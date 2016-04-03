@@ -1,0 +1,434 @@
+/*
+策略出处: https://www.botvs.com/strategy/1484
+策略名称: 期货做市高频交易策略 兼容OK-VC-796
+策略作者: Zero
+策略描述:
+
+这个策略属于期货的做市策略
+会对盘口价格造成影响
+所以不适合大资金.
+策略为研究市场行为而写, 实盘请用小资金测试.
+
+
+参数              默认值    描述
+--------------  -----  -----------------
+ContractType    0      合约类型: 周|月|季
+MLevel          0      杠杆大小: 5倍|10倍|20倍
+DepthBuy        5      买单深度
+DepthSell       5      卖单深度
+Interval        500    出错重试间隔(毫秒)
+LoopInterval    2      轮询间隔(秒)
+SlidePrice      0.01   滑点
+MinDiff         0.5    盘口最小差价
+KeepStocksRate  true   保证金保留倍数
+Lot             80     开仓手数
+LotCover        200    平仓手数
+StopLoss        3      最大亏损波动(元)
+StopProfit      0.5    目标利润点(元)
+OpType          0      操作类型: 做多|做空|自动
+EMA_Fast        7      EMA快线周期
+EMA_Slow        12     EMA慢线周期
+EMAInterval     50     EMA检测间隔(秒)
+WaitType        0      K线收集完成前: 做多|做空|等待
+DisableLog      false  关闭订单跟踪
+*/
+
+var DO_IDLE  = 0;
+var DO_LONG  = 1;
+var DO_SHORT = 2;
+
+var _MarginLevel = [5, 10, 20][MLevel];
+var _ContractType = ["week", "month", "quarter"][ContractType];
+var _CurrentDirection = [DO_LONG, DO_SHORT, DO_IDLE][OpType !=2 ? OpType : WaitType];
+var _isAuto = OpType == 2;
+var _IsBitVC = false;
+var _Is796 = false;
+var _IsOKCoin = false;
+var _MinAmount = 0;
+var _Fee = 0.0003;
+
+function _N(v, precision) {
+    if (typeof(precision) != 'number') {
+        precision = _IsOKCoin ? 3 : 2;
+    }
+    var d = parseFloat(v.toFixed(Math.max(10, precision+5)));
+    s = d.toString().split(".");
+    if (s.length < 2 || s[1].length <= precision) {
+        return d;
+    }
+
+    var b = Math.pow(10, precision);
+    return Math.floor(d*b)/b;
+}
+
+function GetOrders() {
+    var orders = null;
+    while (!(orders = exchange.GetOrders())) {
+        Sleep(Interval);
+    }
+    return orders;
+}
+
+function CancelPendingOrders(orderType) {
+    while (true) {
+        var orders = GetOrders();
+        var count = 0;
+        if (typeof(orderType) != 'undefined') {
+            for (var i = 0; i < orders.length; i++) {
+                if (orders[i].Type == orderType) {
+                    count++;
+                }
+            }
+        } else {
+            count = orders.length;
+        }
+        if (count == 0) {
+            return;
+        }
+
+        for (var j = 0; j < orders.length; j++) {
+            if (typeof(orderType) == 'undefined' || (orderType == orders[j].Type)) {
+                exchange.CancelOrder(orders[j].Id, orders[j]);
+                if (j < (orders.length-1)) {
+                    Sleep(Interval);
+                }
+            }
+        }
+    }
+}
+
+function GetPosition(orderType) {
+    var positions;
+    while (!(positions = exchange.GetPosition())) {
+        Sleep(Interval);
+    }
+    for (var i = 0; i < positions.length; i++) {
+        if (positions[i].ContractType == _ContractType && positions[i].Type == orderType) {
+            return positions[i];
+        }
+    }
+    return null;
+}
+
+function GetAccount() {
+    var account;
+    while (!(account = exchange.GetAccount())) {
+        Sleep(Interval);
+    }
+    return account;
+}
+
+function GetLimit() {
+    var ticker;
+    while (!(ticker = exchange.GetTicker())) {
+        Sleep(Interval);
+    }
+    if (IsVirtual()) {
+        return {high: ticker.Sell + 100, low: ticker.Buy - 100};
+    }
+    var js = exchange.GetRawJSON();
+    try {
+        var obj = JSON.parse(js);
+        return {high: parseFloat(obj.limit_highest_price), low: parseFloat(obj.limit_lowest_price)};
+    } catch (e) {
+        Log(e);
+    }
+    return null;
+}
+
+function GetDepth() {
+    var depth;
+    while (true) {
+        depth = exchange.GetDepth();
+        if (depth && depth.Asks.length > 0 && depth.Bids.length > 0 && depth.Asks[0].Price > depth.Bids[0].Price) {
+            break;
+        }
+        Sleep(Interval);
+    }
+    return depth;
+}
+
+var LastOpenPrice = 0;
+var LastCoverPrice = 0;
+var LastHoldPrice = 0;
+var LastRecord = null;
+var LastEMATime = 0;
+
+function GetDirection() {
+    if (OpType != 2) {
+        return _CurrentDirection;
+    }
+    var n = new Date().getTime();
+    if ((n - LastEMATime) < (EMAInterval * 1000)) {
+        return _CurrentDirection;
+    }
+    LastEMATime = n;
+
+    var records = exchange.GetRecords();
+    if (!records || records.length < (EMA_Slow + 3)) {
+        return _CurrentDirection;
+    }
+    var newLast = records[records.length-1];
+    if ((!LastRecord) || (LastRecord.Time == newLast.Time && LastRecord.Close == newLast.Close)) {
+        if (!LastRecord) {
+            LastRecord = newLast;
+        }
+        return _CurrentDirection;
+    }
+    LastRecord = newLast;
+
+    var emaFast = TA.EMA(records, EMA_Fast);
+    var emaSlow = TA.EMA(records, EMA_Slow);
+    return emaFast[emaFast.length-1] >= emaSlow[emaSlow.length-1] ? DO_LONG : DO_SHORT;
+}
+
+function GetPrice() {
+    var buyPrice = 0;
+    var buyAmount = 0;
+    var sellPrice = 0;
+    var sellAmount = 0;
+    var depth = GetDepth();
+    for (var i = 0; i < depth.Asks.length; i++) {
+        sellAmount += depth.Asks[i].Amount;
+        if (sellAmount >= DepthSell) {
+            sellPrice = depth.Asks[i].Price;
+            break;
+        }
+    }
+
+    for (var i = 0; i < depth.Bids.length; i++) {
+        buyAmount += depth.Bids[i].Amount;
+        if (buyAmount >= DepthBuy) {
+            buyPrice = depth.Bids[i].Price;
+            break;
+        }
+    }
+
+    var diff = MinDiff - (sellPrice - buyPrice);
+    if (diff >= 0) {
+        buyPrice = buyPrice - (diff/2);
+        sellPrice = sellPrice + (diff/2);
+    } else {
+        buyPrice += SlidePrice;
+        sellPrice -= SlidePrice;
+    }
+    return {buy : buyPrice, sell: sellPrice};
+}
+
+
+function updateProfit() {
+    var account = GetAccount();
+    if (_IsBitVC) {
+        try {
+            var obj = JSON.parse(exchange.GetRawJSON());
+            LogProfit(obj.dynamicRights, 'Stocks:', account.Stocks, 'FrozenStocks:', account.FrozenStocks);
+        } catch(e) {
+            Log(e);
+        }
+    } else {
+        LogProfit(account.Stocks + account.FrozenStocks);
+    }
+}
+
+var _prePositions = 0;
+
+function onTick() {
+    var price = GetPrice();
+
+    if (_IsBitVC) {
+        var limit = GetLimit();
+        if (limit) {
+            price.sell = Math.max(Math.min(price.sell, limit.high), limit.low);
+            price.buy = Math.min(Math.max(price.buy, limit.low), limit.high);
+        }
+    }
+
+    var openFunc = _CurrentDirection == DO_LONG ? exchange.Buy : exchange.Sell;
+    var openDirection = _CurrentDirection == DO_LONG ? "buy" : "sell";
+    var openTradeType = _CurrentDirection == DO_LONG ? ORDER_TYPE_BUY : ORDER_TYPE_SELL;
+
+    var coverFunc = _CurrentDirection == DO_LONG ? exchange.Sell : exchange.Buy;
+    var coverDirection = _CurrentDirection == DO_LONG ? "closebuy" : "closesell";
+    var coverTradeType = _CurrentDirection == DO_LONG ? ORDER_TYPE_SELL : ORDER_TYPE_SELL;
+
+    var openPrice = _N(_CurrentDirection == DO_LONG ? price.buy : price.sell);
+    var coverPrice = _N(_CurrentDirection == DO_LONG ? price.sell : price.buy);
+
+    var op = 0;
+    var isFighting = false;
+    var marketCoverPrice = coverPrice;
+
+    if (LastHoldPrice > 0 && LastCoverPrice > 0) {
+        if (_CurrentDirection == DO_LONG) {
+            isFighting = (LastHoldPrice - coverPrice) <= StopLoss;
+            if (isFighting) {
+                coverPrice = _N((LastHoldPrice * (1+_Fee)) + StopProfit);
+            } else {
+                isFighting = true;
+            }
+        } else {
+            isFighting = (coverPrice - LastHoldPrice) <= StopLoss;
+            if (isFighting) {
+                coverPrice = _N((LastHoldPrice * (1-_Fee)) - StopProfit);
+            }
+        }
+    }
+
+    if (LastHoldPrice > 0) {
+        LogStatus(_CurrentDirection == DO_LONG ? "多仓" : "空仓", isFighting ? "僵持中.." : "止损中..", "持仓均价: ", _N(LastHoldPrice), "盘口平仓价:", marketCoverPrice, isFighting ? "#0000ff" : "#ff0000");
+    } else {
+        LogStatus(_CurrentDirection == DO_LONG ? "做多" : "做空", "开仓价: ",  openPrice, "平仓价:", marketCoverPrice, "抢盘中... #428bca");
+    }
+
+    if (openPrice != LastOpenPrice) {
+        op = 1;
+    }
+
+    if (coverPrice != LastCoverPrice) {
+        op = op == 0 ? 2 : 3;
+    }
+
+    if (op == 3) {
+        CancelPendingOrders();
+    } else if (op != 0) {
+        CancelPendingOrders(op == 1 ? openTradeType : coverTradeType);
+    } else {
+        return;
+    }
+
+    var position = 0;
+
+    var hold = GetPosition(openTradeType);
+    if (hold) {
+        position = hold.Amount;
+        LastHoldPrice = hold.Price;
+    } else {
+        LastHoldPrice = 0;
+    }
+
+    var coverAmount = _N(Math.min(position, _IsBitVC ? (LotCover * 100) : LotCover));
+    if (!_Is796) {
+        coverAmount = parseInt(coverAmount);
+    }
+    if (_IsBitVC) {
+        coverAmount = parseInt(parseInt(coverAmount / 100) * 100);
+    }
+    if ((op == 2 || op == 3) && (coverAmount >= _MinAmount)) {
+        exchange.SetDirection(coverDirection);
+        if (coverFunc(coverPrice, coverAmount, "上次平仓价格", LastCoverPrice) > 0) {
+            LastCoverPrice = coverPrice;
+        }
+    }
+
+    if (position == 0 && _prePositions != 0) {
+        updateProfit();
+        _prePositions = 0;
+    }
+    
+    var d = GetDirection();
+    if (_prePositions == 0) {
+        _prePositions = position;
+    }
+
+
+    if (_isAuto) {
+        if (d != _CurrentDirection) {
+            if (position == 0 && GetOrders().length == 0) {
+                Log(d == DO_LONG ? "开始做多" : "开始做空");
+                _CurrentDirection = d;
+            }
+            return;
+        }
+    }
+
+    var account = GetAccount();
+    var canUsedStocks = account.Stocks;
+    if (KeepStocksRate > 0) {
+        canUsedStocks = _N(Math.max(account.Stocks - _N((position * (_IsOKCoin ? 10 : 1) / _MarginLevel / (_Is796 ? 1 : openPrice)) * KeepStocksRate), 0) / KeepStocksRate);
+    }
+    var openAmount = 0;
+    if (_IsBitVC) {
+        openAmount = parseInt(parseInt(Math.min(((canUsedStocks * _MarginLevel * (openPrice*0.9)) / 100), Lot)) * 100);
+    } else if (_IsOKCoin) {
+        openAmount = parseInt(Math.min(((canUsedStocks * _MarginLevel * (openPrice*0.9)) / 10), Lot));
+    } else {
+        openAmount = _N(Math.min(canUsedStocks * _MarginLevel, Lot));
+    }
+    if ((op == 1 || op == 3) && (openAmount >= _MinAmount)) {
+        exchange.SetDirection(openDirection);
+        if (openFunc(openPrice, openAmount, "上次建仓价格", LastOpenPrice) > 0) {
+            LastOpenPrice = openPrice;
+        }
+    }
+}
+
+function onexit() {
+    CancelPendingOrders();
+    Log("Exit");
+}
+
+function main() {
+    var eName = exchange.GetName();
+
+    if (eName.indexOf("Futures") == -1) {
+        throw "该策略为期货专用策略";
+    }
+    if (_IsOKCoin && _MarginLevel == 5) {
+        throw "OKCoin期货只支持10倍或20倍杠杆";
+    }
+    if (DisableLog) {
+        EnableLog(false);
+    }
+
+    _IsBitVC = eName.indexOf("BitVC") != -1;
+    _Is796 = eName.indexOf("796") != -1;
+    _IsOKCoin = eName.indexOf("OKCoin") != -1;
+
+    if (_IsBitVC) {
+        _MinAmount = 100;
+    } else if (_IsOKCoin) {
+        _MinAmount = 1;
+    } else {
+        _MinAmount = exchange.GetMinStock();
+    }
+
+    exchange.SetRate(1);
+    Log(exchange.GetName(), GetAccount());
+    CancelPendingOrders();
+    LoopInterval = Math.max(LoopInterval, 1);
+    EMAInterval = Math.max(EMAInterval, 1);
+    if (_IsBitVC || _IsOKCoin) {
+        Lot = parseInt(Math.max(1, Lot));
+        LotCover = parseInt(Math.max(1, LotCover));
+        if (Lot < 1 || LotCover < 1) {
+            throw "手数最少为1, BitVC一手相当于100元人民币, OKCoin相当于10美金.";
+        }
+    }
+    KeepStocksRate = parseInt(KeepStocksRate);
+    Log("预留", KeepStocksRate, "倍的保证金");
+
+    if (_IsOKCoin && ContractType == 0) {
+        _ContractType = "this_week";
+    }
+    if (!_IsOKCoin && ContractType == 1) {
+        throw "只有OKCoin期货支持月全约";
+    }
+    if (_Is796 && ContractType != 0) {
+        throw "796只支持周合约类型";
+    }
+    exchange.SetContractType(_ContractType);
+    exchange.SetMarginLevel(_MarginLevel);
+
+    if (OpType == 2) {
+        Log("开始收集K线信息, 请耐心等待.");
+    }
+
+    while (true) {
+        if (_CurrentDirection == DO_IDLE) {
+            _CurrentDirection = GetDirection();
+        } else {
+            onTick();
+        }
+        Sleep(LoopInterval * 1000);
+    }
+}
