@@ -1,5 +1,5 @@
 
-# 用Javascript进行量化交易
+# 用 Javascript 进行量化交易
 
 > 开源策略列表
 
