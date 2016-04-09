@@ -68,5 +68,6 @@
  - [函数自动容错模板](https://www.botvs.com/strategy/11609)
  - [Dual Thrust OKCoin 期货](https://www.botvs.com/strategy/12101)
  - [均线策略 30 行打造一个正向收益系统](https://www.botvs.com/strategy/12348)
+ - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [从第三方网站获取K线](https://www.botvs.com/strategy/12977)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
