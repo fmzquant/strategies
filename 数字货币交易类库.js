@@ -29,14 +29,19 @@ $.CancelPendingOrders(exchanges[1]); // 取消第二个交易所所有订单
 $.CancelPendingOrders(exchanges[1], ORDER_TYPE_SELL); // 取消第二个交易所所有的卖单
 ```
 
-> $.Cross(periodA, periodB)
+> $.Cross(periodA, periodB) / $.Cross(arr1, arr2);
 
 ```
 var n = $.Cross(15, 30);
-/* 如果 n 等于 0, 指刚好15周期的EMA与30周期的EMA当前价格相等
- * 如果 n 大于 0, 比如 5, 指15周期的EMA上穿了30周期的EMA 5个周期(Bar)
- * 如果 n 小于 0, 比如 -12, 指15周期的EMA下穿了30周期的EMA 12个周期(Bar)
- */
+var m = $.Cross([1,2,3,2.8,3.5], [3,1.9,2,5,0.6])
+```
+
+``` text
+如果 n 等于 0, 指刚好15周期的EMA与30周期的EMA当前价格相等
+如果 n 大于 0, 比如 5, 指15周期的EMA上穿了30周期的EMA 5个周期(Bar)
+如果 n 小于 0, 比如 -12, 指15周期的EMA下穿了30周期的EMA 12个周期(Bar)
+如果传给Cross不是数组, 则函数自动获取K线进行均线计算
+如果传给Cross的是数组, 则直接进行比较
 ```
 
 
@@ -50,19 +55,6 @@ RetryDelay  500    失败重试(毫秒)
 MAType        0    均线算法: EMA|MA|AMA(自适应均线)
 */
 
-function _N(v, precision) {
-    if (typeof(precision) != 'number') {
-        precision = 4;
-    }
-    var d = parseFloat(v.toFixed(Math.max(10, precision + 5)));
-    s = d.toString().split(".");
-    if (s.length < 2 || s[1].length <= precision) {
-        return d;
-    }
-
-    var b = Math.pow(10, precision);
-    return Math.floor(d * b) / b;
-}
 
 function CancelPendingOrders(e, orderType) {
     while (true) {
@@ -242,17 +234,27 @@ var _MACalcMethod = [TA.EMA, TA.MA, talib.KAMA][MAType];
 // 返回上穿的周期数. 正数为上穿周数, 负数表示下穿的周数, 0指当前价格一样
 $.Cross = function(a, b) {
     var crossNum = 0;
-    var records = null;
-    while (true) {
-        records = exchange.GetRecords();
-        if (records && records.length > a && records.length > b) {
-            break;
+    var arr1 = [];
+    var arr2 = [];
+    if (Array.isArray(a)) {
+        arr1 = a;
+        arr2 = b;
+    } else {
+        var records = null;
+        while (true) {
+            records = exchange.GetRecords();
+            if (records && records.length > a && records.length > b) {
+                break;
+            }
+            Sleep(RetryDelay);
         }
-        Sleep(RetryDelay);
+        arr1 = _MACalcMethod(records, a);
+        arr2 = _MACalcMethod(records, b);
     }
-    var arr1 = _MACalcMethod(records, a);
-    var arr2 = _MACalcMethod(records, b);
-    for (var i = records.length-1; i >= 0; i--) {
+    if (arr1.length !== arr2.length) {
+        throw "array length not equal";
+    }
+    for (var i = arr1.length-1; i >= 0; i--) {
         if (typeof(arr1[i]) !== 'number' || typeof(arr2[i]) !== 'number') {
             break;
         }
@@ -281,4 +283,5 @@ function main() {
     exchange.Buy(1000, 3);
     $.CancelPendingOrders(exchanges[0]);
     Log($.Cross(30, 7));
+    Log($.Cross([1,2,3,2.8,3.5], [3,1.9,2,5,0.6]));
 }

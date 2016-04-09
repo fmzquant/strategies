@@ -15,6 +15,7 @@ exchange.GetRecords() ==> $.GetRecords(exchange, period)
 
 $.GetRecords = function (exchange, period) {    
     var rec1 = exchange.GetRecords();
+    if (!rec1) return null;
     var recN = [];
     var tmp = {Time: null, Open: null, High: null, Low: null, Close: null, Volume: 0};
     for (var i = 0; i < rec1.length; i++) {

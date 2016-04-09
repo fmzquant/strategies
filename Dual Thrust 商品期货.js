@@ -29,6 +29,7 @@ AmountOP          true   开仓合约张数
 Interval          2000   重试间隔(毫秒)
 LoopInterval      3      轮询间隔(秒)
 PeriodShow        500    图表最大显示K线柱数
+NotifyWX          true   下单微信通知
 */
 
 var ChartCfg = {
@@ -76,16 +77,20 @@ var LastBarTime = 0;
 var UpTrack = 0;
 var BottomTrack = 0;
 var chart = null;
-var InitAccount = null;
 var Counter = {
     w: 0,
     l: 0
 };
 
 var manager = null;
+var logSuffix = NotifyWX ? '@' : '';
 
 function onTick(exchange) {
     if (!manager) {
+        if (_C(exchange.GetPosition).length > 0) {
+            throw "策略启动前不能有持仓.";
+        }
+        Log('交易平台:', exchange.GetName(), _C(exchange.GetAccount));
         var insDetail = _C(exchange.SetContractType, ContractTypeName);
         Log("合约", insDetail.InstrumentName, "一手", insDetail.VolumeMultiple, "份, 最大下单量", insDetail.MaxLimitOrderVolume, "保证金率:", insDetail.LongMarginRatio.toFixed(4), insDetail.ShortMarginRatio.toFixed(4), "交割日期", insDetail.StartDelivDate);
         manager = $.NewPositionManager();
@@ -134,11 +139,13 @@ function onTick(exchange) {
     if (State === STATE_IDLE || State === STATE_SHORT) {
         if (Bar.Close >= UpTrack) {
             msg  = '做多 触发价: ' + Bar.Close + ' 上轨:' + UpTrack;
-            Log(msg);
             if (State !== STATE_IDLE) {
                 manager.Cover(ContractTypeName);
-                LogProfit(manager.Profit());
+                var profit = manager.Profit();
+                LogProfit(profit);
+                msg += ' 平仓利润: ' + profit;
             }
+            Log(msg + logSuffix);
             manager.OpenLong(ContractTypeName, AmountOP);
             State = STATE_LONG;
             chart.add(1, {x:Bar.Time, color: 'red', shape: 'flag', title: '多', text: msg});
@@ -148,11 +155,13 @@ function onTick(exchange) {
     if (State === STATE_IDLE || State === STATE_LONG) {
         if (Bar.Close <= DownTrack) {
             msg = '做空 触发价: ' + Bar.Close + ' 下轨:' + DownTrack;
-            Log(msg);
             if (State !== STATE_IDLE) {
                 manager.Cover(ContractTypeName);
-                LogProfit(manager.Profit());
+                var profit = manager.Profit();
+                LogProfit(profit);
+                msg += ' 平仓利润: ' + profit;
             }
+            Log(msg + logSuffix);
             manager.OpenShort(ContractTypeName, AmountOP);
             chart.add(1, {x:Bar.Time, color: 'green', shape: 'circlepin', title: '空', text: msg});
             State = STATE_SHORT;
@@ -172,13 +181,7 @@ function main() {
         throw "只支持传统商品期货(CTP)";
     }
     SetErrorFilter("login|ready");
-    if (_C(exchange.GetPosition).length > 0) {
-        throw "策略启动前不能有持仓.";
-    }
 
-    InitAccount = _C(exchange.GetAccount);
-    LoopInterval = Math.min(1, LoopInterval);
-    Log('交易平台:', exchange.GetName(), InitAccount);
     LogStatus("Ready...");
     LogProfitReset();
     chart = Chart(ChartCfg);
