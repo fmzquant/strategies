@@ -98,6 +98,7 @@ function onTick(exchange) {
 
     var records = _C(exchange.GetRecords);
     if (!records || records.length <= NPeriod) {
+        LogStatus("Calc Bars...");
         return;
     }
     var Bar = records[records.length - 1];

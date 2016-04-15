@@ -329,7 +329,7 @@ function loop(isFirst) {
             var nowAccount = GetAccount(exchange);
             var diff = nowAccount.Stocks + nowAccount.FrozenStocks - preAccount.Stocks;
             if (balance) {
-                diff = nowAccount.Stocks + OrgAccount.FrozenStocks - OrgAccount.Stocks;
+                diff = nowAccount.Stocks + nowAccount.FrozenStocks - OrgAccount.Stocks;
                 if (Math.abs(diff) > minStock) {
                     var obj = Trade(exchange, diff > 0 ? ORDER_TYPE_SELL : ORDER_TYPE_BUY, Math.abs(diff), 0, SlidePrice, MaxAmount, MaxSpace, Interval);
                     if (!obj) {

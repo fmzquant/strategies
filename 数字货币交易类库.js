@@ -144,7 +144,6 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
     var isBuy = tradeType == ORDER_TYPE_BUY;
     while (true) {
         var ticker = _C(e.GetTicker);
-        LastTicker = ticker;
         var tradePrice = 0;
         if (isBuy) {
             tradePrice = _N((mode === 0 ? ticker.Sell : ticker.Buy) + slidePrice, 4);
