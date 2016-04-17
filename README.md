@@ -71,3 +71,5 @@
  - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [从第三方网站获取K线](https://www.botvs.com/strategy/12977)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
+ - [窜天猴 - 移动止损版](https://www.botvs.com/strategy/13594)
+ - [窜天猴 多空较量 爆破版](https://www.botvs.com/strategy/13597)
