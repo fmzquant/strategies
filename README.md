@@ -4,8 +4,8 @@
 > 开源策略列表
 
 
- - [窜天猴 - 移动止损版](https://www.botvs.com/strategy/13594)
  - [窜天猴 多空较量 爆破版](https://www.botvs.com/strategy/13597)
+ - [窜天猴 - 移动止损版](https://www.botvs.com/strategy/13594)
  - [均线策略 30 行打造一个正向收益系统](https://www.botvs.com/strategy/12348)
  - [破冰者](https://www.botvs.com/strategy/9929)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
@@ -32,6 +32,7 @@
  - [【Demo】速度测试 websocket vs rest](https://www.botvs.com/strategy/7547)
  - [记录净资产变动情况2.0](https://www.botvs.com/strategy/8916)
  - [入门模板之各个平台余额](https://www.botvs.com/strategy/48)
+ - [平台价格比较1.0](https://www.botvs.com/strategy/8266)
  - [MACD低买高卖自动跟单滑动止损](https://www.botvs.com/strategy/3)
  - [均线买卖策略](https://www.botvs.com/strategy/143)
  - [趋势跟踪震荡策略](https://www.botvs.com/strategy/179)

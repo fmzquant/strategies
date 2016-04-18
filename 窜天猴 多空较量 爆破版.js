@@ -43,6 +43,7 @@ function main() {
     Log(initAccount);
     var pos = null;
     while (true) {
+        Sleep(Interval*1000);
         if (state === STATE_IDLE) {
             var n = 0;
             while (Math.abs(n) < EnterPeriod) {
@@ -78,10 +79,13 @@ function main() {
             }
         } else {
             var ticker = exchange.GetTicker();
+            if (!ticker) {
+                continue;
+            }
             var dynamicProfit = (state === PD_LONG ? (ticker.Last - pos.price) : (pos.price - pos.price)) * pos.amount;
             LogStatus("持仓类型", (state === PD_LONG ? "多仓" : "空仓"), "持仓均价:", pos.price, "数量:", pos.amount, "浮动盈亏:", _N(dynamicProfit), "止损价:", pos.stopLossPrice, "止盈价:", pos.stopProfitPrice);
-            if ((state === PD_LONG && (ticker.Last > pos.stopProfitPrice) || (ticker.Last < pos.stopLossPrice)) ||
-                (state === PD_SHORT && (ticker.Last < pos.stopProfitPrice) || (ticker.Last > pos.stopLossPrice)) ){
+            if ((state === PD_LONG && ((ticker.Last > pos.stopProfitPrice) || (ticker.Last < pos.stopLossPrice))) ||
+                (state === PD_SHORT && ((ticker.Last < pos.stopProfitPrice) || (ticker.Last > pos.stopLossPrice))) ){
                 Log("止损, 持仓均价:", pos.price, "数量:", pos.amount, "浮动盈亏:", _N(dynamicProfit), "最后成交价:", ticker.Last);
                 var nowAccount = $.GetAccount();
                 var obj = state === PD_LONG ? $.Sell(nowAccount.Stocks - initAccount.Stocks) : $.Buy(initAccount.Stocks - nowAccount.Stocks);
@@ -91,5 +95,4 @@ function main() {
             }
         }
     }
-    Sleep(Interval*1000);
 }
