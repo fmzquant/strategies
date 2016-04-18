@@ -4,8 +4,8 @@
 > 开源策略列表
 
 
- - [窜天猴 多空较量 爆破版](https://www.botvs.com/strategy/13597)
  - [窜天猴 - 移动止损版](https://www.botvs.com/strategy/13594)
+ - [窜天猴 多空较量 爆破版](https://www.botvs.com/strategy/13597)
  - [均线策略 30 行打造一个正向收益系统](https://www.botvs.com/strategy/12348)
  - [破冰者](https://www.botvs.com/strategy/9929)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)

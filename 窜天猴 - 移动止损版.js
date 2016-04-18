@@ -24,7 +24,15 @@ function main() {
     var initAccount = $.GetAccount();
     Log(initAccount);
     var pos = null;
+    var table = {
+        type : 'table',
+        title : '账户信息',
+        cols : ['阶段', '钱', '币'],
+        rows : [['初始', initAccount.Balance, initAccount.Stocks], ['当前', 0, 0]],
+    };
     while (true) {
+        var status = '';
+        var nowAccount = null;
         if (state === STATE_IDLE) {
             var n = $.Cross(FastPeriod, SlowPeriod);
             if (Math.abs(n) >= EnterPeriod) {
@@ -63,16 +71,28 @@ function main() {
             if (enableTS) {
                 Log("触发移动止损, 锁定利润百分比:", _N(Math.abs((pos.price-ticker.Last)/pos.price)) + '%', "当前价格:", ticker.Last, "持仓盈亏:", dynamicProfit);
             }
-            LogStatus("持仓类型", (state === PD_LONG ? "多仓" : "空仓"), "持仓均价:", pos.price, "数量:", pos.amount, "浮动盈亏:", _N(dynamicProfit), "止损价:", pos.stopLossPrice);
+            status = ["持仓类型", (state === PD_LONG ? "多仓" : "空仓"), "持仓均价:", pos.price, "数量:", pos.amount, "浮动盈亏:", _N(dynamicProfit), "止损价:", pos.stopLossPrice].join(' ');
+            if (status.length > 0) {
+                status += '\n';
+            }
             if (shouldCover) {
                 Log("止损, 持仓均价:", pos.price, "数量:", pos.amount, "浮动盈亏:", _N(dynamicProfit), "最后成交价:", ticker.Last);
-                var nowAccount = $.GetAccount();
+                nowAccount = $.GetAccount();
                 var obj = state === PD_LONG ? $.Sell(nowAccount.Stocks - initAccount.Stocks) : $.Buy(initAccount.Stocks - nowAccount.Stocks);
                 state = STATE_IDLE;
                 nowAccount = $.GetAccount();
                 LogProfit(nowAccount.Balance - initAccount.Balance, '钱:', nowAccount.Balance, '币:', nowAccount.Stocks, '平仓详情:', obj, "交叉周期", n);
             }
         }
+        if (!nowAccount) {
+            nowAccount = $.GetAccount();
+        }
+        if (nowAccount.Balance !== table.rows[1][1] || nowAccount.Stocks !== table.rows[1][2]) {
+            table.rows[1] = ['当前 #ff0000', nowAccount.Balance, nowAccount.Stocks];
+        }
+        status += '`'+JSON.stringify(table)+'`';
+        LogStatus(status);
+            
         Sleep(Interval*1000);
     }
 }
