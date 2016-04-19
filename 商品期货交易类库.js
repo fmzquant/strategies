@@ -88,11 +88,11 @@ function Open(e, contractType, direction, opAmount) {
         }
         // CancelPendingOrders
         while (true) {
+            Sleep(Interval);
             var orders = _C(e.GetOrders);
             if (orders.length === 0) {
-                return;
+                break;
             }
-            Sleep(Interval);
             for (var j = 0; j < orders.length; j++) {
                 e.CancelOrder(orders[j].Id);
                 if (j < (orders.length - 1)) {
@@ -145,7 +145,19 @@ function Cover(e, contractType) {
         if (n === 0) {
             break;
         }
-        Sleep(Interval);
+        while (true) {
+            Sleep(Interval);
+            var orders = _C(e.GetOrders);
+            if (orders.length === 0) {
+                break;
+            }
+            for (var j = 0; j < orders.length; j++) {
+                e.CancelOrder(orders[j].Id);
+                if (j < (orders.length - 1)) {
+                    Sleep(Interval);
+                }
+            }
+        }
     }
 }
 
