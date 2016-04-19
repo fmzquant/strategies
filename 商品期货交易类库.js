@@ -24,7 +24,6 @@ Interval    500    失败重试间隔(毫秒)
 SlidePrice    0.1  下单滑价(元)
 */
 
-
 function GetPosition(e, contractType, direction) {
     var allCost = 0;
     var allAmount = 0;
@@ -68,7 +67,7 @@ function Open(e, contractType, direction, opAmount) {
         if (isFirst) {
             isFirst = false;
         } else {
-            positionNow = GetPosition(contractType, direction);
+            positionNow = GetPosition(e, contractType, direction);
             if (positionNow) {
                 needOpen = opAmount - (positionNow.Amount - initAmount);
             }

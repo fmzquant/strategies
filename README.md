@@ -4,6 +4,8 @@
 > 开源策略列表
 
 
+ - [商品期货交易类库](https://www.botvs.com/strategy/12961)
+ - [各大平台API可用率统计](https://www.botvs.com/strategy/4404)
  - [窜天猴 - 移动止损版](https://www.botvs.com/strategy/13594)
  - [窜天猴 多空较量 爆破版](https://www.botvs.com/strategy/13597)
  - [均线策略 30 行打造一个正向收益系统](https://www.botvs.com/strategy/12348)
@@ -11,13 +13,11 @@
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
  - [平台价格指标监控1.1](https://www.botvs.com/strategy/12442)
  - [数字货币交易类库](https://www.botvs.com/strategy/10989)
- - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [高精度回测](https://www.botvs.com/strategy/11575)
  - [从第三方网站获取K线](https://www.botvs.com/strategy/12977)
  - [函数自动容错模板](https://www.botvs.com/strategy/11609)
  - [Dual Thrust OKCoin 期货](https://www.botvs.com/strategy/12101)
  - [差价监控](https://www.botvs.com/strategy/1340)
- - [各大平台API可用率统计](https://www.botvs.com/strategy/4404)
  - [RSI_now_sb_ok](https://www.botvs.com/strategy/11604)
  - [自定义K线周期转换](https://www.botvs.com/strategy/11216)
  - [模板库使用例子](https://www.botvs.com/strategy/10991)

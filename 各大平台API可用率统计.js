@@ -13,19 +13,6 @@ Interval      10  检测频率(秒)
 TickCount    200  采样数量
 */
 
-function _N(v, precision) {
-    if (typeof(precision) != 'number') {
-        precision = 4;
-    }
-    var d = parseFloat(v.toFixed(Math.max(10, precision+5)));
-    s = d.toString().split(".");
-    if (s.length < 2 || s[1].length <= precision) {
-        return d;
-    }
-
-    var b = Math.pow(10, precision);
-    return Math.floor(d*b)/b;
-}
 
 function _D(t) {
     if (typeof(t) == 'undefined') {
@@ -77,6 +64,7 @@ function ExchangeManager(e, idx) {
         } else {
             this.Last = _N(ticker.Last, 3);
         }
+        this.ticker = ticker;
         this.tickerChanged = true;
     };
     
@@ -84,6 +72,7 @@ function ExchangeManager(e, idx) {
         if (ticker) {
             this.tickerChanged = _N(ticker.Last, 3) != this.Last;
             this.Last = _N(ticker.Last, 3);
+            this.ticker = ticker;
         }
         arr.push(ticker);
         if (arr.length > TickCount) {
@@ -169,11 +158,13 @@ function EnsureCall(method) {
 
 
 function main() {
-    if (typeof(SetFailover) === 'function') {
-        SetFailover(true);
-        Log('SetFailover OK');
-    }
     var keys = [];
+    var table = {
+        type: 'table',
+        title: '行情信息',
+        cols: ['交易所', '买一', '卖一', '最后成交价', '最高', '最低', '交易量'],
+        rows: []
+    };
     var es = [];
     for (var i = 0; i < exchanges.length; i++) {
         var m = new ExchangeManager(exchanges[i], i);
@@ -238,8 +229,10 @@ function main() {
             if (es[i].tickerChanged) {
                 chart.add([1, es[i].Last, es[i].idx]);
             }
+            var ticker = es[i].ticker;
+            table.rows[i] = [es[i].GetLabel(), ticker.Buy, ticker.Sell, ticker.Last + '#ff0000', ticker.High, ticker.Low, ticker.Volume];
         }
-        LogStatus("最后更新于: " + _D());
+        LogStatus('最后更新于: ' + _D() +'\n`' + JSON.stringify(table) + '`');
         Sleep(Interval*1000);
     }
 }

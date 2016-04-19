@@ -48,6 +48,10 @@ function main() {
             }
         } else {
             var ticker = exchange.GetTicker();
+            if (!ticker) {
+                Sleep(Interval*1000);
+                continue;
+            }
             var dynamicProfit = 0;
             var shouldCover = false;
             var enableTS = false;
