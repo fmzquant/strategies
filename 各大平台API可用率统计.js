@@ -11,6 +11,10 @@
 ---------  -----  -------
 Interval      10  检测频率(秒)
 TickCount    200  采样数量
+
+按钮    默认值         描述
+----  ----------  ----
+清空日志  __button__  清空日志
 */
 
 
@@ -233,6 +237,11 @@ function main() {
             table.rows[i] = [es[i].GetLabel(), ticker.Buy, ticker.Sell, ticker.Last + '#ff0000', ticker.High, ticker.Low, ticker.Volume];
         }
         LogStatus('最后更新于: ' + _D() +'\n`' + JSON.stringify(table) + '`');
+        var cmd = GetCommand();
+        if (cmd && cmd.indexOf('清空日志') === 0) {
+            LogReset();
+            Log("日志已重置");
+        }
         Sleep(Interval*1000);
     }
 }
