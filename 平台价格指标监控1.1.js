@@ -24,6 +24,7 @@ Interval       500    函数重试间隔
 Period         14     周期
 Index          0      指标类型: ATR|RSI|BOLL|PRICE
 RecordsHand    false  手动收集K线
+CleanLog       true   清理日志图表
 
 按钮    默认值         描述
 ----  ----------  ----
@@ -53,6 +54,7 @@ var ArrayLen = 0;
 //var Interval = 500;			//重试间隔
 //var Period = 12;
 //var RecordsHand = true;	//手动收集K线
+//var CleanLog = true;		//清理日志图表
 
 //常量
 var RsiMid = 50;
@@ -160,6 +162,12 @@ function getCmd() {
 }
 	
 function main()  {
+	//清理
+	if(CleanLog){
+		LogProfitReset();
+		LogReset();
+	}
+	
 	//局部变量申请
 	var ticker0 = null;
 	var price0 = 0;
@@ -209,11 +217,11 @@ function main()  {
 
 	//初始化
 	var rcd = exchange.GetRecords();
-    while (!rcd || rcd.length < (Period + 20)) {
+    while ((_Index != 3) && (!rcd || rcd.length < (Period + 20))) {
 		rcd = exchange.GetRecords();
 		Sleep(Interval);
     }
-	ArrayLen = rcd.length;
+	ArrayLen = Math.max(rcd.length, (Period + 20));
 	ArrayPrice = ARRAY_ZEROS(ArrayLen);
 
 	while (true) {
