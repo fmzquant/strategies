@@ -4,6 +4,8 @@
 > 开源策略列表
 
 
+ - [商品期货主力合约过滤](https://www.botvs.com/strategy/9837)
+ - [从第三方网站获取K线 (0427更新)](https://www.botvs.com/strategy/12977)
  - [平台价格指标监控1.1](https://www.botvs.com/strategy/12442)
  - [20行打造均线交叉策略](https://www.botvs.com/strategy/14051)
  - [均线策略 30 行打造一个正向收益系统](https://www.botvs.com/strategy/12348)
@@ -16,7 +18,6 @@
  - [破冰者](https://www.botvs.com/strategy/9929)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
  - [高精度回测](https://www.botvs.com/strategy/11575)
- - [从第三方网站获取K线](https://www.botvs.com/strategy/12977)
  - [函数自动容错模板](https://www.botvs.com/strategy/11609)
  - [Dual Thrust OKCoin 期货](https://www.botvs.com/strategy/12101)
  - [差价监控](https://www.botvs.com/strategy/1340)
