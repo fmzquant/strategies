@@ -1,7 +1,7 @@
 /*
 策略出处: https://www.botvs.com/strategy/11604
 策略名称: RSI_now_sb_ok
-策略作者: luoluchang
+策略作者: tfboys
 策略描述:
 
 RSI简单买卖测试, 默认 70-100卖出,0-30买入

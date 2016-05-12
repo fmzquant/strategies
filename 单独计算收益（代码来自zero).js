@@ -42,6 +42,6 @@ function main() {
     InitAccount = GetAccount(); 
     while (true) {
         updateProfit(InitAccount, GetAccount(), GetTicker());
-        Sleep(20000);
+        Sleep(5000);
     }
 }

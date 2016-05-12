@@ -4,12 +4,15 @@
 > 开源策略列表
 
 
+ - [单独计算收益（代码来自zero)](https://www.botvs.com/strategy/1084)
+ - [差价监控](https://www.botvs.com/strategy/1340)
+ - [MACD 双向 滑动止损](https://www.botvs.com/strategy/12822)
+ - [时间转换模板](https://www.botvs.com/strategy/14517)
+ - [10行人品策略](https://www.botvs.com/strategy/14436)
  - [商品期货主力合约过滤](https://www.botvs.com/strategy/9837)
  - [从第三方网站获取K线 (0427更新)](https://www.botvs.com/strategy/12977)
  - [平台价格指标监控1.1](https://www.botvs.com/strategy/12442)
- - [20行打造均线交叉策略](https://www.botvs.com/strategy/14051)
  - [均线策略 30 行打造一个正向收益系统](https://www.botvs.com/strategy/12348)
- - [MACD 双向 滑动止损](https://www.botvs.com/strategy/12822)
  - [各大平台API可用率统计](https://www.botvs.com/strategy/4404)
  - [数字货币现货交易类库](https://www.botvs.com/strategy/10989)
  - [商品期货交易类库](https://www.botvs.com/strategy/12961)
@@ -20,7 +23,6 @@
  - [高精度回测](https://www.botvs.com/strategy/11575)
  - [函数自动容错模板](https://www.botvs.com/strategy/11609)
  - [Dual Thrust OKCoin 期货](https://www.botvs.com/strategy/12101)
- - [差价监控](https://www.botvs.com/strategy/1340)
  - [RSI_now_sb_ok](https://www.botvs.com/strategy/11604)
  - [自定义K线周期转换](https://www.botvs.com/strategy/11216)
  - [模板库使用例子](https://www.botvs.com/strategy/10991)
@@ -49,7 +51,6 @@
  - [单点狙击高频加仓自动反手解套算法 V1.2](https://www.botvs.com/strategy/2406)
  - [796期货反手加倍算法](https://www.botvs.com/strategy/3648)
  - [冰山委托 - 支持价格触发 BitVC期货专用](https://www.botvs.com/strategy/951)
- - [单独计算收益（代码来自zero)](https://www.botvs.com/strategy/1084)
  - [多线程获取多个交易的深度信息](https://www.botvs.com/strategy/3651)
  - [账户余额变动邮箱提醒, 支持添加多个交易所](https://www.botvs.com/strategy/2006)
  - [多线程获取多个交易的账户信息](https://www.botvs.com/strategy/3297)

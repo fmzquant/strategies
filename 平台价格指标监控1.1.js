@@ -1,7 +1,7 @@
 /*
 策略出处: https://www.botvs.com/strategy/12442
 策略名称: 平台价格指标监控1.1
-策略作者: luoluchang
+策略作者: tfboys
 策略描述:
 
 1.5---可以监控ATR,RSI,BOLL,PRICE

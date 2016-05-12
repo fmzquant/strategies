@@ -35,10 +35,10 @@ function MACD_Cross(){
     var dea = macd[1];
     var column = macd[2];
     var len = records.length;    
-    if( (dif[len-1] > 0 && dea[len-1] > 0) && dif[len-1] > dea[len-1] && dif[len-2] < dea[len-2] && column[len-1] > 0.2 ){
+    if( (dif[len-1] > 0 && dea[len-1] > 0) && dif[len-1] > dea[len-1] && dif[len-2] < dea[len-2] && column[len-1] > 0.08 ){
     	return 1;
     }
-    if( (dif[len-1] < 0 && dea[len-1] < 0) && dif[len-1] < dea[len-1] && dif[len-2] > dea[len-2] && column[len-1] < -0.2 ){
+    if( (dif[len-1] < 0 && dea[len-1] < 0) && dif[len-1] < dea[len-1] && dif[len-2] > dea[len-2]  ){
         return 2;
     }   
     return 0;  
@@ -125,14 +125,7 @@ var holdOrder = {
         this.level = 1;
     }
 };
-function getTimeByNormal(time){
-    var timeByNormal = new Date();
-    timeByNormal.setTime(time);
-    var strTime = timeByNormal.toString();
-    var showTimeArr = strTime.split(" ");
-    var showTime = showTimeArr[3]+"-"+showTimeArr[1]+"-"+showTimeArr[2]+"-"+showTimeArr[4];
-    return showTime;
-}
+
 function scan(){
 	var sellInfo = null;
 	var buyInfo = null;
@@ -152,7 +145,7 @@ function scan(){
             holdOrder.orderState = ORDER_VALID;
             holdOrder.price = buyInfo.price;
             holdOrder.amount = buyInfo.amount;
-            holdOrder.time = getTimeByNormal((new Date()).getTime());
+            holdOrder.time = $.getTimeByNormal((new Date()).getTime());
 
             state = singal === 1 ? STATE_BUY : STATE_SELL;
             var account = $.GetAccount(exchange);
@@ -171,7 +164,7 @@ function scan(){
                 holdOrder.orderState = ORDER_INVALID;
                 holdOrder.price = sellInfo.price;
                 holdOrder.amount = sellInfo.amount;
-                holdOrder.time = getTimeByNormal((new Date()).getTime());
+                holdOrder.time = $.getTimeByNormal((new Date()).getTime());
                 
                 profit = holdOrder.updateCurrentProfit(lastPrice,sellInfo.amount);
         	    state = STATE_FREE;
@@ -184,7 +177,7 @@ function scan(){
                 holdOrder.orderState = ORDER_INVALID;
                 holdOrder.price = sellInfo.price;
                 holdOrder.amount = sellInfo.amount;
-                holdOrder.time = getTimeByNormal((new Date()).getTime());
+                holdOrder.time = $.getTimeByNormal((new Date()).getTime());
                 
                 profit = holdOrder.updateCurrentProfit(lastPrice,sellInfo.amount);
         	    state = STATE_FREE;
@@ -197,7 +190,7 @@ function scan(){
                 holdOrder.orderState = ORDER_INVALID;
                 holdOrder.price = sellInfo.price;
                 holdOrder.amount = sellInfo.amount;
-                holdOrder.time = getTimeByNormal((new Date()).getTime());
+                holdOrder.time = $.getTimeByNormal((new Date()).getTime());
                 
                 profit = holdOrder.updateCurrentProfit(lastPrice,sellInfo.amount);
         	    state = STATE_FREE;
@@ -210,7 +203,7 @@ function scan(){
                 holdOrder.orderState = ORDER_INVALID;
                 holdOrder.price = sellInfo.price;
                 holdOrder.amount = sellInfo.amount;
-                holdOrder.time = getTimeByNormal((new Date()).getTime());
+                holdOrder.time = $.getTimeByNormal((new Date()).getTime());
                 
                 profit = holdOrder.updateCurrentProfit(lastPrice,sellInfo.amount);
         	    state = STATE_FREE;
