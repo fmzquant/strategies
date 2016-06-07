@@ -38,7 +38,7 @@ function getTimeByNormal(time){
 
 //测试
 function main() {
-    var time1 = $.getTimeByNormal( new Date() );
+    var time1 = $.getTimeByNormal( 1463308260000 );
     Log("当前时间time1：",time1);
     Sleep(1000 * 60);
     var time3 = (new Date()).getTime();
