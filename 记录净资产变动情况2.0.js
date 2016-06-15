@@ -163,6 +163,7 @@ function main() {
             time1 += shuaxin;
         }
         Sleep(5000);
+        $.Draw();
         status_log = init_profit_msg + "\n" + net_msg + "\n" + profit_msg + "\n" + qian_interest_msg + "\n" + bi_interest_msg;
         LogStatus(status_log);
     }

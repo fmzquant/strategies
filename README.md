@@ -4,8 +4,12 @@
 > 开源策略列表
 
 
+ - [从第三方获取K线 (商品期货版)](https://www.botvs.com/strategy/15498)
+ - [定期定额购买策略 (V2)](https://www.botvs.com/strategy/16454)
+ - [价值平均策略](https://www.botvs.com/strategy/16531)
+ - [定期定额购买策略](https://www.botvs.com/strategy/16373)
+ - [记录净资产变动情况2.0](https://www.botvs.com/strategy/8916)
  - [商品期货交易类库(增加下限价单功能)](https://www.botvs.com/strategy/14198)
- - [从回测数据获取K线 (商品期货版)](https://www.botvs.com/strategy/15498)
  - [图表模板](https://www.botvs.com/strategy/15524)
  - [时间转换模板](https://www.botvs.com/strategy/14517)
  - [非常简单的策略，但是很有效](https://www.botvs.com/strategy/15085)
@@ -37,7 +41,6 @@
  - [融资融币统计](https://www.botvs.com/strategy/8954)
  - [【Demo】如何利用“策略交互“动态调整策略参数](https://www.botvs.com/strategy/8379)
  - [【Demo】速度测试 websocket vs rest](https://www.botvs.com/strategy/7547)
- - [记录净资产变动情况2.0](https://www.botvs.com/strategy/8916)
  - [入门模板之各个平台余额](https://www.botvs.com/strategy/48)
  - [平台价格比较1.0](https://www.botvs.com/strategy/8266)
  - [MACD低买高卖自动跟单滑动止损](https://www.botvs.com/strategy/3)
