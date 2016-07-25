@@ -4,6 +4,7 @@
 策略作者: edwardgyw
 策略描述:
 
+6.24更新，完善了4种夜盘时间类型，周六凌晨的夜盘时间计入交易时段
 在原zero提供版本基础上，增加了下限价单和平限价单的功能，方便埋单
 增加了判断当前是否是交易时段的功能，同时提供自定义节假日的功能
 
@@ -249,7 +250,6 @@ $.judgeTrading = function() {
     var hours = now.getHours();
     var isHolidays = false;
     var holidays = getHolidays(holidaysList);
-    //Log(holidays.mon.length);
     if (holidays) {
         for (var i = 0; i < holidays.mon.length; i++) {
             if (holidays.mon[i] == mon && holidays.day[i] == date) {
@@ -258,7 +258,7 @@ $.judgeTrading = function() {
             }
         }
     }
-    if (day == 0 || day == 6 || isHolidays) return false;
+    if (day === 0 || (day === 6 && hours>=3) || isHolidays) return false;
     else if ((hours >= 9 && hours <= 11) || (hours >= 13 && hours < 15)) {
         if (hours == 11 && min >= 30) return false;
         else if (hours == 13 && min < 30) return false;
@@ -266,7 +266,8 @@ $.judgeTrading = function() {
         else return true;
     } else if (nightType == 1 && hours >= 21 && hours < 23) return true;
     else if (nightType == 2 && ((hours >= 21 && hours < 24) || (hours >= 0 && hours < 1 && day !== 1))) return true;
-    //else if(nightType!==1&&nightType!==2) return true;
+    else if(nightType===3&& ((hours>=21&&hours<23)||(hours===23&&min<30))) return true;
+    else if(nightType===4&&((hours >= 21 && hours < 24)||(hours>=0&&hours<2)||(hours===2&&min<30))&&day!==1) return true;
     else return false;
 };
 

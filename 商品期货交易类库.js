@@ -9,6 +9,9 @@
 function main() {
     var p = $.NewPositionManager();
     p.OpenShort("MA609", 1);
+    Log(p.GetPosition("MA609", PD_SHORT));
+    Log(p.GetAccount());
+    Log(p.Account());
     Sleep(60000 * 10);
     p.Cover("MA609");
     LogProfit(p.Profit());
@@ -18,19 +21,30 @@ function main() {
 `不断完善中...`
 
 
-参数            默认值  描述
-----------  -----  ----------
-Interval    500    失败重试间隔(毫秒)
-SlidePrice    0.1  下单滑价(元)
+参数         默认值    描述
+---------  -----  ----------
+Interval   500    失败重试间隔(毫秒)
+SlideTick  true   滑价点数(整数)
 */
 
-function GetPosition(e, contractType, direction) {
+function init() {
+    if (typeof(SlideTick) === 'undefined') {
+        SlideTick = 1;
+    } else {
+        SlideTick = parseInt(SlideTick);
+    }
+    Log("商品交易类库加载成功");
+}
+
+function GetPosition(e, contractType, direction, positions) {
     var allCost = 0;
     var allAmount = 0;
     var allProfit = 0;
     var allFrozen = 0;
     var posMargin = 0;
-    var positions = _C(e.GetPosition);
+    if (typeof(positions) === 'undefined' || !positions) {
+        positions = _C(e.GetPosition);
+    }
     for (var i = 0; i < positions.length; i++) {
         if ( positions[i].ContractType == contractType && 
             (((positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) && direction == PD_LONG) || ((positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) && direction == PD_SHORT)) 
@@ -82,9 +96,9 @@ function Open(e, contractType, direction, opAmount) {
         e.SetDirection(direction == PD_LONG ? "buy" : "sell");
         var orderId;
         if (direction == PD_LONG) {
-            orderId = e.Buy(depth.Asks[0].Price + SlidePrice, Math.min(amount, depth.Asks[0].Amount), contractType, 'Ask', depth.Asks[0]);
+            orderId = e.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Asks[0].Amount), contractType, 'Ask', depth.Asks[0]);
         } else {
-            orderId = e.Sell(depth.Bids[0].Price - SlidePrice, Math.min(amount, depth.Bids[0].Amount), contractType, 'Bid', depth.Bids[0]);
+            orderId = e.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Bids[0].Amount), contractType, 'Bid', depth.Bids[0]);
         }
         // CancelPendingOrders
         while (true) {
@@ -133,12 +147,12 @@ function Cover(e, contractType) {
             if (positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) {
                 depth = _C(e.GetDepth);
                 e.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
-                e.Sell(depth.Bids[0].Price - SlidePrice, Math.min(amount, depth.Bids[0].Amount), contractType, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
+                e.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Bids[0].Amount), contractType, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
                 n++;
             } else if (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) {
                 depth = _C(e.GetDepth);
                 e.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
-                e.Buy(depth.Asks[0].Price + SlidePrice, Math.min(amount, depth.Asks[0].Amount), contractType, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
+                e.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Asks[0].Amount), contractType, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
                 n++;
             }
         }
@@ -161,6 +175,54 @@ function Cover(e, contractType) {
     }
 }
 
+var trans = {
+    "AccountID": "投资者帐号",
+    "Available": "可用资金",
+    "Balance": "期货结算准备金",
+    "BrokerID": "经纪公司代码",
+    "CashIn": "资金差额",
+    "CloseProfit": "平仓盈亏",
+    "Commission": "手续费",
+    "Credit": "信用额度",
+    "CurrMargin": "当前保证金总额",
+    "CurrencyID": "币种代码",
+    "DeliveryMargin": "投资者交割保证金",
+    "Deposit": "入金金额",
+    "ExchangeDeliveryMargin": "交易所交割保证金",
+    "ExchangeMargin": "交易所保证金",
+    "FrozenCash": "冻结的资金",
+    "FrozenCommission": "冻结的手续费",
+    "FrozenMargin": "冻结的保证金",
+    "FundMortgageAvailable": "货币质押余额",
+    "FundMortgageIn": "货币质入金额",
+    "FundMortgageOut": "货币质出金额",
+    "Interest": "利息收入",
+    "InterestBase": "利息基数",
+    "Mortgage": "质押金额",
+    "MortgageableFund": "可质押货币金额",
+    "PositionProfit": "持仓盈亏",
+    "PreBalance": "上次结算准备金",
+    "PreCredit": "上次信用额度",
+    "PreDeposit": "上次存款额",
+    "PreFundMortgageIn": "上次货币质入金额",
+    "PreFundMortgageOut": "上次货币质出金额",
+    "PreMargin": "上次占用的保证金",
+    "PreMortgage": "上次质押金额",
+    "Reserve": "基本准备金",
+    "ReserveBalance": "保底期货结算准备金",
+    "SettlementID": "结算编号",
+    "SpecProductCloseProfit": "特殊产品持仓盈亏",
+    "SpecProductCommission": "特殊产品手续费",
+    "SpecProductExchangeMargin": "特殊产品交易所保证金",
+    "SpecProductFrozenCommission": "特殊产品冻结手续费",
+    "SpecProductFrozenMargin": "特殊产品冻结保证金",
+    "SpecProductMargin": "特殊产品占用保证金",
+    "SpecProductPositionProfit": "特殊产品持仓盈亏",
+    "SpecProductPositionProfitByAlg": "根据持仓盈亏算法计算的特殊产品持仓盈亏",
+    "TradingDay": "交易日",
+    "Withdraw": "出金金额",
+    "WithdrawQuota": "可取资金",
+};
 
 var PositionManager = (function() {
     function PositionManager(e) {
@@ -173,27 +235,54 @@ var PositionManager = (function() {
         this.e = e;
         this.account = null;
     }
-    PositionManager.prototype.GetAccount = function() {
-        return _C(this.e.GetAccount);
+    // Get Cache
+    PositionManager.prototype.Account = function() {
+        if (!this.account) {
+            this.account = _C(this.e.GetAccount);
+        }
+        return this.account;
     };
-
+    PositionManager.prototype.GetAccount = function(getTable) {
+        this.account = _C(this.e.GetAccount);
+        if (typeof(getTable) !== 'undefined' && getTable) {
+            var tbl = { type : "table", title : "账户信息", cols : ["字段", "描述", "值"], rows : [] };
+            try {
+                var fields = JSON.parse(this.e.GetRawJSON());
+                for (var k  in fields) {
+                    var desc = trans[k];
+                    var v = fields[k];
+                    if (typeof(v) === 'number') {
+                        v = _N(v, 5);
+                    }
+                    tbl.rows.push([k, typeof(desc) === 'undefined' ? '--' : desc, v]);
+                }
+            } catch(e) {};
+            return tbl;
+        }
+        return this.account;
+    };
+    
+    PositionManager.prototype.GetPosition = function(contractType, direction, positions) {
+        return GetPosition(this.e, contractType, direction, positions);
+    };
+    
     PositionManager.prototype.OpenLong = function(contractType, shares) {
         if (!this.account) {
-            this.account = _C(exchange.GetAccount);
+            this.account = _C(this.e.GetAccount);
         }
         return Open(this.e, contractType, PD_LONG, shares);
     };
 
     PositionManager.prototype.OpenShort = function(contractType, shares) {
         if (!this.account) {
-            this.account = _C(exchange.GetAccount);
+            this.account = _C(this.e.GetAccount);
         }
         return Open(this.e, contractType, PD_SHORT, shares);
     };
 
     PositionManager.prototype.Cover = function(contractType) {
         if (!this.account) {
-            this.account = _C(exchange.GetAccount);
+            this.account = _C(this.e.GetAccount);
         }
         return Cover(this.e, contractType);
     };
@@ -214,6 +303,9 @@ $.NewPositionManager = function(e) {
 function main() {
     var p = $.NewPositionManager();
     p.OpenShort("MA609", 1);
+    Log(p.GetPosition("MA609", PD_SHORT));
+    Log(p.GetAccount());
+    Log(p.Account());
     Sleep(60000 * 10);
     p.Cover("MA609");
     LogProfit(p.Profit());

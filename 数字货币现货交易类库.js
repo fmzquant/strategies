@@ -172,7 +172,7 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
             prePrice = tradePrice;
             orderId = tradeFunc(tradePrice, doAmount, ticker);
         } else {
-            if (Math.abs(tradePrice - prePrice) > maxSpace) {
+            if (mode === 0 || (Math.abs(tradePrice - prePrice) > maxSpace)) {
                 orderId = null;
             }
             var order = StripOrders(exchange, orderId);

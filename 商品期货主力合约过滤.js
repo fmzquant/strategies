@@ -44,7 +44,8 @@ function main() {
     for (var product in products) {
         var ss = products[product];
         Log("订阅", product, "的", ss.length, "种合约, 以识别主力合约");
-        var vol = 0, volIdx = 0;
+        var vol = 0,
+            volIdx = 0;
         for (var i = 0; i < ss.length; i++) {
             _C(exchange.SetContractType, ss[i]);
         }
@@ -52,15 +53,19 @@ function main() {
         for (var i = 0; i < ss.length; i++) {
             _C(exchange.SetContractType, ss[i]);
             var ticker = exchange.GetTicker();
-            if (ticker && ticker.Volume > vol) {
-                vol = ticker.Volume;
-                volIdx = i;
+
+            if (ticker) {
+                var obj = JSON.parse(exchange.GetRawJSON());
+                if (obj.OpenInterest > vol) {
+                    vol = obj.OpenInterest;
+                    volIdx = i;
+                }
             }
         }
         // 取消订阅行情(之后此合约K线将停止收集), 当然也可以不取消, 这里演示用
         for (var i = 0; i < ss.length; i++) {
-            _C(exchange.SetContractType, "-"+ss[i]);
+            _C(exchange.SetContractType, "-" + ss[i]);
         }
-        Log("主力合约为", ss[volIdx], "交易量", vol, '#ff0000');
+        Log("主力合约为", ss[volIdx], "持仓", vol, '#ff0000');
     }
 }
