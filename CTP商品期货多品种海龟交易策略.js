@@ -35,7 +35,12 @@ MaxLots         4                                                               
 RMode           0                                                                                                                进度恢复模式: 自动|手动
 VMStatus        {}                                                                                                               手动恢复字符串
 WXPush          true                                                                                                             推送交易信息
+
+按钮     默认值         描述
+-----  ----------  -----
+暂停/继续  __button__  暂停/继续
 */
+
 
 
 var _bot = $.NewPositionManager();
@@ -85,7 +90,8 @@ var TTManager = {
             downLine: 0,
             symbolDetail: symbolDetail,
             lastErr: "",
-            lastErrTime: ""
+            lastErrTime: "",
+            isTrading: false
         };
 
         obj.setLastError = function(err) {
@@ -145,6 +151,10 @@ var TTManager = {
             return obj.status;
         };
         obj.Poll = function() {
+            obj.status.isTrading = $.IsTrading(obj.symbol);
+            if (!obj.status.isTrading) {
+                return;
+            }
             var suffix = WXPush ? '@' : '';
             // switch symbol
             _C(exchange.SetContractType, obj.symbol);
@@ -321,6 +331,13 @@ function main() {
     var preTotalHold = -1;
     var lastStatus = '';
     while (true) {
+        if (GetCommand() === "暂停/继续") {
+            Log("暂停交易中...");
+            while (GetCommand() !== "暂停/继续") {
+                Sleep(1000);
+            }
+            Log("继续交易中...");
+        }
         while (!exchange.IO("status")) {
             Sleep(3000);
             LogStatus("正在等待与交易服务器连接, " + new Date() + "\n" + lastStatus);
@@ -334,7 +351,7 @@ function main() {
         var tblMarket = {
             type: "table",
             title: "数据信息",
-            cols: ["合约名称", "合约乘数", "保证金率", "柱线长度", "上线", "下线", "异常描述", "发生时间"],
+            cols: ["合约名称", "合约乘数", "保证金率", "交易时间", "柱线长度", "上线", "下线", "异常描述", "发生时间"],
             rows: []
         };
         var totalHold = 0;
@@ -347,7 +364,7 @@ function main() {
                 vmStatus[d.symbol] = d.vm;
             }
             tblStatus.rows.push([d.symbolDetail.InstrumentName, d.holdAmount == 0 ? '--' : (d.marketPosition > 0 ? '多' : '空'), d.holdPrice, d.holdAmount, d.holdProfit, Math.abs(d.marketPosition), d.open, d.st, d.cover, d.lastPrice, d.N]);
-            tblMarket.rows.push([d.symbolDetail.InstrumentName, d.symbolDetail.VolumeMultiple, _N(d.symbolDetail.LongMarginRatio, 4) + '/' + _N(d.symbolDetail.ShortMarginRatio, 4), d.recordsLen, d.upLine, d.downLine, d.lastErr, d.lastErrTime]);
+            tblMarket.rows.push([d.symbolDetail.InstrumentName, d.symbolDetail.VolumeMultiple, _N(d.symbolDetail.LongMarginRatio, 4) + '/' + _N(d.symbolDetail.ShortMarginRatio, 4), (d.isTrading ? '是#0000ff' : '否#ff0000'), d.recordsLen, d.upLine, d.downLine, d.lastErr, d.lastErrTime]);
             totalHold += Math.abs(d.holdAmount);
         }
         var now = new Date();
@@ -360,7 +377,7 @@ function main() {
         } else {
             tblAssets.rows.unshift(["NowAccount", "当前可用", nowAccount], ["InitAccount", "初始资产", initAccount]);
         }
-        lastStatus = '`' + JSON.stringify([tblStatus, tblMarket, tblAssets]) + '`\n轮询耗时: ' + elapsed + ' 毫秒, 当前时间: ' + now.toLocaleString();
+        lastStatus = '`' + JSON.stringify([tblStatus, tblMarket, tblAssets]) + '`\n轮询耗时: ' + elapsed + ' 毫秒, 当前时间: ' + now.toLocaleString() + ', 星期' + ['日', '一', '二', '三', '四', '五', '六'][now.getDay()];
         if (totalHold > 0) {
             lastStatus += "\n手动恢复字符串: " + JSON.stringify(vmStatus);
         }

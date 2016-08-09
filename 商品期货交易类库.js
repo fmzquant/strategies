@@ -15,6 +15,7 @@ function main() {
     Sleep(60000 * 10);
     p.Cover("MA609");
     LogProfit(p.Profit());
+    Log($.IsTrading('MA609'));
 }
 ```
 
@@ -299,6 +300,72 @@ $.NewPositionManager = function(e) {
     return new PositionManager(e);
 };
 
+// Via: http://mt.sohu.com/20160429/n446860150.shtml
+$.IsTrading = function(symbol) {
+    var now = new Date();
+    var day = now.getDay();
+    var hour = now.getHours();
+    var minute = now.getMinutes();
+
+    if (day === 0 || (day === 6 && (hour > 2 || hour == 2 && minute > 30))) {
+        return false;
+    }
+
+    var p, i, shortName = "";
+    for (i = 0; i < symbol.length; i++) {
+        var ch = symbol.charCodeAt(i);
+        if (ch >= 48 && symbol.charCodeAt(i) <= 57) { 
+            break;
+        }
+        shortName += symbol[i].toUpperCase();
+    }
+
+    var period = [[9,0,10,15], [10,30,11,30], [13,30,15,0]];
+    if (shortName === "IH" || shortName === "IF" || shortName === "IC") {
+        period = [[9,30,11,30], [13,0,15,0]];
+    } else if (shortName === "TF") {
+        period = [[9,15,11,30], [13,0,15,15]];
+    }
+    
+    
+    if (day >= 1 && day <= 5) {
+        for (i = 0; i < period.length; i++) {
+            p = period[i];
+            if ((hour > p[0] || (hour == p[0] && minute>=p[1])) && (hour < p[2] || (hour == p[2] && minute<p[3]))) {
+                return true;
+            }
+        }
+    }
+
+    var nperiod = [
+        [['AU', 'AG'], [21,0,02,30]],
+        [['CU', 'AL', 'ZN', 'PB', 'SN', 'NI'], [21,0,01,0]],
+        [['RU', 'RB', 'HC', 'BU'], [21,0,23,0]],
+        [['P', 'J', 'M', 'Y', 'A', 'B', 'JM', 'I'], [21,0,23,30]],
+        [['SR', 'CF', 'RM', 'MA', 'PTA', 'ZC', 'FG', 'IO'], [21,0,23,30]],
+    ];
+    for (i = 0; i < nperiod.length; i++) {
+        for (var j = 0; j < nperiod[i][0].length; j++) {
+            if (nperiod[i][0][j] === shortName) {
+                p = nperiod[i][1];
+                var condA = hour > p[0] || (hour == p[0] && minute >= p[1]);
+                var condB = hour < p[2] || (hour == p[2] && minute <  p[3]);
+                // in one day
+                if (p[2] >= p[0]) {
+                    if ((day >= 1 && day <= 5) && condA && condB) {
+                        return true;
+                    }
+                } else {
+                    if (((day >= 1 && day <= 5) && condA) || ((day >= 2 && day <= 6) && condB)) {
+                        return true;
+                    }
+                }
+                return false;
+            }
+        }
+    }
+    return false;
+};
 
 function main() {
     var p = $.NewPositionManager();
@@ -309,4 +376,5 @@ function main() {
     Sleep(60000 * 10);
     p.Cover("MA609");
     LogProfit(p.Profit());
+    Log($.IsTrading("MA609"));
 }
