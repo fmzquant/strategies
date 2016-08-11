@@ -4,10 +4,12 @@
 > 开源策略列表
 
 
+ - [从第三方获取K线 (商品期货版) Rev. 160810](https://www.botvs.com/strategy/15498)
+ - [收益率统计](https://www.botvs.com/strategy/19329)
+ - [高频交易策略之 - Penny Jump](https://www.botvs.com/strategy/358)
  - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
  - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [图表模板（增加状态栏表格功能）](https://www.botvs.com/strategy/16848)
- - [收益率统计](https://www.botvs.com/strategy/19329)
  - [从第三方网站获取K线 (0804更新)](https://www.botvs.com/strategy/12977)
  - [不要怂就是干](https://www.botvs.com/strategy/18943)
  - [入门模板之各个平台余额](https://www.botvs.com/strategy/48)
@@ -17,7 +19,6 @@
  - [商品期货交易类库(增加下限价单功能)](https://www.botvs.com/strategy/14198)
  - [获取OK期货实时限价](https://www.botvs.com/strategy/17028)
  - [定期定额投资BTC盈利验证](https://www.botvs.com/strategy/16845)
- - [从第三方获取K线 (商品期货版)](https://www.botvs.com/strategy/15498)
  - [My-1-价值平均定投策略](https://www.botvs.com/strategy/8602)
  - [记录净资产变动情况2.0](https://www.botvs.com/strategy/8916)
  - [时间转换模板](https://www.botvs.com/strategy/14517)
@@ -78,7 +79,6 @@
  - [取消所有订单](https://www.botvs.com/strategy/280)
  - [新手入门之 - 下买单卖单](https://www.botvs.com/strategy/796)
  - [短信通知接口测试](https://www.botvs.com/strategy/653)
- - [高频交易策略之 - Penny Jump](https://www.botvs.com/strategy/358)
  - [抢盘口做市策略 - 高频逼近型](https://www.botvs.com/strategy/348)
  - [国外知名策略 Dual Thrust](https://www.botvs.com/strategy/153)
  - [单平台均衡策略](https://www.botvs.com/strategy/345)

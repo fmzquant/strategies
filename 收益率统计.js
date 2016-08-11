@@ -30,11 +30,20 @@ function main() {
 上30日: 收200.12元(1.565%)，月化1.567%，年化19.076%，回撤1.521%
 总: 收4554.11元(45.541%)，最大回撤3.251%，统计时间74天23小时
 
+
+参数             默认值    描述
+-------------  -----  ---------------------
+SYS_LOGPROFIT  true   是否同时记录到系统自带的LogProfit
 */
 
 $.LogProfit = function(profit) {
     var args = Array.prototype.slice.call(arguments);
-    LogProfit.apply(this, args);
+    if (SYS_LOGPROFIT) {
+        LogProfit.apply(this, args);
+    } else {
+        args.unshift('收益');
+        Log.apply(this,args);
+    }
 
     var _history = $.GetAllProfit();
     _history.push([ Math.floor(new Date().getTime()/1000), profit]);
