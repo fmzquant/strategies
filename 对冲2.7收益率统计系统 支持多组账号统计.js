@@ -69,7 +69,7 @@ function main() {
             tooltip: {
                 valueDecimals: 4
             }
-        })
+        });
     }
     var chart = Chart(cfg);
     var counter = 0;

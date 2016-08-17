@@ -314,7 +314,7 @@ $.IsTrading = function(symbol) {
     var p, i, shortName = "";
     for (i = 0; i < symbol.length; i++) {
         var ch = symbol.charCodeAt(i);
-        if (ch >= 48 && symbol.charCodeAt(i) <= 57) { 
+        if (ch >= 48 && ch <= 57) { 
             break;
         }
         shortName += symbol[i].toUpperCase();
