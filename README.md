@@ -4,6 +4,7 @@
 > 开源策略列表
 
 
+ - [获取周K线](https://www.botvs.com/strategy/20226)
  - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [对冲2.7收益率统计系统 支持多组账号统计](https://www.botvs.com/strategy/18678)
  - [从第三方获取K线 (商品期货版) Rev. 160810](https://www.botvs.com/strategy/15498)

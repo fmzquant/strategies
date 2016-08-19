@@ -7,6 +7,7 @@
 - 只支持操作CTP商品期货
 - 支持自动或手动恢复进度
 - 可同时操作多个不同品种
+- 增加时间段区分与各种网络错误问题的应对处理
 - 移仓功能目前正在加入中
 
 请下载最新托管者并比较版本号是否最新
@@ -35,13 +36,12 @@ MaxLots         4                                                               
 RMode           0                                                                                                                进度恢复模式: 自动|手动
 VMStatus        {}                                                                                                               手动恢复字符串
 WXPush          true                                                                                                             推送交易信息
+MaxTaskRetry    5                                                                                                                开仓最多重试次数
 
 按钮     默认值         描述
 -----  ----------  -----
 暂停/继续  __button__  暂停/继续
 */
-
-
 
 var _bot = $.NewPositionManager();
 
@@ -58,6 +58,21 @@ var TTManager = {
             Log("合约", symbolDetail.InstrumentName, "一手", symbolDetail.VolumeMultiple, "份, 最大下单量", symbolDetail.MaxLimitOrderVolume, "保证金率:", _N(symbolDetail.LongMarginRatio), _N(symbolDetail.ShortMarginRatio), "交割日期", symbolDetail.StartDelivDate);
         }
 
+        var ACT_IDLE = 0;
+        var ACT_LONG = 1;
+        var ACT_SHORT = 2;
+        var ACT_COVER = 3;
+
+
+        var ERR_SUCCESS = 0;
+        var ERR_SET_SYMBOL = 1;
+        var ERR_GET_ORDERS = 2;
+        var ERR_GET_POS = 3;
+        var ERR_TRADE = 4;
+        var ERR_GET_DEPTH = 5;
+        var ERR_NOT_TRADING = 6;
+        var errMsg = ["成功", "切换合约失败", "获取订单失败", "获取持仓失败", "交易下单失败", "获取深度失败", "不在交易时间"];
+
         var obj = {
             symbol: symbol,
             riskRatio: riskRatio,
@@ -70,6 +85,18 @@ var TTManager = {
             multiplierN: multiplierN,
             multiplierS: multiplierS
         };
+        obj.task = {
+            action: ACT_IDLE,
+            amount: 0,
+            dealAmount: 0,
+            avgPrice: 0,
+            preCost: 0,
+            preAmount: 0,
+            init: false,
+            retry: 0,
+            desc: "空闲",
+            onFinish: null
+        }
         obj.maxLots = maxLots;
         obj.lastPrice = 0;
         obj.symbolDetail = symbolDetail;
@@ -150,11 +177,197 @@ var TTManager = {
             }
             return obj.status;
         };
-        obj.Poll = function() {
+        obj.setTask = function(action, amount, onFinish) {
+            obj.task.init = false;
+            obj.task.retry = 0;
+            obj.task.action = action;
+            obj.task.preAmount = 0;
+            obj.task.preCost = 0;
+            obj.task.amount = typeof(amount) === 'number' ? amount : 0;
+            obj.task.onFinish = onFinish;
+            if (action == ACT_IDLE) {
+                obj.task.desc = "空闲";
+                obj.task.onFinish = null;
+            } else {
+                if (action !== ACT_COVER) {
+                    obj.task.desc = (action == ACT_LONG ? "加多仓" : "加空仓") + "(" + amount + ")";
+                } else {
+                    obj.task.desc = "平仓";
+                }
+                Log("接收到任务", obj.symbol, obj.task.desc);
+                // process immediately
+                obj.Poll(true);
+            }
+        };
+        obj.processTask = function() {
+            var insDetail = exchange.SetContractType(obj.symbol);
+            if (!insDetail) {
+                return ERR_SET_SYMBOL;
+            }
+            var SlideTick = 1;
+            var ret = false;
+            if (obj.task.action == ACT_COVER) {
+                var hasPosition = false;
+                do {
+                    if (!$.IsTrading(obj.symbol)) {
+                        return ERR_NOT_TRADING;
+                    }
+                    hasPosition = false;
+                    var positions = exchange.GetPosition();
+                    if (!positions) {
+                        return ERR_GET_POS;
+                    }
+                    var depth = exchange.GetDepth();
+                    if (!depth) {
+                        return ERR_GET_DEPTH;
+                    }
+                    var orderId = null;
+                    for (var i = 0; i < positions.length; i++) {
+                        if (positions[i].ContractType !== obj.symbol) {
+                            continue;
+                        }
+                        hasPosition = true;
+                        var amount = Math.min(insDetail.MaxLimitOrderVolume, positions[i].Amount);
+                        if (positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) {
+                            exchange.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
+                            orderId = exchange.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Bids[0].Amount), obj.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
+                        } else if (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) {
+                            exchange.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closebuy");
+                            orderId = exchange.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Asks[0].Amount), obj.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
+                        }
+                    }
+                    if (hasPosition) {
+                        if (!orderId) {
+                            return ERR_TRADE;
+                        }
+                        Sleep(1000);
+                        while (true) {
+                            // Wait order, not retry
+                            var orders = exchange.GetOrders();
+                            if (!orders) {
+                                return ERR_GET_ORDERS;
+                            }
+                            if (orders.length == 0) {
+                                break;
+                            }
+                            for (var i = 0; i < orders.length; i++) {
+                                exchange.CancelOrder(orders[i].Id);
+                                Sleep(500);
+                            }
+                        }
+                    }
+                } while (hasPosition);
+                ret = true;
+            } else if (obj.task.action == ACT_LONG || obj.task.action == ACT_SHORT) {
+                do {
+                    if (!$.IsTrading(obj.symbol)) {
+                        return ERR_NOT_TRADING;
+                    }
+                    Sleep(1000);
+                    while (true) {
+                        // Wait order, not retry
+                        var orders = exchange.GetOrders();
+                        if (!orders) {
+                            return ERR_GET_ORDERS;
+                        }
+                        if (orders.length == 0) {
+                            break;
+                        }
+                        for (var i = 0; i < orders.length; i++) {
+                            exchange.CancelOrder(orders[i].Id);
+                            Sleep(500);
+                        }
+                    }
+                    var positions = exchange.GetPosition();
+                    // Error
+                    if (!positions) {
+                        return ERR_GET_POS;
+                    }
+                    // search position
+                    var pos = null;
+                    for (var i = 0; i < positions.length; i++) {
+                        if (positions[i].ContractType == obj.symbol && (((positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) && obj.task.action == ACT_LONG) || ((positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) && obj.task.action == ACT_SHORT))) {
+                            if (!pos) {
+                                pos = positions[i];
+                                pos.Cost = positions[i].Price * positions[i].Amount;
+                            } else {
+                                pos.Amount += positions[i].Amount;
+                                pos.Profit += positions[i].Profit;
+                                pos.Cost += positions[i].Price * positions[i].Amount;
+                            }
+                        }
+                    }
+                    // record pre position
+                    if (!obj.task.init) {
+                        obj.task.init = true;
+                        if (pos) {
+                            obj.task.preAmount = pos.Amount;
+                            obj.task.preCost = pos.Cost;
+                        } else {
+                            obj.task.preAmount = 0;
+                            obj.task.preCost = 0;
+                        }
+                    }
+                    var remain = obj.task.amount;
+                    if (pos) {
+                        obj.task.dealAmount = pos.Amount - obj.task.preAmount;
+                        remain = parseInt(obj.task.amount - obj.task.dealAmount);
+                        if (remain <= 0 || obj.task.retry >= MaxTaskRetry) {
+                            ret = {
+                                price: (pos.Cost - obj.task.preCost) / (pos.Amount - obj.task.preAmount),
+                                amount: (pos.Amount - obj.task.preAmount),
+                                position: pos
+                            };
+                            break;
+                        }
+                    } else if (obj.task.retry >= MaxTaskRetry) {
+                        ret = null;
+                        break;
+                    }
+
+                    var depth = exchange.GetDepth();
+                    if (!depth) {
+                        return ERR_GET_DEPTH;
+                    }
+                    var orderId = null;
+                    if (obj.task.action == ACT_LONG) {
+                        exchange.SetDirection("buy");
+                        orderId = exchange.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(remain, depth.Asks[0].Amount), obj.symbol, 'Ask', depth.Asks[0]);
+                    } else {
+                        exchange.SetDirection("sell");
+                        orderId = exchange.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(remain, depth.Bids[0].Amount), obj.symbol, 'Bid', depth.Bids[0]);
+                    }
+                    // symbol not in trading or other else happend
+                    if (!orderId) {
+                        obj.task.retry++;
+                        return ERR_TRADE;
+                    }
+                } while (true);
+            }
+            if (obj.task.onFinish) {
+                obj.task.onFinish(ret);
+            }
+            obj.setTask(ACT_IDLE);
+            return ERR_SUCCESS;
+        };
+        obj.Poll = function(subroutine) {
             obj.status.isTrading = $.IsTrading(obj.symbol);
             if (!obj.status.isTrading) {
                 return;
             }
+            if (obj.task.action != ACT_IDLE) {
+                var retCode = obj.processTask();
+                if (obj.task.action != ACT_IDLE) {
+                    obj.setLastError("任务没有处理成功: " + errMsg[retCode] + ", " + obj.task.desc + ", 重试: " + obj.task.retry);
+                } else {
+                    obj.setLastError();
+                }
+                return;
+            }
+            if (typeof(subroutine) !== 'undefined' && subroutine) {
+                return;
+            }
+            // Loop
             var suffix = WXPush ? '@' : '';
             // switch symbol
             _C(exchange.SetContractType, obj.symbol);
@@ -217,9 +430,10 @@ var TTManager = {
                 return;
             }
             if (opCode == 3) {
-                _bot.Cover(obj.symbol);
-                obj.reset();
-                _G(obj.symbol, null);
+                obj.setTask(ACT_COVER, 0, function(ret) {
+                    obj.reset();
+                    _G(obj.symbol, null);
+                });
                 return;
             }
             // Open
@@ -238,31 +452,23 @@ var TTManager = {
                 obj.setLastError("可开 " + unit + " 手 过小无法开仓");
                 return;
             }
-
-
-            var ret = null;
-            if (opCode == 1) {
-                ret = _bot.OpenLong(obj.symbol, unit);
-            } else {
-                ret = _bot.OpenShort(obj.symbol, unit);
-            }
-            if (!ret) {
-                obj.setLastError("下单失败");
-                return;
-            }
-
-            Log(obj.symbolDetail.InstrumentName, obj.marketPosition == 0 ? "开仓" : "加仓", "离市周期", obj.leavePeriod, suffix);
-            obj.N = N;
-            obj.openPrice = ret.price;
-            obj.holdPrice = ret.position.Price;
-            if (obj.marketPosition == 0) {
-                obj.status.open++;
-            }
-            obj.holdAmount = ret.position.Amount;
-            obj.marketPosition += opCode == 1 ? 1 : -1;
-            obj.status.vm = [obj.marketPosition, obj.openPrice, N, obj.leavePeriod, obj.preBreakoutFailure];
-            _G(obj.symbol, obj.status.vm);
-
+            obj.setTask((opCode == 1 ? ACT_LONG : ACT_SHORT), unit, function(ret) {
+                if (!ret) {
+                    obj.setLastError("下单失败");
+                    return;
+                }
+                Log(obj.symbolDetail.InstrumentName, obj.marketPosition == 0 ? "开仓" : "加仓", "离市周期", obj.leavePeriod, suffix);
+                obj.N = N;
+                obj.openPrice = ret.price;
+                obj.holdPrice = ret.position.Price;
+                if (obj.marketPosition == 0) {
+                    obj.status.open++;
+                }
+                obj.holdAmount = ret.position.Amount;
+                obj.marketPosition += opCode == 1 ? 1 : -1;
+                obj.status.vm = [obj.marketPosition, obj.openPrice, N, obj.leavePeriod, obj.preBreakoutFailure];
+                _G(obj.symbol, obj.status.vm);
+            });
         };
         var vm = null;
         if (RMode === 0) {
@@ -350,18 +556,20 @@ function main() {
         };
         var tblMarket = {
             type: "table",
-            title: "数据信息",
+            title: "运行状态",
             cols: ["合约名称", "合约乘数", "保证金率", "交易时间", "柱线长度", "上线", "下线", "异常描述", "发生时间"],
             rows: []
         };
         var totalHold = 0;
         var vmStatus = {};
         var ts = new Date().getTime();
+        var holdSymbol = 0;
         for (var i = 0; i < tts.length; i++) {
             tts[i].Poll();
             var d = tts[i].Status();
             if (d.holdAmount > 0) {
                 vmStatus[d.symbol] = d.vm;
+                holdSymbol++;
             }
             tblStatus.rows.push([d.symbolDetail.InstrumentName, d.holdAmount == 0 ? '--' : (d.marketPosition > 0 ? '多' : '空'), d.holdPrice, d.holdAmount, d.holdProfit, Math.abs(d.marketPosition), d.open, d.st, d.cover, d.lastPrice, d.N]);
             tblMarket.rows.push([d.symbolDetail.InstrumentName, d.symbolDetail.VolumeMultiple, _N(d.symbolDetail.LongMarginRatio, 4) + '/' + _N(d.symbolDetail.ShortMarginRatio, 4), (d.isTrading ? '是#0000ff' : '否#ff0000'), d.recordsLen, d.upLine, d.downLine, d.lastErr, d.lastErrTime]);
@@ -377,7 +585,7 @@ function main() {
         } else {
             tblAssets.rows.unshift(["NowAccount", "当前可用", nowAccount], ["InitAccount", "初始资产", initAccount]);
         }
-        lastStatus = '`' + JSON.stringify([tblStatus, tblMarket, tblAssets]) + '`\n轮询耗时: ' + elapsed + ' 毫秒, 当前时间: ' + now.toLocaleString() + ', 星期' + ['日', '一', '二', '三', '四', '五', '六'][now.getDay()];
+        lastStatus = '`' + JSON.stringify([tblStatus, tblMarket, tblAssets]) + '`\n轮询耗时: ' + elapsed + ' 毫秒, 当前时间: ' + now.toLocaleString() + ', 星期' + ['日', '一', '二', '三', '四', '五', '六'][now.getDay()] + ", 持有品种个数: " + holdSymbol;
         if (totalHold > 0) {
             lastStatus += "\n手动恢复字符串: " + JSON.stringify(vmStatus);
         }
