@@ -4,14 +4,16 @@
 > 开源策略列表
 
 
+ - [Python简单测试策略](https://www.botvs.com/strategy/20761)
+ - [策略框架](https://www.botvs.com/strategy/20663)
+ - [高频交易策略之 - Penny Jump](https://www.botvs.com/strategy/358)
+ - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
+ - [图表模板（增加状态栏表格功能）](https://www.botvs.com/strategy/16848)
  - [获取周K线](https://www.botvs.com/strategy/20226)
  - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [对冲2.7收益率统计系统 支持多组账号统计](https://www.botvs.com/strategy/18678)
  - [从第三方获取K线 (商品期货版) Rev. 160810](https://www.botvs.com/strategy/15498)
  - [收益率统计](https://www.botvs.com/strategy/19329)
- - [高频交易策略之 - Penny Jump](https://www.botvs.com/strategy/358)
- - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
- - [图表模板（增加状态栏表格功能）](https://www.botvs.com/strategy/16848)
  - [从第三方网站获取K线 (0804更新)](https://www.botvs.com/strategy/12977)
  - [不要怂就是干](https://www.botvs.com/strategy/18943)
  - [入门模板之各个平台余额](https://www.botvs.com/strategy/48)

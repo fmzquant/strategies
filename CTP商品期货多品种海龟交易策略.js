@@ -481,7 +481,7 @@ var TTManager = {
             obj.reset(vm[0], vm[1], vm[2], vm[3], vm[4]);
         } else {
             if (needRestore) {
-                throw "没有找到" + obj.symbol + "的进度恢复信息";
+                Log("没有找到" + obj.symbol + "的进度恢复信息");
             }
             obj.reset();
         }

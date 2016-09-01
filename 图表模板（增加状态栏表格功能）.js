@@ -14,6 +14,7 @@ indicators_1    指标1    指标1
 indicators_2    指标2    指标2
 Interval        500    间隔（毫秒）
 isOpenRightY    true   是否开启右边Y轴
+lineType        line   指标线类型
 */
 
 /*
@@ -44,8 +45,8 @@ var ChartObj = {//画图
     series: [//系列
         {type:'candlestick',yAxis:0,name:'K',id:'KLine',data:[]},
         {type:'flags',onSeries:'KLine',data:[]},
-        {name:indicators_1,type:'spline',yAxis:isOpenRightY?1:0,data:[]},
-        {name:indicators_2,type:'spline',yAxis:isOpenRightY?1:0,data:[]}
+        {name:indicators_1,type:lineType,yAxis:isOpenRightY?1:0,data:[]},
+        {name:indicators_2,type:lineType,yAxis:isOpenRightY?1:0,data:[]}
         //{name:indicators_1,type:'spline',yAxis:1,data:[]},
         //{name:indicators_2,type:'spline',yAxis:1,data:[]}
         ]                  
@@ -232,10 +233,10 @@ function CreateTableString(cols,rows){
     var tableString = strHead + srtTable_type + strTable_title + strTable_cols_begin + strCols + strTable_cols_end + strTable_rows_begin + strRows + strTable_rows_end + strEnd;
     return tableString;
 }
-$.UpDateLogStatus = function() { //更新状态栏 
+$.UpDateLogStatus = function(msg) { //更新状态栏 
     //列用ABC表示，行用0123表示
     ConnectDate(g_cols,g_rows);//链接数据
-    LogStatus("当前时间：" + (new Date()) + "\n" + "`" + JSON.stringify(objTable) + "`");//更新状态栏
+    LogStatus("当前时间：" + (new Date()) + "msg:" + msg +  "\n" + "`" + JSON.stringify(objTable) + "`");//更新状态栏
 };
 //----------------------------------状态栏表格模块over-------------------------------------------------------
 //----------------------------------导出函数----------------------------------------------------------------
@@ -341,4 +342,5 @@ function main(){
 }
 /*修改
 1、增加了是否开启右边坐标轴
+2、增加参数  lineType :  spline  /   line
 */
