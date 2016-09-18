@@ -232,7 +232,7 @@ var TTManager = {
                             exchange.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
                             orderId = exchange.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Bids[0].Amount), obj.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
                         } else if (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) {
-                            exchange.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closebuy");
+                            exchange.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
                             orderId = exchange.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Asks[0].Amount), obj.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
                         }
                     }
@@ -408,12 +408,12 @@ var TTManager = {
                 }
             } else {
                 var spread = obj.marketPosition > 0 ? (obj.openPrice - lastPrice) : (lastPrice - obj.openPrice);
-                if (spread > (obj.N * 2)) {
+                if (spread > (obj.N * StopLossRatio)) {
                     opCode = 3;
                     obj.preBreakoutFailure = true;
                     Log(obj.symbolDetail.InstrumentName, "止损平仓", suffix);
                     obj.status.st++;
-                } else if (-spread > (0.5 * obj.N)) {
+                } else if (-spread > (IncSpace * obj.N)) {
                     opCode = obj.marketPosition > 0 ? 1 : 2;
                 } else if (records.length > obj.leavePeriod) {
                     if ((obj.marketPosition > 0 && lastPrice < TA.Lowest(records, obj.leavePeriod, 'Low')) ||
