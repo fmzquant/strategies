@@ -1,4 +1,4 @@
-/*
+'''
 策略出处: https://www.botvs.com/strategy/21370
 策略名称: Python 机器学习之 SVM 简单预测是涨是跌还是横
 策略作者: Zero
@@ -11,7 +11,7 @@ numpy pandas TA-Lib scipy statsmodels sklearn cvxopt hmmlearn pykalman arch matp
 
 实盘需要在托管者所在机器安装策略需要的库
 
-*/
+'''
 
 from sklearn import svm
 

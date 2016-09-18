@@ -1,4 +1,4 @@
-/*
+'''
 策略出处: https://www.botvs.com/strategy/21104
 策略名称: python版现货数字货币交易类库
 策略作者: 小小梦
@@ -15,7 +15,7 @@ SlidePrice    0.1  下单滑动价
 MaxAmount     0.8  开仓单次最大下单量
 RetryDelay  500    失败重试毫秒
 MAType        0    均线类型: TA.EMA|TA.MA
-*/
+'''
 
 import types # 导入类型模块
 import time  # 导入时间模块

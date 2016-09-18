@@ -1,4 +1,4 @@
-/*
+'''
 策略出处: https://www.botvs.com/strategy/21369
 策略名称: 均线-趋势_数字货币策略V0.1
 策略作者: 太极
@@ -24,7 +24,7 @@ PositionRatio   0.5                                                             
 Interval        10                                                                              轮询周期(秒)
 xxx             ------------------------------------------------------------------------------  分割符号
 MAType          0                                                                               均线类型: TA.EMA|TA.MA
-*/
+'''
 
 #!/usr/local/bin/python
 #-*- coding: UTF-8 -*-

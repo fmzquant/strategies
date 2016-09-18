@@ -1,4 +1,4 @@
-/*
+'''
 策略出处: https://www.botvs.com/strategy/21157
 策略名称: 均线策略（python版）
 策略作者: 小小梦
@@ -17,7 +17,7 @@ ExitSlowPeriod  7      离市慢线周期
 ExitPeriod      true   离市观察期
 PositionRatio   0.8    仓位比例
 Interval        10     轮询周期
-*/
+'''
 
 import types
 def main():

@@ -1,4 +1,4 @@
-/*
+'''
 策略出处: https://www.botvs.com/strategy/20761
 策略名称: Python简单测试策略
 策略作者: Zero
@@ -13,7 +13,7 @@ a     1.2      number
 b     你好hello  str
 c     true     bool
 d     0        select: abc|def|xxx
-*/
+'''
 
 import time
 import talib
