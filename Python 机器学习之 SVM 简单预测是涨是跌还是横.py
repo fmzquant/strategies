@@ -22,6 +22,7 @@ def main():
     predict = None
     pTime = None
     spread = 2
+    Log("Running...")
     while True:
         r = exchange.GetRecords()
         if len(r) < 60:

@@ -234,7 +234,9 @@ function main() {
                 chart.add([1, es[i].Last, es[i].idx]);
             }
             var ticker = es[i].ticker;
-            table.rows[i] = [es[i].GetLabel(), ticker.Buy, ticker.Sell, ticker.Last + '#ff0000', ticker.High, ticker.Low, ticker.Volume];
+            if (ticker) {
+                table.rows[i] = [es[i].GetLabel(), ticker.Buy, ticker.Sell, ticker.Last + '#ff0000', ticker.High, ticker.Low, ticker.Volume];
+            }
         }
         LogStatus('最后更新于: ' + _D() +'\n`' + JSON.stringify(table) + '`');
         var cmd = GetCommand();

@@ -20,8 +20,8 @@
 
 
 参数                默认值    描述
-----------------  -----  ----------
-ContractTypeName  MA609  合约品种
+----------------  -----  -----------
+ContractTypeName  MA701  合约品种
 NPeriod           4      计算周期
 Ks                0.5    上轨系数
 Kx                0.5    下轨系数
@@ -30,6 +30,7 @@ Interval          2000   重试间隔(毫秒)
 LoopInterval      3      轮询间隔(秒)
 PeriodShow        500    图表最大显示K线柱数
 NotifyWX          true   下单微信通知
+CoverAll          false  启动策略时清空合约仓位
 */
 
 var ChartCfg = {
@@ -87,13 +88,19 @@ var logSuffix = NotifyWX ? '@' : '';
 
 function onTick(exchange) {
     if (!manager) {
+        manager = $.NewPositionManager();
         if (_C(exchange.GetPosition).length > 0) {
-            throw "策略启动前不能有持仓.";
+            if (CoverAll) {
+                manager.Cover(ContractTypeName);
+                Log("已清空所有相关仓位");
+            } else {
+                throw "策略启动前不能有持仓.";
+            }
         }
         Log('交易平台:', exchange.GetName(), _C(exchange.GetAccount));
         var insDetail = _C(exchange.SetContractType, ContractTypeName);
         Log("合约", insDetail.InstrumentName, "一手", insDetail.VolumeMultiple, "份, 最大下单量", insDetail.MaxLimitOrderVolume, "保证金率:", insDetail.LongMarginRatio.toFixed(4), insDetail.ShortMarginRatio.toFixed(4), "交割日期", insDetail.StartDelivDate);
-        manager = $.NewPositionManager();
+        
     }
 
     var records = _C(exchange.GetRecords);
@@ -190,10 +197,10 @@ function main() {
 
     LoopInterval = Math.max(LoopInterval, 1);
     while (true) {
-        if (exchange.IO("status")) {
+        if (exchange.IO("status") && $.IsTrading(ContractTypeName)) {
             onTick(exchange);
         } else {
-            LogStatus("未登录状态");
+            LogStatus("未登录状态或不在交易时间段内");
         }
         Sleep(LoopInterval * 1000);
     }

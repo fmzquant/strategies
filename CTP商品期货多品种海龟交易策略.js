@@ -509,6 +509,7 @@ function main() {
     var positions = _C(exchange.GetPosition);
     if (positions.length > 0) {
         Log("检测到当前持有仓位, 系统将开始尝试恢复进度...");
+        Log("持仓信息", positions);
     }
     Log("风险系数:", RiskRatio, "N值周期:", ATRLength, "系统1: 入市周期", EnterPeriodA, "离市周期", LeavePeriodA, "系统二: 入市周期", EnterPeriodB, "离市周期", LeavePeriodB, "加仓系数:", IncSpace, "止损系数:", StopLossRatio, "单品种最多开仓:", MaxLots, "次");
     var tts = [];
