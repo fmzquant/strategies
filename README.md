@@ -4,6 +4,9 @@
 > 开源策略列表
 
 
+ - [Python API 测试](https://www.botvs.com/strategy/21365)
+ - [均线策略（python版）](https://www.botvs.com/strategy/21157)
+ - [python版现货数字货币交易类库](https://www.botvs.com/strategy/21104)
  - [顺势_高频_交易_测试2——失败](https://www.botvs.com/strategy/21938)
  - [Python 机器学习之 SVM 简单预测是涨是跌还是横](https://www.botvs.com/strategy/21370)
  - [顺势_高频_交易_测试1](https://www.botvs.com/strategy/21742)
@@ -13,8 +16,6 @@
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
  - [均线-趋势_数字货币策略V0.2](https://www.botvs.com/strategy/21369)
  - [Python简单测试策略](https://www.botvs.com/strategy/20761)
- - [python版现货数字货币交易类库](https://www.botvs.com/strategy/21104)
- - [均线策略（python版）](https://www.botvs.com/strategy/21157)
  - [转换时间模板](https://www.botvs.com/strategy/14517)
  - [数字货币现货交易类库](https://www.botvs.com/strategy/10989)
  - [图表模板（增加状态栏表格）](https://www.botvs.com/strategy/20967)

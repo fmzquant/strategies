@@ -19,16 +19,52 @@ MAType        0    均线类型: TA.EMA|TA.MA
 
 import types # 导入类型模块
 import time  # 导入时间模块
+import platform # 版本信息 
+
+versionMainValue = None
+isFirstCheck = True
+def typeOfstr(str):
+    if str == "list":
+        if versionMainValue == 2:
+            return types.ListType
+        elif versionMainValue == 3:
+            return list
+    elif str == "int":
+        if versionMainValue == 2:
+            return types.IntType
+        elif versionMainValue == 3:
+            return int
+    elif str == "float":
+        if versionMainValue == 2:
+            return types.FloatType
+        elif versionMainValue == 3:
+            return float
+    else:
+        Log("error , typeOfstr used false")
+            
+def CheckVersion():
+    global versionMainValue,isFirstCheck
+    platformInfo = platform.python_version()
+    if platformInfo[0] == '2':
+        Log("您使用的托管者 python编译环境的python版本是",platformInfo)
+        versionMainValue = 2
+    elif platformInfo[0] == '3':
+        Log("您使用的托管者 python编译环境的python版本是",platformInfo)
+        versionMainValue = 3
+    else:
+        Log("其它版本")
+    isFirstCheck = False
+
 def CancelPendingOrders(e, orderType = "") : # 取消所有未完成挂单
     while True: # 循环
         orders = e.GetOrders()
         LogStatus("orders:",orders,time.time()) # 测试
-        if(type(orders) != types.ListType):
+        if(type(orders) != typeOfstr("list")):
             Sleep(RetryDelay)
             continue
         processed = 0
         for j in range(len(orders)):
-            if (type(orderType) == types.IntType and orders[j].Type != orderType):
+            if (type(orderType) == typeOfstr("int") and orders[j].Type != orderType):
                 continue
             e.CancelOrder(orders[j].Id,orders[j])
             processed += 1
@@ -124,29 +160,39 @@ def Trade(e,tradeType,tradeAmount,mode,slidePrice,maxAmount,maxSpace,retryDelay)
     # 调用时 这样写  ret['price'] 、 ret['amount']
 
 def _Buy(e = exchange,amount = 0):
-    if (type(e) == types.IntType or type(e) == types.FloatType):
+    if isFirstCheck:
+        CheckVersion()
+    if (type(e) == typeOfstr("int") or type(e) == typeOfstr("float")):
         amount = e
         e = exchange
     return Trade(e,ORDER_TYPE_BUY,amount,OpMode,SlidePrice,MaxAmount,MaxSpace,RetryDelay)
 
 def _Sell(e = exchange,amount = 0):
-    if (type(e) == types.IntType or type(e) == types.FloatType):
+    if isFirstCheck:
+        CheckVersion()
+    if (type(e) == typeOfstr("int") or type(e) == typeOfstr("float")):
         amount = e
         e = exchange
     return Trade(e,ORDER_TYPE_SELL,amount,OpMode,SlidePrice,MaxAmount,MaxSpace,RetryDelay)
 
 def _CancelPendingOrders(e = exchange,orderType = ""):
+    if isFirstCheck:
+        CheckVersion()
     return CancelPendingOrders(e,orderType)
 
 def _GetAccount(e = exchange):
+    if isFirstCheck:
+        CheckVersion()
     return _C(e.GetAccount)
 
 _MACalcMethod = [TA.EMA,TA.MA][MAType]
 def Cross(a,b):
+    if isFirstCheck:
+        CheckVersion()
     crossNum = 0
     arr1 = []
     arr2 = []
-    if type(a) == types.ListType and type(b) == types.ListType:
+    if type(a) == typeOfstr("list") and type(b) == typeOfstr("list"):
         arr1 = a
         arr2 = b
     else:
@@ -161,7 +207,7 @@ def Cross(a,b):
     if len(arr1) != len(arr2):
         raise Exception("array length not equal")
     for i in range(len(arr1) - 1,-1,-1):
-        if (type(arr1[i]) != types.IntType and type(arr1[i]) != types.FloatType) or (type(arr2[i]) != types.IntType and type(arr2[i]) != types.FloatType) :
+        if (type(arr1[i]) != typeOfstr("int") and type(arr1[i]) != typeOfstr("float")) or (type(arr2[i]) != typeOfstr("int") and type(arr2[i]) != typeOfstr("float")):
             break
         if arr1[i] < arr2[i] :
             if crossNum > 0 :

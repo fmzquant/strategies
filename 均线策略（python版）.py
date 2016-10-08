@@ -24,7 +24,6 @@ def main():
     STATE_IDLE = -1
     state = STATE_IDLE
     initAccount = ext.GetAccount()
-    Log(initAccount)
     while True:
         if state == STATE_IDLE :
             n = ext.Cross(FastPeriod,SlowPeriod) # 指标交叉函数
