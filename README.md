@@ -4,16 +4,13 @@
 > 开源策略列表
 
 
- - [Python API测试](https://www.botvs.com/strategy/22600)
  - [Python 机器学习之 SVM 预测买卖](https://www.botvs.com/strategy/21370)
- - [这是为什么，请看first_bar 为什么后面的first_bar 变了](https://www.botvs.com/strategy/16309)
  - [顺势_高频_交易_测试3](https://www.botvs.com/strategy/22183)
  - [Python API 测试](https://www.botvs.com/strategy/21365)
  - [均线策略（python版）](https://www.botvs.com/strategy/21157)
  - [python版现货数字货币交易类库](https://www.botvs.com/strategy/21104)
  - [顺势_高频_交易_测试2——失败](https://www.botvs.com/strategy/21938)
  - [顺势_高频_交易_测试1](https://www.botvs.com/strategy/21742)
- - [均线策略改版（python版） (复制)](https://www.botvs.com/strategy/21890)
  - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
  - [各大平台API可用率统计](https://www.botvs.com/strategy/4404)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
