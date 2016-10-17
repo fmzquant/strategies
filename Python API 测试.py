@@ -17,9 +17,16 @@ import matplotlib
 matplotlib.use("Agg")
 
 import numpy as np
-import matplotlib.pyplot as plt, StringIO, base64
+import matplotlib.pyplot as plt, io, base64
 import mpl_toolkits.mplot3d
 
+def saveImage(fig=None):
+    if fig is None:
+        fig = plt
+    dataStream = io.BytesIO()
+    fig.savefig(dataStream, format="png")
+    return '`data:image/png;base64,%s`'%(base64.b64encode(dataStream.getvalue()))
+    
 def main():
     testGlobal = [
             'Version', ['Log', 'ok', 3.5, True], ['Sleep', 100], ['LogProfit', 10.5],
@@ -77,10 +84,27 @@ def main():
 
     # test plot image
     plt.plot([3,6,2,4,7,1])
-    dataStream = StringIO.StringIO()
-    plt.savefig(dataStream, format="png")
-    Log('支持base64图片 `data:image/png;base64,%s`'%(base64.b64encode(dataStream.getvalue())))
+    Log('支持base64图片 ' + saveImage())
     
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    t = ax.scatter(np.random.rand(20), np.random.rand(20))
+    Log(saveImage(fig))
+    
+    x = np.linspace(0, 10, 1000)
+    y = np.sin(x)
+    z = np.cos(x**2)
+
+    plt.figure(figsize=(8,4))
+    plt.plot(x,y,label="$sin(x)$",color="red",linewidth=2)
+    plt.plot(x,z,"b--",label="$cos(x^2)$")
+    plt.xlabel("Time(s)")
+    plt.ylabel("Volt")
+    plt.title("PyPlot Example")
+    plt.ylim(-1.2,1.2)
+    plt.legend()
+    Log(saveImage())
+
     x,y=np.mgrid[-2:2:20j,-2:2:20j]
     z=x*np.exp(-x**2-y**2)
     ax=plt.subplot(111,projection='3d')
@@ -88,10 +112,8 @@ def main():
     ax.set_xlabel('x')
     ax.set_ylabel('y')
     ax.set_zlabel('z')
-    dataStream = StringIO.StringIO()
-    plt.savefig(dataStream, format="png")
     # plot image to status bar
-    LogStatus('支持base64图片 `data:image/png;base64,%s`'%(base64.b64encode(dataStream.getvalue())))
+    LogStatus(saveImage())
     
     # test plot chart
     x = Chart({
