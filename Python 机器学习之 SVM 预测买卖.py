@@ -11,6 +11,10 @@ numpy pandas TA-Lib scipy statsmodels sklearn cvxopt hmmlearn pykalman arch matp
 
 实盘需要在托管者所在机器安装策略需要的库
 
+
+参数           默认值  描述
+---------  -----  ----
+SpreadVal      2  预测价差
 '''
 
 from sklearn import svm
@@ -22,7 +26,6 @@ def main():
     success = 0
     predict = None
     pTime = None
-    spread = 2
     marketPosition = 0
     initAccount = exchange.GetAccount()
     Log("Running...")
@@ -35,9 +38,9 @@ def main():
             preTime = bar.Time
             if pTime is not None and r[len(r)-2].Time == pTime:
                 diff = r[len(r)-2].Close - r[len(r)-3].Close
-                if diff > spread:
+                if diff > SpreadVal:
                     success += 1 if predict == 0 else 0
-                elif diff < -spread:
+                elif diff < -SpreadVal:
                     success += 1 if predict == 1 else 0
                 else:
                     success += 1 if predict == 2 else 0
@@ -52,10 +55,10 @@ def main():
             inputs_X.append([r[i].Open, r[i].Close])
             Y = 0
             diff = r[i+1].Close - r[i].Close
-            if diff > spread:
+            if diff > SpreadVal:
                 Y = 0
                 sets[0] = True
-            elif diff < -spread:
+            elif diff < -SpreadVal:
                 Y = 1
                 sets[1] = True
             else:

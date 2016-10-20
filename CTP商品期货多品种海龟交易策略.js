@@ -230,10 +230,10 @@ var TTManager = {
                         var amount = Math.min(insDetail.MaxLimitOrderVolume, positions[i].Amount);
                         if (positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) {
                             exchange.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
-                            orderId = exchange.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Bids[0].Amount), obj.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
+                            orderId = exchange.Sell(_N(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), 2), Math.min(amount, depth.Bids[0].Amount), obj.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
                         } else if (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) {
                             exchange.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
-                            orderId = exchange.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Asks[0].Amount), obj.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
+                            orderId = exchange.Buy(_N(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), 2), Math.min(amount, depth.Asks[0].Amount), obj.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
                         }
                     }
                     if (hasPosition) {
@@ -332,10 +332,10 @@ var TTManager = {
                     var orderId = null;
                     if (obj.task.action == ACT_LONG) {
                         exchange.SetDirection("buy");
-                        orderId = exchange.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(remain, depth.Asks[0].Amount), obj.symbol, 'Ask', depth.Asks[0]);
+                        orderId = exchange.Buy(_N(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), 2), Math.min(remain, depth.Asks[0].Amount), obj.symbol, 'Ask', depth.Asks[0]);
                     } else {
                         exchange.SetDirection("sell");
-                        orderId = exchange.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(remain, depth.Bids[0].Amount), obj.symbol, 'Bid', depth.Bids[0]);
+                        orderId = exchange.Sell(_N(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), 2), Math.min(remain, depth.Bids[0].Amount), obj.symbol, 'Bid', depth.Bids[0]);
                     }
                     // symbol not in trading or other else happend
                     if (!orderId) {
