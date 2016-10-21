@@ -449,7 +449,7 @@ var TTManager = {
             var canOpen = parseInt(account.Balance / (opCode == 1 ? obj.symbolDetail.LongMarginRatio : obj.symbolDetail.ShortMarginRatio) / (lastPrice * 1.2) / obj.symbolDetail.VolumeMultiple);
             unit = Math.min(unit, canOpen);
             if (unit < obj.symbolDetail.MinLimitOrderVolume) {
-                obj.setLastError("可开 " + unit + " 手 过小无法开仓");
+                obj.setLastError("可开 " + unit + " 手 无法开仓, " + (canOpen >= obj.symbolDetail.MinLimitOrderVolume ? "风控触发" : "资金限制"));
                 return;
             }
             obj.setTask((opCode == 1 ? ACT_LONG : ACT_SHORT), unit, function(ret) {

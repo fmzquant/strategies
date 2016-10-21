@@ -186,6 +186,7 @@ def _GetAccount(e = exchange):
     return _C(e.GetAccount)
 
 _MACalcMethod = [TA.EMA,TA.MA][MAType]
+Interval = 200
 def Cross(a,b):
     if isFirstCheck:
         CheckVersion()

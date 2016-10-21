@@ -4,13 +4,14 @@
 > 开源策略列表
 
 
+ - [商品期货交易类库](https://www.botvs.com/strategy/12961)
+ - [python版现货数字货币交易类库](https://www.botvs.com/strategy/21104)
  - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
  - [Dual Thrust_双轨突破_策略1](https://www.botvs.com/strategy/22983)
  - [Python 机器学习之 SVM 预测买卖](https://www.botvs.com/strategy/21370)
  - [顺势_高频_交易_测试3](https://www.botvs.com/strategy/22183)
  - [Python API 测试](https://www.botvs.com/strategy/21365)
  - [均线策略（python版）](https://www.botvs.com/strategy/21157)
- - [python版现货数字货币交易类库](https://www.botvs.com/strategy/21104)
  - [顺势_高频_交易_测试2——失败](https://www.botvs.com/strategy/21938)
  - [顺势_高频_交易_测试1](https://www.botvs.com/strategy/21742)
  - [各大平台API可用率统计](https://www.botvs.com/strategy/4404)
@@ -22,8 +23,8 @@
  - [图表模板（增加状态栏表格）](https://www.botvs.com/strategy/20967)
  - [策略框架](https://www.botvs.com/strategy/20663)
  - [高频交易策略之 - Penny Jump](https://www.botvs.com/strategy/358)
+ - [MACD低买高卖自动跟单滑动止损 (复制)](https://www.botvs.com/strategy/20266)
  - [获取周K线](https://www.botvs.com/strategy/20226)
- - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [对冲2.7收益率统计系统 支持多组账号统计](https://www.botvs.com/strategy/18678)
  - [从第三方获取K线 (商品期货版) Rev. 160810](https://www.botvs.com/strategy/15498)
  - [收益率统计](https://www.botvs.com/strategy/19329)
