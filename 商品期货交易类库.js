@@ -9,13 +9,24 @@
 function main() {
     var p = $.NewPositionManager();
     p.OpenShort("MA609", 1);
+    p.OpenShort("MA701", 1);
     Log(p.GetPosition("MA609", PD_SHORT));
     Log(p.GetAccount());
     Log(p.Account());
     Sleep(60000 * 10);
-    p.Cover("MA609");
+    p.CoverAll("MA609");
     LogProfit(p.Profit());
-    Log($.IsTrading('MA609'));
+    Log($.IsTrading("MA609"));
+    // 多品种时使用交易队列来完成非阻塞的交易任务
+    var q = $.NewTaskQueue();
+    q.pushTask(exchange, "MA701", "buy", 3, function(task, ret) {
+        Log(task.desc, ret)
+    })
+    while (true) {
+        // 在空闲时调用poll来完成未完成的任务
+        q.poll()
+        Sleep(1000)
+    }
 }
 ```
 
@@ -297,7 +308,21 @@ var PositionManager = (function() {
         }
         return Cover(this.e, contractType);
     };
-
+    PositionManager.prototype.CoverAll = function() {
+        if (!this.account) {
+            this.account = _C(this.e.GetAccount);
+        }
+        while (true) {
+            var positions = _C(this.e.GetPosition)
+            if (positions.length == 0) {
+                break
+            }
+            for (var i = 0; i < positions.length; i++) {
+                Cover(this.e, positions[i].ContractType)
+                Sleep(1000)
+            }
+        }
+    };
     PositionManager.prototype.Profit = function(contractType) {
         var accountNow = _C(this.e.GetAccount);
         return _N(accountNow.Balance - this.account.Balance);
@@ -607,17 +632,22 @@ $.AccountToTable = AccountToTable;
 function main() {
     var p = $.NewPositionManager();
     p.OpenShort("MA609", 1);
+    p.OpenShort("MA701", 1);
     Log(p.GetPosition("MA609", PD_SHORT));
     Log(p.GetAccount());
     Log(p.Account());
     Sleep(60000 * 10);
-    p.Cover("MA609");
+    p.CoverAll("MA609");
     LogProfit(p.Profit());
     Log($.IsTrading("MA609"));
-    
+    // 多品种时使用交易队列来完成非阻塞的交易任务
     var q = $.NewTaskQueue();
     q.pushTask(exchange, "MA701", "buy", 3, function(task, ret) {
         Log(task.desc, ret)
     })
-    q.poll()
+    while (true) {
+        // 在空闲时调用poll来完成未完成的任务
+        q.poll()
+        Sleep(1000)
+    }
 }
