@@ -4,10 +4,15 @@
 > 开源策略列表
 
 
+ - [商品期货跨期对冲](https://www.botvs.com/strategy/23896)
+ - [jLib借贷函数库](https://www.botvs.com/strategy/23943)
+ - [R-Breaker  交易策略](https://www.botvs.com/strategy/23531)
+ - [多平台对冲稳定套利 V2.1 (复制)](https://www.botvs.com/strategy/23718)
+ - [从第三方网站获取K线 (0804更新)+ bitstamp+okcoin现货](https://www.botvs.com/strategy/21487)
+ - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
  - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [（13）策略框架](https://www.botvs.com/strategy/20663)
  - [python版现货数字货币交易类库](https://www.botvs.com/strategy/21104)
- - [CTP商品期货多品种海龟交易策略](https://www.botvs.com/strategy/17289)
  - [Dual Thrust_双轨突破_策略1](https://www.botvs.com/strategy/22983)
  - [Python 机器学习之 SVM 预测买卖](https://www.botvs.com/strategy/21370)
  - [震荡突破策略 (删减B值触发平仓、动态调整触发值 优化ing)](https://www.botvs.com/strategy/22759)

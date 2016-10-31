@@ -497,14 +497,15 @@ $.NewTaskQueue = function(onTaskFinish) {
                     if (positions[i].ContractType !== task.symbol) {
                         continue;
                     }
-                    hasPosition = true;
                     var amount = Math.min(insDetail.MaxLimitOrderVolume, positions[i].Amount, task.amount);
                     if (task.action == "closebuy" && (positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD)) {
                         task.e.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
                         orderId = task.e.Sell(_N(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), 2), Math.min(amount, depth.Bids[0].Amount), task.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
+                        hasPosition = true;
                     } else if (task.action == "closesell" && (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD)) {
                         task.e.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
                         orderId = task.e.Buy(_N(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), 2), Math.min(amount, depth.Asks[0].Amount), task.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
+                        hasPosition = true;
                     }
                 }
                 if (hasPosition) {
@@ -637,7 +638,7 @@ function main() {
     Log(p.GetAccount());
     Log(p.Account());
     Sleep(60000 * 10);
-    p.CoverAll("MA609");
+    p.CoverAll();
     LogProfit(p.Profit());
     Log($.IsTrading("MA609"));
     // 多品种时使用交易队列来完成非阻塞的交易任务
