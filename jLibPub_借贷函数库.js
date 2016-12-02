@@ -1,6 +1,6 @@
 /*
 策略出处: https://www.botvs.com/strategy/23943
-策略名称: jLib借贷函数库
+策略名称: jLibPub_借贷函数库
 策略作者: J
 策略描述:
 

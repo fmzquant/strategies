@@ -1,25 +1,27 @@
 /*
 策略出处: https://www.botvs.com/strategy/23896
-策略名称: 商品期货跨期对冲
+策略名称: 商品期货跨期对冲 - 百行代码实现
 策略作者: Zero
 策略描述:
 
-简单的跨期对冲, 抛砖引玉, 细节还需要处理
+简单的跨期对冲, 抛砖引玉, 细节还需要处理, 轮训间隔可以缩小到1秒或者删除Sleep那行策略就可以随时响应价格变化
 
 
 参数            默认值    描述
-------------  -----  -------
-HedgeSpread   30     开仓价差
-CoverSpread   10     平仓价差
-LoopInterval  true   轮询间隔(秒)
+------------  -----  ---------
 SA            MA701  合约A
 SB            MA705  合约B
+HedgeSpread   30     开仓价差
+CoverSpread   10     平仓价差
+LoopInterval  6      轮询间隔(秒)
+CoverAll      false  启动时平掉所有仓位
 */
 
 
-function Hedge(q, e, symbolA, symbolB, hedgeSpread, coverSpread) {
+function Hedge(q, e, initAccount, symbolA, symbolB, hedgeSpread, coverSpread) {
     var self = {}
     self.q = q
+    self.initAccount = initAccount
     self.status = 0
     self.symbolA = symbolA
     self.symbolB = symbolB
@@ -48,7 +50,8 @@ function Hedge(q, e, symbolA, symbolB, hedgeSpread, coverSpread) {
         if (!tickerB) {
             return
         }
-        LogStatus("A卖B买", _N(tickerA.Buy - tickerB.Sell), "A买B卖",  _N(tickerA.Sell-tickerB.Buy))
+        // _D()是内置时间格式化函数, 不传参就是取当前时间, 可以传时间戳
+        LogStatus(_D(), "A卖B买", _N(tickerA.Buy - tickerB.Sell), "A买B卖",  _N(tickerA.Sell-tickerB.Buy))
         var action = 0; // 1: A sell B buy 2: A buy B sell
 
         if (self.status == 0) {
@@ -89,6 +92,8 @@ function Hedge(q, e, symbolA, symbolB, hedgeSpread, coverSpread) {
                     self.status = 1
                 } else {
                     self.status = 0
+                    var account = _C(exchange.GetAccount)
+                    LogProfit(account.Balance - self.initAccount.Balance, account)
                 }
             })
         })
@@ -98,17 +103,22 @@ function Hedge(q, e, symbolA, symbolB, hedgeSpread, coverSpread) {
 
 
 function main() {
+    SetErrorFilter("ready|login|timeout")
+    Log("正在与交易服务器连接...")
+    while (!exchange.IO("status"))Sleep(1000);
+    Log("与交易服务器连接成功")
     var initAccount = _C(exchange.GetAccount)
+    Log(initAccount)
     var n = 0
     var q = $.NewTaskQueue(function(task, ret) {
         Log(task.desc, ret ? "成功" : "失败")
-        n++
-        if (n % 4 == 0) {
-            var account = _C(exchange.GetAccount)
-            LogProfit(account.Balance - initAccount.Balance, account)
-        }
     })
-    var t = Hedge(q, exchanges[0], SA, SB, HedgeSpread, CoverSpread)
+    if (CoverAll) {
+        Log("开始平掉所有残余仓位...");
+        $.NewPositionManager().CoverAll();
+        Log("操作完成");
+    }
+    var t = Hedge(q, exchanges[0], initAccount, SA, SB, HedgeSpread, CoverSpread)
     while (true) {
         q.poll()
         t.poll()

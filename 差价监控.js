@@ -1,7 +1,7 @@
 /*
-策略出处: https://www.botvs.com/strategy/1340
+策略出处: https://www.botvs.com/strategy/7944
 策略名称: 差价监控
-策略作者: Zero
+策略作者: 折腾中
 策略描述:
 
 只支持两个交易所, 可自定义差价的类型, 支持2.77托管者的自定义图表功能
@@ -17,10 +17,6 @@ EnableCR      false  自定义汇率
 USDCNY        false  USDCNY
 NormalDiff    0.1    普通差价
 HighDiff      0.3    较高差价
-
-按钮    默认值         描述
-----  ----------  ----
-重置数据  __button__  @
 */
 
 
@@ -28,51 +24,6 @@ var __lastDiff = 0;
 var __AType = ["Last", "Buy", "Sell"][AType];
 var __BType = ["Last", "Buy", "Sell"][BType];
 
-var cfg = {
-			tooltip: {xDateFormat: '%Y-%m-%d %H:%M:%S, %A'},
-			title : { text : '差价分析图'},
-			rangeSelector: {
-                buttons:  [{type: 'hour',count: 1, text: '1h'}, {type: 'hour',count: 3, text: '3h'}, {type: 'hour', count: 8, text: '8h'}, {type: 'all',text: 'All'}],
-                selected: 0,
-                inputEnabled: false
-            },
-			xAxis: { type: 'datetime'},
-			yAxis : {
-				plotLines : [{
-					value : 0.0,
-					color : 'black',
-					dashStyle : 'shortdash',
-					width : 3,
-				}, {
-					value : NormalDiff,
-					color : 'green',
-					dashStyle : 'shortdash',
-					width : 1,
-				}, {
-					value : HighDiff,
-					color : 'red',
-					dashStyle : 'shortdash',
-					width : 1,
-				},{
-					value : -NormalDiff,
-					color : 'green',
-					dashStyle : 'shortdash',
-					width : 1,
-				}, {
-					value : -HighDiff,
-					color : 'red',
-					dashStyle : 'shortdash',
-					width : 1,
-				}]
-			},
-			series : [{
-				name : '价差',
-				data : [],
-				tooltip: {
-					valueDecimals: 2
-				}
-			}]
-		};
 function _N(v, precision) {
     if (typeof(precision) != 'number') {
         precision = 4;
@@ -110,9 +61,6 @@ function onTick() {
     }
     if (diff != __lastDiff) {
         // add添加数据到series, 参数格式为[series序号, 数据];
-        cfg.yAxis.plotLines[0].value=diff;
-        cfg.subtitle={text:'当前价差:' + diff};
-        __chart.update(cfg);
         __chart.add([0, [new Date().getTime(), diff]]);
         __lastDiff = diff;
     }
@@ -126,7 +74,46 @@ function main() {
         throw "只支持两个交易所对冲";
     }
     // 传给Chart函数的必须是一个与上下文无关的结构体(附合HighStocks规则, 详情参数HighStocks使用方法)
-    __chart = Chart(cfg);
+    __chart = Chart({
+			tooltip: {xDateFormat: '%Y-%m-%d %H:%M:%S, %A'},
+			title : { text : '差价分析图'},
+			rangeSelector: {
+                buttons:  [{type: 'hour',count: 1, text: '1h'}, {type: 'hour',count: 3, text: '3h'}, {type: 'hour', count: 8, text: '8h'}, {type: 'all',text: 'All'}],
+                selected: 0,
+                inputEnabled: false
+            },
+			xAxis: { type: 'datetime'},
+			yAxis : {
+				plotLines : [{
+					value : NormalDiff,
+					color : 'green',
+					dashStyle : 'shortdash',
+					width : 1,
+				}, {
+					value : HighDiff,
+					color : 'red',
+					dashStyle : 'shortdash',
+					width : 1,
+				},{
+					value : -NormalDiff,
+					color : 'green',
+					dashStyle : 'shortdash',
+					width : 1,
+				}, {
+					value : -HighDiff,
+					color : 'red',
+					dashStyle : 'shortdash',
+					width : 1,
+				}]
+			},
+			series : [{
+				name : '价差',
+				data : [],
+				tooltip: {
+					valueDecimals: 2
+				}
+			}]
+		});
 	// reset 清空所有图表之前的信息
 	// __chart.reset();
     if (EnableCR) {
@@ -134,7 +121,7 @@ function main() {
             var rate = exchanges[i].GetRate();
             if (rate != 1) {
                 exchanges[i].SetRate(USDCNY);
-                Log("更改", exchanges[i].GetName(), "汇率", rate, "为", USDCNY);
+                Log("更改", exchanges[i].GetName(), "汇率", rate, "为", USDCNY)
             }
             var eName = exchanges[i].GetName();
             if (eName == "Futures_BitVC") {
@@ -148,11 +135,5 @@ function main() {
     while (true) {
         onTick();
         Sleep(TickInterval);
-        if (GetCommand() === '重置数据') {
-            LogReset();
-            LogProfitReset();
-            __chart.reset();
-            Log("数据重置成功");
-        }
     }
 }

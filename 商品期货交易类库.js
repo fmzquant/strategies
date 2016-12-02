@@ -58,8 +58,8 @@ function GetPosition(e, contractType, direction, positions) {
         positions = _C(e.GetPosition);
     }
     for (var i = 0; i < positions.length; i++) {
-        if ( positions[i].ContractType == contractType && 
-            (((positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) && direction == PD_LONG) || ((positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) && direction == PD_SHORT)) 
+        if (positions[i].ContractType == contractType &&
+            (((positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) && direction == PD_LONG) || ((positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) && direction == PD_SHORT))
         ) {
             posMargin = positions[i].MarginLevel;
             allCost += (positions[i].Price * positions[i].Amount);
@@ -240,10 +240,15 @@ function AccountToTable(jsStr, title) {
     if (typeof(title) === 'undefined') {
         title = '账户信息';
     }
-    var tbl = { type : "table", title : title, cols : ["字段", "描述", "值"], rows : [] };
+    var tbl = {
+        type: "table",
+        title: title,
+        cols: ["字段", "描述", "值"],
+        rows: []
+    };
     try {
         var fields = JSON.parse(jsStr);
-        for (var k  in fields) {
+        for (var k in fields) {
             if (k == 'AccountID' || k == 'BrokerID') {
                 continue
             }
@@ -254,8 +259,8 @@ function AccountToTable(jsStr, title) {
             }
             tbl.rows.push([k, typeof(desc) === 'undefined' ? '--' : desc, v]);
         }
-    } catch(e) {}
-    return tbl; 
+    } catch (e) {}
+    return tbl;
 }
 
 var PositionManager = (function() {
@@ -283,11 +288,11 @@ var PositionManager = (function() {
         }
         return this.account;
     };
-    
+
     PositionManager.prototype.GetPosition = function(contractType, direction, positions) {
         return GetPosition(this.e, contractType, direction, positions);
     };
-    
+
     PositionManager.prototype.OpenLong = function(contractType, shares) {
         if (!this.account) {
             this.account = _C(this.e.GetAccount);
@@ -318,8 +323,10 @@ var PositionManager = (function() {
                 break
             }
             for (var i = 0; i < positions.length; i++) {
-                Cover(this.e, positions[i].ContractType)
-                Sleep(1000)
+                if (positions[i].ContractType.indexOf('&') == -1) {
+                    Cover(this.e, positions[i].ContractType)
+                    Sleep(1000)
+                }
             }
         }
     };
@@ -349,42 +356,67 @@ $.IsTrading = function(symbol) {
     var p, i, shortName = "";
     for (i = 0; i < symbol.length; i++) {
         var ch = symbol.charCodeAt(i);
-        if (ch >= 48 && ch <= 57) { 
+        if (ch >= 48 && ch <= 57) {
             break;
         }
         shortName += symbol[i].toUpperCase();
     }
 
-    var period = [[9,0,10,15], [10,30,11,30], [13,30,15,0]];
+    var period = [
+        [9, 0, 10, 15],
+        [10, 30, 11, 30],
+        [13, 30, 15, 0]
+    ];
     if (shortName === "IH" || shortName === "IF" || shortName === "IC") {
-        period = [[9,30,11,30], [13,0,15,0]];
-    } else if (shortName === "TF") {
-        period = [[9,15,11,30], [13,0,15,15]];
+        period = [
+            [9, 30, 11, 30],
+            [13, 0, 15, 0]
+        ];
+    } else if (shortName === "TF" || shortName === "T") {
+        period = [
+            [9, 15, 11, 30],
+            [13, 0, 15, 15]
+        ];
     }
-    
-    
+
+
     if (day >= 1 && day <= 5) {
         for (i = 0; i < period.length; i++) {
             p = period[i];
-            if ((hour > p[0] || (hour == p[0] && minute>=p[1])) && (hour < p[2] || (hour == p[2] && minute<p[3]))) {
+            if ((hour > p[0] || (hour == p[0] && minute >= p[1])) && (hour < p[2] || (hour == p[2] && minute < p[3]))) {
                 return true;
             }
         }
     }
 
     var nperiod = [
-        [['AU', 'AG'], [21,0,02,30]],
-        [['CU', 'AL', 'ZN', 'PB', 'SN', 'NI'], [21,0,01,0]],
-        [['RU', 'RB', 'HC', 'BU'], [21,0,23,0]],
-        [['P', 'J', 'M', 'Y', 'A', 'B', 'JM', 'I'], [21,0,23,30]],
-        [['SR', 'CF', 'RM', 'MA', 'PTA', 'ZC', 'FG', 'IO'], [21,0,23,30]],
+        [
+            ['AU', 'AG'],
+            [21, 0, 02, 30]
+        ],
+        [
+            ['CU', 'AL', 'ZN', 'PB', 'SN', 'NI'],
+            [21, 0, 01, 0]
+        ],
+        [
+            ['RU', 'RB', 'HC', 'BU'],
+            [21, 0, 23, 0]
+        ],
+        [
+            ['P', 'J', 'M', 'Y', 'A', 'B', 'JM', 'I'],
+            [21, 0, 23, 30]
+        ],
+        [
+            ['SR', 'CF', 'RM', 'MA', 'TA', 'ZC', 'FG', 'IO'],
+            [21, 0, 23, 30]
+        ],
     ];
     for (i = 0; i < nperiod.length; i++) {
         for (var j = 0; j < nperiod[i][0].length; j++) {
             if (nperiod[i][0][j] === shortName) {
                 p = nperiod[i][1];
                 var condA = hour > p[0] || (hour == p[0] && minute >= p[1]);
-                var condB = hour < p[2] || (hour == p[2] && minute <  p[3]);
+                var condB = hour < p[2] || (hour == p[2] && minute < p[3]);
                 // in one day
                 if (p[2] >= p[0]) {
                     if ((day >= 1 && day <= 5) && condA && condB) {
@@ -475,127 +507,123 @@ $.NewTaskQueue = function(onTaskFinish) {
         if (!insDetail) {
             return self.ERR_SET_SYMBOL;
         }
-        var SlideTick = 1;
         var ret = false;
-        if (task.action == "closebuy" || task.action == "closesell") {
-            var hasPosition = false;
-            do {
-                if (!(task.e.IO("status") && $.IsTrading(task.symbol))) {
-                    return self.ERR_NOT_TRADING;
+        var isCover = task.action != "buy" && task.action != "sell";
+        do {
+            if (!$.IsTrading(task.symbol)) {
+                return self.ERR_NOT_TRADING;
+            }
+            Sleep(500);
+            var ret = self.cancelAll(task.e)
+            if (ret != self.ERR_SUCCESS) {
+                return ret
+            }
+            var positions = task.e.GetPosition();
+            // Error
+            if (!positions) {
+                return self.ERR_GET_POS;
+            }
+            // search position
+            var pos = null;
+            for (var i = 0; i < positions.length; i++) {
+                if (positions[i].ContractType == task.symbol && (((positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) && (task.action == "buy" || task.action == "closebuy")) || ((positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) && (task.action == "sell" || task.action == "closesell")))) {
+                    if (!pos) {
+                        pos = positions[i];
+                        pos.Cost = positions[i].Price * positions[i].Amount;
+                    } else {
+                        pos.Amount += positions[i].Amount;
+                        pos.Profit += positions[i].Profit;
+                        pos.Cost += positions[i].Price * positions[i].Amount;
+                    }
                 }
-                hasPosition = false;
-                var positions = task.e.GetPosition();
-                if (!positions) {
-                    return self.ERR_GET_POS;
+            }
+            // record pre position
+            if (!task.init) {
+                task.init = true;
+                if (pos) {
+                    task.preAmount = pos.Amount;
+                    task.preCost = pos.Cost;
+                } else {
+                    task.preAmount = 0;
+                    task.preCost = 0;
+                    if (isCover) {
+                        Log("找不到仓位", task.symbol, task.action);
+                        ret = null;
+                        break;
+                    }
                 }
-                var depth = task.e.GetDepth();
-                if (!depth) {
-                    return self.ERR_GET_DEPTH;
+            }
+            var remain = task.amount;
+            if (isCover && !pos) {
+                pos = {Amount:0, Cost: 0, Price: 0}
+            }
+            if (pos) {
+                task.dealAmount = pos.Amount - task.preAmount;
+                if (isCover) {
+                    task.dealAmount = -task.dealAmount;
                 }
-                var orderId = null;
+                remain = parseInt(task.amount - task.dealAmount);
+                if (remain <= 0 || task.retry >= task.maxRetry) {
+                    ret = {
+                        price: (pos.Cost - task.preCost) / (pos.Amount - task.preAmount),
+                        amount: (pos.Amount - task.preAmount),
+                        position: pos
+                    };
+                    if (isCover) {
+                        ret.amount = -ret.amount;
+                        if (pos.Amount == 0) {
+                            ret.position = null;
+                        }
+                    }
+                    break;
+                }
+            } else if (task.retry >= task.maxRetry) {
+                ret = null;
+                break;
+            }
+
+            var depth = task.e.GetDepth();
+            if (!depth) {
+                return self.ERR_GET_DEPTH;
+            }
+            var orderId = null;
+            var slidePrice = insDetail.PriceTick * SlideTick;
+            if (isCover) {
                 for (var i = 0; i < positions.length; i++) {
                     if (positions[i].ContractType !== task.symbol) {
                         continue;
                     }
-                    var amount = Math.min(insDetail.MaxLimitOrderVolume, positions[i].Amount, task.amount);
+                    if (parseInt(remain) < 1) {
+                        break
+                    }
+                    var amount = Math.min(insDetail.MaxLimitOrderVolume, positions[i].Amount, remain);
                     if (task.action == "closebuy" && (positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD)) {
                         task.e.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
-                        orderId = task.e.Sell(_N(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), 2), Math.min(amount, depth.Bids[0].Amount), task.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
-                        hasPosition = true;
+                        amount = Math.min(amount, depth.Bids[0].Amount)
+                        orderId = task.e.Sell(_N(depth.Bids[0].Price - slidePrice, 2), amount, task.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
                     } else if (task.action == "closesell" && (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD)) {
                         task.e.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
-                        orderId = task.e.Buy(_N(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), 2), Math.min(amount, depth.Asks[0].Amount), task.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
-                        hasPosition = true;
+                        amount = Math.min(amount, depth.Asks[0].Amount)
+                        orderId = task.e.Buy(_N(depth.Asks[0].Price + slidePrice, 2), amount, task.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
                     }
+                    // assume order is success insert
+                    remain -= amount;
                 }
-                if (hasPosition) {
-                    if (!orderId) {
-                        return self.ERR_TRADE;
-                    }
-                    Sleep(500);
-                    var ret = self.cancelAll(task.e)
-                    if (ret != self.ERR_SUCCESS) {
-                        return ret
-                    }
-                }
-            } while (hasPosition);
-            ret = true;
-        } else {
-            do {
-                if (!$.IsTrading(task.symbol)) {
-                    return self.ERR_NOT_TRADING;
-                }
-                Sleep(500);
-                var ret = self.cancelAll(task.e)
-                if (ret != self.ERR_SUCCESS) {
-                    return ret
-                }
-                var positions = task.e.GetPosition();
-                // Error
-                if (!positions) {
-                    return self.ERR_GET_POS;
-                }
-                // search position
-                var pos = null;
-                for (var i = 0; i < positions.length; i++) {
-                    if (positions[i].ContractType == task.symbol && (((positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) && task.action == "buy") || ((positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) && task.action == "sell"))) {
-                        if (!pos) {
-                            pos = positions[i];
-                            pos.Cost = positions[i].Price * positions[i].Amount;
-                        } else {
-                            pos.Amount += positions[i].Amount;
-                            pos.Profit += positions[i].Profit;
-                            pos.Cost += positions[i].Price * positions[i].Amount;
-                        }
-                    }
-                }
-                // record pre position
-                if (!task.init) {
-                    task.init = true;
-                    if (pos) {
-                        task.preAmount = pos.Amount;
-                        task.preCost = pos.Cost;
-                    } else {
-                        task.preAmount = 0;
-                        task.preCost = 0;
-                    }
-                }
-                var remain = task.amount;
-                if (pos) {
-                    task.dealAmount = pos.Amount - task.preAmount;
-                    remain = parseInt(task.amount - task.dealAmount);
-                    if (remain <= 0 || task.retry >= task.maxRetry) {
-                        ret = {
-                            price: (pos.Cost - task.preCost) / (pos.Amount - task.preAmount),
-                            amount: (pos.Amount - task.preAmount),
-                            position: pos
-                        };
-                        break;
-                    }
-                } else if (task.retry >= task.maxRetry) {
-                    ret = null;
-                    break;
-                }
-
-                var depth = task.e.GetDepth();
-                if (!depth) {
-                    return self.ERR_GET_DEPTH;
-                }
-                var orderId = null;
+            } else {
                 if (task.action == "buy") {
                     task.e.SetDirection("buy");
-                    orderId = task.e.Buy(_N(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), 2), Math.min(remain, depth.Asks[0].Amount), task.symbol, 'Ask', depth.Asks[0]);
+                    orderId = task.e.Buy(_N(depth.Asks[0].Price + slidePrice, 2), Math.min(remain, depth.Asks[0].Amount), task.symbol, 'Ask', depth.Asks[0]);
                 } else {
                     task.e.SetDirection("sell");
-                    orderId = task.e.Sell(_N(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), 2), Math.min(remain, depth.Bids[0].Amount), task.symbol, 'Bid', depth.Bids[0]);
+                    orderId = task.e.Sell(_N(depth.Bids[0].Price - slidePrice, 2), Math.min(remain, depth.Bids[0].Amount), task.symbol, 'Bid', depth.Bids[0]);
                 }
-                // symbol not in trading or other else happend
-                if (!orderId) {
-                    task.retry++;
-                    return self.ERR_TRADE;
-                }
-            } while (true);
-        }
+            }
+            // symbol not in trading or other else happend
+            if (!orderId) {
+                task.retry++;
+                return self.ERR_TRADE;
+            }
+        } while (true);
         task.finished = true
 
         if (self.onTaskFinish) {
@@ -632,19 +660,24 @@ $.AccountToTable = AccountToTable;
 
 function main() {
     var p = $.NewPositionManager();
-    p.OpenShort("MA609", 1);
     p.OpenShort("MA701", 1);
-    Log(p.GetPosition("MA609", PD_SHORT));
+    p.OpenShort("MA705", 1);
+    Log(p.GetPosition("MA701", PD_SHORT));
     Log(p.GetAccount());
     Log(p.Account());
     Sleep(60000 * 10);
     p.CoverAll();
     LogProfit(p.Profit());
-    Log($.IsTrading("MA609"));
+    Log($.IsTrading("MA701"));
     // 多品种时使用交易队列来完成非阻塞的交易任务
     var q = $.NewTaskQueue();
     q.pushTask(exchange, "MA701", "buy", 3, function(task, ret) {
         Log(task.desc, ret)
+        if (ret) {
+            q.pushTask(exchange, "MA701", "closebuy", 1, function(task, ret) {
+                Log(task.desc, ret)
+            })
+        }
     })
     while (true) {
         // 在空闲时调用poll来完成未完成的任务
