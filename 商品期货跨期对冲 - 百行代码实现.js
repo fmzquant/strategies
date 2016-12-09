@@ -14,6 +14,7 @@ SB            MA705  合约B
 HedgeSpread   30     开仓价差
 CoverSpread   10     平仓价差
 LoopInterval  6      轮询间隔(秒)
+OpAmount      true   开仓手数
 CoverAll      false  启动时平掉所有仓位
 */
 
@@ -29,9 +30,10 @@ function Hedge(q, e, initAccount, symbolA, symbolB, hedgeSpread, coverSpread) {
     self.isBusy = false
     self.hedgeSpread = hedgeSpread
     self.coverSpread = coverSpread
-    self.opAmount = 1
+    self.opAmount = OpAmount
     self.poll = function() {
         if (self.isBusy || (!exchange.IO("status")) || (!$.IsTrading(self.symbolA))) {
+            Sleep(1000);
             return
         }
         var insDetailA = exchange.SetContractType(self.symbolA)
@@ -122,6 +124,5 @@ function main() {
     while (true) {
         q.poll()
         t.poll()
-        Sleep(LoopInterval*1000)
     }
 }

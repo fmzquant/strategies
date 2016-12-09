@@ -323,6 +323,13 @@ var PositionManager = (function() {
                 break
             }
             for (var i = 0; i < positions.length; i++) {
+                // Cover Hedge Position First
+                if (positions[i].ContractType.indexOf('&') != -1) {
+                    Cover(this.e, positions[i].ContractType)
+                    Sleep(1000)
+                }
+            }
+            for (var i = 0; i < positions.length; i++) {
                 if (positions[i].ContractType.indexOf('&') == -1) {
                     Cover(this.e, positions[i].ContractType)
                     Sleep(1000)
@@ -352,7 +359,7 @@ $.IsTrading = function(symbol) {
     if (day === 0 || (day === 6 && (hour > 2 || hour == 2 && minute > 30))) {
         return false;
     }
-
+    symbol = symbol.replace('SPD ', '').replace('SP ', '');
     var p, i, shortName = "";
     for (i = 0; i < symbol.length; i++) {
         var ch = symbol.charCodeAt(i);
