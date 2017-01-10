@@ -14,19 +14,10 @@ import talib
 import json
 import traceback
 import matplotlib
-matplotlib.use("Agg")
-
 import numpy as np
-import matplotlib.pyplot as plt, io, base64
+import matplotlib.pyplot as plt
 import mpl_toolkits.mplot3d
 
-def saveImage(fig=None):
-    if fig is None:
-        fig = plt
-    dataStream = io.BytesIO()
-    fig.savefig(dataStream, format="png")
-    return '`data:image/png;base64,%s`'%(base64.b64encode(dataStream.getvalue()))
-    
 def main():
     testGlobal = [
             'Version', ['Log', 'ok', 3.5, True], ['Sleep', 100], ['LogProfit', 10.5],
@@ -84,12 +75,12 @@ def main():
 
     # test plot image
     plt.plot([3,6,2,4,7,1])
-    Log('支持base64图片 ' + saveImage())
+    Log('支持直接打印plt图片 ', plt)
     
     fig = plt.figure()
     ax = fig.add_subplot(111)
     t = ax.scatter(np.random.rand(20), np.random.rand(20))
-    Log(saveImage(fig))
+    Log(fig)
     
     x = np.linspace(0, 10, 1000)
     y = np.sin(x)
@@ -103,7 +94,7 @@ def main():
     plt.title("PyPlot Example")
     plt.ylim(-1.2,1.2)
     plt.legend()
-    Log(saveImage())
+    Log(plt)
 
     x,y=np.mgrid[-2:2:20j,-2:2:20j]
     z=x*np.exp(-x**2-y**2)
@@ -113,7 +104,7 @@ def main():
     ax.set_ylabel('y')
     ax.set_zlabel('z')
     # plot image to status bar
-    LogStatus(saveImage())
+    LogStatus(plt)
     
     # test plot chart
     x = Chart({

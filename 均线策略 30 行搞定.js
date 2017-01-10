@@ -1,10 +1,12 @@
 /*
 策略出处: https://www.botvs.com/strategy/12348
-策略名称: 均线策略 30 行打造一个正向收益系统
+策略名称: 均线策略 30 行搞定
 策略作者: Zero
 策略描述:
 
 "Talk is cheap. Show me the code"
+
+教学性质, 实盘慎用.
 
 
 注: ` 策略使用了交易模板类库`

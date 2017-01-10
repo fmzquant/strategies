@@ -136,7 +136,7 @@ function main() {
     Log(initAccount)
     var n = 0
     var q = $.NewTaskQueue(function(task, ret) {
-        Log(task.desc, ret ? "成功" : "失败")
+        Log(task.desc, ret ? "成功" : "失败", ret)
     })
     if (Reset) {
         LogReset()

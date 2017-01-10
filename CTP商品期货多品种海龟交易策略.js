@@ -37,6 +37,7 @@ RMode           0                                                               
 VMStatus        {}                                                                                                               手动恢复字符串
 WXPush          true                                                                                                             推送交易信息
 MaxTaskRetry    5                                                                                                                开仓最多重试次数
+KeepRatio       10                                                                                                               预留保证金比例
 
 按钮     默认值         描述
 -----  ----------  -----
@@ -46,7 +47,7 @@ MaxTaskRetry    5                                                               
 var _bot = $.NewPositionManager();
 
 var TTManager = {
-    New: function(needRestore, symbol, riskRatio, atrLen, enterPeriodA, leavePeriodA, enterPeriodB, leavePeriodB, useFilter,
+    New: function(needRestore, symbol, keepBalance, riskRatio, atrLen, enterPeriodA, leavePeriodA, enterPeriodB, leavePeriodB, useFilter,
         multiplierN, multiplierS, maxLots) {
 
         // subscribe
@@ -75,6 +76,7 @@ var TTManager = {
 
         var obj = {
             symbol: symbol,
+            keepBalance: keepBalance,
             riskRatio: riskRatio,
             atrLen: atrLen,
             enterPeriodA: enterPeriodA,
@@ -118,6 +120,8 @@ var TTManager = {
             symbolDetail: symbolDetail,
             lastErr: "",
             lastErrTime: "",
+            stopPrice: '',
+            leavePrice: '',
             isTrading: false
         };
 
@@ -386,6 +390,8 @@ var TTManager = {
             var lastPrice = records[records.length - 1].Close;
             obj.lastPrice = lastPrice;
             if (obj.marketPosition === 0) {
+                obj.status.stopPrice = '--';
+                obj.status.leavePrice = '--';
                 obj.status.upLine = 0;
                 obj.status.downLine = 0;
                 for (var i = 0; i < 2; i++) {
@@ -409,6 +415,7 @@ var TTManager = {
                 }
             } else {
                 var spread = obj.marketPosition > 0 ? (obj.openPrice - lastPrice) : (lastPrice - obj.openPrice);
+                obj.status.stopPrice = _N(obj.openPrice + (obj.N * StopLossRatio * (obj.marketPosition > 0 ? -1 : 1)));
                 if (spread > (obj.N * StopLossRatio)) {
                     opCode = 3;
                     obj.preBreakoutFailure = true;
@@ -417,8 +424,9 @@ var TTManager = {
                 } else if (-spread > (IncSpace * obj.N)) {
                     opCode = obj.marketPosition > 0 ? 1 : 2;
                 } else if (records.length > obj.leavePeriod) {
-                    if ((obj.marketPosition > 0 && lastPrice < TA.Lowest(records, obj.leavePeriod, 'Low')) ||
-                        (obj.marketPosition < 0 && lastPrice > TA.Highest(records, obj.leavePeriod, 'High'))) {
+                    obj.status.leavePrice = TA.Lowest(records, obj.leavePeriod, obj.marketPosition > 0 ? 'Low' : 'High')
+                    if ((obj.marketPosition > 0 && lastPrice < obj.status.leavePrice) ||
+                        (obj.marketPosition < 0 && lastPrice > obj.status.leavePrice)) {
                         obj.preBreakoutFailure = false;
                         Log(obj.symbolDetail.InstrumentName, "正常平仓", suffix);
                         opCode = 3;
@@ -446,8 +454,9 @@ var TTManager = {
             var N = _N(atrs[atrs.length - 1], 4);
 
             var account = _bot.GetAccount();
-            var unit = parseInt(account.Balance * (obj.riskRatio / 100) / N / obj.symbolDetail.VolumeMultiple);
-            var canOpen = parseInt(account.Balance / (opCode == 1 ? obj.symbolDetail.LongMarginRatio : obj.symbolDetail.ShortMarginRatio) / (lastPrice * 1.2) / obj.symbolDetail.VolumeMultiple);
+            var currMargin = JSON.parse(exchange.GetRawJSON()).CurrMargin;
+            var unit = parseInt((account.Balance+currMargin-obj.keepBalance) * (obj.riskRatio / 100) / N / obj.symbolDetail.VolumeMultiple);
+            var canOpen = parseInt((account.Balance-obj.keepBalance) / (opCode == 1 ? obj.symbolDetail.LongMarginRatio : obj.symbolDetail.ShortMarginRatio) / (lastPrice * 1.2) / obj.symbolDetail.VolumeMultiple);
             unit = Math.min(unit, canOpen);
             if (unit < obj.symbolDetail.MinLimitOrderVolume) {
                 obj.setLastError("可开 " + unit + " 手 无法开仓, " + (canOpen >= obj.symbolDetail.MinLimitOrderVolume ? "风控触发" : "资金限制"));
@@ -513,6 +522,11 @@ function main() {
         Log("持仓信息", positions);
     }
     Log("风险系数:", RiskRatio, "N值周期:", ATRLength, "系统1: 入市周期", EnterPeriodA, "离市周期", LeavePeriodA, "系统二: 入市周期", EnterPeriodB, "离市周期", LeavePeriodB, "加仓系数:", IncSpace, "止损系数:", StopLossRatio, "单品种最多开仓:", MaxLots, "次");
+    var initAccount = _bot.GetAccount();
+    var initMargin = JSON.parse(exchange.GetRawJSON()).CurrMargin;
+    var keepBalance = _N((initAccount.Balance + initMargin) * (KeepRatio/100), 3);
+    Log("资产信息", initAccount, "保留资金:", keepBalance);
+    
     var tts = [];
     var filter = [];
     var arr = Instruments.split(',');
@@ -530,11 +544,10 @@ function main() {
                 break;
             }
         }
-        var obj = TTManager.New(hasPosition, symbol, RiskRatio, ATRLength, EnterPeriodA, LeavePeriodA, EnterPeriodB, LeavePeriodB, UseEnterFilter, IncSpace, StopLossRatio, MaxLots);
+        var obj = TTManager.New(hasPosition, symbol, keepBalance, RiskRatio, ATRLength, EnterPeriodA, LeavePeriodA, EnterPeriodB, LeavePeriodB, UseEnterFilter, IncSpace, StopLossRatio, MaxLots);
         tts.push(obj);
     }
-    var initAccount = _bot.GetAccount();
-    Log("资产信息", initAccount);
+    
 
     var preTotalHold = -1;
     var lastStatus = '';
@@ -559,7 +572,7 @@ function main() {
         var tblMarket = {
             type: "table",
             title: "运行状态",
-            cols: ["合约名称", "合约乘数", "保证金率", "交易时间", "柱线长度", "上线", "下线", "异常描述", "发生时间"],
+            cols: ["合约名称", "合约乘数", "保证金率", "交易时间", "柱线长度", "上线", "下线", "止损价", "离市价", "异常描述", "发生时间"],
             rows: []
         };
         var totalHold = 0;
@@ -574,13 +587,14 @@ function main() {
                 holdSymbol++;
             }
             tblStatus.rows.push([d.symbolDetail.InstrumentName, d.holdAmount == 0 ? '--' : (d.marketPosition > 0 ? '多' : '空'), d.holdPrice, d.holdAmount, d.holdProfit, Math.abs(d.marketPosition), d.open, d.st, d.cover, d.lastPrice, d.N]);
-            tblMarket.rows.push([d.symbolDetail.InstrumentName, d.symbolDetail.VolumeMultiple, _N(d.symbolDetail.LongMarginRatio, 4) + '/' + _N(d.symbolDetail.ShortMarginRatio, 4), (d.isTrading ? '是#0000ff' : '否#ff0000'), d.recordsLen, d.upLine, d.downLine, d.lastErr, d.lastErrTime]);
+            tblMarket.rows.push([d.symbolDetail.InstrumentName, d.symbolDetail.VolumeMultiple, _N(d.symbolDetail.LongMarginRatio, 4) + '/' + _N(d.symbolDetail.ShortMarginRatio, 4), (d.isTrading ? '是#0000ff' : '否#ff0000'), d.recordsLen, d.upLine, d.downLine, d.stopPrice, d.leavePrice, d.lastErr, d.lastErrTime]);
             totalHold += Math.abs(d.holdAmount);
         }
         var now = new Date();
         var elapsed = now.getTime() - ts;
         var tblAssets = _bot.GetAccount(true);
         var nowAccount = _bot.Account();
+       
         if (tblAssets.rows.length > 10) {
             // replace AccountId
             tblAssets.rows[0] = ["InitAccount", "初始资产", initAccount];
@@ -593,7 +607,7 @@ function main() {
         }
         LogStatus(lastStatus);
         if (preTotalHold > 0 && totalHold == 0) {
-            LogProfit(nowAccount.Balance - initAccount.Balance);
+            LogProfit(nowAccount.Balance - initAccount.Balance - initMargin);
         }
         preTotalHold = totalHold;
         Sleep(LoopInterval * 1000);

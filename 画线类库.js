@@ -83,6 +83,54 @@ $.GetCfg = function() {
     return cfg
 }
 
+$.PlotHLine = function(value, label, color, style) {
+    if (typeof(cfg.yAxis) === 'undefined') {
+        cfg.yAxis = {
+            plotLines: []
+        }
+    } else if (typeof(cfg.yAxis.plotLines) === 'undefined') {
+        cfg.yAxis.plotLines = []
+    }
+    /*
+    Solid
+    ShortDash
+    ShortDot
+    ShortDashDot
+    ShortDashDotDot
+    Dot
+    Dash
+    LongDash
+    DashDot
+    LongDashDot
+    LongDashDotDot
+    */
+    var obj = {
+        value: value,
+        color: color || 'red',
+        width: 2,
+        dashStyle: style || 'Solid',
+        label: {
+            text: label || '',
+            align: 'center'
+        },
+    }
+    var found = false
+    for (var i = 0; i < cfg.yAxis.plotLines.length; i++) {
+        if (cfg.yAxis.plotLines[i].label.text == label) {
+            cfg.yAxis.plotLines[i] = obj
+            found = true
+        }
+    }
+    if (!found) {
+        cfg.yAxis.plotLines.push(obj)
+    }
+    if (!chart) {
+        chart = Chart(cfg)
+    } else {
+        chart.update(cfg)
+    }
+}
+
 $.PlotRecords = function(records, title) {
     var seriesIdx = labelIdx["candlestick"];
     if (!chart) {
@@ -176,8 +224,14 @@ $.PlotFlag = function(time, text, title, shape, color) {
         })
         chart.update(cfg)
     }
-    
-    var obj = {x:time, color: color, shape: shape, title: title, text: text}
+
+    var obj = {
+        x: time,
+        color: color,
+        shape: shape,
+        title: title,
+        text: text
+    }
 
     if (preFlagTime != time) {
         preFlagTime = time
@@ -210,8 +264,9 @@ function main() {
         if (records && records.length > 0) {
             $.PlotRecords(records, 'BTC')
             if (isFirst) {
-                $.PlotFlag(records[records.length-1].Time, 'Start', 'S')
+                $.PlotFlag(records[records.length - 1].Time, 'Start', 'S')
                 isFirst = false
+                $.PlotHLine(records[records.length - 1].Close, 'Close')
             }
         }
         var ticker = exchange.GetTicker()
@@ -219,7 +274,7 @@ function main() {
             $.PlotLine('Last', ticker.Last)
             $.PlotTitle('Last ' + ticker.Last)
         }
-        
+
         Sleep(60000)
     }
 }

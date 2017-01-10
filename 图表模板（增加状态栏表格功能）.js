@@ -1,6 +1,6 @@
 /*
-策略出处: https://www.botvs.com/strategy/20967
-策略名称: 图表模板（增加状态栏表格）
+策略出处: https://www.botvs.com/strategy/16848
+策略名称: 图表模板（增加状态栏表格功能）
 策略作者: 小小梦
 策略描述:
 
@@ -233,7 +233,7 @@ function CreateTableString(cols,rows){
     var tableString = strHead + srtTable_type + strTable_title + strTable_cols_begin + strCols + strTable_cols_end + strTable_rows_begin + strRows + strTable_rows_end + strEnd;
     return tableString;
 }
-$.UpdateLogStatus = function(msg) { //更新状态栏 
+$.UpDateLogStatus = function(msg) { //更新状态栏 
     //列用ABC表示，行用0123表示
     ConnectDate(g_cols,g_rows);//链接数据
     LogStatus("当前时间：" + (new Date()) + "msg:" + msg +  "\n" + "`" + JSON.stringify(objTable) + "`");//更新状态栏
@@ -264,7 +264,7 @@ $.AddZhiBiao = function(zhibiao_Array,records,index){//该函数是在图表上�
     }
     //chart.update(ChartObj); //测试取消
 };
-$.UpdateChart = function(records){//更新图表，每次添加指标线，添加标签 后需要更新 才有效。 records： K线原始数据
+$.UpDateChart = function(records){//更新图表，每次添加指标线，添加标签 后需要更新 才有效。 records： K线原始数据
     if(records[records.length - 1].Time !== lastRecordsTime){
         lastRecordsTime = records[records.length - 1].Time;
     }
@@ -285,9 +285,9 @@ function main(){
     var zhibiao2 = [11,22,44,57,8,77,5];
     
     //$.SignOP((new Date()).getTime(),null,null,3,"自定义信息标记到图表上");// 测试标记 自定义信息 到图表上
-    while(i < 500){
+    while(i < 50000){
         Draw(records);
-        if(i===20){
+        if(i===2000){
             //Sleep(60*60*1000);
             SignOP((new Date()).getTime(),2900,1,1);
             $.SignOP((new Date()).getTime(),null,null,3,"自定义信息标记到图表上");// 测试标记 自定义信息 到图表上
@@ -301,9 +301,9 @@ function main(){
 
         //Draw(records);
         //Log("ceshi1"); //ceshi
-        Sleep(200);
+        Sleep(20000);
         records = exchange.GetRecords();
-        $.UpdateChart(records);//更新图表
+        $.UpDateChart(records);//更新图表
         i++;
     }
     //*/
@@ -324,7 +324,7 @@ function main(){
     TV.e0 = "e0";
     TV.f0 = "f0";//先把 表头数据写成不一样的
     */
-    $.UpdateLogStatus(cols,rows);//更新 状态栏表格
+    $.UpDateLogStatus(cols,rows);//更新 状态栏表格
 
     ///*
     //怎么在 表格里面写入数据呢？
@@ -337,7 +337,7 @@ function main(){
     TV.b3 = obj;
     TV.b0 = array;
 
-    $.UpdateLogStatus(cols,rows);//再次更新 状态栏表格
+    $.UpDateLogStatus(cols,rows);//再次更新 状态栏表格
     //*/
 }
 /*修改

@@ -1,11 +1,11 @@
 /*
 策略出处: https://www.botvs.com/strategy/15498
-策略名称: 从第三方获取K线 (商品期货版) Rev. 160810
+策略名称: 从第三方获取K线 (商品期货版) Rev. 161216
 策略作者: 数·狂
 策略描述:
 
 如果在策略开始时必须获取足够多的K线，使用本模板则可从第三方直接获得指定合约的历史K线数据。
-Update 20160810：支持和讯数据源。（推荐！注意：K线周期只支持1、5、15、30<分钟>和1440<日线>）
+Update 20160810：支持和讯数据源。（推荐！注意：K线周期支持1、5、15、30、60<分钟>和1440<日线>、10080<周线>）
 Update 20160615：支持新浪财经数据源。
 注意：
 仅适用于实盘交易。
@@ -117,7 +117,13 @@ $.HXRecords = function(instrument, timeframe, size, includeLastBar) {
         Log("获取K线时发生错误: 找不到合约");
         return null;
     }
-    var tf = (timeframe == 1 ? 0 : timeframe == 5 ? 1 : timeframe == 15 ? 2 : timeframe == 30 ? 3 : timeframe == 1440 ? 5 : -1);
+    var tf = (timeframe == 1 ? 0 : 
+              timeframe == 5 ? 1 : 
+              timeframe == 15 ? 2 : 
+              timeframe == 30 ? 3 : 
+              timeframe == 60 ? 4 :
+              timeframe == 1440 ? 5 :
+              timeframe == 10080 ? 6 : -1);
     if (tf < 0) {
         Log("获取K线时发生错误: K线周期不正确");
         return null;
@@ -171,14 +177,14 @@ $.HXRecords = function(instrument, timeframe, size, includeLastBar) {
 
 function main() {
     Log(exchange.GetName());
-    var rec = $.BTRecords('rb1610', 5, 100); // 从BotVS获取螺纹钢1610的5分钟K线, 100条, 不含最后一条Bar
+    var rec = $.BTRecords('rb1705', 5, 100); // 从BotVS获取螺纹钢1705的5分钟K线, 100条, 不含最后一条Bar
     if (rec) Log(rec.length, rec[rec.length - 1]);
-    rec = $.SNRecords('MA609', 60, 100, true); // 从新浪财经获取甲醇609的1小时K线, 100条, 含最后一条Bar
+    rec = $.SNRecords('MA705', 60, 100, true); // 从新浪财经获取甲醇705的1小时K线, 100条, 含最后一条Bar
     if (rec) Log(rec.length, rec[rec.length - 1]);
-    rec = $.HXRecords('i1701', 15, 100, true); // 从和讯获取铁矿石1701的15分钟K线, 100条, 含最后一条Bar
+    rec = $.HXRecords('i1705', 15, 100, true); // 从和讯获取铁矿石1705的15分钟K线, 100条, 含最后一条Bar
     if (rec) Log(rec.length, rec[rec.length - 1]);
-    rec = $.BTRecords('i1701', 15, 100, true); // BotVS数据对比
+    rec = $.BTRecords('i1705', 15, 100, true); // BotVS数据对比
     if (rec) Log(rec.length, rec[rec.length - 1]);
-    rec = $.SNRecords('i1701', 15, 100, true); // 新浪财经数据对比
+    rec = $.SNRecords('i1705', 15, 100, true); // 新浪财经数据对比
     if (rec) Log(rec.length, rec[rec.length - 1]);
 }

@@ -33,11 +33,34 @@ function main() {
 `不断完善中...`
 
 
-参数         默认值    描述
----------  -----  ----------
-Interval   500    失败重试间隔(毫秒)
-SlideTick  true   滑价点数(整数)
+参数           默认值    描述
+-----------  -----  -----------
+Interval     500    失败重试间隔(毫秒)
+SlideTick    true   滑价点数(整数)
+RiskControl  false  开启风控
+MaxTrade     50     工作日最多交易交易次数
 */
+
+var __orderCount = 0
+var __orderDay = 0
+
+function CanTrade() {
+    if (!RiskControl) {
+        return true
+    }
+    var nowDay = new Date().getDate();
+    if (nowDay != __orderDay) {
+        __orderDay = nowDay;
+        __orderCount = 0;
+    }
+    __orderCount++;
+    if (__orderCount > MaxTrade) {
+        Log("风控模块限制, 不可交易, 超过最大下单量", MaxTrade, "#ff0000 @");
+        throw "中断执行"
+        return false;
+    }
+    return true;
+}
 
 function init() {
     if (typeof(SlideTick) === 'undefined') {
@@ -103,6 +126,9 @@ function Open(e, contractType, direction, opAmount) {
         if (needOpen < insDetail.MinLimitOrderVolume) {
             break;
         }
+        if (!CanTrade()) {
+            break;
+        }
         var depth = _C(e.GetDepth);
         var amount = Math.min(insDetail.MaxLimitOrderVolume, needOpen);
         e.SetDirection(direction == PD_LONG ? "buy" : "sell");
@@ -146,6 +172,9 @@ function Open(e, contractType, direction, opAmount) {
 }
 
 function Cover(e, contractType) {
+    if (!CanTrade()) {
+        return;
+    }
     var insDetail = _C(e.SetContractType, contractType);
     while (true) {
         var n = 0;
@@ -456,7 +485,7 @@ $.NewTaskQueue = function(onTaskFinish) {
     self.onTaskFinish = typeof(onTaskFinish) === 'undefined' ? null : onTaskFinish
     self.retryInterval = 300
     self.tasks = []
-    self.pushTask = function(e, symbol, action, amount, onFinish) {
+    self.pushTask = function(e, symbol, action, amount, arg, onFinish) {
         var task = {
             e: e,
             action: action,
@@ -469,8 +498,10 @@ $.NewTaskQueue = function(onTaskFinish) {
             preCost: 0,
             retry: 0,
             maxRetry: 10,
-            onFinish: onFinish
+            arg: typeof(onFinish) !== 'undefined' ? arg : undefined,
+            onFinish: typeof(onFinish) == 'undefined' ? arg : onFinish
         }
+        
         switch (task.action) {
             case "buy":
                 task.desc = task.symbol + " 开多仓, 数量 " + task.amount
@@ -514,16 +545,18 @@ $.NewTaskQueue = function(onTaskFinish) {
         if (!insDetail) {
             return self.ERR_SET_SYMBOL;
         }
-        var ret = false;
+        var ret = null;
         var isCover = task.action != "buy" && task.action != "sell";
         do {
             if (!$.IsTrading(task.symbol)) {
                 return self.ERR_NOT_TRADING;
             }
-            Sleep(500);
-            var ret = self.cancelAll(task.e)
-            if (ret != self.ERR_SUCCESS) {
-                return ret
+            if (self.cancelAll(task.e) != self.ERR_SUCCESS) {
+                return self.ERR_TRADE;
+            }
+            if (!CanTrade()) {
+                ret = null
+                break
             }
             var positions = task.e.GetPosition();
             // Error
@@ -681,8 +714,8 @@ function main() {
     q.pushTask(exchange, "MA701", "buy", 3, function(task, ret) {
         Log(task.desc, ret)
         if (ret) {
-            q.pushTask(exchange, "MA701", "closebuy", 1, function(task, ret) {
-                Log(task.desc, ret)
+            q.pushTask(exchange, "MA701", "closebuy", 1, 123, function(task, ret) {
+                Log("q", task.desc, ret, task.arg)
             })
         }
     })
