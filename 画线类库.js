@@ -178,8 +178,8 @@ $.PlotLine = function(label, dot, time) {
     }
     var seriesIdx = labelIdx[label]
     if (typeof(seriesIdx) === 'undefined') {
-        preDotTime[seriesIdx] = 0
         seriesIdx = series.length
+        preDotTime[seriesIdx] = 0
         labelIdx[label] = seriesIdx;
         series.push({
             type: 'line',
