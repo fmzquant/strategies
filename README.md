@@ -4,6 +4,7 @@
 > 开源策略列表
 
 
+ - [比特币现货阶梯差价对冲](https://www.botvs.com/strategy/30573)
  - [商品期货套利 - 多品种网格对冲模型](https://www.botvs.com/strategy/27799)
  - [策略框架模板](https://www.botvs.com/strategy/30861)
  - [策略框架模板 (复制)](https://www.botvs.com/strategy/33431)
