@@ -4,8 +4,8 @@
 > 开源策略列表
 
 
- - [比特币现货阶梯差价对冲](https://www.botvs.com/strategy/30573)
  - [商品期货套利 - 多品种网格对冲模型](https://www.botvs.com/strategy/27799)
+ - [比特币现货阶梯差价对冲](https://www.botvs.com/strategy/30573)
  - [策略框架模板](https://www.botvs.com/strategy/30861)
  - [策略框架模板 (复制)](https://www.botvs.com/strategy/33431)
  - [画线类库](https://www.botvs.com/strategy/27293)
@@ -37,6 +37,7 @@
  - [均线策略（python版）](https://www.botvs.com/strategy/21157)
  - [顺势_高频_交易_测试2——失败](https://www.botvs.com/strategy/21938)
  - [顺势_高频_交易_测试1](https://www.botvs.com/strategy/21742)
+ - [Python 双平台对冲策略](https://www.botvs.com/strategy/21023)
  - [各大平台API可用率统计](https://www.botvs.com/strategy/4404)
  - [Dual Thrust 商品期货](https://www.botvs.com/strategy/13011)
  - [均线-趋势_数字货币策略V0.2](https://www.botvs.com/strategy/21369)

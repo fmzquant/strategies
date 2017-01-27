@@ -172,7 +172,7 @@ function main() {
     var q = $.NewTaskQueue(function(task, ret) {
         Log(task.desc, ret ? "成功" : "失败")
     })
-    var arr = HedgeTable.split(',');
+    var arr = HedgeTable.split('(');
     var tbl = {
         type: 'table',
         title: 'Runtime',
@@ -180,14 +180,17 @@ function main() {
         rows: []
     };
     _.each(arr, function(item) {
-        var tmp = item.split(')');
-        var pair = tmp[0].replace('(', '').split('&');
-        var symbolDetail = _C(exchange.SetContractType, pair[0])
-        Log("合约", symbolDetail.InstrumentName, "一手", symbolDetail.VolumeMultiple, "份, 最大下单量", symbolDetail.MaxLimitOrderVolume, "保证金率:", _N(symbolDetail.LongMarginRatio), _N(symbolDetail.ShortMarginRatio), "交割日期", symbolDetail.StartDelivDate);
-        symbolDetail = _C(exchange.SetContractType, pair[1])
-        Log("合约", symbolDetail.InstrumentName, "一手", symbolDetail.VolumeMultiple, "份, 最大下单量", symbolDetail.MaxLimitOrderVolume, "保证金率:", _N(symbolDetail.LongMarginRatio), _N(symbolDetail.ShortMarginRatio), "交割日期", symbolDetail.StartDelivDate);
-        pairs.push(Hedge(q, exchanges[0], positions, pair[0], pair[1], tmp[1]))
+        if (item != '') {
+            var tmp = item.split(')');
+            var pair = tmp[0].replace('(', '').split('&');
+            var symbolDetail = _C(exchange.SetContractType, pair[0])
+            Log("合约", symbolDetail.InstrumentName, "一手", symbolDetail.VolumeMultiple, "份, 最大下单量", symbolDetail.MaxLimitOrderVolume, "保证金率:", _N(symbolDetail.LongMarginRatio), _N(symbolDetail.ShortMarginRatio), "交割日期", symbolDetail.StartDelivDate);
+            symbolDetail = _C(exchange.SetContractType, pair[1])
+            Log("合约", symbolDetail.InstrumentName, "一手", symbolDetail.VolumeMultiple, "份, 最大下单量", symbolDetail.MaxLimitOrderVolume, "保证金率:", _N(symbolDetail.LongMarginRatio), _N(symbolDetail.ShortMarginRatio), "交割日期", symbolDetail.StartDelivDate);
+            pairs.push(Hedge(q, exchanges[0], positions, pair[0], pair[1], tmp[1]))
+        }
     });
+
     var ts = 0
     var lastUpdate = 0
     while (true) {
