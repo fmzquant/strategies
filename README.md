@@ -8,7 +8,6 @@
  - [商品期货套利 - 多品种网格对冲模型](https://www.botvs.com/strategy/27799)
  - [比特币现货阶梯差价对冲](https://www.botvs.com/strategy/30573)
  - [策略框架模板](https://www.botvs.com/strategy/30861)
- - [策略框架模板 (复制)](https://www.botvs.com/strategy/33431)
  - [画线类库](https://www.botvs.com/strategy/27293)
  - [python版 Dual Thrust OKCoin 期货](https://www.botvs.com/strategy/21856)
  - [测试-布林带策略（基于策略框架） (复制)](https://www.botvs.com/strategy/31456)

@@ -6,8 +6,8 @@
 
 移植自: https://github.com/richox/okcoin-leeks-reaper
 
-原作者说收手续费以后就没用了, 我只做了移植, 没有实盘测试, 有兴趣可以学习
-因为策略使用了GetTrades 这个函数在回测系统中没有被模拟, 所以不能回测, 只能直接上实盘测试 !
+原作者说收手续费以后就失效了, 我只做了移植(支持Huobi), 没有实盘测试, 有兴趣可以学习
+因为策略使用了GetTrades 这个函数在回测系统中是被模拟出来的, 所以回测没有什么意义, 只能直接上实盘测试 !
 
 以下为原说明
 
@@ -47,20 +47,6 @@ CalcNetInterval     60      净值计算周期(秒)
 TickInterval       280      轮训周期(毫秒)
 */
 
-function array_slice(arr, start, end) {
-    var r = []
-    if (start < 0) {
-        start = arr.length + start
-    }
-    if (end < 0) {
-        end = arr.length + end
-    }
-    for (var i = start; i <= end; i++) {
-        r.push(arr[i])
-    }
-    return r
-}
-
 function LeeksReaper() {
     var self = {}
     self.numTick = 0
@@ -86,8 +72,9 @@ function LeeksReaper() {
             }
         }
         self.vol = 0.7 * self.vol + 0.3 * _.reduce(trades, function(mem, trade) {
-            if (trade.Id > self.lastTradeId) {
-                self.lastTradeId = Math.max(trade.Id, self.lastTradeId)
+            // Huobi not support trade.Id
+            if ((trade.Id > self.lastTradeId) || (trade.Id == 0 && trade.Time > self.lastTradeId)) {
+                self.lastTradeId = Math.max(trade.Id == 0 ? trade.Time : trade.Id, self.lastTradeId)
                 mem += trade.Amount
             }
             return mem
@@ -167,14 +154,14 @@ function LeeksReaper() {
         var tradeAmount = 0
         
         if (self.numTick > 2 && (
-            self.prices[self.prices.length-1] - _.max(array_slice(self.prices, -6, -2)) > burstPrice ||
-            self.prices[self.prices.length-1] - _.max(array_slice(self.prices, -6, -3)) > burstPrice && self.prices[self.prices.length-1] > self.prices[self.prices.length-2]
+            self.prices[self.prices.length-1] - _.max(self.prices.slice(-6, -1)) > burstPrice ||
+            self.prices[self.prices.length-1] - _.max(self.prices.slice(-6, -2)) > burstPrice && self.prices[self.prices.length-1] > self.prices[self.prices.length-2]
             )) {
             bull = true
             tradeAmount = self.cny / self.bidPrice * 0.99
         } else if (self.numTick > 2 && (
-            self.prices[self.prices.length-1] - _.min(array_slice(self.prices, -6, -2)) < -burstPrice ||
-            self.prices[self.prices.length-1] - _.min(array_slice(self.prices, -6, -3)) < -burstPrice && self.prices[self.prices.length-1] < self.prices[self.prices.length-2]
+            self.prices[self.prices.length-1] - _.min(self.prices.slice(-6, -1)) < -burstPrice ||
+            self.prices[self.prices.length-1] - _.min(self.prices.slice(-6, -2)) < -burstPrice && self.prices[self.prices.length-1] < self.prices[self.prices.length-2]
             )) {
             bear = true
             tradeAmount = self.btc
