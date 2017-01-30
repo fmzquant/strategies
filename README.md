@@ -4,6 +4,7 @@
 > 开源策略列表
 
 
+ - [移植 OKCoin 韭菜收割机](https://www.botvs.com/strategy/34388)
  - [商品期货套利 - 多品种网格对冲模型](https://www.botvs.com/strategy/27799)
  - [比特币现货阶梯差价对冲](https://www.botvs.com/strategy/30573)
  - [策略框架模板](https://www.botvs.com/strategy/30861)
@@ -93,7 +94,6 @@
  - [多线程获取多个交易的深度信息](https://www.botvs.com/strategy/3651)
  - [账户余额变动邮箱提醒, 支持添加多个交易所](https://www.botvs.com/strategy/2006)
  - [多线程获取多个交易的账户信息](https://www.botvs.com/strategy/3297)
- - [多线程异步并发操作举例](https://www.botvs.com/strategy/3292)
  - [OKCoin期货条件触发委托带止损](https://www.botvs.com/strategy/2169)
  - [监视并显示多个平台的全部资产总和的变化](https://www.botvs.com/strategy/443)
  - [多平台对冲稳定套利 V2.1](https://www.botvs.com/strategy/57)
