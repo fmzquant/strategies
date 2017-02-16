@@ -58,8 +58,9 @@ function Hedge(q, e, positions, symbolA, symbolB, hedgeSpread) {
             hold: 0
         }
         if (n > 0) {
-            n -= Math.min(n, st.amount)
-            st.hold = st.amount * coefficient
+            var m = Math.min(n, st.amount)
+            n -= m
+            st.hold = m * coefficient
             Log("恢复", self.name, st)
         }
         self.dic.push(st)

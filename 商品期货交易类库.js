@@ -33,20 +33,26 @@ function main() {
 `不断完善中...`
 
 
-参数           默认值    描述
------------  -----  -----------
-Interval     500    失败重试间隔(毫秒)
-SlideTick    true   滑价点数(整数)
-RiskControl  false  开启风控
-MaxTrade     50     工作日最多交易交易次数
+参数              默认值    描述
+--------------  -----  -----------
+Interval        500    失败重试间隔(毫秒)
+SlideTick       true   滑价点数(整数)
+RiskControl     false  开启风控
+MaxTrade        50     工作日最多交易交易次数
+MaxTradeAmount  1000   单笔最多下单量
 */
 
 var __orderCount = 0
 var __orderDay = 0
 
-function CanTrade() {
+function CanTrade(tradeAmount) {
     if (!RiskControl) {
         return true
+    }
+    if (typeof(tradeAmount) == 'number' && tradeAmount > MaxTradeAmount) {
+        Log("风控模块限制, 超过最大下单量", MaxTradeAmount, "#ff0000 @");
+        throw "中断执行"
+        return false;
     }
     var nowDay = new Date().getDate();
     if (nowDay != __orderDay) {
@@ -55,7 +61,7 @@ function CanTrade() {
     }
     __orderCount++;
     if (__orderCount > MaxTrade) {
-        Log("风控模块限制, 不可交易, 超过最大下单量", MaxTrade, "#ff0000 @");
+        Log("风控模块限制, 不可交易, 超过最大下单次数", MaxTrade, "#ff0000 @");
         throw "中断执行"
         return false;
     }
@@ -126,7 +132,7 @@ function Open(e, contractType, direction, opAmount) {
         if (needOpen < insDetail.MinLimitOrderVolume) {
             break;
         }
-        if (!CanTrade()) {
+        if (!CanTrade(opAmount)) {
             break;
         }
         var depth = _C(e.GetDepth);
@@ -172,12 +178,10 @@ function Open(e, contractType, direction, opAmount) {
 }
 
 function Cover(e, contractType) {
-    if (!CanTrade()) {
-        return;
-    }
     var insDetail = _C(e.SetContractType, contractType);
     while (true) {
         var n = 0;
+        var opAmount = 0;
         var positions = _C(e.GetPosition);
         for (var i = 0; i < positions.length; i++) {
             if (positions[i].ContractType != contractType) {
@@ -187,13 +191,22 @@ function Cover(e, contractType) {
             var depth;
             if (positions[i].Type == PD_LONG || positions[i].Type == PD_LONG_YD) {
                 depth = _C(e.GetDepth);
+                opAmount = Math.min(amount, depth.Bids[0].Amount);
+                if (!CanTrade(opAmount)) {
+                    return;
+                }
                 e.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
-                e.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Bids[0].Amount), contractType, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
+                
+                e.Sell(depth.Bids[0].Price - (insDetail.PriceTick * SlideTick), opAmount, contractType, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
                 n++;
             } else if (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD) {
                 depth = _C(e.GetDepth);
+                opAmount = Math.min(amount, depth.Asks[0].Amount);
+                if (!CanTrade(opAmount)) {
+                    return;
+                }
                 e.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
-                e.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), Math.min(amount, depth.Asks[0].Amount), contractType, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
+                e.Buy(depth.Asks[0].Price + (insDetail.PriceTick * SlideTick), opAmount, contractType, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
                 n++;
             }
         }
@@ -554,7 +567,7 @@ $.NewTaskQueue = function(onTaskFinish) {
             if (self.cancelAll(task.e) != self.ERR_SUCCESS) {
                 return self.ERR_TRADE;
             }
-            if (!CanTrade()) {
+            if (!CanTrade(task.amount)) {
                 ret = null
                 break
             }

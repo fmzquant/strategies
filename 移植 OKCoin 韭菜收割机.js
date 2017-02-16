@@ -6,7 +6,7 @@
 
 移植自: https://github.com/richox/okcoin-leeks-reaper
 
-原作者说收手续费以后就失效了, 我只做了移植(支持Huobi), 没有实盘测试, 有兴趣可以学习
+原作者说收手续费以后就失效了, 我只做了移植, 没有实盘测试, 有兴趣可以学习
 因为策略使用了GetTrades 这个函数在回测系统中是被模拟出来的, 所以回测没有什么意义, 只能直接上实盘测试 !
 
 以下为原说明
@@ -38,13 +38,14 @@ OKCoin韭菜收割机
 BTC: 3QFn1qfZMhMQ4FhgENR7fha3T8ZVw1bEeU
 
 
-参数                     默认值  描述
------------------  -------  -------------------
-BurstThresholdPct    5e-05  burst.threshold.pct
-BurstThresholdVol   10      burst.threshold.vol
-MinStock             0.1    最小交易量
-CalcNetInterval     60      净值计算周期(秒)
-TickInterval       280      轮训周期(毫秒)
+参数                       默认值  描述
+-----------------  ---------  -------------------
+BurstThresholdPct      5e-05  burst.threshold.pct
+BurstThresholdVol     10      burst.threshold.vol
+MinStock               0.1    最小交易量
+CalcNetInterval       60      净值计算周期(秒)
+BalanceTimeout     10000      平衡等代时间(毫秒)
+TickInterval         280      轮训周期(毫秒)
 */
 
 function LeeksReaper() {
@@ -58,6 +59,7 @@ function LeeksReaper() {
     self.prices = []
     self.tradeOrderId = 0
     self.p = 0.5
+    self.account = null
     self.preCalc = 0
     self.preNet = 0
 
@@ -99,6 +101,7 @@ function LeeksReaper() {
         if (!account) {
             return
         }
+        self.account = account
         var now = new Date().getTime()
         if (self.orderBook.Bids.length > 0 && now - self.preCalc > (CalcNetInterval * 1000)) {
             self.preCalc = now
@@ -108,30 +111,29 @@ function LeeksReaper() {
                 LogProfit(net)
             }
         }
-        LogStatus(account, '\n', self.prices)
         self.btc = account.Stocks
         self.cny = account.Balance
-        self.p = self.btc * self.prices[self.prices-1] / (self.btc * self.prices[self.prices-1] + self.cny)
+        self.p = self.btc * self.prices[self.prices.length-1] / (self.btc * self.prices[self.prices.length-1] + self.cny)
         var balanced = false
         
         if (self.p < 0.48) {
             Log("开始平衡", self.p)
             self.cny -= 300
             if (self.orderBook.Bids.length >0) {
-                exchange.Buy(self.orderBook.Bids[0] + 0.00, 0.01)
-                exchange.Buy(self.orderBook.Bids[0] + 0.01, 0.01)
-                exchange.Buy(self.orderBook.Bids[0] + 0.02, 0.01)
+                exchange.Buy(self.orderBook.Bids[0].Price + 0.00, 0.01)
+                exchange.Buy(self.orderBook.Bids[0].Price + 0.01, 0.01)
+                exchange.Buy(self.orderBook.Bids[0].Price + 0.02, 0.01)
             }
         } else if (self.p > 0.52) {
             Log("开始平衡", self.p)
             self.btc -= 0.03
-            if (self.orderBook.Bids.length >0) {
-                exchange.Sell(self.orderBook.Asks[0] - 0.00, 0.01)
-                exchange.Sell(self.orderBook.Asks[0] - 0.01, 0.01)
-                exchange.Sell(self.orderBook.Asks[0] - 0.02, 0.01)
+            if (self.orderBook.Asks.length >0) {
+                exchange.Sell(self.orderBook.Asks[0].Price - 0.00, 0.01)
+                exchange.Sell(self.orderBook.Asks[0].Price - 0.01, 0.01)
+                exchange.Sell(self.orderBook.Asks[0].Price - 0.02, 0.01)
             }
         }
-        Sleep(400)
+        Sleep(BalanceTimeout)
         var orders = exchange.GetOrders()
         if (orders) {
             for (var i = 0; i < orders.length; i++) {
@@ -152,6 +154,9 @@ function LeeksReaper() {
         var bull = false
         var bear = false
         var tradeAmount = 0
+        if (self.account) {
+            LogStatus(self.account, 'Tick:', self.numTick, ', lastPrice:', self.prices[self.prices.length-1], ', burstPrice: ', burstPrice)
+        }
         
         if (self.numTick > 2 && (
             self.prices[self.prices.length-1] - _.max(self.prices.slice(-6, -1)) > burstPrice ||

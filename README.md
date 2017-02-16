@@ -5,6 +5,7 @@
 
 
  - [移植 OKCoin 韭菜收割机](https://www.botvs.com/strategy/34388)
+ - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [商品期货套利 - 多品种网格对冲模型](https://www.botvs.com/strategy/27799)
  - [比特币现货阶梯差价对冲](https://www.botvs.com/strategy/30573)
  - [策略框架模板](https://www.botvs.com/strategy/30861)
@@ -19,7 +20,6 @@
  - [商品期货跨期对冲 - 单品种套利合约](https://www.botvs.com/strategy/27122)
  - [python版CTP商品期货交易类库](https://www.botvs.com/strategy/24288)
  - [Python API 测试](https://www.botvs.com/strategy/21365)
- - [商品期货交易类库](https://www.botvs.com/strategy/12961)
  - [从第三方获取K线 (商品期货版) Rev. 161216](https://www.botvs.com/strategy/15498)
  - [均线策略 30 行搞定](https://www.botvs.com/strategy/12348)
  - [商品期货跨期对冲 - 百行代码实现](https://www.botvs.com/strategy/23896)
