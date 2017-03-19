@@ -372,6 +372,36 @@ function DealActionLimit(task, AorB, Piece, isAgain){
     return tradeInfo;
 }
 
+function CalcActualPrice(task){
+    if(task.action[0] == 0){
+        var A_Pv = task.APositions.Price;
+        var B_Pv = task.BPositions.Price; 
+        task.dic[task.action[0]].ActualPrice = A_Pv - B_Pv;
+        Log(task.symbolA, A_Pv, task.symbolB, B_Pv, "#FF0000");
+    }else if(task.APositions.Amount == 1 && task.BPositions.Amount == 1){
+        var A_Pv = task.APositions.Price;
+        var B_Pv = task.BPositions.Price; 
+        task.dic[task.action[0]].ActualPrice = A_Pv - B_Pv;
+        Log(task.symbolA, A_Pv, task.symbolB, B_Pv, "#FF0000");
+    }else{
+        var A_Pv = task.APositions.Price;
+        var A_P1 = task.Pre_APositions.Price;
+        var A_m = task.APositions.Amount - task.Pre_APositions.Amount;
+        var A_n = task.Pre_APositions.Amount;
+
+        var B_Pv = task.BPositions.Price; 
+        var B_P1 = task.Pre_BPositions.Price;
+        var B_m = task.BPositions.Amount - task.Pre_BPositions.Amount;
+        var B_n = task.Pre_BPositions.Amount;
+
+        var A_P2 = A_Pv * A_P1 * A_m / ((A_m + A_n) * A_P1 - A_n * A_Pv);
+        var B_P2 = B_Pv * B_P1 * B_m / ((B_m + B_n) * B_P1 - B_n * B_Pv);
+
+        task.dic[task.action[0]].ActualPrice = A_P2 - B_P2;
+        Log(task.symbolA, A_P2, task.symbolB, B_P2, "#FF0000");
+    }
+}
+
 function Hedge_Open_Cover(task){
     if(task.isUseMarketOrder === false){       // 限价单
         if((task.action[1] === "buy" && task.action[2] === "sell") || (task.action[1] === "sell" && task.action[2] === "buy")){ // open
@@ -510,6 +540,8 @@ function TasksController(){ // 任务控制器 构造函数
             FrozenStartTime : 0,
             APositions : null,
             BPositions : null,
+            Pre_APositions : null,
+            Pre_BPositions : null,
             PositionsLastUpdateTime : 0,
             isLogProfit : false,
             taskProfit : 0,
@@ -620,8 +652,9 @@ function TasksController(){ // 任务控制器 构造函数
                         task.isLogProfit = false;
                         task.nowAccount = _C(task.e.GetAccount);        
                         var Positions = _C(task.e.GetPosition);  // 获取持仓信息。
-                        UpdatePosition(task, Positions);
+                        UpdatePosition(task, Positions, PRE);
                         Log("Open symbolA:", task.APositions, "symbolB:", task.BPositions);
+                        CalcActualPrice(task);
                         task.State = PLUS;
                     }else if(task.dic[index].open <= -task.Bdiff && task.State !== PLUS){                     // 反对冲 多A 空B
                         task.action = [index, "buy", "sell", -task.dic[index].amount];
@@ -632,8 +665,9 @@ function TasksController(){ // 任务控制器 构造函数
                         task.isLogProfit = false;
                         task.nowAccount = _C(task.e.GetAccount);        
                         var Positions = _C(task.e.GetPosition);  // 获取持仓信息。
-                        UpdatePosition(task, Positions);
+                        UpdatePosition(task, Positions, PRE);
                         Log("Open symbolA:", task.APositions, "symbolB:", task.BPositions);
+                        CalcActualPrice(task);
                         task.State = MINUS;
                     }else{
                         SumHold--;
@@ -691,7 +725,7 @@ function TasksController(){ // 任务控制器 构造函数
             for(var key in task){
                 value = task[key];
                 if(key === "dic" || key === "Adepth" || key === "Bdepth" || key === "initAccount" || key === "nowAccount" || key === "isFrozen" || 
-                    key === "FrozenStartTime" || key === "P"){ // 过滤显示
+                    key === "FrozenStartTime" || key === "P" || key === "Pre_APositions" || key === "Pre_BPositions"){ // 过滤显示
                     continue;
                 }
                 if(key === "e"){

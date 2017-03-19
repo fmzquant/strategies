@@ -38,7 +38,7 @@ function main() {
 Interval        500    失败重试间隔(毫秒)
 SlideTick       true   滑价点数(整数)
 RiskControl     false  开启风控
-MaxTrade        50     工作日最多交易交易次数
+MaxTrade        100    工作日最多交易交易次数
 MaxTradeAmount  1000   单笔最多下单量
 */
 
@@ -700,6 +700,7 @@ $.NewTaskQueue = function(onTaskFinish) {
         if (processed == 0) {
             self.tasks = []
         }
+        return processed
     }
 
     self.size = function() {

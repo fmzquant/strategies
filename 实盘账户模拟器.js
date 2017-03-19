@@ -17,7 +17,6 @@ isUse                true                      是否启用
 
 /*参数
 */
-
 //功能函数
 var VirtualIndex = 0;
 var Originals = [];

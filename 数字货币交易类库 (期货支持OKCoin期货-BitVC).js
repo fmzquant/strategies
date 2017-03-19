@@ -126,11 +126,11 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
             var doAmount = 0;
             if (isBuy) {
                 diffMoney = _N(initAccount.Balance - nowAccount.Balance, 4);
-                dealAmount = _N(nowAccount.Stocks - initAccount.Stocks, 4);
+                dealAmount = _N(nowAccount.Stocks - initAccount.Stocks, 8);                                                // 如果保留小数过少，会引起在小交易量交易时，计算出的成交价格误差较大。
                 doAmount = Math.min(maxAmount, tradeAmount - dealAmount, _N((nowAccount.Balance - 10) / tradePrice, 4));
             } else {
                 diffMoney = _N(nowAccount.Balance - initAccount.Balance, 4);
-                dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 4);
+                dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 8);
                 doAmount = Math.min(maxAmount, tradeAmount - dealAmount, nowAccount.Stocks);
             }
             if (doAmount < e.GetMinStock()) {
