@@ -38,8 +38,6 @@ MoneyChange  false       纪录资金充值或提现
 StockChange  false       纪录数字货币充值或提现
 */
 
-// botvs@298456fac4241b54943e954fe81f45ee
-
 var initAccount;
 var startTime; //unix timestamp
 var pause = false; //pause execution of strategy or continue
@@ -269,4 +267,3 @@ function onexit(){
 
     Log('Robot Stopped!#ff0000@');
 }
-

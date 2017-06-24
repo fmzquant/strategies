@@ -19,7 +19,7 @@ function main() {
         series: [{
             name: '买一',
             data: [],
-        },{
+        }, {
             name: '卖一',
             data: [],
         }]
@@ -38,8 +38,31 @@ function main() {
         }]
     }
 
-    var chart = Chart([cfgA, cfgB]);
+    var cfgC = {
+        __isStock: false,
+        title: {
+            text: '饼图'
+        },
+        series: [{
+            type: 'pie',
+            name: 'one',
+            data: [
+                ["A", 25],
+                ["B", 25],
+                ["C", 25],
+                ["D", 25],
+            ]
+        }]
+    };
+
+
+    var chart = Chart([cfgA, cfgB, cfgC]);
     chart.reset()
+        // 为饼图清加一个数点，add只能更新通过add方式添加的数据点, 内置的数据点无法后期更新
+    chart.add(3, {
+        name: "ZZ",
+        y: Math.random() * 100
+    });
     while (true) {
         Sleep(1000)
         var ticker = exchange.GetTicker()
@@ -53,11 +76,16 @@ function main() {
         cfgB.subtitle = {
             text: '价差 ' + diff,
         };
-        // update相当于重置了图表的配置
-        chart.update([cfgA, cfgB]);
+        // update实际上等于重置了图表的配置
+        chart.update([cfgA, cfgB, cfgC]);
         chart.add([0, [new Date().getTime(), ticker.Buy]]);
         chart.add([1, [new Date().getTime(), ticker.Sell]]);
         // 相当于更新第二个图表的第一个数据序列
         chart.add([2, [new Date().getTime(), diff]]);
+        // 相当于更新了第三个图表的第一个数据序列
+        chart.add(3, {
+            name: "ZZ",
+            y: Math.random() * 100
+        }, -1);
     }
 }

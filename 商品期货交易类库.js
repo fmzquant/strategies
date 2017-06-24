@@ -128,6 +128,9 @@ function Open(e, contractType, direction, opAmount) {
             }
         }
         var insDetail = _C(e.SetContractType, contractType);
+        if (insDetail.MaxLimitOrderVolume == 0) {
+            insDetail.MaxLimitOrderVolume = 50
+        }
         //Log("初始持仓", initAmount, "当前持仓", positionNow, "需要加仓", needOpen);
         if (needOpen < insDetail.MinLimitOrderVolume) {
             break;
@@ -179,6 +182,9 @@ function Open(e, contractType, direction, opAmount) {
 
 function Cover(e, contractType) {
     var insDetail = _C(e.SetContractType, contractType);
+    if (insDetail.MaxLimitOrderVolume == 0) {
+        insDetail.MaxLimitOrderVolume = 50
+    }
     while (true) {
         var n = 0;
         var opAmount = 0;
@@ -367,12 +373,14 @@ var PositionManager = (function() {
             for (var i = 0; i < positions.length; i++) {
                 // Cover Hedge Position First
                 if (positions[i].ContractType.indexOf('&') != -1) {
+                    Log("开始平掉", positions[i]);
                     Cover(this.e, positions[i].ContractType)
                     Sleep(1000)
                 }
             }
             for (var i = 0; i < positions.length; i++) {
                 if (positions[i].ContractType.indexOf('&') == -1) {
+                    Log("开始平掉", positions[i]);
                     Cover(this.e, positions[i].ContractType)
                     Sleep(1000)
                 }
@@ -557,6 +565,9 @@ $.NewTaskQueue = function(onTaskFinish) {
         var insDetail = task.e.SetContractType(task.symbol);
         if (!insDetail) {
             return self.ERR_SET_SYMBOL;
+        }
+        if (insDetail.MaxLimitOrderVolume == 0) {
+            insDetail.MaxLimitOrderVolume = 50
         }
         var ret = null;
         var isCover = task.action != "buy" && task.action != "sell";

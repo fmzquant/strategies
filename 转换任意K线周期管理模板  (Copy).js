@@ -1,0 +1,305 @@
+/*
+策略出处: https://www.botvs.com/strategy/41741
+策略名称: 转换任意K线周期管理模板  (Copy)
+策略作者: 779335834
+策略描述:
+
+1. 修改自小小梦的"转换任意K线周期" 模板
+
+原理：
+  - 获得固定K线的周期，然后合成任意固定K线整数倍的新K线周期
+
+功能：
+  - 转换基础K线为任意K线周期
+  - 暂时不支持 秒级别
+
+限制:
+   - 新K线周期必须是固定K线周期的整数倍.
+   - 固定K线周期为1min, 3min, 5min, 15min, 30min, 新K线周期也必须是分钟且<60
+   - 固定K线周期为1hour, 新K线周期也必须是小时且<24
+   - 固定K线周期为1day, 新K线周期也必须是天
+   - 每次获得的固定K线周期数目必须>=2
+测试版本，如有BUG ，问题 欢迎留言。
+
+输出函数:
+    $.RecordsManager(NewCycleMS) 生成新周期管理器, NewCycleMS 为新K线周期毫秒数. 默认(1000*60*60*2) 2hour.
+    $.AssembleRecords(records, BaseCycleMS) 通过原records生成新的K线的records, BaseCycleMS 为固定K线周期毫秒,默认用固定records进行计算
+    $.GetRecordsTable(n) 得到新K线最新的N个条目, 默认输出所有条目, 输出为table类型,便于LogStatus输出
+    $.Get***** 获得一些基本信息
+
+
+参数                默认值           描述
+----------------  ------------  -------
+UI_NewCycleForMS  1000*60*60*2  合成周期毫秒数
+*/
+
+/*backtest
+  period: 60
+ */
+var cloneObj = function(obj) {                             // 深拷贝 对象函数
+    var str, newobj = obj.constructor === Array ? [] : {};
+    if (typeof obj !== 'object') {
+        return;
+    } else if (JSON) {
+        str = JSON.stringify(obj);                         //系列化对象
+            newobj = JSON.parse(str);                      //还原
+    } else {
+        for (var i in obj) {
+            newobj[i] = typeof obj[i] === 'object' ?
+                cloneObj(obj[i]) : obj[i];
+        }
+    }
+    return newobj;
+};
+
+var DAY = 0;
+var HOURS = 1;
+var MINUTES = 2;
+
+function GetDHM(objTime, BaseCycle, NewCycleForMS){
+    var ret = [];
+    if(BaseCycle % (1000 * 60 * 60 * 24) === 0){
+        ret[0] = objTime.getDate();
+        ret[1] = DAY;
+    }else if(BaseCycle % (1000 * 60 * 60) === 0){
+        ret[0] = objTime.getHours();
+        ret[1] = HOURS;
+    }else if(BaseCycle % (1000 * 60) === 0){
+        ret[0] = objTime.getMinutes();
+        ret[1] = MINUTES;
+    }
+    if(NewCycleForMS % (1000 * 60 * 60 * 24) === 0){
+        ret[2] = DAY;
+    }else if(NewCycleForMS % (1000 * 60 * 60) === 0){
+        ret[2] = HOURS;
+    }else if(NewCycleForMS % (1000 * 60) === 0){
+        ret[2] = MINUTES;
+    }
+    return ret;
+}
+
+function SearchFirstTime(ret, BaseCycle, NewCycleForMS){
+    if(ret[1] === DAY && ret[2] === DAY){ 
+        var array_day = [];
+        for(var i = 1 ; i < 29; i += (NewCycleForMS / BaseCycle)){
+            array_day.push(i);
+        }
+        for(var j = 0 ; j < array_day.length; j++ ){
+            if(ret[0] === array_day[j]){
+                return true;
+            }
+        }
+    }else if(ret[1] === HOURS && ret[2] === HOURS){
+        var array_hours = [];
+        for(var i = 0 ; i < 24; i += (NewCycleForMS / BaseCycle)){
+            array_hours.push(i);
+        }
+        for(var j = 0 ; j < array_hours.length ; j++){
+            if(ret[0] === array_hours[j]){
+                return true;
+            }
+        }
+    }else if(ret[1] === MINUTES && ret[2] === MINUTES){
+        var array_minutes = [];
+        for(var i = 0; i < 60; i += (NewCycleForMS / BaseCycle)){
+            array_minutes.push(i);
+        }
+        for(var j = 0; j < array_minutes.length; j++){
+            if(ret[0] === array_minutes[j]){
+                return true;
+            }
+        }
+    }else{
+        throw "目标周期与基础周期不匹配！目标周期毫秒数：" + NewCycleForMS + " 基础周期毫秒数: " + BaseCycle;
+    }
+}
+
+function Calc_High(AssRecords, n, BaseCycle, NewCycleForMS){
+    var max = AssRecords[n].High;
+    for(var i = 1 ; i < NewCycleForMS / BaseCycle; i++){
+        max = Math.max(AssRecords[n + i].High, max);
+    }
+    return max;
+}
+
+function Calc_Low(AssRecords, n, BaseCycle, NewCycleForMS){
+    var min = AssRecords[n].Low;
+    for(var i = 1 ; i < NewCycleForMS / BaseCycle; i++){
+        min = Math.min(AssRecords[n + i].Low, min);
+    }
+    return min;
+}
+
+function _RecordsManager(NewCycleForMS) {
+    if (typeof NewCycleForMS == 'string') {
+        this._NewCycleForMS = 1;
+        var arrayNum = NewCycleForMS.split("*");
+        for(var indexNum = 0 ; indexNum < arrayNum.length ; indexNum++){
+            this._NewCycleForMS = this._NewCycleForMS * Number(arrayNum[indexNum]);
+        }
+    } else {
+        this._NewCycleForMS = NewCycleForMS;
+    }
+
+    this._Records = new Array();
+
+    this.GetNewCycleForMS = function() {
+        return this._NewCycleForMS;
+    };
+
+    this.AssembleRecords = function(records, BaseCycle) {
+        var NewCycleForMS = this._NewCycleForMS;
+        var AssRecords = records.slice(0); // 深拷贝
+        var AfterAssRecords = [];
+        
+        if (!records || records.length == 0) {
+            Log("record 为空!");
+            return records;
+        }
+        if(records.length < 2){
+            throw (!records) ? "传入的records参数为 错误" + records : "基础K线长度小于2";
+        }
+        if (typeof BaseCycle === 'undefined') {
+            BaseCycle = records[records.length - 1].Time - records[records.length - 2].Time;
+        }
+        if(NewCycleForMS % BaseCycle !== 0){
+            throw "目标周期‘" + NewCycleForMS + "’不是 基础周期 ‘" + BaseCycle + "’ 的整倍数，无法合成！";
+        }
+        if(NewCycleForMS / BaseCycle > records.length){
+            Log("records: ", records, "NewCycleForMS: ", NewCycleForMS, ", BaseCycle: ", BaseCycle);
+            throw "基础K线数量不足，请检查是否基础K线周期过小！";
+        }
+    
+        // 判断时间戳, 找到 基础K线  相对于 目标K线的起始时间。
+        var objTime = new Date();
+		var isFirstFind = true;
+		var FirstStamp = null;
+        for (var i = 0; i < AssRecords.length; i++) {
+            objTime.setTime(AssRecords[i].Time);
+            var ret = GetDHM(objTime, BaseCycle, NewCycleForMS); 
+            
+            if (isFirstFind === true && SearchFirstTime(ret, BaseCycle, NewCycleForMS) === true) {
+                FirstStamp = AssRecords[i].Time;
+                for (j = 0; j < i; j++) {
+                    AssRecords.shift();        // 把目标K线周期前不满足合成的数据排除。
+                }
+                isFirstFind = false;
+                break;                         // 排除后跳出
+            }else if(isFirstFind === false){
+                if((AssRecords[i].Time - FirstStamp) % NewCycleForMS === 0){
+                    for (j = 0; j < i; j++) {
+                        AssRecords.shift();    // 把目标K线周期前不满足合成的数据排除。
+                    }
+                    break;
+                }
+            }
+        }
+        var BarObj = {                         // 定义一个 K线柱结构
+            Time: 0,
+            Open: 0,
+            High: 0,
+            Low: 0,
+            Close: 0,
+            Volume: 0,
+        };
+        var n = 0;
+        for (n = 0; n < AssRecords.length - (NewCycleForMS / BaseCycle); n += (NewCycleForMS / BaseCycle)) {     // 合成
+            /*
+            {
+            Time    :一个时间戳, 精确到毫秒，与Javascript的 new Date().getTime() 得到的结果格式一样
+            Open    :开盘价
+            High    :最高价
+            Low :最低价
+            Close   :收盘价
+            Volume  :交易量
+            }
+            */
+            BarObj.Time = AssRecords[n].Time;
+            BarObj.Open = AssRecords[n].Open;
+            BarObj.High = Calc_High(AssRecords, n, BaseCycle, NewCycleForMS); 
+            BarObj.Low =  Calc_Low(AssRecords, n, BaseCycle, NewCycleForMS); 
+            BarObj.Close = AssRecords[n + (NewCycleForMS / BaseCycle) - 1].Close;
+			BarObj.Volume = 0;
+			for (var j = n; j < n + (NewCycleForMS / BaseCycle); j++) {
+            	BarObj.Volume += AssRecords[j].Volume;
+			}
+            AfterAssRecords.push(cloneObj(BarObj));
+        }
+        
+        BarObj.Time = AssRecords[Math.max(n - (NewCycleForMS / BaseCycle), 0)].Time + NewCycleForMS;  // 最后一根时间不能变，
+        BarObj.Open = AssRecords[n].Open;
+        BarObj.Close = AssRecords[AssRecords.length - 1].Close;
+        BarObj.Volume = 0;
+        var max = AssRecords[n].High;
+        var min = AssRecords[n].Low;
+        for(var index_n = n + 1 ;index_n < AssRecords.length; index_n++){
+            max = Math.max(max, AssRecords[index_n].High);
+            min = Math.min(min, AssRecords[index_n].Low);
+        	BarObj.Volume += AssRecords[index_n].Volume;
+        }
+        BarObj.High = max;
+        BarObj.Low = min;
+        AfterAssRecords.push(cloneObj(BarObj));
+    
+        this._Records = AfterAssRecords;
+        return AfterAssRecords;
+    };
+
+    this.GetKlineName = function () {
+        return " " + this._NewCycleForMS / 60 / 1000 + " 分钟K线";
+    };
+
+    /* 获得records数据表格*/
+    this.GetRecordsTable = function (n) {
+        if (typeof n !== 'undefined' && n >=0 ) {
+            var records = this._Records.slice(-n);
+        } else {
+            var records = this._Records.slice(0);
+        }
+        
+        var record_array = new Array();
+        for (var i = records.length - 1; i >= 0; i--) {
+            var newDate = new Date();
+            newDate.setTime(records[i].Time);
+            var time_str = newDate.toLocaleString();
+            record_array.push([time_str, records[i].Open, records[i].Close,
+                               records[i].High, records[i].Low, records[i].Volume]);
+        }
+        var title = this.GetKlineName() + "(" + records.length + "根)";
+        var table = {type: 'table', title: title,
+                     cols: ['Time', 'Open','Close', 'High', 'Low', 'Volume'],
+                     rows: record_array};
+        return table;
+    }
+}
+
+$.RecordsManager = function (NewCycleForMS) {
+
+    if (typeof NewCycleForMS === 'undefined') {
+        NewCycleForMS = UI_NewCycleForMS;
+    }
+	var RecordsManager = new _RecordsManager(NewCycleForMS);
+	return RecordsManager;
+}
+    
+function main() {
+    var records = exchange.GetRecords();
+    while (!records || records.length < 24) {
+        records = exchange.GetRecords();
+        Sleep(1000);
+    }
+    
+    while (true) {
+        records = _C(exchange.GetRecords);
+        record_manager0 = $.RecordsManager();
+        new_records0 = record_manager0.AssembleRecords(records);
+        var table0 = record_manager0.GetRecordsTable();
+        
+        var BaseCycle = records[records.length - 1].Time - records[records.length - 2].Time;
+        record_manager1 = $.RecordsManager(BaseCycle);
+        new_records1 = record_manager1.AssembleRecords(records);
+        var table1 = record_manager1.GetRecordsTable();
+        LogStatus('`' + JSON.stringify([table0, table1]) +'`');
+        Sleep(1000);
+    }
+}

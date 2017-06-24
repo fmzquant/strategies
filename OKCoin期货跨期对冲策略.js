@@ -4,13 +4,16 @@
 策略作者: 小小梦
 策略描述:
 
-OKCoin期货跨期对冲策略，季度、当周、次周
+### OKCoin期货跨期对冲策略，季度、当周、次周
 - 1、 季度-当周
 - 2、 季度-次周
 - 3、 当周-次周
 - 4、在周五交割前5分钟会自动 平仓， 锁定15分钟 后再正常运行。
 
-BUG：
+### 更新：
+- 更新新域名 修改API 地址 用于获取 交割时间，原地址 修改为 www.okex.com
+
+### BUG：
 在期货策略中 不能使用 Go函数 ，会导致切换合约问题， 对此 策略已经修改，改为一般调用。
 支持限价单模式。
 市价单模式有一些问题。
@@ -165,11 +168,12 @@ function CheckDelivery(nowTime, Symbol, task) {
         while (contractName == "") {
             //var contractInfo = HttpQuery("https://www.okcoin.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=this_week"); //只是检测this_week ,避免重复调用提高效率
             switch(ContractIndex){
-                case 0: contractInfo = HttpQuery("https://www.okcoin.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=this_week");
+                case 0: contractInfo = HttpQuery("https://www.okex.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=this_week");
+                        // www.okex.com  更换新域名
                         break;
-                case 1: contractInfo = HttpQuery("https://www.okcoin.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=next_week");
+                case 1: contractInfo = HttpQuery("https://www.okex.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=next_week");
                         break;
-                case 2: contractInfo = HttpQuery("https://www.okcoin.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=quarter");
+                case 2: contractInfo = HttpQuery("https://www.okex.com/api/v1/future_hold_amount.do?symbol=btc_usd&contract_type=quarter");
                         break;
                 default: Log("contractInfo:", contractInfo); 
                          //throw "switch NumContractType Error!";

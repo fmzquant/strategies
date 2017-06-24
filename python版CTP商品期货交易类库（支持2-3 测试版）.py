@@ -1,10 +1,12 @@
 '''
 策略出处: https://www.botvs.com/strategy/24288
-策略名称: python版CTP商品期货交易类库
+策略名称: python版CTP商品期货交易类库（支持2-3 测试版）
 策略作者: 小小梦
 策略描述:
 
 python版CTP商品期货交易类库
+测试版 如有BUG 欢迎提出，作者QQ ： 359706687  小小梦
+1、2017.4.25 更新：增加   if (insDetail.MaxLimitOrderVolume == 0)  条件判断，有些期货公司服务器 会返回0 值，特此处理。共修改3处  【1】self.pollTask    【2】function Cover  【3】function Open
 
 
 参数         默认值    描述
@@ -16,11 +18,12 @@ Interval   500    轮询间隔
 import json       # json 模块
 import types      # 类型  模块
 import platform   # 版本信息
+import traceback  # 用于异常处理
 # str() :  ASCII and UTF-8
-import sys
 import time
-reload(sys)
-sys.setdefaultencoding('utf8')
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 versionMainValue = None  # 记录python 版本信息
 isFirstCheck = True      # 记录 是否是第一次检查
@@ -32,6 +35,10 @@ def CheckVersion():      # 检查python 版本
         if platformInfo[0] == '2':
             Log("您使用的托管者 python编译环境的python版本是",platformInfo)
             versionMainValue = 2
+            import sys
+            reload(sys)
+            sys.setdefaultencoding('utf8')
+            Log("import sys, reload(sys), sys.setdefaultencoding（'utf8'）")
         elif platformInfo[0] == '3':
             Log("您使用的托管者 python编译环境的python版本是",platformInfo)
             versionMainValue = 3
@@ -114,6 +121,10 @@ def Open(e, contractType, direction, opAmount):
             if positionNow:
                 needOpen = opAmount - (positionNow['Amount'] - initAmount)
         insDetail = _C(e.SetContractType, contractType)
+        # if (insDetail.MaxLimitOrderVolume == 0)
+        if insDetail["MaxLimitOrderVolume"] == 0:
+            # insDetail.MaxLimitOrderVolume = 50
+            insDetail["MaxLimitOrderVolume"] = 50
         if needOpen < insDetail['MinLimitOrderVolume']:
             break
         depth = _C(e.GetDepth)
@@ -151,6 +162,10 @@ def Open(e, contractType, direction, opAmount):
 
 def Cover(e, contractType):
     insDetail = _C(e.SetContractType, contractType)
+    # if (insDetail.MaxLimitOrderVolume == 0)
+    if insDetail["MaxLimitOrderVolume"] == 0:
+        # insDetail.MaxLimitOrderVolume = 50
+        insDetail["MaxLimitOrderVolume"] = 50
     while True:
         n = 0
         positions = _C(e.GetPosition)
@@ -245,13 +260,12 @@ def AccountToTable(Str, title = '账户的信息'):
                 desc = '--'
             else:   
                 desc = trans[k]
-            # Log(k not in trans)  # ceshi
             v = fields[k]
             if type(v) == typeOfstr('int') or type(v) == typeOfstr('float'):
                 v = _N(v, 5)
             tbl['rows'].append([k, desc, v])
-    except BaseException, e:
-        Log("异常信息：", e)
+    except:
+        Log(traceback.format_exc())
     return tbl
 
 # NewTaskQueue 类
@@ -308,7 +322,6 @@ class NewTaskQueue:
     def cancelAll(self, e):
         while True:
             orders = e.GetOrders()
-            # Log("orders:", orders) # ceshi
             if orders is None:
                 return self.ERR_GET_ORDERS
             if len(orders) == 0:
@@ -322,12 +335,14 @@ class NewTaskQueue:
         insDetail = task["e"].SetContractType(task["symbol"])
         if insDetail is None:
             return self.ERR_SET_SYMBOL
+        # if (insDetail.MaxLimitOrderVolume == 0)
+        if insDetail["MaxLimitOrderVolume"] == 0:
+            # insDetail.MaxLimitOrderVolume = 50
+            insDetail["MaxLimitOrderVolume"] = 50
         ret = False
         isCover = (task["action"] != "buy") and (task["action"] != "sell")
         while True:
             if not ext.IsTrading(task["symbol"]):
-                # Log(ext.IsTrading(task["symbol"]), task["symbol"], ext.IsTrading("MA701")) # ceshi 
-                # raise Exception("stop") # ceshi 
                 return self.ERR_NOT_TRADEING
             Sleep(500)
             ret = self.cancelAll(task["e"])
@@ -432,11 +447,9 @@ class NewTaskQueue:
             if not task["finished"] :
                 processed += 1
                 self.pollTask(task)
-                # LogStatus("jieguo:", jieguo) # ceshi 
 
         if processed == 0:
             self.tasks = []
-        # Log("AA") # ceshi
 
     def size(self):
         return len(self.tasks)
@@ -534,7 +547,7 @@ def IsTrading(symbol):
     hour = tup_localtime.tm_hour   # tm_hour : 0~23
     minute = tup_localtime.tm_min  # tm_min : 0~59
     
-    if (day == 0 or (day == 6 and (hour > 2 or hour == 2 and minute > 30))):
+    if (day == 6 or (day == 5 and (hour > 2 or hour == 2 and minute > 30))):
         return False
 
     shortName = ""                      # i , p
@@ -561,7 +574,7 @@ def IsTrading(symbol):
             [13, 0, 15, 15]
         ]
     
-    if day >= 1 and day <= 5:
+    if day >= 0 and day <= 4:
         for i in range(len(period)):
             p = period[i]
             if ((hour > p[0] or (hour == p[0] and minute >= p[1])) and (hour < p[2] or (hour == p[2] and minute < p[3]))):
@@ -570,11 +583,11 @@ def IsTrading(symbol):
     nperiod = [
         [
             ['AU', 'AG'],
-            [21, 0, 02, 30]
+            [21, 0, 2, 30]  # 此处修改为 2
         ],
         [
             ['CU', 'AL', 'ZN', 'PB', 'SN', 'NI'],
-            [21, 0, 01, 0]
+            [21, 0, 1, 0]   # 此处修改为 1
         ],
         [
             ['RU', 'RB', 'HC', 'BU'],
@@ -598,10 +611,10 @@ def IsTrading(symbol):
                 condB = hour < p[2] or (hour == p[2] and minute < p[3])
                 # in one day
                 if p[2] >= p[0]:
-                    if ((day >= 1 and day <= 5) and condA and condB):
+                    if ((day >= 0 and day <= 4) and condA and condB):
                         return True
                 else:
-                    if (((day >= 1 and day <= 5) and condA) or ((day >= 2 and day <= 6) and condB)):
+                    if (((day >= 0 and day <= 4) and condA) or ((day >= 1 and day <= 5) and condB)):
                         return True
                 return False
     return False
@@ -708,15 +721,7 @@ def main():
 
     Log("q.tasks`s length :", q.size())
     
-    # count = 0 # ceshi 
     while True:
         q.poll()
-        # LogStatus("q.tasks`s length :", q.size())
-        # count += 1 # ceshi 
-        # if count > 10:
-            # break
-
         Sleep(1000)
-
-
 

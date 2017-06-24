@@ -90,5 +90,9 @@ function main() {
     var raw = exchange.GetRawJSON()
     LogStatus('`' + JSON.stringify(AccountToTable(raw))+'`')
     Log(raw)
-    Log("已经在状态栏以表格形式显示")
+    var obj = JSON.parse(raw)
+    //var rights = _N(obj['Balance'] + obj['PositionProfit']);
+    var rights = _N(obj['PositionProfit'] + obj['CurrMargin'] + obj['Available']);
+    Log("已经在状态栏以表格形式显示", rights)
+
 }
