@@ -102,6 +102,7 @@ def PlotRecords(records, title = None):
     global labelIdx, series, preBarTime, chart
     if not chart :
         chart = Chart(cfg)
+        chart.reset()
     if ("candlestick" in labelIdx) == False : 
         cfg["__isStock"] = True
         seriesIdx = len(series)
@@ -139,6 +140,7 @@ def PlotLine(label, dot, Ntime = None):
             "type" : "datetime"
             })
         chart = Chart(cfg)
+        chart.reset()
     if (label in labelIdx) == False :
         seriesIdx = len(series)
         preDotTime.setdefault(str(seriesIdx), 0)
@@ -168,6 +170,7 @@ def PlotFlag(time, text, title, shape = "", color = ""):
     global chart, cfg, labelIdx, preFlagTime
     if not chart :
         chart = Chart(cfg)
+        chart.reset()
     label = "flag"
     if (label in labelIdx) == False : 
         seriesIdx = len(series)

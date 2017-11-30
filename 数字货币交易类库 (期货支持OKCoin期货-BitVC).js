@@ -7,19 +7,20 @@
 数字货币交易类库 (期货支持OKCoin期货/BitVC) 目前测试阶段，使用请留意，如有问题 ，请联系作者 ，十分感谢！
 
 
-参数            默认值    描述
-------------  -----  --------------------------
-OpMode        0      现货-下单方式: 吃单|挂单
-MaxSpace      0.5    现货-挂单失效距离
-SlidePrice    0.1    现货-下单滑动价(元)
-MaxAmount     0.8    现货-开仓最大单次下单量
-RetryDelay    500    现货-失败重试(毫秒)
-MAType        0      现货-均线算法: EMA|MA|AMA(自适应均线)
-Interval      300    期货—失败重试间隔(毫秒)
-F_SlidePrice  2      期货—下单滑价(元)
-lv            0.5    期货—滑价增长率
-max_open_lv   true   期货—开仓滑价最大增长率
-max_cover_lv  true   期货—平仓滑价最大增长率
+参数             默认值    描述
+-------------  -----  --------------------------
+OpMode         0      现货-下单方式: 吃单|挂单
+MaxSpace       0.5    现货-挂单失效距离
+SlidePrice     0.1    现货-下单滑动价(元)
+MaxAmount      0.8    现货-开仓最大单次下单量
+RetryDelay     500    现货-失败重试(毫秒)
+MAType         0      现货-均线算法: EMA|MA|AMA(自适应均线)
+Interval       300    期货—失败重试间隔(毫秒)
+F_SlidePrice   2      期货—下单滑价(元)
+lv             0.5    期货—滑价增长率
+max_open_lv    true   期货—开仓滑价最大增长率
+max_cover_lv   true   期货—平仓滑价最大增长率
+_GetMinStocks  0.01   现货最小交易量
 */
 
 // 现货部分
@@ -55,7 +56,7 @@ function GetAccount(e, waitFrozen) {
     var alreadyAlert = false;
     while (true) {
         account = _C(e.GetAccount);
-        if (!waitFrozen || (account.FrozenStocks < e.GetMinStock() && account.FrozenBalance < 0.01)) {
+        if (!waitFrozen || (account.FrozenStocks < _GetMinStocks && account.FrozenBalance < 0.01)) {   // _GetMinStocks
             break;
         }
         if (!alreadyAlert) {
@@ -133,7 +134,7 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
                 dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 8);
                 doAmount = Math.min(maxAmount, tradeAmount - dealAmount, nowAccount.Stocks);
             }
-            if (doAmount < e.GetMinStock()) {
+            if (doAmount < _GetMinStocks) {
                 break;
             }
             prePrice = tradePrice;
@@ -293,7 +294,7 @@ function Open(e, contractType, direction, opAmount, price) {
                 needOpen = opAmount - (positionNow.Amount - initAmount);
             }
         }
-        if (needOpen < e.GetMinStock()) {
+        if (needOpen < 1) {
             break;
         }
         if (step > max_open_lv) {

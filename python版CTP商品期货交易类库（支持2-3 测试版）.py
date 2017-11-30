@@ -383,7 +383,7 @@ class NewTaskQueue:
                 remain = task["amount"] - task["dealAmount"]
                 if (remain <= 0 or task["retry"] >= task["maxRetry"]):
                     ret = {
-                        "price" : (pos["Cost"] - task["preCost"]) / (pos["Amount"] - task["preAmount"]),
+                        "price" : (0 if task["dealAmount"] == 0 else (pos["Cost"] - task["preCost"]) / (pos["Amount"] - task["preAmount"])),
                         "amount" : (pos["Amount"] - task["preAmount"]),
                         "position" : pos
                     }

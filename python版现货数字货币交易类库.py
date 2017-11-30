@@ -7,14 +7,15 @@
 现货数字货币交易类库（python版）
 
 
-参数            默认值  描述
-----------  -----  ------------------
-OpMode        0    下单方式: 吃单|挂单
-MaxSpace      0.5  挂单失效距离
-SlidePrice    0.1  下单滑动价
-MaxAmount     0.8  开仓单次最大下单量
-RetryDelay  500    失败重试毫秒
-MAType        0    均线类型: TA.EMA|TA.MA
+参数                默认值  描述
+-------------  ------  ------------------
+OpMode           0     下单方式: 吃单|挂单
+MaxSpace         0.5   挂单失效距离
+SlidePrice       0.1   下单滑动价
+MaxAmount        0.8   开仓单次最大下单量
+RetryDelay     500     失败重试毫秒
+MAType           0     均线类型: TA.EMA|TA.MA
+_GetMinStocks    0.01  最小交易量
 '''
 
 import types # 导入类型模块
@@ -78,7 +79,7 @@ def GetAccount(e, waitFrozen = False):
     alreadyAlert = False
     while True:
         account = _C(e.GetAccount)
-        if(not waitFrozen or (account.FrozenStocks < e.GetMinStock() and account.FrozenBalance < 0.01)):
+        if(not waitFrozen or (account.FrozenStocks < _GetMinStocks and account.FrozenBalance < 0.01)):
             break
         if(not alreadyAlert):
             alreadyAlert = True
@@ -138,7 +139,7 @@ def Trade(e,tradeType,tradeAmount,mode,slidePrice,maxAmount,maxSpace,retryDelay)
                 diffMoney = _N(nowAccount.Balance - initAccount.Balance,4)
                 dealAmount = _N(initAccount.Stocks - nowAccount.Stocks,4)
                 doAmount = min(maxAmount,tradeAmount - dealAmount,nowAccount.Stocks)
-            if(doAmount < e.GetMinStock()):
+            if(doAmount < _GetMinStocks):
                 break
             prePrice = tradePrice
             orderId = tradeFunc(tradePrice,doAmount,ticker)

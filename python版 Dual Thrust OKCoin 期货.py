@@ -210,7 +210,7 @@ def main():
     exchange.SetContractType(["this_week","next_week","quarter"][ContractTypeIdx]) 
     exchange.SetMarginLevel([10,20][MarginLevelIdx])
     
-    Log("Fee:",exchange.GetFee())
+    # Log("Fee:",exchange.GetFee())
     if len(exchange.GetPosition()) > 0:
         raise Error_AtBeginHasPosition
     CancelPendingOrders()

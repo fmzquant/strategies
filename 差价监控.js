@@ -132,7 +132,7 @@ function main() {
     if (EnableCR) {
         for (var i = 0; i < exchanges.length; i++) {
             var rate = exchanges[i].GetRate();
-            if (rate != 1) {
+            if (exchanges[i].GetBaseCurrency() != 'CNY') {
                 exchanges[i].SetRate(USDCNY);
                 Log("更改", exchanges[i].GetName(), "汇率", rate, "为", USDCNY);
             }

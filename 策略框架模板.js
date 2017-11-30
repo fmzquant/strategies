@@ -402,6 +402,16 @@ $.TaskCmd = function(cmd, amount, lastPrice){
     }
 }
 
+$.GetTaskState = function(Name, Label){
+    var ret = null;
+    _.each(Tasks, function(task){
+       if(task.Name == Name && task.Label == Label){
+           ret = task.STATE;
+       } 
+    });
+    return ret;
+}
+
 // 模板导出函数
 var usedTime = 0;
 $.Trend = function() {

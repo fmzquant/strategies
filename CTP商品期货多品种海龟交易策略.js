@@ -44,6 +44,12 @@ KeepRatio       10                                                              
 暂停/继续  __button__  暂停/继续
 */
 
+/*backtest
+start: 2016-03-01        
+end: 2016-12-30           
+period: 60         
+*/
+
 var _bot = $.NewPositionManager();
 
 var TTManager = {
@@ -426,7 +432,8 @@ var TTManager = {
                     obj.status.st++;
                 } else if (-spread > (IncSpace * obj.N)) {
                     opCode = obj.marketPosition > 0 ? 1 : 2;
-                } else if (records.length > obj.leavePeriod) {
+                } 
+                if (opCode == 0 && records.length > obj.leavePeriod) {
                     obj.status.leavePrice = obj.marketPosition > 0 ? TA.Lowest(records, obj.leavePeriod, 'Low') : TA.Highest(records, obj.leavePeriod, 'High');
                     if ((obj.marketPosition > 0 && lastPrice < obj.status.leavePrice) ||
                         (obj.marketPosition < 0 && lastPrice > obj.status.leavePrice)) {

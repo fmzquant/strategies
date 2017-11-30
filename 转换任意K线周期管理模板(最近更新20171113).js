@@ -1,9 +1,14 @@
 /*
 策略出处: https://www.botvs.com/strategy/41163
-策略名称: 转换任意K线周期管理模板(最近更新20170622)
-策略作者: 青铜战国级机器人
+策略名称: 转换任意K线周期管理模板(最近更新20171113)
+策略作者: 中本姜(青铜机器人)
 策略描述:
 
+更新于20171114
+    a. 解决Open找不到问题，是record数组访问越界造成的，访问越界是之前的K线有问题导致的。
+更新于20171113
+    a. 过滤掉起始时间不正确的K线组合
+    b. 过滤掉时间间隔不正确的K线组合
 更新于20170622
      a. RecordsManager 增加Name参数,便于区分不同的K线
      b. Fix 当固定K线数目不满一根新K线周期时,Time计算不正确的问题
@@ -49,6 +54,58 @@ UI_NewCycleForMS  1000*60*60*2  合成周期毫秒数
 /*backtest
   period: 60
  */
+/*
+更新于20171114
+    a. 解决Open找不到问题，是record数组访问越界造成的，访问越界是之前的K线有问题导致的。
+更新于20171113
+    a. 过滤掉起始时间不正确的k线组合
+    b. 过滤掉时间间隔不正确的k线组合
+更新于20170622
+     a. RecordsManager 增加Name参数,便于区分不同的K线
+     b. Fix 当固定K线数目不满一根新K线周期时,Time计算不正确的问题
+
+更新于20170531
+    a. fix Volume计算错误
+
+1. 修改自小小梦的"转换任意K线周期" 模板
+
+原理：
+  - 获得固定K线的周期，然后合成任意固定K线整数倍的新K线周期
+
+功能：
+  - 转换基础K线为任意K线周期
+  - 暂时不支持 秒级别
+
+限制:
+   - 新K线周期必须是固定K线周期的整数倍.
+   - 固定K线周期为1min, 3min, 5min, 15min, 30min, 新K线周期也必须是分钟且<60
+   - 固定K线周期为1hour, 新K线周期也必须是小时且<24
+   - 固定K线周期为1day, 新K线周期也必须是天
+   - 每次获得的固定K线周期数目必须>=2
+测试版本，如有BUG ，问题 欢迎留言。
+
+输出函数:
+    $.RecordsManager(NewCycleMS, Name) 生成新周期管理器
+        NewCycleMS 为新K线周期毫秒数. 默认(1000*60*60*2) 2hour.
+        Name: 为该K线管理指定名字
+        返回K线管理器
+    $.AssembleRecords(records, BaseCycleMS) 
+        records: 拿到的原始records
+        BaseCycleMS 为固定K线周期毫秒,默认用固定records进行计算
+        返回新K线周期的records 
+    $.GetRecordsTable(n) 得到新K线最新的N个条目, 默认输出所有条目, 输出为table类型,便于LogStatus输出
+    $.Get***** 获得一些基本信息
+*/
+function EasyReadTime(millseconds) {
+    if (typeof millseconds == 'undefined' ||
+        !millseconds) {
+        millseconds = new Date().getTime();
+    }
+    var newDate = new Date();
+    newDate.setTime(millseconds);
+    return newDate.toLocaleString();
+}
+
 var cloneObj = function(obj) {                             // 深拷贝 对象函数
     var str, newobj = obj.constructor === Array ? [] : {};
     if (typeof obj !== 'object') {
@@ -183,7 +240,8 @@ function _RecordsManager(NewCycleForMS, Name) {
             BaseCycle = records[records.length - 1].Time - records[records.length - 2].Time;
         }
         if(NewCycleForMS % BaseCycle !== 0){
-            throw "目标周期‘" + NewCycleForMS + "’不是 基础周期 ‘" + BaseCycle + "’ 的整倍数，无法合成！";
+            Log("目标周期‘", NewCycleForMS, "’不是 基础周期 ‘", BaseCycle, "’ 的整倍数，无法合成！");
+            return null;
         }
         if(NewCycleForMS / BaseCycle > records.length){
             Log("records: ", records, "NewCycleForMS: ", NewCycleForMS, ", BaseCycle: ", BaseCycle);
@@ -223,7 +281,7 @@ function _RecordsManager(NewCycleForMS, Name) {
             Volume: 0,
         };
         var n = 0;
-        for (n = 0; n < AssRecords.length - (NewCycleForMS / BaseCycle); n += (NewCycleForMS / BaseCycle)) {     // 合成
+        for (n = 0; n < AssRecords.length - (NewCycleForMS / BaseCycle);) {     // 合成
             /*
             {
             Time    :一个时间戳, 精确到毫秒，与Javascript的 new Date().getTime() 得到的结果格式一样
@@ -234,6 +292,22 @@ function _RecordsManager(NewCycleForMS, Name) {
             Volume  :交易量
             }
             */
+            //时间判断
+            var is_bad = false;
+            var start_time = AssRecords[n].Time;
+            var stop_time = AssRecords[n + (NewCycleForMS / BaseCycle) - 1].Time + BaseCycle;
+            if (start_time % NewCycleForMS != 0) {
+                //Log("过滤起始时间不正确的k线组合", EasyReadTime(start_time));
+                is_bad = true;
+            }
+            if (stop_time - start_time != NewCycleForMS) {
+                //Log("过滤时间间隔不正确的k线组合", EasyReadTime(start_time), EasyReadTime(stop_time));
+                is_bad=true;
+            }
+            if (is_bad) {
+                n++;
+                continue;
+            }
             BarObj.Time = AssRecords[n].Time;
             BarObj.Open = AssRecords[n].Open;
             BarObj.High = Calc_High(AssRecords, n, BaseCycle, NewCycleForMS); 
@@ -244,6 +318,7 @@ function _RecordsManager(NewCycleForMS, Name) {
             	BarObj.Volume += AssRecords[j].Volume;
 			}
             AfterAssRecords.push(cloneObj(BarObj));
+            n += (NewCycleForMS / BaseCycle)
         }
         
         if (n == 0) {
@@ -324,9 +399,10 @@ function main() {
         record_manager1 = $.RecordsManager(BaseCycle);
         new_records1 = record_manager1.AssembleRecords(records);
         var table1 = record_manager1.GetRecordsTable();
-        LogStatus('`' + JSON.stringify([table0, table1]) +'`');
+        LogStatus('`' + JSON.stringify([table0, table1, ""]) +'`');
         records = record_manager1.GetRecords();
         //Log(records[records.length-1]);
         Sleep(60000);
     }
 }
+

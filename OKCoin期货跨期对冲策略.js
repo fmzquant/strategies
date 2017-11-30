@@ -411,7 +411,7 @@ function Hedge_Open_Cover(task){
         if((task.action[1] === "buy" && task.action[2] === "sell") || (task.action[1] === "sell" && task.action[2] === "buy")){ // open
             var tradeInfo_A = DealActionLimit(task, A, task.action[3]);
             var dealAmount_A = Math.abs(task.action[3]);
-            while(tradeInfo_A == false || (dealAmount_A -= tradeInfo_A.amount) !== 0){
+            while(tradeInfo_A == false || (dealAmount_A -= tradeInfo_A.amount) > 0){    //  此处应该  判断是否小于 0 。 等于 0 会引起 BUG ，修改为 大于 0 
                 Log("合约：" + task.symbolA + "已对冲" + (tradeInfo_A == false ? 0 : tradeInfo_A.amount), "剩余，重试！张数：" + dealAmount_A);
                 tradeInfo_A = DealActionLimit(task, A, dealAmount_A, true);
                 Sleep(Interval);
@@ -419,7 +419,7 @@ function Hedge_Open_Cover(task){
 
             var tradeInfo_B = DealActionLimit(task, B, task.action[3]);
             var dealAmount_B = Math.abs(task.action[3]);
-            while(tradeInfo_B == false || (dealAmount_B -= tradeInfo_B.amount) !== 0){
+            while(tradeInfo_B == false || (dealAmount_B -= tradeInfo_B.amount) > 0){
                 Log("合约：" + task.symbolB + "已对冲" + (tradeInfo_B == false ? 0 : tradeInfo_B.amount), "剩余，重试！张数：" + dealAmount_B);
                 tradeInfo_B = DealActionLimit(task, B, dealAmount_B, true);
                 Sleep(Interval);
@@ -430,7 +430,7 @@ function Hedge_Open_Cover(task){
         }else if((task.action[1] === "closesell" && task.action[2] === "closebuy") || (task.action[1] === "closebuy" && task.action[2] === "closesell")){ // cover
             var tradeInfo_A_Piece = DealActionLimit(task, A, task.action[3]);
             var dealAmount_A = Math.abs(task.action[3]);
-            while(tradeInfo_A_Piece == false || (dealAmount_A -= tradeInfo_A_Piece) !== 0){
+            while(tradeInfo_A_Piece == false || (dealAmount_A -= tradeInfo_A_Piece) > 0){    //  此处应该  判断是否小于 0 。 等于 0 会引起 BUG ，修改为 大于 0 
                 Log("合约：" + task.symbolA + "已对冲" + (tradeInfo_A == false ? 0 : tradeInfo_A_Piece), "剩余，重试！张数：" + dealAmount_A);
                 tradeInfo_A_Piece = DealActionLimit(task, A, dealAmount_A, true);
                 Sleep(Interval);
@@ -438,7 +438,7 @@ function Hedge_Open_Cover(task){
             
             var tradeInfo_B_Piece = DealActionLimit(task, B, task.action[3]);
             var dealAmount_B = Math.abs(task.action[3]);
-            while(tradeInfo_B_Piece == false || (dealAmount_B -= tradeInfo_B_Piece) !== 0){
+            while(tradeInfo_B_Piece == false || (dealAmount_B -= tradeInfo_B_Piece) > 0){
                 Log("合约：" + task.symbolB + "已对冲" + (tradeInfo_B == false ? 0 : tradeInfo_B_Piece), "剩余，重试！张数：" + dealAmount_B);
                 tradeInfo_B_Piece = DealActionLimit(task, B, dealAmount_B, true);
                 Sleep(Interval);

@@ -24,7 +24,7 @@ period: 15
 mode: 1                 
 */
 
-/*args
+/*defaults
 number : 0
 bool: false
 string: Hello BotVS！
@@ -34,6 +34,6 @@ comboBox : 2
 function main(){
     while(true){
         LogStatus("测试默认参数！");
-        Sleep();
+        Sleep(1000);
     }
 }

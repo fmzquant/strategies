@@ -11,9 +11,10 @@
 https://www.botvs.com/strategy/24288
 
 
-参数        默认值  描述
-------  -----  ----
-Amount      2  开仓手数
+参数            默认值           描述
+------------  ------------  ----
+Amount        2             开仓手数
+ContractList  MA701,rb1701  合约列表
 '''
 
 '''
@@ -68,8 +69,8 @@ def main():
     q = ext.NewTaskQueue()
     Log(_C(exchange.GetAccount))
     tasks = []
-    for symbol in ["MA701", "rb1701"]:
-        tasks.append(Trader(q, symbol))
+    for symbol in ContractList.split(','):
+        tasks.append(Trader(q, symbol.strip()))
     while True:
         if exchange.IO("status"):
             for t in tasks:

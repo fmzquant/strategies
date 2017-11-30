@@ -1,25 +1,58 @@
 /*
-策略出处: https://www.botvs.com/strategy/30307
-策略名称: 数字货币交易类库 (期货支持OKCoin期货-BitVC) (复制)
-策略作者: ucfyao
+策略出处: https://www.botvs.com/strategy/57267
+策略名称: 数字货币交易类库 (期货支持OKCoin期货-BitVC, 支持$.CTA函数)
+策略作者: 小小梦
 策略描述:
 
 数字货币交易类库 (期货支持OKCoin期货/BitVC) 目前测试阶段，使用请留意，如有问题 ，请联系作者 ，十分感谢！
 
+- ### 新增了 $.CTA 函数
 
-参数            默认值    描述
-------------  -----  --------------------------
-OpMode        0      现货-下单方式: 吃单|挂单
-MaxSpace      0.5    现货-挂单失效距离
-SlidePrice    0.1    现货-下单滑动价(元)
-MaxAmount     0.8    现货-开仓最大单次下单量
-RetryDelay    500    现货-失败重试(毫秒)
-MAType        0      现货-均线算法: EMA|MA|AMA(自适应均线)
-Interval      300    期货—失败重试间隔(毫秒)
-F_SlidePrice  2      期货—下单滑价(元)
-lv            0.5    期货—滑价增长率
-max_open_lv   true   期货—开仓滑价最大增长率
-max_cover_lv  true   期货—平仓滑价最大增长率
+  可以用 $.CTA 函数 快速构建 均线等 类型的策略
+  使用模板的 $.CTA 函数 构建的 策略代码如下（很精简）：
+  文章 参看 商品期货交易类库 的 $.CTA 函数 使用 （使用、架构是类似的）  ：  https://zhuanlan.zhihu.com/p/30016518
+```
+function main() {
+    $.CTA(exchanges[0], 0.01, function(r, mp, pair){         // 第一个参数 是 要做的 交易所对象， 第二个参数 0.01 是交易所 要求的 最小下单数量， 第三个 匿名函数 function(){...}
+                                                                                        // 是 回调函数， 交易逻辑 就写在这个函数中， 该回调函数 第一个参数 r 接收最新的 K线数据， 第二个参数 接收 持仓数， 第
+                                                                                        // 三个参数 接收 交易对 名称
+        if (r.length < 20) {                                                     // 判断 K线柱数量 
+            return
+        }
+        var emaSlow = TA.EMA(r, 20)
+        var emaFast = TA.EMA(r, 5)
+        var cross = _Cross(emaFast, emaSlow);                // 判断指标 相交状态，   _Cross 参看 ： https://www.botvs.com/bbs-topic/1140
+        if (mp <= 0 && cross > 1) {
+            Log(pair, "买, 金叉周期", cross, "mp:", mp);
+            return 0.1 * (mp < 0 ? 2 : 1)                                //  返回的数值 就是 要开仓的 数量， 正数是 开多 ，负数是 开空，   0 是 全部平掉。
+        } else if (mp >= 0 && cross < -1) {
+            Log(pair, "卖, 死叉周期", cross, "mp:", mp);
+            return -0.1 * (mp > 0 ? 2 : 1)
+        }
+    })
+}
+```
+
+https://dn-filebox.qbox.me/c230753d3fd584c15ad3e39e33f970aafffe722f.png
+https://dn-filebox.qbox.me/a74f74b34e32897868086e6b771f81fd1468306e.png
+https://dn-filebox.qbox.me/1671268eba20870c7820542448dc0ef541d65a5b.png
+
+
+参数              默认值    描述
+--------------  -----  --------------------------
+OpMode          0      现货-下单方式: 吃单|挂单
+MaxSpace        0.5    现货-挂单失效距离
+SlidePrice      0.1    现货-下单滑动价(元)
+MaxAmount       0.8    现货-开仓最大单次下单量
+RetryDelay      500    现货-失败重试(毫秒)
+MAType          0      现货-均线算法: EMA|MA|AMA(自适应均线)
+Interval        300    期货—失败重试间隔(毫秒)
+F_SlidePrice    2      期货—下单滑价(元)
+lv              0.5    期货—滑价增长率
+max_open_lv     true   期货—开仓滑价最大增长率
+max_cover_lv    true   期货—平仓滑价最大增长率
+_GetMinStocks   0.01   最小交易数量
+isCTAshowTable  false  是否显示 模板生成状态栏表格
 */
 
 // 现货部分
@@ -55,7 +88,7 @@ function GetAccount(e, waitFrozen) {
     var alreadyAlert = false;
     while (true) {
         account = _C(e.GetAccount);
-        if (!waitFrozen || (account.FrozenStocks < e.GetMinStock() && account.FrozenBalance < 0.01)) {
+        if (!waitFrozen || (account.FrozenStocks < _GetMinStocks && account.FrozenBalance < 0.01)) {
             break;
         }
         if (!alreadyAlert) {
@@ -126,14 +159,14 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
             var doAmount = 0;
             if (isBuy) {
                 diffMoney = _N(initAccount.Balance - nowAccount.Balance, 4);
-                dealAmount = _N(nowAccount.Stocks - initAccount.Stocks, 4);
-                doAmount = Math.min(maxAmount, tradeAmount - dealAmount, _N((nowAccount.Balance - 10) / tradePrice, 4));
+                dealAmount = _N(nowAccount.Stocks - initAccount.Stocks, 8);                                                // 如果保留小数过少，会引起在小交易量交易时，计算出的成交价格误差较大。
+                doAmount = Math.min(maxAmount, tradeAmount - dealAmount, _N((nowAccount.Balance * 0.95) / tradePrice, 4));
             } else {
                 diffMoney = _N(nowAccount.Balance - initAccount.Balance, 4);
-                dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 4);
+                dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 8);
                 doAmount = Math.min(maxAmount, tradeAmount - dealAmount, nowAccount.Stocks);
             }
-            if (doAmount < e.GetMinStock()) {
+            if (doAmount < _GetMinStocks) {
                 break;
             }
             prePrice = tradePrice;
@@ -293,7 +326,7 @@ function Open(e, contractType, direction, opAmount, price) {
                 needOpen = opAmount - (positionNow.Amount - initAmount);
             }
         }
-        if (needOpen < e.GetMinStock()) {
+        if (needOpen < 1) {
             break;
         }
         if (step > max_open_lv) {
@@ -456,76 +489,147 @@ $.NewPositionManager = function(e) {
     return new PositionManager(e);
 };
 
+// $.CTA  函数
+$.CTA = function(Exchange, MinStock, onTick, interval){
+    if(typeof(interval) !== "number"){
+        interval = 500
+    }
+    
+    var lastUpdate = 0
+    var e = Exchange
+    var pair = e.GetCurrency()
+    var hold = 0
+    var tradeInfo = null
+    var initAccount = _C(e.GetAccount)
+    var nowAccount = initAccount
+    
+    var CTAshowTable = function(r){
+        var tbl = {
+            type : "table", 
+            title : "策略信息，交易对" + pair,
+            cols : ["变量", "值"],
+            rows : [],
+        }
+        tbl.rows.push(["初始账户：", initAccount])
+        tbl.rows.push(["当前账户：", nowAccount])
+        tbl.rows.push(["上次交易信息：", tradeInfo])
+        tbl.rows.push(["持仓：", hold])
+        tbl.rows.push(["最新K线柱：", r[r.length - 1]])
+        tbl.rows.push(["Bar 数量：", r.length])
+        LogStatus(_D() + '\n`' + JSON.stringify([tbl]) + '`')
+    }
+
+    Log("$.CTA 初始化 完成。")
+
+    while(true){
+        var ts = new Date().getTime()
+
+        var r = e.GetRecords()
+        if(!r || r.length == 0){
+            continue
+        }
+        
+        hold = nowAccount.Stocks - initAccount.Stocks
+        if(Math.abs(hold) < MinStock){
+            hold = 0
+        }
+        var n = onTick(r, hold, pair)
+        var callBack = null
+        if (typeof(n) == 'object' && typeof(n.length) == 'number' && n.length > 1) {
+            if (typeof(n[1]) == 'function') {
+                callBack = n[1]
+            }
+            n = n[0]
+        }
+        if(typeof(n) !== "number"){
+            if(isCTAshowTable){
+                CTAshowTable(r)
+            }
+            continue
+        }
+
+        if(n > 0){             // buy
+            if(hold < 0){
+                Log("平仓")     // 测试
+                tradeInfo = $.Buy(e, Math.min(-hold, n))
+                if(typeof(callBack) == 'function'){
+                    callBack(tradeInfo)
+                }
+                n += hold
+            }
+            if(n > 0){
+                Log("开仓 或 反手")     // 测试
+                tradeInfo = $.Buy(e, n)
+                if(typeof(callBack) == 'function'){
+                    callBack(tradeInfo)
+                }
+            }
+            nowAccount = _C(e.GetAccount)
+        }else if(n < 0){       // sell
+            if(hold > 0){
+                Log("平仓")     // 测试
+                tradeInfo = $.Sell(e, Math.min(hold, -n))
+                if(typeof(callBack) == 'function'){
+                    callBack(tradeInfo)
+                }
+                n += hold
+            }
+            if(n < 0){
+                Log("开仓 或 反手")     // 测试
+                tradeInfo = $.Sell(e, -n)
+                if(typeof(callBack) == 'function'){
+                    callBack(tradeInfo)
+                }
+            }
+            nowAccount = _C(e.GetAccount)
+        }else{                 // keep balance
+            // nowAccount = _C(e.GetAccount)
+            if(hold > 0){
+                tradeInfo = $.Sell(e, hold)
+                if(typeof(callBack) == 'function'){
+                    callBack(tradeInfo)
+                }
+                nowAccount = _C(e.GetAccount)
+            }else if(hold < 0){
+                tradeInfo = $.Buy(e, -hold)
+                if(typeof(callBack) == 'function'){
+                    callBack(tradeInfo)
+                }
+                nowAccount = _C(e.GetAccount)
+            }
+        }
+        
+        if(isCTAshowTable){
+            CTAshowTable(r)
+        }
+        
+        Sleep(interval)
+    }
+}
+
+
 
 // 测试代码
+/*
+2017.5.1 - 2017.10.11 ,  K线 天， 模拟级别， OK国际 ， BTC 
+*/
 function main() {
-    if (exchange.GetName() === 'Futures_OKCoin') {
-        var info = exchange.SetContractType("this_week");
-        Log("info 返回值:", info);
-        Log("当前持仓信息", exchange.GetPosition(), _C(exchange.GetTicker));
-        var depth = exchange.GetDepth();
-        var p = $.NewPositionManager();
-        p.OpenShort("this_week", 10, depth.Bids[0].Price - 2);
-        Log(exchange.GetPosition());
-        Sleep(500 * 1000);
-        depth = exchange.GetDepth();
-        var ret = p.Cover("this_week", depth.Bids[0].Price + 2, 5);
-        Log("cover ret:", ret);
-        //LogProfit(p.Profit());
-        Log(exchange.GetPosition());
-        Log("-----------------------------测试分割线----------------------------------------");
-        var depth = exchange.GetDepth();
-        p.OpenLong("this_week", 20, depth.Bids[0].Price + 2);
-        Log(exchange.GetPosition());
-        Sleep(500 * 1000);
-        depth = exchange.GetDepth();
-        var ret = p.Cover("this_week", depth.Bids[0].Price - 2, 10, PD_LONG);
-        Log("cover ret:", ret);
-        Log(exchange.GetPosition());
-        Log("-----------------------------测试分割线----------------------------------------");
-        var ret = p.Cover("this_week", depth.Bids[0].Price - 3, 10, PD_LONG);
-        Log("cover ret:", ret);
-        var ret = p.Cover("this_week", depth.Bids[0].Price + 3, 5, PD_SHORT);
-        Log("cover ret:", ret);
-        Log(exchange.GetPosition());
-    } else if (exchange.GetName() === 'Futures_BitVC') {
-        var info = exchange.SetContractType("week");
-        Log("info 返回值:", info);
-        Log("当前持仓信息", exchange.GetPosition(), _C(exchange.GetTicker));
-        var depth = exchange.GetDepth();
-        var p = $.NewPositionManager();
-        p.OpenLong("week", 500, depth.Bids[0].Price + 2);
-        Log(exchange.GetPosition());
-        Sleep(500 * 1000);
-        depth = exchange.GetDepth();
-        var ret = p.Cover("week", depth.Bids[0].Price - 2, 500);
-        Log("cover ret:", ret);
-        Log(exchange.GetPosition());
-        Log("-----------------------------测试分割线----------------------------------------");
-        var info = exchange.SetContractType("week");
-        Log("info 返回值:", info);
-        Log("当前持仓信息", exchange.GetPosition(), _C(exchange.GetTicker));
-        var depth = exchange.GetDepth();
-        p.OpenShort("week", 600, depth.Bids[0].Price - 2);
-        Log(exchange.GetPosition());
-        Sleep(500 * 1000);
-        depth = exchange.GetDepth();
-        var ret = p.Cover("week", depth.Bids[0].Price + 2, 500, PD_SHORT);
-        Log("cover ret:", ret);
-        Log(exchange.GetPosition());
-        Log("-----------------------------测试分割线----------------------------------------");
-        var ret = p.Cover("week", depth.Bids[0].Price + 3, 100, PD_SHORT);
-        Log("cover ret:", ret);
-        //p.Cover("week", depth.Asks[0].Price - 3, 300, PD_LONG);
-        Log(exchange.GetPosition());
-    } else if(exchange.GetName() === 'huobi' || exchange.GetName() === 'OKCoin'){
-        Log($.GetAccount());
-        Log($.Buy(0.5));
-        Log($.Sell(0.5));
-        exchange.Buy(1000, 3);
-        $.CancelPendingOrders(exchanges[0]);
-        Log($.Cross(30, 7));
-        Log($.Cross([1,2,3,2.8,3.5], [3,1.9,2,5,0.6]));
-    }
+    $.CTA(exchanges[0], 0.01, function(r, mp, pair){   // $.CTA = function(Exchange, MinStock, onTick, interval)
+        // Log(r.length)   // 测试
+        if (r.length < 20) {
+            return
+        }
+        var emaSlow = TA.EMA(r, 20)
+        var emaFast = TA.EMA(r, 5)
+        var cross = _Cross(emaFast, emaSlow);
+
+        if (mp <= 0 && cross > 1) {
+            Log(pair, "买, 金叉周期", cross, "mp:", mp);
+            return 0.1 * (mp < 0 ? 2 : 1)
+        } else if (mp >= 0 && cross < -1) {
+            Log(pair, "卖, 死叉周期", cross, "mp:", mp);
+            return -0.1 * (mp > 0 ? 2 : 1)
+        }
+    })
 }
 

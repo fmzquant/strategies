@@ -135,6 +135,7 @@ $.PlotRecords = function(records, title) {
     var seriesIdx = labelIdx["candlestick"];
     if (!chart) {
         chart = Chart(cfg)
+        chart.reset()
     }
     if (typeof(seriesIdx) == 'undefined') {
         cfg.__isStock = true
@@ -175,6 +176,7 @@ $.PlotLine = function(label, dot, time) {
             type: 'datetime'
         }
         chart = Chart(cfg)
+        chart.reset()
     }
     var seriesIdx = labelIdx[label]
     if (typeof(seriesIdx) === 'undefined') {
@@ -211,6 +213,7 @@ $.PlotLine = function(label, dot, time) {
 $.PlotFlag = function(time, text, title, shape, color) {
     if (!chart) {
         chart = Chart(cfg)
+        chart.reset()
     }
     label = "flag";
     var seriesIdx = labelIdx[label]

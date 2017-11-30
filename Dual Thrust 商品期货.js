@@ -33,6 +33,11 @@ NotifyWX          true   下单微信通知
 CoverAll          false  启动策略时清空合约仓位
 */
 
+/*backtest
+start: 2016-01-15 09:00:00
+end: 2017-01-01 15:00:00
+period: 1d
+*/
 var ChartCfg = {
     __isStock: true,
     title: {

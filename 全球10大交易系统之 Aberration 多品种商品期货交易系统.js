@@ -40,6 +40,11 @@ AutoRestore   false                   自动根据仓位恢复进度
 Debug  Log(exchange.GetAccount())  调试
 */
 
+/*backtest
+start: 2016-01-15 09:00:00
+end: 2017-01-01 15:00:00
+period: 1d
+*/
 function Aberration(q, e, symbol, period, upRatio, downRatio, opAmount) {
     var self = {}
     self.q = q
