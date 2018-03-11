@@ -1,7 +1,7 @@
 /*
-策略出处: https://www.botvs.com/strategy/57556
-策略名称: 双平台对冲js版本(two platforms hedging-JS)
-策略作者: 7meter
+策略出处: https://www.botvs.com/strategy/61405
+策略名称: 双平台对冲js版本(two platforms hedging-JS)  (Copy)
+策略作者: ellajella-0378
 策略描述:
 
 
@@ -37,7 +37,7 @@ function cancelAll(){
             }
         }
     }
-    return ref;
+    return ret
 }
 
 function main(){

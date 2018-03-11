@@ -40,6 +40,18 @@ $.bitfinexGetPosition = function(){
     return position
 }
 
+//直接使用exchange.GetOrder(id)就可以了，不需要调用模板
+$.bitfinexGetOrder = function(order_id){
+    var order = exchanges[bitfinexIndex].IO("api", "POST", "/v1/order/status", "order_id=", parseInt(order_id))
+    return order
+}
+
+//直接用exchange.CancelOrder(id)就可以取消订单，不需要调用模板
+$.bitfinexCancelOrder = function(order_id){
+    //var result = exchanges[bitfinexIndex].IO("api", "POST", "/v1/order/cancel", "order_id=", parseInt(order_id))
+    //return order
+}
+
 //返回margin钱包一共可以交易多少USD（虚拟币会换成美元加入计算）
 $.marginBalance = function(){
     var balance = exchanges[bitfinexIndex].IO("api", "POST", "/v1/margin_infos")

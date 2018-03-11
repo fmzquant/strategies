@@ -37,6 +37,18 @@ https://dn-filebox.qbox.me/c230753d3fd584c15ad3e39e33f970aafffe722f.png
 https://dn-filebox.qbox.me/a74f74b34e32897868086e6b771f81fd1468306e.png
 https://dn-filebox.qbox.me/1671268eba20870c7820542448dc0ef541d65a5b.png
 
+- ### 注意：
+
+  - #### 使用期货 功能下单时：
+    注意不要忘记 先设置 合约类型  ：exchange.SetContractType("this_week")   否则会报错。
+    ```
+    var p = $.NewPositionManager()
+    // this_week 即 当周合约 开多仓   ,  PositionManager.prototype.OpenLong = function(contractType, shares, price)
+    exchange.SetContractType("this_week")
+    p.OpenLong("this_week", 1, 1000)
+    // 这样就 1000 美元价格  开多仓 合约 1张
+    ```
+
 
 参数              默认值    描述
 --------------  -----  --------------------------

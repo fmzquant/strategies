@@ -1,6 +1,6 @@
 /*
 策略出处: https://www.botvs.com/strategy/41163
-策略名称: 转换任意K线周期管理模板(最近更新20171113)
+策略名称: 转换任意K线周期管理模板(最近更新20180118)
 策略作者: 中本姜(青铜机器人)
 策略描述:
 
@@ -55,6 +55,8 @@ UI_NewCycleForMS  1000*60*60*2  合成周期毫秒数
   period: 60
  */
 /*
+20180118
+    屏蔽掉一些log输出
 更新于20171114
     a. 解决Open找不到问题，是record数组访问越界造成的，访问越界是之前的K线有问题导致的。
 更新于20171113
@@ -240,7 +242,8 @@ function _RecordsManager(NewCycleForMS, Name) {
             BaseCycle = records[records.length - 1].Time - records[records.length - 2].Time;
         }
         if(NewCycleForMS % BaseCycle !== 0){
-            Log("目标周期‘", NewCycleForMS, "’不是 基础周期 ‘", BaseCycle, "’ 的整倍数，无法合成！");
+            //Log(EasyReadTime(records[records.length - 1].Time), EasyReadTime(records[records.length - 2].Time));
+            //Log("目标周期‘", NewCycleForMS, "’不是 基础周期 ‘", BaseCycle, "’ 的整倍数，无法合成！");
             return null;
         }
         if(NewCycleForMS / BaseCycle > records.length){

@@ -42,6 +42,7 @@ var labelIdx = []
 var preBarTime = 0
 var preFlagTime = 0
 var preDotTime = []
+var hasPrimary = false;
 
 var cfg = {
     tooltip: {
@@ -143,12 +144,13 @@ $.PlotRecords = function(records, title) {
         series.push({
             type: 'candlestick',
             name: typeof(title) == 'undefined' ? '' : title,
-            id: 'primary',
+            id: (hasPrimary ? 'records_' + seriesIdx : 'primary'),
             data: []
         });
         chart.update(cfg)
         labelIdx["candlestick"] = seriesIdx
     }
+    hasPrimary = true;
     if (typeof(records.Time) !== 'undefined') {
         var Bar = records;
         if (Bar.Time == preBarTime) {
@@ -185,6 +187,7 @@ $.PlotLine = function(label, dot, time) {
         labelIdx[label] = seriesIdx;
         series.push({
             type: 'line',
+            id: (hasPrimary ? 'line_' + seriesIdx : 'primary'),
             yAxis: 0,
             showInLegend: true,
             name: label,
@@ -193,6 +196,7 @@ $.PlotLine = function(label, dot, time) {
                 valueDecimals: 5
             }
         })
+        hasPrimary = true;
         chart.update(cfg)
     }
     if (typeof(time) == 'undefined') {

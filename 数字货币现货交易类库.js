@@ -122,7 +122,7 @@ $.withdraw = function(e, currency, address, amount, fee, password) {
                 throw "bitfinex not support " + currency;
             }
             var withdraw_type = cMap[currency];
-            ret = e.IO("api", "POST", "/v1/withdraw", "withdraw_type=" + withdraw_type + "&walletselected=exchange&address=" + address + "&amount=" + amount);
+            ret = e.IO("api", "POST", "/v1/withdraw", "withdraw_type=" + withdraw_type + "&walletselected=exchange&address=" + address + "&amount='" + amount + "'");
             if (ret && ret.length == 1 && typeof(ret[0].withdrawal_id) !== 'undefined') {
                 withdraw_id = ret[0].withdrawal_id;
             }

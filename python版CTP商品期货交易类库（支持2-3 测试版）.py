@@ -128,7 +128,7 @@ def Open(e, contractType, direction, opAmount):
         if needOpen < insDetail['MinLimitOrderVolume']:
             break
         depth = _C(e.GetDepth)
-        amount = min(insDetail['MinLimitOrderVolume'], needOpen)
+        amount = min(insDetail['MaxLimitOrderVolume'], needOpen)
         e.SetDirection("buy" if direction == PD_LONG else "sell")
         orderId = None
         if direction == PD_LONG:
@@ -535,7 +535,7 @@ class NewPositionManager:
 def CreateNewPositionManager(e = exchange): # 导出函数实现
     if e not in exchanges:
         raise Exception("error exchange", e)
-    if e.GetName() != 'Futures_CTP':
+    if (versionMainValue != 3 and e.GetName() != 'Futures_CTP') or (versionMainValue == 3 and e.GetName() != 'Futures_CTP'):
         raise Exception("error exchange, 本模板适用于CTP商品期货,当前添加的交易所为：", e.GetName());
     obj_NewPositionManager = NewPositionManager(e)
     return obj_NewPositionManager

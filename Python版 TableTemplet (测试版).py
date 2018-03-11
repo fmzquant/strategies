@@ -93,10 +93,14 @@ class CreateTableManager():
         global listener
         cmd = GetCommand()
         if cmd :
+            cmdList = cmd.split(":")
+            if len(cmdList) == 2 :                                         # 增加了 对于 主策略 交互的 冲突 检测。
+                Log("接收到 TableTemplet 模板以外的 交互命令！", cmdList)     
+                return
             if listener[cmd] :
                 listener[cmd](cmd)
             else :
-                Log("找不到名为：" + cmd + "的命令")
+                Log("TableTemplet 模板中找不到名为：" + cmd + "的命令")
     
     def LogStatus(self, before, end):
         self.UpdateCMD()

@@ -72,9 +72,10 @@ SyncInterval     5      账户与持仓同步周期(秒)
 */
 
 /*backtest
-start: 2017-08-01 00:00:00
-end: 2017-10-10 00:00:00
+start: 2018-01-15 00:00:00
+end: 2018-01-30 00:00:00
 period: 1d
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 */
 
 var __orderCount = 0
@@ -241,7 +242,7 @@ function Cover(e, contractType, lots) {
         if (typeof(lots) == 'number' && amountChange >= lots) {
             break;
         }
-        
+
         for (var i = 0; i < positions.length; i++) {
             if (positions[i].ContractType != contractType) {
                 continue;
@@ -442,14 +443,14 @@ var PositionManager = (function() {
                 if (positions[i].ContractType.indexOf('&') != -1) {
                     Log("开始平掉", positions[i]);
                     Cover(this.e, positions[i].ContractType)
-                    Sleep(1000)
+                    Sleep(Interval)
                 }
             }
             for (var i = 0; i < positions.length; i++) {
                 if (positions[i].ContractType.indexOf('&') == -1) {
                     Log("开始平掉", positions[i]);
                     Cover(this.e, positions[i].ContractType)
-                    Sleep(1000)
+                    Sleep(Interval)
                 }
             }
         }
@@ -595,7 +596,7 @@ $.NewTaskQueue = function(onTaskFinish) {
             arg: typeof(onFinish) !== 'undefined' ? arg : undefined,
             onFinish: typeof(onFinish) == 'undefined' ? arg : onFinish
         }
-        
+
         switch (task.action) {
             case "buy":
                 task.desc = task.symbol + " 开多仓, 数量 " + task.amount
@@ -692,7 +693,11 @@ $.NewTaskQueue = function(onTaskFinish) {
             }
             var remain = task.amount;
             if (isCover && !pos) {
-                pos = {Amount:0, Cost: 0, Price: 0}
+                pos = {
+                    Amount: 0,
+                    Cost: 0,
+                    Price: 0
+                }
             }
             if (pos) {
                 task.dealAmount = pos.Amount - task.preAmount;
@@ -785,9 +790,6 @@ $.NewTaskQueue = function(onTaskFinish) {
             if (processed == 0) {
                 self.tasks = []
             }
-        } else {
-            // wait for master market update
-            exchange.IO("wait")
         }
         return processed
     }
@@ -796,7 +798,7 @@ $.NewTaskQueue = function(onTaskFinish) {
         if (typeof(symbol) !== 'string') {
             return self.tasks.length > 0
         }
-        
+
         for (var i = 0; i < self.tasks.length; i++) {
             if (self.tasks[i].symbol == symbol && !self.tasks[i].finished) {
                 return true
@@ -804,7 +806,7 @@ $.NewTaskQueue = function(onTaskFinish) {
         }
         return false
     }
-    
+
     self.size = function() {
         return self.tasks.length
     }
@@ -820,7 +822,7 @@ $.Cross = function(arr1, arr2) {
         throw "array length not equal";
     }
     var n = 0;
-    for (var i = arr1.length-1; i >= 0; i--) {
+    for (var i = arr1.length - 1; i >= 0; i--) {
         if (typeof(arr1[i]) !== 'number' || typeof(arr2[i]) !== 'number') {
             break;
         }
@@ -851,7 +853,7 @@ onTick(r, mp, symbol):
         无返回值表示什么也不做
 */
 $.CTA = function(contractType, onTick, interval) {
-    SetErrorFilter("login")
+    SetErrorFilter("login|ready|初始化")
     if (typeof(interval) !== 'number') {
         interval = 500
     }
@@ -865,23 +867,39 @@ $.CTA = function(contractType, onTick, interval) {
         var product = ins2product(ct)
         for (var i = 0; i < symbols.length; i++) {
             var tmp = symbols[i].split('/')
-            if (ins2product(tmp[tmp.length-1]) == product) {
+            if (ins2product(tmp[tmp.length - 1]) == product) {
                 return tmp[0]
             }
         }
         return null
     }
-    var refreshHold = function() {
+    var refreshHold = function(qSize) {
+        if (typeof(qSize) === 'undefined') {
+            qSize = 0
+        }
         while (!e.IO("status")) {
+            LogStatus(_D(), "Not connect")
             Sleep(1000)
         }
-        
+
         _.each(symbols, function(ins) {
             var tmp = ins.split('/')
             if (tmp.length == 2) {
-                holds[tmp[0]] = {price:0, value:0, amount:0, profit: 0, symbol: tmp[1]}
+                holds[tmp[0]] = {
+                    price: 0,
+                    value: 0,
+                    amount: 0,
+                    profit: 0,
+                    symbol: tmp[1]
+                }
             } else {
-                holds[ins] = {price:0, value:0, amount:0, profit: 0, symbol: ins}
+                holds[ins] = {
+                    price: 0,
+                    value: 0,
+                    amount: 0,
+                    profit: 0,
+                    symbol: ins
+                }
             }
         });
         var positions = _C(e.GetPosition);
@@ -895,12 +913,12 @@ $.CTA = function(contractType, onTick, interval) {
                 return
             }
             if (pos.Type == PD_LONG || pos.Type == PD_LONG_YD) {
-                if (hold.amount < 0) {
+                if (hold.amount < 0 && qSize == 0) {
                     throw "不能同时持有多仓空仓"
                 }
                 hold.amount += pos.Amount
             } else {
-                if (hold.amount > 0) {
+                if (hold.amount > 0 && qSize == 0) {
                     throw "不能同时持有多仓空仓"
                 }
                 hold.amount -= pos.Amount
@@ -929,10 +947,10 @@ $.CTA = function(contractType, onTick, interval) {
         return account
     }
 
-    var account = refreshHold()
+    var account = refreshHold(0)
     var q = $.NewTaskQueue(function(task, ret) {
         Log("任务结束", task.desc)
-        account = refreshHold()
+        account = refreshHold(q.size())
     })
     var mainCache = []
     while (true) {
@@ -945,7 +963,6 @@ $.CTA = function(contractType, onTick, interval) {
                 ctChart = tmp[0]
                 ctTrade = tmp[1]
             }
-            
             if (!e.IO("status") || !$.IsTrading(ctChart) || !$.IsTrading(ctTrade) || q.hasTask(ctTrade)) {
                 return
             }
@@ -953,7 +970,7 @@ $.CTA = function(contractType, onTick, interval) {
                 // 正在移仓
                 return
             }
-            
+
             // 先获取行情
             var c = e.SetContractType(ctChart)
             if (!c) {
@@ -963,34 +980,47 @@ $.CTA = function(contractType, onTick, interval) {
             if (!r || r.length == 0) {
                 return
             }
-            
+
             // 切换到需要交易的合约上来
             var insDetail = e.SetContractType(ctTrade)
             if (!insDetail) {
                 return
             }
             var tradeSymbol = insDetail.InstrumentID
-            
             // 处理主力合约切换, 指数合约在交易时也默认映射到主力合约上
             if (ctTrade.indexOf('888') !== -1 || ctTrade.indexOf('000') !== -1) {
                 var preMain = ''
                 var isSwitch = false
+                var positions = null;
                 if (typeof(mainCache[ctTrade]) === 'undefined') {
                     if (!IsVirtual()) {
                         Log(ctTrade, "当前主力合约为:", tradeSymbol)
                     }
-                } else if (mainCache[ctTrade][0] != tradeSymbol) {
-                    preMain = mainCache[ctTrade][0]
-                    // 开始切换
-                    var positions = e.GetPosition()
+                    positions = e.GetPosition()
                     if (!positions) {
                         return
                     }
-                    Log(ctTrade, "主力合约切换为:", tradeSymbol, "之前为:", preMain, "#ff0000")
+                    var product = ins2product(ctTrade);
                     _.each(positions, function(p) {
-                        if (p.contractType == preMain) {
+                        if (ins2product(p.ContractType) == product) {
+                            mainCache[ctTrade] = [p.ContractType, p.ContractType];
+                        }
+                    });
+                }
+                if (typeof(mainCache[ctTrade]) !== 'undefined' && mainCache[ctTrade][0] != tradeSymbol) {
+                    preMain = mainCache[ctTrade][0]
+                    Log(ctTrade, "主力合约切换为:", tradeSymbol, "之前为:", preMain, "#ff0000")
+                    // 开始切换
+                    if (!positions) {
+                        positions = e.GetPosition()
+                        if (!positions) {
+                            return
+                        }
+                    }
+                    _.each(positions, function(p) {
+                        if (p.ContractType == preMain) {
                             var isLong = p.Type == PD_LONG || p.Type == PD_LONG_YD
-                            q.pushTask(e, p.contractType, (isLong ? "closebuy" : "closesell"), p.Amount, function(task, ret) {
+                            q.pushTask(e, p.ContractType, (isLong ? "closebuy" : "closesell"), p.Amount, function(task, ret) {
                                 Log("切换合约平仓成功", task.desc, ret)
                             })
                             q.pushTask(e, tradeSymbol, (isLong ? "buy" : "sell"), p.Amount, function(task, ret) {
@@ -1000,7 +1030,7 @@ $.CTA = function(contractType, onTick, interval) {
                         }
                     })
                 }
-                mainCache[ctTrade] = [tradeSymbol,  preMain]
+                mainCache[ctTrade] = [tradeSymbol, preMain]
                 if (isSwitch) {
                     // Wait switch compeleted
                     Log("开始移仓", preMain, "移到", tradeSymbol)
@@ -1009,7 +1039,14 @@ $.CTA = function(contractType, onTick, interval) {
             }
 
             var hold = holds[ctChart];
-            var n = onTick({records: r, symbol: tradeSymbol, account: account, position: hold, positions: holds})
+            var n = onTick({
+                records: r,
+                symbol: tradeSymbol,
+                detail: insDetail,
+                account: account,
+                position: hold,
+                positions: holds
+            })
             var callBack = null
             if (typeof(n) == 'object' && typeof(n.length) == 'number' && n.length > 1) {
                 if (typeof(n[1]) == 'function') {
@@ -1042,10 +1079,10 @@ $.CTA = function(contractType, onTick, interval) {
             }
         })
         q.poll()
-        
+
         var now = new Date().getTime()
-        if ((now - lastUpdate) > (SyncInterval*1000)) {
-            account = refreshHold()
+        if ((now - lastUpdate) > (SyncInterval * 1000)) {
+            account = refreshHold(q.size())
         }
         var delay = interval - (now - ts)
         if (delay > 0) {

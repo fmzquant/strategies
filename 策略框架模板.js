@@ -16,6 +16,9 @@ var TASK_ST = 4;
 var TASK_COVER = 5;
 */
 
+使用说明：
+https://www.botvs.com/bbs-topic/634
+
 
 参数            默认值  描述
 ----------  -----  -----------
@@ -619,6 +622,9 @@ function onTick2() {
 }
 
 function main() {
+    if(exchanges.length != 2){
+        throw "测试 用策略 逻辑函数 有2个 onTick1 , onTick2 ,需要添加2个 交易所对象才能跑起来！"
+    }
     $.Relation_Exchange_onTick(exchanges[0], onTick1);
     $.Relation_Exchange_onTick(exchanges[1], onTick2);
     $.Trend();  // 不用传参数。
