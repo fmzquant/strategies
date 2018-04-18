@@ -20,13 +20,10 @@ StopProfitThreshold  0.9    止盈系数(0-1)
 EMA_Slow             30     EMA慢线周期
 EMA_Fast             7      EMA快线周期
 EnableGoingShort     true   允许做空
+MinStock             0.001  最小交易量
 LoopInterval         60     轮询间隔(秒)
 */
 
-
-function adjustFloat(v) {
-    return Math.floor(v*1000)/1000;
-}
 
 function CancelPendingOrders() {
     while (true) {
@@ -46,22 +43,6 @@ function CancelPendingOrders() {
             }
         }
     }
-}
-
-function GetAccount() {
-    var account;
-    while (!(account = exchange.GetAccount())) {
-        Sleep(Interval);
-    }
-    return account;
-}
-
-function GetTicker() {
-    var ticker;
-    while (!(ticker = exchange.GetTicker())) {
-        Sleep(Interval);
-    }
-    return ticker;
 }
 
 var STATE_WAIT_IDLE     = 0;
@@ -108,7 +89,7 @@ function onTick(exchange) {
         }
     }
 
-    var ticker = GetTicker();
+    var ticker = _C(exchange.GetTicker);
     // 重新设置这两个参数
     if (oldState == STATE_WAIT_IDLE && State != STATE_WAIT_IDLE) {
         LastLowPrice = ticker.Last;
@@ -132,10 +113,10 @@ function onTick(exchange) {
             var ratioMaxUp = Math.abs((LastHighPrice - LastBuyPrice) / LastBuyPrice) * 100;
             if (ticker.Last < LastBuyPrice && ratioStopLoss >= StopLoss) {
                 State = STATE_SELL;
-                Log("开始止损, 当前下跌点数:", adjustFloat(ratioStopLoss), "当前价格", ticker.Last, "对比价格", adjustFloat(LastHighPrice));
+                Log("开始止损, 当前下跌点数:", _N(ratioStopLoss), "当前价格", ticker.Last, "对比价格", _N(LastHighPrice));
             } else if (ticker.Last > LastBuyPrice && ticker.Last < LastHighPrice && ratioStopProfit <= (ratioMaxUp*StopProfitThreshold)) {
                 State = STATE_SELL;
-                Log("开始止赢, 当前上涨点数:", adjustFloat(ratioStopProfit), "当前价格", ticker.Last, "对比价格", adjustFloat(LastBuyPrice));
+                Log("开始止赢, 当前上涨点数:", _N(ratioStopProfit), "当前价格", ticker.Last, "对比价格", _N(LastBuyPrice));
             }
             LastHighPrice = Math.max(LastHighPrice, ticker.Last);
         }
@@ -155,10 +136,10 @@ function onTick(exchange) {
             var ratioMaxDown = Math.abs((LastSellPrice - LastLowPrice) / LastSellPrice) * 100;
             if (ticker.Last > LastSellPrice && ratioStopLoss >= StopLoss) {
                 State = STATE_BUY;
-                Log("开始止损, 当前上涨点数:", adjustFloat(ratioStopLoss), "当前价格", ticker.Last, "对比价格", adjustFloat(LastSellPrice));
+                Log("开始止损, 当前上涨点数:", _N(ratioStopLoss), "当前价格", ticker.Last, "对比价格", _N(LastSellPrice));
             } else if (ticker.Last < LastSellPrice && ticker.Last > LastLowPrice && ratioStopProfit <= (ratioMaxDown*StopProfitThreshold)) {
                 State = STATE_BUY;
-                Log("开始止盈, 当前下跌点数:", adjustFloat(ratioStopProfit), "当前价格", ticker.Last, "对比价格", adjustFloat(LastLowPrice));
+                Log("开始止盈, 当前下跌点数:", _N(ratioStopProfit), "当前价格", ticker.Last, "对比价格", _N(LastLowPrice));
             }
             LastHighPrice = Math.max(LastHighPrice, ticker.Last);
             LastLowPrice = Math.min(LastLowPrice, ticker.Last);
@@ -173,24 +154,26 @@ function onTick(exchange) {
     // Buy or Sell, Cancel pending orders first
     CancelPendingOrders();
 
-    var account = GetAccount();
+    var account = _C(exchange.GetAccount);
 
     // 做多
     if (!Goingshort) {
         if (State == STATE_BUY) {
-            var price = ticker.Last + SlidePrice;
-            var amount = adjustFloat(account.Balance / price);
-            if (amount >= exchange.GetMinStock()) {
+            var price = ticker.Sell + SlidePrice;
+            var amount = _N(account.Balance*0.99 / price);
+            if (amount >= MinStock) {
                 if (exchange.Buy(price, amount, "做多")) {
                     LastBuyPrice = LastHighPrice = price;
+                } else {
+                    Log("开多仓失败", price, amount, account);
                 }
             } else {
                 State = STATE_WAIT_SELL;
             }
         } else {
             var sellAmount = account.Stocks - InitAccount.Stocks;
-            if (sellAmount > exchange.GetMinStock()) {
-                exchange.Sell(ticker.Last - SlidePrice, sellAmount);
+            if (sellAmount > MinStock) {
+                exchange.Sell(ticker.Buy - SlidePrice, sellAmount);
             } else {
                 // No stocks, wait buy and log profit
                 LogProfit(account.Balance - InitAccount.Balance, account);
@@ -199,18 +182,18 @@ function onTick(exchange) {
         }
     } else {
         if (State == STATE_BUY) {
-            var price = ticker.Last + SlidePrice;
-            var amount = Math.min(adjustFloat(account.Balance / price), InitAccount.Stocks - account.Stocks);
-            if (amount >= exchange.GetMinStock()) {
+            var price = ticker.Sell + SlidePrice;
+            var amount = Math.min(_N(account.Balance*0.99 / price), InitAccount.Stocks - account.Stocks);
+            if (amount >= MinStock) {
                 exchange.Buy(price, amount);
             } else {
                 LogProfit(account.Balance - InitAccount.Balance, account);
                 State = STATE_WAIT_IDLE;
             }
         } else {
-            var price = ticker.Last - SlidePrice;
+            var price = ticker.Buy - SlidePrice;
             var sellAmount = account.Stocks;
-            if (sellAmount > exchange.GetMinStock()) {
+            if (sellAmount > MinStock) {
                 exchange.Sell(ticker.Last - SlidePrice, sellAmount, "做空");
                 LastSellPrice = LastLowPrice = price;
             } else {
@@ -222,12 +205,13 @@ function onTick(exchange) {
 }
 
 function main() {
-    InitAccount = GetAccount();
+    InitAccount = _C(exchange.GetAccount);
     Log(exchange.GetName(), exchange.GetCurrency(), InitAccount);
-    EnableGoingShort = EnableGoingShort && (InitAccount.Stocks > exchange.GetMinStock());
+    EnableGoingShort = EnableGoingShort && (InitAccount.Stocks > MinStock);
     LoopInterval = Math.max(LoopInterval, 1);
     while (true) {
         onTick(exchange);
         Sleep(LoopInterval*1000);
     }
 }
+

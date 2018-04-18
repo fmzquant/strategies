@@ -28,7 +28,7 @@ def main():
 				break
 
 		if lines_up == True:
-			records = exchange.GetRecords(PERIOD_M30)
+			records = exchange.GetRecords(PERIOD_M15)
 			current_price = records[-1].get("Close", 0)
 			times = [record.get("Time", 0) for record in records]
 			y = [record.get("High", 0) for record in records]

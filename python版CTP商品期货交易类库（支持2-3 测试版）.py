@@ -412,11 +412,12 @@ class NewTaskQueue:
                         task["e"].SetDirection("closebuy_today" if positions[i]["Type"] ==  PD_LONG else "closebuy")
                         amount = min(amount, depth["Bids"][0]["Amount"])
                         orderId = task["e"].Sell(_N(depth["Bids"][0]["Price"] - slidePrice, 2), amount, task["symbol"], "平今" if positions[i]["Type"] == PD_LONG else "平昨", "Bid", depth["Bids"][0])
+                        remain -= amount
                     elif (task["action"] == "closesell" and (positions[i]["Type"] == PD_SHORT or positions[i]["Type"] == PD_SHORT_YD)):
                         task["e"].SetDirection("closesell_today" if positions[i]["Type"] == PD_SHORT else "closesell")
                         amount = min(amount, depth["Asks"][0]["Amount"])
                         orderId = task["e"].Buy(_N(depth["Asks"][0]["Price"] + slidePrice, 2), amount, task["symbol"], "平今" if positions[i]["Type"] == PD_SHORT else "平昨", "Ask", depth["Asks"][0])
-                    remain -= amount
+                        remain -= amount
             else:
                 if task["action"] == "buy":
                     task["e"].SetDirection("buy")
@@ -598,7 +599,7 @@ def IsTrading(symbol):
             [21, 0, 23, 30]
         ],
         [
-            ['SR', 'CF', 'RM', 'MA', 'TA', 'ZC', 'FG', 'IO'],
+            ['SR', 'CF', 'RM', 'MA', 'TA', 'ZC', 'FG', 'OI'],
             [21, 0, 23, 30]
         ],
     ]

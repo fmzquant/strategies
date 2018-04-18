@@ -14,23 +14,6 @@ SlidePrice     0.3    滑动值
 KeepStock      false  保留币数
 */
 
-
-function GetAccount() {
-    var account;
-    while (!(account = exchange.GetAccount())) {
-        Sleep(2000);
-    }
-    return account;
-}
-
-function GetTicker() {
-    var ticker;
-    while (!(ticker = exchange.GetTicker())) {
-        Sleep(2000);
-    }
-    return ticker;
-}
-
 function cancelAllOrders() {
     var orders = null;
     while (!(orders = exchange.GetOrders())) {
@@ -49,7 +32,7 @@ function cancelAllOrders() {
 
 function sellAll() {
     cancelAllOrders();
-    var initAccount = GetAccount();
+    var initAccount = _C(exchange.GetAccount);
     Log(exchange.GetName(), exchange.GetCurrency(), initAccount);
     if (initAccount.Stocks == 0) {
         Log("空仓");
@@ -57,12 +40,12 @@ function sellAll() {
     }
     var remaind = initAccount.Stocks - KeepStock;
     var account = initAccount;
-    while (remaind >= exchange.GetMinStock()) {
-        var ticker = GetTicker();
+    while (remaind >= 0.001) {
+        var ticker = _C(exchange.GetTicker);
         exchange.Sell(ticker.Buy - SlidePrice, remaind);
         Sleep(RetryInterval * 1000);
         cancelAllOrders();
-        account = GetAccount();
+        account = _C(exchange.GetAccount);
         remaind = account.Stocks - KeepStock;
     }
     Log("平均卖出价", (account.Balance - initAccount.Balance) / (initAccount.Stocks - account.Stocks));
@@ -75,4 +58,5 @@ function main() {
         sellAll();
     }
 } 
+
 

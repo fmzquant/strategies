@@ -101,9 +101,9 @@ def Trade(currentState,nextState):
         Log(_C(exchange.GetPosition)) # ceshi 
         exchange.SetDirection("closebuy" if currentState == STATE_LONG else "closesell")
         while True:
-            # ID = pfn( (ticker['Last'] - slidePrice) if currentState == STATE_LONG else (ticker['Last'] + slidePrice), AmountOP) # xiugai 限价单
+            ID = pfn( (ticker['Last'] - slidePrice) if currentState == STATE_LONG else (ticker['Last'] + slidePrice), AmountOP) # xiugai 限价单
             # ID = pfn(-1, AmountOP) # xiugai  市价单
-            ID = pfn(AmountOP) # xiugai  市价单
+            # ID = pfn(AmountOP) # xiugai  市价单
             Sleep(Interval)
             Log(exchange.GetOrder(ID)) # xiugai
             ClosePrice = (exchange.GetOrder(ID))['AvgPrice'] # 
@@ -124,9 +124,9 @@ def Trade(currentState,nextState):
     exchange.SetDirection("buy" if nextState == STATE_LONG else "sell") 
     Log(_C(exchange.GetAccount))
     while True:
-        # pfn( (ticker['Last'] + slidePrice) if nextState == STATE_LONG else (ticker['Last'] - slidePrice), AmountOP) # 限价单
+        ID = pfn( (ticker['Last'] + slidePrice) if nextState == STATE_LONG else (ticker['Last'] - slidePrice), AmountOP) # 限价单
         # ID = pfn(-1, AmountOP) # 市价单
-        ID = pfn(AmountOP) # 市价单
+        # ID = pfn(AmountOP) # 市价单
         Sleep(Interval)
         Log(exchange.GetOrder(ID)) # xiugai
         CancelPendingOrders()

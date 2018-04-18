@@ -7,30 +7,20 @@
 抢盘口做市策略, 最基础的做市策略，买一卖一抢单抢盘口, 赚买一卖一的差价.
 
 
-参数            默认值    描述
-------------  -----  ----------
-Interval      2000   出错重试间隔(毫秒)
-LoopInterval  true   轮询间隔(秒)
-SlidePrice    0.01   滑点
-MaxDiff       0.8    盘口最小差价
-Lot           0.2    手数
+参数            默认值     描述
+------------  ------  ----------
+Interval      2000    出错重试间隔(毫秒)
+LoopInterval  true    轮询间隔(秒)
+SlidePrice    0.01    滑点
+MaxDiff       0.8     盘口最小差价
+Lot           0.2     手数
+MinStock      0.0001  最小交易量
 */
 
-function adjustFloat(v) {
-    return Math.floor(v*1000)/1000;
-}
-
-function GetOrders() {
-    var orders = null;
-    while (!(orders = exchange.GetOrders())) {
-        Sleep(Interval);
-    }
-    return orders;
-}
 
 function CancelPendingOrders(orderType) {
     while (true) {
-        var orders = GetOrders();
+        var orders = _C(exchange.GetOrders);
         var count = 0;
         if (typeof(orderType) != 'undefined') {
             for (var i = 0; i < orders.length; i++) {
@@ -56,24 +46,6 @@ function CancelPendingOrders(orderType) {
     }
 }
 
-function GetAccount() {
-    var account;
-    while (!(account = exchange.GetAccount())) {
-        Sleep(Interval);
-    }
-    return account;
-}
-
-function GetTicker(e) {
-    if (typeof(e) == 'undefined') {
-        e = exchange;
-    }
-    var ticker;
-    while (!(ticker = e.GetTicker())) {
-        Sleep(Interval);
-    }
-    return ticker;
-}
 
 function updateProfit(accountInit, accountNow, ticker) {
     var netNow = accountNow.Balance + accountNow.FrozenBalance + ((accountNow.Stocks + accountNow.FrozenStocks) * ticker.Buy);
@@ -86,7 +58,7 @@ var LastBuyPrice = 0;
 var LastSellPrice = 0;
 
 function onTick() {
-    var ticker = GetTicker();
+    var ticker = _C(exchange.GetTicker);
     var BuyPrice = ticker.Buy + SlidePrice;
     var SellPrice = ticker.Sell - SlidePrice;
 
@@ -116,15 +88,15 @@ function onTick() {
         CancelPendingOrders(cancelType);
     }
 
-    var orders = GetOrders();
+    var orders = _C(exchange.GetOrders);
     if (orders.length == 2) {
         return;
     }
-    var account = GetAccount();
-    var amountBuy = Math.min(adjustFloat(account.Balance / BuyPrice), Lot);
+    var account = _C(exchange.GetAccount);
+    var amountBuy = _N(Math.min(account.Balance / BuyPrice, Lot));
     var amountSell = Math.min(account.Stocks, Lot);
 
-    if (amountBuy >= exchange.GetMinStock()) {
+    if (amountBuy >= MinStock) {
         if (orders.length == 0 || orders[0].Type == ORDER_TYPE_SELL) {
             if (orders.length > 0) {
                 updateProfit(InitAccount, account, ticker);
@@ -133,7 +105,7 @@ function onTick() {
             LastBuyPrice = BuyPrice;
         }
     }
-    if (amountSell >= exchange.GetMinStock()) {
+    if (amountSell >= MinStock) {
         if (orders.length == 0 || orders[0].Type == ORDER_TYPE_BUY) {
             if (orders.length > 0) {
                 updateProfit(InitAccount, account, ticker);
@@ -149,14 +121,15 @@ function onexit() {
 }
 
 function main() {
-    InitAccount = GetAccount();
+    InitAccount = _C(exchange.GetAccount);
     Log(InitAccount);
     SetErrorFilter("502:|503:|unexpected|network|timeout|WSARecv|Connect|GetAddr|no such|reset|received|EOF");
     exchange.SetRate(1);
     LoopInterval = Math.max(LoopInterval, 1);
-    Lot = Math.max(exchange.GetMinStock(), Lot);
+    Lot = Math.max(MinStock, Lot);
     while (true) {
         onTick();
         Sleep(LoopInterval * 1000);
     }
 }
+

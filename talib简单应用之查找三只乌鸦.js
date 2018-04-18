@@ -9,9 +9,9 @@
 */
 
 /*backtest
-start: 2017-11-11 00:00:00
-end: 2017-11-12 12:00:00
-period: 1h
+start: 2017-12-05 00:00:00
+end: 2017-12-06 12:00:00
+period: 5m
 exchanges: [{"eid":"OKCoin_EN","currency":"BTC"}]
 */
 

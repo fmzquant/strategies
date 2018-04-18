@@ -29,21 +29,6 @@ var lastHighPrice = 0;
 var lastBuyPrice = 0;
 var initBalance = 0;
 
-function GetAccount() {
-    var account;
-    while (!(account = exchange.GetAccount())) {
-        Sleep(2000);
-    }
-    return account;
-}
-
-function GetTicker() {
-    var ticker;
-    while (!(ticker = exchange.GetTicker())) {
-        Sleep(2000);
-    }
-    return ticker;
-}
 
 function cancelAllOrders() {
     var orders = null;
@@ -61,13 +46,9 @@ function cancelAllOrders() {
     }
 }
 
-function adjustFloat(v) {
-    return Math.floor(v*1000)/1000;
-}
-
 function MustBuy() {
     var buyAmount = 0;
-    var initAccount = GetAccount();
+    var initAccount = _C(exchange.GetAccount);
     if (initBalance == 0) {
         initBalance = initAccount.Balance;
         if (initAccount.Balance < UsedFund) {
@@ -82,22 +63,22 @@ function MustBuy() {
     var buyAmount = 0;
     
     while (spend < UsedFund) {
-        var ticker = GetTicker();
-        var amount = adjustFloat((UsedFund - spend) / (ticker.Last + SlidePrice));
-        if (amount < exchange.GetMinStock()) {
+        var ticker = _C(exchange.GetTicker);
+        var amount = _N((UsedFund - spend) / (ticker.Last + SlidePrice));
+        if (amount < 0.001) {
             break;
         }
         exchange.Buy(ticker.Last + SlidePrice, amount);
         Sleep(RetryInterval * 1000);
         cancelAllOrders();
-        var account = GetAccount();
+        var account = _C(exchange.GetAccount);
         spend = initAccount.Balance - account.Balance;
         buyAmount = account.Stocks - initAccount.Stocks;
     }
     
     if (buyAmount > 0) {
         lastBuyPrice = lastHighPrice = (spend / buyAmount);
-        Log("平均买入价", adjustFloat(lastHighPrice));
+        Log("平均买入价", _N(lastHighPrice));
     }
     
     return buyAmount;
@@ -105,13 +86,13 @@ function MustBuy() {
 
 function MustSell(sellAmount) {
     var remaind = sellAmount;
-    var initAccount = GetAccount();
-    while (remaind >= exchange.GetMinStock()) {
-        var ticker = GetTicker();
+    var initAccount = _C(exchange.GetAccount);
+    while (remaind >= 0.001) {
+        var ticker = _C(exchange.GetTicker);
         exchange.Sell(ticker.Last - SlidePrice, remaind);
         Sleep(RetryInterval * 1000);
         cancelAllOrders();
-        var newAccount = GetAccount();
+        var newAccount = _C(exchange.GetAccount);
         remaind -= (initAccount.Stocks - newAccount.Stocks);
         initAccount = newAccount;
     }
@@ -137,7 +118,7 @@ function onTick() {
         }
         state = 0;
     } else if ((EnableStopProfit || EnableStopLoss) && lastBuyAmount > 0) {
-        var ticker = GetTicker();
+        var ticker = _C(exchange.GetTicker);
         if (RefHigh) {
             lastHighPrice = Math.max(lastHighPrice, ticker.Last);
         }
@@ -147,12 +128,12 @@ function onTick() {
         
         if (EnableStopLoss && ticker.Last < lastHighPrice && (ratioStopLoss >= (StopLoss/100))) {
             // Stop loss
-            Log("开始止损, 当前跌价点数:", adjustFloat(ratioStopLoss*100), "当前价格", ticker.Last, "对比价格", adjustFloat(lastHighPrice));
+            Log("开始止损, 当前跌价点数:", _N(ratioStopLoss*100), "当前价格", ticker.Last, "对比价格", _N(lastHighPrice));
             shouldSell = true;
             
         } else if (EnableStopProfit && ticker.Last > lastBuyPrice && (ratioStopProfit >= (StopProfit/100))) {
             // Stop loss
-            Log("开始止赢, 当前涨价点数:", adjustFloat(ratioStopProfit*100), "当前价格", ticker.Last, "对比价格", adjustFloat(lastBuyPrice));
+            Log("开始止赢, 当前涨价点数:", _N(ratioStopProfit*100), "当前价格", ticker.Last, "对比价格", _N(lastBuyPrice));
             shouldSell = true;
         }
         
@@ -167,10 +148,11 @@ function main() {
     if (EnterHour == LeaveHour) {
         throw "进场时间跟离场时间不能相等!";
     }
-    Log(GetAccount());
+    Log(_C(exchange.GetAccount));
     while(true) {
         onTick();
         Sleep(60000);
     }
 } 
+
 

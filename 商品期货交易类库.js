@@ -72,7 +72,7 @@ SyncInterval     5      账户与持仓同步周期(秒)
 */
 
 /*backtest
-start: 2018-01-15 00:00:00
+start: 2018-01-15 09:00:00
 end: 2018-01-30 00:00:00
 period: 1d
 exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
@@ -522,7 +522,7 @@ $.IsTrading = function(symbol) {
 
     var nperiod = [
         [
-            ['AU', 'AG'],
+            ['AU', 'AG', 'sc'],
             [21, 0, 02, 30]
         ],
         [
@@ -538,7 +538,7 @@ $.IsTrading = function(symbol) {
             [21, 0, 23, 30]
         ],
         [
-            ['SR', 'CF', 'RM', 'MA', 'TA', 'ZC', 'FG', 'IO'],
+            ['SR', 'CF', 'RM', 'MA', 'TA', 'ZC', 'FG', 'OI'],
             [21, 0, 23, 30]
         ],
     ];
@@ -743,13 +743,13 @@ $.NewTaskQueue = function(onTaskFinish) {
                         task.e.SetDirection(positions[i].Type == PD_LONG ? "closebuy_today" : "closebuy");
                         amount = Math.min(amount, depth.Bids[0].Amount)
                         orderId = task.e.Sell(_N(depth.Bids[0].Price - slidePrice, 2), amount, task.symbol, positions[i].Type == PD_LONG ? "平今" : "平昨", 'Bid', depth.Bids[0]);
+                        remain -= amount;
                     } else if (task.action == "closesell" && (positions[i].Type == PD_SHORT || positions[i].Type == PD_SHORT_YD)) {
                         task.e.SetDirection(positions[i].Type == PD_SHORT ? "closesell_today" : "closesell");
                         amount = Math.min(amount, depth.Asks[0].Amount)
                         orderId = task.e.Buy(_N(depth.Asks[0].Price + slidePrice, 2), amount, task.symbol, positions[i].Type == PD_SHORT ? "平今" : "平昨", 'Ask', depth.Asks[0]);
+                        remain -= amount;
                     }
-                    // assume order is success insert
-                    remain -= amount;
                 }
             } else {
                 if (task.action == "buy") {

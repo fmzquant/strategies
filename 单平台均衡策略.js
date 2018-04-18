@@ -86,17 +86,17 @@ function onTick() {
     
     if (diff > threshold) {
         var amount = adjustFloat(diff / 2 / ticker.Buy);
-        if (amount < exchange.GetMinStock()) {
+        if (amount < 0.001) {
             return;
         }
-        exchange.Buy(ticker.Buy, amount);
+        exchange.Buy(ticker.Buy*1.1, amount);
         State = STATE_WAIT_BUY;
     } else if (diff <= -threshold) {
         var amount = adjustFloat(Math.abs(diff) / 2 / ticker.Sell);
-        if (amount < exchange.GetMinStock()) {
+        if (amount < 0.001) {
             return;
         }
-        exchange.Sell(ticker.Sell, amount);
+        exchange.Sell(ticker.Sell*0.9, amount);
         State = STATE_WAIT_SELL;
     }
 }

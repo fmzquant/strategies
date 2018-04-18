@@ -45,9 +45,10 @@ KeepRatio       10                                                              
 */
 
 /*backtest
-start: 2016-03-01        
-end: 2016-12-30           
-period: 60         
+start: 2016-03-01 00:00:00
+end: 2016-12-30 00:00:00
+period: 1h
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 */
 
 var _bot = $.NewPositionManager();

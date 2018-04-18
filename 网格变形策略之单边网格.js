@@ -51,6 +51,8 @@ EnableDynamic       false  开启动态挂单
 DynamicMax          30     订单失效距离(元)
 ResetData           true   启动时清空所有数据
 Precision           5      价格小数位长度
+XPrecision          5      下单量小数位长度
+MinStock            0.001  最小交易量
 
 按钮    默认值         描述
 ----  ----------  ----------
@@ -255,7 +257,7 @@ function balanceAccount(orgAccount, initAccount) {
     var ok = true;
     while (true) {
         var diff = _N(nowAccount.Stocks - initAccount.Stocks);
-        if (Math.abs(diff) < exchange.GetMinStock()) {
+        if (Math.abs(diff) < MinStock) {
             break;
         }
         var depth = _C(exchange.GetDepth);
@@ -278,7 +280,7 @@ function balanceAccount(orgAccount, initAccount) {
         } else {
             amount = Math.min(nowAccount.Balance / price, amount);
         }
-        if (amount < exchange.GetMinStock()) {
+        if (amount < MinStock) {
             Log("资金不足, 无法平衡到初始状态");
             ok = false;
             break;
@@ -457,7 +459,7 @@ function fishing(orgAccount, fishCount) {
             var money_diff = (nowAccount.Balance + nowAccount.FrozenBalance) - (InitAccount.Balance + InitAccount.FrozenBalance);
             var floatProfit = _N(money_diff + (amount_diff * ticker.Last));
             var floatProfitAll = _N((nowAccount.Balance + nowAccount.FrozenBalance - orgAccount.Balance - orgAccount.FrozenBalance) + ((nowAccount.Stocks + nowAccount.FrozenStocks - orgAccount.Stocks - orgAccount.FrozenStocks) * ticker.Last));
-            var isHold = Math.abs(amount_diff) >= exchange.GetMinStock();
+            var isHold = Math.abs(amount_diff) >= MinStock;
             if (isHold) {
                 setBusy();
             }
@@ -605,7 +607,7 @@ function main() {
         LogProfitReset();
         LogReset();
     }
-    exchange.SetMaxDigits(Precision)
+    exchange.SetPrecision(Precision, XPrecision)
     if (typeof(AmountType) === 'undefined') {
         AmountType = 0;
     }
