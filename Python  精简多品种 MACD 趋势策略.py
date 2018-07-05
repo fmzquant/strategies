@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/43965
+策略出处: https://www.fmz.com/strategy/43965
 策略名称: Python  精简多品种 MACD 趋势策略
 策略作者: Zero
 策略描述:

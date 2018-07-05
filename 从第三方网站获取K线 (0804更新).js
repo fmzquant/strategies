@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/12977
+策略出处: https://www.fmz.com/strategy/12977
 策略名称: 从第三方网站获取K线 (0804更新)
 策略作者: 数·狂
 策略描述:

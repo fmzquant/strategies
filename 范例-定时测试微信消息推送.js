@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/15098
+策略出处: https://www.fmz.com/strategy/15098
 策略名称: 范例-定时测试微信消息推送
 策略作者: 小小梦
 策略描述:

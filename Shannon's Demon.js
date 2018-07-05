@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/64455
+策略出处: https://www.fmz.com/strategy/64455
 策略名称: Shannon's Demon
 策略作者: FawkesPan
 策略描述:

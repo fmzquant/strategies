@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/15085
+策略出处: https://www.fmz.com/strategy/15085
 策略名称: 非常简单的策略，但是很有效
 策略作者: jiebang
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/638
+策略出处: https://www.fmz.com/strategy/638
 策略名称: 计划委托买入
 策略作者: Zero
 策略描述:
@@ -7,14 +7,15 @@
 计划委托买入, 在价格涨超或者跌破指定的价格后进行买入操作, 如果使用市价单，只写购买金额就可以了，如果限价单，需要指定限价单的价格和个数
 
 
-参数                 默认值  描述
----------------  -----  -------------
-OpType               0  下单类型: 市价单|限价单
-TriggerPrice      2600  触发价格
-MarketUsedMoney  10000  市价单 - 购买金额
-BuyPrice          2610  限价单 - 买入价格
-BuyAmount            3  限价单 - 买入数量
-LoopInterval       200  检测间隔(豪秒)
+参数                    默认值  描述
+---------------  --------  -------------
+OpType               0     下单类型: 市价单|限价单
+TriggerPrice      2600     触发价格
+MarketUsedMoney  10000     市价单 - 购买金额
+BuyPrice          2610     限价单 - 买入价格
+BuyAmount            3     限价单 - 买入数量
+LoopInterval       200     检测间隔(豪秒)
+MinStock             0.01  最小交易币数
 */
 
 
@@ -98,7 +99,7 @@ function cancelPending() {
 function ensureBuy() {
     var account = GetAccount();
     var initAccount = account;
-    var minStock = exchange.GetMinStock();
+    var minStock = MinStock;
     var isfirst = true;
     var c = 0;
     while (true) {

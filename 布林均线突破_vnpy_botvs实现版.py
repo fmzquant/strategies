@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/52801
+策略出处: https://www.fmz.com/strategy/52801
 策略名称: 布林均线突破_vnpy_botvs实现版
 策略作者: ipqhjjybj
 策略描述:

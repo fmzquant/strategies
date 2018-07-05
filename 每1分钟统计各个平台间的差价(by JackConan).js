@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/98
+策略出处: https://www.fmz.com/strategy/98
 策略名称: 每1分钟统计各个平台间的差价(by JackConan)
 策略作者: yzl_126@126.com
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/69436
+策略出处: https://www.fmz.com/strategy/69436
 策略名称: 代替废弃的GetMinStock()函数
 策略作者: hugo_zhou
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/304
+策略出处: https://www.fmz.com/strategy/304
 策略名称: 抢盘口做市策略 - 对敲
 策略作者: Zero
 策略描述:

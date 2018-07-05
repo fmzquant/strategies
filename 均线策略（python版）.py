@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21157
+策略出处: https://www.fmz.com/strategy/21157
 策略名称: 均线策略（python版）
 策略作者: 小小梦
 策略描述:

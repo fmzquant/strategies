@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/25943
+策略出处: https://www.fmz.com/strategy/25943
 策略名称: 全球10大交易系统之 Aberration 多品种商品期货交易系统
 策略作者: Zero
 策略描述:

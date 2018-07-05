@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/19329
+策略出处: https://www.fmz.com/strategy/19329
 策略名称: 收益率统计
 策略作者: 春哥
 策略描述:

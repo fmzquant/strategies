@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/67098
+策略出处: https://www.fmz.com/strategy/67098
 策略名称: 定投简单版
 策略作者: 小码哥
 策略描述:

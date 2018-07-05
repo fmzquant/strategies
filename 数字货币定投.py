@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/54256
+策略出处: https://www.fmz.com/strategy/54256
 策略名称: 数字货币定投
 策略作者: ankye
 策略描述:

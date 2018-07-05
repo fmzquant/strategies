@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/5379
+策略出处: https://www.fmz.com/strategy/5379
 策略名称: 传统期货差价监控 (CTP)
 策略作者: Zero
 策略描述:

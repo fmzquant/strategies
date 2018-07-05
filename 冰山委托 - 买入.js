@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/236
+策略出处: https://www.fmz.com/strategy/236
 策略名称: 冰山委托 - 买入
 策略作者: Zero
 策略描述:

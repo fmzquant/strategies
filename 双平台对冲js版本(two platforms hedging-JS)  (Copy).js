@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/61405
+策略出处: https://www.fmz.com/strategy/61405
 策略名称: 双平台对冲js版本(two platforms hedging-JS)  (Copy)
 策略作者: ellajella-0378
 策略描述:

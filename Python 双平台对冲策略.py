@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21023
+策略出处: https://www.fmz.com/strategy/21023
 策略名称: Python 双平台对冲策略
 策略作者: Zero
 策略描述:

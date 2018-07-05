@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/747
+策略出处: https://www.fmz.com/strategy/747
 策略名称: 计划委托卖出
 策略作者: Zero
 策略描述:
@@ -14,6 +14,7 @@ TriggerPrice  2600   触发价格
 SellPrice     2610   限价单 - 卖出价格
 SellAmount    3      卖出数量
 LoopInterval  true   检测间隔(秒)
+MinStock      0.01   最小交易币数
 */
 
 
@@ -97,7 +98,7 @@ function cancelPending() {
 function ensureSell() {
     var account = GetAccount();
     var initAccount = account;
-    var minStock = exchange.GetMinStock();
+    var minStock = MinStock;
     var isfirst = true;
     while (true) {
         cancelPending();

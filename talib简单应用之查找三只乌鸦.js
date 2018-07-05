@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/62163
+策略出处: https://www.fmz.com/strategy/62163
 策略名称: talib简单应用之查找三只乌鸦
 策略作者: Zero
 策略描述:

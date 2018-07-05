@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/28128
+策略出处: https://www.fmz.com/strategy/28128
 策略名称: 测试-布林带策略（基于策略框架）
 策略作者: 小小梦
 策略描述:
@@ -191,8 +191,10 @@ function Loop(){//循环主体
     var boll = TA.BOLL(records, 20, 2); // 调用布林指标
     var up = boll[0];
     var down = boll[2];
+    var mid = boll[1]
     $.AddZhiBiao(up, records, 1);
     $.AddZhiBiao(down, records, 2);
+    $.AddZhiBiao(mid, records, 3);
     /*
     求一个简单的策略，哪位大神出手帮助一下
     okcoin现货btc，1小时布林线，价格上穿布林线下轨买入，价格上穿布林线上轨卖出

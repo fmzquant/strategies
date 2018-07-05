@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/84042
+策略出处: https://www.fmz.com/strategy/84042
 策略名称: 测试多图表展示Python版
 策略作者: 小小梦
 策略描述:

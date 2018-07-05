@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/44319
+策略出处: https://www.fmz.com/strategy/44319
 策略名称: TableTemplet
 策略作者: 职业养鸡户
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/951
+策略出处: https://www.fmz.com/strategy/951
 策略名称: 冰山委托 - 支持价格触发 BitVC期货专用
 策略作者: Zero
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/12101
+策略出处: https://www.fmz.com/strategy/12101
 策略名称: Dual Thrust OKCoin 期货
 策略作者: Zero
 策略描述:
@@ -120,7 +120,8 @@ function Trade(currentState, nextState) {
             if (amount === 0) {
                 break;
             }
-            pfn(amount);
+            // pfn(amount);
+            pfn(nextState === STATE_LONG ? _C(exchange.GetTicker).Sell * 1.001 : _C(exchange.GetTicker).Buy * 0.999, amount);
             Sleep(Interval);
             CancelPendingOrders();
         };
@@ -142,7 +143,8 @@ function Trade(currentState, nextState) {
             Log("持仓均价", pos[0], "数量:", pos[1]);
             break;
         }
-        pfn(AmountOP-pos[1]);
+        // pfn(AmountOP-pos[1]);
+        pfn(nextState === STATE_LONG ? _C(exchange.GetTicker).Sell * 1.001 : _C(exchange.GetTicker).Buy * 0.999, AmountOP-pos[1]);
         Sleep(Interval);
         CancelPendingOrders();
     }

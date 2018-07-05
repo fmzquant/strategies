@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/11604
+策略出处: https://www.fmz.com/strategy/11604
 策略名称: RSI_now_sb_ok
 策略作者: tfboys
 策略描述:

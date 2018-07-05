@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/76827
+策略出处: https://www.fmz.com/strategy/76827
 策略名称: 五线向上&&突破前高
 策略作者: 围龙小子
 策略描述:

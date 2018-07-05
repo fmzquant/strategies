@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/59120
+策略出处: https://www.fmz.com/strategy/59120
 策略名称: BotVS 商品期货 量化 测试入门 策略
 策略作者: 小小梦
 策略描述:

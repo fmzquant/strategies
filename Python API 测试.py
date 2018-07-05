@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21365
+策略出处: https://www.fmz.com/strategy/21365
 策略名称: Python API 测试
 策略作者: Zero
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/37793
+策略出处: https://www.fmz.com/strategy/37793
 策略名称: 商品期货查看账户详细信息
 策略作者: Zero
 策略描述:

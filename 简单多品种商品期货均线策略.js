@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/57029
+策略出处: https://www.fmz.com/strategy/57029
 策略名称: 简单多品种商品期货均线策略
 策略作者: Zero
 策略描述:

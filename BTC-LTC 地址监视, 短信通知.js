@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/1295
+策略出处: https://www.fmz.com/strategy/1295
 策略名称: BTC-LTC 地址监视, 短信通知
 策略作者: Zero
 策略描述:

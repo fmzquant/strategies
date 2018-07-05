@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/40266
+策略出处: https://www.fmz.com/strategy/40266
 策略名称: 知乎专栏 实例文章策略
 策略作者: yilidalei
 策略描述:

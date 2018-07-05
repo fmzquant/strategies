@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/30861
+策略出处: https://www.fmz.com/strategy/30861
 策略名称: 策略框架模板
 策略作者: 小小梦
 策略描述:
@@ -20,14 +20,15 @@ var TASK_COVER = 5;
 https://www.botvs.com/bbs-topic/634
 
 
-参数            默认值  描述
-----------  -----  -----------
-OpMode        0    下单方式: 吃单|挂单
-MaxSpace      0.5  挂单失效距离
-SlidePrice    0.1  下单滑动价(元)
-MaxAmount     0.8  开仓最大单次下单量
-RetryDelay  500    失败重试(毫秒)
-Interval    500    轮询间隔
+参数             默认值  描述
+----------  ------  -----------
+OpMode        0     下单方式: 吃单|挂单
+MaxSpace      0.5   挂单失效距离
+SlidePrice    0.1   下单滑动价(元)
+MaxAmount     0.8   开仓最大单次下单量
+RetryDelay  500     失败重试(毫秒)
+Interval    500     轮询间隔
+_minStock     0.01  最小交易币数
 */
 
 // 模板全局变量
@@ -80,7 +81,7 @@ function GetAccount(e, waitFrozen) {
     var alreadyAlert = false;
     while (true) {
         account = _C(e.GetAccount);
-        if (!waitFrozen || (account.FrozenStocks < e.GetMinStock() && account.FrozenBalance < 0.01)) {
+        if (!waitFrozen || (account.FrozenStocks < _minStock && account.FrozenBalance < 0.01)) {
             break;
         }
         if (!alreadyAlert) {
@@ -156,7 +157,7 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
                 dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 4);
                 doAmount = Math.min(maxAmount, tradeAmount - dealAmount, nowAccount.Stocks);
             }
-            if (doAmount < e.GetMinStock()) {
+            if (doAmount < _minStock) {
                 break;
             }
             prePrice = tradePrice;
@@ -211,7 +212,7 @@ function TasksInit(tasks){
         task.AddAmount = 0;
         task.StopLossAmount = 0;
         task.STATE = IDLE;
-        task.minStock = _C(task.Exchange.GetMinStock);
+        task.minStock = _minStock; // _C(task.Exchange.GetMinStock);     修改 ， 废弃了 GetMinStock 函数
         task.initAccount = _C(task.Exchange.GetAccount);
         task.Currency = _C(task.Exchange.GetCurrency);
         task.Name = _C(task.Exchange.GetName);

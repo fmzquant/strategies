@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/22838
+策略出处: https://www.fmz.com/strategy/22838
 策略名称: 测试-CTP商品期货连接状态 (图表显示)
 策略作者: 小小梦
 策略描述:
@@ -160,7 +160,7 @@ function main() {
         }
         
         chart.update(ChartCfg);
-        $.UpdateLogStatus("time:" + (new Date())); //更新 状态栏 图表内容
+        $.UpDateLogStatus("time:" + (new Date())); //更新 状态栏 图表内容
         lastState = state; //当前状态更新到上次状态
         Sleep(1000 * 5);
     }

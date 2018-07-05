@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/12348
+策略出处: https://www.fmz.com/strategy/12348
 策略名称: 均线策略 30 行搞定
 策略作者: Zero
 策略描述:

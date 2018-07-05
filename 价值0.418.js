@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/10744
+策略出处: https://www.fmz.com/strategy/10744
 策略名称: 价值0.418
 策略作者: kakababy
 策略描述:

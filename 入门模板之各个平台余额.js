@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/48
+策略出处: https://www.fmz.com/strategy/48
 策略名称: 入门模板之各个平台余额
 策略作者: Zero
 策略描述:

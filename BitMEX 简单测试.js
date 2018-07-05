@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/40289
+策略出处: https://www.fmz.com/strategy/40289
 策略名称: BitMEX 简单测试
 策略作者: Tony123
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/58179
+策略出处: https://www.fmz.com/strategy/58179
 策略名称: 如何找出一定Bar数量的 K线前期高点、低点 及 Demo 程序
 策略作者: 小小梦
 策略描述:

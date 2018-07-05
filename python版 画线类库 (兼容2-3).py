@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/39066
+策略出处: https://www.fmz.com/strategy/39066
 策略名称: python版 画线类库 (兼容2-3)
 策略作者: 小小梦
 策略描述:

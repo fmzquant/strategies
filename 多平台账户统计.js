@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/7827
+策略出处: https://www.fmz.com/strategy/7827
 策略名称: 多平台账户统计
 策略作者: 数·狂
 策略描述:

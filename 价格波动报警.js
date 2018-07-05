@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/885
+策略出处: https://www.fmz.com/strategy/885
 策略名称: 价格波动报警
 策略作者: Zero
 策略描述:

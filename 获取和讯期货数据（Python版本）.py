@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/26017
+策略出处: https://www.fmz.com/strategy/26017
 策略名称: 获取和讯期货数据（Python版本）
 策略作者: edwardgyw
 策略描述:

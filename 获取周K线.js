@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/20226
+策略出处: https://www.fmz.com/strategy/20226
 策略名称: 获取周K线
 策略作者: 数·狂
 策略描述:

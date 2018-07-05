@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/1088
+策略出处: https://www.fmz.com/strategy/1088
 策略名称: 2014年的简易短线机器人
 策略作者: botvsing
 策略描述:
@@ -126,8 +126,7 @@ function CancelPendingOrders() {
 }
 
 //计算将要下单的价格
-function GetPrice(Type) {
-    var depth=_C(exchange.GetDepth);
+function GetPrice(Type,depth) {
     var amountBids=0;
     var amountAsks=0;
     //计算买价，获取累计深度达到预设的价格
@@ -153,8 +152,9 @@ function GetPrice(Type) {
 }
  
 function onTick() {
-    var buyPrice = GetPrice("Buy");
-    var sellPrice= GetPrice("Sell");
+    var depth=_C(exchange.GetDepth);
+    var buyPrice = GetPrice("Buy",depth);
+    var sellPrice= GetPrice("Sell",depth);
     //买卖价差如果小于预设值diffprice，就会挂一个相对更深的价格
     if ((sellPrice - buyPrice) <= diffprice){
             buyPrice-=10;

@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/20761
+策略出处: https://www.fmz.com/strategy/20761
 策略名称: Python简单测试策略
 策略作者: Zero
 策略描述:
@@ -44,14 +44,12 @@ def main():
     Log(str(talib.EMA(r.Close, 10)))
 
     for e in exchanges:
-        Log(e.GetName(), e.GetRate(), e.GetCurrency(), e.GetFee())
+        Log(e.GetName(), e.GetRate(), e.GetCurrency())
         Log(e.GetAccount())
         Log(_C(e.GetOrders))
         Log(e.GetOrder(10))
         Log(e.CancelOrder(10000))
-        Log(e.IO("api", "userinfo"))
-        Log(e.IO("api", "order_info", "symbol=btc_usd&order_id=3"))
-        
+ 
         Log(e.GetUSDCNY())
         #Log(e.GetPosition())
         #Log(e.SetContractType("next_week"))

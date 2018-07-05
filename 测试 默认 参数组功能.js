@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/40155
+策略出处: https://www.fmz.com/strategy/40155
 策略名称: 测试 默认 参数组功能
 策略作者: 小小梦
 策略描述:

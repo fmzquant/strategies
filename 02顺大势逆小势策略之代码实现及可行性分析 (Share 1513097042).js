@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/63223
+策略出处: https://www.fmz.com/strategy/63223
 策略名称: 02顺大势逆小势策略之代码实现及可行性分析 (Share 1513097042)
 策略作者: ellajella-0378
 策略描述:

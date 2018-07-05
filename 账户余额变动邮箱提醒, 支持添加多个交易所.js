@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/2006
+策略出处: https://www.fmz.com/strategy/2006
 策略名称: 账户余额变动邮箱提醒, 支持添加多个交易所
 策略作者: Zero
 策略描述:

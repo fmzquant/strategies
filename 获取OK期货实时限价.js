@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/17028
+策略出处: https://www.fmz.com/strategy/17028
 策略名称: 获取OK期货实时限价
 策略作者: 数·狂
 策略描述:

@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21104
+策略出处: https://www.fmz.com/strategy/21104
 策略名称: python版现货数字货币交易类库
 策略作者: 小小梦
 策略描述:

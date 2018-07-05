@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/796
+策略出处: https://www.fmz.com/strategy/796
 策略名称: 新手入门之 - 下买单卖单
 策略作者: Zero
 策略描述:

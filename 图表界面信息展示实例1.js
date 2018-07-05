@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/36026
+策略出处: https://www.fmz.com/strategy/36026
 策略名称: 图表界面信息展示实例1
 策略作者: 太极
 策略描述:

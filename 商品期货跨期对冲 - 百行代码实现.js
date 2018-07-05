@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/23896
+策略出处: https://www.fmz.com/strategy/23896
 策略名称: 商品期货跨期对冲 - 百行代码实现
 策略作者: Zero
 策略描述:

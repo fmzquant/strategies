@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/15498
+策略出处: https://www.fmz.com/strategy/15498
 策略名称: 从第三方获取K线 (商品期货版) Rev. 161216
 策略作者: 数·狂
 策略描述:

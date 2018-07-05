@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/13011
+策略出处: https://www.fmz.com/strategy/13011
 策略名称: Dual Thrust 商品期货
 策略作者: Zero
 策略描述:

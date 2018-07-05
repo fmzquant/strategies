@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/47144
+策略出处: https://www.fmz.com/strategy/47144
 策略名称: 多均线策略
 策略作者: 小小梦
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/38203
+策略出处: https://www.fmz.com/strategy/38203
 策略名称: 测试多图表展示
 策略作者: Zero
 策略描述:

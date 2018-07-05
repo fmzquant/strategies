@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/36195
+策略出处: https://www.fmz.com/strategy/36195
 策略名称: js R-Breaker
 策略作者: 太极
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/14198
+策略出处: https://www.fmz.com/strategy/14198
 策略名称: 商品期货交易类库(增加下限价单功能)
 策略作者: edwardgyw
 策略描述:

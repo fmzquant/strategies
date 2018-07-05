@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/1125
+策略出处: https://www.fmz.com/strategy/1125
 策略名称: 统计K线回测是否存在趋势
 策略作者: botvsing
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/20663
+策略出处: https://www.fmz.com/strategy/20663
 策略名称: （13）策略框架
 策略作者: 小小梦
 策略描述:

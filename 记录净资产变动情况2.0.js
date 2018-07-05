@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/8916
+策略出处: https://www.fmz.com/strategy/8916
 策略名称: 记录净资产变动情况2.0
 策略作者: 中本姜(青铜机器人)
 策略描述:

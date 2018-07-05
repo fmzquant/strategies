@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/57267
+策略出处: https://www.fmz.com/strategy/57267
 策略名称: 数字货币交易类库 (期货支持OKCoin期货-BitVC, 支持$.CTA函数)
 策略作者: 小小梦
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/18678
+策略出处: https://www.fmz.com/strategy/18678
 策略名称: 对冲2.7收益率统计系统 支持多组账号统计
 策略作者: Zero
 策略描述:

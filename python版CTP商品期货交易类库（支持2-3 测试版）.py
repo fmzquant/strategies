@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/24288
+策略出处: https://www.fmz.com/strategy/24288
 策略名称: python版CTP商品期货交易类库（支持2-3 测试版）
 策略作者: 小小梦
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/6237
+策略出处: https://www.fmz.com/strategy/6237
 策略名称: 高频收割机一号
 策略作者: Zero
 策略描述:

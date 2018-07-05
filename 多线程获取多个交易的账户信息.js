@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/3297
+策略出处: https://www.fmz.com/strategy/3297
 策略名称: 多线程获取多个交易的账户信息
 策略作者: Zero
 策略描述:

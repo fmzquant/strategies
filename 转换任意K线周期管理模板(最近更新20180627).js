@@ -1,6 +1,6 @@
 /*
-策略出处: https://www.botvs.com/strategy/41163
-策略名称: 转换任意K线周期管理模板(最近更新20180118)
+策略出处: https://www.fmz.com/strategy/41163
+策略名称: 转换任意K线周期管理模板(最近更新20180627)
 策略作者: 中本姜(青铜机器人)
 策略描述:
 
@@ -55,6 +55,8 @@ UI_NewCycleForMS  1000*60*60*2  合成周期毫秒数
   period: 60
  */
 /*
+20180627
+    修改了天无法整合的bug
 20180118
     屏蔽掉一些log输出
 更新于20171114
@@ -253,8 +255,8 @@ function _RecordsManager(NewCycleForMS, Name) {
     
         // 判断时间戳, 找到 基础K线  相对于 目标K线的起始时间。
         var objTime = new Date();
-		var isFirstFind = true;
-		var FirstStamp = null;
+        var isFirstFind = true;
+        var FirstStamp = null;
         for (var i = 0; i < AssRecords.length; i++) {
             objTime.setTime(AssRecords[i].Time);
             var ret = GetDHM(objTime, BaseCycle, NewCycleForMS); 
@@ -299,7 +301,7 @@ function _RecordsManager(NewCycleForMS, Name) {
             var is_bad = false;
             var start_time = AssRecords[n].Time;
             var stop_time = AssRecords[n + (NewCycleForMS / BaseCycle) - 1].Time + BaseCycle;
-            if (start_time % NewCycleForMS != 0) {
+            if (ret[2] != DAY && start_time % NewCycleForMS != 0) {
                 //Log("过滤起始时间不正确的k线组合", EasyReadTime(start_time));
                 is_bad = true;
             }
@@ -316,10 +318,10 @@ function _RecordsManager(NewCycleForMS, Name) {
             BarObj.High = Calc_High(AssRecords, n, BaseCycle, NewCycleForMS); 
             BarObj.Low =  Calc_Low(AssRecords, n, BaseCycle, NewCycleForMS); 
             BarObj.Close = AssRecords[n + (NewCycleForMS / BaseCycle) - 1].Close;
-			BarObj.Volume = 0;
-			for (var j = n; j < n + (NewCycleForMS / BaseCycle); j++) {
-            	BarObj.Volume += AssRecords[j].Volume;
-			}
+            BarObj.Volume = 0;
+            for (var j = n; j < n + (NewCycleForMS / BaseCycle); j++) {
+                BarObj.Volume += AssRecords[j].Volume;
+            }
             AfterAssRecords.push(cloneObj(BarObj));
             n += (NewCycleForMS / BaseCycle)
         }
@@ -338,7 +340,7 @@ function _RecordsManager(NewCycleForMS, Name) {
         for(var index_n = n + 1 ;index_n < AssRecords.length; index_n++){
             max = Math.max(max, AssRecords[index_n].High);
             min = Math.min(min, AssRecords[index_n].Low);
-        	BarObj.Volume += AssRecords[index_n].Volume;
+            BarObj.Volume += AssRecords[index_n].Volume;
         }
         BarObj.High = max;
         BarObj.Low = min;
@@ -381,8 +383,8 @@ $.RecordsManager = function (NewCycleForMS, Name) {
     if (typeof NewCycleForMS === 'undefined') {
         NewCycleForMS = UI_NewCycleForMS;
     }
-	var RecordsManager = new _RecordsManager(NewCycleForMS, Name);
-	return RecordsManager;
+    var RecordsManager = new _RecordsManager(NewCycleForMS, Name);
+    return RecordsManager;
 }
     
 function main() {

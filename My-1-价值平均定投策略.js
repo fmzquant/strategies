@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/8602
+策略出处: https://www.fmz.com/strategy/8602
 策略名称: My-1-价值平均定投策略
 策略作者: Lizza
 策略描述:

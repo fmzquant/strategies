@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/42451
+策略出处: https://www.fmz.com/strategy/42451
 策略名称: Ma单均线趋势交易
 策略作者: ipqhjjybj
 策略描述:

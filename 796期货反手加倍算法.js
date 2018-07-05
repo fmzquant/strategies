@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/3648
+策略出处: https://www.fmz.com/strategy/3648
 策略名称: 796期货反手加倍算法
 策略作者: Zero
 策略描述:

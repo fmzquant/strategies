@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/41786
+策略出处: https://www.fmz.com/strategy/41786
 策略名称: buy-hold  买入持有
 策略作者: ipqhjjybj
 策略描述:

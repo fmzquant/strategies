@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/40357
+策略出处: https://www.fmz.com/strategy/40357
 策略名称: 使用 BotVS 构建一个机械化策略
 策略作者: 小小梦
 策略描述:

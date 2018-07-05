@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/55839
+策略出处: https://www.fmz.com/strategy/55839
 策略名称: 一目均衡
 策略作者: icesun963
 策略描述:

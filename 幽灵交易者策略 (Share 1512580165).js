@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/62303
+策略出处: https://www.fmz.com/strategy/62303
 策略名称: 幽灵交易者策略 (Share 1512580165)
 策略作者: ellajella-0378
 策略描述:

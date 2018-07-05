@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/10991
+策略出处: https://www.fmz.com/strategy/10991
 策略名称: 模板库使用例子
 策略作者: Zero
 策略描述:

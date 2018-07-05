@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/82929
+策略出处: https://www.fmz.com/strategy/82929
 策略名称: 内外盘期货品种实时差价图
 策略作者: Zero
 策略描述:

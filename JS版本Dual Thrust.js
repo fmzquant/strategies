@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/36100
+策略出处: https://www.fmz.com/strategy/36100
 策略名称: JS版本Dual Thrust
 策略作者: BotVs@太极
 策略描述:

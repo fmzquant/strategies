@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/13597
+策略出处: https://www.fmz.com/strategy/13597
 策略名称: 窜天猴 多空较量 爆破版
 策略作者: Zero
 策略描述:

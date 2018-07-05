@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/67128
+策略出处: https://www.fmz.com/strategy/67128
 策略名称: 价值平均定投
 策略作者: 小码哥
 策略描述:

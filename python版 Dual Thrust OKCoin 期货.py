@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21856
+策略出处: https://www.fmz.com/strategy/21856
 策略名称: python版 Dual Thrust OKCoin 期货
 策略作者: 小小梦
 策略描述:

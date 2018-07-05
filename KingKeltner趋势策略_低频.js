@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/42283
+策略出处: https://www.fmz.com/strategy/42283
 策略名称: KingKeltner趋势策略_低频
 策略作者: ipqhjjybj
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/27293
+策略出处: https://www.fmz.com/strategy/27293
 策略名称: 画线类库
 策略作者: Zero
 策略描述:

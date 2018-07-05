@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/99
+策略出处: https://www.fmz.com/strategy/99
 策略名称: 多平台强制滑动平仓(买一价)
 策略作者: Zero
 策略描述:

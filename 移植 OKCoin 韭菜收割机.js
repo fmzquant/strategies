@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/34388
+策略出处: https://www.fmz.com/strategy/34388
 策略名称: 移植 OKCoin 韭菜收割机
 策略作者: Zero
 策略描述:

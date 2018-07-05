@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/61867
+策略出处: https://www.fmz.com/strategy/61867
 策略名称: 回测保存K线到本地CSV
 策略作者: botvsing
 策略描述:

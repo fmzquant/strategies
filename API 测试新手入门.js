@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/4
+策略出处: https://www.fmz.com/strategy/4
 策略名称: API 测试新手入门
 策略作者: Zero
 策略描述:

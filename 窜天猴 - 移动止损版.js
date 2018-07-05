@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/13594
+策略出处: https://www.fmz.com/strategy/13594
 策略名称: 窜天猴 - 移动止损版
 策略作者: Zero
 策略描述:

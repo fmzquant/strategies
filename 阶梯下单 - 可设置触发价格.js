@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/639
+策略出处: https://www.fmz.com/strategy/639
 策略名称: 阶梯下单 - 可设置触发价格
 策略作者: Zero
 策略描述:

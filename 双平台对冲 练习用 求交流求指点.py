@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/53512
+策略出处: https://www.fmz.com/strategy/53512
 策略名称: 双平台对冲 练习用 求交流求指点
 策略作者: perseus
 策略描述:

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/2169
+策略出处: https://www.fmz.com/strategy/2169
 策略名称: OKCoin期货条件触发委托带止损
 策略作者: Zero
 策略描述:

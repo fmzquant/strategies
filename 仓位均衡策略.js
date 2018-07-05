@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/54182
+策略出处: https://www.fmz.com/strategy/54182
 策略名称: 仓位均衡策略
 策略作者: 春哥
 策略描述:

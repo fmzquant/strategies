@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/14436
+策略出处: https://www.fmz.com/strategy/14436
 策略名称: 10行人品策略
 策略作者: 春哥
 策略描述:

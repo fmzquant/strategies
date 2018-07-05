@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/46031
+策略出处: https://www.fmz.com/strategy/46031
 策略名称: Python版 TableTemplet (测试版)
 策略作者: 小小梦
 策略描述:

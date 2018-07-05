@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/348
+策略出处: https://www.fmz.com/strategy/348
 策略名称: 抢盘口做市策略 - 高频逼近型
 策略作者: Zero
 策略描述:
@@ -17,6 +17,7 @@ Step          0.1    网格间隔(元)
 Lot           0.05   手数
 MaxNets       20     最大网格数
 DisableLog    false  关闭订单跟踪
+MinStock      0.01   最小交易币数
 */
 
 function adjustFloat(v) {
@@ -130,7 +131,7 @@ function main() {
     InitAccount = GetAccount();
     Log(InitAccount);
     LoopInterval = Math.max(LoopInterval, 1);
-    Lot = Math.max(exchange.GetMinStock(), Lot);
+    Lot = Math.max(MinStock, Lot);
     while (true) {
         onTick();
         Sleep(LoopInterval * 1000);

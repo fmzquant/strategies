@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21370
+策略出处: https://www.fmz.com/strategy/21370
 策略名称: Python 机器学习之 SVM 预测买卖
 策略作者: Zero
 策略描述:
@@ -71,21 +71,20 @@ def main():
         n += 1
         clf = svm.LinearSVC()
         clf.fit(inputs_X, output_Y)
-        predict = clf.predict(np.array([bar.Open, bar.Close]).reshape((1, -1)))
+        predict = clf.predict(np.array([bar.Open, bar.Close]).reshape((1, -1)))[0]
         pTime = bar.Time
-        
         Log("预测当前Bar结束:", bar.Time, ['涨', '跌', '横'][predict])
         if marketPosition == 0:
             if predict == 0:
-                exchange.Buy(initAccount.Balance/2)
+                exchange.Buy(-1, initAccount.Balance/2)
                 marketPosition = 1
             elif predict == 1:
-                exchange.Sell(initAccount.Stocks/2)
+                exchange.Sell(-1, initAccount.Stocks/2)
                 marketPosition = -1
         else:
             nowAccount = exchange.GetAccount()
             if marketPosition > 0 and predict != 0:
-                exchange.Sell(nowAccount.Stocks - initAccount.Stocks)
+                exchange.Sell(-1, nowAccount.Stocks - initAccount.Stocks)
                 nowAccount = exchange.GetAccount()
                 marketPosition = 0
             elif marketPosition < 0 and predict != 1:

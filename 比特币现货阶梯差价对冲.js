@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/30573
+策略出处: https://www.fmz.com/strategy/30573
 策略名称: 比特币现货阶梯差价对冲
 策略作者: 我要发
 策略描述:

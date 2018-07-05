@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/48536
+策略出处: https://www.fmz.com/strategy/48536
 策略名称: Hedge_BTC-ETH Demo
 策略作者: 小小梦
 策略描述:

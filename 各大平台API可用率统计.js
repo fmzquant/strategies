@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/4404
+策略出处: https://www.fmz.com/strategy/4404
 策略名称: 各大平台API可用率统计
 策略作者: Zero
 策略描述:

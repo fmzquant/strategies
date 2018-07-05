@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/10989
+策略出处: https://www.fmz.com/strategy/10989
 策略名称: 数字货币现货交易类库
 策略作者: Zero
 策略描述:

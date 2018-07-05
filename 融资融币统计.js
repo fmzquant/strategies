@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/8954
+策略出处: https://www.fmz.com/strategy/8954
 策略名称: 融资融币统计
 策略作者: 数·狂
 策略描述:

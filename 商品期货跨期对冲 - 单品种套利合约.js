@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/27122
+策略出处: https://www.fmz.com/strategy/27122
 策略名称: 商品期货跨期对冲 - 单品种套利合约
 策略作者: Zero
 策略描述:
@@ -7,22 +7,25 @@
 使用套利合约进行对冲优点是双向开仓速度快, 滑点少, 策略实盘测试通过.
 
 
-参数           默认值              描述
------------  ---------------  ---------
-Symbol       SPD MA705&MA709  套利合约
-HedgeSpread  15               开仓价差
-CoverSpread  5                平仓价差
-OpAmount     true             开仓手数
-CoverAll     false            启动时平掉所有仓位
-Reset        false            启动时重置所有信息
-AutoRestore  true             启动时自动恢复仓位
+参数            默认值              描述
+------------  ---------------  ---------
+Symbol        SPD MA705&MA709  套利合约
+HedgeSpread   15               正溢价开仓价差
+CoverSpread   5                正溢价平仓价差
+RHedgeSpread  2                负溢价开仓价差
+RCoverSpread  10               负溢价平仓价差
+OpAmount      true             开仓手数
+CoverAll      false            启动时平掉所有仓位
+Reset         false            启动时重置所有信息
+AutoRestore   true             启动时自动恢复仓位
 
 按钮        默认值         描述
 --------  ----------  ------
 CoverALL  __button__  平掉所有仓位
 */
 
-function Hedge(q, e, initAccount, symbol, hedgeSpread, coverSpread) {
+
+function Hedge(q, e, initAccount, symbol, hedgeSpread, coverSpread, rHedgeSpread, rCoverSpread) {
     var self = {}
     self.q = q
     self.initAccount = initAccount
@@ -32,6 +35,8 @@ function Hedge(q, e, initAccount, symbol, hedgeSpread, coverSpread) {
     self.isBusy = false
     self.hedgeSpread = hedgeSpread
     self.coverSpread = coverSpread
+    self.rHedgeSpread = rHedgeSpread
+    self.rCoverSpread = rCoverSpread
     self.insDetail = null;
     self.opAmount = OpAmount
     var arr = symbol.split('&');
@@ -81,17 +86,17 @@ function Hedge(q, e, initAccount, symbol, hedgeSpread, coverSpread) {
         var action = 0; // 1: A sell B buy 2: A buy B sell
 
         if (self.status == 0) {
-            if (ticker.Sell > self.hedgeSpread) {
+            if (ticker.Sell >= self.hedgeSpread) {
                 Log("开仓 ", self.pairA, "卖", self.pairB, "买", ticker.Buy, '#ff0000')
                 action = 2
-            } else if (-ticker.Buy > self.hedgeSpread) {
+            } else if (ticker.Buy <= self.rHedgeSpread) {
                 Log("开仓 ", self.pairA, "买", self.pairB, "卖", ticker.Buy, '#ff0000')
                 action = 1
             }
         } else if (self.status == 2 && ticker.Buy <= self.coverSpread) {
             Log("平仓", self.pairA, "买", self.pairB, "卖", ticker.Sell, '#ff0000')
             action = 2
-        } else if (self.status == 1 && ticker.Sell <= self.coverSpread) {
+        } else if (self.status == 1 && ticker.Sell >= self.rCoverSpread) {
             Log("平仓", self.pairA, "卖", self.pairB, "买",ticker.Buy, '#ff0000')
             action = 1
         }

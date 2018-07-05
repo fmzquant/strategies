@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/20383
+策略出处: https://www.fmz.com/strategy/20383
 策略名称: stochRSI策略 (指标框架)
 策略作者: 小小梦
 策略描述:

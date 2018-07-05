@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/7547
+策略出处: https://www.fmz.com/strategy/7547
 策略名称: 【Demo】速度测试 websocket vs rest
 策略作者: momox
 策略描述:

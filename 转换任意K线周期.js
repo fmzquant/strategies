@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/35986
+策略出处: https://www.fmz.com/strategy/35986
 策略名称: 转换任意K线周期
 策略作者: 小小梦
 策略描述:

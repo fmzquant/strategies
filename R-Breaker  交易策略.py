@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/23531
+策略出处: https://www.fmz.com/strategy/23531
 策略名称: R-Breaker  交易策略
 策略作者: 太极
 策略描述:

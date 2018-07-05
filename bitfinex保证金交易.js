@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/57333
+策略出处: https://www.fmz.com/strategy/57333
 策略名称: bitfinex保证金交易
 策略作者: 7meter
 策略描述:

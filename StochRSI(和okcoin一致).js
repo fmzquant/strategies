@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/56119
+策略出处: https://www.fmz.com/strategy/56119
 策略名称: StochRSI(和okcoin一致)
 策略作者: fangj
 策略描述:

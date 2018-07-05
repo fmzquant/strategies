@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/16845
+策略出处: https://www.fmz.com/strategy/16845
 策略名称: 定期定额投资BTC盈利验证
 策略作者: 春哥
 策略描述:

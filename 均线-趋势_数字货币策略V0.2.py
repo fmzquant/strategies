@@ -1,5 +1,5 @@
 '''
-策略出处: https://www.botvs.com/strategy/21369
+策略出处: https://www.fmz.com/strategy/21369
 策略名称: 均线-趋势_数字货币策略V0.2
 策略作者: 太极
 策略描述:

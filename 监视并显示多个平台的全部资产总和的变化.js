@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/443
+策略出处: https://www.fmz.com/strategy/443
 策略名称: 监视并显示多个平台的全部资产总和的变化
 策略作者: Zero
 策略描述:

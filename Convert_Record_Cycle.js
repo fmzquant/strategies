@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/37678
+策略出处: https://www.fmz.com/strategy/37678
 策略名称: Convert_Record_Cycle
 策略作者: jxc6698
 策略描述:

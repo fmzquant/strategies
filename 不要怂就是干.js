@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/18943
+策略出处: https://www.fmz.com/strategy/18943
 策略名称: 不要怂就是干
 策略作者: qq110888000
 策略描述:

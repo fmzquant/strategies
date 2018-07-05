@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/83189
+策略出处: https://www.fmz.com/strategy/83189
 策略名称: okex-BTC合约账户公开
 策略作者: leviyuan
 策略描述:

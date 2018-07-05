@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/8379
+策略出处: https://www.fmz.com/strategy/8379
 策略名称: 【Demo】如何利用“策略交互“动态调整策略参数
 策略作者: momox
 策略描述:

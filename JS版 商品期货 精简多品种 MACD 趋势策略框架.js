@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/44593
+策略出处: https://www.fmz.com/strategy/44593
 策略名称: JS版 商品期货 精简多品种 MACD 趋势策略框架
 策略作者: 小小梦
 策略描述:

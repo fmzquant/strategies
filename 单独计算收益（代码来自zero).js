@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/1084
+策略出处: https://www.fmz.com/strategy/1084
 策略名称: 单独计算收益（代码来自zero)
 策略作者: botvsing
 策略描述:

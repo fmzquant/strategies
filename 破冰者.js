@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/9929
+策略出处: https://www.fmz.com/strategy/9929
 策略名称: 破冰者
 策略作者: Zero
 策略描述:
@@ -28,6 +28,7 @@ RestoreAmount  false  持仓数量
 RestoreProfit  false  上次盈利
 SaveLocal      false  保存本地日志
 StopLoss       8      止损(元)
+MinStock       0.01   最小交易币数
 */
 
 var TradeType = null;
@@ -112,7 +113,7 @@ function GetAccount(e, waitFrozen) {
     var alreadyAlert = false;
     while (true) {
         account = EnsureCall(e, "GetAccount");
-        if (!waitFrozen || (account.FrozenStocks < e.GetMinStock() && account.FrozenBalance < 0.01)) {
+        if (!waitFrozen || (account.FrozenStocks < MinStock && account.FrozenBalance < 0.01)) {
             break;
         }
         if (!alreadyAlert) {
@@ -174,7 +175,7 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
                 dealAmount = _N(initAccount.Stocks - nowAccount.Stocks, 4);
                 doAmount = Math.min(maxAmount, tradeAmount - dealAmount, nowAccount.Stocks);
             }
-            if (doAmount < e.GetMinStock()) {
+            if (doAmount < MinStock) {
                 break;
             }
             prePrice = tradePrice;
@@ -199,7 +200,7 @@ function Trade(e, tradeType, tradeAmount, mode, slidePrice, maxAmount, maxSpace,
 }
 
 function loop(isFirst) {
-    var minStock = exchange.GetMinStock();
+    var minStock = MinStock;
     var initAccount = GetAccount(exchange, true);
     Log(initAccount);
     var holdPrice = 0;

@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/5541
+策略出处: https://www.fmz.com/strategy/5541
 策略名称: 股票证券查询买卖示例
 策略作者: Zero
 策略描述:

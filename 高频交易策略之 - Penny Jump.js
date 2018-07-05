@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/358
+策略出处: https://www.fmz.com/strategy/358
 策略名称: 高频交易策略之 - Penny Jump
 策略作者: Zero
 策略描述:

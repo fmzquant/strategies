@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/82325
+策略出处: https://www.fmz.com/strategy/82325
 策略名称: 【001】单平台均衡策略  【研究】
 策略作者: 风利
 策略描述:

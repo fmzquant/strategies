@@ -1,5 +1,5 @@
 /*
-策略出处: https://www.botvs.com/strategy/38083
+策略出处: https://www.fmz.com/strategy/38083
 策略名称: 商品期货结算单平仓盈亏历史查询
 策略作者: Zero
 策略描述:
