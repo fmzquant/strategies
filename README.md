@@ -1,7 +1,7 @@
 
-# 用 Javascript / Python 进行量化交易
+# 发明者(FMZ) - 筑就非凡的量化世界
 
-> 开源策略列表
+> 开源策略
 
 
  - [RUMI策略](https://www.fmz.com/strategy/129082)
