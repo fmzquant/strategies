@@ -16,7 +16,7 @@ littleDreamXX
 
 
 
-/upload/asset/739ea1e668541f362205d9b5acb43372.png
+![IMG](https://www.fmz.com/upload/asset/739ea1e668541f362205d9b5acb43372.png)
 
 - 主图：
   AMA1指标，公式：AMA1^^EMA(DMA(CLOSE,CQ1),2);

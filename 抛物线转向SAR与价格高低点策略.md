@@ -14,7 +14,7 @@ littleDreamXX
 - 策略支持：商品期货、数字货币现货，数字货币期货
 - 官方网站：www.quant.la
 
-/upload/asset/4d9459b9af47702f7c2c6666212927c7.png
+![IMG](https://www.fmz.com/upload/asset/4d9459b9af47702f7c2c6666212927c7.png)
 
 > 策略参数
 

@@ -23,7 +23,7 @@ littleDreamXX
   主图显示：DMA1，公式 DMA1^^MA(C,L1);
                     DMA2，公式 DMA2^^MA(C,L2);
 
-/upload/asset/6d7b1a3241d607bbc4f4f853687fcf54.png
+![IMG](https://www.fmz.com/upload/asset/6d7b1a3241d607bbc4f4f853687fcf54.png)
 
 > 策略参数
 

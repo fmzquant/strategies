@@ -14,7 +14,7 @@ littleDreamXX
 - 支持：商品期货
 - 官方网站：www.quant.la
 
-   /upload/asset/860ae7cefa35c714a7f3c028ad77e656.png 
+   ![IMG](https://www.fmz.com/upload/asset/860ae7cefa35c714a7f3c028ad77e656.png) 
 
 - 主图：
   均线，           公式：MAC^^MA(CLOSE,LENGTH);

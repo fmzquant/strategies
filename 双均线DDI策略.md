@@ -25,7 +25,7 @@ littleDreamXX
   VAR10:MA(VAR9,PARAM1);
   VAR8:VAR6-VAR7;
 
-/upload/asset/e83641b0567b242687792b105de8e211.png
+![IMG](https://www.fmz.com/upload/asset/e83641b0567b242687792b105de8e211.png)
 
 > 策略参数
 

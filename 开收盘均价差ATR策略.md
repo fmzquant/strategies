@@ -24,7 +24,7 @@ littleDreamXX
   显示：ATR，公式  ATR^^MA(TR,N);
   显示 ：C_O，公式  C_O:EMA(C,N)-EMA(O,N);
 
-/upload/asset/ab8d909c6464234b06ef1f116a4de200.png
+![IMG](https://www.fmz.com/upload/asset/ab8d909c6464234b06ef1f116a4de200.png)
 
 > 策略参数
 

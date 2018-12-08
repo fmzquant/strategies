@@ -14,8 +14,8 @@ littleDreamXX
 - 支持：商品期货
 - 官方网站：www.quant.la
 
-/upload/asset/1f5e3caa65a3871ae9c9d99f9c11bdf0.png  
-/upload/asset/ec4cbcbb036925739a04de90cadf1d8d.png 
+![IMG](https://www.fmz.com/upload/asset/1f5e3caa65a3871ae9c9d99f9c11bdf0.png)  
+![IMG](https://www.fmz.com/upload/asset/ec4cbcbb036925739a04de90cadf1d8d.png) 
 
 - 主图：
    N周期最高价，公式：HH^^HHV(H,N);

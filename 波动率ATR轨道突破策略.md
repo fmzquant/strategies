@@ -14,7 +14,7 @@ littleDreamXX
 - 支持：商品期货、数字货币现货、数字货币期货
 - 官方网站：www.quant.la
 
-/upload/asset/36b0e279ae314411a9d6b7e94a0623f0.png
+![IMG](https://www.fmz.com/upload/asset/36b0e279ae314411a9d6b7e94a0623f0.png)
 
 - 主图：
   中轨，公式：MIDLINE^^MA((H + L + C)/3,LENGTH1);
