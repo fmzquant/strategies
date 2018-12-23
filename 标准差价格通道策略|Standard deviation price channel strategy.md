@@ -1,7 +1,7 @@
 
 > 策略名称
 
-标准差价格通道策略
+标准差价格通道策略|Standard deviation price channel strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 数据周期：30分钟左右
 - 支持 数字货币现货、数字货币期货
 - 支持 商品期货，适合品种：热卷、焦炭、豆粕、郑醇、沪镍、郑油、聚丙烯、螺纹、橡胶、锰硅、PTA、豆油
@@ -28,14 +29,38 @@ littleDreamXX
   标准差，公式：STDS:STD(C,10);
   标准差，公式：STDL:STD(C,60);
 
+||
+
+- Data cycle: about 30 minutes
+- Support: Digital Currency Spot, Digital currency Futures
+- Support: Commodity futures
+
+- Digital Currency backtest:
+  
+  ![IMG](https://www.fmz.com/upload/asset/d5830a58e1b3aca111849d77173ac822.png)  
+
+  ![IMG](https://www.fmz.com/upload/asset/5bbb1e2f4030ce3116263aa6a65a4be9.png)  
+
+  ![IMG](https://www.fmz.com/upload/asset/e5a726a2bfe6570c06dd043c9ee5545c.png) 
+
+- Main chart:
+  upper line, formula: UPPERBAND^^AVGVALUE + SHIFTVALUE;
+  lower line, formula: LOWERBAND^^AVGVALUE - SHIFTVALUE;
+
+- Secondary chart:
+  standard deviation, formula: STDS: STD (C, 10);
+  standard deviation, formula: STDL: STD (C, 60);
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|STOPRANGE|true|止损幅度|
-|N|20|均线参数|
+|STOPRANGE|true|止损幅度|Stop loss range|
+|N|20|均线参数|average line index|
 
 
 > 源码 (麦语言)
@@ -52,8 +77,11 @@ args: [["ContractType","this_week",126961]]
 TPRICE:=(HIGH+LOW+OPEN+CLOSE)/4;
 AVGVALUE:=MA(TPRICE,N);
 //求最高价减去最低价，一个周期前的收盘价减去最高价的绝对值，一个周期前的收盘价减去最低价的绝对值，这三个值中的最大值
+// Find the maximum of these three values: highest price minus lowest price, the absolute value of (closing price a cycle ago minus the highest price）, the absolute value of （closing price a cycle ago minus the lowest price）
+
 TR:=MAX(MAX((HIGH-LOW),ABS(REF(CLOSE,1)-HIGH)),ABS(REF(CLOSE,1)-LOW));
-SHIFTVALUE:=MA(TR,N);//求N个周期内的TR的简单移动平均
+SHIFTVALUE:=MA(TR,N);                   // 求N个周期内的TR的简单移动平均
+                                        // Find the simple moving average of TR in N cycles
 UPPERBAND^^AVGVALUE + SHIFTVALUE;
 LOWERBAND^^AVGVALUE - SHIFTVALUE;
 STDS:STD(C,10);
@@ -65,6 +93,8 @@ BKVOL>0 AND BKHIGH-BKPRICE>=0.2*CLOSE AND C<LOWERBAND,SP;
 SKVOL>0 AND SKPRICE-SKLOW>=0.2*CLOSE AND C>UPPERBAND,BP;
 
 //止损
+//Stop loss
+
 C>=SKPRICE*(1+STOPRANGE*0.01),BP;
 C<=BKPRICE*(1-STOPRANGE*0.01),SP;
 
@@ -77,4 +107,4 @@ https://www.fmz.com/strategy/128121
 
 > 更新时间
 
-2018-12-05 10:53:14
+2018-12-15 15:41:45

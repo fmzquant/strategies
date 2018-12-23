@@ -1,7 +1,7 @@
 
 > 策略名称
 
-高低点与波动率ROC指标策略
+高低点与波动率ROC指标策略|Price high and low - ROC index strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 策略名称：高低点与波动率ROC指标策略
 - 数据周期：15M等
 - 支持：商品期货
@@ -24,15 +25,33 @@ littleDreamXX
 - 副图：
   ARC指标， 公式：ARC:SMA(RC,M,1);
 
+||
+
+- Strategy Name: Price high and low - ROC index strategy
+- Data cycle: 15M, etc.
+- Support: Commodity Futures
+
+  ![IMG](https://www.fmz.com/upload/asset/b2adb08374654bb533bed3f55e502592.png)  
+  ![IMG](https://www.fmz.com/upload/asset/b10e5232882a919868802de72ba6f613.png) 
+
+- Main chart:
+  The highest price of N cycle, formula: HH ^^ HHV (H, N);
+  The lowest price of N cycle, formula: LL ^^ LLV (L, N);
+
+- Secondary chart:
+  ARC index, formula: ARC: SMA (RC, M, 1);
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|N|200|高低点周期参数|
-|SLOSS|true|止损百分比|
-|M|50|ARC参数|
+|N|200|高低点周期参数|high and low cycle parameter|
+|SLOSS|true|止损百分比|stop loss percentage|
+|M|50|ARC参数|ARC index|
 
 
 > 源码 (麦语言)
@@ -73,4 +92,4 @@ https://www.fmz.com/strategy/128417
 
 > 更新时间
 
-2018-12-04 22:06:21
+2018-12-17 16:58:17

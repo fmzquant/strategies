@@ -1,7 +1,7 @@
 
 > 策略名称
 
-波动率ATR轨道突破策略
+波动率ATR轨道突破策略|Volatility ATR - Track Breakthrough Strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 公式名称：波动率轨道突破策略
 - 数据周期：15M，30M等
 - 支持：商品期货、数字货币现货、数字货币期货
@@ -25,15 +26,34 @@ littleDreamXX
 - 副图：
   波动率，公式：ATR:=MA(TR,LENGTH2);
 
+||
+
+- Strategy name: Volatility ATR Track Breakthrough Strategy
+- Data Cycle: 15M, 30M, etc.            
+- Support: Commodity Futures, Digital Currency Spot, Digital Currency Futures 
+
+   ![IMG](https://www.fmz.com/upload/asset/3ab48b24790ffa7df8578da42ee9890d.png)  
+   ![IMG](https://www.fmz.com/upload/asset/26254e88d3af8327dc70f9e4d0797b88.png) 
+
+- Main chart:
+  medium track, formula: MIDLINE ^^ MA ((H + L + C) / 3, LENGTH1);
+  up track, formula: UPBAND ^^ MIDLINE + NATR;
+  low track, formula: DOWNBAND ^ ^ MIDLINE - NATR;
+
+- Secondary chart:
+  Volatility, formula: ATR:= MA (TR, LENGTH2);
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|LENGTH2|100|ATR指标参数|
-|LENGTH1|300|均线指标参数|
-|N|2|上下轨系数|
+|LENGTH2|100|ATR指标参数|ATR index parameter|
+|LENGTH1|300|均线指标参数|MA index parameter|
+|N|2|上下轨系数|Upper and lower track coefficients|
 
 
 > 源码 (麦语言)
@@ -69,4 +89,4 @@ https://www.fmz.com/strategy/128252
 
 > 更新时间
 
-2018-12-05 17:17:26
+2018-12-17 16:18:06

@@ -1,7 +1,7 @@
 
 > 策略名称
 
-RUMI策略
+RUMI策略|RUMI Strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 策略名称：RUMI策略
 - 适用周期：多周期
 - 支持：商品期货、数字货币期货、数字货币现货
@@ -26,15 +27,31 @@ littleDreamXX
 - 副图：
   AOS指标，公式： AOS:MA(OS,N3);
 
+||
+
+- Strategy Name: RUMI Strategy
+- Applicable cycle: multi-cycle
+- Support: Commodity Futures, Digital Currency Futures, Digital Currency Spot
+
+  ![IMG](https://www.fmz.com/upload/asset/d0d4ae5dd9629a8e2b52c821c63f8873.png)  
+  ![IMG](https://www.fmz.com/upload/asset/2cd3d79c46dec610c116645b9a43ae80.png) 
+
+- Main chart:
+  none
+- Secondary chart:
+  AOS index, formula: AOS:MA(OS,N3);
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|N1|3|AOS指标参数1|
-|N2|100|AOS指标参数2|
-|N3|30|AOS指标参数3|
+|N1|3|AOS指标参数1|AOS index parameter1|
+|N2|100|AOS指标参数2|AOS index parameter2|
+|N3|30|AOS指标参数3|AOS index parameter3|
 
 
 > 源码 (麦语言)
@@ -63,4 +80,4 @@ https://www.fmz.com/strategy/129082
 
 > 更新时间
 
-2018-12-07 11:36:11
+2018-12-17 18:19:15

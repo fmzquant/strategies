@@ -1,7 +1,7 @@
 
 > 策略名称
 
-Dual Thrust (麦语言版)
+Dual Thrust (麦语言版)|Dual Thrust (MyLanguage version)
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 > 基本原理
 
 - 在当天收盘，计算两个值： 最高价－收盘价，和收盘价－最低价。然后取这两个值较大的那个，乘以k值，结果称为触发值。
@@ -31,15 +32,35 @@ littleDreamXX
 - 副图：
   无
 
+||
+
+- Fundamental:
+  At the close of the day, two values are calculated: the highest price - the closing price, and the closing price - the lowest price. Then take the larger one and multiply it by the value   of k. The result is called the trigger value.
+  At the opening of the next day, record the opening price, then buy immediately when the price exceeds (opening price + trigger value), or sell short when the price is lower than (opening price - trigger value).
+  This system is a reversal system with no separate stop loss. In other words, the reverse signal is also the closing signal.
+
+  ![IMG](https://www.fmz.com/upload/asset/d2d373289db613f356811d9314775b83.jpg)  
+  ![IMG](https://www.fmz.com/upload/asset/c6c5a6c53fa4f0c9c5971df9349e1dca.png)  
+  ![IMG](https://www.fmz.com/upload/asset/65fd01ff1e7b844006ba18ad0ea3dedf.png) 
+
+- Main chart:
+  Upper track: formula: UPTRACK^^O+KSRG;
+  Lower track: formula: DOWNTRACK^^O-KXRG;
+
+- Secondary chart:
+  none
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|N|4|计算周期|
-|KS|0.5|上轨系数|
-|KX|0.5|下轨系数|
+|N|4|计算周期|Period: calculate period|
+|KS|0.5|上轨系数|upper track coefficient|
+|KX|0.5|下轨系数|lower track coefficient|
 
 
 > 源码 (麦语言)
@@ -62,10 +83,10 @@ RG:=MAX(HH-LC,HC-LL);
 UPTRACK^^O+KS*RG;
 DOWNTRACK^^O-KX*RG;
 
-// 交易信号
+
 C>UPTRACK,BPK;
 C<DOWNTRACK,SPK;
-// 嵌入的JS 代码调整至 手册，有兴趣 可以研究。
+
 ```
 
 > 策略出处
@@ -74,4 +95,4 @@ https://www.fmz.com/strategy/128884
 
 > 更新时间
 
-2018-12-06 12:09:22
+2018-12-18 11:28:40

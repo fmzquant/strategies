@@ -1,7 +1,7 @@
 
 > 策略名称
 
-瀑布线策略
+瀑布线策略|PBX Strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 策略名称：瀑布线PUBU交易策略
 - 数据周期：15M
 - 支持：商品期货
@@ -21,15 +22,31 @@ littleDreamXX
   瀑布线2，公式：PUBU2^^(EMA(C,N2)+EMA(C,N2*2)+EMA(C,N2*4))/3;
   瀑布线3，公式：PUBU3^^(EMA(C,N3)+EMA(C,N3*2)+EMA(C,N3*4))/3;
 
+||
+
+- Strategy Name: PBX Strategy
+- Data cycle: 15M
+- Support: Commodity Futures
+
+  ![IMG](https://www.fmz.com/upload/asset/7a091a85a4f8af0a587ebd533b70145e.png)  
+  ![IMG](https://www.fmz.com/upload/asset/151864a4e277271e6e9dce13515a0b4a.png) 
+
+- Main chart:
+  PBX1，formula：PUBU1^^(EMA(C,N1)+EMA(C,N12)+EMA(C,N14))/3;
+  PBX2，formula：PUBU2^^(EMA(C,N2)+EMA(C,N22)+EMA(C,N24))/3;
+  PBX3，formula：PUBU3^^(EMA(C,N3)+EMA(C,N32)+EMA(C,N34))/3;
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|N1|20|瀑布线1参数|
-|N2|50|瀑布线2参数|
-|N3|70|瀑布线3参数|
+|N1|20|瀑布线1参数|PBX1 parameter|
+|N2|50|瀑布线2参数|PBX2 parameter|
+|N3|70|瀑布线3参数|PBX3 parameter|
 
 
 > 源码 (麦语言)
@@ -44,6 +61,7 @@ args: [["TradeAmount",10,126961],["ContractType","quarter",126961]]
 *)
 
 // 指标
+// index
 PUBU1^^(EMA(C,N1)+EMA(C,N1*2)+EMA(C,N1*4))/3;
 PUBU2^^(EMA(C,N2)+EMA(C,N2*2)+EMA(C,N2*4))/3;
 PUBU3^^(EMA(C,N3)+EMA(C,N3*2)+EMA(C,N3*4))/3;
@@ -64,4 +82,4 @@ https://www.fmz.com/strategy/128420
 
 > 更新时间
 
-2018-12-04 21:24:04
+2018-12-17 17:54:10

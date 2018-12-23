@@ -1,7 +1,7 @@
 
 > 策略名称
 
-动向指数（DMI）与高低点策略
+动向指数（DMI）与高低点策略|DMI and High-Low Strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 策略名称：动向指数（DMI）与高低点策略
 - 数据周期：5M
 - 支持：商品期货
@@ -23,18 +24,33 @@ littleDreamXX
 
   AMA2指标，公式：AMA2^^EMA(DMA(CLOSE,CQ2),2);
 
+||
+
+- Strategy Name: DMI and High-Low Strategy
+- Data Cycle: 5M
+- Support: Commodity Futures
+
+  ![IMG](https://www.fmz.com/upload/asset/e373cde011ba569f143e399a6f51528d.png)  
+  ![IMG](https://www.fmz.com/upload/asset/9c51e404853a232c50c6ef12bb809e7d.png) 
+
+- Main chart:
+  AMA1 index, formula: AMA1 ^ ^ EMA (DMA (CLOSE, CQ1), 2);
+  AMA2 index, formula: AMA2 ^ ^ EMA (DMA (CLOSE, CQ2), 2);
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|N|20|AMA1指标参数（1）|
-|N1|4|AMA1指标参数（2）|
-|N2|60|AMA1指标参数（3）|
-|M|40|AMA2指标参数（1）|
-|M1|8|AMA2指标参数（2）|
-|M2|120|AMA2指标参数（3）|
+|N|20|AMA1指标参数（1）|AMA1 index parameter(1)|
+|N1|4|AMA1指标参数（2）|AMA1 index parameter(2)|
+|N2|60|AMA1指标参数（3）|AMA1 index parameter(3)|
+|M|40|AMA2指标参数（1）|AMA2 index parameter(1)|
+|M1|8|AMA2指标参数（2）|AMA2 index parameter(2)|
+|M2|120|AMA2指标参数（3）|AMA2 index parameter(3)|
 
 
 > 源码 (麦语言)
@@ -76,4 +92,4 @@ https://www.fmz.com/strategy/128418
 
 > 更新时间
 
-2018-12-05 12:38:58
+2018-12-17 17:40:05

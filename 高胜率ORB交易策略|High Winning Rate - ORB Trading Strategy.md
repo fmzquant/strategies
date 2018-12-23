@@ -1,7 +1,7 @@
 
 > 策略名称
 
-高胜率ORB交易策略
+高胜率ORB交易策略|High Winning Rate - ORB Trading Strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 策略名称：高胜率ORB交易策略
 - 数据周期：日K
 - 支持：商品期货
@@ -27,13 +28,34 @@ littleDreamXX
 - 副图：
    无
 
+||
+
+- Policy Name: High Winning Rate - ORB Trading Strategy
+- Data Cycle: Daily
+- Support: Commodity Futures
+
+  ![IMG](https://www.fmz.com/upload/asset/5af37a668117bf82ffd3270e6792752f.png)  
+  ![IMG](https://www.fmz.com/upload/asset/bdafbb088fd859227800705a1c16edca.png) 
+
+- Main chart:
+  MA, formula: MAC ^^ MA (CLOSE, LENGTH);
+  MA of highest price, formula: MA_HH^^ MA (HHHV (HIGH, LENGTH), LENGTH;
+  MA of lowest price, formula: MA_LL^^ MA (LLV (LOW, LENGTH), LENGTH;
+  Upper track, formula: UPBAND ^^ O_TODAY + BAND;
+  Lower track, formula: DOWNBAND ^^ O_TODAY-BAND;
+
+- Secondary chart:
+  none
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|N_DAY|10|N日周期|
+|N_DAY|10|N日周期|N day cycle|
 
 
 > 源码 (麦语言)
@@ -86,4 +108,4 @@ https://www.fmz.com/strategy/129084
 
 > 更新时间
 
-2018-12-06 17:33:27
+2018-12-18 10:46:04

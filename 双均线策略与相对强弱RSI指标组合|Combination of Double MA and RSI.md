@@ -1,13 +1,15 @@
 
 > 策略名称
 
-双均线策略与相对强弱RSI指标组合
+双均线策略与相对强弱RSI指标组合|Combination of Double MA and RSI
 
 > 策略作者
 
 littleDreamXX
 
 > 策略描述
+
+[trans]
 
 - 策略名称：双均线策略与相对强弱RSI指标组合
 - 数据周期：15M，30M等
@@ -23,15 +25,35 @@ littleDreamXX
 - 副图：
   RSI，公式：RSIVALUE:SMA(MAX(CLOSE-REF(CLOSE,1),0),LENGTH,1)/SMA(ABS(CLOSE-REF(CLOSE,1)),LENGTH,1)*100;
 
+||
+
+- Strategy Name: Combination of Double MA and RSI
+- Data Cycle: 15M, 30M, etc.
+- Support: Commodity Futures
+
+  ![IMG](https://www.fmz.com/upload/asset/3115dab65deb2ed7d795cdabb32d88be.png)  
+  ![IMG](https://www.fmz.com/upload/asset/1a352942b56f16cddab02f1692c909f2.png) 
+
+- Main chart:
+  MA 1, formula: MA1 ^^ EMA (C, N1);
+  MA 2, formula: MA2 ^^ EMA (C, N2);
+
+- Secondary chart:
+  RSI, formula:
+  RSIVALUE:SMA(MAX(CLOSE-REF(CLOSE,1),0),LENGTH,1)/SMA(ABS(CLOSE-REF(CLOSE,1)),LENGTH,1)*100;
+
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|SLOSS|true|止损百分比|
-|N1|50|均线1参数|
-|N2|300|均线2参数|
+|SLOSS|true|止损百分比|Stop Loss Percentage|
+|N1|50|均线1参数|MA1 parameter|
+|N2|300|均线2参数|MA2 parameter|
 
 
 > 源码 (麦语言)
@@ -73,4 +95,4 @@ https://www.fmz.com/strategy/128250
 
 > 更新时间
 
-2018-12-05 18:20:59
+2018-12-15 15:44:22

@@ -49,18 +49,6 @@ period: 1h
 exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 *)
 
-// MACD计算参数       已经添加到，策略参数
-// FASTLENGTH:=12;
-// SLOWLENGTH:=26; 
-// MACDLENGTH:=9;
-
-// 均线长度           已经添加到，策略参数
-// L1:=50;
-// L2:=120;
-
-// 止损5%	           已经添加到，策略参数
-// STOPLOSS:=5; 
-
 //MACD
 MACDVALUE:=EMA(CLOSE,FASTLENGTH)-EMA(CLOSE,SLOWLENGTH);
 AVGMACD:=EMA(MACDVALUE,MACDLENGTH);
@@ -96,4 +84,4 @@ https://www.fmz.com/strategy/128134
 
 > 更新时间
 
-2018-12-05 11:48:12
+2018-12-18 15:30:12

@@ -1,7 +1,7 @@
 
 > 策略名称
 
-三均线顺势价格突破策略
+三均线顺势价格突破策略|Three-MA Price Breakthrough Strategy
 
 > 策略作者
 
@@ -9,6 +9,7 @@ littleDreamXX
 
 > 策略描述
 
+[trans]
 - 公式名称：三均线顺势价格突破策略
 - 数据周期：多周期
 - 数据合约：指数合约
@@ -18,16 +19,27 @@ littleDreamXX
 
 ![IMG](https://www.fmz.com/upload/asset/4327c3e54a8618bb6f5b0ac3ea54dfc2.png)
 
+||
+
+- Data cycle: multiple cycles
+- Data contract: index contract
+- Trading contract: main contract
+- Suitable for: commodity futures
+
+  ![IMG](https://www.fmz.com/upload/asset/ed995f267589e43cdc0492a87952dcad.png) 
+
+[/trans]
+
 > 策略参数
 
 
 
 |参数|默认值|描述|
 |----|----|----|
-|SLOSS|2|止损百分比|
-|N1|30|均线1参数|
-|N2|60|均线2参数|
-|N3|90|均线3参数|
+|SLOSS|2|止损百分比|stop loss percentage|
+|N1|30|均线1参数|MA1 parameter|
+|N2|60|均线2参数|MA2 parameter|
+|N3|90|均线3参数|MA3 parameter|
 
 
 > 源码 (麦语言)
@@ -54,14 +66,15 @@ SELLP:=BKVOL>0 AND CROSS(MA2,C) AND MA1>C AND C>=BKPRICE*(1+2*SLOSS*0.01);
 BUYK,BK(LOTS);
 SELLK,SK(LOTS);
 
-//止盈
+// 止盈
+// take profit
 BUYP,BP(SKVOL);
 SELLP,SP(BKVOL);
 
-//止损
+// 止损
+// stop loss
 C>=SKPRICE*(1+SLOSS*0.01),BP(SKVOL);
 C<=BKPRICE*(1-SLOSS*0.01),SP(BKVOL);
-//TRADE_OTHER('AUTO');
 ```
 
 > 策略出处
@@ -70,4 +83,4 @@ https://www.fmz.com/strategy/128130
 
 > 更新时间
 
-2018-12-04 22:11:09
+2018-12-17 12:23:47
