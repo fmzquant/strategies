@@ -1,7 +1,7 @@
 
 > 策略名称
 
-海龟
+RSI统计套利策略-熊市盈利利器
 
 > 策略作者
 
@@ -9,19 +9,30 @@ alinwo
 
 > 策略描述
 
-策略介绍
+策略介绍:
 
-海龟交易策略是趋势策略中非常经典的交易策略，能在交易风险，仓位，资金利用率各方面做到很精细的控制。只要市场出现较大趋势（不管基于分钟K线，小时K线还是日K），海龟都会捕获到趋势并让利润最大化。此策略基于原版海龟交易法则实现，在2017年大牛市下取得了700%，远远高于大盘的收益。
+此策略是基于RSI指标的统计套利策略，根据实测在熊市中也能有很高的胜率。策略会对行情进行RSI数据分析，一旦捕获到预定义的K线形态即进行短期套利。
 
-策略特点
+RSI指标说明:
+
+RSI最早被用于期货交易中，后来人们发现用该指标来指导股票市场投资效果也十分不错，并对该指标的特点不断进行归纳和总结。现在，RSI已经成为被投资者应用最广泛的技术指标之一。投资的一般原理认为，投资者的买卖行为是各种因素综合结果的反映，行情的变化最终取决于供求关系，而RSI指标正是根据供求平衡的原理，通过测量某一个期间内股价上涨总幅度占股价变化总幅度平均值的百分比，来评估多空力量的强弱程度，进而提示具体操作的。
+
+策略特点:
 
 支持任意级别的趋势跟踪（分钟K，小时K，日K，周K等）
 支持任意交易对（ETH/BTC, BSV/BTC等）
+支持任意交易所
 详细的策略报表（包括策略状态，交易历史记录等）
-支持10几个自定义个性化参数
+支持接近10个自定义个性化参数
 
-参数说明
-http://www.pcclean.io/%E6%B5%B7%E9%BE%9F%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/
+使用说明:
+
+此策略基于Botvs实现，在使用之前需要有一个botvs账户
+上传策略并创建机器人
+配置参数并运行策略
+
+参数说明：
+http://www.pcclean.io/rsi%E7%BB%9F%E8%AE%A1%E5%A5%97%E5%88%A9%E7%AD%96%E7%95%A5/
 
 
 
@@ -29,20 +40,7 @@ http://www.pcclean.io/%E6%B5%B7%E9%BE%9F%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5/
 
 ``` javascript
 /*
-海龟策略
-用途：分散风险,平抑波动
-17:34 2018/9/12  retrySell后加sleep，解决清仓余额不足的问题
-17:58 2018/9/12  fixed Sell(-1, 0.00033): Less than minimum requirement
-8:58 2018/9/13 fixed 无限仓位问题
-11:12 2018/9/13 符合海龟交易法则
-20:23 2018/9/23 修改清仓时不更新account.stock的问题
-11:14 2018/10/18 retrysell函数支持 对最小数量的自动修正
-11:16 2018/10/19 支持utc+8时间和logprofit
-15:13 2018/10/19 支持对象化和管理多个交易对
-23:28 2018/10/20 支持统计手续费损失
-9:05 2018/10/22 retryBuy支持自动修正买入量
-22:10 2018/10/22 支持统计市价单盈亏
-11:40 2018/10/25 支持收益曲线连续
+RSI策略:仅用于学习用途,用于实盘后果自负
 */
 
 var ExchangProcessor={
@@ -167,23 +165,19 @@ var ExchangProcessor={
 				return;
 			}
 			var rsi_in=false;
-			if (rsi6[rsi6.length-1]-rsi6[rsi6.length-2]>5 && 
-				rsi6[rsi6.length-3]-rsi6[rsi6.length-2]>5 && 
-				rsi6[rsi6.length-2]<=55 && 
-				rsi6[rsi6.length-1]>rsi12[rsi12.length-1]){
+			if (rsi6[rsi6.length-1]-rsi6[rsi6.length-2]>1 && rsi6[rsi6.length-2]<=65){
 					//Log("rsi_in=true");
 					rsi_in=true;
 				}
 			var rsi_out=false;
-			if (rsi6[rsi6.length-2]-rsi6[rsi6.length-1]>5 && 
-				rsi6[rsi6.length-2]>=70){
+			if (rsi6[rsi6.length-1]>=60){
 				//Log("rsi_out=true");
 				rsi_out=true;
 			}
 			
 			//建仓
 			if (positions.length==0 && position_unit>minest_buy[currency]){
-				if (last>=highest)
+				if (rsi_in)
 				{
 					var buyID = processor.retryBuy(exc_obj,last,position_unit);
 					Sleep(order_wait_secs);
@@ -195,7 +189,7 @@ var ExchangProcessor={
 						var postion = {
 							amount:buyOrder.DealAmount, 
 							buy_price:buyOrder.AvgPrice, 
-							stoploss_price:buyOrder.AvgPrice-2*N};
+							stoploss_price:buyOrder.AvgPrice-N};
 						positions.push(postion);
 						
 						var details={
@@ -219,7 +213,7 @@ var ExchangProcessor={
 			//加仓
 			if (positions.length>0 && position_unit>minest_buy[currency]){
 				var last_buy_price=positions[positions.length-1].buy_price;
-				if (add_already<max_positions){//max = 4N
+				if (add_already<max_positions){
 					if (last-last_buy_price>=0.5*N){
 						var buyID = processor.retryBuy(exc_obj,last,position_unit);
 						Sleep(order_wait_secs);
@@ -231,7 +225,7 @@ var ExchangProcessor={
 							var postion = {
 								amount:buyOrder.DealAmount, 
 								buy_price:buyOrder.AvgPrice, 
-								stoploss_price:buyOrder.AvgPrice-2*N};
+								stoploss_price:buyOrder.AvgPrice-N};
 							positions.push(postion);
 							
 							var details={
@@ -299,7 +293,7 @@ var ExchangProcessor={
 			
 			//清仓
 			if (positions.length>0){
-				if (last<=Lowest){
+				if (rsi_out){
 					var positions_new=[];
 					for (var i=0; i < positions.length; i++){
 						account=_C(exc_obj.GetAccount);
@@ -381,14 +375,14 @@ function main(){
 	Log('之前收入累计：'+pre_profit);
 	var lastprofit=0;
 	while(true){
-		var allstatus='策略仅作为学习使用，实盘风险自担。#0000ff'+'\n';
+		var allstatus='定制策略请联系微信: alinwo (验证消息:botvs量化)#0000ff'+'\n';
 		var allprofit=0;
 		for (i=0; i<exchange_num; ++i){
 			processors[i].work();
 			allstatus+=processors[i].logstatus;
 			allprofit+=processors[i].logprofit;
 		}
-		allstatus+=('我的更多策略分享：http://www.pcclean.io/category/%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81/'+'\n');
+		allstatus+=('定制策略请联系微信: alinwo (验证消息:botvs量化)#0000ff'+'\n');
 		LogStatus(allstatus);
 		if (lastprofit!==allprofit){
 			LogProfit(pre_profit+allprofit);
@@ -401,8 +395,8 @@ function main(){
 
 > 策略出处
 
-https://www.fmz.com/strategy/128382
+https://www.fmz.com/strategy/131971
 
 > 更新时间
 
-2019-01-26 10:44:29
+2019-01-26 10:44:40

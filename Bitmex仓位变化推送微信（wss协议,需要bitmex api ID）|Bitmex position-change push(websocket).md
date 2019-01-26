@@ -19,7 +19,7 @@ botvsing
 function main() {
     var APIKEY = "your Access Key(Bitmex API ID)"
     var expires = parseInt(Date.now() / 1000) + 10
-    var signature = exchange.HMAC("sha256", "hex", "GET/realtime" + expires, "{{secretkey}}")
+    var signature = exchange.HMAC("sha256", "hex", "GET/realtime" + expires, "{{secretkey}}")//secretkey在执行时自动替换，不用填写
     var client = Dial("wss://www.bitmex.com/realtime", 60)
     var auth = JSON.stringify({args: [APIKEY, expires, signature], op: "authKeyExpires"})
     var pos = 0
@@ -41,4 +41,4 @@ https://www.fmz.com/strategy/128624
 
 > 更新时间
 
-2018-12-04 18:04:36
+2018-12-24 09:26:09
