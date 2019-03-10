@@ -15,7 +15,7 @@ littleDreamXX
 - 数据周期：多周期
 - OKEX期货
 - 合约 ： this_week 当周
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/b2ebaacbe7dbb1bb45bb59ceb80dd37f.png)
 

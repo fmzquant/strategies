@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：高低点与波动率ROC指标策略
 - 数据周期：15M等
 - 支持：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/1f5e3caa65a3871ae9c9d99f9c11bdf0.png)  
 ![IMG](https://www.fmz.com/upload/asset/ec4cbcbb036925739a04de90cadf1d8d.png) 

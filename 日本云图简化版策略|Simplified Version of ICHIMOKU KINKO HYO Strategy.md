@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：日本云图简化版策略
 - 支持：商品期货
 - 适用周期：多周期
-- 官方网站：WWW.QUANT.LA
+- 官方网站：www.quantinfo.com
 
   ![IMG](https://www.fmz.com/upload/asset/8f499518ffb1876478917e564e9b7a71.png) 
 

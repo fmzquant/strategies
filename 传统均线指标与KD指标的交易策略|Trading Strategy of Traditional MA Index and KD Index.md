@@ -14,7 +14,7 @@ littleDreamXX
 - 数据周期：15M，30M等
 - 支持：商品期货
 - 指标使用了EMA，KD线，其中KD线使用的是默认参数（指标参数固定3，3，9）
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/f842e44b0b8451cb562b8d5bd888e4c0.png) 
 

@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：混沌操作法策略
 - 支持：商品期货 ， 数字货币， 数字货币期货
 - 使用周期：日线
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
   ![IMG](https://www.fmz.com/upload/asset/a740c3a88fe1e0accb0c6a77fb11721c.png) 
 

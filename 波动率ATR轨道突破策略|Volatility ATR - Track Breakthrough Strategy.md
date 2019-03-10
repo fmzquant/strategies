@@ -13,7 +13,7 @@ littleDreamXX
 - 公式名称：波动率轨道突破策略
 - 数据周期：15M，30M等
 - 支持：商品期货、数字货币现货、数字货币期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/36b0e279ae314411a9d6b7e94a0623f0.png)
 

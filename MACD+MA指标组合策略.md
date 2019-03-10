@@ -14,7 +14,7 @@ littleDreamXX
 - 数据合约：指数合约
 - 交易合约：主力合约
 - 适合品种：商品期货
-- 官方网站：WWW.QUANT.LA
+- 官方网站：www.quantinfo.com
 
 - 副图
   副图显示：MACDDIFF，公式 MACDDIFF:MACDVALUE-AVGMACD;

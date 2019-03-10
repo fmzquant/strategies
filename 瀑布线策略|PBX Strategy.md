@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：瀑布线PUBU交易策略
 - 数据周期：15M
 - 支持：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/3ba2dba0c6b01773b2c296438ff77d25.png)
 

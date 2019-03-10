@@ -14,7 +14,7 @@ littleDreamXX
 - 策略名称：双均线策略与相对强弱RSI指标组合
 - 数据周期：15M，30M等
 - 支持：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/9955a36cca1be0e9d73f99fa8bdb4ac8.png) 
 

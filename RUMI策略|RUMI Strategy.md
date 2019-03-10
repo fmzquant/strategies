@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：RUMI策略
 - 适用周期：多周期
 - 支持：商品期货、数字货币期货、数字货币现货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 
   ![IMG](https://www.fmz.com/upload/asset/df2427683a93f2c896c853c89e3ae494.png)  

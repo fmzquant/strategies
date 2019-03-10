@@ -15,7 +15,7 @@ littleDreamXX
 - 数据合约：指数合约
 - 交易合约：主力合约
 - 适合品种：沪银/沪镍/热卷/铁矿石/焦煤/焦炭/鸡蛋/郑醇/PP/螺纹/橡胶/锰硅/郑煤等
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 - 主图指标线：
   VAR2^^MA(C,PARAM2);

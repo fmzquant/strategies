@@ -14,7 +14,7 @@ littleDreamXX
 - 策略名称: 多级止盈趋势策略
 - 数据周期：多周期
 - 支持：商品期货、数字货币
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
   ![IMG](https://www.fmz.com/upload/asset/b8d89a704605b72bc44a56575a570bf6.png)
 

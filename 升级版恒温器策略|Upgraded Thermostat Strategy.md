@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：升级版恒温器策略
 - 数据周期：1H
 - 支持：商品期货、数字货币期货、数字货币现货
-- 官方网站：WWW.QUANT.LA
+- 官方网站：www.quantinfo.com
 
    ![IMG](https://www.fmz.com/upload/asset/bcf664987bac1aaff72110b1e3679d10.png)
 

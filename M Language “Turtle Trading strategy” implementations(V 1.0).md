@@ -1,7 +1,7 @@
 
 > 策略名称
 
-麦语言海龟策略体验  (V 1.0)|M Language “Turtle Trading strategy” implementations(V 1.0)
+M Language “Turtle Trading strategy” implementations(V 1.0)
 
 > 策略作者
 
@@ -171,8 +171,8 @@ scope.TEST = function(obj) {
 
    The previous closing price is magnified 100 times: TEST(REF(C, 1)); // The mouse moves to the backtest K line and the variable value is displayed.
 
-![IMG](https://www.fmz.com/upload/asset/4df7045852493754488aeae0a7bf6234.png)  
-![IMG](https://www.fmz.com/upload/asset/610e6778a210ed806a8526a6091b06d6.png) 
+   ![IMG](https://www.fmz.com/upload/asset/16ad22541f647db833cf.png)  
+   ![IMG](https://www.fmz.com/upload/asset/168d0e609175942064c3.png) 
 
 [/trans]
 
@@ -182,10 +182,11 @@ scope.TEST = function(obj) {
 
 ``` pascal
 (*backtest
-start: 2018-06-01 00:00:00
-end: 2018-11-21 00:00:00
+start: 2018-11-01 00:00:00
+end: 2018-12-19 00:00:00
 period: 1d
-exchanges: [{"eid":"Futures_CTP","currency":"FUTURES","balance":500000,"minfee":0,"fee":[0,0]}]
+exchanges: [{"eid":"Futures_BitMEX","currency":"XBT_USD"}]
+args: [["ContractType","XBTUSD",126961]]
 *)
 
 // this demonstration mainly uses the Turtle Trading Rules to demonstrate the method of writing "position management, maximum position control and other fund management".
@@ -217,4 +218,4 @@ https://www.fmz.com/strategy/132298
 
 > 更新时间
 
-2018-12-29 09:53:01
+2019-01-28 11:16:10

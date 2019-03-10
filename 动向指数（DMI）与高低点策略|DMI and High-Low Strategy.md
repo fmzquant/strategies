@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：动向指数（DMI）与高低点策略
 - 数据周期：5M
 - 支持：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 
 

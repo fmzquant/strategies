@@ -15,7 +15,7 @@ littleDreamXX
 - 数据合约：指数合约
 - 交易合约：主力合约
 - 适合品种：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/4327c3e54a8618bb6f5b0ac3ea54dfc2.png)
 

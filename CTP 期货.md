@@ -5,7 +5,7 @@ CTP 期货
 
 > 策略作者
 
-tyz
+bbsang
 
 > 策略描述
 

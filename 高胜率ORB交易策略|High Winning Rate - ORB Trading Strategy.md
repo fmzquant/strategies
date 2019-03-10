@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：高胜率ORB交易策略
 - 数据周期：日K
 - 支持：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
    ![IMG](https://www.fmz.com/upload/asset/860ae7cefa35c714a7f3c028ad77e656.png) 
 

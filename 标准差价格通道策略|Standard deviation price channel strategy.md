@@ -13,7 +13,7 @@ littleDreamXX
 - 数据周期：30分钟左右
 - 支持 数字货币现货、数字货币期货
 - 支持 商品期货，适合品种：热卷、焦炭、豆粕、郑醇、沪镍、郑油、聚丙烯、螺纹、橡胶、锰硅、PTA、豆油
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 商品期货回测
 ![IMG](https://www.fmz.com/upload/asset/f58bc64ccfc4dca7cc1905b238f07dd7.png)

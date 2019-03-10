@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：双均线与形态策略
 - 数据周期：15M
 - 支持：商品期货，数字货币，数字货币期货
-- 官方网站：WWW.QUANT.LA
+- 官方网站：www.quantinfo.com
 
   ![IMG](https://www.fmz.com/upload/asset/cf5ac5fdf4f33ed438ed4498e1a7b142.png) 
 

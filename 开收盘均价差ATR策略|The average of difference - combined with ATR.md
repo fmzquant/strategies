@@ -16,7 +16,7 @@ littleDreamXX
 - 数据合约：指数合约
 - 交易合约：主力合约
 - 适合品种：沪铝、沥青、淀粉、热卷、铁矿石、焦炭、鸡蛋、郑醇、螺纹、橡胶、锰硅、郑煤等
-- 官方网站：[WWW.QUANT.LA](WWW.QUANT.LA)
+- 官方网站：[www.quantinfo.com](www.quantinfo.com)
 
 - 主图：
   无

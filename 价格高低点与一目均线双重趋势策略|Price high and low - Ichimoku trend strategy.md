@@ -13,7 +13,7 @@ littleDreamXX
 - 策略名称：价格高低点与一目均线双重趋势策略
 - 数据周期：15M等
 - 支持：商品期货
-- 官方网站：www.quant.la
+- 官方网站：www.quantinfo.com
 
 ![IMG](https://www.fmz.com/upload/asset/487949c7affb8521d9c041610551c3cd.png) 
 
