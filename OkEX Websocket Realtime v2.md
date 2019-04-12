@@ -1,7 +1,7 @@
 
 > 策略名称
 
-OkEX Websocket Realtime
+OkEX Websocket Realtime v2
 
 > 策略作者
 
@@ -137,4 +137,4 @@ https://www.fmz.com/strategy/91176
 
 > 更新时间
 
-2018-11-06 00:13:58
+2019-04-08 23:47:33
