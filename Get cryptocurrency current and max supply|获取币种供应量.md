@@ -7,7 +7,9 @@ Get cryptocurrency current and max supply|获取币种供应量
 
 botvsing
 
+> 策略描述
 
+使用coinmarketcap提供的API接口获取币种供应量和流通量，可用于计算总市值
 
 
 
@@ -48,4 +50,4 @@ https://www.fmz.com/strategy/122370
 
 > 更新时间
 
-2018-10-18 20:55:41
+2019-07-03 16:33:08

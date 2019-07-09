@@ -7,7 +7,12 @@
 
 botvsing
 
+> 策略描述
 
+Very simple, just for learn.
+Code is best annotation.
+
+冰山委托买入，将订单分成小笔M买入，避免冲击市场，是很好的简单入门比特币量化交易的学习策略
 
 > 策略参数
 
@@ -54,4 +59,4 @@ https://www.fmz.com/strategy/121522
 
 > 更新时间
 
-2018-10-16 10:57:07
+2019-07-03 16:40:18

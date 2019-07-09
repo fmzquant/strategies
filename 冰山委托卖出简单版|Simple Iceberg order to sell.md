@@ -12,6 +12,8 @@ botvsing
 Very simple, just for learn.
 Code is best annotation.
 
+冰山委托卖出，将订单分成小笔卖出，避免冲击市场，是很好的简单入门比特币量化交易的学习策略
+
 > 策略参数
 
 
@@ -59,4 +61,4 @@ https://www.fmz.com/strategy/121524
 
 > 更新时间
 
-2018-10-16 10:57:32
+2019-07-03 16:39:19

@@ -9,7 +9,7 @@ Lizza
 
 > 策略描述
 
-实盘：https://www.botvs.com/m/robot/26018
+实盘：https://www.fmz.com/m/robot/26018
 这个策略适合长期看好比特币的脑残粉，使用价值平均策略来进行定投，可以有效的抵抗市场波动。（关于价值平均定投请度娘。）
 
 基本的思路是先想好每个月想要投入多少钱（策略变量：MoneyEveryMonth），然后决定多久交易一次，交易的间隔不建议小于5分钟（策略参数：InvestInternal）。

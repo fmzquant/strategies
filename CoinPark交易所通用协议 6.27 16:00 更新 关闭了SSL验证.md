@@ -11,7 +11,7 @@ botvsing
 
 ## CoinPark通用协议Python2版本
 用途：可以使BotVs支持coinpark.cc交易所
-代码公开地址：https://www.botvs.com/strategy/101399
+代码公开地址：https://www.fmz.com/strategy/101399
 运行地址 
 
     http://127.0.0.1:6667

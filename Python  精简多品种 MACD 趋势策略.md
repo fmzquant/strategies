@@ -13,7 +13,7 @@ Zero
 
 > python版CTP商品期货交易类库（支持2/3 测试版）
 
-https://www.botvs.com/strategy/24288
+https://www.fmz.com/strategy/24288
 
 > 策略参数
 

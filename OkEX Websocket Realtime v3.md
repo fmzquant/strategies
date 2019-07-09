@@ -1,7 +1,7 @@
 
 > 策略名称
 
-OkEX Websocket Realtime v2
+OkEX Websocket Realtime v3
 
 > 策略作者
 
@@ -10,6 +10,8 @@ FawkesPan
 > 策略描述
 
 # OkEX WebSocket API Connecter (compress supported)
+因为 `websocket-client` 新版的各种大脑降级设计 很多功能无法使用
+需要安装老版本websocket-client的包才能正常使用 `pip3 install websocket-client==0.46.0`
 
 
 
@@ -20,9 +22,9 @@ FawkesPan
 # -*- coding: utf-8 -*-
 # encoding: utf-8
 # 
-# Market Real-time Subscription
+# Market Real-time Subscription v3
 #
-# Copyright 2018 FawkesPan
+# Copyright 2019 FawkesPan
 #
 # Do What the Fuck You Want To Public License
 #
@@ -50,11 +52,10 @@ pong = time.time()
 
 class WSSubscription:
 
-    def __init__(self,symbol='btc',contract_type='this_week',on_message=None):
-        self.__symbol = symbol.lower()
-        self.__contract_type = contract_type
+    def __init__(self, instrument_id='BTC-USD-190517', market='futures', on_message=None):
+        self.__iid = instrument_id
+        self.__market = market
         self.__Depth = {}
-        self.__Position = {}
         
         if on_message is not None:
             self.__callbackEnabled = True
@@ -69,14 +70,21 @@ class WSSubscription:
     def GetDepth(self):
         return self.__Depth
 
-    def subscribe(self,ws):
+    def subscribe(self, ws):
+        
+        def operator(op, args):
+            message = {
+                'op': op,
+                'args': args
+            }
+            ws.send(json.dumps(message))
 
         def run(*args):
-            ws.send("{'event':'addChannel','channel':'ok_sub_futureusd_%s_depth_%s_5'}" % (self.__symbol,self.__contract_type))
-            ws.send("{'event':'addChannel','channel':'ok_sub_futureusd_%s_trade_%s'}" % (self.__symbol,self.__contract_type))
+            operator('subscribe', ['%s/depth5:%s' % (self.__market, self.__iid)])
+            operator('subscribe', ['%s/trade:%s' % (self.__market, self.__iid)])
 
             while True:
-                ws.send("{'event':'ping'}")
+                ws.send("ping")
                 time.sleep(30)
 
         threading.Thread(target=run).start()
@@ -84,7 +92,7 @@ class WSSubscription:
     def sub(self):
 
         websocket.enableTrace(False)
-        URL = "wss://real.okex.com:10441/websocket?compress=true"
+        URL = "wss://real.okex.com:10442/ws/v3"
         ws = websocket.WebSocketApp(URL,
                                     on_message=self.incoming,
                                     on_error=self.error_handling,
@@ -108,8 +116,7 @@ class WSSubscription:
             pong = time.time()
         if 'asks' in message and 'bids' in message:
             d = json.loads(message)
-            self.__Depth = d[0]['data']
-            self.__Depth['asks'].reverse()
+            self.__Depth = d['data'][0]
             
         if self.__callbackEnabled:
             self.__callback(message)
@@ -125,7 +132,7 @@ ext.OkEXWS = WSSubscription
 
 # 模块测试
 def main():
-    OkEX = ext.OkEXWS(symbol='btc',contract_type='this_week')
+    OkEX = ext.OkEXWS('BTC-USD-190517', 'futures')
     while (True):
         Log(OkEX.GetDepth())
         time.sleep(1)
@@ -133,8 +140,8 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/91176
+https://www.fmz.com/strategy/143457
 
 > 更新时间
 
-2019-04-08 23:47:33
+2019-05-18 00:17:12

@@ -37,9 +37,6 @@ https://dn-filebox.qbox.me/fb4d0c7d773ca83e9d0230927705d419dc0bbeaa.png
 > 源码 (javascript)
 
 ``` javascript
-if (exchange.GetName() != 'BotVS'){
-    throw 'only support BotVS';
-}
 function main() {
     Log('started');
     var initAccount = _C(exchange.GetAccount);
@@ -81,4 +78,4 @@ https://www.fmz.com/strategy/103070
 
 > 更新时间
 
-2018-10-16 10:59:06
+2019-04-13 13:48:29

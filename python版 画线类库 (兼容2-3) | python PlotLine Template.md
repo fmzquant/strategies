@@ -1,7 +1,7 @@
 
 > 策略名称
 
-python版 画线类库 (兼容2-3)
+python版 画线类库 (兼容2-3) | python PlotLine Template
 
 > 策略作者
 
@@ -255,4 +255,4 @@ https://www.fmz.com/strategy/39066
 
 > 更新时间
 
-2017-11-09 21:22:40
+2019-04-13 13:48:51

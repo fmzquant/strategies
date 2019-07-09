@@ -26,7 +26,7 @@ function main() {
         }
         var emaSlow = TA.EMA(r, 20)
         var emaFast = TA.EMA(r, 5)
-        var cross = _Cross(emaFast, emaSlow);                // 判断指标 相交状态，   _Cross 参看 ： https://www.botvs.com/bbs-topic/1140
+        var cross = _Cross(emaFast, emaSlow);                // 判断指标 相交状态，   _Cross 参看 ： https://www.fmz.com/bbs-topic/1140
         if (mp <= 0 && cross > 1) {
             Log(pair, "买, 金叉周期", cross, "mp:", mp);
             return 0.1 * (mp < 0 ? 2 : 1)                                //  返回的数值 就是 要开仓的 数量， 正数是 开多 ，负数是 开空，   0 是 全部平掉。

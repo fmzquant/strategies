@@ -16,6 +16,8 @@ Remember, the total ratio added up must lower than 1 and has a extra room to buy
 
 指数平衡策略。可以将资产按预设比例进行平衡，支持跨交易所平衡。注意同意个交易所要相邻添加。
 
+The Flash Crash Bot sets pre-orders above and below a specified base price. Buy orders are placed at predefined price points that fall below the set base price. Conversely, sell orders are placed above this base price. This bot is most effective in a volatile market.
+
 > 策略参数
 
 
@@ -107,4 +109,4 @@ https://www.fmz.com/strategy/116012
 
 > 更新时间
 
-2018-10-17 12:09:51
+2019-07-03 16:43:18

@@ -7,7 +7,15 @@
 
 botvsing
 
+> 策略描述
 
+一个简单的固定价格止损机器人，可以帮助你止损。也是个很好的入门数字货币量化交易的策略。
+
+###　参数：
+
+StopPrice：Fixed price to stop loss	
+ 
+Intervel：	Intervel(second) of checking coin price
 
 > 策略参数
 
@@ -79,4 +87,4 @@ https://www.fmz.com/strategy/121081
 
 > 更新时间
 
-2018-10-16 10:55:52
+2019-07-03 16:41:50

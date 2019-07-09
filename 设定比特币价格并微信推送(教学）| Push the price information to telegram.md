@@ -1,13 +1,18 @@
 
 > 策略名称
 
-设定价格微信推送(教学）| Push the price information to telegram
+设定比特币价格并微信推送(教学）| Push the price information to telegram
 
 > 策略作者
 
 botvsing
 
+> 策略描述
 
+教学策略：
+当币价高于或低于设定值后，自动推送一条消息到微信。可设定最小推送间隔。
+
+When the price of the currency is higher or lower than the set value, a message is automatically pushed to WeChat or telegram. The minimum push interval can be set.
 
 > 策略参数
 
@@ -53,4 +58,4 @@ https://www.fmz.com/strategy/125482
 
 > 更新时间
 
-2019-04-09 17:06:16
+2019-07-03 16:18:51
