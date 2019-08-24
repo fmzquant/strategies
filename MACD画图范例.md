@@ -24,6 +24,9 @@ exchanges: [{"eid":"Futures_OKCoin","currency":"BTC_USD"}]
 var preTime = 0;
 var ChartObj = null;
 function main(){
+    // 测试
+    Log(aa.Last)   // 测试
+    
     LogReset(1);
     ChartObj = Chart(null);
     ChartObj.reset();
@@ -103,4 +106,4 @@ https://www.fmz.com/strategy/151972
 
 > 更新时间
 
-2019-06-12 20:16:58
+2019-08-23 10:36:33
