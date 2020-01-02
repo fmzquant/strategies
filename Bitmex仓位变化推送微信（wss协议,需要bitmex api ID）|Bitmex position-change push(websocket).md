@@ -5,7 +5,7 @@ Bitmex仓位变化推送微信（wss协议,需要bitmex api ID）|Bitmex positio
 
 > 策略作者
 
-botvsing
+小草
 
 > 策略描述
 

@@ -5,7 +5,7 @@ Binance buy and sell statistics|币安买卖统计
 
 > 策略作者
 
-botvsing
+小草
 
 > 策略描述
 

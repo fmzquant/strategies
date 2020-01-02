@@ -5,7 +5,7 @@ Push Binance deal order to WeChat|实时推送币安成交到微信(wss协议练
 
 > 策略作者
 
-botvsing
+小草
 
 > 策略描述
 

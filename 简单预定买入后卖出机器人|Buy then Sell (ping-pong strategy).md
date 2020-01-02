@@ -5,9 +5,11 @@
 
 > 策略作者
 
-botvsing
+小草
 
+> 策略描述
 
+如题，可设定买入价格，买入成功后自动挂卖出价格卖出，
 
 > 策略参数
 
@@ -37,6 +39,7 @@ function main() {
     }
     CancelPendingOrders()
     var account = _C(exchange.GetAccount)
+    var init_account = account
     Log('account: ', account.Balance);
     if(account.Balance > BUYPRICE*BUYAMOUNT){
         exchange.Buy(BUYPRICE, BUYAMOUNT);
@@ -45,8 +48,8 @@ function main() {
     }
     while(true){
         account = _C(exchange.GetAccount)
-        if(account.Stocks >= 0.1*BUYAMOUNT){
-            exchange.Sell(SELLPRICE, account.Stocks)
+        if(account.Stocks >= init_account.Stocks + 0.01){
+            exchange.Sell(SELLPRICE, account.Stocks - init_account.Stocks)
         }
         Sleep(Intervel*1000)
     }
@@ -60,4 +63,4 @@ https://www.fmz.com/strategy/121228
 
 > 更新时间
 
-2018-10-16 10:56:26
+2019-10-22 14:57:26

@@ -16,6 +16,14 @@ Python API 测试
 > 源码 (python)
 
 ``` python
+
+'''backtest
+start: 2019-09-14 00:00:00
+end: 2019-10-13 00:00:00
+period: 1h
+exchanges: [{"eid":"Bitfinex","currency":"BTC_USD"}]
+'''
+
 import sys
 import time
 import talib
@@ -39,6 +47,7 @@ def main():
         else:
             ret = g[item]()
         Log('%s => %s' % (item, ret))
+    Log(sys.version)
     testExchanges = [
             'GetName', 'GetUSDCNY', 'GetRate', ['SetRate', 1.0], 'GetAccount', 'GetCurrency', 'GetLabel', 'GetMinStock', 'GetMinPrice', 'GetFee',
             'GetRecords',
@@ -50,7 +59,7 @@ def main():
             ['CancelOrder', 1],
             ['Buy', -1, 1000.0],
             'GetAccount',
-            ['Sell', -1, 3],
+            ['Sell', -1, 1],
             'GetAccount',
             ['Sell', 9999.9, 0.2, "OK"],
             'GetOrders',
@@ -70,9 +79,9 @@ def main():
         Log('exchange.%s => %s' % (item, ret))
     
     # test market order
-    exchange.Buy(1000)
-    exchange.Buy(-1, 200, "buy 200 RMB")
-    exchange.Sell(exchange.GetAccount().Stocks)
+    exchange.Buy(-1, 1000)
+    exchange.Buy(-1, 200, "buy 200 ")
+    exchange.Sell(-1, exchange.GetAccount().Stocks)
     # test Go
     ret, ok = exchange.Go("GetTicker").wait()
     if ok:
@@ -135,4 +144,4 @@ https://www.fmz.com/strategy/21365
 
 > 更新时间
 
-2016-12-18 18:00:34
+2019-10-14 12:35:16

@@ -12,7 +12,7 @@ Zero
 移植自: https://github.com/richox/okcoin-leeks-reaper
 
 原作者说收手续费以后就失效了, 我只做了移植, 没有实盘测试, 有兴趣可以学习
-因为策略使用了GetTrades 这个函数在回测系统中是被模拟出来的, 所以回测没有什么意义, 只能直接上实盘测试 !
+发明者量化Tick级回测支持Depth与Trades的回放, 可以直接进行回测学习策略逻辑
 
 以下为原说明
 
@@ -59,6 +59,14 @@ BTC: 3QFn1qfZMhMQ4FhgENR7fha3T8ZVw1bEeU
 > 源码 (javascript)
 
 ``` javascript
+/*backtest
+start: 2019-09-05 00:00:00
+end: 2019-09-05 22:00:00
+period: 1h
+exchanges: [{"eid":"Binance","currency":"BTC_USDT","fee":[0,0]}]
+mode: 1
+*/
+
 function LeeksReaper() {
     var self = {}
     self.numTick = 0
@@ -251,4 +259,4 @@ https://www.fmz.com/strategy/34388
 
 > 更新时间
 
-2017-02-16 09:33:13
+2019-09-05 21:48:36

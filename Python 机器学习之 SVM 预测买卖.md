@@ -28,6 +28,13 @@ numpy pandas TA-Lib scipy statsmodels sklearn cvxopt hmmlearn pykalman arch matp
 > 源码 (python)
 
 ``` python
+'''backtest
+start: 2019-09-06 00:00:00
+end: 2019-10-05 00:00:00
+period: 1h
+exchanges: [{"eid":"Bitfinex","currency":"BTC_USD"}]
+'''
+
 from sklearn import svm
 import numpy as np
 
@@ -125,4 +132,4 @@ https://www.fmz.com/strategy/21370
 
 > 更新时间
 
-2018-06-05 16:46:36
+2019-10-06 17:54:30

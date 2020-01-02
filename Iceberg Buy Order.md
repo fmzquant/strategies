@@ -5,7 +5,7 @@ Iceberg Buy Order
 
 > 策略作者
 
-botvsing
+小草
 
 > 策略描述
 
