@@ -82,7 +82,7 @@ function oper(){
                       Log(account);
                       Log("公允价格",midLine,"高点",mhigh,"低点",mlow);
                       Log("刚下订单的信息,ID:", order.Id, "Price:", order.Price, "Amount:", order.Amount,
-        "DealAmount:", order.DealAmount, "type:", order.Type);
+        "account.Stocks:", account.Stocks, "type:", order.Type);
             }
             
             exchange.SetDirection("buy");    
@@ -146,4 +146,4 @@ https://www.fmz.com/strategy/170842
 
 > 更新时间
 
-2019-11-14 17:03:33
+2020-02-20 19:45:23

@@ -604,7 +604,8 @@ void main() {
     
     string qs = urlencode(json({{"op", "subscribe"}, {"args", {"futures/depth5:" + realSymbolA, "futures/depth5:" + realSymbolB}}}).dump());
     Log("try connect to websocket");
-    auto ws = Dial("wss://real.okex.com:10442/ws/v3|compress=gzip_raw&mode=recv&reconnect=true&payload="+qs);
+    // wss://real.OKEx.com:8443/ws/v3
+    auto ws = Dial("wss://real.okex.com:8443/ws/v3|compress=gzip_raw&mode=recv&reconnect=true&payload="+qs);
     Log("connect to websocket success");
     
     Depth depthA, depthB;
@@ -667,4 +668,4 @@ https://www.fmz.com/strategy/163447
 
 > 更新时间
 
-2019-09-10 17:58:50
+2020-02-28 17:12:06
