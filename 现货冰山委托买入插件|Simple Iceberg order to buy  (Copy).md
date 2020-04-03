@@ -1,7 +1,7 @@
 
 > 策略名称
 
-冰山委托买入简单版|Simple Iceberg order to buy
+现货冰山委托买入插件|Simple Iceberg order to buy  (Copy)
 
 > 策略作者
 
@@ -13,6 +13,7 @@ Very simple, just for learn.
 Code is best annotation.
 
 冰山委托买入，将订单分成小笔M买入，避免冲击市场，是很好的简单入门比特币量化交易的学习策略
+插件可以在交易终端一键启动，不收取费用，方便手动交易。详细介绍：https://www.fmz.com/digest-topic/5051
 
 > 策略参数
 
@@ -34,7 +35,7 @@ function main(){
         var account = _C(exchange.GetAccount)
         var dealAmount = account.Stocks - initAccount.Stocks
         var ticker = _C(exchange.GetTicker)
-        if(BUYAMOUNT - dealAmount > BUYSIZE){
+        if(BUYAMOUNT - dealAmount >= BUYSIZE){
             var id = exchange.Buy(ticker.Sell, BUYSIZE)
             Sleep(INTERVAL*1000)
             if(id){
@@ -45,8 +46,7 @@ function main(){
         }else{
             account = _C(exchange.GetAccount)
             var avgCost = (initAccount.Balance - account.Balance)/(account.Stocks - initAccount.Stocks)
-            Log('Iceberg order to buy is done, avg cost is ', avgCost) // including fee cost
-            return
+            return 'Iceberg order to buy is done, avg cost is '+avgCost
         }
         
     }
@@ -55,8 +55,8 @@ function main(){
 
 > 策略出处
 
-https://www.fmz.com/strategy/121522
+https://www.fmz.com/strategy/191771
 
 > 更新时间
 
-2020-03-20 16:24:13
+2020-03-24 10:50:51

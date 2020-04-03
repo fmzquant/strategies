@@ -160,6 +160,7 @@ class Hedge {
             }
             _addArr.push_back(_addArr[_addArr.size()-1] + _addArr[_addArr.size()-2]);
         }
+
         _cfgStr = R"EOF(
         [{
         "extension": { "layout": "single", "col": 6, "height": "500px"},
@@ -495,6 +496,7 @@ class Hedge {
     }
 
   private:
+    
     vector<double> _addArr;
     string _state_desc[4] = {"NA", "IDLE", "LONG", "SHORT"};
     int _countOpen = 0;
@@ -510,7 +512,8 @@ class Hedge {
     double _holdAmount = 0;
     bool _isCover = false;
     bool _needCheckOrder = true;
-    Chart _c = Chart("");
+    Chart _c = Chart("{}");
+    
 };
 
 inline unsigned char toHex(unsigned char x) { 
@@ -541,9 +544,6 @@ std::string urlencode(const std::string& str) {
 }
 
 uint64_t _Time(string &s) {
-    // 测试 
-    // Log(s);
-    
     tm t_init;
     t_init.tm_year  = 70;
     t_init.tm_mon   = 0;
@@ -567,7 +567,6 @@ uint64_t _Time(string &s) {
 }
 
 void main() {
-    // 测试 
     // exchange.IO("base", "https://www.okex.me");   // 测试
     if (IsSetProxy) {
         exchange.SetProxy(Proxy);
@@ -581,7 +580,7 @@ void main() {
     string symbolA = InstrumentA;
     string symbolB = InstrumentB;
     Hedge h;
-
+    
     if (IsVirtual()) {
         while (true) {
             exchange.SetContractType(symbolA);
@@ -601,7 +600,7 @@ void main() {
     }
     string realSymbolA = exchange.SetContractType(symbolA)["instrument"];
     string realSymbolB = exchange.SetContractType(symbolB)["instrument"];
-    
+
     string qs = urlencode(json({{"op", "subscribe"}, {"args", {"futures/depth5:" + realSymbolA, "futures/depth5:" + realSymbolB}}}).dump());
     Log("try connect to websocket");
     // wss://real.OKEx.com:8443/ws/v3
@@ -620,9 +619,8 @@ void main() {
     string timeB;
     while (true) {
         auto buf = ws.read();
-        
-        // 测试
-        // Log("buf:", buf);
+
+        Log("buf:", buf);   // 测试
         
         json obj;
         try {
@@ -648,7 +646,7 @@ void main() {
         if (depthA.Valid && depthB.Valid) {
             auto diffA = uint64_t(UnixNano()/1000000)-_Time(timeA);
             auto diffB = uint64_t(UnixNano()/1000000)-_Time(timeB);
-            // Log("diffA:", diffA, "diffB:", diffB);  // 测试
+
             if (diffA > MaxDelay || diffB > MaxDelay) {
                 continue;
             }
@@ -668,4 +666,4 @@ https://www.fmz.com/strategy/163447
 
 > 更新时间
 
-2020-02-28 17:12:06
+2020-03-30 12:16:44
