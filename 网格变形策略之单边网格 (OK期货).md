@@ -411,7 +411,7 @@ function fishing(orgAccount, fishCount) {
                     exchange.SetDirection(BuyFirst ? "closebuy" : "closesell");
                 }
                 var coverId = CoverFunc(coverPrice, BuyFirst ? amountS : amountB, BuyFirst ? '完成买单:' : '完成卖单:', openPrice);
-                if (coverId > 0) {
+                if (coverId) {
                     fishTable[idx] = STATE_WAIT_CLOSE;
                     uuidTable[idx] = coverId;
                 }
@@ -420,7 +420,7 @@ function fishing(orgAccount, fishCount) {
                     exchange.SetDirection(BuyFirst ? "buy" : "sell");
                 }
                 var openId = OpenFunc(openPrice, BuyFirst ? amountB : amountS);
-                if (openId > 0) {
+                if (openId) {
                     fishTable[idx] = STATE_WAIT_COVER;
                     uuidTable[idx] = openId;
                     if (state == STATE_WAIT_CLOSE) {
@@ -496,4 +496,4 @@ https://www.fmz.com/strategy/8474
 
 > 更新时间
 
-2018-06-05 15:09:40
+2020-04-06 18:47:43
