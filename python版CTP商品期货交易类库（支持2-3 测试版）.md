@@ -9,9 +9,12 @@ python版CTP商品期货交易类库（支持2-3 测试版）
 
 > 策略描述
 
-python版CTP商品期货交易类库
-测试版 如有BUG 欢迎提出，作者QQ ： 359706687  小小梦
-1、2017.4.25 更新：增加   if (insDetail.MaxLimitOrderVolume == 0)  条件判断，有些期货公司服务器 会返回0 值，特此处理。共修改3处  【1】self.pollTask    【2】function Cover  【3】function Open
+### python版CTP商品期货交易类库
+
+> 测试版 如有BUG 欢迎提出。
+
+- 1、2017.4.25 更新：
+  增加```if (insDetail.MaxLimitOrderVolume == 0)```条件判断，有些期货公司服务器会返回0值，特此处理。共修改3处【1】self.pollTask、【2】function Cover、【3】function Open
 
 > 策略参数
 
@@ -84,11 +87,11 @@ def init():
         SlideTick = int(SlideTick)
     
     CheckVersion()   # 检查python 版本
-
+    
     if IsVirtual():
         exchange.GetRawJSON = VGetRawJSON
         Log("回测系统中运行，已重写GetRawJSON。")
-
+    
     Log("商品期货交易类库加载成功")
 
 def GetPosition(e, contractType, direction, positions = None):
@@ -592,27 +595,38 @@ def IsTrading(symbol):
             if ((hour > p[0] or (hour == p[0] and minute >= p[1])) and (hour < p[2] or (hour == p[2] and minute < p[3]))):
                 return True
 
-    nperiod = [
+    ''' 参考JavaScript版本合约品种交易时间
+    var nperiod = [
         [
-            ['AU', 'AG'],
-            [21, 0, 2, 30]  # 此处修改为 2
+            ['sc', 'ag', 'au'],
+            [21, 0, 2, 30]
         ],
         [
-            ['CU', 'AL', 'ZN', 'PB', 'SN', 'NI'],
-            [21, 0, 1, 0]   # 此处修改为 1
-        ],
-        [
-            ['RU', 'RB', 'HC', 'BU'],
+            ['nr', 'bu', 'hc', 'rb', 'ru', 'sp', 'fu', 'ZC', 'CF', 'CY', 'FG', 'MA', 'OI', 'RM', 'SR',
+                'TA', 'SA', 'a', 'b', 'c', 'cs', 'i', 'j', 'jm', 'l', 'm', 'p', 'pp', 'v', 'y', 'eg', 'rr', 'eb', 'pg'
+            ],
             [21, 0, 23, 0]
         ],
         [
-            ['P', 'J', 'M', 'Y', 'A', 'B', 'JM', 'I'],
-            [21, 0, 23, 30]
+            ['al', 'cu', 'ni', 'pb', 'sn', 'zn', 'ss'],
+            [21, 0, 1, 0]
+        ]
+    ];
+    '''
+
+    nperiod = [
+        [
+            ['SC', 'AU', 'AG'],
+            [21, 0, 2, 30]  # 此处修改为 2
         ],
         [
-            ['SR', 'CF', 'RM', 'MA', 'TA', 'ZC', 'FG', 'OI'],
-            [21, 0, 23, 30]
+            ['CU', 'AL', 'ZN', 'PB', 'SN', 'NI', 'SS'],
+            [21, 0, 1, 0]   # 此处修改为 1
         ],
+        [
+            ['NR', 'BU', 'HC', 'RB', 'RU', 'SP', 'FU', 'ZC', 'CF', 'CY', 'FG', 'MA', 'OI', 'RM', 'SR', 'TA', 'SA', 'A', 'B', 'C', 'CS', 'I', 'J', 'JM', 'L', 'M', 'P', 'PP', 'V', 'Y', 'EG', 'RR', 'EB', 'PG'],
+            [21, 0, 23, 0]
+        ]
     ]
 
     for i in range(len(nperiod)):
@@ -650,7 +664,7 @@ ext.NewTaskQueue = CreateNewTaskQueue
 def VGetRawJSON():   # 模拟  GetRawJSON 函数 ,仅测试使用。 
     nowTime = time.time()
     DnowTime = _D(nowTime)
-    dict1 = {"AccountID": "073997", "Available": 1331.445464656656, "Balance": 1331.3344567, "BrokerID": "9999", "time": nowTime, "_D": DnowTime}
+    dict1 = {"AccountID": "073997", "Available": 1331.445464656656, "Balance": 1331.3344567, "BrokerID": "9999", "time": nowTime, "_D": DnowTime, "CurrMargin": 0}
     dict1Str = json.dumps(dict1)
     return dict1Str
 
@@ -745,4 +759,4 @@ https://www.fmz.com/strategy/24288
 
 > 更新时间
 
-2018-05-15 14:29:05
+2020-05-19 10:42:08

@@ -167,8 +167,8 @@ COLORS = {
 
 class BitMEX:
 
-    def __init__(self, exchange):
-        self.QUOTES = {}
+    def __init__(self, exchange, silent=False):
+        self.silent = silent
         exchange.GetCurrency()
         if isinstance(exchange.GetCurrency(), bytes):
             self.symbol = str(exchange.GetCurrency(), "utf-8").lower()
@@ -180,9 +180,14 @@ class BitMEX:
         self.bulks = []
         self.amends = []
         if 'BitMEX' in str(name):
-            Log(QUOTES[LANG]['GREET'] % (self.symbol.upper(),COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['GREET'] % (self.symbol.upper(),COLORS['LAPIS']))
         else:
             Log(QUOTES[LANG]['INITF'] % (name))
+            
+    def Log(self, *args):
+        if self.silent:
+            return 
+        Log(*args)
 
     def BulkAdd(self, side=None, price=None, amount=None, symbol=None, ordType='Limit', displayQty=None, clOrdID=None, execInst=None):
         if type is None or price is None or amount is None:
@@ -238,7 +243,7 @@ class BitMEX:
 
         self.bulks.append(order)
 
-        Log(QUOTES[LANG]['NEWORDER'] % (symbol.upper(),side.upper(),price,amount,cl))
+        self.Log(QUOTES[LANG]['NEWORDER'] % (symbol.upper(),side.upper(),price,amount,cl))
 
         return True
 
@@ -248,7 +253,7 @@ class BitMEX:
             ret = self.bulks
             self.bulks = []
             if notify:
-                Log(QUOTES[LANG]['CLEARALL'] % (COLORS['RED']))
+                self.Log(QUOTES[LANG]['CLEARALL'] % (COLORS['RED']))
         else:
             new = []
             for i in self.bulks:
@@ -257,7 +262,7 @@ class BitMEX:
                 else:
                     ret.append(i)
             self.bulks = new
-            Log(QUOTES[LANG]['CLEAR'] % (symbol.encode().upper(), COLORS['RED']))
+            self.Log(QUOTES[LANG]['CLEAR'] % (symbol.encode().upper(), COLORS['RED']))
 
         return ret
 
@@ -267,10 +272,13 @@ class BitMEX:
             orders = self.BulkClear(notify=False)
         else:
             orders = self.BulkClear(symbol=symbol, notify=False)
+            
+        if len(orders) == 0:
+            return True
 
         ret = self.IO("api", "POST", "/api/v1/order/bulk", 'orders=%s' % json.dumps(orders))
 
-        Log(QUOTES[LANG]['ORDCOUNT'] % (len(orders),COLORS['LAPIS']))
+        self.Log(QUOTES[LANG]['ORDCOUNT'] % (len(orders),COLORS['LAPIS']))
         return ret
 
     def BulkOrders(self):
@@ -310,13 +318,13 @@ class BitMEX:
             id = order['clOrdID']
 
         if price is None:
-            Log(QUOTES[LANG]['MODORDERA'] % (id, amount, COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['MODORDERA'] % (id, amount, COLORS['LAPIS']))
             return ret
         elif amount is None:
-            Log(QUOTES[LANG]['MODORDERP'] % (id, price, COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['MODORDERP'] % (id, price, COLORS['LAPIS']))
             return ret
         else:
-            Log(QUOTES[LANG]['MODORDER'] % (id, price, amount, COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['MODORDER'] % (id, price, amount, COLORS['LAPIS']))
             return ret
 
     def AmendAdd(self, symbol=None, orderID=None, clOrdID=None, price=None, amount=None):
@@ -351,13 +359,13 @@ class BitMEX:
             id = order['clOrdID']
 
         if price is None:
-            Log(QUOTES[LANG]['MODORDERA'] % (id, amount, COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['MODORDERA'] % (id, amount, COLORS['LAPIS']))
             return True
         elif amount is None:
-            Log(QUOTES[LANG]['MODORDERP'] % (id, price, COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['MODORDERP'] % (id, price, COLORS['LAPIS']))
             return True
         else:
-            Log(QUOTES[LANG]['MODORDER'] % (id, price, amount, COLORS['LAPIS']))
+            self.Log(QUOTES[LANG]['MODORDER'] % (id, price, amount, COLORS['LAPIS']))
             return True
 
     def AmendClear(self, symbol=None, notify=True):
@@ -366,7 +374,7 @@ class BitMEX:
             ret = self.amends
             self.amends = []
             if notify:
-                Log(QUOTES[LANG]['CLEARALL'] % (COLORS['RED']))
+                self.Log(QUOTES[LANG]['CLEARALL'] % (COLORS['RED']))
         else:
             new = []
             for i in self.amends:
@@ -375,7 +383,7 @@ class BitMEX:
                 else:
                     ret.append(i)
             self.self.amends = new
-            Log(QUOTES[LANG]['CLEAR'] % (symbol.encode().upper(), COLORS['RED']))
+            self.Log(QUOTES[LANG]['CLEAR'] % (symbol.encode().upper(), COLORS['RED']))
 
         return ret
 
@@ -383,8 +391,10 @@ class BitMEX:
         if symbol is None:
             symbol = self.symbol
         orders = self.AmendClear(symbol=symbol, notify=False)
+        if len(orders) == 0:
+            return True
         param = "orders=" + json.dumps(orders)
-        Log(QUOTES[LANG]['ORDCOUNT'] % (len(orders),COLORS['LAPIS']))
+        self.Log(QUOTES[LANG]['ORDCOUNT'] % (len(orders),COLORS['LAPIS']))
         return self.IO("api", "PUT", "/api/v1/order/bulk", param)
 
     def AmendOrders(self):
@@ -398,9 +408,10 @@ class BitMEX:
             param = param + 'filters=' + json.dumps(filters)
         return self.IO("api","DELETE","/api/v1/order/all", param)
 
-    def CancelAllAfter(self, timeout=0):
+    def CancelAllAfter(self, timeout=0, notify=True):
         param = 'timeout=' + str(timeout)
-        Log(QUOTES[LANG]['CA'] % (timeout,COLORS['LAPIS']))
+        if notify:
+            self.Log(QUOTES[LANG]['CA'] % (timeout,COLORS['LAPIS']))
         return self.IO("api","POST","/api/v1/order/cancelAllAfter", param)
 
     def GetInstrument(self, symbol='XBTUSD'):
@@ -440,4 +451,4 @@ https://www.fmz.com/strategy/114148
 
 > 更新时间
 
-2018-11-13 18:07:03
+2020-05-19 22:57:04

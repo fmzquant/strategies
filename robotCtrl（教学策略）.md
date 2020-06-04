@@ -9,7 +9,7 @@ robotCtrl（教学策略）
 
 > 策略描述
 
-相关文章：https://www.fmz.com/bbs-topic-new/5011
+相关文章：https://www.fmz.com/digest-topic/5011
 
 > 策略参数
 
@@ -143,4 +143,4 @@ https://www.fmz.com/strategy/184600
 
 > 更新时间
 
-2020-02-16 20:03:16
+2020-05-08 10:47:52

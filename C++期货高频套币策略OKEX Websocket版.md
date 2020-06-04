@@ -605,6 +605,7 @@ void main() {
     Log("try connect to websocket");
     // wss://real.OKEx.com:8443/ws/v3
     auto ws = Dial("wss://real.okex.com:8443/ws/v3|compress=gzip_raw&mode=recv&reconnect=true&payload="+qs);
+    // auto ws = Dial("wss://real.okex.me:8443/ws/v3|compress=gzip_raw&mode=recv&reconnect=true&payload="+qs);
     Log("connect to websocket success");
     
     Depth depthA, depthB;
@@ -620,7 +621,7 @@ void main() {
     while (true) {
         auto buf = ws.read();
 
-        Log("buf:", buf);   // 测试
+        // Log("buf:", buf);   // 测试
         
         json obj;
         try {
@@ -666,4 +667,4 @@ https://www.fmz.com/strategy/163447
 
 > 更新时间
 
-2020-03-30 12:16:44
+2020-05-27 10:29:05

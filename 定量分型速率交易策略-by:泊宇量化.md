@@ -23,7 +23,7 @@ homily
 ``` pascal
 (*backtest
 start: 2019-01-01 00:00:00
-end: 2020-03-24 00:00:00
+end: 2020-05-08 00:00:00
 period: 1h
 exchanges: [{"eid":"Futures_OKCoin","currency":"BTC_USD","fee":[0.05,0.05]}]
 args: [["TradeAmount",200,126961],["ContractType","quarter",126961]]
@@ -52,4 +52,4 @@ https://www.fmz.com/strategy/183416
 
 > 更新时间
 
-2020-03-25 20:22:01
+2020-05-09 20:08:48

@@ -57,7 +57,7 @@ function Hedge (isOpen, retSetA, retSetB) {
 
 function main () {
     var param = {"op": "subscribe", "args": ["futures/ticker:" + _Instrument_id_A, "futures/ticker:" + _Instrument_id_B]}
-    var client = Dial("wss://real.okex.com:10442/ws/v3|compress=gzip_raw&mode=recv&reconnect=true&payload=" + JSON.stringify(param))
+    var client = Dial("wss://real.okex.com:8443/ws/v3|compress=gzip_raw&mode=recv&reconnect=true&payload=" + JSON.stringify(param))
     client.write(JSON.stringify(param))
     var tickerA, tickerB 
     var arr = []
@@ -111,4 +111,4 @@ https://www.fmz.com/strategy/144378
 
 > 更新时间
 
-2019-04-18 17:56:09
+2020-04-27 16:58:34

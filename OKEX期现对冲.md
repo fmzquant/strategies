@@ -5,24 +5,30 @@ OKEX期现对冲
 
 > 策略作者
 
-alinwo
+larry_super
 
 > 策略描述
 
-策略逻辑
+期现对冲是利用期货和现货之间存在的差价进行套利。因为在交割日的时候，期货会按现货价格成交，当期货和现货一旦出现差价时，就可以通过做空期货做多现货（或做多期货卖出现货）来获得无风险的差价收益。
 
-此策略会自动检测OKEX上现货和期货的差价，当差价达到期望盈利阀值时，通过等量对冲来获取盈利。
+比如，BTC现价20000刀/个，期货25000刀/个。这个时候我买入1个现货BTC, 同时做空一个期货BTC。等到交割之时，我就能得到5000刀的无风险利润。
 
-策略特色
+期现对冲风险很低，目前按okex的行情大致能达到40%-50%的年化收益。极端大牛大熊行情时，收益会更高。
 
+策略逻辑: 此策略会自动检测OKEX上现货和期货的差价，当差价达到期望盈利阀值时，通过等量对冲来获取盈利。
+
+策略特色: 
 支持OKEX上的所有期货品种(BTC, EOS, BCH, ETH等等)
 支持自定义杠杆倍数和合约类型(当周，次周等)
 支持自定义盈利期望值(比如年化40%的利润)
 详尽的报表（包括详尽的策略状态，交易历史，利润跟踪等）
 全自动对冲，不需要人工操作
 
-详细说明见我的博客：
-http://www.pcclean.io/okex%E6%9C%9F%E7%8E%B0%E5%AF%B9%E5%86%B2js%E6%BA%90%E4%BB%A3%E7%A0%81%E5%88%86%E4%BA%AB%E5%9F%BA%E4%BA%8Efmz-botvs%E5%AE%9E%E7%8E%B0/
+需要面对的风险: 交易所跑路风险
+
+支持平台: Botvs/FMZ
+
+策略参数详细说明：https://www.pcclean.io/7w0e
 
 
 
@@ -43,8 +49,8 @@ http://www.pcclean.io/okex%E6%9C%9F%E7%8E%B0%E5%AF%B9%E5%86%B2js%E6%BA%90%E4%BB%
 	9:51 2018/1/9  			first release
 	14:57 2018/1/13 		正式开始运行
 	15:12 2018/11/15 		自动处理强平,提高盈利目标,报表支持显示期货仓位,取消显示交易历史,图标只显示stocks
-	23:12 2018/11/15		支持按钮清空所有收益日志
-	16:09 2018/11/16		支持按钮更新收益图表, 用USDT/USD汇率修正现货价格
+	23:12 2019/02/15		支持按钮清空所有收益日志
+	16:09 2019/06/16		支持按钮更新收益图表, 用USDT/USD汇率修正现货价格
 
 */
 
@@ -587,6 +593,7 @@ function main(){
 		allstatus+=('♜轮询次数: '+total_loop+'\n');
 		allstatus+=('♜更新时间: '+processors[0].get_ChinaTimeString()+'\n');
 		allstatus+=('♜策略仅作为学习交流之用!实盘风险自担！#0000ff'+'\n');
+        allstatus+=('♜微信：alinwo (验证消息: botvs)'+'\n');
 		allstatus+=('`'+JSON.stringify({'type':'button', 'cmd': 'clearprofitchart', 'name': '清空收益图表'})+'`'+'\n');
 		allstatus+=('`'+JSON.stringify({'type':'button', 'cmd': 'logprofit', 'name': '更新收益图表'})+'`'+'\n');
 		LogStatus(allstatus);
@@ -614,8 +621,8 @@ function main(){
 
 > 策略出处
 
-https://www.fmz.com/strategy/127939
+https://www.fmz.com/strategy/157269
 
 > 更新时间
 
-2019-01-26 10:44:21
+2019-07-16 14:06:39
