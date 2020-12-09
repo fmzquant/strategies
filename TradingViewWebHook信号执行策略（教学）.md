@@ -12,6 +12,9 @@ TradingViewWebHook信号执行策略（教学）
 相关文章：https://www.fmz.com/bbs-topic/5533
 B站视频链接：https://www.bilibili.com/video/BV1Wk4y1k7zz/
 
+- 2020.7.29 更新
+  增加SPK , BPK 两条指令，分别对应：卖出平多仓之后卖出开空仓，买入平空仓之后买入开多仓。
+
 > 策略参数
 
 
@@ -38,7 +41,7 @@ B站视频链接：https://www.bilibili.com/video/BV1Wk4y1k7zz/
 /*
 - 交互命令字符串格式
   action:amount
-  action: buy , sell , long , short , cover_long , cover_short
+  action: buy , sell , long , short , cover_long , cover_short, spk , bpk
 - 交易所类型
   eType变量取值: 0 spot , 1 futures
 
@@ -69,6 +72,8 @@ var LONG = "long"
 var SHORT = "short"
 var COVER_LONG = "cover_long"
 var COVER_SHORT = "cover_short"
+var SPK = "spk"
+var BPK = "bpk"
 
 
 function main() {
@@ -135,6 +140,18 @@ function main() {
                 } else if (action == COVER_SHORT) {        
                 	exchange.SetDirection("closesell")
                 	tradeInfo = IsMarketOrder ? exchange.Buy(-1, amount) : exchange.Buy(ticker.Sell, amount)
+                } else if (action == SPK) {   // 卖出平多仓，卖出开空仓
+                    exchange.SetDirection("closebuy")
+                    var tradeInfo1 = IsMarketOrder ? exchange.Sell(-1, amount) : exchange.Sell(ticker.Buy, amount)
+                    exchange.SetDirection("sell")
+                    var tradeInfo2 = IsMarketOrder ? exchange.Sell(-1, amount) : exchange.Sell(ticker.Buy, amount)
+                    tradeInfo = [tradeInfo1, tradeInfo2]
+                } else if (action == BPK) {   // 买入平空仓，买入开多仓
+                    exchange.SetDirection("closesell")
+                    var tradeInfo1 = IsMarketOrder ? exchange.Buy(-1, amount) : exchange.Buy(ticker.Sell, amount)
+                    exchange.SetDirection("buy")
+                    var tradeInfo2 = IsMarketOrder ? exchange.Buy(-1, amount) : exchange.Buy(ticker.Sell, amount)
+                    tradeInfo = [tradeInfo1, tradeInfo2]
                 } else {
                 	Log("期货交易所不支持！", "#FF0000")
                 }
@@ -167,4 +184,4 @@ https://www.fmz.com/strategy/203063
 
 > 更新时间
 
-2020-05-06 11:47:58
+2020-07-29 17:10:43

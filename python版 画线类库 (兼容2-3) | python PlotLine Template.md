@@ -102,6 +102,7 @@ def PlotHLine(value = None, label = None, color = None, style = None):
         cfg["yAxis"]["plotLines"].append(obj)
     if not chart :
         chart = Chart(cfg)
+        chart.update(cfg)    # 更新图表
     else :
         chart.update(cfg)
 
@@ -255,4 +256,4 @@ https://www.fmz.com/strategy/39066
 
 > 更新时间
 
-2019-04-13 13:48:51
+2020-06-29 10:14:22

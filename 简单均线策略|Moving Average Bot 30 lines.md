@@ -37,13 +37,26 @@ https://dn-filebox.qbox.me/fb4d0c7d773ca83e9d0230927705d419dc0bbeaa.png
 > 源码 (javascript)
 
 ``` javascript
+/*backtest
+start: 2020-10-11 00:00:00
+end: 2020-10-11 23:59:00
+period: 1d
+basePeriod: 1h
+exchanges: [{"eid":"Binance","currency":"BTC_USDT"}]
+*/
+
+start = false
 function main() {
     Log('started');
     var initAccount = _C(exchange.GetAccount);
     var ticker = exchange.GetTicker();
     var InitValue = (initAccount.Stocks + initAccount.FrozenStocks)*ticker.Last + initAccount.Balance + initAccount.FrozenBalance;
     while (true) {
-        var records = _C(exchange.GetRecords);
+        var records = _C(exchange.GetRecords, PERIOD_M15);
+        if(!start){
+            Log(records[0], records.length)
+            start = true
+        }
         ticker =_C(exchange.GetTicker);
         var FastRecords = TA.MA(records,FastPeriod);
         var SlowRecords = TA.MA(records,SlowPeriod);
@@ -67,7 +80,9 @@ function main() {
                 LogProfit((NowAccount.Stocks + NowAccount.FrozenStocks)*ticker.Last + NowAccount.Balance + NowAccount.FrozenBalance - InitValue);
             }
         }
-        Sleep(Interval*1000);
+        if(!IsVirtual()){
+            Sleep(Interval*1000)
+        }
     }
 }
 ```
@@ -78,4 +93,4 @@ https://www.fmz.com/strategy/103070
 
 > 更新时间
 
-2019-04-13 13:48:29
+2020-10-13 14:51:55

@@ -14,7 +14,10 @@ python版CTP商品期货交易类库（支持2-3 测试版）
 > 测试版 如有BUG 欢迎提出。
 
 - 1、2017.4.25 更新：
-  增加```if (insDetail.MaxLimitOrderVolume == 0)```条件判断，有些期货公司服务器会返回0值，特此处理。共修改3处【1】self.pollTask、【2】function Cover、【3】function Open
+  增加```if (insDetail.MaxLimitOrderVolume == 0)```条件判断，有些期货公司服务器会返回0值，特此处理。共修改3处
+  【1】self.pollTask
+  【2】function Cover
+  【3】function Open
 
 > 策略参数
 
@@ -469,7 +472,13 @@ class NewTaskQueue:
     def size(self):
         return len(self.tasks)
 
-
+    '''
+    self.GetPosition = function(e, contractType, direction, positions) {
+        return GetPosition(e, contractType, direction, positions);
+    };
+    '''
+    def GetPosition(self, e, contractType, direction=None, positions=None):
+        return GetPosition(e, contractType, direction, positions)
 
 
 
@@ -759,4 +768,4 @@ https://www.fmz.com/strategy/24288
 
 > 更新时间
 
-2020-05-19 10:42:08
+2020-07-06 18:27:40

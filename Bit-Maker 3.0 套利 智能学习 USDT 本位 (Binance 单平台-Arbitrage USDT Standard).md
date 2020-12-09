@@ -52,6 +52,7 @@ Email:  liuhongyu.louie@autobitmaker.com
 |参数|默认值|描述|
 |----|----|----|
 |baseOriginalBalance|1000|baseOriginalBalance|
+|showInfo|false|showInfo|
 
 
 > 源码 (javascript)
@@ -83,15 +84,11 @@ var chart = {
 };
 
 function initChart() {
-    for (var index in exchanges) {
-        if (index > 0) {
-            chart.series.push({
-                name: "Account_" + (Number(index)) + "_Detail",
-                id: "Account_" + (Number(index)) + "_Detail",
-                data: []
-            });
-        }
-    }
+    chart.series.push({
+        name: "Account_" + (Number(0)) + "_Detail",
+        id: "Account_" + (Number(0)) + "_Detail",
+        data: []
+    });
 }
 
 function getChartPosition(avaliableMargin) {
@@ -127,37 +124,41 @@ function getChartPosition(avaliableMargin) {
 
 function updateAccountDetailChart(ObjChart) {
     var nowTime = new Date().getTime();
-    for (var index in exchanges) {
-        if (index > 0) {
-            var account = exchanges[index].GetAccount();
-            if (account !== null && account.Info !== null && account.Info.totalMarginBalance > 0) {
-                ObjChart.add([index - 1, [nowTime, Number(account.Info.totalMarginBalance)]]);
-            }
+    var account = exchanges[0].GetAccount();
+    try {
+        if (account !== null && account.Info !== null && account.Info.totalMarginBalance > 0) {
+            ObjChart.add([0, [nowTime, Number(account.Info.totalMarginBalance)]]);
         }
+    } catch (err) {
+        Log('ERROR ' + account + ',' + err)
     }
 }
 
 function getBalance() {
     var currentBalance = 0;
-    for (var index in exchanges) {
-        var account = exchanges[index].GetAccount();
+    var account = exchanges[0].GetAccount();
+    try {
         if (account !== null && account.Info !== null && account.Info.totalWalletBalance > 0) {
             currentBalance += Number(account.Info.totalWalletBalance);
         }
-        Sleep(1000);
+    } catch (err) {
+        Log('ERROR ' + account + ',' + err)
     }
+    Sleep(666);
     return Number(currentBalance).toFixed(6);
 }
 
 function getMarginBalance() {
     var currentBalance = 0;
-    for (var index in exchanges) {
-        var account = exchanges[index].GetAccount();
+    var account = exchanges[0].GetAccount();
+    try {
         if (account !== null && account.Info !== null && account.Info.totalMarginBalance > 0) {
             currentBalance += Number(account.Info.totalMarginBalance);
         }
-        Sleep(1000);
+    } catch (err) {
+        Log('ERROR ' + account + ',' + err)
     }
+    Sleep(666);
     return Number(currentBalance).toFixed(6);
 }
 
@@ -166,7 +167,52 @@ function printProfitInfo(currentBalance) {
     var profitRate = Number((((currentBalance) - baseOriginalBalance) / baseOriginalBalance) * 100).toFixed(4);
     LogProfit(Number(profitRate), '&');
     Log('The current balance is ' + currentBalance + ', the profit is ' + profit + ', the profit rate is ' + profitRate + '%');
-    LogStatus('本策略是基于均值回归的币安合约套利策略\r\n主要币种是 BTC/USDT 和 ETH/USDT\r\nUSDT本位\r\n当前综合收益：' + (profit) + ' USDT\r\n当前综合收益率：' + profitRate + '%');
+}
+
+function printPositionInfo(exchangeInnerArray, totalProfitUSDT, totalProfitRate) {
+    var totalProfit = 0.0
+    var table = {
+        type: 'table',
+        title: 'POSITIONS',
+        cols: ['Symbol', 'Type', 'AvgPrice', 'Position', 'Profit'],
+        rows: []
+    }
+    if (showInfo) {
+        table.rows.push([{
+            body: '* 2020-09-07 之前一直人民币100万实盘运行，现策略更新，自动将合约闲置资金转入币安宝，即提高资金安全性，也可以双边获利，当合约所需保证金上涨或下降时，将自动调整两边余额。因当前FMZ无法监控币安宝余额，所以剥离10W人民币继续运行原策略以做展示。',
+            colspan: 5
+        }]);
+    }
+    table.rows.push([{
+        body: '本策略是 USDT 本位，基于均值回归的币安合约套利策略，并以低风险辅助网格并行（BitMEX支持BTC本位）',
+        colspan: 5
+    }]);
+    table.rows.push([{
+        body: '套利主要币种是 BTC/USDT 和 ETH/USDT,网格覆盖币安永续合约全部币种交易对',
+        colspan: 5
+    }]);
+    for (var index in exchangeInnerArray) {
+        var position = exchangeInnerArray[index].GetPosition()
+        for (var indexInner in position) {
+            var profit = Number(position[indexInner].Info.unRealizedProfit);
+            totalProfit = totalProfit + profit
+            table.rows.push([position[indexInner].Info.symbol, (position[indexInner].Type == 1 ? 'SHORT #da1b1bab' : 'LONG #1eda1bab'), position[indexInner].Price, position[indexInner].Amount, profit.toFixed(5)]);
+        }
+        Sleep(168);
+    }
+    table.rows.push([{
+        body: 'TOTAL PROFIT OF CURRENT POSITION',
+        colspan: 4
+    }, totalProfit.toFixed(6) + ' USDT']);
+    table.rows.push([{
+        body: 'TOTAL PROFIT',
+        colspan: 4
+    }, totalProfitUSDT + ' USDT']);
+    table.rows.push([{
+        body: 'TOTAL PROFIT RATE',
+        colspan: 4
+    }, totalProfitRate + ' %']);
+    LogStatus('`' + JSON.stringify(table) + '`');
 }
 
 function main() {
@@ -181,6 +227,9 @@ function main() {
                 try {
                     var avaliableMargin = ((getMarginBalance()) / (getBalance())) * 100;
                     ObjChart.update([chart, getChartPosition(avaliableMargin)]);
+                    var profit = Number((currentBalance) - baseOriginalBalance).toFixed(5);
+                    var profitRate = Number((((currentBalance) - baseOriginalBalance) / baseOriginalBalance) * 100).toFixed(4);
+                    printPositionInfo(exchanges, profit, profitRate);
                     Sleep(1000 * 120);
                 } catch (errInner) {
                     throw errInner;
@@ -199,4 +248,4 @@ https://www.fmz.com/strategy/178712
 
 > 更新时间
 
-2020-05-26 01:40:32
+2020-09-24 16:17:18
