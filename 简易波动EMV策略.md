@@ -19,6 +19,14 @@ Hukybo
 > 源码 (python)
 
 ``` python
+'''backtest
+start: 2019-01-01 00:00:00
+end: 2020-01-01 00:00:00
+period: 1d
+basePeriod: 1d
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
+'''
+
 # 获取持仓数量
 def get_position():
     position = 0                              		# 赋值持仓数量为0
@@ -80,4 +88,4 @@ https://www.fmz.com/strategy/213636
 
 > 更新时间
 
-2020-11-18 11:18:44
+2021-01-08 16:57:52

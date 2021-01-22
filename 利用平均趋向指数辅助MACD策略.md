@@ -28,6 +28,14 @@ Hukybo
 > 源码 (python)
 
 ``` python
+'''backtest
+start: 2019-01-01 00:00:00
+end: 2021-01-01 00:00:00
+period: 1d
+basePeriod: 1d
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
+'''
+
 # 导入库
 import talib
 import numpy as np
@@ -45,7 +53,7 @@ def get_data(bars):
 
 # 程序主函数
 def onTick():
-    _C(exchange.SetContractType, "rb000")	# 订阅期货品种
+    _C(exchange.SetContractType, "FG000")	# 订阅期货品种
     bar = _C(exchange.GetRecords)  	# 获取K线数组
     if len(bar) < 100:		# 如果K线数组长度太小，就直接返回跳过
         return
@@ -58,25 +66,21 @@ def onTick():
     adx2 = adx_arr[-3]  # 倒数第三根K线的ADX值
     last_close = bar[-1]['Close']		# 获取最新价格（卖价）
     global mp  							# 全局变量，用于控制虚拟持仓
-    if mp == 1 and (dif < dea or adx1 < adx2):
-        Log('多平')
-        # exchange.SetDirection("closebuy")	# 设置交易方向和类型
-        # exchange.Sell(last_close - 1, 1) 	# 平多单
+    if mp == 1 and dif < dea:
+        exchange.SetDirection("closebuy")	# 设置交易方向和类型
+        exchange.Sell(last_close - 1, 1) 	# 平多单
         mp = 0  								# 设置虚拟持仓的值，即空仓
-    if mp == -1 and (dif > dea or adx1 < adx2):
-        Log('空平')
-        # exchange.SetDirection("closesell")  	# 设置交易方向和类型
-        # exchange.Buy(last_close, 1)  		# 平空单
+    if mp == -1 and dif > dea:
+        exchange.SetDirection("closesell")  	# 设置交易方向和类型
+        exchange.Buy(last_close, 1)  		# 平空单
         mp = 0  								# 设置虚拟持仓的值，即空仓
     if mp == 0 and dif > dea and adx1 > adx2:
-        Log('多开')
-        # exchange.SetDirection("buy")  		# 设置交易方向和类型
-        # exchange.Buy(last_close, 1)  		# 开多单
+        exchange.SetDirection("buy")  		# 设置交易方向和类型
+        exchange.Buy(last_close, 1)  		# 开多单
         mp = 1  								# 设置虚拟持仓的值，即有多单
     if mp == 0 and dif < dea and adx1 > adx2:
-        Log('空开')
-        # exchange.SetDirection("sell")  		# 设置交易方向和类型
-        # exchange.Sell(last_close - 1, 1)		# 开空单
+        exchange.SetDirection("sell")  		# 设置交易方向和类型
+        exchange.Sell(last_close - 1, 1)		# 开空单
         mp = -1  								# 设置虚拟持仓的值，即有空单
         
 def main():
@@ -91,4 +95,4 @@ https://www.fmz.com/strategy/174672
 
 > 更新时间
 
-2020-11-17 17:37:45
+2021-01-11 17:18:04

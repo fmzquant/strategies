@@ -64,11 +64,11 @@ affiliate_code: "9y40d8"
 |Url|https://api.fmex.com|链接交易所api地址，测试网https://api.fmextest.net|
 |maxPrice|20000|区间最高价|
 |minPrice|90|区间最低价|
-|sp_baseAmountLong|160|仓位控制：多仓过多，转向成交空头的限制仓位|
-|sp_baseAmountShort|20|仓位控制：空头仓过多，转向成交多头的限制仓位|
-|g_maxHoldingLong|230|多单最大持仓量|
-|g_maxHoldingShort|100|空单最大持仓量|
-|sp_perAmount|10|市商排序：单量。(深度排序单量=市商单量*3)|
+|sp_baseAmountLong|800|仓位控制：多仓过多，转向成交空头的限制仓位|
+|sp_baseAmountShort|100|仓位控制：空头仓过多，转向成交多头的限制仓位|
+|g_maxHoldingLong|1230|多单最大持仓量|
+|g_maxHoldingShort|300|空单最大持仓量|
+|sp_perAmount|20|市商排序：单量。(深度排序单量=市商单量*3)|
 |Interval|3|Intervel0轮询时间（默认参数即可）|
 |RetryInterval|5000|容错重试间隔(毫秒)（默认参数即可）|
 |Debug|true|显示重试记录（默认参数即可）|
@@ -398,4 +398,4 @@ https://www.fmz.com/strategy/218565
 
 > 更新时间
 
-2020-11-29 23:15:00
+2020-12-25 23:58:32

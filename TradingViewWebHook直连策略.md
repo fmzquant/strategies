@@ -28,6 +28,7 @@ https://www.zybuluo.com/JunQiu/note/1350528
 |SecretKey|$$$__enc__$$$|SecretKey密钥|
 |ContractType||合约ID|
 |Port|80|服务的监听端口号|
+|UseMarketOrderForCTP|true|商品期货使用市价单|
 
 
 > 源码 (python)
@@ -53,6 +54,12 @@ def url2Dict(url):
     return result
 
 class Executor(BaseHTTPRequestHandler):
+    def do_GET(self):
+        try:
+            dictParam = url2Dict(self.path)
+            Log("测试", dictParam)
+        except Exception as e:
+            Log("Provider do_GET error, e:", e)
     def do_POST(self):
         try:
             self.send_response(200)
@@ -75,6 +82,10 @@ class Executor(BaseHTTPRequestHandler):
                         isSpot = False 
                     else :
                         raise "未设置期货合约"
+                                
+                q = None
+                if exchange.GetName() == "Futures_CTP" and UseMarketOrderForCTP == False:
+                    q = ext.NewTaskQueue()
                 
                 if isSpot and dictParam["type"] == "buy":
                     exchange.Buy(-1, float(dictParam["amount"]))
@@ -84,21 +95,38 @@ class Executor(BaseHTTPRequestHandler):
                     Log(exchange.GetAccount())
                 elif not isSpot and dictParam["type"] == "long":
                     exchange.SetDirection("buy")
-                    exchange.Buy(-1, float(dictParam["amount"]))
+                    if not q:
+                        exchange.Buy(-1, float(dictParam["amount"]))
+                    else :
+                        q.pushTask(exchange, ContractType, "buy", float(dictParam["amount"]), lambda task, ret: Log(task["desc"], ret, "#FF0000"))
                     Log("持仓：", exchange.GetPosition())
                 elif not isSpot and dictParam["type"] == "short":
                     exchange.SetDirection("sell")
-                    exchange.Sell(-1, float(dictParam["amount"]))
+                    if not q:
+                        exchange.Sell(-1, float(dictParam["amount"]))
+                    else :
+                        q.pushTask(exchange, ContractType, "sell", float(dictParam["amount"]), lambda task, ret: Log(task["desc"], ret, "#FF0000"))
                     Log("持仓：", exchange.GetPosition())
                 elif not isSpot and dictParam["type"] == "cover_long":
                     exchange.SetDirection("closebuy")
-                    exchange.Sell(-1, float(dictParam["amount"]))
+                    if not q:
+                        exchange.Sell(-1, float(dictParam["amount"]))
+                    else :
+                        q.pushTask(exchange, ContractType, "closebuy", float(dictParam["amount"]), lambda task, ret: Log(task["desc"], ret, "#FF0000"))
                     Log("持仓：", exchange.GetPosition())
                 elif not isSpot and dictParam["type"] == "cover_short":
                     exchange.SetDirection("closesell")
-                    exchange.Buy(-1, float(dictParam["amount"]))
+                    if not q:
+                        exchange.Buy(-1, float(dictParam["amount"]))
+                    else :
+                        q.pushTask(exchange, ContractType, "closesell", float(dictParam["amount"]), lambda task, ret: Log(task["desc"], ret, "#FF0000"))
                     Log("持仓：", exchange.GetPosition())
-            
+                
+                if q is not None:
+                    while q.size() > 0:
+                        q.poll()
+                        Sleep(500)
+                
             # 写入数据应答
             self.wfile.write(json.dumps({"state": "ok"}).encode())
         except Exception as e:
@@ -123,7 +151,13 @@ def main():
         raise Exception("stop")    
     Log("账户资产信息：", _C(exchange.GetAccount))
     while True:
-        LogStatus(_D())
+        if exchange.GetName() == "Futures_CTP":
+            if exchange.IO("status"):
+                LogStatus(_D(), "CTP连接")
+            else:
+                LogStatus(_D(), "CTP未连接")
+        else:
+            LogStatus(_D())
         Sleep(2000)
 ```
 
@@ -133,4 +167,4 @@ https://www.fmz.com/strategy/221850
 
 > 更新时间
 
-2020-11-25 18:15:01
+2020-12-18 11:18:06

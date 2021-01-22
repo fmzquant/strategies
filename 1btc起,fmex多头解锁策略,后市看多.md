@@ -1,7 +1,7 @@
 
 > 策略名称
 
-1btc起,Fmex多头解锁策略,后市看多
+1btc起,fmex多头解锁策略,后市看多
 
 > 策略作者
 
@@ -62,7 +62,7 @@ affiliate_code: "9y40d8"
 |参数|默认值|描述|
 |----|----|----|
 |Url|https://api.fmex.com|交易所api地址，正式版改为：https://api.fmex.com|
-|maxPrice|20000|区间最高价|
+|maxPrice|30000|区间最高价|
 |minPrice|9000|区间最低价|
 |g_maxHoldingLong|21000|多单最大持仓量|
 |g_maxHoldingShort|5000|空单最大持仓量|
@@ -80,7 +80,7 @@ affiliate_code: "9y40d8"
 
 ``` javascript
 //保证金市场风险巨大，你可能随时面临100%损失。或有不明bug100%损失，概不负责。本策略使用的杠杆相对不大，可放心体验
-//实盘地址：https://api.fmex.com 测试网https://api.fmextest.net//注意：默认近端排序不启动(给手动平仓预留空间),多头版先持仓long1u-1000u,空头版先持仓short1u-1000u.用来激活近端排序
+//注意：默认近端排序不启动(给手动平仓预留空间),多头版先持仓long1u-1000u,空头版先持仓short1u-1000u.用来激活近端排序
 var eName = exchange.GetName();
             if (eName == "Futures_FMex") {
                 exchange.IO("extend", '{"POST/v3/contracts/orders$":{"affiliate_code":"9y40d8"}}');
@@ -197,8 +197,8 @@ function underElephant (ticker) {
         order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "LONG",post_only: true,price: buyPrice - 4.5,quantity: sp_perAmount * 3})
         Log("大象挂单买9 LONG" );
         // elephantOrder.push(order.data)
-        //order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "LONG",post_only: true,price: buyPrice - 2,quantity: sp_perAmount * 3})
-        //Log("大象挂单买3 LONG" );
+        order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "LONG",post_only: true,price: buyPrice - 2,quantity: sp_perAmount * 3})
+        Log("大象挂单买4 LONG" );
          order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "LONG",post_only: true,price: buyPrice - 3,quantity: sp_perAmount * 3})
         Log("大象挂单买6 LONG" );
         // elephantOrder.push(order.data)
@@ -230,8 +230,8 @@ function underElephant (ticker) {
        // order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "SHORT",post_only: true,price: sellPrice + 4,quantity: sp_perAmount * 3})
         //Log("大象挂单卖2 LONG" );
         // elephantOrder.push(order.data)
-        //order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "SHORT",post_only: true,price: sellPrice + 4,quantity: sp_perAmount * 3})
-       // Log("大象挂单卖8 LONG" );
+        order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "SHORT",post_only: true,price: sellPrice + 4,quantity: sp_perAmount * 3})
+        Log("大象挂单卖8 LONG" );
         order = createOrderPrice({symbol: symbol,type: "LIMIT",direction: "SHORT",post_only: true,price: sellPrice + 5,quantity: sp_perAmount * 3})
         Log("大象挂单卖10 LONG" );
         // elephantOrder.push(order.data)
@@ -398,4 +398,4 @@ https://www.fmz.com/strategy/178347
 
 > 更新时间
 
-2020-11-27 21:19:04
+2020-12-25 23:49:57

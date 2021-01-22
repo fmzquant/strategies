@@ -28,6 +28,14 @@ Hukybo
 > 源码 (python)
 
 ``` python
+'''backtest
+start: 2019-01-01 00:00:00
+end: 2021-01-01 00:00:00
+period: 1d
+basePeriod: 1d
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
+'''
+
 mp = 0  # 定义一个全局变量，用于控制虚拟持仓
     
 # 程序主函数
@@ -41,8 +49,6 @@ def onTick():
     dea = macd[1][-2]  					# 获取DEA的值
     last_close = bar[-1]['Close']		# 获取最新价格（卖价）
     global mp  							# 全局变量，用于控制虚拟持仓
-    Log(type(dif))
-    Log(type(dea))
     if mp == 1 and dif < dea:
         Log('多平')
         exchange.SetDirection("closebuy")	# 设置交易方向和类型
@@ -76,4 +82,4 @@ https://www.fmz.com/strategy/171604
 
 > 更新时间
 
-2020-10-21 16:34:59
+2021-01-11 15:11:49

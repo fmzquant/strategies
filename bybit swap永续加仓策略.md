@@ -1,7 +1,7 @@
 
 > 策略名称
 
-bybit swap永续加仓策略。-完全支持，fm
+bybit swap永续加仓策略
 
 > 策略作者
 
@@ -138,7 +138,7 @@ https://wx2.sinaimg.cn/mw1024/c5775633ly1gbsjvu4iipj20lr0h775f.jpg
 
 ``` javascript
 
-/*
+/*联系微信：ying5737(策略讨论，支持付费编写)
 # 中频单边趋势策略
 ## 监测变量
 1. 快MA
@@ -665,4 +665,4 @@ https://www.fmz.com/strategy/205469
 
 > 更新时间
 
-2020-07-19 21:07:05
+2021-01-08 19:20:42

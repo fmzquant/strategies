@@ -26,6 +26,7 @@ exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 
 def CTA(st):
     records = st["records"]  # 获取K线数组
+    Log(records)
     if len(records) < 100:  # 如果K线数量不足100根就返回
         return
     amount = st["position"]["amount"]  # 获取真实持仓数量，正数为多头，负数为空头
@@ -59,4 +60,4 @@ https://www.fmz.com/strategy/233060
 
 > 更新时间
 
-2020-10-22 15:49:39
+2020-12-17 14:25:55
