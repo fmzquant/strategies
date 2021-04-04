@@ -26,6 +26,14 @@ HANS123策略最早主要应用于外汇市场，其交易方式比较简单，�
 > 源码 (python)
 
 ``` python
+'''backtest
+start: 2019-01-01 00:00:00
+end: 2021-01-01 05:20:00
+period: 30m
+basePeriod: 30m
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
+'''
+
 
 up_line = down_line = trade_count = 0  										# 定义全局变量：上轨、下轨、当天交易次数
 
@@ -39,17 +47,21 @@ def current_time(bar_arr):
     return int(hour + minute)
 
 def onTick():
-    _C(exchange.SetContractType, "rb000")  			# 订阅期货品种
-    bar_arr = _C(exchange.GetRecords, PERIOD_M1)  	# 获取1分钟K线数组
+    _C(exchange.SetContractType, "TA888")  			# 订阅期货品种
+    bar_arr = _C(exchange.GetRecords, PERIOD_M5)  	# 获取5分钟K线数组
     current_close = bar_arr[-1]['Close']  			# 获取最新价格
     global up_line, down_line, trade_count  		# 引入全局变量
     current = current_time(bar_arr)  					# 处理时间
     if current == 930:  						# 如果K线时间是09:30
-        bar_arr = _C(exchange.GetRecords, PERIOD_D1)  	# 获取日K线数组
-        up_line = bar_arr[-1]['High'] # 前30根K线最高价
-        down_line = bar_arr[-1]['Low'] # 前30根K线最低价
+        #bar_arr = _C(exchange.GetRecords, PERIOD_D1)  	# 获取日K线数组
+        #up_line = bar_arr[-1]['High'] # 前30根K线最高价
+        #down_line = bar_arr[-1]['Low'] # 前30根K线最低价
+        up_line = TA.Highest(bar_arr, 30, 'High')
+        down_line = TA.Lowest(bar_arr, 30, 'Low')
         trade_count = 0  							# 重置交易次数为0
     position_arr = _C(exchange.GetPosition)  		# 获取持仓数组
+    profit = 0
+    position = 0
     if len(position_arr) > 0:  						# 如果持仓数组长度大于0
         position_arr = position_arr[0]  				# 获取持仓字典数据
         if position_arr['ContractType'][:2] == 'rb':# 如果持仓品种等于rb
@@ -58,9 +70,6 @@ def onTick():
             else:
                 position = -position_arr['Amount']  	# 赋值持仓数量为负数
             profit = position_arr['Profit']  			# 获取持仓盈亏
-    else:
-        position = 0  								# 赋值持仓数量为0
-        profit = 0  									# 赋值持仓盈亏为0
     # 如果临近收盘或者达到止盈止损
     if current > 1450 or profit > 100 * 3 or profit < -100:
         if position > 0:  						# 如果持多单
@@ -93,4 +102,4 @@ https://www.fmz.com/strategy/179805
 
 > 更新时间
 
-2020-11-17 17:38:41
+2021-01-25 13:51:38

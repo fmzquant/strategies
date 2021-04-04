@@ -5,7 +5,7 @@ SuperHunter 智能学习 多账户合并展示版
 
 > 策略作者
 
-AutoBitMaker-Team
+AutoBitMaker-ABM
 
 
 

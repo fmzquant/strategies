@@ -1,7 +1,7 @@
 
 > 策略名称
 
-Bit-Maker 3.0 套利 智能学习 USDT 本位 (Binance 单平台-Arbitrage USDT Standard)
+Bit-Maker 现货USDT等额监控
 
 > 策略作者
 
@@ -9,7 +9,20 @@ AutoBitMaker-ABM
 
 > 策略描述
 
-自学习网格：
+**AutoBitMaker** 目前正式推出无风险套利策略。
+策略原理为现货和合约对冲，这个过程也可以手动完成。
+但是相对于手动操作，BOT会捕捉市场所有交易对的利润空间，每天成交上百次。更加释放您的双手，降低市场的风险。
+
+当前代码仅为账号监控，源码公布，大家可自行检查，或者取用。
+监控现货 USDT价值。
+
+我们是 **AutoBitMaker**，简称 **ABM Capital**，请大家仔细鉴别团队名字，微信号，以辨别真伪。
+我们暂时只通过WeChat，Email的联系方式与国内客户沟通，不使用QQ等其他方式。
+
+**ABM 团队**目前提供3种类型策略
+* 合约交易
+* 现货交易
+* 套利交易
 
 自学习网格基于传统网格策略思路，但经过长期实盘+回测数据已对开仓逻辑，加仓时机，止盈位置，仓比，网格间距等几十种参数配置进行优化。实现了智能动态加仓模型和止盈位置，可以规避传统网格遭遇单边情况所需要承担的高风险，利用极低仓位，实现良好的收益回撤比。
 
@@ -20,9 +33,7 @@ AutoBitMaker-ABM
 
 单账户可同时配置运行多个单币种交易对和指数交易对，既能分摊风险风险，同时助您在各种复杂市场行情中获利。
 
-关于优化+风控：
-历史回测服务器全年无休，自动回测所有最新数据，最优参数实时计算。
-我们策略集群含50余台辅助服务器，以平均每秒2次的速度对账户的止损条件进行核对，在风险来临时能快速退出。
+目前团队策略服务器集群已达80台，另有50余台支撑服务器，以平均每秒2次的速度对账户的止损条件进行核对，在风险来临时能快速退出。
 
 使用异构混合云的阿里云，亚马逊云，微软云架构，分离管理与执行节点，多节点间形成集群进行冗余性保障，安全有效的实现业务的流畅运转和资金安全保障
 
@@ -34,8 +45,11 @@ Bot 接管您的账户后，请勿自行做任何操作，当检测到其他任�
 这取决于您的资金量。我们可以在试跑阶段后详谈。如果您能使用我们推荐链接建立账户，那么我们会收取很低的佣金。
 
 联系方式：
-WeChat：DuQi_SEC/autobitmaker/Shawn_gb2312/ABM_DD
-Email:  liuhongyu.louie@autobitmaker.com/autobitmaker_master@autobitmaker.com
+1. 全国均可面谈
+2. WeChat：DuQi_SEC/autobitmaker/autobitmaker_001/Shawn_gb2312/ABM_DD 
+3. Email:  liuhongyu.louie@autobitmaker.com/autobitmaker_master@autobitmaker.com
+
+* 特别提示（微信号 autobitmaker001 不是我们！！我们也不叫makebit！！微信号 autobitmaker_001 才是我们）
 
 微信小程序提交试用申请：
 ![微信小程序码](https://www.fmz.com![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
@@ -46,13 +60,14 @@ Email:  liuhongyu.louie@autobitmaker.com/autobitmaker_master@autobitmaker.com
 
 |参数|默认值|描述|
 |----|----|----|
-|baseOriginalBalance|1000|baseOriginalBalance|
-|showInfo|false|showInfo|
+|baseOriginalBalance|10000|baseOriginalBalance|
 
 
 > 源码 (javascript)
 
 ``` javascript
+//exchanges[0] is spot
+
 var chart = {
     __isStock: false,
     extension: {
@@ -117,38 +132,39 @@ function getChartPosition(avaliableMargin) {
     };
 }
 
-function updateAccountDetailChart(ObjChart) {
+function updateAccountDetailChart(ObjChart, totalBalance) {
     var nowTime = new Date().getTime();
     var account = exchanges[0].GetAccount();
     try {
-        if (account !== null && account.Info !== null && account.Info.totalMarginBalance > 0) {
-            ObjChart.add([0, [nowTime, Number(account.Info.totalMarginBalance)]]);
+        if (account !== null && account.Info !== null && totalBalance > 0) {
+            ObjChart.add([0, [nowTime, Number(totalBalance)]]);
         }
     } catch (err) {
         Log('ERROR ' + account + ',' + err)
     }
 }
 
-function getBalance() {
+function getSpotBalanceInUSDT() {
+    var ticker = JSON.parse(HttpQuery('https://api.binance.com/api/v1/ticker/24hr'));
     var currentBalance = 0;
     var account = exchanges[0].GetAccount();
+    var priceMap = {};
     try {
-        if (account !== null && account.Info !== null && account.Info.totalWalletBalance > 0) {
-            currentBalance += Number(account.Info.totalWalletBalance);
+        if (ticker !== null) {
+            for (var index in ticker) {
+                priceMap[ticker[index].symbol] = ticker[index].lastPrice;
+            }
         }
-    } catch (err) {
-        Log('ERROR ' + account + ',' + err)
-    }
-    Sleep(666);
-    return Number(currentBalance).toFixed(6);
-}
-
-function getMarginBalance() {
-    var currentBalance = 0;
-    var account = exchanges[0].GetAccount();
-    try {
-        if (account !== null && account.Info !== null && account.Info.totalMarginBalance > 0) {
-            currentBalance += Number(account.Info.totalMarginBalance);
+        if (account !== null && account.Info !== null) {
+            for (var index in account.Info.balances) {
+                var obj = account.Info.balances[index];
+                if (obj.asset !== 'USDT' && priceMap[obj.asset + 'USDT']) {
+                    currentBalance += Number(Number(priceMap[obj.asset + 'USDT']) * Number((Number(obj.free) + Number(obj.locked))));
+                }
+                if (obj.asset === 'USDT') {
+                    currentBalance += Number((Number(obj.free) + Number(obj.locked)));
+                }
+            }
         }
     } catch (err) {
         Log('ERROR ' + account + ',' + err)
@@ -169,32 +185,40 @@ function printPositionInfo(exchangeInnerArray, totalProfitUSDT, totalProfitRate)
     var table = {
         type: 'table',
         title: 'POSITIONS',
-        cols: ['Symbol', 'Type', 'AvgPrice', 'Position', 'Profit'],
+        cols: ['Symbol', 'Type', 'CurrentPrice', 'Position', 'USDT Value'],
         rows: []
     }
-    if (showInfo) {
-        table.rows.push([{
-            body: '* 2020-09-07 之前一直人民币100万实盘运行，现策略更新，自动将合约闲置资金转入币安宝，即提高资金安全性，也可以双边获利，当合约所需保证金上涨或下降时，将自动调整两边余额。因当前FMZ无法监控币安宝余额，所以剥离10W人民币继续运行原策略以做展示。',
-            colspan: 5
-        }]);
-    }
     table.rows.push([{
-        body: '本策略是 USDT 本位，基于均值回归的币安合约套利策略，并以低风险辅助网格并行（BitMEX支持BTC本位）',
+        body: '本策略是 USDT 本位，低风险现货智能动态参数网格',
         colspan: 5
     }]);
     table.rows.push([{
-        body: '套利主要币种是 BTC/USDT 和 ETH/USDT,网格覆盖币安永续合约全部币种交易对',
+        body: '所有交易对任选',
         colspan: 5
     }]);
-    for (var index in exchangeInnerArray) {
-        var position = exchangeInnerArray[index].GetPosition()
-        for (var indexInner in position) {
-            var profit = Number(position[indexInner].Info.unRealizedProfit);
-            totalProfit = totalProfit + profit
-            table.rows.push([position[indexInner].Info.symbol, (position[indexInner].Type == 1 ? 'SHORT #da1b1bab' : 'LONG #1eda1bab'), position[indexInner].Price, position[indexInner].Amount, profit.toFixed(5)]);
+    var ticker = JSON.parse(HttpQuery('https://api.binance.com/api/v1/ticker/24hr'));
+    var account = exchanges[0].GetAccount();
+    var priceMap = {};
+    try {
+        if (ticker !== null) {
+            for (var index in ticker) {
+                priceMap[ticker[index].symbol] = ticker[index].lastPrice;
+            }
         }
-        Sleep(168);
+        if (account !== null && account.Info !== null) {
+            for (var index in account.Info.balances) {
+                var obj = account.Info.balances[index];
+                if (obj.asset !== 'USDT' && priceMap[obj.asset + 'USDT']) {
+                    if (Number((Number(obj.free) + Number(obj.locked))) > 0) {
+                        table.rows.push([obj.asset, ('LONG #1eda1bab'), Number(priceMap[obj.asset + 'USDT']), Number((Number(obj.free) + Number(obj.locked))), Number(Number(priceMap[obj.asset + 'USDT']) * Number((Number(obj.free) + Number(obj.locked)))).toFixed(4)]);
+                    }
+                }
+            }
+        }
+    } catch (err) {
+        Log('ERROR ' + account + ',' + err)
     }
+    Sleep(168);
     table.rows.push([{
         body: 'TOTAL PROFIT OF CURRENT POSITION',
         colspan: 4
@@ -215,15 +239,16 @@ function main() {
     var ObjChart = Chart([chart, getChartPosition(100)]);
     while (true) {
         try {
-            var currentBalance = getBalance();
-            printProfitInfo(currentBalance);
-            updateAccountDetailChart(ObjChart);
+            var currentSpotBalance = getSpotBalanceInUSDT();
+            var totalBalance = Number(currentSpotBalance).toFixed(4);
+            printProfitInfo(totalBalance);
+            updateAccountDetailChart(ObjChart, totalBalance);
             for (var i = 0; i < 120; i++) {
                 try {
-                    var avaliableMargin = ((getMarginBalance()) / (getBalance())) * 100;
+                    var avaliableMargin = 100;
                     ObjChart.update([chart, getChartPosition(avaliableMargin)]);
-                    var profit = Number((currentBalance) - baseOriginalBalance).toFixed(5);
-                    var profitRate = Number((((currentBalance) - baseOriginalBalance) / baseOriginalBalance) * 100).toFixed(4);
+                    var profit = Number((totalBalance) - baseOriginalBalance).toFixed(5);
+                    var profitRate = Number((((totalBalance) - baseOriginalBalance) / baseOriginalBalance) * 100).toFixed(4);
                     printPositionInfo(exchanges, profit, profitRate);
                     Sleep(1000 * 120);
                 } catch (errInner) {
@@ -239,8 +264,8 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/178712
+https://www.fmz.com/strategy/255606
 
 > 更新时间
 
-2021-01-07 08:40:45
+2021-02-20 11:36:38

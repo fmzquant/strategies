@@ -29,6 +29,9 @@ https://www.zybuluo.com/JunQiu/note/1350528
 |ContractType||合约ID|
 |Port|80|服务的监听端口号|
 |UseMarketOrderForCTP|true|商品期货使用市价单|
+|isDealBodyMsg|false|是否处理Body消息|
+|amount|0.0001|下单量|
+|ct|swap|合约代码|
 
 
 > 源码 (python)
@@ -42,6 +45,7 @@ https://www.zybuluo.com/JunQiu/note/1350528
 - 类型：数值，端口号，Port
 '''
 
+import re
 import _thread
 import json
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
@@ -66,6 +70,10 @@ class Executor(BaseHTTPRequestHandler):
             self.send_header("Content-type", "application/json")
             self.end_headers()
             dictParam = url2Dict(self.path)
+            
+            # 测试POST请求Body信息            
+            data = self.rfile.read(200)   # 指定了读取长度
+            Log("data:", data)            # 打印POST请求的数据，可以根据请求中的数据具体再让机器人执行对应的操作
             
             # 校验
             if len(dictParam) == 4 and dictParam["access_key"] == AccessKey and dictParam["secret_key"] == SecretKey:
@@ -126,7 +134,22 @@ class Executor(BaseHTTPRequestHandler):
                     while q.size() > 0:
                         q.poll()
                         Sleep(500)
-                
+            
+            # 处理body数据
+            if isDealBodyMsg:
+                if exchange.GetName().find("Futures") != -1:
+                    Log("data:", data.decode('utf-8'))  # 测试
+                    if re.search(r'buy', data.decode('utf-8')):
+                        Log("触发buy")
+                        exchange.SetContractType(ct)
+                        exchange.SetDirection("buy")
+                        exchange.Buy(-1, amount)
+                    elif re.search(r'sell', data.decode('utf-8')):
+                        Log("触发sell")
+                        exchange.SetContractType(ct)
+                        exchange.SetDirection("sell")
+                        exchange.Sell(-1, amount)
+            
             # 写入数据应答
             self.wfile.write(json.dumps({"state": "ok"}).encode())
         except Exception as e:
@@ -145,10 +168,12 @@ def createServer(host):
 def main():
     # 开启一个线程
     try:
-        _thread.start_new_thread(createServer, (("0.0.0.0", Port), ))         # VPS服务器上测试        
+        _thread.start_new_thread(createServer, (("0.0.0.0", Port), ))         # VPS服务器上测试           
     except Exception as e:        
         Log("错误信息：", e)
         raise Exception("stop")    
+    if exchange.GetName().find("Futures") != -1:
+        exchange.SetContractType(ContractType)
     Log("账户资产信息：", _C(exchange.GetAccount))
     while True:
         if exchange.GetName() == "Futures_CTP":
@@ -167,4 +192,4 @@ https://www.fmz.com/strategy/221850
 
 > 更新时间
 
-2020-12-18 11:18:06
+2021-03-31 11:33:30

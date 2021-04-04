@@ -27,6 +27,14 @@ R-Breaker策略由Richard Saidenberg开发，并于1994年公布于世。在之�
 > 源码 (python)
 
 ``` python
+'''backtest
+start: 2019-01-01 00:00:00
+end: 2021-01-01 00:00:00
+period: 1h
+basePeriod: 1h
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
+'''
+
 # 策略主函数
 def onTick():
     # 获取数据
@@ -97,4 +105,4 @@ https://www.fmz.com/strategy/187009
 
 > 更新时间
 
-2020-10-21 16:33:59
+2021-01-25 13:52:41
