@@ -30,8 +30,8 @@
 start: 2019-09-05 00:00:00
 end: 2019-09-05 22:00:00
 period: 1h
-basePeriod: 15m
-exchanges: [{"eid":"Binance","currency":"BTC_USDT","fee":[0,0]}]
+basePeriod: 1h
+exchanges: [{"eid":"Binance","currency":"BTC_USDT","stocks":0,"fee":[0,0]}]
 mode: 1
 '''
 
@@ -50,6 +50,8 @@ class LeeksReaper():
         self.account = None
         self.preCalc = 0
         self.preNet = 0
+
+        self.sgnum = 0
         # self.cny = 0
         # self.btc = 0
         #以上都是self对象的属性
@@ -112,7 +114,7 @@ class LeeksReaper():
         #获取当前时间的时间戳数据
         now = time.time()
         #判断self.orderBook.Bids的长度是否大于0和now - self.preCalc的值是否大于(CalcNetInterval * 1000)，如果都大于就执行下方语句
-        if (len(self.orderBook.Bids) > 0 and now - self.preCalc > (CalcNetInterval * 1000)):
+        if (len(self.orderBook.Bids) > 0 and now - self.preCalc > (CalcNetInterval)):
             #赋值
             self.preCalc = now
             #创建一个变量net用来接收_N函数的返回值
@@ -122,7 +124,7 @@ class LeeksReaper():
                 #赋值
                 self.preNet = net
                 #调用函数LogProfit并传入net
-                LogProfit(net)
+                LogProfit(net-10000)
 
         #赋值
         self.btc = account.Stocks
@@ -197,7 +199,7 @@ class LeeksReaper():
         #判断self.account是否为真
         if (self.account):
             #是真的话就调用LogStatus函数并传入相应的参数
-            LogStatus(self.account, 'Tick:', self.numTick, ', lastPrice:', self.prices[-1], ', burstPrice: ', burstPrice)
+            LogStatus(self.account, 'Tick:', self.numTick, ', lastPrice:', self.prices[-1], ', burstPrice: ', burstPrice,",收割机当前启动次数:",self.sgnum)
 
         #前半段是判断self.numTick的值是否大于2，如果是大于2就往执行||后面的语句，如果不是则判断&&运算符后面的语句，如果为fales直接返回fales,执行else的语句
         if (self.numTick > 2 and (self.prices[-1] - max(self.prices[-6:-1]) > burstPrice or self.prices[-1] - max(self.prices[-6:-2]) > burstPrice and self.prices[-1] > self.prices[-2])):
@@ -234,6 +236,8 @@ class LeeksReaper():
         while (tradeAmount >= MinStock):
             #当bull为真时返回Buy函数的返回值，否则返回Sell函数的返回值
             orderId = exchange.Buy(self.bidPrice, tradeAmount) if bull else exchange.Sell(self.askPrice, tradeAmount)
+            self.sgnum+=1
+            Log("收割机第",self.sgnum,"次启动")
             #调用Sleep函数传入参数400，0.4秒后执行
             Sleep(400)
             #判断orderId是否为true
@@ -299,4 +303,4 @@ https://www.fmz.com/strategy/265827
 
 > 更新时间
 
-2021-03-25 14:12:03
+2021-04-16 11:34:07

@@ -1,7 +1,7 @@
 
 > 策略名称
 
-【定投】每周100USDT-定期定额 (100USDT Invested Every Week - Regular Fixed Investment)
+【定投】【新手入门】每周100USDT-定期定额 (100USDT Invested Every Week - Regular Fixed Investment)
 
 > 策略作者
 
@@ -41,4 +41,4 @@ https://www.fmz.com/strategy/260013
 
 > 更新时间
 
-2021-03-10 08:58:43
+2021-04-06 08:35:55

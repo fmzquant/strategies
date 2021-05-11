@@ -592,9 +592,9 @@ def IsTrading(symbol):
             [9, 30, 11, 30],
             [13, 0, 15, 0]
         ]
-    elif (shortName == "TF" or shortName == "T"):
+    elif (shortName == "TF" or shortName == "T" or shortName == "TS"):
         period = [
-            [9, 15, 11, 30],
+            [9, 30, 11, 30],
             [13, 0, 15, 15]
         ]
     
@@ -629,11 +629,11 @@ def IsTrading(symbol):
             [21, 0, 2, 30]  # 此处修改为 2
         ],
         [
-            ['CU', 'AL', 'ZN', 'PB', 'SN', 'NI', 'SS'],
+            ['CU', 'AL', 'ZN', 'PB', 'SN', 'NI', 'SS', 'BC'],
             [21, 0, 1, 0]   # 此处修改为 1
         ],
         [
-            ['NR', 'BU', 'HC', 'RB', 'RU', 'SP', 'FU', 'ZC', 'CF', 'CY', 'FG', 'MA', 'OI', 'RM', 'SR', 'TA', 'SA', 'A', 'B', 'C', 'CS', 'I', 'J', 'JM', 'L', 'M', 'P', 'PP', 'V', 'Y', 'EG', 'RR', 'EB', 'PG'],
+            ['NR', 'BU', 'HC', 'RB', 'RU', 'SP', 'FU', 'ZC', 'CF', 'CY', 'FG', 'MA', 'OI', 'RM', 'SR', 'TA', 'SA', 'A', 'B', 'C', 'CS', 'I', 'J', 'JM', 'L', 'M', 'P', 'PP', 'V', 'Y', 'EG', 'RR', 'EB', 'PG', 'LU'],
             [21, 0, 23, 0]
         ]
     ]
@@ -768,4 +768,4 @@ https://www.fmz.com/strategy/24288
 
 > 更新时间
 
-2020-07-06 18:27:40
+2021-05-10 17:51:53

@@ -19,21 +19,19 @@ HANS123策略最早主要应用于外汇市场，其交易方式比较简单，�
 
 |参数|默认值|描述|
 |----|----|----|
-|count|50|count|
-|stop|100|stop|
+|test|100|test|
 
 
 > 源码 (python)
 
 ``` python
 '''backtest
-start: 2019-01-01 00:00:00
-end: 2021-01-01 05:20:00
-period: 30m
-basePeriod: 30m
+start: 2020-01-01 00:00:00
+end: 2021-01-01 00:00:00
+period: 10m
+basePeriod: 10m
 exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 '''
-
 
 up_line = down_line = trade_count = 0  										# 定义全局变量：上轨、下轨、当天交易次数
 
@@ -46,54 +44,63 @@ def current_time(bar_arr):
         minute = "0" + minute
     return int(hour + minute)
 
+# 取消未成交订单
+def cancel_order():
+    Sleep(1000)
+    orders = exchange.GetOrders()
+    if len(orders) > 0:
+        exchange.CancelOrder(orders[0].Id)
+
 def onTick():
-    _C(exchange.SetContractType, "TA888")  			# 订阅期货品种
-    bar_arr = _C(exchange.GetRecords, PERIOD_M5)  	# 获取5分钟K线数组
-    current_close = bar_arr[-1]['Close']  			# 获取最新价格
+    _C(exchange.SetContractType, "a888")  			# 订阅期货品种
+    bar_arr = _C(exchange.GetRecords)  	# 获取分钟K线数组
     global up_line, down_line, trade_count  		# 引入全局变量
     current = current_time(bar_arr)  					# 处理时间
     if current == 930:  						# 如果K线时间是09:30
-        #bar_arr = _C(exchange.GetRecords, PERIOD_D1)  	# 获取日K线数组
-        #up_line = bar_arr[-1]['High'] # 前30根K线最高价
-        #down_line = bar_arr[-1]['Low'] # 前30根K线最低价
-        up_line = TA.Highest(bar_arr, 30, 'High')
-        down_line = TA.Lowest(bar_arr, 30, 'Low')
+        bar_arr = _C(exchange.GetRecords, PERIOD_D1)  	# 获取日K线数组
+        up_line = bar_arr[-1]['High'] # 前30根K线最高价
+        down_line = bar_arr[-1]['Low'] # 前30根K线最低价
         trade_count = 0  							# 重置交易次数为0
     position_arr = _C(exchange.GetPosition)  		# 获取持仓数组
     profit = 0
     position = 0
     if len(position_arr) > 0:  						# 如果持仓数组长度大于0
-        position_arr = position_arr[0]  				# 获取持仓字典数据
-        if position_arr['ContractType'][:2] == 'rb':# 如果持仓品种等于rb
-            if position_arr['Type'] % 2 == 0:  		# 如果是多单
-                position = position_arr['Amount']  	# 赋值持仓数量为正数
-            else:
-                position = -position_arr['Amount']  	# 赋值持仓数量为负数
-            profit = position_arr['Profit']  			# 获取持仓盈亏
+        position_dic = position_arr[0]  				# 获取持仓字典数据
+        if position_dic['Type'] % 2 == 0:  		# 如果是多单
+            position = position_dic['Amount']  	# 赋值持仓数量为正数
+        else:
+            position = -position_dic['Amount']  	# 赋值持仓数量为负数
+        profit = position_dic['Profit']  			# 获取持仓盈亏
+    depth = exchange.GetDepth()
+    ask = depth.Asks[0].Price
+    bid = depth.Bids[0].Price
     # 如果临近收盘或者达到止盈止损
-    if current > 1450 or profit > 100 * 3 or profit < -100:
+    if current == 1450 or profit > 300:
         if position > 0:  						# 如果持多单
             exchange.SetDirection("closebuy")  	# 设置交易方向和类型
-            exchange.Sell(current_close - 1, 1) 	# 平多单
+            exchange.Sell(bid, 1) 	# 平多单
         if position < 0:  						# 如果持空单
             exchange.SetDirection("closesell")  	# 设置交易方向和类型
-            exchange.Buy(current_close + 1, 1)  	# 平空单
+            exchange.Buy(ask, 1)  	# 平空单
     # 如果当前无持仓，并且小于指定交易次数，并且在指定交易时间内
-    if position == 0 and trade_count < 3 and 930 < current < 1450:
-        if current_close > up_line:  			# 如果价格大于上轨
+    if position == 0 and trade_count < 3 and 930 < current < 1400:
+        if bid > up_line:  			# 如果价格大于上轨
             exchange.SetDirection("buy")  		# 设置交易方向和类型
-            exchange.Buy(current_close + 1, 1)  	# 开多单
+            exchange.Buy(ask, 1)  	# 开多单
             trade_count = trade_count + 1  		# 交易次数加一次
-        if current_close < down_line:  		# 如果价格小于下轨
+        if ask < down_line:  		# 如果价格小于下轨
             exchange.SetDirection("sell")  		# 设置交易方向和类型
-            exchange.Sell(current_close - 1, 1)	# 开空单
+            exchange.Sell(bid, 1)	# 开空单
             trade_count = trade_count + 1  		# 交易次数加一次
-      
+
 # 策略入口函数
 def main():
     while True:  								# 无限循环
         onTick()  								# 执行策略主函数
+        cancel_order()
         Sleep(1000)  								# 休眠1秒
+
+
 ```
 
 > 策略出处
@@ -102,4 +109,4 @@ https://www.fmz.com/strategy/179805
 
 > 更新时间
 
-2021-01-25 13:51:38
+2021-04-26 15:10:02

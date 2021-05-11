@@ -1,7 +1,7 @@
 
 > 策略名称
 
-【定投】每周100USDT左右-定期不定额 (100USDT Invested Every Week - Regular Variable Investment)
+【定投】【新手入门】每周100USDT左右-定期不定额 (100USDT Invested Every Week - Regular Variable Investment)
 
 > 策略作者
 
@@ -22,8 +22,9 @@ def main():
     marketValueCurrent = 0                                     #当前持有总市值
     marketValueExpected = 0                                    #当前期望总市值
     rateOfReturn = 0                                           #收益率
+    eachBuy = 100
     while True:
-        marketValueExpected = marketValueExpected + 100        #计算当前期望总市值
+        marketValueExpected = marketValueExpected + eachBuy        #计算当前期望总市值
         ticker = exchange.GetTicker()
         price = ticker['Last']                                 #获得当前价格
         amount = marketValueExpected / price - amountAll       #计算本次买入量
@@ -46,4 +47,4 @@ https://www.fmz.com/strategy/260056
 
 > 更新时间
 
-2021-03-10 09:05:34
+2021-04-16 16:54:06

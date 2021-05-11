@@ -29,10 +29,10 @@ Hukybo
 
 ``` python
 '''backtest
-start: 2020-02-17 09:00:00
-end: 2020-06-12 15:00:00
-period: 1d
-basePeriod: 1m
+start: 2020-05-01 09:00:00
+end: 2020-10-01 15:00:00
+period: 1h
+basePeriod: 1h
 exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 args: [["ATRRatio",3]]
 '''
@@ -135,4 +135,4 @@ https://www.fmz.com/strategy/231803
 
 > 更新时间
 
-2020-10-21 16:35:32
+2021-04-26 17:01:51

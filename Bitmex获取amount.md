@@ -20,7 +20,14 @@ config = {
     ETHUSD: 0.000001,
     LTCUSD: 0.000002,
     XRPUSD: 0.0002,
-    LINKUSDT: 0.0001
+    LINKUSDT: 0.0001,
+    ADAUSDT: 0.01,
+    DOGEUSDT: 0.001,
+    DOTUSDT: 0.0001,
+    EOSUSDT: 0.0001,
+    UNIUSDT: 0.00001,
+    TRXUSDT: 0.001,
+    XLMUSDT: 0.001
 }
 
 function Bitmex_amount(symbol, value, price) {
@@ -42,6 +49,27 @@ function Bitmex_amount(symbol, value, price) {
     }
     if (symbol == "LINK") {
         amount = value / price / config.LINKUSDT
+    }
+    if (symbol == "ADA") {
+        amount = value / price / config.ADAUSDT
+    }
+    if (symbol == "DOGE") {
+        amount = value / price / config.DOGEUSDT
+    }
+    if (symbol == "DOT") {
+        amount = value / price / config.DOTUSDT
+    }
+    if (symbol == "EOS") {
+        amount = value / price / config.EOSUSDT
+    }
+    if (symbol == "UNI") {
+        amount = value / price / config.UNIUSDT
+    }
+    if (symbol == "TRX") {
+        amount = value / price / config.TRXUSDT
+    }
+    if (symbol == "XLM") {
+        amount = value / price / config.XLMUSDT
     }
     amount = _N(amount, 0)
     if (amount > 0) {
@@ -70,7 +98,28 @@ function Bitmex_value(symbol, amount, price) {
         value = amount * config.XRPUSD * price
     }
     if (symbol == "LINK") {
-        value = amount * config.XRPUSD * LINKUSDT
+        value = amount * config.LINKUSDT * price
+    }
+    if (symbol == "ADA") {
+        value = amount * config.ADAUSDT * price
+    }
+    if (symbol == "DOGE") {
+        value = amount * config.DOGEUSDT * price
+    }
+    if (symbol == "DOT") {
+        value = amount * config.DOTUSDT * price
+    }
+    if (symbol == "EOS") {
+        value = amount * config.EOSUSDT * price
+    }
+    if (symbol == "UNI") {
+        value = amount * config.UNIUSDT * price
+    }
+    if (symbol == "TRX") {
+        value = amount * config.TRXUSDT * price
+    }
+    if (symbol == "XLM") {
+        value = amount * config.XLMUSDT * price
     }
     value = _N(parseFloat(value), 8)
     if (value > 0) {
@@ -104,4 +153,4 @@ https://www.fmz.com/strategy/223326
 
 > 更新时间
 
-2020-10-16 19:03:07
+2021-04-04 20:24:51
