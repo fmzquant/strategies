@@ -27,7 +27,8 @@ config = {
     EOSUSDT: 0.0001,
     UNIUSDT: 0.00001,
     TRXUSDT: 0.001,
-    XLMUSDT: 0.001
+    XLMUSDT: 0.001,
+    BNBUSDT: 0.000001
 }
 
 function Bitmex_amount(symbol, value, price) {
@@ -71,11 +72,14 @@ function Bitmex_amount(symbol, value, price) {
     if (symbol == "XLM") {
         amount = value / price / config.XLMUSDT
     }
+    if (symbol == "BNB") {
+        amount = value / price / config.BNBUSDT
+    }
     amount = _N(amount, 0)
     if (amount > 0) {
         return amount
     }
-    if (amount < 1){
+    if (amount < 1) {
         return 1
     }
 }
@@ -121,11 +125,14 @@ function Bitmex_value(symbol, amount, price) {
     if (symbol == "XLM") {
         value = amount * config.XLMUSDT * price
     }
+    if (symbol == "BNB") {
+        value = amount * config.BNBUSDT * price
+    }
     value = _N(parseFloat(value), 8)
     if (value > 0) {
         return value
     }
-    if (value <= 0){
+    if (value <= 0) {
         return 0
     }
 }
@@ -153,4 +160,4 @@ https://www.fmz.com/strategy/223326
 
 > 更新时间
 
-2021-04-04 20:24:51
+2021-05-20 22:05:11
