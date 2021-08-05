@@ -39,6 +39,13 @@ python版CTP商品期货交易类库（支持CTA函数测试版）
   
   ret = ext.CTA("MA000/MA888,rb000/rb888,i000/i888", callBack_CTA)
   ```
+- 3、2021.07.14 更新：
+  ```
+  if pos["Type"] == PD_LONG or pos["Type"] == PD_LONG_YD:
+  ```
+  笔误```PD_LONG_YD```写成了```PD_SHORT_YD```
+  
+  
 
 > 策略参数
 
@@ -761,7 +768,7 @@ def CTA(contractType, onTick, interval = 500):
             if mapCT not in holds:
                 continue 
             hold = holds[mapCT]
-            if pos["Type"] == PD_LONG or pos["Type"] == PD_SHORT_YD:
+            if pos["Type"] == PD_LONG or pos["Type"] == PD_LONG_YD:
                 if hold["amount"] < 0 and qSize == 0:
                     raise "不能同时持有多仓空仓"
                 hold["amount"] += pos["Amount"]
@@ -1042,4 +1049,4 @@ https://www.fmz.com/strategy/232516
 
 > 更新时间
 
-2021-05-10 17:51:45
+2021-07-14 16:06:34

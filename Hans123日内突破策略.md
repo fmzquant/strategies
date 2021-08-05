@@ -26,10 +26,10 @@ HANS123策略最早主要应用于外汇市场，其交易方式比较简单，�
 
 ``` python
 '''backtest
-start: 2020-01-01 00:00:00
+start: 2019-01-01 00:00:00
 end: 2021-01-01 00:00:00
-period: 10m
-basePeriod: 10m
+period: 5m
+basePeriod: 5m
 exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 '''
 
@@ -109,4 +109,4 @@ https://www.fmz.com/strategy/179805
 
 > 更新时间
 
-2021-04-26 15:10:02
+2021-07-08 17:12:38

@@ -28,13 +28,24 @@ config = {
     UNIUSDT: 0.00001,
     TRXUSDT: 0.001,
     XLMUSDT: 0.001,
-    BNBUSDT: 0.000001
+    BNBUSDT: 0.000001,
+    SOLUSDT: 0.00001,
+    FILUSDT: 0.000001,
+    VETUSDT: 0.001,
+    MATICUSDT: 0.0001,
+    AAVEUSDT: 0.000001,
+    SUSHIUSDT: 0.00001,
 }
 
 function Bitmex_amount(symbol, value, price) {
     var amount = 0
     if (symbol == "XBT") {
         amount = value * price / config.XBTUSD
+        if (amount <= 100) {
+            amount = 100
+        } else {
+            amount = 100 * _N(amount / 100, 0)
+        }
     }
     if (symbol == "BCH") {
         amount = value / price / config.BCHUSD
@@ -74,6 +85,24 @@ function Bitmex_amount(symbol, value, price) {
     }
     if (symbol == "BNB") {
         amount = value / price / config.BNBUSDT
+    }
+    if (symbol == "SOL") {
+        amount = value / price / config.SOLUSDT
+    }
+    if (symbol == "FIL") {
+        amount = value / price / config.FILUSDT
+    }
+    if (symbol == "VET") {
+        amount = value / price / config.VETUSDT
+    }
+    if (symbol == "MATIC") {
+        amount = value / price / config.MATICUSDT
+    }
+    if (symbol == "AAVE") {
+        amount = value / price / config.AAVEUSDT
+    }
+    if (symbol == "SUSHI") {
+        amount = value / price / config.SUSHIUSDT
     }
     amount = _N(amount, 0)
     if (amount > 0) {
@@ -128,6 +157,24 @@ function Bitmex_value(symbol, amount, price) {
     if (symbol == "BNB") {
         value = amount * config.BNBUSDT * price
     }
+    if (symbol == "SOL") {
+        value = amount * config.SOLUSDT * price
+    }
+    if (symbol == "FIL") {
+        value = amount * config.FILUSDT * price
+    }
+    if (symbol == "VET") {
+        value = amount * config.VETUSDT * price
+    }
+    if (symbol == "MATIC") {
+        value = amount * config.MATICUSDT * price
+    }
+    if (symbol == "AAVE") {
+        value = amount * config.AAVEUSDT * price
+    }
+    if (symbol == "SUSHI") {
+        value = amount * config.SUSHIUSDT * price
+    }
     value = _N(parseFloat(value), 8)
     if (value > 0) {
         return value
@@ -160,4 +207,4 @@ https://www.fmz.com/strategy/223326
 
 > 更新时间
 
-2021-05-20 22:05:11
+2021-07-21 13:16:41

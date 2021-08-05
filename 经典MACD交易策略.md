@@ -47,27 +47,29 @@ def onTick():
     macd = TA.MACD(bar, 5, 50, 15)  		# 计算MACD值
     dif = macd[0][-2]  					# 获取DIF的值
     dea = macd[1][-2]  					# 获取DEA的值
-    last_close = bar[-1]['Close']		# 获取最新价格（卖价）
+    depth = exchange.GetDepth()
+    ask = depth['Asks'][0]['Price']
+    bid = depth['Bids'][0]['Price']
     global mp  							# 全局变量，用于控制虚拟持仓
     if mp == 1 and dif < dea:
-        Log('多平')
+        Log('多平信号成立，挂单价格为：', bid)
         exchange.SetDirection("closebuy")	# 设置交易方向和类型
-        exchange.Sell(last_close - 1, 1) 	# 平多单
+        id = exchange.Sell(bid, 1) 	# 平多单
         mp = 0  								# 设置虚拟持仓的值，即空仓
     if mp == -1 and dif > dea:
-        Log('空平')
+        Log('空平信号成立，挂单价格为：', ask)
         exchange.SetDirection("closesell")  	# 设置交易方向和类型
-        exchange.Buy(last_close, 1)  		# 平空单
+        id = exchange.Buy(ask, 1)  		# 平空单
         mp = 0  								# 设置虚拟持仓的值，即空仓
     if mp == 0 and dif > dea:
-        Log('多开')
+        Log('多开信号成立，挂单价格为：', ask)
         exchange.SetDirection("buy")  		# 设置交易方向和类型
-        exchange.Buy(last_close, 1)  		# 开多单
+        id = exchange.Buy(ask, 1)  		# 开多单
         mp = 1  								# 设置虚拟持仓的值，即有多单
     if mp == 0 and dif < dea:
-        Log('空开')
+        Log('空开信号成立，挂单价格为：', bid)
         exchange.SetDirection("sell")  		# 设置交易方向和类型
-        exchange.Sell(last_close - 1, 1)		# 开空单
+        id = exchange.Sell(bid, 1)		# 开空单
         mp = -1  								# 设置虚拟持仓的值，即有空单
         
 def main():
@@ -82,4 +84,4 @@ https://www.fmz.com/strategy/171604
 
 > 更新时间
 
-2021-01-11 15:11:49
+2021-07-01 17:40:55
