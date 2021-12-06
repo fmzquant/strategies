@@ -5,7 +5,7 @@ CTA策略之商品期货网格策略
 
 > 策略作者
 
-Hukybo
+程文
 
 > 策略描述
 
@@ -143,8 +143,8 @@ TRADE_AGAIN(100);
 
 > 策略出处
 
-https://www.fmz.com/strategy/273847
+https://www.fmz.com/strategy/325958
 
 > 更新时间
 
-2021-05-18 18:16:57
+2021-10-26 14:51:32

@@ -106,7 +106,7 @@ function Open(direction) {
     
 }
 
-function Close(ticker) {
+function Close(ticker,fastLine,midLine) {
     let pos = exchange.GetPosition()[0];
 
     if (pos == null) {
@@ -122,7 +122,7 @@ function Close(ticker) {
         }
     }
     if (pos.Type == PD_SHORT) {
-        if (ticker.Last > pos.Price*(1+ stopLossRate/100) || ticker.Last < pos.Price*(1-(stopLossRate*winLossRate)/100)) {
+        if (ticker.Last > pos.Price*(1+ stopLossRate/100) || ticker.Last < pos.Price*(1-(stopLossRate*winLossRate)/100) ) {
             Log("平空,开仓价为:",pos.Price,"本次盈利:",pos.Profit);
             exchange.SetDirection("closesell");
             exchange.Buy(-1, pos.Amount);
@@ -177,14 +177,14 @@ function main() {
         let high = ticker.High;
         let close = ticker.Close;
 
-        Close(ticker);
+        Close(ticker,curEma8,curEma34);
 
         let crossStatus1 = GetCrossStatus(curEma8, lastEma8, curEma34, lastEma34);
 
         if (crossStatus1 != emaMeet) { //状态变化时更新状态
             if (crossStatus1 == 1) {
                 emaMeet = 1;
-                //Log("ema金叉，时间:", GetCurTime(r));
+                Log("ema金叉，时间:", GetCurTime(r),talib.LINEARREG_SLOPE(ema8));
                 lastEmaCrossTime = r[r.length - 1].Time;
             }
             if (crossStatus1 == 2) {
@@ -268,4 +268,4 @@ https://www.fmz.com/strategy/301620
 
 > 更新时间
 
-2021-07-31 02:05:18
+2021-11-28 07:20:15

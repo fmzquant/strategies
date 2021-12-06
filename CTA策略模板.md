@@ -5,7 +5,7 @@ CTA策略模板
 
 > 策略作者
 
-Hukybo
+程文
 
 
 
@@ -49,8 +49,8 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/83411
+https://www.fmz.com/strategy/328037
 
 > 更新时间
 
-2020-06-22 14:28:21
+2021-11-05 10:42:31

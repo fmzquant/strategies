@@ -5,7 +5,7 @@ python版CTP商品期货交易类库（支持CTA函数测试版）
 
 > 策略作者
 
-小小梦
+雨幕
 
 > 策略描述
 
@@ -902,9 +902,11 @@ def CTA(contractType, onTick, interval = 500):
         if delay > 0:
             Sleep(delay)
 
-def Cross(arr1, arr2):
-    if len(arr1) != len(arr2):
+def Cross(array1, array2):
+    if len(array1) != len(array2):
         raise "array length not equal"
+    arr1 = array1.copy()
+    arr2 = array2.copy()
     n = 0
     arr1.reverse()
     arr2.reverse()
@@ -1049,4 +1051,4 @@ https://www.fmz.com/strategy/232516
 
 > 更新时间
 
-2021-07-14 16:06:34
+2021-11-23 08:53:37

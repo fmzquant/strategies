@@ -5,7 +5,7 @@ Dual Thrust 商品期货
 
 > 策略作者
 
-Zero
+宽客001
 
 > 策略描述
 
@@ -48,6 +48,8 @@ Zero
 start: 2016-01-15 09:00:00
 end: 2017-01-01 15:00:00
 period: 1d
+basePeriod: 1h
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 */
 var ChartCfg = {
     __isStock: true,
@@ -229,4 +231,4 @@ https://www.fmz.com/strategy/13011
 
 > 更新时间
 
-2017-11-10 21:54:38
+2021-10-26 23:32:53

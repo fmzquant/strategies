@@ -5,7 +5,7 @@ MACD Cpp Demo
 
 > 策略作者
 
-Zero
+宽客001
 
 
 

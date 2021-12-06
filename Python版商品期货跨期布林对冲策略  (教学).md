@@ -5,11 +5,11 @@ Python版商品期货跨期布林对冲策略  (教学)
 
 > 策略作者
 
-小小梦
+雨幕
 
 > 策略描述
 
-参考文章：https://www.fmz.com/bbs-topic/5726
+参考文章：https://www.fmz.cn/bbs-topic/5726
 
 > 策略参数
 
@@ -191,4 +191,4 @@ https://www.fmz.com/strategy/213826
 
 > 更新时间
 
-2020-07-02 15:30:12
+2021-10-26 10:45:05

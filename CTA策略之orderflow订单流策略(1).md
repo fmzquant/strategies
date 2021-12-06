@@ -5,7 +5,7 @@ CTA策略之orderflow订单流策略(1)
 
 > 策略作者
 
-Hukybo
+程文
 
 > 策略描述
 
@@ -16,7 +16,7 @@ Hukybo
 在二级交易市场种，影响价格变化的因素是纷繁复杂的，并且每一个因素影响价格变化的权重都不一样，以至于很难从传统技术分析图形中推导出价格行为，因为相对于价格和成交量来说，技术分析图形相对抽象和滞后。而OrderFlow订单流工具的横空出世，使得市场更加通透。OrderFlow订单流有很多种分类，包括：市场深度(L2数据)、成交量分布(VP)、足迹图(Footprint Chart)、成交明细(Sales Details)等等，如下图所示：
 
 1、市场深度(L2数据)
-![](https://www.fmz.com![IMG](https://www.fmz.com/upload/asset/3999e86794a740e64803.png))
+![](https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/3999e86794a740e64803.png))
   
 2、成交量分布(VP)
  ![IMG](https://www.fmz.com/upload/asset/3a79d063885631ae63fb.png) 
@@ -41,6 +41,13 @@ Hukybo
 ### 六、总结
 本篇详细介绍了OrderFlow订单流策略基础知识，以及利用发明者量化交易平台，实现了一个足迹图(Footprint Chart)策略，该策略可以直接用于商品期货实盘账户。在接下来的章节中，我们将深入研究OrderFlow订单流数据，进而开发一系列基于OrderFlow订单流数据的交易策略。
 
+> 策略参数
+
+
+
+|参数|默认值|描述|
+|----|----|----|
+|contractCode|rb888|合约代码|
 
 
 > 源码 (javascript)
@@ -312,4 +319,4 @@ https://www.fmz.com/strategy/291843
 
 > 更新时间
 
-2021-06-28 11:22:23
+2021-10-26 14:09:33

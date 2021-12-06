@@ -5,7 +5,7 @@
 
 > 策略作者
 
-Zero
+宽客001
 
 > 策略描述
 
@@ -30,7 +30,6 @@ basePeriod: 1h
 exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 mode: 1
 */
-
 var NewFuturesTradeFilter = function() {
     var type_enum = {
         OPENLONG:"多开|OpenLong",
@@ -47,7 +46,7 @@ var NewFuturesTradeFilter = function() {
         UNKOWN:"未知|Unkown",
         NOCHANGE:"空闲|NoChange",
     }
-    var color_enum = {RED:"#0000ff", GREEN:"#ff0000", WHITE:"#666666"}
+    var color_enum = {RED:"#00ff00", GREEN:"#ff0000", WHITE:"#666"} // Reverse China color
 
     var tick_dict = {
         delta_enum_NONE: {
@@ -112,9 +111,9 @@ var NewFuturesTradeFilter = function() {
         var ret = null;
         if (typeof(obj) !== 'undefined') {
             var order_forward = '';
-            if (info.Last >= preInfo.AskPrice1) {
+            if (info.Last >= preInfo.Sell) {
                 order_forward = 'forward_enum_UP';
-            } else if (info.Last <= preInfo.BidPrice1) {
+            } else if (info.Last <= preInfo.Buy) {
                 order_forward = 'forward_enum_DOWN';
             } else {
                 if (info.Last >= info.Sell) {
@@ -150,7 +149,7 @@ function main() {
     while (true) {
         var ret = filt.feed(_C(exchange.GetTicker));
         if (ret) {
-            Log("Price:", ret[0], "Amount:", ret[1], ret[2], ret[3]);
+            Log("Price:", ret[0], "Amount:", ret[1], _T(ret[2]), ret[3]);
         }
     }
 }
@@ -162,4 +161,4 @@ https://www.fmz.com/strategy/201568
 
 > 更新时间
 
-2020-04-23 15:18:45
+2021-09-09 19:29:34

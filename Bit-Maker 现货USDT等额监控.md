@@ -52,7 +52,7 @@ Bot 接管您的账户后，请勿自行做任何操作，当检测到其他任�
 * 特别提示（微信号 autobitmaker001 不是我们！！我们也不叫makebit！！微信号 autobitmaker_001 才是我们）
 
 微信小程序提交试用申请：
-![微信小程序码](https://www.fmz.com![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
+![微信小程序码](https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
 
 > 策略参数
 

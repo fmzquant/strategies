@@ -25,9 +25,9 @@
 */
 
 
-var n = 0.01 //初始下单数
-var MarginLevel = 100 //合约杠杆 
-var profit = 20 //期望收益 ，不能小于手续费 
+var n = 50 //初始下单数
+var MarginLevel = 50 //合约杠杆 
+var profit = 0.05 //期望收益 ，不能小于手续费 
 
 
 //取随机数 
@@ -94,4 +94,4 @@ https://www.fmz.com/strategy/270689
 
 > 更新时间
 
-2021-05-08 19:36:37
+2021-11-05 10:42:38

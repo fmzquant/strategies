@@ -5,7 +5,7 @@ Aberration 多品种商品期货交易
 
 > 策略作者
 
-ssder
+程文
 
 > 策略描述
 
@@ -22,7 +22,7 @@ ssder
 
 https://dn-filebox.qbox.me/e65b74536656f064f5c55842d8376a4b29043dbc.png
 
-`是的, 免费开源给BotVS用户, 完整的策略像一个完整的人生, 每个环节都不可少`
+`是的, 免费开源给用户, 完整的策略像一个完整的人生, 每个环节都不可少`
 
 > 策略参数
 
@@ -389,8 +389,8 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/126612
+https://www.fmz.com/strategy/327900
 
 > 更新时间
 
-2018-12-01 02:55:10
+2021-11-11 09:32:34

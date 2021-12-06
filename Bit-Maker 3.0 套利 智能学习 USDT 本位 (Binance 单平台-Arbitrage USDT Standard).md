@@ -38,7 +38,7 @@ WeChat：DuQi_SEC/autobitmaker/Shawn_gb2312/ABM_DD
 Email:  liuhongyu.louie@autobitmaker.com/autobitmaker_master@autobitmaker.com
 
 微信小程序提交试用申请：
-![微信小程序码](https://www.fmz.com![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
+![微信小程序码](https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
 
 > 策略参数
 

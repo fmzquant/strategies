@@ -5,7 +5,7 @@ CTA策略之商品期货马丁普林格KST策略
 
 > 策略作者
 
-Hukybo
+程文
 
 > 策略描述
 
@@ -100,8 +100,8 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/277067
+https://www.fmz.com/strategy/325957
 
 > 更新时间
 
-2021-04-30 11:42:11
+2021-10-26 14:47:56

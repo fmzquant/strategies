@@ -23,7 +23,7 @@ SAR抛物线转向指标
 
 好的交易平台可以让你的策略扶摇直上九万里，通过链接注册可获得两个月VIP5的手续费率优惠：
 （现货：挂单0%，吃单0.07%。合约：挂单0%，吃单0.04%）
-https://www.kucoin.cc/ucenter/signup?rcode=1wxJ2fQ&lang=zh_CN&utmsource=VIP_TF
+https://www.kucoin.center/ucenter/signup?rcode=1wxJ2fQ&lang=zh_CN&utmsource=VIP_TF
 
 > 策略参数
 
@@ -183,4 +183,4 @@ https://www.fmz.com/strategy/224799
 
 > 更新时间
 
-2021-02-01 11:26:20
+2021-11-02 10:53:24

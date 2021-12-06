@@ -5,7 +5,7 @@ footprint chart
 
 > 策略作者
 
-Hukybo
+程文
 
 > 策略描述
 

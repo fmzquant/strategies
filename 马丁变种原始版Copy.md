@@ -1,0 +1,98 @@
+
+> 策略名称
+
+马丁变种原始版Copy
+
+> 策略作者
+
+18318300004
+
+> 策略描述
+
+    这是我进入澳门之后的第一个简单策略，当时我花了10分钟写出了它，它是一个加仓间隔非常小的马丁变种，通过定投和逐步拉大加仓间隔来控制爆仓的风险，盈亏比比传统马丁好不少。
+    在三四月份的大牛市中，这个马丁表现非常不错，巅峰时期用小资金跑一天一倍，当时四天用12u跑CHR到了48u。
+    然而时过境迁，大牛市早已不在，这个马丁用于今天的市场不免会让使用者成为短信接收员，因此我把它分享了出来。
+    其实实盘还有一些可以跑的价值，但是需要人工择时，现在再也不是那种马丁一开坐着数钱的行情了。
+      
+
+> 策略参数
+
+
+
+|参数|默认值|描述|
+|----|----|----|
+|zuoduo|true|做多|
+|zuokong|false|做空|
+|CV|3|价格精度|
+|MarginLevel|75|杠杆倍数|
+|k|true|第一次开仓量|
+|n|true|补仓数量|
+|Q|0.03|止盈点|
+|E|0.0046|加仓间隔|
+
+
+> 源码 (python)
+
+``` python
+'''backtest
+start: 2021-05-01 00:00:00
+end: 2021-05-14 00:00:00
+period: 1m
+basePeriod: 1m
+exchanges: [{"eid":"Futures_Binance","currency":"EOS_USDT","balance":1000}]
+args: [["zuokong",true],["n",3],["E",0.02]]
+'''
+def main():
+    while True:
+        exchange.SetContractType("swap")
+        exchange.SetMarginLevel(MarginLevel)
+        ticker = exchange.GetTicker()
+        account = exchange.GetAccount()
+        position = exchange.GetPosition()
+        if zuoduo:
+            if len(position) == 0:   
+                    exchange.SetDirection("buy")
+                    exchange.Buy(-1, k, "开多")
+            if len(position) > 0:
+                if position[0].Type==0:
+                    fp=Q*position[0].Amount
+                    if position[0].Profit > fp :
+                        exchange.SetDirection("closebuy")
+                        exchange.Sell(-1, position[0].Amount) 
+                        account = exchange.GetAccount()
+                        LogProfit(account["Balance"]) 
+                    fx=(E/n)*position[0].Amount  
+                    if position[0].Profit<position[0].Margin * -fx :
+                        #轮询加仓
+                            exchange.SetDirection("buy")
+                            exchange.Buy(-1, n)
+                            LogProfit(account["Balance"])     
+        if zuokong:
+            if len(position) == 0:   
+                    exchange.SetDirection("sell")
+                    exchange.Sell(-1, k, "开空")
+            if len(position) > 0:
+                if position[0].Type == 1 :
+                    fp=Q*position[0].Amount
+                    if position[0].Profit > fp :
+                        exchange.SetDirection("closesell")
+                        exchange.Buy(-1, position[0].Amount) 
+                        account = exchange.GetAccount()
+                        LogProfit(account["Balance"]) 
+                    fx=(E/n)*position[0].Amount  
+                    if position[0].Profit<position[0].Margin * -fx :
+                        #轮询加仓
+                            exchange.SetDirection("sell")
+                            exchange.Sell(-1, n)
+                            LogProfit(account["Balance"])
+        
+        Sleep(1000)
+```
+
+> 策略出处
+
+https://www.fmz.com/strategy/301962
+
+> 更新时间
+
+2021-07-27 15:08:18

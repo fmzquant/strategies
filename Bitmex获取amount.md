@@ -35,6 +35,10 @@ config = {
     MATICUSDT: 0.0001,
     AAVEUSDT: 0.000001,
     SUSHIUSDT: 0.00001,
+    AXSUSDT: 0.00001,
+    SRMUSDT: 0.00001,
+    LUNAUSD: 0.00001,
+    AVAXUSD: 0.00001,
 }
 
 function Bitmex_amount(symbol, value, price) {
@@ -103,6 +107,18 @@ function Bitmex_amount(symbol, value, price) {
     }
     if (symbol == "SUSHI") {
         amount = value / price / config.SUSHIUSDT
+    }
+    if (symbol == "AXS") {
+        amount = value / price / config.AXSUSDT
+    }
+    if (symbol == "SRM") {
+        amount = value / price / config.SRMUSDT
+    }
+    if (symbol == "LUNA") {
+        amount = value / price / config.LUNAUSD
+    }
+    if (symbol == "AVAX") {
+        amount = value / price / config.AVAXUSD
     }
     amount = _N(amount, 0)
     if (amount > 0) {
@@ -175,6 +191,18 @@ function Bitmex_value(symbol, amount, price) {
     if (symbol == "SUSHI") {
         value = amount * config.SUSHIUSDT * price
     }
+    if (symbol == "AXS") {
+        value = amount * config.AXSUSDT * price
+    }
+    if (symbol == "SRM") {
+        value = amount * config.SRMUSDT * price
+    }
+    if (symbol == "LUNA") {
+        value = amount * config.LUNAUSD * price
+    }
+    if (symbol == "AVAX") {
+        value = amount * config.AVAXUSD * price
+    }
     value = _N(parseFloat(value), 8)
     if (value > 0) {
         return value
@@ -207,4 +235,4 @@ https://www.fmz.com/strategy/223326
 
 > 更新时间
 
-2021-07-21 13:16:41
+2021-10-01 11:02:46

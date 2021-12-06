@@ -5,11 +5,11 @@ python版商品期货多品种均线策略(教学)
 
 > 策略作者
 
-小小梦
+雨幕
 
 > 策略描述
 
-相关文章：https://www.fmz.com/bbs-topic/5629
+相关文章：https://www.fmz.cn/bbs-topic/5629
 
 > 策略参数
 
@@ -507,4 +507,4 @@ https://www.fmz.com/strategy/208512
 
 > 更新时间
 
-2020-05-20 13:53:07
+2021-10-26 10:48:41
