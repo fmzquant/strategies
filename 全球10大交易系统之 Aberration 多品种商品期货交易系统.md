@@ -389,7 +389,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/25943
+https://www.fmz.cn/strategy/25943
 
 > 更新时间
 

@@ -34,7 +34,7 @@ if (pos != scope._tmp) {
 
 > 策略出处
 
-https://www.fmz.com/strategy/328005
+https://www.fmz.cn/strategy/328005
 
 > 更新时间
 

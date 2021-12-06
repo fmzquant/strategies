@@ -776,7 +776,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/319255
+https://www.fmz.cn/strategy/319255
 
 > 更新时间
 

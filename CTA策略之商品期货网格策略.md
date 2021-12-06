@@ -15,7 +15,7 @@ CTA策略之商品期货网格策略
 #### 二、什么是网格策略
 网格策略也称“渔网策略”，就行渔夫捕鱼一样，它是以某个价格为基准，在其上下分别设置价格线（撒网待鱼），每当价格触发价格线时，通过加减仓操作尽可能获利。网格策略属于左侧交易，不需要预测价格涨跌方向，不想右侧交易一样追涨杀跌，而是逆势而为，在价格下跌时买入，价格上涨时卖出。
 
- ![IMG](https://www.fmz.com/upload/asset/39e6d13230875ca90a67.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39e6d13230875ca90a67.png) 
 
 上图展示了网格策略原理，图中蓝色的线代表价格，中间深色的线代表了交易者预期价格，每个网格线之间的价差为10元，当价格突破网格线就卖出1手，当价格跌破网格线就买入1手。在左边行情上涨时，通过低买高卖账户净收益为50元，持空头3手，持仓均价为130元；在右边行情下跌时，通过低买高卖账户净收益为100元，持空头5手，持仓均价为80元。
 
@@ -88,11 +88,11 @@ TRADE_AGAIN(100);
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/39978d86ba5117cc9c5c.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39978d86ba5117cc9c5c.png) 
 **回测绩效**
-  ![IMG](https://www.fmz.com/upload/asset/3a39e723690c1a97b3a4.png) 
+  ![IMG](https://www.fmz.cn/upload/asset/3a39e723690c1a97b3a4.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/399d8e28dcdc63713b61.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/399d8e28dcdc63713b61.png) 
 
 
 
@@ -143,7 +143,7 @@ TRADE_AGAIN(100);
 
 > 策略出处
 
-https://www.fmz.com/strategy/325958
+https://www.fmz.cn/strategy/325958
 
 > 更新时间
 

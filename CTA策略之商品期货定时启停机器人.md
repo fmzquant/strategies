@@ -76,8 +76,8 @@ function getArgs(){
 ### 四、如何使用
 **第1步：申请发明者量化API**
 打开该链接 https://www.fmz.cn/m/account 选择API接口标签，然后点击右上方创建新的ApiKey，默认“*”号即开启了所有权限。创建完毕后页面就会显示“AccessKey”和“SecretKey”。
- ![IMG](https://www.fmz.com/upload/asset/392128f2c5b1c594fa4b.png) 
- ![IMG](https://www.fmz.com/upload/asset/395b15cbbd30c4215a98.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/392128f2c5b1c594fa4b.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/395b15cbbd30c4215a98.png) 
 
 **第2步：修改策略中的全局变量**
 该策略一共有4个可以修改的全局变量，分别是：secretKey、accessKey、botId、code。其中secretKey和accessKey变量需要修改为刚才申请发明者量化API“AccessKey”和“SecretKey”，注意是字符串类型。全局变量botId则是指定的机器人ID号，数字类型。全局变量code则是热门合约，可以设置为：中金所的“IF000”、上期所的“rb000”、大商所的“i000”、郑商所的“RM000”等等。如下面的代码：
@@ -90,8 +90,8 @@ var code = 'rb000';
 
 ### 五、实盘应用
 在实盘应用中，就像创建常规机器人一样部署即可。如下图所示：名字为“CTA策略之商品期货定时启停机器人”机器人管理者ID为266250的机器人。
- ![IMG](https://www.fmz.com/upload/asset/39cc741848b22360f1aa.png) 
- ![IMG](https://www.fmz.com/upload/asset/3a5bbbd0f9f9a1e341f2.jpg) 
+ ![IMG](https://www.fmz.cn/upload/asset/39cc741848b22360f1aa.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a5bbbd0f9f9a1e341f2.jpg) 
 
 ### 六、总结
 作为抛砖引玉，本篇文章管理机器人策略只能管理一个机器人，不过相信你通读策略代码后，可以对该策略进行升级改进，可以升级为管理多个机器人，以及对发明者量化策略、托管者等诸多功能加以扩充，具体可以参考 https://www.fmz.cn/api#FMZ平台扩展API 。
@@ -194,7 +194,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/327556
+https://www.fmz.cn/strategy/327556
 
 > 更新时间
 

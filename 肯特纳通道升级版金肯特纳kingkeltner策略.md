@@ -11,7 +11,7 @@
 
 #### 肯特纳通道简介
 肯特纳通道是由Chester W. Keltner在上个世纪60年代发明的一个交易系统，其核心思想是均线理论。并且当时该系统在非常长的一段时间内，得到了令人瞩目的成绩。虽然原版的肯特纳通道系统没有刚出现时那么有效，但它的核心思想，至今都对交易界产生很深远的影响。
- ![IMG](https://www.fmz.com/upload/asset/3a03d943f203d863b57c.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a03d943f203d863b57c.png) 
 #### 肯特纳通道的原理
 说起通道类策略，大家可能会想到著名的布林带（BOLL），但不一样的是肯特纳通道先是用最高价、最低价、收盘价这三者的平均值作为一个基础价格，然后再计算出这个基础价格的N周期平均值，这个平均值就是肯特纳通道的中轨。上轨就是中轨加上波动幅度的倍数，下轨就是中轨减去波动幅度的倍数。
 
@@ -78,11 +78,11 @@ AUTOFILTER;  // 设置信号过滤方式
 - 手续费：交易所2倍
 
 **测试环境**
- ![IMG](https://www.fmz.com/upload/asset/3a2cf6fc78a7838cf388.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a2cf6fc78a7838cf388.png) 
 **收益明细**
- ![IMG](https://www.fmz.com/upload/asset/39beb91951b537370857.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39beb91951b537370857.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/395f3939f051c589bc78.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/395f3939f051c589bc78.png) 
 上面几张图是BitMEX交易所中XBTUSD永续合约的回测结果，在趋势行情中金肯特纳依然保持这有效性，尽管这种效率已经不是太高，但是从整体来看资金曲线是向上的，即使在2019年7月份市场走势出现回撤时，净值曲线却并没有较大的回撤。
 
 #### 总结
@@ -124,7 +124,7 @@ AUTOFILTER;  // 设置信号过滤方式
 
 > 策略出处
 
-https://www.fmz.com/strategy/326009
+https://www.fmz.cn/strategy/326009
 
 > 更新时间
 

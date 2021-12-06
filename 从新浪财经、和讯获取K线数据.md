@@ -200,7 +200,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/327838
+https://www.fmz.cn/strategy/327838
 
 > 更新时间
 

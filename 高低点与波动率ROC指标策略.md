@@ -15,8 +15,8 @@
 - 支持：商品期货
 - 官方网站：www.quantinfo.com
 
-![IMG](https://www.fmz.com/upload/asset/1f5e3caa65a3871ae9c9d99f9c11bdf0.png)  
-![IMG](https://www.fmz.com/upload/asset/ec4cbcbb036925739a04de90cadf1d8d.png) 
+![IMG](https://www.fmz.cn/upload/asset/1f5e3caa65a3871ae9c9d99f9c11bdf0.png)  
+![IMG](https://www.fmz.cn/upload/asset/ec4cbcbb036925739a04de90cadf1d8d.png) 
 
 - 主图：
    N周期最高价，公式：HH^^HHV(H,N);
@@ -31,8 +31,8 @@
 - Data cycle: 15M, etc.
 - Support: Commodity Futures
 
-  ![IMG](https://www.fmz.com/upload/asset/b2adb08374654bb533bed3f55e502592.png)  
-  ![IMG](https://www.fmz.com/upload/asset/b10e5232882a919868802de72ba6f613.png) 
+  ![IMG](https://www.fmz.cn/upload/asset/b2adb08374654bb533bed3f55e502592.png)  
+  ![IMG](https://www.fmz.cn/upload/asset/b10e5232882a919868802de72ba6f613.png) 
 
 - Main chart:
   The highest price of N cycle, formula: HH ^^ HHV (H, N);
@@ -88,7 +88,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/327852
+https://www.fmz.cn/strategy/327852
 
 > 更新时间
 

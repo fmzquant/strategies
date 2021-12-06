@@ -16,7 +16,7 @@
 #### 图表中的阿隆指标
 
 阿隆指标通过计算当前K线距离前最高价和最低价之间的K线数量，来帮助交易者预测价格走势与趋势区域的相对位置关系变化。它有两部分组成，即：阿隆上线（AroonUp）和阿隆下线（AroonDown），这两条线在0~100之间上下移动，虽然命名为上线和下线，但从图表上看并不像BOLL指标那样是真正意义上的上线和下线。如下图就是阿隆指标：
- ![IMG](https://www.fmz.com/upload/asset/395eac8a5478d8736104.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/395eac8a5478d8736104.png) 
 
 #### 阿隆指标的计算方法
 
@@ -136,11 +136,11 @@ AUTOFILTER;
 - 手续费：交易所2倍
 
 **测试环境**
- ![IMG](https://www.fmz.com/upload/asset/39907574d57473cf986d.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39907574d57473cf986d.png) 
 **收益明细**
- ![IMG](https://www.fmz.com/upload/asset/394305f56784dce4a690.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/394305f56784dce4a690.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/3a2fe000eebf1ffd7ca1.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a2fe000eebf1ffd7ca1.png) 
 从上面的回测结果看，策略在市场行情走势流畅的时候表现很好，无论是在上涨或下跌中，阿隆指标可以完整的跟踪到行情。资金曲线也整体走势向上，并没有出现较大幅度的回撤。但是在震荡行情中，特别是连续的震荡行情中，出现了局部回撤。
 
 #### 阿隆指标的优缺点
@@ -202,7 +202,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/326012
+https://www.fmz.cn/strategy/326012
 
 > 更新时间
 

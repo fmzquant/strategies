@@ -18,9 +18,9 @@
 接下来就要讲一下非常经典的策略了Dual Thrust，这个策略是小编我在FMZ.COM学习程序化交易交易入门的第一个策略。在FMZ.COM上这个策略有很多版本，例如：商品期货版本，数字货币版本等，以及各种不同编程语言的版本。为什么这个策略比较适合入门呢？因为这个策略涵盖了策略开发的很多方面，诸如策略图表，实时状态信息显示，数据处理，交易逻辑设计等等。并且策略并不复杂，代码也不难懂。本文讲解的这个「股票版Dual Thrust策略」移植自商品期货版的DualThrust策略。
 ...
 
-https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/161e33fd8a4040845f2f.png)
+https://www.fmz.cn![IMG](https://www.fmz.cn/upload/asset/161e33fd8a4040845f2f.png)
 
-https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/174ef4a218e34eaf999e.png)
+https://www.fmz.cn![IMG](https://www.fmz.cn/upload/asset/174ef4a218e34eaf999e.png)
 
 #### 策略目前仅为测试版，仅为交流学习，实盘可以自行修改优化。
 
@@ -466,7 +466,7 @@ function main(){
 
 > 策略出处
 
-https://www.fmz.com/strategy/238425
+https://www.fmz.cn/strategy/238425
 
 > 更新时间
 

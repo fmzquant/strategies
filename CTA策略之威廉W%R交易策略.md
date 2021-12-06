@@ -15,7 +15,7 @@ CTA策略之威廉W%R交易策略
 ### 二、威廉W%R原理
 威廉指标在公式设计上与随机指标原理类似，它们都是从研究价格波动幅度为出发点，通过分析一段时间之内的最高价、最低价、收盘价的相互关系，以此判断市场市场买卖双方力量的强弱（超买超卖情况），从而预测价格中短期走势。如下图子图为威廉W%R指数：
 
- ![IMG](https://www.fmz.com/upload/asset/3a3f9282b7e616a3e9ff.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a3f9282b7e616a3e9ff.png) 
 
 其主要原理是利用震荡点，来反映市场的超买超卖行为，分析多空双方力量对比，提取出有效的信号，来判断市场中短期价格走势，与其他技术指标一样，威廉指标可以广泛应用于多个周期的行情，包括：日线、周线、月线、小时线、分钟线等各种数据周期。
 
@@ -82,11 +82,11 @@ C2, SPK;
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/3a7eda19d99168ba94f6.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a7eda19d99168ba94f6.png) 
 **回测绩效**
- ![IMG](https://www.fmz.com/upload/asset/3a4ac54447a6094246d7.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a4ac54447a6094246d7.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/39a5b30fdf2448243444.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39a5b30fdf2448243444.png) 
 
 
 
@@ -115,7 +115,7 @@ C2, SPK;
 
 > 策略出处
 
-https://www.fmz.com/strategy/325936
+https://www.fmz.cn/strategy/325936
 
 > 更新时间
 

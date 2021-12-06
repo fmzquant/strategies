@@ -25,7 +25,7 @@ CTA策略之商品期货黑色系多头择时策略
 
 #### 三、美元指数与大宗商品
 2021年与我们日常生活息息相关的上游物资，不知不觉均出现明显上涨。正如巴菲特所言这一切都拜美联储宽松的货币和财政政策所赐，由于疫情期间美国出台的一系列天量刺激措施，全球的经济复苏已经裹挟着通胀奔涌而来。
- ![IMG](https://www.fmz.com/upload/asset/39b751b439081ac3fcb8.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39b751b439081ac3fcb8.png) 
 图片来源：新浪财经、东方财富
 
 如图所示，上图是美元指数从2018年5月至今的数据，下图是大宗商品指数从2018年8月至今的数据，从图中可以看出，美元指数和大宗商品指数始终呈相反的走势。
@@ -106,13 +106,13 @@ T1 < 5 && T1 > 3 && DT < 7, SP;
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/394c8d1bd5c8566f1311.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/394c8d1bd5c8566f1311.png) 
  
 **回测绩效**
- ![IMG](https://www.fmz.com/upload/asset/394e31969db01c285d6f.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/394e31969db01c285d6f.png) 
  
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/3962b12e6c0d57df2c03.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3962b12e6c0d57df2c03.png) 
 
 > 策略参数
 
@@ -157,7 +157,7 @@ T1 < 5 && T1 > 3 && DT < 7, SP;
 
 > 策略出处
 
-https://www.fmz.com/strategy/325948
+https://www.fmz.cn/strategy/325948
 
 > 更新时间
 

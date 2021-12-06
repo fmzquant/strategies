@@ -27,18 +27,18 @@ CTA策略之商品期货简易马丁格尔
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/39df3d9ffd96e830c2f4.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39df3d9ffd96e830c2f4.png) 
 **回测绩效**
- ![IMG](https://www.fmz.com/upload/asset/3a0b9d36caf93df156c0.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a0b9d36caf93df156c0.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/3992048c1b248823b8e0.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3992048c1b248823b8e0.png) 
 **日志信息**
- ![IMG](https://www.fmz.com/upload/asset/3979363f6bf790113495.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3979363f6bf790113495.png) 
 
 #### 四、马丁格尔策略升级
 马丁格尔策略最大的风险是市场一直处于单边行情，如果交易者的持仓方向与市场方向背道而驰，那么积累起来的头寸是非常恐怖的。如果交易者的初始资金是1万元，亏损时以2倍加仓，那么只需要连续亏损7次就会爆仓。但如果把倍投改为1.5，情况就会好很多，连续亏损12次才会爆仓；如果把倍投改为1.1，则需要连续亏损49次才会爆仓。因为占用的资金量比较小，操作起来风险相对变小了。
 
- ![IMG](https://www.fmz.com/upload/asset/390720a08054ffca4d39.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/390720a08054ffca4d39.png) 
 
 上图是一个倍投数和资金投入比例图，由此可见采用较低的倍投数，所占用的资金非常小，策略抗风险能力就越强，所以为确保资金安全，实盘建议使用低倍投数，建议在实盘之前计算好倍投数，最好是能扛连续亏损十几次的倍投数。
 
@@ -123,7 +123,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/271903
+https://www.fmz.cn/strategy/271903
 
 > 更新时间
 

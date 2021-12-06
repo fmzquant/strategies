@@ -18,12 +18,12 @@ CTA策略之简易波动EMV策略
 #### 二、EMV计算公式
 **第一步：计算mov_mid**
 其中TH代表当天最高价，TL代表当天最低价，YH代表前日最高价，YL代表前日最低价。那么如果MID > 0意味着今天的平均价高于昨天的平均价。
- ![IMG](https://www.fmz.com/upload/asset/399847709b43ab8f26a3.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/399847709b43ab8f26a3.png) 
 **第二步：计算ratio**
 其中TVOL代表当天交易量，TH代表当天最高价，TL代表当天最低价。
- ![IMG](https://www.fmz.com/upload/asset/39ea4592e02efc0d77f7.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39ea4592e02efc0d77f7.png) 
 **第三步：计算emv**
- ![IMG](https://www.fmz.com/upload/asset/39a703e15cec3e690cf6.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39a703e15cec3e690cf6.png) 
 
 #### 三、EMV用法
 EMV的作者认为，巨量上涨伴随的是能量的快速枯竭，上涨往往不会持续太久；反而温和的成交量，能够保存一定的能量，往往使上涨持续更久。一旦上涨趋势形成，较少的成交量就能推动价格上涨，EMV的数值就会升高。一旦下跌趋势行情形成，往往伴随的是无量或少量下跌，EMV的数值就会下降。如果价格处于震荡行情或者价格上涨和下跌都伴随较大成交量时，EMV的数值也会接近于零。因此你会发现，EMV在大部分行情中都处于零轴下方，这也是这个指标的一大特色。站在另一个角度看，EMV重视大趋势且能够产生足够利润的行情。
@@ -114,14 +114,14 @@ if position == 0:  # 如果无持仓
 
 #### 五、策略回测
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/39c4770e20a6363e699f.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39c4770e20a6363e699f.png) 
 
 **回测日志**
- ![IMG](https://www.fmz.com/upload/asset/391451965dcb31f73815.png) 
- ![IMG](https://www.fmz.com/upload/asset/3a00562784520d8904fc.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/391451965dcb31f73815.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a00562784520d8904fc.png) 
 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/3a02f62c4f927ac4805e.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a02f62c4f927ac4805e.png) 
 
 #### 六、总结
 通过本节课程学习，可以看出EMV与普通交易者的看法相反，但却不无道理。由于EMV引入了成交量数据，因此比其他单纯用价格计算的技术指标，更能有效发现价格背后的东西。每一种策略都有着不同的特点，只有充分了解不同策略之间的优缺点，去其糟粕取其精华才能离成功更进一步。
@@ -196,7 +196,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/213636
+https://www.fmz.cn/strategy/213636
 
 > 更新时间
 

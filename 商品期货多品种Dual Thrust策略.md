@@ -143,7 +143,7 @@ function main(){
 
 > 策略出处
 
-https://www.fmz.com/strategy/328021
+https://www.fmz.cn/strategy/328021
 
 > 更新时间
 

@@ -252,7 +252,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/325981
+https://www.fmz.cn/strategy/325981
 
 > 更新时间
 

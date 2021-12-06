@@ -23,7 +23,7 @@ MACD&MA指标组合策略
   主图显示：DMA1，公式 DMA1^^MA(C,L1);
                     DMA2，公式 DMA2^^MA(C,L2);
 
-![IMG](https://www.fmz.com/upload/asset/6d7b1a3241d607bbc4f4f853687fcf54.png)
+![IMG](https://www.fmz.cn/upload/asset/6d7b1a3241d607bbc4f4f853687fcf54.png)
 
 > 策略参数
 
@@ -78,7 +78,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/327849
+https://www.fmz.cn/strategy/327849
 
 > 更新时间
 

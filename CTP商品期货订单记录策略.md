@@ -11,7 +11,7 @@ CTP商品期货订单记录策略
 
 ## CTP商品期货订单记录策略
 
-![IMG](https://www.fmz.com/upload/asset/16a52a5f0a62139310bf.png) 
+![IMG](https://www.fmz.cn/upload/asset/16a52a5f0a62139310bf.png) 
 
 该策略没有任何参数。
 该策略作为CTP商品期货事件触发机制的一个例子展示，可以记录例如手工下单，机器人下单的订单信息，并且显示出来。
@@ -83,7 +83,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/234381
+https://www.fmz.cn/strategy/234381
 
 > 更新时间
 

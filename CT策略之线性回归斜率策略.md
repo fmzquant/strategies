@@ -44,7 +44,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/327774
+https://www.fmz.cn/strategy/327774
 
 > 更新时间
 

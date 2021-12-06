@@ -15,7 +15,7 @@
 - 支持：商品期货、数字货币现货、数字货币期货
 - 官方网站：www.quantinfo.com
 
-![IMG](https://www.fmz.com/upload/asset/36b0e279ae314411a9d6b7e94a0623f0.png)
+![IMG](https://www.fmz.cn/upload/asset/36b0e279ae314411a9d6b7e94a0623f0.png)
 
 - 主图：
   中轨，公式：MIDLINE^^MA((H + L + C)/3,LENGTH1);
@@ -32,8 +32,8 @@
 - Data Cycle: 15M, 30M, etc.            
 - Support: Commodity Futures, Digital Currency Spot, Digital Currency Futures 
 
-   ![IMG](https://www.fmz.com/upload/asset/3ab48b24790ffa7df8578da42ee9890d.png)  
-   ![IMG](https://www.fmz.com/upload/asset/26254e88d3af8327dc70f9e4d0797b88.png) 
+   ![IMG](https://www.fmz.cn/upload/asset/3ab48b24790ffa7df8578da42ee9890d.png)  
+   ![IMG](https://www.fmz.cn/upload/asset/26254e88d3af8327dc70f9e4d0797b88.png) 
 
 - Main chart:
   medium track, formula: MIDLINE ^^ MA ((H + L + C) / 3, LENGTH1);
@@ -85,7 +85,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/327851
+https://www.fmz.cn/strategy/327851
 
 > 更新时间
 

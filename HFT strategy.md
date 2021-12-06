@@ -292,7 +292,7 @@ void main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/326007
+https://www.fmz.cn/strategy/326007
 
 > 更新时间
 

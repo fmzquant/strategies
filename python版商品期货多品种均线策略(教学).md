@@ -503,7 +503,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/208512
+https://www.fmz.cn/strategy/208512
 
 > 更新时间
 

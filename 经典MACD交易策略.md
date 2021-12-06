@@ -16,7 +16,7 @@
 #### MACD简介
 相信做过交易的人对MACD都不陌生，这是一个非常古老的技术指标，它是由查拉尔·阿佩尔(Geral Appel)在上个世纪70年代发明的，全称指数平滑异同移动平均线。顾名思义这个指标是基于均线来对趋势进行判断。
 
- ![IMG](https://www.fmz.com/upload/asset/3a1df4ab082bd983417b.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a1df4ab082bd983417b.png) 
 
 在图形上看，MACD主要由黄白线和中间的红绿柱组成。白线叫做DIF，反映的是一段时间内价格的变化情况；黄线叫做DEA，它是DIF的均线，所以相对要平缓一些；而红绿柱叫做BAR柱，反映的是DIF与DEA两线之间的距离。三者合一就是所谓的MACD。
 
@@ -212,7 +212,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/171604
+https://www.fmz.cn/strategy/171604
 
 > 更新时间
 

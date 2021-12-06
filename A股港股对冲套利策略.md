@@ -425,7 +425,7 @@ function onerror() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/312721
+https://www.fmz.cn/strategy/312721
 
 > 更新时间
 

@@ -1045,7 +1045,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/325979
+https://www.fmz.cn/strategy/325979
 
 > 更新时间
 

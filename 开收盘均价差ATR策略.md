@@ -23,7 +23,7 @@
   显示：ATR，公式  ATR^^MA(TR,N);
   显示 ：C_O，公式  C_O:EMA(C,N)-EMA(O,N);
 
-![IMG](https://www.fmz.com/upload/asset/ab8d909c6464234b06ef1f116a4de200.png)
+![IMG](https://www.fmz.cn/upload/asset/ab8d909c6464234b06ef1f116a4de200.png)
 
 ||
 
@@ -35,8 +35,8 @@
 - Data contract: index contract
 - Transaction contract: main contract
 
-  ![IMG](https://www.fmz.com/upload/asset/0472d059ecdceca56fc7baaf5ff79deb.png)  
-  ![IMG](https://www.fmz.com/upload/asset/aa2ad84ec198efe3c4d6afdd25753f3b.png) 
+  ![IMG](https://www.fmz.cn/upload/asset/0472d059ecdceca56fc7baaf5ff79deb.png)  
+  ![IMG](https://www.fmz.cn/upload/asset/aa2ad84ec198efe3c4d6afdd25753f3b.png) 
 
 - Main chart: 
   none
@@ -98,7 +98,7 @@ C>=PRICE_BP,BP(SKVOL);
 
 > 策略出处
 
-https://www.fmz.com/strategy/327850
+https://www.fmz.cn/strategy/327850
 
 > 更新时间
 

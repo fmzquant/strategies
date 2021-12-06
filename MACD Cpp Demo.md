@@ -67,7 +67,7 @@ void main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/142259
+https://www.fmz.cn/strategy/142259
 
 > 更新时间
 

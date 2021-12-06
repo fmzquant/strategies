@@ -11,11 +11,11 @@
 
 商品期货CTP或者易盛没有提供关于逐笔交易的API接口, 但大部分软件商都提供了显示
 
- ![IMG](https://www.fmz.com/upload/asset/19eb906912fbe7ba0e3.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/19eb906912fbe7ba0e3.png) 
  
 以上数据可以通过ticker信息反推出来，下面给出一个完整的策略代码, 发明者量化支持实盘tick回测可以直接回测模拟实盘
 
- ![IMG](https://www.fmz.com/upload/asset/e0c98168dfa80d9015.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/e0c98168dfa80d9015.png) 
 
 
 
@@ -147,7 +147,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/314959
+https://www.fmz.cn/strategy/314959
 
 > 更新时间
 

@@ -14,7 +14,7 @@ CTA策略之利用相对强弱RSI实现低买高卖
 
 ### 二、RSI简介
 RSI英文全称Relative Strength Index，即相对强弱指标，由著名的技术分析派大师威尔斯·维尔德于1786年6月创造。它是根据一段时间内，上涨幅度的和与下跌幅度的和的比率绘制的一种技术曲线，能够反映出市场一定时期内的景气程度，最早就是应用于期货交易，尤其是适合用于短线交易。
- ![IMG](https://www.fmz.com/upload/asset/39c8366fbe50090783e4.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39c8366fbe50090783e4.png) 
  
 ### 三、RSI原理
 RSI的原理很简单，就是通过一系列的数学运算，得出商品期货市场中买卖双方的力量强弱对比，从而预测未来价格的趋势方向。比如在螺纹钢期货市场中，如果超过一半的人要买，这就是买方市场，价格自然就会上涨；如果超过一半的人要卖，这就是卖方市场，价格就会下跌。
@@ -60,9 +60,9 @@ K线周期：日线
 滑点：开平仓各2跳
 
 **回测绩效**
- ![IMG](https://www.fmz.com/upload/asset/390e332c31ada8eaa12d.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/390e332c31ada8eaa12d.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/39758b22972d69d4b23c.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39758b22972d69d4b23c.png) 
 
 ### 六、总结
 世界上没有完美的预测工具，RSI也不例外，根据选择K线周期的不同，RSI给出的结果也不同，理论上短周期的RSI能及时给出交易信号，但可靠性较差。中长周期的RSI信号可靠，但反应滞后，常常错过交易机会。
@@ -108,7 +108,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/325977
+https://www.fmz.cn/strategy/325977
 
 > 更新时间
 

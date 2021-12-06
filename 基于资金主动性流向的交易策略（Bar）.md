@@ -136,7 +136,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/328035
+https://www.fmz.cn/strategy/328035
 
 > 更新时间
 

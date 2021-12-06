@@ -24,7 +24,7 @@
   VAR10:MA(VAR9,PARAM1);
   VAR8:VAR6-VAR7;
 
-![IMG](https://www.fmz.com/upload/asset/e83641b0567b242687792b105de8e211.png)
+![IMG](https://www.fmz.cn/upload/asset/e83641b0567b242687792b105de8e211.png)
 
 ||
 
@@ -34,9 +34,9 @@
 
  - Data cycle: 15M
 
-   ![IMG](https://www.fmz.com/upload/asset/09e140c314c2cd3829cb03f89f502ac6.png)  
+   ![IMG](https://www.fmz.cn/upload/asset/09e140c314c2cd3829cb03f89f502ac6.png)  
 
-   ![IMG](https://www.fmz.com/upload/asset/5a2ed54d056607b1432ae31cb5c0903d.png) 
+   ![IMG](https://www.fmz.cn/upload/asset/5a2ed54d056607b1432ae31cb5c0903d.png) 
 
  - Main chart:
    VAR2^^MA(C, PARAM2);
@@ -103,7 +103,7 @@ BUYY,BP(SKVOL);
 
 > 策略出处
 
-https://www.fmz.com/strategy/327848
+https://www.fmz.cn/strategy/327848
 
 > 更新时间
 

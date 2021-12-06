@@ -35,7 +35,7 @@ Dual Thrust策略属于开盘区间突破策略，它以当天开盘价加减一
 - down_line = open - short_range
 
 #### 策略逻辑
- ![IMG](https://www.fmz.com/upload/asset/39c9c79b71e2ecc46854.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39c9c79b71e2ecc46854.png) 
 
 - 做多：价格向上突破上轨
 - 做空：价格向下突破下轨
@@ -125,11 +125,11 @@ if mp == -1 and last_bar_close >= up_line:
 - 周期：一小时
 - 滑点：开平仓各2跳
 - 手续费：交易所2倍
- ![IMG](https://www.fmz.com/upload/asset/391b3bc7c635c45aba32.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/391b3bc7c635c45aba32.png) 
 **绩效报告**
- ![IMG](https://www.fmz.com/upload/asset/3a469acb1a33cc5e4afe.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a469acb1a33cc5e4afe.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/3a39c2cb5e6534cdaac9.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a39c2cb5e6534cdaac9.png) 
 
 #### 结尾
 最后提醒大家，尽可能折中选择Ks和Kx外部参数的值。如果值太小，可能会及时跟踪到趋势，但会有很多虚假的突破信号；如果值太大，可能会错过趋势开始的部分，或者刚入场不久，趋势就结束了。
@@ -221,7 +221,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/177504
+https://www.fmz.cn/strategy/177504
 
 > 更新时间
 

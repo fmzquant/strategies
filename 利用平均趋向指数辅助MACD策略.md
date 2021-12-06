@@ -15,7 +15,7 @@
 #### 什么是平均趋向指数
 平均趋向指数是衡量趋势的技术工具，简称ADX(average directional indicator)，它是由韦尔斯·怀尔德在1978年提出，与其他技术分析工具不同的是，ADX并不能判断多空方向，更不能提示精确的买卖点位，它只是衡量当前趋势的强弱。
 
- ![IMG](https://www.fmz.com/upload/asset/3a16876eeada296c97e1.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a16876eeada296c97e1.png) 
 
 ADX的默认周期参数是14，通常在K线图的副图中显示。它的值是在0~100之间，数值越大说明上涨或下跌趋势越强力，通常当ADX的值大于40时，说明趋势强力，此时使用趋势交易才具有最大的回报潜力；当ADX的值小于20时，说明趋势疲软，并警告交易者不要使用趋势跟踪交易策略。
 
@@ -283,7 +283,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/174672
+https://www.fmz.cn/strategy/174672
 
 > 更新时间
 

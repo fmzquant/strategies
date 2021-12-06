@@ -16,14 +16,14 @@ CTA策略之orderflow订单流策略(1)
 在二级交易市场种，影响价格变化的因素是纷繁复杂的，并且每一个因素影响价格变化的权重都不一样，以至于很难从传统技术分析图形中推导出价格行为，因为相对于价格和成交量来说，技术分析图形相对抽象和滞后。而OrderFlow订单流工具的横空出世，使得市场更加通透。OrderFlow订单流有很多种分类，包括：市场深度(L2数据)、成交量分布(VP)、足迹图(Footprint Chart)、成交明细(Sales Details)等等，如下图所示：
 
 1、市场深度(L2数据)
-![](https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/3999e86794a740e64803.png))
+![](https://www.fmz.cn![IMG](https://www.fmz.cn/upload/asset/3999e86794a740e64803.png))
   
 2、成交量分布(VP)
- ![IMG](https://www.fmz.com/upload/asset/3a79d063885631ae63fb.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a79d063885631ae63fb.png) 
 3、足迹图(Footprint Chart)
- ![IMG](https://www.fmz.com/upload/asset/3a47a738b5ad605cbaf2.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a47a738b5ad605cbaf2.png) 
 4、成交明细(Sales Details)
- ![IMG](https://www.fmz.com/upload/asset/3958802cf8b9dc05232a.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3958802cf8b9dc05232a.png) 
  
 ### 三、OrderFlow订单流原理
 市场充斥着各种各样的信息，好的坏的、真的假的，这些信息就像荆棘一样错纵交织，导致这些消息很难被理解，很难用正确的逻辑推导，比如利好消息出来，但价格却没有很大变动；再比如价格往往在一片质疑中走势波澜壮阔的上涨行情；牛市往往在大家都看多时结束等等。所以我们需要站在巨人的肩膀上去分析这个市场，披荆斩棘从中抽取出价格波动的真正原因。
@@ -32,12 +32,12 @@ CTA策略之orderflow订单流策略(1)
 
 ### 四、订单流中的Delta结构数据
 传统的日本蜡烛图(K线)有开盘价、最高价、最低价、收盘价等四个价格，K线仅仅代表这个时间段内的价格变化情况，比如小时线代表了一个小时内的价格变化情况。而Delta结构数据则是根据Tick数据，提供了K线时间段内发生的具体细节，包括K线每个价格的多头和空头成交量，可以很清晰的看见多空成交的订单。如下图所示：
- ![IMG](https://www.fmz.com/upload/asset/3a47a738b5ad605cbaf2.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a47a738b5ad605cbaf2.png) 
 
 在上面的Delta结构数据中，每一根K线都有一个独立的Delta结构数据，在Delta结构数据方框中，最上方是这根K线总的成交量，最下方是这根K线所有多头成交量和空头成交量的差，中间则是这根K线每个价格多头成交量和空头成交量数据。如你所见Delta结构数据将K线拆分成更详细的可视化数据，从而帮助投资者理解价格变动的机制。
 
 ### 五、实盘运行
- ![IMG](https://www.fmz.com/upload/asset/39fda661e67f6ab6d0a9.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39fda661e67f6ab6d0a9.png) 
 ### 六、总结
 本篇详细介绍了OrderFlow订单流策略基础知识，以及利用发明者量化交易平台，实现了一个足迹图(Footprint Chart)策略，该策略可以直接用于商品期货实盘账户。在接下来的章节中，我们将深入研究OrderFlow订单流数据，进而开发一系列基于OrderFlow订单流数据的交易策略。
 
@@ -315,7 +315,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/291843
+https://www.fmz.cn/strategy/291843
 
 > 更新时间
 

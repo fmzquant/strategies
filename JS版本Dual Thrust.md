@@ -130,7 +130,7 @@ function main() {
 
 > 策略出处
 
-https://www.fmz.com/strategy/36100
+https://www.fmz.cn/strategy/36100
 
 > 更新时间
 

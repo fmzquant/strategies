@@ -17,18 +17,18 @@ CTA策略之筑底形态ZDZB策略
 
 **双重顶底**
 双重顶底又叫M顶W底，这种形态在K线的价格走势中经常出现。双顶是由2个相近的高点构成，其形态就像英文字母M，双底是由2个相近的低点构成，其形态就像英文字母W。
- ![IMG](https://www.fmz.com/upload/asset/39a1165e6b23900facdd.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39a1165e6b23900facdd.png) 
 如上图中的双重底所示，当价格持续下跌到第1个低点，又反弹至中间相对高低，然后价格又下跌至第2个低点，这两个低点几乎在同一个水平价位。进而形成了一个双重底形态。
 
 **头肩顶底**
 头肩顶底是一个典型的趋势反转形态，头肩顶一般出现在上涨行情的尾声，头肩底一般出现在下跌行情的尾声。在图形中是以左肩、顶底、右肩组成。如下图所示：
- ![IMG](https://www.fmz.com/upload/asset/3a48cfb4e9272fbc84cb.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a48cfb4e9272fbc84cb.png) 
 
 从上图中可以看到，头肩底包含三个连续的波谷，其中中间的波峰就是这波趋势的最高位，中间波峰的左边和右边即是左肩和右肩，左右肩处于相对较低的价位，且他们的价位大致在同一个水平。连接左肩和右肩的波谷所得的线段就是颈线，在头肩底中颈线具有支持的作用。
 
 **三重顶底**
 三重顶底是头肩顶底的延伸，也是双底W的复合形态，虽然三重顶底形态出现的概率较小，但却比前两者有更高的成功率，一旦该形态形成，很大程度能预测未来的价格走势。
- ![IMG](https://www.fmz.com/upload/asset/398203856a551292ead1.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/398203856a551292ead1.png) 
 上图是一个三重底，在这段价格走势中，三个底部大致都在同一个价位水平，形成了一个强大的支撑区域，除非价格有重大突破，否则很难跌到三重底。实际上关于顶底转折的形态还有很多，比如：底部三角、收敛扩散三角、菱形、旗形、圆弧形等等。
 
 #### 三、什么是筑底指标
@@ -36,7 +36,7 @@ CTA策略之筑底形态ZDZB策略
 
 #### 四、计算筑底指标
 筑底指标的计算方法很简单，用过去125天上涨的周期作为分子用过去125天下跌的周期作为分母，计算出来的数字再取N天的移动平均值。
- ![IMG](https://www.fmz.com/upload/asset/38ec18f6d10e90cbfc26.gif) 
+ ![IMG](https://www.fmz.cn/upload/asset/38ec18f6d10e90cbfc26.gif) 
 
 发明者量化MY语言公式如下：
 ```
@@ -50,11 +50,11 @@ COUNT(CLOSE>=REF(CLOSE,1),N1)/COUNT(CLOSE<REF(CLOSE,1),N1)
 
 #### 六、策略回测
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/39719a3f4c2991e25a29.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39719a3f4c2991e25a29.png) 
 **绩效报告**
- ![IMG](https://www.fmz.com/upload/asset/399c2fa3a94f00053cbf.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/399c2fa3a94f00053cbf.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/39b8d0a004e44095fa3a.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39b8d0a004e44095fa3a.png) 
 
 > 策略参数
 
@@ -90,7 +90,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/325985
+https://www.fmz.cn/strategy/325985
 
 > 更新时间
 

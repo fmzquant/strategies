@@ -18,7 +18,7 @@ CTA策略之商品期货马丁普林格KST策略
 在FinanceWord融语财经的外汇黄金技术分析中，马丁·普林格都会使用一个叫作KST的指标，本篇文章就以马丁·普林格的KST指标作为指引，详细论述其原理，最后依托发明者量化(fmz.com)交易平台，开发一个商品期货马丁普林格KST策略。
 
 #### 三、KST原理
- ![IMG](https://www.fmz.com/upload/asset/3a0af00c040e09f9736c.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a0af00c040e09f9736c.png) 
 KST指标全称为Know Sure Thing，中文名称是“确然指标”，最早出现在1992年的《股票与商品期货》杂志中，KST本质上是基于动量的震荡指标，其核心是变动率(ROC)，通过ROC衡量了4种不同时间周期的价格动量，然后再将它们组合成一个单一的动量震荡指标。它可以通过修正的价格变动，发现市场超买和超卖情况，以此来判断趋势。
 
 具体来说，其利用了4个不同周期的ROC以及再次平均，最后计算出KST值，该值在0轴上下波动。如下面的列表所示：
@@ -66,11 +66,11 @@ AUTOFILTER;
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/395b28315e9cd7262485.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/395b28315e9cd7262485.png) 
 **回测绩效**
- ![IMG](https://www.fmz.com/upload/asset/390b11f7b26d1c00b14c.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/390b11f7b26d1c00b14c.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/39a93b3badfb3673c0c0.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39a93b3badfb3673c0c0.png) 
 
 
 
@@ -100,7 +100,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/325957
+https://www.fmz.cn/strategy/325957
 
 > 更新时间
 

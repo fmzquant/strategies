@@ -79,11 +79,11 @@ if (pos != scope._tmp) {
 接下来我们运行一个实盘验证这个功能，创建实盘选择商品期货，品种设置为橡胶ru2201。
 
 **1、信号触发，web端日志**
- ![IMG](https://www.fmz.com/upload/asset/230c318d01e4cf7d8a13d.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/230c318d01e4cf7d8a13d.png) 
 **2、信号触发，手机App消息推送**
- ![IMG](https://www.fmz.com/upload/asset/231b1ceac094067b4c575.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/231b1ceac094067b4c575.png) 
 **3、信号触发，微信信息推送**
- ![IMG](https://www.fmz.com/upload/asset/230fb050a27bf44ad3388.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/230fb050a27bf44ad3388.png) 
  
 ### 六、总结
 以上我们通过一个简单的My语言威廉W%R交易策略，配合My语言中的语言增强模块所开发的消息推送模块，从而实现策略实时推送仓位变化到手机App与微信。该模块代码可以附加到任何My语言策略中，实现仓位变化推送到手机App与微信，并且针对不同的场景推出多种推送类型，满足您的个性化推送需求。
@@ -118,7 +118,7 @@ if (pos != scope._tmp) {
 
 > 策略出处
 
-https://www.fmz.com/strategy/329988
+https://www.fmz.cn/strategy/329988
 
 > 更新时间
 

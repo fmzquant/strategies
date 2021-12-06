@@ -114,11 +114,11 @@ C>SKPRICE*(1+SLOSS*0.01),BP(SKVOL);                     // 空单止损
 - 周期：一小时
 - 滑点：开平仓各2跳
 - 手续费：交易所2倍
- ![IMG](https://www.fmz.com/upload/asset/39dccb206fa42206c063.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39dccb206fa42206c063.png) 
 **绩效报告**
- ![IMG](https://www.fmz.com/upload/asset/3a18b48d3a7a9aaab5b6.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a18b48d3a7a9aaab5b6.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/39b9fe1cd2946de2e40d.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39b9fe1cd2946de2e40d.png) 
 
 #### 结尾
 大部分传统的指标都远远滞后于K线，但是抛物线转向可以根据内置加速因子的特性与K线紧密贴合，又不至于太过灵活，可以使策略做到攻防兼备。虽然其计算方式很复杂，但现有的指标可以直接使用，这对量化交易初学者来说非常友好。但需要注意的是，当市场进入窄幅震荡行情时，抛物线转向会经常出现无效的买入卖出信号，这将导致其暂时或者相当长时间内失效。
@@ -158,7 +158,7 @@ C>SKPRICE*(1+SLOSS*0.01),BP(SKVOL);                     // 空单止损
 
 > 策略出处
 
-https://www.fmz.com/strategy/326003
+https://www.fmz.cn/strategy/326003
 
 > 更新时间
 

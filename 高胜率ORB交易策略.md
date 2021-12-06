@@ -15,7 +15,7 @@
 - 支持：商品期货
 - 官方网站：www.quantinfo.com
 
-   ![IMG](https://www.fmz.com/upload/asset/860ae7cefa35c714a7f3c028ad77e656.png) 
+   ![IMG](https://www.fmz.cn/upload/asset/860ae7cefa35c714a7f3c028ad77e656.png) 
 
 - 主图：
   均线，           公式：MAC^^MA(CLOSE,LENGTH);
@@ -34,8 +34,8 @@
 - Data Cycle: Daily
 - Support: Commodity Futures
 
-  ![IMG](https://www.fmz.com/upload/asset/5af37a668117bf82ffd3270e6792752f.png)  
-  ![IMG](https://www.fmz.com/upload/asset/bdafbb088fd859227800705a1c16edca.png) 
+  ![IMG](https://www.fmz.cn/upload/asset/5af37a668117bf82ffd3270e6792752f.png)  
+  ![IMG](https://www.fmz.cn/upload/asset/bdafbb088fd859227800705a1c16edca.png) 
 
 - Main chart:
   MA, formula: MAC ^^ MA (CLOSE, LENGTH);
@@ -104,7 +104,7 @@ BUYY,BP(SKVOL);
 
 > 策略出处
 
-https://www.fmz.com/strategy/327858
+https://www.fmz.cn/strategy/327858
 
 > 更新时间
 

@@ -52,7 +52,7 @@ AUTOFILTER;  // 信号过滤
 - 手续费：交易所2倍
 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/392766ae4c121bce3b13.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/392766ae4c121bce3b13.png) 
 
 从上面的回测结果看，策略在市场行情走势流畅的时候表现很好，无论是在上涨或下跌中，阿隆指标可以完整的跟踪到行情。资金曲线也整体走势向上，并没有出现较大幅度的回撤。但是在震荡行情中，特别是连续的震荡行情中，出现了局部回撤。
 
@@ -101,7 +101,7 @@ AUTOFILTER;  // 信号过滤
 
 > 策略出处
 
-https://www.fmz.com/strategy/326011
+https://www.fmz.cn/strategy/326011
 
 > 更新时间
 

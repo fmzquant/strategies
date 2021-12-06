@@ -13,7 +13,7 @@ CTA策略之乖离率BIAS策略
 俗话说分久必合合久必分，在期货市场也有这种现象，没有只涨不跌的品种也没有只跌不涨的品种。但是什么时候分什么时候合，这就要看乖离率了。本篇我们将使用乖离率构建一个简单的策略。
 
 #### 二、乖离率简介
- ![IMG](https://www.fmz.com/upload/asset/3a186c15dabbdc05ecfe.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/3a186c15dabbdc05ecfe.png) 
 乖离率BIAS是由移动平均线衍生出来的一种技术指标，它主要是以百分比的形式，衡量价格在波动中与移动平均线的偏离程度。如果说均线是交易者的平均成本，那么乖离率就是交易者的平均回报率。
 
 #### 三、乖离率的原理
@@ -109,12 +109,12 @@ if mp == 0:  # 如果无持仓
 
 #### 七、策略回测
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/39367e8f51b34d50fb0a.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39367e8f51b34d50fb0a.png) 
 **绩效报告**
- ![IMG](https://www.fmz.com/upload/asset/398347af7738ab10338e.png) 
- ![IMG](https://www.fmz.com/upload/asset/39ec9c8dd2711b462fa2.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/398347af7738ab10338e.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39ec9c8dd2711b462fa2.png) 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/39861be4941993816bbd.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39861be4941993816bbd.png) 
  
 #### 八、总结
 乖离率是一种简单有效的交易工具，能为交易者提供有效的参考，在实际使用中可以配合MACD、布林带指标灵活应用，才能真正体现它的价值。
@@ -199,7 +199,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/215129
+https://www.fmz.cn/strategy/215129
 
 > 更新时间
 

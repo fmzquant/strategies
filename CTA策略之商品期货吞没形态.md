@@ -15,14 +15,14 @@ CTA策略之商品期货吞没形态
 #### 二、什么是吞没形态
 如何才能避免这种情况呢？只能增加专业知识储备，用量化交易工具武装自己，本篇就以日本蜡烛图技术中的吞没形态为例开发一个交易策略。另本篇策略依托发明者(FMZ.COM)量化交易平台，以Python语言开发。
 
- ![IMG](https://www.fmz.com/upload/asset/39a07874a00e6f61617a.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39a07874a00e6f61617a.png) 
 
 什么是吞没形态？吞没形态也叫抱线形态，它是由2根K线组成的复合形态（如上图所示），国内很多交易者会以“阳包阴”或者“阴包阳”来表述吞没形态。其中“阳包阴”为上涨吞没形态，“阴包阳”为下跌吞没形态。从图上看上涨吞没形态是一根大的阳线包住了前面的阴线，下跌吞没形态是一根大阴线包住了之前的阳线。
 
 #### 三、形态的意义
 吞没形态是市场状态表象，但实际却蕴含了交易者之间的心里和资金博弈。它预示着市场价格走向即将反转，在实际使用中吞没形态会给分析和交易起到非常好的效果。尤其是在进出场点位上，或者止盈止损点位上，吞没形态都可以做比较好的参考。如下图所示：
 
- ![IMG](https://www.fmz.com/upload/asset/39c7972e2418c3efe882.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39c7972e2418c3efe882.png) 
 
 在上图左边箭头中，市场本来处于下跌趋势中，但后来出现了一根绿色大阳线，这根大阳线将它之前红色的阴线吞噬，形成了阶段性底部，这种情况说明了市场多头力量开始大于空头力量；右边箭头中，市场本来处于上涨趋势中，但后来出现了一根红色大阴线，这根大阴线将它之前绿色阳线吞噬，形成了阶段性顶部，这种情况说明市场空头力量开始大于多头力量。
 
@@ -118,13 +118,13 @@ def on_tick():
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.com/upload/asset/39fd8e2c615495410ac1.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39fd8e2c615495410ac1.png) 
 
 **回测绩效**
- ![IMG](https://www.fmz.com/upload/asset/39e4b4a1569ac8126a82.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/39e4b4a1569ac8126a82.png) 
 
 **资金曲线**
- ![IMG](https://www.fmz.com/upload/asset/391e0b72219bbaf7fb65.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/391e0b72219bbaf7fb65.png) 
 
 
 
@@ -199,7 +199,7 @@ def main():
 
 > 策略出处
 
-https://www.fmz.com/strategy/285026
+https://www.fmz.cn/strategy/285026
 
 > 更新时间
 

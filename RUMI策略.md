@@ -16,9 +16,9 @@ RUMI策略
 - 官方网站：www.quantinfo.com
 
 
-  ![IMG](https://www.fmz.com/upload/asset/df2427683a93f2c896c853c89e3ae494.png)  
+  ![IMG](https://www.fmz.cn/upload/asset/df2427683a93f2c896c853c89e3ae494.png)  
   
-  ![IMG](https://www.fmz.com/upload/asset/67f75ccbe20acf6cbaa62a1d580daeda.png) 
+  ![IMG](https://www.fmz.cn/upload/asset/67f75ccbe20acf6cbaa62a1d580daeda.png) 
 
 
 - 主图：
@@ -33,8 +33,8 @@ RUMI策略
 - Applicable cycle: multi-cycle
 - Support: Commodity Futures, Digital Currency Futures, Digital Currency Spot
 
-  ![IMG](https://www.fmz.com/upload/asset/d0d4ae5dd9629a8e2b52c821c63f8873.png)  
-  ![IMG](https://www.fmz.com/upload/asset/2cd3d79c46dec610c116645b9a43ae80.png) 
+  ![IMG](https://www.fmz.cn/upload/asset/d0d4ae5dd9629a8e2b52c821c63f8873.png)  
+  ![IMG](https://www.fmz.cn/upload/asset/2cd3d79c46dec610c116645b9a43ae80.png) 
 
 - Main chart:
   none
@@ -76,7 +76,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/327856
+https://www.fmz.cn/strategy/327856
 
 > 更新时间
 

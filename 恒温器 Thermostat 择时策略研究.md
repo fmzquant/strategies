@@ -28,7 +28,7 @@ CMI:=ABS(C-REF(C,29))/(HHV(H,30)-LLV(L,30))*100;
 
 ### 震荡策略内容
 
- ![IMG](https://www.fmz.com/upload/asset/230b71d8e7d92b45aba2c.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/230b71d8e7d92b45aba2c.png) 
 
 在震荡市场中，通常存在一种现象：如果今天价格上涨的话，那么明天的价格下跌的概率更大。而今天价格如果下跌的话，那么明天的价格上涨的概率更大，而这也正是震荡市场的特性。
 
@@ -88,7 +88,7 @@ SEP1:=MIN(SEP,AVG3HI);
 
 ### 趋势策略内容
 
- ![IMG](https://www.fmz.com/upload/asset/23245fa03c7389626aadd.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/23245fa03c7389626aadd.png) 
 
 当 CMI 值大于等于20，即市场处于趋势模式，该策略系统在趋势模式下运用布林通道策略。首先定义布林通道：
 
@@ -119,11 +119,11 @@ DNBAND:=MA(C,50)-STD(C,50)*2;
 
 为了将回测结果尽量接近实盘交易，这里把手续费设置为交易所的2倍，开仓和平仓各加2跳的滑点，回测的数据品种为螺纹钢指数，交易品种为螺纹钢主力连续。固定1手开仓。以下是在1小时级别的初步回测绩效报告。
 
- ![IMG](https://www.fmz.com/upload/asset/230fa2ebf98ccfdfc6c5e.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/230fa2ebf98ccfdfc6c5e.png) 
  
- ![IMG](https://www.fmz.com/upload/asset/231e88a3af61a4fa9ebf0.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/231e88a3af61a4fa9ebf0.png) 
  
- ![IMG](https://www.fmz.com/upload/asset/231414637d7883a70928d.png) 
+ ![IMG](https://www.fmz.cn/upload/asset/231414637d7883a70928d.png) 
 
 从资金曲线和数据来看，该策略表现良好，在螺纹钢品种回测中，除了2017年下半年有较大回撤外，整体资金曲线是稳步向上的。综上，恒温器策略的自动调节交易方式，为大家应对震荡行情提供了一定的思路。感兴趣的读者，可以根据自己的理解适当修改，做进一步的深入研究。
 
@@ -188,7 +188,7 @@ AUTOFILTER;
 
 > 策略出处
 
-https://www.fmz.com/strategy/326013
+https://www.fmz.cn/strategy/326013
 
 > 更新时间
 
