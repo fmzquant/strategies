@@ -5,7 +5,7 @@
 
 > 策略作者
 
-有朋-FMex-高频排序
+gulishiduan_高频排序
 
 > 策略描述
 
@@ -87,7 +87,7 @@ var eName = exchange.GetName();
             } if (eName == "FCoin") {
                 exchange.IO("extend", '{"POST/v2/orders$":{"affiliate_code":"9y40d8"}}');
             }
-exchange.IO("base", Url)//（联系微信：ying5737）策略仅限个人使用，若用于商业传播，请提前联系
+exchange.IO("base", Url)//（联系微信：）策略仅限个人使用，若用于商业传播，请提前联系
 var ordersInfo = {
     buyId: 0,    buyPrice: 0,    sellId: 0,    sellPrice: 0,    minPrice: 0,    maxPrice: 0
 }
@@ -385,7 +385,7 @@ function main() {
         printfBanner()
         Sleep(Interval * 1000) 
     }    
-}//FMex排序挖矿多头版本代码使用说明见描述。（注意api地址）微信：ying5737）
+}//FMex排序挖矿多头版本代码使用说明见描述。（注意api地址）微信：）
 function onexit() {
     Log("已执行退出，同时取消所有订单")
     cancelAllOrder()
@@ -398,4 +398,4 @@ https://www.fmz.com/strategy/178347
 
 > 更新时间
 
-2020-12-25 23:49:57
+2021-12-08 13:53:31

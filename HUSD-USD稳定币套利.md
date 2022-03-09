@@ -308,7 +308,7 @@ function logMyStatus() {
         rows: _.map(arbitOrders, function(arbitOrder) {
             var sideOrders = _.map([arbitOrder.BuyOrder, arbitOrder.SellOrder], function(order) {
                 if (order) {
-                    return getStatusText(order.Status, false) + ' | ' + order.Price + ' | ' + order.Amount
+                    return getStatusText(order.Status, false) + ' | ' + order.Price + ' | ' + order.DealAmount
                 } else {
                     return '-'
                 }
@@ -363,4 +363,4 @@ https://www.fmz.com/strategy/164047
 
 > 更新时间
 
-2020-11-09 01:54:15
+2022-02-16 01:28:18

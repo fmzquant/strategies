@@ -5,7 +5,7 @@ Dual Thrust (麦语言版)|Dual Thrust (MyLanguage version)
 
 > 策略作者
 
-littleDreamXX
+阿基米德的浴缸
 
 > 策略描述
 

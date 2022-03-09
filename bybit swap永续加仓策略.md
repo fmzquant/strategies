@@ -5,7 +5,7 @@ bybit swap永续加仓策略
 
 > 策略作者
 
-有朋-FMex-高频排序
+gulishiduan_高频排序
 
 > 策略描述
 

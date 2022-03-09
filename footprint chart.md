@@ -5,7 +5,7 @@ footprint chart
 
 > 策略作者
 
-程文
+扫地僧
 
 > 策略描述
 

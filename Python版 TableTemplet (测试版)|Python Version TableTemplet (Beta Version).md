@@ -1,7 +1,7 @@
 
 > 策略名称
 
-Python版 TableTemplet (测试版)
+Python版 TableTemplet (测试版)|Python Version TableTemplet (Beta Version)
 
 > 策略作者
 
@@ -173,4 +173,4 @@ https://www.fmz.com/strategy/46031
 
 > 更新时间
 
-2018-01-13 17:44:46
+2022-03-09 14:03:32

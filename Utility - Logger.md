@@ -74,7 +74,8 @@ $.Debug = function(msg, obj, route='route') {
     }
 }
 
-var executedTradesCross = []
+var executedBlocksCross = []
+var executedBlocksCrossIds = []
 var executedTrades = []
 var blocksLatency = []
 var blocksLatencyV2 = []
@@ -91,13 +92,6 @@ var tradesTable = {
 }
 
 var latencyTable = {
-    type: 'table',
-    title: 'Blocks Latency',
-    cols: ['Label-Id', 'Exch-Mkr', 'Send Mkr', 'Cancel Mkr', 'Exec Rprt', 'Send Tkr', 'Lat React', 'Lat Cycle'],
-    rows: blocksLatency
-}
-
-var latencyTableV2 = {
     type: 'table',
     title: 'Timestamps',
     cols: ['Label-Id', 'Exch-Mkr', 'Creating-Mkr', 'Mkr-Live', 'Cancel-Mkr', 'Cancel-Exec', 'Creating-Tkr', 'Tkr-Live', 'Complete'],
@@ -118,11 +112,18 @@ var volumeTable = {
     rows: volumeHistory
 }
 
-var tradesTable_cross = {
+var blocksTableIds = {
+    type: 'table',
+    title: 'Executed Blocks - Ids',
+    cols: ['Date', 'Label-Id', 'Exch-B', 'Exch-S', 'MkrId', 'TkrId', 'Route'],
+    rows: executedBlocksCrossIds
+}
+
+var blocksTable = {
     type: 'table',
     title: 'Executed Blocks',
-    cols: ['Date', 'Label-Id', 'Exch-B', 'Sprd-%', 'Sprd-$', 'Val', 'B-Px', 'S-Px', 'S-Amt', 'MkrId', 'TkrId', 'Lc', 'Lat', 'Tries'],
-    rows: executedTradesCross
+    cols: ['Date', 'Label-Id', 'Exch-B', 'Sprd-%', 'Slip-%', 'Sprd-$', 'Val', 'B-Px', 'S-Px', 'B-Amt', 'S-Amt', 'Lc', 'Lat', 'Tries'],
+    rows: executedBlocksCross
 }
 
 var tradesTable_triangular = {
@@ -159,7 +160,7 @@ $.logBotStatus = function(){
 
         ]
     )
-    LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+    LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
 
 }
 
@@ -201,19 +202,19 @@ $.logArbProfit = function(makerTrade, takerTrade, conversionTrade, route) {
     }    
 }
 
-$.logBlockTrades = function(makerTrade, takerTrade, conversionTrade, labelId, loc, route, lat_mkr, lat_trk, lat_mkr_cancel, lat_cyc, tries) {
+$.logBlockTrades = function(makerTrade, takerTrade, conversionTrade, labelId, loc, route, lat_mkr, lat_trk, lat_mkr_cancel, lat_cyc, tries, premiumTarget, discountTarget) {
     if (conversionTrade) {
         logTradesTriangular(makerTrade, takerTrade, conversionTrade, labelId, loc, lat)
     } 
     else if (takerTrade && makerTrade) {
         try {
-            logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_trk, lat_cyc, tries)
+            logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_trk, lat_cyc, tries, premiumTarget, discountTarget)
             $.logLatency(labelId, makerTrade.exchange, lat_mkr, lat_trk, lat_mkr_cancel, lat_cyc)
         }
         catch(e){
         
         }
-        LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+        LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
     }
     else {
         $.Error("[Utility Logger] Cannot Log Trade", takerTrade)
@@ -237,7 +238,7 @@ $.logExecutions = function(trade, exchange){
                 trade.fees
             ]
         )
-        LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+        LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
     }
 }
 
@@ -253,7 +254,7 @@ $.logPosition = function(exch1, exch2, exh1pos, exch2pos){
 
         ]
     )
-    LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+    LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
 }
 
 $.logVolume = function(exch1, exch2, amt1, amt2){
@@ -276,7 +277,7 @@ $.logVolume = function(exch1, exch2, amt1, amt2){
     _G("accumulatedVolume" + exch1, volExchange1), 
     _G("accumulatedVolume" + exch2, volExchange2)
 
-    LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+    LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
 }
 
 /* Latencies measured.
@@ -303,7 +304,7 @@ $.logLatency = function (labelId, exchange, lat_mkr, lat_tkr, lat_mkr_cancel, la
         ]
     )
 
-    LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+    LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
 }
 
 $.logTimestamps = function(labelId, exchange, loc, creating_maker, maker_live, cancelling_maker, cancelled_execution, creating_taker, taker_live, process_execution){
@@ -329,51 +330,80 @@ $.logTimestamps = function(labelId, exchange, loc, creating_maker, maker_live, c
         ]
     )
 
-    LogStatus('`' + JSON.stringify([tradesTable_cross, tradesTable, posTable, volumeTable, latencyTable, latencyTableV2, currentStatusTable]) + '`')
+    LogStatus('`' + JSON.stringify([blocksTable, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
 
 }
 
-function logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_tkr, lat_cyc, tries){
+function logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_tkr, lat_cyc, tries, premiumTarget, discountTarget){
 
     if (makerTrade.side == 0 || makerTrade.side == "Buy"){
         buyTrade = makerTrade
         sellTrade = takerTrade
         buyExchange = makerTrade.exchange.GetName()
+        sellExchange = takerTrade.exchange.GetName()
     }
     else if (makerTrade.side == 1 || makerTrade.side == "Sell"){
         buyTrade = takerTrade
         sellTrade = makerTrade
         buyExchange = takerTrade.exchange.GetName()
+        sellExchange = makerTrade.exchange.GetName()
     }
     else if (takerTrade.side == 0 || takerTrade.side == "Buy"){
         buyTrade = takerTrade
         sellTrade = makerTrade
         buyExchange = makerTrade.exchange.GetName()
+        sellExchange = takerTrade.exchange.GetName()
     }
     else if (takerTrade.side == 1 || takerTrade.side == "Sell"){
         buyTrade = makerTrade
         sellTrade = takerTrade
         buyExchange = takerTrade.exchange.GetName()
+        sellExchange = makerTrade.exchange.GetName()
     }
+
+    if (route == "route1" || route == "route2"){
+        targetSpread = premiumTarget
+    }
+    else if (route == "route3" || route == "route4"){
+        targetSpread = discountTarget
+    }
+    else {
+        targetSpread = 0
+    }
+
+    var executedSpread = tradeSpreadCross(buyTrade, sellTrade)
     
     var cur_date = new Date() 
     //cur_date.setHours(d.getHours() - 4) 
 
-    executedTradesCross.push(
-        [cur_date.toLocaleString("da-DK", { timeZone: 'America/New_York' }),
+    executedBlocksCross.push(
+        [
+            cur_date.toLocaleString("ja-JP"), // Date
+            labelId, // Label Id
+            buyExchange, // Buy exchange 
+            executedSpread, // Spread %
+            tradeSlippage(executedSpread, targetSpread), // Slippage
+            _N(sellTrade.price - buyTrade.price, 4), // Spread $
+            tradeValueCross(buyTrade, sellTrade), // Value $
+            _N(buyTrade.price, 4), // Buy Price
+            _N(sellTrade.price, 4), // Sell Price
+            buyTrade.size, // Buy Size
+            sellTrade.size, // Sell Size
+            loc, // Location of liquidation initiation
+            lat_cyc, // Total Cycle duration
+            tries // Number of tries to liquidate
+        ]
+    )
+
+    executedBlocksCrossIds.push(
+        [
+            cur_date.toLocaleString("da-DK", { timeZone: 'America/New_York' }),
             labelId,
             buyExchange,
-            tradeSpreadCross(buyTrade, sellTrade),
-            _N(sellTrade.price - buyTrade.price, 4),
-            tradeValueCross(buyTrade, sellTrade),
-            _N(buyTrade.price, 4),
-            _N(sellTrade.price, 4),
-            buyTrade.size,
+            sellExchange,
             makerTrade.id,
             takerTrade.id,
-            loc,
-            lat_cyc,
-            tries
+            route
         ]
     )
 }
@@ -384,6 +414,11 @@ function tradeSpreadCross(buyTrade, sellTrade) {
 
 function tradeValueCross(buyTrade, sellTrade){
     return _N((sellTrade.price * sellTrade.size) - (buyTrade.price * buyTrade.size), 2)
+}
+
+function tradeSlippage(executedSpread, targetSpread){
+    var result = executedSpread - targetSpread
+    return _N(result, 2)
 }
 
 function logTradesTriangular(makerTrade, takerTrade, conversionTrade, labelId, loc, lat){
@@ -433,4 +468,4 @@ https://www.fmz.com/strategy/209236
 
 > 更新时间
 
-2021-11-29 06:08:26
+2021-12-19 05:56:24

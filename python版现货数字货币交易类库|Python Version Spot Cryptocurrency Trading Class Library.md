@@ -1,7 +1,7 @@
 
 > 策略名称
 
-python版现货数字货币交易类库
+python版现货数字货币交易类库|Python Version Spot Cryptocurrency Trading Class Library
 
 > 策略作者
 
@@ -260,4 +260,4 @@ https://www.fmz.com/strategy/21104
 
 > 更新时间
 
-2017-10-20 18:02:17
+2022-03-09 14:05:30
