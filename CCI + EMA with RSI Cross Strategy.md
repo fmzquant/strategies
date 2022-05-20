@@ -35,7 +35,7 @@ Not trading advice, use at your own risk.
 |v_input_float_1|0.67|(?Stop Settings)Trail Loss ($)|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

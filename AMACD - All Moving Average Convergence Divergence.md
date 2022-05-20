@@ -89,7 +89,7 @@ If you have a strategy that can buy based on External Indicators use 'Backtest S
 |v_input_9|#FF5252|Fall|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

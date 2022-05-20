@@ -36,7 +36,7 @@ Simple SuperTrend indicator giving you the option to display two SuperTrends on 
 |v_input_7|true|Show Buy/Sell Labels?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

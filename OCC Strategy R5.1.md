@@ -37,7 +37,7 @@ It helps you determine the time of entry and exit of deals
 |v_input_4|false|- SET to ZERO for Daily or Longer Timeframes|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -42,7 +42,7 @@ If you have any idea on how to optimise the code, please feel free to share
 |v_input_5|#FFFFFF|text_col|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 ////////////////////////////////////////// Tom DeMark heatmap © by Indicator-Jones /////////////////////////////////////////

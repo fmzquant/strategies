@@ -38,7 +38,7 @@ This will lead to more scripts from my side, since i really like to code and tra
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/

@@ -37,7 +37,7 @@ Credit to @everget for the re-creation of the Jurik Moving Average in pinecsript
 |v_input_int_3|10|DWMA Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

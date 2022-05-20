@@ -63,7 +63,7 @@ Kıvanç Özbilgiç
 |v_input_4|false|Change calculation (no volume data)?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

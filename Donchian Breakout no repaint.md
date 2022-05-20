@@ -50,7 +50,7 @@ donchian breakout strategy which i revise the script for no repaint signal
 |v_input_string_5|0|ADR Table Visibility: Bottom|Top|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

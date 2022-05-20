@@ -27,7 +27,7 @@ A classic MACD with average peak and dip lines. The lighter green and red horizo
 |v_input_4|23|MACD Signal Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

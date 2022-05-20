@@ -41,7 +41,7 @@ The author of this script cannot be held responsible for any losses incurred dir
 |v_input_3|false|Aggressive Mode|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

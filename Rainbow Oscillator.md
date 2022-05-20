@@ -95,7 +95,7 @@ Type of moving average, average for the formation of a smoothing overbought and 
 |v_input_float_5|3.5|% Stop Loss|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

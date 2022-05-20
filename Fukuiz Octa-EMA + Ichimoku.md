@@ -61,7 +61,7 @@ SELL= All Ema turn to gray color.
 |v_input_int_10|31|End Day|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

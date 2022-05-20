@@ -21,7 +21,7 @@ Updates or revisions will be recorded in the comments. Good luck with this scrip
 
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

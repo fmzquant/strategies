@@ -35,7 +35,7 @@ good luck trading!
 |v_input_int_4|20|minimum ADX threshold for signal|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 //@version=5

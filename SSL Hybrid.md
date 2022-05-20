@@ -54,7 +54,7 @@ Added "Candle Size > 1 ATR" Diamonds from my old script with the criteria of bei
 |v_input_26|0.9|Continuation ATR Criteria|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

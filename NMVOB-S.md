@@ -34,7 +34,7 @@ NMVOB-S
 |v_input_float_3|2|StdDev|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

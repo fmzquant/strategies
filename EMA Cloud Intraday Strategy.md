@@ -27,7 +27,7 @@ This strategy utilizes the 9 and 20 period exponential moving averages to create
 |v_input_2|20|Slow EMA Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

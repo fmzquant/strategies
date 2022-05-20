@@ -42,7 +42,7 @@ For any notes on the strategy to be edited, or for another strategies ideas plea
 |v_input_float_2|true|StopLose Percentage|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -50,7 +50,7 @@ Hope someone will find this useful, or even just as an additional visual confirm
 |v_input_8|9|Hist Signal Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

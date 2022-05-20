@@ -39,7 +39,7 @@ Limitations of the indicator include the following:
 |v_input_5|2|Multiplier|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

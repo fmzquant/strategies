@@ -112,7 +112,7 @@ This is purely for Educational purpose only. Not to be used as a stand alone ind
 |v_input_9|#ff0062|Fall|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

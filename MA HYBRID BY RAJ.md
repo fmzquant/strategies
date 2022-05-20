@@ -48,7 +48,7 @@ This script is designed for the NNFX Method, so it is recommended for Daily char
 |v_input_26|0.9|Continuation ATR Criteria|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

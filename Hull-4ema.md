@@ -40,7 +40,7 @@ this is a test just trying out pine script
 |v_input_16|2|mult|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

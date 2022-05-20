@@ -27,7 +27,7 @@ This indicator help identify momentum by offering a visual representation of eng
 |v_input_4|true|Show Bullish 3 Line Strike|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

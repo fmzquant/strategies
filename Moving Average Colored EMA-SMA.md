@@ -32,7 +32,7 @@ Amazon Prime Video presents Garaj Garaj Jugalbandi Video Song from Bandish Bandi
 |v_input_float_1|3|Factor|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

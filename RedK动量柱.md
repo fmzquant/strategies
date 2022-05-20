@@ -97,7 +97,7 @@ Here's the detailed (top chart) setup that Mo_Bars is based on -- The settings f
 |v_input_string_3|0|过滤均线类型: SMA|WMA|EMA|RSS_WMA|HMA|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -69,7 +69,7 @@ Thanks again to the authors of the indicators that compose this script and to TR
 |v_input_3|3|Period of Smoothing|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -28,7 +28,7 @@ Those who don't know OTT can search in indicators.
 |v_input_3|0.2|RISOTTO Percent|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

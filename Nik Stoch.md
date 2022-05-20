@@ -29,7 +29,7 @@ Levels : 15, 85, 30, 70
 |v_input_int_6|3|m4|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

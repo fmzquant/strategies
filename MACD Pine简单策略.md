@@ -20,7 +20,7 @@ MACD Pine简单策略
 |v_input_float_1|9|signal|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

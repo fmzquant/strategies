@@ -72,7 +72,7 @@ Note: A small coverage with English subtitles will be available on my Youtube Ch
 |v_input_10|0|Moving Average Type: VAR|EMA|WMA|TMA|SMA|WWMA|ZLEMA|TSF|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

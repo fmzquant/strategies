@@ -33,7 +33,7 @@ Simple, more polite, and hopefully more useful fractals for those wnting a clean
 |v_input_int_2|50|Fractal Transparency|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

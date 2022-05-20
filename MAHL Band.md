@@ -24,7 +24,7 @@ The channel composed of the high price and low price moving average
 |v_input_int_1|3|MA Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

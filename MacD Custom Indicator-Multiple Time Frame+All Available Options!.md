@@ -38,7 +38,7 @@ By the way I fully disclose that I completely STOLE the Dots at the MAcd Cross f
 |v_input_10|9|v_input_10|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

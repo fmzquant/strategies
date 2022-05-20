@@ -41,7 +41,7 @@ Bollinger Bands
 |v_input_float_1|2|BB StdDev|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -28,7 +28,7 @@ Many traders in the financial markets use Ichimoku components to detect trends, 
 |v_input_2|true|Show Candle Cross?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/

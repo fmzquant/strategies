@@ -54,7 +54,7 @@ rsi vwwap open new position only if there is no bullish signal from Cloud , Adx 
 |v_input_9_high|0|RSI Source: high|close|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -24,7 +24,7 @@
 |v_input_int_3|100|长期均线|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

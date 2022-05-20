@@ -48,7 +48,7 @@ Have fun :)
 |v_input_bool_5|true|cciTf5_E|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

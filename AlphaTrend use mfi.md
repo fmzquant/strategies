@@ -22,7 +22,7 @@ AlphaTrend use mfi
 |v_input_source_1|0|source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

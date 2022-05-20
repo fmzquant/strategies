@@ -38,7 +38,7 @@ Supertrend+4moving by pejmantak123
 |v_input_9_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

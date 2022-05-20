@@ -43,7 +43,7 @@ Higher values of length might return errors.
 |v_input_1|21|length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

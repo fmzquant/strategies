@@ -56,7 +56,7 @@ Educational Script - Use this tool at your own responsability.
 |v_input_int_9|false|Trigger|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -38,7 +38,7 @@ The script is totally based on momentum , volume and price. We have used :
 |v_input_float_2|2|BB StdDev|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

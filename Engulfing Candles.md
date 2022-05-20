@@ -20,7 +20,7 @@ A RED triangle ABOVE the bar pointing DOWN indicates that the candle is BEARISH 
 
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

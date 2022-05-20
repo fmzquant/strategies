@@ -38,7 +38,7 @@ Sentiment Oscillator
 |v_input_21|false|Use Alternate Color Scheme?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

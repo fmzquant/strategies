@@ -32,7 +32,7 @@
 |v_input_float_3|3|Factor|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

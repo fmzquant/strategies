@@ -100,7 +100,7 @@ Good luck and enjoy ;)
 |v_input_37|0.072| SL/100|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

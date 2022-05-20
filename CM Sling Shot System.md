@@ -39,7 +39,7 @@ See Link Below for Main Chart Showing 2nd System!!!
 |v_input_6|true|Show 'B'-'S' Letters?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

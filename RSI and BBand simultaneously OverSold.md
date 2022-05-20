@@ -30,7 +30,7 @@ This indicator is created by combining the standard period RSI indicator with an
 |v_input_7|2|Standart Sapma|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

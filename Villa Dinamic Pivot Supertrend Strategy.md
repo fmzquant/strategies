@@ -69,7 +69,7 @@ This strategy works better on AUD/USD in the 15 min timeframe. It uses the Pivot
 |v_input_float_5|2|ST ATR Multiplier|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

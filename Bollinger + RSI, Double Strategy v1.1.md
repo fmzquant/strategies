@@ -35,7 +35,7 @@ P.S. For advanced users if you want access to more functions of this strategy sc
 |v_input_4|true|Enable Background Color?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

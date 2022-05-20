@@ -44,7 +44,7 @@ Upper and lower extremities made from the central level and threshold distance a
 |v_input_2|3|Sequence Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

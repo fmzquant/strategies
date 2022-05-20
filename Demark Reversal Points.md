@@ -23,7 +23,7 @@ Demark Reversal Points
 |v_input_int_3|4|LbLength|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

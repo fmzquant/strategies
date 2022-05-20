@@ -45,7 +45,7 @@ The strategy is to take position when the two lines get overbought or oversold a
 |v_input_int_9|30|Stochastic Oversold Level|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

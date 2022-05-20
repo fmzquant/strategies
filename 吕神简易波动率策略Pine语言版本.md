@@ -26,7 +26,7 @@ https://www.fmz.com/strategy/200131
 |v_input_1|50|指数计算周期|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

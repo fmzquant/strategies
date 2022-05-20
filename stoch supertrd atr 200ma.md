@@ -41,7 +41,7 @@ This strategy combines Supertrend, 200 EMA , Stochastic , and an ATR stop loss i
 |v_input_10|red|High Line Color|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/

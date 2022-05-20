@@ -69,7 +69,7 @@ Angle Attack Follow Line Indicator
 |v_input_34|20|th|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

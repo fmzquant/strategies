@@ -35,7 +35,7 @@ EMA趋势云图
 |v_input_bool_1|true|(?交叉移动平均线)使用基于文本的交叉标签?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

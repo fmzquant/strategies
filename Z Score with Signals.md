@@ -36,7 +36,7 @@ I personally like this for swing trading on the 1 hour chart; however, this can 
 
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

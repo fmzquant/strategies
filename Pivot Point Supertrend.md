@@ -34,7 +34,7 @@ The idea is behind this script is finding pivot point , calculating average of t
 |v_input_7|false|Show Support/Resistance|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

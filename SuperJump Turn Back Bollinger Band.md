@@ -35,7 +35,7 @@ Usually there are more than two triangles, so you can wait after ordering a bett
 |v_input_float_3|true|Stop Loss ATR Ratio|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

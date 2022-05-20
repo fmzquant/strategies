@@ -50,7 +50,7 @@ RSI的传统解释和用法是，70或以上的值表示证券正在超买或被
 |v_input_7|true|熊市背离|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

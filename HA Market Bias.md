@@ -41,7 +41,7 @@ By the way, I would be going with the name 'CEREBR' for any subsequent scripts I
 |v_input_int_1|7|Oscillator Period|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

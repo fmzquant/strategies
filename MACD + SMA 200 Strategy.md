@@ -39,7 +39,7 @@ All trading involves high risk; past performance is not necessarily indicative o
 |v_input_8|true|Enable Background Color?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

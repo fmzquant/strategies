@@ -100,7 +100,7 @@ Waddah Attar Explosion by shayankm
 |v_input_float_8|2|BB Stdev Multiplier|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

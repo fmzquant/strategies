@@ -39,7 +39,7 @@ If you have found a profitable setup for it, please share in the comments or pri
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -45,7 +45,7 @@ If you have any recommendations or alternative ideas, then please drop a comment
 |v_input_1|5|Timeframe Multiplier|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

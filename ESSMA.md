@@ -53,7 +53,7 @@ Happy trading.
 |v_input_int_1|14|ATR Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

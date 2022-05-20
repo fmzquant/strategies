@@ -71,7 +71,7 @@ ENJOY !!
 |v_input_10|6|  ATR Period|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

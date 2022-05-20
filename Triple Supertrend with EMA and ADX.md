@@ -42,7 +42,7 @@ A FIlter is given to take or avoid re-enter on the same side. For example, After
 |v_input_int_3|20|ATR Multi|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

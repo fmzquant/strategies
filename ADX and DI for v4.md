@@ -23,7 +23,7 @@ ADX and DI for v4
 |v_input_2|20|th|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

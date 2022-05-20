@@ -28,7 +28,7 @@ Diamond Trend is an indicator clearly way to catch the trend in the begining $$
 |v_input_5|1.9|Deviation|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

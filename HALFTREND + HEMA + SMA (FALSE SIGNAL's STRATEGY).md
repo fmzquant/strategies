@@ -63,7 +63,7 @@ Thanks again to the authors of the indicators that compose this script and to FA
 |v_input_5|false|Show Channels|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

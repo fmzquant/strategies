@@ -41,7 +41,7 @@
 |v_input_int_1|6|atrPeriod|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

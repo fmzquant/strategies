@@ -34,7 +34,7 @@ This indicator is the Mobo Bands (Momentum Breakout Bands). These bands are boll
 |v_input_11|true|moboShowMid|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -46,7 +46,7 @@ Crossunder = Bearish trend (red zone)
 |v_input_7|true|rsi<rsi2 Divergence|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

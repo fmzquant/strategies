@@ -42,7 +42,7 @@ Enjoy!
 |v_input_6|white|pltextcol|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

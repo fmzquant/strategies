@@ -40,7 +40,7 @@ then it is looking for the stoch indicator to confirm if there is a cross under 
 |v_input_int_3|5|Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

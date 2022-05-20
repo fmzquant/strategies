@@ -35,7 +35,7 @@ Base Level Period - determines the period used for long-term averaging when calc
 |v_input_int_1|450|Base Level Period|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

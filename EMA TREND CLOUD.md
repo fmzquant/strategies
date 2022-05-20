@@ -34,7 +34,7 @@ Exits can happen when price closes in the cloud or on the opposite side of the c
 |v_input_bool_1|true|(?Crossover Moving Averages)Use Text-Based Crossover Labels?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

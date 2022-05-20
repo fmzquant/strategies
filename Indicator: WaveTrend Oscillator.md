@@ -31,7 +31,7 @@ I have marked some cross-overs in the above chart. As you can see, they are *not
 |v_input_6|-53|Over Sold Level 2|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -104,7 +104,7 @@ A Strategy using VuManChu Cipher B + Divergences for backtesting purpose.
 |v_input_81|20|Lookback (for Relative)|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

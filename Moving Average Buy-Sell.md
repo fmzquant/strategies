@@ -27,7 +27,7 @@ Takes two moving averages of different lengths to formulate buy/sell colors on a
 |v_input_int_2|200|Length Tide|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

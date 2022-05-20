@@ -45,7 +45,7 @@ The older line will remain until the new one comes through of same type. Hence, 
 |v_input_9|2|Pivots Lookback Window|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

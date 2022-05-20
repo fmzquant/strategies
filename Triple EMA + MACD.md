@@ -37,7 +37,7 @@ tyvm have a nice day
 |v_input_11|2|MACDLength|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

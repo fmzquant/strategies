@@ -32,7 +32,7 @@ Mr.Carter suggests waiting till the first gray after a black cross, and taking a
 |v_input_5|true|Use TrueRange (KC)|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

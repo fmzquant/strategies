@@ -39,7 +39,7 @@ Enjoy~~!
 |v_input_bool_2|true|Show trend reversals|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

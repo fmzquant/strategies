@@ -111,7 +111,7 @@ This script is intended for experimenting and backtesting different strategies a
 |v_input_9|4|Close|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

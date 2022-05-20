@@ -32,7 +32,7 @@ Just add the indicator to the chart, create an alert and select "Heikin-Ashi Tre
 |v_input_1|false|(?DEVELOPER)Show debug info|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

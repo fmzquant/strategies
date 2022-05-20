@@ -32,7 +32,7 @@ Get your trend
 |v_input_13|30|  Volume lenght|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -31,7 +31,7 @@ In short, this is a trailing stop-loss based on the Average True Range (ATR).
 |v_input_5|true|Highlight State ?|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

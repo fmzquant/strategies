@@ -48,7 +48,7 @@ note that we're approaching the analogy here from a trading perspective and not 
 |v_input_int_5|10|Lookback (for Relative)|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

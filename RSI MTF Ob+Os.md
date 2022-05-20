@@ -31,7 +31,7 @@ RSI MTF Ob+Os
 |v_input_bool_5|true|rsiTf5_E|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

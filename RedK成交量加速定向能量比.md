@@ -47,7 +47,7 @@ VADER是怎么工作的？
 |v_input_int_5|10|回看周期 (相对的)|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

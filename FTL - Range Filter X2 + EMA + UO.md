@@ -53,7 +53,7 @@ Additional features of this indicator:
 |v_input_bool_6|true|Show SELL only below the EMA|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

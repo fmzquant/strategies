@@ -46,7 +46,7 @@ I am not liable for any profit, financial improvement, losses or damages, moneta
 |v_input_5|25|RSI OverSold Limit(Recommended: 20-30)|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

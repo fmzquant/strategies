@@ -54,7 +54,7 @@ These 3 indicators are used for all types of assets: FOREX, CRYPT, CFD's, ETC.
 |v_input_7|6|distancia para el pivote/ distance to pivot |
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

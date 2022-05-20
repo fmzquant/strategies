@@ -27,7 +27,7 @@ Use settings 100,3
 |v_input_float_1|3|Range Multiplier|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

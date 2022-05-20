@@ -55,7 +55,7 @@ EmperorBTC
 |v_input_20|3|*** Gaussian poles ***|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

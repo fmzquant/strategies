@@ -78,7 +78,7 @@ Enjoy~~!!
 |v_input_12|#FF5252|Fall|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

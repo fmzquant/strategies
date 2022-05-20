@@ -31,7 +31,7 @@ I have also added Golden Cross Over of 65 and 21 EMA to have confirmation on tre
 |v_input_3|0|ATR Smoothing: WMA|SMA|EMA|RMA|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

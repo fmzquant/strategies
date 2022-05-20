@@ -28,7 +28,7 @@ The Ichimoku Cloud is a powerful indicator to track trends. By smoothing it and 
 |v_input_5|26|Displacement|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

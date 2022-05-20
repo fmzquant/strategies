@@ -24,7 +24,7 @@ Feel free to use and modify as you see fit. Happy trading!
 
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

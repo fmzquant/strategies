@@ -44,7 +44,7 @@ WARNING:
 |v_input_int_5|2005|From Year|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 //@version=5

@@ -43,7 +43,7 @@ The Bollinger Bands strategy is often used with the assistance of other indicato
 |v_input_float_1|2|mult|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

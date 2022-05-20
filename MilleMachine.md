@@ -55,7 +55,7 @@ Greetings Michael
 |v_input_19|2|Smoothing Trail Short EMA|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 // © Milleman

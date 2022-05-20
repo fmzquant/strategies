@@ -68,7 +68,7 @@ This one will take a little bit of time to master. But, once you master this, an
 |v_input_bool_4|true|Plot Hidden Bearish|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

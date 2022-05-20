@@ -41,7 +41,7 @@ When Trading with the Equity Curve" is active, the position size will be reduced
 |v_input_int_7|12|Momentum Length|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

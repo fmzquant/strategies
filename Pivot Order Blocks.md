@@ -49,7 +49,7 @@ Feel free to use the script, If you do use the script could you please just tag 
 |v_input_2|#FF0000|Bearish Box Color|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/

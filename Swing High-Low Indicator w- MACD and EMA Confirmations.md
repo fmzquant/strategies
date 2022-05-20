@@ -42,7 +42,7 @@ Then look for pullback between price level of break and areas of liquidity (wick
 |v_input_7|true|Show Swing Break Entry Levels|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

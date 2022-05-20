@@ -43,7 +43,7 @@ ATR Multiplier: This multiplier controls the 'width' of our envelope or our extr
 |v_input_float_1|3|ATR Multiplier|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

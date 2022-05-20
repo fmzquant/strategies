@@ -50,7 +50,7 @@ Enjoy!
 |v_input_int_7|10|Thresh-hold|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -27,7 +27,7 @@ Demonstrate how to increase positions in pine language
 |v_input_8|true|LastProfitableTradeFilter|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

@@ -36,7 +36,7 @@ This post and the script don’t provide any financial advice.
 |v_input_3|0.02|Range Width|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest

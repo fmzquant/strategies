@@ -62,7 +62,7 @@ Note: The bb %B is calculated for stDev - 1. This will help you see a change hap
 |v_input_10|70|MAX RSI|
 
 
-> 源码 (javascript)
+> 源码 (PineScript)
 
 ``` javascript
 /*backtest
