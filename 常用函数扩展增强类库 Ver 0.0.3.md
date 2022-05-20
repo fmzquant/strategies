@@ -26,6 +26,7 @@
  * 代码规范参考: https://github.com/fex-team/styleguide/blob/master/javascript.md
  */
 
+/* jshint esversion: 6 */
 /**
  * @Title: 转北京时间
  * @description: 将托管者所在服务器时间转为北京时间
@@ -37,7 +38,7 @@
  *  Log(localDate.getTime())    //1620299985696
  */
 $.ToBJTime = function (localDate) {
-	return new Date(localDate.getTime() + localDate.getTimezoneOffset() * 60000 + 3600000 * 8);
+    return new Date(localDate.getTime() + localDate.getTimezoneOffset() * 60000 + 3600000 * 8);
 };
 
 /**
@@ -47,31 +48,31 @@ $.ToBJTime = function (localDate) {
  * @returns 返回格式化后的日期字符串
  */
 $.FormatDate = function (date, fmt) {
-	date = !date ? new Date() : date;
-	date = typeof date === "number" ? new Date(date) : date;
-	fmt = fmt || "yyyy-MM-dd HH:mm:ss";
-	var obj = {
-		y: date.getFullYear(), // 年份，注意必须用getFullYear
-		M: date.getMonth() + 1, // 月份，注意是从0-11
-		d: date.getDate(), // 日期
-		q: Math.floor((date.getMonth() + 3) / 3), // 季度
-		w: date.getDay(), // 星期，注意是0-6
-		H: date.getHours(), // 24小时制
-		h: date.getHours() % 12 == 0 ? 12 : date.getHours() % 12, // 12小时制
-		m: date.getMinutes(), // 分钟
-		s: date.getSeconds(), // 秒
-		S: date.getMilliseconds(), // 毫秒
-	};
-	var week = ["天", "一", "二", "三", "四", "五", "六"];
-	for (var i in obj) {
-		fmt = fmt.replace(new RegExp(i + "+", "g"), function (m) {
-			var val = obj[i] + "";
-			if (i == "w") return (m.length > 2 ? "星期" : "周") + week[val];
-			for (var j = 0, len = val.length; j < m.length - len; j++) val = "0" + val;
-			return m.length == 1 ? val : val.substring(val.length - m.length);
-		});
-	}
-	return fmt;
+    date = !date ? new Date() : date;
+    date = typeof date === "number" ? new Date(date) : date;
+    fmt = fmt || "yyyy-MM-dd HH:mm:ss";
+    var obj = {
+        y: date.getFullYear(), // 年份，注意必须用getFullYear
+        M: date.getMonth() + 1, // 月份，注意是从0-11
+        d: date.getDate(), // 日期
+        q: Math.floor((date.getMonth() + 3) / 3), // 季度
+        w: date.getDay(), // 星期，注意是0-6
+        H: date.getHours(), // 24小时制
+        h: date.getHours() % 12 == 0 ? 12 : date.getHours() % 12, // 12小时制
+        m: date.getMinutes(), // 分钟
+        s: date.getSeconds(), // 秒
+        S: date.getMilliseconds(), // 毫秒
+    };
+    var week = ["天", "一", "二", "三", "四", "五", "六"];
+    for (var i in obj) {
+        fmt = fmt.replace(new RegExp(i + "+", "g"), function (m) {
+            var val = obj[i] + "";
+            if (i == "w") return (m.length > 2 ? "星期" : "周") + week[val];
+            for (var j = 0, len = val.length; j < m.length - len; j++) val = "0" + val;
+            return m.length == 1 ? val : val.substring(val.length - m.length);
+        });
+    }
+    return fmt;
 };
 /**
  * @Title: 获取永久缓存
@@ -82,13 +83,13 @@ $.FormatDate = function (date, fmt) {
  *
  */
 $.ForeverCache = function (key, data) {
-	key = "ForeverCache" + key;
-	var getDate = _G(key);
-	if (getDate == null) {
-		_G(key, data);
-		return data;
-	}
-	return getDate;
+    key = "ForeverCache" + key;
+    var getDate = _G(key);
+    if (getDate == null) {
+        _G(key, data);
+        return data;
+    }
+    return getDate;
 };
 
 /**
@@ -99,15 +100,15 @@ $.ForeverCache = function (key, data) {
  * @return {*}
  */
 $.TodayCache = function (key, data) {
-	key = "TodayCache" + key;
-	var today = $.ToBJTime(new Date()).getDate();
-	if (_G("TodayCacheToday_" + key) !== today) {
-		_G("TodayCacheToday_" + key, today);
-		_G(key, data);
-		return data;
-	} else {
-		return _G(key);
-	}
+    key = "TodayCache" + key;
+    var today = $.ToBJTime(new Date()).getDate();
+    if (_G("TodayCacheToday_" + key) !== today) {
+        _G("TodayCacheToday_" + key, today);
+        _G(key, data);
+        return data;
+    } else {
+        return _G(key);
+    }
 };
 
 /**
@@ -122,16 +123,16 @@ $.TodayCache = function (key, data) {
  * Log($.ExecuteFuncForTime(60,"myTime",nowTime))
  */
 $.ExecuteFuncForTime = function (second, key, fun) {
-	var endSecond = second * 1000;
-	var nowTime = new Date().getTime();
-	if (_G("funcForTime_" + key) == null || nowTime - _G("funcForTime_" + key) > endSecond) {
-		var data = fun();
-		_G("funcForTime_" + key, nowTime);
-		_G(key, data);
-		return data;
-	} else {
-		return _G(key);
-	}
+    var endSecond = second * 1000;
+    var nowTime = new Date().getTime();
+    if (_G("funcForTime_" + key) == null || nowTime - _G("funcForTime_" + key) > endSecond) {
+        var data = fun();
+        _G("funcForTime_" + key, nowTime);
+        _G(key, data);
+        return data;
+    } else {
+        return _G(key);
+    }
 };
 
 /**
@@ -145,21 +146,21 @@ $.ExecuteFuncForTime = function (second, key, fun) {
  *	Log(sortobjkey(obj,'f')) //{"cc":{"f":3},"aa":{"f":2},"bb":{"f":1}}
  */
 $.SortObjectKey = function (obj, key) {
-	var o = {};
-	Object.keys(obj)
-		.map(function (k, i) {
-			return [k, obj[k]];
-		})
-		.sort(function (a, b) {
-			k = key;
-			if (a[1][k] > b[1][k]) return -1;
-			if (a[1][k] < b[1][k]) return 1;
-			return 0;
-		})
-		.forEach(function (a) {
-			o[a[0]] = a[1];
-		});
-	return o;
+    var o = {};
+    Object.keys(obj)
+        .map(function (k, i) {
+            return [k, obj[k]];
+        })
+        .sort(function (a, b) {
+            k = key;
+            if (a[1][k] > b[1][k]) return -1;
+            if (a[1][k] < b[1][k]) return 1;
+            return 0;
+        })
+        .forEach(function (a) {
+            o[a[0]] = a[1];
+        });
+    return o;
 };
 
 /**
@@ -171,27 +172,197 @@ $.SortObjectKey = function (obj, key) {
  * //{"RunSeconds":18170,"NowUnix":1622821609901,"NowTime":"2021-06-04 23:46:49","FormatTime":"运行时间: 0 天 5 时 2 分 50 秒","StartTime":"2021-06-04 18:43:59"}
  */
 $.RunTime = function () {
-	var startTime = new Date($.ForeverCache("startTime", new Date()));
-	var between = $.TimeBetween(startTime, new Date());
-	var timestamp = parseInt(UnixNano() / 1000000);
-	return {
-		RunSeconds: parseInt((timestamp - startTime.getTime()) / 1000), //运行秒数
-		NowUnix: timestamp, //当间时间戳
-		NowTime: _D($.ToBJTime(new Date())), //当前时间
-		FormatTime: "运行时间: " + between.days + " 天 " + between.hours + " 时 " + between.minutes + " 分 " + between.seconds + " 秒", //格式化后的运行时间
-		StartTime: _D($.ToBJTime(startTime)), //开始时间
-	};
+    var startTime = new Date($.ForeverCache("startTime", new Date()));
+    var between = $.TimeBetween(startTime, new Date());
+    var timestamp = parseInt(UnixNano() / 1000000);
+    let week = $.GetWeek($.ToBJTime(new Date()));
+    return {
+        RunSeconds: parseInt((timestamp - startTime.getTime()) / 1000), //运行秒数
+        NowUnix: timestamp, //当间时间戳
+        NowTime: _D($.ToBJTime(new Date())), //当前时间
+        NowYear: week.year,
+        NowMonth: week.month,
+        NowDay: week.day,
+        NowWeek: week.week,
+        FormatTime: "运行时间: " + between.days + " 天 " + between.hours + " 时 " + between.minutes + " 分 " + between.seconds + " 秒", //格式化后的运行时间
+        StartTime: _D($.ToBJTime(startTime)), //开始时间
+        StartUnix: $.ForeverCache("StartUnix", timestamp),
+    };
 };
 
 $.TimeBetween = function (startDate, endDate) {
-	let delta = Math.abs(endDate - startDate) / 1000;
-	const isNegative = startDate > endDate ? -1 : 1;
-	return [
-		["days", 24 * 60 * 60],
-		["hours", 60 * 60],
-		["minutes", 60],
-		["seconds", 1],
-	].reduce((acc, [key, value]) => ((acc[key] = Math.floor(delta / value) * isNegative), (delta -= acc[key] * isNegative * value), acc), {});
+    let delta = Math.abs(endDate - startDate) / 1000;
+    const isNegative = startDate > endDate ? -1 : 1;
+    return [
+        ["days", 24 * 60 * 60],
+        ["hours", 60 * 60],
+        ["minutes", 60],
+        ["seconds", 1],
+    ].reduce((acc, [key, value]) => ((acc[key] = Math.floor(delta / value) * isNegative), (delta -= acc[key] * isNegative * value), acc), {});
+};
+$.GetAnalyze = function (totalAssets) {
+    var sqlDB;
+    try {
+        sqlDB = DBExec("select * from profit");
+    } catch (error) {
+        return false;
+    }
+
+    var profits = sqlDB.values;
+    if (profits.length == 0) {
+        return {
+            totalAssets: totalAssets,
+            yearDays: 0,
+            totalReturns: 0,
+            annualizedReturns: 0,
+            sharpeRatio: 0,
+            volatility: 0,
+            nowDrawdown: 0,
+            maxDrawdown: 0,
+            maxDrawdownTime: 0,
+            maxAssetsTime: 0,
+            maxDrawdownStartTime: 0,
+            winningRate: 0,
+            nowDrawdownFormat: {
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0,
+            },
+            maxDrawdownFormat: {
+                days: 0,
+                hours: 0,
+                minutes: 0,
+                seconds: 0,
+            },
+        };
+    }
+    var yearDays = 365;
+    // force by days
+    var period = 86400000;
+    //Log(profits[0], profits[10]);
+    var ts = profits[0][3];
+    var te = profits[profits.length - 1][3];
+
+    var freeProfit = 0.03; // 0.04
+    var yearRange = yearDays * 86400000;
+    var totalReturns = profits[profits.length - 1][1] / totalAssets;
+    var annualizedReturns = (totalReturns * yearRange) / (te - ts);
+
+    // MaxDrawDown
+    var maxDrawdown = 0;
+    var maxAssets = totalAssets;
+    var maxAssetsTime = 0;
+    var maxDrawdownTime = 0;
+    var maxDrawdownStartTime = 0;
+    var winningRate = 0;
+    var winningResult = 0;
+    //var nowDrawdown = 0;
+
+    for (var i = 0; i < profits.length; i++) {
+        if (i == 0) {
+            if (profits[i][1] > 0) {
+                winningResult++;
+            }
+        } else {
+            if (profits[i][1] > profits[i - 1][1]) {
+                winningResult++;
+            }
+        }
+        if (profits[i][1] + totalAssets > maxAssets) {
+            maxAssets = profits[i][1] + totalAssets;
+            maxAssetsTime = profits[i][3];
+        }
+        if (maxAssets > 0) {
+            var drawDown = 1 - (profits[i][1] + totalAssets) / maxAssets;
+            if (drawDown > maxDrawdown) {
+                maxDrawdown = drawDown;
+                maxDrawdownTime = profits[i][3];
+                maxDrawdownStartTime = maxAssetsTime;
+            }
+        }
+    }
+    if (profits.length > 0) {
+        winningRate = winningResult / profits.length;
+    }
+    //Log("最大资产",maxAssets,"最大资产时间",_D(maxAssetsTime),"当前资产",profits[profits.length - 1][1],"当前资产时间",_D(profits[profits.length - 1][1]))
+    var nowDrawdown = 1 - (profits[profits.length - 1][1] + totalAssets) / maxAssets;
+    if (nowDrawdown < 0) {
+        nowDrawdown = 0;
+    }
+    // trim profits
+    var i = 0;
+    var datas = [];
+    var sum = 0;
+    var preProfit = 0;
+    var perRatio = 0;
+    var rangeEnd = te;
+    if ((te - ts) % period > 0) {
+        rangeEnd = (parseInt(te / period) + 1) * period;
+    }
+    for (var n = ts; n < rangeEnd; n += period) {
+        var dayProfit = 0.0;
+        var cut = n + period;
+        while (i < profits.length && profits[i][3] < cut) {
+            dayProfit += profits[i][1] - preProfit;
+            preProfit = profits[i][1];
+            i++;
+        }
+        perRatio = ((dayProfit / totalAssets) * yearRange) / period;
+        sum += perRatio;
+        datas.push(perRatio);
+    }
+
+    var sharpeRatio = 0;
+    var volatility = 0;
+    if (datas.length > 0) {
+        var avg = sum / datas.length;
+        var std = 0;
+        for (i = 0; i < datas.length; i++) {
+            std += Math.pow(datas[i] - avg, 2);
+        }
+        volatility = Math.sqrt(std / datas.length);
+        if (volatility !== 0) {
+            sharpeRatio = (annualizedReturns - freeProfit) / volatility;
+        }
+    }
+    return {
+        totalAssets: totalAssets,
+        yearDays: yearDays,
+        totalReturns: totalReturns,
+        annualizedReturns: annualizedReturns,
+        sharpeRatio: sharpeRatio,
+        volatility: volatility,
+        nowDrawdown: nowDrawdown,
+        maxDrawdown: maxDrawdown,
+        maxDrawdownTime: maxDrawdownTime,
+        maxAssetsTime: maxAssetsTime,
+        maxDrawdownStartTime: maxDrawdownStartTime,
+        winningRate: winningRate,
+        nowDrawdownFormat: $.TimeBetween(maxAssetsTime, new Date()),
+        maxDrawdownFormat: $.TimeBetween(maxDrawdownStartTime, maxDrawdownTime),
+    };
+};
+//取第多少周
+$.GetWeek = function (date) {
+    let nowDate = new Date(date);
+    let firstDay = new Date(date);
+    firstDay.setMonth(0); //设置1月
+    firstDay.setDate(1); //设置1号
+    let diffDays = Math.ceil((nowDate - firstDay) / (24 * 60 * 60 * 1000));
+    let week = Math.ceil(diffDays / 7);
+    week = week === 0 ? 1 : week;
+    let month = nowDate.getMonth() + 1;
+    if (month.toString().length == 1) {
+        month = "0" + month;
+    }
+    let ret = {
+        year: nowDate.getFullYear(),
+        month: month,
+        day: nowDate.getDate(),
+        week: week,
+    };
+    return ret;
 };
 function main() {}
 
@@ -203,4 +374,4 @@ https://www.fmz.com/strategy/277946
 
 > 更新时间
 
-2021-09-07 11:40:21
+2022-03-24 15:51:13

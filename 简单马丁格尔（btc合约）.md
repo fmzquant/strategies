@@ -15,6 +15,8 @@
 原理就是输了加倍，直到赢到期望的收益为止
 因为是回测用的，所有下单都是市价单，实盘没跑过！！
 
+2022.4.19修改:根据EMA144判断走低于均线则优先做空，高于均线则做多
+
 
 
 > 源码 (javascript)
@@ -25,14 +27,14 @@
 */
 
 
-var n = 50 //初始下单数
+var n = 0.001 //初始下单数
 var MarginLevel = 50 //合约杠杆 
-var profit = 0.05 //期望收益 ，不能小于手续费 
+var profit = 0.1 //期望收益 ，不能小于手续费 
 
 
 //取随机数 
-function sum(m, n) {　　
-    var num = Math.floor(Math.random() * (m - n) + n);　　
+function sum(m, n) {
+    var num = Math.floor(Math.random() * (m - n) + n);
     return num;
 }
 
@@ -43,14 +45,21 @@ function main() {
     while (true) {
         position = exchange.GetPosition()
         if (position.length == 0) {
-            //取随机数0、1作为方向
-            var redom = sum(2, 0)
-            Log(redom)
-            if (redom == 0) {
+            
+            var records = exchange.GetRecords(PERIOD_H1)
+            // 判断K线bar数量是否满足指标计算周期
+            var ema = TA.EMA(records, 144)
+            var ema144 = ema[ema.length - 1]
+            var ticker = exchange.GetTicker()
+            var nowPrice = ticker.Last
+            Log(ema144)
+
+            
+            if (nowPrice <ema144) {
                 exchange.SetDirection("sell")
                 exchange.Sell(-1, n, "开空")
             }
-            if (redom == 1) {
+            if (nowPrice > ema144) {
                 exchange.SetDirection("buy")
                 exchange.Buy(-1, n, "开多")
             }
@@ -94,4 +103,4 @@ https://www.fmz.com/strategy/270689
 
 > 更新时间
 
-2021-11-05 10:42:38
+2022-04-24 23:05:35

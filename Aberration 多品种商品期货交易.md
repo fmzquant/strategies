@@ -58,6 +58,8 @@ https://dn-filebox.qbox.me/e65b74536656f064f5c55842d8376a4b29043dbc.png
 start: 2016-01-15 09:00:00
 end: 2017-01-01 15:00:00
 period: 1d
+basePeriod: 1h
+exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
 */
 function Aberration(q, e, symbol, period, upRatio, downRatio, opAmount) {
     var self = {}
@@ -393,4 +395,4 @@ https://www.fmz.cn/strategy/327900
 
 > 更新时间
 
-2021-11-11 09:32:34
+2022-04-07 10:44:03
