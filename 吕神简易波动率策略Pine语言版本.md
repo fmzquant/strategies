@@ -46,10 +46,11 @@ vix_ma_down = ta.lowest(vix_ma, N)
 
 plot(vix, 'vix')
 plot(vix_ma, 'vix_ma')
-plot(vix_ma_up, 'vix_ma_up')
-plot(vix_ma_down, 'vix_ma_down')
+upline = plot(vix_ma_up, 'vix_ma_up')
+downline = plot(vix_ma_down, 'vix_ma_down')
+fill(upline, downline, color=color.new(color.gray, 50))
 
-qty = strategy.equity / close
+qty = math.round(strategy.equity / close, 2)
 
 if strategy.position_size == 0
     if vix > vix_ma_up and vix[1] <= vix_ma_up[1]
@@ -72,4 +73,4 @@ https://www.fmz.com/strategy/361827
 
 > 更新时间
 
-2022-05-17 21:45:45
+2022-05-29 20:51:28

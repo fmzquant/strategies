@@ -72,10 +72,13 @@ fsDonchianHi = ta.highest(high[1], FSLength)
 fsDonchianLo = ta.lowest(low[1], FSLength)
 exitLowestPrice = ta.lowest(low[1], TELength)
 exitHighestPrice = ta.highest(high[1], TELength)
-plot(donchianHi, "donchianHi")
-plot(donchianLow, "donchianLow")
+ldh=plot(donchianHi, "donchianHi")
+ldl=plot(donchianLow, "donchianLow")
+fill(ldh, ldl)
 plot(fsDonchianHi, "fsDonchianHi")
 plot(fsDonchianLo, "fsDonchianLo")
+
+
 
 
 if strategy.position_size == 0 and ((not LastProfitableTradeFilter) or (PreBreakoutFailure))
@@ -144,4 +147,4 @@ https://www.fmz.com/strategy/360536
 
 > 更新时间
 
-2022-05-08 19:37:10
+2022-05-21 20:43:32

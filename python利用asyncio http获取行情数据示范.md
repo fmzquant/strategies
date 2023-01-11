@@ -5,7 +5,7 @@ python利用asyncio http获取行情数据示范
 
 > 策略作者
 
-诺宝 NEO BABY
+诺宝 Baccarat Quant
 
 > 策略描述
 

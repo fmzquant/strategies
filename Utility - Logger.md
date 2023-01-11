@@ -94,7 +94,7 @@ var tradesTable = {
 var latencyTable = {
     type: 'table',
     title: 'Timestamps',
-    cols: ['Label-Id', 'Exch-Mkr', 'Creating-Mkr', 'Mkr-Live', 'Cancel-Mkr', 'Cancel-Exec', 'Creating-Tkr', 'Tkr-Live', 'Complete'],
+    cols: ['Label-Id', 'Exch-Mkr', 'Start', 'End', 'Mkr-Live', 'Cancel-Mkr', 'Cancel-Exec', 'Creating-Tkr', 'Tkr-Live', 'Complete'],
     rows: blocksLatencyV2
 }
 
@@ -171,7 +171,7 @@ $.logBotStatus = function(){
     3- REST Update -> bot had to check status via rest.
 */
 
-$.logArbProfit = function(makerTrade, takerTrade, conversionTrade, route) {
+$.logArbProfit = function(makerTrade, takerTrade, conversionPrice, route, conversionTrade=null) {
     if (makerTrade.side == 0 || makerTrade.side == "Buy"){
         buyTrade = makerTrade
         sellTrade = takerTrade
@@ -207,17 +207,13 @@ $.logBlockTrades = function(makerTrade, takerTrade, conversionTrade, labelId, lo
         logTradesTriangular(makerTrade, takerTrade, conversionTrade, labelId, loc, lat)
     } 
     else if (takerTrade && makerTrade) {
-        try {
-            logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_trk, lat_cyc, tries, premiumTarget, discountTarget)
-            $.logLatency(labelId, makerTrade.exchange, lat_mkr, lat_trk, lat_mkr_cancel, lat_cyc)
-        }
-        catch(e){
+        logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_trk, lat_cyc, tries, premiumTarget, discountTarget)
+        $.logLatency(labelId, makerTrade.exchange, lat_mkr, lat_trk, lat_mkr_cancel, lat_cyc)
         
-        }
         LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
     }
     else {
-        $.Error("[Utility Logger] Cannot Log Trade", takerTrade)
+        $.Warn("[Utility Logger] Cannot Log Trade", takerTrade)
     }
 }
 
@@ -307,7 +303,7 @@ $.logLatency = function (labelId, exchange, lat_mkr, lat_tkr, lat_mkr_cancel, la
     LogStatus('`' + JSON.stringify([blocksTable, blocksTableIds, tradesTable, posTable, volumeTable, latencyTable, currentStatusTable]) + '`')
 }
 
-$.logTimestamps = function(labelId, exchange, loc, creating_maker, maker_live, cancelling_maker, cancelled_execution, creating_taker, taker_live, process_execution){
+$.logTimestamps = function(labelId, exchange, loc, start, creating_maker, maker_live, cancelling_maker, cancelled_execution, creating_taker, taker_live, process_execution){
 
     // If order is executed before the bot tries to cancel these status are irrelevante
     if (loc < 2){
@@ -319,7 +315,8 @@ $.logTimestamps = function(labelId, exchange, loc, creating_maker, maker_live, c
         [
             labelId, 
             exchange.GetName(),
-            creating_maker, 
+            start,
+            process_execution,
             maker_live - creating_maker,
             cancelling_maker - maker_live,
             cancelled_execution - cancelling_maker,
@@ -376,40 +373,45 @@ function logTradesCross(makerTrade, takerTrade, labelId, loc, route, lat_tkr, la
     var cur_date = new Date() 
     //cur_date.setHours(d.getHours() - 4) 
 
-    executedBlocksCross.push(
-        [
-            cur_date.toLocaleString("ja-JP"), // Date
-            labelId, // Label Id
-            buyExchange, // Buy exchange 
-            executedSpread, // Spread %
-            tradeSlippage(executedSpread, targetSpread), // Slippage
-            _N(sellTrade.price - buyTrade.price, 4), // Spread $
-            tradeValueCross(buyTrade, sellTrade), // Value $
-            _N(buyTrade.price, 4), // Buy Price
-            _N(sellTrade.price, 4), // Sell Price
-            buyTrade.size, // Buy Size
-            sellTrade.size, // Sell Size
-            loc, // Location of liquidation initiation
-            lat_cyc, // Total Cycle duration
-            tries // Number of tries to liquidate
-        ]
-    )
 
-    executedBlocksCrossIds.push(
-        [
-            cur_date.toLocaleString("da-DK", { timeZone: 'America/New_York' }),
-            labelId,
-            buyExchange,
-            sellExchange,
-            makerTrade.id,
-            takerTrade.id,
-            route
-        ]
-    )
+    var blockData = [
+        cur_date.toLocaleString("ja-JP"), // Date
+        labelId, // Label Id
+        buyExchange, // Buy exchange 
+        executedSpread, // Spread %
+        tradeSlippage(executedSpread, targetSpread), // Slippage
+        _N(sellTrade.price - buyTrade.price, 4), // Spread $
+        tradeValueCross(buyTrade, sellTrade), // Value $
+        _N(buyTrade.price, 4), // Buy Price
+        _N(sellTrade.price, 4), // Sell Price
+        buyTrade.size, // Buy Size
+        sellTrade.size, // Sell Size
+        loc, // Location of liquidation initiation
+        lat_cyc, // Total Cycle duration
+        tries // Number of tries to liquidate
+    ]
+
+    Log("blockData", blockData)
+
+    var blockIds = [
+        cur_date.toLocaleString("da-DK", { timeZone: 'America/New_York' }),
+        labelId,
+        buyExchange,
+        sellExchange,
+        makerTrade.id,
+        takerTrade.id,
+        route
+    ]
+
+    
+    Log("blockIds", blockIds)
+
+    executedBlocksCross.push(blockData)
+    executedBlocksCrossIds.push(blockIds)
 }
 
 function tradeSpreadCross(buyTrade, sellTrade) {
-    return _N(((sellTrade.price / buyTrade.price - 1) * 100), 2)
+    return _N(((sellTrade.price / buyTrade.price - 1) * 100), 3)
 }
 
 function tradeValueCross(buyTrade, sellTrade){
@@ -468,4 +470,4 @@ https://www.fmz.com/strategy/209236
 
 > 更新时间
 
-2021-12-19 05:56:24
+2022-12-31 01:48:56

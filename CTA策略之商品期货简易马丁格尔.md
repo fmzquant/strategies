@@ -5,7 +5,7 @@ CTA策略之商品期货简易马丁格尔
 
 > 策略作者
 
-扫地僧
+Zer3192
 
 > 策略描述
 
@@ -27,18 +27,18 @@ CTA策略之商品期货简易马丁格尔
 - 滑点：开平仓各2跳
 
 **回测配置**
- ![IMG](https://www.fmz.cn/upload/asset/39df3d9ffd96e830c2f4.png) 
+ ![IMG](https://www.fmz.com/upload/asset/39df3d9ffd96e830c2f4.png) 
 **回测绩效**
- ![IMG](https://www.fmz.cn/upload/asset/3a0b9d36caf93df156c0.png) 
+ ![IMG](https://www.fmz.com/upload/asset/3a0b9d36caf93df156c0.png) 
 **资金曲线**
- ![IMG](https://www.fmz.cn/upload/asset/3992048c1b248823b8e0.png) 
+ ![IMG](https://www.fmz.com/upload/asset/3992048c1b248823b8e0.png) 
 **日志信息**
- ![IMG](https://www.fmz.cn/upload/asset/3979363f6bf790113495.png) 
+ ![IMG](https://www.fmz.com/upload/asset/3979363f6bf790113495.png) 
 
 #### 四、马丁格尔策略升级
 马丁格尔策略最大的风险是市场一直处于单边行情，如果交易者的持仓方向与市场方向背道而驰，那么积累起来的头寸是非常恐怖的。如果交易者的初始资金是1万元，亏损时以2倍加仓，那么只需要连续亏损7次就会爆仓。但如果把倍投改为1.5，情况就会好很多，连续亏损12次才会爆仓；如果把倍投改为1.1，则需要连续亏损49次才会爆仓。因为占用的资金量比较小，操作起来风险相对变小了。
 
- ![IMG](https://www.fmz.cn/upload/asset/390720a08054ffca4d39.png) 
+ ![IMG](https://www.fmz.com/upload/asset/390720a08054ffca4d39.png) 
 
 上图是一个倍投数和资金投入比例图，由此可见采用较低的倍投数，所占用的资金非常小，策略抗风险能力就越强，所以为确保资金安全，实盘建议使用低倍投数，建议在实盘之前计算好倍投数，最好是能扛连续亏损十几次的倍投数。
 
@@ -53,36 +53,38 @@ CTA策略之商品期货简易马丁格尔
 ``` javascript
 /*backtest
 start: 2015-06-01 00:00:00
-end: 2021-04-01 00:00:00
+end: 2022-04-01 00:00:00
 period: 1d
 basePeriod: 1d
-exchanges: [{"eid":"Futures_CTP","currency":"FUTURES"}]
+exchanges: [{"eid":"Futures_Binance","currency":"BTC_usdt"}]
 */
 
+MarginLevel =20//合约杠杆 
+unit =0.015//初始下单量
+profits =1//盈亏间距
+bei =1//倍率
 
-unit = 1
-profits = 10
-bei = 2
 
 
 function main() {
-    exchange.SetContractType("RM000")
+    exchange.SetContractType("swap")
+    exchange.SetMarginLevel(MarginLevel)
     while (true) {
         let depth = exchange.GetDepth();
         if (!depth) return;
-        let ask = depth.Asks[0].Price;
-        let bid = depth.Bids[0].Price;
+        let ask = depth.Asks[0].Price==-1;
+        let bid = depth.Bids[0].Price==-1;
         let position = exchange.GetPosition()
         if (position.length == 0) {
             let redom = Math.random()
-            unit = 1
-            if (redom < 0.5) {
-                exchange.SetDirection("sell")
-                exchange.Sell(bid, unit, "开空")
-            }
+            unit =0.015
             if (redom > 0.5) {
+                exchange.SetDirection("sell")
+                exchange.Sell(-1, unit, "开空")
+            }
+            if (redom < 0.5 ) {
                 exchange.SetDirection("buy")
-                exchange.Buy(ask, unit, "开多")
+                exchange.Buy(-1, unit, "开多")
             }
         }
         if (position.length > 0) {
@@ -92,39 +94,47 @@ function main() {
             if (type == 0) {
                 if (profit > profits) {
                     exchange.SetDirection("closebuy")
-                    exchange.Sell(bid, amount, "多头止盈，当前盈利：" + profit)
-                    unit = 1
-                }
-                if (profit < -profits) {
+                    exchange.Sell(-1, amount, "多头止盈，当前盈利：" + profit)
+                      unit = 0.015
+                }       
+            
+                if (profit <-profits ) {
                     unit = unit * bei
                     exchange.SetDirection("buy")
-                    exchange.Buy(ask, unit, "多头加仓，当前盈利：" + profit)
+                    exchange.Buy(-1, unit, "多头加仓，当前盈利：" + profit)
                 }
             }
+        
+        
             if (type == 1) {
                 if (profit > profits) {
                     exchange.SetDirection("closesell")
-                    exchange.Buy(ask, amount, "空头止盈，当前盈利：" + profit)
-                    unit = 1
-                }
+                    exchange.Buy(-1, amount, "空头止盈，当前盈利：" + profit)
+                    unit = 0.015
+            }
+                    
+                
                 if (profit < -profits) {
                     unit = unit * bei
                     exchange.SetDirection("sell")
-                    exchange.Sell(bid, unit, "空头加仓，当前盈利：" + profit)
+                    exchange.Sell(-1, unit, "空头加仓，当前盈利：" + profit)
                 }
-            }
-        }
-        Sleep(1000 * 60 * 60 * 24)
+            
+              }
+          } 
+
+        Sleep(1000 )
     }
 }
+
 
 
 ```
 
 > 策略出处
 
-https://www.fmz.cn/strategy/271903
+https://www.fmz.com/strategy/275287
 
 > 更新时间
 
-2021-04-23 17:55:44
+2022-04-05 07:47:26

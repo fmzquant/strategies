@@ -90,10 +90,8 @@ class ExitTop(object):
             # 判断是否存在大于当前macd值,如果当前价格大于区域内最高价格
             if self.totestlist[-2]+300 < self.totestlist[shorttime[1]] and self.klist[-2] >= are:
                 return True
-            else:
-                return False
-        else:
             return False
+        return False
     
     def main(self):
         result = self.mepath()
@@ -124,4 +122,4 @@ https://www.fmz.com/strategy/356399
 
 > 更新时间
 
-2022-04-12 15:05:57
+2022-12-17 15:32:43

@@ -275,6 +275,15 @@ $.Binance_Api_FundingRate = function (ex) {
   return ret.lastFundingRate
 }
 
+$.Binance_Api_FundingRate_All = function (ex) {
+  const ret = ex.IO('api', 'GET', api_future_base(false) + api_funding_rate)
+  if (isDebug) Log('Binance_Api_FundingRate_All ret: ', ret)
+  if (!ret) {
+    return 0
+  }
+  return ret
+}
+
 /**
  * 查询持仓模式
  *
@@ -415,4 +424,4 @@ https://www.fmz.com/strategy/247137
 
 > 更新时间
 
-2022-03-04 15:10:24
+2022-06-18 00:34:46

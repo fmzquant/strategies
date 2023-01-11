@@ -67,14 +67,16 @@ wkc19891
 /*
  * @Author: top.brids 
  * @Date: 2022-02-13 22:12:34 
- * @Last Modified by: top.brids
- * @Last Modified time: 2022-02-14 17:01:14
+ * @Last Modified by: topbrids@gmail.com
+ * @Last Modified time: 2022-07-17 11:40:10
  * @Last Remark: 策略定制 vx:wkc19891
  */
 
 //1
 let isOk = false;
 let isBinance = false;
+let brokerId = 'WcsXtG5x';
+let _currencys = "";
 let SymbolsEx = [];
 let button0 = [];
 let stoplist = [];
@@ -120,6 +122,98 @@ let unrealizedProfit = 0;
 let pft = 0;
 let ir = 0;
 
+function Buy(symbol, amount) {
+    let ret = exchange.IO("api", "POST", "/fapi/v1/order", `symbol=${symbol}&side=BUY&positionSide=LONG&type=MARKET&quantity=${amount}&newClientOrderId=x-${brokerId}_${uuid(16)}`)
+    let sideAndPos = '';
+    if (ret.positionSide == 'LONG') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入开多'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出平多'
+        }
+    }
+    if (ret.positionSide == 'SHORT') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入平空'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出开空'
+        }
+    }
+    let origType = ret.origType == 'MARKET' ? '市价' : '限价';
+    Log(`${ret.symbol} | ${origType} | 数量:${ret.origQty} | ${sideAndPos}  #32CD32`);
+    return ret;
+}
+function BuyClose(symbol, amount) {
+    let ret = exchange.IO("api", "POST", "/fapi/v1/order", `symbol=${symbol}&side=SELL&positionSide=LONG&type=MARKET&quantity=${amount}&newClientOrderId=x-${brokerId}_${uuid(16)}`)
+    let sideAndPos = '';
+    if (ret.positionSide == 'LONG') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入开多'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出平多'
+        }
+    }
+    if (ret.positionSide == 'SHORT') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入平空'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出开空'
+        }
+    }
+    let origType = ret.origType == 'MARKET' ? '市价' : '限价';
+    Log(`${ret.symbol} | ${origType} | 数量:${ret.origQty} | ${sideAndPos}  #32CD32`);
+    return ret;
+}
+function Sell(symbol, amount) {
+    let ret = exchange.IO("api", "POST", "/fapi/v1/order", `symbol=${symbol}&side=SELL&positionSide=SHORT&type=MARKET&quantity=${amount}&newClientOrderId=x-${brokerId}_${uuid(16)}`)
+    let sideAndPos = '';
+    if (ret.positionSide == 'LONG') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入开多'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出平多'
+        }
+    }
+    if (ret.positionSide == 'SHORT') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入平空'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出开空'
+        }
+    }
+    let origType = ret.origType == 'MARKET' ? '市价' : '限价';
+    Log(`${ret.symbol} | ${origType} | 数量:${ret.origQty} | ${sideAndPos}  #FF0000`);
+    return ret;
+}
+function SellClose(symbol, amount) {
+    let ret = exchange.IO("api", "POST", "/fapi/v1/order", `symbol=${symbol}&side=BUY&positionSide=SHORT&type=MARKET&quantity=${amount}&newClientOrderId=x-${brokerId}_${uuid(16)}`)
+    let sideAndPos = '';
+    if (ret.positionSide == 'LONG') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入开多'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出平多'
+        }
+    }
+    if (ret.positionSide == 'SHORT') {
+        if (ret.side == 'BUY') {
+            sideAndPos = '买入平空'
+        }
+        if (ret.side == 'SELL') {
+            sideAndPos = '卖出开空'
+        }
+    }
+    let origType = ret.origType == 'MARKET' ? '市价' : '限价';
+    Log(`${ret.symbol} | ${origType} | 数量:${ret.origQty} | ${sideAndPos}  #FF0000`);
+    return ret;
+}
 //获取合约面值
 function GetCtVal(coin1) {
     let coin = `${coin1.split('_')[0]}-${coin1.split('_')[1]}-SWAP`;
@@ -497,8 +591,8 @@ function trade() {
         if (position1.length == 0) {
             //1分钟金叉开多
             if (long1) {
-                exchanges[ir].SetDirection('buy')
-                exchanges[ir].Buy(-1, acc[ir])
+                _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                Buy(_currencys, acc[ir])
                 list1[ir] = ticker1.Last;
                 _G('list1', list1)
                 Log(currency, '进场开多,首单进场价格1:', list1[ir])
@@ -515,8 +609,8 @@ function trade() {
                         _G('listpft', listpft)
                         let maxpft = Math.max(...listpft[ir])
                         if (position1[0].Profit < (1 - 0.01 * K4) * maxpft) {
-                            exchanges[ir].SetDirection('closebuy')
-                            exchanges[ir].Sell(-1, position1[0].Amount)
+                            _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                            BuyClose(_currencys, position1[0].Amount)
                             CalLsAmount(position1[0].Amount, ticker1.Last)
                             listpft[ir] = []
                             _G('listpft', listpft)
@@ -541,9 +635,9 @@ function trade() {
                             _G('listpft', listpft)
                             let maxpft = Math.min(...listpft[ir])
                             if (position1[0].Profit > (1 - 0.01 * HcK4) * maxpft) {
-                                exchanges[ir].SetDirection('buy')
                                 let amount = acc[ir] * Math.pow(2, longAddCount[ir])
-                                exchanges[ir].Buy(-1, amount);
+                                _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                                Buy(_currencys, amount)
                                 list1[ir] = ticker1.Last;
                                 _G('list1', list1)
                                 longAddCount[ir] = longAddCount[ir] + 1;
@@ -558,8 +652,8 @@ function trade() {
                 if (position1[0].Type == 1) {
                     //1分钟金叉开多
                     if (long1) {
-                        exchanges[ir].SetDirection('buy')
-                        exchanges[ir].Buy(-1, acc[ir])
+                        _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                        Buy(_currencys, acc[ir])
                         list1[ir] = ticker1.Last;
                         _G('list1', list1)
                         Log(currency, '进场开多,首单进场价格2:', list1[ir])
@@ -575,9 +669,11 @@ function trade() {
                             _G('listpft2', listpft2)
                             let maxpft2 = Math.min(...listpft2[ir])
                             if (position1[0].Profit > (1 - 0.01 * HcK4) * maxpft2) {
-                                exchanges[ir].SetDirection('sell')
                                 let amount = acc[ir] * Math.pow(2, shortAddCount[ir])
-                                exchanges[ir].Sell(-1, amount)
+
+                                _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                                Sell(_currencys, amount)
+
                                 list2[ir] = ticker1.Last;
                                 _G('list2', list2)
                                 shortAddCount[ir] = shortAddCount[ir] + 1;
@@ -589,8 +685,8 @@ function trade() {
                     } else {
                         //空单止盈
                         if ((position1[0].Profit + sSubP[ir]) > 0.01 * C1 * ticker1.Last * position1[0].Amount * ctVal) {
-                            exchanges[ir].SetDirection('closesell')
-                            exchanges[ir].Buy(-1, position1[0].Amount)
+                            _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                            SellClose(_currencys, position1[0].Amount)
                             CalLsAmount(position1[0].Amount, ticker1.Last)
                             list2[ir] = 0
                             _G('list2', list2)
@@ -611,8 +707,10 @@ function trade() {
                     _G('listpft', listpft)
                     let maxpft = Math.max(...listpft[ir])
                     if (position1[0].Profit < (1 - 0.01 * K4) * maxpft) {
-                        exchanges[ir].SetDirection('closebuy')
-                        exchanges[ir].Sell(-1, position1[0].Amount)
+
+                        _currencys = exchanges[ir].GetCurrency().replace("_", "")
+                        BuyClose(_currencys, position1[0].Amount)
+
                         CalLsAmount(position1[0].Amount, ticker1.Last)
                         listpft[ir] = []
                         _G('listpft', listpft)
@@ -636,9 +734,11 @@ function trade() {
                             _G('listpft', listpft)
                             let maxpft = Math.min(...listpft[ir])
                             if (position1[0].Profit > (1 - 0.01 * HcK4) * maxpft) {
-                                exchanges[ir].SetDirection('buy')
                                 let amount = acc[ir] * Math.pow(2, longAddCount[ir])
-                                exchanges[ir].Buy(-1, amount)
+
+                                _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                                Buy(_currencys, amount);
+
                                 list1[ir] = ticker1.Last;
                                 _G('list1', list1)
                                 longAddCount[ir] = longAddCount[ir] + 1;
@@ -659,9 +759,10 @@ function trade() {
                         _G('listpft2', listpft2)
                         let maxpft2 = Math.min(...listpft2[ir])
                         if (position1[1].Profit > (1 - 0.01 * HcK4) * maxpft2) {
-                            exchanges[ir].SetDirection('sell')
                             let amount = acc[ir] * Math.pow(2, shortAddCount[ir]);
-                            exchanges[ir].Sell(-1, amount)
+                            _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                            Sell(_currencys, amount)
+
                             list2[ir] = ticker1.Last;
                             _G('list2', list2)
                             shortAddCount[ir] = shortAddCount[ir] + 1;
@@ -672,8 +773,9 @@ function trade() {
                     }
                 } else {
                     if ((position1[1].Profit + sSubP[ir]) > 0.01 * C1 * ticker1.Last * position1[1].Amount * ctVal) {
-                        exchanges[ir].SetDirection('closesell')
-                        exchanges[ir].Buy(-1, position1[1].Amount)
+                        _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                        SellClose(_currencys, position1[1].Amount);
+
                         CalLsAmount(position1[1].Amount, ticker1.Last)
                         list2[ir] = 0
                         _G('list2', list2)
@@ -693,8 +795,8 @@ function trade() {
         if (position1.length == 0) {
             //1分钟死叉开空
             if (short1) {
-                exchanges[ir].SetDirection('sell')
-                exchanges[ir].Sell(-1, acc[ir])
+                _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                Sell(_currencys, acc[ir]);
                 list2[ir] = ticker1.Last;
                 _G('list2', list2)
                 Log(currency, '进场开空,首单进场价格1:', list2[ir])
@@ -711,8 +813,9 @@ function trade() {
                         _G('listpft2', listpft2)
                         let maxpft2 = Math.max(...listpft2[ir])
                         if (position1[0].Profit < (1 - 0.01 * K4) * maxpft2) {
-                            exchanges[ir].SetDirection('closesell')
-                            exchanges[ir].Buy(-1, position1[0].Amount)
+                            _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                            SellClose(_currencys, position1[0].Amount);
+
                             CalLsAmount(position1[0].Amount, ticker1.Last)
                             Log(currency, '止盈信号1:', K4, ',平空止盈')
                             LogProfit(pft)
@@ -736,9 +839,9 @@ function trade() {
                                 _G('listpft2', listpft2)
                                 let maxpft2 = Math.min(...listpft2[ir])
                                 if (position1[0].Profit > (1 - 0.01 * HcK4) * maxpft2) {
-                                    exchanges[ir].SetDirection('sell')
                                     let amount = acc[ir] * Math.pow(2, shortAddCount[ir]);
-                                    exchanges[ir].Sell(-1, amount)
+                                    _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                                    Sell(_currencys, amount);
                                     list2[ir] = ticker1.Last;
                                     _G('list2', list2)
                                     shortAddCount[ir] = shortAddCount[ir] + 1;
@@ -754,8 +857,8 @@ function trade() {
                 if (position1[0].Type == 0) {
                     //1分钟死叉开空
                     if (short1) {
-                        exchanges[ir].SetDirection('sell')
-                        exchanges[ir].Sell(-1, acc[ir])
+                        _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                        Sell(_currencys, acc[ir]);
                         list2[ir] = ticker1.Last;
                         _G('list2', list2)
                         Log(currency, '进场开空,首单进场价格2:', list2[ir])
@@ -771,9 +874,9 @@ function trade() {
                             _G('listpft', listpft)
                             let maxpft = Math.min(...listpft[ir])
                             if (position1[0].Profit > (1 - 0.01 * HcK4) * maxpft) {
-                                exchanges[ir].SetDirection('buy')
                                 let amount = acc[ir] * Math.pow(2, longAddCount[ir]);
-                                exchanges[ir].Buy(-1, amount);
+                                _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                                Buy(_currencys, amount);
                                 list1[ir] = ticker1.Last;
                                 _G('list1', list1)
                                 longAddCount[ir] = longAddCount[ir] + 1;
@@ -784,8 +887,10 @@ function trade() {
                         }
                     } else {
                         if ((position1[0].Profit + lSubP[ir]) > 0.01 * C1 * ticker1.Last * position1[0].Amount * ctVal) {
-                            exchanges[ir].SetDirection('closebuy')
-                            exchanges[ir].Sell(-1, position1[0].Amount)
+
+                            _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                            BuyClose(_currencys, position1[0].Amount);
+
                             CalLsAmount(position1[0].Amount, ticker1.Last)
                             list1[ir] = 0
                             _G('list1', list1)
@@ -806,8 +911,10 @@ function trade() {
                     _G('listpft2', listpft2)
                     let maxpft2 = Math.max(...listpft2[ir])
                     if (position1[1].Profit < (1 - 0.01 * K4) * maxpft2) {
-                        exchanges[ir].SetDirection('closesell')
-                        exchanges[ir].Buy(-1, position1[1].Amount)
+
+                        _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                        SellClose(_currencys, position1[1].Amount);
+
                         CalLsAmount(position1[1].Amount, ticker1.Last)
                         Log(currency, '止盈信号:', K4, ',平空止盈')
                         LogProfit(pft)
@@ -831,9 +938,11 @@ function trade() {
                             _G('listpft2', listpft2)
                             let maxpft2 = Math.min(...listpft2[ir])
                             if (position1[1].Profit > (1 - 0.01 * HcK4) * maxpft2) {
-                                exchanges[ir].SetDirection('sell')
                                 let amount = acc[ir] * Math.pow(2, shortAddCount[ir]);
-                                exchanges[ir].Sell(-1, amount)
+
+                                _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                                Sell(_currencys, amount);
+
                                 list2[ir] = ticker1.Last;
                                 _G('list2', list2)
                                 shortAddCount[ir] = shortAddCount[ir] + 1;
@@ -854,9 +963,11 @@ function trade() {
                         _G('listpft', listpft)
                         let maxpft = Math.min(...listpft[ir])
                         if (position1[0].Profit > (1 - 0.01 * HcK4) * maxpft) {
-                            exchanges[ir].SetDirection('buy')
                             let amount = acc[ir] * Math.pow(2, longAddCount[ir]);
-                            exchanges[ir].Buy(-1, amount)
+
+                            _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                            Buy(_currencys, amount);
+
                             list1[ir] = ticker1.Last;
                             _G('list1', list1)
                             longAddCount[ir] = _N(parseFloat(longAddCount[ir]), 0) + 1;
@@ -867,8 +978,10 @@ function trade() {
                     }
                 } else {
                     if ((position1[0].Profit + lSubP[ir]) > 0.01 * C1 * ticker1.Last * position1[0].Amount * ctVal) {
-                        exchanges[ir].SetDirection('closebuy')
-                        exchanges[ir].Sell(-1, position1[0].Amount)
+
+                        _currencys = exchanges[ir].GetCurrency().replace("_", "");
+                        BuyClose(_currencys, position1[0].Amount);
+
                         CalLsAmount(position1[0].Amount, ticker1.Last)
                         list1[ir] = 0
                         _G('list1', list1)
@@ -1164,9 +1277,11 @@ function main() {
                         let amount = Number(arr[3]);
                         exchanges[ic].SetContractType("swap")
                         if (arr[2] == 'LONG') {
-                            exchanges[ic].SetDirection("closebuy")
                             let ticker1 = _C(exchanges[ic].GetTicker)
-                            exchanges[ic].Sell(-1, amount)
+
+                            _currencys = exchanges[ic].GetCurrency().replace("_", "");
+                            BuyClose(_currencys, amount);
+
                             CalLsAmount(amount, ticker1.Last)
                             longAddCount[ic] = 0;
                             _G('longAddCount', longAddCount)
@@ -1176,9 +1291,11 @@ function main() {
                             _G('list1', list1)
                         }
                         if (arr[2] == 'SHORT') {
-                            exchanges[ic].SetDirection("closesell")
-                            exchanges[ic].Buy(-1, amount)
                             let ticker1 = _C(exchanges[ic].GetTicker)
+
+                            _currencys = exchanges[ic].GetCurrency().replace("_", "");
+                            SellClose(_currencys, amount);
+
                             CalLsAmount(amount, ticker1.Last)
                             shortAddCount[ic] = 0;
                             _G('shortAddCount', shortAddCount)
@@ -1220,4 +1337,4 @@ https://www.fmz.com/strategy/345080
 
 > 更新时间
 
-2022-02-26 23:17:12
+2022-07-17 11:40:13
