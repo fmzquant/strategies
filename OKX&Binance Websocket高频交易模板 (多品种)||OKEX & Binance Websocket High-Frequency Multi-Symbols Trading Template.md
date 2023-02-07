@@ -11,18 +11,18 @@ OKX&Binance Websocket高频交易模板 (多品种)||OKEX & Binance Websocket Hi
 
 [trans]
 实现功能:
-1. 公共流订阅, trades及深度合成
-2. 私有流订阅, 维护本地委托单与仓位以及余额信息
-3. 维护取消订单超时状态, 支持OKX的amendOrders修改订单
-4. 支持多个品种, 方便高频策略以最低的延迟同时操作多个市场
-5. 添加函数 EventLoop(需要最新托管者支持), 此函数可以在多个websocket连接的情况下, 等待任意websocket数据返回, 避免轮询
-6. 支持OKX与Binance期货与Binance的现货与现货杠杆交易, OKX的现货暂未加入支持, 感兴趣的可以自己更改一下
-7. OKX的私有流订阅需要Key与密码已经做为参数写在模板里
-8. 自动处理断线重连等一些基本的网络功能
-9. 支持私有流订单成交取消回报的事件回调
-10. 统一两个交易所的下单逻辑, 具体可以看模板源码或者例子
-11. 支持同时订阅多个交易所的websocket接口
-12. 订单的报单修改以及删除可以批量做为任务返回, 会自动处理交易任务
+* 公共流订阅, trades及深度合成
+* 私有流订阅, 维护本地委托单与仓位以及余额信息
+* 维护取消订单超时状态, 支持OKX的amendOrders修改订单
+* 支持多个品种, 方便高频策略以最低的延迟同时操作多个市场
+* 添加函数 EventLoop(需要最新托管者支持), 此函数可以在多个websocket连接的情况下, 等待任意websocket数据返回, 避免轮询
+* 支持OKX与Binance期货与Binance的现货与现货杠杆交易, OKX的现货暂未加入支持, 感兴趣的可以自己更改一下
+* OKX的私有流订阅需要Key与密码已经做为参数写在模板里
+* 自动处理断线重连等一些基本的网络功能
+* 支持私有流订单成交取消回报的事件回调
+* 统一两个交易所的下单逻辑, 具体可以看模板源码或者例子
+* 支持同时订阅多个交易所的websocket接口
+* 订单的报单修改以及删除可以批量做为任务返回, 会自动处理交易任务
 
 高频下单的时候，交易所返回的定单会不及时(private通道)，但这时侯行情可能已经变化，我们需要本地维护一个订单状态, 策略已经实现，
 模板会自动识别是OKX还是Binance, 下面是一个简单的例子, 强烈建议阅读源码，这样能更深层次的定制你自己的功能
@@ -132,7 +132,7 @@ function main() {
 
     while (true) {
         ctx.poll()
-        __syscall("TSocket_WaitAny", 1000)
+        EventLoop(1000)
     }
 }
 ```
@@ -539,6 +539,11 @@ function NewOKXWebSocketPrivate(ctx, verbose) {
     }
 
     self.poll = function(timeout) {
+        
+        if (AccessKey.length == 0) {
+            return
+        }
+        
         let ts = new Date().getTime()
         if (self.lastPing == 0) {
             self.lastPing = ts
@@ -610,11 +615,13 @@ function NewOKXWebSocketPublic(e, onLogin, onTick, verbose) {
 
     let self = {
         e: e,
+        key: e.GetName() + '/' + e.GetCurrency(),
         quoteCurrency: e.GetQuoteCurrency(),
         name: e.GetName(),
         verbose: verbose,
         isFutures: e.GetName().indexOf("Futures_") == 0,
         ws: null,
+        cache: {},
         channles: [],
         depthCount: 0,
         depthConsumed: 0,
@@ -623,7 +630,6 @@ function NewOKXWebSocketPublic(e, onLogin, onTick, verbose) {
             asks: {},
             bids: {}
         },
-        trades: [],
         lastMarket: 0
     }
     self.wsPrivate = NewOKXWebSocketPrivate(self, verbose)
@@ -655,7 +661,7 @@ function NewOKXWebSocketPublic(e, onLogin, onTick, verbose) {
         } else if (obj.event == 'login') {
             self.channles = []
             if (typeof(onLogin) === 'function') {
-                onLogin(self.ws)
+                onLogin(self.ws, self.e)
             }
         } else {
             self.lastMarket = new Date().getTime();
@@ -786,17 +792,23 @@ function NewOKXWebSocketPublic(e, onLogin, onTick, verbose) {
             if (!self.ws) {
                 return
             }
-            let tsStr = (new Date().getTime() / 1000).toString()
-            let authMsg = {
-                "op": "login",
-                "args": [{
-                    "apiKey": AccessKey,
-                    "passphrase": Passphrase,
-                    "timestamp": tsStr,
-                    "sign": self.e.HMAC("sha256", "base64", tsStr + "GET" + "/users/self/verify", "{{secretkey}}")
-                }]
+            if (AccessKey.length == 0) {
+                if (typeof(onLogin) === 'function') {
+                    onLogin(self.ws, self.e)
+                }
+            } else {
+                let tsStr = (new Date().getTime() / 1000).toString()
+                let authMsg = {
+                    "op": "login",
+                    "args": [{
+                        "apiKey": AccessKey,
+                        "passphrase": Passphrase,
+                        "timestamp": tsStr,
+                        "sign": self.e.HMAC("sha256", "base64", tsStr + "GET" + "/users/self/verify", "{{secretkey}}")
+                    }]
+                }
+                self.ws.write(JSON.stringify(authMsg))
             }
-            self.ws.write(JSON.stringify(authMsg))
         }
         if (!self.ws) {
             return
@@ -1286,16 +1298,17 @@ function NewBinanceSocketPrivate(ctx, verbose) {
 function NewBinanceWebSocketPublic(e, onLogin, onTick, verbose) {
     let self = {
         e: e,
+        key: e.GetName() + '/' + e.GetCurrency(),
         quoteCurrency: e.GetQuoteCurrency(),
         name: e.GetName(),
         isFutures: e.GetName().indexOf("Futures_") == 0,
         verbose: verbose,
         ws: null,
+        cache: {},
         depthCount: 0,
         depthConsumed: 0,
         lastPing: 0,
-        isReadyDic: {},
-        trades: []
+        isReadyDic: {}
     }
     self.base = self.isFutures ? "wss://fstream.binance.com/ws" : "wss://stream.binance.com/ws"
 
@@ -1407,7 +1420,7 @@ function NewBinanceWebSocketPublic(e, onLogin, onTick, verbose) {
             Log("Dial: ", self.base)
             self.ws = Dial(self.base)
             if (self.ws) {
-                onLogin(self.ws)
+                onLogin(self.ws, self.e)
             }
         }
         if (!self.ws) {
@@ -1560,4 +1573,4 @@ https://www.fmz.com/strategy/395045
 
 > 更新时间
 
-2023-01-11 16:16:25
+2023-02-02 20:12:19

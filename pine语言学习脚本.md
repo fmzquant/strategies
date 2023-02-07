@@ -36,6 +36,8 @@ slowSMA = sma(close, slowLength)
 // 设置止盈止损
 longStop = strategy.position_avg_price * (1 - 0.01)
 shortStop = strategy.position_avg_price * (1 + 0.01)
+longlimit = strategy.position_avg_price * (1 + 0.01)
+shortlimit = strategy.position_avg_price * (1 - 0.01)
 
 // 开仓条件
 longCondition = crossover(fastSMA, slowSMA)
@@ -46,8 +48,8 @@ strategy.entry("Long", strategy.long, when=longCondition)
 strategy.entry("Short", strategy.short, when=shortCondition)
 
 // 止盈止损
-strategy.exit("Long Stop", "Long", stop=longStop)
-strategy.exit("Short Stop", "Short", stop=shortStop)
+strategy.exit("Long Stop", "Long", stop=longStop,limit=longlimit)
+strategy.exit("Short Stop", "Short", stop=shortStop,limit=shortlimit)
 
 ```
 
@@ -57,4 +59,4 @@ https://www.fmz.com/strategy/395433
 
 > 更新时间
 
-2023-01-03 07:32:44
+2023-01-28 14:58:19
