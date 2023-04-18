@@ -151,8 +151,12 @@ function onTick(ctx, event) {
 }
 
 function main() {
-    let ctName = "swap"
     _chart.reset()
+    let ct = exchange.SetContractType("swap")
+    let debug = false
+    let useMargin = false
+    let okxAccessKey = ""
+    let okxPhrase = ""
     let ctx = $.NewWSS(exchange, function(ws, e) {
         let msg = null
         if (e.GetName() == 'Futures_OKCoin') {
@@ -160,7 +164,7 @@ function main() {
                 op: "subscribe",
                 args: []
             }
-            let instId = e.SetContractType(ctName).InstrumentID
+            let instId = ct.InstrumentID
             msg.args.push({
                 channel: "books5",
                 instId: instId
@@ -182,7 +186,7 @@ function main() {
         ws.write(JSON.stringify(msg))
         Log("subscribe", msg, "channel")
         LogStatus("Ready")
-    }, onTick, false)
+    }, onTick, debug, useMargin, okxAccessKey, okxPhrase)
 
     while (true) {
         ctx.poll()
@@ -197,4 +201,4 @@ https://www.fmz.com/strategy/392784
 
 > 更新时间
 
-2023-02-01 19:43:36
+2023-03-24 17:22:54
