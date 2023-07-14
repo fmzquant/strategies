@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TrendScalp-FractalBox-3EMA
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 There are many indicators with William’s Fractal and Alligator . As many use EMA’s it may be useful to define a 3-EMA ribbon and combining Fractal Levels/Box (filling background between top and bottom fractals) for trend scalping. I searched for this kind of indicator in community – some show fractals, some just levels, some with alligator etc. but couldn't find the one needed. Hence thought of this indicator which may be of interest to other users too.
 
@@ -29,11 +29,11 @@ DISCLAIMER: This indicator has been created for educational reference only and d
 
  ![IMG](https://www.fmz.com/upload/asset/190db5ecaaed28b368d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|Show EMA Ribbon|
 |v_input_int_1|35|Fast EMA|
@@ -44,7 +44,7 @@ DISCLAIMER: This indicator has been created for educational reference only and d
 |v_input_int_5|true|Fractal Line Width|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -153,10 +153,10 @@ else if close < nz(fractLevelLow, low)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365059
 
-> 更新时间
+> Last Modified
 
 2022-05-23 12:01:38

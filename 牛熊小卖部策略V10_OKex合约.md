@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 牛熊小卖部策略V10_OKex合约
 
-> 策略作者
+> Author
 
 区班量化
 
-> 策略描述
+> Strategy Description
 
 前面文章讨论过，小卖部策略在特定情况下，可以做到130%的年化收益。不过这是在特定情况下，就是该商品的月度均线，从长期看是上升的，且经过了很长一段时间。如果在进入市场的短期3个月里，都处于下跌市里，那可能遭到重大打击。
 究其原因，最重要的是，该策略没引入做空机制。犹如在A股市场里，只能做多，那下跌来时，只能空仓或者被动挨揍。还好数字货币是提供做空机制的，通过合约交易，我们就可以把下跌风险规避掉。
@@ -16,11 +16,11 @@
 注册币乎后https://m.bihu.com/signup?i=1ewtKO&s=4&c=4
 搜索 物联网区块链 可以联系到作者区班主
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Interval|10|轮询周期(秒)|
 |mnum|20|30分钟线周期|
@@ -28,7 +28,7 @@
 |dnum|5|日线周期|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -257,10 +257,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/171038
 
-> 更新时间
+> Last Modified
 
 2019-10-24 13:44:56

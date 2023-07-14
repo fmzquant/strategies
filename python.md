@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 python
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -74,10 +74,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/343032
 
-> 更新时间
+> Last Modified
 
 2022-01-30 17:35:13

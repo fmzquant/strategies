@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 MA-HYBRID-BY-RAJ
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script is designed for the NNFX Method, so it is recommended for Daily charts only. This script has a SSL / Baseline (you can choose between the SSL or MA), a secondary SSL for continiuation trades and a third SSL for exit trades.
 
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/1677d02f99fb95590c2.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show Baseline|
 |v_input_2|false|Show SSL1|
@@ -48,7 +48,7 @@ This script is designed for the NNFX Method, so it is recommended for Daily char
 |v_input_26|0.9|Continuation ATR Criteria|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -342,10 +342,10 @@ else if sell_atr
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362210
 
-> 更新时间
+> Last Modified
 
 2022-05-10 15:32:42

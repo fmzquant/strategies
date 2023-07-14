@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Python-KLineChart
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
  平台(Javascript/Python语言)开通KLineChart支持, 支持Pine语言全部画图功能(参数保持一致), 支持自定义买卖信号
  下面是一个演示的例子
@@ -21,7 +21,7 @@ Python-KLineChart
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -61,10 +61,10 @@ def main():
         c.close()
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/371600
 
-> 更新时间
+> Last Modified
 
 2022-07-01 17:57:42

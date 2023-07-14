@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Quantitative-Qualitative-Estimation
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The QQE indicator is a momentum based indicator to determine trend and sideways.
 
@@ -43,11 +43,11 @@ Kıvanç Özbilgiç
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/1002a1c2c6624b925ae.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|src: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|14|RSI Length|
@@ -56,7 +56,7 @@ Kıvanç Özbilgiç
 |v_input_5|true|Highlighter On/Off ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -113,10 +113,10 @@ else if sellSignallr and showsignals
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365315
 
-> 更新时间
+> Last Modified
 
 2022-05-24 11:28:43

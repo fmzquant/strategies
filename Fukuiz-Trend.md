@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Fukuiz-Trend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator base on RSI of 2 different periond.
 
@@ -29,11 +29,11 @@ Crossunder = Bearish trend (red zone)
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|24|RSI Short|
 |v_input_int_2|100|RSI Long|
@@ -46,7 +46,7 @@ Crossunder = Bearish trend (red zone)
 |v_input_7|true|rsi<rsi2 Divergence|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -141,10 +141,10 @@ else if bearCond
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363980
 
-> 更新时间
+> Last Modified
 
 2022-05-18 10:51:21

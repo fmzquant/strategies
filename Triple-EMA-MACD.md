@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Triple-EMA-MACD
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 long 50>200 ema
 short 50<200 ema
@@ -18,11 +18,11 @@ tyvm have a nice day
 
  ![IMG](https://www.fmz.com/upload/asset/11f50a9e26890f755a7.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Enable 2nd MA|
 |v_input_2|true|Enable 3rd MA|
@@ -37,7 +37,7 @@ tyvm have a nice day
 |v_input_11|2|MACDLength|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -100,10 +100,10 @@ if (crossunder(delta, 0) and SMema < LGema)
 //plot(strategy.equity, title="equity", color=red, linewidth=2, style=areabr)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362430
 
-> 更新时间
+> Last Modified
 
 2022-05-11 16:17:19

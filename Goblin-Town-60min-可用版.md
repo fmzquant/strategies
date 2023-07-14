@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Goblin-Town-60min-可用版
 
-> 策略作者
+> Author
 
 张超
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_open|0|src: open|high|low|close|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|0|Longs / Shorts: Both|Longs|Shorts|
@@ -78,7 +78,7 @@ Goblin-Town-60min-可用版
 |v_input_61|31|stop day|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 
@@ -595,10 +595,10 @@ strategy.exit("TP-2_L", "L_2", profit = (math.abs((last_open_longCondition   *  
 //strategy.close_all(when = L_STOP or S_STOP)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/376304
 
-> 更新时间
+> Last Modified
 
 2022-08-03 10:57:43

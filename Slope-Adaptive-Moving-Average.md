@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Slope-Adaptive-Moving-Average
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 INTRODUCTION
 
@@ -35,11 +35,11 @@ Buy/Sell Alerts will follow on when slope is out of consolidation/ choppiness ar
 
  ![IMG](https://www.fmz.com/upload/asset/ca6b92cf316e03cc37.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_timeframe_1||Chart Resolution|
 |v_input_source_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -55,7 +55,7 @@ Buy/Sell Alerts will follow on when slope is out of consolidation/ choppiness ar
 |v_input_bool_1|true|(?Plot Parameters)Show Signals on Chart|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -197,10 +197,10 @@ else if shortsignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366930
 
-> 更新时间
+> Last Modified
 
 2022-05-31 18:24:37

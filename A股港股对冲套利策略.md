@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 A股港股对冲套利策略
 
-> 策略作者
+> Author
 
 雨幕
 
-> 策略描述
+> Strategy Description
 
 ## A股港股对冲套利策略
 
 相关文章：https://www.fmz.cn/bbs-topic/7940
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |symbolA|601633.SH|A股代码|
 |symbolH|02333.HK|港股代码|
@@ -34,13 +34,13 @@ A股港股对冲套利策略
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |buyA_sellH|false|买A股卖港股|
 |buyH_sellA|false|买港股卖A股|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -423,10 +423,10 @@ function onerror() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/312721
 
-> 更新时间
+> Last Modified
 
 2021-10-26 10:19:01

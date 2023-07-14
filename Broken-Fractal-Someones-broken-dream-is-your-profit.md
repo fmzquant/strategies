@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Broken-Fractal-Someones-broken-dream-is-your-profit
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Idea
 The idea is simple : when market turns around, it traps a bunch of traders off guard. We trade with them, in the same direction of their exit!
@@ -34,11 +34,11 @@ PS2 : Break of a broken fractal is also very potent. Watch out for those!
 
  ![IMG](https://www.fmz.com/upload/asset/13522764fc0126952eb.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|2|n==1 or 2|
 |v_input_2|false|bgColor|
@@ -47,7 +47,7 @@ PS2 : Break of a broken fractal is also very potent. Watch out for those!
 |v_input_5|true|showBearishSignal|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -112,10 +112,10 @@ else if sellSignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365695
 
-> 更新时间
+> Last Modified
 
 2022-05-25 17:21:02

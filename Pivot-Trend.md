@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Pivot-Trend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello Traders,
 
@@ -28,11 +28,11 @@ You have two options:
 
  ![IMG](https://www.fmz.com/upload/asset/194977bc1a4ef4f04d5.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|4|Pivot Point Period|
 |v_input_2|3|number of PP to check|
@@ -40,7 +40,7 @@ You have two options:
 |v_input_4|orange|coldn|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -106,10 +106,10 @@ else if change(trend) < 0
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366936
 
-> 更新时间
+> Last Modified
 
 2022-05-31 18:43:20

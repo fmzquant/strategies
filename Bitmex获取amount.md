@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Bitmex获取amount
 
-> 策略作者
+> Author
 
 扁豆子
 
@@ -11,7 +11,7 @@ Bitmex获取amount
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 config = {
@@ -229,10 +229,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/223326
 
-> 更新时间
+> Last Modified
 
 2021-10-01 11:02:46

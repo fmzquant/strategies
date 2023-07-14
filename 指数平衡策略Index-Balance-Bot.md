@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 指数平衡策略Index-Balance-Bot
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 This bot wuill maintain a specific proportion of each asset value as you set.
 If you set ETH value to 25%(0.25) of portfolio, deviation to 0.1, bot will buy to 0.25 when the value ratio is below 0.9*0.25 and sell when it is above 1.1*0.25, thus, the ETH value is kept to a certain ratio.
@@ -18,11 +18,11 @@ Remember, the total ratio added up must lower than 1 and has a extra room to buy
 
 The Flash Crash Bot sets pre-orders above and below a specified base price. Buy orders are placed at predefined price points that fall below the set base price. Conversely, sell orders are placed above this base price. This bot is most effective in a volatile market.
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Ratio|0.25|0.25|0.25|assets ratio(separate by "|")|
 |BaseAsset|BTC|base currency|
@@ -31,7 +31,7 @@ The Flash Crash Bot sets pre-orders above and below a specified base price. Buy 
 |Interval|60|check interval（second)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var account = _C(exchanges[0].GetAccount);
@@ -103,10 +103,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/116012
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:43:18

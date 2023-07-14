@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Hull-4ema
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 this is a test just trying out pine script
 4EMA indicator has been created for everyone.
@@ -16,11 +16,11 @@ this is a test just trying out pine script
 
  ![IMG](https://www.fmz.com/upload/asset/f86714aaa93a9e48f7e7.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_hl2|0|Source: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
 |v_input_2|21|HMA Length|
@@ -40,7 +40,7 @@ this is a test just trying out pine script
 |v_input_16|2|mult|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -193,10 +193,10 @@ fill(p1, p2, transp=95, title="background")
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362327
 
-> 更新时间
+> Last Modified
 
 2022-05-10 23:47:44

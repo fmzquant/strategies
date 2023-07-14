@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Momentum-20
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Momentum 2.0 is a normalized Momentum oscillator with a moving base-level. The oscillator value is normalized by its standard deviation, similar to the z-score technique. Instead of the zero level, the indicator uses the base-level calculated as the inverted long-term average value of the oscillator. Similar to the zero-level crossing signal used for the Momentum oscillator, our oscillator calculates the base level crossing signal.
 The moving base-level helps to reduce the number of false signals. In an uptrend the base-level is below zero, in a downtrend it is above it. This allows us to take into account the trend stability effect. In this case, to form a reversal signal, the oscillator must cross a lower value in an uptrend and a higher value in a downtrend.
@@ -25,17 +25,17 @@ Base Level Period - determines the period used for long-term averaging when calc
 
  ![IMG](https://www.fmz.com/upload/asset/1b5c272b6cd20f0a1cb.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|15|Oscillator Period|
 |v_input_int_1|450|Base Level Period|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -76,10 +76,10 @@ else if bearish
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362163
 
-> 更新时间
+> Last Modified
 
 2022-05-10 10:32:54

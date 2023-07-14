@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 OKEX-V5-K线数据分页查询例子-Python版
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## OKEX V5 K线数据分页查询例子
 
@@ -40,7 +40,7 @@ function main() {
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import json
@@ -114,10 +114,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/316746
 
-> 更新时间
+> Last Modified
 
 2021-09-16 11:35:10

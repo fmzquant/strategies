@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Schaff-Trend-Cycle
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 
 
@@ -15,11 +15,11 @@ Schaff-Trend-Cycle
 
  ![IMG](https://www.fmz.com/upload/asset/120e989a66d1e794b0f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|23|MACD Fast Length|
 |v_input_2|50|MACD Slow Length|
@@ -32,7 +32,7 @@ Schaff-Trend-Cycle
 |v_input_9|true|Highlight Breakouts ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -107,10 +107,10 @@ else if sellSignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365905
 
-> 更新时间
+> Last Modified
 
 2022-05-26 17:20:52

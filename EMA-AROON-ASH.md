@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 EMA-AROON-ASH
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 === IMPORTANT ===
 My intention is to find the best strategies and dump the bad ones, as you can check by yourself using this automated strategy, the result is...
@@ -47,11 +47,11 @@ Thanks again to the authors of the indicators that compose this script and to TR
 
  ![IMG](https://www.fmz.com/upload/asset/149789d550e035016a9.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_4_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_string_1|0|Indicator Method: RSI|STOCHASTIC|ADX|
@@ -69,7 +69,7 @@ Thanks again to the authors of the indicators that compose this script and to TR
 |v_input_3|3|Period of Smoothing|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -265,10 +265,10 @@ fill(avg_position_price_plot, SHORT_sl_plot, color=color.new(color.maroon, 85))
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362167
 
-> 更新时间
+> Last Modified
 
 2022-05-10 11:29:01

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 OKEX交易对信息
 
-> 策略作者
+> Author
 
 leviyuan
 
@@ -11,7 +11,7 @@ leviyuan
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // https://github.com/okcoin-okex/API-docs-OKEx.com/blob/master/%E5%B8%81%E5%AF%B9%E7%B2%BE%E5%BA%A6(pairs_increment).csv
@@ -2875,10 +2875,10 @@ data.cit_okb = {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/117000
 
-> 更新时间
+> Last Modified
 
 2018-09-17 00:22:01

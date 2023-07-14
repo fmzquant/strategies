@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 jma-dwma-by-multigrain
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This crossover system was originally conceptualized by Jurik Research and made public to the world on their website.
 
@@ -21,11 +21,11 @@ Credit to @everget for the re-creation of the Jurik Moving Average in pinecsript
 
  ![IMG](https://www.fmz.com/upload/asset/7e260b441ac09fdb30.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|Enable longs?|
 |v_input_bool_2|true|Enable shorts?|
@@ -37,7 +37,7 @@ Credit to @everget for the re-creation of the Jurik Moving Average in pinecsript
 |v_input_int_3|10|DWMA Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -102,10 +102,10 @@ if shorts
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361844
 
-> 更新时间
+> Last Modified
 
 2022-05-09 00:17:15

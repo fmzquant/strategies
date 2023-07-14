@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Okex交易所获取指定币种持仓返回发明者Position结构数组
 
-> 策略作者
+> Author
 
 Exodus[策略代写]
 
-> 策略描述
+> Strategy Description
 
 使用OK请求获取指定币种的持仓信息。
 
@@ -19,7 +19,7 @@ Exodus[策略代写]
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -121,10 +121,10 @@ function GetAllPositionInOk(tExchange,currencyList) {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/388189
 
-> 更新时间
+> Last Modified
 
 2022-11-07 22:51:51

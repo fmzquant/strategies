@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SUPERTREND-ATR-WITH-TRAILING-STOP-LOSS
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 SuperTrend is a moving stop and reversal line based on the volatility (ATR).
 
@@ -42,11 +42,11 @@ The strategy has the following parameters:
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/1b6e2cd4525c73f55ac.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|═══════════════ FROM ═══════════════|
 |v_input_2|true|Month|
@@ -63,7 +63,7 @@ The strategy has the following parameters:
 |v_input_13|3|ATR multplierFactoriplier|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -343,10 +343,10 @@ alertcondition(direction == 1 and direction[1] == -1 ? longStop : na, title="Buy
 alertcondition(direction == -1 and direction[1] == 1 ? shortStop : na, title="Sell", message="Sell!")
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365088
 
-> 更新时间
+> Last Modified
 
 2022-05-23 14:54:56

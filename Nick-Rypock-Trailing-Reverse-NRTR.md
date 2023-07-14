@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Nick-Rypock-Trailing-Reverse-NRTR
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator was invented in 2001 by Konstantin Kopyrkin. The name "Nick Rypock" is derived from his surname reading in the opposite direction:
 
@@ -24,18 +24,18 @@ A dynamic price channel is used to calculate the NRTR. The calculations involve 
  
  
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|2|Coefficient of Correction, %|
 |v_input_2|true|Show Buy/Sell Labels ?|
 |v_input_3|true|Apply Ribbon ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -115,10 +115,10 @@ else if sellSignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365713
 
-> 更新时间
+> Last Modified
 
 2022-05-25 18:14:32

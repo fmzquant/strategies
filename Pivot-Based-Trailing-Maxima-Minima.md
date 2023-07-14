@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Pivot-Based-Trailing-Maxima-Minima
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator returns trailing maximums/minimums and their average resetting at the occurrence of a pivot point high/low, thus allowing the highlighting of past and current support and resistance levels.
 
@@ -36,11 +36,11 @@ The frequency of new higher high/lower low can also help determine how bullish /
 
  ![IMG](https://www.fmz.com/upload/asset/f18b8d3df08302d13e.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|14|length|
 |v_input_color_1|teal|(?Style)Trailing Maximum Color|
@@ -50,7 +50,7 @@ The frequency of new higher high/lower low can also help determine how bullish /
 |v_input_color_5|red|Downtrend Area|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -138,10 +138,10 @@ else if ph
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365719
 
-> 更新时间
+> Last Modified
 
 2022-05-25 18:18:49

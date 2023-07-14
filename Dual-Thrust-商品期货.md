@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Dual-Thrust-商品期货
 
-> 策略作者
+> Author
 
 扫地僧
 
-> 策略描述
+> Strategy Description
 
 > 基本原理
 
@@ -23,11 +23,11 @@ Dual-Thrust-商品期货
 
 策略的详细介绍 : http://xueqiu.com/5256769224/32429363
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractTypeName|MA701|合约品种|
 |NPeriod|4|计算周期|
@@ -41,7 +41,7 @@ Dual-Thrust-商品期货
 |CoverAll|false|启动策略时清空合约仓位|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -225,10 +225,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/13011
 
-> 更新时间
+> Last Modified
 
 2021-10-26 23:32:53

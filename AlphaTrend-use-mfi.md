@@ -1,28 +1,28 @@
 
-> 策略名称
+> Name
 
 AlphaTrend-use-mfi
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
  ![IMG](https://www.fmz.com/upload/asset/fac92b30d9603ace21.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_float_1|5|Multiplier|
 |v_input_1|14|Common Period|
 |v_input_source_1|0|source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -55,10 +55,10 @@ else if ta.crossunder(high, AlphaTrend)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/360014
 
-> 更新时间
+> Last Modified
 
 2022-05-06 15:38:52

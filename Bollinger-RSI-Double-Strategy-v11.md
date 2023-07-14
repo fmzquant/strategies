@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bollinger-RSI-Double-Strategy-v11
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy uses the RSI indicator together with the Bollinger Bands to sell when the price is above the upper Bollinger Band (and to buy when this value is below the lower band). This simple strategy only triggers when both the RSI and the Bollinger Band indicators are at the same time in a overbought or oversold condition.
 
@@ -23,11 +23,11 @@ P.S. For advanced users if you want access to more functions of this strategy sc
 **回测**
  ![IMG](https://www.fmz.com/upload/asset/f3b949b79731708e12.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|6|RSI Period Length|
 |v_input_2|200|Bollinger Period Length|
@@ -35,7 +35,7 @@ P.S. For advanced users if you want access to more functions of this strategy sc
 |v_input_4|true|Enable Background Color?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -123,10 +123,10 @@ if (not na(vrsi))
 //plot(strategy.equity, title="equity", color=red, linewidth=2, style=areabr)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361661
 
-> 更新时间
+> Last Modified
 
 2022-05-08 11:16:49

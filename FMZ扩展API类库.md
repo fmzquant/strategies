@@ -1,28 +1,28 @@
 
-> 策略名称
+> Name
 
 FMZ扩展API类库
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 来自奥总的文章<<奥克手把手教你用JS对接FMZ扩展API>>
 https://www.fmz.com/digest-topic/5631
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |AccessKey|111|AccessKey|
 |SecretKey|222|SecretKey|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var URL = "https://www.fmz.com/api/v1?";
@@ -100,10 +100,10 @@ $.SecretKey = SecretKey;
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/318271
 
-> 更新时间
+> Last Modified
 
 2022-09-09 20:04:34

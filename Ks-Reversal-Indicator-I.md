@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Ks-Reversal-Indicator-I
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 K's reversal indicator I is a special combination between Bollinger bands and the MACD oscillator. It is a contrarian indicator that depends on the following conditions:
 
@@ -26,11 +26,11 @@ Limitations of the indicator include the following:
 
  ![IMG](https://www.fmz.com/upload/asset/14fa3cc24d4b26b9884.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|12|Fast|
 |v_input_2|26|Slow|
@@ -39,7 +39,7 @@ Limitations of the indicator include the following:
 |v_input_5|2|Multiplier|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -81,10 +81,10 @@ else if sell_signal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361785
 
-> 更新时间
+> Last Modified
 
 2022-05-08 11:14:32

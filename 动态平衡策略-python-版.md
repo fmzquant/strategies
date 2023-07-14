@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 动态平衡策略-python-版
 
-> 策略作者
+> Author
 
 teddy
 
@@ -11,7 +11,7 @@ teddy
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -62,10 +62,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/152830
 
-> 更新时间
+> Last Modified
 
 2019-06-22 18:35:30

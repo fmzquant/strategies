@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 均线策略python版
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 均线策略（python版）教学性质，实盘慎用。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |FastPeriod|3|入市快线周期|
 |SlowPeriod|7|入市慢线周期|
@@ -27,7 +27,7 @@
 |Interval|10|轮询周期|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import types
@@ -58,10 +58,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/21157
 
-> 更新时间
+> Last Modified
 
 2016-09-30 23:25:18

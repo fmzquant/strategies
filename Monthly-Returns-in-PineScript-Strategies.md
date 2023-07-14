@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Monthly-Returns-in-PineScript-Strategies
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 I'm not 100% satisfied with the strategy performance output I receive from TradingView. Quite often I want to see something that is not available by default. I usually export raw trades/metrics from TradingView and then do additional analysis manually.
 But with tables, you can build additional metrics and tools for your strategies quite easily.
@@ -23,18 +23,18 @@ This post and the script don’t provide any financial advice.
 **回测**
  ![IMG](https://www.fmz.com/upload/asset/9905438f5790a4926c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|2|leftBars|
 |v_input_2|2|rightBars|
 |v_input_3|2|Return Precision|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -80,10 +80,10 @@ plot(lprice, color = color.red,   linewidth = 2)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361565
 
-> 更新时间
+> Last Modified
 
 2022-05-08 10:43:41

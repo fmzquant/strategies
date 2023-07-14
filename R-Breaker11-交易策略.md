@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 R-Breaker11-交易策略
 
-> 策略作者
+> Author
 
 太极
 
-> 策略描述
+> Strategy Description
 
 R-Breaker  交易策略
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # botvs@f976b25629baf8373e73da860a54030d
@@ -344,10 +344,10 @@ def main():
             Sleep(1000) 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/23874
 
-> 更新时间
+> Last Modified
 
 2017-02-13 11:58:17

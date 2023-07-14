@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Trading-the-Equity-Curve-Position-Sizing-Example
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 "Trading the equity curve" as a risk management method is the process of acting on trade signals depending on whether a system’s performance is indicating the strategy is in a profitable or losing phase.
 
@@ -21,11 +21,11 @@ When Trading with the Equity Curve" is active, the position size will be reduced
 
  ![IMG](https://www.fmz.com/upload/asset/1075924a21fd5a3f586.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|Use Trading the Equity Curve Position Sizing|
 |v_input_float_1|10|Initial % Equity|
@@ -41,7 +41,7 @@ When Trading with the Equity Curve" is active, the position size will be reduced
 |v_input_int_7|12|Momentum Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -146,10 +146,10 @@ plot(smaslowequity, color=color.new(color.red, 0))
 plot(smafastequity, color=color.new(color.green, 0))
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363001
 
-> 更新时间
+> Last Modified
 
 2022-05-13 22:30:27

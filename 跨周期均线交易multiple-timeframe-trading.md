@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 跨周期均线交易multiple-timeframe-trading
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 [trans]演示Pine语言如何跨周期调用||Demonstrates how the pine language use multiple timeframe[/trans]
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -39,10 +39,10 @@ else
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361360
 
-> 更新时间
+> Last Modified
 
 2022-05-06 16:47:08

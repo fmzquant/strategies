@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 奥克量化-JS对接FMZ扩展API-Demo
 
-> 策略作者
+> Author
 
 奥克量化
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -64,10 +64,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/208065
 
-> 更新时间
+> Last Modified
 
 2020-05-16 21:35:13

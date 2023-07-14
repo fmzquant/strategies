@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 CCI-EMA-with-RSI-Cross-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy uses the CCI + 2 RSIs + 2 EMAs to generate trade signals. Trades are only taken during the normal trading session and all open trades are closed 15 min before the close of the current session. A trailing stop loss is used and is customizable.
 
@@ -17,11 +17,11 @@ Not trading advice, use at your own risk.
 
  ![IMG](https://www.fmz.com/upload/asset/180a6a543807ef47db2.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|9|(?EMA Settings)Fast EMA Length|
 |v_input_2|20|Slow EMA Length|
@@ -35,7 +35,7 @@ Not trading advice, use at your own risk.
 |v_input_float_1|0.67|(?Stop Settings)Trail Loss ($)|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -146,10 +146,10 @@ if (shortExit)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362029
 
-> 更新时间
+> Last Modified
 
 2022-05-09 17:00:24

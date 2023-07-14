@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Super-trend-B
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|20|length|
 |v_input_float_1|0.5| multiflier|
@@ -23,7 +23,7 @@ Zer3192
 |v_input_int_3|150|Linear length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -138,10 +138,10 @@ else if high1
     strategy.entry("Alert on Top", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366385
 
-> 更新时间
+> Last Modified
 
 2022-05-29 07:09:06

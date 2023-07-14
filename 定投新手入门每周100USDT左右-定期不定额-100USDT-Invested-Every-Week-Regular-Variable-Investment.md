@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 定投新手入门每周100USDT左右-定期不定额-100USDT-Invested-Every-Week-Regular-Variable-Investment
 
-> 策略作者
+> Author
 
 jfyh5388
 
-> 策略描述
+> Strategy Description
 
 每周定投100USDT左右，定期不定额，跌了多买，涨了少买，收益率优于定额
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 def main():
@@ -41,10 +41,10 @@ def main():
                     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/260056
 
-> 更新时间
+> Last Modified
 
 2021-04-16 16:54:06

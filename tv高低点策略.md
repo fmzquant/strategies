@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 tv高低点策略
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -59,10 +59,10 @@ else if top_zone
     strategy.entry("Alert on Top", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362060
 
-> 更新时间
+> Last Modified
 
 2022-05-27 05:34:08

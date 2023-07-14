@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 分享-ADX值达到条件进行通知
 
-> 策略作者
+> Author
 
 作手君
 
-> 策略描述
+> Strategy Description
 
 为回馈FMZ平台与社区，进行策略&代码&思路&模板的分享
 
@@ -18,11 +18,11 @@
 欢迎合作交流，共同学习进步~
 v：haiyanyydss
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |P_interval_time|1000|轮询间隔(毫秒)|
 |P_contract|quarter|合约|
@@ -30,7 +30,7 @@ v：haiyanyydss
 |P_adx_val|10|微信通知触发值（ADX大于此值）|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -95,10 +95,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/396762
 
-> 更新时间
+> Last Modified
 
 2023-02-09 09:48:46

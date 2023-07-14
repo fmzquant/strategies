@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 封装Bithumb的ordersDetail接口
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 应部分用户需求，使用bithumb 的时候希望查询 某个ID 的订单信息，
 封装了 交易所的这个接口 :  https://api.bithumb.com/info/order_detail
@@ -36,7 +36,7 @@ function main() {
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function GetOrder(e, id, type){
@@ -145,10 +145,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/132241
 
-> 更新时间
+> Last Modified
 
 2018-12-29 12:06:11

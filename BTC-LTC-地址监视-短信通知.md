@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 BTC-LTC-地址监视-短信通知
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 有新的交易, 立即提醒
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Type|0|类型: BTC|LTC|
 |Addr|1LuckyY9fRzcJre7aou7ZhWVXktxjjBb9S|地址|
@@ -26,7 +26,7 @@ Zero
 |PhoneNum|1111|接收短信手机号|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var LastMsg = "";
@@ -84,10 +84,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/1295
 
-> 更新时间
+> Last Modified
 
 2014-11-07 19:41:42

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 TableTemplet
 
-> 策略作者
+> Author
 
 职业养鸡户
 
-> 策略描述
+> Strategy Description
 
 //by 养鸡专业户 17/6/21
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var listener = Array();
@@ -148,10 +148,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/44319
 
-> 更新时间
+> Last Modified
 
 2017-06-21 11:27:08

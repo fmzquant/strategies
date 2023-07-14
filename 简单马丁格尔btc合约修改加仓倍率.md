@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 简单马丁格尔btc合约修改加仓倍率
 
-> 策略作者
+> Author
 
 Zer3192
 
-> 策略描述
+> Strategy Description
 
 ！！！！！！！温馨提示，本策略仅供学习使用，用于实盘必定爆仓！！！！！！！！！！
 ！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
@@ -17,7 +17,7 @@ Zer3192
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -114,10 +114,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/344060
 
-> 更新时间
+> Last Modified
 
 2022-02-20 06:05:56

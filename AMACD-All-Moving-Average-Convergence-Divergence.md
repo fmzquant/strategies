@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 AMACD-All-Moving-Average-Convergence-Divergence
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator displays the Moving Average Convergane and Divergence ( MACD ) of individually configured Fast, Slow and Signal Moving Averages. Buy and sell alerts can be set based on moving average crossovers, consecutive convergence/divergence of the moving averages, and directional changes in the histogram moving averages.
 
@@ -39,11 +39,11 @@ If you have a strategy that can buy based on External Indicators use 'Backtest S
 
  ![IMG](https://www.fmz.com/upload/asset/430e6d9ce16dd5530d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_string_1|0|(?Moving Averages)Fast Moving Average Type: EMA|SMA|WMA|VWMA|HMA|RMA|LSMA|Double EMA|Double SMA|Double WMA|Double RMA|Triple EMA|Triple SMA|Triple WMA|Triple RMA|SWMA|ALMA|VIDYA|FRAMA|
 |v_input_1_close|0|Fast Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -89,7 +89,7 @@ If you have a strategy that can buy based on External Indicators use 'Backtest S
 |v_input_9|#FF5252|Fall|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -407,10 +407,10 @@ strategy.close("Enter Short",when=(closeShort and shortCloseSignal),comment="Sho
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362214
 
-> 更新时间
+> Last Modified
 
 2022-05-10 16:13:20

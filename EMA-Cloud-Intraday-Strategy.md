@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 EMA-Cloud-Intraday-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy utilizes the 9 and 20 period exponential moving averages to create a colored cloud between similar to what is seen on the Ichimoku Cloud . The strategy closes all trades by the end of the trading day. Entry is when the price closes above a Green (9 EMA above 20 EMA ) cloud or below a Red (9 EMA below 20 EMA ) cloud. Exit is when price closes against the 9 EMA or at the end of the trading day. Running the strategy tester on different intraday time frames will show the best time frame for a given Symbol. For example, I have found that the best results are returned by this strategy for SPY on the 30 minute time frame.
 
@@ -16,18 +16,18 @@ This strategy utilizes the 9 and 20 period exponential moving averages to create
 
  ![IMG](https://www.fmz.com/upload/asset/1dec397823194b25bf3.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|10|Trade Quantity|
 |v_input_1|7|Fast EMA Length|
 |v_input_2|20|Slow EMA Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -80,10 +80,10 @@ if (shortExit)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363835
 
-> 更新时间
+> Last Modified
 
 2022-05-17 16:38:28

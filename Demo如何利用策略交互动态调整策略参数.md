@@ -1,29 +1,29 @@
 
-> 策略名称
+> Name
 
 Demo如何利用策略交互动态调整策略参数
 
-> 策略作者
+> Author
 
 momox
 
-> 策略描述
+> Strategy Description
 
 策略需要不断的测试调整，参数也经常改来改去，每次都停止再重启，费事费力，还会丢失原来的盈利进度（虽然也可以通过全局参数来恢复），其实botvs已经提供了动态调整参数的途径--”策略交互“
 
-> 策略参数
+> Strategy Arguments
 
 
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |A3|999|AAA的参数|
 |B3|Botvs|BBB的参数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var Interval=2000;
@@ -67,10 +67,10 @@ function onTick(){
  }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/8379
 
-> 更新时间
+> Last Modified
 
 2016-01-09 21:18:07

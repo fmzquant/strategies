@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 EMA趋势跟踪当周次周季度
 
-> 策略作者
+> Author
 
 crypto_future
 
-> 策略描述
+> Strategy Description
 
 此策略基于EMA均线做趋势跟踪，当形成EMA金叉时开仓，形成EMA死叉时平仓。从趋势中赚取利润。本策略支持OKEX合约做多做空双向开仓。
 
@@ -23,7 +23,7 @@ https://www.pcclean.io/%e6%95%b0%e5%ad%97%e8%b4%a7%e5%b8%81ema%e8%b6%8b%e5%8a%bf
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var strategy_version="1.62.EMA"; //test
@@ -515,10 +515,10 @@ function main(){
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/203272
 
-> 更新时间
+> Last Modified
 
 2020-04-29 11:58:29

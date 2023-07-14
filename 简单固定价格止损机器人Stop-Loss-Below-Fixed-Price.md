@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 简单固定价格止损机器人Stop-Loss-Below-Fixed-Price
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 一个简单的固定价格止损机器人，可以帮助你止损。也是个很好的入门数字货币量化交易的策略。
 
@@ -17,17 +17,17 @@ StopPrice：Fixed price to stop loss
  
 Intervel：	Intervel(second) of checking coin price
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |StopPrice|5000|Fixed price to stop loss|
 |Intervel|10|Intervel(second) of checking coin price|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function CancelPendingOrders() {
@@ -81,10 +81,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/121081
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:41:50

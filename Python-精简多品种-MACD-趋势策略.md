@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Python-精简多品种-MACD-趋势策略
 
-> 策略作者
+> Author
 
 扫地僧
 
-> 策略描述
+> Strategy Description
 
 需要引用小小梦公开的商品期货交易类库
 
@@ -15,17 +15,17 @@ Python-精简多品种-MACD-趋势策略
 
 https://www.fmz.com/strategy/24288
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Amount|2|开仓手数|
 |ContractList|MA701,rb1701|合约列表|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''
@@ -90,10 +90,10 @@ def main():
             Sleep(1000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/43965
 
-> 更新时间
+> Last Modified
 
 2022-04-07 10:48:38

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Paul-The-Gambler-Lévy-Gold-Edition
 
-> 策略作者
+> Author
 
 FawkesPan
 
-> 策略描述
+> Strategy Description
 
 ###### 期货赌徒策略
 ##### 方向做错了就自动反向翻倍开仓
@@ -16,11 +16,11 @@ FawkesPan
 ## 实盘会亏完所有钱!!!
 # 实盘会亏完所有钱!!!
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |STOP_LOSS|0.015|止损距离|
 |TAKE_PROFIT|0.03|止盈距离|
@@ -32,7 +32,7 @@ FawkesPan
 |AMP|2|反向倍数|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -264,10 +264,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/119038
 
-> 更新时间
+> Last Modified
 
 2018-09-28 16:53:43

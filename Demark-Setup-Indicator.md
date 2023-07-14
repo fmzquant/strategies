@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Demark-Setup-Indicator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The Setup Indicator was created by Tom Demark and this is one of many steps in his Sequential Indicator that I will be publishing at a later date. You guys all seemed to really like my Demark Reversal Points script and this indicator is very similar to that one. This indicator was designed for minor trend reversals and as you can see in my example chart, it gives many more buy and sell signals. Not all are perfect of course but it does a pretty good job in identifying minor price reversals overall. This indicator looks for downtrends or uptrends that exist for a certain amount of time to determine price reversal points.
 
@@ -17,11 +17,11 @@ If you like this one then let me know and I will continue publishing more Demark
 
  ![IMG](https://www.fmz.com/upload/asset/7f49aa3c981ee6ed0e.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2||Resolution|
@@ -30,7 +30,7 @@ If you like this one then let me know and I will continue publishing more Demark
 |v_input_5|4|Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -75,10 +75,10 @@ else if crossunder(dsi, 0)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366947
 
-> 更新时间
+> Last Modified
 
 2022-05-31 19:29:50

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Candle-Strength
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -57,10 +57,10 @@ else if (open > close)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380219
 
-> 更新时间
+> Last Modified
 
 2022-08-27 12:03:45

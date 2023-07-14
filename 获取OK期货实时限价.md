@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 获取OK期货实时限价
 
-> 策略作者
+> Author
 
 数·狂
 
-> 策略描述
+> Strategy Description
 
 获取OK期货实时限价，仅实盘有效。
 代码仅供学习，作者不保证程序正确性，据此交易后果自负。
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 $.GetLimit = function(currStr, contract) {
@@ -41,10 +41,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/17028
 
-> 更新时间
+> Last Modified
 
 2016-06-19 11:15:05

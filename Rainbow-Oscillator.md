@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Rainbow-Oscillator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 ---------------
 FEATURES
@@ -74,11 +74,11 @@ Type of moving average, average for the formation of a smoothing overbought and 
  ![IMG](https://www.fmz.com/upload/asset/e04e6f9a46dda5a36a.png) 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_float_1|0.33|RSI Weight|
 |v_input_float_2|0.33|CCI Weight|
@@ -95,7 +95,7 @@ Type of moving average, average for the formation of a smoothing overbought and 
 |v_input_float_5|3.5|% Stop Loss|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -215,10 +215,10 @@ else if shortCond
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363002
 
-> 更新时间
+> Last Modified
 
 2022-05-13 23:11:47

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Chandelier-Exit
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a redesign of the Chandelier Exit indicator. It removes stupid transitions between Chandelier Exit' states and highlights initial points for both lines.
 
@@ -18,11 +18,11 @@ In short, this is a trailing stop-loss based on the Average True Range (ATR).
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/eb0bb76fedf761b0b8.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|22|ATR Period|
 |v_input_2|3|ATR Multiplier|
@@ -31,7 +31,7 @@ In short, this is a trailing stop-loss based on the Average True Range (ATR).
 |v_input_5|true|Highlight State ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -98,10 +98,10 @@ else if sellSignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363848
 
-> 更新时间
+> Last Modified
 
 2022-05-17 17:14:58

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 期现成对下单_Public
 
-> 策略作者
+> Author
 
 daniaoren
 
-> 策略描述
+> Strategy Description
 
 用于期现成对下单的插件，可在交易终端里使用。
 
@@ -15,11 +15,11 @@ daniaoren
 
 如果要支持其它交易所可能要自己小改一下。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractSwap|swap|永续合约|
 |ContractFuture|quarter|期货合约|
@@ -28,7 +28,7 @@ daniaoren
 |RealTrade|false|是否真实下单|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 def main():
@@ -75,10 +75,10 @@ def main():
 	return TradeMsg
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/232006
 
-> 更新时间
+> Last Modified
 
 2021-02-24 21:04:40

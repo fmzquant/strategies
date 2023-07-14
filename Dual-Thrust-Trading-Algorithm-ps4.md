@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Dual-Thrust-Trading-Algorithm-ps4
 
-> 策略作者
+> Author
 
 a624587332
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|20|Lookback Window|
 |v_input_2|2|Multiplier|
@@ -30,7 +30,7 @@ a624587332
 |v_input_13|true|Repaint?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=4
@@ -205,10 +205,10 @@ alertcondition(short, title='Sell', message='go short')
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/373247
 
-> 更新时间
+> Last Modified
 
 2022-07-14 02:43:15

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 CM-MACD-Custom-Indicator-Multiple-Time-Frame-V2
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Thanks to @SKTennis for help in Updating code to V2
 Added Groups to Settings Pane.
@@ -27,11 +27,11 @@ Alerts are Pre-Set to only Alert on Bar Close
 
  ![IMG](https://www.fmz.com/upload/asset/921e143426edc4c84c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_timeframe_1||Indicator TimeFrame|
 |v_input_int_1|12|Fast Length|
@@ -64,7 +64,7 @@ Alerts are Pre-Set to only Alert on Bar Close
 |v_input_bool_10|true|MACD Cross Dn & < 0|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -209,10 +209,10 @@ else if alert_Short_B and cross_DN_B
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364540
 
-> 更新时间
+> Last Modified
 
 2022-05-20 17:25:31

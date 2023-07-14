@@ -1,31 +1,31 @@
 
-> 策略名称
+> Name
 
 BTC-V反策略
 
-> 策略作者
+> Author
 
 ztjeff
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |password|'test888'|口令|
 
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |recv|true|结束程序|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # encoding: utf-8
@@ -170,10 +170,10 @@ def main():
         Log('Program is End!')
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/117202
 
-> 更新时间
+> Last Modified
 
 2018-09-27 21:45:01

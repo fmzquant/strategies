@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MA-Emperor-insiliconot
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The Script offers 9 different EMAs with 14 different MA types.
 
@@ -27,11 +27,11 @@ EmperorBTC
 
  ![IMG](https://www.fmz.com/upload/asset/1a8f3eeae4b9754418d.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Type: LowPass|DEMA|EMA|Gaussian|Geometric_Mean|Butterworth_2Pole|McGuinley|SMA|Sine_WMA|Smoothed_MA|Super_Smoother|Triangular_MA|Wilders|Zero_Lag|
 |v_input_2|8|MA 1|
@@ -55,7 +55,7 @@ EmperorBTC
 |v_input_20|3|*** Gaussian poles ***|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -311,10 +311,10 @@ else if shortCond
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361725
 
-> 更新时间
+> Last Modified
 
 2022-05-08 00:11:51

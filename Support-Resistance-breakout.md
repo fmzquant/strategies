@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Support-Resistance-breakout
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Strategy based on longing resistance breakout and shorting support breakout.
 It defines highs and lows using fractal with 2 bars for confirming high/lows. So it has 2 bars lag.
@@ -18,16 +18,16 @@ Position exit is: bar change in opposite to position direction > difference is s
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/e46dc598125cff334f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|21|SR lookbak length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -72,10 +72,10 @@ short:= trend==-1 and close<lvalc ? 1 : trend==1 ? -1 : short[1]
 barcolor(long>0? color.green : short>0? color.red : trend>0? color.white: trend<0 ? color.orange : color.blue)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366931
 
-> 更新时间
+> Last Modified
 
 2022-05-31 18:20:45

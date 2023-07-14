@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Range-Filter-Buy-and-Sell
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 
 
@@ -15,11 +15,11 @@ Range-Filter-Buy-and-Sell
 
  ![IMG](https://www.fmz.com/upload/asset/151a3119214c553d086.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|---------------- Use Date ----------------|
 |v_input_2|7|From Month|
@@ -37,7 +37,7 @@ Range-Filter-Buy-and-Sell
 |v_input_14|1.5|Take Profit %|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -173,10 +173,10 @@ if useStopLoss
 //     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365859
 
-> 更新时间
+> Last Modified
 
 2022-05-26 12:25:38

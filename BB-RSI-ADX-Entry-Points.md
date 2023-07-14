@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 BB-RSI-ADX-Entry-Points
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a combination of indicators used to find oversold and overbought entry points for possible reversion.
 
@@ -40,11 +40,11 @@ Note: The bb %B is calculated for stDev - 1. This will help you see a change hap
 
  ![IMG](https://www.fmz.com/upload/asset/95057c5dafb05dd468.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|9|(?BB Settings)BB Length|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -62,7 +62,7 @@ Note: The bb %B is calculated for stDev - 1. This will help you see a change hap
 |v_input_10|70|MAX RSI|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -150,10 +150,10 @@ else if enter_short
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362403
 
-> 更新时间
+> Last Modified
 
 2022-05-11 12:42:28

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Trendelicious
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator uses the rolling middle of highest and lowest points over a period of time to determine if the asset is currently in an uptrend or a downtrend.
 
@@ -30,18 +30,18 @@ The author of this script cannot be held responsible for any losses incurred dir
 
  ![IMG](https://www.fmz.com/upload/asset/b14d4431424bb1113c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|30|length|
 |v_input_2_hl2|0|Price Source: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
 |v_input_3|false|Aggressive Mode|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -103,10 +103,10 @@ else if not uptrend
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363793
 
-> 更新时间
+> Last Modified
 
 2022-05-17 13:47:42

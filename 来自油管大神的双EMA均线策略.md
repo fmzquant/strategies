@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 来自油管大神的双EMA均线策略
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/bbs-topic/9670
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Swing Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|20|Swing Period|
@@ -29,7 +29,7 @@
 |v_input_10|true|amount|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -169,10 +169,10 @@ if sellCondition and strategy.position_size == 0
     strategy.exit("exit_short", "short", amount, loss=loss, trail_points=trailPoints, trail_offset=trailOffset)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/385745
 
-> 更新时间
+> Last Modified
 
 2022-10-10 08:57:09

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SuperJump-Turn-Back-Bollinger-Band
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a simple indicator using bolinger band return.
 
@@ -20,11 +20,11 @@ Usually there are more than two triangles, so you can wait after ordering a bett
 
  ![IMG](https://www.fmz.com/upload/asset/1489631d2f4d125bf8a.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|68|(?Bollinger)length|
 |v_input_1_open|0|Source: open|high|low|close|hl2|hlc3|hlcc4|ohlc4|
@@ -35,7 +35,7 @@ Usually there are more than two triangles, so you can wait after ordering a bett
 |v_input_float_3|true|Stop Loss ATR Ratio|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -118,10 +118,10 @@ else if ShortSig
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363997
 
-> 更新时间
+> Last Modified
 
 2022-05-18 11:27:17

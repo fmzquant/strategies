@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 coingecko_crawler
 
-> 策略作者
+> Author
 
 linsilence
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |isDebug|false|debug|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
   
@@ -44,10 +44,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/279269
 
-> 更新时间
+> Last Modified
 
 2021-05-08 20:58:24

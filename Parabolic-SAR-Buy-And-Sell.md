@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 Parabolic-SAR-Buy-And-Sell
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 **backtest**
 
  ![IMG](https://www.fmz.com/upload/asset/172b455153ea2ebc596.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0.00252|Start|
 |v_input_2|0.00133|Increment|
@@ -26,7 +26,7 @@ Parabolic-SAR-Buy-And-Sell
 |v_input_5|true|Highlight Start Points ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -73,10 +73,10 @@ else if dir == -1 and dir[1] == 1 and highlightStartPoints
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365722
 
-> 更新时间
+> Last Modified
 
 2022-05-25 18:23:13

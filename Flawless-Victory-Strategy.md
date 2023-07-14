@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Flawless-Victory-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello everyone, I am a heavy Python programmer bringing machine learning to TradingView. This 15 minute Bitcoin Long strategy was created using a machine learning library and 1 year of historical data in Python. Every parameter is hyper optimized to bring you the most profitable buy and sell signals for Bitcoin on the 15min chart. The historical Bitcoin data was gathered from Binance API , in case you want to know the best exchange to use this long strategy. It is a simple Bollinger Band and RSI strategy with two versions included in the tradingview settings. The first version has a Sharpe Ratio of 7.5 which is amazing, and the second version includes the best stop loss and take profit positions with a Sharpe Ratio of 2.5 . Let me talk a little bit more about how the strategy works. The buy signal is triggered when close price is less than lower Bollinger Band at Std Dev 1, and the RSI is greater than a certain value. The sell signal is triggered when close price is greater than upper Bollinger Band at Std Dev 1, and the RSI is greater than a certain value. What makes this strategy interesting is the parameters the Machine Learning library found when backtesting for the best Sharpe Ratio. I left my computer on for about 28 hours to fully backtest 5000 EPOCHS and get the results. I was able to create a great strategy that might be one of TradingView's best strategies out on the website today. I will continue to apply machine learning to all my strategies from here on forward. Please Let me know if you have any questions or certain strategies you would like me to hyper optimize for you. I'm always willing to create profitable strategies!
 
@@ -18,11 +18,11 @@ P.S. You can always pyramid this strategy for more gains! I just don't add pyram
 
  ![IMG](https://www.fmz.com/upload/asset/196cd937cba374aaca1.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Version 1 - Doesn't Use SL/TP|
 |v_input_2|false|Version 2 - Uses SL/TP|
@@ -33,7 +33,7 @@ P.S. You can always pyramid this strategy for more gains! I just don't add pyram
 |v_input_7|2.317|Take Profit %|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -183,10 +183,10 @@ if v3 == true
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365687
 
-> 更新时间
+> Last Modified
 
 2022-05-25 17:08:13

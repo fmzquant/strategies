@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Get-cryptocurrency-current-and-max-supply获取币种供应量
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 使用coinmarketcap提供的API接口获取币种供应量和流通量，可用于计算总市值
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function GetSupply(symbol, max){
@@ -44,10 +44,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/122370
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:33:08

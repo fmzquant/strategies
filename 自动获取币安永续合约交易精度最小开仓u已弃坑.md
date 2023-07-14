@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 自动获取币安永续合约交易精度最小开仓u已弃坑
 
-> 策略作者
+> Author
 
 GCC
 
-> 策略描述
+> Strategy Description
 
     本来从交易规则里直接获取交易精度是很合理的做法，奈何币安经常不及时更新这部分，遂弃坑。
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 def init():
@@ -48,10 +48,10 @@ def init():
     Log("初始化结束")
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/322632
 
-> 更新时间
+> Last Modified
 
 2021-11-12 15:44:44

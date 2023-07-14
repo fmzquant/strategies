@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 学习API与教程内代码学习文件
 
-> 策略作者
+> Author
 
 中本大料
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -436,10 +436,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/131864
 
-> 更新时间
+> Last Modified
 
 2019-01-02 15:41:01

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 合成任意周期K线-使用请看源码最下面
 
-> 策略作者
+> Author
 
 FawkesPan
 
@@ -11,7 +11,7 @@ FawkesPan
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #!/usr/bin/env python3
@@ -117,10 +117,10 @@ def main():
     Log(M15_GEN[len(M15_GEN)-50:])
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/117473
 
-> 更新时间
+> Last Modified
 
 2018-09-21 13:24:55

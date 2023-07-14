@@ -1,37 +1,37 @@
 
-> 策略名称
+> Name
 
 JavaScript版K线数据行情收集器
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## JavaScript版K线数据行情收集器
 
 相关文章：https://www.fmz.com/bbs-topic/6744
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |tableName|testRecords_min1|储存K线数据的表名称|
 
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |refreshRecords|__button__|刷新K线图表|
 |deleteBDTable|__button__|删除数据库表|
 |initCollecter|__button__|初始化收集器|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var collecter = {}
@@ -197,10 +197,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/267223
 
-> 更新时间
+> Last Modified
 
 2021-03-30 11:57:49

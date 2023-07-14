@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 测试多图表展示Python版
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import random
@@ -79,10 +79,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/84042
 
-> 更新时间
+> Last Modified
 
 2018-03-30 22:20:34

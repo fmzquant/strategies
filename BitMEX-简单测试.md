@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 BitMEX-简单测试
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 现已接入BitMEX, 支持全平台API, 支持IO扩展.
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 只支持实盘
@@ -37,10 +37,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/40289
 
-> 更新时间
+> Last Modified
 
 2017-05-08 17:20:34

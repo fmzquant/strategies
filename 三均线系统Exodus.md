@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 三均线系统Exodus
 
-> 策略作者
+> Author
 
 Exodus[策略代写]
 
-> 策略描述
+> Strategy Description
 
 本系统是双向合约策略，在满足条件是做多或做空，下单量为合约的数量，使用币安时下单量为几个btc，使用火币时下单量单位为张
 【7-31更新】
@@ -26,11 +26,11 @@ Exodus[策略代写]
   ![IMG](https://www.fmz.com/upload/asset/1f4c36c1fca8b23e727c7.jpg) 
   
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |afterEmaCrossTime|4|在k线金叉或死叉后几根k线内macd满足条件才允许操作|
 |buyVolume|0.016|交易数量(0.016BTC)|
@@ -45,7 +45,7 @@ Exodus[策略代写]
 |MACD3|9|MACD参数3|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -262,10 +262,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/301620
 
-> 更新时间
+> Last Modified
 
 2021-11-28 07:20:15

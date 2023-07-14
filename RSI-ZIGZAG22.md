@@ -1,25 +1,25 @@
 
-> 策略名称
+> Name
 
 RSI-ZIGZAG22
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|length|
 |v_input_2|true|Minimum % Change|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -110,10 +110,10 @@ else if f
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/379760
 
-> 更新时间
+> Last Modified
 
 2022-08-24 04:08:44

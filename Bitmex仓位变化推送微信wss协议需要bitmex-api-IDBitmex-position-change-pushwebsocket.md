@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Bitmex仓位变化推送微信wss协议需要bitmex-api-IDBitmex-position-change-pushwebsocket
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 使用websocket协议和平台最新的HMAC获取签名的方法，仓位有变化推送到微信
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {
@@ -35,10 +35,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128624
 
-> 更新时间
+> Last Modified
 
 2018-12-24 09:26:09

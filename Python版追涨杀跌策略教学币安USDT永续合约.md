@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Python版追涨杀跌策略教学币安USDT永续合约
 
-> 策略作者
+> Author
 
 韬奋量化
 
-> 策略描述
+> Strategy Description
 
 原版代码是现货版：
 https://www.fmz.com/bbs-topic/4908
@@ -21,18 +21,18 @@ https://www.fmz.com/bbs-topic/4908
 （现货：挂单0%，吃单0.07%。合约：挂单0%，吃单0.04%）
 https://www.kucoin.cc/ucenter/signup?rcode=1wxJ2fQ&lang=zh_CN&utmsource=VIP_TF
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |leverage|true|杠杆倍数|
 |StopGain|0.05|止盈率|
 |StopLoss|0.05|止损率|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -134,10 +134,10 @@ def main():
         Sleep(500)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/286091
 
-> 更新时间
+> Last Modified
 
 2021-05-30 16:35:25

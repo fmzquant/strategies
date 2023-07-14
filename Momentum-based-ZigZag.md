@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Momentum-based-ZigZag
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 I spent a lot of time searching for the best ZigZag indicator . Difficulty with all of them is that they are always betting on some pre-defined rules which identify or confirm pivot points . Usually it is time factor - pivot point gets confirmed after a particular number of candles. This methodology is probably the best when market is moving relatively slow, but when price starts chopping up and down, there is no way the ZigZag follows accurately. On the other hand if you set it too tight (for example pivot confirmation after only 2 or even 1 candle), you will get hundreds of zigzag lines and they will tell you nothing.
 
@@ -27,11 +27,11 @@ Enjoy!
 
  ![IMG](https://www.fmz.com/upload/asset/1d7f462e0d596e3c7bb.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Color ZigZag lines to show force direction|
 |v_input_string_1|0|Select Momentum Indicator:: _qqefactor|MovingAverage|QQE|
@@ -50,7 +50,7 @@ Enjoy!
 |v_input_int_7|10|Thresh-hold|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -225,10 +225,10 @@ else if GoShort
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363824
 
-> 更新时间
+> Last Modified
 
 2022-05-17 16:29:07

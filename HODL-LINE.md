@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 HODL-LINE
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator determines periods of bull market when a buy-and-hold investor can hold the asset, and bear market periods when they should avoid holding it. Though it was designed primarily with cryptocurrencies in mind, it can be successfully used for any market.
 Technically, the indicator is an asymmetric trend filter aimed to account for the fact that market sell-offs tend to be sharper than up-trends. The algorithm has two regimes – with and without price smoothing.
@@ -25,17 +25,17 @@ Use Smoothing – turns on and off smoothing of the price with HMA . With the sm
 
  ![IMG](https://www.fmz.com/upload/asset/174e3fb47f122e56769.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_string_1|0|Sensitivity: Hold Short Term|Super Sensitive|Hold Medium Term|Hold Long Term|
 |v_input_bool_1|true|Use Smoothing|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -108,10 +108,10 @@ else if crossing_condition_bear
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364536
 
-> 更新时间
+> Last Modified
 
 2022-05-20 16:59:54

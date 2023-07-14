@@ -1,28 +1,28 @@
 
-> 策略名称
+> Name
 
 OKex期货测试for新手
 
-> 策略作者
+> Author
 
 区班量化
 
-> 策略描述
+> Strategy Description
 
 OKex期货使用较麻烦，故我写了这么一个框架，方便新用户理解和使用。注意ETH是10美元为一张的。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Interval|10|轮询周期(秒)|
 |mnum|20|30分钟线周期|
 |initRatio|0.5|初始仓位比例|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -140,10 +140,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/170842
 
-> 更新时间
+> Last Modified
 
 2020-02-20 19:45:23

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Big-Snapper-Alerts-R30-Chaiking-Volatility-condition-TP-RSI
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Big Snapper Alerts R3.0 + Chaiking Volatility condition + TP RSI
 
@@ -18,11 +18,11 @@ Educational Script - Use this tool at your own responsability.
 
  ![IMG](https://www.fmz.com/upload/asset/1625ca6598ac6191ade.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_string_1|0|Coloured MA Type: : HullMA|EMA|WMA|VWMA|SMMA|DEMA|TEMA|SMA|ZEMA|TMA|SSMA|
 |v_input_int_1|18|Coloured MA - Length|
@@ -56,7 +56,7 @@ Educational Script - Use this tool at your own responsability.
 |v_input_int_9|false|Trigger|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -586,10 +586,10 @@ alertcondition(closeshort, title='close Short Alert', message='Close SHORT')
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362055
 
-> 更新时间
+> Last Modified
 
 2022-05-09 21:37:30

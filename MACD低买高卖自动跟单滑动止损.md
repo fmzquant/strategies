@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 MACD低买高卖自动跟单滑动止损
 
-> 策略作者
+> Author
 
 John。
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ac1|0.005|交叉后第一柱|
 |bc1|-1e-06|交叉后前一柱|
@@ -23,7 +23,7 @@ John。
 |MinStock|30|最小持仓|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -210,10 +210,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/194224
 
-> 更新时间
+> Last Modified
 
 2020-04-20 11:54:46

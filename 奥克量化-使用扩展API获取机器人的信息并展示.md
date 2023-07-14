@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 奥克量化-使用扩展API获取机器人的信息并展示
 
-> 策略作者
+> Author
 
 奥克量化
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -122,10 +122,10 @@ function getLogPrientItem(robotDetail){
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/208526
 
-> 更新时间
+> Last Modified
 
 2020-05-18 21:28:05

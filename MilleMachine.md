@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MilleMachine
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello traders,
 
@@ -28,11 +28,11 @@ Greetings Michael
 
  ![IMG](https://www.fmz.com/upload/asset/8b461e99d0042af31d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Mode: LongShort|OnlyLong|OnlyShort|Indicator Mode|
 |v_input_2|true|% Risk|
@@ -55,7 +55,7 @@ Greetings Michael
 |v_input_19|2|Smoothing Trail Short EMA|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // © Milleman
@@ -216,10 +216,10 @@ plot(strategy.position_size != 0.0 and (isLong or isShort) ? SLPrice : na, title
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361786
 
-> 更新时间
+> Last Modified
 
 2022-05-08 16:22:45

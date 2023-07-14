@@ -1,31 +1,31 @@
 
-> 策略名称
+> Name
 
 冰山委托买入简单版Simple-Iceberg-order-to-buy
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 Very simple, just for learn.
 Code is best annotation.
 
 冰山委托买入，将订单分成小笔M买入，避免冲击市场，是很好的简单入门比特币量化交易的学习策略
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |BUYAMOUNT|2|amount to buy|
 |BUYSIZE|0.1|iceberg order size|
 |INTERVAL|3|orders exist time(second)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main(){
@@ -53,10 +53,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/121522
 
-> 更新时间
+> Last Modified
 
 2020-03-20 16:24:13

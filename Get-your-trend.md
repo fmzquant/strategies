@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 Get-your-trend
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 来自tradingview社区热门策略
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|src: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|5|  1-SMA Lenght|
@@ -32,7 +32,7 @@ Get-your-trend
 |v_input_13|30|  Volume lenght|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -256,10 +256,10 @@ strategy.close_all( when =  close_condt )
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/360018
 
-> 更新时间
+> Last Modified
 
 2022-05-07 13:52:58

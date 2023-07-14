@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 TUE-ADX-MACD-Confluence-V10
 
-> 策略作者
+> Author
 
 Zer3192
 
-> 策略描述
+> Strategy Description
 
 MACD/ADX
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show BUY/SELL Signals|
 |v_input_2|true|Show Candle Colors|
@@ -29,7 +29,7 @@ MACD/ADX
 |v_input_10|red|Down Candle Color|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -112,10 +112,10 @@ else if trade[1] != -1 and trade == -1
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/368715
 
-> 更新时间
+> Last Modified
 
 2022-06-12 14:01:56

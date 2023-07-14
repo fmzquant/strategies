@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MAHL-Band
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The channel composed of the high price and low price moving average
 
@@ -15,16 +15,16 @@ The channel composed of the high price and low price moving average
 
  ![IMG](https://www.fmz.com/upload/asset/ec8392508188c41741.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|3|MA Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -67,10 +67,10 @@ else if down
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362497
 
-> 更新时间
+> Last Modified
 
 2022-05-11 20:48:53

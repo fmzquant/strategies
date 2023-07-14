@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 python版-Dual-Thrust-OKCoin-期货
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 Dual Thrust 策略包含完整的图表显示, 图表动态更新，模板引用等功能, 可做学习模板使用.
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractTypeIdx|0|合约品种: 当周|次周|季度|
 |MarginLevelIdx|0|杠杆大小: 10|20|
@@ -28,7 +28,7 @@ Dual Thrust 策略包含完整的图表显示, 图表动态更新，模板引用
 |PeriodShow|500|图表最大显示K线柱数|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import time
@@ -244,10 +244,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/21856
 
-> 更新时间
+> Last Modified
 
 2018-03-23 16:53:49

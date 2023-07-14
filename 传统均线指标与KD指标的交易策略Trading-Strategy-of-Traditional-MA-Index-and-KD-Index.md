@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 传统均线指标与KD指标的交易策略Trading-Strategy-of-Traditional-MA-Index-and-KD-Index
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 - 策略名称：传统均线指标与KD指标的交易策略
@@ -45,17 +45,17 @@
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SLOSS|2|止损百分比|stop loss percentage|
 |N|120|EMA参数|EMA parameter|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -89,10 +89,10 @@ C>=BKPRICE*(1+SLOSS*0.01) AND C<MAC,SP(BKVOL);
 C<=SKPRICE*(1-SLOSS*0.01) AND C>MAC,BP(SKVOL);
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128249
 
-> 更新时间
+> Last Modified
 
 2019-08-20 10:30:47

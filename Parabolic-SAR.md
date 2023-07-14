@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Parabolic-SAR
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a redesign of the built-in Parabolic SAR indicator. I added a proper input system, an option to highlight initial points for both lines and an option to choose points width. So, customize it as you want.
 
@@ -19,11 +19,11 @@ To know which settings for PSAR are the most profitable on your instrument and t
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/18fc8e68728079fd29f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0.02|Start|
 |v_input_2|0.02|Increment|
@@ -34,7 +34,7 @@ To know which settings for PSAR are the most profitable on your instrument and t
 |v_input_7|true|Highlight State ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -92,10 +92,10 @@ else if sellSignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366942
 
-> 更新时间
+> Last Modified
 
 2022-05-31 19:01:00

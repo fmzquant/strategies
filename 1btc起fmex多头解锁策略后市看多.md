@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 1btc起fmex多头解锁策略后市看多
 
-> 策略作者
+> Author
 
 gulishiduan_高频排序
 
-> 策略描述
+> Strategy Description
 
 **FMex排序挖矿多头版本代码使用说明**
 
@@ -55,11 +55,11 @@ affiliate_code: "9y40d8"
 ******风险自负/参数可调，微信：ying5737**
 **优化方向：加入均线或K线对比来确定方向，挡位优化，增加自定义单量等/******
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Url|https://api.fmex.com|交易所api地址，正式版改为：https://api.fmex.com|
 |maxPrice|30000|区间最高价|
@@ -76,7 +76,7 @@ affiliate_code: "9y40d8"
 |ApiList|GetAccount,GetDepth,GetTicker,GetRecords,GetTrades,GetOrders,SetContractType|容错API列表（默认参数即可）|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //保证金市场风险巨大，你可能随时面临100%损失。或有不明bug100%损失，概不负责。本策略使用的杠杆相对不大，可放心体验
@@ -392,10 +392,10 @@ function onexit() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/178347
 
-> 更新时间
+> Last Modified
 
 2021-12-08 13:53:31

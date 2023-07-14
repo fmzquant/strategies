@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 熊赚币牛赚U之平衡策略
 
-> 策略作者
+> Author
 
 VIC
 
-> 策略描述
+> Strategy Description
 
 * 巴菲特理念的钱币平衡策略的合约版，默认直接半仓做多合约。
 * 币安BUSD没有挂单手续费，可以极限的缩小平衡处理的间距，吃到最大的利润和手续费返还。
@@ -19,11 +19,11 @@ VIC
 * 最后说一句,尝试过了马丁的负期望,高频套利的高竞争,也许回归价值投资才是最终的胜利之道.
 * 欢迎点头像加我VX交流此策略
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |pricePrecision|3|价格精度|
 |amountPrecision|2|下单精度|
@@ -31,7 +31,7 @@ VIC
 |leverage|10|杠杆初始|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -137,10 +137,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/339698
 
-> 更新时间
+> Last Modified
 
 2022-02-09 20:08:54

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MACD-Willy-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy is mainly developed for scalping / intraday trading. It could potentially be used to identify entry/exit signals for short term options trading. It performs decently well on popular stocks when used on time frames between 5 min to 15 min using regular session bar data. It combines 3 popular indicators, EMA , MACD , and William %range, to generate both long and short signals.
 
@@ -42,11 +42,11 @@ Enjoy~~!!
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_3_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_4|50|Volume MA Period|
@@ -78,7 +78,7 @@ Enjoy~~!!
 |v_input_12|#FF5252|Fall|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -219,10 +219,10 @@ if S_exit1 //and window2
 //     strategy.close_all()
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362012
 
-> 更新时间
+> Last Modified
 
 2022-05-09 16:32:15

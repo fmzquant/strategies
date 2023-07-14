@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TradingView下单机器人11
 
-> 策略作者
+> Author
 
 夏天不打你
 
-> 策略描述
+> Strategy Description
 
 **自用的Tradingview下单机器人，功能如下：**
 1、支持火币、okex、币安三大交易所的币本位季度合约和USDT永续合约下单。
@@ -31,11 +31,11 @@ levelRate表示杠杆倍数，price表示价格，size表示下单的张数。or
 
 在策略中创建警报，webhook地址填：运行服务端的服务器IP地址，消息填：{{strategy.order.alert_message}}，其它参数默认即可。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Interval|1000|(?基本设置)程序运行周期（ms）|
 |Currency|ETH_USDT|交易对|
@@ -72,7 +72,7 @@ levelRate表示杠杆倍数，price表示价格，size表示下单的张数。or
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |LogPrint|修正了一些bug.|输出日志|
 |SaveLocalData|false|保存数据到本地|
@@ -86,7 +86,7 @@ levelRate表示杠杆倍数，price表示价格，size表示下单的张数。or
 |ManualOrder|-1,longopen,1|人工下单|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -1145,10 +1145,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/301404
 
-> 更新时间
+> Last Modified
 
 2022-02-22 23:20:20

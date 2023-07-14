@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Python版多品种追涨杀跌策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 https://www.fmz.com/bbs-topic/4959
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -104,10 +104,10 @@ def main():
         Sleep(500)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/182268
 
-> 更新时间
+> Last Modified
 
 2020-01-20 17:44:33

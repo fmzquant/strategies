@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Dual-Thrust-OKCoin-期货
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 > 基本原理
 
@@ -23,11 +23,11 @@ Zero
 
 策略的详细介绍 : http://xueqiu.com/5256769224/32429363
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractTypeIdx|0|合约品种: 当周|次周|季度|
 |MarginLevelIdx|0|杠杆大小: 10|20|
@@ -40,7 +40,7 @@ Zero
 |PeriodShow|500|图表最大显示K线柱数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var ChartCfg = {
@@ -261,10 +261,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/12101
 
-> 更新时间
+> Last Modified
 
 2018-06-05 16:33:49

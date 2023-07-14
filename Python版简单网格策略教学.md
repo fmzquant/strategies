@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Python版简单网格策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 https://www.fmz.com/bbs-topic/4877
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -158,10 +158,10 @@ def main ():
         Sleep(500)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/180385
 
-> 更新时间
+> Last Modified
 
 2020-01-04 14:42:23

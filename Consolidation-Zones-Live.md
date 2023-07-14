@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Consolidation-Zones-Live
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is the script that finds Consolidation Zones in Realtime.
 
@@ -22,11 +22,11 @@ How it works?
 
  ![IMG](https://www.fmz.com/upload/asset/3109331121cb872000.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|10|Loopback Period|
 |v_input_2|5|Min Consolidation Length|
@@ -34,7 +34,7 @@ How it works?
 |v_input_4|blue|Zone Color|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -131,10 +131,10 @@ else if breakoutdown
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365320
 
-> 更新时间
+> Last Modified
 
 2022-05-24 11:43:02

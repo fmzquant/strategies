@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Backtesting-Indicator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 For anyone interested, Here is an example of how to put backtesting results into an Indicator. This calculates the same values as you find in the Summary Screen of the built in Strategy backtester. This will use the same result size as the standard backtester i.e. 5 minute chart grabs roughly 1 month of data, 1 minute chart grabs 1 week of data, etc... I tried to keep this as self-contained as possible so I put most of the code for the results in the bottom of the Indicator. The results stop at the last completed trade signal i.e. a Buy has a Sell to it. This is the same indicator I posted earlier with the PCT Trailing StopLoss so you will see that code in here as well. As said in my previous posting, the indicator is just a simple EMA crossover to give it something to do and I would not recommend using this indicator on its own, but instead copy the code to your own indicator if you find it useful. I also left the code in so that you can switch back to a Strategy if you want to verify the results.
 
@@ -22,11 +22,11 @@ This is not financial advice. Use at your own risk.
 
  ![IMG](https://www.fmz.com/upload/asset/eb4b87871c37c0b178.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_float_1|3000|(?Back Test)Opening Balance:|
 |v_input_float_2|0.9|Allocated % (90% = .9):|
@@ -42,7 +42,7 @@ This is not financial advice. Use at your own risk.
 |v_input_3_close|0|ema 2 Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -216,10 +216,10 @@ else if sellAlert
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363797
 
-> 更新时间
+> Last Modified
 
 2022-05-17 14:05:42

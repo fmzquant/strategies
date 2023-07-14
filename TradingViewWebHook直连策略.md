@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TradingViewWebHook直连策略
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/bbs-topic/5969
 
@@ -18,11 +18,11 @@ TradingViewWebHook直连策略
 HTTPServer问题的资料：
 https://www.zybuluo.com/JunQiu/note/1350528
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |AccessKey|$$$__enc__$$$|AccessKey密钥|
 |SecretKey|$$$__enc__$$$|SecretKey密钥|
@@ -34,7 +34,7 @@ https://www.zybuluo.com/JunQiu/note/1350528
 |ct|swap|合约代码|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''
@@ -186,10 +186,10 @@ def main():
         Sleep(2000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/221850
 
-> 更新时间
+> Last Modified
 
 2021-03-31 11:33:30

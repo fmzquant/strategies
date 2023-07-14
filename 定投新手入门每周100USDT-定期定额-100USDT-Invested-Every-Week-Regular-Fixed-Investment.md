@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 定投新手入门每周100USDT-定期定额-100USDT-Invested-Every-Week-Regular-Fixed-Investment
 
-> 策略作者
+> Author
 
 jfyh5388
 
-> 策略描述
+> Strategy Description
 
 每周定投100USDT，定期定额
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 def main():
@@ -35,10 +35,10 @@ def main():
                     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/260013
 
-> 更新时间
+> Last Modified
 
 2021-04-06 08:35:55

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 ETHUSDTPERP-BOT-30min
 
-> 策略作者
+> Author
 
 a624587332
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|true|AVERAGE DIRECTIONAL INDEX|
@@ -39,7 +39,7 @@ a624587332
 |v_input_22|1.6| Take profit|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=4
@@ -186,10 +186,10 @@ strategy.exit("tp", qty_percent = q, profit = per(tp), loss = los)
 //By wielkieef
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/376260
 
-> 更新时间
+> Last Modified
 
 2022-08-02 23:47:12

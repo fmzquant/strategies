@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 币安合约websocket接口查询持仓账户范例
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 币安合约websocket接口查询持仓账户范例
 
@@ -19,7 +19,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {
@@ -52,10 +52,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/242102
 
-> 更新时间
+> Last Modified
 
 2020-12-15 15:25:46

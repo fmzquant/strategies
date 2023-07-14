@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 各大平台API可用率统计
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 支持多个交易所, 多线程, 想学习多线程或者图表的可以学习下这个策略
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Interval|10|检测频率(秒)|
 |TickCount|200|采样数量|
@@ -23,12 +23,12 @@ Zero
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |清空日志|__button__|清空日志|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -264,10 +264,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/4404
 
-> 更新时间
+> Last Modified
 
 2016-09-26 09:01:12

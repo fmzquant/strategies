@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 双均线策略与相对强弱RSI指标组合Combination-of-Double-MA-and-RSI
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 
@@ -45,18 +45,18 @@
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SLOSS|true|止损百分比|Stop Loss Percentage|
 |N1|50|均线1参数|MA1 parameter|
 |N2|300|均线2参数|MA2 parameter|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -89,10 +89,10 @@ SELLS,SP(BKVOL);
 BUYS,BP(SKVOL);
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128250
 
-> 更新时间
+> Last Modified
 
 2019-08-20 10:29:50

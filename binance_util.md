@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 binance_util
 
-> 策略作者
+> Author
 
 linsilence
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |isDebug|false|是否测试|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -418,10 +418,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/247137
 
-> 更新时间
+> Last Modified
 
 2022-06-18 00:34:46

@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 MACD-Pine简单策略
 
-> 策略作者
+> Author
 
 发明者量化
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|12|fast|
 |v_input_int_1|26|slow|
 |v_input_float_1|9|signal|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -49,10 +49,10 @@ else if fast<slow and fast[1]>slow[1]
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/356844
 
-> 更新时间
+> Last Modified
 
 2022-05-23 18:08:17

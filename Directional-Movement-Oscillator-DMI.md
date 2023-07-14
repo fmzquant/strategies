@@ -1,25 +1,25 @@
 
-> 策略名称
+> Name
 
 Directional-Movement-Oscillator-DMI
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|10|DI Length|
 |v_input_2|8|DI Smoothing Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -60,10 +60,10 @@ else if p2
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/369999
 
-> 更新时间
+> Last Modified
 
 2022-06-20 21:26:14

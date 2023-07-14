@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Optimized-Trend-Tracker
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 A brand new indicator from the developer of MOST (Moving Stop Loss) indicator Anıl Özekşi.
 
@@ -54,11 +54,11 @@ Note: A small coverage with English subtitles will be available on my Youtube Ch
 
  ![IMG](https://www.fmz.com/upload/asset/c77ddd12ada704a222.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|2|OTT Period|
@@ -72,7 +72,7 @@ Note: A small coverage with English subtitles will be available on my Youtube Ch
 |v_input_10|0|Moving Average Type: VAR|EMA|WMA|TMA|SMA|WWMA|ZLEMA|TSF|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -193,10 +193,10 @@ else if sellSignallk
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361567
 
-> 更新时间
+> Last Modified
 
 2022-05-07 01:30:12

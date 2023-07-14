@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 日志Logger
 
-> 策略作者
+> Author
 
 fmzero
 
-> 策略描述
+> Strategy Description
 
 设置不同的level，控制日志输出等级
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |level|0|日志级别: 调试|信息|警告|错误|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //var COLOR_ERROR = "#FF0000"
@@ -65,10 +65,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/151754
 
-> 更新时间
+> Last Modified
 
 2020-01-20 10:17:59

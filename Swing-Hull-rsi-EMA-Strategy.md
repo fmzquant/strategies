@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Swing-Hull-rsi-EMA-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 A Swing trading strategy that use a combination of indicators, Hull average to get the trend direction, ema and rsi do the rest, use it are your own risk expecially at the end of any hull trend
 Past Performance Does Not Guarantee Future Results
@@ -15,11 +15,11 @@ Past Performance Does Not Guarantee Future Results
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/ab1fe0ba981e4b4a64.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|500|period|
 |v_input_2|14|length|
@@ -32,7 +32,7 @@ Past Performance Does Not Guarantee Future Results
 |v_input_9|75|sl|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -133,10 +133,10 @@ strategy.exit("Out Short", "SYS-SHORT", qty_percent=Q, loss=Stop)
 //plot(strategy.equity, title="equity", color=red, linewidth=2, style=areabr)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365668
 
-> 更新时间
+> Last Modified
 
 2022-05-25 16:06:18

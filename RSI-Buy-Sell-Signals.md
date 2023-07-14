@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RSI-Buy-Sell-Signals
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator is mainly based on Overbought and Oversold. Indicator for short-term trading. This way you can get small but acceptable signals.
 The main basis of the indicator is as follows:
@@ -30,11 +30,11 @@ I am not liable for any profit, financial improvement, losses or damages, moneta
 
  ![IMG](https://www.fmz.com/upload/asset/bc52f54c413e5d2a42.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_3|false|exponential|
 |v_input_int_1|8|(?Envelope Settings)Envelope Length|
@@ -46,7 +46,7 @@ I am not liable for any profit, financial improvement, losses or damages, moneta
 |v_input_5|25|RSI OverSold Limit(Recommended: 20-30)|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -124,10 +124,10 @@ else if cross_buy
 // fill(sell_sig,sl_sig, color=slColor)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362004
 
-> 更新时间
+> Last Modified
 
 2022-05-09 15:14:58

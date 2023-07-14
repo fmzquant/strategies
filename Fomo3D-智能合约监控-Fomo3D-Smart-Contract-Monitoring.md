@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Fomo3D-智能合约监控-Fomo3D-Smart-Contract-Monitoring
 
-> 策略作者
+> Author
 
 FawkesPan
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |TG|0|是否启用 Telegram 机器人: 0|1|
 |TGKEY||Telegram 机器人KEY|
@@ -25,7 +25,7 @@ FawkesPan
 |WECHAT|0|启用微信通知: 0|1|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #!/usr/bin/env python3
@@ -117,10 +117,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/107916
 
-> 更新时间
+> Last Modified
 
 2018-09-12 02:35:10

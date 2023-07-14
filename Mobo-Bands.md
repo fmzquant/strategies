@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Mobo-Bands
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator is the Mobo Bands (Momentum Breakout Bands). These bands are bollinger bands that have an adjusted standard deviation. There are Buy signals when it has momentum breakouts above the bands for moves to the upside and Sell signals when it has momentum breakouts below the bands for moves to the downside. The bands simply suggest that all markets have periods of chop which we all know to be true. While the price is inside the bands it is said to be trendless. Once the breakouts happen you can take trades in the breakout direction. I like to use these to swing trade options on the hourly timeframe but the bands should work on most instruments and timeframes. I like to use it to take swings on SPY on the 1 hour chart for entries and use the Daily chart for trend confirmation.
 
@@ -15,11 +15,11 @@ This indicator is the Mobo Bands (Momentum Breakout Bands). These bands are boll
 
  ![IMG](https://www.fmz.com/upload/asset/1f2ff4b7c1c03df68cb.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_hl2|0|Price: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
 |v_input_2|3|colorNormLength|
@@ -34,7 +34,7 @@ This indicator is the Mobo Bands (Momentum Breakout Bands). These bands are boll
 |v_input_11|true|moboShowMid|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -114,10 +114,10 @@ else if Signal2 and wasUp[1]
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362868
 
-> 更新时间
+> Last Modified
 
 2022-05-13 14:36:34

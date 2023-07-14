@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Moving-Average-Cross
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|true|Start Date|
 |v_input_int_2|true|Start Month|
@@ -25,7 +25,7 @@ Zer3192
 |v_input_int_8|29|Fast MA Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -104,10 +104,10 @@ table.cell(table_id = testTable, column = 2, row = 5, text = "34", bgcolor=color
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380331
 
-> 更新时间
+> Last Modified
 
 2022-08-28 07:42:12

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 stochRSI策略-指标框架
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 stochRSI指标策略
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*参数
@@ -341,10 +341,10 @@ function main(){
 */
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/20383
 
-> 更新时间
+> Last Modified
 
 2016-08-22 19:23:00

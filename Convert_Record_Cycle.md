@@ -1,28 +1,28 @@
 
-> 策略名称
+> Name
 
 Convert_Record_Cycle
 
-> 策略作者
+> Author
 
 jxc6698
 
-> 策略描述
+> Strategy Description
 
 # 得到指定周期的蜡烛图 线数据
 
 如有BUG ，问题 欢迎留言
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |UI_NewCycleForMS|1000*60*60*2|合成周期毫秒数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /**
@@ -203,10 +203,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/37678
 
-> 更新时间
+> Last Modified
 
 2017-03-13 16:41:10

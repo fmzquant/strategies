@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Renko-Reversal-Alert
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -62,10 +62,10 @@ else if short
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/368749
 
-> 更新时间
+> Last Modified
 
 2022-06-12 18:32:42

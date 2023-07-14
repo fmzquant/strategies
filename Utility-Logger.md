@@ -1,27 +1,27 @@
 
-> 策略名称
+> Name
 
 Utility-Logger
 
-> 策略作者
+> Author
 
 btcvegas
 
-> 策略描述
+> Strategy Description
 
 设置不同的level，控制日志输出等级
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |level|0|Logging Level: DEBUG|INFO|WARNING|ERROR|
 |routeFilter|0|Route Filter: All|route1|route2|route3|route4|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -533,10 +533,10 @@ function tradeSpreadTriangular(makerTrade, takerTrade, conversionTrade) {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/209236
 
-> 更新时间
+> Last Modified
 
 2023-02-28 05:26:51

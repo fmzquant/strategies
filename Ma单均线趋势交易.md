@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Ma单均线趋势交易
 
-> 策略作者
+> Author
 
 ipqhjjybj
 
@@ -11,7 +11,7 @@ ipqhjjybj
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -147,10 +147,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/42451
 
-> 更新时间
+> Last Modified
 
 2017-06-04 21:55:07

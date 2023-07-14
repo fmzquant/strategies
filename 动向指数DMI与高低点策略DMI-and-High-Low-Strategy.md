@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 动向指数DMI与高低点策略DMI-and-High-Low-Strategy
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 - 策略名称：动向指数（DMI）与高低点策略
@@ -39,11 +39,11 @@
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |N|20|AMA1指标参数（1）|AMA1 index parameter(1)|
 |N1|4|AMA1指标参数（2）|AMA1 index parameter(2)|
@@ -53,7 +53,7 @@
 |M2|120|AMA2指标参数（3）|AMA2 index parameter(3)|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -86,10 +86,10 @@ BKVOL=0  AND  REF(AMA1,1)<REF(AMA2,1)  AND  AMA2<AMA1,BPK;
 SKVOL=0  AND  REF(AMA1,1)>REF(AMA2,1)  AND  AMA2>AMA1,SPK;
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128418
 
-> 更新时间
+> Last Modified
 
 2019-08-20 10:24:43

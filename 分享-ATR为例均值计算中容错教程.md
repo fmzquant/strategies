@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 分享-ATR为例均值计算中容错教程
 
-> 策略作者
+> Author
 
 作手君
 
-> 策略描述
+> Strategy Description
 
 为回馈FMZ平台与社区，进行策略&代码&思路&模板的分享
 
@@ -21,7 +21,7 @@ v：haiyanyydss
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var arecords = _C(exchange.GetRecords, 300);
@@ -60,10 +60,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/396764
 
-> 更新时间
+> Last Modified
 
 2023-02-09 09:48:42

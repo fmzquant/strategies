@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Shannons-Demon
 
-> 策略作者
+> Author
 
 FawkesPan
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |DELAY|30|平衡间隔|
 |DS|1.04|Sell|
@@ -22,7 +22,7 @@ FawkesPan
 |RSIS|20|RSI Sell|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -73,10 +73,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/64455
 
-> 更新时间
+> Last Modified
 
 2018-08-30 03:04:37

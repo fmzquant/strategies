@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 SpotGridStra
 
-> 策略作者
+> Author
 
 ktrader
 
-> 策略描述
+> Strategy Description
 
 对现货进行网格管理
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # 现货网格管理
@@ -108,10 +108,10 @@ class SpotGridStra():
 ext.SpotGridStra = SpotGridStra
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/276994
 
-> 更新时间
+> Last Modified
 
 2021-04-29 17:49:31

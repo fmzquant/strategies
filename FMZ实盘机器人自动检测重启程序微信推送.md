@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 FMZ实盘机器人自动检测重启程序微信推送
 
-> 策略作者
+> Author
 
 eason04
 
-> 策略描述
+> Strategy Description
 
 **FMZ实盘机器人自动检测重启程序（微信推送）**
  ![IMG](https://www.fmz.com/upload/asset/27d06163dac4df7fe8520.png) 
@@ -32,7 +32,7 @@ eason04
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''
@@ -121,10 +121,10 @@ while True:
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/383695
 
-> 更新时间
+> Last Modified
 
 2022-09-22 18:27:23

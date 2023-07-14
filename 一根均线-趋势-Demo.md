@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 一根均线-趋势-Demo
 
-> 策略作者
+> Author
 
 扁豆子
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Amount|100|Amount|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 定义对象
@@ -97,10 +97,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/193609
 
-> 更新时间
+> Last Modified
 
 2020-04-11 21:28:30

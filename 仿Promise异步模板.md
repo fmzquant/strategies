@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 仿Promise异步模板
 
-> 策略作者
+> Author
 
 nogo
 
-> 策略描述
+> Strategy Description
 
 仿Promise异步模板
 
@@ -15,7 +15,7 @@ nogo
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -227,10 +227,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/386497
 
-> 更新时间
+> Last Modified
 
 2022-10-16 13:24:40

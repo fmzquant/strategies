@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 QQE-signals
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Converted the QQE oscillator to in-chart long and short signals with built in alerts. This is multi-timeframe and quite robust.
 **backtest**
 
  ![IMG](https://www.fmz.com/upload/asset/169ba0815c6b2e0b187.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|10|RSI Length|
 |v_input_2|5|RSI Smoothing|
@@ -26,7 +26,7 @@ Converted the QQE oscillator to in-chart long and short signals with built in al
 |v_input_4|10|Thresh-hold|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -101,10 +101,10 @@ else if qqeShort
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365028
 
-> 更新时间
+> Last Modified
 
 2022-05-23 11:32:09

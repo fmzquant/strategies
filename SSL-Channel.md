@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SSL-Channel
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 :
 Multiple Moving Averages to choose from ( SMA , EMA , SMMA (RMA), WMA , VWMA )
@@ -18,11 +18,11 @@ MTF
 
  ![IMG](https://www.fmz.com/upload/asset/1377dfc3d2a8a60c192.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|Take Wicks into Account ?|
 |v_input_2|true|Highlight State ?|
@@ -50,7 +50,7 @@ MTF
 |v_input_16|true|Show Buy/Sell Labels ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -148,10 +148,10 @@ else if Hlv2 == -1 and Hlv2[1] == 1
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365858
 
-> 更新时间
+> Last Modified
 
 2022-05-26 12:19:48

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Diamond-Trend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Diamond Trend is an indicator clearly way to catch the trend in the begining $$
 
@@ -15,11 +15,11 @@ Diamond Trend is an indicator clearly way to catch the trend in the begining $$
 
  ![IMG](https://www.fmz.com/upload/asset/f6a5f43fe714bdae29.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0.02|start|
 |v_input_2|0.02|increment|
@@ -28,7 +28,7 @@ Diamond Trend is an indicator clearly way to catch the trend in the begining $$
 |v_input_5|1.9|Deviation|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -80,10 +80,10 @@ else if sell
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362178
 
-> 更新时间
+> Last Modified
 
 2022-05-10 14:47:48

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Villa-Dinamic-Pivot-Supertrend-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy works better on AUD/USD in the 15 min timeframe. It uses the Pivot Supertrend to enter trades based on different filters such as:
 - Simple EMA filter: that the 3 EMAs should be in order
@@ -24,11 +24,11 @@ This strategy works better on AUD/USD in the 15 min timeframe. It uses the Pivot
 
  ![IMG](https://www.fmz.com/upload/asset/4d0c276dfb86f39819.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|false|(?Strategy Inputs)Use Simple EMA Filter|
 |v_input_bool_2|true|Use DEMA Angle Filter|
@@ -69,7 +69,7 @@ This strategy works better on AUD/USD in the 15 min timeframe. It uses the Pivot
 |v_input_float_5|2|ST ATR Multiplier|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -394,10 +394,10 @@ strategy.exit("Exit", "Short", stop = sl_s_n, limit = tp_s_n)
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362920
 
-> 更新时间
+> Last Modified
 
 2022-05-13 18:42:02

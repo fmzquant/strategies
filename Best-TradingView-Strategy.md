@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Best-TradingView-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The script is totally based on momentum , volume and price. We have used :
 1: Bollinger Band Squeezes to know when a breakout might happen.
@@ -21,11 +21,11 @@ The script is totally based on momentum , volume and price. We have used :
 
  ![IMG](https://www.fmz.com/upload/asset/1cbcd9497b9cc5e9ad6.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|15|length1|
 |v_input_float_1|2|mult1|
@@ -38,7 +38,7 @@ The script is totally based on momentum , volume and price. We have used :
 |v_input_float_2|2|BB StdDev|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -159,10 +159,10 @@ plot(out, color=color.green)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362059
 
-> 更新时间
+> Last Modified
 
 2022-05-09 21:42:21

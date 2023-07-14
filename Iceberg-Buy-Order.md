@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 Iceberg-Buy-Order
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 冰山委托指的是投资者在进行大额交易时，为避免对市场造成过大冲击，将大单委托自动拆为多笔委托，根据当前的最新买一/卖一价格和客户设定的价格策略自动进行小单委托，在上一笔委托被全部成交或最新价格明显偏离当前委托价时，自动重新进行委托。
 例子:
 如果单次均值浮动点数设置为10那么:
 每一笔委托的数量为其单次委托平均值的90%~110%，委托价格为最新买1价*（1-委托深度），在上一笔委托全部成交后再进行新的一笔委托，在最新成交价格距离该笔委托超过委托深度*2时自动撤单并重新进行委托。在策略总成交量等于其总委托数量时停止委托。当市场的最新成交价格高于其最高买入价格时停止委托，在最新成交价格重新低于最高买入价后恢复委托。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |TotalBuyNet|10000|total buy value|
 |AvgBuyOnce|100|avg buy value|
@@ -30,7 +30,7 @@ Iceberg-Buy-Order
 |LoopInterval|true|loop time(second)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function CancelPendingOrders() {
@@ -112,10 +112,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/103319
 
-> 更新时间
+> Last Modified
 
 2018-07-05 11:10:09

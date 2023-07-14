@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 SSL-Hybrid-STOCH-RSI
 
-> 策略作者
+> Author
 
 luqi0212
 
-> 策略描述
+> Strategy Description
 
 回测一年，K线周期15分钟
 5万u，开单50个以太，止盈止损10000%（即不设止盈止损）
 开单数量、止盈止损参数以及其他参数自己调整
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show Baseline|
 |v_input_2|false|Show SSL1|
@@ -55,7 +55,7 @@ luqi0212
 |v_input_30|10000|止损|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -362,10 +362,10 @@ strategy.exit("exit",  profit = prof, loss = los)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/391080
 
-> 更新时间
+> Last Modified
 
 2022-11-24 11:24:03

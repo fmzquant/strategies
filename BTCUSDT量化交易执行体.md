@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 BTCUSDT量化交易执行体
 
-> 策略作者
+> Author
 
 zomo
 
-> 策略描述
+> Strategy Description
 
 ```
 https://github.com/Find-Dream/BTCUSDT
@@ -45,7 +45,7 @@ kill -9 获取到的进程号
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 from okex.trade import trade,pos_info,acc_info,select_last
@@ -202,10 +202,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/321120
 
-> 更新时间
+> Last Modified
 
 2021-10-03 09:32:41

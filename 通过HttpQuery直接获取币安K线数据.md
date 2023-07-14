@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 通过HttpQuery直接获取币安K线数据
 
-> 策略作者
+> Author
 
 夏天不打你
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // GetRecords_Binance_Swap("5m", "ETHUSDT")
@@ -41,10 +41,10 @@ function GetRecords_Binance_Swap(period, symbol) {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/334026
 
-> 更新时间
+> Last Modified
 
 2021-12-07 20:17:06

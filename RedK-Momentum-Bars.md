@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RedK-Momentum-Bars
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Momentum Bars (Mo_Bars) offers a different way to visualize (relative) momentum - and uses some simple TA concepts to provide a different perspective into how we read momentum changes and incorporate that in our trading.
 
@@ -45,11 +45,11 @@ Here's the detailed (top chart) setup that Mo_Bars is based on -- The settings f
 
  ![IMG](https://www.fmz.com/upload/asset/9c35dab96de1e2b43f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_source_1_close|0|Fast MA Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_int_1|10|Length|
@@ -62,7 +62,7 @@ Here's the detailed (top chart) setup that Mo_Bars is based on -- The settings f
 |v_input_string_3|0|Type: SMA|WMA|EMA|RSS_WMA|HMA|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -209,10 +209,10 @@ else if Alert_dn
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364001
 
-> 更新时间
+> Last Modified
 
 2022-05-18 11:32:35

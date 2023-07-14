@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 OkEX-Websocket-Realtime-v3
 
-> 策略作者
+> Author
 
 FawkesPan
 
-> 策略描述
+> Strategy Description
 
 # OkEX WebSocket API Connecter (compress supported)
 因为 `websocket-client` 新版的各种大脑降级设计 很多功能无法使用
@@ -15,7 +15,7 @@ FawkesPan
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #!/usr/bin/env python3
@@ -138,10 +138,10 @@ def main():
         time.sleep(1)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/143457
 
-> 更新时间
+> Last Modified
 
 2019-05-18 00:17:12

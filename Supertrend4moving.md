@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Supertrend4moving
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 stop loss trailing and moving average can be use together for best entering and exit position
 Supertrend+4moving by pejmantak123
@@ -16,11 +16,11 @@ Supertrend+4moving by pejmantak123
 
  ![IMG](https://www.fmz.com/upload/asset/14ee26429757153c544.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|20|ATR Period|
 |v_input_2_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -38,7 +38,7 @@ Supertrend+4moving by pejmantak123
 |v_input_9_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -117,10 +117,10 @@ else if sellSignal
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363825
 
-> 更新时间
+> Last Modified
 
 2022-05-17 15:35:18

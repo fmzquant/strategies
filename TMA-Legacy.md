@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TMA-Legacy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a script based on the original TMA- RSI Divergence indicator by PhoenixBinary.
 The Phoenix Binary community and the TMA community built this version to be public code for the community for further use and revision after the reported passing of Phoenix Binary (The community extends our condolences to Phoenix's family.
@@ -36,11 +36,11 @@ This one will take a little bit of time to master. But, once you master this, an
 
  ![IMG](https://www.fmz.com/upload/asset/1b1cd2d0ad479aabcbc.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_10|14|ADX Smoothing|
 |v_input_int_11|14|DI Length|
@@ -68,7 +68,7 @@ This one will take a little bit of time to master. But, once you master this, an
 |v_input_bool_4|true|Plot Hidden Bearish|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -378,10 +378,10 @@ else if hiddenBearCond
 // END ###
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362083
 
-> 更新时间
+> Last Modified
 
 2022-05-09 22:59:36

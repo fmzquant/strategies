@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Pivot-Order-Blocks
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 // How it Works \\
 Order Blocks based on pivot reversal candle
@@ -34,11 +34,11 @@ Feel free to use the script, If you do use the script could you please just tag 
 
  ![IMG](https://www.fmz.com/upload/asset/133eb5003e76e3f0820.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|10|(?=== Pivots ===)Pivot High|
 |v_input_int_2|10|/|
@@ -49,7 +49,7 @@ Feel free to use the script, If you do use the script could you please just tag 
 |v_input_2|#FF0000|Bearish Box Color|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -118,10 +118,10 @@ else if ph
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362542
 
-> 更新时间
+> Last Modified
 
 2022-05-11 23:35:28

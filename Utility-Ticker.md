@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Utility-Ticker
 
-> 策略作者
+> Author
 
 btcvegas
 
@@ -11,7 +11,7 @@ btcvegas
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -74,10 +74,10 @@ $.updateTicker = function (exchange1, exchange2, contract1, contract2, graph, lo
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/268995
 
-> 更新时间
+> Last Modified
 
 2021-07-07 23:23:50

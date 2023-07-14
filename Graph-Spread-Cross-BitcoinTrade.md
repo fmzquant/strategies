@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 Graph-Spread-Cross-BitcoinTrade
 
-> 策略作者
+> Author
 
 btcvegas
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |timeout|60000|timeout (ms)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -127,10 +127,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/269000
 
-> 更新时间
+> Last Modified
 
 2021-07-12 20:41:21

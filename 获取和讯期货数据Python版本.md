@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 获取和讯期货数据Python版本
 
-> 策略作者
+> Author
 
 edwardgyw
 
-> 策略描述
+> Strategy Description
 
 数狂很早之前写了个js版本的第三方数据获取，我照着他的改写了个python版本的，可以下在云服务器上引入自己的包，这样研究时候也可以用。
 update 12.01 和讯接口有变化多了60分钟和周线的信息，原版选择1440会获取60分钟的k线，这里fix了
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #coding: utf-8
@@ -92,10 +92,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/26017
 
-> 更新时间
+> Last Modified
 
 2016-12-01 00:28:00

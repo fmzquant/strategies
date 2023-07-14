@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 grid
 
-> 策略作者
+> Author
 
 CYZWX
 
@@ -11,7 +11,7 @@ CYZWX
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 last_tick = []
@@ -52,10 +52,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/291160
 
-> 更新时间
+> Last Modified
 
 2021-06-17 02:43:52

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 如何找出一定Bar数量的-K线前期高点低点-及-Demo-程序
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function FindLastHighestPoint(Records, NumOfBars){
@@ -112,10 +112,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/58179
 
-> 更新时间
+> Last Modified
 
 2017-10-28 15:16:43

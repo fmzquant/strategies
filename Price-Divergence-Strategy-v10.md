@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Price-Divergence-Strategy-v10
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Created by Request: This is a trend trading strategy that uses Price Divergence detection signals that are confirmed by the "Murrey's Math Oscillator" (Donchanin Channel based).
 
@@ -21,11 +21,11 @@ Strategy Code Example by JayRogers
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/fe14c620de17b78dc2.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Method (0=rsi, 1=macd, 2=stoch, 3=volume, 4=acc/dist, 5=fisher, 6=cci):|
 |v_input_2|true|Show Labels|
@@ -45,7 +45,7 @@ Strategy Code Example by JayRogers
 |v_input_16|false|Trailing Stop Loss Offset Points|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -254,10 +254,10 @@ strategy.exit("Exit Sell", from_entry="Sell", profit=useTakeProfit, loss=useStop
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366935
 
-> 更新时间
+> Last Modified
 
 2022-05-31 18:31:45

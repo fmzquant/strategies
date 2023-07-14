@@ -1,27 +1,27 @@
 
-> 策略名称
+> Name
 
 定期定额投资BTC盈利验证
 
-> 策略作者
+> Author
 
 春哥
 
-> 策略描述
+> Strategy Description
 
 每次按照固定金额购买比特币持有
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |FIXED_AMOUNT|100|每次买多少人民币|
 |PERIOD|86400|周期(单位秒)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -103,10 +103,10 @@ function createChart() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/16845
 
-> 更新时间
+> Last Modified
 
 2016-06-17 01:00:11

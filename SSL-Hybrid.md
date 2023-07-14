@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SSL-Hybrid
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script is designed for the NNFX Method, so it is recommended for Daily charts only.
 Tried to implement a few VP NNFX Rules
@@ -20,11 +20,11 @@ Added "Candle Size > 1 ATR" Diamonds from my old script with the criteria of bei
 
  ![IMG](https://www.fmz.com/upload/asset/16f9872d59d9fafbaaf.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show Baseline|
 |v_input_2|false|Show SSL1|
@@ -54,7 +54,7 @@ Added "Candle Size > 1 ATR" Diamonds from my old script with the criteria of bei
 |v_input_26|0.9|Continuation ATR Criteria|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -350,10 +350,10 @@ else if sell_atr
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363851
 
-> 更新时间
+> Last Modified
 
 2022-05-17 17:36:40

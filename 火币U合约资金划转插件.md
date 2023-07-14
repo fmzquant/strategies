@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 火币U合约资金划转插件
 
-> 策略作者
+> Author
 
 xunfeng91
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |typeIndex|0|划转类型: 母子账户划转|同账号不同账户划转|
 |subuid||子账户UID|
@@ -24,7 +24,7 @@ xunfeng91
 |direct|0|账户划转方向: 母到子|子到母|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -126,10 +126,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/255402
 
-> 更新时间
+> Last Modified
 
 2021-02-26 14:32:55

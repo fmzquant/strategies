@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Pivot-Point-Supertrend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello All,
 
@@ -19,11 +19,11 @@ The idea is behind this script is finding pivot point , calculating average of t
 
  ![IMG](https://www.fmz.com/upload/asset/fd80a8497ef73b8f55.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|3|Pivot Point Period|
 |v_input_2|2|ATR Factor|
@@ -34,7 +34,7 @@ The idea is behind this script is finding pivot point , calculating average of t
 |v_input_7|false|Show Support/Resistance|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -123,10 +123,10 @@ else if Trend == -1 and Trend[1] == 1
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363829
 
-> 更新时间
+> Last Modified
 
 2022-05-17 16:03:36

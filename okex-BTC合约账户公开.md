@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 okex-BTC合约账户公开
 
-> 策略作者
+> Author
 
 leviyuan
 
@@ -11,7 +11,7 @@ leviyuan
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var exchangeRate = 6.4,
@@ -95,10 +95,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/83189
 
-> 更新时间
+> Last Modified
 
 2018-03-29 09:51:37

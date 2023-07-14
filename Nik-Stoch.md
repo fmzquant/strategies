@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Nik-Stoch
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Stochastics Oscillator with settings of 5,3,3
 Levels : 15, 85, 30, 70
@@ -15,11 +15,11 @@ Levels : 15, 85, 30, 70
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/141e589f5b00c84de34.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|14|lookback_period|
 |v_input_int_2|3|m1|
@@ -29,7 +29,7 @@ Levels : 15, 85, 30, 70
 |v_input_int_6|3|m4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -76,10 +76,10 @@ else if k1[1] > d1[1] and k1 < d1
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362172
 
-> 更新时间
+> Last Modified
 
 2022-05-10 14:08:03

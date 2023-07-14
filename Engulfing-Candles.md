@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Engulfing-Candles
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script shows you where a candle is either bullish or bearish engulfing the previous candle.
 
@@ -20,7 +20,7 @@ A RED triangle ABOVE the bar pointing DOWN indicates that the candle is BEARISH 
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -66,10 +66,10 @@ else if bearishEngulfing
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361783
 
-> 更新时间
+> Last Modified
 
 2022-05-08 10:57:57

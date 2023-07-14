@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Moon-Launch-Alerts-Template-Indicator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 I created this indicator/study script because i ran into the issue that the same Alerts would fire multiple times. For example it would trigger a Long signal when already being in a Long. I guess there would be no issue with a very basic strategy but with a larger script and many variables, it seemed to create complications.
 
@@ -34,11 +34,11 @@ Hope someone will find this useful, or even just as an additional visual confirm
 
  ![IMG](https://www.fmz.com/upload/asset/1ecf2b3477b9cd2f5d2.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|- *Trade Shorts* - |
 |v_input_2|true|- *Trade Exits* -|
@@ -50,7 +50,7 @@ Hope someone will find this useful, or even just as an additional visual confirm
 |v_input_8|9|Hist Signal Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -284,10 +284,10 @@ alertcondition(condition=tradedowns and tradeshorts and not exitdata2[1] and not
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362671
 
-> 更新时间
+> Last Modified
 
 2022-05-12 18:45:45

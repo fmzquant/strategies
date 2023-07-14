@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 C-API调用例子
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 支持C++ 11, 兼容各种平台(Windows/Linux/Mac). 云端编译.
 
 
 
-> 源码 (cpp)
+> Source (cpp)
 
 ``` cpp
 void main() {
@@ -144,10 +144,10 @@ void main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/61533
 
-> 更新时间
+> Last Modified
 
 2018-02-14 11:35:11

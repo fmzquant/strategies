@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 高频交易策略之-Penny-Jump
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 今天假设有一个笨笨的大型机构投资人（共同基金，银行，退休基金….），他想要买进一只股票，但又不想挂市价买进，所以就在市场里面挂了一张要买进的大单。这时候所有市场里面的人都会看的到limit order book里面有人挂进了大单准备要买进这只股票。
 
@@ -27,11 +27,11 @@ Zero
 
 https://dn-filebox.qbox.me/33ecc8cd888b2918dcfb4044913c3c89a4cd4061.jpg
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Interval|2000|出错重试间隔(毫秒)|
 |Lot|0.01|手数|
@@ -46,7 +46,7 @@ https://dn-filebox.qbox.me/33ecc8cd888b2918dcfb4044913c3c89a4cd4061.jpg
 |STTick|true|止损跳数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -180,10 +180,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/358
 
-> 更新时间
+> Last Modified
 
 2016-08-27 10:37:36

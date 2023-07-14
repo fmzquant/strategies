@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 CM-Sling-Shot-System
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Sling Shot System + Even Better System.
 
@@ -25,11 +25,11 @@ See Link Below for Main Chart Showing 2nd System!!!
 
  ![IMG](https://www.fmz.com/upload/asset/1cff6c996298e8426b1.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show Aggressive Entry?, Or Use as Alert To Potential Conservative Entry?|
 |v_input_2|true|Show Conservative Entry?|
@@ -39,7 +39,7 @@ See Link Below for Main Chart Showing 2nd System!!!
 |v_input_6|true|Show 'B'-'S' Letters?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -95,10 +95,10 @@ else if sl and codiff2
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361675
 
-> 更新时间
+> Last Modified
 
 2022-05-07 17:06:50

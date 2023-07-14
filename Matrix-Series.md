@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Matrix-Series
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 For those who are using charts with white backround they should change from the indicator options->style the black color to white.
 OB/OS zones are at 200 and -200 and marked with aqua color above below the candles.
@@ -17,11 +17,11 @@ OB/OS zones are at 200 and -200 and marked with aqua color above below the candl
 
  ![IMG](https://www.fmz.com/upload/asset/18996ab5d6508b3a4cb.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|5|Smoother|
 |v_input_2|50|SupResPeriod|
@@ -33,7 +33,7 @@ OB/OS zones are at 200 and -200 and marked with aqua color above below the candl
 |v_input_8|true|Dynamic zones|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -108,10 +108,10 @@ else if DOWNshape
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365381
 
-> 更新时间
+> Last Modified
 
 2022-05-24 16:42:26

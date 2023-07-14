@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 FTL-Range-Filter-X2-EMA-UO
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Thjs script combines two range filters, an EMA and the Ultimate oscillator .
 This is an indicator type of script with alerts that is ideal for one minute scalping and was developed initially for NAS100 but has been used successfully with other symbols.
@@ -26,11 +26,11 @@ Additional features of this indicator:
 
  ![IMG](https://www.fmz.com/upload/asset/19cf79e165de560657d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_3_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_1_hl2|0|(?Leading Range Filter)Source: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
@@ -53,7 +53,7 @@ Additional features of this indicator:
 |v_input_bool_6|true|Show SELL only below the EMA|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -384,10 +384,10 @@ else if shortCondition
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362887
 
-> 更新时间
+> Last Modified
 
 2022-05-13 16:11:48

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Volume-Divergence
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 It's a simply volume indicator. You should watch for breaks on both volume uptrend and volume downtrend. It uses fibonacci numbers to build smoothed moving average of volume .
 
@@ -17,11 +17,11 @@ Also you can check divergences for trend reversal and momentum loss.
 
  ![IMG](https://www.fmz.com/upload/asset/af6d0a4629bc6e121a.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|5|First Moving Average length|
 |v_input_2|8|Second Moving Average length|
@@ -35,7 +35,7 @@ Also you can check divergences for trend reversal and momentum loss.
 |v_input_10|false|Plot Hidden Bearish|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -237,10 +237,10 @@ else if bearCond
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365895
 
-> 更新时间
+> Last Modified
 
 2022-05-26 17:04:32

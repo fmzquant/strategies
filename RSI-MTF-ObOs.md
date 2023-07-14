@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 RSI-MTF-ObOs
 
-> 策略作者
+> Author
 
 张超
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|(?[ RSI SETTING ])Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_int_1|14|Length|
@@ -31,7 +31,7 @@ RSI-MTF-ObOs
 |v_input_bool_5|true|rsiTf5_E|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -136,10 +136,10 @@ else if rsiOs
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363590
 
-> 更新时间
+> Last Modified
 
 2022-05-16 18:17:17

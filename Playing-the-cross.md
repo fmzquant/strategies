@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Playing-the-cross
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 For this script i used Kijun-sen from Ichimoku Cloud and Moving Average.
 
@@ -27,18 +27,18 @@ This will lead to more scripts from my side, since i really like to code and tra
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/10f6d717693fae6f57a.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|26|Kijun-Sen length|
 |v_input_int_2|55|EMA length|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -77,10 +77,10 @@ else if Up
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362427
 
-> 更新时间
+> Last Modified
 
 2022-05-11 15:07:20

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 okex币币最小交易量
 
-> 策略作者
+> Author
 
 leviyuan
 
@@ -11,7 +11,7 @@ leviyuan
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 数据来源 https://github.com/okcoin-okex/API-docs-OKEx.com/blob/master/%E5%B8%81%E5%B8%81%E6%9C%80%E5%B0%8F%E4%BA%A4%E6%98%93%E9%87%8F(min_trade_size%20for%20spot).mda_btc
@@ -526,10 +526,10 @@ $.GetMinTradeSize = function(exchIndex) {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/88754
 
-> 更新时间
+> Last Modified
 
 2018-04-25 13:45:38

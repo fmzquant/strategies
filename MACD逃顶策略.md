@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MACD逃顶策略
 
-> 策略作者
+> Author
 
 program
 
-> 策略描述
+> Strategy Description
 
 **介绍:** MACD量价背离时卖出持有币种
 **原理实现:** 以当前macd值为开始向前遍历找出大于当前macd值的索引对应k线收盘价，锁定对应k线价格到当前收线k线范围内的最大值，如果当前价格大于区域内最高价则触发卖出。
@@ -18,21 +18,21 @@ program
 
 **说明:** 策略只支持现货，可以多币种同时运行,源码仅供参考，实盘操作请谨慎运行。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |num|0.1|卖出数量|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
-start: 2021-04-01 00:00:00
-end: 2022-04-01 00:00:00
+start: 2023-01-01 00:00:00
+end: 2023-05-12 00:00:00
 period: 1d
 basePeriod: 1h
 exchanges: [{"eid":"Bitfinex","currency":"BTC_USD","stocks":10}]
@@ -52,21 +52,26 @@ class ExitTop(object):
         self.Sell = False
     
     # 获取k线及MACD数据
-    def GetRecord(self):
+    def GetRecord(self) -> bool:
         self.totestlist = []
         self.klist = []
         self.toplus = []
         self.tocpn = []
         records = exchanges[self.index].GetRecords()
         macd = TA.MACD(records, 12, 26, 9)
+        # 判断DIF是否大于DEA
+        if not macd[0][-2] > macd[1][-2] and macd[0][-3] < macd[1][-3] or not macd[0][-2] > macd[1][-2] and macd[0][-4] < macd[1][-4]:
+            return False
         self.totestlist = macd[0][len(macd[0])-80:]
         # 封装k线数据
         for get in range(len(records)):
             self.klist.append(records[get]["Close"])
         self.klist = self.klist[len(self.klist)-80:]
+        return True
     
     def mepath(self):
-        self.GetRecord()
+        if not self.GetRecord():
+            return False
         # 向前遍历发现最大值
         maxsign = -1000000000000
         for i in range(len(self.totestlist)-1,-1,-1):
@@ -116,10 +121,10 @@ def main():
             Sleep(1000*60)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/356399
 
-> 更新时间
+> Last Modified
 
-2022-12-17 15:32:43
+2023-05-13 21:21:01

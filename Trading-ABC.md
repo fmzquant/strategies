@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Trading-ABC
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello Traders,
 
@@ -36,11 +36,11 @@ You can change/set;
 
  ![IMG](https://www.fmz.com/upload/asset/9a650e6cf56612570d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|8|(?Setup)ZigZag Period|
 |v_input_2|0.618|Fibonacci Max|
@@ -63,7 +63,7 @@ You can change/set;
 |v_input_19|40|EMA 2 Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -300,10 +300,10 @@ else if short
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365127
 
-> 更新时间
+> Last Modified
 
 2022-05-24 10:13:47

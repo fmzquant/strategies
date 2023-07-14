@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Easy-stock
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Timeframe: W|5|15|30|60|120|240|360|720|D|1|
 |v_input_2|24|Period|
@@ -21,7 +21,7 @@ Zer3192
 |v_input_4|100|len|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -75,10 +75,10 @@ else if sell
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/368777
 
-> 更新时间
+> Last Modified
 
 2022-06-12 21:13:20

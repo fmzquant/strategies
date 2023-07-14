@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Swing-High-Low-Indicator-w-MACD-and-EMA-Confirmations
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Swing High/Low Indicator w/ MACD and EMA Confirmations by KaizenTraderB
 
@@ -27,11 +27,11 @@ Then look for pullback between price level of break and areas of liquidity (wick
 
  ![IMG](https://www.fmz.com/upload/asset/218f429f1e8d47fc2fc.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|5|Bars back to check for a swing|
 |v_input_2|true|Show Signal Markers|
@@ -42,7 +42,7 @@ Then look for pullback between price level of break and areas of liquidity (wick
 |v_input_7|true|Show Swing Break Entry Levels|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -173,10 +173,10 @@ else if downtrend
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362443
 
-> 更新时间
+> Last Modified
 
 2022-05-11 16:33:11

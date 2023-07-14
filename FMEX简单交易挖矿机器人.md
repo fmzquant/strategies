@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 FMEX简单交易挖矿机器人
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 具体参考文章： https://www.fmz.com/digest-topic/5834
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |MaxAmount|1000|最大下单量|
 |ProfitTime|60|打印收益时间间隔|
@@ -26,7 +26,7 @@ FMEX简单交易挖矿机器人
 |Url|https://api.testnet.fmex.com|API基地址|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 exchange.SetBase(Url)
@@ -263,10 +263,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/171560
 
-> 更新时间
+> Last Modified
 
 2020-09-25 15:34:15

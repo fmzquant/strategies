@@ -1,27 +1,27 @@
 
-> 策略名称
+> Name
 
 SeamlessConnWS
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 https://www.fmz.com/bbs-topic/4328
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |IsUsedWebSocket|false|是否启用WebSocket|
 |Hook_GetTicker|false|Hook行情接口GetTicker|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function WSConnecter_Huobi (method, symbol) {
@@ -251,10 +251,10 @@ function main () {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/167755
 
-> 更新时间
+> Last Modified
 
 2019-09-26 17:00:42

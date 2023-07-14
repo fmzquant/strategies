@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 js-R-Breaker
 
-> 策略作者
+> Author
 
 太极
 
-> 策略描述
+> Strategy Description
 
 R-Breaker
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 NPeriod=2 //周期
@@ -167,10 +167,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/36195
 
-> 更新时间
+> Last Modified
 
 2017-02-20 15:33:43

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 bollmaboll
 
-> 策略作者
+> Author
 
 3piggy
 
-> 策略描述
+> Strategy Description
 
 布林带突破与回撤结合策略
 开仓信号：布林带上轨均线金叉，布林带宽放大，中轨向上，开多。反之开空
@@ -16,11 +16,11 @@ bollmaboll
 
 信号还在过滤中
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ma|13|ma周期|
 |bo|25|bo周期|
@@ -28,7 +28,7 @@ bollmaboll
 |period|true|period|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import numpy as np
@@ -96,10 +96,10 @@ def main():
 		Sleep(30000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/146391
 
-> 更新时间
+> Last Modified
 
 2020-04-23 16:46:09

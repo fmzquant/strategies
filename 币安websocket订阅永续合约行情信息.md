@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 币安websocket订阅永续合约行情信息
 
-> 策略作者
+> Author
 
 GCC
 
@@ -11,7 +11,7 @@ GCC
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import json
@@ -36,10 +36,10 @@ def main():
     client.close()
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/327491
 
-> 更新时间
+> Last Modified
 
 2021-11-24 14:29:50

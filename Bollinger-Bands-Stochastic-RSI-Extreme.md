@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bollinger-Bands-Stochastic-RSI-Extreme
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is the finalized code released to the public that I created in a video linked here.
 
@@ -29,11 +29,11 @@ The RSI Stochastic is above the set threshold (90 by default)
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/1352b4112281b0a43e2.png)
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|false|Offset|
@@ -47,7 +47,7 @@ The RSI Stochastic is above the set threshold (90 by default)
 |v_input_10|10|Upper Limit|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -119,10 +119,10 @@ else if Bull
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366946
 
-> 更新时间
+> Last Modified
 
 2022-05-31 19:16:17

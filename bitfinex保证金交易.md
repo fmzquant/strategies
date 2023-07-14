@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 bitfinex保证金交易
 
-> 策略作者
+> Author
 
 7meter
 
@@ -11,7 +11,7 @@ bitfinex保证金交易
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var bitfinexIndex = 0;
@@ -65,10 +65,10 @@ $.marginBalance = function(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/57333
 
-> 更新时间
+> Last Modified
 
 2017-12-02 22:04:28

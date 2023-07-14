@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 切换OKEX_V5模拟盘交易终端插件
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 交易终端OKEX_V5模拟盘切换插件
 
@@ -43,7 +43,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {    
@@ -52,10 +52,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/288769
 
-> 更新时间
+> Last Modified
 
 2021-06-08 15:08:47

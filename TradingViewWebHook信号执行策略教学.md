@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TradingViewWebHook信号执行策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/bbs-topic/5533
 B站视频链接：https://www.bilibili.com/video/BV1Wk4y1k7zz/
@@ -15,11 +15,11 @@ B站视频链接：https://www.bilibili.com/video/BV1Wk4y1k7zz/
 - 2020.7.29 更新
   增加SPK , BPK 两条指令，分别对应：卖出平多仓之后卖出开空仓，买入平空仓之后买入开多仓。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |IsMarketOrder|false|是否使用市价单|
 |QuotePrecision|2|下单价格精度|
@@ -29,13 +29,13 @@ B站视频链接：https://www.bilibili.com/video/BV1Wk4y1k7zz/
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |buy|0.01|测试买入|
 |sell|0.01|测试卖出|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -178,10 +178,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/203063
 
-> 更新时间
+> Last Modified
 
 2020-07-29 17:10:43

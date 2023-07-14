@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Final-Formula-by-TraderShaman
 
-> 策略作者
+> Author
 
 TraderShaman
 
-> 策略描述
+> Strategy Description
 
 TWITTER: https://twitter.com/TraderShaman
 
@@ -45,11 +45,11 @@ TELEGRAM: https://t.me/tradershaman
 
 TWITTER: https://twitter.com/TraderShaman
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |targetProfit|5|目标利润|
 |amount|0.05|下单量|
@@ -62,7 +62,7 @@ TWITTER: https://twitter.com/TraderShaman
 |showLine|false|显示曲线图表|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // OKEX V5 获取总权益
@@ -329,10 +329,10 @@ function onexit() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/371272
 
-> 更新时间
+> Last Modified
 
 2022-11-20 02:07:07

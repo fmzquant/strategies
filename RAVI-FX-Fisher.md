@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 RAVI-FX-Fisher
 
-> 策略作者
+> Author
 
 张超
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_source_1_close|0|(?Basic Settings)Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_int_1|4|Fast MA Length|
@@ -22,7 +22,7 @@ RAVI-FX-Fisher
 |v_input_bool_1|false|(?UI Options)Color bars?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -66,10 +66,10 @@ else
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/369392
 
-> 更新时间
+> Last Modified
 
 2022-06-16 15:15:28

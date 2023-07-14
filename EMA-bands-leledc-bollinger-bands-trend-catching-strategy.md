@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 EMA-bands-leledc-bollinger-bands-trend-catching-strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The basics:
 In its simplest form, this strategy is a positional trend following strategy which enters long when price breaks out above "middle" EMA bands and closes or flips short when price breaks down below "middle" EMA bands. The top and bottom of the middle EMA bands are calculated from the EMA of candle highs and lows, respectively.
@@ -58,11 +58,11 @@ This script is intended for experimenting and backtesting different strategies a
 
  ![IMG](https://www.fmz.com/upload/asset/12ed8fdcb889021572e.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|34|EMA Length|
 |v_input_2_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -111,7 +111,7 @@ This script is intended for experimenting and backtesting different strategies a
 |v_input_9|4|Close|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -818,10 +818,10 @@ else
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362022
 
-> 更新时间
+> Last Modified
 
 2022-05-09 16:48:15

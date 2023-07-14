@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 Trade-Hour-V3
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_string_1|0|timezone: Europe/London|America/Los_Angeles|America/Chicago|America/Phoenix|America/Toronto|America/Vancouver|America/Argentina|America/El_Salvador|America/Sao_Paulo|America/Bogota|Europe/Moscow|Europe/Athens|Europe/Berlin|America/New_York|Europe/Madrid|Europe/Paris|Europe/Warsaw|Australia/Sydney|Australia/Brisbane|Australia/Adelaide|Australia/ACT|Asia/Almaty|Asia/Ashkhabad|Asia/Tokyo|Asia/Taipei|Asia/Singapore|Asia/Shanghai|Asia/Seoul|Asia/Tehran|Asia/Dubai|Asia/Kolkata|Asia/Hong_Kong|Asia/Bangkok|Pacific/Auckland|Pacific/Chatham|Pacific/Fakaofo|Pacific/Honolulu|
 |v_input_source_1_close|0|source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_int_1|true|ROC Timeperiod|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -65,10 +65,10 @@ strategy.order("buy", strategy.long, when =isLongBestHour)
 strategy.order("sell", strategy.short, when = isShortBestHour)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380530
 
-> 更新时间
+> Last Modified
 
 2022-08-29 20:12:40

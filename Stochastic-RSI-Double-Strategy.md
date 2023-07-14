@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Stochastic-RSI-Double-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy combines the classic RSI strategy to sell when the RSI increases over 70 (or to buy when it falls below 30), with the classic Stochastic Slow strategy to sell when the Stochastic oscillator exceeds the value of 80 (and to buy when this value is below 20).
 
@@ -21,11 +21,11 @@ All trading involves high risk; past performance is not necessarily indicative o
 
  ![IMG](https://www.fmz.com/upload/asset/7d33b6438e380b1a22.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|14|lookback length of Stochastic|
 |v_input_2|80|Stochastic overbought condition|
@@ -37,7 +37,7 @@ All trading involves high risk; past performance is not necessarily indicative o
 |v_input_8|30|RSI oversold condition|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -106,10 +106,10 @@ if (crossunder(k,d) and k > StochOverBought)
 //plot(strategy.equity, title="equity", color=red, linewidth=2, style=areabr)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365671
 
-> 更新时间
+> Last Modified
 
 2022-05-25 16:12:14

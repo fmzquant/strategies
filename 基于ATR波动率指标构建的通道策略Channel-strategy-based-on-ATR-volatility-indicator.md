@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 基于ATR波动率指标构建的通道策略Channel-strategy-based-on-ATR-volatility-indicator
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 [trans]
 思路：通道自适应策略，固定止损+浮动止盈
@@ -36,7 +36,7 @@ Trading Contract: Commodity Futures /Digital Currency
 
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -67,10 +67,10 @@ C<=BKPRICE*(1-SLOSS*0.01),SP;
 AUTOFILTER;
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/127691
 
-> 更新时间
+> Last Modified
 
 2018-12-21 16:13:58

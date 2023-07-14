@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 期货一键对冲插件Hedge-on-two-contracts
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 可自动立即对冲两个合约，注意加适当的滑价，可能会不成交。仓位较多可分多次点击.
 
 插件可以在交易终端一键启动，不收取费用，方便手动交易。详细介绍：https://www.fmz.com/digest-topic/5051
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Contract_A|this_week|交易合约A|Contract A|
 |Contract_B|quarter|交易合约B|Contract B|
@@ -26,7 +26,7 @@
 |Reverse|false|反向交易|Reverse Direction|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -54,10 +54,10 @@ function main(){
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/191348
 
-> 更新时间
+> Last Modified
 
 2020-03-24 10:52:08

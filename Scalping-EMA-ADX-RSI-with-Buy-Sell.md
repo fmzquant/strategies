@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Scalping-EMA-ADX-RSI-with-Buy-Sell
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a study indicator that shows the entries in the strategy seen in one of the youtube channel so it does not belong to me. I can't tell who it is because it's against the House Rules to advertise but you can find out if you look for it on youtube. Default values of oscilators and ema adjusted as suggested. He says he got the best results in 5 min timeframe but i tried to make things as modifiable as possible so you can mess around with the settings and create your own strategy for different timeframes if you'd like. Suggested to use with normal candlestick charts. The blue line below indicates the ADX is above the selected threshold set in the settings named "Trend Ready Limit". You can set alerts for Buy, Sell or Buy/Sell signal together.
 
@@ -38,11 +38,11 @@ Changed: Signals will check up to 2 candles before if the RSI is below or above 
 
  ![IMG](https://www.fmz.com/upload/asset/5627c204e26ab04507.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|Draw Trend Ready On Chart|
 |v_input_2|true|Enable MA Rule|
@@ -59,7 +59,7 @@ Changed: Signals will check up to 2 candles before if the RSI is below or above 
 |v_input_int_8|30|Trend Ready Limit|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -172,10 +172,10 @@ else if alertShort
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365898
 
-> 更新时间
+> Last Modified
 
 2022-05-26 17:11:01

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RSI-Divergence-Indicator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 
 Thanks to mohanee for the base code. we modified this to not give entry alerts but instead alert on the just the divs themselves.
@@ -18,11 +18,11 @@ Works really well with an AO div detector.
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/b669f9b16c24fa7825.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|14|RSI Period|
 |v_input_2_close|0|RSI Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -36,7 +36,7 @@ Works really well with an AO div detector.
 |v_input_10|false|Plot Hidden Bearish|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -228,10 +228,10 @@ else if bullCond
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366941
 
-> 更新时间
+> Last Modified
 
 2022-05-31 18:54:21

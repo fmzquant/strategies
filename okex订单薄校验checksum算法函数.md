@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 okex订单薄校验checksum算法函数
 
-> 策略作者
+> Author
 
 亮锅
 
-> 策略描述
+> Strategy Description
 
 模板说明：用于Okex对于自维护订单薄的合法完整性校验checksum算法实现
 
@@ -22,7 +22,7 @@ okex订单薄校验checksum算法函数
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -133,10 +133,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/280884
 
-> 更新时间
+> Last Modified
 
 2021-05-15 00:24:25

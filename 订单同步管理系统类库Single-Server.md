@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 订单同步管理系统类库Single-Server
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：
 https://www.fmz.com/digest-topic/8932
 https://www.fmz.com/digest-topic/8946
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |config1||跟单配置1|
 |config2||跟单配置2|
@@ -27,7 +27,7 @@ https://www.fmz.com/digest-topic/8946
 |amountPrecision|3|跟单量精度|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 全局变量
@@ -243,10 +243,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/345171
 
-> 更新时间
+> Last Modified
 
 2022-02-16 14:47:15

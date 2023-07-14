@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 KRT凯尔特纳通道
 
-> 策略作者
+> Author
 
 cyberking
 
-> 策略描述
+> Strategy Description
 
 ZF:=H-C; //振幅
 DX:=H+L+C)/3; //典型价格
@@ -16,7 +16,7 @@ KRTXR^^EMA(DX,10)-EMA(ZF,10); //凯尔特纳下轨
 
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -36,10 +36,10 @@ C<KRTXR,SPK;
 AUTOFILTER;
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/188499
 
-> 更新时间
+> Last Modified
 
 2020-03-05 11:41:52

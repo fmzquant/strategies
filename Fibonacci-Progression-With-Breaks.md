@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Fibonacci-Progression-With-Breaks
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator highlights points where price significantly deviates from a central level. This deviation distance is determined by a user-set value or using a multiple of a period 200 Atr and is multiplied by successive values of the Fibonacci sequence.
 
@@ -33,18 +33,18 @@ Upper and lower extremities made from the central level and threshold distance a
 
  ![IMG](https://www.fmz.com/upload/asset/c3049b5140ba230397.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_string_1|0|method: Atr|Manual|
 |v_input_1|true|size|
 |v_input_2|3|Sequence Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -108,10 +108,10 @@ else if sell
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363749
 
-> 更新时间
+> Last Modified
 
 2022-05-17 10:41:56

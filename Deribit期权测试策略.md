@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Deribit期权测试策略
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## Deribit期权测试策略
 
@@ -18,7 +18,7 @@ Deribit期权测试策略
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function CancelAll() {
@@ -110,10 +110,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/179475
 
-> 更新时间
+> Last Modified
 
 2019-12-25 15:17:30

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 均线和高低点相对强弱策略Relative-Strength-Strategy-Based-on-Price
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 - 策略名称：基于价格相对强的弱策略
@@ -43,17 +43,17 @@
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |N|100|均线指标参数|MA index parameter|
 |M|2|止损差价系数|stop loss difference coefficient|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -87,10 +87,10 @@ S_MA AND BKHIGH>BKPRICE+STOPLOSS,SP(BKVOL);
 B_MA AND SKLOW<SKPRICE-STOPLOSS,BP(SKVOL);
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/129078
 
-> 更新时间
+> Last Modified
 
 2018-12-18 10:25:23

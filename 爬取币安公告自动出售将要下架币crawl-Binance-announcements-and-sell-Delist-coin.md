@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 爬取币安公告自动出售将要下架币crawl-Binance-announcements-and-sell-Delist-coin
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 爬取币安公告页面，观察近两次的下架信息，具体格式为“Binance将下架CLOAK、MOD、SALT、SUB、WINGS”、“Binance将下架BCN，CHAT，ICN，TRIG”。
 
@@ -16,7 +16,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var exchangeInfo = JSON.parse(HttpQuery('https://api.binance.com/api/v1/exchangeInfo'))
@@ -95,10 +95,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/137450
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:16:39

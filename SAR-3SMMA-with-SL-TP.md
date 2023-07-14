@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SAR-3SMMA-with-SL-TP
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script is a combination of SAR strategy and 3 Smoothed Moving Averages.
 
@@ -22,11 +22,11 @@ If you have found a profitable setup for it, please share in the comments or pri
 
  ![IMG](https://www.fmz.com/upload/asset/17ecae098ab4b99118c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_float_1|0.02|(?na)start|
 |v_input_float_2|0.02|increment|
@@ -39,7 +39,7 @@ If you have found a profitable setup for it, please share in the comments or pri
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -185,10 +185,10 @@ plotchar(series=strategy.position_size < 0, title="inShort", char='')
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362845
 
-> 更新时间
+> Last Modified
 
 2022-05-13 14:29:21

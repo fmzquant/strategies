@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 My-1-价值平均定投策略
 
-> 策略作者
+> Author
 
 Lizza
 
-> 策略描述
+> Strategy Description
 
 实盘：https://www.fmz.com/m/robot/26018
 这个策略适合长期看好比特币的脑残粉，使用价值平均策略来进行定投，可以有效的抵抗市场波动。（关于价值平均定投请度娘。）
@@ -27,11 +27,11 @@ Lizza
 
 说明：程序会每次检查账户内的资金和比特币与启动时的差额，以此计算每次需要购买的数量，因此不要用其他机器人公用一个帐户，也不要手工进行买入卖出的操作。如果在交易所有充值和体现，应该在程序互动部分填入，否则程序计算会错误。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ErrorInterval|2000|出错重试(毫秒)|
 |InvestInternal|15|投资间隔（按照分钟计算）|
@@ -41,7 +41,7 @@ Lizza
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |Pause|__button__|暂停交易|
 |Continue|__button__|继续交易|
@@ -49,7 +49,7 @@ Lizza
 |StockChange|false|纪录数字货币充值或提现|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var initAccount;
@@ -283,10 +283,10 @@ function onexit(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/8602
 
-> 更新时间
+> Last Modified
 
 2016-06-14 10:42:59

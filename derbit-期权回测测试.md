@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 derbit-期权回测测试
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 - 模拟derbit的期权买卖逻辑
 - 支持买入卖入期权
@@ -15,7 +15,7 @@ derbit-期权回测测试
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -69,10 +69,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/222436
 
-> 更新时间
+> Last Modified
 
 2020-08-07 15:31:28

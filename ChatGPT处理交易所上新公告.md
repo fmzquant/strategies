@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 ChatGPT处理交易所上新公告
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 解决交易所上架时间不统一问题的一种有效方法是利用 ChatGPT 进行处理，避免使用正则表达式进行繁琐的匹配。将公告直接交给 ChatGPT，让其识别和处理各种交易所的时间格式，成为了一种便捷且高效的应用场景。
 
@@ -54,16 +54,16 @@ Log(result);
 
 ```
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |OPENAI_API_KEY|xxxx|API KEY|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -117,10 +117,10 @@ Log(openaiCompletions(announcement))
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/407636
 
-> 更新时间
+> Last Modified
 
 2023-04-03 14:03:09

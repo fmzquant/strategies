@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 FTSMA-Trend-is-your-frend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This my new solid strategy: if you belive that "TREND IS YOUR FRIEND" this is for you!
 
@@ -42,11 +42,11 @@ I WILL PROVIDE A DETAILED QUICK INSTALLATION GUIDE WITH THE STUDY!
 
  ![IMG](https://www.fmz.com/upload/asset/1b7ceae2fe73402c7c1.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|200|Slow MA period|
@@ -67,7 +67,7 @@ I WILL PROVIDE A DETAILED QUICK INSTALLATION GUIDE WITH THE STUDY!
 |v_input_17|false|Trailing Stop Loss Offset Points|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -238,10 +238,10 @@ strategy.exit("Exit Buy", from_entry = "Long Entry", profit = useTakeProfit, los
 strategy.exit("Exit Sell", from_entry = "Short Entry", profit = useTakeProfit, loss = useStopLoss, trail_points = useTrailStop, trail_offset = useTrailOffset)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365882
 
-> 更新时间
+> Last Modified
 
 2022-05-26 15:49:22

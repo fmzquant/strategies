@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 股票DualThrust策略
 
-> 策略作者
+> Author
 
 雨幕
 
-> 策略描述
+> Strategy Description
 
 ### 股票DualThrust策略
 
@@ -42,11 +42,11 @@ https://www.fmz.cn![IMG](https://www.fmz.cn/upload/asset/174ef4a218e34eaf999e.pn
   
   
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |IsReset|false|是否重置日志|
 |StrIds|["600519.SH", "600121.SH"]|股票代码列表|
@@ -56,7 +56,7 @@ https://www.fmz.cn![IMG](https://www.fmz.cn/upload/asset/174ef4a218e34eaf999e.pn
 |AmountOP|100|交易量|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var Ids = []            //  ["600519.SH", "600121.SH"]    
@@ -464,10 +464,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/238425
 
-> 更新时间
+> Last Modified
 
 2021-10-26 10:33:04

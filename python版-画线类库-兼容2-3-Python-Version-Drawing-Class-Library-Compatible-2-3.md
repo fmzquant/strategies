@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 python版-画线类库-兼容2-3-Python-Version-Drawing-Class-Library-Compatible-2-3
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 简化了策略图表画线的逻辑, 可以直接调用封装好的函数
 
@@ -23,7 +23,7 @@ python版-画线类库-兼容2-3-Python-Version-Drawing-Class-Library-Compatible
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # Python 2/3 兼容版本
@@ -250,10 +250,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/39066
 
-> 更新时间
+> Last Modified
 
 2022-03-09 14:04:58

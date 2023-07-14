@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 ESSMA
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Concept:
 
@@ -36,11 +36,11 @@ Happy trading.
 
  ![IMG](https://www.fmz.com/upload/asset/1c0cc53861912eb84cc.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|(?Source)Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|50|(?Length)Length1|
@@ -53,7 +53,7 @@ Happy trading.
 |v_input_int_1|14|ATR Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -145,10 +145,10 @@ else if down
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362637
 
-> 更新时间
+> Last Modified
 
 2022-05-12 15:20:54

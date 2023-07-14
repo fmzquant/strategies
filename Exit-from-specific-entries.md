@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Exit-from-specific-entries
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=4
@@ -42,10 +42,10 @@ if (secondExit)
     strategy.close(id="EL 1")
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/395966
 
-> 更新时间
+> Last Modified
 
 2023-01-07 21:20:36

@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 Python版单平台均衡策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 引用自JavaScript版单平台均衡策略
 > 这个需要建仓，比如账户有5000块钱，跟1个币，如果币的价值大于账户的余额5000了并且差价超过阀值，比如币现在值6000块钱，就卖掉(6000-5000)/6000/2个币，说明币升值了，把钱兑换回来，如果币贬值了，比如4000块钱了，就买入(5000-4000)/4000/2个币, 币跌的时候买一些回来，如果再涨了，就再卖掉，好像天平一样，两边不同的对冲，所以我命名为均衡策略
 
 文章地址： https://www.fmz.com/bbs-topic/4986
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |threshold|0.05|阀值|
 |Interval|2000|出错重试间隔(毫秒)|
@@ -28,7 +28,7 @@ Python版单平台均衡策略教学
 |ZPrecision|8|价格精度|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -89,10 +89,10 @@ def main():
         Sleep(LoopInterval * 1000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/183374
 
-> 更新时间
+> Last Modified
 
 2020-02-05 10:19:20

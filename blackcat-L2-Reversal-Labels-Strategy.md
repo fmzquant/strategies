@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 blackcat-L2-Reversal-Labels-Strategy
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -60,10 +60,10 @@ if (shortCondition)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366430
 
-> 更新时间
+> Last Modified
 
 2022-05-29 11:35:50

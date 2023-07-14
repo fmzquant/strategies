@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Python-机器学习之-SVM-预测买卖
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 Python入门简单策略 sklearn 机器学习库的使用
 
@@ -16,16 +16,16 @@ numpy pandas TA-Lib scipy statsmodels sklearn cvxopt hmmlearn pykalman arch matp
 
 实盘需要在托管者所在机器安装策略需要的库
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SpreadVal|2|预测价差|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -126,10 +126,10 @@ def main():
                 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/21370
 
-> 更新时间
+> Last Modified
 
 2019-10-06 17:54:30

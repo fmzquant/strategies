@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bybit-算法接针-VWAP-BTC
 
-> 策略作者
+> Author
 
 扁豆子
 
-> 策略描述
+> Strategy Description
 
 在这里开始分享Bybit原始版本的接针策略~
 主要原因是什么呢///
@@ -29,11 +29,11 @@ Bybit-算法接针-VWAP-BTC
  
  (●'◡'●)
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |start_balance|false|初始金额|
 |long_qty|true|单次做多USD|
@@ -48,7 +48,7 @@ Bybit-算法接针-VWAP-BTC
 |stop_step|3600|止损后停止时间(s)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 判断uid权限 (UID list + getAccount uid 校验)
@@ -407,10 +407,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/182656
 
-> 更新时间
+> Last Modified
 
 2021-01-29 10:44:37

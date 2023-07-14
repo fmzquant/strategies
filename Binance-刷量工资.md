@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Binance-刷量工资
 
-> 策略作者
+> Author
 
 扁豆子
 
-> 策略描述
+> Strategy Description
 
 草神策略2花里胡哨版本!!
 
@@ -19,11 +19,11 @@ Discord https://discord.gg/BWEGYnnNu9
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Trade_symbols|ETH,BCH,XRP,EOS,LTC,TRX,ETC,LINK,XLM,ADA,XMR,DASH,ZEC,XTZ,BNB,ATOM,ONT,IOTA,BAT,VET,NEO,QTUM,IOST|交易的币种|
 |Log_profit_interval|60|Log总权益间隔s|
@@ -38,7 +38,7 @@ Discord https://discord.gg/BWEGYnnNu9
 |start_balance|false|start_balance|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var Version = '2.3.3';
@@ -900,10 +900,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/204804
 
-> 更新时间
+> Last Modified
 
 2021-06-24 17:10:01

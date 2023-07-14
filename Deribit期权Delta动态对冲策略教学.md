@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 Deribit期权Delta动态对冲策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## Deribit期权Delta动态对冲策略（教学）
 
 文章地址：https://www.fmz.com/bbs-topic/6726
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |isTestNet|true|是否切换为模拟盘|
 |testNetBase|https://test.deribit.com|模拟盘基地址|
@@ -27,7 +27,7 @@ Deribit期权Delta动态对冲策略教学
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |setContractType||设置期权合约|
 |buyOption||买入期权合约|
@@ -35,7 +35,7 @@ Deribit期权Delta动态对冲策略教学
 |setHedgeDeltaStep|true|设置对冲阈值|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 构造函数
@@ -394,10 +394,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/265090
 
-> 更新时间
+> Last Modified
 
 2021-03-29 10:13:06

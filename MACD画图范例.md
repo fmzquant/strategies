@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 MACD画图范例
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ MACD画图范例
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -97,10 +97,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/151972
 
-> 更新时间
+> Last Modified
 
 2020-02-27 14:09:37

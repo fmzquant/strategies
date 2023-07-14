@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 Python版冰山委托-卖出
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 教学策略，相关文章地址：https://www.fmz.com/bbs-topic/5080
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |TotalSellStocks|10|卖出总数量(币)|
 |AvgSellOnce|0.3|单次卖出数量均值(币)|
@@ -27,7 +27,7 @@ Python版冰山委托-卖出
 |LoopInterval|300|价格轮询间隔(毫秒)|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import random
@@ -97,10 +97,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/188754
 
-> 更新时间
+> Last Modified
 
 2020-03-07 16:57:48

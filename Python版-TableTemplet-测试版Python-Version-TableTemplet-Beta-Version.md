@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Python版-TableTemplet-测试版Python-Version-TableTemplet-Beta-Version
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ Python版-TableTemplet-测试版Python-Version-TableTemplet-Beta-Version
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # TableTemplet
@@ -167,10 +167,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/46031
 
-> 更新时间
+> Last Modified
 
 2022-03-09 14:03:32

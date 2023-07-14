@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 SuperTrend-V1
 
-> 策略作者
+> Author
 
 homily
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Factor|3|Factor|
 |Pd|7|Pd|
 |vol|10|vol|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -123,10 +123,10 @@ def doTicker(records):
         exchange.Sell(_C(exchange.GetTicker).Buy*0.99, vol*2);
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/200625
 
-> 更新时间
+> Last Modified
 
 2020-04-23 00:12:49

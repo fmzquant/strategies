@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 baguette-by-multigrain
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 **Rationale**
 The rationale behind this indicator is that: when the price of an asset reaches an extreme, regardless of the trend, there is a (maybe not equal but) opposite reaction.
@@ -30,11 +30,11 @@ ATR Multiplier: This multiplier controls the 'width' of our envelope or our extr
 
  ![IMG](https://www.fmz.com/upload/asset/b551d763796cea8a3c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_source_1_hlc3|0|(?JMA)JMA Source: hlc3|high|low|open|hl2|close|hlcc4|ohlc4|
 |v_input_int_1|144|JMA Length|
@@ -43,7 +43,7 @@ ATR Multiplier: This multiplier controls the 'width' of our envelope or our extr
 |v_input_float_1|3|ATR Multiplier|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -166,10 +166,10 @@ else if short
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361794
 
-> 更新时间
+> Last Modified
 
 2022-05-09 00:17:31

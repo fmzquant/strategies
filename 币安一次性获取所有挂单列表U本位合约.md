@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 币安一次性获取所有挂单列表U本位合约
 
-> 策略作者
+> Author
 
 夏天不打你
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 获取所有挂单
@@ -66,10 +66,10 @@ function getAllPendingOrders(num) {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/319429
 
-> 更新时间
+> Last Modified
 
 2021-09-27 10:27:08

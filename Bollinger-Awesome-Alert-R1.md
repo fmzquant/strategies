@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bollinger-Awesome-Alert-R1
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator is an implementation of the Bollinger Band and Awesome Oscillator Scalping system.
 
@@ -36,11 +36,11 @@ HINTS: Best trades tend to occur when price reversing bounce off outer band and 
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/fe8423451e99aad452.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|Use EMA for Bollinger Band|
 |v_input_2|false|Filter Buy/Sell with Bollinger Bands|
@@ -55,7 +55,7 @@ HINTS: Best trades tend to occur when price reversing bounce off outer band and 
 |v_input_11|50|BB Squeeze Threshold %|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -245,10 +245,10 @@ else if break_down
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365419
 
-> 更新时间
+> Last Modified
 
 2022-05-24 18:31:33

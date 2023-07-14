@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Brick-count-Renko
 
-> 策略作者
+> Author
 
 Zer3192
 
-> 策略描述
+> Strategy Description
 
 砖形指标
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -54,10 +54,10 @@ else if brick_green
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/368734
 
-> 更新时间
+> Last Modified
 
 2022-06-12 16:39:56

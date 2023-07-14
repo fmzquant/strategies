@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 画线类库Plot-library
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 简化了策略图表画线的逻辑, 可以直接调用封装好的函数
 
@@ -41,7 +41,7 @@ function main() {
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var chart = null
@@ -295,10 +295,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/27293
 
-> 更新时间
+> Last Modified
 
 2018-07-05 18:04:17

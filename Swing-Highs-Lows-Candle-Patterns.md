@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Swing-Highs-Lows-Candle-Patterns
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script labels swing highs and swing lows as well as the candle pattern that occurred at that precise point. The script can detect the following 6 candle patterns: hammer , inverse hammer , bullish engulfing , hanging man , shooting star , and bearish engulfing .
 
@@ -34,16 +34,16 @@ Higher values of length might return errors.
 
  ![IMG](https://www.fmz.com/upload/asset/be36dc9f3162c7d660.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|21|length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -112,10 +112,10 @@ else if pl
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361718
 
-> 更新时间
+> Last Modified
 
 2022-05-07 21:35:09

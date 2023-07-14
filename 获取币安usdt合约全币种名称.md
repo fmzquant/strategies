@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 获取币安usdt合约全币种名称
 
-> 策略作者
+> Author
 
-11111
+牛逼plus
 
-> 策略描述
+> Strategy Description
 
 1，放入FMZ调试工具，可以直接运行
 2，获取币安usdt合约全币种名称及个数
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function unique (str) {
@@ -43,10 +43,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/327743
 
-> 更新时间
+> Last Modified
 
 2021-11-04 03:25:30

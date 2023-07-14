@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 RSI_now_sb_ok
 
-> 策略作者
+> Author
 
 tfboys
 
-> 策略描述
+> Strategy Description
 
 RSI简单买卖测试, 默认 70-100卖出,0-30买入
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |RSIPeriod|14|RSI周期|
 |SlidePrice|0.3|下单滑动值|
@@ -26,7 +26,7 @@ RSI简单买卖测试, 默认 70-100卖出,0-30买入
 |Interval|1000|出错重试(毫秒)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function adjustFloat(v) {
@@ -193,10 +193,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/11604
 
-> 更新时间
+> Last Modified
 
 2016-03-08 16:00:06

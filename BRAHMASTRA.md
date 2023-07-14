@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 BRAHMASTRA
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 ⬜ Process
 ▶ Scan pivots which are in trend. This means, series of pivot Highs or pivot lows either in ascending order or descending order.
@@ -28,11 +28,11 @@ The older line will remain until the new one comes through of same type. Hence, 
 
  ![IMG](https://www.fmz.com/upload/asset/973700b783234a7238.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_hl2|0|Price Data (hl2): hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
 |v_input_2|true|===HMA-Kahlman Trend Module===|
@@ -45,7 +45,7 @@ The older line will remain until the new one comes through of same type. Hence, 
 |v_input_9|2|Pivots Lookback Window|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -141,10 +141,10 @@ else if crossdn
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362870
 
-> 更新时间
+> Last Modified
 
 2022-05-13 15:26:38

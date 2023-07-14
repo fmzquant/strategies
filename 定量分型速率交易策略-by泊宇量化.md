@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 定量分型速率交易策略-by泊宇量化
 
-> 策略作者
+> Author
 
 homily
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |len|35|len|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -47,10 +47,10 @@ AUTOFILTER;
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/183416
 
-> 更新时间
+> Last Modified
 
 2021-02-08 13:47:31

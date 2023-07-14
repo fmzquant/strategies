@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 冰山委托买入-Jason
 
-> 策略作者
+> Author
 
 Jason_MJ
 
-> 策略描述
+> Strategy Description
 
 **1. 前提：**
     初次学习写策略--冰山委托：
@@ -67,11 +67,11 @@ Jason_MJ
 
 **策略不完善，希望路过的大佬们指点一二**
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |buyAmount|10000|买入金额|
 |buyNum|100|单笔购买数量均值|
@@ -82,7 +82,7 @@ Jason_MJ
 |buyOncePoint|10|单次购买数量均值浮点数|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import random
@@ -166,10 +166,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/271475
 
-> 更新时间
+> Last Modified
 
 2021-04-16 10:26:23

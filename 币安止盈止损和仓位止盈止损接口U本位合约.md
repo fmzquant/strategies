@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 币安止盈止损和仓位止盈止损接口U本位合约
 
-> 策略作者
+> Author
 
 夏天不打你
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 挂多单止损
@@ -73,10 +73,10 @@ function shortTakeProfit(num, symbol, price, size) {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/319427
 
-> 更新时间
+> Last Modified
 
 2022-06-13 11:56:29

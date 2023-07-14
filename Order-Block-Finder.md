@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Order-Block-Finder
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 After finding a huge amount of use from TV user's wugamlo script Order Block Finder (Experimental), I decided to make some much needed upgrades! Added support for plotting the last X number of Order Blocks and am currently working on a multi-timeframe version.
 
@@ -20,11 +20,11 @@ Please visit the original script page (link at top) to review how the indicator 
 
  ![IMG](https://www.fmz.com/upload/asset/bb14ca43e91e986c7f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Hover over ( ! ) for documentation|
 |v_input_2|0|Color Scheme: LIGHT|DARK|
@@ -34,7 +34,7 @@ Please visit the original script page (link at top) to review how the indicator 
 |v_input_6|2|Number of Bearish Channels to show|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -124,10 +124,10 @@ else if OB_bear
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365075
 
-> 更新时间
+> Last Modified
 
 2022-05-23 13:54:57

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Vitalik-Scalpe
 
-> 策略作者
+> Author
 
 a624587332
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_open|0|  Source: open|high|low|close|hl2|hlc3|hlcc4|ohlc4|
 |v_input_32|false|  Filter|
@@ -64,7 +64,7 @@ a624587332
 |v_input_47|31|stop day|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -562,10 +562,10 @@ strategy.close_all(when = ATR_L_STOP or ATR_S_STOP)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/376261
 
-> 更新时间
+> Last Modified
 
 2022-08-02 23:55:53

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Buy-Sell-Strat
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy will produce a buy or sell signal when the following criteria are met:
 
@@ -24,7 +24,7 @@ Feel free to use and modify as you see fit. Happy trading!
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -88,10 +88,10 @@ plot(b, title = "Slow EMA", color = color.blue)
 //plotshape(reversalPatternDown, style = shape.arrowup, location = location.belowbar, color = color.red) //*TEST* reversal check
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361966
 
-> 更新时间
+> Last Modified
 
 2022-05-09 11:24:33

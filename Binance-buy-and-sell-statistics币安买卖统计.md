@@ -1,27 +1,27 @@
 
-> 策略名称
+> Name
 
 Binance-buy-and-sell-statistics币安买卖统计
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 记录主动成交数据，反映了买卖盘的活跃程度
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Interval|600|Log interval（second)|
 |Pair|btcusdt|trading pair|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var tradeHistory = {buyData:{amount:0, money:0}, sellData:{amount:0, money:0}}
@@ -61,10 +61,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/121917
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:35:27

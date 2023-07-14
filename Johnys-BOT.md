@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Johnys-BOT
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello
 
@@ -55,11 +55,11 @@ Good luck and enjoy ;)
 
  ![IMG](https://www.fmz.com/upload/asset/159efe4661da93e1142.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_high|0|src: high|close|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_26|15|leftBars|
@@ -100,7 +100,7 @@ Good luck and enjoy ;)
 |v_input_37|0.072| SL/100|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -590,10 +590,10 @@ if short_
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363970
 
-> 更新时间
+> Last Modified
 
 2022-05-18 10:24:18

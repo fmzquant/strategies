@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 OBV-MACD-Indicator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 So this script is my improvement to macd that we all know . it faster and more accurate with less lag
 first is based on OBV as it primary source
@@ -21,11 +21,11 @@ this is volume indicator based so in some graph where volume does not exist this
 
  ![IMG](https://www.fmz.com/upload/asset/1ebc5eddbfa196529fe.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|OBV Length |
 |v_input_2|0|MA Type: DEMA|TTEMA|TEMA|TDEMA|EMA|AVG|THMA|ZLEMA|ZLDEMA|ZLTEMA|DZLEMA|TZLEMA|LLEMA|NMA|
@@ -37,7 +37,7 @@ this is volume indicator based so in some graph where volume does not exist this
 |v_input_8|50|period|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -319,10 +319,10 @@ else if pivotl
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366938
 
-> 更新时间
+> Last Modified
 
 2022-05-31 18:46:37

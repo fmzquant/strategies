@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 72s-Adaptive-Hull-Moving-Average
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 One challenging issue for beginner traders is to differentiate market conditions, whether or not the current market is giving best possibility to stack profits, as earliest, in shortest time possible, or not.
 
@@ -62,11 +62,11 @@ Clear SELL entry signal is same as above, just the opposite.
 
  ![IMG](https://www.fmz.com/upload/asset/c26d83c2b416482e2d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Choose which charger to adapt to:: Volatility|Volume|
 |v_input_2_close|0|Source:: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
@@ -82,7 +82,7 @@ Clear SELL entry signal is same as above, just the opposite.
 |v_input_12|true|Background color to differentiate movement|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -250,10 +250,10 @@ else if sell
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365902
 
-> 更新时间
+> Last Modified
 
 2022-05-26 17:17:37

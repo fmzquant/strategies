@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 现货指数平衡策略-v11曾实盘跑过一段时间现在疑似有bug因为不用了懒得改
 
-> 策略作者
+> Author
 
 GCC
 
-> 策略描述
+> Strategy Description
 
 指数平衡策略python版
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |symbols|BTC,ETH,BCH,LTC|交易对|
 |slip|0.03|下单滑点|
@@ -26,7 +26,7 @@ GCC
 |init_fund|-1|初始资金|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -247,10 +247,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/329093
 
-> 更新时间
+> Last Modified
 
 2021-12-04 20:53:35

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Python版多图表范例
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ Python版多图表范例
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -145,10 +145,10 @@ def main():
         cfgE["series"][0]["data"][0][1] = random.random() * 100
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/190826
 
-> 更新时间
+> Last Modified
 
 2020-03-16 10:12:22

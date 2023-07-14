@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 talib简单应用之查找三只乌鸦
 
-> 策略作者
+> Author
 
 Zero
 
@@ -11,7 +11,7 @@ Zero
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -37,10 +37,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/62163
 
-> 更新时间
+> Last Modified
 
 2018-04-07 11:47:38

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Okex张币转换欧意张换算为币数或者币数换算为张
 
-> 策略作者
+> Author
 
 Exodus[策略代写]
 
-> 策略描述
+> Strategy Description
 
 如题：
 ![IMG](https://www.fmz.com/upload/asset/1f4d7d7de4354276de970.png)  
@@ -20,7 +20,7 @@ Exodus[策略代写]
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //测试模块
@@ -75,10 +75,10 @@ function ZhangToAmount(currency,px,sz){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/387901
 
-> 更新时间
+> Last Modified
 
 2022-10-29 18:47:50

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 把USDT从合约账户划转到现货-资金账户OKEX币安同时支持
 
-> 策略作者
+> Author
 
 夏天不打你
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {
@@ -59,10 +59,10 @@ function isOKexExchange() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/338145
 
-> 更新时间
+> Last Modified
 
 2021-12-30 16:11:11

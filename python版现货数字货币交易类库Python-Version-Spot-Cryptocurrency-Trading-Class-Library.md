@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 python版现货数字货币交易类库Python-Version-Spot-Cryptocurrency-Trading-Class-Library
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 现货数字货币交易类库（python版）
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |OpMode|0|下单方式: 吃单|挂单|
 |MaxSpace|0.5|挂单失效距离|
@@ -26,7 +26,7 @@ python版现货数字货币交易类库Python-Version-Spot-Cryptocurrency-Tradin
 |_GetMinStocks|0.01|最小交易量|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import types # 导入类型模块
@@ -254,10 +254,10 @@ def main():
     Log("avgprice:",avgprice,"  dealamount:",dealamount)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/21104
 
-> 更新时间
+> Last Modified
 
 2022-03-09 14:05:30

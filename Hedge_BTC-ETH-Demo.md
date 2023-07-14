@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Hedge_BTC-ETH-Demo
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 BTC 和 ETH 的 跨品种对冲 思路测试 DEMO 
 根据价格比  画出 图表，分析 价格比 变化，寻找套利空间。
@@ -15,16 +15,16 @@ BTC 和 ETH 的 跨品种对冲 思路测试 DEMO
 
 by  littleDream
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Mode|0|模式: BOLL|SMA|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*exchanges
@@ -168,10 +168,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/48536
 
-> 更新时间
+> Last Modified
 
 2017-07-25 13:19:52

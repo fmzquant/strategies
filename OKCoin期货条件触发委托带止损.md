@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 OKCoin期货条件触发委托带止损
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 OKCoin期货条件触发下单, 成交后可条件触发自动止损
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |CType|0|货币类型: 人民币|美元|
 |ContractType|0|合约类型: 当周|下周|当月|季度|
@@ -30,7 +30,7 @@ OKCoin期货条件触发下单, 成交后可条件触发自动止损
 |LoopInterval|300|轮询间隔(毫秒)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var _ContractType = ["this_week", "next_week", "month", "quarter"][ContractType];
@@ -191,10 +191,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/2169
 
-> 更新时间
+> Last Modified
 
 2014-12-10 15:33:25

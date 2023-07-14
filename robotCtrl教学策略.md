@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 robotCtrl教学策略
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/digest-topic/5011
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |strRobotParams|["175708,14:55:33-15:10:33"]|机器人定时参数|
 |isPushMsg|false|是否推送到微信|
@@ -23,7 +23,7 @@ robotCtrl教学策略
 |secretKey|$$$__enc__$$$|FMZ平台扩展API的SECRET KEY|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # -*- coding: utf-8 -*-
@@ -137,10 +137,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/184600
 
-> 更新时间
+> Last Modified
 
 2020-05-08 10:47:52

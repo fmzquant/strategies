@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 TUE-ADX-MACD-Confluence-Strategy
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|(?Time Preferences)Restrict trading times?|
 |v_input_string_1|0930-1600:23456|Trading Time String|
@@ -30,7 +30,7 @@ Zer3192
 |v_input_10|red|Down Candle Color|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -148,10 +148,10 @@ plotshape(trade[1] != -1 and trade == -1 and showsignals, style=shape.labeldown,
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380245
 
-> 更新时间
+> Last Modified
 
 2022-08-27 16:37:33

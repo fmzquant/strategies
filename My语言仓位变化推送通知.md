@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 My语言仓位变化推送通知
 
-> 策略作者
+> Author
 
 发明者量化
 
@@ -11,7 +11,7 @@ My语言仓位变化推送通知
 
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 
@@ -32,10 +32,10 @@ if (pos != scope._tmp) {
 %%
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/305745
 
-> 更新时间
+> Last Modified
 
 2021-08-09 14:01:30

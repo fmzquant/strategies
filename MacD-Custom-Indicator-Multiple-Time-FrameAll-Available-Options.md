@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MacD-Custom-Indicator-Multiple-Time-FrameAll-Available-Options
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Regular MACD Indicator with Histogram that plots 4 Colors Based on Direction Above and Below the Zero Line
 Update allows Check Box Options, Show MacD & Signal Line, Show Change In color of MacD Line based on cross of Signal Line.
@@ -20,11 +20,11 @@ By the way I fully disclose that I completely STOLE the Dots at the MAcd Cross f
 
  ![IMG](https://www.fmz.com/upload/asset/1e9c4d77121b59a35fd.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Use Current Chart Resolution?|
 |v_input_2|60|Use Different Timeframe? Uncheck Box Above|
@@ -38,7 +38,7 @@ By the way I fully disclose that I completely STOLE the Dots at the MAcd Cross f
 |v_input_10|9|v_input_10|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -111,10 +111,10 @@ else if outMacD < outSignal and math.abs(outMacD - outSignal) >90
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361532
 
-> 更新时间
+> Last Modified
 
 2022-05-06 21:35:07

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SWING-TRADE-SIGNALS
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 BUY & SELL Signals for higher timeframes based on Ema & Sma with RSI overbought/oversold dots for possible reversal indication.
 
@@ -19,11 +19,11 @@ Best work with 1h+ timeframes.
 
  ![IMG](https://www.fmz.com/upload/asset/1190f85e1e5f9b65be2.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|5|ema_value|
 |v_input_2|50|sma_value|
@@ -31,7 +31,7 @@ Best work with 1h+ timeframes.
 |v_input_4|20|Oversold limit of RSI|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -89,10 +89,10 @@ else if sellcall
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365907
 
-> 更新时间
+> Last Modified
 
 2022-05-26 17:28:12

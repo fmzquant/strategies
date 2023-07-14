@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 海龟交易法Turtles-strategy
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 Demonstrate how to increase positions in pine language
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|RiskRatio|
 |v_input_2|20|ATRLength|
@@ -27,7 +27,7 @@ Demonstrate how to increase positions in pine language
 |v_input_8|true|LastProfitableTradeFilter|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -141,10 +141,10 @@ else if strategy.position_size < 0
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/360536
 
-> 更新时间
+> Last Modified
 
 2022-05-21 20:43:32

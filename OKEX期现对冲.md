@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 OKEX期现对冲
 
-> 策略作者
+> Author
 
 larry_super
 
-> 策略描述
+> Strategy Description
 
 期现对冲是利用期货和现货之间存在的差价进行套利。因为在交割日的时候，期货会按现货价格成交，当期货和现货一旦出现差价时，就可以通过做空期货做多现货（或做多期货卖出现货）来获得无风险的差价收益。
 
@@ -32,7 +32,7 @@ larry_super
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //【OKEX期现对冲】说明
@@ -619,10 +619,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/157269
 
-> 更新时间
+> Last Modified
 
 2019-07-16 14:06:39

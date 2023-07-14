@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Heikin-Ashi-Trend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script:
 Adds a Heikin-Ashi line to the chart (EMA-based).
@@ -21,18 +21,18 @@ Just add the indicator to the chart, create an alert and select "Heikin-Ashi Tre
 
  ![IMG](https://www.fmz.com/upload/asset/1ccdc5b470424d683c8.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|77|EMA|
 |v_input_int_2|21|EMA Smoothing|
 |v_input_1|false|(?DEVELOPER)Show debug info|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -79,10 +79,10 @@ else
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362000
 
-> 更新时间
+> Last Modified
 
 2022-05-09 14:33:57

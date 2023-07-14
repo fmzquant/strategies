@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 行情中心客户端market-center-client
 
-> 策略作者
+> Author
 
 fmzero
 
-> 策略描述
+> Strategy Description
 
 ## 行情中心客户端
 
@@ -47,16 +47,16 @@ fmzero
 * GetFutureDepth
 * ~~GetFutureTrade~~
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |udspath|/tmp/goex.market.center|行情中心路径|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // a client for market center, https://github.com/goex-top/market_center
@@ -379,10 +379,10 @@ function main() {
   
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/182185
 
-> 更新时间
+> Last Modified
 
 2020-02-09 20:15:26

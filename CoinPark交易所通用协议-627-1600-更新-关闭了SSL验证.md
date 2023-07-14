@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 CoinPark交易所通用协议-627-1600-更新-关闭了SSL验证
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 ## CoinPark通用协议Python2版本
 用途：可以使BotVs支持coinpark.cc交易所
@@ -34,7 +34,7 @@ CoinPark交易所通用协议-627-1600-更新-关闭了SSL验证
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #!/usr/bin/env python
@@ -340,10 +340,10 @@ if __name__ == "__main__":
         run()
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/101399
 
-> 更新时间
+> Last Modified
 
 2021-06-04 15:54:19

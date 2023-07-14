@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 M-Language-Turtle-Trading-strategy-implementationsV-10
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 [trans]
 > 尝个鲜
@@ -178,7 +178,7 @@ scope.TEST = function(obj) {
 
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -212,10 +212,10 @@ CROSSDOWN(L,LV(L,10))&&BKVOL>0,SP(BKVOL); // The lowest price down-cross the low
 TRADE_AGAIN(10);
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/132298
 
-> 更新时间
+> Last Modified
 
 2019-01-28 11:16:10

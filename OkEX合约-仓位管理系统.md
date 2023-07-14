@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 OkEX合约-仓位管理系统
 
-> 策略作者
+> Author
 
 FawkesPan
 
@@ -11,7 +11,7 @@ FawkesPan
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -319,10 +319,10 @@ ext.okexPositionManager = PositionManager
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/121976
 
-> 更新时间
+> Last Modified
 
 2019-05-16 22:07:51

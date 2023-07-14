@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Dual-Thrust-OKEX期货-教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 > 基本原理
 
@@ -16,11 +16,11 @@ Dual-Thrust-OKEX期货-教学
 - 这个系统是反转系统，没有单独止损。也就是说，反向信号也同时就是平仓信号。
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |NPeriod|4|计算周期|
 |Ks|0.5|上轨系数|
@@ -28,7 +28,7 @@ Dual-Thrust-OKEX期货-教学
 |AmountOP|true|开仓合约张数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var STATE_IDLE = 0
@@ -150,10 +150,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/112425
 
-> 更新时间
+> Last Modified
 
 2020-02-24 09:56:09

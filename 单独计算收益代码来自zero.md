@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 单独计算收益代码来自zero
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 收益可以和策略放在一起，但还是独立出来更好。原因：1、交易策略更改中断时，收益不会被重置。2、收益计算本身会调用API函数，经常造成策略API网络错误，影响交易运行，独立出来减少这种可能性。3、可以自定义循环间隔。
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -55,10 +55,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/1084
 
-> 更新时间
+> Last Modified
 
 2016-05-10 20:05:02

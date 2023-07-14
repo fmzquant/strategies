@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 设定比特币价格并微信推送教学-Push-the-price-information-to-telegram
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 教学策略：
 当币价高于或低于设定值后，自动推送一条消息到微信。可设定最小推送间隔。
 
 When the price of the currency is higher or lower than the set value, a message is automatically pushed to WeChat or telegram. The minimum push interval can be set.
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Currency|BTC_USDT|trading pair|
 |UpPrice|5500|when price is higher than|
@@ -26,7 +26,7 @@ When the price of the currency is higher or lower than the set value, a message 
 |Interval|10|interval|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -52,10 +52,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/125482
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:18:51

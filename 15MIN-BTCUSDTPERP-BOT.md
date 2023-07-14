@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 15MIN-BTCUSDTPERP-BOT
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is my BTCUSDTPERP 15 min bot
 Best results are on BTCUSDTPERP at binancefutures
@@ -50,11 +50,11 @@ Enjoy ;)
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/16ed324d9172131e373.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_ohlc4|0|src: ohlc4|high|low|open|hl2|hlc3|hlcc4|close|
 |v_input_2|true|AVERAGE DIRECTIONAL INDEX|
@@ -97,7 +97,7 @@ Enjoy ;)
 |v_input_39|0.8| Take profit [BT]|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -461,10 +461,10 @@ strategy.exit("tp", qty_percent = q, profit = per(tp), loss = los)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365126
 
-> 更新时间
+> Last Modified
 
 2022-06-20 10:25:03

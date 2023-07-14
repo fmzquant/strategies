@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 EHMA-Range-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This script is a modified version of @borserman's script for the Exponential Hull Moving Average
 All credit for the EHMA goes to him :)
@@ -25,18 +25,18 @@ This post and the script don’t provide any financial advice.
 
  ![IMG](https://www.fmz.com/upload/asset/dd1ae65fe62a72b29b.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Position Type: Both|Long|Short|
 |v_input_2|180|Length|
 |v_input_3|0.02|Range Width|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -124,10 +124,10 @@ if pos_type == "Short"
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362103
 
-> 更新时间
+> Last Modified
 
 2022-05-10 00:01:08

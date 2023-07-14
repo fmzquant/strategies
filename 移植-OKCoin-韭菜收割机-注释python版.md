@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 移植-OKCoin-韭菜收割机-注释python版
 
-> 策略作者
+> Author
 
 去者伯仁
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |BurstThresholdPct|5e-05|burst.threshold.pct|
 |BurstThresholdVol|10|burst.threshold.vol|
@@ -23,7 +23,7 @@
 |TickInterval|280|轮训周期(毫秒)|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -297,10 +297,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/265827
 
-> 更新时间
+> Last Modified
 
 2021-04-16 11:34:07

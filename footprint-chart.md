@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 footprint-chart
 
-> 策略作者
+> Author
 
 扫地僧
 
-> 策略描述
+> Strategy Description
 
 我们都知道，在期货市场中，价格的涨跌是多空双方博弈、能量对抗的结果，期货市场的价格运动反应了期货市场能量的变化。在最初形成的盘感与美感的表象认知里，如果你尝试用自然界的能量现象解释期货市场的价格运行，会发现道理相通。能量概况数据有叫成交量分布图，它是展示每一根K线内每个价位上的主动卖量化和主动买量。通过收集Tick数据并加以汇总和换算得来的能量概况数据。用户可以基于能量概况来开发相应的指标或策略。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |contractCode|rb888|合约代码|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -285,10 +285,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/189965
 
-> 更新时间
+> Last Modified
 
 2021-05-25 10:00:37

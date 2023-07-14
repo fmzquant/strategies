@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Chande-Kroll-Stop
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Dear TV''ers,
 
@@ -21,11 +21,11 @@ good luck trading!
 
  ![IMG](https://www.fmz.com/upload/asset/ba67a3e2b923ac9d2b.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|10|p|
 |v_input_int_2|true|x|
@@ -35,7 +35,7 @@ good luck trading!
 |v_input_int_4|20|minimum ADX threshold for signal|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=5
@@ -75,10 +75,10 @@ if ta.crossover(close, stop_short) and sig>ADX_sig
     strategy.entry("short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362031
 
-> 更新时间
+> Last Modified
 
 2022-05-09 17:44:31

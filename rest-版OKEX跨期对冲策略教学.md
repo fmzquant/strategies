@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 rest-版OKEX跨期对冲策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 极简版OKEX跨期对冲策略（教学）
    
@@ -26,11 +26,11 @@ rest-版OKEX跨期对冲策略教学
   ### 教学策略，实盘慎用。
   ### 教学策略，实盘慎用。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |_Begin|true|起始差价|
 |_Add|true|差价间距|
@@ -39,7 +39,7 @@ rest-版OKEX跨期对冲策略教学
 |_ContractNum|true|节点下单量|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function Hedge (isOpen, priceA, priceB) {
@@ -84,10 +84,10 @@ function main () {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/144406
 
-> 更新时间
+> Last Modified
 
 2019-04-17 16:58:51

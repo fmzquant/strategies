@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 简单均线策略Moving-Average-Bot-30-lines
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 "Talk is cheap. Show me the code"
 
@@ -21,11 +21,11 @@ Beginers can start with this strategy, learn how to code, know the difference be
 
 https://dn-filebox.qbox.me/fb4d0c7d773ca83e9d0230927705d419dc0bbeaa.png
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Slippage|0.1|Slippage|
 |FastPeriod|5|fast line periods|
@@ -34,7 +34,7 @@ https://dn-filebox.qbox.me/fb4d0c7d773ca83e9d0230927705d419dc0bbeaa.png
 |Interval|120|Interval time(second)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -87,10 +87,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/103070
 
-> 更新时间
+> Last Modified
 
 2020-10-13 14:51:55

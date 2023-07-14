@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 CCI-MTF-ObOs
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello Traders,
 
@@ -26,11 +26,11 @@ Have fun :)
 
  ![IMG](https://www.fmz.com/upload/asset/180aa95f110b949ccae.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_hlc3|0|(?[ CCI SETTING ])Source: hlc3|high|low|open|hl2|close|hlcc4|ohlc4|
 |v_input_int_1|20|Length|
@@ -48,7 +48,7 @@ Have fun :)
 |v_input_bool_5|true|cciTf5_E|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -152,10 +152,10 @@ else if cciOs
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363582
 
-> 更新时间
+> Last Modified
 
 2022-05-16 18:12:07

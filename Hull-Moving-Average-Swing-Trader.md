@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Hull-Moving-Average-Swing-Trader
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hull Moving Average Strategy
 2 X HMA's,
@@ -20,11 +20,11 @@ Buy and Sell signals on chart, red & green view pane (Green Buy, Red Sell)
 
  ![IMG](https://www.fmz.com/upload/asset/1a38528566ff6c42af6.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|210|HullMA Period|
 |v_input_2_open|0|Price data: open|high|low|close|hl2|hlc3|hlcc4|ohlc4|
@@ -36,7 +36,7 @@ Buy and Sell signals on chart, red & green view pane (Green Buy, Red Sell)
 |v_input_8|9999|To Year|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -116,10 +116,10 @@ if price < c1 and price[1] < c2
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365884
 
-> 更新时间
+> Last Modified
 
 2022-05-26 15:54:32

@@ -1,31 +1,31 @@
 
-> 策略名称
+> Name
 
 发明者APP图表测试策略
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 发明者APP图表测试策略
 
 测试APP图表用，也可以作为画图参考代码，包含一个随机K线生成对象。
 
-> 策略参数
+> Strategy Arguments
 
 
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |buy|true|买入|
 |sell|true|卖出|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var cfgA = {
@@ -524,10 +524,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/298823
 
-> 更新时间
+> Last Modified
 
 2021-08-08 23:18:34

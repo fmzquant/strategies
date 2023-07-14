@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 SAR抛物线转向指标
 
-> 策略作者
+> Author
 
 韬奋量化
 
-> 策略描述
+> Strategy Description
 
 本策略基于扁豆子的《一根均线 趋势 Demo》进行修改（https://www.fmz.com/strategy/193609），
 使用抛物线转向指标SAR的信号作为买卖点，属于数字货币期货趋势策略。
@@ -25,17 +25,17 @@ SAR抛物线转向指标
 （现货：挂单0%，吃单0.07%。合约：挂单0%，吃单0.04%）
 https://www.kucoin.center/ucenter/signup?rcode=1wxJ2fQ&lang=zh_CN&utmsource=VIP_TF
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Amount|100|Amount|
 |time_interval|3600|自定义K线周期（秒）|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -177,10 +177,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/224799
 
-> 更新时间
+> Last Modified
 
 2021-11-02 10:53:24

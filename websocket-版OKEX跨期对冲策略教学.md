@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 websocket-版OKEX跨期对冲策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 极简版OKEX跨期对冲策略（教学）
    
@@ -29,11 +29,11 @@ websocket-版OKEX跨期对冲策略教学
   ### 教学策略，实盘慎用。
   ### 教学策略，实盘慎用。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |_Begin|true|起始差价|
 |_Add|true|差价间距|
@@ -44,7 +44,7 @@ websocket-版OKEX跨期对冲策略教学
 |_Instrument_id_B|LTC-USD-190426|B交易所当周合约ID|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function Hedge (isOpen, retSetA, retSetB) {
@@ -105,10 +105,10 @@ function main () {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/144378
 
-> 更新时间
+> Last Modified
 
 2020-04-27 16:58:34

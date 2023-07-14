@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Moving-Average-Buy-Sell
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Takes two moving averages of different lengths to formulate buy/sell colors on average EMA .
 
@@ -15,11 +15,11 @@ Takes two moving averages of different lengths to formulate buy/sell colors on a
 
  ![IMG](https://www.fmz.com/upload/asset/1a4bb62396a5187a0c1.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_int_1|20|Length Wave|
@@ -27,7 +27,7 @@ Takes two moving averages of different lengths to formulate buy/sell colors on a
 |v_input_int_2|200|Length Tide|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -75,10 +75,10 @@ else if Down
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362092
 
-> 更新时间
+> Last Modified
 
 2022-05-09 23:46:33

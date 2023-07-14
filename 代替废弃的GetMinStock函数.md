@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 代替废弃的GetMinStock函数
 
-> 策略作者
+> Author
 
 hugo_zhou
 
@@ -11,7 +11,7 @@ hugo_zhou
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /****************
@@ -43,10 +43,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/69436
 
-> 更新时间
+> Last Modified
 
 2018-01-17 17:42:25

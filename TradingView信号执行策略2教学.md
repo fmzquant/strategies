@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 TradingView信号执行策略2教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/digest-topic/9794
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SleepInterval|true|循环间隔|
 |FMZ_AccessKey|xxx|FMZ平台的AccessKey|
@@ -26,13 +26,13 @@ TradingView信号执行策略2教学
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |TestSignal|{"Flag":"45M103Buy","Exchange":1,"Currency":"BTC_USDT","ContractType":"swap","Price":"10000","Action":"buy","Amount":"0"}|测试信号|
 |evalCode|Log(exchange.GetName())|执行Javascript代码|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //信号结构
@@ -336,10 +336,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/392048
 
-> 更新时间
+> Last Modified
 
 2023-03-02 17:15:45

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 StochRSI和okcoin一致
 
-> 策略作者
+> Author
 
 fangj
 
@@ -11,7 +11,7 @@ fangj
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function Stoch_RSI(records) {
@@ -136,10 +136,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/56119
 
-> 更新时间
+> Last Modified
 
 2017-09-26 13:04:37

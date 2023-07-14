@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 python利用asyncio-http获取行情数据示范
 
-> 策略作者
+> Author
 
 诺宝
 
-> 策略描述
+> Strategy Description
 
 **真正的异步,其实获取行情这些用异步就够了,出现信号之后用事件驱动操作相应的币种,用平台封装的那些同步接口就够了**
 **需要python 3.61并且安装相应的库**
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -82,10 +82,10 @@ def main():
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/343374
 
-> 更新时间
+> Last Modified
 
 2022-02-02 17:21:47

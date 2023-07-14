@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 Linear-trend
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|c: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|200|len|
 |v_input_3|4|Deviation|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -73,10 +73,10 @@ else if sell
     strategy.entry("short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/367476
 
-> 更新时间
+> Last Modified
 
 2022-06-03 16:09:05

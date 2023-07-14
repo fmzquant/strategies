@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Tom-DeMark-Sequential-Heat-Map
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator uses Tom DeMark’s TD Sequential counting from 1 to 13.
 Number 9 and 13 usually identify an exhausted trend and mark a trend reversal.
@@ -29,11 +29,11 @@ If you have any idea on how to optimise the code, please feel free to share
 
  ![IMG](https://www.fmz.com/upload/asset/1859111aa7cc63d68cc.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Paint Bars|
 |v_input_2|true|Show labels|
@@ -42,7 +42,7 @@ If you have any idea on how to optimise the code, please feel free to share
 |v_input_5|#FFFFFF|text_col|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 ////////////////////////////////////////// Tom DeMark heatmap © by Indicator-Jones /////////////////////////////////////////
@@ -181,10 +181,10 @@ else if sellSetup == 13
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361847
 
-> 更新时间
+> Last Modified
 
 2022-05-08 17:29:16

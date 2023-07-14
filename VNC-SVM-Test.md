@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 VNC-SVM-Test
 
-> 策略作者
+> Author
 
 virtualpeer
 
@@ -11,7 +11,7 @@ virtualpeer
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import numpy as np
@@ -83,10 +83,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/112188
 
-> 更新时间
+> Last Modified
 
 2018-08-18 20:34:19

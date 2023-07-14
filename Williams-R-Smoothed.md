@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Williams-R-Smoothed
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 From TradingView's description:
 Williams %R (%R) is a momentum-based oscillator used in technical analysis , primarily to identify overbought and oversold conditions. The %R is based on a comparison between the current close and the highest high for a user defined look back period. %R Oscillates between 0 and -100 (note the negative values) with readings closer to zero indicating more overbought conditions and readings closer to -100 indicating oversold. Typically %R can generate set ups based on overbought and oversold conditions as well overall changes in momentum.
@@ -26,11 +26,11 @@ Enjoy~~!
 
  ![IMG](https://www.fmz.com/upload/asset/be759889670f5c8d21.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|34|length|
 |v_input_1|5|Smoothed %R Length|
@@ -39,7 +39,7 @@ Enjoy~~!
 |v_input_bool_2|true|Show trend reversals|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -102,10 +102,10 @@ else if plotRev and bearreverse
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361974
 
-> 更新时间
+> Last Modified
 
 2022-05-09 12:08:11

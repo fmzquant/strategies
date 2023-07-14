@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Fukuiz-Octa-EMA-Ichimoku
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy is based EMA of 8 different period and Ichimoku Cloud which works better in 1hr 4hr and daily time frame.
 
@@ -31,11 +31,11 @@ SELL= All Ema turn to gray color.
 
  ![IMG](https://www.fmz.com/upload/asset/8f65855b35cf7e6a02.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show Ribbon (EMA)|
 |v_input_2|5|EMA 1 Length|
@@ -61,7 +61,7 @@ SELL= All Ema turn to gray color.
 |v_input_int_10|31|End Day|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -196,10 +196,10 @@ else if sell2
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363588
 
-> 更新时间
+> Last Modified
 
 2022-05-16 18:21:00

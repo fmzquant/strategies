@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 经典MACD交易策略
 
-> 策略作者
+> Author
 
 扫地僧
 
-> 策略描述
+> Strategy Description
 
 #### 摘要
 在上节中，我们学习了卡夫曼均线的原理和计算方法 https://www.fmz.cn/digest-topic/4463 ，以及根据卡夫曼均线设计了一个简单的自适应动态双均线策略。本节我们将继续重温经典技术分析工具MACD，深度解析每一个计算步骤，以及如何用Python和talib库去实现它，并根据MACD比较常用的使用方法来构建策略。
@@ -146,18 +146,18 @@ if mp == -1 and is_up_cross(dif, dea):
 #### 结尾
 通过本节学习，相信你已经对什么是MACD、MACD原理及计算方法有了了解，你可以参照本节中的代码，试着在FMZ中把策略临摹下来，或者你有更好的想法，可以结合本节所学的知识对策略加以升级改进。很开心能和大家分享对量化交易的心得。在接下来的章节中，我们将学习一个动态阶梯突破策略，拭目以待吧。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |short|5|short|
 |long|50|long|
 |m|15|m|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -210,10 +210,10 @@ def main():
         Sleep(1000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/171604
 
-> 更新时间
+> Last Modified
 
 2021-11-11 09:57:11

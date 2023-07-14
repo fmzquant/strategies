@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Midas-Mk-II-Ultimate-Crypto-Swing
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 >> This scrip is only meant to be used in 4hour crypto chart <<
 
@@ -21,7 +21,7 @@ Updates or revisions will be recorded in the comments. Good luck with this scrip
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -67,10 +67,10 @@ else if short_entry_condition
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362089
 
-> 更新时间
+> Last Modified
 
 2022-05-09 23:22:05

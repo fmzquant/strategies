@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Linear-Regression
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 ue to public demand
 
@@ -48,11 +48,11 @@ The original formula for calculation is posted there
 
  ![IMG](https://www.fmz.com/upload/asset/12d9252c09f58fd6c73.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|100|length|
@@ -67,7 +67,7 @@ The original formula for calculation is posted there
 |v_input_11|false|End At Bar Index|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -140,10 +140,10 @@ else if sell
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365345
 
-> 更新时间
+> Last Modified
 
 2022-05-24 14:17:42

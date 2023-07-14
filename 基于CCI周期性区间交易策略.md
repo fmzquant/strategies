@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 基于CCI周期性区间交易策略
 
-> 策略作者
+> Author
 
 深蓝
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Diff|40|周期区间|
 |Length|100|周期长度|
@@ -21,7 +21,7 @@
 |Name|rb1810|合约代码|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -82,10 +82,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/60287
 
-> 更新时间
+> Last Modified
 
 2018-04-23 17:42:32

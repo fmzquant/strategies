@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bollinger-Bands-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 **Definition**
 The Bollinger Bands strategy is often used with the assistance of other indicators to make conceptual and strategic trading decisions. Bollinger Bands consist of three bands total: an upper band, middle band, and lower band. These separate bands are each used to highlight extreme prices in a specific security. The upper band is associated with overbought securities, whereas the lower band points to securities that are oversold, and the middle band acts as a moving average.  
@@ -33,17 +33,17 @@ The Bollinger Bands strategy is often used with the assistance of other indicato
 **回测**
  ![IMG](https://www.fmz.com/upload/asset/11ac1fd3c8fe95be131.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|22|length|
 |v_input_float_1|2|mult|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -72,10 +72,10 @@ if (ta.crossunder(source, upper))
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361629
 
-> 更新时间
+> Last Modified
 
 2022-05-07 13:22:37

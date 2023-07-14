@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Deribit-websocket-范例
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ Deribit-websocket-范例
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var client = null
@@ -92,10 +92,10 @@ function onexit() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/147765
 
-> 更新时间
+> Last Modified
 
 2019-05-15 18:37:40

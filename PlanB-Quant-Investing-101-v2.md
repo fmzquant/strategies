@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 PlanB-Quant-Investing-101-v2
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|90|selllevel|
 |v_input_2|65|drop|
 |v_input_3|50|buylevel|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -89,10 +89,10 @@ strategy.entry("Sell Signal",strategy.short, when = sellsignal)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/379757
 
-> 更新时间
+> Last Modified
 
 2022-08-24 02:56:16

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Arnaud-Legoux-Moving-Average-Cross-ALMA
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Long Entry|
 |v_input_2|true|Short Entry|
@@ -31,7 +31,7 @@ Zer3192
 |v_input_float_5|2.5|(?Stop Percentage)Long Stop Loss|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -127,10 +127,10 @@ plot(Alma1,"Alma Fast", color=color.purple, style=plot.style_circles)
 plot(Alma2,"Alma Slow", color=#acb5c2, style=plot.style_circles)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380250
 
-> 更新时间
+> Last Modified
 
 2022-08-27 17:09:42

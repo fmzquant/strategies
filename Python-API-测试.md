@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Python-API-测试
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 Python API 测试
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -138,10 +138,10 @@ def main():
         Sleep(10000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/21365
 
-> 更新时间
+> Last Modified
 
 2019-10-14 12:35:16

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 FMZ教程-Python速成手册
 
-> 策略作者
+> Author
 
 作手君
 
@@ -11,7 +11,7 @@ FMZ教程-Python速成手册
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # 单行注释
@@ -459,10 +459,10 @@ import math
 dir(math)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/395727
 
-> 更新时间
+> Last Modified
 
 2023-01-16 09:43:03

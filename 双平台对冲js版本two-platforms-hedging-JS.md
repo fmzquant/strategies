@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 双平台对冲js版本two-platforms-hedging-JS
 
-> 策略作者
+> Author
 
 7meter
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |MinSpreadA|0.51|A->B差价|
 |MinSpreadB|0.52|B->A差价|
@@ -24,13 +24,13 @@
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |A->B|0.51|更改价差(A->B)|
 |B->A|0.52|更改价差(B->A)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function cancelAll(){
@@ -237,10 +237,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/57556
 
-> 更新时间
+> Last Modified
 
 2018-01-22 17:42:27

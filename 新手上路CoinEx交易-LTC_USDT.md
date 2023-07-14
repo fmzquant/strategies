@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 新手上路CoinEx交易-LTC_USDT
 
-> 策略作者
+> Author
 
 yuehen7
 
-> 策略描述
+> Strategy Description
 
 新手上路，研究了几天，简单的写了个......
 
@@ -15,11 +15,11 @@ yuehen7
 QQ:185772115
 可以交流交流呀~
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |MinSpace|0.06|最小利润差价|
 |MaxSpace|0.03|挂单失效距离|
@@ -30,7 +30,7 @@ QQ:185772115
 |Precision|2|小数精度|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function GetAccount(e, waitFrozen) {
@@ -308,10 +308,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/103464
 
-> 更新时间
+> Last Modified
 
 2018-07-07 15:13:14

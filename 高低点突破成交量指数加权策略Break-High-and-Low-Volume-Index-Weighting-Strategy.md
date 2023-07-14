@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 高低点突破成交量指数加权策略Break-High-and-Low-Volume-Index-Weighting-Strategy
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 - 策略名称：高低点突破成交量指数加权策略
@@ -41,11 +41,11 @@
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SLOSS|2|止损百分比|percentage of stop loss|
 |N|300|EMA指标参数|EMA index parameter|
@@ -53,7 +53,7 @@
 |MINAMOUNT|true|最少一次下单数量|minimum order quantity at a time|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -90,10 +90,10 @@ C<=BKPRICE*(1-SLOSS*0.01),SP(BKVOL);
 AUTOFILTER;
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128125
 
-> 更新时间
+> Last Modified
 
 2018-12-15 15:42:32

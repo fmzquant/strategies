@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 bybit反向合约动态网格特异网格
 
-> 策略作者
+> Author
 
 @cqz
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |GridPercentage|0.05|GridPercentage|
 |StartPositionRate|0.3|StartPositionRate|
@@ -26,7 +26,7 @@ bybit反向合约动态网格特异网格
 |Reset|false|Reset|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //Arguments:
@@ -646,10 +646,10 @@ function cancelAllOrders() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365406
 
-> 更新时间
+> Last Modified
 
 2022-05-24 17:38:11

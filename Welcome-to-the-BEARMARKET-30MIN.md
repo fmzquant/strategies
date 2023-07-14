@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Welcome-to-the-BEARMARKET-30MIN
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 
 Hello everyone,
@@ -34,11 +34,11 @@ rsi vwwap open new position only if there is no bullish signal from Cloud , Adx 
 
  ![IMG](https://www.fmz.com/upload/asset/10b6726f9fa1eb5447c.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|2|PP period|
 |v_input_2|10|ATR Factor|
@@ -54,7 +54,7 @@ rsi vwwap open new position only if there is no bullish signal from Cloud , Adx 
 |v_input_9_high|0|RSI Source: high|close|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -301,10 +301,10 @@ strategy.close_all(when = Short_close)
 //By wielkieef
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363564
 
-> 更新时间
+> Last Modified
 
 2022-05-16 15:52:51

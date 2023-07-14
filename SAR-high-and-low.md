@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 SAR-high-and-low
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0.02|start|
 |v_input_2|0.02|increment|
@@ -22,7 +22,7 @@ Zer3192
 |v_input_5|2|Multiplier|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -76,10 +76,10 @@ else if high1
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/367572
 
-> 更新时间
+> Last Modified
 
 2022-06-04 08:50:51

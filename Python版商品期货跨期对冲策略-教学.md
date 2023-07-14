@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 Python版商品期货跨期对冲策略-教学
 
-> 策略作者
+> Author
 
 雨幕
 
-> 策略描述
+> Strategy Description
 
 移植自JavaScript版本[商品期货跨期对冲 - 百行代码实现](https://www.fmz.cn/strategy/23896)
 简单的跨期对冲, 抛砖引玉, 细节还需要处理, 轮训间隔可以缩小到1秒或者删除Sleep那行策略就可以随时响应价格变化。
 教学策略，学习为主。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SA|rb2010|合约A|
 |SB|rb2101|合约B|
@@ -29,14 +29,14 @@ Python版商品期货跨期对冲策略-教学
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |AllCover|__button__|平仓|
 |SetHedgeSpread|false|设置HedgeSpread|
 |SetCoverSpread|false|设置CoverSpread|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 class Hedge:
@@ -190,10 +190,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/211504
 
-> 更新时间
+> Last Modified
 
 2021-10-26 10:47:16

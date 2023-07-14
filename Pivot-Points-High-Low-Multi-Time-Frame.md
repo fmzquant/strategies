@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Pivot-Points-High-Low-Multi-Time-Frame
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello All,
 
@@ -25,11 +25,11 @@ Enjoy!
 
  ![IMG](https://www.fmz.com/upload/asset/1318370f9c6d12e0e86.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_timeframe_1|240|timeframe|
 |v_input_int_1|2|Left Bars|
@@ -42,7 +42,7 @@ Enjoy!
 |v_input_6|white|pltextcol|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -100,10 +100,10 @@ else if not na(pivotlow)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363557
 
-> 更新时间
+> Last Modified
 
 2022-05-16 15:20:30

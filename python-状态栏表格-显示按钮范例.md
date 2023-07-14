@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 python-状态栏表格-显示按钮范例
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ python-状态栏表格-显示按钮范例
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import json
@@ -28,10 +28,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/147155
 
-> 更新时间
+> Last Modified
 
 2019-05-10 11:35:13

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 吕神简易波动率策略Pine语言版本
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 来自于两年前用户公开的一个简单的波动率策略
 
@@ -17,16 +17,16 @@ https://www.fmz.com/strategy/200131
 
  ![IMG](https://www.fmz.com/upload/asset/143fce25524c3447937.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|50|指数计算周期|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -67,10 +67,10 @@ else if strategy.position_size < 0
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361827
 
-> 更新时间
+> Last Modified
 
 2022-05-29 20:51:28

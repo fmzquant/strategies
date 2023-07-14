@@ -1,15 +1,15 @@
 
-> 策略名称
+> Name
 
 TypeScript-演示
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
-平台加入原生TypeScript支持, 只需要在源码开头加入 (策略语言类型还是先JavaScript)
+平台加入原生TypeScript支持, 只需要在源码开头加入 (策略语言类型还是选JavaScript)
 
 ```
 // @ts-check
@@ -20,7 +20,7 @@ TypeScript-演示
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // @ts-check
@@ -54,10 +54,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/405326
 
-> 更新时间
+> Last Modified
 
-2023-03-23 16:09:47
+2023-04-30 20:17:23

@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 统计各个平台间的最大差价by-JackConan
 
-> 策略作者
+> Author
 
 yzl_126@126.com
 
-> 策略描述
+> Strategy Description
 
 统计各个平台间的最大差价; 
 如果要打印当时各交易所的市场行情，可以把 //printCurPrice();   前面的注释//去掉；
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var maxSpace = 0;
@@ -67,10 +67,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/86
 
-> 更新时间
+> Last Modified
 
 2014-06-22 21:15:34

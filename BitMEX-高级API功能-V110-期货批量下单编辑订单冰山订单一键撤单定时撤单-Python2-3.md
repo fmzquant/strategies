@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 BitMEX-高级API功能-V110-期货批量下单编辑订单冰山订单一键撤单定时撤单-Python2-3
 
-> 策略作者
+> Author
 
 FawkesPan
 
-> 策略描述
+> Strategy Description
 
 # BitMEX 高级API功能 (FMZ.com)
 
@@ -101,16 +101,16 @@ BitMEX.AmendOrders()
 
 [使用 GNU General Public License v3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |LANG|ZH|语言 / Language|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -445,10 +445,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/114148
 
-> 更新时间
+> Last Modified
 
 2020-05-19 22:57:04

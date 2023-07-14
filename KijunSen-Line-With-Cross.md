@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 KijunSen-Line-With-Cross
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Kijen Sen Independent Line of Ichimoku Trading System
 
@@ -18,17 +18,17 @@ Many traders in the financial markets use Ichimoku components to detect trends, 
 
  ![IMG](https://www.fmz.com/upload/asset/159637efb31d4192cce.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|26|Length|
 |v_input_2|true|Show Candle Cross?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -60,10 +60,10 @@ else if showCross and crossDown
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362223
 
-> 更新时间
+> Last Modified
 
 2022-05-10 18:56:36

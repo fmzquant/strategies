@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Crodls-Supertrend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This Indicator is using the supertrend with 3 different inputs as confirmation as well as the 200 EMA which will give us the data for an up or down trend.
 then it is looking for the stoch indicator to confirm if there is a cross under 30 for a long and above 70 for a short.
@@ -16,11 +16,11 @@ then it is looking for the stoch indicator to confirm if there is a cross under 
 
  ![IMG](https://www.fmz.com/upload/asset/714409a2e72aade205.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|12|ATR1 Length|
 |v_input_float_1|3|Factor1|
@@ -40,7 +40,7 @@ then it is looking for the stoch indicator to confirm if there is a cross under 
 |v_input_int_3|5|Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -134,10 +134,10 @@ else if short
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362916
 
-> 更新时间
+> Last Modified
 
 2022-05-13 17:43:21

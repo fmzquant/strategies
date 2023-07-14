@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RSI-by-zdmre
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Traditional interpretations and usage of the RSI dictate that values of 70 or above suggest that a security becomes overbought or overvalued and may be primed for a trend reversal or corrective price pullback. An RSI reading of 30 or below indicates an oversold or undervalued condition.
 
@@ -20,17 +20,17 @@ Thanks @DieGobelMonte for your suggestion.
 
  ![IMG](https://www.fmz.com/upload/asset/10d58845636280dcd8d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|14|Length|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -70,10 +70,10 @@ else if os
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362898
 
-> 更新时间
+> Last Modified
 
 2022-05-13 16:47:24

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 HALFTREND-HEMA-SMA-FALSE-SIGNALs-STRATEGY
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 === INTRO and CREDITS ===
 This script is a mix of 3 indicators in order to recreate FALSE SIGNAL's strategy from YouTube.
@@ -46,11 +46,11 @@ Thanks again to the authors of the indicators that compose this script and to FA
 
  ![IMG](https://www.fmz.com/upload/asset/18297df589e6a7f56c3.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|false|(?Strategy)Full candle must be outside the HEMA / Wicks can touch the HEMA but body must be out|
 |v_input_int_1|150|(?Simple Moving Average SMA)Length|
@@ -63,7 +63,7 @@ Thanks again to the authors of the indicators that compose this script and to FA
 |v_input_5|false|Show Channels|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -238,10 +238,10 @@ else if short
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362667
 
-> 更新时间
+> Last Modified
 
 2022-05-12 17:53:57

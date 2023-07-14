@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Moving-Average-Cross-Alert-Multi-Timeframe-MTF
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 See when two moving averages cross. With the option to choose between four moving average calculations:
 
@@ -24,11 +24,11 @@ The moving averages can be plotted from different time-frames, like e.g. the wee
 
  ![IMG](https://www.fmz.com/upload/asset/177719604d95d13a9de.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Price Source For The Moving Averages: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|true|Use Current Timeframe As Resolution?|
@@ -38,7 +38,7 @@ The moving averages can be plotted from different time-frames, like e.g. the wee
 |v_input_6|2|Moving Average Calculation: (1 = SMA), (2 = EMA), (3 = WMA), (4 = Linear)|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -137,10 +137,10 @@ else if Sell
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365314
 
-> 更新时间
+> Last Modified
 
 2022-05-24 11:23:02

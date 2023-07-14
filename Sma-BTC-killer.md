@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Sma-BTC-killer
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello !!
 
@@ -53,11 +53,11 @@ ENJOY !!
 
  ![IMG](https://www.fmz.com/upload/asset/b9533260444f2dfb3e.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|14|  1-SMA Lenght|
 |v_input_2|28|  2-SMA Lenght|
@@ -71,7 +71,7 @@ ENJOY !!
 |v_input_10|6|  ATR Period|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -311,10 +311,10 @@ strategy.close_all( when = ATR_L_STOP or ATR_S_STOP)
 // By wielkieef
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363766
 
-> 更新时间
+> Last Modified
 
 2022-05-17 13:41:03

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TMA-Overlay
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator help identify momentum by offering a visual representation of engulfing candlestick patters overlayed with smoothed moving averages
 
@@ -15,11 +15,11 @@ This indicator help identify momentum by offering a visual representation of eng
 
  ![IMG](https://www.fmz.com/upload/asset/9f32a7e78810b1cc45.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|(?Smoothed MA Inputs)Show 100 Line|
 |v_input_2|true|Show Trend Fill|
@@ -27,7 +27,7 @@ This indicator help identify momentum by offering a visual representation of eng
 |v_input_4|true|Show Bullish 3 Line Strike|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -113,10 +113,10 @@ plotshape(bearS ? bearSig : na, style=shape.triangledown, color=color.red, locat
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361689
 
-> 更新时间
+> Last Modified
 
 2022-05-07 21:08:06

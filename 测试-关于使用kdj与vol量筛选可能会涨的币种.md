@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 测试-关于使用kdj与vol量筛选可能会涨的币种
 
-> 策略作者
+> Author
 
 xxs1xxs1
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |MarginLevel|20|MarginLevel|
 |amountScale|3|量精度|
@@ -23,13 +23,13 @@ xxs1xxs1
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |已经清算的数据|__button__|已经清算的数据|
 |清除持久数据数据|__button__|清除持久数据数据|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -395,10 +395,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/313036
 
-> 更新时间
+> Last Modified
 
 2021-09-09 21:39:15

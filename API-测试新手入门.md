@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 API-测试新手入门
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 新手入门学习模板
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |message|Hello|回显的信息|
 |running|true|布尔值|
@@ -24,7 +24,7 @@ Zero
 |cond|123|条件显示1|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {
@@ -38,10 +38,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/4
 
-> 更新时间
+> Last Modified
 
 2019-03-19 21:09:24

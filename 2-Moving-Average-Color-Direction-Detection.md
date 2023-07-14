@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 2-Moving-Average-Color-Direction-Detection
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The filling option is added between the moving averages (it is deactivated by default, activate in configuration if you wish), if the 2 averages are green the filling will be green, if the 2 averages are red the filling will be red, this would confirm a trend healthy in the case that you are using a fast and a slow average, in the case that the fast average changes of direction will be filled in the purple color, this can indicate several things: a correction of the trend is being generated, possible rest of the price , possible start of laterality, possible change of trend, when the color is purple the trader will have to analyze the general context to be able to define what could be happening.
 
@@ -25,11 +25,11 @@ The following alerts were created:
 
  ![IMG](https://www.fmz.com/upload/asset/1cbd3d5353e6275e6d0.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|1-MA|
 |v_input_2|0|1-MA Type: : SMA|EMA|WMA|VWMA|SMMA|DEMA|TEMA|HullMA|ZEMA|TMA|SSMA|
@@ -44,7 +44,7 @@ The following alerts were created:
 |v_input_11|false|FILLING|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=3
@@ -154,10 +154,10 @@ else if crossunder(ma_series_b,ma_series)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364535
 
-> 更新时间
+> Last Modified
 
 2022-05-20 16:44:13

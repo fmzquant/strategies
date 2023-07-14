@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 超级趋势策略SuperTrend
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 [trans]
 
@@ -50,17 +50,17 @@ Remark: If you encounter undefined variables, it is proved that this attribute i
  ![IMG](https://www.fmz.com/upload/asset/114b4feedd1ae4f8550.png) 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|5|factor|
 |v_input_int_1|10|atrPeriod|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -90,10 +90,10 @@ else if direction > 0
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/359806
 
-> 更新时间
+> Last Modified
 
 2022-06-20 10:03:33

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 3-Supertrend-Add-In-This-Single-Script
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 1st Supertrend Level 21 1
 2nd Supertrend Level 14 2 
@@ -18,11 +18,11 @@
  ![IMG](https://www.fmz.com/upload/asset/16364ff2277259753d7.png) 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|21|ATR Length|
 |v_input_float_1|true|Factor|
@@ -32,7 +32,7 @@
 |v_input_float_3|3|Factor|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -93,10 +93,10 @@ else if direction_1>0 and direction_2 >0 and direction_3 >0
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362457
 
-> 更新时间
+> Last Modified
 
 2022-05-11 17:04:21

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 回测保存K线到本地CSV
 
-> 策略作者
+> Author
 
 小草
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''
@@ -52,10 +52,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/61867
 
-> 更新时间
+> Last Modified
 
 2017-12-15 13:31:31

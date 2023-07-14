@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Bitcoin-Scalper-30MIN
 
-> 策略作者
+> Author
 
 a624587332
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_high|0|src: high|close|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_19|false|Filter|
@@ -57,7 +57,7 @@ a624587332
 |v_input_40|0.08| SL/100|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -568,10 +568,10 @@ if short_                   and        ACT_BT
 //By Wielkieef
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/376263
 
-> 更新时间
+> Last Modified
 
 2022-08-02 23:58:55

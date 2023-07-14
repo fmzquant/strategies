@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TradingView-Alerts-to-MT4-MT5-dynamic-variables-NON-REPAINTING
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Accidentally, I’m sharing open-source profitable Forex strategy. Accidentally, because this was aimed to be purely educational material. A few days ago TradingView released a very powerful feature of dynamic values from PineScript now being allowed to be passed in Alerts. And thanks to TradingConnector, they could be instantly executed in MT4 or MT5 platform of any broker in the world. So yeah - TradingConnector works with indices and commodities , too.
 
@@ -36,11 +36,11 @@ Thanks @LucF and @a.tesla2018 for helping me with code fixes :)
 
  ![IMG](https://www.fmz.com/upload/asset/c1704916f81332fd29.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|400|TakeProfitDistance|
 |v_input_2|150|TakePartialProfitDistance|
@@ -49,7 +49,7 @@ Thanks @LucF and @a.tesla2018 for helping me with code fixes :)
 |v_input_int_3|4|Smooth|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -128,10 +128,10 @@ else if GoShort
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365389
 
-> 更新时间
+> Last Modified
 
 2022-05-24 16:59:00

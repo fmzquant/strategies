@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 OKEx跨期对冲策略
 
-> 策略作者
+> Author
 
 reboting
 
-> 策略描述
+> Strategy Description
 
 什么是跨期对冲？
 所谓跨期套利就是在同一期货品种的不同月份合约上建立数量相等、方向相反的交易头寸，最后以对冲或交割方式结束交易、获得收益的方式。最简单的跨期套利就是买入近期的期货品种，卖出远期的期货品种。比如Okex的BTC次周和当周合约。交割期不同，最多相差3个月。当合约价差出现时，投资者可进行买入一个合约同时卖出另外一个合约，待到价差回归后再进行相应的反向平仓，进而利用价差的合理回归获得利润。
@@ -33,7 +33,7 @@ https://www.pcclean.io/45gd
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var strategy_version="1.2.0.7(adjust parameters)";
@@ -488,10 +488,10 @@ function main(){
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/157635
 
-> 更新时间
+> Last Modified
 
 2019-07-17 22:39:05

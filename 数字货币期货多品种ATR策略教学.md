@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 数字货币期货多品种ATR策略教学
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/digest-topic/8726
 
@@ -56,11 +56,11 @@ var params = '[{
 
 策略用到了一个模版类库：数字货币期货交易类库（测试版）
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |params||参数|
 |onlyOne|true|只跑单品种|
@@ -73,7 +73,7 @@ var params = '[{
 |openRatio|0.1|开仓系数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -269,10 +269,10 @@ function onexit() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/339344
 
-> 更新时间
+> Last Modified
 
 2022-01-22 13:35:11

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 U本位网格振幅筛选
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 找出平均振幅最大的币种,用于网格交易
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -101,10 +101,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364968
 
-> 更新时间
+> Last Modified
 
 2022-07-28 10:43:07

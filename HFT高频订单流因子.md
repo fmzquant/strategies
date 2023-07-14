@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 HFT高频订单流因子
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 
 一个入门级订单流高频alpha因子, 可以做为市商策略的最优买卖定价距离参考, 信号归一为[-1, 1], 趋向1表示买方市场,趋向-1则是卖方市场, 策略会实时绘制因子值与最后成交价
@@ -17,16 +17,16 @@ HFT高频订单流因子
  
  
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |QSize|100|QSize|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 let _chart = Chart({
@@ -195,10 +195,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/392784
 
-> 更新时间
+> Last Modified
 
 2023-03-24 17:22:54

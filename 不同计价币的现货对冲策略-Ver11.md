@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 不同计价币的现货对冲策略-Ver11
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 不同计价币的现货对冲策略 Ver1.1
 
 相关文章：https://www.fmz.com/digest-topic/7666
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |keepBalanceCyc|300|平衡周期|
 |diffAsPercentage|true|使用差价百分比|
@@ -40,13 +40,13 @@
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |A2B|false|修改AtoB的参数|
 |B2A|false|修改BtoA的参数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var lastKeepBalanceTS = 0
@@ -335,10 +335,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/302834
 
-> 更新时间
+> Last Modified
 
 2021-08-29 15:51:59

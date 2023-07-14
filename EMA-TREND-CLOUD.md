@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 EMA-TREND-CLOUD
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 ******THIS IS NOT TRADING ADVICE - THERE ARE NO GUARANTEES - USE AT YOUR OWN RISK******
 
@@ -23,18 +23,18 @@ Exits can happen when price closes in the cloud or on the opposite side of the c
 
  ![IMG](https://www.fmz.com/upload/asset/184ea44f346ab988372.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|9|Fast EMA Length|
 |v_input_2|20|Slow EMA Length|
 |v_input_bool_1|true|(?Crossover Moving Averages)Use Text-Based Crossover Labels?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -88,10 +88,10 @@ else if Bear
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364037
 
-> 更新时间
+> Last Modified
 
 2022-05-18 16:08:03

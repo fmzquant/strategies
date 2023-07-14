@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 stoch-supertrd-atr-200ma
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy combines Supertrend, 200 EMA , Stochastic , and an ATR stop loss indicator. For buy conditions, the Stochastic has to be below the 20 level, price has to be above the 200 Ema and the Supertrend has to be green. For sell conditions, it has to be the opposite. the Stochastic has to be above the 80 level, price has to be below the 200 Ema and the Supertrend has to be red.
 
@@ -15,11 +15,11 @@ This strategy combines Supertrend, 200 EMA , Stochastic , and an ATR stop loss i
 
  ![IMG](https://www.fmz.com/upload/asset/15ffad236de4dff553d.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|ema needed?|
 |v_input_1|10|ATR Length|
@@ -41,7 +41,7 @@ This strategy combines Supertrend, 200 EMA , Stochastic , and an ATR stop loss i
 |v_input_10|red|High Line Color|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -143,10 +143,10 @@ plot(sl_breakeven_price_activated1 and strategy.position_size < 0 ? strategy.ope
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362169
 
-> 更新时间
+> Last Modified
 
 2022-05-10 13:39:21

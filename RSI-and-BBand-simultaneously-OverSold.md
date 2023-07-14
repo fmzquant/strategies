@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RSI-and-BBand-simultaneously-OverSold
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This indicator is created by combining the standard period RSI indicator with an Oversold limit of 32, an Overbought limit of 70 and a period of 14 (these values can be changed optionally from the entries and still tabs of the indicator settings) and the Bollinger Band . indicator with a standard deviation of 2 and a period of 20. Also, the RSI Oversold is an upward green triangle where the price simultaneously falls below the BB and the lower limit (Low) (i.e. below 32), where the RSI Overbought (i.e. above 70) at the same time the price rises above the BB and the upper limit (Upper) is a downward red triangle. is indicated by a triangle. An alarm condition is established on these conditions. Source codes are posted visually and written in clear language and with explanations for beginners to learn to pine.
 
@@ -15,11 +15,11 @@ This indicator is created by combining the standard period RSI indicator with an
 
  ![IMG](https://www.fmz.com/upload/asset/1f1cc8bca66e3e9a1fd.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|RSI Kaynagi: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|14|RSI Periodu|
@@ -30,7 +30,7 @@ This indicator is created by combining the standard period RSI indicator with an
 |v_input_7|2|Standart Sapma|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -88,10 +88,10 @@ else if bullishkosulu
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362654
 
-> 更新时间
+> Last Modified
 
 2022-05-12 17:48:21

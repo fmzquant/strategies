@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 Twin-Range-Filter
 
-> 策略作者
+> Author
 
 Zer3192
 
-> 策略描述
+> Strategy Description
 
  ![IMG](https://www.fmz.com/upload/asset/1483bbf4b8e38d8d4d65e.png) 
  ![IMG](https://www.fmz.com/upload/asset/1485dd6a930fe8e336169.png) 
  ![IMG](https://www.fmz.com/upload/asset/1487774e19f755ee216e5.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|27|Fast period|
@@ -26,7 +26,7 @@ Zer3192
 |v_input_5|2|Slow range|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -106,10 +106,10 @@ else if short
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/367643
 
-> 更新时间
+> Last Modified
 
 2022-06-12 21:00:10

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 DMI-测试范例
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ DMI-测试范例
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -110,10 +110,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/154050
 
-> 更新时间
+> Last Modified
 
 2019-07-03 13:56:18

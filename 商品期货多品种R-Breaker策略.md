@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 商品期货多品种R-Breaker策略
 
-> 策略作者
+> Author
 
 雨幕
 
-> 策略描述
+> Strategy Description
 
 - 只支持操作CTP商品期货
 - 支持自动或手动恢复进度
@@ -20,11 +20,11 @@
 https://www.fmz.cn/digest-topic/8047
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Instruments|rb888,MA888,jd888|合约列表|
 |LoopInterval|3|轮询周期(秒)|
@@ -38,12 +38,12 @@ https://www.fmz.cn/digest-topic/8047
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |暂停/继续|__button__|暂停/继续|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -774,10 +774,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.cn/strategy/319255
 
-> 更新时间
+> Last Modified
 
 2022-04-06 10:14:33

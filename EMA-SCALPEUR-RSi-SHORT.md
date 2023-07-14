@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 EMA-SCALPEUR-RSi-SHORT
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|9|EMA_L|
 |v_input_int_2|26|EMA_L2|
@@ -22,7 +22,7 @@ Zer3192
 |v_input_int_5|5|RSI|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -90,10 +90,10 @@ strategy.close ("short",  when = sellexit, comment = "EXIT-SHORT")
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380251
 
-> 更新时间
+> Last Modified
 
 2022-08-27 17:17:28

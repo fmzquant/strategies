@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bit-Maker-现货USDT等额监控
 
-> 策略作者
+> Author
 
 AutoBitMaker-ABM
 
-> 策略描述
+> Strategy Description
 
 **AutoBitMaker** 目前正式推出无风险套利策略。
 策略原理为现货和合约对冲，这个过程也可以手动完成。
@@ -54,16 +54,16 @@ Bot 接管您的账户后，请勿自行做任何操作，当检测到其他任�
 微信小程序提交试用申请：
 ![微信小程序码](https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |baseOriginalBalance|10000|baseOriginalBalance|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //exchanges[0] is spot
@@ -262,10 +262,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/255606
 
-> 更新时间
+> Last Modified
 
 2021-02-20 11:36:38

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 恒温器-震荡修正为-最高价-最低价-添加增减仓选项-添加额外张数功能-修正cmi数据刷新日期问一天一次变为1小时一次-ok-准备修正一些功能
 
-> 策略作者
+> Author
 
 醉里挑灯看剑
 
-> 策略描述
+> Strategy Description
 
 根据回测结果，同等参数下 貌似采用减仓模式比增仓模式，效果更好。。。
 窘。。
@@ -15,11 +15,11 @@
 这个版本为完善版把，自由度高点，随意，怎么用
 微信:fzqtdkj，多少年前的老古董代码，研究那么多年头发都研究白了，屁也没研究出来，交易之难，难于上青天啊，tm的就差去修仙问道了。。。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractTypeIdx|0|合约类型: this_week|next_week|quarter|
 |MarginLevelIdx|0|杠杆: 10|20|
@@ -45,7 +45,7 @@
 |Trend_ExtraAmount_State|false|趋势_附加数量启用状态|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -1073,10 +1073,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/255502
 
-> 更新时间
+> Last Modified
 
 2022-03-13 05:18:54

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 OKEX-V5止盈止损接口
 
-> 策略作者
+> Author
 
 夏天不打你
 
@@ -11,7 +11,7 @@ OKEX-V5止盈止损接口
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -78,10 +78,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/340820
 
-> 更新时间
+> Last Modified
 
 2022-04-07 19:38:37

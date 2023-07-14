@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Bit-Maker-30-套利-智能学习-USDT-本位-Binance-单平台-Arbitrage-USDT-Standard
 
-> 策略作者
+> Author
 
 AutoBitMaker-ABM
 
-> 策略描述
+> Strategy Description
 
 自学习网格：
 
@@ -40,17 +40,17 @@ Email:  liuhongyu.louie@autobitmaker.com/autobitmaker_master@autobitmaker.com
 微信小程序提交试用申请：
 ![微信小程序码](https://www.fmz.cn![IMG](https://www.fmz.com/upload/asset/1281e73989f891ac26aa9.jpg))
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |baseOriginalBalance|1000|baseOriginalBalance|
 |showInfo|false|showInfo|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var chart = {
@@ -237,10 +237,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/178712
 
-> 更新时间
+> Last Modified
 
 2021-01-07 08:40:45

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 ZigZag-PA-Strategy-V41
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 EXPERIMENTAL:
 WARNING: this strategy repaints after reloading and results are heavily curve fitted, use at your own discretion.
@@ -17,11 +17,11 @@ UPDATE: (AleksanderThor) add option for a 2nd target, to use you need to activat
 
  ![IMG](https://www.fmz.com/upload/asset/f6c9860b59b6177205.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|Use Heikken Ashi Candles|
 |v_input_2|true|Use Alt Timeframe|
@@ -45,7 +45,7 @@ UPDATE: (AleksanderThor) add option for a 2nd target, to use you need to activat
 |v_input_20|-0.236|Target 2 - Fib. Rate to use for SL:|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -306,10 +306,10 @@ strategy.close('target02_sell', when=target02_sel_close)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365711
 
-> 更新时间
+> Last Modified
 
 2022-05-25 18:08:49

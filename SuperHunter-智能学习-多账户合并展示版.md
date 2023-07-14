@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 SuperHunter-智能学习-多账户合并展示版
 
-> 策略作者
+> Author
 
 AutoBitMaker-ABM
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |baseOriginalBalance|1000|baseOriginalBalance|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var chart = {
@@ -207,10 +207,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/236644
 
-> 更新时间
+> Last Modified
 
 2020-11-13 21:29:02

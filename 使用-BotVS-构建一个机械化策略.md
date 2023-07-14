@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 使用-BotVS-构建一个机械化策略
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 知乎专栏文章 附带策略
 使用 BotVS 构建一个机械化策略
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 参数
@@ -150,10 +150,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/40357
 
-> 更新时间
+> Last Modified
 
 2017-09-21 09:16:02

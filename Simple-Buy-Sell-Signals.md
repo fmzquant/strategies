@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Simple-Buy-Sell-Signals
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -54,10 +54,10 @@ else if nmS
 // strategy.close("Short",when=nmL)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380396
 
-> 更新时间
+> Last Modified
 
 2022-08-28 18:30:25

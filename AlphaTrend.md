@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 AlphaTrend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 AlphaTrend is a brand new indicator which I've personally derived from Trend Magic and still developing
 
@@ -50,11 +50,11 @@ Kıvanç Özbilgiç
 **回测结果**
  ![IMG](https://www.fmz.com/upload/asset/5b0e559be7c9374225.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_float_1|true|Multiplier|
 |v_input_1|8|Common Period|
@@ -63,7 +63,7 @@ Kıvanç Özbilgiç
 |v_input_4|false|Change calculation (no volume data)?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -115,10 +115,10 @@ else if sellSignalk and showsignalsk and O2 > K1
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361480
 
-> 更新时间
+> Last Modified
 
 2022-05-06 15:49:16

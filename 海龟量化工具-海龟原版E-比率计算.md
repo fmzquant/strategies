@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 海龟量化工具-海龟原版E-比率计算
 
-> 策略作者
+> Author
 
 道长
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -257,10 +257,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/259135
 
-> 更新时间
+> Last Modified
 
 2021-03-05 15:49:20

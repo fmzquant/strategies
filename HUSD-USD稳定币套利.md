@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 HUSD-USD稳定币套利
 
-> 策略作者
+> Author
 
 一拳男孩
 
-> 策略描述
+> Strategy Description
 
 ### HUSD/USDT 稳定币套利
 火币有段时间搞活动，HUSD区免手续费，于是搞了个脚本薅羊毛。
 根据总是会**回归1**的特点进行稳定套利
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |MAX_ATR|0.0001|最大均幅|
 |ORDER_AMOUNT|1000|单次下单量|
@@ -33,7 +33,7 @@ HUSD-USD稳定币套利
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |profitRate|1e-05|利润率|
 |orderAmount|1000|单次下单量|
@@ -44,7 +44,7 @@ HUSD-USD稳定币套利
 |maxATR|0.0001|最大均幅|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var _running = false
@@ -357,10 +357,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/164047
 
-> 更新时间
+> Last Modified
 
 2022-02-16 01:28:18

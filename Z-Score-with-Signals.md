@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Z-Score-with-Signals
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is my open-source indicator of z-score with buy and sell indicators.
 I see there are other z-score indicators, I just am particular about how I like my z-scores calculated and so decided to make my own and add buy and sell signals to help guide me. And I figured I could share it openly here!
@@ -36,7 +36,7 @@ I personally like this for swing trading on the 1 hour chart; however, this can 
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -80,10 +80,10 @@ else if (z > 2.50)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361834
 
-> 更新时间
+> Last Modified
 
 2022-05-08 16:33:16

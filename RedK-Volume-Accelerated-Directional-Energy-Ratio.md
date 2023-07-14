@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RedK-Volume-Accelerated-Directional-Energy-Ratio
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The Volume-Accelerated Directional Energy Ratio (VADER) makes use of price moves (displacement) and the associated volume (effort) to estimate the positive (buying) and negative (selling) "energy" behind the scenes, enabling traders to "read the market action" in more details and adjust their trading decisions accordingly.
 
@@ -32,11 +32,11 @@ note that we're approaching the analogy here from a trading perspective and not 
 
  ![IMG](https://www.fmz.com/upload/asset/130a0f8baab4c18b768.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|9|length|
 |v_input_int_2|5|(?Directional Energy Ratio)Average|
@@ -48,7 +48,7 @@ note that we're approaching the analogy here from a trading perspective and not 
 |v_input_int_5|10|Lookback (for Relative)|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -211,10 +211,10 @@ else if Alert_dn
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364036
 
-> 更新时间
+> Last Modified
 
 2022-05-18 15:30:50

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 QQE-MOD-SSL-Hybrid-Waddah-Attar-Explosion
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 TRADE CONDITIONS
 
@@ -42,11 +42,11 @@ Waddah Attar Explosion by shayankm
 
  ![IMG](https://www.fmz.com/upload/asset/1bee9f9cdc8ec8fa3ad.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_3|true|Show Baseline|
 |v_input_4|false|Show SSL1|
@@ -100,7 +100,7 @@ Waddah Attar Explosion by shayankm
 |v_input_float_8|2|BB Stdev Multiplier|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -608,10 +608,10 @@ strategy.close(id = "Short", when = exitShort, comment = "Closing Short", alert_
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361969
 
-> 更新时间
+> Last Modified
 
 2022-05-09 12:01:14

@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 BitMEX-高级API功能-期货批量下单一键撤单-JavaScript
 
-> 策略作者
+> Author
 
 FawkesPan
 
@@ -11,7 +11,7 @@ FawkesPan
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -66,10 +66,10 @@ function CancelPendingOrders() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/105056
 
-> 更新时间
+> Last Modified
 
 2018-08-30 03:01:43

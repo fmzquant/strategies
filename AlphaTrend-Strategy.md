@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 AlphaTrend-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The strategy version of AlphaTrend indicator for backtesting and optimisation purposes for TradingView users:
 
@@ -29,11 +29,11 @@ backtest
 
  ![IMG](https://www.fmz.com/upload/asset/1585c096248c551d0d4.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_float_1|true|Multiplier|
 |v_input_1|14|Common Period|
@@ -42,7 +42,7 @@ backtest
 |v_input_4|false|Change calculation (no volume data)?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -100,10 +100,10 @@ if (shortCondition)
  
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/377541
 
-> 更新时间
+> Last Modified
 
 2022-08-12 16:51:26

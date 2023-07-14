@@ -1,25 +1,25 @@
 
-> 策略名称
+> Name
 
 Highest-high-lowest-low-stop
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|20|Highest High Lookback|
 |v_input_2|20|Lowest Low Lookback|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=3
@@ -70,10 +70,10 @@ if (strategy.position_size < 0)
     strategy.exit(id="XS LL", stop=hiHighs)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/395962
 
-> 更新时间
+> Last Modified
 
 2023-01-07 21:10:04

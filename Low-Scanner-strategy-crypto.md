@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Low-Scanner-strategy-crypto
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Strategy Direction: long|short|all|
 |v_input_2|10|min|
@@ -35,7 +35,7 @@ Zer3192
 |v_input_18|5| Take profit4|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -134,10 +134,10 @@ strategy.exit("x4", profit = per(tp4), loss = los)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/366538
 
-> 更新时间
+> Last Modified
 
 2022-05-29 20:48:52

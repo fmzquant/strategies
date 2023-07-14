@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 动态平衡alpha
 
-> 策略作者
+> Author
 
 中本大料
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |threshold|0.05|阈值|
 |LoopInterval|60|循环时间|
@@ -22,7 +22,7 @@
 |YPrecision|8|价精度|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var threshold = 0.05
@@ -96,10 +96,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/115321
 
-> 更新时间
+> Last Modified
 
 2018-09-06 09:50:43

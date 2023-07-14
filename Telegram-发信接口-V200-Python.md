@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Telegram-发信接口-V200-Python
 
-> 策略作者
+> Author
 
 FawkesPan
 
-> 策略描述
+> Strategy Description
 
 # Telegram API接口 (FMZ.com)
 
@@ -40,18 +40,18 @@ Telegram.Send(message=string, chat_id=integer)
 
 [使用 WTFPL – Do What the Fuck You Want to Public License](http://www.wtfpl.net/)
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |DEBUG|0|DEBUG模式: 0|1|
 |KEY||Telegram 机器人 Key|
 |CHATID|false|Telegram 会话 ID|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #!/usr/bin/env python3
@@ -107,10 +107,10 @@ def main():
     return True
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/116201
 
-> 更新时间
+> Last Modified
 
 2019-05-16 20:06:03

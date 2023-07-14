@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Inverted-Hammer-Extended-Options
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|10|Downtrend EMA Threshold|
 |v_input_float_1|2|Min Upper Wick X Body|
@@ -24,7 +24,7 @@ Zer3192
 |v_input_bool_2|false|Broke Previous High|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -75,10 +75,10 @@ if invertedHammer
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/368717
 
-> 更新时间
+> Last Modified
 
 2022-06-12 14:15:53

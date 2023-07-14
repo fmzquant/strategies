@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 使用画线类库画K线以及均线图表范例
 
-> 策略作者
+> Author
 
 小小梦
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |MaCyc|10|均线参数|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var PreBarTime = 0
@@ -58,10 +58,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/125770
 
-> 更新时间
+> Last Modified
 
 2018-11-12 11:39:09

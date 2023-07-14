@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Intraday-BUY-SELL
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 BUY & SELL Scalp Signals for Crude Oil Future Contracts (Or it can be used with any scrip with good amount of Volume ) based on Sma & RSI overbought/oversold alert (!) for possible reversal indication.
 
@@ -19,11 +19,11 @@ Best to perform with 3 min timeframe on Crude Oil Futures
 
  ![IMG](https://www.fmz.com/upload/asset/ae4be0a059edbbe53b.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|14|RSI Length|
 |v_input_2|75|Higher Value of RSI|
@@ -31,7 +31,7 @@ Best to perform with 3 min timeframe on Crude Oil Futures
 |v_input_4|50|SMA Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -102,10 +102,10 @@ else if SELL
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365706
 
-> 更新时间
+> Last Modified
 
 2022-05-25 17:44:23

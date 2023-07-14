@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 指标库python版
 
-> 策略作者
+> Author
 
 陈皮
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # 0级：核心工具函数
@@ -258,10 +258,10 @@ ext.MFI = MFI
 ext.ASI = ASI
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/381042
 
-> 更新时间
+> Last Modified
 
 2022-09-03 19:09:52

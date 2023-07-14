@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 C版多图表测试
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ C版多图表测试
 
 
 
-> 源码 (cpp)
+> Source (cpp)
 
 ``` cpp
 /*backtest
@@ -150,10 +150,10 @@ void main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/190848
 
-> 更新时间
+> Last Modified
 
 2020-03-16 11:48:16

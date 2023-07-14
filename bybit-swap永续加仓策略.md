@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 bybit-swap永续加仓策略
 
-> 策略作者
+> Author
 
 gulishiduan_高频排序
 
-> 策略描述
+> Strategy Description
 
 //近期有朋友反应有小bug,先上测试网。参数可以根据需要自由调整。策略的本质是跟踪k线的抵扣价判断多空，简单来说是通过均线的转折，实时检测信号
 //注册新账户，欢迎用我的注册连接：https://www.bytick.com/zh-CN/register/?affiliate_id=7586&language=en&group_id=0&group_type=2
@@ -100,11 +100,11 @@ https://wx2.sinaimg.cn/mw1024/c5775633ly1gbsjvu4iipj20lr0h775f.jpg
 2. 停止。策略停止退出
 3. 切换策略行情后继续.切换行情为震荡或趋势后继续运行，是交互1'继续'的一种扩展
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |fastMaPeriod|5|快MA周期|
 |slowMaPeriod|10|慢MA周期|
@@ -127,14 +127,14 @@ https://wx2.sinaimg.cn/mw1024/c5775633ly1gbsjvu4iipj20lr0h775f.jpg
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |继续|__button__|是否继续|
 |停止|__button__|是否停止|
 |切换策略行情|0|切换策略行情后继续: 震荡|趋势|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -659,10 +659,10 @@ function main () {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/205469
 
-> 更新时间
+> Last Modified
 
 2021-01-08 19:20:42

@@ -1,25 +1,25 @@
 
-> 策略名称
+> Name
 
 GuoJian_First
 
-> 策略作者
+> Author
 
 liuguojian
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |min|0.0085|买入最小值|
 |max|0.008534|卖出最大值|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*backtest
@@ -76,10 +76,10 @@ function init(){
  
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/113871
 
-> 更新时间
+> Last Modified
 
 2018-08-28 21:43:15

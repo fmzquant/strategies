@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 EtHEriOOOm-30MIN
 
-> 策略作者
+> Author
 
 a624587332
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_hl2|0|src: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
 |v_input_2|0|Longs / Shorts: Both|Longs|Shorts|
@@ -62,7 +62,7 @@ a624587332
 |v_input_45|0.081| SL/100|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 strategy("EtHEriOOOm [30MIN]", overlay=true,  pyramiding=1,initial_capital = 10000, default_qty_type= strategy.percent_of_equity, default_qty_value = 100, calc_on_order_fills=false, slippage=0,commission_type=strategy.commission.percent,commission_value=0.04)
@@ -432,10 +432,10 @@ if long_                                                                and     
 // By wielkieef
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/376259
 
-> 更新时间
+> Last Modified
 
 2022-08-02 23:44:45

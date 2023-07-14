@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 FMZ教程-JavaScript速成手册
 
-> 策略作者
+> Author
 
 作手君
 
@@ -11,7 +11,7 @@ FMZ教程-JavaScript速成手册
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 //文中的console.log在FMZ调试可以用Log函数代替
@@ -372,10 +372,10 @@ myNewObj = new MyConstructor(); // = {myNumber: 5}
 myNewObj.myNumber; // = 5
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/395725
 
-> 更新时间
+> Last Modified
 
 2023-01-16 09:43:09

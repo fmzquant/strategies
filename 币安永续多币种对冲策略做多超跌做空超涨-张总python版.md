@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 币安永续多币种对冲策略做多超跌做空超涨-张总python版
 
-> 策略作者
+> Author
 
 汇链资本
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Trade_symbols|IOST,TRX,XLM,QTUM,DASH,ADA,BNB,XMR,ZEC,ATOM,IOTA,NEO,ONT,XRP,BAT,VET,EOS,ETC,LTC|交易的币种|
 |Trade_value|50|每偏离指数1%持有价值|
@@ -24,7 +24,7 @@
 |Reset|false|重置历史数据|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 #刚学python，希望指正！共同学习！
@@ -538,10 +538,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/201963
 
-> 更新时间
+> Last Modified
 
 2020-05-02 23:34:14

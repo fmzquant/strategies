@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Uniswap-V3-交易类库Uniswap-V3-Trade-Template
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 发明者平台正式接入web3链上合约交互调用, 这个模板是以uniswap v3为例的一个交易类库, 有动手能力的可以轻松接入其它defi交易所
 
@@ -129,17 +129,17 @@ $.testUniswap = function() {
 
 ```
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ChainType|0|ChainType: Default|Ethereum|Arbitrum|Optimism|Avalanche|Polygon|Celo|
 |AutoFetchTokens|false|AutoFetchTokens|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /* jshint esversion: 7 */
@@ -503,10 +503,10 @@ $.testUniswap = function() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/397260
 
-> 更新时间
+> Last Modified
 
 2023-03-15 15:35:03

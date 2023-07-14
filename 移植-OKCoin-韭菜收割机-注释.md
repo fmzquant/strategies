@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 移植-OKCoin-韭菜收割机-注释
 
-> 策略作者
+> Author
 
 lkk91297
 
-> 策略描述
+> Strategy Description
 
 移植自: https://github.com/richox/okcoin-leeks-reaper
 
@@ -42,11 +42,11 @@ OKCoin韭菜收割机
 
 BTC: 3QFn1qfZMhMQ4FhgENR7fha3T8ZVw1bEeU
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |BurstThresholdPct|5e-05|burst.threshold.pct|
 |BurstThresholdVol|10|burst.threshold.vol|
@@ -56,7 +56,7 @@ BTC: 3QFn1qfZMhMQ4FhgENR7fha3T8ZVw1bEeU
 |TickInterval|280|轮训周期(毫秒)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function LeeksReaper() {                                        //创建构造函数LeeksReaper
@@ -322,10 +322,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/124178
 
-> 更新时间
+> Last Modified
 
 2018-10-31 13:43:19

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Shannon-Entropy-V2
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Version 2, Shannon Entropy
 This update includes both a deadband (Plotting Optional) and PercentRank Indicating.
@@ -23,11 +23,11 @@ Using this script is based on "Information" and it highlights places that need y
 
  ![IMG](https://www.fmz.com/upload/asset/6819752e8699f5b327.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|9|Entropy Length|
@@ -39,7 +39,7 @@ Using this script is based on "Information" and it highlights places that need y
 |v_input_8|true|Print Bands|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -105,10 +105,10 @@ else if hvp>(100-vPR)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365095
 
-> 更新时间
+> Last Modified
 
 2022-05-24 10:13:21

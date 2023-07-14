@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MTF-RSI-STOCH-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This sharing is an indicator where you can see the average of different time frames.
 
@@ -22,11 +22,11 @@ The strategy is to take position when the two lines get overbought or oversold a
 
  ![IMG](https://www.fmz.com/upload/asset/189dc4ce5df05106d85.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|80|(?GRP1)Overbought Level|
 |v_input_int_2|20|Oversold Level|
@@ -45,7 +45,7 @@ The strategy is to take position when the two lines get overbought or oversold a
 |v_input_int_9|30|Stochastic Oversold Level|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -162,10 +162,10 @@ strategy.close("Buy_Short",when=(AVG_STOCH <=30 and AVG <=50 and close <=strateg
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362168
 
-> 更新时间
+> Last Modified
 
 2022-05-10 12:06:12

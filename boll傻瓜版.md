@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 boll傻瓜版
 
-> 策略作者
+> Author
 
 sabar
 
@@ -11,7 +11,7 @@ sabar
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
  function main (){
@@ -40,10 +40,10 @@ sabar
  }     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/318249
 
-> 更新时间
+> Last Modified
 
 2021-09-23 09:43:52

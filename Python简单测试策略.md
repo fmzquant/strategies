@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 Python简单测试策略
 
-> 策略作者
+> Author
 
 Zero
 
-> 策略描述
+> Strategy Description
 
 需要下载最新的托管者, 托管者机器个需要安装python, (Linux自带无需安装)
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |a|1.2|number|
 |b|你好hello|str|
@@ -23,7 +23,7 @@ Zero
 |d|0|select: abc|def|xxx|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import time
@@ -87,10 +87,10 @@ def main():
         Sleep(10000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/20761
 
-> 更新时间
+> Last Modified
 
 2018-06-05 16:43:46

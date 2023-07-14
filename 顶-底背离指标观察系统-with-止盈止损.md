@@ -1,25 +1,25 @@
 
-> 策略名称
+> Name
 
 顶-底背离指标观察系统-with-止盈止损
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|止损百分比|
 |v_input_2|true|止盈百分比|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -77,10 +77,10 @@ else if strategy.position_size < 0
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/402455
 
-> 更新时间
+> Last Modified
 
 2023-03-02 22:39:32

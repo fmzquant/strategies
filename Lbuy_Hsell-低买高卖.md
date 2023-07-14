@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Lbuy_Hsell-低买高卖
 
-> 策略作者
+> Author
 
 sltrain
 
@@ -11,7 +11,7 @@ sltrain
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -51,10 +51,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/224579
 
-> 更新时间
+> Last Modified
 
 2020-08-29 21:22:50

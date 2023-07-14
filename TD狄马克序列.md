@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 TD狄马克序列
 
-> 策略作者
+> Author
 
 btccccrazy
 
@@ -11,7 +11,7 @@ btccccrazy
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -93,10 +93,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/262467
 
-> 更新时间
+> Last Modified
 
 2021-03-16 11:18:47

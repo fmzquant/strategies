@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 MACD-Strategy
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|39|Period|
 |v_input_2|7|Fast Length|
@@ -36,7 +36,7 @@ Zer3192
 |v_input_19|31|Backtest Stop Day|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
@@ -147,10 +147,10 @@ plot(strategy.position_size > 0 ? SL_floating_long : na, style=plot.style_linebr
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/392636
 
-> 更新时间
+> Last Modified
 
 2022-12-02 15:57:11

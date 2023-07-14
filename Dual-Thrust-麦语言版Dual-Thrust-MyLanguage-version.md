@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Dual-Thrust-麦语言版Dual-Thrust-MyLanguage-version
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 > 基本原理
@@ -48,18 +48,18 @@ Dual-Thrust-麦语言版Dual-Thrust-MyLanguage-version
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |N|4|计算周期|Period: calculate period|
 |KS|0.5|上轨系数|upper track coefficient|
 |KX|0.5|下轨系数|lower track coefficient|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -85,10 +85,10 @@ C<DOWNTRACK,SPK;
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128884
 
-> 更新时间
+> Last Modified
 
 2019-08-20 10:47:50

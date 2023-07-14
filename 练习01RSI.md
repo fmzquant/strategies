@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 练习01RSI
 
-> 策略作者
+> Author
 
 3028165668
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -64,10 +64,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/288889
 
-> 更新时间
+> Last Modified
 
 2021-06-09 10:24:00

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 币安合约BNB手续费抵扣-自动购买自动划转
 
-> 策略作者
+> Author
 
 Xueqiu Bot
 
-> 策略描述
+> Strategy Description
 
 Contact : ck@xueqiubot.com / WeChat@stay37
 本策略为自动从合约账户划转USDT至现货账户购买BNB，将BNB转入合约账户抵扣手续费。
@@ -15,7 +15,7 @@ Contact : ck@xueqiubot.com / WeChat@stay37
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 # Contact : ck@xueqiubot.com / WeChat@stay37
@@ -56,10 +56,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/236437
 
-> 更新时间
+> Last Modified
 
 2020-11-11 22:38:54

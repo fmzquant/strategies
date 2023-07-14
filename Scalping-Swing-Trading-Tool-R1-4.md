@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Scalping-Swing-Trading-Tool-R1-4
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Description:
 This study project is a "Scalping Swing trading Tool" and is an alternative to the "Scalping Pullback Tool R1". It is designed for a two pane TradingView chart layout:
@@ -55,11 +55,11 @@ Other than the "SweetSpot Gold2" indicator, you should not need any other indica
 
  ![IMG](https://www.fmz.com/upload/asset/11a7ebca21140501d74.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|Show Price Action Channel (PAC)|
 |v_input_2|true|Show coloured Bars close relative on PAC|
@@ -77,7 +77,7 @@ Other than the "SweetSpot Gold2" indicator, you should not need any other indica
 |v_input_14|false|Filter for Pristine (Ideal) Fractals|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -397,10 +397,10 @@ else if isdown
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365642
 
-> 更新时间
+> Last Modified
 
 2022-05-25 15:58:26

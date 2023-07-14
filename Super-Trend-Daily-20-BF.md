@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Super-Trend-Daily-20-BF
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is my Super Trend Daily strategy but with one important difference. You can now adjust settings for long or short signals individually and separately. For example, the condition for a long signal may require a different parameter setting than the condition for a short signal. Each parameter in the signal generation can be tuned. You can also decide what kind of stop loss you want for each side - you could have a fixed stop loss for longs and an ATR derived stop loss for shorts, or whatever.
 
@@ -30,11 +30,11 @@ This is a work in progress so any suggestions for improvements are welcome.
 
  ![IMG](https://www.fmz.com/upload/asset/7d3052cb0b5687a425.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|════════ Test Period ═══════|
 |v_input_2|2017|Backtest Start Year|
@@ -70,7 +70,7 @@ This is a work in progress so any suggestions for improvements are welcome.
 |v_input_32|true|Use Shorts|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -247,10 +247,10 @@ fill(p0, p4, color = color.red, transp=60)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365892
 
-> 更新时间
+> Last Modified
 
 2022-05-26 16:48:33

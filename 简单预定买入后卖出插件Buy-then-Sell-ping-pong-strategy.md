@@ -1,22 +1,22 @@
 
-> 策略名称
+> Name
 
 简单预定买入后卖出插件Buy-then-Sell-ping-pong-strategy
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 如题，可设定买入价格，买入成功后自动挂卖出价格卖出，
 插件可以在交易终端一键启动，不收取费用，方便手动交易。详细介绍：https://www.fmz.com/digest-topic/5051
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |BUYPRICE|6200|buy price|
 |BUYAMOUNT|0.1|buy amount|
@@ -24,7 +24,7 @@
 |Intervel|6|sleep time (second)|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function CancelPendingOrders() {
@@ -58,10 +58,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/121228
 
-> 更新时间
+> Last Modified
 
 2020-03-24 10:50:59

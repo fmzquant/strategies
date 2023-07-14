@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 SSL-CHANNEL-STOCH-RSI
 
-> 策略作者
+> Author
 
 luqi0212
 
-> 策略描述
+> Strategy Description
 
 默认开仓数量 20 个币
 止盈止损10000%，即不设止盈止损
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|Take Wicks into Account ?|
 |v_input_2|true|Highlight State ?|
@@ -53,7 +53,7 @@ luqi0212
 |v_input_16|true|Show Buy/Sell Labels ?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -179,10 +179,10 @@ strategy.exit("exit",  profit = prof, loss = los)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/391341
 
-> 更新时间
+> Last Modified
 
 2022-11-24 11:56:41

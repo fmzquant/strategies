@@ -1,24 +1,24 @@
 
-> 策略名称
+> Name
 
 Larry-Connors-RSI2均值回归策略
 
-> 策略作者
+> Author
 
 homily
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Y|70|Y|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -52,10 +52,10 @@ CLOSE<ma1 AND RSI2>90,SP(BKVOL);
 AUTOFILTER;
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/207157
 
-> 更新时间
+> Last Modified
 
 2020-05-14 09:50:47

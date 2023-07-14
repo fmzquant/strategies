@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Indicator-WaveTrend-Oscillator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 WaveTrend Oscillator is a port of a famous TS /MT indicator.
 When the oscillator is above the overbought band (red lines) and crosses down the signal (dotted line), it is usually a good SELL signal. Similarly, when the oscillator crosses above the signal when below the Oversold band (green lines), it is a good BUY signal.
@@ -17,11 +17,11 @@ I have marked some cross-overs in the above chart. As you can see, they are *not
 **回测**
  ![IMG](https://www.fmz.com/upload/asset/1e6ca21012dec675df4.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|10|Channel Length|
 |v_input_2|21|Average Length|
@@ -31,7 +31,7 @@ I have marked some cross-overs in the above chart. As you can see, they are *not
 |v_input_6|-53|Over Sold Level 2|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -84,10 +84,10 @@ else if wt1 < osLevel1
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361521
 
-> 更新时间
+> Last Modified
 
 2022-05-08 11:16:55

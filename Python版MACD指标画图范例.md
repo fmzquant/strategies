@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 Python版MACD指标画图范例
 
-> 策略作者
+> Author
 
 小小梦
 
@@ -11,7 +11,7 @@ Python版MACD指标画图范例
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -92,10 +92,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/187379
 
-> 更新时间
+> Last Modified
 
 2020-02-27 19:02:49

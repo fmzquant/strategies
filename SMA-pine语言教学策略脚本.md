@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 SMA-pine语言教学策略脚本
 
-> 策略作者
+> Author
 
 Zer3192
 
@@ -11,7 +11,7 @@ Zer3192
 
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 
@@ -51,10 +51,10 @@ if (strategy.position_size < 0)
 strategy.exit("stoploss/takeprofit","Short", stop=shortStop, limit=shortEntry)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/400134
 
-> 更新时间
+> Last Modified
 
 2023-02-15 18:19:03

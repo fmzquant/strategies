@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RSI-Divergence-with-Pivot-BB-SMA-EMA-SMMA-WMA-VWMA
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 RSI Divergences with Pivots , BB, MA is a basic RSI oscillator with some useful features, it allow the user to display divergences, pivots , and Moving Average directly on the RSI Indicator.
 
@@ -21,11 +21,11 @@ Bollinger Bands
 
  ![IMG](https://www.fmz.com/upload/asset/171d5b429c597cc2474.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|false|Hide pivots?|
 |v_input_2|false|Shorter labels?|
@@ -41,7 +41,7 @@ Bollinger Bands
 |v_input_float_1|2|BB StdDev|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -217,10 +217,10 @@ else if divbull
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362664
 
-> 更新时间
+> Last Modified
 
 2022-05-12 17:45:45

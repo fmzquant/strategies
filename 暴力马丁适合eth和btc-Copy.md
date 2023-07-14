@@ -1,28 +1,28 @@
 
-> 策略名称
+> Name
 
 暴力马丁适合eth和btc-Copy
 
-> 策略作者
+> Author
 
 Zer3192
 
-> 策略描述
+> Strategy Description
 
 ETH 每600美元0.002手设置，一个月盈利50%,建议每两个月把盈利取出来，因为马丁最后的归宿就是爆仓，天下没有不爆仓的马丁，建议有3份资金，也就是1800美元使用，btc没测试，总之很暴力就是了
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |N|0.002|资金使用率或手数|
 |XX|true|加倍数值|
 |sssss|true|实盘参数系数2|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -85,10 +85,10 @@ MULTSIG(0, 0, 50, 0);
 TRADE_AGAIN(100);
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/343745
 
-> 更新时间
+> Last Modified
 
 2022-02-06 07:08:49

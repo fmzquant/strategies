@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 Accurate-Swing-Trading-System
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|3|Swing|
 |v_input_2|true|Barcolor|
 |v_input_3|false|Bgcolor|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -65,10 +65,10 @@ else if Sell
     strategy.entry("short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/367565
 
-> 更新时间
+> Last Modified
 
 2022-06-04 07:05:48

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 布林均线突破_vnpy_botvs实现版
 
-> 策略作者
+> Author
 
 ipqhjjybj
 
-> 策略描述
+> Strategy Description
 
 这是将 botvs的接口用 Vnpy 的写法 方式简单封装掉，便于后期的调用！
            这本来是期货的 策略， 直接改参数套在 比特币上。
@@ -18,11 +18,11 @@ ipqhjjybj
            bar.minute.hour  代表是小时级别 
            bar.minute.minute  代表是分钟级别
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractTypeIdx|0|期货类型: 当周|次周|季度|
 |MarginLevelIdx|0|杠杠大小: 10|20|
@@ -30,7 +30,7 @@ ipqhjjybj
 |minute_use|12|分钟级别|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''
@@ -641,10 +641,10 @@ def main():
         Sleep(LoopInterval * 1000)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/52801
 
-> 更新时间
+> Last Modified
 
 2017-09-10 21:35:41

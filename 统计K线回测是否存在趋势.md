@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 统计K线回测是否存在趋势
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 这个策略主要是想从回测数据中考察是否可以根据前面涨跌情况，预测接下来的涨跌。具体如下：如果5根K线中，出现4个或5个上涨，那么下一根是否更趋向于上涨，该策略将统计出上涨的频率。当然也已更改策略的参数统计其它上涨或下跌的情况。在几天的回测时间内，策略运行的还可以，但是回测周期较长时，比如从本月13号到现在，就会出现混乱，不清楚原因。
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function adjustFloat(v) {
@@ -58,10 +58,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/1125
 
-> 更新时间
+> Last Modified
 
 2014-10-28 19:32:09

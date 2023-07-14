@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 账号内所有订单显示U本位
 
-> 策略作者
+> Author
 
 高频量化
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {
@@ -99,10 +99,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/335519
 
-> 更新时间
+> Last Modified
 
 2021-12-17 23:22:30

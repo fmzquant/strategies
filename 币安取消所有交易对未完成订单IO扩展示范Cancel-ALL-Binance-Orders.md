@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 币安取消所有交易对未完成订单IO扩展示范Cancel-ALL-Binance-Orders
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 币安取消所有交易对未完成订单，使用IO接口，可以当作学习IO接口连接为支持API接口的范例
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function cancellAll(){
@@ -41,10 +41,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/121549
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:36:05

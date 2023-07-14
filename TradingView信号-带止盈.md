@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 TradingView信号-带止盈
 
-> 策略作者
+> Author
 
 JKMCHEN
 
-> 策略描述
+> Strategy Description
 
 相关文章：https://www.fmz.com/digest-topic/9794
 
@@ -16,19 +16,21 @@ JKMCHEN
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |TakeProfitPercentage|0.3|止盈百分比|
 |Leverage|5|杠杆（5-10）|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
+////TradingView信号-带止盈 V 0.1.0
+
 // 参数设置
 //var TakeProfitPercentage = 0.3; // 止盈百分比
 //var Leverage = 5; // 开仓倍率
@@ -253,10 +255,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/410060
 
-> 更新时间
+> Last Modified
 
-2023-04-18 15:26:23
+2023-04-20 14:44:36

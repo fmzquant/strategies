@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MACD-SMA-200-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Here is a combination of the classic MACD (moving average convergence divergence indicator) with the classic slow moving average SMA with period 200 together as a strategy.
 
@@ -23,11 +23,11 @@ All trading involves high risk; past performance is not necessarily indicative o
 
  ![IMG](https://www.fmz.com/upload/asset/131fdf72f74c661fa0c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_close|0|source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 |v_input_2|12|MACD fast moving average|
@@ -39,7 +39,7 @@ All trading involves high risk; past performance is not necessarily indicative o
 |v_input_8|true|Enable Background Color?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -122,10 +122,10 @@ else if crossunder(hist, 0) and macd < 0 and fastMA < slowMA and close[slowLengt
 //plot(strategy.equity, title="equity", color=red, linewidth=2, style=areabr)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361684
 
-> 更新时间
+> Last Modified
 
 2022-05-08 11:16:41

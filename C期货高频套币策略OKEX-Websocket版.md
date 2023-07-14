@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 C期货高频套币策略OKEX-Websocket版
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## C++期货高频套币策略OKEX Websocket版
 
@@ -58,11 +58,11 @@ C期货高频套币策略OKEX-Websocket版
 
   ![IMG](https://www.fmz.com/upload/asset/170dcc772a1925d46885.png)
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |InstrumentA|this_week|近期合约|
 |InstrumentB|next_week|远期合约|
@@ -79,7 +79,7 @@ C期货高频套币策略OKEX-Websocket版
 |Proxy||代理设置|
 
 
-> 源码 (cpp)
+> Source (cpp)
 
 ``` cpp
 /*backtest
@@ -661,10 +661,10 @@ void main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/163447
 
-> 更新时间
+> Last Modified
 
 2020-05-27 10:29:05

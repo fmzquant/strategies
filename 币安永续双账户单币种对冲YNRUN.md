@@ -1,26 +1,26 @@
 
-> 策略名称
+> Name
 
 币安永续双账户单币种对冲YNRUN
 
-> 策略作者
+> Author
 
 高吸低抛
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |Reset|false|重置历史数据|
 |MarginLevel|50|交易币种的杠杆|
 |CloseAllOnExit|false|机器人停止后取消所有仓位|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var Stop_loss = 0.8;
@@ -1408,10 +1408,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/211262
 
-> 更新时间
+> Last Modified
 
 2020-09-08 19:25:12

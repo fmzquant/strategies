@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Squeeze-Momentum-Indicator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This is a derivative of John Carter's "TTM Squeeze" volatility indicator, as discussed in his book "Mastering the Trade" (chapter 11).
 
@@ -19,11 +19,11 @@ Mr.Carter suggests waiting till the first gray after a black cross, and taking a
 
  ![IMG](https://www.fmz.com/upload/asset/c21966c53f5a293a81.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|20|BB Length|
 |v_input_2|2|BB MultFactor|
@@ -32,7 +32,7 @@ Mr.Carter suggests waiting till the first gray after a black cross, and taking a
 |v_input_5|true|Use TrueRange (KC)|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -94,10 +94,10 @@ else if val <0 and val > nz(val[1])
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361508
 
-> 更新时间
+> Last Modified
 
 2022-05-08 11:17:04

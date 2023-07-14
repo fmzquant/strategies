@@ -1,23 +1,23 @@
 
-> 策略名称
+> Name
 
 Dual-Thrust-OKEX-Feature
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 Check the url below to learn abount Dual Thrust Strategy.
 
 https://www.quantconnect.com/tutorials/strategy-library/dual-thrust-trading-algorithm
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |ContractTypeIdx|0|Contract Name: this_week|next_week|quarter|
 |MarginLevelIdx|0|Margin Level: 10|20|
@@ -30,7 +30,7 @@ https://www.quantconnect.com/tutorials/strategy-library/dual-thrust-trading-algo
 |PeriodShow|500|total K-line number to show for chart|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var ChartCfg = {
@@ -250,10 +250,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/103247
 
-> 更新时间
+> Last Modified
 
 2018-07-04 14:41:06

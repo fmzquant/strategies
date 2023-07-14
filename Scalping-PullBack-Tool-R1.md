@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Scalping-PullBack-Tool-R1
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This study project is a Scalping Pullback trading Tool that incorporates the majority of the indicators needed to analyse and scalp Trends for Pull Backs and reversals on 1min, 5min or 15min charts. The set up utilies Heikin Ashi candle charts. Incorporated within this tool are the following indicators:
 1. Major industry (Banks) recognised important EMAs in an EMA Ribbon:
@@ -37,11 +37,11 @@ Other than the SweetSpot Gold10 indicator, you should not need any other indicat
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/108b0415e329fb1a830.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|34|High Low PAC channel Length|
 |v_input_2|89|fastEMAlength|
@@ -61,7 +61,7 @@ Other than the SweetSpot Gold10 indicator, you should not need any other indicat
 |v_input_16|true|Use Heikin Ashi Candles in Algo Calculations|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -317,10 +317,10 @@ else if Short
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364527
 
-> 更新时间
+> Last Modified
 
 2022-05-20 16:32:14

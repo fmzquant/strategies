@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 BuySell-Strategy-depends-on-AOStochRSIATR
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy is just for training, its purpose is just learning code in pine script.
 Don't make buy or sell decision with this strategy.
@@ -32,11 +32,11 @@ RSI ve Stoch asırı alım bölgesinde iken awesome negatife döner ise short 
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/12d6d36c626f331a198.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|3|Fast Length|
 |v_input_2|17|Slow length|
@@ -48,7 +48,7 @@ RSI ve Stoch asırı alım bölgesinde iken awesome negatife döner ise short 
 |v_input_8|14|ATR Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -134,10 +134,10 @@ if (ShortCondition)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/364518
 
-> 更新时间
+> Last Modified
 
 2022-05-20 16:19:55

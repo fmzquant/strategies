@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 BSC-Transaction
 
-> 策略作者
+> Author
 
 扁豆子
 
-> 策略描述
+> Strategy Description
 
 就...
 最近研究打新, 自动链上转帐...
@@ -15,11 +15,11 @@ BSC-Transaction
 在此公开一哈~
 祝大家发财!!
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |my_address|1|my_address|
 |to_address|1|to_address|
@@ -31,7 +31,7 @@ BSC-Transaction
 |gas|10|gas|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 
@@ -139,10 +139,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/263596
 
-> 更新时间
+> Last Modified
 
 2021-03-23 14:45:49

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 OK确认无法提币交易对
 
-> 策略作者
+> Author
 
 daniaoren
 
-> 策略描述
+> Strategy Description
 
 自用的，简单列出所有目前OKEX无法提现的币，有时候挺有用的，需要自取
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function main() {
@@ -41,10 +41,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/253278
 
-> 更新时间
+> Last Modified
 
 2021-02-10 15:29:08

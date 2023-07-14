@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Hull-Suite-Strategy
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Converted the hull suite into a strategy script for easy backtesting and added ability to specify a time periods to backtest over.
 
@@ -16,11 +16,11 @@ Converted the hull suite into a strategy script for easy backtesting and added a
 
  ![IMG](https://www.fmz.com/upload/asset/108ca21a1a518163216.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Strategy Direction: long|short|all|
 |v_input_2|2016|Backtest Start Year|
@@ -39,7 +39,7 @@ Converted the hull suite into a strategy script for easy backtesting and added a
 |v_input_15|40|Band Transparency|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -121,10 +121,10 @@ if HULL[0] < HULL[2] and testPeriod()
     strategy.entry("sell", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365727
 
-> 更新时间
+> Last Modified
 
 2022-05-25 18:48:40

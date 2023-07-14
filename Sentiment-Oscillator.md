@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Sentiment-Oscillator
 
-> 策略作者
+> Author
 
 发明者量化
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|49|(?Parameters)Market Sentiment Lookback Length|
 |v_input_2|40|Fast EMA Length|
@@ -38,7 +38,7 @@ Sentiment-Oscillator
 |v_input_21|false|Use Alternate Color Scheme?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -205,10 +205,10 @@ if longStrategy
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361332
 
-> 更新时间
+> Last Modified
 
 2022-05-05 20:45:11

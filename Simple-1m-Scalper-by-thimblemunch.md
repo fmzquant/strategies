@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 Simple-1m-Scalper-by-thimblemunch
 
-> 策略作者
+> Author
 
 Zer3192
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|12|STC Length|
 |v_input_2|26|STC FastLength|
@@ -22,7 +22,7 @@ Zer3192
 |v_input_5|3|Trend Multiplyer|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 //@version=4
@@ -103,10 +103,10 @@ else if secretSauceShort
     strategy.entry("sell", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/380007
 
-> 更新时间
+> Last Modified
 
 2022-08-25 19:55:23

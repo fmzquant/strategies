@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 基于ATR波动率指标构建的通道策略Channel-strategy-based-on-ATR
 
-> 策略作者
+> Author
 
 阿基米德的浴缸
 
-> 策略描述
+> Strategy Description
 
 [trans]
 - 名称: 基于ATR波动率指标构建的通道策略
@@ -44,18 +44,18 @@
 
 [/trans]
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |SLOSS|2|止损百分比|stop loss percentage|
 |N|200|ATR指标参数|ATR index parameter|
 |M|4|上下轨系数|upper and lower track coefficients|
 
 
-> 源码 (麦语言)
+> Source (MyLanguage)
 
 ``` pascal
 (*backtest
@@ -82,10 +82,10 @@ C<=BKPRICE*(1-SLOSS*0.01),SP;
 AUTOFILTER;
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/128126
 
-> 更新时间
+> Last Modified
 
 2018-12-18 12:55:34

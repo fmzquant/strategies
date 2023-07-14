@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Ichimoku-Cloud-Smooth-Oscillator
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The Ichimoku Cloud is a powerful indicator to track trends. By smoothing it and placing it in a separate chart, the signals can be easily identified without cluttering the display. The bold line is the signal: green indicates a buy signal while red indicates a sell signal. Gray represents a possible change in direction and the lack of a trend. The thinner line is the width of the cloud which can be used to further determine the direction.
 
@@ -15,11 +15,11 @@ The Ichimoku Cloud is a powerful indicator to track trends. By smoothing it and 
 
  ![IMG](https://www.fmz.com/upload/asset/18da159feb076ddb1c4.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|9|Conversion Line Periods|
 |v_input_2|26|Base Line Periods|
@@ -28,7 +28,7 @@ The Ichimoku Cloud is a powerful indicator to track trends. By smoothing it and 
 |v_input_5|26|Displacement|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -97,10 +97,10 @@ else if conversionCloudDistance<0
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361977
 
-> 更新时间
+> Last Modified
 
 2022-05-09 12:22:38

@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 crypto-futures-hourly-scalping-with-ma-rsi-ogcheckers
 
-> 策略作者
+> Author
 
 张超
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|3|(?moving_average_settings)moving average length 1 ( default = 3 )|
 |v_input_2|5|moving average length 2 ( default = 5 )|
@@ -26,7 +26,7 @@ crypto-futures-hourly-scalping-with-ma-rsi-ogcheckers
 |v_input_8|5|(?rsi_lower+rsi_buffer = rsi_lower_limit + rsi_buffer)rsi_buffer ( -10 to 10 ) ( default = 5 )|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -141,10 +141,10 @@ else if c1o1 and c1o and oc and c1c and r7>=rsi_upper
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365080
 
-> 更新时间
+> Last Modified
 
 2022-05-23 14:25:26

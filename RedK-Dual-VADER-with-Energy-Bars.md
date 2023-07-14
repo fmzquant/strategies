@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RedK-Dual-VADER-with-Energy-Bars
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 The visual improvements I added in VADER-DEB helps bring more insight about the market action by
 1) exposing the dual/long VADER plot by default (which we use as a proxy for sentiment) - and it shows now as an area (instead of a histogram) - You can still hide the sentiment plot in indicator settings
@@ -27,11 +27,11 @@ good luck !
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/18a93e656d65507c1cf.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|10|length|
 |v_input_int_2|5|(?Directional Energy Ratio)Average|
@@ -43,7 +43,7 @@ good luck !
 |v_input_int_5|20|Lookback (for Relative)|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -228,10 +228,10 @@ else if Alert_dn
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365322
 
-> 更新时间
+> Last Modified
 
 2022-05-24 11:49:07

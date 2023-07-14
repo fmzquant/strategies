@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 期货一键平仓插件Cover-all-contracts
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 平该交易对下的所有期货仓位。
 平仓方式：已平多仓为例，不断挂卖一卖出，0.5s后撤销，继续挂卖一，知道完全平仓。每次挂单量为当前所有可平仓位。
@@ -16,7 +16,7 @@
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -50,10 +50,10 @@ function main(){
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/191363
 
-> 更新时间
+> Last Modified
 
 2020-04-02 09:40:01

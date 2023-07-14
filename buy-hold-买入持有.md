@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 buy-hold-买入持有
 
-> 策略作者
+> Author
 
 ipqhjjybj
 
-> 策略描述
+> Strategy Description
 
 买入持有策略
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -94,10 +94,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/41786
 
-> 更新时间
+> Last Modified
 
 2017-06-02 22:18:11

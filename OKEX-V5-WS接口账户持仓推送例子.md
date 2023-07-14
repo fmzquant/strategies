@@ -1,30 +1,30 @@
 
-> 策略名称
+> Name
 
 OKEX-V5-WS接口账户持仓推送例子
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## OKEX V5 WS接口账户持仓推送例子
 
 OKEX V5 WS接口私有接口使用范例，策略参数```accessKey```、```secretKey```、```passphrase```。其中```passphrase```是在交易所网站创建APIKEY时填写的秘钥口令。策略例子首先登陆验证，然后订阅了所有持仓信息。定时发送ping，交易所服务器会响应pong。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |accessKey|$$$__enc__$$$|accessKey|
 |secretKey|$$$__enc__$$$|secretKey|
 |passphrase|$$$__enc__$$$|passphrase|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 function getLogin(pAccessKey, pSecretKey, pPassphrase) {
@@ -83,10 +83,10 @@ function onexit() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/313116
 
-> 更新时间
+> Last Modified
 
 2021-09-03 11:49:54

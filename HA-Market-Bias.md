@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 HA-Market-Bias
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Hello Everyone. I hope you are all doing great. It's been a long time since I posted my first script here, and I got a lot of response from that.
 
@@ -29,11 +29,11 @@ By the way, I would be going with the name 'CEREBR' for any subsequent scripts I
 
  ![IMG](https://www.fmz.com/upload/asset/102d86d1df109ae1a02.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|(?HA Market Bias)Show HA Plot/ Market Bias|
 |v_input_1|100|Period|
@@ -41,7 +41,7 @@ By the way, I would be going with the name 'CEREBR' for any subsequent scripts I
 |v_input_int_1|7|Oscillator Period|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -118,10 +118,10 @@ else if o2 < c2
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361996
 
-> 更新时间
+> Last Modified
 
 2022-05-09 14:16:37

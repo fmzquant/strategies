@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Super-Scalper-5-Min-15-Min
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 This strategy is based on RSI and ATR Bands which works better in 5 and 15 Mins time frame.
 Perform enough back testing with 1:2R before using in real time.
@@ -19,11 +19,11 @@ I have also added Golden Cross Over of 65 and 21 EMA to have confirmation on tre
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/f78087a61a12c0ca4f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|14|ATR Period|
 |v_input_float_1|true|ATR Multi|
@@ -34,7 +34,7 @@ I have also added Golden Cross Over of 65 and 21 EMA to have confirmation on tre
 |v_input_int_5|100|Slow RSI Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -119,10 +119,10 @@ plot(shortSMA, color = color.red)
 plot(longSMA, color = color.yellow)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365373
 
-> 更新时间
+> Last Modified
 
 2022-05-24 16:20:58

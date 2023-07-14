@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RSI统计套利策略
 
-> 策略作者
+> Author
 
 quant777
 
-> 策略描述
+> Strategy Description
 
 此策略是基于RSI指标的统计套利策略，根据实测在熊市中也能有很高的胜率。策略会对行情进行RSI数据分析，一旦捕获到预定义的K线形态即进行短期套利。
 
@@ -26,7 +26,7 @@ https://www.pcclean.io/8cut
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 /*
@@ -383,10 +383,10 @@ function main(){
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/157366
 
-> 更新时间
+> Last Modified
 
 2019-07-16 14:28:24

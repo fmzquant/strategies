@@ -1,30 +1,30 @@
 
-> 策略名称
+> Name
 
 3EMA
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 **backtest**
 
  ![IMG](https://www.fmz.com/upload/asset/106b24ced36e0a7aa2c.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_1|20|短期均线|
 |v_input_int_2|50|中期均线|
 |v_input_int_3|100|长期均线|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -78,10 +78,10 @@ else if IN_SHORT_AREA
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362572
 
-> 更新时间
+> Last Modified
 
 2022-05-12 01:35:20

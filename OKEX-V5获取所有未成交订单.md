@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 OKEX-V5获取所有未成交订单
 
-> 策略作者
+> Author
 
 夏天不打你
 
@@ -11,7 +11,7 @@ OKEX-V5获取所有未成交订单
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -96,10 +96,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/340779
 
-> 更新时间
+> Last Modified
 
 2022-01-14 22:29:20

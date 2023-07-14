@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Moving-Average-Colored-EMA-SMA
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Amazon Prime Video presents Garaj Garaj Jugalbandi Video Song from Bandish Bandits. A folk song performed by Ritwik Bhowmik and Atul Kulkarni, sung by Farid Hasan & Mohammed Aman, music directed by Shankar Ehsaan Loy and lyrics by Sameer Samant. In the season finale Radhe and Digvijay repeat this song as an ode to their common teacher, Panditji.
 
@@ -15,11 +15,11 @@ Amazon Prime Video presents Garaj Garaj Jugalbandi Video Song from Bandish Bandi
 
  ![IMG](https://www.fmz.com/upload/asset/1758ea192f6c8cff0bf.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|(?Moving Average Colored EMA/SMA)Show EMA on chart|
 |v_input_int_1|13|Ema Length|
@@ -32,7 +32,7 @@ Amazon Prime Video presents Garaj Garaj Jugalbandi Video Song from Bandish Bandi
 |v_input_float_1|3|Factor|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -129,10 +129,10 @@ else if sell
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/362499
 
-> 更新时间
+> Last Modified
 
 2022-05-11 21:23:11

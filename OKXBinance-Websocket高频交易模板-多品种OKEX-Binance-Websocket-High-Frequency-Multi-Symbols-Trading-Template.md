@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 OKXBinance-Websocket高频交易模板-多品种OKEX-Binance-Websocket-High-Frequency-Multi-Symbols-Trading-Template
 
-> 策略作者
+> Author
 
 发明者量化
 
-> 策略描述
+> Strategy Description
 
 [trans]
 实现功能:
@@ -159,7 +159,7 @@ The following is the a common market maker robot for OKX and Binance based on th
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -1572,10 +1572,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/395045
 
-> 更新时间
+> Last Modified
 
 2023-03-27 10:34:41

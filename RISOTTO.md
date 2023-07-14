@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 RISOTTO
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 RSI OTT is Anıl Özekşi's latest derived version of Optimized Trend Tracker on RSI Oscillator.
 He can solve the fake signals of RSI Oscillator by adopting OTT on the indicator.
@@ -16,11 +16,11 @@ Those who don't know OTT can search in indicators.
 **backtest**
  ![IMG](https://www.fmz.com/upload/asset/161da421e1b62c9e45f.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_4|false|Show RSI/OTT Crossing Signals?|
 |v_input_1|100|(?0.0 RSI)0.0 RSI Period|
@@ -28,7 +28,7 @@ Those who don't know OTT can search in indicators.
 |v_input_3|0.2|RISOTTO Percent|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -110,10 +110,10 @@ else if sellSignallc
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363847
 
-> 更新时间
+> Last Modified
 
 2022-05-17 17:08:28

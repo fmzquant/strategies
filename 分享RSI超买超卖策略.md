@@ -1,17 +1,17 @@
 
-> 策略名称
+> Name
 
 分享RSI超买超卖策略
 
-> 策略作者
+> Author
 
-胡萝卜-CCXT策略代写
-
-
+胡萝卜-CCXT策略定制
 
 
 
-> 源码 (python)
+
+
+> Source (python)
 
 ``` python
 import talib
@@ -67,10 +67,10 @@ while True:
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/410112
 
-> 更新时间
+> Last Modified
 
 2023-04-18 12:46:08

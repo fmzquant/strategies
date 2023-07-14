@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 海龟策略btc现货版
 
-> 策略作者
+> Author
 
 groot
 
-> 策略描述
+> Strategy Description
 
 看到平台上没有公开的python海龟策略，自己写个简单的抛个砖。
 接近原版的海龟系统，没怎么优化，当做回测试验吧，也可以自己再优化下接实盘跑。
@@ -20,11 +20,11 @@ groot
 
 现货资金利用率较低，改成合约版后收益会更高。
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |fresh_rete|24|交易频率（小时）|
 |trade_percent|0.01|资产比率|
@@ -32,7 +32,7 @@ groot
 |atrlength|24|atr周期数|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -123,10 +123,10 @@ def main():
         Sleep(fresh_rete*60*60*1000)        
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/186598
 
-> 更新时间
+> Last Modified
 
 2020-03-06 12:04:41

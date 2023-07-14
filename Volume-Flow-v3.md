@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Volume-Flow-v3
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 DepthHouse Volume Flow indicator is used to help determine trend direction strictly based on Negative and Positive volume data.
 
@@ -24,18 +24,18 @@ Other changes:
 
  ![IMG](https://www.fmz.com/upload/asset/ac6b4d0c05b46b2f19.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|0|Moving Average Type: Simple|Exponential|Double Exponential|
 |v_input_2|14|MA Length|
 |v_input_3|3.1|Factor For Breakout Candle|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -107,10 +107,10 @@ else if rsig
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/365085
 
-> 更新时间
+> Last Modified
 
 2022-05-23 14:40:50

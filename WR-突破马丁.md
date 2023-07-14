@@ -1,19 +1,19 @@
 
-> 策略名称
+> Name
 
 WR-突破马丁
 
-> 策略作者
+> Author
 
 老虎量化
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |period|15|K线周期|
 |marginLevel|20|杠杆倍数|
@@ -27,12 +27,12 @@ WR-突破马丁
 
 
 
-|按钮|默认值|描述|
+|Button|Default|Description|
 |----|----|----|
 |清仓停机|__button__|清仓停机|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''backtest
@@ -518,10 +518,10 @@ def bianSwap(i, amount, directionStr, positionSide, zhiying, zhisun):
     
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/301145
 
-> 更新时间
+> Last Modified
 
 2021-09-02 13:06:24

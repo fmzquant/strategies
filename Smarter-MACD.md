@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Smarter-MACD
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 A classic MACD with average peak and dip lines. The lighter green and red horizontal lines are the average peak and dip of the entire span, respectively. The second, bolder of the two lines are the averages of the peaks and dips above and below the overall peak and dip averages. The filled in color is to help visualize these averages and possible trade setups. Rework of the MACD + Averages script.
 
@@ -15,11 +15,11 @@ A classic MACD with average peak and dip lines. The lighter green and red horizo
 
  ![IMG](https://www.fmz.com/upload/asset/911c77b07aedaf0a4d.jpg) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|(?Visibility Settings)Show right-side monitor?|
 |v_input_2|12|(?MACD Settings)MACD Fast MA Length|
@@ -27,7 +27,7 @@ A classic MACD with average peak and dip lines. The lighter green and red horizo
 |v_input_4|23|MACD Signal Length|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -163,10 +163,10 @@ else if showMacd and (macdTop < macdTop[1])
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363579
 
-> 更新时间
+> Last Modified
 
 2022-05-16 17:05:05

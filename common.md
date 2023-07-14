@@ -1,25 +1,25 @@
 
-> 策略名称
+> Name
 
 common
 
-> 策略作者
+> Author
 
 linsilence
 
 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |retryDelay|1000|重试延迟|
 |isDebug|false|是否测试|
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -583,10 +583,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/246749
 
-> 更新时间
+> Last Modified
 
 2022-12-03 15:56:38

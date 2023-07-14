@@ -1,9 +1,9 @@
 
-> 策略名称
+> Name
 
 检查https-quantla-Argus-是否正常
 
-> 策略作者
+> Author
 
 小草
 
@@ -11,7 +11,7 @@
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import urllib2
@@ -27,10 +27,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/100344
 
-> 更新时间
+> Last Modified
 
 2018-06-22 10:29:01

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MultiSymbolCtrlLib
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 ## 说明
 
@@ -16,7 +16,7 @@ MultiSymbolCtrlLib
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 // 交易所接口调用实现
@@ -1380,10 +1380,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/276298
 
-> 更新时间
+> Last Modified
 
 2022-05-18 11:35:37

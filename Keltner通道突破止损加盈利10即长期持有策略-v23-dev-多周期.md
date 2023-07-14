@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Keltner通道突破止损加盈利10即长期持有策略-v23-dev-多周期
 
-> 策略作者
+> Author
 
 nanpian
 
-> 策略描述
+> Strategy Description
 
 一个多头策略购买Btc现货的策略，原始是1000个usdt的现金。
 每个小时看是否突破keltner通道，如果突破了，就做多。
@@ -21,7 +21,7 @@ nanpian
 
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 '''
@@ -146,10 +146,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/313041
 
-> 更新时间
+> Last Modified
 
 2021-09-02 12:04:56

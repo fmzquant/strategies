@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 MAGIC-MACD
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Thanks & Credits
 To Tradingview Team for allowing me to use their default MACD version and coding it in to a MAGIC MACD by adding a few lines of code that
@@ -86,11 +86,11 @@ This is purely for Educational purpose only. Not to be used as a stand alone ind
 
  ![IMG](https://www.fmz.com/upload/asset/4802b7293091d73f1e.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_bool_1|true|Enable Signal EMA=ON/MACD=OFF|
 |v_input_1|5|Fast Length|
@@ -112,7 +112,7 @@ This is purely for Educational purpose only. Not to be used as a stand alone ind
 |v_input_9|#ff0062|Fall|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -180,10 +180,10 @@ else if ta.crossunder(macd2,signal2)
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361839
 
-> 更新时间
+> Last Modified
 
 2022-05-08 17:16:51

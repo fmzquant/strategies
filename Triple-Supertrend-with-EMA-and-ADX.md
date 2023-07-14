@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Triple-Supertrend-with-EMA-and-ADX
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 Publishing a strategy that includes adx and ema filter as well
 
@@ -22,11 +22,11 @@ A FIlter is given to take or avoid re-enter on the same side. For example, After
 
  ![IMG](https://www.fmz.com/upload/asset/18f728137093b0473f5.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_int_4|200|EMA Len|
 |v_input_int_5|14|ADX Len|
@@ -42,7 +42,7 @@ A FIlter is given to take or avoid re-enter on the same side. For example, After
 |v_input_int_3|20|ATR Multi|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -166,10 +166,10 @@ strategy.close('SELL', Exit_short)
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/361880
 
-> 更新时间
+> Last Modified
 
 2022-05-08 21:16:55

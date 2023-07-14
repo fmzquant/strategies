@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 多图表例子数据可下载为csv等表格Multiple-charts-example
 
-> 策略作者
+> Author
 
 小草
 
-> 策略描述
+> Strategy Description
 
 一个展示多个图表的例子，多个图可共用一行，可以设置图表展示的宽度。
 支持HighCharts和HighStocks的基本图表，如折线图、直方图、柱状图、饼图、K线图等等，具体查询highchart官网，仿照本例子稍微更改就可使用。
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 var tradeHistory = {buyData:{amount:0, money:0}, sellData:{amount:0, money:0}, a:0, b:0, c:0, d:0, total:0}
@@ -331,10 +331,10 @@ function main() {
 }
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/136056
 
-> 更新时间
+> Last Modified
 
 2019-07-03 16:13:56

@@ -1,13 +1,13 @@
 
-> 策略名称
+> Name
 
 Concept-Dual-SuperTrend
 
-> 策略作者
+> Author
 
 张超
 
-> 策略描述
+> Strategy Description
 
 
 Simple SuperTrend indicator giving you the option to display two SuperTrends on a single script plus additional customization features. Dual setup inspired by Income Sharks 
@@ -17,11 +17,11 @@ Simple SuperTrend indicator giving you the option to display two SuperTrends on 
 
  ![IMG](https://www.fmz.com/upload/asset/15d862ed42201678eaf.png) 
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |v_input_1_hl2|0|Source: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
 |v_input_float_1|2|ATR Multiplier (Fast)|
@@ -36,7 +36,7 @@ Simple SuperTrend indicator giving you the option to display two SuperTrends on 
 |v_input_7|true|Show Buy/Sell Labels?|
 
 
-> 源码 (PineScript)
+> Source (PineScript)
 
 ``` javascript
 /*backtest
@@ -137,10 +137,10 @@ else if sellSignal2
     strategy.entry("Enter Short", strategy.short)
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/363807
 
-> 更新时间
+> Last Modified
 
 2022-05-17 14:47:45

@@ -1,21 +1,21 @@
 
-> 策略名称
+> Name
 
 Python版冰山委托-买入
 
-> 策略作者
+> Author
 
 小小梦
 
-> 策略描述
+> Strategy Description
 
 教学策略，相关文章地址：https://www.fmz.com/bbs-topic/5080
 
-> 策略参数
+> Strategy Arguments
 
 
 
-|参数|默认值|描述|
+|Argument|Default|Description|
 |----|----|----|
 |TotalBuyNet|10000|购买总金额(元)|
 |AvgBuyOnce|100|单次购买数量均值(元)|
@@ -27,7 +27,7 @@ Python版冰山委托-买入
 |LoopInterval|true|价格轮询间隔(秒)|
 
 
-> 源码 (python)
+> Source (python)
 
 ``` python
 import random
@@ -97,10 +97,10 @@ def main():
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/188435
 
-> 更新时间
+> Last Modified
 
 2020-03-07 16:58:07

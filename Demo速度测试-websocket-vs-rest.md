@@ -1,20 +1,20 @@
 
-> 策略名称
+> Name
 
 Demo速度测试-websocket-vs-rest
 
-> 策略作者
+> Author
 
 momox
 
-> 策略描述
+> Strategy Description
 
 websocket 接口 与  REST 接口的 速度测试，支持添加多个交易所测试，注意会短时增加你的api调用频率，请在确保不影响其他机器人运行的情况下运行。如果出现”Futures_OP 4: argument error“的错误，请更新到最新的托管者程序 
 特别提醒：只能添加支持websocket接口的交易所（有点废话，不支持websocket接口，你还测什么速度），不然会出错，目前 ok，火币提供websocket接口 ，BTCC不提供，其他请咨询查阅相关交易所API介绍或帮助
 
 
 
-> 源码 (javascript)
+> Source (javascript)
 
 ``` javascript
 
@@ -143,10 +143,10 @@ function main() {
 
 ```
 
-> 策略出处
+> Detail
 
 https://www.fmz.com/strategy/7547
 
-> 更新时间
+> Last Modified
 
 2016-01-09 20:58:20
