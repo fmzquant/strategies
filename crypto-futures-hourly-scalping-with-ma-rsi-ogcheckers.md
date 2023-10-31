@@ -5,7 +5,7 @@ crypto-futures-hourly-scalping-with-ma-rsi-ogcheckers
 
 > Author
 
-张超
+ChaoZhang
 
 
 

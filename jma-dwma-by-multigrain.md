@@ -5,7 +5,7 @@ jma-dwma-by-multigrain
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

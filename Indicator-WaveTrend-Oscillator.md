@@ -5,7 +5,7 @@ Indicator-WaveTrend-Oscillator
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

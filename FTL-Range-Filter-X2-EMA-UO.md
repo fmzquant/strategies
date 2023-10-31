@@ -5,7 +5,7 @@ FTL-Range-Filter-X2-EMA-UO
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

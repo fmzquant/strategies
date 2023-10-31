@@ -5,7 +5,7 @@ Combo-2-20-EMA-Bandpass-Filter
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

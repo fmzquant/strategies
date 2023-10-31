@@ -5,7 +5,7 @@ Quantitative-Qualitative-Estimation
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -24,7 +24,6 @@ function unique (str) {
 
 function main() {
     var exchange_info = JSON.parse(HttpQuery('https://fapi.binance.com/fapi/v1/exchangeInfo'));
-    //Log(exchange_info.symbols);
     var str = '';
     exchange_info.symbols.forEach(function(exitem, index) {
         if (exitem.symbol.indexOf('USDT') == -1) {return}
@@ -36,9 +35,35 @@ function main() {
         }
         str += exitem.baseAsset + content;
     });
-    Log(unique(str))
-	Log(unique(str).split(',').length)
-    //return unique(str);
+	Log('全合约币种数量：', unique(str).split(',').length)
+    Log('全合约币种名称：',unique(str))
+    // return leverageBracket;
+
+    let leverageBracket = exchange.IO("api", "GET", "/fapi/v1/leverageBracket", "timestamp=" + new Date().getTime())
+    let newList = leverageBracket.map((item) => {
+        return {
+            symbol: item.symbol,
+            leverage: item.brackets[0].initialLeverage
+        }
+    })
+    let selectLeverage = 25;
+    newList = newList.filter((item) => {
+        return item.leverage >= selectLeverage;
+    })
+    Log('筛选币数量：' , newList.length);
+    let str2 = ''
+
+    newList.forEach(function(exitem, index) {
+        if (exitem.symbol.indexOf('USDT') == -1) {return}
+        if (exitem.symbol.indexOf('BTCST') !== -1) {return}
+        if (exitem.symbol.indexOf('BTCDOM') !== -1) {return}
+        var content = ',';
+        if (index == newList.length - 1) {
+            content = '';
+        }
+        str2 += exitem.baseAsset + content;
+    });
+    Log('筛选币名称：', str);
 }
 
 ```
@@ -49,4 +74,4 @@ https://www.fmz.com/strategy/327743
 
 > Last Modified
 
-2021-11-04 03:25:30
+2023-09-26 20:50:01

@@ -228,16 +228,7 @@ $.NewWSS = function(e, onWSSLogin, onWSSTick, Debug, UseMargin, AccessKey, Passp
             }
             self.ws.write(JSON.stringify(msg))
         }
-        self.pushOrder = function(instId, px, sz, amount, ordType) {
-            self.ws.write(JSON.stringify({
-                "instId": instId,
-                "tdMode": "cross",
-                "side": side,
-                "ordType": ordType,
-                "px": px.toFixed(2),
-                "sz": px.toFixed(0)
-            }))
-        }
+
         self.getOrdersMap = function(instId) {
             let mp = self.account.orders[instId]
             if (typeof(mp) === 'undefined') {
@@ -1578,4 +1569,4 @@ https://www.fmz.com/strategy/395045
 
 > Last Modified
 
-2023-03-27 10:34:41
+2023-09-14 13:25:15

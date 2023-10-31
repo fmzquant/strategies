@@ -5,7 +5,7 @@ Johnys-BOT
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

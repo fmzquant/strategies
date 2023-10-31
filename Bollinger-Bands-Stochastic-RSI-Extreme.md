@@ -5,7 +5,7 @@ Bollinger-Bands-Stochastic-RSI-Extreme
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

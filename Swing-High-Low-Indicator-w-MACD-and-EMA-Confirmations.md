@@ -5,7 +5,7 @@ Swing-High-Low-Indicator-w-MACD-and-EMA-Confirmations
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

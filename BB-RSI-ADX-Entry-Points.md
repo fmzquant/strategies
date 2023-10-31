@@ -5,7 +5,7 @@ BB-RSI-ADX-Entry-Points
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ Price-Divergence-Strategy-v10
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

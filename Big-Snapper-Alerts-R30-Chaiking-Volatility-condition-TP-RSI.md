@@ -5,7 +5,7 @@ Big-Snapper-Alerts-R30-Chaiking-Volatility-condition-TP-RSI
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

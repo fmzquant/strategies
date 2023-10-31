@@ -5,7 +5,7 @@ RedK-Dual-VADER-with-Energy-Bars
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

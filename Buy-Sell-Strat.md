@@ -5,7 +5,7 @@ Buy-Sell-Strat
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

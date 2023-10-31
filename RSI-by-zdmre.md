@@ -5,7 +5,7 @@ RSI-by-zdmre
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ Pivot-Based-Trailing-Maxima-Minima
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

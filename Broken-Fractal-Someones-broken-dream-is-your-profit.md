@@ -5,7 +5,7 @@ Broken-Fractal-Someones-broken-dream-is-your-profit
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

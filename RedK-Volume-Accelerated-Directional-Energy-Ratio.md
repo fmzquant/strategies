@@ -5,7 +5,7 @@ RedK-Volume-Accelerated-Directional-Energy-Ratio
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ ChatGPT处理交易所上新公告
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ QQE-MOD-SSL-Hybrid-Waddah-Attar-Explosion
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

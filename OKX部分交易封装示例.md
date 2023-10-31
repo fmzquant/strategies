@@ -5,7 +5,7 @@ OKX部分交易封装示例
 
 > Author
 
-作手君
+作手君TradeMan
 
 
 

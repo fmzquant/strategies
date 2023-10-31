@@ -5,7 +5,7 @@ AlphaTrend-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

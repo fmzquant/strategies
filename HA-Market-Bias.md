@@ -5,7 +5,7 @@ HA-Market-Bias
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ U本位网格振幅筛选
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

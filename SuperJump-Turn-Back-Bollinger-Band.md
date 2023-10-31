@@ -5,7 +5,7 @@ SuperJump-Turn-Back-Bollinger-Band
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

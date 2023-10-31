@@ -5,7 +5,7 @@ Monthly-Returns-in-PineScript-Strategies
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

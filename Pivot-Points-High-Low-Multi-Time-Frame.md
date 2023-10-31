@@ -5,7 +5,7 @@ Pivot-Points-High-Low-Multi-Time-Frame
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ ADX-and-DI-for-v4
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

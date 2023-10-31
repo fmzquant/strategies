@@ -5,7 +5,7 @@ VuManChu-Cipher-B-Divergences-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

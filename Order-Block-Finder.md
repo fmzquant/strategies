@@ -5,7 +5,7 @@ Order-Block-Finder
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

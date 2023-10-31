@@ -5,7 +5,7 @@ Pivot-Order-Blocks
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

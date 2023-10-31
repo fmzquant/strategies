@@ -5,7 +5,7 @@ Supertrend4moving
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

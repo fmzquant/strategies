@@ -5,7 +5,7 @@ Trading-the-Equity-Curve-Position-Sizing-Example
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

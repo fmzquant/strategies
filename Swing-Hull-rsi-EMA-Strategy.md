@@ -5,7 +5,7 @@ Swing-Hull-rsi-EMA-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ ZigZag-PA-Strategy-V41
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

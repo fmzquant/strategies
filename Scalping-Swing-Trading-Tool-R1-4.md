@@ -5,7 +5,7 @@ Scalping-Swing-Trading-Tool-R1-4
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

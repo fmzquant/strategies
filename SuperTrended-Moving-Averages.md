@@ -5,7 +5,7 @@ SuperTrended-Moving-Averages
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

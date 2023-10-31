@@ -5,7 +5,7 @@ Moving-Average-Buy-Sell
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

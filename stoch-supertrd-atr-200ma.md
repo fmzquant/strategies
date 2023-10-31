@@ -5,7 +5,7 @@ stoch-supertrd-atr-200ma
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

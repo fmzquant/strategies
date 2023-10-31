@@ -5,7 +5,7 @@ Demark-Setup-Indicator
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ SWING-TRADE-SIGNALS
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

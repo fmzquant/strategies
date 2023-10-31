@@ -5,7 +5,7 @@ CM-MACD-Custom-Indicator-Multiple-Time-Frame-V2
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

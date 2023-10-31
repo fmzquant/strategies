@@ -5,7 +5,7 @@ Smaller-Fractals-Transparency
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

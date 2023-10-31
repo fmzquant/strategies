@@ -5,7 +5,7 @@ Z-Score-with-Signals
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

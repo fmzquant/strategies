@@ -5,7 +5,7 @@ SUPERTREND-ATR-WITH-TRAILING-STOP-LOSS
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

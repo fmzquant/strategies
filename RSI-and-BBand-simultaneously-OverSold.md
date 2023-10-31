@@ -5,7 +5,7 @@ RSI-and-BBand-simultaneously-OverSold
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

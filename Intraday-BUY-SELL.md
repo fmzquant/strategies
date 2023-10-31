@@ -5,7 +5,7 @@ Intraday-BUY-SELL
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

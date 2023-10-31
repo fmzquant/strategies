@@ -5,7 +5,7 @@ Super-Trend-Daily-20-BF
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

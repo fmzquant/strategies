@@ -5,7 +5,7 @@ CM-Sling-Shot-System
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

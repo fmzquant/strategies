@@ -5,7 +5,7 @@ Welcome-to-the-BEARMARKET-30MIN
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

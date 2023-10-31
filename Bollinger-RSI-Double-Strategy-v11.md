@@ -5,7 +5,7 @@ Bollinger-RSI-Double-Strategy-v11
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

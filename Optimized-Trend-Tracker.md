@@ -5,7 +5,7 @@ Optimized-Trend-Tracker
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

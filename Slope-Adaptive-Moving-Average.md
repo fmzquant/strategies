@@ -5,7 +5,7 @@ Slope-Adaptive-Moving-Average
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

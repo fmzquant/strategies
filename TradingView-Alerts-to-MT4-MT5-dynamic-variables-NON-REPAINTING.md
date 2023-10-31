@@ -5,7 +5,7 @@ TradingView-Alerts-to-MT4-MT5-dynamic-variables-NON-REPAINTING
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ TrendScalp-FractalBox-3EMA
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

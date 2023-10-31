@@ -5,7 +5,7 @@ Midas-Mk-II-Ultimate-Crypto-Swing
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

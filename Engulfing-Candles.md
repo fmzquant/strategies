@@ -5,7 +5,7 @@ Engulfing-Candles
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

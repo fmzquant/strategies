@@ -5,7 +5,7 @@ Concept-Dual-SuperTrend
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

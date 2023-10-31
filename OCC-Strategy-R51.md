@@ -5,7 +5,7 @@ OCC-Strategy-R51
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ RedK-Momentum-Bars
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

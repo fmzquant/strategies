@@ -5,7 +5,7 @@ AMACD-All-Moving-Average-Convergence-Divergence
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

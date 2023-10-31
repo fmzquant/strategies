@@ -5,7 +5,7 @@ Scalping-PullBack-Tool-R1
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -159,13 +159,13 @@ function main() {
         let diff = ticker.Sell - ticker.Buy;
         let time = new Date().getTime()
         $.PlotLineSummer('盘口图表', '买一', ticker.Buy, time, 12, true);
-        $.PlotLineSummer('盘口图表', '卖一', ticker.Buy, time, 12, true);
+        $.PlotLineSummer('盘口图表', '卖一', ticker.Sell, time, 12, true);
         $.PlotBarSummer('差价图', '差价1', diff, time, 12, true);
         $.PlotBarSummer('差价图', '差价2', diff * 2, time, 12, true);
         $.PlotLineSummer('盘口图表2', '买一', ticker.Buy, time, 8, true);
-        $.PlotLineSummer('盘口图表2', '卖一', ticker.Buy, time, 8, true);
+        $.PlotLineSummer('盘口图表2', '卖一', ticker.Sell, time, 8, true);
         $.PlotLineSummer('盘口图表3', '买一', ticker.Buy, time, 4, true);
-        $.PlotLineSummer('盘口图表3', '卖一', ticker.Buy, time, 4, true);
+        $.PlotLineSummer('盘口图表3', '卖一', ticker.Sell, time, 4, true);
         let data = [["A", 25 + (++count)],
                     ["B", 25 - count],
                     ["C", 25],
@@ -182,4 +182,4 @@ https://www.fmz.com/strategy/404014
 
 > Last Modified
 
-2023-06-15 15:43:33
+2023-08-09 13:04:14

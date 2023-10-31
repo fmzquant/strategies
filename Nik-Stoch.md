@@ -5,7 +5,7 @@ Nik-Stoch
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

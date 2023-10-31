@@ -5,7 +5,7 @@ Relative-Strength-Index-Divergences-Libertus
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

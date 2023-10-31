@@ -5,7 +5,7 @@ MA-HYBRID-BY-RAJ
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

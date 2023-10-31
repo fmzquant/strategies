@@ -5,7 +5,7 @@ RSI-Divergence-with-Pivot-BB-SMA-EMA-SMMA-WMA-VWMA
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

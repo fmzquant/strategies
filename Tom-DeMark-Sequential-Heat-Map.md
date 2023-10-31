@@ -5,7 +5,7 @@ Tom-DeMark-Sequential-Heat-Map
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

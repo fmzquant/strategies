@@ -5,7 +5,7 @@ Heikin-Ashi-Trend
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

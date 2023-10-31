@@ -5,7 +5,7 @@ Triple-Supertrend-with-EMA-and-ADX
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

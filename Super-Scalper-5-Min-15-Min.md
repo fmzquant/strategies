@@ -5,7 +5,7 @@ Super-Scalper-5-Min-15-Min
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

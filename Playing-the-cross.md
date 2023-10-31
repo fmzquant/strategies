@@ -5,7 +5,7 @@ Playing-the-cross
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

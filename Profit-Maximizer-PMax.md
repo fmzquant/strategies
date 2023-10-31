@@ -5,7 +5,7 @@ Profit-Maximizer-PMax
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

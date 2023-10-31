@@ -5,7 +5,7 @@ BEST-Engulfing-Breakout-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

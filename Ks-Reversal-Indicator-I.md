@@ -5,7 +5,7 @@ Ks-Reversal-Indicator-I
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

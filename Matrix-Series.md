@@ -5,7 +5,7 @@ Matrix-Series
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

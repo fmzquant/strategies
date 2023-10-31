@@ -5,7 +5,7 @@ HALFTREND-HEMA-SMA-FALSE-SIGNALs-STRATEGY
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

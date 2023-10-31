@@ -173,9 +173,9 @@ $.Binance_Api_Spot_ExchangeInfo_Symbol_filter = (ex, symbolStr) => {
   })
   isDebug && Log('Binance_Api_Spot_ExchangeInfo_Symbol_filter:', f)
 
-  if (isNaN(f.pricePercision ?? NaN) || isNaN(f.quantityPercision ?? NaN) || isNaN(f.amountMin ?? NaN)) {
-    return null
-  }
+  // if (isNaN(f.pricePercision ?? NaN) || isNaN(f.quantityPercision ?? NaN) || isNaN(f.amountMin ?? NaN)) {
+  //   return null
+  // }
   return f
 }
 
@@ -424,4 +424,4 @@ https://www.fmz.com/strategy/247137
 
 > Last Modified
 
-2022-06-18 00:34:46
+2023-07-18 20:14:08

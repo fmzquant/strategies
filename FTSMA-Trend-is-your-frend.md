@@ -5,7 +5,7 @@ FTSMA-Trend-is-your-frend
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

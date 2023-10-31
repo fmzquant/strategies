@@ -5,7 +5,7 @@ Delta-RSI-Oscillator-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

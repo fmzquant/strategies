@@ -5,7 +5,7 @@ MacD-Custom-Indicator-Multiple-Time-FrameAll-Available-Options
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

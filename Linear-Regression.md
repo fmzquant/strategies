@@ -5,7 +5,7 @@ Linear-Regression
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ EMA-bands-leledc-bollinger-bands-trend-catching-strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

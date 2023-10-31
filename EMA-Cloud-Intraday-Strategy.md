@@ -5,7 +5,7 @@ EMA-Cloud-Intraday-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

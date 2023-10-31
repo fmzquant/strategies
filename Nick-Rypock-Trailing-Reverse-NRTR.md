@@ -5,7 +5,7 @@ Nick-Rypock-Trailing-Reverse-NRTR
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

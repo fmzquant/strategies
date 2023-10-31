@@ -5,7 +5,7 @@
 
 > Author
 
-作手君
+作手君TradeMan
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ Parabolic-SAR-Buy-And-Sell
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ Moving-Average-Colored-EMA-SMA
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

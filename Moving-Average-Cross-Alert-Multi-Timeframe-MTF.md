@@ -5,7 +5,7 @@ Moving-Average-Cross-Alert-Multi-Timeframe-MTF
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

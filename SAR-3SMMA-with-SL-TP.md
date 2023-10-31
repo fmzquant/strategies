@@ -5,7 +5,7 @@ SAR-3SMMA-with-SL-TP
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

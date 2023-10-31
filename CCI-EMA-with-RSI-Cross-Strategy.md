@@ -5,7 +5,7 @@ CCI-EMA-with-RSI-Cross-Strategy
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

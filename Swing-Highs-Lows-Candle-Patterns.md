@@ -5,7 +5,7 @@ Swing-Highs-Lows-Candle-Patterns
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

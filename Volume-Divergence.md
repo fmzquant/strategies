@@ -5,7 +5,7 @@ Volume-Divergence
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

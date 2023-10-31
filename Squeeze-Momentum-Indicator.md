@@ -5,7 +5,7 @@ Squeeze-Momentum-Indicator
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

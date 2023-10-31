@@ -5,7 +5,7 @@ Moon-Launch-Alerts-Template-Indicator
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

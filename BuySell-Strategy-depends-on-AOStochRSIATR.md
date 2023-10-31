@@ -5,7 +5,7 @@ BuySell-Strategy-depends-on-AOStochRSIATR
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

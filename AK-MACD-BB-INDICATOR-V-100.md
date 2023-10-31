@@ -5,7 +5,7 @@ AK-MACD-BB-INDICATOR-V-100
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

@@ -5,7 +5,7 @@ Angle-Attack-Follow-Line-Indicator
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

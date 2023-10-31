@@ -5,7 +5,7 @@ Hull-Moving-Average-Swing-Trader
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

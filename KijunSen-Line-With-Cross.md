@@ -5,7 +5,7 @@ KijunSen-Line-With-Cross
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

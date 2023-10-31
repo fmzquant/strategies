@@ -5,7 +5,7 @@ FMZ教程-JavaScript速成手册
 
 > Author
 
-作手君
+作手君TradeMan
 
 
 

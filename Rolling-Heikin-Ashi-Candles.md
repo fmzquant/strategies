@@ -5,7 +5,7 @@ Rolling-Heikin-Ashi-Candles
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 

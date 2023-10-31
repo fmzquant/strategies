@@ -5,7 +5,7 @@ EMA-TREND-CLOUD
 
 > Author
 
-张超
+ChaoZhang
 
 > Strategy Description
 
