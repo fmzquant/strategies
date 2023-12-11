@@ -55,6 +55,7 @@ MartinGale抢帽子策略是一种通过频繁交易来产生利润的交易策�
  strategy('[blackcat] L1 MartinGale Scalping Strategy', overlay=true, pyramiding = 5)
  
  // Define input variables
+// martingaleMultiplier = input(2, title="加倍倍数")
  takeProfit = input(1.03, title='Take Profit')
  stopLoss = input(0.95, title='Stop Loss')
  inputTradingMode = input.string(defval='Long', options=['Long', 'Short', 'BiDir'], title='Trading Mode')
@@ -62,7 +63,7 @@ MartinGale抢帽子策略是一种通过频繁交易来产生利润的交易策�
  //The purpose of this rule is to forbid short entries, only long etries will be placed. The rule affects the following function: 'entry'.
 strategy.risk.allow_entry_in(inputTradingMode == 'Long' ? strategy.direction.long : inputTradingMode == 'Short' ? strategy.direction.short : strategy.direction.all)
 
-// Define strategy logic
+// Define strategy logic 
 entryPrice = 0.0
 stopPrice = 0.0
 takeProfitPrice = 0.0
@@ -80,7 +81,7 @@ crossunderState = sma3 < sma8
 
 if strategy.position_size == 0
     if crossoverState
-       strategy.entry('Buy', strategy.long)
+       strategy.entry('Buy',strategy.long)
        entryPrice := close
        stopPrice := close - stopLoss * sma8[1]
        takeProfitPrice := close + takeProfit * sma8[1]
@@ -139,4 +140,4 @@ https://www.fmz.com/strategy/428756
 
 > Last Modified
 
-2023-10-09 07:12:58
+2023-11-03 17:27:45

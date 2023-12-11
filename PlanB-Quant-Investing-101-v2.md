@@ -18,6 +18,9 @@ Zer3192
 |v_input_1|90|selllevel|
 |v_input_2|65|drop|
 |v_input_3|50|buylevel|
+|v_input_4|false|----- Use Stop Loss / Take profit -----|
+|v_input_5|100|Stop Loss %|
+|v_input_6|1.5|Take Profit %|
 
 
 > Source (PineScript)
@@ -85,6 +88,19 @@ buysignal = rsibuy and rsibounce
 
 strategy.entry("Buy Signal",strategy.long, when = buysignal)
 strategy.entry("Sell Signal",strategy.short, when = sellsignal)
+// === Stop LOSS ===
+useStopLoss = input(false, title='----- Use Stop Loss / Take profit -----', type=bool)
+sl_inp = input(100, title='Stop Loss %', type=float, step=0.25)/100
+tp_inp = input(1.5, title='Take Profit %', type=float, step=0.25)/100
+stop_level = strategy.position_avg_price * (1 - sl_inp)
+take_level = strategy.position_avg_price * (1 + tp_inp)
+stop_level_short = strategy.position_avg_price * (1 + sl_inp)
+take_level_short = strategy.position_avg_price * (1 - tp_inp)
+// === Stop LOSS ===
+
+if useStopLoss
+    strategy.exit("Stop Loss/Profit Long","Buy Signal", stop=stop_level, limit=take_level)
+    strategy.exit("Stop Loss/Profit Short","Sell Signal", stop=stop_level_short, limit=take_level_short)
 
 
 ```
@@ -95,4 +111,4 @@ https://www.fmz.com/strategy/379757
 
 > Last Modified
 
-2022-08-24 02:56:16
+2023-12-02 17:49:46

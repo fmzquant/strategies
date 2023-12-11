@@ -60,11 +60,8 @@ EMA作为一种趋势跟踪指标,可有效滤除价格的随机波动,捕捉到
 
 浪速EMA黄金交叉策略整体而言是一个参数优化程度较高、操作规范、风险可控的短线交易策略。它把握短中线EMA交叉的交易时机,以捕捉价格趋势。止损策略也能有效控制单笔交易的风险。该策略较易实施,可为量化交易提供一个坚实的策略框架。
 
-[/trans]
-
 
 ||
-This is an SEO optimized article about the Gaan EMA Crossover Strategy:
 
 ### Strategy Overview
 
@@ -168,4 +165,4 @@ https://www.fmz.com/strategy/426902
 
 > Last Modified
 
-2023-09-15 14:26:40
+2023-12-01 14:57:55

@@ -18,7 +18,7 @@ ChaoZhang
 ``` javascript
 
 /* jshint esversion: 6 */
-var Day = 100; //统计天数
+var Day = 30; //统计天数
 var Quote = "USDT"; //计价货币,BUSD或者USDT
 function GetAmplitude(klineList) {
     let ret = {
@@ -77,9 +77,12 @@ function main() {
             let symbol = ele.baseAsset + "_" + Quote;
             exchange.SetCurrency(symbol);
             let records = exchange.GetRecords(PERIOD_D1);
-            if (records.length < Day) continue; //只统计够天数的币种
+            if (records.length < Day) {
+                Log(symbol, records.length);
+                continue; //只统计够天数的币种
+            }
             let ampls = GetAmplitude(records.splice(-1 * (Day + 1), Day));
-            Log(symbol, records.length);
+            // 
             table.rows.push([
                 symbol, //币种
                 ampls.day, //天数
@@ -107,4 +110,4 @@ https://www.fmz.com/strategy/364968
 
 > Last Modified
 
-2022-07-28 10:43:07
+2023-12-06 23:45:12

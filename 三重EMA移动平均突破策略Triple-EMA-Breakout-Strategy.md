@@ -59,8 +59,6 @@ ChaoZhang
 
 ||
 
-This is an SEO optimized article about the Triple EMA Breakout Strategy:
-
 
 ### Strategy Overview
 
@@ -165,4 +163,4 @@ https://www.fmz.com/strategy/426906
 
 > Last Modified
 
-2023-09-15 14:36:11
+2023-12-01 14:58:23

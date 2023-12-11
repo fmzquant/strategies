@@ -9,7 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-Here is a professional SEO article summarizing the Uptrend and Oversold Index Swing Trading System strategy:
 
 Riding Trends and Mean Reversion with the I11L Hypertrend 
 
@@ -204,4 +203,4 @@ https://www.fmz.com/strategy/426334
 
 > Last Modified
 
-2023-09-11 11:35:33
+2023-12-01 15:01:34

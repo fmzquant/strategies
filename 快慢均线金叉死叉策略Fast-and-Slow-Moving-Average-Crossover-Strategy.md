@@ -60,10 +60,6 @@ ChaoZhang
 快慢均线金叉死叉策略通过比较不同均线周期判定趋势转折点,是一种较为经典和常用的量化交易思路。可根据市场调整参数,并与其他指标组合使用,以控制风险和提高收益。
 
 ||
-
-This is an SEO optimized article about the Fast and Slow Moving Average Crossover Strategy:
-
-
 ### Strategy Overview
 
 The fast and slow moving average crossover strategy is a quantitative trading strategy that generates trading signals by comparing fast and slow moving averages. It goes long when the fast MA crosses above the slow MA, and goes short when the fast MA crosses below the slow MA. The strategy aims to capture trend turning points on the medium-short term timeframe.
@@ -159,4 +155,4 @@ https://www.fmz.com/strategy/426908
 
 > Last Modified
 
-2023-09-15 14:39:26
+2023-12-01 14:57:24

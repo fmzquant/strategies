@@ -58,8 +58,6 @@ ChaoZhang
 
 ||
 
-This is an SEO optimized article about the Narrow Range Inside Day Breakout Strategy: 
-
 ### Strategy Overview
 
 The narrow range inside day breakout strategy identifies narrow range oscillations and inside day close breakouts for long-only trend following. It generates long signals when price narrowing, inside day, and SMA slope up all emerge to capture post-breakout trends. 
@@ -204,4 +202,4 @@ https://www.fmz.com/strategy/426905
 
 > Last Modified
 
-2023-09-15 14:34:11
+2023-12-01 15:00:06
