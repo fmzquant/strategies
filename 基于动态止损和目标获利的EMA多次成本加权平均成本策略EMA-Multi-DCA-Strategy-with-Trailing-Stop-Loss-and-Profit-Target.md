@@ -112,7 +112,7 @@ The strategy encompasses EMA trend detection, multi-DCA cost averaging, trailing
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-12 00:00:00
 end: 2024-01-18 00:00:00

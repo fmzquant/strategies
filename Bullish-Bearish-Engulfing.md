@@ -21,7 +21,7 @@ Zer3192
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 indicator("Bullish & Bearish Engulfing", overlay=true)
 

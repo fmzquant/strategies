@@ -144,7 +144,7 @@ The strategy combines EMA, TTS and STC indicators to determine market direction,
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-04-14 00:00:00

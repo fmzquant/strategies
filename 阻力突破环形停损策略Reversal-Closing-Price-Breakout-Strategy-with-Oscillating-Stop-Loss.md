@@ -170,7 +170,7 @@ This is an effective breakout strategy with good risk control, stable profit mod
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-10 00:00:00

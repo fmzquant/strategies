@@ -132,7 +132,7 @@ This strategy captures uptrend by detecting N consecutive rising candles. It can
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-12-07 00:00:00

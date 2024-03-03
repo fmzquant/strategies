@@ -89,7 +89,7 @@ In summary, this strategy uses EMA crosses for trend identification and tracking
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-05 00:00:00
 end: 2023-09-11 00:00:00

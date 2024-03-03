@@ -34,7 +34,7 @@ Just add the indicator to the chart, create an alert and select "Heikin-Ashi Tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-05-08 00:00:00
 end: 2022-05-07 23:59:00

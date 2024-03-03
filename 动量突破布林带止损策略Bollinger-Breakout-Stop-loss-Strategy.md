@@ -132,7 +132,7 @@ This is a relatively simple trend following strategy based on Bollinger Bands. I
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

@@ -138,7 +138,7 @@ In summary, the Dual Moving Average Reversal Strategy is a highly practical appr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-24 00:00:00
 end: 2023-12-24 00:00:00

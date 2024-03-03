@@ -106,7 +106,7 @@ The strategy integrates the advantages of trend judgment and long-term filtering
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-27 00:00:00
 end: 2023-11-26 00:00:00

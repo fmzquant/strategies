@@ -135,7 +135,7 @@ This strategy constructs a simple quantitative trading strategy based on the lin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-28 00:00:00

@@ -124,7 +124,7 @@ This strategy utilizes the strengths of RSI indicator and engulfing patterns, an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2024-01-02 00:00:00

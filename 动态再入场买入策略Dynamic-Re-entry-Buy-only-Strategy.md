@@ -138,7 +138,7 @@ This dynamic re-entry buy-only strategy integrates multiple technical indicators
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-12-18 00:00:00

@@ -117,7 +117,7 @@ This strategy leverages multiple technical analysis tools to determine market tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy("Forex and Crypto Trading Strategy", overlay=true)
 

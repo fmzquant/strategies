@@ -148,7 +148,7 @@ The strategy effectively combines accurate entry signals with limit line filters
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-04 00:00:00
 end: 2023-12-10 00:00:00

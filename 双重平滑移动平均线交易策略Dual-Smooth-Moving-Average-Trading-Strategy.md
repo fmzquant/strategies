@@ -112,7 +112,7 @@ Overall this is a typical trend-following strategy. The dual smooth MA system co
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-06 00:00:00
 end: 2023-10-12 00:00:00

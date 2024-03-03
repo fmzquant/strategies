@@ -79,7 +79,7 @@ Overall, the Dual Moving Average Golden Cross algorithm is a very practical quan
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-16 00:00:00
 end: 2024-01-22 00:00:00

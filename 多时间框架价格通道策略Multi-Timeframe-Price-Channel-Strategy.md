@@ -123,7 +123,7 @@ The strategy attempts to build short-term reversal system using multiple timefra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-09 00:00:00
 end: 2023-09-14 09:00:00

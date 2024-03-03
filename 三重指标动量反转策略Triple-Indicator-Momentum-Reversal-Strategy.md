@@ -167,7 +167,7 @@ This strategy uses multiple indicators to determine market trends, and opens pos
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-25 00:00:00
 end: 2023-10-25 00:00:00

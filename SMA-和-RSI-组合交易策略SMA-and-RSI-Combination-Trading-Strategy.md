@@ -140,7 +140,7 @@ This strategy integrates the strengths of SMA and RSI indicators, filtering out 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-01 00:00:00
 end: 2023-10-07 00:00:00

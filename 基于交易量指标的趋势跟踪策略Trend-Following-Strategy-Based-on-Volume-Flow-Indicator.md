@@ -161,7 +161,7 @@ This strategy determines the trend direction with VFI and uses moving averages t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-10-06 21:00:00

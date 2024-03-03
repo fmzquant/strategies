@@ -148,7 +148,7 @@ The SMART professional quantitative trading strategy identifies institutional fu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-18 23:59:59

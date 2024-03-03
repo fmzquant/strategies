@@ -195,7 +195,7 @@ The Oscillating Long-Short RSI Crypto Switching Strategy combines ICHIMOKU and R
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-24 00:00:00

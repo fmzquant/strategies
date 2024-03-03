@@ -105,7 +105,7 @@ Overall this strategy is well-suited for trend trading. It avoids overbought/ove
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

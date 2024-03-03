@@ -119,7 +119,7 @@ The SMA Crossover strategy generates simple and effective trading signals by cal
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-22 00:00:00

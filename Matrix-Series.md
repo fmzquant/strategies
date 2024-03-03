@@ -35,7 +35,7 @@ OB/OS zones are at 200 and -200 and marked with aqua color above below the candl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-16 00:00:00
 end: 2022-05-22 23:59:00

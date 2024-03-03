@@ -160,7 +160,7 @@ This strategy effectively combines Ichimoku Kinko Hyo and crossover systems for 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-16 00:00:00
 end: 2023-11-15 00:00:00

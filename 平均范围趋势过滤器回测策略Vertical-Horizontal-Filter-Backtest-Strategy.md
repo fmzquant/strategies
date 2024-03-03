@@ -88,7 +88,7 @@ Summary: This strategy intuitively determines the trend based on the characteris
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2024-01-07 00:00:00

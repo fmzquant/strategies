@@ -48,7 +48,7 @@ I am not liable for any profit, financial improvement, losses or damages, moneta
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-08 00:00:00
 end: 2022-05-08 00:00:00

@@ -120,7 +120,7 @@ The Trend Tracking Trailing Stop strategy comprehensively employs methods such a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-16 00:00:00
 end: 2024-01-16 00:00:00

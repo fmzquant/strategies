@@ -156,7 +156,7 @@ The strategy logic is clear and reliable overall, using Williams Fractal and ABC
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-09-23 00:00:00

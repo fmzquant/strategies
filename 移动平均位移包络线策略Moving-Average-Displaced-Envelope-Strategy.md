@@ -148,7 +148,7 @@ The moving average displaced envelope strategy utilizes simple exponential movin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-25 00:00:00
 end: 2024-02-01 00:00:00

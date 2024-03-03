@@ -121,7 +121,7 @@ This strategy leverages enhanced MACD for improved mid- to long-term trend ident
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-07 00:00:00
 end: 2023-09-13 00:00:00

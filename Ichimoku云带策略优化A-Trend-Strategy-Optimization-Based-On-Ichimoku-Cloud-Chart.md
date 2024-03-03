@@ -169,7 +169,7 @@ This strategy effectively combines Ichimoku cloud and multiple auxiliary indicat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-11 00:00:00
 end: 2024-01-13 14:00:00

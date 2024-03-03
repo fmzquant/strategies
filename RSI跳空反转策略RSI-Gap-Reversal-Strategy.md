@@ -140,7 +140,7 @@ The GBP RSI Gap Reversal Strategy captures reversals by identifying RSI gap sign
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-23 00:00:00
 end: 2023-06-23 00:00:00

@@ -115,7 +115,7 @@ The overall framework of this RSI reversal strategy is reasonable with clear and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-06 00:00:00
 end: 2023-11-12 00:00:00

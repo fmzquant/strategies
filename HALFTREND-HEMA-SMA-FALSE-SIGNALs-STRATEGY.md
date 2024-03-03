@@ -65,7 +65,7 @@ Thanks again to the authors of the indicators that compose this script and to FA
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-11 00:00:00
 end: 2022-05-10 23:59:00

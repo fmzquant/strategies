@@ -159,7 +159,7 @@ The overall framework of this strategy is complete, generating trading signals b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-30 00:00:00
 end: 2023-12-06 00:00:00

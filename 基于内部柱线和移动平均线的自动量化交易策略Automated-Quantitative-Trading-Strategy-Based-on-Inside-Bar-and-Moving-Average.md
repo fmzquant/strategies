@@ -147,7 +147,7 @@ This strategy implements a fully-automated quantitative trading solution by dyna
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-12-20 00:00:00

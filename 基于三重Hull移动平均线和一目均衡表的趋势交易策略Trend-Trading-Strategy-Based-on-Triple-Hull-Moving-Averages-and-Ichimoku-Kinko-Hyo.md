@@ -132,7 +132,7 @@ This strategy combines the Hull MA and Ichimoku Kinko Hyo indicators to build a 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-24 00:00:00

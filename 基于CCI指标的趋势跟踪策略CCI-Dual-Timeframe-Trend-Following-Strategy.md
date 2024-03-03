@@ -170,7 +170,7 @@ In conclusion, this is a simple trend following strategy based on CCI crossover.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-11-23 00:00:00

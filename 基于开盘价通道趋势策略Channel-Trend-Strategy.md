@@ -137,7 +137,7 @@ The Channel Trend strategy utilizes the channel lines formed by opening price an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-17 00:00:00
 end: 2023-12-17 00:00:00

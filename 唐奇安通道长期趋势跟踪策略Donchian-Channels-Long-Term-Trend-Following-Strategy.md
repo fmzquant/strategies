@@ -114,7 +114,7 @@ In summary, this is a very simple long term trend following strategy using Donch
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-07 00:00:00
 end: 2024-01-14 00:00:00

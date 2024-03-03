@@ -114,7 +114,7 @@ The golden cross strategy judges long-term trend shifts by comparing fast and sl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-09-14 00:00:00

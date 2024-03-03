@@ -151,7 +151,7 @@ The Lazy Bear Squeeze Momentum strategy has strong signal generation through a m
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-31 00:00:00
 end: 2024-02-01 00:00:00

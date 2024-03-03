@@ -112,7 +112,7 @@ This strategy trades based on overbought and oversold areas judged by the StochR
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

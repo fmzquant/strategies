@@ -124,7 +124,7 @@ In summary, the Oscillating Breakthrough Strategy is a simple and practical shor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-22 00:00:00
 end: 2024-02-21 00:00:00

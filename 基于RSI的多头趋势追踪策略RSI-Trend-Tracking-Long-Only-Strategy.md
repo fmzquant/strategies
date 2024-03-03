@@ -130,7 +130,7 @@ In summary, this strategy has clear logic to go long on oversold RSI levels and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-28 00:00:00
 end: 2024-01-03 00:00:00

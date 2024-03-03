@@ -161,7 +161,7 @@ This strategy combines MACD, EMA and RSI to organically implement trend followin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-17 00:00:00
 end: 2023-12-17 00:00:00

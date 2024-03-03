@@ -35,7 +35,7 @@ Simple, more polite, and hopefully more useful fractals for those wnting a clean
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-03 00:00:00
 end: 2022-05-09 23:59:00

@@ -170,7 +170,7 @@ In summary, this is a relatively simple trend following strategy. It uses the Sm
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-11-14 00:00:00

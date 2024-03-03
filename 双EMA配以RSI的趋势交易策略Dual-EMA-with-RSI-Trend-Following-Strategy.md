@@ -159,7 +159,7 @@ Overall this is a simple and practical trend following strategy. By combining EM
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-28 00:00:00
 end: 2023-09-27 00:00:00

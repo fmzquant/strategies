@@ -148,7 +148,7 @@ The Reversal Breakout Oversold RSI strategy is easy to understand and operate ov
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-14 00:00:00
 end: 2023-12-18 19:00:00

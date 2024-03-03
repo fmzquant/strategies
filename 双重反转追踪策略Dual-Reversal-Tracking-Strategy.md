@@ -129,7 +129,7 @@ The Dual Reversal Tracking strategy achieves dual insurance of reversal capturin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-06-14 00:00:00

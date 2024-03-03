@@ -286,7 +286,7 @@ In summary, the Momentum Tracking Mean Reversion Strategy is a simple yet practi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-18 00:00:00
 end: 2023-11-23 00:00:00

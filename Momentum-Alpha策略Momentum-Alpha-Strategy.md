@@ -142,7 +142,7 @@ The Momentum Alpha strategy dynamically captures momentum opportunities by judgi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-16 04:00:00

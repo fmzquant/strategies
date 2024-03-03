@@ -144,7 +144,7 @@ This strategy combines the advantages of the KDJ indicator and RSI indicator by 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-20 00:00:00
 end: 2023-11-26 00:00:00

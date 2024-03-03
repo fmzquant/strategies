@@ -214,7 +214,7 @@ This strategy provides a very flexible and comprehensive trading solution throug
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-26 00:00:00
 end: 2023-09-26 00:00:00

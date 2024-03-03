@@ -101,7 +101,7 @@ The dual moving average crossover strategy judges the trend and inflection point
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-30 00:00:00

@@ -115,7 +115,7 @@ In summary, this is a very typical and simple MA crossover system that generates
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

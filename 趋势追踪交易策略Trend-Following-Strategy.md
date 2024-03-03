@@ -208,7 +208,7 @@ Noro's trend following strategy integrates price channel, RSI and body filter in
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-25 00:00:00
 end: 2023-09-24 00:00:00

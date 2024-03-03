@@ -99,7 +99,7 @@ The Ichimoku Entries Strategy is a multi-indicator integrated trend trading stra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-30 00:00:00
 end: 2024-01-30 00:00:00

@@ -141,7 +141,7 @@ The Dynamic Support and Resistance Channel Breakout Strategy leverages the suppo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-10 00:00:00
 end: 2024-01-17 00:00:00

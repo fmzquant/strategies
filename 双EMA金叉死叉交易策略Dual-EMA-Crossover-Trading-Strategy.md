@@ -203,7 +203,7 @@ This strategy uses dual EMA golden cross and death cross as trading signals, for
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-10-16 00:00:00

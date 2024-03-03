@@ -139,7 +139,7 @@ This strategy utilizes the fast-tracking ability of McGinley MA combined with pr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-07 00:00:00
 end: 2023-11-13 00:00:00

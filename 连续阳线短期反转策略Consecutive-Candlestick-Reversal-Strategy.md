@@ -174,7 +174,7 @@ In summary, this is a typical short-term mean reversion strategy based on candle
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-07 00:00:00
 end: 2023-10-07 00:00:00

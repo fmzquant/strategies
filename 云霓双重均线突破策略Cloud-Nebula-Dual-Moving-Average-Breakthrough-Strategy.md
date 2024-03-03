@@ -111,7 +111,7 @@ The Cloud Nebula Dual Moving Average Breakthrough Strategy comprehensively utili
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-14 00:00:00
 end: 2023-12-19 00:00:00

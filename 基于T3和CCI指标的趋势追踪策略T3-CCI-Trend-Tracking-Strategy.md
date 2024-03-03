@@ -134,7 +134,7 @@ Overall, this is a reliable medium-to-long-term trend tracking strategy. It cont
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-16 00:00:00
 end: 2023-11-23 00:00:00

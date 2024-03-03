@@ -196,7 +196,7 @@ This strategy combines RSI, MACD and double MA to identify and track trends, and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-22 00:00:00
 end: 2023-10-22 00:00:00

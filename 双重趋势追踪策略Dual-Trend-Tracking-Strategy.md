@@ -180,7 +180,7 @@ The Dual Trend Tracking strategy accurately identifies trend reversals while ver
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-20 00:00:00
 end: 2023-09-26 00:00:00

@@ -56,7 +56,7 @@ In conclusion, statistical techniques help uncover price behavior patterns objec
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-06 00:00:00
 end: 2023-05-01 00:00:00

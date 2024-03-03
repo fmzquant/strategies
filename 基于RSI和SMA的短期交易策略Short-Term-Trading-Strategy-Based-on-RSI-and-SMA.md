@@ -93,7 +93,7 @@ This strategy "Short-term RSI and SMA Percentage Change" comprehensively employs
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

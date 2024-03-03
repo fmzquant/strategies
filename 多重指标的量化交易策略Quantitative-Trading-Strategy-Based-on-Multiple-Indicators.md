@@ -169,7 +169,7 @@ This strategy automates trading by interpreting multiple indicators. It benefits
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-24 00:00:00
 end: 2023-10-24 00:00:00

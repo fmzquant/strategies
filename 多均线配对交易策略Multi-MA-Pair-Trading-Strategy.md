@@ -210,7 +210,7 @@ In summary, the multi-indicator approach forms a relatively robust trading syste
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 strategy("Free Strategy #08 (Combo of #01 and #02) (ES / SPY)", overlay=true)
 

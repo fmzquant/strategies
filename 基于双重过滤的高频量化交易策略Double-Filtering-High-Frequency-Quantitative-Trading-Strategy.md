@@ -175,7 +175,7 @@ In general, the core idea of ​​this strategy is a high-frequency quantitativ
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-11-26 00:00:00

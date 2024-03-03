@@ -150,7 +150,7 @@ In summary, this article provides an in-depth analysis of a typical RSI indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-28 00:00:00
 end: 2023-11-27 00:00:00

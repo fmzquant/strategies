@@ -118,7 +118,7 @@ The strategy judges the current trend direction by integrating multiple technica
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-11-20 00:00:00

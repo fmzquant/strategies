@@ -101,7 +101,7 @@ This strategy synergizes momentum and MA breakout systems with prudent profit ta
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-09-13 00:00:00

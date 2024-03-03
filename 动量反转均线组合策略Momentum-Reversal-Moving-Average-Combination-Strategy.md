@@ -125,7 +125,7 @@ This strategy captures and tracks trends by determining trend direction with dou
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-16 00:00:00
 end: 2023-11-23 00:00:00

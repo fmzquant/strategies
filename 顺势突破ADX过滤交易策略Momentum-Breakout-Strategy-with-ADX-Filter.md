@@ -117,7 +117,7 @@ In conclusion, this is a simple and practical breakout strategy with filter. Ide
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-27 00:00:00
 end: 2024-01-03 00:00:00

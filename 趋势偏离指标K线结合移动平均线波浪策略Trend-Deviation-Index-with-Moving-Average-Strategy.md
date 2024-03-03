@@ -125,7 +125,7 @@ This strategy uses TSI to determine trend direction combined with price candlest
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-29 00:00:00
 end: 2023-11-05 00:00:00

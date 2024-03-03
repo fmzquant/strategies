@@ -116,7 +116,7 @@ Overall, this is a relatively stable and reliable trend following strategy. It c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-19 00:00:00
 end: 2023-10-19 00:00:00

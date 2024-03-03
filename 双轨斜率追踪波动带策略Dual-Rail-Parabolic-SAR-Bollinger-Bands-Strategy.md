@@ -115,7 +115,7 @@ The Dual-Rail Parabolic SAR Bollinger Bands strategy fully utilizes Bollinger's 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 strategy(title="Bollinger + sar", shorttitle="Bollinger + sar",
      overlay=true) 

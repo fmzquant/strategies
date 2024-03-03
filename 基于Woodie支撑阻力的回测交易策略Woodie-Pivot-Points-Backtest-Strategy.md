@@ -143,7 +143,7 @@ This strategy trades Woodie pivot breakouts. Optimizing parameters, adding stops
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-13 00:00:00
 end: 2023-02-22 00:00:00

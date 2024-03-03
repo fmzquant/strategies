@@ -118,7 +118,7 @@ Overall, this buy low sell high strategy is well suited for highly volatile cryp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-12-25 00:00:00

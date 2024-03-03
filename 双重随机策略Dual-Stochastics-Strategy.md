@@ -199,7 +199,7 @@ The Dual Stochastics strategy judges bullish and bearish zones by current period
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-07 00:00:00
 end: 2023-11-06 00:00:00

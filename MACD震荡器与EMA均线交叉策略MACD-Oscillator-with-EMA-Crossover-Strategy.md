@@ -222,7 +222,7 @@ In summary, the strategy forms a simple yet powerful system from the MACD and EM
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © SoftKill21
 

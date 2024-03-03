@@ -104,7 +104,7 @@ This strategy combines the strengths of trend following and pullback trading usi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-20 00:00:00
 end: 2024-02-26 00:00:00

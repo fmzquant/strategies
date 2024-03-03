@@ -174,7 +174,7 @@ The EMA crossover strategy has clear, easy-to-understand logic using established
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-10 00:00:00
 end: 2023-11-09 00:00:00

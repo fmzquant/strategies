@@ -131,7 +131,7 @@ This strategy identifies longer cycle trend directions through the crossover sys
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-27 00:00:00
 end: 2023-11-02 00:00:00

@@ -156,7 +156,7 @@ The TMA Crossover strategy is an easy-to-use trend following strategy overall. I
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-08 00:00:00
 end: 2024-01-15 00:00:00

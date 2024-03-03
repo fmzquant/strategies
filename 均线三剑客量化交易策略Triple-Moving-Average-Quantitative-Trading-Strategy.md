@@ -102,7 +102,7 @@ Summary: This strategy integrates multiple auxiliary signals, leverages the stre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-17 00:00:00
 end: 2023-08-08 00:00:00

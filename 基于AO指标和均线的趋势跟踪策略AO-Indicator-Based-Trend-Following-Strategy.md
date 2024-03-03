@@ -103,7 +103,7 @@ This is a simple trend following strategy. Using the AO to determine short-term 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2023-12-14 20:00:00

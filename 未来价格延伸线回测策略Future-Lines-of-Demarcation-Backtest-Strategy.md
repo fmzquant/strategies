@@ -115,7 +115,7 @@ The strategy judges future price trend by comparing price with displaced future 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-29 00:00:00
 end: 2024-02-04 00:00:00

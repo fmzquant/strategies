@@ -105,7 +105,7 @@ This strategy possesses both trend following and reversal trading capabilities, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-21 00:00:00
 end: 2023-11-20 00:00:00

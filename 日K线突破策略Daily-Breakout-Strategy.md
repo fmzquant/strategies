@@ -111,7 +111,7 @@ The daily breakout strategy identifies market momentum through simple and effect
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-26 00:00:00
 end: 2023-08-30 00:00:00

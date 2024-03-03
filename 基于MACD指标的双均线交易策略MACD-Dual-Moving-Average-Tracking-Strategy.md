@@ -105,7 +105,7 @@ This strategy uses the classic MACD dual moving average combination indicator to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-10 00:00:00
 end: 2023-12-13 02:00:00

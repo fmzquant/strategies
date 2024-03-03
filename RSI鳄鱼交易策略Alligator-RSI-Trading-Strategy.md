@@ -120,7 +120,7 @@ The Alligator RSI trading strategy uses RSI MA crosses to capture market reversa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-30 00:00:00
 end: 2023-12-06 00:00:00

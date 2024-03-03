@@ -200,7 +200,7 @@ This strategy judges the trend direction mainly based on moving averages, and ta
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-19 00:00:00
 end: 2023-09-25 00:00:00

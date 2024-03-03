@@ -106,7 +106,7 @@ This strategy successfully employs the weighted standard deviation indicator tog
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-16 00:00:00
 end: 2023-11-23 00:00:00

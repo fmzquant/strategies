@@ -141,7 +141,7 @@ Overall this is a mature and reliable trend following strategy. It identifies tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // © CRabbit
 //@version=5
 

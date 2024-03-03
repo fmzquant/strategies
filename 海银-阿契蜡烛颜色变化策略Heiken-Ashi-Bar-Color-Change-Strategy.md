@@ -98,7 +98,7 @@ The Heiken Ashi bar color change strategy judges trends by analyzing candle colo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-08 00:00:00
 end: 2023-10-08 00:00:00

@@ -131,7 +131,7 @@ The fast oscillating RSI trading strategy identifies price oscillations and dete
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-07 00:00:00
 end: 2024-01-07 00:00:00

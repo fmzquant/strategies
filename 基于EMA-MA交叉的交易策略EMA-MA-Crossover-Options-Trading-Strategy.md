@@ -143,7 +143,7 @@ This short-term EMA/MA crossover strategy captures short-term trend changes and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-09 00:00:00
 end: 2024-01-15 00:00:00

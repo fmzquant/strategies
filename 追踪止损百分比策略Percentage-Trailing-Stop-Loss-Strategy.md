@@ -115,7 +115,7 @@ The percentage trailing stop loss strategy is very practical overall, which can 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-08 00:00:00
 end: 2024-01-07 00:00:00

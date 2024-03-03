@@ -190,7 +190,7 @@ This strategy tries to identify more reliable trend turning points by combining 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-24 00:00:00
 end: 2023-09-23 00:00:00

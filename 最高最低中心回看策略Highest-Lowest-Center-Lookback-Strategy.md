@@ -146,7 +146,7 @@ The Highest/Lowest Center Lookback strategy is a simple and practical trend foll
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-27 00:00:00
 end: 2023-12-27 00:00:00

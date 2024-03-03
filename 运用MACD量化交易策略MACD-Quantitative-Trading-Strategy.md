@@ -87,7 +87,7 @@ This strategy utilizes the probability of mean reversions from oversold levels i
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 strategy(title="MACD - EURUSD", shorttitle="MACD EURUSD")
 

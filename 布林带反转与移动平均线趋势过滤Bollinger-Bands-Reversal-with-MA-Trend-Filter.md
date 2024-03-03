@@ -131,7 +131,7 @@ This strategy takes both the reversal signals from Bollinger Bands and trend jud
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-05 00:00:00
 end: 2023-12-05 00:00:00

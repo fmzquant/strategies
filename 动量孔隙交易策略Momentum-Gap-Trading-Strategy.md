@@ -209,7 +209,7 @@ The Momentum Gap Trading Strategy is a simple yet practical breakout strategy. B
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-21 00:00:00
 end: 2023-12-27 00:00:00

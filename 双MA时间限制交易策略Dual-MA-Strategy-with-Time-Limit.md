@@ -116,7 +116,7 @@ This strategy generates trading signals using dual MAs and controls the running 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-11-13 00:00:00

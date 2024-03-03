@@ -69,7 +69,7 @@ In summary, indicator integration improves judgment effectiveness, but traders s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-05 00:00:00
 end: 2023-09-08 00:00:00

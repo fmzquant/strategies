@@ -166,7 +166,7 @@ The Momentum Burst Tracking Strategy is a very practical trend tracking strategy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-03-01 00:00:00
 end: 2023-12-10 05:20:00

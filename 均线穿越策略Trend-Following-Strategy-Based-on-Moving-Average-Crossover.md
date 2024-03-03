@@ -189,7 +189,7 @@ The strategy uses moving average crossover as the primary signal along with osci
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-17 00:00:00
 end: 2023-05-14 00:00:00

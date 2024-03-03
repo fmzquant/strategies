@@ -167,7 +167,7 @@ This strategy combines the strengths of moving averages, channels, volatility an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-05 00:00:00
 end: 2023-11-12 00:00:00

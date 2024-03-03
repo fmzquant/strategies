@@ -122,7 +122,7 @@ This strategy effectively tracks medium-short term trends by combining reversal 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-11-23 00:00:00

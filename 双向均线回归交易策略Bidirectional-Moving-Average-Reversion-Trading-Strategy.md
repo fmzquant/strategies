@@ -146,7 +146,7 @@ The bidirectional moving average reversion trading strategy aims to profit from 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-15 00:00:00
 end: 2024-01-14 00:00:00

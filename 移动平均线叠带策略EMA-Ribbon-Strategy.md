@@ -146,7 +146,7 @@ The EMA Ribbon strategy has clear logic, identifying trend with EMA crossovers a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-14 00:00:00
 end: 2024-01-21 00:00:00

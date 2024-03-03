@@ -105,7 +105,7 @@ The overall operation of this strategy is stable. Within reasonable parameter sp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-22 08:00:00

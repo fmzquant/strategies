@@ -173,7 +173,7 @@ The BB%B strategy is a simple and practical quantitative trading strategy. It us
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-25 00:00:00
 end: 2023-09-24 00:00:00

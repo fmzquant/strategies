@@ -100,7 +100,7 @@ This strategy combines the power of multiple technical tools. With proper parame
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-27 00:00:00
 end: 2024-02-26 00:00:00

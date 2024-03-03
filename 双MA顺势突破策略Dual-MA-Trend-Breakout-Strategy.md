@@ -166,7 +166,7 @@ The Dual MA Trend Breakout Strategy is generally a simple and practical trend fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-31 00:00:00
 end: 2024-01-07 00:00:00

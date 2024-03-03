@@ -167,7 +167,7 @@ This strategy identifies and tracks trends based on the price deviation concept 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-14 00:00:00
 end: 2024-01-21 00:00:00

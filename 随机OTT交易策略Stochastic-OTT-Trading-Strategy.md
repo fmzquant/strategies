@@ -106,7 +106,7 @@ This strategy integrates OTT’s reversal and stochastic’s filtering ability t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-21 00:00:00

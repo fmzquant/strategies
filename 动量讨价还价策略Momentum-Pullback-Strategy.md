@@ -117,7 +117,7 @@ Overall this is an easy to understand and implement medium-term trading strategy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-18 00:00:00
 end: 2024-01-25 00:00:00

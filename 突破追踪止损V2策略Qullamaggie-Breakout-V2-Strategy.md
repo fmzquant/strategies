@@ -180,7 +180,7 @@ This strategy combines the philosophies of breakout and trend-following trailing
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-17 00:00:00
 end: 2023-10-23 00:00:00

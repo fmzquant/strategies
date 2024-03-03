@@ -120,7 +120,7 @@ This strategy effectively captures downtrend based on MA and RSI. Gradual positi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-31 00:00:00
 end: 2023-11-06 00:00:00

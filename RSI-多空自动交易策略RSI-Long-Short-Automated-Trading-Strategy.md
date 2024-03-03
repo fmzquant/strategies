@@ -118,7 +118,7 @@ Overall this is an automated trading strategy using the RSI indicator to judge o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-22 00:00:00
 end: 2023-10-29 00:00:00

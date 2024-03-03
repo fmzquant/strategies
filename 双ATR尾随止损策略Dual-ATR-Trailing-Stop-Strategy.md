@@ -118,7 +118,7 @@ The Dual ATR Trailing Stop Strategy is easy to understand and implement, especia
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

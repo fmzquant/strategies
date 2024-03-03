@@ -93,7 +93,7 @@ Integrating a variety of analytical tools to judge the market, this strategy can
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-23 00:00:00
 end: 2024-02-29 00:00:00

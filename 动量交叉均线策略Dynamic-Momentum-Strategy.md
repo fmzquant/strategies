@@ -107,7 +107,7 @@ The momentum SMA cross strategy dynamically captures changing market trends by c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

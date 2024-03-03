@@ -134,7 +134,7 @@ The strategy leverages the strengths of both RSI and Stoch RSI to establish a du
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-30 00:00:00

@@ -140,7 +140,7 @@ In general, this is a typical trend following strategy that uses the characteris
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-05 00:00:00

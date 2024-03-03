@@ -83,7 +83,7 @@ In summary, the multi-indicator approach can improve decisions to some extent bu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-06 00:00:00
 end: 2023-09-12 00:00:00

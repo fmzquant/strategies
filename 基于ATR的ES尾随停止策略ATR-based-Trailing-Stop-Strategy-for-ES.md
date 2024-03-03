@@ -99,7 +99,7 @@ In general, this is a robust trend following strategy. It solves the problem of 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-05 00:00:00
 end: 2024-01-11 00:00:00

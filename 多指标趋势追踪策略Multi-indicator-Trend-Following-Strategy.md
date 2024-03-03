@@ -226,7 +226,7 @@ This strategy integrates multiple indicators to determine the trend direction, a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © myn
 

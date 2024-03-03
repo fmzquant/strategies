@@ -148,7 +148,7 @@ In general, the Fibonacci Band Oscillation Strategy is a very practical short-te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-11-20 00:00:00

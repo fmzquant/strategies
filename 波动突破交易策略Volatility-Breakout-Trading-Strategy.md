@@ -126,7 +126,7 @@ In conclusion, this is a very practical price action based strategy. It has the 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-04 00:00:00
 end: 2023-03-12 00:00:00

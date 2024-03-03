@@ -139,7 +139,7 @@ Overall, this strategy is a stable medium-long term holding strategy. It can eff
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-10 00:00:00
 end: 2023-12-17 00:00:00

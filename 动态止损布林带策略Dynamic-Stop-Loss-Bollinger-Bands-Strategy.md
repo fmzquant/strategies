@@ -81,7 +81,7 @@ This strategy utilizes Bollinger Bands' regression attributes along with dynamic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

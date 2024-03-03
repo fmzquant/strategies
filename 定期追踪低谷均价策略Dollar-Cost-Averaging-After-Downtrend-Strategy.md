@@ -121,7 +121,7 @@ The overall idea of this dollar cost averaging after downtrend strategy is clear
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

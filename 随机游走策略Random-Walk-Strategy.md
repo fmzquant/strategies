@@ -170,7 +170,7 @@ The random walk strategy realizes mechanical trading through random number contr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-02 00:00:00
 end: 2023-10-08 00:00:00

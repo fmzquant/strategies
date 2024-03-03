@@ -205,7 +205,7 @@ But the strategy itself also has some inherent weaknesses. It requires users to 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2023-12-15 01:00:00

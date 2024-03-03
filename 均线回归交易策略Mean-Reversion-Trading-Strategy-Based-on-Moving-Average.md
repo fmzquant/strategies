@@ -134,7 +134,7 @@ The mean reversion strategy utilizes the equilibrium reversion tendency of stock
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-19 00:00:00
 end: 2023-10-25 00:00:00

@@ -38,7 +38,7 @@ Happy trading and good luck!
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=4
 // Copyright by Libertus - 2021
 // RSI Divergences v3.2

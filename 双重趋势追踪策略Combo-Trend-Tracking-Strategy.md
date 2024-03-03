@@ -160,7 +160,7 @@ The combo trend tracking strategy effectively determines the essentiality of pri
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-25 00:00:00
 end: 2024-01-01 00:00:00

@@ -144,7 +144,7 @@ The dual confirmation breakout strategy strikes an efficient balance between cap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-14 00:00:00
 end: 2023-12-14 00:00:00

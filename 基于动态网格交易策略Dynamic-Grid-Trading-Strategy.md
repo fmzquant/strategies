@@ -117,7 +117,7 @@ The dynamic grid trading strategy adapts to the market by adjusting grid paramet
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-23 00:00:00
 end: 2024-01-22 00:00:00

@@ -105,7 +105,7 @@ This strategy successfully combines the strengths of Bollinger Bands and RSI, is
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-12-25 00:00:00

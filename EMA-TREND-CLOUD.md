@@ -36,7 +36,7 @@ Exits can happen when price closes in the cloud or on the opposite side of the c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-17 00:00:00
 end: 2022-05-16 23:59:00

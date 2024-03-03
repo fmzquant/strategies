@@ -136,7 +136,7 @@ The candlestick pattern strategy identifies short-term turning points using tech
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-11-24 02:00:00

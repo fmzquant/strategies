@@ -156,7 +156,7 @@ The Rainbow Oscillator backtesting strategy judges market trends and stability b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-12-25 00:00:00

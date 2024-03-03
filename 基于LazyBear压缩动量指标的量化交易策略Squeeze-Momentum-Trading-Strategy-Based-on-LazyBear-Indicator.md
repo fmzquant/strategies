@@ -87,7 +87,7 @@ The strategy judges price trends and volatility relatively comprehensively with 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

@@ -174,7 +174,7 @@ This strategy achieves stable trend capturing through the combination of moving 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-10 00:00:00
 end: 2024-01-16 00:00:00

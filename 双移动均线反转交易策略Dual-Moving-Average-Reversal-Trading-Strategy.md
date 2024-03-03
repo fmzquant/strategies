@@ -114,7 +114,7 @@ Overall this strategy is quite balanced, using dual EMA for trend and candlestic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-10 00:00:00
 end: 2023-11-09 00:00:00

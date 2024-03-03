@@ -113,7 +113,7 @@ In summary, this is a simple trend tracking strategy using Bollinger Bands to de
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-18 00:00:00
 end: 2023-12-18 00:00:00

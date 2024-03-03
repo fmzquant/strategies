@@ -30,7 +30,7 @@ Diamond Trend is an indicator clearly way to catch the trend in the begining $$
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-09 00:00:00
 end: 2022-05-08 23:59:00

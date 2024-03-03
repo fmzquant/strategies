@@ -161,7 +161,7 @@ Overall this strategy is a typical short-term breakout system, incorporating tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-10-06 00:00:00

@@ -171,7 +171,7 @@ In summary, the dual RSI strategy is a typical trend following strategy. Its ide
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-07 00:00:00
 end: 2023-11-14 00:00:00

@@ -132,7 +132,7 @@ The strategy overall adopts a trend following approach. Extensive parameter tuni
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-17 00:00:00
 end: 2024-02-18 00:00:00

@@ -103,7 +103,7 @@ The overall idea of this strategy is clear and easy to understand. By dynamicall
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-10-10 00:00:00

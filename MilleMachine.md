@@ -57,7 +57,7 @@ Greetings Michael
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // © Milleman
 //@version=4
 //strategy("MilleMachine", overlay=true, default_qty_type = strategy.percent_of_equity, default_qty_value = 100, initial_capital=10000, commission_type=strategy.commission.percent, commission_value=0.06)

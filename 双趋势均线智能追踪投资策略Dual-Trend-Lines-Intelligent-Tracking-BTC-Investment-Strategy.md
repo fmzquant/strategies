@@ -146,7 +146,7 @@ Overall, this is a very practical automated BTC investment program. Using dual E
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © Wunderbit Trading
 

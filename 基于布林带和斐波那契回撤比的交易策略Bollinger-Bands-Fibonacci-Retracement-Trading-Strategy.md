@@ -184,7 +184,7 @@ This strategy combines the strengths of Bollinger Bands and Fibonacci retracemen
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-27 00:00:00
 end: 2023-09-26 00:00:00

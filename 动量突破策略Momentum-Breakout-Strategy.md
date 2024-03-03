@@ -213,7 +213,7 @@ Overall this is a simple and clear momentum breakout strategy. It adopts a prude
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 //descripcion: 
 //entrada en saturacion oscilador estocastico

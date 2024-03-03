@@ -128,7 +128,7 @@ This strategy integrates three common technical analysis techniques - EMA crosso
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-02 12:00:00

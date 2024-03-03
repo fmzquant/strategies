@@ -143,7 +143,7 @@ This strategy is named "Four-factor Momentum Tracking Strategy". It uses ADX, BB
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-04 00:00:00
 end: 2023-12-10 00:00:00

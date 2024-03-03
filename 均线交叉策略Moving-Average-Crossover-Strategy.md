@@ -171,7 +171,7 @@ In conclusion, this MA crossover strategy has a clear logic and is simple to imp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-10-09 00:00:00

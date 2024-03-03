@@ -152,7 +152,7 @@ The Bollinger Bands Breakout Trend Trading Strategy offers a rules-based approac
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-25 00:00:00
 end: 2024-02-26 00:00:00

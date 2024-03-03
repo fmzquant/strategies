@@ -149,7 +149,7 @@ This strategy combines the trading signals from TMO and AMA to scalp in range-bo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-23 00:00:00
 end: 2023-11-30 00:00:00

@@ -160,7 +160,7 @@ Overall this is a relatively simple trend following strategy, with the core idea
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-27 00:00:00
 end: 2023-03-12 00:00:00

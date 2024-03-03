@@ -110,7 +110,7 @@ Overall this is a very basic RSI strategy, generating trading signals by identif
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-14 00:00:00
 end: 2024-02-21 00:00:00

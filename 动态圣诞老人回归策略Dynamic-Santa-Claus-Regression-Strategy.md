@@ -113,7 +113,7 @@ The Dynamic Santa Claus Regression Strategy utilizes the dynamic regression rela
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-05 00:00:00
 end: 2024-01-11 00:00:00

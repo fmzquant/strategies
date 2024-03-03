@@ -67,7 +67,7 @@ Of course, the centroid force indicator has limited capabilities in complex mark
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-04 00:00:00
 end: 2023-09-11 00:00:00

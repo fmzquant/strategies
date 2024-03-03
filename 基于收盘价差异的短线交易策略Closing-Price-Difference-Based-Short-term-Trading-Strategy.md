@@ -151,7 +151,7 @@ This strategy judges future price trends based on closing price differences, usi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-28 00:00:00
 end: 2023-09-27 00:00:00

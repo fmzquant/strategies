@@ -118,7 +118,7 @@ The strategy fully utilizes the efficient stop loss function of the Parabolic SA
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

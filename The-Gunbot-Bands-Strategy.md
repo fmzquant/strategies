@@ -65,7 +65,7 @@ Overall, the Gunbot Bands strategy aims to capitalize on trend continuations but
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-02 00:00:00
 end: 2023-09-09 00:00:00

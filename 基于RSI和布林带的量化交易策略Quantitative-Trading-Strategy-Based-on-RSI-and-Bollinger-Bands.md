@@ -134,7 +134,7 @@ The quantitative trading strategy based on RSI and Bollinger Bands, through doub
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-02-03 00:00:00

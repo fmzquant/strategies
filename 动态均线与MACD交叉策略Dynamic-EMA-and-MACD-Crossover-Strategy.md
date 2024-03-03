@@ -156,7 +156,7 @@ This strategy combines dual EMA crossover system and MACD indicator to construct
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-29 00:00:00
 end: 2024-02-05 00:00:00

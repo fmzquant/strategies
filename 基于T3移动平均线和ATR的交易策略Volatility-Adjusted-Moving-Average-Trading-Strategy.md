@@ -189,7 +189,7 @@ This strategy combines the advantages of the T3 and ATR to enable fast response 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-31 00:00:00
 end: 2023-11-06 00:00:00

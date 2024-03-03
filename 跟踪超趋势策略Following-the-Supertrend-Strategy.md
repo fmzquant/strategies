@@ -164,7 +164,7 @@ This strategy designed a simple trend following strategy based on the Supertrend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-16 00:00:00
 end: 2023-10-23 00:00:00

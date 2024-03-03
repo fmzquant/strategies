@@ -197,7 +197,7 @@ This strategy combines short and medium-term indicators to identify reversals ac
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 ////////////////////////////////////////////////////////////
 //  Copyright by HPotter v1.0 23/05/2019

@@ -136,7 +136,7 @@ The strategy determines price trend based on EMA indicator and goes long on gold
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-17 00:00:00
 end: 2023-11-23 00:00:00

@@ -113,7 +113,7 @@ In conclusion, the Double Moving Average Reversal strategy captures price trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-10 00:00:00
 end: 2023-06-08 00:00:00

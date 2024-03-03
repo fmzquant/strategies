@@ -144,7 +144,7 @@ The 4-hour Stochastic EMA trend strategy combines EMAs and Stochastic to identif
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-25 00:00:00
 end: 2023-09-25 00:00:00

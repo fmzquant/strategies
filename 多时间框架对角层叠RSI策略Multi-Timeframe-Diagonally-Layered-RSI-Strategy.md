@@ -104,7 +104,7 @@ Overall this is a very effective downtrend trading strategy. Using multi-timefra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-21 00:00:00
 end: 2023-06-24 00:00:00

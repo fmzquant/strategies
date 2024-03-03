@@ -92,7 +92,7 @@ This strategy belongs to high frequency scalping trading type. It sets entry and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-27 00:00:00

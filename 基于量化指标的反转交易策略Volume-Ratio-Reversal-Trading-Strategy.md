@@ -137,7 +137,7 @@ The VR reversal trading strategy is a simple, easy-to-implement short-term quant
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

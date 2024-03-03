@@ -144,7 +144,7 @@ Overall, the adaptive trend following strategy is quite a mature quantitative st
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-15 00:00:00
 end: 2024-01-14 00:00:00

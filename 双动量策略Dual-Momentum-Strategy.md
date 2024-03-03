@@ -154,7 +154,7 @@ The Dual Momentum strategy captures trend direction using fast and slow momentum
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-28 00:00:00
 end: 2023-09-27 00:00:00

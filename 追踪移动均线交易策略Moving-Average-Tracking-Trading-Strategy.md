@@ -155,7 +155,7 @@ The strategy has clear and easy-to-understand logic. Trading signals can be obta
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-23 00:00:00
 end: 2023-10-23 00:00:00

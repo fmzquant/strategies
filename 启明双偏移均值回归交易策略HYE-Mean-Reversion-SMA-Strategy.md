@@ -173,7 +173,7 @@ The HYE Mean Reversion SMA Strategy is a simple and practical short-term mean re
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-08 00:00:00
 end: 2023-12-14 00:00:00

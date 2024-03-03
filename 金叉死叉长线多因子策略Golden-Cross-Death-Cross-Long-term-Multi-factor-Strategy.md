@@ -122,7 +122,7 @@ As a long-term multi-factor golden cross death cross strategy, it combines movin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-16 00:00:00
 end: 2024-01-22 00:00:00

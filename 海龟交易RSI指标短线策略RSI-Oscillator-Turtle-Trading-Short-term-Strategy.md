@@ -171,7 +171,7 @@ In summary, this is a relatively robust short-term trading strategy. It adopts a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-11-07 20:00:00

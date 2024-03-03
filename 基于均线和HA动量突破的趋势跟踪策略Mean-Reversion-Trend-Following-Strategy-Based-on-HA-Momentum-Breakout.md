@@ -168,7 +168,7 @@ In summary, this is a trend following strategy based on determining the directio
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-10 00:00:00

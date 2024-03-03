@@ -145,7 +145,7 @@ The Reversal Breakout Trend strategy leverages the strengths of reversal and tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-06 00:00:00

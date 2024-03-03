@@ -174,7 +174,7 @@ In summary, this is a simple and robust strategy using the Parabolic SAR to iden
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-10-10 00:00:00

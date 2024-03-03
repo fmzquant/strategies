@@ -139,7 +139,7 @@ The dual kinetic moving average trading strategy integrates the advantages of mu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-12 00:00:00
 end: 2024-02-18 00:00:00

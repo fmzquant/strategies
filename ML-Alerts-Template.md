@@ -52,7 +52,7 @@ Hope someone will find this useful, or even just as an additional visual confirm
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-16 00:00:00
 end: 2022-05-15 23:59:00

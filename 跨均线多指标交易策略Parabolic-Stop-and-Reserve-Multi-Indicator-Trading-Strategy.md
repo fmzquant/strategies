@@ -177,7 +177,7 @@ The Parabolic Stop and Reserve Multi-Indicator Trading Strategy integrates vario
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-20 00:00:00
 end: 2023-12-27 00:00:00

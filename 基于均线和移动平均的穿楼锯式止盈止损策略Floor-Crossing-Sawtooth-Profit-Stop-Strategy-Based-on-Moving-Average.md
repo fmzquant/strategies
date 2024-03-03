@@ -200,7 +200,7 @@ In summary, through the moving average filter and moving take profit and stop lo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-12-11 00:00:00

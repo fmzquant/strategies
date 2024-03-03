@@ -188,7 +188,7 @@ This strategy enters based on Stochastic overbought/oversold and manages risk wi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-28 00:00:00
 end: 2023-09-27 00:00:00

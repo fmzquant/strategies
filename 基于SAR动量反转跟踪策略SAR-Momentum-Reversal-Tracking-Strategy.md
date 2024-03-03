@@ -108,7 +108,7 @@ The strategy provides an automated system to capture market trend reversals usin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-27 00:00:00
 end: 2024-02-03 00:00:00

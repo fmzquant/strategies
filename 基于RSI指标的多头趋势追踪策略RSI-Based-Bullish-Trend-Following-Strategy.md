@@ -115,7 +115,7 @@ The strategy utilizes RSI to judge market condition and has reasonable stop loss
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-24 00:00:00

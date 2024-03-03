@@ -151,7 +151,7 @@ In conclusion, this dynamic envelope moving average strategy works very well for
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

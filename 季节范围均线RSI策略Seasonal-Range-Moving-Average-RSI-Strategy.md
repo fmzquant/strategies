@@ -124,7 +124,7 @@ This strategy combines moving average and RSI, with the addition of seasonal jud
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

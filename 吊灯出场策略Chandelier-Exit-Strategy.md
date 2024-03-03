@@ -98,7 +98,7 @@ This strategy identifies reversal opportunities using the dynamic stop lines fro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-28 00:00:00
 end: 2024-01-04 00:00:00

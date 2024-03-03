@@ -141,7 +141,7 @@ The dynamic trailing stop loss strategy sets trailing stop loss lines through a 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-17 00:00:00

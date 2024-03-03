@@ -119,7 +119,7 @@ The strategy catches short term trends formed from MA crossover signals, expands
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-19 00:00:00
 end: 2024-02-26 00:00:00

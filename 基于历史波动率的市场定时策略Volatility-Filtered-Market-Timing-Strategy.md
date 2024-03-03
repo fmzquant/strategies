@@ -80,7 +80,7 @@ This strategy greatly improved returns and reduced max drawdown of a SPY buy & h
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-08 00:00:00
 end: 2024-01-14 00:00:00

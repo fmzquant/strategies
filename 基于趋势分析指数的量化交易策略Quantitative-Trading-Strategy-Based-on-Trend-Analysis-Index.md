@@ -125,7 +125,7 @@ In summary, this is a mid- to long-term trend following strategy based on the sl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 ////////////////////////////////////////////////////////////
 //  Copyright by HPotter v1.0 21/12/2017

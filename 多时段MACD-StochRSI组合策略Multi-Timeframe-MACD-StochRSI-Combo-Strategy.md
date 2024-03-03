@@ -101,7 +101,7 @@ In summary, this multi-timeframe approach can improve signal quality but require
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-13 00:00:00
 end: 2023-09-12 00:00:00

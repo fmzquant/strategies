@@ -133,7 +133,7 @@ This strategy is an optimized version for the classic MACD indicator. By using m
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

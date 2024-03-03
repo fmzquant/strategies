@@ -159,7 +159,7 @@ The Leledec strategy catches trend reversals by identifying extremum patterns in
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-01 00:00:00
 end: 2023-09-30 23:59:59

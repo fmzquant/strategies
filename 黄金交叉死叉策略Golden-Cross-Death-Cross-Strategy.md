@@ -167,7 +167,7 @@ This strategy implements long/short stock selection based on MA crossover princi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-10-10 00:00:00

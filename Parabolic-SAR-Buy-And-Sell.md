@@ -28,7 +28,7 @@ ChaoZhang
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-24 00:00:00
 end: 2022-05-23 23:59:00

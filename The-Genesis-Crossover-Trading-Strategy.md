@@ -38,7 +38,7 @@ The Genesis strategy works well when strong directional trends occur. Sideways c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-06-15 00:00:00

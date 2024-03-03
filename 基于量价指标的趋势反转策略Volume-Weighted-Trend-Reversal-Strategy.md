@@ -155,7 +155,7 @@ The Volume Weighted Trend Reversal Strategy combines VWAP and QQE Mod to identif
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-21 00:00:00
 end: 2024-02-20 00:00:00

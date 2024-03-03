@@ -177,7 +177,7 @@ This long-term strategy uses RSI for trend direction, confirmed by candlestick p
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-14 00:00:00
 end: 2023-09-20 00:00:00

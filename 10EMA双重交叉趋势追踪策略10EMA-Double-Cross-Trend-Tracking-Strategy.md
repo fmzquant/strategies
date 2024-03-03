@@ -96,7 +96,7 @@ This 10EMA double cross trend tracking strategy judges the current trend directi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-22 00:00:00
 end: 2023-12-28 00:00:00

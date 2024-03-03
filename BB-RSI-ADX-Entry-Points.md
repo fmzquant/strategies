@@ -64,7 +64,7 @@ Note: The bb %B is calculated for stDev - 1. This will help you see a change hap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-10 00:00:00
 end: 2022-05-09 23:59:00

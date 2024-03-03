@@ -150,7 +150,7 @@ This strategy uses the EXIT arrows of the SSL hybrid indicator as the signal cor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-05 00:00:00

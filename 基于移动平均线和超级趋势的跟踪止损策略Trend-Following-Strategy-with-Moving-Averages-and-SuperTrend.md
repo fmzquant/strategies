@@ -165,7 +165,7 @@ The strategy integrates Moving Averages’ trend analysis and SuperTrend’s sto
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-13 00:00:00

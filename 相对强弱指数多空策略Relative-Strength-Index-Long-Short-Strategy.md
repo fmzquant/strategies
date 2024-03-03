@@ -129,7 +129,7 @@ The relative strength index strategy judges the relative valuation of cryptocurr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-16 00:00:00
 end: 2023-11-15 00:00:00

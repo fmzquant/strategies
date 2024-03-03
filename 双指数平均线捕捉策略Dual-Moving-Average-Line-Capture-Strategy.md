@@ -112,7 +112,7 @@ This strategy has performed creditably in backtests by confirming overall trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-05 00:00:00
 end: 2023-12-06 22:00:00

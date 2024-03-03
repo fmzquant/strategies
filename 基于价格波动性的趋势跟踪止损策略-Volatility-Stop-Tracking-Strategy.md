@@ -108,7 +108,7 @@ Overall this is a good algorithm implementation for setting stop loss lines base
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-30 00:00:00
 end: 2023-11-30 00:00:00

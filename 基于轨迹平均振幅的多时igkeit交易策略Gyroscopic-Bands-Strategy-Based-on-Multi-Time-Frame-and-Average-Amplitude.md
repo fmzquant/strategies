@@ -147,7 +147,7 @@ This strategy improves the moving average strategy by introducing price trajecto
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-17 00:00:00
 end: 2023-11-23 00:00:00

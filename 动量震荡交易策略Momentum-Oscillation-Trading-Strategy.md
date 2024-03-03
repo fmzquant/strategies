@@ -97,7 +97,7 @@ This strategy combines the strengths of Bollinger Bands reversion and momentum, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-13 00:00:00
 end: 2023-11-20 00:00:00

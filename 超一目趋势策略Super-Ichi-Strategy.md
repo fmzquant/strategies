@@ -255,7 +255,7 @@ The Super Ichi strategy is well-suited for medium-to-long term trend trading ove
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-05 00:00:00
 end: 2023-11-05 00:00:00

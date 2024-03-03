@@ -166,7 +166,7 @@ The strategy has clear logic using Bollinger Bands to determine trend direction 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-16 00:00:00
 end: 2023-11-09 00:00:00

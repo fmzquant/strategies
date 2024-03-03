@@ -195,7 +195,7 @@ The S&P500 Advanced RSI Indicator Trading Strategy identifies medium to long ter
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-06 00:00:00
 end: 2024-02-05 00:00:00

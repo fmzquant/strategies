@@ -108,7 +108,7 @@ The overall idea of ​​the strategy is clear and easy to understand. It uses 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-27 00:00:00
 end: 2023-11-26 00:00:00

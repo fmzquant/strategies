@@ -145,7 +145,7 @@ The random entry and exit strategy tests different markets' performance under si
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-04 00:00:00
 end: 2023-10-10 00:00:00

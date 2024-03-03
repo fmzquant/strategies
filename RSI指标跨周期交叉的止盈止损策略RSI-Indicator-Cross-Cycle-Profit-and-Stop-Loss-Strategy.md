@@ -141,7 +141,7 @@ The overall operation of this strategy is clear and smooth, the indicator select
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-05 00:00:00
 end: 2024-01-18 05:20:00

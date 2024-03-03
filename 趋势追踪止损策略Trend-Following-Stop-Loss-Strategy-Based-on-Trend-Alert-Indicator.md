@@ -162,7 +162,7 @@ In general, this is a very practical trend tracking stop loss strategy. It uses 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-29 00:00:00
 end: 2024-02-04 00:00:00

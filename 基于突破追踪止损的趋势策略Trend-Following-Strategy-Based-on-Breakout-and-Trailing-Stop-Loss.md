@@ -122,7 +122,7 @@ In summary, this article has explained a trend following strategy based on price
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-13 00:00:00
 end: 2023-02-03 00:00:00

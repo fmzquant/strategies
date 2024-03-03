@@ -157,7 +157,7 @@ The MACD Volume Reversal Trading Strategy improves signal accuracy by requiring 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

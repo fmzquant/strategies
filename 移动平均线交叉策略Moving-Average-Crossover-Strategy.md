@@ -199,7 +199,7 @@ The moving average crossover strategy is a simple and practical trend following 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-13 00:00:00
 end: 2023-09-20 00:00:00

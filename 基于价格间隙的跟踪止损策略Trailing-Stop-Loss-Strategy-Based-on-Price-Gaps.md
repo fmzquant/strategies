@@ -135,7 +135,7 @@ In conclusion, this is a simple and effective trailing stop loss strategy based 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-27 00:00:00

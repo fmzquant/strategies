@@ -108,7 +108,7 @@ The EMA crossover strategy is a simple yet practical quantitative trading strate
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-11 00:00:00
 end: 2023-12-11 00:00:00

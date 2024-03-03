@@ -138,7 +138,7 @@ The strategy uses Z-distance to determine price-VWAP relationship and adds EMA t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-03 00:00:00
 end: 2023-11-09 00:00:00

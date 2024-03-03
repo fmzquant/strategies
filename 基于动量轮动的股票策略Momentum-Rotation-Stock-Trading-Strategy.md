@@ -137,7 +137,7 @@ The strategy adopts a mature momentum rotation concept, with Stoch RSI as core t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-09-13 13:00:00

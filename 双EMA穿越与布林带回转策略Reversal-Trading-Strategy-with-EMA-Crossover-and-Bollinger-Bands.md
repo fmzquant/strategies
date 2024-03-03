@@ -152,7 +152,7 @@ This strategy builds upon the two most important technical indicators EMA and Bo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-21 00:00:00
 end: 2024-02-20 00:00:00

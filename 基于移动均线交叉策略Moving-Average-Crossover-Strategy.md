@@ -108,7 +108,7 @@ The MA crossover strategy is a classic and simple trend-following strategy. It m
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-17 04:00:00

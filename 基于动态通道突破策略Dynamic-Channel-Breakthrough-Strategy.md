@@ -105,7 +105,7 @@ The overall strategy uses scientific and reasonable methods to judge price trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-27 00:00:00
 end: 2024-02-26 00:00:00

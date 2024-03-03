@@ -183,7 +183,7 @@ The Moving Average Crossover strategy is straight-forward, judging trend and tim
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

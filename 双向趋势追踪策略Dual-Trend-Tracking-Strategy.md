@@ -128,7 +128,7 @@ This strategy integrates the Aroon and RSI indicators to form a relatively compl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-09 00:00:00
 end: 2023-09-12 00:00:00

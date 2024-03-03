@@ -106,7 +106,7 @@ In summary, this is a rather conservative stock investing strategy. Using dual M
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2023-12-20 00:00:00

@@ -133,7 +133,7 @@ The strategy integrates the strengths of Smooth Moving Average and Stochastic fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-18 00:00:00
 end: 2024-01-25 00:00:00

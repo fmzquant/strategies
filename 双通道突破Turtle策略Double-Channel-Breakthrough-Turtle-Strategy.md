@@ -158,7 +158,7 @@ In conclusion, the Double Channel Breakthrough Turtle Strategy is an overall sta
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-05 00:00:00
 end: 2024-01-04 00:00:00

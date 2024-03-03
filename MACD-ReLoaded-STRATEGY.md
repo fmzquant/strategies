@@ -59,7 +59,7 @@ In longer time frames like daily charts WMA , Volume Weighted MACD V2, and MACDA
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-23 00:00:00
 end: 2022-05-22 23:59:00

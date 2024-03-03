@@ -111,7 +111,7 @@ This strategy combines moving average systems and Bollinger Bands to implement o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-09 00:00:00
 end: 2023-12-10 00:00:00

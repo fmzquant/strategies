@@ -131,7 +131,7 @@ Overall, the strategy identifies support/resistance with SMAs and trades breakou
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-27 00:00:00

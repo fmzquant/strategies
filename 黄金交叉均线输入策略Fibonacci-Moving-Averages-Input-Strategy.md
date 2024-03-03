@@ -294,7 +294,7 @@ Overall, the Fibonacci Moving Averages Input strategy is a reliable trend follow
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-25 00:00:00
 end: 2023-10-31 00:00:00

@@ -47,7 +47,7 @@ In summary, AlphaTrend has unique strengths in identifying dynamic trend reversa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-04-10 00:00:00

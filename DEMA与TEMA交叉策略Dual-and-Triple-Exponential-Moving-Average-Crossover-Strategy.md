@@ -122,7 +122,7 @@ This strategy generates trading signals from DEMA and TEMA crossover, combining 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2024-01-02 00:00:00

@@ -98,7 +98,7 @@ This strategy combines Camarilla pivot lines and Bollinger Bands, generating tra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-28 00:00:00
 end: 2024-02-04 00:00:00

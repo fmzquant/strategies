@@ -149,7 +149,7 @@ In conclusion, this is a typical short-term trading strategy based on trend foll
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

@@ -147,7 +147,7 @@ Overall, the strategy trades based on trend direction determined by moving avera
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-02 00:00:00
 end: 2023-10-08 00:00:00

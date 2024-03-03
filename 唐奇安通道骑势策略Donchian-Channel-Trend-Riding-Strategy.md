@@ -129,7 +129,7 @@ In general, the Donchian Channel Trend Riding Strategy is a relatively simple an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-26 00:00:00
 end: 2024-02-16 00:00:00

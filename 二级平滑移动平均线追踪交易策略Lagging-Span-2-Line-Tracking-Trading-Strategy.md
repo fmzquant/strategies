@@ -128,7 +128,7 @@ The strategy is relatively simple and practical. It uses the Lagging Span 2 line
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-25 00:00:00
 end: 2024-01-24 00:00:00

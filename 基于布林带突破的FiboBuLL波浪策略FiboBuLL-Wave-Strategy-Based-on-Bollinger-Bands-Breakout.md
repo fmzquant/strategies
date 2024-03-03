@@ -174,7 +174,7 @@ The FiboBuLL Wave strategy provides a basic framework for designing trades based
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-24 00:00:00
 end: 2023-11-30 00:00:00

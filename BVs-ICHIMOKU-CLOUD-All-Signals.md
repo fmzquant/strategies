@@ -51,7 +51,7 @@ This script can be a helpful tool to backtest the Ichimoku Cloud trading strateg
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-03-21 00:00:00

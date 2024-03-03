@@ -38,7 +38,7 @@ Works really well with an AO div detector.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-30 00:00:00
 end: 2022-05-29 23:59:00

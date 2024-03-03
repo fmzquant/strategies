@@ -119,7 +119,7 @@ In summary, the logic of this strategy is clear, and the indicators used are als
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-07 00:00:00
 end: 2023-11-06 00:00:00

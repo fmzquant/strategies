@@ -135,7 +135,7 @@ Of course some risks remain, like price gaps and oversensitive stops. Further op
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

@@ -164,7 +164,7 @@ This is a trend following strategy incorporating the Wave Trend indicator with a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-31 00:00:00
 end: 2024-01-30 00:00:00

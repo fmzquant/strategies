@@ -144,7 +144,7 @@ In summary, this strategy identifies trends using dual Stochastics and VWMA, whi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-19 00:00:00
 end: 2023-10-25 00:00:00

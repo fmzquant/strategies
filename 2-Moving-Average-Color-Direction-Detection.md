@@ -46,7 +46,7 @@ The following alerts were created:
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 study(shorttitle="MA_2X", title="2 Moving Average Color Direction Detection ", overlay=true)
 

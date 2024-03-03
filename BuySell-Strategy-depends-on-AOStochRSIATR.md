@@ -50,7 +50,7 @@ RSI ve Stoch asırı alım bölgesinde iken awesome negatife döner ise short 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-19 00:00:00
 end: 2022-05-18 23:59:00

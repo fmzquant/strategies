@@ -127,7 +127,7 @@ To summarize, the Yin Yang Hanging Man strategy generates trade signals by ident
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

@@ -98,7 +98,7 @@ In summary, this is a typical pre-market short scalping strategy using EMA/SMI t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-09-12 00:00:00

@@ -37,7 +37,7 @@ good luck trading!
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy(title = "Chande Kroll Stop", overlay=true)
 p = input.int(10, minval=1)

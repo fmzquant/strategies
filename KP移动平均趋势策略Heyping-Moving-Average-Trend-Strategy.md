@@ -123,7 +123,7 @@ The Heyping Moving Average Trend Strategy combines various technical indicators 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-27 00:00:00
 end: 2024-01-02 00:00:00

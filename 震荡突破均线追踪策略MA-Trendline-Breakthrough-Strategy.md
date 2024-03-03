@@ -112,7 +112,7 @@ In summary, this is an excellent breakout strategy for range-bound markets. The 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-23 00:00:00
 end: 2023-03-15 00:00:00

@@ -111,7 +111,7 @@ This is a longer time frame trend following strategy based on Bollinger Bands an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-07 00:00:00
 end: 2024-01-14 00:00:00

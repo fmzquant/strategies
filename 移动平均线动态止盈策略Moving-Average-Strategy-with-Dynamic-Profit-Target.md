@@ -133,7 +133,7 @@ The strategy identifies trend with moving averages, takes profit at ATR multiple
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-09-17 00:00:00

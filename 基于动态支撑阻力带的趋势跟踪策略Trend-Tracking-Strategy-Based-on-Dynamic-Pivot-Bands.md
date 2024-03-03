@@ -105,7 +105,7 @@ This strategy mainly relies on the oscillation of the market to make profits. By
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-12-25 00:00:00

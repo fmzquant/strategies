@@ -131,7 +131,7 @@ The overall idea of this strategy is clear, combining Bollinger ATR channel and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

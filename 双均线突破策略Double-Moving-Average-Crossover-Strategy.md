@@ -140,7 +140,7 @@ Overall, the dual moving average crossover strategy offers simplicity, flexibili
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-10 00:00:00
 end: 2023-06-16 00:00:00

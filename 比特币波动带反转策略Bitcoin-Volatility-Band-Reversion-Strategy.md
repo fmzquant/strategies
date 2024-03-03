@@ -154,7 +154,7 @@ The strategy overall is rather simple and intuitive, identifying reversals via v
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-10-11 00:00:00

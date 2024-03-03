@@ -51,7 +51,7 @@ Thanks @LucF and @a.tesla2018 for helping me with code fixes :)
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-23 00:00:00
 end: 2022-05-22 23:59:00

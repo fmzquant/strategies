@@ -170,7 +170,7 @@ The RSI Divergence captures mean-reverting opportunities by comparing price dyna
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-13 00:00:00
 end: 2024-02-20 00:00:00

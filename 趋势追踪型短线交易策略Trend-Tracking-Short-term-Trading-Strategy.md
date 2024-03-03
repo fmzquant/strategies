@@ -90,7 +90,7 @@ This strategy comprehensively utilizes moving averages, trend indicators and key
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-27 00:00:00
 end: 2023-12-29 23:00:00

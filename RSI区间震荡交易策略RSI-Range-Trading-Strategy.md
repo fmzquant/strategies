@@ -139,7 +139,7 @@ The RSI range trading strategy makes simple reversal trades based on RSI overbou
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-30 00:00:00
 end: 2023-11-05 00:00:00

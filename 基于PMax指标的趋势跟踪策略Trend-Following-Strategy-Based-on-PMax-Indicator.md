@@ -63,7 +63,7 @@ In conclusion, the combination of PMax and moving averages forms a relatively ma
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-05 00:00:00
 end: 2023-09-12 00:00:00

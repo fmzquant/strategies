@@ -37,7 +37,7 @@ In summary, this composite entry signal RSI strategy fuses the strengths of mult
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-03-10 00:00:00

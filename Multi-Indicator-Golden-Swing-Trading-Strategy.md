@@ -58,7 +58,7 @@ However, combining indicators also introduces lag, potentially missing optimal e
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-03-10 00:00:00

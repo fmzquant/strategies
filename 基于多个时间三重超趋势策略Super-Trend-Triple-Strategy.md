@@ -135,7 +135,7 @@ The Super Trend Triple strategy adopts three Super Trend indicators with differe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-12-20 00:00:00

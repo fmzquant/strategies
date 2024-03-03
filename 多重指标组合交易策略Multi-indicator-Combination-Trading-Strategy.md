@@ -170,7 +170,7 @@ This strategy combines CCI, ADX and AO to generate fairly reliable long signals.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-19 00:00:00
 end: 2023-10-25 00:00:00

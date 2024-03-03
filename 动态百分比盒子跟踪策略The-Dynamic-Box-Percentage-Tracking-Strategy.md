@@ -117,7 +117,7 @@ This is a simple and practical percentage range-based system. Through parameter 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-16 00:00:00
 end: 2023-11-22 00:00:00

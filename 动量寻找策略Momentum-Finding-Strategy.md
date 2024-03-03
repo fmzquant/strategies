@@ -142,7 +142,7 @@ The main idea of ​​this strategy is: using Bollinger Bands to determine the 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-17 00:00:00
 end: 2024-01-24 00:00:00

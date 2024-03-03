@@ -119,7 +119,7 @@ This strategy uses the combination of VWMACD, HMA and fast/slow TEMA to capture 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-08 00:00:00
 end: 2023-11-14 00:00:00

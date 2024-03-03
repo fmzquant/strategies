@@ -143,7 +143,7 @@ In summary, the golden ratio moving average trading strategy is a simple and eff
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-29 00:00:00
 end: 2024-01-04 00:00:00

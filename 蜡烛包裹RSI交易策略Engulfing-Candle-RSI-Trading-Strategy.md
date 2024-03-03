@@ -175,7 +175,7 @@ In summary, this strategy identifies price reversal points using RSI and candles
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-29 00:00:00
 end: 2024-02-04 00:00:00

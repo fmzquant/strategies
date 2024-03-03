@@ -132,7 +132,7 @@ This strategy combines EMA lines for trend determination and RSI signals for inc
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-25 00:00:00
 end: 2024-02-01 00:00:00

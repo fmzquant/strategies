@@ -168,7 +168,7 @@ The Monthly Trend Breakout Strategy analyzes trend, momentum and extremes. It de
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-17 00:00:00
 end: 2023-10-23 00:00:00

@@ -139,7 +139,7 @@ The dual-direction ADX trading strategy overall is a very practical quantitative
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

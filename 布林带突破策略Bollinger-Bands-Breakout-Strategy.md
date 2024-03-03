@@ -188,7 +188,7 @@ In summary, the Bollinger Bands strategy is an overall reliable trend following 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-09-12 04:00:00

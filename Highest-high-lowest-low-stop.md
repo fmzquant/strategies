@@ -21,7 +21,7 @@ Zer3192
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 strategy(title="Highest high/lowest low stop", overlay=true)
 

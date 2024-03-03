@@ -145,7 +145,7 @@ This strategy integrates the advantages of SuperTrend, Fisher Transform and othe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-26 00:00:00
 end: 2023-11-02 00:00:00

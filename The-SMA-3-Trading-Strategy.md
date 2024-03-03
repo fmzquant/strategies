@@ -51,7 +51,7 @@ Overall, SMA-3 offers a straightforward approach to trading short-term price swi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-04 00:00:00
 end: 2023-09-10 00:00:00

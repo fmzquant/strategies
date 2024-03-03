@@ -182,7 +182,7 @@ The Go With The Trend RSI strategy combines pivot points and RSI to identify pot
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-30 00:00:00
 end: 2023-10-07 00:00:00

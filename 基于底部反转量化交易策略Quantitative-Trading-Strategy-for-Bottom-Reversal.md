@@ -123,7 +123,7 @@ This strategy effectively identifies market bottom by fast RSI for oversold and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-29 00:00:00
 end: 2024-02-05 00:00:00

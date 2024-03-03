@@ -97,7 +97,7 @@ In summary, this strategy generally adopts the idea of matching prices and volum
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-13 00:00:00
 end: 2024-02-19 00:00:00

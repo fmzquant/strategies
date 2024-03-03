@@ -171,7 +171,7 @@ In summary, the dual MA reversal strategy is simple and practical overall, ident
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-23 00:00:00
 end: 2023-10-15 00:00:00

@@ -108,7 +108,7 @@ The Stochastic breakout strategy capitalizes on trend opportunities using fast/s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-09-13 00:00:00

@@ -117,7 +117,7 @@ In summary, the strategy is very stable over-all, with momentum tracking effecti
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-12 00:00:00
 end: 2024-01-18 00:00:00

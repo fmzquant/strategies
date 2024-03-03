@@ -131,7 +131,7 @@ This strategy integrates the ideas of dynamic channel and MA trend judgment, and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

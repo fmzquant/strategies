@@ -227,7 +227,7 @@ This strategy integrates MACD signals, closing price analysis, and multiple entr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-29 00:00:00

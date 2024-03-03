@@ -107,7 +107,7 @@ The strategy effectively combines Ichimoku and ADX to capture trending markets. 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-10 23:59:59

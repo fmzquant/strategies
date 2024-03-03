@@ -153,7 +153,7 @@ This strategy integrates the strengths of RSI and candlestick pattern recognitio
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-15 00:00:00
 end: 2023-09-21 00:00:00

@@ -203,7 +203,7 @@ The Daily Open Reversal is a typical short-term mean-reverting strategy that cap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-19 00:00:00
 end: 2024-01-25 00:00:00

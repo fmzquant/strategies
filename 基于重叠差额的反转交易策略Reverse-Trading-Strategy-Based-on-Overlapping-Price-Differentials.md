@@ -144,7 +144,7 @@ The strategy judges market turning points by calculating price differential reve
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-07 00:00:00
 end: 2023-12-14 00:00:00

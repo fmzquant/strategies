@@ -115,7 +115,7 @@ The overall logic of this strategy is clear, using the SSL channel to determine 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-26 00:00:00
 end: 2023-05-14 00:00:00

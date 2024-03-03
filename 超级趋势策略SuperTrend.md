@@ -62,7 +62,7 @@ Remark: If you encounter undefined variables, it is proved that this attribute i
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2020-04-27 00:00:00
 end: 2022-04-26 23:59:00

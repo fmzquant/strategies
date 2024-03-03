@@ -235,7 +235,7 @@ The biggest highlight of this strategy is the scientific integration of multiple
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-19 00:00:00
 end: 2024-01-18 00:00:00

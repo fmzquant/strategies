@@ -138,7 +138,7 @@ The Dual Indicator Slight Reversal Trading Strategy attempts to capture short-te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-09 00:00:00
 end: 2023-10-16 00:00:00

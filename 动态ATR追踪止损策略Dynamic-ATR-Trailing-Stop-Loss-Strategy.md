@@ -97,7 +97,7 @@ This strategy designs a dual-layer dynamic trailing mechanism based on the ATR i
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-04 00:00:00
 end: 2023-12-10 00:00:00

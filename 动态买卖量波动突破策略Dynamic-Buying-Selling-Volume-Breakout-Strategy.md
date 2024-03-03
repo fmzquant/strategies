@@ -107,7 +107,7 @@ This strategy makes full use of the predictability of buying and selling volume,
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-19 00:00:00
 end: 2023-12-25 00:00:00

@@ -141,7 +141,7 @@ This is an overall robust strategy using double MAs for trend direction and BBs 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-18 00:00:00
 end: 2023-10-24 00:00:00

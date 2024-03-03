@@ -161,7 +161,7 @@ This strategy forms long-line signals through multiple SMA crosses, combined wit
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-17 00:00:00
 end: 2023-11-23 00:00:00

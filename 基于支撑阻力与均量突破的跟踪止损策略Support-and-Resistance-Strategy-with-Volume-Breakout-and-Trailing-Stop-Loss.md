@@ -141,7 +141,7 @@ The strategy integrates various analytical tools, applying support/resistance, v
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-03 00:00:00
 end: 2024-01-10 00:00:00

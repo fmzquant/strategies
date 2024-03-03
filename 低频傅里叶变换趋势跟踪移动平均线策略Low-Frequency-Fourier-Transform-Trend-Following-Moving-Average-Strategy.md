@@ -140,7 +140,7 @@ This low frequency Fourier transform trend following moving average strategy has
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-27 00:00:00
 end: 2023-11-29 02:00:00

@@ -36,7 +36,7 @@ The idea is behind this script is finding pivot point , calculating average of t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-09 00:00:00
 end: 2022-05-15 23:59:00

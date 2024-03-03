@@ -173,7 +173,7 @@ Overall this is a relatively simple trend chasing strategy. It uses a custom mom
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-19 00:00:00
 end: 2023-04-13 00:00:00

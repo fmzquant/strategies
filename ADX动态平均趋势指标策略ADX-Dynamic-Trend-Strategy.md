@@ -161,7 +161,7 @@ The ADX Dynamic Trend Strategy utilizes ADX to determine trend existence and DI 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-07 00:00:00
 end: 2024-01-14 00:00:00

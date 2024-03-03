@@ -142,7 +142,7 @@ This strategy integrates multiple technical indicators for robust trend followin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-11 00:00:00
 end: 2023-01-11 00:00:00

@@ -112,7 +112,7 @@ This strategy identifies reversal signals through candlestick patterns and sets 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-26 00:00:00
 end: 2024-01-25 00:00:00

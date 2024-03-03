@@ -104,7 +104,7 @@ The strategy combines reversal trend catching and dynamic stops for stable short
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

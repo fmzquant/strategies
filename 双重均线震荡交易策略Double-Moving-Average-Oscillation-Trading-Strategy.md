@@ -140,7 +140,7 @@ The Double Moving Average Oscillation Trading Strategy generates high-quality os
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-03 00:00:00
 end: 2023-12-03 00:00:00

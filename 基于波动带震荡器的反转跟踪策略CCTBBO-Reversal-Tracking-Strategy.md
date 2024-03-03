@@ -115,7 +115,7 @@ In summary, this is a quantitative trading strategy for identifying price revers
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-17 11:00:00

@@ -165,7 +165,7 @@ The Double Dip Reversal Breakout System synergistically combines trend-following
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

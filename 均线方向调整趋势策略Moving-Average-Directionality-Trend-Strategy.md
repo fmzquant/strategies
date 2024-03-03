@@ -116,7 +116,7 @@ This strategy stresses determining the secular trend via MA directionality to mi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-07 00:00:00
 end: 2023-06-24 00:00:00

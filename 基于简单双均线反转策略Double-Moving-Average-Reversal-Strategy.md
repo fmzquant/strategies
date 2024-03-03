@@ -97,7 +97,7 @@ This is a typical double MA reversal strategy overall. It identifies reversals b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-12-19 00:00:00

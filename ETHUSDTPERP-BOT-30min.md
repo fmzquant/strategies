@@ -41,7 +41,7 @@ a624587332
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=4
 strategy("ETHUSDTPERP BOT 30min", overlay=false,  pyramiding=1,initial_capital = 10000, default_qty_type= strategy.percent_of_equity, default_qty_value = 100, calc_on_order_fills=false, slippage=0,commission_type=strategy.commission.percent,commission_value=0.075)
 

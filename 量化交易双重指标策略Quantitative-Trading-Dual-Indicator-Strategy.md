@@ -119,7 +119,7 @@ As a dual indicator filtered strategy, this strategy has good overall stability 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-07 00:00:00
 end: 2024-01-11 23:00:00

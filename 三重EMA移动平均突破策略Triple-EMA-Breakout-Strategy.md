@@ -118,7 +118,7 @@ The triple EMA breakout strategy innovatively applies the MA indicator for uniqu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-04-25 00:00:00

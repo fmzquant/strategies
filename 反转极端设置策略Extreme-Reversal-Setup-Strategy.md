@@ -132,7 +132,7 @@ The extreme reversal setup strategy generates trading signals when reversals occ
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-13 00:00:00
 end: 2024-02-20 00:00:00

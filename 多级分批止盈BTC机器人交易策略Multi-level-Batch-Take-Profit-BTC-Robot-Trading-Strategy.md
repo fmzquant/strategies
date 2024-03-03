@@ -159,7 +159,7 @@ In summary, this is a BTC trading strategy based on buying at lowest points with
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-17 00:00:00
 end: 2023-10-17 00:00:00

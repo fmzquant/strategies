@@ -129,7 +129,7 @@ The Renko reversal tracking strategy innovatively applies traditional technical 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-09-08 18:00:00

@@ -44,7 +44,7 @@ Then look for pullback between price level of break and areas of liquidity (wick
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-03 00:00:00
 end: 2022-05-09 23:59:00

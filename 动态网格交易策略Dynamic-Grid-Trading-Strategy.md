@@ -128,7 +128,7 @@ The dynamic grid trading strategy is designed reasonably as a whole. It can cons
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-30 00:00:00

@@ -283,7 +283,7 @@ In summary, the Dual SuperTrend and MACD combination strategy combines the stren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-18 00:00:00
 end: 2023-09-25 00:00:00

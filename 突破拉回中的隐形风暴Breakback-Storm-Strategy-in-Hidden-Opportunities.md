@@ -149,7 +149,7 @@ Overall, the Breakback Storm strategy aims to capture short-term trend reversal 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 00:00:00

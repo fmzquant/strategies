@@ -149,7 +149,7 @@ T7 JNSAR provides a simple and effective trend following strategy for NIFTY. By 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-18 00:00:00
 end: 2023-09-17 00:00:00

@@ -94,7 +94,7 @@ In conclusion, this strategy identifies trend reversals using double Gann channe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-01-15 00:00:00

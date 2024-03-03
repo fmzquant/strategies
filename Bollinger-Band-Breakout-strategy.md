@@ -39,7 +39,7 @@ In summary, while the Bollinger Band breakout strategy has some merits, it also 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-04 00:00:00
 end: 2023-09-10 00:00:00

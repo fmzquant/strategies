@@ -136,7 +136,7 @@ This strategy mainly uses the combination of the 5-day RSI indicator and the 200
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

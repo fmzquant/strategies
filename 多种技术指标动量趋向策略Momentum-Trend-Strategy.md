@@ -143,7 +143,7 @@ This strategy combines multiple indicators to gauge overall market momentum and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 //credit to LazyBear, Lewm444, and others for direct and indirect inputs/////////////////////////////////
 //script is very rough, publishing more for collaborative input value than as a finished product/////////

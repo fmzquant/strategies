@@ -128,7 +128,7 @@ This strategy identifies overbought/oversold zones using a combination of multi-
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-25 00:00:00
 end: 2023-10-28 10:00:00

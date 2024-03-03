@@ -65,7 +65,7 @@ The strategy has the following parameters:
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-22 00:00:00
 end: 2022-05-22 00:00:00

@@ -192,7 +192,7 @@ The strategy precisely tracks the trend by combining Hull MA, STC and UT Bot ind
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-10-06 00:00:00

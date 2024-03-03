@@ -127,7 +127,7 @@ This long-term trend following strategy enters based on confirmations from ATR, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-11 00:00:00
 end: 2024-02-17 00:00:00

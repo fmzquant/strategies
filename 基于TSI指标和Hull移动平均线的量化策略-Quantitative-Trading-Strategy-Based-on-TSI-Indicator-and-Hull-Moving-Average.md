@@ -110,7 +110,7 @@ This strategy combines the TSI indicator and Hull Moving Average to generate tra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-11 00:00:00
 end: 2023-12-17 00:00:00

@@ -139,7 +139,7 @@ The Dual Reversal Momentum Index strategy can effectively improve the accuracy o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-06 00:00:00
 end: 2024-02-05 00:00:00

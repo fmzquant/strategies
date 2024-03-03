@@ -125,7 +125,7 @@ The Super Trend LSMA Long Strategy integrates the advantages of trend tracking i
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-11 00:00:00
 end: 2023-12-17 00:00:00

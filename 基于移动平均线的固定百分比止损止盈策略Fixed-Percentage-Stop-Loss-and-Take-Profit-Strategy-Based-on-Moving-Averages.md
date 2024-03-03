@@ -162,7 +162,7 @@ This strategy identifies trend direction with moving averages, and sets fixed pe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-11 00:00:00
 end: 2023-12-17 00:00:00

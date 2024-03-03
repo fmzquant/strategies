@@ -133,7 +133,7 @@ In general, this strategy is a relatively universal short-term strategy that cap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-07 00:00:00
 end: 2023-12-14 00:00:00

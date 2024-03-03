@@ -109,7 +109,7 @@ In conclusion this is a typical multi timeframe moving average strategy. It capi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-29 00:00:00
 end: 2024-02-28 00:00:00

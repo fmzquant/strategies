@@ -151,7 +151,7 @@ This strategy combines EMA mid-to-long trend and MACD short-term reversals, trad
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-12 00:00:00
 end: 2023-09-19 00:00:00

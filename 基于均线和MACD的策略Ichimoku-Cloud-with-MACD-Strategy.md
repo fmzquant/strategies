@@ -155,7 +155,7 @@ This strategy combines the strengths of the Ichimoku Cloud and MACD indicators, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-08 00:00:00
 end: 2023-10-15 00:00:00

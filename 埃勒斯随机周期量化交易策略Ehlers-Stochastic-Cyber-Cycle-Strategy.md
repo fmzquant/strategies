@@ -156,7 +156,7 @@ The Ehlers Stochastic Cyber Cycle Strategy integrates the advantages of stochast
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-09 00:00:00
 end: 2024-01-16 00:00:00

@@ -144,7 +144,7 @@ Overall, this MACD EMA Crossover Trend Tracking strategy is relatively simple an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

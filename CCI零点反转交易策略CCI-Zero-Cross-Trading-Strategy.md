@@ -171,7 +171,7 @@ The CCI Zero Cross Trading Strategy is a simple and effective CCI-based quantita
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-30 00:00:00
 end: 2023-12-06 00:00:00

@@ -113,7 +113,7 @@ The strategy capitalizes on PPO's trending characteristics. Further improving pa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-14 00:00:00
 end: 2023-03-11 00:00:00

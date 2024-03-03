@@ -122,7 +122,7 @@ This strategy integrates the advantages of the Super Trend indicator and trailin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-18 00:00:00
 end: 2023-12-18 00:00:00

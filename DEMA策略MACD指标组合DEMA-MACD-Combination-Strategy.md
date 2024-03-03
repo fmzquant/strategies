@@ -178,7 +178,7 @@ This strategy combines the DEMA moving average and the MACD indicator to take ad
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-14 00:00:00
 end: 2023-12-20 00:00:00

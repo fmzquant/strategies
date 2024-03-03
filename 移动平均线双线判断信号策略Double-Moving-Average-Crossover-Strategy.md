@@ -168,7 +168,7 @@ This strategy uses the double judgment of Bollinger Bands and moving average ind
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-26 00:00:00
 end: 2023-12-26 00:00:00

@@ -97,7 +97,7 @@ In conclusion, this is a very practical trend tracking strategy. The inter-timef
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-23 00:00:00
 end: 2024-02-22 00:00:00

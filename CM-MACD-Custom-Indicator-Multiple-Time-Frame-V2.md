@@ -66,7 +66,7 @@ Alerts are Pre-Set to only Alert on Bar Close
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-19 00:00:00
 end: 2022-05-18 23:59:00

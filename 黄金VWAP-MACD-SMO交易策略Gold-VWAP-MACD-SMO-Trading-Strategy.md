@@ -149,7 +149,7 @@ The Gold VWAP MACD SMO strategy combines multiple indicators to determine the tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-19 00:00:00
 end: 2023-10-19 00:00:00

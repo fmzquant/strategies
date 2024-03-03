@@ -64,7 +64,7 @@ In summary, watching pivotal support/resistance level breakouts is a relatively 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-09-12 00:00:00

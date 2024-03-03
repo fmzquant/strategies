@@ -181,7 +181,7 @@ In conclusion, this strategy has clear logic and obvious advantage in trend catc
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-03 00:00:00
 end: 2023-11-02 00:00:00

@@ -165,7 +165,7 @@ This strategy combines Center of Gravity and SSL Channel to determine trends, an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-19 00:00:00
 end: 2023-09-13 00:00:00

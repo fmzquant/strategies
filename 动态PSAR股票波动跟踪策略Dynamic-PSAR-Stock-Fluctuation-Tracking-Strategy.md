@@ -101,7 +101,7 @@ This strategy utilizes the Parabolic SAR indicator to realize a fully automated 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-28 00:00:00
 end: 2024-02-04 00:00:00

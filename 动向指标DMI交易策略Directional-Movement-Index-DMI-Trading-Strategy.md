@@ -100,7 +100,7 @@ DMI strategy accurately determines trend direction with controlled drawdown. Fur
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-09-17 00:00:00

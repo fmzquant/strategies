@@ -156,7 +156,7 @@ This article detailed introduced the main content of the bidirectional EMA cross
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-23 00:00:00
 end: 2024-01-23 00:00:00

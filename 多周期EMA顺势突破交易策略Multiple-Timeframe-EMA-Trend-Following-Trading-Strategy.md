@@ -152,7 +152,7 @@ In general, this is a typical trend following strategy. It capitalizes on the ad
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-26 00:00:00
 end: 2024-02-25 00:00:00

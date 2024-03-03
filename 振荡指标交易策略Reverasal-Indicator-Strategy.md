@@ -134,7 +134,7 @@ The strategy mainly works for range-bound markets, capturing mid-term reversals 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-02 00:00:00

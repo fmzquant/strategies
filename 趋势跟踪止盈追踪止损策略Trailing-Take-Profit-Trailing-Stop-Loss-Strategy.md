@@ -150,7 +150,7 @@ The Trailing Take Profit Trailing Stop Loss Strategy skillfully utilizes a combi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-10 00:00:00
 end: 2023-11-18 00:00:00

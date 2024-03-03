@@ -165,7 +165,7 @@ This strategy combines MACD, RSI, SMA and other indicators to capture moving ave
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-05 00:00:00
 end: 2023-11-09 23:00:00

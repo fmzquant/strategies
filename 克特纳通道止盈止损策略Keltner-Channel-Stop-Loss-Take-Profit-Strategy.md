@@ -125,7 +125,7 @@ The Keltner Channel Stop Loss Take Profit Strategy optimizes traditional channel
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-15 00:00:00
 end: 2023-08-23 00:00:00

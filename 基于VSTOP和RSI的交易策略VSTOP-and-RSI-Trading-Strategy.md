@@ -140,7 +140,7 @@ This strategy integrates trend judgment and overbought/oversold levels to captur
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-02 00:00:00
 end: 2023-10-08 00:00:00

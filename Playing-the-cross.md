@@ -40,7 +40,7 @@ This will lead to more scripts from my side, since i really like to code and tra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © Glenn234
 

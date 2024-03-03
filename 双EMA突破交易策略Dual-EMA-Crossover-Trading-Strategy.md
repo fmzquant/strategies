@@ -107,7 +107,7 @@ The dual EMA crossover strategy leverages EMA crosses for trend direction, along
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-09 00:00:00
 end: 2023-04-13 00:00:00

@@ -171,7 +171,7 @@ This strategy achieves the effect of multiple percentage profit exits, with 4 ex
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-30 00:00:00

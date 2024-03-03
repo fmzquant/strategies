@@ -150,7 +150,7 @@ The Super Guppy strategy synthetically considers factors across multiple timefra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-13 00:00:00
 end: 2023-11-20 00:00:00

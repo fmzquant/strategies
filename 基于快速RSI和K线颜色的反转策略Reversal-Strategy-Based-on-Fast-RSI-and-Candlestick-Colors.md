@@ -80,7 +80,7 @@ In summary, reversal trading relies on indicators precisely identifying timing. 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-06 00:00:00
 end: 2023-01-20 00:00:00

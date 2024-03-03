@@ -101,7 +101,7 @@ In summary, this is a typical stop loss trail strategy. The core idea is to set 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-11-20 00:00:00

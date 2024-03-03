@@ -163,7 +163,7 @@ The Ichimoku Balance Line strategy captures mid- to long-term trends by entering
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-18 00:00:00
 end: 2023-10-24 00:00:00

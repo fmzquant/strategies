@@ -113,7 +113,7 @@ As a simple trend following strategy, the core idea is to use fast and slow MAs 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-01 00:00:00
 end: 2023-09-20 23:59:59

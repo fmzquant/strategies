@@ -150,7 +150,7 @@ In conclusion, this improved moving average crossover strategy guides trades in 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-01 00:00:00

@@ -49,7 +49,7 @@ PS2 : Break of a broken fractal is also very potent. Watch out for those!
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-24 00:00:00
 end: 2022-05-24 00:00:00

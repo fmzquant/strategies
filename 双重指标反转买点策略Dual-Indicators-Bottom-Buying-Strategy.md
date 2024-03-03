@@ -155,7 +155,7 @@ This dual indicator mean reversion strategy identifies bottom signals with volum
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-27 00:00:00
 end: 2024-01-03 00:00:00

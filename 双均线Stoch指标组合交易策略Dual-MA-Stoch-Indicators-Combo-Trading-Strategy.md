@@ -102,7 +102,7 @@ In summary, this strategy quantitatively trades using MAs for trend and Stoch fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-12 00:00:00
 end: 2023-09-11 00:00:00

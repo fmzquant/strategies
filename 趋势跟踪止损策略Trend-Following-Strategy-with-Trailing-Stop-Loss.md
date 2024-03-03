@@ -161,7 +161,7 @@ The strategy integrates trailing stop loss, dynamic ATR stop loss and partial ta
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-29 00:00:00

@@ -125,7 +125,7 @@ The Trend Following Buy and Sell Strategy has a simple and straightforward logic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-10 00:00:00
 end: 2023-10-16 00:00:00

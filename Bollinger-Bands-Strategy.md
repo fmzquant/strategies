@@ -45,7 +45,7 @@ The Bollinger Bands strategy is often used with the assistance of other indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-06 00:00:00
 end: 2022-05-05 23:59:00

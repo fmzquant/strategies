@@ -99,7 +99,7 @@ Overall an effective system for long term trend following across various instrum
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-29 00:00:00
 end: 2024-02-28 00:00:00

@@ -189,7 +189,7 @@ The Adaptive Multi Timeframe Fibonacci Retracement Trading Strategy utilizes var
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-24 00:00:00

@@ -234,7 +234,7 @@ The multi-factor strategy combines multiple trading logics like trend, mean-reve
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-30 00:00:00
 end: 2023-10-30 00:00:00

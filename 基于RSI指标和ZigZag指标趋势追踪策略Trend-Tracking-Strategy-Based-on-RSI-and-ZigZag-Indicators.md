@@ -120,7 +120,7 @@ In summary, this is a typical trend following strategy. The core idea is to iden
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-22 00:00:00
 end: 2024-02-21 00:00:00

@@ -135,7 +135,7 @@ This strategy combines the strengths of trend and volatility analysis using TFO 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-27 00:00:00
 end: 2023-12-03 00:00:00

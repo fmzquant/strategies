@@ -134,7 +134,7 @@ In summary, this moving average crossover strategy is a very typical and practic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // @_benac
 //@version=5
 strategy('Larry', overlay=true , initial_capital=1000 )

@@ -126,7 +126,7 @@ In conclusion, the Bill Williams Awesome Oscillator trading strategy effectively
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-12-18 00:00:00

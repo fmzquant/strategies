@@ -99,7 +99,7 @@ The overall idea of this strategy is clear. By integrating the moving averages o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-27 00:00:00

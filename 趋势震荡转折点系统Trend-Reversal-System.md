@@ -110,7 +110,7 @@ The Trend Reversal System combines moving averages, CCI and Supertrend to identi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-16 00:00:00
 end: 2023-01-08 00:00:00

@@ -118,7 +118,7 @@ The Double Donchian Channel Breakout strategy is overall a relatively stable and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-02-03 00:00:00

@@ -102,7 +102,7 @@ The Dual Timeframe Tesla Trend Following Strategy 2024 provides effective trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-29 00:00:00
 end: 2024-02-16 00:00:00

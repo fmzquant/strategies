@@ -144,7 +144,7 @@ Overall this is a low-risk short-term mean reversal trading strategy. It identif
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-01 00:00:00
 end: 2024-02-26 23:59:59

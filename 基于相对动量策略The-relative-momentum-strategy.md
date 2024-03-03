@@ -130,7 +130,7 @@ The relative momentum strategy captures the excess growth phases of individual s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-21 00:00:00
 end: 2024-01-28 00:00:00

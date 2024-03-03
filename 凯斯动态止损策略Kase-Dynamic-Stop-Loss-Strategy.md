@@ -92,7 +92,7 @@ In summary, this approach can intelligently optimize stops and targets to some e
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-04-15 00:00:00

@@ -139,7 +139,7 @@ The trading strategy determines trend shifts using MA crossovers, a typical tren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-01-11 00:00:00

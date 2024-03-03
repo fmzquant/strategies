@@ -129,7 +129,7 @@ This strategy combines the EHMA indicator and adaptive channel indicator to form
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-25 00:00:00
 end: 2024-02-25 00:00:00

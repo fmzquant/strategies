@@ -149,7 +149,7 @@ The strategy enables trend following with JMA and RSI crossovers and limits risk
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-03-15 00:00:00

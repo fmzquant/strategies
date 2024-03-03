@@ -104,7 +104,7 @@ This strategy catches trend trades from same high/low breakouts. But stop/profit
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-09-13 00:00:00

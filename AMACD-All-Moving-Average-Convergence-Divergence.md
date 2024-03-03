@@ -91,7 +91,7 @@ If you have a strategy that can buy based on External Indicators use 'Backtest S
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-09 00:00:00
 end: 2022-05-08 23:59:00

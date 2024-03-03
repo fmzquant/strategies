@@ -114,7 +114,7 @@ This is purely for Educational purpose only. Not to be used as a stand alone ind
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-07 00:00:00
 end: 2022-05-06 23:59:00

@@ -115,7 +115,7 @@ In summary, this is a basic trend following strategy using simple EMA and SMA cr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2024-01-12 00:00:00

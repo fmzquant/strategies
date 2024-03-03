@@ -126,7 +126,7 @@ This is a dual moving average tracking strategy. The core idea is to track movin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-18 00:00:00
 end: 2023-12-24 00:00:00

@@ -110,7 +110,7 @@ This strategy leverages neural networks across two timeframes to accurately dete
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-14 00:00:00
 end: 2023-09-13 00:00:00

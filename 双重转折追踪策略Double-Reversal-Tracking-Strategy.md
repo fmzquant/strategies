@@ -146,7 +146,7 @@ The Double Reversal Tracking strategy captures reversal opportunities by real-ti
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-30 00:00:00

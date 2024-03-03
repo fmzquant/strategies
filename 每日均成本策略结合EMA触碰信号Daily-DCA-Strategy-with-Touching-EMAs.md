@@ -246,7 +246,7 @@ In summary, this EMA-combined daily DCA strategy realizes the concept of long-te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-08 00:00:00
 end: 2024-01-15 00:00:00

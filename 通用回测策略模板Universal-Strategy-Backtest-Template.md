@@ -88,7 +88,7 @@ Of course, users still need to address optimization, risk control etc, as the te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-05 00:00:00
 end: 2023-09-12 00:00:00

@@ -144,7 +144,7 @@ In summary, this is a basic trend following strategy that can effectively track 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-14 00:00:00
 end: 2024-02-20 00:00:00

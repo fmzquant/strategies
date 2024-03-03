@@ -135,7 +135,7 @@ The PPO Price Sensitivity Momentum Double Bottom Directional Trading Strategy ca
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-27 00:00:00
 end: 2024-01-28 00:00:00

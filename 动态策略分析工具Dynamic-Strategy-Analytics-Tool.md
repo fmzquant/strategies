@@ -201,7 +201,7 @@ The goal is to collect periodic results for intuitive statistical visualization 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-12 00:00:00
 end: 2023-10-12 00:00:00

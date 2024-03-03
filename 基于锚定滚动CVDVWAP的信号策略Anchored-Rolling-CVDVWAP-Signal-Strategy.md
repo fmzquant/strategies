@@ -105,7 +105,7 @@ The Anchored Rolling CVDVWAP Signal strategy synthesizes various indicators to a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-28 00:00:00
 end: 2023-12-28 00:00:00

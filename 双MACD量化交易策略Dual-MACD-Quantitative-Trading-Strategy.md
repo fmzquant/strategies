@@ -127,7 +127,7 @@ The dual MACD quantitative trading strategy has simple and clear logic, using du
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-13 00:00:00
 end: 2023-11-12 00:00:00

@@ -141,7 +141,7 @@ The overall operation of this strategy is smooth. By using a dynamic stop loss t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-26 00:00:00
 end: 2024-02-25 00:00:00

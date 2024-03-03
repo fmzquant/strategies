@@ -113,7 +113,7 @@ The Double Bottom Reversal Mean Reversion DCA Grid Strategy consolidates price p
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-12 00:00:00
 end: 2024-02-19 00:00:00

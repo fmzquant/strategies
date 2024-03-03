@@ -109,7 +109,7 @@ The strategy combines advantages of multiple indicators for accurate trend judgm
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-18 00:00:00
 end: 2023-09-18 21:00:00

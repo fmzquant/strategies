@@ -126,7 +126,7 @@ This strategy utilizes MACD and MA’s strengths in judging market rhythm. But L
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-09-13 00:00:00

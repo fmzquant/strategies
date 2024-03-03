@@ -147,7 +147,7 @@ The strategy mainly relies on ABCD pattern for market timing and entries. Two-st
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-11 00:00:00
 end: 2024-02-18 00:00:00

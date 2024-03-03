@@ -151,7 +151,7 @@ In summary, this dual MA strategy is simple and practical. By capturing differen
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-09 00:00:00
 end: 2024-01-16 00:00:00

@@ -140,7 +140,7 @@ In summary, this is a typical trend tracking strategy using EMA and standard dev
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-27 00:00:00
 end: 2023-11-26 00:00:00

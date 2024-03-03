@@ -135,7 +135,7 @@ The open drive strategy follows trend by capturing strong directional breakouts 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-10-22 00:00:00

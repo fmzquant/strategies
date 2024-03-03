@@ -196,7 +196,7 @@ This strategy captures market trends by combining Heikin-Ashi candles and moving
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-26 00:00:00
 end: 2024-01-01 00:00:00

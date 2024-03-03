@@ -87,7 +87,7 @@ This strategy makes full use of Bollinger Bands’ advantage in judging trend di
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-02-03 00:00:00

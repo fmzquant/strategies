@@ -128,7 +128,7 @@ The SMA Offset Fluctuation Trading Strategy identifies optimal entry points by s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-12-18 00:00:00

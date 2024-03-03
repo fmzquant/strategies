@@ -149,7 +149,7 @@ The dual EMA crossover is a simple and direct trend following strategy suitable 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-19 00:00:00
 end: 2023-08-23 00:00:00

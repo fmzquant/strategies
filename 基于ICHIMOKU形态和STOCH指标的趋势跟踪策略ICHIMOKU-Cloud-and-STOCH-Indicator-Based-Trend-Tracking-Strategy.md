@@ -166,7 +166,7 @@ This strategy combines ICHIMOKU cloud charts and Stoch indicators to make compre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-11-14 00:00:00

@@ -26,7 +26,7 @@ Feel free to use and modify as you see fit. Happy trading!
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-01-01 00:00:00
 end: 2022-05-07 23:59:00

@@ -127,7 +127,7 @@ The strategy is relatively simple and practical overall, combining both trend an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-14 00:00:00
 end: 2023-12-19 10:00:00

@@ -129,7 +129,7 @@ This strategy belongs to a typical trend following strategy that continuously tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-10 00:00:00

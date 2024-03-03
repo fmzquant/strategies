@@ -54,7 +54,7 @@ The VWMA + SMA Bollinger Bands + RSI strategy offers traders a comprehensive app
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-08-31 00:00:00
 end: 2023-09-06 00:00:00

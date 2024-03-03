@@ -203,7 +203,7 @@ The Williams AD strategy judges market sentiment based on indicator direction ch
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-11-01 00:00:00

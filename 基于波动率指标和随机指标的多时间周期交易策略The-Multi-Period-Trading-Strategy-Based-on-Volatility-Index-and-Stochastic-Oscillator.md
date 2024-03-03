@@ -113,7 +113,7 @@ This strategy utilizes the VIX to gauge market timing and risk levels, and filte
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-12-20 00:00:00

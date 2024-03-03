@@ -178,7 +178,7 @@ The strategy combines multiple indicators for stronger signals, but needs optimi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-14 00:00:00
 end: 2023-09-21 00:00:00

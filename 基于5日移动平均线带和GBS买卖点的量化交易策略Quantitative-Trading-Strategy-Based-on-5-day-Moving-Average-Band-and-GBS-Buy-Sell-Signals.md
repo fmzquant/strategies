@@ -101,7 +101,7 @@ This strategy integrates the moving average band and GBS buy/sell signals, opera
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

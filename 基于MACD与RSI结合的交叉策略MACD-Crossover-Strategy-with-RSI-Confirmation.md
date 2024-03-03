@@ -166,7 +166,7 @@ The MACD and RSI crossover strategy combines the strengths of two widely used te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-20 00:00:00
 end: 2024-02-26 00:00:00

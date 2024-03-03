@@ -127,7 +127,7 @@ This strategy combines trend judgment and reversal signals to find local reversa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-27 00:00:00
 end: 2024-01-02 00:00:00

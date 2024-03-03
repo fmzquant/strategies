@@ -114,7 +114,7 @@ The overall idea of this strategy is clear, using the ATR indicator to determine
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-23 00:00:00
 end: 2024-02-22 00:00:00

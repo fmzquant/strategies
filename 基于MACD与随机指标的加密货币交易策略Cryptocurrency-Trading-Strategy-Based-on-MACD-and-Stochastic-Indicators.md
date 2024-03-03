@@ -115,7 +115,7 @@ This strategy combines the MACD indicator and the stochastic indicator %K, using
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 00:00:00

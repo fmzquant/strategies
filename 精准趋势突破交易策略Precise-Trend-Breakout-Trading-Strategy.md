@@ -192,7 +192,7 @@ The Precise Trend Breakout Trading Strategy successfully combines trend, pattern
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-01 00:00:00
 end: 2023-10-14 05:20:00

@@ -121,7 +121,7 @@ The strategy is overall quite robust in tracking mid- to long-term trends effect
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-30 00:00:00
 end: 2024-02-05 00:00:00

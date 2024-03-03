@@ -158,7 +158,7 @@ The strategy shows overall stable running with decent risk-adjusted returns. It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 // Learn more about Autoview and how you can automate strategies like this one here: https://autoview.with.pink/
 strategy("MP ZeroLag EMA", "MP 0 Strat", overlay=true, pyramiding=0, initial_capital=100000, currency=currency.USD, default_qty_type = strategy.percent_of_equity, default_qty_value = 100, commission_type=strategy.commission.percent, commission_value=0.1)

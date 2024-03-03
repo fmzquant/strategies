@@ -28,7 +28,7 @@ https://www.fmz.com/strategy/200131
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-05-16 00:00:00
 end: 2022-05-15 23:59:00

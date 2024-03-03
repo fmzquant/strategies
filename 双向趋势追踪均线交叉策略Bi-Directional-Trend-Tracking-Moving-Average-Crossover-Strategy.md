@@ -113,7 +113,7 @@ With parameter tuning, this multi-dimensional trend strategy can steadily track 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-22 00:00:00
 end: 2023-11-22 00:00:00

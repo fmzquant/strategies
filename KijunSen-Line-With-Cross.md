@@ -30,7 +30,7 @@ Many traders in the financial markets use Ichimoku components to detect trends, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © dilan1999
 

@@ -157,7 +157,7 @@ The Ichimoku Early Cloud Trend Following Strategy utilizes Ichimoku Cloud for ea
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-12-11 00:00:00

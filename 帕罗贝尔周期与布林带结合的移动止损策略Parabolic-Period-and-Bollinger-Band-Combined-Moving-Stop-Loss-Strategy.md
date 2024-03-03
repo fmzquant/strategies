@@ -116,7 +116,7 @@ This strategy combines judging market trend direction and strength with paraboli
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-02 00:00:00
 end: 2024-02-01 00:00:00

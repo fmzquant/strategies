@@ -155,7 +155,7 @@ The strategy is relatively simple and direct, using RSI pullback breakouts to de
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-05 00:00:00
 end: 2023-11-12 00:00:00

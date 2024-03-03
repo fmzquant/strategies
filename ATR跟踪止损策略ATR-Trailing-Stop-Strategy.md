@@ -137,7 +137,7 @@ The ATR trailing stop strategy trades continuously in trends while dynamically m
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-18 00:00:00
 end: 2023-09-25 00:00:00

@@ -120,7 +120,7 @@ Overall this is a reliable London session bitcoin trading strategy. It combines 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-11-22 08:00:00

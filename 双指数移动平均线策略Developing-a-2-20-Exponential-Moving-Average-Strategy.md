@@ -124,7 +124,7 @@ This strategy utilizes a dual exponential moving average indicator to determine 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-10-07 00:00:00

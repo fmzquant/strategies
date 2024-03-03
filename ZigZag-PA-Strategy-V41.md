@@ -47,7 +47,7 @@ UPDATE: (AleksanderThor) add option for a 2nd target, to use you need to activat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-24 00:00
 end: 2022-05-24 00:00:00

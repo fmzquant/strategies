@@ -232,7 +232,7 @@ This is a typical trend following strategy that identifies trend direction via B
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-09 00:00:00
 end: 2023-10-16 00:00:00

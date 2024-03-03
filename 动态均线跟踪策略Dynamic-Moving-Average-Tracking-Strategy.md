@@ -80,7 +80,7 @@ In summary, this is a very simple and practical strategy, identifying trends usi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-26 00:00:00
 end: 2023-12-03 00:00:00

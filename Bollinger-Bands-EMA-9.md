@@ -46,7 +46,7 @@ Please note that you need to adjust this script according to your personal risk 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-01 00:00:00
 end: 2023-09-07 00:00:00

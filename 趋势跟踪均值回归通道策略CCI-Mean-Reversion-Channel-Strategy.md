@@ -175,7 +175,7 @@ Overall this is a very flexible and customizable trend following system. Key adv
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-31 00:00:00

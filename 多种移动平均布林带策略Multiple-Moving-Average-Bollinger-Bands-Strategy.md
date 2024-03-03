@@ -103,7 +103,7 @@ The strategy is quite innovative overall, enriching Bollinger Bands indicator wi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-30 00:00:00
 end: 2023-10-13 00:00:00

@@ -90,7 +90,7 @@ The overall framework of this strategy is clear and usable as a proof of concept
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2024-01-02 00:00:00

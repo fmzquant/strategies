@@ -47,7 +47,7 @@ In summary, the ultra long RSI reversal strategy suits medium-long term holding.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-03 00:00:00
 end: 2023-09-10 00:00:00

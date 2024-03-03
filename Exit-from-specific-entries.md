@@ -13,7 +13,7 @@ Zer3192
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=4
 strategy(title="Exit from specific entries", overlay=true,
      pyramiding=2, close_entries_rule="ANY")

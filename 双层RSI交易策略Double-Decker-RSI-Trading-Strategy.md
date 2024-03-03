@@ -146,7 +146,7 @@ In general, the Double Decker RSI strategy is a very practical quantitative trad
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-30 00:00:00
 end: 2024-01-29 00:00:00

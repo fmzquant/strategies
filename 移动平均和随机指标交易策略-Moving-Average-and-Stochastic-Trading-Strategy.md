@@ -130,7 +130,7 @@ The overall strategy operates smoothly. With stop losses and profit targets, the
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-25 00:00:00
 end: 2024-02-01 00:00:00

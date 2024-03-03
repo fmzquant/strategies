@@ -142,7 +142,7 @@ The BB RSI swing trading strategy effectively catches two-way price swings withi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-16 00:00:00
 end: 2023-09-15 00:00:00

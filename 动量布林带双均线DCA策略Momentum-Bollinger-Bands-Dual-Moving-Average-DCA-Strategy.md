@@ -107,7 +107,7 @@ The Momentum Bollinger Bands Dual Moving Average DCA Strategy integrates Bolling
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-24 00:00:00
 end: 2024-01-30 00:00:00

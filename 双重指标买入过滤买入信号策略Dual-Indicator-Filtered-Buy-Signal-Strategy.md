@@ -187,7 +187,7 @@ Its core strength lies in the effective combination of indicators and filters fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-30 00:00:00
 end: 2023-12-06 00:00:00

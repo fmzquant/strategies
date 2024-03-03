@@ -86,7 +86,7 @@ This strategy aims to capture market reversal points by using the call/put ratio
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-30 00:00:00
 end: 2023-10-30 00:00:00

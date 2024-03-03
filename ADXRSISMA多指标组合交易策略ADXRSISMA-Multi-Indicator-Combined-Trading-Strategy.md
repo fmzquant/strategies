@@ -137,7 +137,7 @@ This strategy fully utilizes the strengths of various indicators to build a robu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-12 00:00:00
 end: 2023-09-13 00:00:00

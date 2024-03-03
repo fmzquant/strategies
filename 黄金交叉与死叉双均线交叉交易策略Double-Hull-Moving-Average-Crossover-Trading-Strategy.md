@@ -154,7 +154,7 @@ This strategy utilizes golden cross and death cross principles to determine tren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-10-10 00:00:00

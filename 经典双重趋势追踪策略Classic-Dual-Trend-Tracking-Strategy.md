@@ -183,7 +183,7 @@ This strategy judges mid-long term trend with Pivot Points and uses RSI etc to a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-31 00:00:00

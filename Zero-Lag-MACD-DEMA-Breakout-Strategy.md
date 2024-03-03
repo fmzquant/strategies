@@ -53,7 +53,7 @@ In summary, the zero-lag MACD DEMA breakout strategy works very well on strong t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-10 00:00:00

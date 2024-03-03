@@ -29,7 +29,7 @@ A classic MACD with average peak and dip lines. The lighter green and red horizo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-08 00:00:00
 end: 2022-05-14 23:59:00

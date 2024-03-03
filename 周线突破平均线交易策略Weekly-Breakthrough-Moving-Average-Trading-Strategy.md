@@ -143,7 +143,7 @@ In summary, this is a simple and straightforward strategy that judges trend base
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-10 00:00:00
 end: 2024-01-17 00:00:00

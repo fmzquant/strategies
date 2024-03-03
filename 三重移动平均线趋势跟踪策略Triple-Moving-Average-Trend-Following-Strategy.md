@@ -132,7 +132,7 @@ This strategy integrates traditional technical indicators and the philosophy of 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 00:00:00

@@ -118,7 +118,7 @@ The triple moving average trend following strategy has a clear and easy-to-under
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-06 00:00:00
 end: 2023-11-05 00:00:00

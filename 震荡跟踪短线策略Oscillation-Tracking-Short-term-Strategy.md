@@ -124,7 +124,7 @@ In general, this strategy is one that takes advantage of short-term fluctuations
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-16 00:00:00
 end: 2024-01-16 22:45:00

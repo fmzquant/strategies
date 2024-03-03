@@ -133,7 +133,7 @@ In summary, this is a very typical trend-following strategy, using channels to c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-12-19 00:00:00

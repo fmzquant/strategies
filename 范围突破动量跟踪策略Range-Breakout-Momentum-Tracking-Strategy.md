@@ -111,7 +111,7 @@ This strategy uses multiple technical indicators to quickly capitalize on short-
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-04-30 00:00:00

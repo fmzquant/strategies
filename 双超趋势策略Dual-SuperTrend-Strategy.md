@@ -147,7 +147,7 @@ The Dual SuperTrend strategy leverages the dual-channel mechanism for trend foll
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-08 00:00:00
 end: 2023-11-14 00:00:00

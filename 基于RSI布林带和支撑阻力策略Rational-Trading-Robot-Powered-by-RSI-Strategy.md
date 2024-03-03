@@ -131,7 +131,7 @@ The strategy demonstrates strong adaptability and versatility. By monitoring mul
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-19 00:00:00
 end: 2024-02-06 00:00:00

@@ -160,7 +160,7 @@ In summary, this Volatility Breakthrough Strategy is relatively mature as a whol
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-11 00:00:00
 end: 2023-12-12 00:00:00

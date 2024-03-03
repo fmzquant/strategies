@@ -134,7 +134,7 @@ The "Bollinger Band and RSI Mixing with DCA Strategy" combines multiple quantita
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-11 00:00:00
 end: 2024-01-17 00:00:00

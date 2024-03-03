@@ -192,7 +192,7 @@ The key strength of this strategy lies in its swift response suitable for short-
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-16 00:00:00
 end: 2024-01-15 00:00:00

@@ -117,7 +117,7 @@ This strategy provides automated date-based entry and dynamic risk management vi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

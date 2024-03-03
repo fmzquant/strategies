@@ -132,7 +132,7 @@ This strategy provides a framework for high frequency trading based on Bollinger
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy("High Frequency Strategy", overlay=true)
 

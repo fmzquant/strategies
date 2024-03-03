@@ -132,7 +132,7 @@ This is a typical short-term trading strategy utilizing Bitcoin's increased week
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-14 00:00:00
 end: 2023-11-13 00:00:00

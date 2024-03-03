@@ -130,7 +130,7 @@ The MoonFlag MACD Momentum StochRSI Trading Strategy comprehensively judges mark
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-16 00:00:00
 end: 2024-02-22 00:00:00

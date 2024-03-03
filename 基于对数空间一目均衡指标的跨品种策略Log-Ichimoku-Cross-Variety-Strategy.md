@@ -111,7 +111,7 @@ This strategy utilizes the logarithmic Ichimoku indicator to design a quantitati
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-22 00:00:00
 end: 2024-02-21 00:00:00

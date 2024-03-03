@@ -32,7 +32,7 @@ This indicator is created by combining the standard period RSI indicator with an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-11 00:00:00
 end: 2022-05-11 00:00:00

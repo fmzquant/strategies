@@ -121,7 +121,7 @@ This is a very typical trend following strategy. It captures price trends effect
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-20 00:00:00
 end: 2024-02-26 00:00:00

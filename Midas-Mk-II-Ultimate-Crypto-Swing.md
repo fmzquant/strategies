@@ -23,7 +23,7 @@ Updates or revisions will be recorded in the comments. Good luck with this scrip
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-08 00:00:00
 end: 2022-05-07 23:59:00

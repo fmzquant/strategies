@@ -91,7 +91,7 @@ In summary, this is a simple trend tracking strategy based on channel breakouts 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-22 00:00:00

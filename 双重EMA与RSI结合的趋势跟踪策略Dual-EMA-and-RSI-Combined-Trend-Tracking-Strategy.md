@@ -153,7 +153,7 @@ Overall this is a very typical short-term strategy combining trend tracking and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-10 00:00:00
 end: 2024-01-14 13:00:00

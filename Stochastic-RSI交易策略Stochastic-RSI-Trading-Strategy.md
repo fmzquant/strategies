@@ -169,7 +169,7 @@ The Stochastic RSI strategy combines the strengths of RSI and Stochastic oscilla
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-23 00:00:00
 end: 2023-09-22 00:00:00

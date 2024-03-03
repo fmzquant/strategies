@@ -209,7 +209,7 @@ This strategy combines the strengths of dual moving average crossover and trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-20 00:00:00
 end: 2023-09-27 00:00:00

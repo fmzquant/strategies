@@ -143,7 +143,7 @@ This strategy determines short-term trends by tracking SPY data and combining mu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

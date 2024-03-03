@@ -168,7 +168,7 @@ In summary, this is a typical trend following strategy. It first judges the tren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-08 00:00:00
 end: 2023-10-08 00:00:00

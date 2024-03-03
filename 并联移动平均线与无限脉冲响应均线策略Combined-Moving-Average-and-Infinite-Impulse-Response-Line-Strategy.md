@@ -176,7 +176,7 @@ Through flexible combinations and optimizations of indicators, this strategy can
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-23 00:00:00
 end: 2024-01-10 00:00:00

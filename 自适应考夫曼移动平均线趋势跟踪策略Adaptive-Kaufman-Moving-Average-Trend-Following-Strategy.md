@@ -163,7 +163,7 @@ This strategy uses Kaufman's Adaptive Moving Average to track price trends. The 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2024-01-02 00:00:00

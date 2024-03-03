@@ -145,7 +145,7 @@ The Quantum Volume Strategy is a representative trading strategy based on volume
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-12 00:00:00
 end: 2023-10-19 00:00:00

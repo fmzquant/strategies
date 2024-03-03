@@ -208,7 +208,7 @@ In summary, this long-only strategy capitalizes on CCI overbought/oversold level
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-08 00:00:00
 end: 2023-11-14 00:00:00

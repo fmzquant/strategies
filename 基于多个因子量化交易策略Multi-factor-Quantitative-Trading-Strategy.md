@@ -127,7 +127,7 @@ This strategy identifies entry timing through a combination of technical indicat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-13 00:00:00
 end: 2024-02-19 00:00:00

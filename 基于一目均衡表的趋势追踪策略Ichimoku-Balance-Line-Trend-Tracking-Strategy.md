@@ -108,7 +108,7 @@ This strategy uses Ichimoku cloud to identify trends and implement simple trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-04 00:00:00
 end: 2023-10-08 00:00:00

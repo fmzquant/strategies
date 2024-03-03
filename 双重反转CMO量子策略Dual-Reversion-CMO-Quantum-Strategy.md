@@ -133,7 +133,7 @@ The strategy is robust overall with simple parameters, easy to implement, combin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-04 00:00:00
 end: 2024-01-03 00:00:00

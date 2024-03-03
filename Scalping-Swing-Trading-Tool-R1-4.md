@@ -79,7 +79,7 @@ Other than the "SweetSpot Gold2" indicator, you should not need any other indica
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-24 00:00:00
 end: 2022-05-23 23:59:00

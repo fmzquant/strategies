@@ -140,7 +140,7 @@ Overall, this is a relatively classic and commonly used breakout strategy. It us
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-18 00:00:00
 end: 2024-01-17 00:00:00

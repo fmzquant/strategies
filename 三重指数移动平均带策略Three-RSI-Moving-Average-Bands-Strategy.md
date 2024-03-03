@@ -115,7 +115,7 @@ The three RSI moving average bands strategy integrates the advantages of multipl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-21 00:00:00
 end: 2024-02-20 00:00:00

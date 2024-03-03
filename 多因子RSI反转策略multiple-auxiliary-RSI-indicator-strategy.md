@@ -119,7 +119,7 @@ In conclusion, this is a short-term mean reversion strategy. By leveraging RSIâ€
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-03-24 00:00:00

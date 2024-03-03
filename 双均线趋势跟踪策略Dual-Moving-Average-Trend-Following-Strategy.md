@@ -152,7 +152,7 @@ This strategy uses dual moving average crossovers to determine trend direction a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-24 00:00:00
 end: 2023-09-12 00:00:00

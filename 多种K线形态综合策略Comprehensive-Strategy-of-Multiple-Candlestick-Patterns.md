@@ -217,7 +217,7 @@ This strategy can be further enhanced by adjusting determination patterns and pa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-14 00:00:00
 end: 2023-12-14 00:00:00

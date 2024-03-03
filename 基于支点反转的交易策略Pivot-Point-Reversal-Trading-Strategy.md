@@ -140,7 +140,7 @@ This strategy identifies trading opportunities from pivot area reversals with a 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-12 00:00:00
 end: 2023-09-19 00:00:00

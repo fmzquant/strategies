@@ -127,7 +127,7 @@ The Swing Trading Strategy Based on Momentum, Oscillation and Moving Average Cro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy("Swing Trading Strategy", overlay=true)
 

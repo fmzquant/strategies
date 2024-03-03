@@ -110,7 +110,7 @@ The strategy considers trend, overbought/oversold levels, and volatility range t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-11-14 00:00:00

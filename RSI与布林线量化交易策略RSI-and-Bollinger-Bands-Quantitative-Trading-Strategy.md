@@ -122,7 +122,7 @@ This strategy utilizes the logic of buying at RSI lows and selling at Bollinger 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-08 00:00:00
 end: 2024-01-07 00:00:00

@@ -104,7 +104,7 @@ This simple strategy uses indicators for trend direction and stop loss for risk 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-09-13 00:00:00

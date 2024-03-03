@@ -108,7 +108,7 @@ In summary, this short-term and long-term EMA merged decision strategy is very s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-05 00:00:00
 end: 2024-01-04 00:00:00

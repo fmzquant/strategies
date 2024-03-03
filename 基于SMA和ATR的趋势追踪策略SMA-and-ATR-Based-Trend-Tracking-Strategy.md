@@ -133,7 +133,7 @@ The overall idea of this strategy is clear. It judges trend direction through SM
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-16 00:00:00
 end: 2024-01-16 17:00:00

@@ -171,7 +171,7 @@ This strategy combines RSI and WMA to determine trend direction, aiming to profi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-24 00:00:00
 end: 2023-12-06 05:20:00

@@ -135,7 +135,7 @@ This strategy uses Bollinger Bands and Stochastic for entries, sets two take pro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-18 00:00:00
 end: 2023-10-24 00:00:00

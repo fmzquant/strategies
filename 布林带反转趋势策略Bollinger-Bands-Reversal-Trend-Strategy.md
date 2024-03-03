@@ -80,7 +80,7 @@ This strategy determines trend direction with Bollinger Bands first. It then uti
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-29 00:00:00
 end: 2023-12-06 00:00:00

@@ -144,7 +144,7 @@ This strategy integrates trend following and extreme reversal trading ideas, add
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-15 00:00:00
 end: 2023-10-15 00:00:00

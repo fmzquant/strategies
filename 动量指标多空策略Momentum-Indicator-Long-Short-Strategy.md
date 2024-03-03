@@ -166,7 +166,7 @@ The strategy logically uses ADX for trend, DMI for direction and CCI for reversa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-11-01 00:00:00

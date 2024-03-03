@@ -124,7 +124,7 @@ In summary, the CDC Action Zone [TS Trader] strategy implements a simple yet pra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-13 00:00:00
 end: 2024-02-19 00:00:00

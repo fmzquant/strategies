@@ -73,7 +73,7 @@ ENJOY !!
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-01-01 00:00:00
 end: 2022-02-11 23:59:00

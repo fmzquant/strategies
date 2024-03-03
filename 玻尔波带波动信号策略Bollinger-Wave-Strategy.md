@@ -140,7 +140,7 @@ The Bollinger Wave Strategy integrates trend determination of moving averages an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-08 00:00:00
 end: 2024-01-14 00:00:00

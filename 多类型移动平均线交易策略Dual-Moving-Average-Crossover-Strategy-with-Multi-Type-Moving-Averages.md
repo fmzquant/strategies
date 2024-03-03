@@ -159,7 +159,7 @@ This dual moving average crossover strategy with multi-type MAs incorporates tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-09-12 22:00:00

@@ -162,7 +162,7 @@ The strategy belongs to a typical reversal capturing strategy. By combining two 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-22 00:00:00
 end: 2024-01-21 00:00:00

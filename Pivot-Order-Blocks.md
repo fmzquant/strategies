@@ -51,7 +51,7 @@ Feel free to use the script, If you do use the script could you please just tag 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © MensaTrader
 

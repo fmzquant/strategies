@@ -47,7 +47,7 @@ The older line will remain until the new one comes through of same type. Hence, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-12 00:00:00
 end: 2022-05-11 23:59:00

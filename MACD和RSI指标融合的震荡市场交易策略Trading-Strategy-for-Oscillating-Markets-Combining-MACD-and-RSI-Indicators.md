@@ -69,7 +69,7 @@ In conclusion, combining MACD and RSI can improve strategy effectiveness for osc
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-06 00:00:00
 end: 2023-03-11 00:00:00

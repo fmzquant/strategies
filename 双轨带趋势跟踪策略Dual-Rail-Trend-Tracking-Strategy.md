@@ -170,7 +170,7 @@ The Dual Rail strategy is a simple and practical short-term trading strategy. It
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-18 00:00:00
 end: 2023-09-17 00:00:00

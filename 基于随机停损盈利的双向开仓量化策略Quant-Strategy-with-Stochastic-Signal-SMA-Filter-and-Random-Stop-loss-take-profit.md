@@ -126,7 +126,7 @@ The “DayLight Hunter Quant Strategy with Two-way Position, Stochastic Signal a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-31 00:00:00
 end: 2024-01-07 00:00:00

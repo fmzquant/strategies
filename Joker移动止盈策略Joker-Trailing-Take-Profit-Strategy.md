@@ -131,7 +131,7 @@ The Joker Trailing Take Profit strategy has a clear structure and uses moving av
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-23 00:00:00
 end: 2023-09-22 00:00:00

@@ -181,7 +181,7 @@ This strategy applies multiple technical indicators for comprehensive trend anal
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-17 00:00:00
 end: 2023-09-23 00:00:00

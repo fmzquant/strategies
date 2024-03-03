@@ -123,7 +123,7 @@ The BBMA breakthrough strategy integrates the use of Bollinger Bands and moving 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-24 00:00:00

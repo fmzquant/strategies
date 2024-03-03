@@ -142,7 +142,7 @@ The Mala Adaptive Moving Average Strategy uses sine wave analysis to generate tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-30 00:00:00
 end: 2023-12-06 00:00:00

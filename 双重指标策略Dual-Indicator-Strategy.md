@@ -145,7 +145,7 @@ The Dual Indicator Strategy combines the strengths of SMA and MACD to improve si
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-11-01 00:00:00

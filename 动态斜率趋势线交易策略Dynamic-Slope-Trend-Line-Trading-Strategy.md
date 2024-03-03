@@ -162,7 +162,7 @@ Overall this is an efficient short-term strategy based on using dynamic slope to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-06 00:00:00
 end: 2024-01-19 00:00:00

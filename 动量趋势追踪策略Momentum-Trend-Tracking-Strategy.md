@@ -148,7 +148,7 @@ In summary, this is a trend tracking strategy based on moving average system. Th
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-30 00:00:00
 end: 2023-11-06 00:00:00

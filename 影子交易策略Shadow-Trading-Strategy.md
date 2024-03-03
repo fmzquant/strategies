@@ -122,7 +122,7 @@ The shadow trading strategy is a simple and practical short-term trading strateg
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-11 23:59:59

@@ -112,7 +112,7 @@ Overall this is a typical mean reversion strategy. It uses fast/slow MA crosses 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-02 00:00:00

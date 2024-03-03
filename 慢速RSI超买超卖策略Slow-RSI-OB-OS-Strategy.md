@@ -116,7 +116,7 @@ The Slow RSI OB/OS strategy successfully explored new trading ideas by extending
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-20 00:00:00
 end: 2023-12-27 00:00:00

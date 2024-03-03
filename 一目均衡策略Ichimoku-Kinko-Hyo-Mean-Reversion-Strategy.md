@@ -165,7 +165,7 @@ This strategy integrates multiple indicators to determine trend direction, and e
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-17 00:00:00
 end: 2023-09-23 00:00:00

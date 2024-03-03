@@ -242,7 +242,7 @@ This strategy designed a relatively robust breakout system by analyzing trends a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-10-26 00:00:00

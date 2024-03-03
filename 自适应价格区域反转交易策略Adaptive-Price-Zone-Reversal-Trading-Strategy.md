@@ -154,7 +154,7 @@ In summary, this is a short-term reversal strategy which captures price zones us
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-05 00:00:00
 end: 2023-12-11 08:00:00

@@ -126,7 +126,7 @@ Overall, the Trend Prediction Dual Moving Average Strategy is a very promising s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-26 00:00:00
 end: 2024-02-01 00:00:00

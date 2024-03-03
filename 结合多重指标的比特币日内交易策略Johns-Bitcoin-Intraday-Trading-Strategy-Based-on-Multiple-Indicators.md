@@ -134,7 +134,7 @@ By verifying signals through four major indicators, this strategy can effectivel
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-29 00:00:00
 end: 2023-12-06 00:00:00

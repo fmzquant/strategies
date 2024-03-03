@@ -113,7 +113,7 @@ This strategy combines multiple momentum indicators to identify potential price 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-28 00:00:00

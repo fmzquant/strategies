@@ -140,7 +140,7 @@ The strategy achieves simple trend following through Gann HiLo bands but can be 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-10 00:00:00
 end: 2023-09-16 00:00:00

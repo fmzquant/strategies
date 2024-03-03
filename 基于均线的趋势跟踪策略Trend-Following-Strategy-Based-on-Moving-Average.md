@@ -122,7 +122,7 @@ This strategy builds a trading system based on double EMA crossovers, using fast
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-21 00:00:00
 end: 2024-01-21 00:00:00

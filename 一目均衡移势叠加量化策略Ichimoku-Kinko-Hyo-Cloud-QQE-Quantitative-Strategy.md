@@ -167,7 +167,7 @@ This strategy can be further improved from the following aspects:
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-13 00:00:00
 end: 2024-02-19 00:00:00

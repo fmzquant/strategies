@@ -111,7 +111,7 @@ The Bitcoin trading strategy based on Chinese zodiac calendar pioneers an innova
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-20 00:00:00
 end: 2022-12-31 05:20:00

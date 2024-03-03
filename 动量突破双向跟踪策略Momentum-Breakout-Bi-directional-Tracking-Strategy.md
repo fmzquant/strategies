@@ -129,7 +129,7 @@ This strategy considers both momentum and trend-following indicators to generate
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-11 00:00:00
 end: 2023-12-17 00:00:00

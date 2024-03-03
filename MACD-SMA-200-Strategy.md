@@ -41,7 +41,7 @@ All trading involves high risk; past performance is not necessarily indicative o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-05-06 00:00:00
 end: 2022-05-05 23:59:00

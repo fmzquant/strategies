@@ -167,7 +167,7 @@ In summary, the volume oscillator long short term moving average crossover strat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-03-11 00:00:00

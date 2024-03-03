@@ -127,7 +127,7 @@ This strategy combines short-term signal generation, long-term signal filtering,
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-04 00:00:00
 end: 2024-01-03 00:00:00

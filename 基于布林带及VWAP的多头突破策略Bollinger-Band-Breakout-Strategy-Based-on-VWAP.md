@@ -107,7 +107,7 @@ A stable breakout system suitable for algorithm trading. Attention is needed on 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-06 00:00:00
 end: 2024-02-05 00:00:00

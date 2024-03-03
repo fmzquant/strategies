@@ -65,7 +65,7 @@ You can change/set;
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-22 00:00:00
 end: 2022-05-21 23:59:00

@@ -109,7 +109,7 @@ The strategy effectively catches trends using ATR and locks in profits with dyna
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-14 00:00:00
 end: 2023-09-20 00:00:00

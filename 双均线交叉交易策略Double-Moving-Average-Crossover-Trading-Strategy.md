@@ -231,7 +231,7 @@ The dual moving average crossover is a classic technical indicator strategy. It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-05 00:00:00
 end: 2023-10-05 22:00:00

@@ -166,7 +166,7 @@ Overall, this is a stable and efficient quantitative trading strategy. It combin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-25 00:00:00
 end: 2023-10-28 00:00:00

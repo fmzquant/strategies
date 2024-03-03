@@ -140,7 +140,7 @@ This strategy is designed based on the bilateral three-point moving average indi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-24 00:00:00
 end: 2024-01-30 00:00:00

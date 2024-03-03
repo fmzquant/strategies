@@ -142,7 +142,7 @@ This SuperTrend dual MA strategy is a simple trend following system adaptable to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-18 00:00:00

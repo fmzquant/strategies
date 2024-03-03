@@ -145,7 +145,7 @@ This strategy first uses EMA crossover to determine the major trend and reversal
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-09 00:00:00
 end: 2023-10-16 00:00:00

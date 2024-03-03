@@ -191,7 +191,7 @@ This strategy makes decisions based on the trading signals of Faytterro Estimato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-21 00:00:00
 end: 2023-08-10 00:00:00

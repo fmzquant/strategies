@@ -135,7 +135,7 @@ In general, the Myo_LS_D strategy is a relatively mature and stable dual-track t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-15 00:00:00
 end: 2024-01-14 00:00:00

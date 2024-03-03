@@ -143,7 +143,7 @@ Overall this is a short-term cycle trading strategy with some merits but also ro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-02-17 00:00:00

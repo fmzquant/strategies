@@ -76,7 +76,7 @@ This strategy generates trading signals when all major moving averages reach con
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 strategy(title="MACD Multi-MA Strategy", overlay=false )
 

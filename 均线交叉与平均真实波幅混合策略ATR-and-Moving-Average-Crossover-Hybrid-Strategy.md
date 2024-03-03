@@ -126,7 +126,7 @@ This strategy fully utilizes the strengths of ATR and MA crossover in identifyin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-26 00:00:00
 end: 2023-09-25 00:00:00

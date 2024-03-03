@@ -162,7 +162,7 @@ By exploiting Delta-RSI’s high sensitivity and strict filtering mechanisms, th
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-01-11 00:00:00

@@ -39,7 +39,7 @@ It helps you determine the time of entry and exit of deals
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-15 00:00:00
 end: 2022-05-14 23:59:00

@@ -118,7 +118,7 @@ In general this is a simple but practical strategy suitable for most people. Wit
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-14 00:00:00
 end: 2023-12-18 19:00:00

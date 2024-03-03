@@ -143,7 +143,7 @@ In conclusion, this double MA strategy is a typical and practical quant strategy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-31 00:00:00
 end: 2024-01-07 00:00:00

@@ -128,7 +128,7 @@ The Donchian channel breakout uses breakouts to identify trends, with channel mi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-14 00:00:00
 end: 2023-09-13 00:00:00

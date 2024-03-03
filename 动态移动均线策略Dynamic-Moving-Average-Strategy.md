@@ -123,7 +123,7 @@ This strategy determines trend and places corresponding long/short trades by dyn
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-16 00:00:00
 end: 2023-11-22 00:00:00

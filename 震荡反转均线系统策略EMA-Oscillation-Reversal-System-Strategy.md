@@ -163,7 +163,7 @@ This strategy integrates MA system, BB indicator and chandelier exits to form a 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-11 00:00:00
 end: 2023-10-17 00:00:00

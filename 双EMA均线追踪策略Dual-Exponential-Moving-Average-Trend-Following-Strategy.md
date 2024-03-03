@@ -112,7 +112,7 @@ In general, the Dual EMA Trend Following Strategy is a robust and practical tren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-02 00:00:00
 end: 2024-02-01 00:00:00

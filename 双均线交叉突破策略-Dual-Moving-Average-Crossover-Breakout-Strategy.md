@@ -116,7 +116,7 @@ In summary, this dual MA crossover breakout strategy is quite simple and practic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-20 00:00:00
 end: 2023-11-26 00:00:00

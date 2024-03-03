@@ -113,7 +113,7 @@ The biggest strength of this strategy is its simple and clear trading logic of g
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-27 00:00:00
 end: 2023-12-27 00:00:00

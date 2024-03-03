@@ -139,7 +139,7 @@ This strategy builds a relatively simple breakout trading system using HullMA an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-03-01 00:00:00
 end: 2024-02-29 00:00:00

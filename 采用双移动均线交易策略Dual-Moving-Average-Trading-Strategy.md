@@ -96,7 +96,7 @@ This strategy generates signals by dual exponential moving averages, with streng
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-18 00:00:00
 end: 2024-02-17 00:00:00

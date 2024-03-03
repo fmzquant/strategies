@@ -86,7 +86,7 @@ A simple but practical trend following strategy. The dual EMA core filters false
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2023-12-13 02:00:00

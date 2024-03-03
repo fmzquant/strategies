@@ -180,7 +180,7 @@ The strategy profits from the opening price increase by buying low at close and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-10 00:00:00
 end: 2023-11-09 00:00:00

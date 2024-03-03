@@ -101,7 +101,7 @@ This strategy attempts to capitalize on trends from inside bar breakdowns. But t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-07 00:00:00
 end: 2022-10-31 00:00:00

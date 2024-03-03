@@ -151,7 +151,7 @@ In summary, this is a typical trend following strategy template with some genera
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-16 00:00:00
 end: 2024-01-15 00:00:00

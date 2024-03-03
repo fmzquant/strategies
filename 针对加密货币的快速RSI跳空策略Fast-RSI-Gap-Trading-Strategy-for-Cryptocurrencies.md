@@ -156,7 +156,7 @@ In summary, the fast RSI gap trading strategy is an efficient approach designed 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-27 00:00:00
 end: 2023-11-26 00:00:00

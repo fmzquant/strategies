@@ -158,7 +158,7 @@ The Gradient Reversal Trading Strategy is an easy-to-use trend following strateg
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-02 00:00:00
 end: 2023-10-08 00:00:00

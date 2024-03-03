@@ -128,7 +128,7 @@ The P-Signal multi timeframe trading strategy is overall a very promising strate
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-27 00:00:00

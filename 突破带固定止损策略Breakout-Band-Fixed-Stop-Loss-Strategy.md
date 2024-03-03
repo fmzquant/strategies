@@ -216,7 +216,7 @@ Overall the strategy is reasonable in using breakout bands to identify trends an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-26 00:00:00
 end: 2023-10-28 03:00:00

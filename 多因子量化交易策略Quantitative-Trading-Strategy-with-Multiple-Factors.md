@@ -151,7 +151,7 @@ Overall, this is a very promising quantitative trading strategy. By combining si
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-18 00:00:00
 end: 2024-01-24 00:00:00

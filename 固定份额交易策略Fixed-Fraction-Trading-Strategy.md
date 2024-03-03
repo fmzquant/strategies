@@ -156,7 +156,7 @@ The fixed percentage strategy provides diversification and risk control. But it 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-21 00:00:00
 end: 2022-11-22 00:00:00

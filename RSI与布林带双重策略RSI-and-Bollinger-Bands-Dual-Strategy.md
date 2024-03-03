@@ -122,7 +122,7 @@ The RSI and Bollinger Bands dual strategy fully utilizes the strengths of the tw
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-11 00:00:00
 end: 2023-12-04 00:00:00

@@ -43,7 +43,7 @@ When Trading with the Equity Curve" is active, the position size will be reduced
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-12 00:00:00
 end: 2022-05-11 23:59:00

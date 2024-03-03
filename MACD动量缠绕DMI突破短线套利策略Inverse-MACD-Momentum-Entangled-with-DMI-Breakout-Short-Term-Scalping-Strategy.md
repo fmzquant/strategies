@@ -204,7 +204,7 @@ In summary, this short-term bear scalping strategy provides substantial quantita
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-13 00:00:00
 end: 2023-11-12 00:00:00

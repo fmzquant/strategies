@@ -111,7 +111,7 @@ This strategy leverages Bollinger Bands for overbought/oversold signals and inco
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-22 00:00:00

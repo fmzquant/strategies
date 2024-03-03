@@ -172,7 +172,7 @@ In summary, the Dual Moving Average Trend Following strategy provides a simple a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-01 00:00:00
 end: 2023-10-07 00:00:00

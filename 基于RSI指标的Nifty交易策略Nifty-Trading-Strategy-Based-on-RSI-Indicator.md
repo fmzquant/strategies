@@ -128,7 +128,7 @@ This strategy designs a short-term trading strategy based on RSI indicator, capt
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-18 00:00:00
 end: 2024-01-24 00:00:00

@@ -181,7 +181,7 @@ The Camarilla Pivot Breakout Strategy is a simple and direct quantitative tradin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-27 00:00:00
 end: 2024-01-03 00:00:00

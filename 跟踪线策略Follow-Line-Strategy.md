@@ -124,7 +124,7 @@ The Follow Line strategy aims to capture price trends in volatile markets. It is
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-23 00:00:00
 end: 2023-11-30 00:00:00

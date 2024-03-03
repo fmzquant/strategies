@@ -176,7 +176,7 @@ The Dual Moving Average Price Channel Trading Strategy forms relatively stable a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-11 00:00:00
 end: 2024-01-18 00:00:00

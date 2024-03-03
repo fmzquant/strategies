@@ -109,7 +109,7 @@ The Dual Bollinger Band Volatility Tracking strategy captures price volatility i
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-18 00:00:00
 end: 2023-12-24 00:00:00

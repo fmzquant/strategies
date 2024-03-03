@@ -120,7 +120,7 @@ In general, this strategy belongs to an aggressive high-risk strategy. Due to no
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-31 00:00:00
 end: 2024-01-13 05:20:00

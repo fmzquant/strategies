@@ -96,7 +96,7 @@ In summary, this strategy trades based on MACD and signal line crossover. MACD's
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-11 00:00:00

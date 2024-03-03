@@ -197,7 +197,7 @@ With its simple logic and ease of implementation, the dual moving average crosso
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

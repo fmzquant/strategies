@@ -248,7 +248,7 @@ The strategy combines trend following and trend reversal organically by judging 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-25 00:00:00
 end: 2023-09-24 00:00:00

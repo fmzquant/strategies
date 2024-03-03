@@ -191,7 +191,7 @@ This strategy integrates the advantages of multiple indicators, and is very prac
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-10-08 00:00:00

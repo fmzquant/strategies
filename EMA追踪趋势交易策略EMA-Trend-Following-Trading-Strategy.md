@@ -143,7 +143,7 @@ The EMA trend following strategy is a simple and practical way to track medium- 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-09-18 00:00:00

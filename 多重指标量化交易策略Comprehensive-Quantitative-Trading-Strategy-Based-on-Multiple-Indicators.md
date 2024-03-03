@@ -176,7 +176,7 @@ This strategy integrates SuperTrend, QQE and A-V2 indicators into a comprehensiv
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-21 00:00:00
 end: 2023-12-27 00:00:00

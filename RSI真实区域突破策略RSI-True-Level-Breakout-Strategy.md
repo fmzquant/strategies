@@ -164,7 +164,7 @@ The RSI True Level breakout strategy combines the strengths of a trend indicator
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-01 00:00:00
 end: 2023-11-07 00:00:00

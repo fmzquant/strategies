@@ -195,7 +195,7 @@ This strategy achieves relatively accurate trend judgment and entries by using d
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-22 00:00:00
 end: 2023-09-21 00:00:00

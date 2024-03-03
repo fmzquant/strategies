@@ -123,7 +123,7 @@ This strategy combines the dual moving average crossover strategy and the Willia
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 00:00:00

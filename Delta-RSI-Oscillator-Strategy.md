@@ -47,7 +47,7 @@ Since D-RSI oscillator is based on polynomial fitting of the RSI curve, there is
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-29 00:00:00
 end: 2022-05-28 23:59:00

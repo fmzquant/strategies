@@ -163,7 +163,7 @@ The Sell the Rallies strategy provides traders with a powerful tool to actively 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

@@ -180,7 +180,7 @@ This strategy comprehensively considers trend, money management etc, uses Ichimo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-27 00:00:00
 end: 2023-12-27 00:00:00

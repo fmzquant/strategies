@@ -148,7 +148,7 @@ The logic is simple but has blind trading risks. Enhancing signal filters, trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-14 00:00:00
 end: 2023-09-21 00:00:00

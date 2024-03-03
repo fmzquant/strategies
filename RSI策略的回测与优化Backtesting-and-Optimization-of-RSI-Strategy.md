@@ -163,7 +163,7 @@ In summary, this is a simple and straightforward strategy using RSI to trade ove
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-02 00:00:00
 end: 2023-11-09 00:00:00

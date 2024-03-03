@@ -150,7 +150,7 @@ The overall performance of this strategy is good. The logic is clear and easy to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-13 00:00:00
 end: 2023-12-15 02:00:00

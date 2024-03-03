@@ -220,7 +220,7 @@ This is an easy to understand trend following strategy based on simple moving av
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-10-31 00:00:00

@@ -102,7 +102,7 @@ This strategy identifies short-term trends by using CCI and dual moving averages
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-22 00:00:00
 end: 2024-01-28 00:00:00

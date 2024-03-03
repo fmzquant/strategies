@@ -154,7 +154,7 @@ This strategy generates trading signals by adaptively adjusting the MA period to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-10 00:00:00
 end: 2023-11-16 00:00:00

@@ -133,7 +133,7 @@ The Dual Moving Average Crossover Trading Strategy compares moving average relat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-28 00:00:00

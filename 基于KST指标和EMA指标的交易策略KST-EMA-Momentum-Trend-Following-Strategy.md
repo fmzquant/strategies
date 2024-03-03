@@ -153,7 +153,7 @@ This strategy has clear, reliable logic that is easy to implement. KST identifie
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-31 00:00:00
 end: 2023-11-06 00:00:00

@@ -131,7 +131,7 @@ Overall this is a fairly robust oversold breakout strategy. Taking positions aft
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-18 00:00:00
 end: 2023-09-25 00:00:00

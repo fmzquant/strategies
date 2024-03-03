@@ -59,7 +59,7 @@ Risk management: Pair trading can be a risky strategy, so it is important to use
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-03 00:00:00
 end: 2023-09-09 00:00:00

@@ -151,7 +151,7 @@ In summary, this is a typical medium-term trend following strategy based on chan
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-27 00:00:00

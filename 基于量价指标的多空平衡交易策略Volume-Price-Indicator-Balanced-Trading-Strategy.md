@@ -171,7 +171,7 @@ This strategy utilizes a combination of indicators including RSI, ATR, SMA and c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-11-23 00:00:00

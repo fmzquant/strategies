@@ -102,7 +102,7 @@ This strategy generates trading signals from golden crosses and death crosses of
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-01 00:00:00
 end: 2023-11-30 23:59:59

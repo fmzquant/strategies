@@ -143,7 +143,7 @@ Overall, the Super Trend Daily Reversal Strategy is a relatively stable and reli
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-22 00:00:00
 end: 2024-02-21 00:00:00

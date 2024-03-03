@@ -100,7 +100,7 @@ As a short-term intraday trading strategy, this strategy has advantages like hug
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-16 00:00:00
 end: 2023-11-23 00:00:00

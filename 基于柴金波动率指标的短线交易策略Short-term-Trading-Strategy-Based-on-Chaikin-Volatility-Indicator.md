@@ -136,7 +136,7 @@ The strategy has a simple and clear logic suitable for short-term trading. The f
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-12-04 00:00:00

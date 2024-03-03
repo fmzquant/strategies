@@ -134,7 +134,7 @@ By reasonably applying the idea of ​​a multi-factor model, this strategy cap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-28 00:00:00
 end: 2024-02-03 00:00:00

@@ -130,7 +130,7 @@ The strategy realizes simple and effective trend tracking by using dual moving a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-05 00:00:00

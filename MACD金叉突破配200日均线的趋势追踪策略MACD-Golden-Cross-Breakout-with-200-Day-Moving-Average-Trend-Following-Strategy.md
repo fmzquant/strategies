@@ -170,7 +170,7 @@ In summary, this strategy integrates the MACD and 200-day MA for signal judgemen
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

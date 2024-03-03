@@ -110,7 +110,7 @@ The overall strategy is relatively simple and reliable, using double EMA crossov
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-11-20 00:00:00

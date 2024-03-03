@@ -143,7 +143,7 @@ The RSI strategy is a typical mean-reversion strategy that tracks overbought/ove
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-11-01 00:00:00

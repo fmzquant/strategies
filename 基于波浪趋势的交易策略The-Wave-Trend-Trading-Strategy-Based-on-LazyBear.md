@@ -135,7 +135,7 @@ In summary, this is a very simple and practical wave trend following strategy. B
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-18 00:00:00
 end: 2023-12-18 00:00:00

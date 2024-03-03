@@ -121,7 +121,7 @@ Overall the Momentum Turtle Trend Tracking strategy is a robust system for mid t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-23 00:00:00
 end: 2023-11-22 00:00:00

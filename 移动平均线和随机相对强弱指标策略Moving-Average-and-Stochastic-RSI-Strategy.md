@@ -94,7 +94,7 @@ This strategy successfully combines moving averages and Stochastic RSI indicator
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-25 00:00:00
 end: 2024-01-31 00:00:00

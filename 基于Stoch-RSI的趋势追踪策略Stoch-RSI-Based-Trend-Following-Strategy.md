@@ -92,7 +92,7 @@ This strategy integrates the advantages of the Stoch RSI indicator and adopts a 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-26 00:00:00
 end: 2024-02-01 00:00:00

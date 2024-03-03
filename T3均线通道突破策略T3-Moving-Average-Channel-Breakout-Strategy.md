@@ -106,7 +106,7 @@ This strategy capitalizes on the T3 MA's sensitivity by trading channel breakout
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-07 00:00:00
 end: 2023-04-15 00:00:00

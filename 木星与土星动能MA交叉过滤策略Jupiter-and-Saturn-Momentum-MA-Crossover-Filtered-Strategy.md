@@ -146,7 +146,7 @@ This strategy combines the strengths of long-term trend following and dual momen
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-26 00:00:00
 end: 2023-10-27 13:00:00

@@ -186,7 +186,7 @@ In summary, this is a typical frankenstein strategy combining multiple indicator
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-24 00:00:00
 end: 2023-10-24 00:00:00

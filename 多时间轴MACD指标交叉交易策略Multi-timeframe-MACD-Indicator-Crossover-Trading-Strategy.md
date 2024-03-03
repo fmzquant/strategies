@@ -106,7 +106,7 @@ The Multi-timeframe MACD Indicator Crossover Trading Strategy has a clear logic 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-19 00:00:00
 end: 2024-02-18 00:00:00

@@ -190,7 +190,7 @@ There remains room for further enhancements:
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-22 00:00:00
 end: 2024-02-27 00:00:00

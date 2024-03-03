@@ -135,7 +135,7 @@ The Momentum Trend strategy based on MACD and Bollinger Bands tracks medium-long
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-22 00:00:00
 end: 2024-02-28 00:00:00

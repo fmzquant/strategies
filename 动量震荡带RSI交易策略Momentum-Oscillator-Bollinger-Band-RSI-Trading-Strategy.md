@@ -134,7 +134,7 @@ The overall risk/reward profile of this strategy is balanced and backtest result
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-09-17 00:00:00

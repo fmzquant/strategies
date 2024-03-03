@@ -131,7 +131,7 @@ This is a simple yet effective intraday scalping strategy integrating dual EMA c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-17 00:00:00
 end: 2024-01-23 00:00:00

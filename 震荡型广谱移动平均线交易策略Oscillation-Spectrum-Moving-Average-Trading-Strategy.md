@@ -124,7 +124,7 @@ This trading strategy implements high flexibility based on the spectrum moving a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-18 00:00:00
 end: 2024-01-24 00:00:00

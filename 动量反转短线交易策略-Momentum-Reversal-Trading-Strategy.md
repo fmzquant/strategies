@@ -125,7 +125,7 @@ In summary, this is a very simple and practical short-term trading strategy. It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-11 00:00:00
 end: 2024-01-17 00:00:00

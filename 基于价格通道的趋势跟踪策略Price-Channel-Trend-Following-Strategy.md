@@ -138,7 +138,7 @@ The price channel strategy builds a simple channel using historical peaks and tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2024-01-07 00:00:00

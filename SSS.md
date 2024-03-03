@@ -44,7 +44,7 @@ For any notes on the strategy to be edited, or for another strategies ideas plea
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-12 00:00:00
 end: 2022-05-11 23:59:00

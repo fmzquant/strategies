@@ -158,7 +158,7 @@ The dormant range reversal strategy has a clear logic and profit potential. Fine
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-29 00:00:00

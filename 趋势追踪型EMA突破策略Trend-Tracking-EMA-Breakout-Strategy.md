@@ -100,7 +100,7 @@ The strategy has very good profit potential when the trend is correctly judged. 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-11 00:00:00
 end: 2024-01-11 00:00:00

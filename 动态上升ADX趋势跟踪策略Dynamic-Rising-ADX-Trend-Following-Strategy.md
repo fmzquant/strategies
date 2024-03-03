@@ -107,7 +107,7 @@ This dynamic rising ADX trend following strategy captures trend shifts swiftly b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-10 00:00:00

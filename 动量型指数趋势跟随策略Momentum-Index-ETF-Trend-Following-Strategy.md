@@ -109,7 +109,7 @@ In conclusion, this is a low-risk, easy-to-implement momentum index ETF trend fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-04 00:00:00
 end: 2023-12-04 00:00:00

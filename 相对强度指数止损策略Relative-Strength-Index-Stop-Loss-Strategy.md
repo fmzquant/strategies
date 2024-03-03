@@ -122,7 +122,7 @@ The RSI stop loss strategy integrates the strengths of technical indicators and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy("RSI Strategy with Daily Loss Limit", overlay=true)
 

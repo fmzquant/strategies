@@ -135,7 +135,7 @@ This DMI trend-following strategy is simple and practical for catching major tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy("DMI Buy/Sell Strategy", overlay=true)
 

@@ -127,7 +127,7 @@ This strategy effectively combines the Vortex Indicator and Moving Averages to c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-01 00:00:00
 end: 2024-02-01 00:00:00

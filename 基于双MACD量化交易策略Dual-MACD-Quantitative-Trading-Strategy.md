@@ -179,7 +179,7 @@ The Dual MACD quantitative trading strategy integrates dual timeframe analysis t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-29 00:00:00
 end: 2024-01-11 05:20:00

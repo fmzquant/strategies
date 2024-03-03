@@ -144,7 +144,7 @@ This strategy integrates the advantages of reversal and trend strategies through
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-30 00:00:00
 end: 2023-02-03 00:00:00

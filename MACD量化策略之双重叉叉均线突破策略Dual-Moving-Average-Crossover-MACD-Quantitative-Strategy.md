@@ -117,7 +117,7 @@ This is overall a very simple and practical strategy, generating high probabilit
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-14 00:00:00
 end: 2024-02-21 00:00:00

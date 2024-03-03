@@ -108,7 +108,7 @@ The strategy has clear and simple logic, effectively uses opening features for s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-23 00:00:00
 end: 2023-11-30 00:00:00

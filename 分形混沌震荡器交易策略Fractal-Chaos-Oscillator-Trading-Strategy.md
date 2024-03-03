@@ -95,7 +95,7 @@ FCO strategy simplifies trend direction judgment for short-term trading. Perform
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-09-17 00:00:00

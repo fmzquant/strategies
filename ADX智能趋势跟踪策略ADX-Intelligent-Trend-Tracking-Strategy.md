@@ -115,7 +115,7 @@ The ADX Intelligent Trend Tracking Strategy is generally a relatively stable tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-27 00:00:00

@@ -86,7 +86,7 @@ This strategy trades reversals at pivot points and locks monthly profits to cont
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-05 00:00:00
 end: 2023-03-23 05:20:00

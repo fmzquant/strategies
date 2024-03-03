@@ -166,7 +166,7 @@ The dual MA strategy is a simple short-term strategy based on MA crosses to dete
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-26 00:00:00
 end: 2023-11-01 00:00:00

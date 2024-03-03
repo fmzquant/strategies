@@ -140,7 +140,7 @@ This article analyzed in detail the logic, strengths, weaknesses and optimizatio
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-22 00:00:00
 end: 2024-02-24 06:00:00

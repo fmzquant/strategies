@@ -116,7 +116,7 @@ The Quadriple EMA strategy is a relatively simple trend-following strategy. It u
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-24 00:00:00
 end: 2023-11-30 00:00:00

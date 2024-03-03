@@ -137,7 +137,7 @@ The overall strategy is quite stable with steady returns, maximum drawdown and S
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-08-10 00:00:00

@@ -122,7 +122,7 @@ This strategy leverages the classic technical indicator of moving average crosse
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-14 00:00:00
 end: 2024-01-21 00:00:00

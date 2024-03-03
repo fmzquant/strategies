@@ -225,7 +225,7 @@ The RSI Tracking ADX strategy is an effective yet simple trend following strateg
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-03 00:00:00
 end: 2023-10-09 00:00:00

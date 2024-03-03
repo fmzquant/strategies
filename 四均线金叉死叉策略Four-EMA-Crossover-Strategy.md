@@ -142,7 +142,7 @@ This is a very effective four EMA crossover strategy. It determines market trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-14 00:00:00
 end: 2023-12-14 00:00:00

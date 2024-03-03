@@ -188,7 +188,7 @@ This strategy locates market reversals by accurately combining multiple indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-30 00:00:00

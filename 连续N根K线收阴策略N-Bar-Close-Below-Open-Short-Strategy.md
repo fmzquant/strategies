@@ -113,7 +113,7 @@ This strategy identifies short-term trend simply based on the relationship betwe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-18 00:00:00
 end: 2023-12-25 00:00:00

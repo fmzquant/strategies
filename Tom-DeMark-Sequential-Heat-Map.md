@@ -44,7 +44,7 @@ If you have any idea on how to optimise the code, please feel free to share
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 ////////////////////////////////////////// Tom DeMark heatmap © by Indicator-Jones /////////////////////////////////////////
 //
 // This indicator uses Tom DeMark’s TD Sequential counting from 1 to 13. 

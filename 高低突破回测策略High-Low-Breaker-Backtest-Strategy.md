@@ -141,7 +141,7 @@ In summary, the High Low Breaker Backtest Strategy is a simple and practical tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-11-26 00:00:00

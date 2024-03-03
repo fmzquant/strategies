@@ -172,7 +172,7 @@ The Triple SuperTrend and Stoch RSI strategy successfully combines multi-timefra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-29 00:00:00
 end: 2023-04-17 00:00:00

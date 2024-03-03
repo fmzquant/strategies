@@ -194,7 +194,7 @@ In summary, the trailing buy strategy improves the strategy by trailing the pric
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-08 00:00:00

@@ -211,7 +211,7 @@ The core of the strategy is to capture decent mid-term swings via reversal tradi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-29 00:00:00

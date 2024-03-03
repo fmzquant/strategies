@@ -185,7 +185,7 @@ The strategy constructs a lag-free trend following system using SMI and Ergodic 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-31 00:00:00

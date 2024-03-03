@@ -121,7 +121,7 @@ This ANN-based strategy can identify complex nonlinear trends and is suitable fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-14 00:00:00
 end: 2023-11-13 00:00:00

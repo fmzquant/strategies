@@ -104,7 +104,7 @@ The overall logic of this strategy is clear and has some practical value. Howeve
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-03 00:00:00
 end: 2023-12-03 00:00:00

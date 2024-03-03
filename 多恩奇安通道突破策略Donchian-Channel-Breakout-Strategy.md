@@ -150,7 +150,7 @@ In conclusion, the Donchian channel breakout strategy is an effective trend-foll
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-26 00:00:00
 end: 2024-02-25 00:00:00

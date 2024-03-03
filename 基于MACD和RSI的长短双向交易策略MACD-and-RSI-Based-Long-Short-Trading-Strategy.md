@@ -123,7 +123,7 @@ This strategy implements dual-directional trading with MACD and RSI combination.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-08 00:00:00
 end: 2023-10-08 00:00:00

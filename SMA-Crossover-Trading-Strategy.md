@@ -72,7 +72,7 @@ Overall, the SMA crossover method works well in trending markets but must be tra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-11 00:00:00
 end: 2023-09-10 00:00:00

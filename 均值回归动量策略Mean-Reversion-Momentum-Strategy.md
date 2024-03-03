@@ -168,7 +168,7 @@ In summary, the mean reversion momentum strategy captures mid-term mean reversio
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-11-14 00:00:00

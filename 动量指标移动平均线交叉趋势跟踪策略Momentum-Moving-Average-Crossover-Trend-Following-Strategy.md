@@ -170,7 +170,7 @@ This strategy combines the advantages of MA and momentum indicators to track tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-23 00:00:00
 end: 2023-10-23 00:00:00

@@ -117,7 +117,7 @@ The strategy captures trending opportunities using simple MA crossover system. D
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-10-16 00:00:00

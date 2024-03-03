@@ -88,7 +88,7 @@ The Reversal Bollinger Bands strategy is an simple and practical short-term trad
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-01 00:00:00
 end: 2023-11-03 18:59:59

@@ -124,7 +124,7 @@ In summary, this is a simple dual moving average crossover strategy, using MA cr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

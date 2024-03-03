@@ -132,7 +132,7 @@ The bottom catching strategy has clear logic and works well in bear markets. Mor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-14 00:00:00
 end: 2023-11-21 00:00:00

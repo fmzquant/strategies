@@ -42,7 +42,7 @@ then it is looking for the stoch indicator to confirm if there is a cross under 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-05 00:00:00
 end: 2022-05-11 23:59:00

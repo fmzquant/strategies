@@ -40,7 +40,7 @@ The moving averages can be plotted from different time-frames, like e.g. the wee
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-23 00:00:00
 end: 2022-05-22 23:59:00

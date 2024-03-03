@@ -135,7 +135,7 @@ The Exponential Smoothed Stochastic Oscillator strategy generates more reliable 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-11 00:00:00
 end: 2024-01-17 00:00:00

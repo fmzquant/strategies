@@ -142,7 +142,7 @@ This strategy generates buy signals based on close price breakthrough. The idea 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-19 00:00:00
 end: 2024-02-20 00:00:00

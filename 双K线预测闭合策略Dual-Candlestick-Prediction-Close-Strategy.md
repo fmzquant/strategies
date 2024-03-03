@@ -152,7 +152,7 @@ This strategy predicts short-term trends by analyzing the open and close prices 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-19 00:00:00
 end: 2024-01-25 00:00:00

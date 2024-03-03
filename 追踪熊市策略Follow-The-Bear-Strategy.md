@@ -168,7 +168,7 @@ The Follow the Bear strategy provides a straightforward approach to short-term s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-18 00:00:00
 end: 2024-02-25 00:00:00

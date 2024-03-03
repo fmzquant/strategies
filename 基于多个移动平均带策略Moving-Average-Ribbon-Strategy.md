@@ -145,7 +145,7 @@ The Moving Average Ribbon strategy is one of the more common trend following str
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=4
 strategy(title="Moving Average Ribbon", shorttitle="MA Ribbon", overlay=true)
 src = input(close, type=input.source, title="Source")

@@ -96,7 +96,7 @@ In summary, this strategy aims to improve accuracy by combining multiple factors
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-05 00:00:00
 end: 2023-02-03 00:00:00

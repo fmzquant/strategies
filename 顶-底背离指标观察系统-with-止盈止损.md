@@ -21,7 +21,7 @@ Zer3192
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-03-01 00:00:00
 end: 2023-02-28 23:59:00

@@ -29,7 +29,7 @@ Demonstrate how to increase positions in pine language
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-04-29 00:00:00
 end: 2022-04-28 23:59:00

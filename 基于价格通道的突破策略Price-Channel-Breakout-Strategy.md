@@ -165,7 +165,7 @@ In conclusion, this is a quantitative strategy based on price channel to determi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-16 00:00:00
 end: 2024-01-15 00:00:00

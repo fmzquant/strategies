@@ -117,7 +117,7 @@ This strategy judges the market state through the multi-factor combination of mo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-16 00:00:00
 end: 2023-11-22 00:00:00

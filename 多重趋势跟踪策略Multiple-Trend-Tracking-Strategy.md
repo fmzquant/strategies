@@ -165,7 +165,7 @@ The multiple trend tracking strategy integrates MACD, RSI, ATR and DEMA four ind
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-10 00:00:00
 end: 2023-11-16 00:00:00

@@ -156,7 +156,7 @@ The strategy logic is clear, using dual Bollinger to determine trend burst is th
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-30 00:00:00
 end: 2023-10-30 00:00:00

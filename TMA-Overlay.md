@@ -29,7 +29,7 @@ This indicator help identify momentum by offering a visual representation of eng
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-10-01 00:00:00
 end: 2022-05-05 23:59:00

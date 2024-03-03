@@ -136,7 +136,7 @@ Overall, the Multi-EMA Bull Trend Strategy is a robust and reliable trend follow
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-15 00:00:00
 end: 2024-01-21 00:00:00

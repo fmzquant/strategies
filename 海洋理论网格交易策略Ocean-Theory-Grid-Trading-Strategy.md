@@ -141,7 +141,7 @@ The strategy realizes risk-controllable range trading by leveraging grid trading
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-12 00:00:00
 end: 2023-10-12 00:00:00

@@ -281,7 +281,7 @@ In conclusion, 888 BOT v4 exemplifies a multi-indicator strategy which can signi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-20 00:00:00
 end: 2023-09-27 00:00:00

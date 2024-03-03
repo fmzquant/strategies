@@ -110,7 +110,7 @@ The core idea of this strategy is to use dynamic moving average to track price c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-23 00:00:00
 end: 2023-11-05 05:20:00

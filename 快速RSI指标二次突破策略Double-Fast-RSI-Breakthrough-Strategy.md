@@ -153,7 +153,7 @@ This strategy uses dual RSI to determine price breakthrough, adds body breakthro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-30 00:00:00
 end: 2023-11-06 00:00:00

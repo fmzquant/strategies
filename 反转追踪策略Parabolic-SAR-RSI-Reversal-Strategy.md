@@ -166,7 +166,7 @@ The reversal tracking strategy generates signals using SAR and RSI to capture re
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-10-07 00:00:00

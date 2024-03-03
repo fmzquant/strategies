@@ -91,7 +91,7 @@ In summary, this SonicR-based strategy identifies channel direction for systemat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-11 00:00:00
 end: 2022-11-12 00:00:00

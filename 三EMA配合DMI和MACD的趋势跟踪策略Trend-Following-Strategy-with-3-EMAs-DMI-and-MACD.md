@@ -142,7 +142,7 @@ In summary, this is a robust trend-following system combining simple yet powerfu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-18 00:00:00
 end: 2024-01-24 00:00:00

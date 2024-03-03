@@ -107,7 +107,7 @@ The overall logic of this strategy is clear - it dynamically adjusts position si
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-08 00:00:00
 end: 2024-01-15 00:00:00

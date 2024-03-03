@@ -205,7 +205,7 @@ This strategy determines trend direction with Bollinger Bands and controls risk 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-15 00:00:00
 end: 2023-09-21 00:00:00

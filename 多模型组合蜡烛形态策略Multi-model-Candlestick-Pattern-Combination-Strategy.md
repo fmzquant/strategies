@@ -159,7 +159,7 @@ This strategy constructs a relatively stable short-term trading system by combin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-10 00:00:00
 end: 2023-10-16 00:00:00

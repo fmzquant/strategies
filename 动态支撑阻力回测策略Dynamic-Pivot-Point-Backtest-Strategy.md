@@ -136,7 +136,7 @@ This strategy makes long or short trades based on price breaking dynamic support
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 ////////////////////////////////////////////////////////////
 //  Copyright by HPotter v1.0 14/06/2018

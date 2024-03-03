@@ -193,7 +193,7 @@ The Donchian channel breakout strategy uses channel breakouts to determine trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-07 00:00:00

@@ -125,7 +125,7 @@ The cryptocurrency trend following strategy based on Heiken Ashi has comprehensi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-12 00:00:00
 end: 2024-01-18 00:00:00

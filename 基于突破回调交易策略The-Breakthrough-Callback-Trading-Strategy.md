@@ -121,7 +121,7 @@ In summary, the breakthrough callback trading strategy is generally a relatively
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

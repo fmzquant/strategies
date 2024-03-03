@@ -182,7 +182,7 @@ In conclusion, the strategy capitalizes on Monday reversals, with clear entry/ex
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-06 00:00:00
 end: 2023-11-05 00:00:00

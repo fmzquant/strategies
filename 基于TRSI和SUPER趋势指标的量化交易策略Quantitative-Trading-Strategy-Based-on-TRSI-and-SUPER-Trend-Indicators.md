@@ -127,7 +127,7 @@ This strategy integrates multiple indicators such as TRSI and Super Trend to for
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-14 00:00:00
 end: 2023-11-26 05:20:00

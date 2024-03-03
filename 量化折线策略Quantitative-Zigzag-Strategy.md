@@ -105,7 +105,7 @@ Next, the practicality of the strategy can be improved by increasing variables, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-11-20 00:00:00

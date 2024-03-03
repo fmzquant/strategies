@@ -122,7 +122,7 @@ In summary, this is a relatively stable and reliable short-term trading strategy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-10-13 00:00:00

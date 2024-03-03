@@ -212,7 +212,7 @@ Overall, with refinements in parameter tuning, time frame confluence, risk manag
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-23 00:00:00
 end: 2024-01-22 00:00:00

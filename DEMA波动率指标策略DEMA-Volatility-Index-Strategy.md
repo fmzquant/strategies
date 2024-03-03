@@ -184,7 +184,7 @@ This strategy captures trend changes in market sentiment by calculating smoothed
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-17 00:00:00
 end: 2023-10-23 00:00:00

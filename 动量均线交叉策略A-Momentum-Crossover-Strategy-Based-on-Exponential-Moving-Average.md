@@ -129,7 +129,7 @@ In summary, this EMA crossover strategy is a simple and practical trend followin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-15 00:00:00
 end: 2024-01-22 00:00:00

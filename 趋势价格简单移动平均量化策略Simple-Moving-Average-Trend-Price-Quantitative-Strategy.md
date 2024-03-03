@@ -97,7 +97,7 @@ The strategy integrates multiple indicators to judge the trend, which can improv
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-21 00:00:00
 end: 2024-02-27 00:00:00

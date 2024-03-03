@@ -145,7 +145,7 @@ The strategy is simple and practical overall. It uses Supertrend for entries and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2024-01-07 00:00:00

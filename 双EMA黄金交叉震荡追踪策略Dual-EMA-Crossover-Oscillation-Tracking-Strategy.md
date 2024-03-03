@@ -124,7 +124,7 @@ In summary, the Dual EMA Crossover Oscillation Tracking strategy is a highly pra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-26 00:00:00
 end: 2024-01-02 00:00:00

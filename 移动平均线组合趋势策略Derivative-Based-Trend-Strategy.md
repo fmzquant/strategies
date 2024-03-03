@@ -140,7 +140,7 @@ This moving average combination trend strategy uses multiple moving averages to 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-04 00:00:00
 end: 2023-12-10 00:00:00

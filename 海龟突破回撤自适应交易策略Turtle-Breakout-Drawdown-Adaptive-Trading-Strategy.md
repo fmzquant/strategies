@@ -141,7 +141,7 @@ Overall, this is an effective strategy suitable for medium and long term trend t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //Noro
 //2020
 

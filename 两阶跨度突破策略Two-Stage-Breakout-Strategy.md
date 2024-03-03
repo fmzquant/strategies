@@ -117,7 +117,7 @@ This strategy captures price spikes using a two-stage breakout in ranging market
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-31 23:59:59

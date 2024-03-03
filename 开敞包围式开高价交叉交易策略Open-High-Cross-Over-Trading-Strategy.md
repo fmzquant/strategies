@@ -167,7 +167,7 @@ This strategy generates signals based on open-high crossovers and uses MAs to fi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-17 00:00:00
 end: 2023-10-17 00:00:00

@@ -145,7 +145,7 @@ In conclusion, this strategy utilizes the Ease of Movement indicator to determin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-12-19 00:00:00

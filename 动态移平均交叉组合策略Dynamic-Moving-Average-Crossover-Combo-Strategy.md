@@ -195,7 +195,7 @@ The Dynamic Moving Average Crossover Combo strategy is an intelligent multi-indi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-28 00:00:00
 end: 2024-02-04 00:00:00

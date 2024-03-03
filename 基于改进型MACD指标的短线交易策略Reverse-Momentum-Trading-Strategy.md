@@ -134,7 +134,7 @@ The Reverse Momentum Trading Strategy integrates various technical analysis theo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2024-01-16 00:00:00

@@ -155,7 +155,7 @@ This medium-term quantitative trading strategy utilizes multiple technical indic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-10 00:00:00
 end: 2023-12-01 00:00:00

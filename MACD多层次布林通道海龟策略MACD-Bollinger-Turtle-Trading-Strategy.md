@@ -168,7 +168,7 @@ The strategy synthesizes three major quant tools - MACD, Bollinger Bands and Tur
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-29 00:00:00
 end: 2023-12-05 00:00:00

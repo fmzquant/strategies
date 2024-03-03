@@ -68,7 +68,7 @@ In conclusion, backtest results may suggest outcomes of random trading, but do n
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-01-12 00:00:00

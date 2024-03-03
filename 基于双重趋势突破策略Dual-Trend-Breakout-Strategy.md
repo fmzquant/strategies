@@ -149,7 +149,7 @@ This strategy forms a dual confirmation system by combining multiple popular tec
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-11 00:00:00
 end: 2024-02-18 00:00:00

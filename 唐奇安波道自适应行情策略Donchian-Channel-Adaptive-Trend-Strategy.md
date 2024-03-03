@@ -162,7 +162,7 @@ Overall this is a simple and practical adaptive trend following strategy. It has
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-19 00:00:00
 end: 2023-10-25 00:00:00

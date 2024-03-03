@@ -87,7 +87,7 @@ The stable and reliable Ichimoku moving average crossover strategy is suitable a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-18 00:00:00
 end: 2023-12-18 00:00:00

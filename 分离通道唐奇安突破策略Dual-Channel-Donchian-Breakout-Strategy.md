@@ -119,7 +119,7 @@ This strategy implements flexible breakout trading via dual-band Donchian Channe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-19 00:00:00
 end: 2023-12-25 00:00:00

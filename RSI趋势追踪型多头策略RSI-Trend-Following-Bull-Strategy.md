@@ -100,7 +100,7 @@ In summary, this strategy is a relatively traditional trend following bull strat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-28 00:00:00
 end: 2024-01-03 00:00:00

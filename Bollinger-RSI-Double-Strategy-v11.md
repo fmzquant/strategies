@@ -37,7 +37,7 @@ P.S. For advanced users if you want access to more functions of this strategy sc
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-06 00:00:00
 end: 2022-05-05 23:59:00

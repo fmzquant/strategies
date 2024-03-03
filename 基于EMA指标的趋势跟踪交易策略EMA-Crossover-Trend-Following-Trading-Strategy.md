@@ -92,7 +92,7 @@ In conclusion, this is a very practical trend following strategy. It adopts simp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-12 00:00:00
 end: 2024-02-18 00:00:00

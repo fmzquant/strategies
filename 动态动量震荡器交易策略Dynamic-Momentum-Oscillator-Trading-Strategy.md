@@ -124,7 +124,7 @@ The Dynamic Momentum Oscillator Trading Strategy generates relatively accurate t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-15 00:00:00
 end: 2024-01-21 00:00:00

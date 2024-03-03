@@ -167,7 +167,7 @@ This strategy uses a trailing percentage stop with a trigger line before activat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-14 00:00:00
 end: 2023-09-20 00:00:00

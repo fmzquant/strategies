@@ -122,7 +122,7 @@ This strategy capitalizes on channel and SMA to achieve steady gains in strong t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-13 00:00:00

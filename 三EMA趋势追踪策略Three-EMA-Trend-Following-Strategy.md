@@ -160,7 +160,7 @@ The Three EMA trend following strategy trades by identifying trend direction via
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-10 00:00:00
 end: 2023-11-09 00:00:00

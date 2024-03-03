@@ -140,7 +140,7 @@ This strategy integrates MACD, multiple moving averages and ZLSMA trend determin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-22 00:00:00
 end: 2024-02-28 00:00:00

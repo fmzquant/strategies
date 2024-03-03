@@ -159,7 +159,7 @@ Through the dual verification filtering mechanism, the Dual Moving Average Price
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

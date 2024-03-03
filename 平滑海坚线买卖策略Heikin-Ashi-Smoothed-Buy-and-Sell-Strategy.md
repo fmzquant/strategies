@@ -111,7 +111,7 @@ This strategy utilizes Heikin-Ashi's trend following ability and combines candle
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-30 00:00:00
 end: 2023-10-06 00:00:00

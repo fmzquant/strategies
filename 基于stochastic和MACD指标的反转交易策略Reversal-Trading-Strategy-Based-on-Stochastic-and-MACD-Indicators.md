@@ -166,7 +166,7 @@ This strategy combines the strengths of stochastic and MACD in identifying favor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-14 00:00:00
 end: 2023-06-24 00:00:00

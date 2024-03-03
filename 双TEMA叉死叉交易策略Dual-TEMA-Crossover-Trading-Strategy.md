@@ -194,7 +194,7 @@ The dual TEMA crossover strategy is an overall trend-following strategy using tr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-10-11 00:00:00

@@ -162,7 +162,7 @@ In summary, this strategy is named "Dual Envelope Trend Following Strategy". It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-18 00:00:00
 end: 2024-01-18 00:00:00

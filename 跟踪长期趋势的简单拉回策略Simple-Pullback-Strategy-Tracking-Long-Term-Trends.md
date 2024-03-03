@@ -102,7 +102,7 @@ The main idea of this strategy is to choose a better entry point during short-te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-12-11 00:00:00

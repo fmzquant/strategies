@@ -109,7 +109,7 @@ In summary, this strategy belongs to a medium-frequency trading strategy that ai
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-12-11 00:00:00

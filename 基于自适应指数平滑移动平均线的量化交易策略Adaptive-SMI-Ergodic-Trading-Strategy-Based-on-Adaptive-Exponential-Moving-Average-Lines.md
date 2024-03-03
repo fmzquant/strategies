@@ -80,7 +80,7 @@ This article has conducted an in-depth analysis of the principle, advantages, ri
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-10 00:00:00
 end: 2023-12-17 00:00:00

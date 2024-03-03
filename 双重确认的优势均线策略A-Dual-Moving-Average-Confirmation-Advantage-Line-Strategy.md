@@ -114,7 +114,7 @@ In summary, this is a relatively simple and practical dual confirmation trend fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-16 00:00:00
 end: 2024-01-22 00:00:00

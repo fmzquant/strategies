@@ -160,7 +160,7 @@ Overall, the DCCI Breakout Strategy is a very practical short-term trading syste
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-11 00:00:00
 end: 2023-09-20 00:00:00

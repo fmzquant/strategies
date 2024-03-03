@@ -167,7 +167,7 @@ This strategy uses Donchian Channel to determine trend direction, trading breako
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-09-15 00:00:00

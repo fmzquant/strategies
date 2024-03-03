@@ -162,7 +162,7 @@ The EMA bounce strategy is a simple and practical trend following strategy. It h
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-01 00:00:00
 end: 2023-12-07 00:00:00

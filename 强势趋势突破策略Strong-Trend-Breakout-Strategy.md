@@ -148,7 +148,7 @@ The strategy has clear and simple logic, capturing strong trends through breakou
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-22 00:00:00
 end: 2023-10-24 17:00:00

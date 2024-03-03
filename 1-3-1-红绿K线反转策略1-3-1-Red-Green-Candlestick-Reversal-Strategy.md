@@ -149,7 +149,7 @@ The 1-3-1 red green reversal strategy is overall a simple and practical short te
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

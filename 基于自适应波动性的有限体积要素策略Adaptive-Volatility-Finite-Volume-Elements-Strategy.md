@@ -113,7 +113,7 @@ Overall this strategy is quite reliable with solid principles. It can serve as a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-10 00:00:00
 end: 2023-10-16 00:00:00

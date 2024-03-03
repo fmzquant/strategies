@@ -128,7 +128,7 @@ The Dual Range Filter Trend Tracking Strategy integrates the various advantages 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-29 00:00:00
 end: 2024-02-04 00:00:00

@@ -142,7 +142,7 @@ The "Double Channel Kitchen" strategy effectively utilizes the Supertrend for ma
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-09 00:00:00
 end: 2023-10-09 00:00:00

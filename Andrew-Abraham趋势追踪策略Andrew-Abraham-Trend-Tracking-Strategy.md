@@ -105,7 +105,7 @@ In summary, the Trend Tracking strategy is a simple and practical trend trading 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2024-01-07 00:00:00

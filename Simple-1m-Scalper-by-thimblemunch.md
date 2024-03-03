@@ -24,7 +24,7 @@ Zer3192
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=4
 study(title='Simple 1m Scalper by thimblemunch', shorttitle='Simple 1m Scalper', overlay=true)
 

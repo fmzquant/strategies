@@ -54,7 +54,7 @@ In conclusion, the RSI is a simple and practical tool for gauging overbought/ove
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-13 00:00:00
 end: 2023-09-12 00:00:00

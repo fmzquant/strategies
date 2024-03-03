@@ -118,7 +118,7 @@ The strategy is designed with a stable entry mechanism based on the idea of shor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-18 00:00:00
 end: 2023-12-21 05:00:00

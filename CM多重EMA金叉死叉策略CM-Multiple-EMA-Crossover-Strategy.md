@@ -132,7 +132,7 @@ This strategy identifies mid-long term trends using EMA crosses in intuitive vis
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-21 00:00:00
 end: 2023-09-20 00:00:00

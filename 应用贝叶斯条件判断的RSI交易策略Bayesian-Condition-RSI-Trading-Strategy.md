@@ -167,7 +167,7 @@ This strategy first statistically calculates probability distributions of price 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-11 00:00:00
 end: 2023-03-15 00:00:00

@@ -131,7 +131,7 @@ Overall, this is a good trend tracking strategy. Compared with traditional trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

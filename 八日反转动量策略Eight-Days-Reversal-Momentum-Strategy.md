@@ -98,7 +98,7 @@ The strategy captures the price movement from breakout to pullback by judging th
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-04 00:00:00
 end: 2023-12-04 00:00:00

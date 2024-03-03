@@ -80,7 +80,7 @@ Overall, the Dual Timeframe Trends Following strategy aims to capture trend move
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-12 00:00:00
 end: 2023-09-11 00:00:00

@@ -175,7 +175,7 @@ In summary, the Donchian Channel Breakout Strategy is a very practical short-ter
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-03 00:00:00
 end: 2023-12-03 00:00:00

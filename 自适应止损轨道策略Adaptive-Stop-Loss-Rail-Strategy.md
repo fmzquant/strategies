@@ -197,7 +197,7 @@ In summary, this adaptive stop loss rail strategy uniquely combines Kalman predi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-06-01 00:00:00
 end: 2024-01-01 00:00:00

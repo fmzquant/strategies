@@ -124,7 +124,7 @@ The overall strategy design philosophy is clear, with the core idea of using MAC
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-07 00:00:00
 end: 2024-01-14 00:00:00

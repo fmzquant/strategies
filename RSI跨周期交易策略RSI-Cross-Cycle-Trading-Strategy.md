@@ -157,7 +157,7 @@ This strategy is based on the overbought and oversold principles of RSI indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-01 00:00:00
 end: 2023-09-30 23:59:59

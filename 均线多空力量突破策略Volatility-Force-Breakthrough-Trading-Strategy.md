@@ -162,7 +162,7 @@ This strategy integrates moving average, ATR, Bollinger Bands and Force Index to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-25 00:00:00
 end: 2023-10-25 00:00:00

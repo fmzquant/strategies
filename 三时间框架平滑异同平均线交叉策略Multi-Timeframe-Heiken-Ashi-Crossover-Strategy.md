@@ -134,7 +134,7 @@ The strategy taps into Heiken Ashi across timeframes for trend following, but in
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-03-23 00:00:00

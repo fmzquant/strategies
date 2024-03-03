@@ -160,7 +160,7 @@ Overall, the strategy mainly relies on short-term BT Bitcoin adjustment patterns
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

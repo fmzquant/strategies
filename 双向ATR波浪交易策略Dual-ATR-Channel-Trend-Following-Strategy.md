@@ -128,7 +128,7 @@ The dual ATR channel trend following strategy combines moving averages, ATR chan
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-10-27 00:00:00

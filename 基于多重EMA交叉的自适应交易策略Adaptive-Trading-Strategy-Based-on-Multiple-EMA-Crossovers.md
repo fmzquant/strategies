@@ -100,7 +100,7 @@ The strategy achieves adaptive effect leveraging multiple EMA crossovers, keepin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-26 00:00:00
 end: 2023-09-07 00:00:00

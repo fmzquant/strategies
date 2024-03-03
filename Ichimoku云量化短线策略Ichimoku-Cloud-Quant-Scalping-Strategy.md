@@ -174,7 +174,7 @@ The Ichimoku Cloud Quant Scalping Strategy integrates the advantages of Ichimoku
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-13 00:00:00
 end: 2023-12-20 00:00:00

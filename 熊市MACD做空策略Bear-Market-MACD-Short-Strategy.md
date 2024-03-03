@@ -102,7 +102,7 @@ This strategy captures short-term down moves when ensured of a bear trend. Profi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-14 00:00:00
 end: 2023-09-13 00:00:00

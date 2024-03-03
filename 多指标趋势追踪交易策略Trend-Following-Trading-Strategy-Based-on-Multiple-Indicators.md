@@ -103,7 +103,7 @@ The trend following trading strategy based on multiple indicators improves signa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-05 00:00:00
 end: 2024-01-11 00:00:00

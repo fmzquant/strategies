@@ -38,7 +38,7 @@ I personally like this for swing trading on the 1 hour chart; however, this can 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-07 00:00:00
 end: 2022-05-07 00:00:00

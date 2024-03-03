@@ -186,7 +186,7 @@ The RSI breakout strategy combines trend and reversal strategies. It identifies 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-30 00:00:00
 end: 2023-10-06 00:00:00

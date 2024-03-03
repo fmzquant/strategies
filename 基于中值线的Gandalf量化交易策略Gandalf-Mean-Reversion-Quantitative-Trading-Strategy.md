@@ -233,7 +233,7 @@ The Gandalf quantitative strategy is a simple yet effective strategy based on pr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-22 00:00:00
 end: 2023-10-29 00:00:00

@@ -99,7 +99,7 @@ In summary, this strategy combines multiple indicators and uses a trailing stop 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-02-03 00:00:00

@@ -141,7 +141,7 @@ The momentum breakout strategy is a typical mean-reversion strategy. By capturin
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-27 00:00:00
 end: 2023-11-09 05:20:00

@@ -127,7 +127,7 @@ The strategy has clear logic and some practical value. But its parameters are fi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-10-07 00:00:00

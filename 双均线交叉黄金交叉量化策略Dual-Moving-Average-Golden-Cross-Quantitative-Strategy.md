@@ -132,7 +132,7 @@ In conclusion, the core idea of this strategy is using dual MA crossover for tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-19 00:00:00
 end: 2023-12-25 00:00:00

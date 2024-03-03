@@ -37,7 +37,7 @@ Usually there are more than two triangles, so you can wait after ordering a bett
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-17 00:00:00
 end: 2022-05-16 23:59:00

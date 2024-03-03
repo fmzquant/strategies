@@ -135,7 +135,7 @@ The Ichimoku Cloud strategy comprehensively uses multiple indicators for trend d
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-09-14 00:00:00

@@ -131,7 +131,7 @@ The dual moving average breakout strategy has simple and clear logic. Dual MAs i
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-10-07 00:00:00

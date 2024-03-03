@@ -116,7 +116,7 @@ The strategy combines BB and VWAP to detect short-term price anomalies as entry 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-04 00:00:00
 end: 2024-01-03 00:00:00

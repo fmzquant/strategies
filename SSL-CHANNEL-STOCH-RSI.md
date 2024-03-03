@@ -55,7 +55,7 @@ luqi0212
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-12-01 00:00:00
 end: 2022-11-13 05:20:00

@@ -138,7 +138,7 @@ In summary, this article has explained a quantitative trading strategy utilizing
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-09-08 09:00:00

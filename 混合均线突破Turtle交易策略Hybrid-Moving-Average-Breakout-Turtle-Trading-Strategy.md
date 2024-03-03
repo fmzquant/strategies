@@ -133,7 +133,7 @@ This strategy forms a relatively accurate signaling, strong stop loss capability
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-28 00:00:00
 end: 2023-12-04 00:00:00

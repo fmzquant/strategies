@@ -104,7 +104,7 @@ The EMA Breakthrough Trap Strategy integrates the advantages of trend judgment a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-14 00:00:00
 end: 2024-02-20 00:00:00

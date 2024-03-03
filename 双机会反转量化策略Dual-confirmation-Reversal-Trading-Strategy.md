@@ -224,7 +224,7 @@ The dual-confirmation reversal strategy is a stable and practical system for sho
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-14 00:00:00
 end: 2023-11-13 00:00:00

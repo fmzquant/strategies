@@ -171,7 +171,7 @@ In summary, the RSI-Stochastic dual strategy effectively utilizes the strengths 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-30 00:00:00
 end: 2023-10-06 00:00:00

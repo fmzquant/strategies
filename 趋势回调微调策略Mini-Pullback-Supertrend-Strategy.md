@@ -142,7 +142,7 @@ The strategy combines multiple indicators reliably for trend and pullback identi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-06 00:00:00
 end: 2023-10-12 00:00:00

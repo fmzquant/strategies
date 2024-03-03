@@ -98,7 +98,7 @@ The Inverse Fisher RSI Moving Average Multi Timeframe Strategy has an overall ro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-11-20 00:00:00

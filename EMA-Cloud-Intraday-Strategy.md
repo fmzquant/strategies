@@ -29,7 +29,7 @@ This strategy utilizes the 9 and 20 period exponential moving averages to create
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-16 00:00:00
 end: 2022-05-15 23:59:00

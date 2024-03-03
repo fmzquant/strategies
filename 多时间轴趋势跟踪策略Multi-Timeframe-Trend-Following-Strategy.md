@@ -99,7 +99,7 @@ The Multi Timeframe Trend Following Strategy incorporates over 20 indicators to 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-16 00:00:00
 end: 2024-01-22 00:00:00

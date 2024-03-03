@@ -142,7 +142,7 @@ The strategy logic is simple and clear, generating trades based on fast and slow
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-03 00:00:00
 end: 2023-10-09 00:00:00

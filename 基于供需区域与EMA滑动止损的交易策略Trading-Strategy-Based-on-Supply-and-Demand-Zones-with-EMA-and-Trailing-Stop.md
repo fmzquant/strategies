@@ -155,7 +155,7 @@ Combines multiple techniques for decent backtests. Real-world is complex, optimi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-18 00:00:00
 end: 2024-01-17 00:00:00

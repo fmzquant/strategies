@@ -48,7 +48,7 @@ Crossunder = Bearish trend (red zone)
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-17 00:00:00
 end: 2022-05-16 23:59:00

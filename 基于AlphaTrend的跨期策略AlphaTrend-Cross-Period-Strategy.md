@@ -132,7 +132,7 @@ Overall this AlphaTrend strategy is a simple and efficient trend following syste
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-20 00:00:00
 end: 2023-09-26 00:00:00

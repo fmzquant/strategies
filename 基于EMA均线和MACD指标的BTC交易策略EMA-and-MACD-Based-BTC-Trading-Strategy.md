@@ -100,7 +100,7 @@ This strategy integrates the strengths of both EMA and MACD indicators and uses 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-24 00:00:00

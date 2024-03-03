@@ -129,7 +129,7 @@ In summary, the Holy Grail strategy combines the advantages of double moving ave
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-24 00:00:00
 end: 2023-11-30 00:00:00

@@ -136,7 +136,7 @@ In conclusion, this is an overall robust strategy, which can significantly impro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-11 00:00:00
 end: 2024-01-18 00:00:00

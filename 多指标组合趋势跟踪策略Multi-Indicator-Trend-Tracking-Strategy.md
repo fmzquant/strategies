@@ -229,7 +229,7 @@ This strategy forms stable ensemble signals by integrating multiple indicators f
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-16 00:00:00
 end: 2023-09-22 00:00:00

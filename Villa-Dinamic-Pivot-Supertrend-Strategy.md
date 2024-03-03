@@ -71,7 +71,7 @@ This strategy works better on AUD/USD in the 15 min timeframe. It uses the Pivot
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-01 00:00:00
 end: 2022-02-11 23:59:00

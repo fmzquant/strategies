@@ -139,7 +139,7 @@ The strategy effectively identifies trends with Renko and TEMA, suitable for hig
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-20 00:00:00
 end: 2023-09-19 00:00:00

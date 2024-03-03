@@ -99,7 +99,7 @@ The strategy is simple and practical overall. The use of only EMA and RSI requir
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-05 00:00:00
 end: 2024-02-04 00:00:00

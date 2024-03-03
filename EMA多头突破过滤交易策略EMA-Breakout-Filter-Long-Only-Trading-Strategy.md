@@ -90,7 +90,7 @@ In summary, this simple system can perform well in bull trends but requires caut
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2020-09-11 00:00:00
 end: 2021-04-17 00:00:00

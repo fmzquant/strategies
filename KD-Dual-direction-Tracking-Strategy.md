@@ -42,7 +42,7 @@ In summary, the KD dual-direction tracking strategy can capitalize on strong mom
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-11 00:00:00
 end: 2023-09-10 00:00:00

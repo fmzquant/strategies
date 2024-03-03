@@ -128,7 +128,7 @@ Overall, this moving average breakout strategy is very suitable as a beginner qu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-22 08:00:00

@@ -159,7 +159,7 @@ This strategy combines the strengths of reversal and FCO strategies through port
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-10-26 00:00:00

@@ -190,7 +190,7 @@ In summary, by integrating the SMI, fast RSI, and body filter, this strategy has
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-22 00:00:00
 end: 2024-01-21 00:00:00

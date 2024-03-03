@@ -167,7 +167,7 @@ Overall this is a typical trend following strategy. Combining trend and overboug
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-17 00:00:00
 end: 2023-01-31 00:00:00

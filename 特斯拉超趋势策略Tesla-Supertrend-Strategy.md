@@ -164,7 +164,7 @@ In summary, the Tesla Supertrend Strategy aims to identify quality entry and exi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-29 00:00:00

@@ -122,7 +122,7 @@ The strategy successfully combines the trend judgment of moving averages and the
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-04 00:00:00
 end: 2023-12-04 00:00:00

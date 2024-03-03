@@ -158,7 +158,7 @@ The RSI Rising Crypto Trend Strategy captures longer timeframe crypto trends usi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-10-16 00:00:00

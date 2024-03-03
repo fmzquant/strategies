@@ -161,7 +161,7 @@ In summary, the MACD Trend Following Strategy utilizes the simple and effective 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-14 00:00:00
 end: 2023-10-27 05:20:00

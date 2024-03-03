@@ -34,7 +34,7 @@ Amazon Prime Video presents Garaj Garaj Jugalbandi Video Song from Bandish Bandi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-05-10 00:00:00
 end: 2022-04-22 05:20:00

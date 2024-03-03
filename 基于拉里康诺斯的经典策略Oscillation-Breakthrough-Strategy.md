@@ -165,7 +165,7 @@ This strategy combines double MA trend tracking and RSI overbought/oversold to f
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-26 00:00:00
 end: 2023-10-26 00:00:00

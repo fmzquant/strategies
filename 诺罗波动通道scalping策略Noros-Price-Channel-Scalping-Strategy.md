@@ -96,7 +96,7 @@ In general, Noro's Price Channels Scalping Strategy is a strategy very suitable 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-10 00:00:00
 end: 2023-12-10 00:00:00

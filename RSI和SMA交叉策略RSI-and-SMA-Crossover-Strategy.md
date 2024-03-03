@@ -132,7 +132,7 @@ This strategy makes decisions by combining the crossover signals of RSI and SMA,
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-27 00:00:00
 end: 2024-01-03 00:00:00

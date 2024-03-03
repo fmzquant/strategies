@@ -129,7 +129,7 @@ In summary, this article has explained a quantitative trading strategy using ATR
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-09-13 00:00:00

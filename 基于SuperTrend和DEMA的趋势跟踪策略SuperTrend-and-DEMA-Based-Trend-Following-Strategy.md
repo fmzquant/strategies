@@ -148,7 +148,7 @@ This strategy combines the strengths of SuperTrend and DEMA indicators to implem
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-07 00:00:00
 end: 2023-12-07 00:00:00

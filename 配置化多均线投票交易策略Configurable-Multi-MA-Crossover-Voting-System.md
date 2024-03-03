@@ -199,7 +199,7 @@ The configurable multi-MA approach forms a robust position holding mechanism. Bu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-16 00:00:00
 end: 2023-09-22 00:00:00

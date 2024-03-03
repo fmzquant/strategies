@@ -106,7 +106,7 @@ This strategy integrates the strengths of Stochastic RSI, EMA and other indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-30 00:00:00
 end: 2023-10-30 00:00:00

@@ -177,7 +177,7 @@ The strategy has clear and simple logic, promising backtest results, and is easy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-21 00:00:00
 end: 2023-11-20 00:00:00

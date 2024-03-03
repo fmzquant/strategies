@@ -119,7 +119,7 @@ The Williams 9-day breakout strategy is a relatively classic short-term trend fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-10-16 00:00:00

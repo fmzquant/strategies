@@ -142,7 +142,7 @@ Overall this is a decent trend following strategy. It uses multiple indicators t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-06 00:00:00

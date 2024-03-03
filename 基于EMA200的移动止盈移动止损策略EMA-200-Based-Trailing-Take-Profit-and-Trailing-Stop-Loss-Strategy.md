@@ -116,7 +116,7 @@ The EMA 200 based trailing take profit and stop loss strategy judges the overall
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-08 00:00:00
 end: 2024-01-07 00:00:00

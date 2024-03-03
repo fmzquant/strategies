@@ -149,7 +149,7 @@ The Stochastic Vortex Strategy takes into account the price reversal signals and
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-14 00:00:00
 end: 2023-12-20 00:00:00

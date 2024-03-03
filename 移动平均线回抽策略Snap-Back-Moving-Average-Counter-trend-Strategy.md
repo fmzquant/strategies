@@ -163,7 +163,7 @@ The strategy has a clear logic and is easy to understand as a typical moving ave
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-22 00:00:00
 end: 2022-12-14 00:00:00

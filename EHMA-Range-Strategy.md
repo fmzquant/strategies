@@ -38,7 +38,7 @@ This post and the script don’t provide any financial advice.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-05-08 00:00:00
 end: 2022-05-07 23:59:00

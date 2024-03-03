@@ -115,7 +115,7 @@ This basic example demonstrates using RSI for quant trading. We can build on it 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-06 00:00:00
 end: 2023-12-12 00:00:00

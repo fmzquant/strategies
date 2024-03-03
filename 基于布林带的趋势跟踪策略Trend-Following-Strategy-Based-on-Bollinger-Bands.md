@@ -110,7 +110,7 @@ In conclusion, this is a practical trend following strategy generally. It identi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-22 00:00:00
 end: 2024-02-21 00:00:00

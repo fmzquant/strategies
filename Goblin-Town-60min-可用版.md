@@ -80,7 +80,7 @@ ChaoZhang
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 
 strategy("Goblin Town [60min]", overlay = true, pyramiding=100,initial_capital = 10000, default_qty_type= strategy.percent_of_equity, default_qty_value = 50, calc_on_order_fills=false, slippage=0,commission_type=strategy.commission.percent,commission_value=0.03)
 

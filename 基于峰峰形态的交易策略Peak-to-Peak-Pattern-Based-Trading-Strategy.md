@@ -134,7 +134,7 @@ This strategy is simple to operate with possibly smaller drawdowns based on the 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

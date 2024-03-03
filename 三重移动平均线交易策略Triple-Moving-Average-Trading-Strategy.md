@@ -157,7 +157,7 @@ In general this is a typical trend-following strategy by judging the crossover o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-02 00:00:00
 end: 2023-11-01 00:00:00

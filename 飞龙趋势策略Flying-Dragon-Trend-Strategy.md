@@ -143,7 +143,7 @@ The Flying Dragon Trend strategy cleverly combines moving averages into a visual
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-31 00:00:00
 end: 2023-02-14 00:00:00

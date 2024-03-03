@@ -75,7 +75,7 @@ In summary, this strategy suits nimble short-term trading, catching profit oppor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-06 00:00:00
 end: 2023-09-12 00:00:00

@@ -44,7 +44,7 @@ This is not financial advice. Use at your own risk.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-16 00:00:00
 end: 2022-05-16 00:00:00

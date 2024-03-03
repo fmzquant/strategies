@@ -127,7 +127,7 @@ This strategy integrates ATR, RSI and trailing stop loss for a typical adaptive 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-19 23:59:59

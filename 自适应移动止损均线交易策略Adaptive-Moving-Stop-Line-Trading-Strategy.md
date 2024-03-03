@@ -158,7 +158,7 @@ This strategy integrates the use of the T3 line to determine trend direction, AT
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-21 00:00:00
 end: 2024-02-20 00:00:00

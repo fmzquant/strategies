@@ -151,7 +151,7 @@ This strategy utilizes indicators like MACD, RSI, CCI, StochRSI and 200-day movi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-15 00:00:00
 end: 2024-01-17 06:00:00

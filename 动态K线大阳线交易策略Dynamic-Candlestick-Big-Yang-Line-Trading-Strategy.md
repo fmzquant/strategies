@@ -140,7 +140,7 @@ Overall, the Dynamic Candlestick Big Yang Line Trading Strategy is a very practi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-29 00:00:00
 end: 2023-12-05 00:00:00

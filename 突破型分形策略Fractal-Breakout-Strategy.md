@@ -112,7 +112,7 @@ The Fractal Breakout Strategy is very suitable for judging long-term trends over
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-18 00:00:00
 end: 2023-12-18 00:00:00

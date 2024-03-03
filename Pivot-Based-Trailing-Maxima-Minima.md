@@ -52,7 +52,7 @@ The frequency of new higher high/lower low can also help determine how bullish /
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-24 00:00:00
 end: 2022-05-23 23:59:00

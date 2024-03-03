@@ -173,7 +173,7 @@ This strategy uses multi-timeframe Hull MA to determine trend direction by compa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-07 00:00:00
 end: 2023-11-06 00:00:00

@@ -136,7 +136,7 @@ The strategy is relatively simple and reliable. By correctly identifying S/R lev
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-30 00:00:00
 end: 2024-02-05 00:00:00

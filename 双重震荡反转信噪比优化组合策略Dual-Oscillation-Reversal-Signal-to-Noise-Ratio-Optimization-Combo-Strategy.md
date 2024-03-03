@@ -132,7 +132,7 @@ This strategy combines dual oscillation reversal and signal-to-noise ratio strat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-31 00:00:00

@@ -114,7 +114,7 @@ The Momentum Indicator Decision Trading Strategy is generally a steady mid-long 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-08 00:00:00
 end: 2023-11-10 00:00:00

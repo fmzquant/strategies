@@ -125,7 +125,7 @@ Overall, the breakout tracking strategy is a highly optimized, risk-controlled t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-09-14 00:00:00

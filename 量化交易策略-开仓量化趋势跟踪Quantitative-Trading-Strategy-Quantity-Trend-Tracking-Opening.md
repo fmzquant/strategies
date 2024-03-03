@@ -78,7 +78,7 @@ This quantitative trading strategy realizes automatic opening based on tracking 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2024-01-11 00:00:00

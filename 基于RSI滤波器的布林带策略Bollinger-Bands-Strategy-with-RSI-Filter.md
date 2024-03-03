@@ -146,7 +146,7 @@ Nonetheless, there is room for improvement via parameter optimization and risk c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-28 00:00:00
 end: 2023-11-27 00:00:00

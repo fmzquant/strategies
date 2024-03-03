@@ -127,7 +127,7 @@ The Hull moving average trend following strategy effectively tracks mid-to-long 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-16 00:00:00
 end: 2023-09-15 00:00:00

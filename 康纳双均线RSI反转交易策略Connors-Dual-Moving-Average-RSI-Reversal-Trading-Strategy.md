@@ -117,7 +117,7 @@ The Connors Dual Moving Average RSI Reversal Trading Strategy captures market re
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-21 00:00:00
 end: 2023-11-16 00:00:00

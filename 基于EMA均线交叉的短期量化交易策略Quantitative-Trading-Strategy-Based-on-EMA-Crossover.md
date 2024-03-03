@@ -108,7 +108,7 @@ The strategy generates trade signals through crossover of two fast EMAs, and a l
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-28 00:00:00
 end: 2024-01-04 00:00:00

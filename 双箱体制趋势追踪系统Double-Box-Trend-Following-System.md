@@ -156,7 +156,7 @@ The Trend Following System is a practical trend trading strategy combining trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-25 00:00:00
 end: 2023-10-26 07:00:00

@@ -62,7 +62,7 @@ The EMA200 and Stochastic RSI strategy is a relatively simple and effective trad
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-08-30 00:00:00
 end: 2023-09-05 00:00:00

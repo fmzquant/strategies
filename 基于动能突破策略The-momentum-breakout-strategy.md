@@ -97,7 +97,7 @@ This strategy combines multiple indicators to determine trend direction and trig
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-23 00:00:00
 end: 2024-02-22 00:00:00

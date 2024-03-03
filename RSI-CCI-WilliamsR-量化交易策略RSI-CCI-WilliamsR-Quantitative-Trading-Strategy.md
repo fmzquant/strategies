@@ -142,7 +142,7 @@ The “Three Trail Trawler Strategy” identifies price reversal points for over
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-16 00:00:00
 end: 2024-01-23 00:00:00

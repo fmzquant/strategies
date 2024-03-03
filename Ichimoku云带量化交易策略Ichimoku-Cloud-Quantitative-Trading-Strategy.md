@@ -113,7 +113,7 @@ This strategy combines Ichimoku cloud and other indicator signals into a complet
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-29 00:00:00
 end: 2024-01-04 00:00:00

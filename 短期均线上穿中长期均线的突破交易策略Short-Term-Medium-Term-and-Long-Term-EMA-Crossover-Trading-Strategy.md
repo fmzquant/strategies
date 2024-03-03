@@ -92,7 +92,7 @@ This is a typical breakout system that judges trend reversals by comparing cross
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-16 00:00:00
 end: 2023-11-23 00:00:00

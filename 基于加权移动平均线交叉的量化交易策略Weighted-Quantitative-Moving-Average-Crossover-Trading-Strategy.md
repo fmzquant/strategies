@@ -116,7 +116,7 @@ In general, this is a stable short-term trading strategy. Compared with single p
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-29 00:00:00
 end: 2023-12-05 00:00:00

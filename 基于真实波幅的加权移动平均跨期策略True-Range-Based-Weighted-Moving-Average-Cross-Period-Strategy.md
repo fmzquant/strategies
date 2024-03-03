@@ -111,7 +111,7 @@ In summary, this is a cross-cycle trend strategy based on True Range indicators 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-10 00:00:00
 end: 2024-01-16 00:00:00

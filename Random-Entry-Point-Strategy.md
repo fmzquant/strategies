@@ -80,7 +80,7 @@ In summary, the Random Entry Point strategy relies on law of large numbers for p
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-11 00:00:00
 end: 2023-04-14 00:00:00

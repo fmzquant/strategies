@@ -157,7 +157,7 @@ This strategy combines channel trend analysis with breakout trading. With risk c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-12 04:00:00
 end: 2023-09-15 00:00:00

@@ -58,7 +58,7 @@ In conclusion, the dual moving average crossover strategy combines multiple anal
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-09-12 00:00:00

@@ -74,7 +74,7 @@ Note: A small coverage with English subtitles will be available on my Youtube Ch
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-06 00:00:00
 end: 2022-05-05 23:59:00

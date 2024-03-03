@@ -107,7 +107,7 @@ This is an excellent sandbox for experimenting with dual moving averages. Its bi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-28 00:00:00
 end: 2024-02-03 00:00:00

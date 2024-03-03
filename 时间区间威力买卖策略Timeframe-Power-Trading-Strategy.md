@@ -185,7 +185,7 @@ The Timeframe Power Trading Strategy generates alpha by identifying optimal intr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-23 00:00:00
 end: 2023-11-22 00:00:00

@@ -44,7 +44,7 @@ backtest
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-08-11 00:00:00
 end: 2022-08-10 23:59:00

@@ -109,7 +109,7 @@ The RSI Moving Average Crossover Trend Strategy is a simple trend following stra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-27 00:00:00

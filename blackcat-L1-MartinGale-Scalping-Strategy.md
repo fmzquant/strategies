@@ -50,7 +50,7 @@ MartinGale抢帽子策略是一种通过频繁交易来产生利润的交易策�
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
  strategy('[blackcat] L1 MartinGale Scalping Strategy', overlay=true, pyramiding = 5)
  

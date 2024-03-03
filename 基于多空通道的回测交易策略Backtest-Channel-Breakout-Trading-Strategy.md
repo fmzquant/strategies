@@ -150,7 +150,7 @@ This strategy backtests simple channel breakout rules, easy to operate but requi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-20 00:00:00
 end: 2023-08-30 00:00:00

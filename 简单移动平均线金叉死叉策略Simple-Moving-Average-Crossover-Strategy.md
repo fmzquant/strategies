@@ -204,7 +204,7 @@ In summary, this simple SMA crossover system is reliable in determining trend di
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-14 00:00:00
 end: 2023-11-13 00:00:00

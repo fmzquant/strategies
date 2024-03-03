@@ -101,7 +101,7 @@ This is a very practical short-term trading strategy. It identifies common candl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-12-18 00:00:00

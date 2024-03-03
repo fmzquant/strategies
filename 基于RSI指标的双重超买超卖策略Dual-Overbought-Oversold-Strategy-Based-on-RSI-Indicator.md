@@ -69,7 +69,7 @@ In summary, indicator combinations need careful balancing. Reasonable usage can 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-12 00:00:00

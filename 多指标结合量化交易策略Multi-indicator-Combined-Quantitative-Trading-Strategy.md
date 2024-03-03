@@ -127,7 +127,7 @@ This is a typical multi-variable technical indicator strategy with a balanced mi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-24 00:00:00
 end: 2024-01-23 00:00:00

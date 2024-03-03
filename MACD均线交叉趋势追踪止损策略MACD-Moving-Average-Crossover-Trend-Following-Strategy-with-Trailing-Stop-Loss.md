@@ -137,7 +137,7 @@ The strategy combines MACD, EMA/SMA and other indicators to determine trend and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-30 00:00:00
 end: 2023-11-05 00:00:00

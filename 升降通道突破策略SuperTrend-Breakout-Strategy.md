@@ -106,7 +106,7 @@ The strategy leverages the adaptive channel breakout model to achieve great tren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-26 00:00:00
 end: 2024-02-26 20:20:00

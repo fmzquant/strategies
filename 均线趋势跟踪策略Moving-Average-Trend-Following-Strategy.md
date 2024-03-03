@@ -141,7 +141,7 @@ In summary, this strategy judges and follows market trends using simple moving a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-24 00:00:00
 end: 2024-01-31 00:00:00

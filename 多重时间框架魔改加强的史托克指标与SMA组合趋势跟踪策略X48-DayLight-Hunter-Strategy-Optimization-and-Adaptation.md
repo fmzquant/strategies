@@ -129,7 +129,7 @@ This strategy combines the strengths of Stochastic and SMA indicators to achieve
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-17 00:00:00
 end: 2023-12-17 00:00:00

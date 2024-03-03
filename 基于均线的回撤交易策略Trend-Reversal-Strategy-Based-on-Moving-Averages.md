@@ -156,7 +156,7 @@ The overall logic of this strategy is clear and easy to implement for low-cost t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-21 00:00:00
 end: 2024-02-20 00:00:00

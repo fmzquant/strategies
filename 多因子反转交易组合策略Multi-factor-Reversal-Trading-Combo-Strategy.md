@@ -144,7 +144,7 @@ This strategy combines the 123 reversal system and FSK indicator to trade price 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-19 00:00:00

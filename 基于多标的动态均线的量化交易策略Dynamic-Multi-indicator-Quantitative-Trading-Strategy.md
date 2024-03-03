@@ -216,7 +216,7 @@ In summary, this strategy integrates MA, RSI, ATR, ADX and more into a relativel
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-28 00:00:00
 end: 2024-02-03 00:00:00

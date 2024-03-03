@@ -48,7 +48,7 @@ This script seems quite comprehensive and versatile as it allows you to change m
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-08 00:00:00
 end: 2023-09-07 00:00:00

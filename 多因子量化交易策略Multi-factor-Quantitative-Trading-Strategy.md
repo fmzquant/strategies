@@ -103,7 +103,7 @@ This strategy successfully combines the strengths of trend following and reversa
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2022-11-15 00:00:00

@@ -171,7 +171,7 @@ The Big Surge Big Fall strategy profits from huge candlesticks reversals with st
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-06 00:00:00
 end: 2023-11-05 00:00:00

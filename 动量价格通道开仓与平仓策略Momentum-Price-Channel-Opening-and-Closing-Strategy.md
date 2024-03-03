@@ -121,7 +121,7 @@ The design idea of this strategy based on the price channel indicator is clear. 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-29 00:00:00
 end: 2023-12-05 00:00:00

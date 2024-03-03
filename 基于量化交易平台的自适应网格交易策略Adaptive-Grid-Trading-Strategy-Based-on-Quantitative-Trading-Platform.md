@@ -142,7 +142,7 @@ This strategy is an adaptive grid strategy with automatically adjustable paramet
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-24 23:59:59

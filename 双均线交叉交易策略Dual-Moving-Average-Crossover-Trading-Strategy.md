@@ -137,7 +137,7 @@ The Dual Moving Average Crossover is a simple and practical trend-following stra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-29 00:00:00
 end: 2023-12-06 00:00:00

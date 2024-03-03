@@ -169,7 +169,7 @@ In summary, this SMA Ichimoku crossover strategy integrates the advantages of Ic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-15 00:00:00
 end: 2023-10-15 00:00:00

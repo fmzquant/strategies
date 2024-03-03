@@ -158,7 +158,7 @@ The Three Inside Down Reversal strategy aims to open positions during the initia
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-28 00:00:00
 end: 2023-12-28 00:00:00

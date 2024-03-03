@@ -74,7 +74,7 @@ In summary, using multiple indicators to determine trends is a common and effect
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-12 00:00:00
 end: 2023-02-03 00:00:00

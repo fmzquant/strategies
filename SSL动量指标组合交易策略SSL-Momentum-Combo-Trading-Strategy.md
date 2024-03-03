@@ -251,7 +251,7 @@ In summary, the tight integration of SSL and QQE forms a stable trend following 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-23 00:00:00
 end: 2023-09-22 00:00:00

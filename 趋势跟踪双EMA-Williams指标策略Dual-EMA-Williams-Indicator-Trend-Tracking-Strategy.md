@@ -160,7 +160,7 @@ This strategy successfully combines dual EMA and Williams Indicator to capture m
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-20 00:00:00
 end: 2022-11-29 05:20:00

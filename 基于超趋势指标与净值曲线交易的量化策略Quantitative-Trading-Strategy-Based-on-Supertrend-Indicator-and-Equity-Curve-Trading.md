@@ -168,7 +168,7 @@ This strategy cleverly combines the Supertrend indicator with equity curve tradi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-14 00:00:00
 end: 2024-01-14 00:00:00

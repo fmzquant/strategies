@@ -136,7 +136,7 @@ This strategy makes beneficial extensions to the base strategy for better risk c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-07 00:00:00
 end: 2023-08-30 05:20:00

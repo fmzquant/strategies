@@ -142,7 +142,7 @@ Further enriching the benchmarks, metrics and visualizations can turn this into 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-28 00:00:00
 end: 2024-01-04 00:00:00

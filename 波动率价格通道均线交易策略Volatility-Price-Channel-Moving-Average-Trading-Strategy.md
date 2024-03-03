@@ -139,7 +139,7 @@ This strategy combines multiple indicators to judge price abnormalities and tren
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-10 00:00:00
 end: 2023-12-11 00:00:00

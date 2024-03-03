@@ -87,7 +87,7 @@ In summary, Super BitMoon is a solid quantitative momentum strategy ideal for sh
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-09-08 09:00:00

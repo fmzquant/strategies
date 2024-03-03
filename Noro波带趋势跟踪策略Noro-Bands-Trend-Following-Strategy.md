@@ -160,7 +160,7 @@ This strategy uses Noro Bands to determine trend and breakout signals to time en
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-10 00:00:00
 end: 2023-09-17 00:00:00

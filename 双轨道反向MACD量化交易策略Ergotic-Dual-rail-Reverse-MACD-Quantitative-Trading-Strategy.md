@@ -111,7 +111,7 @@ The dual-rail reverse MACD quantitative strategy builds upon the classic MACD in
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-12-20 00:00:00

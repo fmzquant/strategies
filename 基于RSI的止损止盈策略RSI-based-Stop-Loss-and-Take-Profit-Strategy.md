@@ -106,7 +106,7 @@ This strategy designs a simple and practical stop loss and take profit strategy 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-29 00:00:00
 end: 2024-01-28 00:00:00

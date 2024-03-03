@@ -131,7 +131,7 @@ This is a simple RSI strategy enhanced by integrated probability module. Compare
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-12-19 00:00:00

@@ -46,7 +46,7 @@ WARNING:
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 ////////////////////////////////////////////////////////////
 //  Copyright by HPotter v1.0 05/04/2022

@@ -112,7 +112,7 @@ This strategy is mainly applied to high volatility non-trending instruments. It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-05 00:00:00
 end: 2023-12-05 00:00:00

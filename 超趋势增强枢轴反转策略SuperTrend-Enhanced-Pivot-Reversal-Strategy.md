@@ -175,7 +175,7 @@ The SuperTrend Enhanced Pivot Reversal Strategy is a highly effective approach. 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-18 00:00:00
 end: 2023-10-24 00:00:00

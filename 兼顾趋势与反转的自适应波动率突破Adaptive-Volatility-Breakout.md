@@ -145,7 +145,7 @@ This strategy comprehensively considers trend following and reversal detection w
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-24 00:00:00

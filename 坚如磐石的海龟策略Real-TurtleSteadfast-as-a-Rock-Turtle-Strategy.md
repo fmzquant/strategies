@@ -176,7 +176,7 @@ Steadfast as a Rock Turtle strategy follows the classic turtle trading methodolo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-18 00:00:00
 end: 2024-02-17 00:00:00

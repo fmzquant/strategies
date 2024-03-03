@@ -131,7 +131,7 @@ This strategy combines the 123 Reversal and STARC Bands strategies, utilizing bo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-26 00:00:00
 end: 2023-12-03 00:00:00

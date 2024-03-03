@@ -142,7 +142,7 @@ In general, this Adaptive ATR-ADX Trend Strategy V2 performs very well. By dynam
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-28 00:00:00
 end: 2023-12-04 00:00:00

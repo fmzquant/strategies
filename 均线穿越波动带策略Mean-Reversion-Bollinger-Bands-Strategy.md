@@ -167,7 +167,7 @@ The Mean Reversion Bollinger Bands Strategy cleverly uses the bands to identify 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-24 00:00:00
 end: 2023-10-24 00:00:00

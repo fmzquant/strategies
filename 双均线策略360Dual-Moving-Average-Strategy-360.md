@@ -117,7 +117,7 @@ The Dual Moving Average Strategy 360° utilizes moving average filtering and qua
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-25 00:00:00
 end: 2024-01-30 08:00:00

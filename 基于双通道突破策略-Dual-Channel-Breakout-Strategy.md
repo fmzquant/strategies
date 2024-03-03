@@ -92,7 +92,7 @@ This dual channel breakout strategy combines the strengths of Bollinger Bands an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-31 00:00:00
 end: 2024-01-31 00:00:00

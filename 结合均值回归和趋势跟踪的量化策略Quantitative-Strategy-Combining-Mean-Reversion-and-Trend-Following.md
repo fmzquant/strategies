@@ -123,7 +123,7 @@ In summary, this article has explained a quantitative strategy utilizing mean re
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-07 00:00:00
 end: 2023-04-05 00:00:00

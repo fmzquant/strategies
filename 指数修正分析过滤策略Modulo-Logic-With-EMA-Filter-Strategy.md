@@ -123,7 +123,7 @@ This strategy effectively combines the randomness of modulo operations and trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

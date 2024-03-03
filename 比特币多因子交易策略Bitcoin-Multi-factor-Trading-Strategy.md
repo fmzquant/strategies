@@ -191,7 +191,7 @@ This strategy combines multiple indicators and risk management techniques tailor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-25 00:00:00
 end: 2023-09-09 00:00:00

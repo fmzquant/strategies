@@ -106,7 +106,7 @@ By calculating the first and second order derivatives of the adaptive moving ave
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-15 00:00:00
 end: 2024-02-21 00:00:00

@@ -28,7 +28,7 @@ ESte indicador esta hecho para darte las senales de venta y compra con un riesgo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2021-07-27 00:00:00
 end: 2022-08-02 00:00:00

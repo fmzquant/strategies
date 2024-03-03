@@ -119,7 +119,7 @@ The strategy has clear and simple logic, managing risks with adaptive ATR-based 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-10-07 00:00:00

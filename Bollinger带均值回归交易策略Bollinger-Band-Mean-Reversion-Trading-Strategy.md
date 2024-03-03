@@ -144,7 +144,7 @@ In summary, the Bollinger Band mean reversion strategy with trend filters and ri
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-20 00:00:00
 end: 2023-08-10 00:00:00

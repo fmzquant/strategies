@@ -128,7 +128,7 @@ The Mean Reversion with Incremental Entry strategy focuses on mean reversion tec
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-29 00:00:00
 end: 2024-01-28 00:00:00

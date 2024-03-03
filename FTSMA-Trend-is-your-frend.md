@@ -69,7 +69,7 @@ I WILL PROVIDE A DETAILED QUICK INSTALLATION GUIDE WITH THE STUDY!
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-25 00:00:00
 end: 2022-05-24 23:59:00

@@ -165,7 +165,7 @@ By combining Hull and LSMA, this strategy effectively judges trend direction cha
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-28 00:00:00
 end: 2024-02-04 00:00:00

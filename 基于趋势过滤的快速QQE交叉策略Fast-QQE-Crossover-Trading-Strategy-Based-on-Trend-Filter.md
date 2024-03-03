@@ -224,7 +224,7 @@ Of course the risks cannot be ignored. Real money testing and continuous optimiz
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-17 00:00:00
 end: 2024-01-24 00:00:00

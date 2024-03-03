@@ -134,7 +134,7 @@ The Golden Cross Moving Average Trading Strategy is a typical trend following st
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-10 00:00:00

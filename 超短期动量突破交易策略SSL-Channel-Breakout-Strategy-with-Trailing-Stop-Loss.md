@@ -171,7 +171,7 @@ This strategy combines SSL channel directional bias and breakout signals, with d
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-24 00:00:00
 end: 2023-10-24 00:00:00

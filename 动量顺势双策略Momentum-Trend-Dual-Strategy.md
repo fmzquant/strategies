@@ -126,7 +126,7 @@ The strategy successfully combines the RSI and Bollinger Bands indicators to imp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-22 00:00:00
 end: 2024-01-21 00:00:00

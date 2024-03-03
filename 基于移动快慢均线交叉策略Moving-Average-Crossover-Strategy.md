@@ -110,7 +110,7 @@ In general, the moving average crossover strategy is a quant strategy with simpl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-14 00:00:00
 end: 2023-11-16 04:00:00

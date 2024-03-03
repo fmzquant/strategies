@@ -130,7 +130,7 @@ In summary, this zero lag volatility breakout EMA strategy captures price moment
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-07 00:00:00
 end: 2024-01-14 00:00:00

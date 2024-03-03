@@ -63,7 +63,7 @@ Other than the SweetSpot Gold10 indicator, you should not need any other indicat
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-12 00:00:00
 end: 2022-05-18 23:59:00

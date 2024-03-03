@@ -153,7 +153,7 @@ Overall this is a robust trend following strategy. Compared to fixed stop loss, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-14 00:00:00
 end: 2023-11-13 00:00:00

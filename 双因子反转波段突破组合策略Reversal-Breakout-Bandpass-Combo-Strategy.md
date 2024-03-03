@@ -95,7 +95,7 @@ This strategy integrates reversal and trend factors to achieve multi-factor driv
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 00:00:00

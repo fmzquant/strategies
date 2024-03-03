@@ -166,7 +166,7 @@ By combining multiple trend reversal indicators and optimizing configurations, t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-13 00:00:00
 end: 2023-11-15 03:00:00

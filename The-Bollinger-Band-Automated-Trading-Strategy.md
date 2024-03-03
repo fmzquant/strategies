@@ -60,7 +60,7 @@ The strategy aims to capitalize on trend continuations. Appropriate stop loss an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-09-09 00:00:00

@@ -136,7 +136,7 @@ This strategy integrates fast and slow stochastic oscillators into a dual direct
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-17 00:00:00
 end: 2023-09-16 00:00:00

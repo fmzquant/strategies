@@ -94,7 +94,7 @@ In summary, this dual-indicator judgement system with risk controls can improve 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-06 00:00:00
 end: 2023-02-21 00:00:00

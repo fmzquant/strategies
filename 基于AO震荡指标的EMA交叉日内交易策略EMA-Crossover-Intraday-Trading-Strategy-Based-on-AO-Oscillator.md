@@ -133,7 +133,7 @@ In summary, this intraday trading tactic combines the AO trend gauge with EMA cr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-18 00:00:00
 end: 2023-12-24 00:00:00

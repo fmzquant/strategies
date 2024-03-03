@@ -153,7 +153,7 @@ The strategy identifies trend direction by ZigZag and trades the trend. The logi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-23 00:00:00
 end: 2023-04-14 00:00:00

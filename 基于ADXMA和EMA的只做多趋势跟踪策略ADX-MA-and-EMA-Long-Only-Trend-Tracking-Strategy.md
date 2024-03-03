@@ -131,7 +131,7 @@ In general, this is a long-only trend tracking strategy that uses ADX to judge t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-22 00:00:00
 end: 2024-01-28 00:00:00

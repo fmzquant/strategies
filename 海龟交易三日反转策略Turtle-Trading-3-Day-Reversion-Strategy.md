@@ -193,7 +193,7 @@ The Turtle Trading 3-day Reversion Strategy identifies short-term reversal oppor
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-05 00:00:00
 end: 2023-10-12 00:00:00

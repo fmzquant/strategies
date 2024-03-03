@@ -137,7 +137,7 @@ This strategy judges market trends and power using the bull and bear power indic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2023-12-19 00:00:00

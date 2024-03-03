@@ -107,7 +107,7 @@ The strategy realizes simple and effective trend following based on CMO and WMA.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-27 00:00:00

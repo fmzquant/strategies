@@ -157,7 +157,7 @@ The momentum strategy follows price change trends instead of price levels, effec
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-25 00:00:00
 end: 2023-02-03 00:00:00

@@ -198,7 +198,7 @@ The strategy combines multiple indicators for stronger risk resistance. But indi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 persistent_bull = nz(persistent_bull[1],0) 
 persistent_bear  = nz(persistent_bear[1],0) 

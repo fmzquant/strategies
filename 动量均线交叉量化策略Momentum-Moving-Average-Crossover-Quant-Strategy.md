@@ -144,7 +144,7 @@ This strategy integrates MA and volume indicators to design a complete quant str
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-25 00:00:00
 end: 2024-01-25 00:00:00

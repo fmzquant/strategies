@@ -34,7 +34,7 @@ Get-your-trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2020-01-28 00:00:00
 end: 2022-04-27 00:00:00

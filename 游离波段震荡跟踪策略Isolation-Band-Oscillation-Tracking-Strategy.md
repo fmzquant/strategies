@@ -147,7 +147,7 @@ Overall, this strategy is very practical. It can effectively control risks by au
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-02-03 00:00:00

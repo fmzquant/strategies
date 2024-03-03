@@ -132,7 +132,7 @@ This strategy is a typical trend following strategy, using ADXR to determine tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-17 00:00:00
 end: 2023-10-24 00:00:00

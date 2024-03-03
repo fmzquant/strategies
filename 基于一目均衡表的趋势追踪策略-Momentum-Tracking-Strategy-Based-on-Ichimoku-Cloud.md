@@ -122,7 +122,7 @@ This is a typical trend following strategy harnessing strengths of MAs, RSI and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-11 00:00:00
 end: 2024-01-17 00:00:00

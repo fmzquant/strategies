@@ -102,7 +102,7 @@ This strategy achieves risk control by dynamically balancing between funds and p
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-18 19:00:00

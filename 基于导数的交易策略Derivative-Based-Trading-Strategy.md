@@ -148,7 +148,7 @@ This is a multi-timeframe trend following strategy utilizing multiple derivative
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-31 23:59:59

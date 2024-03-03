@@ -206,7 +206,7 @@ The RePaNoCHa strategy realizes relatively stable automated trading decisions an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-18 00:00:00
 end: 2023-09-24 00:00:00

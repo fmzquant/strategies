@@ -150,7 +150,7 @@ This strategy combines RSI and WMA to identify overbought/oversold levels and sp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-10 00:00:00
 end: 2024-01-11 06:00:00

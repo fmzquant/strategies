@@ -142,7 +142,7 @@ Overall, this is a very practical trend following strategy. It automatically tra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-01-11 00:00:00

@@ -127,7 +127,7 @@ The strategy integrates the strengths of dual EMA and BPF indicators with dual f
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-10 00:00:00
 end: 2024-01-16 00:00:00

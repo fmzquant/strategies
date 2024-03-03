@@ -114,7 +114,7 @@ This strategy effectively takes advantage of the Ichimoku Cloud to determine tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-19 00:00:00
 end: 2023-12-26 00:00:00

@@ -71,7 +71,7 @@ This strategy integrates the stochastic indicator Stochastic and trend strength 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-13 00:00:00
 end: 2023-11-14 04:00:00

@@ -115,7 +115,7 @@ The Volatility Breakout Reversal Trading Strategy uses channels to track price c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-12 00:00:00
 end: 2024-02-18 00:00:00

@@ -146,7 +146,7 @@ In summary, this strategy is suitable for trend-fading scenarios. By constantly 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-06 00:00:00
 end: 2024-02-05 00:00:00

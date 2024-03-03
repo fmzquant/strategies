@@ -175,7 +175,7 @@ In conclusion, this strategy effectively captures mid-to-long term trends throug
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-07 00:00:00
 end: 2023-11-10 05:00:00

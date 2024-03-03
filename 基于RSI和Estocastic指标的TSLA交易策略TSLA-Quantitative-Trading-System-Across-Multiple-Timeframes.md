@@ -103,7 +103,7 @@ To conclude, this is a typical mean-reversion strategy based on overbought and o
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-21 00:00:00
 end: 2023-12-21 00:00:00

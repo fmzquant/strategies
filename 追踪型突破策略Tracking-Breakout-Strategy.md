@@ -168,7 +168,7 @@ This strategy is a tracking breakout strategy, with the logic of trading along t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-10-16 00:00:00

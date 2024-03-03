@@ -180,7 +180,7 @@ Overall, the BB dual long and short trading strategy is a very typical and pract
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-25 00:00:00
 end: 2023-11-01 00:00:00

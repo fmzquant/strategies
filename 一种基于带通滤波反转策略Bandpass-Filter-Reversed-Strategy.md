@@ -151,7 +151,7 @@ The Bandpass Filter Reversed Strategy extracts useful medium-frequency signals b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-16 00:00:00
 end: 2024-01-23 00:00:00

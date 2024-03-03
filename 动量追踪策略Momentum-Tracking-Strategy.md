@@ -193,7 +193,7 @@ The momentum tracking strategy is a simple and practical trend following approac
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-02 00:00:00
 end: 2023-11-09 00:00:00

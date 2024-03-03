@@ -102,7 +102,7 @@ This strategy integrates the advantages of trend identification and risk control
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2023-12-19 00:00:00

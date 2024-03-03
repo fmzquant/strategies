@@ -136,7 +136,7 @@ This strategy integrates multiple different types of technical indicators. Throu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-22 00:00:00
 end: 2023-11-21 00:00:00

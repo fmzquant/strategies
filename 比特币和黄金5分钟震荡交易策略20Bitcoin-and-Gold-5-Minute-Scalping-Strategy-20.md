@@ -116,7 +116,7 @@ In summary, as a short-term frequent trading strategy, this strategy can effecti
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-19 00:00:00
 end: 2024-01-10 00:00:00

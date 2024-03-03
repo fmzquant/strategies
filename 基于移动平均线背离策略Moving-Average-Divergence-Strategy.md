@@ -118,7 +118,7 @@ This strategy uses divergences between price and MA as trading signals for autom
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-24 00:00:00
 end: 2024-01-12 00:00:00

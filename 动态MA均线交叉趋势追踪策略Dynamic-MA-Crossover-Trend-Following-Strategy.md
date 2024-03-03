@@ -138,7 +138,7 @@ The overall logic of this strategy is clear. It uses dynamic bands to filter sig
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-12-18 00:00:00

@@ -133,7 +133,7 @@ This strategy designs a trading signal smoothing Ehlers cyber cycle trading stra
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-19 00:00:00
 end: 2024-02-18 00:00:00

@@ -188,7 +188,7 @@ The Bollinger Bands Breakout Strategy is a time-tested system for short-term tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-22 00:00:00
 end: 2023-11-04 05:20:00

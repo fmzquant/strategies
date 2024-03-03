@@ -122,7 +122,7 @@ Overall this Bollinger Bands swing trading strategy is very practical. It has si
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-02 00:00:00
 end: 2024-01-02 00:00:00

@@ -50,7 +50,7 @@ This script is designed for the NNFX Method, so it is recommended for Daily char
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-02 00:00:00
 end: 2022-05-08 23:59:00

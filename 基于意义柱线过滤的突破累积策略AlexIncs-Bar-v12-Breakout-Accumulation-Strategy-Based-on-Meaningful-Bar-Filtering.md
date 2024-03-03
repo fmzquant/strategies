@@ -137,7 +137,7 @@ This strategy utilizes “meaningful bar” filtering and trend judgment to gene
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-26 00:00:00
 end: 2024-01-02 00:00:00

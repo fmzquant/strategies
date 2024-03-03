@@ -113,7 +113,7 @@ The Turtle Trading Strategy effectively tracks trends by a simple breakout syste
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-24 00:00:00
 end: 2023-12-24 00:00:00

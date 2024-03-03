@@ -123,7 +123,7 @@ This strategy captures short-term price trend changes by constructing the Gann M
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2024-01-02 00:00:00

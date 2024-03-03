@@ -151,7 +151,7 @@ The strategy identifies trend changes using BBO and enters positions accordingly
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-03 00:00:00
 end: 2023-10-09 00:00:00

@@ -56,7 +56,7 @@ These 3 indicators are used for all types of assets: FOREX, CRYPT, CFD's, ETC.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-07 00:00:00
 end: 2022-05-06 23:59:00

@@ -114,7 +114,7 @@ The strategy has a clear logic to determine market trend through BB and filter s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-21 00:00:00
 end: 2023-12-21 00:00:00

@@ -161,7 +161,7 @@ This strategy combines moving average, overbought-oversold and volatility system
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-17 00:00:00
 end: 2023-10-17 00:00:00

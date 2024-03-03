@@ -160,7 +160,7 @@ This strategy aims to capture SPY’s short-term hourly opportunities. Refining 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=5
 strategy(title="SPY 1 Hour Swing Trader", initial_capital=300000, default_qty_type=strategy.percent_of_equity, default_qty_value=15, pyramiding=0, commission_type=strategy.commission.cash_per_order, commission_value=0, overlay=true, calc_on_every_tick=false, process_orders_on_close=true, max_labels_count=500)
 

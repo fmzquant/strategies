@@ -102,7 +102,7 @@ This strategy belongs to an advanced momentum reversal breakthrough strategy. It
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

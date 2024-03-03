@@ -160,7 +160,7 @@ The Gradual Moving Average Trend Following Strategy effectively tracks major tre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-25 00:00:00
 end: 2023-10-25 00:00:00

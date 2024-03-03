@@ -166,7 +166,7 @@ The loft stop strategy uses a Kalman filter to track price changes and lock in p
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-10-06 00:00:00

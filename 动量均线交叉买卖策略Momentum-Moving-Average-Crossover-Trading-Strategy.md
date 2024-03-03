@@ -99,7 +99,7 @@ This strategy identifies trading opportunities using the MACD indicator and filt
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-19 00:00:00
 end: 2024-02-18 00:00:00

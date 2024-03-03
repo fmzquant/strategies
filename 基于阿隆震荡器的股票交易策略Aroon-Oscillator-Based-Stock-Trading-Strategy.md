@@ -128,7 +128,7 @@ This strategy creatively achieved automated trading of assets with high volatili
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-15 00:00:00
 end: 2024-01-10 00:00:00

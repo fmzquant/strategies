@@ -132,7 +132,7 @@ Overall this is a quantitative trend following strategy. It uses the VIDYA indic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-29 00:00:00
 end: 2023-10-29 00:00:00

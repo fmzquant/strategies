@@ -137,7 +137,7 @@ This strategy uses dual moving average indicators to issue trading signals, with
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-07 00:00:00
 end: 2023-12-12 08:00:00

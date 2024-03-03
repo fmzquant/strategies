@@ -129,7 +129,7 @@ In summary, by adjusting parameters, this quantitative trend tracking strategy c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-15 00:00:00
 end: 2023-09-14 00:00:00

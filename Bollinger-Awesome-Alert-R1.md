@@ -57,7 +57,7 @@ HINTS: Best trades tend to occur when price reversing bounce off outer band and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-23 00:00:00
 end: 2022-05-22 23:59:00

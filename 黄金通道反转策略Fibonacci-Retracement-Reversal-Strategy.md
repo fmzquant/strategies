@@ -130,7 +130,7 @@ The Fibonacci Retracement Reversal strategy balances trend and reversal scenario
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

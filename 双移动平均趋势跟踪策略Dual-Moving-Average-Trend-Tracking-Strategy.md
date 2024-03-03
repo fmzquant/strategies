@@ -133,7 +133,7 @@ The Dual Moving Average Trend Tracking Strategy has a clear logic of using dual 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-12 00:00:00
 end: 2023-12-18 00:00:00

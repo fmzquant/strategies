@@ -165,7 +165,7 @@ With improvements in parameter optimization and indicator selection, this strate
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

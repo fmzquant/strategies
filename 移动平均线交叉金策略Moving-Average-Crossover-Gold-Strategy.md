@@ -123,7 +123,7 @@ Overall, this moving average crossover gold strategy has clear logic and is easy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-20 00:00:00
 end: 2023-12-26 00:00:00

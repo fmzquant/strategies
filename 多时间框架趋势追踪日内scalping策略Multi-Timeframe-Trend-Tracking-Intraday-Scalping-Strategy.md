@@ -149,7 +149,7 @@ Overall this is a typical multi-timeframe trend tracking strategy using intraday
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-09 00:00:00
 end: 2023-11-15 00:00:00

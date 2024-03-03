@@ -151,7 +151,7 @@ This strategy combines multiple quantitative technical indicators to determine e
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-12-25 00:00:00

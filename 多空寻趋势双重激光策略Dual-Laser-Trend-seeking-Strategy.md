@@ -220,7 +220,7 @@ The strategy has clear logic of using multiple indicators to determine trend dir
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-06 00:00:00
 end: 2023-11-05 00:00:00

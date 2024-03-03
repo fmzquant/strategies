@@ -144,7 +144,7 @@ The RSI Channel Price Difference Tracking Strategy generates trading signals by 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-17 00:00:00
 end: 2023-12-17 00:00:00

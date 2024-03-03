@@ -120,7 +120,7 @@ The strategy features simplicity and efficiency. It determines major trend with 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-26 00:00:00
 end: 2023-12-26 00:00:00

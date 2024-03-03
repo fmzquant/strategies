@@ -157,7 +157,7 @@ The strategy is relatively simple, implementing a threshold-based trading strate
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-23 00:00:00
 end: 2023-10-29 00:00:00

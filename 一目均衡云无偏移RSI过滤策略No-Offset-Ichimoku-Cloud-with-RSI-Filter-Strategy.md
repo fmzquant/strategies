@@ -147,7 +147,7 @@ In summary, this is quite a robust trend following strategy. It adopts the Ichim
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-31 00:00:00
 end: 2023-02-20 00:00:00

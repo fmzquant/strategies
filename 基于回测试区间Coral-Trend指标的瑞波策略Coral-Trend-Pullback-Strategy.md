@@ -168,7 +168,7 @@ This strategy first uses Coral Trend to determine the medium and long term trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-27 00:00:00
 end: 2024-02-03 00:00:00

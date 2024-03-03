@@ -120,7 +120,7 @@ The SMA crossover strategy features simple logic that is easy to grasp and imple
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-19 00:00:00
 end: 2023-12-19 00:00:00

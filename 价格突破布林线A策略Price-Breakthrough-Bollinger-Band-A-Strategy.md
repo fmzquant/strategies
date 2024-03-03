@@ -165,7 +165,7 @@ The strategy integrates Bollinger Band, Stoch indicator with technical fundament
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-29 00:00:00
 end: 2023-11-03 18:00:00

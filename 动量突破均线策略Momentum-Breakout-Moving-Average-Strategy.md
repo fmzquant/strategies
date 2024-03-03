@@ -152,7 +152,7 @@ The Momentum Breakout Moving Average Strategy capitalizes on the strengths of co
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-20 00:00:00
 end: 2023-11-26 00:00:00

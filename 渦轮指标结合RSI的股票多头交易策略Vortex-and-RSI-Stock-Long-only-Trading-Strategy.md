@@ -161,7 +161,7 @@ This strategy integrates Vortex for trend and RSI for overheating control into a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-19 00:00:00
 end: 2023-09-18 00:00:00

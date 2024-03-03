@@ -137,7 +137,7 @@ This strategy implements trend trading by judging the major trend using dual EMA
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-04 00:00:00
 end: 2023-12-10 00:00:00

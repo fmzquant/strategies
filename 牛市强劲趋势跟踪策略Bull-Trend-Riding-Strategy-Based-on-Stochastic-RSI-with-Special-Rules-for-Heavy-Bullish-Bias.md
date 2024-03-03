@@ -175,7 +175,7 @@ This strategy identifies trend with Donchian Channel, and trades with StochRSI s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-16 00:00:00
 end: 2023-10-16 00:00:00

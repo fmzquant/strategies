@@ -134,7 +134,7 @@ The Volatility Capture RSI-Bollinger strategy is a technical indicator-driven st
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-23 00:00:00
 end: 2023-11-30 00:00:00

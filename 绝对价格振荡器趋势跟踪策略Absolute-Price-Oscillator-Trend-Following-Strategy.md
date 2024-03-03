@@ -146,7 +146,7 @@ This EMA crossover system using APO provides a solid foundation for trend follow
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-14 00:00:00
 end: 2023-09-20 00:00:00

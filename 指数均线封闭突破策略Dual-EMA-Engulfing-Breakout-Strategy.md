@@ -111,7 +111,7 @@ The strategy's logic is clear and easy to understand, using EMAs to determine st
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-06 00:00:00
 end: 2023-12-06 00:00:00

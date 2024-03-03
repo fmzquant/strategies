@@ -130,7 +130,7 @@ This strategy combines Ichimoku Cloud and dynamic trailing stop techniques, whic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-22 00:00:00
 end: 2023-12-28 00:00:00

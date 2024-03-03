@@ -140,7 +140,7 @@ This strategy calculates the cumulative changes in price and volume to design a 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-31 00:00:00
 end: 2023-11-20 00:00:00

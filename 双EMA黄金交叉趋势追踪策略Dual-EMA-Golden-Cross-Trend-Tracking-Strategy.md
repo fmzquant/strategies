@@ -111,7 +111,7 @@ This strategy judges trend based on EMA crossovers, which is simple and clear to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-21 00:00:00
 end: 2023-11-20 00:00:00

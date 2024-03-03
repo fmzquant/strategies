@@ -125,7 +125,7 @@ In conclusion, this WMA-based strategy specializes in capturing short-term price
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-17 00:00:00
 end: 2023-12-24 00:00:00

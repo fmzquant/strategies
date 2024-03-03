@@ -156,7 +156,7 @@ The Schaff Trend Cycle strategy identifies overbought/oversold via momentum metr
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-01 00:00:00
 end: 2023-10-31 00:00:00

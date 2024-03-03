@@ -152,7 +152,7 @@ This strategy trades EMA and MA crossover reversals simply and efficiently but h
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=2
 strategy(title = "MA + EMA Crossover Strategy ",shorttitle="eMA", overlay = true,default_qty_type = strategy.percent_of_equity, default_qty_value = 100,commission_type=strategy.commission.percent,commission_value=0.1,initial_capital=100000)
 

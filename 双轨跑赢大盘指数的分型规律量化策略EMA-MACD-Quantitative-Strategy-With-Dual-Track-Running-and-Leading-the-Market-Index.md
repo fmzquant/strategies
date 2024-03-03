@@ -163,7 +163,7 @@ This strategy integrates the strengths of moving average line indicators and MAC
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-05 00:00:00
 end: 2023-12-11 00:00:00

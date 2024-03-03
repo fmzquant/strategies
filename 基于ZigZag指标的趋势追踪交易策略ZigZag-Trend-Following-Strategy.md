@@ -158,7 +158,7 @@ This strategy uses the ZigZag indicator to determine price trends and establishe
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-31 00:00:00
 end: 2024-01-07 00:00:00

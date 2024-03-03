@@ -244,7 +244,7 @@ This strategy integrates the strengths of RSI and SuperTrend to effectively iden
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-11-02 00:00:00

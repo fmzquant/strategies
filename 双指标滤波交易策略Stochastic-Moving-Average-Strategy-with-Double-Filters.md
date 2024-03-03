@@ -145,7 +145,7 @@ This is an overall solid trend-following strategy. It uses stochastic to determi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-25 00:00:00
 end: 2024-02-01 00:00:00

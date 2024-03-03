@@ -51,7 +51,7 @@ The Squeeze Momentum on Reversal Strategy is a powerful tool that can be used to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-02 00:00:00
 end: 2023-09-08 00:00:00

@@ -157,7 +157,7 @@ Overall this Balancing Trend strategy is a reliable, robust trend following syst
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-16 00:00:00
 end: 2023-11-20 08:00:00

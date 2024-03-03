@@ -220,7 +220,7 @@ The strategy utilizes the classic CCI overbought/oversold principles for entry. 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-24 00:00:00
 end: 2023-10-24 00:00:00

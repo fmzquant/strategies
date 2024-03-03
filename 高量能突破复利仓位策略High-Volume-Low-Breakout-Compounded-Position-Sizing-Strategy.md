@@ -141,7 +141,7 @@ In summary, this is a fairly simple and straightforward strategy for capturing r
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-11 00:00:00
 end: 2024-02-17 00:00:00

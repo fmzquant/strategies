@@ -135,7 +135,7 @@ The strategy has relatively simple logic of tracking moving averages to capture 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-08 00:00:00
 end: 2023-12-14 00:00:00

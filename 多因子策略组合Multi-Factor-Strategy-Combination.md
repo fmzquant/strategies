@@ -160,7 +160,7 @@ This strategy combines strengths of Stoch.RSI, RSI, Double Strategy, CM Williams
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-18 00:00:00
 end: 2023-10-25 00:00:00

@@ -212,7 +212,7 @@ The Dual Moving Average Bollinger Band system demonstrates overall positive resu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-17 00:00:00
 end: 2023-10-17 00:00:00

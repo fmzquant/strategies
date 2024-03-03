@@ -176,7 +176,7 @@ This strategy combines multiple technical indicators to achieve high frequency h
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-20 00:00:00
 end: 2023-10-26 00:00:00

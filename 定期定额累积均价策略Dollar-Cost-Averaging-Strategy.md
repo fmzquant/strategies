@@ -68,7 +68,7 @@ In summary, the dollar cost averaging strategy accumulates assets through batche
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-08 00:00:00
 end: 2023-09-14 00:00:00

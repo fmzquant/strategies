@@ -139,7 +139,7 @@ In summary, this strategy is a quantitative trading strategy that determines fut
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-03 00:00:00
 end: 2023-12-10 00:00:00

@@ -112,7 +112,7 @@ The RSI Fibonacci Retracement strategy has good stability in general as a trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-22 00:00:00
 end: 2023-12-28 00:00:00

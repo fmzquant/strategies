@@ -145,7 +145,7 @@ This strategy trades reversals using RSI combined with moving averages and profi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-21 00:00:00
 end: 2023-09-27 00:00:00

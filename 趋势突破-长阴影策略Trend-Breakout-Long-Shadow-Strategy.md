@@ -144,7 +144,7 @@ Overall, this strategy profits from short-term price swings through trend identi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-08 00:00:00
 end: 2023-11-14 00:00:00

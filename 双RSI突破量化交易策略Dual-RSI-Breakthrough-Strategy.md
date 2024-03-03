@@ -106,7 +106,7 @@ The dual RSI breakthrough strategy uses fast and slow RSI indicators to track ma
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-10 00:00:00
 end: 2024-01-17 00:00:00

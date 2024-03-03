@@ -107,7 +107,7 @@ The Last Candle strategy is a simple trend following strategy. It quickly judges
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-14 00:00:00
 end: 2023-12-20 00:00:00

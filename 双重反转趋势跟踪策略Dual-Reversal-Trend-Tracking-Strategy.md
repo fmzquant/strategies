@@ -139,7 +139,7 @@ The strategy integrates dual reversal judgments to effectively discover price in
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-12 00:00:00
 end: 2023-12-12 00:00:00

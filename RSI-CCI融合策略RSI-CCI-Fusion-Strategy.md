@@ -144,7 +144,7 @@ The RSI-CCI fusion strategy improves judgement by consolidating indicators. With
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-19 00:00:00
 end: 2023-09-18 00:00:00

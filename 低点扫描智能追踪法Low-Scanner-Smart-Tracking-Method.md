@@ -169,7 +169,7 @@ The Low Scanner Smart Tracking Method is a high winning rate non-repainting Fore
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-24 00:00:00
 end: 2023-10-25 00:00:00

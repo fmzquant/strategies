@@ -157,7 +157,7 @@ This strategy combines various techniques including price breakout, indicator si
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-23 00:00:00
 end: 2023-11-30 00:00:00

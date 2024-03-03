@@ -114,7 +114,7 @@ In summary, this Supertrend multi-timeframe backtest strategy is very practical.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-27 00:00:00
 end: 2023-12-04 00:00:00

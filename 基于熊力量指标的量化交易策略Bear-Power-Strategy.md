@@ -161,7 +161,7 @@ The Bear Power strategy identifies market structures and profits from short posi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-27 00:00:00
 end: 2023-12-30 01:00:00

@@ -117,7 +117,7 @@ The High Minus Exponential Moving Average Stock Strategy designs a simple but ef
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-27 00:00:00
 end: 2023-12-03 00:00:00

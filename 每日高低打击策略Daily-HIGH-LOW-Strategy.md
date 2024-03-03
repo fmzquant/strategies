@@ -210,7 +210,7 @@ In summary, this is a simple and intuitive high/low breakout strategy, focusing 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © exlux99
 

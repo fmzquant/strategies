@@ -51,7 +51,7 @@ The BEST Supertrend Strategy is a great way to get started with trading. It is a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-09 00:00:00
 end: 2023-09-08 00:00:00

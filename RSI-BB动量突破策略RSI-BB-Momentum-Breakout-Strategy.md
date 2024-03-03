@@ -218,7 +218,7 @@ The RSI-BB strategy combines the advantages of using trend and momentum indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-03 00:00:00
 end: 2023-11-02 00:00:00

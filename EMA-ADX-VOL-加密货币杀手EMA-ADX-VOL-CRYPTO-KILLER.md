@@ -135,7 +135,7 @@ By comprehensively considering price trend direction, trend strength and trading
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-28 00:00:00
 end: 2023-12-04 00:00:00

@@ -13,7 +13,7 @@ Zer3192
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 
 //@version=4
 study("SMA Cross", overlay=true)

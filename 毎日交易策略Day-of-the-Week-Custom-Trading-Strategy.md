@@ -168,7 +168,7 @@ This strategy provides highly flexible long/short trading ability through daily 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-19 00:00:00
 end: 2023-09-25 00:00:00

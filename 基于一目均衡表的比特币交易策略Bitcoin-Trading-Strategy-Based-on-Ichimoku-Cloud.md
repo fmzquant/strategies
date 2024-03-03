@@ -146,7 +146,7 @@ This strategy generates signals when short-term equilibrium line crosses over lo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-31 00:00:00
 end: 2024-01-30 00:00:00

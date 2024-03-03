@@ -95,7 +95,7 @@ This strategy catches trend changes by simple MA crossovers. It belongs to typic
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-23 00:00:00
 end: 2024-02-29 00:00:00

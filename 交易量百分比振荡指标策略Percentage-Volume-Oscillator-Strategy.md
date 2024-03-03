@@ -133,7 +133,7 @@ The Percentage Volume Oscillator strategy judges volume trend changes by calcula
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-06 00:00:00
 end: 2023-10-23 00:00:00

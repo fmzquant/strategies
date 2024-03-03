@@ -177,7 +177,7 @@ In summary, this strategy uses adaptive ATR moving averages to identify trends, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-26 00:00:00
 end: 2023-11-01 00:00:00

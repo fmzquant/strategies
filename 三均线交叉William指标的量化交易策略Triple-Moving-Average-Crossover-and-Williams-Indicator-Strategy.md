@@ -160,7 +160,7 @@ The strategy has clear logic overall, entering and exiting positions with a comb
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-28 00:00:00
 end: 2023-09-27 00:00:00

@@ -134,7 +134,7 @@ The Dual MA Convergence Trend Tracking Strategy judges trend direction by calcul
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-21 00:00:00
 end: 2023-12-27 00:00:00

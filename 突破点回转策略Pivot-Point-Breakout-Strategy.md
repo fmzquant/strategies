@@ -172,7 +172,7 @@ The pivot point breakout strategy captures trends simply through pivotal point b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-27 00:00:00
 end: 2023-09-26 00:00:00

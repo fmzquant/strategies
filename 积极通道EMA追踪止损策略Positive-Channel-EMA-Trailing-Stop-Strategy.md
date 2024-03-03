@@ -96,7 +96,7 @@ This strategy integrates multiple mainstream technical indicators and methods su
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-10 00:00:00
 end: 2023-12-12 04:00:00

@@ -128,7 +128,7 @@ This strategy combines supply/demand analysis, trend determination, reversal ide
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-01 00:00:00
 end: 2023-12-20 23:59:59

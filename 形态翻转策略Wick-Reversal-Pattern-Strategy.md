@@ -114,7 +114,7 @@ The wick reversal pattern strategy effectively identifies reversal patterns and 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-08 00:00:00
 end: 2023-10-15 00:00:00

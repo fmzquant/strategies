@@ -119,7 +119,7 @@ This dual CCI filtered momentum explosion strategy enhances the reliability of t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-01 00:00:00
 end: 2023-10-07 00:00:00

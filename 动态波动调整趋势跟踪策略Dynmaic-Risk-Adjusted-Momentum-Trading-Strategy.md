@@ -124,7 +124,7 @@ The strategy integrates various techniques like normalisation, dynamic position 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-17 00:00:00
 end: 2024-01-23 00:00:00

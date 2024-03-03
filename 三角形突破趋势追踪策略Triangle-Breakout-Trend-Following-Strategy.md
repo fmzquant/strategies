@@ -137,7 +137,7 @@ The strategy is overall robust with triangle formation improving signal accuracy
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-20 00:00:00
 end: 2023-09-19 00:00:00

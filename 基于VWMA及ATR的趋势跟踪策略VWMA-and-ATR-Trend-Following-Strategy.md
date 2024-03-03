@@ -142,7 +142,7 @@ The strategy has an overall trend-following bias and catches obvious price trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-07 00:00:00
 end: 2023-10-13 00:00:00

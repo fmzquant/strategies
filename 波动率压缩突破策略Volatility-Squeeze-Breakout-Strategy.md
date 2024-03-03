@@ -76,7 +76,7 @@ The Volatility Squeeze Breakout Strategy is a powerful and flexible trading syst
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-11-09 00:00:00

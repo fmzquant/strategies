@@ -143,7 +143,7 @@ The MACD Trend Prediction Strategy improves the calculation of MACD by using the
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-26 00:00:00
 end: 2023-11-01 00:00:00

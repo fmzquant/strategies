@@ -103,7 +103,7 @@ Overall this is a solid framework for automatically identifying support and resi
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-12-05 00:00:00

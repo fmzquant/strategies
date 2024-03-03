@@ -136,7 +136,7 @@ In general, the dual moving average trading strategy is quite effective and stab
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 strategy("CS: 2 Moving Averages Script - Strategy (Testing)", overlay=true)
 

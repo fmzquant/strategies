@@ -173,7 +173,7 @@ This strategy judges overbought/oversold levels first and then combines with bre
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-29 00:00:00
 end: 2024-02-05 00:00:00

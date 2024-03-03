@@ -154,7 +154,7 @@ This strategy uses the Zero Lag Hull EMA combo to accurately and sensitively cap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-19 00:00:00
 end: 2023-09-18 00:00:00

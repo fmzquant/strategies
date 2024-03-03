@@ -128,7 +128,7 @@ The strategy has clear logic of riding trends on higher timeframes using SAR ind
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-09 00:00:00
 end: 2024-01-15 00:00:00

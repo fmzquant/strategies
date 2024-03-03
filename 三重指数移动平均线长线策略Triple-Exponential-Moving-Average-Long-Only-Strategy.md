@@ -131,7 +131,7 @@ In summary, the Triple EMA Long Only Strategy identifies trend directions via th
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-08 00:00:00
 end: 2023-11-14 00:00:00

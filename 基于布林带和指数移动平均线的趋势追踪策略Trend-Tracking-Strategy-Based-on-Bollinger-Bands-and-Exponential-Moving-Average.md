@@ -134,7 +134,7 @@ This strategy integrates using Bollinger Bands to determine the trend and EMA fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-10 00:00:00
 end: 2023-11-16 00:00:00

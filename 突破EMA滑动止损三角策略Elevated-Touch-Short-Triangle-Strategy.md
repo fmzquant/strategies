@@ -101,7 +101,7 @@ In summary, this is a simple and practical short-term EMA breakout strategy. It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-30 00:00:00
 end: 2024-02-29 00:00:00

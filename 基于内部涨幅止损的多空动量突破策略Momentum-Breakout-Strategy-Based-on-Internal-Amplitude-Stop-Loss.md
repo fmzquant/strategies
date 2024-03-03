@@ -97,7 +97,7 @@ This strategy is a typical high-frequency trading strategy, belonging to a short
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-15 00:00:00
 end: 2023-11-22 08:00:00

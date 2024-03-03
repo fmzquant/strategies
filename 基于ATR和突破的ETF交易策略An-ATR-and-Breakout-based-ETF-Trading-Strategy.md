@@ -171,7 +171,7 @@ The strategy has clear and simple logic. The core mechanisms of breakout and ada
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-18 00:00:00
 end: 2023-12-21 03:00:00

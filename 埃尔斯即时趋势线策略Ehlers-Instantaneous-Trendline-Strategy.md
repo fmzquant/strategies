@@ -173,7 +173,7 @@ Overall, the Ehlers Instantaneous Trendline strategy utilizes technical indicato
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-13 00:00:00
 end: 2023-12-19 00:00:00

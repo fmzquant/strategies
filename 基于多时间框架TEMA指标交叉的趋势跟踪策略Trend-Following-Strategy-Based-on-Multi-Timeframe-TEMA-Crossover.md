@@ -123,7 +123,7 @@ The strategy overall is simple and clear in logic, identifying trend bias via TE
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-01 00:00:00
 end: 2023-12-24 00:00:00

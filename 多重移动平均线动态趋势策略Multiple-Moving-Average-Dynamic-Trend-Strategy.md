@@ -136,7 +136,7 @@ The multiple moving average dynamic trend strategy determines market trends by c
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-16 00:00:00
 end: 2023-11-22 00:00:00

@@ -156,7 +156,7 @@ This strategy integrates the strengths of RSI, T3 and ATR indicators, achieving 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-14 00:00:00
 end: 2023-11-21 00:00:00

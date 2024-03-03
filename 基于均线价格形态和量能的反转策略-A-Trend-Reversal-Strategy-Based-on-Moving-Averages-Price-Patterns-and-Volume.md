@@ -116,7 +116,7 @@ This strategy neatly combines moving averages, price action and volume to trade 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-10 00:00:00
 end: 2024-01-16 00:00:00

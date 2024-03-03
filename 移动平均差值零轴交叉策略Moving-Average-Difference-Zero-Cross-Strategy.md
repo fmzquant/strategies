@@ -86,7 +86,7 @@ This strategy integrates the moving average difference method and zero axis cros
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-01-19 00:00:00
 end: 2024-01-25 00:00:00

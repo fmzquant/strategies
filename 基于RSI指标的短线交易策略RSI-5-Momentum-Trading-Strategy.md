@@ -92,7 +92,7 @@ The strategy utilizes the reversal pattern of RSI peaks and troughs to set clear
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-14 00:00:00
 end: 2024-01-21 00:00:00

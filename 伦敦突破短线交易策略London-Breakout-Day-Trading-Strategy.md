@@ -138,7 +138,7 @@ The London breakout day trading strategy suits short-term intraday trading very 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-07 00:00:00
 end: 2023-09-08 09:00:00

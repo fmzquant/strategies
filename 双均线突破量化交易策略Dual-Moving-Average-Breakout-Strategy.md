@@ -112,7 +112,7 @@ The dual moving average breakout strategy is a simple and practical trend follow
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-02-03 00:00:00

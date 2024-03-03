@@ -182,7 +182,7 @@ Overall this is a typical and simple trend following system. The core lies in us
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-11-14 00:00:00

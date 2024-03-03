@@ -72,7 +72,7 @@ This is a work in progress so any suggestions for improvements are welcome.
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-04-25 00:00:00
 end: 2022-05-24 23:59:00

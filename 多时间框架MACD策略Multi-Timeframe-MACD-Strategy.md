@@ -123,7 +123,7 @@ The Multi Timeframe MACD Strategy utilizes the trend judgment capability of the 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-28 00:00:00
 end: 2023-11-27 00:00:00

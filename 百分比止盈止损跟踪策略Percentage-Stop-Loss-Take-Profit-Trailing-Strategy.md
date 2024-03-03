@@ -169,7 +169,7 @@ This strategy combines SMA for trend and percentage stop/take for profit managem
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-25 00:00:00
 end: 2023-09-24 00:00:00

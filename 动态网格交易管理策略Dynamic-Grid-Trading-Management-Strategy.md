@@ -78,7 +78,7 @@ The Dynamic Grid Trading Management Strategy is a versatile trading approach, ap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-27 00:00:00
 end: 2023-12-03 00:00:00

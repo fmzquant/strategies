@@ -116,7 +116,7 @@ This is a simple short-term mean reversal strategy, using MA breakout as entry t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=3
 strategy(title="Buy The Dip", shorttitle="BTFD", overlay=true)
 dipness = input(title="Dipness",defval=2)

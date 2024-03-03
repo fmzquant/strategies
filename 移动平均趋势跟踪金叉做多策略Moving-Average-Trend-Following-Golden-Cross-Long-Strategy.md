@@ -150,7 +150,7 @@ The strategy integrates the advantages of moving averages and MACD, achieving go
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-15 00:00:00
 end: 2023-10-22 00:00:00

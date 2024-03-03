@@ -189,7 +189,7 @@ This is a typical dual momentum breakout strategy. It uses double confirmation t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-16 00:00:00
 end: 2023-11-15 00:00:00

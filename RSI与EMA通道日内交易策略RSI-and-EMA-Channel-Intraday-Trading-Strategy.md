@@ -122,7 +122,7 @@ The strategy integrates the EMA channel and RSI indicator into a systematic fram
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-26 00:00:00
 end: 2023-12-26 00:00:00

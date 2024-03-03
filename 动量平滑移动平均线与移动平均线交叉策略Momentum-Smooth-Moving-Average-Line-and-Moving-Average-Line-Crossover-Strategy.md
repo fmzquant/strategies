@@ -155,7 +155,7 @@ Overall, this is a simple and practical trend tracking strategy. It uses EMA cro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-20 00:00:00
 end: 2023-11-26 00:00:00

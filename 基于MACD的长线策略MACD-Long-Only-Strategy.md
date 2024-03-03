@@ -155,7 +155,7 @@ In conclusion, this is an overall very simple and intuitive  long term trading s
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-04 00:00:00
 end: 2024-01-11 00:00:00

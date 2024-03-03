@@ -130,7 +130,7 @@ In summary, this is a simple and practical dual EMA trend tracking strategy. It 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-02-19 00:00:00
 end: 2024-02-25 00:00:00

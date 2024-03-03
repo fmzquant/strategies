@@ -90,7 +90,7 @@ Overall this strategy balances stability and profitability. MACD judges the main
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-01 00:00:00
 end: 2024-02-17 00:00:00

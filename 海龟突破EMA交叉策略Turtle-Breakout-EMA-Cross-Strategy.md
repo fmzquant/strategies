@@ -140,7 +140,7 @@ The strategy identifies trend reversals using EMA crossovers in a simple and str
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-10-30 00:00:00
 end: 2023-11-06 00:00:00

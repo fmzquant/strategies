@@ -191,7 +191,7 @@ In general, this is a relatively simple and practical breakout strategy. Its adv
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-20 00:00:00
 end: 2023-10-26 00:00:00

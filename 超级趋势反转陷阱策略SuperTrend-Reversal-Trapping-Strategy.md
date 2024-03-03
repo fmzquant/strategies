@@ -169,7 +169,7 @@ This strategy combines SuperTrend and trapping candle patterns to enter on perce
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-17 00:00:00
 end: 2023-09-24 00:00:00

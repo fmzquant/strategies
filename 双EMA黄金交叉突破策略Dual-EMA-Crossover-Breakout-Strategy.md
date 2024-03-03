@@ -148,7 +148,7 @@ The Dual EMA Crossover Breakout strategy effectively identifies trends using dua
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-27 00:00:00

@@ -183,7 +183,7 @@ In summary, the Adaptive Moving Average Channel Breakout Strategy is a simple an
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-26 00:00:00
 end: 2023-11-01 00:00:00

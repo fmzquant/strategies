@@ -129,7 +129,7 @@ The overall framework of this strategy is complete, integrating trend judgment a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-06 00:00:00
 end: 2023-12-12 00:00:00

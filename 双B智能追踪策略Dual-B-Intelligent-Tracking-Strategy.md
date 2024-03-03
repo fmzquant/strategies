@@ -133,7 +133,7 @@ In conclusion, this is a typical Bollinger Bands trading strategy template. It a
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-18 00:00:00
 end: 2024-01-17 00:00:00

@@ -127,7 +127,7 @@ In conclusion, this is a very practical short-term trading strategy. It uses pri
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-26 00:00:00
 end: 2023-09-26 00:00:00

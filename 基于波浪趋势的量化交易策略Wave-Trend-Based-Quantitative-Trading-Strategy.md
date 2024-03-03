@@ -108,7 +108,7 @@ This strategy identifies trends and overbought/oversold levels using Wave Trend 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-20 00:00:00
 end: 2023-11-27 00:00:00

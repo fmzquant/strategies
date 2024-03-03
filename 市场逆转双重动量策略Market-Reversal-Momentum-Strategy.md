@@ -127,7 +127,7 @@ The strategy integrates Supertrend and Fisher Transform with flexibility to adap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-21 00:00:00
 end: 2024-02-27 03:00:00

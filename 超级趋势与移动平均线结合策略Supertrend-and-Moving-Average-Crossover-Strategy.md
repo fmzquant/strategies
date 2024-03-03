@@ -137,7 +137,7 @@ The strategy combines Supertrend for trend direction and EMA+SMA crossovers to g
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-19 00:00:00
 end: 2024-02-18 00:00:00

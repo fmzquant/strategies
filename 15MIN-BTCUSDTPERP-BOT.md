@@ -99,7 +99,7 @@ Enjoy ;)
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-20 00:00:00
 end: 2022-06-18 23:59:00

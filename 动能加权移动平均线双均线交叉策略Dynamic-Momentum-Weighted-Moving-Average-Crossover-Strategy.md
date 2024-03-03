@@ -126,7 +126,7 @@ The strategy judges changes in market trend using MAEMA dual moving average cros
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-12 00:00:00
 end: 2024-01-11 00:00:00

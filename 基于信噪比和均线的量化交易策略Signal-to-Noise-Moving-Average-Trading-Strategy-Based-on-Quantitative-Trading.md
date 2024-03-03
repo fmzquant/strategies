@@ -130,7 +130,7 @@ This strategy realizes quantitative trading by judging market risk via signal-to
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-12-25 00:00:00
 end: 2023-12-29 10:00:00

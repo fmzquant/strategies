@@ -91,7 +91,7 @@ In summary, this mechanical cyclical system has impressive backtests but struggl
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-12 00:00:00
 end: 2023-09-11 00:00:00

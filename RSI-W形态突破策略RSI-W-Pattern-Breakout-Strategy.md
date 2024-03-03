@@ -138,7 +138,7 @@ This strategy utilizes RSI W patterns for efficient reversal breakout trading. B
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-17 00:00:00
 end: 2023-09-16 00:00:00

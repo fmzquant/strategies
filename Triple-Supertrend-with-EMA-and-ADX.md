@@ -44,7 +44,7 @@ A FIlter is given to take or avoid re-enter on the same side. For example, After
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-02-07 00:00:00
 end: 2022-05-07 00:00:00

@@ -122,7 +122,7 @@ This strategy combines the strengths of EVWMA and Bollinger Bands to track trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-10-26 00:00:00
 end: 2023-11-01 00:00:00

@@ -132,7 +132,7 @@ This support/resistance cloud indicator integrates statistical analysis and grap
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-10 00:00:00
 end: 2024-01-17 00:00:00

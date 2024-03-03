@@ -159,7 +159,7 @@ The strategy logic is simple and clear. Using multiple indicators can help filte
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-06 00:00:00
 end: 2023-10-06 00:00:00

@@ -101,7 +101,7 @@ This strategy utilizes breakout and regression to determine short-term trends, b
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-02-01 00:00:00
 end: 2024-02-29 23:59:59

@@ -138,7 +138,7 @@ The 60-minute timeframe allows fast profits but also introduces higher risk. Ove
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-15 00:00:00
 end: 2024-01-22 00:00:00

@@ -137,7 +137,7 @@ The moving average crossover strategy generates trading signals through the simp
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-12-25 00:00:00
 end: 2023-12-07 05:20:00

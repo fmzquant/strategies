@@ -185,7 +185,7 @@ The Ichimoku Cloud and MACD Momentum Riding strategy considers both trend and ti
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-03 05:20:00

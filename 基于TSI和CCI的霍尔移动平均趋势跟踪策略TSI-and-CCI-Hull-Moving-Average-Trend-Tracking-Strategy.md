@@ -160,7 +160,7 @@ This strategy comprehensively utilizes the TSI, CCI and Hull MA indicators to fo
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-11-21 00:00:00
 end: 2023-11-27 00:00:00

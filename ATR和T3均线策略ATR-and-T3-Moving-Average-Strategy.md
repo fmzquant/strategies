@@ -137,7 +137,7 @@ The strategy integrates ATR and T3 moving average for simple and effective trend
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-09 00:00:00
 end: 2023-09-16 00:00:00

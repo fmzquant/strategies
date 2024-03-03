@@ -128,7 +128,7 @@ This strategy integrates dynamic channels, breakouts, and take profits. With pro
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-09 00:00:00
 end: 2023-09-15 00:00:00

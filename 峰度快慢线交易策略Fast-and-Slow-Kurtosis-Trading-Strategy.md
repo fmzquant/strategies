@@ -208,7 +208,7 @@ This strategy uses Kurtosis crossover for a simple and intuitive system. But con
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-16 00:00:00
 end: 2023-09-22 00:00:00

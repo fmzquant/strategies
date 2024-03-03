@@ -134,7 +134,7 @@ This is a very practical dynamic position scaling strategy. It flexibly adjusts 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-20 00:00:00
 end: 2024-02-19 00:00:00

@@ -40,7 +40,7 @@ However, it's important to remember that past performance doesn't guarantee futu
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-09-01 00:00:00
 end: 2023-08-14 05:20:00

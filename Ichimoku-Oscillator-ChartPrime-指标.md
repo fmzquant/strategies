@@ -75,7 +75,7 @@ Ichimoku-Oscillator-ChartPrime-指标
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 // This source code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
 // © ChartPrime
 

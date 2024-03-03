@@ -116,7 +116,7 @@ This strategy holds positions based on 3 SMA crossovers to determine trend direc
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-08-21 00:00:00
 end: 2023-09-20 00:00:00

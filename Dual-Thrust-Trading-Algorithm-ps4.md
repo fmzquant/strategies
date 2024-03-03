@@ -32,7 +32,7 @@ a624587332
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 //@version=4
 study("Dual Thrust Trading Algorithm (ps4)", overlay=true)
 // author: capissimo

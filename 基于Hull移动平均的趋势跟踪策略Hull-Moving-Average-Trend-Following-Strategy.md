@@ -147,7 +147,7 @@ Overall, this strategy leverages the responsiveness of Hull MA to timely follow 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-09-11 00:00:00
 end: 2023-09-12 22:00:00

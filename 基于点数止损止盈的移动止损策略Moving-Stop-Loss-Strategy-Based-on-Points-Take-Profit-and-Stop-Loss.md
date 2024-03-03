@@ -102,7 +102,7 @@ The core idea of this strategy is simple and clear, using EMA and WMA as basis, 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-03 00:00:00
 end: 2024-01-10 00:00:00

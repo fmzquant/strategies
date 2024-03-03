@@ -123,7 +123,7 @@ Overall, the Moving Average Crossover Trend Strategy is a simple and practical t
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2024-01-01 00:00:00
 end: 2024-01-31 23:59:59

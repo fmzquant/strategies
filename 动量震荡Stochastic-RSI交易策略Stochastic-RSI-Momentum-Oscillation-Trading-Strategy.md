@@ -152,7 +152,7 @@ This article details the construction principles, advantages, risks and optimiza
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2023-11-25 00:00:00
 end: 2023-12-25 00:00:00

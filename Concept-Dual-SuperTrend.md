@@ -38,7 +38,7 @@ Simple SuperTrend indicator giving you the option to display two SuperTrends on 
 
 > Source (PineScript)
 
-``` javascript
+``` pinescript
 /*backtest
 start: 2022-05-09 00:00:00
 end: 2022-05-15 23:59:00
