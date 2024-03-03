@@ -1548,7 +1548,7 @@ function main() {
             msg = {
                 method: "SUBSCRIBE",
                 params: [symbol + "@aggTrade", symbol + "@depth20@100ms"],
-                id: "1",
+                id: 1,
             }
         }
         ws.write(JSON.stringify(msg))
@@ -1569,4 +1569,4 @@ https://www.fmz.com/strategy/395045
 
 > Last Modified
 
-2023-09-14 13:25:15
+2024-01-02 16:36:13

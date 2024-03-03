@@ -11,6 +11,13 @@ ChaoZhang
 
 找出平均振幅最大的币种,用于网格交易
 
+> Strategy Arguments
+
+
+
+|Argument|Default|Description|
+|----|----|----|
+|Day|30|Day|
 
 
 > Source (javascript)
@@ -18,7 +25,7 @@ ChaoZhang
 ``` javascript
 
 /* jshint esversion: 6 */
-var Day = 30; //统计天数
+// var Day = 30; //统计天数
 var Quote = "USDT"; //计价货币,BUSD或者USDT
 function GetAmplitude(klineList) {
     let ret = {
@@ -110,4 +117,4 @@ https://www.fmz.com/strategy/364968
 
 > Last Modified
 
-2023-12-06 23:45:12
+2024-01-08 17:52:48
