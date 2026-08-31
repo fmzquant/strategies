@@ -1,7 +1,7 @@
 
 > Name
 
-入门模板之各个平台余额
+Starter-Template-for-Platform-Balances
 
 > Author
 
@@ -9,16 +9,13 @@ Zero
 
 > Strategy Description
 
-查看各个平台的余额和货币数量
+View balances and currency amounts across platforms
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|DisableRate|false|禁用汇率转换|
-
+|DisableRate|false|Disable exchange-rate conversion|
 
 > Source (javascript)
 

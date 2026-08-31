@@ -9,12 +9,10 @@ Cover-all-contracts
 
 > Strategy Description
 
-平该交易对下的所有期货仓位。
-平仓方式：已平多仓为例，不断挂卖一卖出，0.5s后撤销，继续挂卖一，知道完全平仓。每次挂单量为当前所有可平仓位。
+Close all futures positions for the current trading pair.
+Closing method: using closed long positions as an example, the script repeatedly places a sell order at the best ask, cancels it after 0.5 seconds, and continues placing new best-ask orders until the position is fully closed. Each order uses the full currently closable position size.
 
-插件可以在交易终端一键启动，不收取费用，方便手动交易。详细介绍：https://www.fmz.com/digest-topic/5051
-
-
+The plugin can be launched with one click from the trading terminal free of charge, making manual trading more convenient. Detailed introduction: https://www.fmz.com/digest-topic/5051
 
 > Source (javascript)
 

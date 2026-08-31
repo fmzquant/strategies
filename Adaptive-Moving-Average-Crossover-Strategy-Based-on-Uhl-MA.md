@@ -9,8 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
 ## 概述
 
 Uhl MA系统是一个自适应的均线交叉系统,其设计目的是为了弥补传统均线系统的不足。该系统采用快速均线和慢速均线交叉产生交易信号。慢速均线采用Uhl最初提出的修正均线(CMA),快速均线采用也基于修正均线思想的修正趋势步(CTS)。系统通过自适应调整均线参数,实现更稳定可靠的交易信号。
@@ -47,9 +45,6 @@ Uhl MA系统是一个自适应的均线交叉系统,其设计目的是为了弥�
 
 Uhl MA系统是一个非常有创新思维的自适应均线交叉策略。相比传统策略,其采用动态均线可以减少误交易的概率,更好的捕捉趋势机会。但该策略也存在一定局限性,主要在震荡行情下的表现不佳。通过进一步改进计算方法,引入其他辅助指标进行过滤优化,仍有非常大的提升空间。与此同时,参数优化和风险控制也是关键。总体来说,Uhl MA策略具有较好的发展前景和研究价值。
 
-[/trans]
-
-|| 
 
 ## Overview
 
@@ -87,7 +82,6 @@ The potential optimizations include:
 
 The Uhl MA system is a very innovative adaptive MA crossover strategy. Compared to traditional strategies, the dynamic MAs help reduce false signals and better capture trends. But limitations exist in ranging markets. Further improvements in calculation methodology and adding filters hold great potential. Meanwhile, parameter tuning and risk control are also critical. Overall, the Uhl MA strategy has good potential and research value worth further exploration.
 
-[/trans]
 
 > Strategy Arguments
 

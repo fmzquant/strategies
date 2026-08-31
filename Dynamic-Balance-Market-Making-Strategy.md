@@ -1,7 +1,7 @@
 
 > Name
 
-动态平衡-做市策略
+Dynamic-Balance-Market-Making-Strategy
 
 > Author
 
@@ -11,16 +11,13 @@ FawkesPan
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|DELAY|5|平衡间隔|
-|PRICE_INCREMENT|1e-06|最小价格变化|
-|AMOUNT_INCREMENT|0.01|最小数量变化|
-|AMOUNT_MINIMUM|0.01|最低交易数量|
-|SPREAD|0.3|挂单价格间隔|
-
+|DELAY|5|Rebalance interval|
+|PRICE_INCREMENT|1e-06|Minimum price increment|
+|AMOUNT_INCREMENT|0.01|Minimum quantity increment|
+|AMOUNT_MINIMUM|0.01|Minimum trade quantity|
+|SPREAD|0.3|Order price spacing|
 
 > Source (javascript)
 

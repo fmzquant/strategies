@@ -1,7 +1,7 @@
 
 > Name
 
-期货基础策略
+Futures-Basic-Strategy
 
 > Author
 
@@ -11,37 +11,32 @@ s2696922797c
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|contract|AP101|合约代码|
-|direction|0|方向: 做多|做空|
-|amount|true|数量|
-|cost|false|成本|
-|stopProfit|false|止盈|
-|stopProfitPriceDifference|30|止盈差价|
-|stopLoss|false|止损|
-|stopLossPriceDifference|10|止损差价|
-|advanced|false|显示高级设置|
-|openRange|5|可开仓的价格区间|
-|closeRange|5|可平仓的价格区间|
-|openingTime|300000|开仓计时（ms）|
-|endTime|180000|交易结束计时（ms）|
-|lingerTime|300000|徘徊计时（ms）|
-|lingerLossRatio|30|徘徊止损率（%）|
-|lingerLossPriceDifference|5|徘徊止损差价|
-|overnight|false|是否隔夜|
-|whetherToCatchUp|false|是否追高|
-
-
+|contract|AP101|Contract code|
+|direction|0|Direction: Long|Short|
+|amount|true|Quantity|
+|cost|false|Cost|
+|stopProfit|false|Take profit|
+|stopProfitPriceDifference|30|Take-profit price difference|
+|stopLoss|false|Stop loss|
+|stopLossPriceDifference|10|Stop-loss price difference|
+|advanced|false|Show advanced settings|
+|openRange|5|Allowable entry price range|
+|closeRange|5|Allowable exit price range|
+|openingTime|300000|Entry timer (ms)|
+|endTime|180000|Trade end timer (ms)|
+|lingerTime|300000|Linger timer (ms)|
+|lingerLossRatio|30|Linger stop-loss ratio (%)|
+|lingerLossPriceDifference|5|Linger stop-loss price difference|
+|overnight|false|Hold overnight|
+|whetherToCatchUp|false|Chase rising prices|
 
 
 |Button|Default|Description|
 |----|----|----|
-|stop|__button__|停止运行|
-|changeStopProfit|false|更改止盈位|
-
+|stop|__button__|Stop running|
+|changeStopProfit|false|Change take-profit level|
 
 > Source (javascript)
 

@@ -11,52 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1dbb4f51f19252626ff.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多重均线、相对强弱指标(RSI)、平均趋向指标(ADX)和成交量分析的综合量化交易系统。策略通过多重技术指标的协同配合,在趋势确认的基础上进行交易,通过成交量和动量指标的过滤来提高交易的可靠性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键组件:
-1. 使用双重赫尔均线(Double HullMA)、成交量加权移动平均线(VWMA)和基础加权移动平均线(WMA)构建多重均线系统
-2. 通过ADX指标判断趋势强度,只在趋势明显时进行交易
-3. 利用RSI指标过滤极端市场状态,避免在过度买入或卖出区域交易
-4. 结合成交量分析,要求交易信号出现时成交量高于一定阈值
-5. 通过n1和n2线的交叉来确定具体的交易方向
-
-多重均线系统提供了价格趋势的基准判断,ADX确保只在趋势足够强时交易,RSI帮助避免追涨杀跌,而成交量分析则确保交易发生在市场活跃度较高的时期。
-
-#### 策略优势
-1. 多重确认机制降低了假突破的风险
-2. 结合技术指标和成交量分析提高了交易的可靠性
-3. 通过RSI过滤极端市场状态,避免在不利时机入场
-4. ADX的使用确保只在趋势明显时交易,提高胜率
-5. 成交量要求帮助确认市场共识
-6. 策略逻辑清晰,参数可调整性强
-
-#### 策略风险
-1. 多重过滤条件可能导致错过部分交易机会
-2. 在震荡市场中可能表现不佳
-3. 参数优化可能导致过度拟合
-4. 均线系统在快速反转行情中可能反应滞后
-5. 成交量过滤可能在低流动性市场中限制交易机会
-
-建议通过以下方式管理风险:
-- 根据不同市场特点调整参数
-- 设置适当的止损止盈
-- 控制每次交易的资金比例
-- 定期回测验证策略有效性
-
-#### 策略优化方向
-1. 引入自适应参数机制,根据市场状态动态调整
-2. 增加市场波动率过滤器,在高波动期间调整仓位
-3. 完善出场机制,可考虑加入追踪止损
-4. 优化成交量过滤器,考虑相对成交量而非绝对值
-5. 加入时间过滤,避开重要消息发布期
-6. 考虑加入价格波动率指标,提高对市场风险的识别能力
-
-#### 总结
-该策略通过多重技术指标的协同配合,构建了一个相对完善的趋势跟踪系统。策略的主要特点是通过多重确认来提高交易的可靠性,同时通过各种过滤器来控制风险。虽然可能会错过一些交易机会,但总体上有助于提高交易的稳定性。通过建议的优化方向,策略还有进一步提升的空间。 || 
-
 #### Overview
 This strategy is a comprehensive quantitative trading system that combines multiple moving averages, Relative Strength Index (RSI), Average Directional Index (ADX), and volume analysis. The strategy executes trades based on trend confirmation through multiple technical indicators, using volume and momentum filters to enhance trading reliability.
 
@@ -100,7 +54,7 @@ Risk management recommendations:
 6. Consider adding price volatility indicators for better risk assessment
 
 #### Summary
-The strategy builds a relatively complete trend following system through multiple technical indicators working in concert. Its main feature is using multiple confirmations to improve trading reliability while controlling risk through various filters. While it may miss some opportunities, it generally helps improve trading stability. The suggested optimization directions provide room for further strategy enhancement.[/trans]
+The strategy builds a relatively complete trend following system through multiple technical indicators working in concert. Its main feature is using multiple confirmations to improve trading reliability while controlling risk through various filters. While it may miss some opportunities, it generally helps improve trading stability. The suggested optimization directions provide room for further strategy enhancement.
 
 
 

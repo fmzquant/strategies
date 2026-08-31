@@ -1,7 +1,7 @@
 
 > Name
 
-平台价格指标监控11
+Platform-Price-Indicator-Monitoring-11
 
 > Author
 
@@ -9,38 +9,33 @@ tfboys
 
 > Strategy Description
 
-1.5---可以监控ATR,RSI,BOLL,PRICE
-1.4---增加告警周期设置
-1.3---增加微信通知
-1.2---支持期货平台
-1.1---稳定版本
+1.5 --- Can monitor ATR, RSI, BOLL, and PRICE
+1.4 --- Added alert period settings
+1.3 --- Added WeChat notifications
+1.2 --- Added support for futures platforms
+1.1 --- Stable version
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|CType0|0|所0货币类型: 人民币|美元|
-|ContractType0|0|所0合约类型: 当周|下周|当月|季度|
-|MLevel0|0|所0杠杆大小: 10倍|20倍|
-|LoopInterval|500|轮询间隔(毫秒)|
-|MaxVal|2755|值上限|
-|MinVal|2730|值下限|
-|AlarmPeriod|2|告警周期(单位:轮询时长)|
-|Interval|500|函数重试间隔|
-|Period|14|周期|
-|Index|0|指标类型: ATR|RSI|BOLL|PRICE|
-|RecordsHand|false|手动收集K线|
-|CleanLog|true|清理日志图表|
-
-
+|CType0|0|Exchange 0 currency type: CNY|USD|
+|ContractType0|0|Exchange 0 contract type: This week|Next week|This month|Quarter|
+|MLevel0|0|Exchange 0 leverage: 10x|20x|
+|LoopInterval|500|Polling interval (milliseconds)|
+|MaxVal|2755|Upper value limit|
+|MinVal|2730|Lower value limit|
+|AlarmPeriod|2|Alert period (in polling intervals)|
+|Interval|500|Function retry interval|
+|Period|14|Period|
+|Index|0|Indicator type: ATR|RSI|BOLL|PRICE|
+|RecordsHand|false|Manually collect K-line data|
+|CleanLog|true|Clear logs and charts|
 
 
 |Button|Default|Description|
 |----|----|----|
-|推送切换|__button__|微信推送|
-
+|PushToggle|__button__|WeChat push notification|
 
 > Source (javascript)
 

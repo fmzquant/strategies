@@ -1,7 +1,7 @@
 
 > Name
 
-数字货币现货打新抢币策略教学
+Cryptocurrency-Spot-New-Listing-Token-Sniping-Strategy-Tutorial
 
 > Author
 
@@ -9,22 +9,19 @@
 
 > Strategy Description
 
-相关文章：https://www.fmz.com/bbs-topic/9262
+Related article: https://www.fmz.com/bbs-topic/9262
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|symbol|null|监控的交易对|
-|ApiReqInterval|200|api请求间隔|
-|pendingPrice|-1|挂单价格|
-|pendingAmount|-1|挂单量|
-|deltaPrice|-1|价格变动|
-|deltaAmount|-1|订单量变动|
-|ordersNum|10|订单数量|
-
+|symbol|null|Trading pair to monitor|
+|ApiReqInterval|200|API request interval|
+|pendingPrice|-1|Order price|
+|pendingAmount|-1|Order quantity|
+|deltaPrice|-1|Price increment|
+|deltaAmount|-1|Order quantity increment|
+|ordersNum|10|Number of orders|
 
 > Source (javascript)
 

@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/202fb559ed6de3f27df.png)
 
-[trans]
-#### 概述
-这是一个结合了多重均线、趋势跟踪、结构突破和动量指标的综合性交易策略。该策略通过分析多个时间周期的趋势方向,同时结合价格结构突破和回调买入的方式来确定交易信号。策略采用了固定的止损和获利目标来管理风险,并通过多重验证机制来提高交易的准确性。
-
-#### 策略原理
-策略使用了三条指数移动平均线(EMA25、EMA50和EMA200)来确定市场趋势。当价格位于EMA200之上且EMA200向上倾斜时,被认为处于上升趋势;反之则视为下降趋势。在确定趋势方向后,策略寻找价格对EMA25或EMA50的回调机会。同时,策略还需要确认近期高点或低点的突破,以及K线收盘价相对开盘价的位置,以验证动量的方向。RSI指标作为额外的过滤条件,要求买入信号RSI大于50,卖出信号RSI小于50。
-
-#### 策略优势
-1. 多重验证机制显著提高了交易的可靠性
-2. 结合了趋势和动量分析,降低了假突破的风险
-3. 清晰的止损和获利目标有助于情绪管理
-4. 策略逻辑简单清晰,易于理解和执行
-5. 适用于不同的市场环境和交易品种
-
-#### 策略风险
-1. 多重条件可能导致错过部分交易机会
-2. 固定的止损和获利目标可能不适合所有市场环境
-3. 在剧烈波动的市场中可能触发频繁的止损
-4. 需要持续监控市场以确保策略参数的适用性
-5. 在横盘市场中可能产生较多假信号
-
-#### 策略优化方向
-1. 引入自适应的止损和获利目标计算方法
-2. 增加交易量分析作为辅助确认指标
-3. 考虑加入市场波动率过滤机制
-4. 优化趋势判断的时间周期选择
-5. 增加策略在不同市场环境下的适应性
-
-#### 总结
-这是一个设计合理的综合性交易策略,通过多重技术指标的配合使用,有效地平衡了交易机会和风险控制。策略的核心优势在于其严格的多重验证机制,这有助于提高交易的成功率。虽然存在一些需要优化的地方,但总体而言,这是一个值得尝试的策略框架。 ||
-
 #### Overview
 This is a comprehensive trading strategy that combines multiple moving averages, trend following, structure breakouts, and momentum indicators. The strategy determines trading signals by analyzing trends across multiple timeframes while incorporating price structure breakouts and pullback entries. It employs fixed stop-loss and take-profit targets for risk management and uses multiple validation mechanisms to enhance trading accuracy.
 
@@ -70,7 +39,7 @@ The strategy employs three exponential moving averages (EMA25, EMA50, and EMA200
 5. Enhance strategy adaptability across different market conditions
 
 #### Summary
-This is a well-designed comprehensive trading strategy that effectively balances trading opportunities and risk control through the coordinated use of multiple technical indicators. The strategy's core strength lies in its strict multiple validation mechanism, which helps improve trading success rates. While there are areas for optimization, overall, this represents a worthwhile strategy framework to explore.[/trans]
+This is a well-designed comprehensive trading strategy that effectively balances trading opportunities and risk control through the coordinated use of multiple technical indicators. The strategy's core strength lies in its strict multiple validation mechanism, which helps improve trading success rates. While there are areas for optimization, overall, this represents a worthwhile strategy framework to explore.
 
 
 

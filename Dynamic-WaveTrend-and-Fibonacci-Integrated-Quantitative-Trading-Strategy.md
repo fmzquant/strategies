@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16670c4ad1e27d030ce.png)
 
-[trans]
-#### 概述
-这是一个结合了WaveTrend指标、斐波那契回调水平和RSI指标的综合量化交易策略。策略通过多重技术指标的协同配合,在市场趋势与价格波动中寻找最佳的交易机会。策略采用动态调整的方式持续跟踪市场走势,通过多重信号确认来提高交易的准确性。
-
-#### 策略原理
-策略主要基于以下几个核心要素:
-1. WaveTrend指标:通过计算价格的指数移动平均(EMA)和标准差,构建了一个动态的波动通道。当WaveTrend的快线(WT1)与慢线(WT2)发生交叉时,产生交易信号。
-2. 斐波那契回调水平:策略动态计算并更新价格的最高点和最低点,实时绘制38.2%、50%和61.8%三个关键的斐波那契回调水平。
-3. RSI指标:使用14周期的相对强弱指数(RSI)来确认市场的超买超卖状态。
-4. 多重信号确认:策略要求WaveTrend交叉信号、RSI超买超卖信号以及价格与斐波那契水平的关系同时满足特定条件才会触发交易。
-
-#### 策略优势
-1. 信号可靠性高:通过多重技术指标的协同配合,有效降低了虚假信号的影响。
-2. 风险控制完善:设置了基于点数的止盈止损机制,能够有效控制每笔交易的风险。
-3. 适应性强:策略能够动态调整斐波那契水平,适应不同市场环境。
-4. 信号明确:交易信号清晰,易于理解和执行。
-
-#### 策略风险
-1. 市场波动风险:在剧烈波动的市场中,可能会出现止损点位过于宽松的情况。
-2. 信号滞后性:由于使用了移动平均等技术指标,信号可能存在一定的滞后性。
-3. 资金管理风险:固定的止盈止损点位可能不适合所有市场环境。
-
-#### 策略优化方向
-1. 动态止盈止损:建议将固定点数的止盈止损改为基于ATR指标的动态止盈止损机制。
-2. 市场环境过滤:增加趋势强度过滤器,在不同市场环境下调整策略参数。
-3. 信号优化:可以考虑加入成交量指标来辅助确认交易信号。
-4. 参数优化:建议对WaveTrend和RSI的参数进行优化,以适应不同的交易品种和时间周期。
-
-#### 总结
-这是一个设计合理、逻辑清晰的综合量化交易策略。通过多重技术指标的配合使用,能够有效捕捉市场机会并控制风险。策略的主要优势在于其可靠的信号系统和完善的风险控制机制。通过建议的优化方向,策略的稳定性和适应性还可以进一步提升。 || 
-
 #### Overview
 This is a comprehensive quantitative trading strategy that combines WaveTrend indicator, Fibonacci retracement levels, and RSI indicator. The strategy seeks optimal trading opportunities in market trends and price fluctuations through the coordination of multiple technical indicators. It continuously tracks market trends through dynamic adjustment and improves trading accuracy through multiple signal confirmations.
 
@@ -70,7 +39,7 @@ The strategy is based on several core elements:
 4. Parameter optimization: Recommend optimizing WaveTrend and RSI parameters to adapt to different trading instruments and timeframes.
 
 #### Summary
-This is a well-designed quantitative trading strategy with clear logic. Through the combined use of multiple technical indicators, it can effectively capture market opportunities while controlling risks. The strategy's main advantages lie in its reliable signal system and comprehensive risk control mechanism. Through the suggested optimization directions, the strategy's stability and adaptability can be further enhanced.[/trans]
+This is a well-designed quantitative trading strategy with clear logic. Through the combined use of multiple technical indicators, it can effectively capture market opportunities while controlling risks. The strategy's main advantages lie in its reliable signal system and comprehensive risk control mechanism. Through the suggested optimization directions, the strategy's stability and adaptability can be further enhanced.
 
 
 

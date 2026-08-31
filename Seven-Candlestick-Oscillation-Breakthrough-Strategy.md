@@ -10,61 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14b50815ac56c1445d3.png)
- [trans]
-
-### 概述
-
-七笔形态震荡突破策略通过检测价格形成七根K线的persistence上涨或下跌的形态,判断市场震荡趋势,并在固定时间点进行突破操作,实现盈利。
-
-### 策略原理
-
-该策略的核心逻辑基于两个指标:
-
-1. sevenReds:检测到7根持续下跌的K线,定义为市场震荡下行趋势
-2. sevenGreens:检测到7根持续上涨的K线,定义为市场震荡上行趋势
-
-当检测到sevenReds时,做多;当检测到sevenGreens时,做空。
-
-此外,策略还在每天固定时间(美国重要数据发布时间)进行平仓,锁定利润。
-
-### 优势分析
-
-七笔形态震荡突破策略具有以下优势:
-
-1. 捕捉市场震荡趋势,七根K线过滤市场噪音,提高信号质量
-2. 定时操作,避开重要经济数据造成的大幅跳空行情的系统风险
-3. 定时止盈,及时锁定收益,降低回撤概率
-
-### 风险分析
-
-七笔形态震荡突破策略也存在一定的风险:
-
-1. 形态识别错误风险。七根K线无法完全过滤市场噪音,可能会发出错误信号
-2. 止损措施不完善,无法限制单笔损失
-3. 锁定收益的时间无法动态调整,存在未及时止盈的风险
-
-对应解决方法:
-
-1. 增加K线数量,提高persistence判断阈值
-2. 增加移动止损逻辑
-3. 动态调整止盈时间,结合波动率指标判断
-
-### 优化方向  
-
-七笔形态震荡突破策略可以从以下方面进行优化:
-
-1. 增加多个证券池,进行指数或行业轮动
-2. 增加机器学习模型,辅助判断市场状态
-3. 结合均线指标进行入场时机优化 
-4. 动态调整仓位利用率,根据回撤情况控制风险敞口
-
-### 总结
-
-七笔形态震荡突破策略通过捕捉市场中短期震荡趋势实现盈利,同时利用定时操作规避重大风险,并设置止盈逻辑锁定利润。该策略可通过多证券池轮动、机器学习等方式进行效果优化,是一种较为典型的中频量化交易策略。
-
-||
-
-### Overview
+ ### Overview
 
 The seven candlestick oscillation breakthrough strategy detects the persistence up and down candlestick patterns formed by seven K-lines to determine market oscillation trends and make breakthrough operations at fixed times to profit.
 
@@ -113,8 +59,6 @@ The seven candlestick oscillation breakthrough strategy can be optimized in the 
 ### Conclusion
 
 The seven candlestick oscillation breakthrough strategy profits by capturing short-term oscillation trends in the market, while using timed execution to avoid major risks and taking profits to lock in gains. The strategy can be enhanced via multi-asset rotation, machine learning etc. It is a typical medium-frequency quantitative trading strategy.
-
-[/trans]
 
 
 

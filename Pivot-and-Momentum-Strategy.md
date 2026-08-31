@@ -1,7 +1,7 @@
 
 > Name
 
-Pivot-and-Momentum-Strategy-枢轴动量策略
+Pivot-and-Momentum-Strategy
 
 > Author
 

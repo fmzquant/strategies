@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/118ccfb3e5431cfeb24.png)
-[trans]
-
-### 一、策略概述
-
-本策略名称为“基于SMA、EMA的量化交易策略”,其主要思想是结合不同参数的SMA均线和EMA均线来构建交易信号。
-
-### 二、策略原理  
-
-1. 计算close价格的SMA9、SMA50、SMA180均线和EMA20均线。
-
-2. 根据收盘价close与支撑位sup和阻力位res的关系,确定买入信号和卖出信号。当close突破sup时产生买入信号BuySignal,当close跌破res时产生卖出信号SellSignal。
-
-3. 在买入信号触发时,执行多头开仓策略;在卖出信号触发时,平掉多头仓位。
-
-4. 在卖出信号触发时,执行空头开仓策略;在买入信号触发时,平掉空头仓位。
-
-### 三、策略优势分析  
-
-1. 结合了多种均线来形成交易信号,提高信号的准确性和稳定性。
-
-2. 计算了动态的支撑阻力位,使交易信号更有依据。
-
-3. 采用了高中低波动均线,既注重长期趋势判断又兼顾短期突破,提高策略机会获利率。
-
-4. 支持做多做空双向交易,可以在趋势行情和震荡行情下都能获得收益。
-
-### 四、策略风险分析
-
-1. SMA均线存在滞后性,可能导致买入卖出信号被延迟,从而影响策略效果。
-
-2. 没有设定止损机制,持仓亏损可能会扩大。  
-
-3. 回测数据不足,实盘中参数需要根据市场调整。 
-
-4. 依赖技术指标形成交易信号,无法应对重大黑天鹅事件的冲击。
-
-对应风险的解决方法:
-1. 适当调整SMA均线周期;
-2. 设定合理的止损位;
-3. 加大回测样本量,调整参数;  
-4. 风控机制需要进一步完善。
-
-### 五、策略优化方向  
-
-1. 增加基于波动率的止损机制,控制单笔损失。
-
-2. 增加机器学习模型判断行情趋势,辅助形成交易信号。  
-
-3. 增加关键价格位分析模块,提高支撑阻力判断的准确性。
-
-4. 测试不同均线指标参数的组合,寻找更优参数。
-
-### 六、策略总结  
-
-本策略综合运用了SMA均线和EMA均线的技术指标来构建交易信号,同时计算了动态的支撑阻力位,形成了较为完整的买卖策略逻辑。策略具有指标参数灵活、双向交易、适应多种行情的优点,但也面临均线滞后、止损不完善等问题。未来可从止损机制、趋势判断、关键价格位判断等方面进行策略优化,使策略具有更好的稳定性和盈利空间。
-
-||
-
 ### I. Strategy Overview  
 
 This strategy is named "Quantitative Trading Strategy Based on SMA and EMA". Its main idea is to combine SMA lines and EMA lines with different parameters to construct trading signals.
@@ -120,9 +62,7 @@ Solutions:
 
 ### VI. Summary
 
-This strategy combines the technical indicators of SMA and EMA to construct trading signals, and calculates dynamic support and resistance to form a complete buy and sell logic. The advantages are flexible parameters, two-way trading, adaptable to different markets, but it also faces issues like lagging and inadequate stop loss. Future optimizations can be made in aspects like stop loss, trend judgment, key price analysis to improve stability and profitability.
-
-[/trans]]
+This strategy combines the technical indicators of SMA and EMA to construct trading signals, and calculates dynamic support and resistance to form a complete buy and sell logic. The advantages are flexible parameters, two-way trading, adaptable to different markets, but it also faces issues like lagging and inadequate stop loss. Future optimizations can be made in aspects like stop loss, trend judgment, key price analysis to improve stability and profitability.]
 
 > Strategy Arguments
 

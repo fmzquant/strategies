@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/182c575fd28d467c195.png)
 
-[trans]
-#### 概述
-该策略是一个结合布林带指标与价格突破的高频交易系统。策略通过监控价格与布林带的位置关系,结合前期高低点突破信号,在市场出现超买超卖时进行反转交易。系统采用1:1的风险收益比设置止盈止损,并通过可视化的方式展示各个关键价位,帮助交易者直观理解市场走势。
-
-#### 策略原理
-策略的核心逻辑建立在两个主要判断条件上:当价格突破前期高点且前期高点位于布林带下轨以下时,触发做多信号;当价格跌破前期低点且前期低点位于布林带上轨以上时,触发做空信号。布林带参数采用20周期移动平均线与2倍标准差,用于判断市场的波动范围和超买超卖区域。系统在触发交易信号后,会自动设置相应的止损位和目标位,并通过不同样式的线条进行可视化展示。
-
-#### 策略优势
-1. 结合了趋势突破和均值回归两种交易思路,能够在不同市场环境下保持稳定性
-2. 采用固定的风险收益比进行仓位管理,有利于长期稳定获利
-3. 通过可视化展示入场、止损和目标位,提高了策略的可操作性
-4. 布林带指标的使用帮助识别市场超买超卖状态,提高了交易的准确性
-5. 策略逻辑简单明确,便于理解和执行
-
-#### 策略风险
-1. 高频交易可能面临较高的交易成本,需要考虑手续费的影响
-2. 在横盘震荡市场中可能产生频繁的假突破信号
-3. 固定的风险收益比可能无法充分把握大趋势行情
-4. 布林带参数固定可能不适应所有市场环境
-5. 需要实时监控市场以确保信号的及时执行
-
-#### 策略优化方向
-1. 引入成交量指标作为信号确认,提高突破的可靠性
-2. 根据市场波动率动态调整布林带参数
-3. 增加趋势过滤器,避免在横盘市场频繁交易
-4. 考虑加入时间过滤,避免在不活跃时段交易
-5. 开发自适应的风险收益比设置机制
-
-#### 总结
-这是一个集成了多个技术分析概念的完整交易系统。通过布林带指标与价格突破相结合的方式,策略能够在市场超买超卖区域捕捉反转机会。虽然存在一定的优化空间,但系统的基础框架具有良好的可扩展性和实用价值。通过合理的风险管理和参数优化,该策略有望在实际交易中取得稳定收益。 || 
-
 #### Overview
 This strategy is a high-frequency trading system that combines Bollinger Bands indicators with price breakout signals. The strategy monitors the relationship between price and Bollinger Bands, combined with previous high and low point breakout signals, to execute reversal trades during market overbought and oversold conditions. The system implements a 1:1 risk-reward ratio for profit and loss targets, and visualizes key price levels to help traders intuitively understand market trends.
 
@@ -70,7 +39,7 @@ The core logic of the strategy is based on two main conditions: a buy signal is 
 5. Develop adaptive risk-reward ratio setting mechanisms
 
 #### Summary
-This is a comprehensive trading system integrating multiple technical analysis concepts. Through the combination of Bollinger Bands indicators and price breakouts, the strategy can capture reversal opportunities in market overbought and oversold areas. While there is room for optimization, the system's basic framework has good extensibility and practical value. Through proper risk management and parameter optimization, this strategy has the potential to achieve stable returns in actual trading.[/trans]
+This is a comprehensive trading system integrating multiple technical analysis concepts. Through the combination of Bollinger Bands indicators and price breakouts, the strategy can capture reversal opportunities in market overbought and oversold areas. While there is room for optimization, the system's basic framework has good extensibility and practical value. Through proper risk management and parameter optimization, this strategy has the potential to achieve stable returns in actual trading.
 
 
 

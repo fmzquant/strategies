@@ -1,7 +1,7 @@
 
 > Name
 
-Fibonacci-Extension-and-Retracement-Channel-Breakout-Strategy-斐波那契延展回撤通道突破策略
+Fibonacci-Extension-and-Retracement-Channel-Breakout-Strategy
 
 > Author
 

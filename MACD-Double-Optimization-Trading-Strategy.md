@@ -10,54 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13b7986453039fb1b9a.png)
- [trans]
-
-### 二、策略概述
-该策略运用MACD指标以及均线的交叉原理构建交易信号。其优势在于可以分别为做多和做空方向优化MACD的参数,从而使参数针对不同行情方向进行最优配置。
-
-### 三、策略原理
-1. 分别计算做多和做空两个方向的MACD指标。做多采用一组参数,做空采用另一组参数,可以自由配置。
-2. 判断MACD线和Signal线的交叉产生交易信号。做多时看涨交叉,做空时看跌交叉。
-3. 可以配置Signal线是否也需要交叉才触发信号,从而避免假信号。
-4. 进入做多或做空仓位后,等待反向交叉时平仓。
-
-### 四、策略优势
-1. 双向参数优化:可以自由优化做多和做空的参数,使其分别针对行情方向进行最优配置。
-2. 可配置信号平滑:Signal参数可以控制信号线的平滑程度,过滤假信号。
-3. 可配置信号过滤:可配置是否需要Signal线交叉才触发,避免假信号误导。
-4. 可细调仓位控制:可单独开启做多或做空,也可同时做多做空。
-
-### 五、策略风险
-1. MACD滞后问题:MACD本身有一定滞后,可能错过快速反转。
-2. 多空切换风险:行情快速变化时,仓位切换可能过于频繁。
-3. 参数风险:不当的参数配置可能无法捕捉行情特征。
-4. 止损保护:应设置合理的止损来控制单笔损失。
-
-管理风险的方法:
-1. 结合其他指标判断大格局,避免追高杀跌。
-2. 设置信号延迟和平滑参数来减少错误信号。 
-3. 反复测试优化参数,使其匹配不同周期的行情节奏。
-4. 设定止损止盈机制,控制单笔损失。
-
-### 六、优化方向 
-可以从以下几个方面来优化这个策略:
-
-1. 测试不同的快线和慢线长度参数组合,找出对不同周期行情最佳的参数。
-
-2. 测试不同的Signal线参数,Smoother信号线可以过滤掉更多噪音。
-
-3. 测试打开和关闭Signal线交叉过滤的差别,寻找最佳平衡。
-
-4. 根据回测情况设定最优止损止盈比例。
-
-5. 尝试只做多或只做空,看是否可以将策略效果最大化。
-
-### 七、总结
-该MACD双向优化交易策略通过分别配置做多和做空参数,实现了针对不同行情方向的最优化,可以自由调整参与的方向。同时加入了信号过滤机制来避免错误信号。通过参数优化和风险管理手段,可以进一步提高策略效果
-
-||
-
-### II. Strategy Overview
+ ### II. Strategy Overview
 This strategy uses the MACD indicator and moving average cross principles to construct trading signals. Its advantage is that it can optimize the parameters of MACD separately for long and short directions, so that the parameters can be optimally configured for different market directions.  
 
 ### III. Strategy Principle  
@@ -113,8 +66,6 @@ Some ways this strategy can be further optimized:
 
 ### VII. Summary 
 By configuring long and short parameters separately, this MACD Double Optimization Trading Strategy realizes optimization tailored to different market directions, and allows free adjustment of the participation direction. At the same time, signal filtering mechanisms are introduced to avoid erroneous signals. Through parameter optimization and risk management measures, the strategy effect can be further improved.
-
-[/trans]
 
 > Strategy Arguments
 

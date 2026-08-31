@@ -9,10 +9,8 @@ Push-the-price-information-to-telegram
 
 > Strategy Description
 
-教学策略：
-当币价高于或低于设定值后，自动推送一条消息到微信。可设定最小推送间隔。
-
-When the price of the currency is higher or lower than the set value, a message is automatically pushed to WeChat or telegram. The minimum push interval can be set.
+Tutorial strategy:
+When the asset price rises above or falls below the configured threshold, a message is automatically pushed to WeChat or Telegram. The minimum push interval can be configured.
 
 > Strategy Arguments
 

@@ -1,7 +1,7 @@
 
 > Name
 
-典型价格百分比通道-凯尔特纳与百分比通道变形
+Typical-Price-Percentage-Channel-Keltner-and-Percentage-Channel-Variant
 
 > Author
 
@@ -9,12 +9,10 @@ cyberking
 
 > Strategy Description
 
-典型价格百分比通道-凯尔特纳与百分比通道变形
-DX^^EMA((H+L+C)/3,N);  //21天典型价格均线 中 
-KRTHR^^EMA(DX,N)*1.05; //21天百分比通道 上
-KRTXR^^EMA(DX,N)/1.05; //21天百分比通道 下
-
-
+Typical Price Percentage Channel - Keltner and Percentage Channel Variant
+DX^^EMA((H+L+C)/3,N);  // 21-day typical price moving average, middle
+KRTHR^^EMA(DX,N)*1.05; // 21-day percentage channel, upper
+KRTXR^^EMA(DX,N)/1.05; // 21-day percentage channel, lower
 
 > Source (MyLanguage)
 

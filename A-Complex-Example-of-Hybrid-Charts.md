@@ -1,7 +1,7 @@
 
 > Name
 
-混合图表的一个复杂例子
+A-Complex-Example-of-Hybrid-Charts
 
 > Author
 
@@ -9,13 +9,9 @@ Zero
 
 > Strategy Description
 
-
-更多需求请直接查询 [Highchart官方](https://www.highcharts.com/) 或 [Highchart第三方中文文档](https://www.highcharts.com.cn/)
+For additional requirements, please refer directly to [the official Highcharts documentation](https://www.highcharts.com/) or the [third-party Chinese documentation](https://www.highcharts.com.cn/)
  
- ![IMG](https://www.fmz.com/upload/asset/15adb3835db63ae637d.png) 
-
-
-
+ ![IMG](https://www.fmz.com/upload/asset/15adb3835db63ae637d.png)
 
 > Source (javascript)
 

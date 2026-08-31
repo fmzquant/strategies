@@ -85,8 +85,6 @@ This strategy integrates the strengths of MACD and Stoch indicators to capture m
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
 |v_input_1|3|%D Smoothing|
@@ -104,18 +102,17 @@ This strategy integrates the strengths of MACD and Stoch indicators to capture m
 |v_input_13|108|Signal Smoothing|
 |v_input_14|0|Oscillator MA Type: EMA|SMA|
 |v_input_15|0|Signal Line MA Type: EMA|SMA|
-|v_input_16|30|MACDCHA步长|
-|v_input_17|20|MACDCHA步长2|
-|v_input_18|10|MACDCHA步长3|
-|v_input_19|5|MACDCHA步长4|
-|v_input_20|3|MACDCHA步长5|
-|v_input_21|true|MACDCHA步长6|
-|v_input_22|50|hist步长|
-|v_input_23|4|做多止损 %|
-|v_input_24|10|做多止盈 %|
-|v_input_25|4|做空止损 %|
-|v_input_26|10|做空止盈 %|
-
+|v_input_16|30|MACDCHA Step|
+|v_input_17|20|MACDCHA Step 2|
+|v_input_18|10|MACDCHA Step 3|
+|v_input_19|5|MACDCHA Step 4|
+|v_input_20|3|MACDCHA Step 5|
+|v_input_21|true|MACDCHA Step 6|
+|v_input_22|50|Histogram Step|
+|v_input_23|4|Long Stop Loss (%)|
+|v_input_24|10|Long Take Profit (%)|
+|v_input_25|4|Short Stop Loss (%)|
+|v_input_26|10|Short Take Profit (%)|
 
 > Source (PineScript)
 

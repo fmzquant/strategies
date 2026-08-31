@@ -9,9 +9,7 @@ ktrader
 
 > Strategy Description
 
-对现货进行网格管理
-
-
+Grid management for spot trading
 
 > Source (python)
 

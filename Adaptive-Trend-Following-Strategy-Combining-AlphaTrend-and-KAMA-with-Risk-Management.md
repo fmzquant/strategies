@@ -1,7 +1,7 @@
 
 > Name
 
-AlphaTrend与KAMA结合的自适应趋势跟踪与风险管理策略Adaptive-Trend-Following-Strategy-Combining-AlphaTrend-and-KAMA-with-Risk-Management
+Adaptive-Trend-Following-Strategy-Combining-AlphaTrend-and-KAMA-with-Risk-Management
 
 > Author
 

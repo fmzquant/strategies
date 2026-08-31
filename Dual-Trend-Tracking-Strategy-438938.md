@@ -10,51 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/150428d706f0ff9e0e6.png)
- [trans]
-
-## 概述
-
-双重趋势追踪策略是一个结合超级趋势指标、双指数移动平均线(DEMA)和布林带的复合策略。它旨在利用多种技术指标的优势,在趋势反转时及时捕捉买卖信号。
-
-## 策略原理
-
-该策略主要由三个部分组成:
-
-1. 超级趋势指标:计算向上突破线和向下突破线,判断目前的趋势方向。当价格从下向上突破超级趋势线时生成买入信号;从上向下突破时生成卖出信号。
-
-2. 双指数移动平均线(DEMA):一种趋势跟踪指标,结合了简单移动平均线和指数移动平均线的特点,能更快地响应价格变动。策略中设置200日的DEMA,用来判断长期趋势方向。
-
-3. 布林带:表示价格波动的范围。布林带异常收缩或扩张时,预示着可能的趋势反转。
-
-当超级趋势指标和DEMA都发出买入/卖出信号时,即进入相应的仓位。此外,布林带的异常也可作为辅助判断的信号。
-
-## 策略优势
-
-1. 多指标组合,综合判断,减少假信号。
-2. 超级趋势指标对细小价格变动不敏感,只在趋势转折点产生信号,避免过于频繁交易。
-3. DEMA平滑曲线,判断长期趋势准确可靠。
-4. 布林带辅助判断趋势反转点。
-
-## 风险及解决方法
-
-1. 超级趋势指标参数设置过于灵敏,可能产生较多噪音。可调整ATR周期和倍数参数实现优化。 
-2. DEMA周期过长追随趋势能力差。可以测试缩短至100天等参数。
-3. 多指标组合判断时信号不一致的情况。这时可遵循超级趋势指标为主信号。
-
-## 优化方向
-
-1. 测试不同的ATR周期和倍数参数设定,找到超级趋势指标最佳参数。
-2. 优化DEMA周期参数。
-3. 添加其他指标辅助判断,如KDJ、MACD等。
-4. 增加止损策略。
-
-## 总结
-
-双重趋势追踪策略多指标组合,综合利用超级趋势、DEMA和布林带三者的优势,在抓取趋势的同时提高信号质量,通过参数优化可期望获得更好的策略效果。止损机制的添加也是未来的优化重点。
-
-|| 
-
-## Overview 
+ ## Overview 
 
 The Dual Trend Tracking Strategy is a composite strategy combining the Supertrend indicator, Double Exponential Moving Average (DEMA) and Bollinger Bands. It aims to timely capture buy and sell signals when trends reverse by leveraging the advantages of multiple technical indicators.
 
@@ -101,8 +57,6 @@ When the Supertrend indicator and DEMA both issue buy/sell signals, the strategy
 ## Summary
 
 The Dual Trend Tracking Strategy combines the strengths of Supertrend, DEMA and Bollinger Bands by using multiple indicators, improving signal quality while capturing trends. Further performance improvements can be expected through parameter optimization and adding stop loss mechanisms.
-
-[/trans]
 
 > Strategy Arguments
 

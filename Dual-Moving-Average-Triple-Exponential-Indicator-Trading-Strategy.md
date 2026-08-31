@@ -10,59 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d6d2ced2ed7ef66edc.png)
- [trans]
-
-## 概述
-
-本策略运用双均线指标和三指数均线指标,结合随机指标,形成一个较为稳定可靠的趋势追踪交易策略。其主要思想是在均线指标判断出现金叉或死叉时,发出交易信号;而随机指标则用于辅助判断超买超卖情况,避免在市场剧烈波动时产生错误信号。
-
-## 原理
-
-该策略主要由四个部分组成:
-
-1. 双均线指标:分别计算50周期和100周期的指数移动平均线(EMA),当短期EMA上穿长期EMA时产生买入信号,下穿时产生卖出信号。
-
-2. 三指数指标:分别计算50周期、100周期和200周期的指数移动平均线,用于判断市场趋势方向。当50EMA>100EMA>200EMA时为多头市场,50EMA<100EMA<200EMA时为空头市场。
-
-3. 随机指标:计算RSI的6日K值和D值,判断超买超卖情况。K值上穿D值时为超卖,下穿时为超买。
-
-4. 交易信号:只有在双均线指标产生信号的同时,市场也符合三指数均线的多头或空头状态,且随机指标未显示超买超卖时,才发出真正的交易指令。
-
-## 优势
-
-这套策略综合运用均线指标和随机指标的优点,在发出交易信号时既考虑了趋势方向的判断,也参考了市场的超买超卖状态,从而可以较好的过滤噪音,追踪较为明确的趋势。另外,它采用三指数均线来判断整体趋势,使得信号更加可靠。这套策略简单易懂,容易实施,也易于优化。
-
-## 风险及对策 
-
-该策略最大的风险在于它依赖指标判断,当指标发出错误信号时容易导致交易失败。此外,采用较长周期均线指标判断整体趋势时,也可能错过短期机会。主要的风险对策如下:
-
-1. 优化指标参数,调整双均线和三指数均线的周期组合,使其更加匹配市场特征。
-
-2. 结合更多指标进行CANCEL操作,在判断市场出现剧烈波动时中止当前交易。
-
-3. 采用短线多头策略进行辅助,在长线多头市场中利用短期机会进行盈利。
-
-## 优化方向 
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 调整双均线和三指数均线的周期参数,优化指标顺应市场特征。
-
-2. 增加VOLUME和MACD等指标判断,避免价格异常造成错误信号。
-
-3. 利用candle模式更好确认趋势,避免短期回撤后的错误信号。
-
-4. 扩展至股票、外汇等更多品种,检验策略的适应性。
-
-5. 结合VIX指标判断整体市场波动率,控制仓位规模。
-
-## 总结
-
-本策略利用双均线指标发出交易信号,三指数均线和随机指标进行辅助判断,从而构建一个较为稳定的趋势追踪策略。它简单易懂,易于实施,与市场特征匹配度高,收益较为稳定,是一套值得推荐的量化策略。通过针对性优化,有望获得更好的效果。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy uses dual moving average indicators and triple exponential moving average indicators, combined with stochastic indicators, to form a relatively stable and reliable trend tracking trading strategy. Its main idea is to issue trading signals when the moving average indicator detects golden crosses or death crosses; while the stochastic indicator is used to assist in judging overbought and oversold situations to avoid generating wrong signals during drastic market fluctuations.
 
@@ -108,8 +56,7 @@ The main aspects where this strategy can be optimized include:
    
 ## Conclusion
 
-This strategy uses dual moving average indicators to issue trading signals, with triple exponential moving averages and stochastic indicators as complements, thereby constructing a relatively stable trend tracking strategy. It is simple, easy to implement, highly matched with market characteristics, delivering stable returns. It is a worthwhile quantitative strategy to recommend. Through targeted optimizations, it has the potential to achieve even better results.  
-[/trans]
+This strategy uses dual moving average indicators to issue trading signals, with triple exponential moving averages and stochastic indicators as complements, thereby constructing a relatively stable trend tracking strategy. It is simple, easy to implement, highly matched with market characteristics, delivering stable returns. It is a worthwhile quantitative strategy to recommend. Through targeted optimizations, it has the potential to achieve even better results.
 
 > Strategy Arguments
 

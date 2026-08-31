@@ -14,8 +14,8 @@ When the oscillator is above the overbought band (red lines) and crosses down th
 
 I have marked some cross-overs in the above chart. As you can see, they are *not* the only useful signals WT generates. Try it on your instrument and let me know what you think.
 
-**回测**
- ![IMG](https://www.fmz.com/upload/asset/1e6ca21012dec675df4.png) 
+**Backtest**
+ ![IMG](https://www.fmz.com/upload/asset/1e6ca21012dec675df4.png)
 
 > Strategy Arguments
 

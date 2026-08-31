@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12039bfa4a130d423bf.png)
 
-[trans]
-#### 概述
-该策略是一个基于ATR动态追踪止损和均线交叉的复合型交易系统,结合了多重技术指标进行交易过滤和风险控制。策略在15分钟时间周期运行,通过EMA均线、ATR波动率、RSI指标和成交量等多维度指标来确定交易信号,并采用动态追踪止损方式管理风险。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键组成部分：
-1. 入场条件采用多重过滤机制：
-   - 价格位于100周期EMA之上/下
-   - 1小时周期100EMA趋势确认
-   - 价格与ATR追踪止损线的交叉
-   - RSI在30-70之间的中性区域
-   - 当前成交量大于20周期均量
-2. 风险控制系统：
-   - 基于3倍ATR的动态追踪止损
-   - 设置2倍ATR作为获利目标
-3. 出场机制：
-   - 15和17周期EMA连续两根K线的交叉信号
-   - 触发追踪止损或获利目标
-   
-#### 策略优势
-1. 多重技术指标交叉验证,有效降低虚假信号
-2. 采用多周期趋势过滤,提高交易方向的准确性
-3. 动态ATR止损可以根据市场波动率自适应调整
-4. 获利目标与止损挂钩,确保风险收益比的动态平衡
-5. 利用EMA交叉作为出场信号,避免过早离场
-6. 成交量确认增加交易有效性
-
-#### 策略风险
-1. 多重过滤条件可能导致错过部分交易机会
-2. 在剧烈波动市场中ATR止损可能过宽
-3. 连续EMA交叉出场可能导致部分利润回吐
-4. 对市场趋势依赖性较强,震荡市表现可能欠佳
-5. 计算复杂度较高,可能存在执行延迟风险
-
-#### 策略优化方向
-1. 引入自适应参数优化机制：
-   - ATR乘数可根据不同市场状态动态调整
-   - EMA周期可基于市场波动率自动优化
-2. 增加市场状态识别：
-   - 添加趋势强度指标
-   - 引入波动率周期判断
-3. 完善风险控制：
-   - 实现分批建仓和减仓
-   - 增加最大持仓时间限制
-4. 优化出场机制：
-   - 结合趋势强度动态调整获利目标
-   - 添加时间止损机制
-
-#### 总结
-该策略通过综合运用多个技术指标和风险控制手段,构建了一个相对完整的交易系统。策略的主要特点是采用动态ATR追踪止损来适应市场波动,同时利用多重指标过滤和均线交叉来确认交易信号。虽然存在一定的优化空间,但整体设计理念符合现代量化交易的要求,具有良好的实践应用价值。 || 
-
 #### Overview
 This strategy is a comprehensive trading system that combines ATR dynamic trailing stop-loss and EMA crossovers, integrating multiple technical indicators for trade filtering and risk control. Operating on a 15-minute timeframe, the strategy utilizes multiple dimensions of indicators including EMA, ATR volatility, RSI, and volume to determine trading signals while employing dynamic trailing stops for risk management.
 
@@ -110,7 +59,7 @@ The core logic includes several key components:
    - Add time-based stop-loss mechanism
 
 #### Summary
-This strategy constructs a relatively complete trading system through the comprehensive use of multiple technical indicators and risk control measures. The main feature is the use of dynamic ATR trailing stops to adapt to market volatility, while utilizing multiple indicator filters and EMA crossovers to confirm trading signals. While there is room for optimization, the overall design philosophy aligns with modern quantitative trading requirements and demonstrates good practical application value.[/trans]
+This strategy constructs a relatively complete trading system through the comprehensive use of multiple technical indicators and risk control measures. The main feature is the use of dynamic ATR trailing stops to adapt to market volatility, while utilizing multiple indicator filters and EMA crossovers to confirm trading signals. While there is room for optimization, the overall design philosophy aligns with modern quantitative trading requirements and demonstrates good practical application value.
 
 
 

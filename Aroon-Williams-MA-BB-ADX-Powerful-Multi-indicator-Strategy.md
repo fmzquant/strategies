@@ -10,100 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a9633c80b6a20d8e1e.png)
- [trans]
-### 概述
-
-本策略通过多种不同周期的Aroon,MA,BB,Williams,%R,ADX等多种强力指标的组合,形成多维度的强力开仓指标,在趋势较明显时,能够进行高效的开仓。
-
-### 策略原理
-
-本策略主要通过以下几种指标的组合实现强力开仓信号:
-
-1. Aroon指标:计算一定周期内的最高价和最低价,形成一个震荡指标,通过多个周期Length的Aroon指标组合,判断趋势走向。
-
-2. MA均线:计算短周期和长周期的MA均线交叉,判断趋势转折点。
-
-3. BB布林带:当价格突破布林带上轨时,为卖出信号。
-
-4. Williams %R指标:该指标在超买超卖区域形成背离,作为开仓信号。
-
-5. ADX平均方向运动指数:判断趋势的力度,ADX高于某个位置时产生开仓信号。
-
-以上多个指标,通过不同的周期Length参数,组成一个多维度判断体系,在趋势较明显时,多个指标能够形成强力的开仓信号。
-
-具体来说,买入条件有:
-
-1. Aroon_1低于-85时
-2. MA均线形成金叉时 
-3. Williams %R低于-99时
-4. ADX高于14时
-5. Aroon_2高于-39时
-
-当上述5个买入条件中满足3个时,产生强力的买入信号。
-
-卖出条件也是类似,有5个卖出条件,当满足其中3个时,产生卖出信号。
-
-所以,该策略通过多种不同指标的组合,在趋势明显时,能产生高确定性的强力开仓信号。
-
-### 优势分析
-
-本策略最大的优势在于指标信号的多维度组合,这大大减少了因单一指标造成的错误信号的概率,从而能够在趋势较明显时,产生高质量的开仓信号,这是本策略的最大亮点。
-
-其他优势还有:
-
-1. 通过参数调整,可以适应不同市场的特征
-
-2. 指标参数设置科学合理,参数鲁棒性较高
-
-3. 实现了多时间周期的组合,提高了判断准确率  
-
-4. 代码结构清晰,易于理解和二次开发
-
-### 风险分析
-
-本策略也存在一些风险:  
-
-1. 多指标组合虽然可以提高判断质量,但是也增加了策略复杂度,扩大了过优化的风险
-
-2. 参数设置不是百分之百完美,在特定市场下可能会失效
-
-3. 指标组合方式还有优化空间,组合逻辑可以进一步提炼 
-
-4. 短期调整机会可能会被错过
-
-对应解决方法:
-
-1. 增加样本回测,检验参数的鲁棒性
-
-2. 调整部分参数,使之能够适应更多市场
-
-3. 优化指标集成方式,提高判断质量
-
-4. 适当缩短部分指标参数,增加对短期调整的捕捉
-
-### 优化方向 
-
-本策略的主要优化方向是指标集成方式的优化,主要包括:
-
-1. 添加更多不同类型的指标,形成指标森林,进一步提高判断准确性
-
-2. 优化指标参数设置,使其能够自动适应市场变化
-
-3. 使用机器学习等方法,自动搜索最优指标集成方案
-
-4. 增加止损策略,以控制风险
-
-5. 结合情绪指标等,判断市场热度,动态调整参数
-
-通过集成更多指标,自动优化参数和集成方案,本策略的判断质量和鲁棒性还有很大提升空间。
-
-### 总结
-
-本策略最大的亮点是多种指标的科学集成,形成强力的开仓信号,在趋势明显时,效果显著。该策略集成方式还有很多优化空间,通过引入更多指标,以及参数和集成方式的智能优化,本策略可以成为一个非常强大的量化交易策略。
-
-||
-
-### Overview
+ ### Overview
 
 This strategy combines multiple strong indicators with different periods such as Aroon, MA, BB, Williams, %R, ADX to form a multi-dimensional powerful open position indicator system that can efficiently open positions when the trend is obvious.  
 
@@ -192,8 +99,6 @@ There is still a lot of room for improvement in the judgment quality and robustn
 ### Summary  
 
 The biggest highlight of this strategy is the scientific integration of multiple indicators to form a powerful opening signal that performs significantly when the trend is obvious. There is a lot of room for optimization in the integration methods of this strategy. By introducing more indicators and intelligent optimization of parameters and integration methods, this strategy can become a very powerful quantitative trading strategy.
-
-[/trans]
 
 > Strategy Arguments
 

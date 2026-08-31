@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/193a08cfaaf674f1ccb.png)
 
-[trans]
-#### 概述
-本策略是一个基于线性信号和Z分数标准化的量化交易系统。它通过组合RSI等外生变量与价格数据,构建标准化的交易信号,并利用阈值触发交易。该策略适用于日内和高频交易场景,具有较强的适应性和可配置性。
-
-#### 策略原理
-策略的核心原理包含以下几个关键步骤:
-1. 线性信号构建:使用可配置的权重(signal_alpha)将RSI指标与价格数据进行线性组合,形成初始信号。
-2. Z分数标准化:基于设定的回溯期(lookback_period),计算线性信号的均值和标准差,将信号标准化为Z分数形式。
-3. 阈值触发机制:当Z分数低于负阈值时开多仓,高于正阈值时开空仓,阈值由风险调整因子(risk_adjustment_factor)控制。
-4. 风险管理:对每笔交易设置止盈止损,通过百分比参数灵活调整风险收益比。
-
-#### 策略优势
-1. 信号标准化:Z分数转换使信号具有良好的统计特性,便于设置通用阈值。
-2. 灵活性强:可通过调整signal_alpha来平衡外生变量与价格的影响力。
-3. 风险可控:完整的止盈止损机制,可根据市场特征灵活配置。
-4. 适应性好:适用于多个时间周期,可扩展到其他具有高流动性的交易品种。
-
-#### 策略风险
-1. 参数敏感性:策略表现对参数选择较为敏感,需要充分回测验证。
-2. 市场环境依赖:在趋势性不强的震荡市场可能产生频繁交易。
-3. 信号滞后:移动平均计算导致的滞后性可能影响入场时机。
-4. 流动性风险:高频交易在流动性不足时可能面临滑点损失。
-
-#### 策略优化方向
-1. 动态参数调整:引入自适应机制,根据市场波动率动态调整阈值和止损位置。
-2. 多重信号确认:增加其他技术指标作为过滤条件,提高信号可靠性。
-3. 仓位管理优化:基于波动率和信号强度设计动态仓位管理系统。
-4. 交易成本控制:优化开平仓逻辑,减少频繁交易带来的成本损耗。
-
-#### 总结
-这是一个结构清晰、逻辑严谨的量化交易策略。通过线性组合和标准化处理,构建了稳健的交易信号系统。策略的可配置性强,风险管理完善,但需要注意参数优化和市场适应性问题。通过建议的优化方向,可进一步提升策略的稳定性和盈利能力。 || 
-
 #### Overview
 This strategy is a quantitative trading system based on linear signals and Z-score normalization. It constructs standardized trading signals by combining exogenous variables like RSI with price data and triggers trades using thresholds. The strategy is suitable for intraday and high-frequency trading scenarios, offering strong adaptability and configurability.
 
@@ -72,7 +40,7 @@ The core principles include several key steps:
 4. Transaction Cost Control: Optimize entry and exit logic to reduce costs from frequent trading.
 
 #### Summary
-This is a well-structured and logically rigorous quantitative trading strategy. It builds a robust trading signal system through linear combination and standardization processing. The strategy offers strong configurability and comprehensive risk management but requires attention to parameter optimization and market adaptability. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced.[/trans]
+This is a well-structured and logically rigorous quantitative trading strategy. It builds a robust trading signal system through linear combination and standardization processing. The strategy offers strong configurability and comprehensive risk management but requires attention to parameter optimization and market adaptability. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced.
 
 
 

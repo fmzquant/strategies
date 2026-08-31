@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/5c01f5e951a05a3933.png)
 
-[trans]
-#### 概述
-这是一个基于MACD指标的量化交易策略,通过设定特定的时间范围来执行交易。策略核心是利用快速和慢速移动平均线计算MACD值,并与信号线的交叉来确定买卖时机。策略还包含了止损和止盈机制,以控制风险和锁定利润。
-
-#### 策略原理
-策略使用8周期和16周期的指数移动平均线(EMA)计算MACD值,并使用11周期的简单移动平均线(SMA)作为信号线。当MACD线上穿信号线时产生买入信号,下穿时产生卖出信号。同时,策略引入了1%的止损和2%的止盈设置,并且只在用户指定的时间范围内(默认2023全年)执行交易。
-
-#### 策略优势
-1. 时间灵活性强：通过时间范围参数,用户可以精确控制策略的运行周期,便于进行特定时期的回测和实盘交易。
-2. 风险管理完善：集成了止损和止盈机制,能够有效控制单笔交易的风险暴露。
-3. 参数可调节性高：主要指标参数均可调整,包括快慢均线周期、信号线周期以及止损止盈比例。
-4. 信号明确：基于MACD交叉产生的交易信号清晰,易于执行和监控。
-
-#### 策略风险
-1. 滞后性风险：由于使用均线系统,信号存在一定滞后性,可能错过最佳入场点。
-2. 振荡市场风险：在横盘震荡市场中可能产生频繁的假信号,导致过度交易。
-3. 固定止损风险：使用固定百分比止损可能不能很好适应不同市场环境。
-4. 时间依赖性：策略效果可能受特定时间段市场特征影响,难以保证在所有时期都有稳定表现。
-
-#### 策略优化方向
-1. 引入趋势过滤器：可添加长周期均线或ATR指标作为趋势确认,减少假信号。
-2. 动态止损机制：考虑使用ATR或波动率来设置动态止损位,提高止损的适应性。
-3. 优化信号确认：可以添加成交量、RSI等辅助指标来确认信号有效性。
-4. 时间周期优化：建议增加多时间周期分析,提高信号可靠性。
-5. 仓位管理改进：可引入基于波动率的动态仓位管理系统。
-
-#### 总结
-这是一个结构完整、逻辑清晰的量化交易策略。通过MACD交叉产生交易信号,配合时间筛选和风险管理,形成了一个实用的交易系统。策略的可调节性强,适合进一步优化和个性化调整。建议交易者在实盘使用前进行充分的回测,并根据具体交易品种和市场环境调整参数。 || 
-
 #### Overview
 This is a quantitative trading strategy based on the MACD indicator that executes trades within a specified time range. The core strategy utilizes fast and slow moving averages to calculate MACD values and generates signals based on crossovers with the signal line. The strategy also incorporates stop-loss and take-profit mechanisms to control risk and lock in profits.
 
@@ -66,7 +37,7 @@ The strategy employs 8-period and 16-period exponential moving averages (EMA) to
 5. Position Management Enhancement: Introduce volatility-based dynamic position sizing system.
 
 #### Conclusion
-This is a well-structured quantitative trading strategy with clear logic. It generates trading signals through MACD crossovers, combined with time filtering and risk management to form a practical trading system. The strategy's high adjustability makes it suitable for further optimization and customization. Traders are advised to conduct thorough backtesting before live implementation and adjust parameters according to specific trading instruments and market conditions.[/trans]
+This is a well-structured quantitative trading strategy with clear logic. It generates trading signals through MACD crossovers, combined with time filtering and risk management to form a practical trading system. The strategy's high adjustability makes it suitable for further optimization and customization. Traders are advised to conduct thorough backtesting before live implementation and adjust parameters according to specific trading instruments and market conditions.
 
 
 

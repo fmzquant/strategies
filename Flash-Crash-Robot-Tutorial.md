@@ -1,7 +1,7 @@
 
 > Name
 
-闪崩机器人-教学
+Flash-Crash-Robot-Tutorial
 
 > Author
 
@@ -11,18 +11,15 @@
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|Spread|50|挂单价格间隔|
-|OrderSize|0.1|每单大小|
-|SpreadTimes|true|订单大小递增倍数|
-|TotalBuy|3|总买单量|
-|TotalSell|3|总卖单量|
-|Interval|300|休眠时间（ms)|
-|fee|0.25|手续费|
-
+|Spread|50|Order price spacing|
+|OrderSize|0.1|Order size per order|
+|SpreadTimes|true|Order size multiplier|
+|TotalBuy|3|Total buy order volume|
+|TotalSell|3|Total sell order volume|
+|Interval|300|Sleep interval (ms)|
+|fee|0.25|Fee|
 
 > Source (javascript)
 

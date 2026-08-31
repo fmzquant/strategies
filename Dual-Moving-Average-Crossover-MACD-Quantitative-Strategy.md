@@ -1,7 +1,7 @@
 
 > Name
 
-MACD量化策略之双重叉叉均线突破策略Dual-Moving-Average-Crossover-MACD-Quantitative-Strategy
+Dual-Moving-Average-Crossover-MACD-Quantitative-Strategy
 
 > Author
 

@@ -10,57 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ba8273345864a49b10.png)
- [trans]
-
-## 概述
-
-该策略是一种基于布林带指标的短线反转交易策略。它结合了均线、标准差和布林带通道,寻找价格异常离散的机会进行反转交易。
-
-## 策略原理   
-
-1. 计算均线和标准差。使用sma()函数计算sma均线,使用stdev()函数计算标准差。
-
-2. 根据均线和标准差计算布林带上下轨。上轨线为价格+标准差*1,下轨线为价格-标准差*1。
-
-3. 当价格突破上轨或下轨时,表明价格发生异常,这时我们判断去做反转交易。
-
-4. 具体来说,如果价格低于下轨,我们做多头交易;如果价格高于上轨,我们做空头交易。
-
-## 优势分析
-
-1. 利用布林带通道判断价格异常,这为反转交易提供了依据。
-
-2. 结合均线因子,可以有效过滤部分噪音交易。
-
-3. 标准差因子的引入,让布林带通道更加动态,更好判断价格异常。
-
-4. 该策略回撤较小,具有一定的稳定性。
-
-## 风险分析 
-
-1. 布林带指标并不能完全判断价格的异常情况,价格可能出现假突破的情况。
-
-2. 交易频率可能过高,建议适当调整参数,控制交易频率。
-
-3. 突破布林带上下轨信号可能时间较长,需要适当调整参数获得更好的反转效果。
-
-4. 适当引入止损来控制风险。
-
-## 优化方向
-
-1. 优化均线周期和标准差参数,获得更加合理的布林带通道。
-2. 增加EMA和MACD等辅助因子,过滤部分信号。 
-3. 引入止损和头寸控制机制。
-4. 优化仓位规模和仓位控制措施。
-
-## 总结  
-
-该策略通过布林带指标判断价格异常,配合均线和标准差参数进行反转交易。具有一定的稳定性。我们需要进一步通过参数优化、辅助因子引入、止损管理和仓位控制等手段来降低策略的最大回撤和提高稳定性。
-
-||
-
-
-## Overview
+ ## Overview
 
 This strategy is a short-term reversal trading strategy based on the Bollinger Band indicator. It combines moving averages, standard deviations and Bollinger bands to look for opportunities for reversal trading when prices are abnormally dispersed.
 
@@ -107,8 +57,6 @@ This strategy is a short-term reversal trading strategy based on the Bollinger B
 ## Summary   
 
 This strategy judges abnormal prices through the Bollinger Band indicator and makes reversal trades with moving averages and standard deviation parameters. It has certain stability. We need to further reduce the maximum drawdown of the strategy and improve stability through means such as parameter optimization, introduction of auxiliary factors, stop loss management and position control.
-
-[/trans]
 
 > Strategy Arguments
 

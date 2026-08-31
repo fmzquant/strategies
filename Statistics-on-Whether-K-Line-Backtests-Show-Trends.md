@@ -1,7 +1,7 @@
 
 > Name
 
-统计K线回测是否存在趋势
+Statistics-on-Whether-K-Line-Backtests-Show-Trends
 
 > Author
 
@@ -9,9 +9,7 @@
 
 > Strategy Description
 
-这个策略主要是想从回测数据中考察是否可以根据前面涨跌情况，预测接下来的涨跌。具体如下：如果5根K线中，出现4个或5个上涨，那么下一根是否更趋向于上涨，该策略将统计出上涨的频率。当然也已更改策略的参数统计其它上涨或下跌的情况。在几天的回测时间内，策略运行的还可以，但是回测周期较长时，比如从本月13号到现在，就会出现混乱，不清楚原因。
-
-
+This strategy is mainly intended to examine whether subsequent price movement can be predicted from the preceding rise-and-fall pattern in backtest data. Specifically, if 4 or 5 out of 5 K-lines are bullish, does the next bar also tend to rise? The strategy calculates the frequency of such upward follow-through. Its parameters can also be changed to count other bullish or bearish patterns. Over a backtest window of just a few days, the strategy runs reasonably well, but over longer periods, such as from the 13th of this month until now, the results become inconsistent, and the reason is unclear.
 
 > Source (javascript)
 

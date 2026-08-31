@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12b590b816a1f7d51aa.png)
 
-[trans]
-#### 概述
-这是一个基于突破结构(BOS)和成交量确认的智能交易策略。该策略通过监测价格突破前期高点或低点,并结合成交量放大确认,形成交易信号。策略采用了多重条件验证机制,包括连续确认次数要求和动态止盈止损设置,以提高交易的可靠性和风险控制能力。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素:
-1. 通过计算指定周期内的最高价和最低价来识别结构性高点和低点
-2. 使用移动平均线计算成交量基准,判断当前成交量是否显著放大
-3. 当价格突破前期高点且成交量放大时,累计多头确认次数
-4. 当价格跌破前期低点且成交量放大时,累计空头确认次数
-5. 只有在达到指定的确认次数后才会触发交易信号
-6. 建仓后设置基于百分比的止盈止损价位
-
-#### 策略优势
-1. 多重条件验证机制提高了交易信号的可靠性
-2. 结合成交量指标,避免假突破带来的误判
-3. 使用连续确认机制,降低操作频率,提高胜率
-4. 采用动态止盈止损设置,根据入场价格自动调整退场位置
-5. 策略逻辑清晰,参数可调整性强,适应性好
-
-#### 策略风险
-1. 震荡市场可能频繁出现假突破,导致连续止损
-2. 剧烈波动行情下止损位可能不够及时
-3. 确认机制可能导致入场延迟,错过最佳价位
-4. 成交量判断标准固定,不能很好适应市场状态变化
-解决方案:
-- 引入市场波动率指标,动态调整参数
-- 增加趋势过滤器,减少震荡市假信号
-- 优化止损逻辑,提高止损的灵活性
-- 设计自适应的成交量阈值计算方法
-
-#### 策略优化方向
-1. 增加趋势判断指标,如移动平均线系统,只在趋势方向交易
-2. 引入ATR指标动态调整止损距离,提高风控灵活性
-3. 设计波动率自适应的成交量阈值判断机制
-4. 加入时间过滤器,避开高风险时段
-5. 优化确认机制,在保证可靠性的同时提高入场时效性
-
-#### 总结
-这是一个结合了技术分析经典理论和现代量化交易方法的策略系统。通过多重条件验证和严格的风险控制,策略具有较好的稳定性和可靠性。虽然存在一些需要优化的方面,但整体框架设计合理,具有良好的实战应用价值。通过建议的优化方向,策略的表现还可以进一步提升。 || 
-
 #### Overview
 This is an intelligent trading strategy based on Break of Structure (BOS) and volume confirmation. The strategy generates trading signals by detecting price breakouts of previous highs or lows, combined with volume expansion confirmation. It employs multiple condition verification mechanisms, including consecutive confirmation requirements and dynamic take-profit/stop-loss settings, to enhance trading reliability and risk control capabilities.
 
@@ -90,7 +49,7 @@ Solutions:
 5. Optimize confirmation mechanism to improve entry timing while maintaining reliability
 
 #### Summary
-This is a strategy system that combines classical technical analysis theory with modern quantitative trading methods. Through multiple condition verification and strict risk control, the strategy demonstrates good stability and reliability. While there are aspects requiring optimization, the overall framework design is reasonable and has practical application value. The strategy's performance can be further improved through the suggested optimization directions.[/trans]
+This is a strategy system that combines classical technical analysis theory with modern quantitative trading methods. Through multiple condition verification and strict risk control, the strategy demonstrates good stability and reliability. While there are aspects requiring optimization, the overall framework design is reasonable and has practical application value. The strategy's performance can be further improved through the suggested optimization directions.
 
 
 

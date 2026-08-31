@@ -10,45 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a3fb3ecb438acc1280.png)
- [trans]
-## 概述
-
-该策略是一个利用均线黄金交叉形成买入信号,死叉形成卖出信号的短线交易策略。它使用两条不同周期的指数移动平均线(EMA)作为交易信号。当短周期EMA线从下方向上突破长周期EMA线时,形成黄金交叉,产生买入信号;当短周期EMA线从上方向下跌破长周期EMA线时,形成死叉,产生卖出信号。
-
-## 策略原理  
-
-该策略的核心逻辑是计算两条EMA线,一条长度为55周期的短期EMA线,另一条长度为34周期的长期EMA线。当短期EMA线上穿长期EMA线时,认为股价处于上升趋势,因此产生买入信号;当短期EMA下穿长期EMA时,认为股价下跌,因此产生卖出信号。
-
-代码中首先输入了两个EMA参数,然后计算出两条EMA线。在产生买入和卖出信号时,分别画出了相关的图形标记。同时,将两条EMA线画在K线图上,便于直观判断趋势。
-
-## 策略优势
-
-1. 操作简单,容易理解,适合新手学习;
-2. 响应灵敏,短线操作,获利快; 
-3. 采用EMA能有效滤除价格异常波动的影响,发出较为可靠的信号;
-4. 可自定义EMA参数,优化策略;
-5. 可在多种品种中应用。
-
-## 风险及解决
-
-1. 容易产生频繁交易,增加交易成本和滑点风险。可适当调整EMA周期参数,过滤掉过于频繁的信号。
-2. 存在一定的滞后,可能错过价格靠前的机会。可结合其他指标如BOLL加强判断。
-3. EMA参数设置不当可能导致交易信号错误。要多次反复测试优化参数。 
-
-## 优化思路
-
-1. 结合更多指标判断,如BOLL,MACD等,设定一定的门槛条件,避免错误信号。
-2. 增加仓位管理模块,使其能更好地控制风险。
-3. 根据不同品种和周期参数差异,设计自适应EMA参数优化机制。
-4. 增加止损策略,能够有效控制单笔损失。
-
-## 总结
-
-该策略整体来说是一个非常简单实用的短线交易策略,特别适合新手来学习和应用,容易上手,而且也具有不错的效果。如果能够不断优化参数,并辅以其他判断指标,会使策略更加强大、稳健。这是一个非常有价值的策略思路,值得后续不断深入研究。
-
-||
-
-## Overview
+ ## Overview
 
 This is a short-term trading strategy that utilizes golden cross of moving average lines to generate buy and sell signals. It employs two exponential moving average (EMA) lines with different periods as trading signals. When the short period EMA line crosses above the long period EMA line, a golden cross is formed and a buy signal is triggered. When the short period EMA crosses below the long period EMA, a death cross occurs and a sell signal is generated.  
 
@@ -82,8 +44,6 @@ In the code, two EMA parameters are input first, based on which two EMA lines ar
 ## Summary  
 
 In general, this is a very simple and practical short-term trading strategy, especially suitable for beginners to learn and adopt for its ease of use and considerable efficacy. As long as parameters are continuously optimized with complement from other judgment tools, the strategy will become increasingly robust. The underlying idea possesses high value and deserves further research going forward.
-
-[/trans]
 
 > Strategy Arguments
 
