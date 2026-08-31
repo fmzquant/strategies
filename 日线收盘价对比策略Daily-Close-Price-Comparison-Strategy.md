@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过比较当前K线的收盘价与前一日的收盘价,判断多空方向。属于简单的趋势跟踪策略,当价格上涨时做多,下跌时做空。无需复杂指标判断,通过最基本的价格信息判断趋势方向。
-
-## 策略原理 
-
-1. 计算当前K线收盘价与前一日收盘价的差价比例。
-
-2. 比例大于设定阈值时,表示价格上涨,做多。
-
-3. 比例小于负的设定阈值时,表示价格下跌,做空。
-
-4. 阈值设定为0,即只要上涨就做多,下跌就做空。
-
-5. 没有设置止损止盈逻辑,全靠趋势持续性来实现盈利。
-
-## 优势分析
-
-1. 非常简单直观的趋势判断方法,容易理解实现。
-
-2. 无需计算任何技术指标,降低计算资源占用。
-
-3. 只关注最核心的价格信息,减少不必要的指标噪音。
-
-4. 回测表现优异,但实盘效果存疑。
-
-## 风险分析
-
-1. 没有止损设置,存在无限亏损的风险。
-
-2. 无法有效处理盘整波动市场,容易被套。
-
-3. 存在过拟合风险,实盘效果待验证。
-
-4. 单纯跟踪趋势无法锁定利润,实现的盈利有限。
-
-## 优化方向
-
-1. 增加移动止损策略,使亏损可控。
-
-2. 结合波动率指标,降低盘整市被套率。
-
-3. 测试不同天数周期参数设定,提高稳定性。 
-
-4. 增加趋势判断指标,避免非理性价格波动。
-
-5. 优化止盈策略,如回看最高价等,扩大盈利空间。
-
-## 总结
-
-该策略核心思路简单,但实盘效果存疑。需要强化风险控制机制,并进行参数优化测试,才能使之真正可实际应用。但基本思路值得借鉴学习。
-
-|| 
 
 ## Overview
 
@@ -117,7 +62,6 @@ This strategy determines direction by comparing the current bar's closing price 
 
 The strategy's core idea is simple but its live performance is questionable. Stronger risk control mechanisms and parameter optimization testing are needed before real application. But the basic concept is worth learning from.
 
-[/trans]
 
 > Strategy Arguments
 

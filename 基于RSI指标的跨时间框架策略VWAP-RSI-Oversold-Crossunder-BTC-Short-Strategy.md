@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13bff0ccc18a8baff14.png)
-[trans]
-
-# 
-
-## 概述
-
-本策略为基于RSI指标的跨时间框架BTC做空策略。该策略通过计算每笔K线的成交量加权平均价(VWAP)得到一个VWAP曲线,再对该曲线应用RSI指标。当RSI指标出现从超买区向下穿越的死叉信号时,做空BTC。
-
-## 策略原理
-
-1. 计算每根K线的成交量加权平均价(VWAP),得到一条VWAP曲线
-2. 对VWAP曲线应用RSI指标,参数为20日,超买线为85,超卖线为30
-3. 当RSI指标从超买区(85)向下穿越超卖区(30)时,开仓做空
-4. 持仓28根K线后,如果RSI指标再次上穿超卖线(30),平仓
-
-## 优势分析 
-
-1. 使用VWAP而不是简单的收盘价,更能反映真实交易价格
-2. 应用RSI指标识别超买超卖状态,避免追高杀跌
-3. 跨时间框架操作,避免被套
-4. 风险可控,28根K线止损
-
-## 风险及解决方案
-
-1. 突发事件导致价格急速上涨,无法止损
-   - 采用跨时间框架,降低被套风险
-2. 参数设置不当,容易错过机会
-   - 对RSI参数和超买超卖线进行测试和优化
-3. K线无法穿越进入超卖区
-   - 结合其他指标判断趋势,灵活调整参数
-
-## 优化方向
-
-1. 测试更多参数组合,找到最佳参数
-2. 结合MACD,KD等其他指标判断是否进入超买超卖区 
-3. 根据不同品种分别测试参数设置
-4. 优化止损机制,根据波动率设置止损幅度
-
-## 总结
-
-本策略通过VWAP和RSI的结合识别BTC的超买超卖状态,以跨时间框架的方式进行操作,能够有效控制风险。策略思路清晰易懂,值得进一步测试优化,应用于实盘交易。
-
-||
 
 ## Overview  
 
@@ -92,7 +49,6 @@ This is a BTC short strategy across timeframes based on the RSI indicator of VWA
 
 This strategy identifies BTC overbought/oversold status with the combination of VWAP and RSI. By trading across timeframes, it can effectively control risks. The strategy logic is clear and easy to understand, worth further testing and optimizing for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

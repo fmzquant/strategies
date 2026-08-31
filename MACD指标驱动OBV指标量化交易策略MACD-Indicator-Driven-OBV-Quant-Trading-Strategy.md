@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ce49f8bc27f809d05d.png)
 
-[trans]
-### 概述
-
-本策略通过计算OBV指标的MACD指标,判断OBV量能的趋势和转折点,以此驱动交易决策。其基本思路是当OBV的MACD柱形图从负数区域突破0轴线而进入正数区域时产生买入信号;而从正数区域跌破0轴线进入负数区域时产生卖出信号。
-
-### 策略原理
-
-本策略的核心指标是OBV的MACD指标。OBV指标可以反映股票的量能趋势,它通过统计一段时间内的收盘价变化方向和成交量变化关系,来判断是上涨量能增强还是减弱。MACD指标可以显示不同均线间的差值,反映价格变化的动量。所以,结合OBV量能指标和MACD动量指标,可以更清楚地判断量能的变化趋势。
-
-具体来说,本策略首先计算OBV指标,它通过统计一段时间内收盘价变化方向和成交量的关系,计算出OBV量能线。然后,在OBV量能线的基础上计算其MACD指标,包含MACD线、信号线和histogram柱形图。最后,当macd histogram从负数区域突破0轴线向上进入正数区域时,产生买入信号;当柱形图从正数区域跌破0轴线进入负数区域时,产生卖出信号。
-
-这样,通过MACD直观显示OBV量能的动量特征,判断量能的变化趋势,用MACD的突破来发出交易信号,可以提高交易决策的准确性。
-
-### 优势分析
-
-这种策略结合OBV量能分析和MACD动量指标,对量能变化和价格走势判断比较准确,可以有效过滤ALSE信号。具体优势有:
-
-1. OBV指标可以判断买卖双方力量对比和量能变化趋势
-2. MACD柱形图可以清晰识别OBV量能转折点  
-3. 交易信号比较清晰,不易产生误判
-4. 可配置交易的参数较多,交易规则清晰
-
-### 风险分析
-
-该策略也存在一些风险,主要集中在以下几个方面:  
-
-1. OBV和MACD都对交易量敏感,如果出现异常的高额成交量,会产生误导  
-2.  Parameters设置不当也会影响策略效果  
-3.  多空转换时,OBV量能变化可能滞后,导致交易信号滞后
-
-针对这些风险,可以采取以下措施加以应对:
-
-1. 对交易量进行过滤,剔除异常数据  
-2. 谨慎设置参数,要考量市场环境  
-3. 适当调整参数设置,如MACD周期,使交易信号及时
-
-### 优化方向  
-
-本策略还有进一步优化的空间,主要方向有:
-
-1. 结合其他指标进行组合交易,提高策略效果  
-2. 增加止损机制来控制风险  
-3. 优化参数设置,使其更符合不同市场环境需要
-
-通过不断测试和优化,本策略可以成为一个稳定而高效的量化交易策略。
-
-### 总结
-
-本策略是一种典型的结合量能分析和动量指标来判断价格趋势和发出交易信号的量化策略。它可以清晰识别出价格波动的转折点,交易信号比较可靠,在参数设定合理的前提下,可以获得较好的策略效果。但它也存在一些风险,需要通过不断优化来提高效果和降低风险。总的来说,本策略为量化交易策略提供了一种典型的思路,值得进一步研究和应用。
-
-||
 
 ### Overview
 
@@ -112,7 +61,6 @@ By continuous testing and optimization, this strategy can become a stable and ef
 
 This strategy is a typical quantitative strategy that combines volume analysis and momentum indicators to determine price trends and generate trading signals. It can clearly identify the inflection points of price fluctuations, and the trading signals are relatively reliable. With reasonable parameter settings, good strategy results can be obtained. But it also has some risks that need to be reduced by continuous optimization to improve performance. In general, this strategy provides a typical idea for quantitative trading strategies which is worth researching and applying.
 
-[/trans]
 
 > Strategy Arguments
 

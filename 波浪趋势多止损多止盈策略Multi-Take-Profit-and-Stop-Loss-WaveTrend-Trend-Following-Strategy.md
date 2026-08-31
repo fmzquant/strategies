@@ -11,48 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b3c8e682e89ddc59c3.png)
 
-[trans]
-
-## 概述
-
-该策略为LazyBear的原始波浪趋势策略,增加了第二止损、多个止盈价格以及高时间框架EMA过滤器。其利用波浪趋势指标生成交易信号,再结合EMA过滤和止损止盈管理,实现自动化趋势跟踪交易。
-
-## 策略原理
-
-该策略的核心指标是波浪趋势指标(WaveTrend),它由三部分组成:
-
-1. AP:平均价格=(最高价+最低价+收盘价)/3
-
-2. ESA:AP的n1期EMA
-
-3. CI:(AP-ESA)/ (0.015×AP-ESA的n1期EMA)的绝对值的n1期EMA
-
-4. TCI:CI的n2期EMA,即波浪趋势线1(WT1)
-
-5. WT2:WT1的4周期SMA
-
-当WT1上穿WT2产生金叉时,做多;当WT1下穿WT2产生死叉时,平仓。
-
-此外,策略还引入高时间框架EMA作为过滤器,只有当价格高于EMA时才能做多,低于EMA时才能做空,从而过滤掉部分假信号。
-
-## 策略优势
-
-1. 利用波浪趋势指标自动跟踪趋势,避免人为判断错误
-2. 增加第二止损,有效控制单笔亏损
-3. 多个止盈价格,最大程度锁定利润
-4. EMA过滤器,过滤假信号,提高胜率
-
-## 策略风险及优化
-
-1. 不能过滤趋势反转,可能造成损失
-2. 参数设置不当可能导致过于频繁交易
-3. 可测试不同参数组合,优化参数
-4. 可考虑结合其他指标判断趋势反转
-
-## 总结
-
-该策略综合考虑了趋势跟踪、风险控制、利润最大化等多个维度,通过波浪趋势指标自动捕捉趋势,配合EMA过滤器提高交易效率,在把握趋势的同时控制风险,是一个高效稳定的趋势跟踪策略。通过进一步的参数优化和增加反转判断,可以进一步扩展该策略的适用性。
-||
 
 ## Overview
 
@@ -99,7 +57,6 @@ Additionally, a high timeframe EMA filter is implemented to avoid false signals,
 ## Conclusion
 
 This strategy comprehensively incorporates trend following, risk control and profit maximization through WaveTrend's automatic trend detection, EMA filter to improve efficiency and stop loss/take profit management to balance trend trading and risk control. It is an efficient and steady trend following system. Further parameter optimization and reversal mechanisms can enhance the strategy's applicability.  
-[/trans]
 
 > Strategy Arguments
 

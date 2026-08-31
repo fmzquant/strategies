@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/179b87946ff09328a99.png)
 
-[trans]
-
-## 概述
-
-随机震荡策略综合运用了一股寄与均线交叉、MACD指标以及Hull移动平均等多种技术指标,形成较为科学和系统的交易决策体系。该策略致力于在震荡行情中捕捉趋势转换点,以求发现并抓住行情中的潜在机会。
-
-## 策略原理
-
-首先,该策略同时采用了一股寄的转折线和基准线指标。其中,转折线以9周期内的最高价和最低价的平均值计算,基准线以24周期内的最高价和最低价的平均值计算。当价格从基准线下方上穿时,为买入信号;从基准线上方下穿时,为卖出信号。
-
-其次,MACD作为一个重要的趋势跟踪指标,也被该策略所采用。MACD通过计算短期ema(12日)和长期ema(24日)的差值,再计算信号线(9日ema)。当MACD从下向上穿过信号线时,为买入信号;从上向下穿过信号线时,为卖出信号。
-
-再者,Hull移动平均被引入该策略,以减少移动平均线的滞后性,提高价格转折信号的灵敏度。其计算方法是:以一半周期的WMA乘2,减去完整周期的WMA,再计算开方周期WMA。快速Hull MA和慢速Hull MA的交叉作为辅助的买卖信号。
-
-最后,该策略综合以上多种指标的结果,形成较为可靠的交易决策系统。当一股寄、MACD和Hull MA等多个指标发出同向信号时,才会产生实际的买入和卖出操作。
-
-## 策略优势
-
-- 多指标组合,综合运用一股寄、MACD和Hull MA三种指标,形成较强的决策力。
-
-- 减少假信号,不同指标之间可以进行验证,降低单一指标误判的概率。
-
-- 提高操作效率,只在多个指标一致时出手,避免频繁交易。 
-
-- 可调参数,指标参数可以根据市场调整,提高策略适应性。
-
-- 降低滞后,Hull MA改进移动平均计算,可更早捕捉价格变化。
-
-## 策略风险
-
-- 多空混战行情风险较大,容易产生错误信号。
-
-- 指标参数设置不当也会影响策略表现。
-
-- 过于注重指标反转信号,可能错过趋势行情。
-
-- Hull MA较新指标,长期有效性有待验证。
-
-- 交易频率可能偏低,无法及时抓住全部机会。
-
-## 优化方向 
-
-- 可以测试添加其他指标,如Bollinger Bands,进一步优化决策系统。
-
-- 可调整指标参数,找到最优参数组合。
-
-- 可以引入动态止损机制来控制单笔损失。
-
-- 可以结合趋势判断指标,避免错过趋势机会。
-
-- 优化仓位管理,不同市场调整交易频率和仓位。
-
-## 总结
-
-随机震荡策略综合运用多种指标和技术分析方法,在震荡行情中寻找交易机会。它具有指标组合优势、减少假信号、提高操作效率等特点。但也存在一定的风险,需要进一步测试和优化,以适应更广泛的市场情况,在风险和收益之间找到最佳平衡点。总体来说,该策略是一个可靠、实用的震荡交易策略。
-
-||
 
 
 ## Overview
@@ -126,7 +69,6 @@ Lastly, the strategy combines all indicators above to form a robust trading syst
 
 The Random Oscillation Strategy combines multiple technical analysis techniques to capture opportunities in range-bound markets. It offers the advantages of indicator integration, reduced false signals and improved efficiency. But it also carries inherent risks that require further optimization and adaption. Overall, it represents a robust, practical approach for trading oscillating markets.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -12,96 +12,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ac53566703cb6f0b31.png)
 
-[trans]
-
-## 概述
-
-威廉姆累积/分配指标(Williams Accumulation/Distribution,简称Williams AD)是一种通过监测价格变动和交易量变化,判断市场买卖气势的技术分析指标。该指标基于威廉姆于下跌市场中,成交量通常会增大的假设。它反映了目前的市场趋势是被买方控制还是卖方控制。
-
-该策略通过分析威廉姆累积/分配指标的值变化,判断目前趋势是处于累积阶段还是分配阶段,从而产生买入和卖出信号。
-
-## 策略原理
-
-该策略的核心指标是威廉姆累积/分配指标(Williams AD)。计算公式如下:
-
-```
-If Close > Previous Close
-   Williams AD = Previous Williams AD + (Close - Low)
-If Close < Previous Close
-   Williams AD = Previous Williams AD + (Close - High)  
-If Close == Previous Close
-   Williams AD = Previous Williams AD
-```
-
-其中,如果今天的收盘价高于昨天,则今天的AD值等于昨天的AD值加上“今收-今低”的差价。如果今天收盘价低于昨天,则今天的AD值等于昨天的AD值加上“今收-今高”的差价。
-
-该指标反映了交易中的力量关系,主要判断规则如下:
-
-- AD指标上涨,代表买方力量增加,属于累积行情。
-- AD指标下跌,代表卖方力量增加,属于分配行情。
-
-当股票价格创新高,而AD指标没有创新高时,视为分配信号,做空。当股票价格创新低,而AD指标没有创新低时,视为累积信号,做多。
-
-根据该判断规则,该策略具体交易信号生成规则为:
-
-- AD > 0,产生做多信号
-- AD < 0,产生做空信号
-
-并且可以通过输入参数reverse来反转做多做空方向。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 利用威廉姆累积/分配指标判断市场买卖气力,可提高交易胜率。
-
-2. 指标计算方法简单,容易实现。
-
-3. 可通过反转参数,灵活适应不同行情。
-
-4. 通过监测指标和价格的背离,可产生较准确的交易信号。
-
-5. 可清晰直观地通过K线颜色展示目前市场气势。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 威廉姆累积/分配指标存在滞后,可能产生错误信号。
-
-2. 仅依靠一个指标易受假突破等因素影响,信号产生过于频繁。
-
-3.  参数设置不当可能导致过于频繁交易。
-
-4. 需要同时结合其他因素确定买卖时机。
-
-5. 牛熊转换时,指标判断可能存在误区。
-
-可通过优化参数设置、结合多个指标确认、适当过滤交易次数等方式降低风险。
-
-## 策略优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 增加参数进行优化,如设置交易区间、交易频率等。
-
-2. 结合其他指标进行滤波,避免错误信号,如量价指标、移动平均线等。 
-
-3. 增加止损策略,以控制单笔损失。
-
-4. 进行参数训练,寻找最优参数组合。
-
-5. 结合机器学习算法实现动态参数优化。
-
-6. 在不同品种、周期等市场环境中测试策略健壮性。
-
-7. 构建模拟交易系统进行回测,评估策略风险收益情况。
-
-## 总结
-
-威廉姆累积/分配指标策略通过指标的多空变化判断市场气力方向,具有交易信号生成简单、参数设置灵活等特点。但作为单一技术指标策略,其存在一定固有缺陷,需要进行多维度优化,并辅以其他技术手段进行验证,才能在实盘中稳定获利。该策略提供了判断市场买卖气力的参考,但交易时还需谨慎。
-
-||
 
 ## Overview
 
@@ -190,7 +100,6 @@ This strategy can be optimized in the following aspects:
 
 The Williams AD strategy judges market sentiment based on indicator direction changes. It has the advantages of simple signal generation and flexible parameter tuning. But as a single indicator strategy, it has inherent limitations and needs multi-dimensional optimizations and additional techniques for verification before stable profitability in live trading. It provides reference for judging market sentiment but still requires prudent trading.
 
-[/trans]
 
 > Strategy Arguments
 

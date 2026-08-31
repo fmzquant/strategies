@@ -10,101 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16aac6830cf06137396.png)
-[trans]
-
-
-## 概述
-
-RSI-BB动量突破策略是一个结合相对强弱指标(RSI)和布林带指标(BB)的突破策略。该策略利用RSI判断市场趋势和超买超卖现象,利用BB判断突破口,在RSI和BB指标同时发出买入或卖出信号时,进行相应的买入或卖出操作。
-
-## 策略原理
-
-代码中首先计算RSI和BB两个指标。
-
-RSI的计算方法是:
-
-```pine
-up = rma(max(change(close), 0), 30) 
-down = rma(-min(change(close), 0), 30)
-rsi = down == 0 ? 100 : up == 0 ? 0 : 100 - (100 / (1 + up / down))
-```
-
-其中up统计近30天收盘价上涨的幅度,down统计近30天收盘价下跌的幅度,rsi根据上涨幅度和下跌幅度的比值计算出来。
-
-BB的计算方法是:
-
-```pine
-basis = sma(close, 50)
-dev = 0.2 * stdev(close, 50) 
-upper = basis + dev
-lower = basis - dev
-```
-
-其中basis是50日均线,dev是标准差的0.2倍,upper和lower分别是带中线上下轨。 
-
-bbi是布林带宽度指数,计算方法是:
-
-```pine 
-bbr = close>upper? 1 : close<lower? -1 : 0
-bbi = bbr - bbr[1]
-```
-
-bbr判断当前close是否突破上下轨,突破为1,跌破为-1,否则为0。bbi就是当前bbr减去前一周期bbr,大于0表示向上突破,小于0表示向下突破。
-
-在计算出RSI和BBI后,策略的交易信号判断逻辑是:
-
-```
-long = rsi>52 and rsi<65 and bbi>0.11 and bbi<0.7 
-short = rsi<48 and rsi>35 and bbi<-0.11 and bbi>-0.7
-```
-
-也就是当RSI在52-65区间,且BBI大于0.11小于0.7时做多;当RSI在35-48区间,且BBI小于-0.11大于-0.7时做空。
-
-## 策略优势
-
-1. 结合RSI和BB两个指标,能更准确判断买卖点。RSI判断超买超卖,BB判断突破口,两者结合更可靠。
-
-2. RSI参数设置为30日线,可以过滤市场中的部分噪音,识别主要趋势。
-
-3. BB参数设置为50日线以及0.2倍标准差,可以起到过滤震荡的效果。
-
-4. BBI增加0.11和0.7的过滤条件,可以过滤假突破。
-
-5. RSI的做多做空区间设置为52-65和35-48,增加buffer避免错失买卖点。
-
-## 策略风险
-
-1. 突破交易策略容易被套,需要设置止损来控制风险。
-
-2. 回测数据可能存在过拟合,实盘效果可能会有差异。
-
-3. 市场可能出现剧烈变动,导致止损被击穿产生较大亏损。
-
-4. 需要优化RSI和BB的参数,包括周期参数及买卖区间参数。
-
-5. 订单的价格设置也会对实盘效果产生较大影响。
-
-## 策略优化方向
-
-1. 测试不同的RSI和BB的参数组合,找到最佳参数。
-
-2. 添加其他指标判断过滤信号,如MACD、KD等。
-
-3. 优化和调整买卖的RSI区间参数,减小区间范围以过滤更多噪音。 
-
-4. 优化BBI的过滤参数,设置动态区间过滤假突破。
-
-5. 添加趋势判断指标,避免逆势操作。
-
-6. 测试不同的止损方式,寻找最大回撤可接受的止损方案。 
-
-7. 测试不同的订单方式,寻找滑点影响最小的下单方案。
-
-## 总结
-
-RSI-BB动量突破策略结合趋势判断和突破口判断的优点,在回测中表现不俗。但实盘效果可能会受滑点和止损的影响。需要针对回测结果优化参数,并测试不同的止损和下单方案,找到更适合实盘的设置。此外,参数和过滤条件都需要动态调整,才能应对市场的变化。总体来说,该策略有一定的实战价值,但需要持续优化和验证,才能产生稳定的效果。
-
-||
 
 
 ## Overview
@@ -198,7 +103,6 @@ Go long when RSI is between 52-65 and BBI is between 0.11 and 0.7. Go short when
 
 The RSI-BB strategy combines the advantages of using trend and momentum indicators. Backtest results are promising but live performance may vary due to real-world factors like slippage and stop loss. Parameters and filters need to be optimized based on backtest results. Stop loss and order placement should also be evaluated for real-world effectiveness. The strategy has merit but requires ongoing enhancements and robustness testing to generate consistent results.
 
-[/trans]
 
 > Strategy Arguments
 

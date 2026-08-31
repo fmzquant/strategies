@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9e09ca2e2a83d0bf6d.png)
-[trans]
-
-## 概述
-本策略将RSI指标与价格突破结合,在一定趋势下形成的盘整范围内寻找轮动机会,进而进行短线交易,追求高效率的短线获利。
-
-## 策略原理
-1. RSI指标判断:当RSI指标小于超卖线30时产生买入信号,作为潜在的反转买点;当RSI指标大于超买线60时产生卖出信号,锁定利润;
-2. 窗口限制:只在指定的回测时间窗口内生效,从而限制策略效力,防止全局套利;
-3. 突破判断:结合价格走势,寻找突破的机会,增强策略的实际效果,防止不必要的空转。
-
-所以,该策略综合多个维度的判断逻辑,在一定的趋势和突破机会下,利用RSI指标产生的买卖信号进行短线获利的轮动操作。可以有效抓住市场短期的超跌反弹和超买回落的机会。
-
-## 优势分析
-1. 结合多重逻辑判断,相较于简单的RSI策略,更加严谨,可以有效避免双向空转带来的不必要损失;
-2. 利用RSI指标判断局部极值区域,寻找反转机会,从而获利;  
-3. 设置回测时间窗口,可针对特定市场行情进行验证和优化,提高策略实际可用性;
-4. 追求短线获利,不需要预测趋势转向,更加容易把握,降低风险。
-
-## 风险与解决方法
-1. 无法直接判断整体趋势方向,需要人工分析大局;
-2. RSI指标滞后反应价格变化,可能错过最佳买卖点;
-3. 需要充分了解策略适用的大行情环境;
-4. 可引入更多技术指标判断大趋势,优化策略参数,提高策略灵活性。
-
-## 优化方向  
-1. 增加对大趋势的判断,避免长期滞留亏损的单子;
-2. 调整RSI参数,优化超买超卖线,提高效果; 
-3. 增加止损逻辑;
-4. 优化回测窗口范围,让策略更契合实际行情。
-
-## 总结
-本策略利用RSI指标判断超买超卖的短期反转机会,同时结合价格突破进行短线获利的轮动操作。特点是追求短期效率,操作简单,风险有限,非常适合短线交易者在特定行情下使用。需要注意判断整体大趋势,并优化参数等,从而获得更好的效果。
-
-||
 
 ## Overview  
 This strategy combines the RSI indicator with price breakthroughs to find rotation opportunities within a certain trend and range-bound market, so as to make short-term trades and pursue highly efficient short-term profits.   
@@ -76,7 +42,6 @@ Therefore, this strategy integrates multiple dimensions of judgment logic to con
 ## Summary  
 This strategy leverages RSI indicator to identify short-term reversal opportunities from extremely overbought/oversold scenarios, and conducts short-term profitable rotation operations combined with price breakthroughs. Its characteristics are pursuing short-term efficiency, easy operation, limited risks, and hence extremely suitable for short-term traders to use under certain market conditions. Attention should be paid to judging the overall major trend, parameter optimization etc., in order to obtain better performance.
 
-[/trans]
 
 > Strategy Arguments
 

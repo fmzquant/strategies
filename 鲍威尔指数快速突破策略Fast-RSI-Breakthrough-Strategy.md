@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b50f1ccc86b7d3ba7e.png)
 
-[trans]
-
-## 概述
-
-该策略基于RSI指标和蜡烛实体的EMA实现快速突破操作。它利用RSI的快速形态和大型蜡烛实体来识别反转信号。
-
-## 策略原理
-
-1. 计算RSI指标,周期7,用RMA实现加速形态。
-
-2. 计算蜡烛实体大小的EMA,周期30,作为实体大小基准。 
-
-3. 如果RSI上穿限值线(默认30),并且当前K线实体大于平均实体大小的1/4,做多。
-
-4. 如果RSI下穿限值线(默认70),并且当前K线实体大于平均实体大小的1/4,做空。
-
-5. 如果已经持仓,RSI重新回穿限值线时平仓。
-
-6. 可以设置RSI长度、限值、参考价格等参数。
-
-7. 可以设置实体大小EMA周期、开仓 chroot倍数等参数。
-
-8. 可以设置RSI金叉/死叉的根数。
-
-## 优势分析
-
-1. 利用RSI指标的反转属性,能及时捕捉反转信号。
-
-2. RMA实现RSI的加速形态,使反转更加敏感。
-
-3. 结合大型K线实体过滤,避免被小范围震荡套利。
-
-4. 回测数据充足,可靠性较高。
-
-5. 可自定义参数,适应不同市场环境。
-
-6. 交易逻辑清晰简单。
-
-## 风险分析
-
-1. RSI指标存在回测偏差,实盘效果待验证。
-
-2. 大型K线实体无法完全过滤充分震荡市场。
-
-3. 默认参数可能不适合所有品种,需要优化。 
-
-4. 胜率可能不高,需要承受连续止损的心理压力。
-
-5. 突破失败的风险,需要及时止损。
-
-## 优化方向  
-
-1. 优化RSI参数,适应不同周期及品种。
-
-2. 优化K线实体EMA周期,平滑实体大小。
-
-3. 优化开仓的实体倍数,控制入场频率。
-
-4. 增加移动止损,保证胜率。
-
-5. 增加趋势过滤,避免逆势交易。
-
-6. 优化资金管理策略,控制单笔风险。
-
-## 总结
-
-该策略整体来说是一个非常简单直接的反转策略。它同时利用RSI指标的反转属性和大型K线实体的破坏力,在市场突破时快速入场。虽然回测效果不错,但实盘效果还有待验证,使用时需要注意优化参数并控制风险。整体来说,该策略具有非常高的价值,是可以在实盘中应用并持续优化的非常好的策略之一。
-
-|| 
 
 ## Overview
 
@@ -147,7 +78,6 @@ This strategy implements fast breakthrough operations based on RSI indicator and
 
 In summary, this is a very simple and direct reversal strategy. It utilizes both the reversal attribute of RSI and the momentum of large candlestick bodies to get in fast during market reversals. Although backtest results look good, actual performance is yet to be validated. Parameter optimization and risk control are needed when applying it. Overall it is a strategy with great value and is worth applying and constantly improving in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

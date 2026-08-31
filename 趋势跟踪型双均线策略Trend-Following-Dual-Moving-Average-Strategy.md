@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11dca9ced5455f7b02b.png)
 
-[trans]
-
-### 概述
-
-本策略运用平均方向指数评级指标(ADXR)来识别市场趋势,并结合双均线形成交易信号,属于典型的趋势跟踪型策略。ADXR指标能够有效识别趋势的变化,双均线则可以进一步过滤掉部分虚假信号。本策略适用于如股票、外汇等趋势性较强的市场,可在震荡行情中获取较好的收益。
-
-### 策略原理
-
-1. 计算ADXR指标值。其中ADX表示平均方向指数,反映趋势的力度;ADXR对ADX进行平滑处理,能更好地显示趋势。
-
-2. 设置ADXR指标的双阈值,当ADXR上穿第一个阈值时看涨,下穿第二个阈值时看跌。这表明当前处于趋势状态。
-
-3. 根据ADXR信号判断持仓方向。若ADXR上穿第一个阈值,做多;若ADXR下穿第二个阈值,做空。
-
-4. 结合双均线过滤信号。只有当价位于快线上方时做多,价位于慢线下方时做空。此过滤可以避免趋势反转时的误交易。 
-
-5. 根据持仓方向绘制K线颜色。做多为绿色,做空为红色。
-
-### 优势分析
-
-1. ADXR指标平滑价格变动,能有效识别趋势,较好地避免震荡市的调整带来的交易风险。
-
-2. 双均线过滤可降低回撤,避免趋势反转带来的亏损。
-
-3. 结合趋势指标和双均线,既保证了交易随趋势进行,又控制了风险,非常适合趋势性市场。
-
-4. 策略思路清晰易懂,参数设置灵活,可按需调整,适合不同市场环境。
-
-### 风险分析
-
-1. ADXR指标参数设置不当可能导致无法及时捕捉趋势转换,应根据具体市场谨慎设置ADXR参数。
-
-2. 双均线参数设置不当也可能导致过滤过多信号而错过交易机会,应根据市场调整双均线参数。
-
-3. 任何指标都可能发出错误信号,应结合较大级别趋势进行验证,避免被套。
-
-4. 震荡趋势中应降低仓位规模,防止亏损扩大。
-
-### 优化方向
-
-1. 可以结合其他指标对ADXR信号进行验证,如MACD,布林带等,提高信号准确率。
-
-2. 可以添加止损策略,如移动止损、时间止损等,控制单笔亏损。
-
-3. 可以根据市场变化优化参数,如在降低市场效率时采用更长周期均线,在高效市场中缩短均线周期等。
-
-4. 可以结合资金管理和仓位管理策略,如固定份额、马丁格尔等,控制整体风险。
-
-### 总结
-
-本策略整体来看是一个典型的趋势跟踪策略,使用ADXR指标辅助确定趋势方向,双均线过滤减少回撤。策略优点是简单清晰,易于实施,可根据不同市场环境进行参数调整。但任何技术指标都可能出现错误信号,此策略也存在一定风险,需要注意防范埋伏的暗流,应结合趋势及资金管理策略来控制风险。如果参数优化得当,本策略可以获得较好的风险收益比,适合追踪趋势性较强的市场。
-
-||
 
 ### Overview
 
@@ -115,7 +62,6 @@ This strategy uses the Average Directional Movement Index Rating (ADXR) to ident
 
 This strategy is a typical trend following strategy, using ADXR to determine trend direction and dual moving averages to reduce drawdowns. The advantages lie in its simplicity and flexibility to be adapted for different markets. But any technical indicator can give false signals, and risks should be managed with trend filters and money management. With proper parameter tuning, this strategy can achieve good risk-adjusted returns for trending markets.
 
-[/trans]
 
 > Strategy Arguments
 

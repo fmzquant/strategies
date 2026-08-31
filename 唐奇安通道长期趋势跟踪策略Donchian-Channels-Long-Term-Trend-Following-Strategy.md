@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/633209937ee3052d09.png)
-[trans]
-
-## 概述
-
-这个策略是基于唐奇安通道的长期趋势跟踪策略。它使用唐奇安通道的上轨和下轨来寻找价格突破口,在突破口发生时进入市场。同时它使用通道的中轨作为止损线来退出市场。这个策略适用于有明显趋势的市场,可以捕捉长期趋势以获得高额利润。
-
-## 策略原理
-
-该策略使用长度为20周期的唐奇安通道。通道的上轨是最近20周期内的最高价,下轨是最近20周期内的最低价。中轨默认长度是上下轨的2倍,也可以设置为和上下轨相同长度。当价格突破上轨时,做多;当价格突破下轨时,做空。当价格跌破中轨时,平掉多单;当价格涨破中轨时,平掉空单。
-
-使用更长的中轨长度可以让获利头寸有更大的运行空间,在市场存在趋势时能够获得更高的利润。其实,长度为上下轨2倍的中轨非常接近 Wilder 推荐的 3 倍 ATR 移动止损。所以这个更长的中轨可以作为趋势跟踪策略的替代止损方法。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 策略思路简单,容易理解和实现;
-2. 唐奇安通道是经典的趋势跟踪指标,可靠性高;  
-3. 利用通道中轨进行移动止损,可以有效控制风险;
-4. 在趋势明显的市场中,可以获得高额利润;
-5. 中轨作为替代的移动止损方法,让利润能最大限度地运行。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 作为趋势跟踪策略,它依赖明显的趋势行情,在盘整市场中容易被套牢;
-2. 中轨止损有时会过于宽松,导致亏损扩大;
-3. 无法准确判断趋势转向点,会在趋势反转时损失较大。
-
-可以通过适当缩短中轨长度或搭配其他止损指标来降低风险。也可以优化入场逻辑以减少不必要的交易。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化唐奇安通道的参数,适应更多市场;
-2. 搭配其他指标判断趋势,提高 entrada 准确性; 
-3. 优化中轨的止损逻辑,使之更稳定可靠;
-4. 增加过滤条件,减少不必要的交易,降低交易频率。
-
-## 总结
-
-该策略整体来说是一个非常简单的长期趋势跟踪策略。它使用唐奇安通道指标判断趋势方向并入场,以中轨进行移动止损。在趋势明显的市场中,它可以获得较高的盈利。但该策略也存在一定的风险,需要对参数和止损逻辑进行优化,以获得更稳定的效果。
-
-|| 
 
 ## Overview
 
@@ -100,7 +54,6 @@ Some ways to optimize this strategy:
 
 In summary, this is a very simple long term trend following strategy using Donchian Channels for trend direction and entries, with a middle band trailing stop. It can achieve high profits when used in strongly trending markets. But there are also risks that need to be addressed through parameter tuning and stop loss optimization to make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

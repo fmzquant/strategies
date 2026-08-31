@@ -10,93 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12e7d96673ef9d4c089.png)
-[trans]
-
-## 概述
-
-该策略基于经典商品通道指数(CCI),只做多头。当CCI指标处于极低水平(CCI <-150 或用户定义阈值),并且重新取得力度(即CCI>前根K线的CCI)时,同时对价格“力度”本身进行过滤(即发出信号的K线收盘价必须高于开盘价的一定幅度 - 固定为0.25%),系统会进入市场。 当达到止损或者价格高于CCI上带时,平仓离场。
-
-该策略用于获得高胜率(超过50%)的交易,而非追求捕捉趋势的全部长度。因此,适用于“看到潜在亏损就受不了”的交易者。
-
-## 策略原理
-
-1. 使用ta.sma()和ta.dev()函数构建CCI指标及其区间带。
-
-2. 使用input选择起始交易日期,设置回测窗口。
-
-3. 入场条件:CCI下穿低线并开始上涨,同时要求信号K线收盘价高于开盘价0.25%。
-
-4. 出场条件1:CCI上穿上线,止盈离场。
-
-5. 出场条件2:跌破止损线,亏损离场。
-
-6. 策略仅做多,根据CCI指标力度选择入场时机,同时利用止损控制风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用CCI指标识别超买超卖情况,能够有效抓住反转机会。
-
-2. 仅做多方向,避免错误操作带来的过多风险。
-
-3. 采用价格力度过滤,确保入场时价格已经形成支撑。
-
-4. 止损机制控制单笔亏损,有效管理资金。
-
-5. 回测参数灵活,可调整入场过滤条件。
-
-6. 胜率较高,适合注重资金管理的投资者。
-
-7. 策略思路清晰,代码实现简洁易懂。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 仅做多方向,容易错过短线向下趋势。
-
-2. CCI参数设置不当可能导致失效。
-
-3. 停损设置过于宽松,无法有效控制亏损。
-
-4. 多头行情过强,止损被突破造成较大亏损。
-
-5. 交易频率过高带来交易成本压力。
-
-对应风险管理措施:
-
-1. 优化CCI参数,寻找最佳值。
-
-2. 调整止损幅度,在风险和止损被突破概率之间找到平衡。 
-
-3. 交易成本考虑在内,控制入场频率。
-
-4. 结合趋势和区间判断,避免单边方向交易。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 采用动态止损,根据市场波动程度调整止损距离。
-
-2. 结合MACD等指标,避免止损过于宽松。
-
-3. 增加卖出机会,在cci指标过热时考虑做空。
-
-4. 考虑交易成本因素,设置最小止盈距离。
-
-5. 优化参数与策略时间框架结合,寻找最佳组合。
-
-6. 利用机器学习方法自动优化参数。
-
-7. 增加资金管理模块,动态调整仓位。
-
-## 总结
-
-总而言之,该策略利用CCI指标的超买超卖特征,在价格形成支撑的情况下做多,通过止损控制风险,追求高胜率交易。策略优势在于简单易操作,风险控制到位。存在的不足之处在于仅做多、止损过于固定等,这些问题都可以通过参数优化、增加卖点、动态止损等方式得到改善。该策略适合追求高胜率、注重资金管理的投资者。
-
-||
 
 ## Overview
 
@@ -184,7 +97,6 @@ Some ways to improve the strategy:
 
 In summary, this long-only strategy capitalizes on CCI overbought/oversold levels with price strength filter and stop losses. It offers easy implementation, good risk control and high win percentage. The limitations of being long-only and fixed stops can be addressed through parameter optimization, short entries, dynamic stops etc. The strategy suits investors seeking high win rates and proper risk management.
 
-[/trans]
 
 > Strategy Arguments
 

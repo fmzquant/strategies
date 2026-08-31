@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19addbfcf0858fb5295.png)
-[trans]
-
-## 概述
-
-本策略通过计算快速移动平均线和慢速移动平均线的交叉来判断趋势,在快速移动平均线上穿慢速移动平均线时做多,并设置一个动态追踪的止损线来锁定利润,在价格变化一定比例时止损退出。
-
-## 策略原理
-
-该策略使用快速移动平均线和慢速移动平均线的金叉来判断多头趋势的开始。具体来说,是计算一定周期内的收盘价的简单移动平均线,比较快速平均线和慢速平均线的数值,当快速移动平均线上穿慢速移动平均线时,判断为多头趋势开始,此时开仓做多。
-
-在开仓做多后,策略不设置固定止损,而是利用一个动态追踪的止损线来锁定利润。这个止损线的设置方法是:最高价*(1-设置的止损百分比)。这样可以让止损线随价格上涨而上涨,在一定比例下跌时停损退出。
-
-这种方式的优点是可以无限追涨,并且可以在利润达到一定水平后通过止损来锁定利润。
-
-## 优势分析
-
-这种动态追踪止损策略的主要优势有:
-
-1. 可以无限追涨,不会漏掉大的行情。采用固定止损很容易在大行情开始后被止损出场。
-
-2. 可以通过设定止损百分比来锁定利润。如果只追涨不止损,整个行情结束时可能亏损。设定止损可以锁定利润。
-
-3. 比固定止损更加灵活。固定止损只能设置一个价格,而这里的止损会根据最高价变化。
-
-4. 回撤风险较小。采用固定止损时,止损价距离最高价较大,在正常的回调中就可能被止损。这里的止损距离最高价很近,正常回调不会被止损。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 判断入场信号的指标不稳定,可能产生错误信号。
-
-2. 单一的止损方式,没有考虑其他因素。市场可能突发重大变化导致策略失效。
-
-3. 没有止盈限制,依赖止损。如果止损失效,可能造成较大亏损。
-
-4. 数据设定需要优化。移动平均线周期等参数需要调整至最优。
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加更多指标来确认入场,避免错误信号。比如加入成交量的判断。
-
-2. 增加止盈设置。当收益达到一定比例时止盈。
-
-3. 增加止损的安全性。当市场发生异常时大幅调整止损距离。
-
-4. 对交易品种、交易时段等进行优化调整。不同品种和交易时段参数需要调整。
-
-5. 增加机器学习来动态调整参数。让模型自动优化判断指标和止损幅度。
-
-## 总结
-
-本策略整体思路清晰合理,使用快慢均线判断趋势是一个较为经典的方法,并且采用动态追踪止损这一手法可以有效锁定利润并降低风险。但这些指标和参数都需要不断测试和优化,才能使策略稳定盈利。同时也要防范市场的重大变化对策略的影响,这需要通过完善整体思路和框架,增加安全机制来实现。
-
-|| 
 
 ## Overview
 
@@ -122,7 +65,6 @@ The strategy can be improved in several areas:
 
 The overall logic of this strategy is sound and reasonable. Using fast and slow moving averages to determine trends is a classic approach. Trailing stop loss is also effective for locking in profits and reducing risks. However, continual testing and optimization is needed for the indicators and parameters to make the strategy consistently profitable. At the same time, major market changes that could invalidate the strategy need to be guarded against by improving the overall logic and framework and adding safeguards.
 
-[/trans]
 
 > Strategy Arguments
 

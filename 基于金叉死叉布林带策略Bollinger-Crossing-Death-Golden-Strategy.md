@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13acdae144895aee645.png)
-[trans]
-## 概述
-
-该策略是基于布林带指标的金叉死叉策略,通过调整布林带的参数,优化适用于黄金交易。当价格收盘高于上轨时生成买入信号,当价格收盘低于下轨时生成卖出信号。
-
-## 策略原理
-
-该策略使用长度为50、乘数为2.5的布林带。布林带的中轨线是价格的SMA均线,上轨线是中轨线加上标准差的乘数,下轨线是中轨线减去标准差的乘数。
-
-当价格收盘突破上轨线时,产生买入信号;当价格收盘跌破下轨线时,产生卖出信号。其利用了布林带通道缩减的特性,在通道缩减后突破产生信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 参数经过优化,适合黄金交易,收益稳定。
-
-2. 利用布林带通道特征,在价格波动减小后产生信号,避免错失机会。 
-
-3. 金叉死叉容易判断,操作简单,适合手动跟踪。
-
-4. 图形显示直观,利于监控价格在通道内运行情况。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 布林带参数不适当可能导致虚假信号。需要测试优化参数。
-
-2. 频繁买卖会增加交易成本和滑点损失。可以适当调整参数降低交易频率。
-
-3. 黄金波动较大时容易止损。可以适当调整止损点或增加仓位管理。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同市场及时间周期参数,寻找最佳参数组合。
-
-2. 增加仓位管理模块,通过均线、通道突破等产生加仓信号。
-
-3. 增加止损模块, trails止损跟踪价格运行。
-
-4. 结合其他指标滤除假信号,提高策略稳定性。
-
-## 总结
-
-该策略通过调整布林带的参数,优化适合黄金交易。利用布林带通道宽窄特性产生信号。在优化参数、增加仓位管理、止损方面有较大改进空间。总体而言,该策略操作简单,稳定性良好,适合手动跟单黄金交易。
-
-||
 
 ## Overview  
 
@@ -109,7 +59,6 @@ The strategy can be optimized from the following aspects:
 
 The strategy optimizes Bollinger Bands for gold trading by adjusting parameters. It utilizes the expansion and contraction of Bollinger Bands to generate signals. There is large room for improvement in parameters optimization, position management, stop loss. Overall, the strategy has simple logic, good stability, and is suitable for manual gold trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13c2c7d06cf1eb377e8.png)
 
-[trans]
-
-## 概述
-
-该策略运用两个不同周期的移动平均线的交叉来进行交易,属于趋势追踪型策略。策略利用短期和长期移动平均线交叉买入信号和卖出信号,在趋势行情中进行交易。
-
-## 策略原理
-
-该策略使用9周期的短期移动平均线SMA和50周期的长期移动平均线LMA。当短期移动平均线从下方上穿越长期移动平均线时,产生买入信号;当短期移动平均线从上方下穿长期移动平均线时,产生卖出信号。
-
-同时,策略还引入RSI指标判断趋势强度。只有当RSI大于设定阈值(默认55)时,才会产生交易信号。这可以避免RSI处于超卖区间时产生错误信号。
-
-策略每次交易资金占总资金的30%,每次只开一个订单。考虑了0.1%的交易费用。
-
-## 优势分析
-
-- 该策略利用移动平均线交叉形成的趋势信号,能够有效跟踪趋势行情。
-- 引入RSI指标判断趋势强度,可以避免趋势受阻时产生错误信号。
-- 默认参数经过优化,可以在多种市场中获得较稳定的收益。
-- 资金管理合理,避免单笔损失过大。
-
-## 风险分析
-
-- 当市场处于震荡调整时,该策略容易产生错误信号,无法获利。
-- 跟踪趋势策略,无法在没有明确趋势时获得收益。
-- 参数设置不当可能导致交易频繁,增加交易费用。
-- 未考虑突发事件的影响,可能导致止损不及时。
-
-可通过优化参数,组合其他指标判断获利机会,严格资金管理,设置止损来减小风险。
-
-## 优化方向
-
-- 可以测试不同移动平均线组合,寻找最优参数。
-- 可以引入其他指标判断趋势,如MACD等。
-- 可以设置动态止损来控制单笔损失。
-- 可以根据不同市场调整资金管理比例。
-- 可以结合交易量指标来判断趋势强弱。
-
-## 总结
-
-该策略通过简单的移动平均线交叉系统捕捉趋势机会。默认参数经过优化,收益稳定,适合自动化交易。可通过引入其他辅助指标、优化参数、完善止损进一步提高策略稳定性和收益率。总体来说,该策略利用趋势交叉信号进行交易,在趋势明显的市场中效果较好。
-
-|| 
 
 ## Overview
 
@@ -95,7 +52,6 @@ Risks can be reduced via parameter optimization, using other indicators, strict 
 
 The strategy captures trending opportunities using simple MA crossover system. Default parameters are optimized with steady returns, suitable for algorithmic trading. Further improvements can be made by adding other indicators, optimizing parameters, and implementing stop loss. Overall, it is an effective trend following strategy for trending markets using crossover signals.
 
-[/trans]
 
 > Strategy Arguments
 

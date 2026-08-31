@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1506cca7363c7fdffbc.png)
-[trans]
-
-## 概述
-
-追踪止损百分比策略是一种基于交易品种价格百分比来设置和调整止损单的策略。它可以在价格达到一定盈利水平后,将止损单调整至入场价位,实现保本止损。
-
-## 策略原理
-
-该策略通过input参数设置长仓追踪止损的百分比,如3%。在开仓后,会实时计算追踪止损价格。计算方法是:
-
-1. 当价格超过入场价*(1+追踪止损百分比),则将止损价格调整至入场价,实现保本。
-
-2. 当价格低于上述水平,则止损价格为入场价*(1-追踪止损百分比)。
-
-这样可以实现当价格达到一定盈利后保本止损,避免盈利全部收益被损失,同时防止过于激进的止损被价格正常波动顶出。
-
-策略还绘制了追踪止损价格的图表进行确认,并设置了只做多头交易。在金叉时做多,死叉时平仓。做多后设置追踪止损单,实现该策略的止损逻辑。
-
-## 优势分析
-
-该策略最大的优势是可以通过追踪止损实现盈利后保本,无论后市如何,至少可以保住本金,避免亏损。这对许多投资者有重要意义。
-
-另外,该策略止损比较温和,追踪止损幅度不是太大,可以防止价格正常波动就被止损出场。这与一般的固定止损相比更加灵活和智能。
-
-## 风险分析
-
-该策略主要风险在于止损幅度设置不当,如果设置太小,则难以实现保本止损;如果设置太大,则容易被价格正常波动顶出场。所以这里需要仔细测试和评估合适的止损幅度。
-
-另一个风险是在异常市场时,价格突然大幅度跳空,这时止损价格可能来不及更新,导致止损无效。不过该概率较小。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加平仓条件,如死叉、价格跌破SMA等规则,使策略更加全面。
-
-2. 加入止损百分比的动态调整机制,在不同市场环境下自动优化止损幅度。
-
-3. 增加离场策略,当价格运行一定距离后退出场外,固定利润。
-
-4. 可以研究不同品种的止损百分比参数差异,建立参数自适应优化机制。
-
-## 总结
-
-追踪止损百分比策略整体来说非常实用,可以有效实现盈利后保本止损,避免亏损。该策略优化空间很大,值得进一步研究提高效果。总体而言,该策略适合追求稳定投资利润的投资者。
-
-||
 
 ## Overview
 
@@ -102,7 +55,6 @@ This strategy can be optimized in the following aspects:
 
 The percentage trailing stop loss strategy is very practical overall, which can effectively realize breakeven stop loss after making profits to avoid losses. This strategy has large room for optimization and is worth further researching to improve efficiency. In general, this strategy suits investors pursuing steady investment returns.
 
-[/trans]
 
 > Strategy Arguments
 

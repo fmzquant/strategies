@@ -11,19 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于三重指数移动平均和线性回归的趋势跟踪策略”。该策略通过三重指数移动平均线和线性回归线的交叉来识别趋势方向,并设定自适应止损以锁定利润。
-
-三重指数移动平均线(TEMA)综合了单一EMA和双重EMA的优点,能更灵敏地捕捉价格变化趋势。线性回归线反映价格长期均衡趋势。当短期的TEMA上穿长期的线性回归线时,判断为上涨趋势形成,考虑做多;反之则考虑做空。
-
-进入仓位后,策略采用基于ATR指标的自适应止损方式来锁定利润。它根据市场波动率设定和调整止损距离。这避免止损过于固定,也使止损可以跟随市场波动自适应调整。
-
-该策略的优势是指标组合识别趋势方向较为准确,自适应止损机制也较为先进。但参数设定需要根据具体品种谨慎测试和优化,始终紧跟市场变化进行调整。
-
-总之,多种技术指标的合理融合应用,配合严格的风险管理措施,可以提高策略交易的效率和规避风险的能力。
-
-
-||
 
 
 
@@ -37,7 +24,6 @@ The advantage of this strategy is the indicator combo identifies trend direction
 
 In summary, the reasonable integration of multiple technical indicators, together with strict risk management measures, can improve the efficiency of strategy trading and the ability to mitigate risks.
 
-[/trans]
 
 > Strategy Arguments
 

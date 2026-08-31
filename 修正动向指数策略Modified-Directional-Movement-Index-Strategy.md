@@ -11,50 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-
-## 策略原理
-
-该策略基于修正动向指数(DMI)指标进行交易。DMI通过比较正向运动指标(+DI)和负向运动指标(-DI)的差值来判断趋势方向。
-
-具体交易逻辑是:
-
-1. 计算一定周期内的+DI和-DI
-
-2. 将+DI和-DI的值区分映射到100到-100的区间
-
-3. 计算+DI和-DI的差值,绘制修正DMI曲线
-
-4. 当修正DMI上穿0轴时产生买入信号
-
-5. 当修正DMI下穿0轴时产生卖出信号
-
-6. 可平滑DMI曲线以过滤假信号
-
-该策略直接比较+DI和-DI的相对强度,判断趋势方向,避免单一指标判断的局限性。
-
-## 策略优势
-
-- 修正DMI直观反映+DI和-DI实力对比
-
-- 结合均线可过滤假信号
-
-- 明确的做多做空信号点
-
-## 策略风险
-
-- DMI指标本身滞后,可能错过时点
-
-- 需要优化参数周期
-
-- 震荡市容易被套
-
-## 总结
-
-该策略通过修正DMI判断趋势方向变化,为捕捉趋势提供了新视角。但其滞后性问题仍需注意,可以辅以其他指标进行验证。
-
-
-||
 
 
 ## Strategy Logic 
@@ -97,7 +53,6 @@ The strategy directly compares the relative strength of +DI and -DI to determine
 
 This strategy judges trend direction change through the modified DMI, providing an alternative view to trend trading. But DMI's lagging nature needs caution, and can be combined with other confirming indicators.
 
-[/trans]
 
 > Strategy Arguments
 

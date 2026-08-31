@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17ddb4a37ced2438b7a.png)
 
-[trans]
-
-## 概述
-这是一个基于双重移动平均线指标的反转交易策略。该策略通过计算两组不同参数设置的移动平均线,根据其方向变化来判断价格趋势,并设定方向变化的灵敏度参数,从而产生交易信号。
-
-## 策略原理
-该策略的核心指标是双重移动平均线。策略允许选择移动平均线的类型(SMA、EMA等)、长度和价格源(收盘价、典型价格等)。计算出两组移动平均线之后,通过定义参数reaction判断其方向。当快线上穿慢线时产生买入信号,下穿时产生卖出信号。reaction参数用来调整识别转折点的灵敏度。
-
-此外,策略还设定了变化方向和持续上涨/下跌的条件判定,避免产生错误信号。并用不同颜色可视化表示价格的涨跌状态。当价格持续上涨时,movavg线显示为绿色,下跌时为红色。
-
-## 优势分析
-这种双重movavg策略结合不同参数设定的快慢线,可以有效滤波交易市场的噪声,识别较强势的趋势。相比单一movavg策略,它减少了错误信号,可以在趋势更加明确时入场,从而获得更高的胜率。
-
-灵敏度参数reaction让该策略可以灵活适应不同周期和品种。策略过程直观简单,容易理解和优化。
-
-## 风险分析
-该策略最大的风险在于错过转折点而亏损或反向建仓。这与参数reaction设定有关。如果reaction太小,则容易产生错误信号;如果reaction太大,则可能错过较好的入场点。
-
-另一个风险是无法有效控制亏损。当价格出现剧烈波动时,无法快速止损,导致亏损扩大。这需要配合止损策略来控制。
-
-## 优化方向
-该策略的优化方向主要集中在参数reaction、移动平均线类型及长度的选择。reaction可适当增加来减少错误信号。移动平均线参数可据不同周期和品种进行测试,选择产生信号最佳的组合。
-
-另外,结合其他辅助指标如RSI、KD等来确认交易信号也是优化思路。或使用机器学习方法自动优选参数。
-
-## 总结
-本策略整体来说较简单实用,通过双重移动平均线滤波并产生交易信号,可有效识别趋势反转,是一种典型的趋势跟踪策略。优化参数组合后,其顺市捕捉能力和抗市持仓能力都会得到提高。与止损和位置管理机制配合使用效果更佳。
-
-||
 
 
 ## Overview
@@ -72,7 +43,6 @@ In addition, confirming trading signals with other auxiliary indicators such as 
 ## Summary  
 Overall, this strategy is relatively simple and practical. By filtering with dual moving averages and generating trading signals, it can effectively identify trend reversals and is a typical trend-following strategy. After optimizing the parameter portfolio, its ability to capture trends and hold positions against the market will be improved. Using it with stop loss and position management mechanisms works better.
 
-[/trans]
 
 > Strategy Arguments
 

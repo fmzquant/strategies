@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/510332b8f537630e26.png)
-[trans]
-
-## 概述
-
-本策略利用移动平均线和MACD指标识别价格趋势和动量,结合交叉信号进行买卖判断。属于典型的趋势追踪策略。
-
-## 策略原理
-
-本策略使用双移动平均线形成均线交叉信号。快速移动平均线长度为12日,慢速移动平均线长度为26日。当快速移动平均线上穿慢速移动平均线时,产生金叉,做多信号。当快速移动平均线下穿慢速移动平均线时,产生死叉,做空信号。
-
-同时,本策略使用MACD指标判断动量。MACD指标由快线(12日EMA)减去慢线(26日EMA)得到,再用信号线(9日EMA)平滑MACD。当MACD上穿信号线时为多头动量增强信号,当MACD下穿信号线时为空头动量增强信号。
-
-本策略综合考虑移动平均线交叉信号和MACD指标信号,进行买卖决策。当产生金叉和MACD上穿时,做多。当产生死叉和MACD下穿时,做空。
-
-## 策略优势分析
-
-1. 使用双移动平均线交叉结合MACD指标,综合考虑价格趋势和动量信号,避免错失买卖机会。
-
-2. 快速移动平均线和慢速移动平均线长度配比合理,可以有效识别中期趋势。MACD指标参数设置也较为标准,可靠识别动量变化。
-
-3. 通过图形可视化指标,交易信号直观清晰。能够直观判断趋势方向和动量强弱。
-
-4. 策略参数设定合理灵活,可调整移动平均线长度和MACD参数进行优化,适应不同市场环境。
-
-5. 实现了趋势跟踪,可以获取较长的趋势行情收益。
-
-## 策略风险分析
-
-1. 双移动平均线交叉存在滞后,可能延迟做多做空时机。
-
-2. MACD指标存在频繁发出错误信号的可能,需要结合价格行情判断。
-
-3. 多头行情中,死叉可能是调整信号,此时应持有多单而不是轻易平仓。
-
-4. 空头行情中,金叉可能是反弹信号,此时应持有空单而不是轻易平仓。 
-
-5. 需要严格遵守资金管理原则,控制单笔交易占用资金比例,避免过度交易。
-
-## 策略优化方向
-
-1. 优化移动平均线参数,测试不同时间周期的参数组合,提高交叉信号的可靠性。
-
-2. 优化MACD指标参数,调整长短周期EMA和信号线参数,降低错误信号。
-
-3. 添加其他辅助指标,如KDJ、BOLL等,进行综合判断,提高信号准确性。
-
-4. 结合交易量指标,避免虚假突破带来的错误信号。
-
-5. 采用回测确定最佳参数组合,根据历史数据测算最优参数。
-
-6. 设置止损策略,严格控制单次止损比例,降低交易风险。
-
-## 总结
-
-本策略整合双移动平均线交叉和MACD指标,实现了趋势交易。优化参数设置,严格遵守资金管理,有助于获取长期稳定收益。但也需要注意防范指标产生的错误信号,与价格行情结合进行综合判断,降低交易风险。通过进一步优化,可以提高策略效果。
-
-||
 
 
 ## Overview
@@ -123,7 +66,6 @@ This strategy considers both the moving average crossover signals and the MACD i
 
 This strategy integrates double moving average crossover and MACD for trend trading. Optimizing parameters and following prudent money management will help achieve steady gains long-term. But false signals need to be avoided by confirming with price action. Further optimizations can improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

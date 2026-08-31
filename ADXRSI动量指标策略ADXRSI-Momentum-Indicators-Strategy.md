@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13ea780e8d31b825e6f.png)
-[trans]
-### 概述
-
-本策略运用动量指标ADX、RSI以及布林带,通过判断市场趋势和超买超卖情况,实现低买高卖,获利退出的自动交易策略。
-
-### 策略原理
-
-1. ADX指标判断趋势。当ADX大于32时,认为行情处于趋势状态。
-2. RSI指标判断超买超卖。当RSI指标上穿30级时,认为行情超卖;当RSI指标下穿70级时,认为行情超买。 
-3. 布林带判断盘整与突破。当收盘价突破布林带上轨时,认为行情结束盘整上涨;当收盘价跌破布林带下轨时,认为行情结束盘整下跌。
-
-根据以上指标判断市场状态,制定交易策略如下:
-
-买入条件:
-1. ADX>32,趋势状况
-2. RSI上穿30级,超卖状况
-3. 收盘价低于布林带下轨,结束下跌盘整
-
-卖出条件:  
-1. ADX>32,趋势状况
-2. RSI下穿70级,超买状况 
-3. 收盘价高于布林带上轨,结束上涨盘整
-
-### 优势分析
-
-本策略综合运用多种指标判断市场状态,避免单一指标判断失误的概率。同时,通过趋势、超买超卖状态的判断,可以有效锁定市场转折点,实现低买高卖。
-
-相比单一使用趋势指标,本策略可以更及时地捕捉短期机会。相比单一使用震荡指标,本策略则可以更好地把握趋势方向。所以,本策略既保留了趋势跟踪的优点,又具有逆势操作的灵活性,是一种潜在效率较高的量化策略。
-
-### 风险分析
-
-本策略主要存在以下风险:
-
-1. 指标发出错误信号的风险。当市场突发重大事件时,指标判断可能会失效。
-2. 止损位置设置过于激进的风险。如果止损距离过小,可能会被短期市场波动止损出场。
-3. 参数数据拟合风险。如果指标参数仅基于历史数据拟合得到,则参数稳定性会较差,可能无法适应市场变化。
-
-对应风险管理措施:
-1. 人工干预异常市场,手动暂停策略,避免错误信号带来损失。
-2. 设置合理的止损距离,同时结合均线等指标判断止损价位,避免被套。 
-3. 增加 Parameter Tuning 模块,使用 Walk Forward Analysis 方法动态优化参数,保证参数的稳健性。
-
-### 优化方向 
-
-本策略的优化空间主要在以下几个方面:
-
-1. 优化指标参数。可以引入智能优化算法,针对不同品种参数进行独立优化。
-
-2. 增加特征工程。引入更多价格技术指标,建立支持向量机等模型进行训练,提升信号准确率。
-
-3. 结合突破策略。根据不同品种行情特点,运用基于通道、支撑阻力等判断规则,把握突破点位,增强策略稳定性。
-
-4. 优化止盈止损机制。引入跟踪止盈、移动止损等方式,实现止盈止损动态调整,最大限度锁定利润,有效控制风险。
-
-### 总结
-
-本策略作为一种中短期量化交易策略,运用 ADX、RSI、布林带等多种技术指标判断市场状态,在判断市场结构发生重大变化时进行买入卖出操作。策略逻辑清晰可解释,可大幅度减少单一技术指标判断失误的概率。与此同时,策略也需要警惕指标发出错误信号、设置过于激进止损和参数偏差等风险,需要从风险管理和模型优化方面入手,提高策略的稳定性和效率。
-
-||
 
 ### Overview
 
@@ -135,7 +76,6 @@ The main aspects to improve this strategy includes:
 This medium-term quantitative trading strategy utilizes multiple technical indicators like ADX, RSI and Bollinger Bands to determine market conditions and places trades when significant structural changes are identified. The logic is clear and interpretable, drastically reducing reliance on a single indicator. Meanwhile, risks like false signals, overly tight stops and parameter overfitting needs to be addressed through risk management and model optimization to enhance stability and efficiency.  
 
 
-[/trans]
 
 > Strategy Arguments
 

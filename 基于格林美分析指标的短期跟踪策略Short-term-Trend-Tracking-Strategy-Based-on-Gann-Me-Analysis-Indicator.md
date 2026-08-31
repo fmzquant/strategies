@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14a9979defad1d68689.png)
-[trans]
-
-### 概述
-
-本策略通过构建多个不同周期的EMA指标,并计算其差值,形成格林美指标,用于判断价格趋势和发出交易信号。该策略适用于短期趋势跟踪,可以有效捕捉价格变化趋势。
-
-### 策略原理
-
-该策略首先构建6个短周期EMA指标和6个长周期EMA指标。短周期EMA包括3日线、5日线、8日线、10日线、12日线和15日线。长周期EMA包括30日线、35日线、40日线、45日线、50日线和60日线。
-
-然后计算短周期EMA之和(g)和长周期EMA之和(mae)。通过长短周期EMA之差(gmae = mae - g)形成格林美差值指标。该差值指标可以判断价格趋势。
-
-当差值上穿0轴时,表示短期均线上升速度快于长期均线,属于多头信号,做多;当差值下穿0轴时,表示短期均线下降速度快于长期均线,属于空头信号,做空。
-
-### 策略优势
-
-1. 使用双EMA均线策略,可以有效跟踪短期趋势
-2. 构建多组EMA,避免假突破,提高信号准确率  
-3. 差值指标直观判断长短期趋势关系
-4. 简单参数设置,容易实盘操作
-
-### 策略风险
-
-1. 短周期操作,存在一定止损风险
-2. 多组EMA参数设置需要测试优化
-3. 只适合短线操作,不适合持续长线
-
-### 策略优化
-
-1. 测试优化EMA参数,提高交易效率
-2. 增加止损策略,控制单笔损失
-3. 结合其他指标过滤入场信号
-4. 优化资金管理,调整仓位管理
-
-### 总结
-
-本策略通过构建格林美差值指标,捕捉短期价格趋势变化,属于短线跟踪策略。优点是反应灵敏,适合高频交易。缺点是对市场变量敏感,止损风险较大。整体而言,该策略表现出色,值得在实盘中测试和应用。
-
-|| 
 
 ### Overview
 
@@ -87,7 +48,6 @@ When the difference crosses above the 0 axis, it means that the short-term movin
 
 This strategy captures short-term price trend changes by constructing the Gann Me difference indicator. It belongs to a short-term tracking strategy. The advantages are sensitive reaction and suitability for high-frequency trading. The disadvantages are sensitivity to market variables and higher stop loss risks. Overall, the strategy performs well and is worth testing and applying in real trading.
 
-[/trans]
 
 > Strategy Arguments
 

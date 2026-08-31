@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/151e8cb1d61c21d2841.png)
-[trans]
-## 概述
-这是一个非常简单的趋势跟随策略。它会在出现多头型公平价差时做多,出现空头型公平价差时平仓或做空。它在盘整行情下表现不佳,但在趋势行情中可以获得非常丰厚的利润。  
-
-## 策略原理
-该策略的核心逻辑是识别公平价差形态。所谓“公平价差”,是指当天的最高价低于前一天的最低价,或当天的最低价高于前一天的最高价,会形成一个“突破的间隙”。这通常预示着可能的趋势转折。具体来说,策略规则是:
-
-1. 如果当天最高价低于前两天的最低价,且收盘价低于前两天最低价,则认为形成空头型公平价差,做空。
-2. 如果当天最低价高于前两天的最高价,且收盘价高于前两天的最高价,则认为形成多头型公平价差,做多。
-
-这里使用了两个lag,也就是前两根K线的高低价来判断公平价差,这样避免被假突破或短期回调影响,提高形态判断的可靠性和信号质量。
-
-## 策略优势
-1. 识别恰当的公平价差形态可以很好预测未来的趋势可能出现反转。
-2. 策略逻辑和规则简单清晰易于理解和实施。
-3. 可以快速捕捉到新的趋势机会。
-
-## 策略风险
-1. 公平价差形态判断并不完全准确,如果短期里出现回调也会产生错误信号。
-2. 该策略会在趋势发生反转的时候出现亏损,需要及时止损防范风险。 
-3. 在盘整行情中表现较差,会有更多的虚假信号和小额亏损。
-
-## 优化方向
-1. 优化止损机制。可以结合动态ATR实现动态的风险控制。
-2. 优化过滤条件。可以基于成交量、均线指标等判断公平价差突破的可靠性。 
-3. 结合多因子模型预测未来趋势概率。
-
-## 总结  
-本策略识别公平价差的形成来判断趋势可能发生反转,属于基本的趋势跟随策略。优点是捕捉趋势反转的时机较为精准,但也存在一定的误报率。可以通过止损与过滤来控制风险,也可以结合更多因子来提高判断的准确性。总的来说,这是一个非常简单实用的趋势交易策略,值得拓展与优化。
-
-||
 
 ## Overview  
 This is a very simple trend following strategy. It will go long when a bullish FVG appears and close or go short when a bearish FVG appears. It does not perform well in range-bound markets, but can be very profitable in trending markets.
@@ -71,7 +40,6 @@ Here 2 lags are used, which is the highest and lowest price of the previous 2 ba
 
 ## Conclusion
 This strategy identifies the formation of fair value gaps to determine if trends may reverse. It belongs to the basic trend-following strategy. The advantage is that it can capture the timing of trend reversals more precisely. But there are also certain false signals. Risks can be controlled through stop losses and filtering. More factors can also be incorporated to improve judgment accuracy. Overall, this is a very simple and practical trend trading strategy that is worth expanding and optimizing.
-[/trans]
 
 > Strategy Arguments
 

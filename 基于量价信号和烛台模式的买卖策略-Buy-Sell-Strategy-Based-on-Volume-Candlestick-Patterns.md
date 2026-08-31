@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1d8d6c250d2a3d1d7da.png)
 
-[trans]
-#### 概述
-该策略结合了价格和交易量的信号,以及斐波那契回撤水平,在15分钟和45分钟的时间框架内产生买卖信号。策略使用了多个移动平均线(MA)作为趋势和动量的指标,包括简单移动平均线(SMA)和指数移动平均线(EMA)。此外,还使用了斐波那契回撤水平作为潜在的进场点。该策略的主要目标是在价格和交易量出现显著变化时及时捕捉买卖机会。
-
-#### 策略原理
-1. 计算快速MA(默认为10)和慢速MA(默认为30),当快速MA高于慢速MA时表示上升趋势,反之则表示下降趋势。
-2. 计算交易量MA(默认为20),当前交易量高于交易量MA表示交易量增加,反之则表示交易量减少。
-3. 使用多个MA和EMA作为辅助指标,包括快速MA(默认为9)、短期SMA(默认为10和60)和EMA(默认为3和7)。
-4. 计算斐波那契回撤水平(0.47、0.658和0.886),作为潜在的支撑位和阻力位。
-5. 当短期SMA(60)与精确度线(基于快速EMA和慢速EMA的交叉)发生交叉时,产生买入或卖出信号。
-6. 当快速MA(9)与EMA(7)交叉时,产生平仓信号。
-
-#### 优势分析
-1. 结合了价格和交易量的信息,提供更全面的市场分析。
-2. 使用多个MA和EMA作为辅助指标,有助于确认趋势和动量的变化。
-3. 斐波那契回撤水平为潜在的进场点提供了参考,有助于优化进场时机。
-4. 买卖信号基于短期SMA和精确度线的交叉,有助于及时捕捉市场转折点。
-5. 平仓信号基于快速MA和EMA的交叉,有助于及时锁定利润或止损。
-
-#### 风险分析
-1. 在震荡市场中,频繁的交叉信号可能导致过多的交易和手续费损失。
-2. 策略依赖于历史数据计算的MA和斐波那契水平,可能无法及时适应市场的突发变化。
-3. 策略缺乏对市场趋势强度的评估,在趋势较弱时可能产生错误信号。
-4. 策略的参数(如MA周期)需要根据不同的市场状况进行优化,否则可能影响策略的有效性。
-
-#### 优化方向
-1. 引入趋势强度指标(如ADX),在趋势较弱时避免交易或采取更保守的策略。
-2. 优化MA和EMA的周期参数,以适应不同的市场状况和交易品种。
-3. 结合其他技术指标(如RSI、MACD)以提高信号的可靠性。
-4. 引入止损和止盈机制,以控制单笔交易的风险敞口。
-5. 对于震荡市场,考虑采用更适合的交易策略(如范围交易)。
-
-#### 总结
-该策略通过结合价格、交易量和斐波那契回撤水平,在多个时间框架内产生买卖信号。策略的优势在于综合考虑了多个市场要素,并使用了多个MA和EMA作为辅助指标。然而,策略在震荡市场中可能产生过多的交易信号,并且依赖于历史数据计算的指标,因此需要进一步优化以提高其适应性和可靠性。优化方向包括引入趋势强度指标、优化参数、结合其他技术指标以及引入风险管理措施等。
-
-|| 
 
 #### Overview
 This strategy combines signals from price and trading volume, along with Fibonacci retracement levels, to generate buy and sell signals within the 15-minute and 45-minute timeframes. The strategy employs multiple moving averages (MAs) as indicators of trend and momentum, including Simple Moving Averages (SMAs) and Exponential Moving Averages (EMAs). Additionally, Fibonacci retracement levels are used as potential entry points. The primary objective of the strategy is to capture buying and selling opportunities promptly when significant changes in price and trading volume occur.
@@ -81,7 +45,6 @@ This strategy combines signals from price and trading volume, along with Fibonac
 
 #### Summary
 This strategy generates buy and sell signals within multiple timeframes by combining price, trading volume, and Fibonacci retracement levels. The strategy's advantage lies in its comprehensive consideration of multiple market elements and the use of multiple MAs and EMAs as auxiliary indicators. However, the strategy may generate excessive trading signals in choppy markets and relies on indicators calculated from historical data. Therefore, further optimization is needed to improve its adaptability and reliability. Optimization directions include introducing trend strength indicators, optimizing parameters, combining other technical indicators, and introducing risk management measures.
-[/trans]
 
 
 

@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/114ac74f6f1c3954b40.png)
 
-[trans]
-
-## 概述
-
-本策略融合利用了麦克风散架(MACD)指标和多时间框架均线,形成一个综合利用趋势和趋势反转信号的长短双向交易策略。策略可以在趋势行情中获取额外利润,同时也能抓住反转机会。
-
-## 策略原理
-
-1. 使用两组不同周期的EMA均线组合作为多时间框架过滤器,进行长空方向判断:15分钟快速EMA高于1小时慢速EMA为看涨过滤器,15分钟快速EMA低于1小时慢速EMA为看跌过滤器。
-
-2. 当观察到麦克风散架形成背离时(柱状线与价格背离),判断可能反转。
-
-3. 在看涨过滤器开启时,若发现有牛市背离(价格新高而MACD未创新高),等待MACD零轴上穿,做多;在看跌过滤器开启时,若发现有熊市背离(价格新低而MACD未创新低),等待MACD零轴下穿,做空。
-
-4. 止损方式为持续追踪型止损,根据最高价最低价波动范围计算。止盈为止损的一定倍数。
-
-5. 当MACD柱状线发生零轴方向穿越时平仓。
-
-## 优势分析
-
-1. 多时间框架EMA组合能对大周期趋势进行判断,避免逆势交易。
-
-2. MACD背离能捕捉到价格反转机会,适合反转策略。
-
-3. 动态追踪止损能锁定盈利,避免亏损扩大。
-
-4. 根据止损计算止盈距离能获得预期回报。
-
-## 风险分析
-
-1. EMA均线组合作为过滤器,在盘整时期可能出现方向判断错误。
-
-2. MACD背离后反弹幅度不足,可能无法盈利。
-
-3. 止损距离设定不当,可能过于宽松或过于紧凑。
-
-4. 反转空间不足,获利受限。
-
-5. 需要恰当把握反转切入时机,过早过晚都可能导致损失。
-
-## 优化方向
-
-1. 可以测试不同参数组合的EMA以获得更准确的趋势判断。
-
-2. 可以尝试把MACD参数调整为更敏感的参数组合。
-
-3. 可以测试不同的止损止盈比例设置。
-
-4. 可以加入附加过滤条件,避免陷入假反弹。例如加入更高时间框架EMA判断全局趋势。
-
-5. 可以优化反转切入确认条件,确保反转趋势足够成熟。
-
-## 总结
-
-本策略综合运用了趋势过滤、趋势反转信号、动态止损止盈管理等手段,能够顺势而为,亦能抓反转。通过参数调整和优化过滤条件,可以适应更广泛的市场环境,在控制风险前提下获取稳定收益。该策略具有一定的普适性和实用价值,是多时间框架与指标融合运用的典型代表。
-||
 
 ## Overview 
 
@@ -123,7 +67,6 @@ This strategy integrates the MACD indicator and multi time frame moving averages
 This strategy utilizes trend filtering, reversal signals, dynamic stop/take profit management to trade with the trend and capitalize on reversals. Proper parameter tuning and optimizing filters adapts it to diverse market conditions, delivering steady profits while controlling risks. It has versatility and practical value as a typical example of integrating multi time frame analysis with indicators.
 
 
-[/trans]
 
 > Strategy Arguments
 

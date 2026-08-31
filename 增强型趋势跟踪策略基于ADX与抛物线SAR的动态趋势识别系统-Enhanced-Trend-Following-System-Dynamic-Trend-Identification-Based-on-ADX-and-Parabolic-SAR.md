@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1ccc12a199ce1d43fe3.png)
 
-[trans]
-#### 概述
-本策略是一个结合了平均趋向指标(ADX)和抛物线止损转向指标(SAR)的趋势跟踪交易系统。该系统通过ADX来衡量趋势强度,利用SAR来确认趋势方向,从而在强趋势市场中捕捉交易机会。系统采用双重确认机制,既确保趋势的存在性,又验证趋势的可靠性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键组成部分:
-1. ADX指标用于测量趋势强度,当ADX值超过25时,表明市场存在明显趋势。
-2. DI+和DI-的交叉用于判断趋势方向,DI+大于DI-时代表上升趋势,反之则为下降趋势。
-3. 抛物线SAR通过动态调整止损点来跟踪价格走势,为趋势方向提供额外确认。
-
-交易信号的触发条件如下:
-- 做多条件:ADX>25且DI+>DI-且价格位于SAR之上
-- 做空条件:ADX>25且DI->DI+且价格位于SAR之下
-- 平仓条件:当出现相反的交易信号时
-
-#### 策略优势
-1. 双重确认机制显著提高了交易信号的可靠性
-2. 动态止损设置helps保护既有利润
-3. 参数可调整性强,适应不同市场环境
-4. 策略逻辑清晰,易于理解和执行
-5. 在强趋势市场中表现优异
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假信号
-2. 入场点可能滞后于趋势起点
-3. 快速反转行情下可能承受较大回撤
-4. 参数设置不当可能影响策略表现
-
-风险控制建议:
-- 设置最大回撤限制
-- 根据市场波动调整参数
-- 结合其他技术指标进行交易确认
-- 实施仓位管理策略
-
-#### 策略优化方向
-1. 引入波动率指标调整参数
-   - 在高波动期间提高ADX阈值
-   - 在低波动期间降低SAR敏感度
-
-2. 优化出场机制
-   - 添加利润目标
-   - 设计动态止损策略
-
-3. 增加市场环境过滤
-   - 结合趋势线分析
-   - 考虑成交量因素
-
-4. 完善仓位管理
-   - 基于ATR设计仓位大小
-   - 实现分批建仓/平仓
-
-#### 总结
-该策略通过结合ADX和SAR指标,构建了一个稳健的趋势跟踪系统。策略的主要优势在于其双重确认机制和动态止损设置,但在震荡市场中表现可能欠佳。通过合理的参数优化和风险控制,该策略能够在趋势明显的市场环境中获得良好表现。建议交易者在实盘应用前进行充分的回测,并根据具体市场特点调整参数设置。 
-
-|| 
 
 #### Overview
 This strategy is a trend following trading system that combines the Average Directional Index (ADX) with the Parabolic Stop and Reverse (SAR) indicator. The system measures trend strength using ADX and confirms trend direction using SAR to capture trading opportunities in strong trending markets. It employs a dual confirmation mechanism to ensure both the existence and reliability of trends.
@@ -119,7 +64,6 @@ Risk control suggestions:
 
 #### Summary
 This strategy constructs a robust trend following system by combining ADX and SAR indicators. Its main advantages lie in the dual confirmation mechanism and dynamic stop-loss settings, although performance may be suboptimal in oscillating markets. Through appropriate parameter optimization and risk control, the strategy can achieve good performance in clearly trending market environments. Traders are advised to conduct thorough backtesting before live implementation and adjust parameters according to specific market characteristics.
-[/trans]
 
 
 

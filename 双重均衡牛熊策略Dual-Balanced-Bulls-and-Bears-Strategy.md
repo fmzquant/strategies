@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/171dc169e9ee1c4f06d.png)
 
-[trans]
-
-## 概述
-
-双重均衡牛熊策略是一个结合123反转策略和多空均衡指标的组合策略。该策略旨在利用123反转策略产生的信号和多空均衡指标的信号进行验证,实现更可靠的入市。
-
-## 原理
-
-该策略由两个子策略组成:
-
-1. 123反转策略。该策略在后两个收盘价出现反转时产生信号,即如果前两天收盘价下跌而第三天收盘价上涨时做多,如果前两天收盘价上涨而第三天收盘价下跌时做空。同时,该策略还会结合STOCH指标,只在STOCH指标显示超卖或超买时才产生信号。
-
-2. 多空均衡指标策略。该策略通过计算多头力量和空头力量的均衡情况,判断市场趋势。具体来说,它计算当天收盘价与开盘价的差异以及前一天与当天的差异,来判断多头力量和空头力量。多空力量差值越大,表示趋势越明确。
-
-组合策略的交易信号来源于上述两个子策略的交易信号。只有当两个子策略的信号一致时,比如都显示做多时,组合策略才会采取该信号入场。如果两个子策略发出的信号不一致,组合策略会跳过该信号,采取观望态度。
-
-## 优势
-
-双重均衡牛熊策略最大的优势在于可靠性高。因为它要求两个子策略发出一致信号才入场,可以起到验证的作用,避免假信号。此外,两个子策略分别从反转和趋势两个方面挖掘机会,可以实现策略分散,避免单一策略的风险。
-
-123反转策略可以捕捉短期市场的反转机会。多空均衡策略可以判断长期趋势方向。两者配合使用,可以在反转的同时把握主要趋势,过滤掉较弱的反转信号,从而提高获利概率。
-
-## 风险
-
-该策略最大的风险在于子策略发出错误信号的概率加倍。尽管组合策略要求双方信号一致,但当两个子策略同时发错信号时,组合策略也会跟着入场,从而承担双倍的损失。
-
-此外,子策略之间可能出现分歧,一个发出做多信号,另一个做空。这时组合策略就会漏掉机会。如果分歧持续存在,组合策略可能长时间无法入场,导致资金效率下降。
-
-## 优化方向
-
-可以考虑引入 추세-역전 전략(trend-reversal strategy)作为第三个子策略。该策略可以判断长期趋势,并在趋势反转时产生信号。增加判断市场趋势的策略有助于滤除错误信号,提高稳定性。
-
-另一个优化方向是调整子策略的参数,使它们能够产生更匹配的交易信号。比如调整多空均衡策略的阈值参数,使其能捕捉较弱的趋势,从而与反转策略形成互补。
-
-此外,可以研究在子策略持续分歧时的处理方法。比如设定分歧的最大容忍次数,超过后采取单独子策略的信号入场。这可以在一定程度上缓解机会的损失。
-
-## 总结
-
-双重均衡牛熊策略通过组合使用123反转策略和多空均衡策略,实现交易信号的双重验证,可以有效过滤假信号,提高稳定性。同时结合反转策略和趋势策略,实现策略的分散,降低风险。该策略可进一步优化参数设定,引入第三策略等,以提高匹配度和资金效率。总体来说,该策略思路新颖,具有很强的实用价值。
-
-||
 
 ## Overview
 
@@ -91,7 +50,6 @@ Handling prolonged conflicts between the sub-strategies can also be researched. 
 
 The Dual Balanced Bulls and Bears strategy combines the 123 Reversal strategy and Bulls and Bears Balance strategy to achieve dual verification of trading signals and effectively filter out false signals and increase stability. Meanwhile, combining reversal and trend strategies provides diversification to lower risks. The strategy can be further optimized by adjusting parameters, adding a third strategy etc. to improve alignment and capital efficiency. Overall, the strategy has novel ideas and substantial practical value.
 
-[/trans]
 
 > Strategy Arguments
 

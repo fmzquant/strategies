@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fb39a84eb036bba19a.png)
-[trans]
-## 概述
-
-多时间框架跨越均线策略(Multi Timeframe Moving Average Crossover Strategy)是一个利用不同时间周期的移动平均线之间交叉信号来判断趋势方向的算法交易策略。该策略综合利用了趋势指标、动量指标和波动率指标的组合,使得策略信号更加可靠。
-
-## 策略原理
-
-该策略通过计算不同周期的CCI指标判断市场趋势方向,再结合MACD指标寻找金叉死叉信号,最后用ATR指标设定止损止盈位,从而实现低买高卖。
-
-具体来说,首先计算20周期的CCI指标,根据其正负来判断市场趋势;然后计算MACD指标的快慢均线是否发生交叉,判断是否有买卖信号生成;接着利用ATR指标生成追踪止损机制,进一步锁定盈利;最后,综合以上多个指标的信号,产生最终的买入卖出策略信号。
-
-## 策略优势
-
-1. 多指标组合,提高信号准确率
-
-   该策略通过CCI、MACD和ATR三个指标的组合运用,综合判断市场的趋势、动量和波动率,使得策略信号更加精确可靠。
-
-2. 多时间框架分析,把握市场节奏
-
-   利用不同周期的CCI判断市场总体走势,配合高周期MACD寻找低买高卖节点,能够把握市场较大的趋势节奏。  
-
-3. ATR止损追踪,有效控制风险
-
-   借助ATR指标生成的stop loss,可以根据市场波动率来设置合理的止损位,同时具有追踪止损功能,可以很好地控制策略的风险。
-
-## 策略风险
-
-1. 参数优化空间有限
-
-   该策略中大部分参数的调整空间并不是很大,容易达到效果的极限,限制了策略效果的进一步提升。
-
-2. 多指标组合增大计算负载
-
-   由于策略使用了多个指标进行组合运算,在一定程度上增加了策略的计算负载。在高频交易中可能会产生卡顿的问题。
-
-3. 信号频繁,风险控制有限
-
-   策略信号可能会比较频繁,而风险控制主要依靠ATR指标的止损追踪,对极端行情的风险控制并不完备。
-
-## 策略优化
-
-1. 利用机器学习算法提升参数优化效率
-
-   可以尝试使用一些机器学习的超参数优化算法,如贝叶斯优化、遗传算法等,使参数调整更加智能高效。
-
-2. 增加功能性指标,提高策略弹性
-
-   可考虑加入一些其他功能性指标,如波动率指标、量能指标、情绪指标等,提升策略的适应性和鲁棒性。
-
-3. 加强风险管理模块,控制策略风险
-
-   可以设计更科学的止损原则,也可以加入一定的仓位控制或资金管理模块,更好地防范极端行情的风险,保证策略的稳定性。
-
-## 总结
-
-多时间框架跨越均线策略通过运用CCI、MACD和ATR三大指标的组合,实现了较为可靠的趋势判断和高效的风险控制。该策略综合考量了趋势、动量和波动率三个维度,具有信号准确度高、把握市场节奏和有效控制风险的优点。当然,策略也存在一定的参数优化空间有限、计算负载大以及风险控制可以提升等问题。通过引入更多指标、运用更优的参数优化手段以及设计更强大的风险控制模块,该策略可以得到进一步提升和优化。
-
-|| 
 
 ## Overview  
 
@@ -125,7 +67,6 @@ Specifically, it first computes the 20-period CCI to judge bullish or bearish tr
 
 The Multi Timeframe Moving Average Crossover Strategy utilizes the powers of CCI, MACD and ATR to achieve reliable trend capturing and efficient risk control. It accounts for trend, momentum and volatility to generate accurate signals, grasp market rhythms and manage risk. Although some aspects like parameter tuning, computing load and risk control can be improved further, it is a solid algorithmic trading system nonetheless. With some enhancements using machine learning, more indicators and better risk management, its performance can reach new levels.
 
-[/trans]
 
 > Strategy Arguments
 

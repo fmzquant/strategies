@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/109ae395f354ad58633.png)
-[trans]
-
-## 概述
-
-该策略利用超级趋势指标识别市场趋势方向,结合Heikin Ashi蜡烛图形态进行入市。同时,策略预设了止损位和止盈位功能来锁定盈亏。
-
-## 策略原理
-
-1. 使用超级趋势指标判断市场趋势方向。该指标基于平均真实波动范围和特定乘数来确定上轨和下轨。当价格突破上轨时为看涨信号,反之为看跌信号。
-
-2. 结合Heikin Ashi蜡烛图形态过滤入市时机。当超级趋势指标发出信号,同时Heikin Ashi蜡烛为阳线时做多,阴线时做空。
-
-3. 设置止损位和止盈位。策略提供比例止损、固定止损、平均真实波动止损、枢轴点止损等多种止损方式。止盈方式有比例止盈、固定止盈、风险回报比止盈等。
-
-## 优势分析
-
-1. 超级趋势指标能有效跟踪市场趋势,避免错失重要交易机会。
-
-2. Heikin Ashi过滤入市时机,可减少不必要的交易,提高胜率。
-
-3. 多个止损止盈方式可供选择,可根据个人偏好进行设置,有效控制风险。
-
-4. 可选择是否在新的信号出现时主动平仓重入,保证始终跟随最新趋势。
-
-## 风险分析
-
-1. 超级趋势指标对市场变化反应滞后,可能错过趋势转折点。
-
-2. Heikin Ashi形态过滤无法完全规避亏损交易的出现。
-
-3. 止损位设定不当可能过早离场或损失过大。
-
-4. 频繁重入带来更高交易成本和滑点风险。
-
-可通过调整超级趋势指标参数、组合其他指标作为过滤及优化止损止盈方式来降低上述风险。
-
-## 优化方向
-
-1. 调整超级趋势指标参数,寻找最佳参数组合。
-
-2. 尝试不同的价格数据作为超级趋势指标的计算源,如收盘价、均价等。 
-
-3. 增加其他指标判断filter,如KDJ指标、移动平均线等。
-
-4. 优化止损止盈的设置,实现最佳风险回报比。
-
-5. 测试固定数量开仓或按资金比例开仓的效果。
-
-## 总结
-
-本策略整合超级趋势指标和Heikin Ashi技术,通过跟踪趋势方向并选择合适时机入市,可有效获取市场趋势收益。同时灵活的止损止盈设置也使风险控制成为可能。通过参数优化和增加其他filter条件,可以进一步增强策略稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -114,7 +61,6 @@ The above risks could be reduced by optimizing Supertrend parameters, combining 
 
 This strategy integrates Supertrend and Heikin Ashi techniques to effectively profit from market trends by tracking direction and timing entries properly. Flexible stop loss/take profit also facilitates risk control. Further enhancements on stability and profitability could be achieved through parameter tuning, adding more filters and optimizations.
 
-[/trans]
 
 > Strategy Arguments
 

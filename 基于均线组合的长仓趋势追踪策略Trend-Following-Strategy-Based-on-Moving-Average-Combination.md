@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/157e938fe175bbe4346.png)
-[trans]
-
-## 概述
-
-该策略通过计算多组快慢均线的组合,识别趋势方向,实现长仓追踪。当快速均线由下向上驶入慢速均线时产生买入信号;当快速均线由上向下驶出慢速均线时产生卖出信号。
-
-## 策略原理
-
-1. 计算3/6/9/12/15/18/21日7组快速EMA均线。
-2. 计算24/27/30/.../200日14组慢速EMA均线。 
-3. 设置快EMA均线色彩判断规则:3日线上驶6日线代表涨势,设置为青色;下驶代表跌势,设置橙色。
-4. 设置慢EMA均线色彩判断规则:24日线上驶25日线代表涨势,设置为绿色;下驶代表跌势,设置为红色。
-5. 当快EMA线 grupo 由下向上穿过慢EMA线 group 时产生买入信号,代表趋势转为上升。
-6. 当快EMA线 grupo 由上向下穿过慢EMA线 group 时产生卖出信号,代表趋势转为下降。
-
-通过快慢均线的组合匹配,可以有效识别中长线趋势的变化,进行长线追踪。
-
-## 策略优势
-
-1. 快慢均线配合,识别趋势变化能力强。快速均线能识别短期趋势,慢速均线过滤盘整,组合使用能提高识别精确度。
-2. 多个均线组合,判断信号更加清晰可靠,避免假信号。 
-3. 采用不同EMA周期参数,能够识别不同级别的中长线趋势,操作周期灵活。
-4. 长仓追踪策略,符合大部分私募基金以中长线方式运作的模式。
-
-## 策略风险
-
-1. 跟踪持仓时间过长,可能错过短线交易机会。
-2. EMA均线组合并不适合捕捉短期价格波动。当遇到价格震荡较大的区间整理时,可能产生不必要的交易信号。  
-3. 参数设置不当可能导致交易信号过于频繁或保守,建议参数测试后实盘验证。
-
-## 策略优化建议
-
-1. 增加快速均线的组数,设置更多的短周期EMA,能提高对短线趋势的判断能力。
-2. 增加慢速均线的组数,设置更多的中长周期EMA,能提高对中长线趋势的判断能力。
-3. 增加MA信号确认,在EMA均线发出信号时同时检验MA均线的支持,可以减少假信号。  
-4. 结合交易量的多空分析,避免在价格震荡剧烈的假破情况下产生错误信号。
-
-## 总结
-
-该策略通过构建快速均线和慢速均线的组合系统,识别股价中长线趋势的变化,属于典型的追踪持仓策略。在参数选取和信号过滤方面还有很大优化空间,投资者可以按照自己的风格进行调整,以适应不同的行情环境。
-
-||
 
 ## Overview
 
@@ -92,7 +50,6 @@ By combining fast and slow MAs, it can effectively identify the change in medium
 
 This strategy identifies mid- to long-term trend changes by constructing fast and slow MA systems, which is a typical tracking position strategy. There is still much room for optimization in parameter selection and signal filtering. Investors can tailor it to adapt to different market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

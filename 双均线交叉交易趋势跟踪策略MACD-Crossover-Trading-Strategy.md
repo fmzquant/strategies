@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/781ac375f0cb31c236.png)
-[trans]
-
-## 概述
-
-双均线交叉交易策略是一种趋势跟踪策略。它利用快速移动平均线(MACD)和慢速移动平均线的交叉作为买入和卖出信号。当快速移动平均线从下方上扫慢速移动平均线时,产生买入信号;当快速移动平均线从上方下扫慢速移动平均线时,产生卖出信号。
-
-## 策略原理
-
-该策略基于MACD指标。MACD指标是两条不同参数的移动平均线的差值,反映价格的动量变化。具体来说,是快速移动平均线(默认参数为12日线)减去慢速移动平均线(默认参数为26日线)得到的差值,称为MACD柱。为了消除震荡,MACD指标中又引入了DEA线或称信号线,一般为MACD的9日加权移动平均线。  
-
-当MACD柱从下向上突破DEA线而进入正值区域时,说明短期平均线上扫长期平均线,表明股价趋势转为上升,产生买入信号。当MACD从上向下跌破DEA线而进入负值区域时,表明短期平均线下扫长期平均线,股价趋势转为下降,产生卖出信号。
-
-该策略就是利用MACD柱和DEA线的交叉来判断买入和卖出时机。当MACD柱上扫DEA线时买入,下扫时卖出。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. captured  能够顺势而为,及时抓住价格趋势的变化。
-2. 简单明了,容易理解和实现。
-3. 参数较为固定,不需要经常调整。
-4. 可适用于不同时间周期。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1.  whipsaws   可能产生多次错误信号,即在横盘中反复触发买入卖出。 
-2.  lagging  存在一定的滞后性,可能错过价格变化的最佳时机。
-3.  over optimization  参数容易过度优化,实际效果可能不佳。
-
-为了降低风险,可以适当调整参数,或与其它指标结合使用,如量价指标、波动率指标等。此外,合理的止损和止盈策略也很重要。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 参数优化。可以测试不同的参数组合,找到最佳的参数。但要注意避免过度优化。
-
-2. 与其它指标组合。可以引入量价指标、波动率指标等,形成更强大的组合策略。
-
-3. 止损止盈策略。设定合理的止损止盈点,可以有效控制风险。
-
-4. 适配性优化。该策略可以适用于不同市场和时间周期,可以根据实际情况调整。
-
-## 总结
-
-双均线交叉策略通过捕捉价格趋势的变化,实现低成本的趋势跟踪交易。它简单实用,易于实现,是一种适合新手的入门策略。但该策略也存在一定缺陷,需要注意防范风险。通过不断优化和改进,可以使该策略的实际效果更好,值得推荐。
-
-||
 
 ## Overview
 
@@ -108,7 +58,6 @@ This strategy can be optimized in the following aspects:
 
 The MACD crossover trading strategy captures trend changes at a low cost by following price trends. It is simple, practical and easy to implement, making it a suitable starter strategy for beginners. But this strategy also has some flaws. By constantly optimizing and improving, the actual effect of this strategy can be better. It is worth recommending.
 
-[/trans]
 
 > Strategy Arguments
 

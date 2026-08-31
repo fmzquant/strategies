@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13310a1cd3d81105cfb.png)
-[trans]
-### 概述
-
-该策略结合了威廉双指数移动平均线和一目均衡图两个技术指标,以发挥各自的优势,提高交易决策的准确性。其中,威廉双指数移动平均线可充分反映价格变化趋势,一目均衡图则可提前判断趋势反转。
-
-### 原理
-
-威廉双指数移动平均线包含快线和慢线。快线计算公式为:2∗(n/2周期加权移动平均线),慢线计算公式为:n周期加权移动平均线。当快线从下方向上突破慢线时,为买入信号;从上方向下跌破时,为卖出信号。
-
-一目均衡图包含换手线、基准线、先行线及云图四个组成部分。其中,换手线和基准线的黄金交叉为买入信号,死亡交叉为卖出信号。价格突破云图上沿为买入信号,下跌破云图下沿为卖出信号。
-
-该策略结合两种指标优势,第一重判定为威廉指标发出信号,第二重判定为一目均衡图指标确认,可有效过滤假信号,提高决策准确性。
-
-### 优势
-
-1. 威廉双指数移动平均线反应灵敏,可确定较强趋势方向。
-2. 一目均衡图判断先行,可提前判断趋势反转。
-3. 结合两种指标,可互相验证,减少假信号。
-4. 通过参数优化,可自适应不同周期和品种。
-
-### 风险及优化
-
-1. 非趋势市场中可能产生频繁信号。可适当调整参数,过滤掉部分信号。
-2. 快线和慢线交叉过程中,会有一定滞后。可结合云图判断,避免错过最佳买卖点位。
-3. 建议与趋势指标或波动指标组合使用,可进一步避免假信号。
-
-### 总结
-
-该策略充分利用威廉指标判断趋势方向和一目均衡图提前看反转的优势,可显著提升交易决策的准确性。通过参数调整和组合其他指标,可持续优化策略,使之更适应市场的变化。
-
-||
 
 ### Overview  
 
@@ -71,7 +40,6 @@ This strategy combines the strengths of both indicators. The first determinant i
 
 This strategy fully utilizes the abilities of the Williams Indicator to judge trend directions and Ichimoku Kinkou Hyo to provide early warnings of reversals, significantly improving the accuracy of trading decisions. Further optimizations such as parameter tuning and combining with other indicators will allow sustainable enhancements for adapting to market changes.
 
-[/trans]
 
 > Strategy Arguments
 

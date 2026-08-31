@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16e566fe96e1d0694f0.png)
-[trans]
-
-该策略名称为“双重MA指标震荡价格追踪策略”,其利用了SMA和EMA等多种MA移动平均线的组合,通过设置多个快慢指标对市场价格进行实时追踪,在市场出现震荡的时候可以给出交易信号。
-
-策略概述:
-该策略通过构建三组不同参数的MA指标线,分别代表市场的快、中、慢速行情,同时辅助设置滤波指标来过滤误差信号,形成长短多空判断依据。策略逻辑优化过滤方法多样,利用价均线交叉、超买超卖指标RSI、布林线突破等技术指标进行复合判断,可以有效判断价格临界点买卖点位,把握震荡行情并减小市场风险,策略具有显著优势。
-
-策略原理:
-1、设置一组快(21周期)、中(55周期)、慢(89周期)三条MA指标线代表不同时间长度的平均价格水平;
-2、通过判断三条MA指标线的排列关系(快>中>慢 或 快<中<慢),来判断目前行情是处于上升或下降阶段;
-3、辅以SuperTrend等判断长短线判断,增加信号的准确性;
-4、根据这些信号和过滤指标的状态变化来选时交易,发出买入/卖出信号。
-
-
-策略优势:
-1、利用多组MA组合指标判断市场长短期运行态势,提高判断的准确性;
-2、采用多种滤波方法优化买卖点位的选择,增加获利几率;
-3、应用布林线、RSI等技术指标辅助突破,把握关键支撑位和反转机会;
-4、根据快速MA的方向变化选择买卖方向,无需贪图反转,追击震荡行情,实现盈利;
-5、交易信号通过可视化箭头和标记清晰显示,容易掌握,操作方便。
-
-风险与防范:
-1、MA均线策略对假突破概率抗性较弱;
-2、复合指标之间可能存在时间差,带来信号落后的风险;
-3、突破买入后,还需要进一步判断后市强势程度,防止被套;
-4、实盘考虑增加止损、止盈条件,以控制单笔交易的最大损失。
-
-策略优化:
-1、测试不同MA类型和参数,寻找最优MA组合;
-2、增强反转判断模块,如完善KD指标使用;
-3、结合交易量指标分析,确定真实趋势;
-4、扩展BIAS指标判断超买超卖区域。
-
-总结:
-在不断波动的数字货币市场中,该策略利用波段震荡来回的机会进行频繁交易,通过设定的MA指标和辅助滤波判断进行多空切换,把握市场关键反转时机。同时也可以进一步优化,增加止损模块来降低单次损失,通过策略自动化来获取长线的正向收益。
-
-||
 
 The strategy is named "Dual MA Indicator Oscillating Price Tracking Strategy". It utilizes the combination of SMA, EMA and other MA moving averages to track market prices in real time. When there is oscillation in the market, it can give trading signals.
 
@@ -80,7 +43,6 @@ Strategy Optimization:
 
 Conclusion:  
 In the ever-fluctuating cryptocurrency market, this strategy takes the opportunity to make frequent trades during the ups and downs of market waves. By setting the MA indicators and auxiliary filtering judgments for switching between long and short positions, it grasps the key reversal timing of the market. It can also be further optimized by adding stop loss modules to reduce single losses and obtain long-term positive returns through strategy automation.
-[/trans]
 
 > Strategy Arguments
 

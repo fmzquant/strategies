@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/126f331b0078b30480b.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的市场开盘交易系统,主要针对德国和美国市场开盘时段。策略通过布林带识别盘整阶段,结合短期和长期指数移动平均线确认趋势方向,利用相对强弱指标和趋势方向指标过滤交易信号,最终采用真实波幅指标动态管理仓位。
-
-#### 策略原理
-策略采用14周期布林带(标准差1.5倍)识别低波动阶段,当价格接近布林带中轨时视为盘整。同时使用10周期和200周期指数移动平均线确认多头趋势,要求价格位于两条均线之上。使用7周期RSI确保市场非超卖(>30),7周期ADX确认趋势强度(>10)。策略还会分析最近20根K线的高点寻找阻力位,要求至少有两次触及。突破该阻力位且满足其他条件时入场,使用2倍ATR设置止损,4倍ATR设置止盈。
-
-#### 策略优势
-1. 多重技术指标交叉验证,有效降低虚假信号
-2. 基于ATR的动态止损止盈,适应市场波动
-3. 专注于开盘时段高波动机会
-4. 通过盘整-突破模式捕捉强势趋势
-5. 完善的风险控制机制
-
-#### 策略风险
-1. 多重指标可能导致错过部分交易机会
-2. 开盘时段波动剧烈可能触发止损
-3. 市场快速反转可能造成较大损失
-建议采用合理仓位控制,严格执行止损策略,避免过度交易。
-
-#### 策略优化方向
-1. 可根据不同市场特点调整指标参数
-2. 考虑添加成交量指标验证突破有效性
-3. 引入更多技术指标提高信号可靠性
-4. 优化入场时机选择,减少滑点影响
-5. 完善止盈止损机制,提高盈亏比
-
-#### 总结
-该策略通过多维度技术分析方法捕捉开盘时段的交易机会,运用动态止损止盈管理风险。策略逻辑清晰,风控完善,具有良好的实用性。通过持续优化和调整,有望进一步提升策略表现。
-
-|| 
 
 #### Overview
 This strategy is a market opening trading system based on multiple technical indicators, primarily targeting German and US market opening sessions. It identifies consolidation phases using Bollinger Bands, confirms trend direction with short and long-term exponential moving averages, filters trading signals using RSI and ADX, and manages positions dynamically using ATR.
@@ -71,7 +40,6 @@ Recommended to implement proper position sizing, strict stop-loss execution, and
 
 #### Summary
 This strategy captures trading opportunities during market opening sessions through multi-dimensional technical analysis, employing dynamic stop-loss and take-profit for risk management. With clear logic and robust risk control, it demonstrates good practicality. Continuous optimization and adjustment can further enhance strategy performance.
-[/trans]
 
 
 

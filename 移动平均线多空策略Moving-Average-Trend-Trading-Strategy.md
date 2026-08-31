@@ -9,66 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-这个策略是基于移动平均线的多空策略。它使用3条不同参数的移动平均线进行交易信号生成。当价格上穿移动平均线时做多,下穿时做空。该策略有3条移动平均线,可以进行级别分批做多做空,实现趋势跟踪。
-
-## 策略原理
-
-该策略使用sma函数计算长度为len的移动平均线ma。然后根据ma计算出3条平移一定比例的移动平均线longline1、longline2、longline3。其中longline1平移-4%,longline2平移-5%,longline3平移-6%。
-
-在买入信号生成时,如果当前无仓位,当价格上穿longline1时开仓做多;如果已有1手仓位,当价格上穿longline2时再开1手;如果已有2手仓位,当价格上穿longline3时再开1手,最多持有3手多仓。
-
-在卖出信号生成时,如果当前持有多仓,当价格下穿ma时平仓。
-
-该策略可以通过分批分级做多,实现趋势跟踪效果。
-
-## 策略优势
-
-- 使用移动平均线判断趋势方向,可以有效过滤市场噪音,稳定盈利
-- 分批分级做多做空,可以在趋势中获利较多
-- 平移移动平均线作为入场点,可以更好地把握趋势
-- 回撤相对较小,最大回撤控制在20%左右
-
-## 策略风险
-
-- 该策略是纯趋势策略,在盘整市的时候容易被套牢
-- 移动平均线产生信号滞后,可能错过趋势转换点
-- 分批做多容易追高杀入,风险较大
-- 没有止损策略,在突发事件中可能造成较大亏损
-
-风险解决方法:
-
-- 可以加入其他指标判断,确定趋势转换点
-- 合理设置移动平均线参数,不能太长,否则信号太滞后
-- 适当缩减分批做多的数量,防止追高
-- 增加移动止损以控制损失
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加其他指标判断,确定趋势方向,例如加入MACD判断趋势强弱
-
-2. 优化移动平均线参数,寻找最优参数组合
-
-3. 调整分批做多的数量和比例,防止追高杀入
-
-4. 增加移动止损机制,可以根据ATR来设置止损位
-
-5. 可以根据市场波动率动态调整仓位数,在波动大时减仓
-
-6. 测试不同品种参数效果,寻找最适合该策略的品种
-
-7. 开发Exit模块,在特定形态出现时考虑止盈退出
-
-## 总结
-
-整体来说,该策略利用移动平均线判断趋势方向进行交易,通过分批分级做单可以跟踪趋势获利。但存在一定的滞后,追高风险。我们可以通过添加辅助判断指标、优化参数、调整仓位管理、增加止损机制等方式来优化该策略,使之能够适应不同市场情况,达到稳定可控的盈利效果。
-
-||
 
 
 ## Overview
@@ -128,7 +68,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, the strategy trades based on trend direction determined by moving averages, and profits from trends via staged entries. But it has some lagging issues and risks of chasing high prices. We can optimize it by adding auxiliary indicators, optimizing parameters, adjusting position sizing, adding stop loss, etc, to adapt to different market conditions and achieve steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/143e58dcb803649f236.png)
-[trans]
-
-## 概述
-
-趋势反转动量复合策略是一种结合趋势反转策略和动量突破策略的复合交易策略。该策略通过同时利用价格反转信号和动量指标信号,实现更准确地捕捉市场转折点,从而在价格开始反转的时候及时入场。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123反转策略:当收盘价连续2天低于前一日收盘价后转抬,且9日慢速K线低于50时做多;当收盘价连续2天高于前一日收盘价后转跌,且9日快速K线高于50时做空。
-
-2. DAPD动量突破策略:DAPD为近21日高点与近21日低点的平均差价,根据DAPD上下突破判断 entry 和 exit 点。
-
-当两种策略信号同向时,发出入场信号;当信号方向相反时,则暂时待命。
-
-## 策略优势
-
-该策略结合了反转策略和动量策略的优点,可以更加准确地捕捉价格转折点。主要优势有:
-
-1. 双重过滤增加信号可靠性。同向信号时,成功率较高。
-
-2. 123形态判断能减少头寸反转的风险。
-
-3. DAPD动量指标判断,适合趋势型品种。
-
-## 策略风险
-
-1. 信号时间点匹配风险。两种策略信号产生时间可能存在偏差。
-
-2. 调参困难风险。两种策略参数不易同时优化。
-
-3. 双重交易成本风险。每次开仓需同时支付两种策略的手续费。
-
-## 优化方向 
-
-1. 优化两种策略的参数匹配程度,使信号尽量同步。
-
-2. 研究不同品种使用不同参数组合的效果。
-
-3. 尝试只在策略信号强势时开仓,过滤弱信号。
-
-## 总结
-
-趋势反转动量复合策略,利用反转策略和动量策略的优势,在价格开始反转时能准确及时入场。双重过滤机制提高信号的成功率。通过优化参数匹配度,可进一步提高绩效表现。该策略适合具有一定资金实力和交易经验的投资者使用。
-
-|| 
 
 ## Overview
 
@@ -102,7 +55,6 @@ The strategy combines the merits of reversal and momentum strategies, capturing 
 
 The Reversal Momentum Compound strategy captures reversing price timely by combining merits of reversal and momentum strategies. Dual filters increase success rate. Further performance improvement can be achieved by optimizing signal alignment. The strategy suits investors with sufficient capital and trading expertise.
 
-[/trans]
 
 > Strategy Arguments
 

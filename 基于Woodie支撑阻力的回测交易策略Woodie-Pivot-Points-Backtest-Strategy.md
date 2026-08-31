@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用Woodie模型计算支撑阻力位,进行突破回测交易。属于经典的支撑阻力突破类策略。
-
-## 策略原理
-
-1. 根据昨日高低收价格计算本期平衡点及上下轨。
-
-2. 当价格从上方突破平衡点时,进行做多。
-
-3. 当价格从下方突破平衡点时,进行做空。
-
-4. 可选择反向交易信号。
-
-5. 用不同颜色标记交易信号。
-
-## 优势分析
-
-1. Woodie模型计算简单直观。
-
-2. 支撑阻力突破是常见的交易手法。
-
-3. 可视化的支撑阻力位和信号标记。
-
-4. 默认参数简单实用。
-
-5. 代码易理解,适合修改优化。
-
-## 风险分析
-
-1. 可能出现突破后的假突破。
-
-2. 无法有效设置止损止盈。
-
-3. 模型及参数设置不当影响效果。
-
-4. 无法区分趋势和盘整。
-
-5. 信号可能时效性不强。
-
-## 优化方向
-
-1. 测试不同周期参数寻找最优参数。
-
-2. 增加趋势判断指标进行过滤。
-
-3. 加入止损止盈逻辑进行风险控制。
-
-4. 评估突破后的回调情况产生继续信号。
-
-5. 研究如何判断突破的力度效果。
-
-6. 考虑与其他因子组合进行验证。
-
-## 总结
-
-该策略采用Woodie模型的支撑阻力位进行突破交易。优化参数设置、加入止损止盈等可以提高策略稳定性,将其打造成一个可靠的短期交易系统。
-
-||
 
 ## Overview
 
@@ -129,7 +68,6 @@ This strategy uses Woodie model to calculate pivots and trade breakouts for back
 
 This strategy trades Woodie pivot breakouts. Optimizing parameters, adding stops and exits can improve stability for a reliable short-term system.
 
-[/trans]
 
 > Strategy Arguments
 

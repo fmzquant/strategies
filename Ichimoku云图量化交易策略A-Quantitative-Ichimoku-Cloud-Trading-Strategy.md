@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1607814fab3632e6ec0.png)
-[trans]
-
-### 概述
-
-本策略基于市场技术分析中一种著名的趋势指标---Ichimoku云图,利用Ichimoku云图的转换线、基准线和云图之间的交叉关系来判断市场趋势,并进行量化交易。该策略适用于追踪市场中期趋势的交易者。
-
-### 策略原理  
-
-该策略的核心指标是Ichimoku云图中的三条线:转换线、基准线和云图。转换线代表近期价格动量,基准线代表中期价格趋势,而云图则可视化地反映中长期支持与阻力区域。策略通过判断这三者之间的交叉关系来确定市场趋势和交易信号。
-
-具体来说,策略逻辑主要基于以下规则:
-
-1. 当基准线上穿云图时,表示中期趋势转为上涨,做多;
-
-2. 当转换线上穿云图时,表示短期价格开始反弹,做多;  
-
-3. 当基准线下穿云图时,表示中期趋势转为下跌,做空;
-
-4. 当转换线下穿云图时,表示短期价格开始下挫,做空。
-
-此外,为过滤假信号,策略还加入价格与云图之间的交叉作为辅助条件。只有转换线或基准线交叉云图,而价格同时也交叉云图,才会生成真正的交易信号。
-
-### 优势分析
-
-相比单一使用移动平均线等指标,本策略最大的优势在于同时结合多时间段的数据,判断市场结构的变化。转换线反映短期情况,基准线反映中期趋势,云图反映长期支撑阻力。它们的组合可以更准确地把握住市场的转折点。此外,Ichimoku云图本身就具有滤波假信号的功能,避免买入噪音中的小峰或卖出噪音中的小谷,从而帮助我们抓住中长期趋势。
-
-### 风险分析 
-
-本策略最大的风险在于Ichimoku云图本身对参数设置较为敏感。如果参数设定不当,容易产生错误信号。此外,在震荡行情中,云图常常扁平化,导致产生大量不确定信号。策略订单的频繁打开与停止损耗手续费。最后,中长线交易本身具有亏损扩大的风险,需要严格控制止损点。
-
-为降低风险,我们可以调整参数组合、设置止损策略、止盈策略,甚至可以考虑与其他指标组合使用Ichimoku云图。
-
-### 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化参数组合。可以尝试不同长度周期的参数,找到最匹配目标交易品种的组合。
-
-2. 增加过滤条件。可以加入其他指标,确保在趋势选择上更加可靠。例如加入量能指标,确保在量能放大时打开订单。
-
-3. 增加止损机制。 trailing stop 或时间止损可以进一步控制单笔亏损。
-
-4. 结合波段策略。在中长线趋势基础上,识别更短周期的反转作为入场时机。
-
-### 总结  
-
-Ichimoku云图量化策略通过基准线、转换线与云图的交叉判定中长期趋势,并以此作为交易信号。相比单一指标,它综合判断多时间段的数据,能更可靠地判断结构性变化。同时内在的滤波机制也避免追逐市场噪音。如果参数优化和风险控制到位,该策略可以产生稳定的超额收益。它适合有经验的趋势交易者进行中长期持仓。
-
-
-|| 
 
 ### Overview  
 
@@ -110,7 +60,6 @@ There are several ways we can enhance this strategy:
 
 The Ichimoku Cloud strategy identifies intermediate-term trends using crosses of the Conversion/Base Lines against the Cloud. Compared to single indicators, it incorporates multiple timeframes for reliable trend change detection. The inherent noise filtering also avoids whipsaws. With proper parameter tuning and risk management, this strategy can generate stable excess returns over the long run. It suits experienced trend traders with intermediate-term holding periods.
 
-[/trans]
 
 > Strategy Arguments
 

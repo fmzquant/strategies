@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e14ef1edbe33a7226b.png)
-[trans]
-
-## 概述
-
-这个策略的核心思想是结合RSI指标以及自定义的AI条件来发现交易机会。它会在满足多重条件时建立多头或空头仓位,并使用固定的止盈止损水平。
-
-## 策略原理
-
-该策略通过以下几个步骤实现:
-
-1. 计算14周期的RSI值
-2. 定义两个自定义AI条件(多头和空头)
-3. 将AI条件与RSI超买超卖区结合,形成入场信号
-4. 根据风险百分比和止损点数计算仓位大小 
-5. 计算止盈和止损价格
-6. 在满足入场信号时开仓
-7. 在满足止盈或止损条件时平仓
-
-同时,该策略还会在形成交易信号时发出警报,并在图表上画出RSI曲线。
-
-## 策略优势分析
-
-该策略有以下几个优势:
-
-1. 结合RSI和AI条件,可以更准确地发现交易机会
-2. 采用多个条件的组合,可以有效过滤假信号
-3. 根据风险管理原则计算仓位大小,可以控制每笔交易的风险
-4. 采用固定止盈止损方式,每笔交易的风险和回报明确
-5. 可以通过参数调整自由定制策略
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. RSI参数设置不当可能导致交易信号不准确
-2. 自定义AI条件设计不当也可能产生错误信号
-3. 止损点数设置太小可能导致止损频繁被触发
-4. 市场剧烈波动时,固定止盈止损方式可能会损失更多利润或增加损失
-
-可以通过调整RSI参数、优化AI条件、适当放宽止损距离等方式来降低这些风险。
-
-## 策略优化方向 
-
-该策略还可以通过以下几个方面进行优化:
-
-1. 增加更多自定义AI条件,组合更多因素判断趋势
-2. 对RSI参数进行优化,找到最佳参数组合
-3. 测试不同的止盈止损机制,如追踪止损、移动止盈
-4. 添加附加过滤条件,如交易量突增等,以发现高质量交易机会
-5. 结合机器学习算法自动生成最优参数
-
-## 总结
-
-总的来说,这是一个基于RSI指标和AI自定义条件进行交易的可定制和优化空间大的高级策略。它通过组合多个信号源判断趋势方向,采用风险管理和止盈止损机制进行交易。该策略可以为用户提供较好的交易效果,也具有很强的扩展性和优化空间。
-
-|| 
 
 ## Overview
 
@@ -120,7 +64,6 @@ Some ways the strategy can be further improved:
 
 In summary, this is a highly configurable and optimizable advanced strategy for trading based on RSI and custom AI logic. It determines trend direction through a combination of multiple signal sources, executes trades with risk management and take profit/stop loss procedures. The strategy can provide good trading performance for users, with abundant expansion and optimization capabilities.
 
-[/trans]
 
 > Strategy Arguments
 

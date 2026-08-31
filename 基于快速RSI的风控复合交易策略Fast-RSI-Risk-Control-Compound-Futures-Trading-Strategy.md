@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15c441e0ddf42cccdf0.png)
 
-[trans]
-
-
-## 概述
-
-本策略针对现货交易平台BitMEX设计,通过对快速RSI指标进行分析,结合多项技术指标筛选信号,实现高效率的趋势追踪交易。策略同时设置了资金管理、止损机制,可以有效控制交易风险。
-
-## 策略原理
-
-1. 计算快速RSI,参数设置为7日线,超买线25,超卖线75。当RSI上穿超买线,为超买信号;当RSI下穿超卖线,为超卖信号。
-
-2. 对K线实体设置筛选。要求开盘为阴线,实体长度不小于昨日平均实体20%。
-
-3. 对K线颜色设置筛选。要求最近4根K为阴线时做空,最近4根K为阳线时做多。
-
-4. 设置止损逻辑。当价格向不利方向移动时,平仓止损。
-
-5. 设置防反弹机制。当价格向有利方向移动达到止损线时,再次发出信号才建仓。
-
-6. 设置资金管理。采用固定资金百分比建仓,每损失一笔加倍仓位。
-
-## 优势分析
-
-1. 快速RSI参数设置合理,能快速捕捉趋势。结合K线实体和颜色判断,可有效过滤假突破。
-
-2. 多层过滤信号,可以减少交易次数,提高胜率。
-
-3. 策略内置止损机制,可以有效控制单笔损失。
-
-4. 采用动态仓位调整,实现适度激进的资金管理。
-
-5. 可自定义交易时间段,避开重大事件带来的震荡。
-
-## 风险及优化
-
-1. 速度过快可能漏掉交易机会。可以适当放宽参数,增加灵活性。
-
-2. 无法有效判断趋势末期。可考虑结合其他指标判断潜在反转。
-
-3. 仓位调整方式过于激进,可引入锁仓方式。
-
-4. 可根据不同市场调整参数,实现更优的参数组合。
-
-## 总结
-
-本策略整体来说较为稳健,通过快速RSI判断趋势方向,再结合多重技术指标过滤信号,可以在趋势中获得较好回报。同时策略具备一定的优化空间,通过调整参数组合,可适应不同市场环境,具有较强的实用性。
-
-||
 
 
 ## Overview
@@ -105,7 +57,6 @@ This strategy is designed for the spot trading platform BitMEX. By analyzing the
 
 Overall this strategy is quite robust. By judging trend direction with fast RSI and filtering signals with multiple indicators, it can get good returns during trends. Also the strategy has room for optimization. By adjusting parameter combinations it can adapt to different market environments, thus having good practicality.
 
-[/trans]
 
 > Strategy Arguments
 

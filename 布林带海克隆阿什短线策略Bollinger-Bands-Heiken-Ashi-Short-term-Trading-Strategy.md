@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1240de9afe7e1f812ef.png)
-[trans]
-
-## 概述
-
-本策略结合布林带指标和海克隆阿什技术,通过识别海克隆阿什蜡烛方向和布林带宽度,来捕捉短线趋势机会。它采用10秒K线判断趋势方向,属于高频算法交易策略,适用于如Solana等高速公链的量化交易。
-
-## 策略原理  
-
-本策略主要基于以下两个指标进行判断:
-
-1. 海克隆阿什技术:通过计算海克隆阿什蜡烛的开盘价、收盘价判断价格趋势方向。若N根连续的海克隆阿什蜡烛为阳线,则视为多头信号;若N根连续的海克隆阿什蜡烛为阴线,则视为空头信号。
-
-2. 布林带指标:通过计算价格的标准差范围来判断市场波动率和价格是否过热。如果布林带宽度大于某个阈值,则意味着价格波动较大,趋势更加明显。
-
-具体交易逻辑为:
-
-- 若连续N根海克隆阿什为多头信号,且布林带宽度大于波动率阈值,则做多;
-
-- 若连续N根海克隆阿什为空头信号,且布林带宽度大于波动率阈值,则做空。
-
-该策略通过结合布林带和海克隆阿什两种指标,综合判断市场的波动性和价格趋势方向,从而在高频时间尺度上捕捉短线获利机会。
-
-## 策略优势
-
-本策略具有以下几个优势:
-
-1. 结合多种指标判断,提高信号准确性。海克隆阿什技术判断大致趋势,布林带指标衡量市场波动率,两者结合可以提高交易信号的可靠性。
-
-2. 高频算法交易,捕捉短线获利。10秒K线结合高效交易所(如Solana)实现高频出入场,适合短线套利。
-
-3. 参数可调整空间大。可调整海克隆阿什蜡烛根数、布林带参数等,适应不同市场环境。
-
-4. 实现简单,容易扩展。该策略主要运用基础指标,代码实现简洁,便于后续进行功能扩展。
-
-## 风险及解决方案分析
-
-本策略也存在以下主要风险:
-
-1. 高频交易带来的滑点风险。采用高效交易所,调整交易频次等手段规避。
-
-2. 布林带压缩时失效。可结合其他指标确定趋势性,如KDJ指标等。
-
-3. 海克隆阿什假信号。调整根数参数,必要时结合其他指标进行二次确认。
-
-4. 高频时间尺度,消息面影响大。关注重大新闻事件,必要时暂停交易。
-
-## 后续优化方向  
-
-本策略可从以下几个方面进一步优化:
-
-1. 结合深度学习等技术判断海克隆阿什信号可靠性。
-
-2. 增加止损机制,控制单笔交易风险。
-
-3. 结合更多指标进行组合交易,提高稳定性。
-
-4. 根据不同币种特点调整参数,实施币种组合交易。
-
-5. 利用高频数据进行趋势预测,提前定位交易机会。
-
-## 总结
-
-本策略是一种典型的结合海克隆阿什和布林带指标的短线高频算法交易策略。它具有信号准确性较高、高频捕捉短线获利等优势。同时也存在一定的滑点风险、假信号风险等。可通过参数调整、风控机制、多指标组合等手段进行优化提升。总的来说它是一个可扩展性较强的短线量化策略思路。
-
-||
 
 ## Overview
 
@@ -138,7 +73,6 @@ This strategy can be further improved in the following aspects:
 
 This is a typical short-term high-frequency algorithmic trading strategy combining Heiken Ashi and Bollinger Bands. It has advantages like relatively high signal accuracy and capturing short-term profits at high frequency. It also has certain risks like slippage and false signals. Optimization methods like parameter tuning, risk control mechanisms and indicator combinations can help improve it. Overall it is a highly extensible short-term quantitative strategy idea.  
 
-[/trans]
 
 > Strategy Arguments
 

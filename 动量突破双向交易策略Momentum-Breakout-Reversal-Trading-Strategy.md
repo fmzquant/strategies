@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16afa8e24c1335d1b48.png)
-[trans]
-
-## 概述
-
-本策略运用简单移动平均线判断趋势方向,在持续上涨行情中做多,持续下跌行情中做空,实现双向交易。
-
-## 策略原理
-
-本策略使用加权移动平均线VWMA判断市场趋势方向。当VWMA上涨时,做多;当VWMA下跌时,做空。
-
-具体来说,策略首先计算一定周期的VWMA,然后判断VWMA是否上涨超过5天,如果是,则开仓做多;如果VWMA下跌超过5天,则开仓做空。平仓条件是VWMA方向反转超过5天后平仓。
-
-为了计算月度和年度的收益表现,策略记录每月和每年的收益。通过比较本策略与市场基准收益,可以直观看到策略相对市场的表现。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 使用VWMA判断趋势,可以有效过滤市场噪音,捕捉主要趋势。
-
-2. 仅在趋势确认后开仓,可以避免趋势反转带来的风险。
-
-3. 采用双向交易,无论行情上涨或下跌都可以盈利。
-
-4. 记录月度和年度收益,便于评估策略效果。
-
-5. 收益表中添加市场基准收益,可以直观比较策略与市场的相对表现。
-
-## 风险分析
-
-本策略也存在一些风险:
-
-1. 使用VWMA判断趋势可能存在滞后,可能错过趋势开始阶段的机会。
-
-2. 仅在趋势确认后开仓,可能错过部分Movement。
-
-3. 双向交易需要确定止损点,否则亏损可能加大。
-
-4. 大市场波动可能导致止损被触发,无法持有完整的趋势。
-
-5. 趋势反转判断可能不准确,导致亏损加大。
-
-## 优化方向
-
-本策略可以从以下方面进行优化:
-
-1. 优化VWMA周期参数,改善趋势判断。
-
-2. 调整确认趋势的天数,改善进出场时机。
-
-3. 添加止损策略,控制单笔亏损。
-
-4. 结合其他指标判断走势反转,提高确定性。
-
-5. 优化仓位管理,根据市场情况调整仓位。
-
-6. 考虑交易成本,设定MinimumProfit。
-
-## 总结
-
-本策略整体思路清晰简单,利用VWMA判断趋势方向,在趋势确认后双向交易,可以有效跟踪市场走势。但也存在一定风险,需要进一步测试和优化参数,调整进出场逻辑,并适当控制仓位规模。本策略为基础双向交易策略,为量化交易奠定了基础,值得进一步研究与改进。
-
-||
 
 ## Overview
 
@@ -134,7 +71,6 @@ Some aspects that could optimize the strategy:
 
 The overall logic of this strategy is simple and clear, using VWMA to determine trend direction and reversal trade after confirmation, which can effectively track market moves. But it also has some risks, requiring further testing and parameter tuning, adjusting entry/exit logic, and appropriate position sizing. This basic reversal trading strategy lays the foundation for quantitative trading and is worth further research and improvement.
 
-[/trans]
 
 > Strategy Arguments
 

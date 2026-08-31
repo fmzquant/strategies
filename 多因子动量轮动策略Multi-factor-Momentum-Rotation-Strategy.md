@@ -11,101 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b5dcde95f20d6f98b1.png)
 
-[trans]
-
-
-## 概述
-
-本策略综合利用RSI、均线MACD、布林带和涨跌停因子,实现多因子动量轮动交易。策略首先判断多个技术指标是否同时发出买入或卖出信号,如果是,则进行相应的买入或卖出操作。同时,策略采用移动止盈和止损来锁定利润和控制风险。
-
-## 策略原理  
-
-本策略主要包含以下几个部分:
-
-1. 判断因子
-
-   - RSI:计算14周期RSI,判断是否低于设置的买入线或高于设置的卖出线
-   - TD序列:计算涨跌停天数,判断是否达到买入卖出条件 
-   - MACD:计算MACD和MACD历史值,判断是否达到买入卖出条件
-   - 布林带:计算20日布林带,判断价格是否触及布林带上下轨
-
-2. 入场与出场
-
-   - 买入条件:RSI、MACD、TD序列同时发出买入信号时,进行买入
-   - 卖出条件:RSI、MACD、TD序列同时发出卖出信号时,进行卖出
-   - 止盈:以固定点数或百分比进行移动止盈
-   - 止损:设定最大容忍损失点数,做止损
-
-3. 策略优化
-
-   - 调整RSI参数:优化RSI的周期参数
-   - 调整MA周期:优化均线的周期参数
-   - 调整入场条件:增加或减少入场信号
-   - 增加其他因子:结合更多技术指标和统计因子
-
-## 策略优势分析
-
-- 多因子组合,确保入场的准确性
-
-  本策略不仅考虑单一技术指标,而是结合RSI、MACD、TD序列等多个因子,这样可以减少因单一指标造成的假信号,提高入场的准确性。
-
-- 动量特征,捕捉趋势
-
-  RSI、MACD等指标具有较明显的动量特征,能捕捉到股价的趋势变化。与均线等趋势跟踪指标相比,这些指标转折更为灵敏。
-
-- 止盈止损机制,控制风险
-
-  移动止盈可以随着行情运行动态止盈,较好地锁定利润。止损设置则可以控制单笔损失。
-
-- 策略思路清晰简单
-
-  本策略结合常用技术指标,具有一定的通用性。规则相对简单清晰,容易理解和操作。
-
-## 策略风险分析
-
-- 多头行情下效果较差
-
-  本策略以逆市操作为主,属于反转策略。在牛市中,采用本策略可能会频繁停损,效果不佳。
-
-- 交易频率可能过高
-
-  若参数设置得太敏感,则交易频率可能会过高,增加交易成本和滑点损失。
-
-- 指标发散风险
-
-  本策略依赖多种指标同方向信号,但有时各指标也可能出现分歧,从而发出错误信号。
-
-- 止损被追穿风险
-
-  设置固定止损点数可能会被突破,可以设置动态止损或考虑换股来规避该风险。
-
-## 策略优化方向
-
-- 优化参数,减少交易频率
-
-  可以测试RSI的参数以及均线的周期参数,找到交易频率较低的组合。
-
-- 增加统计因子,提高效率
-
-  可以结合股票自己的统计特性,如波动率、流动性等来设定参数,提高策略效率。
-
-- 结合VIX等全市场指标
-
-  可以根据VIX等全市场恐慌指数来调整策略的参数,在市场 panic 时降低交易频率。
-
-- 测试不同持仓时间
-
-  可以测试不同的持仓周期,判断长期持有或短期轮动对策略效果的影响。
-
-- 优化和测试止盈止损策略
-
-  可以研究更先进的动态止盈止损方式,回测效果。
-
-## 总结
-
-本策略综合考虑多种技术指标,在确保较高入场准确率的基础上,采用移动止盈止损来锁定利润和控制风险。策略思路简单清晰,容易理解操作,可通过参数优化和指标优选进一步提升效果。但该策略更适合逆市和震荡行情,在持续上涨行情中效果可能较差。本策略为典型的多因子动量反转策略,可为股票轮动交易提供思路和参考。
-
-||
 
 
 ## Overview
@@ -199,7 +104,6 @@ The main components of this strategy are:
 
 This strategy combines multiple technical indicators and adopts moving stop profit/loss to lock in profits and control risks while ensuring high entry accuracy. The logic is simple and clear. Performance can be further improved through parameter optimization and indicator selection. But the strategy is more suitable for mean-reversion and range-bound markets. It may underperform in persistent uptrends. In summary, this is a typical multi-factor mean-reversion momentum strategy that provides ideas and reference for stock rotation trading.
 
-[/trans]
 
 > Strategy Arguments
 

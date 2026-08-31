@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15d9fb7b7f1360e0296.png)
-[trans]
-
-## 概述
-
-该策略是一个利用K线实体大小和趋势动量指标EMA来判断市场趋势,实现低买高卖的自动交易策略。其基本思路是在上升行情中追涨杀跌,在下降行情中回补做多。
-
-## 策略原理
-
-1. 根据K线实体大小将蜡烛分为渣渣蜡烛、小蜡烛、大蜡烛三种类型。
-2. 在EMA上升的情况下,如果出现大红蜡烛,说明市场在调整,此时抛出多单。
-3. 在EMA下降的情况下,如果出现大绿蜡烛,说明市场企稳,此时加仓建仓。
-4. 通过实时监控K线实体变化和EMA趋势,动态调整仓位。
-
-## 优势分析
-
-1. 策略思路清晰,通过简单指标判断市场结构,容易理解。  
-2. 策略参数较少,不易过拟合,稳定性较高。
-3. 实现了低吸高抛的交易逻辑,在行情大幅波动时获利明显。
-4. 兼顾趋势和反转,在行情转换时也能及时反应。
-
-## 风险及优化
-
-1. 未考虑股价的绝对幅度,可能导致止损风险。可以结合ATR指标进行止损。
-2. 没有考虑加密货币的基差问题,可以测试更多的交易对。
-3. 可以引入机器学习算法辅助判断K线形态。
-4. 可以结合交易量指标筛选品种。
-5. 可以测试不同周期的参数调整。
-
-## 总结
-
-本策略整体思路清晰易懂,主要突出“动量”和“追踪”两个特点。通过简单的EMABOLL指标判断市场主线方向,K线实体判断局部调整,实现低吸高抛的高效交易。策略稳定性较高,在加密货币中表现尤为出色,值得进一步测试优化。
-
-||
 
 
 ## Overview
@@ -75,7 +42,6 @@ This strategy utilizes the body size of candlesticks and the trend momentum indi
 
 The overall idea of this strategy is straightforward and easy to understand, with “momentum” and “tracking” as its main features. It determines the main market direction through the simple EMABOLL indicator and uses candlestick bodies to judge local adjustments, realizing efficient trading by buying low and selling high. The strategy has high stability and performs exceptionally well in cryptocurrencies, making it worthwhile for further testing and optimization.
 
-[/trans]
 
 
 

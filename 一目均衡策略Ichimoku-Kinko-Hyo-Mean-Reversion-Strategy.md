@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略综合利用 Ichimoku Kinko Hyo 指标、日线突破、高斯平滑移动平均线、MACD 指标等多种技术指标,对趋势方向进行判断,寻找更可靠的入场时点。
-
-## 策略原理  
-
-1. Ichimoku Kinko Hyo 指标判断:Conversion Line 上穿 Base Line 视为看涨信号。
-
-2. 日线突破判断:今日收盘价较昨日收盘价上涨一定比例确认看涨信号。
-
-3. 高斯平滑移动平均线判断:价格上穿均线视为看涨信号。
-
-4. MACD 判断:DIFF 线上穿 DEA 线视为看涨信号。
-
-5. 综合以上多重因素判断市场面临趋势转换,确定看多进入的时点。
-
-## 策略优势  
-
-1. 多种指标综合判断,提高判断准确性。
-
-2. 日内和多时间框判断共同确认,避免假突破。 
-
-3. Ichimoku Kinko Hyo 对趋势判断准确可靠。
-
-4. 高斯平滑移动平均线具有滞后性较小的特点。
-
-5. MACD 可判断动量面临转折。
-
-## 策略风险
-
-1. 多重条件同时成立时机相对较少,可能导致错过较佳入场点。
-
-2. 指标参数设置不当可能导致发出错误信号。
-
-3. 日内判断与多时间框判断可能出现分歧。
-
-4. 假突破仍可能发生,带来损失。
-
-对应优化方法:
-
-1. 调整指标参数,扩大入场时机。
-
-2. 测试不同品种和周期参数组合,优化参数。 
-
-3. 优化时间框配置,使各时间框信号协调。
-
-4. 设置止损止盈,控制单笔损失。
-
-## 策略优化方向 
-
-1. 测试不同指标的组合,寻找更好的组合。
-
-2. 增加机器学习算法,利用更多数据提升判断能力。
-
-3. 增加趋势检测,避免逆势交易。
-
-4. 优化资金管理策略,使策略更稳健。
-
-5. 优化止损止盈策略,最大化盈利。
-
-## 总结
-
-该策略整合多个指标判断趋势方向,在确定较高概率看多时机时入场,通过多时间框和多指标共同验证,提高判断准确性。可从调整参数窗口、优化组合以及引入更多数据等方面进行优化,集成更多因子信号,在保持稳定的基础上获取更多交易机会。
-
-|| 
 
 ## Overview
 
@@ -141,7 +74,6 @@ Possible solutions:
 
 This strategy integrates multiple indicators to determine trend direction, and enters on high probability bullish signals verified across timeframes and indicators. It can be improved by adjusting parameters, optimizing indicator combinations and incorporating more data to integrate more signals while maintaining stability for more trading opportunities.
 
-[/trans]
 
 > Strategy Arguments
 

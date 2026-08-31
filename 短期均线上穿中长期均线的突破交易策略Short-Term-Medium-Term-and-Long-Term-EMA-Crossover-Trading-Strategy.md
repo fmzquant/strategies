@@ -11,40 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/17173b7cc08054c20d6.png)
-[trans]
-
-
-本策略基于短期、中期和长期三条不同周期的指数移动平均线(EMA)进行交易信号生成。其中,短期EMA周期为5天,中期EMA周期为8天,长期EMA周期为13天。当短期EMA上穿中期和长期EMA时,做多;当短期EMA下穿中期和长期EMA时,做空。
-
-#### 策略原理
-
-该策略通过计算不同周期的EMA来判断市场趋势。短期EMA反映最近几天的平均价格,中长期EMA反映较长时间内的平均价格。短期EMA上穿中长期EMA代表价格开始向上突破,因此做多;短期EMA下穿中长期EMA代表价格开始向下突破,因此做空。
-
-具体来说,该策略同时计算5天、8天和13天三条EMA。当5天EMA上穿8天和13天EMA时生成做多信号;当5天EMA下穿8天和13天EMA时生成做空信号。做多后,如果5天EMA重新下穿13天EMA,则平仓。做空后,如果5天EMA重新上穿13天EMA,则平仓。
-
-#### 策略优势
-
-1. 使用多周期EMA判断趋势,避免因单一EMA周期过短或过长而漏掉关键的趋势转折点
-2. 结合中短长三个周期EMA,交易信号更加可靠准确
-3. 通过EMA平滑价格,可过滤掉部分市场噪音,防止无谓开仓
-
-#### 策略风险
-
-1. 三条EMA均为延后的趋势指标,在实际价格突破前一定有时间差,可能会导致交易信号滞后
-2. EMA无法区分真正趋势和短期调整,可能会产生错误信号
-3. 固定的EMA周期无法适应市场在不同周期下的变化特征
-
-可以通过以下方法优化:
-
-1. 结合其他指标如MACD等判断真正趋势,避免产生错误信号
-2. 根据不同品种、市场环境可灵活调整EMA周期参数
-3. 增设移动止损,以锁定利润,控制风险
-
-#### 总结
-
-本策略通过计算短中长三个周期EMA并比较其交叉情况来判断市场趋势转折,属于典型的突破系统。其优点是交易信号简单清晰,容易操作;缺点是EMA指标本身滞后,无法区分真正趋势和短期调整。未来可以考虑辅以其他技术指标判断,或结合自适应参数调整优化该策略。
-
-||
 
 This strategy generates trading signals based on three exponential moving average lines (EMA) with different periods: short-term EMA with 5-day period, medium-term EMA with 8-day period and long-term EMA with 13-day period. It goes long when the short-term EMA crosses over the medium-term and long-term EMAs, and goes short when the short-term EMA crosses under the medium-term and long-term EMAs.  
 
@@ -75,7 +41,6 @@ Improvement ideas:
 #### Summary
 This is a typical breakout system that judges trend reversals by comparing crossovers between short, medium and long-period EMAs. Its simplicity in signaling facilitates ease of trading, but also suffers from EMAs' inherent lagging and inability to filter real trends from temporary corrections. Future enhancements may integrate other technical indicators or adaptive parameter tuning to optimize it.  
 
-[/trans]
 
 > Strategy Arguments
 

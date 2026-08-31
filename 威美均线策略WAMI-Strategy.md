@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1201dcd0fb4853144db.png)
-[trans]
-
-## 概述
-
-威美均线策略(WAMI Strategy)是一个基于傅里叶分析,通过迭代优化过程找到在历史市场数据中能够持续获得稳定收益的交易策略。它结合了指数移动平均线(EMA)、加权移动平均线(WMA)和动量指标(MOM),形成一个复合交易指标——威美均线(WAMI)。当威美均线高于或低于一个阈值时,该策略会发出买入或卖出信号。
-
-## 策略原理
-
-该策略的核心指标是威美均线(WAMI)。它的计算方法是:先计算价格的动量,再计算出n日加权移动平均,然后进行两次指数移动平均计算,得到最终的威美均线。其中动量指标反映价格变化速度,WMA过滤掉短期噪音,EMA平滑价格。
-
-当威美均线上升越过指定阈值时产生买入信号,意味着市场正在形成上涨趋势;当下降越过阈值时产生卖出信号,代表进入下跌趋势。用户可以根据回测结果自行调整阈值,以达到更好的策略优化效果。
-
-## 优势分析
-
-该策略结合了趋势跟踪和超买超卖判断,能抓住中长线价格趋势的同时避免被套。相比普通移动平均线策略,威美均线提高了交易信号的质量和稳定性。
-
-主要优势有:
-
-1. 傅里叶优化提高参数可配置性
-2. 双EMA滤波降低假信号
-3. WMA+MOM组合提高敏感性
-4. 可长可短,适应性强
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 优化过程复杂,不当设置可能失败
-2. 大幅震荡市场中震荡率降低
-3. 表现与参数设置高度相关
-4. 趋势反转时无法快速切换
-
-可以通过调整参数组合、设置止损、合理期望收益来降低这些风险。当市场进入剧烈震荡时,应暂停使用或减小仓位。
-
-## 优化方向 
-
-该策略还可从以下几个方面进行优化:
-
-1. 测试更多参数组合寻找最优参数
-2. 增加成交量等辅助条件过滤entry
-3. 增加止损机制
-4. 结合其他指标判断大级别趋势
-5. 动态调整参数适应市场环境
-
-## 总结
-
-综上所述,威美均线策略是一个值得推荐的中长线趋势跟踪策略。它通过对价格apw量变化的深入分析,形成高质量的交易信号。在参数优化和风险控制到位的前提下,该策略可以获得稳定收益。但用户需要注意,任何策略都存在失败的可能,务必审慎评估后再投入真实资金交易。
-
-||
 
 ## Overview
 
@@ -106,7 +57,6 @@ Some aspects this strategy can be further optimized on:
 
 In conclusion, the WAMI Strategy is a recommended medium-to-long term trend following strategy. By thoroughly analyzing price and volume changes, it generates quality trading signals. Given proper parameter optimization and risk control, this strategy can achieve steady profits. However, users should note that any strategy may fail, so prudent evaluation is a must before committing real capital.
 
-[/trans]
 
 > Strategy Arguments
 

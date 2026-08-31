@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f2e206d271871c8fe8.png)
-[trans]
-### 概述
-
-本策略基于简单移动平均线和加权移动平均线的交叉来产生交易信号,同时结合止损和止盈来管理仓位。该策略融合了动态因素(移动平均线交叉)和静态因素(固定止损止盈比例),达到动静交织的效果。
-
-### 策略原理  
-
-核心逻辑是计算两个不同周期的移动平均线,一个是9日简单移动平均线,一个是21日加权移动平均线。当短周期的9日简单移动平均线上穿长周期的21日加权移动平均线时,产生买入信号;当短周期线下穿长周期线时,产生卖出信号。
-
-收到信号后,按照设置的止损止盈比例下单。例如,如果止损比例设定为5%,那么止损价格就设置为入场价的95%。如果止盈比例为5%,那么止盈价格设置为入场价的105%。这样就实现了动态因素(移动平均线交叉决定入场和出场时机)和静态因素(固定的止损止盈比例)的融合。
-
-### 优势分析
-
-该策略结合动态技术指标和静态策略参数,兼具动静系统的优势。技术指标能够动态捕捉市场特征,有利于把握趋势;而参数设置则提供稳定的风险和回报控制,有利于降低仓位管理的随机性。
-
-相较于纯动态系统,本策略在仓位管理上更为稳健,可以减少非理性决策的影响。相较于纯静态系统,本策略的入场选择更为灵活,能够适应市场的变化。所以,本策略整体而言稳健性和收益性都较好。
-
-### 风险分析  
-
-本策略的风险主要来自两个方面。一是移动平均线产生错误信号的可能。当市场处于震荡整理时,移动平均线可能交叉频繁,使策略被套牢。二是固定止损止盈无法适应特殊市况的风险。当突发事件导致市场大幅波动时,预设的止盈止损位置可能会被突破,无法有效控制风险。
-
-对策一是避开关键时间节点,减少错误信号的概率。对策二是根据市场波动率和特殊事件启用自适应止损算法,使止损止盈随市场调整。
-
-### 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 测试不同参数组合,寻找最佳参数;
-
-2. 增加过滤条件,避免无效信号;  
-
-3. 应用自适应止损算法,与市场联动;
-
-4. 结合其他指标判断强弱趋势,避开震荡市;
-
-5. 利用机器学习方法自动优化参数。
-
-通过测试不同参数、增加过滤条件、改进止损止盈、判断趋势等方法,可以进一步提高策略的稳定性和收益率。
-
-### 总结  
-
-本策略成功结合了动态指标和静态参数,兼顾了灵活性和稳健性。相较于纯动态和纯静态策略,本策略整体表现更佳。当然,仍有可优化的空间,通过参数调整、过滤条件、自适应止损、机器学习等方法可以使策略效果更优。
-
-||
 
 ### Overview
 
@@ -99,7 +55,6 @@ Through testing parameters, adding filters, improving stops, judging trends, etc
 
 The strategy successfully combines dynamic indicators and static parameters, balancing flexibility and robustness. Compared with pure dynamic and static strategies, this strategy performs better overall. Of course, there is still room for optimization by adjusting parameters, adding filters, adaptive stops, machine learning, etc., to make the strategy more effective.
 
-[/trans]
 
 > Strategy Arguments
 

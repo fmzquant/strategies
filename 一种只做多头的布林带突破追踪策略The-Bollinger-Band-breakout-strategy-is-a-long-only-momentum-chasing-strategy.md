@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d17c4a3eee3ae1ca2d.png)
-[trans]
-
-## 概述
-
-布林带突破策略是一种只做多头的momentum追踪策略。它利用布林带的上轨和下轨来判断价格动能,并在价格突破上轨时做多,在价格跌破下轨或移动平均线时平仓。
-
-## 策略原理
-
-该策略首先计算N日移动平均线作为基准线,然后在基准线上下各添加K倍标准差构建上轨和下轨,从而形成布林带。当价格突破上轨时,表示价格出现向上突破,属于金叉信号,此时策略会开仓做多;当价格跌破下轨或移动平均线时,表示价格出现向下回落,属于死叉信号,此时策略会平仓清仓。
-
-由于布林带上轨和下轨能够动态地包含价格数据的大部分分布,所以它们代表了当前市场价格的合理波动范围。当价格突破该合理波动范围,就意味着市场出现异常,需要及时调整仓位。这就是该策略的基本判断逻辑。
-
-## 优势分析
-
-该策略有以下几个优势:
-
-1. 能够有效捕捉价格趋势,及时追踪市场momentum
-2. 利用布林带判断异常突破,不易假突破
-3. 规则清晰易执行,容易量化实现
-4. 可根据市场波动率选取合适的参数,优化策略
-
-## 风险分析 
-
-该策略也存在一些风险:  
-
-1. 市场出现剧烈波动时,布林带判断会失效
-2. 无法判断市场实际趋势,可能追高杀跌
-3. 存在一定的时间滞后
-4. 没有考虑交易成本,实际操作效果会打折扣
-
-为了控制这些风险,可以结合趋势判断指标,譬如MACD;也可以适当调整参数,缩小布林带范围来降低错误信号。
-
-## 优化方向
-
-该策略还可以从以下几个方向进行优化:
-
-1. 结合交易量指标判断真实突破
-2. 利用自适应布林带实时优化参数
-3. 结合止损策略,控制单笔损失
-4. 增加持仓优化机制,根据市场情况动态调整仓位
-
-通过以上几点优化,可以进一步提高策略稳定性,并减少交易风险。
-
-## 总结
-
-布林带突破策略整体来说是一种较为经典的追踪趋势策略。它有比较清晰的判断逻辑和易操作的特点,适合量化交易。但也存在一定缺陷,需要进一步优化以适应复杂多变的市场环境。如果能与其他指标和策略机制有效结合,就能大幅提高效果。
-
-||
 
 ## Overview
 
@@ -104,7 +56,6 @@ Through the above optimizations, we can further improve the stability of the str
 
 In summary, the Bollinger Band breakout strategy is a rather classic trend chasing strategy. It has clear logic and easy automation. But there are still some flaws, requiring further optimizations to adapt to complex changing market environments. If combined properly with other indicators and mechanisms, the results can be greatly improved.
 
-[/trans]
 
 > Strategy Arguments
 

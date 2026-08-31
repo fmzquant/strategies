@@ -9,68 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略基于自适应波带通道,设计了两种不同的跟踪止损策略,进行多时间框架的系统性回测验证,属于趋势跟踪类交易策略。
-
-## 策略原理
-
-1. 计算自适应波带通道的上下轨,通道宽度通过参数调整。
-
-2. 突破追踪策略,价格突破通道后开仓,在通道内时止损。
-
-3. 回归反转策略,价格到达通道时开仓,价格回归通道内时止损。 
-
-4. CCI指标辅助判断多空线。
-
-5. 多时间框架回测验证两种策略的可行性。
-
-## 优势分析
-
-1. 波带通道简单直观,可以有效捕捉价格趋势。
-
-2. 两种策略可以适应不同市场情况,提高稳健性。
-
-3. CCI指标可以辅助判断多空。
-
-4. 多时间框架回测使结果更具说服力。
-
-5. 策略规则简单清晰,易于实施。
-
-## 风险分析 
-
-1. 波带通道可能出现失效的情况。
-
-2. 两种策略都存在止损过早或过晚的风险。
-
-3. CCI指标可能发出错误信号。
-
-4. 需要谨慎处理回测数据偏差。
-
-5. 参数优化时可能存在过拟合。
-
-## 优化方向
-
-1. 测试不同参数,寻找最优参数组合。
-
-2. 评估增加其他指标进行信号过滤。
-
-3. 优化止损策略,降低风险。
-
-4. 研究自适应通道宽度的计算方法。 
-
-5. 在更多品种和周期进行回测验证。
-
-6.采用机器学习方法动态优化参数。
-
-## 总结
-
-该策略基于波带通道设计了两种跟踪止损策略,进行了多时间框架的回测验证。通过参数优化、止损策略改进等方式,可以增强系统稳健性,将其开发为一个成熟可靠的趋势跟踪交易系统。
-
-||
 
 
 ## Overview
@@ -131,7 +69,6 @@ This strategy uses adaptive Bollinger Bands to design two types of trailing stop
 
 This strategy designs two trailing stop strategies based on Bollinger Bands and backtests them across multiple timeframes. Refining via parameter optimization, stop improvements etc can enhance robustness into a mature trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

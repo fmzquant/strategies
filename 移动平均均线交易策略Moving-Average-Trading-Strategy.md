@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5d029cba0ad9d90c33.png)
-[trans]
-## 概述
-
-该策略是一个基于移动平均线的趋势跟踪交易策略。它使用14日简单移动平均线来判断市场趋势方向,并在价格接近移动平均线时进行买入或卖出。
-
-## 策略原理  
-
-该策略的核心逻辑是:
-
-1. 计算14日简单移动平均线(SMA)
-2. 当收盘价低于移动平均线的99%时,认为处于超卖状态,产生买入信号
-3. 入场后设置止损和止盈价格
-4. 止损价格为入场价格再向下10个点
-5. 止盈价格为入场价格再向上60个点  
-
-该策略属于趋势跟踪策略,通过移动平均线判断市场总体走势,在超卖时段介入,随大趋势运行止损止盈。
-
-## 优势分析
-
-该策略有以下主要优势:  
-
-1. 策略逻辑简单清晰,容易理解和实现
-2. 利用移动平均线判断市场走势,可以过滤掉部分噪音
-3. 只在超卖阶段介入,可以避开大幅下跌的风险
-4. 止损和止盈设置合理,避免亏损扩大
-5. 回撤和损失可以控制在一定范围内
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 移动平均线存在滞后,可能错过短线交易机会
-2. 止损设置过于激进,可能被秒出
-3. 市场出现大幅跳空或重大消息导致方向反转
-4. 机器人套利或高频交易干扰
-
-可以通过适当放宽入场条件、调整止损位置等方法来规避部分风险。
-
-## 优化方向  
-
-该策略还可以从以下几个方面进行优化:
-
-1. 优化移动平均线的参数,适配更多市场环境
-2. 增加多个时间周期的移动平均线,进行组合判断
-3. 在特定时间段使用不同的止损止盈比率
-4. 利用波动率指标过滤入场时机
-5. 增加机器学习等算法判断趋势和关键点
-
-## 总结
-
-该策略整体来说是一种简单实用的趋势跟踪策略。它利用移动平均线判断趋势方向,在超卖点位介入,并设置合理的止损止盈,可以有效控制风险。通过一定的优化和组合,可以适配更多的市场情况,进一步提高策略的稳定性和盈利能力。
-
-||
 
 ## Overview   
 
@@ -115,7 +62,6 @@ Some ways to optimize this strategy:
 
 In summary, this is a simple and practical trend-following strategy. It identifies trend direction using moving average, enters oversold stages, and sets reasonable stop loss and take profit to control risk. With proper enhancements and combinations, it can be adapted to more market conditions and further improve stability and profitability.
 
-[/trans]
 
 
 

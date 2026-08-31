@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16d89db5059d8c844bc.png)
-[trans]
-
-### 概述
-
-量化双因子反转惯性交易策略(Quant Dual Factor Reversal Inertia Trading Strategy)是一种结合价格反转信号和市场惯性信号的量化交易策略。该策略首先利用随机指标实现价格反转信号,然后结合相对波动率指标的市场惯性信号,最终实现双因子驱动的交易决策。
-
-### 策略原理
-
-该策略主要基于两部分:
-
-1. 价格反转部分采用乌尔夫·詹森(Ulf Jensen)在其著作中提出的思想,具体为:当收盘价连续2日上涨,而9日Slow Stochastic指标低于50时,做多;当收盘价连续2日下跌,而9日Fast Stochastic指标高于50时,做空。
-
-2. 市场惯性部分采用相对波动率指标(RVI)。该指标值在0到100之间波动,高于50表示市场长期趋势为上涨;低于50表示市场长期趋势为下跌。
-
-综上,该策略整合价格反转信号和市场惯性信号,最终判断当前市场方向。当两者信号一致时,产生交易信号。
-
-### 优势分析
-
-该策略最大的优势在于结合了反转和趋势两大交易思路。反转信号能够捕捉短期调整提供交易机会;惯性信号确保只在长期趋势一致时开仓,可有效过滤噪音。
-
-另外,双因子驱动可提高信号质量,同时Stochastic指标参数优化和RVI平滑优化也为策略优化提供了空间。
-
-### 风险分析
-
-该策略面临的主要风险有:
-
-1. 反转信号识别不准确的风险。需要验证参数是否合理。
-
-2. 惯性信号发出错误信号的风险。RVI指标本身会有滞后,需要平滑参数调整。
-
-3. 双因子信号时间匹配不当,错过交易机会的风险。需要测试不同参数下匹配情况。
-
-此外,反转类策略会面临趋势市场下亏损加剧的风险。需要严格遵守止损规则。
-
-### 优化方向 
-
-该策略可从以下几个方面进行优化:
-
-1. 优化Stochastic指标的参数,识别反转信号的质量和及时性。
-
-2. 优化RVI指标的平滑参数,提高惯性判断的准确性。
-
-3. 测试不同持仓时间,确定最佳持仓周期。
-
-4. 加入止损机制。回测不同的止损点,找到最优止损位置。
-
-5. 可以考虑加入其他因子信号,例如交易量异动等,形成多因子驱动。
-
-### 总结
-
-量化双因子反转惯性交易策略综合考虑反转和趋势因子,使用 stochastic指标和RVI指标产生交易信号。策略具有双因子驱动、反转机会捕捉以及信号过滤等优势,可通过多方面参数优化进一步改善。风险控制也尤为重要,需要严格执行止损。该策略为量化交易提供了一个很好的思路。
-
-||
 
 
 ### Overview
@@ -115,7 +62,6 @@ The strategy can be optimized in the following aspects:
 
 The Quantitative Dual Factor Reversal Inertia Trading Strategy comprehensively considers reversal and trend factors, using the Stochastic indicator and RVI indicator to generate trading signals. The strategy has advantages like dual-factor driven, capturing reversal opportunities, and signal filtering. It can be further improved through multi-faceted parameter optimization. Risk control through strict stop loss enforcement is also crucial. The strategy provides good ideas for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

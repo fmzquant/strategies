@@ -9,54 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略融合使用一目均衡表和相对强弱指数(RSI)指标来判断趋势方向,在趋势启动时入场。当一目均衡表的三根线段形成符合条件的排列组合并结合RSI信号时,产生交易信号。
-
-### 策略原理
-
-1. 计算一目均衡表的转换线、基准线、延迟线
-2. 计算RSI指标值
-3. 当转换线上穿基准线,延迟线在阳线上方,收盘价突破云图,且RSI低于50时做多
-4. 当转换线下穿基准线,延迟线在阴线下方,收盘价跌破云图,且RSI高于50时做空
-5. 当反向信号出现时平仓
-
-具体来说,该策略融合一目均衡表的趋势判断和RSI的超买超卖判定。当一目均衡表的三线组合形态显示趋势启动,并且RSI同时显示没有超买超卖时,产生入场信号。RSI过滤帮助避免在盘整时错误入场。平仓信号则完全依据一目均衡表反向FORMATION。
-
-### 优势分析
-
-1. 融合RSI指标,提高入场准确率
-2. 一目均衡表可判断趋势方向,具有较强的趋势跟踪能力
-3. 交易信号简单直观,容易掌握
-4. 可调整均线和RSI参数,适应不同周期
-5. 有止盈止损策略,可控制风险
-
-### 风险分析
-
-1. 一目均衡表判定有时滞后,可能误入盘整
-2. 需要优化参数,否则交易信号可能不准确
-3. 长期持仓面临隔夜风险
-4. RSI容易发出假信号
-5. 可能因为反转而被套
-
-可以通过参数优化,优化止盈止损策略,适当缩短持仓周期等方式来管理风险。
-
-### 优化方向
-
-1. 测试不同均线和RSI参数找出最佳组合
-2. 引入移动止损追踪价格变化
-3. 评估限定交易时间的效果
-4. 研究不同品种的参数偏好
-5. 测试增加再入场和加仓规则
-6. 比较不同的止盈止损策略
-
-### 总结
-
-本策略融合一目均衡表和RSI指标进行趋势判断和交易。优点是信号简单直观,ROI高;缺点是存在滞后和被套风险。可通过参数优化、止盈止损优化、限定交易时间等方式提高策略效果并控制风险。该策略可使交易者全面了解一目均衡表的应用。
-
-|| 
 
 ### Overview
 
@@ -103,7 +55,6 @@ Risks can be managed via parameter optimization, stop profit/loss tuning, limiti
 
 This strategy combines Ichimoku Cloud and RSI for trend analysis and trading. Pros are simple intuitive signals and high ROI; Cons are lags and trapped risks. Performance can be improved and risks controlled through parameter optimization, stop profit/loss tuning, trading hours control etc. It allows comprehensive understanding of Ichimoku Cloud application.
 
-[/trans]
 
 > Strategy Arguments
 

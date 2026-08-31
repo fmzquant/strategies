@@ -9,79 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-该策略综合利用Voss预测滤波器和Ehlers瞬时趋势线指标,以识别市场周期性转折点,实现量化交易。Voss滤波器可提前发出买入/卖出信号,而瞬时趋势线指标则用于判断整体趋势方向,减少Voss滤波器在趋势市场中的误导。该策略可用于比特币等周期性比较明显的品种,在回测中表现较好。
-
-## 策略原理
-
-### Voss预测滤波器
-
-Voss预测滤波器来自约翰·F·埃勒斯的文章《A Peek Into The Future》。该滤波器的计算公式如下:
-
-```pine
-_filt = 0.5 * _s3 * _x1 + _f1 * _s2 * _filt[1] - _s1 * _filt[2]
-_voss = _x2 * _filt - _sumC
-```
-
-其中,_x1为价格的一阶差分;_x2为平滑因子;_s1、_s2、_s3为滤波参数;_f1为周期参数;_filt为滤波结果;_voss为最终输出。
-
-该滤波器可看作是一种平滑滤波,它强调当前和过去几个周期的信息,从而提前发出买入/卖出信号。由于内在的组 delays,它就像“看进了未来”一样,可在其他指标之前发出预测性信号。
-
-### 瞬时趋势线指标
-
-瞬时趋势线指标由以下公式计算:
-
-```pine 
-_it = (_a-((_a*_a)/4.0))*_src+0.5*_a*_a*_src[1]-(_a-0.75*_a*_a)*_src[2]+2*(1-_a)*nz(_it[1])+-(1-_a)*(1-_a)*nz(_it[2])
-```
-
-该指标实时绘制一条与价格最符合的趋势线,可准确判断趋势方向和强弱。
-
-### 策略逻辑
-
-当Voss由负转正,并上穿滤波结果时产生买入信号。
-
-当Voss由正转负,并下穿滤波结果时产生卖出信号。 
-
-同时,只有当瞬时趋势线指标确认趋势方向时,才会发出交易信号。这能过滤掉Voss滤波器在趋势市场中可能发出的错误信号。
-
-## 策略优势
-
-- Voss滤波器可提前发出预测性信号,捕捉周期性反转点
-- 瞬时趋势线指标可准确判断趋势方向,避免因滤波器提前发出的错误信号
-- 可配置参数进行优化,适用于不同周期和市场环境
-- 可添加止损策略控制风险
-
-## 策略风险及解决方法
-
-- 该策略依赖滤波器提前发出信号,可能跳过部分趋势行情 
-- 在强势趋势下,可能产生反作用交易信号,带来损失
-
-可通过以下方法降低风险:
-
-- 优化周期参数,匹配不同品种周期性
-- 调整带宽参数,降低滤波强度,减少误导信号
-- 增加趋势过滤,避免强势趋势下的错误信号
-- 设置止损策略,控制单笔损失
-
-## 策略优化方向
-
-该策略可从以下方面进行优化:
-
-- 尝试不同的价格源,如收盘价、均线等,获得更好的输入
-- 调整滤波器周期参数,匹配具体品种的周期性
-- 优化趋势指标参数,获取更准确的趋势判断 
-- 尝试不同的趋势指标,寻找更合适的组合
-- 添加止损、 trailing stop 策略,更好控制风险
-- 进行参数优化,寻找最佳参数组合
-
-## 总结
-
-该策略综合Voss滤波器和趋势指标,可有效识别市场的周期性反转点。通过优化参数,控制风险,该策略可实现稳定的量化交易系统。它可广泛应用于具有明显周期性的品种,在回测中已展现出良好的交易效果。总体而言,该策略具有独特的预测能力,且可通过多方面优化,具有广阔的应用前景。
-
-||
 
 ## Overview
 
@@ -154,7 +81,6 @@ The strategy can be improved by:
 
 This strategy combines the Voss filter and trend indicator to effectively identify cyclical turns in the market. With optimized parameters and risk controls, it can produce a robust quantitative trading system. It is widely applicable to instruments exhibiting cyclical patterns, as evidenced by good backtest results. Overall, the strategy has unique predictive capabilities, and broad potential for enhancement through multi-dimensional optimization.
 
-[/trans]
 
 > Strategy Arguments
 

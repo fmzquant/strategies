@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/152597fc80e60846ad1.png)
-[trans]
-
-## 概述
-
-该策略利用自适应移动平均线指标考夫曼自适应移动平均线(KAMA)来跟踪价格趋势,实现低买高卖,获利。
-
-## 策略原理
-
-考夫曼自适应移动平均线(KAMA)指标的计算公式为:
-
-```
-nAMA = nz(nAMA[1]) + nsmooth * (Close - nz(nAMA[1]))
-
-其中:
-
-nsmooth = (nefratio * (nfastend - nslowend) + nslowend)^2
-
-nefratio = nsignal / nnoise 
-
-nsignal = |Close - Close[Length]|
-
-nnoise = sum(|Close - Close[1]|, Length)
-
-nfastend = 0.666
-
-nslowend = 0.0645
-```
-
-该指标综合考虑了市场波动性和价格变化趋势,可以更快地跟踪价格趋势。具体来说:
-
-1. 当市场波动较小时,nsmooth 接近 nslowend,KAMA 线变化缓慢,抑制市场噪音。
-2. 当市场波动加大和出现趋势时,nsmooth 接近 nfastend,KAMA 线快速变化,跟踪趋势。
-
-通过比较价格和 KAMA 的关系,可以判断价格的趋势方向,以此来决定做多做空。
-
-## 策略优势
-
-该策略最大的优势在于利用自适应移动平均线指标跟踪价格趋势变化,可以有效减少噪音的影响,跟踪效果好。具体优势如下:
-
-1. KAMA指标抑制市场噪音,可以减少不必要的交易次数组合。
-2. KAMA指标可以快速响应价格变化趋势,追踪效果好。
-3. 策略决策规则简单清晰,容易理解和实现。
-4. 可配置反向交易,适应不同市场环境。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 在震荡行情中,KAMA指标可能出现误差信号。可通过调整参数优化指标效果。
-2. 跟踪延迟存在,可能错过短期价格反转。可酌情结合其他指标诊断。 
-3. 未考虑交易费用和滑点,实盘效果会弱于回测。
-
-## 策略优化方向 
-
-该策略还可以从以下几个方面进行优化:
-
-1. 优化KAMA参数,提高指标的跟踪灵敏度。
-2. 增加止损机制,控制单笔交易的最大损失。
-3. 结合其它指标过滤信号,提高决策的准确性。
-4. 添加重新入场机制,进一步跟踪趋势。
-
-## 总结
-
-本策略利用考夫曼自适应移动平均线指标跟踪价格趋势,决策规则简单清晰,实盘操作容易。该指标抑制噪音的同时快速响应价格变化,跟踪效果良好,是一个值得推荐的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -149,7 +83,6 @@ This strategy can also be optimized in the following aspects:
 
 This strategy uses Kaufman's Adaptive Moving Average to track price trends. The decision rules are simple and easy to implement for live trading. While suppressing noise, the indicator responds quickly to price changes with excellent tracking effect. It is a recommended trend following strategy worth trying out.
 
-[/trans]
 
 > Strategy Arguments
 

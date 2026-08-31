@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14489420dd56ced3993.png)
-[trans]
-
-### 概述
-
-超级趋势反转策略是一种结合超级趋势指标和RSI指标的反转交易策略。该策略利用超级趋势判断市场趋势方向,再结合RSI指标识别反转机会,在趋势反转点进行交易。
-
-### 策略原理
-
-超级趋势反转策略主要由两部分组成:
-
-1. 超级趋势指标判断市场趋势
-
-    超级趋势指标通过计算当前价格与一定周期的平均真实波幅的价格带来判断趋势方向。当价格突破上轨时为看涨,而价格跌破下轨时为看跌。
-    
-2. RSI指标识别反转
-
-    RSI指标通过比较一段时间内的收盘涨价日数和跌价日数,来判断当前是否处于超买超卖状态。结合超级趋势指标,可以发现趋势反转的时机。
-    
-    本策略中,通过一定transformations,得到处理后的RSI曲线,设定阈值线,RSI曲线突破相应阈值时产生买入和卖出信号。
-    
-### 优势分析
-
-超级趋势反转策略结合趋势和反转指标,综合考量趋势力量和超买超卖现象,可以在相对较好的位置打开和平仓,从而获得较优的策略收益。
-
-主要优势有:
-
-1. 结合趋势和反转,在反转点交易
-2. 回撤可控,较好控制风险
-3. 参数优化空间大,可根据市场调整
-
-### 风险分析
-
-超级趋势反转策略也存在一定的风险,主要包括:
-
-1. 反转失败风险
-
-    反转信号可能是假信号,不能成功反转,此时亏损可能加大。
-    
-2. 参数优化风险
-
-    不当的参数优化可能导致策略过拟合,无法适应市场的变化。
-    
-3. 技术指标滞后
-
-    所有技术指标都存在滞后,可能错过最佳进入位置。
-
-针对这些风险,可以通过组合其他指标,调整参数优化方法等方式进一步优化和改进。
-
-### 优化方向 
-
-超级趋势反转策略可根据市场和需求,在以下维度进行优化:
-
-1. 优化超级趋势参数,适应不同市场
-2. 优化或改进RSI反转触发逻辑
-3. 增加止损策略,以控制单笔亏损
-4. 结合其他指标,确定反转可靠性
-5. 加入交易量指标,避免假突破
-
-### 总结
-
-超级趋势反转策略融合趋势交易和反转交易的优点,既可以顺势而为,又可以在反转点打开仓位。通过不断测试和优化参数,适当地控制风险,该策略可以获得稳定的策略收益。其可优化空间也非常大,可根据市场实际情况调整。
-
-||
 
 ### Overview
 
@@ -134,7 +71,6 @@ The Super Trend reverse strategy can be optimized in the following dimensions ac
 
 The Super Trend reverse strategy combines the advantages of trend trading and reversal trading, allowing to go with the trend while opening positions at reversal points. By continuously testing and optimizing parameters and appropriately controlling risks, this strategy can obtain stable strategy returns. Its optimization space is also very large, adjustable based on actual market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

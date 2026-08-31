@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略利用神经网络预测模型在两种时间范围内判断价格趋势,并在双时间轴信号同向时进行交易。
-
-具体逻辑是:
-
-1. 分别取得两种时间轴价格变动,例如日线和1小时线
-
-2. 将价格变动输入神经网络进行训练,得到每轴的预测输出
-
-3. 当两轴预测输出同方向,即超过阈值,产生交易信号
-
-4. 日线预测做多时,1小时预测做多时,进行做多交易
-
-5. 日线预测做空时,1小时预测做空时,进行做空交易
-
-6. 两轴预测不一致时,平仓
-
-该策略充分利用双时间轴信息,在多个维度判断趋势方向,然后进行交易,可有效减少假信号。
-
-## 策略优势
-
-- 双时间轴预测,提高判断准确性
-
-- 神经网络对复杂数据进行建模
-
-- 同向交易,避免被套
-
-## 策略风险
-
-- 需要大量数据进行网络训练
-
-- 网络结构设计需要反复测试
-
-- 双轴组合信号出现的频率较低
-
-## 总结
-
-该策略使用神经网络从双时间轴判断价格趋势,在确保判断准确性的前提下进行交易。但其需要优化网络参数,设定合理的交易频率。整体来说可提供较为稳健的交易方向指引。
-
-||
 
 
 ## Strategy Logic
@@ -95,7 +52,6 @@ Using dual timeframe inputs improves accuracy by judging trend from multiple dim
 
 This strategy leverages neural networks across two timeframes to accurately determine trend before trading. But parameter tuning is needed for ideal trade frequency. Overall it provides robust trend guidance with precision.
 
-[/trans]
 
 > Strategy Arguments
 

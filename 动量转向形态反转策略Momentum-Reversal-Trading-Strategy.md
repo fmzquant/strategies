@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/784d7d70c8e6c93103.png)
-[trans]
-# 
-
-## 概述
-
-该策略结合了123形态反转和易于移动两种策略,目的是通过捕捉价格的转折点来进行交易。123形态反转策略在股票价格连续三日形成特定模型时产生信号。易于移动(EOM)策略则利用价格和交易量变化判断市场动量。这两种策略相结合,既考虑了价格的技术形态,也考虑了市场动量,从而提高交易信号的准确性。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123形态反转策略
-
-  - 使用Stoch指标判断超买超卖
-  - 当收盘价连续两日下跌,且Stoch快线高于慢线时做空
-  - 当收盘价连续两日上涨,且Stoch快线低于慢线时做多
-
-2. 易于移动策略
-
-  - 计算前一日的区间中点
-  - 计算区间中点相对于前一日的移动(变化)
-  - 计算区间中点移动和成交量的比值
-  - 比值大于阈值时看涨,小于阈值时看跌
-
-综合两个信号,当Easy of Movement和123形态同时做多信号时,开多仓;当Easy of Movement和123形态同时做空信号时,开空仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 结合价格技术形态和市场动量,提高信号准确性
-
-2. 123形态反转捕捉转折点,易于移动判断趋势动量,二者互补
-
-3. Stoch指标避免在盘整中反复开平仓
-
-4. 交易逻辑简单清晰,容易实施
-
-5. 可自定义参数,适应不同市场环境
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 过于依赖参数设置,参数不当可能导致交易频繁或漏单
-
-2. 多种过滤条件联合使用,信号产生频率可能过低
-
-3. 易于移动指标对市场波动敏感,可引发假信号
-
-4. 实盘略逊回测,需要控制仓位规模
-
-5. 仅适用趋势性股票,不适合盘整市
-
-## 优化方向
-
-可以从以下几方面优化该策略:
-
-1. 优化参数,调整过滤条件严格程度,平衡交易频率和信号质量
-
-2. 加入止损策略,严格控制单笔损失
-
-3. 结合趋势过滤,避免逆势交易
-
-4. 增加资金管理模块,根据波动率动态调整仓位
-
-5. 采用机器学习方法优化参数,使之动态适应市场
-
-## 总结
-
-该策略整合价格技术指标和市场动量指标,在捕捉转折点的同时确认趋势质量,具有较高的实战价值。但也需要注意控制交易频率、单笔损失和逆势操作的风险。通过参数优化、止损策略、趋势过滤等手段可以进一步提升策略的稳定性和盈利能力。该策略思路清晰易于实施,值得量化交易者继续研究和改进。
-
-||
 
 
 ## Overview
@@ -154,7 +81,6 @@ The strategy can be improved by:
 
 This strategy integrates price patterns and momentum for high practical value. But trading frequency, loss control and counter-trend risks need to be managed. Further improvements in parameters, stop loss, trend filtering can enhance stability and profitability. The logic is clear and easy to implement for quant traders.
 
-[/trans]
 
 > Strategy Arguments
 

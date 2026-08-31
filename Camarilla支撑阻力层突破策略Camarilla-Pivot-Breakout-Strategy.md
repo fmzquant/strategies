@@ -10,89 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11a805f97ef831a5d72.png)
-[trans]
-
-## 概述
-
-Camarilla支撑阻力层突破策略(Camarilla Pivot Breakout Strategy)是一个利用Camarilla支撑阻力层进行 Entries 和 Exits 的量化交易策略。该策略借鉴传统技术分析中的支撑阻力理论,结合Camarilla数学公式计算不同时间级别的支撑阻力关键点,设定突破这些关键点作为建仓和平仓的条件,达到获取超额收益的目的。
-
-## 策略原理
-
-该策略的核心逻辑是:计算 Camarilla 公式得到的日线级别的 H4 和 L4 这两个关键支撑阻力点,当价格突破这两个点时产生交易信号。 
-
-具体来说,策略首先计算当前K线的日内最高价、最低价以及收盘价的中间值作为当日的支撑阻力中枢点 Pivot。然后计算这三个价格的范围 Range。根据 Range 可以计算出 Camarilla 公式中的各关键支撑阻力位,包括 H4、H3、H2、H1 和 L1、L2、L3、L4 等。其中,H4 为当日的第一阻力位,L4 为当日第一支撑位。 
-
-在交易信号产生上,如果当日收盘价突破上方的 H4 位,产生做多信号;如果收盘价突破下方的 L4 位,产生做空信号。这样,通过捕捉关键支撑阻力位的突破,来判断行情的突破方向和力度,产生交易信号。
-
-所以该策略的主要逻辑就是:利用 Camarilla 关键点突破来判断市场结构和获得交易信号。
-
-## 优势分析
-
-这种利用 Camarilla 支撑阻力位突破的策略有几个主要的优势:
-
-1. 利用传统技术分析理论指标,回测稳定
-
-Camarilla 分析依据的是传统技术分析中支撑阻力理论。这种理论测试了时间的考验,可以保证策略在不同品种和不同时间段的稳定性。
-
-2. 参数设置简单,容易实盘操作
-
-相比机器学习等定制化策略,Camarilla 策略规则简单,参数少,容易理解和实盘操作。这对于初学者而言是非常重要的。
-
-3. 突破信号明确,实现简单
-
-监控 H4 和 L4 的突破就可以建立仓位,策略信号简洁明确,代码实现也很简单。这使得我们可以快速测试策略思路并实盘。
-
-4. 可谓是适合高频和低频交易
-
-Camarilla 策略同时适合高频(秒级、分级K线)和低频(日线、周线级)的交易,这是一个很大的优势。
-
-## 风险分析
-
-当然,这种简单的突破策略也存在一定的风险,主要集中在:
-
-1. 可能出现虚假突破的风险
-
-市场突破 Camarilla 点后可能无法继续向同一方向运行,出现反转即虚假突破的风险。这时如果不及时止损,会面临较大的亏损。
-
-2. 部分突破无法捕捉的风险
-
-如果只监控收盘价的突破,可能会错过部分突破机会从而影响盈利。这需要通过优化入场条件来解决。
-
-3. 盈利可能受限的风险
-
-相比更复杂的策略,仅仅依赖 Camarilla 点突破的盈利空间和幅度可能比较有限。这是可以通过适当调整持仓规模等方法来缓解。
-
-所以这种简单的突破策略还需要进一步通过止损策略、优化入场23168条件、适当调整仓位等方法来控制风险,确保其稳定运行。
-
-## 优化方向
-
-要进一步优化和改进该 Camarilla 突破策略,可以从以下几个方面入手:
-
-1. 结合更多指标判断真假突破
-
-例如结合量能指标、移动均线等来判断突破的可靠性,避免虚假突破的风险。
-
-2. 优化突破判定逻辑
-
-比如放宽突破幅度,通过回测确定更佳的参数。或者结合季节性等更多规则。
-
-3. 优化止损策略 
-
-适当缩小止损幅度,同时防止被套。或者设定错失利润止损、移动止损等策略。
-
-4. 动态调整仓位和杠杆 
-
-根据市场变化适时调整仓位大小和杠杆参数,让策略更好地适应不同市况。
-
-5. 结合更复杂的机器学习算法
-
-运用 LSTM、RNN 等深度学习模型来预测关键点突破概率,让策略更智能化。
-
-## 总结
-
-Camarilla 支撑阻力层突破策略是一种简单直接、易于实现的量化交易策略。它运用了成熟的技术分析工具,通过捕捉关键支撑阻力点的突破产生交易信号。这种策略优点是稳定、可靠,实盘操作也较为简单。当然,想要获得更高的交易效率,还需要对其进行止损优化、参数调整、风控等进一步优化。
-
-|| 
 
 ## Overview  
 
@@ -175,7 +92,6 @@ Leverage LSTM, RNN models to predict breakout probabilities and enhance intellig
 
 The Camarilla Pivot Breakout Strategy is a simple and direct quantitative trading strategy that is easy to implement. It utilizes mature technical analysis tools and generates trade signals by capturing breaks of key support and resistance levels. This type of strategy has the advantage of stability and reliability. It is also relatively simple for real-world execution. Of course, further enhancements around stop loss, parameter tuning, risk control etc. are necessary to achieve higher efficiency.  
 
-[/trans]
 
 
 

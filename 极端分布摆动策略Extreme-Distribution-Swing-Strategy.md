@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bb0f4082e65255cb84.png)
-[trans]
-
-本策略旨在利用极端分布检测Chande动量震荡指标的极端值,在比特币和加密货币的1分钟时间框架下进行交易。但是参数可以调整适用于任何交易对。
-
-经过对Chande动量指标的长时间研究,我决定创建一个利用正态分布百分位数水平进行入市的策略。这可以在1分钟时间框架内产生连续若干天的漂亮收益,最终目标是使策略的更强大版本在机器人上运行并获利。本策略定义严格,也可以放宽参数以进行更多交易,从而获得更高的样本量和更好的夏普比率。
-
-该策略检查Chande的值是否处于根据过去几百个Chande值计算的极端百分位数中,如果是,则开仓。
-
-止损和止盈还没有集成到本策略中,但这将是下一个添加的功能,以尽量减少损失和放大潜在利润。
-
-任何流动的加密货币交易对在低时间轴上都会带来良好的结果。
-
-我们还有一个免费的15分钟和1小时策略。
-
-### 策略原理
-
-该策略首先计算Chande动量震荡指标,该指标基于当天收盘价较前一日收盘价的变化计算得出。具体来说,它通过计算上涨变化之和与下跌变化之和的比值来衡量价格变化的动量。
-
-然后,该策略记录过去一定周期内(默认425个周期)的Chande值,并计算出不同百分位数水平。当当前Chande值达到预设的极端百分位数(默认买入在1%,卖出在99%)时,触发长/短仓开仓信号。平仓信号则在Chande值达到正常水平百分位数时触发(默认97.5%和2.5%)。
-
-通过这种方式,策略可以捕捉Chande值的极端突破,实现对突发趋势的捕捉。同时,也避免了Chande值长期维持极端状态时重复开仓的风险。
-
-### 策略优势
-
-- 利用Chande指标的动量特征,能够快速捕捉市场突发趋势
-- 采用正态分布概率检测极端值,回撤风险较小
-- 可调参数灵活,适用于不同市场环境
-- 简单直观的策略逻辑,容易理解实现
-
-### 策略风险
-
-- Chande作为动量指标,对短期市场噪音敏感,可能产生假信号
-- 针对极端值交易,空仓时间长,日内交易频次较低  
-- 未设置止损止盈,存在亏损扩大的风险
-- 参数设置不当可能导致过优化
-
-风险管理应注意设置止损止盈,适当放宽极端参数,结合趋势指标过滤假信号。此外,优化参数时应注意避免过度优化。
-
-### 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 加入止损止盈规则,设置合理的止损幅度,控制单笔亏损风险。
-
-2. 优化参数,调整长短周期参数组合,适应不同市场环境。可加入步进优化算法找到最优参数。
-
-3. 增加过滤条件,结合趋势指标如MA等,过滤不利趋势下的假信号,提高策略稳定性。
-
-4. 多时间框架结合,在高时间框架确定趋势方向,在低时间框架进行入市。
-
-5. 测试不同交易品种的参数健壮性,调整适应更多品种。
-
-6. 引入机器学习算法,利用AI对参数及过滤条件进行优化,实现动态调整。
-
-### 总结
-
-本策略整体来说是一个利用Chande动量指标极端值进行捕捉趋势交易的策略思路。它 Straightforward 的策略逻辑和高效的运行方式非常适合快速捕捉突发趋势。同时,也需要注意控制风险,避免过优化,并进行多方面优化以适应不同市场环境。总体而言,该策略提供了一个交易市场突发趋势的有效思路,值得进一步研究和应用。
-
-||
 
 This strategy aims to detect extremes of the Chande Momentum Oscillator using extreme distribution detection on 1-minute timeframes mainly for Bitcoin and cryptocurrencies. However, parameters can be adjusted for any pair. 
 
@@ -126,7 +67,6 @@ The strategy can be optimized in several aspects:
 
 Overall this is a strategy utilizing extreme values of the Chande momentum oscillator to capture trending moves. Its straightforward logic and efficient execution make it very suitable for quickly capitalizing on burst trends. At the same time, controlling risk, avoiding overoptimization, and multi-dimensional optimization are needed to adapt it across market regimes. In summary, it provides an effective approach for trading market bursts worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

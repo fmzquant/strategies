@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8a476a58eb7047f91b.png)
-[trans]
-## 概述
-
-移动平均线金叉死叉交易策略是一种追踪短期和长期移动平均线(EMA)的交叉情况,在金叉和死叉时进行买入和卖出操作的量化交易策略。该策略结合MACD指标进行交易信号判断。
-
-## 策略原理
-
-该策略主要依赖12日EMA、26日EMA和MACD指标。具体逻辑是:
-
-1. 计算12日EMA和26日EMA。
-2. 计算MACD(即12日EMA减26日EMA)。
-3. 计算MACD的9日EMA作为信号线。
-4. 当MACD上穿信号线时,产生买入信号。
-5. 当MACD下穿信号线时,产生卖出信号。
-6. 在产生信号的第二根K线收盘时,进行对应的买入或者卖出操作。
-
-另外,该策略还设置了一些过滤条件:
-
-1. 交易时间为每天的非收市时间。
-2. MACD和信号线差值的绝对值需要大于0.08。
-3. 每次只允许单向持仓。
-
-## 优势分析
-
-该策略结合移动平均线交叉和MACD指标,可以有效捕捉市场短期和中期趋势的转折点。主要优势有:
-
-1. 策略规则简单清晰,容易理解和实现。
-2. 指标参数经过优化,表现较为稳定。
-3. 兼顾追踪中短期趋势与及时止损退出。
-4. 交易逻辑严谨,避免无效交易。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 回测数据拟合风险。实际运用时,参数和阈值可能需要调整。
-2. 频繁交易带来的滑点成本过高的风险。
-3. 趋势反转没有及时退出带来的亏损风险。
-4. 量化交易本身的杠杆风险放大。
-
-对应缓解方法:
-
-1. 动态优化参数,调整阈值。
-2. 适当放宽交易规则,减少不必要交易。  
-3. 结合更多指标判断反转信号。
-4. 严格控制仓位和杠杆。
-
-## 优化方向  
-
-该策略主要可从以下方面进行优化:
-
-1. 测试更长周期的移动平均线组合,寻找最优参数。
-2. 增加公司业绩、重大事件等基本面因素作为过滤器。
-3. 结合更多指标判断趋势反转时机,如布林带、KDJ等。  
-4. 开发止损机制。当亏损达到事先设定的止损点时,主动止损。
-5. 添加 dangere ratio 以控制最大回撤。
-
-## 总结
-
-移动平均线金叉死叉结合MACD交易策略,通过简单的趋势跟踪形成交易信号,易于实现,并结合适当的过滤条件控制风险,是一种行之有效的量化交易策略。该策略可通过参数优化、止损机制增加、结合更多辅助指标等方式得到改进。
-
-||
 
 ## Overview
 
@@ -133,7 +71,6 @@ The main aspects for optimizing this strategy include:
 
 The moving average crossover MACD trading strategy generates trading signals through simple trend tracking and effectively controls risks with appropriate filtering conditions. It is an effective quantitative trading strategy. The strategy can be improved in ways like parameter optimization, adding stop loss mechanisms, incorporating more auxiliary indicators etc.
 
-[/trans]
 
 
 

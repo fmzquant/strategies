@@ -9,45 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过整合多重技术指标进行价格交易。结合使用Super Signals线、MACD指标和Laguerre RSI指标,在多个指标同时发出信号时才入场,同时设置止损和止盈点来控制风险收益比。
-
-## 策略原理
-
-Super Signals线包含基线、上下通道构成的交易区间带。MACD指标判断多空趋势。Laguerre RSI判断超买超卖。只有当价格突破Super Signals通道、MACD给出对应信号、RSI也确认时,才产生交易信号。入场后设置止损止盈,止损基于ATR或百分比,止盈为止损的一定倍数。
-
-## 优势分析
-
-- 多重指标验证,确保信号可靠性
-- Super Signals线判断关键 Support/Resistance 
-- MACD判断主要趋势方向
-- RSI过滤假突破,避免被套
-- 止损止盈机制控制交易风险
-
-## 风险分析
-
-- 各指标参数设置需要反复测试优化
-- 多重条件限制了交易频次
-- 持仓时间无法完美优化
-- 无法准确判断趋势反转点
-
-通过调整参数组合、持仓时间、止盈止损条件等可以降低风险。
-
-## 优化方向
-
-- 测试不同参数组合,平衡交易频次和效果
-- 考虑其他止损止盈方式,如移动止损
-- 测试不同出场指标,辅助判断趋势反转
-- 在多市场多品种中测试策略健壮性
-
-## 总结
-
-该策略利用多指标确认信号,回测表现良好。通过进一步调优参数,严格控制风险,可以成为稳定可靠的量化交易系统。
-
-||
 
 ## Overview 
 
@@ -85,7 +46,6 @@ Risks can be reduced by adjusting parameters, holding periods, profit/loss condi
 
 This multiple indicator confirmation strategy shows good backtest results. Further tuning parameters and tightly controlling risks can make it a stable and reliable trading system.
 
-[/trans]
 
 > Strategy Arguments
 

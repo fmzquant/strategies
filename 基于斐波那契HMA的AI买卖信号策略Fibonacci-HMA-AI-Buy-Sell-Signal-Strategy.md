@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18e9a6f7d0fa5b21fcc.png)
-[trans]
-
-## 概述
-
-本策略引入了一种基于斐波那契数列的Hull移动平均线(HMA)的交易策略,以识别潜在的买入和卖出信号。该策略运用特定的与斐波那契数列相关的HMA线,旨在为交易环境中可能的入市和退市点提供洞察。
-
-## 策略原理
-
-该策略使用与斐波那契数列中数字1、2和3相关的独特HMA线,即HMA 1、HMA 2和HMA 3。当这些HMA线发生交叉时,会生成自动的买入和卖出信号。例如,当HMA 3上穿HMA 2时会产生买入信号,而当HMA 3下穿HMA 2时会产生卖出信号。这些HMA线使用不同的颜色进行可视化表示,以方便识别交易机会。
-
-## 优势分析
-
-该策略结合了斐波那契分析和Hull移动平均线的优点。斐波那契分析可用于识别关键的支撑与阻力位,而HMA线平滑价格数据减少噪音,生成更可靠的交易信号。此外,该策略简化了视觉呈现,易于判断趋势的开始和结束。
-
-## 风险分析 
-
-该策略可能会在价格震荡时产生错误信号。此外,参数设置不当也会影响策略表现。需要调整HMA线的周期长度以适应不同的市场环境。
-
-## 优化方向
-
-可以考虑结合其他指标进行信号过滤,例如RSI来避免错误信号。此外,可以测试不同参数组合的实际交易表现,以确定最佳参数。也可以尝试把该策略与其他交易策略组合使用。
-
-## 总结
-
-本策略充分利用了斐波那契数列在金融市场中的应用优势,与HMA指标的信号过滤能力相结合,形成一个用于发现潜在趋势的有效工具。该策略简单直观,容易实施,值得进一步测试与优化。
-
-||
 
 
 ## Overview
@@ -63,7 +36,6 @@ Consider adding other indicators like RSI for signal filtration to avoid false s
 
 This strategy aptly utilizes the efficacy of Fibonacci analysis in financial markets and combines it with the signal filtering capacity of HMA to form an effective instrument for uncovering potential trends. Simple and intuitive, it warrants further testing and refinements.
 
-[/trans]
 
 
 

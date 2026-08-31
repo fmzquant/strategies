@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1677301e5cac532b6cc.png)
-[trans]
-
-## 概述
-
-该策略基于Karobein均值回归指标和价格动量。它利用价格动量辅助指标进行趋势判断,并结合Karobein均值回归指标进行具体入场。该策略适用于中长线交易。
-
-## 策略原理
-
-该策略首先通过计算不同周期价格的变化率,得到价格动量指标。当价格动量指标上穿动态阈值线时产生多头信号,下穿时产生空头信号。
-
-然后结合Karobein均值回归指标确定具体入场时机。Karobein均值回归指标基于价格的均线回归性质计算得到,它能反映价格的波动加速度和路径。该指标具有内在的正弦波特征,有助于判断价格走势方向和时间节点。
-
-当价格动量指标发出信号时,若Karobein均值回归指标处于对应的方向区域,则产生入场信号。
-
-## 策略优势
-
-1. 该策略综合考虑了价格动量和均值回归两个因素,具有较强的趋势判断能力。
-
-2. Karobein均值回归指标可准确定位价格转折点位,提高入场时机精确度。
-
-3. 可通过参数调整自由控制持仓周期,适用于不同时间周期。
-
-4. 可实时调整动态阈值参数,对市场变化进行自适应。
-
-## 策略风险
-
-1. 该策略为趋势跟踪策略,在震荡趋势中容易被套。
-
-2. Karobein均值回归指标存在一定程度的滞后,可能错过价格转折节点。 
-
-3. 需关注持仓周期参数设置,过长持仓时间可能导致亏损扩大。
-
-4. 应适当调整动态阈值参数,不宜设置过大,否则将错过进场时机。
-
-对应风险的解决方法:
-
-1. 可通过趋势判断指标提前判断震荡来临,及时平仓止损。
-
-2. 选择合适周期Karobein均值回归指标,不能过于滞后。
-
-3. 测试不同持仓时间参数,选择适合自己的持仓时间。
-
-4. 调整动态阈值范围,不能过宽以避免漏入场点。
-
-## 策略优化方向
-
-1. 可测试不同价格动量计算周期,优化参数。
-
-2. 可加入波动率指标,判断震荡来临,可设置止损。 
-
-3. 可优化Karobein均值回归指标参数,使其更加灵敏。
-
-4. 可加入附加过滤条件,如交易量指标等,提高信号质量。
-
-5. 可采用机器学习算法动态优化参数。
-
-## 总结
-
-本策略综合考虑价格动量因素和均值回归因素,具有较强的趋势判断和信号产生能力。可通过参数调整自适应不同市场环境。下一步可从入场时机、止损方面进行进一步优化,使策略更加稳定和强大。该策略值得进一步研究和应用。
-
-|| 
 
 ## Overview
 
@@ -130,7 +69,6 @@ Corresponding risk management methods:
 
 This strategy comprehensively utilizes price momentum and mean reversion factors, with strong capabilities in trend judgment and signal generation. It can adapt to different market environments through parameter tuning. Further optimizations can be done regarding entry timing and stop loss to make the strategy more robust. This strategy deserves further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

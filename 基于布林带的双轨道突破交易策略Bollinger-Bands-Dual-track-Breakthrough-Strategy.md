@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12fd3e1ebfd70c5bf34.png)
-[trans]
-## 概述
-
-该策略是基于布林带的双轨道突破交易策略。它使用布林带的上轨和下轨作为买入和卖出信号,并设定了止损点以控制风险。
-
-## 策略原理
-
-该策略使用布林带的上轨和下轨线。布林带是由均线及其对应的两个标准差通道组成。当价格接触或突破布林带上轨时产生卖出信号;当价格接触或突破布林带下轨时产生买入信号。 此外,该策略还设置了止损点。当价格低于均线一定比例时,会识别止损。
-
-具体来说,策略通过计算指定周期(如20日)的平均线及其标准差的两倍来绘制布林带。上轨线为平均线加上标准差的两倍,下轨线为平均线减去标准差的两倍。当收盘价大于或等于上轨线时,发出卖出信号;当收盘价小于或等于下轨线时,发出买入信号。此外,如果价格低于平均线的一定比例(如1%),则发出止损信号。
-
-## 策略优势
-
-该策略利用布林带的特性,在价格出现异常波动时能够发出交易信号,从而抓住价格反转的机会。相比单纯跟踪均线策略,该策略能够在波动加大时产生交易信号,在一定程度上规避了假突破的风险。
-
-与简单的双轨道突破策略相比,该策略增加了止损机制。这能够有效控制个别错误信号造成的损失。止损点的设置也比较合理,距离平均线较近,避免了过于激进的止损造成的过多损失。
-
-## 策略风险
-
-该策略最大的风险在于布林带本身并不能确保交易信号的有效性。当市场出现特殊情况时,价格可能出现不合理的大幅波动,这时布林带发出的交易信号可能是错误的。此时很可能造成较大的亏损。
-
-另外,止损点的设置也可能过于激进或保守,这都会影响最终的收益。如果止损幅度过大,则有效信号可能会被频繁止损;而如果止损幅度过小,则无法有效控制损失。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的参数组合,如均线周期、标准差倍数、止损百分比等的不同数值,寻找最优参数;
-
-2. 增加其他指标判断,形成多重过滤条件,避免错误信号;
-
-3. 优化止损策略,如采用移动止损、分批止损等方式替代简单的止损;
-
-4. 结合不同时间周期的布林带进行交易信号确认,避免被套。
-
-## 总结
-
-该策略整体来说是一种实用的趋势跟踪和双轨突破结合的策略。它能够在价格波动加大时抓住反转机会,并设置了止损来控制风险。通过参数优化、增加信号过滤以及优化止损策略等手段,可以进一步增强该策略的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -90,7 +50,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, this strategy is a practical combination of trend tracking and dual-track breakthrough strategies. It can seize opportunities for reversals when price fluctuations increase, and sets stop losses to control risks. By means of parameter optimization, increased signal filtering, optimized stop loss strategies, etc., the stability and profitability of the strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e0ad9156e6e91b680b.png)
 
-[trans]
-
-## 概述
-
-移动平均线交叉策略是一种 momentum 策略,利用双移动平均线的交叉信号来判断趋势方向,产生买入和卖出信号。该策略使用 2 条简单移动平均线和 1 条指数移动平均线,根据它们的交叉情况判定多空,属于中短期交易策略。
-
-## 策略原理
-
-该策略使用 3 条移动平均线:
-
-- EMA1: 一条较短周期的指数移动平均线,代表快线
-- SMA1: 一条较长周期的简单移动平均线,代表慢线  
-- SMA2: 一条更长周期的简单移动平均线,判断趋势方向
-
-策略以 EMA1, SMA1, SMA2 的大小关系来判断趋势:
-
-- 上升趋势:EMA1 > SMA1 > SMA2
-- 下降趋势:EMA1 < SMA1 < SMA2
-
-进入信号:
-
-- 多头进入:当快线上穿慢线时做多
-- 空头进入:当快线下穿慢线时做空
-
-退出信号:
-
-- 多头退出:快线下穿慢线时平仓
-- 空头退出:快线上穿慢线时平仓
-
-该策略提供了多种参数配置,可以选择不同的移动平均线来判断进入和退出。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1.  capture momentum: 能够捕捉市场趋势的变化,momentum 策略
-2. flexible configuration: 提供多种移动平均线选择,可以灵活配置
-3. trend filtering: 使用长周期移动平均线来判断趋势方向,避免逆势交易
-4. risk management: 可配置止损和止盈,控制单笔交易风险
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. whipsaws: 在突破前有可能出现持续震荡导致多次假突破
-2. sensitive to MA parameters: 移动平均线参数设置不当可能导致过于频繁或不够敏感
-3. lagging: 移动平均线本质具有滞后性,可能错过突破最佳时点
-4. no fundamentals: 纯技术指标驱动,不考虑基本面
-
-针对 whipsaws 风险,可以适当调整移动平均线周期;对参数敏感性风险,可以优化参数;对滞后性风险,可以结合其他先行指标优化。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 加入其他技术指标过滤,例如 RSI、布林带等,提高信号质量
-2. 优化移动平均线周期参数,寻找最优参数
-3. 加入机器学习模型判断趋势和信号可靠性
-4. 结合交易量,避免价格在低量情况下出现虚假突破
-5. 结合基本面因素,避免逆经济周期交易
-
-## 总结
-
-移动平均线交叉策略整体较为简单直接,通过快慢均线的交叉判定趋势方向和参与时机。该策略优势是可以捕捉momentum,灵活配置参数,但也存在一定的whipsaw风险、滞后风险等问题。通过引入其他指标进行过滤优化,该策略可以成为一个非常实用的量化交易策略。
-
-||
 
 ## Overview
 
@@ -141,7 +75,6 @@ Potential optimizations:
 
 The Moving Average Crossover strategy is straight-forward, judging trend and timing by crossing of fast and slow MAs. Its advantage is capturing momentum with flexible configurations, but risks like whipsaw and lagging exist. With optimizations like additional filters, it can become a very practical quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

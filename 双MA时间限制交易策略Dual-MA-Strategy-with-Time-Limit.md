@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12e1a2b05c2b44bf6ec.png)
-[trans]
-
-## 概述
-
-本策略是在原有的双均线交易策略基础上,增加了时间限制模块,用于控制策略的启动时间。该模块可以有效管理策略的运行时间,降低非理想市场条件下的交易风险。
-
-## 原理
-
-策略使用快速MA和慢速MA构建交易信号。快速MA参数为14天,慢速MA参数为21天。当快速MA上穿慢速MA时生成买入信号;当快速MA下穿慢速MA时生成卖出信号。 
-
-策略还引入了交易反转选择,可以反转原有交易信号的方向。
-
-时间限制模块通过时间戳比较当前时间和设定的启动时间,返回真值,来控制策略是否启动。该模块需要设置启动的年、月、日、时、分,只有当当前时间超过设置时间,策略才会启动。
-
-## 优势
-
-- 利用双MA形成交易信号,可以有效捕捉中短期趋势
-- 增加时间限制模块,可以更精确地控制策略的运行时间,避免非理想市场条件下的不必要交易
-- 交易反转选择增加了策略的灵活性
-
-## 风险及解决 
-
-- 双MA策略可能会产生多次交易信号,带来更高的交易频率和交易成本
-- 时间限制模块设置不当可能导致错过交易机会
-- 交易反转选择不当可能导致交易信号错误 
-
-可以适当优化MA周期参数,降低交易频率。同时合理设置时间限制模块的启动时间,避免错过机会。最后,根据不同市场条件,审慎选择是否需要反转交易信号方向。
-
-## 优化方向
-
-- 增加止损模块,可以更好地控制单笔交易的风险
-- 增加移动止损追踪,可以根据趋势逐步移动止损点,实现盈利的跟进提取
-- 结合多个标的运算信号,可以提高信号质量,减少假信号
-- 开发参数优化模块,可以自动寻找最佳参数组合
-
-## 总结
-
-本策略通过双MA形成交易信号,并加入时间限制模块控制策略运行时间,能够有效捕捉趋势,同时规避非理想市场条件下的风险。策略还可进一步通过优化参数设置、止损模块以及跨标的运算等手段进行提升,在降低交易频率的同时提高每笔交易的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -89,7 +49,6 @@ Optimizing the MA periods can reduce trading frequency. The start time should al
 
 This strategy generates trading signals using dual MAs and controls the running time with the time limit module, effectively capturing trends while avoiding unfavorable market conditions. Further enhancements can be made through parameter tuning, stop loss modules, cross-asset signal generation, etc. to reduce trading frequency while improving the stability and profitability of each trade.
 
-[/trans]
 
 > Strategy Arguments
 

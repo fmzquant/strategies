@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10b53f3c8a203d05490.png)
 
-[trans]
-
-## 概述
-
-该策略运用8条不同周期的指数移动平均线与Ichimoku云图作为主要交易信号,可以在1小时、4小时或日线时间框架下有效运行。
-
-## 策略原理
-
-该策略的核心原理基于以下两大部分:
-
-1. 8条指数移动平均线(Octa-EMA)
-
-   该策略使用了8条不同周期的EMA,分别为5日线、11日线、15日线、18日线、21日线、24日线、28日线和34日线。这8条EMA被称为“Octa-EMA”。当较短周期的EMA在较长周期EMA之上时表示多头趋势,反之则表示空头趋势。
-
-2. Ichimoku云图指标 
-
-   Ichimoku云图包含转换线、基准线、延迟线和先导线A/B。云图主要判断趋势方向和提供支持阻力。当价格在云图上方时为多头趋势,在云图下方为空头趋势。
-
-该策略的交易信号来自以上两大组成部分。当8条EMA全部处于多头排列(短EMA在长EMA之上),且价格高于Ichimoku的云图时产生买入信号。当EMA排列转为空头(短EMA下穿长EMA)时产生卖出信号。
-
-## 策略优势分析
-
-该策略主要有以下优势:
-
-1. 使用双重指标过滤,可以减少假信号
-2. Ichimoku云图可判断趋势方向,避免逆势交易
-3. 8条EMA交叉组合判断趋势,提高准确性 
-4. 可在多种时间周期下运行
-5. 参数优化空间大,可针对不同品种定制
-
-## 策略风险分析
-
-该策略也存在一定的风险:
-
-1. 在震荡行情中可能产生较多空头信号
-2. 买入条件较严格,可能错过部分买点
-3. 当短期与中长期趋势不一致时可能失效
-4. EMA参数设置不当可能导致信号滞后
-
-针对以上风险,可以通过调整EMA参数或优化入场条件来降低风险,也可以结合其他指标作为辅助。
-
-## 策略优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 调整EMA参数,优化对应的周期
-2. 增加均线多空判断指标,确保趋势判断准确性
-3. 结合MACD、KDJ等其他指标,优化入场时机
-4. 增加止损止盈策略,控制单次盈亏
-5. 测试不同品种参数效果,寻找最佳参数组合
-6. 利用机器学习算法自动寻优参数
-
-## 总结
-
-Octa-EMA与Ichimoku云图量化交易策略整体而言是一种较为稳定和可靠的趋势跟踪策略。它同时运用EMA组合判断趋势及Ichimoku过滤信号,在参数优化后可以获得较低的误判率。该策略可广泛应用于股指、外汇、贵金属等品种,也可在多个时间周期下运行。如果能够结合止损止盈及辅助指标,将可以进一步提高策略的胜率和盈利率。
-
-||
 
 ## Overview
 
@@ -123,7 +66,6 @@ This strategy can be optimized in several aspects:
 
 Overall, the Octa-EMA and Ichimoku cloud strategy is a relatively stable and reliable trend following system. It uses EMA crossovers to determine trends and Ichimoku to filter signals, providing low false signals when optimized. This strategy can be widely applied on indices, forex, metals etc. at multiple timeframes. By incorporating stop loss/take profit and confirming indicators, win rate and profitability can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

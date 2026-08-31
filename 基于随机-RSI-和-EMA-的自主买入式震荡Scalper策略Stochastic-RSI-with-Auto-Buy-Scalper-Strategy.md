@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18bf5618a0c9c2d8f6e.png)
-[trans]
-
-
-## 概述
-
-该策略旨在实现一种基于随机指数平滑移动平均线(RSI)和指数移动平均线(EMA)指标的自主式买入并持有币种的Scalper交易策略。它适用于5分钟K线,针对BTC进行了优化。策略的目标是在横盘或不大幅下跌时尽可能多持有币种。
-
-## 策略原理
-
-该策略使用RSI指标判断是否处于超买超卖区域,并结合随机RSI指标的K值和D值关系来发出买入和卖出信号。
-
-当随机RSI的K线低于20时视为超卖,并在K线大于D线时产生买入信号。之后,会根据三个条件判断是否卖出:1)价格上涨超过1%后出现EMA翻转;2)随机RSI指标K线低于D线时;3)止损价格达到入场价的98.5%时。
-
-此外,当短期EMA在上涨后发生向下翻转也会判断为卖出信号。
-
-## 策略优势
-
-- 使用随机RSI指标判断买入时点更可靠,可以有效过滤假突破。
-- 结合EMA指标可以更好地判断趋势改变的时机。
-- 采用止损可以有效控制亏损。
-- 尽可能多持有币种可以减少交易频率,降低手续费。
-
-## 策略风险
-
-- RSI指标发出假信号的可能性。可以适当调整RSI参数来优化。
-- 止损价格设定过小可能导致亏损扩大。可以适当调整止损幅度。
-- EMA指标参数设置不当可能错过趋势改变时机。可以测试不同EMA周期的参数。
-
-## 优化方向
-
-- 测试不同的RSI和随机RSI参数设置来寻找最优参数组合
-- 尝试不同的止损幅度来平衡防止亏损和利润回撤
-- 测试EMA的长短周期组合,判断最佳判定趋势改变的参数
-- 可以考虑加入其他指标来提高买入卖出时机判断的准确性
-
-## 总结
-
-该策略整合了随机RSI和EMA等多个指标的优势,采用较为稳健的方法判断买入和卖出时机。通过参数优化及风险管理可以进一步提高策略收益率和稳定性。总体来说,该策略逻辑合理,值得在实盘中进行验证和优化。
-
-
-||
 
 
 ## Overview
@@ -89,7 +48,6 @@ In addition, a downward turn of short term EMA after an uptrend will also be con
 
 This strategy integrates the strengths of Stochastic RSI, EMA and other indicators, using relatively robust methods to determine entry and exit timing. Further improvements on profitability and stability can be achieved through parameter optimization and risk management. Overall the strategy logic is sound and worth verifying and optimizing in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eab3f46897dacaf70f.png)
-[trans]
-
-
-## 概述
-
-移动平均线交叉策略是一个非常经典的技术分析策略。它通过计算不同周期的移动平均线,并观察它们的交叉情况来判断行情的趋势,实现低买高卖的目的。该策略适用于中长线交易,可以有效过滤市场噪音,识别趋势。
-
-## 原理
-
-该策略主要是计算10日简单移动平均线SMA和10日三角移动平均线TRIMA。当SMA上穿TRIMA时产生买入信号,表示行情由下跌转为上涨,可以买入。当SMA下穿TRIMA时产生卖出信号,表示行情由上涨转为下跌,可以卖出。
-
-具体来说,策略首先输入收盘价,并定义计算SMA和TRIMA的周期长度。其中SMA的计算公式为:
-
-SMA = (P1 + P2 + ... + Pn) / n
-
-其中Pn为过去n天的收盘价。
-
-TRIMA的计算公式为:
-
-TRIMA = (SMA1 + SMA2 + SMA3) / 3
-
-其中SMA1、SMA2、SMA3分别是过去n天收盘价的SMA。
-
-这样,TRIMA相当于对SMA再进行一次SMA,具有更好的平滑效果。当短周期的SMA上穿长周期的TRIMA时,表示短周期均线上的突破,可以买入。相反,当SMA下穿TRIMA时,表示短周期均线下的突破,可以卖出。
-
-## 优势
-
-该策略最大的优势就是利用了移动平均线的趋势判断能力,可以有效地识别市场趋势,滤除短期市场噪音,实现低买高卖。相比单一移动平均线,SMA和TRIMA的组合使用可以提高突破的可靠性,降低假突破的概率。此外,移动平均线本身具有较好的平滑性,也可以起到止损的效果,降低单笔止损的概率。总体来说,该策略非常适合中长线持仓交易。
-
-## 风险
-
-该策略的主要风险在于移动平均线本身滞后于价格变化,可能会错过趋势的前期,导致入场过晚。此外,当市场没有明显趋势时,该策略会产生更多假突破。最后,移动平均线策略更依赖参数优化,如果参数设置不当,也会大幅影响策略效果。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线的周期参数,采用更科学的方法寻找最佳周期组合。
-
-2. 增加成交量的过滤指标,避免在成交量不佳的情况下发出错误信号。
-
-3. 结合趋势指标如MACD判断局部趋势,避免在盘整市中反复交易。
-
-4. 采用自适应移动平均线,当市场进入特定阶段时动态调整周期参数。
-
-5. 采用多时间框架进行验证,例如只有日线、4小时线均突破时才考虑入场。
-
-## 总结
-
-移动平均线交叉策略是一个简单实用的技术分析策略,非常适合中长线持仓交易,可以有效识别趋势方向。但该策略也存在一定滞后性,需要结合趋势判断指标进行过滤优化,降低误信号概率。如果参数优化得当,它既可以 rodeo 保护资金,又可以抓住较大的趋势机会。是非常值得研究和应用的一个策略思路。
-
-||
 
 
 ## Overview
@@ -112,7 +60,6 @@ This strategy can be optimized in the following aspects:
 
 The moving average crossover strategy is a simple and practical technical analysis strategy that is very suitable for medium and long-term position trading. It can effectively identify the trend direction. But it also has certain lagging, and needs to be filtered and optimized with trend judgment indicators to reduce the probability of false signals. If the parameters are optimized properly, it can both protect capital and seize larger trend opportunities. It is definitely worth researching and applying as a strategy idea.
 
-[/trans]
 
 > Strategy Arguments
 

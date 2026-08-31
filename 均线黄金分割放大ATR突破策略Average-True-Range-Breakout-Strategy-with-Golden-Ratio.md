@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a6e76dbbe7e4cef797.png)
-[trans]
-## 概述
-本策略是一个利用ATR指标构建交易信号的突破策略。该策略运用均线系统产生交易信号,通过黄金分割放大后的ATR指标上下通道构建多空仓位。能够在趋势中大幅获利,在震荡行情中获得小额稳定收益。
-
-## 策略原理  
-代码中通过求取收盘价的ATR周期指标,并放大1.618倍作为上轨,放大2.618倍作为下轨,与均线ema结合构建布林通道突破交易系统。当价格从下轨突破向上时做多,价格从上轨突破向下时做空,实现趋势跟踪获利。
-
-## 策略优势
-1. ATR指标能有效地捕捉市场波动率,利用波动率构建自适应交易通道,避免使用固定参数导致的过拟合。
-2. 黄金分割放大后的ATR上下轨能在不增加交易频率的前提下扩大收益空间。
-3. 均线系统过滤了短期噪音,与ATR通道配合能锁定中长线趋势。
-
-## 策略风险 
-1. ATR指标对极端行情的应对存在滞后。  
-2. 黄金分割放大倍数不当可能导致交易频率过高。
-3. 长周期均线切换信号发生滞后。
-
-## 策略优化
-1. ATR指标可以考虑与市场波动率指数VIX结合使用或调整放大倍数。  
-2. 均线系统可以引入多时间周期EMA,构建自适应交易系统。
-3. 可以设立止损机制降低单笔交易最大损失。
-
-## 总结
-本策略综合运用均线过滤、ATR通道跟踪和黄金分割原理。能够有效跟踪中长线趋势,具有良好的稳定性。通过参数调整可以适应不同品种不同周期的应用,值得探索其良好的市场适应性。
-
-||
 
 ## Overview  
 This is a breakout strategy that utilizes the ATR indicator to generate trading signals. The strategy employs a moving average system to produce entry signals and an amplified ATR channel based on the golden ratio to construct long and short positions. It could gain significantly in trends and obtain small but steady profits in range-bound markets.
@@ -60,7 +34,6 @@ The code calculates the ATR over a period of closing prices, amplifies it by 1.6
 
 ## Summary
 This strategy integrates moving average filtering, ATR channel tracking and the golden ratio methodology, which can effectively follow mid-to-long term trends with good stability. By tuning parameters, it can be adapted to different products across various frequencies, worthy of exploring for its excellent market adaptivity.  
-[/trans]
 
 > Strategy Arguments
 

@@ -11,60 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/127576aa2b2f95ff6a8.png)
-[trans]
-
-概述:
-
-交易量百分比振荡指标(PVO)是一种用于交易量的动量震荡指标。PVO 通过计算两个不同周期的交易量指数移动平均线之间的差异百分比,来衡量交易量趋势的变化。该策略运用PVO指标来发现交易量的趋势,以确认或否定价格行情。通常,当PVO为正或上升时,突破或支持位破裂更有效。
-
-策略原理:
-
-1. 计算短期交易量EMA(默认12日)
-2. 计算长期交易量EMA(默认26日)
-3. 计算短期EMA与长期EMA的差异百分比作为PVO
-4. 计算PVO的信号线EMA(默认9日)
-5. 计算PVO与信号线的差异作为柱状图
-6. 当信号线上穿PVO线时做空,下穿时做多
-7. 可选择反向交易
-8. 对符合交易信号的K线绘制不同颜色
-
-该策略通过双EMA组合形成PVO指标,再结合信号线,发现交易量变化趋势,指导价格交易方向。与普通双EMA不同的是,PVO更着眼于交易量差异百分比,能更清晰判断交易量增减。
-
-优势分析:
-
-1. 利用交易量变化判断未来价格趋势,具有一定的阻断作用
-2. 双EMA结构简单实用,参数调整灵活
-3. 可视化K线颜色直观判断趋势,操作方便
-4. 结合信号线减少假信号,提高稳定性 
-5. 可选择反向交易,丰富策略运用
-6. 适用于中长线趋势和短线操作
-
-该策略充分利用了交易量变化对价格行情的提示作用。相比单一指标,PVO结构更稳定,可定制参数组合判断交易量趋势变化,从而提前探测价格可能的变动方向。直观的K线颜色区分强化趋势判断,可根据需要选择反向交易,是一种通用实用的交易量策略。
-
-风险分析:
-
-1. 交易量指标对价格信号有一定滞后,可能出现背离
-2. EMA参数设置不当可能误判市场状态
-3. 反向交易时需要谨慎,可能加大亏损
-4. 依靠交易量变化无法确定具体入场点位
-5. 交易量不一定能百分之百预测价格,需结合其他指标
-
-交易量变化往往滞后价格行情,当价格进入趋势末期时,PVO可能发出错误信号。参数设置不当也会影响判断效果。反向交易时务必审慎,因为趋势可能延续。交易量难以判断具体的入场时机,需辅助其他指标精确操作。交易量指标无法百分百预测价格,仍需要谨慎跟单。
-
-策略优化方向:
-
-1. 优化EMA周期参数,适应不同品种和周期
-2. 增加过滤条件,避免无效信号
-3. 结合其他指标确认入场时机
-4. 增加止损条
-
-可以测试优化EMA参数组合,寻找最佳周期判断买卖趋势。可设置交易量波动幅度条件,过滤无效信号。可引入MACD,KD等指标进一步确认具体入场点位。也可以设置止损线,控制单笔亏损。这将大大提高策略的实用性。
-
-总结:
-
-交易量百分比振荡指标策略通过计算交易量指数移动平均线的差异百分比,来判断交易量的变化趋势,以发现价格可能的未来走势。该策略运用简单有效的双EMA结构测量交易量波动,借助直观的K线颜色增强视觉效果。可根据需要选择反向交易,参数设置灵活,既适合中长线也适合短线,是一个非常实用的基于交易量的策略工具。但交易量指标对价格信号具有一定滞后性,无法明确入场时机,因此需要优化参数设置,并辅助其他指标来提高策略效果。
-
-||
 
 Overview:
 
@@ -117,7 +63,6 @@ Conclusion:
 
 The Percentage Volume Oscillator strategy judges volume trend changes by calculating the percentage difference between volume EMAs to anticipate potential price direction. It adopts simple and effective double EMA structure to measure volume fluctuations and uses intuitive color coding to enhance visual effect. The flexible reverse trading option and parameter settings make it suitable for both mid-to-long term and short term trading. But as volume indicator lags price signal and cannot determine precise entry timing, parameters and incorporation of other indicators need optimization to improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/4e097cca6a25e18d1d.png)
 
-[trans]
-#### 概述
-该策略结合随机震荡指标（Stochastic Oscillator）和移动平均线（Moving Average）来判断市场的超买和超卖状态,并根据移动平均线的趋势方向来确定交易方向。当随机震荡指标在超卖区交叉向上,且移动平均线呈上升趋势时,策略开多头仓位;当随机震荡指标在超买区交叉向下,且移动平均线呈下降趋势时,策略开空头仓位。同时,策略设置了止损（Stop Loss）来控制风险。
-
-#### 策略原理
-1. 计算随机震荡指标的 K 值和 D 值,其中 K 值是价格相对于最高价和最低价的位置,D 值是 K 值的移动平均线。
-2. 计算指定周期的移动平均线。
-3. 判断进场条件:当 K 值从下向上穿越超卖水平,且移动平均线向上时,开多头仓位;当 K 值从上向下穿越超买水平,且移动平均线向下时,开空头仓位。
-4. 判断出场条件:当 K 值与移动平均线交叉,且移动平均线改变方向时,平仓。
-5. 设置止损,控制风险。
-
-#### 优势分析
-1. 结合随机震荡指标和移动平均线,能够较好地捕捉市场趋势和超买超卖状态。
-2. 使用移动平均线的趋势方向来过滤交易信号,提高交易质量。
-3. 设置止损,有效控制风险。
-4. 代码结构清晰,易于理解和修改。
-
-#### 风险分析
-1. 随机震荡指标和移动平均线都是滞后指标,可能出现信号延迟的情况。
-2. 在震荡市场中,该策略可能会出现频繁交易,导致高交易成本。
-3. 固定的止损比例可能无法适应不同的市场环境,需要根据市场波动性进行调整。
-
-#### 优化方向
-1. 可以考虑引入其他技术指标,如 MACD、RSI 等,以提高信号的可靠性。
-2. 对于止损,可以采用动态止损或者基于 ATR（Average True Range）的止损方法,以更好地适应市场变化。
-3. 可以根据市场趋势和波动性,动态调整随机震荡指标和移动平均线的参数,以优化策略表现。
-4. 引入仓位管理,根据市场状况和账户风险,动态调整仓位大小。
-
-#### 总结
-该策略通过结合随机震荡指标和移动平均线,在捕捉市场超买超卖状态的同时,利用移动平均线的趋势方向来过滤交易信号,并设置止损来控制风险。策略思路清晰,易于理解和实现。但是,策略也存在一些局限性,如指标滞后、频繁交易等问题。通过引入其他技术指标、优化止损方法、动态调整参数和仓位管理等方式,可以进一步提升策略的表现和稳健性。
-
-|| 
 
 #### Overview
 This strategy combines the Stochastic Oscillator and Moving Average (MA) to determine overbought and oversold market conditions and uses the trend direction of the moving average to determine the trading direction. When the Stochastic Oscillator crosses upward in the oversold area and the moving average is in an upward trend, the strategy opens a long position; when the Stochastic Oscillator crosses downward in the overbought area and the moving average is in a downward trend, the strategy opens a short position. Additionally, the strategy sets a Stop Loss to control risk.
@@ -73,7 +41,6 @@ This strategy combines the Stochastic Oscillator and Moving Average (MA) to dete
 
 #### Summary
 This strategy combines the Stochastic Oscillator and moving average to capture overbought and oversold market conditions while using the trend direction of the moving average to filter trading signals and setting a stop loss to control risk. The strategy logic is clear and easy to understand and implement. However, the strategy also has some limitations, such as indicator lag and frequent trading. By introducing other technical indicators, optimizing stop loss methods, dynamically adjusting parameters, and implementing position sizing, the strategy's performance and robustness can be further enhanced.
-[/trans]
 
 > Strategy Arguments
 

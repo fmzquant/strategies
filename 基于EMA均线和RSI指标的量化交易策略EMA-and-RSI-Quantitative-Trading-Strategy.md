@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1034fbaf38865e07e8c.png)
-[trans]
-## 概述
-
-本策略称为“双均抄底策略”。该策略利用EMA均线系统与RSI指标的组合,形成交易信号,并设定止损和止盈条件,实现亏损控制和盈利目标。策略适用于BTC/USD和其他数字货币交易。
-
-## 策略原理  
-
-该策略以50日EMA均线和100日SMA均线为核心技术指标。当短期EMA上穿长期SMA时产生买入信号;当EMA下穿SMA时产生卖出信号,这是典型的趋势跟踪策略。同时结合RSI指标判断市场是否过热过冷,RSI高于70为超买区,低于30为超卖区,可以避免不必要的追高杀跌。  
-
-具体交易规则如下:  
-
-买入条件:50日EMA上穿100日SMA  
-卖出条件:50日EMA下穿100日SMA  
-
-止盈条件:RSI大于70时平多单;RSI小于30时平空单
-
-## 策略优势  
-
-该策略集成了均线、RSI等多种指标,形成比较稳定和可靠的交易信号。相比单一指标,多指标集成能够过滤掉一些假信号。  
-
-EMA快速响应价格变化,SMA能抑制短期噪音。EMA和SMA的配合使用,平衡了指标的灵敏度。  
-
-RSI指标判断超买超卖区,有助于把握大趋势,避免追高杀跌。
-
-## 策略风险  
-
-该策略依赖指标拟合历史数据,存在过拟合风险。如果市场状态发生重大变化,策略表现会受到影响。此外,数字货币市场波动大,止损点设定也有难度。  
-
-应对方法:  
-1. 继续优化指标参数,改进信号质量  
-2. 结合更多因子,判断交易机会  
-3. 动态调整止损位,优化止损策略
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 整合更多指标,如MACD、布林带等,形成指标集群,增强信号的稳健性。  
-
-2. 尝试机器学习模型自动优化指标参数。目前参数依赖经验值设定,可以采用强化学习、进化优化等算法自动寻找最优参数。
-
-3. 结合交易量指标。增加交易量确认,避免出现无量突破的假信号。  
-
-4. 增加自动止损策略,通过追踪波动率等指标,实现止损点的动态调整。
-
-## 总结  
-
-该策略整合EMA、SMA和RSI指标,形成稳定的交易信号。并设定比较清晰的止盈止损规则,对资金风险控制到位。但仍存在过拟合、止损点设置困难等问题。未来将从提高信号质量、止损策略优化等方面进行改进。
-
-||
 
 ## Overview  
 
@@ -109,7 +59,6 @@ The strategy can be further enhanced from the following aspects:
 
 The strategy consolidates EMA, SMA and RSI to form stable trading signals. Clear take profit and stop loss rules control capital risks. But issues like overfitting, difficulty in stop loss point setting still exist. Future improvements will focus on enhancing signal quality, optimizing stop loss strategies etc.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/117c6d49b96fbe28529.png)
-[trans]
-
-## 概述
-
-海龟交易决策系统是一个基于突破理论的趋势跟踪交易策略。它通过交易品种的最高价和最低价的移动平均线生成交易信号,实现潜在趋势的识别。当价格突破指定周期内的最高价或最低价时产生交易信号。该策略同时结合了移动止损、加仓管理和资金管理模块,使其成为一个较为完整的决策系统。
-
-## 策略原理
-
-海龟交易决策系统的核心策略信号通过比较价格与 N1 周期最高价和 N2 周期最低价的大小关系来产生。当价格上穿 N1 周期最高价时,产生买入信号;当价格下穿 N2 周期最低价时,产生卖出信号。Shutdown 模式用于控制新的信号产生。
-
-在开仓后,会实时比较价格与止损价的大小关系,生成移动止损信号。同时,也会比较价格与加仓线的关系,产生加仓信号。止损价和加仓线均与ATR有关。
-
-每次开仓时候计算持仓单位,通过取初始资金的一定比例来规避单笔损失对总资本的影响。单笔损失被限定在一定范围内。
-
-## 优势分析
-
-海龟交易决策系统具有以下几个优势:
-
-1. 捕捉潜在趋势:通过比较价格与周期最高最低价的关系判断潜在趋势方向,能较早地捕捉到潜在的价格趋势。
-
-2. 风险管理:采用资金管理和止损来控制单笔及总体的损失风险。
-
-3. 加仓管理:适当加仓能够获得趋势中的额外利润。
-
-4. 完整性:结合了资金管理、止损管理和加仓管理,使决策系统更加完备。
-
-5. 简单明了:信号生成规则简单直接,容易理解和验证。
-
-## 风险分析
-
-海龟交易决策系统也存在一些风险:
-
-1. 假突破风险:价格可能出现假突破最高价或最低价的情况,造成错误信号。可以适当调整参数过滤掉一些假突破。
-
-2. 趋势反转风险:存在加仓后的价格反转导致亏损加大的风险。应适当限制加仓次数,并及时止损。 
-
-3. 参数优化风险:不同市场参数设置会有较大不同,应分市场优化参数以降低风险。
-
-## 优化方向  
-
-海龟交易决策系统还可以从以下几个方面进行优化:
-
-1. 增加过滤器:检测价格突破的力度,过滤掉部分假突破。
-
-2. 优化止损策略:如何合理跟踪止损,在保护利润和减少不必要止损中寻找平衡。
-
-3. 分市场参数优化:针对不同品种特点优化参数组合。
-
-4. 增加机器学习:利用机器学习算法辅助判断趋势方向。
-
-## 总结
-
-海龟交易决策系统通过比较价格与指定周期内最高最低价的关系判断潜在趋势方向,并结合风险管理模块构建整个决策系统。它具有较强的趋势跟踪能力,同时也存在一定的假突破风险与参数优化问题。该策略可以作为量化交易的一个基础模型,并在此基础上进行扩展与优化,开发出适合自己的决策系统。
-
-||
 
 ## Overview
 
@@ -118,7 +63,6 @@ The Turtle Trading Decision System can also be optimized in the following aspect
 
 The Turtle Trading Decision System judges the potential trend direction by comparing prices with the highest and lowest prices over specified periods, and constructs the entire decision system with risk management modules. It has strong trend tracking capability, and also has some risks of false breakouts and parameter optimization. This strategy can serve as a basic model for quantitative trading, and be expanded and optimized on this basis to develop appropriate decision systems for yourself.
 
-[/trans]
 
 > Strategy Arguments
 

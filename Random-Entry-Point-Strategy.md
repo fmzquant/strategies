@@ -11,33 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-随机点位交易策略
-
-随机点位交易策略利用随机整数产生的数值来决定做多或做空的时机。本策略遵循交易的黄金法则:“让利润上升,快速止损”。
-本策略的原理是:
-
-1. 设置一个随机整数,例如6。
-
-2. 每次K线形成时,用当日的成交量取余随机整数,得到0-5的一个随机数。 
-
-3. 将0-5划分成两半,0-2做多,3-5做空。
-
-4. 如果随机数落在0-2,且当前无仓位,则做多;如果随机数落在3-5,且当前无仓位,则做空。
-
-5. 做多做空后设置止损点和止盈点,例如止损-5%,止盈15%,等待止损止盈。
-
-6. 止损止盈后清仓,等待下一轮随机信号。
-
-7. 重复1-6,持续进行随机多空交易。
-
-8. 大数定律保证最终会有利润,同时设置止损可以控制风险。
-
-该策略优点是实现简单,不需要预测市场方向,跟随随机信号可以长期获利。但随机性也带来一定风险,短期내可能出现较大亏损,需要有足够的资金支撑。此外,参数设置如止损点、止盈点也会对策略影响很大,需要仔细测试优化找到最佳参数。
-
-总的来说,随机点位交易策略依靠大数定律实现盈利,设置止损止盈控制风险,适合有充足资金的投资者长期使用。
-
-||
 
 Random Entry Point Trading Strategy
 
@@ -65,7 +38,6 @@ The advantages of this strategy are simplicity of implementation, no need to pre
 
 In summary, the Random Entry Point strategy relies on law of large numbers for profitability, uses SL/TP to control risk, suitable for investors with sufficient capital for long term use.
 
-[/trans]
 
 > Strategy Arguments
 

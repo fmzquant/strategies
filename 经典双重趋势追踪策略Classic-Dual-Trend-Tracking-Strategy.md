@@ -11,83 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1bab8cb690ace1facda.png)
 
-[trans]
-
-## 概述
-
-该策略通过计算经典Pivot点以及利用RSI指标判断当前趋势方向,实现对 stocks的双重趋势跟踪,适用于中短线趋势交易。
-
-## 策略详述
-
-该策略主要通过以下步骤实现双重趋势跟踪:
-
-1. 计算经典Pivot点,包括中枢点(Pivot)、支撑1(S1)、阻力1(R1)、支撑2(S2)、阻力2(R2)等。
-
-2. 利用RSI指标判断股票趋势方向。RSI高于80为超买区,低于20为超卖区。
-
-3. 判断股票日线级别的趋势方向。如果收盘价大于前一日的R2,视为强势;如果收盘价小于前一日的S2,视为弱势。
-
-4. 根据日线级别趋势方向,结合Pivot点和RSI指标,制定当日的交易策略。
-
-   - 如果日线为强势(收盘价>R2),则在Pivot点以下观察回调买点,或在S1以下买入。
-
-   - 如果日线为弱势(收盘价<S2),则在Pivot点以上观察回调卖点,或在R1以上卖出。
-
-5. 设置止损点。强势止损于前一日的S1,弱势止损于前一日的R1。
-
-该策略通过计算Pivot点判断中长线趋势方向,配合RSI等指标确定短期趋势和具体入场点,实现对股价双重趋势的跟踪,适用于中短线交易。
-
-## 优势分析
-
-该策略主要优势有:
-
-1. 能够同时跟踪中长线趋势和短期趋势,灵活适应市场变化。
-
-2. Pivot点有一定的趋势判断能力,可以有效判断中长线趋势。
-
-3. RSI等指标可以判断短期超买超卖情况,辅助确定具体入场点。
-
-4. 策略操作规则清晰简单,容易掌握。
-
-5. 风险控制到位,有清晰的止损点。
-
-## 风险分析
-
-该策略主要风险有:
-
-1. Pivot点存在失效的可能,无法准确判断中长线趋势。可以通过调整参数或组合其他指标来改善。
-
-2. RSI等指标可能发出错误信号。可以适当调整参数,或与其他指标组合使用。 
-
-3. 止损点设置可能过于武断,无法完全避免止损被击穿的风险。可以适当留出一定缓冲区。
-
-4. 策略回撤可能较大,需要有心理准备和充足资金支持。
-
-5. 存在过于频繁交易的风险。可以适当调整开仓条件避免过频交易。
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 尝试不同的参数组合,如调整RSI的参数,优化Pivot点的计算方法等,寻找最佳参数组合。
-
-2. 增加或组合其他指标,如KDJ、MACD等,使信号更加准确可靠。
-
-3. 优化止损策略,如移动止损、离场止损等,降低止损被击穿的风险。 
-
-4. 优化仓位管理,适当控制单笔仓位规模,降低单笔损失的影响。
-
-5. 优化开仓条件,避免过于频繁出入场。可以设置过滤条件等。
-
-6. 测试不同品种的效果,调整参数达到最佳效果。
-
-7. 增加自动止盈策略,以锁定利润。
-
-## 总结
-
-该策略通过计算Pivot点判断中长线趋势,并利用RSI等指标辅助判断短期趋势和具体入场点,实现对股价双重趋势的跟踪,整体运行逻辑清晰合理,中短线交易效果较好。但存在一定概率上的错误信号风险,需要进一步优化参数组合,严格控制止损来降低风险,同时适当限制仓位规模以控制 possível 可能出现的较大回撤。如果能够不断优化和完善该策略,将可以获得稳定的投资收益。
-
-||
 
 
 ## Overview
@@ -164,7 +87,6 @@ The strategy can be optimized in these areas:
 
 This strategy judges mid-long term trend with Pivot Points and uses RSI etc to assist in determining short-term trend and entry points, achieving dual-trend tracking of prices. The overall logic is clear and reasonable, working well for medium-term trading. But some risk of false signals exists, necessitating further optimization of parameters, strict stop loss control to reduce risks, and appropriate position sizing control to manage possible larger drawdowns. With continuous optimization and improvements, stable investment returns can be achieved.
 
-[/trans]
 
 > Strategy Arguments
 

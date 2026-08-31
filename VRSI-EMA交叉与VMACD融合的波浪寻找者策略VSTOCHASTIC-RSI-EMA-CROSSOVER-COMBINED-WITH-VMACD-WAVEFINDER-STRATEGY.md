@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11eb833a57010f4073e.png)
-[trans]
-
-## 概述
-
-这是一个结合随机RSI, EMA交叉和VMACD的策略,用于识别市场的反转点, 在下跌趋势即将反转的时候表现最佳。它会在符合条件时产生买入信号。
-
-## 策略原理 
-
-该策略主要基于以下几个指标的组合:
-
-1. 随机RSI(随机指数平滑移动平均线):用于识别超买超卖现象
-2. EMA(指数移动平均线)快线和慢线的交叉:判断趋势和可能的反转
-3. VMACD(量加权MACD):用于确认反转信号
-
-当随机RSI从超卖区域反弹,并且EM快线上穿慢线,同时VMACD也开始上升的时候,就会产生买入信号。此外,如果短期价格突破10周期的SMA(简单移动平均线),也会作为辅助信号产生买入。
-
-该策略会实时跟踪这几个指标的变化,并计算一定长度后的SMA, EMA等信息。当触发买入条件后,就会使用固定数量的合约进行买入开仓。之后如果触发止损条件,例如回撤5%或者位于SMA线下方,就会平仓止损。
-
-## 优势分析
-
-该策略结合了多个指标,能够有效识别市场反转机会。主要优势有:
-
-1. 随机RSI识别超买超卖的能力较强
-2. EMA交叉判断反转信号准确性高 
-3. VMACD有效过滤假信号
-4. 多指标组合, 提高信号质量
-5. 采用短期SMA作为止损方式合理
-
-综上,该策略可以有效抓住反转信号,在下跌到一定程度后建立多头头寸,从而获利。
-
-## 风险分析
-
-尽管该策略有一定优势,但也存在一些风险需要注意,主要有:
-
-1. 市场可能并没有反转,继续下跌的系统性风险
-2. 当多个指标同时触发买入条件的概率不高,信号产生较少
-3. SMA止损可能过于主观,回撤控制效果一般
-4. 未考虑大幅震荡市场的情况
-
-针对以上风险,可以通过以下方式进一步优化:
-
-1. 增加其他反转指标的组合,提高效果
-2. 采用时间止损和金额止损相结合的方式
-3. 对市场状态进行判断,在震荡行情避免建仓
-4. 优化止损逻辑,防止过于激进的止损被套
-
-## 优化方向
-
-该策略主要可从以下方向进行进一步优化:
-
-1. 增加更多指标的组合,形成指标集群,提高信号质量
-2. 根据大类资产的特点选择最佳的参数,进行参数优化
-3. 增加机器学习算法,根据历史数据训练判断反转的概率
-4. 在回测时加入滑点,使结果更贴近实际交易
-5. 优化止损策略,使之更加平滑合理
-6. 检测趋势状态,区分震荡和趋势行情,避免盲目建仓
-
-## 总结
-
-该VRSI-EMA交叉与VMACD融合的波浪寻找者策略,整体来说是一个不错识别下跌反转机会的策略。它结合多个指标形成买入信号,可以有效判定反转的时机。但也存在一些需要优化的方向,若经过进一步改进,该策略的实盘表现会更加出色。它代表了多指标融合这类量化策略的典型范例。
-
-
-||
 
 
 
@@ -135,7 +72,6 @@ Main areas that could be optimized for the strategy:
 
 Overall this VRSI-EMA Crossover with VMACD Wavefinder Strategy is quite capable of catching downtrend reversal opportunities. It generates buy signals effectively by combining multiple indicators to determine optimal timing for reversals. However, there remains some areas for improvements. If further optimized, the strategy's performance in live trading could be even better. It represents a typical example of a quantitative strategy based on the fusion of multiple indicators.
 
-[/trans]
 
 > Strategy Arguments
 

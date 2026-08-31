@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10761b441f92ed91c7e.png)
-[trans]
-
-### 概述
-
-本策略通过集成双重交易信号的方式实现更稳定更高效的交易决策。其一是结合价格反转信号和随机指标的反转策略,其二是中心线与价格通道的突破策略。两种策略的交易信号会做逻辑与运算,即两策略同时发出同向信号时才会开仓。这种多策略集成方式可以过滤掉部分无效信号,实现更可靠的交易决策。
-
-### 策略原理
-
-反转策略部分,是在价格出现连续两个交易日的反转形态,且随机指标已经进入超买超卖区域时,产生交易信号。这样可以同时利用价值反转信号和超买超卖信号双重确认。中心重心线部分,是围绕价格的线性回归中心线构建价格上下通道,通道突破产生交易信号。通道突破信号同时意味着价格开始发生趋势性的方向性运动。
-
-两种策略分别捕捉价值与趋势性机会。通过策略信号的逻辑与,即两策略同时发出同向信号时才开仓。这可以有效过滤掉部分无效Signals,使最终策略更加可靠。
-
-### 优势分析
-
-本策略最大优势是信号的稳定可靠。反转策略与趋势策略的组合,同时兼顾反转与趋势两大交易机会,不会错过任何大的行情。而逻辑与运算过滤掉了部分无效信号,使最终策略更加可靠,避免被噪声欺骗。
-
-此外,反转策略与趋势策略的组合,也实现了多时间框架下的稳定操作。反转策略利用短期超买超卖产生信号,中心重心线策略基于中长线均线,时间框架互补,可以产生持续稳定的交易机会。
-
-### 风险分析
-
-本策略最大风险在于双重策略信号无法匹配,导致无法产生足够的交易信号。这种情况可能发生在股票横盘整理的时候。当价格长时间处于震荡,没有明显方向性的时候,反转信号和趋势信号都不容易产生,会造成交易机会减少。
-
-此外,双重策略逻辑与运算也可能错过部分单一策略的机会。当只有单一策略产生有效交易信号时,也不会开仓。这可能导致一定程度的机会成本。
-
-为降低风险,可以适当放宽部分参数,使策略信号更容易匹配从而开仓。也可以考虑引入选股机制,选择更加趋势明显的标的来交易,以获得更多交易机会。
-
-### 优化方向 
-
-本策略后续主要可以从两个维度进行优化:
-
-首先是参数优化。包括stoch随机指标的参数,中心线通道的参数等都可以继续测试优化,以获得更加匹配的信号。这可以通过更多回测来实现。
-
-其次是引入类似选股操作的机制。因为本策略更适合有明显趋势的标的。所以如果能根据一定指标来选择符合条件的标的来交易,也可以显著提高策略整体表现。这需要结合行业轮动性,均线系统等方法来设计选股模块。
-
-### 总结
-
-本策略通过反转策略与趋势策略的集成,实现了交易决策的双重确认与多时间框架匹配。同时也存在信号匹配困难导致交易机会减少的问题。下一步的优化可以从参数与模块组合两个层面入手,以获得更强更稳定的策略表现。
-
-||
 
 ### Overview
 
@@ -86,7 +47,6 @@ Second is to introduce mechanisms similar to stock selection operations. Because
 
 This strategy achieves double confirmation and multi-timeframe matching of trading decisions by integrating reversal and trend strategies, while also facing the problem of reduced trading opportunities due to difficulty in signal matching. Next step optimization can be approached from both the parameter and modular perspectives to obtain stronger and more stable strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

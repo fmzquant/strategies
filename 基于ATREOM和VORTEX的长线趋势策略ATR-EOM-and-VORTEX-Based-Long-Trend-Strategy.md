@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e9cd628e4939244df4.png)
-[trans]
-## 概述
-
-该策略是一个长线趋势策略,用于股票和加密货币市场。它结合了ATR(平均真实波动幅度)、EOM(易动平均)和VORTEX(涡流指标)三个指标来识别趋势方向。
-
-## 策略原理
-
-- ATR用于衡量市场波动性。这里我们计算10周期的ATR,再通过5周期EMA平滑ATR。如果当前ATR高于EMAATR,表示目前处于高波动的行情,属于牛市;相反,则属于熊市。
-
-- EOM属于量价指标。这里我们计算10周期的EOM。如果EOM为正,表示目前处于量能激增的行情,属于牛市;如果EOM为负,则属于熊市。  
-
-- VORTEX代表涡流指标,用于判断长线趋势方向。我们分别计算近10周期价格波动的绝对值之和得到VMP和VMM。再用ATR求和作为归一化的分母,计算出VIP和VIM。取两者平均值,若大于1表示属于牛市,小于1为熊市。
-
-综上,该策略通过ATR和EMAATR判断短期波动性,EOM判断量价特征,VORTEX判断长线趋势三者结合,来确定最终只做多的方向。
-
-
-## 优势分析
-
-- 该策略结合了三大类别指标来识别趋势方向,包括波动率类、量价类和趋势类,判断全面,信号较强。
-
-- ATR和VORTEX都具有一定的平滑特征,可以有效过滤震荡行情的噪音,避免错误的多头信号。
-
-- 只做多而不做空,可以最大限度减少短线调整带来的亏损风险。
-
-- 作为趋势跟踪策略,它专注于捕捉中长线方向性机会,利于获取行情主要趋势的收益。
-
-## 风险分析
-
-- 回测数据不足,实盘表现还需验证,参数设置也需要进一步优化测试。
-
-- 无法搜索反转或震荡行情带来的获利机会,收益上限存在一定局限。
-
-- 纯粹的趋势策略,无法有效控制持仓风险,存在一定程度的资金锁定风险。
-
-- 无法做空,无法对冲头寸风险,亏损空间相对较大。
-
-## 优化方向  
-
-- 测试不同ATR和VORTEX周期参数的稳定性。
-
-- 尝试引入止损机制,如移动止损、时间止损等,控制单笔亏损。
-
-- 基于ATR值设置仓位比例,高波动时减仓降低风险。
-
-- 结合反转因子确认入场时机,避免不必要的锁定资金。
-
-
-## 总结
-
-该策略属于长线趋势跟踪策略,通过ATR、EOM和VORTEX三大指标确认趋势方向后进场,只做多而不做空,以期捕捉主趋势带来的超额收益。它具有判断综合性强、信号较清晰的优点,但也存在数据不足、风险控制能力较弱的劣势。未来可从引入止损、优化参数设置、仓位管理等方面进行改进与优化。
-
-||
 
 ## Overview
 
@@ -111,7 +59,6 @@ In summary, this strategy combines ATR/EMAATR for short-term volatility, EOM for
 
 This long-term trend following strategy enters based on confirmations from ATR, EOM and VORTEX across three categories, and only goes long without short to benefit from main trend. It has the advantage of comprehensive judgments and clear signals, but the disadvantages of insufficient data validation, weak risk control capabilities. Future improvements can be made in areas like introducing stop loss, optimizing parameter settings and position sizing.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1061b4da3bf987926c3.png)
-[trans]
-
-## 概述
-
-该策略基于PIVOT高低点和突破来判断加密货币的趋势反转,属于突破反转类策略。策略首先计算标的物最近一段时间的最高价和最低价PIVOT点,然后判断价格是否突破这些关键点位后发生反转,以捕捉大的趋势变化。
-
-## 策略原理
-
-1. 计算PIVOT高低点
-
-   使用ta.pivothigh()和ta.pivotlow()函数计算最近一定bar数的最高价点和最低价点作为关键PIVOT点。
-
-2. 判断突破
-
-   如果价格突破PIVOT低点向上,或者突破PIVOT高点向下,则判断趋势发生反转。
-
-3. 设置过滤条件
-
-   需要价格较PIVOT点有一定幅度突破,并且突破150bar的收盘价,避免被套。
-
-4. 入场和出场
-
-   触发买入条件后做多入场,触发卖出条件后平掉多单。类似判断空单入场和出场。
-
-## 优势分析
-
-1. 使用PIVOT点判断,对大的趋势变化比较敏感
-2. 有效过滤加入震荡趋势中,确保趋势反转后入场
-3. 由于判断高低PIVOT点突破,能及时捕捉反转机会
-
-## 风险分析
-
-1. 大周期震荡容易使策略被套
-2. 需要调整PIVOT点长度和过滤条件来适应不同标的物
-3. 需要确保交易所手续费接近于零,否则盈亏受影响较大
-
-## 优化方向
-
-1. 可以测试不同的PIVOT参数组合
-2. 可以添加移动止损来控制单笔损失
-3. 可以结合其他指标判断过滤信号
-
-## 总结
-
-该策略整体较为稳健,适合捕捉大幅反转。但需要注意控制风险,调整参数适应不同币种。相信在参数优化和风控的基础上,该策略可以取得较好的效果。
-
-||
 
 ## Overview  
 
@@ -101,7 +54,6 @@ This strategy identifies trend reversals in crypto assets based on PIVOT swing h
 ## Conclusion
 
 The strategy is robust overall to capture large reversals, but needs customized parameters per asset and risk controls. With further optimization and guardrails, it can perform well across crypto markets.  
-[/trans]
 
 > Strategy Arguments
 

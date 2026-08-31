@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a37a141d99e6e1e401.png)
-[trans]
-
-## 概述
-
-移动平均线交叉策略是一种基于移动平均线的timing策略。它通过计算不同周期的移动平均线,判断其交叉情况,产生买入和卖出信号。该策略同时结合了指数移动平均线作为辅助判断指标,进一步提高信号的准确性。
-
-## 原理
-
-该策略的核心逻辑基于两个移动平均线的交叉情况。具体来说,分别计算n日简单移动平均线(short MA)和m日简单移动平均线(long MA)。当short MA从下向上突破long MA时,产生买入信号;当short MA从上向下跌砪long MA时,产生卖出信号。这反映了短期趋势对长期趋势的洗涤和修正。
-
-此外,该策略还引入了x日指数移动平均线(EMA)作为辅助指标。EMA相比SMA更为流畅,能更快速地体现价格变化趋势。它的辅助作用在于,只有当短期EMA也确认了移动平均线交叉信号时,才会触发实际的交易信号。这避免了部分虚假信号的干扰,提高了交易策略的稳定性。
-
-## 优势
-
-移动平均线交叉策略具有以下优势:
-
-1. 简单易用。该策略仅仅依赖两个移动平均线的交叉情况,非常简单,容易理解和实施。
-
-2. 直观形象。移动平均线能清晰地反映市场趋势,其交叉情况也十分直观,无需复杂计算。
-
-3. 历史悠久。移动平均线策略可以追溯到上世纪初,经历了百年的市场考验,已成为技术分析的经典工具之一。
-
-4. 风险可控。通过调整移动平均线的天数参数,可以控制交易信号的频繁程度,进而控制风险。
-
-5. 通用灵活。移动平均线交叉策略适用于多种品种和多种时间周期,是一种非常通用和灵活的交易策略。
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 仓位切换频繁。当市场震荡起伏时,移动平均线可能频繁交叉,导致换仓过于頻繁。
-
-2. 产生延迟。移动平均线本身承载一定滞后性,特别是长周期均线,可能错过短期交易机会。
-
-3. 需调参优化。不同品种和时间周期下,移动平均线参数需要独立测试和优化,否则效果可能不佳。
-
-4. 可配合其他指标。单一的移动平均线策略效果并非最佳,往往需要辅助其他技术指标过滤信号。
-
-## 优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 调整移动平均线参数,适应不同周期。可以测试不同的短期长期均线参数组合,找到最佳参数。
-
-2. 增加成交量的辅助判断。例如设置成交量突破指标,避免无效信号。
-
-3. 增加波动率指标的判断。例如KDJ,MACD等判断市场实际走势,过滤不确定信号。 
-
-4. 结合企业基本面。根据业绩预期等调整参数,使策略更具前瞻性。
-
-5. 策略组合化运用。与其他策略或模型组合使用,发挥协同效应。
-
-## 总结
-
-移动平均线交叉策略通过简单的均线交叉原理实现交易信号的生成。它直观易懂,参数调节灵活,风险可控,是一种实用性很强的timing策略。但其本身也存在一定的滞后性与频繁切换风险。因此,该策略可以通过多种方式进行优化与组合,从而发挥更大效用。它已成为量化交易中一种简单有效的基础策略。
-
-||
 
 ## Overview
 
@@ -122,7 +65,6 @@ This strategy can be optimized in the following aspects:
 
 The moving average crossover strategy generates trading signals through the simple principle of moving average crossover. It is intuitive, easy to understand, flexible in parameter adjustment and risk controllable. But it also has inherent lagging properties and risks of over-frequent position switching. Therefore, this strategy can be optimized and combined in various ways to maximize its utility. It has become a simple and effective basic strategy in quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

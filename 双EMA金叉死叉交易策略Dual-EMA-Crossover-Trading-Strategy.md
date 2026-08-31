@@ -11,93 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/118b11e6819d1c5863f.png)
 
-[trans]
-
-
-### 概述
-
-本策略运用双EMA均线的金叉死叉来判断入场和出场时机。具体来说,当快EMA线从下方向上突破慢EMA线时产生金叉信号,做多;当快EMA线从上方向下跌破慢EMA线时产生死叉信号,做空。该策略简单易行,是一种非常常见的交易策略。
-
-### 策略原理
-
-该策略的核心代码如下:
-
-```pine
-fast = input(25, title="Fast") 
-slow = input(75, title="Slow")
-
-matype1=ema(source, fast)
-matype2=ema(source, slow)
-
-longCondition = crossover(matype1, matype2) 
-shortCondition = crossunder(matype1, matype2)
-
-if (longCondition)
-    strategy.entry("Long", strategy.long)
-
-if (shortCondition)  
-    strategy.entry("Short", strategy.short)
-```
-
-该策略首先设置快慢两个EMA均线,其中快EMA线周期为25,慢EMA线周期为75。然后计算两条EMA线的值。当快EMA线从下方向上突破慢EMA线时,产生longCondition条件为真;当快EMA从上方向下跌破慢EMA时,产生shortCondition条件为真。满足相应条件时,做多或做空。
-
-该策略利用了EMA均线的平滑特点,可以有效过滤市场Noise,同时又能快速捕捉趋势的变化。两条EMA均线间的金叉死叉交叉为一个较强的交易信号,可以有效控制交易风险。
-
-### 优势分析
-
-该策略有以下几点优势:
-
-1. 操作思路简单直观,容易理解实现。
-
-2. 利用EMA平滑市场波动,有效过滤False Signal。
-
-3. 金叉死叉是较强的交易信号,可以有效控制风险。
-
-4. 可灵活调整EMA周期,适用于不同市场环境。
-
-5. 容易与其他技术指标组合使用。
-
-6. 可通过优化EMA参数来获得更好的策略效果。
-
-### 风险分析 
-
-该策略也存在一些风险:
-
-1. 在震荡行情中,EMA交叉频繁,会产生大量无效交易信号。
-
-2. EMA具有滞后性,可能错过短线机会。
-
-3. 仅靠EMA交叉无法确定趋势转折点,存在一定盈利上限。
-
-4. 固定的EMA周期不能适应市场的变化。
-
-5. 需要较强的资金支持,否则衍生风险大。
-
-6. 需要严格的止损约束,否则单笔损失可能很大。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化EMA周期参数,适应不同市场情况。
-
-2. 增加其他指标过滤,如MACD、布林带等,提高信号质量。 
-
-3. 增加趋势判断指标,如ATR止损、ADX等,减少无效交易。
-
-4. 结合更多时间周期分析,判断趋势方向。
-
-5. 利用机器学习方法动态优化EMA周期。
-
-6. 优化仓位管理,以控制风险。
-
-7. 优化止损策略,降低单笔损失。
-
-### 总结
-
-本策略运用双EMA均线的金叉死叉交叉作为交易信号,形成一个较为经典的趋势跟随策略。该策略简单易行,容易与其他技术指标组合,适用于对趋势判断要求不高的投资者。但也存在一定的盈利上限和风险,需要进行适当优化以适应不同市场环境。总体来说,该策略提供了一个非常好的策略开发基础,可供投资者进行深入研究。
-
-||
 
 ## Overview
 
@@ -182,7 +95,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy uses dual EMA golden cross and death cross as trading signals, forming a classical trend following strategy. It is simple and easy to implement, and can be combined with other indicators, suiting investors with relatively low requirements on trend judgment. But it also has profit limits and risks, requiring proper optimizations for different market environments. Overall, it provides an excellent basis for strategy development and in-depth research.
 
-[/trans]
 
 > Strategy Arguments
 

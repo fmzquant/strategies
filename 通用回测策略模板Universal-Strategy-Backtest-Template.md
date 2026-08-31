@@ -9,33 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本代码为一个通用的策略回测模板,提供了完整的策略开发框架,可快速构建和测试交易策略。用户只需在模板中添加策略逻辑代码,即可进行回测分析。
-
-模板包含以下功能模块:
-
-1. 策略逻辑空框架,用于编写指标计算、条件判断和交易信号生成代码。
-
-2. 可配置的回测时间段设置。
-
-3. ADX指标以过滤不确定市场状况。
-
-4. 多个止盈头和可调整的止损设置。 
-
-5. 杠杆和自动仓位计算。
-
-6. 交易状态管理模块。 
-
-7. 生成交易执行预警信息的语法。
-
-8. 完整的交易执行框架,可直接执行策略交易并管理仓位。
-
-该模板的优点是提供了全面的策略开发环境,使用简单,同时包含丰富的辅助功能,可快速评估策略的效果。用户可基于模板引入各种指标规则进行开发,无需建立复杂的框架即可高效回测。
-
-当然,用户仍需关注参数优化、风险控制等问题,模板仅提供基础框架,策略最终效果仍由用户开发结果决定。但整体而言,该模板可大幅降低策略开发难度。
-
-||
 
 This code provides a complete framework for quickly building and testing trading strategies. Users simply need to add strategy logic, and can immediately conduct backtests and analysis.
 
@@ -61,7 +34,6 @@ The advantage is the comprehensive environment enabling easy strategy developmen
 
 Of course, users still need to address optimization, risk control etc, as the template only provides the foundation - the final strategy performance depends on the user's coding skills. But overall, the template significantly reduces the difficulty of strategy development.
 
-[/trans]
 
 > Strategy Arguments
 

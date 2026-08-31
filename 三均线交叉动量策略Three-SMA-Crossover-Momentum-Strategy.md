@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1409ce1608b12ef217c.png)
-[trans]
-
-## 概述
-
-三均线交叉动量策略是一种典型的跟踪市场趋势的技术指标策略。它结合了16周期、36周期和72周期的三条简单移动平均线,通过它们的多头交叉和空头交叉来判断市场趋势,并结合考夫曼自适应移动平均线作为过滤器,在趋势方向比较明确时,采取做多或做空的操作。
-
-## 策略原理
-
-该策略的核心指标是16周期、36周期和72周期三条简单移动平均线。当短周期均线上穿较长周期的均线时,表明市场进入多头趋势;当短周期均线下穿较长周期均线时,表明市场进入空头趋势。例如,16均线上穿36均线和72均线时,为多头信号;16均线下穿36均线和72均线时,为空头信号。
-
-考夫曼自适应移动平均线(KAMA)被用作过滤器,来避免在趋势不明确的情况下出现错误信号。只有在KAMA处于非加速或非减速模式下(即线性段落),均线交叉信号才会被激活执行。
-
-策略通过跟踪均线的交叉情况,在趋势较为明朗时,采取做多或做空的操作。做多条件是16均线上穿36均线和72均线,且KAMA线性(非加速);做空条件是16均线下穿36均线和72均线,且KAMA线性(非减速)。
-
-## 优势分析
-
-该策略具有如下优势:
-
-1. 结合多时间段均线,可以有效跟踪市场中长线趋势
-2. 引入自适应移动平均线作为过滤器,可以减少趋势不明确时的错误信号
-3. 操作简单,容易实施,适合自动或程序化交易
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 在震荡行情中,均线交叉可能频繁出现,会产生过多无效信号
-2. 没有设置止损,亏损可能扩大
-3. 针对加密货币等高波动市场设计,波动小的市场效果可能不佳  
-
-可以通过适当调整均线参数,设置止损约束,或只在波动较大的市场使用该策略来降低风险。
-
-## 优化方向  
-
-该策略可以通过以下方式进行优化:
-
-1. 测试不同的均线参数组合,找到最优参数
-2. 增加成交量或波动率指标作为辅助过滤条件 
-3. 设置止损机制
-4. 结合其他指标判断进场时机
-5. 优化仓位管理,通过逐步加仓和减仓调整风险
-
-## 总结
-
-三均线交叉动量策略整体来说是一个较为经典和实用的跟踪趋势型策略。它通过多时间段均线的交叉来判断市场中长线走势,并有效过滤了部分噪音。可以作为选时交易的参考指标之一。但该策略也存在一定弱点,需要进一步扩展和优化,才能在更广泛的市场中立足。
-
-|| 
 
 ## Overview
 
@@ -102,7 +55,6 @@ The strategy can be optimized in the following ways:
 
 The Three SMA Crossover Momentum strategy is a rather classic and practical trend-following strategy overall. It judges medium- and long-term market trends effectively through multi-period SMA crossovers and filters out some noise. It can serve as one of the timing reference indicators for positional trading. But this strategy also has some weaknesses, requiring further enhancements and optimizations to stand in more diverse markets.
 
-[/trans]
 
 > Strategy Arguments
 

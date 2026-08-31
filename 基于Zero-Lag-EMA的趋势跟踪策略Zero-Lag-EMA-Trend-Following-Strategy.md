@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个典型的趋势跟踪策略。它使用快慢Zero-Lag EMA策略判断趋势方向,结合移动止损、止盈、复利等机制实现趋势跟踪交易。
-
-## 策略原理
-
-1. 计算快速Zero-Lag EMA和慢速Zero-Lag EMA。它们分别使用不同周期平滑价格。
-
-2. 当快速线上穿慢速线时产生做多信号;当快速线下穿慢速线时产生做空信号。
-
-3. 进场后设置移动止损线,跟踪最高价/最低价,实现风险控制。
-
-4. 设置移动止盈线,当价格达到一定比例时止盈退出。
-
-5. 使用开仓次数计数器实现类似复利的加仓机制。
-
-## 优势分析
-
-1. Zero-Lag EMA对延迟响应较小,可以更快捕捉趋势转变。
-
-2. 双EMA策略比较简单直观,容易判断操作方向。
-
-3. 止损止盈设置合理,可以很好控制单笔亏损。
-
-4. 加仓机制可以在趋势扩张时获得更多利润。
-
-## 风险分析 
-
-1. 参数设定不当可能导致止损止盈过于激进或保守。
-
-2. 趋势判断指标选择不当可能错过趋势转变时机。
-
-3. 加仓机制在趋势反转时可能扩大总体损失。
-
-4. 需要针对不同品种调整参数,避免过拟合某一品种。
-
-## 优化方向
-
-1. 测试不同EMA周期参数,找到更合适的参数组合。
-
-2. 优化止损止盈比例,在盈利和风险控制间找到平衡。
-
-3. 调整加仓逻辑,限制单向最多开仓次数。
-
-4. 增加其它技术指标进行入场过滤,提高信号质量。
-
-5. 在特定时间段内关闭交易,避开容易产生错误信号的时间段。
-
-6. 针对不同品种特点分别测试参数,提高稳定性。
-
-## 总结
-
-该策略整体运行稳定,收益风险比也较优秀。通过参数优化、辅助过滤等手段可以进一步增强策略效果。也需要警惕在个别行情下可能出现的信号错误。总体来说,该策略框架设计合理,有望通过持续调整优化成为一个稳定收益的趋势跟踪策略。
-
-|| 
 
 ## Overview
 
@@ -121,7 +64,6 @@ This is a typical trend following strategy. It uses fast and slow Zero-Lag EMA t
 
 The strategy shows overall stable running with decent risk-adjusted returns. It can be further improved via parameter optimization, auxiliary filtration etc. Also need to watch out potential signal errors in certain market conditions. Overall this strategy has a sound framework and shows potential to become a steady profitable trend following strategy after continuous refinements.
 
-[/trans]
 
 > Strategy Arguments
 

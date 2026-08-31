@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1724fca9b2447bf7efb.png)
 
-[trans]
-
-## 概述
-
-该策略结合相对成交量指标和价格行情判断的趋势指标,实现了一个融合趋势跟踪和突破的自动化交易系统。当成交量增加且波动较小时买入,根据止损点和价格行情判断止盈或止损。
-
-## 策略原理
-
-1. 使用 Bollinger Bands 判断价格是否波动较小。具体实现是比较ATR和BOLL通道带宽。
-
-2. 计算过去N天的平均成交量,和当前Volume比较判断成交量是否增加。
-
-3. 当价格低位运行,成交量增加,波动较小时买入。
-
-4. 设置止损点,跟踪最低价更新。
-
-5. 当价格向下突破止损点时止损。
-
-6. 当价格形成多头吞噬模式时止盈。
-
-## 优势分析
-
-1. 结合成交量和波动性指标,可以有效过滤假突破。
-
-2. 采用趋势跟踪止损方法,可以最大限度锁定利润。
-
-3. 利用多头吞噬等形态判断作为止盈信号,可以在趋势反转前夕及时止盈。
-
-4. 策略较为直观简单,容易理解和跟踪。
-
-5. 止损和止盈规则比较明确,降低了闭市antisipate带来的不确定性。
-
-## 风险分析
-
-1. 成交量指标存在滞后,可能错过最佳入场点。
-
-2. 多头吞噬等形态判断作为止盈信号可能不足够可靠,存在过早止盈的风险。
-
-3. 止损点靠后的策略,存在单笔损失可能较大的风险。
-
-4. 需要合理参数调整,如ATR和成交量周期等,否则可能出现频繁交易。
-
-5. 需要关注和优化止盈止损规则,降低不必要平仓的可能。
-
-## 优化方向
-
-1. 尝试结合其他指标过滤入场信号,如MACD等。
-
-2. 优化ATR和成交量周期参数,降低频繁交易风险。 
-
-3. 尝试其他止盈信号,如价格突破下轨等Exit机制。
-
-4. 研究通过动态调整止损位来锁定更多利润的可能性。
-
-5. 测试不同持仓时间对绩效的影响,寻找最优持仓周期。
-
-6. 回测不同品种合约效果,找到最佳适用品种。
-
-## 总结
-
-该策略整体较为简单直观,通过结合成交量指标和价格行情判断,实现了趋势跟踪型策略。优点是信号生成较为清晰,跟踪容易,降低反向操作风险。但仍需优化过滤信号的质量和止盈止损规则,使策略更稳定可靠。通过继续改进参数设定、进场退出机制等,有望产生更加优异的绩效表现。
-
-||
 
 
 ## Overview
@@ -136,7 +73,6 @@ This strategy combines relative volume indicator and price action trend judgment
 
 The strategy is relatively simple, using volume and price action for trend following. It has clear signals and easy tracking. But the quality of filters and exit rules can be further improved for more reliable performance. With continued efforts on parameter tuning and entry/exit design, outstanding results could be achieved.
 
-[/trans]
 
 > Strategy Arguments
 

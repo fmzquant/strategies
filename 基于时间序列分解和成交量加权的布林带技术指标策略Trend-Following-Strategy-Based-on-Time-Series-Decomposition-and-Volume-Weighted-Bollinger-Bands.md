@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12c0c22334818516af8.png)
-[trans]
-## 概述
-
-该策略融合了时间序列分解、成交量加权平均价、布林带和 delta(OBV-PVT) 4种技术指标,以实现对价格趋势、超买超卖的多维度判断。
-
-## 策略原理
-
-1. 使用时间序列分解去除价格中的噪音和周期性,得到更为准确的趋势判断;
-2. 基于该趋势线,计算成交量加权后的新价格; 
-3. 计算收盘价的布林带百分比宽度BB%B指标来判断超买超卖;
-4. 计算OBV-PVT的变化量Delta(OBV-PVT)的布林带百分比宽度,作为量价背离的判断标准;
-5. 根据量价指标的多空交叉以及布林带指标的过冲回撤来产生交易信号。
-
-## 优势分析
-
-1. 结合了价格、成交量和统计特征的多重判断,策略健壮性好;  
-2. BB%B和Delta(OBV-PVT)相结合,能更好地判断短期的超买超卖现象;
-3. 量价交叉信号过滤了部分噪音交易点。
-
-## 风险分析 
-
-1. 参数设置过于复杂,不易调整;
-2. 短期区间震荡可能增加损失;
-3. 量价背离并不能完全过滤误导信号。
-
-可以通过调整均线周期、布林带幅度以及风险盈亏比来优化策略,降低交易频率的同时提高单次交易的盈亏比。
-
-## 总结
-
-该策略综合运用了时间序列分解、布林带指标、OBV指标等多种分析工具,通过量价关系、统计特性以及趋势判断的有机结合,实现对短期余震的识别,能有效抓住市场的主要趋势。同时也存在一定的风险,需要通过参数调整以达到最优状态。
-
-|| 
 
 ## Overview
 
@@ -73,7 +41,6 @@ Parameters like moving averages, Bollinger Bands widths and risk-reward ratios c
 
 Integrating tools like time series decomposition, Bollinger Bands, OBV indicators, this strategy combines price-volume relationships, statistical properties and trend analysis to identify short-term reversals and catch major trends. There are also certain risks that need to be addressed through parameter tuning for optimal performance.
 
-[/trans]
 
 > Strategy Arguments
 

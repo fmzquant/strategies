@@ -11,89 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/976d5f6e03d65b0302.png)
-[trans]
-
-## 概述
-
-EMA交叉策略通过追踪两个不同周期的EMA均线的交叉情况,判断价格趋势从而产生买入和卖出信号。当短周期EMA上穿长周期EMA时产生买入信号,当短周期EMA下穿长周期EMA时产生卖出信号。该策略同时结合SuperTrend指标过滤假突破。
-
-## 策略原理
-
-该策略主要基于EMA均线的金叉死叉原理。EMA均线能够平滑价格数据过滤噪音,通过EMA均线的交叉情况判断价格趋势。当短周期EMA(20周期)上穿长周期EMA(50周期)时,代表短周期价格现在位于长周期价格之上,说明价格存在突破上升趋势,产生买入信号。当短周期EMA下穿长周期EMA时,代表短周期价格跌破长周期价格,说明价格存在下跌趋势,产生卖出信号。 
-
-同时,该策略结合SuperTrend指标来过滤EMA交叉产生的假信号。SuperTrend指标是根据ATR计算出的上轨和下轨,可以更准确判断真实趋势。当价格突破SuperTrend指标的上轨时产生买入信号,当价格跌破SuperTrend指标下轨时产生卖出信号。只有在SuperTrend指标也同时产生买入/卖出信号时,EMA交叉才会产生真正的交易信号。这可以过滤由于价格震荡而产生的EMA交叉假信号。
-
-具体来说,该策略判断条件如下:
-
-1. 当20EMA上穿50EMA,且价格突破SuperTrend上轨时,产生买入信号;
-
-2. 当20EMA下穿50EMA,且价格跌破SuperTrend下轨时,产生卖出信号。
-
-通过EMA交叉判断大趋势,同时结合SuperTrend指标过滤震荡,可以提高策略交易信号的准确率。
-
-## 优势分析
-
-EMA交叉策略具有以下优势:
-
-1. 操作简单,易于实现。仅需要计算两个EMA均线的交叉情况。
-
-2. 对价格震荡有一定的过滤作用。EMA作为移动平均线,能够过滤掉部分噪音。
-
-3. 结合SuperTrend指标,可以进一步过滤噪音,减少假信号。
-
-4. 可以通过调整EMA周期参数,适应不同市场环境。
-
-5. 可自定义长短仓位,可实现多种交易方式。
-
-6. 可在不同时间周期上实现,适用于不同型交易者。
-
-## 风险分析
-
-EMA交叉策略也存在一些风险:
-
-1. 当市场出现剧烈波动时,EMA交叉signals可能滞后,无法及时反映价格变化。
-
-2. EMA均线具有滞后性,可能产生错误信号。
-
-3. 短周期EMA和长周期EMA参数设置不当,可能导致产生过多错误信号。
-
-4. 单纯依靠均线交叉无法确定市场实际趋势,存在一定盲目性。
-
-5. 需要选择合适的止损策略控制风险。
-
-以下几点可以降低风险:
-
-1. 优化EMA周期参数,选择合适的快慢均线周期。
-
-2. 适当缩短持仓时间,及时止损。
-
-3. 结合其它指标如移动平均线、K线形态等进行综合判断。
-
-4. 适当调整交易频率,降低交易次数。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化EMA均线的周期参数,适应不同周期和市场环境。可以引入自适应参数优化机制。
-
-2. 尝试不同的均线指标,如SMA,KWMA等。
-
-3. 结合更多指标进行组合交易,形成多因子模型。如MACD,RSI等。引入机器学习算法进行参数优化和权重调整。
-
-4. 增加止损策略,如跟踪止损,百分比止损等来控制风险。
-
-5. 引入交易量过滤,结合交易量指标避免虚假信号。
-
-6. 优化策略 exits,设定离场规则。如结合K线形态,突破等 EXIT signals。
-
-7. 在较高时间周期确认趋势,在较低时间周期入场,实现趋势跟踪。
-
-## 总结
-
-EMA交叉策略是一种简单实用的趋势跟踪策略。它能够识别价格中期趋势,产生买入卖出timing信号。结合SuperTrend指标可以有效过滤噪音,减少错误trades。但该策略依然存在滞后,产生错误信号的风险。通过参数优化,止损,组合其他指标等方式可以增强策略效果。EMA交叉策略易于操作SIMPLE,适合跟踪中长线趋势,是一种适合新手交易者的有效策略。
-
-||
 
 
 ## Overview
@@ -176,7 +93,6 @@ This strategy can be enhanced and optimized in the following aspects:
 
 The EMA crossover strategy is a simple and practical trend following system. It can identify mid-term trends and generate timing signals. Combining with SuperTrend filter could reduce false trades effectively. But risks like lagging and wrong signals still exist. The strategy can be enhanced via parameter optimization, stop loss, combining indicators, etc. The EMA crossover strategy is easy to use, suitable for mid-long term trend tracking, and effective for novice traders.
 
-[/trans]
 
 > Strategy Arguments
 

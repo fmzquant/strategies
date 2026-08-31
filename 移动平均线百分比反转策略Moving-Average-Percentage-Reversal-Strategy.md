@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-移动平均线百分比反转策略通过计算价格与移动平均线的百分比差距来判断买卖时机。 当价格与移动平均线的差距达到一定百分比时产生交易信号。
-
-具体来说,策略的交易逻辑是:
-
-1. 计算价格与长度为N的移动平均线的差额
-2. 将差额转换为百分比形式,即差额除以价格
-3. 当百分比差距大于预设上限(如5%)时,做空
-4. 当百分比差距小于预设下限(如-3%)时,做多
-5. 可选择反转信号,即做多反转为做空,做空反转为做多
-
-若N取14,上限设定为5%,下限设定为-3%,则:
-
-- 当价格较14日移动平均线高出5%时,做空
-- 当价格较14日移动平均线低出3%时,做多
-
-通过调整N、上下限参数,可以控制策略的敏感度。
-
-## 策略优势 
-
-- 使用百分比形式,避免受价格绝对数值的影响
-- 可根据市场调整参数,适用于不同周期
-- 采用BREAK策略,可以较早捕捉趋势转折
-
-## 策略风险
-
-- 百分比差值无法确定趋势方向
-- 容易发出错误信号,需进行过滤
-- 移动平均线滞后,无法及时捕捉转折
-
-## 总结
-
-移动平均线百分比策略通过计算价格与移动平均线的百分比差距来判断买卖点位,采用BREAK策略,旨在捕捉趋势的转折点。通过调整参数可以适应不同的市场环境。但也存在一定的滞后性与误报风险,需要进行优化过滤。
-
-||
 
 ## Strategy Logic 
 
@@ -86,7 +48,6 @@ Parameters N, upper/lower limits can adjust sensitivity.
 
 The MA percentage strategy uses the percentage gap between price and MA to identify potential turning points, with a BREAK approach. Adjustable parameters can adapt to varying market conditions, but lag and whipsaws are risks needing mitigation.
 
-[/trans]
 
 > Strategy Arguments
 

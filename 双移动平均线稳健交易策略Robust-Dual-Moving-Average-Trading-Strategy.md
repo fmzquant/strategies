@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6d11bbe4e33a9d6334.png)
-[trans]
-## 概述
-
-双移动平均线稳健交易策略融合了相对强弱指数(RSI)和变化率指标(ROC)的双重力量,用于识别中长线趋势的方向。该策略同时设置了过滤条件和止损条件,实现了在趋势方向确认的基础上进行 Entry,能够有效降低假突破带来的风险。
-
-## 策略原理
-
-该策略基于 RSI 指标和 ROC 指标的组合来判断入场时机。当价格接近相对超卖区域时认为是结构转折点,形成反转信号;价格在相对超卖区域中波动时,表示当前趋势会持续一段时间。ROC 指标则从变化率的角度判断价格变化趋势和力度。两者的组合能形成判断market structure方面的互补。
-
-另外,该策略加入了中长线趋势判断的 SMA 和短期止损线这两个过滤条件,这使得策略只在中长线趋势方向确认,短期没有止损风险的前提下才会入场。这种配置方式可以减少在震荡行情中被套牢的机会,对交易者而言风险可控。
-
-该策略灵活的输入项设置还使得交易者可以自由选择仅采用 RSI 或 ROC 其中一个指标作为入场依据,或将二者组合使用,可针对不同品种和行情类型进行优化,这进一步扩大了策略的适用范围。
-
-## 优势分析
-
-该策略最大的优势在于结合趋势和反转信号进行入场判断,既考虑了趋势因素也兼顾了结构性机会,建立在市场结构转变的基础上,从而可以确保入场时机准确。与单一指标相比,RSI 和 ROC 的组合使用也使得策略对市场中的随机性噪音具有更强的抗干扰能力。
-
-另一个优势是策略内置的趋势过滤器(SMA)和短期止损器,能够有效减少在震荡行情下被套的概率。趋势判断和短期止损这两道防线的设置使这成为一个风险可控的稳健策略。
-
-最后,该策略内置多种参数设置组合,交易者可以针对不同品种和行情类型进行优化,这使得策略的适用面非常广泛。无论是趋势行情还是盘整行情,该策略都可以通过参数调整适应市场变化。
-
-## 风险分析
-
-该策略最大的风险在于 RSI 和 ROC 等反转信号指标存在一定的滞后。当趋势发生转变时,这些指标往往会有一定的滞后才使得参数达到设定的门限水平。这种滞后会导致策略的入场时间偏晚,无法捕捉趋势最初的启动阶段。
-
-另一个潜在风险是在震荡趋势中,RSI 和 ROC 的参数设置可能会过于灵敏,导致产生一定的假信号。如果适逢短期止损被触发,则这些假信号会直接造成实际的损失。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 加入更多指标进行组合,如 KDJ、MACD 等,利用更多维度判断市场结构,提高信号的准确度
-
-2. 对 RSI 和 ROC 的参数设置加入自适应优化机制,使指标参数能够根据实时波动性进行动态调整
-
-3. 优化入场逻辑,在趋势指标和反转指标达到条件时设置一定的确认机制,避免在震荡中出现的假信号
-
-4. 扩大止损范围或设置游离止损,给反转更多的空间,以减少止损过密造成的遗漏利润
-
-## 总结
-
-双移动平均线稳健交易策略成功地结合了趋势判断和反转指标,在中长线趋势确认的基础上捕捉结构性机会。该策略还具备强大的可配置性,交易者可以针对个股和行情类型进行参数优化。内置的双重防护机制也使其成为一个风险可控的选择。通过进一步集成更多指标,或建立自适应参数调整机制,该策略的表现还具有扩展的空间。
-
-||
 
 ## Overview
 
@@ -97,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 The Robust Dual Moving Average Trading Strategy successfully combines trend diagnosis and reversal indicators to capture structural opportunities upon intermediate-to-long-term trend confirmation. With robust configurability, traders can optimize parameters for individual stocks and market conditions. The dual line of defense also makes it a risk-controllable choice. Further performance improvements can be achieved by incorporating more indicators or establishing adaptive parameter tuning mechanisms.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/752e6967715196d91f.png)
 
-[trans]
-
-### 概述
-
-埃尔斯即时趋势线策略是John Ehlers在他的书《股票和期货的控制分析》中提出的。该策略利用技术指标来识别股票或期货的即时趋势,并在趋势反转时打开仓位。
-
-### 策略原理
-
-该策略的核心是计算即时趋势线(IT)。IT线的计算公式如下:
-
-```
-it := (a-((a*a)/4.0))*src+0.5*a*a*src[1]-(a-0.75*a*a)*src[2]+2*(1-a )*it[1]-(1-a )*(1-a )*it[2]
-```
-
-其中src代表价格,a是一个平滑因子,默认值为0.07。该公式是一个二阶滤波器,能够平滑价格并生成趋势。
-
-另一个关键指标是滞后线(lag),计算公式为:
-
-```
-lag = 2.0 * it - nz(it[2])
-```
-
-该线滞后于IT线一个周期。当价格上穿滞后线时,代表趋势反转,做多;当价格下穿滞后线时,代表趋势反转,做空。
-
-此外,策略还设定了止损单来控制风险。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 使用IT线识别趋势,能够有效过滤市场噪音,提高信号质量
-2. 应用二阶滤波器,参数优化空间大,可调性高
-3. 结合滞后线生成交易信号,避免在趋势中反复开平仓
-4. 设定止损单控制风险,可以预设止损比例
-5. 代码结构清晰,易于理解和修改
-
-### 风险分析
-
-该策略也存在一些风险:
-
-1. IT线和滞后线参数设置不当可能导致产生错误信号
-2. 止损点设置不当可能过早止损或止损幅度过大
-3. 交易频率可能较高,交易成本影响盈利
-4. 集中持仓时间过长可能 magnification 效应影响收益率 
-
-这些风险可以通过以下方法减轻:
-
-1. 应用机器学习算法优化参数
-2. 设置自适应止损点位
-3. 适当调整开仓数量,降低交易频率
-4. 设定持仓周期止损
-
-### 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 测试不同滤波器参数对结果的影响,寻找最优参数
-2. 尝试结合其他指标筛选交易信号,提高信号质量
-3. 优化开仓逻辑,在趋势加速阶段加大仓位
-4. 设置自适应止损策略,根据市场波动程度调整止损点
-5. 进行时间序列分析,判断交易时间和周期对结果的影响  
-
-### 结论
-
-总的来说，埃勒斯瞬时趋势线策略利用技术指标来识别股票/期货的实时趋势，并在趋势反转时开仓。它具有有效的噪声过滤、高参数可调性、清晰的信号生成逻辑和内置风险控制等优点。通过进一步优化参数选择、信号过滤、头寸规模和止损调整，这个策略可以取得更好的表现。清晰的代码结构也使其易于理解和修改。总之，这是一个值得测试和改进的高效跟踪系统。
-
-||
 
 ## 
 
@@ -145,7 +78,6 @@ This strategy can be further optimized in the following aspects:
 
 Overall, the Ehlers Instantaneous Trendline strategy utilizes technical indicators to identify real-time trends in stocks/futures and open positions when trends reverse. It has the advantages of effective noise filtering, high parameter tuneability, clear signal generation logic, and incorporated risk control. With further optimization on parameter selection, signal filtering, position sizing and stop loss tuning, this strategy can achieve even better performance. The clear code structure also makes it easy to understand and modify. In summary, this is an efficient trend following system worth testing and improving.
 
-[/trans]
 
 > Strategy Arguments
 

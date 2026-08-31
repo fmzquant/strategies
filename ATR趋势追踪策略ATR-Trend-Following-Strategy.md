@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于平均真实波幅指标ATR来判断趋势方向,在趋势上涨时做多,在趋势下跌时做空,属于趋势跟踪类型的策略。
-
-## 策略原理
-
-该策略首先计算价格的简单移动平均线sma和指数移动平均线ema。然后计算ATR指标,即过去N天的平均波动范围。 
-
-策略通过ema平均线、上轨(ema + ATR * 系数)和下轨(ema - ATR * 系数)来判断趋势方向。当价格上穿上轨时,做多;当价格下穿下轨时,做空。
-
-代码主要逻辑:
-
-1. 计算价格sma和ema平均线
-2. 计算ATR平均波动范围
-3. 计算上轨线和下轨线
-4. 判断做多信号:价格上穿上轨线
-5. 判断做空信号:价格下穿下轨线
-6. 设置止损平仓:价格下穿上轨线平多单;价格上穿下轨线平空单
-
-通过ATR动态调整仓位,能够有效跟踪趋势 Directions。
-
-## 策略优势
-
-1. 使用ATR指标判断趋势方向,能够有效捕捉价格趋势
-2. 基于平均线设置止损,能够合理控制风险
-3. 策略逻辑简单清晰,容易理解实现
-4. 可配置参数灵活,适用于不同市场环境
-
-## 策略风险
-
-1. 大幅震荡市场下,ATR指标将失效
-2. 参数设置不当可能造成过于频繁开仓
-3. 突发事件造成急促反转时,止损可能无效
-4. 交易费用较高的市场,跟踪 Setting 需要调整
-
-解决方法:
-1. 大幅震荡市场下,宜暂停策略,或采用其他指标
-2. 优化参数,降低开仓频率
-3. 针对重要数据事件,提高止损比率
-4. 根据具体品种,调整ATR取值范围
-
-## 策略优化方向
-
-1. 结合趋势指标优化参数,如加入MACD判定趋势
-2. 增加过滤器,如布林带判定入场
-3. 优化止损方式,如移动止损或离场指标
-4. 针对特定品种优化ATR取值范围
-5. 增加资金管理策略,如固定份额等
-6. 结合机器学习方法动态优化参数
-
-## 总结
-
-该ATR趋势追踪策略整体思路清晰,通过ATR指标判断趋势方向,属于典型的趋势跟踪策略。策略优点是简单易操作,能够有效跟踪趋势;但也存在一定风险,需要针对不同市场环境进行优化调整,才能发挥策略的最大效用。总体来说,该策略作为一种量化交易工具还具有很大的拓展空间和运用价值。
-
-||
 
 
 ## Overview
@@ -122,7 +65,6 @@ Solutions:
 
 The ATR trend following strategy has clear logic to determine trend direction using ATR. It is a typical trend following system. The advantages are simplicity and ability to follow trends. But it also has risks that require optimizations for different markets. Overall, it has great potential and value as a quantitative trading tool.
 
-[/trans]
 
 > Strategy Arguments
 

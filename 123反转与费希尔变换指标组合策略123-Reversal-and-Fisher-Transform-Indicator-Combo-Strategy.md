@@ -10,29 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略名称为“123反转与费希尔变换指标组合策略”。该策略集成应用123反转形态判定和费希尔变换指标,在两者发出共同信号时进行买入或卖出。
-
-123反转形态指价格连续三日形成高低缺口,第三日收盘反转前两日趋势的形态。根据统计,123反转的交易获利率较高。
-
-费希尔变换指标对价格作正态化处理,当变换曲线出现突破极值点时,可以有效识别价格反转点。
-
-交易逻辑如下:
-
-1. 123反转形态显示买入信号或卖出信号。
-
-2. 费希尔变换曲线显示买入或卖出信号。
-
-3. 当两者发出同向信号时,进行相应的买入或卖出交易。
-
-4. 当两者发出反向信号时,保持空仓。
-
-该策略的优势在于指标组合可以提高对价格反转时点的判断准确性。但参数优化仍然关键,需要严格的资金管理。
-
-总体来看,指标集成应用可以形成更全面的分析角度。但交易者仍需保持足够的灵活性,根据市场情况进行策略调整。
-
-
-||
 
 This strategy is named “123 Reversal and Fisher Transform Indicator Combo Strategy”. It incorporates the 123 reversal pattern and Fisher transform indicator, entering trades when both give concurring signals.
 
@@ -54,7 +31,6 @@ The advantage of this strategy is the indicator combo can improve judgment accur
 
 In conclusion, indicator integration forms a more comprehensive analytical perspective. But traders still need sufficient discretion to adjust strategies based on market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

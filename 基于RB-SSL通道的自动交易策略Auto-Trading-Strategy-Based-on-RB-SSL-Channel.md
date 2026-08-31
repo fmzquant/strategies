@@ -9,38 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于RB SSL通道指标设计自动交易系统,利用通道线上的突破进行长短仓位切换,属于短线趋势跟随类策略。该策略简单实用,容易实现自动化交易。
-
-## 策略原理  
-
-该策略主要是利用RB SSL通道指标识别趋势方向。RB SSL通道包括上轨和下轨,分别由一定周期内的最高价SMA和最低价SMA组成。当价格上穿上轨时为多头信号,当价格下穿下轨时为空头信号。
-
-具体来说,代码中首先计算一定周期内的最高价SMA和最低价SMA,作为通道的上下轨。然后判断价格是否突破上下轨,作为做多做空信号。在进入多头时,以上轨作为止损线;进入空头时,以下轨作为止损线。
-
-## 优势分析
-
-- 使用通道突破判断趋势方向,信号比较清晰。
-- 止损线设置合理,可以很好控制风险。
-- 代码简洁易懂,容易实现自动化。
-- 兼顾趋势跟踪和短线操作,收益space较大。
-
-## 风险及优化
-
-- 仅依靠通道指标,对复杂行情的判断력较弱。
-- 无法有效过滤震荡行情,容易被套。
-- 周期参数对结果影响很大,需要仔细测试优化。
-- 可以考虑加入其它指标进行组合,提高判断准确性。 
-- 可以基于ATR等指标设置移动止损,以更好控制风险。
-
-## 总结
-
-该策略整体思路清晰简单,利用通道指标判断趋势方向,以通道线作为止损位,非常适合自动化交易。但仅依靠简单指标,对复杂行情判断能力较弱。可以通过多指标组合、参数优化、加入移动止损等方式进行改进优化,使策略更实用可靠。
-
-||
 
 ## Overview
 
@@ -71,7 +39,6 @@ Specifically, the code first calculates the SMA of highest and lowest prices ove
 
 The strategy has an overall clear and simple logic, using channel indicator for trend direction and channel lines for stop loss, very suitable for automation. But relying solely on simple indicators means weak judgment in complex markets. Improvements like multi-indicator combo, parameter optimization, mobile stop loss can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

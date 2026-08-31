@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1f6e3873916ac74abeb.png)
 
-[trans]
-
-## 概述
-
-本策略结合双移动均线和相对强弱指标RSI,寻找价格在强势趋势中的短期反转机会进行交易。在趋势方向明确时,利用RSI识别超买超卖情况,等待价格反转进入场内。该策略适用于趋势较明显的市场,能够在不逆势的前提下捕捉部分反转 movement。
-
-## 策略原理
-
-1. 计算30日简单移动均线SMA和200日指数移动均线EMA,判断大趋势方向
-
-   - SMA>EMA,为上升趋势
-   - SMA<EMA,为下降趋势
-
-2. 计算30日RSI,判断超买超卖
-
-   - RSI<=53为超卖
-   - RSI>=60为超买
-
-3. 进入规则:
-
-   - 上升趋势中(SMA>EMA)且RSI<=53时做多
-   - 下降趋势中(SMA<EMA)且RSI>=60时做空
-
-4. 出场规则:
-
-   - 多单止损或止盈
-   - 空单止损或止盈
-
-## 策略优势分析
-
-1. 追踪大趋势,避免逆势操作
-
-2. RSI参数设置较为保守,可以减少虚假信号
-
-3. 结合双移动均线过滤,entry timing比较准确 
-
-4. 风险可控,回撤不大
-
-## 风险分析
-
-1. 需要较明显趋势市场,震荡行情效果不佳
-
-2. RSI参数设置保守,可能错过部分机会
-
-3. 止损位置需要合理设置,避免过于激进退出
-
-## 策略优化方向 
-
-1. 优化RSI参数,适当降低参数寻找更多entry机会
-
-2. 测试不同的移动均线组合
-
-3. 设置趋势过滤,只在趋势足够明显时操作
-
-4. 优化止损策略,严格控制单笔止损
-
-## 总结
-
-本策略整体风险可控,适合中长线持仓交易者。策略根据大趋势方向交易,采用保守RSI参数以及严格的移动均线过滤,可以有效避免假突破,从而提高胜率。同时也存在一定潜在改进空间,如果参数调整得当,可以获得更多机会。需要注意风险控制,保持长线的交易心态。
-
-||
 
 
 ## Overview
@@ -132,7 +71,6 @@ This strategy combines dual moving averages and the relative strength index (RSI
 
 The strategy has controllable risks overall, suitable for medium-long term position traders. It trades with the major trend direction, uses conservative RSI settings and strict moving average filters to avoid false breakouts, improving win rate. There is also room for potential improvements with parameter tuning to gain more opportunities. Risk control is essential to maintain a long-term trading mentality.
 
-[/trans]
 
 
 

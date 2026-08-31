@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c31d913440ea85ac7e.png)
-[trans]
-## 概述
-
-该策略通过计算快速EMA均线和慢速EMA均线的交叉,判断市场趋势方向,实现趋势追踪交易。当快速EMA上穿慢速EMA时,做多;当价格跌破快速EMA时,平仓。
-
-## 策略原理
-
-策略通过输入快速期EMA平均线周期i_shortTerm和慢速期EMA平均线周期i_longTerm,分别计算出快速EMA和慢速EMA。当短期EMA上穿长期EMA(goLongCondition1条件),并且价格高于短期EMA(goLongCondition2条件)时,做多入场。当价格跌破短期EMA(exitCondition2条件)时,平仓退出。
-
-该策略基于EMA平均线的黄金交叉原理,通过快慢EMA的交叉判断市场主要趋势,并跟踪趋势进行交易。当短期EMA上穿长期EMA时,表示市场步入趋势;当价格高于短期EMA时,表示目前处于趋势上行阶段,这样入场做多。当价格跌破短期EMA时,表示趋势反转 biosignal,应立即平仓。
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. captured利用EMA平均线交叉判断市场主要趋势方向,避免被市场短期波动干扰,锁定主要趋势。
-
-2. 设置快慢EMA参数,可以调整对趋势判断的敏感度,灵活适应不同行情。
-
-3. 策略逻辑简单清晰,容易理解实现,适合量化交易初学者。
-
-4. 可自定义EMA周期参数,针对不同品种和市场调整参数,优化策略效果。
-
-5. 利用价格突破EMA退出止损,可有效控制风险,保护资金。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 当趋势反转时,EMA交叉信号会较价格转折慢一些,可能带来较大亏损。
-
-2. 作多突破短期EMA入场时,可能出现假突破带来损失。
-
-3. paramedic参数设置不当也会影响策略效果。
-
-4. 效果与市场走势密切相关,不适合所有的品种和阶段。
-
-对应的风险管理措施有:
-
-1. 优化EMA参数,提高对趋势反转的敏感度。
-
-2. 添加其他指标过滤确定入场时机。
-
-3. debug参数不断优化,针对品种和市场调整。
-
-4. 充分了解策略适用场景,避免盲目使用。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 利用MACD、KD等其他指标过滤信号,优化入场时机。
-
-2. 添加移动止损,跟踪利润,进一步控制风险。
-
-3. 结合波动率指标ATR优化止损位置。
-
-4. 测试更科学的EMA参数设定方法,进一步优化参数。
-
-5. 多时间框架验证信号,提高信号准确性。
-
-6. 尝试BREAKOUT改进策略,在趋势加速阶段捕捉更大行情。
-
-## 总结
-
-本策略通过EMA平均线交叉判断市场主要趋势方向,实现简单有效的趋势追踪交易。策略逻辑清晰易于实现,风险可控,适合量化交易初学者练习。通过进一步优化参数设定、入场过滤和止损方法,可以获得更好的策略效果。但任何策略都有其局限性,用户在实盘中应充分考虑市场环境,审慎使用。
-
-||
 
 ## Overview
 
@@ -146,7 +78,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy effectively tracks market trend by trading on EMA crossover signals. With clear logic and controllable risks, it is suitable for quant trading beginners to practice on. Further optimizations on parameter tuning, entry filtering, stop loss placement can improve strategy performance. But all strategies have limitations, users should apply cautiously based on market conditions when live trading.
 
-[/trans]
 
 > Strategy Arguments
 

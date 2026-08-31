@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/130fccf0829576ae20c.png)
-[trans]
-本文将详细分析一个基于简单移动平均线的趋势跟随策略。该策略运用多时间框架的均线组合产生交易信号,属于典型的趋势跟随策略。
-
-#### 策略概述
-
-该策略同时使用 21 日、50 日、100 日和 200 日的简单移动平均线。当价格突破这些均线时产生买入和卖出信号。此外,策略还利用Donchian通道,在价格突破 20 日和 55 日的最高价或最低价时补充产生交易信号。该策略适合趋势较明显的市场,通过多个时间框架锁定趋势获利。
-
-#### 策略原理
-
-核心原理是使用多个均线时间框架判断趋势方向。具体来说,策略运用 4 条不同时间长度的简单移动平均线:21 日线、50 日线、100 日线和 200 日线。这些均线的时间跨度从短期到长期不断放大,用于识别不同级别的趋势。
-
-当短期均线上穿长期均线时产生买入信号。这表示市场趋势可能发生转折,进入上升通道。而当短期均线下穿长期均线时,产生卖出信号。这标志着市场趋势可能开始反转,进入下行通道。
-
-此外,策略还利用 Donchian 通道补充交易信号。也就是当价格突破 20 日或 55 日的最高价/最低价时,也会触发买入/卖出信号,锁定趋势利润。
-
-综上,该策略同时结合均线理论和Donchian通道,通过多时间框架判断趋势方向,属于典型的趋势跟随策略。
-
-#### 策略优势
-
-1. 多时间框架设计,可以有效捕捉中长线明确趋势
-2. 同时使用均线和Donchian通道,信号较为可靠
-3. 实现简单,适合量化交易初学者实践
-
-#### 策略风险
-
-1. 虚假突破风险。价格可能出现一段时间的剧烈波动,导致均线或Donchian通道发出错误信号
-2. 震荡行情下容易止损。该策略更适合明确趋势的市场环境
-3. 参数优化空间有限。移动平均线和Donchian通道难以进行有效参数调整
-
-对应风险的解决方案:
-
-1. 增加过滤条件,避免虚假突破。例如增加交易量条件
-2. 适当缩短止损幅度,应对震荡行情
-3. 尝试引入机器学习算法自动优化参数
-
-#### 策略优化方向
-
-1. 增加基于交易量的过滤条件,避免在价格剧烈波动中产生错误信号
-2. 尝试将移动平均线替换为能更好平滑价格的指标,如Kaufman自适应移动平均线
-3. 应用机器学习算法自动优化策略参数,使之更好适应当前市场情况
-4. 结合波动率指标判断趋势强弱,避免在震荡行情中被套利
-
-#### 总结
-
-本文详细解析了一个基于多时间框架移动平均线和Donchian通道的简单趋势跟随策略。该策略运用不同长度均线组合判断趋势方向,原理简单清晰,容易实现。与此同时,也分析了策略的优势、可能存在的风险和后续的优化思路。通过深入理解和适当优化,相信该策略可以成为量化交易的有利工具。
-
-||
 
 This article will analyze in detail a trend following strategy based on simple moving averages. The strategy generates trading signals using a combination of moving averages of different timeframes, belonging to a typical trend following strategy.  
 
@@ -102,7 +55,6 @@ Solutions to the risks:
 #### Conclusion
 
 This article has analyzed in detail a simple trend following strategy based on multi-timeframe moving averages and Donchian Channel. The strategy determines trend direction using different length moving averages, with simple and clear principles that are easy to implement. At the same time, the advantages, potential risks and future optimization ideas are also discussed. With in-depth understanding and proper optimization, I believe this strategy can become a useful tool for quantitative trading.
-[/trans]
 
 > Strategy Arguments
 

@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ceae36f6d74fcdedf8.png)
-[trans]
-
-## 一、策略名称
-信噪比均线交易策略(Signal-to-Noise Moving Average Trading Strategy)
-
-## 二、策略概述
-该策略通过计算一定周期内的信噪比,再结合均线交易信号,实现量化交易。其基本思路是:
-
-1. 计算一定周期(可设定)的信噪比
-2. 对信噪比应用均线平滑
-3. 比较当前信噪比与均线值,产生交易信号
-4. 根据交易信号做多头或空头
-
-## 三、策略原理
-1. 信噪比(Signal to Noise Ratio)的计算公式为:StN = -10*log(Σ(1/close)/n)
-   其中n为周期长度
-2. 对信噪比应用简单移动平均(SMA)得到平滑信噪比
-3. 比较当前信噪比StN与平滑信噪比SMAStN:
-   (1) 如果SMAStN > StN,做空
-   (2) 如果SMAStN < StN,做多
-   (3) 否则清仓
-
-## 四、策略优势分析
-该策略主要有以下优势:
-1. 信噪比能判断市场波动和风险,SMA有去噪功能
-2. 结合信噪比判断市场风险与SMA产生交易信号,运用不同指标优势
-3. 可设定参数调整策略,适应不同市场情况
-4. 可Stdout信号指示做多做空,直观判断市场特征
-
-## 五、策略风险分析 
-该策略也存在一些风险:  
-1. 信噪比与均线交叉判断存在错位风险
-2. 周期设定不当可能导致虚假信号
-3. 做空机会相对少,可通过参数调整优化
-4. 突发事件导致剧烈波动,可能触发止损
-
-风险解决:
-1. 调整均线参数,避免平滑过度
-2. 优化周期参数,测试不同市场适应性
-3. 调整做空条件,提供更多做空机会
-4. 设置止损以控制最大损失
-
-## 六、策略优化方向  
-该策略可以从以下方面进行优化:
-1. 测试更多类型均线的搭配使用 
-2. 增加止损机制控制风险
-3. 增加仓位管理,根据波动调整仓位
-4. 结合更多因子判断,提高策略稳定性
-5. 使用机器学习方法自动优化参数
-
-## 七、总结
-本策略通过信噪比判断市场波动风险,并利用均线产生交易信号,实现量化交易。相比单一技术指标,本策略整合信噪比与SMA各自的优势,在控制风险的同时提高稳定性。通过参数优化与机器学习等方式,本策略有很大的改进空间,是一种可靠、有效的量化交易策略。
-
-||
 
 ## I. Strategy Name  
 Signal-to-Noise Moving Average Trading Strategy
@@ -115,7 +61,6 @@ The strategy can be optimized in the following ways:
 ## VII. Summary
 This strategy realizes quantitative trading by judging market risk via signal-to-noise ratio and generating trading signals from moving average. Compared to single technical indicators, this strategy integrates the advantages of both StN and SMA to improve stability while controlling risks. With parameter optimization and machine learning, this strategy has great potential for improvement and is a reliable and effective quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

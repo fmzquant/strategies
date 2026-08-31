@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种同时运用均值回归和趋势跟踪技术的量化交易策略。该策略旨在趋势行情中进行反向交易,以及跟踪趋势进行同向交易。
-
-一、策略原理
-
-该策略主要通过简单移动平均线和RSI指标产生交易信号:
-
-1. 当价格低于200周期移动平均线时,判断目前处于下行阶段;
-
-2. 当RSI指标低于20时,进行逆势的均值回归交易; 
-
-3. 当价格高于200周期移动平均线时,判断目前处于上行阶段;
-
-4. 当价格上穿移动平均线时,进行顺势的趋势跟踪交易。
-
-5. 平仓条件为RSI高于80或价格跌破移动平均线一定幅度。
-
-6. 可分别设置均值回归和趋势跟踪的交易仓位。
-
-该策略综合运用均值回归和趋势跟踪技术,在不同阶段进行适当操作。
-
-二、策略优势
-
-该策略主要具有以下优势:
-
-1. 结合两种不同技术,可以提高策略的适应性;
-
-2. 在趋势和震荡市场中均可找到交易机会;
-
-3. 可以通过调整仓位控制不同模式下的风险。
-
-4. 参数设置简单,易于实施。
-
-三、潜在风险
-
-但该策略也存在以下风险:
-
-1. 移动平均线和RSI等指标易受假突破影响;
-
-2. 两种交易模式的切换可能存在滞后;
-
-3. 需要付出一定回撤以获取长期收益。
-
-四、内容总结
-
-本文详细介绍了一种利用均值回归和趋势跟踪技术的量化交易策略。该策略可以在不同市场阶段进行交易,提高适应性。但也需要防范指标失效和模式切换滞后的风险。总体来说,它提供了一种灵活结合不同技术的策略思路。
-
-||
 
 This article explains in detail a quantitative trading strategy that combines both mean reversion and trend following techniques. It aims to trade counter-trend during trending markets and ride the momentum during trending markets.
 
@@ -106,7 +57,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative strategy utilizing mean reversion and trend following techniques. It can trade in different market stages to improve adaptiveness. But risks like indicator failure and delayed mode switching need to be managed. Overall, it provides a flexible approach to combine different techniques.
 
-[/trans]
 
 > Strategy Arguments
 

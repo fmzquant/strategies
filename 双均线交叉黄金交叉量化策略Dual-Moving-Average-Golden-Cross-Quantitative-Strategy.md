@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18baf10de60f52273b4.png)
-[trans]
-
-## 概述
-
-该策略通过计算双均线的交叉情况,判断价格趋势和交易机会。当快线上穿慢线时,认为是黄金交叉,做多;当快线下穿慢线时,认为是死亡交叉,做空。同时结合量能指标判断真实交叉,避免虚假信号。
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 计算两组不同参数的均线,一组快速响应价格变化,一组相对缓慢。当快线上穿慢线时,表明价格启动上涨趋势;当快线下穿慢线时,表明价格开始下跌。
-
-2. 均线交叉时,再检测量能指标的变化。如果量能指标同步突破,说明交叉信号可信;如果量能指标没有对应突破,则可能是虚假信号。
-
-3. 根据交叉方向和量能判断,进入做多或做空仓位。并设置止盈条件,在盈利达到一定比例时止盈。
-
-具体来说,策略通过计算7日双均线的交叉,判定价格趋势;计算量变动指标,判断交叉信号的可靠性;在确定可靠信号时,按 SIGNAL 做多或做空;设置盈利条件,实现止盈。
-
-## 优势分析
-
-该策略主要优势有:
-
-1. 结合双均线判断趋势方向,又结合量能指标过滤虚假信号,避免被套。
-2. 只在量能指标确认时才入场,增加成功率。
-3. 设定止盈条件,及时止盈,避免赚了钱还要亏钱。
-
-## 风险分析
-
-该策略主要风险有:
-
-1. 均线交叉延迟,容易错过价格变化的最佳机会点。可以适当优化参数,使均线更敏感。
-2. 量能指标出现分歧时难以判断。可以引入更多辅助指标进行确认。
-3. 止盈点设置不合理可能导致超短线或超长线操作。应测试和优化止盈参数。
-
-## 优化方向 
-
-该策略可从以下方向进行优化:
-
-1. 优化均线周期参数,使其更敏感,及时捕捉价格变化。
-2. 增加更多指标进行信号确认,如MACD,KD等,避免量能指标出现误判。 
-3. 结合更多止盈策略,如移动止盈、百分比止盈、震荡止盈等,实现动态止盈。
-4. 增加自动止损策略,控制单笔损失。
-5. 优化仓位管理,不同市场环境下,调整策略仓位。
-
-## 总结
-
-该策略整体来说,核心思路是双均线交叉判断趋势,量能指标过滤信号。效果较为稳定,容易实施。通过进一步优化参数、增加信号过滤和止盈/止损策略,可以使策略更加可靠与智能化,具有较高的实战价值。
-
-||
 
 ## Overview
 
@@ -114,7 +65,6 @@ The strategy can be optimized from the following aspects:
 
 In conclusion, the core idea of this strategy is using dual MA crossover for trend and Volume filter for signal reliability. It is stable and easy to implement. Further optimizations on parameters, signal filtering, profit taking and stop loss can make it more reliable and intelligent for practical trading.
 
-[/trans]
 
 > Strategy Arguments
 

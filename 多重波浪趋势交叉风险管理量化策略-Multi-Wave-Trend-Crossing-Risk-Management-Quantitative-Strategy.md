@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1609170420cdb36e2a7.png)
 
-[trans]
-#### 概述
-该策略是一个基于WaveTrend指标的量化交易系统,结合了动态风险管理机制。策略通过计算价格波动的趋势强度,在超买超卖区域进行信号过滤,同时应用了止损、止盈和追踪止损等风险控制手段,实现了全方位的交易管理。
-
-#### 策略原理
-策略的核心是通过HLC3价格计算WaveTrend指标。首先计算n1周期的指数移动平均线(EMA)作为基准线,然后计算价格与基准线的偏差,并使用0.015作为系数进行归一化处理。最终得到两条波浪线wt1和wt2,分别代表快线和慢线。交易信号基于这两条线与超买超卖水平的交叉产生,同时结合了多层次的风险控制系统。
-
-#### 策略优势
-1. 信号系统具有良好的趋势跟踪能力,通过双重超买超卖水平提高了信号的可靠性
-2. 完整的风险管理体系,包含固定止损、固定止盈和动态追踪止损
-3. 参数可调节性强,便于根据不同市场情况进行优化
-4. 结合了波动率自适应机制,提高了策略的适应性
-5. 通过分层设计的信号系统,有效降低了虚假信号的影响
-
-#### 策略风险
-1. 在剧烈波动市场中可能出现止损频繁的情况
-2. 参数设置不当可能导致交易成本过高
-3. 在横盘市场中可能产生过多假信号
-4. 需要合理设置止损和止盈比例,避免风险收益比失衡
-5. 追踪止损可能在快速反转行情中导致较大回撤
-
-#### 策略优化方向
-1. 引入成交量指标进行信号确认,提高交易的可靠性
-2. 优化追踪止损参数,使其更好地适应不同的市场环境
-3. 增加趋势强度过滤器,减少横盘市场的交易频率
-4. 考虑加入动态止损机制,根据市场波动率自动调整止损位置
-5. 引入时间过滤器,避免在不利的交易时段开仓
-
-#### 总结
-该策略通过结合WaveTrend指标和完善的风险管理系统,实现了一个较为全面的量化交易策略。策略的核心优势在于其适应性强且风险可控,但仍需要交易者根据实际市场情况进行参数优化和策略改进。通过持续优化和完善,该策略有望在实际交易中取得稳定的收益。
-
-|| 
 
 #### Overview
 This strategy is a quantitative trading system based on the WaveTrend indicator, incorporating dynamic risk management mechanisms. The strategy calculates trend strength through price fluctuations, filters signals in overbought and oversold regions, and applies risk control measures including stop-loss, take-profit, and trailing stop mechanisms.
@@ -73,7 +41,6 @@ The core of the strategy lies in calculating the WaveTrend indicator using HLC3 
 
 #### Summary
 This strategy achieves a comprehensive quantitative trading approach by combining the WaveTrend indicator with a robust risk management system. Its core strengths lie in its adaptability and controlled risk exposure, though traders need to optimize parameters and improve the strategy based on actual market conditions. Through continuous optimization and refinement, this strategy shows promise for achieving stable returns in real trading environments.
-[/trans]
 
 
 

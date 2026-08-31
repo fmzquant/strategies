@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12a942b6f1c141c2c6e.png)
-[trans]
-
-## 概述
-
-该策略综合运用MACD指标与布林通道指标,辅以海龟交易法则形成多层次判断体系,旨在提高策略盈利能力的同时控制风险。
-
-## 策略原理
-
-1. 利用MACD指标的快慢均线金叉死叉形态判断潜在趋势,配合布林通道上下轨判断超买超卖情况发出交易信号。
-
-2. 结合海龟交易法则中N值突破形成追踪止损机制,进一步锁定利润,控制风险。
-
-3. 借助布林通道特征,调整首次开仓比例,后续利用海龟交易法则的加仓原则,实施级差开仓与止损,扩大盈利空间。
-
-
-## 优势分析
-
-1. MACD指标具有较强的趋势判断能力,布林通道指标有效判断了超买超卖情况,二者结合形成判断体系提高准确性。
-
-2. 海龟交易法则中的追踪止损机制,能比较好地锁定利润,避免回撤过深。
-
-3. 级差加仓与追踪止损结合,在控制风险的前提下,扩大利润空间。
-
-## 风险分析 
-
-1. 布林通道参数设置不当,可能错失机会或增加错误信号。
-
-2. 海龟交易法则中N值设置需要谨慎,过大或过小都可能影响策略表现。
-
-3. 连续加仓需要谨慎,避免追高杀低。
-
-## 优化方向
-
-1. 调整布林通道参数,优化通道宽度,提高盈利机会。
-
-2. 测试不同的N值大小,找到最佳止损位置。 
-
-3. 优化加仓的幅度和次数,在保证盈利的前提下降低风险。
-
-## 总结
-
-该策略综合运用MACD、布林通道与海龟交易法则三种主流量化工具,通过调整参数找到最佳匹配度,形成判断指标体系。从而充分发挥各工具的优势,相互补充,共同提升系统表现。同时策略还设置了严格的止损机制与适当加仓,在追求更高收益的同时保证了风险收益匹配度。总的来说,该策略表现出良好的稳定盈利能力。
-
-|| 
 
 ## Summary
 
@@ -95,7 +51,6 @@ The strategy combines the MACD indicator with Bollinger Bands and the Turtle Tra
 
 The strategy synthesizes three major quant tools - MACD, Bollinger Bands and Turtle Trading Rules by fine tuning parameters to achieve optimal synergy. This fully utilizes their respective strengths for mutual enhancement while lifting overall system performance. Strict stop losses and prudent pyramiding further ensures sound risk-reward profile. In summary, the strategy demonstrates consistent profitability with stability.
 
-[/trans]
 
 > Strategy Arguments
 

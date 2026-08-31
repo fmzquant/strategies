@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a48274ed19b654a7fa.png)
 
-[trans]
-
-### 概述
-
-本策略融合了波动率指标VIX和随机指标RSI,通过不同时间周期指标的组合,实现高效的突破买入和超买超卖的止损平仓。策略优化空间较大,可适应不同市场环境。
-
-### 策略原理  
-
-1. 计算VIX波动率指标:取最近20天的最高价与最低价计算波动率。当波动率高于上轨时,表示市场恐慌;当低于下轨时,表示市场Complacency。
-
-2. 计算RSI随机指标:取最近14天的涨跌幅计算,当RSI高于70时为超买区,低于30时为超卖区。
-
-3. 融合两种指标,当波动率高于上轨或最高百分位时做多;当RSI高于70时平仓。
-
-### 策略优势
-
-1. 融合多种指标,综合判断市场时点。
-2. 不同时间周期指标互相验证,提高决策准确性。 
-3. 可优化调整参数,适应不同交易品种。
-
-### 风险分析  
-
-1. 参数设置不当可能导致多次虚假信号。
-2. 单一平仓指标容易漏掉价格反转。
-
-#### 优化建议
-
-1. 增加更多验证指标,例如均线、布林带等判断入场时机。
-2. 增加更多平仓指标,例如反转K线形态等。
-
-### 总结  
-
-本策略通过VIX指标判断市场时点和风险水平,配合RSI指标过滤掉超买超卖的不利交易点,从而在高效的时机买入且及时止损。策略优化空间较大,可适应更广泛的市场环境。
-
-||
 
 Overview
 This strategy combines the volatility index VIX and stochastic oscillator RSI through a composition of indicators across different time periods, in order to achieve efficient breakout entries and overbought/oversold exits. The strategy has large room for optimizations and can be adapted to different market environments.  
@@ -73,7 +38,6 @@ Optimization Suggestions
 Summary
 This strategy utilizes the VIX to gauge market timing and risk levels, and filters out unfavorable trades using overbought/oversold readings from the RSI, in order to enter at opportune moments and exit timely with stops. There is ample room for optimization to suit wider market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

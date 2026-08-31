@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c975f428ed2739ec2c.png)
-[trans]
-
-## 概述
-【量化之光】这是一个采用Stochastic指标和OTT指标的组合策略。策略利用Stochastic指标产生买入和卖出信号,并结合OTT指标对信号进行过滤,试图抓住大趋势并且减少行情震荡造成的虚假信号的影响。本文将对该策略进行详细评估。
-
-## 策略原理
-该策略的核心思想是在Stochastic指标上叠加OTT指标进行信号过滤。Stochastic指标将价格与指定时间段内的最高价和最低价进行比较,用于判断价格是否处于极端区域。OTT指标采用移动平均线和动态止损来跟踪趋势。
-
-代码设置Stochastic的高位为1080,低位为1020,Stochastic中值在此之间时为持平区间。在Stochastic生成买入/卖出信号时,代码将根据OTT指标判断信号有效性。如果价格向上穿越OTT平均线的话,则发出买入信号,如果价格向下穿越OTT平均线的话,则发出卖出信号。
-
-这种组合利用Stochastic判断超买超卖并发出入场信号,OTT负责追踪趋势,利用止损过滤掉太强的震荡行情造成的虚假信号,从而优化了信号的准确率和波动率。
-
-## 优势分析
-该策略利用Stochastic和OTT指标的组合,优化了以下几个方面:
-
-1. 提高了信号的准确率。Stochastic判断超买超卖,OTT负责滤除震荡行情造成的虚假信号。
-2. 降低了策略的波动率。通过动态止损限制了本次亏损,过滤很多假突破。
-3. 有效地抓住股票大趋势。Stochastic给出基本信号,OTT跟踪大趋势。
-4. 减少了过多的信号干扰。提高信号质量的同时也减少了无用信号。
-5. 计量化动态止损设定。定性保障本次亏损,进一步降低策略波动率。
-6. 系统结合趋势和超买超卖指标。利用这2种指标互相优化缺点。
-
-综合来看,该策略通过运用OTT对Stochastic信号进行过滤,有效提高了信号质量和策略收益,同时降低了交易次数和策略波动率,达到了贴近趋势、低风险高收益的效果。
-
-## 风险分析
-*  本策略适用范围相对较窄。主要应用于有明显趋势的股票。对于价格波动很大的股票,或者股价处于震荡整理的股票影响较小。
-*  完全依赖技术面。策略没有考虑股票的基本面和市场的宏观面,存在一定的盲目性。
-*  参数设置敏感。Stochastic和OTT的多个参数需要专业调校,否则会影响策略的盈利能力。
-*  止损过于宽松。承担一定的潜在损失,需要进一步优化。
-*  假突破和震荡行情下会产生一定的亏损和信号干扰。需要修改判断条件和止损条件。
-
-针对上述风险,可采取以下措施进行改进:
-
-1. 根据不同类别股票使用不同参数组合。
-2. 结合基本面和新闻面发出信号增强。
-3. 对参数进行优化测试寻找最优设置。
-4. 引入移动止损以进一步降低风险。 
-5. 修改判断条件,采用更加严谨的信号确认机制。
-
-## 优化方向
-该策略可以在以下几个方面进行深化优化:
-
-1. 根据不同市场和股票类别调整参数设定。现在的默认值是通用的,可以对不同股票分别测试寻找最优参数组合。
-
-2. 引入止盈机制和移动止损。现在采用的是动态的固定止损,无法动态跟踪亏损和收益。可以测试引入移动止损和止盈来进一步控制策略风险收益。
-
-3. 优化信号判断逻辑。现在的判断逻辑较为简单,对价格的上下突破直接标记买入和卖出信号。可以考虑结合更多指标和价格形态判断来确保信号的可靠性。
-
-4. 增加开仓条件和过滤机制。现在的策略对每一个信号进行无差别处理。可以引入量能指标、成交量指标等开仓条件,并增加一定的信号时间窗口来滤除假信号。
-
-5. 测试不同的指标与OTT的结合。现在采用的是Stochastic与OTT的组合。可以测试MACD、RSI等其他指标与OTT的结合效果。
-
-6. 融合资金管理和仓位管理模块。现在没有资金管理和仓位控制机制,完全依赖止损。可以测试不同类型的资金管理和仓位管理方法来进一步控制单笔和总体风险。
-
-## 总结
-【量化之光】这是一个Stochastic与OTT指标有机结合的量化策略。它利用两种指标互补优势,提高了信号准确率,有效抓住大趋势的同时也降低了风险。
-
-该策略具有误差率低、信号清晰、波动率小的优点。它增强了信号的可靠性,优化了止损水平,降低了交易频率,是一款值得推荐的量化策略。
-
-与此同时,本策略也存在一定的改进空间。通过参数优化、止损机制完善、信号和过滤机制增强等手段,可以使该策略向更稳定、自动化和智能化的方向发展,这也是我们后续的工作目标。
-
-||
 
 ## Overview  
 Quant Lights is a combined strategy using the Stochastic indicator and the OTT indicator. The strategy uses the Stochastic indicator to generate buy and sell signals, and combines them with the OTT indicator to filter the signals, trying to catch the big trend and reduce the impact of market fluctuations that cause false signals. This article will evaluate the strategy in detail.
@@ -132,7 +70,6 @@ The advantages of the strategy include low error rate, clear signals, and small 
 
 At the same time, there is still room for improvement in this strategy. Through parameter optimization, improvement of the stop mechanism, enhancement of signals and filtering mechanisms, etc., the strategy can develop towards a more stable, automated and intelligent direction. This is also the goal of our follow-up work.
 
-[/trans]
 
 > Strategy Arguments
 

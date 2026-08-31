@@ -10,91 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fc6ef2d2cde331a266.png)
-[trans]
-
-## 概述
-
-双轨跟踪反转策略是一个结合布林带,Keltner通道以及动量指标的反转交易策略。该策略通过布林带和Keltner通道的综合判断,识别价格进入压缩区域的时机;同时结合动量指标判断价格的反转信号,形成交易入场和出场信号。
-
-## 策略原理 
-
-1. 计算布林带中的中轨、上轨、下轨
-
-    - 中轨采用close的SMA
-    - 上下轨是中轨加减一个可调整的倍数的标准差
-
-2. 计算Keltner通道中的中轨、上轨、下轨
-
-    - 中轨采用close的SMA
-    - 上下轨是中轨加减一个可调整的倍数的ATR
-
-3. 判断布林带是否位于Keltner通道内侧
-
-    - 当布林带上轨低于Keltner上轨,布林带下轨高于Keltner下轨时,认为处于压缩
-    - 反之,非压缩
-
-4. 计算close与布林带、Keltner通道中点的线性回归斜率val
-
-    - val > 0 表示close在上升,val < 0 表示close在下降
-
-5. 计算close的变化率ROC和其EMA
-
-    - 判断变化率是否达到可调整的阈值
-    - 如果超过阈值,认为处于趋势中
-
-6. 在压缩时,当val > 0且变化率达到阈值时做多
-
-    - 反之做空
-
-7. 设置止损、止盈条件
-
-## 策略优势
-
-1. 结合双轨系统判断反转时点,提高准确率
-
-2. 增加线性回归和变化率判断,避免反转假信号
-
-3. 可调整的参数设置灵活,可针对不同品种进行优化
-
-4. 采用止损止盈策略,可以有效控制单次交易风险
-
-5. 回测数据充足,可验证策略有效性
-
-## 策略风险及解决方案
-
-1. 双轨压缩不一定产生有效反转
-
-   - 优化参数,严格双轨压缩条件
-
-2. 假突破产生错误信号
-
-   - 增加线性回归判定,确定趋势方向
-
-3. 止损设置过于宽松,单次亏损过大
-
-   - 优化止损点,严格控制单次亏损
-
-4. 测试周期 Datenichinhalt
-
-   - 增加更多回测周期,验证长期有效性
-
-## 策略优化方向 
-
-1. 优化参数设置,适应更多品种
-
-2. 增加机器学习判断支撑阻力关键点
-
-3. 结合交易量变化提高突破真实性
-
-4. 增加跨时间段分析,判断趋势持续性
-
-5. 优化止损止盈策略,实现动态追踪
-
-## 总结
-
-双轨跟踪反转策略总体来说是一个利用布林带Keltner通道等指标进行的反转策略。该策略通过参数优化,可以适应不同品种,在一定程度上识别突破的真实性。但反转交易本身仍存在一定的风险,需要进一步结合机器学习等技术来提升判断准确性,从而获得更稳定的超额收益。
-
-||
 
 
 ## Overview
@@ -179,7 +94,6 @@ The Dual Channel Tracking Reversal strategy is a reversal trading strategy that 
 
 The Dual Channel Tracking Reversal strategy utilizes indicators like Bollinger Bands and Keltner Channels for reversal trading. With parameter optimization, it can be adapted across different products to identify breakout validity to some extent. But reversal trading still carries inherent risks, requiring further incorporation of machine learning etc. to improve accuracy for steady excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

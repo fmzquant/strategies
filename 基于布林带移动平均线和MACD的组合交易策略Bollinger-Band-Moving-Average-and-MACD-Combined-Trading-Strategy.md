@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11a14d6bf202f063dde.png)
-[trans]
-
-## 策略概述
-
-该策略结合了布林带、移动平均线和MACD三种指标,形成一个较为完整的交易体系。它在判断市场趋势的同时,也能抓住部分反转机会。
-
-## 策略名称与原理  
-
-本策略名称为“三角锚定趋势追踪策略”。该名称突出了它在判断趋势方向和锚定入市点位时,同时使用三种技术指标的特点。
-
-其基本交易逻辑是:
-
-1. 判断趋势方向。通过布林带中轨、EMA移动平均线和MACD的零轴比较,来判断目前市场所处的多头阶段还是空头阶段。
-
-2. 寻找入市时机。在确定多头(或空头)趋势后,策略会根据EMA移动平均线是否突破布林中轨,以及MACD柱形线是否正(或负)向突破信号线来判断入市。
-
-3. 设置止盈止损。进入场内后,会预设固定止盈位和止损位。
-
-## 策略优势分析
-
-该策略最大的优势在于同时使用了趋势、均线和MACD三种不同类型的技术指标来指导决策。这使得它可以更准确判断市场走势,也更有利于抓住部分反转机会。
-
-首先,布林带中轨线能清晰反映出当前阶段的主要趋势方向。EMA均线的作用则是跟踪趋势运行。它们的比较和结合,可以更准确地判断目前的多头和空头状况。
-
-其次,布林带本身就具有比较强的包容性。中轨线附近也反映出一定的支撑压力位,因此EMA线的突破具有一定的信号价值。
-
-再者,MACD的加入也可见多空能量的消长。它的绝对值大小代表群众情绪高涨或者冷淡,也可提示反转的可能性。
-
-最后,策略预设了止盈止损条件,可控制单笔交易的风险收益情况,从而保证整体稳定运行。
-
-## 策略风险分析  
-
-尽管该策略综合运用了多种分析工具,但仍有以下主要风险:
-
-1. 布林带参数设置不当,中轨线无法清晰反映主趋势。
-
-2. 均线系统发出多头信号,但MACD未明确转正,空头力量可能会扩大。
-
-3. 止盈止损范围设置过大,单笔亏损可能扩大。
-
-主要的解决思路是:
-
-1. 调整布林带参数,确保中轨线有效反映主趋势。
-
-2. 引入更多技术指标判断多空能量。
-
-3. 评估历史交易情况,优化止盈止损参数。
-
-## 策略优化方向  
-
-该策略还可从以下几个方面进一步优化:
-
-1. 在趋势判断上引入更多指标。如KDJ、ATR等辅助判断,提高判断准确率。
-
-2. 在操作层面设置更细致的止损方式。如移动止损、突破新高(低)后加大止损比例等。
-
-3. 评估不同品种的表现效果。调整参数适应更多行情特点。
-
-4. 测试效果和评估了不同时间框架和市场的回测结果。相应地调整参数。
-
-5. 增加机器学习算法,实现参数的自动优化和策略规则的动态更新。
-
-## 总结  
-
-本策略同时运用布林带、移动平均线和MACD三大技术指标。它判断趋势清晰,具有一定的包容性,也可抓住部分反转机会。通过引入更多辅助工具判断和优化止盈止损策略,可望获得更稳定的交易表现。本策略值得进一步评估和改进,可望成为量化决策的有力工具。
-
-||
 
 ## Strategy Overview  
 
@@ -141,7 +74,6 @@ The strategy can be further improved in the following aspects:
 ## Conclusion  
 
 This strategy leverages BB, MA and MACD together. It has clear trend judgment, certain envelope characteristics and also captures some reversals. With more auxiliary tools for judging entries/exits, it can achieve more reliable performance. Further evaluation and enhancement of this strategy is warranted and expected to produce a robust quantitative tool.  
-[/trans]
 
 > Strategy Arguments
 

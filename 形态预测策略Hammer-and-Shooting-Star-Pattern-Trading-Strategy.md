@@ -9,81 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-形态预测策略利用蜡烛图形态来判断未来价格走势,在交易界广泛使用。该策略通过识别锤子线和射击之星两种简单形态来捕捉趋势反转机会。
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 利用ATR指标识别趋势强弱,过滤掉震荡市场。ATR值小于设置的最小阈值或大于最大阈值时才会考虑交易。
-
-2. 计算当前K线的33.3%费波那契回撤线。若收盘价高于该线则认为属于锤子线,若收盘价低于该线则认为属于射击之星。
-
-3. 对识别出的形态进行额外确认,要求形态完成(实体部分高于或低于开盘价),且为未确认的K线。
-
-4. 入场后设置止损和止盈,止损为ATR的一定倍数,止盈为止损的风险回报倍数。
-
-该策略利用ATR指标和费波那契技术识别锤子线和射击之星形态,同时设置风险控制指标,符合趋势交易的一般原理。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 原理简单明了,容易理解实现。
-
-2. 利用日内短期形态,无需长时间等待持仓,灵活性强。
-
-3. ATR参数设置控制了过大行情的风险。可针对不同品种分别优化参数。
-
-4. 结合风险回报比设定合理止盈止损点,风险可控。
-
-5. 自动化交易信号直接连接止损平仓,操作简便。
-
-6. 可适用于多种品种,具有普适性。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 形态交易存在一定的误判率,不可完全依赖。
-
-2. 未考虑交易手续费,实际盈利空间更小。
-
-3. 日内短线交易可能增加交易频率和滑点成本。
-
-4. ATR参数优化依赖历史数据,无法保证参数永远适用。
-
-5. 自动下单存在发单失败风险,应设置重试机制。
-
-6. 止盈止损设置不当可能导致超赎过多或过少。
-
-## 优化方向
-
-该策略可考虑以下几个方向进行优化:
-
-1. 增加其他过滤条件,如交易量,提高形态有效率。
-
-2. 考虑手续费设置,优化止盈止损点。
-
-3. 动态优化ATR参数,使之适应不同行情周期。 
-
-4. 评估每对交易品种的parameter,设定个性化参数。
-
-5. 增加自动重试机制,降低下单风险。
-
-6. 利用机器学习提高形态识别准确率。
-
-7. 添加止损追踪,锁定更多利润。
-
-## 总结
-
-总而言之,该交易策略整合常用的技术指标,原理简单易于理解和实施。在参数优化和风险控制到位的情况下,可望获得稳定收益。但交易者仍需注意风险,保持 trades 数量适中,避免过度激进。本策略为基础型策略,可在其基础上进行扩展创新,将交易效果提升到新的高度。
-
-|| 
 
 ## Overview
 
@@ -157,7 +82,6 @@ Some ways to potentially improve the strategy:
 
 In summary, this trading strategy integrates commonly used technical indicators with simple logic for straightforward implementation. With robust parameter optimization and risk control, it has potential for consistent profitability. However, traders should remain vigilant of risks and keep trade frequency reasonable to avoid over-trading. The strategy serves as a basic framework for further innovation to reach new levels of trading performance.
 
-[/trans]
 
 
 > Strategy Arguments

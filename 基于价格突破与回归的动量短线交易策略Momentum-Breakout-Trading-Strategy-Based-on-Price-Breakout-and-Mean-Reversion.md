@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1899c7f9f996e07acc5.png)
-[trans]
-
-## 概述
-
-本策略基于价格突破与均线回归的组合,采用多个指标进行确认和筛选,实现对趋势的判断和跟踪。策略适合短线和中线交易,通过严格的入场和退出机制来锁定小盈利。
-
-## 策略原理
-
-1. 使用HMA均线作为基准线,判断价格趋势方向。价格高于均线为看涨,价格低于均线为看跌。
-
-2. SSL通道作为确认指标,通过通道方向与价格关系来确认趋势。
-
-3. TDFI作为量能指标,来判断力度。只有量能达到一定水平,才可入场。
-
-4. RVI指标作为退出指标,当RVI线形态发生变化时,判断趋势结束,退出仓位。 
-
-5. ATR指标计算止损位和止盈位。
-
-6. 入场条件:价格突破基准线,SSL通道方向与价格一致,TDFI达到阈值。
-
-7. 出场条件:RVI指标线形态变化,或价格回破基准线和SSL通道。
-
-## 优势分析
-
-1. 使用多个指标组合判断,可以有效过滤假突破。
-
-2. 严格的入场条件与止损Exit,可以控制单次止损。
-
-3. 充分利用价格趋势,获得超额收益。
-
-4. 指标参数优化空间大,可针对不同产品和周期进行调整。
-
-## 风险分析
-
-1. 无法判断趋势反转,可能出现超量继续追高/追低的风险。
-
-2. 短周期操作,存在过度交易的风险。
-
-3. 止损位的设定存在主观影响,可能过于宽松或过于紧致。
-
-4. 参数设置不当可能导致交易频繁或不足。
-
-## 优化方向
-
-1. 增加趋势判断指标,确保判断趋势方向的准确性。
-
-2. 加入反转信号指标,以降低超量追高/追低的概率。
-
-3. 考虑将ATR动态调整为ATR Trailing Stop,让止损更趋动态化。
-
-4. 测试不同均线系统,寻找参数优化方向。
-
-5. 优化指标参数,针对具体交易品种进行参数调整。
-
-## 总结
-
-本策略通过多指标确认,实现交易信号精确化。严格的止损机制控制了单笔损失。该策略适合熟悉技术分析操作的人群,通过参数调整可以适应不同市场周期。整体而言,该策略具有正向效益与收益,但需要注意防范趋势判断错误和过度交易的风险。
-
-||
 
 
 ## Overview
@@ -127,7 +68,6 @@ This strategy combines price breakout and mean reversion to determine and track 
 
 This strategy achieves precision in trading signals through multi-indicator confirmation. Strict stop loss mechanism controls single loss. It suits people familiar with technical analysis operations. Parameters can be adjusted for different market cycles. Overall, the strategy has positive expected benefit and return, but risks of incorrect trend judgment and overtrading should be noted.
 
-[/trans]
 
 > Strategy Arguments
 

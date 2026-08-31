@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a95b9af47cb8c16126.png)
-[trans]
-### 概述
-
-本策略融合了多时间框架EMA指标与K线形态判断,实现了较为灵敏的长线信号捕捉与止损退出。
-
-### 策略原理
-
-本策略主要基于以下几个指标进行判断:
-
-1. EMA均线:采用13周期、21周期2组EMA,判断价格突破形成交易信号。
-
-2. K线形态:判断K线实体方向,与EMA指标联合使用,过滤假突破。
-
-3. 支持阻力:采用近期10周期 highest高点构建,判断突破通过该区域增强信号可靠性。
-
-4. 上升分时:120周期close收盘价在open开盘价之上判断为上升分时,作为辅助判断。
-
-交易信号生成规则为:
-
-1. 多头信号:快速EMA向上突破慢速EMA,并且为阳线K线,关闭空仓开多。
-
-2. 空头信号:快速EMA向下跌破慢速EMA,并且为阴线K线,平掉多仓。
-
-3. 止损退出:反手信号发出时止损退出当前头寸。
-
-### 策略优势
-
-1. 多时间框架EMA指标,判断趋势更可靠,避免假突破。
-2. 结合K线实体方向进行过滤,识别趋势更准确。
-3. 增加分时判断和支持阻力判断,确保信号质量。
-4. 采用反手做为止损方式,降低亏损风险。
-
-### 策略风险
-
-1. 无效突破带来损失风险。即使引入多时间框架EMA和K线实体判断,也无法完全避免无效突破对策略的影响。
-2. 参数选择风险。EMA周期、K线判断周期等参数设置不当,会导致信号质量下降。
-3. 支撑阻力失效风险。历史支持阻力失效是常见情况,这也会导致信号产生时没有足够动量。
-4. 分时失效风险。分时情况是变化的,不能完全依赖分时判断。
-
-以上风险可以通过避免过度优化,审慎选择参数,严格把控仓位规模等方法加以缓解。
-
-### 策略优化方向  
-
-1. 引入机器学习模型辅助判断。可以训练分类模型判断K线实体方向,提高判断准确性。
-2. 增加自适应止损机制。如 trailing stop 或基于波动率的止损。
-3. 结合情绪面分析。引入一定的媒体舆论判断机制,避免重大负面消息对策略的影响。
-4. 增加仓位管理模块。如引入固定仓位比例,或基于资金管理的仓位调节模块。 
-
-### 总结
-
-本策略整合多时间框架EMA指标与K线实体判断,实现了较为可靠的趋势判断。同时结合支持阻力与分时情况进行辅助,确保信号质量。通过反手信号机制止损,可以有效控制单笔止损。未来可通过引入机器学习模型、自适应止损、情绪面分析和仓位管理模块等进行优化,使策略更为稳健。
-
-||
 
 ### Overview  
 
@@ -115,7 +62,6 @@ The above risks can be mitigated through methods like avoiding excessive optimiz
 
 The strategy integrates multiple time frame EMA and K-line entity judgments for relatively reliable trend judgments. Auxiliary judgments using support resistance and time division ensure signal quality. Using reverse signals for stop loss can effectively control single stop loss. Future optimizations can be done through introducing machine learning models, adaptive stops, sentimental analysis and position sizing management modules to make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

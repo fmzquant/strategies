@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e5e320a8257d0cf6da.png)
-[trans]
-
-## 概述
-
-本文要介绍的交易策略名为“基于ZigZag指标的趋势追踪交易策略”(ZigZag Trend Following Strategy)。该策略利用ZigZag指标识别价格趋势,并在趋势反转时打开头寸以追踪趋势。在Strategy Pine代码中,ZigZag指标用于确认价格的新高点和新低点。当价格突破ZigZag指示线时作为交易信号。买入信号是收盘价高于ZigZag指示线时做多;卖出信号是收盘价低于ZigZag指示线时做空。这可以有效追踪中长线的价格趋势。
-
-## 策略原理  
-
-该策略的核心是使用ZigZag指标来定位价格的极值点并展示价格趋势。ZigZag指标由高低价的Exponential Moving Average(指数移动平均线)构成。具体来说,分为以下几步构建:
-
-1. 计算close价格的指数移动平均线EMA,包含三条移动平均线:快线、中线、慢线。
-
-2. 判断价格是否上涨趋势。即当前中线是否高于上一根K线的中线。
-
-3. 如果目前是上涨趋势,那么找出从上一波低点开始计数的检测周期内的最低价,作为ZigZag的值。
-
-4. 如果目前是下跌趋势,那么找出从上一波高点开始计数的检测周期内的最高价,作为ZigZag的值。
-
-5. 如此形成了反映价格波动极值点的ZigZag指标。
-
-在此基础上,我们以ZigZag线为参考,判断价格趋势。即当价格上涨时突破ZigZag指示线,我们做多;当价格下跌时突破ZigZag指示线,我们做空。
-
-## 优势分析  
-
-采用ZigZag指标判断价格趋势和追踪价格极值点作为建仓的优势有:
-
-1. 可以有效过滤市场噪音,捕捉主要趋势。
-
-2. 由于建立在价格新高新低突破上的交易信号,可以高效获利。
-
-3. ZigZag线比较光滑,可以减少假信号。
-
-4. 容易通过调整ZigZag参数来优化策略。
-
-## 风险分析  
-
-该策略的主要风险有:  
-
-1. 长期运行可能会因为行情剧烈波动被套牢。这时需要及时止损。
-
-2. ZigZag指标对参数敏感。不当设置可能错过交易机会或者产生假信号。需要适当测试和优化参数。  
-
-3. 追踪趋势策略更依赖于趋势行情。如果遇到震荡盘整理,则该策略效果不佳。
-
-针对以上风险,我们可以设置止损机制控制单笔损失;同时调整持仓规模,不要追求全仓操作;最后,匹配不同类型的策略组合使用。
-
-## 优化方向  
-
-我们可以从以下几个方面继续优化该策略:
-
-1. 增加止损机制。比如设定移动止损或者价格回撤幅度的止损。
-
-2. 结合其他指标过滤进场。例如增强型能量指标,确保有足够的动能;或者交易量指标,确保有放量特征。
-
-3. 根据不同的市场环境(如牛市和熊市)采用不同的参数配置。
-
-4. 测试不同的EMA均线参数以寻找最佳参数组合。
-
-## 总结  
-
-本策略利用ZigZag指标判断价格趋势,在极值点附近建立追踪头寸。其优点是顺势而为,高效获利。同时也存在被套风险。我们可以设置止损,优化参数以及交易策略组合来控制风险。该策略更适合中长线趋势交易。如果控制和组合得当,可以获得稳定收益。
-
-||
 
 ## Overview
 
@@ -134,7 +71,6 @@ We can further optimize this strategy in the following aspects:
 
 This strategy uses the ZigZag indicator to determine price trends and establishes tracking positions near extreme points. Its advantage is to follow the trend efficiently for profit. It also has the risk of being trapped. We can set stop loss, optimize parameters and trade strategy portfolio to control risks. This strategy is more suitable for medium-to-long term trend trading. If properly controlled and combined, it can obtain stable returns.
 
-[/trans]
 
 > Strategy Arguments
 

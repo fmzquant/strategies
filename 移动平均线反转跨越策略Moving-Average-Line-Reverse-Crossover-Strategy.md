@@ -10,87 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1604837903559d99bf0.png)
-[trans]
-
-## 概述
-
-移动平均线反转跨越策略是一种技术分析策略。它利用移动平均线的方向和股价的关系来判断进入或退出仓位的时机。具体来说,是当股价从上方向下方跨越45天移动平均线时做空;当持有空仓8天后平仓;之后再次出现股价向下跨越45天移动平均线的信号时可以重新做空。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 计算45天简单移动平均线(SMA)
-2. 当收盘价从上方向下方跨越45天移动平均线时,做空入场
-3. 持有空仓8个交易日后平仓
-4. 之后如果再次出现价格跨越信号,可以重新做空
-
-具体来说:
-
-1. 首先计算45天SMA
-2. 如果不在持有空仓且出现价格下跌跨越SMA的信号(收盘价<SMA且前一日收盘价>前一日SMA),则做空入场
-3. 如果已持有空仓8天,则平仓
-4. 如果不在持有空仓且再次出现价格跨越SMA信号,且与上次平仓至少有8天的间隔,则可以重新做空
-
-通过这样的逻辑,就可以在股价显著向下突破移动平均线时做空,并在一定时间后 cutoff loss。
-
-## 优势分析
-
-这种策略有以下几点优势:
-
-1. 概念简单,容易理解和实现
-2. 利用了移动平均线的信号,可判断股价趋势反转
-3. 有清晰的入场规则、止损规则
-4. 可以过滤掉部分假突破信号
-
-相比其他策略,该策略易于理解,容易编程实现。同时,它利用了移动平均线这一大家熟知的技术指标来判断股价趋势。当价格突破移动平均线时,常常意味着短期趋势产生转折。因此可以捕捉到一些反转机会。
-
-此外,策略中的入场规则和 8 天固定止损方法,也使得风险控制比较清晰。假突破的情况也在一定程度上得到过滤。总的来说,该策略简单实用,容易掌握。
-
-## 风险分析
-
-但是该策略也存在一些风险:  
-
-1. 移动平均线本身滞后性较强,不能确保每次跨越都是精确的趋势反转点
-2. 8天持仓时间比较短,可能无法持续捕捉大的行情
-3. 对突破信号的判断没有更多确认,可能存在一定的假突破情况
-4. 没有设置止盈点,无法锁定利润
-
-具体来说,移动平均线本身滞后于价格变化,因此其发出信号的时间不一定精确。部分突破可能是临时性的,并不能真正把握住反转点。
-
-此外,8天的持仓时间比较短。在大的股票行情中,这样的止损设置可能过于激进,无法持续捕捉较大的反转。也增加了反复进出市场的交易次数。
-
-策略中对突破信号的判断仅仅依赖价格与移动平均线的关系。没有设置更多的确认指标或条件来过滤信号。这在一定程度上使得假突破的情况时有发生。
-
-最后,没有设置止盈点来锁定利润。这样在亏损被止损切换之前,利润也有可能被削减。
-
-## 优化方向  
-
-根据上述风险分析,该策略可以从以下几个方向进行优化:
-
-1. 设置更多的确认指标或条件来过滤假突破  
-
-    例如可以配置MACD、KD等其他技术指标,在它们也出现一定信号时才认定趋势反转。或者配置交易量的突增作为辅助条件。
-
-2. 配置自适应的持仓时间 
-
-    例如当价格运行超过某一固定幅度后才止损。或者当其他指标(如MACD)发出信号时止损。
-
-3. 设置滑点止盈
-
-    即在价格运行一定比例后逐步移动止盈点,来锁定利润。
-
-4. 优化移动平均线的天数参数
-
-    尝试不同天数的参数并测试,寻找最优参数。也可以配置双移动平均线系统。
-
-通过这些优化,可以在保持策略简单行之有效的基础上,提高信号质量,减少假突破概率;获取更充分的趋势利润;并有更强的风险控制能力。从而可能获得更好的策略表现。
-
-## 总结  
-
-移动平均线反转跨越策略是一个非常简单实用的短线交易策略。它利用移动平均线这一广为人知的技术指标,判断股价是否出现短期趋势反转的信号。具有容易理解、实现简单、风险可控等优点。同时也存在一些可优化的问题,例如假突破、持仓时间等。通过合理的技术指标或参数配置,可以在保持其简单有效特性的同时,进一步增强策略的表现与风险控制能力。
-
-||
 
 ## Overview  
 
@@ -171,7 +90,6 @@ Through these optimizations, while maintaining the simplicity and effectiveness 
 
 The moving average reverse crossover strategy is a very simple and practical short-term trading strategy. It utilizes the well-known technical indicator of moving averages to determine whether stock prices show short-term trend reversal signals. It has the advantages of easy to understand, simple to implement, controllable risks and so on. There are also some optimizable issues such as false breakouts and holding periods. By reasonably configuring technical indicators or parameters, the simplicity and validity of the strategy can be maintained while further enhancing the performance and risk control capabilities.
 
-[/trans]
 
 
 

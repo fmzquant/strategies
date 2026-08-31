@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a4084cb7316bb1d874.png)
-[trans]
-
-## 概述
-本策略运用多级移动平均线的交叉原理,捕捉中长线趋势,实现稳定盈利。策略采用不同参数的快速、中速和慢速三组移动平均线,根据其交叉情况制定交易决策。这种多级移动平均线交叉策略,相比传统只有两组移动平均线的策略,可以过滤掉更多假信号,提高策略胜率。
-
-## 策略原理  
-本策略使用三组移动平均线:快速移动平均线MAshort、中速移动平均线MAmid和慢速移动平均线MAlong。其中,MAshort参数为9,反应最快,用于捕捉短线信号;MAmid参数为50,速度适中,用于确认趋势;MAlong参数为100,反应最慢,用于判断长线趋势方向。  
-
-策略的具体交易逻辑是:当中速移动平均线MAmid上穿慢速移动平均线MAlong时,表明股价上涨势头正在形成,这时策略做多;当快速移动平均线MAshort下穿中速移动平均线MAmid时,表示短线趋势发生转折,策略此时平仓。  
-
-该策略最大的优点在于,通过多组移动平均线的组合匹配,可以有效过滤假信号,只选择那些中长线上涨趋势中较有力的一次突破来建仓做多。
-
-## 优势分析
-本策略有以下优势:  
-1. 策略参数经过优化,可以有效匹配中长线趋势,胜率较高  
-2. 多级移动平均线设计可以过滤噪音和假信号  
-3. 适用于各类股票和数字货币,历史回测效果较好  
-4. 操作频率不高,每次建仓占用资金30%,风险可控  
-5. 可配置时间周期,实盘灵活度高
-
-## 风险分析
-本策略也存在以下风险:  
-1. 长线趋势突然发生转折的概率较小,但一旦发生,止损幅度可能较大  
-2. 交易频率不高,存在一定程度的资金利用率低下问题  
-3. 策略参数需要根据不同交易品种进行优化,适用面可能有限  
-
-针对上述风险,我们将进一步扩大策略适用范围,同时结合止损技术控制最大回撤。当中长线趋势发生转折时,我们将采用降低仓位的方式应对。
-
-## 优化方向  
-本策略还可从以下几个方面进行优化:
-1. 优化移动平均线的日数参数,寻找更佳的参数组合
-2. 增加成交量的指标进行确认,避免曲线拟合问题
-3. 设定策略最大损失值,如最大回撤20%,强制止损
-4. 增加机器学习模型判断趋势,提高策略的自适应能力  
-
-## 总结  
-本策略属于典型的中长线量化策略,通过多级移动平均线匹配 WebDriverWait==long term trend,以控制交易风险的前提下,持续盈利。相比单一指标,该策略融合多组参数,可以有效识别较强的中长线趋势信号。通过进一步优化,本策略可以适用于更多品种,在量化交易领域发挥重要作用。
-
-|| 
 
 # Overview
 This strategy utilizes the principle of multi-level moving average line crossing to capture medium-long term trends and achieve steady profits. It employs fast, medium, and slow three sets of moving averages with different parameters and makes trading decisions based on their crossovers. Compared to traditional strategies with only two sets of moving averages, this multi-level moving average crossing strategy can filter out more false signals and improve the win rate of the strategy.  
@@ -86,7 +47,6 @@ This strategy can also be optimized in the following ways:
 ## Summary
 This strategy belongs to a typical medium-long term quantitative strategy which, with the premise of controlling trading risks, continuously profits by matching multi-level moving averages with medium-long term trends. Compared with a single indicator, this strategy incorporates multiple parameters and can effectively identify strong medium and long term trend signals. Through further optimization, this strategy can be applied to more varieties and play an important role in quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

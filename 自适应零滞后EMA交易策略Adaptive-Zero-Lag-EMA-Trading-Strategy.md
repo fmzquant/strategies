@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略利用自适应零滞后EMA指标进行趋势判断和交易信号产生。该EMA指标可动态调整参数,有效消除滞后问题。属于典型的趋势跟踪交易策略。
-
-策略原理:
-
-1. 计算自适应零滞后EMA指标,包含余弦法和I-Q法两种自适应算法。
-
-2. EMA为正常EMA指标,EC为自适应零滞后EMA。
-
-3. 当EC上穿EMA时做多,EC下穿EMA时做空。
-
-4. 计算误差曲线,设定阈值过滤假信号。
-
-5. 设置固定止损止盈点数,以锁定收益和控制风险。
-
-该策略的优势:
-
-1. 自适应EMA可有效减小指标滞后。
-
-2. 阈值过滤提高信号质量,避免假突破。
-
-3. 止损止盈方式简单实用,易于操作。
-
-该策略的风险:
-
-1. 自适应EMA参数不稳定,存在失效的可能。
-
-2. 固定止损止盈难以适应市场的变化。
-
-3. 无法限制单笔亏损大小,存在较大损失风险。
-
-总之,该策略采用自适应EMA指标进行趋势跟踪,可在一定程度上减小滞后问题,但需要关注参数稳定性,并配合优化的止损止盈机制以控制风险。
-
-||
 
 This strategy uses the Adaptive Zero Lag EMA indicator for trend determination and trade signals. The adaptive EMA dynamically tunes parameters to eliminate lag. It aims for trend following.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy uses adaptive EMA for trend following, reducing lag to some extent. But parameter stability and optimized stops are needed to control risks.
 
-[/trans]
 
 > Strategy Arguments
 

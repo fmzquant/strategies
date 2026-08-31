@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略结合布林带(BB)、相对强弱指数(RSI)和Aroon指标,以发挥各指标的优势,为交易提供高效的入场和出场信号。
-
-## 策略原理
-
-1. 当价格突破布林带下带时,显示多头信号。
-
-2. 当RSI上穿超买线时,显示多头确认信号。 
-
-3. 当Aroon上穿下穿时,显示多头确认信号。
-
-4. 当上述三个条件同时满足时,做多。
-
-5. 当价格突破布林带上带时,显示空头信号。
-
-6. 当RSI下穿超卖线时,显示空头确认信号。
-
-7. 当Aroon下穿上穿时,显示空头确认信号。 
-
-8. 当上述三个条件同时满足时,做空。
-
-## 策略优势
-
-- 可配置参数,优化至最佳组合
-- 多种指标确认,提高信号准确率
-- 适用于多种市场环境
-- 简单的交易逻辑,易于实施
-
-## 策略风险
-
-- 参数优化不当,可能产生过多错误信号
-- 多重指标增加滞后,可能错过快速反转
-- 反向操作增加交易频率和成本
-
-## 优化方向
-
-- 多市场多时间框架回测寻找最佳参数
-- 评估每种指标的效果,必要时删减
-- 尝试基于机器学习的参数优化
-- 优化策略代码,减少计算量
-- 测试不同持仓时间参数
-
-## 总结
-
-该策略综合多个指标的优势,形成较强大的入场信号。通过参数优化、去除冗余指标及优化代码,可以将策略效果提升至更高水平。总体而言,该策略为交易提供了有效的定制化解决方案。
-
-|| 
 
 ## Overview
 
@@ -108,7 +57,6 @@ This strategy combines Bollinger Bands (BB), Relative Strength Index (RSI) and A
 
 The strategy combines strengths of multiple indicators into robust entry signals. Further improvements via parameter optimization, reducing redundant indicators, and optimizing code can enhance performance. Overall an effective customizable solution  trading.
 
-[/trans]
 
 > Strategy Arguments
 

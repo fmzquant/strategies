@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1094193357ee718bba0.png)
-[trans]
-## 概述
-
-MyQuant趋势识别策略是一个用于比特币每日交易的策略。该策略通过计算价格的移动平均线及其一阶和二阶导数来识别市场趋势,并据此制定买入卖出决策。
-
-## 策略原理  
-
-该策略首先计算价格的自适应移动平均线(ALMA)及其一阶导数和二阶导数。一阶导数反映价格变化速度,二阶导数反映价格曲率。根据一阶和二阶导数值判断目前处于上升趋势、下降趋势或震荡期。再结合股票指标,判断是否达到买入卖出条件。 
-
-具体来说,策略计算以下指标:
-- ALMA:价格的自适应移动平均线,长度为140,快速因子为1.1, sigma 为6
-- dema: ALMA的一阶导数
-- d2ema: dema的一阶导数,反映价格二阶导数  
-- index: dema指标的震荡指数
-- ind: 价格离均线的偏离度指数
-
-在买入条件满足时,根据 CAUSED.Accumulation/Distribution Bands 和Caused Exposure Top and Bottom Finder信号计算买入股数。在卖出条件满足时,卖出全部头寸。
-
-## 策略优势  
-
-该策略结合趋势和指标判断,能够有效识别市场趋势转折点。使用价格的一阶和二阶导数判断趋势,避免受价格震荡的影响,使信号更加清晰。相比常见移动平均线策略,具有判断准确率更高等优势。
-
-## 风险分析  
-
-该策略对交易时间段的选择以及参数调整非常敏感。如果时间段选择不当,未能涵盖重要的价格转折点,会导致策略效果不佳。如果指标参数设置不当,则买入卖出信号会受到更多噪声的影响,从而影响策略收益。此外,策略预设的止损条件也会影响最终收益。
-
-## 优化方向
-
-可从以下几个方面进一步优化该策略:  
-1) 优化时间段选择逻辑,通过更加智能地选择回测和实盘交易时间段。  
-2) 优化指标参数,如调整 ALMA 和 dema 的长度等参数。  
-3) 增加止损条件判断,以控制最大损失。
-4) 评估不同加密货币的效果,挑选出表现最好的品种。
-
-## 总结  
-
-MyQuant趋势识别策略通过对价格的自适应移动平均线进行一阶和二阶导数计算,有效识别了比特币的市场趋势,并做出相应买入卖出决策。该策略结合多种指标进行判断,避免信号被过度噪声干扰。通过进一步的时间和参数优化,该策略效果还可得到提升。
-
-||
 
 ## Overview  
 
@@ -87,7 +48,6 @@ The strategy can be further optimized in the following aspects:
 
 By calculating the first and second order derivatives of the adaptive moving average of prices, the MyQuant Trend Identifier Strategy effectively identifies the market trends for Bitcoin and makes corresponding buy and sell decisions. By combining multiple indicators for judgment, it avoids excessive noise interference with the signals. With further optimization of time and parameters, the performance of this strategy can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

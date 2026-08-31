@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a9dfff7cf5a3d4f3a2.png)
-[trans]
-## 概述
-
-本策略基于传统均线交易策略改进而来,采用一目均衡表指标辅助判断多空方向。该策略结合价格突破和均线交叉信号,识别潜在趋势反转点,实现低风险交易机会的捕捉。
-
-## 策略原理
-
-一目均衡表包含转换线、基准线、延迟线和先行线。当转换线上穿或下穿基准线时产生金叉死叉信号。价格突破云内涨跌趋势作为入场信号,基准线和先行线组成的云内作为止损线。
-
-具体来说,多头入场信号为转换线上穿基准线且突破云内上边线。做多后,若价格跌破云内下边线则止损退出。空头入场及止损规则类似。
-
-## 优势分析
-
-相比 tradition moving average strategies,本策略具有以下优势:
-
-1. 一目均衡表结合价格运动态势判断,避免假突破产生错误信号
-2. 云内作为移动止损,能及时止损控制风险
-3. 通过参数调整,可适应不同周期及市场环境
-
-## 风险分析
-
-本策略主要面临以下风险:  
-
-1. 趋势反转风险。突破入场后价格可能重新进入震荡,无法获利。
-2. 突破假信号风险。价格出现短期调整回补可能被误判为突破信号。
-3. 参数优化风险。不同参数适用于不同周期,需要测试调整。
-
-对应解决方法:
-
-1. 采用移动止损及部分止盈。
-2. 结合更高周期判断,避免短线噪音。  
-3. 多组参数回测优选组合 parameter optimization
-
-## 优化方向  
-
-本策略可从以下方面进行优化:
-
-1. 增加机器学习判断突破真伪信号的可能性
-2. 采用自适应移动止损自动调整止损距离
-3. 参数自适应优化 find optimal parameters 
-
-## 总结
-
-本策略总体来说是一个可靠、低风险的趋势跟踪策略。相比单纯均线策略,结合一目均衡表指标判断能够过滤掉部分噪音信号。云内作为移动止损使其承受风险能力较强。通过进一步优化,可望获得更稳定的超额收益。
-
-||
 
 ## Overview  
 
@@ -101,7 +55,6 @@ This strategy can be further improved by:
 
 In conclusion, this is an overall reliable, low-risk trend following strategy. By incorporating Ichimoku Cloud on top of moving averages, it helps filter out some false signals. The Cloud stop loss also makes it robust in terms of risk management. Further optimizations may lead to more consistent alpha generation.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1589d8a90757cc94093.png)
-[trans]
-
-### 概述
-
-这是一种利用自定义的基于高斯平滑的去趋势价格震荡指标识别潜在价格反转的策略。该策略结合去趋势价格震荡指标和价格周期的高斯平滑移动均线,设定具体的入场和出场条件,以捕捉价格反转机会。
-
-### 策略原理
-
-该策略首先计算去趋势价格震荡指标(GDPO),方法是比较收盘价和一定周期的指数移动平均线,以识别出短期内的价格周期。然后对GDPO进行高斯平滑,使用Arnaud Legoux移动平均线(ALMA)应用高斯平滑技术,过滤掉噪音,给出价格趋势更清晰的图景。 
-
-策略通过平滑后的GDPO与其滞后版本的交叉情况来确定做多做空的具体入场和出场条件。当平滑GDPO上穿滞后版本且为负时,做多入场;当平滑GDPO下穿滞后版本或零轴时,平仓做多头仓位。类似地,当平滑GDPO下穿滞后版本且为正时,做空入场;当平滑GDPO上穿滞后版本或零轴时,平仓做空头仓位。
-
-在图表上,平滑后的GDPO和其滞后版本用不同颜色绘制,以直观显示其交叉情况。同时绘制零轴作为参考。策略入场时设置背景颜色变化以提示。并在GDPO的交叉点绘制叉型标记以提示出场点。
-
-### 优势分析
-
-该策略结合去趋势技术和高斯平滑过滤噪音,可以更清晰地识别价格反转机会。相比其他震荡指标,GDPO通过去趋势来配合周期分析,可提高准确性。高斯平滑滤除大量噪声,使指标信号更清晰。具体的入场出场条件可以有效控制损失。
-
-### 风险分析
-
-该策略对参数调节较为敏感,如周期长度、平滑参数等,需要经过充分回测确定合适参数组合,否则可能出现过多错误信号。在趋势行情中,该策略可能产生连续亏损。止损策略需要搭配使用以控制单笔损失。此外,反转失败是该策略的主要风险,需要关注形态特征及趋势强度等确定反转概率。
-
-可以通过动态调整参数,结合趋势判断指标进行优化,提高策略稳健性。也可以设置动态止损来控制风险。
-
-### 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 动态调整平滑参数,在趋势行情中增大平滑强度,减少错误信号。
-
-2. 结合趋势判断指标,如ADX,避免反转策略在趋势行情中持续亏损。
-
-3. 增加止损策略,如随价格波动调整止损点或盈利后移动止损。
-
-4. 优化入场条件,可结合其他指标或形态作为确认,提高入场准确率。 
-
-5. 优化资金管理,根据市场情况调整仓位和止损点。
-
-6. 测试不同的价格数据,如日线、周线等,评估不同周期下的策略效果。
-
-### 总结
-
-基于高斯平滑去趋势反转策略,利用GDPO指标识别价格短期周期性,并应用高斯滤波技术提取信号,在明确的入场出场条件下捕捉反转机会。该策略有效控制了反转交易的风险,但需要注意参数优化及趋势判断。通过动态调整、确认指标及止损策略的配合,可以进一步提升策略稳定性。
-
-||
 
 
 ### Overview
@@ -99,7 +54,6 @@ The strategy can be optimized in several aspects:
 
 The Gaussian Detrended Reversion strategy identifies short-term cycles using the GDPO and extracts signals with Gaussian filtering to capture reversals under defined entry and exit rules. It effectively controls the risks of reversal trading but requires parameter optimization and trend validation. Further improvements in robustness can be made through dynamic adjustments, confirming indicators and stop loss strategies.
 
-[/trans]
 
 > Strategy Arguments
 

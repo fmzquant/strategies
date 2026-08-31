@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a7009aaa619d14da7f.png)
 
-[trans]
-
-## 概述
-
-黄金分割移动平均线交易策略是一种试图利用长短期移动平均线的黄金交叉作为交易信号的量化交易策略。该策略同时结合RSI指标避免在局部高位开仓,以控制风险。
-
-## 策略原理
-
-该策略主要基于两个移动平均线:200日线作为长期均线,10日线作为短期均线。当短期均线上穿长期均线时产生买入信号;当短期均线下穿长期均线时产生卖出信号。这就是著名的“黄金交叉”。该策略同时结合RSI指标,如果RSI小于30就会触发策略只在超卖区开仓。
-
-具体来说,如果满足以下条件就会开多头仓位:
-
-1. 10日均线上穿200日均线 
-2. 当前无持仓 
-3. RSI小于30
-
-平仓条件如下:  
-
-1. 止损:价格跌破开仓价一定比例(可设置)时止损
-2. 止盈:价格超过一定比例(可设置)时止盈
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用了移动平均线的黄金交叉信号,这是一种经典且有效的技术指标交易信号
-2. 结合RSI避免在高点买入,可以一定程度控制风险
-3. 有止损和止盈设置,可以锁定利润,规避风险
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 移动平均线策略容易产生错误信号和掉头
-2. RSI在一些强势行情中会失效
-3. 止损设置过小可能导致超短线交易而频繁停损
-
-为降低这些风险,可以考虑以下几点优化措施:
-
-1. 调整均线参数,或者加入更多均线
-2. 结合其他指标确认RSI信号
-3. 调整止损止盈参数设定
-
-## 优化方向  
-
-该策略还有进一步优化的空间:
-
-1. 增加更多指标过滤信号,避免错误信号
-2. 优化移动平均线参数
-3. 结合波动率指标设定动态止损
-4. 加入机器学习模型判断市场状态
-5. 采用算法自动优化参数
-
-## 总结
-
-黄金分割移动平均线交易策略整体来说是一种简单有效的趋势跟踪策略。它利用经典的均线交叉信号产生交易机会,并设有止损止盈来控制风险。该策略可以通过多指标组合、参数优化、机器学习等手段进行进一步改进,从而获得更好的策略效果。
-
-||
 
 ## Overview
 
@@ -125,7 +67,6 @@ There is room for further optimization of the strategy:
 
 In summary, the golden ratio moving average trading strategy is a simple and effective trend following strategy. It generates trading opportunities using classic MA crossover signals and has stops to control risks. The strategy can be further improved through multi-indicator combinations, parameter optimization, machine learning, etc. to obtain better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

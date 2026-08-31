@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1436fb3f86ec5b8f2ac.png)
-[trans]
-#### 概述
-该策略的主要思路是通过监测价格的下跌幅度来进行买入操作。当价格较前一个周期下跌超过5%时,就会触发买入信号,以当前收盘价买入一定数量的仓位。当价格高于买入价格时,就平仓获利了结。该策略利用了市场的波动性,试图抓住价格的短期反弹机会来获利。
-
-#### 策略原理
-1. 计算当前收盘价较前一周期收盘价的跌幅百分比。
-2. 如果跌幅超过5%,则触发买入信号,以当前收盘价买入一定数量的仓位。买入的数量根据当前账户余额和买入价格计算得出。
-3. 记录买入价格和买入数量。
-4. 当前价格高于买入价格时,平仓获利了结。
-5. 计算盈亏情况,更新账户余额。
-6. 在图表上用黄色标记出买入信号发生时的K线。
-
-#### 优势分析
-1. 简单易懂:策略逻辑清晰,容易理解和实现。
-2. 趋势捕捉:通过买入下跌幅度较大的品种,可以捕捉到价格的短期反弹趋势。
-3. 风险控制:买入数量是根据账户余额和当前价格计算得出,控制了每次交易的风险敞口。
-4. 及时了结:当价格高于买入价时就果断平仓,不恋战,控制住了风险。
-5. 直观表现:在图表上用特殊颜色标记出买入信号,方便观察和分析。
-
-#### 风险分析
-1. 频繁交易:该策略以短期波动为主要目标,交易频率可能较高,需要注意手续费成本对收益的影响。
-2. 深度回撤:如果在买入后价格出现进一步的大幅下跌,则可能面临一定的回撤风险。
-3. 价格波动:策略主要依赖价格的波动性,在波动率较低的市场环境中,策略的效果可能会打折扣。
-4. 盈亏平衡:策略对胜率和赔率并没有明确的要求和控制,在实际运行中需要注意策略的整体盈亏平衡能力。
-
-#### 优化方向
-1. 止损优化:目前策略在买入后并没有设置止损条件,可以考虑增加一些止损逻辑,比如固定百分比止损或者ATR止损等,来进一步控制单次交易的最大损失。
-2. 信号过滤:在产生买入信号后,可以增加一些额外的条件来过滤信号的质量,比如结合均线系统、RSI等指标,或者考虑价格拐点、烛线形态等,以提高信号的胜率和可靠度。
-3. 仓位管理:目前策略采用固定资金比例来确定买入数量,可以考虑优化为更动态的仓位管理模型,比如根据价格波动率、账户净值曲线等因素来调整每次买入的数量。
-4. 多品种协同:该策略的思路可以用于多个品种,通过品种之间的关联性分析以及资金分配管理,可能会取得更好的效果。
-
-#### 总结
-该策略以价格短期下跌超过特定幅度作为买入信号,抓住价格的反弹机会来获利,逻辑简单易懂。策略的优势在于对趋势的捕捉和风险的控制,但是频繁交易、深度回撤、价格波动等风险也需要注意。未来可以从止损优化、信号过滤、仓位管理、多品种协同等方面对策略进行进一步的优化和改进,以期获得更稳健的效果。
-
-|| 
 
 #### Overview
 The main idea of this strategy is to perform a buy operation by monitoring the decline in price. When the price falls by more than 5% compared to the previous period, a buy signal is triggered, and a certain amount of position is bought at the current closing price. When the price is higher than the buying price, the position is closed to take profits. This strategy takes advantage of market volatility and tries to capture short-term price rebound opportunities to make profits.
@@ -78,7 +43,6 @@ The main idea of this strategy is to perform a buy operation by monitoring the d
 
 #### Summary
 This strategy uses the short-term price decline exceeding a specific amplitude as a buy signal, capturing the rebound opportunity of the price to make profits. The logic is simple and easy to understand. The advantages of the strategy lie in trend capture and risk control, but risks such as frequent trading, deep drawdown, and price volatility also need to be noted. In the future, the strategy can be further optimized and improved from aspects such as stop-loss optimization, signal filtering, position management, and multi-variety collaboration, in order to obtain more robust results.
-[/trans]
 
 
 

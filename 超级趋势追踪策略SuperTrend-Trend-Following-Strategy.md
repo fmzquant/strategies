@@ -9,70 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略基于超级趋势指标来判断价格趋势方向,并据此产生交易信号,属于趋势追踪策略类型。本策略特别针对特斯拉(TSLA)1分钟线进行测试,表现尚可。
-
-## 策略原理
-
-1. 计算ATR和最高价、最低价的平均值,以超级趋势乘数确定上轨和下轨。
-
-2. 判断价格是否突破上轨或下轨,以确定超级趋势的方向。
-
-3. 当价格上穿下轨时产生看多信号;当价格下穿上轨时产生看空信号。
-
-4. 可以选择在确定信号次日开盘入场,也可以选择在价格触碰超级趋势轨时立即入场。
-
-## 策略优势
-
-1. 超级趋势指标判断趋势简单清晰,容易编程实现。
-
-2. 可灵活选择入场时机,满足不同交易者需求。
-
-3. 可快速捕捉中短线趋势,适合趋势追踪。
-
-4. 策略交易频繁,可进行扩展优化。
-
-## 策略风险
-
-1. 超级趋势指标存在滞后,可能错过最佳入场时机。
-
-2. 交易频繁带来的滑点成本较大。
-
-3. 没有止损等风险控制手段。
-
-4. 回测数据仅基于特斯拉1分钟线,难以证明策略有效性。
-
-对应解决方法:
-
-1. 调整参数以降低滞后概率。
-
-2. 添加滑点控制,确保交易成本不会过高。
-
-3. 增加止损工具,控制单笔亏损。
-
-4. 在更多品种和周期回测验证策略稳健性。
-
-## 策略优化方向
-
-1. 测试不同的超级趋势参数组合,降低滞后。
-
-2. 增加过滤器,避免被套。
-
-3. 优化资金管理策略,提高策略效率。
-
-4. 引入机器学习预测超级趋势走向。
-
-5. 结合其他指标验证信号,提升策略稳定性。
-
-## 总结
-
-该策略利用超级趋势指标判断中短线趋势方向,产生交易信号,属于典型的趋势追踪策略。整体框架简洁有效,但可进一步优化入场机会、风险控制、参数选择等方面。若能取得更多品种的 historical data,并加入机器学习等技术,则可以大幅提升策略稳定性和盈利能力。
-
-|| 
 
 ## Overview
 
@@ -134,7 +70,6 @@ Possible Solutions:
 
 This strategy uses SuperTrend to identify medium-term trend direction for trading signals, typical of trend following strategies. The overall framework is simple and effective, but can be further improved in areas like entry opportunities, risk management, parameter selection etc. With more historical data across products and integrated techniques like machine learning, it can be significantly enhanced in stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

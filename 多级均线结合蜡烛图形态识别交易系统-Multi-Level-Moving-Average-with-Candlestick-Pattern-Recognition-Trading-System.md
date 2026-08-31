@@ -11,58 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b0b3f1b0c4343a73d5.png)
 
-[trans]
-#### 概述
-该策略是一个综合性的技术分析交易系统,将经典的蜡烛图形态识别与趋势分析相结合。系统主要依托于多种经典蜡烛图形态的识别,包括十多种不同的蜡烛图形态,同时结合短期和长期移动平均线来确认市场趋势,从而产生买卖信号。该策略适用于不同的时间周期,既可用于短线交易也可用于中长期持仓。
-
-#### 策略原理
-策略采用多层次的信号确认机制:
-1. 使用6周期指数移动平均线(EMA)作为短期趋势指标
-2. 通过50和200周期简单移动平均线(SMA)判断长期趋势
-3. 识别多种蜡烛图形态:
-   - 十字星家族(普通十字星、墓碑十字、蜻蜓十字)
-   - 锤子形态(锤子线、上吊线、倒锤子、流星)
-   - 吞没形态
-   - 孕线形态
-   - 启明星/黄昏星形态
-   - 三兵/三鸦形态
-4. 结合趋势和形态生成交易信号
-
-#### 策略优势
-1. 信号多维度确认:通过移动平均线和蜡烛图形态的双重确认,提高交易信号的可靠性
-2. 适应性强:可以适应不同市场环境,既能捕捉趋势也能把握反转机会
-3. 风险控制完善:通过形态识别的严格条件,降低虚假信号
-4. 操作逻辑清晰:每个交易信号都有明确的入场条件
-5. 可扩展性强:策略框架容易根据需求添加新的形态识别模块
-
-#### 策略风险
-1. 形态识别延迟:蜡烛图形态确认需要多根K线完成,可能错过最佳入场时机
-2. 信号重叠:多个形态同时出现可能导致信号冲突
-3. 市场噪音:震荡市中可能产生过多虚假信号
-4. 参数敏感性:移动平均线周期选择对策略表现影响较大
-5. 计算复杂度:多个形态的实时计算可能影响执行效率
-
-#### 策略优化方向
-1. 信号权重系统:
-   - 为不同形态设置可调整的权重
-   - 根据市场环境动态调整权重
-2. 市场环境识别:
-   - 添加波动率指标以识别市场状态
-   - 根据不同市场状态调整策略参数
-3. 止损优化:
-   - 基于形态特征设计动态止损
-   - 添加跟踪止损机制
-4. 信号过滤:
-   - 增加成交量确认机制
-   - 添加趋势强度过滤器
-5. 优化计算效率:
-   - 简化形态识别算法
-   - 优化数据结构
-
-#### 总结
-该策略通过整合多种技术分析工具,构建了一个完整的交易系统。策略的核心优势在于多维度的信号确认机制,但同时也面临着信号延迟和过度拟合的风险。通过添加市场环境识别和动态参数调整机制,策略有望获得更好的表现。在实际应用中,建议通过回测优化参数,并结合风险管理系统使用。
-
-|| 
 
 #### Overview
 This strategy is a comprehensive technical analysis trading system that combines classical candlestick pattern recognition with trend analysis. The system primarily relies on identifying multiple classic candlestick patterns, including more than ten different formations, while incorporating both short-term and long-term moving averages to confirm market trends and generate buy/sell signals. The strategy is adaptable to different timeframes and suitable for both short-term trading and medium to long-term position holding.
@@ -113,7 +61,6 @@ The strategy employs a multi-layered signal confirmation mechanism:
 
 #### Summary
 This strategy integrates multiple technical analysis tools to build a complete trading system. Its core strength lies in the multi-dimensional signal confirmation mechanism, though it faces challenges of signal delay and potential overfitting. The strategy's performance can be enhanced by adding market environment recognition and dynamic parameter adjustment mechanisms. In practical application, it's recommended to optimize parameters through backtesting and implement alongside a risk management system.
-[/trans]
 
 
 

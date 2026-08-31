@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11f8524c0dbfd7f5c72.png)
 
-[trans]
-
-
-## 概述
-
-双移动平均线突破策略是一个较为典型的趋势跟踪策略。它通过计算两条不同周期的移动平均线,并以其交叉作为买入和卖出信号,来捕捉市场趋势的方向和力度。
-
-## 策略原理
-
-该策略主要基于两个移动平均线。第一个移动平均线的周期较短,可以更快地响应价格变化;第二个移动平均线周期较长,可以过滤掉部分噪音。当短期移动平均线上穿长期移动平均线时,视为买入信号;当短期移动平均线下穿长期移动平均线时,则为卖出信号。
-
-具体来说,该策略计算了10周期的指数移动平均线(price1)和20周期的指数移动平均线(price2)。如果当前K线的开盘价和收盘价都高于两条移动平均线,则产生买入信号;如果当前K线的开盘价和收盘价都低于两条移动平均线,则产生卖出信号。
-
-通过这样的设计,可以在趋势开始形成时较早地进入市场,并跟踪趋势;当趋势反转时,也可以尽早退出市场,有效控制风险。
-
-## 策略优势
-
-- 捕捉趋势早期,跟踪强劲趋势
-- 双均线过滤,避免部分假突破
-- K线开盘价和收盘价双确认,减少无效交易
-
-## 策略风险
-
-- 双均线策略容易产生较多的反向交易
-- 双均线运行时可能出现频繁交叉信号
-- 参数优化空间大,不当优化可能导致过拟合
-
-## 策略优化方向  
-
-- 测试不同参数组合,寻找最优参数
-- 增加止损策略,降低单次损失大小  
-- 增加过滤条件,减少无效交易
-- 结合其他指标确认信号有效性
-
-## 总结
-
-本策略整体来说较为简单实用,通过双均线交叉原理捕捉趋势,是量化交易的一个基础策略。但该策略也存在一定的风险,需要进一步优化以适应不同市场环境。在参数调整、止损机制、信号过滤等方面都有优化空间,可以使策略更稳定可靠。
-
-||
 
 
 ## Overview
@@ -87,7 +48,6 @@ This design allows earlier entry when a trend starts to form and follows the tre
 
 The strategy is relatively simple and practical, capturing trends with dual MA crossover, making it a fundamental quant strategy. But it also has some risks and needs further optimization for different market regimes. There is room for enhancing parameters, stops, filters etc. to make it more robust.
 
-[/trans]
 
 > Strategy Arguments
 

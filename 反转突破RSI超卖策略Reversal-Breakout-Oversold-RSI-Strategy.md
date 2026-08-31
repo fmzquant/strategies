@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eaa3e77b3b8a08481f.png)
-[trans]
-
-## 概述
-
-反转突破RSI超卖策略是一种利用相对强度指数(RSI)指标判断超卖情况,在价格反转时进入做多仓位的算法交易策略。该策略设置RSI阈值为30,当RSI低于30时判断为超卖状态,此时开启做多仓位。策略通过严格的止损和止盈规则来锁定盈利。
-
-## 策略原理
-
-反转突破RSI超卖策略使用14周期的RSI指标。当RSI指标低于30时,判断为超卖状态。这表明前一段时间价格持续下跌,目前处于超卖状态,市场即将出现反转,价格很可能转为上涨。策略在此时开启做多头寻求反转机会。 
-
-具体来说,当RSI<30且处于回测时间窗口时,会触发做多信号开仓。然后设置止损位为入场价的1%下方,止盈位为入场价的7%上方。当价格高于止盈位或低于止损位时平仓离场。
-
-整个策略通过判断超卖反转点入场,设置止损止盈来锁定盈利的方式进行资金增长。
-
-## 优势分析
-
-反转突破RSI超卖策略具有以下几个优势:
-
-1. 捕捉超卖反转带来的做多机会,这是一种较为可靠的交易策略。
-
-2. 利用RSI指标识别入场点,相比直接对价格建仓判断更为专业。
-
-3. 严格的止损和止盈设置,可以有效控制单笔交易的风险和盈利。
-
-4. 回测数据表明,该策略收益和胜率都较高。
-
-5. 容易理解,新人也可以轻松使用。
-
-## 风险分析
-
-反转突破RSI超卖策略也存在一些风险,主要有以下几点:
-
-1. 价格反转失败的概率依然存在。尽管RSI低于30会提高反转概率,但市场环境复杂多变,反转失败的情况也会出现,此时止损会被触发。
-
-2. 止损点过于接近,出现止损碰撞的概率较大。可以适当放宽止损幅度。
-
-3. 回测时间窗口设置不当,可能对测试结果产生偏差。应调整回测周期,全面评估策略效果。
-
-4. 交易币种不当也会对收益产生影响。此策略最适合交易波动较大的币种。
-
-## 优化方向  
-
-反转突破RSI超卖策略还有一定的优化空间:
-
-1. 调整RSI参数,测试不同参数对策略收益的影响。
-
-2. 测试不同交易对,选择波动更大的币种。
-
-3. 调整止损止盈参数,找到最优参数组合。适当扩大止损幅度也是一个方向。
-
-4. 增加其他指标过滤,例如价格突破某一移动均线之后才入场。
-
-5. 测试不同时间周期参数,寻找最佳入场时机。
-
-## 总结
-
-反转突破RSI超卖策略整体易于理解易于操作,通过捕捉超卖反转机会获取收益。策略最大优势在于容易掌握,新人也能使用。同时严格的止损止盈机制也使风险可控。下一步可以从调整参数、增加过滤指标等方向进行优化,使策略效果更出色。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ There is still room for optimization of the Reversal Breakout Oversold RSI Strat
 
 The Reversal Breakout Oversold RSI strategy is easy to understand and operate overall, capturing reversal opportunities from oversold situations to make profits. The biggest advantage of the strategy is that it is easy to grasp even for beginners. At the same time, the strict stop loss and take profit mechanism also makes the risk controllable. The next step is to optimize from directions like adjusting parameters and adding filter indicators to make the strategy performance even better.
 
-[/trans]
 
 > Strategy Arguments
 

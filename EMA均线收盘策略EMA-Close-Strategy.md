@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用EMA均线的金叉死叉原理,结合K线收盘价判断建仓和平仓信号。当快速EMA均线(8日线、13日线、21日线)向上突破中期EMA均线(55日线)且收盘价高于中期EMA均线时,做多;当快速EMA均线向下跌破中期EMA均线且收盘价低于中期EMA均线时,做空。该策略适合日线和小时线交易。
-
-## 策略原理  
-
-该策略基于EMA均线的金叉死叉原理设计。代码中设置了5条不同周期的EMA均线(8日线、13日线、21日线、55日线、200日线),并在图表上进行可视化绘制。策略的核心逻辑是:
-
-1. 当8日线、13日线、21日线均上穿55日线,且收盘价高于55日线时,做多;
-
-2. 当8日线、13日线、21日线均下穿55日线,且收盘价低于55日线时,做空。 
-
-这样,通过快速EMA均线的金叉死叉与中期EMA均线的关系,结合K线实际收盘价的突破,可以确定较为可靠的入场和出场信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA均线的金叉死叉原理,可以有效捕捉价格趋势的转换。
-
-2. 结合收盘价与均线的关系判断入场出场,可以过滤假突破带来的错误信号。
-
-3. 使用多条不同周期的EMA均线进行组合,可以提高信号的可靠性。
-
-4. 交易逻辑简单清晰,容易理解和实现,适合新手学习。
-
-5. 可自定义EMA均线的周期参数,适应不同市场环境。
-
-6. 可视化绘制均线,形成直观的图表交易指标。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. EMA均线系统本身对震荡趋势的判断效果不佳,容易产生错误信号。
-
-2. 收盘价与均线关系无法完全避免假突破。
-
-3. 参数设置不当可能导致过于频繁交易,增加交易成本。
-
-4. 回测数据拟合风险,实盘效果可能弱于回测。
-
-5. 不能有效控制单笔止损,可能带来较大亏损。
-
-## 优化方向
-
-该策略可以从以下方面进一步优化:
-
-1. 结合其他指标如MACD、KDJ等进行信号过滤,提高信号质量。
-
-2. 增加趋势判断指标,避免震荡市打败均线系统。
-
-3. 设定止损机制,控制单笔损失。
-
-4. 优化EMA均线的周期参数,适应不同交易品种。
-
-5. 设定仓位管理机制,根据资金规模动态调整仓位。
-
-6. 在多时间框架上寻找交易机会,进行时间均衡。
-
-## 总结
-
-EMA均线收盘策略是一个基于均线理论的简单有效的跟踪趋势交易策略。它有较强的实用价值,代码简洁,适合初学者学习,也可作为模块集成到更复杂的策略系统中。但该策略也存在一些局限性,需要继续优化以适应市场的变化。整体来说,EMA均线收盘策略提供了一个不错的趋势交易思路,值得深入研究。
-
-||
 
 ## Overview
 
@@ -141,7 +74,6 @@ Some ways to further improve the strategy:
 
 The EMA Close strategy is a simple yet effective trend following strategy based on EMA theory. It has strong practical value with clean code and is easy to learn for beginners, and can also be integrated into more complex systems. However, some limitations exist and further optimizations are needed to adapt to evolving markets. Overall, the EMA Close strategy provides a solid trend trading framework worth studying in depth.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bd2658810f4d45a56f.png)
-[trans]
-
-## 概述
-
-本策略基于BTC的50日移动平均线和200日移动平均线的金叉死叉信号,结合额外的技术指标判断来发出买入和卖出信号。该策略主要适用于BTC/USDT这种具有明显趋势性特征的币对。
-
-## 策略原理
-
-当50日移动平均线上方突破200日移动平均线而形成“金叉”时,表示BTC进入多头市场,产生买入信号。而当50日移动平均向下突破200日移动平均线而形成“死叉”时,表示BTC进入空头市场,产生卖出信号。
-
-该策略除了基本的移动平均线“金叉”和“死叉”信号判断以外,还加入了一些额外的技术指标来辅助判断,这些指标包括:
-
-1. EMA指标:计算一个 length+offset 的 EMA 指标,当其上涨时表明目前处于多头市场,可以买入。
-
-2. 比较移动平均线与EMA的数值关系:如果EMA值高于50日移动平均线,则产生买入判断。
-
-3. 检查价格比上一根K线的低点下跌1%以上,如果满足则产生卖出信号。
-
-通过组合运用上述几个指标,可以过滤掉一些错误信号,使策略交易决策更加可靠。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 使用移动平均线作为主要交易信号,可过滤市场噪音,识别趋势方向。
-
-2. 结合EMA等多种辅助技术指标,可以增强信号的可靠性,过滤假信号。 
-
-3. 采用适当的止损策略,可以有效控制单笔损失。
-
-4. 较为简单的交易逻辑,容易理解实现,适合量化交易初学者。
-
-5. 可配置参数较多,可以按照自己的偏好进行调整。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 移动平均线本身滞后性较强,可能错过价格快速反转的机会。
-
-2. 辅助指标增加了规则数量,也提高了产生错误信号的概率。
-
-3. 止损设置不当可能导致亏损扩大。
-
-4. 参数设置(如移动平均线长度等)不当也会影响策略效果。
-
-对应解决方法:
-
-1. 适当缩短移动平均线周期,增大参数优化范围。
-
-2. 增加回测数据量,检查信号质量。
-
-3. 适当放宽止损幅度,同时设置盈利止盈。
-
-4. 增加参数优化,寻找最佳参数组合。
-
-## 优化方向
-
-该策略还可从以下几个方向进行优化:
-
-1. 增加机器学习算法,实现参数的自动优化。
-
-2. 加入更多辅助指标,构建多个子策略,通过投票机制产生决策。
-
-3. 尝试 Breakout 策略,识别价格突破。
-
-4. 利用深度学习预测价格趋势。
-
-5. 优化止损机制,实现动态跟踪止损。
-
-以上优化可以提高决策的准确性,增强策略的盈利能力和稳定性。
-
-## 总结
-
-本策略主要基于BTC的移动平均线交叉进行交易决策,辅以EMA等技术指标来过滤信号。该策略具有较强的趋势跟踪能力,可配置性也较高,适合作为量化交易的入门策略。但也存在一定的滞后性风险,需要注意防范。接下来的优化方向可以从机器学习、集成策略、止损策略等多个层面进行。
-
-||
 
 ## Overview
 
@@ -163,7 +86,6 @@ The above optimizations can improve decision accuracy and enhance the profitabil
 
 This strategy mainly makes trading decisions based on the moving average crossover of BTC, assisted by technical indicators such as EMA to filter signals. The strategy has strong trend-following capability and high configurability, making it suitable as a beginner's quantitative trading strategy. But there are also certain lagging risks that need to be guarded against. The next optimization directions can be from multiple dimensions such as machine learning, portfolio strategies, stop-loss strategies, etc.
 
-[/trans]
 
 > Strategy Arguments
 

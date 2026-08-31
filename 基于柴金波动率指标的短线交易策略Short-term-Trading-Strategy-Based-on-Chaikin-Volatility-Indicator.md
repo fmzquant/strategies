@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1022e29341cbbddcaac.png)
-[trans]
-
-## 概述
-
-本策略基于柴金波动率指标设计了一个短线交易系统,主要用于捕捉市场的短线波动。该策略的主要思路是当柴金波动率指标上穿或下穿指定阈值时,进行买入或卖出操作。
-
-## 策略原理
-
-柴金波动率指标是通过计算证券的最高价和最低价的范围来量化衡量波动率。当最高价和最低价的差值扩大时,表示波动率上升。
-
-本策略的具体逻辑是:
-
-1. 计算柴金波动率指标(xROC_EMA)
-2. 设置一个触发阈值(Trigger)
-3. 当xROC_EMA上穿Trigger时,做多;当xROC_EMA下穿Trigger时,做空
-4. 可以选择是否交易反向
-
-## 策略优势分析
-
-本策略具有以下优势:
-
-1. 响应迅速,适合短线操盘
-2. 回撤相对较小,具有一定的资金管理效果
-3. 实现简单,容易理解
-4. 可以灵活调整参数,适应不同市场环境
-
-## 风险分析
-
-本策略也存在一定的风险:
-
-1. 短线交易带来较高的交易频率,存在过度交易的风险
-2. 设置的参数如Length、Trigger等容易过拟合
-3. 交易反转时容易形成亏损
-4. 无法有效过滤市场噪音,存在一定的误交易概率
-
-对应风险的解决方法如下:
-
-1. 适当调整参数,控制交易频率
-2. 优化参数设置,防止过拟合
-3. 适当宽松止损,给予价格一定的回调空间
-4. 结合其他指标进行过滤,减少误交易
-
-## 策略优化方向
-
-本策略可以从以下方面进行优化:
-
-1. 结合市场结构指标,识别趋势和关键支撑位
-2. 增加过滤条件,减少whipsaw,例如加入量能指标、移动平均线等
-3. 动态调整参数,使之能根据市场环境变化而变化
-4. 优化止损机制,如采用追踪止损或Chandelier Exit等,以锁定更多利润
-
-## 总结
-
-本策略整体思路清晰简洁,具有短线操盘特点。参数设置灵活,可根据需要调整。同时也存在一些参数易过拟合和交易频率过高的风险。通过进一步优化,可使策略 parameter robustness 更强,从而获得更稳定的表现。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ The strategy can be improved by:
 
 The strategy has a simple and clear logic suitable for short-term trading. The flexible parameters can be adjusted as needed. Overfitting and high trading frequency risks exist. Further optimizations can make the strategy more robust for steadier performance.
 
-[/trans]
 
 > Strategy Arguments
 

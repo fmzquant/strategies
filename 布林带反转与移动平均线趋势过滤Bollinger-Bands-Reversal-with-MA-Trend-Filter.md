@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/185ab8b949c58e0c1b2.png)
-[trans]
-
-## 概述
-
-该策略结合了布林带和移动平均线,利用布林带上下轨反转点和移动平均线方向作为入场和出场信号。具体来说,当价格从下向上突破布林带下轨且高于移动平均线时,做多;当价格从上向下突破布林带上轨且低于移动平均线时,平仓。
-
-## 策略原理
-
-该策略主要基于布林带和移动平均线两个指标。
-
-布林带包含上带、下带和中轨。中轨是n天的简单移动平均线,上下带分别是中轨上下k倍标准差。当价格接近上下带时表示过度买入或卖出,这时可能会产生反转。
-
-移动平均线反映了价格的平均趋势方向。当短期移动平均线上穿长期移动平均线时,表示价格走势由下向上,可以考虑做多;而短期移动平均线下穿长期移动平均线时,表示价格走势由上向下,可以考虑做空。
-
-该策略综合考虑了布林带反转信号和移动平均线的趋势判断。价格突破布林带下轨时产生买入信号,而且要求移动平均线上升以确保大趋势为上涨;价格突破布林带上轨时产生卖出信号,而且要求移动平均线下降以确保大趋势为下跌。这样就实现了在反转的同时考量大的趋势方向。
-
-具体操作规则如下:
-
-1. 当价格从下向上突破布林带下轨且高于移动平均线时,做多
-2. 当价格从上向下突破布林带上轨且低于移动平均线时,平仓
-
-## 优势分析
-
-该策略主要优势有:
-
-1. 综合考虑了中短期反转信号和长期趋势方向,符合多空双边操作的需要
-2. 利用布林带上下轨反转性较强,可以获得较好的入场机会
-3. 增加移动平均线过滤,避免在震荡行情中被套利
-4. 策略逻辑简单清晰,容易理解实现,适合量化交易
-
-## 风险及解决
-
-该策略主要风险有:
-
-1. 布林带参数设置不当,上下轨突破产生的交易信号可能频繁,容易被套。可以通过优化参数,找到最佳参数组合。
-2. 移动平均线参数设置不当,可能过滤掉较好的交易机会。可以考虑结合其他指标进行优化。 
-3. 行情可能出现长时间的震荡,导致亏损加大。可以设置止损点,让单个亏损控制在一定范围。
-
-## 策略优化
-
-该策略主要可优化的方向:
-
-1. 优化布林带参数,找到产生交易信号最优参数组合
-2. 尝试不同类型、长度的参数移动平均线,寻找最匹配的组合
-3. 增加其他指标判断,例如成交量,RSI等,提高策略效果  
-4. 建立动态止损机制,能够根据市场波动幅度来设置止损点
-5. 测试不同品种参数设置效果,寻找最佳品种适应性
-
-## 总结
-
-该策略综合考虑布林带反转信号和移动平均线趋势判断,在保证反转效果的同时控制了局部震荡对总体趋势判断的影响。策略信号产生及原理简单清晰,容易理解实现,且可以通过多种方式进行优化提高效果,是一种适合量化交易的有效策略。
-
-||
 
 ## Overview
 
@@ -114,7 +61,6 @@ The main aspects this strategy can optimize on:
 
 This strategy takes both the reversal signals from Bollinger Bands and trend judgments from Moving Average into consideration, controlling the impact of local shocks on overall trend judgments while ensuring reversal effectiveness. The signals and principles are simple and clear, easy to understand and implement, and there are multiple ways to optimize for better performance, making it an efficient strategy suitable for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

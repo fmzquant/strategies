@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/155c7953c340da9ee66.png)
 
-[trans]
-#### 概述
-这是一个结合布林带和抛物线转向指标(PSAR)的综合交易策略,使用固定的风险收益比进行交易管理。该策略主要在日内交易时段运行,通过价格突破布林带以及蜡烛图形态来识别交易机会,同时利用PSAR指标进行趋势确认。策略采用动态止损和获利目标设置,保持风险收益比为1:3。
-
-#### 策略原理
-策略运用多重技术指标进行交易信号确认:
-1. 使用20周期的布林带作为主要的价格波动范围指标
-2. 通过PSAR指标(初始值0.02,最大值0.2)作为趋势确认工具
-3. 计算蜡烛线实体比例(实体长度/总长度≥0.33)来确保信号的可靠性
-4. 在指定的交易时间窗口内(GMT-5 7:30-16:00)执行交易
-5. 多头入场条件:收盘价突破上轨且蜡烛实体比例满足要求
-6. 空头入场条件:收盘价突破下轨且蜡烛实体比例满足要求
-
-#### 策略优势
-1. 结合多重技术指标,提高信号可靠性
-2. 采用固定的风险收益比(1:3),有利于长期稳定收益
-3. 通过时间过滤,避免低流动性期间的干扰
-4. 使用蜡烛实体比例过滤,减少假突破
-5. 设置动态止损和获利目标,适应市场波动
-6. 策略逻辑清晰,易于理解和优化
-
-#### 策略风险
-1. 在高波动市场中可能出现滑点
-2. 固定的风险收益比可能错过部分盈利机会
-3. 时间过滤可能错过重要的市场机会
-4. 多重指标可能导致信号滞后
-5. 在震荡市场中可能产生连续亏损
-
-#### 策略优化方向
-1. 引入自适应的布林带周期,以适应不同市场环境
-2. 开发动态的风险收益比设置机制
-3. 增加成交量指标作为辅助确认
-4. 优化PSAR参数,提高趋势跟踪效果
-5. 加入市场波动率过滤器
-6. 开发更智能的时间过滤机制
-
-#### 总结
-该策略通过综合运用布林带、PSAR指标和蜡烛图分析,构建了一个完整的交易系统。策略的核心优势在于多重技术指标的协同作用和严格的风险管理。虽然存在一些固有风险,但通过建议的优化方向可以进一步提升策略的稳定性和盈利能力。策略特别适合日内交易者使用,能够在控制风险的同时获得稳定收益。
-
-|| 
 
 #### Overview
 This is a comprehensive trading strategy that combines Bollinger Bands and Parabolic SAR (PSAR) indicators, utilizing a fixed risk-reward ratio for trade management. The strategy operates during intraday trading hours, identifying trading opportunities through price breakouts of Bollinger Bands and candlestick patterns, while using the PSAR indicator for trend confirmation. The strategy implements dynamic stop-loss and take-profit targets, maintaining a 1:3 risk-reward ratio.
@@ -90,7 +50,6 @@ The strategy employs multiple technical indicators for trade signal confirmation
 #### Summary
 The strategy creates a complete trading system through the combined use of Bollinger Bands, PSAR indicators, and candlestick analysis. Its core strength lies in the synergy of multiple technical indicators and strict risk management. While inherent risks exist, the suggested optimization directions can further enhance strategy stability and profitability. The strategy is particularly suitable for intraday traders, capable of generating stable returns while maintaining risk control.
 
-[/trans]
 
 
 

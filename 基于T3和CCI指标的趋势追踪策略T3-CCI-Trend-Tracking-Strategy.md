@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f29faa48f09f98ec2b.png)
 
-[trans]
-
-# 基于T3指标和CCI指标的趋势追踪策略
-
-## 概述
-
-这是一个利用T3平滑移动平均线和CCI指标实现趋势追踪的量化策略。该策略通过计算T3-CCI指标来识别趋势,并在获得双重确认信号时入市,以追踪趋势。
-
-## 策略原理
-
-该策略首先计算出T3平滑移动平均线和CCI指标。然后将CCI指标通过一系列滤波计算成T3-CCI指标。当T3-CCI指标上穿0轴线时产生买入信号,下穿0轴线时产生卖出信号。为了过滤假信号,该策略要求T3-CCI指标连续两个周期保持同一信号才会下单。
-
-具体来说,该策略采用以下步骤:
-
-1. 计算CCI指标和T3指标
-2. 将CCI指标通过一系列数字滤波器转换为T3-CCI指标
-3. 判断T3-CCI指标的多空状态
-4. 等待两个bar的持续信号作为入市信号
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 利用T3指标有效平滑CCI指标,过滤市场噪音
-2. 采用双重确认机制,避免产生假信号
-3. 追踪中长线趋势,避开短期回调
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 在震荡行情中容易产生假信号
-2. 双重确认机制可能错过短线机会
-3. 大幅趋势反转时止损风险较大
-
-对策:
-
-1. 调整CCI和T3参数,优化指标效果
-2. 可以适当缩短确认周期,或同时运行快慢参数组合
-3. 采用移动止损或及时止损,控制单笔损失
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 调整CCI和T3参数,适应不同周期和市场
-2. 增加趋势判断指标,提高信号质量
-3. 基于波动率自动调整止损位置
-4. 利用机器学习方法动态优化参数
-
-## 总结
-
-该策略整体来说是一个可靠的中长线趋势追踪策略。它利用双重确认和趋势跟踪特点控制了风险,可以作为趋势交易的基础策略。通过参数和规则优化,可以进一步提高策略表现。
-
-||
 
 
 ## Overview
@@ -118,7 +63,6 @@ The strategy can be optimized in the following directions:
 
 Overall, this is a reliable medium-to-long-term trend tracking strategy. It controls risks with double confirmation and trend tracking features, and can serve as a basic trend trading strategy. Further performance improvement can be achieved through parameter and rule optimization.
 
-[/trans]
 
 > Strategy Arguments
 

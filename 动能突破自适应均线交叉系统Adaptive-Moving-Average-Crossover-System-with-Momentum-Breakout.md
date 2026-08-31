@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bb9eb4a53a8fba3af5.png)
-[trans]
-
-## 一、概述
-
-这个策略的核心是运用自适应均线和动能指标实现突破交易。首先,策略使用热林阳线加权平均价格和三双顺滑移动平均线构建自适应均线;然后,结合动量指标,判断突破的信号,形成交易决策。
-
-## 二、策略原理  
-
-该策略主要由三部分组成:
-
-1. 自适应均线的构建。策略使用热林阳线价格和三双顺滑移动平均线构建三条自适应均线。这些均线能够快速响应价格变化。  
-
-2. 动量指标的计算。策略使用价格的三双顺滑移动平均线的差值作为动量指标。该指标能突出显示价格趋势的变化。
-
-3. 均线的交叉作为交易信号。当快速均线上穿慢速均线时生成买入信号;当快速均线下穿慢速均线时生成卖出信号。
-
-## 三、策略优势
-
-这种策略结合自适应均线和动量指标,能够快速抓住价格变化趋势,并产生交易信号,主要有以下优势:  
-
-1. 使用热林阳线价格构建自适应均线,能更快速响应价格变化。
-2. 三双顺滑移动平均线能有效平滑价格数据,处理异常数据。  
-3. 动量指标能清晰识别价格趋势变化点。
-4. 均线交叉产生清晰的交易信号。
-5. 策略参数设置灵活,可调整自适应性。
-
-## 四、风险与对策  
-
-1. 当价格剧烈波动时,均线交叉信号可能出现误导。可适当调整参数,过滤信号。
-2. 多头市场中,策略表现更佳。空头市场中,止损保护资金。  
-
-## 五、优化思路  
-
-1. 可以测试更多类型的移动平均线,寻找更好的参数。
-2. 可以加入附加过滤条件,避免误信号。例如增加交易量过滤。
-3. 可以优化参数设置,针对不同市场调整自适应性。  
-
-## 六、总结  
-
-该策略整合自适应均线和动量指标,快速响应价格变化,产生简洁高效的交易信号。通过参数调整,可以灵活适应不同市场环境。这是一个非常实用的突破交易策略。
-
-||
 
 ## I. Overview
 
@@ -92,7 +50,6 @@ By combining adaptive moving averages and momentum indicators, this strategy can
 
 This strategy integrates adaptive moving averages and momentum indicators to generate efficient trading signals by quickly responding to price changes. Through parameter tuning, it can be adaptive to different market environments. This is a very practical breakout trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

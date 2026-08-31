@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c5459d6fdfce3e6558.png)
 
-[trans]
-
-## 概述
-该策略的主要思想是利用快速移动均线和慢速移动均线的交叉来判断市场趋势,并在短线和长线均线发生反转时入场,实现追踪趋势的效果。
-
-## 策略原理
-1. 设置快速移动均线周期shortma(默认7天)和慢速移动均线周期longma(默认77天)
-2. 当短线均线上穿长线时判断为买入信号,记录barssince(mabuy),长线意味着进入趋势;当短线均线下穿长线时判断为卖出信号,记录barssince(masell),长线意味着趋势结束
-3. 比较barssince的大小,短线均线从上向下交叉的bar数越多表示趋势持续时间越长;反之,短线均线从下向上交叉栏数越多表示反转信号越强
-4. 当卖出信号的bar数大于买入信号的bar数时发出买入信号;当买入信号的bar数大于卖出信号的bar数时发出卖出信号
-5.  such策略本质上是双均线的反转策略,通过快速均线和慢速均线的反转来判断趋势转折点
-
-## 策略优势
-1. 使用双均线判断,过滤了部分噪音交易信号
-2. 增加了barssince比较,避免了假断和 Close 价格反转带来的错误信号
-3. 容易理解和实现
-4. 可自定义移动均线参数,适用于不同周期和市场
-
-## 策略风险
-1. 双均线策略容易产生较多信号,交易频繁
-2. 移动均线参数设置不当可能错过较长的趋势机会
-3. 当突破长期均线时,止盈点可能会很远,存在较大的回撤
-4. 不能有效过滤螺旋和震荡市
-
-## 策略优化方向 
-1. 增加其他指标过滤,避免在震荡行情中被套住
-2. 增加止损机制
-3. 优化移动均线参数组合
-4. 根据市场周期动态调整移动均线参数
-
-## 总结
-该策略整体来说逻辑清晰易懂,通过快速均线和慢速均线反转来判断市场趋势转折点,在理论上能够有效跟踪趋势。但实际运用中仍需要针对策略算法本身以及参数设置进行优化,使其更加稳定和实战。
-
-||
 
 
 ## Overview
@@ -78,7 +44,6 @@ The main idea of this strategy is to use the crossover of fast and slow moving a
 ## Summary 
 The strategy overall has clear, easy to understand logic, using fast and slow MA reversals to detect trend reversal points. In theory it can effectively track trends. But in actual implementation it still needs optimization of the algorithm itself and tuning of parameters to make it more robust and practical.
 
-[/trans]
 
 > Strategy Arguments
 

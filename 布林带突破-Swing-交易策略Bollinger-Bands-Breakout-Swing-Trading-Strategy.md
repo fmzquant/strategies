@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/104389330b1fd3a57a4.png)
-[trans]
-
-### 概述
-
-该策略是一种基于布林带的突破交易策略。它使用布林带的上沿和中线,实现 Swing 交易。具体来说,它在价格突破布林带上轨时做多,在价格跌破布林带中线时平仓。这是一个典型的趋势跟踪策略。
-
-### 策略原理  
-
-1. 计算 20 日的布林带,包含上轨、中线和下轨
-2. 当收盘价大于上轨时,做多
-3. 当收盘价低于中线时,平仓
-
-以上就是该策略的主要交易逻辑。它简单有效,能够捕捉较强的趋势行情。  
-
-### 优势分析
-
-这种布林带 Swing 策略主要有以下优势:
-
-1. 操作简单,容易实施。
-2. 能够有效跟踪较强趋势,持仓时间不会太长。
-3. 利用布林带这个指标本身的优势,有一定的概率优势。
-
-总的来说,这是一种表现相对较好的趋势策略,简单实用,容易把控。
-
-### 风险及解决 
-
-这种策略也存在一些风险,主要包括:  
-
-1. 布林带指标本身对市场震荡有一定敏感性,可能造成频繁的打开和平仓。可以适当调整参数或增加过滤条件来避免。
-2. 无法有效处理盘整行情,这期间可能出现损失或频繁小额交易。可以考虑在这种行情使用其他策略。
-
-此外,也可以结合更多过滤指标或优化止损策略来控制风险。
-
-### 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化布林带参数,适应更广泛的市场情况。
-2. 增加额外指标判断,提高决策准确性。例如 KDJ、MACD 等。  
-3. 优化止损策略,设置合理止损点,控制单笔亏损。
-4. 优化仓位管理,不同市况采用不同的交易仓位。
-
-通过系统的测试和优化,可以持续改进该策略,提高盈利效果。
-
-### 总结  
-
-该布林带 Swing 策略整体来说非常实用。它操作简单,容易实现趋势跟踪。同时也存在一些需要注意的风险,可以通过参数调整和优化来解决。这是一个值得推荐的量化策略。
-
-
-|| 
 
 ### Overview
 
@@ -107,7 +57,6 @@ Continuous improvement of the strategy can be done through systematic testing an
 
 Overall this Bollinger Bands swing trading strategy is very practical. It has simple operation for easy trend following. There are also some risks to note, which can be addressed through parameter tuning and optimization. This is a recommended quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

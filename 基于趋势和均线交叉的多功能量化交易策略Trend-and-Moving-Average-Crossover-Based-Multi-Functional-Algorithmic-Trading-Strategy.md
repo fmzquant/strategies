@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11c26b3b00f0a750cce.png)
-[trans]
-
-## 概述
-
-该策略集成了多种技术指标和交易概念,可用于自动生成买入和卖出信号。主要特点是结合趋势分析指标实现优化止损,同时利用均线交叉产生交易信号。
-
-## 策略原理
-
-### 技术指标
-
-- 定制UTSTC指标:基于平均真实波幅实现了一个自适应追踪止损指标,可根据市场波动性调整止损范围。
-
-- STC指标:快速简单移动平均线和慢速简单移动平均线的差值,用于判断市场趋势方向和潜在反转点。
-
-- 简单移动平均线(SMA)和指数移动平均线(EMA):计算不同周期的移动平均线并绘画,提供额外的趋势判断信息。
-
-### 交易信号
-
-- 买入信号:当收盘价上穿UTSTC指标并且STC指标处于看涨状态时产生。
-
-- 卖出信号:当收盘价下穿UTSTC指标并且STC指标处于看跌状态时产生。
-
-## 策略优势
-
-- 整合多种指标判断市场趋势,可提高信号准确率。
-
-- UTSTC指标根据真实波幅自动调整止损范围,可有效控制每单亏损。
-
-- 利用均线交叉产生简单有效的交易信号。
-
-- 不同参数设置组合可以适应更多市场环境。
-
-## 策略风险
-
-- STC等趋势判断指标存在滞后,可能错过短期反转机会。
-
-- 均线交叉信号可能产生假信号。
-
-- 需要仔细评估各个参数设置,不当组合可能降低盈利或增加亏损。
-
-- 止损范围过大可能增加亏损风险,过小可能过早止损。
-
-## 优化方向
-
-- 测试不同长度周期的STC指标参数,寻找对策略影响最小的设置。
-
-- 尝试结合其他指标过滤假信号,如KDJ、MACD等。 
-
-- 根据回测结果调整止损参数,找到最优参数组合。
-
-- 评估不同持仓时间设置,寻找最优持仓周期。
-
-## 总结
-
-该策略整合趋势判断、自动止损管理和交易信号判断多个模块,形成一个较为全面的量化交易方案。通过参数调优和功能扩展,可望获得稳定的收益。但任何策略都无法完全规避亏损,需要谨慎验证效果并做好风险控制。
-
-||
 
 ## Overview
 
@@ -125,7 +68,6 @@ This strategy integrates multiple technical indicators and trading concepts to a
 
 This strategy combines trend, automated stops and signal modules into a rather complete algorithmic trading framework. With parameter tuning and feature expansion, stable profits may be achieved but no strategy can fully avoid losses. Proper validation and risk control is still essential.
 
-[/trans]
 
 > Strategy Arguments
 

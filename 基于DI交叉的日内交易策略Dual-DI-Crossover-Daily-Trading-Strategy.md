@@ -10,86 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13cc2e99e18f12c6352.png)
-[trans]
-
-
-## 概述
-
-本策略基于平均真实范围指标(ATR)以及趋向指标(DMI)的正向指标(DI+)和负向指标(DI-)的交叉来判断买入和卖出时机。该策略属于趋势跟踪策略,通过DI+和DI-的交叉来判断趋势的转折点,ATR用于设置止损和止盈价格。
-
-## 策略原理
-
-1. 计算ATR(14):利用过去14天的最高价,最低价和收盘价计算出平均真实波动范围
-
-2. 计算DI+和DI-:
-
-    - DI+ = 100 * RMA(MAX(UP,0),N) / ATNR 
-
-    - DI- = 100 * RMA(MAX(DOWN,0),N) / ATNR
-
-    其中UP为当日最高价和昨日收盘价的差值,DOWN为当日最低价和昨日收盘价的差值,N为参数长度,默认为14,ATNR为上一步计算所得的ATR
-
-3. 判断买入和卖出:
-
-    - 当DI+上穿DI-,产生买入信号
-
-    - 当DI+下穿DI-,产生卖出信号
-
-4. 设置止损止盈:
-
-    - 多单止损价为入场价减去ATR乘以止损倍数
-
-    - 多单止盈价为入场价加上ATR乘以止盈倍数
-
-    - 空单止损价为入场价加上ATR乘以止损倍数 
-
-    - 空单止盈价为入场价减去ATR乘以止盈倍数
-
-## 策略优势分析
-
-1. 利用DI+和DI-交叉判断趋势转换点,能够及时捕捉新的趋势方向
-
-2. ATR作为动态止损止盈指标,能够根据市场波动程度来设定合理的止损止盈点
-
-3. 策略参数较少,容易理解和实现
-
-4. 回测数据显示,该策略具有正向的盈利因子,表现优于买持策略
-
-## 风险及解决方法分析
-
-1. DI交叉产生误交易风险
-
-    - 出现假突破时,会产生不必要的交易信号,可适当调整DI周期参数以过滤误信号
-
-2. 止损止盈点过于靠近
-
-    -市场出现剧烈波动时,靠近的止损止盈容易被触发,可调整ATR倍数以适应市场波动频率
-
-3. 无法有效处理趋势震荡市
-
-    - 震荡行情中 DI 会频繁交叉,产生过多无效交易信号,可结合其他指标过滤信号
-
-4. 回撤风险
-
-    - 策略最大回撤可接受,但无法完全避免系统性回撤,可调整仓位管理策略来控制回撤
-
-## 优化建议
-
-1. 结合移动平均线等指标过滤DI交叉信号,避免在震荡行情中产生误交易
-
-2. 增加仓位管理机制,如固定份额、马丁格尔等方式,以控制回撤并提高盈利性
-
-3. 优化ATR参数,使止损止盈更符合不同交易品种的波动范围
-
-4. 进行参数优化,找到最佳的参数组合,如DI周期、ATR周期和ATR倍数等
-
-5. 增加夜盘和早盘的交易判断逻辑,使策略全天候运行
-
-## 总结
-
-本策略整体较为简单实用,通过DI的交叉判定买卖时机,并用ATR动态设置止损止盈。策略参数量少,容易 tester 和实盘验证,也方便进行优化调整。但DI交叉对震荡行情判断效果不佳,这也是本策略需要改进的方向。总体来说,本策略表现稳定,适合用作日内短线交易策略。
-
-||
 
 
 ## Overview
@@ -168,7 +88,6 @@ This strategy generates trading signals based on the crossover of the positive d
 
 This is a simple and practical strategy generating signals from DI crossover and setting dynamic stop loss/take profit with ATR. With few parameters, it is easy to test and optimize. But DI crossover is less effective during consolidation. Going forward, combining additional filters is the main improvement area. Overall this strategy demonstrates stable performance suitable for short-term day trading.
 
-[/trans]
 
 > Strategy Arguments
 

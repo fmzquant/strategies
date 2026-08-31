@@ -9,83 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过识别强劲趋势和有利时机,实现亏损控制的短线交易。策略追踪价格突破简单移动平均线的趋势信号,在RSI超买超卖区发生背离时及时止损止盈,捕捉短期价格涨跌。
-
-## 策略原理 
-
-1. 计算多周期简单移动平均线
-
-    - 分别设置9日线、50日线和100日线的SMA
-    
-    - 短周期线上穿长周期线判断趋势方向
-
-2. RSI指标判断超买超卖
-
-    - 设置RSI长度为14周期
-    
-    - RSI高于70为超买,低于30为超卖区
-    
-3. 价格突破9日线时入场
-
-    - 价格向上突破9日线时做多
-    
-    - 价格向下跌破9日线时做空
-    
-4. RSI背离 THENJournal形成时止损止盈
-
-    - RSI背离价格作用停损
-
-    - RSI达到设定参数则止盈
-
-## 优势分析
-
-- 追踪短期趋势,适合高频交易
-
-- 移动平均组合判断趋势方向,避免错误交易
-
-- RSI指标判断时机,可有效控制风险 
-
-- 灵活止损止盈,锁定短线获利
-
-- 结合指标信号,提高策略稳定性
-
-## 风险分析
-
-- 短期趋势判断可能失误,追高杀跌
-
-- RSI产生假信号,扩大亏损
-
-- 止损止盈参数设置不当,减少获利或扩大损失
-
-- 交易频率过高,增加交易成本和滑点
-
-- 参数失效和异常市场影响策略效果
-
-- 优化参数设定,严格止损,考虑成本控制
-
-## 优化方向
-
-- 测试不同移动平均线组合,优化判断效果
-
-- 考虑STOCH等其他指标验证RSI信号
-
-- 加入机器学习判断突破的有效性
-
-- 针对不同品种和交易时段调整参数
-
-- 优化止损止盈逻辑,实现动态跟踪
-
-- 考虑整合自动调参机制
-
-## 总结
-
-该策略整合均线指标和RSI指标优势,实现保守的短线交易策略。通过参数优化、信号验证、风险控制等使策略更完善,可适应市场的变化获得持续效果。可继续扩展移动平均线组合、加入机器学习等方式提升策略效果,在不断优化中趋于成熟。
-
-||
 
 
 ## Overview
@@ -162,7 +85,6 @@ This strategy identifies strong trends and favorable timing for short-term tradi
 
 This strategy combines SMA and RSI for a conservative short-term trading approach. Fine-tuning parameters, validating signals, controlling risks makes it more robust and adaptive. There is room for improvement by exploring more SMA combos, adding machine learning models etc. Continuous optimization will lead to further maturity.
 
-[/trans]
 
 > Strategy Arguments
 

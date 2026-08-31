@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cb43efc60d649cd860.png)
-[trans]
-
-## 概述
-该策略是一种基于EMA指标的通道型止损策略。它融合了趋势判断、通道追踪以及动态止损等多项主流技术指标,通过判断EMA的排序关系来确定牛熊周期,结合ATR通道追踪来实现止损,使得止损点能够持续跟踪价格运行。这种止损思路较为积极,有效避免了过于激进的止损被突破的概率。
-
-## 策略原理
-策略主要通过三条不同周期的EMA曲线来判断牛熊状态。具体判断规则是:
-
-- EMA5>EMA20>EMA40 为牛市周期
-- EMA20>EMA5>EMA40 为牛市周期  
-- EMA20>EMA40>EMA5 为牛市周期
-- EMA40>EMA20>EMA5 为熊市周期
-- EMA40>EMA5>EMA20 为熊市周期
-- EMA5>EMA40>EMA20 为熊市周期
-
-在确定了牛熊周期后,策略使用SMMA采样的K线价格,结合ATR指标的倍数作为通道范围。当价格突破该通道时,才会发出交易信号。此外,交易信号发出后,会开启ATR动态跟踪止损机制,实时调整止损位置,确保止损点能够跟着价格运行,从而提高止损的有效性。
-
-## 策略优势
-该策略主要的优势有以下几点:
-
-1. 使用EMA判断牛熊周期,可以有效捕捉市场趋势的转折点
-2. 基于ATR通道构建入场点位,避免在震荡市中错入
-3. ATR动态跟踪止损,可以最大程度锁定盈利,有效控制风险
-
-## 风险及优化
-该策略主要的风险集中在参数设置不当可能导致的过度交易以及止损被突破等问题。可以从以下几个方面进行优化:
-
-1. 优化EMA周期参数组合,寻找最佳参数匹配
-2. 优化ATR倍数大小,防止止损过于近或过于远
-3. 增加其他过滤指标,避免在震荡行情中错入
-
-## 总结
-本策略整合了趋势判断、通道交易和动态止损等多种主流技术指标与方法,形成了一个较为完整的止损交易策略体系。在参数优化及风险控制方面还有很大的优化空间。该策略适用于对止损要求较高的投资者。
-
-||
 
 
 ## Overview
@@ -81,7 +46,6 @@ The main risks of this strategy are concentrated in the problems caused by impro
 ## Conclusion  
 This strategy integrates multiple mainstream technical indicators and methods such as trend judgment, channel trading, and dynamic stop loss to form a relatively complete stop loss trading system. There is still great room for optimization in parameter tuning and risk control. It is suitable for investors who have high requirements for stop loss.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -12,97 +12,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/de3343931156c6c683.png)
 
-[trans]
-
-## 概述
-
-动量孔隙交易策略(Momentum Gap Trading Strategy)是一种追踪价格波动的量化交易策略。它利用开盘价与前一天收盘价之间的差距(称为孔隙)来构建一个动量指标,并以该指标生成交易信号。该策略适用于高波动性股票,可捕捉价格跳空后的继续运行。
-
-本策略基于波音公司前量化分析师佩里·考夫曼(Perry J. Kaufman)在2024年1月《技术分析杂志》上发表的文章《孔隙动量指标》。考夫曼构建了一个跟踪孔隙的动量时间序列,并提出使用该时间序列的移动平均线作为交易信号。当动量指标上穿其移动平均线时做多,下穿其移动平均线时平仓。
-
-## 策略原理
-
-动量孔隙策略的关键在于构建孔隙动量时间序列。构建思路类似于量化术语“弹性量”(On-Balance Volume,OBV),只不过使用的价格输入由每日收盘价变为每日孔隙。
-
-具体计算流程是:
-
-1. 计算最近N天正孔隙总和与负孔隙绝对值之比
-2. 将比率累加构成孔隙动量序列
-3. 对孔隙动量序列应用移动平均生成信号
-
-正孔隙定义为开盘价高于前一日收盘价的差值,负孔隙则相反。比率在本质上反映了最近一段时间内正孔隙与负孔隙的强度对比。
-
-移动平均线抚平了原始波动序列,可用来发出交易信号。本策略采用了一个慢速移动平均线,当快速孔隙动量指标上穿慢速移动平均线时做多,下穿时平仓。
-
-## 优势分析
-
-与传统技术指标相比,动量孔隙策略具有以下优势:
-
-1. 利用价格跳空捕捉市场失衡
-
-   价格跳空(Gap)代表了巨大的供需失衡,跳空方向代表了市场议价权转移。本策略通过空隙比较市场多空力量,可有效捕捉这种失衡。
-
-2. 具有持续性
-
-   价格跳空后往往伴随趋势的继续,追踪跳空动量可捕捉价格趋势波段。指标设计增强了这种持续性特征。
-
-3. 参数少,实施简单
-
-   整个指标只包含两个参数,一个追踪动量的窗口期和一个信号平滑期。非常易于实施。
-
-4. 可量化,适合自动交易
-
-   采用数值比较清晰的交易规则,标准化程度高,可直接连接自动交易系统,适合程序化交易。
-
-## 风险分析
-
-尽管有许多优点,动量孔隙策略也存在一些风险:
-
-1. 容易产生错误信号
-
-   价格跳空短期内可能出现回补,进而使指标产生错误信号。may generate false signals as gaps may fill shortly after opening.
-
-2. 无法有效处理震荡行情
-
-   当价格出现频繁震荡时,指标将会发出大量互相抵消的交易信号。
-
-3. 潜在的过优化问题
-
-   仅仅两个参数很容易导致在历史数据上过度优化。must be careful not to overfit.
-
-建议通过以下方式来控制风险:
-
-1. 采用止损来限制单笔损失
-
-2. 增加参数以适应更多市场状态
-
-3. 多组合优化以防范过优化
-
-## 优化方向 
-
-本策略可从以下几个维度进行扩展与优化:
-
-1. 多个时间周期组合
-
-   采用不同追踪动量窗口的多个孔隙指标,不同周期间可起到互补效果。
-
-2. 整合跳空指标
-
-   例如将真实间隙指标与ATR指标整合作为风险管理。manage risk with ATR.
-
-3. 考虑跳空各方面
-
-   例如跳空距离、跳空次数、跳空产生日等更多特征。incorporate more gap characteristics.
-   
-4. 机器学习模型
-
-   使用跳空数据训练更复杂的机器学习模型,may achieve better performance.
-
-## 总结
-
-动量孔隙策略是一个简单但实用的突破类策略。它跟踪价格跳空这一市场微观结构变化,挖掘隐藏在其中的剧烈供需变化。与其他技术指标相比,它能更清楚地反映市场失衡,并迅速抓住价格趋势转折点。尽管如此,仍需要辅以风险控制手段以避免潜在问题。本策略为我们提供了一个基于市场结构识别机会的范例,值得我们在实践中做进一步优化与创新。
-
-||
 
 ## Overview
 
@@ -194,7 +103,6 @@ This strategy can be expanded and enhanced in the following dimensions:
 
 The Momentum Gap Trading Strategy is a simple yet practical breakout strategy. By tracking price gaps, an important market microstructure change, it uncovers the drastic supply and demand shifts hidden behind. Compared to other technical indicators, it reflects market imbalances more clearly and swiftly seizes price trend turning points. That said, risk controls are still necessary to address potential issues. This strategy exemplifies how identifying opportunities based on market structure can lead to effective techniques that can be further optimized and innovated in practice.
 
-[/trans]
 
 > Strategy Arguments
 

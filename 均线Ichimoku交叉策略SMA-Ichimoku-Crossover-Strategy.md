@@ -9,78 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-均线交叉策略是一种比较常见的交易策略。该策略运用均线的金叉死叉原理,结合Ichimoku云图指标以及SMA平滑移动均线,形成一个较为完整的交易系统。该策略可以自动进行 stock开平仓操作。
-
-## 策略原理
-
-该策略主要通过Ichimoku指标中的转折线和基准线比较,以及SMA短期和长期移动均线的交叉情况来判断买卖股票。
-
-具体来说,代码中定义了Ichimoku指标的转折线conversionLine、基准线baseLine、领先线1 leadLine1和领先线2 leadLine2。同时定义了长期SMA移动均线ma1和短期SMA移动均线ma2。
-
-在判断买入时,要同时满足转折线低于基准线、短期均线低于长期均线的条件,即发生均线金叉。
-
-判断卖出时,要同时满足转折线高于基准线、短期均线高于长期均线的条件,即发生均线死叉。
-
-此外,代码还定义了一些辅助条件,如收盘价高于前一日的判断,以及利用均线的数值做差再除以一个数值来判断均线的斜率。这可以判断均线交叉的力度和方向。
-
-## 策略优势分析
-
-该策略集多种技术指标优势于一体,可以较好地判断市场趋势,具有以下优势:
-
-1. Ichimoku云图本身就包含对趋势的判断,结合SMA均线可以形成比较强大的趋势判断。
-
-2. SMA均线本身就可以判断价格趋势和力度,快均线交叉慢均线可以判断买卖点。
-
-3. 增加收盘价判断可以避免无谓的反复开平仓。
-
-4. 均线斜率的计算增加了对均线交叉力度的判断,可以过滤假交叉。 
-
-5. 整体来说,该策略对趋势判断比较准确,可以减少不必要的交易,而且具有一定的优化空间。
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. Ichimoku和SMA均线都可能出现滞后,不能及时反映价格变化。
-
-2. 多种条件组合判断,增加了策略复杂度,也增加了出错概率。
-
-3. 策略仅基于技术指标,不能判断重大消息面的影响。
-
-4. 策略没有设置止损条件,存在亏损扩大的风险。
-
-5. 策略没有考虑特殊行情的处理,如盘整行情。
-
-6. 参数设置不当也会影响策略效果。
-
-## 策略优化方向 
-
-该策略还可以从以下几个方面进行优化:
-
-1. 设置止损条件,可以在亏损扩大时自动止损。
-
-2. 增加对重大消息面的判断,避免重大消息面影响。
-
-3. 增加对特殊行情的判断,如加大交易区间或调整参数。
-
-4. 对参数组合进行测试优化,寻找最优参数。
-
-5. 增加机器学习算法,利用AI进行参数优化和市场判断。
-
-6. 增加量能指标判断,避免假突破。
-
-7. 结合更多基本面指标,如成交量变化等。
-
-## 总结
-
-综上所述,该均线交叉策略整合了Ichimoku指标和SMA移动均线的优势,形成了一套较为完整的股票交易策略。该策略判断趋势的能力较强,可以有效地捕捉趋势机会。但也存在一些问题,如滞后、复杂度大、缺乏止损等。这给了该策略很大的优化空间,通过设置止损、判断重大消息面、优化参数等手段都可以不断改进该策略,使其成为一个稳定、可靠的量化交易策略。
-
-||
 
 
 ## Overview
@@ -151,7 +79,6 @@ This strategy can be optimized in the following aspects:
 
 In summary, this SMA Ichimoku crossover strategy integrates the advantages of Ichimoku and SMA moving averages to form a relatively complete stock trading strategy. This strategy has strong ability to determine trends and can effectively capture trend opportunities. But there are also problems like lag, high complexity, lack of stop loss. This gives great room for optimizing this strategy. By setting stop loss, judging major news events, optimizing parameters and more, this strategy can be continuously improved to become a stable and reliable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

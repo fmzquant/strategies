@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e586d219cf4e7ab937.png)
-[trans]
-
-
-## 概述
-
-该策略通过计算多个技术指标的综合信号,判断当前时间框架下的趋势方向。当判断为上涨趋势时,在较高点设定追踪止损线;当判断为下跌趋势时,在较低点设定追踪止损线。策略可以自适应不同品种和不同时间框架,通过动态调整止损线,实现风险控制。
-
-## 原理
-
-该策略结合了均线、ATR、KD、变动率等多个指标,判断当前时间框架下的总体趋势方向。具体来说,它计算出以下几个子信号的综合值:
-
-1. 均线方向信号
-2. KD指标超买超卖信号  
-3. 量价背离信号
-4. 通道突破信号
-5. 多时间框架综合试错信号
-6. Percent R信号
-7. 均线回归信号
-8. ATR通道突破信号
-
-上述每个子信号都经过了平滑处理,并设定不同的阈值判断买入/卖出。 然后对每个子信号进行加权,计算出当前时间框架下的总体信号。如果信号大于0,则判断为上涨趋势,如果信号小于0,则判断为下跌趋势。
-
-在判断为上涨趋势时,策略会在之前较高点附近设定追踪止损线;在判断为下跌趋势时,策略会在之前较低点附近设定追踪止损线。这样可以根据实际价格走势来动态调整止损位,实现风险控制的目的。
-
-## 优势
-
-该策略集成了多个指标判断当前趋势方向,提高了判断的准确性。同时,策略可以自适应不同品种和时间框架,具有较强的适应性。
-
-最重要的是,该策略能够动态调整止损线,能够根据实际走势调整风险控制水平,从而对冲系统性风险,这是其最大的优势。
-
-## 风险
-
-该策略判断趋势信号的质量直接影响止损线的设定,如果判断产生错误,可能导致止损位设定过于宽松或过于严格。此外,止损线无法完全规避行情突变的风险。
-
-该策略还需要权衡获利水平和止损距离,如果止损距离过近,可能导致止损过于频繁;如果止损距离过远,则无法有效控制风险。这需要根据不同品种不同周期进行参数优化。
-
-## 优化方向 
-
-可以考虑引入机器学习算法,利用历史数据训练判断趋势方向的模型,从而提高判断准确性。
-
-可以测试不同参数组合,优化止损线的距离。例如动态调整ATR周期参数,以适应市场波动率的变化。
-
-还可以结合交易量能量指标判断真实趋势,防止量价背离导致的信号错误。
-
-## 总结
-
-该策略通过集成多个技术指标判断当前趋势方向,并据此动态调整追踪止损线,旨在提高止损的实效性,控制交易风险。该策略理念先进,值得进一步优化和验证,是一个可供参考的多时间框架自适应风险控制策略。
-
-|| 
 
 ## Overview
 
@@ -105,7 +56,6 @@ Volume energy indicators can also be combined to determine true trends and preve
 
 The strategy judges the current trend direction by integrating multiple technical indicators, and accordingly dynamically adjusts the tracking stop loss line. It aims to improve the effectiveness of stop loss and control trading risks. The strategy idea is advanced and worth further optimization and verification. It is a multi-timeframe adaptive risk control strategy that can be referenced.
 
-[/trans]
 
 > Strategy Arguments
 

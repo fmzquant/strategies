@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/188c201782d83755e9e.png)
-[trans]
-
-本文介绍一种基于K线形态的动量突破交易策略。该策略通过识别蜡烛形态,判断市场趋势和进入时机。
-
-#### 策略概述
-
-动量突破策略主要判断潜在的反转信号,通过识别多头吞噬形态或空头吞噬形态进入场内。识别到信号后,快速追踪趋势,实现超额收益。
-
-#### 策略原理
-
-动量突破策略的核心判断逻辑基于识别吞噬形态,吞噬形态分为多头吞噬和空头吞噬两种。
-
-多头吞噬是指当日收盘价高于开盘价,并且上一根K线的收盘价低于上一根K线的开盘价。这种形态通常预示着市场情绪的改变,多空心理发生逆转,因此是进行适当追涨的良好时机。
-
-空头吞噬刚好与多头吞噬相反,是指当日收盘价低于开盘价,并且上一根K线的收盘价高于上一根K线的开盘价。这同样预示着市场情绪发生变化,因此也是空头介入的机会。
-
-识别到吞噬形态后,动量突破策略会快速建立仓位,实现超额杠杆,追踪潜在的反转趋势。此外,策略还会动态调整止损价和止盈价,在保证盈利的同时严格控制风险。
-
-#### 策略优势
-
-1. 快速判断市场反转时机,捕捉潜在机会
-2. 风险收益比较匹配,止损止盈设置合理
-3. 杠杆率可调整,满足不同风险偏好
-4. 全自动交易,效率较高
-
-#### 策略风险
-
-1. 吞噬形态仅作为参考,不能完全确定反转
-2. 反转失败概率存在,可能形成窄幅震荡
-3. 杠杆过高容易爆仓
-4. 需要足够的资金支持适当仓位
-
-针对风险,可以从以下几个方面进行优化:
-
-1. 结合其他指标过滤信号
-2. 适当调整杠杆限制风险
-3. 增加仓位建立步骤,分批成本均价
-4. 优化止盈止损策略,保证收益
-
-#### 策略优化
-
-动量突破策略可以从以下几个维度进行优化:
-
-1. 多因子验证信号可靠性
-可以加入均线、波动率等指标来验证吞噬信号,确保信号的可靠性。
-
-2. 结合情感指标判断市场心理
-结合市场的恐慌指数、贪婪指数等情感判断指标,能更准确判断市场反转时机。
-
-3. 优化止盈止损策略
-可以通过移动止损、渐进止盈、移动止盈等方式来锁定利润,降低回撤风险。
-
-4. 引入算法交易
-可以用机器学习等算法模型来辅助判断交易信号,提高策略的自动化程度。
-
-#### 总结
-
-动量突破策略整体来说是一种较为典型的反转策略。它通过捕捉关键的K线信号,快速判断并跟踪市场趋势反转。虽然仍存在一定的风险,但可以通过多种方式进行有效优化,将收益风险比控制在合理区间,适合积极进取型的投资者采用。
-
-|| 
 
 This article introduces a momentum breakout trading strategy based on candlestick patterns. The strategy identifies market trends and entry opportunities by recognizing candlestick formations.  
 
@@ -114,7 +54,6 @@ The strategy can be optimized in the following ways:
 
 The momentum breakout strategy is a typical mean-reversion strategy. By capturing key candlestick signals, it quickly judges and tracks market trend reversals. Although risks exist, the strategy can be effectively enhanced through multiple optimization techniques to control the risk-reward ratio. It suits aggressive investors seeking arbitrage-like returns.
 
-[/trans]
 
 > Strategy Arguments
 

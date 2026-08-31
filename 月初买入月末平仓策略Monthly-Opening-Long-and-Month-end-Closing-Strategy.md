@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12bc6cbcc85f67b693d.png)
 
-[trans]
-
-该策略的核心思想是每月的第一个交易日开仓做多,最后一个交易日平仓。这是一个非常简单的策略,主要用于教学演示。
-
-### 策略原理
-
-该策略首先定义了每月的第一个交易日(星期一)作为开仓信号,最后一个交易日(星期五)作为平仓信号。
-
-在开仓时,如果开启了仅做多设置,则直接做多;如果允许做空,则同时开仓做多做空。
-
-在平仓时,如果允许做空,则平掉全部头寸;如果仅做多,则仅平掉做多头寸。
-
-为了控制风险,策略还加入了一个简单的止损设置。当价格触及止损价时,强制平仓止损。
-
-总体来说,该策略思路非常简单直白,属于最基础的月度交易策略,适合用来教学演示。实际运用中,可根据自己需要对入场出场信号、止损方式等进行优化。
-
-### 策略优势
-
-1. 思路简单直白,非常适合初学者学习。
-
-2. 采用月度持仓,操作频率低,适合追求稳定的投资者。
-
-3. 做多做空可选,可满足不同风格的交易者。 
-
-4. 加入止损功能,可以一定程度控制个股风险。
-
-### 策略风险
-
-1. 入场出场时间固定,无法根据市场状态调整,存在被套利的可能。
-
-2. 没有加入量化指标判断,存在盲目跟踪的风险。
-
-3. 单一股票止损容易被突破,无法有效控制 Tail Risk。
-
-4. 仓位固定,无法根据市场情况调整仓位。
-
-5. 成交不确定性可能导致无法完全按策略执行。
-
-6. 简单的止损方式可能导致小止损,应采用 volatility stop 等动态止损。
-
-### 策略优化方向
-
-1. 可以引入量化指标判断市场状态,动态调整开仓节奏。
-
-2. 考虑对标基准指数,判断个股相对强弱选择入场。
-
-3. 根据市场波动率等风险指标动态调整仓位。
-
-4. 采用动态止损,或许多层次止损。
-
-5. 加入算法交易模块,确保交易信号可以成交。
-
-6. 优化资金管理策略,不同市场环境调整股指期货仓位。
-
-7. 结合机器学习判断个股质量,选择入场个股。
-
-### 总结
-
-该策略是一个非常基础的月初买入月末平仓策略,逻辑简单,容易理解,适合初学者学习。但实际运用时,需要对入场出场时间、止损方式、仓位管理等进行优化,才能在复杂多变的市场中持续盈利。我们要深入理解策略的优劣势,不断完善策略系统,开发出适合自己的量化交易方案。
-
-||
 
 
 This strategy's core idea is to open long position on the first trading day of each month and close position on the last trading day of the month. It is a very simple strategy, mainly for teaching demonstration.
@@ -132,7 +71,6 @@ Overall, this strategy has a very simple and straightforward logic, which is the
 
 This is a very basic monthly opening long and month-end closing strategy. The logic is simple and easy to understand, suitable for beginners to learn. But in actual use, the entry/exit timing, stop loss methods, position sizing etc need to be enhanced, in order to profit persistently in the complex and ever-changing markets. We should thoroughly understand the pros and cons of the strategy, and keep improving the strategy system to develop suitable quantitative trading solutions for ourselves.
 
-[/trans]
 
 > Strategy Arguments
 

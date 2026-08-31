@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12de859aee26aa2261d.png)
 
-[trans]
-#### 概述
-该策略使用两条移动平均线(MA)来生成交易信号。当较短周期的MA从下向上穿过较长周期的MA时,生成买入信号;当较短周期的MA从上向下穿过较长周期的MA时,生成卖出信号。该策略同时设置了交易时间段(UTC时间8点到20点)和止盈点(150个点)。
-
-#### 策略原理
-1. 计算两条不同周期的移动平均线(默认为5周期和20周期)。
-2. 判断较短周期MA是否上穿/下穿较长周期MA,以此作为买入/卖出信号。
-3. 设置交易时间段为UTC时间8点到20点,只在该时间段内进行交易。
-4. 判断最近4根K线是否收在MA上方/下方,以此确认趋势。
-5. 如果满足买入/卖出条件,则开仓并设置150个点的止盈。
-
-#### 策略优势
-1. 使用两条不同周期的MA可以有效捕捉趋势,适用于趋势性市场。
-2. 设置交易时间段可以避免在流动性差的时间交易,降低风险。
-3. 通过判断最近4根K线是否收在MA上方/下方,可以确认趋势,提高信号可靠性。
-4. 设置固定的止盈点,可以有效锁定利润,控制风险。
-
-#### 策略风险
-1. 在震荡市场中,该策略可能会频繁出现错误信号,导致亏损。
-2. 固定的止盈点可能会限制策略的盈利空间。
-3. 该策略未设置止损,在行情急速逆转时可能会面临较大风险。
-
-#### 策略优化方向
-1. 可以考虑引入更多技术指标,如RSI、MACD等,以提高信号可靠性。
-2. 可以优化止盈止损点的设置,如采用动态止盈止损或者基于ATR的止盈止损。
-3. 可以结合市场微观结构,如订单流等信息,对交易信号进行二次确认。
-4. 可以针对不同的市场状态(趋势/震荡)采取不同的参数设置,提高策略的适应性。
-
-#### 总结
-该策略基于两条不同周期的移动平均线的交叉来生成交易信号,适用于趋势性市场。通过设置交易时间段和固定止盈点,可以在一定程度上控制风险。但是该策略在震荡市场中表现可能不佳,并且固定止盈点可能会限制策略的盈利空间。未来可以考虑引入更多技术指标、优化止盈止损点设置、结合市场微观结构信息以及针对不同市场状态采取不同参数设置等方式来优化该策略。
-
-|| 
 
 #### Overview
 This strategy uses two moving averages (MA) to generate trading signals. When the shorter-period MA crosses above the longer-period MA, a buy signal is generated; when the shorter-period MA crosses below the longer-period MA, a sell signal is generated. The strategy also sets a trading time period (8 AM to 20 PM UTC) and a profit target (150 points).
@@ -73,7 +41,6 @@ This strategy uses two moving averages (MA) to generate trading signals. When th
 
 #### Summary
 This strategy generates trading signals based on the crossover of two moving averages with different periods, suitable for trending markets. By setting a trading time period and fixed profit target, it can control risk to a certain extent. However, the strategy may not perform well in choppy markets, and the fixed profit target may limit the strategy's profit potential. In the future, one can consider incorporating more technical indicators, optimizing the setting of profit target and stop loss, combining market microstructure information, and adopting different parameter settings for different market states to optimize this strategy.
-[/trans]
 
 > Strategy Arguments
 

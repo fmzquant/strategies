@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f5e9e12cd4244e49e4.png)
-[trans]
-## 概述
-
-该策略基于3条不同周期的EMA平均线,通过判断价格是否处于EMA平均线之上,来判断目前的趋势方向。当短期EMA线上穿长期EMA线时生成买入信号;当短期EMA线下穿长期EMA线时生成卖出信号。该策略追踪趋势运行,在趋势转向时及时平仓。
-
-## 策略原理
-
-该策略使用3条EMA平均线,分别是10日线、20日线和50日线。其判断规则为:
-
-1. 当10日EMA线和20日EMA线同时位于50日EMA线之上时,定义为上升趋势;
-
-2. 当10日EMA线和20日EMA线同时位于50日EMA线之下时,定义为下降趋势;  
-
-3. 当短期EMA线(10日线和20日线)上穿长期EMA线(50日线)时产生买入信号;
-
-4. 当短期EMA线(10日线和20日线)下穿长期EMA线(50日线)时产生卖出信号;
-
-5. 在上升趋势中持有多头仓位,下降趋势中持有空头仓位;
-
-6. 在趋势转向时(EMA短期线与长期线发生穿透)平掉当前信号方向的头寸。
-
-该策略通过 capture profit,通过及时平仓锁定盈利的方式轮番进行多空操作。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 规则简单清晰,容易理解和实现;
-2. 利用EMA平均线判断趋势方向,避免被市场短期波动干扰;  
-3. 及时平仓,追踪趋势运行,避免亏损扩大;
-4. 无需预测行情方向,跟踪趋势运行,胜率较高。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 在盘整市的时候,EMA平均线之间容易出现多次穿透,可能频繁开仓平仓带来交易成本;
-2. 行情跳空后EMA判断趋势的效果会受到影响,可能错失良好的开仓机会。
-
-针对以上风险,可以通过以下方法加以优化:
-
-1. 在EMA间距较小时,可以适当放宽开仓规则,避免过于频繁交易;
-2. 结合其他指标确定趋势,避免EMA判断失效的情况。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 参数优化。可以测试不同EMA周期的参数组合,找到最佳的参数;
-
-2. 交易成本优化。适当优化开仓规则,减少不必要的频繁交易;  
-
-3. 止损策略优化。设定合理的止损水平,控制单笔损失;
-
-4. 结合其他指标。运用MACD,KDJ等其他指标辅助判断,优化入场时机。
-
-## 总结  
-
-该策略整体来说较为简单实用。其利用EMA判断趋势运行方向,附带适当的止损策略,可以有效控制风险。同时也存在一些优化空间,若果结合参数优化、止损策略、其他指标等,该策略的效果还具有很大提升空间。
-
-||
 
 ## Overview  
 
@@ -134,7 +73,6 @@ The strategy can be optimized from the following aspects:
 
 In general, this strategy is quite simple and practical. It uses EMA to determine trend direction with proper stop loss strategy to effectively control risks. There are also rooms for optimization. By combining parameter optimization, stop loss strategy and other indicators, the performance of this strategy can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/127dd61dd40d8e19922.png)
-[trans]
-## 概述
-
-基于价格波动范围的买卖信号过滤策略(Range Filter Buy Sell Signals Strategy)是一个非常实用的量化交易策略。它利用价格的波动范围来过滤买入和卖出信号,在低波动市场中减少假信号,在高波动市场中提高信号质量。这个策略名称准确地概括了策略的主要功能。
-
-## 策略原理
-
-该策略首先计算资产价格在一个特定周期内的波动范围。具体来说,它计算指定周期内的最高价与最低价之间的差价,来确定价格波动的幅度。
-
-之后,它会生成买入和卖出信号。但是并不是所有的信号都会触发入场,而是需要满足价格波动范围过滤条件。例如,只有当价格突破波动范围时才会发出买入信号。
-
-通过这种方式,该策略在低波动的市场环境中能过滤掉大多数假信号,避免无谓的入场。而在高波动时,它能捕捉较大方向性移动,从中获利。
-
-## 策略优势
-
-这个策略最大的优势在于能动态调整对信号的过滤强度。在低波动时,它只选择高质量信号;而在高波动时,它能抓住市场提供的更多机会。
-
-相比固定参数的过滤器,这个策略更加智能和适应性强。无论市场处于何种状态,它都能提供较优的风险回报。
-
-此外,相比单一操作条件,这个策略融合了趋势方向判断,能提供更可靠的交易信号。与此同时,它还具备止损止盈功能,能有效控制个别交易的风险。
-
-## 策略风险
-
-该策略主要的风险在于波动范围参数设定。如果设定的范围过大或过小,都会对信号质量和获利机会产生不利影响。
-
-此外,短期内价格震荡趋势较强的市场中,该策略的获利机会会相对较少。采用不同周期系统的组合有助于缓解这个问题。
-
-## 策略优化方向  
-
-该策略可以通过以下几个方面进行优化:
-
-1. 利用自适应参数算法自动优化波动范围参数,使之更加智能和动态。
-
-2. 增加基于大周期趋势的过滤规则,避免震荡市中被套。
-
-3. 结合不同周期的该策略,形成系统,提高整体的稳定性。
-
-4. 添加机器学习算法,提高参数设置和过滤规则的效果。
-
-## 总结
-
-基于价格波动范围的买卖信号过滤策略是一个非常实用和有效的量化交易策略。它能动态调整过滤强度,在不同市场环境中都能提供较优的风险回报。与此同时,该策略还有很大的优化空间,特别是参数优化和规则优化方面。总的来说,这个策略为追求稳定超额收益的量化交易者提供了一个非常好的基础解决方案。
-
-|| 
 
 ## Overview  
 
@@ -97,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 The Range Filter Buy Sell Signals Strategy is a very practical and effective quantitative trading strategy. It can dynamically adjust the filtering intensity and provide superior risk reward in different market environments. At the same time, there is still great potential in optimizing this strategy, especially in parameter optimization and rule optimization. Overall, this strategy provides an excellent base solution for quantitative traders pursuing steady excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

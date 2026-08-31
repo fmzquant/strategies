@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于抛物线转向指标SAR进行交易,SAR指标可显现市场的趋势反转点。当SAR点突破价格时产生交易信号。
-
-## 原理
-
-抛物线转向指标SAR(Stop and Reverse)主要判断市场趋势反转,属于趋势跟踪指标。
-
-SAR点位于价格之下时代表看涨,此时如果SAR上穿价格则为做空信号。
-
-SAR点位于价格之上时代表看跌,此时如果SAR下穿价格则为做多信号。 
-
-该策略就是以SAR指标的突破作为交易信号的方向。并以SAR点作为止损位。
-
-## 优势
-
-1. SAR指标可准确定位潜在的反转点。
-
-2. 由于采用趋势跟踪机制,可减少假信号。
-
-3. SAR作为止损位可顺势Setting,避免被套。
-
-4. 无需其它指标或过滤器即可运作。
-
-5. 参数优化简单,使用默认设置即可。
-
-## 风险及解决方法
-
-1. SAR指标在盘整时可能产生频繁信号。可添加过滤器识别趋势性行情。
-
-2. 止损点靠近当前价可能被击穿。应适当宽松止损点。
-
-3. 未考虑交易量因素。可加入量能指标避免价量不符。 
-
-4. 回撤可能较大。应适当设置仓位以限制风险。
-
-5. 趋势反转不一定成功。可设置再次反转确认。
-
-## 优化思路
-
-1. 测试是否调整SAR参数能获得更好结果。
-
-2. 加入MACD等指标判断反转成功率。
-
-3. 建立动态移动止损机制。
-
-4. 优化开仓仓位,充分利用SAR信号。
-
-5. 研究加入继续反转确认逻辑。
-
-## 总结
-
-该策略运用抛物线转向指标SAR判断潜在反转点,在SAR突破价格时交易。优点是顺势止损,避免被套。但SAR信号时点选择可能不准,需进一步优化。整体来说,抛物线转向思路值得借鉴学习。
-
-|| 
 
 ## Overview
 
@@ -121,7 +64,6 @@ The strategy simply trades the SAR flip as signal direction, with SAR as stop lo
 
 The strategy trades potential reversal points identified by SAR, taking trades when SAR flips price. Benefits include trailing stops to avoid traps. But SAR timing may be inaccurate and needs refinement. Overall the SAR reversal concept is worth learning.
 
-[/trans]
 
 > Strategy Arguments
 

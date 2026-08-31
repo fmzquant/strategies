@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/7f0f348ba642e04848.png)
 
-[trans]
-
-## 概述
-
-移动平均线跟踪策略是一个基于简单移动平均线的趋势跟踪策略。该策略使用长度为200天的简单移动平均线判断价格趋势方向,当价格上穿移动平均线时做多,当价格下穿移动平均线时做空,实现对趋势的跟踪。
-
-## 策略原理
-
-该策略主要基于以下几点原理:
-
-1. 使用长度为200天的简单移动平均线slowMA判断价格趋势方向。
-2. 当收盘价close上穿slowMA时,认为行情开始上涨,因此做多。
-3. 当收盘价close下穿slowMA时,认为行情开始下跌,因此做空。
-4. 通过last_long和last_short变量记录最后一次做多和做空的时间。
-5. 通过crossover函数判断last_long和last_short的交叉以生成交易信号。
-6. 在回测时间段内,收到做多信号long_signal时做多,收到做空信号short_signal时做空。
-
-该策略主要通过移动平均线判断趋势方向,并在均线发生转折时及时做反向操作,实现对趋势的跟踪获利。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略思路简单清晰,容易理解和实现。
-2. 使用长周期移动平均线,可以有效过滤噪音,锁定主要趋势。
-3. 及时做反向操作,可以在趋势转折点捕捉较大幅度的价格波动。
-4. 只需要移动平均线一个指标,免除多个指标组合的复杂度。
-5. 入场和出场规则清晰,不需要过多的人为干预。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 长周期均线对短期调整不敏感,可能错过短线机会。
-2. 大周期趋势顶底识别能力较弱,容易发生反转损失。
-3. 无止损机制,可能带来较大回撤。
-4. 参数固定,不同品种和市场环境适应能力较弱。
-5. 仅基于历史数据进行策略测试,可能存在过拟合风险。
-
-针对风险,可以从以下几个方面进行优化和改进:
-
-1. 结合短周期均线,同时兼顾长短周期趋势。 
-2. 增加量价组合条件,避免虚假突破。
-3. 加入趋势性指标过滤,提高对趋势转折的识别能力。
-4. 增加动态止损机制,控制单笔损失。
-5. 采用参数优化方法,提高参数的适应性。
-6. 在不同市场环境中进行复制测试,检查策略稳健性。
-
-## 优化方向
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 优化移动平均线的周期参数,寻找最优参数组合。可以使用Walk Forward Analysis等参数优化方法。
-
-2. 增加短期移动平均线,形成多均线策略,同时跟踪长短周期趋势。
-
-3. 结合趋势性指标,如MACD等,提高识别趋势转折的能力。
-
-4. 加入止损机制,如跟踪止损、挂单止损等,控制单笔损失。
-
-5. 进行复制测试,在不同品种和不同时段中测试策略,提高稳健性。
-
-6. 利用机器学习等方法,实现策略的参数自适应和策略优化。
-
-## 总结
-
-移动平均线跟踪策略是一个简单实用的趋势跟踪策略,思路清晰,易于实现,可以捕捉趋势机会。但该策略也存在一些问题,如对短期调整不敏感,风险控制能力较弱等。我们可以从多方面进行优化,使策略更稳健、参数更优化、风险控制更完善。总体来说,移动平均线跟踪策略具有很好的应用价值,是量化交易的一个重要策略思路。
-
-||
 
 
 ## Overview
@@ -148,7 +79,6 @@ The strategy can be further optimized in the following aspects:
 
 The moving average tracking strategy is a simple and practical trend-following strategy. It has a clear logic and is easy to implement for capturing trends. But it also has some weaknesses like being insensitive to short-term corrections and weak risk control. We can optimize the strategy from multiple aspects to make it more robust, better parameterized and with stronger risk management. Overall, the moving average tracking strategy has good application value and is an important trend trading concept in quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

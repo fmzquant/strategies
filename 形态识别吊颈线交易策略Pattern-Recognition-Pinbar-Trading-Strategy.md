@@ -9,46 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略通过识别K线形态实现价格形态交易。它会寻找最近出现的吊颈线形态,根据形态信号做多或做空。交易者可以设置止盈止损的倍数。趋势跟踪止损可以锁定更多利润。
-
-## 策略原理
-
-识别当前K线是否符合吊颈线的形态要求:实体处于下半段,收盘价和开盘价接近低点。做多信号则相反,实体在上半段,收开接近高点。寻找最后一个交易信号的K线,计算该K线实体高度。设置止盈为该高度的N倍,止损为该高度的M倍(M小于N)。
-
-入场后开始趋势跟踪,将止盈线逐渐向利润方向移动,止损线保持不变,直到止盈或止损触发为止。
-
-## 优势分析
-
-- 利用价格形态识别信号,避免频繁交易
-- 止盈止损倍数可自定义,兼顾风险和收益
-- 趋势跟踪止损锁定更多利润
-- 可过滤假突破,避免被套
-
-## 风险分析
-
-- 形态识别准确率无法达到100%
-- 止损范围过小可能被价格震荡止损
-- 趋势跟踪时需要及时移动止盈线
-
-可通过优化参数、辅助指标等方法来减少风险。
-
-## 优化方向 
-
-- 测试不同的止盈止损设置
-- 结合其他指标过滤假信号
-- 优化形态识别条件逻辑
-- 在不同品种中测试参数健壮性
-
-## 总结
-
-该策略利用形态识别发现交易机会,回测表现良好。止盈止损设定合理,可控制单笔交易风险。通过参数优化等进一步完善,可以成为简单实用的交易系统。
-
-||
 
 
 ## Overview 
@@ -87,7 +47,6 @@ Risks can be reduced via parameter optimization, adding indicators etc.
 
 This strategy identifies opportunities through pattern recognition with good backtest results. Reasonable stops control trade risk. Further refinements like parameter optimization can make it a simple and practical system.
 
-[/trans]
 
 > Strategy Arguments
 

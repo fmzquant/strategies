@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a123d6024287194256.png)
-[trans]
-
-## 概述
-
-本策略采用多周期情绪分析的方法,对XBTUSD合约做多空交易。它综合考虑了不同周期下的价格波动幅度和最高价、最低价信息,通过一系列权重调整,计算出当前市场的整体情绪值。根据情绪值的变化规律判断行情,产生买入和卖出信号。
-
-## 策略原理
-
-1. 计算a到j个周期(1到89根K线)下的最高价、最低价、平均价、价格波动幅度等指标。
-
-2. 定义当前收盘价在价格范围内的标准化位置(place变量),再结合各周期价格波动幅度,计算出不同周期下的情绪值。
-
-3. 情绪值经过一系列权重(w变量)调整,计算出整体情绪值(sentiment)。情绪值反映目前市场的平均情绪。
-
-4. 分析情绪值的波动情况,当情绪从正转负时,产生卖出信号;当情绪从负转正时,产生买入信号。
-
-5. 根据情绪的绝对波动值大小(delta变量),判断入场的力度,以及设置止盈止损条件。
-
-## 策略优势
-
-1. 考虑了多种不同时间周期下的情绪,更全面判断市场走势。
-
-2. 权重调整机制使策略更稳定。
-
-3. 综合考虑情绪值和情绪波动,判断入场时机更精准。
-
-4. 结合最高价最低价、止盈止损机制控制风险。
-
-## 策略风险
-
-1. 参数设置不当可能导致过于频繁交易或漏掉交易机会。
-
-2. 突发黑天鹅事件可能导致策略失效。
-
-3. 合约调整、交易规则变更等可能对策略产生影响。
-
-4. 情绪值计算依赖历史数据,在市场结构发生变化时需要重新评估和调整。
-
-可以通过调整权重、交易周期、止盈止损幅度等参数来优化,使策略更适应市场结构的变化。同时优化资金管理,严格控制单笔交易规模和总体仓位。
-
-## 优化方向
-
-1. 继续扩充分析周期,丰富情绪判断的基础。
-
-2. 加入更多技术指标,实现情绪判断和技术指标的组合。
-
-3. 结合机器学习方法提取情绪特征。
-
-4. 动态调整权重设置。
-
-5. 优化止盈止损策略。
-
-## 总结
-
-本策略立足于情绪分析的交易理念,通过多周期综合考量,判断当前整体市场情绪。其连续的情绪变化作为产生交易信号的依据,并辅以价格波动信息判断具体入场时机。这套策略判断行情的角度独特,在大周期震荡行情中表现较好。通过进一步扩充周期设置、加入更多辅助技术指标、调整参数优化等手段,可以使该情绪交易策略更加成熟和稳定,适应更加复杂的市场环境。
-
-||
 
 ## Overview
 
@@ -122,7 +65,6 @@ Risks can be managed by adjusting weights, trading cycles, take profit ratios et
 
 This strategy is based on the trading philosophy of sentiment analysis. It determines current overall market mood by considering multiple cycles. The continuous sentiment changes serve as the basis for generating trading signals, assisted by price fluctuation for timing entry. This unique approach of judging market trends works well in ranging cycles. Further expanding analysis periods, adding more indicators and optimizing can make the sentiment trading strategy more mature and stable for adapting more complex market environments.
 
-[/trans]
 
 > Strategy Arguments
 

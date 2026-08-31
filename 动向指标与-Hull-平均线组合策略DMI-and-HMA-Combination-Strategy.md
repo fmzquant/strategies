@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e22d768d83d006c98d.png)
-[trans]
-
-## 概述
-
-该策略采用动向指标(DMI)和Hull移动平均线(HMA)的组合,利用DMI判断市场方向,HMA确认趋势力度,实现无风险管理的交易。
-
-## 策略原理
-
-1. 计算真实波幅(True Range)、多头动向指标(DIPlus)、空头动向指标(DIMinus)和平均方向指数(ADX)。
-
-2. 计算快速Hull平均线(fasthull)和慢速Hull平均线(slowhull)。
-
-3. 触发做多条件:DIPlus上穿DIMinus且fasthull上穿slowhull。
-
-4. 触发做空条件:DIMinus下穿DIPlus且fasthull下穿slowhull。
-
-5. 满足做多做空条件后分别发出做多和做空信号。
-
-## 优势分析
-
-该策略结合趋势判断指标DMI和Hull均线的双重确认,可以有效识别市场趋势方向,避免多头市和空头市的反复。无风险管理降低了交易频率,从长期来看整体盈利水平良好。
-
-## 风险分析
-
-该策略最大的风险在于无止损设置,行情出现剧烈波动时无法有效控制亏损。此外,参数优化空间有限,针对性不强也是一大缺点。
-
-可以通过加入移动止损、优化参数组合等手段来减少风险。
-
-## 优化方向 
-
-1. 加入ATR止损,利用真实波幅trailing止损。
-
-2. 优化Hull周期参数,找到最佳组合。
-
-3. 动态调整做多做空的参数门槛。
-
-4. 加入量能指标等过滤器,确保趋势持续。
-
-## 总结
-
-DMI和HMA的组合策略,判断精准,简单有效,适合中长线操作。加入适当的止损和参数优化后,可以成为非常出色的趋势追踪系统。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ Possible solutions include adding moving stop loss, optimizing parameter mix etc
 
 The DMI and HMA combination performs outstandingly in identifying trends with simplicity and efficiency. With proper stop loss and parameter tuning, it can become a great trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

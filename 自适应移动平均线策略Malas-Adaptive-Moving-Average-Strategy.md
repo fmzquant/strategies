@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/136d8da30c04548e636.png)
-[trans]
-
-## 概述
-
-自适应移动平均线策略(Mala Adaptive Moving Average Strategy)是一个基于John Ehlers的MESA自适应移动平均线指标的量化交易策略。该策略运用正弦波进行交易决策,在低点买入,高点卖出,通过滑动调节参数使正弦波能够自适应不同品种和市场环境。
-
-## 策略原理
-
-自适应移动平均线策略使用正弦波生成器来产生交易信号。正弦波由一个转动的矢量(这称为相量)在竖直轴上投下的阴影确定。矢量转过360度时,完成一个周期。当矢量通过某个角度时就产生买入信号,通过另一个角度时产生卖出信号。这样,交易决策就是由频域中的角度定义的,而不是时域中的波形特征,可以使策略更加鲁棒,适应不同品种和市场环境。
-
-具体来说,该策略首先对价格进行平滑和去趋势化处理,然后计算正弦波的两个分量:同相分量I和正交分量Q。这两个分量通过相位平移进行叠加和滤波,得到最终的Re和Im。Re和Im反映正弦波的频率信息,通过atan(Im/Re)可以推导出周期period。根据期望的周期范围确定一个平滑的周期smoothperiod。周期和相位信息确定MAMA和FAMA曲线,其交叉产生交易信号。参数alpha通过周期和相位变化率deltaphase动态调节,在一定范围内上下波动,使指标能够自适应市场环境的变化。
-
-## 优势分析
-
-自适应移动平均线策略具有以下优势:
-
-1. 使用正弦波和相位作为交易信号,使策略更加鲁棒,不受时域波形的影响。
-
-2. 周期和参数可以动态调整适应市场变化,具有很强的自适应能力。
-
-3. MAMA和FAMA曲线只依赖价格本身的特征,没有滞后,可以及时捕捉趋势转换。
-
-4. 通过参数設定可以调整策略的灵敏度,适合不同风格的交易者。
-
-5. 策略逻辑清晰简单,容易理解和修改,适合用于研究和教学。
-
-## 风险分析
-
-自适应移动平均线策略也存在以下风险:
-
-1. 由于依赖正弦曲线周期和相位,当价格出现异常扭曲时会产生错误信号。
-
-2. 在周期判断时设置了硬性边界,这会使周期变化不够平滑。
-
-3. 相位和周期的蜂窝效应会使曲线在关键点附近震荡,可能错过最佳 Entries 和 Exits。
-
-4. 当市场波动加剧时,参数和曲线的自适应能力会下降。
-
-5. 作为技术指标,策略容易在重要技术位置出现假突破和错误信号。
-
-这些风险可以通过设置更平滑的参数,结合其他指标进行过滤,调整持仓规模等方法加以缓解。
-
-## 优化方向
-
-自适应移动平均线策略可以从以下几个方面进行优化:
-
-1. 改进周期和参数的计算方法,使其变化更加平滑自然。例如可以引入统计方法对价格进行更好的建模。
-
-2. 结合波动率、成交量等指标对信号进行过滤,提高准确率。也可以结合基本面理解信号的可靠性。
-
-3. 优化参数设置和滑点控制,降低交易成本,提高系统的稳健性。
-
-4. 引入机器学习和遗传算法等方法动态优化参数,使系统参数不断演化和更新。
-
-5. 设定不同的 Entries 和 Exits,结合趋势和反转系统,建立组合,提高持续盈利能力。
-
-## 总结
-
-自适应移动平均线策略运用正弦波分析产生交易信号,通过动态调节参数使得系统能够自主适应市场环境的变化,具有较强的鲁棒性和广泛的适用性。相比其他自适应移动平均线策略,它有更高的实战性和稳定性。但该策略作为一个技术策略,在关键技术位也会出现错误信号,这需要引入其他辅助工具进行过滤优化。通过不断完善,该策略有望成为一个值得推荐的自适应交易系统。
-
-|| 
 
 ## Overview
 
@@ -128,7 +67,6 @@ The Mala Adaptive Moving Average Strategy can be improved in the following aspec
 
 ## Conclusion
 The Mala Adaptive Moving Average Strategy uses sine wave analysis to generate trading signals, automatically adapting itself to market changes through dynamic parameter tuning, making it quite robust and widely applicable. Compared to other adaptive moving average strategies, it demonstrates higher practicability and stability. But as a technical strategy, it is subject to wrong signals around important technical levels, requiring filtering and optimization with auxiliary tools. With continuous improvement, this strategy has the potential to become a recommended adaptive trading system.  
-[/trans]
 
 > Strategy Arguments
 

@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11c8252bf57ef793872.png)
-[trans]
-
-## 概述
-
-本策略基于相对强弱指数(RSI)和平均真实波动幅度(ATR)通道,适用于5分钟和15分钟时间周期,属于超级scalping类型策略。策略通过RSI指标判断长短方向进入点,并利用ATR通道设置止损和止盈,实现高频交易。
-
-## 策略原理
-
-1. 使用21日指数移动平均线(EMA)和65日EMA形成金叉死叉,判断大趋势方向。
-2. RSI低于50时看跌,高于50时看涨,发出买入和卖出信号。
-3. ATR通道上下轨分别为:close+ATR和close-ATR。 close突破ATR上轨时卖出,下破ATR下轨时买入。
-4. 利用ATR的2倍设置止损,5倍设置止盈。
-
-## 优势分析
-
-1. 使用金叉死叉判断大趋势,避免逆势操作。
-2. RSI可确定较好的入场时机。
-3. ATR通道设置止损止盈点效果好,大幅提高盈亏比。
-4. 适合高频scalping交易,获利快。
-
-## 风险分析
-
-1. 需密切注意盯盘,错过入场或止损点可能造成较大亏损。 
-2. 趋势市场中可能出现多次加仓,需要控制好资金比例。
-3. 需要足够的资金支持频繁交易。
-
-## 优化方向
-
-1. 优化ATR参数,使止损止盈更加合理。
-2. 增加其他指标过滤,提高入场质量。 
-3. 加入自动止损和止盈功能。
-4. 增加资金管理和仓位控制模块。
-
-## 总结
-
-本策略属于高频scalping交易类型,通过RSI指标和ATR通道设定入场出场点,实现快速交易。优点是获利快,风险控制到位,适合逢高短轻的操作。但需要密切盯盘,而且需要足够的资金支持频繁交易。整体来说,该策略顺势操作效果好,可通过进一步优化来提升盈利能力。
-
-||
 
 # Super Scalping Strategy Based on RSI and ATR Channel
 
@@ -86,7 +48,6 @@ This strategy is based on Relative Strength Index (RSI) and Average True Range (
 
 This strategy belongs to high frequency scalping trading type. It sets entry and exit points through RSI indicator and ATR channel for quick trades. The advantages are quick profit with good risk control, suitable for trading along the trend. However, close market watch is needed with enough capital supporting frequent trades. Overall speaking, this strategy performs well for trend trading and could be further improved on profitability through optimization.
 
-[/trans]
 
 
 

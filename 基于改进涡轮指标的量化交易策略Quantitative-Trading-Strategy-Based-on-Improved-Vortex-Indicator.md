@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/101ad28d8e0bbc08a2c.png)
 
-[trans]
-
-## 概述
-
-本策略为改进版的涡轮指标策略,在原有涡轮指标的基础上,增加了多项新功能,包括基于阈值进行买卖信号触发、使用EMA平滑涡轮线、添加止损止盈、实现只做多、只做空或双向交易等。该策略适用于希望利用改进涡轮指标进行量化交易的投资者。
-
-## 原理
-
-该策略的核心指标是改进版的涡轮指标。传统涡轮指标通过计算价格波动的绝对值之和,形成正负涡轮线。当正涡轮线上穿负涡轮线时,为买入信号;当负涡轮线下穿正涡轮线时,为卖出信号。 
-
-本策略对传统涡轮指标进行了升级:
-
-1. 不再仅根据涡轮线的交叉来判断买卖,而是引入阈值概念。只有当正负涡轮线之间的差价超过设定的阈值时,才会触发买卖。这可以过滤掉部分无效的小幅度交叉信号。
-
-2. 对涡轮线进行EMA平滑处理,以减少曲线的抖动。 
-
-3. 添加止损止盈设置,可以预设盈亏比例,更精细控制风险。
-
-4. 可以选择只做多、只做空或双向交易,满足不同需求。
-
-基于以上改进,该策略可以更可靠地捕捉趋势,在回测中表现出色。
-
-## 优势分析
-
-1. 改进后的涡轮指标滤除无效信号,可以有效避免假突破。EMA平滑处理也有助于去噪。
-
-2. 采用阈值判断买卖信号,而非简单交叉,可以更可靠地判断趋势转折点。
-
-3. 添加止损止盈功能,可以预设盈亏比来控制单笔交易风险,符合理性交易原则。 
-
-4. 可选择只做多、只做空或双向,可以灵活适应市场不同阶段,满足不同交易者的需求。
-
-5. 该策略参数设计合理,回测表现较好,具有实际运用价值。
-
-## 风险分析
-
-1. 该策略主要适用于趋势性行情,在盘整市场中表现可能会受到影响。
-
-2. 涡轮线本身对股票波动较为敏感,参数设置不当可能导致过于频繁交易。
-
-3. 阈值设置过高会错过买卖点,过低会增加假信号,需要仔细测试找到最佳参数。
-
-4. 市场存在异常行情时,止损可能被突破,需要警惕此风险。
-
-## 优化方向
-
-1. 可以考虑结合其他指标进行组合,在确定信号时引入更多因素判断。
-
-2. 可以测试不同股票对参数的敏感性,优化参数设置。
-
-3. 可以研究自适应止损技巧,在大趋势中随价格调整止损位。
-
-4. 可以引入机器学习等技术,训练模型自动优化参数。
-
-5. 可以探索基于该策略的指数化方法,扩大策略容量。
-
-## 总结
-
-本策略在传统涡轮指标的基础上进行了多项改进,形成一个较为成熟可靠的量化交易方案。它结合趋势判断和风险控制的优点,既可以避免零散交易的过拟合风险,也可以利用指标本身的趋势捕捉能力。通过参数优化和组合技术的应用,该策略可以进一步增强稳定性和跟踪能力。总体来说,本策略具有一定的实践价值,是涡轮指标策略的一个提升版本。
-
-||
 
 ## Overview
 
@@ -131,7 +70,6 @@ With these improvements, the strategy can more reliably detect trends and perfor
 
 This strategy makes multiple enhancements over the traditional Vortex Indicator and forms a relatively mature and reliable quantitative trading system. Combining trend filtering and risk control, it avoids overfit risks from scattered trades and utilizes the trend capture capabilities of the indicator itself. With further parameter optimization and combination techniques, the strategy can be made more stable and responsive. Overall, it holds practical value as an upgraded version of the Vortex Indicator strategy.
 
-[/trans]
 
 > Strategy Arguments
 

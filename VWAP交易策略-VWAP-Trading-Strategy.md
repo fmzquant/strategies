@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1cfeb989f0bfb31c7bc.png)
-[trans]
-
-#### 概述
-
-该策略是一个基于EMA、VWAP和成交量的交易策略。主要思路是在特定的交易时间内,当收盘价突破VWAP和EMA,且成交量大于前一根K线的成交量时产生开仓信号。同时设置了止损和止盈,以及在特定时间段内平仓的条件。
-
-#### 策略原理
-
-1. 计算EMA和VWAP指标。
-2. 判断是否在指定的交易时间内。
-3. 多头开仓条件:收盘价大于VWAP和EMA,成交量大于前一根K线,并且收盘价大于开盘价。
-4. 空头开仓条件:收盘价小于VWAP和EMA,成交量大于前一根K线,并且开盘价大于收盘价。
-5. 多头平仓条件:收盘价跌破VWAP或EMA,达到止盈或止损点位,或者到达指定的离场时间。
-6. 空头平仓条件:收盘价突破VWAP或EMA,达到止盈或止损点位,或者到达指定的离场时间。
-
-#### 策略优势
-
-1. 同时考虑了价格趋势(EMA)、市场公允价值(VWAP)和成交量,开仓条件更加严格,有助于提高策略的胜率。
-2. 设置了止损和止盈,以控制风险和锁定利润。
-3. 限定了交易时间和离场时间,避免了在非交易时段和持仓过夜的风险。
-
-#### 策略风险
-
-1. 该策略在震荡市中表现可能不佳,因为频繁的突破和回撤可能导致多次开仓和平仓,从而增加交易成本和滑点。
-2. 止损点位是固定的,在行情剧烈波动时,可能会被提前触发,导致策略承受较大损失。
-3. 该策略未考虑实际的市场深度和委托情况,在实盘交易中可能面临滑点和开仓失败等问题。
-
-#### 策略优化方向
-
-1. 可以考虑加入更多的过滤条件,如ATR、RSI等指标,以进一步确认趋势和动量的强度。
-2. 止损和止盈点位可以设置为动态的,如跟随ATR或百分比止损,以适应不同的市场波动。
-3. 可以对参数进行优化,如EMA长度、VWAP来源、止损止盈点位等,以提高策略的稳定性和盈利能力。
-4. 可以考虑加入仓位管理,如根据波动率或资金比例调整开仓量,以控制整体风险。
-
-#### 总结
-
-该策略通过综合考虑价格趋势、市场公允价值和成交量,在特定的交易时间内进行交易。虽然设置了止损止盈和限定交易时间,但在实际应用中仍需注意震荡市和滑点等风险。未来可以通过加入更多过滤条件、优化参数和仓位管理等方式来提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 
@@ -86,7 +47,6 @@ This strategy is a trading strategy based on EMA, VWAP, and volume. The main ide
 
 By comprehensively considering price trends, market fair value, and trading volume, this strategy trades within a specific trading time. Although stop loss, take profit, and limited trading time are set, it still needs to pay attention to risks such as volatile markets and slippage in actual application. In the future, the strategy's robustness and profitability can be improved by adding more filtering conditions, optimizing parameters, and managing positions.
 
-[/trans]
 
 > Strategy Arguments
 

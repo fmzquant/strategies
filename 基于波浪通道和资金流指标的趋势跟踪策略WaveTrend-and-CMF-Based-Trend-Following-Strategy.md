@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/124bee87aaa3826fc3e.png)
-[trans]
-
-### 概述
-
-该策略采用波浪通道指标和资金流指标相结合的方式,识别趋势方向并进行趋势跟踪。策略以15分钟时间周期运行,通过波浪通道判断价格趋势方向,再利用资金流指标进行趋势确认,实现超短线的趋势追踪。
-
-### 策略原理
-
-波浪通道指标(WaveTrend)可以有效识别价格的趋势方向。它由通道均线、通道均价和通道索引组成。通道均线是价格的指数移动平均线,反映价格趋势;通道均价是通道均线的移动平均,用来定位通道均线;通道索引则反映价格对通道均线的偏离程度,并给出超买超卖信号。
-
-资金流指标(CMF)则可以判断资金的流入流出,确认趋势。该指标基于成交量调整后的积累/派发线,反映买卖双方力量对比。值在0附近表示资金流入流出平衡;低于0表示资金流出,高于0表示资金流入。
-
-本策略以15分钟周期运行,通过波浪通道指标判断价格趋势方向后,再利用资金流指标进行确认,从而实现趋势的跟踪。具体来说,如果波浪通道指标通道索引低于-60同时资金流指标小于-0.2,则做多;如果波浪通道指标通道索引高于60同时资金流指标大于0.2,则做空。平仓条件则以资金流指标为主,多仓资金流指标大于0.18时平多仓,空仓资金流指标小于-0.18时平空仓。
-
-### 策略优势
-
-1. 波浪通道指标可有效判断价格趋势方向
-2. 资金流指标可确认趋势方向,避免错误交易
-3. 结合波浪通道和资金流指标,可实现超短线的趋势跟踪
-4. 15分钟周期运行,更适合短线操作
-
-### 策略风险
-
-1. 波浪通道指标在盘整期间可能产生错误信号
-2. 资金流指标可能滞后,错过趋势转折点
-3. 单一周期操作风险较大,应适当放宽持仓周期
-4. 缺乏止损策略,无法控制单笔损失
-
-风险解决方法:
-
-1. 结合其他指标进行确认,避免错误信号
-2. 适当调整资金流指标参数,提高敏感性
-3. 可适当延长持仓周期,降低单一周期风险
-4. 增加移动止损、转仓止损等策略,控制损失
-
-### 策略优化方向 
-
-1. 增加仓位数优化,让策略能更好跟踪趋势
-2. 增加止损策略,控制单笔损失
-3. 结合 stoch多空指标等,避免因单一指标出现错误信号
-4. 测试不同持仓时间,寻找最佳持仓周期
-5. 对资金流指标参数进行优化,找到最佳参数组合
-
-### 总结
-
-该策略采用波浪通道指标判断趋势方向,和资金流指标进行确认,实现超短线的趋势跟踪操作。策略优势是指标组合合理,可有效跟踪趋势,且15分钟周期运行更适合短线操作。但也存在风险,比如指标信号不准、持仓时间过短等。未来可通过止损策略、参数优化、增加信号过滤等方式进一步优化,使策略的稳定性和收益率得到提升。
-
-||
 
 ### Overview
 
@@ -104,7 +56,6 @@ Solutions:
 
 This strategy uses WaveTrend to determine trend and CMF to confirm, for ultra short-term trend following. Its advantages lie in reasonable indicator combination and effective trend following, with 15-minute timeframe making it suitable for short-term trading. But risks exist such as inaccurate signals and overshort holding period. Future improvements like stop loss, parameter optimization and more signal filtering can further enhance its stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

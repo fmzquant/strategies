@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8e2c835256eefbf33a.png)
-[trans]
-
-### 概述
-
-闭合阳线策略是一种基于K线形态的量化交易策略。该策略通过识别“闭合阳线”形态来寻找买入卖出信号。
-
-### 策略原理  
-
-该策略的核心原理是:当前K线为阴线,前一K线为阳线,且当前K线的最低价高于前一K线的最低价,当前K线的最高价低于前一K线的最高价时,产生“闭合阳线”形态。这意味着价格已经形成一个封闭的上涨空间,显示多头力量即将耗尽,这是卖出信号。相反,当形成“闭合阴线”时,产生买入信号。
-
-这里使用K线实体的平均值作为止损线。当实体大于止损线一半时止损。
-
-### 优势分析
-
-闭合阳线策略的优势主要有:
-
-1. 基于简单合理的K线形态判断,容易理解和实现。
-2. 可以识别换手较少的区间突破。当涨幅收窄出现“闭合阳线”时,多头力量即将耗尽,这是合适的卖点。
-3. 有明确的止损机制以控制风险。
-
-### 风险分析  
-
-闭合阳线策略也存在一些风险:  
-
-1. 监测频率较低,可能错过最佳买卖点。对较短周期的K线效果不佳。
-2. 假阳线、假阴线可能导致错误信号。需要结合成交量等指标进行过滤。  
-3. 仅基于K线形态,没有考虑其他技术指标和基本面因素的综合判断,存在一定盲目性。
-
-为降低这些风险,可以考虑加入成交量的条件判断,或与移动均线等其他指标结合使用,综合判断市场走势。 止损线也可以根据市场波动程度进行动态调整。
-
-### 优化方向  
-
-闭合阳线策略还可以从以下几个方面进行优化:
-
-1. 加入成交量的条件判断。成交量急剧放大常常意味着趋势反转。
-2. 调整止损条件。可以根据市场波动程度及风险偏好动态调整止损线。
-3. 多周期结合。识别多周期上关键支持位附近的阳线闭合卖点。
-4. 与其他技术指标结合。例如加上均线系统判断整体走势,或引入一些预测型指标提前判断买卖点。
-
-### 总结  
-
-闭合阳线策略作为一种基于K线形态的量化策略,优势在于简单易懂、容易实现,能有效识别一定的买卖信号。但也存在一些局限,如容易产生错误信号、盲目性较强等。这些问题也为该策略提供了优化的方向。通过使用成交量、多周期分析、其他技术指标等信息进行综合判断,可以进一步增强该策略的效果。
-||
 
 ### Overview
 
@@ -95,7 +52,6 @@ The Harami Closing Price strategy can also be improved from the following aspect
 
 The Harami Closing Price strategy is easy to understand and implement for generating certain buy and sell signals based on candlestick patterns. But it also has some limitations like generating false signals and blindness. These problems also point to directions for further optimizations, by applying more comprehensive judgments with trading volumes, multiple timeframes, and other technical indicators. This can greatly enhance the strategy's efficacy.  
 
-[/trans]
 
 > Strategy Arguments
 

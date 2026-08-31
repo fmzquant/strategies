@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18ef8c3c3cbc7688a6e.png)
-[trans]
-
-### 概述
-
-本策略名为“低波动定向买入止盈止损策略”。它利用移动平均线的交叉作为买入信号,结合止盈止损来锁定盈利,适用于低波动区间的币种。
-
-### 策略原理
-
-该策略使用3条不同周期的移动平均线:50周期、100周期和200周期。其买入逻辑是:当50周期线上穿100周期线,并且100周期线上穿200周期线时,做多入场。
-
-该信号表示市场正在从低波动区间突破,开始进入趋势状态。50周期快速上涨代表短期内部力量突然增强,开始带动中长线向上;100周期线也开始向上表示中期力量加入,稳定趋势上行。
-
-入场后,策略采用止盈止损方式锁定利润。止盈目标为入场价的8%,止损线为入场价的4%。设置止盈大于止损,有利于获利超过亏损,确保策略整体盈利性。
-
-### 优势分析  
-
-该策略具有以下优势:
-
-1. 能准确抓住低波动区间突破带来的趋势机会。
-2. 移动平均线容易计算和回测,逻辑简单清晰。  
-3. 止盈止损设置合理,有利于获得稳定收益。
-4. 可配置参数灵活,容易优化。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 错误的突破信号可能导致亏损。
-2. 市场反转时难以止损。
-3. 止盈止损参数设置不当会影响盈利。
-
-对策:
-
-1. 结合其他指标过滤信号,确保突破有效性。
-2. 适当缩短止损周期,减少反转造成的损失。 
-3. 测试不同止盈止损比例,寻找最优参数。
-
-### 优化方向  
-
-该策略可从以下方面进行优化:
-
-1.测试不同移动平均线周期参数,找到最佳组合。
-2.加入成交量等指标来确认趋势突破。 
-3.动态调整止盈止损幅度。
-4.结合机器学习等手段来预测突破成功率。
-5.针对不同市场条件和币种进行参数调整。
-
-综上所述,该策略整体运行逻辑清晰,通过配置移动平均线周期及止盈止损幅度来获得低风险收益,可灵活应用于量化交易。后续可从入场信号、止损方式等方面进行优化,配合参数调整寻找最佳效果。
-
-||
 
 ### Overview  
 
@@ -108,7 +58,6 @@ Optimizations can be made in below areas:
 
 In summary, the strategy has clear logic overall, obtains low risk profit through configuring moving average periods and profit taking/stop loss percentage. It can be flexibly applied in quantitative trading. Further optimizations can be made in areas like entry signals and stop loss methods, combined with parameter tuning to achieve best results.
 
-[/trans]
 
 > Strategy Arguments
 

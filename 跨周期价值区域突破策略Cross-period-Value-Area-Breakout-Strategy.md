@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11f7335e1a172edba84.png)
-[trans]
-
-### 概述
-
-本策略的核心思想是结合不同周期的RSI指标判断当前价格区域,发现较大周期RSI指标出现突破时,在较小周期采取相应的买入或卖出操作。该策略综合利用了不同周期技术指标的优势,通过多个时间维度判断当前价格的相对价值,寻找较优的入场点位。
-
-### 策略原理  
-
-本策略主要通过以下几个步骤判断价格区域并寻找交易机会:
-
-1. 计算较大周期(例如日线)的RSI指标的最高点(Swing High)和最低点(Swing Low)
-2. 判断较大周期RSI在给定回看周期内是否出现最高或最低点
-3. 如果出现突破,则在较小周期(例如5分钟线)判断价格走势(多头或空头),采取相应的买入或卖出操作
-
-例如,当日线RSI指标出现突破新高时,我们判断目前处于多头行情,而如果日线RSI出现突破新低时,则判断目前处于空头行情,在这两种情况下我们分别在5分钟线上采取买入和卖出操作。
-
-### 优势分析
-
-相比传统仅关注一个时间周期的策略,本策略具有以下几个优势:
-
-1. 评估当前价格的相对价值更准确。日线等较大周期指标可以过滤短期市场噪音,判断大周期趋势和价值区域。
-
-2. 结合不同时间周期指标,提高信号的可靠性。只依赖单一周期指标容易出现错误信号,而多个周期指标同步发出信号则更加可靠。
-
-3. 更有效抓取短期机会。日线等大周期突破为我们指明大的方向,而我们只需要在5分钟等短周期寻找机会就可以获利。
-
-4. 回撤更小。跨时间周期结合,有助于避免被套。当大周期指标发生转折时,我们将及时止损退出。
-
-### 风险分析  
-
-本策略的主要风险在于:
-
-1. 大周期指标判断错误。当日线RSI等指标无法有效判断价值区域时,会导致信号产生错误。这需要优化RSI的参数设定。  
-
-2. 小周期行情与大周期判断不符。有时候小周期价格走势会对抗大周期趋势,这时需要设定止损来控制损失。
-
-3. 资金管理不当。如果风险管理不当,单次损失过大,会导致难以恢复。这需要合理设定仓位管理。
-
-### 优化方向
-
-本策略的优化空间还很大,主要可以从以下几个方面入手:  
-
-1. 周期参数优化。可以测试更多的周期组合,寻找最佳参数。
-
-2. RSI参数优化。可以调整RSI的参数看看是否可以提高判断准确性。
-
-3. 增加其他指标。可以加入更多指标进行组合,例如加上均线判断趋势方向。  
-
-4. 优化止损机制。可以根据回撤情况动态调整止损点。
-
-5. 优化仓位管理。可以更科学合理的管理每次交易的具体仓位。
-
-### 总结  
-
-本策略通过评估跨周期的RSI指标看涨情况,实现不同时间维度之间的价值套利。这种跨周期判断的思路值得进一步挖掘,我们可以通过参数优化、止损优化、组合优化等方法不断完善,使得策略更具优势。总的来说,本策略具有独特的思路和很大的优化空间。
-
-||
 
 ### Overview  
 
@@ -119,7 +62,6 @@ There is still large room to improve this strategy, mainly from the following as
 
 This strategy realizes cross period arbitrage between different time dimensions by assessing bullish condition in cross period RSIs. Such idea of cross period judgement deserves further exploitation. We can keep improving it via parameter tuning, stop loss optimization, indicator combinations to make it more advantageous. Overall speaking, this strategy has a unique idea and huge potential to be enhanced.  
 
-[/trans]
 
 > Strategy Arguments
 

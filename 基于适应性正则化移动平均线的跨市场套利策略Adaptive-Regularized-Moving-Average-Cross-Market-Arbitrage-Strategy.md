@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/149b39b3266f4b39c6e.png)
-[trans]
-
-
-## 概述
-
-本策略通过计算适应性正则化移动平均线,实现不同市场之间的套利交易。该策略具有跨市场套利、动态参数调整、风险控制等特点。
-
-## 策略原理
-
-该策略首先定义了一个scaleMinimax函数,用于将时间序列标准化到指定范围。然后定义了一个自适应正则化移动平均线rema函数,计算出平滑后的信号线sig。该信号线的计算方式是:
-
-1. 定义一个滑动窗口,默认长度为5日。
-2. 每日的sig值为前一日sig值与当日收盘价的加权平均。加权平均采用自适应加权机制,离当前价值越近的,权重越大。
-3. 加入λ参数作为正则项,使sig的变换更加平滑。
-
-在得到信号线后,策略通过判断信号线与价格的金叉死叉来决定多空。具体来说:
-
-1. 当sig上穿价格时,做多。
-2. 当sig下穿价格时,做空。
-
-此外,该策略加入平滑因子smooth和显示信号线show_line作为可调参数,提高了策略的灵活性。
-
-## 优势分析
-
-相比传统移动平均线策略,该策略具有以下优势:
-
-1. 采用自适应加权机制,可以更快地响应价格变化。
-2. 加入正则化项,使信号线更加平滑,避免由于价格剧烈波动产生错误信号。
-3. 跨市场套利,可以利用不同市场之间的价格差异获利。
-4. 可调参数设计灵活,可以根据市场情况进行优化。
-
-## 风险及解决方案
-
-该策略也存在一定的风险:
-
-1. 双边交叉出现错误信号的概率较大。解决方法是适当调整平滑参数,避免信号线震荡。
-
-2. 跨市场套利必须要确保两市场具有价格关联性且走势一致。解决方法是选择高相关性的市场进行套利。
-
-3. 参数优化需要积累足够的历史数据进行回测。解决方法是在现实交易中谨慎调整参数。
-
-## 优化方向
-
-该策略还可从以下方面进行优化:
-
-1. 在参数选取上,可以引入机器学习算法自动优化参数组合。
-
-2. 在信号生成上,可以引入更多的指标进行组合,构建更稳定的交易信号。
-
-3. 在风险控制上,可以设置止损线,以控制单笔损失。
-
-4. 在跨市场套利上,可以扩展到更多相关性高的交易品种。
-
-## 总结
-
-本策略通过自适应计算移动平均线的方式,实现了跨市场之间的套利交易。相比传统移动平均线策略,具有参数自适应、平滑处理、跨市场套利等优势。下一步,通过机器学习、组合信号、风险管理等方式进一步优化该策略。
-
-||
 
 
 ## Overview
@@ -130,7 +72,6 @@ The strategy can also be optimized in the following aspects:
 
 This strategy implements arbitrage trading between markets by adaptively calculating moving averages. Compared with traditional moving average strategies, it has the advantages of adaptive parameters, smoothed processing, cross-market arbitrage, etc. Next steps are to further optimize the strategy through machine learning, combined signals, risk management, etc.
 
-[/trans]
 
 > Strategy Arguments
 

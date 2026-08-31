@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ab51ca8479a421dd32.png)
-[trans]
-
-## 概述
-
-趋势成块策略是一种基于价格变化百分比或跳动点数进行对角线排列的交易策略。它可以清晰地在图表上显示本地趋势和转折点。这是一个非常有用的跟踪价格方向的工具。
-
-## 原理  
-
-该策略的计算基于价格变动的百分比或跳动点数偏差(在“偏差”参数中表示),并以对角线行的形式显示在图表上。
-
-每一行由基准中线、上限线和下限线组成:
-
-- 基准中线等于上一行或下一行的上限线或下限线(如果价格在一个时间间隔内快速变化,则当前行的基准中线将大于上一行的上限线或者小于下一行的下限线一个相等的偏差数量,具体取决于价格变动方向)。在计算开始时,基准中线等于第一行的初始值。
-
-- “数量”参数确定根据价格变动方向的上限线或下限线的偏差量,“转折”参数确定改变价格变动方向的偏差量。
-
-构建新行的规则:
-
-- 如果收盘价≥上限线且收盘价>开盘价,上限线会逐步上移,下限线也会上移但幅度较小。
-
-- 如果最低价≤下限线且收盘价<开盘价,下限线会逐步下移,上限线也会下移但幅度较小。
-
-通过调整偏差量,可以在图表上清楚地看到本地趋势和转折点。这是一个非常有用的工具来跟踪价格走势。
-
-## 优势分析
-
-- 可视化显示价格变化趋势,清晰识别支持阻力。
-
-- 对角线能清楚显示突破的力度和回调的范围。
-
-- 可根据需要调整对角线的斜率来识别不同力度的趋势。
-
-- 能找到比较大的支持阻力,并进行突破。
-
-- 容易看出价格的节奏变化,从而调整仓位。
-
-## 风险分析
-
-- 对角线并不能完全准确预测后续价格走势。
-
-- 需要关注走势中出现的背离,对角线与实际价格可能会出现分歧。
-
-- 不能作为孤立使用的策略,需要结合其他指标判断大趋势。
-
-- 需要注意参数调整不当可能导致过于频繁交易。
-
-- 回调时需要警惕反转的可能,不能机械盲目追踪。
-
-可以适当缩小仓位规模,同时参考其他指标作为辅助判断,在大趋势下进行操作。
-
-## 优化方向
-
-- 可以添加仓位管理模块,在趋势不同阶段动态调整仓位。
-
-- 可以结合波动率指标,在波动加大时降低仓位。
-
-- 可以根据回撤比例来设置止损点,控制单笔损失。
-
-- 可以添加过滤器,在价格出现背离时暂停交易。
-
-- 可以划分多级别对角斜率,识别不同力度的趋势变化。
-
-通过动态调整仓位,设定止损和过滤条件,可以更加稳定地跟踪价格趋势。
-
-## 总结
-
-趋势成块策略利用对角线直观显示价格趋势变化,能清楚识别支持阻力位和突破口。但不能依赖对角线独立判断,需要辅以其他指标进行综合分析,同时控制风险。这是一个非常有价值的辅助工具,能帮助交易者更好地把握市场节奏。通过优化可以使策略更加稳健高效,具有很大的应用潜力。
-
-|| 
 
 ## Overview
 
@@ -145,7 +76,6 @@ By dynamically adjusting positions, setting stops and filters, can more steadily
 ## Summary
 
 The Sizeblock strategy utilizes diagonal lines to intuitively display price trend changes and clearly identify support, resistance and breakout levels. But cannot solely rely on diagonal lines for judgment, need to incorporate analysis from other indicators and manage risks. This is a very valuable auxiliary tool to help traders better grasp market rhythm. Optimization can make the strategy more robust and efficient with great application potential.
-[/trans]
 
 > Strategy Arguments
 

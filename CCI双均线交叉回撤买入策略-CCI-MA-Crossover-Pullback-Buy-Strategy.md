@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14ca75675c744c3f97d.png)
 
-[trans]
-#### 概述
-CCI+双均线交叉回撤买入策略是一种综合利用顺势指标(CCI)和双均线交叉信号的量化交易策略。该策略在双均线金叉形成后,等待价格回撤到快线附近同时CCI指标超卖时买入,在死叉形成后价格反弹到快线附近同时CCI指标超买时卖出。通过结合CCI和双均线交叉信号,该策略可以更好地捕捉趋势性机会,同时通过等待回撤买入和反弹卖出来获得更优的入场和出场时机,从而提高策略的风险收益比。
-
-#### 策略原理
-1. 计算CCI指标,根据用户设置的CCI参数(源数据、周期、移动平均类型、超买超卖阈值)计算当前CCI值。
-2. 判断CCI超买超卖,当CCI大于超买阈值时将背景色设为红色,小于超卖阈值时将背景色设为绿色。
-3. 计算快慢均线,根据用户设置的快慢均线参数(源数据、周期、移动平均类型)分别计算当前快慢均线值。
-4. 判断金叉死叉,当快线上穿慢线形成金叉时绘制多头信号,快线下穿慢线形成死叉时绘制空头信号。
-5. 进行交易决策:
-   - 多头入场:当快线在慢线上方,且前一根K线收盘价在快线下方,当前K线为阳线,同时CCI小于超卖阈值时买入开多仓
-   - 空头入场:当快线在慢线下方,且前一根K线收盘价在快线上方,当前K线为阴线,同时CCI大于超买阈值时卖出开空仓
-
-#### 策略优势
-1. 趋势跟踪:通过双均线交叉信号来判断趋势方向,能更好地顺应市场趋势。
-2. 逆势入场:在趋势确立后等待价格回撤买入或反弹卖出,可以获得相对更优的入场价格,提高风险收益比。
-3. 降低假信号:将CCI指标与均线交叉信号相结合,能有效降低单一指标产生的假信号。
-4. 参数灵活:用户可根据自己偏好灵活设置CCI和均线参数,以优化策略表现。
-
-#### 策略风险
-1. 震荡市风险:在震荡市场中,频繁的金叉死叉可能导致策略产生较多的亏损交易。
-2. 参数风险:不恰当的参数设置可能导致策略表现欠佳,需要对不同市场状况下的最优参数组合进行充分回测和分析。
-3. 趋势风险:当市场趋势反转时,策略可能会延迟出场而承担更大的回撤风险。
-
-#### 策略优化方向
-1. 引入仓位管理,根据当前市场趋势强度和波动率来动态调整每笔交易的仓位,以更好地控制风险。
-2. 优化入场条件,如加入交易量指标或其它辅助判断指标,提高入场信号的可靠性。
-3. 优化出场条件,如设置移动止损或时间止损,降低单笔交易的最大亏损。
-4. 对不同市场和品种分别进行参数优化,提高策略的适应性和稳健性。
-
-#### 总结
-CCI+双均线交叉回撤买入策略是一个兼具趋势跟踪和逆势入场优点的量化交易策略。通过双均线捕捉趋势方向,并利用CCI指标来甄别超买超卖区间,同时等待价格回撤和反弹来获取更优入场价格,可以在一定程度上提高策略的盈利潜力和风险收益比。但该策略同样面临参数优化、震荡市和趋势突变等风险,需要通过进一步优化和改进来增强策略的稳健性和盈利能力。策略思路清晰,代码结构完整,整体适合进行实盘交易。
-
-|| 
 
 #### Overview
 The CCI + MA Crossover Pullback Buy Strategy is a quantitative trading strategy that combines the Commodity Channel Index (CCI) and dual moving average crossover signals. The strategy buys when the price pulls back to the fast moving average and the CCI indicates oversold conditions after a bullish crossover. It sells when the price rallies to the fast moving average and the CCI indicates overbought conditions after a bearish crossover. By combining CCI and dual moving average crossover signals, this strategy can better capture trending opportunities while achieving better entry and exit points through pullback buys and rally sells, thus improving the risk-reward ratio.
@@ -77,7 +43,6 @@ The CCI + MA Crossover Pullback Buy Strategy is a quantitative trading strategy 
 
 #### Summary
 The CCI + MA Crossover Pullback Buy Strategy is a quantitative trading strategy that combines the advantages of trend following and counter-trend entry. By capturing trend direction with dual moving averages and identifying overbought/oversold zones with the CCI indicator, while waiting for price pullbacks and rallies to achieve better entry prices, the strategy can potentially improve profitability and risk-reward ratio to a certain extent. However, the strategy also faces risks such as parameter optimization, choppy markets, and sudden trend changes. Further optimization and improvements are needed to enhance the robustness and profitability of the strategy. The strategy logic is clear, the code structure is complete, and it is suitable for live trading overall.
-[/trans]
 
 
 

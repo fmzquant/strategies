@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/170bbaf788b98d3e18d.png)
-[trans]
-
-## 概述
-
-过渡区间策略是一种基于价格波动区间的短线交易策略。它利用价格在一定时间区间内形成的波动区间来判断市场趋势,在区间突破时入场做多/空。
-
-## 策略原理
-
-该策略通过计算过去N根K线的最高价和最低价,构建出价格的波动区间。当最新K线 penetrates 该区间时,判断趋势发生转折,产生交易信号。
-
-具体来说,策略持续追踪最后N根K线(可调节参数N)的最高价和最低价,其中:
-
-- 最低价 = 过去N根K线中的最低点 
-- 最高价 = 过去N根K线中的最高点
-
-这样便构建出了价格的波动区间。
-
-当最新K线的收盘价高于区间最高价时,说明区间突破,产生做多信号;当最新K线的收盘价低于区间最低价时,说明区间突破,产生做空信号。
-
-此外,策略还加入了颜色过滤器和实体过滤器。颜色过滤器根据K线的颜色来过滤信号;实体过滤器根据K线实体的大小来过滤信号。这可以过滤掉一些假信号。
-
-## 策略优势
-
-该策略具有如下优势:
-
-1. 捕捉价格区间,判断趋势转折点,精确做多做空
-2. 颜色过滤和实体过滤,可过滤假信号
-3. 策略逻辑简单清晰,容易理解和调整参数
-4. 可调整的参数较多,可以优化策略
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 参数设置不当可能导致过于频繁交易,产生过高交易费用
-2. 区间范围设置不当,可能导致区间突破假信号太多
-3. 行情剧烈波动时,价格区间预测效果较差
-4. 无法处理价格跳空缺口的情况
-
-可以通过调整区间参数,优化信号过滤条件等方法来降低这些风险。
-
-## 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 动态调整价格区间的范围,而不是固定的N根K线
-2. 加入止损逻辑,降低亏损风险
-3. 优化过滤器参数,提高信号质量
-4. 增加对价格缺口的处理逻辑
-5. 结合多个时间周期判断信号,避免被套
-
-## 总结
-
-过渡区间策略整体来说是一种较为简单实用的短线交易策略。它通过价格区间判断趋势转折点,可以快速抓住行情机会。同时也存在一些风险需要注意。通过参数调整和优化,可以进一步完善该策略,提高盈利效果。
-
-||
 
 ## Overview
 
@@ -119,7 +63,6 @@ The strategy can be optimized in several directions:
 ## Conclusion
 
 The Transient Zones strategy is an easy-to-use short-term trading strategy overall. It determines trend reversal points through price zones and can quickly capitalize on market opportunities. It also has some risks to note. Further improvements can be made through parameter adjustment and optimization to enhance profitability.  
-[/trans]
 
 > Strategy Arguments
 

@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1e5d5012a69f88800e8.png)
 
-[trans]
-####概述
-该策略使用指数移动平均线(EMA)、最高价、最低价和平均真实波幅(ATR)等技术指标,通过判断价格与EMA、最高价和最低价的关系,识别当前的趋势方向,在向上突破最低价时买入,在向下突破最高价或触及动态阻力位时卖出,以捕捉趋势行情,获取超额收益。
-
-####策略原理
-1. 计算ATR,用于衡量市场波动率,为构建动态通道提供依据。
-2. 计算最高价和最低价,作为判断趋势方向的基础。
-3. 计算EMA_HL,即最高价和最低价的EMA,作为动态通道的中轴线。
-4. 计算EMA_HIGHEST和EMA_LOWEST,即在EMA_HL的基础上加减ATR乘以一定比例得到的上下轨。
-5. 计算SELL_LINE,即在最高价的基础上加上ATR乘以一定比例得到的动态阻力位。
-6. 判断多头信号:当EMA_LOWEST向上突破最低价且收盘价低于EMA_MID时,产生买入信号。
-7. 判断空头信号:当EMA_HIGHEST向下突破最高价且收盘价高于EMA_MID时,或者最高价触及SELL_LINE时,产生卖出信号。
-
-####策略优势
-1. 利用EMA、最高价、最低价等指标综合判断趋势,信号可靠性高。
-2. 引入ATR作为波动率衡量标准,构建动态通道,适应不同市场状态。
-3. 设置SELL_LINE动态阻力位,及时锁定利润,控制回撤风险。
-4. 参数可调,适应不同品种和周期,具有一定的普适性和灵活性。
-
-####策略风险
-1. 趋势识别可能存在滞后,导致入场时机不够理想。
-2. 参数设置不当可能导致信号频繁,增加交易成本。
-3. 对于震荡市,策略表现可能不佳,需要结合其他方法判断。
-4. 极端行情下,如快速变盘,策略可能失效,需要设置止损。
-
-####策略优化方向
-1. 引入更多指标,如成交量、波动率等,丰富趋势判断维度,提高信号可靠性。
-2. 对参数进行优化,如ATR倍数、EMA周期等,找到最优参数组合,提高策略稳定性。
-3. 加入仓位管理,如根据ATR动态调整仓位,控制单笔风险敞口。
-4. 设置止损和止盈,控制单笔最大亏损和最大收益,提高风险收益比。
-5. 结合其他策略,如突破策略、均值回归策略等,形成策略组合,提高整体稳健性。
-
-####总结
-该策略利用EMA、最高价、最低价等技术指标,结合ATR构建动态通道,通过突破最高价和最低价产生交易信号,以捕捉趋势行情,是一个简单实用的趋势追踪策略。策略参数可调,适应性和灵活性较好,但在震荡市表现可能欠佳,需要通过引入更多指标、优化参数、加入风控等方式进一步优化和改进。
-
-||
 
 ####Overview
 This strategy uses technical indicators such as Exponential Moving Average (EMA), highest price, lowest price, and Average True Range (ATR) to identify the current trend direction by analyzing the relationship between price and EMA, highest price, and lowest price. It generates a buy signal when the price breaks above the lowest price and a sell signal when the price breaks below the highest price or reaches the dynamic resistance level, aiming to capture trend movements and achieve excess returns.
@@ -81,7 +45,6 @@ This strategy uses technical indicators such as Exponential Moving Average (EMA)
 
 ####Summary
 This strategy utilizes technical indicators like EMA, highest price, and lowest price, combined with ATR to construct dynamic channels. It generates trading signals by breaking above the lowest price and breaking below the highest price to capture trend movements. It is a simple and practical trend-following strategy with adjustable parameters, offering good adaptability and flexibility. However, its performance may be suboptimal in rangebound markets, requiring further optimization and improvement through introducing more indicators, optimizing parameters, and adding risk controls.
-[/trans]
 
 
 

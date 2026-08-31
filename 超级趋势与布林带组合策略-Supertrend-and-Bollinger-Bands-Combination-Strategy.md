@@ -10,36 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d92bacf6999be07086.png)
-[trans]
-#### 概述
-该策略结合了超级趋势指标和布林带指标,旨在捕捉市场的趋势性机会。超级趋势指标用于判断当前市场的趋势方向,而布林带指标用于衡量市场的波动率。当收盘价突破超级趋势线且位于布林带下轨时产生做多信号,当收盘价跌破超级趋势线且位于布林带上轨时产生做空信号。该策略的优势在于能够在趋势明确时及时入场,同时避免在震荡市中过早入场。
-
-#### 策略原理
-1. 计算真实波幅(ATR)和超级趋势指标,用于判断当前市场的趋势方向。
-2. 计算布林带上下轨,用于衡量市场的波动率。 
-3. 当收盘价突破超级趋势线且位于布林带下轨时,产生做多信号;当收盘价跌破超级趋势线且位于布林带上轨时,产生做空信号。
-4. 当持有多头仓位时,如果收盘价跌破超级趋势线则平仓;当持有空头仓位时,如果收盘价突破超级趋势线则平仓。
-
-#### 策略优势
-1. 结合趋势和波动率两个维度的信息,能够更全面地把握市场机会。
-2. 在趋势明确时能够及时入场,有助于捕捉趋势行情的收益。
-3. 在震荡市中,布林带与超级趋势结合能够有效过滤掉假突破信号,降低震荡行情下的亏损风险。
-4. 代码逻辑清晰,参数较少,易于理解和实现。
-
-#### 策略风险
-1. 在单边趋势行情下,由于频繁出现突破信号,可能会导致交易频率过高,增加交易成本。
-2. 对突破点的捕捉依赖于超级趋势指标,而该指标对参数较为敏感,不同参数下指标走势差异较大,可能影响策略效果。
-3. 布林带宽度会随着市场波动率的变化而变化,在高波动率环境下可能会扩大止损。
-
-#### 策略优化方向 
-1. 可以考虑引入更多有效的过滤条件,如交易量、市场情绪等,以进一步提高信号的可靠性。
-2. 对于超级趋势指标的参数,可以进行优化测试,选择最佳参数以提高策略稳定性。
-3. 在交易执行方面,可以引入更为细致的仓位管理和风险控制措施,如设置移动止损、动态调整仓位等,以降低单次交易的风险敞口。
-
-#### 总结
-超级趋势布林带组合策略是一个趋势追踪型策略,通过结合趋势和波动率两个市场要素,能够比较有效地捕捉趋势性机会。但该策略也存在一定的局限性,如对参数敏感、在高波动率环境下风险加大等。因此,在实际应用中还需要根据市场特点和自身风险偏好,对策略进行适当的优化和改进。
-
-|| 
 
 #### Overview
 This strategy combines the Supertrend indicator and the Bollinger Bands indicator to capture trending opportunities in the market. The Supertrend indicator is used to determine the current market trend direction, while the Bollinger Bands indicator is used to measure market volatility. A long signal is generated when the closing price breaks above the Supertrend line and is below the lower Bollinger Band, and a short signal is generated when the closing price breaks below the Supertrend line and is above the upper Bollinger Band. The advantage of this strategy is that it can enter the market in a timely manner when the trend is clear, while avoiding premature entry in a choppy market.
@@ -69,7 +39,6 @@ This strategy combines the Supertrend indicator and the Bollinger Bands indicato
 #### Summary
 The Supertrend Bollinger Band combination strategy is a trend-following strategy that can effectively capture trending opportunities by combining two market factors: trend and volatility. However, this strategy also has certain limitations, such as being sensitive to parameters and increased risk in high-volatility environments. Therefore, in actual application, it is necessary to appropriately optimize and improve the strategy according to market characteristics and one's own risk preferences.
 
-[/trans]
 
 > Strategy Arguments
 

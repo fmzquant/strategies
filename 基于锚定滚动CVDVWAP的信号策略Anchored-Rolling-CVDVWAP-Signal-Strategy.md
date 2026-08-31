@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16d8b4f390e2bf34aba.png)
-[trans]
-
-## 概述
-
-基于锚定滚动CVDVWAP的信号策略是一个在TradingView平台上设计的复杂的技术分析指标。它集成了锚定成交量加权平均价格(VWAP)、累积成交量(CVD)和标准差分析的概念,以生成交易的入场和退出信号。
-
-## 策略原理
-
-该策略的核心在于计算一个锚定的VWAP,即从一个特定的“锚定柱”开始计算VWAP,这个锚定柱是在一个用户定义的周期内成交量最大的柱。然后根据这个锚定的VWAP绘制一个通过标准差计算的包络带,反映超买超卖区域。同时结合价格的变化率(ROC)指标检测“下跌”和“上涨”形态。当检测到形态的同时CVD过滤器发出信号,就生成买入和卖出信号。这些信号可以进行切换以重复发出,或者等待当前信号退出后再发出下一个信号。
-
-## 策略优势
-
-1. 利用成交量加权平均价格判断价格的价值区域和支撑/阻力位
-2. 标准差包络带高亮价格进入超买超卖状态的情况
-3. CVD成交量指标反映买卖压力
-4. 清晰的入场退出信号点
-5. 自动设置止损和止盈水平,辅助风险管理
-
-## 风险分析
-
-1. 参数设置不当可能导致错失交易机会或产生无效信号
-2. 需要结合更多指标进行决策,不能单独使用
-3. 需要适当优化参数以适应不同品种和周期
-4. 停损和止盈位置设置不当可能带来较大亏损
-
-## 优化方向
-
-1. 调整计算VWAP的锚定柱选择逻辑,如结合均线判断
-2. 尝试不同的标准差倍数设置envelope包络带
-3. 优化ROC的参数以适应品种的波动率特征
-4. 设置动态滑点或适应性止损来应对市场剧烈波动
-
-## 总结
-
-基于锚定滚动CVDVWAP的信号策略综合运用多种指标判断价格走势和买卖力度,对于发现交易机会很有帮助。但仍需谨慎使用,需要不断测试和优化以配合自身的交易策略使用。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ The core of this strategy is to calculate an anchored VWAP, which starts the VWA
 
 The Anchored Rolling CVDVWAP Signal strategy synthesizes various indicators to assess price action and buying/selling momentum, which is very helpful for discovering trading opportunities. But still needs to be used cautiously, requiring continual testing and optimizations to fit one's own trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

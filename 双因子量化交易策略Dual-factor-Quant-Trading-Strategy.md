@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fb8d0a19bac1fdfb46.png)
-[trans]
-
-### 概述
-
-本策略结合了123反转和质数震荡指标两个因子,实现双因子驱动的量化交易。该策略捕捉短期反转机会的同时,也能识别更长期的趋势,实现低风险 excess return。
-
-### 策略原理   
-
-第一部分为123反转策略。该策略利用2日内收盘价反转的特征来判断买卖点。当收盘价连续2日上涨且慢速K线低于50时,认为矫枉过正,产生买点;当收盘价连续2日下跌且快速K线高于50时,认为反弹过头,产生卖点。
-
-第二部分为质数震荡指标策略。该指标计算指定价格区间内最接近当前价格的质数,并输出与当前价格的差值。正值表示当前价格接近质数上限,负值表示当前价格接近质数下限。根据差值判断趋势,与123反转信号进行结合,产生最终交易信号。   
-
-两个子策略的交易信号合并原则是:同向信号的情况下产生实际交易信号,异向信号的情况下暂不开仓。
-
-### 优势分析
-
-该策略结合双重因子,既考虑了短期反转效应,也兼顾了长期趋势特徵,多角度判断市场,提高策略抗风险能力。
-
-相比单一 momentum 策略,本策略在突发事件造成价格短期跳水时,可以利用反转因子及时止损或反向开仓,有效控制 intraday risk。
-
-相比单一反转策略,本策略引入质数震荡指标判断趋势方向,可以避免频繁反转交易造成 overtrading。
-
-### 风险分析
-
-该策略最大的风险在于两个因子之间存在信号冲突的情况。当 123 反转显示超买超卖迹象,产生反转信号,而质数震荡指标显示仍在趋势中时,如果直接反转交易可能导致亏损。
-
-为控制此风险,策略加入了额外判断逻辑,只有当两因子信号同向时才产生实际交易信号。但这也可能错过部分交易机会。
-
-### 优化方向  
-
-1. 优化 Stochastic 指标参数,找到更适合具体标的的反转参数组合
-
-2. 优化质数震荡指标的容差百分比参数,降低噪音交易
-
-3. 增加止损策略,防止单向行情亏损扩大 
-
-4. 增加仓位管理模块,不同市场环境下调整仓位
-
-5. 加入机器学习模型判断两因子信号可信度,降低信号冲突概率
-
-### 总结  
-
-本策略成功结合短期反转因子与长期趋势因子,实现低风险的量化交易。有效利用双重因子过滤噪声交易,并设定额外判断逻辑控制风险,是一款平稳收益的实战策略。后续将持续进行参数优化与功能扩展,使策略更适应真实市场的特征。
-
-||
 
 ## Overview  
 
@@ -97,7 +52,6 @@ To control this risk, additional logic is added - actual trades are generated on
 ## Conclusion   
 
 This strategy successfully combines short-term reversal factors and long-term trend factors to achieve low-risk quantitative trading. By effectively using dual factors to filter noise and setting additional logic to control risks, it is a steady profit practical strategy. Parameters and functions will be continually optimized to suit real market characteristics.  
-[/trans]
 
 > Strategy Arguments
 

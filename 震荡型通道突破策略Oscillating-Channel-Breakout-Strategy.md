@@ -10,78 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/191b751aed041a868b2.png)
-[trans]
-
-
-## 概述
-
-该策略是一种基于通道指标的突破交易策略。它利用通道上下轨的震荡特征,在价格突破通道上轨时做多,突破通道下轨时做空,属于趋势跟踪类型策略。
-
-## 策略原理
-
-该策略首先利用SMA计算通道的中轴线,以中轴线加一个参数值为上轨,减一个参数值为下轨,形成一个价格通道。然后判断价格是否突破上下轨,并结合交易量的激增作为开仓信号。当价格重新回落进入通道时,则作为平仓信号。
-
-具体来说,策略的交易逻辑如下:
-
-1. 计算通道中轴线:SMA(收盘价,N)
-
-2. 通道上轨线:中轴线 + 参数值
-
-3. 通道下轨线:中轴线 - 参数值 
-
-4. 突破上轨线时,如果满足交易量大于前一周期2倍的条件,做多入场
-
-5. 回落进入通道时,平多头仓位
-
-6. 突破下轨线时,如果满足交易量大于前一周期2倍的条件,做空入场
-
-7. 回落进入通道时,平空头仓位
-
-## 优势分析
-
-该策略具有以下几点优势:
-
-1. 利用通道指标,可以有效跟踪价格趋势。
-
-2. 结合交易量激增的条件,可以有效过滤假突破。
-
-3. 回落进通道作为止损退出机制,可以限制单次交易的损失。
-
-4. 震荡特性适合捕捉中短线趋势。
-
-5. 实现逻辑简单,容易理解和实现。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 当价格长期处于通道一侧时,会连续触发同向开仓,面临亏损风险。
-
-2. 通道参数设置不当可能导致出现过多错误信号。
-
-3. 交易量激增的判断标准不恰当也可能错过真正的突破信号。
-
-4. 止损退出机制可能过于保守,错过较大的行情。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化通道参数,使其更加贴合不同市场的特点。
-
-2. 优化或增加开仓条件,如考虑均线多空,或Kline形态等,避免假突破。 
-
-3. 优化止损退出机制,适当放宽止损幅度,避免过早离场。
-
-4. 增加仓位管理机制,根据市场情况调整仓位和资金利用率。
-
-5. 结合更多指标判断大级别趋势方向,避免与大趋势做对。
-
-## 总结
-
-该策略整体来说是一个较为简单实用的趋势跟踪策略。它利用价格通道的震荡特性,可以有效捕捉中短线趋势。但也需要注意优化参数设置,并防范其中存在的风险,这样可以获得更好的策略效果。如果结合更多指标和技术手段进行优化,可以进一步增强策略的稳定性和获利能力。
-
-||
 
 
 ## Overview
@@ -152,7 +80,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a simple and practical trend following strategy. By utilizing the channel oscillation, it can effectively capture medium-term trends. But parameter tuning is needed to fit different markets, and risks should be monitored. Further optimizations with more indicators and techniques can enhance its stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

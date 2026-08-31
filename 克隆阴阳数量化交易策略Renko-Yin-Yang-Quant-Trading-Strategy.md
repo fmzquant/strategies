@@ -9,55 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-克隆阴阳数量化交易策略是一个基于日内量价关系的短线交易策略。该策略利用日内股票交易的阴阳方向信息,结合量能确认信号,实现低风险的短线操作。
-
-## 策略原理
-
-该策略通过计算股票每日的开盘价、收盘价、最高价、最低价,结合ATR指标,生成Renko砖块。当阴阳砖块发生反转时产生交易信号。
-
-具体来说,策略首先计算Renko砖块的开盘价o2和收盘价c2。如果o2<c2,表示阳线,如果o2>c2,表示阴线。当阳线转为阴线时产生卖出信号,当阴线转为阳线时产生买入信号。
-
-为了过滤假突破,策略还统计了上一个阳线和阴线的周期数,如果阳线周期数较多,则信号更可靠。此外,策略还在买入和卖出后设置了止损止盈逻辑。
-
-## 策略优势
-
-1. 使用Renko砖块过滤了市场噪音,交易信号更清晰。
-
-2. 结合量能关系,避免了假突破的风险。
-
-3. DAPM模型简单有效,适合日内短线操作。
-
-4. 可自定义ATR参数调整交易频率。
-
-5. 可自定义止损止盈策略优化风险管理。
-
-## 风险分析
-
-1. 仍存在趋势不明显的假突破风险。
-
-2. Renko参数设置不当可能错过趋势或增大交易频率。
-
-3. 止损点设置过小可能造成轻微亏损被反弹止损。
-
-## 优化方向
-
-1. 可考虑结合其他技术指标过滤信号。
-
-2. 可考虑增加移动止损或跟踪止损功能。 
-
-3. 可针对不同品种参数进行优化测试。
-
-4. 可考虑不同时间周期的组合,进行多时间框架交易。
-
-## 总结
-
-该策略总体而言是一个非常实用的短线交易策略。它利用量价关系进行高效过滤,可以抓住短线价格向上和向下的关键点位。同时也需要注意合理的参数设置,适当的风险管理和止损策略,会大大提高策略的稳定性和盈利能力。通过不断优化测试,该策略可以成为日内短线交易员必备的有力工具。
-
-||
 
 ## Overview
 
@@ -105,7 +56,6 @@ To filter false breakouts, the strategy also counts the number of periods of the
 
 In conclusion, this is a very practical short-term trading strategy. It uses price-volume relationship to filter efficiently and capture key turning points. Proper parameter tuning, risk management and stop loss strategy can greatly improve its stability and profitability. With continuous optimization and testing, this strategy can become a powerful tool for intraday traders.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/199b6c7fac7bd6081bb.png)
-[trans]
-
-### 概述
-
-本策略采用三重确认机制生成交易信号,即动量指标确认市场趋势强劲,超级趋势指标确认趋势方向,以及EMA指标作为确认趋势方向的额外验证。只有当这三个指标都满足条件时,策略才会生成做多或做空的交易信号,从而确保只选择高概率的交易机会。
-
-### 策略原理
-
-1. 动量指标(Momentum RSI)
-
-    * 动量RSI指标用于判断市场趋势的力度。当读数大于60时表示市场趋势强劲。
-
-    * 只有在剧烈的牛市和熊市中才产生交易信号。
-
-2. 超级趋势分析
-
-    * 超级趋势线代表市场趋势的方向。只在价格突破超级趋势线时才考虑建仓。
-
-    * 当价格从下向上突破超级趋势线时,转换为多头趋势;当价格从上向下突破时,转换为空头趋势。
-
-3. EMA策略
-
-    * EMA及其辅助趋势线用于确认趋势方向。买入信号仅在EMA向上突破辅助趋势线时出现,空头信号则相反。
-
-只有当这三个指标同时符合建仓条件时,才会发出真正的交易信号。这就大大减少了假信号的数量,提高了策略的稳定性。
-
-### 优势分析  
-
-该策略具有极高的稳定性和盈利概率。主要优势有:
-
-1. 多重确认机制,有效过滤噪音,只选择高概率交易。
-
-2. 超级趋势线动态跟踪止损,有效控制风险。
-
-3. 结合趋势力度判定,只在强劲趋势中交易,避免额外风险。  
-
-4. EMA指标额外验证确保交易方向正确。
-
-5. 完全参数化,各类交易者都可以按需自定义。
-
-### 风险分析
-
-该策略主要风险来自异常突破造成的错误交易信号。 主要风险及解决方法包括:  
-
-1. 假突破风险:增加突破验证机制。
-
-2. 震荡范围变大风险:适当调整止损范围。  
-
-3. 趋势反转风险:缩短持仓周期,及时止损。
-
-### 优化方向
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 优化参数:调整指标参数,适应更多品种。
-
-2. 增加过滤:结合更多指标,提升信号质量。  
-
-3. 复合策略:与其他策略组合,利用优势互补。
-
-4. 动态调参:根据市场环境自动调整参数。
-
-5. 机器学习:使用算法自动寻找最优参数。
-
-### 总结
-
-本策略通过动量指标、超级趋势以及EMA的有效结合,实现了多重确认的高概率交易策略。严格的突破验证机制也使其拥有极强的稳定性。同时也具备非常高的可定制性和优化空间。总的来说,该策略融合了趋势跟踪和断裂型交易的优点,是一种非常有前景的算法交易策略。
-
-|| 
 
 ### Overview  
 
@@ -149,7 +80,6 @@ The main directions for optimizing this strategy include:
 
 This strategy achieves a high probability trading strategy with multiple confirmations by effectively combining momentum, Supertrend and EMA indicators. Its strict breakout verification mechanism also gives it extremely strong stability. At the same time, it has very high customizability and optimization potential. In summary, this strategy integrates the advantages of trend following and breakout trading, making it a very promising algorithmic trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

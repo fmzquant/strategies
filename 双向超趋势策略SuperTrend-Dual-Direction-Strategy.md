@@ -9,50 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略根据ATR指标计算出的上轨和下轨,判断当前趋势方向,并给出买入和卖出信号。当价格突破上轨时看涨,当价格突破下轨时看跌。
-
-## 策略原理
-
-1. 计算ATR指标,表示价格的平均波动范围
-2. 根据ATR值乘以一个倍数计算上轨线和下轨线
-3. 判断价格与上下轨的关系,确定趋势方向
-    - 当价格在上轨之上,为看涨的趋势
-    - 当价格在下轨之下,为看跌的趋势
-4. 在趋势发生转变时给出买入和卖出信号
-    - 当由看跌趋势变为看涨趋势时,在上轨附近给出买入信号
-    - 当由看涨趋势变为看跌趋势时,在下轨附近给出卖出信号
-5. 可视化地显示上下轨、趋势方向和买卖信号
-
-## 优势分析
-
-- 使用ATR指标判断趋势,可根据市场波动幅度来设置合适的参数,使上下轨线更能适应市场趋势
-- 采用突破上下轨判断趋势转变,可以及时捕捉趋势反转
-- 结合趋势方向过滤 Signals,避免被市场中的假突破干扰
-- 可视化地显示上下轨和买卖 Signals,一目了然
-
-## 风险分析
-
-- ATR参数设置过大或过小,都会使上下轨线脱离价格,无法有效跟踪趋势
-- 倍数参数过大,会增多假信号;倍数过小,信号出现滞后
-- 反转时机掌握不准,可能发生亏损的反向开仓
-- 需要组合其他指标过滤策略信号,降低被套利的风险
-
-## 优化方向
-
-- 可以考虑动态优化ATR周期参数,使上下轨更贴合市场波动
-- 可以研究不同品种不同周期的参数调整策略
-- 可以结合其他指标判定趋势,例如增加量价确认
-- 可以通过机器学习技术来优化参数设置
-
-## 总结
-
-该策略整体实现了基于ATR指标判断双向趋势的思路,突破上下轨给出买卖信号,然后结合趋势方向进行过滤,可避免被假信号干扰。通过Parameter调整可以适应不同市场环境。但是也存在一定的风险,需要进一步优化。总体来说,该策略较为简单实用,值得进一步研究改进。
-
-|| 
 
 ## Overview
 
@@ -95,7 +51,6 @@ This strategy uses the upper and lower bands calculated based on the ATR indicat
 
 This strategy implements the idea of determining dual-directional trend based on ATR. Breakout signals are generated and filtered by trend direction to avoid fake signals. Parameters can be tuned for different market environments. There are still some risks that need further optimization. Overall speaking, this is a simple and practical strategy worth researching and improving.
 
-[/trans]
 
 > Strategy Arguments
 

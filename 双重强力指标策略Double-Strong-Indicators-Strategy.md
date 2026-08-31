@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f34fda5b45509d9f7c.png)
-[trans]
-
-### 概述
-
-本策略综合运用移动平均线聚散指标(MACD)和相对强弱指数(RSI)两个强力指标,设定买入和卖出条件,以捕捉股价的反转机会。
-
-### 策略原理
-
-1. 计算MACD指标,包括快线、慢线和信号线。快线和慢线交叉为买卖信号。
-
-2. 计算RSI指标,设置超买区和超卖区阈值。RSI指标可以判断超买超卖情况。
-
-3. 结合MACD指标的金叉死叉信号和RSI指标的超买超卖区判断,制定买入和卖出条件:
-
- - 买入条件:MACD快线上穿慢线形成金叉,同时RSI指标刚刚从超卖区回落,具有反转信号;
-
- - 卖出条件:MACD快线下穿慢线形成死叉,同时RSI指标进入超买区,具有反转信号。
-
-4. 这样可以同时利用两个强力指标的优势,在反转点位精确买入卖出。
-
-### 优势分析
-
-1. MACD指标可以判断股价趋势和买卖时机。RSI指标可以判断超买超卖情况。两者结合可以提高买卖精准度。
-
-2. 同时利用两个指标过滤信号,可以避免因单一指标产生的假信号。
-
-3. MACD结合RSI,可以在反转点前买入,反转点后卖出,捕捉反转机会。
-
-4. 该策略操作频率适中,既可以跟踪趋势,也可以捕捉反转,灵活运用。
-
-### 风险分析
-
-1. MACD指标在震荡行情中容易产生假信号。RSI指标参数设置需要优化,否则也会出现假信号。
-
-2. 股价短期内可能存在剧烈波动,跌破策略的止损点造成损失。
-
-3. 需要优化RSI和MACD的参数设置,否则可能出现过多信号或信号不足。
-
-4. 实盘交易中需要严格把控资金管理和风险控制。
-
-### 优化方向
-
-1. 优化MACD参数的快慢均线设置,寻找最佳的参数组合。
-
-2. 优化RSI的超买超卖阈值,防止假信号的产生。
-
-3. 加入止损机制,以控制单笔损失。
-
-4. 可以考虑加入其他指标,如布林带、KDJ等,形成多重过滤。
-
-5. 可以测试不同的买卖策略,如突破策略、趋势跟踪策略等。
-
-### 总结
-
-本策略同时运用MACD和RSI两个强力指标,在反转点买入卖出,具有较强的实战价值。但需要持续优化参数设置,严格做好资金管理,才能在实盘中取得好的效果。该策略整体较为灵活,可适应不同行情,值得实盘验证与长期跟踪。
-
-|| 
 
 ## Overview
 
@@ -122,7 +65,6 @@ This strategy combines the Moving Average Convergence Divergence (MACD) indicato
 
 This strategy combines the strengths of MACD and RSI for reversals. But parameter tuning, risk control and money management are key for live performance. The flexibility makes it suitable for different market conditions and worth live testing and tracking.
 
-[/trans]
 
 > Strategy Arguments
 

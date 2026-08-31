@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/150f94400b6034fc22f.png)
 
-[trans]
-#### 概述
-该策略使用动态时间框架的高低点突破来产生交易信号。它通过比较当前时间框架的最高价和最低价与前一个时间框架收盘价加减一定点数来决定是否进行买卖。这种方法可以适应不同的市场走势和波动性,从而提高策略的适应性和灵活性。
-
-#### 策略原理
-该策略的核心是利用不同时间框架的高低点来判断价格走势。首先,根据用户选择的时间框架获取对应的最高价、最低价和收盘价数据。然后,通过比较当前时间框架的最高价是否大于前一个时间框架的收盘价加上一定点数来确定买入信号,同理,通过比较当前时间框架的最低价是否小于前一个时间框架的收盘价减去一定点数来确定卖出信号。一旦出现买入或卖出信号,策略就会相应地开仓或平仓。此外,策略还会在图表上标示出买卖信号,并绘制策略的权益曲线,以便直观地评估策略表现。
-
-#### 策略优势
-1. 适应性强:通过使用动态时间框架,策略可以适应不同的市场环境和波动特征,提高策略的适应性和稳定性。
-2. 简单易懂:策略逻辑清晰,易于理解和实现,不需要复杂的数学模型或机器学习算法。
-3. 灵活性高:用户可以根据自己的偏好和经验,调整时间框架和点数阈值,以优化策略表现。
-4. 直观明了:通过在图表上标示买卖信号和绘制权益曲线,用户可以直观地评估策略的表现和风险。
-
-#### 策略风险
-1. 参数敏感:策略的表现可能对时间框架和点数阈值等参数较为敏感,不恰当的参数设置可能导致策略表现不佳。
-2. 过拟合风险:如果在优化参数时过度拟合历史数据,可能导致策略在实际应用中表现欠佳。
-3. 市场风险:策略的表现可能受到市场突发事件、政策变动等因素的影响,导致损失。
-
-#### 策略优化方向
-1. 动态调整参数:根据市场状况和策略表现,动态调整时间框架和点数阈值等参数,以适应市场变化和提高策略稳定性。
-2. 引入风险管理:在策略中引入止损、仓位管理等风险控制措施,以降低单次交易的风险敞口和回撤幅度。
-3. 结合其他指标:将该策略与其他技术指标或基本面因素相结合,形成更稳健和全面的交易系统。
-4. 优化代码效率:对代码进行优化和改进,提高策略的执行效率和速度,减少延迟和滑点等影响。
-
-#### 总结
-动态时间框架高低点突破策略通过利用不同时间框架的价格数据,根据高低点突破来产生交易信号。该策略逻辑清晰,适应性强,易于实现和优化。但同时也存在参数敏感、过拟合和市场风险等问题,需要在实际应用中不断优化和改进。通过动态调整参数、引入风险管理、结合其他指标和优化代码效率等措施,可以进一步提高策略的稳健性和盈利能力,为量化交易提供有效的工具和思路。
-
-|| 
 
 #### Overview
 This strategy uses dynamic timeframe high-low breakouts to generate trading signals. It determines whether to buy or sell by comparing the highest and lowest prices of the current timeframe with the closing price of the previous timeframe plus or minus a certain number of points. This approach can adapt to different market trends and volatility, thus improving the adaptability and flexibility of the strategy.
@@ -65,7 +37,6 @@ The core of this strategy is to use the high and low points of different timefra
 
 #### Summary
 The dynamic timeframe high-low breakout strategy generates trading signals based on price breakouts of high and low points in different timeframes. The strategy logic is clear, adaptable, and easy to implement and optimize. However, it also has problems such as parameter sensitivity, overfitting, and market risk, which need to be continuously optimized and improved in actual application. By dynamically adjusting parameters, introducing risk management, combining with other indicators, and optimizing code efficiency, the robustness and profitability of the strategy can be further improved, providing effective tools and ideas for quantitative trading.
-[/trans]
 
 
 

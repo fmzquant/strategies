@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5c00e0b0402dcb8434.png)
-[trans]
-## 概述
-
-该策略是一种基于价格发散信号的趋势交易策略。它使用多种指标检测价格发散信号,比如RSI、MACD、Stochastics等,并通过Murrey Math振荡器进行确认。当价格发散信号出现时,如果振荡器也确认当前为趋势方向,则进行入场。
-
-## 策略原理
-
-该策略的核心是价格发散理论。当价格创新高但指标没有创新高时,称为熊市价格发散;当价格创新低但指标没有创新低时,称为牛市价格发散。这表明趋势可能发生反转。策略使用顶底分型与振荡器结合确认交易信号。
-
-具体来说,策略的入场条件为:
-1. 检测到价格发散信号,包括常规发散和隐藏发散
-2. Murrey Math振荡器位于对应的趋势区域内
-
-出场条件为振荡器回穿中线时平仓。
-
-## 优势分析
-
-该策略结合了价格发散理论和趋势确认,具有以下优势:
-
-1. 利用价格发散信号检测潜在趋势反转点
-2. 应用振荡器确认当前趋势,避免假突破
-3. 多种指标和参数组合,可以灵活调整
-4. 兼顾趋势跟踪和防止亏损
-5. 逻辑规则清晰,代码优化空间大
-
-## 风险分析 
-
-主要风险来自以下几个方面:
-
-1. 价格发散信号可能是假信号,不能完全确认趋势反转
-2. 振荡器参数设置不当可能导致漏进错过交易机会
-3. 多空仓位过度倾斜带来较大亏损风险
-4. 行情剧烈波动期间可能激增交易次数和滑点成本
-
-建议设置止损,调整仓位,优化参数组合以降低风险。
-
-## 优化方向
-
-该策略还有进一步优化的空间:
-
-1. 增加机器学习算法,实时优化参数组合
-2. 增加自适应止损技术,如跟踪止损、平均止损等
-3. 结合更多指标和过滤条件,提高信噪比
-4. 动态调整振荡器参数,优化趋势判断
-5. 优化风险管理,设置最大回撤等限制
-
-## 总结
-
-该策略整合价格发散理论和趋势分析指标,能有效发现潜在的趋势转换点。结合优化的风险管理措施,可以获得较好的策略收益率。未来可通过机器学习等高级方法进行优化,以获得更稳定的超额收益。
-
-||
 
 ## Overview
 
@@ -112,7 +61,6 @@ Some further optimizations:
 
 This strategy integrates price divergence concept with trend analysis tools to discover potential reversals early. With proper risk management enhancements, it could achieve good risk-adjusted returns. Further machine learning based optimizations may lead to more stable alpha.
 
-[/trans]
 
 > Strategy Arguments
 

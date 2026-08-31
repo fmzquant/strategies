@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/102c063d41fe766561a.png)
-[trans]
-## 概述
-
-该策略是一种典型的趋势跟随策略。它使用多组不同周期的移动平均线来判断市场趋势,在趋势确立时入场,在短期趋势反转时离场。
-
-## 策略原理  
-
-该策略采用4组移动平均线:9日线、21日线、50日线和200日线。它们分别代表不同的时间维度。
-
-当短期移动平均线由下向上突破长期移动平均线时,认为行情进入上涨趋势;当短期移动平均线由上向下跌破长期移动平均线时,认为行情进入下跌趋势。
-
-策略以9日线为参考,判断其他几条移动平均线的排列关系,从而判断总体趋势方向。具体逻辑是:
-
-多头入场条件:收盘价 > 9日线 且 9日线 > 21日线 且 21日线 > 50日线 且 50日线 > 200日线  
-
-空头入场条件:收盘价 < 9日线 且 9日线 < 21日线 且 21日线 < 50日线 且 50日线 < 200日线
-
-其中,收盘价与9日线的关系判断最短期趋势,9日线与21日线的关系判断短期趋势,21日线与50日线的关系判断中期趋势,50日线与200日线的关系判断长期趋势。只有当四组移动平均线的关系都符合时,才判断行情趋势成立,发出交易信号。
-
-离场条件:收盘价跌破21日移动平均线,平掉所有多单;收盘价涨破21日移动平均线,平掉所有空单。
-
-## 策略优势
-
-1. 使用多组移动平均线判断趋势,可有效过滤非主流走势的市场噪音,捕捉中长线趋势。
-
-2. 入场条件严格,需要多种时间维度的趋势判断都有效,可避免被短期调整套住。
-
-3. 及时止损,有效控制风险。
-
-## 风险及解决方法
-
-1. 长期横盘整理市场中,容易产生大量虚假信号,从而增加交易风险。可通过优化参数,调整移动平均线的周期数量,过滤部分噪音。
-
-2. 在剧烈行情中,移动平均线常常发生死叉或黄叉。这时需要结合其他因素判断真实趋势。可以加入像RSI,MACD等指标进行确认,避免错过大行情。
-
-## 优化方向  
-
-1. 参数优化。可以测试不同参数组合,寻找最优参数。如调整移动平均线的周期数,添加或调整止损条件等。
-
-2. 增加质量过滤。例如在入场时判断成交量是否放大,避免量能不足的跳空。或者判断波动是否放大,避免震荡整理。
-
-3. 增加其他技术指标确认,避免在剧烈行情中发出错误信号。可以考虑加入RSI、MACD等指标进行多因素判断。
-
-## 总结  
-
-该策略整体来说是一种典型且实用的趋势跟随策略。它使用多组移动平均线判断趋势,入场条件严格,可以有效锁定中长线趋势。同时搭配及时止损,可以控制风险。通过参数优化、增加确认指标等手段,可以进一步提高策略的稳定性和盈利能力。它适合那些喜欢跟随趋势进行长线操作的投资者。
-
-||
 
 ## Overview  
 
@@ -104,7 +56,6 @@ Exit conditions: close price crosses below 21-day MA, flatten all long positions
 ## Summary   
 
 Overall this is a typical and practical trend following strategy. It adopts multiple MAs to determine trends, has strict entry rules to lock in medium-to-long term trends. Together with timely stop loss, it helps control risks. Further improvements on stability and profitability can be achieved through ways like parameter optimization and adding confirmation indicators. It suits investors who prefer following the trend for long-term trading.  
-[/trans]
 
 > Strategy Arguments
 

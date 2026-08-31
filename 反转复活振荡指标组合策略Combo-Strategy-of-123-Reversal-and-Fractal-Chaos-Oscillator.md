@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1cea81b57ad1517c0fe.png)
 
-[trans]
-
-
-## 概述
-
-该策略是一个组合策略,结合使用了反转策略和复活振荡指标策略,目的是获取更可靠的交易信号。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 反转策略
-
-    反转策略来自Ulf Jensen的《我如何在期货市场上将资金增加两倍》一书第183页。该策略属于反转类型,具体逻辑是:
-
-    - 当收盘价比前一日收盘价高,连续两日时,并且9日慢速Stoch指标低于50时,做多入场。
-
-    - 当收盘价比前一日收盘价低,连续两日时,并且9日快速Stoch指标高于50时,做空入场。
-
-2. 复活振荡指标策略
-
-    复活振荡指标通过计算市场中最细微波动的差值,其值一般在-1到1之间波动。指标数值越高,表示趋势性越强,无论是涨趋势还是跌趋势。
-
-    当指标达到较高值时,做多;当指标达到较低值时,做空。该指标适合用于日内交易。
-
-最后,当两种策略信号同向时,即进行相关方向的交易。
-
-## 优势分析
-
-- 结合反转策略和趋势策略,可以过滤掉一些假信号,提高交易信号的可靠性。
-
-- 反转策略可以捕捉到短期反转机会;复活振荡指标策略可以捕捉中长线趋势。
-
-- Stoch指标参数优化较好,可以有效过滤震荡市场的假信号。
-
-- 复活振荡指标对细微市场波动较为敏感,可以提前捕捉到趋势转折。
-
-## 风险及解决方案
-
-- 反转策略容易被巨大趋势反转吞噬,可适当调整参数,或与趋势策略组合使用。
-
-- 指标策略容易产生过多交易信号,可适当调整参数,或与其他过滤指标组合使用。 
-
-- 两种策略信号可能不一致产生冲突,可根据历史回测数据调整参数,优化两者配合。
-
-- 可引入止损策略,以控制单笔损失。
-
-## 优化方向 
-
-- 测试不同的反转参数组合,找到最佳参数。
-
-- 测试不同的复活振荡指标参数,找到最优参数。
-
-- 尝试不同的指标参数优化方法,如遗传算法、随机森林等。
-
-- 增加其他辅助指标,进一步过滤信号。
-
-- 增加机器学习模型,提高信号准确率。
-
-- 引入风险管理机制,如止损、仓位管理等。
-
-## 总结
-
-该策略通过组合反转策略和复活振荡指标策略,综合利用两种不同类型策略的优势,能够提高交易信号质量,在回测中表现出较好的效果。通过参数优化、增加其他指标、风险管理等进一步优化,该策略有望取得更好的实盘效果。总体来说,这是一个非常有创新思路的策略,值得进一步研究和应用。
-
-||
 
 
 ## Overview
@@ -141,7 +75,6 @@ When the signals of both strategies agree, a trade will be made in that directio
 
 This strategy combines the strengths of reversal and FCO strategies through portfolio usage, and improves signal quality. It shows good performance in backtests. Further optimizations like parameter tuning, adding indicators, risk management etc. can improve its live performance. Overall this is an innovative strategy worth researching and applying.
 
-[/trans]
 
 > Strategy Arguments
 

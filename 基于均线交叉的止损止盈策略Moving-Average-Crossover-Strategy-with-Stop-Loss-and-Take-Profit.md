@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fb405492a2b7a62f93.png)
-[trans]
-
-## 概述
-
-该策略通过计算不同周期的移动平均线,设定止损止盈点,实现自动交易。当短周期移动平均线上穿长周期移动平均线时做多;当短周期移动平均线下穿长周期移动平均线时做空。同时设置止损和止盈点来控制风险。
-
-## 策略原理
-
-该策略基于均线交叉原理。它同时计算9日简单移动平均线和55日简单移动平均线。当9日均线上穿55日均线时,代表短期趋势反转为上涨,此时做多;当9日均线下穿55日均线时,代表短期趋势反转为下跌,此时做空。
-
-同时,该策略利用ATR指标设置止损和止盈点。ATR指标可以衡量市场波动幅度。止损点设置为收盘价减去ATR值,这样可以根据市场波动性来設置合理的止损;止盈点利用风险回报比例来设定,这里设置为风险回报比例为2,即止盈 = 收盘价 + 2 * ATR值。
-
-## 策略优势
-
-这是一个非常简单实用的短线交易策略,有以下几个优势:
-
-1. 均线交叉原理简单易懂,容易掌握;
-2. 同时结合止损和止盈,可以有效控制风险,增强实用性; 
-3. 移动平均线参数可以灵活调整,适应不同市场环境;
-4. ATR止损可以根据市场波动性设定止损点,比较智能;
-5. 风险回报比例设置可以根据个人风险偏好调整。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 均线交叉信号可能出现假突破,引发错误交易;
-2. 止损或止盈设置不当可能增大亏损或减小盈利; 
-3. 移动平均线参数设置不当会导致交易频率过高或信号滞后;
-4. ATR参数设置不当也会使止损点过近或过远。
-
-对于这些风险,可以通过优化参数、严格止损、合理位置管理来降低。
-
-## 策略优化
-
-该策略还可以进一步优化:
-
-1. 利用优化工具寻找最佳移动平均参数组合;
-2. 增加其他指标过滤均线交叉信号,避免假突破;  
-3. 尝试其他类型的移动平均线,如指数移动平均线等;
-4. 可以考虑将ATR参数也加入优化,使止损止盈更加智能。
-
-## 总结
-
-该策略整体思路清晰、易于实现,特别适合初学者掌握。作为一个基础的短线交易策略,它具有操作简单、容易优化等优点。如果搭配COMPLETE或其他框架使用,可以进一步强化该策略,使之成为一个足够实用的量化交易系统。
-
-||
 
 
 ## Overview
@@ -103,7 +56,6 @@ This strategy can be further optimized:
 
 The overall logic of this strategy is clear and easy to implement, especially suitable for beginners to master. As a basic short-term trading strategy, it has the advantages of simple operation and easy optimization. When combined with COMPLETE or other frameworks, it can be further enhanced to become a practical quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e5055b9dfe6da41ab8.png)
-[trans]
-## 概述
-
-多空线性交叉策略是一种技术分析策略,基于线性回归模型预测股票未来价格走势。策略的基本原理是:股价走势往往遵循一定的线性趋势,通过计算价格的线性回归,可以预测未来价格。当预测价格上穿当前价格时做多,下穿时平仓。
-
-## 策略原理
-
-该策略首先计算一段时间内股价的线性回归。线性回归用最小二乘法拟合出一条直线,这条直线代表了价格随时间变化的趋势。策略然后在图表上绘制预测价格线和当前价格。
-
-策略定义了两个信号:
-
-1. 做多信号:当预测价格上穿当前价格时触发  
-2. 做空信号:当预测价格下穿当前价格时触发
-
-当做多信号出现时,策略开仓做多;当做空信号出现时,平仓。
-
-策略的关键步骤如下:
-
-1. 计算一段时间内价格的线性回归
-2. 在图表上画出预测价格线和当前价格  
-3. 定义做多和做空信号
-4. 做多信号触发时开仓做多
-5. 做空信号触发时平仓
-
-## 优势分析
-
-多空线性交叉策略有以下优点:
-
-1. 简单有效:该策略逻辑清晰,易于实现,可以捕捉到价格的线性趋势。
-2. 适用性广:无论在趋势行情还是震荡行情,策略都能产生交易信号。  
-3. 可优化性强:策略包含一些关键参数,如线性回归周期、移动平均线等,可以通过优化这些参数提高策略性能。
-
-## 风险分析  
-
-尽管多空线性交叉策略有诸多优点,但它也存在一些风险:
-
-1. 趋势识别风险:当价格走势不遵循线性趋势时,例如震荡行情,策略可能会产生错误信号。可以通过结合其他指标如MACD等来降低风险。
-2. 参数设置风险:策略性能对参数设置较为敏感,不当的参数可能导致亏损。因此实盘前需要对参数做充分的回测和优化。  
-3. 过拟合风险:如果对参数优化过度,可能导致策略过拟合历史数据,未来表现不佳。避免过拟合的方法包括保持简单、数据集外测试等。
-
-## 优化方向
-
-1. 结合其他指标:线性回归信号可以与其他技术指标如MACD、布林带等结合,提高信号准确度。
-2. 动态参数优化:可以设计一套参数自适应机制,根据市场情况动态调整参数,提高适应性。
-3. 加入风控模块:在策略中加入止损、资金管理等风控措施,降低单次交易风险,提高累积收益。  
-4. 机器学习优化:可以用机器学习算法不断优化线性回归模型,使其预测更加准确。
-
-## 总结
-
-多空线性交叉策略以价格线性回归为基础,通过比较预测价格和当前价格产生交易信号。该策略逻辑简单清晰,可以捕捉价格的线性趋势,适用于各类行情。同时,策略易于实现和优化,可以灵活调整参数,结合其他指标,加入风控模块等,不断提高策略性能。但策略也存在识别趋势不准、参数设置不当、过拟合历史数据等风险,实际运用时需谨慎。总的来说,多空线性交叉策略是一个简单有效的量化交易策略,值得进一步探索和优化。
-
-|| 
 
 ## Overview
 
@@ -113,7 +61,6 @@ Despite its many advantages, the Long-Short Linear Regression Crossover Strategy
 
 The Long-Short Linear Regression Crossover Strategy generates trading signals based on the comparison of the predicted price from linear regression and the current price. The logic of the strategy is simple and clear, and it can capture the linear trend of the price and is applicable to various market conditions. At the same time, the strategy is easy to implement and optimize, and parameters can be flexibly adjusted, combined with other indicators, risk control modules can be added, etc., to continuously improve the performance of the strategy. However, the strategy also has risks such as inaccurate trend recognition, inappropriate parameter settings, and overfitting of historical data, so caution is needed in practical application. Overall, the Long-Short Linear Regression Crossover Strategy is a simple and effective quantitative trading strategy that is worth further exploration and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

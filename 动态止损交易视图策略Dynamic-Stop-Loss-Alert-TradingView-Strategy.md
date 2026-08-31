@@ -9,44 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略展示如何使用TradingView的动态变量在警报中传递止损价格,并通过TradingConnector在MT4/5平台执行交易。策略使用Stochastic指标判断入场时机,动态设置最新支撑阻力作为止损点,还可以部分止盈。
-
-## 策略原理
-
-Stochastic指标的K线和D线金叉做多,死叉做空。计算最近的支撑阻力点作为止损价格。入场后,止损价格通过动态变量实时传递至broker。部分止盈设置为止损距离的一定比例。止盈价格也可以动态传递。
-
-## 优势分析
-
-- 动态止损使止损价格可精确设置
-- 部分止盈提高资金利用效率
-- 实时传递止损价至broker账户
-- 回测止损价格接近实盘,拟真模拟
-
-## 风险分析
-
-- Stochastic指标存在滞后性
-- 部分止盈过于频繁影响持仓
-- 动态变量在不同时间框架效果不同 
-- 需要优化部分止盈的比例
-
-可适当缩短Stochastic的参数周期,调整部分止盈的比例等来控制风险。
-
-## 优化方向
-
-- 测试不同的Stochastic参数组合
-- 优化部分止盈的比例设置
-- 尝试不同的止损方式,如移动止损
-- 在多市场多品种中测试
-
-## 总结
-
-该策略展示如何利用TradingView新功能在MT4/5执行动态止损交易。可作为 further backtesting的基础框架。仍需要针对具体品种进行优化调整。
-
-||
 
 ## Overview
 
@@ -83,7 +45,6 @@ Risks can be managed by tuning Stochastic parameters, adjusting partial profit r
 
 This strategy demonstrates executing dynamic stop loss trades from TradingView to MT4/5 using new features. It can serve as a framework for further backtesting. Optimization is required for specific assets.
 
-[/trans]
 
 > Strategy Arguments
 

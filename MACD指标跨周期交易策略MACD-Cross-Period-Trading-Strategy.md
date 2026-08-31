@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略利用MACD指标在较高周期(例如日线)形成趋势判断,并在较低周期(例如5分钟)进行具体的交易执行。这种跨周期操作,旨在提高MACD指标交易策略的可靠性。
-
-策略原理:
-
-1. 在高周期计算MACD指标,判断大趋势方向。
-
-2. 在低周期寻找入场时点,当MACD上穿信号线时做多,下穿信号线时做空。
-
-3. 结合MFI指标的超买超卖信号,进一步确认交易时点。
-
-4. 设置止损线止盈线,进行风险管理。 
-
-5. 优化参数,提高指标和策略稳定性。
-
-该策略的优势:
-
-1. 跨周期判断,避免被短期市场噪音干扰。
-
-2. MFI指标验证,可过滤假信号,提高准确率。 
-
-3. 止损止盈机制有助于控制单笔交易风险。
-
-该策略的风险:
-
-1. 跨周期操作存在滞后问题,可能错过最佳时点。
-
-2. MACD和MFI均可能出现较多假信号,需谨慎验证。
-
-3. 需要严格的资金管理,以对冲交易风险。
-
-总之,该策略采用跨周期MACD判断大趋势,并利用MFI指标进行 filtring,在低周期进行交易,可提高稳定性。但跨周期滞后问题依然存在,投资者仍需谨慎操作。
-
-||
 
 This strategy uses MACD on higher timeframes (e.g. daily) for trend bias and trades on lower timeframes (e.g. 5-min) for execution. The cross-period approach aims to improve the reliability of basic MACD strategies. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this approach uses cross-period MACD for bias and MFI for filtring, trading off lower timeframes for stability. But lag issues remain so prudent trading is still required.
 
-[/trans]
 
 > Strategy Arguments
 

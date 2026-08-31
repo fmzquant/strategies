@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13f1e11f7f054b48ef9.png)
 
-[trans]
-
-### 概述
-
-均线回归交易策略是一种基于价格离均线的偏离程度来进行交易的策略。该策略利用价格短期偏离长期均线的特点,在价格显著低于或高于均线时建立头寸,并在价格回归均线时平仓套利。
-
-### 策略原理
-
-该策略首先计算一定周期的移动平均线,代表长期价格趋势。然后根据价格相对于移动平均线的偏离程度来判断建立头寸的时机和头寸规模。
-
-当价格低于移动平均线一定比例时,代表价格偏离长期趋势,这时按一定的头寸比例逐步建立多单。价格偏离越多,建立的头寸越大。当价格重新回升到高于移动平均线,代表回归长期趋势,这时按头寸比例平仓套利。
-
-同理,当价格高于移动平均线一定比例时,建立空单。当价格下跌回归移动平均线时,按比例平仓。
-
-### 优势分析
-
-1. 利用均线的趋势识别能力,遵循股票价格的长期均衡趋势,把握主要趋势方向。
-
-2. 通过分批建立头寸,降低建仓成本,获得较优的成本价。
-
-3. 采用分阶段止盈,不同程度回归均线有不同止盈机会,降低风险。
-
-4. 头寸控制采用固定份额,避免单笔损失过大。
-
-5. 参数设置灵活,可根据不同品种调整移动均线周期或头寸比例。
-
-### 风险分析 
-
-1. 价格震荡时,可能频繁止损。可适当放宽止损幅度,或采用其他过滤条件。
-
-2. 强势股票可能直接突破均线继续上涨或下跌,无法回归均线止盈。可结合趋势指标判断强势趋势,降低头寸。
-
-3. 参数设置不当可能导致过于激进建仓或止损。应谨慎测试参数并根据市场调整。
-
-4. 交易频繁时交易费用可能较高,应考虑费用因素优化参数。
-
-### 优化方向
-
-1. 优化移动均线周期,适应不同品种特点。
-
-2. 优化头寸比例,平衡风险收益。
-
-3.增加其他技术指标过滤,避免不必要交易。 
-
-4. 结合波动率指标,根据市场波动程度调整头寸比例。
-
-5. 加入止盈放大机制,降低风险,提高收益率。
-
-### 总结
-
-均线回归策略利用股票的均衡回归特性,在价格偏离移动均线时建仓,价格回归时止盈,能有效把握股票的长短期趋势。通过参数优化和指标过滤,能够适应市场的变化,在控制风险的前提下获得较好收益。该策略既考虑趋势跟踪又注重风险控制,值得投资者研究应用。
-
-||
 
 ### Overview
 
@@ -115,7 +62,6 @@ Similarly, when the price rises above the moving average by a threshold, short p
 
 The mean reversion strategy utilizes the equilibrium reversion tendency of stocks by entering on deviation from the moving average and taking profit on reversion. With proper parameter tuning and filters, it can adapt to market changes and achieve good returns under risk control. The strategy incorporates both trend following and risk management, making it worth researching and applying for investors.
 
-[/trans]
 
 > Strategy Arguments
 

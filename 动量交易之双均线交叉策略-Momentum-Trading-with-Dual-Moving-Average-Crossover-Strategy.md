@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14b8960d55bf49db59a.png)
 
-[trans]
-#### 概述
-该策略使用8周期和21周期的指数移动平均线(EMA)来识别市场趋势的变化。当较短周期的EMA从下方穿越较长周期的EMA时,产生买入信号;反之,当较短周期的EMA从上方穿越较长周期的EMA时,产生卖出信号。该策略还结合了三个连续更高的低点(HLL)和三个连续更低的高点(LLH)作为进一步确认趋势反转的信号。此外,该策略还设置了止损和止盈水平,以控制风险和锁定利润。
-
-#### 策略原理
-1. 计算8周期和21周期的EMA,用于识别主要趋势方向。 
-2. 识别三个连续更高的低点(HLL)和三个连续更低的高点(LLH),作为趋势反转的早期信号。
-3. 当8周期EMA从下方穿越21周期EMA,且出现HLL突破时,产生买入信号;当8周期EMA从上方穿越21周期EMA,且出现LLH突破时,产生卖出信号。
-4. 设置止损水平为入场价格的5%,止盈水平为入场价格的16%,以控制风险和锁定利润。
-5. 当出现反向信号时,平仓并反向开仓。
-
-#### 策略优势
-1. 结合EMA和价格行为模式(HLL和LLH)来确认趋势,提高信号可靠性。
-2. 设置明确的止损和止盈水平,有助于控制风险和锁定利润。
-3. 适用于多个时间框架和不同市场,具有一定的普适性。
-4. 逻辑清晰,易于理解和实现。
-
-#### 策略风险
-1. 在震荡市场中,频繁的交叉可能导致多次虚假信号,导致亏损。
-2. 固定的止损和止盈水平可能无法适应不同的市场环境,导致潜在的机会成本或更大的损失。
-3. 策略依赖于历史数据,对于突发事件或基本面变化的适应性可能较差。
-
-#### 策略优化方向
-1. 引入自适应止损和止盈机制,如基于波动率(如ATR)来调整止损和止盈水平,以更好地适应不同市场状况。
-2. 结合其他指标或因子,如成交量、相对强弱指数(RSI)等,以进一步过滤信号并提高可靠性。
-3. 对参数(如EMA周期、止损止盈比例等)进行优化,找到在特定市场或标的上表现最佳的参数组合。
-4. 考虑引入风险管理措施,如仓位sizing,以控制单次交易的风险敞口。
-
-#### 总结
-该策略利用8周期和21周期EMA的交叉,结合HLL和LLH价格模式,以识别趋势反转并产生交易信号。明确的止损止盈规则有助于控制风险和锁定利润。然而,该策略在震荡市场中可能产生虚假信号,固定的止损止盈水平也可能无法适应不同市场环境。为进一步改进,可考虑引入自适应止损止盈、结合其他指标、优化参数以及引入风险管理措施等。总的来说,该策略提供了一个基于动量和趋势跟踪的交易框架,但仍需要根据具体市场和个人偏好进行调整和优化。
-
-|| 
 
 #### Overview
 This strategy employs the 8-period and 21-period Exponential Moving Averages (EMAs) to identify changes in market trends. A buy signal is generated when the shorter-term EMA crosses above the longer-term EMA from below, while a sell signal is generated when the shorter-term EMA crosses below the longer-term EMA from above. The strategy also incorporates three consecutive Higher Lows (HLs) and three consecutive Lower Highs (LHs) as further confirmation of trend reversals. Additionally, stop-loss and take-profit levels are set to manage risk and lock in profits.
@@ -73,7 +41,6 @@ This strategy employs the 8-period and 21-period Exponential Moving Averages (EM
 
 #### Summary
 This strategy utilizes the crossover of 8-period and 21-period EMAs, combined with HL and LH price patterns, to identify trend reversals and generate trading signals. Clear stop-loss and take-profit rules help manage risk and lock in profits. However, the strategy may generate false signals in choppy markets, and fixed stop-loss and take-profit levels may not adapt well to different market conditions. To further improve, consider introducing adaptive stop-loss and take-profit, incorporating other indicators, optimizing parameters, and introducing risk management measures. Overall, the strategy provides a framework for momentum and trend-following trading but requires adjustments and optimizations based on specific markets and individual preferences.
-[/trans]
 
 > Strategy Arguments
 

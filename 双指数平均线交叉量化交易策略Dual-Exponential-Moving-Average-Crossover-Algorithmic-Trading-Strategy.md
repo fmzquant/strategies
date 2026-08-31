@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1caf8bf6da5777bc5aa.png)
-[trans]
-## 概述
-
-本策略名称为“双指数平均线交叉量化交易策略”。该策略通过计算双指数移动平均线(Exponential Moving Average, EMA)并进行交叉买卖点判断,结合量化交易开仓原理,实现自动化交易。
-
-## 策略原理
-
-本策略核心逻辑基于双指数移动平均线。指标1为短期20日EMA,指标2为长期50日EMA。当短期EMA从下方上穿长期EMA时产生买入信号;当短期EMA从上方下穿长期EMA时产生卖出信号。这样利用EMA不同参数的交叉来判断市场买卖点。
-
-此外,策略还使用Vortex量化指标来辅助判断趋势和产生交易信号。Vortex指标通过计算最高价与昨日收盘价、最低价与昨日收盘价的差值比较判断涨跌力道,参数周期为1日和3日。结合Vortex指标可过滤掉部分非主要趋势的EMA信号。
-
-在交易信号产生时,根据策略内置的资金管理模块,结合盈亏比例原理进行风险管理。策略允许设置止损位和止盈位来锁定盈利,以控制风险。
-
-## 优势分析
-
-- 1. 策略整合双EMA交叉和Vortex量化指标,充分利用指标优势,提高信号准确性
-- 2. 自动化交易系统,无需人工参与,降低人为失误概率
-- 3. 内置自动止损止盈功能,可以限制单笔交易最大Loss
-- 4. 资金管理模块控制每个交易的投入资金比例,从而控制总体交易风险
-
-## 风险分析
-
-- 1. EMA交叉信号可能出现假信号,Vortex量化指标也无法完全过滤假信号,所以会存在一定亏损概率
-- 2. 突发重大黑天鹅事件可能直接扩大单笔交易亏损
-- 3. 回撤控制依赖止损功能,如果突破止损会造成更大损失
-
-优化方向:
-- 1. 可以测试调整EMA参数,优化交叉信号
-- 2. 可以结合更多指标过滤信号
-- 3. 可以通过机器学习算法自动优化参数
-
-## 总结
-
-本策略总体而言是一个典型的双EMA交叉策略,利用EMA不同参数之间的交叉来判断市场买卖时机,属于中短线交易策略。策略最大的优势在于利用量化指标进行信号过滤,并通过自动化交易系统实现无人值守,同时内置止损止盈来控制风险,表现相对稳定。后期可通过参数优化以及引入更多辅助指标来进一步提高策略效果。
-
-||
 
 ## Overview
 
@@ -89,7 +53,6 @@ Improvement Opportunities:
 
 Overall this is a typical dual EMA crossover strategy for medium-term trading. It identifies trading opportunities from EMA crossovers. The biggest advantage lies in using indicators like the Vortex to filter signals, executing the automated strategy reliably, plus the embedded stop loss/take profit functions to mitigate risks. Going forward, strategy performance may be further enhanced through parameter tuning and integrating more complementary indicators.
 
-[/trans]
 
 > Strategy Arguments
 

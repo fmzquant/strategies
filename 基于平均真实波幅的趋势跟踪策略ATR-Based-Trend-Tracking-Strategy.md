@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/833f351091b72b171c.png)
-[trans]
-
-## 概述
-
-该策略是一个基于平均真实波幅(ATR)的趋势跟踪策略。它使用ATR来计算指标值,从而判断价格趋势方向。该策略同时提供止损机制来控制风险。
-
-## 策略原理  
-
-该策略使用三个主要参数:周期Period、乘数Multiplier和进出场点Entry/Exit Point。默认参数为14周期的ATR和4倍的乘数。
-
-该策略首先计算多头均价(buyavg)和空头均价(sellavg),然后比较价格与这两个均价的关系,判断目前的趋势方向。如果价格高于空头均价,则判断为多头;如果价格低于多头均价,则判断为空头。
-
-此外,该策略结合ATR来设定 추踪止损(Trailing Stop Loss)。具体方法是:以ATR的14周期加权移动平均乘以一个乘数(默认为4)作为止损距离。这样可以根据市场波动程度来调整止损距离。
-
-当止损被触发时,该策略就会平仓了结利润。
-
-## 策略优势
-
-1. 基于趋势判断,能够顺势而为,持续获利
-2. 采用ATR动态调整止损距离,可以有效控制风险
-3. 计算买卖点位简单直接,容易理解实现
-
-## 风险及对策  
-
-1. 趋势发生转变时,可能出现较大亏损
-   - 适当调整ATR周期和乘数,优化止损距离
-2. 震荡行情中, WILL产生多次小额损失
-   - 增加过滤条件,避免震荡市
-3. 参数设置不当可能导致策略效果变差
-   - 多组合参数优化测试,找到最佳参数
-
-## 策略优化方向  
-
-1.加入其他指标判断过滤信号,避免在震荡行情中出入场
-2.优化ATR周期和乘数参数,使止损距离更加合理
-3.加入开仓仓位控制,根据市场情况调整仓位大小
-
-## 总结
-
-该策略整体来说是一个简单实用的趋势跟踪策略。它只需要少量参数即可实现,通过ATR来动态调整止损,可以有效控制风险。如果搭配其他辅助判断指标,可以进一步优化,过滤掉一些噪音信号。总的来说,该策略适合那些想要学习趋势跟踪策略的人,也可以作为其他高级策略的基础组件来使用。
-
-|| 
 
 ## Overview
 
@@ -92,7 +50,6 @@ When the stop loss is triggered, the strategy will close the position to lock in
 
 Overall this is a simple and practical trend tracking strategy. It only needs a few parameters to implement, and uses ATR to dynamically adjust stops to effectively control risks. When combined with other assisting indicators for filtering, it can be further optimized. In general, this strategy suits those who want to learn about trend tracking strategies, and can also be used as a basic component for more advanced strategies.
 
-[/trans]
 
 > Strategy Arguments
 

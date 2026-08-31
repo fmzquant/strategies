@@ -11,26 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“融合MACD和RSI的短线交易策略”。该策略综合运用MACD和RSI两个指标的信号,对短线周期内的市场变动进行捕捉,以获利。
-
-MACD即指数平滑移动平均线。它由快线、慢线和柱状差离线组成。当快线上穿慢线时,代表短期价格变动的动能开始增强,产生买入信号;当快线下穿慢线时,动能衰减,产生卖出信号。
-
-RSI即相对强弱指标。它反映价格的超买超卖情况。RSI低于20时为超卖,高于80时为超买。超买区是价格下跌的预警;超卖区是价格反弹的预警。
-
-本策略的交易信号来源于两部分:
-
-第一,MACD快慢线交叉和差离柱变化。当差离柱从负向正转折,说明价格短期内存在增长动能,可以买入。当差离柱从正向负转折,说明动能减弱,应卖出。
-
-第二,RSI的超买超卖。结合RSI可以过滤部分MACD产生的假信号。只在RSI低位时买入,RSI高位时卖出,可以提高成功率。
-
-本策略的优势是综合两种指标优势,提高了交易信号准确性。及时捕捉短期变动,具有灵敏度。但MACD和RSI参数需要优化,避免过度交易。止损点位也需要设定合理,控制单笔交易亏损。
-
-总之,本策略适用于短线周期的机动交易,能够抓住市场短期反转带来的获利机会。但需要积极的风险管理措施辅助,并密切跟踪市场走势,以便及时调整策略参数。
-
-
-
-||
 
 This strategy is named “Short-term Trading Strategy Integrating MACD and RSI”. It combines the signals from the MACD and RSI indicators to capture market fluctuations over short timeframes for profit.
 
@@ -48,7 +28,6 @@ The advantage of this strategy is combining the strengths of the two indicators 
 
 In summary, this strategy suits nimble short-term trading, catching profit opportunities from short-term reversals. But active risk management and close market monitoring are required to adjust parameters timely.
 
-[/trans]
 
 > Strategy Arguments
 

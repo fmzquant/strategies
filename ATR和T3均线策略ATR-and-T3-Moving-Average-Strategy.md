@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合ATR指标和T3均线进行趋势判断和跟踪。ATR实现价格通道划分,判断大趋势方向。T3均线进行入场定位和止损出场判定。策略适合追求稳定盈利的趋势追随者。
-
-## 策略原理
-
-1. ATR指标构建价格通道,通道方向判断主趋势方向。
-
-2. T3均线辅助判断具体入场时点,价格突破T3均线时买入做多。
-
-3. 价格跌破下轨止损平仓;上涨突破上轨时止盈平仓。
-
-4. 可选择仅做多或双向交易。
-
-5. 参数优化结合指标性质,寻找最佳组合。
-
-## 优势分析
-
-1. ATR通道划分清晰,大趋势判断准确。
-
-2. T3均线参数可调,灵活捕捉不同级别趋势。
-
-3. 止损止盈规则一致性高,避免随意 vcfkkmr。
-
-4. 交易频率低,适合长线持仓。
-
-## 风险分析
-
-1. 指标间可能出现分歧,导致错误交易。
-
-2. 未考虑个股波动特性,参数拘泥风险。
-
-3. 交易频率低容易失去机会,收益空间有限。
-
-4. 重仓持有带来的尾盘滑点风险。
-
-## 优化方向
-
-1. 增加其他指标判断,确保交易有效性。
-
-2. 针对不同品种参数进行优化,提高适应性。
-
-3. 优化持仓规模,平衡频率和风险。
-
-4. 考虑动态移动止损止盈点,扩大获利空间。
-
-5. 策略层面增加 FILTER,提升稳定性。
-
-## 总结
-
-该策略整合ATR和T3均线实现简单有效的趋势跟踪。但需要进一步增强指标逻辑和参数优化,降低误判概率,使策略更适应实盘条件。
-
-||
 
 ## Overview 
 
@@ -117,7 +62,6 @@ This strategy combines ATR and T3 moving average for trend determination and tra
 
 The strategy integrates ATR and T3 moving average for simple and effective trend tracking. But further enhancements in indicator logic and parameter optimization can lower errors and make it more practical.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13f8bcd85b80b7f898c.png)
-[trans]
-
-## 概述
-
-该策略是基于Bollinger带和MACD指标的量化交易策略。它融合了两种主流的技术指标来识别交易机会,旨在在趋势行情中获得较高的胜率。
-
-策略会在价格突破Bollinger带下轨时建立做多头寻求Trend Following,在价格突破上轨时平仓;同时利用MACD指标判断动量方向过滤虚假突破。可配置RSI指标辅助判断超买超卖进一步避免损失。
-
-## 策略原理  
-
-该策略主要由Bollinger带指标和MACD指标组成。
-
-Bollinger带是根据股价的标准差计算上下轨,股价向上突破上轨时为超买信号,向下跌破下轨时为超卖信号。本策略在价格向下突破下轨时做多,跌破上轨时平仓止损。
-
-MACD指标则判断股价的动量和方向。短期平均线突破长期平均线为买入信号,反之为卖出信号。本策略结合MACD指标来过滤Bollinger带的虚假突破。
-
-另外,RSI指标可辅助判断是否超买超卖。RSI低位时表示超卖,可以增强买入信号,RSI高位时表示超买,可以增强卖出信号。
-
-## 策略优势  
-
-该策略结合了Bollinger带、MACD和RSI三种指标,可以有效判断价格趋势和波动。具有如下优势:
-
-1. Bollinger带判断价格波动范围,能抓住Trend Following
-2. MACD判断动量方向,过滤Bollinger的误报
-3. RSI辅助判断超买超卖,避免建仓追高
-4. 可通过参数优化获得较高胜率
-
-## 策略风险  
-
-该策略也存在一些风险需要警惕:  
-
-1. 股价剧烈波动时,止损风险较大
-2. 参数设置不当时,获利能力会下降  
-3. 趋势行情逆转时,MACD指标会误判
-
-对策:
-
-1. 可适当放宽止损幅度
-2. 需多次回测找到最佳参数组合 
-3. 可利用更多指标预测价格转折
-
-## 策略优化方向
-
-该策略有以下几个主要的优化方向:  
-
-1. 优化Bollinger带的参数,适应更多市场环境
-2. 增加更多指标判断,提高策略稳定性  
-3. 利用机器学习算法自动优化参数
-4. 在高频数据上测试策略效果
-5. 增加资金管理模块,控制单笔损失
-
-## 总结  
-
-本策略总体来说是一种典型的趋势跟踪策略。它结合多种技术指标增强稳定性,在判断准确时能获得不错的胜率。但也存在一定的风险需要注意。通过持续优化和调整,可以进一步提升策略表现。
-
-||
 
 
 ## Overview  
@@ -121,7 +65,6 @@ Major directions to optimize the strategy include:
 
 Overall this is a typical trend following strategy. By combining multiple technical indicators, it improves robustness and can achieve decent win rate when signals are accurate. However risks need to be monitored. Further improvements can be made through continuous optimization and tuning.  
 
-[/trans]
 
 > Strategy Arguments
 

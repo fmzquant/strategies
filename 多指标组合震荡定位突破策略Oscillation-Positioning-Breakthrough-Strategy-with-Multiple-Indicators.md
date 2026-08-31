@@ -10,82 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/aa7e688f935244a704.png)
-[trans]
-
-
-## 概述
-
-本策略通过组合使用STOCH.RSI、RSI、双重策略、CM 威廉姆斯指标和货币流量指数(MFI)等多个指标,实现对市场波动的精确定位,looking for opportunties to long/short。当股票价格接近支撑或压力位时可以发出交易信号。该策略综合利用了多个指标的优势,通过指标互相验证,可有效减少误报率,增强信号的可靠性。
-
-## 策略原理   
-
-1. STOCH.RSI 指标结合随机指标 Stochastic 和相对强弱指数 RSI 的优点。可以显示超买超卖区域,发现反转机会。
-
-2. RSI 指标判断超买超卖,作为辅助验证信号。 
-
-3. 双重策略判断 Stoch 和 RSI 的交叉情况,发出交易信号。
-
-4. CM 威廉姆斯指标计算百分位范围。弹出该范围代表着市场的反转,作为辅助 Stoch.RSI 和 RSI 判断市场波动和反转的依据。
-
-5. 货币流量指数(MFI)判断资金流入流出情况,与 Stoch.RSI、RSI 互相验证,提高信号质量。
-
-
-综上,该策略通过 Stoch.RSI、RSI、双重策略、CM 威廉姆斯指标和 MFI 等多个指标的组合,可以有效判断市场的超买超卖区域,定位反转机会,发出交易信号。多个指标的组合验证可以提高信号质量,减少误报。
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 多指标组合,相互验证,可以减少误报,提高信号质量。
-
-2. 利用 STOCH.RSI、RSI 和 MFI 判断超买超卖区域,可有效定位市场反转点。 
-
-3. CM 威廉姆斯指标计算百分位范围,可以辅助判断市场波动和反转。
-
-4. 双重策略发出交易信号,操作简单,容易跟踪。
-
-5. 参数优化空间大,可以根据不同市场调整参数,适应性强。
-
-## 风险分析  
-
-该策略也存在一些风险:   
-
-1. 多指标组合运算比较复杂,对计算能力要求较高,不适合高频交易。
-
-2. 参数设置不当可能导致信号质量下降,应该选择适合自己的参数。
-
-3. 反转信号可能有滞后,需要结合更多指标判断走势。 
-
-4. 交易次数可能较多,需要控制好资金利用效率。
-
-对应的解决方法:
-
-1. 选择计算能力强的终端,针对参数进行优化。
-
-2. 做好回测,选择适合自己的参数组合。
-
-3. 与更多指标组合使用,提前判断走势。
-
-4. 优化止损机制,控制单笔交易风险。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化指标参数,选择最佳参数组合。
-
-2. 增加volume,利润因子等指标,提高交易选股能力。 
-
-3. 结合更多聚合线,布林带等指标,提前判断支持阻力。
-
-4. 加入止损、入市筛选条件,控制风险。
-
-5. 不同品种、周期参数不一样,可以根据品种特点选择最佳参数。
-
-## 总结
-
-本策略通过 STOCH.RSI、RSI、双重策略、CM 威廉姆斯指标和 MFI 多指标精确组合,定位市场超买超卖区域,发现反转机会。相互验证信号,可以减少误报,提高信号质量。通过参数优化、增加其他判断条件等方式进一步完善,可以成为一个稳定、实用的交易策略。
-||
 
 ## Overview
 
@@ -159,7 +83,6 @@ This strategy can be improved in the following aspects:
 
 This strategy locates market reversals by accurately combining multiple indicators including STOCH.RSI, RSI, Dual Strategy, CM Williams and MFI. Cross validation improves signal quality and reduces false signals. Further enhancements like parameter optimization and additional filters can make it a stable, practical trading system.
 
-[/trans]
 
 > Strategy Arguments
 

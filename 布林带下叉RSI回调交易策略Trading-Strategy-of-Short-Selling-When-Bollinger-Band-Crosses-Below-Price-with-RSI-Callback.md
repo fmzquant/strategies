@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e17f21ce7be297193a.png)
-[trans]
-
-## 概述
-
-该策略利用布林带指标判断价格是否进入超买超卖区域,结合RSI指标判断是否存在回调机会,在超买区形成死叉时做空,在价格上涨超过布林带上轨时止损。
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 当收盘价格上穿布林带上轨时,表示资产进入超买区域,存在回调机会
-2. RSI指标可以有效判断超买超卖区域,RSI>70为超买区
-3. 当收盘价格从上轨下穿时,做空头仓
-4. 当RSI从超买区回落或止损点触发时,平仓止损
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用布林带判断超买超卖区域,提高 trades的成功率
-2. 结合RSI指标过滤假突破的机会,避免不必要的 loss
-3. 损益比高,最大程度控制风险
-
-## 风险分析
-
-该策略存在以下风险:
-
-1. 突破上轨后继续上涨导致 loss 进一步扩大
-2. RSI未能及时回落,loss 进一步扩大
-3. 单边持仓,无法交易盘整市
-
-可以通过以下方法降低风险:
-
-1. 适当调整止损点,及时止损
-2. 组合其他指标判断RSI回落信号
-3. 结合均线指标,判断是否进入盘整
-
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 优化布林带参数,适应更多交易品种
-2. 优化 RSI 参数,提高指标效果
-3. 增加其他指标组合,判断趋势反转点
-4. 增加多头交易逻辑
-5. 结合止损策略,动态调整止损点
-
-## 总结
-
-该策略整体来说是一种典型的超买区快速短线交易策略。利用布林带判断买卖点,RSI过滤信号。通过合理止损来控制风险水平。可以通过参数优化,组合指标,增加开仓逻辑等方式进行效果提升。
-
-
-||
 
 ## Overview  
 
@@ -114,7 +60,6 @@ This strategy can be improved on:
 
 In summary, this is a typical overbought quick short scalping strategy. It capitalizes on Bollinger Bands for trade entries and RSI to filter signals. Risk is managed through prudent stop loss placement. Further enhancements can come from parameter tuning, adding indicators, expanding trade logic etc.
 
-[/trans]
 
 > Strategy Arguments
 

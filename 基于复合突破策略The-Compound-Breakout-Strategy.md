@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/161c5c898c285efbf74.png)
-[trans]
-### 概述
-
-该策略通过计算最近N根K线的最高价和最低价,结合移动平均线指标,设定双重突破条件,实现低买高卖的交易策略。
-
-### 策略原理  
-
-该策略主要基于以下几点原理:
-
-1. 计算最近7根K线的最低价minLow,用于确定突破买入条件 
-2. 计算最近7根K线的最高价maxHigh,用于确定突破卖出条件
-3. 计算长度为200的简单移动平均线mma,结合mma指标判断趋势方向
-4. 买入条件:收盘价close突破minLow,且高于mma
-5. 卖出条件:收盘价close突破maxHigh或高于maxHigh
-
-通过计算最近N根K线的极值,判断市场是否处于超卖或超买状态。结合移动平均线确定趋势方向,设定双重条件,实现低买高卖的突破交易策略。
-
-### 优势分析
-
-该策略具有以下优势:  
-
-1. 双重条件设定使策略交易信号更加可靠 
-2. 利用K线极值判断超卖超买状态,可以抓住反转机会
-3. 结合移动平均线判断趋势方向,避免逆势操作
-4. 实现了低买高卖的理念,符合大部分交易者的交易心理
-5. 策略逻辑简单清晰,容易理解和实现
-
-通过双重条件确认,使策略信号质量较高,同时参数优化空间大,适合不同市场环境。
-
-### 风险分析  
-
-该策略也存在一些风险:  
-
-1. 双重条件限制信号频率,可能错过部分交易机会
-2. K线极值计算周期设置不当,可能无法准确判断超卖超买状态  
-3. 移动平均线参数设置不当,可能判断错误趋势方向
-4. 需同时优化多个参数,参数优化难度较大
-
-这些风险可以通过调整计算周期、优化参数组合等方法降低。此外,也可以考虑结合其他指标进行优化。
-
-### 优化方向  
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 优化K线极值计算周期,找到最合适判断超买超卖的周期参数
-2. 测试不同长度移动平均线的效果
-3. 增加其他指标结合,如BOLL通道、KD指标等
-4. 增加止损策略,控制单笔止损
-5. 优化入场离场条件,提高信号质量
-
-通过参数优化、指标优化、风控优化等手段,可以大幅提升策略profit因子。
-
-### 总结  
-
-该策略总体来说是一个非常实用的突破策略。计算K线极值判断超买超卖状态,移动平均线判断趋势方向,双重条件设定过滤误信号,实现高质量的低买高卖策略。通过优化计算周期、增加其他指标等手段可以进一步提升策略效果。该策略既适合新手学习,也适合专业交易员优化运用。
-
-||
 
 ### Overview  
 
@@ -123,7 +66,6 @@ Through parameter optimization, indicator optimization, risk control optimizatio
 
 In general, this is a very practical breakout strategy. Calculating extremes of K lines to determine oversold and overbought status, using moving average line to determine trend direction, setting double filtering conditions to filter false signals, it implements high-quality low-buying and high-selling strategies. By optimizing computing cycles, adding other indicators and other means, the strategy effect can be further enhanced. The strategy is suitable for both beginners to learn and professional traders to optimize and use.
 
-[/trans]
 
 > Strategy Arguments
 

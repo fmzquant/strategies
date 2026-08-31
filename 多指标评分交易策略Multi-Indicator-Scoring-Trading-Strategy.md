@@ -11,82 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/13bb02828065dee9763.png)
-[trans]
-## 概述
-
-多指标评分交易策略通过整合技术指标评分,识别趋势方向和力度,实现自动交易。该策略综合考虑一组指标,包括Ichimoku云,HMA,RSI,Stoch,CCI和MACD。根据每个指标的结果,为其评分,然后综合所有指标的评分,形成一个整体评分。当整体评分高于阈值时做多,低于阈值时做空。
-
-## 策略原理
-
-该策略由多个部分组成:
-
-1. 计算一组指标,包括Ichimoku云,Hull移动平均线,相对强弱指数,随机指标,商品通道指数和移动平均线敏感度。
-
-2. 对每个指标进行评分。当指标显示多头信号时给予正分,空头信号时给予负分。
-
-3. 将所有指标评分进行求和平均,得到一个综合评分。
-
-4. 将综合评分与事先设定的阈值进行比较,判断整体趋势方向。评分高于阈值时看多,低于阈值时看空。
-
-5. 根据判断结果进行开仓。当看多时做多,看空时做空。
-
-6. 止损停利通过ATR指标设定。
-
-该策略充分利用了多种指标的优势,综合判断市场趋势方向。相比单一指标,能够过滤掉部分虚假信号,提高信号的可靠性。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多指标综合判断,提高信号准确率。单一指标容易产生误判,该策略通过评分求平均的方式,能有效过滤虚假信号。
-
-2. 利用指标优势,识别趋势和目前力度。例如Ichimoku云判断大趋势,Stoch判断超买超卖。
-
-3. 自动交易避免情绪影响,严格执行策略信号。
-
-4. 使用ATR设定止损停利点,有利于风险控制。
-
-5. 可以针对不同品种进行参数调优。指标参数和评分阈值都可以优化。
-
-6. 策略逻辑简单清晰,易于理解和修改。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 多指标组合不一定优于单一指标,需要反复测试找到最佳参数。
-
-2. 指标发出错误信号时,评分求平均也无法完全避免损失。
-
-3. ATR止损可能过于接近或过于宽松,需要根据品种特点调整。
-
-4. 需要避免过度优化而导致的曲线拟合。应在不同品种和时间段测试策略稳健性。
-
-5. 交易频率可能过高,交易成本也会影响最终收益。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试更多指标的组合,找到对特定品种最优的指标选择。
-
-2. 调整每个指标的评分权重,优化评分算法。
-
-3. 动态调整ATR参数,使止损停利更贴合市场波动。
-
-4. 加入交易过滤条件,减少不必要的交易频率。例如趋势过滤,交易量过滤等。
-
-5. 进行步进优化找到参数优化区间,再随机/网格优化寻找最佳参数组合。
-
-6. 在多品种多时间框架测试策略稳健性,避免过度优化。
-
-7. 组合其他有效交易策略,形成策略组合。 
-
-## 总结
-
-多指标评分交易策略通过评分求平均的思路,提高了信号判断的准确性和可靠性。该策略参数调优空间大,可针对不同品种进行优化得到较好效果。但是也需要注意过优化的风险,保持参数优化和策略测试的科学性。作为一种优化方向广阔的交易策略思路,值得进一步研究和应用。
-
-||
 
 
 ## Overview 
@@ -163,7 +87,6 @@ The strategy can be optimized in the following aspects:
 
 The multi indicator scoring strategy improves signal accuracy and reliability through averaging indicator scores. With large optimization space, it can be optimized for good results on different products. Overfitting risks need attention to keep parameter optimization and strategy testing scientific. As a strategy idea with broad optimization directions, it deserves further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

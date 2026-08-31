@@ -11,66 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/cf998d789580cec10e.png)
-[trans]
-
-## 概述
-
-该策略基于移动平均线和成交量的趋势分析,设定动量指标,并以追踪趋势的方式进行买卖操作。
-
-## 策略原理
-
-1. 计算close价格的EMA均线和成交量的累积EMA均线
-2. 当close上穿EMA时判断为上升趋势,作多头操作
-3. 当继续上升时,close上穿累积EMA的2倍均线时,追加多仓
-4. 设置RSI指标,当RSI超过90时平掉1/3头寸获利了结
-5. 当close下穿EMA时判断为下降趋势,平掉全部多头仓位
-6. 当close下穿EMA时判断为下降趋势,做空操作
-7. 设置止损线,止损线为进入价格的固定百分比
-8. 空头获利方式与多头相同
-
-## 优势分析
-
-该策略主要优势有:
-
-1. 使用EMA均线判断趋势,可以有效跟踪趋势
-2. 采用成交量的累积EMA来判断真实的趋势变化
-3. 追踪动量指标RSI来获利了结
-4. 风险控制到位,有止损线
-5. 可以适应不同行情,灵活调整参数
-
-## 风险分析
-
-该策略主要风险有:
-
-1. EMA均线生成滞后,可能错过转折点
-2. 成交量不一定能反映真实趋势
-3. 固定百分比止损可能过于机械化
-4. PARAMETERS太多,调参难度大
-5. 交易频繁,交易费用成本较高
-
-风险解决思路:
-
-1. 优化EMA参数,降低滞后性
-2. 结合其他指标确认成交量信号
-3. 根据市场情况优化止损点
-4. 简化参数,仅保留主要设置
-5. 适当放宽止损线和交易频率
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同EMA参数设置,找到最优参数组合
-2. 增加 VOLUME 倍数作为入场信号强弱判定
-3. 结合MACD,KD等其他指标确认入场
-4. 根据特定股票特点优化止损百分比
-5. 优化交易频率,降低交易费用
-
-## 总结
-
-该策略整体来说是一个基于均线系统的趋势追踪策略。核心思路是使用EMA判定趋势方向,并配合VOLUME动量指标来确认入场。可以通过参数优化不断优化,并辅助其他指标进一步确认。总体来说是一个灵活的趋势追踪策略,在熟练运用后可以获得不错的回报。
-
-||
 
 
 ## Overview
@@ -130,7 +70,6 @@ This strategy can be optimized in the following aspects:
 
 In summary, this is a trend tracking strategy based on moving average system. The core idea is to use EMA to determine trend direction, and confirm entry with VOLUME momentum indicator. It can be continuously optimized through parameter tuning, and assisted by other indicators for further confirmation. Overall it is a flexible trend tracking strategy, which can yield good returns after proficient use.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eb06f8047df5cdcebd.png)
-[trans]
-### 概述
-
-本策略联合使用5日移动平均线带和GBS买卖点来识别趋势方向和发出交易信号。移动平均线带用于判断趋势方向和大级别支撑阻力,GBS买卖点用于在趋势方向配合的情况下寻找精确的入场时机。该策略适合中短线趋势交易,可以在震荡行情中实现超额收益。
-
-### 策略原理
-
-1. 计算5日高价和低价的简单移动平均,得到5日移动平均线带
-2. 当收盘价突破移动平均线带时,判断趋势产生转折
-3. 在判断为趋势上行的时候,满足GBS买点条件就进行做多操作;在判断为趋势下行的时候,满足GBS卖点条件就进行做空操作
-4. 设置止损止盈退出机制,回撤超过一定比例就止损
-
-### 策略优势
-
-1. 移动平均线带判断大趋势方向准确
-2. GBS买卖点具有较高的胜率
-3. 止损机制有效控制风险,亏损有限
-
-### 策略风险及解决方法
-
-1. 震荡行情中可能出现多次虚假突破,从而产生交易失误
-   - 解决方法:适当放宽移动平均线带,确保只在趋势明确的时候操作
-2. 单一 Indicator 依赖风险较大
-   - 解决方法:增加其他 Indicator 的验证,例如MACD、RSI 等,避免错过反转信号
-3. 回测数据拟合风险
-   - 解决方法:扩大回测时间范围,增加不同品种和参数的回测对比
-
-### 策略优化方向
-
-1. 增加参数优化,寻找最优参数组合
-2. 增加其他 Indicator 的验证信号
-3. 开发自适应移动平均线机制
-4. 根据市场信息调整止损幅度
-5. 增加机器学习算法,实现策略的自动优化
-
-### 总结
-
-本策略整合运用移动平均线带和 GBS 买卖点,在判断明确趋势方向的前提下进行高确定性操作,可以过滤震荡市场的噪音,在中短线获利后及时止盈。该策略简单易操作,资金效率较高,可以为量化交易者创造稳定收益。通过不断优化和迭代,进一步提升策略的胜率和盈利能力。
-
-||
 
 ### Overview
 
@@ -88,7 +48,6 @@ This strategy combines the 5-day moving average band and GBS buy/sell signals to
 ### Conclusion
 
 This strategy integrates the moving average band and GBS buy/sell signals, operating with high confidence after identifying a clear trend direction to filter out market noise. It can lock in medium-term profits and exit timely. The strategy is simple and efficient in capital utilization, providing stable profits for quant traders. Continuous optimizations and iterations can further improve the win rate and profitability.  
-[/trans]
 
 > Strategy Arguments
 

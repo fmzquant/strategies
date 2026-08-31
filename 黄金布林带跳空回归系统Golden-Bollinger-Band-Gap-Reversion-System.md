@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d61ea212f6073cd390.png)
-[trans]
-### 概述
-
-这是一个基于布林带的外汇跳空短线交易系统。它适用于主要货币对,要求交易手续费低于1点差,时间周期在1-15分钟之间。
-
-### 策略原理
-
-该系统使用布林带、RSI和ADX三个指标来识别交易机会。
-
-布林带被用来识别价格的突破。当价格突破上边带时,看多;当价格突破下边带时,看空。RSI被用来避免假突破。只有在RSI反转时(从超买区下落或从超卖区上升),才认为突破是有效的。ADX被用来过滤掉趋势不明显的市场,只在ADX低于32时才入场。
-
-具体的入场规则是:多单入场要求价格突破上边带,RSI从超卖区上升并交叉30线,同时ADX低于32;空单入场要求价格突破下边带,RSI从超买区下落并交叉70线,同时ADX低于32。
-
-出场规则有止盈止损和中线回归。具体为:设定固定止盈止损点;当价格重新回到布林中线时平仓。
-
-### 优势分析
-
-该系统具有以下几个优势:
-
-1. 使用布林带能捕捉价格的跳空行情,这种行情利润潜力大。
-
-2. 结合RSI指标避免假突破,提高盈利概率。
-
-3. 使用ADX指标过滤掉无明显趋势的市场,避免无谓交易。
-
-4. 回归中线出场能锁定大部分利润,避免利润回吐。
-
-5. 适合高杠杆交易,能迅速放大盈利。
-
-### 风险分析
-
-该系统也存在一些风险:
-
-1. 依赖跳空突破,如果无法捕捉到价格跳空则无法盈利。
-
-2. 回测数据拟合风险。实盘可能无法复制回测结果。
-
-3. 趋势持续时间过短,出现震荡市也会亏损。
-
-4. 高杠杆放大了风险。单笔损失可能较大。
-
-5. 交易时间受限,可能错过部分交易机会。
-
-### 优化方向 
-
-该系统可以从以下几个方面进行优化:
-
-1. 优化参数,改进指标效果。比如修改布林带周期,RSI参数等。
-
-2. 增加或改进过滤条件,提高获利交易比例。比如结合更多指标或者基本面元素。
-
-3. 优化止盈止损策略,最大化单笔盈利。比如跟踪止损,依据ATR止损等。 
-
-4. 自动确定合适杠杆水平。使期望收益最大化。
-
-5. 使用机器学习技术自动寻找最优参数。避免人工遍历。
-
-### 总结
-
-黄金布林带跳空回归系统是一个典型的短线突破系统。它捕捉价格跳空带来的利润机会。同时使用多个指标进行过滤,在回测中展现出良好的盈利能力。但实盘测试仍有待验证,流动性和滑点也会对结果产生一定影响。总体来说,这是一个有潜力的短线交易策略,值得实盘验证和优化改进。
-
-||
 
 ### Overview
 
@@ -138,7 +76,6 @@ The system can be improved from the following aspects:
 
 The Golden Bollinger Band Gap Reversion System is a typical short-term breakout system. It aims to capture profits from price gaps. Multiple filters are used to improve quality of signals. It demonstrates good profitability in backtests. But live performance is still to be validated, with liquidity and slippage impacting results. Overall this is a promising short-term trading strategy, worth live testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

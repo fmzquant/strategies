@@ -12,42 +12,6 @@ ChaoZhang
 ![IMG](https://www.fmz.com/upload/asset/104746c52a489785d68.png)
 
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的混合交易系统，结合了均线（EMA）、相对强弱指标（RSI）和超级趋势（SuperTrend）来捕捉市场趋势。策略采用固定参数设置，专门针对2小时时间周期进行了优化，通过21/55/200周期均线系统识别趋势，同时结合RSI(14)动量过滤器和SuperTrend(3,14)止损来管理风险。该策略还要求成交量出现1.5倍的突破，并通过ATR确认波动率，从而提高交易的可靠性。
-
-#### 策略原理
-策略的核心逻辑建立在多层技术分析框架之上：
-1. 趋势识别系统使用三重均线（21/55/200周期），通过均线交叉和位置关系判断趋势方向
-2. 动量确认系统采用RSI(14)指标，结合其均线来过滤假突破
-3. 风险控制系统整合了SuperTrend指标作为动态止损，并设置了6小时的交易冷却期
-4. 交易触发条件要求成交量超过20周期均量的1.5倍，同时ATR需高于其48周期均值
-
-#### 策略优势
-1. 参数优化：采用预先优化的固定参数，无需频繁调整
-2. 趋势把握：通过多重技术指标的配合，能够有效捕捉持续性趋势
-3. 风险控制：内置交易冷却机制，避免过度交易
-4. 市场适应性：在波动性较大的市场中表现出色
-5. 交易确认：多重条件过滤，提高交易信号的可靠性
-
-#### 策略风险
-1. 跳空风险：在24小时交易的市场中，可能面临跳空带来的损失
-2. 新闻影响：重大新闻事件可能导致价格剧烈波动，影响策略表现
-3. 止损rigidity：固定的止损设置可能不够灵活
-4. 市场环境依赖：在盘整市场中可能产生频繁的假信号
-5. 滑点风险：在流动性较差的市场中可能面临较大滑点
-
-#### 策略优化方向
-1. 动态参数调整：可以根据市场波动率自动调整SuperTrend的参数
-2. 市场环境识别：增加市场环境判断模块，在不同市场状态下采用不同的参数设置
-3. 止损优化：引入动态止损机制，根据市场波动度自适应调整止损位置
-4. 成交量分析增强：加入更复杂的成交量分析模型，提高交易信号的准确性
-5. 风险管理优化：引入动态仓位管理系统，根据市场环境调整持仓量
-
-#### 总结
-该策略通过多重技术指标的组合，构建了一个相对完整的交易系统。其优势在于能够有效捕捉市场趋势，并通过多重条件过滤提高交易的可靠性。虽然存在一些固有的风险，但通过优化和改进，策略的整体表现还有提升空间。策略特别适合在波动性较大的市场中使用，但需要注意市场环境的变化和风险控制。 
-
-|| 
 
 #### Overview
 This strategy is a hybrid trading system that combines multiple technical indicators, including Exponential Moving Averages (EMA), Relative Strength Index (RSI), and SuperTrend to capture market trends. The strategy uses fixed parameters optimized for 2-hour timeframes, employing a 21/55/200 EMA system for trend identification, combined with RSI(14) momentum filter and SuperTrend(3,14) stop-loss for risk management. It also requires a 1.5x volume surge and ATR volatility confirmation to enhance trading reliability.
@@ -82,7 +46,6 @@ The core logic is built on a multi-layered technical analysis framework:
 
 #### Summary
 This strategy constructs a relatively complete trading system through the combination of multiple technical indicators. Its strength lies in effective trend capture and enhanced trading reliability through multiple condition filters. While inherent risks exist, the strategy's overall performance can be improved through optimization and refinement. It is particularly suitable for volatile markets but requires attention to market environment changes and risk control.
-[/trans]
 
 
 

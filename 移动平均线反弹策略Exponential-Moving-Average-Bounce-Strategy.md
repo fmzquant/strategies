@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10983e2605ced169d5e.png)
-[trans]
-
-## 策略概述
-
-移动平均线反弹策略是一种跟踪价格突破移动平均线的策略。它检查蜡烛是否从移动平均线下方反弹回来,如果是,就是多头信号;如果蜡烛从移动平均线上方向下反弹,就是空头信号。
-
-## 策略名称
-
-Exponential Moving Average Bounce Strategy
-
-## 策略原理
-
-该策略基于 exponential moving average (指数移动平均线)。它会实时计算出一个 EMA 线。然后检查价格是否从 EMA 线上方或下方发生反弹:
-
-- 如果价格先跌破 EMA 线,然后又重新回升收盘于 EMA 线之上,就是多头信号
-- 如果价格先突破 EMA线,然后又重新下跌收盘于EMA线之下,就是空头信号
-
-这样的反弹就是策略的入场信号。
-
-## 策略优势分析
-
-### 顺势操作,避免被套
-
-EMA反弹策略只在确定价格反转后才入场,能够避免逆势操作被套。
-
-### 回撤小,历史收益好
-
-由于运用了指数移动平均线,能够有效平滑价格数据,过滤市场噪音,使得该策略回撤小,历史收益较好。
-
-### 容易理解,参数调整灵活  
-
-EMA反弹策略仅仅依赖移动平均线,非常简单直接,新手容易理解;同时EMA周期参数可以灵活调整,适应不同品种。
-
-## 风险分析
-
-### 容易假信号
-
-EMA线附近往往存在密集的假突破,可能引发错误信号。需要调整EMA参数以过滤这些噪音。
-
-### 顺势操作,无法预测转折点
-
-该策略本质上是顺势操作。无法预测价格转折点,只能追逐趋势。这可能错过周期调整的最佳入场时机。
-
-### 止损位置容易被击穿
-
-移动平均线附近的止损位有时候会被突破,造成亏损扩大。这需要运用更为灵活的止损方式。
-
-## 优化方向
-
-### 结合其他指标过滤信号
-
-可以加入像RSI,MACD等其他指标来确认价格反转,过滤假信号。
-
-### 优化止损方式 
-
-可以使用时间止损,震荡止损等更为灵活的止损方式,降低被击穿风险。
-
-### 参数优化
-
-对EMA周期参数进行优化,找到最佳参数组合。也可以使EMA参数动态变化,追踪市场周期。
-
-## 总结
-
-移动平均线反弹策略是一种简单实用的趋势跟踪策略。它顺势操作,回撤小,容易理解。同时也存在一定的假信号风险与止损风险。我们可以通过更好的指标组合,止损方式,参数选择来优化该策略,使其成为稳定可靠的量化策略。
-
-|| 
 
 ## Strategy Overview  
 
@@ -140,7 +74,6 @@ Optimize the EMA period parameters to find the best parameter combinations. The 
 
 The EMA bounce strategy is a simple and practical trend following strategy. It has small drawdowns and is easy to understand. At the same time, it also has some risks of false signals and being stopped out. We can optimize the strategy by using better indicator combinations, stop loss methods and parameter selections to make it a stable and reliable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

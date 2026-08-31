@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/198847a3568ae2ba0ec.png)
-[trans]
-### 策略概述
-
-本策略以50%资金和50%仓位进行动态平衡,通过不断调整仓位和资金比例,实现风险控制。适合无法实时监控市场的投资者。
-
-### 策略原理
-
-1. 初始化本金100万元,分为50%资金和50%仓位。
-
-2. 在交易周期内,每天开盘时,如果剩余资金大于未实现盈亏的1.05倍,则用剩余资金的2.5%进行加仓。
-
-3. 如果未实现盈亏大于剩余资金的1.05倍,则卖出部分仓位,使之重新恢复到平衡状态。
-
-4. 在交易结束时,平仓清算所有头寸。
-
-### 策略优势
-
-1. 通过资金和仓位的动态平衡,可以有效控制风险,最大程度避免极端行情的巨额损失。
-
-2. 不需要频繁监控市场,仅需要调整资金和仓位比例,操作简单,适合工作繁忙的投资者。
-
-3. 可以通过调整参数,实现不同程度的风险偏好,满足不同投资者的需求。
-
-### 策略风险
-
-1. 无法捕捉市场短期涨跌,盈利空间受限。
-
-2. 如果行情出现长期单边突破,可能导致仓位比例过低,无法充分捕捉行情。
-
-3. 参数设置不当可能导致仓位调整过于频繁或资金利用率不高。
-
-### 策略优化
-
-1. 可以引入更多参数,实现仓位和资金比例的更精细化控制。
-
-2. 可以结合止损止盈原理,在仓位较大时适当止损。
-
-3. 可以测试不同的交易周期参数设置,提升策略的适应性。
-
-### 总结
-
-本策略通过资金和仓位动态平衡的思路,实现了风险控制的目标。相比其他策略,操作简单,容易实现。后续通过引入更多可调参数以及结合其他策略思路,可以使策略更加完善。
-
-|| 
 
 ### Strategy Overview
 
@@ -96,7 +52,6 @@ This strategy dynamically balances between 50% funds and 50% positions to contro
 ### Conclusion
 This strategy achieves risk control by dynamically balancing between funds and positions. Simple to implement compared to other strategies. Can be further improved by introducing more adjustable parameters and combining with other strategy concepts.
 
-[/trans]
 
 
 

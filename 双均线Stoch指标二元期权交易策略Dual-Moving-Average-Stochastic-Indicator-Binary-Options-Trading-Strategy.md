@@ -10,87 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10398691d19a3b33943.png)
-[trans]
-
-
-## 概述
-
-本策略结合双均线和Stoch指标,实现了一个简单有效的二元期权交易策略。该策略同时使用价格的高点EMA、低点EMA和收盘价EMA构建双均线系统,并结合Stoch指标来发出交易信号,以捕捉二元期权中的短期价格波动。
-
-## 原理
-
-本策略主要基于以下原理:
-
-1. 使用价格的高点EMA和低点EMA构建上轨和下轨,hesesEMA lines作为支撑阻力位。
-
-2. 计算收盘价EMA判断价格相对双均线的位置关系。如果收盘价上穿上轨或下破下轨,说明可能形成趋势反转。
-
-3. Stoch指标判断超买超卖情况。K值和D值同时低于50表示超卖区,高于50表示超买区。
-
-4. 根据Stoch指标的超买超卖区配合价格突破上下轨的反转信号,可以进行短期买入卖出操作。
-
-具体交易规则如下:
-
-- 如果收盘价低于下轨且开盘价低于双均线中点,同时Stoch指标显示超卖区(K<50, D<50),做多;
-
-- 如果收盘价高于上轨且开盘价高于双均线中点,同时Stoch指标显示超买区(K>50, D>50),做空。
-
-## 优势分析
-
-这套策略结合双均线和Stoch指标,能够有效捕捉二元期权价格的短期趋势反转,具有以下优势:
-
-1. 均线系统过滤震荡,Stoch指标判断超买超卖提高准确率。
-
-2. 交易规则简单清晰,容易实施。
-
-3. 资金利用效率高,一次只持仓一个方向。
-
-4. 回撤可控,避免无谓亏损。
-
-5. 易于优化,可调整均线参数和Stoch输入值。
-
-## 风险分析
-
-虽然这套策略有一定优势,但也存在以下风险:
-
-1. 双均线产生虚假突破的概率,可能错过较强趋势或反转。
-
-2. Stoch指标存在滞后,发出信号时趋势可能已发生反转。
-
-3. 无法适应大幅震荡市场,应避开重大事件。
-
-4. 参数设置不当可能导致交易频率过高或信号不足。
-
-5. 无法准确预测二元期权价格走势,存在一定亏损风险。
-
-对应风险可以通过调整参数、优化规则、严格止损来减小。除此之外,需要考虑账户资金规模和止损点的匹配关系,控制单笔损失和最大回撤。
-
-## 优化方向
-
-这套策略还有进一步优化的潜力,主要方向如下:
-
-1. 增加其他指标过滤,如MACD、RSI等,提高信号准确率。
-
-2. 加入趋势指标判断,避免逆势交易。
-
-3. 优化均线系统参数,找到最佳长度组合。
-
-4. 调整超买超卖判定条件,降低Stoch滞后问题。 
-
-5. 设置动态止损或移动止损。
-
-6. 结合相关技术分析工具,找到最佳的入场时机。
-
-7. 测试不同品种套利可行性。
-
-通过以上优化手段,可以进一步提升策略的稳定性和盈利能力。
-
-## 总结
-
-本策略整合双均线和Stoch指标优势,形成一个简单可靠的二元期权短期交易策略。它标准化了交易规则,有助于风险控制。虽然仍存在一定改进空间,但其思路清晰,易于操作,是一种值得考虑的选择。通过优化参数设置和规则,可望获得更理想的策略效果。
-
-
-||
 
 
 ## Overview
@@ -169,7 +88,6 @@ Through the above optimization means, strategy stability and profitability can b
 
 This strategy integrates the advantages of dual moving averages and Stochastic oscillator into a simple and reliable short-term binary options trading strategy. It standardizes trading rules for better risk control. Although there is still room for improvement, its logic is clear and easy to implement, making it a viable choice worth considering. By optimizing parameters and rules, better strategy performance may be achieved.
 
-[/trans]
 
 > Strategy Arguments
 

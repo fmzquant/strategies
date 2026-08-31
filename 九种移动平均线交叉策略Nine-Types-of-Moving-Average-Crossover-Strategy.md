@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d05f084bf9d07aa949.png)
-[trans]
-
-### 概述
-
-该策略采用两种不同参数设置的移动平均线进行交叉操作,根据交叉信号判断趋势方向,进行开仓与平仓。策略允许选择9种不同类型的移动平均线,包括简单移动平均线(SMA)、指数移动平均线(EMA)、加权移动平均线(WMA)、阿尔莫移动平均线(ALMA)、数量价值移动平均线(VWMA) 等。策略同时设定止损位和止盈位。
-
-### 策略原理
-
-该策略的核心逻辑是比较两条移动平均线的数值,根据两条移动平均线的交叉情况判断市场趋势方向。具体来说,我们设置快线和慢线两个移动平均线。当快线上穿慢线时,认为市场进入上升趋势,做多;当快线下穿慢线时,认为市场进入下降趋势,做空。
-
-进入仓位后,如果价格触及止损线则亏损了就退出仓位;如果价格触及止盈线则盈利达到预期就退出仓位。这样可以锁定利润,防止亏损扩大。
-
-从代码逻辑看,策略主要分为四个部分:
-
-1. 计算移动平均线。根据用户选择的移动平均线类型,计算出快线和慢线的移动平均线。
-
-2. 生成交易信号。根据快线和慢线的交叉情况,产生做多和做空信号。
-
-3. 设置止损止盈位。根据入场价格和设置的止损止盈百分比,实时计算出止损线和止盈线的价格。
-
-4. 入场和出场。根据做多做空信号入场,根据止损止盈信号出场。
-
-### 优势分析
-
-该策略最大的优势在于可以自由选择多种类型的移动平均线。不同类型的移动平均线对价格的灵敏度不同,用户可以根据自己的需要选择合适的移动平均线。此外,可以自定义移动平均线的长度期间,实现对时间维度的优化。
-
-另一个优势是设置了止损止盈机制。这可以有效防止亏损进一步扩大,同时锁定利润。总体而言,该策略较为灵活,可自定义程度高,适合不同需求的用户。
-
-### 风险分析
-
-该策略主要风险在于移动平均线具有滞后性。当价格突然出现大幅波动时,移动平均线无法及时响应,可能导致错过最佳入场或出场时机。这时会产生较大亏损。
-
-另一个风险是止损止盈位置的设置。如果设置的幅度太小,有可能会被套利;如果太大,又容易导致利润锁定不够及时。所以在实盘中要根据市场情况优化止损止盈的参数。
-
-总的来说,该策略主要依靠移动平均线判定趋势方向,所以在突发事件导致价格大幅波动时效果会打折扣。此外,参数设置也会对策略收益有较大影响。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线的类型。根据不同市场环境和交易品种,选择更加合适的移动平均线。
-
-2. 优化移动平均线的参数。调整移动平均线的长度期间,使其更加符合市场特点。
-
-3. 添加其它指标过滤。可以加入 MACD,RSI 等其它指标,避免在没有趋势的市场中频繁交易。
-
-4. 优化止损止盈比例。根据历史数据计算出最优的止损止盈参数。
-
-5. 增加机器学习模型。使用 LSTM,随机森林等算法预测价格走势,辅助生成交易信号。
-
-6. 采用止损追踪算法。使止损线能够随价格走势逐步移动,减少止损被触发的概率。
-
-### 总结
-
-本策略整体来说较为简单直接,通过交叉判断趋势方向,属于典型的趋势跟随策略。优点是简单容易理解,灵活度高,可以自行选择移动平均线类型以及参数。缺点是对突发事件反应较慢,存在一定程度滞后。总体而言,该策略适合追求长线稳定收益的投资者。通过优化可以进一步提高策略稳定性和收益水平。
-
-||
 
 ### Overview
 
@@ -122,7 +65,6 @@ This strategy can be optimized in the following aspects:
 
 Overall, this strategy is relatively simple and straightforward. It determines the trend direction via crossover and belongs to a typical trend following strategy. The advantages are being easy to understand and highly flexible with customizable moving average types and parameters. The disadvantages are slower reactions to sudden events and some degree of lagging. In general, this strategy suits investors seeking long-term steady returns. Further improvements on stability and return can be achieved through optimization.
 
-[/trans]
 
 > Strategy Arguments
 

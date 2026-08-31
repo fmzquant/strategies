@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15857ddb0720d9acfd9.png)
-[trans]
-
-## 策略概述
-
-该策略是一个基于网格的多头 Martingale 动态加仓网格交易策略。主要思想是在价格触及网格线时,根据已有仓位数量动态调整每次的加仓量,同时设置总的最大开仓数量。当价格上涨触及止盈价格时,平掉所有多头仓位。
-
-## 策略原理
-
-1. 根据 "Grid Size" 参数将价格划分为等距的网格。 
-2. 在每个网格线位置挂多头限价单。
-3. 当前价格触及网格线时:
-   - 如果当前开仓数量为0,则以起始仓位 "start_lot" 开仓。
-   - 如果当前开仓数量大于0,且当前网格价格低于上一个开仓价格,则在当前网格价格开新的多头仓位,仓位大小为上一仓位的 "multifactor" 倍。
-4. 最大开仓数量由 "Max Open Orders" 参数控制。
-5. 开仓后,在比开仓均价高出 "TakeProfit" 点的位置设置止盈线。
-6. 当前价格触及止盈线时,平掉所有多头仓位,重置各项参数。
-
-通过这种方式,在行情下跌过程中逐步加大仓位,当行情回升触及止盈线时获利了结。
-
-## 策略优势
-
-1. 动态加仓:根据当前开仓数量,动态调整每次加仓量,在行情持续下跌时逐步加大仓位,提高策略收益潜力。
-2. 参数灵活:通过 "Grid Size"、"start_lot"、"multifactor" 等参数可以灵活控制网格大小、初始仓位、加仓倍数等。
-3. 风险可控:通过 "Max Open Orders" 参数控制最大开仓数量,防止过度加仓。同时设置止盈线,在获利时及时了结,控制回撤。
-
-## 策略风险
-
-1. 无止损:该策略没有设置止损,如果行情一直向下突破,可能面临较大亏损风险。
-2. 参数敏感:策略表现对 "multifactor" 等参数比较敏感,不适当的参数可能带来风险。
-3. 高波动率:该策略在行情波动较大时频繁开仓、平仓,可能带来额外的滑点和手续费成本。
-
-风险防范措施:
-1. 结合风险承受能力,谨慎设置 "multifactor" 等参数。必要时可在代码中添加止损逻辑。
-2. 仔细回测和模拟交易,选择合适的参数。
-3. 评估策略在高波动行情下的表现。如果必要,可通过调整参数或限制使用场景等方式规避风险。
-
-## 优化方向
-
-1. 加入趋势判断:在开仓时根据价格走势判断趋势,如趋势看跌,则不开新的多头仓位,以降低风险。
-2. 动态调整止盈:根据价格走势、波动率等指标,动态调整止盈位置,在趋势强劲时适当提高止盈点位,增强盈利能力。
-3. 优化仓位管理:在加仓时,除了考虑加仓倍数,还可以结合账户资金、当前持仓量等,对加仓量进行更精细的控制。
-4. 结合其他信号:将网格交易和其他趋势判断、震荡判断等指标信号结合,综合判断行情,指导交易。
-
-这些优化可以提高策略适应性,更好地把握行情,提高盈利潜力和稳健性。同时通过更精细的仓位控制和风险管理,降低回撤,提高风险收益比。
-
-## 总结
-
-该基于网格的多头 Martingale 动态加仓网格交易策略,通过逐步加仓的方式试图在行情下跌过程中降低持仓均价,并在上涨时获利了结。策略通过参数设置具有较强的灵活性。但同时也潜在较大风险,需要仔细评估和控制风险。若能在此基础上加入趋势判断、动态止盈、仓位优化等,有望进一步提升策略性能。策略实现了价格触及网格线时自动开仓加仓,价格触及止盈线时自动全平仓的功能,整体逻辑较为清晰,但也有优化空间。策略适合在对行情和参数进行充分评估的基础上谨慎使用。
-
-|| 
 
 ## Strategy Overview
 
@@ -107,7 +57,6 @@ These optimizations can improve the strategy's adaptability to better capture ma
 ## Summary
 
 This grid-based long Martingale dynamic position grid trading strategy attempts to lower the average holding price during downtrends by gradually adding positions, and takes profits when prices rise. The strategy offers strong flexibility through parameter settings. However, it also carries significant potential risks that require careful assessment and control. If trend detection, dynamic take profit, position optimization and other features can be added, the strategy's performance may be further enhanced. The strategy realizes functions to automatically open and add positions when prices hit grid lines, and automatically close all positions when prices hit the take profit level. The overall logic is relatively clear, but there is room for optimization. The strategy is suitable for cautious use after thoroughly evaluating market conditions and parameters.
-[/trans]
 
 > Strategy Arguments
 

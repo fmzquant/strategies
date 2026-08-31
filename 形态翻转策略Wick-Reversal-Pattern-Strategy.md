@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-形态翻转策略通过检测K线形态,识别价格从上涨到下跌或者从下跌到上涨的转折点,在转折点附近进行买入或卖出操作。该策略主要利用影线与实体的比例关系来判断价格反转信号。
-
-## 策略原理
-
-该策略的核心逻辑是检测K线的影线部分与实体部分的比例关系,来判断是否存在价格反转形态。
-
-当出现下跌K线时,如果该K线的下影线较长,上影线和实体较短,则表示该K线有较强的买入力道,可能反转为上涨。具体来说,是检测收盘价高于开盘价,并且下影线长度大于上影线与实体长度的一定倍数,则产生多头信号。
-
-相反,当出现上涨K线时,如果该K线的上影线较长,下影线和实体较短,则表示该K线有较强的卖出力道,可能反转为下跌。具体来说,是检测收盘价低于开盘价,并且上影线长度大于下影线与实体长度的一定倍数,则产生空头信号。
-
-此外,若开盘价与收盘价相差很小,但影线较长,也可能产生反转信号。
-
-检测反转信号时,还会结合平均K线范围进行过滤,只有在K线范围大于平均值时,才会产生信号。
-
-## 策略优势
-
-- 利用影线与实体比例关系,捕捉反转形态,识别反转点
-- 同时检测多头和空头反转形态
-- 结合K线平均范围过滤,避免在震荡市场中产生错误信号
-- 简单明了的形态识别逻辑,容易理解实现
-
-## 策略风险
-
-- 影线与实体比例的参数设置需要经验,不恰当可能导致漏捕反转或产生假信号
-- 仅仅依靠单个K线形态判断反转,容易被局部震荡误导
-- 没有结合趋势判断,可能逆势操作产生损失
-
-可以考虑结合趋势指标,避免逆势操作。也可以通过与其他技术指标组合,确认反转信号。参数设置可以通过回测优化获得更好的参数组合。
-
-## 策略优化方向  
-
-- 可以结合趋势指标,确认反转方向与趋势一致,避免逆势操作
-- 可以结合其他技术指标,如磁力线、布林带等,确认反转信号
-- 可以利用机器学习方法,自动优化影线与实体比例的参数
-- 可以在反转后,设置止损与止盈条件,优化退出机制
-
-## 总结
-
-形态翻转策略通过比较简单的形态识别方法,有效识别价格反转形态,捕捉转折点。但仅仅依靠单个K线形态容易产生误判,需要与其他技术指标组合使用,同时加入趋势判断,可以避免逆势操作,从而提高策略稳定性。此外,参数优化和止损/止盈设置也是进一步完善策略的方向。总之,形态翻转策略为我们提供了一个简单实用的思路,但需要配合其他技术手段才能发挥最大效果。
-
-||
 
 ## Overview
 
@@ -98,7 +52,6 @@ Consider incorporating trend indicators to avoid counter trend trades. Combining
 
 The wick reversal pattern strategy effectively identifies reversal patterns and catches turning points using simple pattern recognition. However, relying solely on single candle patterns can be misleading. Combining with other technical indicators and adding trend bias helps avoid counter trend trades and improves strategy stability. Parameter optimization and stop loss/take profit also help further enhance the strategy. In summary, the wick reversal strategy provides a simple and practical idea but needs to be complemented with other techniques to maximize performance.
 
-[/trans]
 
 > Strategy Arguments
 

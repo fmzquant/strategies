@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于Alan Hull提出的Hull移动平均指标,属于趋势跟踪策略。该指标可以有效减少移动平均线的滞后效应,对价格变化响应更灵敏。策略使用Hull移动平均判断趋势方向,并结合额外过滤条件发出交易信号。
-
-## 策略原理
-
-1. 计算短周期和长周期两组Hull移动平均。短周期判断具体交易方向,长周期判断大趋势方向。
-
-2. 当短周期Hull MA上穿下穿时,判断趋势发生转折。结合大趋势方向过滤噪音交易。
-
-3. 增加价格突破Hull MA的条件,确保突破成功。
-
-4. 增加价格变化率条件,避免不理想的突破 Entry。 
-
-5. 设置止损和止盈条件,控制风险。
-
-## 优势分析
-
-相比普通移动平均线,该策略具有以下优势:
-
-1. Hull MA响应价格变化更迅速,可以及时捕捉趋势转折。
-
-2. 双 Hull MA结构可以判断大、小两个时间维度的趋势。
-
-3. 价格突破与变化率条件可有效过滤假突破。
-
-4. 动态止损止盈可锁定利润,控制风险。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 参数设定不当可能错过价格趋势转折。
-
-2. 大趋势判断错误可能导致逆势交易。
-
-3. 停止损失设定过宽可能带来较大亏损。
-
-4. 交易次数过于频繁,增加交易成本和滑点风险。
-
-## 优化方向
-
-可从以下几个方面进行优化:
-
-1. 优化 Hull MA 周期,平衡敏感性和平滑性。
-
-2. 优化 Entry 和 Exit的参数,找到最优数值。
-
-3. 测试不同品种参数健壮性,提高策略适应性。 
-
-4. 结合量能指标,避免背离造成的风险。
-
-5. 增加条件,提高策略的稳定性。
-
-## 总结
-
-该策略整体来说,利用 Hull MA 的响应迅速性实现对趋势的及时跟踪,在控制风险的前提下,具有较强的盈利能力。但需要注意参数优化,并防范一些较难避免的系统性风险。
-
-|| 
 
 
 ## Overview
@@ -130,7 +69,6 @@ It can be optimized in the following aspects:
 
 Overall, this strategy leverages the responsiveness of Hull MA to timely follow trends, and has strong profitability under risk control. But parameter optimization is needed, and some unavoidable systemic risks should be guarded against.
 
-[/trans]
 
 > Strategy Arguments
 

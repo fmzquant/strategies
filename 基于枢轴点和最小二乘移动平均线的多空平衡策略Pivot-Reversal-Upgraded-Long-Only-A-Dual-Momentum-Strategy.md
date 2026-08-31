@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9a2903b2d1bb5b5a49.png)
-[trans]
-
-### 概述
-
-这是一个只做多头的量化交易策略,它结合了枢轴点反转策略和最小二乘移动平均线策略的优点。该策略在牛市中跟随主要趋势进入场内,在观察到枢轴点上轨形成之后判断反转信号做多;同时,它要求收盘价高于最小二乘移动平均线才会开仓做多,使策略更加稳定。
-
-### 策略原理
-
-该策略融合了枢轴点反转策略和最小二乘移动平均线策略。枢轴点反转策略会计算过去一定交易日的最高价和最低价,得到上轨和下轨。当价格突破上轨时,判断为反转信号。最小二乘移动平均线是一种趋势判断指标,它能更好地逼近价格。该策略在枢轴点上轨形成时,如果收盘价高于最小二径线,就做多。
-
-具体来说,该策略首先计算过去3根K线的最高价和过去16根K线的最低价,得到枢轴点上轨和下轨。在上轨形成时,开仓做多;当下一次下轨形成时,平仓。同时,它要求收盘价高于20日的最小二乘移动平均才会开仓。
-
-### 策略优势
-
-1. 结合两种策略的优势,使交易决策更稳定可靠
-
-2. 枢轴点策略能判断反转点,最小二乘移动平均线过滤假突破,减少交易风险
-
-3. 只做多头,符合大部分人的心理预期
-
-4. 策略简单清晰,容易理解与优化
-
-5. 交易频次适中,适合中长线操作
-
-### 风险分析
-
-1. 无法抓住快速下跌行情的机会
-
-2. 存在一定的延迟,可能错过部分上涨机会
-
-3. 牛熊转换时,会产生较大亏损
-
-解决方法:
-
-1. 适当缩短计算周期,减少延迟
-
-2. 调整移动平均线参数,优化参与度
-
-3. 增加止损策略,降低单笔损失
-
-### 优化方向
-
-1. 加入多种趋势指标组合,提高判断准确性
-
-2. 增加机器学习模型预测结果,指导决策
-
-3. 结合波动率指标,控制仓位规模
-
-4. 优化参数,提高策略胜率
-
-5. 测试更长时间周期数据,验证稳定性
-
-### 总结
-
-本策略整合枢轴点反转策略和最小二乘移动平均线策略的优势,在判断趋势反转的同时控制风险,属于稳健型策略。它结构简单,易于理解和测试,非常适合量化交易初学者学习和实践。但该策略只做多,无法利用下跌行情获利,这是其主要局限。通过引入更多指标和机器学习等方法进行优化,可以进一步增强该策略的稳定性和跟踪能力,从而获得更好的绩效。
-
-||
 
 ### Overview  
 
@@ -122,7 +65,6 @@ Solutions:
 
 This strategy integrates the strengths of pivot point reversal and LSMA strategies to control risks while judging trend reversals. With simple structure for easy understanding and testing, it is perfect for beginner quants to learn and practice. But its long side only approach prevents profiting from market declines, a major limitation. Further improvements in stability and tracking ability could be achieved by introducing more indicators and machine learning optimization for better performance.
 
-[/trans]
 
 > Strategy Arguments
 

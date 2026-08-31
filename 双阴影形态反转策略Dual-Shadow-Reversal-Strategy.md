@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10d2dc400446c6ab7b8.png)
 
-[trans]
-
-## 概述
-
-双阴影形态反转策略是一种基于K线形态的短线交易策略。该策略通过识别出现连续两根K线都不存在影线的特殊K线形态,来判断可能的反转机会。策略的优点是简单明了,易于实现,但同时也存在一定的风险需要注意。
-
-## 原理
-
-该策略的核心逻辑是识别“双阴影”形态。具体来说,策略会判断当前K线是否满足“开盘价等于最低价,收盘价等于最高价”的条件,即没有下影线和上影线,这种K线称为阴影线。如果前一根K线也满足这个条件,就认为出现了连续两根阴影线,即“双阴影”形态。
-
-根据技术分析理论,这种双阴影形态通常预示着当前趋势即将反转。因为连续两根K线价格都在一个很窄的区间内波动,说明买卖双方力量趋于平衡,预示着反转的可能。
-
-判断到双阴影形态后,策略会在下一根K线开盘时按收盘价进入做多或做空方向。并在设定的bar数后平仓离场。
-
-## 优势
-
-- 策略思路清晰易懂,简单的形态判断,容易实现。
-
-- 利用了经典的双阴影反转形态,有一定的技术分析依据。
-
-- 操作频率不高,有利于降低交易成本和风险。
-
-- 可方便加入回测功能,优化参数。
-
-## 风险
-
-- 形态交易依赖历史图形统计概率,不能完全避免乖离。
-
-- 虽然双阴影预示反转,但反转未必会发生或维持。
-
-- 设定固定的止盈区间难以对付行情快速运行的情况。
-
-- 只看一两个K线信息,容易造成过于激进出入场。
-
-## 优化思路
-
-- 可以结合趋势指标,避免逆势操作。
-
-- 可以 Wait for Confirm 进场,等待反转确认信号。 
-
-- 停止盈亏可根据ATR动态设置,而不是固定天数。
-
-- 可用机器学习判断哪些双阴影形态更可靠。
-
-## 总结
-
-双阴影反转策略利用经典的形态交易理念,思路简单直观,既适合新手学习,也可作为机器人的模块之一。但仍需要注意风险控制,可通过优化进场timing和止盈方式来改进。整体来说,该策略优点和缺点都较为明显,可供参考借鉴。
-
-||
 
 ## Overview
 
@@ -107,7 +58,6 @@ Upon detecting the dual shadow pattern, the strategy will enter long or short at
 
 The dual shadow reversal strategy leverages the classic concept of pattern trading in a simple and intuitive way, suitable for beginners while also serving as a modular component for algos. But risk management is still essential, and the strategy can be improved by optimizing entry timing and take-profit methods. Overall, the pros and cons of this strategy are quite apparent for reference.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14e3a45b01fe66f63ec.png)
-[trans]
-
-## 概述
-反转波动带策略是一种基于布林带的FOREX交易策略。它在日元交易对上效果最佳。当价格突破布林带上限或下限时,采取反向操作,目标价设置为最近10根K线的最高点或最低点。
-
-## 策略原理
-该策略基于20日简单移动均线及其2倍标准差构建上轨和下轨。当当前K线收盘价突破下轨时,做多;当突破上轨时,做空。止损价设置为最近10根K线的最低价,止盈价为最近10根K线的最高价。
-
-具体来说,如果前一根K线开盘价低于下轨,且当前K线收盘价も低于下轨,则做多进场。止损价设置为最近10根K线的最低价,止盈价设置为最近10根K线的最高价。
-
-相反,如果前一根K线开盘价高于上轨,且当前K线收盘价も高于上轨,则做空进场。止损价设置为最近10根K线的最高价,止盈价设置为最近10根K线的最低价。
-
-## 优势分析
-这种策略具有反转交易的特点。当价格突破布林带时,说明趋势正在发生转折,因此采取反向操作。设置止盈止损也比较合理,能够获取较好的风险回报比。
-
-此外,这种策略参数较少,实现简单,容易理解。而日元交易对波动较大,适合采用此策略。
-
-## 风险分析
-该策略最大的风险在于不能有效判断趋势转折点。当价格突破布林带上下限后,仍有可能继续原有趋势运行。这时如果反向做市,很可能造成损失。
-
-此外,止盈止损设置为近期最高最低价也存在风险。如果行情出现V型反转,止损可能直接被击穿。止盈设置也可能预判不准确,无法全额享受行情反转带来的利润。
-
-为控制风险,可以设置合理的止损幅度,降低单笔损失。也可以采用移动止损来锁定利润,适当调整止盈位置。
-
-## 优化方向  
-该策略可以从以下几个方面进行优化:
-1. 增加过滤条件,避免错误信号。可以设置交易量过滤,确保突破时交易量放大,以确认趋势转折。
-2. 优化参数设置。可以测试不同参数对结果的影响,寻找最优参数组合。
-3. 结合其他指标进行验证,如RSI等震荡指标,确认买卖信号的可靠性。
-4. 利用机器学习等方法动态优化止损止盈位置,让策略更具适应性。
-
-## 总结
-反转波动带策略overall是一种简单实用的短线交易策略。它反转操作且风险可控,适合日内交易。但参数和过滤条件还需进一步优化,以减少错误信号并提高效率。如果搭配其他技术指标和动态止盈止损,该策略的表现还具有很大提升空间。
-
-||
 
 ## Overview
 The Reversal Bollinger Bands strategy is a FOREX trading strategy based on Bollinger Bands. It works best on JPY pairs. When price breaks through the Bollinger Bands upper or lower limit, it takes a reverse operation with the target price set to the highest or lowest point of the last 10 candlesticks.
@@ -82,7 +47,6 @@ The strategy can be optimized in the following aspects:
 ## Conclusion 
 The Reversal Bollinger Bands strategy is an simple and practical short-term trading strategy overall. It has reversible operations and controllable risks, suitable for intraday trading. But parameters and filter conditions need further optimization to reduce false signals and improve efficiency. If combined with other technical indicators and dynamic stop loss and take profit, the performance of this strategy still has great room for improvement.
 
-[/trans]
 
 
 

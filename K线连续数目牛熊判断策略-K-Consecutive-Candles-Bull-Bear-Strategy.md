@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1e0f433500bd65b3cc4.png)
 
-[trans]
-#### 概述
-该策略基于K线的连续上涨或下跌数目来判断牛市或熊市,并据此进行交易。当收盘价连续高于前一根K线的收盘价达到指定数目时,开多头仓位;当收盘价连续低于前一根K线的收盘价达到指定数目时,开空头仓位。同时设置了止损和止盈,并引入了移动止盈的机制以保护利润。
-
-#### 策略原理
-1. 记录连续多头和空头条件成立的次数。如果收盘价高于前一根K线,多头计数加1,空头计数重置为0;如果收盘价低于前一根K线,空头计数加1,多头计数重置为0;否则两个计数都重置为0。
-2. 当多头计数达到指定数目k时,开多头仓位,设置止损和止盈。
-3. 对于多头仓位,记录开仓后最高价,当最高价超过开仓价iTGT个最小变动单位,且收盘价回撤至最高价下方iPcnt%时,平仓。
-4. 当空头计数达到指定数目k2时,开空头仓位,设置止损和止盈。 
-5. 对于空头仓位,记录开仓后最低价,当最低价低于开仓价iTGT个最小变动单位,且收盘价反弹至最低价上方iPcnt%时,平仓。
-
-#### 策略优势
-1. 简单易懂,基于K线的连续性进行交易决策,逻辑清晰。
-2. 引入了移动止盈的机制,在价格朝有利方向运行一段距离后主动保护利润。
-3. 止损和止盈的设置可以有效控制风险和锁定利润。
-4. 参数可调,适用于不同的市场和交易风格。
-
-#### 策略风险
-1. 在震荡行情中,频繁的开平仓可能导致较大的滑点成本。
-2. 连续K线数目的判断受到市场噪音的影响,可能出现频繁的信号。
-3. 固定的止损和止盈点位可能无法适应市场的波动性变化。
-
-#### 策略优化方向
-1. 引入更多的技术指标,如均线、波动率等,辅助判断趋势的强度和方向。
-2. 优化移动止盈的触发条件,如根据ATR自适应调整回撤百分比。
-3. 采用更加动态的止损和止盈方式,如跟踪止损、阶梯式止盈等。
-4. 对参数进行优化,找到适合不同市场和品种的最优参数组合。
-
-#### 总结
-该策略通过K线的连续性来捕捉牛熊趋势,同时设置了止损止盈以控制风险。移动止盈的引入可以更好地保护利润。但在震荡市中可能出现频繁信号,需要进一步优化信号的可靠性。此外,止损止盈的设置也可以更加灵活,以适应市场的动态变化。综合来看,该策略思路简单清晰,适合趋势性市场,但仍有优化的空间。
-
-|| 
 
 #### Overview
 This strategy determines bull or bear markets based on the number of consecutive up or down candles and makes trades accordingly. When the closing price is consecutively higher than the previous candle's close for a specified number of times, it enters a long position; when the closing price is consecutively lower than the previous candle's close for a specified number of times, it enters a short position. Stop loss and take profit are set, and a trailing stop mechanism is introduced to protect profits.
@@ -73,7 +41,6 @@ This strategy determines bull or bear markets based on the number of consecutive
 
 #### Summary
 This strategy captures bull and bear trends through the continuity of candles while setting stop loss and take profit to control risks. The introduction of a trailing stop can better protect profits. However, it may generate frequent signals in choppy markets, requiring further optimization of signal reliability. In addition, the setting of stop loss and take profit can be more flexible to adapt to dynamic market changes. Overall, the strategy has a simple and clear idea, suitable for trending markets, but there is still room for optimization.
-[/trans]
 
 
 

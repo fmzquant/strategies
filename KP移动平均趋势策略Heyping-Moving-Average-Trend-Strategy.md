@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1394ba94a9019d912c6.png)
-[trans]
-
-### 概述
-
-KP移动平均趋势策略是一种技术分析指标组合的趋势跟踪策略。该策略主要利用平均线指标识别价格趋势方向,采用均线交叉信号判断入场 timing。策略可在 TradingView 平台上实现,通过参数优化获得较好的表现。
-
-### 策略原理
-
-KP策略主要运用三类指标:
-
-1. 平均线:快速EMA 和慢速SMA。EMA反应价格变化更为敏感,SMA更稳定。两者配合使用,快速EMA交叉慢速SMA产生交易信号。
-
-2. 希肯阿修蜡烛图:特殊的烛形图,有更清晰的趋势特征。策略中用于绘制EMA均线的价格数据来源。
-
-3. 对数变换选项:对价格数据做可选的对数变换,更便于观察百分比价格变动。
-
-具体交易逻辑是,快速EMA向上突破慢速SMA时做多;向下跌破时平仓。该策略属于典型的趋势跟踪策略。
-
-### 优势分析
-
-1. 参数可调性强,能适应不同品种和交易时段
-2. 可视化指标配合,形成清晰易读的趋势交易策略
-3. 增加对数变换可选项,应对更加波动的品种
-4. 希肯阿修蜡烛图更好判定趋势方向
-5. 整合停损机制控制风险
-
-### 风险分析
-
-1. 趋势反转风险,需要及时止损
-2. 参数优化需谨慎,避免过拟合
-3. 交易品种和时段选择对策略表现影响大
-4. 需进行充分回测确保参数稳健性
-
-### 优化方向 
-
-1. 增加自适应参数优化模块
-2. 整合更多指标过滤假信号
-3. 增加算法交易模块,实现自动化下单
-4. 结合机器学习技术判断关键点
-5. 优化止损策略,实现动态跟踪止损
-
-### 总结
-
-KP移动平均趋势策略整合多种技术指标判断趋势方向,参数设置灵活,可视化效果出色。该策略可作为基础趋势跟踪策略,进行适当优化调整后用于实盘交易。但用户须谨记,任何策略都不能完美预测市场,需控制风险,审慎操作。
-
-|| 
 
 ## Overview  
 
@@ -100,7 +54,6 @@ The specific logic is to go long when the faster EMA crosses above the slower SM
 
 The Heyping Moving Average Trend Strategy combines various technical indicators to define trend directions with flexible configurations and great visualization. It can serve as a baseline trend following strategy and be further tuned for live trading while noting no strategy is perfect. Risk management is key.
 
-[/trans]
 
 > Strategy Arguments
 

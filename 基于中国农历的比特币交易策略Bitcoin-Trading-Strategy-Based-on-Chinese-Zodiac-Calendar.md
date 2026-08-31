@@ -12,49 +12,6 @@ ChaoZhang
 ![IMG](https://www.fmz.com/upload/asset/12ecc3c9901faecad3a.png)
 这里返回您要求的中英文文章内容:
 
-[trans]
-
-### 概述
-
-该策略通过结合中国传统农历的12生肖轮回,发出“看涨”、“看跌”及“观望态度三大信号,为比特币交易者提供独特的市场视角。当出现看涨信号时,建议开仓做多;当出现看跌信号时,建议开仓做空;当出现观望信号时,建议暂时观望,不要盲目开仓。
-
-### 策略原理
-
-该策略的核心逻辑是通过计算每根K线所在年份除以12的余数,判断当前处于中国农历的哪一个生肖年。根据历史数据统计,属鼠、牛、虎、兔、龙、蛇的年份,比特币市场往往处于上升趋势;属马、羊、猴、鸡、狗、猪的年份,比特币市场往往处于下降趋势。因此策略根据余数,给出不同的交易信号。
-
-当计算出的年份余数为0、1、4、5、8、9时,即为上升趋势的生肖年,策略会显示“看涨”的信号,建议开仓做多,以获利于比特币市场的上涨。
-
-当计算出的年份余数为2、6、10时,即为下降趋势的生肖年,策略会显示“看跌”的信号,建议开仓做空,以获利于比特币市场的下跌。 
-
-当计算出的年份余数为3、7、11时,即为震荡不明的生肖年,策略会显示“观望”的信号,建议暂时观望市场,不盲目开仓,避免不必要的损失。
-
-### 优势分析
-
-该策略最大的优势在于提供了一个完全不同于技术分析和基本面分析的独特视角。中国农历生肖文化历史悠久,融合了中国古代对市场和经济运行的深刻理解。生肖年的判断没有死板的公式,而是通过历史轮回的模式识别。这为比特币交易决策提供了宝贵的参考。
-
-这种交易策略简单易操作,代码量少,资源消耗低,可以广泛应用到不同类型的交易系统中。它不需要复杂的计算和参数优化,降低了策略实现的难度,使更多交易者能够接触和使用。
-
-### 风险分析 
-
-该策略最大的风险在于,生肖年判断的准确性无法得到严格的验证和计量。中国农历生肖文化中蕴含的历史智慧,很难用数据进行证明。因此在实际使用时,需要谨慎参考,不能完全依赖生肖年的模式来进行交易。
-
-另一个风险点在于,即使从概率上判断生肖年的上涨概率更高,但个别年份也可能出现反转。这就需要交易者结合更多信息进行综合判断,而不要依赖某一种交易信号。
-
-此外,过于依赖该策略的交易信号,也很容易形成herding effect,从而导致巨大的系统性风险。这一点也需要引起足够的重视。
-
-### 优化方向
-
-该策略的优化方向主要有两个:
-
-第一是丰富生肖年的判断规则。可以考虑结合阴阳五行、三奇六凶等更多中国古典哲学理论,使生肖年的模式判断更加立体和全面,也更符合中国文化传统。
-
-第二是与其他因子或模型进行组合。单一的生肖年判断很难确保交易决策的准确性。需要将其与技术指标、经济环境判断等其他模型组合使用,形成更加稳健的决策体系,降低错误率。
-
-### 总结
-
-基于中国农历生肖年的比特币交易策略,开辟了一个全新的策略视角。它为交易决策提供了非常有价值的参考,让交易者能够跳出技术分析和基本面分析的框架,从更高的维度审视市场。但也需要意识到其局限性,避免完全依赖该策略带来的风险。仅作为重要的参考因子之一来使用,并与其他模型和指标组合,才能发挥生肖年判断的最大效用。
-
-||
 
 ### Overview
 
@@ -105,7 +62,6 @@ Second, combine with other factors or models. Relying solely on zodiac years has
 The Bitcoin trading strategy based on Chinese zodiac calendar pioneers an innovative strategic perspective. It provides valuable references for trading decisions by enabling traders to break out of the frameworks of technical and fundamental analysis, to examine the market from a higher dimension. But its limitations should also be acknowledged to avoid risks associated with over-reliance. Only as one important reference factor instead of the sole basis for decisions, and only when used in combination with other models and indicators, can the zodiac calendar produce its maximum utility.
 
 
-[/trans]
 
 
 

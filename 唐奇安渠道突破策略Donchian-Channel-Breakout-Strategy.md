@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9256c20ba778fbf814.png)
-[trans]
-
-## 概述
-
-唐奇安渠道突破策略是一种基于价格行为和趋势的突破交易策略。它利用唐奇安通道上下轨来识别潜在的突破点,在价格突破通道时打开多头或空头头寸。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 使用 Ta.highest 和 Ta.lowest 函数计算一定周期(如60根K线)的最高价和最低价,构建唐奇安通道的上轨和下轨。
-
-2. 当价格突破上轨时,认为行情可能进入多头趋势,所以在上轨突破下一根K线开盘时做多;当价格突破下轨时,认为行情可能进入空头趋势,所以在下轨突破下一根K线开盘时做空。
-
-3. 一旦价格重新跌破上轨或重新涨破下轨,则认为趋势发生转折,此时平掉当前的多头或空头头寸。
-
-4. 为控制风险,做多做空后的止损点设定为开仓价格减去或加上一个最小跳价。
-
-这种基于通道突破的策略简单而直接,既考虑了价格行为又结合了趋势特征,容易操作而稳定。
-
-## 优势分析  
-
-该策略具有以下几个优势:
-
-1. 策略逻辑清晰简洁,容易理解和实施,实操性强。
-
-2. 利用唐奇安通道判断趋势方向,可以有效过滤噪音,识别可靠的突破信号。
-
-3. 做多做空后的止损设置合理,可以很好控制单笔损失。
-
-4. 无论行情处于何种状态,只要价格发生有效突破,该策略都可以顺势而为,抓住潜在趋势。
-
-5. 策略参数较少,不易过拟合,参数优化空间大,可塑性强。
-
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 趋势following策略,无法抓住反转行情。
-
-2. 停损点过近可能会被价格短线波动止损。
-
-3. 通道长度设置不当会增加假突破的概率。
-
-针对上述风险,可以采取以下应对措施:
-
-1. 结合其他指标识别潜在反转信号,避免强行following。
-
-2. 设置合理的尾随止损以锁定盈利,而不是死撑初始止损。 
-
-3. 测试不同参数取值,找出最佳参数组合。
-
-## 优化方向  
-
-该策略还具有进一步优化的空间:
-
-1. 尝试双通道突破策略,一个通道用于确定入场点,另一个通道用于确定止损或止盈点。
-
-2. 在价格突破通道一定ticks后再开仓,以过滤部分假突破。
-
-3. 添加交易量或波动率指标过滤,避免在价格剧烈波动时出现失误交易。
-
-4. 尝试不同持仓策略,如趋势following策略或反转策略,多种组合可能获得更好结果。
-
-5. 添加风险管理模块,控制单日最大损失、最大回撤等等。
-
-
-## 总结  
-
-唐奇安渠道突破策略整体来说是一种非常实用的短期跟随趋势策略。它通过价格行为判断,识别潜在趋势的变化,利用通道突破打开仓位。策略逻辑简洁,容易操作,在多种市场中都可能获得不错的效果。通过进一步优化参数设定、止损机制、反转识别等等,该策略的表现还具有很大的提升空间。它可以作为量化交易的一个很好的起点策略。
-
-||
 
 ## Overview
 
@@ -156,7 +83,6 @@ There is room for further optimization:
 
 In summary, the Donchian Channel Breakout Strategy is a very practical short-term trend following strategy. It identifies potential trend changes through price action, and utilizes channel breakouts to enter trades. The logic is simple and easy to execute, and can achieve decent results across various markets. With further optimizations like parameter tuning, stop loss mechanisms, reversal identification etc., significant performance lift can be expected. It serves as a great starting point strategy for algo trading.
 
-[/trans]
 
 > Strategy Arguments
 

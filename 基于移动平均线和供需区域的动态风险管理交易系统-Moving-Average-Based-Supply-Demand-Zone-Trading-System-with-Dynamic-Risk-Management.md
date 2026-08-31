@@ -14,38 +14,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-这是一个结合了移动平均线交叉、供需区域识别以及动态止损止盈的综合交易策略。该策略通过短期和长期移动平均线的交叉来确定交易方向,同时利用供需区域作为重要的价格支撑位和阻力位,并配合百分比止损止盈来管理风险。策略的核心在于只在特定的供需区域附近开仓,从而提高交易的胜率。
-
-#### 策略原理
-策略使用9周期和21周期的简单移动平均线(SMA)来判断趋势方向。当价格处于需求区域(支撑位)1%范围内,且短期均线向上穿越长期均线时,系统发出做多信号;当价格处于供给区域(阻力位)1%范围内,且短期均线向下穿越长期均线时,系统发出做空信号。供需区域的识别基于50个周期内的显著高低点,并要求该点位具有至少2根确认蜡烛图。系统会根据入场价格自动设置动态的止损位(默认1%)和止盈位(默认2%)。
-
-#### 策略优势
-1. 多重确认机制: 结合了技术指标(均线交叉)和价格结构(供需区域),降低假突破风险
-2. 动态风险管理: 止损止盈基于入场价格的百分比设置,适应不同市场环境
-3. 可视化交易信号: 在图表上清晰标示供需区域和交易信号,便于分析和验证
-4. 参数灵活可调: 均线周期、供需区域确认条件、止损止盈比例等都可根据不同市场特征调整
-5. 策略逻辑清晰: 入场和出场条件明确,便于回测和优化
-
-#### 策略风险
-1. 震荡市场风险: 频繁的均线交叉可能导致过多假信号
-2. 滑点风险: 在供需区域附近的交易可能面临较大滑点
-3. 参数敏感性: 不同市场环境下最优参数可能差异较大
-4. 止损幅度风险: 固定百分比止损可能不适合所有市场环境
-5. 资金管理风险: 策略未包含头寸规模管理功能
-
-#### 策略优化方向
-1. 引入成交量确认: 在均线交叉和供需区域分析中加入成交量指标,提高信号可靠性
-2. 动态参数优化: 根据市场波动率自动调整止损止盈比例和供需区域范围
-3. 增加趋势过滤: 添加更长周期的趋势判断,避免在大趋势相反方向交易
-4. 完善资金管理: 加入基于波动率的头寸规模计算
-5. 增强供需区域识别: 引入更多技术指标来确认供需区域的有效性
-
-#### 总结
-这是一个将经典技术分析方法与现代风险管理理念相结合的策略系统。通过在重要价格区域附近进行交易,并结合移动平均线交叉信号,策略提供了一个相对可靠的交易框架。动态止损止盈的设计有助于适应不同市场环境,但策略的实际应用还需要根据具体市场特征进行优化。建议在实盘交易前进行充分的参数优化和回测验证。
-
-|| 
 
 #### Overview
 This is a comprehensive trading strategy that combines moving average crossovers, supply/demand zone identification, and dynamic risk management. The strategy determines trade direction through short-term and long-term moving average crossovers, utilizes supply/demand zones as key support and resistance levels, and manages risk with percentage-based stop-loss and take-profit levels. The strategy's core principle is to only enter trades near specific supply/demand zones to improve win rate.
@@ -76,7 +44,6 @@ The strategy employs 9-period and 21-period Simple Moving Averages (SMA) to dete
 
 #### Summary
 This strategy system combines classical technical analysis methods with modern risk management concepts. By trading near significant price zones and incorporating moving average crossover signals, the strategy provides a relatively reliable trading framework. The dynamic stop-loss and take-profit design helps adapt to different market conditions, but practical application requires optimization based on specific market characteristics. Thorough parameter optimization and backtesting are recommended before live trading.
-[/trans]
 
 
 

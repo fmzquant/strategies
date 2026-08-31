@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1201d9083eaf39ff3db.png)
-[trans]
-
-## 策略概述
-
-该策略结合了随机RSI和EMA来检测趋势和验证交易信号。当价格在EMA20上方回调到EMA9和EMA14之间,同时随机RSI低于超卖水平时产生做多信号;当价格在EMA20下方回调到EMA9和EMA14之间,同时随机RSI高于超买水平时产生做空信号。
-
-## 策略原理
-
-1. 使用ta.ema函数计算3条不同周期的EMA线,分别为EMA9、EMA14和EMA20,用于判断价格所处的趋势状态。  
-2. 使用ta.rsi函数计算RSI指标,再用ta.stoch函数将RSI转换为随机RSI指标,用于判断价格是否超买超卖。
-3. 当收盘价>EMA20且收盘价<EMA9和EMA14,同时随机RSI<超卖水平时,触发做多信号,执行买入操作。  
-4. 当收盘价<EMA20且收盘价>EMA9和EMA14,同时随机RSI>超买水平时,触发做空信号,执行卖出操作。
-
-该策略的核心思想是利用随机RSI来判断价格在主趋势(由EMA20表示)中的回调是否到达了合适的超买超卖区域,同时用快速EMA和中速EMA来验证回调的力度,如果价格突破快速EMA和中速EMA则回调可能结束,趋势可能反转,此时不适合入场,只有价格回调到EMA9和EMA14之间时才考虑顺势入场。这种多重条件验证的方式可以有效提高信号质量并减少误判。
-
-## 策略优势
-
-1. 结合了趋势性指标(EMA)和摆动性指标(RSI),可以更好地把握趋势和超买超卖的时机。
-2. 采用了随机RSI,相比原版RSI指标有两个优点:一是增加了指标的平滑性,二是避免了指标长时间黏在极值区。
-3. 多重条件验证,可以有效过滤掉很多假信号,提高信号的可靠性。
-4. 代码逻辑清晰简单,易于理解和修改,可以作为新手学习的模板。
-
-## 策略风险
-
-1. 对震荡市并不适用,因为此时EMA频繁交叉,可能会产生很多虚假信号。  
-2. 如果趋势很强,价格单边上涨或下跌,此策略会错失很多机会,因为回调很浅。  
-3. EMA参数的选择对策略影响很大,不同品种不同周期需要分别调试。
-4. 随机RSI参数也需要根据实际情况调整,目前默认值在某些品种上效果可能不理想。
-
-## 优化方向
-
-1. 可以考虑引入ATR指标来动态调整超买超卖水平,以适应不同的波动率。
-2. 可以加入更多不同周期的EMA,用于更精细地描述价格回调的位置。
-3. 止损和止盈也是必须要考虑的,可以用百分比止损或者ATR止损,还可以用移动止损保护利润。 
-4. 可以用K线的形态如针孔、吞没等来辅助判断趋势转折,作为补充条件提高准确率。
-
-## 总结
-
-该策略采用随机RSI结合EMA的多重条件验证,在把握趋势回调的同时有效控制了风险,整体思路简单易懂,适合新手学习使用。但是策略本身也存在一些局限性,如对震荡市表现不佳,趋势行情把握不足等,需要根据实际情况灵活调整参数。后续还可以考虑从动态参数、更多指标验证、资金管理等方面对策略进行优化和提升,以期获得更稳健的收益。总的来说,该策略可以作为一个基础模板,在此基础上进行修改和扩展,是一个不错的出发点和学习素材。
-
-||
 
 ## Strategy Overview
 
@@ -90,7 +49,6 @@ The core idea of this strategy is to use the Stochastic RSI to determine whether
 
 This strategy uses Stochastic RSI combined with EMA multi-condition verification to effectively control risk while grasping trend retracements. The overall idea is simple and easy to understand, suitable for beginners to learn and use. However, the strategy itself also has some limitations, such as poor performance in sideways markets, insufficient grasp of trend movements, etc., which need to be flexibly adjusted according to the actual situation. In the future, consideration can also be given to optimizing and improving the strategy from aspects such as dynamic parameters, more indicator verification, and money management to obtain more robust returns. In general, this strategy can serve as a basic template that can be modified and expanded upon, and is a good starting point and learning material.
 
-[/trans]
 
 > Strategy Arguments
 

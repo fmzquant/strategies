@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10cd49cecee2416d410.png)
 
-[trans]
-
-## 概述
-
-这是一个利用移动平均线和MACD指标进行双向突破操作的量化交易策略。它具有跨时间轴操作的特点,即在较长时间周期判断趋势方向,在较短时间周期寻找入场机会的优势。
-
-## 策略原理
-
-该策略使用3条不同长度期的SMMA均线以及一条EMA均线判断趋势方向。同时,它结合MACD指标判断短期趋势和入场时机。具体来说,它的买入条件是:价格上穿所有均线,且短均线在长均线之上时触发;而卖出条件则是相反,价格下穿所有均线,短均线在长均线之下时触发。 
-
-可以看出,该策略同时利用了移动平均线判断中长期趋势方向,以及MACD判断短期反转来捕捉较优的入场时机。这种多时间轴联合操作是该策略的重要特点。
-
-## 优势分析
-
-这种跨时间轴操作的优势在于,可以在高概率的趋势方向中,选择合适的短期反转点入场,从而获得较优的风险回报比。具体来说,主要有以下3点优势:
-
-1. 3条SMMA均线加1条EMA均线多级滤波,可以有效判断中长期趋势方向,避免逆势操作。
-
-2. MACD指标判断短期反转点入场,可以获得较优的入场价位。
-
-3. 严格的移动平均线顺序关系作为过滤条件,可以减少误操作的概率。
-
-
-## 风险分析
-
-该策略的主要风险在于:
-
-1. 移动平均线本身滞后性较强,可能错过短期趋势反转机会。 
-
-2. MACD指标容易产生假Signals,需要结合价位过滤。
-
-3. 多时间轴判断增加了策略复杂度,容易产生失效的情况。
-
-针对风险1和风险2,可以通过适当缩短均线周期和Signal周期来优化,快速响应短期趋势反转。针对风险3,则需要针对不同品种和周期进行优化测试,使策略参数严格适配该品种的特点。
-
-## 优化方向 
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 优化移动平均线和MACD的参数,使其最佳匹配不同周期和品种特点。例如缩短均线长度,加大Signal 参数等。
-
-2. 增加止损策略,利用ATR 或其它指标设置合理的移动止损。这可以显著改善策略的风险控制。
-
-3. 寻找替代MACD信号的更好指标或过滤方式。例如引入波动率指标,对 Signals 进行过滤等。
-
-4. 测试不同的止盈止损比例关系,以获取风险回报比更优的参数组合。
-
-
-## 总结
-
-总体来说,这是一个具有独特跨时间轴思路的突破系统。它同时利用移动平均线和 MACD 的优势,实现了多时间段联合判断操作策略。通过对参数和过滤条件进行优化调整,该策略可以成为一个非常实用的量化交易方案。
-
-||
 
 
 ## Overview
@@ -114,7 +61,6 @@ The main aspects that this strategy can be optimized include:
 
 In general, this is a unique breakthrough system with cross-timeframe thinking. It utilizes the advantages of both moving averages and MACD to achieve a joint judgment operation strategy across multiple time frames. By optimizing and adjusting parameters and filtering criteria, this strategy can become a very practical quantitative trading solution.
 
-[/trans]
 
 > Strategy Arguments
 

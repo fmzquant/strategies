@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/92442868519574f426.png)
-[trans]
-
-## 概述
-
-比特币哈希带策略利用比特币网络的哈希率指标,当矿工衰竭结束、开始恢复时做多,当矿工开始衰竭时做空,通过捕捉矿工循环的波动来获利。
-
-## 策略原理
-
-该策略使用IntoTheBlock数据在交易视图中显示比特币每日哈希率。它计算快速移动平均线和慢速移动平均线,当快速移动平均线上穿慢速移动平均线时做多,认为矿工衰竭结束、开始恢复;当快速移动平均线下穿慢速移动平均线时做空,认为矿工开始衰竭。
-
-具体来说,策略定义了两条移动平均线:SignalLine(默认长度30日)和LongLine(默认长度60日)。当SignalLine上穿LongLine时,认为是做多信号;当SignalLine下穿LongLine时,认为是做空信号。根据方向参数,策略会在出现对应信号时开仓做多或做空。
-
-## 优势分析
-
-该策略最大的优势是利用了比特币网络本身的特征,通过哈希率反映出矿工的扩张和收缩周期,形成交易信号。这避免了对 比特币价格本身复杂的分析,使用网络数据作为预测指标,相对简单可靠。
-
-另一个优势是参数较少。主要就是快速平均线和慢速平均线的长度设置,非常简单,不会过度优化。同时,移动平均线算法也提供了多种选择,可以灵活调整。
-
-## 风险分析
-
-该策略主要风险在于哈希率数据提供商的质量。如果数据存在质量问题,会严重影响信号的准确性。目前IntoTheBlock提供的数据质量较好,但也需要注意其服务的持续性。
-
-另一个风险是市场本身的系统性风险。即使捕捉到了矿工扩张和收缩的特征,在市场整体大幅波动时,仍可能遭遇亏损。需要关注更多市场指标判断系统性风险。
-
-## 优化方向
-
-可以考虑与价格指标结合,当价格指标也显示反转信号时,增加开仓确信度。例如结合K线形态指标、移动平均线指标等,当两者同时提示做多或做空时,再开仓。
-
-可以测试不同周期的哈希带指标构建策略。例如使用周线或月线指标,过滤掉过多噪音,判断更大级别的趋势反转。
-
-可以尝试机器学习模型判断哈希率反转的关键点。相比固定参数移动平均线,机器学习模型可能更好地模拟出反转的复杂特征。
-
-## 总结
-
-本策略整体思路清晰、简单,通过比特币网络本身的数据反映矿工周期,形成交易信号,避免复杂的价格预测,有一定的可靠性。但仍需要进一步优化与组合,降低市场系统性风险的影响,提高稳定盈利能力。
-
-||
 
 ## Overview
 
@@ -84,7 +47,6 @@ Try machine learning models to determine key reversal points of the hash rate. C
 
 The overall logic of this strategy is clear and simple. By reflecting the miner cycle through the Bitcoin network's own data, it forms trading signals while avoiding complex price forecasts, giving it a certain reliability. But further optimization and combination are still needed to reduce the impact of market systemic risks and improve stable profitability.
 
-[/trans]
 
 > Strategy Arguments
 

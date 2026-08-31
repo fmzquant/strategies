@@ -9,22 +9,6 @@
 
 > Strategy Description
 
-[trans]
-- 策略名称：动向指数（DMI）与高低点策略
-- 数据周期：5M
-- 支持：商品期货，数字货币
-- 官方网站：www.quantinfo.com
-
-
-
-![IMG](https://www.fmz.com/upload/asset/739ea1e668541f362205d9b5acb43372.png)
-
-- 主图：
-  AMA1指标，公式：AMA1^^EMA(DMA(CLOSE,CQ1),2);
-
-  AMA2指标，公式：AMA2^^EMA(DMA(CLOSE,CQ2),2);
-
-||
 
 - Strategy Name: DMI and High-Low Strategy
 - Data Cycle: 5M
@@ -37,7 +21,6 @@
   AMA1 index, formula: AMA1 ^ ^ EMA (DMA (CLOSE, CQ1), 2);
   AMA2 index, formula: AMA2 ^ ^ EMA (DMA (CLOSE, CQ2), 2);
 
-[/trans]
 
 > Strategy Arguments
 

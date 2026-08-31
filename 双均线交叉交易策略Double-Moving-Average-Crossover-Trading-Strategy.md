@@ -9,103 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-双均线交叉交易策略通过计算两条不同参数设置的均线,并通过均线的交叉进行买入和卖出操作。该策略简单直接,适合中短期交易。
-
-### 策略原理
-
-该策略主要通过输入快速均线周期、慢速均线周期、均线类型等参数,计算快速均线和慢速均线。当快速均线上穿慢速均线时,进行买入操作;当快速均线下穿慢速均线时,进行卖出操作。
-
-该策略的核心逻辑是:
-
-1. 输入参数:快速均线周期maLen1,慢速均线周期maLen2,均线类型maTypeChoice
-
-2. 根据输入参数计算快速均线maValue1和慢速均线maValue2
-
-3. 比较两条均线大小关系,定义买入和卖出条件:
-
-    - 买入条件:maValue1上穿maValue2
-
-    - 卖出条件:maValue1下穿maValue2
-
-4. 在买入和卖出条件成立时,进行相应的交易操作
-
-5. 可视化显示均线,并用不同颜色区分均线大小关系
-
-6. 发送买入和卖出信号提示
-
-### 策略优势
-
-- 使用双均线交叉原理,避免被单一均线震荡误导
-
-- 均线参数可调,可适应不同周期操作
-
-- 交易逻辑简单直接,容易理解实现
-
-- 可自定义买入卖出信号提示,实时掌握交易时机
-
-- 可视化显示均线走势,形成直观交易指标
-
-- 可通过参数优化找到最佳参数组合
-
-- 可用于回测寻找最优参数,也可用于实盘交易
-
-### 策略风险
-
-- 均线交叉容易产生错误信号,应结合趋势和形态进行判断
-
-- 双均线震荡时,容易频繁开仓造成交易费用损失
-
-- 参数不当可导致过于频繁或不频繁交易
-
-- 突发事件可能导致剧烈行情,无法止损
-
-- 大周期突破时,短周期指标可能失效
-
-- 需要频繁监控,无法全自动实现
-
-风险解决方法:
-
-- 结合趋势指标,避免震荡劈头交易
-
-- 结合形态指标,确认信号有效性
-
-- 优化参数,使交易频率达到合理水平
-
-- 设置止损止盈点,控制单笔损失
-
-- 多时间段验证参数稳定性
-
-- 采用时间或信号过滤,避免假突破
-
-### 策略优化方向 
-
-- 测试不同均线参数,寻找最优参数
-
-- 测试不同均线类型,选择产生信号最准确的均线
-
-- 结合趋势指标,避免不顺趋势交易
-
-- 结合波动指标,判断合适出场时机
-
-- 加入时间或信号过滤,减少错误信号
-
-- 设置滑点控制,优化实盘交易效果
-
-- 多品种多周期验证稳定性
-
-- 加入自动止损止盈策略
-
-- 探索机器学习等技术提升回测效果
-
-### 总结
-
-双均线交叉策略是一个非常典型的技术指标策略。它利用快慢均线交叉原理产生交易信号,通过参数优化可以获得不错的回测结果。但该策略也存在一定的风险,需要配合趋势、形态等其他技术指标来进行验证,降低错误信号率。此外,实盘交易中还需要考虑滑点控制等交易细节。总体来说,双均线交叉策略适合中短期操作,是理解和实现简单的首选交易策略之一。通过不断优化和验证,可以将该策略运用于实盘,获得稳定收益。
-
-|| 
 
 ### Overview
 
@@ -199,7 +102,6 @@ Risk Management:
 
 The dual moving average crossover is a classic technical indicator strategy. It generates signals from MA crosses and can produce good backtest results through optimization. However, risks like false signals remain, requiring additional filters. Real trading also needs execution details like slippage control. Overall, the strategy suits medium-term trading as a simple and intuitive choice. With continuous improvements and robustness validation, this strategy can achieve stable returns in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

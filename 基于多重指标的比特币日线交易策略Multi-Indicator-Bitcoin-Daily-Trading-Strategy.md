@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bb27b02cb055b9f86c.png)
 
-[trans]
-
-## 概述
-
-本策略基于多重指标组合,在比特币的日线时间范围内寻找交易机会。主要使用MACD、RSI、Stoch RSI等指标,结合均线的方向,判断目前的趋势方向,以发出买入和卖出信号。
-
-## 策略原理
-
-本策略主要利用了以下几个指标:
-
-1. MACD `(快线-慢线)` 及其信号线。当MACD上穿信号线时为买入信号,下穿0时为卖出信号。
-
-2. RSI相对强弱指数。当RSI上穿设定阈值时为买入信号。
-
-3. Stoch RSI。Stoch RSI指标反映RSI的超买超卖情况。当Stoch RSI低于设定阈值时为买入信号,高于设定阈值时为卖出信号。
-
-4. 均线方向。当收盘价下穿均线时为卖出信号。
-
-根据这些指标,本策略的交易信号如下:
-
-**买入信号**:当`(Stoch RSI < 设定阈值) 且 (MACD上穿阈值 或 RSI上穿阈值)`时
-
-**卖出信号**:当`(MACD下穿0) 且 (收盘价下穿均线 或 Stoch RSI > 设定阈值)`时
-
-通过组合使用多个指标,可以比较准确地判断目前的趋势方向,并在趋势转折点发出交易信号。
-
-## 策略优势
-
-1. 组合使用多个指标,可以提高判断准确性,避免因单一指标带来的错误信号。
-
-2. MACD指标可以判断目前的趋势方向和力度。RSI指标反映超买超卖情况。Stoch RSI判断RSI的超买超卖情况。均线判断目前的趋势方向。这些指标互为验证,提高了效果。
-
-3. 买入和卖出信号设置了多个指标的组合条件,可以过滤掉一些假信号,避免不必要的交易。
-
-4. 本策略回测起始时间为2017年1月1日,包含了2017年底比特币涨幅巨大的行情,可以检验策略在行情中的表现。
-
-5. 策略包含止损设置,可以控制单笔交易的损失。
-
-## 策略风险
-
-1. 多指标组合虽然可以提高准确性,但指标之间也可能会产生分歧,导致一定的误判 risk。
-
-2. 策略优化的止损水平,可能需要根据不同行情调整。止损过宽会增加单笔损失,止损过窄会被止损摘出。
-
-3. 日线级别策略,无法在更短时间范围内进行细节操作。在突发事件造成短期大幅波动时,无法起到应对作用。
-
-4. 策略仅回测了部分历史行情,可能存在过拟合风险。需要在更长的时间范围和更多市场中测试,才能验证策略效果。
-
-## 优化方向
-
-1. 测试更多指标的组合,寻找更好的多指标组合策略。
-
-2. 对指标参数进行优化,找到更合适的参数数值。
-
-3. 测试不同的止损水平,寻找止损和止盈比例的最佳组合。
-
-4. 在更长的历史行情中进行回测,避免过拟合。
-
-5. 尝试在更高频的时间范围运用该策略思路,进行较为频繁的交易。
-
-## 总结
-
-本策略通过组合MACD、RSI、Stoch RSI等多个指标,判断目前比特币日线级别的趋势方向,在趋势转折点发出交易信号。同时设置止损来控制交易风险。该策略回测结果表现出色,但仍需在更长时间和更多市场中进行验证,以避免过拟合风险。通过进一步优化指标参数以及止损、止盈设置,可以获得更好的效果。本策略为多指标组合策略提供了一个初步思路,值得进一步探索和改进。
-
-||
 
 ## Overview  
 
@@ -139,7 +74,6 @@ Using multiple indicators together can better determine the current trend direct
 
 This strategy combines MACD, RSI, Stoch RSI and other indicators to determine the bitcoin daily trend direction and identify trend reversals for trade entry. Stop loss is set to control trade risk. Backtest shows positive results but still requires further verification across longer timeframe and more markets to avoid overfit risks. Further optimizations on indicator parameters and stop loss/take profit levels can improve results. The strategy provides an initial idea of multi-indicator combination approach which is worth deeper exploration and enhancement.
 
-[/trans]
 
 > Strategy Arguments
 

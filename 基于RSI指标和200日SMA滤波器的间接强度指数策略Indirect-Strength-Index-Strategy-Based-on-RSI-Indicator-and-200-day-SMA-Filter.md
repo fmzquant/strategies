@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b091ed5e4a648e54f7.png)
-[trans]
-
-## 概述
-
-该策略主要基于相对强弱指数(RSI)指标判断过买过卖情况,以200日简单移动平均线(200 Day Simple Moving Average, SMA)作为主要的价格趋势滤波器,在确定趋势方向的基础上,利用RSI指标寻找较佳的入场和出场时机,实现盈利。相比单一使用RSI指标,该策略增加了趋势判断,可以更加准确地把握市场走势,在牛市中追涨杀跌,在熊市中反其道而行之,从而获取更高的策略收益。
-
-## 策略原理  
-
-该策略主要由RSI指标和200日SMA滤波器两部分组成。
-
-RSI指标部分主要判断价格是否进入超买超卖区域。其计算公式为:
-
-RSI = 100 - 100 / (1 + RSI上涨天数的平均涨幅 / RSI下跌天数的平均跌幅)
-
-根据经验参数,当RSI < 30时为超卖,>70时为超买。
-
-200日SMA滤波器主要判断大盘趋势方向。当价格高于200日SMA时为牛市,否则为熊市。
-
-根据以上两者综合判断,策略有如下入场和出场逻辑:
-
-多头入场:RSI < 45 且 收盘价 > 200日SMA   
-
-多头出场:RSI > 75 且 收盘价 > 200日SMA
-
-空头入场:RSI > 65 且 收盘价 < 200日SMA
-
-空头出场:RSI < 25 且 收盘价 < 200日SMA
-
-这样,就利用RSI指标的精确判断在大趋势中寻找较优入场和出场点,进而获取较高策略收益。
-
-## 策略优势分析
-
-该策略最大的优势在于利用RSI指标和200日SMA滤波器的配合,使得策略更加稳定和精确:
-
-1. 200日SMA有效判断大盘趋势,避免了单一RSI指标的误判
-2. RSI指标可以在大盘趋势中寻找较佳入场出场点
-3. 策略操作简单,容易实施
-
-此外,该策略还具有如下优势:
-
-1. 适用于各种品种,包括股票指数、数字货币和贵金属
-2. 资金利用效率高  
-3. 可谨慎加入止损,有效控制单笔损失
-
-## 策略风险分析
-
-该策略也存在一些风险:  
-
-1. 大盘发生突发性调整时,可能产生较大亏损
-2. RSI指标和200日SMA指标存在一定程度的滞后
-3. 交易频繁,交易成本较高  
-
-为控制这些风险,可采取如下措施:
-
-1. 适当调整仓位管理,防范突发事件的冲击
-2. 优化RSI和SMA的参数,降低滞后概率
-3. 适当调整交易频率,降低交易成本  
-
-## 策略优化方向  
-
-该策略可从以下几个方面进行优化:  
-
-1. 动态调整RSI参数,根据市场波动程度选择合适的参数
-2. 测试其他均线指标如EMA是否能带来更好效果  
-3. 增加自动止损机制  
-4. 增加仓位管理模块,根据资金规模动态调整仓位
-5. 优化入场出场逻辑,测试能否带来更好收益
-
-## 总结  
-
-该策略整体运行效果良好,具有判断准确、操作简单、适用范围广等优点。加入止损和仓位管理后,可谨慎实盘运行。后续可从参数优化、止损优化、仓位管理等方面进行策略增强,使策略效果更加出色。
-
-||
 
 ## Overview
 
@@ -154,7 +81,6 @@ The strategy can be optimized in the following aspects:
 
 The overall performance of this strategy is good, with the advantages of accurate judgment, simple operation, and wide applicability. After adding stop loss and position sizing, it can be carefully run in live trading. Follow-up aspects like parameter optimization, stop loss optimization, position sizing can further enhance the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

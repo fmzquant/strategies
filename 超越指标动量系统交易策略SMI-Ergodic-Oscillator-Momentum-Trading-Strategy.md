@@ -11,85 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/185e8218e28c39efd75.png)
 
-[trans]
-
-## 概述
-
-该策略基于超越指标(SMI)和悟道线(Ergotic Line)构建了一个趋势跟踪系统,结合快速移动均线和慢速移动均线形成买卖信号,属于频繁交易的动量系统策略。
-
-## 策略原理
-
-该策略主要是基于超越指标(SMI)和悟道线(Ergotic Line)来构建交易信号。 
-
-超越指标(SMI)是根据价格的变动速度进行计算,通过两个不同周期的指数移动平均线之差除以绝对差值来计算。其计算公式为:
-
-SMI = (Fast EMA - Slow EMA) / Abs(Fast EMA - Slow EMA)
-
-其中,Fast EMA是短周期的指数移动平均线,Slow EMA是长周期的指数移动平均线。
-
-通过计算价格变动的速度快慢,SMI可以判断市场趋势的变化。当SMI上穿0时为看涨信号,反之为看跌信号。
-
-悟道线(Ergotic Line)是SMI的指数移动平均线,可以用来产生交易信号。当SMI上穿悟道线时为买入信号,SMI下穿悟道线时为卖出信号。
-
-该策略通过SMI和悟道线的组合,形成了一个无滞后的趋势跟踪系统,属于频繁交易的动量系统策略。
-
-## 策略优势 
-
-1. 基于价格变动速度的趋势判断,对趋势变化敏感;
-
-2. 悟道线过滤SMI指标的假信号,形成较为可靠的交易信号;
-
-3. 采用双轨道结构,买卖信号明确;
-
-4. 交易频繁,能捕捉趋势内的较快价格变动。
-
-5. 无滞后,能及时捕捉转折点。
-
-## 策略风险
-
-1. 作为动量系统,在震荡行情中存在大量止损的风险;
-
-2. 双轨道设置不当可能导致信号频繁,造成过度交易;
-
-3. 短周期参数设置不当,可能产生大量假信号;
-
-4. 没有考虑大级别趋势方向,可能逆势操作。
-
-5. 需严格遵守止损规则,否则亏损可能加剧。
-
-针对风险,可以考虑优化如下方面:
-
-1. 优化双轨道参数,降低假信号概率;
-
-2. 结合趋势过滤,避免逆势;
-
-3. 加入止损策略,控制单笔亏损。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化快慢均线参数,寻找最优参数组合;
-
-2. 测试不同的价格输入,如开盘价,最高价,最低价等; 
-
-3. 加入机器学习算法,对参数进行自动优化;
-
-4. 结合趋势指标进行过滤,避免逆势交易;
-
-5. 增加止损策略,严格控制单笔亏损;
-
-6. 考虑交易次数或盈亏比等因素,避免过度交易;
-
-7. 测试不同品种的适用性,寻找最佳品种。
-
-8. 探索与其他指标的组合,形成更完善的交易系统。
-
-## 总结
-
-该策略基于超越指标和悟道线构建了一个无滞后的趋势跟踪系统,通过双轨道形成清晰的交易信号,属于频繁交易的动量策略。优点是捕捉趋势变化迅速,缺点是容易造成过度交易和逆势交易。我们可以通过参数优化、止损策略、趋势过滤等方式进行改进,将其打造成一个更完善的量化交易系统。
-
-||
 
 ## Overview
 
@@ -167,7 +88,6 @@ The strategy can be improved in the following aspects:
 
 The strategy constructs a lag-free trend following system using SMI and Ergodic Line, generating clear trade signals through the double rail structure. It belongs to a high-frequency momentum trading strategy. The advantage is quickly capturing trend changes while the disadvantages include over-trading and counter-trend trades. Improvements can be made through parameter optimization, stop loss, trend filters etc. to build a more robust quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1180b3ed246b783f3e5.png)
 
-[trans]
-
-
-## 概述
-
-该策略利用波尔带通道内外比较来判断趋势,并结合动量指标追踪趋势,属于趋势追踪策略。策略判断通道内波动小于通道外时产生新的趋势方向信号,并打开仓位。仓位止损采用ATR乘数,止盈为ATR乘数风险回报比例。
-
-## 原理
-
-该策略主要由以下几部分组成:
-
-1. 波尔带设置:包括大波尔带长度40周期,小波尔带长度20周期,通道宽度为标准差的2倍。
-
-2. 通道 explosioin 判断:如果大波尔带上轨低于小波尔带上轨,大波尔带下轨高于小波尔带下轨,则说明波动加大,产生新的趋势方向信号。
-
-3. 动量指标: 240周期的14日EMA,判断趋势方向。
-
-4. ATR止损止盈:ATR的14倍为止损距离,止盈为止损距离的1.5倍。
-
-策略首先判断是否通道爆发,如果通道爆发,再判断动量方向,决定做多还是做空。入场后,以ATR倍数进行止损止盈管理。
-
-## 优势
-
-1. 使用双波尔带结构,可以比较不同时间周期内的波动情况,判断趋势爆发点。
-
-2. 借助动量指标判断趋势方向,避免被震荡市场 whipsaw。
-
-3. 利用ATR进行止损止盈管理,可以根据市场波动调整止损距离。
-
-4. 风险回报比例合理,避免过度追求,也不会过于保守。
-
-## 风险
-
-1. 在没有明确趋势的震荡行情中,容易被套住。可以通过优化动量指标参数来减少误判。
-
-2. ATR止损可能会过于保守,可以测试其他止损方式,如移动止损等。
-
-3. 固定的止损止盈倍数可能不适合所有品种,可以考虑使其可调整。
-
-4. 双波尔带判断趋势转折点效果存疑,可以测试其他通道指标如KD通道等。
-
-## 优化方向
-
-1. 测试不同的动量指标参数,找到最佳参数组合。
-
-2. 尝试不同的止损方式,如移动止损,自适应ATR等。
-
-3. 使止损止盈倍数可调整,根据不同品种和市场环境优化。 
-
-4. 测试不同通道指标的效果,选取更稳定的通道指标。
-
-5. 考虑加入复利管理,让盈利更可控。
-
-6. 可以根据波段、时间等过滤入场时机,提高胜率。
-
-## 总结
-
-本策略整体思路清晰,使用双波尔带判断趋势爆发点是其最大亮点。但仍需针对止损方式、通道指标、风险管理等方面进行优化测试,使策略参数更具适应性,在不同市场环境中都能稳定运行。总体来说,该策略具有较好的优势和发展潜力,值得进行深入研究。
-
-||
 
 
 
@@ -130,7 +70,6 @@ The strategy first judges if the band explodes, then determines long or short ba
 
 The strategy logic is clear, using dual Bollinger to determine trend burst is the biggest highlight. But optimizations are still needed on stops, channels, risk management etc to make parameters more adaptive across different market conditions. Overall the strategy has good advantages and potential, worth further research.
 
-[/trans]
 
 > Strategy Arguments
 

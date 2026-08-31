@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12db008960c3983e255.png)
 
-[trans]
-
-## 概述
-
-该策略通过简单移动均线的金叉死叉来判断趋势方向,在趋势开始阶段全仓做多做空,并设立止损止盈单进行风险控制。入场后会使用均线进行持续的趋势跟踪,在趋势背离时及时止损。该策略同时具有可配置的止损、止盈、仓位管理模块,可以灵活调整策略的参数,适用于不同品种。
-
-## 策略原理
-
-该策略主要通过简单移动均线的金叉和死叉来判断趋势的开始和结束。策略首先根据快线SMA(例如21日线)和慢线SMA(例如49日线)的关系来判断趋势方向。当快线从下方上穿慢线时,认为行情进入上升趋势,会在该时间点开多单;当快线从上方下穿慢线时,认为行情进入下跌趋势,会在该时间点开空单。
-
-入场后,策略会实时监控价格与SMA的关系。当价格从上方下破SMA时,认为上升趋势结束,会平掉多单;当价格从下方上破SMA时,认为下跌趋势结束,会平掉空单。
-
-为控制风险,策略在开仓时会同时下达止损单和止盈单。止损距离根据ATR设置,止盈距离则可选择按照百分比设置或按照ATR设置。开仓后,止损单会实时跟踪价格,实现趋势跟踪的效果。止盈单到达后会退出部分仓位,余下仓位继续跟踪,直至全部退出。
-
-该策略还具有仓位管理模块,可以限制每次交易的资金利用率,从而控制单笔交易的风险敞口。同时,最大回撤设置可以控制策略的总体风险。
-
-## 策略优势
-
-- 使用均线比较判断趋势方向,原理简单易懂
-- 入场后实时跟踪止损,可以锁定大部分利润
-- 可配置的止损、止盈方式,可以根据不同品种进行调整
-- 单笔风险可控,不会全仓交易
-- 最大回撤设置,可以限制策略总损失
-
-## 风险及解决方案
-
-- 双均线交叉具有一定滞后性,可能错过趋势开始的最佳入场点
-- 需要反复调整参数,测试不同周期的均线组合
-- 均线交叉具有一定误报率,入场准确率无法达到100%
-- 跟踪止损容易被突破,无法锁定全部利润
-- 需要适当宽松止损距离,给予价格一定回调空间
-- 最大回撤限制可能过于保守,损失了上涨机会
-- 可以适当放宽最大回撤比例,给策略更多容错空间
-
-## 优化方向
-
-- 尝试不同的参数组合,选择最佳的均线周期
-- 加入趋势强度指标,提高入场的准确性
-- 优化止损策略,在趋势中尽量追涨杀跌
-- 测试不同的止盈策略,选择最优止盈点
-- 优化仓位管理方案,提高资金利用效率
-- 调整最大回撤设定,平衡收益和风险
-
-## 总结
-
-该策略总体来说是一个非常适合新手的入门策略,原理简单,易于理解和掌握。同时它也具备适当的风险控制能力,可以减少大额亏损的概率。通过参数优化可以获得不错的效果。但其本质 defects 也决定了它无法做到高度精准的操作。建议可以作为新手练习的策略来使用,但不适合追求高效率和高胜率操作的交易者。如果想取得更好的交易效果,需要寻找拥有更强预测能力的策略。
-
-|| 
 
 ## Overview
 
@@ -105,7 +57,6 @@ The strategy also has position sizing module to limit funds utilized for each tr
 
 In summary, this is a very suitable starter strategy for beginners, with simple logic and easy understanding. It also has proper risk control capabilities to reduce large losses. Good results can be achieved through parameter tuning. But its intrinsic weaknesses also determine that it cannot operate with high precision. It is recommended for beginners to practice, but may not suit advanced traders pursuing high efficiency and win rate. To obtain better trading performance, strategies with stronger predictive power should be sought.
 
-[/trans]
 
 > Strategy Arguments
 

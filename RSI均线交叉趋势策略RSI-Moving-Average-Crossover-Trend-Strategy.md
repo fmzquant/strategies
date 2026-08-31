@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e878eed53c78c69548.png)
 
-[trans]
-
-## 概述
-
-RSI均线交叉趋势策略(RSI Moving Average Crossover Trend Strategy)是一个利用RSI指标的均线交叉信号来判断趋势和发出交易信号的策略。该策略同时结合价格的EMA,只有当价格高于EMA的时候,才会发出买入信号。
-
-## 策略原理
-
-该策略的核心指标是RSI,同时计算RSI的EMA和SMA两条均线。只有当RSI的EMA线高于SMA线而价格高于EMA时,才会发出买入信号;当RSI的EMA线低于SMA线时,会发出卖出信号,实施趋势跟踪。
-
-RSI指标能够有效反映市场的超买超卖现象。RSI指标上突破70视为市场超买,而下破30则被视为超卖。该策略运用EMA和SMA两条移动平均线来发现RSI指标的趋势和转折点。EMA线对最新价格变化更为敏感,而SMA线对老数据的依赖更高,二者能够形成配合。 
-
-当RSI的EMA开始上扬,说明市场出现盘整企稳迹象,此时用SMA来验证其方向;当SMA也开始上扬,说明RSI明确进入上升趋势,这时策略会在价格高于EMA的前提下发出买入信号,跟踪趋势。
-
-## 优势分析
-
-这是一个跟踪趋势的策略,能够有效抓住中长线的方向性机会。相比单一指标,该策略运用RSI的EMA和SMA形成交叉验证,可以减少错误信号和增强稳定性。
-
-该策略还结合价格的EMA以确保只在价格上升趋势中买入,避免震荡行情的风险,从而提高盈利概率。
-
-## 风险分析 
-
-该策略主要基于RSI指标,当RSI产生错误信号时,该策略也会跟随发出错误信号。此外,RSI指标更适用于判断超买超卖现象,对判断中长线趋势有一定的滞后性。
-
-该策略也存在一定的时间滞后,特别是当RSI的EMA和SMA均值偏平盘整时,会导致信号推迟。这段期间亦存在一定亏损的风险。
-
-## 优化方向
-
-1. 可以考虑对RSI进行优化,选取更加合适的参数,增强其判断效果。
-
-2. 可以考虑加入止损逻辑,在亏损达到一定幅度后退出仓位,有效控制风险。
-
-3. 可以测试不同时间周期的参数设置,优化参数,使策略在更多品种和更多周期上都能稳定运行。
-
-## 总结
-
-RSI均线交叉趋势策略,是一种简单的利用RSI指标判断趋势方向和交叉验证的策略。它结合价格EMA,能够在上升趋势中抓住方向性机会。该策略稳定性较高,适合中长线持有,但也需要注意防范一定的滞后风险。通过进一步优化,可以使该策略的表现更加出色。
-
-||
 
 ## Overview  
 
@@ -87,7 +48,6 @@ There can also be some time lag, especially when the RSI EMA and SMA are more ra
 
 The RSI Moving Average Crossover Trend Strategy is a simple trend following strategy using RSI to determine trend direction and crossovers for verification. It incorporates price EMA to buy on uptrends. The strategy has high stability for mid-long term holding but lag risk needs to be managed. Further optimizations can improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

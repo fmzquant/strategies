@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用RSI指标判断加密货币是否处于超跌状态,如果RSI低于30就认为是超跌,这时买入,然后设置止损和止盈价格,如果达到止损价格就卖出止损,如果达到止盈价格就卖出止盈。
-
-## 策略原理
-
-1. 该策略使用RSI指标来判断入场时机。RSI指标是一种技术分析指标,通过计算价格变动速度和幅度来判断资产是否超买或超卖。RSI值范围在0到100之间,一般认为RSI高于70为超买区,RSI低于30为超卖区。
-
-2. 当RSI指标低于30时,判断为超跌,这时买入开仓做多。
-
-3. 开仓后设置止损和止盈价格。止损价格为入场价格的1%以下,止盈价格为入场价格的7%以上。
-
-4. 如果价格跌破止损价格,则止损出场;如果价格超过止盈价格,则止盈出场。
-
-## 策略优势分析
-
-1. 利用RSI指标判断超跌来确定买入时机,可以在价格跌至低点时买入,获得较好入场价位。
-
-2. 设置止损可以控制单笔损失。止损幅度较小,可以承受一定回调。
-
-3. 设置止盈可以锁定盈利,不会错过涨幅。止盈幅度较大,让利润最大化。
-
-4. 该策略回撤控制能力较强,风险较小。
-
-## 策略风险分析
-
-1. RSI指标发出超跌信号不一定代表价格反转,可能会继续下跌导致止损。
-
-2. 止损幅度过小,如果回调过大可能被秒止损。
-
-3. 止盈幅度过大,可能提前止盈无法持仓时间足够长。
-
-4. �盘走势不佳时,该策略可能亏损较大。
-
-## 策略优化方向
-
-1. 可以结合其他指标确认RSI超跌信号,避免错误信号。例如KDJ指标等。
-
-2. 可以根据不同币种的波动程度设置合适的止损止盈幅度。
-
-3. 可以测试不同时间周期的参数设置,寻找最佳参数组合。
-
-4. 可以根据回测结果优化仓位大小。
-
-## 总结
-
-该策略总体来说是一个比较稳健的超跌追涨策略。利用RSI指标判断超跌买入,可以在相对低位建仓。设置止损止盈来控制风险和锁定盈利。该策略回撤可控,适合长线持仓。可以根据不同市场情况优化参数,以获得更好的效果。
-
-||
 
 ## Overview
 
@@ -109,7 +58,6 @@ This strategy uses the RSI indicator to determine if a cryptocurrency is oversol
 
 Overall this is a fairly robust oversold breakout strategy. Taking positions after RSI signals oversold provides good entry points at relatively low prices. The stop loss and take profit mechanics help control risk and lock in profits. Drawdowns are manageable which makes it suitable for longer term holdings. Parameters can be optimized according to changing market conditions for improved performance.
 
-[/trans]
 
 > Strategy Arguments
 

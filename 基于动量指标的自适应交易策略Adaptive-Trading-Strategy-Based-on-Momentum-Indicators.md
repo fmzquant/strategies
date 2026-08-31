@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e5991e90daffa31c24.png)
-[trans]
-
-## 概述
-
-该策略是一个基于动量指标的自适应股票交易策略。它整合了布林带、Keltner通道和价格压缩指标,实现了趋势判断、突破点识别和止损退出的全自动交易。
-
-## 策略原理  
-
-该策略主要通过布林带和Keltner通道构建价格通道,识别通道突破形成交易信号。当价格从下向上突破通道时,采取看涨操作;当价格从上向下突破通道时,采取看跌操作。此外,策略还使用价格压缩指标判定目前处于价格通道内时,根据指标差值的正负采取相应的操作。
-
-具体来说,布林带通过计算价格的标准差,得到上下轨;Keltner通道通过计算价格的平均值±平均波动范围,得到上下轨。当两者 channel 发生fdopen时,认为行情进入盘整,等待下一次突破。价格压缩指标反映价格是否被压缩在两个通道内,根据压缩指标差值的正负情况判断行情方向。
-
-综上,该策略融合多种指标判断价格走势,形成清晰的长短逻辑,可以有效过滤假突破,识别高概率的交易机会。
-
-
-## 策略优势
-
-1. 整合多种指标,判断力强。指标组合实现互补,可以提高识别准确率。
-
-2. 压缩指标差值判定,减少假突破。指标差值作为辅助条件,避免无谓交易。  
-
-3. 自适应通道止损,有效控制风险。通道作为止损位置,可以根据市场波动自动调整,减少亏损。
-
-4. 简单参数设定,适合自动化。只有几个主要参数,便于测试优化,易于集成到自动交易系统。
-
-
-## 策略风险
-
-1. 多空转换频繁时,会增多交易次数。行情震荡时,可能导致频繁开仓平仓。
-
-2. 指标参数不当可能错过训练好的机会。需要充分测试优化,找到最佳参数。
-
-3. 仅适合具有明确方向的股价,不适合极度震荡的市场。指标容易被迷惑,产生错误信号。
-
-
-## 策略优化方向  
-
-1. 增加仓位控制模块,优化资金利用效率。例如根据突破强度分配资金等。
-
-2. 增加机器学习模型动态调整指标参数。让指标参数能自动适应不同周期、不同股票。 
-
-3. 增强止损策略,引入更多辅助指标判断止损时机。改进后可以在关键点减少止损次数。
-
-
-## 总结
-
-该策略整合布林带、Keltner通道和价格压缩指标,形成清晰的判断逻辑和风险控制体系。它融合趋势判断和突破操作,可以自动适应行情,识别高概率交易机会。通过参数优化和辅助条件增加,该策略可以进一步强化,成为量化交易的重要工具。
-
-||
 
 ## Overview
 
@@ -101,7 +52,6 @@ In summary, this strategy integrates multiple indicators to judge the price move
 ## Conclusion  
 
 This strategy integrates Bollinger Bands, Keltner Channels and price squeeze indicator to form a clear logic for judgement and risk control system. It combines trend judgment and breakout operations, can automatically adapt to market conditions and identify high probability trading opportunities. With further parameter optimization and auxiliary conditions improvement, this strategy can be further strengthened into an important tool for quantitative trading.
-[/trans]
 
 
 > Strategy Arguments

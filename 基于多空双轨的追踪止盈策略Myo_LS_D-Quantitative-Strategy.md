@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1349a0e28875de1ec72.png)
 
-[trans]
-# Myo_LS_D量化策略
-
-## 概述
-Myo_LS_D量化策略是一个基于多空双轨的追踪止盈策略。该策略综合利用均线、价格突破、风险回报比等多个指标构建交易信号。在趋势判断准确的前提下,实现了较高的胜率和盈利率。
-
-## 策略原理  
-该策略主要由趋势判断模块、做多模块、做空模块、追踪止盈模块等组成。
-
-1. 趋势判断模块运用donchain通道判断整体趋势方向。做多进入的前提是处于上升趋势,做空则需要处于下降趋势。
-
-2. 做多模块考量了新的高点、低点、长线均线位置等因素。做空模块考量了新的高点、低点、短线均线位置等因素。这确保了在向上或向下突破关键价格点时建仓。
-
-3. 追踪止盈模块使用两条不同周期的SMA均线实时追踪价格变动。当价格跌破均线时平仓止盈。这种实时追踪可以最大化获取趋势中的利润。
-
-4. 止损设置考虑扩大止损,确保止损点距离支持位较远,避免被震出。
-
-## 优势分析
-该策略最大的优势在于多空分离建仓,追踪止盈策略。具体来说主要体现在:
-
-1. 多空分离可以最大化抓取单边趋势行情的盈利机会。
-
-2. 追踪止盈通过实时调整可以获得更高的盈利率。与传统止盈方法相比,收益能获得显著提升。
-
-3. 扩大止损可以减少被震出的概率,降低亏损风险。
-
-## 风险及解决
-该策略主要的风险集中在以下几点:  
-
-1. 趋势判断出现错误,可能造成逆势建仓亏损。可以适当调整donchain参数或添加其他指标判断来优化。
-
-2. 追踪止盈过于激进,可能提前止盈无法持续获利。可以适当扩大止盈均线间距来优化。
-
-3. 止损范围过小,可能增加被震出概率。可以适当扩大止损幅度以降低风险。
-
-## 优化方向  
-该策略主要可以从以下几个方面继续优化:
-
-1. 优化趋势判断模块,提高判断准确性。可考虑结合更多指标如MACD等来实现。
-
-2. 调整追踪止盈方式,进一步扩大获利空间。例如可以按比例移动止盈线等。
-
-3. 扩大止损范围或考虑缩进止损来进一步降低被震出概率。
-
-4. 不同品种参数不一样,可以训练获得最优参数组合。进一步提升策略收益。
-
-## 总结 
-Myo_LS_D策略总体来说是一个比较成熟稳定的多空追踪止盈策略。它优势明显,风险可控,是值得长期持有使用的量化方案之一。未来通过进一步优化,可以使其收益性能得到持续提升,成为更加卓越的量化策略。
-
-||
 
 ## Overview
 The Myo_LS_D quantitative strategy is a dual-track tracking stop-profit strategy based on long and short positions. The strategy combines multiple indicators such as moving averages, price breakthroughs, and risk-return ratios to build trading signals. It achieves a high win rate and profit rate on the premise of accurate trend judgment.
@@ -110,7 +60,6 @@ The main optimization directions for this strategy are:
 ## Summary   
 In general, the Myo_LS_D strategy is a relatively mature and stable dual-track tracking stop-profit quantitative strategy. It has obvious advantages and controllable risks. It is one of the quantitative solutions worth holding for the long term. Future optimizations can enable continuous performance improvement to make it an even more superior quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

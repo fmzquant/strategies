@@ -10,118 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15e6ec9ac09a36234c8.png)
-[trans]
-
-
-## 概述
-
-本策略采用固定网格交易的方式,设置起始价格和每层网格间距比例,然后根据这个比例设置10层固定买入和卖出价格,实现低买高卖的网格交易策略。
-
-## 策略原理  
-
-该策略首先设置起始价格sprice和每层网格间距比例gridpercent。然后根据起始价格和比例计算出10层买入和卖出价格。
-
-买入价格公式:
-
-b1=sprice-(sprice*p1) 
-
-b2=sprice-(sprice*p2)
-
-b3=sprice-(sprice*p3)
-
-...
-
-其中p1~p10是根据gridpercent逐层计算出来的比例。
-
-卖出价格公式:
-
-s1=b1+(sprice*p1)
-
-s2=b2+(sprice*p1) 
-
-s3=b3+(sprice*p1)
-
-...
-
-买入条件是当收盘价低于对应的买入价格时就会触发买入:
-
-if (close<b1)
-
-strategy.entry("b1", strategy.long, when=(close<b1))
-
-同理,当收盘价高于对应的卖出价格时就会触发卖出:
-
-if (close>s1)
-
-strategy.exit("b1", when=(close>s1)) 
-
-这样就实现了固定网格的低买高卖策略。
-
-## 策略优势
-
-这种固定网格策略具有以下几个优势:
-
-1. 实现了自动的低买高卖,不需要 timing 市场,降低了交易难度。
-
-2. 设置合理的网格间距可以有效控制风险,避免追涨杀跌。
-
-3. 无论行情是上涨还是下跌,都可以实现盈利。
-
-4. 可以通过调整网格参数来适应不同市场行情。
-
-5. 可以通过增加网格层数来扩大持仓规模。
-
-6. 可以结合止损来避免极端行情的巨额亏损。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 行情横盘时,交易费用会磨掉利润。
-
-2. 起始价格和网格设置不当时,容易亏损。
-
-3. 突发事件造成价格跳空跌时,可能导致亏损。
-
-4. 机械交易系统有交易插队风险。 
-
-5. 集中爆发事件导致亏损扩大。
-
-对应的解决方法:
-
-1. 合理设置网格参数,确保盈利大于交易费用。
-
-2. 通过回测优化参数,设置合适的起始价格和网格间距。
-
-3. 增加止损来控制风险。
-
-4. 适当放宽交易价格来避免插队。
-
-5. 设置风险控制,限制最大亏损。
-
-## 策略优化
-
-该策略可以从以下几个方向进行优化:
-
-1. 动态调整网格间距,当波动加大时扩大间距,减小间距。
-
-2. 根据历史数据计算波动范围,动态调整起始价格。
-
-3. 加入机器学习模型,预测价格走势,动态调整网格。
-
-4. 在高风险点加入止损,通过观察历史止损点来优化止损位置。
-
-5. 结合资金管理策略,根据利润情况动态调整仓位。
-
-6. 优化仓位管理,最大化资金利用效率。
-
-7. 优化交易执行,使用TWAP等算法减少冲击成本。
-
-## 总结
-
-本策略采用固定网格交易的方式,根据起始价格和网格间距比例设置买入卖出价格,实现自动化的低买高卖交易,可以有效利用行情波动获利。同时也要注意风险控制,通过参数优化、动态调整和止损来锁定利润和控制亏损。结合先进的机器学习和资金管理手段,可以进一步提高策略收益率和胜率。
-
-||
 ## Overview
 
 This strategy adopts fixed grid trading approach by setting the starting price and percentage between each grid layer. Then it calculates 10 fixed buy and sell prices based on the percentage to implement low-buy-high-sell grid trading strategy.
@@ -230,7 +118,6 @@ The strategy can be enhanced in the following ways:
 
 The strategy implements fixed grid trading by setting buy and sell prices based on starting price and grid percentage, achieving auto low-buy-high-sell. It's important to manage risks by optimizing parameters, dynamic adjustments and stop loss for profit locking and loss control. Incorporating advanced ML and money management techniques can further improve strategy profitability and win rate.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10d734e93039772d372.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是找到每月最佳的买入日期,通过在这个日期买入数字资产,并在月末卖出,来实现最优的投资回报。该策略适用于希望利用日内价格波动获得超额收益的投资者。
-
-## 策略原理
-
-该策略根据用户设置的每月买入日期和卖出日期运行。在买入日期当天开多单买入资产,如果设置了卖出日期,在卖出日期平仓;如果未设置卖出日期,则在策略结束日期当天平仓。这样可以测试每月不同买入日期带来的收益差异。
-
-买入信号的判断逻辑是:如果是用户设置的买入日期,并且在策略生效日期范围内,则开多单。
-
-平仓信号判断逻辑是:如果设置了卖出日期并且是卖出日期,平仓;如果未设置卖出日期但是超出了策略结束日期,也平仓。
-
-## 策略优势
-
-1. 可以找到每月价格波动最大的买入点,利用高频日内交易获得超额收益
-2. 可以通过比较不同买入日期的收益规律找出最佳买入点
-3. 可以结合当月新闻事件确定是否最佳买入日期会发生变化
-4. 可以设置不同的卖出日期来实现短线和长线交易的平衡
-
-## 策略风险及解决方案
-
-1. 买入后价格暴跌的风险
-
-   - 设置止损点,降低最大亏损
-   - 选择流动性充足的交易对,避免极端价格波动
-
-2. 最佳买入日期变化的风险
-
-   - 监测历史数据变化,及时调整最佳买入点
-   - 在高风险时期,减小头寸规模
-
-3. 设置错误导致亏损的风险
-
-   - 逐步测试不同参数,比较收益差异
-   - 选择有代表性的时间范围进行测试
-
-## 策略优化方向
-
-1. 结合更多因素确定买入点
-
-   - 考虑当月关键新闻事件对价格的影响 
-   - 分析相关数字资产的价格走势
-   - 增加机器学习模型判断最佳买入时机
-
-2. 优化仓位管理机制
-
-   - 设定止盈点动态平仓
-   - 根据波动率调整头寸规模
-   - 考虑跨期持仓
-
-3. 扩展至其他交易市场
-
-   - 应用于更多数字货币交易对
-   - 应用于股票、外汇等市场
-   - 设定跨市场套利交易策略
-
-## 总结
-
-本策略通过测试不同买入日期带来的收益差异,寻找每月价格波动最大的买入点。这可以为寻求日内高频交易获利的投资者带来超额收益。下一步通过引入更多判断买入时机的因素、优化仓位管理和扩展应用市场,可以进一步提升策略的稳定性和收益水平。
-
-||
 
 ## Overview
 
@@ -134,7 +71,6 @@ The logic for close position signal is: if the sell date is set and it is the se
 
 This strategy finds the date of largest intraday price swing each month by testing profit difference from different buy dates. It can bring excess returns for investors seeking profits from high frequency intraday trading. Further improvement on determining entry timing, position management and expanding application scope will enhance the stability and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

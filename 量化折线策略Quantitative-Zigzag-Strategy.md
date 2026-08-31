@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1484b9a8090882c5bd5.png)
-[trans]
-
-## 概述
-本策略的目的是测试不同的输入变量如K线颜色、成交量和随机方法,是否可以用正弦波的方式来预测价格变化。策略将这些变量转化为正弦波的形式,当波峰或波谷达到设定次数时,做出买入或卖出决策。
-
-## 策略原理
-策略分为三个部分,第一个部分检测K线的颜色变化。当几根相同颜色的K线后,出现不同颜色时则正弦波转向。第二部分检测成交量是否高于或低于均值,当突破均值时波转向。第三部分使用随机方法模拟掷硬币,随机结果不同则波转向。这三个波累积到设定次数时,做出交易决策。
-
-代码通过跟踪三个波的当前方向、波峰数和上一个K线的情况,来控制波的运行。当波峰数达到参数设定时,改变运行方向。通过这个循环来模拟正弦波运行。
-
-## 优势分析
-这种正弦波理论看似很有道理,模拟出来的波形也与现实市场有一定关联。但通过本策略的测试可以发现,其实都是随机结果。哪种变量组合的波形看起来更像,并不能提高交易结果。
-
-所以该策略的一个优势是反驳了“市场可以预测”这一错误观念。市场中的变量确实会影响价格,但不可预测,随机决策也可获得相近结果。
-
-## 风险分析
-本策略最大的风险就是随机交易中难以确定盈亏。不同参数下结果也难以预测,无法提前确定是否可盈利。
-
-此外,正弦波预测理论本身就是错误的。市场变化太复杂,不可能用简单周期性模拟。所以该策略无法真正应用于实盘交易中。
-
-为降低风险,需要对随机结果进一步分析,确定参数范围;或者结合其他分析方法来验证交易信号。
-
-## 优化方向 
-本策略可以从以下几个方向进行优化:
-
-1. 增加更多变量转换为波,扩大样本空间
-2. 对当前三个波进行组合,寻找最佳遍历组合
-3. 设置止损方式,比如亏损比例止损
-4. 优化入场出场逻辑,进行回测寻找最佳参数
-
-## 总结
-本策略通过测试不同正弦波,说明了市场不可预测的本质。同时也反驳了用波形循环来预测的错误理论。
-
-下一步,可以通过增加变量、组合波形、设置止损和优化参数等方式提高策略的实盘可用性。但关键还是要理解,市场变化复杂多变,不容易预测。我们要做的是降低随机风险,而不是预测市场。
-
-||
 
 ## Overview
 The purpose of this strategy is to test whether different input variables such as candlestick colors, volume and random methods can be used to predict price changes in the form of sine waves. The strategy converts these variables into sine wave forms. When the peaks or troughs reach the set number of times, buy or sell decisions are made.
@@ -80,7 +44,6 @@ Through testing different sine waves, this strategy illustrates the unpredictabl
 
 Next, the practicality of the strategy can be improved by increasing variables, combining waveforms, setting stops, and optimizing parameters. But the key is still to understand that market changes are complex and unpredictable. What we need to do is reduce random risks rather than predict the market.
 
-[/trans]
 
 > Strategy Arguments
 

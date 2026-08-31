@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a8831f1c93d21e8dfd.png)
-[trans]
-
-## 概述
-
-最高最低中心回看策略是一种趋势跟踪策略。它的主要思想是计算过去一定周期内的最高价和最低价的中间价作为基准价,然后根据这个基准价再结合波动率计算出建仓区和平仓区。当价格进入建仓区时,做多;当价格进入平仓区时,平仓。
-
-## 策略原理
-
-该策略主要通过以下几个步骤实现:
-
-1. 计算过去lookback_length周期内的最高价h和最低价l,并使用EMA平滑
-2. 计算最高价和最低价的中间价center作为基准价
-3. 根据ATR和ATR multiplier计算波动率vola
-4. 根据center和vola计算出建仓区upper和平仓区lower
-5. 当价格price上穿upper时,做多;当price下穿lower时,平仓
-
-通过这种方法,可以在价格进入趋势状态时及时跟踪趋势;同时也可以通过波动率来控制风险。
-
-## 优势分析
-
-这种策略具有以下几个优势:
-
-1. 可以有效跟踪趋势,及时捕捉价格变化
-2. 使用最高最低价的中间价作为基准价,可以减少假突破的概率
-3. 波动率可以自动调整,从而控制风险
-4. 持仓时间短,可以获取较高频率的交易机会
-5. 实现简单,容易理解和优化
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 在震荡行情中可能会出现较多无谓交易
-2. ATR大小和倍数的设置会影响策略表现,需要仔细测试优化
-3. 在突破中间价后可能会出现回调从而导致止损
-4. 如果趋势反转速度过快,会带来较大亏损
-
-为了控制这些风险,可以从以下几个方面进行优化:
-
-1. 调整ATR参数,降低波动率,过滤震荡
-2. 增加过滤条件,避免无谓交易
-3. 采用移动止损以锁定利润
-4. 结合趋势指标判断真正趋势的开始和结束
-
-## 优化方向 
-
-该策略还具有进一步优化的空间:
-
-1. 可以测试不同市场及不同周期的参数效果
-2. 可以结合机器学习算法自动优化参数
-3. 可以结合更多指标判断趋势开始和结束
-4. 可以考虑动态调整建仓比例
-5. 可以结合情绪指标避免被极端情绪带偏
-
-通过这些优化,可以期望进一步提高策略的稳定性和盈利能力。
-
-## 总结
-
-最高最低中心回看策略是一个简单实用的趋势跟踪策略。它可以及时捕捉价格变化,跟踪趋势,而又能够通过波动率控制风险。该策略容易实现,适合量化交易初学者学习和实践。通过参数优化和规则优化,可以进一步提升策略的效果。总的来说,这是一种值得推荐的量化策略。
-
-|| 
 
 ## Overview
 
@@ -130,7 +69,6 @@ Through these optimizations, further improvements in strategy stability and prof
 
 The Highest/Lowest Center Lookback strategy is a simple and practical trend following strategy. It can capture price changes in time, track trends, while controlling risk through volatility. The strategy is easy to implement, suitable for quantitative trading beginners to learn and practice. By optimizing parameters and rules, the strategy performance can be further improved. In general, this is a recommended quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

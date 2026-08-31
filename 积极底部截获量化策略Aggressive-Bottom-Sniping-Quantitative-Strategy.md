@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10cd87c0ffee787280c.png)
-[trans]
-## 概述
-
-该策略通过在下跌趋势中判断突出的交易量定位短期底部,在超卖条件下进行买入操作,属于积极的短线交易策略。
-
-## 策略原理
-
-当交易量超过基于SMA的平均量2倍标准差时认为是突出交易量,同时RSI低于30时认为是超卖状态。当两者条件同时满足时,判断为短期底部并立即做多。做多后一定时间后(如10根K线)会平仓离场。
-
-所以该策略的逻辑只有下面几步:
-
-1. 计算最近20根K线的交易量SMA作为基准量
-2. 计算最近20根K线交易量的2倍标准差作为突出量的判断标准
-3. 计算最近20根K线的RSI判断是否超卖
-4. 当交易量超过基准量+2倍标准差且RSI低于30时,判断为短期底部
-5. 在短期底部时立即做多
-6. 10根K线后自动平仓
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 逻辑简单,容易理解和优化
-2. 利用了交易量突出的特点判断短期转折点
-3. RSI指标确保只在超卖区做多,避免追顶
-4. 自动止损,最大化回避尾部风险
-
-总的来说,策略充分利用了量能突破判断短期趋势反转的特点,同时严格控制了风险,是一种可靠性较高的积极做多策略。
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 交易量和RSI所构成的交易信号可能出现假突破的情况,导致错误做多亏损;
-2. 固定的止损时间设置可能在市场大幅反转时无法止损或止损过早;
-3. parameter优化不到位可能导致信号频繁或过少。
-
-针对以上风险,可以从以下几个方面进行优化:
-
-1. 增加其他指标过滤,避免假突破的信号;
-2. 设置动态跟踪止损,而不是固定Root K线止损; 
-3. 全面测试并优化参数,确保参数稳健。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 增加机器学习模型判断量能突破的可靠性,避免假信号
-2. 增加自适应止损机制,而不是简单的固定根K线设置
-3. 针对突出量参数进行多维数据集优化
-4. 增加机器学习筛选超卖信号的准确性
-5. 结合情绪面分析增加策略的阿尔法
-
-通过引入更多先进的技术指标、机器学习和情绪面分析,可以显著提高策略的稳定性、阿尔法和 Sharpe 比率。
-
-## 总结
-
-该策略整体来说是一个非常简单直接、逻辑清晰的短线突破策略。通过合理应用交易量指标判断短期趋势反转点,同时严格控制风险,可以获得不错的效果。但是仍然存在一定的假信号风险和参数健壮性风险。这些问题都可以通过引入更多先进技术进行逐步改进和优化,使策略的效果更加显著。
-
-||
 
 ## Overview
 
@@ -129,7 +69,6 @@ By introducing more advanced techniques, significant improvement can be achieved
 
 In summary, this is a very simple, straightforward and logical short-term breakout strategy. By properly leveraging volume to detect trend reversals, and strictly controlling risks, solid performance can be achieved. But risks of false signals and parameter robustness exist. These can be addressed incrementally by introducing more advanced techniques to further improve the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

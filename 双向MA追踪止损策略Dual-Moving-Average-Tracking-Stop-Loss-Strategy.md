@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/146b8638dde1cd02b66.png)
-[trans]
-
-## 概述
-
-本策略通过双向移动平均线构建多空信号,实现追踪止损,其核心思想是使用移动平均线判断趋势方向,在趋势方向做多做空,并使用ATR计算止损位,实现追踪止损。
-
-## 策略原理
-
-本策略使用hl2作为源价格,计算一定周期的ATR作为止损幅度。根据ATR值乘以特定倍数计算上轨和下轨。当价格上穿上轨时产生买入信号做多,当价格下穿下轨时产生卖出信号做空。
-
-在开仓后,根据ATR的实时变化调整止损位,实现止损追踪。具体来说,当做多之后,下轨根据最新低点不断上调,实现止损追踪;当做空之后,上轨根据最新高点不断下调,实现止损追踪。
-
-这样,本策略充分利用了移动平均线判断趋势方向的功能,又增加了基于ATR的止损追踪机制,既保证了交易方向的正确性,也控制了交易风险。
-
-## 策略优势
-
-本策略最大的优势在于风险控制。传统的移动平均线策略只考虑方向判断,很容易爆仓。而本策略加入ATR计算的追踪止损,可以根据市场波动幅度动态调整止损位,有效控制交易风险。
-
-此外,本策略融合多空双向交易。相比单边策略,能够在趋势转折时及时调整仓位方向,避免被困在同一方向,提高策略收益。
-
-## 策略风险
-
-本策略主要风险在于ATR周期和倍数的设置。如果ATR周期过短或倍数过大,止损幅度将过小,无法有效控制风险;如果ATR周期过长或倍数过小,则止损过于宽松,难以获利。此外,价格突破移动平均线触发建仓信号时,也可能出现假突破的风险。
-
-可以通过优化参数周期和倍数,平衡止损收益;结合其他指标过滤假突破,提高信号质量,降低风险。
-
-## 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线周期,寻找最佳参数组合
-
-2. 增加其他指标过滤,如MACD、KDJ等,提高信号质量
-
-3. 增加仓位管理策略,如固定份额、马丁格尔等,提高策略收益
-
-4. 可以研究不同品种的参数差异,进行参数优化
-
-5. 可以结合机器学习方法如遗传算法等对参数进行训练优化
-
-## 总结
-
-本策略全面考虑了趋势判断和风险控制,在追求收益的同时注重降低回撤。通过参数优化和组合等方法,可以将策略收益进一步提升。总的来说,本策略思路明确,易于实施,是一种可靠稳定的量化交易策略。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ This strategy can be enhanced from the following aspects:
 
 This strategy fully considers trend judging and risk control, pursuing profits while lowering drawdowns. Further enhancement through parameter optimization and portfolio methods can help improve strategy profitability. In summary, this is a robust and stable quantitative trading strategy with clear logic and easy implementation.
 
-[/trans]
 
 > Strategy Arguments
 

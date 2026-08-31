@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/115a9944d892faa0e44.png)
-[trans]
-
-## 概述
-该策略是一个基于简单移动平均线的组合交易策略。它使用9日线和21日线的均线交叉作为买入和卖出信号。当短期均线从下方上穿长期均线时产生买入信号;当短期均线从上方下穿长期均线时产生卖出信号。
-
-## 策略原理
-这个策略的核心逻辑是使用两个不同参数的简单移动平均线,一个是9日线代表短期趋势,一个是21日线代表长期趋势。当短期趋势线从下方上穿长期趋势线的时候,表示行情从下跌转为上涨,这时产生买入信号;当短期趋势线从上方下穿长期趋势线时,表示行情从上涨转为下跌,这时产生卖出信号。
-
-该策略主要依赖均线的“黄金交叉”和“死亡交叉”两个信号。所谓“黄金交叉”是短期均线从下向上突破长期均线,表示行情可能从下跌转为上涨;“死亡交叉”则是短期均线从上向下跌破长期均线,预示着行情即将从上涨转为下跌。这个策略就是利用这两个信号判断行情的长短期趋势关系,产生买入和卖出决策。
-
-## 策略优势
-1. 操作简单,容易理解使用
-2. 参数少,不需要大量测试和优化
-3. 交易频率适中,避免过于激进
-4. 能相对准确地捕捉长短期趋势的转折点
-5. 具有一定的可测性和稳定性
-
-## 策略风险
-1. 双均线策略容易产生错误信号和频繁切换
-2. 买卖点选择和参数设定依赖经验,不够系统化
-3. 效果与参数选择高度相关,9和21天线并非最优
-4. 无法有效过滤震荡行情的噪音交易
-5. 大幅震荡行情中表现不佳,容易损失
-
-可以通过如下方法来优化和改进:
-1. 增加过滤机制,避免错误信号
-2. 结合其他指标判断趋势信号的可靠性
-3. 根据不同品种和参数进行测试优化
-4. 设置止损止盈逻辑,控制风险
-
-## 总结
-该策略整体来说是一个较为传统和简单的双均线组合策略。它易于理解和实现,参数选择也比较简单,能够有效跟踪长短期趋势的转换。但是该策略也存在一些问题,如产生误信号,PARAMETERS选择经验化,大幅震荡行情中的表现较差等。这需要我们在使用的时候注重风险控制,并进行适当的优化、改进和组合。
-
-||
 
 ## Overview
 This is a combination trading strategy based on simple moving averages (SMA). It uses a crossover of the 9-day and 21-day SMA lines as buy and sell signals. When the short-term SMA crosses above the long-term SMA from below, a buy signal is generated. When the short-term SMA crosses below the long-term SMA from above, a sell signal is generated.
@@ -76,7 +42,6 @@ Possible Enhancements:
 ## Conclusion
 Overall this is a fairly traditional and simple dual moving average crossover system. It is easy to understand and implement with relatively simple parameter selection. It can effectively track changes between short-term and long-term trends. However, issues like false signals, empirically chosen parameters, mediocre performance in high volatility environments need to be addressed. Appropriate optimizations, enhancements, and combinations should be considered along with solid risk control practices.
 
-[/trans]
 
 
 

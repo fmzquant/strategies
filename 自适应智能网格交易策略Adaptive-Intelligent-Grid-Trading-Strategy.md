@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b4e1d317a4b31563ab.png)
 
-[trans]
-
-## 概述
-
-该策略是一个基于TradingView平台的自适应智能网格交易策略,使用Pine Script v4编写。它在价格表上覆盖,并在指定的范围内创建一个网格,以生成买入和卖出信号。
-
-## 策略原理
-
-### 关键功能
-
-1. 金字塔形和资金管理:
-    - 允许同向最多14次追加(金字塔),
-    - 使用基于现金的策略管理头寸大小,
-    - 为模拟目的,初始资本设定为100美元,
-    - 每次交易收取0.1%的佣金。
-
-2. 网格范围:
-    - 用户可以选择使用自动计算的范围或手动设置网格的上下限,
-    - 自动范围可以从最近的价格高点和低点或从简单移动平均线(SMA)导出,
-    - 用户可以定义用于计算范围的回看周期,并调整偏差以扩大或缩小范围。
-
-3. 网格线:
-    - 该策略允许在范围内的可自定义数量的网格线,建议范围在3至15之间,
-    - 网格线在上限和下限之间均匀间隔。
-
-### 策略逻辑
-
-- 持仓进入:
-    - 当价格跌破网格线且该网格线没有相关的未平仓订单时,脚本会下买单,
-    - 每个买单数量根据初始资金除以网格线数量计算,并根据当前价格调整。
-
-- 持仓退出:
-    - 当价格上涨超过更高的网格线,且存在与下一个更低网格线相关的未平仓订单时,会触发卖出信号。
-
-- 自适应网格:
-    - 如果使用自动范围,则网格会通过重新计算上下限并相应调整,来适应变化的市场条件。
-
-## 优势分析
-
-该策略集成了网格交易的系统性和高效执行的优势。允许追加且使用资金管理,可以有效控制风险;网格自动自适应市场,适用于不同行情;参数可调整,适应不同交易风格。
-
-## 风险分析
-
-价格突破网格上下限可能造成较大损失。应适当调整参数,或结合止损来控制风险。此外,过于频繁交易会增加交易费用。
-
-## 优化方向  
-
-可以考虑结合趋势指标过滤信号或优化网格参数,也可以通过止损来防范极端行情的风险。
-
-## 总结
-
-本策略系统地生成买卖点并管理头寸,通过参数调整可适应不同偏好。它将网格交易的规则性与趋势交易的灵活性有机结合,既降低了操作难度,又具备一定的容错性。
-
-||
 
 ## Overview 
 
@@ -117,7 +63,6 @@ Consider combining with a trend filter or optimizing grid parameters. A stop los
 
 This strategy systematically generates entries and exits while managing positions. Through parameter tuning it adapts to different preferences. It combines the rules-based nature of grid trading with the flexibility of trend trading, easing operation complexity while retaining robustness.
 
-[/trans]
 
 > Strategy Arguments
 

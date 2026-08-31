@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13afe8dc93c3ba1c714.png)
-[trans]
-## 概述
-
-Noro平移均线止损策略是一种趋势跟踪策略。它通过计算3日简单移动平均线,并在其上方和下方加上一个比例作为开仓线和止损线。同时设置了止盈位。这样可以在趋势开始时打开头寸,在趋势反转时止损出场。
-
-## 策略原理  
-
-该策略的核心是计算3日简单移动平均线ma。然后在ma上方加上一个百分比lo作为开仓线long,当价格上穿long时做多;在ma下方减去一个百分比sl作为止损线stop,当价格下破stop时止损。同时设置了止盈线take,当价格达到止盈线时止盈。
-
-具体计算规则如下:
-
-1. 计算3日简单移动平均线ma 
-2. 开仓线long = ma + ma * lo%
-3. 止盈线take = 当前持仓均价 + 当前持仓均价 * tp%
-4. 止损线stop = 当前持仓均价 - 当前持仓均价 * sl%
-
-这样就构建起了一个以ma为基准,通过可配置的百分比来设置开仓线、止盈线和止损线的趋势跟踪策略。
-
-## 优势分析
-
-这种策略最大的优势在于可以自动跟踪趋势运行。通过做多看涨,做空看跌,无需判断面上形态就可以捕捉中间趋势。再配合止盈止损设置,可以在趋势结束时自动止损,避免回撤过大。
-
-另一个优势是参数可以灵活调整。通过调整开仓线、止盈线和止损线的百分比参数,可以自由控制仓位规模和止损空间。
-
-## 风险分析  
-
-该策略最大的风险在于容易形成巨大的滑点。因为其是离场线交易,当价格急速下跌时很容易造成超出止损价格很远才成交的情况。这将会让投资者损失惨重。
-
-另一个风险是参数设置不当可能导致过于频繁出入场,增加交易频率和手续费的负担。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 改为使用限价单止损,避免巨大滑点的风险
-2. 增加仓位数设置,可以平滑调仓,降低交易频率
-3. 增加趋势判断指标,避免非趋势市场的误操作
-4. 优化参数设置,找到最优参数组合
-
-## 总结  
-
-Noro平移均线止损策略是一个简单实用的趋势跟踪策略。它可以自动跟踪趋势运行,配合止盈止损设置有效控制风险。该策略最大的风险在于可能造成较大滑点,以及参数设置不当导致过于频繁交易。通过改进止损方式、优化参数设置等手段,可以将该策略优化得更加实用。
-
-||
 
 ## Overview
 
@@ -100,7 +56,6 @@ The strategy can be optimized in the following ways:
 
 The Noro Shifted Moving Average Stop Loss Strategy is a simple and practical trend following strategy. It can automatically track trends with take profit and stop loss controlling risk. The biggest risks come from potential slippage and overly frequent trading from poor parameter optimization. By improving stop loss technique and optimizing parameters, the strategy can be made more robust.
 
-[/trans]
 
 > Strategy Arguments
 

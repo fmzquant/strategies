@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c07fd9959645e77419.png)
 
-[trans]
-
-## 概述
-
-本策略主要通过“唐奇安通道”指标来实现追踪型突破交易策略。该策略结合趋势和突破两种交易思路,在长线趋势判断的基础上,寻找较短周期的突破点进行 entries,实现在趋势行情中的顺势交易。此外,策略还设置止损和止盈水平,以控制每单交易的风险收益比。总体来说,该策略具有追踪趋势的优势,可以顺势而为,把握长线趋势机会。
-
-## 策略原理
-
-1. 设置“唐奇安通道”指标的参数,默认周期20;
-
-2. 设置EMA平滑移动均线,默认周期200; 
-
-3. 设置风险收益比,默认1.5;
-
-4. 设置突破回踩参数,分别为多头和空头;
-
-5. 记录上一突破是否为高点或低点;
-
-6. 多头信号:如果上一突破为低点,且价格高于唐奇安上轨且高于EMA均线,生成多头信号; 
-
-7. 空头信号:如果上一突破为高点,且价格低于唐奇安下轨且低于EMA均线,生成空头信号;
-
-8. 进入多头仓位后,设置止损为唐奇安下轨回撤5个点,止盈为风险收益比乘以止损距离;
-
-9. 进入空头仓位后,设置止损为唐奇安上轨回撤5个点,止盈为风险收益比乘以止损距离。
-
-通过这种方式,策略结合趋势判断和突破操作,能顺势而为,在长线趋势中捕捉较短周期的机会。同时,止损止盈设置可以控制单笔交易的风险收益情况。
-
-## 优势分析
-
-1. 追踪长线趋势,顺势而为,避免逆势交易。
-
-2. 唐奇安通道作为长线指标,结合EMA均线过滤,可以较好判断趋势方向。
-
-3. 止损止盈机制控制每单风险,可以限制可能的损失。
-
-4. 风险收益比优化,可以拉大盈亏比,追求超额收益。
-
-5. 回测参数设置灵活,可以针对不同市场调整最佳参数组合。
-
-## 风险分析
-
-1. 唐奇安通道和EMA均线作为过滤指标,可能发出错误信号。
-
-2. 突破交易容易被套,需要 identifty 明确趋势背景。 
-
-3. 止损止盈距离固定,无法根据市场波动程度做调整。
-
-4.  Parameters 优化空间有限,实盘效果难以保证。
-
-5. 交易系统经不起太多随机性事件的考验,黑天鹅事件可能造成较大亏损。
-
-## 优化方向
-
-1. 可以考虑加入更多指标进行过滤,例如震荡指标,提高信号质量。
-
-2. 可以设置智能止损止盈,根据市场波动程度和ATR指标动态调整盈亏位置。
-
-3. 可以采用机器学习等方法对参数进行测试和优化,使之更贴近真实市场。
-
-4. 可以优化入场逻辑,设置VOLUME或波动率指标作为辅助条件,避免陷阱。
-
-5. 可以考虑与趋势跟踪策略或机器学习结合,形成混合策略,提高稳定性。
-
-## 总结
-
-本策略作为一种追踪型突破策略,核心思路是在判断到长线趋势的前提下,以突破为信号进行顺势操作,并设定止损止盈控制单笔交易风险。该策略具有一定的优势,但也存在一些可优化空间。总体而言,如能处理好参数设定、入场时机选择等问题,并辅以其他技术进行增强,该策略可以成为一种实用的趋势跟踪策略。但投资者仍需谨记,任何交易系统都无法完全规避市场风险,需要做好风险管理。
-
-||
 ## Overview
 
 This strategy mainly uses the “Donchian Channel” indicator to implement a tracking breakout trading strategy. The strategy combines trend following and breakout trading ideas, seeking breakout points in shorter cycles based on identification of the major trend, in order to trade along the trend. In addition, the strategy sets stop loss and take profit levels to control the risk/reward of each trade. Overall, the strategy has the advantage of tracking the trend, and trading in the direction of the major trend.
@@ -145,7 +76,6 @@ In this way, the strategy combines trend following and breakout trading, to trad
 ## Conclusion
 
 This strategy is a tracking breakout strategy, with the logic of trading along the major trend identified, and taking breakout as entry signal, while setting stop loss and take profit to control risk per trade. The strategy has some advantages, but also room for improvements. Overall, with proper parameter tuning, entry timing, and enhancements with other techniques, it can become a practical trend following strategy. But investors should always keep in mind that no trading system can eliminate market risk entirely, and risk management is essential.  
-[/trans]
 
 > Strategy Arguments
 

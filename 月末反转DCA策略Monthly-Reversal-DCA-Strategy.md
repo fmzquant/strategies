@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略的目的是识别资产的短期下跌趋势结束点,在那个点固定投入一定金额购买资产。这样可以在资产反转开始后以较低的成本价格固定定投。
-
-## 原理
-
-该策略基于月时间框架操作。每月有240个1小时K线,用于判断趋势反转的时机。 
-
-具体来说,策略通过计算EMA快线和EMA慢线的差值EMA\_CD以及EMA\_CD的信号线,当快线上穿信号线时,判断短期下跌趋势结束,发出买入信号。
-
-在买入信号发出后,策略会在当月月末平仓。然后第二个月再重复这个过程,定期买入并持有一个月的时间。
-
-这样可以让我们在短期下跌结束的时候低吸,并且固定定投。
-
-## 优势
-
-这种策略最大的优势是可以过滤震荡行情,只在趋势反转点买入,从而以较优的价格固定定投。
-
-另外,采用EMA判断趋势反转点,可以比仅仅根据K线反转来判断更加稳定和准确。EMA能抹平短期市场噪音对买入时机的影响。
-
-最后,月末设置止损可以锁定每个月的投资业绩,限制单月最大亏损。
-
-## 风险
-
-该策略最大的风险在于买入后价格继续下跌,导致月末止损亏损。这种情况通常是判断反转失误造成的。 
-
-可以通过调整EMA周期参数来优化判断,或者结合其他指标如RSI来确认反转信号。
-
-另一个风险是止损点设置。止损点过小容易被短期波动止损,过大又限制不了损失。需要测试不同止损点来找到最优参数。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化EMA周期参数,找到判断趋势反转最优参数组合
-
-2. 增加其他指标过滤,如RSI,获确认反转信号
-
-3. 测试不同的止损点,找到最大限制亏损和不被套利的最优止损位置
-
-4. 可以考虑在止损基础上加入移动止损,根据价格实时调整止损位置
-
-5. 可以测试不同时间周期,如日线、周线操作,看哪个周期该策略效果最好
-
-## 总结
-
-本策略整体思路清晰简单,通过EMA指标判断短期趋势反转,并在反转点月末定投,可以有效过滤震荡市场,以较低价格定投。策略优化空间主要在参数优化和止损策略调整。总体来说,该策略는一种固定资产配置的优秀策略思路,值得进一步测试优化。
-
-||
 
 ## Overview
 
@@ -110,7 +58,6 @@ The strategy can be improved in the following areas:
 
 The overall idea of this strategy is simple and clear - using EMA to identify short-term trend reversals, and dollar cost average at reversal points monthly. It can effectively filter out choppy markets and invest at relatively low prices. The optimization space lies mostly in parameter tuning and stop loss techniques. Overall this is an excellent strategy concept for fixed asset allocation, worth further testing and enhancement.
 
-[/trans]
 
 > Strategy Arguments
 

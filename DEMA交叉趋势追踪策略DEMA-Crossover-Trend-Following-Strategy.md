@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ad583c41ddf8c8e92d.png)
-[trans]
-### 概述
-
-该策略基于双指数移动平均线(DEMA)的交叉作为交易信号,采用趋势追踪方式,自动设置止损和止盈。策略优点是交易信号清晰,止损止盈设置灵活,能够有效控制风险。
-
-### 策略原理
-
-1. 计算快线DEMA(8日)、慢线DEMA(24日)和辅助线DEMA(可配置)。
-
-2. 当快线上穿慢线产生金叉信号时,做多;当快线下穿慢线产生死叉信号时,做空。
-
-3. 添加交易信号过滤,只有当辅助线的当日值高于前一日时,才生成信号,避免假突破。
-
-4. 采用趋势追踪止损机制,止损线会随价格走势进行调整,确保止损点锁定部分利润。
-
-5. 同时设置固定比例止损和止盈,控制单笔交易最大损失和盈利。
-
-### 策略优势
-
-1. 交易信号清晰,容易判断进出场时机。
-
-2. 双DEMA算法更平滑,避免被过度优化,信号更可靠。 
-
-3. 辅助线过滤增加信号判断效果,减少假信号。
-
-4. 采用趋势追踪止损,可以锁定部分利润,有效控制风险。
-
-5. 设置固定比例止损止盈,控制单笔交易最大损失,避免超出风险范围。
-
-### 策略风险
-
-1. 在震荡行情中,可能产生频繁交易,容易posure增大,造成策略亏损。
-
-2. 设置固定止损比例过大,在异常行情中可能触发大额止损。
-
-3. DEMA交叉信号滞后,在快速行情中买入靠近行情高点,会增加亏损风险。
-
-4. 在部署实盘时,滑点成本会对盈利性造成影响,需要调整止盈止损参数。
-
-### 策略优化
-
-1. 可以根据市场情况调整DEMA参数,寻找最佳平衡点。
-
-2. 在实盘中要考虑滑点成本,适当扩大固定止损范围。
-
-3. 可以增加其他辅助判断指标,如MACD等,增强信号效果。 
-
-4. 可以设置追踪止损步进值,优化止损逻辑。
-
-### 总结
-
-该策略利用DEMA的趋势判断能力,结合趋势追踪机制控制风险,在Determine trend direction的交易策略体系中是非常典型的代表。总体来说,该策略信号清晰,止损止盈设置合理,是一种容易掌握、风险可控的交易策略。在实盘中结合滑点成本优化和辅助指标判断,可以获得较好的投资回报。
-
-||
 
 ### Overview
 
@@ -117,7 +63,6 @@ This strategy is based on the crossover of double exponential moving average (DE
 
 This strategy leverages DEMA's trend detection capability and combines it with trend following risk control methodologies. It is a very typical example in the Determine Trend Direction strategy system. In general this is a strategy with clear signals, sensible stop loss/profit taking configuration and controllable risks. When optimized for slippage costs and added with supplemental indicators in live trading, it can achieve good investment returns.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1eccbda23284af10bf9.png)
-[trans]
-
-## 概述
-
-该策略运用EMA均线系统和MACD指标来识别趋势方向,在EMA均线发生黄金交叉时判断为上涨趋势建立多单;而在EMA均线发生死亡交叉时判断为下跌趋势建立空单。为filter波动性过大的信号,策略中增加MACD指标在两个时间周期上交叉作为附加的确认条件。
-
-## 策略原理  
-
-该策略主要基于EMA均线和MACD指标来捕捉中长线的价格趋势。其中使用9期和21期EMA构建均线系统,9EMA快速响应价格变动而21EMA则相对稳定,当快线上穿慢线时生成黄金交叉信号判断为价格处于上涨趋势;反之,快线下穿慢线时生成死亡交叉信号则判断为价格转为下跌趋势。EMA交叉信号受到一定周期内价格波动的影响,为了过滤假信号,策略中增加基于默认参数的MACD指标在1小时和4小时两个时间周期上的交叉作为附加的确认条件。满足均线交叉和MACD交叉双重条件后开仓。  
-
-那么识别到价格反转趋势后如何确定入场和退出的时机呢?本策略判断价格在EMA均线上方时为涨势,在下方为跌势,所以在黄金交叉发生时如果收盘价高于EMA 21 则开多单;死亡交叉时如果收盘价低于EMA 21则开空单。这里的依据是均线价格的支撑和压力特性,打开仓位后设置止损和止盈价格以锁定盈利并控制风险。
-
-## 策略优势  
-
-1. 基于均线判断中长期趋势方向,再辅以MACD指标过滤假信号,可以有效识别价格反转点。
-
-2. EMA均线上下轨以及MACD多空转向的组合,形成了多重验证的交易信号。使策略可以在趋势较明显时进行交易。
-
-3. 通过在EMA均线附近开仓,利用均线的支持压力特征来设置止损止盈,可以获得较好的风险回报比。
-
-4. 相对比较长线的指标参数设置,避免被短期市场波动干扰信号,适合中长线趋势跟踪。
-
-## 策略风险  
-
-1. 均线系统及MACD指标都无法准确预测价格反转点,存在一定的滞后。如遇到突发事件导致快速调整可能入场过晚止损。
-
-2. EMA均线交叉并不一定代表真实趋势转折,如果本轮行情波动较大信号可能不可靠。
-
-3. MACD指标参数设置不当也可能误报信号或漏报信号,导致错过交易机会或错误入场。
-
-4. 作为趋势跟踪策略,容易被突发事件震荡的市场否定,一旦止损可能损失较大。
-
-## 策略优化方向  
-
-1. 测试调整EMA均线的长短周期数值,找到最优参数组合。例如调整为20和60日EMA。
-
-2. 测试MACD指标的参数来获取最稳定可靠的信号线组合。例如调整MACD的长短均线周期。
-
-3. 对止损止盈条件进行测试和优化,设置最合适的止损幅度。可根据收益风险比来综合判断。
-
-4. 增加其他指标signals作为EMA均线交叉的确认指标。例如KDJ指标或布林带指标的信号。
-
-5. 增加自适应止损策略,让止损线可以跟踪止盈线,改善风险控制的效果。
-
-## 总结  
-
-该策略整合EMA均线交易系统和MACD指标的优点,试图捕捉价格中长线趋势的转折点。在确认双重信号后选择最佳入场时机开仓,并设置止损止盈来锁定利润。通过参数优化和加入其他指标可以进一步增强信号的准确性。但需注意作为趋势跟踪策略,市场短期内的震荡可能增加其止损风险。总体而言,该策略基于简单易用的技术指标并形成多重验证机制,适用于跟踪中长线价格趋势,可获得较好的盈亏比。
-
-||
 
 ## Overview  
 
@@ -105,7 +56,6 @@ So when a trend reversal is identified, how to determine the entry and exit poin
 ## Conclusion   
 
 This strategy combines the strengths of EMA trading system and MACD indicator in an attempt to capture mid- to long-term trend reversal points. It enters positions upon confirming dual signals and set stop loss/profit taking levels to lock in profits. Further improvements on signal accuracy can be achieved through parameter optimization and incorporating additional indicators. Note that as a trend following strategy, it is vulnerable to whipsaws in the short term. Overall, building upon simple and intuitive technical indicators while forming multi-layer signal verification, this strategy suits for mid- to long-term trend tracking and can achieve decent risk-adjusted returns.
-[/trans]
 
 > Strategy Arguments
 

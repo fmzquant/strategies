@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13a5cd24001a94813b6.png)
 
-[trans]
-
-### 概述
-
-该策略是一个追踪波动率的双向交易策略。它使用平均真实波动率ATR指标来设置止损位,根据价格突破止损位的方向来判断趋势方向。在趋势方向发生转变时,进行反向开仓。
-
-### 策略原理  
-
-该策略使用3日ATR计算波动率。ATR值乘以一个系数作为止损位。当价格高于止损位时,判断为上升趋势,并在价格向下跌破止损位时平仓;当价格低于止损位时,判断为空头趋势,并在价格向上涨破止损位时平仓。在趋势发生转变时,进行反向开仓。止损位会在趋势保持不变时进行跟踪优化,在趋势转变时重新设置。
-
-### 优势分析
-
-- 利用ATR动态跟踪市场波动性,降低了止损位被突破的可能性
-- 双向交易,可以在市场双向波动中获利
-- 反向开仓点选取在趋势转变初期,增大获利概率  
-
-### 风险分析 
-
-- 市场可能出现剧烈波动,ATR无法充分反映实际波动度,导致止损被突破
-- 多头仓位有GAP风险
-- 可能频繁小额盈亏交易
-
-针对风险,可以适当加大ATR系数增加止损缓冲区,控制交易频率,设置最小止盈位等。
-
-### 优化方向
-
-- 结合其他指标判断趋势转变信号
-- ATR参数优化 
-- 加入交易量控制 
-
-### 总结
-
-本策略整体是一个稳定的双向跟踪止损策略。通过ATR指标动态设置止损位,控制了回撤风险。同时双向交易增加了盈利机会。通过进一步优化,可以使策略更稳定可靠、跟随趋势能力更强。
-
-||
 
 
 ### Overview
@@ -80,7 +45,6 @@ To mitigate risks: increase ATR coefficient for wider stop levels, limit trade f
 
 This is an overall stable dual-direction trailing stop strategy. ATR sets dynamic stop levels to control drawdowns. Dual-direction trading also increases profit chances. Further optimizations can make the strategy more robust, enhancing trend following capabilities.
 
-[/trans]
 
 > Strategy Arguments
 

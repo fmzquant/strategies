@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一种拉回系统,旨在为高波动性证券设计,因此比特币是一个非常理想的交易品种。该策略可以在日线图或更低时间框架(我在3小时时间框架上找到了良好的结果,但没有在1小时以下进行测试)上使用。
-
-## 策略原理
-
-该策略通过比较前两个K线的收盘价的变化来计算波动性,并用此价格变化生成一个移动平均线。在移动平均线上包裹一个标准差波带,内部为1个标准差,外部为2个标准差。如果价格高于预设的移动平均线过滤器,则确定我们处于上升趋势,所以在上升趋势时,如果有拉回导致内部标准差波带被刺破,则发出买入信号。但如果价格继续下跌并突破外部标准差波带,则不会发出买入信号,因为这表明波动率刺破过大。当内部波带被刺破时,指标上会显示绿色背景的刺破“买入”事件。 对于卖出/短线交易,则是在内部上部波带刺破且低于预设移动平均线滤波器时发出信号,指标上显示红色背景。
-
-用户可以改变他们想要测试的日期范围、计算波动率的移动平均周期和内外波带标准差。对于比特币,我将内部和外部标准差波带保留在标准设置,但发现3周期的波动率跟踪对于1天图表交易很好,5周期的波动率跟踪对于3小时图表则很好。由于这不是买入并持有策略,因此交易时您可能希望坚持最流动的币种,以便可以在任何交易所快速进出。如果要在较低波动的市场上测试此策略,则将内部标准差波带更改为约0.75可能适用于各种期货市场,可能也适用于股票。止损和止盈水平基于过去7根K线的交易范围。
-
-## 策略优势
-
-- 利用波动率交易,可捕捉市场转折点
-- 双向交易,可在上涨和下跌市场中获利
-- 标准参数设置简单易用
-- 可轻松优化参数以适应不同标的
-- 停损与止盈设定合理,有利锁定利润
-
-## 策略风险
-
-- 高波动标的存在亏损扩大的风险
-- 多空切换频繁,交易费用较高  
-- 短期操作,需密切注意市场变化
-- 标的流动性不足时难以止损
-- 参数不当可能导致过度交易
-
-风险应对方法:
-
-1. 选择适当的波动标的,控制单笔仓位。
-
-2. 优化参数,降低无效交易。
-
-3. 采用止盈止损,严格资金管理。
- 
-4. 注重交易执行效率,选择流动性好的标的。
-
-5. 调整参数以适应不同标的特性。
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线周期,以更好跟踪不同标的的波动率。
-
-2. 调整波动率带的参数,使其更贴近特定标的的波动范围。
-
-3. 增加其他过滤条件,如交易量放大,进一步验证交易信号。
-
-4. 利用机器学习技术动态优化参数,使策略更具适应性。
-
-5. 在更高频的时间框架上测试,以捕捉更多交易机会。
-
-6. 添加止盈止损移动跟踪,让利润更多地锁定在账户中。
-
-7. 结合其它指标或模型,建立量化组合策略。
-
-## 总结
-
-该策略整体较为简单直观,利用波动率指标识别反转情况,以捕捉市场转折点。策略优化空间较大,通过调整参数及结合其他技术指标,可以继续提升策略的稳定性和盈利能力。但交易者需要注意防范过度优化和曲线拟合的问题。此策略更适合短期交易,需要严格的资金管理以控制风险。如果掌握得当,该策略可以成为波动性高的数字货币交易的利器。
-
-||
 
 ## Overview
 
@@ -133,7 +70,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy overall is rather simple and intuitive, identifying reversals via volatility indicator to capture market turning points. There is large optimization space by adjusting parameters and incorporating other technical indicators to further enhance stability and profitability. However traders need to be aware of overfitting and curve fitting problems. This strategy suits short-term trading more, requiring strict money management to control risks. If mastered properly, it can become a powerful tool for trading high volatility cryptocurrencies.
 
-[/trans]
 
 > Strategy Arguments
 

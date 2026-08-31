@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种多指标组合的短线量化交易策略。该策略集合使用一组强大的技术指标,在低时间周期(如15分钟)产生交易信号。
-
-一、策略原理
-
-该策略的核心是使用多种指标的组合,主要包括:
-
-(1)双均线系统:计算一快一慢两个Hull移动平均线,根据其交叉关系判断趋势方向。
-
-(2)Ichimoku系统:计算转换线、基准线等,并结合云图形态判断趋势和支持阻力。
-
-(3)Donchian通道:通过最高价和最低价构建通道,判断价格突破。
-
-(4)MACD:计算MACD和信号线,并根据其交叉进行操作。
-
-当这些指标对趋势判断达成一致时,才会产生更可靠的交易信号。具体逻辑是:
-
-当快速Hull MA上穿慢速Hull MA,AND Ichimoku线上穿云图 AND Donchian通道突破 AND MACD上穿信号线时,做多;相反判断做空。
-
-同时,结合每日K线收盘价的变化作为辅助判断,避免被反转套牢。
-
-此外,策略含有止损和止盈逻辑,可以控制单笔交易的风险回报。
-
-二、策略优势
-
-该策略最大的优势是指标组合互补,能提高信号质量。不同指标从多个角度判断趋势,只有一致同意才产生信号,这避免了单一指标的局限性。
-
-其次,多时间周期组合也是一大优势。每日Kline的辅助判断可以过滤出短期Low周期被套的风险。
-
-最后,策略含有止损止盈机制也使每单交易的风险可控。
-
-三、潜在风险
-
-尽管该策略设计合理,但交易中也应注意以下风险:
-
-首先,多指标组合提高了参数优化难度,不当设置可能导致过优化。
-
-其次,在强势趋势中,止损可能被突破带来损失。
-
-最后,多时间周期判断也存在 complexesignals難以判断的情况。
-
-总体来说,该策略overall组合逻辑科学,可通过参数测试不断优化,成为有效的短线量化策略。
-
-四、内容总结
-
-本文详细介绍了一种多指标组合的短线量化交易策略。它使用双均线、Ichimoku、Donchian通道、MACD等指标进行组合,提高信号质量。同时使用多时间周期判断和止损止盈逻辑控制风险。总体来说,该策略经优化后可成为高效的短线量化交易系统。
-
-||
 
 This article introduces in detail a short-term algorithmic trading strategy combining multiple indicators. It utilizes a group of powerful technical indicators to generate trading signals on lower timeframes such as the 15-minute chart.
 
@@ -106,7 +57,6 @@ IV. Summary
 
 In summary, this article has introduced in detail a short-term algorithmic trading strategy combining multiple indicators. It uses a combination of dual moving averages, Ichimoku, Donchian Channel, MACD and more to improve signal quality. It also utilizes multi-timeframe analysis and stop loss/take profit logic to control risks. With optimization, this strategy can become an efficient system for short-term systematic trading.
 
-[/trans]
 
 > Strategy Arguments
 

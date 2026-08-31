@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1fee83701c0f24b1fee.png)
-[trans]
-
-## 概述
-该策略基于Nadaraya-Watson核回归方法构建了一个动态波动率包围带,通过跟踪价格与包围带的交叉情况,实现低买高卖的交易信号。策略具有数学分析基础,能够自适应市场变化。
-
-## 策略原理
-策略的核心是计算价格的动态包围带。首先,根据自定义的看回期,构建价格(收盘价、最高价、最低价)的Nadaraya-Watson核回归曲线,得到平滑化的价格估计。然后基于自定义的ATR长度计算ATR指标,结合近端因子和远端因子,得到上下包围带的范围。当价格从下包围带下方突破进入包围带,产生买入信号;当价格从上包围带上方突破离开包围带,产生卖出信号。该策略通过跟踪价格与波动率相关的统计属性,动态调整交易决策。
-
-## 策略优势
-1. 基于数学模型,参数可控,不容易产生过度优化
-2. 自适应市场变化,利用价格与波动率的动态关系捕捉交易机会  
-3. 采用对数坐标,能够很好处理不同时间周期和波动幅度的品种
-4. 可自定义参数调整策略的灵敏度
-
-## 策略风险
-1. 数学模型理论化,实盘表现可能不如预期
-2. 关键参数选取需要经验,不当设置可能影响收益
-3. 存在一定的滞后,可能错过部分交易机会
-4. 大幅震荡市场中容易出现错误信号
-
-主要通过优化参数,做好回测,了解影响因素,谨慎实盘来规避和减少这些风险。
-
-## 策略优化方向 
-1. 进一步优化参数,找出最佳参数组合
-2. 利用机器学习方法自动优选参数
-3. 增加过滤条件,在特定市场环境下激活策略
-4. 结合其他指标过滤误导信号
-5. 尝试不同的数学模型算法
-
-## 总结
-该策略整合统计分析与技术指标分析,通过动态跟踪价格与波动率,实现低买高卖的交易信号。可根据市场和自身情况调整参数。整体来说,策略理论基础坚实,实际表现还有待进一步验证。需要谨慎看待,审慎实盘。
-
-||
 
 
 ## Overview
@@ -74,7 +41,6 @@ Proper optimization, sufficient backtest, understanding key factors and prudent 
 
 ## Conclusion  
 The strategy incorporates statistical analysis and technical indicators analysis to generate trading signals by dynamically tracking the relationship between price and volatility. The parameters can be adjusted based on market conditions and personal needs. Overall speaking, despite the solid theoretical foundation, its actual performance still needs further verification. One should treat it prudently and trade cautiously.  
-[/trans]
 
 > Strategy Arguments
 

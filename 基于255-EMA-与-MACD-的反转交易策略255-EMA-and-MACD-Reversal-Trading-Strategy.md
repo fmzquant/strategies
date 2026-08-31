@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用 255 周期的 EMA 和 MACD 指标来寻找反转交易机会。当价格远离 255 EMA 时,在 MACD 发生金叉或死叉时进行反向进入。
-
-## 策略原理
-
-1. 使用 255 周期 EMA 作为中长期趋势的判断。价格远离 EMA 代表进入超买超卖区域。
-
-2. EMA 上方设定上轨,EMA 下方设定下轨,轨道宽度通过 ATR 指标动态调整。
-
-3. 当价格高于上轨时为超买区,当价格低于下轨时为超卖区。这些情况下等待反转信号出现。 
-
-4. MACD 指标采用标准参数(12,26,9)。当 MACD 金叉时为多头信号,死叉时为空头信号。
-
-5. 结合 EMA 超买超卖和 MACD 信号,在价格远离 EMA 时且 MACD 发生反转时,采取反向进入。
-
-## 优势分析
-
-1. 使用 255 周期 EMA 可以比较好地判断中长期趋势方向。
-
-2. MACD 金叉死叉可以较敏感地捕捉短期反转机会。
-
-3. EMA 上下轨场设定可以判断超买超卖区域,避免在趋势中随波逐流。
-
-4. 反向交易策略,可以在价格反转前进入,具有一定的计划性。
-
-5. 采用动态 ATR 止损可以有效控制风险。
-
-## 风险分析
-
-1. MACD 信号可能出现假反转,导致不必要的损失。
-
-2. 强势趋势情况下反转失败概率较大,应避免盲目反转。
-
-3. 止损设置过小可能导致止损被触发,设置过大可能控制风险不足。
-
-4. 参数设置不当也会影响策略效果,需要经过反复测试优化。
-
-5. 交易费用也会影响最终收益,需要考虑其对策略的影响。
-
-## 优化方向
-
-1. 可以测试不同的 EMA 周期参数,寻找更合适的中长期趋势判断指标。
-
-2. 可以尝试其他指标结合 EMA 来判断超买超卖区域。例如布林带,KD,RSI 等。
-
-3. MACD 参数也可以进行优化,找到更敏感或者稳定的组合参数。
-
-4. 可以测试其他止损方式,例如 trailing 止损来锁定利润。
-
-5. 可以根据不同品种不同周期进行参数优化,使策略更具适应性。
-
-6. 可以结合趋势力度指标,避免强势趋势中反转。
-
-## 总结
-
-该策略整合 EMA 中长期趋势判断和 MACD 短期反转信号,在超买超卖区域反向交易,是一个基础的反转策略。该策略有一定的优势,但也存在一些风险需要防范。通过继续优化参数以及风险控制,该策略可以成为一个具有效率的量化交易策略。但任何策略都需要根据市场环境调整,不能橙子化,盲目跟单。
-
-||
 
 ## Overview
 
@@ -130,7 +69,6 @@ This strategy uses the 255-period EMA and MACD indicator to identify reversal tr
 
 This strategy combines EMA mid-to-long trend and MACD short-term reversals, trading reverse at overbought/oversold regions. It's a basic reversal strategy with pros and cons. Further parameter tuning and risk control can turn it into an efficient trading system. But any strategy needs adaptive adjustments per market environments, not mechanical signals.
 
-[/trans]
 
 > Strategy Arguments
 

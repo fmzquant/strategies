@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1234b37627725a57fb0.png)
-[trans]
-
-## 概述
-
-本策略基于两个著名的指标:相对强弱指标(RSI)和加权移动平均线(Weighted Moving Average,WMA),用来识别市场趋势并跟踪其方向。RSI用来判断超买超卖,WMA用来判断价格趋势,二者结合使用可以有效过滤掉不相关的信号,提高获利概率。这是一个中长期策略,同时结合了资金管理方法,可以根据盈亏情况调整仓位。
-
-## 策略原理
-
-### RSI指标  
-
-RSI是最广为人知的超买超卖指标之一。其公式为:
-
-$$RSI = 100 - \frac{100}{1+\frac{AvgGain}{AvgLoss}}$$
-
-其中AvgGain为一定周期内收盘价高于开盘价的日数的收盘价之和除以天数,AvgLoss 为收盘价低于开盘价的日数的收盘价绝对值之和除以天数。
-
-本策略将RSI周期设定为20,作为判断趋势的指标。当RSI大于60时产生多头信号,小于40时产生空头信号。  
-
-### 加权移动平均线WMA  
-
-WMA相比SMA更加强调近期价格。其计算公式为:
-
-$$WMA = \frac{\sum_{i=1}^n w_i x_i}{\sum_{i=1}^n w_i}$$  
-
-w为权重,随着i的增加w呈指数增长。本策略采用的权重公式为:
-
-$$w = \begin{cases} 100/(4+(n-4)*1.3), & i <= 3 \\ 1.3*w, & i > 3 \end{cases}$$  
-
-即最近3天的权重相同,之后每往前1天权重增加1.3倍。这样可以强调近期价格的影响。  
-
-本策略中,WMA的长度为20天。
-
-### 策略信号
-
-多头信号:RSI > 60 且 WMA 20天 ROC < -1  
-空头信号:RSI < 40 且 WMA 20天 ROC > 1
-
-其中WMA的20天ROC的计算公式为:
-
-$$ROC = (WMA_{今日}/WMA_{20天前} - 1) \times 100$$
-
-## 策略优势  
-
-- 利用RSI判断趋势方向,避免被震荡市耗尽资金
-- WMA通过近期加权降低噪音,判断主要趋势
-- RSI和WMA ROC结合使用,可以有效过滤无关信号
-- 采用多个ATR随机止盈,追踪止盈可以灵活锁定利润 
-- 资金管理方法可以根据损益情况调整仓位规模,控制风险
-
-## 策略风险
-
-- 策略参数不当可能导致交易频繁,建议优化参数
-- 止损点设定不当可能扩大损失
-- 作为趋势跟踪策略,不适合震荡盘整理市
-- 需关注宏观环境变化,必要时手动平仓
-
-## 策略优化方向  
-
-- 对RSI长度、WMA长度、ROC阈值进行测试,找到最优参数组合
-- 测试不同的资金管理方法,找到最佳仓位调整方案  
-- 增加其他指标判断,进一步过滤信号
-- 结合止损策略,降低单笔损失风险  
-- 优化止盈策略,在趋势中尽可能追加利润
-
-## 总结  
-
-本策略综合运用RSI和WMA两个指标判断趋势方向,以中长线博取主要趋势的利润。同时利用资金管理和止盈策略控制风险,具有一定的实战价值。但参数设置和止损机制都需要不断测试和优化,才能获得更好的效果。建议投资者在实盘中审时度势,必要时手工干预,始终做到风险可控。
-
-||
 
 ## Overview  
 
@@ -146,7 +77,6 @@ $$ROC = (WMA_{today}/WMA_{20\_days\_ago} - 1) \times 100$$
 
 This strategy combines RSI and WMA to determine trend direction, aiming to profit from major trend over medium/long term. Money management and profit taking strategies also used to control risks. It has practical value but parameter settings and stop loss mechanism need continuous testing and optimization for better results. Investors should assess situation, intervene manually if necessary, and ensure controllable risks.
 
-[/trans]
 
 > Strategy Arguments
 

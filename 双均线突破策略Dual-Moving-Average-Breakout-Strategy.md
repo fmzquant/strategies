@@ -9,60 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-双均线突破策略是一种非常简单的移动平均线交易策略。它使用快速移动平均线和慢速移动平均线的突破来产生交易信号。当快速移动平均线从下方突破慢速移动平均线时,进行买入操作。当快速移动平均线从上方突破慢速移动平均线时,进行卖出操作。
-
-## 策略原理
-
-该策略使用了两组移动平均线,包括快速移动平均线(mafast、mafastL)和慢速移动平均线(maslow、maslowL)。快速移动平均线参数设置较小,能够快速响应价格变动;慢速移动平均线参数较大,具有平滑价格的效果。
-
-当短期价格走势收敛于长期价格趋势时,就会产生快速移动平均线和慢速移动平均线的交叉。根据交易信号,进行买入或卖出操作。
-
-该策略利用了移动平均线的Golden Cross(金叉)和Death Cross(死叉)交易信号。当短期均线由下往上突破长期均线时,为金叉信号,表示看涨;当短期均线由上往下突破长期均线时,为死叉信号,表示看跌。
-
-## 策略优势分析
-
-- 使用双均线过滤增加信号的可靠性。单一均线容易产生假信号,双均线能有效过滤市场噪音。
-
-- 快慢均线配合使用,能够有效捕捉趋势的变化。快线响应迅速,慢线滤波效果好。
-
-- 策略思路简单清晰,容易理解和实现,适合新手学习。
-
-- 可自定义均线周期参数,适应不同市场环境。
-
-## 策略风险分析
-
-- 均线策略容易产生滞后,特别是在趋势快速变化的场景下。
-
-- 需要优化均线参数,不同周期参数对结果影响很大。
-
-- 双均线策略只适合趋势明显的市场,不适合盘整市场。
-
-- 交易频率可能较低,存在长时间无交易的情况。
-
-- 需要严格控制止损,避免出现大额浮亏。
-
-## 策略优化方向
-
-- 对均线周期参数进行测试和优化,找到最佳参数组合。可以通过统计学方法寻找最优参数。
-
-- 增加成交量的过滤,避免在成交量不足时产生错误信号。
-
-- 结合其他技术指标,如MACD、RSI等,形成综合交易系统,提高信号准确率。
-
-- 增加止损策略,如跟踪止损、转仓止损等,主动控制风险。
-
-- 优化仓位管理,不同市场采用不同的仓位和资金管理策略。
-
-## 总结
-
-双均线突破策略整体思路简单清晰,使用双均线过滤可以提高信号质量,快慢均线配合可以有效捕捉趋势变化。但该策略也存在滞后、误报等问题。可以通过优化参数、增加过滤条件、止损策略等方式进行改进。总体来说,双均线策略适用于趋势明显的市场,可以作为新手学习的入门策略。
-
-||
 
 
 ## Overview
@@ -115,7 +61,6 @@ The strategy utilizes the golden cross and death cross trading signals of moving
 
 The dual moving average breakout strategy has simple and clear logic. Dual MAs improve signal quality and fast-slow MAs capture trend changes well. But it also has lags and false signals. Improvements can be made by optimizing parameters, adding filters, applying stop loss etc. Overall, it is suitable for trending markets and a good starter strategy to learn.
 
-[/trans]
 
 > Strategy Arguments
 

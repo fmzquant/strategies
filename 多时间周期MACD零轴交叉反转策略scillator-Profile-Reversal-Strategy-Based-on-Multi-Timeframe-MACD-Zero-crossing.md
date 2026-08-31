@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7a422427830a290110.png)
-[trans]
-## 概述
-多时间周期MACD零轴交叉反转策略通过计算不同周期的MACD指标,识别价格可能反转的信号,采用趋势跟踪止损方式,追求较高的资金利用效率。
-
-## 策略原理  
-该策略同时计算3周期和10周期的SMA移动平均线,构建快慢线,再计算MACD指标和信号线。当快线和信号线发生向上或向下的零轴交叉时,说明价格达到临界点,有可能出现反转。此外,该策略还结合了成交量的多空态势判断、RSI指标等,来识别反转信号的可靠性。当反转信号达到一定可靠性要求时,做多或做空。
-
-具体来说,策略通过以下方法判断价格反转:
-1. MACD零轴交叉,说明价格达到临界点  
-2. 成交量的买卖压力判断多空态势  
-3. RSI指标看涨跌势力,结合MACD斜率变化,判断反转信号强度   
-4. 快线和信号线反向交叉,形成反转信号
-
-当反转信号可靠性较高时,策略采用趋势跟踪止损方式入场,追求较高收益。
-
-## 优势分析
-该策略具有以下几个优势:  
-
-1. 多指标判断,使反转信号更加可靠  
-2. 采用MACD零轴交叉判断反转点位,精准度较高  
-3. RSI指标和成交量辅助判断,可靠性高  
-4. 趋势跟踪止损方式,追求较高资金利用效率  
-
-## 风险分析  
-该策略也存在一些风险:  
-
-1. MACD指标发出假信号的概率较大,容易被套住  
-2. 多空交替过程中,止损被击穿概率较大  
-3. 参数设置不当可能导致过于频繁交易,增加交易成本和滑点损失  
-
-可以通过以下方式减少风险:
-1. 适当放宽止损幅度,避免被套  
-2. 优化参数,降低交易频率  
-3. 只在关键支撑阻力位附近考虑入场  
-
-## 优化方向  
-该策略还可进一步优化的方向包括:  
-
-1. 增加机器学习算法,辅助判断反转信号可靠性  
-2. 增加情绪指标判断多空心理面  
-3. 结合关键支撑阻力位,提高入场精确度  
-4. 优化止损方式,进一步提高资金利用效率  
-5. 测试最优参数组合,降低交易频率  
-
-## 总结  
-多时间周期MACD零轴交叉反转策略,综合考量了价格、成交量和波动指标等多个维度的信息,通过多指标判断确定反转入场时机,在盈利充分后及时止损,能够在反转行情中获得较好收益。该策略有望通过机器学习和关键位优化等方式进一步改进,以减少交易频率和风险,提高盈利空间。
-
-||
 
 ## Overview  
 The 3 10.0 Oscillator Profile Reversal strategy identifies potential price reversals by calculating MACD indicators across different timeframes. It adopts a trend-following stop loss approach to pursue higher capital efficiency.  
@@ -105,7 +57,6 @@ The strategy can be further optimized through:
 ## Conclusion
 The multi timeframe MACD zero-crossing reversal strategy comprehensively considers price, volume and volatility indicators to determine entry timing through multi-indicator evaluation. It sets timely stop loss upon sufficient profitability. It can achieve good returns during reversal markets. Further improvements on machine learning and key level integration may lower risks and trading frequencies while improving profitability.
 
-[/trans]
 
 > Strategy Arguments
 

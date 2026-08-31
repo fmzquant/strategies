@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11de078ac7823da9f15.png)
-[trans]
-## 概述
-三指数均线止盈止损策略是一种基于三条不同周期的指数移动平均线进行入市出市的趋势跟踪策略。它同时使用平均真实波幅指标设置止盈止损位,实现风险管理。
-
-## 策略原理
-该策略使用三条指数移动平均线:快线、中线、慢线。当中线上穿慢线时做多;当快线下穿中线时平仓。这是一个典型的趋势跟踪策略,通过三条均线的多空转换判断趋势方向。
-
-同时,该策略利用平均真实波幅指标计算止盈止损位。具体来说,多单止盈位为进场价格+平均真实波幅*止盈系数;空单止盈位为进场价格-平均真实波幅*止盈系数。止损原理与止盈相似。这可以有效限制单边风险。
-
-## 优势分析
-1. 决策指标直观清晰,容易理解实现。
-2. 系统性强,容易量化。
-3. 兼顾趋势跟踪和风险控制。
-
-## 风险分析
-1. 存在一定的滞后,无法及时捕捉转折。
-2. 震荡趋势中容易止损。
-3. 参数设置需要优化,否则实现效果不佳。
-
-风险应对措施包括:适当缩短均线周期,优化止盈止损系数,添加其他决策指标辅助判断。
-
-## 优化方向 
-1. 多种均线指标组合,寻找最佳参数。
-2. 增加其他技术指标判断,如MACD、RSI等。
-3. 采用机器学习算法自动优化参数。
-4. 基于真实波幅动态调整止盈止损位。
-5. 结合情绪指标避免过度拥挤交易。
-
-## 总结
-该策略总体来说是一种效果稳定的趋势跟踪策略,简单参数设置,容易实现。通过平均真实波幅的动态止盈止损,可以限制单边风险。但需要注意参数优化和指标组合,防止过度优化和决策滞后。总体而言,风险收益平衡较好,值得考虑。
-
-||
 
 ## Overview
 The Triple Exponential Moving Average Profit Taking and Stop Loss Strategy is a trend-following strategy based on three exponential moving averages with different periods for market entry and exit. It also uses the Average True Range indicator to set profit-taking and stop-loss levels for risk management.
@@ -73,7 +41,6 @@ Risk mitigation measures include: shortening moving average periods, optimizing 
 ## Conclusion
 Overall this is an effective trend-following strategy with stable performance and easy implementation via simple parameters. The dynamic profit taking and stop loss based on Average True Range limits per-side risk. But parameter optimization and indicator combinations need to be done carefully to prevent overfitting or decision lag. On balance, this strategy has good risk-reward profile and is worth considering.
 
-[/trans]
 
 > Strategy Arguments
 

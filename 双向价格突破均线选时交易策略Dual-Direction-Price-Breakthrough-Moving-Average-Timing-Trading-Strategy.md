@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/151515d2c8e2d28ddd8.png)
-[trans]
-
-## 概述
-
-双向价格突破均线选时交易策略(Dual Direction Price Breakthrough Moving Average Timing Trading Strategy)是一个利用价格突破均线来判断买卖时机的量化交易策略。该策略使用价格与指定周期的移动平均线做比较,根据价格上穿或下穿均线来产生交易信号。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 使用EMA函数计算指定周期(如200天)的移动平均线(EMA)。
-
-2. 比较收盘价与EMA的大小关系,判断价格是否突破EMA。具体来说,当天收盘价大于EMA时,认为价格上穿EMA;当天收盘价小于EMA时,认为价格下穿EMA。
-
-3. 根据上穿和下穿来判断买卖时机。当价格上穿EMA时,产生买入信号;当价格下穿EMA时,产生卖出信号。
-
-4. 在产生信号时,按一定比例(如全仓)下单,然后设置止损和止盈价格。
-
-5. 当价格达到止损或止盈价格时,平掉头寸。
-
-6. 如此循环,利用价格突破均线的时机性来获利。
-
-该策略简单直接,容易理解和实现。通过捕捉短线上的突破信号来获得较好的时机性。但也存在一定的滞后性和多次震荡的风险。
-
-## 策略优势
-
-- 策略逻辑简单清晰,容易理解和验证。
-- 利用均线特征,有一定的趋势跟踪能力。
-- 交易次数多,适合短线操作。
-- 可以快速响应价格变化,捕捉较好的时机。
-
-## 策略风险
-
-- 有一定的滞后性,可能漏掉价格最初的突破。
-- 多次突破震荡时,容易产生交易频繁的问题。
-- 大幅反转时,止损有被套的可能。
-
-可以通过参数调整来优化,比如调整均线参数,使用更高效的指标判断,降低交易频率等方法。也可以设置adaptive止损或引入过滤条件等手段来控制风险。
-
-## 策略优化方向  
-
-- 尝试不同类型和参数的均线指标,寻找更优解。如EMA,SMA,LWMA等。
-- 增加过滤条件,避免多次震荡交易。如引入成交量,布林线,ATR等辅助判断。  
-- 优化和测试止损止盈策略,降低风险。
-- 结合趋势和反转等多种策略思路,建立综合性的交易体系。
-- 增加参数化配置,使策略更具普适性。
-
-## 总结  
-
-本策略整体较为简单直观,核心思路是跟踪均线来捕捉价格的短期突破。优点是反应敏捷,易于实现;缺点是滞后性和迟缓性。后期可从指标选择、止损机制、过滤手段等方面进行优化,使策略更加稳定和全面。
-
-|| 
 
 ## Overview  
 
@@ -112,7 +60,6 @@ Optimization methods include parameter tuning, using more effective indicators, 
 
 The strategy has relatively simple logic of tracking moving averages to capture short-term momentum. Advantages include responsiveness and ease of use; disadvantages include lagging and inertia. Further optimizations can be done on indicator selection, stop loss mechanisms, filtering techniques to make the strategy more solid and comprehensive.  
 
-[/trans]
 
 > Strategy Arguments
 

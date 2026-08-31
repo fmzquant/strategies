@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1218162083385551378.png)
 
-[trans]
-
-
-## 概述
-
-本策略运用假设检验的方法判断ATR是否偏离均值,结合对价格走势的预测,实现了一个基于ATR的均值回复交易策略。当ATR出现显著偏离时,表明市场可能存在反常波动。此时,如果价格走势预测为看涨,则可以建立做多头寸。
-
-## 策略原理
-
-1. 假设检验
-
-    - 快速ATR周期(参数atr_fast)与慢速ATR周期(参数atr_slow)进行两样本t检验。假设检验的零假设H0为两样本均值无显著差异。
-
-    - 如果检验统计量高于阈值(参数reliability_factor指定的置信区间),则拒绝原假设,即认为快速ATR已明显偏离慢速ATR。
-
-2. 价格走势预测
-    
-    - 计算对数收益率的移动平均作为预期漂移率(参数drift)。
-    
-    - 如果漂移率上升,则判断目前为看涨趋势。
-
-3. 入场及止损退出
-
-    - 当快慢ATR差异显著且趋势看涨时,做多入场。
-    
-    - 随后利用ATR计算持续调整止损线。当价格跌破止损线时止损退出。
-
-## 优势分析
-
-- 利用假设检验判断ATR异常偏离更科学、参数自适应。
-
-- 结合价格趋势预测,避免了仅凭ATR偏离做出错误交易。
-
-- 持续调整止损,降低亏损风险。
-
-## 风险分析
-
-- 价格出现断崖式下跌时,无法止损。
-
-- 趋势判断存在错误,可能买入最高点。
-
-- 参数设置不当,将错过正确的交易时点或者增加不必要的交易。
-
-## 优化建议
-
-- 可考虑加入其它指标进行多因子确认,避免单一指标造成错误交易。
-
-- 可以测试不同的ATR参数组合,找到更稳定的参数。
-
-- 增加对突破关键价格关口的判断,避免买入假突破。
-
-## 总结
-
-本策略总体思路清晰,利用假设检验判断反常波动的思路可取。但ATR偏离并不能完全判断趋势,需增加判断依据提高准确性。止损规则可靠,但无法应对断崖式下跌。未来可从入场条件、参数选择、止损优化等方面进行改进。
-
-||
 
 
 ## Overview
@@ -121,7 +65,6 @@ This strategy uses hypothesis testing to determine if ATR deviates from its mean
 
 The overall logic of this strategy is clear. Using hypothesis testing to detect abnormal volatility is reasonable. However, ATR deviation alone is insufficient to determine trend. More confirming factors are needed to improve accuracy. The stop loss rules are reliable but ineffective against cliff-style crashes. Future improvements can be made in areas like entry criteria, parameter selection, stop loss optimization.
 
-[/trans]
 
 > Strategy Arguments
 

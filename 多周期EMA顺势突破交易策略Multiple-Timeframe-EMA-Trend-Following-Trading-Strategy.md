@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/139880d00875d9ca789.png)
-[trans]
-
-### 概述
-
-该策略是一种基于多周期指数移动平均线(EMA)的趋势跟踪和顺势突破交易策略。它同时结合了5个不同周期的EMA,具有较强的趋势识别能力,可以顺势捕捉中长线价格运动。
-
-### 策略原理  
-
-1. 计算5个不同周期的EMA,具体为12周期、15周期、18周期、21周期和24周期的EMA。
-
-2. EMA排序:EMA12 > EMA15 > EMA18 > EMA21 > EMA24 作为买入信号;EMA12 < EMA15 < EMA18 < EMA21 < EMA24 作为卖出信号。
-
-3. 只有在用户设定的起始日期之后,才会触发交易信号。
-
-4. 当触发买入信号时,执行长仓开仓操作;当触发卖出信号时,执行短仓开仓操作。
-
-该策略通过组合多个EMA,形成一个趋势通道,利用通道内外轨的关系判断价格趋势方向。EMA周期设置比较接近,可以提高对突破信号的敏感性,同时也避免被短期市场噪音误导。此外,允许用户自定义策略的起始日期,可实现更大的灵活性。
-
-### 优势分析
-
-1. 使用多组EMA形成趋势通道,识别趋势的能力较强。
-
-2. EMA周期设置接近,对趋势突破信号灵敏,可及时捕捉中长线趋势。  
-
-3. 可自定义策略起始日期,使用灵活。
-
-4. 资金管理可定制,可控制单笔订单规模。
-
-5. 交易规则清晰简单,适合趋势跟踪。
-
-### 风险分析
-
-1. EMA本质具有滞后性,可能错过短期剧烈波动。 
-
-2. 突破交易容易被套,需要合理止损。
-
-3. 趋势反转时容易形成重大损失。
-
-4. 需要选择合适的股票品种,不适用于波动性过大的股票。
-
-相应的风险控制和优化措施:
-
-1. 适当调整EMA参数,优化周期组合。
-
-2. 增加其他指标过滤,确定趋势方向。 
-
-3. 合理设置止损点,控制单笔损失。
-
-### 优化思路
-
-1. 增加其他指标组合,例如MACD、KDJ等,提高策略效果。
-
-2. 添加交易量的条件判断,避免虚假突破。
-
-3. 优化EMA的周期参数,寻找最佳组合。
-
-4. 在特定时间段停止交易,规避市场波动期。
-
-5. 采用机器学习方法动态优化EMA周期和参数。
-
-### 总结
-
-该策略总体而言是一个较为典型的趋势跟踪策略。它利用EMA的优点,通过组合多个EMA形成交易通道,当价格突破通道时产生交易信号。策略优点是交易规则简单清晰,容易跟踪中长线趋势;缺点是对短期市场噪音敏感,存在一定的滞后性。通过适当调整参数以及加入其他辅助工具的优化,可以提高策略稳定性和效果。它适合有一定交易经验的投资者使用。
-
-|| 
 
 ### Overview  
 
@@ -139,7 +74,6 @@ Corresponding risk management and optimizations:
 
 In general, this is a typical trend following strategy. It capitalizes on the advantages of EMAs by forming a trading channel using multiple EMAs and generating trading signals when price breaks out of the channel. The pros are simple and clear trading rules which make it easy to follow mid-to-long term trends. The cons are sensitivity to short-term market noise and inherent lagging effect. Proper parameter tuning and optimizations like adding other assisting tools can improve the stability and performance. It suits investors with some trading experience.
 
-[/trans]
 
 > Strategy Arguments
 

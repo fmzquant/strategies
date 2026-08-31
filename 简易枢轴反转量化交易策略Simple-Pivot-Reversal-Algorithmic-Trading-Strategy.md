@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bf96cfa71317df7201.png)
-[trans]
-
-### 概述
-
-本策略基于枢轴点的突破来进行反转交易。它会计算指定周期的最高价和最低价,以此确定枢轴高点和枢轴低点。当价格超过枢轴高点时,做空;当价格低于枢轴低点时,做多。这是一个典型的短线反转策略。
-
-### 策略原理
-
-该策略的核心逻辑是计算枢轴高点和枢轴低点。枢轴高低点的计算公式如下:  
-
-枢轴高点 = 最近N1根K线的最高价之和 / N1 
-
-枢轴低点 = 最近N2根K线的最低价之和 / N2
-
-其中N1和N2是可以设置的两个参数,代表计算枢轴点所需要的K线数量。
-
-计算出枢轴高低点后,策略就可以进行交易了。具体交易规则是:
-
-1. 当价格上穿枢轴高点时,做空仓位
-2. 当价格下破枢轴低点时,做多仓位
-3. 持仓后设置止损位
-
-这样,它就实现了一个基于枢轴点突破的短线反转策略。
-
-### 优势分析
-
-这是一个非常简单的反转策略,具有如下优势:
-
-1. 原理简单,容易理解和实现
-2. 适合短线频繁交易
-3. 可以捕捉突破枢轴后的反转行情
-4. 可以通过调整参数进行优化
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 反转失败的风险。枢轴点突破后的反转不一定会成功,存在继续原趋势运行的可能。
-2. 止损被击破的风险。设置的止损价格可能会被突破,造成较大损失。
-3. 参数不当带来的风险。如果参数设置不当,将严重影响策略效果。
-
-可以通过调整参数、设置离场策略等方法来控制这些风险。
-
-### 优化方向  
-
-该策略还有很大的优化空间:
-
-1. 结合其他技术指标,确定更准确的入场时机
-2. 增加离场条件,例如移动止损、盈利后止损等
-3. 动态调整参数,让策略更具有适应性
-4. 优化参数,找到最佳的参数组合
-
-### 总结  
-
-本策略是一个非常简单的短线枢轴反转策略。它的优点是简单易理解,适合频繁交易,可以捕捉反转行情。但也存在一定的风险,需要进一步优化以减少风险。总体来说,这是一个非常适合新手练习的策略,也为高级策略奠定了基础。
-
-||
 
 ### Overview  
 
@@ -122,7 +65,6 @@ There is large room for optimization:
 
 In summary, this is a very simple short-term pivot reversal strategy. Its advantages are simplicity and ability to capture reversals. But there are some risks that need to be addressed through optimization. Overall this serves as a good practice strategy for beginners and builds foundation for advanced strategies.
 
-[/trans]
 
 > Strategy Arguments
 

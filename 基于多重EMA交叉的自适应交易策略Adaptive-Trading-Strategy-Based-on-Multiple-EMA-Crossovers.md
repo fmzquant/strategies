@@ -9,37 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过多组EMA指标组合实现自适应的多空交易。根据市场长短线趋势采用不同参数的EMA指标判断入场和出场。策略自动识别多空行情,采用独立的止损机制控制风险。
-
-## 策略原理
-
-该策略主要利用了EMA指标的交叉原理进行操作。当快线上穿慢线时看多,下穿看空。它同时设置多组EMA,根据市场长短线态势选择不同的参数进行交易。具体来说,判断长线为看多时,用一组较长周期EMA指标判断做多信号;长线看空时,用另一组较短周期EMA判断做空时机。平仓也采用不同周期EMA。 止损根据当前持仓方向以固定比例 trailing stop。
-
-## 优势分析
-
-- 多组EMA自适应判断,对不同市场更灵活。
-- 区分多空市场,使交易信号更清晰。
-- 独立参数的开平策略,出入场精准。
-- 固定比例移动止损,有效控制风险。
-- 策略思路直观简单,容易理解和实施。
-
-## 风险及优化  
-
-- EMA容易产生假信号,参数设置关键。
-- 固定止损难以跟踪大幅波动。
-- 应加入量能指标等过滤器,提升策略稳定性。
-- 可使用机器学习算法自动优化参数。
-- 考虑将止损改为动态设定,如ATR止损。
-
-## 总结
-
-该策略利用多组EMA交叉实现自适应效果,既保持了EMA原有的优势,又使策略更具弹性。加入适当过滤条件和动态止损后,可成为一个非常实用的自动化交易系统。
-
-||
 
 
 ## Overview
@@ -70,7 +39,6 @@ The strategy mainly utilizes the crossover principle of EMA indicators. Long whe
 
 The strategy achieves adaptive effect leveraging multiple EMA crossovers, keeping EMA’s advantages and making the strategy more flexible. With proper filters and dynamic stops added, it can become a highly practical automated trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16c91ebd56c0969fbb3.png)
-[trans]
-## 概述
-
-四均线多时间框架趋势策略是一种基于4个不同周期的双指数移动平均线(DEMA)构建多时间框架判断趋势方向的策略。该策略同时利用10日线、15日线、21日线和30日线四条均线判断价格趋势,通过多时间框架过滤误报机会,寻找高概率的趋势方向。
-
-## 策略原理
-
-该策略通过计算10日、15日、21日和30日四条双指数移动平均线,并比较其大小关系来判断行情趋势方向。具体规则如下:
-
-1. 计算10日线DEMA、15日线DEMA、21日线DEMA和30日线DEMA。
-
-2. 当10日线上穿15日线,15日线上穿21日线,21日线上穿30日线时,判断为多头趋势形成,做多。
-
-3. 当30日线下穿21日线,21日线下穿15日线,15日线下穿10日线时,判断为空头趋势形成,做空。
-
-4. 盈利平仓或止损退出。
-
-该策略通过多时间框架判断,能过滤掉部分噪音,锁定较高概率的趋势方向。同时,越长周期的均线过滤效果越好,所以策略采用了10、15、21、30日四条均线构建判断逻辑。
-
-## 策略优势
-
-- 多时间框架设计,通过longer timeframe的DEMA过滤noise,抓住高概率趋势。
-
-- 利用DEMA指标的趋势跟踪性能更好的特点。
-
-- 规则清晰简单,容易理解实现,适合量化交易。
-
-## 风险及解决
-
-- 多头止损或空头止损风险。采用移动止损来控制单笔止损。
-
-- 回撤较长。调整持仓规模,降低单笔风险。
-
-- 参数优化空间有限。加入 Aux信号辅助判断。
-
-## 优化空间
-
-- 加入停损策略,进一步控制风险。
-
-- 优化 DEMA 周期参数。加入更多 Aux信号判断。
-
-- 结合趋势指标,降低趋势反转概率。
-
-## 总结
-
-四均线多时间框架趋势策略通过比较10日线、15日线、21日线和30日线DEMA的大小关系,判断价格趋势方向,属于典型的趋势追踪策略。相比单一均线,该策略采用了多时间框架判断,能有效过滤部分噪音,提高判断准确性。同时,策略规则简单清晰,容易理解和实现,适合量化交易。总体来说,该策略利用DEMA指标的优势,设计了多时间框架的判断逻辑,抓住了高概率精准趋势,值得推荐。
-
-||
 
 ## Overview
 
@@ -105,7 +57,6 @@ By judging through multiple timeframes, this strategy can filter out some noise 
 
 The Four DEMA Multi Timeframe Trend Strategy determines the price trend direction by comparing the magnitude relations of 10-day, 15-day, 21-day and 30-day DEMA lines. It belongs to a typical trend following strategy. Compared to single MA lines, this strategy adopts multiple timeframe judgement to effectively filter some noise and improves accuracy. Also, the strategy rules are simple and clear, easy to understand and implement, suitable for quant trading. In conclusion, this strategy utilizes the advantages of DEMA indicator and designs multiple timeframe logic to capture high-probability precise trends, worth recommending.
 
-[/trans]
 
 > Strategy Arguments
 

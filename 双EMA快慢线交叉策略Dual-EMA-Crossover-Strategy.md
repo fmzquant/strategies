@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/209e374f223308fa9fe.png)
-[trans]
-### 概述
-
-双EMA快慢线交叉策略(Dual EMA Crossover Strategy)是一个基于两条不同周期的EMA均线交叉进行开仓和平仓的量化交易策略。该策略简单有效,容易理解,是量化交易的一种常用策略。
-
-### 策略原理
-
-该策略使用两条EMA均线,一条为25周期的EMA线,作为快线,一条为50周期的EMA线,作为慢线。当快线上穿慢线时,做多;当快线下穿慢线时,做空。
-
-做多之后,设置止盈为入场价格的2%,止损为入场价格的2%,当价格达到止盈或止损后,平掉仓位。做空同理。
-
-该策略的核心就是利用EMA快慢线的交叉来判断市场趋势和反转。上穿时判断为牛市并做多,下穿时判断为熊市并做空。止盈止损设置来锁定利润和控制风险。
-
-### 优势分析
-
-双EMA快慢线交叉策略具有以下优势:
-
-1. 思路清晰,逻辑简单,容易理解实施。
-2. 快线和慢线配合使用,可以抓住中短线趋势。
-3. 可以顺势而为,及时抓住市场转折点。
-4. 风险控制到位,止盈止损设置合理。
-
-总的来说,该策略通过清晰的逻辑判断市场,运用EMA本身的优点,在风险可控的前提下,获取不错的中短线收益。
-
-### 风险分析
-
-双EMA快慢线交叉策略也存在一些风险:  
-
-1. 市场出现剧烈波动时,EMA线交叉信号可能不准确,存在其误判的概率。
-2. 止盈止损点设置不合理时,可能错过更大的行情或承担更大的亏损。
-3. 交易费用和滑点的影响也不能忽略。
-
-这些风险都可通过以下方式得到优化解决:
-
-1. 结合其他指标判断市场,避免EMA交叉的误判信号。
-2. 测试并优化止盈止损的设置点,在收益和风险之间找到平衡。 
-3. 选择手续费低廉的交易平台,适当放大交易量。
-
-### 优化方向  
-
-该策略还具有以下主要的优化方向:
-
-1. 优化EMA的周期参数,寻找最佳参数组合。
-2. 增加其他指标判断,形成交易组合,提高准确率。  
-3. 动态调整止盈止损点。当亏损达到一定幅度时止损点跟踪放大,当盈利达到一定幅度止盈点移动等。
-4. 区分多头和空头市场,做定向交易。
-
-这些优化都可以在保持策略简单清晰的基础上,提升收益率和胜率。
-
-### 总结  
-
-双EMA快慢线交叉策略总的来说是一种非常实用的量化交易策略。它易于理解和实现,有效把握市场趋势。同时也具有一定的优化空间,通过参数调整和组合可以进一步提高收益率。这种简单直接的策略思路值得投资者学习和运用。
-
-||
 
 ### Overview
 
@@ -117,7 +63,6 @@ These optimizations can improve return and win rates while keeping the strategy 
 
 In summary, the Dual EMA Crossover Strategy is a very practical quantitative trading strategy. It is easy to understand and implement, and effectively captures market trends. At the same time, it has room for optimization. Further improvements on return rates can be achieved through parameter tuning and combinations. The simplicity and directness of this strategy is worth learning and applying for investors.
 
-[/trans]
 
 > Strategy Arguments
 

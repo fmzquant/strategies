@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1927bd0c8fd728861ef.png)
-[trans]
-
-### 概述
-
-该策略通过计算RSI指标及其EMA均线的交叉情况来判断多空,并结合RSI与价格的背离来寻找潜在买卖点,属于趋势跟踪策略。
-
-### 策略原理
-
-1. 计算长度为14的RSI指标,当RSI上穿50分界线时为看多信号,下穿为看空信号。
-
-2. 计算RSI的20周期EMA均线及14周期EMA均线,当快线上穿慢线时为买入信号,下穿为卖出信号。
-
-3. 检测RSI与价格的背离情况:
-
-  - 多头背离:价格创新低但RSI没有创新低,为买入信号
-
-  - 隐藏多头背离:价格创新高但RSI没有创新高,为买入信号
-
-  - 空头背离:价格创新高但RSI没有创新高,为卖出信号
-
-  - 隐藏空头背离:价格创新低但RSI没有创新低,为卖出信号
-
-4. 可选择开启止损策略,包括百分比止损和ATR止损。
-
-### 优势分析
-
-1. RSI指标的优势在于可检测超买超卖情况。EMA均线的优势在于可发挥平滑作用,滤波掉部分噪音。
-
-2. RSI与价格背离可在趋势反转前给出提前信号。
-
-3. 整合两种指标信号,可以互相验证,提高策略稳定性。
-
-4. 止损机制可控制单笔损失。
-
-### 风险分析
-
-1. RSI作为一个随价格波动的指数指标,当价格出现剧烈波动时,RSI指标的效用会打折扣。
-
-2. EMA均线存在时间滞后问题,不能准确定位转折点。
-
-3. 背离信号可能出现假信号,价格继续原趋势运行的情况。
-
-4. 止损点设置不合理可能造成不必要的止损。
-
-5. 回撤可能较大,需要充足的资金支持。
-
-### 优化方向
-
-1. 可以测试不同参数对RSI及EMA的计算,寻找最佳参数组合。
-
-2. 可以考虑用MACD等其他指标替换EMA均线,进行组合优化。 
-
-3. 可以设置确认机制,避免出现假背离。如需连续多个背离信号触发。
-
-4. 增加止盈策略,以锁定利润。
-
-5. 可以基于candlestick模式等短期信号进行入场,配合本策略的趋势判断。
-
-### 总结
-
-该策略整合了RSI指标的超买超卖判断、EMA的趋势判断和背离信号的预测,形成了一套较为完整的趋势跟踪体系。在参数调整和组合优化的基础上,可以获得较好的策略效果。但仍需要注意防范趋势市的冲击和假信号的干扰。通过严格的资金管理,该策略可以在中长线上获得稳定的超额收益。
-
-||
 
 ### Overview
 
@@ -134,7 +71,6 @@ This strategy determines long and short positions by calculating RSI indicator a
 
 This strategy integrates overbought/oversold detection of RSI, trend following with EMA, and reversal prediction of divergences into a systematic trend tracking system. With parameter tuning and ensemble optimization, good results can be achieved. But risks like trend shocks and false signals should be guarded against. With proper money management, this strategy can produce steady excess returns in medium-to-long term.
 
-[/trans]
 
 > Strategy Arguments
 

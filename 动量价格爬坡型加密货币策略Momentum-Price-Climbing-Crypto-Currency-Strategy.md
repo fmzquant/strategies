@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bbc7404a1070b432cc.png)
-[trans]
-### 概述
-
-该策略是一个简单高效的适用于加密货币的短线交易爬坡策略,也可用于中长线趋势交易。其主要组成部分包括价格震荡指标、漩涡指标以及止损止盈的风险管理机制。
-
-### 策略原理
-
-该策略的入场条件为:
-1. 价格震荡指标为正,表示价格在爬坡;
-2. 漩涡指标VIP上穿VIM,表明趋势向上; 
-3. 当前K线收盘价高于前两根K线的最高价,也意味着价格在向上突破。
-
-当以上三个条件同时满足时做多头入场。
-
-该策略的出场条件为: 
-1. 价格震荡指标为负,表示价格在回落,做多头出场;
-2. 漩涡指标VIP下穿VIM,表明趋势向下,做多头出场;
-3. 达到止盈或止损条件。
-
-### 策略优势 
-
-该策略结合了价格震荡指标和漩涡指标来判断价格趋势和突破信号,能够有效捕捉价格上涨阶段,具有如下优势:
-
-1. 使用价格震荡指标判断价格爬坡方向,避免在盘整时错交易;
-2. 漩涡指标判断趋势方向,有助于确定大趋势;  
-3. K线收盘价突破判断力度,可减少假突破机会;
-4. 风险管理机制设置止盈止损点,有效控制每单交易风险;
-5. 可灵活调整参数,适用于不同周期和品种。
-
-
-### 策略风险
-
-尽管该策略整体来说比较稳定,但也存在一定的风险需要注意:
-
-1. 错过长线大趋势的风险。如果用在过于短线周期,可能错过更大的行情机会;
-2. 假突破的风险。当价格出现剧烈波动时,短期内可能出现一些误导型走势,容易诱发假信号;  
-3. 参数不当导致过于频繁交易的风险。参数设置不当可能导致交易频繁,增加交易成本和滑点损失。
-
-可通过调整持仓周期、组合更多指标过滤信号、优化参数设置等方式来防范和化解上述风险。
-
-### 策略优化方向 
-
-该策略还可从以下几个方向进行优化:
-
-1. 增加更多指标判断,如波动率、量能指标等,提高信号的质量; 
-2. 优化参数设置,使其更符合不同品种和周期的特点;  
-3. 增加机器学习模型判断,利用大数据泛化预测价格走势;
-4. 在高级平台中加入自动止损、追踪止盈功能,使交易更加自动化。
-
-通过上述优化,可以进一步提升策略的胜率、盈利水平、稳定性。
-
-### 总结
-
-该策略整体较为简洁有效,能够捕捉价格爬坡上涨阶段,在加密货币中具有不错的盈利潜力。虽然仍有进一步优化的空间,但作为一个量化交易的入门策略已经较为出色。总体来说,该策略适合追求高频率盈利的加密货币短线和中线交易者。
-
-||
 
 ### Overview
 
@@ -135,7 +79,6 @@ Through the above optimizations, the win rate, profit level and stability of the
 
 The strategy is relatively simple and efficient overall, able to capture upside price climbing phases with decent profit potential for crypto currencies. Although there is room for further optimization, it already works well as an introductory quantitative trading strategy. In summary, this strategy suits crypto currency traders looking for high frequency short and medium-term profits.
 
-[/trans]
 
 > Strategy Arguments
 

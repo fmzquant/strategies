@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略基于凯斯(Kase)先生的动态止损理论而设计。该策略通过计算价格的动态波动范围,寻找最佳的止损和止盈价格点,实现盈亏平衡。
-
-策略原理:
-
-1. 计算价格的动态波动范围指数RWH和RWL。
-
-2. 根据RWH和RWL得到价格偏离程度指数Pk。
-
-3. 当Pk>0时,根据偏离程度计算止损价位。当Pk<0时,计算止盈价位。
-
-4. 可选择止损止盈的偏离倍数,一般为标准差的1-3倍。
-
-5. 当价格触碰止损止盈价位时,进行反向操作。
-
-该策略的优势:
-
-1. 动态计算止损止盈点,可根据市场波动进行调整。
-
-2. 停损点不会过于接近或过于宽松。
-
-3. 数学计算方式可避免主观情绪影响判断。
-
-该策略的风险:
-
-1. 计算止损价位存在滞后,可能错过最佳止损时点。
-
-2. 需优化偏离倍数参数,以平衡止损止盈。
-
-3. 无法限制单笔亏损大小,存在大单损失风险。
-
-总之,该策略可在一定程度上智能优化止损止盈设置,但其效果仍需经过回测验证,且不能完全规避SUBJECTIVE 主观风险,投资者仍需谨慎。
-
-||
 
 This strategy is based on Mr. Kase's dynamic stop loss approach, computing price's dynamic range to find optimal stop loss and take profit levels for balancing profits and losses. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this approach can intelligently optimize stops and targets to some extent but still requires robust backtesting. It also cannot fully eliminate subjective risks so prudent trading remains essential.
 
-[/trans]
 
 > Strategy Arguments
 

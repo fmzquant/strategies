@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15d8d64ac021fd2c2a8.png)
 
-[trans]
-
-### 概述
-
-该策略基于布林带的上下轨,判断价格突破布林带上轨时做多,突破下轨时做空,属于趋势跟踪类型策略。
-
-### 策略原理
-
-该策略使用布林带中的中轨、上轨、下轨来判断极端价格范围。中轨是过去25个周期收盘价的简单移动平均线,上下轨线分别是中轨线上下一个标准差的距离。当价格从上轨线下穿或者从下轨线上穿时,说明价格出现了突破,属于异常价格行为,这时可以做出交易决策。
-
-如果价格低于下轨线时,买入做多;如果价格高于上轨线时,卖出做空。做多时候,设置止损线为入场价乘以止损因子,止盈线为入场价乘以止盈因子。
-
-该策略还加入了一些辅助规则,比如24小时内只允许发出一个信号,避免无谓的交易。
-
-### 策略优势
-
-1. 使用布林带判断异常价格范围,属于趋势跟踪策略,能够捕捉价格趋势
-2. 按照止损止盈原则设置了相关参数,可以控制单笔损失
-3. 加入了一些辅助规则,避免重复信号和无谓交易
-
-### 策略风险
-
-1. 布林带范围并不能完全代表价格趋势,可能出现错误信号
-2. 突破信号时机选择不当可能导致亏损
-3. 趋势市没有趋势的时间长短和涨跌动能难以预测,可能导致不必要的买入
-
-风险控制措施:
-
-1. 调整布林带参数,优化突破信号时机
-2. 结合其他指标判断大趋势
-3. 根据不同品种和市场情况设定止损止盈幅度
-
-### 策略优化方向  
-
-1. 可以考虑布林带参数自适应优化,使布林带更贴近当前市场状态
-2. 可以结合其他指标,判断趋势信号的可靠性,避免错误信号
-3. 可以结合机器学习模型,自动识别最佳的买入卖出时机
-
-### 总结
-
-该策略整体来说属于简单的趋势跟踪策略,使用布林带判断价格异常并跟踪趋势,在参数优化、风险控制和信号过滤方面还有优化空间,但核心思路简单清晰,适合作为策略学习入门。
-
-||
 
 ### Overview
 
@@ -95,7 +52,6 @@ Risk Management:
 
 In summary, this is a simple trend tracking strategy using Bollinger Bands to determine abnormal prices and track trends. There is room for improvement in parameter optimization, risk control and signal filtering, but the core idea is simple and clear, making it suitable as a beginner strategy for learning.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,28 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于终极波动指标的反转做多策略”。该策略利用终极波动指标判断超买超卖情况,在指标达到超卖状态时进行逆市做多操作。
-
-终极波动指标融合了多种周期的价格信息,判断市场的超买超卖水平。当指标下穿低点,表示市场步入超卖状态,预示着价格可能出现反弹。
-
-交易逻辑如下:
-
-1. 当终极波动指标下穿低点(如45)时,表示市场超卖,考虑做多。
-
-2. 继续持有做多仓位,直至指标上穿中线(如70),平仓止盈。
-
-3. 设置止损线,如价格跌破止损线则止损出场。若指标显示多头分歧,可以适当调整止损线。
-
-4. 如果指标重新下穿低点,可以考虑加仓做多。
-
-该策略的优势是捕捉超卖反弹机会。但指标参数需要优化,且指标本身滞后,需要结合趋势分析。止损和资金管理也尤为重要。
-
-总体而言,利用指标判断反转时机是一个常见方法。但交易者仍需保持判断的灵活性,不可完全依赖任何单一指标。
-
-
-
-||
 
 
 
@@ -54,7 +32,6 @@ The advantage of this strategy is capturing oversold bounce opportunities. But o
 
 In conclusion, using indicators to determine reversal timing is common. But traders still need discretion and should not purely rely on any single indicator.
 
-[/trans]
 
 > Strategy Arguments
 

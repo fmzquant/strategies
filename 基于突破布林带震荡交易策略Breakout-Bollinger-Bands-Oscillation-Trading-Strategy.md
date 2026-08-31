@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/171b53b9bdd0d72ff94.png)
-[trans]
-
-## 概述
-
-突破布林带震荡交易策略是一种当市场处于震荡状态时的交易策略。该策略利用布林带指标判断市场的震荡状况,在价格触碰布林带上下轨时发出交易信号。与传统趋势跟随策略不同,该策略更适用于横盘整理的市场环境。
-
-## 策略原理  
-
-该策略主要基于布林带指标实现。布林带由中轨、上轨和下轨组成。当价格接近上轨或下轨时,代表着市场过度看涨或看跌,这时就有较大概率发生反转。
-
-具体来说,该策略首先利用DMI指标判断市场是否处于震荡状态。当+DMI和-DMI的差值小于20时,认为市场处于横盘震荡。在此条件下,当价格上穿下轨时做多,当价格下破上轨时做空。止损点设在相反轨道附近。
-
-## 策略优势  
-
-相对于趋势跟随策略,该策略更适合横盘震荡的市场环境,不会因追逐趋势而息损。与传统震荡交易策略相比,该策略利用布林带指标能更准确判断市场的超买超卖情况,从而提高入场的概率。
-
-## 策略风险 
-
-该策略主要依赖布林带判断市场震荡和超买超卖情况,当布林带发散或收缩失常时,会导致错误信号。此外,止损点靠近,单笔止损可能较大。建议采用资金管理优化止损策略。
-
-## 策略优化方向
-
-可以考虑结合其他指标过滤入场信号,例如RSI等震荡指标,提高入场准确率。此外,优化止损策略也很重要,避免单笔较大止损。还可以选择更适合该策略的交易品种,例如低市值币。
-
-## 总结  
-
-该策略整体来说适合震荡市场,可以在趋势策略失效时使用。但其依赖指标判断市场状态的效果仍有优化空间。我们可以通过多指标组合、资金管理等方法进一步完善该策略,使其效果更加稳定优异。
-
-||
 
 ## Overview
 
@@ -66,7 +37,6 @@ We can consider combining other indicators to filter entry signals, such as RSI 
 
 In general, this strategy is suitable for oscillating markets and can be used when trend strategies fail. But there is still room for improving its effectiveness by judging market states with indicators. We can further improve this strategy by methods like multi-indicator combos, money management, etc. to make it more stable and profitable.
 
-[/trans]
 
 > Strategy Arguments
 

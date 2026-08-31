@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b8d2043ee5fb4789be.png)
-[trans]
-
-## 概述
-
-趋势顺应海龟交易策略是一种基于移动平均线判断趋势方向,并在趋势反转点进行交易的量化策略。该策略同时结合K线形态判定信号,在潜在反转点进行进场和止损。
-
-## 策略原理
-
-该策略使用三条不同周期的EMA平均线来判断趋势方向。具体来说,分别计算15日线、120日线和220日线的EMA平均线。当15日线高于220日线时判断为看涨趋势,当15日线低于220日线时判断为看跌趋势。
-
-在看涨趋势时,如果收盘价低于220日线,则做空;在看跌趋势时,如果收盘价高于220日线,则做多。
-
-同时,策略还会结合K线形态来确认信号。当出现看涨的大缺口K线或看跌的大缺口K线时,则平仓止损。
-
-## 优势分析
-
-该策略最大的优势在于能够顺应趋势操作,避免在没有明确信号的情况下随意做反向操作。通过多条移动平均线判断趋势,可以有效过滤市场噪音,锁定主要趋势方向。
-
-同时,策略还会在潜在的趋势反转点进场,这时具有很好的风险回报比特征。并且结合K线形态止损,可以避免止损点过于碎片化。
-
-## 风险分析
-
-该策略主要风险在于移动平均线所判断的趋势可能和实际价格走势有一定的滞后。这时就可能出现与趋势的反向操作。
-
-此外,策略中所用到的K线形态规则也可能会失效,无法有效止损。当市场出现异常波动时,止损点可能会被直接突破,导致较大的亏损。
-
-为降低上述风险,可以考虑调整移动平均线的周期参数,或者调整K线形态判定的比例因子,使规则更加严格。当然,也需要意识到技术分析始终无法完全规避市场风险,需要控制好仓位。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线的周期参数,找到更合适判断趋势的周期参数组合
-
-2. 测试不同类型的移动平均线指标,如SMA、LWMA等,寻找更符合自己风格的指标
-
-3. 调整或增加K线形态判定规则,使反转信号更加清晰可靠  
-
-4. 增加止损策略,如跟踪止损、时间止损等,进一步控制单笔亏损
-
-5. 结合其他指标,如震荡指标、成交量等,丰富系统的交易信号
-
-## 总结
-
-趋势顺应海龟交易策略整体来说是一个非常典型的趋势跟随策略。它判断趋势的方法简单易行,同时也具备一定的风险控制措施。该策略适合对趋势交易有一定了解,并希望获得稳定收益的投资者。如果能够不断优化,它也可以成为具有长期竞争优势的量化策略。
-
-||
 
 
 ## Overview
@@ -103,7 +56,6 @@ The strategy can be optimized in the following aspects:
 
 The turtle-trend following strategy is a very typical trend following strategy overall. Its method of judging the trend is simple and easy to implement, while also having certain risk control measures. This strategy is suitable for investors who have some understanding of trend trading and hope to obtain stable returns. If continuously optimized, it can also become a quantitative strategy with long-term competitive advantages.
 
-[/trans]
 
 > Strategy Arguments
 

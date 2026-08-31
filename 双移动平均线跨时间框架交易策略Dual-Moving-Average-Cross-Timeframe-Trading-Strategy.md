@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/570a16ae6a3da1e925.png)
-[trans]
-### 概述
-本策略通过计算两个不同类型的移动平均线,在两个不同的时间框架上生成买入和卖出信号。这是一个非常好的沙盒策略,可以用来实验不同类型的移动平均线以及不同的时间框架组合。
-
-### 策略原理
-本策略使用两个移动平均线,一个快速移动平均线和一个慢速移动平均线。快速移动平均线时间框架要大于或等于图表的时间框架。当快速移动平均线向上突破慢速移动平均线时,产生买入信号;当快速移动平均线向下突破慢速移动平均线时,产生卖出信号。
-
-用户可以选择多种不同类型的移动平均线,如SMA、EMA、KAMA等,时间框架可以是不同的,这样就可以通过组合实验,找出最佳的参数。
-
-### 优势分析
-该策略最大的优势在于可以非常方便地调整参数实验不同的组合,寻找最佳参数设置。
-
-用户可以自由选择两种移动平均线的类型、时间长度、时间框架,系统会实时计算并显示结果。这比测试一个个参数的组合策略要容易很多。
-
-并且策略内置了止损止盈功能,可以降低风险,提高盈利概率。
-
-### 风险分析
-该策略最大的风险在于参数设置不当可能导致交易信号过于频繁,从而增加交易成本和滑点的损失。
-
-另外,双移动平均线本身就容易产生假信号,如果参数选得不当,买卖信号可能不可靠。
-
-这些风险可以通过优化参数、组合其他指标来减轻。
-
-### 优化方向
-可以考虑在双移动平均线基础上加入其他指标组合,进行过滤,例如RSI指标来确认买入卖出信号,从而减少假信号。
-
-另外可以尝试将移动平均线的参数训练优化,找到最佳参数组合。也可以考虑使用机器学习的方法来动态优化参数。
-
-### 总结
-本策略是一个非常好的双移动平均线实验沙盒。它的优势在于可以快速迭代不同的参数组合,以找到最佳交易策略。当然也存在一些参数设置不当的风险,这需要通过加入其他指标组合进行过滤来降低风险。如果继续对该策略进行优化,很可能可以获得更好的交易效果。
-
-||
 
 ### Overview
 This strategy generates buy and sell signals by calculating two different types of moving averages across two different timeframes. It is a very good sandbox strategy to experiment with different moving averages and timeframe combinations.
@@ -73,7 +41,6 @@ Parameters of moving averages can also be optimized via training to find the bes
 ### Conclusion  
 This is an excellent sandbox for experimenting with dual moving averages. Its biggest advantage is fast iteration of different parameter combinations to find the best trading strategy. Of course there are also risks of improper parameter settings, which can be reduced by adding filtering indicators. Further optimizations of this strategy can potentially lead to even better trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

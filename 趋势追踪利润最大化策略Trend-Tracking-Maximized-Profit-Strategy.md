@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算价格的移动平均线及标准差CHANNEL,形成动态的上下轨,并结合最高价、最低价的平均值形成中轨,从而判断当前趋势方向。当价格突破上轨时看涨,当价格跌破下轨时看跌,实现根据趋势变化进行交易的策略。
-
-## 策略原理
-
-1. 计算close的20日简单移动平均线basis作为中间基准线
-2. 计算close的20日标准差dev作为上下轨距离中轨的基础
-3. 中轨basis±2\*dev确定上轨upper和下轨lower
-4. 计算最近20日内最高价upper2和最低价lower2的平均值basis2作为第二条中轨 
-5. 上述两条中轨取平均值MB作为最终中轨
-6. 当close大于中轨MB时为看涨信号,当MB大于close时为看跌信号
-7. 根据信号判断做多做空方向,实现跟踪趋势获得利润
-
-## 优势分析
-
-1. 使用动态的标准差Channel,能够快速捕捉价格变化趋势
-2. 结合最高价和最低价信息,中轨更具有参考意义
-3. 采用双重中轨设计,使信号更加准确可靠
-4. 策略思路简单清晰,容易理解实现
-5. 可配置参数较少,适合各类市场环境
-
-## 风险分析
-
-1. 突破上轨或下轨交易时,需要考虑止损策略,控制单笔损失
-2. 交易频率可能较高,需要考虑手续费的影响 
-3.  Parameters如期间参数需要谨慎优化,避免过拟合
-4. 趋势变化时,存在交易信号错误的可能
-5. 需要做好资金管理,不能使用过高杠杆
-
-## 优化方向
-
-1. 可以考虑在突破上轨、下轨时,增加过滤条件,避免假突破
-2. 可以基于ATR等指标设定动态止损exit
-3. 可以结合交易量的信息来验证突破信号的可靠性
-4. 可以针对Parameters如计算周期等进行优化,适应更多市场环境
-5. 可以考虑设定开仓数量,以控制单笔损失风险
-
-## 总结
-
-该策略整体思路清晰易懂,通过动态Channel捕捉趋势,并结合多重中轨设计产生交易信号,可以有效跟踪趋势方向进行交易,获得较好的交易回报。在实际运用中,需要关注止损策略、资金管理,并针对Parameters进行优化,从而获得长期稳定的收益。
-
-||
 
 ## Overview
 
@@ -97,7 +52,6 @@ This strategy calculates the moving average and standard deviation CHANNEL of th
 
 The overall idea of this strategy is clear and easy to understand. By dynamically capturing trends through Channel and generating trading signals with multiple middle rail designs, it can effectively track trend directions for trading and obtain good returns. In actual application, attention should be paid to stop loss strategies, capital management, Parameters optimization, etc., so as to obtain stable returns in the long run.
 
-[/trans]
 
 
 

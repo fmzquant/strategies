@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/83517f5bd3bd11440a.png)
-[trans]
-## 概述
-该策略结合了相对强弱指数(RSI)和马丁格尔加仓原理。当RSI低于超卖线时,进行首次买入开仓;之后如果价格继续下跌,将以2的指数进行加仓,以获利止盈。这种策略适用于高市值币种的现货交易,可以获得长期稳定收益。
-
-## 策略原理
-1. 使用RSI指标判断市场超卖,RSI期间设置为14,超卖阈值设置为30。
-2. 当RSI < 30时,以账户权益的5%进行首次开仓做多。
-3. 如果价格较首次入场价下跌0.5%,则以2倍仓位加仓做多;如果价格继续下跌,以4倍仓位再次加仓。
-4. 每上涨0.5%,以收益止盈方式平仓。
-5. 重复上述步骤,进行循环交易。
-
-## 优势分析
-- 利用RSI判断市场超卖点位,可以在相对低点开仓做多。
-- 马丁格尔加仓可以使得平均开仓价格越来越低。
-- 小幅止盈可以获得持续稳定的收益。
-- 适用于高市值币种的现货交易,风险可控。
-
-## 风险分析
-- 如果行情长期低迷,持仓亏损可能进一步扩大。
-- 没有设置止损,无法限制最大损失。
-- 加仓次数过多也会使得损失加剧。
-- 做多方向交易,行情继续下跌仍存在较大风险。
-
-## 策略优化
-1. 可以设置止损点,限制最大亏损。
-2. 优化RSI参数,寻找最佳超卖超买信号。
-3. 可以根据特定币种波动率设定合理止盈范围。
-4. 可以根据总资产或单项持仓比例设定加仓幅度。
-
-## 总结
-该策略结合RSI指标和马丁格尔加仓原理,在判断超卖点位时适当加仓做多,以小幅止盈获利。它可以获取持续稳定收益,但也存在一定风险。通过设定止损、调整参数等方式可以进一步优化。
-
-||
 
 ## Overview
 This strategy combines Relative Strength Index (RSI) and martingale position averaging principles. It initiates a long position when RSI goes below the oversold line, and doubles down the position if the price continues to decline. Profit taking is achieved with small targets. This strategy is suitable for high market cap coins in spot trading for steady gains.
@@ -74,7 +41,6 @@ This strategy combines Relative Strength Index (RSI) and martingale position ave
 
 ## Summary
 This strategy combines RSI indicator and martingale position averaging to take advantage of oversold situations with appropriate averaging down, and small profit taking for steady gains. It has risks that can be reduced through stop losses, parameter tuning, etc.
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12bb1510a399a4a6552.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是利用输入的止损止盈金额,来设置合理的止损止盈点数,对每笔交易进行风险和收益的管理。
-
-## 策略原理
-
-该策略首先设置了随机的入场信号,当SMA14上穿SMA28的时候做多,当SMA14下穿SMA28的时候做空。
-
-在入场后,策略利用moneyToSLPoints函数,根据输入的止损金额,计算出对应的止损点数,同理也计算出止盈点数。这样就实现了基于美元金额的止损止盈设置。
-
-例如,如果入场做多100手,每点值10美元,止损设置为100美元,那么止损点数就设置为100/10/100=0.1点。
-
-最后用strategy.exit设置止损止盈出场点。同时画出止损线和止盈线的图形作为调试参考。
-
-## 优势分析
-
-这种基于价格止损止盈的策略,最大的优势是参数设置直观,可以直观的看到风险和收益的关系,进行参数选择。
-
-另外,相对于点数止损,美元止损可以更好的控制实际的风险敞口。当市场波动加大的时候,美元止损可以更好的保护资金。
-
-## 风险分析
-
-这种止损止盈策略也存在一定风险:
-
-1. 止损点过宽容易被套。如果止损距离过远,行情短线反转的概率就比较大,很容易被套住无法止损。
-
-2. 止盈点过近难以获利。如果止盈距离太近,正常的单边行情都无法达到,很难盈利。
-
-3. 需要合理选择合约。如果选择的是点值太大的合约,例如原油,那么同样的美元止损,对应的点数就会很小,在市场波动中很容易被刮出。这就需要合理选择点值。
-
-## 优化方向 
-
-这种策略可以从以下几个方面进行优化:
-
-1. 入场信号可以优化,例如结合趋势、波动率、季节性等选择更优入场时机。
-
-2. 可以根据不同品种,选择合适的止损止盈百分比。例如大宗商品可以设置更宽松的止损。
-
-3. 可以结合波动率,当波动加大时适当放宽止损;当波动减小时适当收紧止损。
-
-4. 可以根据交易日内不同时段选择不同的止损止盈策略。例如美国交易时段收紧止损,减少被套概率。
-
-## 总结
-
-本策略以美元金额为参数,实现了直观的止损止盈功能。该策略优势是参数选择和资金控制直观明了,缺点是容易被套和难以获利。我们可以从入场时机、止损止盈参数优化、合约选择等方面进行改进,使策略更稳定盈利。
-
-||
 
 
 ## Overview
@@ -107,7 +58,6 @@ Some ways this strategy can be improved on:
 
 This strategy implements intuitive stop loss and take profit based on dollar amounts. Its advantages are intuitive parameters and capital control. Drawbacks are ease of being caught in reversals and missing profits. It can be improved by enhancing entries, optimizing stops/targets, choosing better products etc. to make it more stable.
 
-[/trans]
 
 > Strategy Arguments
 

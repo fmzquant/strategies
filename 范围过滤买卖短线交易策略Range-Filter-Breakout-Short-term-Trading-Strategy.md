@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于价格的波动范围来判断买入和卖出时机。它计算一定周期内的价格波动范围,并以该范围作为过滤条件产生交易信号。当价格超出波动范围时产生买入或卖出信号。属于基于价格突破的短线交易策略。
-
-## 策略原理
-
-该策略的核心指标是价格的波动范围。具体计算过程为:
-
-1. 计算过去N周期内的最高价和最低价之差作为价格振幅
-
-2. 对价格振幅进行均线平滑处理,得到范围过滤器
-
-3. 当价格上涨超过范围过滤器时,产生买入信号
-
-4. 当价格下跌超过范围过滤器时,产生卖出信号
-
-通过这种方式,可以利用价格突破波动范围来判断趋势方向, filtrate123噪音交易,获得比较清晰的交易信号。
-
-## 策略优势
-
-- 使用价格实体范围,容易判断突破
-- 波动范围平滑处理,有效过滤噪声
-- 突破型信号,易于捕捉短线趋势
-- 交易频次较高,适合短线操作
-- 可调参数,容易优化至不同品种
-
-## 策略风险 
-
-- 范围突破容易出现冲高回落
-- 需要较长历史数据计算范围 
-- 参数设置不当会过于灵敏或迟钝
-- 无法有效控制止损,存在较大回撤
-- 效果可能受到交易费用影响 
-
-可以通过以下措施来降低风险:
-
-- 适当放宽范围过滤波动系数
-- 优化参数,找到最佳参数组合
-- 设置止损线止损或移动止损
-- 适当减少交易频次,降低交易费用
-- 根据不同品种分别测试参数
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试计算范围的不同周期参数
-
-2. 优化范围过滤波动系数
-
-3. 加入MACD等指标进行二次确认
-
-4. 使用移动止损或追踪止损
-
-5. 根据具体品种不同调整参数
-
-6. 考虑优化仓位管理系统
-
-## 总结
-
-该策略利用价格突破范围来产生短线交易信号。这可以有效识别短期趋势机会。但也容易出现冲高回落的风险。我们可以通过参数优化,设置止损规则,加入指标过滤等方法来改进策略系统,在保留其突破识别能力的同时,控制风险、减少回撤。此外,针对不同品种特点进行参数调整也很关键。只有不断优化测试,才能使策略更稳定可靠。
-
-|| 
 
 ## Overview 
 
@@ -137,7 +72,6 @@ The strategy can be improved by:
 
 This strategy uses price breaking out of ranges to generate short-term signals, effectively capturing temporary trends. But risks like whipsaws exist. Improvements can be made through parameter optimization, stop losses, adding filters etc. to control risks while retaining effectiveness. Fine-tuning parameters by product characteristics is also essential. Continual optimizations lead to robustness.
 
-[/trans]
 
 > Strategy Arguments
 

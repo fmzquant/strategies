@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b0c052c814cf8ca6c8.png)
-[trans]
-
-### 概述
-
-该策略通过计算两个不同周期的移动平均线,并绘制其交叉点来发出交易信号。当短期移动平均线上穿长期移动平均线时,做多;当短期移动平均线下穿长期移动平均线时,做空。
-
-### 策略原理
-
-该策略基于移动平均线的优势——它能去掉价格序列中的随机性,提取出主要趋势。策略使用7日线和20日线构建双移动平均线系统,这两个周期较常用也较为明确。
-
-当短期移动平均线上穿长期移动平均线时,意味着价格进入上升趋势;当短期移动平均线下穿长期移动平均线时,意味着价格进入下降趋势。根据这个原理,我们买入做多或卖出做空。
-
-具体来说,策略通过计算7日简单移动平均线和20日简单移动平均线,当两条平均线产生交叉时判断出趋势转折并发出交易信号。为区分交叉类型,定义短期线大于长期线为价格上升趋势,反之为价格下降趋势。当短期线上穿长期线,即价格上升趋势开始的时候做多头入场;当短期线下穿长期线,即价格下降趋势开始的时候做空头入场。
-
-### 优势分析
-
-(1)策略思路清晰简单,容易理解和实现。
-
-(2)移动平均线作为一种趋势跟踪指标,能有效过滤掉价格中包含的部分噪音,使用双移动平均线系统能进一步提高稳定性。
-
-(3)参数配置灵活,可调整周期的参数组合,满足不同市场环境的交易要求。
-
-(4)使用较为常用的两个移动平均周期,容易判断明确的交易信号。
-
-(5)可视化辅助分析比较强大,通过视觉效果直观判断趋势、重要点位等。
-
-(6)策略回测后可根据优化结果调整参数,提高策略收益率。
-
-### 风险分析
-
-(1)双移动平均线策略对市场波动较为敏感,在震荡行情中容易出现频繁交易亏损的情况。
-
-(2)仅依赖均线交叉并不一定能准确判断趋势转折点位,可能引发错误信号。
-
-(3)规则较为死板,当突发事件影响市场时,策略无法做出调整可能造成较大亏损。
-
-(4)参数不当也会引发错误信号或错失交易机会,需要谨慎测试优化。
-
-为缓解这些风险,可适当调整参数组合;加入其他指标进行辅助;设置止损策略控制亏损;根据市场环境调整参数或关闭策略等。
-
-### 优化方向 
-
-(1) 结合其他技术指标,形成组合策略,可以提高信号的准确性。比如加入成交量指标,在移动平均线交叉的同时判定成交量的放大,可以增加Entry chance。
-
-(2) 加入止损策略,可以有效控制单笔亏损。例如当价格突破移动平均线一定范围时,退出当前Head position。
-
-(3) 测试优化移动平均线的周期参数组合。可以尝试不同的快慢周期匹配,找到最佳参数组合。此外还可以测试使用指数移动平均线、权重移动平均线等其他移动平均线指标。
-
-(4) 根据不同品种和市场环境进行参数调优。对于波动性大的品种可以缩短移动平均线周期,降低交易频次。对于趋势性强的市场环境可以加大两均线的时间跨度差距。
-
-### 总结
-
-移动平均线双交叉策略整体来说是一个非常典型和基础的趋势跟踪策略。它通过计算两个不同周期的移动平均线并观察其交叉情况来判断价格趋势的变化。当短期移动平均线上穿或下穿长期移动平均线时产生交易信号。这种简单的交易思路易于实现,参数调整灵活,是量化交易的入门级策略。但也存在一些缺陷,比如对市场环境波动敏感,信号可能不准确等。通过与其他技术指标组合或者设置止损以及参数优化等手段,可以强化该策略,使其成为一个非常实用的量化交易策略。
-
-||
 
 ### Overview  
 
@@ -118,7 +63,6 @@ To mitigate these risks, parameters could be adjusted accordingly. Other indicat
 
 The moving average crossover strategy is a very typical and basic trend following strategy. By calculating two moving averages of different periods and observing their crossovers, it judges changes in price trend. Trading signals are generated when the shorter period moving average crosses above or below the longer one. This simple logic is easy to implement and flexible to adjust, making it an introductory quant strategy. But it also has defects like sensitivity to market fluctuations and potential inaccurate signals. By combining with other indicators, adding stops, and parameter optimization, the strategy can be enhanced into a very practical one for quantitative trading.  
 
-[/trans]
 
 > Strategy Arguments
 

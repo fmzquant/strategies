@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a13e59a7c7498faf3b.png)
 
-[trans]
-### 概述
-
-该策略是一个利用RSI指标识别震荡行情,并在震荡过程中捕捉趋势反转机会的交易策略。策略通过快速RSI指标判断价格是否进入震荡区,并结合K线实体和快速RSI的多空信号来判断入场时机。
-
-### 策略原理  
-
-该策略主要基于以下原理运作:
-
-1. 通过快速RSI判断价格是否进入设定的超买超卖区间,作为震荡识别依据
-2. 结合K线实体突破和快速RSI多空信号判断具体的入场时机 
-3. 通过双重过滤机制避免非震荡行情的假信号
-
-具体来说,策略运用双周期RSI判断价格是否进入设定的30-70震荡区间。同时要求K线实体突破均线的1/4或1/2才产生交易信号。这样通过双重条件判断,可以有效过滤除震荡行情的假信号,确保只在真正震荡的时候入场。
-
-### 优势分析
-
-该策略具有以下显著优势:
-
-1. 快速RSI指标灵敏,可以快速判断价格进入和离开震荡区间  
-2. 双时间框架分析,避免被噪音干扰
-3. 实体过滤机制,确保在真实趋势反转时入场
-4. 操作频率适中,避免过度交易
-
-### 风险分析
-
-该策略也存在一些风险需要留意:  
-
-1. 可能漏掉趋势反转机会,导致获利不足
-2. 震荡突破假信号可能造成损失
-3. 参数设置不当会影响策略表现
-
-为控制风险,建议适当调整参数组合,实盘验证,并设置止损机制。
-
-### 优化方向  
-
-该策略还有进一步优化的空间:  
-
-1. 整合其他指标信号,构建Likelihood模型  
-2. 添加自适应参数调节模块  
-3. 增加算法交易模块,实现更快速度交易
-
-通过多指标整合、自适应参数调节和算法交易等手段,有望进一步提升策略的稳定性和收益率。
-
-### 总结  
-
-该快速震荡RSI交易策略,通过快速RSI指标捕捉价格震荡和双重过滤机制判断入场时机,是一个值得深入研究和运用的有效策略。在实践中需要关注风险,并在多维度进行优化调整,以进一步提升策略效果。
-
-||
 
 ### Overview  
 
@@ -108,7 +59,6 @@ By techniques like multi-indicator integration, adaptive parameter tuning and al
 
 The fast oscillating RSI trading strategy identifies price oscillations and determines entry timing via fast RSI and dual filter mechanisms. It is an effective strategy worth in-depth research and application. In practice, risks should be monitored and multi-dimensional optimizations are needed to further lift the strategy efficacy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,59 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略通过结合123形态反转策略和RSI动量策略,实现双重信号过滤,在趋势反转点位实现高概率 entries。
-
-## 原理解析
-
-### 123形态反转策略
-
-该策略来源于Ulf Jensen的《我如何在期货市场上获得三倍收益》一书第183页。其原理是在盘整阶段判断潜在的趋势反转机会。
-
-具体来说,当收盘价连续2日高于前一日收盘价,并且9日Slow K线低于50时,做多;当收盘价连续2日低于前一日收盘价,并且9日Fast K线高于50时,做空。
-
-所以,该策略本质上是以Stochastic指标的快慢线金叉死叉来判断潜在反转机会。
-
-### RSI动量策略
-
-该策略利用ROC函数计算价格变化率,再基于价格变化率构建RSI指标,从而判定动量趋势。
-
-当RSI低于买入区时表明价格上涨动量加速,做多;当RSI高于卖出区时表明价格下跌动量加速,做空。
-
-### 优势
-
-- 123形态反转策略能在盘整之后判断潜在反转点位
-- RSI动量策略能够有效过滤假突破
-- 两种策略信号累积,形成强力的入场信号
-
-### 风险
-
-- 123形态容易形成头部重叠或假突破,需配合其他指标过滤
-- RSI本身还是以价格为基础,无法完全避免被套
-- 双重信号累积时可能会错过较好入场点位
-
-可考虑以下几点来降低风险:
-
-1. 调整Stochastic指标的参数,使用更长周期确定趋势
-2. 调整RSI的参数,使用更低区买入和更高区卖出
-3. 考虑仅使用单一信号入场
-
-## 优化方向 
-
-- 可测试ROC周期参数,找到对特定品种更合适的参数
-- 可测试123形态判定逻辑,例如调整K线快慢线参数
-- 可测试RSI区段参数,确定更适合的买入卖出区域
-- 可尝试其他指标如MACD取代Stochastic
-- 可测试仅使用单一策略信号的效果
-
-## 总结
-
-本策略通过双重反转信号的验证,能够在趋势反转前提高入场准确率。123形态判定反转机会,RSI动量指标进一步验证反转有效性。策略易于优化和调整参数,用户可以根据不同品种和交易偏好进行测试。但也应注意双重信号可能错过入场时点的风险。总体来说,该策略提供了一种有效判断反转走势的思路和框架。
-
-|| 
 
 ## Overview
 
@@ -113,7 +60,6 @@ Possible ways to reduce risks:
 
 This strategy improves entry accuracy at trend reversals by requiring two confirming reversal signals. 123 pattern identifies reversals and RSI momentum verifies validity. Easy to optimize parameters for different products and preferences. But beware of missing entries from dual signal accumulation. Overall an effective framework for identifying reversal trends.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d49ddbb223977b6a0f.png)
 
-[trans]
-
-## 概述
-
-移动平均线交叉穿越策略是一种基于技术指标的量化交易策略。该策略通过计算两条移动平均线之间的交叉关系,判断市场的趋势方向,并相应生成交易信号。
-
-## 策略原理
-
-该策略的核心指标是两条移动平均线:一条较长期的40周期简单移动平均线(SMA),以及股票的收盘价。当股票的收盘价从下方向上突破40周期SMA时,表示市场趋势可能发生转折,股票进入新的上升趋势,这时策略会生成做多信号;当收盘价下跌突破40周期SMA时,表示股票上升趋势结束,可能进入下跌通道,这时策略会平仓做多头仓位。
-
-通过比较收盘价与SMA的突破关系,可以捕捉到价格趋势的转折点,进而根据趋势方向做出交易决策。
-
-## 策略优势
-
-该策略具有以下几个优势:
-
-1. 规则简单清晰,容易理解与实施;
-2. 可有效捕捉股票中长线趋势的转折,及时调整仓位;
-3. SMA指标对异常价格变动有一定的滤波效果,可减少错误信号;
-4. 可自定义SMA参数,适用于不同的交易品种与周期。
-
-## 策略风险
-
-该策略也存在以下风险:
-
-1. SMA指标作为趋势跟踪工具,对突发事件的响应滞后;
-2. 可能出现频繁交易与反复震荡,增加交易成本和套利风险;
-3. 参数设置不当可能导致过度交易或错过机会。
-
-可通过调整SMA参数、设置止损线等方法来控制风险。
-
-## 优化方向  
-
-该策略还可从以下几个方面进行优化:
-
-1. 增加多个移动平均线比较,形成交易过滤器,减少错误信号;
-2. 结合其他指标判断,如成交量fgraph矩,增强决策可靠性;  
-3. 动态优化SMA参数,让它自动适应市场变化;
-4. 设定复合条件的止损机制,控制单笔损失。
-
-## 总结
-
-移动平均线交叉策略通过比较价格与SMA的关系变化判断趋势转折,是一种较为经典的规则型交易策略。该策略实施简单,容易跟踪中长期趋势获利,同时也存在一定盈利回吐和滞后识别风险。可通过参数设定与组合指标判断来控制风险与提高决策效果。
-
-|| 
 
 ## Overview  
 
@@ -99,7 +54,6 @@ The strategy can also be optimized in the following aspects:
 
 The moving average crossover strategy judges trend reversal by comparing price changes with the SMA relationship. It is a relatively classic rule-based trading strategy. The strategy is simple to implement, easy to follow mid-to-long term trends for profit, while there are also certain risks of profit retracement and lagging identification. Risks can be controlled and decision effectiveness improved by parameter settings and incorporating other indicators.
 
-[/trans]
 
 > Strategy Arguments
 

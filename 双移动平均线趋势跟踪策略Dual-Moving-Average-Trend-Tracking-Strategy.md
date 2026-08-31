@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f7648374b77911a76b.png)
 
-[trans]
-
-## 概述
-
-双移动平均线趋势跟踪策略是一种跟踪股票价格趋势的量化交易策略。该策略使用双指数移动平均线系统判断价格趋势方向,并结合ADX指标判断趋势力度,在中长线上捕捉价格趋势。
-
-## 策略原理
-
-该策略主要基于双指数移动平均线系统判断价格趋势方向。策略使用快慢两个不同参数的EMA,快线EMA1反应价格变化更迅速,慢线EMA2响应价格变化更滞后。当快线上穿慢线时为买入信号,表示价格开始上升;当快线下穿慢线时为卖出信号,表示价格开始下跌。
-
-此外,策略还引入ADX指标判断趋势力度。ADX通过计算价格波动来判断趋势的力度。当ADX值上升,说明趋势在加强;当ADX值下降,说明趋势在减弱。策略通过ADX指标设置交易过滤条件,只在趋势力度较强时才发出交易信号。
-
-具体来说,策略的交易信号生成规则为:
-
-1. 快线上穿慢线时做多,快线下穿慢线时做空
-2. ADX>25时才允许做多做空
-
-这样可以有效过滤掉趋势力度较弱的无效信号,进一步提高交易系统的稳定性。
-
-## 策略优势
-
-该策略主要具有以下几个优势:
-
-1. **捕捉中长线价格趋势**:双EMA平均线系统能够有效判断价格中长线趋势,避免被短期市场噪音干扰。
-
-2. **过滤假断裂**:通过ADX指标判断趋势力度,避免在趋势转折点附近出现的假断裂带来不必要的亏损。
-
-3. **参数优化空间大**:快慢线参数组合、ADX参数等都有优化空间,可以通过组合参数获取更好的交易效果。
-
-4. **适应性强**:该策略适用于大多数股票和时间周期,已经经过了多种市场的验证。
-
-5. **易于实施**:该策略只需要简单平均线指标,资源占用少,易于编程实现,实际运用成本低。
-
-## 策略风险
-
-该策略也存在一定的风险,主要集中在以下几个方面:
-
-1. **趋势反转风险**:任何趋势策略都无法完美判断趋势反转点,在真正趋势反转来临时难免会承受较大的亏损。
-
-2. **参数优化过度风险**:参数优化到极致也会导致策略对历史数据过度拟合,这会降低策略的稳定性和实战效果。
-
-3. **突发事件风险**:重大突发事件会打破原有的价格趋势模式,这时移动平均线指标会失效,需要人工干预或设置止损来控制亏损。
-
-针对以上风险,我们可以从以下几个方面进行优化:
-
-1. 引入附加指标判断价格转折点。例如引入成交量,在价格转折的同时成交量会放大。
-
-2. 适当放宽ADX参数,确保在趋势初期也能把握机会。同时也可以引入MACD等辅助判断指标。
-
-3. 对参数组合进行多组训练测试,选择稳定性和实战效果都良好的参数。避免单一参数组的优化过度风险。
-
-## 策略优化方向  
-
-该策略还有一些可优化的方向:
-
-1. **引入止损机制**:设置移动止损或百分比止损,可以在趋势反转时主动止损,避免持仓亏损过大。
-
-2. **结合交易量指标**:例如成交量,可以避免在成交量放大的价格转折点出现错误信号。
-
-3. **参数自适应优化**:让指标的参数能够根据实时市场变化进行自适应调整,而不是固定静态参数,这可以大大提高策略的稳定性。
-
-4. **引入机器学习**:使用机器学习算法分析大量历史数据,确定移动平均线和ADX的参数,甚至可以预测价格的未来走势。这是移动平均线策略演化的一个方向。
-
-5. **跨周期优化**:不同交易周期Parameter设置可以不一样,可以测试出每种周期下参数的最优配置。
-
-## 总结
-
-双移动平均线趋势跟踪策略整体来说是一种成熟稳定的策略思路。该策略通过双EMA平均线系统捕捉价格中长线趋势,并有ADX指标来过滤信号,能够有效把握股票价格趋势,避免被短期市场噪音干扰。与此同时,该策略也存在一定的风险,需要对参数组合与止损方法进行优化,甚至可以引入更多辅助指标和机器学习算法来提升策略的稳定性。总的来说,双移动平均线趋势跟踪策略具有良好的平衡性,是一种适合中长线投资者使用的量化策略思路。
-
-||
 
 ## Overview
 
@@ -149,7 +79,6 @@ There are also some directions in which this strategy can be optimized:
 
 In general, the Dual Moving Average Trend Tracking strategy is a mature and stable strategy idea. This strategy captures medium to long term price trends through the dual EMA system, and has the ADX indicator to filter signals, which can effectively capture stock price trends and avoid interference from short-term market noise. At the same time, this strategy also has certain risks, requiring optimization of parameter combinations and stop loss methods, and can even introduce more auxiliary indicators and machine learning algorithms to enhance strategy stability. In summary, the Dual Moving Average Trend Tracking strategy has good balance, and is a quantitative strategy idea suitable for medium to long term investors.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ca5e2406be07a27644.png)
 
-[trans]
-
-#### 概述
-
-多层级动态趋势跟随系统是一种基于海龟交易法则的改进策略。该策略利用多个时间周期的趋势信号,结合动态止损和金字塔加仓,实现对中长期趋势的把握。系统通过设置两个趋势跟随周期(L1和L2)来捕捉不同速度的趋势,并使用自适应的ATR指标来动态调整入场、加仓和止损位置。这种多层级的设计使得策略能够在不同市场环境下保持稳定性,同时通过金字塔加仓来最大化盈利潜力。
-
-#### 策略原理
-
-1. 趋势识别:使用两个移动平均线周期(L1和L2)来识别不同速度的趋势。L1用于捕捉较快的趋势,L2用于捕捉较慢但更可靠的趋势。
-
-2. 入场信号:当价格突破L1或L2的高点时产生做多信号。如果上一次L1交易盈利,则跳过下一次L1信号,直到出现L2信号。
-
-3. 动态止损:使用ATR的倍数(默认3倍)作为初始止损距离,随着持仓时间的增加,止损位会逐渐上移。
-
-4. 金字塔加仓:在趋势延续过程中,每当价格上涨0.5个ATR时进行加仓,最多加仓5次。
-
-5. 风险控制:每笔交易的风险不超过账户净值的2%,通过动态计算持仓量来实现。
-
-6. 退出机制:当价格跌破10日低点(L1)或20日低点(L2)时平仓,或者触发移动止损线时平仓。
-
-#### 策略优势
-
-1. 多层级趋势捕捉:通过L1和L2两个周期,既能捕捉快速趋势,又能把握长期趋势,提高了策略的适应性和稳定性。
-
-2. 动态风险管理:使用ATR作为波动性指标,实现了入场、止损和加仓位置的动态调整,更好地适应市场变化。
-
-3. 金字塔加仓:在趋势延续时逐步加仓,既控制了风险,又最大化了盈利潜力。
-
-4. 灵活的参数设置:多个可调参数使策略能够适应不同的市场和交易风格。
-
-5. 自动化执行:策略可以完全自动化运行,减少人为干预和情绪影响。
-
-#### 策略风险
-
-1. 趋势反转风险:在强趋势市场表现优异,但在震荡市场可能频繁交易导致亏损。
-
-2. 滑点和交易成本:频繁的加仓和移动止损可能带来较高的交易成本。
-
-3. 过度优化风险:参数众多,容易造成过度拟合历史数据。
-
-4. 资金管理风险:如果初始资金较小,可能无法有效执行多次加仓。
-
-5. 市场流动性风险:在流动性较差的市场,可能难以按照理想价格执行交易。
-
-#### 策略优化方向
-
-1. 引入市场环境过滤:可以添加趋势强度指标(如ADX)来判断市场环境,在震荡市场减少交易频率。
-
-2. 优化加仓策略:可以考虑根据趋势强度动态调整加仓间隔和次数,而不是固定的0.5ATR和5次。
-
-3. 引入止盈机制:在长期趋势中,可以设置部分止盈以锁定利润,如在达到3倍ATR盈利时平掉一半仓位。
-
-4. 多品种相关性分析:在组合应用时,可以加入品种间相关性分析,以优化整体风险收益比。
-
-5. 加入波动率过滤:在极高波动率时期可以暂停交易或调整风险参数,以应对异常市场。
-
-6. 优化退出机制:可以考虑使用更灵活的退出指标,如parabolic SAR或Chandelier Exit。
-
-#### 总结
-
-多层级动态趋势跟随系统是一种结合了经典海龟交易法则和现代量化技术的综合策略。通过多层级趋势识别、动态风险管理和金字塔加仓等方法,该策略在保持稳健性的同时,提高了对趋势的把握能力和盈利潜力。虽然在震荡市场面临挑战,但通过合理的参数优化和风险控制,该策略有望在不同市场环境下保持稳定表现。未来可以通过引入市场环境判断、优化加仓和退出机制等方向进行进一步改进,以提高策略的鲁棒性和盈利能力。
-
-|| 
 
 #### Overview
 
@@ -135,7 +72,6 @@ The Multi-Level Dynamic Trend Following System is an improved strategy based on 
 
 The Multi-Level Dynamic Trend Following System is a comprehensive strategy combining classic Turtle Trading Rules with modern quantitative techniques. Through multi-level trend identification, dynamic risk management, and pyramid position building, this strategy improves trend capture ability and profit potential while maintaining robustness. Although it faces challenges in range-bound markets, with proper parameter optimization and risk control, the strategy has the potential to maintain stable performance across different market environments. Future improvements can focus on introducing market environment assessment, optimizing position building and exit mechanisms to enhance the strategy's robustness and profitability.
 
-[/trans]
 
 
 

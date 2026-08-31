@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a514e968f293222069.png)
-[trans]
-#### 概述
-该策略基于均值回归的原理,利用价格偏离移动平均线的情况来进行交易决策。当价格向上偏离上轨时做空,向下偏离下轨时做多,价格回归到移动平均线时平仓。这个策略的核心是假设价格总是会回归到均值水平。
-
-#### 策略原理
-1. 计算指定周期(默认20)的简单移动平均线(SMA)作为价格的均值水平。
-2. 计算价格的标准差(DEV),并以此构建上下轨道。上轨是SMA加上标准差的倍数(默认1.5),下轨是SMA减去标准差的倍数。
-3. 当价格向上突破上轨时做空,向下突破下轨时做多。
-4. 当做多的价格向下穿过SMA时平多,做空的价格向上穿过SMA时平空。
-5. 在图表上标记移动平均线、上轨、下轨以及买卖信号。
-
-#### 优势分析
-1. 均值回归策略基于价格总是回归均值的统计学原理,长期而言有一定的盈利概率。
-2. 上下轨的设置提供了明确的入场和出场点位,便于执行和管理。
-3. 策略逻辑简单清晰,容易理解和实现。
-4. 适用于存在明显均值回归特征的品种和周期。
-
-#### 风险分析
-1. 市场趋势发生变化时,价格可能长期偏离均值而不回归,导致策略失效。
-2. 标准差倍数设置不当会导致交易频率过高或过低,影响收益。
-3. 极端行情下价格波动剧烈,上下轨可能失去作用。
-4. 如果品种或周期不存在均值回归的特征,该策略可能无法盈利。
-
-#### 优化方向
-1. 对SMA的周期和标准差倍数进行优化测试,找到最佳参数。
-2. 引入趋势判断指标,在趋势明确时避免逆势交易。
-3. 在标准差之外加入ATR等波动率指标,构建动态轨道。
-4. 对滑点、手续费等交易成本进行考虑,控制回测的真实性。
-5. 加入风控模块,如止损止盈、仓位管理等。
-
-#### 总结
-均值回归策略是一种基于统计学原理的量化交易策略,通过构建价格均值上下轨来进行交易决策。该策略逻辑简单,执行明确,但要注意品种的选择和参数的优化。在实际应用中,还需要考虑趋势、交易成本、风险控制等因素,以提高策略的稳健性和盈利能力。总之,均值回归策略是量化交易领域一种常见且值得深入研究的策略。
-
-|| 
 
 #### Overview
 This strategy is based on the principle of mean reversion, using the deviation of prices from the moving average to make trading decisions. It goes short when the price deviates above the upper band and goes long when it deviates below the lower band. The position is closed when the price reverts back to the moving average. The core assumption of this strategy is that prices will always revert to the mean level.
@@ -76,7 +42,6 @@ This strategy is based on the principle of mean reversion, using the deviation o
 
 #### Summary
 The mean reversion strategy is a quantitative trading strategy based on statistical principles, which makes trading decisions by constructing upper and lower bands around the mean price. The strategy has simple logic and clear execution, but attention should be paid to the selection of instruments and optimization of parameters. In practical application, factors such as trend, trading costs, and risk control also need to be considered to improve the robustness and profitability of the strategy. In general, the mean reversion strategy is a common and worthy of in-depth study in the field of quantitative trading.
-[/trans]
 
 
 

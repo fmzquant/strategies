@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-随机指标双轨突破策略是根据随机指标的两条轨道线进行交易操作的策略。其交易信号来源于随机指标快线对慢线及上下轨的突破。
-
-该策略的具体逻辑是:
-
-1. 计算一定周期内(例如7日)的随机指标的快线和慢线
-
-2. 设置快线的上下两条轨道线(例如上轨80,下轨20)
-
-3. 当快线从下方突破上轨时,做多
-
-4. 当快线从上方突破下轨时,做空
-
-5. 可选择反向交易信号,即做多变做空,做空变做多
-
-通过快线突破上下轨来捕捉趋势,并以慢线作为支撑和压力,能够有效过滤假突破。此外,可以通过调整参数来适应不同周期。
-
-## 策略优势
-
-- 规则简单直观,容易实现
-
-- 随机指标能较好地判断超买超卖现象
-
-- 上下轨加慢线能有效过滤假突破
-
-## 策略风险
-
-- 速度差指标滞后,可能漏失机会
-
-- 需要反复优化参数,适应市场环境
-
-- 上下轨需要谨慎设置,避免过于频繁交易
-
-## 总结
-
-随机指标双轨突破策略通过快慢线轨道之间的突破来捕捉趋势机会。设置合理的参数能有效把握市场节奏,但需注意指标本身的滞后性问题。可考虑结合其他指标进行验证,以提高策略稳定性。
-
-
-||
 
 ## Strategy Logic
 
@@ -91,7 +49,6 @@ Breakouts of the bands with the slow Stochastic line as support/resistance can e
 
 The Stochastic breakout strategy capitalizes on trend opportunities using fast/slow line band breaks. With well-tuned parameters, it can effectively capture market rhythm but lag is a key risk to note. Combining with other confirming indicators can improve strategy robustness. 
 
-[/trans]
 
 > Strategy Arguments
 

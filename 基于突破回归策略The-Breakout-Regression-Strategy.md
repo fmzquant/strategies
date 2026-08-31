@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6727ef820f88c51f18.png)
-[trans]
-
-### 概述
-
-该策略是一个系统化的方法,旨在利用原油期货市场的波动性获利。它测量蜡烛的平均区间范围,如果快速移动平均线高于慢速移动平均线,这意味着蜡烛更大;如果慢速移动平均线高于快速移动平均线,这意味着蜡烛更小。
-
-根据这个原理,识别潜在的长入场点和短入场点。仓位只保持一定的蜡烛数量,这个参数由“Exit after bars”输入控制。
-
-### 策略原理
-
-1. 计算最近9根K线的最高收盘价,作为突破判断标准
-2. 计算最近50根K线的最低收盘价,作为突破判断标准
-3. 计算最近5根和20根K线的平均波幅对比,判断K线形态逐渐扩大还是缩小
-4. 识别长线和短线突破信号:当收盘价等于最高收盘价,且K线逐渐缩小时,做多;当收盘价等于最低收盘价,且K线逐渐缩小时,做空
-5. 突破后的固定根K线平仓离场:可调整参数改变平仓间隔
-
-### 优势分析
-
-1. 回归策略,通过和历史极值对比判断行情方向
-2. 结合波动性判断,可避免虚假突破
-3. 固定根K线离场,可锁定一定盈利,规避回撤
-
-### 风险分析
-
-1. 历史极值随市场结构变化而改变,可能出现信号失败
-2. 虚假突破导致套牢
-3. 离场间隔参数不当,可能丢失更大盈利或增加亏损
-
-### 优化方向
-
-1. 极值参数可通过行情统计学优化
-2. 可加入波动率指标评估真实突破概率
-3. 可通过策略回测结果优化离场根数
-
-### 总结
-
-该策略利用突破和回归判断短期趋势,属于波动性策略。通过优化参数设置和加入波动率指标判定,可以减少虚假突破概率,提高盈利水平。同时固定根K线的快速离场机制,可锁定一定利润,有效控制风险。该策略可以作为短线操作的辅助工具,也可通过参数调整获得更长周期的操作信号。
-
-||
 
 ### Overview
 
@@ -86,7 +47,6 @@ According to this principle, it identifies potential long and short entry points
 
 This strategy utilizes breakout and regression to determine short-term trends, belonging to volatility strategies. By optimizing parameters and adding volatility metrics to determine false breakout probability, it can increase profitability. Also the fast exit mechanism locks in some profit and controls risk effectively. It can serve as an auxiliary tool for short-term trading, and can also generate longer-term trading signals through parameter tuning.
 
-[/trans]
 
 > Strategy Arguments
 

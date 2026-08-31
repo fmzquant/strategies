@@ -12,47 +12,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/df96004da95531fe21.png)
 
-[trans]
-
-## 概述
-
-本策略名为“流动性驱动趋势策略”(Liquidity Driven Trend Strategy),目的是识别不同时间周期上的价格趋势方向,并相应做出买入或卖出决策。该策略运用双均线系统判断趋势,并利用多时间框架上的差价相对强度指数(RSI)实现在趋势变化时及时反应。
-
-## 策略原理  
-
-该策略的核心逻辑基于CHOP指标,其中变动平均系统判断大趋势方向。具体来说,策略在高周期时间框架上计算快线(Length=20)与慢线(Length=50)的 RSI 值,并计算二者差值。当快线 RSI 上穿慢线 RSI 时则判断为看涨,形成做多信号;反之,快线 RSI 下穿慢线 RSI 则看跌,形成做空信号。根据价格涨跌而变化的 RSI 差值,可 sensitive 地判断趋势变化点。  
-
-该策略还引入多时间框架判定:在较高级别周期(如日线)计算 RSI 差值,以判断整体趋势方向;根据较高级别周期的判断结果,在较低级别周期(如5分钟线)进行具体的买入卖出执行。这种多时间框架的组合,既考虑了高周期趋势判断,又兼顾低周期操作的灵活性。
-
-## 策略优势
-
-- 利用 RSI 差值判断潜在趋势反转,提前反应,sensitive
-- 应用多时间框架思路,高周期判断趋势,低周期操作执行
-- RSI 指标体现价格与成交量变化,反映市场流动性与参与热度  
-- 简单参数设置,容易理解、可解释、可调整
-
-## 策略风险及解决 
-
-- 双均线判定时可能出现虚假突破
-- 突破失败可能造成不必要损失
-
-解决方法:
-
-1. 调整均线参数,降低虚假突破概率
-2. 增加过滤条件,避免不必要入场
-
-## 策略优化方向
-
-- 利用 Kalman Filter 算法优化 RSI 参数
-- 增加 MACD 等指标辅助判断
-- 结合交易量变化设定动态出场位置 
-
-## 总结
-
-本策略运用 RSI 差值判断潜在趋势变化,实现 sensitive 地捕捉转折点。多时间框架的运用既保证了对大趋势的判断,又使具体买卖操作更为灵活。相比其他趋势跟踪策略,该策略更加简单直接,参数Settings 直观,易于调整优化。总体来说,该策略形成了一套高效、实用的趋势交易体系,值得进一步探索应用。
-
-
-||
 
 ## Overview
 
@@ -91,7 +50,6 @@ Solutions:
 
 This strategy leverages RSI divergence to sensitively capture potential turning points of the trend. The multi-timeframe application ensures judging the overall trend while keeping specific trade execution flexible. Compared to other trend following strategies, this strategy is more straightforward, intuitive in parameter adjustments and easy to optimize. In conclusion, the strategy forms an efficient and practical trend trading system worth further exploration and application.  
 
-[/trans]
 
 
 

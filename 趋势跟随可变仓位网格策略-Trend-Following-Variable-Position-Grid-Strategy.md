@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1828af091215c9459d0.png)
 
-[trans]
-#### 概述
-
-该策略是一个趋势跟随可变仓位网格策略,主要利用EMA、RSI和吞没形态来判断趋势方向和入场时机。策略根据吞没形态的实体大小来调整止损和止盈位置,同时允许用户选择只做多、只做空或者多空都做。此外,该策略还提供了MACD作为趋势过滤条件的选项。
-
-#### 策略原理
-
-该策略使用200周期EMA线来判断大趋势方向,当价格在EMA上方时认为处于上升趋势,在EMA下方则认为处于下降趋势。9周期RSI用于判断动量,RSI大于50认为多头动能较强,小于50则认为空头动能较强。同时,策略使用看涨和看跌吞没形态作为入场信号。当EMA、RSI、吞没形态信号一致时,策略开仓。
-
-策略止损和止盈的位置根据吞没形态实体的大小来确定。止损位置为吞没实体的两倍,同时设置最小止损幅度为入场价的0.3%,以避免止损距离过小导致频繁止损。止盈位置为止损幅度乘以事先设定的盈亏比,确保盈亏比固定。此外,策略提供了MACD作为趋势过滤条件的选项,当MACD主线在信号线上方时认为多头趋势较强,反之认为空头趋势较强。
-
-#### 策略优势
-
-1. 趋势跟随:策略利用多个指标共同判断趋势,有助于在趋势形成初期介入,捕捉趋势行情。
-
-2. 动态止损止盈:根据吞没形态实体大小来调整止损止盈位置,在趋势较强时拉大止盈空间,趋势较弱时缩小止损范围,灵活控制仓位。
-
-3. 用户可自定义交易方向、风险偏好等参数,适应不同用户需求。
-
-4. 提供MACD作为趋势过滤条件的选项,进一步确认趋势强度,提高入场胜率。
-
-#### 策略风险
-
-1. 趋势判断错误:虽然策略采用了多个指标联合判断,但在某些情况下仍可能出现趋势判断错误,导致损失。
-
-2. 幅度收窄:若吞没形态实体较小,止损和止盈距离会非常接近,导致盈亏比恶化,这种情况在震荡行情中较为常见。
-
-3. 参数优化:不同标的、不同周期下,最优参数可能差异较大,需要用户不断调试和优化。
-
-#### 策略优化方向
-
-1. 趋势判断:可尝试引入更多趋势确认工具如布林带、平均方向指数(ADX)等,提高趋势判断准确性。
-
-2. 止损止盈优化:考虑引入ATR等与波动率相关的指标,动态调整止损止盈距离,减少幅度过小带来的风险。
-
-3. 仓位管理:根据趋势强弱、账户盈利情况等动态调整仓位大小,在趋势强且稳定盈利时加大仓位,降低频繁交易带来的成本。
-
-4. 多周期、多品种协同:跨周期、跨品种验证趋势信号,提高趋势把握的胜率,同时分散单一标的或周期的风险。
-
-#### 总结
-
-该趋势跟随可变仓位网格策略在趋势行情中表现较好,通过多个指标共同判断趋势方向和强度,动态调整止损止盈和仓位,能较好地把握趋势,获得超额收益。但在趋势不明朗或频繁波动的行情中,该策略表现一般。因此,在使用该策略时,需要重点关注趋势品种的筛选,并随行情变化调整参数。此外,趋势判断、止损止盈、仓位管理、多周期多品种协同等方面还有进一步优化的空间。
-
-|| 
 
 #### Overview
 
@@ -97,7 +53,6 @@ The stop-loss and take-profit positions are determined based on the size of the 
 #### Summary
 
 This trend-following variable position grid strategy performs well in trending markets by using multiple indicators to determine trend direction and strength, dynamically adjusting stop-loss, take-profit, and position sizing to capture trends and achieve excess returns. However, the strategy's performance is average in unclear or frequently fluctuating markets. Therefore, when using this strategy, it is crucial to focus on selecting trending instruments and adjusting parameters as market conditions change. Furthermore, there is room for further optimization in trend identification, stop-loss and take-profit placement, position sizing, and multi-timeframe and multi-instrument coordination.
-[/trans]
 
 > Strategy Arguments
 

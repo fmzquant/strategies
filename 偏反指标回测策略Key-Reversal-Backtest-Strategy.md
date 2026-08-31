@@ -11,81 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17db127ee66d2b8d4a4.png)
 
-[trans]
-
-### 概述
-
-偏反指标回测策略通过检测股票价格是否创出新的高点后关闭价格回落,来判断市场潜在空头机会,属于短线交易策略。该策略结合视觉形态进行形态识别,辅助判断价格反转信号,然后进行回测验证策略的可行性。
-
-### 策略原理
-
-该策略的核心逻辑是基于“偏反指标”理论,通过判断价格创出新高后是否有明显回落迹象,来识别潜在的空头机会。具体实现原理如下:
-
-1. 定义参数nLength,表示回朔周期,用来判断价格创不创新高;
-
-2. 定义变量xHH,存储过去nLength周期内的最高价;  
-
-3. 定义变量C1,判断当天最高价是否超过xHH,即是否创新高,同时收盘价是否低于前一日收盘价,符合该条件则可能为偏反形态;
-
-4. 绘制三角形指示当天可能为偏反形态的K线;
-
-5. 当识别到偏反形态时,进行短线空头交易,设置止盈止损逻辑。
-
-通过上述流程,可以有效识别偏反形态,判断价格反转信号,进行短线空头交易。
-
-### 优势分析
-
-该策略具有以下几个优势:
-
-1. 基于实际价格形态,判断反转信号更加可靠;
-
-2. 结合图形化指标,交易信号更直观;  
-
-3. 实现止盈止损逻辑,有利于风险控制;
-
-4. 回测验证策略的可行性,更有说服力。
-
-总体来说,该策略结合多个因素判断交易信号,并进行回测验证,判断价格反转的准确性较高,具有很好的实战价值。
-
-### 风险分析 
-
-尽管该策略有明显的优势,但是也存在一些风险需要注意:
-
-1. 偏反形态不一定会引发趋势反转,存在一定的假信号风险;  
-
-2. 单一股票样本量可能较小,不能完全代表整体市场;
-
-3. 止损点设置不当可能带来更大的资金损失。
-
-为规避上述风险,可以考虑以下几点:
-
-1. 结合更多因素验证交易信号,如成交量异动等; 
-
-2. 增大回测样本量,不同品种组合回测;
-
-3. 优化和测试不同的止损点,寻找最优参数。
-
-### 优化方向  
-
-该策略还存在一些可以优化的方向:  
-
-1. 增加机器学习算法,训练模型判断偏反形态的可能性,提高准确率;  
-
-2. 优化止损算法,如追踪止损、平均止损等,降低单笔止损;
-
-3. 结合情绪分析等更多因素判断市场反转概率,设定动态交易信号;
-
-4. 丰富策略类型,如结合量能指标、波动指标等判断反转信号;  
-
-5. 使用更复杂交易系统的回测和优化功能,提高策略的灵活性。
-
-通过上述几个方面的优化,可以使该交易策略的准确性和实战水平进一步提升。
-
-### 总结
-
-偏反指标回测策略通过判断价格形态识别短期反转信号,并进行回测验证,能够有效捕捉反转机会。该策略图形化指标直观,止盈止损逻辑完备,具有良好的实战价值。当然,仍需要注意一定的假信号风险,通过不断优化判断模型和止损算法可以使策略效果更好。总体上,该策略为判断市场反转提供了新的思路,是一种非常有前景的量化交易方法。
-
-||
 
 ### Overview
 
@@ -159,7 +84,6 @@ Through the above aspects of optimization, the accuracy and practical level of t
 
 The key reversal backtest strategy identifies short-term reversal signals by judging price patterns, and verifies them through backtesting. It can effectively capture reversal opportunities. This strategy has intuitive graphical indicators and complete stop profit and stop loss logic, with good practical value. Of course, certain false signal risks still need to be noted. By continuously optimizing the judgment model and stop loss algorithm, the effect of the strategy can be better. Overall, this strategy provides new ideas for judging market reversals and is a very promising quantitative trading method.
 
-[/trans]
 
 > Strategy Arguments
 

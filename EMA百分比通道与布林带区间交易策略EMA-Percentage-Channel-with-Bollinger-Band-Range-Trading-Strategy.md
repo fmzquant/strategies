@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12e3b8663cd04c217cb.png)
-[trans]
-
-## 概述
-
-该策略基于用户选择的EMA和定义的百分比通道。当价格低于上轨时,策略做多;当价格高于下轨时,策略做空。如果价格开始趋势交易并突破通道,则平仓所有头寸,以防止损失。
-
-对于趋势性市场,建议使用配套的“EMA百分比通道与布林带趋势交易策略”。
-
-## 原理
-
-1. 计算200周期的EMA作为基准EMA。
-
-2. 根据用户设置的百分比,计算上下轨:
-    上轨 = EMA * (1 + 百分比)
-    下轨 = EMA * (1 - 百分比)
-    
-3. 计算20周期的布林带,描绘通道范围。
-
-4. 当收盘价由下向上突破布林带下轨时,做多;当收盘价由上向下突破布林带上轨时,做空。
-
-5. 使用ATR计算止损位,避免过大亏损。
-
-6. 如果价格超出设置的百分比通道范围,则平仓所有头寸,防止进一步损失。
-
-## 优势
-
-1. 使用EMA作为基准,可以更好地捕捉趋势转换点。
-
-2. 百分比通道设定合理的交易范围,避免过于频繁交易。
-
-3. 布林带提供支撑阻力位,辅助判断进场时机。
-
-4. 使用ATR trailing stopdynamically设置止损,有效控制单笔交易风险。
-
-5. 价格超出通道则全部平仓,可快速控制损失。
-
-6. 可自定义的参数设置灵活,可针对不同市场调整。
-
-## 风险
-
-1. 如果百分比通道范围过宽,可能错过趋势或防止亏损不及时。
-
-2. 如果百分比通道范围过窄,可能过于频繁交易,增加交易成本。
-
-3. 布林带参数设置不当也可能导致错过交易机会。
-
-4. 停损点设定过于宽松可能导致单笔亏损过大。
-
-5. 需要适当优化参数以找到最佳交易范围。
-
-## 优化方向
-
-1. 测试不同的EMA周期参数,找到最适合的均线周期。
-
-2. 优化百分比通道参数,寻找最佳通道范围。
-
-3. 调整布林带周期参数,优化捕捉波动的效果。 
-
-4. 调整ATR周期和倍数,进一步优化止损策略。
-
-5. 测试仅做多上方或做空下方的条件,看是否能提高胜率。
-
-6. 结合趋势指标,判断是否需要提前平仓。
-
-## 总结
-
-该策略综合利用均线、通道、波动率等多种指标的优势,实现了较为稳定的区间交易策略。关键是找到最适合特定市场的各项参数设置,实现风险和收益的平衡。未来可继续优化参数及策略规则,或与趋势交易策略组合使用。
-
-||
 
 
 ## Overview
@@ -147,7 +78,6 @@ For trending markets, the sister "EMA Percentage Channel with Bollinger Band Tre
 
 This strategy combines the strengths of moving averages, channels, volatility and more to create a relatively stable range trading system. The key is finding the most suitable parameter settings for each specific market to balance risk and reward. Future improvements can continue optimizing rules and parameters, or combining with trend strategies.
 
-[/trans]
 
 > Strategy Arguments
 

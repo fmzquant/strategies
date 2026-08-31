@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10bd32e4a6c1b849210.png)
-[trans]
-
-
-## 概述
-
-本策略的核心思想是利用CCI指标判断市场趋势方向,以及利用EMA指标对CCI进行平滑处理,实现趋势跟随交易。当CCI上穿过买点时做多,当CCI下穿过卖点时做空,达到跟随市场趋势的目的。
-
-## 策略原理  
-
-1. 计算CCI指标。CCI指标以当日收盘价与过去20天的均线的偏离程度来判断目前的股价是否已超买或超卖。公式为:(typical price - 20日SMA) / (0.015 * 20日典型价格标准差)。
-
-2. 对CCI指标进行EMA平滑处理,得到CCI-EMA曲线,以减少CCI指标的震荡,使信号更明确。 
-
-3. 设置CCI的买点和卖点。当CCI-EMA上穿过买点时,做多;当CCI-EMA下穿过卖点时,做空。
-
-4. 持仓至CCI-EMA再次触碰买点或卖点时平仓。
-
-## 策略优势分析
-
-1. 利用CCI判断市场趋势方向,再结合EMA过滤假信号,可以有效跟踪市场趋势。
-
-2. CCI指标对价格异常敏感,可以快速捕捉趋势的转折。EMA指标能减少误报率。二者配合使用,可以在趋势开始阶段即抓住机会。
-
-3. 采用趋势跟随策略,可最大限度减少交易次数,降低交易成本和滑点损失。
-
-4. 策略回测效果较好,具有一定的实盘可行性。
-
-## 策略风险分析 
-
-1. CCI指标存在对曲线过度敏感的问题,EMA无法完全滤除所有假信号,仍存在一定的误报风险。
-
-2. 纯趋势跟随策略,在趋势震荡或反转时容易亏损。应适当配合趋势判断指标使用。
-
-3. 纯机械交易策略,无法根据市场情况灵活调整参数,存在过优化风险。
-
-4. 回测数据不足,无法完全反映实盘表现。实盘时应适当调整参数,严格控制止损。
-
-## 策略优化方向
-
-1. 优化CCI的参数,测试不同长度周期的参数效果。
-
-2. 优化EMA参数,寻找最佳的EMA周期长度。
-
-3. 测试不同的买卖点参数组合,找到最优参数。
-
-4. 结合其他指标判断趋势反转,设置止损位来避免亏损扩大。
-
-5. 添加自动参数优化功能,根据不同品种自动寻找最优参数组合。
-
-## 总结
-
-本策略整体来说是一个较为简单的趋势跟随交易策略。它利用CCI判断趋势方向且对价格变化敏感,配合EMA进行滤波从而产生交易信号。策略具有一定的优势,但也存在一些风险需要注意。通过参数优化以及配合使用其他指标,可以进一步提高策略稳定性和实盘表现。总体来说,本策略为量化交易提供了一个简单可靠的趋势跟随策略模板。
-
-||
 
 
 
@@ -117,7 +63,6 @@ The core idea of this strategy is to use the CCI indicator to determine the mark
 
 Overall this is a relatively simple trend following trading strategy. It uses CCI to determine trend direction and is sensitive to price changes, combined with EMA filtering to generate signals. The strategy has some advantages but also risks to note. Through parameter optimization and using other indicators, the stability and live performance can be further improved. Overall it provides a simple and reliable trend following template for quant trading.
 
-[/trans]
 
 > Strategy Arguments
 

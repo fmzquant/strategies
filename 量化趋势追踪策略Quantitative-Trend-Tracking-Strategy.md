@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/52039180b6aa7fb627.png)
-[trans]
-## 概述
-该策略采用了布林带、RSI、ADX、MACD等多个指标对市场趋势进行判断,具有较强的趋势识别能力。当指标信号同时 bullish 时,采取追涨策略;当指标信号同时 bearish 时,平仓止损。
-
-## 策略原理
-
-- 使用布林带判断价格是否处在布林带上轨或下轨附近,作为判定趋势是否形成的依据
-- 结合RSI指标判断是否处于超买超卖区域,避免假突破
-- 使用ADX判断趋势力度,只有在趋势力度较强时才发出信号
-- 采用MACD判断短期和长期趋势一致性
-- 结合日内时间段,只在指定交易时段交易
-
-通过多指标组合判断,准确识别价格趋势,在趋势发生时及时追踪,实现超额收益。
-
-## 优势分析
-
-该策略最大的优势在于指标组合判断较为全面和准确,能有效识别价格趋势,避免因单一指标造成的假信号。
-
-具体来说,优势有:
-
-1. 布林带能判断价格波动范围和强弱程度
-2. RSI避免买进超买区域,卖出超卖区域
-3. ADX判断趋势力度,只跟随强势趋势
-4. MACD判断短长线一致性
-5. 限定交易时段,避免隔夜风险
-
-通过指标组合判断,能最大程度减少假信号,增强策略稳定性。
-
-## 风险分析
-
-该策略主要风险来自:
-
-1. 突发事件造成指标失效
-2. 震荡行情中产生大量假信号
-
-针对风险1,由于依赖多个指标,能够一定程度上避免单一指标失效的问题,但仍需完善风控机制。
-
-针对风险2,可适当调整参数,缩小交易区间,减少交易频率,降低风险。
-
-## 优化方向  
-
-该策略主要可优化的方向包括:
-
-1. 增加止损机制,如移动止损、时间止损、突破止损等,避免拉回过深
-2. 优化参数,调整指标参数组合,寻找最优参数
-3. 增加过滤条件,如成交量过滤,避免量小的假突破
-4. 结合更多指标,如KDJ、OBV等,提升信号准确性
-5. 采用机器学习方法自动优化参数
-
-通过持续优化,不断提高策略参数健壮性,降低假信号概率。
-
-## 总结  
-
-该策略整体来说识别趋势信号能力较强,通过指标组合判断,能有效识别价格趋势,max|max|
-
-但是也存在一定风险,需要不断完善风控机制,持续优化参数,才能长期稳定运作。如果后期能引入机器学习等方法实现参数自动优化,将大大增强策略的鲁棒性和收益能力。
-
-||
 
 ## Overview
 This strategy adopts multiple indicators such as Bollinger Bands, RSI, ADX, MACD to judge market trends and has strong trend identification capability. It takes trend following strategy when indicator signals are bullish simultaneously. It closes positions to stop loss when indicator signals are bearish simultaneously.
@@ -124,7 +66,6 @@ By continuous optimization, continuously improve parameter robustness and reduce
 Overall this strategy has relatively strong capability of identifying trend signals through indicator combination judgements which can effectively identify price trends. 
 
 But it also has certain risks, risk management and parameter optimization needs to be continuously improved for steady long-term operations. If methods like machine learning can be introduced later to achieve auto-optimization of parameters, it will greatly enhance robustness and profitability of the strategy.  
-[/trans]
 
 > Strategy Arguments
 

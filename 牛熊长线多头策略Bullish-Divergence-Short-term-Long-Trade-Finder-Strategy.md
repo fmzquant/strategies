@@ -10,88 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fb888073b0834aa54b.png)
-[trans]
-
-## 概述
-
-该策略通过寻找RSI指标的多头背离情况,判断短期内比特币价格可能反弹上涨的时机,从而确定合适的买入时机。
-
-## 策略原理
-
-1. 使用RSI指标判断是否存在多头背离
-
-    - 定义RSI指标参数(默认14周期)
-    - 计算当前RSI值
-    - 判断是否存在以下多头背离情况:
-        - RSI指标出现较低低点
-        - 此时价格出现较低低点 
-        - 之后RSI指标出现较高低点
-        - 此时价格出现较高低点
-
-2. 判断RSI值是否低于门限值
-
-    - 定义RSI低点判定门限值(默认40)
-    - 如果当前RSI值低于该门限值,则可能为买入时机
-
-3. 判断收盘价是否低于背离开始的低点
-
-    - 如果是,则进一步验证背离买入信号
-
-4. 定义止损退出条件
-
-    - 设置止损百分比(默认5%)
-    - 如果回撤达到该百分比,则止损退出
-
-5. 定义盈利退出条件
-
-    - 设置RSI高点判定门限值(默认75)
-    - 如果RSI上涨达到该门限值,则盈利退出
-
-## 优势分析
-
-1. 使用RSI指标判断多头背离,可以有效捕捉价格短期反弹的时机
-
-2. 配合RSI低点判断,可以在反弹前确定具体的买入点位
-
-3. 设置止损和止盈条件,可以对交易风险和收益进行管理
-
-4. 该策略参考了大量比特币实盘交易中RSI指标的特点,非常适合比特币短线做多
-
-5. 策略参数设置合理,可以适应不同市场情况,有利于实盘应用
-
-## 风险分析
-
-1. RSI指标存在失效的可能,如果判断错误,将导致交易亏损
-
-2. 单一技术指标容易产生假信号,应该与其他指标结合使用
-
-3. 需要选择合适的参数值,如果设置不当,会影响策略收益率
-
-4. 做多方向交易,需要关注大级别趋势,避免逆势操作
-
-5. 需要关注交易费用,过于频繁交易会影响最终收益
-
-6. 应定期回测优化参数,根据不同市场调整策略
-
-## 优化方向
-
-1. 可以考虑加入移动均线等其他指标,设置过滤条件,减少假信号
-
-2. 可以测试不同周期的参数设置,寻找最佳参数组合
-
-3. 可以结合较大级别趋势判断,避免在趋势反转时做多
-
-4. 可以设置动态止损,当利润达到一定水平后逐步抬高止损点
-
-5. 可以根据具体持仓情况,设置不同的止损幅度
-
-6. 可以引入机器学习等技术,实现参数的自动优化
-
-## 总结
-
-该策略通过捕捉RSI指标多头背离,判断比特币短期内存在反弹上涨的可能,从而确定买入时机。策略简单有效,参考了大量实盘经验,非常适合比特币短线做多。但单一技术指标易产生假信号,需要与其他指标组合使用,同时要关注参数优化、止损设置、交易成本等问题。如果使用得当,该策略可以在实盘中获利良多。
-
-||
 
 
 ## Overview
@@ -173,7 +91,6 @@ This strategy tries to identify short-term opportunities where Bitcoin is likely
 
 This strategy aims to identify Bitcoin short-term bounce opportunities by detecting RSI bullish divergences and determine good long entry points. The strategy is simple and effective, incorporating lots of practical trading experience, making it very suitable for Bitcoin scalping longs. However, reliance on a single indicator tends to generate false signals, so it should be combined with other indicators. Attention should also be given to parameter optimization, stop loss placement, trading costs, etc. If used properly, this strategy can be very profitable in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

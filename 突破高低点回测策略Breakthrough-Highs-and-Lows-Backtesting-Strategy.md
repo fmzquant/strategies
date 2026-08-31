@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6d3826a679658e5d0d.png)
-[trans]
-
-### 概述
-
-该策略基于突破周期高低点来判断趋势方向,在价格突破周期高点时做多,突破周期低点时做空,属于趋势跟踪策略。
-
-### 策略原理
-
-该策略首先读取用户设置的周期(日线、周线等)和回看周期数。然后根据这些参数得到回看周期的最高价和最低价。例如设置为日线周期、回看1周期,则取上一日的最高价和最低价。
-
-在实际交易中,如果收盘价大于等于回看周期的最低价,则判断为向上突破,做多;如果收盘价小于等于回看周期的最高价,则判断为向下突破,做空。
-
-这样通过突破周期高低点来捕捉趋势方向,属于趋势跟踪策略的一种。
-
-### 优势分析
-
-该策略主要有以下几点优势:
-
-1. 基于突破点判断趋势方向,容易抓住强势盘整后的大趋势。
-
-2. 操作简单容易理解,非常适合新手学习使用。
-
-3. 可方便优化调整周期参数,适用于不同品种。
-
-4. 可通过反向输入设置逆向操作,丰富策略运用。
-
-5. 绘制周期高低点辅助判断,形成多重验证。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 无法有效过滤震荡盘整,可能出现多次误操作。
-
-2. 无法控制止损,存在一定程度上的亏损风险。
-
-3. 对交易费用敏感,实际盈亏存在一定偏差。
-
-4. 无法限制仓位规模,存在超量问题。
-
-针对上述风险,可设置止损机制、优化过滤条件、控制仓位数量等方法进行优化。
-
-### 优化方向  
-
-该策略主要可从以下几个方向进行优化:
-
-1. 增加过滤机制,避免震荡盘整频繁开仓。可设置价格通道、波动率等过滤条件。
-
-2. 设置移动止损或时间止损。控制单笔损失风险,确保整体profitability。 
-
-3. 优化仓位规模和资金管理,防止超量问题,确保策略稳定性。
-
-4. 测试不同周期参数的效果,选择最优参数组合。 
-
-5. 增加算法交易模块,利用机器学习算法提高决策效率。
-
-### 总结
-
-总的来说,该突破高低点回测策略基于趋势跟踪判断方向,简单易操作,适合新手学习,但存在被套利困难的风险。通过增加过滤条件、止损机制、控制仓位等优化手段,可以减轻这些风险,使策略效果更好。该策略可为我们进一步研究和改进提供思路和借鉴作用。
-
-||
 
 ### Overview
 
@@ -130,7 +69,6 @@ The main optimization directions are:
 
 In summary, this breakthrough high low backtest strategy is simple to operate based on trend tracking, suitable for beginners to learn, but risks being trapped exist. By adding optimizations like filters, stops, position control, these risks can be reduced and strategy results improved. It can provide ideas and references for our further research and improvements.
 
-[/trans]
 
 > Strategy Arguments
 

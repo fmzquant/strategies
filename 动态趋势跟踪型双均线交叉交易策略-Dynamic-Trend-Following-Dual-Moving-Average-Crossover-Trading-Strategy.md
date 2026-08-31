@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/7e543ecd39c6548c02.png)
 
-[trans]
-#### 概述
-该策略是一个基于技术分析的动态趋势跟踪系统,主要利用双均线(200日简单移动平均线和21周指数移动平均线)来识别市场趋势。策略通过整合相对强弱指标(RSI)和平均趋向指标(ADX)作为动量过滤器,并结合真实波幅(ATR)进行动态风险管理,实现了对上升趋势的精确捕捉和风险的有效控制。
-
-#### 策略原理 
-策略的核心逻辑建立在以下几个关键要素之上:
-1. 使用200日简单移动平均线(SMA)和21周指数移动平均线(EMA)的双重确认来定义多头市场条件
-2. 通过RSI>50的条件确保动量持续向上
-3. 利用ADX>25的条件验证趋势强度
-4. 基于ATR的动态止损设置,提供了与市场波动相适应的风险控制
-5. 采用百分比止盈机制,确保在达到预期收益时及时获利了结
-
-#### 策略优势
-1. 系统具有良好的适应性,可以根据市场波动动态调整止损位置
-2. 双均线交叉提供了可靠的趋势确认信号,有效降低假突破风险
-3. 通过RSI和ADX的配合,显著提高了入场信号的质量
-4. 策略参数高度可定制,便于根据不同市场环境进行优化
-5. 采用日线级别交易,降低了交易成本和短期波动影响
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假信号,增加交易成本
-2. 均线策略天然具有滞后性,可能错过趋势初期的部分收益
-3. 多重过滤条件可能导致错过某些潜在的交易机会
-4. 在剧烈波动市场中,基于ATR的止损可能会过于宽松
-5. 固定百分比止盈可能在强势趋势中过早了结盈利部位
-
-#### 策略优化方向
-1. 可以引入成交量指标作为辅助确认,提高信号可靠性
-2. 考虑添加动态止盈机制,更好地适应不同市场阶段
-3. 优化RSI和ADX的参数设置,提高信号的及时性
-4. 增加趋势强度的分级判断,实现仓位的动态管理
-5. 引入市场波动率指标,在高波动期间适当调整交易频率
-
-#### 总结
-这是一个设计合理、逻辑清晰的趋势跟踪策略,通过多重技术指标的配合使用,较好地平衡了收益和风险。策略的可定制性强,适合在不同市场环境下通过参数优化来保持其有效性。虽然存在一定的滞后性风险,但通过完善的风险控制机制,策略整体表现出较好的稳定性和可靠性。
-
-|| 
 
 #### Overview
 This strategy is a dynamic trend-following system based on technical analysis, primarily utilizing dual moving averages (200-day SMA and 21-week EMA) to identify market trends. The strategy integrates the Relative Strength Index (RSI) and Average Directional Index (ADX) as momentum filters, combined with Average True Range (ATR) for dynamic risk management, achieving precise capture of uptrends and effective risk control.
@@ -83,7 +46,6 @@ The core logic of the strategy is built on several key elements:
 
 #### Summary
 This is a well-designed trend-following strategy with clear logic, effectively balancing returns and risks through multiple technical indicators. The strategy's high customizability makes it suitable for maintaining effectiveness across different market environments through parameter optimization. While it carries some inherent lag risks, the comprehensive risk control mechanisms contribute to overall stability and reliability.
-[/trans]
 
 
 

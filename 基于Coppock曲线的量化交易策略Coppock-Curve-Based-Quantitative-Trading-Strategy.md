@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19ccee84fb7143e22a6.png)
-[trans]
-
-## 概述
-
-该策略利用不太为人所知的Coppock曲线技术指标来实现量化交易。Coppock曲线通过计算标准普尔500指数或交易等价物的变化率的加权移动平均来派生。当Coppock曲线上穿零线时产生买入信号,下穿零线时产生卖出信号。可选择使用跟踪止损来锁定利润。该策略以$SPY的Coppock曲线作为买卖其他ETF和股票的代理信号。
-
-## 原理
-
-该策略使用Coppock曲线作为产生交易信号的技术指标。Coppock曲线的计算公式为:
-
-Coppock曲线 = 10周期加权移动平均(14周期变化率ROC + 11周期变化率ROC)
-
-其中变化率ROC的计算公式为:(当前Close - N周期前Close) / N周期前Close  
-
-策略以$SPY的收盘价为基础,计算其Coppock曲线。当曲线上穿零线时产生买入信号,下穿零线时产生卖出信号。
-
-## 优势
-
-- 使用独特的Coppock曲线指标,相比常见的移动平均线等指标,具有更好的前瞻性
-- 可配置指标参数进行优化,如加权移动平均周期、变化率计算周期等
-- 采用$SPY作为信号源,市场代表性强
-- 可选择trailing stop止损来锁定利润,降低回撤
-
-## 风险
-
-- Coppock曲线并不是非常普及的指标,需验证其有效性
-- 交易信号可能存在拉迟,需要优化参数
-- 止损设置过于宽松可能错失回撤机会
-- 依赖单一指标容易产生假信号
-
-## 优化方向
-
-- 测试不同市场、不同股票以优化最佳参数组合
-- 结合其他指标过滤假信号,例如成交量
-- 动态优化止损百分比
-- 考虑交易次数或价格突破作为入场
-
-## 总结
-
-该策略利用Coppock曲线独特的曲线形态特征来产生交易信号。相比常见指标,Coppock曲线具有更强的前瞻性。但作为独立指标其可靠性仍需验证,建议与其他因素组合使用以过滤假信号。通过参数优化、止损优化以及组合其他指标,该策略可以成为一个有效的量化交易系统。
-
-||
 
 
 ## Overview
@@ -93,7 +51,6 @@ The strategy calculates the Coppock Curve based on the closing price of $SPY. Bu
 
 The strategy utilizes the unique curve shape characteristics of the Coppock Curve to generate trade signals. Compared to common indicators, the Coppock Curve has stronger predictive power. But as a standalone indicator, its reliability needs validation. It's recommended to combine it with other factors to filter false signals. Through parameter optimization, stop loss optimization and combining with other indicators, this strategy can become an effective quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

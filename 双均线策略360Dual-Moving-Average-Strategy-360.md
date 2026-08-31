@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f0f44c7ab39e16b9d4.png)
-[trans]
-## 概述
-
-双均线策略360°是一种融合双均线和趋势强弱判定的量化交易策略。该策略通过计算不同周期的均线,判断价格趋势;同时结合切线角累加判定趋势强弱,实现了更准确的买入卖出时机选择。
-
-## 策略原理
-
-双均线策略360°的核心逻辑是:
-
-1. 计算1分钟和经过卡尔曼滤波之后的均线;
-2. 通过两个均线的价差计算切线角;
-3. 累加切线角,得到趋势强弱信号;
-4. 根据累加切线角是否超过设定阈值发出交易信号。
-
-具体而言,策略中定义了1分钟原始均线和经过卡尔曼滤波后的均线。卡尔曼滤波可以去除均线中的部分噪声,使其更加平滑。然后计算两个均线的切线角,该角度反映了价格的趋势变化。例如当切线角为正时,表示价格在上升;反之则表示下降。
-
-策略选择30分钟作为计算周期,real summed该周期内所有正负切线角。当切线角和超过360度时,表示趋势十分强劲,发出做多信号;反之当切线角和小于-360度时,表示趋势反转,发出做空信号。
-
-## 优势分析
-
-双均线策略360°的主要优势有:
-
-1. 均线过滤了短期市场噪音,使交易决策更稳定可靠;
-2. 切线角量化了趋势强度,避免了仅凭均线形态判断的主观性;
-3. 选取多个切线角累加具有更好的去噪效果,发出的交易信号更加可靠;
-4. 相比单一均线策略,双均线结合趋势强度判断使策略更加全面和稳健。
-
-## 风险分析
-
-双均线策略360°也存在一些风险:
-
-1. 均线具有滞后性,可能错过短期趋势转折点;
-2. 仅依赖数量积累的趋势强度信号容易受到市场震荡的影响;
-3. 参数设置(如计算周期长度)不当可能导致错失交易机会或产生错误信号。
-
-为降低上述风险,可以缩短均线周期、优化参数组合、增加止损机制等。
-
-## 优化方向  
-
-双均线策略360°还有进一步优化的空间:
-
-1. 增加自适应均线,根据市场波动率调整均线参数;  
-2. 增加多个均线周期参考,形成优化的参数组合;
-3. 增加基于波动率、交易量等的动态趋势判断模块;  
-4. 结合机器学习模型辅助调整参数或做出交易决策。
-
-## 总结
-
-双均线策略360°综合运用均线过滤和切线角量化判断趋势,实现了较为稳健的量化交易策略。相比单一技术指标,该策略形成了更全面的考量,具有较强的实用性。但仍需注意参数调整与风险控制,未来可继续优化,使策略效果更佳。
-
-||
 
 ## Overview  
 
@@ -111,7 +60,6 @@ The Dual Moving Average Strategy 360° can be further optimized by:
 
 The Dual Moving Average Strategy 360° utilizes moving average filtering and quantitative tangent angle trend judgments to achieve a relatively robust quantitative trading strategy. Compared to single technical indicators, this strategy forms a more comprehensive consideration and has stronger practicality. But parameter tuning and risk control are still vital, and the strategy can be further optimized for even better results going forward.
 
-[/trans]
 
 
 

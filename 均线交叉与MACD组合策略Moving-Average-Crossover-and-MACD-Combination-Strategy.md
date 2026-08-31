@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19ddff782d78fe4e696.png)
 
-[trans]
-
-## 概述
-
-本策略综合利用了移动平均线交叉系统和MACD指标,实现了在趋势银行阶段做多,在趋势转折点止盈止损的自动化交易策略。策略名称为“均线交叉与MACD组合策略”。
-
-## 原理
-
-该策略主要基于均线交叉系统与MACD指标的组合。具体来说,当短期均线上穿长期均线时,做多;当短期均线下穿长期均线时,做空。这里选取的是21日EMA作为短期均线,100日EMA作为长期均线。
-
-同时,辅助使用MACD指标来确认交易信号。只有当MACD的DIFF线上穿DEA线时,才会发出做多信号。而一旦DIFF下穿DEA,就会平掉多单止损。
-
-此外,策略还采用了RSI来避免过度做空,只有RSI低于30%时才会开仓做空。
-
-在止损方面,策略采用了固定百分比跟踪止损的方法,多单止损点为入场价减1%,空单止损点为入场价加1%。同时,策略也实现了移动止盈,当多单浮动盈利达到入场价的3%时止盈。
-
-## 优势分析
-
-该策略最大的优势在于利用均线系统确定大趋势方向,再用MACD指标进行入场,可以有效过滤假突破。与单一使用均线交叉系统相比,可以减少无效交易次数,提高获利概率。
-
-另外,策略采用固定百分比止损和移动止盈,可以将亏损控制在可承受范围,同时在保证盈利的前提下尽早止盈,锁定盈利。 这在实际交易中既可以降低账户回撤,也可以减少贪婪导致的失利。
-
-## 风险分析
-
-该策略的主要风险在以下几个方面:
-
-1. 均线交叉体系存在滞后,可能导致入场迟缓错过最佳入场点。可以通过优化均线参数来降低延迟。
-
-2. MACD指标容易产生虚假信号,需要辅助其他指标进行过滤。可以考虑加入KDJ等指标进行优化。
-
-3. 固定百分比止损止盈方式有时不能及时止损止盈,可以改为动态跟踪止损。
-
-4. 策略回撤可能较大,可以考虑降低仓位规避风险。
-
-5. 策略仅做多不做空,存在只跟多向趋势的局限性,可以考虑加入做空机制。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化均线参数,使均线信号更加精确。可以试验EMA、SMA等不同类型均线。
-
-2. 增加其他指标过滤均线交叉信号,如KDJ、RSI等,减少错误交易。 
-
-3. 尝试动态止损方式,能更好地控制风险。如追踪止损,ATR止损等。
-
-4. 添加做空机制,使策略能在下跌行情中盈利。
-
-5. 优化资金管理,调整仓位大小,可以降低最大回撤。
-
-6. 测试不同品种合约的表现效果,扩大策略适用范围。
-
-7. 增加机器学习算法,利用算法自动优化参数,减少人工干预。
-
-## 总结
-
-本策略整合均线交叉系统和MACD指标优点,实现了较高的获利率。通过优化参数设置、加入其他指标以及改进止损止盈方式,可以进一步增强策略稳定性和减少回撤。而增加做空机制和机器学习则可以扩大策略适用性。总之,该策略为量化交易提供了一个较好的思路,但还需要不断测试和优化,才能使之成为稳定可靠的交易策略。
-
-||
 
 
 ## Overview
@@ -128,7 +69,6 @@ The strategy can be improved in the following aspects:
 
 This strategy combines the strengths of moving average crossover system and MACD indicator for high profitability. Further enhancements in parameter tuning, additional filters, stop loss mechanisms, and shorting mechanisms can improve stability and reduce drawdowns. Machine learning incorporation can also expand applicability. Overall it provides a good direction for quantitative trading strategies, but still requires continual testing and optimization to become a robust strategy.
 
-[/trans]
 
 
 

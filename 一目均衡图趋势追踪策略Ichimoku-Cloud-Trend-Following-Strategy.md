@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cf603d9a4b31ba3f47.png)
-[trans]
-## 概述
-
-一目均衡图趋势追踪策略(Ichimoku Cloud Trend Following Strategy)是一种技术分析策略。它利用一目均衡图的五条指标线,判断市场趋势方向、支持阻力位和进场时机。
-
-## 原理
-
-该策略的核心指标线包含:
-
-1. 转换线:最近9日高点与低点的平均值,反映短期趋势。
-2. 基准线:最近26日高点与低点的平均值,反映中长期趋势。
-3. 先行线A:转换线与基准线的平均值,位移26日,判断中期支撑与阻力。
-4. 先行线B:最近52日高点与低点的平均值,位移26日,判断长期支撑与阻力。
-5. 随动线:价格位移26日,反映趋势动量。
-
-当转换线上穿基准线时为买入信号;下穿为卖出信号。随动线位于价格之上且云团颜色为绿色为多头趋势,否则为空头。
-
-策略根据转换线和基准线的关系判断趋势方向。比如,转换线向上突破基准线则判断为进入多头,此时如果满足随动线高于价格的条件,则产生买入信号。
-
-止损或止盈依据先行线A或基准线来设置。如果选择基准线止损,当价格跌破基准线时平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用多指标综合判断,提高精确度。
-2. 先行线可提前判断支撑与阻力。 
-3. 随动线验证趋势动量,防止虚假突破。
-4. 基准线作为中长期趋势指标,可减少噪音交易。
-
-## 风险及优化
-
-该策略主要风险在于容易产生虚假信号。优化建议:
-
-1. 调整平均周期参数,优化指标灵敏度。
-2. 添加其他指标或图形过滤,如MACD、布林带。
-3. 降低交易频率,追踪中长线趋势。
-
-## 总结
-
-一目均衡图策略综合多指标判断市场走势,既考量短期动量,也重视中长期趋势。转换线与基准线的关系判断市场买卖时机,基准线作为止损线锁定利润,可有效控制风险。该策略适合中长线追踪趋势交易。
-
-||
 
 ## Overview  
 
@@ -95,7 +52,6 @@ Main risk is false signals. Suggested optimizations:
 
 Ichimoku Cloud combines indicators to judge market trend. It considers both short-term momentum and mid/long term trend. Conversion and Base Lines determine trading signals. Base Line sets stop loss to lock in profits and control risks. This strategy suits mid/long term trend following.
 
-[/trans]
 
 > Strategy Arguments
 

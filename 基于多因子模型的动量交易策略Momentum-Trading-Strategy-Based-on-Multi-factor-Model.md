@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c81ef28b99132dce82.png)
-[trans]
-
-## 概述
-
-该策略是一个基于多个技术指标的动量交易策略。策略采用了布林带、RSI、ATR等多个技术指标,实现了多因子模型,可以在趋势出现时快速判断入场。同时,策略还采用了止损、高级止盈等风险控制手段,可以有效控制风险。
-
-## 策略原理
-
-该策略的交易信号主要来源于布林带。当价格接近布林带下轨时看多,当价格接近布林带上轨时看空。为了过滤假突破,策略额外加入了RSI指标的判断规则。只有当RSI指标也确认当前是超买超卖区域时,才会产生交易信号。
-
-除此之外,策略中还使用了ATR指标来实现止损止盈。具体来说,开仓时会记录一个买入价格,之后会根据ATR指标的数值来trailing stop,从而锁定利润,有效控制风险。
-
-## 策略优势分析
-
-该策略最大的优势在于,利用多因子模型综合判断市场,可以有效判断市场的结构性机会。这可以避免单一指标造成的假信号。同时,策略内置的止损和高级止盈机制,也可以有效控制风险,避免亏损过大。
-
-## 风险分析
-
-该策略最大的风险在于,如果行情出现剧烈反转,多个指标同时产生错误信号的概率会比较大。这会导致策略较大亏损。此外,技术指标发出信号时,也可能是市场普遍共识,容易形成herding effect,从而被套。
-
-为了降低这些风险,我们可以适当调整参数,选择更加明确的信号。同时也可以加入更多过滤条件,避免在市场顶底附近出错交易。
-
-## 优化方向
-
-该策略可以朝着以下几个方向进行优化:
-
-1. 添加更多技术指标,形成更加立体的多因子模型,提高判断准确性
-
-2. 优化止损逻辑,根据市场不同阶段选择不同的止损策略
-
-3. 结合机器学习等技术,动态优化参数,并评估信号的可靠性
-
-4. 加入行业,概念等信息,形成镶嵌多因子模型
-
-## 总结
-
-本策略通过合理应用多因子模型的思想,很好地把握了趋势的方向。同时,科学的风险控制手段也使得策略可以可控地获利。通过不断优化,有望进一步提高策略的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -86,7 +47,6 @@ The strategy can be optimized in the following directions:
 
 By reasonably applying the idea of ​​a multi-factor model, this strategy captures the direction of the trend very well. At the same time, scientific risk control measures also enable the strategy to profit in a controllable manner. Through continuous optimization, it is expected to further improve the stability and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

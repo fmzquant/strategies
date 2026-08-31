@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合了EMA和RSI两个指标来识别趋势方向并进行进出场。当价格在EMA之上且RSI低于买点时看涨;当价格在EMA之下且RSI高于卖点时看跌。同时结合最后两个K线的收盘价大小关系判定趋势方向,实现趋势交易。
-
-## 策略原理
-
-1. 计算200日EMA,作为判断趋势的均线指标。EMA快速响应价格变化,能够有效判断趋势方向。
-
-2. 计算14日RSI,判断是否超买超卖。RSI低于50视为超卖,高于50视为超买。同时结合RSI的向上向下趋势判断买卖时机。
-
-3. 比较最后两个K线的收盘价大小关系,判断趋势方向。最后两个收盘价递增认为处于上涨趋势,递减认为处于下跌趋势。
-
-4. 当处于上涨趋势,价格高于200日EMA,且RSI低于50且上涨时,发出买入信号。
-
-5. 当处于下跌趋势,价格低于200日EMA,且RSI高于50且下跌时,发出卖出信号。 
-
-6. ATR和最近14根K线的最高价、最低价用于计算止损点和止盈点。
-
-7. 采用移动止损策略,实现风险控制。
-
-## 优势分析
-
-1. 双重指标结合判断趋势方向,提高准确率。EMA判断主趋势,RSI和K线关系判断局部趋势和买卖时机。
-
-2. RSI指标有效避免了假突破。通过RSI的多空状态避免EMA指标的滞后带来的不必要的交易。
-
-3. 移动止损有效控制个别大amplitude波动造成的亏损。
-
-4. 优化后的参数组合使策略参数鲁棒性较强。
-
-## 风险分析
-
-1. 大amplitude震荡行情中,EMA和RSI产生错误信号的概率较大,应避开此类行情。
-
-2. 止损点过小易造成过频止损;止损点过大难以控制损失。应适当调整ATR参数。
-
-3. 日间突破EMA后再回调的概率大,此时应适当放宽RSI参数,避免错过趋势。
-
-## 优化方向
-
-1. 适当调整ATR参数和止损距离,找到更好的止损点。
-
-2. 对EMA和RSI指标参数进行优化,找到更合适的参数组合。
-
-3. 添加其他辅助指标进行过滤,如MACD、布林带等,提高信号准确度。 
-
-4. 可以测试不同品种参数设置的差异性,进一步提高参数的稳定性。
-
-5. 可以尝试在特定时间段关闭策略,避开容易产生错误信号的时间段。
-
-## 总结
-
-该策略整体较为稳定,收益稳定,最大回撤和夏普率也非常优秀。通过参数优化和止损点调整,可以进一步提升策略的效果。同时也需要警惕在特定行情下可能产生的错误信号,通过辅助指标或时间过滤来避开这些行情。该策略有望通过持续优化成为一个值得长期持有的稳定策略。
-
-|| 
 
 ## Overview
 
@@ -121,7 +64,6 @@ This strategy combines EMA and RSI indicators to identify trend direction and ma
 
 The overall strategy is quite stable with steady returns, maximum drawdown and Sharpe ratio. It can be further improved by parameter optimization and stop loss adjustment. Also need to watch out wrong signals during specific market conditions, and avoid them via auxiliary indicators or time filters. This strategy has the potential to become a long-term stable strategy through continuous optimization.
 
-[/trans]
 
 > Strategy Arguments
 

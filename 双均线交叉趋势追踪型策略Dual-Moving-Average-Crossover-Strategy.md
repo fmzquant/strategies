@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18d6d545a7e83002ff8.png)
-[trans]
-
-### 概述
-
-本策略运用简单均线交叉和平均真实波幅指标来产生买入和卖出信号,属于趋势追踪型策略。主要使用50日均线和100日均线的交叉来判断趋势,利用ATR指标设定止损点以控制风险。
-
-### 策略原理   
-
-1. 计算50日简单移动平均线SMA1和100日简单移动平均线SMA2
-2. 当SMA1上穿SMA2时,发出买入信号;当SMA1下穿SMA2时,发出卖出信号
-3. 计算14日ATR指标
-4. ATR乘以设置的乘数作为止损点
-5. 当发出买入信号时,以收盘价减去止损点作为止损卖出点;当发出卖出信号时,以收盘价加上止损点作为止损买入点
-
-可以看出,该策略主要依赖均线的趋势判断能力,以及ATR指标的风险控制能力。基本原理简单清晰,容易理解和实现。
-
-### 策略优势
-
-1. 原理清晰易于实现,适合初学者
-2. 利用均线判断主趋势,可有效跟踪趋势
-3. ATR止损可有效控制个别巨震带来的损失
-4. 可方便地调整参数,适应不同市场环境
-
-### 策略风险 
-
-1. 在震荡行情中,均线产生大量假信号,容易错过反转点位
-2. ATR指标对快速变动的市场反应不够敏感,可能造成超出预期的损失
-3. 指标参数和ATR乘数的设置依赖经验,不当设置可能影响策略表现
-4. 双均线本身滞后性大,可能错过转折点
-
-风险控制方法:
-
-1. 适当缩短均线周期,使指标更敏感
-2. 动态调整ATR乘数,让止损更灵活
-3. 结合其他指标过滤假信号
-4. 在大级别结构面判断的基础上操作
-
-### 策略优化方向
-
-1. 尝试其他类型的均线,如指数移动平均线能更好地滤波
-2. ATR可考虑用Keltner通道等动态止损方式替代 
-3. 增加成交量等辅助指标过滤信号
-4. 结合波浪理论、支撑阻力位等确定趋势关键点
-
-### 总结
-
-本策略属于典型的趋势跟踪策略,运用均线判断趋势方向,ATR设置止损来控制风险,原理简单清晰,易于掌握。但存在一定的滞后性与假信号风险,可通过参数调整、指标优化、结合更多因素等方法进行改进,使策略更适应多变的市场环境。总的来说,本策略适合初学者实践与优化,但实战时需要谨慎对待。
-
-||
 
 ### Overview
 
@@ -106,7 +57,6 @@ Risk Management:
 
 This is a typical trend following strategy, using moving averages to determine trend direction and ATR stop loss to control risks. The logic is simple and easy to grasp. But it has certain lagging and false signal risks. Improvements can be made through parameter tuning, indicator optimization, incorporating more factors etc. to make the strategy more adaptive. Overall this strategy is suitable for beginner practice and optimization, but need to be careful when apply it in actual trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略运用价格表现指数(PPI)判断市场趋势方向,当PPI上涨时做多,下跌时做空。PPI通过计算一定周期价格变化百分比,判断价格动能和未来方向。
-
-## 策略原理
-
-主要逻辑:
-
-- PPI计算一定周期(默认14日)的价格变化百分比
-
-- 当PPI上涨时,说明价格在上升,做多
-
-- 当PPI下跌时,说明价格在下降,做空
-
-- 可选择反向交易信号
-
-PPI的上涨表明价格在积累动能向上,下跌则代表价格动能向下。以一定参数跟踪PPI曲线,可捕捉中长线价格趋势。
-
-## 策略优势
-
-- 使用简单指标判断价格趋势和动量
-
--  Parameter可自由配置,适应多种品种
-
-- 交易逻辑清晰直观
-
-- 可反向交易,兼顾多种市场环境
-
-## 策略风险 
-
-- 无法滤除短期噪音,容易假突破
-
-- 未考虑仓位管理和止损
-
-- 参数不当可能错过趋势或者过度交易
-
-应对方法:
-
-- 优化参数,平衡稳定性和敏感度
-
-- 增加止损策略,控制单笔损失
-
-- 考虑仓位管理,降低单笔风险
-
-## 策略优化方向
-
-- 测试不同品种的参数组合
-
-- 结合其他指标过滤假信号
-
-- 开发动态仓位管理机制
-
-- 增加移动止损或时间止损 
-
-- 利用机器学习判断信号质量
-
-## 总结
-
-该策略基于价格表现指数判断趋势,具有简单性与通用性。通过参数优化、风控措施等进一步提升,可成为一个稳定的量化交易策略。它提供了基于简单指标判断趋势的有效思路。
-
-|| 
 
 ## Overview
 
@@ -133,7 +70,6 @@ Mitigations:
 
 This strategy determines trend by price performance index, with simplicity and universality. Further improvements in parameters, risk controls etc. can make it a robust quant strategy. It provides an effective approach of using simple indicators for trend detection.
 
-[/trans]
 
 > Strategy Arguments
 

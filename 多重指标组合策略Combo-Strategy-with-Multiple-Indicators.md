@@ -9,45 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过组合使用多种不同类型的技术指标,实现更精确可靠的交易信号产生。策略由两部分组成:第一个部分使用 123 反转策略,第二个部分使用 TEMA 指标。两者产生的交易信号进行组合,以过滤错误信号,提高信号质量。
-
-## 策略原理
-
-第一部分使用 123 反转策略。该策略基于 stochastic 指标,当股价连续两天收盘价格出现反转(例如两天收盘价格由涨转跌),并且 stochastic 指标显示超买或超卖信号时,产生买入或卖出信号。
-
-具体来说,如果收盘价格比前一日收盘价格高,且 stochastic 慢线低于 50,产生买入信号。如果收盘价格比前一日收盘价格低,且 stochastic 快线高于 50,产生卖出信号。
-
-第二部分使用 TEMA 指标。TEMA 代表三重指数移动平均线,计算方法为:
-
-TEMA = 3*EMA(CLOSE, N) - 3*EMA(EMA(CLOSE, N), N) + EMA(EMA(EMA(CLOSE, N), N), N)
-
-其中,N 为参数长度。如果收盘价高于 TEMA 指标值,产生买入信号;如果收盘价低于 TEMA 指标值,产生卖出信号。
-
-最后,组合两个指标的信号。只有当两个指标产生一致的信号时(两个都买入或两个都卖出),才产生实际的交易信号。
-
-## 策略优势
-
-- 通过组合多个指标,可以过滤掉一些错误信号,提高信号质量。
-- 123 反转策略基于股票价格实际反转情况,避免在趋势中追高买入和惊恐卖出。
-- TEMA 通过多重平滑可以减少噪音,产生更可靠信号。
-- 两种不同类型指标的组合,可以在更大程度上确保交易信号的可靠性。
-
-## 风险及优化
-
-- 反转策略本身存在着在牛市中错过向上的大趋势的风险。可以适当调整反转策略的参数,降低missing out的概率。
-- TEMA 作为趋势跟踪指标,存在着产生错误信号的可能。可以适当调整TEMA的参数,优化指标的灵敏度。 
-- 两种指标如果参数选择不当,也可能造成信号过于稀少。需要调整参数以达到适当的交易频率。
-- 可以考虑添加过滤器,在特定市场环境下关闭策略,以控制风险。
-
-## 总结
-
-该策略通过合理的多指标组合,提高了交易信号质量,是一个非常有效的量化交易策略。但仍需要注意风险控制,适当调整参数或添加其他组件进行优化,使策略在不同市场中都能稳定运行。
-
-||
 
 ## Overview
 
@@ -85,7 +46,6 @@ Finally, the signals from the two indicators are combined. Only when both indica
 
 This strategy improves signal quality through reasonable combination of multiple indicators, making it a very effective quantitative trading strategy. But risk management is still needed, like fine tuning parameters or adding other components for optimization, so that the strategy can keep stable performance across different markets.
 
-[/trans]
 
 > Strategy Arguments
 

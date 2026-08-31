@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10895fb3b5aebf1fb4b.png)
-[trans]
-
-
-## 概述
-
-该策略基于质数震荡指标来判断市场趋势,并据此构建长短仓位。质数震荡指标计算价格附近的最近质数与价格的差值,正值表示多头趋势,负值表示空头趋势。该策略可以捕捉价格震荡时隐藏的趋势信息,对于突破交易有指导意义。
-
-## 策略原理
-
-该策略首先定义一个PrimeNumberOscillator函数,传入参数为价格和allowedPercent。该函数会在价格正负allowedPercent的范围内寻找最接近价格的质数,并返回两者的差值。差值大于0表示多头趋势,小于0表示空头趋势。
-
-然后在策略中,调用PrimeNumberOscillator函数计算xPNO值。根据xPNO正负判断仓位方向,乘以reverseFactor来确定最终的交易方向。根据交易方向开仓做多做空。
-
-该策略主要依赖质数震荡指标判断趋势方向。指标本身比较粗糙,需要结合其他因素来验证交易信号。但它基于数学原理,可以提供一定的客观指引。
-
-## 优势分析
-
-- 基于数学原理,相对客观
-- 可以识别隐藏在震荡中的趋势
-- 参数调整灵活,可以自由设定敏感度
-- 实现简单,容易理解和优化
-
-## 风险分析 
-
-- 质数震荡指标本身比较粗糙,存在多次错判的可能
-- 需要结合其他技术指标验证,不能单独使用
-- 需谨慎选择参数,过大或过小都会失效
-- 交易频率可能过高,需要控制仓位规模
-
-## 优化方向
-
-- 可以结合移动平均,超买超卖等指标过滤信号
-- 可以添加止损策略,降低单笔损失
-- 可以根据市场情况动态调整allowedPercent参数
-- 可以优化仓位管理,通过波动率等指标控制仓位大小
-
-## 总结
-
-该策略基于质数震荡原理判断趋势方向,实现简单,逻辑清晰。但质数震荡本身存在一定局限,需谨慎使用。可以通过組合其他技术指标来验证信号,控制交易风险。该策略为数学交易策略的典型代表,对于学习和研究具有一定参考价值。
-
-|| 
 
 ## Overview
 
@@ -89,7 +48,6 @@ The strategy mainly relies on the PNO indicator for trend direction. The indicat
 
 The strategy determines trend direction based on prime number oscillation principles, with simple logic and implementation. But PNO has limitations that require cautious use. Combining other technical indicators to verify signals and control risk is needed. As a typical representative of mathematical trading strategies, it has reference value for study and research.
 
-[/trans]
 
 > Strategy Arguments
 

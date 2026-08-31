@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/135bb068a7cd8948252.png)
-[trans]
-## 概述
-
-这个策略的核心思想是基于平均价格的移动来产生交易信号。它结合了三种不同参数设置的超趋势指标,并且设置了ATR止损、锚定止损、百分比止损和点数止损等多种止损方式。
-
-策略优势在于利用多重超趋势系统提高信号准确率,同时提供了弹性止损设置。
-
-## 策略原理
-
-1. 计算三组超趋势指标:超趋势线是根据ATR指标与价格平均值的乘积计算而来。当价格超过超趋势线时为看涨信号,当价格跌破超趋势线时为看跌信号。
-
-2. 利用布林带指标的上轨和下轨来判断价格突破。布林带上轨突破为看涨信号,下轨突破为看跌信号。 
-
-3. 结合三组超趋势指标的买卖信号,判断是否符合多头和空头的进入条件。 
-
-4. 设置ATR止损、锚定止损、百分比止损和点数止损等多种止损方式,进行风险管理。
-
-5. 根据ATR指标值的大小来判断是否进入场内。这可以用于过滤掉低波动率环境下的错误信号。
-
-## 策略优势
-
-1. 结合多组参数设置不同的超趋势指标,可以提高信号的准确性。
-
-2. 利用布林带指标判断价格是否突破上下轨,避免假突破。
-
-3. 提供多种止损方式进行风险管理,最大程度避免超出可承受的损失。
-
-4. 利用ATR指标值来控制是否进入场内,可过滤误导信号。
-
-## 策略风险
-
-1. 多重指标组合判断进入时机,可能会错过部分较好的机会。
-
-2. 止损方式设置不当可能造成超出期望的损失。
-
-3. 布林带参数设置不当也会使得信号产生滞后。
-
-4. ATR指标值过滤条件设置过严格也会导致较多信号被过滤。
-
-## 策略优化方向
-
-1. 调整超趋势指标的ATR周期参数,优化指标的敏感性。
-
-2. 尝试不同类型的价格平均值作为超趋势指标的输入源,如加权移动平均线等。
-
-3. 优化布林带的参数,使其能更快地响应价格的真实趋势。 
-
-4. 结合市场的波动率特点,调整ATR指标过滤器的参数界限。
-
-5. 在回测中测试不同止损条件下的收益率,找到最优止损点。
-
-## 总结
-
-该策略通过组合多个指标滤波和判断信号,在一定程度上过滤了部分噪音。同时提供了弹性的止损机制来控制风险。通过调整参数可以获得更好的策略表现。但多重指标判断也可能导致错过商机的问题。总体而言,该策略适用于中长线投资,可获得稳定的投资回报。
-
-|| 
 
 ## Overview
 
@@ -121,7 +65,6 @@ The advantage lies in improving signal accuracy through multiple Super Trend sys
 
 This strategy filters noises and controls risks to some extent by combining signals from multiple indicators and flexible stop loss mechanisms. Fine tuning parameters can lead to better performance. However, multiple signal criteria may also cause missing opportunities. Generally speaking, this strategy suits medium-long term investment for steady returns.
 
-[/trans]
 
 > Strategy Arguments
 

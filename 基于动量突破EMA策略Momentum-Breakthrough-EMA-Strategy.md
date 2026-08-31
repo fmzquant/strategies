@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fb59654b99268ddf7a.png)
-[trans]
-
-## 概述
-
-该策略是一种趋势追踪策略,它通过检测价格动量的变化,在突破均线的时候进行入场,目标是捕捉股价的趋势行情。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-当今日收盘价高于昨日的最高价,并且昨日最高价没有触碰5日EMA均线时,进行买入开仓。此为突破信号,表示股价在向上突破。
-
-入场后设置止损为前一根K线的最低价再下滑100点。止盈为入场价乘以设置的止盈止损比率(默认为2)。如果价格继续上涨,可以使用跟踪止损来锁定更大利润。
-
-以上是该策略的基本交易逻辑。
-
-## 优势分析
-
-这种策略具有以下几点优势:
-
-1. 捕捉股价趋势行情,利润潜力大。特别适合于股价进入加速上涨或下跌阶段时的持续追涨/追跌。
-
-2. 通过EMA滤波,避免在震荡中频繁开仓。
-
-3. 突破信号明确,不易产生假突破。
-
-4. 风险控制到位。止损控制了单笔损失,确保资金安全。
-
-5. 策略逻辑简单清晰,容易理解和优化。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 追涨杀跌策略,存在错过市场转折点的风险。需要关注更大级别的趋势指标,控制整体持仓。
-
-2. 利用突破进行入场,可能出现假突破的风险。这需要结合成交量分析来验证突破信号。
-
-3. 止损点设置不当,可能造成止损过于宽泛或过于僵硬。这需要根据市场波动度和个人风险偏好进行调整。
-
-4. 若止盈点设置过大,可能因价格回落无法全部获得。这需要适当使用移动止盈来锁定利润。
-
-## 优化方向
-
-该策略可以从以下几个角度进行进一步优化:
-
-1. 优化参数,如MA周期、止损幅度等的设置,使之更符合不同股票和市场环境。可以使用步进优化和遗传算法对参数组合进行测试。
-
-2. 增加成交量的验证。交易量能验证突破信号的有效性。可以设置成交量突破来过滤入场信号。
-
-3. 增加对大级别趋势的判断。确保仅在大趋势吻合时进行反向操作。例如在下跌行情中仅做空头策略。
-
-4. 设置动态跟踪止损。当价格达目标后,移动止损线锁定利润,而不是设定固定止盈点。这可以最大限度锁定趋势利润。
-
-5. 增加机器学习算法,利用神经网络或随机森林来判断买入卖出信号。可以显著提高策略的稳定性和胜率。
-
-## 总结
-
-本策略通过检测价格动量变化,结合EMA过滤和止损方法,实现了对股价趋势行情的捕捉。这种简单的突破系统存在一定的优势和改进空间。我们可以通过参数优化、辅助指标增加、止损方式调整等方法来进行策略增强。这将使该策略在应对复杂多变的股市中更加稳健和高效。
-
-||
 
 ## Overview  
 
@@ -130,7 +69,6 @@ Some ways this strategy can be further optimized:
 
 This strategy captures trending moves by detecting price momentum changes, using EMA filter and stop loss methods. Though simple, this breakout system has advantages and room for improvement. We can make the strategy more robust and efficient by optimizing parameters, adding supporting indicators, adjusting stops etc. to handle complex and ever-changing market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

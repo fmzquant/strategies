@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10f58f751b598e3df8f.png)
-[trans]
-
-## 概述
-
-本策略基于ICHIMOKU云图形态指标和STOCH随机指标,实现对趋势的判断和跟踪。策略名为“云图Stoch趋势跟踪策略”。
-
-## 策略原理
-
-该策略主要通过ICHIMOKU云图和STOCH指标判断当前趋势方向,以及过冲超买超卖情况。
-
-当Conversion Line转换线上穿Base Line基准线而Stoch指标从超卖区域反弹时,认为处于看涨行情,该策略采取看涨方向;当Conversion Line下穿Base Line而Stoch指标从超买区域回落时,认为处于看跌行情,该策略采取看跌方向。
-
-代码中,Conversion Line转换线定义为近N1个K线的最高价和最低价的平均值;Base Line基准线定义为近N2个K线的最高价和最低价的平均值。当转换线上穿基准线时产生看涨信号。
-
-Stoch指标中,定义了超买线和超卖线阈值,以及平滑参数K和D。Stoch从超卖区域反弹时产生看涨信号,从超买区域回落时产生看跌信号。
-
-综合两种指标,该策略实现对趋势方向的判断。
-
-## 优势分析
-
-该策略结合图形形态指标和超买超卖指标,能够有效判断趋势方向。
-
-相较于单一使用趋势判断指标,该策略综合考虑了趋势和过冲情况,可以更准确判断入场时机。
-
-ICHIMOKU云图能够识别中长线趋势,而Stoch指标可以发现短期超买超卖情况,二者互补形成系统性判断。
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 当出现突发黑天鹅事件时,指标失效的系统性风险。
-
-2. 存在一定的滞后性,可能错过部分行情或反向开仓的风险。
-
-3. 多因子的综合判断存在一定主观性,参数设置不当可能导致失误的风险。
-
-4. 交易频繁时,交易成本会对盈利产生一定影响。
-
-对应优化措施:
-
-1. 结合新闻事件判断,避免主要政策事件出现时的盲目交易。
-
-2. 适当缩短周期参数,降低滞后判断的概率。
-
-3. 做回测优化参数,提高参数设置的科学性。 
-
-4. 适当加大止盈止损幅度,降低交易频率。
-
-## 优化方向 
-
-该策略主要可从以下方面进行优化:
-
-1. 优化ICHIMOKU转换线和基准线的周期参数,使之更符合不同市场的特点。
-
-2. 优化Stoch指标的K、D平滑参数,以及超买超卖阈值参数。
-
-3.增加其他指标判断,形成多因子模型,提高策略系统性。
-
-4. 优化止盈止损点位,降低交易频率的同时保证盈利。
-
-5. 增加对突发事件的判断模块,避免在重大事件出现时失效。
-
-## 总结
-
-本策略基于ICHIMOKU云图和Stoch指标,实现对趋势方向和超买超卖情况的综合判断,能够有效跟踪趋势行情。由于考虑了图形形态和量化指标,使得策略更具系统性。未来可通过优化参数、增加其他指标以及突发事件判断模块等方式进一步优化该策略。
-
-||
 
 
 ## Overview
@@ -143,7 +76,6 @@ The main optimization directions for this strategy are:
 
 This strategy combines ICHIMOKU cloud charts and Stoch indicators to make comprehensive judgments on trend direction and overbought/oversold situations, which can effectively track trending markets. By considering chart patterns and quantitative indicators, the strategy is more systematic. Future optimizations may include adjusting parameters, adding other indicators, adding emergency judgment modules, etc.
 
-[/trans]
 
 > Strategy Arguments
 

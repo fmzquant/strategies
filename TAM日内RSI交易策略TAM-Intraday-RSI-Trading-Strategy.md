@@ -11,81 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1afaea96d4e98dfbfd9.png)
 
-[trans]
-
-## 概述
-
-TAM日内RSI交易策略利用RSI指标的多周期交叉实现日内交易入场和出场。策略在多空环境下都表现不俗,能够有效利用RSI指标捕捉市场的超买超卖现象,在行情出现反转时进行逆势操作。
-
-## 策略原理   
-
-该策略使用两个RSI指标实现买入和卖出信号。买入信号使用短周期2日RSI和中周期14日RSI,当短周期或中周期RSI上穿50时产生买入信号。卖出信号使用短周期7日RSI和中周期50日RSI,当短周期或中周期RSI下破50时产生卖出信号。
-
-策略同时要求RSI值实际上穿过50,而不仅仅是产生交叉,这可以过滤掉许多假信号。具体来说,买入需要同时满足以下条件:
-- 2日RSI上穿50
-- 2日RSI实际大于50
-- 14日RSI上穿50
-- 14日RSI实际大于50  
-
-卖出条件也类似:
-- 7日RSI下穿50
-- 7日RSI实际小于50
-- 50日RSI下穿50
-- 50日RSI实际小于50
-
-这样的多重过滤可以确保只在RSI显示超买超卖迹象时才发出信号,不会被小幅震荡误导。
-
-## 策略优势分析
-
-TAM日内RSI策略具有以下优势:
-
-1. 使用双RSI实现多时间框架分析,可以有效过滤市场噪音,只在显著趋势转换点才入场。
-
-2. 仅在RSI实际越过关键阈值时才发出信号,避免被假突破误导。
-
-3. 采用不同参数的RSI判断入场和出场,可以更精确地捕捉反转点位。
-
-4. 日内交易时间段内,RSI指标表现较为稳定可靠,适合日内交易策略。
-
-5. 可配置参数灵活,可以针对不同市场调整RSI参数,获得更好的绩效。
-
-6. 逻辑清晰简单,容易理解实现,适合量化交易。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 日内交易具有过夜 gaps 的风险,gaps 会直接跳过策略的止损设置。
-
-2. RSI容易发生背离,必须 combine 其他指标进行验证。
-
-3. 日内时间段市场波动较大,止损设置需要宽松但又不宽松过头。 
-
-4. 参数优化存在过优化风险,必须在不同市场中进行验证。
-
-5. 量化回测不能完全反映实盘交易效果,实盘时需适当调整策略。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 结合其他指标确认RSI信号,例如KDJ、MACD等。
-
-2. 增加成交量的过滤,只在成交量放大的情况下考虑信号。
-
-3. 优化策略参数,针对更短的日内周期进行参数测试。
-
-4. 增加机器学习模型辅助决策,利用算法自动发现更好的参数。
-
-5. 策略艺术化,结合关键支撑阻力位、图形形态等技术分析方法。 
-
-6. 优化止损策略,利用ATR、振幅等方法设置动态止损。
-
-## 总结
-
-TAM日内RSI策略整体来说是一个非常实用的量化策略。它利用RSI指标的多时间框架评估有效判断超买超卖情况,配合严格的入场出场规则可以过滤假信号。在参数优化和风险管理到位的情况下,该策略可以产生稳定的交易信号,实现良好的交易效果。总的来说,该策略逻辑清晰易于实现,值得量化交易者进行测试验证。
-
-||
 
 
 ## Overview
@@ -160,7 +85,6 @@ The strategy can be improved in the following aspects:
 
 Overall the TAM intraday RSI strategy is a very practical quant strategy. It effectively assesses overbought and oversold conditions using the multi timeframe RSI evaluation and generates solid signals when combined with strict entry/exit rules to filter out false signals. With proper optimization and risk management, the strategy can produce stable trade signals and achieve good results. Its clear and straightforward logic makes it easy to implement and test for algo traders.
 
-[/trans]
 
 > Strategy Arguments
 

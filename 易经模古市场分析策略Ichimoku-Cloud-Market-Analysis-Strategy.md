@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-### 策略概述
-
-易经模古市场分析策略是一种运用易经模古指标进行趋势判断和交易信号产生的量化交易策略。该策略根据价格突破云带,以及天线和基线的黄金交叉来判断牛熊趋势,并详细设定入场和出场的交易逻辑。该策略兼具趋势跟踪和震荡捕捉的功能。
-
-### 策略原理
-
-易经模古市场分析策略使用以下关键指标:
-
-- 天线:7-9周期的移动平均线,代表短期趋势。 
-
-- 基线:22-26周期的移动平均线,代表中期趋势。
-
-- 云带:由前方线和后方线组成,代表长期趋势的支持和阻力区域。
-
-- 致寸线:代表延迟后的当期价格。
-
-交易信号的判断标准如下:
-
-- 多头信号:价格和致寸线上穿云带,且天线上穿基线时,做多。
-
-- 空头信号:价格和致寸线下穿云带,且天线下穿基线时,做空。
-
-- 出场信号:价格触发与入场方向相反的交易信号时,平仓。
-
-该策略的优势在于同时关注短中长三个周期的趋势态势,避免被单一周期误导。云带区域可起到强力的支持和阻力作用。而黄金交叉则可产生较准确的交易信号。
-
-### 策略优势
-
-- 同时关注多周期趋势,判断力强
-
-- 云带区域形成支撑和阻力
-
-- 黄金交叉产生精准信号 
-
-- 结合趋势和震荡,系统性强
-
-- 参数可调整,适应市场变化
-
-### 风险警示
-
-- 交易信号可能出现滞后
-
-- 云带范围过窄或过宽会误判趋势
-
-- 需要适当调整周期参数
-
-- 该策略较复杂,需要一定学习成本
-
-### 总结
-
-易经模古市场分析策略综合运用多种指标判断趋势方向,在产生交易信号时及时入场。该策略同时兼顾趋势和震荡,可适用于多种市场环境。但需要注意指标参数的调整,并防止交易信号的滞后。如果掌握其运用,可以产生稳定的交易系统。
-
-
-||
 
 
 ### Strategy Overview 
@@ -120,7 +64,6 @@ The advantage of this strategy is considering the trends of short, medium and lo
 
 The Ichimoku Cloud strategy comprehensively uses multiple indicators for trend direction and timely entry when signals emerge. It balances trend and swing, adaptable to various market environments. But parameter tuning and lagging signal prevention are important. When mastered, it can form a robust trading system.
 
-[/trans]
 
 > Strategy Arguments
 

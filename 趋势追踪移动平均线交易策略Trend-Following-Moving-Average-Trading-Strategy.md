@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eea2cbc4cdeb1f0e24.png)
-[trans]
-
-## 概述
-
-该策略是一种基于趋势追踪移动平均线的交易策略。它利用不同参数设置的最高价和最低价的移动平均线来判断市场趋势,并在趋势转折点 generating 对应的交易信号。当价格突破向上追踪的移动平均线时,做多;当价格跌破向下追踪的移动平均线时,做空。该策略同时利用ATR来设置止损和止盈水平。
-
-## 策略原理  
-
-该策略使用不同参数设置的最高价和最低价的简单移动平均线来判断市场趋势。具体来说,它创建了两个组追踪移动平均线:
-
-1. h1 和 l1 组成的向上追踪移动平均系统。h1 是最高价的简单移动平均线,表示市场趋势的上轨;l1 是 h1减去ATR值构成的下轨。当价格上穿h1时产生做多信号;当价格下穿l1时产生平仓信号。
-
-2. h2 和 l2 组成的向下追踪移动平均系统。h2 是最低价的简单移动平均线,表示市场趋势的下轨;l2 是 h2加上ATR值构成的上轨。当价格下穿h2时产生做空信号;当价格上穿l2时产生平仓信号。
-
-利用双轨系统可以更准确地判断趋势转折点,过滤掉部分噪音交易。同时,ATR值被用来设置止损和止盈水平,控制每单的风险收益比。
-
-## 优势分析
-
-该策略主要有以下几个优势:
-
-1. 利用双轨系统过滤噪音,识别趋势转折点更加准确。
-2. ATR动态跟踪波动率,可以有效控制单笔止损。
-3. 策略逻辑简单清晰,容易理解实现,适合新手学习。
-4. 可灵活调整参数,适应不同市场环境。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 双轨突破产生信号可能滞后,无法充分捕捉趋势开始阶段的机会。 
-2. 追踪移动平均线对曲线形趋势的识别能力较弱。
-3. 未考虑交易费用的影响。高频交易时交易费用可能比较大。
-
-对策:
-1. 适当缩短移动平均线周期,使信号更加灵敏。
-2. 结合其他指标如MACD等判断走势类型,避免在震荡区间高频交易。 
-3. 调整仓位规模,降低交易频率。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 利用机器学习算法自动优化参数,适应市场环境。
-2. 结合交易量指标避免假突破。
-3. 增加微调仓位的规则,让仓位大小与趋势强度挂钩。
-4. 优化止损机制,运用trailer stop等方式。
-
-## 总结
-
-该策略整体来说是一个简单实用的趋势追踪策略,核心理念是通过双轨过滤和ATR动态止损来识别趋势转折并限制单笔损失。具有一定的实战价值,同时也有较大的优化空间。通过参数调优、结合其他指标等方式可以获得更好的效果。
-
-||
 
 ## Overview  
 
@@ -112,7 +60,6 @@ The strategy can be optimized from the following aspects:
 
 In conclusion, this is a simple and practical trend following strategy. The core philosophy is to identify trend turning points and control per trade loss through dual-band filtering and dynamic ATR stops. It has definite practical merits and also large room for optimization. Better performances could be achieved through parameter tuning, incorporating other indicators etc.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d41a7c254d92e67892.png)
 
-[trans]
-
-## 概述
-
-本策略结合使用布林带、相对强弱指数(RSI)和商品路径指数(CCI)三个指标,寻找其交叉信号,发出买入和卖出信号。该策略旨在发现市场的超买超卖现象,在反转点入场,以期获得较好的投资回报。
-
-## 策略原理  
-
-### 布林带
-布林带由中轨、上轨和下轨组成。中轨通常采用20日移动平均线。上轨和下轨分别是中轨之上和之下两个标准差的位置。如果价格接近下轨时,被视为超卖信号。如果价格接近上轨时,被视为超买信号。
-
-### RSI指标
-RSI指标反映了一段时间内收盘价格上涨和下跌的速度变化,用来测量买盘和卖盘的力量对比。RSI值在0至30时为超卖区,在70至100时为超买区。当RSI从超买区下降时可以作为卖出信号,当RSI从超卖区上涨时可以作为买入信号。 
-
-### CCI指标
-CCI指标用来衡量股票价格偏离其平均价格的程度。其中,+100代表价格远高于平均价,为超买;-100代表价格远低于平均价,为超卖。CCI能反映价格的极端情况。
-
-### 策略交叉信号
-本策略以布林带判断价格短期内是否超买超卖,以RSI指标判断买卖盘力量均衡情况,以CCI指标判断价格偏离程度。布林带、RSI和CCI指标同时给出买入/卖出信号时,发出交易指令。
-
-## 策略优势
-
-1. 结合多种指标判断,减少假信号,提高信号准确度
-2. 发现市场转折点,捕捉反转趋势 的机会
-3. 各参数可自定义调整,适应不同市场环境
-4. 采用均线过滤CCI指标,减少噪声,提高稳定性
-
-## 风险及解决方案
-
-1. 布林带、RSI和CCI指标都可能产生错误信号,造成交易亏损。可适当宽松参数,或增加其他指标进行验证。  
-2. CCI指标对于曲折行情不太适用,可采用均线或波动率指标替代。 
-3. 交易指令只有止损,没有止盈。可增加移动止盈来锁定部分利润。
-
-## 优化方向  
-
-1. 测试更多参数组合,找到最佳参数;
-2. 增加机器学习算法,实时优化参数;  
-3. 增加止盈策略,设定目标利润;
-4. 结合更多指标,如MACD、KD等判断信号可靠性。
-
-## 总结
-
-本策略综合考虑了短期、中期和长期市场状况,通过布林带、RSI和CCI三个指标的交叉信号,判断市场反转的时机,属于较为稳健的反转跟踪策略。可通过参数调整、止盈方式等进一步优化,适用于多种市场环境。
-
-||
 
 
 ## Overview  
@@ -100,7 +55,6 @@ This strategy uses Bollinger Bands to judge short-term overbought/oversold level
 
 This strategy analyzes overall market conditions using Bollinger Bands, RSI and CCI indicators. It identifies inflection points through crossover signals to trade market reversals. With further optimizations like parameter tuning, profit taking mechanisms etc., it can be a robust countertrend strategy for various market environments.
 
-[/trans]
 
 > Strategy Arguments
 

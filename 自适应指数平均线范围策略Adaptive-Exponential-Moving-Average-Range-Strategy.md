@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/128583a0312d75259a8.png)
-[trans]
-### 概述
-
-该策略运用计算速度更快的指数线性加权平均线(EHMA)以及自适应通道来构建趋势跟随型策略。由于EHMA计算速度更快,可有效识别价格变化趋势,避免假突破产生不必要的交易信号。同时,自适应通道可以过滤掉部分价格震荡,只有价格突破通道时才会发出交易信号,降低无效交易的概率,提高盈利概率。
-
-### 策略原理  
-
-1. 根据参数Period计算指数线性加权平均线EHMA。EHMA计算速度快,可有效跟踪价格变化趋势。
-
-2. 根据参数RangeWidth,在EHMA上下各扩张一个自适应通道。只有当价格高于上通道线或低于下通道线时,才认为趋势发生转变,发出交易信号。
-
-3. 判断价格与通道的关系。价格上穿上通道线时做多,下穿下通道线时做空。价格下穿上通道线时平多仓,上穿下通道线时平空仓。
-
-### 优势分析
-
-相比普通移动平均线策略,该策略具有以下优势:
-
-1. 使用EHMA算法计算平均线。EHMA对价格变化趋势的响应更加敏感,可有效识别趋势变化,避免假突破造成不必要交易。
-
-2. 自适应通道可有效过滤价格震荡。只有价格确定趋势变化时才会产生交易信号。可过滤掉部分无效交易,提高盈利概率。
-
-3. 可灵活调整通道宽度,适应不同市场环境。宽通道可过滤更多震荡,降低交易频率;窄通道可更早识别趋势变化,增加交易频率。
-
-### 风险分析
-
-该策略也存在以下风险:  
-
-1. 依然无法完全避免假突破。价格可能出现断层,直接上穿或下穿通道带。需要适当调整参数,控制风险。
-
-2. 通道过于宽泛时可能错过部分交易机会。可适当缩窄通道提高敏感度。
-
-3. 通道过于窄小时则会增加无效交易次数。可适当扩大通道宽度提高稳定性。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化参数Period。调整平均线计算周期,适应不同品种和周期图的特点。
-
-2. 优化参数RangeWidth。根据市场波动程度和个人风险偏好,调整通道范围。
-
-3. 增加止损策略。在持仓过程中,设定合理的止损点,有效控制单笔交易最大损失。
-
-4. 结合其他指标过滤 Entries. 例如增加成交量的判断,降低 Entries 的无效率。  
-
-5. 多品种化应用与参数优化。在更多品种和周期上进行测试,优化通用参数。
-
-### 总结  
-
-该策略整合 EHMA 指标和自适应通道指标,形成趋势跟随型策略。可有效识别市场趋势,同时过滤价格震荡,避免不必要交易。经过一系列参数优化与风险控制后,能够在多种品种与周期上稳定盈利。
-
-||
 
 ### Overview  
 
@@ -112,7 +60,6 @@ This strategy can be optimized in the following aspects:
 ### Summary   
 
 This strategy combines the EHMA indicator and adaptive channel indicator to form a trend following strategy. It can identify market trends effectively and filter out price fluctuations to avoid unnecessary trades. After a series of parameter optimization and risk control, stable profits can be achieved across various products and timeframes.  
-[/trans]
 
 > Strategy Arguments
 

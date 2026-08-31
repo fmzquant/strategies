@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d0bd70ffc1a1e819eb.png)
-[trans]
-
-## 概述
-阳光超级趋势策略是一种基于ATR和SuperTrend指标的趋势跟踪策略。它可以准确预测趋势反转,非常适合作为时序指标使用。该策略可以增强投资者的耐心和定力,帮助它们在合适的时机进入和退出市场。
-
-## 策略原理  
-该策略使用SuperTrend指标判断当前趋势方向。当SuperTrend指标发生方向变化时,我们认为可能发生了趋势反转。此外,策略还使用K线实体的方向进行辅助判断。当潜在反转信号出现而K线实体的方向与此前一致时,过滤掉无效信号。
-
-具体来说,策略根据以下逻辑生成交易信号:
-1. 使用SuperTrend指标判断主要趋势方向
-2. 当SuperTrend指标方向发生变化时,产生潜在反转信号
-3. 如果此时K线实体方向与之前一致,过滤掉该反转信号
-4. 如果K线实体方向发生变化,确认反转信号,产生交易信号
-
-## 优势分析
-1. 基于SuperTrend指标,能够准确判断趋势反转点
-2. 结合K线实体方向过滤无效信号,提高信号质量  
-3. 适合作为时序指标,指导投资者选择合理入场和退出时间
-4. 可广泛应用于任何时间周期和不同品种,适应性强
-
-## 风险及解决方法
-1. SuperTrend指标容易产生多余信号,需辅助过滤  
-解决方法:本策略采用K线实体方向进行辅助判断,有效过滤无效信号
-2. SuperTrend参数设置易过优化或过度优化  
-解决方法:采用默认参数,避免人为调参过度优化
-3. 无法处理超快行情的反转  
-解决方法:适当调整ATR周期参数,应对更快速行情
-
-## 优化方向  
-1. 尝试不同的ATR周期参数组合
-2. 增加Volume或波动率指标进行辅助过滤信号
-3. 结合其它指标系统进行组合,提高策略性能
-4. 开发止损机制,控制单笔损失
-
-## 总结
-阳光超级趋势策略是一种基于SuperTrend指标判断趋势反转的高效策略。它结合K线实体方向进行辅助判断,能有效过滤无效信号,提高信号质量。该策略操作简单,适应性强,可广泛应用于多个品种和时间周期。通过合理参数优化和止损机制增加,可以进一步提升策略表现。
-||
 
 ## Overview
 The Sunny Supertrend strategy is a trend-following strategy based on the ATR and SuperTrend indicators. It can accurately predict trend reversals and works perfectly as a timing indicator. The strategy can increase patience and help traders enter and exit the markets at the right time.  
@@ -87,7 +50,6 @@ Solution: Adjust the ATR period parameter appropriately to cope with faster mark
 ## Conclusion
 The Sunny Supertrend strategy is an efficient trend reversal strategy based on the SuperTrend indicator. It combines candlestick body directions for auxiliary judgment, which can effectively filter out invalid signals and improve signal quality. This strategy is simple to operate, highly adaptable, and can be widely used across multiple products and timeframes. By reasonably optimizing parameters and increasing stop loss mechanisms, the strategy's performance can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

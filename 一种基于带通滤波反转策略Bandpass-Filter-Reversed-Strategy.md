@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17cb875618693df1e9c.png)
-[trans]
-### 概述
-
-带通滤波反转策略是一种基于带通滤波器的股票交易策略。它通过构建一个cos和正弦函数,来模拟一个带通滤波器,并生成买入和卖出信号。当滤波器输出高于或低于某个触发水平时,该策略会进行反向操作,即买入或卖出。
-
-### 策略原理
-
-该策略的核心是构建一个带通滤波器BP,它由两个参数组成:中心频率和带宽。中心频率决定了滤波器通过的主要周期,带宽决定了通过的周期范围。这些参数决定了滤波器的传递特性。
-
-具体来说,该策略构建了以下几个变量:
-
-- Length:滤波器的中心周期 
-- Delta: 带宽参数
-- Beta:与中心频率相关的系数
-- Gamma:与带宽相关的系数
-- Alpha:与Beta、Gamma有关的中间变量
-
-根据这些变量,策略构建出了一个一阶IIR(无限脉冲响应)滤波器:
-
-BP = 0.5\*(1 - alpha)\*(xPrice - xPrice\[2\]) + beta\*(1 + alpha)*nz(BP\[1\]) - alpha\*nz(BP\[2\])
-
-当BP高于或低于TriggerLevel时,该策略会进行相反方向的操作。
-
-### 优势分析
-
-该策略的主要优势有:
-
-1. 使用带通滤波器,可以滤除高频和低频噪声,只提取 Useful的中频周期信号,提高信噪比。
-2. 相对简单直观,只需要调整几个参数,就可以适应不同周期和市场环境。
-3. 采用反转策略,可以及时捕捉价格短期反转现象,获利后快速平仓,降低持仓风险。
-
-### 风险分析
-
-该策略也存在一些风险:
-
-1. 带通滤波器的参数设置需要根据不同周期和市场环境调整,如果设置不当,会错过交易机会或者产生更多错误信号。
-2. 反转策略容易受到错觉反转的影响, если反转不成立、价格继续原方向运行,会造成损失。
-3. 交易频率可能较高,需要注意防止超优化,并控制交易成本。
-
-为了降低这些风险,可以考虑以下几个优化方法:
-
-1. 采用自适应滤波器,根据市场变化自动调整参数。
-2. 结合趋势过滤器,避免逆势开仓。  
-3. 优化参数组合,使策略参数化,适应更多市场情况。
-
-### 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 周期和参数自适应:根据不同周期及最近一个时间窗口的价格行情,实时调整 Length、Delta 等参数,使滤波器动态适应市场环境变化。
-
-2. 结合趋势判断:在带通滤波器基础上加入 MACD、MA 等技术指标判断趋势方向,避免逆势开仓。
-
-3. 多时间框架结合:在多个时间框架(例如 5 分钟、15 分钟、30 分钟等)部署策略,不同时间框架之间进行信号验证,提高信号准确率。
-
-4.止损机制:设定合理的止损位置,在亏损达到止损位后主动平仓止损,有效控制单笔亏损大小。
-
-通过以上几点优化,可以大幅提高策略的稳定性、适应性和盈利能力。
-
-### 总结
-
-带通滤波反转策略通过构建带通滤波器,提取有用的中频信号,并在滤波器输出触发水平时,采取反向操作,捕捉价格的短期反转机会。该策略相对简单,通过参数优化可以适应多种市场环境。主要优化方向包括自适应滤波器、趋势判断、多时间框架组合及止损机制等。
-
-||
 
 ### Overview  
 
@@ -136,7 +72,6 @@ Through the above optimizations, the stability, adaptability and profitability o
 ### Summary  
 
 The Bandpass Filter Reversed Strategy extracts useful medium-frequency signals by constructing a bandpass filter, and takes reverse operations when the filter output triggers the level to capture short-term price reversal opportunities. The strategy is relatively simple. Through parameter optimization, it can adapt to various market environments. The main optimization directions include adaptive filters, trend judgments, multi-timeframe combinations, stop loss mechanisms, etc.
-[/trans]
 
 > Strategy Arguments
 

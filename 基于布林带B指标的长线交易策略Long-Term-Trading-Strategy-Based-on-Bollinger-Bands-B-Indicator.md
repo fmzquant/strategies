@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1dbf10fc99a3e1dd9c2.png)
-[trans]
-## 概述
-
-本策略基于布林带%B指标设计交易信号,在%B值低于设定阈值时做多,采用动态加仓的方式追踪趋势,达到预设止盈止损条件后平仓。该策略适用于识别突破下行布林带支撑位后的反弹行情。
-
-## 策略原理
-
-1. 计算N日布林带的中轨、上轨、下轨
-2. 计算%B值:(收盘价-下轨)/(上轨-下轨)
-3. 当%B值低于设定阈值(默认为0)时,做多
-4. 以开仓价格为基准,计算止盈线(默认为开仓价格的105%)和止损线(默认为开仓价格的95%)
-5. 在开仓后,只要符合条件就继续加仓
-6. 最先触发的止盈止损条件决定平仓
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用%B指标识别布林带下轨支撑反弹点位,具有较高的效率
-2. 采用动态加仓方式,能够追踪趋势获利
-3. 止盈止损条件清晰,有利于风险控制
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. %B指标发出虚假信号的概率较大,需要结合其他指标进行确认
-2. 震荡行情中止损可能较频繁
-3. 加仓过于激进可能带来更大的风险
-
-对应解决方法:
-
-1. 与KD、MACD等指标组合使用,确保交易信号的可靠性
-2. 调整止损位置,扩大承受震荡的空间
-3. 合理控制单次加仓比例,防止风险失控
-
-## 优化方向
-
-该策略还可从以下方面进行优化:
-
-1. 测试不同参数组合,寻找最佳参数
-2. 优化加仓逻辑,在盈利达到一定比例后停止加仓
-3. 增加流动性过滤,避免低流动性股票的误交易
-
-## 总结
-
-本策略总体来说是一个较为稳健的长线交易策略。识别能力和参数优化都还有提升的空间,若结合其他指标过滤信号,控制好仓位管理,该策略在趋势行情中可以获得较好的回报。
-
-||
 
 ## Overview
 
@@ -107,7 +58,6 @@ The strategy can be further optimized in the following areas:
 
 Overall this is a relatively robust long-term trading strategy. There is room for improvement in both signal accuracy and parameter tuning. When combined with additional signal filtering and prudent position sizing, this strategy can achieve decent results in trending markets.  
 
-[/trans]
 
 > Strategy Arguments
 

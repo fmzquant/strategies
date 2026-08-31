@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a1306b70bef33da749.png)
 
-[trans]
-# 
-
-## 概述
-
-耐心追踪趋势策略是一种趋势跟随型策略。它利用移动平均线的指标组合判断趋势方向,并结合超买超卖指标CCI发出交易信号。该策略追求大趋势,在震荡行情中可以有效避免被套。
-
-## 策略原理
-
-该策略使用21周期和55周期的EMA组合判断趋势方向。当短期EMA在长期EMA上方时定义为上升趋势,当短期EMA在长期EMA下方时定义为下降趋势。
-
-CCI指标用于判断超买超卖情况。CCI上穿-100线为底部超卖讯号,下穿100线为顶部超买讯号。根据CCI指标的不同超买超卖线,策略分为三个交易信号强度级别。
-
-在判断为上升趋势时,如果CCI指标发出强烈的底部超卖信号,就进行多头入场。判断为下降趋势时,如果CCI指标发出强烈的顶部超买信号,就进行空头入场。
-
-止损线设置为SuperTrend指标,目标利润设置为固定的点数。
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 追踪大趋势,避免被套
-2. CCI指标可以有效判断反转点位
-3. SuperTrend止损线设置合理 
-4. 固定止损与固定止盈,风险可控
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 大趋势判断失误的概率 
-2. CCI指标发出假信号的概率
-3. 止损点过浅或过深造成不必要止损的概率
-4. 固定止盈无法持续追踪趋势获利的概率
-
-针对这些风险,我们可以通过调整EMA周期参数,CCI参数以及止损止盈点位来优化。同时引入更多指标进行策略信号验证也很有必要。
-
-## 优化方向
-
-该策略的优化方向主要有:
-
-1.测试更多指标的组合,寻找更优趋势判断以及信号验证指标。
-
-2.利用ATR动态止损止盈,以更好地跟踪趋势和控制风险。
-
-3.引入基于历史数据训练的机器学习模型来判断趋势概率。
-
-4.针对不同品种参数进行调整优化。
-
-## 总结
-
-耐心追踪趋势策略整体是一个非常实用的趋势跟随策略。它利用移动平均线判断大趋势方向,CCI指标发现反转点位信号,超级趋势止损线设定合理。通过参数调整与多指标组合验证,该策略可以进一步优化,值得长期实盘跟踪验证。
-
-|| 
 
 ## Overview  
 
@@ -116,7 +62,6 @@ The main optimization directions are:
 
 The Patient Trend Following Strategy is a very practical trend trading strategy overall. It defines big trend with moving averages and detects reversal signals with CCI oscillator, while setting reasonable stop loss levels using SuperTrend indicator. With further parameter tuning and more indicator combinations for signal verification, this strategy can be further optimized and is worth tracking in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

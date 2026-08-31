@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17f6295720b6450caf5.png)
-[trans]
-
-## 概述
-
-一目均衡策略是一个利用Ichimoku Kinko Hyo指标实现的趋势跟踪策略。该策略结合多种指标识别趋势方向,在牛市中做多,在熊市中做空,实现资金的长期增值。
-
-## 策略原理
-
-该策略主要基于Ichimoku Kinko Hyo指标。该指标由转向线(Tenkan-Sen)、基准线(Kijun-Sen)、前沿线(Senkou-Span A)、先行线(Senkou-Span B)和延迟线(Chikou-Span)组成。当价格在云图之上时为多头趋势,当价格在云图之下时为空头趋势。
-
-该策略的交易信号来自以下条件的组合:
-
-1. 转向线上穿基准线为多头信号
-2. 转向线下穿基准线为空头信号  
-3. 延迟线向上穿越为多头确认
-4. 延迟线向下穿越为空头确认
-5. RSI指标高于50为多头指标
-6. RSI指标低于50为空头指标
-7. 价格在云图之上为多头趋势
-8. 价格在云图之下为空头趋势
-
-当上述多头条件同时满足时,做多入场;当上述空头条件同时满足时,做空入场。
-
-## 优势分析
-
-该策略结合趋势跟踪和超买超卖指标,能够有效识别趋势的方向。主要优势如下:
-
-1. Ichimoku Kinko Hyo指标能够识别中长期趋势,避免被短期市场噪音误导。
-2. 结合RSI指标可以有效判断超买超卖区域,防止错过反转机会。
-3. 考虑了股价波动率条件,只在波动率较高时出手,避免无效交易。
-4. 严格的入场和出场机制,最大程度规避风险。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:  
-
-1. Ichimoku Kinko Hyo指标存在滞后,可能导致入场时机偏晚。
-2. 多条件组合交易信号出现的频率较低,容易导致交易次数不足。
-3. 未考虑资金管理和仓位管理,可能存在超量交易的风险。
-
-对应解决方法:
-
-1. 适当缩短Ichimoku Kinko Hyo参数,提高指标的灵敏度。
-2. 降低入场条件严格度,增加交易频率。
-3. 加入资金管理和仓位管理模块,控制单笔交易资金占比和仓位。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 更换或组合其他指标,如KDJ、MACD等,丰富信号来源。
-2. 优化Ichimoku Kinko Hyo 参数,提高指标灵敏度。
-3. 加入止损策略,以锁定利润和控制风险。
-4. 增加仓位管理模块,根据资金规模动态调整仓位。
-5. 增加期货套期保值模块,管理多头套期保值风险。
-
-## 总结
-
-一目均衡策略整体是一个可靠、稳健的趋势跟踪策略。它解决了趋势交易中的重要问题——识别趋势准确度和 trades 生成频率之间的平衡。通过参数调整和模块扩展仍有优化空间,是可以长期运用的策略之一。
-
-|| 
 
 ## Overview  
 
@@ -130,7 +69,6 @@ The strategy can be improved in the following aspects:
 
 Overall this Balancing Trend strategy is a reliable, robust trend following system. It addresses the key challenge in trend trading - balancing trend identification accuracy and trade generation frequency. There is still room for improvement through parameter tuning and module expansion. It is a strategy that can be applied for the long run.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1614f2e58d643da6fea.png)
 
-[trans]
-
-## 概述
-
-Noro's 值道策略v1.1是一个基于价值通道和价格变化方向的趋势交易策略。该策略结合价值通道指标和快速RSI指标,识别出突破价值通道的K线形态信号,并结合连续红绿K线的颜色反转信号来建立多空仓位。该策略旨在捕捉中长线趋势的方向,而避免被市场的短期波动所迷惑。
-
-## 策略原理
-
-该策略首先计算过去一定周期内的最高价和最低价的均值,构建出中间价值通道。当价格从通道下方向上突破该通道时,视为多头信号;当价格从通道上方向下跌破该通道时,视为空头信号。 
-
-与此同时,该策略结合两个辅助判断规则:快速RSI指标和K线颜色。当快速RSI低于25%时,认为处于超买状态,价格可能反弹;此时若价格突破通道上轨,产生较强的多头信号。相反,当快速RSI高于75%时,认为处于超卖区,价格可能下跌;此时若价格突破通道下轨,产生较强的空头信号。此外,策略还会统计最近两个K线的颜色变化。连续两个红色K线会增强空头信号,连续两个绿色K线会增强多头信号。 
-
-综合这三个信号指标,该策略可以有效识别中长线趋势,并及时建立仓位。当仓位方向与最新K线颜色相反时,认为趋势发生转变,此时平掉当前仓位。
-
-## 策略优势
-
-该策略最大的优势是结合多种指标判断趋势方向,避免被短期市场Noise所迷惑。具体来看,主要有以下几个方面的优势:
-
-1. 价值通道指标能清晰识别中长线趋势的方向和力度。价格突破通道上下轨时,代表趋势进入新的阶段,产生较强信号。
-
-2. 快速RSI指标能判断超买超卖现象,避免在转折点追逐趋势。例如超卖时买入,超买时卖出。
-
-3. K线颜色判定能进一步验证趋势的持续性,如果颜色发生变化,则关闭当前仓位。
-
-4. 该策略只在连续两个同色K线突破通道时才开仓,避免被短期震荡误导。
-
-5. 平均止损方式简单有效,只要K线颜色发生变化就平仓,最大程度避免亏损扩大。
-
-## 策略风险
-
-该策略也存在一些风险需要注意,主要有:
-
-1. 价值通道参数设置不当,通道过于宽泛或者过于狭窄,会错过趋势转换点或者产生过多错误信号。
-
-2. 快速RSI参数设置不当,无法准确判断超买超卖现象,从而錯过反转机会。
-
-3. 平均止损方式可能在震荡趋势中过于敏感,造成仓位频繁开平。
-
-4. 无法判断突破价值通道后的具体运行走势,可能导致亏损放大。
-
-5. 无法应对黑天鹅事件的突发性冲击,会遭受巨大亏损。
-
-## 优化方向
-
-该策略还有以下几个主要优化方向:
-
-1. 动态调整价值通道参数,让通道能更好地适应不同周期和不同市场的波动。
-
-2. 结合波动率指标修正RSI参数,在大幅波动时降低敏感度,在低波动时提高敏感度。
-
-3. 加入移动止损机制,根据趋势波动幅度来设定止损位置,避免过于敏感地止损。 
-
-4. 增加对突破力度和背驰现象的判断,避免出现虚假突破。
-
-5. 结合历史数据训练判断模型,辅助判断趋势转折高度可能的时段,提高开仓成功率。
-
-6. 优化仓位管理策略,根据风险状况动态调整仓位比例。
-
-## 总结
-
-Noro's 值道策略v1.1整体来说是一个简单实用的趋势跟踪策略。它结合多种指标来识别中长线趋势方向,并设定较为谨慎的开仓规则。在优化止损机制、动态调整参数等方面还有进一步改进的空间。但该策略整体思路简单清晰,易于实际应用,非常适合作为量化交易的入门策略之一。随着参数调整和机制优化,该策略可以成为稳定可靠的量化系统。
-
-|| 
 
 
 ## Overview
@@ -136,7 +73,6 @@ Some major opportunities to enhance the strategy include:
 
 Overall, Noro's Price Channel Strategy v1.1 is a simple and practical trend following strategy. It incorporates multiple indicators to identify mid-to-long term trend directions and establishes relatively prudent entry rules. There is room for further enhancement in areas like stop loss mechanisms and dynamic parameter tuning. But the overall logic is simple and clear, making it easy to implement for quantitative trading, especially for beginners. With parameter tuning and mechanism optimization, it can become a stable and reliable trading system.
 
-[/trans]
 
 > Strategy Arguments
 

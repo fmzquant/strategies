@@ -9,77 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合双MACD指标和随机指标StochRSI进行交易信号判断。双MACD采用不同参数设置实现快慢效应,StochRSI用于强势背驰验证。策略还加入趋势判断及止损条件控制风险。
-
-## 策略原理
-
-该策略的交易信号判断基于以下指标:
-
-- 双MACD:快速MACD采用短周期参数,慢速MACD采用长周期参数,实现不同的平滑效果。
-
-- StochRSI:计算一定周期内RSI的最高低值,判断RSI是否处于超买超卖状态。
-
-交易信号判断规则:
-
-- 做多:快速MACD上穿零轴且慢速MACD上穿零轴,StochRSI处于超卖状态且K线上穿D线,且处于上升趋势。
-
-- 做空:快速MACD下穿零轴且慢速MACD下穿零轴,StochRSI处于超买状态且K线下穿D线,且处于下降趋势。
-
-## 策略优势
-
-- 双MACD验证可避免假突破,提高信号质量。
-
-- StochRSI判断超买超卖状态,避免追涨杀跌。
-
-- 考虑大趋势方向,减少逆势交易损失。
-
-- 实现指标多时间框架验证,提高信号有效性。
-
-- 设置止损条件控制风险。
-
-## 风险分析
-
-- MACD容易产生假信号,需进一步过滤验证。
-
-- StochRSI参数设置不当可能错过交易机会。
-
-- 止损点设置不合理可能过于保守或激进。
-
-- 缺乏持仓管理策略,无法动态止损。
-
-可从以下方面进行优化:
-
-1. 增加交易量或均线角度等过滤条件。
-
-2. 优化StochRSI参数或引入其它随机指标。
-
-3. 动态调整止损点,跟踪止损。
-
-4. 增加仓位管理模块,根据策略表现动态调整仓位。
-
-## 策略优化方向
-
-该策略的主要优化方向:
-
-1. 优化指标参数,提高指标效果。
-
-2. 增加筛选条件,过滤假信号。
-
-3. 优化止损策略,实现动态止损。
-
-4. 引入仓位管理,根据策略效果调整仓位。
-
-5. 增加机器学习模块,利用大数据自动优化。
-
-## 总结
-
-该策略综合考虑多种指标,形成较强的交易信号。但仍需优化参数设置、进一步过滤信号、动态止损等方面,以减少不必要交易,提高获利概率。整体来说策略思路合理,有良好的优化空间。
-
-||
 
 
 ## Overview
@@ -150,7 +79,6 @@ Main areas to optimize:
 
 The strategy combines multiple indicators for stronger signals, but needs optimization in parameters, filtering, dynamic stops to reduce unwanted trades and improve profitability. Overall the logic is sound with good optimization potential.
 
-[/trans]
 
 > Strategy Arguments
 

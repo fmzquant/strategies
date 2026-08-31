@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d55a8a9a5b95019c53.png)
-[trans]
-## 概述
-
-该策略通过使用两个不同周期的ATR(Average True Range)指标,构建双重动态跟踪止损线,在价格突破止损线时产生交易信号。同时利用蜡烛线实体长度动态设置止盈价位,以实现动态止盈止损。策略还结合了EMA指标来辅助判断趋势。
-
-## 策略原理
-
-1. 计算两个不同周期(默认为10和20)的ATR指标值,再乘以各自的敏感系数(默认为1和2)得到两个止损宽度。
-2. 根据价格在两个止损线上方或下方的位置以及突破情况,产生多头或空头信号。
-3. 止盈价位根据当前蜡烛线实体长度的1.65倍(可调整)动态计算。
-4. 在开仓后,如果价格触及止盈价位,则平仓获利了结。
-5. 使用EMA等指标辅助判断当前趋势,为进场提供参考。
-
-该策略利用ATR指标的特性,构建双重动态止损,可以较好地适应不同市场波动率,同时也能快速应对市场突变。动态止盈的设置使得策略能够在趋势行情中获取更多利润。综合来看,该策略在趋势性市场中表现较好,但在震荡市可能出现较多次数的盈亏抵消。
-
-## 优势分析
-
-1. 双重动态止损线能够适应不同的市场波动率,灵活性较高。
-2. 止盈价位根据当前蜡烛线实体长度动态计算,可以在趋势行情中获取更多利润。
-3. 使用EMA等指标辅助判断趋势,为进场提供参考,增强了策略的可靠性。
-4. 代码逻辑清晰,可读性强,便于理解和优化。
-
-## 风险分析
-
-1. 在震荡市场中,频繁的交易可能导致较高的手续费成本,影响收益。
-2. 止损线参数和止盈倍数的设置需要根据不同市场和产品特性进行优化,不当的参数可能导致策略表现欠佳。
-3. 策略主要依赖于价格突破动态止损线产生信号,对于一些大波动的假突破行情,可能产生错误信号。
-
-## 优化方向
-
-1. 对于震荡市场,可以考虑引入更多指标或条件来过滤交易信号,如RSI、MACD等。
-2. 对不同的产品和市场,可以通过历史回测和参数优化来寻找最佳的止损线参数和止盈倍数。
-3. 可以考虑引入仓位管理和风险控制模块,根据市场波动率和账户风险动态调整仓位大小。
-4. 增加更多的趋势判断指标,提高信号的可靠性和准确性。
-
-## 总结
-
-该策略通过双重动态止损线和动态止盈的设计,能够较好地适应不同市场环境,在趋势行情中表现出色。但是在震荡市场中,可能面临频繁交易和盈亏抵消的问题。因此,该策略更适合在趋势性市场中使用,同时需要结合产品特性和市场环境,对参数进行优化和调整。此外,仍有进一步优化的空间,如引入更多过滤条件、仓位管理和风险控制等模块,以提高策略的稳健性和盈利能力。总的来说,该策略思路清晰,逻辑简单易懂,具有一定的实用价值和可优化空间,值得进一步研究和应用。
-
-||
 
 ## Overview
 
@@ -89,7 +49,6 @@ This strategy utilizes the characteristics of the ATR indicator to construct dua
 
 This strategy, with its design of dual dynamic stop-loss lines and dynamic take-profit, can adapt well to different market environments and perform well in trending markets. However, in range-bound markets, it may face the problem of frequent trading and profit and loss offsets. Therefore, this strategy is more suitable for use in trending markets and needs to be optimized and adjusted based on product characteristics and market conditions. Moreover, there is still room for further optimization, such as introducing more filtering conditions, position management, and risk control modules to improve the robustness and profitability of the strategy. Overall, the strategy has a clear idea, simple and easy-to-understand logic, and has certain practical value and room for optimization, which is worthy of further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1164ed7a5a46f80e6a0.png)
-[trans]
-
-## 概述
-
-该策略利用基于多项式插值的RSI动量指标Delta-RSI生成交易信号。Delta-RSI通过局部多项式回归方法对RSI进行平滑处理,得到RSI的一阶时间导数,用作动量指标。该策略增加了基于ATR、成交量和RSI的过滤器,可以过滤掉一部分“假”信号。
-
-## 原理
-
-该策略的核心指标是Delta-RSI。其计算步骤如下:
-
-1. 输入RSI时间序列,长度为rsi_l周期
-2. 在长度为window的滑动窗口上,利用多项式插值方法拟合RSI
-3. 计算拟合曲线在当前点的一阶导数,即Delta-RSI
-4. Delta-RSI上穿0为买入信号,下穿0为卖出信号
-5. 还可以结合Delta-RSI的信号线生成交易信号
-
-策略通过ATR、成交量和RSI过滤器过滤信号:
-
-1. ATR过滤器:当前N周期ATR高于M周期ATR,表示波动率上升
-2. 成交量过滤器:当前成交量超过近M周期平均成交量的N倍
-3. RSI过滤器:RSI高于阈值1且低于阈值2,过滤超买超卖区域
-
-## 优势
-
-该策略具有以下优势:
-
-1. Delta-RSI指标更加灵敏,可以提早捕捉趋势转折
-2. 增加过滤器,可以过滤掉大部分假信号,提高信号质量
-3. 可自定义多项式插值和滤波参数,适应不同市场环境
-4. 可单独做多做空,满足不同偏好
-5. 可设置止损止盈,控制单笔亏损和盈利
-
-## 风险
-
-该策略也存在以下风险:
-
-1. 参数设置不当可能使平滑过度或过滤过度
-2. 多头仓位亏损风险或空头仓位亏损风险
-3. 停损止损设置过宽可能扩大单笔亏损
-
-可以通过优化参数、调整过滤条件、设定更严格的止损来控制和降低这些风险。
-
-## 优化方向
-
-该策略还可进一步优化:
-
-1. 优化Delta-RSI模型参数,改进拟合效果
-2. 增加基于机器学习的自适应滤波
-3. 根据不同品种分别设定参数
-4. 增加模型组合等方法提高稳定性
-
-## 总结
-
-该策略利用Delta-RSI指标的高灵敏度特点,配合严格的过滤机制,在控制风险的前提下提升策略的质量。通过持续优化参数和模型,有望进一步扩大策略正收益率,是一种有效的量化交易策略。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ This strategy can be further improved by:
 
 By exploiting Delta-RSI’s high sensitivity and strict filtering mechanisms, this strategy can improve quality while controlling risks. Further parameter and model optimization may expand positive profit rate. It is an effective quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

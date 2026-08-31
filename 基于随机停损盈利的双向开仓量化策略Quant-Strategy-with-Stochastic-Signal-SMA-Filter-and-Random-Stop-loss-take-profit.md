@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/190c9f4e5aa698dc69f.png)
-[trans]
-
-## 概述
-
-本策略名称为“DayLight Hunter双向开仓随机停损盈利量化策略”。该策略的主要思想是利用Stochastic指标产生买入和卖出信号,结合SMA均线进行过滤,实现双向开仓,并设置随机的止损止盈点,实现盈利。
-
-## 策略原理
-
-该策略使用5日线Stochastic指标的%K线和%D线交叉来产生交易信号。当%K线从下向上跨过%D线时,产生买入信号;当%K线从上向下跨过%D线时,产生卖出信号。为了过滤假信号,策略还引入了长度为50的SMA均线,只有当收盘价低于SMA低点时才产生买入信号,当收盘价高于SMA高点时才产生卖出信号。
-
-收到买入信号时,策略会以固定数量开仓做多;收到卖出信号时,若为单边交易模式,会平仓之前的多单再开空单;若为对冲模式,则直接添加空单进行对冲。对每一个交易单位,策略都会设置一个随机的止损止盈点。具体来说,会根据当前价格的一定百分比收益作为止盈点,一定百分比损失作为止损点。这样可以锁定盈利,也可以控制风险。
-
-## 策略优势
-
-本策略最大的优势在于利用Stochastic指标的信号与SMA滤波实现了较低误报率的双向交易。这为获利提供了更大的机会。此外,策略的随机止盈止损机制,可以在盈利后及时止盈,避免盈利全部归零;也可以在出现较大亏损时止损,减小损失。所以,整体来说,策略的获利空间更大,风险控制也做得较好。
-
-## 风险分析
-
-该策略的主要风险在于Stochastic指标可能产生假信号,这会导致不必要的亏损。此外,随机设置的止盈止损点可能会过于激进,造成止盈止损过早或者过晚,从而影响收益。最后,对冲交易中无法及时止损也会导致亏损加大。
-
-为降低风险,建议优化SMA均线的参数,过滤更多假信号。此外,可以考虑结合其他指标判断市场趋势,避免逆势交易。最后,要合理设置止损范围,并对对冲单位设置独立的止损点,控制风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化Stochastic指标的参数,寻找最佳参数组合,以减少假信号。
-
-2. 优化或增加其他技术指标,辅助Stochastic指标判断趋势。例如MACD,KD等。
-
-3. 使用机器学习等方法研究不同参数下Stochastic信号的正确率、胜率等指标,寻找其最优参数空间。
-
-4. 优化随机止盈止损算法,使其更加智能化和动态化。例如结合移动止损、余额管理等思路。
-
-5. 添加仓位控制模块,使其可以根据策略表现、市场环境等因素动态调整仓位。
-
-## 总结
-
-“DayLight Hunter双向开仓随机停损盈利量化策略”综合运用了Stochastic指标的交叉信号、SMA滤波原理、双向开仓思路和随机停损止盈方法。它具有信号相对准确、双向交易机会多、止盈止损灵活等优点,风险也在可控范围内。通过进一步优化参数设定、指标组合和风控模块,该策略可以获得更加稳定和出色的表现。它为量化交易实践提供了一个非常值得参考的范例。
-
-||
 
 ## Overview
 
@@ -90,7 +49,6 @@ The strategies can be optimized in the following aspects:
 
 The “DayLight Hunter Quant Strategy with Two-way Position, Stochastic Signal and Random Stop loss/take profit” combines Stochastic crossover signals, SMA filter principle, two-way trading and random stop loss/take profit method. It has advantages like relatively accurate signals, abundant two-way trading opportunities, flexible stop loss/profit taking, and risks within acceptable range. Further optimizations on parameter tuning, indicator combinations and risk control modules can help achieve more stable and better performance. It provides a very good reference case for quantitative trading practice.
 
-[/trans]
 
 > Strategy Arguments
 

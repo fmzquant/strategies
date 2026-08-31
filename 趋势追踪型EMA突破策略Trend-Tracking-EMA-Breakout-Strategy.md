@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11d40f410082cd29ab5.png)
-[trans]
-
-## 概述
-该策略是一个基于指数移动平均线(EMA)的趋势追踪型突破策略。它在月线、周线和日线时间框架上判断趋势方向,并在日线上执行具体的入场和出场操作。
-
-## 策略原理
-### 趋势判断
-1. 在月线上,价格高于8日EMA,8日EMA高于21日EMA,判断为多头趋势;
-2. 在周线上,价格高于8日EMA,8日EMA高于21日EMA,判断为多头趋势;  
-3. 在日线上,价格高于8日EMA,8日EMA高于21日EMA,判断为多头趋势;
-
-### 入场信号
-1. 在日线上出现向下回调,低点触及昨日8日EMA;  
-2. 回调构成Lower High和Lower Low的Ring Low形态;
-3. 收盘价高于前一日的最高价构成趋势反转信号;
-
-### 出场信号  
-设置止盈止损标准,达到退出。
-
-## 优势分析
-1. 在三个时间框架判断趋势,提高判断准确性;
-2. 回调低点触及EMA构成支持,增加入场确定性;
-3. 追踪趋势运行,盈利潜力大;  
-
-## 风险分析
-1. 三个时间框架判断不一致可能引发错误信号;  
-2. 回调幅度过大致使策略失效;
-3. 市场出现断头派对可能席卷止损;
-
-## 优化方向  
-1. 增加 MACD、RSI 等指标辅助判断;
-2. 优化EMA参数设置;
-3. 结合波动率指标调整止盈止损幅度;  
-
-## 总结  
-该策略整体作为一个趋势追踪策略,在正确判断趋势时,盈利潜力非常好。需要注意防止趋势判断错误和回调过度而产生错误信号。同时,优化止盈止损设置也是进一步提高策略优势的关键。
-
-||
 
 
 ## Overview
@@ -85,7 +47,6 @@ Set profit taking and stop loss standards for exiting.
 ## Summary   
 The strategy has very good profit potential when the trend is correctly judged. Need to watch out for inaccurate trend judgment and excessive pullback causing false signals. Meanwhile, optimizing profit taking and stop loss settings is key to further improving the edge.
 
-[/trans]
 
 > Strategy Arguments
 

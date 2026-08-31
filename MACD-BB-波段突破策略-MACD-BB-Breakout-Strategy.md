@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1094e28bebe4661d193.png)
 
-[trans]
-#### 概述
-MACD BB 波段突破策略是一种基于 MACD 指标和布林带指标的交易策略。该策略利用 MACD 指标捕捉市场的短期趋势,同时使用布林带指标来确定市场的超买和超卖区域。当 MACD 指标突破布林带上轨时,策略开多单;当 MACD 指标突破布林带下轨时,策略开空单。该策略旨在捕捉市场的短期趋势,并在趋势形成的早期阶段进行交易。
-
-#### 策略原理
-MACD BB 波段突破策略的原理如下:
-1. 计算 MACD 指标:使用快速移动平均线(EMA)和慢速移动平均线(EMA)计算 MACD 指标。
-2. 计算布林带:使用 MACD 指标的简单移动平均线(SMA)和标准差计算布林带上轨和下轨。
-3. 多头信号:当 MACD 指标突破布林带上轨时,策略开多单。
-4. 空头信号:当 MACD 指标突破布林带下轨时,策略开空单。
-5. 止盈止损:策略可以设置止盈和止损百分比,以管理交易风险。
-
-#### 策略优势
-1. 趋势捕捉:MACD 指标能够有效捕捉市场的短期趋势,使策略能够在趋势形成的早期阶段进行交易。
-2. 波动性考量:布林带指标考虑了价格的波动性,帮助策略在市场波动加剧时避免错误的交易信号。
-3. 参数灵活:策略的参数,如 MACD 的快慢线周期、布林带的周期和标准差倍数,都可以根据市场特点进行优化调整。
-
-#### 策略风险
-1. 幅度风险:策略在趋势形成的早期阶段进行交易,可能面临较大的回撤风险。
-2. 频繁交易:若参数设置不当,策略可能产生过多的交易信号,导致频繁交易和高额交易成本。
-3. 参数优化:策略的表现依赖于参数的选择,不恰当的参数可能导致策略表现不佳。
-
-#### 策略优化方向
-1. 趋势确认:在产生交易信号后,可以结合其他指标或价格行为来确认趋势的有效性,以过滤掉一些错误信号。
-2. 动态止损:根据市场波动性或价格行为动态调整止损位置,以更好地控制风险。
-3. 参数自适应:通过机器学习或优化算法,实现策略参数的自适应调整,以适应不同的市场状况。
-
-#### 总结
-MACD BB 波段突破策略通过结合 MACD 指标和布林带指标,在趋势形成的早期阶段进行交易。策略的优势在于能够捕捉短期趋势并考虑价格波动性,但也面临着幅度风险、频繁交易和参数优化的挑战。通过趋势确认、动态止损和参数自适应等优化方向,可以进一步提升策略的稳健性和适应性。
-
-|| 
 
 #### Overview
 The MACD BB Breakout Strategy is a trading strategy based on the MACD indicator and Bollinger Bands. The strategy utilizes the MACD indicator to capture short-term market trends while using Bollinger Bands to determine overbought and oversold areas in the market. When the MACD indicator breaks above the upper Bollinger Band, the strategy enters a long position; when the MACD indicator breaks below the lower Bollinger Band, the strategy enters a short position. The strategy aims to capture short-term market trends and initiate trades in the early stages of trend formation.
@@ -71,7 +40,6 @@ The principle of the MACD BB Breakout Strategy is as follows:
 
 #### Summary
 The MACD BB Breakout Strategy combines the MACD indicator and Bollinger Bands to initiate trades in the early stages of trend formation. The strategy's strengths lie in its ability to capture short-term trends and consider price volatility. However, it also faces challenges such as drawdown risk, frequent trading, and parameter optimization. Through trend confirmation, dynamic stop loss, and parameter adaptation, the strategy's robustness and adaptability can be further enhanced.
-[/trans]
 
 > Strategy Arguments
 

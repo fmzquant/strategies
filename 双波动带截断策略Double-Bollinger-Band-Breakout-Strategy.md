@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/db7b05c7d07944b638.png)
-[trans]
-
-### 概述
-双波动带截断策略是一个利用波动带指标的短线交易策略。它同时使用快速和慢速两个不同参数设置的波动带,在波动带进行向上或向下突破时寻找交易机会。
-
-### 策略原理
-该策略同时使用长度分别为20和50,标准差为1的快速和慢速波动带。当收盘价突破快速波动带上轨时,以该收盘价进入多头头寸;当收盘价突破快速波动带下轨时,以该收盘价进入空头头寸。  
-
-一旦进入头寸后,策略会等待价格继续突破慢速波动带上轨或下轨,作为进一步确认信号。此外,策略还会结合RSI指标判断趋势方向。只有当RSI高于50时,才会考虑突破上轨的买入信号;只有当RSI低于50时,才会考虑突破下轨的卖出信号。
-
-在仓位建立后,如果价格重新突破快速波动带上轨或下轨,则对应的多头或空头头寸会退出。
-
-### 优势分析
-双波动带截断策略的优势主要体现在 capture small moves的能力上。通过快速波动带捕捉小幅价格突破,慢速波动带再次验证信号,可以过滤假突破的噪音,从中获利。同时,RSI指标的结合也可以避免在震荡趋势中错过大趋势的反转点。
-
-另外,双波动带本身作为动量指标,可以很好地判断市场目前是否处于高动量阶段,这对于一个短线交易策略来说是非常有利的。
-
-### 风险分析
-该策略的主要风险在于双波动带产生的交易信号可能过于频繁,无法有效过滤市场噪音。这会导致过多的错误交易亏损累积。此外,在低速行情阶段,波动带的幅度收窄,交易机会也会减少。
-
-为降低风险,可以考虑调整波动带参数,使用更长周期的慢速波动带,或人工再次确认信号。也可以结合其他技术指标,如MACD、KDJ等进行组合,改善策略稳定性。
-
-### 优化方向
-该策略的优化空间主要集中在波动带参数和RSI参数调节上。例如可以测试不同长度周期的快速和慢速波动带参数,找到最佳组合。或者尝试不同长度周期的RSI指标参数,看是否可以改善策略表现。
-
-另一个优化方向是添加或调整止损逻辑。当前策略并没有设置止损,这增加了策略最大回撤的风险。适当设置固定比例止损或追踪止损都可以显著改善风险收益情况。
-
-### 总结
-双波动带截断策略是一个对市场动量敏感的短线交易策略。它可以在高波动的行情中捕捉小幅价格移动,在双波动带指标发出清晰信号时进行交易。但该策略的可靠性还有待进一步验证,通过参数优化和止损逻辑的添加,有望进一步改善策略的稳定性。
-
-||
 
 ### Overview
 The Double Bollinger Band Breakout Strategy is a short-term trading strategy that utilizes the Bollinger Band indicator. It employs two Bollinger Bands with different parameter settings, fast and slow, to identify trading opportunities when the bands are broken up or down.
@@ -70,7 +39,6 @@ Another direction is to add or amend stop loss logic. Currently there is no stop
 ### Conclusion
 The Double Bollinger Band Breakout Strategy is a short-term momentum trading strategy sensitive to market volatility. It captures small price moves within volatile markets when clear signals are given by the double Bollinger setup. However, further proof of reliability is needed. Through parameter tuning and adding stop loss logic, there is good potential to further improve stability.
 
-[/trans]
 
 > Strategy Arguments
 

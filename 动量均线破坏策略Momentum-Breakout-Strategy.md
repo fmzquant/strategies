@@ -9,76 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略是基于动量破坏原理,结合RSI和随机指标的趋势跟踪策略。它使用DEMA指标判断价格动量方向,RSI指标判断超买超卖,KDJ指标辅助判断趋势,根据这些指标信号进行 longing和shorting操作。该策略适用于中长线趋势交易。
-
-## 策略原理
-
-本策略使用DEMA指标来判断价格动量方向。DEMA是双指数移动平均线,它比普通EMA更敏感,可以更早发现趋势变化。策略通过计算价格与DEMA的差额百分比来判断价格动量的方向和力度。
-
-当价格上涨幅度大于设定参数时,认为价格处于上涨趋势;当价格下跌幅度大于设定参数时,认为价格处于下跌趋势。结合RSI指标判断是否处于超买超卖区域,如果RSI低于超卖线,说明处于超卖状态,可以做多;如果RSI高于超买线,说明处于超买状态,可以做空。
-
-此外,策略还使用KDJ指标的随机线K和D线来确认趋势。当随机线K线上穿D线时,做多信号成立;当K线下穿D线时,做空信号成立。
-
-最后,该策略还加入了时间过滤条件,只在指定的年、月、日内生效,从而避免不必要的交易。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 使用双指数移动平均线DEMA判断价格动量,更敏感,可以提早发现趋势变化。
-
-2. 结合RSI指标判断超买超卖情况,避免在市场转折点附近乱入场。
-
-3. 使用随机指标KDJ确认趋势信号,可以过滤掉部分错误信号。
-
-4. 加入时间过滤条件,只在指定时间内交易,避免不必要的资金占用。
-
-5. 承上启下,分析流程清晰,易于理解和修改。
-
-6. 指标参数可调,可以根据不同品种和时间周期进行优化。
-
-## 风险分析
-
-本策略也存在一些风险需要注意:
-
-1. DEMA和RSI等指标都可能发出错误信号,导致不必要的亏损。可以适当调整参数或增加过滤条件来降低误判概率。
-
-2. 双重指标组合并不能完全避免巨大行情的反转,大幅震荡市场中可能出现止损。
-
-3. 固定的时间区间设置可能错过某些具有交易机会的时间段,建议加入更灵活的交易时间控制。
-
-4. 趋势交易方式需要承担一定回撤,需要忍受连续亏损的心理准备。
-
-5. 需要持续关注指标参数的优化,以适应市场的变化。
-
-## 优化方向 
-
-本策略可以从以下几个方面进行优化:
-
-1. 测试更多指标的组合,寻找更稳定和顺畅的交易策略逻辑。例如MACD,KD,MOVING AVERAGE等。
-
-2. 对指标参数进行测试和优化,找到参数的最佳取值区间。
-
-3. 增加止损策略,如移动止损,尾随止损等,降低回撤。
-
-4. 增加钱管理功能,比如固定交易数量,动态调整仓位等,控制风险。
-
-5. 优化入场和出场逻辑,确保高概率入场,尽早止损。
-
-6. 增加更多过滤条件,确保在趋势明确之后才入场。例如量能指标,通道指标等。
-
-7. 优化时间控制策略,使交易更贴近市场节奏。例如只在美国或亚洲交易时段交易等。
-
-## 总结
-
-本策略立足于趋势交易,使用DEMA判断趋势方向,RSI判断超买超卖,KDJ确认信号,以控制风险。它操作简单,逻辑清晰,可定制性强,适合中长线持仓。随着参数优化、止损策略和风控措施的不断完善,本策略有望成为跟踪市场主趋势的稳定交易系统。当然,任何策略都不能完全避免市场风险,需要交易者保持耐心和纪律,始终谨记“保本”的原则。
-
-||
 
 ## Overview
 
@@ -146,7 +76,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy focuses on trend trading, using DEMA for trend direction, RSI for overbought/oversold levels, and KDJ for confirmation to control risk. It has simple logic, high customizability, and is suitable for medium-to-long term holding. With continuous improvements in parameter optimization, stop loss strategies and risk control, this strategy has the potential to become a stable system for following the major market trend. Of course, no strategy can fully avoid market risks. Traders need patience and discipline, always remembering the "capital preservation" principle.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/902a0f17374778593e.png)
-[trans] 
-## 概述
-
-该策略通过计算Hull移动平均线及其上下百分比带,实现突破买入和止损卖出的量化交易。策略优势包括参数可调、实现简单、 stopper严格。但也存在追高杀跌、频繁交易等风险。通过优化止损策略、添加短线操作等,可以获得更好的效果。
-
-## 策略原理  
-
-1. 计算长度为length的Hull移动平均线hullma。
-
-2. 根据hullma的百分比绘制上轨xL1、xL3和下轨xL2、xL4。
-
-3. 当收盘价上穿下轨时,做多;当收盘价下穿上轨时,平仓。 
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. HullMA指标对价格变化敏感,可以有效跟踪趋势。
-
-2. 百分比带设置自由度高,可以通过调整来适应不同品种。
-
-3. 通过双轨策略,可以有效过滤错误信号。
-
-4. 止损策略可以有效控制风险。
-
-## 风险分析 
-
-该策略也存在一些风险:
-
-1. 可能存在追高杀跌的情况。
-
-2. 频繁买卖带来的滑点损耗。
-
-3. 参数设置不当可能导致交易频繁。
-
-4. 停损位置设置需要反复测试优化。
-
-## 优化方向
-
-该策略可以从以下方向进行优化:
-
-1. 优化hullMA长度 parameter,适应不同品种。
-
-2. 优化百分比带parameter,降低错误交易。 
-
-3. 添加短线操作策略,利用回调获取更多利润。
-
-4. 优化停损策略,确保止损有效。
-
-5. 测试不同品种参数健壮性。
-
-## 总结
-
-本策略通过HullMA指标及其百分比带构建了一个较为简单直观的突破交易策略。策略优劣势明确,通过参数调整和功能优化扩展,可以成为一个非常实用的量化策略。
-
-||
 
 ## Overview
 
@@ -121,7 +65,6 @@ Some optimization directions:
 
 This strategy builds a relatively simple breakout trading system using HullMA and percentage bands. With clear pros and cons, and further optimizations on parameters and functionalities, it can become a very practical quant strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,14 +9,10 @@ Zero
 
 > Strategy Description
 
-[trans]
-本期分享MACD+MA指标组合策略，在技术分析中，指标的组合使用是非常常见的，不同的指标组合在一起具有不同的操作要点和分析方法，指标的组合使用可以增强信号的准确性。该策略正是通过比较价格与MA的相互关系，再以MACD指标衡量价格运动加速度，来判断市场所处的状态，构建一种简单的择时交易策略。
-||
 The MA indicator is short for English(Moving average) and is called the moving average indicator. The moving average(MA) has a trending characteristic, which is relatively stable, unlike the day K line that will rise and fall. The longer the moving average, the more stable the performance. Not easily up and down, you must wait for the true clarity of the stock price trend. The moving average is, in the final analysis, a trend-tracking tool that makes it easy to identify whether a trend has ended or reversed and whether a new trend is emerging.
 
 In this issue, we share the MACD+MA index combination strategy. In the technical analysis, the combination of indicators is very common. Different indicators have different operation points and analysis methods. The combination of indicators can enhance the accuracy of the signal. The strategy is to compare the relationship between price and MA, and then measure the price movement acceleration by MACD index to judge the state of the market and construct a simple timing trading strategy.
 
-[/trans]
 
 
 

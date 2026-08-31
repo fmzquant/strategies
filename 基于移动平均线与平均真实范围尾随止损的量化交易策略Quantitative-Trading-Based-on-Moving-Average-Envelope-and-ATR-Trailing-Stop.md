@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12129411d2f49626fd0.png)
-[trans]
-
-## 概述
-
-本策略的名称为“MADEFlex”,全称为“基于移动平均线信封与平均真实范围尾随止损的灵活量化交易策略”。该策略结合了移动平均线信封指标和平均真实范围尾随止损机制,实现了一个灵活且可控的量化交易解决方案。
-
-## 策略原理  
-
-本策略的核心是移动平均线信封(MADE)指标。MADE指标通过乘以百分比因子实施位移的指数移动平均线(EMA)形成上、下轨。当价格突破上轨时,产生卖出信号;当价格跌破下轨时,产生买入信号。本策略结合MADE指标与平均真实范围(ATR)尾随止损机制。ATR尾随止损以ATR值的若干倍设立止损位,实现止损线的灵活跟踪。这样可避免不必要的止损,也可锁定已经实现的利润。  
-
-具体来说,MADE指标含有3个参数:周期Period、上轨百分比perAb和下轨百分比perBl。周期Period决定了EMA的周期长度。上、下轨距离EMA的幅度通过百分比因子控制。ATR尾随止损部分主要通过ATR周期nATRPeriod和ATR倍数nATRMultip设定。当价格超过上一根K线的止损线时,调整止损线至价格减去固定ATR损失;当价格低于上一根K线的止损线时,调整止损线至价格加上固定ATR损失。  
-
-最终通过结合MADE指标信号和ATR尾随止损条件过滤,产生买入和卖出信号。可通过反向交易input开关reverse实现反向操作。  
-
-## 优势分析
-
-MADEFlex策略具有以下优势:
-
-1. 结合指标信号和止损机制,更加可靠。MADE指标本身容易产生错信号。结合ATR尾随止损可有效过滤掉部分噪声。
-
-2. 可调参数丰富,控制灵活。可调整MADE指标的参数及ATR参数,控制信号数量与质量。
-
-3. 支持反向操作。可通过reverse开关进行反向交易,丰富策略运用场景。  
-
-4. 可视化 stopper 直观。通过绘图止损线,直观判断止损效果。
-
-## 风险分析  
-
-MADEFlex策略也存在以下风险:  
-
-1. MADE指标参数不当可能产生大量错误信号。需要谨慎测试确定合适参数。  
-
-2. ATR止损过于宽松可能错过止损机会。建议测试确定合适的ATR倍数。
-
-3. 反向操作风险大。尤其是高波动行情中,反向操作可能增加亏损风险。需要谨慎使用。
-
-4. 不存在止损可能造成更大损失。在极端行情中,没有止损保护可能造成更大的损失。
-
-## 优化方向  
-
-MADEFlex策略可从以下方向进行优化:  
-
-1. 优化MADE参数,提高信号质量。可测试不同周期、百分比参数,找到更可靠的参数组合。  
-
-2. 优化ATR止损参数,实现更好的止损效果。可测试ATR周期和ATR倍数,确定更恰当的组合。
-
-3. 增加其他过滤条件,进一步减少错误信号。比如结合波动率指标进一步过滤信号。
-
-4. 增加止盈策略,在利润达到一定水平后止盈退出。可锁定利润,控制风险。
-
-5. 结合机器学习方法动态优化参数。使用强化学习等方法实时优化参数,使策略更具弹性。
-
-## 总结  
-
-MADEFlex策略成功结合了移动平均信封指标的交易信号和平均真实范围尾随止损方法。通过可调参数实现了一个灵活可控的量化交易解决方案。该策略可靠性较高,控制能力强,适合有一定量化基础的用户使用与优化。通过进一步优化,有望产生更加显著的策略表现。
-
-|| 
 
 
 ## Overview
@@ -123,7 +66,6 @@ The MADEFlex strategy can be optimized in the following directions:
 
 The MADEFlex strategy successfully combines the trading signals from Moving Average Envelope indicator and the ATR trailing stop methodology. Through adjustable parameters, it implements a flexible and controllable quantitative trading solution. The strategy has relatively high reliability and strong control capability. It is suitable for users with some quantitative basis to use and optimize. With further optimizations, more significant strategy performance can be expected.
 
-[/trans]
 
 > Strategy Arguments
 

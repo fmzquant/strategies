@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19caf3e41acd323f5c5.png)
-[trans]
-
-## 概述
-
-该策略利用双EMA均线形成金叉做多,死叉做空的经典趋势跟随策略,并利用ATR指标和ADX指标进行额外过滤,在强势趋势时进行追踪,在震荡时控制风险。
-
-## 策略原理
-
-该策略主要基于以下几点:
-
-1. 使用较短期的8周期EMA均线和较长期的20周期EMA均线形成金叉和死叉信号。EMA均线本身具有趋势跟随性质。
-
-2. ATR指标体现近期波动幅度。通过ATR指标的正态化,可以动态调整EMA均线交叉的过滤条件,在强势趋势追踪时降低要求,在震荡行情时提高过滤要求,控制风险。
-
-3. ADX指标判断趋势强度。当ADX值大于30时,认为出现强势趋势,此时及时止损防守。
-
-4. 结合涨跌趋势判断做多做空时机。在牛市中,金叉做多,在熊市中死叉做空。
-
-5. 交易量过滤,在交易量放大的时候进行入场。
-
-6. USD指数简单判断美元强弱,美元强势时止损和止盈幅度扩大。
-
-7. 结合超级趋势指标来判断总体行情走势,辅助判断做多做空时机。
-
-该策略充分结合趋势指标与震荡指标,能够动态调整参数,在追踪趋势的同时控制风险。
-
-## 策略优势
-
-1. 使用双EMA均线系统进行趋势判断,EMA具有平滑性,可以有效过滤假突破。
-
-2. ATR指标动态调整EMA均线交叉过滤条件,使策略可以灵活适应不同市场环境。
-
-3. ADX指标和交易量作为辅助判断指标,避免在震荡行情中被套。
-
-4. 考虑美元指数和超级趋势指标判断大趋势,提高决策的准确性。
-
-5. 风险管理参数会根据美元强弱自动调整,强美元时止损和止盈幅度放大。
-
-6. 使用简单直观的金叉死叉交易信号以及止损止盈策略,容易实现和回测。
-
-## 策略风险
-
-1. 双EMA均线系统去除趋势临界点判断存在滞后。
-
-2. ATR参数选择不当可能导致过于激进或保守。
-
-3. ADX指标参数需要优化,ADX高点选择不当可能错过趋势。 
-
-4. 美元指数以及超级趋势指标判断可能存在错误。
-
-5. 止损幅度过小可能增加亏损;止损过宽容易被套。
-
-## 优化思路
-
-1. 可以考虑结合其他指标如MACD判断趋势临界点。
-
-2. 利用更多历史数据训练ATR参数空间,找到最优参数范围。
-
-3. 测试不同ADX参数、优化ADX高点判断。
-
-4. 增加更多变量判断美元指数和市场总体走势。
-
-5. 根据回测数据计算出最优止损幅度。
-
-6. 可以考虑止损改为移动止损或振荡止损。
-
-7. 继续优化开仓量大小以及持仓周期。
-
-## 总结
-
-本策略整合经典的双EMA均线系统与多个辅助指标,通过参数自动优化,实现了一个较完整的趋势跟随策略。它能够灵活适应市场环境的变化,在追踪趋势的同时控制风险。但仍需要针对止损和指标参数进行进一步测试和优化,以获得更好的稳定收益。该策略思路值得借鉴和改进。
-
-||
 
 
 ## Overview
@@ -155,7 +82,6 @@ The strategy combines trend and oscillation indicators to dynamically adjust par
 
 This strategy integrates the classic dual EMA system with multiple auxiliary indicators, using parameterized optimization for a fairly robust trend following approach. It adapts flexibly to changing market environments, tracking trends while controlling risk. Further testing and optimization of stops and indicator parameters would improve results. The concepts are worth learning from and improving upon.
 
-[/trans]
 
 
 

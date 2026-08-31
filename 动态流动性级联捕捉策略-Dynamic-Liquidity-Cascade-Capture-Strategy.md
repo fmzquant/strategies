@@ -12,43 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d97bca43c4d813fa7dfb.png)
 ![IMG](https://www.fmz.com/upload/asset/2d933f58cfeb8f853e688.png)
 
-[trans]
-#### 概述
-该策略是一个专门设计用于捕捉市场极端波动时期的量化交易系统。它通过监控价格与均线之间的偏离程度,识别市场中可能出现的流动性枯竭情况,从而捕捉市场反转机会。策略采用了均线组合、波动率跟踪以及动态止损机制,构建了一个完整的交易系统。
-
-#### 策略原理
-策略的核心是通过计算价格与均线偏离度来识别市场异常。具体实现包括:
-1. 使用15周期简单移动平均线(SMA)和30周期指数移动平均线(EMA)的组合作为基准价格
-2. 计算当前价格与均线组合之间的百分比偏离度
-3. 通过89周期的最高值和最低值来确定历史极值
-4. 在出现连续3次做多型流动性枯竭时进场做多
-5. 设置了三重退出机制:技术反弹、反向流动性枯竭信号以及跟踪止损
-
-#### 策略优势
-1. 精确的市场时机把握:通过多重指标确认,提高入场准确性
-2. 风险控制完善:采用多层次的止损机制,有效控制下行风险
-3. 适应性强:策略可以根据市场波动度自动调整止损范围
-4. 执行力强:策略设定了明确的入场和出场条件,减少主观判断
-5. 系统化程度高:整个交易过程都是基于量化指标,易于实现自动化
-
-#### 策略风险
-1. 假信号风险:在横盘市场可能产生错误的流动性枯竭信号
-2. 滑点风险:在极端市场条件下,可能面临较大的执行滑点
-3. 参数敏感性:策略效果对均线周期和止损倍数较为敏感
-4. 市场环境依赖:在低波动率环境下,策略收益可能不够理想
-5. 技术风险:需要保证系统稳定性,避免信号延迟或丢失
-
-#### 策略优化方向
-1. 引入成交量指标:通过成交量确认流动性枯竭信号的有效性
-2. 优化参数自适应:根据市场波动状态动态调整策略参数
-3. 增加市场环境过滤:在不适合的市场环境下暂停交易
-4. 完善止损机制:可以考虑加入基于波动率的动态止损
-5. 优化信号确认机制:增加更多的技术指标来过滤假信号
-
-#### 总结
-动态流动性级联捕捉策略是一个专注于捕捉市场极端情况的量化交易系统。通过科学的指标组合和严格的风险控制,策略能够在市场出现剧烈波动时捕捉交易机会。虽然存在一定的风险,但通过持续优化和完善,策略有望在各种市场环境下保持稳定的表现。
-
-|| 
 
 #### Overview
 This strategy is a quantitative trading system specifically designed to capture extreme market volatility periods. It monitors the deviation between price and moving averages to identify potential market liquidity exhaustion situations and capture market reversal opportunities. The strategy incorporates moving average combinations, volatility tracking, and dynamic stop-loss mechanisms to build a complete trading system.
@@ -84,7 +47,6 @@ The core of the strategy is to identify market anomalies by calculating the devi
 
 #### Summary
 The Dynamic Liquidity Cascade Capture Strategy is a quantitative trading system focused on capturing extreme market situations. Through scientific indicator combinations and strict risk control, the strategy can capture trading opportunities during intense market volatility. While certain risks exist, through continuous optimization and improvement, the strategy has the potential to maintain stable performance across various market environments.
-[/trans]
 
 
 

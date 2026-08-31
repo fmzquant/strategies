@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bd64708e4561311f31.png)
-[trans]
-## 概述
-
-基于V型反转指标SMA策略通过计算股价的14天最高价与前一天最低价的绝对差值和14天最低价与前一天最高价的绝对差值,再分别计算其14日简单移动平均线,形成VI+和VI-曲线。当VI+上穿VI-时为多头信号。当VI-下穿VI+时为空头信号。
-
-## 策略原理
-
-该策略的核心指标是VI+和VI-。其中VI+反映多头力量,VI-反映空头力量。具体计算公式如下:
-
-```
-VMP = SUM(ABS(HIGH - LOW[1]),14)
-VMM = SUM(ABS(LOW - HIGH[1]),14)  
-STR = SUM(ATR(1),14)
-VI+ = VMP/STR  
-VI- = VMM/STR
-```
-
-为了去除曲线的震荡,对VI+和VI-分别计算14日简单移动平均线,得到SMA(VI+)和SMA(VI-)。当SMA(VI+)上穿SMA(VI-)时产生多头信号;当SMA(VI-)下穿SMA(VI+)时产生空头信号。
-
-此外,策略还会结合VI+和VI-的向上向下状态来判断趋势,从而进行过滤,只在趋势向下时做多,趋势向上时做空。
-
-## 优势分析
-
-该策略结合趋势状态和VI指标的金叉死叉,可以有效过滤假信号,提高获利概率。相比简单的移动平均线策略,其突破信号更加可靠。
-
-## 风险分析
-
-该策略主要面临两个方面的风险:
-
-1. VI指标在某些周期内会产生误导信号。这时需要结合趋势过滤和止损来控制风险。
-
-2. 交易费用和滑点成本较高的市场不适合该策略,会大幅降低盈利空间。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化VI指标的周期参数,寻找最佳参数组合。
-
-2. 利用机器学习方法自动识别误导信号,提升信号质量。
-
-3. 结合止损和资金管理优化退出机制,控制单笔交易亏损。
-
-4. 优化交易品种选择,选择交易成本较低的市场。
-
-## 总结
-
-基于V型反转指标的SMA策略,通过计算VI+和VI-指标并结合趋势状态判断买卖时机,是一种较为可靠的趋势跟踪策略。该策略优势在于信号质量好,能有效过滤噪音。但也存在被套风险,需要不断优化以适应市场变化。
-
-||
 
 ## Overview
 
@@ -109,7 +59,6 @@ The strategy can be optimized in the following aspects:
 
 The V-Reversal SMA strategy determines trading signals by calculating the VI+ and VI- indicators and combining trend status. It is a relatively reliable trend following strategy. Its strength lies in high signal quality and ability to filter out noise. But it also faces risks of being trapped, requiring continuous optimizations to adapt to market changes.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17f8a0366151b9f4acd.png)
-[trans]
-
-## 概述
-
-该策略名为“OBV金字塔”,基于OBV指标设计开仓策略,并采用金字塔加仓方式,在趋势出现后,分批多次加仓,追踪趋势进行获利。
-
-## 策略原理
-
-该策略使用OBV指标判断趋势方向。OBV指标基于成交量变化判断价格趋势,成交量的变化反映市场参与者的态度。当OBV上穿0轴表示买盘力道增强,多头趋势形成;当OBV下穿0轴表示卖盘力道增强,空头趋势形成。
-
-该策略通过判断OBV是否上穿0轴,来确认多头趋势的形成。在多头趋势形成时,设定金字塔式加仓规则,最多可加仓7次。通过追踪趋势进行获利,设置止盈止损退出机制。
-
-## 优势分析
-
-该策略最大优势是能捕捉趋势,通过金字塔加仓方式追踪趋势运行,获利潜力大。另外,策略风险控制到位,有止盈止损设置。
-
-具体来说,优势主要体现在:
-1. 使用OBV判断趋势方向准确;
-2. 金字塔加仓方式能够追踪趋势获利;  
-3. 设置止盈止损能控制风险;
-4. 策略逻辑简单清晰易于理解。
-
-## 风险分析
-
-该策略主要风险来自两方面:
-
-1. OBV判断失误,造成错失良机或错误建仓;
-2. 加仓过多,风险扩大。
-
-对应解决方法:
-1. 优化OBV参数,确保判断准确;
-2. 适当控制加仓次数,确保风险可控。
-
-## 优化方向 
-
-该策略主要可优化方向:
-
-1. OBV参数优化,提高判断准确率;
-2. 加仓次数和金额优化;
-3. 止盈止损点位优化;
-4. 结合其他指标判断,避免OBV单一判断风险。
-
-优化这些内容后,可以使策略更稳定、更可控、更具备扩展性。
-
-## 总结
-
-该策略整体来说非常实用。它使用OBV指标判断趋势方向,然后通过金字塔加仓追踪趋势运行。策略逻辑简洁清晰,易于理解和回测。有一定的实战运用价值。通过对参数、止盈止损、加仓方式等的深入优化,策略效果能够得到进一步提升,值得进一步研究。
-
-|| 
 
 # Overview
 
@@ -108,7 +59,6 @@ This can make the strategy more stable, controllable and extensible.
 
 Overall this is a very practical strategy. It uses OBV to determine trend direction, then pyramids into the trend for profit. The logic is simple and clear for easy backtesting. It has applicability value and with further parameter, risk and money management optimization, performance can improve further, warranting additional research.
 
-[/trans]
 
 > Strategy Arguments
 

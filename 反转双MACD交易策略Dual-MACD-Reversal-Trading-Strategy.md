@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/182d5d986e8b37b1b85.png)
-[trans]
-
-## 概述
-反转双MACD交易策略是一个利用MACD指标识别趋势反转信号的量化交易策略。该策略同时结合了RVI指标和CCI指标来确认买入时机,以过滤掉一些假反转。本策略适用于日内和短线交易。
-
-## 策略原理
-策略主要基于MACD指标。MACD为较快移动平均线EMA(12)减去较慢移动平均线EMA(26)得到快线,再用SIGNAL(9)作为慢线。当快线上穿慢线产生 Golden Cross时看涨;当快线下穿慢线产生 Dead Cross 时看跌。 
-
-该策略运用双时间周期MACD指标寻找反转机会。策略使用6小时级别MACD判断总体趋势方向,日内1小时级别MACD寻找反转信号。当6小时MACD处于上升趋势时,1小时级别如果出现快线下穿慢线的死叉信号,说明价格可能反转上涨。此时结合RVI指标和CCI指标进一步确认,产生买入信号。
-
-RVI指标测量最新几根K线的收盘价和开盘价与最高价和最低价的关系。当RVI低于0.2时被认为是超卖。CCI指标小于-100时表示超卖。所以策略利用RVI指标低于0.2 和 CCI指标低于-95这两个条件来辅助确认买入信号。
-
-## 优势分析
-该策略结合双时间周期MACD以及RVI和CCI指标,可以比较准确地识别反转机会,过滤掉部分假反转信号,从而提高策略的稳定性。具体优势如下:
-
-1. 利用6小时级别MACD判断大趋势,避免在大盘不确定性加大的环境中交易。
-
-2. 1小时级别MACD识别反转时机,可以捕捉较短周期内的价格调整。
-
-3. RVI指标和CCI指标的结合使用,可以更准确判断反转的时机。
-
-4. 策略加入止损点,可以减少亏损。
-
-## 风险分析
-该策略也存在一定的风险,主要体现在:
-
-1. MACD指标本身容易产生假信号,所以即使辅助指标过滤效果较好,也无法完全避免亏损。建议降低仓位规模。
-
-2. RVI指标和CCI指标可能发出错误信号,从而错过较好的反转机会或增加不必要的亏损。建议合理调整RVI和CCI参数。
-
-3. 止损点设置不当可能过于密集触发止损,也可能过于宽松无法及时控制损失。建议根据市场波动程度调整止损幅度。
-
-## 优化方向 
-该策略可以从以下几个方面继续优化:
-
-1. 当前使用1小时和6小时两个时间周期,可以测试更多时间周期组合,寻找更稳定的参数。
-
-2. 可以引入更多指标,如KDJ、WR、OBV等来辅助判断买卖点。但要防止产生过于复杂的交易信号。
-
-3. 可以根据不同品种参数不断优化,设立参数库。如适合中低频交易的品种可以适当加长参数周期。
-
-4. 可以设置动态止损机制,在盈利后逐步挪动止损点。或根据市场波动程度实时调整止损幅度。
-
-## 总结
-反转双MACD交易策略综合考虑趋势判断和反转信号,并辅以RVI和CCI指标过滤信号。该策略可以有效识别短线调整提供较好的风险回报比,适合日内和短线交易,也可作为多策略组合的一部分,提供整体策略的多样性。
-
-||
 
 ## Overview
 The Dual MACD Reversal Trading Strategy is a quantitative trading strategy that uses the MACD indicator to identify trend reversal signals. This strategy also combines the RVI indicator and the CCI indicator to confirm buy signals and filter out some false reversals. This strategy is suitable for intraday and short-term trading.
@@ -104,7 +57,6 @@ The strategy can be further optimized from the following aspects:
 ## Summary 
 The Dual MACD Reversal Trading Strategy comprehensively considers trend judgment and reversal signals, and is assisted by RVI and CCI indicators to filter signals. This strategy can effectively identify short-term adjustments with good risk-return ratios, suitable for intraday and short-term trading, and can also be used as part of a multi-strategy portfolio to provide overall strategy diversity.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,67 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/12026ec6b55a3d2ebd2.png)
-[trans]
-
-### 概述
-
-本策略结合均线指标和超趋势指标,实现对趋势的跟随操作。在趋势向上时做多,在趋势向下时做空。
-
-### 策略原理
-
-1. 计算加权移动平均线MA。使用成交量作为权重,计算一定周期内的加权平均价格。
-
-2. 基于MA计算出Hull移动平均线。Hull移动平均线对价格变化更为敏感。
-
-3. 计算超趋势指标。超趋势指标结合ATR,可以发现价格趋势的变化。计算上轨和下轨。
-
-4. 当收盘价超过上轨时,做多;当收盘价跌破下轨时,做空。
-
-5. 绘制辅助指标,如开盘价、收盘价、最高价、最低价,更直观地观察价格的变动。
-
-6. 根据指标交叉做出买入和卖出决策。
-
-### 优势分析
-
-1. 该策略同时结合均线指标和超趋势指标,能更准确地捕捉趋势变化。
-
-2. Hull均线对价格变化更为敏感,有利于及时发现趋势转变。
-
-3. 超趋势指标能动态调整上下轨位,适应市场波动。
-
-4. 辅助指标直观显示价格变动情况,结合指标信号做出判断。
-
-5. 策略参数优化空间大,可调整均线周期、超趋势乘数等参数。
-
-### 风险分析
-
-1. 在盘整行情中,可能产生虚假信号,导致不必要的交易。
-
-2. 需要同时监控多种指标,策略实现相对复杂。
-
-3. 需要适当调整参数,使指标参数符合不同品种的特点。
-
-4. 需要严格控制止损,避免单笔损失过大。
-
-5. 交易次数可能较多,需要控制手续费的影响。
-
-### 优化方向
-
-1. 可以测试不同均线的参数,选择对市场更敏感的均线指标。
-
-2. 可以测试不同的超趋势乘数,选择能及时捕捉趋势变化的数值。
-
-3. 可以结合波动率指标,在波动加大时降低仓位。
-
-4. 可以加入突破条件,避免在盘整中出现虚假信号。 
-
-5. 可以优化止损策略,使止损更符合市场特点。
-
-### 总结
-
-本策略同时结合均线指标和超趋势指标判断趋势方向,以跟随趋势进行操作。优点是指标之间可以相互验证,更准确判定趋势。但需要警惕虚假信号的干扰。通过参数优化和风险控制,可以进一步改进策略效果。该策略适合对趋势性较强的品种进行趋势跟随操作。
-
-|| 
 
 ## Overview
 
@@ -131,7 +70,6 @@ This strategy combines moving average and super trend indicators to follow the t
 
 This strategy judges trend direction using both moving average and super trend to follow the trend. The advantage is mutual verification between indicators for more accurate trend detection. But false signals should be watched out for. The strategy can be further improved through parameter optimization and risk control. It suits trend following operations on instruments with strong trending characteristics.
 
-[/trans]
 
 > Strategy Arguments
 

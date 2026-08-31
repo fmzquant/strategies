@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1eed25efc20c1297ef4.png)
-[trans]
-
-## 概述
-
-相对动量策略通过比较个股和指数的动量,来判断个股相对于大盘的强弱,当个股的动量高于大盘时买入,个股动量低于大盘时卖出,以捕捉个股的增长高峰。
-
-## 策略原理
-
-该策略主要判断个股相对大盘的强弱,具体逻辑是:
-
-1. 计算个股在某段时间内的收益率作为个股动量
-2. 计算指数在同一段时间内的收益率作为指数动量 
-3. 将个股动量和指数动量计算移动平均线平滑处理
-4. 当个股动量的移动平均线上穿指数动量的移动平均线时,认为个股动量强于指数整体,成为买入信号
-5. 当个股动量的移动平均线下穿指数动量的移动平均线时,认为个股动量弱于指数整体,成为卖出信号
-
-通过这样的逻辑判断,我们可以买入个股增长旺盛的时期,并在其增长动力消退时及时卖出,锁定其增长高峰期的超额收益。
-
-## 优势分析
-
-相对动量策略主要具有以下优势:
-
-1. 可动态捕捉个股增长高峰,无需关心具体行情,只要个股增长快于大盘即可买入
-2. 通过移动平均线处理,可过滤掉短期波动的干扰,增强信号的可靠性
-3. 简单直接的买入卖出条件,容易理解操作
-4. 可自由设定计算相对动量的时间参数,优化策略
-
-## 风险分析
-
-相对动量策略也存在一定的风险:  
-
-1. 个股增长高峰结束后可能出现回调调整,存在止盈不足的风险
-2. 相对动量指标可能产生错误信号,识别的增长高峰并非真实高峰
-3. 需设置止损来控制最大亏损
-
-这些风险可以通过合理止盈止损、适当调整参数等方法来控制。
-
-## 优化方向  
-
-相对动量策略可从以下几个方面进行优化:
-
-1. 测试不同的动量计算时间参数,找到最佳参数
-2. 测试不同类型和长度的移动平均线,寻找最优参数
-3. 加入成交量指标过滤,避免量能不足的假突破
-4. 结合其他技术指标确认买入时机
-
-## 总结  
-
-相对动量策略通过捕捉个股相对大盘的增长高峰,可有效获取超额收益。该策略具有简单清晰的买入卖出逻辑、易于操作的优点,通过参数优化和风险控制,可获得较好的效果。
-
-||
 
 ## Overview  
 
@@ -110,7 +59,6 @@ The relative momentum strategy can be optimized mainly from the following aspect
 
 The relative momentum strategy captures the excess growth phases of individual stocks versus the overall market to generate alpha. With its simple, clear buy/sell logic and ease of operation, and when coupled with parameter optimization and risk control, this strategy can perform very well.
 
-[/trans]
 
 > Strategy Arguments
 

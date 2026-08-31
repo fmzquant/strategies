@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a2f5c9a71e78df9385.png)
-[trans]
-
-## 策略概述
-
-Kuberan策略是由Kathir编写的一款强大的交易策略。它融合了多种分析技术,形成了一个独特而强大的交易方法。该策略以财富之神Kuberan命名,象征着其丰富交易者投资组合的目标。
-
-Kuberan不仅仅是一个策略,更是一个全面的交易系统。它结合了趋势分析、动量指标和成交量指标,以识别高概率的交易机会。通过利用这些要素的协同作用,Kuberan提供了明确的进场和出场信号,适用于各种水平的交易者。
-
-## 策略原理
-
-Kuberan策略的核心是多指标交汇原理。它利用了一种独特的指标组合,这些指标相互配合,以减少噪音和错误信号。具体来说,该策略使用了以下几个关键组件:
-
-1. 趋势方向判断:通过比较当前价格与支撑位和阻力位,判断当前趋势方向。
-2. 支撑阻力位:通过zigzag指标和枢轴点来识别关键的支撑位和阻力位。
-3. 背离判断:通过比较价格走势与动量指标,判断是否出现背离,提示潜在的趋势反转。
-4. 波动率自适应:通过ATR指标动态调整止损位,以适应不同的市场波动率。
-5. K线型态判断:通过特定的K线组合来确认趋势和反转信号。
-
-通过综合考虑以上因素,Kuberan策略能够在各种市场环境下自适应调整,捕捉高概率的交易机会。
-
-## 策略优势
-
-1. 多指标交汇:Kuberan策略利用了多个指标的协同作用,大大提高了信号的可靠性,降低了噪音干扰。
-2. 自适应性强:通过动态调整参数,该策略能够适应多变的市场环境,不易失效。
-3. 明确信号:Kuberan提供清晰的进场和出场信号,简化了交易决策过程。
-4. 回测稳健:该策略经过了严格的历史回测,在各种市场行情下都表现稳健。
-5. 适用性广:Kuberan适用于多种市场和品种,不限于特定交易标的。
-
-## 策略风险
-
-1. 参数敏感:Kuberan策略的表现对参数选择较为敏感,不当的参数可能导致表现下降。
-2. 突发事件:该策略主要基于技术面信号,对基本面突发事件的应对能力有限。
-3. 过拟合风险:如果在参数优化时考虑过多的历史数据,可能导致策略过于迎合过去,而对未来行情适应性下降。
-4. 杠杆风险:如果使用过高杠杆,遭遇较大回撤时有爆仓风险。
-
-针对以上风险,可以采取适当的控制措施,如定期调整参数、设置合理止损、适度控制杠杆、关注基本面变化等。
-
-## 优化方向
-
-1. 机器学习优化:可以引入机器学习算法来动态优化策略参数,提高适应性。
-2. 加入基本面因素:考虑将基本面分析纳入交易决策,以应对技术面信号失效的情况。
-3. 投资组合管理:在资金管理层面,可以将Kuberan策略纳入投资组合,与其他策略形成有效对冲。
-4. 细分市场优化:针对不同市场品种的特点,定制优化策略参数。
-5. 高频化改造:将策略改造为高频交易版本,捕捉更多短线交易机会。
-
-## 总结
-
-Kuberan是一款功能强大,安全可靠的交易策略。它巧妙地融合了多种技术分析方法,通过指标交汇原理,在捕捉趋势和把握转折点方面表现出色。尽管任何策略都难免面临风险,但Kuberan已经在回测中证明了其稳健性,通过适当的风险控制和优化措施,相信该策略能够帮助交易者在市场博弈中掌控先机,驱动投资组合的长期稳健增长。
-
-|| 
 
 ## Strategy Overview
 
@@ -108,7 +58,6 @@ To mitigate these risks, appropriate control measures can be implemented, such a
 
 Kuberan is a powerful and reliable trading strategy that ingeniously combines multiple technical analysis methods. Through the principle of indicator confluence, it excels in capturing trends and identifying turning points. While no strategy is immune to risks, Kuberan has proven its robustness in backtesting. With appropriate risk control measures and optimization efforts, this strategy can help traders gain an edge in market battles, driving long-term, steady growth of their investment portfolios.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d6bd472598eb401ff1.png)
-[trans]
-
-## 概述
-
-本策略采用线性回归技术计算出线性回归拦截点,并以其作为买卖信号来构建量化交易策略。该策略通过分析股票价格时间序列,拟合一条线性回归趋势线,使用线性回归拦截点判断价格是否被高估或低估,以此产生交易信号。
-
-## 策略原理
-
-线性回归拦截点表示当时间系列X值为0时,Y值(通常是价格)的预测值。该策略预先设置参数Length,以收盘价为源序列,计算出最近Length天的线性回归拦截点(xLRI)。当收盘价高于xLRI时,做多;当收盘价低于xLRI时,做空。
-
-具体计算公式如下:
-```
-xX = Length *(Length - 1)* 0.5  
-xDivisor = xX *xX - Length* Length *(Length - 1) *(2 * Length - 1) / 6
-xXY = Σ(i *收盘价[i]),i从0到Length-1  
-xSlope = (Length *xXY - xX* Σ(收盘价, Length))/ xDivisor
-xLRI = (Σ(收盘价, Length) - xSlope * xX) / Length
-```
-通过这样的计算,可以得到最近Length天的线性回归拦截点xLRI。策略以其判断价格的高低,产生交易信号。
-
-## 策略优势
-
-本策略具有以下优势:
-
-1. 采用线性回归技术,对价格具有一定的预测能力和趋势判断能力。
-2. 参数较少,模型简单,容易理解和实现。
-3. 可自定义参数Length adaptive 调整策略灵活性。
-
-## 风险及解决方法
-
-本策略也存在一些风险:  
-
-1. 线性回归拟合仅仅是基于历史数据进行的统计拟合,对未来价格走势的预测能力有限。
-2. 如果公司基本面发生较大变化,线性回归拟合的结果可能会失效。
-3. 参数Length设置不当可能导致过拟合。
-
-对策:
-
-1. 适当缩短参数Length,防止过拟合。
-2. 关注公司基本面变化,必要时人工干预关闭仓位。
-3. 采用自适应参数Length,根据市场情况动态调整。
-
-## 策略优化方向 
-
-本策略还可从以下方面进行优化:
-
-1. 增加止损机制,以控制单笔损失。
-2. 结合其它指标,形成组合策略,提高稳定性。
-3. 增加参数自适应优化模块,让Length参数动态变化。
-4. 增加仓位控制模块,防止超量交易。
-
-## 总结
-
-本策略基于线性回归拦截点构建了一个简单的量化交易策略。总体来说,该策略具有一定的经济价值,但也存在一些风险需要注意。通过不断优化,有望进一步提高策略的稳定性和收益性。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ This strategy can also be optimized in the following aspects:
 
 This strategy constructs a simple quantitative trading strategy based on the linear regression intercept. Overall, the strategy has some economic value, but there are also some risks to note. Through continuous optimization, it is expected to further improve the stability and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

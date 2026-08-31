@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13aed4e5e1bca4bd725.png)
 
-[trans]
-
-### 概述
-
-该策略通过RSI指标判断超买超卖,结合快线、中线、慢线构建的趋势判断体系,在价格跃动的时候判断机会建仓做多做空。
-
-### 策略原理
-
-1. 使用RSI指标判断超买超卖
-
-  - RSI参数设置为14周期
-  - 超卖线为30,超买线为70
-
-2. 使用三条不同周期的SMA均线判断趋势
-
-  - 快线为9周期SMA,代表短期趋势
-  - 中线为50周期SMA,代表中期趋势
-  - 慢线为200周期SMA,代表长期趋势
-
-3. 当快线上穿中线,并且RSI指标显示超卖时,做多入场
-
-4. 当快线下穿中线,并且RSI指标显示超买时,做空入场
-
-5. 停损设置为入场价格的4% 
-
-6. 获利方式为分批止盈,首先止盈20%,然后在价格继续上涨时止盈15%,依次退出仓位
-
-### 优势分析
-
-1. 使用三条不同周期的SMA均线,能对不同时间段的趋势变化做出判断
-2. RSI指标的使用避免在非超买超卖区域建仓
-3. 分批止盈增加了策略持仓周期,也增加了持仓平均获利
-
-### 风险分析 
-
-1. 三条均线发出错误信号的概率
-2. 分批止盈存在未全部成交的风险
-3. 需要选择合适的股票品种,适合价格波动较大的股票
-
-### 策略优化方向
-
-1. 可以测试修改均线和RSI的参数,优化入场和出场机会
-2. 可以增加其他指标过滤 candle 形态等,提高策略准确率
-3. 可以通过动态跟踪止损,进一步控制风险
-
-### 总结
-
-本策略结合均线指标和超买超卖指标RSI,在捕捉价格变化趋势的同时对买卖机会进行判断,属于较为常见的跟踪趋势策略。通过参数测试和增加其他辅助判断指标,可以进一步优化和提高策略胜率。
-
-||
 
 ### Overview
 
@@ -109,7 +59,6 @@ This strategy uses the RSI indicator to determine overbought and oversold condit
 
 This strategy combines moving average indicators and the overbought/oversold indicator RSI. By capturing price trend changes while judging trading opportunities, it belongs to a commonly used trend tracking strategy. Further optimizations and improved win rate can be achieved through parameter testing and incorporating additional auxiliary judgment indicators.
 
-[/trans]
 
 > Strategy Arguments
 

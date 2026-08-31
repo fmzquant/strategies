@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9706c6338b26258869.png)
-[trans]
-
-## 概述
-
-可持续追踪止损交易策略是一个用于数字货币交易的自动化交易策略。它具有追踪止损和部分止盈的功能,可以实现可持续增长的交易目标。
-
-## 策略原理
-
-该策略通过设定止损点和追踪止损点来实现交易目标。具体来说,在开仓时会设定一个初始止损点。当价格走势利好时,止损点会随价格上移一定比例,以锁定部分利润。当价格向不利方向反转时,止损点不会改变,以限制亏损。
-
-该策略分为做多和做空两种形式。当选择做多时,如果满足做多条件,则会在当前价格开多单,并设置初始止损价。随后每上涨1%,止损价会上调固定百分比。当价格下跌触发止损或满足平仓条件时,会平掉当前仓位。做空情况类似。
-
-## 优势分析
-
-该策略最大的优势在于可以追踪止损和部分止盈,在保证利润的同时控制风险,实现交易账户的可持续增长。无论行情如何,该策略都可以帮助交易者锁定部分利润,避免亏损扩大。此外,该策略参数可调,可以适应不同风险偏好。
-
-## 风险分析
-
-该策略主要风险在于止损点过于接近,可能会被短期市场噪音触发。此外,部分止盈比例过大也会限制利润区间。为降低这些风险,可以适当放宽止损点,并优化部分止盈参数。
-
-## 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化开仓和止损条件,提高开仓准确率
-
-2. 优化止损点比例,在保证止损的同时最大化获利 
-
-3. 增加止盈条件,可以更好地锁定利润
-
-4. 增加参数化控制,使策略更具灵活性
-
-## 总结
-
-本策略整体来说是一个非常有实战价值的自动交易策略。它可以自动管理止损和止盈,实现账户的可持续增长。通过参数调整和优化,该策略可以适用于不同市场情况,满足投资者不同风险偏好。总体来说,该策略是一款值得推荐的数字货币交易策略。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ The strategy can be improved in the following aspects:
 
 In conclusion, this is a strategy with great practical value for automated trading. It can automatically manage stop loss and take profit to achieve sustainable account growth. Through parameter tuning and optimization, it can be adapted to different market conditions and risk preferences. Overall, it is a recommended trading strategy for cryptocurrencies.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,68 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略利用建立多空通道,进行通道突破型的系统回测验证,属于趋势突破类交易策略。
-
-## 策略原理
-
-1. 计算一定周期内的最高价构建多头通道,最低价构建空头通道。
-
-2. 当价格突破上通道线时,进行买入。
-
-3. 当价格突破下通道线时,进行卖出。
-
-4. 可以设置回测的时间范围,对策略进行验证。
-
-5. 采用突破通道进行交易,策略规则简单清晰。
-
-## 优势分析
-
-1. 多空通道可以比较直观地界定行情通道。
-
-2. 突破通道线后的趋势向上可能性较大。
-
-3. 回测可以验证策略在历史行情中的效果。
-
-4. 通道突破的交易思路简单易行。
-
-5. 代码较为简洁,容易进行修改和优化。
-
-## 风险分析
-
-1. 存在突破后的假突破 Bring回调风险。
-
-2. 无法有效设置止损和止盈。
-
-3. 通道参数设定不当会影响策略效果。
-
-4. 回测结果可能存在优化偏差。
-
-5. 实盘实施时效果可能会有较大差异。
-
-## 优化方向
-
-1. 测试不同参数寻找最优参数组合。
-
-2. 增加其他因子组合过滤假突破。 
-
-3. 建立止损和止盈机制。
-
-4. 针对回测数据做好处理,消除数据偏差。
-
-5. 在多种市场环境中进行回测验证。
-
-6. 模拟实盘进行验证以配置实盘参数。
-
-## 总结
-
-该策略采用简单的突破通道法则进行回测验证,易于操作,但仍需优化以提高稳定性。通过参数调整、风险控制等进一步完善,可以使之成为可靠的突破交易系统。
-
-||
 
 ## Overview
 
@@ -130,7 +68,6 @@ This strategy builds long and short channels, backtesting channel breakouts syst
 
 This strategy backtests simple channel breakout rules, easy to operate but requiring refinement for stability. Further improvements like parameter tuning and risk controls can make it a reliable breakout system.
 
-[/trans]
 
 > Strategy Arguments
 

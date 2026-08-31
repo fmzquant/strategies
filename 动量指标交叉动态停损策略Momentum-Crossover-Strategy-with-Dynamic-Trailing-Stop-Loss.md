@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/140cba80fcb7fe6b14d.png)
-[trans]
-
-## 概述
-本策略结合了移动平均线指标和动向指数指标,实现了双指标的交叉信号来发出买入和卖出信号。同时,策略加入了动态追踪止损来控制风险。
-
-## 策略原理
-1. 使用短期9日EMA和长期21日EMA构建移动平均线指标。当短期EMA上穿长期EMA时生成买入信号;当短期EMA下穿长期EMA时生成卖出信号。
-2. 使用ADX、+DI和-DI构建DMI指标。当+DI上穿-DI时为买入信号;当-DI上穿+DI时为卖出信号。 
-3. 将EMA指标和DMI指标的信号结合,即双指标都满足条件时才会发出实际的买入卖出信号。
-4. 使用动态止损追踪最高价/最低价来止损。
-
-## 优势分析
-1. 双指标结合过滤假信号,提高信号准确率。短期指标捕捉趋势变化;长期指标确定大趋势方向。
-2. 动量指标能提前捕捉到价格趋势,具有一定的leading特征。
-3. 动态止损机制能最大限度锁定利润,同时控制风险。
-
-## 风险分析
-1. 双指标结合时,买入和卖出信号会减少,可能错过部分机会。 
-2. 指标参数设置不当可能导致交易频率过高或信号质量差。
-3. 止损设置过于宽松会增加亏损风险;设置过于严格会增加与趋势脱钩风险。
-
-## 优化方向
-1. 测试不同长度EMA长短期参数组合,找到最优参数。
-2. 测试不同ADX参数选择,提高DMI信号质量。 
-3. 优化止损参数,使其既能最大限度锁定利润,也能控制风险。
-4. 可以考虑加入更多滤波指标,进一步提高信号质量。
-
-## 总结
-本策略整合移动平均线和动量指标的优势,双重确认信号,利用指标之间的互补提高策略盈利能力。同时,动态追踪止损机制能有效控制策略的风险。通过参数优化和规则完善,本策略返现能力和稳定性都有望得到提升。
-
-||
 
 ## Overview
 This strategy combines moving average indicators and directional movement index (DMI) indicators to generate buy and sell signals based on dual-indicator crossovers. It also incorporates a dynamic trailing stop loss to control risks.   
@@ -70,7 +39,6 @@ This strategy combines moving average indicators and directional movement index 
 ## Conclusion
 This strategy combines the strengths of moving averages and momentum indicators for dual confirmation of signals, complementing each other to enhance profitability. Meanwhile, the dynamic trailing stop loss effectively controls risks. Further parameter optimization and strategy refinement could improve both profitability and stability.
 
-[/trans]
 
 > Strategy Arguments
 

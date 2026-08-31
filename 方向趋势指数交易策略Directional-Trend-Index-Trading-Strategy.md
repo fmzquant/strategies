@@ -9,44 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是利用方向趋势指数(DTI)判断价格趋势走向并进行趋势跟踪的交易系统。DTI通过比较一定周期内最高价和最低价的变化方向来判断趋势,并设定上下阈值来产生交易信号。当DTI上穿上轨时做多,下穿下轨时做空。
-
-## 策略原理
-
-计算一定周期内的最高价变化和最低价变化,得到价格变化值。对价格变化值进行多次指数移动平均,得到DTI曲线。设定DTI的上下阈值,当指标上穿上阈值时产生做多信号,下穿下阈值时产生做空信号,一直持有至下一信号出现。
-
-## 优势分析
-
-- DTI判断趋势方向准确、信号较少
-- 采用阈值过滤无效突破,避免噪音交易
-- 持续跟踪趋势,不受短期波动影响
-- 参数调整空间大,可平衡反应灵敏度
-
-## 风险分析
-
-- 无法准确判断趋势反转点,存在亏损风险
-- DTI参数设置不当可能漏失交易机会
-- 长期持仓可能带来较大回撤
-- 交易频次较低,不适合高频交易
-
-可适当缩短计算周期,调整阈值参数,或结合其他指标判断趋势反转。
-
-## 优化方向
-
-- 测试计算DTI的不同参数组合
-- 优化DTI做多做空的阈值
-- 考虑设置止损策略控制风险
-- 在不同品种中测试参数健壮性
-
-## 总结
-
-DTI策略通过清晰的指标信号判断趋势方向,可实现长线稳定盈利。通过参数优化等进一步改进,可成为优质的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -83,7 +45,6 @@ Risks can be mitigated by shortening calculation period, adjusting thresholds, o
 
 DTI strategy accurately determines trend direction from clear signals, enabling steady long-term profits. Further refinements like parameter optimization can make it a high-quality trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

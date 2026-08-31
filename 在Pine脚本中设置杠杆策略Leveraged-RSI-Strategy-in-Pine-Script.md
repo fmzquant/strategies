@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1705398a0459d32bcf5.png)
-[trans]
-
-#### 概述
-
-本策略旨在解决Pine脚本回测时无法设置杠杆的问题,实现杠杆复利。策略通过计算策略权益、设置的杠杆倍数和收盘价格,动态计算开仓手数。
-
-#### 策略原理
-
-1. 设置精度precision,控制开仓手数精度
-2. 设置杠杆倍数leverage,默认为1倍
-3. 计算开仓手数:`Lev = math.max(math.round(strategy.equity * leverage / close), 0)`,使其与权益和杠杆成正比
-4. 入场:当RSI指标由低位向上突破30时做多;由高位向下突破70时做空
-5. 按照计算的手数Lev下单
-
-#### 优势分析
-
-1. 解决Pine脚本无法设置杠杆的问题
-2. 权益变化与开仓手数成正比,实现杠杆复利
-3. RSI指标 filtered,避免无谓交易
-4. 手数计算精度precision可调,满足不同需求
-
-#### 风险分析
-
-1. 杠杆过高容易爆仓
-2. 需适当调整杠杆、开仓手数,控制风险
-
-#### 优化方向
-
-1. 可测试不同参数下的稳定性
-2. 可结合止损策略,进一步控制风险
-3. 可考虑多因子模型,提高策略效果
-
-#### 总结
-
-本策略在Pine脚本中实现杠杆设置,解决回测无法模拟杠杆问题,计算开仓手数与权益挂钩,完成杠杆复利。策略简单有效,可进一步优化,值得学习。
-
-||
 
 #### Overview
 
@@ -82,7 +45,6 @@ This strategy aims to solve the problem that Pine Script cannot set leverage dur
 
 This strategy implements leverage setting in Pine Script, solving the problem that backtesting cannot simulate leverage, calculates position size linked to equity to achieve compound interest with leverage. The strategy is simple and effective, can be further optimized, and worth learning.
 
-[/trans]
 
 > Strategy Arguments
 

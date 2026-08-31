@@ -12,46 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d956cd2a077604bd3dd3.png)
 ![IMG](https://www.fmz.com/upload/asset/2d80434f14f582d02b81a.png)
 
-[trans]
-#### 概述
-这是一种复杂的多指标交易策略，结合了成交量加权平均价格(AVWAP)、固定范围成交量分布(FRVP)、指数移动平均线(EMA)、相对强弱指数(RSI)、平均方向指数(ADX)和移动平均收敛散度(MACD)等多个技术分析工具，旨在通过指标聚合来识别高概率交易机会。
-
-#### 策略原理
-策略通过多重条件来确定入场信号：
-1. 价格与AVWAP的交叉
-2. 价格相对EMA的位置
-3. RSI的强度判断
-4. MACD趋势动量
-5. ADX趋势强度确认
-6. 成交量过滤器
-
-策略专注于亚洲、伦敦和纽约交易时段，这些时段通常流动性较好，交易信号更可靠。入场逻辑包括长仓和空仓两种模式，并设置了梯度止盈和止损机制。
-
-#### 策略优势
-1. 多指标组合，提高信号准确性
-2. 动态成交量过滤，避免低流动性交易
-3. 灵活的止盈止损策略
-4. 基于不同交易时段的策略优化
-5. 动态风险管理机制
-6. 可视化信号辅助决策
-
-#### 策略风险
-1. 多指标组合可能导致信号复杂性增加
-2. 回测数据可能存在过拟合风险
-3. 不同市场条件下性能可能不稳定
-4. 交易成本和滑点可能影响实际收益
-
-#### 策略优化方向
-1. 引入机器学习算法动态调整参数
-2. 增加更多交易时段适应性
-3. 优化止盈止损策略
-4. 引入更多过滤条件
-5. 开发跨品种通用性策略模型
-
-#### 总结
-这是一个高度定制且多维度的交易策略，通过整合多个技术指标和交易时段特征，试图提高交易信号的质量和准确性。策略展示了量化交易中指标聚合和动态风险管理的复杂性。
-
-|| 
 
 #### Overview
 This is a complex multi-indicator trading strategy that combines Volume Weighted Average Price (AVWAP), Fixed Range Volume Profile (FRVP), Exponential Moving Average (EMA), Relative Strength Index (RSI), Average Directional Index (ADX), and Moving Average Convergence Divergence (MACD) to identify high-probability trading opportunities through indicator confluence.
@@ -90,7 +50,6 @@ The strategy focuses on Asian, London, and New York trading sessions, which typi
 
 #### Summary
 This is a highly customized and multi-dimensional trading strategy that attempts to improve trading signal quality and accuracy by integrating multiple technical indicators and trading session characteristics. The strategy demonstrates the complexity of indicator confluence and dynamic risk management in quantitative trading.
-[/trans]
 
 
 

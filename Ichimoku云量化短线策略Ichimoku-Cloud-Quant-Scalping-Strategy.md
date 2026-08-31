@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1735a46dc0abe867cf1.png)
-[trans]
-
-## 概述
-
-Ichimoku云量化短线策略(Ichimoku Cloud Quant Scalping Strategy)是一个结合一目均衡表和平均方向指数的短线量化策略。该策略运用Ichimoku云指标判断趋势方向,配合ADX指标过滤非趋势市场,在趋势行情中进行短线操作。
-
-## 策略原理
-
-该策略主要由两部分组成:
-
-1. Ichimoku云指标判断趋势方向
-
-    - Conversion Line:最近7周期的中值线
-    - Base Line:最近26周期的中值线 
-    - Leading Span A:Conversion Line与Base Line的中点
-    - Leading Span B:最近52周期的中值线
-    
-    当价格在云端上方时为多头趋势,下方为空头趋势。策略以Conversion Line的突破来判断趋势的转折。
-    
-2. ADX指标过滤非趋势市场
-
-    ADX大于20时表示趋势行情,这时策略才产生交易信号。小于20时表示盘整,此时策略不交易。
-
-交易规则:
-
-- 多头进入:价格突破Conversion Line上方且ADX大于20 
-- 空头进入:价格突破Conversion Line下方且ADX大于20
-- 止损:150个点
-- 止盈:200个点
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 乘趋势而上,避免盘整。Ichimoku云指标可准确判断趋势方向和转折点,配合ADX指标过滤盘整市场,避免假突破。
-
-2. 回撤控制。止损设置为150点,可有效控制单笔损失。
-
-3. 盈亏比高。止盈为200点,止损为150点,盈亏比高达1.33,易于盈利。
-
-4. 交易频率适中。只在趋势行情中交易,不会高频出入场。
-
-## 风险分析
-
-该策略也存在以下风险:  
-
-1. 趋势判断失败风险。Ichimoku云指标判断趋势转向失败时会产生错误信号。可以适当延长参数周期进行优化。
-
-2. 止损被追穿风险。快速行情中止损有可能被突破。可以设置移动止损或考虑增加止损范围。 
-
-3. 夜盘和盘前交易风险。策略默认只在日盘交易,夜盘和盘前行情判断可能会失效。可以设置24小时交易或在盘前盘后单独制定交易策略。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. Ichimoku云指标参数优化。可以测试不同的转换线、基准线和备选线参数,找到最佳参数组合。
-
-2. ADX参数和阈值优化。可以测试ADX的周期参数和滤波阈值,找到最优参数。
-  
-3. 止盈止损优化。可以根据历史数据回测确定最优止盈止损点位。
-
-4. 移动止损策略。设置浮动止损以更好地跟踪趋势获利。
-
-5. 趋势判断辅助指标。加入MACD,KD等指标辅助判断趋势,提高信号准确率。
-
-6. 适应性优化。针对差异大的品种单独制定交易策略参数。
-
-## 总结  
-
-Ichimoku云量化短线策略整合Ichimoku云指标和ADX指标的优点,既可以准确判断趋势转折点,又能有效滤除盘整市场,避免假信号。该策略盈亏比高、回撤可控,适合跟踪趋势进行短线操作。通过参数优化、止损优化、辅助指标等手段,可以进一步提升策略稳定性和收益率。
-
-||
 
 ## Overview  
 
@@ -154,7 +81,6 @@ The potential optimization directions:
   
 The Ichimoku Cloud Quant Scalping Strategy integrates the advantages of Ichimoku Cloud and ADX to accurately determine trend reversal points and filter out range-bound markets. It has high profit factor, controllable drawdown, and is suitable for scalping along the trend. Further improvements on parameters, stop loss, auxiliary indicators can enhance the stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

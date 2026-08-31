@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/154479f180b6cfe05e5.png)
-[trans]
-## 概述
-
-本策略结合MACD动量指标和DMI趋向指标,在符合条件时进行做多操作。其 exits设置了固定止盈和自定义的波动性 trailing stop来锁定收益。
-
-## 原理
-
-该策略的 entries 依赖 MACD 和 DMI 指标:
-
-- MACD 为正(MACD 线高于Signal线)时,表示市场上涨动能增强
-- DMI中的DI+高于DI- 时,表示市场处于趋势向上阶段
-
-当上述两个条件同时满足时,做多开仓。
-
-Position exits 则有两个标准:
-
-- 固定止盈:close 价格涨幅达到设置的百分比时止盈
-- 波动性追踪止损:使用 ATR 和最近最高价计算出一个动态调整的止损位置。这个可以根据市场波动性来 trailing stop loss
-
-## 优势
-
-- MACD 和 DMI 的结合可以比较可靠地判断市场的趋势方向,减少错误的操作
-- 止盈条件结合了固定止盈和波动性止损,可以灵活锁定利润
-
-## 风险
-
-- MACD 和 DMI 都可能产生假信号,导致不必要的亏损
-- 固定止盈可能让利润无法最大化
-- 波动性止损的 trails 速度可能调整不当,过于激进或保守
-
-## 优化方向
-
-- 可以考虑加入其它指标过滤入场信号,例如利用 KDJ 指标判断是否过超买过超卖
-- 可以测试不同的参数以获得更好的止盈止损效果
-- 可以根据具体交易品种调整移动平均线等参数,优化系统
-
-## 总结
-
-本策略综合多个指标判断市场趋势和条件,在较大概率利好情况下介入。止盈条件也做了优化设计,在保证一定利润的同时也考虑了收益锁定的灵活性。通过参数调整以及进一步的风险管理,本策略可以成为一个稳定输出的量化交易系统。
-
-||
 
 ## Overview
 
@@ -91,7 +50,6 @@ There are two standards for position exits:
 
 This strategy synthesizes multiple indicators to judge market trends and conditions, and intervenes in situations with a relatively large probability of favor. The profit taking conditions have also been optimally designed to ensure a certain profit while considering the flexibility of locking in gains. Through parameter adjustment and further risk management, this strategy can become a stable quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16bd1ddf5b6100c9a72.png)
 
-[trans]
-
-### 概述
-
-动量趋势跟踪策略(Momentum Trend Tracking Strategy)是一个利用相对强度指数(RSI)、随机指标(Stochastic)和动量指标(Momentum)来识别趋势的策略。它综合多个指标信号,回测效果良好,适合中长线持仓。
-
-### 策略原理
-
-该策略首先分别计算长度为9周期的RSI、Stochastic和Momentum指标。然后把Stochastic和RSI的数值相乘,再除以Momentum,得到一个综合指标,即KNRP。该指标能够同时反映多个子指标的信息。
-
-之后,对KNRP求长度为2的移动平均,当其上穿下穿时生成交易信号。即当平均值大于前一周期时做多,小于前一周期时做空。该信号反映了KNRP指标的短期趋势。
-
-### 优势分析
-
-该策略最大的优势是指标设计合理,有效地结合了多种技术指标的信息,能够准确判断趋势的走向。相比单一指标,它减少了错误信号的概率,提高了信号的可靠性。
-
-另外,该策略判断趋势的主要依据是KNRP的移动平均,避免了追高杀跌的风险,符合趋势交易的理念。此外,参数设置灵活,用户可以根据自己的风格进行调整。
-
-### 风险分析
-
-该策略主要的风险在于多指标组合本身。如果组合方式不当,不同指标之间可能会出现冲突。这会增加错误信号,影响策略表现。此外,参数设置不当也会对结果产生较大影响。
-
-为降低风险,建议优化参数,测试不同长度和组合方式的参数对策略指标和整体回测结果的影响。另外也需要关注长期行情对参数稳定性的影响。
-
-### 优化方向
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 测试更多种类的技术指标的组合,寻找更有效判断趋势的方式
-
-2. 对指标参数进行优化,找到对现有市场环境更适合的数值
-
-3. 添加止损、止盈逻辑,以锁定利润、减少亏损
-
-4. 在更长的时间周期如日线或周线上测试,评估作为中长线策略的效果
-
-5. 添加仓位管理模块,根据市场情况调整仓位
-
-### 总结
-
-动量趋势跟踪策略整体来说是一种较为稳定可靠的趋势策略。它解决了单一指标易受假信号影响的缺点,通过加权多指标有效判断趋势。参数设置灵活、优化空间较大,适合技术指标 traders。如果进一步完善,该策略有望成为一个值得长期持有的量化策略。
-
-||
 
 ### Overview
 
@@ -94,7 +51,6 @@ The main aspects that this strategy can be optimized include:
 ### Summary
 
 The Momentum Trend Tracking Strategy is generally a relatively stable and reliable trend strategy. It solves the problem that a single indicator is prone to false signals and effectively determines the trend through weighted multiple indicators. The parameters are flexible with large optimization space, suitable for technical indicator traders. With further improvements, this strategy has the potential to become a long-term quantitative strategy worth holding.
-[/trans]
 
 > Strategy Arguments
 

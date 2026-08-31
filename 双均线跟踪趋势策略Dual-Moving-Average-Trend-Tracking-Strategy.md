@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b27c4a240fc5dedb0e.png)
 
-[trans]
-
-## 概述
-
-双均线跟踪趋势策略是一个利用快速移动平均线和慢速移动平均线组合来判断市场趋势,并在趋势方向发生转折时发出交易信号的策略。该策略同时结合了均线指标和价格通道指标来识别趋势,可以有效过滤市场噪音,判断趋势方向。
-
-## 策略原理
-
-双均线跟踪趋势策略使用两个移动平均线指标——快速移动平均线(5周期)和慢速移动平均线(21周期)。快速均线用于生成交易信号,慢速均线用于判断市场趋势方向。当快速均线从下向上穿过慢速均线时,产生买入信号;当快速均线从上向下穿过慢速均线时,产生卖出信号。
-
-该策略还同时使用价格通道指标辅助判断趋势。价格通道由最高价和最低价的移动平均线确定。当价格突破通道时,表示趋势发生反转。该策略使用两个价格通道,第一个价格通道周期为21,第二个价格通道周期为5,与均线周期相匹配。
-
-在判断买入和卖出信号时,该策略要求红柱连续出现(用户可设置柱子数量),作为额外的过滤条件。这可以避免在盘整区域发出错误信号。
-
-总的来说,双均线跟踪趋势策略判断趋势的逻辑是:
-
-1. 使用价格通道判断大级别趋势方向 
-2. 使用快速均线判断短期趋势并发出交易信号
-3. 结合额外的柱形过滤,避免在盘整中产生错误信号
-
-通过多级别的趋势判断,可以有效过滤噪音,确定趋势方向。
-
-## 优势分析
-
-双均线跟踪趋势策略有以下优势:
-
-1. 利用双均线系统,可以有效识别趋势,判断主要趋势方向
-2. 快速均线发出交易信号,可以及时捕捉趋势反转
-3. 价格通道判断大级别趋势,避免被短期市场噪音误导 
-4. 红/绿柱过滤条件,可以减少在盘整区域发出错误信号的概率
-5. 策略参数可调整,可以针对不同市场调整参数,提高策略稳定性
-6. 可添加止损策略,可以有效控制每次交易的风险
-
-综上,该策略整体稳定性较好,在大幅趋势市中表现较为出色。
-
-## 风险分析
-
-双均线跟踪趋势策略也存在一些风险,主要有:
-
-1. 当市场长期盘整时,容易产生错误信号,从而可能带来连续小额损失
-2. 策略参数设置不当时,交易信号可能滞后,错过最佳入场时机
-3. 缺乏有效的止损策略时,单笔交易风险难以控制
-
-对应地,可以通过以下方法降低策略风险:
-
-1. 调整红/绿柱过滤条件,在盘整市场中降低交易频率
-2. 优化快速均线参数,确保交易信号及时
-3. 添加移动止损或百分比止损策略,严格控制单笔损失
-
-## 优化方向  
-
-双均线跟踪趋势策略还有进一步优化的空间,主要方向有:
-
-1. 结合波动率指标,如ATR,自动调整止损幅度
-2. 利用机器学习方法自动优化策略参数
-3. 增加 neuronal network判断趋势方向的模块
-4. 综合多种指标和过滤条件,构建策略组合
-
-这些优化方向可以进一步提高策略的稳定性、适应性和智能化水平。
-
-## 总结  
-
-双均线跟踪趋势策略整体来说是一个较为稳健的趋势跟踪策略。它同时结合均线指标和价格通道判断趋势方向和强度,并以快速均线发出交易信号。额外增加的柱形过滤条件也可以进一步避免错误信号。该策略参数可调整,可以很好适应不同市场环境。同时也留有较大的优化空间,有潜力打造成一个可靠、智能的自动交易策略。
-
-||
 
 ## Overview
 
@@ -139,7 +74,6 @@ These optimization directions can further improve the stability, adaptiveness an
 
 In conclusion, the Dual Moving Average Trend Tracking strategy is a relatively robust trend following strategy. It combines moving averages and price channels to determine trend direction and strength, generating trading signals with the fast MA. The additional candle filters also help avoid wrong signals. The adjustable parameters allow adaptation to different market environments. There is also ample room for further optimizations to build a reliable, intelligent automated trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

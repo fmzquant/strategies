@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c7ec5249d6664c4fb3.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是结合KST指标和EMA均线,实现对趋势的判断和跟随。当KST指标出现金叉并低于0时买入,当出现死叉并高于0时卖出。同时结合EMA均线作为支撑阻力,只有收盘价突破EMA均线时才发出交易信号。该策略简单实用,可以自动跟踪趋势,适合中长期持仓。
-
-## 策略原理  
-
-1. 计算KST指标:分别计算10日、15日、20日、30日的ROC指标,再分别对其加权求和,最后通过一个9日SMA平滑得到KST指标。
-
-2. 计算EMA均线:计算长度为50的EMA均线。
-
-3. 产生买入信号:当KST指标的快线上穿慢线(金叉)并低于0,同时收盘价高于EMA均线时,产生买入信号。
-
-4. 产生卖出信号:当KST指标的快线下穿慢线(死叉)并高于0,同时收盘价低于EMA均线时,产生卖出信号。
-
-5. 设置移动止损:跟踪止损设置为账户价值的1%,实现自动止损。
-
-## 策略优势
-
-1. KST指标可以识别趋势变化,EMA均线可以确认趋势方向,二者结合可以准确判断ENTRY时机。
-
-2. 采用快慢交叉结合0轴判断KST指标方向,避免无谓交易。
-
-3. EMA均线作为支撑阻力,进一步过滤假信号,只在突破EMA时入场。
-
-4. 自动跟踪止损来控制风险,让盈利运行。
-
-5. 策略参数较少,容易实现和优化。
-
-## 策略风险
-
-1. KST指标对趋势变化判断有滞后,可能错过部分机会。可以缩短计算周期或优化加权方式。
-
-2. EMA均线有滞后性,在趋势转折点可能失效。可以试验其他指标或多均线组合。 
-
-3. 止损设置过于宽松会让亏损扩大;过于紧凑会被隔夜大幅波动止损。需要仔细测试找到平衡点。
-
-4. 策略信号频繁,交易成本可能较高。可以适当放宽入场条件,减少交易次数。
-
-## 策略优化方向
-
-1. 优化KST指标的计算周期参数,找到对特定品种更敏感的参数组合。
-
-2. 测试不同的均线指标或组合,如MA、WMA等,看哪种与KST配合效果更好。
-
-3. 尝试根据波动率或ATR动态调整止损幅度。
-
-4. 增加过滤条件,如交易量突增等,避免被套。
-
-5. 考虑结合其他指标,如RSI、MACD等,使策略更全面。
-
-6. 测试不同品种参数效果,制定适应不同品种的优化方案。
-
-## 总结
-
-本策略整体思路清晰、可靠、容易实现,通过KST指标判断趋势转折,EMA均线进一步过滤,止损控制风险,可以自动跟踪中长线趋势。参数选取合理、优化空间大,用户可以根据需要调整参数,适用于不同品种,具有良好的普适性。本策略既适合新手学习,也可为专业交易者提供方向。通过继续优化测试,本策略有望成为稳定可靠的趋势跟随策略。
-
-||
 
 
 ## Overview
@@ -127,7 +68,6 @@ The core idea of this strategy is to combine the KST indicator and EMA lines to 
 
 This strategy has clear, reliable logic that is easy to implement. KST identifies trend turns, EMA filters further, and stops control risk. It automatically tracks medium to long term trends. Reasonable parameters provide large optimization space. Users can tweak for different instruments. Applicable for beginners to learn and professionals to build on. With further optimization it shows promise as a robust trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

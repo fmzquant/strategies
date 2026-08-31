@@ -9,32 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略名为多重过滤器SuperTrend交易策略。该策略在Supertrend基础上,加入多重指标作为过滤器,严格控制入场。
-
-策略运作原理:
-1. 计算Supertrend指标,产生买入和卖出信号。
-2. 如果启用MACD过滤器,只有当MACD上穿信号线同时快线上穿慢线时,才产生买入信号;只有当MACD下穿信号线同时快线下穿慢线时,才产生卖出信号。
-3. 如果启用EMA过滤器,只有当价格上穿200日EMA时,才产生买入信号;只有当价格下穿200日EMA时,才产生卖出信号。
-4. 如果启用Stochastic RSI过滤器,只有当Stochastic RSI从超买区下穿超卖区时,才产生买入信号;只有当Stochastic RSI从超卖区上穿超买区时,才产生卖出信号。
-5. 如果启用MFI过滤器,只有当MFI上穿其EMA时,才产生买入信号;只有当MFI下穿其EMA时,才产生卖出信号。
-6. 如果启用CCI过滤器,只有当价格上穿CCI基准线时,才产生买入信号;只有当价格下穿CCI基准线时,才产生卖出信号。
-7. 使用ATR或布林带计算止损止盈位。
-
-该策略的优势:
-1. 多重过滤增加信号的可靠性,避免假信号。
-2. 严格的止损止盈策略有助于风险控制。
-3. 可自定义指标参数及开关,灵活度高。
-
-该策略的风险:
-1. 过多过滤条件可能错过部分交易机会。
-2. 指标参数设置不当可能导致过滤失效。
-3. 止损止盈设定不恰当可能导致亏损扩大。
-
-总之,多重过滤器SuperTrend交易策略同时考虑趋势跟踪和指标分析,通过多重确认提高信号质量。设置合理的止损止盈机制对降低交易风险起关键作用。该策略适合有一定交易经验的人士使用。
-
-|| 
 
 This strategy is called SuperTrend Trading Strategy with Multiple Filters. It adds multiple indicators as filters on top of the Supertrend to strictly control entries.
 
@@ -59,7 +33,6 @@ Risks of this strategy:
 
 In summary, the SuperTrend Trading Strategy with Multiple Filters considers both trend following and indicator analysis, improving signal quality through multiple confirmations. Reasonable stop loss and take profit mechanisms are key to reducing trading risks. The strategy is suitable for traders with some experience.
 
-[/trans]
 
 > Strategy Arguments
 

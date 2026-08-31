@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/112686506afc4b86b82.png)
-[trans]
-## 概述
-该策略是一种双重策略,结合了反转趋势捕捉策略和动态止损策略,目的是在捕捉反转趋势的同时设置动态止损来控制风险。
-
-## 策略原理
-### 反转趋势捕捉策略
-该策略基于随机指标K值和D值。当价格连续两天下跌,同时K值上升超过D值时生成买入信号;当价格连续两天上涨,同时K值下降低于D值时生成卖出信号。这样可以捕捉价格反转的趋势。
-
-### 动态止损策略 
-该策略基于价格波动性和偏度设置动态止损位。它计算最近一段时间内价格高点和低点的波动情况,再结合偏度判断目前是在上行通道还是下行通道,从而动态设置止损价格。这样可以根据市场环境调整止损位置。
-
-两种策略结合使用,在捕捉反转信号的同时设置动态止损来控制风险。
-
-## 优势分析
-- 能够捕捉价格反转点,适合反转交易
-- 设置动态止损,能根据市场环境调整止损位置
-- 双重信号确认,避免假信号
-- 控制风险,保证盈利
-
-## 风险分析
-- 反转失败风险。价格反转信号可能失败
-- 参数设置风险。参数设置不当可能影响策略效果
-- 流动性风险。某些交易品种流动性差,无法止损
-
-可以通过优化参数、严格止损、选择流动性好的品种来控制风险。
-
-## 优化方向
-- 优化随机指标参数,寻找最佳参数组合
-- 优化止损参数,找到最佳的止损位置
-- 增加过滤条件,避免在震荡市场开仓
-- 增加仓位管理模块,控制最大损失
-
-通过综合优化,使策略在控制风险的前提下尽可能捕捉反转趋势。
-
-## 总结
-该策略结合反转趋势捕捉和动态止损双重策略,既能捕捉价格反转点,又能设置动态止损控制风险,是一种相对稳定的短线交易策略。通过持续优化监控,该策略有望获取稳定收益。
-
-||
 
 ## Overview
 This strategy combines a reversal trend catching strategy and dynamic stop loss strategy to capture reversal trends while controlling risks with dynamic stops.
@@ -85,7 +47,6 @@ Comprehensive optimizations enable the strategy to catch reversals while control
 ## Summary
 The strategy combines reversal trend catching and dynamic stops for stable short-term trading. With continuous optimization and monitoring, it has the potential for steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

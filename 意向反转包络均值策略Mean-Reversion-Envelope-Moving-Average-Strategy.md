@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1190231432d25590fef.png)
-[trans]
-
-## 概述
-
-意向反转包络均值策略是一种基于移动均线的意向反转交易策略。该策略使用双指数移动均线作为基础计算,并在其上下各添加多个包络带。当价格触碰包络带时,根据方向开仓做多或做空。当价格回归到均线时,平仓退出。
-
-## 策略原理
-
-该策略使用双指数移动均线(DEMA)作为基础指标。双指数移动均线是一种对价格变化灵敏度较高的移动均线。在其基础上,策略分别在上下两侧添加多个价格带,构成一个均线包络区。包络区的范围由用户设定,每条价格带之间按照一定百分比间隔。
-
-当价格上涨逼近上边包络带时,该策略会开仓做空;当价格下跌触碰下边包络带时,该策略会开仓做多。每碰触一条新的价格带带就会加仓一次。当价格回归移动均线附近时,策略会平仓所有头寸。
-
-该策略通过包络区捕捉价格过激波动,并在反转来临时获利退出,实现低买高卖的交易目标。它适用于有明显均值回归特征的市场周期,如比特币等数字货币。
-
-
-## 策略优势
-
-- 使用双指数移动均线,对短期价格变化较为敏感,可以快速捕捉趋势转折。
-- 均线附近设立包络区,可以更准确地捕捉价格反转。
-- 分批开仓加仓,充分利用资金效率。
-- 获利后快速切换方向,灵活应对市场变化。
-- 可以通过调整参数自由优化。
-
-## 策略风险 
-
-- 大幅度行情无法获利切换方向。
-- 参数设置不当可能导致过于频繁交易。
-- 需要相对稳定的行情,不适用于大幅震荡的市场。
-- 包络区范围太小,可能出现无法开仓的情况。
-
-可以通过适当放宽包络区范围,增加触发价格变化的敏感性来降低风险。同时调整移动均线长度参数,适应不同周期行情。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动均线算法。可以测试不同类型的移动均线指标效果。
-
-2. 调整均线长度参数。缩短周期可以提高对短期价格变化的捕捉,但也可能增加噪声交易。
-
-3. 优化包络区参数。可以测试不同百分比设置,找到最优参数组合。
-
-4. 增加止损策略。设定移动止损或回撤止损,可以有效控制单笔损失。
-
-5. 增加过滤条件。结合其他指标信号,避免非理性行情下无效开仓。
-
-
-## 总结
-
-意向反转包络均值策略通过构建均线价格通道,有效捕捉价格反转机会。它可以灵活调整参数,适用于不同市场环境。该策略transaction成本较低,回报率较高,是一种值得推荐的量化交易策略。
-
-||
 
 ## Overview
 
@@ -111,7 +59,6 @@ The strategy can be optimized in the following aspects:
 
 The Mean Reversion Envelope Moving Average Strategy effectively captures mean reversion opportunities by building a price channel around the moving average. It can be flexibly adapted to different market environments through parameter adjustments. With relatively low transaction costs and high returns, this is a recommended quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

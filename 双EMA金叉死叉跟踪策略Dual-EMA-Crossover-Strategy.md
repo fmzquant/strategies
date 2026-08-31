@@ -10,78 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e1f59adca37a458ac4.png)
-[trans]
-
-
-## 概述
-
-本策略通过计算快线EMA和慢线EMA,并比较两者的大小关系,实现双EMA的金叉和死叉交易信号,属于趋势跟踪策略。当快线上穿慢线时生成买入信号,当快线下穿慢线时生成卖出信号,实现了一个简单的趋势追踪策略。
-
-## 策略原理
-
-该策略的核心逻辑主要包含以下几个部分:
-
-1. 计算快线EMA和慢线EMA:通过ta.ema()函数计算长度为fastInput的快线EMA和长度为slowInput的慢线EMA。
-
-2. 设置回测时间范围:通过useDateFilter参数设置是否过滤回测时间,backtestStartDate和backtestEndDate设置回测开始和结束时间。
-
-3. 生成交易信号:通过ta.crossover()和ta.crossunder()函数比较快线EMA和慢线EMA的大小关系,当快线上穿慢线时生成买入信号,当快线下穿慢线时生成卖出信号。
-
-4. 处理时间范围外的订单:在回测时间范围外会取消未成交的订单,并平掉所有头寸。
-
-5. 绘制移动平均线:在图表上绘制出快线EMA和慢线EMA的移动平均线。
-
-## 策略优势
-
-这是一个非常简单的趋势跟踪策略,具有以下几点优势:
-
-1. 策略逻辑简单,易于理解和实现。
-
-2. EMA平滑了价格数据,可以减少噪音交易。 
-
-3. 可自定义EMA周期参数,适应不同市场环境。
-
-4. 可灵活设置回测时间范围,针对特定时间范围进行测试。
-
-5. 可优化入场和出场条件,结合其他指标等使用。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 双EMA策略较为粗放,无法灵活应对市场变化。
-
-2. 存在频繁交易和重复交易的风险。
-
-3. EMA参数设置不当可能导致交易信号错误。
-
-4. 回测时间范围不合理可能导致过拟合。
-
-5. 存在避免不了回撤和亏损的风险。
-
-可通过参数优化、适当过滤波动、设置止损等方式来控制风险。
-
-## 优化方向 
-
-该策略可从以下几个方面进行优化:
-
-1. 优化EMA周期参数,选择最佳参数组合。
-
-2. 增加其他指标过滤,避免不必要的交易。
-
-3. 增加止损策略,控制单笔亏损。
-
-4. 结合趋势、波动率等过滤器,减少交易频率。 
-
-5. 测试不同的品种合约,寻找最佳策略适用对象。
-
-6. 使用滑点、手续费等成本控制,使回测更真实。
-
-## 总结
-
-本策略整体来说是一个非常简单的双EMA金叉死叉策略,逻辑清晰易懂,通过快慢线EMA比较产生交易信号。该策略优点是实现简单,但也存在一些问题如频繁交易、容易造成过优化等。下一步可从参数优化、风险控制等方面进行改进,使策略更稳健实用。
-
-||
 
 
 ## Overview
@@ -152,7 +80,6 @@ This strategy can be optimized in the following aspects:
 
 In summary, this is a very simple dual EMA crossover strategy with clear logic by comparing fast and slow EMAs. The advantage is simple implementation, but it also has issues like frequent trading, overfitting. Next step is to improve on parameter optimization, risk management for a more robust strategy.
 
-[/trans]
 
 > Strategy Arguments
 

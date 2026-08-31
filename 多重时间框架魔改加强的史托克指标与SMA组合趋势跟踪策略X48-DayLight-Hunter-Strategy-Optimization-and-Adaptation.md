@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fe106022893b745cc6.png)
-[trans]
-
-#### 概述
-本策略采用经典的史托克指标与SMA指标的组合,实现了较强的趋势跟踪能力。策略的核心思想是利用史托克指标识别趋势方向信号,结合SMA指标进行过滤提高信号质量,采用不同的风险模式设置指标参数,实现风险和收益的动态调整。此外,策略还利用多重时间框架判断,优化了入场时机选择。
-
-#### 策略原理
-1. 策略使用魔改加强版的史托克指标,指标参数包括%K周期、%K平滑周期、%D平滑周期,通过参数设置控制指标的灵敏度。
-2. SMA指标参数包括高点SMA和低点SMA,用于过滤信号,提高信号质量,避免假突破。 
-3. 根据不同的风险偏好,策略提供了低风险模式、中风险模式和高风险模式的选择。风险模式会影响史托克指标的交叉参数,从而实现风险和收益的动态调整。
-4. 策略判断长仓信号为史托克指标上穿阈值且关闭价低于低点SMA时;判断短仓信号为史托克指标下穿阈值且收盘价高于高点SMA时。
-5. 策略通过引入多重时间框架判断模块,在不同时间范围内验证信号,选择更优的入场时机,以控制交易风险。
-
-#### 策略优势
-1. 采用魔改加强版史托克指标,提高指标灵敏度,能够快速捕捉市场变化。
-2. 增加SMA指标双轨过滤机制,能够有效过滤假信号,提高信号质量。
-3. 提供多种风险模式供选择,用户可以根据自己的风险偏好,灵活调整参数。
-4. 增加多重时间框架判断模块,优化入场时机选择,降低交易风险。
-5. 策略参数设置合理、指标运用自然,整体框架科学严谨,稳定性好、适应性强。
-
-#### 策略风险
-1. 策略本身没有止损机制,需要手动设置止损位控制亏损风险。 
-2. 策略信号频繁,容易过度交易而增加交易成本。
-3. 策略对参数和风险模式设置较为敏感,需要测试优化找到最佳参数。
-4. 策略回撤可能较大,不适合全仓操作,需要控制交易资金规模。
-
-对应方法:
-1. 根据市场波动程度合理设置止损比例,最大程度控制亏损。
-2. 适当调整史托克指标参数,降低信号频率。或设置最小止盈,减少不必要交易。
-3. 建议选择默认低风险模式,根据回测数据调整其他参数。
-4. 控制仓位规模,分批建立头寸,降低单笔交易风险。
-
-#### 策略优化方向 
-1. 对史托克指标和SMA指标的参数进行全面测试,找到最优参数组合。 
-2. 增加多重时间框架的数量,丰富判断依据,优化入场时机选择。
-3. 引入止损指标组合如ATR止损,能动态跟踪止损位,降低风险。
-4. 构建指标信号过滤和确认机制,如增加成交量指标判断,避免被套。
-5. 加入仓位管理模块,根据市场情况主动调整仓位,降低单笔的交易风险。
-
-
-#### 总结
-本策略综合运用史托克指标与SMA指标的优势,实现了较强的趋势跟踪效果。策略框架合理,指标使用自然,通过控制参数和风险模式还原了指标本质,优化了策略的稳定性。多重时间框架判断模块也提升了策略的适应性,能够根据不同品种和周期进行调整。总体来说,本策略具有较好的普适性,同时也具有很大的优化空间,值得后续深入研究。
-
-|| 
 
 #### Overview
 This strategy combines the classic Stochastic indicator and SMA indicator to achieve strong trend tracking capability. The core idea of the strategy is to identify trend direction signals with Stochastic indicator and filter with SMA indicator to improve signal quality. It also provides different risk modes to dynamically adjust risk and reward. In addition, the multi-timeframe judgement is utilized to optimize the entry timing and control trading risk.
@@ -92,7 +49,6 @@ Solutions:
 
 #### Summary  
 This strategy combines the strengths of Stochastic and SMA indicators to achieve strong trend tracking capability. The framework is solid and indicator application is fluid. By controlling parameters and risk modes, the nature of the indicators is restored for better stability. The multi-timeframe judgement also enhances adaptiveness across products and timeframes. Overall it has good versatility and huge potential for further optimizations and enhancements.
-[/trans]
 
 
 > Strategy Arguments

@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ddad23b167e0f49408.png)
 
-[trans]
-#### 概述
-MACD TEMA 交叉策略是一个基于 MACD 和 TEMA 指标的交易策略,适用于 BTCUSDT 的 1 小时时间框架。该策略通过计算 MACD 和 TEMA 指标的交叉点来生成买入和卖出信号。当 MACD 线从下向上穿过 TEMA 线时,产生买入信号;当 MACD 线从上向下穿过 TEMA 线时,产生卖出信号。该策略还使用柱状图来表示 MACD 和 TEMA 之间的差值,用不同的颜色表示差值的变化趋势,以提供更直观的信号。
-
-#### 策略原理
-MACD TEMA 交叉策略的原理是利用 MACD 和 TEMA 指标之间的交叉点作为买卖信号。MACD 是一个动量指标,通过计算两个不同周期的移动平均线之间的差值来衡量价格的变化速度。TEMA 是一个趋势跟踪指标,通过计算三次指数移动平均线来平滑价格波动并识别趋势方向。当 MACD 线从下向上穿过 TEMA 线时,表明价格上涨势头加强,产生买入信号;当 MACD 线从上向下穿过 TEMA 线时,表明价格下跌势头加强,产生卖出信号。同时,该策略还使用柱状图来表示 MACD 和 TEMA 之间的差值,通过柱状图颜色的变化来提供更直观的信号。
-
-#### 策略优势
-1. 结合了 MACD 和 TEMA 两个指标,可以更准确地捕捉市场趋势和动量变化。
-2. 使用柱状图来表示 MACD 和 TEMA 之间的差值,提供更直观的信号,便于traders 快速做出决策。
-3. 参数可调,可以根据不同的市场条件和交易风格进行优化。
-4. 适用于 BTCUSDT 这样的高波动性市场,可以有效地捕捉短期价格波动。
-
-#### 策略风险
-1. MACD 和 TEMA 指标都是基于历史数据计算的,在市场突变或异常波动时可能会产生错误信号。
-2. 该策略在震荡市场中可能会产生较多的虚假信号,导致频繁交易和高交易成本。
-3. 参数设置不当可能会导致策略性能下降,需要不断优化和调整。
-4. 该策略没有考虑市场的基本面因素,如重大新闻事件等,可能会受到意外因素的影响。
-
-#### 策略优化方向
-1. 结合其他技术指标,如 RSI、BOLL 等,以提高信号的可靠性和准确性。
-2. 引入止损和止盈机制,以控制风险和保护利润。
-3. 对参数进行优化,如调整 MACD 和 TEMA 的周期,以适应不同的市场状况。
-4. 考虑市场的基本面因素,如重大新闻事件等,以避免意外因素的影响。
-
-#### 总结
-MACD TEMA 交叉策略是一个结合了 MACD 和 TEMA 指标的交易策略,适用于 BTCUSDT 的 1 小时时间框架。该策略通过计算两个指标之间的交叉点来生成买卖信号,并使用柱状图来提供更直观的信号。该策略的优势在于能够捕捉市场趋势和动量变化,适用于高波动性市场。但同时也存在一些风险,如虚假信号和参数设置不当等。未来可以通过结合其他技术指标、引入止损止盈机制、优化参数和考虑基本面因素等方式来进一步优化该策略。
-
-|| 
 
 #### Overview
 The MACD TEMA Crossover Strategy is a trading strategy based on the MACD and TEMA indicators, optimized for the BTCUSDT 1-hour timeframe. The strategy generates buy and sell signals by calculating the crossover points between the MACD and TEMA lines. A buy signal is generated when the MACD line crosses above the TEMA line, while a sell signal is generated when the MACD line crosses below the TEMA line. The strategy also uses a histogram to represent the difference between the MACD and TEMA lines, with different colors indicating the trend of the difference, providing more intuitive signals.
@@ -67,7 +38,6 @@ The principle of the MACD TEMA Crossover Strategy is to use the crossover points
 
 #### Summary
 The MACD TEMA Crossover Strategy is a trading strategy that combines the MACD and TEMA indicators, optimized for the BTCUSDT 1-hour timeframe. The strategy generates buy and sell signals by calculating the crossover points between the two indicators and uses a histogram to provide more intuitive signals. The strategy's advantages lie in its ability to capture market trends and momentum changes, making it suitable for highly volatile markets. However, it also has some risks, such as false signals and improper parameter settings. In the future, the strategy can be further optimized by combining other technical indicators, introducing stop-loss and take-profit mechanisms, optimizing parameters, and considering fundamental factors.
-[/trans]
 
 > Strategy Arguments
 

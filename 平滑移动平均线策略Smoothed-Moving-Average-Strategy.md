@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/137b7bc310626195758.png)
-[trans]
-
-## 概述
-
-该策略结合了多种不同的移动平均线,实现了一个简单的趋势跟踪策略。策略同时具有过滤噪音的功能。
-
-## 策略原理
-
-该策略首先会对收盘价进行平滑,可以选择是否使用Heiken Ashi收盘价。然后会调用smoothMA函数,实现多次叠加平滑移动平均线。smoothMA函数首先调用variant函数,variant函数可以生成多种不同类型的移动平均线,如SMA、EMA、DEMA等。variant函数生成指定类型和长度的移动平均线之后,smoothMA会通过递归的方式多次叠加调用variant函数,从而实现多重平滑。最终形成平滑度很高的移动平均线。当平滑移动平均线上涨时产生买入信号,当下跌时产生卖出信号。
-
-## 优势分析
-
-- 多重叠加移动平均线,能够有效滤除市场噪音,识别趋势。
-- 支持多种移动平均线类型,如SMA、EMA、DEMA等,可以灵活组合使用。
-- 支持Heiken Ashi技术,可以过滤假突破。 
-- 策略简单易用,容易实施。
-- 允许自定义移动平均线长度、类型和平滑次数,可以针对不同品种优化参数。
-
-## 风险分析
-
-- 多重叠加移动平均线会产生滞后,可能错过趋势最初的变化。
-- 仅使用简单的移动平均线系统,在震荡行情中无法有效获利。
-- 未考虑交易成本,实际交易中交易成本会降低盈利能力。
-- 未设置止损,存在亏损扩大的风险。
-
-可以考虑结合其他指标如MACD、KDJ等使用,识别趋势信号更加准确。优化移动平均线参数,降低滞后。设置合理的止损水平,控制单笔亏损。同时注意控制交易频率,降低交易成本。
-
-## 优化方向
-
-- 可以尝试不同长度和类型的移动平均线组合,找到最佳参数。
-- 可以考虑在策略中加入其他技术指标,形成更系统的入市和出市规则。
-- 可以设定交易时间,避免主要宏观事件对策略的影响。
-- 可以根据品种特性调整参数,寻找最佳参数组合。
-- 可以设定止损和止盈水平,控制交易风险。
-
-## 总结
-
-该策略通过多重叠加移动平均线实现趋势跟踪,可以有效滤除市场噪音。优点是简单易用,可以灵活调整参数。但仅使用移动平均线系统仍有盈利能力受限的问题。可以考虑与其他技术指标组合使用,同时注意控制交易风险,优化参数,提高策略效率。
-
-||
 
 ## Overview
 
@@ -88,7 +48,6 @@ Consider combining other indicators like MACD, KDJ to improve signal accuracy. O
 
 The strategy follows trends via multi-overlay of moving averages, effectively filtering market noise. The advantages are simplicity and flexibility. But relying solely on MAs has limited profitability. Consider combining with other indicators, managing risks and optimizing parameters to improve efficiency.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,48 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略利用双重平滑移动平均线系统作为主要交易信号,同时结合交易量验证指标TDFI进行交易信号过滤,以发挥平滑移动平均线的优势,减少非主流市场环境下的错误交易。
-
-## 策略原理
-
-该策略利用两组不同参数设置的平滑移动平均线组合作为主要交易信号。首先使用快速设置的8周期平滑移动平均线组合作为第一确认信号,再使用稍慢的16周期平滑移动平均线作为第二确认信号。当快速移动平均线发出买入信号时,如果稍慢移动平均线也同一方向发出信号,且是在最近1到2根K线内,则开仓做多;当快速移动平均线发出卖出信号时,如果稍慢移动平均线也同一方向发出信号,且是在最近1到2根K线内,则开仓做空。平仓信号以第二确认信号的反向突破为准。此外,交易量验证指标TDFI用于检测K线的交易量能量,用于过滤误导性交易信号。只有在交易量符合预期时,才会开仓。
-
-## 策略优势
-
-- 平滑移动平均线能有效跟踪趋势,避免被市场噪音影响,有利于抓取中长线趋势
-- 双重平滑移动平均线组合,能提高信号的可靠性,避免在非主流市场中产生错误交易
-- 交易量指标的引入,能过滤因低量造成的误导信号,避免不必要的损失
-- 策略参数优化空间大,可以根据不同品种和周期进行调整,适应性强
-
-## 策略风险
-
-- 平滑移动平均线系统在趋势反转点时容易晚识别信号,可能造成一定损失
-- 非主流行情下,双重平滑移动平均线仍有可能同时发出错误信号
-- 交易量指标效果受限,不能完全避免所有误导信号
-
-为降低Above risks,以下优化方向可考虑:
-
-- 加入趋势力指标,辅助判断趋势反转点
-- 优化平滑移动平均线参数,使快慢配置更合理
-- 尝试不同交易量指标,提高对低量误导信号的过滤效果
-
-## 策略优化方向
-
-- 加入MACD等辅助指标判断趋势反转点
-- 调整ATR止损止盈参数,适应不同品种特性
-- 尝试增大建仓比例,提高策略收益率
-- 根据回测结果优化参数,提高策略稳定性
-
-## 总结
-
-该策略整体来说是一个典型的趋势跟踪策略。双重平滑移动平均线系统结合交易量过滤指标TDFI,能较好发挥趋势跟踪功能,同时降低非主流行情下的错误信号率。通过参数优化,可以适应不同周期和品种的市场特点。但该策略更依赖参数调整,而非机械地应用。需要注意反转点的识别不足以及参数调整对策略效果的影响。整体而言,该策略思路清晰易懂,值得进一步优化实战。
-
-||
 
 
 ## Overview
@@ -91,7 +49,6 @@ To reduce risks, the following optimization directions could be considered:
 
 Overall this is a typical trend-following strategy. The dual smooth MA system combined with the TDFI volume filter can effectively leverage trend-tracking capability while reducing incorrect signal rates in non-trending markets. Through parameter optimization it can be adapted to different timeframes and products. However, it relies more on parameter tweaking than mechanical application. Lack of trend reversal identification and parameter tuning impact should be noted. Overall a clear and straightforward approach, worthy of further optimization and practice.
 
-[/trans]
 
 > Strategy Arguments
 

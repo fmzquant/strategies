@@ -10,28 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-本策略名称为“基于随机运气的简单交易策略”。该策略使用随机方法在每周首日产生做多或做空信号,通过大量重复测试评估随机交易的效果。
-
-具体来说,策略的交易逻辑非常简单直白:
-
-1. 每周一投掷一枚硬币,随机生成头或尾的结果。
-
-2. 如果是头,则在当日做多;如果是尾,则在当日做空。
-
-3. 做多时,设置止损为1倍ATR,止盈为1倍ATR;做空同理,实现1:1的风险回报比。
-
-4. 持仓至本周末平仓。
-
-该策略的优势在于回测大量年份的数据,可评估随机交易的平均胜率。交易规则极简单,可作为策略比较的基准线。
-
-但随机交易无法利用市场规律,难以持续获得正收益。止盈止损固定也易造成亏损扩大。交易者仅可将其作为实验性策略,不能用于实盘。
-
-总体来说,数据回测可以提示随机交易的效果,但不代表可实际运用的策略。交易者最终还是需要判断力与系统的交易技巧。
-
-
-
-||
 
 
 
@@ -53,7 +31,6 @@ But random trading cannot utilize market patterns and will unlikely generate sus
 
 In conclusion, backtest results may suggest outcomes of random trading, but do not represent actually applicable strategies. Traders ultimately still need discretion and systematic trading techniques.
 
-[/trans]
 
 > Strategy Arguments
 

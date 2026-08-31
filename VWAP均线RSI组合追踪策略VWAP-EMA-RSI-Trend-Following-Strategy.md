@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略综合运用VWAP、EMA和RSI三种指标,进行趋势判断和趋势追踪操作。并采用移动止损方式来锁定利润,避免回撤扩大。
-
-策略原理: 
-
-1. 计算VWAP作为当日公平价位指标。
-
-2. 计算15周期EMA作为中短线趋势指标。
-
-3. 计算RSI判断是否处于超买区域,RSI高于阈值时产生做多信号。
-
-4. 当收盘价高于VWAP和EMA,且RSI超买时,进行做多入场。 
-
-5. 设置移动止损线在入场点下方某比例跟踪。
-
-6. 设置固定止盈点数,以保证盈利。
-
-该策略的优势:
-
-1. VWAP反映公平价值,EMA判断趋势,RSI指示超买区域,提高入场准确性。
-
-2. 移动止损方式,可以根据实时价格调整止损位置,保护利润。
-
-3. 固定止盈可一定程度上锁定利润,减少监控。
-
-该策略的风险:
-
-1. RSI指标和EMA在震荡行情中易产生错误信号。
-
-2. 移动止损需要合理设置跟踪幅度,过大过小均有问题。 
-
-3. 无法限制单笔亏损大小,存在大单风险。
-
-总之,该策略汇集多种指标优势,采用移动止损方式进行追踪。可在大趋势中获得较好效果,但需优化参数,严格进行风险控制。
-
-||
 
 This strategy combines VWAP, EMA and RSI for trend bias and follows trends using a trailing stop approach. It aims to ride trends with adaptive exits.
 
@@ -81,7 +44,6 @@ Risks:
 
 In summary, this strategy combines multiple indicators and uses a trailing stop for trend following. It performs well in sustained trends but requires optimization and risk controls.
 
-[/trans]
 
 > Strategy Arguments
 

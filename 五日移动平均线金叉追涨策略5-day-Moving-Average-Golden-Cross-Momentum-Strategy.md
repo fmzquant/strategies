@@ -9,65 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于5日和78日移动平均线金叉形成追涨信号,目标捕捉短线价格Momentum突破带来的机会。
-
-## 策略原理 
-
-1. 计算3日、78日、195日加权移动平均线。
-
-2. 当3日线上穿195日线时,发出买入信号。
-
-3. 当3日线处于78日线之上,78日线又处于195日线之上时,认为处于上升趋势通道,也发出买入信号。
-
-4. 设置6ATR动态止盈线,在止盈线下方发出止盈信号。
-
-5. 当3日线重新下穿195日线时发出止损信号。
-
-## 优势分析
-
-1. 多重均线交叉组合,有效过滤假突破。
-
-2. 动态止盈设定避免反转止损。
-
-3. 回测每笔交易平均持有周期仅2小时,适合短线Momentum交易。
-
-4. 最大回撤可控在20%左右。
-
-## 风险分析
-
-1. 固定均线参数无法适应市场变化。
-
-2. 样本期限仅1年,需扩大样本验证策略。
-
-3. 止盈止损参数需要优化,控制风险。
-
-4. 无法应对价格跳空。
-
-5. 手续费和滑点成本可能较大。
-
-## 优化方向
-
-1. 测试不同均线参数,优化组合。
-
-2. 优化止盈止损参数,平衡收益风险。
-
-3. 设置入场筛选条件,减少套牢概率。 
-
-4. 优化仓位管理,根据趋势逐步加仓。
-
-5. 测试不同品种和更长时间段。
-
-6. 进行Monte Carlo模拟评估最大回撤。
-
-## 总结
-
-该策略利用均线多重金叉判断股价上涨趋势,设置动态止盈止损规则,回测表现良好。但该策略样本期限短,参数稳健性有待验证,且无法处理跳空行情。需要进一步扩大样本区间回测,引入更多过滤条件降低误信号率,同时优化止盈止损参数,并评估手续费等交易成本影响。如果能经过全面检验与优化,该策略可以成为一个稳定的短线追涨系统。
-
-|| 
 
 ## Overview
 
@@ -125,7 +66,6 @@ This strategy uses 5-day and 78-day MA crosses to generate momentum chasing sign
 
 This strategy identifies uptrend with MA crosses and sets dynamic profit stop rules with good backtest results. But limited sample period, param stability remains verified and fails on gaps. Requires further backtesting over larger datasets, more filters to reduce false signals, optimized profit stop parameters, evaluation on transaction costs. If passes comprehensive optimization and verification tests, can become a robust short-term momentum chasing system.
 
-[/trans]
 
 > Strategy Arguments
 

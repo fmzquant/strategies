@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b08c88cfd9448585fc.png)
 
-[trans]
-
-
-## 概述
-
-黄金VWAP MACD SMO交易策略是一个在12小时时间周期下设计的完整交易策略。它结合了VWAP月线、SMO振荡器和MACD指标来识别黄金市场的交易机会。
-
-## 策略原理
-
-该策略使用VWAP月线作为主要的趋势指标。VWAP代表价格的平均成交价,月线意味着计算VWAP的时间范围是过去一个月。如果当前收盘价高于VWAP月线,那么表明目前是处于趋势上涨的阶段;如果收盘价低于VWAP月线,则意味着趋势正在下跌。
-
-SMO振荡器则用来判断目前的超买超卖情况。它由一个长周期组分和一个短周期组分构成。当振荡器高于0时表示处于超买状况,而低于0时则代表超卖。
-
-而MACD直方图可以判断动量方向。当柱子向上突破时,代表动量正转强劲,可以做多;当柱子向下突破时,意味着动量转弱,应该考虑做空。
-
-根据这三个指标,可以建立交易策略的具体规则:
-
-多头进入:当收盘价高于VWAP月线,MACD直方柱上涨突破,且SMO振荡器高于0时做多
-空头进入:当收盘价低于VWAP月线,MACD直方柱下跌突破,且SMO振荡器低于0时做空
-
-止盈止损根据输入的百分比设置。
-
-## 优势分析
-
-该策略结合多个时间范围和指标,可以有效判断趋势方向和力度,具有如下优势:
-
-1. VWAP月线可以判断主要趋势方向,避免逆势操作
-2. MACD直方图可以及时捕捉动量变化
-3. SMO振荡器判断超买超卖情况,有助于在容易形成拐点的区域入场
-4. 多指标组合可以相互验证,提高信号的可靠性
-5. 可自定义止盈止损比例,控制风险
-
-## 风险分析
-
-尽管该策略设计合理,但仍存在一定的风险需要注意:
-
-1. VWAP指标对十字异动敏感,可能产生错误信号
-2. MACD参数设置不当,导致虚假突破的概率增加
-3. SMO参数不当也可能导致误判超买超卖区域
-4. 止盈止损设置过于宽松,无法有效控制单笔损失
-
-为控制上述风险,应该合理优化VWAP和MACD的参数,幅度不宜过大。同时,止盈止损比例不宜过大,应控制单笔亏损在3%左右为宜。
-
-## 优化方向
-
-该策略还可从以下方面进行优化:
-
-1. 增加量价确认,例如成交量突破均线
-2. 结合波动率指标如ATR,根据市场波动率调整仓位
-3. 在高位添加分批 lighten 机制,防止错失利润
-4. 测试不同的止盈止损策略,如移动止损、环比止损等
-5. 增加模型校验模块,过滤异常信号
-
-## 总结
-
-黄金VWAP MACD SMO策略综合多个指标判断趋势和超买超卖情况,可以有效抓住黄金的中长线机会。虽有一定的风险,但可通过参数优化和风控手段进行控制。该策略具有非常强大的延展性,可根据实际需要进行模块化优化,是一套值得长期跟踪的交易系统。
-
-||
 
 
 ## Overview
@@ -125,7 +67,6 @@ The strategy can also be optimized in the following aspects:
 
 The Gold VWAP MACD SMO strategy combines multiple indicators to determine the trend and overbought/oversold conditions, which can effectively capture medium-to-long term opportunities in gold. Although there are some risks, they can be controlled through parameter optimization and risk management. The strategy has very strong scalability and can be optimized modularly based on actual needs. It is a trading system worthy of long-term tracking.
 
-[/trans]
 
 > Strategy Arguments
 

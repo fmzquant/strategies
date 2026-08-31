@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c20bbc1803d2d2cc8f.png)
-[trans]
-
-## 策略概述
-该策略是基于多个移动平均线指标来产生交易信号的策略。策略会同时关注短期、中期和长期移动平均线,根据它们的交叉情况来判断趋势方向并产生交易信号。
-
-## 策略名称
-多重均线交叉策略(Multi Moving Average Crossover Strategy)
-
-## 策略原理
-该策略同时使用 3 条不同周期的移动平均线,包括 7 日线、13 日线和 21 日线。其交易逻辑基于以下几点:
-
-1. 当短期 7 日线上穿中期 13 日线,长期 21 日线处于上升趋势时,产生做多信号;
-2. 当短期 7 日线下穿中期 13 日线,长期 21 日线处于下降趋势时,产生做空信号。
-
-通过结合不同时间段的移动平均线,可以更准确判断市场趋势,避免错误交易。
-
-## 策略优势
-1. 使用多组移动平均线,可以更准确判断市场走势,避免被市场中的假突破或短期波动误导。
-2. 只在趋势明确时才产生信号,可以减少不必要的交易次数,从而降低交易成本。
-3. 参数设置灵活,可以根据个人偏好调整移动平均线的周期,适应不同品种和市场环境。
-
-## 策略风险
-1. 在震荡调整的市场中,可能出现频繁的错误信号。
-2. 移动平均线作为趋势跟随指标,无法准确定位转折点。
-3. 移动平均线交叉延迟识别趋势,可能错过部分利润。
-4. 可通过引入其他技术指标验证信号,优化移动平均线参数来降低风险。
-
-## 策略优化方向
-1. 考虑引入波动率指标,判断趋势强度,避免在震荡市场中交易。
-2. 尝试运用机器学习等定量技术自动优化移动平均线参数。
-3. 增加止损策略,在亏损扩大时及时止损。
-4. 考虑在移动平均线交叉时,利用限价单减少滑点。
-
-## 总结
-该策略结合短中长三个时间段的移动平均线,根据它们的交叉关系判断市场趋势,是一个相对稳定和高效的趋势跟随策略。通过对指标参数、止损机制以及下单方式的优化,可以进一步提高策略的胜率和盈利能力。
-
-||
 
 
 ## Strategy Overview  
@@ -82,7 +45,6 @@ By combining moving averages across different timeframes, the strategy can judge
 
 ## Conclusion
 This strategy combines short-term, medium-term and long-term MAs to determine market trend based on their crossover relations, making it a relatively stable and efficient trend-following strategy. Further improvements in indicator parameters, stop loss mechanisms and order placement can help increase win rate and profitability.
-[/trans]
 
 > Strategy Arguments
 

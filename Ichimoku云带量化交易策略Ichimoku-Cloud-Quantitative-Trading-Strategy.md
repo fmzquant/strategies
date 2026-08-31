@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6a418e09b8e25a3301.png)
-[trans]
-
-### 概述
-
-本策略综合运用一根曲线、日K线、Hull移动平均线、MACD指标等多个指标,构建长短多空决策机制,实现自动交易。
-
-### 策略原理
-
-基于Ichimoku云带的转换线和延迟线构建多空交易信号。结合Hull移动平均线判断趋势方向。再利用MACD指标判断长短节奏。日内K线判断突破作为入场信号。
-
-转换线是近9日的中价平均。延迟线是近26日的中价平均。当转换线上穿延迟线时,做多。当转换线下穿延迟线时,做空。
-
-Hull移动平均线通过双平均线交叉来判断趋势,当快线上穿慢线时,判断为上升趋势;反之, dann判断为下降趋势。
-
-MACD取12和26指数移动平均线差值,通过零轴和平均线的金叉死叉来判断多空。
-
-日内K线突破延迟线作为入场时机。
-
-### 策略优势
-
-1. 综合多个指标,准确判断趋势方向。
-2. 选时精准,避免无谓交易。
-3. 风险控制到位,止损止盈机制。
-
-### 策略风险
-
-1. 参数设定不当可能导致过于激进入场。
-2. 多指标组合增加了策略复杂度。
-3. 短线操作难免出现回撤。
-
-### 策略优化
-
-1. 调整参数组合,适应更多品种和周期。
-2. 加入机器学习模块,实现参数自适应。
-3. 优化入场动量指标,提高胜率。
-
-### 总结
-
-本策略结合Ichimoku云带等多个指标信号,搭建完整的量化决策体系。严格的止损止盈机制控制交易风险。通过参数调整和模型优化,可以适应更多交易品种,具有广阔的应用前景。
-
-||
 
 ### Overview
 
@@ -90,7 +49,6 @@ K-line penetration on lagging line provides entry timing.
 
 This strategy combines Ichimoku cloud and other indicator signals into a complete quantitative system. Strict stop loss/take profit mechanism controls risks. With parameter turning and model optimization, it can be applied to more trading instruments with broad prospects.
 
-[/trans]
 
 > Strategy Arguments
 

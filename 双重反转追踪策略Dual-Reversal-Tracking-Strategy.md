@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6b0eafb96d158b2735.png)
-[trans]
-
-## 概述
-
-双重反转追踪策略通过结合123反转和关键反转下跌两个子策略,实现更精确的交易信号捕捉。其中123反转策略通过观测收盘价与之前两天的对比,结合Stoch指标判断潜在反转。关键反转下跌策略则通过在下跌趋势中观测新的低点来判断反转信号。两种策略信号的结合可以使得交易决策更加准确可靠。
-
-## 策略原理
-
-该策略由两个子策略组成。第一个子策略即123反转策略,其判断逻辑是:
-
-1. 如果今天和昨天的收盘价均高于前天,且快速Stoch指标低于慢速Stoch指标且快速线低于50,做多;
-
-2. 如果今天和昨天的收盘价均低于前天,且快速Stoch指标高于慢速Stoch指标且快速线高于50,做空。
-
-第二个子策略即关键反转下跌策略,其判断逻辑很简单:
-
-在下跌趋势中,如果出现新的低点,则做空。
-
-整个策略的交易信号则是,只有当两个子策略的信号同向时,才发出实际的交易信号。
-
-## 优势分析
-
-该策略最大的优势在于信号准确可靠。因为它需要两个子策略的信号同向才实际下单,从而可以过滤掉部分噪音交易,这大大提高了策略的稳定性。
-
-另外,该策略同时结合了多个时间维度的信息,包括双日线比较和Stoch指标的多日信息,使得判断依据更加全面和可靠。
-
-从原理上看,该策略同时满足反转策略和趋势策略的特点,适合在现实中实际应用。
-
-## 风险分析
-
-该策略的最大风险在于双重信号的要求也增大了漏单的概率。当两个子策略信号不一致时,将错过交易机会。
-
-另外,子策略本身也存在一定问题。123反转策略对参数敏感度较高,需要仔细测试和优化。关键反转下跌策略则对于震荡行情效果不佳。
-
-这些问题都是可以通过调整参数以及引入其他辅助判断来解决的。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整子策略参数,使其更加匹配具体品种特点;
-
-2. 引入Volume和波动率等辅助指标,提高决策的准确性;
-
-3. 增加机器学习模型判断,利用历史数据对参数进行自动优化。
-
-## 总结
-
-双重反转追踪策略通过123反转和关键反转下跌子策略的结合,实现反转捕捉的双重保险。它结合了反转策略和趋势策略的优势,在现实中应用前景广阔。通过参数和模型优化,可以使该策略的效果进一步提升,成为反转交易者的重要工具。
-
-|| 
 
 ## Overview
 
@@ -111,7 +60,6 @@ This strategy can be optimized in the following aspects:
 
 The Dual Reversal Tracking strategy achieves dual insurance of reversal capturing through the combination 123 Reversal and Key Reversal Down sub-strategies. It combines the advantages of reversal and trend-following strategies, with broad application prospects in reality. Through parameter and model optimization, the effect of this strategy can be further improved to become an important tool for reversal traders.
 
-[/trans]
 
 > Strategy Arguments
 

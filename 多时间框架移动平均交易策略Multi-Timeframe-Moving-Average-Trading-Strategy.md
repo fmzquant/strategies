@@ -9,82 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略利用多时间框架移动平均线的交叉进行交易信号判断。策略可以在当前时间框架观察较长时间框架的移动平均线,以发掘更大的趋势方向。属于跨时间框架的趋势跟踪策略。
-
-## 策略原理
-
-该策略使用两个移动平均线,分别在当前周期和较高周期计算。
-
-例如在15分钟图上计算20日线和50日线:
-
-- 20日线根据当前15分钟K线计算
-- 50日线根据日线K线计算
-
-当15分钟20日线上穿日线50日线时,做多;当15分钟20日线下穿日线50日线时,做空。
-
-这样就实现了在当前周期观察较长周期趋势的效果。策略也允许自定义移动平均线的周期长度。
-
-交叉信号点还可以显示点状标记以提醒交易。
-
-## 策略优势
-
-- 跨时间框架分析,发现更大趋势
-- 高周期线条更稳定,避免过多假信号
-- 低周期线条更敏感,快速捕捉趋势变化
-- 可自行定义多组均线周期进行组合
-- 点状标记清晰可见的交易提示
-
-## 策略风险 
-
-- 多时间框架合成增加策略复杂度
-- 低周期线条判断假信号风险仍存在
-- 均线系统整体滞后,可能错过最佳入场点
-- 仅使用均线系统,过滤效果有限
-- 需优化周期参数组合,不同品种不一定相同
-
-可以通过以下措施降低风险:
-
--保留较长高周期均线,确保主趋势判断正确
-
--加入其他技术指标进一步过滤信号
-
--优化均线周期参数至优组合
-
--适当放宽入场条件,如加入K线形态
-
-## 优化方向
-
-该策略可以从以下几个方面进行改进:
-
-1. 测试更多均线周期组合,优化参数
-
-   不同周期组合对不同品种会有最佳匹配组合
-
-2. 在交叉时加入二次确认条件 
-
-   例如交叉时检查MACD指标走势
-
-3. 优化止损方式,避免过早止损
-
-   可以根据 PostForm123 的辅助证据来决定是否退出
-
-4. 对短周期和长周期分别过滤
-
-   短周期采用更严格的过滤条件,长周期采用更宽松的条件
-
-5. 考虑各时间段采用不同参数组合
-
-   不同时间段市场特性不一,可以做参数优化
-
-## 总结
-
-该策略通过观察多时间框架均线的交叉来判断趋势方向,以发现更大级别的趋势。这可以有效滤除短期噪音, Focus123123 更大的行情节奏。但也存在周期设置困难、趋势判断滞后等问题。我们可以通过严格的回测优化参数组合,并加入其他指标进行过滤confirmation123来改进123123123。同时,也需要实盘验证,根据市场反馈不断修正完善策略系统,使其更稳定可靠。只有坚持不断学习和优化,才能顺应市场的变化。
-
-|| 
 
 ## Overview
 
@@ -154,7 +78,6 @@ The strategy can be improved by:
 
 This strategy observes crossovers between MAs of multiple timeframes to determine trend direction and uncover larger trends. This filters out short-term noises and focuses on larger price moves. However, challenges like timeframe tuning and lagging signals exist. Enhancements can be made via rigorous backtesting and optimization for robust parameters, adding filters for confirmation, live validation for continuous improvements according to market feedback. Persistent learning and optimization is key to adaptivity.
 
-[/trans]
 
 > Strategy Arguments
 

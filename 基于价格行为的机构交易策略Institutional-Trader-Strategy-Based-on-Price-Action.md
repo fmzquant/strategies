@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/134c2b1a163d884534a.png)
-[trans]
-## 概述
-
-本策略名为“基于价格行为的机构交易策略”。它attempts to利用机构交易者的某些交易模式,特别是他们倾向于在特定“订单区块”附近下单的倾向。 该策略结合了公平价值、流动性和价格行为的元素,以确定进入和退出市场的时机。
-
-## 策略原理
-
-该策略的核心是识别“订单区块”- 即过去发生过大量机构交易活动的价格区域。 这些区域与显著的流动性相关。订单区块是使用价格结构确定的,通常与关键的技术价格水平相关。 
-
-公平价值被定义为基于移动平均线等指标的工具的“合理”价格。当当前价格远离公平价值时,这被视为市场失衡的信号。
-
-流动性也是一个关键因素,因为机构交易者倾向于在高流动性区域执行交易。
-
-该策略通过计算简单移动平均线来确定公平价值。然后它识别长度为20个周期的潜在订单区块。 如果关闭价格与公平价值之间的差距低于订单区块总高度的38.2%,则确定订单区块。
-
-多头订单区块被认为是买入信号。空头订单区块被视为卖出信号。
-
-## 优势分析
-
-该策略的主要优势是利用了机构交易者的交易模式,这可能使其超越基于更机械化指标的策略。通过关注订单流和价值区域,它结合了几种不同类型的分析。
-
-其他优势包括:
-
-- 利用流动性获取较优执行
-- 依赖易于可视化和理解的概念如订单流
-- 容易在图表上可视化订单区块
-- 有灵活性调整参数如区块长度
-
-## 风险分析
-
-该策略也面临一些潜在的风险,比如:
-
-- 依赖对过去价格行为的判断
-- 在没有订单流的市场中可能无法正常运行
-- 可能会产生虚假信号
-- 可能会错过短期趋势
-
-为了缓解这些风险,建议考虑:
-
-- 结合其他指标过滤虚假信号
-- 调整参数如区块长度
-- 对交易发出的信号进行过滤
-
-## 优化方向
-
-以下是本策略的一些潜在优化:
-
-1. 测试并优化关键参数值如区块长度和公平价偏差百分比。
-2. 添加其他指标和过滤器以提高质量
-3. 建立止损和获利获取机制
-4. 结合更多的数据源如订单簿活动
-5. 测试在不同期间(日内,多日等)和不同市场中的健壮性
-6. 添加机器学习预测来过滤信号
-
-## 总结
-
-总而言之,该策略提供了一种独特的方法来利用机构交易员的交易行为。它融合了多个要素,并具有一定的优势。但是像大多数交易策略一样,它也会面临市场发生变化和出现非预期价格行为时的风险。 通过持续的测试、优化和风险管理,该策略可以成为一个有价值的量化交易工具。
-
-||
 
 ## Overview
 
@@ -127,7 +68,6 @@ Here are some potential optimizations for the strategy:
 
 In summary, the strategy offers a unique approach to take advantage of institutional trader behavior. It blends multiple elements and has certain advantages. But like most trading strategies, it also faces risks when market conditions change or unexpected price behavior occurs. With continual testing, optimization, and risk management, the strategy can become a valuable quantitative trading tool.
 
-[/trans]
 
 > Strategy Arguments
 

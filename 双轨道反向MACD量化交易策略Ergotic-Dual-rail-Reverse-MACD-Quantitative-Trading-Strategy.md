@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1093f37488bfd69f2a2.png)
-[trans]
-
-### 概述
-该策略是一个双轨道反向MACD量化交易策略。它借鉴了William Blau在他的著作《Momentum, Direction and Divergence》中描述的技术指标,并在此基础上进行了扩展。该策略同时具有回测功能,可以加上警报、过滤器、跟踪止损等附加功能。
-
-### 策略原理
-该策略的核心指标是MACD。它计算快速移动平均线EMA(r)和慢速移动平均线EMA(slowMALen),然后计算它们的差值xmacd。另外计算xmacd的EMA(signalLength)得到xMA_MACD。当xmacd上穿xMA_MACD时做多,下穿时做空。该策略的关键在于反向交易信号,即xmacd和xMA_MACD的关系与常规MACD指标相反,这也是“反向MACD”这个名称的由来。
-
-此外,该策略还引入了趋势过滤器。在做多信号发出时,如果配置了看涨趋势过滤器,会检测价格是否在上涨;类似的,做空信号会检测价格下跌趋势。RSI指标和MFI指标也可用来过滤信号。配置止损机制,可以防止超过阈值的损失。
-
-### 优势分析
-该策略最大的优势在于回测功能强大。可以选择不同的交易品种,设置回测的时间范围,针对具体品种数据进行策略优化。相比简单的MACD策略,它增加了趋势、超买超卖的判断,可以过滤掉一些雷同信号。双轨道反向MACD与传统MACD不同,可以把握一些传统MACD可能遗漏的机会。
-
-### 风险分析
-该策略的风险主要源于反向交易的思路。反向信号虽然可以获取一些机会,但也意味着放弃了一些传统MACD买卖点,这需要谨慎评估。此外,MACD本身就容易产生多头虚假信号的问题。如果遇到震荡行情,该策略可能会产生过多交易,增加交易成本和滑点损失。
-
-为降低风险,可以适当调整参数,优化移动平均线的长度;结合趋势和指标过滤器,避免在震荡市产生信号;适当调高止损距离,保证个别交易亏损控制。
-
-### 优化方向
-该策略可以从以下几个方面进行优化:
-1. 调整快慢轨参数,优化移动平均线长度,对具体品种数据进行测试,找到最佳参数组合
-2. 增加或调整趋势过滤器,根据回测结果判断是否有提高策略收益率
-3. 测试不同的止损机制,是固定止损好还是跟踪止损好
-4. 尝试结合其他指标,如KD、布林带等,设定更多过滤条件,确保信号质量
-
-### 总结
-双轨道反向MACD量化策略借鉴了经典MACD指标的思想,在此基础上进行了扩展与改进。该策略同时具备灵活的参数配置、丰富的过滤机制选择,以及强大的回测功能等优点。这使其能够针对不同交易品种进行个性化优化,是一种值得探索的有潜力的量化交易策略。
-
-|| 
 
 ### Overview
 This strategy is a dual-rail reverse MACD quantitative trading strategy. It draws on the technical indicators described by William Blau in his book "Momentum, Direction and Divergence" and expands on them. The strategy also has backtesting capabilities and can incorporate additional features like alerts, filters, trailing stop loss, etc.  
@@ -66,7 +37,6 @@ The strategy can be improved in several aspects:
 ### Summary
 The dual-rail reverse MACD quantitative strategy builds upon the classic MACD indicator with extensions and improvements. With flexible parameter configurations, abundant filter choices, and powerful backtesting functionality, it can be tuned to suit different trading instruments. Hence it is an intriguing and promising quantitative trading strategy worthy of further exploration.
 
-[/trans]
 
 > Strategy Arguments
 

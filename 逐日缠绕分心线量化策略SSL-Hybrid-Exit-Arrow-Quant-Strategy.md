@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11d68ec62d6f09f2b8d.png)
-[trans]
-
-## 概述
-
-逐日缠绕分心线量化策略是一种基于均线和最大最小价指标的短线量化交易策略。它利用SSL混合指标的EXIT箭头来判断买卖点,配合QQE指标进行过滤,采用ATR指标计算止损位和分批加仓位。该策略适合对市场波动敏感且风险控制严格的投资者。
-
-## 策略原理
-
-该策略使用SSL混合指标的EXIT箭头判断买卖入场点。EXIT箭头上方为EXIT高点,下方为EXIT低点。当收盘价从EXIT高点向下穿过时产生卖出信号,当收盘价从EXIT低点向上穿过时产生买入信号。
-
-为了提高信号的可靠性,该策略引入QQE指标作为辅助过滤条件。EXIT箭头产生的信号只有在QQE指标同方向时才会执行。
-
-为控制风险,该策略使用倍数ATR指标计算止损位和分批加仓位。空头止损为收盘价+ATR×1.8,多头止损为收盘价-ATR×1.8。分三批加仓,每批加仓金额为初始金额的10%,加仓位分别为收盘价-ATR×0.1、收盘价-ATR×0.3和收盘价-ATR×0.7。 
-
-每批加仓设置了分别止损,首批金额20%的仓位在达到止损位时止损,其余仓位继续持有。
-
-## 策略优势
-
-1. 通过EXIT箭头获利,及时止损,有效控制风险
-2. QQE指标过滤,提高信号的准确性
-3. 利用ATR指标根据市场波动情况计算止损和加仓位,风控更加精准
-4. 分批加仓,充分把握趋势获利
-
-## 策略风险
-
-1. 盈利仓位达到部分止损可能使剩余仓位面临继续止损的风险。可以考虑整体止盈或股票本体基本面止盈。
-2. EXIT箭头和QQE指标对市场波动的敏感性不同,可能产生矛盾信号,应调整参数减少信号冲突。
-3. 加仓过于激进容易出现追高杀跌的情况。应审时度势,降低杠杆水平。
-
-## 优化方向
-
-1. 结合股票本体基本面指标进行止盈,例如对账面价值比、市盈率和股息率等设置合理的止盈位。
-2. 调整QQE指标的参数,使其与EXIT箭头产生的信号保持一致。
-3. 根据市场热度降低加仓比例,在震荡行情中减少加仓。
-4. 根据最大回撤、盈亏比等指标测试最佳参数组合。
-
-## 总结
-该策略以SSL混合指标的EXIT箭头为信号核心,利用QQE指标和ATR指标进行过滤和止损。通过分批加仓实现盈利放大。是一种短线量化策略,适合于追踪市场短期趋势的情况。该策略具有回撤控制和风险控制能力,但也需要注意防范信号冲突、追高杀跌等风险。如果能够结合股票基本面的止盈方法,在判断市场震荡和调整加仓比例时更为审慎,则该策略的盈利空间将更大。
-
-|| 
 
 ## Overview  
 
@@ -88,7 +48,6 @@ Each batch of add-on positions has its own stop loss. The first batch of 20% of 
 ## Summary
 This strategy uses the EXIT arrows of the SSL hybrid indicator as the signal core, with the QQE and ATR indicators as filters and for stop loss. Profit compounding is achieved through batched add-on positions. It is a short-term quantitative strategy suitable for tracking short-term market trends. The strategy has drawdown control and risk mitigation capabilities, but risks like signal conflicts and chasing tops/smashing bottoms should be noted. Incorporating fundamentals-based profit taking and being more prudent when determining oscillating markets and reducing add-on ratios can further expand this strategy’s profit potential.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c5c5d6b3fdbf512bd8.png)
-[trans]
-
-## 概述
-
-本策略融合多种技术指标,在玻尔班带指标发出价格反转信号时,结合RSI、ADX和ATR指标判断市场结构,寻找高概率的反转交易机会。
-
-## 策略原理
-
-1. 使用20周期的玻尔班带,价格到达上下轨时等待反转K线构成的买卖信号。 
-
-2. RSI指标判断市场是否处于震荡区间,RSI高于60为看涨范围,低于40为看跌范围。
-
-3. ADX低于20判断市场处于震荡,高于20判断市场趋势状态。
-
-4. ATR止损设置和追踪止损。
-
-5. 结合EMA均线过滤信号。
-
-## 策略优势分析
-
-1. 多种指标融合,形成高概率交易信号。
-
-2. 可配置参数,适应不同市场环境。
-
-3. 止损规则严密,有效控制风险。
-
-## 策略风险分析
-
-1. 参数设置不当可能导致过于频繁交易。
-
-2. 反转失败的概率仍然存在。
-
-3. 止损追踪在特定市场中可能失效。
-
-## 策略优化方向
-
-1. 测试更多指标的组合,寻找更适合参数配置。
-
-2. 在突破失败后及时识别继续反转的机会。
-
-3. 测试不同的止损方式,使止损更为智能化。
-
-## 总结
-
-本策略在玻尔班带作为基础交易信号的同时,多种辅助指标形成高概率过滤系统,止损规则也比较完备。通过参数调整和指标优化仍可进一步增强策略表现。整体来看,该策略形成了一套可靠的反转交易体系。
-
-||
 
 ## Overview
 
@@ -102,7 +55,6 @@ This strategy integrates multiple technical indicators. It looks for high probab
 
 This strategy uses Bollinger Bands for core trading signals, and multiple auxiliary indicators form a high-probability filtering system. The stop loss rules are also quite complete. Further performance improvement can be achieved through parameter tuning and indicator optimization. Overall, this strategy forms a reliable reversal trading system.
 
-[/trans]
 
 > Strategy Arguments
 

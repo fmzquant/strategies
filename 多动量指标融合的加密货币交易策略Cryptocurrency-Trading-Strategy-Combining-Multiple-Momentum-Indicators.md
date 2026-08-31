@@ -9,28 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略名称为“多动量指标融合的加密货币交易策略”。该策略通过整合MFI、RSI和Stoch RSI三个动量指标,判断加密货币的超买超卖形态,产生交易信号。
-
-MFI指标即资金流量指标。它综合考虑成交量和价格信息,判断市场买卖力道强弱。MFI低于20表示超卖,高于80表示超买。
-
-RSI指标即相对强弱指数。它描绘价格的超买超卖水平。RSI低于30表示超卖,高于70表示超买。 
-
-Stoch RSI指标是RSI指标的变体。它判断RSI指标本身是否超买超卖。参数设置为20-80代表超买超卖区。
-
-本策略的交易逻辑:
-
-当MFI、RSI和Stoch RSI三个指标同时低于超卖区域,视为多重超卖信号,做多;
-
-当三个指标同时高于超买区域,视为多重超买信号,做空。
-
-该策略的优势在于通过多指标确认,可以过滤假信号,提高入场的准确率。但参数设置需要充分优化,并配合止损来控制风险。
-
-总体而言,动量指标对加密货币价格的脉动较为敏感,多指标融合可以提升策略稳健性。但交易者仍需关注市场结构的变化,保持策略灵活调整的意识。靠单一策略难以完美应对市场的多变性。
-
-
-||
 
 This strategy is named “Cryptocurrency Trading Strategy Combining Multiple Momentum Indicators”. It integrates the MFI, RSI and Stoch RSI indicators to gauge overbought and oversold conditions in cryptocurrencies for trade signals.
 
@@ -51,7 +29,6 @@ The advantage of this strategy is the multiple indicator confirmation can filter
 In conclusion, momentum indicators are sensitive to cryptocurrency price fluctuations, and combining multiple ones can enhance strategy robustness. Still, traders should watch for market structure changes and maintain flexibility in strategy adjustment, as no single strategy can perfectly adapt to market variations.
 
 
-[/trans]
 
 > Strategy Arguments
 

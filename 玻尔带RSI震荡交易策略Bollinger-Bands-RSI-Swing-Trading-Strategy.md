@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-玻尔带RSI震荡交易策略是一种联合使用玻尔带指标和相对强弱指数(RSI)指标的短线震荡交易策略。该策略通过捕捉价格在玻尔带上下轨之间的震荡波动获得利润。
-
-## 原理
-
-首先,该策略使用玻尔带指标分析价格波动的上下限。当价格接近上轨时为超买,接近下轨时为超卖。
-
-其次,结合RSI指标判断超买超卖的强弱。RSI高于70为超买,低于30为超卖。
-
-当价格触碰玻尔带下轨,且RSI显示超卖时,做多;当价格触碰玻尔带上轨,且RSI显示超买时,做空。
-
-## 优势
-
-- 玻尔带指标能准确定位价格的波动范围。
-
-- RSI指标避免盲目做多做空。
-
-- 利用价位回归特性,获利概率较大。
-
-- 频繁交易,具有持续盈利能力。
-
-- 适用于不同品种和时间周期。
-
-## 风险
-
-- 玻尔带参数设置不当,无法定位关键价位。
-
-- RSI参数设置不合理,产生假信号。
-
-- 反弹力度不足,止损被触发。
-
-- 需承受较高交易频率所带来的滑点成本。
-
-- 波动市场中难以抓住趋势。
-
-## 应对方法  
-
-- 优化参数,使玻尔带贴近实际波动范围。
-
-- 调整RSI周期,确保能过滤噪音。
-
-- 移动止损追踪价格,减少套利损失。 
-
-- 选择交易量充足的品种,降低滑点影响。
-
-- 可辅助其他指标来确定趋势方向。
-
-## 总结
-
-玻尔带RSI震荡交易策略,能够有效捕捉价格在范围内的双向波动。通过参数调优和风险管理,可以获得稳定收益。这是一个值得推荐的短线量化交易策略。
-
-||
 
 
 ## Overview 
@@ -118,7 +63,6 @@ When price hits the lower band and RSI shows oversold, go long. When price hits 
 
 The BB RSI swing trading strategy effectively catches two-way price swings within ranges. With proper parameter tuning and risk management, it provides steady profits. This is a recommended short-term quant trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15eee6e8915e8d2c948.png)
 
-[trans]
-
-
-本策略通过动态选择不同类型的移动平均线,并结合多个时间周期,实现交易信号的产生。
-
-### 策略原理
-
-该策略允许选择 SMA、EMA、TEMA、WMA、HMA 五种移动平均线指标,并设置均线的周期长度。策略会根据选择动态绘制不同类型的均线。当收盘价上涨突破均线时,做多;当收盘价下跌突破均线时,做空。
-
-具体来说,策略首先根据输入参数定义回测周期。然后计算五种均线指标:
-
-- SMA 简单移动平均线
-- EMA 指数移动平均线  
-- TEMA 三指数移动平均线
-- WMA 加权移动平均线
-- HMA Hull移动平均线
-
-根据选择,绘制相应的均线。当收盘价高于均线时,做多;收盘价低于均线时,做空。
-
-该策略通过组合使用不同类型的均线,可以平滑价格数据,过滤市场噪音,产生较为可靠的交易信号。而允许自定义均线周期长度,可以针对不同周期的趋势进行交易。
-
-### 策略优势
-
-- 组合使用多种均线指标,可靠性较高
-- 可自定义均线周期,适用于不同周期操作
-- 动态切换均线类型,优化参数灵活
-- 简单直观的趋势跟踪策略,容易实现
-
-### 策略风险
-
-- 均线产生滞后,可能错过趋势转折点
-- 固定参数容易过拟合,实盘效果可能弱于回测
-- 多头阶段积极做多,空头阶段积极做空,容易影响资金使用效率
-
-可以通过优化以下方面来降低风险:
-
-- 结合其他指标判断趋势,确定更准确的入场时机
-- 实盘优化参数,调整均线周期适应不同市场环境
-- 优化仓位管理,根据资金规模和风险控制适当调整仓位
-
-### 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加其他指标过滤,形成更稳定的交易信号
-
-   例如可以加入量能指标,只有在成交量放大的情况下才产生交易信号,过滤掉一些假突破。
-
-2. 优化出入场逻辑
-
-   可以设置通道,只有在价格突破通道时才入场;设置止损线,价格触碰止损线后平仓。这可以减少不必要的损失。
-
-3. 动态调整均线周期
-
-   可以根据市场状况动态调整均线周期,在趋势更明显时使用长周期均线,在盘整时使用短周期均线。
-
-4. 优化资金管理策略
-
-   可以根据回撤情况调整仓位大小,在回撤时减小仓位,在盈利时适度加大仓位。
-
-### 总结
-
-该策略通过组合应用多种均线指标,结合多个时间周期,形成较为稳定的趋势跟踪效果。策略优化空间较大,可以从入场过滤、出场方式、参数优化等方面进行改进,使策略在实盘中获得更好的效果。
-
-||
 
 This strategy dynamically selects different types of moving averages across multiple timeframes to generate trading signals. 
 
@@ -138,7 +73,6 @@ The strategy can be improved in several aspects:
 
 The strategy combines various moving averages across timeframes to generate relatively stable trend following effects. With ample room for optimizations in entries, exits, parameters and money management, it can be improved for better real-world performance.
 
-[/trans]
 
 > Strategy Arguments
 

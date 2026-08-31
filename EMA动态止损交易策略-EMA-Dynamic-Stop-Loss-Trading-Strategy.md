@@ -10,36 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1427fdee89e710dfa9b.png)
-[trans]
-#### 概述
-该策略基于20日和200日指数移动平均线(EMA)的交叉信号,并结合相对强弱指标(RSI)和移动平均线收敛发散指标(MACD)进行确认,以产生买入和卖出信号。同时,该策略采用动态止损和固定目标收益的方法来管理交易风险和锁定利润。
-
-#### 策略原理
-1. 计算20日和200日EMA,当20日EMA上穿200日EMA时,产生买入信号;当20日EMA下穿200日EMA时,产生卖出信号。
-2. 使用RSI和MACD对EMA交叉信号进行确认,只有当RSI高于50且MACD线高于信号线时,才执行买入;只有当RSI低于50且MACD线低于信号线时,才执行卖出。
-3. 设置固定的目标收益率(如20%)和初始止损率(如10%)。
-4. 当持仓盈利达到目标收益率时,将止损价格提高到当前价格的10%以下,实现动态止损。
-5. 当价格触及动态止损价格时,平仓获利了结。
-
-#### 策略优势
-1. 结合多个技术指标确认交易信号,提高了信号的可靠性。
-2. 采用动态止损方法,在锁定利润的同时,给予价格一定的回撤空间,避免过早平仓。
-3. 设置固定的目标收益率,有助于控制风险和实现稳定的收益。
-
-#### 策略风险
-1. EMA交叉信号可能出现频繁的虚假信号,导致交易成本增加。
-2. 在震荡市场中,该策略可能会出现连续亏损的情况。
-3. 固定的目标收益率和止损率可能无法适应不同的市场状况,需要根据市场波动性进行调整。
-
-#### 策略优化方向
-1. 引入更多的技术指标或市场情绪指标,以提高信号的准确性和可靠性。
-2. 采用自适应的目标收益率和止损率,根据市场波动性和资产特性进行动态调整。
-3. 结合市场趋势和波动周期,在不同的市场环境下采用不同的参数设置。
-
-#### 总结
-该策略通过EMA交叉信号结合RSI和MACD确认,以及动态止损和固定目标收益的风险管理方法,在趋势性市场中有望实现稳定的盈利。但在震荡市场中,该策略可能面临频繁交易和连续亏损的风险。因此,需要进一步优化和改进,以提高策略的适应性和稳健性。
-
-|| 
 
 #### Overview
 This strategy generates buy and sell signals based on the crossover of the 20-day and 200-day Exponential Moving Averages (EMAs), confirmed by the Relative Strength Index (RSI) and Moving Average Convergence Divergence (MACD) indicators. The strategy employs dynamic stop-loss and fixed profit target methods to manage trading risks and lock in profits.
@@ -68,7 +38,6 @@ This strategy generates buy and sell signals based on the crossover of the 20-da
 
 #### Summary
 By combining EMA crossover signals with RSI and MACD confirmation, along with dynamic stop-loss and fixed profit target risk management methods, this strategy aims to achieve stable profits in trending markets. However, in choppy markets, the strategy may face risks of frequent trading and consecutive losses. Therefore, further optimization and improvements are needed to enhance the strategy's adaptability and robustness.
-[/trans]
 
 
 

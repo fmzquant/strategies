@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14fb3c5f93cca937174.png)
-[trans]
-### 概述
-
-本策略通过组合使用移动平均线、成交量指标以及价格动量指标,设计出一套量化规则,用以识别股票进入积累阶段的时机。在该阶段,股票通常处于价格的盘整和蓄势状态,提供了较低价格进场的良好机会。
-
-### 策略原理  
-
-策略使用50日、90日和200日简单移动平均线来判断价格趋势。只有当价格高于200日线时,才产生买入信号。这可以过滤掉大趋势下跌的不确定性。
-
-除了判断大趋势,策略还会判断短期均线顺序来确认趋势。具体来说,是判断50日线高于90日线。
-
-在移动平均线确认大趋势和短期趋势符合条件的基础上,策略会结合成交量指标PVT和MACD指标来判断积累特征。只有当PVT向上突破、MACD线高于Signal线和成交量放大,才会产生买入信号。
-
-### 策略优势  
-
-相比单一使用移动平均线,本策略在确认趋势的同时,还检查了成交量的特点。这可以更加准确判断股票进入积累阶段的时机,从而确保进场的价格优势。
-
-通过多时间框架分析,本策略结合了中长期趋势判断和短期特征判断,时间框架匹配,可以减少因单一时间框架判断错误所带来的不确定性。
-
-### 风险与解决  
-
-本策略主要依赖均线判断,当价格出现剧烈波动时,均线判断会失效。这时应降低仓位规模,或直接止损退出。 
-
-另外,积累阶段判断也可能出错,从而错过反转机会。这需要通过观察更多特征指标来确认判断。
-
-### 优化思路  
-
-本策略可以引入机器学习算法,通过特征提取和模型训练,实现对积累阶段的自动判断。这可以减少因人工设置阈值而带来的局限性。
-
-另外,本策略也可以尝试 breakpoint 功能,在不同市场环境下,自动切换不同参数,使策略更具鲁棒性。
-
-### 总结  
-
-本策略总体采用价格与成交量匹配的思路判断股票积累特征。在确认大方向的同时,挖掘短期积累机会。 通过参数优化与机器学习等手段的引入,策略效果还有进一步提升的空间。
-
-|| 
 
 ### Overview
 
@@ -81,7 +45,6 @@ In addition, this strategy can also try the breakpoint functionality to automati
 
 In summary, this strategy generally adopts the idea of matching prices and volumes to judge the characteristics of stock accumulation stages. While confirming the major direction, it digs short-term accumulation opportunities. There is still room for further improvement in strategy performance by introducing parameter optimization and machine learning.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/117825ac55ae3bcae6d.png)
-[trans]
-
-
-## 概述
-
-本策略结合了动态支撑/阻力位和相对强弱指标RSI,设定RSI超买超卖范围,在突破动态支撑/阻力位时判断RSI是否进入超买超卖区域,从而产生买入和卖出信号。
-
-## 原理
-
-**1. 动态支撑/阻力位**
-
-使用security函数获取收盘价作为动态支撑/阻力位,当价格突破此动态位时产生交易信号。
-
-**2. RSI指标**
-
-计算一定周期内的平均涨幅和平均跌幅,通过比较两者生成RSI值,判断是否进入超买超卖区域。
-
-**3. 交易信号**
-
-价格突破动态位时,如果RSI未进入超买超卖区域,产生买入/卖出信号。如果已进入,则忽略突破产生的信号。
-
-**4. 退出信号** 
-
-价格回落到动态位时平仓,或RSI回到正常区域时平仓。
-
-## 优势分析
-
-1. 利用动态支撑/阻力位判断趋势方向,提高获利概率。
-
-2. RSI指标过滤假突破,避免乱入。
-
-3. 结合趋势和指标,适用于不同行情。
-
-4. 规则清晰易于实施。
-
-## 风险及解决方案
-
-1. 动态位可能出现多次测试突破,造成错误信号,可适当放宽突破幅度过滤。
-
-2. 单一RSI指标可能产生误判,可引入其他指标进行组合过滤。 
-
-3. 震荡行情中可能出现频繁开仓平仓,交易成本较高,可适当放宽RSI正常值范围,减少交易频率。
-
-4. 参数设置不当可能导致漏单或乱单,应根据不同品种合理选择参数。
-
-## 优化方向
-
-1. 利用机器学习技术自动优化RSI参数。
-
-2. 增加止损止盈策略,以锁定利润和减少亏损。
-
-3. 结合更多指标进行组合过滤,提高策略稳定性。 
-
-4. 增加波动率指标,在低波动时降低仓位。
-
-5. 优化仓位数算法,使仓位动态调整,适应不同市场环境。
-
-## 总结
-
-本策略结合趋势判断和指标过滤,能有效识别价格在关键水平附近的破坏,在控制风险的前提下获取较高盈利。通过进一步优化参数设置、增加止损止盈、引入更多指标等,可将策略的稳定性和适应性进一步提升,使其能够在更广泛的市场中获得稳定收益。
-
-||
 
 
 ## Overview
@@ -132,7 +70,6 @@ Close positions when price falls back to the dynamic level, or when RSI returns 
 
 This strategy combines trend judgment and indicator filtering to effectively identify trend reversal around key levels while controlling risks. Further optimizations on parameter tuning, stop loss/profit taking, more indicators etc. can improve its stability and adaptability to generate steady profits in a wider range of markets.
 
-[/trans]
 
 > Strategy Arguments
 

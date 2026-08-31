@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9e67e055c2a9d7350f.png)
-[trans]
-
-
-## 概述
-
-本策略的核心思想是利用价格的波动率来判断市场的趋势,当波动率上升时,表示市场正在形成新的趋势;当波动率下降时,表示当前趋势正在结束。策略通过计算价格的百分比变化,然后对其进行双均线滤波,得到反映价格波动率的指标。当该指标上穿其信号线时产生买入信号,下穿其信号线时产生卖出信号。
-
-## 策略原理  
-
-该策略首先计算价格的百分比变化:
-
-```
-i=(src/nz(src[1], src))*100
-```
-
-然后通过一个长度为35的均线滤波,得到初级的价格波动率指标pmol2。再通过一个长度为20的均线对pmol2进行二次滤波,得到最终的价格波动率指标pmol。最后,通过一个长度为10的均线得到pmol的信号线pmols。 当pmol上穿pmols时,产生买入信号;当pmol下穿pmols时,产生卖出信号。
-
-## 优势分析
-
-- 利用双均线滤波,可较好地提取价格波动率,过滤噪音。
-- 计算价格的百分比变化,可放大价格变化,更清晰地反映趋势变化。  
-- 获利方式比较明确:趋势开始买入,趋势结束卖出。
-
-## 风险分析
-
-- 双均线滤波会带来一定程度的滞后。
-- 百分比变化计算方式对价格幅度较敏感。
-- 牛熊转换时,须及时平仓。
-
-优化方向:
-
-- 优化均线参数,提高对趋势的捕捉。
-- 尝试不同的价格变化计算方式。
-- 增加过滤条件,避免错误信号。
-
-## 总结  
-
-本策略通过计算百分比变化和双均线滤波的方式,提取价格波动率,判断市场趋势变化,属于较为成熟的技术指标类策略。该策略捕捉趋势的能力较强,但识别转换点能力一般。可通过调整参数和增加辅助条件来优化。
-
-||
 
 
 ## Overview
@@ -88,7 +48,6 @@ Then it filters i with a 35-period moving average to get the preliminary volatil
 
 This strategy uses percentage change and double MA filtering to extract price volatility and judge trend changes. It belongs to the relatively mature technical indicator strategies. The strategy has good trend catching capability but medium turning point recognition capability. Can optimize via parameter tuning and adding auxiliary conditions.
 
-[/trans]
 
 > Strategy Arguments
 

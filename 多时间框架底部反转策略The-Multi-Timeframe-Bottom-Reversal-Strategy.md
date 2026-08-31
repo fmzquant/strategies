@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/139264014e0014496eb.png)
 
-[trans]
-
-## 概述
-
-该策略利用多个底部形态指标的组合来识别大幅反转的时机,采取趋势追踪止损策略,目标获利超过止损。
-
-## 原理
-
-该策略主要基于以下几个指标判断底部反转:
-
-1. 底部敏感度指标(Noro's BottomSensivity):判断K线是否出现特定底部形态。
-
-2. 确定性意愿指数(CVI):判断多空心理面临转变。 
-
-3. 终极指标(UCS):判断超跌脱离均线的情况。
-
-4. 收益率指标(RSI):判断超卖情况。
-
-5. 形态组合:包括烛形、图钉等多种底部形态。
-
-该策略将多个底部指标组合使用,当满足策略参数设置的底部形态数量时,产生买入信号。为过滤假突破,策略还加入RSI指标判断,只有在超卖时才会触发买入。
-
-用户可以自定义配置各个底部判断指标的使用与参数,实现了高度的灵活性。同时,策略加入SMA均线过滤,避免在趋势下方做多。
-
-## 优势
-
-- 利用多个指标判断,提高確定性
-
-- 可自定义指标参数,适应不同品种
-
-- SMA均线过滤,避免追顶
-
-- 可配置仅红K线入场,降低风险
-
-- 可启用弹窗报警,实时监控
-
-## 风险
-
-- 多指标组合判断可能错过底部
-
-- 底部形态不一定持续反转
-
-- 需要关注交易量能否支撑反转
-
-## 优化方向 
-
-- 优化指标参数配置,调整适应不同品种
-
-- 增加仓位管理,通过加仓降低成本价
-
-- 增加止损策略,跟踪趋势止损
-
-## 总结
-
-该策略充分利用多指标判断提高底部识别准确性,通过趋势跟踪止损锁定盈利,可有效控制风险。但仍需关注交易量能否支撑起反转趋势。用户可以根据品种特点优化参数,以适应不同市场环境。
-
-|| 
 
 ## Overview
 
@@ -123,7 +66,6 @@ Users can customize the usage and parameters of each bottom indicator, providing
 
 The strategy effectively identifies bottoms with multiple indicators, controlling risk with trend following stop loss. But volume support needs monitoring. Users can optimize parameters per product characteristics.
 
-[/trans]
 
 > Strategy Arguments
 

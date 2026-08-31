@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e6257e2ca494904b99.png)
-[trans]
-
-## 概述
-
-该策略是基于价格通道原理设计的趋势跟踪策略。它通过计算一定历史周期内的最高价和最低价,形成价格通道,并以通道边界作为买入和卖出信号,实现追踪价格趋势的目的。
-
-## 策略原理  
-
-价格通道策略的核心思想是:股价在上涨趋势时会突破历史高点,而在下跌趋势时会突破历史低点。因此,可以根据一定历史周期(如21天)内的最高价和最低价构建价格通道,通道上沿和下沿分别作为买入和卖出信号。
-
-具体来说,该策略通过highest()和lowest()函数计算最近21天的最高价和最低价,形成价格通道。如果当天收盘价高于最近21天最高价(即突破通道上沿),则产生买入信号;如果当天收盘价低于最近21天最低价(即突破通道下沿),则产生卖出信号。
-
-此外,该策略还检查是否有缺口,以判断趋势突变的可能性。如果有向下缺口,为防范风险,会设置价格通道为红色;如果有向上缺口,则设置为绿色。
-
-## 优势分析
-
-价格通道策略的主要优势有:
-
-1. 策略思路简单、易于理解和实现
-2. 能有效识别股票价格趋势,及时追踪趋势
-3. 通过突破买入和突破卖出,可以减少交易次数,降低交易成本
-4. 设置价格通道可以起到止损的作用  
-5. 检查缺口情况,可提示趋势转变
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 仅基于价格信息,忽略了其他基本面、技术指标等信息
-2. 价格通道参数设置不当可能导致过于激进或保守
-3. 突破买入可能出现回调导致止损
-4. 未考虑股价波动率和流动性的影响 
-5. 行业、个股特点的差异性没有考虑进去
-
-为了克服这些风险,可以考虑优化如下几个方面:
-
-1. 结合关键技术指标判断,避免错误信号
-2. 加入自适应通道参数算法  
-3. 结合均线系统,判断趋势持续性
-4. 设置通道宽度因子校正不同波动率
-5. 区分行业和概念来设定参数
-
-## 优化方向  
-
-该策略还有以下几个主要的优化方向:
-
-1. 优化价格通道的参数计算方法,如引入自适应通道、波动率通道等
-2. 结合其他技术指标判断买入/卖出时机,提高策略效果
-3. 加入止损和止盈策略,控制风险和锁定利润
-4. 区分行业和个股特点,设定动态参数
-5. 结合基本面信息和事件驱动因素提升策略
-6. 应用机器学习算法实现参数自适应和状况判断
-
-## 总结
-
-价格通道策略通过简单的历史最高价和最低价构建通道,以通道边界作为交易信号,属于典型的趋势跟踪策略。该策略易于理解和实现,能够有效跟踪价格趋势,且设定价格通道具有止损功能。但该策略也存在一定的风险,主要优化方向包括参数优化、与其他指标结合、止损/止盈、动态参数等。总体而言,价格通道策略为量化交易提供了一个简单实用的趋势跟踪思路,但需要进一步优化和改进才能在实际应用中取得更好效果。
-
-|| 
 
 ## Overview
 
@@ -124,7 +66,6 @@ The main directions to optimize this strategy include:
 
 The price channel strategy builds a simple channel using historical peaks and troughs and uses the channel boundaries as trading signals. It is a typical trend following strategy that is easy to understand and implement and can effectively track price trends, with the price channel serving as a stop loss mechanism. However there are also risks with this strategy. The main optimization dimensions include parameter tuning, combining other indicators, implementing stop loss/profit taking, dynamic parameterization, etc. Overall, the price channel strategy provides a simple and practical trend following framework for quantitative trading, but needs further enhancements and optimizations to achieve better performance in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

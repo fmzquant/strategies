@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1addd7806136f18c9a8.png)
-[trans]
-
-### 概述
-
-该策略的主要思想是通过绘制未来价格延伸线,并结合当前价格与该线的关系,判断未来价格的方向。当价格高于或低于延伸线时,可以相应做多或做空。
-
-### 策略原理  
-
-未来价格延伸线(Future Lines of Demarcation,FLD)代表着未来特定周期内的中位价、最高价或最低价。该策略运用FLD判断价格未来走势,其原理是:
-
-1. 根据周期长度,计算出FLD的位移周期Period,即Price的未来价格。
-2. 比较当前Close价格与FLD位移周期后的价格。
-    - 当Close价格低于FLD未来价格,判断为看涨信号。
-    - 当Close价格高于FLD未来价格,判断为看跌信号。
-3. 根据看涨和看跌信号,进行相应的做多做空操作。
-
-### 优势分析
-
-该策略主要优势有:
-
-1. 使用FLD判定未来价格走势,准确率较高。
-2. 可自定义周期参数,适用于不同市场环境。
-3. 可选择中位价、最高价或最低价作为FLD绘制源,适应性强。
-
-### 风险分析  
-
-该策略主要风险有:
-
-1. FLD本身可能失效,导致错失机会或错误信号。可以结合其他指标判断。
-2. 周期参数设置不当,可能导致过多错误信号。需要优化周期长度。
-3. 突发事件导致价格急剧波动,FLD预测失效。可以设置止损来控制风险。
-
-### 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 结合其他指标过滤信号,提高策略准确率。比如MACD,KDJ等。  
-2. 优化周期参数,找到最佳参数组合。
-3. 增加止损止盈机制,控制单笔亏损和盈利。
-4. 根据回测结果,调整做多做空规则,减少错误信号。
-
-### 总结  
-
-该策略通过比较价格与位移后的未来价格延伸线,判断价格未来走势方向,属于典型的趋势跟踪策略。总体来说逻辑清晰易懂,实施风险较小。通过参数优化和指标组合,可以获得较好的策略效果。
-
-||
 
 ### Overview
 
@@ -100,7 +54,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy judges future price trend by comparing price with displaced future price extension line. It's a typical trend following strategy. The logic is clear and easy to understand, with relatively small implementation risk. By parameter optimization and indicator combination, good strategy results can be obtained.  
 
-[/trans]
 
 > Strategy Arguments
 

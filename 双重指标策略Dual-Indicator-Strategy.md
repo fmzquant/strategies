@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b17f082103cb48450a.png)
 
-[trans]
-
-### 概述
-
-双重指标策略(Dual Indicator Strategy)是一个同时结合简单移动平均线(SMA)和移动平均收敛散发指标(MACD)的量化交易策略。该策略运用多种技术指标确认交易信号,旨在提高交易决策的准确性。
-
-### 策略原理
-
-双重指标策略主要基于两个技术指标:SMA和MACD。策略采用7根、15根和60根K线的SMA,以及标准12/26/9参数设置的MACD。
-
-当7根SMA高于15根和60根SMA,15根SMA也高于60根SMA时,视为SMA指标给出的看涨信号,概率为0.5。
-
-同时,当MACD指标的MACD线上穿信号线时,也视为MACD指标给出的看涨信号,概率为0.5。
-
-当两个指标的看涨信号概率相加达到1时,就进行买入开仓。
-
-相反,当7根SMA低于15根和60根SMA,15根SMA也低于60根SMA时,视为SMA指标给出的看跌信号,概率为0.5。
-
-同时,当MACD指标的MACD线下穿信号线时,也视为MACD指标给出的看跌信号,概率为0.5。
-
-当两个指标的看跌信号概率相加达到1时,就进行卖出开仓。
-
-此外,策略采用两个不同的止盈点:价格上涨或下跌9%时,平仓50%的头寸;价格上涨或下跌21%时,平仓剩余所有头寸。
-
-如果产生与当前持仓方向相反的信号,会先平掉之前的持仓,再按照新的信号开仓。
-
-### 优势分析
-
-双重指标策略最大的优势在于可以同时利用SMA和MACD两个指标的优点。SMA可以有效跟踪价格趋势变化,过滤市场噪音;而MACD可以发现短期的趋势反转时机。两者结合可以提高交易信号的可靠性。
-
-此外,采用不同参数设置的多组SMA有助于辨识中长期趋势;而止盈策略可以锁定部分利润,控制风险。
-
-### 风险分析
-
-双重指标策略也存在一些潜在风险需要注意。由于仅依赖技术指标,可能出现指标发出错误信号的情况。此外,止盈设置不当也可能导致过早离场,错过大涨大跌。
-
-可以通过调整SMA周期参数或者增加其他滤波指标来优化策略,确保交易信号更可靠。同时,止盈水平也需要根据市场波动程度进行动态调整,保证可以持续捕获趋势行情。
-
-### 优化方向
-
-双重指标策略还有一些可优化的空间:
-
-1. 测试添加其他技术指标,如RSI、布林带等,形成多重指标过滤;
-
-2. 尝试机器学习算法,利用多变量建立交易信号判断模型;
-
-3. 根据不同品种、周期参数进行策略调优;
-
-4. 增加止损策略,严格控制单笔损失;
-
-5. 优化止盈策略,在趋势中持续获利。
-
-通过系统的回测和优化,可以不断提升策略的稳定性和盈利能力。
-
-### 总结
-
-双重指标策略综合运用SMA和MACD两个指标的优势,在提高信号准确性的同时,有效控制交易风险。该策略有良好的优化空间和扩展性,是一种可靠、适应性强的量化交易策略。通过持续的数据驱动和策略调优,该策略可以逐步发展成一个强大的量化交易系统。
-
-||
 
 ### Overview
 
@@ -127,7 +68,6 @@ Through systematic backtesting and optimization, the strategy's stability and pr
 
 The Dual Indicator Strategy combines the strengths of SMA and MACD to improve signal accuracy while effectively controlling risks. With strong optimization potential and versatility, it is a robust and adaptive quantitative trading strategy. With continuous data-driven improvements, the strategy can evolve into a powerful trading system.
 
-[/trans]
 
 > Strategy Arguments
 

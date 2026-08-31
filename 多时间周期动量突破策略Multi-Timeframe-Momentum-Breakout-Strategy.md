@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1d7d957e62ba9093ed6.png)
 
-[trans]
-
-## 概述
-
-本策略通过结合多种技术指标如 RSI,ADX,ATR 以及动量指标,实现对趋势的判断和突破点的捕获。策略同时结合 Fibonacci 回撤线和均线,进一步提高对关键点位和趋势的判断准确性。
-
-## 策略原理
-
-1. 通过 RSI,ADX,DI+,DI- 等指标判断趋势方向和强度。RSI 可以反映超买超卖情况,ADX 反映趋势强度,DI+/DI- 判断多头和空头趋势。这些指标值显示在右上角的表格中,方便判断。
-
-2. 结合均线判断趋势方向。采用 5 日和 9 日 EMA 判断短期趋势,21日 WMA 判断中期趋势,60日 WMA 判断长期趋势。当短期上穿中长期均线时为多头信号。
-
-3. 利用 Fibonacci 回撤线寻找 0.5,0.618 等关键支撑位。这些点位往往是潜在的反转点。
-
-4. 基于 ATR 和停损比例设置止损价位,以控制风险。基于 ATR 和止盈比例设置止盈价位,以锁定利润。
-
-5. 当出现 RSI 超买超卖信号时,考虑反转进入。当短期均线上穿(下穿)中长期均线且交易量放大时考虑追踪趋势进入。进入信号后设置止损和止盈。
-
-## 优势分析
-
-1. 综合运用多种指标判断趋势方向和强度,提高决策的准确性。
-
-2. 基于ATR设置止损止盈机制,有效控制风险。
-
-3. 结合Fibonacci关键点位,提高反转点判断的准确性。
-
-4. 交易量放大作为追踪趋势的辅助条件,避免假突破。
-
-5. 表格直观显示多项指标当前值,便于快速判断和决策。
-
-## 风险分析
-
-1. 指标发出错误信号的概率无法完全避免,会导致错误操作的风险。可以通过调整参数优化指标的参数。
-
-2. ATR 和止损比例设置会影响实际止损点位。该比例设置过大过小都会带来一定风险,需要权衡设置。
-
-3. 交易量放大作为Entry条件也无法完全避免假突破的出现,需要结合价格行情细节判断。
-
-4. Fibonacci 点位也并非百分之百可靠,价格可能会直接透过该点位突破。
-
-## 优化方向  
-
-1. 对RSI, ADX, ATR等参数进行测试和优化,找到最佳参数组合。
-
-2. 测试不同的均线组合,判断哪些均线组合判断趋势效果最好。
-
-3. 测试不同的止损止盈比例参数,找到风险收益最优的参数。
-
-4. 可以考虑加入BollingerBands指标判断交易量放大的效果。
-
-## 总结
-
-本策略综合运用了趋势判断,关键点位判断,交易量分析等多种技术手段。通过参数优化,进一步提升判断准确性和收益性。止损止盈设置控制了风险,最大化收益。该策略对判断中长线趋势和捕捉短期反转效果较好。通过不断优化测试可以使策略更加稳定和可靠。
-
-||
 
 ## Overview
 
@@ -119,7 +64,6 @@ This strategy combines multiple technical indicators like RSI, ADX, ATR and mome
 
 This strategy combines trend analysis, key level identification, volume analysis and more. Further parameter optimization can improve accuracy and profitability. Stop loss & take profit manages risk and maximizes reward. It is effective in gauging medium-long term trends and capturing short-term reversals. Continued optimizations can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

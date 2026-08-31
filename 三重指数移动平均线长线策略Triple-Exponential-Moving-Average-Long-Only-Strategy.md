@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/956037267034eed70d.png)
-[trans]
-
-
-## 概述
-
-三重指数移动平均线长线策略(Triple Exponential Moving Average Long Only Strategy)是一个基于三重指数移动平均线作为交易信号的长线策略。该策略通过计算三条不同周期的EMA,并叠加转换为TEMA指标,以滤除短期市场噪音,识别中长线趋势方向。当价格上穿TEMA时做多,下穿TEMA时平仓。该策略适合对中长线趋势交易感兴趣的投资者。
-
-## 策略原理
-
-该策略通过TEMA技术指标识别中长线趋势。TEMA指标是对EMA指数移动平均线进行三重平滑之后得到的趋势指标。EMA指标本身对价格起到一定滤波作用。TEMA通过计算三条不同周期的EMA指数移动平均线,并进行叠加转换,可进一步滤除短期噪音,突显更大周期的趋势。
-
-具体来说,该策略首先计算fastEmaPeriod周期的EMA指标ema1,然后再基于ema1计算出同周期ema2,最后基于ema2计算出ema3。最终的TEMA指标按照:TEMA = 3 * (ema1 - ema2) + ema3的公式进行计算。当价格上穿TEMA时,做多;当价格下穿TEMA时,平仓。
-
-通过多重指数平滑,TEMA指标可有效识别曲折反复的中长线趋势方向,滤除短期噪音对交易的干扰,因此非常适合作为空头的长线交易策略。
-
-## 策略优势分析
-
-- 使用TEMA指标可有效识别中长线趋势,滤除短期噪音干扰,避免被套。
-
-- 仅做多不做空,可规避空头带来的无限亏损风险。
-
-- 采用百分比仓位管理,可根据账户资金灵活调整仓位规模,控制风险。
-
-- 时间窗口设置可实现回测指定历史时间段,优化策略参数。
-
-## 策略风险分析
-
-- 长线持仓时,遇到重大黑天鹅事件导致快速调头可能造成较大亏损。
-
-- TEMA指标在趋势转折点失败时,可能错过及时止损机会。
-
-- 百分比仓位无法限制单笔亏损大小,需辅以止损来控制风险。
-
-- 回测存在过拟合风险,参数优化不一定适用于未来市场。
-
-## 策略优化方向
-
-- 结合波动率指标优化参数,提高参数的稳健性。
-
-- 增加止损策略,以控制单笔亏损。
-
-- 优化仓位管理,在回撤时降低仓位。
-
-- 加入跨时间周期的 Tendency 指标,提升趋势判断的准确性。
-
-- 测试不同持仓周期参数,寻找最优持仓周期。
-
-## 总结
-
-综上所述,该三重指数移动平均线长线策略通过计算TEMA指标识别趋势方向,采用长线持仓避免被短期噪音干扰,仅做多不做空规避无限亏损风险,可有效捕捉中长线趋势进行长周期持仓。但该策略也存在一定风险,需要适当优化以提高稳健性。整体来说,该策略适合具有一定风险承受能力并倾向趋势交易的投资者。
-
-||
 
 
 ## Overview
@@ -112,7 +60,6 @@ Through multiple exponential smoothing, TEMA can effectively identify mid-to-lon
 
 In summary, the Triple EMA Long Only Strategy identifies trend directions via the TEMA indicator, holds long-term positions to avoid short-term noise, stays only long to avoid unlimited downside, and effectively catches mid-to-long term trends. However, risks exist requiring optimizations to improve robustness. Overall it suits investors with some risk tolerance favoring trend trading.
 
-[/trans]
 
 > Strategy Arguments
 

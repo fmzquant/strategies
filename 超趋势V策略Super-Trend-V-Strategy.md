@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/cd1a3cb17ec47bc28b.png)
 
-[trans]
-
-## 概述
-
-超趋势V策略是一种基于移动平均线和标准差的短线交易策略。它利用Super Trend指标判断价格的趋势方向,结合移动平均线形成的支撑和阻力进行入场。同时,它利用标准差通道预测价格潜在的支撑和阻力区域,设定止损止盈的价格区间,实现趋势跟随和高效退出的短线交易策略。
-
-## 策略原理
-
-该策略首先计算Super Trend指标,Super Trend指标利用ATR和价格的关系判断趋势的方向。当价格高于上升趋势时为看涨,当价格低于下跌趋势时为看跌。
-
-然后计算出价格的移动平均线EMA和开盘价的移动平均线EMA,当价格上穿移动平均线且高于开盘价均线时为买入信号,当价格下穿移动平均线且低于开盘价均线时为卖出信号。
-
-接着利用标准差计算出价格通道的上下轨,并作平滑处理,价格突破标准差上轨时为止损信号,价格突破标准差下轨时为止盈信号。
-
-最后,结合不同时间周期的移动平均线来判断趋势方向,与Super Trend指标结合,形成稳定的趋势判断。
-
-## 策略优势
-
-- 利用Super Trend指标判断价格趋势方向,避免趋势反转造成损失
-- 移动平均线结合开盘价辅助判断入场时机,避免假突破
-- 标准差通道预测价格潜在支撑和阻力区域,设置止损止盈价格
-- 多时间周期结合判断趋势方向,提高稳定性
-
-## 策略风险
-
-- Super Trend指标存在滞后,可能漏掉趋势转换点
-- 移动平均线产生交叉信号存在滞后,入场时机不准
-- 标准差通道范围过于固定,不能实时反映市场波动
-- 多个时间周期判断可能产生互相冲突
-
-风险解决方法:
-
-- 适当缩短Super Trend参数,提高敏感性
-- 优化移动平均线周期,或加入其他指标判断入场
-- 动态调整标准差通道参数,使范围能配合市场
-- 确定清楚多周期判断逻辑,处理可能的冲突
-
-## 策略优化方向 
-
-- 优化Super Trend参数,寻找最佳参数组合
-- 尝试其他指标结合移动平均线判断入场时机
-- 尝试动态调整标准差通道参数
-- 测试不同的多周期组合,找到最匹配的周期
-- 优化止损止盈策略,以提高策略获利空间
-
-## 总结
-
-超趋势V策略整合趋势、均线、标准差通道等指标优点,实现了稳定判断趋势方向,选择合适入场时机,并设置价格区域止损止盈的短线交易策略。通过参数优化、指标优化、止损止盈优化等方面进行改进,能够提高策略稳定性和盈利能力。其扎实的逻辑和严谨的思路值得学习和研究。
-
-||
 
 ## Overview
 
@@ -109,7 +59,6 @@ Risk Management:
 
 The Super Trend V strategy integrates the advantages of trend, moving average, standard deviation channel and other indicators to achieve stable trend judgment, proper entry timing, and stop loss and take profit based on price zones. By optimizing parameters, indicators, stop loss and take profit, etc., it can improve the stability and profitability of the strategy. Its solid logic and rigorous thinking are worth learning and researching.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/be10e97aa2847fcf86.png)
 
-[trans]
-## 概述
-这是一个利用ATR指标和收盘价来捕捉趋势突破的量化交易策略。该策略通过动态计算上下趋势线来判断趋势方向,当收盘价突破趋势线时产生交易信号。该策略同时设置止损和目标价位,并可根据波动性进行移动止损。
-
-## 策略原理  
-1. 计算ATR信号: atr_signal = atr(atr_period)
-2. 计算上下趋势线:
-   - 下趋势线: lower_trend = low - atr_mult*atr_signal 
-   - 上趋势线: upper_trend = high + atr_mult*atr_signal
-3. 动态调整趋势线,如果趋势线突破则保持不变,否则更新为最新值
-4. 根据收盘价与趋势线的相对位置给趋势线标色,用于判断趋势方向
-5. 产生交易信号:
-   - 做多信号: 当前无持仓且收盘价突破上趋势线
-   - 做空信号: 当前无持仓且收盘价突破下趋势线
-6. 设置止损和目标价:
-   - 止损: 最新交易价 ± 突破时ATR波动幅度factor
-   - 目标价: 最新交易价 ± 止损幅度 * 盈亏比rr
-7. 移动止损: 
-   - 多头止损: 最高上趋势线
-   - 空头止损: 最低下趋势线
-
-## 优势分析
-1. 基于波动率动态调整趋势线,适应不同市场状态
-2. 趋势线具有方向性的颜色标记,便于识别趋势
-3. 使用ATR作为波动率衡量,设置合理的止损和目标价
-4. 移动止损功能,在保证利润的同时尽可能降低回撤
-5. 参数化程度高,适应不同品种与周期
-
-## 风险分析
-1. 趋势突破策略在震荡市容易产生过多信号导致亏损
-2. ATR参数选取不当可能导致趋势线过于敏感或迟钝,影响信号质量
-3. 固定的盈亏比可能无法适应不同的市场特征
-4. 移动止损可能割肉离场,错失趋势行情
-   
-解决方法:
-1. 引入趋势过滤或震荡指标辅助判断,避免震荡市亏损
-2. 根据品种与周期特性,分别优化ATR参数
-3. 优化盈亏比和移动止损逻辑,提高策略收益风险比
-4. 可结合趋势识别方法改进移动止损,捕捉更多趋势利润
-
-## 优化方向
-1. 结合多时间周期,用大周期识别趋势,小周期触发信号
-2. 趋势线突破前加入量价指标验证,提高信号有效性
-3. 优化仓位管理,增加波段操作
-4. 对止损与盈亏比进行参数寻优
-5. 改进移动止损逻辑,减少趋势行情中过早止损
-
-多时间周期有助于过滤噪音,趋势把握更稳定。突破前的量价指标验证可剔除虚假信号。仓位管理的优化可提高资金利用效率。止损与盈亏比参数的优化可改善策略收益风险比。移动止损逻辑的改进则可在控制回撤的同时获得更多趋势利润。
-
-## 总结
-该策略以ATR作为波动率衡量,动态调整趋势线位置,捕捉趋势突破行情。合理设置止损与盈利目标,并采用移动止损锁定利润。参数可调,适应性强。但趋势突破策略也容易受到震荡行情的影响,需要进一步优化与改进。可通过结合多周期、筛选信号、优化仓位管理、参数寻优等方式提升策略绩效和稳定性。量化策略需要在理解策略本质的基础上,不断测试与优化,力求为初学者提供更多思路与方向。
-
-|| 
 
 ## Overview
 This is a quantitative trading strategy that captures trend breakouts using the ATR indicator and closing prices. The strategy dynamically calculates upper and lower trend lines to determine the trend direction and generates trading signals when the closing price breaks through the trend lines. The strategy also sets stop-loss and target price levels and allows for trailing stops based on volatility.
@@ -116,7 +63,6 @@ Multi-timeframe analysis helps filter out noise for more stable trend identifica
 ## Summary
 This strategy uses ATR as a volatility gauge to dynamically adjust trend line positions and capture trend breakouts. It sets reasonable stop-losses and profit targets, employing trailing stops to lock in gains. The parameters are adjustable for strong adaptability. However, trend breakout strategies are susceptible to whipsaw losses in choppy conditions and require further optimization and refinement. Combining multiple timeframes, filtering signals, optimizing position sizing, parameter optimization, and other techniques can improve the strategy's performance and robustness. Quantitative strategies demand continuous testing and optimization based on a solid understanding of the underlying principles in order to provide aspiring traders with more ideas and guidance.
 
-[/trans]
 
 > Strategy Arguments
 

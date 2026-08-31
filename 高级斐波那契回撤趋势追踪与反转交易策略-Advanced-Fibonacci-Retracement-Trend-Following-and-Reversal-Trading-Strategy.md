@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/985f2efee8ef56cb11.png)
 
-[trans]
-#### 概述
-该策略是一个基于斐波那契回撤水平的高级趋势追踪和反转交易系统。它通过动态识别价格的高低点,自动计算并绘制七个关键的斐波那契回撤水平(0%, 23.6%, 38.2%, 50%, 61.8%, 78.6%和100%),以此来识别潜在的支撑和阻力位。系统采用双向交易机制,既可以捕捉上升趋势中的买入机会,也可以在下跌趋势中进行做空操作。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 动态高低点识别:通过用户自定义的回溯期计算最高点和最低点,确保斐波那契水平的实时更新。
-2. 双向交易信号:在61.8%回撤位上方突破时触发做多信号,在38.2%回撤位下方突破时触发做空信号。
-3. 精确的退出机制:多头在达到23.6%水平时退出,空头在达到78.6%水平时退出。
-4. 视觉优化选项:提供紧凑线条显示模式,减少图表视觉干扰。
-
-#### 策略优势
-1. 自适应性强:通过动态计算斐波那契水平,策略能够适应不同市场环境。
-2. 风险控制完善:设定了明确的入场和出场条件,避免主观判断带来的偏差。
-3. 交易机会多样:既可以捕捉趋势延续,也可以进行反转交易。
-4. 可视化程度高:清晰的图表显示帮助交易者快速判断市场状况。
-
-#### 策略风险
-1. 市场波动风险:在剧烈波动市场中可能出现虚假信号。
-2. 趋势依赖性:在震荡市场中可能产生频繁的进出场信号。
-3. 时滞风险:回溯期的设置可能导致信号滞后。
-4. 参数敏感性:不同的回溯期设置可能产生显著不同的交易结果。
-
-#### 策略优化方向
-1. 信号过滤:建议增加趋势确认指标,如移动平均线或RSI,以减少虚假信号。
-2. 动态止损:可以根据ATR指标动态调整止损位置。
-3. 仓位管理:建议引入基于波动率的仓位管理机制。
-4. 市场环境识别:增加市场环境判断模块,在不同市场条件下采用不同的参数设置。
-
-#### 总结
-该策略通过结合经典的斐波那契回撤理论和现代量化交易技术,构建了一个全面的交易系统。其优势在于能够自动识别关键价格水平并提供清晰的交易信号,但同时也需要注意市场环境对策略表现的影响。通过建议的优化方向,策略的稳定性和盈利能力有望得到进一步提升。
-
-|| 
 
 #### Overview
 This strategy is an advanced trend-following and reversal trading system based on Fibonacci retracement levels. It dynamically identifies price highs and lows to automatically calculate and plot seven key Fibonacci retracement levels (0%, 23.6%, 38.2%, 50%, 61.8%, 78.6%, and 100%) for identifying potential support and resistance levels. The system employs a bi-directional trading mechanism that can capture both long opportunities in uptrends and short opportunities in downtrends.
@@ -76,7 +43,6 @@ The core logic is based on several key elements:
 #### Summary
 The strategy combines classical Fibonacci retracement theory with modern quantitative trading techniques to create a comprehensive trading system. Its strength lies in automatic identification of key price levels and clear trading signals, while remaining mindful of market environment impacts on strategy performance. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced.
 
-[/trans]
 
 
 

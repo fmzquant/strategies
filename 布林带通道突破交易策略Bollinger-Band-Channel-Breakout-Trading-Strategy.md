@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过观察价格对布林带通道的突破来进行交易。布林带可有效界定价格震荡范围,其突破可作为趋势转换的信号。
-
-策略原理:
-
-1. 计算布林带中线、上带和下带。中线为n日简单移动均线,带宽为n日标准差的若干倍。 
-
-2. 当价格上穿下带时,做多;当价格下穿上带时,做空。
-
-3. 设置止损位于相反方向的布林带线上,进行风险控制。
-
-4. 采用趋势追踪止损可锁定更多利润,也可选择固定止损。
-
-5. 可为做多做空订单设置互斥,避免同时存在多空单。
-
-该策略的优势:
-
-1. 突破布林带可有效识别趋势变化点。
-
-2. 设置在布林带上的止损有利于从趋势中及时退出。
-
-3. 互斥订单可避免同向交易对冲。
-
-该策略的风险:
-
-1. 布林带均线和标准差存在滞后,可能错过最佳入场点位。
-
-2. 震荡趋势中可能出现频繁的假突破。
-
-3. 标准参数无法适应市场波动率的变化。
-
-总之,该策略通过判断布林带的突破情况进行交易,属于典型的通道突破策略。在参数优化和风险控制方面还有改进空间,但整体思路简单可靠。
-
-||
 
 This strategy trades the price breakout of Bollinger Bands. The bands effectively define price oscillation range, with breakouts signaling potential trend turns. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy trades BB breakouts as a typical channel system. There is room for improvement in tuning and risk management but the overall concept is simple and robust.
 
-[/trans]
 
 > Strategy Arguments
 

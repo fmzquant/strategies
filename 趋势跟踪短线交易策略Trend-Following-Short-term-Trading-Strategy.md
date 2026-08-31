@@ -10,93 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fcd4c6bd95c7f2ca00.png)
-[trans]
-
-## 概述
-
-该策略是一种基于多个指标判断趋势的短线交易策略。它综合运用了包括WOW、BMA、BarColor、SuperTrend、DI、TTS、RSI和WTO等8个指标来判断趋势方向,并以此制定买入和卖出决策。
-
-## 策略原理
-
-该策略首先计算并判断WOW、BMA、BarColor、SuperTrend、DI、TTS、RSI和WTO这8个指标的趋势方向。
-
-WOW指标是根据价格中的实体位置来判断多空趋势的。如果实体位置接近上轨,为看涨;如果接近下轨,为看跌。 
-
-BMA指标是根据SMA多空关系来判断趋势,如果收盘价SMA上穿开盘价SMA为看涨,下穿为看跌。
-
-BarColor指标是根据K线颜色来判断趋势,连续多个阳线为看涨,阴线为看跌。 
-
-SuperTrend指标是根据平均波动范围来判断价格趋势,价格在上轨之上为看涨,下轨之下为看跌。
-
-DI指标是根据多空动量大小关系来判断趋势,多头动量大于空头动量为看涨,反之为看跌。
-
-TTS指标根据价格与均线的位置关系来判断多空趋势。
-
-RSI指标根据相对强弱指标的位置来判断趋势方向。
-
-WTO指标根据波动性指标的多空来判断趋势方向。
-
-然后,该策略会统计这8个指标看涨的数量,并据此绘制分级别的SILA看涨支撑线和看跌阻力线。支撑线和阻力线的数量越多,表示趋势信号越强。
-
-当多个指标看涨时,如果收盘价处于最低级别的支撑线之上,则产生买入信号;当多个指标看跌时,如果收盘价处于最低级别的阻力线之下,则产生卖出信号。
-
-此外,该策略还会利用K线形态来判断短期回调的机会,在趋势反转时寻找更有利的进场点。
-
-## 策略优势
-
-1. 综合多个指标判断趋势,提高判断准确率
-
-该策略不依赖单一指标,而是综合运用8个常用的趋势判断指标,对趋势进行多方位判定,可以提高判断的准确性和可靠性。
-
-2. SILA系统绘制分级支撑阻力,识别趋势信号强弱
-
-该策略基于多个指标的看涨看跌信号,采用SILA系统绘制多个分级别的支撑线和阻力线。线的数量越多表示趋势信号越强。这可以帮助交易者进一步识别信号的强弱。
-
-3. 结合K线形态寻找回调机会,进场点更优 
-
-该策略不仅依据趋势指标判断方向,还会结合K线形态来寻找短期回调的机会,在趋势反转点进场,可以争取到更优的入场点位。
-
-## 策略风险
-
-1. 多个指标之间可能出现分歧
-
-本策略采用多个指标,这些指标之间在某些情况下可能会出现判断分歧的情况,需要交易者自己权衡,增加了决策难度。
-
-2. 指标参数设置可能需要优化
-
-本策略中诸多指标都采用了默认参数,实际应用时可能需要对参数进行优化,以取得最佳效果。
-
-3. 系统性风险需要考虑
-
-如遇到重大黑天鹅事件,系统性风险会导致正常的技术指标失效,需要注意评估市场系统性风险。
-
-4. 回撤风险
-
-跟随趋势而交易回撤在扩大阶段可能比较大,需要注意控制单笔交易规模以限制回撤。
-
-## 策略优化方向
-
-1. 对指标参数进行测试优化
-
-可以通过更系统的方法对各个指标的参数如周期长度、数值大小等进行优化,寻找最佳参数组合。
-
-2. 增加止损方式
-
-可以考虑增加移动止损或者百分比止损来控制回撤。
-
-3. 结合量能指标
-
-可以引入像MAVP、OBV等量能指标与趋势指标进行组合,提高战术决策的准确性。
-
-4. 优化仓位管理
-
-可以研究不同市场阶段的持仓比例,以便在趋势更明朗时加大仓位。
-
-## 总结
-
-本策略Overall是一种多指标跟踪趋势的短线交易策略。它综合运用多个指标判断趋势方向,采用SILA系统识别信号强度,并辅以K线形态优化入场。该策略可以提高判断准确率,但需要注意不同指标的分歧风险。下一步可以通过参数优化、止损优化、量能结合等方法进一步改进该策略。
-
-||
 
 ## Overview
 
@@ -182,7 +95,6 @@ Research optimal position sizes for different market stages, and size up when tr
 
 In summary, this is a multi-indicator trend following short-term trading strategy. It determines trend direction using multiple indicators and identifies strength of signals with the SILA system, supplemented by candlestick patterns for entry improvements. The strategy can improve accuracy but the risk of conflicting signals should be noted. Further improvements can be made through parameter optimization, stop loss optimization, volume incorporation etc.
 
-[/trans]
 
 > Strategy Arguments
 

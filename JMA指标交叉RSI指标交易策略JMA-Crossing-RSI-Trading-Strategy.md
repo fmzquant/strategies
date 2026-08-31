@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过Jurik移动平均线(JMA)与RSI指标的交叉来产生买卖信号。当JMA上穿RSI时做多,当JMA下穿RSI时做空。该策略试图利用两个指标的组合过滤假信号,在趋势较明显时进行交易。
-
-## 原理
-
-该策略主要利用两种指标进行组合:
-
-1. JMA指标:一种用幂乘数平滑移动平均线,具有更低的滞后性,能更快捕捉价格变化。
-
-2. RSI指标:较为常见的强弱指标,反映市场买卖力道。
-
-当JMA上穿RSI时,表示短期价格上涨势头强于长期趋势,产生买入信号;当JMA下穿RSI时,提示做空信号。
-
-交叉信号发出后,交易在对应方向开仓。平仓条件为价格超过指定目标比例或指标再次交叉反向。
-
-## 优势
-
-1. JMA指标参数可调,能够对不同周期进行优化。
-
-2. RSI指标可过滤假突破。
-
-3. 采用双指标组合,可减少假信号。
-
-4. 内置止损机制,可以限制亏损。
-
-5. 可自定义盈利比例,实现盈利目标。
-
-## 风险及解决方案
-
-1. 双指标组合inating,信号产生频率可能过低。可调整参数,使指标更敏感。
-
-2. JMA指标还存在滞后问题,可能错过价格转折点。可结合其他先导指标进行优化。
-
-3. 止损点设置不当可能被突破导致亏损扩大。应根据历史数据测试确定适合的止损位。
-
-4. 仅依赖指标易产生假信号。可加入交易量或波动率指标进行过滤。
-
-## 优化思路
-
-1. 对JMA参数进行测试,找到最佳参数组合。
-
-2. 尝试不同的RSI参数Setting,优化指标效果。
-
-3. 加入移动止损机制,让止损更具适应性。
-
-4. 优化开仓仓位管理逻辑,如加入加仓和分批建仓条件。
-
-5. 研究其他指标Filter信号,如KD、MACD等。
-
-## 总结
-
-该策略基于JMA和RSI两个指标交叉实现趋势跟踪,可配置止损来限制风险。但仍存在一定假信号概率,需要继续优化指标参数和过滤条件来减少失误交易。止损策略也需要根据回测数据进行优化测试。本策略为双指标交叉交易提供了基础框架,具有一定的拓展空间。
-
-|| 
 
 ## Overview
 
@@ -121,7 +64,6 @@ Upon signal, the strategy enters trade in corresponding direction. Exits when pr
 
 The strategy enables trend following with JMA and RSI crossovers and limits risk via stops. But false signals remain probable, requiring further optimization on parameters and filters. Stop loss also needs backtest validation. It provides a basic framework for dual indicator crossing system with room for improvements.
 
-[/trans]
 
 > Strategy Arguments
 

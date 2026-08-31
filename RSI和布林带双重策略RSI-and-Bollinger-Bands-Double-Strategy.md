@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/124fb999ee4214b2801.png)
 
-[trans]
-#### 概述
-该策略结合了相对强弱指数(RSI)和布林带(Bollinger Bands)两个技术指标,当价格低于布林带下轨时产生买入信号,当价格高于布林带上轨时产生卖出信号。该策略只有在RSI指标和布林带指标同时处于超卖或超买状态时才会触发交易信号。
-
-#### 策略原理
-1. 根据设定的RSI参数计算RSI值。 
-2. 使用布林带公式计算布林带中轨、上轨和下轨。
-3. 判断当前收盘价是否突破布林带上轨或下轨。
-4. 判断当前RSI值是否高于超买阈值或低于超卖阈值。
-5. 当布林带和RSI指标同时满足买入或卖出条件时,产生相应的交易信号。
-
-#### 策略优势
-1. 结合了趋势和动量两种技术指标,能够更全面地判断市场状态。
-2. 同时使用两个指标作为过滤条件,有效降低了假信号的出现概率。
-3. 代码逻辑清晰,参数设置灵活,适合不同市场环境和交易风格。
-
-#### 策略风险
-1. 在震荡市中,该策略可能会产生较多的亏损交易。
-2. 参数设置不当可能导致策略表现欠佳,需要根据实际情况进行优化。
-3. 该策略未设置止损,可能面临较大的回撤风险。
-
-#### 策略优化方向
-1. 可以根据市场特点和个人偏好,对RSI和布林带的参数进行优化。
-2. 引入其他技术指标如MACD、均线等,提高信号的可靠性。
-3. 设置合理的止损和止盈,控制单笔交易风险。
-4. 对于震荡市,可以考虑增加判断条件或减小仓位,降低频繁交易带来的成本。
-
-#### 总结
-RSI和布林带双重策略通过结合趋势和动量指标,能够比较全面地判断市场状态,并给出相应的交易信号。但该策略在震荡市中表现可能欠佳,且未设置风险控制措施,因此实盘运用时需要谨慎。通过优化参数、引入其他指标和设置合理的止损止盈等方式,可以进一步提升该策略的稳定性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy combines the Relative Strength Index (RSI) and Bollinger Bands technical indicators. It generates buy signals when the price falls below the lower Bollinger Band and sell signals when the price rises above the upper Bollinger Band. The strategy only triggers trading signals when both the RSI and Bollinger Bands indicators are simultaneously in an oversold or overbought state.
@@ -71,7 +40,6 @@ This strategy combines the Relative Strength Index (RSI) and Bollinger Bands tec
 
 #### Summary
 The RSI and Bollinger Bands Double Strategy combines trend and momentum indicators to provide a relatively comprehensive assessment of market conditions and generate corresponding trading signals. However, the strategy may underperform in choppy markets and lacks risk control measures, so caution is needed when applying it to live trading. By optimizing parameters, introducing other indicators, and setting reasonable stop-loss and take-profit levels, the stability and profitability of this strategy can be further improved.
-[/trans]
 
 > Strategy Arguments
 

@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/3d0a9a45e020b9ce0b.png)
-[trans]
-
-## 概述
-
-本文主要描述了一种结合相对强弱指数(RSI)与斐波那契回转位进行交易的策略。该策略首先根据一定周期内的历史价格动态计算出关键的斐波那契回转位,然后结合RSI指标判断市场是否超买超卖,在回转位附近发出交易信号。
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 使用一定周期(如200根K线)的价格数据,计算出该周期的价格中值、标准差和关键斐波那契回转位(如0.764);
-
-2. 当价格接近上方或下方回转位时,借助RSI指标判断该回转位区域是否存在超买超卖现象;
-
-3. 如果RSI指标显示超买或超卖信号,则在回转位附近发出做多或做空信号;
-
-4. 并设置止损和止盈水平,在超过设置价格或触发止损条件时平仓。
-
-以上就是该策略判断交易时机的基本流程。
-
-## 策略优势分析
-
-相比单一使用RSI或斐波那契进行交易,该组合策略具有以下优势:
-
-1. 双重指标过滤,可以减少假信号,提高信号质量;
-
-2. 回转位附近进行反转交易,是比较经典的技术分析手法;
-
-3. 设置止损止盈后,可以有效控制单笔交易的最大损失;
-
-4. 可通过参数优化,调整指标参数和回转位设置,适应不同周期和品种。
-
-## 策略风险分析
-
-该策略也存在一定的风险需要注意:
-
-1. 关键回转位靠近后再反弹的概率并不是100%,需要结合价格实体判断;
-
-2. 单一周期RSI可能产生垂死反弹的假信号,可以考虑多周期验证; 
-
-3. 停损点设置过于宽松,可能增加亏损;
-
-4. 标的价格剧烈波动时,止损可能被突破,需要考虑放宽止损点。
-
-以上风险都可通过参数调整、优化指标结合等方法加以控制。
-
-## 策略优化方向  
-
-该策略还可进一步优化的地方包括:
-
-1. 增加成交量指标的验证,避免低量的假突破;
-
-2. 考虑布林带指标,在带状突破时发出信号;
-
-3. 构建机器学习或神经网络模型,自动识别高质量交易机会;
-
-4. 利用遗传算法等方法自动优化参数,调整止损止盈点。
-
-## 总结
-
-本文详细阐述了一种结合RSI和斐波那契回转位进行判断的量化交易策略。该策略集双重指标分析与经典技术策略于一体,在控制风险的前提下,提高交易信号的质量。随着参数调整与模型优化的进行,策略效果还可获得进一步提升。
-
-||
 
 ## Overview
 
@@ -135,7 +72,6 @@ Areas for further optimizations include:
 
 This article describes in detail a quantitative trading strategy that combines RSI and Fibonacci retracement analysis. By blending dual indicator analysis and classic technical strategies, the strategy improves signal quality under managed risks. Further performance gains can be achieved through ongoing parameter tuning and model optimization.
 
-[/trans]
 
 > Strategy Arguments
 

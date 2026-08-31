@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/137636ba3c3b3e555ac.png)
-[trans]
-## 概述
-Bollinger Bands RSI OBV策略结合布林带、相对强弱指标(RSI)和平衡量指标(OBV)来识别股价的突破点与反转点。当股价突破布林带上下轨,并且RSI指标显示超买超卖,同时OBV指标出现转折时,该策略会发出交易信号。
-
-## 策略原理
-该策略的交易逻辑主要基于布林带、RSI指标和OBV指标。具体来说:
-1. 当股价突破布林带中轨且向上,同时RSI大于50表示多头趋势形成,此时如果OBV指标回落表明短期内出现下跌,那么这个时候就是建仓多单的时机。
-2. 当股价跌破布林带下轨时候,平掉之前的多单头寸。
-3. 当股价突破布林带中轨且向下,同时RSI小于50表示空头趋势形成,此时如果OBV指标上升表明短期内出现反弹,那么这个时候就是建仓空单的时机。
-4. 当股价重新冲破布林带上轨时候,平掉之前的空单头寸。
-所以该策略使用布林轨的突破来确定方向;再结合RSI判断强弱以及OBV判断短期反转,形成交易信号。
-
-## 优势分析
-该策略最大的优势在于同时结合布林轨、RSI和OBV三种不同类型的指标,能够在股价开始方向性变化的时候提前捕捉到变化信号。例如股价突破布林中轨向上后,如果只看K线的话可能会直接建多单,但是结合RSI和OBV就能判断出此时是否存在短期调整的可能性从而避免建仓。所以这种组合指标能够提高策略的稳定性。
-其次,该策略同时设置有突破布林轨的入场条件以及相反方向重新突破布林轨的止损条件。这能够控制每单的盈亏比例在一定的合理范围内,减少单笔损失的可能性。
-最后,该策略代码逻辑清晰简洁,参数设定合理易于理解,适合作为模拟实盘的策略框架进行优化和改进。这降低了策略实盘时可能出现的风险。
-
-## 风险分析
-该策略最大的风险在于布林轨宽度设置不当可能导致错失大量交易机会。如果布林轨间距设置过大,股价需要波动较大幅度才会触发建仓或止损逻辑。这可能错过一些比较小幅的趋势性机会。
-此外,策略目前只考虑了买卖点选择逻辑,没有整合资金管理、仓位管理等方面的优化。这导致单边无限加仓的可能,容易因为无法及时止损退出造成较大亏损。
-最後,RSI与OBV指标组合判断上也可能出现错误信号。RSI仅从一定周期内股价涨跌速度考虑,无法判断长期趋势;OBV也可能因为个股特点而变得不那么可靠。这都可能影响策略信号的准确性。
-
-## 优化方向
-考虑到上述分析,该策略可以从以下几个方向进行优化:
-1. 对布林轨的宽度进行优化,设置自适应布林轨宽度以自动适应市场波动幅度。
-2. 整合仓位管理逻辑,当连续亏损时降低仓位规模。连续盈利时则适当加大仓位。
-3. 对RSI指标的参数如看涨周期等进行测试与优化。
-4. 尝试不同的短期指标如KDJ、MACD等替代OBV指标,判断是否能提高信号准确性。
-5. 测试不同的中长期指标如MVSL、DMI等与RSI结合使用,助力判断股价中长期走势。
-
-## 总结
-Bollinger Bands RSI OBV策略综合运用三种不同类型的技术指标,在保证了一定的稳定性和筛选标准的同时,也为后续的优化和改进提供了框架基础。该策略适用于中长线的选股与持股,也可作为短线策略的基础来进行大幅度调整与优化。
-
-||
 
 ## Overview
 The Bollinger Bands RSI OBV strategy combines Bollinger Bands, Relative Strength Index (RSI) and On Balance Volume (OBV) to identify breakout and reversal points of stock prices. When the stock price breaks through the upper and lower rails of the Bollinger Bands, and the RSI indicator shows overbought or oversold, while the OBV indicator shows a turn, this strategy will issue trading signals.
@@ -92,7 +58,6 @@ In view of the above analysis, the strategy can be optimized in the following as
 ## Conclusion  
 The Bollinger Bands RSI OBV strategy comprehensively uses three different types of technical indicators to provide a framework basis for subsequent optimization and improvement while ensuring certain stability and screening criteria. This strategy is suitable for mid-to-long term stock selection and holdings, and can also be used as the basis for short-term strategies to make significant adjustments and optimizations.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ff8190fd73cc4670f.png)
-[trans]
-#### 概述
-该策略结合了唐奇安通道和简单移动平均线两个技术指标。当价格突破唐奇安通道下轨且高于简单移动平均线时开多仓,当价格突破唐奇安通道上轨且低于简单移动平均线时开空仓。多头仓位在价格触及唐奇安通道上轨时平仓,空头仓位在价格触及唐奇安通道下轨时平仓。该策略适用于趋势性较强的市场。
-
-#### 策略原理 
-1. 计算唐奇安通道上下轨。唐奇安通道上轨为过去n个周期的最高价,下轨为过去n个周期的最低价。
-2. 计算简单移动平均线。简单移动平均线为收盘价在过去m个周期的算术平均值。
-3. 多头开仓:当价格低于唐奇安通道下轨且收盘价高于简单移动平均线时,开多仓。
-4. 空头开仓:当价格高于唐奇安通道上轨且收盘价低于简单移动平均线时,开空仓。
-5. 多头平仓:当价格触及唐奇安通道上轨时,平多仓。
-6. 空头平仓:当价格触及唐奇安通道下轨时,平空仓。
-
-#### 策略优势
-1. 结合趋势和波动两个市场要素。简单移动平均线捕捉趋势,唐奇安通道捕捉波动,能较好把握趋势行情中的回撤机会。
-2. 止盈条件明确,有助于及时锁定利润。多头和空头分别在价格触及唐奇安通道上轨和下轨时平仓,能在趋势反转前及时了结盈利头寸。
-3. 参数较少,优化难度小。该策略仅有唐奇安通道周期、偏移量和简单移动平均线周期三个参数,便于进行优化。
-
-#### 策略风险
-1. 频繁交易。该策略开平仓频率较高,在交易成本高昂的市场会拖累收益。可通过适度放宽开仓条件或增加时间框来减少交易次数。
-2. 震荡市表现不佳。趋势不明朗时,该策略可能遭遇较多亏损。可通过统计波动率指标来识别震荡市,暂停策略。  
-3. 参数稳定性不足。不同标的和周期,最优参数可能差异较大,参数稳定性欠佳,实盘表现可能不及回测。需进行充分样本外测试和敏感性分析,确认参数稳健。
-
-#### 策略优化方向
-1. 加入和其它指标结合的可选开仓条件,例如要求DMI中的ADX大于某阈值才允许开仓,或RSI离开超卖区时才开多仓,提高开仓胜率。
-2. 使用动态止盈线取代固定的唐奇安通道线止盈,从而实现利润追踪功能。例如多头可在价格触及唐奇安通道上轨后,改为在ATR止盈线或SAR止盈线上平仓。
-3. 根据波动率水平动态调整唐奇安通道周期,在高波动率市场状态下缩短唐奇安通道周期,低波动率市场状态下展长周期。这有助于适应不同市场。
-
-#### 总结
-动态唐奇安通道与简单移动平均线结合策略是一个简单易用的量化交易策略框架。它从趋势跟踪和波动性突破两个角度构建开平仓逻辑,适合趋势性较强的品种。但该策略在频繁震荡的市场中表现不佳,且参数稳健性一般。可通过引入辅助开仓条件、动态止盈和参数自适应机制来提高该策略的适应性和鲁棒性。总的来说,该策略可作为一个基础策略框架,在此基础上进一步修改完善,打造出更高级的量化策略。
-
-|| 
 
 #### Overview
 This strategy combines two technical indicators: Donchian Channel and Simple Moving Average (SMA). It opens a long position when the price breaks below the lower band of the Donchian Channel and closes above the SMA. Conversely, it opens a short position when the price breaks above the upper band of the Donchian Channel and closes below the SMA. The long position is closed when the price reaches the upper band of the Donchian Channel, while the short position is closed when the price reaches the lower band. This strategy is suitable for markets with strong trends.
@@ -71,7 +40,6 @@ This strategy combines two technical indicators: Donchian Channel and Simple Mov
 #### Summary
 The Dynamic Donchian Channel and Simple Moving Average Combination Strategy is a simple and easy-to-use quantitative trading strategy framework. It constructs entry and exit logic from the perspectives of trend following and volatility breakout, making it suitable for instruments with strong trends. However, the strategy performs poorly in frequently rangebound markets, and its parameter robustness is mediocre. The adaptability and robustness of the strategy can be improved by introducing auxiliary entry conditions, dynamic profit-taking, and parameter self-adaptation mechanisms. Overall, this strategy can serve as a basic strategy framework to be further modified and improved upon to create more advanced quantitative strategies.
 
-[/trans]
 
 
 

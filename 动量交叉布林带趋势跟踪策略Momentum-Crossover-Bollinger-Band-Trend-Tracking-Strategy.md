@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/dd01bf4e7ab3be4cb4.png)
-[trans]
-## 概述
-
-该策略运用布林带指标判断市场趋势方向,并结合动量指标实现趋势跟踪交易。策略名称中“动量”代表采用动量指标,“交叉”代表判断指标交叉做多做空信号,“布林带”代表使用布林带判定趋势方向,“趋势”代表策略追踪趋势,“跟踪”代表策略可以跟踪趋势进行交易。
-
-## 策略原理  
-
-该策略主要分为三个部分:
-
-1. 判断布林带方向。布林带中轨代表均线,布林带上下轨代表波动范围。当价格接近上轨时为超买,接近下轨时为超卖。布林带方向代表价格趋势方向。
-
-2. 计算动量。该策略选用 Hull 动量。Hull 动量由快速移动平均线减去慢速移动平均线得出。正值代表上升趋势,负值代表下降趋势。
-
-3. 交叉信号。当快速移动平均线从下方上穿慢速移动平均线时产生做多信号;从上方下穿时产生做空信号。
-
-交易规则为:布林带方向代表大趋势,动量指标交叉代表入场时机。当动量交叉与布林带方向一致时,产生交易信号。即追踪布林带代表的趋势方向。
-
-## 策略优势
-
-1. 结合趋势和动量,避免假突破。采用布林带判断大级别趋势,再利用动量指标判断具体的入场时机,避免追逐局部突破带来的formset风险。
-
-2. 风险控制更好。布林带提供止损位,比简单移动平均线更有效。
-
-3. 跟踪趋势更高效。动量指标可确保入场之后有足够力量继续推动价格朝原来的方向发展,跟踪趋势更顺畅。
-
-## 策略风险 
-
-1. 布林带判定失败风险。布林带并不总是完全准确判定趋势,有可能错误提供方向信号从而增加损失率。
-
-2. 趋势反转风险。即使布林带正确反映大级别趋势,价格在中短期也可能出现反转,交易时需注意判断。
-
-3. 参数优化风险。策略参数如计算周期等需要针对不同市场数据进行优化,以达到最佳交易效果。
-
-## 策略优化方向
-
-1. 结合更多指标 FILTER。除布林带和 Hull 动量外,可加入MACD,KDJ等其他指标,形成指标 FILTER,提高判断准确率。
-
-2. 自适应参数优化。加入机器学习算法,根据不同品种和市场环境,实时优化参数,提高策略稳定性。 
-
-3.止损策略优化。优化止损策略,在大趋势不变前最大程度锁住利润,在趋势反转时最快止损。
-
-## 总结
-
-该策略整合布林带判定大级别趋势和 Hull 动量指标判断具体入场时机,实现了对趋势的有效跟踪。同时也存在一定改进空间,可从加入更多指标 filter,参数自适应优化和止损策略优化等方面进行改进,以提高稳定性和利润率。
-
-||
 
 ## Overview  
 
@@ -105,7 +59,6 @@ The trading rule is: The direction of Bollinger Bands represents the major trend
 
 This strategy integrates Bollinger Bands to determine large-scale trends and Hull momentum indicators to determine specific entry points, which effectively tracks trends. At the same time, there is still room for improvement, such as adding more indicator filters, adaptive parameter optimization, stop-loss strategy optimization and so on to improve stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

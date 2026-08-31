@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/4a204eb9eb7dac6202.png)
-[trans]
-
-## 概述
-
-该策略是两个不同策略的组合,第一个策略基于股票价格的双移动平均线穿越形成信号;第二个策略基于威廉姆斯指标中的神奇摆动指标。最终信号取两个策略信号的交集,形成最终交易信号。
-
-## 策略原理
-
-第一个策略的原理是,当昨日收盘价高于前日收盘价,且快速K线9日随机指标低于慢速D线3日随机指标时产生买入信号;当昨日收盘价低于前日收盘价,且快速K线9日随机指标高于慢速D线3日随机指标时,产生卖出信号。
-
-第二个策略的原理是,计算5日和34日价格波动的差值,并计算该差值的移动平均线。当当前值高于前一周期时为买入信号,当当前值低于前一周期时为卖出信号。
-
-结合两个策略,最终信号取两个策略信号的交集。当两个策略同时发出买入信号时,做多;当两个策略同时发出卖出信号时,做空。
-
-## 优势分析
-
-该策略结合了双移动平均线策略和威廉姆斯指标策略两个策略的优势。双移动平均线策略可以抓取中长线趋势;威廉姆斯指标策略可以捕捉短线交易机会。组合两个策略,可以同时兼顾获利和防止假突破。
-
-另外,该策略采用多个参数输入设定,可以根据不同股票和行情进行参数优化,适应更广泛的市场环境。
-
-## 风险分析
-
-该策略最大的风险在于两个策略信号可能不一致。当一个策略发出买入信号而另一个发出卖出信号时,该策略无法产生有效信号,可能错过交易机会。
-
-此外,该策略包含多个参数,这给参数优化带来一定难度。不合适的参数组合可能导致策略表现不佳。
-
-为降低风险,可以考虑只采用其中一个策略信号;或者研究确定适合不同市场环境的参数范围。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 评估两个策略信号的一致性,研究在不同参数下其信号匹配程度,确定最佳参数组合。
-
-2. 测试该策略在不同品种和不同周期下的表现,寻找最佳适用范围。
-
-3. 可以考虑将双移动平均线策略改为其他指标,如KDJ指标等,丰富策略组合。
-
-4. 增加止损机制,以控制危险,例如设定最大回撤止损。
-
-## 总结
-
-该策略结合双移动平均线策略和威廉姆斯指标策略,同时兼顾趋势跟踪和短线信号捕捉。通过参数优化可以适应较广泛的市场环境。但其中也存在信号匹配度不一致带来的风险以及复杂参数优化的难点。总体来说,该策略为量化交易提供了一种有效的思路,值得进一步研究优化,以减小风险和提高稳定性。
-
-|| 
 
 ## Overview
 
@@ -98,7 +53,6 @@ The strategy can be enhanced in several aspects:
 
 This strategy combines the dual moving average crossover strategy and the Williams Indicator strategy to capture both trend tracking and short-term signals. Through parameter optimization, it can adapt to a wide range of market conditions. However, inconsistent signal matching and complex parameter optimization remain its challenges. Overall, it provides an effective approach to quantitative trading and is worth further research and optimization to reduce risks and improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

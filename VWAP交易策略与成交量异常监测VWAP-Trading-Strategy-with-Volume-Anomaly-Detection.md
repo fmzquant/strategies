@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/5f0ed5b4b166d3e829.png)
 
-[trans]
-#### 概述
-该策略基于多个VWAP(成交量加权平均价)水平,包括开盘价、最高价、最低价和成交量异常高的蜡烛图的VWAP。策略利用VWAP作为支撑位和阻力位,同时考虑了成交量的异常情况。当价格突破VWAP水平并满足一定条件时,策略会产生交易信号。此外,该策略还使用RSI指标来检测动量变化,作为平仓条件。
-
-#### 策略原理
-1. 计算多个VWAP水平,包括开盘价VWAP、最高价VWAP、最低价VWAP和异常高成交量蜡烛图的VWAP。
-2. 检测成交量异常高的蜡烛图,并在该蜡烛图上重置异常高成交量VWAP的累积变量。
-3. 在VWAP水平上下设置偏离值,作为交易信号的触发条件。
-4. 检查价格是否在VWAP的另一侧存在跳空,以避免错误信号。
-5. 根据价格相对于VWAP的位置以及收盘价与开盘价的关系,产生多个交易信号,包括Wick(影线)和Crossover(交叉)两种类型。
-6. 使用RSI指标检测动量变化,当RSI超过70或低于30时,平仓相应的交易。
-
-#### 优势分析
-1. 该策略利用了多个VWAP水平,提供了更全面的支撑位和阻力位信息。
-2. 通过检测成交量异常高的蜡烛图,策略可以捕捉到市场的重要变化。
-3. 设置偏离值可以过滤掉一些噪音信号,提高交易信号的质量。
-4. 考虑了价格在VWAP另一侧的跳空情况,避免了一些错误信号。
-5. 根据价格与VWAP的相对位置以及收盘价与开盘价的关系,产生多个交易信号,增加了策略的灵活性。
-6. 使用RSI指标作为平仓条件,可以帮助策略在动量发生变化时及时退出交易。
-
-#### 风险分析
-1. 该策略依赖于VWAP水平,如果市场出现极端行情,VWAP可能失去效力。
-2. 异常高成交量的判断基于固定的阈值,可能无法适应不同的市场情况。
-3. 偏离值的设置可能需要根据不同的市场和交易品种进行调整。
-4. 该策略产生了多个交易信号,可能导致过度交易和高昂的交易成本。
-5. RSI指标可能产生滞后的平仓信号,导致策略承受更大的风险。
-
-#### 优化方向
-1. 对VWAP水平的计算方法进行优化,如考虑更长的时间周期或使用加权方法。
-2. 优化异常高成交量的判断标准,如采用自适应的阈值或结合其他成交量指标。
-3. 对偏离值进行参数优化,找到最佳的偏离幅度。
-4. 引入风险管理措施,如设置止损和止盈,控制单笔交易的风险敞口。
-5. 尝试其他的动量指标或组合多个指标,以获得更准确的平仓信号。
-6. 对交易信号进行过滤,减少过度交易和降低交易成本。
-
-#### 总结
-该策略利用多个VWAP水平和成交量异常检测,生成多样化的交易信号。通过考虑价格与VWAP的相对位置、收盘价与开盘价的关系以及RSI指标,策略试图捕捉市场的重要变化并及时退出交易。然而,该策略也存在一些风险,如对极端行情的适应性、过度交易和滞后的平仓信号等。为了进一步改进,可以考虑优化VWAP的计算方法、异常成交量的判断标准、偏离值的设置,并引入风险管理措施和更多的指标组合。总的来说,该策略为基于VWAP的交易提供了一个很好的起点,但仍需要根据实际市场情况进行优化和调整。
-
-|| 
 
 #### Overview
 This strategy is based on multiple VWAP (Volume Weighted Average Price) levels, including the open price, high price, low price, and the VWAP of candles with abnormally high volume. The strategy utilizes VWAP levels as support and resistance, while also considering abnormal volume situations. When the price breaks through VWAP levels and meets certain conditions, the strategy generates trading signals. Additionally, the strategy uses the RSI indicator to detect momentum changes as an exit condition.
@@ -87,7 +48,6 @@ This strategy is based on multiple VWAP (Volume Weighted Average Price) levels, 
 
 #### Summary
 This strategy utilizes multiple VWAP levels and abnormal volume detection to generate diverse trading signals. By considering the relative position of price to VWAP, the relationship between the closing price and the opening price, and the RSI indicator, the strategy attempts to capture significant market changes and exit trades in a timely manner. However, the strategy also has some risks, such as adaptability to extreme market conditions, overtrading, and lagging exit signals. To further improve the strategy, one can consider optimizing the calculation method of VWAP, the judgment criteria for abnormal volume, the setting of displacement values, and introducing risk management measures and more indicator combinations. Overall, this strategy provides a good starting point for VWAP-based trading but still requires optimization and adjustment based on actual market conditions.
-[/trans]
 
 
 

@@ -10,31 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/94167a8e43301ded56.png)
-[trans]
-
-### 概述
-动态网格交易管理策略（Dynamic Grid Trading Management Strategy）是一种基于价格变动的交易策略。它利用了市场波动性，通过在不同价格水平设置买入和卖出点，以达到优化投资组合的目的。该策略适用于各种市场条件，特别适合于长期持有、现货交易和无杠杆的摆动交易。
-
-### 策略原理
-动态网格交易管理策略的核心在于使用基于时间周期的枢轴点来确定网格级别。它通过设置多个买入和卖出点，实现在价格下跌时买入，在价格上涨时卖出的策略。当市场价格下跌时，策略会持续买入，以降低平均买入成本。当市场价格上涨超过平均买入价格时，策略开始卖出，若价格持续上涨，则持续卖出，从而实现利润。
-
-### 策略优势
-1. **适应市场波动**：该策略能有效适应市场波动，无论是牛市还是熊市均可运用。
-2. **风险分散**：通过在不同价格级别进行交易，分散了单一价格点买入或卖出的风险。
-3. **长期收益**：适合长期持有策略，通过平均成本效应，长期可能获得稳定收益。
-
-### 策略风险
-1. **市场极端行为**：在极端市场行为下，如剧烈波动或市场崩溃，该策略可能会面临较大风险。
-2. **策略优化需求**：策略需要根据市场情况不断调整和优化，以适应不同的市场环境。
-
-### 策略优化方向
-1. **参数调整**：根据市场变化，调整网格大小和交易频率，以适应不同的市场波动。
-2. **风险控制**：引入更精细的风险管理机制，如设置止损点，以避免极端市场条件下的大幅损失。
-
-### 总结
-动态网格交易管理策略是一种灵活的交易策略，适用于多种市场环境。它通过在不同价格级别进行买卖，旨在降低风险并实现长期收益。然而，由于市场的不可预测性，策略需要不断的调整和优化以适应市场变化。总体而言，该策略为追求长期稳定收益的投资者提供了一个有吸引力的选择。
-
-||
 
 ### Overview
 The Dynamic Grid Trading Management Strategy is a market fluctuation-based trading approach. Utilizing market volatility, it sets buying and selling points at different price levels to optimize the portfolio. This strategy is adaptable to various market conditions, particularly suitable for long-term holdings, spot trading, and swing trading without leverage.
@@ -59,7 +34,6 @@ ts to Market Fluctuations**: The strategy effectively adapts to market swings, a
 
 ### Conclusion
 The Dynamic Grid Trading Management Strategy is a versatile trading approach, applicable to various market environments. By trading at different price levels, it aims to reduce risk and achieve long-term gains. However, due to market unpredictability, the strategy requires ongoing adjustments and optimizations to adapt to market changes. Overall, this strategy offers an attractive option for investors seeking long-term, stable returns.
-[/trans]
 
 > Strategy Arguments
 

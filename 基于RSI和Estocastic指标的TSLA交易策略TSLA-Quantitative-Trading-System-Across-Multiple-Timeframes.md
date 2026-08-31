@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11f106c662ba999a7e7.png)
-[trans]
-
-本策略综合利用RSI和Estocastic两种不同类型的技术指标,在TSLA 5分钟和标普100 1分钟的双时间框架下设计交易规则,实现自动化的TSLA股票交易系统。
-
-## 策略概述
-
-该策略主要思想是同时监控TSLA自身的价格技术指标和美股大盘的技术指标,在二者同时达到超买超卖的状态时,发出交易信号。策略采用5分钟和1分钟两个时间周期指标进行组合,可以有效过滤掉部分噪音交易信号。 
-
-## 策略原理
-
-首先,策略在TSLA的5分钟K线上计算5日RSI指标,并在标普100指数的1分钟K线上计算14日RSI指标。当TSLA的5日RSI低于30、且标普100的14日RSI也低于30时,認为TSLA股价处于超卖状态,该时点发出买入信号。
-
-买入后,策略继续监控TSLA 1分钟K线上的14日Estocastic指标。当Estocastic指标超过78时,認为TSLA股价向上反弹布林带,该时点发出卖出信号。
-
-此外,策略还设置了3%的止损位次,当价格向下跌破止损位次时,也会主动止损离场。
-
-## 策略优势
-
-1. 多时间框架设计,可以有效过滤噪音信号
-2. RSI和Estocastic指标互相验证,提高信号质量 
-3. 止损机制控制单笔损失
-4. 回测数据为TSLA和标普100的分钟数据,市场代表性强
-5. 策略逻辑简单清晰,容易理解与优化
-
-## 策略风险
-
-1. 多时间框架以及双指标组合会漏过部分机会
-2. 止损位置设置过于激进可能造成不必要的滑点损失
-3. 标普100作为交易信号的辅助工具,本身也会带来一定的系统性风险
-4. 回测数据质量과市场环境变化也会对结果产生影响
-
-## 策略优化方向 
-
-1. 可以测试更多的参数组合寻找最佳指标配置
-2. 增加自适应止损算法
-3. 增加仓位管理模块,以锁定更多涨幅
-4. 增加机器学习算法训练指标权重
-5. 在更长的时间框架内寻找交易转折点
-
-## 总结
-
-本策略总体上是一个典型的超买超卖反转策略,同时加入了多时间框架验证和止损模块使得策略更为稳健。该策略的优势在于简单易懂、容易实施。接下来的研究方向是如何在控制风险的同时获取更多alpha,这需要对指标和模型进行定制化优化。总的来说,本策略为构建量化交易系统奠定了坚实的基础。
-
-||
 
  
 This strategy utilizes two different types of technical indicators, RSI and Estocastic, across the 5-minute chart of TSLA and 1-minute chart of S&P 100 index to design trading rules and build an automated trading system for TSLA stocks.
@@ -97,7 +53,6 @@ In addition, a 3% stop loss is set in the strategy. When the price drops below t
 
 To conclude, this is a typical mean-reversion strategy based on overbought and oversold signals, with additional features like multiple timeframe validation and stop loss to make it more robust. The advantage lies in its simplicity to understand and implement. The next step is to acquire more alpha while controlling risks, which requires custom optimization work around the indicators and models. Overall, this strategy establishes a solid foundation for building quantitative trading systems.
 
-[/trans]
 
 
 

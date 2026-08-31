@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1159a773149e732e153.png)
-[trans]
-## 概述
-
-本策略是一种基于自适应移动均线的趋势跟踪策略。它使用两个不同周期的DEMA移动均线进行买卖信号生成。策略会根据不同的周期自动适应分析粒度,实现多时间框架的跟踪。
-
-## 策略原理
-
-策略使用DEMA快线和DEMA慢线构建交易信号。快线周期为tf,慢线周期为tf*2。当快线上穿慢线时产生买入信号;当快线下穿慢线时产生卖出信号。这样可以跟踪中长线趋势。另外,策略还使用Hull双移动均线过滤器来减少噪音交易。仅在Hull过滤器同方向时才会发出交易信号。
-
-## 优势分析
-
-该策略最大的优势是可以自适应不同的周期。它会根据不周期自动选择分析粒度,从日线到周线都可以使用。这让策略适用于多种市场环境。另外,双均线结构可以有效跟踪趋势,双线过滤增加了信号质量。所以,该策略非常适合跟踪中长线趋势。
-
-## 风险分析 
-
-该策略主要风险来自于趋势反转。当市场从牛市进入熊市时,快线和慢线可能出现剧烈的向下交叉,导致巨额浮亏。此外,双线过滤器也可能滤除掉部分赚钱机会。如果过滤器方向与价格反向,那些本该获利的信号也会被跳过。所以,该策略主要针对稳定的中长线趋势市场。
-
-## 优化方向
-
-可以通过调整过滤器参数或使用其他指标替换来优化策略。例如,可以测试MACD取代HullMA,或调整HullMA的周期参数。也可以测试不同的参数组合来寻找更匹配的交易规则。此外,还可以结合波动率指标来控制仓位规模。当市场波动加大时,可以适当缩小仓位。
-
-## 总结
-
-该策略整体来说是一个非常实用的自适应趋势跟踪策略。它可以自动调整分析周期,适合不同时间段的交易。双均线结构可以稳定跟踪趋势,过滤器也提高了信号质量。总的来说,适合追求稳定中长线收益的投资者。
-
-||
 
 ## Overview
 
@@ -61,7 +35,6 @@ The strategy can be optimized by adjusting the filter parameters or using other 
 
 In conclusion, this is a very practical adaptive trend following strategy. It can automatically adjust the analysis timeframe for different periods and is suitable for trading across different time horizons. The dual moving average structure can steadily track trends, and the filter also improves signal quality. Overall, it is suitable for investors looking for steady mid-to-long term returns.
 
-[/trans]
 
 > Strategy Arguments
 

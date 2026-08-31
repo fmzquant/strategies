@@ -9,53 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-PresentTrend策略是一个独特的自定义趋势跟随策略。该策略结合了短期和长期市场趋势,使其适用于不同的市场条件。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 自定义RSI或MFI指标:该指标根据RSI或MFI计算PresentTrend值,根据该值的金叉死叉生成买入和卖出信号,指示潜在的趋势反转。
-
-2. ATR指标:这是一种流行的趋势跟随指标,使用平均真实波动范围(ATR)。
-
-当两种策略的买入和卖出信号同时触发时,该策略会开仓做多或做空。这可以确保交易仅在短期和长期趋势一致时发生,从而提高策略的可靠性。 
-
-## 策略优势
-
-- 结合短期和长期趋势,适用于不同市场条件
-- 使用自定义指标和ATR,提高信号可靠性
-- 可选择只做多、只做空或双向交易,适应不同交易风格
-- 默认参数经过优化,平衡了灵敏度和稳定性
-- 可根据个人偏好调整参数,优化策略
-
-## 策略风险及解决方案
-
-- 所有趋势跟随策略存在被套利的风险
-- 多空双向交易可能增加交易次数和手续费
-- 参数设置不当可能产生过多错误信号
-- 可适当缩短交易持仓周期,降低套利风险
-- 可选择只做多或做空,减少交易次数
-- 应充分测试并适当调整参数,确保参数合理
-
-## 策略优化方向
-
-- 增加止损机制,更好控制单笔损失
-- 结合其他指标过滤信号,减少错误交易
-- 测试不同持仓周期参数,寻找最优参数
-- 尝试基于机器学习自动优化参数
-- 利用更多数据源,如订单流信息等
-- 优化策略代码,提高执行效率
-
-## 总结
-
-PresentTrend策略整体来说是一个非常有效的趋势跟随策略。它同时结合短期和长期趋势指标,在保持灵敏度的同时提高信号的可靠性。通过调整方向、参数以及增加附加逻辑,该策略可以适应不同的市场环境和交易者需求。虽然仍需注意趋势跟随策略固有的风险,但总体上PresentTrend是一个值得考虑的选择。
-
-|| 
 
 ## Overview
 
@@ -101,7 +54,6 @@ The strategy enters a long position when all buy signals from both strategies ar
 
 Overall, the PresentTrend strategy is a highly effective trend-following system. It combines short-term and long-term trend indicators to be sensitive while improving signal reliability. With adjustable direction, parameters, and additional logic, the strategy can adapt to different market environments and trader needs. While inherent trend-following risks remain, PresentTrend is a compelling option worth considering.
 
-[/trans]
 
 > Strategy Arguments
 

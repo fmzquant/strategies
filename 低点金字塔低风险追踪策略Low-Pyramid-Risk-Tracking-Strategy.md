@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/190799ca3c70c5fb0ef.png)
-[trans]
-
-本策略通过组合不同指标识别价格Movement中的潜在低点,并通过金字塔追踪逐步建仓的方式降低风险。该策略同时结合了止损、止盈、移动止损等功能,可以有效控制风险。
-
-## 策略概述
-
-该策略首先使用RSI和EMA RSI的差值来识别价格的潜在低点。为了过滤假信号,策略还结合了移动平均线和多时间框架随机指标进行确认。一旦确认低点信号,就会在该点稍低的位置逐步建立多单,这就是追踪金字塔的思路。策略允许最多开设12个追踪订单,每个订单的数量会按顺序递增,这可以有效分散风险。所有订单会跟随一个整体止损位进行退出,同时还允许为每个订单单独设置止盈。为了进一步控制风险,该策略还设置了基于账户权益百分比的整体止损。
-
-## 策略原理
-
-该策略主要由低点识别模块、金字塔追踪模块、风险控制模块三个部分组成。
-
-**低点识别模块**使用RSI指标和其EMA之间的差值来识别价格的潜在低点。为了提高准确性,还引入了移动平均线指标和多时间框架随机指标进行信号过滤。只有当价格低于移动平均线,而随机指标K线又低于30时,才会确认低点信号的有效性。
-
-**金字塔追踪模块**是本策略的核心。一旦确认低点信号,策略就会在比该低点再低0.1%的位置开设第一单。之后只要价格继续下跌且低于平均入场价一定比例,就会继续追加多单。新增订单的数量会依次递增,例如第三个订单的数量是第一个订单的3倍。这种金字塔追踪方式可以平均风险。本策略最多允许开设12个追踪订单。
-
-**风险控制模块**主要包括三个方面。第一是整体止损,根据最近一定周期内最高价计算的止损位。所有订单会跟随这个止损位同时止损。第二是每个订单独立的止盈设置,允许按照入场价的一定比例来止盈。第三是基于账户权益比例的整体止损,这是最强的风险控制手段。
-
-## 策略优势
-
-- 利用金字塔追踪降低个别订单的风险,同时分散总体风险
-- 多指标组合提高低点识别的准确性
-- 整体止损、止盈和移动止损功能能有效控制风险
-- 权益比例止损机制保护账户免受重大损失
-- 可通过调整参数找到风险与收益的平衡点
-
-## 策略风险
-
-- 低点识别准确性仍有一定局限,可能错过最佳入场点或进入假信号
-- 追加订单时可能面临不利行情,加重亏损
-- 需要较长的运行周期来体现策略的优势
-- 参数设置不当可能导致风险控制不足
-
-为降低上述风险,可以从以下几个方面进行优化:
-
-1. 更换或增加指标,提高低点识别的准确性
-2. 优化订单数量、间隔、止盈幅度等参数,减少单笔订单的风险
-3. 适当缩短止损幅度,保护利润
-4. 测试不同品种,选择流动性好、波动较大的品种
-
-## 策略优化方向 
-
-该策略仍有进一步优化的空间:
-
-1. 尝试引入机器学习等更先进的技术识别低点
-2. 根据市场状态动态调整订单数量、止损幅度等参数
-3. 增加箱体内止损策略,避免亏损扩大
-4. 增加重新入场机制
-5. 优化股票和数字货币品种的策略参数
-
-## 总结
-
-本策略通过金字塔追踪的思路有效降低了单笔订单的风险,整体止损、止盈、移动止损等功能也起到了很好的风险控制作用。但低点识别等方面仍有优化空间,如果能引入更先进的技术,增加动态调参功能,再配合参数优化,本策略的收益风险比将会得到大幅提升。
-
-||
 
 
 This strategy identifies potential low points in price movement through a combination of different indicators and gradually builds positions through pyramiding to reduce risk. The strategy also incorporates functions such as stop loss, take profit, and trailing stop loss to effectively control risk.
@@ -119,7 +64,6 @@ There is still room for further optimization of this strategy:
 
 This strategy effectively reduces risks of individual orders through pyramid tracking approach, and overall stop loss, take profit, trailing stop functions also play very good role of risk control. But there is still room for improving low point identification and other aspects. If more advanced techniques can be introduced, dynamic adjustment of parameters can be added, combined with parameter optimization, the risk reward ratio of this strategy could be greatly improved.
 
-[/trans]
 
 > Strategy Arguments
 

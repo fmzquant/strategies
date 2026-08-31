@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/dd28c83af9b2cb798d.png)
-[trans]
-
-### 概述
-
-该策略是一个结合ATR指标和ADX指标的趋势跟踪策略。它会根据市场的趋势状态,动态调整ATR的倍数,从而实现更好的趋势跟踪。
-
-### 策略原理
-
-该策略主要基于ATR指标和ADX指标。
-
-首先,计算真实波动范围(ATR)和ADX。ATR反映市场波动程度,ADX判断趋势力度。
-
-然后,根据ADX的多空向指标DX的差值,判断目前走势的多空状态。如果DI+高于DI-,则为多头趋势,如果DI-高于DI+,则为空头趋势。
-
-接着,当ADX上升时,使用一个较大的ATR倍数(m1),当ADX下降时,使用一个较小的ATR倍数(m2),从而实现动态调整。这是该策略的核心所在。
-
-最后,结合ATR和价格的中值,计算上下轨,进而判断趋势方向。当价格突破上轨时看多,当价格突破下轨时看空。
-
-所以,该策略融合ATR指标和ADX指标,通过动态调整ATR参数,能够更好地捕捉趋势进行交易。
-
-### 优势分析
-
-该策略有几个明显的优势:
-
-1. 能够动态调整参数,更好地捕捉趋势
-2. 结合ATR和ADX两个指标,判断更为全面 
-3. 回撤有望控制在一定范围内
-4. 实现过程较为简单,容易理解
-
-所以,这是一个非常实用的趋势跟踪策略,回撤控制能力出色,值得推荐。
-
-### 风险分析
-
-该策略也存在一些风险:
-
-1. ADX指标存在滞后,可能错过趋势转折点
-2. ATR大小选择不当,可能导致获利不足或止损过大
-3. 突发事件导致快速打破上下轨,造成损失
-
-所以,需要注意的参数优化和风险控制。此外,黑天鹅事件也会对策略造成较大冲击。
-
-### 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化ATR和ADX的参数,使其更好地捕捉趋势
-2. 添加其他指标确认,避免ADX滞后问题
-3. 构建动态止损机制,控制单笔损失
-4. 调整仓位管理,不同市场环境下采取不同策略
-
-所以,该策略仍有很大的优化空间,针对问题进行参数和机制调整非常必要。
-
-### 总结
-
-该自适应ATR-ADX趋势策略V2整体来说非常出色,通过动态调整ATR参数,能够很好地捕捉趋势;同时结合ATR和ADX两个指标判断,容错性较强。但我们也要注意风险控制和策略优化,防止滞后和亏损扩大。总的来说,该策略值得学习和应用。
-
-|| 
 
 ### Overview  
 
@@ -122,7 +65,6 @@ So there is still much room for optimization by adjusting parameters and mechani
 
 In general, this Adaptive ATR-ADX Trend Strategy V2 performs very well. By dynamically adjusting ATR parameters, it captures trends nicely. Also, combining two indicators in ATR and ADX makes it more robust. But we still need to pay attention to risk control and optimization to prevent lagging and oversized losses. Overall, the strategy is well worth learning and applying.
 
-[/trans]
 
 > Strategy Arguments
 

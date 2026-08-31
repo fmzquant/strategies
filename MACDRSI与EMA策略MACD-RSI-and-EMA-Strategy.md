@@ -10,34 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1715d6499a48a9ee3ec.png)
-[trans]
-## 概述
-
-该策略结合了移动平均线(SMA)、平均真实范围指标(ATR)、顺势指标(CCI)和布林带,旨在发现短期和中期价格趋势,为交易决策提供支持。
-
-## 策略原理
-
-该策略使用四条不同周期的SMA曲线来识别价格趋势方向,包括5日、10日、50日和200日线。ATR用于测量市场波动率和设置止损点。CCI用于识别超买超卖情况。而布林带上下轨则可作为支持阻力位。 
-
-当短期SMA(5日和10日线)上穿长期SMA(50日和200日线)时,做多。当短期SMA下穿长期SMA时,做空。CCI大于100时卖出,小于-100时买入。止损点按照ATR值设置。
-
-## 优势分析
-
-该策略结合移动平均线的趋势判断和CCI的超买超卖判断,可以有效把握市场机会。特别是中短期交易效果更佳。另外,风险控制比较科学,可以最大程度避免亏损。
-
-## 风险分析 
-
-该策略较为保守,容易产生错过信号的情况。当出现震荡市或趋势反转时,止盈可能会较早被触发。此外,参数设置不当也会对效果产生影响。
-
-## 优化方向
-
-可尝试优化SMA的参数,使之更贴近当前市场状态。也可以调整布林带的标准差,使之更适合作为支持阻力位。此外,可以考虑加入其他指标辅助判断,如KDJ、MACD等。这可能会提高策略的胜率。
-
-## 总结
-
-该策略整合了多种分析工具判断市场,在parameter设置得当的情况下,可以获得不错的投资回报。其止损规则也使得风险可控。值得实盘验证与优化。
-
-||
 
 ## Overview
 
@@ -65,7 +37,6 @@ Try to optimize the parameters of SMA to make them closer to current market cond
 
 Integrating a variety of analytical tools to judge the market, this strategy can yield satisfactory investment returns when parameters are set appropriately. Its stop loss rules also make risks controllable. It is worthwhile to verify and optimize in paper trading and live trading.
 
-[/trans]
 
 > Strategy Arguments
 

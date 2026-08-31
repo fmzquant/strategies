@@ -9,81 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略针对跳空缺口形态进行反转交易。当标的物跳空缺口下跌后反转上涨时,策略会在次日开盘或收盘进行买入操作,并设置追踪止损来锁定利润。
-
-## 策略原理
-
-1. 判断标的物是否出现跳空缺口,即当日开盘价低于前一日收盘价。
-
-2. 若出现跳空缺口下跌,则观察当日收盘价是否高于开盘价,表明反转上涨。
-
-3. 如果满足跳空缺口反转条件,则在次日开盘或收盘时进行买入操作。
-
-4. 入场后设置一定百分比的追踪止损,如5%。止损线随价格上涨而上调。
-
-5. 当价格回落至止损线时触发止损单,止损离场。
-
-## 优势分析
-
-该策略主要优点:
-
-1. 捕捉跳空缺口形态带来的反转交易机会。
-
-2. 反转形态高概率,符合多空心理交替的行情规律。
-
-3. 追踪止损锁定利润,无需人工监控。
-
-4. 可灵活设置入场时间和止损水平,适应个股特点。
-
-5. 程序化执行,回测优化方便。
-
-## 风险分析
-
-该策略主要风险:
-
-1. 跳空缺口反转失败概率存在,需要验证形态。
-
-2. 止损水平设定过大易被突破导致亏损扩大。
-
-3. 标的股选择不当,可能出现硬着陆大幅反转。
-
-4. 数据回测不足,可能存在过拟合风险。
-
-5. 实盘操作与回测存在差异。
-
-对应解决方法:
-
-1. 优化止损水平,同时控制单笔损失比例。
-
-2. 整体市场面判断,避免选择顶背离个股。
-
-3. 验证形态,检验成交量变化。
-
-4. 扩大回测样本量,模拟实盘验证。
-
-## 优化方向
-
-该策略可考虑以下几点进行优化:
-
-1. 结合趋势指标过滤,避免逆势entry。
-
-2. 动态调整止损水平比例,保护利润。
-
-3. 考虑增加时间过滤,只在指定日期交易。
-
-4. 评估形态强弱,调整入场资金比例。
-
-5. 测试不同持仓时间,寻找最优退出点位。
-
-## 总结
-
-跳空缺口反转策略利用高概率反转形态进行交易。通过止损策略可有效控制风险。但仍需警惕假反弹与市场结构变化。实盘时建议谨慎评估形态与趋势方向,同时持续优化参数。
-
-|| 
 ## Overview
 
 This strategy trades gap down reversals. When the current candle opens below the prior close and finishes up on the day with a close greater than the open, the strategy enters long on the next day's open or close.
@@ -156,7 +81,6 @@ Some ways to improve the strategy:
 
 The gap down reversal strategy capitalizes on high probability reversal patterns. Stops effectively control risk but beware of false bounces and changing market conditions. When trading live, cautious evaluation of patterns and trends along with ongoing optimizations are recommended.
 
-[/trans]
 
 > Strategy Arguments
 

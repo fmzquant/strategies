@@ -9,74 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于动量反转的交易理念,通过RSI、Stoch和MACD三个指标判断当前趋势,结合ATR设置止损止盈位,实现高效捕捉趋势反转的自动交易策略。
-
-## 策略原理
-
-该策略使用了RSI、Stoch和MACD三个指标来判断当前趋势方向。具体逻辑是:
-
-- RSI(7日):RSI值大于50为看涨,小于50为看跌
-- Stoch(%K,14,3,3):%K值大于50为看涨,小于50为看跌  
-- MACD(12,26,9):MACD大于Signal为看涨,小于Signal为看跌
-
-当三个指标同时看涨时,该Bar设置为绿色;当三个指标同时看跌时,该Bar设置为红色;如果指标信号存在分歧,则设置为黑色。
-
-交易规则如下:
-
-- 当当前Bar为绿色,前一个Bar为黑色或红色时,做多入场,入场价为该Bar高点加0.01
-- 当当前Bar为红色,前一个Bar为黑色或绿色时,做空入场,入场价为该Bar低点减0.01  
-- 如果多头持仓期间出现红色或黑色Bar,平仓
-- 如果空头持仓期间出现绿色或黑色Bar,平仓
-
-该策略还使用ATR(7日均线)设置止损止盈位置。止损位为ATR的1.5倍,止盈位为ATR的3倍。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 使用多指标判断趋势,可以有效过滤假突破。RSI、Stoch和MACD三个指标同时看涨或看跌时,大概率为趋势反转点。
-
-2. ATR止损止盈设置较优。ATR能有效跟踪市场波动程度,运用ATR的多倍设置止损止盈,可以根据市场情况动态调整止损止盈位,防止止损过于宽松或过于紧凑。
-
-3. 交易逻辑简单清晰,容易理解实现,适合用作自动交易策略。
-
-## 风险分析
-
-本策略也存在以下风险:
-
-1. 多指标组合判断可能存在个别指标发出错误信号的情况,从而影响入场时机。可以考虑调整指标参数或增加其他指标进行验证,降低错误信号率。
-
-2. ATR大小对止损止盈影响较大。如果ATR计算不准,可能导致止损过大或止盈过小。可以考虑加入其他指标辅助确认ATR大小。
-
-3. 缺乏趋势判断。本策略侧重反转交易,对趋势判断不足,容易在震荡行情中被套牢。可以加入趋势指标辅助判断。
-
-4. 存在过拟合风险。应进行充分回测,验证参数和规则可靠性。
-
-## 优化方向  
-
-本策略可以从以下方面进行优化:
-
-1. 调整或增加指标,提高对趋势反转时点的判断精确度。例如加入布林线判断超买超卖状态。
-
-2. 优化ATR的计算方法,使其更好跟踪市场波动。例如使用ATR与价格的比率等。
-
-3. 增加趋势判断指标,避免在震荡行情中被套。例如加入移动平均线判断趋势方向。 
-
-4. 优化资金管理,例如根据回撤情况调整仓位。
-
-5. 进行周期优化,验证不同时间周期参数的稳健性。
-
-6. 在更多品种和时间段回测,检查策略的稳定可靠性。
-
-## 总结
-
-本策略基于动量反转思路设计,使用RSI、Stoch和MACD组合判断趋势反转时点,配合ATR动态设置止损止盈,形成了一套较完整的趋势反转交易策略。策略具有交易逻辑清晰、止损止盈设置合理等优点,但也存在指标信号错误、缺乏趋势判断等不足。未来可以从优化指标参数、加入趋势判断、调整资金管理等方面进行改进,使策略更稳定可靠。
-
-|| 
 
 ## Overview
 
@@ -143,7 +75,6 @@ Possible improvements for this strategy:
 
 This strategy is designed based on momentum reversal concepts, using RSI, Stoch and MACD combo to identify reversals, with dynamic ATR stops and targets. It forms a relatively complete trend reversal system. Advantages include clear logic and reasonable stops/targets. Deficiencies include signal errors and lack of trend filters. Improvements can be made by optimizing indicators, adding trends, and adjusting position sizing. This can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

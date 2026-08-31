@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/170fb79891be6196c4d.png)
 
-[trans]
-
-## 概述
-
-该策略基于改动的能量潮指标(OBV)和MACD进行交易信号判断,属于量价综合策略。它融合了股价指数MACD和改动OBV作为量价综合信号,旨在发现股票量价强弱突破的交易机会。
-
-## 策略原理
-
-1. 计算简单移动平均线SMA,判断大盘趋势。
-
-2. 计算改动OBV。它根据收盘价和前一日收盘价的关系改动OBV的计算方式,使OBV更敏感。
-
-3. 在改动OBV上计算MACD。MACD由快线、慢线和MACD柱组成,可发现量能变化趋势。 
-
-4. 当MACD金叉且向上时,判断为买入信号。
-
-5. 当MACD死叉且向下时,判断为卖出信号。
-
-6. 结合大盘SMA判断,避免不必要的交易。
-
-## 优势分析
-
-1. 改动OBV更加敏感,可提前捕捉到量能变化。
-
-2. MACD可清晰判断量能变化趋势和关键点位。
-
-3. 量价综合信号,提高信号准确率。
-
-4. SMA判断大盘趋势,有助过滤误信号。
-
-5. 策略思路清晰易理解,参数优化空间大。
-
-## 风险分析
-
-1. 改动OBV容易产生误信号,需要配合其他指标过滤。
-
-2. MACD参数设置不当会错过交易机会或产生误信号。
-
-3. 需要关注股票本身信息,避免因个股问题导致损失。
-
-4. 需关注市场环境,不适用于特殊行情场景。
-
-5. 回测数据拟合风险,实盘可能效果下降。
-
-## 优化方向
-
-1. 测试不同SMA周期组合,优化大盘趋势判断。
-
-2. 测试MACD参数设置,优化量能变化判断。
-
-3. 增加其他指标过滤误信号,如KDJ、RSI等。 
-
-4. 添加止损策略,控制单笔损失。
-
-5. 优化资金管理策略,提高整体盈利效果。
-
-6. 测试不同股票策略参数差异。
-
-## 总结
-
-该策略融合改动OBV和MACD指标,实现了量价结合,能够提前捕捉股票量能态势的变化,从而产生交易信号。相比单一使用OBV或MACD,该策略可以提供更可靠的买卖时机。但该策略也存在一定的误信号风险,需要进一步优化指标组合和参数设定,并辅以资金管理手段,才能在实盘中获得稳定收益。总体来说,该策略思路清晰,值得进一步测试优化,以发掘其潜力。
-
-|| 
 
 ## Overview
 
@@ -135,7 +72,6 @@ This strategy uses altered On Balance Volume (OBV) and MACD to generate trading 
 
 The strategy combines altered OBV and MACD to achieve volume and price synthesis. It can capture volume momentum change early and generate trading signals. Compared to using OBV or MACD alone, this strategy provides more reliable trading opportunities. However, false signals risk exists and further optimizations on indicators and parameters, plus money management are needed to obtain steady profits in live trading. Overall, the strategy has clear logic and is worth testing and optimizing to explore its potential.
 
-[/trans]
 
 > Strategy Arguments
 

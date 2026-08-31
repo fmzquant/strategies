@@ -11,98 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/189faac7cf9959c9167.png)
 
-[trans]
-
-## 概述
-
-三重模式震荡交易策略是一个基于多种技术指标组合的短线交易策略。该策略结合超级趋势指标、SSL混合均线和改进QQE指标,形成稳定的交易信号。它适用于数字货币和股票等具有较高波动性的交易品种,特别是在突破期后具有较好的表现。
-
-## 原理
-
-### 入场信号
-
-长仓入场:
-
-- 超级趋势由空转多
-- 收盘价上穿SSL混合基线上轨 
-- QQE改进版为蓝色(多头)
-
-空仓入场:
-
-- 超级趋势由多转空
-- 收盘价下穿SSL混合基线下轨
-- QQE改进版为红色(空头)
-
-### 出场信号  
-
-长仓出场:超级趋势由多转空
-
-空仓出场:超级趋势由空转多
-
-### 止损
-
-可选择百分比止损、ATR止损或近期最高最低价止损
-
-### 止盈
-
-可设置止盈回报比例,自动计算止盈价格
-
-### 资金管理 
-
-可选是否使用资金管理逻辑控制仓位大小
-
-### 绘图
-
-- 绘制超级趋势线、SSL混合均线通道
-- 可选择是否绘制EMA均线
-- 绘制多空头开仓、止损、止盈线
-- 绘制多空头开仓标签
-
-## 优势
-
-1. 多重指标组合,形成稳定交易信号
-
-结合超级趋势、SSL混合均线和QQE改进版指标,不同指标相互验证,可过滤假突破,形成高质量交易信号。
-
-2. 适合波动性品种的震荡交易
-
-策略采用短线交易方式,专注于捕捉中短线价格波动。超级趋势可有效跟踪价格趋势,SSL混合均线则可清晰识别支撑压力位,两者配合使用可在震荡行情中获取收益。
-
-3. 多种止损止盈方式可选
-
-止损可选择百分比、ATR值或近期极值。止盈可设置回报比例。资金管理可控制仓位。用户可根据品种特点和风险偏好自由组合。
-
-4. 清晰的绘图
-
-策略绘图清晰,可直观显示止损、止盈线位。开仓线标记易于识别交易信号。
-
-## 风险及优化
-
-1. 可能出现小亏损
-
-由于采用短线交易,无法完全避免普通的震荡型小亏损。可适当放宽止损幅度,优化资金管理逻辑。
-
-2. 假突破风险
-
-当价格出现假突破时,可能会形成错误信号。可测试不同周期的EMA来过滤假突破,或优化趋势识别指标参数。
-
-3. 监控指标失效风险 
-
-如果基础指标失效,则会出现多重错误信号。要定期验证指标有效性,发现问题及时调整。
-
-4. 优化回测周期
-
-当前回测周期为固定时间段,无法对应品种不同的行情周期。建议优化为对应合约主交易时间段。
-
-5. 优化品种适应性
-
-可针对不同品种数据特点微调策略参数,提高长短仓胜率。建议采用步进优化方法比较不同参数对策略的影响。
-
-## 总结
-
-本策略通过组合使用多个指标形成交易信号,可有效过滤假突破,适合波动性较大的数字货币和个股。同时提供多种止损止盈方式可供选择,使用灵活。总体来说,该策略形成稳定的交易信号,在中短线震荡行情中可以获得较好收益。通过进一步优化,可以针对不同交易品种优化参数,提高策略profit factor。本策略为一个值得深入研究的高效交易系统。
-
-||
 
 
 ## Overview
@@ -194,7 +102,6 @@ Fine tune parameters for each instrument's data characteristics, improving win r
 
 This strategy combines multiple indicators for robust signals, filtering false breakouts. It excels trading volatile cryptocurrencies and equities short-term. Numerous stop loss and take profit choices provide flexibility. Overall, stable signals are generated for medium-term range trading. Further optimizations can improve profit factor across instruments. A promising high-performance trading system worth in-depth research.
 
-[/trans]
 
 
 > Strategy Arguments

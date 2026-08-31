@@ -15,94 +15,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-
-这是一种基于多时间尺度技术指标组合的量化交易策略，通过综合分析移动平均线、随机相对强弱指标(SRI)和价格动量，实现精准的市场进入和风险控制。该策略旨在捕捉市场趋势，同时有效管理交易风险，适用于追求稳定收益的量化交易者。
-
-#### 策略原理
-
-策略核心由五个关键技术指标组成：
-1. 移动平均线指标：
-- 5日、10日、50日和100日简单移动平均线(SMA)
-- 通过多时间尺度移动平均线的相对位置判断市场趋势方向
-- 价格与移动平均线的相对关系确定进入信号
-
-2. 随机相对强弱指标(SRI)：
-- 使用1分钟时间尺度计算SRI
-- SRI低于70作为做多信号
-- SRI高于30作为做空信号
-
-3. 蜡烛线形态：
-- 分析开盘价与前一根K线收盘价的关系
-- 判断当前价格动量和市场情绪
-
-4. 风险管理机制：
-- 设置止盈(TP)和止损(SL)点
-- 实现盈亏保本(Break-Even, BE)策略
-- 动态调整止损位置
-
-#### 策略优势
-
-1. 多维度信号验证
-- 综合使用移动平均线、SRI和价格动量
-- 显著降低错误信号的概率
-- 提高交易信号的可靠性
-
-2. 灵活的风险控制
-- 预设止盈和止损点
-- 动态盈亏保本机制
-- 有效控制单笔交易最大损失
-
-3. 多时间尺度分析
-- 结合不同周期移动平均线
-- 全面捕捉市场趋势
-- 提高策略适应性
-
-4. 参数可调节性
-- 可自定义止盈、止损点
-- 适应不同市场环境和交易品种
-
-#### 策略风险
-
-1. 参数敏感性风险
-- 移动平均线和SRI参数对策略表现影响显著
-- 需要进行充分的回测和参数优化
-
-2. 市场剧烈波动风险
-- 极端市场条件下策略可能失效
-- 建议设置最大回撤限制
-
-3. 过度交易风险
-- 频繁交易可能增加交易成本
-- 需要结合实际交易成本进行调整
-
-4. 指标滞后性风险
-- 移动平均线存在一定滞后性
-- 可能错过趋势early stage信号
-
-#### 策略优化方向
-
-1. 引入机器学习算法
-- 使用监督学习算法优化参数
-- 动态调整止盈止损点
-- 提高策略的自适应能力
-
-2. 增加附加过滤条件
-- 引入成交量指标
-- 加入趋势强度指标
-- 提高信号的准确性
-
-3. 多品种适应性优化
-- 开发通用参数自适应机制
-- 减少人工干预
-- 提高策略的普适性
-
-#### 总结
-
-这是一种基于多时间尺度分析的量化交易策略，通过综合技术指标和先进的风险管理机制，旨在捕捉市场趋势并控制交易风险。策略的核心优势在于信号的多维度验证和灵活的风险控制。未来将通过机器学习和更复杂的技术指标组合进一步提升策略的稳定性和收益率。
-
-|| 
 
 #### Overview
 
@@ -189,7 +101,6 @@ The strategy's core consists of five key technical indicators:
 #### Summary
 
 This is a quantitative trading strategy based on multi-timeframe analysis, aiming to capture market trends and control trading risks through comprehensive technical indicators and advanced risk management mechanisms. The strategy's core advantages lie in multi-dimensional signal verification and flexible risk control. Future improvements will focus on enhancing stability and return rates through machine learning and more complex technical indicator combinations.
-[/trans]
 
 
 

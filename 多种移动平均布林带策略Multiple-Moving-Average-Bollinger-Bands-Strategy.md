@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/21bf538abf67daa81fe.png)
-[trans]
-### 概述
-
-该策略通过输入不同类型的移动平均线构建布林带,从而发掘更多交易机会。它提供了12种移动平均线类型,可以灵活组合,以获得最佳参数。
-
-### 策略原理  
-
-该策略的核心在于利用用户输入的移动平均线类型,包括SMA、EMA、WMA、DEMA、TMA、VAR、WWMA、ZLEMA、TSF、HULL、TILL等12种,结合布林带指标形成交易信号。布林带的中轨线采用选择的移动平均线,上下轨分别是中轨线正负一个标准差。当价格突破上轨线时,做空;当价格突破下轨线时,做多。这样通过不同移动平均线类型的组合,可以优化参数,获得更稳定和准确的交易信号。  
-
-代码主要分为以下部分:
-1. 定义12种移动平均线类型的计算函数,包括SMA、EMA、WMA等。 
-2. getMA函数,根据mav输入参数返回相应的移动平均线。
-3. 计算布林带的中轨线、上轨线、下轨线。中轨采用getMA函数得到的移动平均。
-4. 绘制布林带。
-5. 生成长信号和空信号。价格突破上轨时空头,突破下轨时多头。
-
-### 优势分析  
-
-该策略最大的优势在于提供了多种移动平均线类型。不同市场环境下,移动平均线反应快慢不同,采用多类型移动平均可以大大增强策略的适应性。此外,该策略可以优化移动平均线长度参数,寻找最佳组合,从而获得更准确的交易信号。
-
-### 风险分析
-
-该策略的主要风险在于移动平均线本身信号混乱,可能出现多次虚假突破。此外,布林带指标对剧烈价格变动也比较敏感,中轨线无法有效跟踪价格。这就需要采用稳定性较强的移动平均线类型,并适当调整参数。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-1. 测试不同的移动平均线组合,寻找最佳参数,提高信号稳定性。  
-2. 增加止损策略,确保个别错误信号带来的损失控制。
-3. 结合其他指标过滤信号,避免频繁交易。比如MACD,KD等。 
-4. 优化资金管理,调整仓位。
-
-### 总结  
-
-该策略整体来说非常创新,为布林带指标提供了更丰富的细分应用。通过调整组合移动平均线,可以获得更加准确和稳定的信号。同时也为布林带策略的优化提供了新的思路。通过参数调整和优化,该策略可以成为一个非常实用的交易工具。
-
-||
 
 ### Overview  
 
@@ -83,7 +46,6 @@ The strategy can be optimized from the following aspects:
 
 The strategy is quite innovative overall, enriching Bollinger Bands indicator with more sophisticated applications. By adjusting the combined moving averages, more accurate and steady signals can be obtained. It also opens up new ideas for optimizing Bollinger Bands strategies. With parameter tuning and optimizations, this strategy can become a very practical trading tool.
 
-[/trans]
 
 > Strategy Arguments
 

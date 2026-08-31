@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e917a2a060a288d2aa.png)
-[trans]
-### 策略概述
-
-该策略是一个结合Heikin Ashi蜡烛线和超级趋势指标的趋势跟踪止损策略。它利用Heikin Ashi蜡烛线过滤市场噪音,超级趋势指标判断趋势方向,并以超级趋势作为动态止损线,实现高效的趋势跟踪和风险控制。
-
-### 策略原理
-
-1. 计算Heikin Ashi蜡烛线:包括开盘价、收盘价、最高价、最低价。
-2. 计算超级趋势指标:根据ATR和价格计算上轨和下轨。
-3. 结合Heikin Ashi蜡烛线和超级趋势判断趋势方向。
-4. 当Heikin Ashi收盘价较前一根K线收盘价更接近超级趋势的上轨时为看涨趋势;当Heikin Ashi收盘价较前一根K线收盘价更接近超级趋势的下轨时为看跌趋势。
-5. 在看涨趋势中,以超级趋势上轨作为追踪止损线;在看跌趋势中,以超级趋势下轨作为追踪止损线。
-
-### 策略优势
-
-1. 利用Heikin Ashi过滤假突破,识别趋势信号更可靠。
-2. 超级趋势作为动态止损,最大程度锁定趋势获利,避免回撤过大。 
-3. 结合不同时间周期判断多空,确认高低位信号更可靠。
-4. 定时平仓功能避免特定时间的非理性行情影响。
-
-### 策略风险
-
-1. 趋势反转时容易止损。可适当宽松止损线降低此风险。
-2. 超级趋势参数设置不当可能导致止损过宽或过窄。可测试不同参数组合。 
-3. 未考虑资金管理问题。应设置仓位控制。
-4. 未考虑交易成本。应测算成本影响。
-
-### 策略优化方向
-
-1. 优化超级趋势参数组合,寻找最优参数。
-2. 增加仓位控制功能。
-3. 增加成本考量,如手续费、滑点等。
-4. 可根据趋势强弱灵活调整止损幅度。
-5. 考虑结合其他指标过滤入场信号。
-
-### 总结
-
-该策略整合Heikin Ashi和超级趋势两个指标的优点,能捕捉趋势方向,同时利用超级趋势实现自动化的动态跟踪止损,从而锁定趋势利润。策略风险主要来自趋势反转和参数优化,这两个方面都可通过进一步优化获得改进。总体来说,该策略利用指标整合提高了交易系统的稳定性和收益空间。
-
-||
 
 ### Strategy Overview
 
@@ -89,7 +49,6 @@ This strategy combines the Heikin Ashi candlesticks and the SuperTrend indicator
 
 This strategy combines the strengths of Heikin Ashi and SuperTrend to identify trend directions and automatically trail the trend with dynamic stop loss to lock in profits. Main risks come from trend reversal and parameter tuning. Further optimizations on these two aspects can improve strategy performance. Overall this strategy demonstrates how indicator integration can enhance stability and profitability of trading systems.
 
-[/trans]
 
 > Strategy Arguments
 

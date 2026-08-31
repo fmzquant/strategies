@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e71a2a708f61bbf9a5.png)
-[trans]
-## 概述
-
-本策略的核心是利用ADX指标来判断市场趋势,并结合DI+-指标的差值来自动识别突破点,从而实现自适应交易。当DI+与ADX差值超过设定阈值时做多,当DI-与ADX差值超过设定阈值时做空。该策略可以自动识别趋势突破点,无需人工干预,适合中长线持有。
-
-## 策略原理  
-
-1. 计算True Range,Directional Movement指标,得到DI+、DI-、DX及ADX等指标。
-
-2. 比较DI+与ADX的差值amplitude1, DI-与ADX的差值amplitude2。
-
-3. 当amplitude1大于设定阈值(如10)时产生做多信号;当amplitude2大于设定阈值(如10)时产生做空信号。
-
-4. 并要求ADX介于DI+和DI-之间,以过滤错误信号。
-
-这样,当市场进入趋势状态时,DI+或DI-会明显领先ADX,从而产生交易信号;当市场趋势结束时,DI+、DI- 和ADX会重新贴近,避免追高杀跌。
-
-## 策略优势
-
-1. 自动识别趋势突破点,无需人工判断。
-
-2. 可灵活调整DI与ADX差值的阈值,适应不同市场环境。 
-
-3. 结合ADX指标,可有效过滤错误信号。
-
-4. 持股时间较长,无需高频交易,资金使用率高。
-
-5. 回撤可控,稳定增长。
-
-## 策略风险
-
-1. ADX指标滞后,可能错过短线交易机会。可以结合其他指标或减小ADX参数以提高敏感度。
-
-2. 震荡行情中容易被套。可以引入止损策略或增加ADX过滤条件以减少套盘概率。
-
-3. 大幅趋势反转时易损失惨重。可设置移动止损或跟踪止损来控制风险。
-
-## 策略优化
-
-1. 可以测试不同市场及品种,调整最佳参数组合。
-
-2. 可考虑结合其他指标判断,提高信号准确率。例如MACD,KD等。
-
-3. 增加止损策略以控制回撤和最大损失。
-
-4. 引入仓位管理,根据市场情况调整交易仓位。
-
-5. 优化入场点选择和出场条件,以降低交易风险。
-
-## 总结  
-
-本策略整合ADX和DI指标的优点,实现了对趋势的有效判断和自适应交易。无需频繁操盘,适合中长线持有。同时也存在一定风险,需要加入辅助技术指标和资金管理手段进行改进,可大大提升策略稳定性。该策略思路可靠、逻辑清晰,值得深入研究与应用。
-
-||
 
 ## Overview
 
@@ -117,7 +63,6 @@ Thus, when the market enters a trend, DI+ or DI- will notably lead ADX, generati
 
 This strategy integrates the strengths of ADX and DI indicators to effectively judge trends and implement adaptive trading. No frequent trading needed, suitable for medium-long term holdings. There are also certain risks. Auxiliary technical indicators and risk management techniques need to be incorporated to improve strategy stability. The strategy idea is reliable and logically clear, worth in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

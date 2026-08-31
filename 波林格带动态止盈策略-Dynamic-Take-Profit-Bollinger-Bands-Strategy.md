@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13e205166f875bf6bf6.png)
 
-[trans]
-#### 概述
-该策略利用波林格带(Bollinger Bands)指标,在价格触及上轨时做空,触及下轨时做多,并设置动态止盈位,当持仓达到1%的盈利就平仓。该策略的核心思想是价格总是在波林格带内波动,具有均值回归的特性,因此可以在价格偏离移动平均线过远时进行反向操作,博取价差收益。
-
-#### 策略原理
-1. 计算移动平均线和标准差:使用简单移动平均(SMA)计算收盘价的移动平均值(basis),然后计算收盘价相对移动平均线的标准差(dev)。
-2. 计算上轨和下轨:上轨(upper)为 basis + dev \* multiplier,下轨(lower)为 basis - dev \* multiplier,其中 multiplier 为波动幅度的倍数。
-3. 产生交易信号:当收盘价上穿下轨且当前收盘价小于开盘价时产生做多信号;当收盘价下穿上轨且当前收盘价大于开盘价时产生做空信号。
-4. 动态止盈:开仓后,根据开仓价和止盈比例(takeProfitPercentage)计算止盈价格,当价格达到止盈价时平仓。
-5. 可视化:在图表上绘制波林格带、移动平均线以及交易信号。
-
-#### 策略优势
-1. 简单有效:该策略逻辑清晰,只利用了一个技术指标,便于理解和实施。
-2. 适用性广:波林格带具有普适性,可以用于各种不同的交易标的和市场。
-3. 动态止盈:与固定止盈相比,动态止盈可以让盈利单的利润最大化,同时控制住风险。
-4. 有效把握趋势:在趋势行情中,价格触及上轨或下轨后,通常会沿原方向继续运行一段时间,该策略可以有效把握这种趋势机会。
-
-#### 策略风险
-1. 震荡市中表现不佳:当市场处于宽幅震荡、价格在波林格带内反复突破时,该策略可能会频繁出现交易信号,导致交易次数过多,手续费成本上升。
-2. 趋势行情中回撤较深:如果趋势持续时间很长,价格长期偏离均线,该策略逆势而为,回撤可能较深。
-3. 参数选择困难:波林格带的参数(如长度、倍数)对策略表现影响很大,但并没有放之四海而皆准的最优参数。
-
-#### 策略优化方向
-1. 结合趋势判断:在策略中加入趋势判断指标(如移动平均线),在趋势行情中可暂停交易,或者顺势交易。
-2. 优化止盈止损:可以根据ATR等波动率指标对止盈止损进行动态调整,以期获得更好的收益风险比。
-3. 多因子组合:考虑将波林格带与其他技术指标(如RSI、MACD等)结合使用,提高信号准确性,减少虚假信号。
-4. 基本面过滤:在产生交易信号后,可以通过基本面数据(如财报、行业数据等)进行二次确认,从而提高策略的稳健性。
-
-#### 总结
-该策略利用波林格带构建了一个简单有效的交易系统,以价格触及上下轨为信号,同时采用动态止盈的方式控制风险。策略在趋势行情中表现较好,但在震荡市中可能面临频繁交易的问题。后续可以从趋势判断、止盈止损优化、因子组合、基本面过滤等方面对策略进行完善,以期获得更加稳健的收益。
-
-|| 
 
 #### Overview
 This strategy utilizes the Bollinger Bands indicator to go short when the price touches the upper band and go long when it touches the lower band. It sets a dynamic take profit level and closes the position when it reaches 1% profit. The core idea is that the price always fluctuates within the Bollinger Bands and has a mean-reverting characteristic, so we can take reverse positions when the price deviates too far from the moving average to capture the price difference.
@@ -74,7 +42,6 @@ This strategy utilizes the Bollinger Bands indicator to go short when the price 
 #### Summary
 This strategy constructs a simple and effective trading system using Bollinger Bands, taking the price touching the upper and lower bands as signals, and adopting dynamic take profit to control risk. The strategy performs well in trending markets but may face frequent trading issues in ranging markets. Further improvements can be made in terms of trend analysis, take profit and stop loss optimization, factor combination, and fundamental filtering to achieve more robust returns.
 
-[/trans]
 
 
 

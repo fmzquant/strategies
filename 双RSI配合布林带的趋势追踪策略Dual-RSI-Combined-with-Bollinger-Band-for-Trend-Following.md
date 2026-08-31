@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略通过双RSI指标判断超买超卖状况,并结合布林带的突破来产生交易信号,属于趋势追踪类型策略。策略较为简单,旨在通过多种指标的组合提高信号的可靠性,在趋势行情中获得较好收益。
-
-## 原理分析
-
-策略使用双时间周期RSI,分别判断短期和长期的超买超卖状况。只有两者同时达到超买或超卖阈值时,才产生交易信号。这可以避免单一RSI产生的错误信号。 
-
-同时,策略还引入布林带指标判断价格突破。只有在RSI达到条件的同时,价格也突破布林带上轨或下轨时,才会产生交易。布林带的突破判断可以避免在非趋势行情中产生信号。
-
-最后,策略还加入快慢均线判断趋势方向。只有在布林带突破时,大趋势也符合RSI信号方向时,才会开仓。
-
-## 优势分析
-
-策略综合运用多种指标判断,可以较好地过滤假信号,只在趋势明显时产生交易。同时快慢均线的配合也利于跟踪趋势。策略较简单直接,适合跟踪行情中出现的短期linewidth趋势进行获利。
-
-## 风险分析
-
-策略可能存在无法及时识别趋势反转的风险。如果行情出现V型反转,策略可能无法快速止损,导致较大损失。此外,参数设置也会影响策略表现,需要进行优化寻找最佳参数。
-
-## 优化思路
-
-1. 增加止损策略,在价格反转时快速止损。
-
-2. 引入其他指标判断,如增加成交量的验证,避免假突破。 
-
-3. 优化参数设置,找到最佳参数组合。
-
-4. 增加机器学习模型,辅助判断行情趋势模式,以提高信号准确性。
-
-5. 加强资金管理和风险控制。优化仓位管理,严格控制单笔损失。
-
-## 总结
-
-本策略综合运用双RSI和布林带指标,在行情出现短期趋势时能够获利。策略较简单直接,适合跟踪短期趋势。但也存在一定局限性,如无法快速识别趋势反转。通过引入止损策略、增加信号过滤和参数优化等,可以进一步增强策略的稳健性和盈利能力。
-
-
-
-||
 
 
 ## Overview
@@ -88,7 +47,6 @@ The main risk is failing to promptly identify trend reversals. Sharp V-shaped re
 
 This strategy combines dual RSI and Bollinger Bands to profit from short-term trends. While simple and straightforward, limitations exist like delayed reversal signals. Adding stop loss, signal filtering, parameter optimization can further enhance its robustness and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13e48f7c4135f2fe6ce.png)
-[trans]
-
-## 概述
-
-一云双提前知机会均线趋势跟踪策略是一种基于人气指标一云图的趋势跟踪策略。该策略利用一云图的转折线提前发出买卖信号,实现趋势的提前捕捉。同时,策略还融合了均线的趋势判断,进行多层确认,避免假突破。
-
-## 策略原理
-
-该策略主要基于以下几个要点:
-
-1. 使用转化线(Conversion Line)和基准线(Base Line)构建一云图,并以26周期的位移绘制云图。
-
-2. 当收盘价突破云图上轨时,发出买入信号;当收盘价跌破云图下轨时,发出卖出信号。
-
-3. 为过滤假突破,要求当前收盘价同时突破转化线和基准线的最大值和最小值。
-
-4. 止损线设置为入场价的5%,可关闭。
-
-通过这样的多重过滤,可以有效识别趋势转折点,及时捕捉新的交易机会。同时严格的突破过滤也可以减少假信号的发出。
-
-## 策略优势
-
-这种策略有以下几个优势:
-
-1. 一云图转折线有明显的提前特征,可以较早捕捉到趋势的转折。
-2. 融合均线判断,避免了隔夜gaps造成的假突破。
-3. 多重条件过滤,可以减少假信号,提高信号质量。
-4. 长线操作,回撤相对较小,容易寻找止盈位置。
-5. 可适用于不同品种,特别适合趋势品种。
-
-## 策略风险
-
-该策略也存在以下一些风险:
-
-1. 趋势市场适用性更好,盘整市场会增加假信号。
-2. 一云图参数设置会影响效果,需要针对不同品种进行优化。 
-3. 止损位置设置需要谨慎,避免被套。
-4. 信号频率偏低,容易错过短线机会。
-
-可以通过以下方法减少风险:
-
-1. 选择趋势明显的品种,避免交易盘整品种。
-2. 优化一云图参数,针对不同周期确定最佳参数组合。
-3. 采用移动止损或及时止损,控制单笔损失。
-4. 可以结合其他指标,增加信号释放频率。
-
-## 策略优化
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加仓位管理机制,通过运算符如 `strategy.position_size` 控制建仓比例。
-
-2. 增加品种过滤,通过 `security()` 过滤品种池,自动识别趋势程度。
-
-3. 增加止损止盈策略,设置移动止损或部分止盈,进一步控制风险。
-
-4. 结合其他指标,如布林线、RSI等,构建多指标交易系统,提高信号质量。
-
-5. 应用机器学习方法,通过训练判断买卖信号的可靠性,动态调整下单数量。
-
-## 总结
-
-一云双提前知机会均线趋势跟踪策略通过一云图实现趋势的提前判断,再融合均线多层过滤器,可以有效识别高质量交易机会。策略较为稳健,优化空间大,可广泛应用于实盘交易。
-
-||
 
 ## Overview
 
@@ -138,7 +73,6 @@ The strategy can be further improved on the following aspects:
 
 The Ichimoku Early Cloud Trend Following Strategy utilizes Ichimoku Cloud for early trend identification, reinforced by moving average filters, to reliably detect high-quality trading opportunities. The strategy is stable with much room for enhancements and can be widely adopted for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

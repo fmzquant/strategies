@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略专注于熊市下跌行情中的做空交易,同时确保资产处于大周期下行通道中,然后在进一步下跌后止盈退出。
-
-主要交易逻辑是:
-
-1. 计算MACD指标的快线、慢线和柱状线
-
-2. 当MACD快线下穿慢线,表示开始进入下跌趋势
-
-3. 价格低于450日移动平均线,确认处于下行长期趋势中 
-
-4. 当上述两个条件满足时,做空入场
-
-5. 止盈线设定为入场价的8%下方
-
-6. 止损线设定为入场价的4%上方
-
-该策略充分利用MACD判断短期趋势转向,并辅助长期均线判断大趋势,避免盲目做空。止盈止损策略控制风险。
-
-## 策略优势
-
-- MACD判断短期下跌机会 
-
-- 长期均线过滤避免做空反转
-
-- 止盈止损比为2:1,控制风险
-
-## 策略风险
-
-- 需要优化MACD参数
-
-- 长期均线容易滞后产生错误信号
-
-- 仅做空无法利用多头机会
-
-## 总结
-
-该策略在确保大趋势为下行的情况下,捕捉短期下跌机会做空。止盈止损策略 Optimization和组合管理对策略效果至关重要。
-
-
-||
 
 
 ## Strategy Logic
@@ -96,7 +52,6 @@ It utilizes MACD for short-term turns and long MA to avoid blind shorting. Profi
 
 This strategy captures short-term down moves when ensured of a bear trend. Profit/loss tuning and position sizing are key for performance.
 
-[/trans]
 
 
 

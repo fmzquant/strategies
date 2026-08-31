@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11bf14bf005bb632302.png)
 
-[trans]
-#### 概述
-
-该策略基于 Ichimoku 云指标中的领先 Span B 线,当价格突破领先 Span B 线时产生交易信号。当价格向上突破领先 Span B 线时,产生买入信号;当价格向下突破领先 Span B 线时,产生卖出信号。该策略利用了 Ichimoku 云指标中领先 Span B 线对未来价格趋势的预测能力,通过及时捕捉价格突破领先 Span B 线的时机,以期获得良好的交易机会。
-
-#### 策略原理
-
-1. 计算 Ichimoku 云指标中的转折线(Tenkan-sen)、基准线(Kijun-sen)、领先 Span A 线(Senkou Span A)和领先 Span B 线(Senkou Span B)。
-2. 当收盘价向上突破领先 Span B 线时,产生买入信号,开仓做多。
-3. 当收盘价向下突破领先 Span B 线时,产生卖出信号,平仓。
-4. 在图表上标记买入和卖出信号,以便直观观察。
-
-#### 策略优势
-
-1. 该策略基于 Ichimoku 云指标,能够综合考虑多个时间维度的价格信息,提供更全面的市场分析。
-2. 利用领先 Span B 线对未来价格走势的预测能力,捕捉趋势性机会。
-3. 策略逻辑简单清晰,易于理解和实现。
-4. 通过图表标记买卖信号,方便交易者直观把握交易时机。
-
-#### 策略风险
-
-1. 该策略依赖于单一指标,可能面临指标失效的风险。
-2. 在震荡市场中,频繁的价格突破可能导致交易信号过多,增加交易成本。
-3. 策略未设置止损,面临潜在的大额损失风险。
-
-#### 策略优化方向
-
-1. 结合其他技术指标或价格行为特征,对交易信号进行进一步确认,提高信号可靠性。
-2. 引入仓位管理和风险控制机制,如设置合理的止损止盈,控制单笔交易风险。
-3. 对策略参数进行优化,如调整 Ichimoku 云指标的计算周期,以适应不同市场状况。
-4. 考虑交易成本因素,设置适当的信号过滤机制,减少频繁交易。
-
-#### 总结
-
-Ichimoku Leading Span B 突破策略是一个基于 Ichimoku 云指标中领先 Span B 线的交易策略。通过捕捉价格突破领先 Span B 线的时机,以期获得趋势性交易机会。该策略优点是逻辑简单,易于实现,能够综合考虑多时间维度的价格信息。但同时也面临单一指标失效、频繁交易和缺乏风控等潜在风险。因此,在实际应用中,需要结合其他指标、优化参数设置、引入风控措施等方面进行优化,以提升策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 
@@ -83,7 +46,6 @@ This strategy is based on the Leading Span B line of the Ichimoku Cloud indicato
 #### Summary
 
 The Ichimoku Leading Span B Breakout Strategy is a trading strategy based on the Leading Span B line of the Ichimoku Cloud indicator. By capturing the timing of price breakouts of the Leading Span B line, it aims to obtain trending trading opportunities. The strategy's advantages are its simple logic, easy implementation, and ability to comprehensively consider price information from multiple time dimensions. However, it also faces potential risks such as single indicator failure, frequent trading, and lack of risk control. Therefore, in practical application, it is necessary to optimize the strategy by combining other indicators, optimizing parameter settings, introducing risk control measures, etc., to improve the strategy's robustness and profitability.
-[/trans]
 
 > Strategy Arguments
 

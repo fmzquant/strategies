@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b02e38bb7efb8d3d5a.png)
 
-[trans]
-
-## 概述
-这是一个结合了动量指标和K线实体过滤的个性化交易策略。它综合运用了随机动量指数、快速RSI和K线实体过滤三种技术指标,实现了一个动量突破为主,同时考虑超买超卖的策略。
-
-## 策略原理  
-本策略使用以下三个指标进行交易信号判断:
-
-1. 随机动量指数(SMI):它结合了K线实体间距和收盘价的相对位置,判断价格动能强弱。当SMI上穿过界线时产生买入信号,下穿界线时产生卖出信号。
-
-2. 快速RSI(7日线):它判断了价格的超买超卖状况。RSI低于20时为超卖产生买入信号,高于80时为超买产生卖出信号。  
-
-3. K线实体过滤:计算10日内的平均K线实体大小,当今日K线实体超过该平均值的三分之一时有效,避免无效信号。
-
-本策略首先判断SMI和RSI的信号,如果符合其中一个indicator的信号要求,再结合K线实体过滤判定该信号是否有效,如果有效则产生交易信号。
-
-## 优势分析
-本策略具有以下优势:
-
-1. 多个指标结合,判断更精确可靠。
-
-2. 增加K线实体过滤,避免无效信号。
-
-3. 结合超买超卖判断,在趋势反转点更容易捕捉信号。
-
-4. 多空两个方向交易,收益机会增加。
-
-5. 采用部分交易仓位,避免单次交易过度损失。
-
-
-## 风险分析
-本策略也存在一些风险:  
-
-1. 指标作用下,容易产生误信号导致亏损。可通过参数优化减少误信号。
-
-2. 部分仓位交易无法充分利用每个方向的趋势机会。可通过放大交易仓位获得更高收益。
-
-3. SMI作为主指标,对参数设置敏感,不当设置可能错过交易机会或增加误信号。
-
-4. 多空双向交易,操作频繁,交易成本增加。
-
-## 优化方向  
-本策略可从以下几个方向进行进一步优化:
-
-1. 优化SMI和RSI的参数,找到最佳参数组合。
-
-2. 增加仓位放大和仓位管理机制,在趋势中获得更高收益。  
-
-3. 增加止损策略,降低单次亏损风险。
-
-4. 结合更多indicator判断信号可靠性,减少误信号。
-
-5. 采用高效合约,降低交易成本。
-
-
-## 总结  
-本策略综合运用了SMI、快速RSI和K线实体过滤三种技术指标,实现了一个动量为主,兼顾超买超卖的个性化交易策略。它具有判断精确、识别有效信号、结合超买超卖和多空交易等优势,也存在一些参数敏感性、不能充分利用趋势、操作频繁等风险。通过持续优化参数设置、增加仓位和止损管理、减少误信号等方法,本策略可以获得更好的交易效果。
-||
 
 ## Overview
 This is a personalized trading strategy that combines momentum indicators and candlestick entity filtering. It comprehensively uses three technical indicators - Stochastic Momentum Index, fast RSI and candlestick entity filtering to implement a momentum breakthrough-based strategy while also considering overbought and oversold conditions.
@@ -124,7 +66,6 @@ The strategy can be further optimized in the following aspects:
 
 ## Conclusion   
 The strategy comprehensively utilizes the SMI, fast RSI and candlestick entity filtering indicators to implement a momentum-based, overbought/oversold-aware personalized trading strategy. It has advantages like precise judgment, identification of valid signals, combination of overbought/oversold conditions and dual-directional trading, but also risks like parameter sensitivity, inability to fully capitalize trends, and frequent operations. By continuously optimizing parameters, increasing position sizing and stop loss management, reducing false signals etc., the strategy can achieve better trading performance.  
-[/trans]
 
 > Strategy Arguments
 

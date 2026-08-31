@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/164854fcc7ef77fc2b7.png)
-[trans]
-## 概述
-
-本策略采用双移动均线形成交易信号的方式,当短期移动均线上穿长期移动均线时生成买入信号;当短期移动均线下穿长期移动均线时生成卖出信号。该策略结合移动均线的趋势跟踪功能,可以有效捕捉价格趋势,实现趋势交易。
-
-## 策略原理
-
-本策略使用两条不同周期的指数移动均线(EMA)。EMA1为短期移动均线,周期设置为9;EMA2为长期移动均线,周期设置为21。当短期移动均线EMA1上穿长期移动均线EMA2时,产生买入信号;当EMA1下穿EMA2时,产生卖出信号。
-
-这样可以利用移动均线的趋势跟踪功能,在价格开始新的趋势方向时及时捕捉信号,跟踪趋势进行交易。例如当价格从下跌转为上涨时,短期移动均线会先于长期移动均线上升,短期移动均线上穿长期移动均线是价格开始上涨的一个早期信号。
-
-## 优势分析
-
-本策略最大的优势在于可以有效识别价格趋势,尤其适合趋势性较强的市场。移动均线本身具有很好的趋势跟踪功能,双移动均线策略进一步增强了这一优势。此外,相比单一移动均线策略,双移动均线策略可以进一步过滤假信号,信号的可靠性更高。
-
-## 风险分析
-
-本策略最大的风险在于当价格出现剧烈波动时,移动均线会有滞后性,可能出现错过最佳入场或出场时机的情形。此外,当市场处于震荡区间时,该策略会产生更多无效信号,降低策略的稳定性。
-
-为降低风险,可以适当调整移动均线的周期参数,或增加其他指标进行滤波。例如结合市场波动率指标设置阈值,避免在市场大幅震荡时依然进行交易等。
-
-## 优化方向
-
-本策略的优化空间主要在以下几个方面:
-
-1. 优化移动均线周期参数,寻找最优参数组合
-2. 增加其他指标结合进行滤波操作,提高信号的可靠性
-3. 根据不同品种和市场环境设定自适应的参数
-4. 结合量能指标等确定具体的入场点位
-5. 优化止损机制
-
-## 总结
-
-本策略采用双指数移动均线形成交易信号的方法,最大优势是价格趋势跟踪能力强,可以有效识别价格趋势转折。但也存在移动均线滞后等问题。下一步可以从提高信号质量、确定具体入场时机以及止损方面进行优化。
-
-||
 
 ## Overview
 
@@ -81,7 +45,6 @@ The optimization space mainly lies in the following aspects:
 
 This strategy generates signals by dual exponential moving averages, with strength in price trend tracking capability to detect trend reversals. But limitations like MA lag do exist. Next step would be enhancing signal quality, entry timing and stop loss from various dimensions.
 
-[/trans]
 
 > Strategy Arguments
 

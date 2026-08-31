@@ -11,86 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9f62b112e2b6907c15.png)
 
-[trans]
-
-## 概述
-
-震荡多空RSI换币策略是一种用于加密货币的量化交易策略。它结合了市场技术指标RSI与ICHIMOKU指标,在价格震荡时识别多空信号,实现低买高卖。它适用于中长线周期,如3-4小时以上。
-
-## 策略原理
-
-该策略主要基于以下指标和规则:
-
-**ICHIMOKU指标**
-- Tenkan线:过去20根K线的最高最低价中点
-- Kijun线:过去50根K线的最高最低价中点  
-- Senkou A线:Tenkan线与Kijun线的中点  
-- Senkou B线:过去120根K线的最高最低价中点
-- Chikou线:当前K线收盘价的前30根K线
-
-**RSI指标**
-- 区间为0-100
-- 高于50为多头信号,低于50为空头信号
-
-**入场规则**  
-多头入场:Tenkan线上穿Kijun线(黄金交叉)且价格突破Senkou A&B线,同时RSI高于50
-空头入场:Tenkan线下穿Kijun线(死亡交叉)且价格跌破Senkou A&B线,同时RSI低于50  
-
-**退出规则**  
-与入场相反的信号出现时立即止损离场
-
-该策略综合考虑了中长期趋势、短期资金流动性和超买超卖情况,在震荡行情中捕捉反转机会。它同时设置了止损规则来规避巨额亏损。
-
-## 优势分析
-
-**1. 多种指标综合判断,确保高确定性**
-
-该策略同时考虑ICHIMOKU的趋势和支撑阻力判断、RSI的超买超卖情况,以及K线实体方向的资金流动性,确保信号的可靠性。
-
-**2. 适合震荡行情,频繁获利**  
-
-加密货币市场波动较大,该策略可充分捕捉震荡行情中的反转机会,实现频繁的低买高卖。
-
-**3. 防止追涨杀跌,风险可控**  
-
-策略综合考虑中长期趋势和短期情况,可避免追涨杀跌的风险,同时设置止损规避风险。
-
-
-## 风险分析
-
-**1. 可能错过部分运行行情**
-
-该策略以反转为主,当出现长时间的运行行情时,策略会频繁震荡打击资金。
-
-**2. 单一品种,无法分散风险**  
-
-策略仅交易单一品种,无法分散市场系统性风险。
-
-**3. 极端行情下发生止损** 
-
-在极端行情下,如跳空、量能爆发等情况时,策略可能会触发止损而被迫离场。
-
-
-## 优化方向  
-
-**1. 增加止损策略,降低单次亏损**
-
-可设置移动止损或余额百分比止损来锁定利润,防止利润归零。
-
-**2. 结合股指相关性,分散市场风险**  
-
-可在股指相关性较强的品种中寻找交易机会,以分散市场系统性风险。
-
-**3. 增加条件过滤,减少无效交易**
-
-可设置价格波动率、成交量变动等条件过滤,避免无效的反转信号,提高获利概率。
-
-
-## 总结
-
-震荡多空RSI换币策略综合运用ICHIMOKU指标和RSI指标判断加密货币的反转点,适合震荡行情的低买高卖获利。它同时设置了止损规则来控制风险。该策略可通过优化止损机制、关联性分散风险和设置条件过滤来进一步增强效果,值得实盘验证。
-
-||
 
 ## Overview  
 
@@ -169,7 +89,6 @@ Filters like price volatility or volume changes can be added to avoid invalid re
 
 The Oscillating Long-Short RSI Crypto Switching Strategy combines ICHIMOKU and RSI indicators to identify reversal points for cryptocurrencies, suitable for buying low and selling high profit-taking during oscillations. It also sets stop loss rules to control risk. The strategy can be further enhanced by optimizing stop loss mechanism, diversifying risks through correlation and adding conditional filters, worth live testing.
 
-[/trans]
 
 > Strategy Arguments
 

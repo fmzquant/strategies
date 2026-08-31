@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bd05e091e1c85b6990.png)
-[trans]
-
-## 概述
-本策略主要思想是结合动能区和ATR指标,在出现金叉时做多,出现死叉时做空。同时设置止损和止盈价格。当价格出现反转信号时,会反向开仓,实现反转订单的功能。
-
-## 原理
-1. 使用快速EMA和慢速EMA计算多空信号。快速EMA高于慢速EMA为看涨,反之为看跌。
-2. 在无仓位时,出现金叉就做多,出现死叉就做空。
-3. 已开仓时,若出现反转信号,会先平掉当前仓位,再按相反方向开新仓。
-4. 使用ATR指标计算止损和止盈价格。止损价格会根据ATR通道进行调整,确保止损风险小。
-5. 当价格进入超买超卖区域时,会调整止损价格为最后一根K线的最高价或最低价,避免被套。
-
-## 优势
-1. 结合动能区和ATR,能够在趋势中顺势开仓,又能定时止损止盈。
-2. 实现反转订单功能,能够在价格反转时快速切换方向,充分利用价格双向波动获得更高收益。
-3. ATR止损机制能够有效控制单笔止损风险,整体实现高胜率。
-4. 结合超买超卖判定,避免被突发事件套住。
-
-## 风险及解决
-1. 反转订单在震荡行情中可能过于频繁交易,增加交易成本和止损几率。
-   - 解决:增加最小持仓周期,在震荡行情中减少反转。
-2. ATR值变化可能令止损范围过大或过小。 
-   - 解决:根据ATR值实时调整止损距离。
-3. 参数设置不当可能导致交易频率过高或信号效果不佳。
-   - 解决:根据不同品种合理选择参数组合。
-
-## 优化方向
-1. 优化参数设置,寻找最佳参数组合。
-2. 增加辅助技术指标过滤,提高信号质量。 
-3. 增加资金管理模块,使仓位与账户总资产挂钩。
-4. 增加跨时间周期分析,利用更多信息提升策略效果。
-
-## 总结
-本策略整合动能区和ATR指标的优势,实现高效双向交易。反转订单机制及ATR智能止损,能够充分利用价格波动。优化参数设置和结合更多指标可进一步提高策略效果。本策略适合高频双向交易,也可作为辅助决策工具。
-
-||
 
 ## Overview
 The main idea of this strategy is to combine the Action Zone and ATR indicator to go long when there is a golden cross and go short when there is a dead cross. It also sets stop loss and take profit prices. When a price reversal signal occurs, it will open reverse positions to achieve reverse order functionality.
@@ -80,7 +44,6 @@ The main idea of this strategy is to combine the Action Zone and ATR indicator t
 ## Summary 
 This strategy integrates the advantages of Action Zone and ATR indicators to achieve efficient two-way trading. The reverse order mechanism and intelligent ATR stop loss can make full use of price fluctuations. Optimizing parameter settings and incorporating more indicators can further improve strategy performance. This strategy is suitable for high frequency two-way trading and can also serve as an auxiliary decision-making tool.
 
-[/trans]
 
 > Strategy Arguments
 

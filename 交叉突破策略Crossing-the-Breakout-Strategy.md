@@ -9,54 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-移动均线交叉策略是一种非常常见的量化交易策略。该策略利用移动均线的金叉死叉来判断趋势,以获利。当短期移动均线上穿长期移动均线时,表明股价开始上涨,可以做多;当短期移动均线下穿长期移动均线时,表明股价开始下跌,可以做空。
-
-## 策略原理
-
-该策略基于移动均线的金叉死叉来判断买入和卖出时机。代码中使用`upOrDown`和`longOrShort`两个布尔型输入参数来判断做多做空;使用`percentInput`输入参数来设定股价变化的阈值百分比;使用`closePositionDays`输入参数来设定头寸持有的天数。
-
-策略的核心逻辑是:计算今天相对于昨天的涨跌幅,如果达到了输入的阈值百分比,则发出交易信号。如果是看涨,则当今天相对昨天上涨超过阈值时,做多;如果是看跌,则当今天相对昨天下跌超过阈值时,做空。
-
-做多做空后,会在画图上用不同颜色标记这一天和之后的4天。4天后自动平仓。
-
-## 策略优势
-
-- 使用移动均线金叉死叉判断市场趋势是一个成熟可靠的方法
-- 策略逻辑简单清晰,容易理解实现
-- 可以通过调整参数来控制策略的频繁程度
-- 自动止损机制可以有效控制风险
-
-## 策略风险
-
-- 移动均线具有滞后性,可能错过价格快速变化的时点
-- 股价短期内可能出现大幅震荡,导致不必要的交叉信号
-- ParameterSet参数设置不当也会影响策略效果
-- 无法有效应对突发事件的影响
-
-风险控制措施:
-
-1. 优化移动均线参数,适当延长周期有助于过滤噪声
-2. 加大股价变化阈值百分比,减少不必要的交易
-3. 测试不同的持仓天数,控制单笔损失
-4. 结合其他指标进一步确认趋势信号
-
-## 策略优化方向
-
-- 可以考虑将移动均线改为EMA、DMA等指数移动均线,使其对价格变化更敏感
-- 增加止损机制,如突破均线时立即止损
-- 增加其他技术指标进行组合,如MACD、KDJ等,提高策略胜率
-- 可以尝试机器学习方法自动优化参数
-- 优化进入和退出的时机,如breakout entrada等
-
-## 总结
-
-移动均线交叉策略是一个非常简单实用的量化交易策略。它通过判断短期和长期趋势的关系,利用股票价格的趋势性来获利。该策略容易实现,逻辑清晰,是许多量化交易策略的基础。通过参数调整和优化,可以获得更好的策略效果。但我们也需要注意控制风险,防止曲解其思想而盲目使用。
-
-||
 
 
 ## Overview
@@ -104,7 +56,6 @@ Risk management:
 
 The moving average crossover strategy is a very simple and practical quantitative trading strategy. By judging the relationship between short-term and long-term trends, it profits from the trending nature of asset prices. This strategy is easy to implement with clear logic, and forms the foundation of many quantitative trading strategies. We can obtain better performance through parameter tuning and optimizations. But we also need to manage risks and avoid misuse.
 
-[/trans]
 
 > Strategy Arguments
 

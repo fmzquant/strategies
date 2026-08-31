@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/da5b5ce8d268105657.png)
-[trans]
-## 概述
-
-该策略名为“黄金交叉法则”,是一种同时结合指数移动平均线(EMA)和相对强弱指数(RSI)的量化交易策略。它的主要思想是在高需求区买入,在高供给区卖出,利用EMA判断总体趋势方向,利用RSI判断超买超卖区域。
-
-## 策略原理
-
-该策略首先计算50日EMA和14日RSI。然后设置高需求区和高供给区的布林带。当价格高于50日EMA且RSI高于55时为买入信号。当价格低于50日EMA且RSI低于45时为卖出信号。策略的入场点是在高需求区买入和在高供给区卖出。
-
-具体来说,当收盘价高于50日EMA且在高需求区时,发出买入信号;当收盘价低于50日EMA且在高供给区时,发出卖出信号。这样,就利用EMA判断大致趋势,用RSI判断超买超卖区,在极端区域打反向战术交易,从而获得较高的胜率。
-
-## 优势分析
-
-该策略结合EMA和RSI双重指标,能够有效判断市场趋势和超买超卖区域。EMA平滑价格,判断大趋势,RSI判断局部调整空间。两者互补,避免假信号。
-
-另外,该策略增设了高需求区和高供给区概念,就是利用布林带设置的超买超卖区间。这样可以过滤掉大部分噪音,只在极端区域出手,从而提高策略胜率。
-
-总的来说,该策略综合多个指标和概念,利用不同工具的优势,钳形攻势,形成强势的价值选股和择时系统,能够获得较高的盈利率。
-
-## 风险分析
-
-该策略最大的风险在于布林带的设置。如果高需求区和高供给区设置得过大或过小,都会导致策略频繁损失。必须根据不同股票特点和市场环境Tuning参数。
-
-另一个潜在风险是,如果行情出现长期筑顶或筑底,会出现EMA和RSI同时发出错误信号的概率。这时,必须介入人工干预,停止策略,避免巨额损失。
-
-## 优化方向 
-
-第一,该策略可以引入机器学习算法,实现参数的动态优化。例如,使用强化学习调整布林带上下限,或者使用LSTM优化EMA和RSI的参数。
-
-第二,该策略可以结合文本采集和自然语言处理技术,获取市场情绪指标,助力交易决策。在极端市场情绪出现时,手动干预策略,可以有效规避风险。
-
-第三,该策略可以和选股策略结合。首先用深度学习等方法选出具有成长潜力的标的;然后再用该策略进行择时;从而全面提高策略效果。
-
-## 总结
-
-该策略总体来说,指标组合得当,优势明显,有效控制了风险。通过引入机器学习和文本分析等技术进行优化,有望进一步提升策略效果,成为新一代量化策略的典范。
-
-||
 
 ## Overview
 
@@ -85,7 +47,6 @@ Thirdly, stock screening strategies can be combined. By first selecting stocks w
 
 In conclusion, this is a solid strategy with appropriate indicator combos and obvious edge, while keeping risks in check. Further performance boost can be expected by optimizing with machine learning and text analytics. It has the potential to become a new paradigm of quantitative trading strategies.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,58 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1231ccb1521d35a7fdf.png)
 
-[trans]
-
-## 概述
-
-这个交易策略采用多重移动平均线和动量指标相结合的方式,识别趋势的方向和力度,在趋势开始阶段建立仓位,随后利用移动止损、移动止盈等方式进行利润优化和风险控制,目标是在中长线趋势中捕捉大幅度的价格走势。
-
-## 策略原理
-
-1. 使用两组不同参数设置的移动平均线组合构建快线和慢线:
-    - 快线由5周期指数移动平均线和25周期加权移动平均线构成,代表短期趋势
-    - 慢线由28周期指数移动平均线和72周期加权移动平均线组成,代表中长期趋势
-
-2. 当快线上穿慢线时,表示短期趋势开始强于中长期趋势,为入场信号。
-
-3. 结合动量指标RSI,仅在RSI低位(买入信号)或RSI高位(卖出信号)时才入场,以过滤假突破。
-
-4. 一旦入场后,采用移动止损来压缩亏损,采用移动止盈来锁定利润。
-
-5. 当快线下穿慢线时,提示趋势反转,此时止损或止盈退出。
-
-## 优势分析
-
-1. 双重移动平均线组合过滤噪音,识别趋势中段的运行方向和力度。
-2. 仅在趋势开始阶段建立仓位,避免假突破造成不必要的损失。 
-3. 动量指标结合过滤 Entries,提高 entries 质量。
-4. 移动止损压缩单笔亏损,减少个别点亏带来的损失。
-5. 移动止盈让利润可观,在行情好的时候追加利润。
-
-## 风险分析
-
-1. 双重移动平均线在趋势转折点会有滞后,可能错过反转机会。
-    - 可以适当缩短移动平均线周期,使其更敏感。
-2. 假突破造成不必要入场。
-    - 可以加入更多过滤指标。
-3. 止损或止盈距离未优化,可能过于宽松或过于紧凑。
-    - 可以通过回测优化参数,找到最佳止损止盈距离。
-4. 方向性策略,只适合趋势市。
-    - 可以根据大盘情况选择是否使用该策略。
-
-## 优化方向
-
-1. 优化移动平均线参数,找到representations of trend的最佳参数组合。
-2. 增加趋势过滤指标,例如ATR动态止损,能量潮指标等。
-3. 优化止损止盈参数,找到最佳参数组合。
-4. 增加对大行情的判断,选择是否启用该策略。
-5. 增加对多时间周期的综合判断,使用更大级别的趋势方向指引短周期策略方向。
-
-## 总结
-
-本策略整合移动平均线和动量指标, aim to 识别establish early entries during emerging 趋势s, 通过及时止损和止盈来进行风险和利润管理。虽然仍需要进行参数和规则优化以适应更广泛的市场情况,但已具备捕捉中长线趋势的基本框架和方向。通过不断优化,本策略有望成长为一个稳定、高效的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -114,7 +62,6 @@ This trading strategy combines multiple moving averages and momentum indicators 
 
 This strategy integrates moving averages and momentum indicators to identify and establish early entries during emerging trends, while managing risk and reward via timely stops and take profits. Although further parameter and logic optimization is needed to adapt to wider market conditions, it already has a basic framework and directionality for capturing mid- to long-term trends. With continual improvements, this strategy can potentially grow into a robust, efficient trend-following system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13099eb28f322da696f.png)
-[trans]
-
-## 概述
-
-一目均衡策略是一种趋势跟踪策略,它通过计算均线并结合 Ichimoku Kinko Hyo指标判断趋势方向,实现低风险的趋势跟踪交易。
-
-## 策略原理  
-
-该策略主要基于 Ichimoku Kinko Hyo 指标判断趋势方向。Ichimoku Kinko Hyo 又称“一目均衡表”,它由转换线(Tenkan-sen)、基准线(Kijun-sen)、先行线(Senkou Span A)和确认线(Senkou Span B)组成,形成前方和后方之间的均衡区域,称为“云带”。当价格在云带上方时为多头趋势,价格下破云带为空头信号。
-
-此策略结合价格与均线的关系判断趋势方向。当价格上穿基准线和转换线时产生买入信号;当价格下破云带时产生卖出信号。通过这样的组合判断,可以有效过滤假突破,锁定趋势方向。  
-
-## 优势分析
-
-- 利用 Ichimoku Kinko Hyo 指标判断趋势,避免被震荡市场的假突破误导
-- 均线参数可调,可针对不同周期进行优化  
-- 结合均线关系判断,可有效锁定趋势方向
-- 采用云带判断,可实现低风险的趋势跟踪交易
-
-## 风险分析
-
-- 震荡行情中容易产生错误信号  
-- 参数设置不当可能导致过于频繁或不及时地产生交易信号
-- 需要人工判断趋势方向及参数调整
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化 Ichimoku 参数,适应更多时间周期
-2. 增加止损策略,控制单笔损失  
-3. 结合其他指标判断强弱趋势,避免被震荡行情误导  
-4. 增加开仓条件,避免在极端行情中建仓
-
-## 总结  
-
-整体来说,一目均衡策略通过 Ichimoku Kinko Hyo 指标判断趋势方向,可有效锁定趋势,并配合均线关系判断产生交易信号,实现低风险的趋势跟踪交易。该策略可通过参数调整和优化来适应不同的市场环境,值得投资者进一步研究和使用。
-
-||
 
 ## Overview  
 
@@ -86,7 +47,6 @@ The strategy can be optimized in several ways:
 
 In conclusion, the Ichimoku Balance Line Strategy uses the Ichimoku Cloud to determine trend direction, locks in trends effectively, and generates trade signals by combining price relationship with moving averages, allowing low-risk trend trading. The strategy can be adapted to different market environments through parameter tuning and optimizations, making it worthwhile for investors to research and utilize.  
 
-[/trans]
 
 > Strategy Arguments
 

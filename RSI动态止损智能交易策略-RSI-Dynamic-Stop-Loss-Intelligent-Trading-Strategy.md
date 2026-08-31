@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/100b6af3faa1fee8422.png)
 
-[trans]
-#### 概述
-该策略是一个基于RSI指标的动态止损交易系统,结合了SMA均线和ATR波幅指标来优化交易决策。策略采用多层次止盈方案,通过金字塔式平仓方式实现收益最大化,同时运用ATR动态止损来控制风险。策略具有高度的自适应性,能够根据市场波动情况自动调整交易参数。
-
-#### 策略原理
-策略主要依据RSI超卖区间(RSI<30)作为开仓信号,并要求价格位于200日均线之上,以确保处于上升趋势。系统采用三重止盈目标(5%、10%、15%),并结合ATR动态止损。具体来说:
-1. 入场条件: RSI低于30且价格在SMA200上方
-2. 仓位管理: 单次开仓使用75%资金
-3. 止损设置: 基于1.5倍ATR值的动态止损
-4. 止盈策略: 分别在5%、10%、15%位置设置三档止盈点,按33%、66%、100%比例分批平仓
-
-#### 策略优势
-1. 动态风险管理: 通过ATR自适应市场波动
-2. 分批止盈: 降低情绪干扰,提高盈利概率
-3. 趋势确认: 利用均线过滤假信号
-4. 资金管理: 采用百分比仓位控制,适应不同账户规模
-5. 佣金优化: 考虑了交易成本,更贴近实际交易
-
-#### 策略风险
-1. 均线滞后性可能导致入场延迟
-2. RSI超卖不一定代表反转
-3. 大比例仓位可能带来较大回撤
-4. 频繁分批止盈可能增加交易成本
-建议通过调整参数和增加过滤条件来管理这些风险。
-
-#### 策略优化方向
-1. 增加成交量确认信号
-2. 引入趋势强度指标
-3. 优化止盈比例分配
-4. 添加时间周期过滤
-5. 考虑加入波动率自适应的仓位管理
-
-#### 总结
-该策略通过结合技术指标和动态风险管理,构建了一个相对完整的交易系统。其优势在于自适应性强、风险可控,但仍需根据实际市场情况进行参数优化。策略适合中长期投资者使用,可作为系统化交易的良好起点。
-
-|| 
 
 #### Overview
 This strategy is a dynamic stop-loss trading system based on the RSI indicator, combining SMA and ATR indicators to optimize trading decisions. It employs a multi-level take-profit approach with pyramid-style position closing to maximize returns while using ATR dynamic stop-loss for risk control. The strategy features high adaptability and automatically adjusts trading parameters based on market volatility.
@@ -81,7 +45,6 @@ These risks can be managed through parameter adjustments and additional filters.
 
 #### Summary
 This strategy combines technical indicators with dynamic risk management to create a comprehensive trading system. Its strengths lie in adaptability and controlled risk, though parameter optimization based on market conditions is still necessary. The strategy is suitable for medium to long-term investors and serves as a solid foundation for systematic trading.
-[/trans]
 
 
 

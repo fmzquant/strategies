@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11e8ea4d21504523c68.png)
 
-[trans]
-
-## 概述
-
-移动平均线穿越策略通过计算不同周期的移动平均线,利用它们之间的交叉作为买入和卖出信号,属于技术分析类策略。该策略结合了快速移动平均线、中速移动平均线和慢速移动平均线的交叉进行交易信号判断,可以有效过滤市场噪音,识别趋势。
-
-## 策略原理
-
-该策略通过计算3种不同周期的移动平均线:34周期EMA、89周期EMA和200周期EMA。策略首先计算出这3条移动平均线的值,然后进行绘图,不同周期的移动平均线以不同颜色和线粗进行绘制,以便清晰识别。 
-
-策略的交易信号判断基于不同移动平均线之间的交叉:当快速移动平均线向上穿越中速移动平均线时,产生买入信号;当快速移动平均线向下穿越中速移动平均线时,产生卖出信号。这属于较为积极的交易策略。 
-
-为过滤掉过多噪音,策略还引入了慢速移动平均线。只有当快速移动平均线同时穿越慢速移动平均线,才会触发真正的买入和卖出信号。例如,只有当快速移动平均线同时上穿中速线和慢速线时,才会触发买入信号。这可以确保只在较大趋势发生转折时才进行交易。
-
-## 策略优势
-
-- 利用多周期移动平均线,可以有效过滤市场噪音,识别大趋势的转折。
-- 快速移动平均线对市场变化敏感,中速移动平均线稳定,慢速移动平均线过滤假突破,三者搭配可以识别趋势转折点。  
-- 采用EMA算法计算移动平均线,对最新价格更敏感,可以提早反应趋势转变。
-- 图形直观显示不同移动平均线,通过交叉清晰判断入市和出场点。
-- 策略较为灵活,可调整移动平均线周期,适应不同市场环境。
-
-## 策略风险
-
-- 移动平均线存在时滞,可能延迟生成交易信号。
-- 若市场趋势强劲,移动平均线可能无效,会产生过多交易信号。
-- 移动平均线周期设置不当,可能增大交易频率和风险。
-- 大盘突发事件造成剧烈波动,会使移动平均线产生错误交叉。
-- 交易费用较高的市场不适合该高频策略。
-
-## 策略优化
-
-- 评估不同移动平均线周期的组合,找到最佳参数。
-- 加入Volatility Index等波动率指标,在大幅震荡时暂停交易。
-- 结合stochastic oscillator等超买超卖指标,避免在极端点买入卖出。  
-- 优化入场时机,等待重要移动平均线回调测试后再进场。
-- 采用自适应移动平均线,让周期动态调整,更灵活应对市场变化。
-
-## 总结
-
-移动平均线穿越策略是一种典型的技术分析策略。它观察不同时间周期移动平均线的关系,据此判断市场趋势转折买卖点。该策略同时采用快中慢三条移动平均线并观察其交叉情况,既可以敏感捕捉趋势,也可有效过滤假信号。通过参数优化,可灵活适应市场环境。但在具体运用时,仍需考虑移动平均线滞后等问题。总体来说,该策略直观简单,思路清晰,值得实盘验证优化。
-
-||  
 
 
 ## Overview
@@ -96,7 +53,6 @@ To filter out excess noise, the strategy also employs a slow MA. Only when the f
 
 The crossing moving average strategy is a typical technical analysis strategy. It observes the relationship between MAs of different timeframes to determine market reversal points. The simultaneous use of fast, medium and slow MAs can both react quickly to trends and filter fake signals effectively. With proper parameter tuning, it can be flexible for different market environments. Still, lagging issues with MAs need to be considered. Overall, the strategy has an intuitive logic and is worth validating and optimizing in live markets.
 
-[/trans]
 
 > Strategy Arguments
 

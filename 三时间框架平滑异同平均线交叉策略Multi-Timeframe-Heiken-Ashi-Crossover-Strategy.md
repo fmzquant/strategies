@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于三个时间周期的平滑异同平均线指标,当不同周期指标同向看涨或看跌时,产生交易信号。目的是利用多时间框架确认趋势,降低假信号概率。
-
-## 原理
-
-平滑异同平均线(Heiken Ashi)指标不同于普通K线,其计算方式可平滑价格曲线,识别趋势较为准确。
-
-本策略采用日线、周线和月线三个时间周期的平滑异同平均线指标。当三者同向看涨,即出现所有时间周期的火烛线为绿色时,产生买入信号;当三者同看跌,即火烛线全部为红色时,产生卖出信号。
-
-入场后,只要任一时间周期平滑异同平均线转向,即产生平仓信号。
-
-## 优势
-
-1. 多时间框架验证,可减少假信号,增强稳定性。
-
-2. 平滑异同平均线指标可识别趋势,减少噪音。
-
-3. 规则简单清晰,容易实施。
-
-4. 可灵活选择时间周期组合,适应不同品种。
-
-5. 无参数优化,极易操作。
-
-## 风险及解决方案
-
-1. 多重条件限制,可能错过交易机会。可降低条件限制。
-
-2. 平滑异同平均线滞后问题仍存在,可能延迟信号。可结合其他指标进行优化。
-
-3. 未设止损,无法控制风险。可加入移动止损策略。 
-
-4. 盈亏比例固定,缺乏灵活性。可设置动态止盈止损。
-
-5. 仅基于指标,容易产生假信号。可加入量价确认机制。
-
-## 优化思路
-
-1. 测试添加更多时间框架,如15分钟或60分钟。
-
-2. 优化平滑异同平均线参数,提高灵敏度。
-
-3. 加入移动止损策略,以控制风险。
-
-4. 研究加入市场结构指标,避开震荡范围。 
-
-5. 新增再入场条件,延长持仓周期。
-
-## 总结
-
-该策略利用多时间周期平滑异同平均线指标的优点实现趋势跟踪,但仅基于指标易产生假信号。可通过添加更多指标、止损策略、优化参数等方法进行改进,使策略更可靠。整体来说,多时间框架验证思路值得学习借鉴。
-
-|| 
 
 ## Overview
 
@@ -117,7 +62,6 @@ Exits when any timeframe flips direction after entry.
 
 The strategy taps into Heiken Ashi across timeframes for trend following, but indicator-only design prone to false signals. Improvements can be made via additional indicators, stops, parameter optimization to make it more reliable. Overall the multi-timeframe confirmation is a useful concept.
 
-[/trans]
 
 > Strategy Arguments
 

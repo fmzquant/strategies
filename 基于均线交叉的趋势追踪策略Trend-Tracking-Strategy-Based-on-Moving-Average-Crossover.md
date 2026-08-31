@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/138f66f65f6b344bb1a.png)
-[trans]
-## 概述
-
-本策略是一个基于均线交叉来判断市场趋势方向,并追踪趋势的量化交易策略。该策略运用了多组不同参数的简单移动平均线的交叉来判断买入和卖出时间点。
-
-## 策略原理
-
-该策略主要判断规则如下:
-
-1. 当短期均线从下方向上突破长期均线时,表明行情可能正在进入多头趋势,此时做多;
-2. 当短期均线从上方向下跌破长期均线时,表明行情可能正在进入空头趋势,此时做空;
-3. 使用不同参数的均线判断不同级别的趋势,实现不同时间段内的趋势追踪。
-
-具体而言,策略中使用了20日线,30日线,50日线,60日线和200日线这5条移动平均线。当20日线向上交叉50日线时判断为买入信号;当10日线向下交叉30日线时判断为卖出信号。使用不同参数的均线,可以判断更长期和更短期的趋势方向。
-
-## 策略优势
-
-这种基于均线交叉的趋势追踪策略具有以下优势:
-
-1. 操作简单,容易理解和实现;
-2. 可以有效地判断市场趋势方向和强弱;
-3. 不同参数设置可以实现不同时间段内的趋势追踪;
-4. 可定制化程度高,可以根据自己的需要调整均线参数。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 均线具有滞后性,可能会产生一定的迟滞;
-2. 错误的均线参数设置可能导致过多的交易信号和不必要的损失;
-3. 需要注意避免在盘整行情中使用该策略,应该在明确的趋势行情中使用。
-
-为了降低风险,我们可以调整均线参数,优化参数设置,同时辅助使用其他指标进行决策。
-
-## 策略优化方向 
-
-我们可以从以下几个方面来优化改进该策略:
-
-1. 优化均线参数,找到最优参数组合,降低交易频率的同时提高盈利率;
-2. 增加其他技术指标进行辅助,例如RSI,KD等,提高决策的准确性;  
-3. 添加止损策略,及时止损退出可以有效控制风险;
-4. 结合复杂的机器学习模型进行参数优化和策略评估,不断迭代升级。
-
-## 总结
-
-本策略是一个非常基础的趋势追踪策略。它使用均线交叉原理判断市场趋势方向,简单有效,容易理解实现。我们可以在此基础之上进行大量扩展与优化,使其适用于更复杂的量化交易。总的来说,这是一个非常好的策略基础框架。
-
-||
 
 ## Overview  
 
@@ -107,7 +59,6 @@ We can optimize this strategy in the following areas:
 
 This is a very basic trend tracking strategy. It uses MA crossover principle to determine market trend direction, simple and effective, easy to understand and implement. We can make lots of expansions and optimizations to make it suitable for more complex quantitative trading. Overall this is a great strategy framework to build upon.
 
-[/trans]
 
 
 

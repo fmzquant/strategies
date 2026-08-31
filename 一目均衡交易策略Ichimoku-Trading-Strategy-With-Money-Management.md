@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14ae8911455f5025f3a.png)
-[trans]
-
-### 概述
-
-这是一个基于Ichimoku Kinko Hyo指标的只做多头的股票交易策略。该策略利用一目均衡的基本原理来判断入市和出市时机。
-
-### 策略原理
-
-该策略首先计算一目均衡的组成元素,包括天玑线(Tenkan-Sen)、基准线(Kijun-Sen)、先行线(Senkou Span A)和延迟线(Senkou Span B)。
-
-当满足以下条件时,做多入市:
-- 天玑线上穿基准线,表明短期均线上穿长期均线,属于金叉信号
-- 价格上穿云图,表明股价取得支持,开始上涨
-- 未来的云图呈红色,表明未来趋势向上
-- 价格距离天玑线小于2倍ATR,表明价格不虚高,符合追涨策略
-- 价格距离基准线小于3倍ATR,表明价格不虚高,符合追涨策略
-- 天玑线和基准线都在云图之上,表明一目均衡趋势向上
-
-当满足以下条件时,平仓出场:
-- 天玑线下穿基准线,表明短期均线下穿长期均线,属于死叉信号
-- 价格跌破云图,表明股价失去支持
-- 或者盈利超过30%,遵循止盈策略
-- 或者亏损超过3%,遵循止损策略
-
-### 优势分析
-
-- 利用一目均衡指标判断股价趋势,准确率较高
-- 结合ATR来控制追涨止跌,避免超买超卖
-- 同时判断多种信号,避免假信号
-- 补仓策略可以加速盈利
-
-### 风险分析
-
-- 一目均衡信号可能滞后,需要结合其他指标判断
-- 错误的ATR参数设置可能导致超买超卖
-- 补仓策略可能加大亏损风险
-- 需要人工确定参数,不同股票参数不同
-
-### 优化方向
-
-- 可以结合MACD、KDJ等其他指标来确认信号
-- 可以加大止盈幅度,缩小止损幅度
-- 可以根据历史数据自动优化ATR参数
-- 可以研究不同行业股票的参数区别,建立参数池
-
-### 总结
-
-这是一个非常实用的股票交易策略,利用一目均衡判断趋势,ATR控制风险,以追涨止跌的方法来获利。该策略优势明显,经过参数优化和组合指标优化后,效果会更好,适合用于实盘交易。
-
-||
 
 ### Overview
 
@@ -108,7 +58,6 @@ Exit if the following conditions are met:
 
 This is a very practical stock trading strategy, utilizing Ichimoku for trend and ATR for risk control, profiting from chase strategy with stop loss. The advantages are obvious. Further optimizations on parameters and combining indicators would make it even better for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,78 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略试验性地将Chande动量指标、RMI指标、Triple HMA RSI、Double EVW RSI、Triple EMA RSI等多个动量指标组合使用,在所有指标同时发出信号时判断趋势方向并入场。属于多因子实验性策略。
-
-## 策略原理
-
-1. 计算Chande动量指标,并设置其买入卖出线。
-
-2. 计算RMI指标、Triple HMA RSI、Double EVW RSI、Triple EMA RSI等多个指标。
-
-3. 设置每个指标的买入线和卖出线。
-
-4. 当Chande动量指标发生向上穿越买入线时,检查其它指标是否也低于各自的买入线。如果所有指标同时满足条件,则产生买入信号。
-
-5. 反之,如果Chande动量指标下穿卖出线,而其它指标同时超过各自卖出线,则产生卖出信号。
-
-## 策略优势
-
-1. 多个指标组合,可以互相验证,避免误判。
-
-2. Chande动量指标对趋势变化敏感,可以有效捕捉转折。
-
-3. RMI指标可以显示动量水平,判断超买超卖。
-
-4. HMA RSI、EVW RSI等指标测试不同RSI计算方式。
-
-5. 多指标组合方式可以灵活测试指标效果。
-
-## 策略风险
-
-1. 多指标组合要求较难满足,信号较少,可能错失机会。
-
-2. 没有止损等风险控制手段。
-
-3. 指标效果存在时间段依赖性,可能对不同周期不敏感。
-
-4. 没有参数优化,指标参数设置可能不当。
-
-5. 回测数据不足,无法完全验证策略。
-
-对应解决方法:
-
-1. 适当降低指标阈值,提供更多交易机会。
-
-2. 加入移动止损或硬止损以控制单笔损失。
-
-3. 在不同周期和品种中测试,找到最佳参数。
-
-4. 采用机器学习或网格搜索等方法进行参数优化。
-
-5. 在更多市场中进行回测,确保策略稳健性。
-
-## 策略优化方向
-
-1. 测试不同指标参数设置,找到最优配置。
-
-2. 增加自适应多 timescale 动量指标。
-
-3. 引入趋势检测,避免逆势交易。
-
-4. 采用机器学习提高多指标权重配置。
-
-5. 结合均线系统,改进入场的时机选择。
-
-## 总结
-
-该策略通过组合多个动量指标,试图找到更可靠的趋势转折点。这种多元化的策略思路具有很强的拓展性和优化空间,可从参数选择、指标权重、风险控制等方面入手,在保证信号质量的前提下,获取更多符合系统逻辑的交易机会。但仍需注意回测不足所带来的曲拟合风险。
-
-|| 
 
 ## Overview
 
@@ -150,7 +78,6 @@ Possible Solutions:
 
 This strategy tries to identify more reliable trend turning points by combining multiple momentum indicators. The diversified logic has great extensibility and optimization potential in areas like parameter selection, indicator weighting, risk control etc, to acquire more quality signals while ensuring robustness, but risks like curve-fitting needs to be managed.
 
-[/trans]
 
 > Strategy Arguments
 

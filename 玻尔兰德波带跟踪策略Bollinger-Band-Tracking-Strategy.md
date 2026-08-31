@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1faec17c3a825eb3de6.png)
-[trans]
-### 概述
-
-此策略运用玻尔兰德波带指标,结合跟踪止损,实现趋势跟踪交易。当价格突破上轨时做空,当价格跌破下轨时做多,设置止损和止盈价格,以锁定收益。同时,该策略还提供可选的反转入场选择,即当价格重新进入波带时反向做单。
-
-### 策略原理
-
-该策略首先计算布林带的中轨、上轨和下轨。中轨为长度为Len的WMA均线,上轨和下轨距离代表标准差的倍数Deviation。 
-
-当价格上穿上轨线时,做空;当价格下穿下轨线时,做多。开仓后设置止损和止盈价格。止损价格为输入的Stop值,止盈价格为输入的Limit值。
-
-此外,策略还提供反转开仓的选择。勾选“Reversal Entry”后,价格重新进入布林带时做反向单,属于MEAN REVERSION交易方式。
-
-无论顺势开仓还是反转开仓,止损和止盈设置都相同。止损和止盈均有两个选择,固定止损或移动止损。后者trailers stop会根据价格变化进行调整。
-
-### 优势分析
-
-该策略结合布林带指标和跟踪止损,能够有效控制风险,同时锁定趋势获利。反转开仓方式可以减少止损被触发的概率。
-
-布林带上下轨能清晰判断价格突破,波段交易方式使盈亏结果明朗。跟踪止损调整止损位置,防止获利被套。
-
-### 风险分析
-
-布林带策略最大的风险在于趋势反转。突破上轨做空后,价格可能出现V型反转,导致快速止损。做多情况也类似。
-
-反转开仓方式可能错过趋势延续机会。价格重新进入波带后做反向单,可能使利润减少。
-
-此外,参数设置不当也会导致风险放大。Len和Deviation需要谨慎设置,否则将增加止损风险。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加参数自适应功能。Len和Deviation可以根据市场波动程度进行动态调整,使布林带更贴近价格。
-
-2. 增加开仓过滤条件。可以添加交易量突增、成交笔数增加等额外条件,避免被套。
-
-3. 结合其他指标过滤信号。比如MACD,KDJ等指标判断趋势性,避免错漏信号。
-
-4. 增加时间限制。只在特定时间段交易,可以减少隔夜风险。
-
-### 总结
-
-该玻尔兰德波带跟踪策略,使用布林带指标判断价格突破。设置止盈止损锁定收益,运用跟踪止损调整风险。策略简单实用,可根据市场选择顺势或反转交易。通过参数优化和条件过滤,可以将风险进一步降低,从而获得更稳定的收益。
-
-||
 
 ### Overview
 
@@ -101,7 +55,6 @@ The strategy can be optimized in the following aspects:
 
 The Bollinger Band tracking strategy determines price breakthroughs using Bollinger Band indicator. It locks profits by settings stop loss and take profit, and uses tracking stop loss to adjust risks. The strategy is simple and practical. Based on market conditions, trend trading or reversal trading can be selected. By optimizing parameters and adding filter conditions, risks could be further reduced to obtain more steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

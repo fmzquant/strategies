@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1888333f2986e2f4add.png)
-[trans]
-
-## 概述
-
-蕾蕾DEC策略通过识别蕾蕾DEC指标的穷尽形态,来判断市场趋势反转的时机。当出现主要蕾蕾DEC穷尽形态时,做多;当出现次要蕾蕾DEC穷尽形态时,做空。该策略主要适用于中长线交易。
-
-## 策略原理
-
-蕾蕾DEC指标用于识别价格的局部极值点。它通过统计多根K线的收盘价与开盘价的关系,来判断该点是否是一个潜在的极值点。
-
-该策略的核心逻辑是:
-
-1. 计算主要蕾蕾DEC指标(maj),参数为bar计数(maj_qual)和查找范围(maj_len)。
-
-2. 当主要蕾蕾DEC连续向上突破maj_qual根K线,并且这根K线的最高价超过之前maj_len根K线的最高价,则视为主要蕾蕾DEC向上穷尽,产生做多信号。
-
-3. 计算次要蕾蕾DEC指标(min),参数为bar计数(min_qual)和查找范围(min_len)。
-
-4. 当次要蕾蕾DEC连续向下突破min_qual根K线,并且这根K线的最低价低于之前min_len根K线的最低价,则视为次要蕾蕾DEC向下穷尽,产生做空信号。
-
-根据蕾蕾DEC指标的原理,穷尽形态表示该点附近可能是一个极值点和趋势反转点,因此产生交易信号。
-
-## 优势分析
-
-- 该策略具有较强的趋势判断能力。蕾蕾DEC指标可以有效识别出价格的局部极值点。
-
-- 通过不同参数组合,可以灵活适应不同周期和市场环境。
-
-- 可单独使用主要蕾蕾DEC信号,也可以结合次要蕾蕾DEC信号,实现更全面和准确的判断。
-
-- 可设置不同的bar计数和查找范围参数,调整策略的灵敏度。
-
-## 风险分析
-
-- 如其他指标一样,蕾蕾DEC指标也可能出现假信号,需要结合其他指标进行验证。
-
-- 需要优化参数,以适应不同周期和品种。参数设置不当可能出现频繁交易或漏单的问题。
-
-- 该策略主要基于K线形态,可能会错过短期价格震荡中的机会。
-
-- 需要关注突破蕾蕾DEC信号的K线实体部分,防范趋势反转失败。
-
-## 优化方向
-
-- 优化参数组合,提高参数的适应性。可以考虑动态优化参数。
-
-- 结合其他指标进行过滤,如量能指标、移动平均线等,提高信号的可靠性。
-
-- 加入止损策略,控制单笔损失。
-
-- 结合短期指标,抓住短期价格波动中的机会。
-
-- 测试不同的交易品种,寻找最佳适用环境。
-
-- 优化资金管理策略,如持仓规模、仓位管理等。
-
-## 总结
-
-蕾蕾DEC策略通过捕捉蕾蕾DEC指标的极限形态,来判断潜在的趋势反转点,是一种较好的趋势跟踪策略。该策略具有判断市场趋势的优势,但需要深入优化,辅以其他指标进行过滤验证,并做好风险管理,才能长期稳定盈利。整体来说,蕾蕾DEC策略为我们提供了另一种有价值的交易工具。
-
-||
 
 
 ## Overview
@@ -131,7 +70,6 @@ According to the logic of the Leledec indicator, exhaustion patterns represent p
 
 The Leledec strategy catches trend reversals by identifying extremum patterns in the Leledec indicator. It is an effective trend following methodology. While advantageous in assessing trends, further optimization, additional signal validation, and proper risk management is needed for long term profitability. Overall, the Leledec strategy provides a valuable addition to a trader's toolkit.
 
-[/trans]
 
 > Strategy Arguments
 

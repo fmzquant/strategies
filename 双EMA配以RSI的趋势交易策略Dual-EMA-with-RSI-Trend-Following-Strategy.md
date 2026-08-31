@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略结合了移动平均线指标EMA和超买超卖指标RSI来判断趋势方向,以发现潜在的趋势机会。当快速EMA上穿慢速EMA时判断为看涨机会;当快速EMA下穿慢速EMA时判断为看跌机会。同时,RSI指标用来过滤假突破,只有当RSI也确认趋势方向时才入场。
-
-## 原理
-
-该策略主要基于以下原理:
-
-1. EMA能有效平滑价格数据,展现出价格趋势。快慢EMA组合可形成均线差距,差距扩大表明趋势形成,差距收窄则预示趋势反转。
-
-2. RSI可有效识别超买超卖情况。结合RSI可以过滤EMA假突破的假信号。只有EMA和RSI同时确认趋势,才可以高概率入场。
-
-具体来说,快速EMA期间设为8,慢速EMA期间设为24。当快EMA上穿慢EMA时生成看涨信号,下穿时生成看跌信号。RSI期间设为7,上穿70*(1-RSI阈值)时为超买区,下穿30*(1+RSI阈值)时为超卖区。只有EMA和RSI同时看涨时,才进行多头入场;只有EMA和RSI同时看跌时,才进行空头入场。
-
-## 优势
-
-该策略结合EMA和RSI指标的优势,可以有效识别趋势方向,并过滤掉一些假信号。主要优势有:
-
-1. EMA平滑价格,识别趋势方向;RSI判断超买超卖,过滤假突破。
-
-2. 参数设置灵活,可针对不同品种进行优化。
-
-3. 采用了多种指标确认,可以减少假信号,提高胜率。
-
-4. 策略逻辑简单清晰,容易理解实现,适合趋势跟踪。
-
-5. 可适用于不同时间周期,可用于日内交易或长线持仓。
-
-## 风险
-
-该策略也存在一些风险需要注意:
-
-1. 当趋势反转时,EMA无法及时响应,可能产生损失。
-
-2. RSI多空判断参数设置如果不恰当,可能错过交易机会。
-
-3. 股指类品种容易出现剧烈波动,策略可能面临止损风险。
-
-4. 交易费用也会影响策略收益,需要考虑合理的止损点位。
-
-5. 策略没有考虑基本面因素,存在被套利的风险。
-
-对应风险,可以通过合理止损来控制单笔损失;优化RSI参数设置;考虑交易成本优化止盈止损位等方法来改善。
-
-## 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化EMA和RSI的参数,使其更好地拟合不同品种的特点。
-
-2. 增加其他指标过滤,如Bollinger Bands, KDJ等,提高信号质量。
-
-3. 增加基本面因素,避免被套利的风险。
-
-4. 结合趋势线、支撑阻力位等进行入场。
-
-5. optimize take profit and stop loss based on volatility and risk preference.
-
-6. Backtest over longer timeframe and different assets to ensure robustness.
-
-## 总结
-
-该策略整体来说是一个比较简单实用的趋势跟踪策略。它结合EMA和RSI两个指标来识别趋势方向,可以过滤一些噪音得到较高质量的交易信号。通过参数优化及适当运用其他工具,可以进一步增强策略的效果。但任何策略都不能完全避免亏损,需要控制好风险评估,作为趋势跟踪工具来使用。
-
-|| 
  
 
 ## Overview
@@ -142,7 +75,6 @@ The strategy can be enhanced in the following aspects:
 
 Overall this is a simple and practical trend following strategy. By combining EMA and RSI, it identifies trend direction effectively and filters out noise. With parameter tuning and integrating other tools, the strategy can be further improved. But no strategy eliminates losses entirely. Manage risks properly when using it for trend following.
 
-[/trans]
 
 > Strategy Arguments
 

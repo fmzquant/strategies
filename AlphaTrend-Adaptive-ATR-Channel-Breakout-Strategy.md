@@ -9,18 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-AlphaTrend自适应ATR通道突破策略
-
-AlphaTrend策略运用ATR自适应通道来捕捉价格趋势方向,根据通道的突破情况进行趋势追踪。具体来说,该策略构建了一个以ATR为基础的动态通道,通道的上轨为最低价减去ATR值,下轨为最高价加上ATR值。当价格上穿上轨时,做多进入;当价格下穿下轨时,做空进入。
-
-ATR能够实时反映市场的波动性和热度,上下轨形成的通道可以判断价格走势和力度。当价格突破通道时,说明趋势出现反转或加速的可能,这时进行追踪是较为合理的。AlphaTrend策略的优势在于运用ATR指标的自适应性来捕捉价格变化,同时还结合RSI等其他指标来确定趋势方向,这可以提高entries的准确性。
-
-但是,该策略也存在一些问题需要注意。ATR指标本身有反应滞后的特点,可能导致entries出现在趋势反转后。另外,未设置止损导致持仓期间存在较大的回撤风险。最后,参数设置如ATR周期长度需要优化以适应不同品种和周期。
-
-总的来说,AlphaTrend策略利用动态ATR通道判断趋势反转点有其独特优势,但实盘时仍需严格的资金管理。设置止损,控制单笔仓位规模,优化参数等都是必要的。只有做到风险控制到位,才能长期应用该策略。
-
-||
 
 The AlphaTrend strategy uses an adaptive ATR channel to capture price trend direction and follow trends based on channel breakouts. Specifically, it constructs a dynamic channel based on ATR, with the upper band being the low minus ATR value, and the lower band being the high plus ATR value. Long entries are taken when price breaks above the upper band, and short entries are taken when price breaks below the lower band.
 
@@ -30,7 +18,6 @@ However, some issues need to be noted. ATR itself has lagging characteristics, w
 
 In summary, AlphaTrend has unique strengths in identifying dynamic trend reversal points, but strict risk management is still required for live trading, including using stops, sizing positions, and parameter tuning. With proper risk controls, this strategy can be applied successfully over the long term.
 
-[/trans]
 
 > Strategy Arguments
 

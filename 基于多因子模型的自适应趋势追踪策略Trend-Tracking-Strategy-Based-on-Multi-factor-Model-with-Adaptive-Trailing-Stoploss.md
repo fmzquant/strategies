@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1969f4349df8698b8cf.png)
-[trans]
-
-## 概述
-
-该策略是一个多因子模型驱动的自适应趋势追踪策略。它整合了RSI、MACD、Stochastics等多个指标,构建多因子模型判断趋势方向。同时,它具有自适应止损机制,可以根据ATR动态调整止损价格,实现风险控制。
-
-## 原理
-
-该策略运用多个指标构建判断趋势的模型。首先,它结合RSI、MACD判断趋势方向;然后,结合Stochastics判断是否超买超卖,过滤掉部分信号。在进入订单后,它利用ATR计算风险参数,实现自适应止损。
-
-具体来说,当RSI高于52并且MACD金叉时产生买入信号;当RSI低于48并且MACD死叉时产生卖出信号。为了过滤假信号,它还会检测Stochastics是否超买超卖。在止损方面,它根据ATR计算参数,实现自适应止损,可以有效控制单笔止损风险。
-
-## 优势
-
-该策略最大的优势在于风险控制能力强。通过多因子模型判断趋势方向,可以过滤掉部分噪音,提高信号质量。同时,自适应止损机制可以根据市场波动程度调整止损幅度,有效控制单笔损失。
-
-此外,该策略参数设置合理,回测效果较好。不同周期资产可以通过调整参数实现最佳化。它可以通过参数优化适应更多市场环境。
-
-## 风险
-
-该策略主要风险在于多因子模型构建的质量。如果模型构建不当,不能有效判别趋势,则会产生大量错误信号。此外,止损策略本身就存在被套利的风险。
-
-为降低这些风险,可以从调整模型权重、优化参数设置、组合其他止损策略等方面进行改进。当出现异常市场时,手工干预也是必要的。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整多因子模型中的指标权重,找到最优权重组合
-
-2. 测试更多指标,如CCI、波动率等,丰富多因子模型
-
-3. 优化参数设置,适应更多品种和周期
-
-4. 尝试不同的止损策略,寻找最佳组合
-
-5. 增加模型训练和策略评估模块,实现机器学习驱动
-
-## 总结
-
-该策略整合多因子模型和自适应止损机制,实现了趋势判断和风险控制的有机结合。它回测效果良好,具有扩展性。通过持续优化,它可以成为一个值得长期持有的定量策略。
-
-|| 
 
 ## Overview
 
@@ -93,7 +50,6 @@ This strategy can be optimized from the following aspects:
 ## Summary  
 
 This strategy integrates multi-factor model and adaptive stoploss mechanism to achieve organic combination of trend judgment and risk control. It has good backtesting results and scalability. With continuous optimization, it can become a quantitative strategy worthwhile for long term holding.  
-[/trans]
 
 > Strategy Arguments
 

@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17bb1bd7ec2722307a2.png)
-[trans]
-
-## 概述
-
-该策略基于华尔街捕鼠光环指标,对比基准加密货币市场的涨跌态势,实现对目标加密货币进行看涨看跌操作的自动交易策略。策略可根据不同加密货币设置支持度指标参数,实现对多种加密货币的跟踪交易。
-
-## 策略原理
-
-1. 计算基准加密货币的华尔街捕鼠光环指标均线,设置均线长度为200周期。
-
-2. 判断均线的涨跌状态:当均线上涨时,策略采取看涨操作;当均线下跌时,策略采取看跌操作。
-
-3. 策略根据均线的涨跌状态,以及当前头寸情况,实现自动开仓和平仓:
-
-    - 当均线上涨且当前无头寸时,策略市价自动开仓做多;
-
-    - 当均线下跌且当前无头寸时,策略市价自动开仓做空; 
-
-    - 当做多头寸利润达到设置的止盈比例时,策略市价自动平掉做多单;
-
-    - 当做空头寸利润达到设置的止盈比例时,策略市价自动平掉做空单;
-
-    - 当做多头寸亏损达到设置的止损比例时,策略市价自动平掉做多单;
-
-    - 当做空头寸亏损达到设置的止损比例时,策略市价自动平掉做空单。
-
-4. 策略根据基准加密货币行情变化,实时更新止盈止损价格。
-
-## 优势分析
-
-1. 策略具有较强的适应性,可针对不同的加密货币设置不同的参数,实现对多种加密货币的跟踪交易。
-
-2. 利用华尔街捕鼠光环指标判断市场趋势,可避免噪音导致的错误交易。该指标对突破上下轨有一定的滞后性,可以减少虚假突破带来的损失。
-
-3. 策略加入止盈止损机制,可以把握趋势进行追涨杀跌,且可控制单笔损失。
-
-4. 策略进行全自动化交易,无需人工干预,可24小时运行。
-
-## 风险分析
-
-1. 存在某些加密货币价格与基准加密货币脱钩的可能,从而导致策略无法正常交易的风险。可以优化为采用多个基准加密货币计算相关系数,选择相关性最强的基准加密货币。
-
-2. 存在由于市场异常波动导致止损被突破的风险。可以适当调整止损比例或加入止损追踪。
-
-3. 存在止盈比例设置过小导致无法捕捉足够趋势收益的风险。可以加入趋势跟踪或动态止盈。
-
-4. 存在假突破导致平仓止损的风险。可以适当调整指标参数, identificationsettings或加入再入场机制。
-
-## 优化方向
-
-1. 利用相关性分析选择多个基准加密货币,组合计算指标,降低单一基准货币风险。
-
-2. 增加趋势跟踪机制,根据波动率动态调整止盈止损。
-
-3. 增加级别止损,防止极端行情止损被突破。
-
-4. 增加再入场机制,避免止损后错过后续行情。
-
-5. 优化指标参数,identificationsettings,提高指标效果。
-
-6. 针对不同加密货币分别优化参数,提升策略适应性。
-
-7. 优化仓位管理,根据资金规模动态调整仓位。
-
-## 总结
-
-该策略整体来看是一种典型的趋势跟踪策略。核心思路是根据华尔街捕鼠光环指标判断基准加密货币的趋势方向,以此来确定目标加密货币的交易方向。策略具有一定的优势,但也存在一些风险需要注意。通过持续优化参数以及增加趋势跟踪、风险控制等机制,可以进一步增强策略的稳定性和收益率。总体来说,该策略为自动化程序化加密货币交易提供了思路和借鉴。
-
-|| 
 
 ## Overview
 
@@ -152,7 +83,6 @@ Note: The strategy with default parameters is intended for 4h timeframe. On othe
 
 Overall this is a typical trend following strategy. The core idea is to determine the trend direction of a benchmark crypto using Wall Street CCI and trade the target crypto accordingly. The strategy has some advantages but also risks to note. Further enhancements in tuning, trend tracking, risk control etc. can improve stability and profitability. In summary, the strategy provides ideas and reference for automated systematic crypto trading.
 
-[/trans]
 
 > Strategy Arguments
 

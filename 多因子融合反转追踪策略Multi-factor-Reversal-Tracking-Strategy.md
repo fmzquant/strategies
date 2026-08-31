@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-### 策略概述
-
-多因子融合反转追踪策略通过整合价格反转形态以及超买超卖指标,来产生入市和出市的决策信号。该策略综合运用多种因子判断市场结构的高低点,在反转点位产生交易信号,以期捕捉中短线价格的反转机会。
-
-### 策略原理
-
-该策略由两大模块组成:
-
-1、123反转形态模块
-
-- 当出现2日价格创新高但第3日回落时,视为潜在的短期高点,做空。
-
-- 当出现2日价格创新低但第3日反弹时,视为潜在的短期低点,做多。 
-
-2、RSI反向工程模块
-
-- 通过动态调整RSI的超买超卖线,来判断反转点位。
-
-- RSI高于调整后的超买线则看空,RSI低于调整后的超卖线则看多。
-
-最后,当两个模块的信号一致时,才会产生实际的交易指令。
-
-该策略最大的优势在于整合多种因子判断市场的结构性高低点,过滤掉一部分单一因子下的假信号,可以提高实际交易的胜率。
-
-### 策略优势
-
-- 多因子组合,综合判断市场高低点
-
-- 结合反转形态和超买超卖指标
-
-- 有效过滤假反转信号,提高准确率 
-
-- 回测参数可优化,适应不同市场
-
-- 实施难度不高,可快速复制交易
-
-### 风险提示
-
-- 反转信号可能滞后,需要及时更新参数
-
-- 需要防止过度交易而增加交易费用
-
-- 仍需关注个股的基本面情况 
-
-- 反转策略更适用于指数和热门股
-
-### 总结
-
-多因子融合反转追踪策略完美结合了量化工具的优势与人工分析的经验,通过考量多个角度来确定交易信号。相比单一指标策略,它可以大幅提升实际交易的稳定性和胜率。该策略值得率先在回测中进行验证优化,然后再逐步实盘,具有非常显著的实用价值。
-
-
-||
 
 
 ### Strategy Overview 
@@ -116,7 +62,6 @@ The biggest advantage is incorporating multiple factors to determine structural 
 
 The multi-factor reversal tracking strategy perfectly combines the strengths of quant tools and manual analysis experience by considering multiple perspectives for trade signals. Compared to single indicator strategies, it significantly enhances actual trading stability and win rate. The strategy is worth verifying and optimizing in backtests first, then gradually implementing in live trading, with very pronounced practical value.
 
-[/trans]
 
 > Strategy Arguments
 

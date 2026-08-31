@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/181c883399e6520b891.png)
-[trans]
-
-## 概述
-
-突破回调策略是一种趋势追踪策略。它的基本原理是在突破前一根K线的最高价或最低价时做多做空,设置止盈止损后 let 盈利继续运行。
-
-## 策略原理  
-
-该策略主要通过判断价格是否突破前一根K线的最高价或最低价来确定 Entry 时机。具体逻辑是:
-
-如果当前K线的最高价高于前一根K线的最高价,则发出做多信号。
-
-如果当前K线的最低价低于前一根K线的最低价,则发出做空信号。 
-
-收到做多做空信号后立即入场。入场后设置止盈为 50 个点,止损为 100 个点。
-
-当亏损大于等于止损点数或盈利大于等于止盈点数时主动退场。
-
-## 优势分析
-
-这种突破回调策略具有如下优势:
-
-1. 操作逻辑简单,容易实现。
-2. 可以有效抓住趋势的开始,及时入场。 
-3. 设置止盈止损后可以让盈利继续运行,避免过早离场。
-4. 回撤和风险控制能力较强。
-
-## 风险分析 
-
-该策略也存在一些风险:  
-
-1. 突破信号可能是假突破,导致误入场。
-2. 盘整 consolidate 市的时候,容易被套。
-3. 需要合理设置止盈止损点数,以控制风险。
-
-## 优化方向
-
-可以从以下几个方面继续优化该策略:
-
-1. 增加价格突破的有效性判断,避免假突破。例如可以加入指标过滤和成交量验证。
-
-2. 增加趋势判断机制,避免盘整市带来的套牢风险。可以加入移动平均线等趋势指标。
-
-3. 优化止盈止损策略,例如跟踪止损、盈利后移止损等,让利润更加最大化。
-
-4. 进行参数优化,找到最佳的止盈止损点数。
-
-## 总结
-
-该突破回调策略总的来说逻辑简单、实施方便,能有效捕捉趋势开始,回撤和风险控制能力也较强。通过进一步优化可以成为一个非常实用的量化策略。
-
-||
 
 ## Overview  
 
@@ -112,7 +60,6 @@ The strategy can be further optimized in the following aspects:
 
 In general, this breakout pullback strategy has the advantage of simple logic, easy implementation, and effectively capturing trend starts. It also has good ability of controlling risks and drawdowns. With further optimizations, it can become a very practical quant strategy.
 
-[/trans]
 
 > Strategy Arguments
 

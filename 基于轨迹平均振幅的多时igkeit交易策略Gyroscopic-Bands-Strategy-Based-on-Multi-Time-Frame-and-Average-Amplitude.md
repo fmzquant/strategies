@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/4109adb0f8112a8410.png)
-[trans]
-
-## 概述
-
-本策略名称为“基于轨迹平均振幅的多时间帧交易策略”。它的主要思想是通过引入一个拟合价格轨迹的粒子,基于粒子与价格之间的平均振幅来构建交易信号。
-
-## 策略原理  
-
-该策略首先定义了一个拟合价格轨迹的粒子。该粒子受引力和惯性的影响,其运动轨迹会围绕价格振荡。然后计算粒子与价格之间的平均偏离距离,并以此构建上下轨道。当价格突破上轨或下轨时,发出交易信号。
-
-具体来说,策略中定义的粒子位置公式为:
-
-```
-pos:=if pos<close 
-     nz(pos[1])+grav+traj  
-else 
-     nz(pos[1])-(grav)+traj
-```
-
-这里`grav`代表引力项,使粒子向价格趋近;`traj`代表惯性项,使粒子保持运动趋势。这两个项结合使粒子围绕价格振荡。
-
-然后计算价格与粒子之间的平均偏离距离`avgdist`,并以此构建上下轨道:
-
-```
-bbl=pos-sma(avgdist,varb) 
-bbh=pos+sma(avgdist,varb)
-```
-
-最后,当价格大于上轨时做多,小于下轨时做空。
-
-## 策略优势
-
-相比传统的移动平均线策略,本策略有以下优势:
-
-1. 利用粒子轨迹更好地模拟价格波动;
-2. 上下轨道可基于历史平均振幅自适应调整,有利于捕捉突破;  
-3. 多时间框架设计,可以在高低时间框架之间切换,捕捉更多交易机会。
-
-## 策略风险  
-
-本策略也存在一些风险:  
-
-1. 粒子运动参数设置不当可能导致虚假信号或漏失信号;
-2. 多时间框架之间切换时可能出现信号冲突;  
-3. 突破上下轨道信号可能会增加止损风险。  
-
-对应风险管理措施包括:优化参数以减少虚假信号,定义清晰的时间框架择时规则,设置适当的止损位置等。
-
-## 策略优化方向  
-
-本策略可从以下几个方面进行优化:
-
-1. 优化粒子运动相关参数,拟合价格轨迹;
-2. 增加时间框架的层数,在更高级时间框架确认信号;
-3. 加入波动率指标判断,避免在市场剧烈波动时产生信号;
-4. 优化止损策略,降低单笔止损。
-
-## 总结  
-
-本策略通过引入价格轨迹拟合的方式改进了移动平均线策略,具有参数自适应、多时间框架、止损优化等特点。其关键在于找到合适的粒子运动方程来模拟价格。虽然仍需进一步测试和优化,但基本思路是可行的,值得进一步研究。
-
-|| 
 
 ## Overview
 
@@ -132,7 +70,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy improves the moving average strategy by introducing price trajectory fitting. It has features like adaptive parameters, multi time frames, stop loss optimization, etc. The key is to find a suitable particle motion equation to simulate the price. Although further testing and optimization is needed, the basic idea is feasible and worth further research.
 
-[/trans]
 
 > Strategy Arguments
 

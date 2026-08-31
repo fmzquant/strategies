@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略“双通道厨房”采用Supertrend和StochRSI两个指标,分析不同时间周期的价格趋势和超买超卖情况,以识别潜在的买入和卖出信号。该策略旨在跟随主要趋势方向进行交易,在中长线上捕捉价格的主要方向。
-
-## 策略原理
-
-该策略使用1小时和4小时两个时间周期的Supertrend指标判断价格趋势方向。当两个时间周期的Supertrend都呈同一个方向时,我们可以认为出现了一个较强的价格趋势。
-
-另外,策略利用StochRSI指标判断是否存在超买超卖情况。StochRSI指标结合了RSI和Stochastic Oscillator两个指标的优点。当StochRSI指标线段上穿超买线时,表示价格可能存在超卖现象;当StochRSI指标线段下穿超卖线时,表示价格可能存在超买现象。
-
-在双Supertrend确认价格趋势方向的同时,如果StochRSI也显示了超买超卖现象,那么这时就是一个较好的买入或卖出时机。为了进一步验证信号,策略还设置了一个回溯期,在StochRSI显示超买超卖信号后,需要回溯一定的K线数量,如果在这段时间内价格走势确认StochRSI的信号,那么就会触发买入或卖出。
-
-整体来说,该策略综合利用双时间框架的Supertrend判断大趋势,以及StochRSI判断局部调整的方法,在中长线上进行趋势跟踪型交易。
-
-## 策略优势
-
-- 利用多时间周期指标进行判断,可以有效过滤错误信号
-- 综合Supertrend和StochRSI指标的优点,进行趋势判断和超买超卖判定
-- 设置回溯期进行信号验证,可以避免不必要的交易
-- 采用中长线操作策略,可以减少过于频繁交易带来的滑点损失
-- 容易理解的双指标组合,参数调整灵活
-
-## 策略风险
-
-- 大盘震荡时期,中长线趋势不明显,可能出现较多错误信号
-- 回溯期过长,可能错过较好的买入/卖出时机
-- StochRSI参数设置不当,可能出现错误的超买超卖信号
-- Supertrend参数设置不当,可能判断错误的趋势方向
-- 机械地跟随指标信号,容易忽略重大基本面变化
-
-优化方法:
-
-- 优化StochRSI和Supertrend的参数组合
-- 不同大盘环境下,调整回溯周期长度
-- 结合交易量等指标进行验证
-- 关注重要基本面消息,必要时主动干预
-
-## 策略优化方向
-
-- 增加更多不同时间周期的Supertrend指标,形成多级筛选
-- 将StochRSI指标替换为其他超买超卖类型指标,如KD,RSI等
-- 增加移动止损策略,根据趋势争取更大收益
-- 结合重要的均线指标,如30周期均线等判断大趋势
-- 开发自动参数优化程序,使策略更具鲁棒性
-
-## 总结
-
-“双通道厨房”策略充分利用Supertrend判断大趋势和StochRSI判断局部调整的方法,实现了一种可靠的趋势跟踪策略。该策略以中长线操作为主,可以有效避免过于频繁交易带来的收益损失。通过参数优化和组合指标验证等手段,该策略可以获得稳定的正收益。但投资者仍需关注重大基本面变化,避免机械地跟随指标信号。总体来说,该策略为积极的投资者在具有一定风险意识的前提下获得正收益提供了一种有效的技术分析方法。
-
-||
 
 ## Overview 
 
@@ -111,7 +59,6 @@ Improvements:
 
 The "Double Channel Kitchen" strategy effectively utilizes the Supertrend for major trend and StochRSI for local reversals, to implement a reliable trend following system. It focuses on medium-long term holdings to avoid excessive trading and slippage. Through parameter optimization, combining indicators, this strategy can achieve steady positive results. However investors should still watch out for major fundamental changes, instead of just mechanically following indicator signals. Overall, this strategy offers an effective technical analysis approach for active investors to generate positive returns with proper risk awareness.
 
-[/trans]
 
 > Strategy Arguments
 

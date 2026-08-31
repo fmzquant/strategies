@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ec59ac8ae7817e006b.png)
-[trans]
-### 概述
-
-本策略基于动态移动指标(DMI)设计了一个只做多头的长线策略,同时结合平均真实波幅(ATR)进行尾随止损,以控制亏损风险。为了进一步优化,该策略还融入了交易时间和标准普尔500指数的季节性过滤条件,具有一定的优势。
-
-### 策略原理
-
-1. 该策略只在指定的交易日(周一至周五)和交易时间(默认为当地时间9:30-20:30)开仓。
-
-2. 当ADX大于27时,表示目前处于价格趋势状态。此时如果+DI线上穿-DI线,产生做多信号。
-
-3. 开仓后,以ATR的5.5倍设置止损位,并且止损线会随价格上涨而上移,确保获利。
-
-4. 可选地应用标准普尔500指数的季节性规则,只在历史上表现较好的时段开仓。
-
-### 优势分析
-
-1. 结合趋势指标和止损机制,能够有效跟踪趋势,并控制 einzelnen头寸的损失。
-
-2. 利用交易时间和季节性过滤条件,可以避开市场的异常波动期,降低误报率。
-
-3. DMI和ATR均为成熟的技术指标,参数调整灵活,适合量化优化。
-
-### 风险分析
-
-1. DMI和ATR参数设置不当可能导致信号过多或过少。需要调参数进行测试。
-
-2. 止损幅度设大了可能造成不必要的止损。设小了可能无法有效控制损失。
-
-3. 交易时间和季节性规则可能过滤掉部分利润机会。需要评估滤波效果。
-
-### 优化方向
-
-1. 可以考虑结合其他指标,如MACD、布林带等,设计进场和出场规则。
-
-2. 可以测试不同的ATR倍数止损方式,也可以考虑动态调整止损幅度。
-
-3. 可以测试调整交易时间段,或优化季节性交易的开始结束时间。
-
-4. 可以尝试应用机器学习方法自动优化参数。
-
-### 总结
-
-本策略整合趋势分析与风险控制技术,在一定程度上克服了趋势跟踪策略的剧烈抖动问题。同时加入交易时间和季节性过滤,可以减少错误信号。通过参数调优和功能扩展,本策略可以获得更好的稳定收益。
-
-||
 
 ### Overview
 
@@ -103,7 +57,6 @@ This strategy designs a long-only trend following strategy based on the Dynamic 
 
 This strategy integrates trend following and risk control techniques to overcome high volatility issues with trend systems. Adding trading hours and seasonal filters further reduces false signals. With parameter tuning and feature expansion, this strategy can achieve more steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

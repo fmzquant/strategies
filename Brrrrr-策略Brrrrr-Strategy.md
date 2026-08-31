@@ -10,19 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-股票"Brrrrr"策略是一种基于监控稳定币发行量变化,通过做多做空加密货币实现盈利的交易策略。该策略的名称来源于"Brrrrr"(即打印机运作的声音),意在表达策略的运作原理是通过追踪稳定币印制来判断加密货币的价格变动。
-
-该策略的基本原理是:当稳定币增发时,比特币价格上涨;当稳定币回收燃烧时,比特币价格下跌。根据这一原理,我们可以在稳定币增发时做多比特币,在稳定币回收燃烧时平仓或者直接做空比特币。
-
-为了过滤掉过多的无效信号,该策略采用唐奇安通道技术。只有当稳定币发行量超过近期50天内的最高值时,才触发做多信号。只有当稳定币发行量低于近期50天内的最低值时,才触发平仓或者做空信号。
-
-该策略的优势在于捕捉到了稳定币发行对加密货币价格的影响这一市场规律,通过技术指标过滤了部分噪音,可以在大的趋势转折点给出较准确的交易信号。但该策略仅基于单一变量,且稳定币增发缩减难以预测,存在一定的当头风险。
-
-总的来说,股票"Brrrrr"策略是一个基于监控稳定币发行的有趣的交易策略,值得进一步测试优化,但交易者需要谨慎对待,不能孤注一掷。通过组合其他多种变量和技术指标,或许可以进一步增强该策略的效果。
-
-
-||
 
 Stock “Brrrrr” Strategy Introduction  
 
@@ -36,7 +23,6 @@ The advantage of this strategy is capturing the market dynamic of stablecoin imp
 
 In summary, the stock “Brrrrr” strategy is an interesting trading strategy worth further testing and optimizing based on monitoring stablecoin issuance, but traders should be cautious not to bet the farm on it. Combining more variables and indicators may further improve the strategy.
 
-[/trans]
 
 
 > Strategy Arguments

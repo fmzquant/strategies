@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13dbe9dae210a699f57.png)
-[trans]
-
-## 策略概述
-
-波林格带突破与波动率过滤策略是一个基于波林格带指标的交易策略。它利用波林格带来判断价格相对于移动平均线的位置和波动性,从而决定开仓和平仓。该策略的一个独特之处在于它采用了波动率过滤器,通过检测连续K线的涨跌幅来避免在市场波动较大时入场交易。此外,该策略还设置了止盈和止损条件,以保护利润和控制风险。
-
-## 策略原理
-
-该策略的核心是计算波林格带指标。波林格带由三条线组成:中轨是简单移动平均线,上轨和下轨分别在中轨的基础上加减一定的标准差。标准差的大小由参数mult控制。
-
-策略的开仓条件基于收盘价相对于波林格带的位置。如果交易方向设置为做多(tradeDirection>=0),且收盘价跌破下轨一定比例(lower_breakout_pct),则开多仓;如果交易方向设置为做空(tradeDirection<=0),且收盘价突破上轨一定比例(upper_breakout_pct),则开空仓。这里的突破比例参数允许价格略微突破波林格带才开仓,以确认趋势。  
-
-另一方面,如果连续两根K线的涨跌幅都超过了预设的波动率阈值(Volatility),则判断当前市场波动较大,策略不会开新仓。这个波动率过滤器可以在一定程度上避免剧烈波动的市场环境。
-
-平仓方面,如果多头仓位的收盘价触及上轨附近(upper-area*long_win_pct),或空头仓位的收盘价触及下轨附近(lower+area*short_win_pct),策略就会平掉相应仓位以获利了结。此外,如果持仓的浮动亏损超过了预设的最大回撤比例(max_drawdown_percent),策略也会平仓止损。
-
-## 策略优势
-
-1. 波林格带是一个成熟且广泛使用的技术指标,它融合了移动平均线和价格波动性的信息。利用波林格带制定交易策略,可以捕捉到趋势和波动的变化。
-
-2. 该策略同时包含了开多和开空的逻辑,可以在多空双向市场中灵活把握机会。波林格带突破点的设置让策略的入场点更有确认性。
-
-3. 波动率过滤器避免了在剧烈波动的市场下开仓,一定程度上降低了频繁交易和杠杆方面的风险。
-
-4. 策略采用了止盈和止损机制,可以主动控制仓位,在价格回撤至关键位置时平仓。这有利于保护利润,控制回撤。
-
-## 策略风险
-
-1. 波林格带本质上是一个落后指标,对市场的反应存在一定的滞后性。在趋势转折或走势变化的关键时刻,策略可能错失最佳的入场时机。
-
-2. 策略的参数设置对于不同的市场状况并不一定都适用。比如波动率过滤器的阈值设定,在趋势型和震荡型行情中可能需要有所区别。固定参数可能导致策略在某些行情中无法开仓或者开仓过于频繁。  
-
-3. 虽然有止损措施,但是当市场出现跳空缺口时,策略可能无法按预设的价位成交,导致更大的损失。
-
-4. 策略在开仓后并没有设置移动止损或者跟踪止损,这可能导致部分利润回吐。
-
-## 优化方向
-
-1. 可以考虑引入更多技术指标或者市场状态判断,比如 ATR、趋势指标、波动率指标等,作为策略的过滤条件,提高开仓的质量和时机把握。
-
-2. 对于波动率过滤器,可以尝试采用动态的阈值,根据不同品种或者不同时间周期自适应调整,提高过滤效果。
-
-3. 在止损止盈方面,可以引入移动止损或者跟踪止盈的机制,让策略在趋势延续时持仓,而不是过早平仓。同时可以考虑设置不同的止盈止损比例,优化风险收益比。
-
-4. 可以进一步优化仓位管理,根据趋势强度、波动率、风险度等指标动态调整开仓比例,控制回撤。此外,还可以通过加仓、减仓等操作,更好地利用资金。
-
-## 总结
-
-波林格带突破与波动率过滤策略利用了波林格带对价格位置和波动性的刻画,构建了一个双向交易策略。该策略的独特之处在于波动率过滤器避免了剧烈波动市场的交易,同时设置了较为简单的止盈止损条件。整体来看,该策略较为完备地包含了开平仓逻辑和风险控制,但是在应对市场变化、参数适用性、止损效果等方面还有进一步优化的空间。如果能够引入更多技术指标、动态参数和仓位管理优化,该策略的稳健性和收益性或许能够得到提高。
-
-|| 
 
 ## Strategy Overview
 
@@ -109,7 +58,6 @@ In terms of exiting positions, if the closing price of a long position reaches n
 ## Summary
 
 The Bollinger Bands Breakout with Volatility Filter Strategy leverages the characterization of price position and volatility by Bollinger Bands to construct a two-way trading strategy. The unique aspect of this strategy is the volatility filter that avoids trading in extremely volatile markets, while also setting relatively simple take-profit and stop-loss conditions. Overall, the strategy includes fairly comprehensive entry and exit logic and risk control, but there is room for further optimization in terms of adapting to market changes, parameter applicability, and stop-loss effectiveness. If more technical indicators, dynamic parameters, and position management optimizations can be introduced, the robustness and profitability of the strategy may be improved.
-[/trans]
 
 > Strategy Arguments
 

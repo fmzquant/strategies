@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/154879124e0300f85a5.png)
 
-[trans]
-
-## 概述
-
-本策略是基于SSL通道指标的回测策略,同时结合了ATR止损、ATR止盈和资金管理等功能,可以更全面地测试SSL通道策略的效果。
-
-## 策略原理
-
-### SSL通道指标
-
-SSL通道指标由通道中线和通道带组成。通道中线是简单移动平均线,分为上轨和下轨,通常取高点期间的简单移动平均线作为上轨,低点期间的简单移动平均线作为下轨。通道带则由上轨和下轨之间的区域构成。
-
-当价格接近通道上轨时视为超买,当价格接近通道下轨时视为超卖。价格突破通道带的时候,表示趋势发生转变的信号。
-
-本策略中的SSL通道指标参数设置为:`ssl_period=16`。
-
-### ATR止损止盈
-
-ATR指平均真实波幅。它可以用来评估市场的波动性和确定止损止盈位置。
-
-本策略使用了参数`atr_period=14`的ATR指标,并结合`atr_stop_factor=1.5`和`atr_target_factor=1.0`作为止损和止盈的动态倍数,实现了基于市场波动率的止损止盈。
-
-此外,为了适应不同品种,本策略还加入了`two_digit`参数判断合约为2位精度的品种(如黄金、日元),从而可灵活调整止损止盈位。
-
-### 资金管理 
-
-资金管理主要通过参数`position_size`(固定仓位)和`risk`(百分比风险敞口)实现。当`use_mm=true`时会启用资金管理模块。
-
-资金管理的主要目标是控制每次开仓的头寸大小。当采用固定百分比风险模式时,会根据账户权益计算出风险敞口后转化为合约数,从而实现抑制单笔损失的效果。
-
-## 优势分析
-
-- 使用SSL通道判断趋势方向,对于捕捉趋势转换具有一定效果
-- 应用ATR动态计算止损止盈位置,可以自适应市场波动率
-- 利用资金管理原则,有助于从长期角度控制风险
-
-## 风险分析
-
-- SSL通道虽可判断趋势转折,但并不是百分之百可靠,可能出现错误信号
-- ATR跟随市场波动率设置止损止盈,可能会过于宽松或过于僵硬
-- 资金管理参数设置不当也会导致仓位过大或效率过低
-
-这些风险可以通过以下方法加以改善:
-
-1. 结合其他指标进行确认,避免出现错误信号
-2. 适当调整ATR周期参数,使止损止盈水平达到最佳平衡  
-3. 测试不同资金管理参数,找到最优仓位
-
-## 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化SSL通道参数,寻找最佳参数组合
-2. 优化或替换ATR止损止盈机制,使其更加完善 
-3. 增加其他过滤指标,避免不必要的交易
-4. 增加仓位控制模块,实现损益最大化
-5. 针对不同品种进行参数微调,提高策略适应性
-6. 加入量化工具,实现更全面的回测和优化
-
-通过系统的测试和优化,本策略可以成为一个可靠和稳定的量化交易系统。
-
-## 总结  
-
-本策略整合了SSL通道指标判断趋势、ATR设定止损止盈和资金管理控制风险三种机制。通过全面的回测可以检验该策略的效果,并且可以作为量化交易策略优化的基础框架。与此同时,本策略也有可以改进的空间,如加入其他过滤指标、优化参数以及扩充功能等。总的来说,本策略为搭建自动化交易系统奠定了坚实的基石。
-||
 ## Overview
 
 This is a backtesting strategy based on the SSL channel indicator, integrated with functions like ATR stop loss, ATR take profit and money management to facilitate a more comprehensive test on the SSL channel strategy.  
@@ -139,7 +74,6 @@ With systematic optimization, this strategy can become a robust algorithmic trad
 
 This strategy combines the SSL channel for trend, ATR for risk control, and money management for position sizing. Comprehensive backtesting facilitates evaluating and enhancing the strategy into an automated trading system. There is also room for improvements like adding filters, optimizing parameters and expanding functionality. Overall, this forms a solid foundation for building algorithmic trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/52167a15e79643e814.png)
-[trans]
-
-该策略的主要思想是利用Williams商业区买卖压力指标判断市场的累积与分配阶段,以发现价格和Williams指标之间的背离,从而产生交易信号。当安全资产创下新高但Williams指标没有创下新高时,代表博弈参与者分配,应卖出;当安全资产创下新低但Williams指标没有创下新低时,代表博弈参与者累积,应买入。
-
-策略原理详述如下:
-
-该策略基于Williams商业区买卖压力指标,该指标反映市场的买卖压力,判断市场被买方或卖方所控制。Williams指标通过对收盘价、最高价和最低价的计算,判断价格的累积与分配。当价格创新高但Williams指标没有创新高,代表分配,应卖出;当价格创新低但Williams指标没有创新低,代表累积,应买入。
-
-本策略运用Williams指标判断市场的累积和分配,以发现价格背离并产生交易信号。同时,利用移动平均线来平滑Williams指标,避免出现错误信号。当Williams指标高于其移动平均线时为累积阶段;低于移动平均线时为分配阶段。在发现背离时,若为长仓则在分配阶段卖出,在累积阶段买入;若为短仓则相反。
-
-该策略主要优势有:
-
-1. 能准确判断市场的买卖压力,捕捉价格趋势的转折点。
-
-2. 运用移动平均线来平滑指标曲线,避免产生错误信号。
-
-3. 规则清晰明确,易于理解与实施。
-
-4. 可灵活调整参数,适用于不同市场环境。
-
-主要风险及解决方法如下:
-
-1. Williams指标可能产生错误信号,移动平均线可在一定程度上减轻这一问题。
-
-2. 若参数设置不当,可能错过价格转折或产生虚假信号。应调整参数使其适应不同周期。
-
-3. 须关注突发事件对价格的影响,必要时暂停交易计划。
-
-该策略主要可优化的方向:
-
-1. 测试更多参数组合,寻找最佳参数。
-
-2. 增加其他技术指标进行组合,提高信号准确性。
-
-3. 增加止损策略,降低单笔损失。
-
-4. 优化入场时机,在趋势更加明确后进入。
-
-总的来说,本策略利用Williams商业区买卖压力指标判断市场博弈参与者的意愿,再结合移动平均线发现价格背离,从而产生交易信号。该策略易于理解实施,可通过调整参数适用于不同市场,也可进行多方面优化,值得深入研究与运用。
-
-|| 
 
 The main idea of this strategy is to use the Williams Commercial Bid-Ask Pressure Indicator to judge the accumulation and distribution stages of the market, so as to discover the divergence between price and Williams Indicator and generate trading signals. When the security reaches a new high but the Williams Indicator does not reach a new high, it represents distribution by game participants and should sell. When the security reaches a new low but the Williams Indicator does not reach a new low, it represents accumulation by game participants and should buy.
 
@@ -90,7 +49,6 @@ The main directions for optimizing this strategy are:
 
 In summary, this strategy uses the Williams Commercial Bid-Ask Pressure Indicator to judge the willingness of market participants, combined with moving averages to discover price divergence, thus generating trading signals. This strategy is easy to understand and implement, adaptable to different markets through parameter adjustment, and can be optimized in many ways, worth in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

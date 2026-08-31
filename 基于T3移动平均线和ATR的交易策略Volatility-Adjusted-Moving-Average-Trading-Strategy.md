@@ -10,89 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6128944b76f7984711.png)
-[trans]
-
-# 
-
-## 概述
-
-该策略利用T3移动平均线、ATR指标和海克力的组合,识别买入和卖出信号,并根据ATR计算止损止盈位置,实现趋势跟踪交易。策略优势是响应迅速,同时控制了交易风险。
-
-## 原理分析  
-
-### 指标计算
-
-- T3移动平均线:计算一个平滑的参数为T3(默认100)的T3移动平均线,用于判断趋势方向。
-
-- ATR:计算ATR(平均真实波动幅度),用于确定止损止盈位置的大小。
-
-- ATR移动止损:基于ATR计算一个移动止损线,可以根据价格变化和波动率进行调整,实现趋势跟踪。
-
-### 交易逻辑
-
-- 买入信号:当收盘价上穿ATR移动止损线且低于T3平均线时产生买入信号。
-
-- 卖出信号:当收盘价下穿ATR移动止损线且高于T3平均线时产生卖出信号。
-
-- 止损止盈:入场后,根据ATR值和用户设定的风险回报比率计算止损和止盈价格。
-
-### 策略入场和出场
-
-- 买入后,止损价格为入场价减去ATR值,止盈价格为入场价加上ATR值乘以风险回报比率。
-
-- 卖出后,止损价格为入场价加上ATR值,止盈价格为入场价减去ATR值乘以风险回报比率。
-
-- 当价格触发止损或止盈价位时,平仓离场。
-
-## 优势分析
-
-### 响应迅速
-
-T3平均线参数默认为100,相比一般的移动平均线更加灵敏,可以更快响应价格变化。
-
-### 风险控制
-
-使用ATR计算的移动止损可以根据市场波动 trail 价格,避免止损被突破的风险。止盈止损位置以ATR为基础,可以控制每笔交易的风险回报比。
-
-### 趋势跟踪
-
-ATR移动止损线能够跟踪趋势,即使在价格短期回调时也不会被触发离场,从而减少了错误信号。
-
-### 参数优化空间
-
-T3平均线周期和ATR周期都可以进行优化,从而针对不同市场调整参数,提高策略稳定性。
-
-## 风险分析
-
-### 突破风险 
-
-如果出现剧烈行情,价格可能直接突破止损线造成损失。可以适当扩大ATR周期和止损距离来缓解。
-
-### 趋势反转风险
-
-在趋势反转时,价格穿越移动止损线可能造成损失。可以结合其他指标判断趋势,避免在反转点附近交易。
-
-### 参数优化风险
-
-参数优化需要丰富的历史数据支持,存在过优化风险。应该采用多市场多时间周期组合优化参数,不能依赖单一数据集。
-
-## 优化方向
-
-- 测试不同T3平均线周期参数,找到平衡灵敏度和稳定性的最佳参数组合
-
-- 测试ATR周期参数,在控制风险和获取趋势之间找到最佳平衡
-
-- 结合RSI、MACD等指标,避免趋势反转点错误交易
-
-- 采用机器学习方法训练最优参数,降低人工优化局限性
-
-- 增加仓位管理策略,更好地控制风险
-
-## 总结
-
-本策略整合T3均线和ATR指标的优势,既能快速响应价格变化,又能控制风险。通过 Parameter 优化和结合其他指标可以进一步增强策略稳定性和交易效率。但交易者仍需注意反转和突破的风险,避免过度依赖回测结果。
-
-|| 
 
 ## Overview
 
@@ -172,7 +89,6 @@ Parameter optimization risks overfitting limited historical data. Need robust op
 
 This strategy combines the advantages of the T3 and ATR to enable fast response with risk control. Further enhancements in stability and efficiency possible through parameter optimization and additional filters. But traders should still watch for reversal and breakeven risks, and avoid over-reliance on backtest results.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,96 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8140e036e27e96fe19.png)
 
-[trans]
-
-
-## 概述
-
-该策略利用布林带、肯特纳通道和自适应相对强弱指标三种技术指标判断当前趋势方向,配合抛物线SAR指标进行入场。当三种指标判断结果一致时产生交易信号。策略主要判断趋势方向,在趋势发生变化时及时入场,目标获利。
-
-## 原理
-
-该策略使用以下三个技术指标组合判断当前趋势:
-
-1. 斯奎兹指标(SQUEEZE MOMENTUM INDICATOR):计算布林带和肯特纳通道,当两者叠加时产生压缩,表示趋势即将出现变化的信号。该指标返回压缩状态和线性回归曲线斜率。
-
-2. 自适应相对强弱指数(RSI VOLUME WEIGHTED):计算成交量加权的RSI,用中线判断超买超卖。该指标强调成交量变化。
-
-3. 抛物线停损(SAR):判断当前价格与抛物线SAR的位置关系,SAR在价格上方看跌,SAR在价格下方看涨。
-
-策略使用布林带判定趋势方向,肯特纳通道refine,RSI判断超买超卖找反转机会,SAR指示入场时机。具体逻辑如下:
-
-1. 计算布林带、肯特纳通道、斯奎兹指标。斯奎兹压缩时进入准备阶段。
-
-2. 计算成交量加权RSI。RSI高于中线看涨,低于中线看跌。
-
-3. 计算抛物线SAR。SAR在价格下方则看涨,在价格上方则看跌。 
-
-4. 综合上述三种指标:当斯奎兹压缩,RSI高于中线,SAR在价格下方时产生多头信号;当斯奎兹压缩,RSI低于中线,SAR在价格上方时产生空头信号。
-
-5. 信号产生时,判断前一个K线的三个指标判断结果,如果与当前信号判断相反,则产生入场信号。
-
-6. 入场后设置止损止盈,跟踪止损。
-
-## 优势
-
-该策略具有以下优势:
-
-1. 多指标组合看涨看跌,判断准确。斯奎兹指标识别趋势变化准确、RSI判断超买超卖明确、SAR指示入场时机精准。
-
-2. 指标逻辑简单清晰,容易理解实现。
-
-3. 采用多指标确认,可过滤假突破。
-
-4. 设置了止损止盈机制,可以锁定利润,控制风险。
-
-5. 回测数据充足,可靠性较高。
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 多头和空头入场逻辑相似,可能同时发出反向信号,需要过滤。
-
-2. 三种指标均采用参数优化,可能过拟合。
-
-3. 交易次数可能过于频繁,要合理控制仓位数。
-
-4. 止损设置可能过于接近,容易被突破。
-
-对应的解决方法:
-
-1. 增加指标结果持续周期判定,避免信号震荡。
-
-2. 采用 walk forward analysis 方法,调整参数,防止过拟合。
-
-3. 设置pyramid大小,控制单向持仓数量。
-
-4. 测试不同的止损区间,优化止损位置。
-
-## 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化指标参数,提高参数稳定性。可以考虑动态优化参数。
-
-2. 增加仓位控制逻辑,如大小仓、均仓等方式。
-
-3. 测试不同止损方式,如波动止损、线性止损、归零仓等。
-
-4. 增加money management功能,例如固定仓位、固定资金利用率等。
-
-5. 结合机器学习算法实现动态entrada和出场。
-
-6. 增加对冲机制,做多做空对冲,降低相关市场系统性风险。
-
-7. 考虑加入更多指标,建立投票机制,提高判断准确性。
-
-## 总结
-
-该策略整体思路清晰,利用多指标看涨看跌判断趋势方向,在布林带通道压缩时机敏锐入场,止损止盈机制控制风险,是一种较为稳定的趋势跟踪策略。通过参数优化、风控机制的改进,可以获得更好的回测指标和实盘效果。该策略适用于趋势较明显的品种,也可考虑在相对稳定的大周期如日线操作。整体来说,该策略具有较强的实用价值。
-
-|| 
 
 
 ## Overview
@@ -189,7 +99,6 @@ Some directions to optimize the strategy:
 
 The strategy has clear logic of using multiple indicators to determine trend direction and astutely entering on squeeze. The stop loss and take profit mechanics limit risks. Parameter optimization and risk controls can further improve backtest and live results. It is a stable trend following strategy suitable for trending products, and can also work on larger timeframes like daily. With strong practical value, this strategy can be further optimized in many aspects.  
 
-[/trans]
 
 > Strategy Arguments
 

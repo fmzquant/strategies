@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d59f469553540c160e.png)
 
-[trans]
-
-
-## 概述
-
-该策略是一种多时间框架的量价指标交易策略。它综合运用了相对强弱指数(RSI)、平均真实波幅(ATR)、简单移动平均线(SMA)以及自定义的量价条件来识别潜在的做多信号。当满足一定的超卖、量价指标交叉、价格突破等条件时,该策略会建立做多头寸。同时,它也设置了止损位和止盈位来控制每单的风险收益比。
-
-## 策略原理
-
-该策略主要基于以下几个关键点:
-
-1. RSI低于超卖线且在最近10根K线内连续处于超卖状态时,视为超卖信号
-2. 定义了多组量价条件,需要同时满足这些量价条件才认为量价指标发出做多信号
-3. 当收盘价从下向上突破13周期的SMA时,视为价格的突破信号
-4. ATR小周期低于大周期也是助推信号
-5. 综合上述多个指标信号,形成最终做多决策
-
-具体来说,该策略对RSI指标设置了长度和超卖线参数,根据这些参数计算RSI值。当RSI指标连续多根K线低于超卖线时,产生超卖信号。
-
-此外,该策略定义了3个交易量阈值,根据不同时间周期的数据,设定了多组量价条件。例如90周期的量值大于49周期量值的1.5倍。当这些量价条件同时满足时,发出量价指标的做多信号。
-
-在价格方面,该策略计算13周期SMA指标,并统计价格向上突破SMA以来的K线数量。当价格从下向上突破SMA,且突破后的K线数量少于5根时,视为价格的突破信号。
-
-ATR周期参数方面,该策略指定了小周期5和大周期14的ATR。当小周期ATR低于大周期ATR时,表示市场波动加速缩小,作为助推的做多信号。
-
-最终,该策略综合考虑上述多个买入条件,包括超卖、量价指标、价格突破和ATR指标。当这些条件同时满足时,产生最终的做多信号,并建立做多头寸。
-
-## 策略优势
-
-该策略具有以下几个优势:
-
-1. 多时间框架量价指标判断,提高精确度。策略不仅考虑单一周期的量价数据,而是评估多组不同周期量价条件的交叉情况,可以更精确判断量能的集中度。
-
-2. 超卖+量价+价格三重判断机制,确保买入信号的可靠性。超卖提供了最基础的买入时点选取,此外量价和价格的指标交叉为买入时机增加了额外确认,可靠性较高。
-
-3. 设置止损止盈机制严格控制单笔交易风险。止损和止盈参数可以根据个人风险偏好进行调整,在追求利润最大化的同时合理控制每单的风险。
-
-4. 多指标集成判断增加弹性。即使部分指标发生故障或错误,仍能依靠其他指标判断保证一定的持续运作能力。
-
-## 风险及对策 
-
-该策略也存在一些风险:
-
-1. 参数配置风险。各类指标的参数设置直接影响判断结果,不合理的参数可能导致交易信号产生偏差。需认真求证参数的合理取值。
-
-2. 盈利空间有限。作为融合多个指标进行集成判断的策略,信号产生频率相对更为保守,单位时间内交易次数较少,盈利空间存在一定局限。
-
-3. 指标发散风险。当部分指标发出做多信号而另一些指标发出做空信号时,策略无法确定最优决策。这需要提前识别并解决指标间可能的发散情况。
-
-## 策略优化方向 
-
-该策略可以进一步从以下几个方面进行优化:
-
-1. 增加机器学习模型辅助判断。可以训练量价及波动特征模型,辅助人工设定的参数,实现参数的动态化。
-
-2. 提高止盈策略的成熟度。例如可以设置浮动止盈、分批止盈、跟踪止盈等,在防止掉期的同时可以进一步提升每单收益。
-
-3. 评估引入盘口数据。除K线量价数据外,结合深度买卖盘口数据也可以判断持仓分布情况,可提供额外参考信号。
-
-4. 测试校验其他指标集成。本策略主要运用RSI、ATR和SMA等指标进行集成,还可以尝试引入布林线、KDJ等其他指标组合,丰富和优化交易信号来源。
-
-## 总结
-
-本策略综合运用了RSI、ATR、SMA及自定义量价条件判断来实现对潜在做多时机的识别。它同时具有多时间框架量价指标判断、三重信号确认机制及止损止盈控制风险等优势。当然也需要留意参数配置风险、盈利空间限制等问题。未来该策略可以从机器学习辅助、止盈策略优化、盘口数据引入及指标集成扩展等方面进行进一步优化。
-
-||
 
 ## Overview
 
@@ -141,7 +75,6 @@ This strategy can be further optimized in the following aspects:
 
 This strategy utilizes a combination of indicators including RSI, ATR, SMA and custom volume price conditions to identify potential long entry opportunities. It has advantages like multi-timeframe volume price evaluation, triple confirmation mechanism and stop loss/take profit risk controls. Nonetheless, risks like parameter configuration, constrained profit potential also need to be noted. In the future, this strategy can be further enhanced via machine learning augmentation, more sophisticated take profit design, incorporation of order book data as well as expanded indicator combinations.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略综合运用多种技术指标,对价格反转进行判断,属于多因子驱动的反转交易策略。它整合123形态与极化分形效率(PFE)指标,在两者给出一致信号时入场,可以有效过滤假信号,提高交易胜率。
-
-## 策略原理
-
-该策略主要由两部分组成:
-
-1. 123形态判断:当收盘价连续2日上涨后第3日回落,且 Stochastic快线低于慢线,产生买入信号;当收盘价连续2日下跌后第3日反弹,且 Stochastic快线高于慢线,产生卖出信号。
-
-2. PFE指标判断:PFE高于预设上限时看空,PFE低于预设下限时看多。
-
-仅当123形态与PFE指标产生一致信号时,才会入场。当两者不一致时,维持空仓。
-
-123形态可识别潜在反转点。PFE判别趋势效率,避免追逐假突破。两者配合,可以提高判断准确率,达到多因子验证的效果。
-
-## 策略优势
-
-- 123形态与PFE指标互为验证,减少假信号
-- PFE指标理论基础稳固,对价格效率有效判断
-- 多因子驱动,提高判断准确率 
-- 结合反转形态与趋势指标,策略灵活
-- 可自定义参数,适应市场变化
-
-## 策略风险及应对
-
-- 个别因子可能发出错误信号
-- 因子设定需要不断优化和调整
-- 持仓时间较短,受到频繁止损风险
-
-应对方法:
-
-1. 增加验证因子,提高准确率
-2. 优化参数配置,提高 stableness
-3. 采用自动优化方法找到最佳参数
-4. 设置问候止损或移动止损
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加基于Volatility的止损设置
-2. 采用机器学习等方法自动优化所有参数
-3. 在趋势较强时,降低反转交易频率
-4. 结合自适应指标针对市场波动性调整持仓
-5. 与其他策略组合,分散风险,提高整体收益率
-
-## 总结
-
-该策略融合多种因子判断价格反转点,既有理论依据,又易于实施。相比单一指标,多因子驱动提高判断准确率,是一种相对稳健的反转交易策略。通过参数优化、止损管理、组合等方法可以进一步增强策略效果。
-
-|| 
 
 ## Overview
 
@@ -116,7 +61,6 @@ The strategy can be enhanced through:
 
 This strategy combines multiple factors to identify reversal points, providing theoretical soundness and ease of implementation. The multi-factor approach improves accuracy over single indicators. Further improvements can come through parameter optimization, stop loss management, portfolio combinations and more.
 
-[/trans]
 
 > Strategy Arguments
 

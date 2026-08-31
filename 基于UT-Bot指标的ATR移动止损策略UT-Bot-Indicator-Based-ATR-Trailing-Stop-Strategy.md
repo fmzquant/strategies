@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11ddb3b9afabc59941a.png)
-[trans]
-## 概述
-
-该策略基于QuantNomad开发的UT Bot指标,结合了移动止损的思路。原始代码由@Yo_adriiiiaan编写,@HPotter进行了修改。该策略将与LuxAlgo的Smart Money Concepts配合使用。目前该策略处于测试阶段。
-
-## 策略原理
-
-该策略的主要原理如下:
-
-1. 当收盘价高于50期简单移动平均线时,进行做多交易。
-2. 对于多头仓位,设置移动止损价格。移动止损价格为当前收盘价的80%(1-20%)。移动止损价格会随着价格上涨而上移,但不会下移,从而起到保护利润的作用。
-3. 对于空头仓位,同样设置移动止损价格。移动止损价格为当前收盘价的120%(1+20%)。移动止损价格会随着价格下跌而下移,但不会上移。
-4. 使用ATR(Average True Range,平均真实波幅)作为移动止损的参考依据。ATR移动止损价格的计算方法为:向上移动时,取前一个ATR移动止损价格和(当前收盘价-ATR*Key Value)两者的较大值;向下移动时,取前一个ATR移动止损价格和(当前收盘价+ATR*Key Value)两者的较小值。其中Key Value为用户设置的参数,用于调节移动止损的敏感度。
-5. 根据ATR移动止损价格的突破情况,判断当前持仓方向。当价格向上突破ATR移动止损价格时,持多头仓位;当价格向下突破ATR移动止损价格时,持空头仓位;其他情况下保持当前持仓状态不变。
-
-## 优势分析
-
-1. 移动止损的设置可以很好地保护利润,使得策略在趋势行情中能够获得更多收益。
-2. 分别对多头和空头仓位设置止损,能够适应不同的行情。
-3. 使用ATR作为止损的参考依据,可以动态调整止损位置,更加灵活有效。
-4. 提供了Key Value参数供用户优化,可以根据不同品种和周期进行调节,提高适应性。
-
-## 风险分析
-
-1. 在震荡行情中,频繁的止损可能导致过多的交易,增加手续费成本,降低收益。
-2. 固定百分比的移动止损方式相对简单,在一些行情中可能无法很好地应对价格波动。
-3. 策略中只考虑了移动止损,而没有设置移动止盈,可能错失一些盈利机会。
-4. 参数的选择对策略表现有较大影响,不当的参数可能带来更大的回撤风险。
-
-## 优化方向
-
-1. 可以考虑结合其他指标或条件,例如交易量、波动率等,对进场条件进行优化,提高信号的可靠性。
-2. 对于移动止损的计算方法,可以探索更加复杂和有效的方式,例如使用抛物线止损、动态百分比止损等。
-3. 可以加入移动止盈的机制,例如根据ATR或百分比设置动态止盈位,以更好地锁定利润。
-4. 针对不同的品种和周期,可以进行参数优化,寻找最适合的参数组合。也可以根据市场状态的变化,动态调整参数。
-
-## 总结
-
-该策略在UT Bot指标的基础上,加入了移动止损的逻辑,能够在趋势行情中起到保护利润的作用。同时,策略对多头和空头仓位分别设置止损,适应性较强。使用ATR作为移动止损的参考依据,可以动态调整止损位置,提高灵活性。但是,该策略在震荡行情中可能面临频繁止损带来的高交易成本风险,且缺乏移动止盈的设置,有错失盈利的可能。此外,参数的选择对策略表现有较大影响。
-
-未来,可以从优化进场条件、探索更复杂的移动止损方式、加入移动止盈机制、针对不同品种和周期进行参数优化等方面对策略进行完善,以期获得更稳健的收益。总的来说,该策略思路简单明了,易于理解和实现,但还有进一步优化的空间,值得继续探索和改进。
-
-|| 
 
 ## Overview
 
@@ -94,7 +51,6 @@ The main principles of this strategy are as follows:
 Based on the UT Bot indicator, this strategy incorporates trailing stop logic, which can protect profits in trend markets. At the same time, the strategy sets stop losses separately for long and short positions, making it highly adaptable. Using ATR as a reference for the trailing stop allows for dynamic adjustment of the stop loss position, improving flexibility. However, this strategy may face the risk of high transaction costs due to frequent stop-outs in choppy markets, and it lacks a trailing profit target setting, which may miss profit opportunities. In addition, the choice of parameters has a significant impact on strategy performance.
 
 In the future, the strategy can be improved by optimizing entry conditions, exploring more complex trailing stop methods, adding a trailing profit target mechanism, and optimizing parameters for different varieties and cycles, in order to obtain more stable returns. Overall, the strategy idea is simple and straightforward, easy to understand and implement, but there is room for further optimization and it is worth continuing to explore and improve.
-[/trans]
 
 > Strategy Arguments
 

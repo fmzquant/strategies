@@ -9,81 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略运用双移动平均线的金叉死叉来判断趋势,以发出买入和卖出信号。当快速移动平均线从下方上穿慢速移动平均线时,产生金叉,买入信号出现。当快速移动从上方下穿慢速移动平均线时,产生死叉,卖出信号出现。
-
-## 策略原理
-
-该策略由以下几部分组成:
-
-1. 计算价格的百分比形式的振荡器值。振荡器的值为价格减去一个中值的百分比。中值由例如20日最高价和最低价的平均值计算。
-
-2. 计算振荡器值的移动平均线,如20日hull移动平均线。
-
-3. 计算移动平均线的延迟值,如12日延迟。
-
-4. 判断移动平均线是否上穿或下穿延迟移动平均线,出现金叉或死叉信号。
-
-5. 发出买入和卖出信号。
-
-具体来说,策略首先计算价格的振荡器值,然后计算振荡器的移动平均线,再计算该移动平均线的延迟值。 
-
-当振荡器移动平均线上穿延迟移动平均线时,产生金叉信号,做多;当振荡器移动平均线下穿延迟移动平均线时,产生死叉信号,做空。
-
-这样,通过判断双移动平均线的交叉情况,决定交易方向。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用双移动平均线过滤虚假信号,提高信号的可靠性。
-
-2. 运用快速和慢速均线组合,抓住中期趋势。快速均线对价格变化敏感,慢速均线有滞后性,组合使用可以在滤除短期噪音的同时捕捉到中期趋势反转。
-
-3. 振荡器的使用可以突出突破点,产生更明确的交易信号。 
-
-4. 可自定义移动平均线算法和参数,适应不同市场环境。
-
-5. 策略逻辑简单清晰,容易理解和实现,适合新手学习。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 双移动平均线交叉产生信号滞后,可能错过最佳入场点位。
-
-2. 双移动平均线在盘整市中容易产生错误信号。
-
-3. 无法判断趋势强弱,可能在牛市中过早离场。
-
-4. PARAMETERS可调参数过多,不易优化找到最佳参数组合。
-
-5. 没有止损机制,无法控制单笔损失。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线的类型和参数,测试不同组合在不同市场中的稳定性。
-
-2. 增加趋势判断指标,如ADX,避免因错误信号打开不必要交易。
-
-3. 添加止损策略,如移动止损或百分比止损,控制单笔损失。
-
-4. 结合其他指标,如交易量能量,RSI等,提高交易信号质量。
-
-5. 使用机器学习方法自动优化参数,得到更稳定参数设置。
-
-6. 考虑适当放宽入场条件,以减少漏单可能。
-
-## 总结
-
-该双移动平均线金叉死叉策略,通过快速和慢速均线的组合匹配,在滤除短期市场噪音的同时,捕捉到价格中期趋势的转折点,以此产生交易信号。该策略优点是简单易于实现,容易理解,新手友好。但也存在产生错误信号、无法判断趋势强度等缺点。通过优化移动平均线参数,添加趋势判断指标,设置止损条件等,可以改进该策略,使之更适合不同市场环境。总体来说,双移动平均线策略是一种实用的技术指标策略,值得进行相应优化调整后实盘验证。
-
-|| 
 
 
 ## Overview 
@@ -158,7 +83,6 @@ The strategy can be optimized in the following aspects:
 
 This dual moving average crossover strategy captures mid-term trend reversal points by combining fast and slow moving averages, filtering out short-term market noise. It has the advantage of being simple, easy to understand and beginner friendly. But it also has drawbacks like generating wrong signals and inability to determine trend strength. The strategy can be improved by optimizing MA parameters, adding trend filters, setting stop loss conditions etc to suit different market environments. Overall, the dual MA strategy is a practical technical indicator based strategy worth verifying through optimization and live testing.
 
-[/trans]
 
 > Strategy Arguments
 

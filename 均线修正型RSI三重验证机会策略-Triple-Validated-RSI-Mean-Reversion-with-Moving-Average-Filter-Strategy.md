@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1239171a682745beb6a.png)
 
-[trans]
-#### 概述
-本策略是一个基于均值回归理论的短期交易策略,通过结合200日均线和2周期RSI指标进行交易。策略核心是在长期上升趋势中寻找超卖修正机会,通过三重验证机制确保交易信号的可靠性。
-
-#### 策略原理
-策略采用三重验证机制来确认交易信号:首先要求价格位于200日均线之上,确认长期上升趋势;其次通过连续三天的RSI下跌形成短期超卖,且首次下跌需从RSI 60以上开始;最后要求RSI降至10以下形成极度超卖。当三重条件同时满足时,系统发出做多信号。当RSI回升至70以上时,认为已达到超买状态,系统自动平仓。
-
-#### 策略优势
-1. 三重验证机制显著提高了交易信号的可靠性
-2. 结合长短期指标,避免了单一指标可能带来的虚假信号
-3. 策略逻辑清晰,参数设置简单,易于理解和执行
-4. 通过均线过滤,确保交易方向与主趋势一致
-5. 采用极端超卖条件触发入场,提高了交易成功概率
-
-#### 策略风险
-1. 频繁交易可能带来较高的交易成本
-2. 在强势趋势市场中,可能错过持续上涨机会
-3. RSI指标在某些市场条件下可能产生滞后
-4. 市场波动剧烈时可能导致过多假信号
-建议通过设置止损,控制持仓时间和优化交易频率来管理风险。
-
-#### 策略优化方向
-1. 可以考虑增加成交量指标作为辅助确认
-2. 优化RSI参数,测试不同周期的表现
-3. 引入自适应机制,根据市场波动调整参数
-4. 增加趋势强度过滤器,提高交易质量
-5. 考虑加入止损机制,优化风险控制
-
-#### 总结
-该策略通过均线和RSI指标的巧妙组合,构建了一个稳健的交易系统。三重验证机制有效提高了交易的可靠性,但仍需注意风险管理和参数优化。策略整体设计合理,具有较好的实用价值和优化空间。
-
-|| 
 
 #### Overview
 This strategy is a short-term mean reversion trading system that combines a 200-day moving average with a 2-period RSI indicator. The core concept is to identify oversold correction opportunities within long-term uptrends through a triple validation mechanism.
@@ -73,7 +41,6 @@ Risk management through stop-loss settings, position duration control, and tradi
 
 #### Summary
 The strategy creates a robust trading system through clever combination of moving averages and RSI indicators. While the triple validation mechanism effectively improves trading reliability, attention to risk management and parameter optimization remains crucial. The overall design is rational with good practical value and optimization potential.
-[/trans]
 
 
 

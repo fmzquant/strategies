@@ -11,80 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11524e527d4c59a5fc9.png)
 
-[trans]
-
-
-## 概述
-
-本策略基于SSL通道指标,结合突破信号进行超短期动量交易。当价格突破SSL上轨时,做多;当价格突破SSL下轨时,做空。同时设置移动止损和跟踪止损来控制风险。
-
-## 策略原理
-
-1. 计算长度为N的高价SMA和低价SMA作为SSL通道的上轨和下轨
-
-2. 当收盘价大于上轨时,设置买入信号;当收盘价小于下轨时,设置卖出信号
-
-3. 入场后设置固定止损位于SSL通道另一端,以控制风险
-
-4. 入场后设置跟踪止损,根据价格波动来锁定利润
-
-5. 当价格突破跟踪止损或固定止损位后,平仓离场
-
-## 优势分析
-
-1. 基于通道指标判断长短方向,避免假突破
-
-2. 结合两种止损方式,既可锁定利润,也可控制风险
-
-3. 交易频率高,适合超短线操作
-
-4. 参数设置灵活,可调整至自己的交易风格
-
-5. 自动识别多空,不需要判断方向
-
-## 风险分析
-
-1. 短线操作易受突发事件影响,需警惕高波动
-
-2. 固定止损在突破SSL后触发,可能会止损过大
-
-3. 跟踪止损设置不当可能过早离场
-
-4. 通道突破容易形成虚假信号,需组合其他指标过滤
-
-5. 仅适合有经验的短线交易者,不适合长线投资者
-
-解决方法:
-
-1. 合理设置固定止损比例,控制单次止损
-
-2. 跟踪止损设置合理幅度,避免过早离场
-
-3. 结合量能指标等过滤器,识别真正趋势突破
-
-4. 做好资金管理,分批建仓,控制风险敞口
-
-## 优化方向
-
-1. 优化SMA周期参数,调整到最佳长度
-
-2. 尝试其他通道指标,如BB,KD等
-
-3. 增加量能指标判断突破可信度 
-
-4. 考虑换手率,避免低换手率假突破
-
-5. 测试不同持仓时间,找到最佳出场时机
-
-6. 测试固定止损和移动止损设置
-
-7. 调整仓位管理策略,优化资金使用效率
-
-## 总结
-
-本策略整合SSL通道指标判断趋势方向,以突破为信号入场,并使用双止损管理风险。优点是反应敏捷,易于掌握趋势,适合高频交易。需要注意防范假突破,完善止损机制,并控制好仓位。有潜力成为超短线交易的有效策略,值得进一步测试优化。
-
-|| 
 
 ## Overview
 
@@ -156,7 +82,6 @@ Solutions:
 
 This strategy combines SSL channel directional bias and breakout signals, with dual stop loss management. It reacts fast to capture trends, suitable for high frequency trading. Beware of false breakouts, refine stop loss mechanisms, and control position sizing. With further optimization, it has the potential to be an effective ultrashort-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

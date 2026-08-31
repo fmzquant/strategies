@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/125f998bbb33dbf8404.png)
-[trans]
-
-## 概述
-
-该策略基于平滑震荡指标来识别价格趋势,并采用趋势追踪方式进行交易。当价格突破指标线时做多头,当价格跌破指标线时做空头。
-
-## 策略原理
-
-该策略使用自定义的平滑震荡指标来识别价格趋势。指标计算当前K线的反转收盘价,即能使盈亏和轨迹图颜色发生反转的理论价格。然后对该反转收盘价进行平滑处理,得到最终的平滑震荡指标线。当价格高于(低于)指标线时,表示行情处于上升(下跌)趋势。
-
-策略以突破指标线作为建仓信号。当价格突破指标线时做多,当价格跌破指标线时做空。止损线设置为入场价的一定百分比,以锁定利润并控制风险。
-
-## 策略优势
-
-1. 使用自定义指标识别趋势,回测表现较好
-2. 采用趋势追踪,大致符合量化趋势交易理论
-3. 设置止损有利于风险控制
-
-## 风险分析
-
-1. 指标存在一定程度回溯,可能导致策略表现不佳
-2. 仅基于单一指标,容易产生错误信号
-3. 止损设置存在优化空间,可能出现超止损现象
-
-## 优化方向
-
-1. 考虑结合其他指标过滤交易信号,如布林带、RSI等
-2. 测试不同的指标参数设置
-3. 对止损方式进行测试和优化
-4. 更多测试不同品种和周期的数据
-
-## 总结
-
-该策略整体思路清晰,采用自定义指标识别趋势并以趋势追踪的方式进行交易。从回测结果来看,策略表现较好,具有一定的实盘运用潜力。但仅依赖单一指标且存在一定回溯,信号质量仍待验证。此外,止损机制也需要进一步测试和优化。总的来说,该策略概念可行,但仍需做更多工作来提升实盘运用能力。
-
-|| 
 
 ## Overview
 
@@ -80,7 +44,6 @@ The strategy enters trades based on breakouts of the indicator line. Long trades
 
 The strategy demonstrates a clear trend following approach using a custom oscillator indicator. Backtest results are encouraging, indicating potential for live trading. However sole dependence on one repainting indicator and lack of signal quality verification are concerns. Stop loss mechanics also require additional testing and tuning. Overall the strategy concept looks feasible but more work is needed to make it reliably deployable for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

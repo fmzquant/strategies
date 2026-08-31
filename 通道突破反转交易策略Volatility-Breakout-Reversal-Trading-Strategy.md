@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ec06bced59d8b19bbe.png)
-[trans]
-## 概述
-
-通道突破反转交易策略是一种追踪价格通道的移动止盈止损点的反转交易策略。它利用加权移动平均方法计算价格通道,并在价格突破通道时建立多头或空头头寸。
-
-## 策略原理
-
-该策略首先利用Wilder平均真实范围(ATR)指标计算价格波动率。然后根据ATR值计算出平均范围常数(ARC)。ARC即为价格通道的一半宽度。接着计算出通道的上轨和下轨,即止盈止损点,称为SAR点。当价格突破上轨时做空,突破下轨时做多。
-
-具体来说,首先计算最近N根K线的ATR。然后用一个系数乘以ATR得到ARC。ARC乘以系数可以控制通道的宽度。ARC加到N根K线里收盘价最高点上得到通道上轨,即高SAR。ARC减去收盘价最低点得到通道下轨,即低SAR。如果价格收盘突破上轨,则做空;如果收盘突破下轨,则做多。
-
-## 策略优势
-
-1. 利用价格波动率计算自适应通道,可以跟踪市场变化
-2. 反转交易,适合趋势反转市场
-3. 移动止盈止损,可以锁定利润,控制风险
-
-## 策略风险
-
-1. 反转交易容易被套,需要适当调整参数
-2. 大幅度波动市场中容易被关闭头寸
-3. 参数不当会造成过于频繁交易
-
-解决方法:
-
-1. 优化ATR周期和ARC系数,使通道宽度合理
-2. 结合趋势指标过滤进入时机
-3. 增大ATR周期,降低交易频率
-
-## 策略优化方向  
-
-1. 优化ATR周期和ARC系数
-2. 增加开仓条件,比如结合 MACD 指标
-3. 增加止损策略
-
-## 总结
-
-通道突破反转交易策略利用通道追踪价格变化,在波动加剧时反转建仓,并设置自适应移动止盈止损。这种策略适用于反转为主的盘整市场,在判断反转点准确的前提下,可以获得不错的投资回报。但需要注意防止止损点过于宽松和参数优化问题。
-
-||
 
 ## Overview
 
@@ -89,7 +49,6 @@ Solutions:
 
 The Volatility Breakout Reversal Trading Strategy uses channels to track price changes and reverses positions when volatility spikes. It works well in range-bound markets with reversals, generating good returns if reversal points are accurately identified. Care should be taken to avoid stops being too wide and overfitting parameters.
 
-[/trans]
 
 > Strategy Arguments
 

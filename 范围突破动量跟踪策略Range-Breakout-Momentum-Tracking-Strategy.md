@@ -9,42 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 策略原理
-
-该策略融合了范围指标、动量指标和趋势跟踪来捕捉短期走势。策略具体规则如下:
-
-1. 计算一定周期内的价格范围(高点和低点之差)并平滑处理,得到平滑范围指标。该指标能判断价格走势的扩张和收缩。
-
-2. 计算一定周期内的动量指标,如Hull曲线。Hull曲线在判断短期趋势方向和强弱上具有很好的效果。 
-
-3. 当平滑范围指标颜色变化(如从红变绿),表示范围开始扩大,并配合Hull曲线同向(如Hull曲线向上),则做多入场。
-
-4. 当平滑范围指标颜色变化(如从绿变红),表示范围开始收缩,并配合Hull曲线同向(如Hull曲线向下),则做空入场。 
-
-5. 加入趋势跟踪止损机制,例如Hull曲线回落则止损出场。
-
-通过范围指标判断走势扩张,动量指标判断方向,能快速捕捉短期趋势机会。跟踪止损来控制风险。
-
-## 策略优势
-
-- 结合多种指标,综合判断市场走势
-- 范围指标判断扩张点位,动量指标判断方向
-- 快速定位短线机会,实现资金快速周转
-
-## 策略风险
-
-- 容易被套,需要及时止损
-- 过于频繁交易,交易成本可能较高  
-- 针对短线行情,在长期横盘中效果不佳
-
-## 总结
-
-该策略综合运用多种技术指标,旨在快速抓取短线趋势机会。相比长线策略,其操作频率更高,可捕捉短期价格波动。但需要严格的止损机制以控制风险。
-
-
-||
 
 ## Strategy Logic
 
@@ -78,7 +42,6 @@ Expanding ranges with directional momentum allows fast capturing of short-term t
 
 This strategy uses multiple technical indicators to quickly capitalize on short-term trends. Compared to long-term strategies, it trades more frequently to capture price swings. Strict stops are required to control risks.
 
-[/trans]
 
 > Strategy Arguments
 

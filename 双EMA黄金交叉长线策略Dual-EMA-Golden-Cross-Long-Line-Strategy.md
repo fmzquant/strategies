@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ed2bd65340652c549a.png)
-[trans]
-## 概述
-
-双EMA黄金交叉长线策略是一种仅开启做多头仓位的趋势跟踪策略。该策略同时使用短期EMA、中期EMA和长期EMA三条移动平均线。具体进入规则是:价格高于长期EMA,同时短期EMA从下方上穿中期EMA构成黄金交叉时,开仓做多。
-
-## 策略原理   
-
-1. 使用三条EMA周期可配置,分别计算出短期EMA、中期EMA和长期EMA。
-
-2. 如果价格高于长期EMA,则证明目前处于多头趋势中。
-
-3. 如果短期EMA从下方上穿中期EMA,形成黄金交叉,则进一步证实多头趋势加强中。
-
-4. 当上述两个条件同时满足时,开仓做多。
-
-## 优势分析
-
-该策略最大的优势是能够有效识别趋势,采用多周期EMA结合判断,避免被短期市场噪音误导。同时,配置停损作为风险控制手段,能够将损失控制在一定范围。
-
-## 风险分析  
-
-该策略主要风险在于多头仓位。当行情反转时,无法及时关闭头寸,导致亏损扩大的风险。此外,EMAS周期设置不当也会导致交易频繁,增加交易成本。
-
-## 优化方向  
-
-1. 增加仓位数量管理,当回撤达到一定比例时降低仓位。
-
-2. 增加突破新高停损设置。
-
-3. 优化EMAS周期参数,降低交易频率。 
-
-
-## 总结  
-
-本策略整体为稳定优质的长线持仓策略。识别趋势能力较强,风险控制到位。通过进一步优化,可望获得更好的稳定收益。
-
-||
 
 ## Overview  
 
@@ -81,7 +44,6 @@ The main risk of this strategy is the long position. When the market reverses, i
 ## Summary   
 
 This strategy is overall a stable high-quality long-term holding strategy. It has strong ability to identify trends with proper risk control. With further optimization, it is expected to obtain better stable returns.  
-[/trans]
 
 > Strategy Arguments
 

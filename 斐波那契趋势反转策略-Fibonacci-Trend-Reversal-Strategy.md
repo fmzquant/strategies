@@ -10,34 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1265dca7825d877f2a1.png)
-[trans]
-#### 概述
-"斐波那契趋势反转策略"是一种利用斐波那契回撤水平和趋势强度指标(TSOT)来捕捉市场趋势反转点的交易策略。该策略通过动态ATR止损和部分止盈,实现了风险管理和利润的最大化。策略适用于5分钟的可扩展市场。
-
-#### 策略原理
-该策略使用斐波那契回撤水平(0.236、0.5和0.786)来识别潜在的趋势反转点。同时,利用TSOT指标通过价格的百分位数排名来衡量趋势强度。当价格突破中间的斐波那契水平(0.5)并且TSOT指标显示看涨/看跌信号时,策略开仓做多/做空。止损位置使用动态ATR计算,止盈则设置了部分止盈和风险回报比。此外,策略还允许根据新的TSOT信号反转仓位。
-
-#### 策略优势
-1. 结合斐波那契回撤和趋势强度指标,能够更准确地捕捉趋势反转点。
-2. 动态ATR止损根据当前市场波动率调整,实现了有效的风险管理。
-3. 部分止盈设置可以在达到目标盈利时及时获利了结,同时让利润继续奔跑。
-4. 允许根据新信号反转仓位,提高了策略的适应性和灵活性。
-
-#### 策略风险
-1. 在震荡市或趋势不明朗时,频繁的反转信号可能导致过度交易和损失。
-2. 虽然动态止损和部分止盈有助于控制风险,但极端行情下仍可能出现较大回撤。
-3. 策略参数(如斐波那契水平、TSOT计算等)的选择需要根据不同市场和时间周期进行优化,不恰当的参数可能影响策略表现。
-
-#### 策略优化方向
-1. 引入更多确认信号(如交易量、动量指标等)来过滤假信号,提高开仓准确性。
-2. 优化止盈止损逻辑,如结合趋势强度动态调整止盈目标,或者引入追踪止损等。
-3. 对于频繁反转的情况,可以设置反转次数限制或加入反转过滤条件,以减少过度交易。
-4. 针对不同的市场特点和交易品种,对策略参数进行细致的优化和测试。
-
-#### 总结
-"斐波那契趋势反转策略"通过斐波那契回撤水平和TSOT指标的结合,能够有效捕捉趋势反转点,并通过动态止损和部分止盈实现风险控制和利润目标。策略在趋势明确的市场中表现出色,但在震荡市需要谨慎应对。未来可以从信号确认、止盈止损优化、反转管理等方面对策略进行进一步的改进和完善,以提升其稳健性和盈利能力。
-
-|| 
 
 #### Overview
 The "Fibonacci Trend Reversal Strategy" is a trading strategy that utilizes Fibonacci retracement levels and the Trend Strength Over Time (TSOT) indicator to capture potential trend reversal points in the market. The strategy implements dynamic ATR stop-loss and partial take-profit to manage risk and maximize profits. It is optimized for scalping (5-minute timeframe) in the expandable market.
@@ -64,7 +36,6 @@ The strategy employs Fibonacci retracement levels (0.236, 0.5, and 0.786) to ide
 
 #### Summary
 The "Fibonacci Trend Reversal Strategy" effectively captures trend reversal points by combining Fibonacci retracement levels with the TSOT indicator, while managing risk and profit targets through dynamic stop-loss and partial take-profit. The strategy performs well in markets with clear trends but requires caution in choppy conditions. Future improvements can focus on signal confirmation, optimization of take-profit and stop-loss, and reversal management to enhance the strategy's robustness and profitability.
-[/trans]
 
 > Strategy Arguments
 

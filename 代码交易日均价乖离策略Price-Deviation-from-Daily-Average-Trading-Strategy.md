@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13260cee4e7d0996faa.png)
-[trans]
-
-## 概述
-
-本策略基于一支蜡烛图指标——Ichimoku Kinko Hyo进行交易信号生成。Ichimoku Kinko Hyo直译为“一目均衡表”,它融合了移动平均线和波段指标的优点,可以同时识别趋势方向和支持阻力位,被视为一种综合指标。
-
-本策略运用Ichimoku Kinko Hyo的成分线来判断趋势方向和强弱。当价格突破云图上下轨时产生交易信号。同时,策略还利用“边沿对边沿”入场机会,这是Ichimoku独特的交易机会。
-
-## 策略原理  
-
-本策略使用了Ichimoku Kinko Hyo的五条成分线:
-
-1. Tenkan线(转折线):最高价和最低价的9日平均
-2. Kijun线(基准线):最高价和最低价的26日平均  
-3. Senkou Span A(先行一):Tenkan线和Kijun线的平均
-4. Senkou Span B(先行二):最高价和最低价的52日平均  
-5. Chikou线(迟行线):收盘价的26日迟移平均
-
-另外绘制Ichimoku的云图,由Senkou Span A和Senkou Span B组成,大体代表目前的趋势区间。
-
-本策略的交易信号来源于以下情形:
-
-1. 价格从下方突破云图上轨:做多信号
-2. 价格从上方突破云图下轨:做空信号  
-3. 价格从云图下方进入云图: 做多“边沿对边沿”入场机会
-4. 价格从云图上方进入云图: 做空“边沿对边沿”入场机会
-
-此外,策略还判断Tenkan线和Kijun线的金叉死叉作为止盈和止损的时机。
-
-## 策略优势
-
-本策略最大的优势在于利用Ichimoku Kinko Hyo指标判断趋势方向和支持阻力的能力强。
-
-1. 用云图判断主要趋势方向,避免逆势操作。  
-2. 用成分线识别支持阻力位,找准突破的交易机会。
-3. 增加“边沿对边沿”入场机会,扩大获利空间。
-
-另外,本策略加入了金叉止损和死叉止盈模块,可以锁定部分利润,控制风险。
-
-## 风险及解决  
-
-本策略主要的风险在于Ichimoku成分线算法导致的潜在跳空。这会造成虚假突破的风险。  
-
-解决方法是适当调整算法参数,缩小成分线间的距离,或者加入过滤器条件,避免进入震荡区间。
-
-## 策略优化
-
-本策略有几个可以优化的方向:  
-
-1. 优化Ichimoku成分线的参数,调整均线周期,适应更多品种和周期。
-
-2. 增加成交量的确认,避免跳空造成的虚假信号。 
-
-3. 结合其他指标过滤,例如MACD、RSI等,识别趋势和超买超卖区域。
-
-4. 优化止损止盈逻辑,例如移动止损、缩量等方法。
-
-## 总结
-
-总而言之,本策略利用Ichimoku Kinko Hyo的云图和成分线判断趋势方向和交易机会。策略优势在于趋势判断清晰,入场时机精准。通过优化参数和增加过滤条件,可以进一步降低虚假信号比率,从而得到更好的策略表现。
-
-
-||
 
 
 ## Overview  
@@ -133,7 +70,6 @@ Several aspects of the strategy can be improved:
 ## Summary  
 
 In summary, this Ichimoku system identifies trend direction and trading chances with the Cloud and component lines. The advantages lie in clear trend determination and accurate entry signals. Further improvements on parameters and filters can lower false signals for better strategy performance.
-[/trans]
 
 > Strategy Arguments
 

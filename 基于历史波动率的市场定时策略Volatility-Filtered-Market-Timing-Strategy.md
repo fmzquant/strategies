@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12cc088bf6d5419d644.png)
-[trans]
-
-## 概述
-
-本策略通过添加一个基于历史波动率的过滤器,实现了一个改进版的买入并持有策略。过滤器的作用是在市场波动性较高的时期关闭买入头寸,而在波动性较低时重新建立买入头寸,从而降低策略的最大回撤。
-
-## 策略原理
-
-1. 计算SPY在过去100天内的历史波动率
-2. 如果当前波动率高于过去100天波动率的95分位值,则过滤该交易日,关闭买入头寸
-3. 如果波动率低于95分位值,则建立买入头寸
-
-## 优势分析
-
-相比于无过滤器的简单买入并持有策略,本策略在28年的回测期内,年化收益率有所提高(7.95% vs 9.92%),同时最大回撤大幅下降(50.79% vs 31.57%)。这说明加入市场波动性过滤器可以在一定程度上提高策略收益率并减少风险。
-
-## 风险分析
-
-本策略的主要风险在于波动率计算方法和过滤器参数设置的准确性。如果波动率计算不准确,过滤器将失效;如果过滤器参数设置的太保守或者太激进,都会对策略收益产生不利影响。此外,Past performance is not indicative of future results,策略的历史表现不代表未来表现。
-
-## 优化方向
-
-可以考虑加入其他过滤器 Indicators 作为确认信号,比如长期移动均线,大盘指数ADX指标等。另外参数调整优化也很关键,比如测试不同的 lookback period, filtering threshold 等参数设置。机器学习和时间序列分析技术也可以用来建立和优化波动率预测模型。
-
-## 总结
-
-本策略通过一个简单的基于历史波动率的过滤器,大幅提高了SPY买入持有策略的收益率,同时也显著降低了最大回撤。这证明了市场状态识别和资产配置的重要性。我们可以通过继续优化波动率模型和加入确认信号来进一步完善该策略。
-
-|| 
 
 ## Overview
 
@@ -66,7 +37,6 @@ Consider adding other confirming indicators as additional filters, like long ter
 
 This strategy greatly improved returns and reduced max drawdown of a SPY buy & hold strategy via a simple volatility filter. It shows the importance of market regime identification and asset allocation. We can further refine it by optimizing the volatility model and adding confirming signals.
 
-[/trans]
 
 > Strategy Arguments
 

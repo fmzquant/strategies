@@ -9,59 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略采用跨周期技术指标来识别趋势方向,结合趋势过滤和波动过滤,实现低风险趋势跟踪交易。
-
-## 策略原理
-
-1. 使用高低点突破来判断买卖信号。当价格突破7周期高点时看空,突破7周期低点时看多。
-
-2. Trendflex指标判断主趋势方向。该指标结合了双平滑技术,可以有效识别趋势中段,值在1以上表明处于上升趋势,值在-1以下则为下降趋势。这里我们要求Trendflex > 1时才能长,< -1时才能短,从而过滤掉盘整状态。
-
-3. Bollinger Bands波动带来识别震荡区间。close价格处于带中时,避免做多做空。
-
-4. 采用移动止损和移动止盈来管理头寸。
-
-## 优势分析
-
-1. 跨周期指标结合双平滑技术,可以有效识别趋势方向,避免被震荡市困扰。
-
-2. 同时考虑趋势方向和波动规律,使交易信号更可靠。
-
-3. 止损止盈设置合理,可以锁定盈利,防止亏损扩大。
-
-4. 策略较为简单易懂,容易实施。
-
-## 风险分析
-
-1. 突破信号可能出现假突破,从而产生错误交易。可以考虑加入更多滤波条件。
-
-2. 固定周期参数无法适应市场的变化,可以考虑动态优化参数。
-
-3. 缺乏价格止损,无法防止极端行情造成的超大亏损。
-
-4. 止盈止损点固定,无法根据市场波动智能调整。
-
-## 优化方向
-
-1. 可以考虑加入更多趋势判断指标,形成策略组合,提高判断准确性。
-
-2. 增加震荡识别模块,在震荡剧烈时暂停交易,降低风险。
-
-3. 引入机器学习算法,实现参数的动态优化。
-
-4. 加入价格止损模块,可以在亏损达到一定阈值时止损退出。
-
-5. 基于市场波动计算止盈止损比例,实现止盈止损的智能调整。
-
-## 总结
-
-本策略总体来说较为稳健可靠,同时也存在一定改进空间。核心思路是跨周期判断趋势方向,再结合趋势强度指标和波动指标进行过滤,从而发出高质量信号。该策略简单实用,非常适合跟踪中长线趋势。通过引入更多条件判断和动态参数优化,可以进一步提高策略效果。
-
-|| 
 
 ## Overview
 
@@ -113,7 +60,6 @@ This strategy uses cross-period technical indicators to identify trend direction
 
 Overall, this strategy is relatively stable and reliable, while also having room for improvement. The core idea is to determine the trend direction across cycles, and then filter using trend strength indicators and volatility indicators to generate high-quality signals. This simple and practical strategy is very suitable for tracking medium and long term trends. By introducing more conditional judgments and dynamic parameter optimization, the strategy effect can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

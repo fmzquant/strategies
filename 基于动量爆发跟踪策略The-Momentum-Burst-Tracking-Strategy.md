@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bc35fb08918caf075f.png)
-[trans]
-
-## 概述
-
-动量爆发跟踪策略通过计算价格变化百分比判断价格突破,结合成交量过滤信号,实现高概率捕捉趋势的突破点。当触发买入信号后,该策略采用价格跟踪止损的方式来锁定利润,避免回撤过大。
-
-## 策略原理
-
-该策略主要通过以下几个指标判断买入时机:
-
-1. 价格变化百分比(isFourPercentBull) - 计算收盘价相对前一日收盘价的变化百分比,用于判断价格是否有效突破;
-
-2. 收盘价与最高价的比率(HighCloseRatio) - 计算收盘价与最高价的比率,判断价格突破强度;
-
-3. 交易量(volume) - 要求交易量大于前一日,确保有效突破; 
-
-4. 200日简单移动平均线(SMA) - 要求收盘价和开盘价均高于200日线,判断趋势方向。
-
-当上述多个条件同时满足时,发出买入信号。之后,该策略采用价格跟踪止损方式来主动止损和锁定利润。具体来说,跟踪止损线的计算公式为:
-
-```
-trailPrice = close * (100 - trailPercent) / 100
-```
-
-其中trailPercent为可配置的止损跟踪百分比。这 Ensure 的是,只要价格上涨,止损线也会跟着上涨,从而锁定利润。当价格回落至止损线时,平仓止损。
-
-## 策略优势
-
-这是一个典型的突破策略,具有以下优势:
-
-1. 多重条件过滤,确保突破的有效性,避免假突破;
-2. 采用价格跟踪止损,可以主动止损和锁定利润,最大程度避免回撤;
-3. 策略逻辑简单清晰,容易理解和优化。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 突破失败的概率仍存在,无法完全避免亏损;
-2. 跟踪止损过于激进可能造成频繁止损;
-3. 参数设置不当可能导致交易频率过高或信号漏失。
-
-对应风险的解决方案是:
-
-1. 优化参数,降低止损幅度,确保有足够空间;  
-2. 适当宽松突破条件,确保不会错过明确趋势;
-3. 测试不同品种,评估策略稳定性。
-
-## 优化方向 
-
-考虑到该策略较高的止损频率,以下几个方向可以进一步优化:
-
-1. 尝试其他跟踪止损方式,如平均线跟踪、ATR 和波动率跟踪等;
-2. 增加机器学习算法,根据历史数据训练判断效果较好的突破参数组合;
-3. 增加基于交易量突破的辅助判断条件,确保突破效果;
-4. 评估不同品种参数设置差异,寻找最佳适配品种。
-
-## 总结
-
-动量爆发跟踪策略总体来说是一个非常实用的趋势跟踪策略。它解决了突破策略中无法有效止损和止盈的问题,在捕捉趋势的同时,又可以很好控制风险。通过参数优化和机器学习等手段的引入,该策略效果还具有进一步提升的空间,是值得深入研究和应用的。
-
-|| 
 
 ## Overview
 
@@ -142,7 +80,6 @@ Considering the high frequency of stops in this strategy, the following directio
 
 The Momentum Burst Tracking Strategy is a very practical trend tracking strategy overall. It solves the problem of inability to effectively stop loss and profit taking in breakout strategies, while still controlling risks well when capturing trends. With room for further improvement by introducing optimizations and machine learning, it is worth in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6b2b32d837dd199818.png)
 
-[trans]
-#### 概述
-本策略基于智能资金概念(SMC)理论,通过划分均衡区(Equilibrium)、溢价区(Premium)和折价区(Discount)三个关键价格区域,结合50周期简单移动平均线(SMA)和订单块(Order Blocks)分析,构建了一个完整的趋势跟踪交易系统。策略通过识别市场结构中的关键支撑位和阻力位,在不同区域之间的价格波动中捕捉交易机会。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素:
-1. 通过计算最近8根K线的波动高点和低点,确定市场的波动范围。
-2. 以波动高低点的中间值作为均衡区,高于均衡区定义为溢价区,低于均衡区定义为折价区。
-3. 使用50周期SMA判断整体趋势方向,价格在SMA之上视为多头趋势,反之为空头趋势。
-4. 在折价区且价格站上SMA时产生买入信号,在溢价区且价格跌破SMA时产生卖出信号。
-5. 通过分析20根K线内的最高价和最低价来识别订单块,用于确认交易信号。
-6. 标记波动高低点作为流动性区域,预测可能的价格反转点。
-
-#### 策略优势
-1. 结构化的区域划分方法,能够清晰定位市场所处阶段。
-2. 多重信号确认机制,通过区域、趋势和订单块三重验证提高交易准确性。
-3. 动态适应市场变化,实时更新关键价格水平。
-4. 完整的风险管理体系,包含止损和仓位管理。
-5. 代码实现简洁高效,易于维护和优化。
-
-#### 策略风险
-1. 在剧烈波动市场中可能出现假突破信号。
-2. 依赖历史数据计算的指标可能在快速转向市场中滞后。
-3. 固定周期的移动平均线可能不适用于所有市场环境。
-4. 需要合理设置止损以控制风险。
-建议采取以下措施管理风险:
-- 动态调整参数以适应不同市场环境
-- 增加波动率过滤器
-- 实施严格的资金管理规则
-- 定期回测和优化策略参数
-
-#### 策略优化方向
-1. 引入自适应参数:
-- 根据市场波动率动态调整区域范围
-- 使用自适应周期的移动平均线
-2. 增强信号过滤:
-- 添加成交量确认机制
-- 引入动量指标辅助判断
-3. 完善风险管理:
-- 实现动态止损机制
-- 优化仓位管理算法
-4. 提高执行效率:
-- 优化计算逻辑减少资源消耗
-- 改进信号生成机制提高响应速度
-
-#### 总结
-该策略通过智能化的区域划分和多重信号确认机制,构建了一个稳健的趋势跟踪系统。策略的核心优势在于其清晰的市场结构分析方法和完善的风险管理体系。通过持续优化和改进,策略有望在不同市场环境下保持稳定的表现。建议交易者在实盘应用时,需要根据具体市场特征调整参数,并始终保持严格的风险控制。
-
-|| 
 
 #### Overview
 This strategy, based on Smart Money Concepts (SMC) theory, constructs a comprehensive trend following trading system by dividing the market into three key price zones: Equilibrium, Premium, and Discount. It combines a 50-period Simple Moving Average (SMA) with Order Block analysis to identify trading opportunities through price movements between different zones.
@@ -107,7 +58,6 @@ Recommended risk management measures:
 
 #### Summary
 This strategy builds a robust trend following system through intelligent zone division and multiple signal confirmation mechanisms. Its core strengths lie in clear market structure analysis and comprehensive risk management. Through continuous optimization and improvement, the strategy shows promise for stable performance across different market conditions. Traders are advised to adjust parameters based on specific market characteristics and maintain strict risk control when implementing the strategy in live trading.
-[/trans]
 
 
 

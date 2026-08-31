@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1ecdb2cabbd335138e9.png)
 
-[trans]
-#### 概述
-该策略是一个双时间尺度动量策略。它通过在高级别时间周期上使用简单移动平均线(SMA)来判断趋势方向,在低级别时间周期上使用枢轴点(PivotLow和PivotHigh)来识别反转点。当高级别时间周期呈现上升趋势且低级别时间周期出现看涨枢轴点时开多,当高级别时间周期呈现下降趋势且低级别时间周期出现看跌枢轴点时开空。
-
-#### 策略原理
-该策略的主要原理是高级别时间周期的趋势方向会影响低级别时间周期的走势。当高级别时间周期呈现上升趋势时,低级别时间周期的回调更可能是买入机会;当高级别时间周期呈现下降趋势时,低级别时间周期的反弹更可能是做空机会。该策略利用简单移动平均线(SMA)来判断高级别时间周期的趋势方向,利用枢轴点(PivotLow和PivotHigh)来识别低级别时间周期的反转点。
-
-#### 策略优势
-1. 双时间尺度分析,利用了高级别时间周期对低级别时间周期的影响,增加了交易的成功概率。
-2. 使用SMA判断趋势方向比较可靠,使用枢轴点捕捉反转点比较精准。
-3. 参数可调,适应性强。用户可以根据自己的需求调整高低时间尺度、SMA的周期、枢轴点的参数等。
-4. 逻辑清晰,容易理解和实现。
-
-#### 策略风险
-1. 趋势突变风险。如果高级别时间周期的趋势突然发生变化,低级别时间周期可能还没有反应过来,导致策略失效。
-2. 参数设置风险。不恰当的参数设置可能导致策略表现不佳。比如SMA周期选择过短可能导致频繁交易,选择过长可能导致趋势判断滞后。
-3. 极端行情风险。在极端行情下(如暴涨暴跌),该策略可能失效。因为这种行情下,低级别时间周期可能不遵循高级别时间周期的趋势。
-
-#### 策略优化方向  
-1. 增加趋势变化的判断。可以增加一些逻辑来判断高级别时间周期趋势是否发生变化,以便更快地调整低级别时间周期的交易。
-2. 优化参数选择。可以使用一些参数优化的方法(如遗传算法、网格搜索等)来寻找最优参数组合。
-3. 增加风险控制。可以增加一些风险控制的措施(如止损、仓位管理等)来降低极端行情下的损失。
-4. 多因子融合。可以考虑将其他指标或因子(如波动率、成交量等)融入到该策略中,以提高策略的稳健性。
-
-#### 总结
-该双时间尺度动量策略利用了高低级别时间周期之间的联系,通过在高级别时间周期判断趋势方向,在低级别时间周期捕捉反转点,以此实现趋势跟随和反转交易。该策略逻辑清晰,优势明显,但同时也存在一些风险。未来可以从趋势变化判断、参数优化、风险控制、多因子融合等方面对该策略进行优化,以提高其适应性和稳健性。
-
-|| 
 
 #### Overview
 This strategy is a dual timeframe momentum strategy. It determines the trend direction on the higher timeframe using a Simple Moving Average (SMA) and identifies reversal points on the lower timeframe using pivot points (PivotLow and PivotHigh). It enters long when the higher timeframe shows an uptrend and a bullish pivot point appears on the lower timeframe, and enters short when the higher timeframe shows a downtrend and a bearish pivot point appears on the lower timeframe.
@@ -65,7 +37,6 @@ The main principle of this strategy is that the trend direction of the higher ti
 
 #### Summary
 This dual timeframe momentum strategy leverages the connection between higher and lower timeframes, determining the trend direction on the higher timeframe and capturing reversal points on the lower timeframe to achieve trend following and reversal trading. The strategy has clear logic and obvious advantages, but also has some risks. In the future, the strategy can be optimized from aspects such as trend change detection, parameter optimization, risk control, and multi-factor fusion to improve its adaptability and robustness.
-[/trans]
 
 > Strategy Arguments
 

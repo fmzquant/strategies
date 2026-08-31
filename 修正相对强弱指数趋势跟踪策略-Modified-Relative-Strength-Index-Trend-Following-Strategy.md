@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/182d910a73db6224a81.png)
 
-[trans]
-#### 概述
-该策略基于修正的相对强弱指数(Modified RSI)来捕捉市场趋势。策略的主要思路是利用Modified RSI指标的交叉信号和直方图信号来判断市场趋势,并根据趋势方向进行交易。
-
-#### 策略原理
-1. 计算价格的EMA作为Modified RSI的输入
-2. 计算Modified RSI指标
-3. 计算Modified RSI的EMA作为信号线
-4. 计算Modified RSI和信号线的差值作为直方图
-5. 当Modified RSI上穿信号线且直方图大于0时,产生买入信号
-6. 当Modified RSI下穿信号线且直方图小于0时,产生卖出信号
-
-#### 策略优势
-1. Modified RSI指标相比传统RSI指标,能更好地捕捉趋势
-2. 结合Modified RSI的交叉信号和直方图信号,能有效过滤假信号
-3. 参数可调,适用于不同的市场和周期
-4. 程序简洁,计算效率高
-
-#### 策略风险
-1. Modified RSI指标在震荡市容易产生错误信号
-2. 趋势转折点的捕捉可能存在滞后
-3. 单一指标容易受到价格噪音干扰
-
-#### 策略优化方向
-1. 可以结合其他趋势指标如移动平均线等,提高信号可靠性
-2. 可以加入止损止盈模块,控制单笔交易风险
-3. 可以根据不同市场特点,优化参数
-4. 可以加入仓位管理模块,动态调整仓位
-
-#### 总结
-该策略利用Modified RSI指标的特性,从趋势跟踪的角度构建交易系统。Modified RSI指标克服了传统RSI指标的部分缺陷,趋势捕捉能力相对较强。但是单一指标的策略往往存在局限性,需要结合其他技术手段来改进。通过优化策略参数、丰富信号来源、加入风控模块等方法,可以进一步提升该策略的稳定性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy captures market trends based on the Modified Relative Strength Index (Modified RSI). The main idea of the strategy is to use the crossover signals and histogram signals of the Modified RSI indicator to determine the market trend and make trades according to the trend direction.
@@ -75,7 +42,6 @@ This strategy captures market trends based on the Modified Relative Strength Ind
 
 #### Summary
 This strategy utilizes the characteristics of the Modified RSI indicator to build a trading system from the perspective of trend following. The Modified RSI indicator overcomes some of the defects of the traditional RSI indicator and has relatively strong trend capture ability. However, strategies based on a single indicator often have limitations and need to be improved in combination with other technical means. By optimizing strategy parameters, enriching signal sources, adding risk control modules, and other methods, the stability and profitability of this strategy can be further improved.
-[/trans]
 
 > Strategy Arguments
 

@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d3f3ee7221410dfeb8.png)
-[trans]
-## 概述
-
-本策略通过结合123反转和MACD指标,实现了跨时间框架的动量追踪。123反转判断短期趋势反转点,MACD判断中长期趋势,两者结合实现在短期反转的同时锁定中长期趋势的多空信号。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123反转部分:当前两根K线形成高点/低点,并且随机指标低于/高于50时产生买入/卖出信号。
-
-2. MACD部分:快线上穿慢线时产生买入信号,快线下穿慢线时产生卖出信号。
-
-最后将两者结合,即在123反转的同时MACD也产生同向信号时,发出最终信号。
-
-## 优势分析
-
-该策略结合了短期反转和中长期趋势,可以在短期波动中锁定中长期趋势,从而获得更高的胜率。特别是在震荡行情中,可以通过123反转过滤掉部分噪音,从而提高稳定性。
-
-另外通过调整参数,可以平衡反转信号和趋势信号的比例,适应不同市场环境。
-
-## 风险分析
-
-该策略有一定的时间滞后,特别是使用长周期MACD时,可能错过短期行情。此外,反转信号本身就存在一定程度的随机性,容易被套住。
-
-可以适当缩短MACD周期,或增加止损来控制风险。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整123反转参数,优化反转效果
-
-2. 调整MACD参数,优化趋势判断
-
-3. 增加其它辅助指标过滤,提高效果
-
-4. 增加止损策略,控制风险
-
-## 总结
-
-本策略整合多种参数和多个时间框架的技术指标,通过跨时间框架动量追踪,平衡了反转交易和趋势交易的优点。可通过参数调整平衡效果,并可引入更多指标或止损来进行优化,是一个非常有潜力的策略思路。
-
-||
 
 ## Overview
 
@@ -97,7 +53,6 @@ Possible ways to optimize the strategy:
 
 The strategy combines parameters across timeframes along with multiple technical indicators for cross-timeframe momentum tracking, balancing the pros of reversal and trend-following strategies. Parameter tuning and more indicators or stops can further optimize it. The concept has great potential.
 
-[/trans]
 
 > Strategy Arguments
 

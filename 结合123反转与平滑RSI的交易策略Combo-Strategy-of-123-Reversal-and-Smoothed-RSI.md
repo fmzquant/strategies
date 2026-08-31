@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1352252d150b14addeb.png)
 
-[trans]
-
-## 概述
-
-该策略通过结合123反转形态与平滑RSI指标,实现更准确地捕捉趋势反转点,以获得更高的胜率。策略可用于任何周期的任何品种,是一种非常通用的趋势反转交易策略。
-
-## 策略原理
-
-1. 123反转形态判断:当前两日收盘价构成高低点,第三日收盘价高于前一日收盘价时,为底部反转信号;当前两日收盘价构成低高点,第三日收盘价低于前一日收盘价时,为顶部反转信号。
-
-2. 平滑RSI指标判断:平滑RSI指标通过加权移动平均的方法,减少RSI指标的滞后性。当RSI指标上穿设定的高位阈值线时,为买入信号;当RSI指标下穿设定的低位阈值线时,为卖出信号。
-
-3. 策略信号:只有当123反转形态信号和平滑RSI指标信号同向时,才产生交易信号。做多信号为123反转形成底部信号且RSI指标上穿高位;做空信号为123反转形成顶部信号且RSI指标下穿低位。
-
-## 策略优势
-
-1. 将趋势判断指标RSI与反转形态结合,可更准确判断趋势反转点。
-
-2. 平滑RSI指标通过平滑处理,可减少普通RSI指标的滞后性问题。
-
-3. 123反转形态简单清晰,容易判断实现。
-
-4. 可灵活调整参数,适用于不同品种和周期,使用范围广泛。
-
-5. 可方便优化和改进,有很高的拓展空间。
-
-## 策略风险
-
-1. 123反转形态较为简单,对小波段调整不敏感,可能产生虚假信号。 
-
-2. 平滑RSI指标优化程度不够,调参数容易过优化。
-
-3. 需要反转形态和RSI指标同向才产生信号,信号产生频率可能不高。
-
-4. 未考虑交易成本,小资金可能难以盈利。
-
-5. 缺乏止损机制,无法控制单笔损失。
-
-## 策略优化方向
-
-1. 优化平滑RSI参数,找到最佳的参数组合。
-
-2. 添加其他指标或形态进行过滤,提高信号质量。
-
-3. 添加止损机制,控制单笔损失。
-
-4. 考虑交易成本,调整参数以适应不同资金量。 
-
-5. 测试不同品种和周期的参数设置,寻找最优参数组合。
-
-6. 增加自动参数优化功能。
-
-## 总结
-
-该策略整体思路清晰简单,通过反转形态结合趋势判断指标,可有效判断潜在的趋势反转点。策略优势在于可广泛适用和方便优化,但也存在一定的风险,需要注意防范并持续优化。整体来说,该策略是一种通用且实用的短线反转交易策略,值得深入研究与应用。
-
-||
 
 
 ## Overview
@@ -124,7 +67,6 @@ This strategy combines the 123 reversal pattern and smoothed RSI indicator to ca
 
 The strategy has clear and simple logic, using reversal pattern combined with trend indicator to identify potential trend reversals. It has the advantage of wide applicability and easy optimization, but also has some risks to note and improve on. Overall it is a versatile and practical short-term reversal trading strategy worthy of further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

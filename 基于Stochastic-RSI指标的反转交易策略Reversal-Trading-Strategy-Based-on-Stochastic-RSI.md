@@ -11,28 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于Stochastic RSI指标的反转交易策略”。该策略利用Stochastic RSI指标识别超买超卖现象,在超买超卖极端区域出现反转时进行反向交易。
-
-Stochastic RSI指标的计算方式是:将RSI指标的数据作为Stochastic计算的输入,得到K线和D线信号。它反映RSI指标自身的超买超卖情况。
-
-具体交易逻辑如下:
-
-1. 计算快速RSI,以捕捉超买超卖现象。
-
-2. 对RSI加权移动平均,得到Stochastic RSI中的K线信号。
-
-3. K线上穿其移动平均线时,产生买入信号;下穿时,产生卖出信号。
-
-4. 在K线接近超买区或超卖区时,出现反转信号,考虑进行反转交易。
-
-该策略的优势是利用Stochastic RSI指标识别反转点位。但需要优化参数组合,并防止过度交易。止损策略也必不可少。
-
-总体来说,Stochastic RSI用于判断反转时机是一种常见而实用的方法。但交易者仍需保持对大趋势的判断力,避免在反弹中追高杀跌。
-
-
-
-||
 
 
 
@@ -54,7 +32,6 @@ The advantage of this strategy is using Stochastic RSI to identify reversal poin
 
 In conclusion, Stochastic RSI is a common and useful way to determine reversal timing. But traders still need overall trend judgment to avoid buying tops and selling bottoms in retracements.
 
-[/trans]
 
 > Strategy Arguments
 

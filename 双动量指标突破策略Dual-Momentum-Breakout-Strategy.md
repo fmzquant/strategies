@@ -11,86 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/eb869bd3df154dac3d.png)
 
-[trans]
-
-## 概述
-
-该策略是一种双动量指标突破策略。它使用两个不同参数设置的动量指标,在两个动量指标都突破零轴时产生交易信号。该策略只做多头 entries,空头仅用于平仓。
-
-## 策略原理
-
-代码首先设置策略属性,如委托模式、手续费模式等。然后它计算两个动量指标:
-
-```pine
-// Momentum settings
-
-i_len           = input(defval = 12, title = "Length", minval = 1) 
-i_src           = input(defval = close, title = "Source")
-i_percent       = input(defval = true, title = "Percent?")
-i_mom           = input(defval = "MOM2", title = "MOM Choice", options = ["MOM1", "MOM2"])
-
-// Momentum code
-
-mom0 = momentum(i_src, i_len, i_percent) 
-mom1 = momentum(mom0, 1, i_percent)
-mom2 = momentum(i_src, 1, i_percent)
-
-momX = mom1 
-
-if i_mom == "MOM2"
-    momX := mom2
-```
-
-mom0是基础动量指标,长度为i_len,数据源为i_src,是否计算百分比由i_percent决定。
-
-mom1是以mom0为数据源,长度为1的动量指标。
-
-mom2是以原始数据i_src为源,长度为1的动量指标。
-
-最终使用的动量指标momX默认为mom1,也可以选择mom2。
-
-当mom0和momX同时超过0轴时,做多;当mom0和momX同时低于0轴时,平仓。
-
-## 策略优势
-
-1. 使用双动量指标结合不同参数设置,可以提高交易信号的可靠性,双重确认降低了假信号。
-
-2. 只做多头entries,空头仅用于平仓,可以降低交易频率,减少交易成本。
-
-3. 动量指标参数可以调整,适应不同市场环境。
-
-4. 代码结构清晰,容易理解和修改。
-
-5. 加入了交易消息设置,可以结合自动交易系统使用。
-
-## 策略风险
-
-1. 双动量指标虽然可以减少假信号,但也可能错过较弱的趋势信号。
-
-2. 仅做多头交易,可能错过空头交易机会。 
-
-3. 动量指标参数设置不当可能导致过于频繁或过于迟缓的交易。
-
-4. 回测数据不充分可能导致参数过拟合。
-
-5. 双重确认虽降低假信号但无法完全避免,实盘交易时仍需关注突破有效性。
-
-## 策略优化方向
-
-1. 可以测试不同长度以及是否计算百分比的参数组合,找出最佳参数。
-
-2. 可以考虑在趋势确认后,加入空头交易信号,以捕捉更多交易机会。
-
-3. 可以测试不同的动量指标计算方式,如ROC,RSI等,寻找更好的效果。 
-
-4. 可以结合趋势过滤,避免在震荡行情中交易。
-
-5. 可以优化止损策略,在利润最大化的同时控制风险。
-
-## 总结
-
-本策略是一个典型的双动量指标突破策略。它使用双重确认降低假信号,只做多头进入以减少交易频率。该策略优点是简单明了,容易实现,在参数优化和风险控制时有很大的改进空间。整体来说,本策略作为动量突破策略的基础框架是可行的,但需要针对具体市场进行优化调整,才能在实盘中稳定盈利。
-||
 
 ## Overview
 
@@ -169,7 +89,6 @@ When mom0 and momX both breach above 0 line, go long. When mom0 and momX both br
 ## Conclusion
 
 This is a typical dual momentum breakout strategy. It uses double confirmation to reduce false signals and only long entries to lower trade frequency. The advantages are simplicity and ease of implementation, with much room for improvements in parameter optimization and risk control. Overall it serves as a reasonable momentum breakout framework but needs market-specific tuning and optimizations for profitable live trading.
-[/trans]
 
 > Strategy Arguments
 

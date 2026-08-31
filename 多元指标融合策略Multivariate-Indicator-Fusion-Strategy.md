@@ -9,62 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-多元指标融合策略通过组合使用多个不同类型的技术指标,结合其各自的优势,实现更精准和全面的市场判断,以达到提高交易胜率的目的。
-
-## 策略原理
-
-该策略同时使用了三个不同的技术指标:变动率指数(VI)、ROC-RSI和价格变动率(Price ROC)。
-
-首先,策略计算VI,它由正向变动指标VIP和负向变动指标VIM组成。VIP和VIM分别测量价格的上涨力量和下跌力量。通过比较VIP和VIM的变化率,可以判断未来价格上涨或下跌的可能性。
-
-其次,策略结合了ROC和RSI形成ROC-RSI指标。ROC衡量价格较长周期内的变动情况,RSI反映较短周期内价格的超买超卖情况。ROC-RSI综合这两方面信息,判断目前的股价是否处于非理性的极端区域。
-
-最后,价格变动率(Price ROC)直接反映价格变动的强度。与VI和ROC-RSI不同,它从价格本身的角度判断趋势。 
-
-策略通过组合使用上述三个指标,只有当它们同时发出买入或卖出信号时,才生成交易指令。这可以过滤掉一些可能的假信号,提高信号的可靠性。
-
-## 策略优势
-
-这种多元指标组合策略最大的优势在于能够综合不同指标的优势,形成更全面和准确的判断。
-
-具体来说,VI能反映买卖力量,捕捉趋势转折。ROC-RSI则可判断价格是否过冷过热。Price ROC直接反映价格变化趋势。各指标能相互验证,避免单一指标造成失误。
-
-同时,要求多个指标同时发出信号,可以过滤掉一些假信号,这也提高了交易信号的质量。
-
-总之,多元指标组合策略可以发挥各指标的优势之处,互相补充验证,从而实现更可靠精准的交易策略。
-
-## 策略风险及优化
-
-该策略的主要风险在于各个指标参数设置不当,导致指标之间产生冲突。
-
-例如,如果VI和Price ROC判断趋势向上,但ROC-RSI指数过高发出卖出信号,则可能错过买入机会。
-
-要优化该策略,可以从以下几个方面入手:
-
-1. 调整各指标的参数,使其能配合得当,发出一致的交易信号。
-
-2. 增加或减少使用的指标数量和类型,找到最优指标组合。比如可以加入移动平均线等趋势指标。
-
-3. 调整指标信号的合并逻辑,如改为多数指标发出信号时交易。
-
-4. 添加止损机制,以控制单次损失。
-
-5. 优化资金管理策略,如仓位大小设置等。
-
-6. 测试不同品种和交易时段适用性。
-
-通过持续优化,可以将多元指标组合策略发挥到极致,从而稳定获得超额收益。
-
-## 总结
-
-多元指标组合策略通过融合使用VI、ROC-RSI和Price ROC等指标的优势,实现更可靠和全面的市场判断,从而提高交易胜率。其最大优势在于指标互相验证,避免单一指标造成失误。同时优化指标组合也是实现策略最大效果的关键。通过不断测试和优化,多元指标组合策略能够有效地提升交易效果。
-
-||
 
 ## Overview
 
@@ -118,7 +62,6 @@ Continuous optimization can maximize the potential of the multivariate strategy 
 
 The Multivariate Indicator Fusion strategy combines the strengths of indicators like VI, ROC-RSI and Price ROC for more reliable and comprehensive market assessments, improving win rate. Its biggest advantage is mutual verification to avoid single indicator errors. Meanwhile, optimizing indicator combinations is key to maximize performance. With continuous testing and optimization, the multivariate strategy can effectively enhance trading outcomes.
 
-[/trans]
 
 > Strategy Arguments
 

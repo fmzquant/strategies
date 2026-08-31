@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a2accdf3564ef98bce.png)
 
-[trans]
-
-## 概述
-
-本文详细分析了一个基于RSI指标的加密货币交易策略。该策略利用RSI指标判断市场情绪高潮和低潮,实现低买高卖。具体来说,当RSI指标上穿30这个超卖线时,发出买入信号;当RSI指标下穿70这个超买线时,发出卖出信号。
-
-## 策略原理
-
-该策略的核心指标是RSI,即相对强弱指标。RSI指标基于股票在一定时间内的涨跌幅度,来判断股票是否处于超买或者超卖状态。RSI指标数值范围在0到100之间。当RSI大于70时表示为超买区,小于30时表示为超卖区。
-
-策略的核心逻辑就是当RSI指标从超卖区突破到超卖线30上方时,产生买入信号;当RSI从超买区跌破超买线70下方时,产生卖出信号。这样通过在超买超卖区域反转的时候入场,可以达到低买高卖的目的。
-
-具体在代码中,是通过`ta.crossover`和`ta.crossunder`这两个指标函数来判断RSI何时上穿30分界线或者下穿70分界线,从而产生交易信号的。
-
-## 优势分析
-
-这种基于RSI指标信号的动量策略,主要具有以下优势:
-
-1. 操作简单,容易理解和实现
-2. RSI指标可靠,应用广泛
-3. 能捕捉市场的情绪转折点,实现低买高卖
-4. 通过调节RSI参数可以适应不同市场周期
-5. 可结合其他指标过滤信号,提高系统稳定性
-
-总的来说,这种策略具有操作简单,指标权威,捕捉市场转折,参数可调等多重优势。这使其成为一种值得推荐的基础量化策略。
-
-## 风险分析
-
-当然,这种策略也存在一些风险需要注意:
-
-1. 容易产生多头陷阱和空头陷阱
-2. 不能有效过滤曲折行情中的假突破
-3. 容易被高频交易机构套利
-4. RSI参数设置不当会错过趋势或增加交易频率过高
-5. 单一指标容易受到market maker的欺骗
-
-针对这些风险,可以通过以下方法加以优化和改进:
-
-1. 结合ATR指标过滤止损止盈,控制单笔损失
-2. 增加MA指标判断趋势方向,避免逆势操作
-3. 采用时间或TICK突破来过滤假信号
-4. 适当调整RSI参数或动态优化参数
-5. 结合多个指标和模型判断,形成指标群
-
-## 优化方向
-
-这种RSI指标策略还具有很大的优化空间,主要优化思路如下:
-
-1. 采用自适应RSI参数,不同市场采用不同参数组合
-2. 增加移动止损、移动止盈技术,控制单笔亏损和最大回撤
-3. 结合神经网络模型判断指标信号可靠性,过滤假信号
-4. 增加模型组合投票机制,提高稳定性
-5. 采用深度学习特征提取指标信号,实现无参智能策略
-6. 结合高频特征和文本特征判断市场情绪,优化买卖点
-7. 采用强化学习方式训练RSI参数和止损止盈幅度
-
-从上面的分析可以看出,这种基于RSI的量化策略还有很大的改进优化空间,未来可望通过机器学习和深度学习技术不断优化,从而产生更好的交易表现和稳定性。
-
-## 总结
-
-本文详细剖析了一种典型的基于RSI指标的加密货币交易策略。通过对策略优势、风险和优化思路的分析,可以看出这是一种简单实用的策略。该策略可通过参数调节、止损止盈、指标组合等方法进行扩展和优化,未来可利用先进的机器学习和AI技术不断改进。总体而言,这是一种值得推荐的基础量化策略。
-
-|| 
 
 ## Overview
 
@@ -135,7 +72,6 @@ As can be seen from the analysis, there is tremendous potential to enhance this 
 
 In summary, this article provides an in-depth analysis of a typical RSI indicator-based cryptocurrency trading strategy. From examining the pros, cons and optimization paths, this strategy offers a simple yet practical approach. There is ample room for extensions such as parameter tuning, stop loss/take profit, indicator combos. Going forward, advanced AI techniques can be employed for continual improvements. Overall, this is a recommended foundational quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

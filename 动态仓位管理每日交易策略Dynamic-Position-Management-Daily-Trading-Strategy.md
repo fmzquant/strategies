@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d050c11fab1eb2a458.png)
 
-[trans]
-#### 概述
-这个策略采用了一种一致的每日交易方法,着重于在严格控制风险的同时捕捉小目标利润。该策略从2021年开始进行了回测,展现出稳健的表现,交易胜率达到了100%。策略的主要思路是根据前一天的市场状况,在每个交易日开始时开立新的多头或空头仓位。关键参数包括0.3%的目标利润和0.2%的止损,初始资金为1000美元,每笔交易的佣金为0.1%。
-
-#### 策略原理
-该策略的核心原理是基于前一交易日的市场走势,在每个交易日开盘时开立新的多头或空头仓位。具体来说,如果前一天没有任何仓位,策略会在新的一天开盘时开立多头仓位。如果已经有多头仓位,策略会检查是否达到0.3%的目标利润,如果达到就平仓。对于空头仓位,策略会检查是否达到0.2%的止损,如果达到,就平掉空头仓位,同时开立一个新的多头仓位来替代。这确保了策略在市场中始终保持敞口。
-
-#### 策略优势
-这个每日交易策略有几个显著的优势:
-
-1. 100%胜率:在36个已平仓交易中,该策略实现了100%的胜率,凸显了其一贯的表现。
-2. 动态仓位管理:如果空头仓位触及止损,策略会立即开立一个新的多头仓位来替代它,确保持续的市场敞口。
-3. 严格的风险管理:该策略设定了0.3%的目标利润和0.2%的止损,有效地控制了风险。
-4. 定期市场参与:策略在每天开始时开立仓位,保证了定期参与市场。
-5. 稳健的回测结果:从2021年开始的回测展现出稳健的表现,净利润达到22.2%,最大回撤为13.75%。
-
-#### 策略风险
-尽管该策略展现出了优异的表现和风险控制,仍然存在一些潜在的风险:
-
-1. 持续亏损的可能性:虽然回测结果令人印象深刻,但过去的表现并不能保证未来的结果。连续的亏损交易可能会侵蚀利润。
-2. 黑天鹅事件:策略可能容易受到意外事件和极端市场波动的影响,导致超出预期的损失。
-3. 杠杆风险:策略在每笔交易中使用了200%的杠杆,这放大了潜在的回报,但也增加了风险。
-
-为了缓解这些风险,可以考虑增加多样化,在不同的市场和资产类别中应用类似的策略。定期监控和调整策略参数也很重要,以适应不断变化的市场状况。
-
-#### 策略优化方向 
-1. 参数优化:目标利润、止损和其他关键参数可以通过进一步的回测和优化来改进,以在不同的市场条件下实现最佳性能。
-2. 多元化:将策略扩展到其他市场和资产类别,可以提高整体回报并降低风险。 
-3. 动态仓位调整:根据市场波动性或其他因素动态调整仓位大小,可以进一步优化风险调整后的回报。
-4. 加入额外的过滤器:引入额外的技术指标或市场情绪指标作为过滤器,可以提高交易信号的质量。
-
-#### 总结
-总的来说,这个每日交易策略提供了一种平衡的方法来进行日内交易,重点是风险管理和持续盈利。它适合寻求系统化和严谨交易方法的交易者。策略展现出了令人印象深刻的回测结果,100%的胜率和稳健的风险调整后回报。然而,重要的是要认识到过去的表现并不能保证未来的结果,管理风险和适应市场变化至关重要。通过进一步的优化和改进,这个策略可以成为任何交易者工具箱中的一个有价值的补充。
-
-|| 
 
 #### Overview
 This strategy employs a consistent daily trading approach, focusing on capturing small profit targets while maintaining strict risk management. The strategy has been backtested from the year 2021, demonstrating robust performance with a 100% win rate. The main idea of the strategy is to open new long or short positions at the start of each trading day based on the previous day's market conditions. Key parameters include a 0.3% profit target and a 0.2% stop loss, with an initial capital of $1000 and a commission of 0.1% per trade.
@@ -79,7 +44,6 @@ To mitigate these risks, diversification could be considered by applying similar
 
 #### Conclusion
 Overall, this daily trading strategy offers a balanced approach to intraday trading with a strong emphasis on risk management and consistent profitability. It is suitable for traders seeking a systematic and disciplined trading methodology. The strategy has demonstrated impressive backtesting results, with a 100% win rate and robust risk-adjusted returns. However, it is important to recognize that past performance does not guarantee future results, and managing risk and adapting to market changes are crucial. With further optimization and enhancements, this strategy could be a valuable addition to any trader's toolbox.
-[/trans]
 
 
 

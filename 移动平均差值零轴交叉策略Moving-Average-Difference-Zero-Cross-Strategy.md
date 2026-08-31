@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fba222f1ecd01ae531.png)
-[trans]
-
-### 概述
-
-该策略运用移动平均线差值法判断股价与均线偏离度,并结合零轴交叉系统发出交易信号。基本思路是,当价格从上方接近均线时看跌,当价格从下方接近均线时看涨。
-
-### 策略原理  
-
-1. 计算8日指数移动平均线ema和过去8日中的最低移动平均线lowestEMA
-2. 计算价格与当前移动平均线ema的差值diff
-3. 判断diff小于0为看跌信号,diff上穿0为底背离,看涨信号
-4. 结合diff的数值大小比较过去一周最大跌幅,发出交易信号
-
-### 优势分析
-
-1. 利用双均线系统,能够有效过滤假突破
-2. 运用最小价格理论,发现底部信号
-3. 结合数值比较判断超跌超买,避免追高杀跌
-
-### 风险分析  
-
-1. 双均线策略容易产生 whipsaw  effect
-2. 需关注交易频率过高的问题 
-3. 合理设置移动平均线参数很关键
-
-### 优化方向  
-
-1. 调整移动平均线周期参数,适应不同周期
-2. 增加成交量指标过滤假突破信号
-3. 结合 stochastic 指标避免超跌超买
-
-### 总结  
-
-本策略整合均线差值法和零轴交叉判断系统,旨在提高买卖点探测准确性。但仍需进一步优化参数设置,并配合其他指标过滤信号。总的来说,该策略利用简单指标判断效果尚可,可作为基础策略之一运用于实盘。
-
-||
 
 ### Overview
 
@@ -80,7 +44,6 @@ This strategy uses the moving average difference method combined with zero axis 
 
 This strategy integrates the moving average difference method and zero axis crossover system to improve the accuracy of buy and sell point detection. However, further optimization of parameter settings and combination with other indicators to filter signals are still needed. In general, this simple indicator strategy has considerable efficacy and can be used as a basic strategy for live trading.
 
-[/trans]
 
 
 

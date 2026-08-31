@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/173a40b75417fc357a7.png)
 
-[trans]
-
-## 概述
-
-该策略基于价格通道指标,设置了动量参数,通过计算不同周期的最高价和最低价的均值,形成价格通道中线,以此为基准,设置长线和短线。当价格突破长线时,做多;当价格突破短线时,做空。平仓条件为价格回归通道中线。
-
-## 策略原理  
-
-该策略使用价格通道指标计算不同周期内的最高价和最低价的均值,形成价格通道中线。以中线为基准,通过shift参数设置长线和短线。具体来说,长线计算公式为:中线+(中线×长线参数%);短线计算公式为:中线+(中线×短线参数%)。
-
-当价格低于长线时,使用限价单开多单;当价格高于短线时,使用限价单开空单。多空单的止损方式为价格回归通道中线。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用价格通道指标,可以有效捕捉价格趋势和关键支持阻力位。
-2. 采用突破记录方式开仓,可以减少假突破带来的亏损。  
-3. 止损方式直接以价格通道中线为标准,避免追价止损带来的过度亏损。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 价格通道参数设置不当,可能错过积极行情或产生过多假突破。
-2. 突破开仓方式带来一定程度划渡成本。
-3. 价格快速回落期间,无法及时止损。  
-
-可以通过优化参数,设置止损单,或者结合其他指标判断来减轻上述风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化价格通道的参数,寻找最佳组合。
-2. 尝试不同的开仓方式,如K线形态、指标多空信号等。 
-3. 增加止损单设置,防止价格快速回落带来的亏损。
-4. 结合交易量、波动率等指标,避免在 shares市场产生假突破。
-
-## 总结  
-
-本策略基于价格通道指标设计思路清晰,使用突破开仓可以有效控制风险。但也存在参数优化空间较大,止损机制有待完善等问题。总体来说,该策略具有一定的实用价值,值得进一步测试与优化。
-
-||
 
 ## Overview  
 
@@ -97,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 The design idea of this strategy based on the price channel indicator is clear. Using breakout to open positions can effectively control risks. But there are also large parameter optimization spaces and stop loss mechanisms that need to be improved. Overall, the strategy has a certain practical value and is worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

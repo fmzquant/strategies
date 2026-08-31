@@ -9,24 +9,6 @@
 
 > Strategy Description
 
-[trans]
-- 名称: 基于ATR波动率指标构建的通道策略
-- 思路：通道自适应策略，固定止损+浮动止盈
-- 数据周期：多周期
-- OKEX期货
-- 合约 ： this_week 当周
-- 官方网站：www.quantinfo.com
-
-![IMG](https://www.fmz.com/upload/asset/b2ebaacbe7dbb1bb45bb59ceb80dd37f.png)
-
-- 主图：
-  画UBAND， 公式：UBAND^^MAC+M*ATR;
-  画DBAND， 公式：DBAND^^MAC-M*ATR;
-
-- 副图：
-  无
-
-||
 
 - Strategy name: Channel strategy based on ATR volatility index
 - Strategy idea: Channel Adaptive Strategy, Fixed Stop + Floating Stop
@@ -42,7 +24,6 @@
 - Secondary chart:
   none
 
-[/trans]
 
 > Strategy Arguments
 

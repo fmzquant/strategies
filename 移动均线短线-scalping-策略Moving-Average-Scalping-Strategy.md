@@ -9,80 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略属于短线 scalping 策略类型,其目标是频繁开仓平仓,通过小额盈利并控制下行风险来实现稳定收益。策略通过均线指标判断可能的反转点入场做多,并设定快速止盈目标来锁定小额利润。
-
-## 策略原理
-
-该策略使用 4 个移动均线,分别是 9 周期、50 周期、100 周期和 200 周期均线。
-
-具体交易规则为:
-
-- 9 周期均线上穿 50 周期均线时做多入场
-- 50 周期均线低于 100 周期均线
-- 100 周期均线低于 200 周期均线
-
-这样的组合判断可以找到价格短期处于下跌但可能反转的时机点做多。
-
-平仓规则为 9 周期均线上穿 200 周期均线时平多仓。这里设置一个较近的止盈目标,旨在通过频繁小额盈利实现稳定收益。
-
-## 策略优势
-
-- 频繁开平仓,有效控制单笔亏损
-- 利用均线判断反转点,找到潜在买点
-- 设定较近止盈点,锁定小额确定利润
-- 降低持仓时间,减少大趋势影响
-- 资金利用率高,适合小资金量增长
-
-## 策略风险
-
-- 均线判断滞后,可能错过最佳进入时点
-- 盈利空间小,易受交易费用影响  
-- 较多无效交易,交易频繁造成时间和精力成本
-- 止盈点过于保守,未能充分跟随趋势
-- 难以在盘整市场获得盈利
-
-可以通过以下方法降低风险:
-
-- 优化均线参数,提高买点判断准确性
-- 适当放宽止盈 EXIT,追求更多趋势利润
-- 加入其他技术指标进行确认,减少无效交易
-- 优化资金利用率和仓位管理
-- 考虑usch
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化均线参数组合
-
-   测试更多均线周期参数,找到更准确判断反转的组合。
-
-2. 放宽止盈点
-
-   适当放宽止盈距离,追求更多趋势利润。
-
-3. 加入其他技术指标
-
-   例如 KDJ、MACD 等,进行确认,减少无效交易。 
-
-4. 优化仓位管理
-
-   设定仓位大小根据具体止盈点和止损点进行动态调整。
-
-5. 加入重新入场机制
-
-   在止盈出场后,如果趋势继续,可以考虑通过条件重新入场。
-
-## 总结
-
-本策略属于短线 scalping 策略类型,通过判断短期反转的均线组合形成交易信号,并设定较近止盈来频繁获利。这可以有效控制单笔损失和风险,适合于小资金量的增长。但存在盈利空间小、交易频繁等问题。我们可以通过参数优化、止盈调整、加入指标过滤等方法进行改进,在保持其优势的基础上,进一步扩大盈利空间,使策略更稳定高效。同时要注重持续学习其他更多元化的策略思路。
-
-|| 
 
 ## Overview 
 
@@ -154,7 +80,6 @@ The strategy can be improved by:
 
 This scalping strategy identifies potential short-term reversals with MA combinations for frequent small profits. This effectively controls single loss and risks, making it suitable for small accounts growth. However limitations exist like small profit range and excessive trades. Improvements can be made via parameter tuning, TP adjusting, adding filters etc, to expand profits while retaining its strengths, making the strategy more robust and efficient. Also continuously learning other more advanced strategies is important.
 
-[/trans]
 
 > Strategy Arguments
 

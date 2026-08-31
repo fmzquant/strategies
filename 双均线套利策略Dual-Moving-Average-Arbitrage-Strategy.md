@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b2bf16093057a729cb.png)
-[trans]
-
-## 概述
-
-该策略是一个利用双均线形态进行套利操作的策略。它结合了123形态反转和有限成交量元素(FVE)两个子策略,当两者同时发出买入或卖出信号时,进行套利操作。
-
-## 策略原理
-
-### 123形态反转
-
-该子策略来源于Ulf Jensen的《我如何在期货市场上获利三倍》一书。它在以下条件发出信号:
-
-- 当收盘价连续2日上涨,且9日慢stoch指标低于50时,做多;
-- 当收盘价连续2日下跌,且9日快stoch指标高于50时,做空。
-
-### 有限成交量元素(FVE)
-
-FVE是一个纯粹的成交量指标。它根据价格的涨跌幅度和成交量的大小,判断资金是流入还是流出。
-
-当最近两个bar的FVE指标同时上涨或下跌时发出信号。
-
-## 优势分析
-
-该策略结合两种指标判断市场趋势和资金流向,可以有效避免错误信号。且两个子策略都具有一定的反转特征,因此可以进行套利操作以获利。
-
-另外,双均线形态出现时,代表短期和中期趋势一致,因此具有较强的稳定性。
-
-## 风险分析
-
-该策略依赖均线形态,当市场震荡时,容易出现错误信号导致亏损。此外,反转失败是常见的风险。
-
-可以通过适当调整参数使策略更为稳健,也可以设置止损来控制风险。
-
-## 优化方向
-
-可以测试更多种类的均线指标寻找最佳匹配。也可以引入其他辅助判断指标,如强弱指标、波动率指标等来避免错误信号。
-
-此外,可以研究如何根据市场状态动态调整参数,使策略更具适应性。也可以探索机器学习和神经网络算法以实现参数自适应。
-
-## 总结
-
-该双均线套利策略整合两种反转思路指标进行判断,可以一定程度上规避风险。但由于依赖均线形态,仍需进一步优化以使策略更稳健。总的来说,该策略为短线套利交易提供了一个基础框架,值得进一步研究。
-
-||
 
 ## Overview  
 
@@ -96,7 +52,6 @@ In addition, research can be done on how to dynamically adjust parameters based 
 
 This dual moving average arbitrage strategy integrates two reversal-type indicators for judgement, which can mitigate risks to some extent. But reliance on moving average formations means further optimization is needed to make the strategy more robust. Overall, it provides a basic framework for short-term arbitrage trading and is worth further research.
 
-[/trans]
 
 > Strategy Arguments
 

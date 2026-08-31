@@ -11,33 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/965f7182cf1f86410f.png)
 
-[trans]
-这个策略名为"动态阈值价格变化突破策略"。该策略的主要思路是通过设置一个动态阈值,当价格变化率超过该阈值时产生买入信号,当价格变化率低于该阈值的负值时产生卖出信号。同时,策略还设置了止损,当价格跌破前6根K线的最低价时平仓。
-
-#### 策略原理
-该策略的核心是计算价格变化率,通过当前收盘价除以前一个收盘价再减去1来得到。然后,将计算得到的价格变化率与用户输入的阈值进行比较,当价格变化率大于等于阈值时,如果当前没有持仓或者持有空头头寸,则产生买入信号;当价格变化率小于等于阈值的负值时,如果当前没有持仓或者持有多头头寸,则产生卖出信号。在产生买入信号后,策略会记录之前6根K线的最低价作为止损价位,一旦价格跌破止损价位,策略就会平掉多头头寸。
-
-#### 策略优势
-1. 该策略使用了动态阈值,可以适应不同的市场环境,具有一定的灵活性。
-2. 策略逻辑简单清晰,易于理解和实现。
-3. 设置了止损,在一定程度上控制了风险。
-4. 适合在上涨行情中使用,可以有效捕捉上涨趋势。
-
-#### 策略风险
-1. 该策略在震荡行情中可能会出现频繁交易的情况,导致交易成本增加。
-2. 止损设置可能不够灵活,在某些情况下可能导致过早止损。
-3. 策略只考虑了价格变化率这一个因素,没有考虑其他可能影响价格走势的因素,如成交量、市场情绪等。
-
-#### 策略优化方向
-1. 可以考虑引入更多的指标,如成交量、波动率等,以提高策略的可靠性。
-2. 可以优化止损设置,如使用移动止损或者动态止损,使止损更加灵活。
-3. 可以对参数进行优化,如阈值的大小、止损的计算周期等,以找到最优的参数组合。
-4. 可以加入仓位管理,根据市场情况动态调整仓位,以控制风险。
-
-#### 总结
-"动态阈值价格变化突破策略"通过比较价格变化率与动态阈值来产生交易信号,适合在上涨行情中使用。该策略逻辑简单清晰,具有一定的灵活性和风险控制能力。但是,该策略也存在一些不足,如在震荡行情中可能出现频繁交易、止损设置不够灵活等。未来可以考虑从引入更多指标、优化止损设置、优化参数、加入仓位管理等方面对策略进行优化,以进一步提高策略的表现。
-
-||
 
 This strategy is named "Dynamic Threshold Price Change Breakout Strategy". The main idea of this strategy is to set a dynamic threshold, and when the price change rate exceeds this threshold, a buy signal is generated, and when the price change rate is lower than the negative value of this threshold, a sell signal is generated. At the same time, the strategy also sets a stop loss. When the price falls below the lowest price of the previous 6 candles, the position will be closed.
 
@@ -63,7 +36,6 @@ The core of this strategy is to calculate the price change rate, which is obtain
 
 #### Summary
 The "Dynamic Threshold Price Change Breakout Strategy" generates trading signals by comparing the price change rate with a dynamic threshold, which is suitable for use in rising markets. The strategy logic is simple and clear, with a certain degree of flexibility and risk control capabilities. However, this strategy also has some shortcomings, such as frequent trading in volatile markets and inflexible stop loss settings. In the future, we can consider optimizing the strategy from aspects such as introducing more indicators, optimizing stop loss settings, optimizing parameters, and adding position management to further improve the performance of the strategy.
-[/trans]
 
 > Strategy Arguments
 

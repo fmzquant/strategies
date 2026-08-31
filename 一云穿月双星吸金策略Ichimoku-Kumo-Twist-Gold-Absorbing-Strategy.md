@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/118430cbc1738d794ad.png)
-[trans]
-
-
-## 概述
-
-一云穿月双星吸金策略是一种结合市场技术分析指标一云和范围过滤的量化交易策略。该策略利用一云指标判断市场趋势和重要支持、阻力位,以及K线形态来产生交易信号。同时,结合范围过滤来控制交易频率和风险。
-
-## 策略原理
-
-该策略主要基于一云指标和K线形态来判断市场走势。一云指标包含前转线、基准线和云线,它们的交叉关系可以判断市场趋势;同时云线可作为支持和阻力位。该策略通过设置不同参数组合来调整一云线的灵敏度。另外,策略里通过形态识别,在前转线上穿基准线时产生买入信号,下穿时产生卖出信号。
-
-此外,策略还设置了日期范围过滤,只有在指定的日期范围内才会进行交易,这可以控制策略的交易频率。同时,止损设置也可以降低风险,当价格向不利方向运行时 stoploss 选项将停止损失。
-
-## 优势分析
-
-- 利用一云指标判断市场走势,指标参数可调整灵敏度
-- K线形态识别,交易信号明确
-- 设置日期范围过滤,可控制交易频率
-- 止损设置,可以及时止损,降低风险
-
-## 风险分析
-
-- 一云指标存在滞后,可能错过快速变化的趋势
-- 日期范围过滤可能错过部分交易机会
-- 止损设置不当可能扩大损失
-
-可以通过调整一云指标参数、优化日期范围、修正止损点等方法来改善和控制风险。
-
-## 优化方向  
-
-- 可以测试不同的参数组合,选择最佳一云指标配置
-- 可以结合其他指标判断,避免一云指标滞后的问题
-- 可以通过回测优化日期范围设置
-- 可以设置条件式动态滑点止损
-
-## 总结
-
-一云穿月双星吸金策略综合运用一云指标、K线识别、范围过滤等方法判断市场走势,可以较清晰地把握趋势方向。通过参数调整、风险控制等手段,可以获得较好的策略效果。但仍需注意一云指标滞后问题,并进行持续的优化调整。
-
-|| 
 
 ## Overview
 
@@ -87,7 +47,6 @@ Methods like adjusting Ichimoku parameters, optimizing date range, amending stop
 
 The Ichimoku Kumo Twist Gold-Absorbing Strategy integrates the Ichimoku indicator, candlestick pattern recognition, range filtering to determine market trends. It can grasp trend directions quite clearly. Through means like parameter tuning, risk control etc, good strategy performance can be achieved. But the Ichimoku lagging problem should be noted, and continuous optimization adjustments made.
 
-[/trans]
 
 > Strategy Arguments
 

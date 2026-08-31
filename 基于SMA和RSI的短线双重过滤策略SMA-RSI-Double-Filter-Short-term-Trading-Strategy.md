@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于简单移动平均线(SMA)和相对强弱指数(RSI)这两种指标设计。它在RSI值突破入场信号线,且收盘价低于SMA时做空;在止损或止盈信号出现时平仓。该策略结合双重过滤条件进行入场,可有效避免无效交易。
-
-## 原理
-
-该策略主要根据两种指标判断行情:
-
-1. SMA:计算最近200天的收盘价简单移动平均,代表中长线趋势方向。
-
-2. RSI:计算最近14天收盘价的相对强弱,代表短期超买超卖情况。 
-
-当RSI上穿51进入超买区,又在SMA线上方时,表示短线和中长线趋势背离,因此做空。 
-
-之后设置止损线和止盈线。当RSI下破32时止盈;当RSI上穿54或止损线被突破时止损。
-
-## 优势
-
-1. 双指标过滤增加入场准确率。RSI确定短期超买信号,SMA确定中长线空头信号,两者组合更可靠。
-
-2. 采用追踪止损方式,可根据行情走势锁定利润,避免给利润回吐。
-
-3. 策略逻辑简单清晰,容易理解修改。
-
-## 风险
-
-1. 未考虑交易量、波动率等影响因素。
-
-2. RSI参数较为固定,可能不适用于所有品种和周期。 
-
-3. 未考虑交易滑点、手续费等交易成本。
-
-4. 策略较为简单,可扩展空间有限。
-
-## 优化思路
-
-1. 测试并优化RSI和SMA的参数,找到最佳参数组合。
-
-2. 增加止盈止损方式。如移动止损、比例止损等。
-
-3. 结合趋势性指标如MACD进行过滤,避免逆势交易。
-
-4. 考虑加入交易量指标,过滤低量的虚假突破。
-
-## 总结
-
-该策略整体思路清晰,具有一定的实用价值。但其参数设定较为固定,未考虑市场变化。此外也存在一些可以优化的细节。综合而言,该策略可作为初学者理解双重指标过滤策略的一个示例,但实盘时还需进一步测试和完善。
-
-||
 
 
 ## Overview
@@ -110,7 +59,6 @@ After that, stop loss and take profit lines are set. Position is closed when RSI
 
 The strategy has clear logic and some practical value. But its parameters are fixed and don't adapt to market changes. There are also some details that can be improved. Overall, it can serve as an example for beginners to learn double indicator filtering strategies, but needs further testing and enhancement for actual trading.
 
-[/trans]
 
 > Strategy Arguments
 

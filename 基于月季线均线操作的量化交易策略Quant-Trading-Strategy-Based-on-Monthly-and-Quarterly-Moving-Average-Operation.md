@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6c0027e3b22d6d2f44.png)
-[trans]
-
-## 概述
-
-本策略主要基于月线和季线的均线进行操作,具体来说是20日线作为月线,60日线作为季线,策略信号来源为两条均线的金叉死叉。当月线上穿季线时 longing,形成多头信号;当月线下穿季线时进行清仓平仓。该策略适用于中长线操作,通过捕捉盘整背驰机会获利。
-
-## 策略原理  
-
-本策略使用20日简单移动均线作为月线指标,60日简单移动均线作为季线指标。具体交易信号生成逻辑如下:  
-
-1.  当20日线上穿60日线时,即发生金叉时,做多入场。  
-2.  当股价较10日内最高点回撤超过10%时,平仓止盈。  
-3.  当20日线下穿60日线时,即发生死叉时,清仓平仓。
-4.  当亏损达到10%时,止损出场。
-
-通过月线和季线的均线交叉来判断中长线趋势,金叉做多表示进入中长线牛市,死叉做空表示进入中长线熊市。同时结合止盈止损策略控制风险。
-
-## 策略优势
-
-1. 使用月季线均线,过滤市场噪音,捕捉中长线趋势。
-2. 策略参数简单,容易实现。
-3. 可配置止盈止损参数,控制风险。
-
-## 风险分析  
-
-1. 无法确定趋势反转点,存在亏损风险。  
-2. 月线和季线均线存在滞后,可能错过短线机会。
-3. 需要选取合适的止损点,以免过于激进被秒出。
-
-**解决方法:**  
-
-1. 采用移动止损追踪,及时止损。
-2. 结合其他指标过滤信号,确定趋势。 
-3. 调整均线参数,优化策略。
-
-## 策略优化方向  
-
-1. 增加其他指标过滤,如KD指标等,避免假突破。 
-2. 优化均线参数,寻找最佳均线周期组合。
-3. 增加止盈策略,如移动止盈等,获取更多盈利。
-
-## 总结  
-
-本策略Overall XXXXX系统atically利用月季线均线的优势,通过均线的金银死叉来判断中长线趋势方向。同时配置合理的止盈止损机制控制风险。策略优化空间还很大,值得进一步测试优化。
-
-||
 
 ## Overview
 
@@ -100,7 +54,6 @@ Use the moving average crossovers of monthly and quarterly lines to determine me
 
 This strategy systematically utilizes the advantages of monthly and quarterly moving averages by judging medium- and long-term trend directions through golden cross and death cross of the moving averages. At the same time, reasonable stop loss and take profit mechanisms are configured to control risks. There is still much room for optimizing this strategy, worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

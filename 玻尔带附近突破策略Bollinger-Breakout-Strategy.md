@@ -9,54 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略基于玻尔带指标设计,当价格突破玻尔带上下轨时,采取相应做多或做空操作。策略通过捕捉突破行情来获利。
-
-### 策略原理 
-
-1. 计算玻尔带的中轨、上轨和下轨
-2. 突破下轨时做多;突破上轨时做空
-3. 设置起止时间,限定交易区间
-4. 设置持仓时间,默认当日平仓
-
-具体来说,该策略首先计算长度为length的中轨SMA,以及以mult倍标准差计算的上下轨。当收盘价从下向上突破下轨时,做多入场;从上向下突破上轨时,做空入场。同时设置起止时间限定交易区间。每日开盘前强制平仓。
-
-该策略试图捕捉价格突破上下轨后的扩张行情。突破下轨时看多方力量增强,突破上轨时看空方力量增强,这时交易同方向有利。
-
-### 优势分析
-
-1. 简单直观,容易理解和实现
-2. 利用玻尔带指标判断行情突破,具有一定的趋势跟踪能力
-3. 可灵活调整参数,适用于不同周期和品种
-4. 每日平仓,可控制隔夜风险
-5. 可单独开启多头或空头交易
-
-### 风险分析
-
-1. 突破假突破风险。突破后价格可能再度回折。
-2. 需适时调整参数。不同周期需要调整参数。
-3. 潜在亏损扩大风险。扩大突破幅度可能扩大单笔亏损。
-4. 交易成本扩大风险。频繁交易可能加大交易成本。
-
-可通过优化入场条件,添加止损策略,引入趋势过滤等方式来降低上述风险。
-
-### 优化方向
-
-1. 优化参数以适应不同周期
-2. 添加再入场和加仓条件以追踪趋势
-3. 增加止损策略以控制风险
-4. 设定交易时间段以避开重要新闻事件
-5. 评估趋势过滤条件以过滤曲折行情
-6. 测试不同持仓时间并比较结果
-
-### 总结
-
-本策略为基于玻尔带的突破策略,通过捕捉突破展开的行情获利。优点是思路简单,易于实现;缺点是容易受到曲折行情的误导。可通过参数优化、止损策略、交易时间控制等方式提高策略效果并控制风险。该策略可使交易者理解指标应用和突破交易的基本方法。
-
-|| 
 
 
 ### Overview
@@ -104,7 +56,6 @@ Risks can be reduced by optimizing entry rules, adding stop loss, introducing tr
 
 This is a breakout strategy based on Bollinger Bands. It profits from breakout moves. Pros are simple logic and easy implementation; Cons are susceptibility to false breakouts. Risks can be managed through parameter optimization, stop loss, trading hours control etc. It allows traders to understand basics of using indicators and trading breakouts.
 
-[/trans]
 
 > Strategy Arguments
 

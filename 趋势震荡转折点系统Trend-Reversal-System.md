@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16c52841b79e0ca00f2.png)
 
-[trans]
-
-### 概述
-
-趋势震荡转折点系统是一个利用移动平均线、CCI指标和超级趋势指标来识别趋势,在回调时入场的趋势跟踪策略。它可以确认趋势方向,并在拉回时提供入场信号。
-
-### 策略原理
-
-该策略使用21个周期的EMA作为短期移动平均线,55个周期的EMA作为长期移动平均线。21日EMA在55日EMA之上表明目前处于上升趋势,21日EMA在55日EMA之下表明目前处于下降趋势。
-
-CCI指标可以显示价格是否已达到极端水平。当CCI达到默认的100或-100时为第一级别信号,140/-140为第二级别信号,180/-180为第三级别信号。这表示目前可能处于超买或超卖状态。 
-
-超级趋势指标则可以判断具体的趋势方向。它结合平均真实波动幅度来判断上升趋势和下降趋势的止损位和入场位。
-
-当出现21日EMA在55日EMA之上,且CCI达到低位时(表明目前处于超卖区域),就可以做多入场。当出现21日EMA在55日EMA之下,且CCI达到高位时(表明目前处于超卖区域),就可以做空入场。入场后止损位设置为超级趋势指标的止损位,止盈设置为固定的400点利润。
-
-### 优势分析
-
-该策略结合多种指标判断趋势和超买超卖情况,可以有效过滤假突破。采用固定止盈可以获得稳定的风险回报比。遵循趋势交易可以获得较高胜率。利用CCI指标的超买超卖信号,可以在趋势震荡阶段获得较好入场时机。
-
-### 风险分析
-
-该策略对交易品种参数需要优化,不同品种参数设置会影响策略效果。止损设置比较粗放,无法针对不同市场调整。固定止盈无法根据市场波动程度调整盈亏比。CCI指标可能产生假信号。需要进一步判断趋势波动的力度,避免在震荡趋势中反复交易。
-
-### 优化方向
-
-可以测试不同交易品种的参数设置,优化移动平均线周期、ATR周期、ATR乘数等参数。可以考虑将止损改为ATR止损或 trailing stop,以适应市场波动。可以测试将止盈改为波动止盈,根据ATR值来设置目标利润。可以增加过滤条件,判断CCI信号出现时的趋势力度,避免在震荡市场中被套。可以增加量化的趋势力度判断指标,避免错误的趋势判断。
-
-### 总结
-
-趋势震荡转折点系统综合了移动平均线、CCI指标和超级趋势来识别趋势方向和超买超卖情况,以在趋势回调时入场。它有较高的稳定性和胜率,但需要进一步优化止损、止盈和趋势判断机制,使策略参数可适应不同品种和市场环境。总体来说,该策略以简单直接的方式结合多种指标来捕捉趋势机会,值得进一步研究和应用。
-
-||
 
 
 ### Overview
@@ -76,7 +43,6 @@ Test parameter settings on different symbols, optimize MA periods, ATR period, A
 
 The Trend Reversal System combines moving averages, CCI and Supertrend to identify trends and overbought/oversold for retracement entries. It has relatively high stability and win rate, but the stop loss, take profit and trend validation mechanisms need further optimization for robustness across symbols and market conditions. Overall it uses a simple and direct approach to combine indicators for catching trend opportunities, and is worth researching more into and applying.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d8d53c1b590c2490db.png)
-[trans]
-
-## 概述
-
-该策略采用 RSI 指标判断市场潜在趋势方向,结合布林带指标识别关键支撑阻力区域,在趋势震荡行情中寻找低吸机会建仓做多,在超买区域止盈止损。
-
-## 策略原理  
-
-1. 使用 RSI 指标判断市场潜在趋势方向。RSI 低于 40 视为超卖区域,市场有转多的可能;RSI 高于 50 视为超买区域,市场有转空的可能。  
-
-2. 使用布林带指标识别关键支撑阻力区域。布林带中轨为价格的移动平均线,上下轨构成价格的标准差通道。价格接近下轨时为低吸机会区域。  
-
-3. 当 RSI<40 且价格接近布林带下轨时,判断为低吸做多机会,采取建立多头仓位。  
-
-4. 当 RSI>50 或止盈超过 50% 时,平掉多头仓位止盈止损。
-
-## 优势分析  
-
-1. 使用 RSI 判定市场潜在趋势方向,避免逆势建仓。 
-
-2. 结合布林带寻找低吸机会点,精确定位建仓时机。
-
-3. 采用趋势震荡思路,防止被套持。
-
-4. 灵活的止盈止损机制,保证盈利最大化。
-
-## 风险分析  
-
-1. 布林带参数不恰当可能导致无法正确定位支撑区域。
-
-2. 顺势突破或假突破可能造成超买超卖判断错误。  
-
-3. 止盈止损点设置不当可能造成过早离场或亏损扩大。
-
-## 优化方向
-
-1. 优化布林带参数,使支撑阻力区域识别更加准确。
-
-2. 结合 MACD、KDJ 等其他指标过滤虚假信号。 
-
-3. 动态优化止盈止损算法,在保证盈利的同时最大限度减少亏损。
-
-## 总结
-
-该策略通过 RSI 判定潜在趋势方向,辅以布林带识别支撑区域,实现低买高卖,是一个典型的趋势震荡策略。通过一定优化,可以成为一个可靠稳定盈利的量化策略。
-
-|| 
 
 ## Overview
 
@@ -102,7 +55,6 @@ This strategy uses the RSI indicator to determine the potential market trend dir
 
 This strategy determines potential trend direction with RSI, combined with Bollinger Bands to identify support areas, realizing low buy high sell, which is a typical trend shock strategy. With proper optimization, it can become a reliable and stable profitable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,84 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/116a43c599c66fdbe4a.png)
-[trans]
-该策略的主要思想是同时检测多种常见的K线形态,包括锤头线、启明星线等[10]多种形态,当检测到这些形态时,判断为价格反转信号,做出相应的买入或者卖出操作。
-
-### 策略原理
-
-本策略主要基于以下原理:
-
-1. 使用K线形态判断价格趋势和关键反转点。K线图能清晰显示价格的打开、收盘、最高和最低点,从中可以识别出许多重要的价格形态,判断价格趋势和关键的反转点。
-
-2. 同时判断多种K线形态。任何单一的K线形态都可能存在误判,所以本策略综合判断多种K线形态,包括启明星、黄昏之星等10多种形态,提高判断的准确性。
-
-3. 根据形态类型判断做多做空方向。判断出不同K线形态后,根据其代表的多空意义,产生相应的做多或者做空信号。
-
-具体来说,本策略主要按以下流程运行:
-
-1. 输入参数:首先输入一些判断K线形态的参数,如实体部分大小判断阈值、影线部分大小判断阈值等。
-
-2. 趋势判断:计算不同周期的SMA,判断价格总体上处于上涨趋势还是下跌趋势,这对判断K线形态的意义非常重要。
-
-3. K线形态扫描:扫描数据,判断是否出现上涨的K线形态(如启明星、锤头线等)或者下跌的K线形态(如黄昏之星、垂死十字等)。
-
-4. 交易信号:当上涨形态出现时,产生做多信号;当下跌形态出现时,产生做空信号。
-
-5. 持仓管理:设置止损位置,以控制风险。
-
-### 策略优势
-
-本策略主要有以下优势:
-
-1. 利用K线形态判断价格关键点,判断准确;
-
-2. 综合多种K线形态,提高判断准确性,减少误判概率;
-
-3. 自动扫描形态,快速捕捉交易机会;
-
-4. 可方便地根据形态参数进行优化,提高盈利能力。
-
-### 策略风险
-
-本策略也存在一些风险:
-
-1. 单一K线形态判断存在误判风险,需要组合判断来减少;
-
-2. 无法完全避免极端行情的剧烈波动带来的损失;
-
-3. 需要优化输入参数,以取得最佳交易结果。
-
-对策方法如下:
-
-1. 采用多种K线形态的组合判断,降低误判概率;
-
-2. 设置止损位置,严格控制单笔损失大小;
-
-3. 详细测试不同参数对交易结果的影响,优化参数以减少损失,提高收益。
-
-### 策略优化方向 
-
-本策略主要可以从以下方向进行优化:
-
-1. 增加或减少判断的K线形态种类。如果某些形态误判较多,可以删除;如果新增的形态判断效果良好,可以添加。
-
-2. 优化K线形态的参数阈值。可以测试修改实体部分和影线部分的参数,找到最佳判断阈值。
-
-3. 优化止损位置。可以测试不同的止损位置,找到最大限度减少单笔损失的最佳止损点。
-
-4. 测试不同的趋势判断指标。可以尝试SMA、EMA等其他指标来判断价格趋势。
-
-5. 增加参数组合优化功能。建立参数空间,自动测试不同参数组合的交易结果。
-
-通过上述优化方向的改进,可以持续提高策略的交易业绩。
-
-### 总结
-
-本策略综合判断多种K线形态,自动扫描价格数据,利用不同形态判断价格趋势和关键反转点,通过做多做空操作获利。它反应灵敏,可以快速捕捉交易机会,自动化程度高,使用方便,是一种高效的量化交易策略。
-
-本策略可以通过调整判断形态的种类和参数、优化止损点以及改进趋势判断指标等手段进一步提升策略业绩,是一种值得长期修改和使用的有效的量化策略。
-
-||
 
 The main idea of this strategy is to detect multiple common candlestick patterns simultaneously, including hammer, morning star and [10] other patterns. When these patterns are detected, it is judged as a price reversal signal to make corresponding buy or sell operations.
 
@@ -165,7 +87,6 @@ This strategy comprehensively judges multiple candlestick patterns, automaticall
 
 This strategy can be further enhanced by adjusting determination patterns and parameters, optimizing stop loss points and improving trend determination indicators. It is an effective quantitative strategy worth continuous modifications and long term usage.
 
-[/trans]
 
 > Strategy Arguments
 

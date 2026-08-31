@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f7ba4d736db01ef515.png)
 
-[trans]
-#### 概述
-本策略是一个基于平均真实波幅(ATR)指标的趋势跟踪交易系统,通过动态计算价格波动范围来识别市场趋势,并结合自适应的止盈止损机制进行风险管理。策略采用多周期分析方法,通过ATR乘数动态调整交易信号的触发条件,实现对市场波动的精确跟踪。
-
-#### 策略原理
-策略核心基于ATR指标的动态计算,通过设定的周期参数(默认10期)计算市场真实波幅。使用ATR乘数(默认3.0)构建上下轨道线,当价格突破轨道线时触发交易信号。具体包括:
-1. 使用SMA或标准ATR计算波幅基准
-2. 动态计算上下轨道线作为趋势跟踪基准
-3. 通过价格与轨道线的交叉确定趋势方向
-4. 在趋势转换点位触发交易信号
-5. 实现基于百分比的动态止盈止损系统
-
-#### 策略优势
-1. 自适应性强:通过ATR动态调整对市场波动的反应
-2. 风险可控:内置百分比止盈止损机制,有效控制每笔交易风险
-3. 参数灵活:关键参数如ATR周期、乘数等可根据市场特征调整
-4. 视觉清晰:提供完善的图形界面,包括趋势标记和信号提示
-5. 时间管理:支持自定义交易时间窗口,提高策略适用性
-
-#### 策略风险
-1. 趋势反转风险:在震荡市场可能产生频繁假信号
-2. 参数敏感性:ATR周期和乘数的选择对策略表现影响较大
-3. 市场环境依赖:在高波动期间可能出现滑点较大的情况
-4. 止损设置:固定百分比止损可能不适合所有市场条件
-
-#### 策略优化方向
-1. 引入多重时间框架分析,提高趋势判断准确性
-2. 添加成交量指标确认,增强信号可靠性
-3. 开发自适应止盈止损机制,根据市场波动动态调整
-4. 增加趋势强度过滤器,减少假信号
-5. 结合波动率指标优化入场时机
-
-#### 总结
-这是一个设计完善的趋势跟踪策略,通过ATR指标实现对市场波动的精确跟踪,并结合止盈止损机制进行风险管理。策略的优势在于其适应性强、风险可控,但仍需注意市场环境对策略表现的影响。通过建议的优化方向,策略的稳定性和盈利能力有望进一步提升。
-
-|| 
 
 #### Overview
 This strategy is a trend-following trading system based on the Average True Range (ATR) indicator, which identifies market trends through dynamic calculation of price volatility ranges and incorporates adaptive take-profit and stop-loss mechanisms for risk management. The strategy employs a multi-period analysis approach, using ATR multiplier to dynamically adjust trade signal triggers for precise market volatility tracking.
@@ -81,7 +45,6 @@ The core strategy is based on dynamic ATR calculations, using a period parameter
 
 #### Summary
 This is a well-designed trend-following strategy that achieves precise market volatility tracking through the ATR indicator, combined with take-profit and stop-loss mechanisms for risk management. The strategy's strengths lie in its adaptability and controlled risk, though market environment impact on strategy performance should be noted. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced.
-[/trans]
 
 
 

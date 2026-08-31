@@ -9,92 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans] 
-
-## 概述
-
-本策略基于价格的历史波动区间来确定交易信号。它计算一定周期内的最高价与最低价的差值,并通过移动平均线形成波动区间。当价格突破该区间的上下轨时,产生交易信号。属于基于价格突破的趋势跟踪策略。
-
-## 策略原理  
-
-该策略的核心指标是价格的历史波动率。具体计算方法是:
-
-1. 计算过去N根Bar的最高价和最低价之差,记为HL
-
-2. 计算过去N根Bar的最高价和最低价的平均值avg(H, L) 
-
-3. 波动率 = HL / avg(H, L)
-
-其中N为"Volatility Length"参数。
-
-得到波动率后,计算上下轨:
-
-上轨 = 当前close + 当前close * 波动率
-
-下轨 = 当前close - 当前close * 波动率
-
-上下轨再通过WMA均线做平滑处理,参数为"Average Length"。
-
-当价格突破上轨时,做多;当价格突破下轨时,做空。
-
-平仓信号根据"Exit Type"参数给定:
-
-1. Exit Type为Volatility MA时,价格回破WMA均线平仓;
-
-2. Exit Type为Range Crossover时,价格回破上下轨平仓。
-
-## 策略优势
-
-- 使用价格波动率,适合捕捉趋势性行情
-- WMA均线处理让区间更稳定可靠
-- 突破式入场容易把握趋势转折点
-- 回破均线或上下轨可及时止损
-- 参数优化空间大,可针对不同市场进行调整
-
-## 策略风险
-
-- 区间突破容易出现冲高回落的风险
-- 趋势反转时容易损失较大
-- WMA均线有时识别趋势转折不够敏感  
-- 针对参数优化不易,需要大量反复试错
-- 回撤风险较大,需要注重资金管理
-
-可以通过以下措施减少风险:
-
-- 优化参数,使区间更稳定可靠
-- 加入其他指标判断,避免冲高回落
-- 缩小交易 SIZE,注重资金管理
-- 考虑加入重新入场机制
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 参数优化
-  
-  通过测试不同的Length参数,找到最佳参数组合。
-
-2. 加入其他指标判断
-
-  例如在价格突破上轨时,如果MACD也同时金叉,才入场做多。
-
-3. 优化止损方式
-
-  可以优化为带有弹性的追踪止损,而不是简单的区间突破止损。
-
-4. 添加再入场机制
-
-  在止损出场后,如果趋势继续,可以设置再入场条件,对趋势进行再次追踪。
-
-5. 优化仓位管理
-
-  可以根据市场波动率的高低,动态调整交易仓位。
-
-## 总结
-
-该策略总体来说比较适合趋势性行情,通过波动率上的轨和下轨来判断趋势方向和强度,并配合WMA均线形成较为可靠的交易区间,从而产生突破买卖点。但也存在一些问题,如趋势判断滞后,止损方式可以改进等。需要我们针对实盘数据进行大量的回测和优化,调整参数设置和策略规则,降低误入误出 probability,使策略在不同市场中都能有较好的表现。同时,严格的资金管理也是该策略能否长期盈利的关键。
-
-|| 
 
 ## Overview
 
@@ -179,7 +93,6 @@ The strategy can be improved by:
 
 This strategy works well for trending markets in general by using volatility-based bands to gauge trend strength and WMA to form reliable trading ranges for breakout signals. But some issues exist like lagging trend detection, improvable stops, etc. Extensive backtesting and optimization is needed using real data to adjust parameters and rules, reducing false signals and making it robust across different market conditions. Also strict risk management is key for long-term profitability.
 
-[/trans]
 
 > Strategy Arguments
 

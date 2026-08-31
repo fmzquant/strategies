@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14ae8a20deb3418743a.png)
 
-[trans]
-
-### 
-
-本策略采用20日线和60日线的移动平均线交叉形成买卖信号。当价格上涨突破20日线时,做多;当价格下跌突破20日线时,平仓。同理,价格突破60日线时也形成买卖信号。该策略属于典型的趋势跟踪策略。
-
-### 策略原理  
-
-1. 计算20日简单移动平均线和60日简单移动平均线
-2. 当收盘价格上涨突破20日线时,做多
-3. 当收盘价格下跌突破20日线时,平仓
-4. 当收盘价格上涨突破60日线时,做多
-5. 当收盘价格下跌突破60日线时,平仓
-
-以上形成该策略的交易信号和规则。当价格突破平均线时,表明趋势开始,可以跟踪趋势做多;当价格跌破平均线时,表明趋势结束,此时平仓是正确选择。
-
-### 策略优势
-
-1. 采用双移动平均线结合,使策略更稳定。20日线能更快地捕捉短期趋势机会;60日线则过滤掉部分短期市场噪音,锁定中长期趋势。  
-2. 策略回测从2018年开始,选择了台湾股票市场,相对大陆A股,台股的交易制度更加完善,更能体现策略效果。
-3. 设置了合理的止损和头寸控制,最大程度控制了风险。
-
-### 策略风险 
-
-1. 策略仅基于移动平均线指标,当市场不具备明显趋势时,将产生较多 Whirlaway 和打差。
-2. 策略对买入/卖出的数量及头寸没有进行优化,无法最大化利用资金。
-3. 该策略对价格上涨和下跌作出对称反应,无法应对市场不同行情。
-
-风险解决方法:
-1. 可以添加其他指标组合,如KDJ、MACD等,形成多重验证,避免误交易。  
-2. 可以根据市值、波动率等因素优化头寸和交易资金的利用效率。
-3. 可以根据大盘指数不同阶段采用非对称操作,在震荡调整中减少交易,在明确趋势中加大仓位。
-
-### 策略优化方向  
-
-1. 优化买入卖出的数量。可以根据止损信息动态调整头寸数量。
-2. 优化移动平均线的天数参数。可以采用步进优化、随机优化等方法找到更优参数。  
-3. 增加止损策略。移动止损或挂单止损,可以更好保护利润。
-4. 增加仓位管理。根据资金规模、市值规模动态调整单笔交易的仓位。
-
-### 总结
-
-本策略整体是一个典型的双移动平均线交叉策略。核心思路是跟踪趋势,当价格突破平均线时建立趋势位置。策略简单实用,容易实现。同时也存在一些可以优化的空间,通过参数优化、止损规避、仓位管理等手段,可以获得更好的策略效果。
-
-||
 
 This strategy adopts the crossover of 20-day moving average and 60-day moving average to generate trading signals. It goes long when price breaks above 20-day MA and closes position when price breaks below 20-day MA. Similarly, it forms trading signals when price crosses 60-day MA. This strategy belongs to a typical trend following system.  
 
@@ -98,7 +53,6 @@ Risk Solutions:
 
 This is a typical dual moving average crossover strategy. The core idea is to follow trends by establishing position when price crosses over MA line. The strategy is simple and practical to implement. Meanwhile, there is room for further optimization, by parameter tuning, stop loss, position sizing etc. to achieve better results.
 
-[/trans]
 
 > Strategy Arguments
 

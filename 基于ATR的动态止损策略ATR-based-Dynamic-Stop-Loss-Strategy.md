@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略运用ATR指标设定动态止损点,根据价格波动幅度调整止损位置,实现风险控制。策略主要通过5日EMA和20日EMA形成金叉做多入场,然后利用ATR指标设定止损位置和止盈位置。止损位置会根据价格波动情况进行调整,从而锁定更多利润。
-
-## 策略原理
-
-该策略首先判断5日EMA上穿20日EMA形成金叉时做多入场。入场后,利用ATR指标计算入场价距离当前价格的ATR倍数,设定止损位置为入场价下方1.5ATR处。然后随着价格上涨,逐步抬高止损位置,如果价格上涨超过入场价3ATR,则部分止盈。
-
-具体来说,策略会定义以下变量:
-
-- entry_price:入场价
-- stop_price:止损价格 
-- take_profit_price:止盈价格
-- atr_down:下方ATR线
-- atr_up:上方ATR线
-- atr_current:当前ATR线
-- atr_ref:ATR数值
-
-入场后会计算atr_ref为当前ATR数值,atr_div为入场价距当前价格的ATR倍数。然后根据atr_div设定atr_down、atr_current和atr_up的位置。止损价格stop_price为入场价下方1.5ATR。
-
-随着价格上涨,通过比较当前价格avg和atr_up,如果avg上穿atr_up,则重新计算atr_div和atr对应的位置,从而将止损线逐步抬高,增加持仓利润。
-
-如果价格超过入场价3ATR,则会部分平仓以锁定利润,此时tookProfit标志置为true。之后如果价格继续上涨,会继续抬高止损位置。如果触发止损,则会判断tookProfit,如果之前已经部分止盈,则仅平掉剩余头寸,否则全仓平掉。
-
-## 策略优势
-
-1. 利用ATR指标动态调整止损位置,可以根据市场波动程度来设定合理的止损距离。
-
-2. 在亏损有限的情况下,跟随趋势运行切割利润。止损线会逐步抬高,让利润不断累积。
-
-3. 部分止盈机制可以锁定部分利润,减少风险。之后止损位置继续抬高,让利润继续运行。
-
-## 策略风险
-
-1. ATR指标对异常突破不敏感,无法应对gaps带来的风险。
-
-2. EMA指标无法判断趋势反转,可能在趋势反转时又进入新的头寸。
-
-3. 部分止盈后再反转亏损的概率较大。
-
-4. 参数优化不足,1.5ATR止损和3ATR止盈需要根据不同品种调整。
-
-## 策略优化
-
-1. 可以考虑加入其他止损指标,如Donchian通道等,防止ATR指标的滞后。
-
-2. 可以测试不同的均线指标,或加入MACD等判断趋势反转。
-
-3. 可以优化部分止盈的比例和次数,不同品种可以有不同设置。
-
-4. 增加参数优化,测试不同ATR倍数的止损止盈效果。加入步进止损止盈功能。
-
-5. 测试在趋势较弱时的表现,可考虑仅在趋势较强时启用该策略。
-
-## 总结
-
-该策略整体思路清晰易懂,利用ATR指标动态调整止损实现交易风险控制是其最大优势。但ATR指标本身存在滞后性,且参数设置需要优化。加入其他止损和趋势判断指标将是改进方向。此外,部分止盈机制也需要根据不同品种进行优化测试。总体来说,该策略提供了一种利用ATR进行止损管理的思路,但需要进一步优化与完善。
-
-||
 
 
 ## Overview
@@ -130,7 +69,6 @@ If price rises above 3ATR of entry price, it will partially close position to lo
 
 The strategy has a clear logic of using ATR for dynamic stop loss management which is its biggest strength. However, ATR itself has limitations like lagging. Adding other stop and trend indicators will improve it. Also the partial take profit needs optimizations across products. Overall it provides the idea of ATR-based stop loss management but needs further optimizations and enhancements.
 
-[/trans]
 
 
 

@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15384655626028da3a7.png)
-[trans]
-
-
-### 概述
-
-该策略综合运用布林带指标和Aroon指标,通过振荡市场的震荡破坏来获利。策略在震荡趋势型市场中表现较好,能够在震荡突破之后及时入场,并设定止损止盈条件,在合适的时候退出仓位。
-
-### 策略原理
-
-该策略主要利用两个指标来识别交易机会和退出点。
-
-首先是布林带。布林带由中轨、上轨和下轨组成。中轨是n日收盘价的简单移动平均线,上轨是中轨+k倍标准差,下轨是中轨-k倍标准差。当价格从下轨向上突破中轨时,为买入信号。当价格从上轨向下突破中轨时,为卖出信号。该策略使用布林带判断震荡趋势中的机会点,在中轨附近出现突破时入场。
-
-其次是Aroon指标。Aroon指标反映价格在n日内达到最高值和最低值的相对强弱。Aroon指标可以判断趋势和机会。当Aroon Up主线大于设置的阈值时,认为行情趋势向上;当Aroon Down主线大于设置的阈值时,认为行情趋势向下。该策略使用Aroon指标的Up主线来确认行情处于上升趋势,Down主线来判断是否要止损退出。
-
-综合这两个指标,该策略在布林带发生突破,Aroon Up主线高于阈值时买入。在止损线触发或Aroon Up主线低于设置值时平仓。
-
-### 策略优势
-
-1. 综合多个指标,提高决策的准确性。单一指标容易受到市场噪音的影响,该策略通过布林带和Aroon指标的组合,可以过滤假信号。
-
-2. 及时捕捉趋势反转点。布林带具有较强的趋势识别能力,可以发现短期内突破中轨的机会点。Aroon指标判断长期趋势,避免在震荡行情中反复开仓。
-
-3. 风险控制到位。止损策略和Aroon指标的Down主线控制了下行风险。同时,部分仓位交易也控制了单笔损失。
-
-4. 适用于震荡行情,不容易产生大额亏损。相比趋势跟踪策略,该策略在震荡行情中表现更佳。
-
-### 风险分析
-
-1. 布林带存在差错。当市场突发事件造成大幅波动时,布林带会失效。
-
-2. Aroon参数设置需要优化。不同市场需要调整Aroon参数,以达到最佳效果。
-
-3. 止损过小容易出现再次触发。应适当放宽止损范围,避免止损线被触发后再次被触发。 
-
-4. 需避免在强势趋势中使用。策略适用于震荡市场,在强势趋势市场中表现不佳,应注意避免。
-
-### 优化方向
-
-1. 优化布林带参数,采用自适应布林带。允许布林带参数根据市场变化调整,提高指标的灵活性。
-
-2. 优化Aroon参数的动态设置。不同币种和交易周期需要调整Aroon参数,可以研究动态优化参数。
-
-3. 增加其他指标过滤,如RSI指标来避免超买超卖。可以进一步提高策略决策的准确性。
-
-4. 采用机器学习方法优化止损点。通过算法训练可以得到更优化的止损方式,最大程度减少止损被再次触发的概率。
-
-5. 结合量能指标,避免假突破。如能量指标OBV,可以避免布林带发生的假突破信号。
-
-### 总结
-
-该策略总体上是一个典型的震荡型交易策略。它结合布林带指标和Aroon指标来识别交易机会,可以有效抓住市场的短期震荡。通过止损和部分仓位管理风险,适合于震荡行情。但需要注意参数优化和风险控制,避免使用于趋势性行情中。如果进一步优化,可以成为一个非常实用的量化策略。
-
-||
 
 
 ## Overview
@@ -116,7 +62,6 @@ Combining the two indicators, the strategy goes long when a Bollinger breakthrou
 
 Overall this is a typical oscillation trading strategy. It identifies trading opportunities by combining Bollinger Bands and Aroon, capable of capitalizing on short term market oscillations. With proper stop loss, risk management and parameter optimization, it is suitable for ranging markets. But optimization and risk control is needed to avoid applying it in trending markets. With further improvements, it can become a very practical quant strategy.
 
-[/trans]
 
 > Strategy Arguments
 

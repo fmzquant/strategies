@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/21fff9f95a395c1f6f8.png)
-[trans]
-
-### 一、策略概述
-
-本策略综合运用一目均衡表、Macd指标、Chaikin金流指标和Tsi震荡指标等多种技术指标,实现精准判断市场趋势方向,进行短线交易。
-
-
-
-### 二、策略原理
-
-策略运用一目均衡表中的天平线、基准线、先行线等指标判断日内价格趋势。同时结合Macd的快慢均线交叉信号,以及金流指标和震荡指标判断资金流入流出。多种指标综合判断后进行买卖决策。
-
-当天平线上穿基准线,先行线在0轴之上,收盘价在一目均衡表的云端之上时为看涨信号。反之当天平线下穿基准线,先行线在0轴之下,收盘价在云端之下时为看跌信号。策略同时检测Macd的直方图是否为正值以及Chaikin金流指标和震荡指标是否同向为正,若指标同向看涨,则进行买入开多;若指标同向看跌,则进行卖出开空。
-
-当指标发出与之前相反信号时,进行反向交易平掉之前头寸。
-
-
-
-### 三、策略优势
-
-1. 运用多种指标综合判断,提高判断准确性。
-
-2. 短线操作,跟踪市场实时波动。
-
-3. 无需人工干预,全自动算法交易。
-
-
-
-### 四、策略风险及解决方法
-
-1. 多种指标同向看涨看跌的判断容易产生误判风险。可适当放宽部分判定条件,降低误判率。
-
-2. 高频短线交易较高手续费率以及难以抓住趋势。可适当延长持仓周期,追求超额收益以弥补成本。
-
-3. 无止损设置可能造成较大亏损。可结合ATR来设定合适的止损点或移动止损。
-
-
-
-### 五、策略优化方向
-
-1. 优化参数组合。调整均线参数,适配不同周期和品种。
-
-2. 增加止损机制。结合ATR指标来动态设定移动止损线。
-
-3. 增加仓位管理。动态调整交易量比例。
-
-4. 结合机器学习技术对指标和信号进行优化。
-
-
-### 六、总结
-
-本策略综合运用多种技术指标判断趋势实时波动,进行高频短线交易。虽然存在一定风险,但可通过优化来改进。该策略值得进一步深入研究和实盘验证,通过增加止损以及仓位管理来降低交易风险。
-
-||
 
 ### I. Strategy Overview
 
@@ -116,7 +62,6 @@ When the indicator issues a signal opposite to the previous one, a reverse trade
 
 This strategy comprehensively uses multiple technical indicators to determine trend fluctuations in real time for high-frequency short-term trading. Although there are some risks, it can be improved through optimization. The strategy is worth further in-depth research and live trading verification. By increasing stop loss and position management, trading risks could be reduced.
 
-[/trans]
 
 > Strategy Arguments
 

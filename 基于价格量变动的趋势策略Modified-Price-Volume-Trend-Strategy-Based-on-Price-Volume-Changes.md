@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16773942888cea538cc.png)
-[trans]
-
-## 概述
-
-本策略名称为“基于价格量变动的趋势策略”。该策略通过计算价格和交易量的累计变动情况,结合移动平均线构建长短仓单,实现追踪趋势的目的。
-
-## 策略原理
-
-该策略的核心指标是价量累计变动指标(MPVT)。该指标通过价格和交易量的变化情况,反映市场人气和资金流入流出的情况。具体计算公式如下:
-
-```
-rV = 交易量 / 50000
-xCumPVT = 昨日xCumPVT + (rV * (最新收盘价 - 昨日收盘价) / 昨日收盘价)
-```
-
-然后结合参数Level和Scale,构建价量变动Residence指标:
-
-```
-nRes = Level + Scale * xCumPVT
-```
-
-Residence指标反映了价格和交易量的综合变化。当其上穿其N日简单移动平均线时,做多;当其下穿其N日简单移动平均线时,做空。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 通过价量指标判断市场人气和资金流向,可以及时捕捉到趋势的转折点。
-2. 结合参数优化,可以灵活调整策略的参数,适应不同市场环境。
-3. 可以通过反向输入参数,实现做空策略,扩大策略运用场景。
-
-## 风险分析 
-
-该策略也存在一些风险:
-
-1. 价量指标容易产生错误信号,可能出现突破不成立的情况。可以适当调整参数或结合其他指标进行过滤。
-2. 趋势行情适用性更好,盘整行情容易产生错误信号。可以考虑与趋势和波动率指标进行组合。
-3. 参数优化效果取决于历史周期,可能产生过拟合风险。应适当调整参数或采用步进优化方法。
-
-## 优化方向
-
-该策略可以考虑从以下几个方面进行优化:
-
-1. 可以测试不同的移动平均线,如加权移动平均线、EMA等进行组合,看哪种效果更好。
-
-2. 可以结合其他指标,如RSI、KD等进行过滤信号,减少错误信号发生概率。
-
-3. 可以测试不同的参数组合,寻找最佳参数对。也可以采用步进优化方法,让参数实时更新。
-
-4. 可以通过和趋势以下指标,如布林带进行组合,提高策略的稳定性。
-
-## 总结
-
-本策略通过计算价格和交易量变化累计值,设计出价量变动Residence指标,能够有效反映市场资金流入流出情况,是一种典型的价量COMBO策略。该策略简单实用,适用于趋势行情,通过参数优化和指标组合优化空间大,是非常值得推荐的趋势策略。
-
-||
 
 ## Overview
 
@@ -124,7 +68,6 @@ The following aspects can be considered to optimize this strategy:
 ## Summary
 This strategy calculates the cumulative changes in price and volume to design a Price-Volume Change Residence indicator, which can effectively reflect capital inflows and outflows. It is a typical price-volume COMBO strategy. The strategy is simple and practical, suitable for trend markets, with large optimization space through parameter optimization and indicator combination optimization, and is a highly recommended trend strategy.
 
-[/trans]
 
 > Strategy Arguments
 

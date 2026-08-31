@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略结合了相对强弱指数(RSI)指标和K线形态模式,在RSI达到超买超卖区域时,识别特定的K线形态作为入场信号,实现趋势跟踪。
-
-## 策略原理
-
-1. 计算RSI指标的值,以30为超卖线,70为超买线。
-
-2. 在RSI上穿30时看做超卖信号,在RSI下穿70时看做超买信号。
-
-3. 在上述信号出现时,判断当前K线或前一根K线是否形成白色/黑色实体、锤头/吊颈线等特定形态。
-
-4. 如果同时满足RSI信号和K线形态条件,则产生买入/卖出信号。
-
-5. 对应的,如果形成多头形态如锤头线等,在RSI超卖时买入;如果形成空头形态如射击星等,在RSI超买时卖出。
-
-6. 识别出双线形态、三线形态等较复杂的组合Candlestick模式,作为入场信号。
-
-7. RSI回穿中线也作为平仓信号。
-
-## 策略优势
-
-1. 结合指标和形态,过滤假信号,提高入场的准确性。
-
-2. 识别K线形态,能捕捉较明显的趋势转折点。
-
-3. 利用RSI的超买超卖区域发出信号,增加获利机会。
-
-4. 识别双三线形态组合,能抓住趋势较强的转折点。
-
-5. RSI回穿中线作为止损/止盈信号,有利锁定盈利。
-
-## 策略风险
-
-1. RSI指标存在滞后,可能错过转折点。
-
-2. 部分K线形态信号较弱,可能存在虚假信号。
-
-3. 未考虑突破前高点、回测前低点作为止损止盈信号,存在亏损风险。
-
-4. 未设置移动止损,大幅逆转可能导致亏损扩大。
-
-5. 回测数据不足,可能对参数优化结果产生偏差。
-
-## 策略优化方向
-
-1. 结合其他指标过滤入场信号,如MACD、布林带等。
-
-2. 添加趋势线作为止损止盈。
-
-3. 根据回测结果优化RSI参数,寻找最佳参数组合。 
-
-4. 优化止损止盈策略,如追踪止损、区间止损等。
-
-5. 测试更长时间周期的数据,评估参数稳定性。
-
-6. 根据不同品种、市场情况调整参数。
-
-## 总结
-
-本策略整合RSI指标和K线形态识别的优势,在超买超卖点挑选高质量信号入场,达到趋势跟踪的效果。同时识别一些较强的组合形态信号,可提高获利概率。但存在一定滞后、假信号的风险,需要与其他手段配合使用,并继续优化。总体来说,该策略融合了多个利多策略思想,如果参数调优到位,应可获得较好的效果。
-
-||
 
 
 ## Overview
@@ -138,7 +73,6 @@ This strategy combines the Relative Strength Index (RSI) indicator with candlest
 
 This strategy integrates the strengths of RSI and candlestick pattern recognition to enter on high quality signals at overbought/oversold turning points for trend-following. Strong combo patterns also improve odds. But risks like lag and false signals remain, requiring combination with other techniques and further optimization. Overall it blends multiple winning ideas and may achieve good results if properly parameterized.
 
-[/trans]
 
 > Strategy Arguments
 

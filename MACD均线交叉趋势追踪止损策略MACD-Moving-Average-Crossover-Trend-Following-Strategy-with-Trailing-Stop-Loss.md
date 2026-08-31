@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16eb3d35d99a6630493.png)
 
-[trans]
-
-## 概述
-
-该策略运用MACD指标判断趋势方向,结合EMA均线和SMA均线交叉作为辅助判断。入场信号为MACD直线上穿信号线且趋势向上,止损为价格跌破由ATR计算的浮动止损线。策略还设置了分批出场,首先平掉一部分头寸获利了结,其次在价格达到较大涨幅时再平仓一部分确保大额利润,最后将部分头寸追踪持有直到止损。
-
-## 原理
-
-### 入场信号
-
-当快线EMA上穿慢线EMA时,表示短期价格变化趋势好于长期趋势,判断为买入信号。同时,快速SMA上穿慢速SMA也表明短期价格上涨势头好于长期。因此结合MACD直线上穿信号线和趋势向上的EMA&SMA交叉信号,可以确定较强的入场时机。
-
-### 止损方式 
-
-采用ATR来计算止损位。ATR可以有效反映价格的波动范围。当价格跌破该波动范围则退出止损。ATR的周期可以调节,周期调小可以使止损更精确但也更容易被突破,周期调大止损位会更宽但不易被突破。同时,止损位随着价格上涨而向上漂移,实现趋势跟踪。
-
-### 出场方式
-
-分批出场,首先在小幅上涨后就平掉一部分头寸回笼资金。然后在价格大幅上涨时再平一部分头寸获利。最后将部分头寸追踪持有直到止损位触发止损。这样可以锁定部分利润且持有一定时间获利。
-
-## 优势
-
-- 利用MACD判断趋势方向,再辅以EMA和SMA的交叉信号,可以较准确判断入场时机
-- ATR计算的止损位既可实现止损又可跟踪趋势
-- 分批出场,可以回笼资金、锁定利润且持有一段时间
-
-## 风险及对策
-
-- MACD和趋势指标发出错误信号的风险。可以适当调整参数,或增加其他指标进行辅助判断。
-- ATR止损被突破的风险。可以适当扩大ATR周期或增加止损系数。
-- 部分头寸追踪时被套牢的风险。可以缩小追踪头寸比例,及时止损。
-
-## 优化方向
-
--优化MACD参数,使其对趋势的判断更准确
-
-- 优化ATR周期参数,使止损更合适
-
-- 优化出场比例和头寸控制,减少被套风险
-
-- 增加移动止盈或考虑波动率指标优化止损
-
-## 总结
-
-该策略综合运用MACD、EMA/SMA等多种指标判断趋势方向,以求取准确的入场时机。同时采用浮动的ATR止损来锁定利润且跟踪趋势达到更好的效果。出场设置分批平仓,可以回笼资金、确保利润且持有一段时间。总体来说,该策略稳定性较好,可以获得不错的效果。但仍需对指标参数及出场方式进行优化,以求取更佳回报。
-
-||
 
 
 ## Overview
@@ -106,7 +59,6 @@ Exits partially on small price surge to take profit. Exits more on large price s
 
 The strategy combines MACD, EMA/SMA and other indicators to determine trend and entry timing accurately. The floating ATR stop loss helps lock in profit while following the trend. Exits are staggered to take profit, ensure gain and hold position for duration. Overall it is stable with decent result. But parameters and exits can be further optimized for better return.
 
-[/trans]
 
 > Strategy Arguments
 

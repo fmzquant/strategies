@@ -9,92 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略是一个适用于比特币和其他加密货币15分钟时间周期的综合交易策略。它整合多个指标生成买入卖出信号,包括三重指数移动平均线、平均真实波动幅度、以及平衡线蜡烛图形,同时具有止盈止损等风险管理机制。
-
-## 策略原理
-
-该策略使用以下多个指标:
-
-- 三重指数移动平均线(TEMA):使用不同长度和源的3个TEMA,分别基于高点、低点和收盘价计算。
-
-- 平均真实波动幅度(ATR):使用EMA平滑的自定义ATR计算市场波动率。
-
-- 超趋指标:基于ATR和倍数确定趋势方向。 
-
-- 简单移动平均线(SMA):对短周期TEMA进行SMA计算以平滑值。
-
-- 平衡线收盘价:用于额外确认趋势。
-
-当短周期TEMA高于两个长周期TEMA,超趋指标看涨,短周期TEMA高于其SMA,且平衡线收盘价高于前一日时,产生买入信号。
-
-当短周期TEMA低于两个长周期TEMA,超趋指标看跌,短周期TEMA低于其SMA,且平衡线收盘价低于前一日时,产生卖出信号。
-
-止盈止损分别设置为入场价格的1%和3%。同时考虑手续费因素。
-
-## 优势分析
-
-- 多因子综合判断,提高准确率
-
-结合趋势、波动率、形态等多个因子指标,可以提高判断准确性,避免假信号。
-
-- 止盈止损机制合理控制风险
-
-合理的止盈止损设置可以锁定利润,也可有效限制单笔损失。
-
-- 参数优化空间大
-
-指标参数可以灵活调整,适应市场的变化,寻找最佳组合。
-
-- 考虑手续费因素更贴近实盘
-
-加入手续费因子,可以使回测结果更接近实际交易表现。
-
-## 风险分析
-
-- 多因子组合误判风险
-
-过多指标组合也可能出现误判,需要仔细评估指标的实效性。
-
-- 短周期操作风险较大
-
-相比长周期,15分钟操作更受突发事件影响,存在更大的偶发风险。
-
-- 策略稳定性有待检验
-
-该策略尚需在更长周期和多市场中进行验证,以确保稳定性。
-
-- 参数优化耗时较长
-
-多指标组合带来大量参数,优化所有参数组合需要较长时间。
-
-## 优化方向
-
-- 评估各指标的实际效果
-
-回测检验各个指标的实际提升效果,避免使用冗余指标。
-
-- 优化参数,测试稳定性
-
-在更多市场中测试参数优化结果,确保稳定可靠。
-
-- 加入止损策略
-
-如移动止损、挂单止损等方式进一步控制风险。
-
-- 考虑更多成本因素
-
-如滑点成本等使回测更实盘化。
-
-## 总结
-
-该策略综合多个指标和风险控制机制,对比特币15分钟周期交易进行设计。其优化空间还很大,需要深入回测评估指标效果,广泛市场稳定性测试,以及加入更多实盘考虑因素,以求在多因子策略中找到最优参数组合。如果持续优化和验证,该策略可成为加密货币高频交易的有效工具。
-
-||
 
 
 ## Overview
@@ -166,7 +80,6 @@ Such as slippage to make backtest closer to live performance.
 ## Summary
 This strategy combines multiple indicators and risk management techniques tailored for 15-min Bitcoin trading. Large space remains for optimizing parameters, evaluating indicator effectiveness, broad market stability test, and introducing more real-world factors to find the optimal combination within the multi-factor approach. With persistent optimization and verification, it can become an effective tool for crypto high frequency trading.
 
-[/trans]
 
 > Strategy Arguments
 

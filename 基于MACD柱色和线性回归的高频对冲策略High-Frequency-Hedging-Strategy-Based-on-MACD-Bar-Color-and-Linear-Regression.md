@@ -11,78 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b4d771e70b2b2865b5.png)
 
-[trans]
-
-## 概述
-
-本策略融合了MACD柱色和线性回归指标,通过巧妙的组合实现高频的反转交易,特别适合短线套利和对冲,属于典型的市场中性策略。
-
-## 策略原理
-
-该策略主要由以下几部分组成:
-
-1. MACD柱色作为趋势判断指标。当MACD柱子颜色是绿色时,说明处于上涨趋势,这时不做空单;当MACD柱子颜色是红色时,说明处于下跌趋势,这时不做多单。
-
-2. 线性回归作为关键的交易信号指标。当价格从下方上穿线性回归时,做多;当价格从上方下穿线性回归时,做空。
-
-3. PAC通道由高、低、收盘价的EMA组成,用于判断线性回归的方向。只有当线性回归方向符合通道内趋势时,才产生交易信号。
-
-4. EMA 89作为止损线,当价格重新回穿该线时,平仓止损。
-
-交易信号的生成逻辑是:
-
-多头信号:线性回归上穿PAC通道下轨 且 线性回归上坡趋势 且 MACD柱子颜色不是红色
-空头信号:线性回归下穿PAC通道上轨 且 线性回归下坡趋势 且 MACD柱子颜色不是绿色
-
-止损退出信号:价格下穿EMA 89
-
-该策略结合趋势判断和关键价格水平,实现高频的对冲交易。
-
-## 优势分析
-
-1. 使用MACD柱子颜色判断大趋势,避免逆势交易。
-
-2. 线性回归具有平滑性,可以过滤掉部分噪音。
-
-3. EMA形成的通道清晰地界定多空方向。
-
-4. 止损线设置合理,最大限度保证盈利。
-
-5. 交易频率高,适合借助程序交易的高频策略。
-
-6. 实现对冲交易,可在震荡行情中获利。
-
-## 风险分析
-
-1. 线性回归和通道指标都需要一定参数优化,否则可能出现失效。
-
-2. 大幅震荡行情中止损可能较频繁被触发。可以适当放宽止损范围。
-
-3. 交易次数较高,需要注意手续费的影响。
-
-4. MACD指标具有一定滞后性,可能错过短期趋势反转。
-
-5. EMA通道也需要不断优化,以适应市场变化。
-
-## 优化方向
-
-1. 调整线性回归和通道参数,使指标更符合不同品种特点。
-
-2. 放宽止损幅度,同时确保止盈比大于1。
-
-3. 优化MACD参数,使其能捕捉到更多短期信号。
-
-4. 尝试其他指标替代线性回归,如布林线。
-
-5. 增加仓位控制,防止单边亏损过大。
-
-6. 结合RSI等指标过滤部分交易信号。
-
-## 总结
-
-本策略综合运用多种技术指标,实现高频的对冲交易。其优势在于抓住短期反转,风险控制合理,非常适合市场震荡时期。同时也需要注意一定的参数优化和改进,防止出现过拟合。如果管理得当,可以成为具有很强实战意义的高频策略。
-
-||
 
 
 ## Overview
@@ -155,7 +83,6 @@ This strategy combines trend judgment and key price levels to achieve high frequ
 
 This strategy combines multiple technical indicators to achieve high frequency hedging trading. Its strength lies in catching short term reversals with reasonable risk controls, making it very suitable for range-bound market conditions. At the same time, certain parameter optimization and improvements are needed to prevent overfitting. With proper management, it can become a highly practical high frequency trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

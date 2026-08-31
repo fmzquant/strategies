@@ -11,83 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/148fc7accad9c45cf24.png)
 
-[trans]
-
-## 概述
-
-Ichimoku Cloud and MACD Momentum Riding是一个结合Ichimoku云图指标和MACD动量指标的趋势跟踪策略。该策略利用Ichimoku云图判断趋势方向和支持与阻力位,以及MACD指标判断动量反转,在趋势中择时进入场内。同时,策略采用追踪止损来锁定利润,降低回撤。
-
-## 策略原理
-
-### Ichimoku云图
-
-Ichimoku云图由转向线(Tenkan-Sen)、基准线(Kijun-Sen)、先行线(Senkou-Span A)、延迟线(Senkou-Span B)和确认线(Chikou-Span)组成。该策略使用以下信号来判断趋势方向和支持阻力:
-
-- 价格在云图上方,为上升趋势
-- 价格在云图下方,为下降趋势
-- 转向线上穿基准线,为多头信号  
-- 转向线下穿基准线,为空头信号
-
-### MACD指标  
-
-Moving Average Convergence Divergence,即MACD,是一种动量指标。该策略中MACD的快线上穿慢线为做多信号,下穿为做空信号。
-
-### 入场与退出
-
-当转向线上穿基准线,延迟线上穿前26根K线的收盘价,收盘价突破云图上沿,且MACD金叉时,做多入场。  
-
-当价格上涨3%时,策略会移动止损线至当前价格的97%,以锁定利润并跟踪价格上涨。如果回撤超过3%,则止损退出。
-
-当转向线下穿基准线,延迟线下穿前26根K线的收盘价,收盘价跌破云图下沿,且MACD死叉时,做空入场。
-
-当价格下跌3%时,策略会移动止损线至当前价格的103%,以锁定利润并跟踪价格下跌。如果回升超过3%,则止损退出。
-
-
-## 优势分析
-
-这种策略结合趋势判断和入场时机把握,可以在趋势行情中获得较好收益。
-
-1. Ichimoku云图可以清楚判断趋势方向。策略只在云图方向一致时入场,避免逆势操作。
-
-2. MACD可有效判断短期动量反转。结合云图判断,可提高入场精准度。  
-
-3. 追踪止损使得策略可在趋势中长期运行。策略可配合资金管理有效控制单笔交易风险。
-
-
-## 风险分析
-
-该策略也存在一定风险:  
-
-1. 云图生成需要较长数据周期,在短期内判断可能不准。
-
-2. MACD作为随价格波动的指标,容易产生误信号。应结合更多指标修正判断。  
-
-3. 追踪止损只适合趋势行情,应适当调整止损幅度。否则在震荡行情中可能过于频繁止损。
-
-4. 策略本身并无风控模块,用户应配合资金管理来控制亏损。
-
-
-## 优化方向  
-
-关于Ichimoku Cloud and MACD Momentum Riding策略,可从以下几个方向进行优化:
-
-1. 优化参数,调整转向线、基准线等的周期参数,优化MACD的参数,使信号更明确。
-
-2. 增加过滤条件,结合RSI、布林带等其他指标来验证信号,减少误判率。 
-
-3. 增加动态止损,根据市场波动程度和风险偏好动态调整止损幅度。
-
-4. 结合资金管理,限制单笔损失占比,有效控制总体亏损。
-
-5. 开发自动选择合约、调仓的功能。扩大策略适应性,在更多市场中运用。
-
-
-## 总结  
-
-Ichimoku Cloud and MACD Momentum Riding策略是一个既考虑趋势判断又兼顾交易信号的量化策略。在unfinished参数优化和风控措施的配合下,该策略可以获得较好的策略收益率。它适合有一定量化和编程基础的投资人作为趋势跟踪策略使用,也为量化初学者提供了一个参考实例来学习指标结合和策略开发。
-
-
-||
 
 
 ## Overview
@@ -163,7 +86,6 @@ The Ichimoku Cloud and MACD Momentum Riding strategy can be optimized in the fol
 
 The Ichimoku Cloud and MACD Momentum Riding strategy considers both trend and timing, which can achieve good return when parameters are properly tuned and risk controls are in place. It suits investors with some programming skills as a trend following strategy, and serves as a reference to quant trading beginners for learning technical indicators and strategy development.
 
-[/trans]
 
 > Strategy Arguments
 

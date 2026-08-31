@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1155f177ce67147828e.png)
-[trans]
-#### 概述
-
-该策略结合了趋势交易和移动平均线交叉的概念,利用两条不同周期的指数移动平均线(EMA)来判断市场趋势。当快速EMA上穿慢速EMA时产生买入信号,反之则产生卖出信号。此外,该策略还加入了箭头指示器和警报功能,方便交易者实时掌握交易机会。
-
-#### 策略原理
-
-该策略的核心是利用两条不同周期的EMA来判断市场趋势。EMA对价格变化的反应比简单移动平均线(SMA)更灵敏,能更及时地反映市场趋势的变化。当快速EMA上穿慢速EMA时,表明上升趋势形成,产生买入信号;反之则表明下降趋势形成,产生卖出信号。同时,画出箭头指示器,直观显示买卖信号,设置警报条件,提醒交易者及时操作。
-
-#### 策略优势
-
-1. 趋势跟踪:利用EMA快慢线的交叉,能够有效捕捉市场趋势,顺势而为。
-
-2. 灵敏性高:相比SMA,EMA对价格变化的反应更加灵敏,能更及时反映趋势变化。
-
-3. 直观明了:箭头指示器和警报功能的加入,使交易信号更加直观,方便交易者实时把握交易机会。
-
-4. 参数灵活:快慢线的周期可以根据市场特点和交易者偏好进行调整,具有一定的灵活性。
-
-#### 策略风险
-
-1. 频繁交易:若市场波动较大,快慢线交叉频繁,可能导致过多的交易信号,增加交易成本。
-
-2. 延迟风险:EMA虽然相对灵敏,但仍存在一定的延迟性,可能错过最佳入场时机。
-
-3. 震荡市中失效:在震荡市场中,趋势不明显,EMA快慢线交叉可能会产生错误信号。
-
-4. 参数优化难度:快慢线周期的选择需要根据市场特点不断调整,优化难度较大。
-
-#### 策略优化方向
-
-1. 加入趋势确认指标:如ADX等趋势确认指标,辅助判断趋势强度,过滤震荡市中的错误信号。
-
-2. 结合其他技术指标:如RSI、MACD等,提供更多的决策依据,提高信号准确性。
-
-3. 优化参数选择:根据不同市场和周期,对快慢线周期进行优化,提高趋势捕捉能力。
-
-4. 加入止损止盈:设置合理的止损止盈位,控制单笔交易风险,提高策略稳定性。
-
-#### 总结
-
-该策略通过EMA快慢线交叉来判断趋势,具有趋势跟踪、灵敏、直观等优势,但同时也面临频繁交易、延迟、震荡市失效等风险。未来可以通过加入其他技术指标、优化参数选择、设置止损止盈等方式来改进策略,提高其稳定性和盈利能力。
-
-|| 
 
 #### Overview
 
@@ -96,7 +52,6 @@ The core of this strategy is to use two EMAs with different lengths to identify 
 #### Summary
 
 This strategy utilizes the crossover of fast and slow EMAs to identify trends, offering advantages such as trend following, sensitivity, and clarity. However, it also faces risks like frequent trading, lag, and ineffectiveness in rangebound markets. Future improvements can be made by incorporating additional technical indicators, optimizing parameter selection, and implementing stop loss and take profit levels to enhance the strategy's stability and profitability.
-[/trans]
 
 > Strategy Arguments
 

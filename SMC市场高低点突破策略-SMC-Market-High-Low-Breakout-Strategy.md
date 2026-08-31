@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1888debaa889488dfd3.png)
 
-[trans]
-#### 概述
-SMC市场高低点突破策略是一个基于高级市场概念(SMC)原理的量化交易策略。该策略在高级别时间框架中识别重要的买卖压力区域(订单区块),并在当前时间框架中寻找最佳的突破点入场。这与SMC原理相一致,即这些区块通常作为支撑位或阻力位。策略同时考虑了趋势方向、诱导形态和风险回报比,以优化进场点位和盈亏比。
-
-#### 策略原理
-1. 在高级别时间框架(如1小时图)中识别上升趋势和下降趋势。上升趋势定义为收盘价高于前一周期收盘价,且低点高于前一周期低点。下降趋势则相反。
-2. 在高级别时间框架中寻找诱导形态。多头诱导形态为在上升趋势中,前一周期高点高于前两周期和前三周期高点。空头诱导形态则在下降趋势中,前一周期低点低于前两周期和前三周期低点。 
-3. 在高级别时间框架中识别订单区块。在多头诱导形态后,将该周期的最高价和最低价定义为订单区块的上下边界。空头诱导形态则相反。
-4. 在当前时间框架(如15分钟图)中寻找最佳进场点。多头进场为当前收盘价突破订单区块下沿,且前一周期收盘价在区块内。空头进场则为收盘价跌破订单区块上沿。
-5. 设置止损和止盈。止损位置为订单区块的边界,止盈根据设定的风险回报比(如1:1.5)计算。
-
-#### 策略优势
-1. 基于SMC原理,在高级别时间框架中捕捉主要趋势和关键支撑阻力位,避免了在低级别时间框架中的市场噪音干扰。
-2. 诱导形态的识别有助于判断趋势强度和可持续性,为进场提供更多依据。
-3. 在当前时间框架中精确突破进场,减少无效信号和回撤风险。
-4. 灵活的风险回报比设置,可根据个人风险偏好进行调整。
-
-#### 策略风险
-1. 在震荡市或趋势反转初期,该策略可能面临一定回撤风险。
-2. 极端行情下(如급涨急跌),订单区块可能失效,导致止损位过于宽松。
-3. 仅考虑价格行为,忽略了成交量等其他重要指标,判断可能存在偏差。
-
-#### 策略优化方向 
-1. 引入更多高级别时间框架(如日线、周线)作为过滤,确保捕捉长期趋势。
-2. 在识别趋势和诱导形态时,可结合均线系统、动量指标等,提高判断准确性。
-3. 对订单区块边界进行动态优化,如考虑ATR(平均真实波幅)或通道宽度,以应对不同市场状态。
-4. 进场后可设置移动止损,如跟踪ATR或SAR(抛物线指标),以降低持仓风险。
-5. 考虑市场情绪指标(如 VIX)或宏观经济数据,以识别可能的趋势反转或黑天鹅事件。
-
-#### 总结
-SMC市场高低点突破策略是一个基于SMC原理的量化交易策略,通过在高级别时间框架中识别关键压力区域,并在当前时间框架中寻找最佳突破点入场。该策略综合考虑了趋势方向、诱导形态和风险回报比,以优化进场点位和盈亏比。策略优势在于基于高级别时间框架过滤噪音,精确捕捉趋势,并具有灵活的风险管理功能。但在震荡市或趋势反转初期,策略可能面临一定回撤风险。未来可通过引入更多时间框架、优化订单区块边界、动态止损以及考虑市场情绪等方面进行优化,以提高策略稳健性和适应性。
-
-|| 
 
 #### Overview
 The SMC Market High-Low Breakout Strategy is a quantitative trading strategy based on the principles of Superior Market Concepts (SMC). It identifies significant buying/selling pressure areas (order blocks) on higher timeframes and seeks optimal breakout entry points on the current timeframe. This aligns with the SMC principle that these blocks often act as support or resistance levels. The strategy considers trend direction, inducement patterns, and risk-reward ratio to optimize entry levels and profit targets.
@@ -75,7 +42,6 @@ The SMC Market High-Low Breakout Strategy is a quantitative trading strategy bas
 
 #### Summary
 The SMC Market High-Low Breakout Strategy is a quantitative trading strategy based on SMC principles. It identifies key pressure areas on higher timeframes and seeks optimal breakout entry points on the current timeframe. The strategy comprehensively considers trend direction, inducement patterns, and risk-reward ratio to optimize entry levels and profit targets. Its advantages lie in filtering out noise based on higher timeframes, precisely capturing trends, and providing flexible risk management features. However, the strategy may face drawdown risks during market consolidation or early trend reversals. Future optimizations can introduce more timeframes, optimize order block boundaries, implement dynamic stop-losses, and consider market sentiment to improve the strategy's robustness and adaptability.
-[/trans]
 
 
 

@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过全面自定义一目均衡表(Ichimoku Kinko Hyo)各项参数和条件,实现高度灵活的均衡表交易策略。该策略可完整复制均衡表多种交易方法,适应不同市场环境。
-
-策略原理:
-
-1. 计算转换线、基準线、前导线1、前导线2和延迟线。
-
-2. 根据自定义参数设置多头和空头的入场条件组合。
-
-3. 根据自定义参数设置多头和空头的出场条件组合。
-
-4. 视觉显示配置的条件达成情况。
-
-5. 根据入场和出场条件进行交易,可选择是否使用止损止盈。
-
-该策略的优势:
-
-1. 完全自定义均衡表参数,匹配个人交易方式。
-
-2. 条件组合交易,可过滤假信号,提高稳定性。 
-
-3. 视觉辅助判断,直观反映市场情况。
-
-4. 测试优化灵活,可适应多种市场类型。
-
-该策略的风险:
-
-1. 全自定义带来的复杂度,需要花费大量时间测试。
-
-2. 参数不合理可能得到损失,需要谨慎测试。
-
-3. 过于复杂的条件组合可能导致漏失良机。
-
-总之,该策略实现了均衡表交易策略的高度自定义,用户可根据偏好、市场情况调整参数,以达到最佳效果。但也需要谨慎测试,以免增加非系统性风险。
-
-||
 
 This strategy fully customizes all parameters and conditions of the Ichimoku Cloud for ultimate flexibility in Ichimoku trading. It can replicate a wide range of Ichimoku methods to suit different market environments. 
 
@@ -81,7 +44,6 @@ Risks:
 
 In summary, this strategy enables high customization of Ichimoku trading systems. Users can tune parameters and conditions to suit their preferences and market conditions. But prudent testing is required to avoid unintended risks.
 
-[/trans]
 
 > Strategy Arguments
 

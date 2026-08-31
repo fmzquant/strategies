@@ -9,64 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-交易黄金时段策略通过历史数据回测,自动判断每天哪个时段最适合买入和卖出,并在对应的时段发出交易信号。该策略利用ROC指标计算K线在不同时段的涨跌幅度,进而评估不同时段的交易效果,找出最佳买入和卖出时段。
-
-## 策略原理
-
-1. 使用现有时间得到当前小时数now_hour。
-
-2. 使用ROC指标计算出每小时的K线涨跌幅度indicator。
-
-3. 计算indicator与now_hour的累积乘积buy_hourXindicator_cum。
-
-4. 计算indicator的累积和buy_indicator_cum。
-
-5. 最佳买入时段buy_hour = buy_hourXindicator_cum / buy_indicator_cum。
-
-6. 同理计算最佳卖出时段sell_hour。
-
-7. 比较now_hour与buy_hour和sell_hour,判断当前时段是否最佳买入或卖出时段。
-
-8. 在最佳买入和卖出时段发出对应的信号。
-
-9. 用不同背景颜色实时显示最佳买入卖出时段。
-
-## 优势分析
-
-该策略最大的优势是能够自动判断每天最适合交易的时段。不需要人工观察历史数据来判断最佳交易时段,节省大量时间和精力。同时,该策略可以根据实时数据调整最佳交易时段,对市场变化做出快速反应。相比固定的交易时段,该策略更具优势。
-
-另外,该策略有效利用了ROC指标。通过计算每小时K线的涨跌幅度,可以更准确判断不同时段的交易效果。ROC指标对异方波动较敏感,能反映市场变化。
-
-## 风险分析
-
-该策略最大的风险在于ROC指标本身的局限性。ROC仅考虑价格变化率,对交易量变化不敏感。同时ROC对盘整范围窄的市场效果不好。如果遇到横盘整理的市场,ROC指标效果会打折扣。
-
-此外,策略用于回测历史数据求出最佳交易时段。但历史规律未必适用于当前市场。市场可能发生结构性变化,原有的交易规律不再适用。这需要针对当前市场行情调整参数,而不能完全依赖回测结果。
-
-对此,可以考虑结合其他指标进行复合计算,如交易量,获得更全面的市场状态判断。同时需要针对当前市场行情进行参数调整测试,确保交易信号符合新的市场状态。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 尝试其他指标替换ROC指标,如交易量,寻找更合适的指标计算时段强弱。
-
-2. 增加其他过滤条件,利用均线,震荡指标等判断局部趋势,避免不合理交易。
-
-3. 优化时间周期参数,测试不同的时间周期参数对结果的影响。
-
-4. 增加止损机制,设置合理的止损点,控制交易风险。
-
-5. 结合机器学习方法,利用更大数据量求解最优交易时段。
-
-## 总结
-
-该交易黄金时段策略总体来说是一种可行且有效的方法。它利用ROC指标自动判断每天最佳的买入卖出时段,节省大量时间和精力。但我们也要注意ROC指标和历史回测的局限性,针对当前市场行情调整参数。此外,该策略还有很多提升空间,可以从多方面进行优化,使得信号更加准确可靠。如果用于实盘,建议严格遵守止损规则,控制交易风险。
-
-|| 
 
 ## Overview
 
@@ -124,7 +66,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, the golden trade hour strategy is a feasible and effective approach. It uses the ROC indicator to automatically determine the optimal intraday buy and sell hours, saving much time and effort. But we should also note the limitations of the ROC indicator and historical backtesting, and adjust parameters based on current market conditions. Furthermore, there is still much room for improvement by optimizing this strategy in many aspects to generate more accurate and reliable signals. If used for live trading, it is recommended to strictly follow stop loss rules to control trading risks.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/190ff29c04906639469.png)
-[trans]
-
-## 概述
-
-该策略结合了相对强弱指数(RSI)和Stoch RSI这两个强大的技术指标,实现了一个较为稳定和可靠的双向交易策略。当RSI指标显示超买超卖信号并且Stoch RSI发出金叉死叉交易信号时,该策略将入场做多或做空。
-
-## 策略原理
-
-该策略主要基于RSI和Stoch RSI两个指标。RSI用于判断市场是否处于超买超卖状态。Stoch RSI用于发出具体的交易信号。
-
-首先,通过RSI判断市场是否超买超卖。如果RSI高于设定的超买线则判断为超买,如果RSI低于设定的超卖线则判断为超卖。
-
-其次,Stoch RSI发出交易信号。当快线从下向上突破慢线时产生买入信号;当快线从上向下突破慢线时产生卖出信号。
-
-最后,只有当RSI显示超买超卖的同时Stoch RSI发出信号,该策略才会进入场内交易。做多信号为RSI显示超卖并且Stoch RSI金叉;做空信号为RSI显示超买并且Stoch RSI死叉。
-
-## 优势分析
-
-该策略结合RSI和Stoch RSI两个指标的优势,既考虑了市场总体走势,又关注细节变化从而发出交易信号,做到了更加可靠。
-
-RSI指标能够有效判断市场是否处于超买超卖状态,避免在市场顶部追高和市场底部追低。Stoch RSI指标考察RSI的动量变化,能够及时捕捉转折点。两者的结合,既保证了交易信号的可靠性,也确保了入场的时间点。
-
-此外,该策略加入了时间和价格过滤条件,进一步减少了错误交易的概率,使整个策略更加稳健。
-
-## 风险分析
-
-该策略主要依赖RSI和Stoch RSI两个指标,这两个指标都对市场变化较为敏感,可能会频繁发送错误信号。此外,指标之间也可能会产生背离。这些都可能导致策略交易频率较高,且获利不稳定。
-
-为降低这些风险,可适当调整RSI和Stoch RSI的参数,增加过滤条件等,使策略参数更加匹配市场特征;也可以加入其他指标进行验证,避免仅凭一个指标的信号入场。
-
-## 优化方向
-
-该策略可从以下几个方面进行进一步优化:
-
-1. 加入移动止损策略,以锁定利润并减少亏损;
-
-2. 优化RSI和Stoch RSI参数,使其更符合不同周期和不同品种的特点;
-
-3. 增加更多过滤条件,如加大交易周期时间范围,降低交易频率等;
-
-4. 结合其它指标进行信号验证,避免单一指标判断失误;
-
-5. 进行回测优化,寻找最佳参数组合。
-
-## 总结
-
-该策略综合运用RSI和Stoch RSI两个指标的优势,实现了一个双向交易的策略框架。相比单一使用某个指标,该策略判断更加全面和可靠,避免了许多不必要的错误信号。通过进一步的优化,该策略可以成为一个稳定盈利的量化交易策略。
-
-||
 
 ## Overview
 
@@ -106,7 +57,6 @@ The strategy can be further optimized in the following aspects:
 
 The strategy leverages the strengths of both RSI and Stoch RSI to establish a dual-directional trading framework, providing more comprehensive and reliable signal generation compared to using a single indicator, avoiding many unnecessary false signals. With further optimization, it can become a steady profitable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

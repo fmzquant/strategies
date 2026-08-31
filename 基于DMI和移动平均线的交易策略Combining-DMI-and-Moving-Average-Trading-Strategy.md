@@ -9,68 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过结合趋向指标DMI和移动平均线来识别的趋势方向,以发出买入和卖出信号。当DMI显示报价进入趋势状态且移动平均线确认趋势方向时,策略会产生交易信号。
-
-## 策略原理
-
-该策略主要基于两个指标:
-
-1. DMI包括DMI+和DMI-,用于识别趋势的存在及方向。当DMI+高于DMI-,表示上升趋势;当DMI-高于DMI+,表示下跌趋势。
-
-2. 移动平均线,一般选取15到50天的平均线,用于判断价格趋势方向。当价格高于(低于)移动平均线时,表示上升(下跌)趋势。
-
-策略首先计算DMI+、DMI-和移动平均线。在DMI显示趋势状态(DMI+高于DMI-或DMI-高于DMI+)的同时,如果移动平均线也确认该趋势方向,则产生交易信号。具体来说:
-
-- 当DMI+上穿DMI- 且价格上穿移动平均线时,做多;
-- 当DMI-上穿DMI+ 且价格下穿移动平均线时,做空。
-
-该策略同时加入了反转输入选项。启用反转后,做多和做空信号会反向。
-
-## 优势分析
-
-这种结合趋向指标和趋势指标的策略,可以提高信号的可靠性,利用两种指标的优势进行互补。
-
-DMI的优势在于可以快速识别趋势的存在。而移动平均线可过滤掉部分噪音,确认趋势方向。两者结合使用,可以在趋势形成时较早进入场内,同时避免在非趋势时随波逐流。
-
-另外,该策略加入反转选项,可以根据实际需要选择顺势或逆势交易。这增加了策略的灵活性。
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 在趋势转换时,可能出现错误信号,从而导致亏损。这需要调整参数,或设置止损来控制风险。
-
-2. 趋势形成需要一定时间,在此期间策略容易受到价格震荡的干扰,产生错误信号。可以适当调整DMI和移动平均线的参数期限来过滤这种噪音。
-
-3. 反转交易面临逆势亏损扩大的风险。启用反转时,需要控制单笔亏损比例,或使用移动止损来锁定部分利润。
-
-4. 不同品种和不同时间周期下,参数需要重新优化。直接复制参数在其他品种或周期使用可能效果不佳。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的移动平均线周期参数,找到衔接趋势转换的最佳参数组合。
-
-2. 测试DMI的平滑周期参数,过滤趋势中出现的短期反转噪音。
-
-3. 评估启用反转选项与默认顺势交易在历史回测中的效果差异,选择更优方案。
-
-4. 加入止损策略,如移动止损、时间止损、突破止损等,控制单笔亏损。
-
-5. 评估在不同品种和周期参数优化效果,优化参数组合。
-
-6. 结合其他指标进行过滤,如强弱指标RSI,可避免局部极值点发出错误信号。
-
-## 总结
-
-该策略通过融合趋向指标DMI和移动平均线两种指标的优势,在趋势形成时较早进入场内,并可避免在震荡行情中被套牢。反转交易选项也增加了策略的灵活性。通过参数优化、止损以及与其他指标组合使用,可以进一步增强策略稳定性。但需要注意不同品种和周期下需要重新测试参数的适用性。
-
-|| 
 
 ## Overview
 
@@ -132,7 +70,6 @@ Possible optimizations for this strategy include:
 
 This strategy combines the strengths of the trend-following DMI and moving average indicators to enter trends early while avoiding whipsaws in choppy markets. The reverse option also adds flexibility. Further enhancements in stability can come from parameter optimization, stops, and combining with additional filters. However, parameters will need to be re-tested for applicability across different products and timeframes.
 
-[/trans]
 
 > Strategy Arguments
 

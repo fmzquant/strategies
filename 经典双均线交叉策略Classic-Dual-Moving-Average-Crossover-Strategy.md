@@ -10,89 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b70c5ce3c6f1c36d83.png)
-[trans]
-
-## 概述
-
-双均线交叉策略是一种非常经典和常用的技术分析策略。该策略利用快速移动平均线和慢速移动平均线的交叉作为买入和卖出的信号。当快速移动平均线从下方向上突破慢速移动平均线时,产生买入信号;当快速移动平均线从上方向下跌破慢速移动平均线时,产生卖出信号。
-
-## 策略原理
-
-该策略的代码主要包括以下部分:
-
-1. 定义快慢均线的长度和类型:快线长度为5周期,慢线长度为21周期,均采用简单移动平均线。
-
-2. 计算快线和慢线:通过sma函数计算5周期和21周期的简单移动平均线。
-
-3. 画图:绘制快线和慢线的走势图。
-
-4. 定义买入和卖出条件:快线上穿慢线时买入,快线下穿慢线时卖出。
-
-5. 执行交易:通过策略的long和short函数在满足条件时自动执行买入和卖出操作。
-
-该策略的关键是使用不同长度周期的均线组合,形成快慢均线,并以其交叉作为交易信号。快线能更快捕捉价格变化,慢线更能反映长期趋势。当快线上穿慢线时,说明行情由下向上反转,属于买入信号;当快线下穿慢线时,说明行情由上向下反转,属于卖出信号。该策略原理简单清晰,容易实施。
-
-## 优势分析
-
-双均线交叉策略具有以下优势:
-
-1. 原理简单,容易掌握,适合初学者。
-
-2. 顺势操作,遵循价格趋势,回撤较小。
-
-3. 交易频率适中,不会过于频繁交易。
-
-4. 可自定义参数,灵活应对市场变化。
-
-5. 容易通过优化找到适合自己的参数组合。
-
-6. 可设定止损点,控制风险。
-
-7. 可在多种市场中使用,适用性强。
-
-8. 可与其他指标组合使用,提高效果。
-
-## 风险分析
-
-双均线交叉策略也存在一些风险:
-
-1. 当市场趋势强劲时,均线追随趋势延迟,可能出现迟钝,错过最佳入场时机。可以适当缩短均线周期,提高敏感性。
-
-2. 震荡行情中,可能出现较多假信号。可以适当增加过滤条件,避免错误交易。
-
-3. 交易次数可能偏多,影响盈利。可以适当放宽均线间距,减少交叉。
-
-4. 无法判断趋势类型,存在逆势交易风险。可以辅助趋势指标判断。 
-
-5. 参数优化需要一定历史数据支持,新品种可能存在过拟合。应采用多种组合测试参数健壮性。
-
-6. 单一指标易受外界环境影响,表现可能不稳定。可以结合其他指标进行验证。
-
-## 优化方向
-
-双均线交叉策略还可以从以下方面进行优化:
-
-1. 测试不同长度的快慢均线,找到适合具体交易品种的最佳参数。
-
-2. 增加过滤条件,如交易量,ATR止损等,减少不优异机会。
-
-3. 结合动量指标等确认买卖信号,避免假突破。 
-
-4. 优化止损策略,避免部分止损过早或过晚退出。
-
-5. 结合趋势和波浪指标,实现趋势跟踪和逆势交易。
-
-6. 采用自适应均线,根据市场调整均线参数,而非固定周期。
-
-7. 多时间段组合运用,根据市场时间特点采用不同参数组合。
-
-8. 实时优化,利用机器学习等技术持续优化参数。
-
-## 总结
-
-双均线交叉策略以其原理简单,易于掌握和实施的特点,成为技术分析中最核心和常用的交易策略之一。该策略顺应价格趋势,回撤可控,风险亦可接受。但其可优化空间也很大,通过参数优化,结合其他指标以及自动化算法,可以进一步扩展该策略的适用性和效果。总体来说,双均线交叉策略值得投资者重点研究和长期应用。
-
-||
 
 ## Overview
 
@@ -174,7 +91,6 @@ There are some ways to optimize the dual MA strategy further:
 
 With its simple logic and ease of implementation, the dual moving average crossover strategy has become one of the most essential and widely used technical analysis strategies. It follows the price trend with controlled pullback and acceptable risk. But there is also huge potential for optimization, by parameter tuning, incorporating other indicators and automated algorithms, its applicability and performance can be further enhanced. Overall, the dual MA crossover strategy deserves great attention and long-term application by investors.
 
-[/trans]
 
 > Strategy Arguments
 

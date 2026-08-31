@@ -9,77 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-均线黄金交叉策略是一种比较常见的量化交易策略。该策略使用两个不同参数的指数移动均线(EMA),当短期EMA上穿长期EMA时,做多;当短期EMA下穿长期EMA时,平仓。该策略利用了短期EMA能更快响应价格变化,长期EMA更能反映趋势的特点,采用EMA交叉形成交易信号。
-
-## 策略原理
-
-该策略首先定义了两个EMA均线,ema1长度为10,ema2长度为21。然后计算出两条均线的值。当ema1上穿ema2时,说明价格开始向上突破,属于做多信号;当ema1下穿ema2时,说明价格跌破EMA均线,属于平仓信号。 
-
-为了过滤假突破,代码还定义了一个阈值threshold,计算公式为:
-
-```pine
-threshold = ((ema1 - ema2)*100) / ((ema1 + ema2)/2)
-```
-
-该阈值表示两均线间距占均线平均值的百分比。当threshold大于0.15%时为做多信号,小于-0.006时为平仓信号。
-
-综上,该策略的交易信号总结为:
-
-- 做多信号:ema1上穿ema2,且threshold >= 0.15%
-- 平仓信号:ema1下穿ema2,且threshold <= -0.006%
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA均线能平滑价格数据,有利于产生交易信号。
-
-2. 双EMA设定不同参数,可以在响应速度和稳定性上达到平衡。
-
-3. 增加threshold阈值可以过滤假突破,避免无谓交易。
-
-4. 策略思路简单清晰,容易理解实现,适合量化交易初学者。
-
-5. 可灵活调整EMA参数和threshold阈值,优化策略效果。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. EMA均线滞后于价格,可能错过短线操作机会。
-
-2. 存在被套牢的风险,如果趋势反转可能造成较大损失。
-
-3. threshold阈值设定不当可能过滤掉有效信号或者发出错误信号。
-
-4. EMA参数不合适,短期和长期EMA无明显特征差异,产生假信号。
-
-5. 大盘波动可能导致止损而被突破,应设置合理的止损。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化EMA参数,测试不同周期参数对策略效果的影响。
-
-2. 优化threshold阈值,平衡过滤假信号和保留有效信号。
-
-3. 增加其他技术指标判断,如MACD,KDJ等,综合判定交易信号。 
-
-4. 加入止损机制,可以是移动止损或者挂单止损,控制单笔损失。
-
-5. 可以考虑加入分批建仓的方法,降低单一入场的风险。
-
-6. 测试不同持仓时间,寻找更合适的持仓周期。
-
-## 总结
-
-均线黄金交叉策略整体思路清晰易懂,利用EMA均线的特点进行交易信号判定。该策略存在一定的优势,同时也要注意一些潜在风险。通过参数优化、止损设置、信号过滤等方法可以获得更好的策略效果。该策略适合作为量化交易的入门策略来学习和实践。
-
-|| 
 
 ## Overview
 
@@ -150,7 +79,6 @@ The strategy can be optimized in the following aspects:
 
 The EMA golden cross strategy has clear and simple logic, utilizing the characteristics of EMAs to generate trading signals. The strategy has certain advantages but potential risks exist. The strategy can be improved by optimizing parameters, setting stop loss, filtering signals etc. It is suitable as a beginner's quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

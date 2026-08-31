@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/177c877e47160fc0587.png)
-[trans]
-### 概述
-
-高低点突破策略是一个基于高低点识别的长线期波动策略。该策略在策略方向参数方向上,在突破最近一个特定窗口期的最高价时做多,突破最近一个特定窗口期的最低价时做空。
-
-### 策略原理
-
-该策略通过输入参数设置查看最近N根K线的最高价和最低价,即波动的高低点,根据方向参数判断策略方向。在做多时,当价格突破最近N根K线内的最高点时按照止赢方式入市做多;当价格跌破最近N根K线内的最低点时按照止损方式入市做空。 
-
-此外,该策略还设定了止损位。在开仓做多后,止损线设置为最低价附近;做空后,止损线设置为最高价附近。这可以有效规避单边行情带来的巨大亏损。
-
-### 优势分析
-
-该策略最大优势是能抓住高低点附近的关键波动,顺势而为,实现盈利。另外设置止损线有效控制了风险。
-
-具体优势有:
-
-1. 策略思路清晰,通过突破高低点来判断入场和出场。
-
-2. 利用swing高低点来寻找反转机会,这是技术分析的经典做法。
-
-3. 有止损设置来控制风险,可以避免单边行情带来的巨亏。
-
-4. 代码结构清晰,容易理解和修改。
-
-5. 可输入不同参数来优化策略,如调整最高最低点周期数等。
-
-### 风险分析
-
-该策略的主要风险在于高低点判断不准带来的错误交易。具体风险包括:
-
-1. 最高最低点可能出现错误突破带来错误入场。
-
-2. 突破点附近可能有巨大的止损被触发。
-
-3. 趋势品种容易形成花费巨大才能确定高低点。
-
-4. 参数设置不当也会影响策略表现。
-
-对应解决方法包括:
-
-1. 优化参数,调整最高最低点判断的周期数。
-
-2. 加大止损幅度。
-
-3. 区分品种特性,避免在趋势品种使用。
-
-4. 采用机器学习方法动态优化参数。
-
-### 策略优化方向 
-
-该策略可以从以下方向进行优化:
-
-1. 最高最低点周期数优化:当前固定周期数,可以改为动态优化以避免固定模式带来的过优化。
-
-2. 增加止损止盈优化:可以基于ATR、波动率等指标动态调整止损幅度。
-
-3. 结合多个时间周期:可以在更高时间周期确定趋势,低时间周期决定入场。
-
-4. 增加机器学习:使用神经网络等方法预测潜在高低点突破概率,提升效果。
-
-5. 优化止损算法:改进算法以在保证止损的前提下尽量减少无效止损被触发的情况。
-
-### 总结
-
-高低点突破策略整体是一个非常实用的长线量化策略。它通过捕捉高低点附近的反转机会获利,并设置止损来控制风险,从而在保证收益的同时也控制了回撤。该策略参数设置灵活,思路清晰,是值得推荐的一个策略思路。后续可通过引入动态优化、机器学习等方式以进一步完善该策略。
-
-||
 
 ### Overview
 
@@ -145,7 +77,6 @@ The strategy can be optimized in the following directions:
 
 The Swing Points Breakouts strategy is a practical long-term quantitative strategy overall. By capturing reversal opportunities around swing points and setting stop losses to control risks, it ensures profits while also controlling drawdowns. With flexible parameter tuning and clear logic, it is a recommended strategy paradigm worth utilizing. Further improvements can be made by introducing dynamic optimization and machine learning.
 
-[/trans]
 
 > Strategy Arguments
 

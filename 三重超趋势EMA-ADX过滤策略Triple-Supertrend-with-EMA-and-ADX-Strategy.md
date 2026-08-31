@@ -9,55 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-这是一种融合三重超趋势、EMA和ADX指标的量化交易策略。它利用三重超趋势系统发出交易信号,并结合EMA和ADX作为过滤条件,以控制交易频率、提高交易信号质量。
-
-## 策略原理
-
-- 使用三组不同参数的超趋势系统,当三组超趋势都同向时产生交易信号。
-- 应用EMA作为趋势过滤器,只有当收盘价高于EMA时做多,收盘价低于EMA时做空。
-- 应用ADX作为趋势强弱过滤器,只有当ADX高于设定阈值时才交易。  
-- 允许选择是否重入,控制盈利能力和止损风险。
-
-具体来说,长入场条件为三重超趋势都转为看涨、收盘价高于EMA、ADX高于设定值时开多仓;短入场条件为三重超趋势都转为看空、收盘价低于EMA、ADX高于设定值时开空仓。平仓条件为任一超趋势转向时平掉当前仓位。
-
-该策略同时绘制三组超趋势的支撑阻力线,辅助判断趋势方向。
-
-## 优势分析
-
-- 三重超趋势系统可过滤假突破,提高入场准确率。
-- EMA和ADX双过滤降低 whipsaw 带来的损失,增强止损能力。  
-- 允许选择是否重入,可根据个人风险偏好调整策略的盈利能力。
-- 结合视觉上的超趋势支撑阻力线,有助判断趋势方向。
-
-## 风险分析
-
-- 超趋势等指标存在滞后问题,可能出现晚入场、提前出场的情况。
-- 选择过于严格的过滤条件会导致错过机会。
-- 在缩量整理的市场中,容易形成 whipsaw 带来损失。
-- 允许重入会增加交易频率和滑点成本。
-
-可以通过调整参数组合、优化过滤条件等方法来降低这些风险。同时要控制好仓位规模,严格止损,以应对不确定的市场情况。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-- 测试不同的参数组合,找到最佳的超趋势和EMA参数。
-- 优化ADX的门槛值,降低假信号。
-- 添加其他指标过滤,如波动率、成交量等。
-- 针对不同品种分别优化参数,提高适应性。
-- 建立动态止损机制,主动控制风险。
-- 尝试机器学习等方法寻找更好的入场和出场规则。
-
-## 总结
-
-本策略充分利用三重超趋势系统的优势,并辅以EMA和ADX双重过滤,可有效提高交易信号质量,控制风险。通过参数优化、增加过滤条件、动态止损等方法可以进一步增强策略的健壮性和适应性。与趋势判断相结合,该策略可为量化交易提供有效的入场和出场信号。
-
-|| 
 
 ## Overview
 
@@ -119,7 +70,6 @@ This strategy can be optimized in several aspects:
 
 This strategy utilizes the strengths of triple supertrend systems and augments it with EMA and ADX double filters to effectively improve signal quality and control risks. Further enhancements in parameters, filters, dynamic stops can improve its robustness and adaptiveness. Combined with trend analysis, it provides effective entry and exit signals for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

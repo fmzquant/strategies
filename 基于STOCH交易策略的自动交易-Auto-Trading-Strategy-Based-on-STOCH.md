@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-本策略基于STOCH指标设计了一个简单的自动交易系统。该策略适合外汇,股票指数,大宗商品等市场,也可扩展至股票和加密货币市场。
-
-## 策略概述
-
-该策略使用STOCH指标识别超买超卖状态,结合PIVOT点设定止损位置,实现趋势跟踪。当STOCH指标显示超买超卖时,进行做多做空操作;止损点设在当日PIVOT点附近,可有效控制风险;部分止盈点设定在一定盈利后关闭部分头寸。
-
-## 策略原理
-
-该策略使用STOCH指标的快线%K和慢线%D实现金叉做多和死叉做空。具体逻辑是,当%K线从下向上突破%D线时,进行做多操作;当%K线从上向下突破%D线时,进行做空操作。这样可捕捉超买超卖状态。 
-
-为控制风险,长仓做多止损点设在当日最低PIVOT点附近,空仓做空止损点设在当日最高PIVOT点附近,可有效锁定风险。
-
-部分止盈逻辑是,开仓后特定盈利水平时,关闭50%头寸。这样可优化资金使用效率。
-
-综上,该策略整体 Capture超买超卖状态的恰当时点; Control风险控制方面;Optimize资金使用效率。可谓Capture, Control 和Optimize的有机结合。
-
-## 策略优势
-
-- 使用STOCH指标可有效捕捉超买超卖现象,辅以PIVOT点可控制风险,从而全面掌控交易风险。
-
-- 部分止盈机制可优化资金使用效率。采用部分平仓的方法,既确保部分利润,也保留后续运行盈利空间。
-
-- 策略参数可自定义,交易者可根据市场和风险偏好调整参数,实现策略的灵活运用。
-
-- 策略逻辑非常简单清晰,容易理解掌握,适合不同交易者使用。代码直观易读,便于修改维护。
-
-
-## 策略风险
-
-- 作为趋势跟踪策略,容易被困于震荡行情中,无法实现盈利。
-
-- STOCH指标可能产生错误信号,引发不必要的交易行为。应适当过滤信号,避免无谓交易。
-
-- 止损点靠近当日枢轴点,在突破盘整后可能过于接近,应适当拉大止损距离。
-
-- 部分策略参数如期间长度等需要根据不同市场调整,否则会影响策略表现。
-
-- 回测仅基于历史数据,无法保证未来表现。实盘中会受到更多不可控因素影响。
-
-- 自动交易系统需确保服务器稳定性,避免因连接问题导致无法正常交易。
-
-## 策略优化方向
-
-- 可引入趋势过滤,避免趋势不明时盲目交易。例如加入MA指标判断趋势方向。
-
-- 可加入交易量监测,像放量,空头放量等,过滤假突破。避免被套。
-
-- 可根据不同品种、周期调整参数,优化策略表现。例如调整STOCH的参数。
-
-- 可考虑加入机器学习算法,利用大数据训练模型,自动优化参数。
-
-- 可设定盈亏比来引入风险控制,避免出现大额亏损的单子。
-
-- 可加入更多条件来过滤入场时机,提高策略胜率。如引入股票基本面模型等。
-
-## 总结
-
-本策略整体采用了较为简单直观的趋势跟踪方法,以STOCH指标识别超买超卖状态,并加入PIVOT止损来控制风险,同时引入部分止盈来优化资金效率。从Capture,Control和Optimize三个层面进行设计,形成一个较为完整的自动交易系统。该策略逻辑简单易懂,参数可自定义,可为不同交易者所用。但也存在一定的风险与不足,需要在实盘运用中不断测试与优化,方能长期产生稳定收益。
-
-||
 
 
 This strategy designs a simple auto trading system based on the STOCH indicator. It is suitable for Forex, stock indices, commodities and can be extended to stocks and crypto markets.
@@ -133,7 +70,6 @@ In summary, this strategy Captures overbought and oversold points appropriately;
 
 This strategy adopts a simple and intuitive trend following approach based on the STOCH indicator to identify overbought/oversold points. With PIVOT stop loss to control risk and partial take profit to optimize capital efficiency. The design covers Capture, Control and Optimize. The logic is simple and customizable. But it also has some risks and can be further optimized. Continuous testing and improvement in live trading is crucial for steady profitability.
 
-[/trans]
 
 
 > Strategy Arguments

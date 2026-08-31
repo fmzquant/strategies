@@ -10,81 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ed343d5919a137fc91.png)
-[trans]
-
-## 概述
-
-该策略运用均线系统判断当前趋势方向,根据趋势方向做多做空。当均线上升时判断为看涨置信度较高,做多;当均线下降时判断为看跌置信度较高,做空。该策略主要通过均线系统来判断市场走势方向,属于趋势跟随型策略。
-
-## 策略原理
-
-1. 计算一定周期(默认400周期)的加权移动平均线vwma作为均线指标。
-
-2. 判断均线vwma是否上升,如果上升则设置看多信号uptrend;如果下降则设置看空信号downtrend。
-
-3. 当uptrend为真时,做多;当downtrend为真时,平仓做空。
-
-4. 计算每根K线的策略收益率bar_pnl和买持收益率bar_bh。
-
-5. 根据季度和年度断点,计算每个季度和年度的策略收益率quarter_pnl和年度收益率year_pnl以及相应的买持收益率quarter_bh和year_bh。
-
-6. 在表格中展示每年度每个季度的策略收益率和买持收益率。
-
-## 策略优势分析
-
-该策略主要依靠均线判断市场趋势方向,具有以下优势:
-
-1. 操作简单,通过均线指标判断市场走势,容易理解掌握。
-
-2. 回撤控制能力较强,跟随趋势操作,能够有效控制非趋势市的损失。
-
-3. 可配置参数较少,主要调整均线周期,容易测试优化。
-
-4. 采用表格直观展示收益情况,一目了然。
-
-5. 收益表格中添加买持收益进行对比,可以明确策略增量收益。
-
-6. 可灵活设置表格位置,方便组合其他策略使用。
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. Bulk market风险,在长期持续的牛市中,相比买持策略可能收益略低。可以适当调整均线周期来优化。
-
-2. 震荡行情下 whipsaw风险较大。可考虑增加过滤条件,如突破前高点等,来减少反复 transactions。
-
-3. 均线系统对曲线拟合性不佳,可能错过趋势转折点。可以试验不同类型均线指标。
-
-4. 未考虑止损退出机制,存在大幅回撤风险。可以设置动态止损或考虑降低仓位。
-
-5. 表格优化方面,可考虑添加 sharpe ratio,最大回撤等风险指标。
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化均线参数,调整均线周期适应不同市场环境。
-
-2. 增加过滤条件,如突破前高点等,以减少 whipsaw。
-
-3. 尝试不同类型均线,如加权移动均线,双指数移动均线等。
-
-4. 加入止损机制,可以设置动态止损或考虑降低仓位。
-
-5. 丰富表格内容,添加 sharpe ratio,最大回撤等指标。
-
-6. 结合其他指标,如MACD,Bollinger Bands等判断趋势。
-
-7. 优化仓位管理,根据市场情况动态调整仓位。
-
-8. 测试不同标的运行效果,寻找最佳适用范围。
-
-## 总结
-
-该均线交易策略整体较为简单直接,通过均线判断趋势操作,回撤控制能力较强,适合跟随趋势型交易者。优化空间还很大,可从均线系统、止损机制、仓位管理等方面进行优化,使策略更适应复杂市场环境。表格设计展示了策略与买持收益比较,直观展示策略增量价值。该策略有效框架和表格展示思路,对于量化交易者具有一定的借鉴作用。
-
-|| 
 
 ## Overview
 
@@ -158,7 +83,6 @@ The strategy can be optimized in the following aspects:
 
 The moving average trading strategy is relatively simple and straightforward. It follows the trend by determining trend using moving average, with good drawdown control, suitable for trend following traders. There is still large room for optimization, like the moving average system, stop loss mechanism, position sizing etc. to make it adaptable to complex market environments. The table design compares the strategy return to buy & hold, showing the excess returns intuitively. The framework and table design of this strategy can provide some good reference for quantitative traders.
 
-[/trans]
 
 > Strategy Arguments
 

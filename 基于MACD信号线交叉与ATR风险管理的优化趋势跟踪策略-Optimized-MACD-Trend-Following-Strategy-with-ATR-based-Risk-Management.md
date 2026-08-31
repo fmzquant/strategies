@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/198c3cda0eaa2784fad.png)
 
-[trans]
-#### 概述
-该策略是一个基于MACD信号线交叉的自动化比特币交易策略。它利用MACD指标来识别趋势的变化,并根据ATR(平均真实波动范围)来设置止损和止盈水平,以管理每笔交易的风险。该策略旨在捕捉强劲的上升趋势,同时通过动态止损和止盈水平来控制风险。
-
-#### 策略原理
-该策略的核心是MACD指标,它由两条移动平均线(快线和慢线)之间的差值计算得出。当MACD线从下向上穿过信号线,并且MACD线在零线下方时,就会产生买入信号。这表明股价可能正在转向上升趋势。一旦确认买入信号,该策略就会以当前收盘价进行做多交易。
-
-止损和止盈水平是根据ATR计算得出的。ATR衡量了一段时间内的平均价格波动范围。通过将ATR乘以特定的倍数,可以得到动态的止损和止盈水平。这有助于根据最近的市场波动情况调整这些水平。
-
-#### 策略优势
-1. 趋势跟踪:该策略利用MACD指标来识别潜在的趋势变化,使其能够捕捉强劲的上升趋势。
-
-2. 风险管理:通过基于ATR的动态止损和止盈水平,该策略能够管理每笔交易的风险。这有助于限制潜在损失,同时让利润在有利趋势中不断增长。
-
-3. 参数优化:该策略的输入参数(如MACD的长度和ATR的倍数)可以进行优化,以适应不同的市场条件和交易风格。
-
-#### 策略风险
-1. 错误信号:MACD指标有时可能产生错误的交易信号,导致无利可图的交易。
-
-2. 趋势逆转:该策略在趋势发生逆转时可能面临风险。如果价格突然反转,止损水平可能无法提供足够的保护。
-
-3. 缺乏多样性:该策略仅依赖于MACD指标和ATR。在某些市场条件下,这可能不足以做出明智的交易决定。
-
-#### 策略优化方向
-1. 结合其他指标:考虑将其他技术指标(如RSI或移动平均线)纳入策略,以提高信号的可靠性。
-
-2. 优化参数:使用历史数据对MACD的长度、ATR的倍数和风险百分比等输入参数进行优化,以找到最佳的参数组合。
-
-3. 加入仓位管理:实施更高级的仓位管理方法,根据市场条件和账户余额调整每笔交易的仓位大小。
-
-#### 总结
-该优化的MACD趋势跟踪策略展示了如何将动量指标与风险管理技术相结合,以在加密货币市场中进行交易。通过利用MACD信号线交叉来识别潜在的趋势变化,并使用基于ATR的动态止损和止盈水平来管理风险,该策略旨在捕捉有利的价格走势,同时将损失降至最低。然而,在实施该策略之前,还需要进一步的回测、优化和风险评估。
-
-|| 
 
 #### Overview
 This strategy is an automated Bitcoin trading strategy based on MACD signal line crossovers. It utilizes the MACD indicator to identify changes in trend and sets stop loss and take profit levels based on the Average True Range (ATR) to manage risk on each trade. The strategy aims to capture strong uptrends while controlling risk through dynamic stop loss and take profit levels.
@@ -77,7 +43,6 @@ The stop loss and take profit levels are calculated based on the ATR. The ATR me
 
 #### Summary
 This optimized MACD trend-following strategy demonstrates how to combine a momentum indicator with risk management techniques for trading in the cryptocurrency market. By leveraging MACD signal line crossovers to identify potential trend changes and using dynamic stop loss and take profit levels based on ATR to manage risk, the strategy aims to capture favorable price movements while minimizing losses. However, further backtesting, optimization, and risk assessment are necessary before implementing the strategy.
-[/trans]
 
 > Strategy Arguments
 

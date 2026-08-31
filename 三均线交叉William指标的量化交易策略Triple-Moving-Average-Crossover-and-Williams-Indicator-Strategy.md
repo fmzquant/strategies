@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过结合三条平滑移动平均线、相对强弱指数(RSI)和威廉指标,识别股价的趋势方向,在趋势发生反转的时候寻找入场机会。当快中慢三条移动平均线向上(下)对齐,RSI高于(低于)50,且出现向下(上)的威廉指标信号时,做多(空)头。止损点设定为入场价格的一定百分比,止盈点为入场价格向有利方向移动一定百分比后。
-
-## 策略原理
-
-该策略使用了三条不同周期的平滑移动平均线,包括快线、中线和慢线。当快线上穿中线时,表示股价进入上升趋势;当快线下穿中线时,表示股价进入下跌趋势。在确定股价处于上升或下跌趋势后,策略等待首次交易机会的出现。
-
-具体来说,在股价进入上升趋势后,策略会等待以下五个条件同时满足,才会开仓做多:
-1. 快线、中线和慢线全部向上;
-2. RSI高于50; 
-3. 出现向下的威廉指标形态;
-4. 股价上穿慢线;
-5. 当前没有持仓。
-
-在股价进入下跌趋势后,策略会等待以下五个条件同时满足,才会开仓做空:
-1. 快线、中线和慢线全部向下;  
-2. RSI低于50;
-3. 出现向上的威廉指标形态;
-4. 股价下穿慢线;
-5. 当前没有持仓。
-
-做多做空后,策略会设置止损点和止盈点来控制风险。具体来说,止损点为入场价格的一定百分比,止盈点为入场价格向有利方向移动一定百分比后的价格。
-
-## 策略优势
-
-1. 结合多种指标确认入场,可以有效避免假突破。三条均线确定趋势方向,威廉指标捕捉反转信号,RSI过滤震荡行情,共同提高入场的准确率。
-
-2. 设置止盈止损点,可以很好控制每单的风险收益比,从而保证盈利的交易大于亏损的交易。
-
-3. 策略逻辑清晰易理解,参数设置合理,适合不同级别的交易者使用。
-
-## 策略风险
-
-1. 在震荡行情中,指标可能发出错误信号,导致不必要的入场。可以通过优化RSI的参数来过滤掉部分震荡行情。
-
-2. 快线中线交叉可能出现假突破,应该与其他指标搭配使用。可以考虑加入成交量指标。 
-
-3. 停损点距离入场价太近可能会被止损出场,止损点的设置需要调整到合适的位置。
-
-4. 止盈点距离入场价太远可能无法止盈出场,止盈点也需要调整到合适的位置。
-
-## 策略优化方向 
-
-1. 可以测试不同周期的参数组合,优化三条均线和RSI的参数。
-
-2. 可以加入其他指标,如成交量指标,突破前判断成交量是否突出。
-
-3. 可以根据不同品种分别测试该策略的参数设置。
-
-4. 可以根据回测结果绘制收益曲线,测试止损止盈参数的设置。
-
-5. 可以尝试在启用之前进行模拟交易,优化参数设置。
-
-## 总结
-
-该策略整体来说逻辑清晰,使用指标组合进行入场和出场,可以有效控制风险。策略的参数优化空间还很大,通过测试不同的参数设置,该策略可以成为一个稳定盈利的量化交易策略。但任何策略都无法完全避免损失,需要交易者保持交易纪律,做到盈利了就止盈,亏损了就止损。
-
-||
 
 
 ## Overview
@@ -140,7 +79,6 @@ After going long or short, the strategy sets a stop loss at a certain percentage
 
 The strategy has clear logic overall, entering and exiting positions with a combination of indicators, which effectively controls risk. There is large room for parameter optimization. By testing different parameter settings, this strategy can become a steady profitable quantitative trading strategy. However, no strategy can completely avoid losses. Traders need to follow trading disciplines - taking profits when winning and cutting losses when losing.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d81d0903d5d9151893.png)
 
-[trans]
-#### 概述
-该策略结合了修正的Hull移动平均(HMA)和一目均衡(Ichimoku Kinko Hyo)两种技术指标,旨在捕捉市场的中长期趋势。策略的主要思路是利用HMA与一目均衡中的基准线(Kijun Sen)的交叉信号,同时结合一目均衡的云层(Kumo)作为过滤条件,以此来判断市场的趋势方向并进行交易。
-
-#### 策略原理
-1. 计算修正的Hull移动平均(HMA)
-   - 计算WMA(加权移动平均)并进行双重平滑处理,得到修正的HMA
-2. 计算一目均衡的各项指标
-   - 计算转折线(Tenkan Sen)、基准线(Kijun Sen)、先行上线(Senkou Span A)和先行下线(Senkou Span B)
-3. 生成交易信号
-   - 当HMA上穿基准线,且收盘价位于云层之上时,产生做多信号
-   - 当HMA下穿基准线,且收盘价位于云层之下时,产生做空信号
-4. 执行交易
-   - 根据做多或做空信号进行相应的交易操作
-5. 退出交易
-   - 当HMA在相反方向上穿越基准线时,退出当前持仓
-
-#### 策略优势
-1. 结合了HMA和一目均衡两种有效的趋势跟踪指标,能够更好地捕捉市场趋势
-2. 利用一目均衡的云层作为过滤条件,可以有效减少虚假信号,提高交易的胜率
-3. 修正的HMA相比传统的移动平均线具有更快的响应速度和更低的延迟,能够及时反映市场的变化
-4. 策略逻辑清晰,易于理解和实现,适用于各种市场和时间周期
-
-#### 策略风险
-1. 在市场震荡或趋势不明朗时,该策略可能会产生较多的虚假信号,导致频繁交易和资金损失
-2. 策略的参数设置对交易结果有较大影响,不同的参数组合可能导致不同的表现
-3. 该策略未考虑市场的突发事件和非理性行为,在极端市场条件下可能面临较大风险
-
-#### 策略优化方向
-1. 引入其他技术指标或市场情绪指标,以提高信号的可靠性和稳定性
-2. 优化策略参数,如通过机器学习或遗传算法等方法寻找最优参数组合
-3. 考虑加入风险管理模块,如设置止损止盈、仓位管理等,以控制策略的风险敞口
-4. 根据不同市场和时间周期的特点,对策略进行针对性的调整和优化
-
-#### 总结
-该策略通过结合修正的Hull移动平均和一目均衡,构建了一个相对稳健的趋势跟踪交易系统。策略逻辑清晰,易于实现,同时也具有一定的优势。然而,策略的表现仍然受到市场条件和参数设置的影响,需要进一步的优化和改进。在实际应用中,应结合具体的市场特点和风险偏好,对策略进行适当的调整和管理,以期获得更好的交易结果。
-
-|| 
 
 #### Overview
 This strategy combines two technical indicators: the modified Hull Moving Average (HMA) and Ichimoku Kinko Hyo (IKHS), aiming to capture medium to long-term market trends. The main idea is to utilize the crossover signals between the HMA and the Kijun Sen (baseline) of IKHS, while using the Kumo (cloud) of IKHS as a filtering condition to determine the trend direction and make trading decisions.
@@ -85,7 +47,6 @@ This strategy combines two technical indicators: the modified Hull Moving Averag
 
 #### Summary
 By combining the modified Hull Moving Average and Ichimoku Kinko Hyo, this strategy constructs a relatively stable trend-following trading system. The strategy logic is clear and easy to implement, while also having certain advantages. However, the performance of the strategy is still affected by market conditions and parameter settings, requiring further optimization and improvement. In practical applications, it is necessary to make appropriate adjustments and management based on specific market characteristics and risk preferences to obtain better trading results.
-[/trans]
 
 > Strategy Arguments
 

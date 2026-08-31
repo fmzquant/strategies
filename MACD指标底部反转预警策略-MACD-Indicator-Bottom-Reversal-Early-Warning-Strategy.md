@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f81e658e7fd8699cb2.png)
-[trans]
-
-## 概述
-
-MACD指标底部反转预警策略通过对MACD指标的快慢线进行分析,判断当前价格是否处于历史高点或低点,是否即将发生反转,实现对市场价格走势的快速判断。
-
-## 策略原理
-
-该策略是MACD标准指标输出的快线和慢线对应数据进行筛选和过滤,判断价格是否进入反转前的临界区,发出买入或卖出信号。
-
-具体来说,策略通过计算MACD的快线与慢线的金叉和死叉来判断价格进入上涨趋势的底部区域或下跌趋势的顶部区域。在金叉时,如果close价格高于前一个bar的close价格,且diff高于前一个bar的diff值,则判断为进入底部区域,发出底部反转预警信号。在死叉时,如果close价格低于前一个bar的close价格,且前一个bar的diff高于当前diff值,则判断为进入顶部区域,发出顶部反转预警信号。
-
-## 优势分析
-
-1. 使用MACD指标,对大盘走势判断准确
-2. 底部和顶部反转预警,可以及时捕捉反转机会
-3. 结合快慢线关系,避免多余判断误报
-4. 可添加报警,实时监控市场变化
-
-## 风险分析
-
-1. MACD指标本身判断滞后,无法确定精确反转点
-2. 需要适当调整参数,使其适合不同交易品种和时间周期
-3. 无法判断具体反转幅度和反转后的走势
-4. 需要同时关注交易量变化判断反转可靠性 
-
-解决方法:
-1. 结合其他指标如K线形态、交易量变化等判断
-2. 调整参数使其适合不同交易品种和时间周期
-3. 及时止损,控制风险
-
-## 优化方向 
-
-1. 优化MACD指标参数,使其更好判断底部和顶部
-2. 增加止损逻辑,避免亏损扩大
-3. 结合交易量变化判断反转可靠性
-4. 增加机器学习模型判断反转概率
-
-## 总结
-
-MACD指标底部反转预警策略通过分析MACD快慢线交叉情况,判断价格是否进入反转的临界区,可有效发现底部和顶部,为交易决策提供指引。但MACD本身判断滞后,无法确定精确反转点和反转力度。因此,需适当调整参数,并与其他指标结合使用,控制风险,以发挥该策略的效用。未来可通过引入机器学习等技术进一步提升判断准确性。
-
-||
 
 ## Overview  
 
@@ -94,7 +51,6 @@ Solutions:
 
 The MACD Indicator Bottom Reversal Early Warning Strategy can effectively discover bottoms and tops to provide guidance for trading decisions by analyzing MACD fast and slow line crosses to judge whether prices have entered the critical area before reversal. However, the lagging judgment of the MACD itself cannot determine the exact reversal point and reversal momentum. Therefore, appropriate parameter adjustments are needed, combined with other indicators, to control risks and leverage the effectiveness of this strategy. In the future, the introduction of machine learning techniques can further improve judgment accuracy.
 
-[/trans]
 
 
 

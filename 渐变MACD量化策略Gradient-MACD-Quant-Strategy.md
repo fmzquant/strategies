@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12c8a3c1c6306ad467a.png)
-[trans]
-
-### 概述
-
-本策略通过计算Heikin-Ashi蜡烛线,平滑K线价格,结合MACD指标发出交易信号,实现追踪中长线趋势的量化交易策略。
-
-### 策略原理  
-
-1. 计算Heikin-Ashi开盘价、收盘价、最高价、最低价,绘制Heikin-Ashi蜡烛线,平滑K线价格走势。
-
-2. 设置MACD参数:快线长度12,慢线长度26,信号线长度9。
-
-3. 计算DEA慢线、DEA快线和MACD差值。绘制MACD柱状图。
-
-4. 当MACD差值上穿0时,做多;当MACD差值下穿0时,做空。
-
-5. 设置年、月、日过滤条件,只在指定时间段内交易。
-
-### 优势分析
-
-1. Heikin-Ashi蜡烛线可有效滤除市场噪音,识别趋势。
-
-2. MACD可提供较为清晰的趋势买卖点。
-
-3. 结合Heikin-Ashi和MACD,可提高买卖点质量,增加获利 trades。 
-
-4. 设置时间过滤条件,可根据历史数据回测确定最佳交易时段,提高盈利率。
-
-### 风险分析  
-
-1. 趋势反转时,可能出现较大亏损。
-
-2. MACD参数设置不当,可产生过多无效信号。
-
-3. 时间过滤条件过于死板,可能漏掉较好交易机会。  
-
-对策:
-
-1. 设置止损止盈,控制单次亏损。
-
-2. 优化MACD参数,确定最佳参数组合。
-
-3. 结合其他指标判断局部趋势。
-
-### 优化方向  
-
-1. 测试不同的参数组合,寻找最优参数。
-
-2. 增加止损机制,如留出止损/追踪止损。 
-
-3. 结合EMA、KDJ等指标判断反转点。
-
-4. 添加量能指标,避免量能 divergence。
-
-### 总结  
-
-本策略通过计算Heikin-Ashi蜡烛线平滑价格,配合MACD Tradingview指标判断趋势方向和入场点位,实现了一个基于趋势跟踪的量化策略。相比普通MACD策略,它平滑了价格曲线,过滤了部分噪音,可以更清楚判断趋势方向。通过parameter优化、止损机制、和其它指标的组合,可以进一步增强策略的稳定性和盈利能力。
-
-||
 
 
 ### Overview  
@@ -126,7 +67,6 @@ Countermeasures:
 ### Summary
 This strategy smoothes price action with Heikin-Ashi candlesticks and determines trend direction and entry signals with MACD Tradingview indicator to implement a trend-following quant strategy. Compared with regular MACD strategies, it filters out some noise for clearer trend identification. Further enhancements on parameter optimization, stop loss, and combo indicators can improve its stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用快速移动平均线和慢速移动平均线的组合来判断趋势方向,快线突破慢线时产生交易信号,属于双移动平均线交易系统。
-
-## 原理
-
-该策略使用长度较短的快速移动平均线和长度较长的慢速移动平均线。
-
-慢速MA用于判断主趋势方向。当价格位于MA上方时,判断为上升趋势;价格位于MA下方时,判断为下降趋势。
-
-在上升趋势中,如果快速MA上穿慢速MA,产生买入信号;在下降趋势中,如果快速MA下穿慢速MA,产生卖出信号。
-
-交易信号产生后,可选择是否设置止损位继续跟踪止损。
-
-## 优势
-
-1. 快慢MA组合可有效识别趋势。
-
-2. 快MA可产生较为灵敏的交易信号。
-
-3. 慢MA滤除市场噪音,防止假突破。
-
-4. 可选择多种MA算法,如EMA、DEMA等。
-
-5. 可启用止损策略跟踪止损。
-
-## 风险及解决方法
-
-1. MA存在滞后问题,可能导致信号滞后。可测试更灵敏参数。
-
-2. 停损点可能过于接近,被突破造成损失。应适当留出波动空间。
-
-3. 未考虑交易量,存在价格被操纵的风险。可添加交易量确认。
-
-4. 仅基于指标易产生假信号。可加入其它因素进行确认。
-
-5. 参数优化困难。可使用步进优化或遗传算法寻找最优参数。
-
-## 优化思路
-
-1. 测试不同MA算法参数,寻找最优参数。
-
-2. 研究自适应移动平均线以提高敏感度。
-
-3. 加入其它指标或因素进行信号过滤优化。
-
-4. 建立动态止损机制,使止损更灵活。
-
-5. 优化资金管理策略,如根据ATR动态调整仓位。
-
-## 总结
-
-该策略运用双MA交叉判断趋势产生交易信号,可设置止损 limiting risk。其交易逻辑简单清晰,但存在参数选择困难等问题。可通过参数优化、指标过滤、止损策略等进行改进,使策略更稳健可靠。
-
-||
 
 ## Overview 
 
@@ -121,7 +64,6 @@ After signal, trailing stop can be optionally enabled.
 
 The strategy trades dual MA crossovers to identify trends, with stops limiting risk. The logic is simple and clear but parameter selection and other issues exist. Enhancements through optimization, filtering, stops can improve robustness. It serves as a reasonable baseline trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

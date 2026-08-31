@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a63c08a89ffd505442.png)
-[trans]
-
-## 概述
-本策略通过计算两条不同参数的移动平均线,当快线上穿慢线时生成买入信号。同时利用平均真实波动范围计算追踪止损价位,当价格跌破该止损价位时产生卖出信号。该策略能够有效跟踪市场趋势,在盈利后及时止损。
-
-## 策略原理
-1. 快速移动平均线(EMA):参数为12日指数移动平均线,能够快速响应价格变化。
-2. 慢速移动平均线(SMA):参数为45日简单移动平均线,表征中长期趋势。  
-3. 当快速移动平均线上穿慢速移动平均线时,产生买入信号。
-4. 计算15日平均真实波动幅度(ATR)作为止损基准。
-5. 根据ATR数值设定追踪止损幅度(如6倍ATR),并实时更新止损价位。
-6. 当价格低于止损价位时,产生卖出信号。
-
-该策略融合趋势跟踪和止损管理的优点,既可以跟踪中长线方向,又可以通过止损来控制单笔损失。
-
-## 优势分析
-1. 移动平均线组合可以有效识别趋势,增加信号的可靠性。
-2. 动态追踪止损可以及时止损,避免打击资金实力。
-3. 结合ATR止损使止损价位合理,防止过于敏感。
-4. 策略思路清晰易懂,参数调整灵活。
-
-## 风险分析
-1. 移动平均线存在滞后,可能错过短线机会。
-2. 止损过于宽松会使盈利能力变差。
-3. 止损过于敏感会增加交易频率和手续费负担。
-4. 股票波动率变化可能影响ATR参数的稳定性。
-
-可以适当优化移动平均线参数,或调整ATR倍数来平衡止损幅度。也可以结合其他指标作为过滤条件来改善入场时机。
-
-## 优化方向 
-1. 测试更多参数组合选择最佳的移动平均线。
-2. 根据不同股票的特点调整ATR止损的倍数参数。
-3. 增加量价指标等过滤条件,避免不必要的交易。
-4. 积累更多历史数据测试,验证参数稳定性。
-
-## 总结
-本策略成功融合移动平均线的趋势跟踪和ATR动态止损,通过参数优化可以适应不同股票特性。该策略形成了清晰的买入定界和止损定界,使交易逻辑简单清楚。总体来说,该双移动均线追踪止损策略稳定、简单、易于优化,适合作为股票交易的基础策略。
-
-||
 
 ## Overview 
 This strategy generates buy signals when the fast moving average crosses over the slow moving average. At the same time, it calculates the trailing stop loss price based on Average True Range to set sell signals. This strategy can effectively track market trends and cut losses in a timely manner when profit-taking.
@@ -86,7 +47,6 @@ Parameters can be optimized to balance stop loss amplitude. Other indicators can
 ## Conclusion
 This strategy successfully combines MA’s trend following ability and ATR’s dynamic trailing stop loss. Parameters can be optimized to adapt to different stocks. It forms clear buy and sell boundaries, making logic simple and clear. In conclusion, this dual MA tracking stop loss strategy features stability, simplicity and ease of optimization. It works well as a fundamental strategy for stock trading.
 
-[/trans]
 
 > Strategy Arguments
 

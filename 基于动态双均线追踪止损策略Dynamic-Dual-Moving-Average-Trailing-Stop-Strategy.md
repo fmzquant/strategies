@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1857b4e7e220fffcee2.png)
-[trans]
-## 概述
-
-该策略是一个基于双EMA均线的动态止损追踪策略。它使用9日线、20日线判断市场趋势方向,结合RSI指标过滤假断裂。同时使用ATR指标计算动态止损位和止盈位。该策略适用于中长线持仓。
-
-## 策略原理
-
-该策略使用9日EMA作为短期均线,20日EMA作为中期均线,判断价格趋势。当价格上穿短期均线,并且收盘价高于前一日最高价,同时RSI高于30时,做多;当价格下穿短期均线,并且收盘价低于前一日最低价,同时RSI低于70时,做空。
-
-止损位设置为收盘价减去1.5倍的ATR值,止盈位为收盘价加上ATR值乘以止盈系数。同时使用ATR的2倍设定趋势跟踪止损。
-
-## 策略优势
-
-1. 使用双EMA判断市场主要趋势,避免被噪音承压
-2. 结合RSI指标过滤假突破,提高入场准确率
-3. 动态止损止盈,可以根据市场波动程度来调整止损止盈位
-4. 趋势跟踪止损,让利润最大化
-
-## 风险分析
-
-1. EMA均线具有滞后性,可能错过短期机会
-2. RSI参数设置不当可能导致错过入场机会
-3. 止损止盈比例设置不当,可能过于宽松或严格
-4. 行情剧烈波动时,止损可能被突破
-
-## 优化方向 
-
-1.测试不同参数的EMA组合,找到最优参数
-2.优化RSI参数,平衡入场准确率和把握机会之间的关系
-3.测试不同的止损止盈比例,找到最优配置
-4.加入更多过滤指标条件,减少止损被突破概率
-
-## 总结
-
-该策略整体来说是一种较为稳定的中长线持仓策略。它结合双EMA判断市场主要趋势,避免被短期市场噪音影响决策。RSI指标的加入也在一定程度上过滤了假突破。此外,动态止损止盈机制也让该策略可以根据市场波动程度来调整自己的止损止盈水平。但是该策略也存在一定的风险,比如均线的滞后性,以及止损突破的可能性。这需要我们在实际应用中,通过不同的参数调整和优化来找到最佳配置。
-
-||
 
 ## Overview
 
@@ -83,7 +46,6 @@ The stop loss is set at closing price minus 1.5 times ATR. Take profit is set at
 
 Overall this is a relatively stable medium to long term holding strategy. It uses dual EMAs to determine major market trend, avoiding being affected by short term noise. The addition of RSI also filters false breaks to some extent. Moreover, the dynamic stop loss/take profit mechanism allows the strategy to adjust based on market volatility. However, there are still risks like lagging of moving averages and potential of stop loss penetration. We need to find the optimum configuration through parameter tuning and optimization during practical application.
 
-[/trans]
 
 > Strategy Arguments
 

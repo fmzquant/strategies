@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于动向指标DMI实现趋势交易。DMI由三条曲线组成:ADX、+DI和-DI。ADX表示趋势的强弱,大于给定阈值时表示进入趋势;+DI和-DI分别表示上升趋势和下降趋势的力度。当+DI上穿-DI时,做多;当-DI上穿+DI时,做空。
-
-## 策略原理
-
-计算ADX、+DI和-DI的曲线。设置ADX的合理阈值判断是否进入趋势,例如25。当ADX大于该阈值时,如果+DI大于-DI,则判断为上升趋势,做多;如果-DI大于+DI,则判断为下降趋势,做空。在反向信号出现前一直持有仓位。
-
-## 优势分析
-
-- DMI指标判断趋势方向准确、信号较少
-- 采用ADX判断趋势强弱,避免无效突破产生噪音交易
-- 顺势而为,一次只做多或空一边,避免反复交易
-- 参数调优空间大,可调整ADX阈值、DI周期等
-
-## 风险分析 
-
-- 需谨防趋势反转带来损失
-- ADX判断趋势强弱有滞后性
-- 长期持仓带来更大回撤风险
-
-可适当缩短持仓周期,或结合其他指标判断趋势反转。
-
-## 优化方向
-
-- 优化ADX参数,平衡反应灵敏度和过滤假信号
-- 测试不同持仓周期参数的效果
-- 可考虑结合均线等指标判断趋势反转
-- 测试在不同品种参数的稳定性
-
-## 总结
-
-DMI策略判断趋势方向准确,回撤控制较好。可通过参数优化进一步改进,是一种简单实用的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -81,7 +44,6 @@ Mitigate by shortening holding period or adding other indicators to determine tr
 
 DMI strategy accurately determines trend direction with controlled drawdown. Further improvements possible through parameter optimization. A simple and practical trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

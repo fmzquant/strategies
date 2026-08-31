@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16fec096f9955afdc5b.png)
-[trans]
-## 概述
-
-懒熊动量挤压策略是一种结合布林带、Keltner通道和动量指标的量化交易策略。它利用布林带和Keltner通道判断当前市场是否处于挤压状态,然后结合动量指标进行交易信号的产生。
-
-该策略的主要优势是可以自动识别趋势性行情的开始,并配合动量指标判断入场时机。但是也存在一定的风险,需要针对不同品种进行参数优化。
-
-## 策略原理
-
-懒熊动量挤压策略基于以下三个指标进行判定:
-
-1. 布林带(Bollinger Bands):包含中轨、上轨和下轨
-2. Keltner通道(Keltner Channels):包含中轨、上轨和下轨  
-3. 动量指标(Momentum Indicator):当前价格与n天前价格的差值
-
-当布林带上轨低于Keltner通道上轨,且布林带下轨高于Keltner通道下轨时,我们认为市场处于挤压状态。这通常意味着当前趋势性行情即将开始。
-
-为了确定入场时机,我们利用动量指标判断价格变化的速度。当动量向上突破其平均值时生成买入信号;当动量向下跌破其平均值时生成卖出信号。
-
-## 策略优势分析
-
-懒熊动量挤压策略的主要优势有:
-
-1. 可以自动识别趋势开始的时机,及早入场
-2. 结合多种指标进行判断,避免假信号
-3. 兼顾趋势和反转两种交易方式
-4. 可自定义参数,针对不同品种进行优化
-
-## 风险分析
-
-懒熊动量挤压策略也存在一定的风险:
-
-1. 布林带和Keltner通道发出假信号的概率较大
-2. 动量指标表现不稳定,可能错过最佳入场点
-3. 需要对参数进行优化,否则效果不佳
-4. 效果与交易品种相关性较大
-
-为了降低风险,建议优化布林带和Keltner通道的长度参数,调整止损点位,选择流动性较好的交易品种,同时结合其他指标进行验证。
-
-## 策略优化方向 
-
-为进一步增强懒熊动量挤压策略的效果,主要的优化方向有:
-
-1. 测试不同品种和周期的参数组合
-2. 优化布林带和Keltner通道的长度
-3. 优化动量指标的长度
-4. 针对多头和空头制定不同的止损止盈策略
-5. 增加其他指标进行信号验证
-
-通过多方位测试与优化,可以大幅提升该策略的胜率和盈利能力。
-
-## 总结
-
-懒熊动量挤压策略整合多种指标判断力强,可以有效识别趋势开始的时机。但也存在一定的风险,需要针对不同交易品种进行参数优化。通过不断测试与优化,该策略可以成为高效的算法交易系统。
-
-||
 
 ## Overview
 
@@ -122,7 +66,6 @@ Through rigorous testing and optimization, the strategy's edge and profitability
 
 The Lazy Bear Squeeze Momentum strategy has strong signal generation through a multi-indicator approach, and can effectively identify new trend starts. But it also carries risks that necessitate optimization across trading instruments. With continual testing and enhancement, it can become a robust algorithmic trading system.
 
-[/trans]
 
 > Strategy Arguments
 

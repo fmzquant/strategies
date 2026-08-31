@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14ccc1e1237dfda1458.png)
-[trans]
-
-### 一、策略概述
-
-本策略名称为“基于Ichimoku Kinko Hyo指标的多空双向突破策略”。该策略运用Ichimoku Kinko Hyo指标中的变转线、基准线、先行线以及Kumo云图,判断股票的多空方向和趋势,以实现突破买入和突破卖出。
-
-### 二、策略详细原理  
-
-1. 计算Ichimoku Kinko Hyo指标的组成要素,包括:
-    - Tenkan-Sen(转折线):计算最高价和最低价的中间值
-    - Kijun-Sen(基准线):计算最高价和最低价的中间值 
-    - Senkou Span A(先行线A):计算Tenkan-Sen和Kijun-Sen的中间值
-    - Senkou Span B(先行线B):计算最高价和最低价的中间值
-    - Chikou Span(延迟线)
-
-2. 判定买入信号:
-    - 当Tenkan-Sen上穿Kijun-Sen时;
-    - 且当日收盘价上穿Kumo云图时;
-    - 且延迟线上穿Kumo云图时,产生买入信号。
-
-3. 判定卖出信号:
-   - 当Tenkan-Sen下穿Kijun-Sen时;
-   - 且当日收盘价下穿Kumo云图时;
-   - 且延迟线下穿Kumo云图时,产生卖出信号。
-   
-### 三、策略优势分析
-
-1. 运用Ichimoku Kinko Hyo指标判断趋势,准确率较高。
-2. 延迟线的加入避免了假突破的发生。 
-3. 多空双向交易,可在市场上涨和下跌中都获得收益。
-4. 参数可调整,适应不同周期。
-
-### 四、策略风险分析 
-
-1. 市场震荡时,可能出现频繁交易亏损。
-2. 需要同时满足多个条件判定信号,可能错过最佳入场点。
-3. 高换手费率,长期交易成本较高。
-
-#### 风险解决方法
-1. 调整参数,避免震荡市频繁交易。
-2. 结合其他指标确认信号,降低错误率。 
-3. 适当延长持仓周期,降低换手费率。
-
-### 五、策略优化方向
-
-1. 结合移动平均线等指标确认交易信号。
-2. 加入止损逻辑,降低单笔亏损。
-3. 优化参数,使之对不同周期和品种适应性更强。
-
-### 六、策略总结
-
-本策略通过Ichimoku Kinko Hyo多指标组合判断股票趋势,并以价格和云图的突破为交易信号,实现了多空双向交易。相比单一指标,本策略判断准确度更高,避免了许多假突破。同时也存在一定程度上的滞后,无法抓住最佳买入时点的问题。总体而言,该策略准确判定趋势方向的能力较强,风险也在可控范围,值得进一步优化和验证。
-
-||
 
 ### I. Strategy Overview
 
@@ -115,7 +61,6 @@ The strategy is named "Ichimoku Kinko Hyo Indicator Based Breakout Strategy". It
 ### VI. Strategy Summary
 
 The strategy determines trend direction accurately using Ichimoku Kinko Hyo indicators and takes breakout signals as entry and exit points, allowing long and short trading. Compared with single indicator strategies, it has higher accuracy and avoids many false signals. There is also some lagging in capturing best entry price. In conclusion, the strategy is quite effective in determining trends and the risks are manageable. Further optimizations and walk-forward testing are recommended.  
-[/trans]
 
 > Strategy Arguments
 

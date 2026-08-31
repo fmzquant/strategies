@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b045e4b81279b20a43.png)
-[trans] 
-
-## 概述
-
-本策略首先利用2期和20期的指数移动平均线构建双均线指标,判断价格是否突破均线,作为进入场内的基本判断。同时,辅助判断指标“多空力量平衡指标”进一步识别多头和空头的相对力量,过滤误操作。两种指标综合判断形成最终交易信号。
-
-## 策略原理  
-
-1. 2/20均线指标
-    - 计算2期和20期的指数移动平均线(EMA)
-    - 当收盘价从均线一侧突破到另一侧时,发出交易信号
-    - 突破20均线为确定趋势的信号
-    - 突破2均线为确定具体入场点位的信号
-
-2. 多空力量平衡指标
-    - 分别计算多头力量值和空头力量值
-    - 比较两者大小得出多空力量相对强弱
-    - 强势方向作为进场的辅助判断
-
-3. 两个指标综合判断
-    - 双均线指标判断大趋势方向
-    - 多空力量平衡指标进行局部区域判断
-    - 两者判断结果一致时,发出交易信号
-
-## 优势分析
-
-这种组合策略最大的优势在于结合不同品种的指标,实现更可靠的交易判断。具体来说有以下几个方面的优势:
-
-1. 利用双均线判断大方向,避免被局部浮动骗局
-2. 借助多空力量平衡指标进行局部区域判断,精确掌握具体入场点位
-3. 两种指标互相验证,可以过滤掉一定的误操作情况,降低交易风险
-4. 参数设置灵活,可针对不同市场品种进行优化
-5. 策略思路简单清晰,容易理解,便于后期优化
-
-## 风险分析
-
-本策略也存在一些风险需要注意:
-
-1. 指标发出信号的滞后性可能导致止损点过深
-2. 双均线指标对参数设置比较敏感
-3. 多空平衡指标对短期行情判断准确性稍差  
-4. 在特殊行情下(常见突破假信号),两种指标可能出现判断偏差
-
-对策:
-
-1. 适当缩短持仓周期,或设置适当的移动止损
-2. 测试不同参数组合,找到最优参数
-3. 辅助参考其他指标进行确认
-4. 根据品种特点优化参数
-
-## 优化方向  
-
-本策略后续可从以下几个方面进行优化:
-
-1. 测试更多的均线指标参数组合
-2. 增加止损策略,控制单笔止损
-3. 结合波动率指标,提高参数自适应能力 
-4. 增加机器学习模型,实现动态参数优化
-5. 尝试不同的顺势指标替换多空平衡指标
-6. 开发可视化界面,便于用户测试不同参数
-
-## 总结
-
-本策略通过双均线指标判断大趋势,并用多空力量平衡指标辅助判断入场时机。两种指标互为验证,可以有效降低误操作概率。策略参数选择灵活,可针对不同品种进行优化调整。整体来说,策略较为简单实用,值得广大投资者学习和使用。后续通过进一步优化,可以使策略效果进一步提升。
-
-||
 
 ## Overview
 
@@ -140,7 +74,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy judges the major trend through dual moving average indicator and uses bull bear power balance indicator to assist in determining entry timing. The two indicators verify each other and can effectively reduce the probability of mis-operations. The strategy parameters are flexible and can be optimized for different varieties. Overall, the strategy is simple and practical, worth learning and using by most investors. Subsequent optimizations can further improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

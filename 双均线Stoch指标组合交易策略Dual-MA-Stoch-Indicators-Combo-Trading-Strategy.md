@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过组合运用均线指标和Stoch指标,设计一个具有趋势判断和超买超卖判定功能的量化交易系统。该策略综合多个指标的优势,进行系统化的趋势判断和机会捕捉。
-
-策略原理:
-
-1. 计算中长期均线(MA)和短期均线(EMA),作为确定趋势方向的技术指标。
-
-2. 计算Stoch K值和D值,判断是否进入超买或超卖状态。
-
-3. 当CLOSE从下向上突破MA,并且Stoch K值和D值都高于超买线时,判断为长线入场时点,做多。
-
-4. 当CLOSE从上向下突破EMA,并且Stoch K值和D值都低于超卖线时,判断为短线入场时点,做空。
-
-5. 以COLOR标记判断的交易方向。
-
-该策略优势:
-
-1. 双均线组合判断主趋势方向,可避免错误信号。
-
-2. Stoch指标识别超买超卖区域,提高获利概率。
-
-3. 组合使用多个指标,可以相互验证,增加信号可靠性。
-
-该策略风险:
-
-1. 参数优化不当,会出现交易频繁或信号不一致情况。
-
-2. 均线和Stoch均可能出现滞后情况,导致入场过早或过晚。
-
-3. 多指标组合虽提高可靠性,但也增加了策略复杂度。
-
-总之,该策略通过运用均线判断趋势,Stoch判断超买超卖,进行量化交易。在参数调整优化的前提下,可以提高交易系统稳定性和可靠性。但任何量化策略都需严格的风险管理,投资者仍需审慎判断使用。
-
-||
 
 This strategy combines moving averages and Stoch indicators into a quantitative trading system with both trend-following and overbought/oversold detection capabilities. It integrates the strengths of multiple indicators for systematic trend identification and opportunity capture.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy quantitatively trades using MAs for trend and Stoch for overbought/oversold levels. With robust parameter optimization, it can improve system stability and reliability. But prudent risk management is still required, and investors should apply discretion.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-本文将详细介绍一种利用KST指标进行趋势追踪的量化交易策略。该策略通过计算KST线和信号线的交叉关系来判断价格趋势并产生交易信号。
-
-一、策略原理
-
-该策略主要通过以下步骤形成交易信号:
-
-1. 分别计算多条不同周期ROC指标的数值;
-
-2. 对ROC指标分别进行移动平均,并计算和值得到KST线;
-
-3. 对KST线再次进行移动平均,得到信号线;
-
-4. 当KST线上穿信号线时产生做多信号;当下穿信号线时产生做空信号。
-
-5. 可选择适当的仓位大小。
-
-通过计算ROC指标的集合和值,KST线能够同时反映价格的短期和长期变动趋势。其与信号线的交叉关系可用于趋势判断。
-
-二、策略优势
-
-该策略最大的优势是指标计算全面,同时反映了不同时间维度上的趋势信息。
-
-另一个优势是指标使用简单直观, Signal line易于判断。
-
-最后,可调整仓位控制策略的整体风险敞口。
-
-三、潜在风险
-
-但该策略也存在以下问题:  
-
-首先,指标本身对价格变化存在一定滞后。
-
-其次,仅依靠KST一种指标容易被反转所迷惑。
-
-再者,参数优化工作量较大,需要谨防过拟合问题。
-
-四、内容总结 
-
-本文详细介绍了一种利用KST指标交叉进行趋势追踪的量化交易策略。该策略可以通过指标反映价格趋势变化,形成交易信号。但也需要注意防控滞后问题,并适当优化参数。总体来说,它提供了一种简单的趋势跟踪方法。
-
-||
 
 
 Trend Following Strategy Using KST Indicator
@@ -97,7 +54,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative trend following strategy using KST crossover signals. It reflects price trends through the indicator for trade signals, but requires managing indicator lag and proper parameter tuning. Overall it provides a simple trend tracking approach.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,82 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略是两个量化交易策略的组合,旨在产生更准确可靠的交易信号。第一个策略基于价格反转,第二个策略基于成交量分析。组合信号可有效提高盈利概率。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 反转策略
-
-使用STO指标判断反转信号。当两日收盘价上涨且STO慢线低于50时做多;当两日收盘价下跌且STO快线高于50时做空。
-
-2. 成交量策略 
-
-计算一定周期内的成交量价量关系,判断多空方向,并进行均线平滑处理。
-
-两部分策略同为多则做多,同为空则做空。
-
-组合信号可提高信号质量,其中任一策略出现假信号的概率将大大降低。
-
-## 策略优势 
-
-- 组合两个独立策略,提高信号准确率
-- 反转策略捕捉换手机会,成交量策略判断未来方向
-- 两种不同类型策略相互验证,减少误信号
-- 组合方式简单直接,易于实施
-- 可独立优化每部分策略的参数
-
-## 策略风险
-
-- 反转策略容易被套,需严格退出机制
-- 成交量分析可能出现滞后现象
-- 仅基于量化指标,需辅以技术分析
-- 较长的数据系列trained1来计算均线
-- 不同品种参数不一定通用,需单独优化
-
-可以通过以下措施来减少风险:
-
-- 优化STO参数,提高反转识别能力 
-- 结合其他指标确认成交量突破
-- 优化均线周期参数
-- 辅以图形技术形态判断
-- 根据品种分别测试参数
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试STO指标的最佳参数
-
-   调整K值、D值等参数找到最佳组合
-
-2. 对成交量突破进行二次验证
-
-   加入MACD、BOLL等指标的辅助判断
-   
-3. 优化均线周期参数
-
-   测试不同周期参数得到更稳定判断
-   
-4. 在组合信号基础上引入图形形态
-
-   例如离形态发生时再进场
-   
-5. 根据品种分别测试参数组合
-
-   不同品种参数不一定相同,需分别测试
-
-## 总结
-
-本策略通过组合反转和成交量两种不同类型的策略,相互验证,可以有效提升信号的质量和准确性。但也需要注意参数优化、辅助技术指标等来改进策略效果。我们可以通过不断测试回报结果,调整参数规则,并在实盘中验证,从而获得真正稳定可靠的组合策略。这需要投入大量时间和精力,但回报也将是可观的。
-
-|| 
 
 
 ## Overview
@@ -159,7 +83,6 @@ The strategy can be improved by:
 
 This strategy combines reversal and volume strategies for improved signal quality and accuracy. But parameter optimization, additional technical indicators etc. can further refine performance. We can continually adjust based on backtest results, validate in live trading, to obtain a truly robust combo strategy. This requires immense time and effort, but the rewards will be significant too.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f457fba4b015446775.png)
-[trans]
-
-### 概述
-
-该策略融合了SuperTrend和Fisher变换两个指标,实现了一种较为稳定的趋势跟随长线交易策略。当SuperTrend指标发出买入信号,同时Fisher变换指标小于-2.5且上升时,产生买入信号。策略以合理的止损和止盈方式进行持仓管理。
-
-### 策略原理
-
-1. SuperTrend指标用于判断价格趋势方向。当价格上穿上轨时,为看涨信号;当价格下穿下轨时,为看跌信号。本策略在SuperTrend为看涨时发出买入信号。
-
-2. Fisher变换指标反映价格波动对消费者心理的影响程度。Fisher值在(-2.5, 2.5)区间代表市场neutral,小于-2.5代表市场panic,大于2.5代表市场euphoria。本策略在Fisher小于-2.5且上升时发出买入信号,以捕捉panic到neutral的转折点。 
-
-3. 策略以合理止损止盈来管理仓位。止损点设置为入场价减去ATR值与ATR倍数的乘积,止盈点设置为入场价加上ATR值与ATR倍数的乘积。止损幅度大于止盈幅度,体现趋势跟随策略的风险控制思想。
-
-4. 同时考虑了风险金额管理。根据ATR和风险金额计算头寸规模,使每单位风险不超过设置的风险金额。
-
-### 优势分析
-
-1. 多指标结合,避免单一指标造成交易频繁。SuperTrend判断趋势方向,Fisher变换判断市场心理面,两者结合形成稳定的交易信号。
-
-2. 设置合理止损止盈,有利于把握趋势进行长线持有,同时控制风险。
-
-3. 采用风险金额管理和最小交易单位,使每笔交易风险可控,避免超过承受能力的大额损失。
-
-4. 交易信号稳定,适合长线持有。Fisher变换是平滑指标,有助于过滤市场噪音,避免假信号。
-
-5. 指标参数优化空间大。可以根据不同品种不同周期调整SuperTrend的ATR周期和乘数参数,以及Fisher变换的平滑参数,寻找最佳参数组合。
-
-### 风险分析
-
-1. 作为趋势跟随策略,在震荡盘整阶段将积累小额损失。应选择趋势明显的品种和周期运行策略。
-
-2. Fisher变换对极端情况效果不佳。当市场长期维持某一状态时,Fisher值会持续偏离中性区间,此时应暂停策略。
-
-3. 止损点过近可能造成过频退出。应合理设置ATR周期和ATR倍数参数,确保止损距离有一定缓冲区间。
-
-4. 忽略交易成本会导致小额获利交易亏损。应考虑品种的交易费用水平,适当调整止盈幅度。
-
-5. 需长时间参与市场才能体现策略优势。应确保有足够资金支持长线交易,且心态稳定。
-
-### 优化方向
-
-1. 调整ATR周期和ATR倍数参数,优化止损止盈幅度。可以通过回测数据优化参数,也可以动态优化。
-
-2. 尝试不同的Fisher变换参数,如平滑周期,寻找更稳定的交易信号。可以结合市场波动率动态调整参数。
-
-3. 结合其他指标作为过滤器,避免大盘不确定时的错误交易。可采用均线、波动率等判断大盘走势。 
-
-4. 测试不同止盈策略,如移动止盈、分批止盈、ATR尾随止盈等,提高盈利能力。
-
-5. 优化资金管理策略,如固定比例资金管理、凯利公式等,使盈亏比更高。
-
-6. 针对交易费用进行优化,确保小额持仓交易后保持盈利。
-
-### 总结
-
-该策略整合SuperTrend和Fisher变换等指标优势,形成稳定的趋势跟随长线交易策略。通过止损止盈管理和风险控制,能获得较好的风险回报率。策略有待进一步优化参数、过滤信号、资金管理等方面,以获得更强的实盘表现。但整体思路稳健,值得实盘验证和持续优化。如果管理停利和风险的心态,该策略有望获得稳定的长线收益。
-
-||
 
 
 ### Overview
@@ -127,7 +68,6 @@ This strategy combines the SuperTrend and Fisher Transform indicators to impleme
 
 This strategy integrates the advantages of SuperTrend, Fisher Transform and other indicators to form a stable trend following long term trading strategy. Through stop loss, take profit and risk management, it can achieve good risk reward ratio. The strategy needs further optimization on parameters, signal filtering, capital management etc. to improve practical performance. But the overall logic is robust and worth practical verification and continuous optimization. If managing take profit and risk mindset properly, the strategy has the potential to achieve steady long term returns.
 
-[/trans]
 
 > Strategy Arguments
 

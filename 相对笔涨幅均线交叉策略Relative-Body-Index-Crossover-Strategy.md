@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/de0f52fdd3a09066a7.png)
 
-[trans]
-
-
-## 概述
-
-这个策略主要利用日线的相对笔体比率(RB)的均线交叉信号来判断趋势,并配合止损和止盈进行自动交易。策略名称中的“相对笔涨幅”指的是计算日线相对笔体涨幅的均线。
-
-## 策略原理
-
-该策略基于Vitelot的RBI指标,该指标计算的是日K线的相对笔体比率(RB)的移动平均。RB的计算方式是:
-
-公式里,RB等于亚阳线的实体长度与整根K线长度之比,取正值;阴线的RB取负值。RB的取值范围在-1至1之间。
-
-RBI指标通过RB的移动平均来过滤噪音,捕捉市场的本质特征。当RBI指标上穿其信号线时产生买入信号;当RBI指标下穿信号线时产生卖出信号。 
-
-为过滤掉多头不确定阶段的虚假信号,该策略在RBI指标上穿信号线时,还会判断收盘价是否高于13周期的EMA均线,若高于才产生真正的买入信号执行多头策略。类似地,只有收盘价低于13周期EMA时,才会执行空头策略。
-
-该策略还设置了止损和止盈机制,以控制风险和锁定利润。开仓后会trail跟踪设置的止盈点数,同时设定固定点数的止损。
-
-## 优势分析
-
-- RBI指标过滤了大量噪音,能捕捉市场趋势特征,避免被震荡市场的假信号误导。
-
-- 结合均线过滤,能有效避免多头不确定时段的虚假信号,减少空头亏损。
-
-- 止损止盈设置有助于降低个别仓位的损失风险,同时锁定利润,整体提高盈利率。
-
-- 该策略参数较少,容易理解,适合用于自动交易。
-
-## 风险分析
-
-- 该策略仅基于RBI指标,如果指标本身产生错误信号,则整体策略也会失败。
-
-- 指标参数设置不当也可能导致交易信号质量下降。
-
-- 任何技术指标都可能在特定市况下失效,无法完全避免亏损。
-
-- 止损点设置过小可能导致止损过于频繁;止损点过大又可能扩大单笔损失。
-
-- 回撤控制不够可能导致账户爆仓风险。
-
-## 优化方向
-
-- 可以测试不同的参数组合,优化RBI指标的parameter。
-
-- 可以加入其它辅助指标进行过滤,提高信号质量。
-
-- 可以通过机器学习训练优化止损止盈的参数。
-
-- 可以加入资金管理策略,控制整体仓位和风险敞口。
-
-- 可以尝试不同持仓时间的策略,如隔夜持仓或短线交易。
-
-## 总结
-
-该策略整体来说是一个较为简单直接的趋势跟踪策略。它通过计算日线相对笔体比率的均线交叉来判断趋势方向,同时加入均线过滤和止损止盈来控制风险,可以有效避免震荡市的假信号。但任何技术指标策略都无法完全规避风险,仍需要注意参数优化、风险控制等方面的持续改进优化,才能获得长期稳定的 excess return。整体来说,该策略逻辑清晰、易于理解,适合自动交易,是一个非常实用的趋势跟踪策略。
-
-
-||
 
 ## Overview
 
@@ -125,7 +66,6 @@ The strategy also implements stop loss and take profit to control risks and lock
 
 Overall this is a relatively simple and straightforward trend following strategy. It uses RBI crossover to determine trend direction, with additional filters and stop loss/take profit to control risks, effectively avoiding false signals from ranging markets. But no technical indicators can completely avoid risks. Continuous improvements such as parameter optimization, risk management are still needed for long term stable excess returns. The logic is clear and easy to understand, suitable for automated trading. It is a very practical trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10c8e3b01361409d556.png)
 
-[trans]
-#### 概述
-该策略利用Ichimoku Kumo指标来判断市场趋势和交易信号。策略在Kumo云之下做多,在Kumo云之上做空。策略使用ATR指标作为止损,同时使用Kijun-sen线和Senkou Span线的突破作为入场信号的确认。该策略试图捕捉强势趋势中的交易机会,同时控制风险。
-
-#### 策略原理
-1. 使用Ichimoku指标中的Kijun-sen、Tenkan-sen和Senkou Span线来判断市场趋势。
-2. 当收盘价低于Senkou Span线且Kijun-sen线在Kumo云上方时,产生做多信号。
-3. 当收盘价高于Senkou Span线且Kijun-sen线在Kumo云下方时,产生做空信号。
-4. 使用ATR指标计算止损位置,止损位置为最近5根K线的最高/低点减/加3倍ATR。
-5. 当价格突破止损位置时,平仓离场。
-
-#### 策略优势
-1. 该策略基于Ichimoku指标,能够全面分析市场趋势。
-2. 策略同时考虑价格与Kijun-sen线和Senkou Span线的关系,提高入场信号的可靠性。
-3. 使用ATR作为止损,能够动态调整止损位置,更好地控制风险。
-4. 止损位置的设置考虑了市场波动性,能够适应不同的市场状况。
-
-#### 策略风险
-1. 该策略在震荡市中可能会产生较多的虚假信号,导致频繁交易和资金损失。
-2. 策略的表现依赖于Ichimoku指标参数的选择,不同参数可能产生不同的交易结果。
-3. 在剧烈行情中,价格可能会快速突破止损位置,导致较大的滑点和损失。
-
-#### 策略优化方向
-1. 引入其他技术指标或量价分析,以辅助判断趋势和入场时机,提高信号的准确性。
-2. 优化止损位置的设置,如考虑使用跟踪止损或移动止损,以更好地保护账户安全。
-3. 在策略中加入仓位管理,根据市场波动性和账户风险调整每笔交易的仓位大小。
-4. 对策略进行参数优化,找到最适合当前市场状况的参数组合。
-
-#### 总结
-该策略利用Ichimoku指标的多个组成部分,实现了对市场趋势的全面分析。同时,策略使用ATR止损来控制风险,增强了策略的稳健性。然而,该策略在震荡市中可能表现欠佳,并且依赖于参数选择。未来可以通过引入其他分析方法、优化止损和仓位管理等方式,进一步提升策略的表现。
-
-||
 
 #### Overview
 This strategy uses the Ichimoku Kumo indicator to determine market trends and trading signals. The strategy goes long when the price is below the Kumo cloud and goes short when the price is above the Kumo cloud. The strategy uses the ATR indicator for stop-loss and confirms entry signals with breakouts of the Kijun-sen and Senkou Span lines. The strategy aims to capture trading opportunities in strong trends while controlling risk.
@@ -73,7 +41,6 @@ This strategy uses the Ichimoku Kumo indicator to determine market trends and tr
 
 #### Summary
 This strategy utilizes multiple components of the Ichimoku indicator to comprehensively analyze market trends. At the same time, the strategy uses ATR stop-loss to control risk, enhancing the strategy's robustness. However, the strategy may underperform in ranging markets and relies on parameter selection. In the future, the strategy's performance can be further improved by introducing other analysis methods, optimizing stop-loss and position sizing, and other means.
-[/trans]
 
 
 

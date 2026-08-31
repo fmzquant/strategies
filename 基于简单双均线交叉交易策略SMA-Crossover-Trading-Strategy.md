@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d13e4c1066f90b826b.png)
-[trans]
-# 
-
-## 概述
-本策略基于简单移动平均线(SMA)的金叉死叉原理设计。策略使用两个SMA,即快速SMA和慢速SMA,当快速SMA从下方向上突破慢速SMA时,产生买入信号;当快速SMA从上方向下跌破慢速SMA时,产生卖出信号。
-
-## 策略原理
-该策略主要依赖两个SMA指标线。其中,快速SMA期间设置较短,能更快捕捉价格变动;慢速SMA期间设置较长,能过滤掉部分噪音。当快速SMA从下方向上交叉慢速SMA时,表示短期价格上涨速度较快,产生买入信号。当快速SMA从上方向下交叉慢速SMA时,表示短期价格下跌速度较快,产生卖出信号。
-
-通过设置不同的SMA周期参数,可以在一定程度上调整策略的参数,适应不同的市场环境。同时,该策略还允许设置回测的时间范围,方便在历史数据上测试策略 parameter。
-
-## 优势分析
-- 使用广为人知的SMA指标,原理简单易懂
-- 可自定义SMA周期参数,适应性强
-- 可设置回测时间范围,方便参数优化
-- 采用交叉方式产生信号,对突破信号有一定的过滤作用,可减少错误交易
-
-## 风险分析
-- SMA本身存在滞后性,可能错过短线机会
-- 无法判断趋势力度,产生信号的效果可能不稳定
-- SMA周期参数设置不当,会增加错误信号
-
-针对上述风险,可以采用以下措施:
-- 适当缩短SMA周期,提高敏感性
-- 结合其他指标判断趋势力度
-- 借助参数优化工具寻找最佳参数组合
-
-## 优化方向  
-- 增加止损策略,控制单笔损失
-- 增加仓位管理机制
-- 结合其他技术指标进行组合
-- 增加机器学习算法,实现动态参数优化
-
-## 总结
-本策略属于典型的趋势跟踪策略。运用简单的双均线交叉原理,在参数设置合适的前提下,可以获取较好的跟踪效果。但SMA本身存在一定的滞后性,无法判断趋势的力度。因此,实际应用中,需要引入其他辅助工具,形成指标组合,同时辅以自动化的参数优化和风险控制手段,才能使策略稳定盈利。
-
-||
 
 ## Overview
 This strategy is designed based on the golden cross and dead cross principles of Simple Moving Average (SMA). The strategy uses two SMAs, namely fast SMA and slow SMA. When the fast SMA crosses above the slow SMA from below, a buy signal is generated. When the fast SMA crosses below the slow SMA from above, a sell signal is generated.  
@@ -80,7 +43,6 @@ To address the above risks, the following measures can be taken:
 
 ## Summary  
 This is a typical trend following strategy. By applying the simple principle of double moving average crossover, it can obtain good tracking results when the parameters are set appropriately. However, SMA itself has a certain lagging effect and cannot determine the momentum of the trend. Therefore, in actual application, other auxiliary tools need to be introduced to form an indicator combination, and supplemented with automated parameter optimization and risk control means, in order to make the strategy steadily profitable.
-[/trans]
 
 > Strategy Arguments
 

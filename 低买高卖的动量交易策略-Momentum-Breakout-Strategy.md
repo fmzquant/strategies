@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bbb73a5550072804dc.png)
-[trans]
-### 概述
-
-本策略通过计算EMA均线、MACD指标以及单日涨幅,综合判断市场的突破信号,实现低买高卖的动量交易策略。
-
-### 策略原理
-
-当快速EMA线上穿慢速EMA线时,视为市场处于上升趋势,产生买入信号;当MACD指标的差离值上穿0轴时,也产生买入信号,实现策略的多头开仓。
-
-另外,如果单日收盘价相比开盘价上涨超过10%,也会产生买入信号,追捧市场中的突破行情。
-
-在开仓后,如果价格下跌幅度超过10%,则止损;如果盈利达到45%则止盈。
-
-### 优势分析
-
-这是一个典型的趋势跟踪策略,能够抓住市场中力度突破后的上涨行情,盈利潜力较大。具体优势如下:
-
-1. 使用EMA均线实现了趋势判断,避免在震荡市场中错误开仓
-2. MACD指标确保买入信号更加可靠 
-3. 单日涨幅条件可以抓住行情爆发点
-4. 止损止盈设置合理,可以很好控制风险
-
-### 风险分析
-
-尽管该策略设计合理,但仍有一定的风险需要应对:  
-
-1. 突破信号判断如果不当,可能产生空头损失
-2. 市场止跌反弹时,也会产生错误信号
-3. 止损点设置过大,亏损风险增加
-4. 突破后如果没有足够的后续行情支撑,可能止盈不足
-
-为降低上述风险,可以考虑优化移动止损策略,或结合其他指标如成交量进行信号过滤。
-
-### 优化方向  
-
-该策略还有进一步优化的空间:
-
-1. 增加成交量指标,确保有足够的交易量支撑趋势
-2. 对MACD指标参数进行优化,提高指标敏感度  
-3. 测试不同的EMA周期参数组合
-4. 增加自适应止损机制
-5. 优化止盈点,实现更高效率的现金管理
-
-通过参数调整、指标组合等方法进一步完善,可以大幅提升策略的稳定性和盈利能力。
-
-### 总结  
-
-本策略整体来说,具有简单实用、盈利潜力大的特点。通过对市场突破点的判断,能够有效抓住行情上涨趋势,回撤控制也比较合理。在后续的策略优化中,继续推动参数调整、止损止盈设计的改进,使其成为一个值得长期应用的量化交易策略。
-
-||
 
 ### Overview
 
@@ -109,7 +59,6 @@ Through parameter tuning, indicator combination and other methods, the stability
 
 In general, this strategy is simple, practical and with great profit potential. By judging market breakthrough points, it can effectively capture uptrends, and the drawdown control is also reasonable. In future optimization, continuingly improving parameter adjustment and stop loss/take profit design can make it a worthwhile long-term quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

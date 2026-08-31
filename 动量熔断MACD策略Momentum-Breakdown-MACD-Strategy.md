@@ -11,87 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fc85b9cbeb85280a4f.png)
 
-[trans]
-
-## 概述
-
-动量熔断MACD策略主要是利用MACD指标和动量指标的组合,形成交易信号,属于趋势跟踪策略。该策略首先计算快线EMA和慢线EMA,然后计算MACD值,再计算MACD的信号线。同时计算价格的动量值。当动量值和MACD差值形成零轴上方交叉时产生买入信号;当动量值和MACD差值形成零轴下方交叉时产生卖出信号,属于双重确认形成交易信号的策略。
-
-## 策略原理
-
-该策略主要基于MACD和动量指标的组合使用。
-
-MACD指标是一种趋势跟踪型指标,由快线EMA、慢线EMA和MACD柱状图组成。快线EMA参数通常为12日,慢线EMA参数为26日,计算公式为:
-
-快线EMA = EMA(收盘价,12) 
-
-慢线EMA = EMA(收盘价,26)
-
-MACD = 快线EMA - 慢线EMA
-
-信号线 = EMA(MACD,9)
-
-当快线上穿慢线时,说明短期上升势头强于长期,为入场信号;当快线下穿慢线时,说明长期下跌势头强于短期,为出场信号。
-
-动量指标是反映股票价格变动速度的技术指标,计算公式为:
-
-动量值 = 今日收盘价 - N日前收盘价
-
-其中N一般取10。当今日收盘价上涨超过N日前时,动量值为正,股票处于上涨趋势;当今日收盘价下跌低于N日前时,动量值为负,股票处于下跌趋势。
-
-该策略将MACD指标与动量指标组合使用,形成交易信号的判定标准是:当MACD差值和动量差值的差值上穿零轴时产生买入信号,形成零轴上方交叉;当MACD差值和动量差值的差值下穿零轴时产生卖出信号,形成零轴下方交叉。这属于一种双重确认的交易信号生成机制,可以过滤掉一些假信号,实现趋势跟踪。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. MACD指标与动量指标的组合,实现了趋势跟踪,避免了资产价格仅有震荡缺乏方向性的时候无效交易的发生。
-
-2. 基于双重确认机制生成交易信号,可以过滤掉一些噪音,避免假信号的干扰。
-
-3. MACD指标参数可调,可以根据不同品种和交易周期进行参数优化,适应性强。
-
-4. 采用了买入和卖出双向交易机制,可以实现趋势的双向捕捉。
-
-5. 策略理解简单,参数较少,适合初学者学习。
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. MACD和动量指标都属于趋势跟踪型指标,当市场出现剧烈波动或者没有明显趋势时,可能会产生较多无效交易。
-
-2. 双重指标组合虽然可以过滤假信号,但也可能错过交易机会,应适当调整参数以平衡风险。
-
-3. 大周期趋势出现反转时,MACD指标会有滞后,从而导致交易亏损。
-
-4. 交易频率可能较高,需要注意资金管理和手续费控制。
-
-5. 参数不当可能导致过于灵敏或者过于滞后,需要根据市场情况不断测试优化。
-
-## 策略优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化MACD指标的参数,根据不同交易品种和周期找到最优参数组合。
-
-2. 优化动量指标的天数参数,平衡灵敏度与过滤噪音。
-
-3. 增加止损機制,以控制单笔交易的最大亏损。
-
-4. 增加仓位管理模块,让交易规模能够跟随趋势的走势。
-
-5. 增加陡峭度指标等过滤器,避免曲折行情下的错误交易。
-
-6. 结合其它指标,如布林带、RSI等形成多重确认的交易信号。
-
-7. 添加优化循环,使参数能够不断迭代和优化。
-
-## 总结
-
-动量熔断MACD策略运用MACD指标和动量指标的 Strengths 实现了趋势跟踪交易。其双重确认机制能够有效滤掉市场噪音,避免无效交易的发生。该策略较为简单直接,易于理解使用,特别适合初学者学习。但也需要注意MACD指标的滞后性,以及在震荡盘整阶段的无效交易风险。通过不断优化指标参数和增加辅助技术指标可形成更强健的策略系统。
-
-||
 
 
 ## Overview 
@@ -172,7 +91,6 @@ The strategy can be optimized in the following aspects:
 
 The Momentum Breakdown MACD strategy implements trend-following trading using the strengths of the MACD and Momentum indicators. Its dual confirmation mechanism can effectively filter out market noise and avoid inefficient trading. This strategy is relatively simple and easy to understand, especially suitable for beginners. But the lagging of the MACD and the risk of inefficient trading during range-bound markets should be noted. The strategy can be made more robust by continuously optimizing parameters and incorporating auxiliary technical indicators.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19ecc20f3ab48f65caa.png)
-[trans]
-## 概述
-
-双范围过滤趋势跟踪策略(Dual Range Filter Trend Tracking Strategy)是一个利用双EMA范围过滤来识别趋势方向,并跟踪趋势的量化交易策略。该策略结合双均线过滤和ATR范围计算,可以有效识别中长线趋势的方向,并利用追踪止损来锁定利润。
-
-## 策略原理
-
-该策略的核心是双EMA范围过滤。它计算K线的ATR范围并平滑,然后结合两个EMA来定位K线在范围内的位置,判断目前是否处在趋势之中。当价格突破范围时,就表明趋势发生转变。
-
-具体来说,策略首先计算K线的ATR范围大小,然后结合两个EMA对其进行平滑。ATR范围代表了K线的正常波动区间。当价格超出这个区间时,就意味着趋势发生变化。策略会记录价格突破EMA范围的方向。当方向发生变化时,说明趋势转折,这时可以选择进入场内。  
-
-在进场后,策略利用浮动止损来锁定利润。在持仓期间,它会实时判断K线是否回落超出范围之外,如果发生回落就会退出当前头寸。这可以有效锁定趋势交易的利润。
-
-## 优势分析
-
-双范围过滤趋势跟踪策略结合了均线过滤和范围计算的优势,可以准确判断趋势的方向,避免在震荡行情中频繁进出场。具体优势如下:
-
-1. 利用ATR原理判断K线波动范围,避免在震荡市场无方向进入场内
-2. 双EMA过滤提高判断准确性,降低假信号
-3. 实时浮动止损,可以有效锁定趋势利润
-4. 策略逻辑简单清晰,容易理解和优化
-
-## 风险分析
-
-该策略也存在一些风险,主要集中在以下几个方面:  
-
-1. 大幅度跳空可以击穿ATR范围,导致提前入场
-2. 强势趋势行情中,止损可能过早被触发
-3. 参数设置不当也会影响策略表现
-
-对于这些风险,可以通过适当优化参数、防止假突破、判断趋势强度等方法来解决。
-
-## 优化建议
-
-双范围过滤趋势跟踪策略还具备进一步优化的潜力,主要的优化方向包括:
-
-1. 优化ATR参数,平滑K线波动范围
-2. 结合交易量指标避免假突破
-3. 判断趋势强度,区分单次突破和可持续趋势
-4. 优化止损点位,在保证利润的前提下追踪长趋势
-
-通过这些优化,可以使策略在更多市场环境下获得稳定收益。
-
-## 总结
-
-双范围过滤趋势跟踪策略整合了均线过滤和ATR范围判断的多种优点,可以有效识别中长线可持续趋势的方向和入场时机。它只在趋势发生变化时进入场内,并利用浮动止损来锁定利润。该策略逻辑简洁清晰,非常适合中长线趋势交易。通过持续优化参数和判断规则,该策略可以在多种市场中获得较好收益。
-
-||
 
 ## Overview
 
@@ -105,7 +57,6 @@ Through these optimizations, the strategy can achieve steady profits in more mar
 
 The Dual Range Filter Trend Tracking Strategy integrates the various advantages of moving average filtering and ATR range judgment, and can effectively identify the direction and entry timing of sustainable mid-to-long term trends. It only enters the market when trends change, and uses a floating stop loss to lock in profits. This strategy has simple and clear logic and is very suitable for mid-to-long term trend trading. Through continuous optimization of parameters and judgment rules, this strategy can achieve good returns across various markets.
 
-[/trans]
 
 > Strategy Arguments
 

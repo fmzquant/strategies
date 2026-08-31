@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/112a19897a9066b8849.png)
 
-[trans]
-
-## 概述
-该策略基于月末时点,判断股票价格是否突破200日移动平均线,以捕捉股票价格的趋势性方向。当价格突破200日均线时建立多头头寸,否则清仓观望。
-
-## 策略原理
-1. 使用200日简单移动平均线dma200作为判断价格趋势的指标
-2. 在每月最后一个交易日,判断当日收盘价close是否高于dma200
-3. 如果收盘价突破200日均线,则在下一交易日开盘建立全仓多头头寸
-4. 如果收盘价跌破200日均线,则在下一交易日开盘清仓
-5. 这样可以达到趋势跟踪的效果,在股票价格进入上升趋势时建仓,避开下跌趋势
-
-## 优势分析
-1. 策略优势在于简单有效,容易理解和实现
-2. 利用月末时点建仓,可以减少交易频率,降低交易成本和滑点影响
-3. 200日均线是非常常用的中长期趋势判断指标,对大部分股票有效
-4. 策略回撤和最大跌幅都较小,风险可控
-
-## 风险分析
-1. 200日均线对于一些股票可能不够灵敏,无法及时捕捉到价格转折
-2. 月末只有1个交易点建仓,可能错过中间涨跌机会
-3. 大盘整体趋势不确定时,该策略可能无法正确判断
-4. 应该组合其他指标判断来降低这些风险
-
-## 优化方向  
-1. 可以考虑在月初或月中增加建仓点,提高策略频率
-2. 增加如布林带等指标来判断价格震荡,避免错交易
-3.评估不同均线参数对不同股票的拟合效果,寻找最佳参数组合
-4. 可以建立动态仓位管理机制,当回撤过大时主动止损
-
-## 总结
-该策略整体较为简单实用,通过月末突破200日均线的方式,有效捕捉股票中长期价格趋势,回撤和风险较小。通过结合更多指标判断和动态优化,可以进一步增强策略稳定性和收益率。
-
-||
 
 
 ## Overview
@@ -78,7 +44,6 @@ This strategy is based on the price breakout of the 200-day moving average at mo
 ## Summary
 The strategy is relatively simple and practical overall, effectively capturing medium and long term price trends of stocks through month end breakout of the 200-day MA, with relatively small drawdown and risks. By combining more indicators and dynamic optimizations, the stability and profitability of the strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

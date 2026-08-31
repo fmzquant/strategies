@@ -9,59 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-RSI-VWAP量价策略是一种趋势跟随策略。它结合了相对强弱指数(RSI)和成交量加权平均价(VWAP)两个指标,实现在趋势中的多次加仓与止损。该策略适用于中长线趋势交易。
-
-## 原理
-
-当RSI指标线从超买区回落进入超卖区时,认为趋势反转,做多;当RSI指标线从超卖区上涨进入超买区时,认为趋势反转,做空。 
-
-多仓的止损线为最新开仓价的(1-止损比例),止盈线为持仓均价的(1+止盈比例);空仓类似。
-
-每次开仓后,如果再次触发信号,可以进行加仓,加仓次数最多为5次,每次加仓量递增,实现趋势追踪。
-
-## 优势
-
-1. 结合RSI指标和VWAP指标,可以更好地判断趋势反转点。
-
-2. 采用多次加仓,可以充分利用趋势行情。随着加仓次数的增加,持仓量逐步扩大,实现趋势跟踪。
-
-3. 设置止损线,可以有效控制风险。持仓出现亏损后止损出场,避免亏损进一步扩大。
-
-4. 设置追踪止盈,锁定盈利,避免盈利回吐。
-
-## 风险
-
-1. RSI指标存在repaint现象,实际信号触发点可能发生偏差。
-
-2. VWAP也可能出现repaint。实际的最优入场点只能事后确定。
-
-3. 止损点设置不当可能造成不必要的损失。
-
-4. 止盈点设置不当,可能使盈利无法实现。
-
-5. 趋势判断错误,持续做多(空)可能扩大亏损。
-
-## 优化
-
-1. 优化RSI参数,寻找最佳长度周期。
-
-2. 优化超买超卖区域,使其更准确判断趋势反转。
-
-3. 测试不同的加仓策略,找到最佳加仓方式。
-
-4. 对止损止盈进行优化,找到最优参数。
-
-5. 尝试结合其它指标判断趋势,提高确定趋势反转的概率。
-
-## 总结
-
-RSI-VWAP量价策略,运用RSI指标结合VWAP指标判断趋势反转点,设置多次加仓跟踪趋势行情,在盈利达到预设标准时止盈,出现亏损时止损,综合考虑风险控制和盈利保护。通过参数优化,可以获得更好的策略效果。该策略适合有一定经验的交易者进行中长线趋势交易。
-
-||
 
 ## Overview
 
@@ -113,7 +60,6 @@ After each new entry, the strategy allows up to 5 additional pyramiding entries 
 
 The RSI-VWAP strategy identifies trend reversal points using RSI and VWAP, pyramids to follow the trend, takes profit when predefined targets are met, and stops out with a loss. It balances risk management and profit protection. Further optimizations can improve strategy performance. This strategy suits experienced traders for medium-to-long term trend trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/182fa68f5f298504660.png)
-[trans]
-## 概述
-本策略是将递归移动趋势均线和123形态反转这两种策略组合在一起,形成一个综合信号,以提高策略的稳定性和盈利能力。
-
-## 原理
-### 123形态反转
-该部分借鉴了Ulf Jensen的《我如何在期货市场上获得三倍收益》一书中的内容。其买入信号为:近两天收盘价格上涨且9日周期的STO SLOWK值低于50时做多;卖出信号为:近两天收盘价格下跌且9日周期的STO FASTK值高于50时做空。
-
-### 递归移动趋势均线
-该部分采用了一种叫做“递归多项式拟合”的技术。其思想是利用过去几天的价格以及当天的价格来预测第二天的价格。当预测价格高于昨日实际价格时看空,反之看多。
-
-## 优势
-这种组合策略可以发挥两种策略的优势,避免单一策略的局限性。123形态反转可以在价格反转的时候捕捉较大的行情。而递归移动趋势均线则可以更准确地判断价格的走势方向。两者结合可以形成较强的综合信号。
-
-## 风险及解决方法
-- 123形态反转存在因价格短期震荡而发出错误信号的可能。可以适当调整参数以过滤噪音。
-- 递归移动趋势均线对突发事件的响应可能较慢。可以考虑结合其他指标判断局部趋势。 
-- 两种策略信号可能不一致。这时可考虑只在双信号发出时才开仓,或根据市场状况选择仅跟随一种信号。
-
-## 优化方向
-- 可以测试不同周期参数的组合,寻找最佳参数对
-- 可以引入自动止损机制
-- 可以根据不同品种、市场环境调整参数
-- 可以考虑与其他策略或指标组合,形成更强大的综合系统
-
-## 总结
-本策略综合运用两种不同类型的策略,通过产生综合信号提高稳定性。同时结合两者的优势,可以在价格反转点进行捕捉,并判断价格未来走势。如果继续优化,有望产生更出色的表现。
-
-||
 
 ## Overview
 This strategy combines the Recursive Moving Trend Average and the 123 Reversal Pattern into a composite signal to improve the stability and profitability.  
@@ -67,7 +38,6 @@ The combined strategy exploits the strengths of both strategies to avoid the lim
 ## Conclusion
 This strategy combines two different types of strategies and generates composite signals to improve stability. It exploits both their advantages to catch price reversal points and judge future price trends. Further optimizations may lead to even better performance.
 
-[/trans]
 
 > Strategy Arguments
 

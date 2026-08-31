@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/185cdad5f8ccc679490.png)
-[trans]
-## 概述
-
-趋势追踪止损策略是一个基于趋势指标TrendAlert的追踪止损交易策略。它通过TrendAlert指标判断趋势方向,实现趋势跟踪入场。同时它利用ATR指标设定止损位,实现风险控制。
-
-## 策略原理
-
-该策略主要由以下几个部分组成:
-
-1. TrendAlert指标判断趋势方向。当TrendAlert大于0时为看涨信号,小于0时为看跌信号。
-
-2. ATR指标计算近期价格波动范围。ATR乘以ATR止损倍数atrStopMultiplier作为固定止损位。
-
-3. 最低价lowestLow和最高价highestHigh结合ATR止损构建追踪止损。使用structure参数控制是否启用。
-
-4. 根据趋势信号方向进入做多或做空头寸。入场后设置Take Profit和Stop Loss。
-
-5. 当价格触发止损或止盈后平仓头寸。
-
-该策略通过趋势判断过滤假信号,追踪止损控制风险,目标获利确保盈利,全面提高交易系统稳定性。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 趋势过滤和追踪止损双重保证,避免追逐市场噪音,确保交易风险可控。
-
-2. ATR自适应止损设定防止过度优化,适用于多种市场环境。
-
-3. 目标止盈确保盈利,避免吃掉利润。
-
-4. 策略逻辑清晰简洁,容易理解修改,适合量化交易者二次开发。
-
-5. Pine脚本语言编写,可直接在TradingView平台使用,不需编程基础。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 趋势判断失误可能导致不必要入场和止损被触发。可适当宽松止损位或过滤入场信号。
-
-2. 行情剧烈波动时,ATR可能低估真实波幅。这时可增大ATR止损倍数atrStopMultiplier。
-
-3. 目標止盈可能限制策略获利空间。可根據市场调整limitMultiplier参数。
-
-4. 代码exist逻辑仅基于价格,实际应结合时间管理。
-
-## 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 优化参数ATR长度atrLength和止损倍数atrStopMultiplier,调整止损算法的敏感度。
-
-2. 尝试不同的趋势判断指标,寻找更好的入场时机。
-
-3. 根据具体交易品种特点选择或调整目标止盈参数。
-
-4. 增加时间止损机制,避免单子过夜带来的风险。
-
-5. 结合交易量指标过滤假突破提高策略稳定性。
-
-## 总结
-
-本策略总体来说是一个非常实用的趋势跟踪止损策略。它利用指标判断趋势方向实现趋势跟踪,同时设定自适应止损确保风险控制。该策略逻辑清晰,使用简单,非常适合初学者学习。同时也为高级策略开发提供了一个良好的交易策略框架,值得量化交易者深入研究和优化。
-
-||
 
 ## Overview
 
@@ -141,7 +75,6 @@ The strategy can be optimized in the following aspects:
 
 In general, this is a very practical trend tracking stop loss strategy. It uses indicators to determine the trend direction to achieve trend tracking, while setting adaptive stops to ensure risk control. The strategy logic is clear and easy to use, making it ideal for beginners to learn. At the same time, it also provides a good trading strategy framework for advanced strategy development, which is worth quantitative traders' in-depth research and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

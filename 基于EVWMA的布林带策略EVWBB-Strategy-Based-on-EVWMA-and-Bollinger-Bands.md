@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ff98febb0cd88e993f.png)
 
-[trans]
-
-## 概述
-
-该策略利用EVWMA作为布林带的基础线,当价格突破布林带上轨时做多,突破下轨时做空,以捕捉价格的趋势性移动。
-
-## 策略原理
-
-该策略首先计算最近30个周期的总成交量vol_period。然后计算EVWMA,公式为:(前一日EVWMA x (vol_period - 今日成交量) + 今日成交量 x 收盘价) / vol_period。
-
-布林带的中轨basis为EVWMA,上下轨分别为basis ± 2倍的stdev(收盘价的标准差)。当价格上穿上轨时做多,下穿下轨时做空。止损点为basis。
-
-## 优势分析
-
-1. EVWMA能更好地反映价格变化趋势,与均线相比更平滑。
-
-2. 布林带能清晰识别出价格波动的上下限,利于捕捉价格突破。 
-
-3. 结合趋势指标EVWMA和波动指标布林带,能更精确判断入场时机。
-
-4. 止损点为basis,有利于控制风险。
-
-## 风险分析
-
-1. 在剧烈行情中,EVWMA无法及时反映价格变化,可能错过入场机会。
-
-2. 布林带在横盘中容易被反复震荡触发入场。
-
-3. 未考虑持仓时间和位置规模的管理,存在获利不理想和亏损扩大的风险。
-
-4. 没有设置止盈点,存在超出合理目标而继续持有的风险。
-
-## 优化方向
-
-1. 可以测试不同参数,找到更合适的期间长度。
-
-2. 可以考虑结合其他指标如MACD等过滤入场信号。
-
-3. 可以设置持仓时间管理,如设置固定持仓周期。
-
-4. 可以设置止盈点,预先确定合理的盈利目标。
-
-5. 可以根据市场情况调整仓位规模。
-
-## 总结
-
-该策略整合了EVWMA和布林带两个指标的优势,通过捕捉价格突破上下轨的方式实现趋势跟踪。优点是指标组合合理,入场精准,能够有效控制风险。但也存在参数设置不当,持仓管理不完善等问题。通过优化参数,设置止盈止损,以及加强持仓管理,能够进一步提高策略的稳定性和盈利能力。总体来说,该策略思路合理,有一定的实用价值和开发潜力。
-
-||
 
 
 ## Overview
@@ -108,7 +59,6 @@ The basis for the Bollinger Bands is set as EVWMA, and the upper and lower bands
 
 This strategy combines the strengths of EVWMA and Bollinger Bands to track trends by capturing breakouts. Its advantages are reasonable indicator combination, precise entries, and effective risk control. However, improper parameter tuning and lack of trade management remain issues. Further improvements in parameter optimization, profit targeting, stop losses, and position sizing can enhance its stability and profitability. Overall, the strategy logic is sound and shows practical value and development potential.
 
-[/trans]
 
 > Strategy Arguments
 

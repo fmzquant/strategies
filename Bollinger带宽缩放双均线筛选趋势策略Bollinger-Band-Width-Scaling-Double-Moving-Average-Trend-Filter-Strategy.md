@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/181af817922384577aa.png)
 
-[trans]
-
-
-该策略基于布林带和双均线进行交易信号生成,同时结合趋势过滤,目标是追求高胜率和良好的盈亏比。
-
-### 策略原理
-
-1. 使用布林带的上轨、中轨、下轨进行多空信号判定。当价格触碰上轨时看空,触碰下轨时看多。
-
-2. 使用长度为20的中短期均线和长度为60的长期均线进行趋势判断。当短期均线上穿长期均线时为看涨,下穿时为看跌。
-
-3. 根据布林带的宽度动态调整止损位置。当布林带宽度大于0.5%时,止损位置为下轨;当宽度小于0.5%时,止损位置缩小为下轨的一半区间。
-
-4. 入场条件:看涨时价格突破下轨作为做多信号,看跌时价格突破上轨作为做空信号。
-
-5. 出场条件:做多时触碰布林带上轨或短期均线时止盈;做空时触碰布林带下轨或短期均线时止盈。
-
-6. 止损条件:做多时价格跌破布林带下轨动态区间止损;做空时价格涨破布林带上轨动态区间止损。
-
-### 策略优势
-
-1. 使用双均线进行趋势判断,能够有效过滤趋势不明或盘整市场的噪音。
-
-2. 布林带中轨作为支持阻力,上轨下轨作为动态止损位,可以控制风险。
-
-3. 根据布林带宽度调整止损幅度,降低止损被激活的概率,确保止损位置合理。
-
-4. 追踪趋势方向交易,胜率较高。
-
-### 策略风险
-
-1. 双均线生成假突破的概率较大,可能错过趋势转折点。可以适当缩短均线周期。
-
-2. 布林带在震荡趋势中容易被套住。可以通过降低交易频次来规避。
-
-3. 止损位置靠近支持阻力时容易被击穿。可以适当放宽止损范围。
-
-4. 无法有效捕捉短线回调的机会。可以适当缩短持仓时间。
-
-### 策略优化方向 
-
-1. 优化均线周期参数,找到策略适合的市场环境。
-
-2. 优化布林带的倍数参数,平衡止损被击穿的概率。
-
-3. 添加其他指标进行多Factor验证,提高信号质量。
-
-4. 结合交易量能量来判断趋势,避免出现背离。
-
-5. 资金管理优化,例如固定份额、固定止损等,控制单笔损失。
-
-6. 价格 shock 处理,例如大幅跳空缺口的情况。
-
-### 总结
-
-本策略整体较为稳健,以双均线判断趋势方向,布林带提供支撑阻力位并设置动态止损。但也存在一定的局限性,如误判趋势、止损过近等问题。后续可以从均线系统、止损策略、资金管理等多个方面进行优化,使策略参数更具鲁棒性,在各种市场环境中都能保持稳定的表现。总体来说,本策略以其较高的胜率、良好的盈亏比而脱颖而出,是一种非常适合新手使用的简单有效的策略思路。
-
-||
 
 This strategy generates trading signals based on Bollinger Bands and double moving averages, with trend filtering to target high win rate and good profit-loss ratio.
 
@@ -124,7 +66,6 @@ This strategy generates trading signals based on Bollinger Bands and double movi
 
 This is an overall robust strategy using double MAs for trend direction and BBs for support/resistance and dynamic stops. Limitations exist like false trend signals and stops too close. Further optimizations can be made across MA system, stop loss strategy, money management etc. to increase robustness across various market conditions. Overall an excellent strategy for beginners with its high win rate, good risk-reward profile and simple yet effective logic.
 
-[/trans]
 
 > Strategy Arguments
 

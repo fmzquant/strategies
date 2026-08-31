@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f1144a1d86d9d0beb5.png)
 
-[trans]
-
-## 概述
-
-本策略基于布林带指标,结合动量指标,实现布林带回归和动量突破的组合交易策略。当价格从布林带下方突破中线时做多,当价格从布林带上方突破中线时做空,并追踪止损止盈情况,在达到目标盈亏比后平仓。
-
-## 策略原理  
-
-本策略使用布林带中线sma作为均线指标,带宽通过参数mult*stdev动态调整。当价格从下方突破中线时,说明价格获取上行动量,这时做多;当价格从上方突破中线时,说明价格获取下行动量,这时做空。做多做空后设置止盈止损参数,用于追踪利润和控制风险。
-
-具体来说,布林带的计算通过length和mult两个参数完成,长度length决定中线的周期,mult决定带宽的大小。enterLong和enterShort判断突破的时机,exitLong和exitShort根据入场价格和目标止盈止损比例计算止损止盈价格。
-
-## 策略优势
-
-本策略结合了均线回归和动量指标,能够在趋势开始阶段顺势捕捉较大行情。与简单跟踪均线相比,增加了基于布林带宽度的动量判断,可以过滤掉部分假突破。止盈止损设置直接基于入场价格计算,无需人工干预。
-
-## 策略风险
-
-- 布林带拟合价格时存在滞后,可能错过部分行情
-- 止损设置过于宽松会增加亏损风险
-- 多头行情中做空的信号可能获取不佳
-
-可以通过调整布林中线周期、带宽参数以及止损范围来优化,使得策略更加适应不同市场情况。
-
-## 策略优化
-
-- 加入交易量或波动率指标,避免低量的假突破
-- param分批优化布林周期长度、宽度系数、止损幅度
-- 在特定市场阶段只做多或只做空
-- 加入机器学习模型判定趋势方向
-
-## 总结  
-
-本策略整合布林带回归和动量指标的优点,可以在趋势开始的时候顺势捕捉部分行情,通过参数调整可以适应不同阶段市场,是一种较为通用的突破系统。止盈止损设置直接从价格计算可以减少人工干预。本策略也存在一些改进空间,例如加入更多辅助判决指标等,这些将在后续的研究和优化中进一步完善。
-||
 
 
 ## Overview  
@@ -81,7 +46,6 @@ Parameters like periods, band width and stop loss range can be optimized to make
 
 This strategy combines the strengths of Bollinger Bands reversion and momentum, which enables it to capture some trends early on. Through parameter tuning it can adapt to different market stages. The direct stop loss/take profit calculation reduces manual intervention. There is still room for improvement, e.g. incorporating more auxiliary indicators. These will be incrementally enhanced in further research and optimization.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f35095851e66e1fd7b.png)
 
-[trans]
-#### 概述
-该策略是一个结合了中枢点参考(CPR)、指数移动平均线(EMA)、相对强弱指标(RSI)和突破逻辑的综合交易系统。策略采用ATR动态追踪止损机制,通过多重技术指标的协同配合来识别市场趋势和交易机会,并实现风险的动态管理。该策略适用于日内和中短期交易,具有较强的适应性和风险控制能力。
-
-#### 策略原理
-策略主要基于以下几个核心组件:
-1. CPR指标用于确定关键支撑阻力位,计算日度周期的枢轴点、上轨和下轨。
-2. 双EMA系统(9日和21日)用于判断趋势方向,通过金叉死叉产生交易信号。
-3. RSI指标(14日)用于确认市场超买超卖状态,并作为交易过滤器。
-4. 突破逻辑结合价格对枢轴点的突破来确认交易信号。
-5. ATR指标用于设置动态追踪止损,根据市场波动性自适应调整止损距离。
-
-#### 策略优势
-1. 多重技术指标的综合运用提高了信号的可靠性。
-2. 动态追踪止损机制能够有效锁定利润并控制风险。
-3. CPR指标提供了重要的价格参考位,有助于准确定位市场结构。
-4. 策略具有良好的适应性,可以根据不同市场条件调整参数。
-5. RSI过滤器和突破确认增强了交易信号的质量。
-
-#### 策略风险
-1. 多重指标可能在震荡市场产生滞后和假信号。
-2. 追踪止损可能在高波动期间被过早触发。
-3. 参数优化需要考虑市场特征,不当的参数设置可能影响策略表现。
-4. 信号冲突时可能影响决策的准确性。
-
-#### 策略优化方向
-1. 引入成交量指标来确认价格突破的有效性。
-2. 增加趋势强度过滤器,提高趋势跟踪的准确性。
-3. 优化止损参数的动态调整机制,提高防护效果。
-4. 添加市场波动率自适应机制,动态调整交易参数。
-5. 考虑加入情绪指标,提升市场时机判断。
-
-#### 总结
-该策略通过多重技术指标的协同作用,构建了一个较为完整的交易系统。动态止损机制和多维度的信号确认提供了较好的风险收益特征。策略的优化空间主要在于信号质量的提升和风险管理的完善。通过持续优化和调整,该策略有望在不同市场环境下保持稳定的表现。
-
-|| 
 
 #### Overview
 This strategy is a comprehensive trading system that combines Central Pivot Range (CPR), Exponential Moving Average (EMA), Relative Strength Index (RSI), and breakout logic. The strategy employs an ATR-based dynamic trailing stop-loss mechanism, utilizing multiple technical indicators to identify market trends and trading opportunities while implementing dynamic risk management. It is suitable for intraday and medium-term trading, offering strong adaptability and risk control capabilities.
@@ -81,7 +45,6 @@ The strategy is based on several core components:
 
 #### Summary
 The strategy constructs a comprehensive trading system through the synergistic effect of multiple technical indicators. The dynamic stop-loss mechanism and multi-dimensional signal confirmation provide favorable risk-reward characteristics. Strategy optimization potential mainly lies in improving signal quality and refining risk management. Through continuous optimization and adjustment, the strategy shows promise in maintaining stable performance across various market conditions.
-[/trans]
 
 
 

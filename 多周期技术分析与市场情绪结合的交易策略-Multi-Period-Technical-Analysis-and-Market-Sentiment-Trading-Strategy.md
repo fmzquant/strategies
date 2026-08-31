@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f389ec9e7a066d4b42.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多个技术指标和市场情绪的综合交易系统。策略核心采用了短期和长期移动平均线(SMA)的交叉信号，同时结合MACD指标来确认趋势方向。此外，策略还整合了市场情绪指标RSI，以及图表形态识别系统，包括双顶/双底和头肩顶形态的识别。策略特别设计了在特定交易时段执行，以提高交易效率和成功率。
-
-#### 策略原理
-策略运作基于以下几个核心组件：
-1. 多周期移动平均线系统：使用10周期和30周期的SMA进行趋势判断
-2. MACD指标：采用标准参数(12,26,9)设置，用于趋势确认
-3. 市场情绪监测：使用RSI指标进行超买超卖判断
-4. 图表形态识别：包含双顶/双底和头肩顶形态的自动识别系统
-5. 时间过滤：专注于特定交易时段的交易机会
-6. 阻力位识别：使用20周期回溯来确定主要阻力位
-
-买入条件需满足：处于目标交易时段，短期SMA上穿长期SMA，且MACD指标显示多头信号。
-卖出条件需满足：价格达到主要阻力位，且MACD指标显示空头信号。
-
-#### 策略优势
-1. 多维度信号确认：结合技术指标和图表形态，提高交易信号的可靠性
-2. 风险管理完善：包含基于RSI的提前退出机制
-3. 市场情绪整合：通过RSI指标进行市场情绪判断，避免过度追涨杀跌
-4. 自动化形态识别：减少主观判断带来的偏差
-5. 时间过滤：专注于市场活跃度较高的时段，提高交易效率
-
-#### 策略风险
-1. 参数敏感性：多个技术指标的参数设置可能影响策略表现
-2. 滞后性风险：移动平均线和MACD都具有一定滞后性
-3. 形态识别准确性：自动化识别系统可能出现误判
-4. 市场环境依赖：在震荡市场中可能产生频繁假信号
-5. 时间局限性：仅在特定时段交易可能错过其他时段的机会
-
-#### 策略优化方向
-1. 参数自适应：引入自适应参数调整机制，根据市场波动度自动调整指标参数
-2. 信号权重系统：建立各个指标信号的权重体系，提高决策准确性
-3. 止损优化：增加动态止损机制，提高风险控制能力
-4. 形态识别增强：引入机器学习算法提高图表形态识别的准确率
-5. 回测周期扩展：在不同市场周期进行回测，验证策略稳定性
-
-#### 总结
-这是一个综合性较强的交易策略，通过多个技术指标和市场情绪的结合，建立了一个相对完整的交易系统。策略的优势在于多维度的信号确认和完善的风险管理机制，但同时也存在参数敏感性和形态识别准确性等问题。通过持续优化和改进，特别是在参数自适应和机器学习应用方面，策略有望获得更好的表现。
-
-|| 
 
 #### Overview
 This strategy is a comprehensive trading system that combines multiple technical indicators and market sentiment. The core strategy utilizes the crossover signals of short-term and long-term Simple Moving Averages (SMA), combined with MACD indicator for trend confirmation. Additionally, the strategy integrates market sentiment indicators (RSI) and chart pattern recognition systems, including double top/bottom and head and shoulders patterns. The strategy is specifically designed to execute during certain trading sessions to improve efficiency and success rate.
@@ -91,7 +50,6 @@ Sell conditions require: Price reaching major resistance levels and MACD showing
 
 #### Summary
 This is a comprehensive trading strategy that establishes a relatively complete trading system through the combination of multiple technical indicators and market sentiment. The strategy's strengths lie in its multi-dimensional signal confirmation and comprehensive risk management mechanisms, though it faces challenges in parameter sensitivity and pattern recognition accuracy. Through continuous optimization and improvement, particularly in parameter adaptation and machine learning applications, the strategy has the potential for enhanced performance.
-[/trans]
 
 
 

@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9930ed2835efb90441.png)
 
-[trans]
-
-## 概述
-
-本策略将交易视图内置的两个强大指标——动向指标(DMI)和去趋势价格震荡器(DPO)组合使用,形成一个可靠的交易决策依据。策略的核心逻辑是在DMI指标出现黄金交叉时,判断DPO指标的值是否大于0,如果大于0则产生多头信号;如果DMI指标出现死叉时,判断DPO指标的值是否小于0,如果小于0则产生空头信号。这可以有效过滤掉区间震荡市场中产生的大量假信号,从而仅在趋势形成时产生交易信号,避免在震荡中反复止损。
-
-## 策略原理
-
-该策略主要利用DMI指标判断趋势方向和强度。DMI指标由三条曲线组成:+DI、-DI和ADX。+DI代表多头力量,-DI代表空头力量,它们的交叉可以判断目前的趋势方向;ADX代表趋势的强度,值越高表示趋势越明显。但是ADX对低位震荡的识别效果不好,此策略移除了ADX的判定,仅利用+DI和-DI的交叉来判断趋势方向。
-
-为了过滤掉区间震荡中产生的假信号,策略引入DPO指标进行辅助判定。DPO指标代表价格与其中轨的偏离程度,当价格处于中轨上方时DPO为正,下方时为负。该策略利用DPO指标的正负来判断目前是否处于趋势中,如果DMI指标出现交叉但DPO指标接近0水平,则判断为震荡,不产生交易信号。
-
-具体来说,判断逻辑为:
-
-1. 当+DI上穿-DI时,属于黄金交叉,判断为多头市场。此时如果DPO指标大于0,确认目前处于上升趋势中,则产生多头信号。
-
-2. 当-DI下穿+DI时,属于死叉,判断为空头市场。此时如果DPO指标小于0,确认目前处于下降趋势中,则产生空头信号。
-
-3. 若+DI/-DI交叉但DPO指标接近0,则判断为震荡,不产生信号。
-
-## 优势分析
-
-这种组合策略最大的优势在于识别趋势的准确性很高,在发生真实趋势反转时才会产生交易信号,从而避免在震荡区间反复亏损。其主要优势有:
-
-1. 利用DMI指标判断趋势方向和强度,是一种成熟可靠的技术指标。
-
-2. 借助DPO指标过滤掉区间震荡的假信号,只在趋势形成时才产生信号,避免亏损。
-
-3. 组合多个指标,可以起到互相验证的作用,提高信号的可靠性。
-
-4. 策略逻辑简单明了,容易理解和实施,适合用于自动或手动交易。
-
-5. 由于只在趋势中交易,可以获得较大的风险回报率。
-
-## 风险分析
-
-尽管这是一种可靠性较高的策略,但仍需注意以下风险:
-
-1. 突发事件导致市场产生巨大单边行情,可能错过这种趋势性机会。可以通过降低DPO参数来减少这种风险。
-
-2. DMI指标本身也可能产生错误信号,这种风险无法完全规避。可以设置止损来控制损失。 
-
-3. DPO指标参数设置不当也可能导致误判。应通过反复回测确定最佳参数。
-
-4. 交易成本会对获利产生一定影响,应控制交易频率。可以通过优化参数来减少无效交易。
-
-## 优化方向 
-
-这种策略仍有进一步优化的空间:
-
-1. 可以测试不同的参数组合,找到最佳参数以减少信号延迟和提高获利率。
-
-2. 可以结合其他指标如KDJ、MACD等进行验证,提高信号准确性。
-
-3. 可以根据不同品种、周期等设置适应性参数,使策略更具适应性。
-
-4. 可以设定动态止损来控制单笔损失。也可以根据趋势阶段设定不同的止损幅度。
-
-5. 可以通过机器学习等方法优化进入和退出的时机,以期获得更高收益。
-
-## 总结
-
-该策略综合运用DMI和DPO两个指标的优势,在判断趋势反转时判断准确性很高,可以可靠识别趋势的生成。同时,利用DPO指标有效过滤了区间震荡带来的噪音,避免了无效交易。这使其成为一种适合自动交易以及手动采用的高效策略。当然,仍有许多细节可以进一步优化,以获得更佳的策略表现。但这种组合指标的思路对量化交易策略设计具有重要借鉴意义。
-
-||
 
 ## Overview
 
@@ -139,7 +74,6 @@ There is still room for further optimization of this strategy:
 
 This strategy combines the advantages of the DMI and DPO indicators to have high accuracy in judging trend reversals, and can reliably identify the generation of trends. At the same time, the use of the DPO indicator effectively filters out the noise caused by range-bound oscillations, avoiding ineffective trades. This makes it an efficient strategy suitable for automated trading and manual adoption. Of course, there are still many details that can be further optimized for better strategy performance. But the idea of combining indicators has important reference significance for quantitative trading strategy design.
 
-[/trans]
 
 > Strategy Arguments
 

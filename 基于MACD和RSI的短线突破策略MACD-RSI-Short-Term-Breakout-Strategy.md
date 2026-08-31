@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是基于1分钟MACD指标和RSI指标设计的短线突破策略。它结合了MACD指标判断趋势和找出突破点,以及RSI指标判断超买超卖的能力,寻找短线突破机会进行长短做波动。
-
-## 策略原理
-
-该策略首先在1分钟时间框架计算MACD指标的集散线,并绘制布林带判断集散线的突破情况。同时计算RSI指标判断多空力道。只有当布林带、MACD和RSI指标同时符合条件时,才会发出交易信号。
-
-具体来说,当1分钟MACD集散线低于下轨且RSI高于51时做多,当MACD集散线高于上轨且RSI低于49时做空。并要求9日、50日和200日均线顺序排列才能交易,防止不利的趋势逆势操作。 
-
-采取固定的止盈止损 Exit 当收益达到0.5%或亏损达到0.3%时平仓。
-
-## 优势分析
-
-该策略结合了趋势判断和超买超卖判断,可以有效过滤假突破。固定止盈止损使每单获利有一定的预期管理。
-
-优势如下:
-
-1. MACD判断趋势方向,RSI判断多空力道,可以有效避免逆势操作。
-
-2. 结合布林带通道判断突破信号,可以过滤假突破。
-
-3. 采取固定止盈止损,每单获利有一定预期,可以控制单笔亏损。
-
-4. 交易频率较高,适合短线操作。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 固定止盈止损无法根据市场变化调整,可能导致止损过小止盈过大。
-
-2. 依赖指标多重过滤信号,在盘整区域会出现多次触发止损。
-
-3. 高频交易手续费负担较重。
-
-4. MACD和RSI参数需要优化,目前参数可能不是最优。
-
-以下几点可以进一步优化:
-
-1. 采用动态止盈止损,根据ATR等指标调整止盈止损比例。
-
-2. 加大布林带参数缩小通道,降低触发频率。
-
-3. 优化MACD和RSI参数,找到最佳参数组合。
-
-4. 根据大周期趋势方向进行过滤,避免逆势交易。
-
-## 总结
-
-该策略整体来说是一个典型的短线突破系统,融合了趋势、超买超卖判断,可以有效发现短线机会。但存在一定风险,需要进一步测试和优化参数,降低风险提高盈利率。如果参数调整得当,该策略可以成为高效的短线策略之一。
-
-||
 
 
 ## Overview
@@ -118,7 +63,6 @@ The following aspects can be further optimized:
 
 Overall this strategy is a typical short-term breakout system, incorporating trend, momentum and overbought/oversold analysis, which can effectively discover short-term opportunities. But there are certain risks, requiring further testing and parameter optimization to lower risks and improve profitability. If tuned properly, this strategy can become an efficient short-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

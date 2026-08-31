@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14c95470bfbc805e88f.png)
-[trans]
-
-## 概述
-
-该策略的核心思想是结合相对强弱指标(RSI)和布林带这两个技术指标来实现双重交易信号的过滤,在最大程度上减少虚假信号的干扰,提高信号质量。
-
-当RSI指标显示超买或超卖信号,同时价格突破或回调布林带上下轨时,会形成交易机会。它综合了两个不同指标的优势,既考虑了市场波动的统计特征,也关注了市场参与者的多空态势,形成全面的判断依据。
-
-## 策略原理  
-
-RSI部分,我们同时关注两个不同周期的RSI指标,一个较短周期的用来捕捉超买超卖信号,一个较长周期的用来确认趋势反转。当短周期RSI显示超买超卖且长周期RSI显示反转时,认为形成交易机会。
-
-布林带部分,我们关注价格是否突破上下轨。突破布林带上轨为卖点,突破下轨为买点。同时我们也关注价格是否回调布林带,这样可以及时捕捉反转机会。
-
-当RSI信号和布林带信号同时呈现时,我们就认为交易机会成型,发出交易指令。
-
-## 优势分析
-
-- 双重指标过滤,可靠性较高,避免多余交易
-- 兼顾趋势和反转,把握不同市场阶段的机会 
-- 参数可配置,可以按需要调整参数
-- 内置时间和资金管理 
-
-## 风险分析
-
-- 布林带参数设置不当可能导致虚假信号
-- 无法应对市场剧烈波动的极端情况
-- RSI指标发散时可能出现错误信号
-- 需要优化参数以适应不同品种和周期
-
-可以通过参数优化、适当缩小仓位、人工干预等方式规避和控制风险。
-
-## 优化方向
-
-- 调整RSI参数,优化超买超卖判断
-- 调整布林带宽度,优化布林带突破策略  
-- 增加仓位管理机制
-- 增加止损策略
-- 结合更多指标实现多因子模型
-
-## 总结
-
-RSI与布林带双重策略充分利用两个指标的优势实现高质量信号的产生,在参数优化和风险管理到位的前提下,可以获得稳定的投资回报。结合更多信号和模型也是未来的可能方向。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ Risks can be avoided and controlled through parameter optimization, appropriatel
 
 The RSI and Bollinger Bands dual strategy fully utilizes the strengths of the two indicators to generate high-quality signals. With proper parameter optimization and risk management, it can achieve steady investment returns. Incorporating more signals and models is also a potential future direction.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略集成MACD,均线和鳄鱼线等多种指标,识别行情趋势方向,进行趋势跟踪操作。
-
-主要交易逻辑:
-
-1. 计算MACD指标的快线、慢线和柱形线
-
-2. 判断MACD柱形线方向,确定趋势方向
-
-3. 计算多条移动平均线,判断价格在均线上的位置
-
-4. 鳄鱼线指标判断趋势力度
-
-5. 当上述多因素指向同一方向时,进行做多或做空
-
-6. 在趋势反转时进行止损退出
-
-通过多种指标的综合判断,策略追求在强势趋势中进行交易,并在早期反转时止损,避免亏损扩大。
-
-## 策略优势
-
-- MACD判断短期走势与力度
-
-- 均线位置判定中长期趋势
-
-- 鳄鱼线显示整体趋势力度
-
-- 多指标组合提高判断准确性
-
-## 策略风险
-
-- 需要反复测试参数优化
-
-- 若多指标发出冲突信号难以处理
-
-- 均线等指标滞后性较强
-
-## 总结
-
-该策略试图通过多种指标对行情方向进行全面判断,在优化参数的基础上获取强势趋势。但滞后性问题以及指标冲突仍需注意。
-
-||
 
 ## Strategy Logic 
 
@@ -98,7 +53,6 @@ By synthesizing multiple indicators, it aims to trade strong trends and cut loss
 
 This strategy attempts to comprehensively determine trend direction using multiple indicators. But lagging issues and signal conflicts warrant caution despite optimization.
 
-[/trans]
 
 > Strategy Arguments
 

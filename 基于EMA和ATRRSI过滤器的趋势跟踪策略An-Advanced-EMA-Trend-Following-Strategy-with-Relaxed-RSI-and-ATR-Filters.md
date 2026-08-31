@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/de64521d7174bbf752.png)
-[trans]
-## 概述
-
-该策略是基于EMA均线和RSI、ATR指标构建的一个长线趋势跟踪策略。策略利用快慢EMA形成金叉死叉信号,结合长线EMA判断趋势方向,利用RSI和ATR对盘整进行过滤,实现对长线趋势的跟踪。
-
-## 策略原理  
-
-1. 快慢EMA(20日EMA和50日EMA)金叉做多,死叉做空
-2. 200日EMA判断长线趋势方向,只在趋势方向交易
-3. RSI低位做多,高位做空
-4. ATR来判断盘整,过滤假突破
-
-## 优势分析
-
-1. 使用快慢EMA组合实现对趋势的判断
-2. 加入长EMA过滤,避免逆势交易
-3. RSI指标过滤超买超卖区域,避免追高杀跌
-4. ATR指标判断盘整,过滤震荡盘整的假突破
-
-## 风险分析 
-
-1. 长线看涨期间,存在一定程度的无法跟踪上涨趋势的风险
-2. EMA指标在盘整时易产生噪音,需要结合ATR指标过滤
-3. RSI和ATR参数设置需要根据不同品种分别测试优化
-
-## 优化方向
-
-1. EMA长度的参数可进行优化,找到不同品种更匹配的组合
-2. RSI和ATR参数也可进行优化,提高对盘整的识别能力
-3. 可考虑加入移动止损,锁定部分利润,控制风险
-
-## 总结
-
-该策略整体来说是一个以EMA为核心的长线趋势跟踪策略,同时引入RSI和ATR指标进行辅助,可以较好地识别趋势方向并过滤噪音。通过参数的优化,该策略可以适用于更多品种,在长线看涨环境中可以获得不错的效果。
-
-|| 
 
 ## Overview  
 
@@ -82,7 +46,6 @@ This is an EMA trend following strategy incorporating RSI and ATR filters, aimin
 
 Overall an effective system for long term trend following across various instruments. Optimization of parameters combined with prudent risk management can lead to positive results, especially in persistent bull market environments. The incorporation of auxiliary indicators like RSI and ATR make this an advanced EMA trend system.
 
-[/trans]
 
 > Strategy Arguments
 

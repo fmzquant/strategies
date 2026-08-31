@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1d4c9bbca9c0d2a50e3.png)
 
-[trans]
-#### 概述
-
-本策略是一个基于移动平均线交叉的交易系统,结合了动态移动止损和双目标利润点的风险管理方法。策略主要依据价格与200期移动平均线的交叉来判断入场时机,同时设置了灵活的止损和获利点,以实现风险控制和利润最大化。
-
-#### 策略原理
-
-1. 入场信号:
-   - 多头入场:当价格向上穿过200期移动平均线时
-   - 空头入场:当价格向下穿过200期移均线时
-
-2. 风险管理:
-   - 初始止损:设置在入场价格的500个点位之外
-   - 动态移动止损:当价格向有利方向移动200个点位时,止损会移动到入场价格处
-   
-3. 利润目标:
-   - 第一目标:当价格达到入场价格3000个点位时,平掉75%的仓位
-   - 第二目标:剩余25%的仓位会在价格达到入场价格4000个点位时平仓
-   - 如果触发动态移动止损,剩余仓位的止损点会设置在入场价格处
-
-4. 仓位管理:
-   - 每次交易固定数量的100个单位
-
-#### 策略优势
-
-1. 趋势跟踪:利用移动平均线捕捉市场趋势,有助于在大趋势中获利。
-
-2. 风险控制:采用初始止损和动态移动止损相结合的方式,既限制了最大损失,又能保护已获利润。
-
-3. 利润最大化:通过设置两个目标价,在保证部分利润的同时,还可以继续追踪大趋势。
-
-4. 自动化:策略完全自动化,减少了人为情绪干扰。
-
-5. 灵活性:各项参数如移动平均线周期、止损点、获利点等都可以根据市场情况进行调整。
-
-#### 策略风险
-
-1. 震荡市风险:在横盘震荡市场中,可能会频繁触发假突破信号,导致连续亏损。
-
-2. 滑点风险:在快速行情中,实际成交价可能与理想价格有较大偏差。
-
-3. 过度交易:频繁的交叉信号可能导致过度交易,增加交易成本。
-
-4. 单一指标依赖:仅依赖移动平均线可能会忽视其他重要的市场信息。
-
-5. 固定仓位风险:每次交易固定数量可能不适合所有市场环境。
-
-#### 策略优化方向
-
-1. 多指标结合:考虑引入其他技术指标如RSI、MACD等,与移动平均线结合使用,提高入场信号的可靠性。
-
-2. 动态仓位管理:根据市场波动性和账户余额动态调整交易数量,以更好地控制风险。
-
-3. 市场环境过滤:增加趋势强度指标或波动率指标,在不适合交易的市场环境中避免入场。
-
-4. 参数优化:使用历史数据回测不同的参数组合,找出最优的移动平均线周期、止损点和获利点设置。
-
-5. 时间过滤:考虑加入时间过滤器,避免在波动较大或流动性较差的时间段交易。
-
-6. 加入基本面因素:结合重要经济数据发布或其他基本面事件,调整策略的进出场时机。
-
-#### 总结
-
-动态移动止损双目标价均线交叉策略是一个结合了技术分析和风险管理的量化交易系统。通过移动平均线捕捉市场趋势,同时利用动态止损和多重获利目标来平衡风险和收益。该策略的主要优势在于其自动化程度高、风险控制灵活,并且有潜力在强趋势市场中获得可观收益。然而,使用者需要注意应对震荡市场的风险,并考虑进一步优化策略以提高其适应性和稳定性。通过持续的参数调整、引入额外的市场指标,以及考虑更复杂的仓位管理方法,该策略有望在各种市场环境中取得更好的表现。
-
-|| 
 
 #### Overview
 
@@ -142,7 +76,6 @@ This strategy is a trading system based on moving average crossovers, combining 
 
 The Dynamic Trailing Stop Dual Target Moving Average Crossover Strategy is a quantitative trading system that combines technical analysis with risk management. It captures market trends using moving averages while balancing risk and reward through dynamic stop losses and multiple profit targets. The strategy's main advantages lie in its high degree of automation, flexible risk control, and potential for significant returns in strong trend markets. However, users need to be aware of the risks in choppy markets and consider further optimizations to improve adaptability and stability. Through continuous parameter adjustment, introduction of additional market indicators, and consideration of more complex position management methods, this strategy has the potential to perform well in various market environments.
 
-[/trans]
 
 
 

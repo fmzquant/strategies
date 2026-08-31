@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15778d51bf600c9d1b7.png)
-[trans]
-
-## 概述
-本策略基于双ALMA移动平均线的金叉死叉信号,结合MACD指标的多空信号,实现自动做多做空。策略适用于4小时及以上时间周期,测试数据为BNB/USDT,时间段为2017年至今,手续费设置为0.03%。
-
-## 策略原理
-策略使用ALMA快线和慢线构建双移动平均线。快线长度为20,慢线长度为40,均采用0.9的偏移量,标准差为5。当快线上穿慢线时生成做多信号,当快线下穿慢线时生成做空信号。
-
-同时,策略结合MACD指标的直方图信号。只有当MACD直方图为正(上升),做多信号才有效;只有当MACD直方图为负(下降),做空信号才有效。
-
-该策略同时设置了止盈止损条件。做多止盈为2倍,止损为0.2倍;做空止盈为0.05倍,止损为1倍。
-
-## 优势分析
-该策略结合双移动平均线的趋势判断和MACD指标的能量判断,可以有效过滤假信号,提高入场的准确性。止盈止损设置合理,最大程度锁定盈利,避免大额亏损。
-
-回测数据adopted自2017年以来,包含多次牛熊转换,策略在跨周期条件下依然表现不俗。这证明策略适应市场的线性与非线性特征。
-
-## 风险分析
-策略有如下风险:
-
-1. 双移动平均线本身存在滞后,可能错过短线机会
-2. MACD直方图为零时,策略将不会产生信号
-3. 止盈止损比例是事前设置,可能与实际行情出现偏差
-
-解决方法:
-
-1. 适当缩短移动平均线周期,提高对短线的敏感性
-2. 优化MACD参数,使直方图波动更为频繁
-3. 动态调整止盈止损的设置
-
-## 优化方向  
-该策略还可从以下几个方面进行优化:
-
-1. 尝试不同类型的移动平均线,寻找更好的平滑效果
-2. 优化移动平均线和MACD的参数,拟合不同品种和周期
-3. 加入附加条件,如交易量变化等,过滤信号
-4. 实时调整止盈止损的比例,让策略更具适应性
-
-## 总结
-本策略成功结合移动平均线的趋势判断和MACD的辅助判断,并设置合理的止盈止损,能够在多种行情下获得稳定收益。通过持续优化参数设置、加入附加过滤条件等手段,策略的稳定性和盈利能力还可得到进一步提升。
-
-|| 
 
 ## Overview  
 This strategy is based on the golden cross and dead cross signals of the double ALMA moving average lines, combined with the long and short signals of the MACD indicator, to achieve automatic long and short positions. The strategy is suitable for time frames of 4 hours or more, and the test data is BNB/USDT ranging from 2017 to the present, with a commission rate set at 0.03%.
@@ -92,7 +50,6 @@ The strategy can also be optimized in the following aspects:
 ## Conclusion  
 The strategy successfully combines the trend judgment of moving averages and the auxiliary judgment of MACD, and sets reasonable take profits and stop losses, which can obtain stable returns in various market conditions. The stability and profitability of the strategy can be further enhanced by continuous optimization of parameter settings, adding additional filtering conditions, etc.
 
-[/trans]
 
 > Strategy Arguments
 

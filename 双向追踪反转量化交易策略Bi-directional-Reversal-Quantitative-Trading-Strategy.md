@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/127a9af0d2fb1389c56.png)
-[trans]
-
-本策略运用双向追踪机制,结合价格反转信号和成交量指标,实现自动化的量化交易。其最大优势在于可靠的风险控制,通过追踪止损来锁定利润,避免亏损扩大。同时,反转交易信号增强了策略的胜率。本文将详细解析该策略的原理、优势、风险和优化方向。
-
-#### 策略原理
-
-本策略由两个子策略组成。第一个子策略运用随机指标判定价格反转信号,具体逻辑是:
-
-如果收盘价连续两天上涨,且9日Slow K线低于50,则做多;如果收盘价连续两天下跌,且9日Fast K线高于50,则做空。
-
-第二个子策略则是结合成交量指标,判断力度的强弱。具体来说,是将当前成交量与40日成交量平均值比较。如果当前成交量大于平均值,认为是量能上攻,属于反转信号,做空;如果当前成交量小于平均值,认为是量能下泻,属于反转信号,做多。
-
-最终交易信号,是上述两个子策略信号的交集。即两子策略同时发出信号时,才会开仓。通过这种“Intersection Targets”方法,可以过滤掉部分噪声交易,提高信号质量。
-
-#### 策略优势
-
-1. 利用双重指标确认,提高信号质量
-2. 反转交易模式,具有一定的时序优势
-3. 结合成交量分析,判断未来价格走势
-4. 可靠的止损机制,有效控制单笔亏损
-
-#### 策略风险
-
-1. 反转信号可能出现失效,无法完全过滤市场噪声
-2. 成交量异常时,量能判断会失效
-3. 止损设置不当,可能造成过早止损或停损幅度过大
-4. 回撤控制机制不完善,可能缩短策略寿命
-
-可以从以下几个方面进一步优化:
-
-1. 增加趋势判断规则,避免逆势交易
-2. 优化止损逻辑,实现追踪止损和分阶段止损
-3. 增加最大回撤限制,关闭策略避免巨额亏损
-4. 结合机器学习算法,建立动态止损和头寸控制模型
-
-总的来说,本策略以双向追踪和价格反转为主要交易逻辑,并辅以量能判断,通过双重确认提高信号质量。在实际应用中,仍需要进一步测试和优化,特别要防范止损和资金管理方面的风险,防止回撤过大导致的破产。但整体来说,本策略运用了量化交易的多种技巧,思路清晰,值得深入研究。
-
-||
 
 This strategy employs a bi-directional tracking mechanism, combined with price reversal signals and volume indicators, to realize automated quantitative trading. Its biggest advantage lies in reliable risk control by tracking stop loss to lock in profits and avoid loss expansion. Meanwhile, the reversal trading signals enhance the win rate of the strategy. This article will analyze in detail the principles, strengths, risks and optimization directions of this strategy.
 
@@ -84,7 +46,6 @@ The strategy can be further optimized in the following aspects:
 
 In summary, this strategy is based mainly on bi-directional tracking and price reversal, plus volume momentum analysis to improve signal quality by dual confirmation. In actual application, further testing and optimization is still needed, especially to guard against the risks of stop loss and capital management, to prevent excessive drawdowns leading to wipeouts. But in general, this strategy utilizes a variety of quantitative trading techniques with clear logic, and is worth in-depth research.
 
-[/trans]
 
 > Strategy Arguments
 

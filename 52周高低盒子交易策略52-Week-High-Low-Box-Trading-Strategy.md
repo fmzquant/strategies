@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cc9ee7964250448e06.png)
-[trans]
-
-### 概述
-
-52周高低盒子交易策略是一种以价格在不同区间震荡形成的"盒子"为交易信号的策略。该策略的核心逻辑是,当价格突破某一区间(盒子)的上下限时,表明价格进入新的区间,这时可以进行买入或卖出操作。
-
-### 策略原理
-
-该策略通过计算最近5天(可调整)的最高价、最低价,判断价格是否进入新的交易区间。具体规则如下:
-
-1. 计算最近5天内的最高价(Highest High)和最低价(Lowest Low),构成一个交易区间盒子。
-2. 当价格突破该区间的上限时,表明可能进入更高的区间,可以进行买入操作。
-3. 当价格跌破该区间的下限时,表明可能进入更低的区间,可以进行卖出操作。
-4. 将止损位设置为上一个区间的上下限附近,以控制风险。
-5. 重复上述判断,不断调整交易区间,实现盈利。
-
-通过这样的区间突破来判断趋势和发出交易信号,是该策略的核心思想。
-
-### 优势分析
-
-52周高低盒子交易策略具有以下几个优势:
-
-1. 策略思路简单直观,容易理解实现。
-2. 能够抓住价格进入新区间后的趋势行情。区间突破是比较可靠的交易信号。
-3. 有明确的止损策略,可以有效控制风险。
-4. 可以通过调整区间长度来适应不同周期和不同品种的行情。
-
-总的来说,这是一种风险控制能力较好,较为实用的趋势交易策略。
-
-### 风险分析
-
-该策略也存在一些风险,主要包括:
-
-1. 当趋势不明显时,会产生多个小损失的情况。
-2. 区间范围设定不当也会增加错误交易的概率。
-3. 止损策略并不能完全规避巨大行情跳空的风险。
-
-这需要交易者在实践中不断测试和优化策略的参数,谨慎进行风险管理。
-
-### 优化方向
-
-52周高低盒子交易策略还可以从以下几个方面进行优化:
-
-1. 结合交易量或者均线指标来验证买卖信号,提高准确率。
-2. 优化区间的长度参数,适应市场的变化。
-3. 可以在突破买入后,等待回调构成更多重入机会。
-4. 结合复利原理,每次止损后可适当加仓,追求更高收益。
-
-在实践过程中,通过参数调整和规则优化,可以不断提升该策略的效果。
-
-### 总结
-
-52周高低盒子交易策略是一个基于价格突破区间判断趋势方向的策略。它有着简单的交易逻辑、强大的风险控制能力。在实践中需要不断测试和优化,充分发掘该策略的优势。总的来说,这是一种值得推荐的实用交易策略。
-
-
-||
 
 
 ### Overview
@@ -132,7 +76,6 @@ Through parameter adjustment and rule optimization in the implementation process
 
 The 52 Week High Low Box Trading Strategy is a strategy that determines trend direction based on price breakouts. It has simple trading logic and strong risk control capabilities. Continuous testing and optimization is needed in practice to fully exploit the advantages of this strategy. Overall, this is a recommended practical trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

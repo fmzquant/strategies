@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14d3addfdabb74b5beb.png)
-[trans]
-
-概述:该策略顺势突破旗形模式与著名的超趋势指标巧妙结合,实现了一种独特的旗形识别方法。它不仅可以发现传统的旗形,还能利用超趋势指标判断趋势方向以及潜在止损位置。
-
-策略原理:
-1. 旗形识别
-- 通过动态追踪最高价和最低价,识别出旗杆和整理区
-- 根据用户设定的参数判断整理区域的深度/拉升幅度、旗形长度是否符合要求
-- 一旦旗形形成,用相应颜色的线段标记出来
-
-2. 超趋势集成
-- 应用简单有效的超趋势指标,实时显示图表上的趋势动向
-- 结合旗形的方向判断,可以确认旗形方向的正确性
-- 同时超趋势线也为交易提供潜在的止损位置
-
-综上,这种旗形与超趋势的 Zero-Lag 整合,实现了一种易于使用的趋势跟踪策略,可谓融会贯通,旗形识别与超趋势止损完美结合。
-
-策略优势:
-1. 融合传统技术分析与趋势跟随
-这种旗形与超趋势的整合,兼顾了图形识别与动量跟随,是一种独特的混合策略。
-
-2. 提供潜在的止损位置
-超趋势为每笔交易提供清晰的止损位置,有助于策略的风险管理。 
-
-3. 方便使用
-该策略提供了一系列可调参数,使用者可以根据自己的交易偏好进行定制。操作简单,易于掌握。
-
-4. 全面支持多空双向交易
-策略同时支持看涨与看跌操作,适用于任何市场环境,可谓非常全面。
-
-策略风险:
-1. 旗形败坏
-当旗形整理超过设定参数或向原趋势方向延伸时,会出现旗形败坏,导致错误信号。
-
-2. 超趋势滞后识别转折点
-超趋势线存在一定程度的滞后性,在趋势转折点时可能出现较大滑点。
-
-3. 参数优化
-不同参数设置会对策略表现产生较大影响,需要通过优化找到最佳参数组合。
-
-4. 交易方向偏向
-如果仅选择单边交易,则会限制策略的应用范围。建议采用双边交易。
-
-策略优化方向:
-1. 测试不同的超趋势参数组合,找到最佳参数;
-2. 优化旗形参数,使旗形识别更准确可靠;  
-3. 尝试结合其他指标,如平均线、K线模型等,丰富策略;
-4. 增加止损策略、仓位管理等模块,提高策略的稳定性。
-
-总结:
-该超趋势增强旗形识别策略,是一种独特的旗形与超趋势的混合趋势策略。它兼顾了图形识别的先导性与超趋势动量跟随的时效性,实现了传统技术分析与数字化量化的完美结合。易于使用的设定使其可以广泛应用于多种交易品种,而可调参数也让交易者可以按照自己的偏好进行个性化定制。总体而言,这是一种融会贯通,实用性极强的旗形识别策略。
-
-
-||
 
 Overview: This strategy ingeniously combines the flag pattern breakout method with the renowned SuperTrend indicator to achieve a unique flag recognition approach. It can not only identify traditional flag patterns, but also utilize the SuperTrend indicator to determine the trend direction and set potential stop loss levels.  
 
@@ -117,7 +63,6 @@ Enhancement Opportunities:
 Conclusion:  
 The SuperTrend Enhanced Flag Finder strategy uniquely merges the predictive power of chart pattern analysis with the timeliness of SuperTrend momentum following. The tunable parameters provide tremendous customizability for traders to tailor it to their personal preferences and trading assets, while the easy-to-use design makes it accessible for broad applications. Overall an ingeniously integrated, highly practical flag pattern recognition strategy.
 
-[/trans]
 
 > Strategy Arguments
 

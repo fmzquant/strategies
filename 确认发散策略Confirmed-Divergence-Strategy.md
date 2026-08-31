@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/201e6d02c0899b6d7f3.png)
 
-[trans]
-## 概述
-
-确认发散策略利用RSI指标和Awesome Oscillator指标的双重发散信号来确定更可靠的入市时机。当价格形成新高或新低,而RSI和AO指标形成反向的高点或低点时,就是发散信号。此策略要求两种指标同时发散,从而过滤掉部分假信号,提高入市效果。
-
-## 策略原理
-
-该策略基于价格涨跌幅度与RSI和AO指标值之间的发散来判断买卖点。具体判断方法如下:
-
-多头发散:价格形成较近期新的低点,而RSI和AO形成较近期新的高点,即价格下跌而RSI和AO上涨,构成多头发散信号。
-
-空头发散:价格形成较近期新的高点,而RSI和AO形成较近期新的低点,即价格上涨而RSI和AO下跌,构成空头发散信号。  
-
-策略要求两种指标同时满足发散条件,从而避免单一指标的假发散带来的错误信号。当发散信号成立时,在布林带下轨或上轨附近设置止损单,具体止损点为下轨上方或上轨下方。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 双重指标过滤增加信号的可靠性,避免单一指标的假发散信号。
-
-2. 利用指标的发散特性判断买卖点,回撤可能性较小。
-
-3. 发散信号具有较好的持续性,获利空间大。
-
-4. 在关键支撑或阻力附近设置止损,减小个别巨亏的可能性。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 双重过滤条件同时成立的时间较少,可能错过部分交易机会。
-
-2. 发散并不是百分之百可靠的信号,个别情况下可能出现亏损。
-
-3. 布林带的参数设置不当可能导致止损过于宽松或过于窄隘。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整发散判断的周期参数,优化发散信号的参数。
-
-2. 测试不同的止损方式,如trailing stop或动态止损。
-
-3. 增加其他指标过滤,如交易量等,进一步提高信号的可靠性。
-
-4. 综合考虑趋势、支持阻力等因素,识别发散信号的质量。
-
-## 总结
-
-确认发散策略通过RSI和AO的双重发散信号判断入市时机,双重过滤机制有效减少假信号,提高获利概率。策略还在关键位设置止损以控制风险,具有较好的风险收益特征。通过参数优化、增加信号过滤等手段,可以进一步提升策略稳定性和交易效果。
-
-||
 
 ## Overview
 
@@ -118,7 +64,6 @@ This strategy can be optimized in several ways:
 
 The Confirmed Divergence Strategy determines entry points through the dual divergence signals of RSI and AO. The double filtering mechanism effectively reduces false signals and increases profitability. The strategy also sets stop loss at key levels to control risks, with good risk-reward characteristics. By means of parameter optimization, increased signal filtering, etc., the stability and trading effect of the strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

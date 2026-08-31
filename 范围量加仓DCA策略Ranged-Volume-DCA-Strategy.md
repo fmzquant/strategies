@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略结合了范围量指标和DCA加仓机器人的策略,在范围量指标发出信号时,使用DCA机器人参数进行加仓建仓。策略试图以低成本加仓追逐趋势获利。
-
-### 策略原理
-
-1. 使用范围量指标判断量能突破
-2. 突破时做多入场,之后在跌破阈值时加仓
-3. 计算DCA机器人参数,包括安全订单价格、数量、最大安全订单数等
-4. 当价格触发安全订单价格时加仓
-5. 当达到盈利目标或超过最大安全订单时止盈
-
-具体来说,该策略结合了范围量指标的量能分析和DCA机器人的加仓机制。当量能超过近期最高点时产生做多信号并入场,之后根据DCA参数在价格下跌至每层安全订单价格时加仓。策略可以追踪趋势,但有止损限制。
-
-### 优势分析
-
-1. 结合范围量指标判断量能,提高入场准确性
-2. 加仓机制可以以低成本追踪趋势
-3. 可灵活配置DCA参数,适应市场环境
-4. 有止盈和止损机制,可控制风险
-
-### 风险分析
-
-1. 量能判断失败风险,可能入场错误方向
-2. DCA加仓次数过多风险,成本和风险增大
-3. 需适时调整DCA参数,否则效果可能不佳
-4. 止损位置设置不当可能扩大单笔损失
-
-可以通过优化参数配置、引入趋势过滤等方法来降低风险。
-
-### 优化方向
-
-1. 测试不同的量参数组合找出最佳参数
-2. 优化DCA参数,适应不同品种和周期
-3. 增加移动止损追踪价格实时变化 
-4. 添加再入场条件在趋势放量时重新入场
-5. 评估趋势过滤以避免错误方向入场
-6. 比较不同止损算法优劣找出最优配置
-
-### 总结
-
-本策略结合范围量与DCA机制,以量能放大信号入场,并以低成本加仓跟随趋势。优点是资金利用效率高,可配置性强;缺点是严重依赖参数优化。通过参数调优、止损优化等方式可在保持优势的基础上降低风险。该策略可让交易者掌握运用指标和机器人调优交易策略的方法。
-
-|| 
 
 ### Overview 
 
@@ -99,7 +53,6 @@ Risks can be reduced via parameter optimization, adding trend filter etc.
 
 This strategy combines ranged volume and DCA mechanisms to enter on volume expansions and pyramid with low cost following trends. Pros are efficient capital use and configurability; Cons are high reliance on parameter optimization. Risks can be reduced through parameter tuning, stop loss optimization while retaining advantages. It allows traders to master using indicators and optimizing trading strategies with bots.
 
-[/trans]
 
 > Strategy Arguments
 

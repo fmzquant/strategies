@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-本文将详细介绍一种利用通道突破进行趋势交易的量化策略。该策略通过EMA通道识别趋势方向,以及布林带判断反转做反向操作。
-
-一、策略原理
-
-该策略主要包括以下几个要素:
-
-1. 设置中线EMA,并根据比例扩展出上下通道;
-
-2. 当价格突破上通道线时,做多追涨;突破下通道线时,做空追踪;
-
-3. 当布林带收窄时,判断趋势反转,做反向操作;
-
-4. 设置ATR止损来限制亏损风险。
-
-5. 可自定义通道参数,找到最佳参数组合。
-
-该策略通过EMA通道判断主流趋势方向,利用布林带识别反转机会,组成完整的趋势系统。
-
-二、策略优势
-
-该策略最大的优势是指标运用合理,EMA判断主流,布林带捕捉反转。
-
-另一优势是止损设置直接有效,可以把控风险。
-
-最后,参数可自定义,可以针对不同品种进行优化。
-
-三、潜在风险
-
-但该策略也存在以下问题:
-
-首先,EMA和布林带指标都存在滞后性。
-
-其次,反转操作的失败风险需要考虑。
-
-最后,参数优化需要大量工作以防过优化。
-
-四、内容总结
-
-本文详细介绍了一种利用EMA通道突破进行趋势交易的策略。它可以识别主流趋势并在反转点做反向操作。该策略可以通过参数优化获得稳定收益,但也需要防控优化难度和指标滞后等问题。
-
-||
 
 This article explains in detail a trend trading strategy utilizing channel breakouts. It identifies trend direction with EMA channels and makes counter-trend trades using Bollinger Bands.
 
@@ -94,7 +51,6 @@ IV. Summary
 
 In summary, this article has explained a trend following strategy based on EMA channel breakouts, with counter-trend trades at reversals. It can achieve steady profits through parameter optimization but requires managing optimization difficulty and indicator lags.
 
-[/trans]
 
 > Strategy Arguments
 

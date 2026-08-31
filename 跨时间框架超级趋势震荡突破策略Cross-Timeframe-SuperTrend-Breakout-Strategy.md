@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/132b6a79b848662d154.png)
-[trans]
-
-## 概述
-
-该策略融合了多时间框架的超级趋势指标与布林带指标,识别趋势方向和关键支撑阻力位,在震荡突破时进行 Entries,并基于交叉退出仓位。该策略主要适用于高波动的商品期货品种,如黄金、白银、原油等。
-
-## 策略原理  
-
-基于 Pine Script 编写的自定义多时间框架超级趋势函数 `pine_supertrend()`,结合不同周期(例如 1 分钟和 5 分钟)的超级趋势,判断大周期趋势方向。
-
-同时,计算布林带上下轨,进行通道突破判断。当价格突破布林带上轨时,认为处于看涨突破;当价格跌破布林带下轨时,认为看跌突破。
-
-策略信号:
-
-多头信号:收盘价 > 布林带上轨 且 收盘价 > 多时间框架超级趋势指标
-空头信号:收盘价 < 布林带下轨 且 收盘价 < 多时间框架超级趋势指标
-
-止损:
-
-多头止损:收盘价 < 5分钟超级趋势指标
-空头止损:收盘价 > 5分钟超级趋势指标
-
-因此,策略捕捉超级趋势指标与布林带指标的共振突破,在高波动行情中进行事务处理。
-
-## 优势分析
-
-- 利用多时间框架超级趋势指标判断大周期趋势方向,提高信号质量
-- 布林带上下轨作为关键支撑阻力位,能减少假突破
-- 超级趋势指标作为止损位,降低亏损,控制风险
-
-## 风险分析 
-
-- 超级趋势指标存在滞后性,可能错过趋势反转点
-- 布林带参数设置不当可能导致过于频繁或过于漏 trades
-- 商品期货夜盘或重大事件发生时,价格剧烈波动,容易止损
-
-风险解决方法:
-
-- 结合多种辅助指标确认信号,避免假突破
-- 优化布林带参数,寻找最佳平衡点
-- 调整止损位置,扩大止损距离
-
-## 优化方向
-
-- 尝试其他趋势指标,如 KDJ、MACD 等作为辅助判断
-- 增加机器学习模型判断概率作为助力
-- 进行参数优化,找到最佳超参数组合
-
-## 总结
-
-该策略整合超级趋势与布林带两个高效指标,通过跨时间框架分析和通道突破判断,实现高概率操盘。策略有效控制了资金风险,证实了在高波动品种中可以获得较好收益。通过进一步优化和INDICATORS组合,策略的效果还可得到提升。
-
-||
 
 ## Overview
 
@@ -122,7 +69,6 @@ Risk Mitigations:
 
 The strategy combines the power of SuperTrend and Bollinger Bands using cross timeframe analysis and channel breakouts for high-probability trading. It effectively controls risk and can generate good profits in volatile instruments. Further optimizations and indicator combinations can improve performance.
 
-[/trans]
 
 > Strategy Arguments
 

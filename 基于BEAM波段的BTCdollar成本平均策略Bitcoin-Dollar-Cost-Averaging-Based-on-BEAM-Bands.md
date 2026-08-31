@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f486d27ae7852df146.png)
-[trans]
-## 概述
-
-这个策略基于Ben Cowen的风险级别理论,目标是使用BEAM波段的级别来实现类似的方法。BEAM波段的上界是取对数后的200周移动平均线,下界是200周移动平均本身。这给了我们一个0到1的范围。当价格在0.5以下波段时,会发出买入指令;当价格在0.5以上波段时,会发出卖出指令。
-
-## 策略原理
-
-该策略主要依赖于Ben Cowen提出的BEAM波段理论。根据BTC的价格变化情况,可以将价格分为0到1之间的10个区域,这10个区域代表了10个不同的风险等级。第0级代表价格接近200周移动平均线,风险最小;第5级代表价格处于中值区域;第10级代表价格接近上轨,风险最大。
-
-当价格下跌至低位时,该策略会逐步加大买入仓位。具体来说,如果价格处于0到0.5波段,会在策略设置的每月某一天发出买入指令,买入金额会随着波段号的减小而逐步增加。例如波段5时,买入金额为月DCA总额的20%;波段1时,买入金额提高到月DCA总额的100%。
-
-当价格上涨至高位时,该策略会逐步减小仓位。具体来说,如果价格超过0.5波段,会按比例发出卖出指令,卖出仓位会随着波段号的增加而逐步增大。例如波段6时,卖出6.67%;波段10时,卖出所有仓位。
-
-## 优势分析
-
-这种BEAM波段DCA成本平均策略最大的优势在于,它充分利用了BTC波动交易的特点,在BTC价格跌至低谷时抄底加仓,在价格涨至高峰时获利了结。这种做法不会错过任何买入或卖出的良机。具体优势可概括如下:
-
-1. 利用BEAM理论判断资产低估程度,科学规避风险;
-2. 充分利用BTC波动特征,无比准确抓住买入卖出最佳机会;  
-3. 采用成本平均方法,有效控制投资成本,获得长期稳定收益;
-4. 自动执行买卖交易,无需人工干预,降低操作风险;
-5. 可自定义参数,灵活调整策略以适应市场变化。
-
-综上,这是一种精细化的参数调控策略,能够在BTC震荡行情中获取长期稳定收益。
-
-## 风险分析
-
-尽管BEAM波段DCA策略具有诸多优势,但也存在一些潜在风险需要警惕。主要风险点可概括如下:
-
-1. BEAM理论和参数设定依赖主观判断,会出现误判的概率;
-2. BTC走势难以预测,存在亏损切损的风险;  
-3. 自动交易容易受到系统故障和Parameter Hacking不利影响;
-4. 波动过大可能导致损失扩大。
-
-为降低风险,可采取以下措施:
-
-1. 优化参数设定,提高BEAM理论判断准确性;  
-2. 适当缩小仓位规模,降低单次亏损金额;
-3. 增加冗余度和容错能力,降低自动交易操作风险;  
-4. 设置止损点,避免单笔亏损过大。
-
-## 优化方向
-
-考虑到上述风险点,该策略主要可从以下方面进行优化:  
-
-1. 优化BEAM理论的参数:调整log法参数、回测周期等,提高模型判断准确性;
-2. 优化仓位控制:调整每月DCA总额、买入卖出比例等,控制单次亏损风险;  
-3. 增加自动交易安全模块:设置冗余服务器、本地处理等,提高容错能力;
-4. 增设止损模块:根据历史波动设置合理止损点,有效控制损失。
-
-通过这些手段,可以大幅提高策略的稳定性和安全性。
-
-## 总结
-
-BEAM波段DCA成本平均策略是一种非常具有实战价值的量化策略。它成功利用BEAM理论指导交易决策,并辅以成本平均模型控制买入成本。同时,它也注意风险管理,设置止损点以防范损失扩大。通过参数优化和模块增设,这种策略可以成为量化交易的重要工具,获得BTC市场的长期稳定收益。它值得量化交易从业者进一步研究和应用。
-
-||
 
 ## Overview
 
@@ -127,7 +70,6 @@ Through these measures, the stability and security of the strategy can be greatl
 
 The BEAM band DCA average cost strategy is a highly practical quantitative trading strategy. It successfully leverages BEAM theory to guide trading decisions, supplemented by a cost averaging model to control buying costs. At the same time, it pays attention to risk management by setting stop loss points to prevent loss expansion. With parameter optimization and modular additions, this strategy can become an important tool for quantitative trading to obtain long-term steady returns from the BTC market. It deserves further research and application by quantitative trading practitioners.
 
-[/trans]
 
 > Strategy Arguments
 

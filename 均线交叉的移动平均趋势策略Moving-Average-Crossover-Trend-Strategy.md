@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/111e8fb4472af32b401.png)
-[trans]
-
-## 概述
-
-这个交易策略是基于简单移动平均线和均线交叉系统的趋势跟踪策略。它利用不同周期的快速移动平均线和慢速移动平均线的交叉作为做多做空的信号。当快速移动平均线从下方上穿越慢速移动平均线时,做多;当快速移动平均线从上方下穿慢速移动平均线时,做空。该策略适用于趋势性比较明显的品种。
-
-## 策略原理
-
-该策略使用一个快速周期如60日的简单移动平均线和一个慢速周期如200日的简单移动平均线。快速移动平均线能更快地响应价格变化,反映近期价格趋势;慢速移动平均线对价格变化响应更慢,能反映中长期趋势。
-
-当短周期均线从下方上穿越长周期均线时,表示短周期价格开始上涨,进入多头市场,这时做多。当短周期均线从上方下穿长周期均线时,表示短周期价格开始下跌,进入空头市场,这时做空。
-
-该策略使用均线的交叉原理判断趋势方向。当短周期价格上涨较快,短周期均线会推动长周期均线向上,并且从下方穿过它。这时说明市场进入上涨趋势,应该做多。相反,当短周期价格下跌较快,短周期均线会拉低长周期均线,并从上方穿过它,说明市场进入下跌趋势,应该做空。
-
-通过快速均线和慢速均线的交叉来捕捉价格趋势的转折点,并相应地调整多空仓位。这是该策略判断趋势并产生交易信号的主要原理。
-
-## 策略优势分析
-
-- 利用均线交叉判断主要趋势,避免被短期市场噪音误导。
-- 兼顾短期和中长期两个时间维度,更稳定和可靠。
-- 实现了简单有效的趋势跟踪,例如上涨趋势中做多,下跌趋势中做空。
-- 移动平均线广泛适用,易于理解,参数设置灵活。
-- 资金管理参数可调整,可控制风险。
-
-## 策略风险分析
-
-- 该策略依赖清晰的价格趋势,如果市场出现剧烈波动,可能失败。
-- 在价格震荡区间中,会产生多次错误信号,频繁开仓与平仓。
-- 移动平均线存在滞后性,可能错过价格转折点。
-- 如果参数设置不当,止损点过小或止盈点过大,会过早离场或平仓。
-- 合理的参数需要根据不同品种的具体特点进行优化设定。
-
-可以通过调整移动平均线的周期参数来适应不同品种的波动频率;改进止损和止盈策略,利用更复杂的指标以减少错误信号;加入交易量过滤等方法来优化该策略,提高策略稳定性。
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 优化移动平均线快慢周期参数,适配不同波动频率的品种。可以测试更多组合,找到最佳参数。
-
-2. 改进入场条件,加入更多指标进行过滤,如交易量突增等,以减少错误信号。
-
-3. 改进止损止盈策略,例如追踪止损或动态止盈,让盈利更高效。
-
-4. 考虑交易成本如手续费,加入成本评估模块,使模拟更真实。
-
-5. 针对不同品种特点,设计Parameter Universe寻找最佳参数组合。
-
-6. 增加局部特征识别,辅助判断趋势转折点,提高开仓平仓时机把握。
-
-通过系统的策略优化,可以大幅提高盈利率和稳定性,降低回撤。
-
-## 总结
-
-该交易策略基于均线交叉判断价格趋势的转变,属于典型的趋势跟踪策略。它利用不同周期均线的交叉作为做多做空信号,通过快速均线和慢速均线组合判定趋势方向,实现了有效的趋势捕捉。该策略稳定、可靠,容易理解和实现,经过参数优化可以适应大多数品种,是量化交易的一个基础策略类型。通过与其他技术指标组合、优化止损平仓策略等方法,可以进一步提高该策略的盈利率和胜率。
-
-||
 
 ## Overview  
 
@@ -122,7 +65,6 @@ Through systematic strategy optimization, profitability, stability can be greatl
 
 The trading strategy determines trend shifts using MA crossovers, a typical trend-following strategy. It uses crossover between fast and slow MAs to generate long/short signals, identifying trend direction through the combination of the two. This strategy steadily and reliably captures trends and is easy to understand and implement. When optimized, it can adapt to most products and forms a fundamental quantitative trading strategy. Further improvements in profitability and win rate can be achieved by combining with other technical indicators, optimizing stop loss/take profit strategies etc.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略基于SonicR系统的理念,通过均线通道识别趋势方向,并在通道突破时入场,实现趋势跟踪操作。该策略结合均线通道和移动均线指标,进行机械化的趋势交易。
-
-策略原理:
-
-1. 计算均线通道,通道中轴为收盘价的均线,通道上轨和下轨分别为高点和低点的均线。
-
-2. 计算更长周期的移动平均线,作为交易信号线。
-
-3. 当收盘价由下向上突破信号线时,进行做多操作。
-
-4. 当收盘价由上向下突破信号线时,进行做空操作。
-
-5. 使用通道填充可视化呈现均线通道。
-
-该策略的优势:
-
-1. 均线通道可以清晰判断价格趋势和突破。
-
-2. 移动平均线过滤了短期市场噪音。
-
-3. 策略规则简单易行,避免人为情绪影响。
-
-该策略的风险:
-
-1. 均线和移动平均线存在滞后性,可能错过最佳入场点。
-
-2. 需要优化参数,以免出现过多无效信号。
-
-3. 机械交易策略回撤可能较大,需要资金管理。
-
-总之,该策略基于SonicR理念,识别均线通道方向,进行机械化的突破交易。简单的规则有利于系统化交易,但需注意优化和风险控制,方能稳定获得长期收益。
-
-||
 
 This strategy identifies trends using mean reversion channels based on the SonicR system and trades breakouts for trend following. It combines channel and moving average indicators for systematic trend trading. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this SonicR-based strategy identifies channel direction for systematic breakout trading. The simple rules benefit algorithmic trading but still require optimization and risk control for steady long-term gains.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19b85674698dd187fee.png)
 
-[trans]
-
-
-## 概述
-
-RSI轴向均线交叉策略通过计算RSI指标及其简单移动平均线,并观察二者的金叉死叉来判断入场出场。该策略同时结合布林带为RSI轴向均线增加支撑阻力判断。
-
-## 策略原理
-
-该策略首先计算14日RSI指标,然后计算RSI指标的8日简单移动平均线。当RSI指标从下向上突破其移动平均线时产生买入信号;当RSI从上向下跌破其移动平均线时产生卖出信号。
-
-同时,该策略为RSI轴向均线增加布林带判定。布林带通过计算标准差来判断RSI轴向均线是否已经相对过于拥挤,从而避免买入高点,卖出低点。
-
-## 优势分析
-
-RSI轴向均线交叉策略结合了趋势性指标RSI和曲线顺势指标移动平均线,能够有效判断市场趋势和随机性。RSI指标的算术平均能较好地平滑价格波动对信号的影响。
-
-该策略加入的布林带使用标准差原理,能够自动调整上下轨的宽度,有效防止交易信号的错乱。当布林带收窄时,表示变化渐趋平缓,适合寻找反转机会;而当布林带扩大时,表示行情剧烈波动的时期,适合跟踪趋势。
-
-## 风险分析
-
-RSI轴向均线交叉策略最大的风险在于RSI指标和移动平均线本身的滞后性。当快速行情来临时,指标的计算和趋势判定都会有一定的滞后。这会导致买点被抬高,卖点被压低。
-
-另一个主要风险是趋势牛熊转换时指标的误导。当行情出现转折而RSI和均线指标还没有反应过来时,会产生错误的交易信号从而造成损失。
-
-解决方法包括适当调整RSI参数,缩短均线周期;加入趋势型指标辅助判断;适当放宽止损范围。
-
-## 优化方向  
-
-RSI轴向均线交叉策略可以从以下几个方向进行优化:
-
-1. 优化RSI参数:调整RSI的长度可以平衡灵敏度和稳定性
-
-2. 优化移动平均线参数:调整均线类型和周期参数,优化指标的顺势性
-
-3. 增加止损机制:设定移动止损或时间止损,控制单笔损失
-
-4. 结合趋势指标:加入MACD,KDJ等指标,避免反转误判
-
-5. 多时间框架验证:利用更高时间框架确定趋势,避免被套
-
-## 总结
-
-RSI轴向均线交叉策略整体来说是一个比较成熟的量化交易策略。它融合了多种技术指标的优势,通过参数调整和多维度优化,可以进入市场的主流行情。该策略最大的风险在于指标的滞后性,需要搭配止损来控制损失。如果运用得当,RSI轴向均线交叉策略可以获得较为稳定的投资回报。
-||
 
 ## Overview  
 
@@ -99,7 +54,6 @@ The RSI Axial Moving Average Crossover Strategy can be optimized in the followin
 
 The RSI Axial Moving Average Crossover Strategy is an overall mature quantitative trading strategy. It combines the advantages of multiple technical indicators and can catch mainstream market moves through parameter tuning and multi-dimensional optimization. The biggest risk is the lagging of indicators, which needs to be addressed by stop losses to control losses. When properly implemented, this strategy can yield relatively stable investment returns.
 
-[/trans]
 
 > Strategy Arguments
 

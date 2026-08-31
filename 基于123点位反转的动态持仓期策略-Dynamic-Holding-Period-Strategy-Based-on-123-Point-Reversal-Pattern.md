@@ -11,77 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/994efb5209428c5e23.png)
 
-[trans]
-#### 概述
-本策略是一个基于市场价格形态识别的量化交易系统,主要通过识别123点位反转形态来捕捉市场潜在的反转机会。策略结合了动态持仓期管理和移动平均线过滤,通过多重条件验证来提高交易的准确性。该策略采用精确的数学模型来定义入场点,并使用200日均线作为辅助退出条件,形成了一个完整的交易系统。
-
-#### 策略原理
-策略的核心逻辑基于价格形态识别,具体包含以下关键要素:
-1. 入场条件设计
-- 当日最低价需低于前一日最低价
-- 前一日最低价需低于3天前最低价
-- 2天前最低价需低于4天前最低价  
-- 2天前最高价需低于3天前最高价
-以上四个条件同时满足时,系统会发出做多信号。
-
-2. 退出机制设计
-- 设定默认持仓期为7天
-- 使用200日简单移动平均线(SMA)作为动态退出条件
-- 当价格触及或超过200日均线时触发平仓信号
-- 持仓时间达到设定天数后自动平仓
-
-#### 策略优势
-1. 形态识别准确性高
-- 采用多重条件验证机制
-- 通过价格高低点的相对位置关系严格定义入场条件
-- 降低了误判概率
-
-2. 风险控制完善
-- 设定固定持仓期限制最大损失
-- 使用长期均线作为趋势过滤器
-- 具备双重退出机制保护盈利
-
-3. 操作规则明确
-- 入场退出条件清晰明确
-- 参数可根据市场情况灵活调整
-- 便于实盘执行和回测验证
-
-#### 策略风险
-1. 形态识别局限性
-- 在震荡市场可能产生虚假信号
-- 剧烈波动时段准确率下降
-- 需要配合其他技术指标验证
-
-2. 参数优化风险
-- 固定持仓期可能不适合所有市场环境
-- 移动平均线周期选择影响策略表现
-- 过度优化可能导致过拟合
-
-3. 市场适应性风险
-- 在强趋势市场中反转信号可靠性降低
-- 不同市场条件下表现差异较大
-- 需要定期评估策略有效性
-
-#### 策略优化方向
-1. 入场信号优化
-- 增加成交量确认机制
-- 引入动量指标作为辅助判断
-- 考虑加入波动率过滤器
-
-2. 退出机制完善
-- 实现动态持仓期管理
-- 增加移动止损功能
-- 开发多层次利润目标
-
-3. 风险控制增强
-- 建立仓位管理系统
-- 设计回撤控制机制
-- 添加市场情绪指标
-
-#### 总结
-该策略通过严格的形态识别和完善的风险控制体系,为交易者提供了一个可靠的市场反转捕捉工具。虽然存在一定的局限性,但通过持续优化和适当的参数调整,该策略能够在不同市场环境下保持稳定的表现。建议交易者在实际应用中结合市场经验,对策略进行针对性调整,以获得更好的交易效果。
-
-|| 
 
 #### Overview
 This strategy is a quantitative trading system based on market price pattern recognition, primarily designed to capture potential market reversal opportunities by identifying 123-point reversal patterns. The strategy combines dynamic holding period management with moving average filtering, utilizing multiple condition verification to enhance trading accuracy. It employs precise mathematical models for entry point definition and uses a 200-day moving average as an auxiliary exit condition, forming a complete trading system.
@@ -151,7 +80,6 @@ When all four conditions are met simultaneously, the system generates a long sig
 
 #### Summary
 The strategy provides traders with a reliable market reversal capture tool through strict pattern recognition and comprehensive risk control systems. While certain limitations exist, continuous optimization and appropriate parameter adjustments enable the strategy to maintain stable performance across different market environments. Traders are advised to combine market experience with strategy-specific adjustments in practical applications to achieve better trading results.
-[/trans]
 
 
 

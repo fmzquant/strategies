@@ -11,43 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/1236e7a319497ca218d.png)
-[trans]
-
-## 策略概述
-本策略 named 动态滤波器量化交易策略(Dynamic Filter Quant Trading Strategy),主要使用范围滤波器指标结合多种技术指标,实现对加密货币BTCUSDT的自动化趋势跟踪交易。策略适用于高频量化交易,通过动态调整止损止盈来锁定利润,降低回撤。
-
-## 策略原理
-本策略的核心指标是范围滤波器(Range Filter),它基于统计价格变动范围,生成一个中线。当价格突破该中线时产生交易信号。此外,策略还结合RSI指标判断超买超卖、均线判断趋势、MACD判断动量等指标进行组合过滤,形成更可靠的交易信号。
-
-具体来说,范围滤波器中线是根据价格变动范围的指数移动平均线得到,方向判断则是根据突破该中线的力度和速度。当价格连续数根K线突破中线时就产生强势突破信号。
-
-RSI指标判断超买超卖状态用于确认滤波器信号。均线朝上时判断为趋势向上,朝下时则判断为趋势向下。MACD指标则判断市场动量是否足够形成趋势。
-
-综合这几个指标的判断,可以识别出比较可靠的趋势突破点作为建立持仓的时机。
-
-## 优势分析
-本策略最大的优势是结合多种指标进行决策,而不是依赖单一技术指标,可以有效减少错误交易的概率,确保交易信号更加可靠。此外,动态调整参数也使得策略可以适应市场的变化。
-
-另一个优势是可以进行高频交易。范围滤波器指标对小周期价格变动很敏感,这意味着策略可以在较短时间内打开和平仓,因此非常适合高频并允许在波动较大的加密货币市场获利。
-
-## 风险分析
-本策略依然存在一定的风险。首先是技术形态判断失效的风险,因为指标并不能百分之百确保价格走势。当价格出现反转时,可能会导致止损。
-
-另一个主要风险是范围滤波器中线并不能完全过滤掉价格震荡。当出现比中线范围更大的价格波动时,中线将失效,导致产生错误信号的风险。这种情况下,可以适当宽松参数,扩大中线范围。
-
-最后,高频交易本身也存在一定风险。当交易频率过高时,交易费用会较大,可能会抵消部分利润。这种情况下,可以适当减小交易频率和持仓时间。
-
-## 策略优化
-本策略还有进一步优化的空间。例如可以考虑结合更多指标,例如波动率指标确认趋势,落实更严格的过滤条件,以确保交易信号更加精确。或者研究不同加密货币和股票的价格行为规律,设定最适合它们的指标参数。
-
-从交易逻辑上,也可以设置动态止损和止盈幅度。也就是说,持仓量变大时扩大止损范围锁定更多利润。或者在盈利较大时加快止盈速度。这可以在一定程度上减少回撤。
-
-最后,可以对滤波器参数进行优化,找到一组参数使得中线范围既可以有效过滤震荡,又可以尽量捕捉到趋势转折点。这需要大量回测数据进行迭代分析。
-
-## 总结
-本策略成功结合多种指标进行判断,形成高可靠性的交易策略,适合应用于高频量化交易。经过持续优化和改进,相信可以获得稳定收益,值得进一步开发。
-
-||
 
 ## Strategy Overview  
 This strategy named Dynamic Filter Quant Trading Strategy mainly uses Range Filter indicator combined with multiple technical indicators to implement automated trend tracking trading of the cryptocurrency BTCUSDT. The strategy is suitable for high-frequency quant trading by dynamically adjusting stop loss and take profit to lock in profits and reduce drawdowns.
@@ -82,7 +45,6 @@ Finally, the filter parameters can be optimized to find a set of parameters so t
 
 ## Summary
 This strategy successfully combines multiple indicators for judgment to form a highly reliable trading strategy suitable for high-frequency quantitative trading. With continuous optimization and improvement, it is believed that stable returns can be obtained and it is worth further development.
-[/trans]
 
 > Strategy Arguments
 

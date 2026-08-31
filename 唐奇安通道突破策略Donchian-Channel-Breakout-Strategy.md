@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 策略原理
-
-唐奇安通道突破策略是一种基于唐奇安通道的趋势跟踪策略。该策略使用不同周期的最高价和最低价来确定多头和空头的入场点以及止损点。
-
-策略的入场规则是:当价格突破指定周期(如20天)的最高价时,做多;当价格突破指定周期(如10天)的最低价时,做空。
-
- EXIT规则是:多头头寸以中轨或下轨止损;空头头寸以中轨或上轨止损。中轨是指定周期(如10天)的最高价和最低价的平均价。
-
-假设交易品种为BTCUSDT,参数设置如下:
-
-- 多头入场周期:20天
-- 多头止损周期:10天
-- 是否中轨止损:是
-- 空头入场周期:10天  
-- 空头止损周期:20天
-- 是否中轨止损:是
-
-那么入场和止损规则是:
-
-- 当价格超过20天内最高价时,在该点多仓入场
-- 多仓止损点为10天内最高价和最低价的中点 
-- 当价格跌破10天内最低价时,在该点空仓入场
-- 空仓止损点为20天内最高价和最低价的中点
-
-通过动态调整入场和止损周期参数,可以在不同市场周期进行优化,在趋势行情中获得较好的收益。
-
-## 策略优势
-
-- 利用突破来判断趋势方向,可以抓住强势行情
-- 止损点接近当前价格,有利于控制风险
-- 参数调整灵活,可针对不同周期进行优化
-
-## 策略风险
-
-- 突破交易容易被套,需要谨慎确定突破有效性
-- 止损点靠近价格,在震荡行情中止损概率较大
-- 参数设置不当可能导致过于频繁出场或无法及时止损
-
-## 总结
-
-唐奇安通道突破策略以突破来判断趋势方向,止损点设定为通道中点或上下轨,可有效控制风险。通过优化参数设置,可以提高策略在趋势行情中的抓捕率。但需注意突破的效力判断及谨慎使用,以避免被套或过频交易。综合来说,该策略适合追捕中长线趋势行情,但不宜在震荡行情中使用。
-
-
-||
 
 # 
 
@@ -100,7 +54,6 @@ By dynamically adjusting the lookback periods, the strategy can be optimized acr
 
 The Donchian channel breakout uses breakouts to identify trends, with channel midpoints/bands as stops to control risk. Optimizing lookback periods can improve trend capture in strong moves. However, caution is needed on breakout validity and shakeouts. Overall this strategy suits mid- to long-term trend trading, but may struggle in choppy markets.
 
-[/trans]
 
 > Strategy Arguments
 

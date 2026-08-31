@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1585534f072aa9ed2db.png)
 
-[trans]
-
-概述:该策略利用MACD指标在多个时间框架上生成交易信号,实现趋势跟踪。其基本思路是在高周期时间框架确认趋势方向,然后在低周期时间框架寻找具体的入场时机。
-
-策略原理:
-该策略使用MACD指标的差离线和信号线的交叉来判断趋势方向。具体而言,它在高周期时间框架(默认60分钟)计算MACD差离线和信号线。当差离线上穿信号线时产生买入信号,下穿信号线时产生卖出信号,用于确认总体趋势方向。
-
-然后策略会在低周期时间框架(当前周期)对MACD进行计算,当差离线和信号线发生交叉时,进入相应的仓位。所以高周期用于判断趋势方向,低周期用于寻找具体的入场点位。
-
-该策略还使用柱状图的颜色变化来辅助判断趋势,绿色柱表示正在上涨,红色柱表示正在下跌。
-
-优势分析:
-1. 多时框架设计,高周期确定趋势方向,低周期寻找入场点位,系统性好。
-
-2. 利用MACD指标的交叉来判断买卖时机,指标参数经过优化,信号比较可靠。
-
-3. 柱状图颜色辅助判断目前趋势状态,形成多重验证,提高决策的准确性。
-
-4. 自动追踪趋势运行,无需过多人工干预,减少情绪化判断错误。
-
-风险分析:
-1. MACD作为跟踪中长期趋势的指标,在短期内可能产生错误信号导致不必要的损失。 
-
-2. 多时框架策略由于需要同时考量多个周期,参数优化和测试难度较大。
-
-3. 策略没有设置止损,可能带来较大亏损。
-
-优化方向:
-1. 优化MACD的参数,寻找最佳的参数组合。
-
-2. 增加止损机制,限制最大损失。
-
-3. 评估是否需要加入其它指标进行信号过滤,提高信号质量。  
-
-4. 测试不同的时框架组合,找到最优时框架匹配。
-
-总结:
-本策略整体设计系统性好,同时结合MACD指标的多重优点,能够有效跟踪中长线趋势。但由于未设置止损,难以避免短期损失扩大的风险,这是需要进一步优化的方向。总的来说,该策略以其较强的趋势跟踪能力,为量化交易提供了一个高质量的选股和决策框架。通过不断优化参数和模型,有望进一步扩大获利空间,提高策略的稳定性。
-
-||
 
 Overview: This strategy uses the MACD indicator to generate trading signals across multiple time frames to track trends. The core idea is to confirm the trend direction in higher time frames and then look for specific entry opportunities in lower time frames.  
 
@@ -89,7 +49,6 @@ Optimization Directions:
 Summary: 
 The strategy is well designed systemactically and combines multiple strengths of the MACD indicator to effectively track medium-long term trends. However, the lack of a stop loss mechanism means short term losses can easily expand, which needs to be improved. Overall, with strong trend following capabilities, the strategy provides a high-quality framework for stock picking and decision making in quantitative trading. Further optimizations in parameters and models can expand profit potential and improve stability.
 
-[/trans]
 
 > Strategy Arguments
 

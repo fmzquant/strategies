@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略名为RSI_OTT-TP/SL。该策略结合了RSI指标和OTT波带来进行交易信号的判断,属于趋势跟踪策略。策略通过RSI指标判定市场趋势方向,并利用OTT波带来定位具体的入场点。策略还允许用户设置止盈止损比例,可以自动止盈止损来锁定利润或者规避损失。
-
-## 策略原理
-
-1. 此策略使用RSI和OTT两种指标来判断趋势和入场点。
-
-2. RSI用于判断整体趋势方向。RSI指标可以显示市场是超买还是超卖,RSI上穿设置的超卖区域则为超买信号,下穿超卖区域则为超卖区域。本策略默认RSI长度为6,超买线为50,超卖区域也为50。
-
-3. OTT波带用于发现入场点。它是在波动率指标VAR的基础上形成的波带。当价格从下向上突破OTT下轨时,为做多信号;当价格从上向下跌破OTT上轨时,为做空信号。
-
-4. 在趋势判断和入场点确认后,本策略会在突破OTT波带时开仓做多或做空。
-
-5. 止盈止损设置了输入框,可以让用户自行设置。当止盈或止损价格触发时,策略会自动平仓。
-
-6. 该策略还允许仅做多、仅做空或者双向交易。
-
-## 策略优势
-
-1. 结合RSI和OTT波带,可以在趋势判断准确的前提下找到高概率的入场点。
-
-2. OTT波带利用动量指标,对价格波动具有很强的敏感性,可以提前发现转折点。
-
-3. 策略提供止盈止损功能,可以锁定利润,也可以在亏损扩大前止损出场,有利于风险控制。
-
-4. 代码结构清晰,注释充分,易于理解和修改。
-
-5. 策略参数可以通过界面灵活调整,适应不同市场环境。
-
-
-## 策略风险
-
-1. RSI指标存在滞后问题,可能错过趋势转折点,从而导致不必要的亏损。
-
-2. OTT波带也可能产生误报信号,建议结合K线形态来验证。
-
-3. 止盈止损设置不当也会影响策略表现,需要针对不同品种调整参数。
-
-4. 策略仅基于单品种回测,实盘中不同品种参数需要单独优化。
-
-5. 回测时间窗口较短,可能无法完整验证策略有效性,建议扩大回测周期。
-
-
-## 优化方向
-
-1. 可以考虑加入其他指标进行过滤,例如MACD、KD等,减少入场误报。
-
-2. 可以基于波动率的方法来动态调整止盈止损幅度。
-
-3. 可以研究不同品种的参数优化,制定参数选择标准。
-
-4. 可以尝试机器学习方法来动态优化策略参数。
-
-5. 可以加入量价确认,避免假突破。也可以利用均量指标来判断趋势。
-
-6. 可以考虑以穿越MA作为止损方式,而不是简单的比例止损。
-
-## 总结
-
-本策略整体来说是一个典型的趋势跟踪策略。它首先通过RSI判断趋势方向,然后利用OTT波带辅助确定具体入场时点,最后设置止盈止损来锁定利润和控制风险。该策略优点是指标组合简单有效,回测表现也较好。但也存在一些问题,如RSI滞后、波带误报等风险。这需要我们在实盘应用时,对参数进行细致优化,还可以加入其他技术指标进行确认,从而提高策略稳定性。如果能持续优化和验证,本策略可以成为一个非常实用的趋势跟踪策略模板。
-
-||
 
 ## Overview
 
@@ -137,7 +72,6 @@ This strategy is named RSI_OTT-TP/SL. It combines RSI indicator and OTT bands to
 
 In summary, this is a typical trend following strategy. It first judges the trend direction through RSI, then uses OTT bands to assist in determining specific entry points, and finally sets take profit and stop loss to lock in profits and control risks. The advantages of this strategy are simple and effective indicator combinations and good backtest results. But there are also some risks like RSI lag and OTT band false signals. This requires us to optimize parameters carefully in live trading, and add other technical indicators for confirmation to improve strategy stability. With continuous optimization and verification, this strategy can become a very practical trend following strategy template.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/673f558bdac0e91900.png)
 
-[trans]
-#### 概述
-该策略基于99周期简单移动平均线(MA99)来判断交易信号。当价格触及MA99时即可开仓,无需两根K线确认。而止损则采用动态止损,即当价格突破MA99并在下一根K线中得到确认时,即平仓止损。该策略旨在捕捉价格在MA99附近的波动,同时通过动态止损来控制风险。
-
-#### 策略原理
-1. 计算99周期简单移动平均线MA99。
-2. 判断当前价格是否触及MA99,即最低价低于等于MA99且最高价高于等于MA99。
-3. 若价格触及MA99且收盘价高于MA99,则做多;若价格触及MA99且收盘价低于MA99,则做空。
-4. 对于多头仓位,若收盘价跌破MA99且下一根K线再次确认,则平仓;对于空头仓位,若收盘价突破MA99且下一根K线再次确认,则平仓。
-5. 每次开仓时,将当前MA99设为止损价位;每次平仓后,重置止损价位。
-
-#### 策略优势
-1. 简单易用:该策略基于单一指标MA99,规则清晰明了,易于理解和实施。
-2. 动态止损:与固定止损相比,动态止损可以更好地适应市场变化,及时控制风险。
-3. 趋势跟踪:MA99代表中长期趋势,在价格触及MA99时开仓,能够跟随主要趋势方向交易。
-4. 减少噪音:相比于使用更短周期的均线,99周期均线能够有效过滤短期波动噪音。
-
-#### 策略风险
-1. 参数优化:该策略仅使用了99这一参数,可能并非最优参数,需要通过回测和优化来确定最佳参数。
-2. 震荡市:在震荡市场中,价格在MA99附近频繁波动,可能导致频繁交易和损失。
-3. 趋势转折:当趋势转折、价格突破MA99后,该策略可能会继续持有错误方向的仓位而遭受损失。
-4. 滑点成本:频繁交易可能会带来较高的滑点和交易成本,影响策略收益。
-
-#### 策略优化方向
-1. 引入趋势过滤:在判断开仓信号时,可以结合其他趋势指标如MACD、ADX等,以确认趋势强度和方向,提高开仓质量。
-2. 优化参数:对MA周期、止损条件等参数进行优化,找到最佳参数组合,提高策略稳健性。
-3. 加入仓位管理:根据市场趋势强度、波动率等因素动态调整仓位大小,控制回撤风险。
-4. 考虑交易成本:在回测和实盘中,应考虑交易滑点、手续费等成本因素,以评估策略实际表现。
-
-#### 总结
-MA99接触与动态止损策略通过判断价格与MA99的关系来开仓,并采用动态止损来控制风险。该策略简单易用,能够跟随中长期趋势,但在震荡市中可能面临频繁交易的问题。通过引入其他指标过滤、优化参数、仓位管理和考虑成本等措施,可以进一步提升该策略的表现和稳健性。
-
-|| 
 
 #### Overview
 This strategy is based on the 99-period Simple Moving Average (MA99) to determine trading signals. When the price touches the MA99, a position can be opened without requiring confirmation from two candles. The stop-loss uses a dynamic approach, meaning that when the price breaks through the MA99 and is confirmed in the next candle, the position is closed for stop-loss. This strategy aims to capture price fluctuations around the MA99 while controlling risk through dynamic stop-loss.
@@ -75,7 +42,6 @@ This strategy is based on the 99-period Simple Moving Average (MA99) to determin
 
 #### Summary
 The MA99 Touch and Dynamic Stop-Loss Strategy opens positions based on the relationship between price and MA99 and uses dynamic stop-loss to control risk. This strategy is simple and easy to use, capable of following medium to long-term trends, but may face the problem of frequent trading in choppy markets. By introducing other indicators for filtering, optimizing parameters, managing positions, and considering costs, the performance and robustness of this strategy can be further improved.
-[/trans]
 
 
 

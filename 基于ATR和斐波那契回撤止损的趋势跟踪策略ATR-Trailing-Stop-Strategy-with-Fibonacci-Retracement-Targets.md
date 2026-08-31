@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/da94a9b61d9c7a1e1e.png)
-[trans]
-
-## 概述
-本策略结合平均真实波动范围(ATR)和斐波那契回撤线,设计一个有止损保护的趋势跟踪策略。当价格突破ATR回撤止损线时,进行趋势跟踪;同时利用斐波那契回撤线来设置价格目标,实现趋势跟踪和止损止盈的有机配合。
-
-## 策略原理
-1. 计算ATR值和ATR回撤止损线。ATR回撤止损线是ATR值乘以一个因子(如3.5)得到的。
-2. 计算三条斐波那契回撤线作为止盈目标。斐波那契回撤线定位是ATR回撤止损线到新高/新低点之间的斐波那契割合(如61.8%, 78.6%, 88.6%)。
-3. 当价格突破ATR回撤止损线时,产生买入/卖出信号,进行趋势跟踪。
-4. 止盈目标为三条斐波那契回撤线。
-
-## 策略优势
-1. ATR止损可以有效控制风险,防止亏损扩大。
-2. 斐波那契目标可以在趋势中获利较多,同时也避免追高杀跌。
-3. 策略操作逻辑清晰简单,容易实施。
-4. 可灵活调整ATR比例因子和斐波那契设置来适应不同市场。
-
-## 策略风险
-1. 在震荡行情中,ATR止损可能被频繁触发,带来操作频繁的风险。
-2. 存在一定的错过回调或调整的风险。
-3. 需要合理参数优化,如ATR周期参数等。
-
-## 优化方向  
-1. 可以结合趋势判断指标,避免在震荡行情中操作。
-2. 可以添加重新入场机制,以减少错过回调的风险。
-3. 对ATR周期、ATR倍数、斐波那契参数进行测试和优化。
-
-## 总结
-本策略整合ATR止损和斐波那契目标两个重要的技术分析方法,既可以在趋势中进行利润优化,也可以用止损来控制风险,是一种实用性很强的趋势跟踪策略。通过进一步优化可以使策略更稳定、更适应行情。
-
-||
 
 ## Overview
 This strategy combines Average True Range (ATR) trailing stop and Fibonacci retracement lines to design a trend following strategy with stop loss protection. When price breaks through the ATR trailing stop line, the strategy starts to follow the trend. At the same time, Fibonacci retracement lines are used to set price targets, achieving an organic combination of trend following, stop loss and take profit.  
@@ -70,7 +39,6 @@ This strategy combines Average True Range (ATR) trailing stop and Fibonacci retr
 ## Summary
 The strategy integrates two important technical analysis methods – ATR trailing stop and Fibonacci retracement for trend following, risk control and profit targeting. With further optimizations, it can become a very practical trend trading strategy that is more robust and adaptive to market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1418b72bb1844af468e.png)
-[trans]
-
-## 概述
-
-本策略名称为“多重均线交易策略”。该策略利用MACD指标与多重均线的交叉作为交易信号,结合ZLSMA指标辅助判断趋势,设定止盈止损Exiting逻辑,实现自动化交易。
-
-## 策略原理  
-
-1. 计算MACD指标的快线、慢线和MACD柱。设置金叉做多,死叉做空。
-
-2. 计算5日线、25日线、45日线、100日线四条均线。均线越长代表趋势持续性越强。
-
-3. 计算两组均线之间的距离,如果距离超过某一阈值,说明均线发散,可设定为交易信号。
-
-4. 计算ZLSMA指标,表示价格中长线趋势方向。ZLSMA形成拐点时可判断趋势转折。
-
-5. 结合MACD指标交叉、均线发散信号和ZLSMA趋势判断,设定多空交易策略。
-
-6. 设置止盈止损点,实现自动化Exiting逻辑。
-
-## 优势分析
-
-1. 多重过滤信号提高策略效率。MACD指标与均线发散信号可相互验证,避免假突破。
-
-2. ZLSMA指标辅助判断中长期趋势方向,避免逆势交易。
-
-3. 自动化Exiting设定止盈止损点,降低人为干预频率。
-
-## 风险分析  
-
-1. 参数设置不当可能导致过度交易或漏单。需要优化参数以达到最佳效果。  
-
-2. 固定止盈止损点会限制获利空间或扩大损失。可以结合ATR指标设置动态止损。
-
-3. 均线策略对震荡行情效果不佳,可考虑辅助其他指标或人工干预。
-
-## 优化方向  
-
-1. 优化均线参数组合,测试不同长度均线的效果。
-
-2. 测试加入其他指标,如KDJ、BOLL等判断买卖点。 
-
-3. 尝试动态止损策略,根据波动率设置止损位置。
-
-4. 加入机器学习模型,自动寻找最优参数。
-
-## 总结
-
-本策略整合MACD指标、多重均线和ZLSMA趋势判断实现自动化交易。通过多重信号过滤提高策略稳定性,设置Exiting逻辑降低风险,具有一定的实战价值。后续通过参数优化、指标扩展、止损动态化等手段可进一步提升策略表现。
-
-||
 
 ## Overview
 
@@ -110,7 +59,6 @@ The strategy is named "Multiple Moving Average Trading Strategy". It utilizes th
 
 This strategy integrates MACD, multiple moving averages and ZLSMA trend determination to achieve automated trading. By filtering with multiple signals, strategy stability is improved; by setting exiting logic, risks are reduced. There is certain practical value for real trading. Subsequent parameter optimization, indicator expansion, dynamic stops etc. can further improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/169b87d8b015d0ccd89.png)
-[trans]
-
-## 概述
-
-高斯波浪预测策略是一种基于高斯滤波的量化交易策略。它利用高斯滤波的平滑特性,对价格序列进行多次滤波,产生多个平滑后的价格序列。然后结合这些价格序列的多项式拟合,实现对未来价格的预测。根据预测结果,进行长仓或短仓的建议。
-
-## 策略原理
-
-该策略的核心是高斯滤波算法。高斯滤波器是一种线性平滑滤波器,它使用高斯函数作为权重。策略中设置参数p为滤波窗口大小。然后通过三角函数计算出滤波系数alfa。每个价格序列ret\\[i\\]表示对原始价格序列进行i次高斯滤波后的结果。
-
-策略运用递归的思想。首先用alfa和原始价格序列price,计算出第一次滤波ret。然后基于ret再进行第二次滤波,得到ret2。如此重复多次。最后结合多个价格序列,拟合出曲线预测未来价格ret4。如果预测价格高于当前实际价格,则做多;如果低于当前价格,则做空。
-
-这样通过多次滤波,可以更加平滑和拟合出趋势。同时结合多项式拟合,实现对短期内价格走势的预测。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用高斯滤波平滑价格。可以有效过滤掉高频噪音,使得策略更稳定。
-
-2. 递归进行多次滤波。可以更好地拟合出价格趋势,预测效果更佳。
-
-3. 基于多项式拟合预测价格。可以对短期价格走势建模,从而产生交易信号。
-
-4. 结合当前价格与预测价格进行判断。交易信号直接与趋势预测相结合,避免错失交易机会。
-
-5. 实现简单,容易理解和优化。可以作为高频策略的基础模块,扩展其他分析指标。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 高斯滤波器对突发价格变化的平滑作用,可能错过短期交易机会。
-
-2. 多项式拟合存在过拟合风险。如果价格变化模式突变,会导致预测效果下降。
-
-3. 滤波窗口大小和拟合多项式阶数需要精确设定。如果不当可能失败。
-
-4. 只依赖开盘价格作为交易信号。无法在内盘进行交易操作。
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 增加模型训练和滑动窗口重新训练机制。使策略参数动态调整,减少过拟合风险。
-
-2. 结合更多价格指标和特征。丰富策略输入,使预测更稳定。
-
-3. 增加止损机制。设置最大损失比例,避免极端行情造成重大损失。
-
-4. 优化仓位管理。根据预测准确率和波动率动态调整仓位。
-
-5. 尝试基于主流机器学习模型的预测。如LSTM等深度学习模型。进一步提高策略预测能力。
-
-## 总结
-
-本策略总体来说是一个利用高斯滤波和多项式拟合进行价格预测的高频量化策略。它有着一定的优势,但也存在改进空间。通过结合更多特征,引入动态调参、止损机制等模块进行优化,可以使策略效果更出色。本策略为高频策略奠定了基础,值得进一步研究。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a high-frequency quantitative strategy that performs price prediction using Gaussian filter and polynomial fitting. It has certain advantages but also room for improvement. By incorporating more features, introducing dynamic parameter tuning, stop loss mechanisms etc, the strategy effect could be much better. This strategy lays the foundation as a basic module for further research and optimization of high-frequency strategies.
 
-[/trans]
 
 > Strategy Arguments
 

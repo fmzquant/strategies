@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ea1fb4a77fbb0620a3.png)
-[trans]
-
-### 概述
-
-该策略采用布林带突破来检测交易信号,实现了对MCL和YG两个正相关资产的配对交易。当MCL价格触碰布林带上轨时,做多MCL和做空YG;当MCL价格触碰布林带下轨时,做空MCL和做多YG,实现对价格趋势的顺势交易。
-
-### 策略原理  
-
-首先,该策略基于一定周期内的收盘价计算出SMA均线和标准差StdDev。然后在SMA均线上下各添加一个偏移量,形成布林带的上轨和下轨。当价格触碰上轨时产生买入信号,触碰下轨时产生卖出信号。
-
-该策略采用了布林带的突破交易思路,即价格突破上轨时看多,突破下轨时看空。布林带通过动态调整通道宽度来适应市场变化,能够有效过滤震荡市场的噪音。与固定通道不同,布林带的通道宽度会随着市场波动性的变化而扩大或缩小。在波动性较大时,布林带上下轨间隙较大,可以过滤掉部分噪音。而在波动性较小时,布林带上下轨间隙较小,可以捕捉较小的突破信号。
-
-对两个正相关资产MCL和YG进行配对交易。当MCL突破上轨时,表明MCL价格处于上升趋势,此时做多MCL,同时做空YG,即买入较强的资产,卖出较弱的资产,以获利于两个资产价格差异的扩大。
-
-### 策略优势
-
-1. 基于布林带的突破交易,能有效过滤市场噪音,识别趋势
-2. 采用相关资产配对,可以获得正相关资产价格差异的alpha收益
-3. 动态调整头寸规模,有效控制个别交易的风险
-4. 采用标准的突破入场和回归中轴出场逻辑,策略逻辑简单清晰
-
-### 策略风险
-
-1. 布林带参数设置不当可能导致交易频率过高或信号不明显
-2. 相关资产之间相关性降低会导致配对交易 alpha 收益的下降
-3. 突破交易容易被波动市场的假突破欺骗,从而产生损失
-4. 无止损导致单笔损失可能扩大
-
-可以通过优化参数,选择相关性更强、流动性较好的交易对象,设定合理的止损位置等方法来降低风险。
-
-### 策略优化
-
-1. 优化布林带参数,寻找最佳参数组合
-2. 测试更多相关资产作为交易对象,选择相关性更强的组合
-3. 增加止损逻辑,限制单笔损失
-4. 增加更多过滤条件,避免被假突破欺骗
-5. 结合其他指标如交易量的确认,改进入场Timing
-
-### 总结
-
-该策略整体来看较为简单直接,通过布林带捕捉趋势,配对交易获得alpha收益。但存在一些参数优化、止损以及配对选择等可优化空间。通过测试不同参数、交易对象,并适当引入趋势过滤等方法,可以获得更好的策略效果。
-
-|| 
 
 ### Overview
 
@@ -94,7 +51,6 @@ Risks can be reduced by optimizing parameters, selecting assets with stronger co
 
 Overall the strategy is simple and straightforward, capturing trends with Bollinger Bands and gaining alpha from pair trading. But there is room for improvement in parameters tuning, stop loss, and pair selection. Further testing of parameters, trading vehicles, trend filters etc. can improve the strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

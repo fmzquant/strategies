@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过组合使用T3均线、T3黄金分割均线和MavilimW加权移动均线,在价格与均线关系发生变化时产生交易信号。属于趋势跟踪类策略。
-
-## 策略原理  
-
-1. 分别计算T3均线、T3黄金分割均线和MavilimW加权移动均线。
-
-2. 价格与均线的突破、回调可以产生买入和卖出信号。
-
-3. 结合多个均线,可以进行交易信号过滤,提高信号质量。
-
-4. 设置止损策略来控制单笔损失。
-
-5. 可选择单独或组合使用多种均线交易系统。
-
-## 优势分析
-
-1. 多均线组合可以提高信号准确率,互相验证。
-
-2. 每种均线对趋势变化响应不同,组合使用可以取得优势。
-
-3. 交易信号直观,由均线的关系形成。
-
-4. 设置止损有助于风险控制。
-
-5. 代码清晰,容易理解原理及自定义。
-
-## 风险分析
-
-1. 均线组合也会出现错误信号导致损失。
-
-2. 无法有效判断价格趋势中断的节点。
-
-3. 均线参数设置不当会影响策略表现。
-
-4. 可能需要频繁调整持仓,增加交易成本。
-
-5. 优化过程中可能过度优化导致过拟合。
-
-## 优化方向
-
-1. 测试不同均线参数,找到最佳组合。
-
-2. 评估其他趋势指标添加进行信号过滤。
-
-3. 优化止损策略参数,降低单笔亏损风险。 
-
-4. 研究价格周期模式,判断趋势中断关键点。
-
-5. 添加趋势指标,避免不必要反转交易。
-
-6. 采用动态仓位管理策略,优化资金使用效率。
-
-## 总结
-
-该策略通过组合多种均线交易系统,形成互相验证的交易信号。但多均线组合也存在错误信号风险。需要持续进行参数优化测试,并辅以风险控制手段,将其打造成一个稳定的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -129,7 +68,6 @@ This strategy combines the T3, T3 Fibonacci and MavilimW moving averages to gene
 
 This strategy combines multiple MA systems for mutual signal verification. But MA combos still have false signal risks. Continual parameter optimization and risk controls can turn it into a robust trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

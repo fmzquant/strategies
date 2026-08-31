@@ -9,77 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于顿希安通道指标,以价格突破通道上下轨作为交易信号的方式,实现 stock/futures/crypto/forex 等品种的趋势跟踪操作,属于中长线持仓的趋势突破策略。
-
-## 策略原理
-
-1. 计算给定周期(如20日)的最高价和最低价,得到顿希安通道的上轨和下轨。
-
-2. 通道中位线为上下轨的平均值。上轨突破为趋势转多信号,下轨突破为趋势转空信号。
-
-3. 当价格收盘突破上轨时,判断为趋势启动,做多入场。
-
-4. 当价格跌破中位线时,视为止盈出场。
-
-5. 可参考回测时间段,生成实际的交易信号。
-
-6. 可选的,也可以以价格突破下轨为做空信号。
-
-该策略通过突破通道判断趋势启动,以中位线为止盈出场点, Capture 中长线趋势行情。通道参数可调整适应市场。
-
-## 优势分析
-
-1. 顿希安通道计算简单,指标易于实现。
-
-2. 价格突破通道可以判断趋势变化。
-
-3. 通道中位线作为止盈位,设置合理。
-
-4. 交易信号规则清晰,易于执行。
-
-5. 可灵活调整通道参数,适应多种品种和周期。
-
-6. 可评估长线或短线交易效果。
-
-7. 扩展空间大,可引入其他技术指标。 
-
-## 风险分析
-
-1. 通道突破出现滞后,错过早期机会的风险。
-
-2. 未考虑突破前的背离,可能产生错误信号。
-
-3. 中位线止损范围固定,对市场冲击敏感。 
-
-4. 回测周期选择不当可能导致过拟合。
-
-5. 未设立止损策略,需关注亏损扩大的风险。
-
-## 优化方向
-
-1. 测试优化通道周期参数。
-
-2. 评估其他类型移动平均线作为止盈线。
-
-3. 增加成交量等指标的过滤条件。
-
-4. 设立移动止损或跟踪止损策略。
-
-5. 引入机器学习预测价格突破。
-
-6. 优化资金管理策略,设立盈亏比。
-
-7. 考虑长短线混合操作 or 多品种组合。
-
-## 总结
-
-该策略以顿希安通道为基础,判断趋势方向,以突破操作,属于典型的中长线趋势跟踪策略。优化通道参数并辅以其他技术指标,可以形成较为稳定的突破系统。此策略 thought 简洁清晰,可拓展空间大,可作为量化交易的一个基础策略模块,具有很好的实用性。
-
-|| 
 
 ## Overview
 
@@ -149,7 +78,6 @@ The strategy determines trend start by channel breakouts, uses midline as profit
 
 This strategy uses Donchian Channel to determine trend direction, trading breakouts, a typical mid-to-long term trend following approach. Optimizing channel parameters and adding other technical indicators can form a more robust breakout system. The clear and concise logic allows expansions, making it a foundational quant strategy module with great practical utility.
 
-[/trans]
 
 > Strategy Arguments
 

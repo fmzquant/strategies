@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a8fb7ba490fa6f0785.png)
-[trans]
-## 概述
-
-本策略的核心思想是结合多个时间框架来识别市场趋势,采用高级时间框架上的超越指标作为过滤器,在低级时间框架上发出买入和卖出信号。该策略旨在利用高时间框架提供的市场结构信息来提高交易决策的质量。
-
-## 策略原理
-
-该策略通过调用security函数获取高级时间框架(默认为4倍当前时间框架)的超越指标值。超越指标包括两个线:超越线和趋势线。当超越线处于趋势线之上时为看涨信号,之下时为看跌信号。
-
-该策略将高时间框架超趋势的方向作为过滤条件,只有低时间框架超趋势的方向与高时间框架一致时,才会发出交易信号。也就是说,只有两个时间框架上的超趋势指标都发出同向信号时,本策略才会做多或做空。
-
-这样可以避免受到低时间框架市场噪音的干扰,提高信号的可靠性。同时利用高时间框架判断市场结构,做出正确的整体判断。
-
-## 策略优势
-
-- 利用高时间框架提供的市场结构信息,过滤掉低时间框架的噪音,提高交易决策的质量
-- 结合多个时间框架分析,使得交易信号更加可靠
-- 可自定义超趋势指标的参数,优化买入卖出策略
-- 内置日期范围设置,可以限制回测的时间范围
-
-## 风险分析
-
-- 高时间框架信号发出滞后,可能错过短线机会
-- 高时间框架判断市场结构存在错误概率
-- 超趋势指标本身也可能发出错误信号
-- 回测时间范围限制可能忽略重要数据,影响测试结果准确性
-
-解决方法:
-
-- 适当调整高时间框架设置,降低信号滞后
-- 结合其他指标确认高时间框架结构判断
-- 优化超趋势指标参数,提高信号质量
-- 逐步扩大回测时间范围,测试策略稳健性
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化超趋势指标参数,寻找最佳参数组合
-2. 增加其他指标进行组合,形成多因子模型
-3. 测试不同的高低时间框架组合
-4. 增加止损机制来控制风险
-5. 结合机器学习算法动态调整超参数
-
-通过参数优化、组合指标、改进止损以及引入机器学习等方法,可以显著提升该多时间框架趋势跟踪策略的效果。
-
-## 总结
-
-本策略巧妙地利用高时间框架的趋势判断来指导低时间框架的交易执行。这种多时间框架设计可以有效过滤市场噪音,识别更清晰的趋势方向。同时内置日期设置功能使回测更加灵活。总的来说,这是一个精心设计的多时间框架趋势跟踪策略,值得进一步研究与应用。
-
-||
 
 ## Overview
 
@@ -112,7 +61,6 @@ Through parameter optimization, combining indicators, improving stops loss, and 
 
 This strategy cleverly leverages higher timeframe trend judgements to guide trade execution in lower timeframes. Such multitimeframe design can effectively filter out market noise and identify clearer trend directions. The built-in date settings also make backtesting more flexible. Overall, this is a well-designed multitimeframe trend tracking strategy that merits further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

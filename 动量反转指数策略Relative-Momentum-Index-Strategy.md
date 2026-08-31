@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12591b9386780ef286c.png)
 
-[trans]
-
-### 概述
-
-动量反转指数(Relative Momentum Index,RMI)策略是基于动量指数的改良策略。该策略通过计算一段时间内价格变化的动量,判断市场是否处于超买或超卖状态,以捕捉反转机会。
-
-### 策略原理
-
-RMI策略的计算公式如下:
-
-```
-xMom = xPrice - xPrice[Length]  //计算Length周期内的价格变动
-xMU = 如果xMom >= 0:之前xMU减去xMU/Length加上xMom;否则:之前xMU 
-xMD = 如果xMom <= 0:之前xMD减去xMD/Length加上xMom的绝对值;否则:0
-RM = xMU / xMD  
-RMI = 100 * (RM / (1 + RM))
-```
-
-该策略首先计算Length周期内的价格变动xMom。如果xMom>=0,表示价格上涨,则xMU累加xMom;如果xMom<0,表示价格下跌,则xMD累加xMom的绝对值。RM是xMU和xMD的比值,代表涨跌力度。RMI对RM做归一化处理,得到0-100之间的指数。
-
-当RMI高于阈值SellZone时,表示超买,做空;当RMI低于阈值BuyZone时,表示超卖,做多。
-
-### 策略优势
-
-- RMI指数相比RSI指数,更加灵敏,能更早捕捉价格反转机会。
-- RMI对涨跌力度进行度量,不会受到震荡行情的影响。
-- RMI以动量为基础,能更准确判断超买超卖状态。
-
-### 策略风险
-
-- 和其他反转策略一样,RMI策略存在被套利的风险。强势行情下买点会被突破。
-- RMI参数需要针对不同品种进行优化,否则效果可能不佳。
-- 需要合理设置超买超卖阈值,否则会产生过多虚假信号。
-
-可通过适当放宽止损点位、优化参数组合、与趋势策略组合等方式降低风险。
-
-### 策略优化
-
-RMI策略可从以下几个方面进行优化:
-
-- 优化Length参数,选择能最大化策略收益的周期长度。
-- 优化超买超卖阈值,降低虚假信号概率。
-- 增加止损机制,控制单笔损失。
-- 与趋势跟踪或均线策略组合,提高胜率。
-- 根据不同品种特点选择合适的交易时段,提高策略稳定性。
-
-### 总结
-
-RMI策略通过测量价格动量变化,进行反转操作,可有效捕捉短线回调机会。相比RSI策略,RMI策略更灵敏,不受震荡影响。但该策略仍存在被套期风险,需优化参数并配合趋势策略使用,才能发挥最大效果。
-
-||
 
 
 ### Overview
@@ -112,7 +61,6 @@ RMI strategy can be improved from the following aspects:
 
 RMI strategy captures short-term pullback opportunities by measuring price momentum change. Compared to RSI, RMI is more sensitive and robust to consolidation. But risks of being stopped out exist. Parameters need to be optimized and combined with trend strategies to maximize performance.
 
-[/trans]
 
 > Strategy Arguments
 

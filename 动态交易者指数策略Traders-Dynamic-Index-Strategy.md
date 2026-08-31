@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/370a4632524d154605.png)
-[trans]
-
-## 概述
-
-该策略运用动态交易者指数(TDI)作为主要技术指标,结合不同周期的移动平均线进行交易信号生成。其目的是发掘超买超卖情况下的反转机会。
-
-## 策略原理
-
-该策略首先计算close的RSI值,长度为13周期。然后计算RSI的34周期简单移动平均线,再以1.6185乘以RSI的34周期标准差作为上下轨。其中上轨为移动平均线加上偏移量,下轨为移动平均线减去偏移量。移动平均线即为中轨。
-
-之后计算RSI的快速MA,长度为2周期;和慢速MA,长度为7周期。再从更高周期取得这些指标的历史值。当快速MA从上方向下穿越慢速MA时,产生买入信号;当快速MA从下方向上穿越慢速MA时,产生卖出信号。
-
-## 优势分析
-
-该策略利用RSI指标的 mean reversion 特性,结合动量指标 implement 反转交易。RSI上下轨反映超买超卖区域,中轨反映平均价位。快慢MA的交叉反映动量变化和反转机会。整体而言,该策略捕捉反转点精准,回撤控制理想。
-
-具体来说,RSI上下轨设定了合理的超买超卖阈值,有助于及时发现异常情况。中轨把握了均衡价位。快速MA过滤了短期噪音,慢速MA判断了中期趋势。二者配合使用,可有效识别反转机会。此外,不同周期指标的组合运用,使策略在多个时间尺度上进行确证,降低了误判风险。
-
-## 风险分析
-
-该策略主要基于反转交易,存在一定的时效性风险。如果行情出现长期的非理性扩张,如踏空行情,该策略会产生连续亏损。此外,如果快慢MA设置不当,可能错过部分反转机会或产生误判。一定程度的参数优化是必要的。
-
-为控制上述风险,建议适当调整MA周期,或增加止损机制等。当市场进入非理性阶段时,应降低仓位甚至停止交易。总体而言,针对特定市场环境进行策略调整是关键。
-
-## 优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 测试不同长度的RSI周期参数,找到对当前市场更合适的设置
-
-2. 优化快速MA和慢速MA的长度,平衡捕捉反转和过滤噪音
-
-3. 增加基于波动率的止损方式,以控制最大回撤 
-
-4. 尝试在下单逻辑中加入其他因子,如交易量变化等,提高成功率
-
-5. 测试在多时间框架下REUSE同一套交易信号的效果
-
-6. 开发参数自适应优化机制,使策略参数动态调整
-
-## 总结
-
-该RSI反转策略整体构架合理,交易逻辑清晰可解释。具有可定制空间和优化潜力。在参数调整和风险控制到位的情况下,其捕捉反转机会的能力值得期待。下一步将通过更多回测和参数调整来优化策略,提高策略抗风险能力和收益水平。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 The overall framework of this RSI reversal strategy is reasonable with clear and interpretable logic. It has customizable space and optimization potential. With proper parameter tuning and risk control, its ability to capture reversals is promising. The next step is to further optimize the strategy through more backtesting and parameter adjustment, to improve its robustness and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e0e6dd823a4bce8cd2.png)
-[trans]
-
-## 概述
-
-该策略是一种简单的移动平均线交叉策略。它在快速EMA上穿越慢速EMA时做多,在快速EMA下穿慢速EMA时做空。该策略结合止损、止盈和移动止损,可以有效控制风险。
-
-## 策略原理
-
-该策略基于快慢移动平均线。快线是9日EMA,慢线是21日EMA。当快线从下方上穿越慢线时,做多。当快线从上方下穿慢线时,做空。平仓信号则相反,快线下穿时平多单,上穿时平空单。
-
-止损根据 close 的一定百分比设置,止盈根据 close 的一定百分比设置。移动止损根据 close 的一定百分比设置,当价格达到该水平时,止损移动到开仓价格。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略逻辑简单清晰,容易理解和实现
-2. 利用了移动平均线的趋势跟踪功能,可以有效捕捉趋势
-3. 结合止损、止盈和移动止损,可以有效控制风险
-4. 参数调整灵活,可以针对不同市场进行优化
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 移动平均线具有滞后性,可能错过调头信号
-2. 止损或止盈设置不当可能造成不必要的损失或利润损失
-3. 参数设置不当可能导致过于频繁交易或漏掉交易机会
-
-解决方法:
-
-1. 合理设置移动平均线参数,优化参数
-2. 调整止损、止盈百分比,确保设置合理
-3. 针对不同市场调整参数,避免过于频繁交易
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同长度的移动平均线参数组合
-2. 根据不同市场波动程度调整止损、止盈和移动止损百分比
-3. 添加其他技术指标过滤信号,优化入场时机
-4. 结合统计技术或机器学习方法动态优化参数
-
-## 总结
-
-该移动平均线交叉金策略整体而言逻辑清晰、易于实现,同时结合止损、止盈和移动止损控制了风险。通过合理参数设置以及针对不同市场进行优化调整,该策略可以获得较好的效果。但仍需注意误报风险和参数优化难度。
-
-||
 
 ## Overview
 
@@ -106,7 +57,6 @@ The strategy can be optimized by:
 
 Overall, this moving average crossover gold strategy has clear logic and is easy to implement. With stop loss, take profit and break-even, it controls risks. With proper parameter tuning and optimization for different markets, it can achieve good performance. But the risks of whipsaws and difficulty of parameter optimization need to be noted.
 
-[/trans]
 
 > Strategy Arguments
 

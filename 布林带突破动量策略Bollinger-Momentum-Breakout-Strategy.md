@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9c4ae181dd06bbf92a.png)
-[trans]
-
-### 概述
-
-该策略通过布林带指标判断市场趋势方向,结合RSI指标过滤阳离子信号,实现追涨杀跌的动量突破操作。其基本思路是:当价格突破布林带上轨时看涨入场,当价格突破布林带下轨时看跌入场。
-
-### 策略原理  
-
-1. 布林带指标判断价格突破上轨时,表示市场进入看涨行情,这时用RSI指标过滤,RSI大于60时产生买入信号;布林带指标判断价格突破下轨时,表示市场进入看跌行情,这时用RSI指标过滤,RSI小于40时产生卖出信号。  
-
-2. 入场后设置止损,避免亏损扩大。
-
-3. 出场条件为价格重新跌破布林中轨时平买单,价格重新涨破布林中轨时平卖单。
-
-### 优势分析
-
-1. 布林带指标可以判断市场主要趋势,捕捉行情转折点。结合RSI指标过滤可以提高信号的可靠性。
-
-2. 追涨杀跌的操作方式可以实现超额收益。
-
-3. 设置止损点可以控制风险。
-
-### 风险分析  
-
-1. 布林带指标对于盘整行情判断效果不佳,容易产生假信号。
-
-2. 止损点设置不当可能造成亏损扩大。
-
-3. 交易频繁,易受交易费用和滑点的影响。
-
-4. 突破信号判断需要及时更新,否则可能错过最佳入场时机。 
-
-### 优化方向  
-
-1. 结合其他指标判断布林带指标突破信号的可靠性。例如成交量,移动平均线等。
-
-2. 动态调整布林带参数,优化指标性能。
-
-3. 优化止损位置。如跟踪止损,百分比止损等方法。减少无谓损失。
-
-
-### 总结
-
-该策略整体思路清晰,通过布林带判断市场趋势和RSI指标过滤,实现动量式的趋势追踪。具有如下特点:操作频繁,盈亏快速,追求超额收益的交易者比较适合。但交易频繁也增加了交易成本,对资金管理和心态控制要求较高。通过参数优化,止损策略优化,可以进一步提高策略的稳定性和盈利能力。
-
-||
 
 ### Overview
 
@@ -100,7 +54,6 @@ This strategy uses Bollinger Bands to determine market trend direction combined 
 
 The strategy has a clear logic to determine market trend through BB and filter signals with RSI for momentum trend chasing. It features high operation frequency, fast profit/loss cycles, more suitable for traders pursuing excess returns. However, high trading frequency also increases transaction costs and requires strict capital management and emotional control. Further performance and stability improvement can be achieved through parameter optimization and stop loss optimization.
 
-[/trans]
 
 > Strategy Arguments
 

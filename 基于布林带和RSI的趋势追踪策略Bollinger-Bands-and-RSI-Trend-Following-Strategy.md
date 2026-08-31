@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/128dee946bf59433b22.png)
 
-[trans]
-
-### 概述
-
-该策略综合利用布林带、RSI指标以及200期移动平均线来识别趋势方向,在趋势方向合适时,在布林带上下轨附近进行反转交易,从而获利。
-
-### 策略原理 
-
-首先,使用200期移动平均线判断大致趋势方向,价格在上时定义为多头趋势,价格在下时定义为空头趋势。其次,当处于多头趋势时,如果RSI指标显示过卖并接近布林带下轨时,执行买入操作;当处于空头趋势时,如果RSI指标显示过买并接近布林带上轨时,执行卖出操作。最后,使用ATR指标设置止损位,目标盈利为止损位的2倍。
-
-### 优势分析
-
-该策略最大的优势在于综合运用多个指标判断趋势方向和交易时机。首先,200日移动平均线能够有效判断大趋势方向。其次,布林带上下轨能够显示价格可能反转的区域。最后,RSI指标显示了价格可能反转的时机。多重指标的运用避免了单一指标判断失误的风险。
-
-### 风险分析 
-
-该策略主要风险在于大趋势判断错误以及反转信号发出错误。如果大趋势判断错误,很可能导致不断损失;如果反转信号发出错误,止损被触发的几率会比较大。此外,反转htrading本身就具有较高风险,需要谨慎操作。
-
-为规避上述风险,建议适当调整移动平均线参数,或增加其他指标进行确认,从而提高判断准确性。此外建议适当放宽止损幅度,避免止损过于容易触发。
-
-### 优化方向 
-
-该策略优化空间较大,可从以下几个方面入手:第一,调整移动平均线参数,优化判断大趋势的准确性。第二,调整布林带参数或增加卡尔曼通道,以提高价格反转区域判断的效果。第三,增加 MACD 等其他指标进行反转确认,减少错误信号。第四,优化止损比例设置,降低实际止损被触发概率。
-
-### 总结
-
-本策略综合运用布林带、RSI 指标与移动平均线判断趋势和交易时机,实现了较好的效果。但仍需进一步优化参数设置及风险管理,以提高稳定盈利能力。总体而言,该策略思路清晰、易于实现,值得进一步研究与应用。
-
-||
 
 ### Overview
 
@@ -67,7 +38,6 @@ There is large room for optimizing this strategy: first, adjust the parameters o
 
 This strategy combines Bollinger Bands, RSI and Moving Averages to determine trends and timing, and has achieved good results. But further optimization on parameter tuning and risk control is needed to improve profit stability. Overall, with clear logic and easy implementation, it is worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

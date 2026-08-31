@@ -9,16 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-RSI均线突破VWAP策略
-
-该策略将RSI指标运用于VWAP上,根据RSI指标突破阈值的方向决定做多做空方向。具体来说,当RSI指标上穿超买线时做空;当RSI指标下穿超卖区时做多。此外,策略还设置在超买超卖区连续突破一定周期后强制止损退出。
-
-该策略的优点是同时利用RSI判断超买超卖状态和VWAP判断价格趋势方向,可以有效过滤错误信号。但也存在滞后识别趋势反转的风险。适当调整RSI参数以及连续突破的周期数值可以优化策略。
-
-总之,RSI均线突破VWAP策略结合了多种指标以识别交易机会,但需要仔细测试与调参以适应不同市场环境。只有控制好风险,才能长期运用该策略。
-
-||
 
 This strategy applies RSI indicator on VWAP, and determines long/short direction based on RSI threshold breakouts. Specifically, it goes short when RSI breaks above overbought level, and goes long when RSI breaks below oversold level. It also forces exit after consecutive threshold breaks for a certain period.
 
@@ -26,7 +16,6 @@ The advantage of this strategy is utilizing both RSI for overbought/oversold and
 
 In summary, the RSI breakout VWAP strategy combines multiple indicators to identify trading opportunities, but requires careful testing and tuning to adapt to different market conditions. Controlling risk is crucial in order to apply this strategy in the long run.
 
-[/trans]
 
 > Strategy Arguments
 

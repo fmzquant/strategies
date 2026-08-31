@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/134269a5b75a42232e6.png)
-[trans]
-
-### 概述
-
-本策略利用平均真实波幅指标和价格计算出的上下轨形成的升降通道,在价格突破通道时产生交易信号。策略具有突出的趋势跟踪能力。
-
-### 策略原理  
-
-本策略首先计算ATR指标作为价格波动的度量,然后结合最高价、最低价、收盘价的平均值,计算出上轨和下轨。当价格上涨突破下轨时,产生买入信号;当价格下跌突破上轨时,产生卖出信号。这样,形成一个自适应的升降通道,跟踪价格趋势。  
-
-在入市后,策略会设置目标利润点数和止损点数,当价格达到目标点数时止盈,如果回撤达到止损点数则止损。
-
-### 优势分析
-
-本策略最大的优势在于其出色的趋势跟踪能力。升降通道能够自适应地调整,捕捉价格趋势的变化。同时,ATR指标的运用也提供了一定的顺势操作的保证。此外,策略中的止盈止损机制也使得盈亏控制更为明确。
-
-### 风险分析  
-
-本策略的一个主要风险在于容易产生较多的空仓期。当价格处于震荡时,常常导致上下通道被频繁触发,则会产生较多无效交易。此外,止损点数设置也会直接影响最终收益。
-
-为降低这些风险,可以考虑优化ATR参数或调整通道宽度,使通道更加贴近真实趋势。此外,也可以结合其他指标过滤入市时机。  
-
-### 优化方向
-
-本策略可以从以下几个方面进行优化:  
-
-1. 优化ATR参数。可以测试不同周期参数,使ATR更好地反映真实波动。
-
-2. 通道宽度优化。可以测试不同的乘数值,确定最佳参数。
-
-3. 增加其他指标过滤。比如结合MACD指标判断买卖点,可以一定程度上减少无效交易。  
-
-4. 停损点数和止盈点数优化。测试不同参数对最终收益率的影响。
-
-5. 考虑夏普率或盈亏比作为优化目标。以更全面地评估策略质量。
-
-### 总结
-
-本策略通过自适应升降通道和突破原理实现了出色的趋势跟踪。同时也具备了相对清晰的止盈止损逻辑。通过一定的参数和规则优化,有望进一步增强策略的动态跟踪性能,使之能够适用于更广泛的市场环境。
-
-||
 
 ### Overview   
 
@@ -90,7 +49,6 @@ The strategy can be enhanced in several aspects:
 
 The strategy leverages the adaptive channel breakout model to achieve great trend following ability. It also has clear risk control mechanisms. With further parameter tuning and logic enhancement, it has the potential to work even better across various market conditions and asset classes.
 
-[/trans]
 
 > Strategy Arguments
 

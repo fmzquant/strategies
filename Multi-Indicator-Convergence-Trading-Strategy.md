@@ -9,30 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-多重指标融合交易策略
-
-多重指标融合交易策略通过综合运用RSI、TD Sequential、MACD和布林带等多个指标的信号,在趋势行情中捕捉较高概率的交易机会。
-
-策略原理:
-
-1. 计算14周期RSI,设定RSIdifference参数作为买入卖出的阈值,当RSI低于(50 - RSIdifference)则产生买入信号,当RSI高于(50 + RSIdifference)则产生卖出信号。
-
-2. 计算MACD指标,当MACD历史柱连续5柱为正值时产生买入信号,当连续5柱为负值时产生卖出信号。
-
-3. 计算TD Sequential指标,当TD连续2柱上涨时判定为买入信号,当TS连续2柱下跌时判定为卖出信号。
-
-4. 计算20日布林带,价格突破上轨和下轨时产生相应的买入卖出信号。
-
-5. 只有当RSI、MACD、TD Sequential的三个指标同时发出同方向的信号时,且布林带无背离信号时,才生成最终的买入卖出决策。
-
-6. 根据止盈止损参数设定收益目标和止损点。
-
-该策略综合多个指标的优势,避免单一指标的假信号。同时通过布林带指标过滤,可在趋势行情中获得较高概率的交易机会。但指标参数设定需要反复测试优化,且必须保证同时满足四个指标条件时信号较少,避免过度交易。
-
-总体来说,该多重指标策略能在趋势明显时获取较高概率的交易机会,但需要仔细参数优化,且指标信号必须审慎处理,避免过于积极交易。
-
-||
 
 
 
@@ -56,7 +32,6 @@ This strategy combines the strengths of multiple indicators to avoid false signa
 
 Overall, this multi-indicator strategy can capture high probability setups during strong trends, but requires careful parameter tuning, and conservative use of indicator signals to avoid excessive trading.
 
-[/trans]
 
 
 > Strategy Arguments

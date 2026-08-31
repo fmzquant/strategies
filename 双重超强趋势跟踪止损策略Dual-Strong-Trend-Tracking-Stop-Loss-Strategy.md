@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6c30d4788579677714.png)
-[trans]
-
-## 概述
-
-本策略基于超强指数平滑移动平均线和相对强弱指数,设计了双重趋势跟踪机制,可以准确判断行情趋势,并设定合理的止损止盈点。策略具有止损点随行情跟踪、止盈点根据趋势设定、双重趋势判断等特点,可以有效控制 einzelnen交易的风险,在趋势行情中获得超强收益。
-
-## 策略原理
-
-1. 计算超强指数平滑移动平均线(Super Trend),判断主要趋势方向。超强指数平滑移动平均线能够准确判断趋势方向,并给出理想的入场点。
-
-2. 计算相对强弱指数(RSI),作为辅助判断趋势指标。RSI高位时为超买区,表示牛市趋势;RSI低位时为超卖区,表示熊市趋势。
-
-3. 当关闭价跨过超强指数平滑移动平均线时,做多;当关闭价跌破超强指数平滑移动平均线时,做空。
-
-4. 合理设定止损止盈点。做多时,以超强指数平滑移动平均线作为止损线,以超强指数平滑移动平均线加合理盈利为止盈点;做空时,以超强指数平滑移动平均线作为止损线,以超强指数平滑移动平均线减合理盈利为止盈点。
-
-5. 止损点会随着行情波动进行浮动。如行情向有利方向发展,止损线会向有利方向移动,确保利润。
-
-6. 当RSI与超强指数平滑移动平均线方向一致时,表示目前趋势较强,此时策略才会入场。当RSI与超强指数平滑移动平均线方向不一致时,表示趋势转折的可能,此时策略会暂时离场。
-
-## 优势分析
-
-- 双重趋势判断机制,可以减少错误信号,增强策略稳定性。
-
-- 停损点随趋势移动,可以最大程度锁定利润,避免止损过早。
-
-- RSI指标的运用,可以过滤掉部分弱势的交易信号。
-
-- 合理设定止盈位置,让利润最大化。
-
-- 策略参数可调节,可以根据不同品种和行情特点进行优化。
-
-- 策略回撤可控,具有较强的风险管理能力。
-
-## 风险分析
-
-- 若遇到突发事件,如重大政策消息,行情可能出现剧烈波动,导致止损点被突破,造成较大亏损。可以适当放宽止损点,或在重大风险事件来临前及时离场。
-
-- 参数设置不当,可能导致止损止盈点设定不合理,扩大亏损或缩小盈利。可以通过反复回测寻找最佳参数组合。
-
-- 多空混战阶段,RSI和超强指数平滑移动平均线可能出现一定背离,导致策略产生错误交易信号。这时可以暂时不交易,等待明确趋势再入场。
-
-## 优化方向
-
-- 优化ATR周期参数,使之更符合不同品种的特点。
-
-- 优化RSI参数设置,找到更稳定可靠的辅助趋势判断条件。
-
-- 结合其他指标判断,如布林带、KDJ等,设定更精准的入场出场依据。
-
-- 测试不同的止盈策略,如跟踪止盈、阶梯止盈、影线止盈等,优化盈利水平。
-
-- 根据回测结果调整仓位管理策略,降低单笔交易风险。
-
-## 总结
-
-本策略整体具有较强的稳定性和持续盈利能力。双重趋势判断机制可以有效过滤噪音,止损止盈策略可以锁定盈利并控制风险。通过不断优化参数设置和入场出场条件,可以使策略在不同市场环境中获得良好表现。总体来说,本策略可作为量化交易的优秀策略模板,值得重点研究和应用。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ This strategy is designed with dual trend tracking mechanisms based on Supertren
 
 The strategy demonstrates overall strong stability and profitability. The dual trend judgment filters out noise effectively and the stop loss/profit taking strategy locks in profits and controls risks. Continuous optimization of parameters and entry/exit conditions will enable great performance across different market environments. It can serve as an excellent template strategy for quantitative trading and is worth in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

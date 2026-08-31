@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-
-## 策略原理
-
-该策略融合均线指标和霍尔曲线指标来识别市场趋势方向,并追踪趋势运行。
-
-主要交易逻辑是:
-
-1. 计算麦基尼动态均线,判断市场总体趋势方向
-
-2. 霍尔曲线指标穿越发出具体做多做空信号
-
-3. 可选择辅助指标进行信号验证 
-
-4. 根据止损和止盈原则设定风险管理机制
-
-5. 霍尔曲线反向时平仓止损
-
-该策略简化了趋势跟踪过程,旨在以机械化系统匹配市场节奏,降低个人思维的影响。
-
-## 策略优势 
-
-- 均线判定总体方向,辅助指标可选择
-
-- 霍尔曲线产生明确做多做空信号
-
-- 风险管理规则化,降低失误
-
-## 策略风险
-
-- 参数设定和过滤条件需要测试优化
-
-- 趋势判断准确性存有不确定性 
-
-- 霍尔曲线可能滞后产生错误信号
-
-## 总结
-
-该策略旨在以机械化系统匹配趋势,简化操作流程。但参数优化和指标限制仍需注意,以提高稳定性。
-
-
-||
 
 ## Strategy Logic
 
@@ -92,7 +49,6 @@ The strategy aims to mechanically systematize trend following, minimizing indivi
 
 This strategy seeks to systematize trend following operations to match market rhythm. But parameter optimization and indicator limitations warrant caution for stability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,25 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans] 
-本策略名称为“MACD和RSI指标融合的震荡市场交易策略”。该策略专门针对最近较为扩张的加密货币震荡盘整市场而设计,通过结合趋势指标MACD和动量指标RSI形成交易信号。
-
-MACD为指数移动平均线差值,可以判断市场趋势和趋势反转。当MACD的快线上穿慢线时产生买入信号;而快线下穿慢线时产生卖出信号。
-
-RSI为相对强弱指数,判断市场超买超卖情况。RSI高于50表示超买,低于50表示超卖。本策略采用RSI指标来过滤MACD指标产生的部分噪音信号。
-
-具体交易策略如下:
-
-当MACD快线上穿慢线,代表短期趋势由跌转涨,但必须在RSI低位(低于预设参数)时才能确认买入信号,避免在超买区域反转带来亏损;
-
-当MACD快线下穿慢线,代表短期趋势由涨转跌,但必须在RSI高位(高于预设参数)时才能确认卖出信号,避免在超卖区域反转亏损。
-
-该策略适用于最近较为发育的加密货币横盘震荡市场,抓住高位低位反转的机会获得利润。但必须采取止损措施限制单笔亏损。此外,MACD和RSI参数需要根据市场调整,才能产生较为可靠的交易信号。
-
-总体来说,MACD和RSI指标的融合运用,可以提高震荡盘整市场的交易策略效果。但任何技术指标都无法完美预测市场,交易者还需要保持对市场趋势的判断力,灵活调整策略。
-
-
-||
 
 This strategy is named "Trading Strategy for Oscillating Markets Combining MACD and RSI Indicators". It is designed specifically for the recent oscillating and ranging crypto markets, generating trade signals by integrating the trend indicator MACD and the momentum oscillator RSI.
 
@@ -45,7 +26,6 @@ This strategy suits the current oscillating and ranging crypto markets to captur
 
 In conclusion, combining MACD and RSI can improve strategy effectiveness for oscillating markets. But no indicators can perfectly predict markets. Traders still need sound market trend judgment and flexible strategy adjustment.
 
-[/trans]
 
 > Strategy Arguments
 

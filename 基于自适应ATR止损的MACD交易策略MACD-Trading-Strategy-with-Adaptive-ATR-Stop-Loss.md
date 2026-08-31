@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用MACD指标产生交易信号,并使用基于ATR的自适应止损来控制风险。属于趋势跟踪类策略。
-
-## 策略原理
-
-1. MACD指标的差离值delt折线突破0轴产生买入和卖出信号。
-
-2. 基于最近N周期的ATR计算动态止损位。ATR可以反映市场波动率。
-
-3. 止损位随着波动率变动而自适应调整,在波动加大时止损会放宽。
-
-4. 在持有信号时实时更新止损位,以锁定利润并控制风险。
-
-5. 当止损位触发时退出持仓,完成风险控制。
-
-## 优势分析
-
-1. MACD指标对于跟踪趋势较为敏感。
-
-2. 动态止损可以自适应市场环境,避免止损过近或过远。
-
-3. 可视化的止损位划线,直观反映风险情况。
-
-4. 策略规则简单清晰,容易理解实现。
-
-5. 回撤可控,风险管理效果良好。
-
-## 风险分析
-
-1. MACD指标可能产生假信号导致不必要的亏损。
-
-2. ATR参数设定不当,止损过近或过远的问题。
-
-3. 止损过于频繁被触发的风险。
-
-4. 趋势反转时难以及时止损。
-
-5. 参数优化时可能存在过拟合风险。
-
-## 优化方向
-
-1. 测试不同参数MACD的组合,寻找最优参数。
-
-2. 尝试其他止损方式,如追踪止损等。
-
-3. 优化止损参数,平衡止损频率和风险控制。
-
-4. 添加趋势判断机制,避免反转止损。
-
-5. 考虑交易成本的影响,防止过度交易。
-
-6. 采用滑点或增强止损确保止损生效。
-
-## 总结
-
-该策略基于MACD指标发信号,采用自适应ATR动态止损。具有风险可控、简单实用的特点。但MACD信号易出现误判,同时止损机制需要不断优化。整体来说,通过参数调整、优化止损策略等,可以将其打造成一个较稳健的趋势跟踪交易系统。
-
-||
 
 
 ## Overview
@@ -130,7 +69,6 @@ This strategy uses the MACD indicator to generate trading signals and adaptive A
 
 This strategy trades MACD signals with adaptive ATR dynamic stops. It features controllable risks and simplicity. But MACD signals may be false, and stops need continual optimization. Overall, with parameter tuning, stop optimization etc, it can become a robust trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

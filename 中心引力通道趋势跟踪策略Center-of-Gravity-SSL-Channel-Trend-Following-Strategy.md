@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略融合了中心引力指标和SSL通道指标,实现价格趋势的判断和突破跟踪,属于趋势跟踪类策略。同时结合动态ATR止损来控制风险。
-
-## 策略原理 
-
-1. 计算中心引力指标,其中上轨和下轨分别为价格上涨和下跌的趋势界限。
-
-2. 计算SSL通道指标,通道内部为盘整区间,通道外部为趋势方向。
-
-3. 当价格突破上轨或通道时判断为上涨趋势并做多;当价格突破下轨或通道时判断为下跌趋势并做空。
-
-4. 在持仓时使用动态ATR止损来跟踪止损位,避免亏损扩大。
-
-5. 结合回测时间段来产生实际的交易信号。
-
-该策略同时利用两个指标判断趋势方向,一个用来判断突破,一个用来确认趋势,二者结合可以提高判断准确性。动态止损可以根据市场波动幅度来调整止损位,是一个非常实用的风险控制手段。
-
-## 优势分析
-
-1. 同时利用两个指标判断趋势,可以提高准确率。
-
-2. 中心引力指标对趋势变化敏感,SSL通道判断趋势方向 cleared。
-
-3. 动态ATR止损根据市场波动实时调整止损位,具有灵活性。 
-
-4. 策略规则简单清晰,易于理解和实现。
-
-5. 参数优化空间大,可以针对不同市场进行调整。
-
-6. 回测功能完备,可以验证策略效果。
-
-## 风险分析
-
-1. 中心引力指标和SSL通道都可能出现失效的情况,导致交易信号错误。可以加入其他指标进行确认。
-
-2. 动态止损可能过于激进,可以适当放宽止损幅度。
-
-3. 回测时间段选择不当可能导致策略效果不佳,需要针对不同市场阶段进行回测。
-
-4. 需要充分考虑交易成本的影响。
-
-## 优化方向
-
-1. 测试不同参数组合,找到最佳参数对。
-
-2. 优化动态止损的ATR周期和倍数参数。
-
-3. 引入其他指标进行信号过滤,如MACD、KDJ等。
-
-4. 增加机器学习模型来辅助判断趋势方向。
-
-5. 优化资金管理,设定仓位控制。
-
-6. 针对具体品种进行参数调整和优化。
-
-## 总结
-
-该策略结合中心引力指标和SSL通道指标来判断趋势,使用动态ATR止损控制风险,是一个可实际操作的趋势跟踪策略。通过参数优化、引入其他指标以及机器学习等方式进行改进,可以进一步提升策略稳定性和实战效果。总体来说,该策略具有较强的实用性和拓展性,是量化交易的一个值得参考的策略思路。
-
-|| 
 
 ## Overview
 
@@ -133,7 +70,6 @@ The strategy utilizes two indicators to determine trends, one for detecting brea
 
 This strategy combines Center of Gravity and SSL Channel to determine trends, and uses dynamic ATR stop loss to control risks. It is an actionable trend following strategy. Further improvements can be made via parameter optimization, introducing other indicators and machine learning etc. Overall this is a highly practical and expandable strategy, serving as a valuable reference for algorithmic trading.
 
-[/trans]
 
 > Strategy Arguments
 

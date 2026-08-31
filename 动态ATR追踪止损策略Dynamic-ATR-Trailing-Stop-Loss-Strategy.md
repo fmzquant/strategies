@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19ee28b8d0b477a4c94.png)
-[trans]
-
-### 概述
-
-本策略是基于ATR指标设计的动态追踪止损机制,可以在保证止损的同时,实时调整止损位置,争取更大盈利。
-
-### 策略原理  
-
-策略使用快速ATR周期5和慢速ATR周期10构建双层动态追踪止损。当价格运行向有利方向时,快速层会第一时间启动追踪,收紧止损位置;当价格短期回调时,慢速层的止损位置可以避免过早止损。同时,快慢速层之间的交叉作为交易信号。 
-
-具体来说,快速层的止损距离为0.5倍5周期ATR,慢速层的止损距离为3倍10周期ATR。当快速层向上突破慢速层时产生买入信号;当快速层向下跌破慢速层时产生卖出信号。止损线也会实时更新,并画在价格曲线之下。
-
-### 优势分析
-
-该策略最大的优势是可以动态调整止损位置,在保证止损的前提下,最大限度争取更多盈利。相比固定止损距离,动态ATR止损线可以根据市场波动程度作出调整,降低止损被激活的概率。
-
-此外,双层ATR设计可以平衡止损的灵敏度。快速层响应迅速,慢速层则可以过滤掉短期噪音,避免过早止损。
-
-### 风险分析  
-
-该策略主要的风险在于止损距离设定是否合理。如果ATR倍数设置过大,止损幅度将跟不上价格运行。如果ATR倍数过小,则容易被短期噪音止损。所以需要根据不同品种的特点调整参数。
-
-此外,在盘整行情中,ATR值较小,止损线靠得较近,容易被频繁止损。所以该策略更适合具有一定波动率的品种。
-
-### 优化方向
-
-可以尝试不同的ATR周期参数组合,寻找最佳平衡。此外可以考虑和其他指标配合使用,例如趋势指标判断市场阶段,从而动态调整ATR倍数的大小。    
-
-也可以研究替代ATR指标的可能性。将ATR改为DKVOL、HRANGE或ATR百分比等指标值,可能可以获得更好的止损效果。
-
-## 总结  
-
-本策略基于ATR指标设计了双层动态追踪机制,既可争取更大盈利,有可避免过度止损。适合对止损要求较高的用户。该策略可根据市场和品种特点灵活调整参数,从而达到最佳止损效果。
-
-
-|| 
 
 ### Overview  
 
@@ -79,7 +43,6 @@ It is also possible to study alternatives to the ATR indicator, replacing ATR wi
 
 This strategy designs a dual-layer dynamic trailing mechanism based on the ATR indicator to maximize profits while avoiding excessive stop loss. It is suitable for users who have higher requirements for stop loss. This strategy can flexibly adjust parameters according to market and variety characteristics to achieve optimal stop loss effect.
 
-[/trans]
 
 > Strategy Arguments
 

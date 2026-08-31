@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11313da58fe220ebbd8.png)
-[trans]
-## 概述
-
-该策略通过组合使用布林带指标和相对强弱指数RSI指标来进行交易信号的生成。它监测三根K线的收盘价是否同时突破上轨或下轨,并结合涡轮指标和RSI指标来确认交易信号。
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 使用长度为20的布林带,当价格收盘突破上轨或下轨时,考虑发出交易信号
-2. 要求三根K线的收盘价同时突破,避免假突破
-3. 结合涡轮指标,强势超买时VIP>1.25,强势超卖时VIM>1.25,过滤信号
-4. 结合RSI指标判断是否超买超卖,RSI上穿70考虑做空,RSI下穿30考虑做多
-5. 当满足上述条件时,产生做多或做空信号
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 三重BB bands过滤假突破,确保突破的可靠性
-2. 涡轮指标判断市场实力,避免不利行情的交易
-3. RSI指标判断超买超卖区域,结合布林带指标进行入场
-4. 多种指标组合,综合判断市场情况,信号可靠性较高
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 布林带指标对参数很敏感,需要优化长度和 StdDev 倍数
-2. 涡轮指标对周期参数也较为敏感,不同市场需要调整
-3. RSI指标容易产生背离,也可能错过趋势
-4. 若三指标判断产生分歧,则无法入场,会错过部分机会
-
-风险控制措施包括:
-
-1. 优化参数,tested取胜率最高的参数
-2. 结合其他指标,例如交易量过滤
-3. 适当放宽指标判断逻辑,防止错失良机
-
-## 优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 对布林带指标的长度和StdDev倍数进行优化,找到最佳参数
-2. 对涡轮指标的周期进行优化,使其更符合不同市场
-3. 增加其他指标判断,例如交易量、macd等,丰富多元化信号
-4. 调整指标判断逻辑,防止指标分歧导致无法入场
-5. 增加止损策略,以控制单笔交易的最大损失
-
-## 总结
-
-该策略综合运用多种指标进行判断,在确保信号可靠性的同时,也存在一定问题。通过参数优化、丰富信号来源、调整判断逻辑以及止损等手段,可以进一步增强策略的稳定性和盈利能力。它为量化交易提供了一个很好的思路。
-
-||
 
 ## Overview  
 
@@ -117,7 +63,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy combines multiple indicators for judgment. While ensuring signal reliability, it also has some problems. Through parameter optimization, enriched signal sources, adjusted judgment logic and stop loss, etc., the stability and profitability of the strategy can be further enhanced. It provides a good idea for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

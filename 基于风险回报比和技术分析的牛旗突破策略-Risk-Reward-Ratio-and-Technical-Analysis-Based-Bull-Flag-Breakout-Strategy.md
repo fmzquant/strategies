@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/181b485cee4d9deada5.png)
 
-[trans]
-#### 概述
-该策略基于牛旗形态,在价格突破旗形区间高点后买入,止损位置设在旗形区间低点,目标利润根据风险回报比设置。策略利用最高价和最低价函数识别旗形区间,并通过比较当前收盘价和前一根K线最高价来判断突破。
-
-#### 策略原理
-1. 识别牛旗形态：用最高价和最低价函数计算旗形区间的高点和低点,并判断当前价格是否突破旗形高点。
-2. 进场：如果当前收盘价突破前一根K线的最高价,且前一根K线的最高价低于旗形高点,则买入。
-3. 止损：止损价格设置为旗形低点减去一个缓冲值。
-4. 止盈：根据风险回报比计算目标价格。目标价格 = 进场价格 + (进场价格 - 止损价格) * 风险回报比
-
-#### 策略优势
-1. 基于经典的牛旗形态,能捕捉到强势趋势中的回调机会。
-2. 止损位置设在旗形低点,风险可控。
-3. 利用风险回报比设置目标价格,博取更高收益。
-4. 代码逻辑清晰,使用TradingView内置函数,易于理解和修改。
-
-#### 策略风险
-1. 在震荡市场或趋势不明朗时,旗形突破后价格可能快速反转,带来较大回撤。
-2. 缓冲值设置不当可能导致过早止损。
-3. 实际风险回报比可能达不到设定值。
-4. 对于一些变形的旗形图案,策略可能失效。
-
-#### 策略优化方向  
-1. 可以考虑加入更多条件过滤信号,如交易量变化、均线方向等,提高信号质量。
-2. 针对不同市场特点,可以对参数进行优化,如旗形区间长度、风险回报比、止损缓冲值等。
-3. 可以考虑分批建仓和动态止损,降低风险暴露。
-4. 加入仓位管理,控制总体风险。
-
-#### 总结
-该策略是一个基于经典牛旗形态的突破策略,通过识别旗形区间和价格突破来捕捉趋势延续机会。策略优点是逻辑清晰,风险可控,但在震荡市或趋势反转时面临一定风险。后续可以从优化信号、动态参数、仓位管理等方面改进,提高策略稳健性和收益性。
-
-|| 
 
 #### Overview
 This strategy is based on the bull flag pattern. It buys when the price breaks out above the high of the flag range, sets the stop loss at the low of the flag range, and sets the profit target according to the risk-reward ratio. The strategy uses the highest and lowest price functions to identify the flag range and determines the breakout by comparing the current closing price with the highest price of the previous candle.
@@ -73,7 +41,6 @@ This strategy is based on the bull flag pattern. It buys when the price breaks o
 
 #### Summary
 This strategy is a breakout strategy based on the classic bull flag pattern, which captures trend continuation opportunities by identifying the flag range and price breakouts. The strategy's advantages are clear logic and controllable risk, but it faces certain risks in volatile markets or trend reversals. Improvements can be made in terms of optimizing signals, dynamic parameters, position management, etc., to enhance the strategy's robustness and profitability.
-[/trans]
 
 
 

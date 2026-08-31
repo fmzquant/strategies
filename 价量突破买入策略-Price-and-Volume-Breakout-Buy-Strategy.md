@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13049b3a1cff39ce4bf.png)
-[trans]
-#### 概述
-"价量突破买入策略"是一种旨在通过检测在指定的蜡烛图范围内同时出现价格和交易量突破来识别买入机会的交易策略。该策略首先将特定数量的蜡烛线作为价格和交易量的检查窗口。这些值被用作基准来识别突破条件。当收盘价和交易量都超过预定窗口内观察到的最大值时,交易就会开始。价格必须高于指定的移动平均线,作为趋势指标,确保所有交易都与主流市场趋势一致。
-
-#### 策略原理
-1. 设置价格突破周期和交易量突破周期作为检查窗口。
-2. 获取价格突破周期内的最高价和最低价。
-3. 获取交易量突破周期内的最高交易量。
-4. 如果收盘价高于前一个周期的最高价,交易量高于前一个周期的最高交易量,收盘价高于趋势线长度的简单移动平均线(SMA),且目前没有任何开仓交易,同时订单方向设置不是做空,那么开始做多。
-5. 如果连续5天收盘价低于趋势线长度的SMA,平掉所有多头仓位。
-6. 如果收盘价低于前一个周期的最低价,交易量高于前一个周期的最高交易量,收盘价低于趋势线长度的SMA,且目前没有任何开仓交易,同时订单方向设置不是做多,那么开始做空。 
-7. 如果连续5天收盘价高于趋势线长度的SMA,平掉所有空头仓位。
-
-#### 策略优势
-1. 同时使用价格和交易量突破作为买卖信号,可以更好地确认趋势的转变。
-2. 在开仓前检查价格是否高于或低于长期SMA,以确保交易符合主要市场趋势。
-3. 设置连续多日收盘价穿越SMA作为平仓信号,可以有效地捕捉趋势的结束。
-4. 适用于高波动性资产,如比特币和以太坊,可以利用市场突然的价格和交易量变化来获利。
-
-#### 策略风险
-1. 在市场波动较小或者没有明显趋势的情况下,该策略可能会导致频繁的交易,从而增加交易成本。
-2. 对于波动性较小的市场,如标准普尔500指数,该策略的效果可能不如在加密货币市场明显。
-3. 该策略在较高的时间框架下可能会产生较少的交易信号,因为大多数交易倾向于有较长的持有期。
-
-#### 策略优化方向
-1. 根据不同的市场特点,调整价格突破周期和交易量突破周期的长度,以适应不同资产的波动特征。
-2. 尝试使用其他趋势确认指标,如指数移动平均线、MACD等,以提高趋势判断的准确性。
-3. 在策略中加入风险管理措施,如设置止损位、动态调整仓位等,以降低单次交易的风险敞口。
-4. 对于持有期较长的交易,可以考虑加入移动止盈策略,以更好地保护已获得的利润。
-
-#### 总结
-"价量突破买入策略"是一种适用于高波动性市场的趋势追踪策略。通过同时考虑价格和交易量的突破,并结合长期SMA作为趋势过滤,该策略可以较好地捕捉强势行情中的交易机会。但是,该策略在趋势不明显或者波动性较小的市场中可能表现不佳,并且可能面临频繁交易的风险。因此,在实际应用中,需要根据不同的市场特点和个人交易风格,对该策略进行适当的优化和调整,以提高其稳定性和盈利能力。
-
-|| 
 
 #### Overview
 The "Price and Volume Breakout Buy Strategy" is a trading strategy designed to identify buying opportunities by detecting concurrent price and volume breakouts over a specified range of candlesticks. The strategy first takes the specific number of candlesticks as the examination window for both price and volume. These values are used as benchmarks to identify breakout conditions. A trade is initiated when both the closing price and the trading volume surpass the maximum values observed within the predetermined window. Price must be above a designated moving average, serving as the trend indicator, ensuring that all trades align with the prevailing market trend.
@@ -76,7 +42,6 @@ The "Price and Volume Breakout Buy Strategy" is a trading strategy designed to i
 
 #### Summary
 The "Price and Volume Breakout Buy Strategy" is a trend-following strategy suitable for highly volatile markets. By considering both price and volume breakouts, and combining long-term SMA as a trend filter, this strategy can better capture trading opportunities in strong markets. However, this strategy may perform poorly in markets with no obvious trends or low volatility and may face the risk of frequent trading. Therefore, in practical applications, it is necessary to appropriately optimize and adjust the strategy according to different market characteristics and personal trading styles to improve its stability and profitability.
-[/trans]
 
 
 

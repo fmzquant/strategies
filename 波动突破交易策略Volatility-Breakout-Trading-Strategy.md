@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/197c44bc52a0e2761ab.png)
-[trans]
-## 概述
-
-波动突破交易策略是一个基于单个价格行动的策略。它通过分析价格和成交量的变化来触发买入和卖出信号。这个策略还可以与警报结合使用,在其他交易所或系统中触发订单。
-
-## 策略原理  
-
-该策略通过分析K线的收盘价、开盘价、最高价和最低价来判断价格走势和力度。
-
-具体来说,它会分析最近3根K线的收盘价是否连续高于或低于开盘价。如果是,则表明价格在连续向上或向下突破,产生趋势性行情。
-
-此外,该策略还会统计一定周期内的最大成交量。如果当前K线的成交量超过最近周期内的最大值,则说明成交量放大,反映出巨大的交易力量进入市场。
-
-在价格产生三根连续突破K线和成交量放大的同时,该策略便会产生买入或卖出信号。
-
-## 策略优势
-
-这是一个利用价格行动和交易量信号的简单有效策略。其主要优势有:
-
-1. 原理清晰,易于理解和实现
-2. 对突发性行情高度敏感,能及时捕捉市场变化
-3. 只需分析基本的K线和成交量数据,无需复杂算法
-4. 可以灵活地调整参数,适应不同品种和周期
-5. 成本低廉,适合中小本金的投资者
-
-## 风险分析  
-
-该策略也存在一些潜在风险:
-
-1. 无法对价格走势进行预判,存在一定的盲目性
-2. 对错触发信号较为敏感,可能增加无谓交易
-3. 在盘整行情中容易产生错误信号
-4. 没有止损措施,存在亏损扩大的风险
-
-为控制这些风险,可以考虑加入移动止损,优化参数组合,或与其他指标或策略组合使用。
-
-## 优化方向  
-
-这是一个基础策略,还有很大的优化空间,主要方向有:
-
-1. 增加止损策略,以控制亏损
-2. 优化参数,适应更多品种和周期
-3. 加入其它指标过滤信号
-4. 与趋势跟踪策略组合,实现趋势自动调整
-5. 结合机器学习算法,实现动态参数与信号优化
-6. 增加量化研究与反馈模块,使策略不断进化与优化
-
-## 总结  
-
-本策略整体来说是一个非常实用的基于价格行动理念的策略。它具有 participating、容易理解、实施成本低等优点。同时也存在一定的盲目性,需要进一步优化与组合来实现更好的策略增强。总的来说这是一个非常有价值的策略思路,值得深入研究与应用。
-
-|| 
 
 ## Overview
 
@@ -113,7 +61,6 @@ As a basic strategy, there is still large room for optimization:
 
 In conclusion, this is a very practical price action based strategy. It has the merits of being intuitive, easy to understand and implement at low costs. Meanwhile, it also has certain blindness and needs further optimizations and combinations for enhanced performance. Overall this is a valuable strategy concept worthy of in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

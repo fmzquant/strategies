@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1dccc78f65925e558e8.png)
 
-[trans]
-#### 概述
-本策略是一个基于指数移动平均线(EMA)的创新性交易系统,通过在不同时间周期设置两条独立的交易链条来捕捉市场机会。策略整合了长期趋势跟踪和短期动量交易的优势,通过在周线、日线、12小时和9小时等多个时间周期上的EMA交叉来产生交易信号,实现了对市场多维度的分析和把握。
-
-#### 策略原理
-策略采用双链条设计,每个链条都有其独特的进出场逻辑:
-
-链条1(长期趋势)采用周线和日线周期:
-- 入场信号:当收盘价在周线周期上穿EMA时产生做多信号
-- 出场信号:当收盘价在日线周期下穿EMA时产生平仓信号
-- 默认EMA周期为10,可根据需要调整
-
-链条2(短期动量)采用12小时和9小时周期:
-- 入场信号:当收盘价在12小时周期上穿EMA时产生做多信号
-- 出场信号:当收盘价在9小时周期下穿EMA时产生平仓信号
-- 默认EMA周期为9,可根据需要调整
-
-#### 策略优势
-1. 多维度市场分析:通过不同时间周期的组合,全面把握市场走势
-2. 灵活性强:两个链条可独立启用或禁用,适应不同交易风格
-3. 风险控制完善:采用多重时间周期确认,降低假信号风险
-4. 参数可调整性强:EMA周期和时间周期均可根据需要修改
-5. 回测功能完善:内置回测期间设置,便于策略验证和优化
-
-#### 策略风险
-1. 趋势反转风险:在剧烈波动市场中可能产生滞后性
-2. 时间周期配置风险:不同市场可能需要不同的时间周期组合
-3. 参数优化风险:过度优化可能导致过拟合
-4. 信号重叠风险:两个链条同时触发可能增加持仓风险
-
-风险控制建议:
-- 设置合理的止损位
-- 根据市场特征调整参数
-- 实盘前进行充分的回测验证
-- 控制每次交易的资金比例
-
-#### 策略优化方向
-1. 信号过滤优化:
-- 添加成交量确认机制
-- 引入波动率指标筛选信号
-- 增加趋势强度确认
-
-2. 风险控制优化:
-- 开发动态止损机制
-- 设计仓位管理系统
-- 增加回撤控制功能
-
-3. 时间周期优化:
-- 研究最优时间周期组合
-- 开发自适应时间周期机制
-- 增加市场状态识别功能
-
-#### 总结
-双重链条混合动量均线跟踪交易系统通过创新性地结合长短期均线策略,实现了对市场的多维度分析和把握。系统设计灵活,可根据不同市场状况和交易者风格进行调整,具有较强的实用性。通过合理的风险控制和持续优化,该策略有望在实际交易中取得稳定收益。建议交易者在实盘使用前,充分进行回测验证和参数优化,以达到最佳交易效果。 
-
-|| 
 
 #### Overview
 This strategy is an innovative trading system based on Exponential Moving Averages (EMA), capturing market opportunities through two independent trading chains set across different timeframes. The strategy integrates the advantages of long-term trend following and short-term momentum trading, generating trading signals through EMA crossovers across weekly, daily, 12-hour, and 9-hour timeframes for multi-dimensional market analysis.
@@ -121,7 +65,6 @@ Risk control suggestions:
 
 #### Summary
 The Dual Chain Hybrid Momentum EMA Tracking Trading System achieves multi-dimensional market analysis through innovative combination of long and short-term moving average strategies. The system design is flexible and can be adjusted according to different market conditions and trader styles, showing strong practicality. Through proper risk control and continuous optimization, this strategy has the potential to achieve stable returns in actual trading. Traders are advised to conduct thorough backtesting and parameter optimization before live implementation to achieve optimal trading results.
-[/trans]
 
 
 

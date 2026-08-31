@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15ca25b298d53f49c92.png)
-[trans]
-
-## 概述
-
-该策略是一个多空顺势交易策略,基于移动平均线的金叉死叉形成交易信号。当快速移动平均线从下方上穿慢速移动平均线时,产生买入信号;当快速移动平均线从上方下穿慢速移动平均线时,产生卖出信号。
-
-## 策略原理
-
-该策略使用两个移动平均线,分别是20日简单移动平均线和30日简单移动平均线。当20日移动平均线从下方上穿30日移动平均线时,产生买入信号;当20日移动平均线从上方下穿30日移动平均线时,产生卖出信号。
-
-移动平均线本身作为一种趋势指标,能够有效地描绘市场趋势方向。交叉原理使得该策略能够及时捕捉趋势转折点,形成交易信号。20日和30日两个周期长度设置得当,既能反映市场趋势,又不至于过于敏感而产生误信号。
-
-## 优势分析
-
-该策略优势主要体现在以下几个方面:
-
-1. 策略逻辑简单清晰,容易理解和实现,适合初学者学习;
-2. 顺势交易,避免逆势建仓,可以减少不必要损失;  
-3. 移动平均线本身带有一定过滤作用,可以滤除行情噪音,避免产生误信号;
-4. 周期参数设置合理,不会过于敏感而影响策略稳定性。
-
-## 风险分析
-
-该策略主要存在以下风险:  
-
-1. 行情震荡时,移动平均线交叉频繁,可能产生较多止损单;
-2. 趋势行情时,移动平均线有滞后性,可能错过部分利润; 
-3. 参数设置不当时,会影响策略稳定性。
-
-对策:
-
-1. 调整移动平均线周期,采用三角形移动平均线等技术来平滑曲线,减少交叉频率;
-2. 辅助其他指标判断趋势,避免在震荡行情中交易;
-3. 优化参数,寻找最佳参数组合。
-
-## 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 尝试不同类型的移动平均线,如加权移动平均线、三角移动平均线等;
-2. 增加其他技术指标判断,避免在震荡市场中产生交易信号; 
-3. 结合波浪理论、通道理论等技术分析方法判断行情趋势;
-4. 采用机器学习等模型实时优化参数;
-5. 结合量化工具,采取止盈止损策略优化资金管理。
-
-## 总结
-
-移动平均交叉系统是一种简单有效的趋势跟踪策略,原理清晰,容易理解,非常适合初学者学习。该策略主要依靠移动平均线的金叉死叉形成交易信号,通过顺势交易获得利润。可以从多方面进行优化,使策略更加稳定和高效。
-
-||
 
 ## Overview  
 
@@ -108,7 +58,6 @@ The main aspects to optimize the strategy:
 
 The moving average crossover system is a simple and effective trend following strategy. The logic is clear and easy to understand, very suitable for beginners to learn. It generates trading signals based on moving average crossovers and profits from trading along the trend. The strategy can be optimized in many ways to become more stable and efficient.
 
-[/trans]
 
 > Strategy Arguments
 

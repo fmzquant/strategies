@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/168bc9ebfb73623be84.png)
 
-[trans]
-
-## 概述
-
-本策略基于candle的实体部分,结合EMA指标判断市场趋势方向,实现ORIGINAL PRIMITIVE TREND TRACKING的效果。当出现较大的阳线时做多,出现较大的阴线时做空,从而跟踪市场趋势。
-
-## 策略原理  
-
-1. 计算最后30根K线的candle实体平均长度sbody
-2. 当最新K线为阳线,实体长度大于sbody/2时,做多
-3. 当已做多时,如果最新K线为阴线,实体长度大于sbody/2,且当前头寸为盈利状态,则平多头寸
-4. 当最新K线为阴线,实体长度大于sbody/2时,做空
-5. 当已做空时,如果最新K线为阳线,实体长度大于sbody/2,且当前头寸为盈利状态,则平空头寸
-
-## 优势分析
-
-本策略具有以下优势:  
-
-1. 原始简单,容易理解和实现
-2. 基于candle结构判断,对突破 Trading Breakouts 有一定效果
-3. 跟踪趋势,能捕捉较大行情
-4. 盈利头寸后快速止损,有利锁定利润
-
-## 风险分析  
-
-本策略也存在一些风险:  
-
-1. 无法有效过滤假突破,可能导致不必要的亏损
-2. 仅基于candle判断易受滑点和隔夜跳空影响  
-3. 未考虑交易频率过高的问题
-
-可通过以下方法降低风险:
-1. 结合其他指标过滤信号
-2. 设置止损策略
-3. 优化参数,控制交易频率
-
-## 优化方向  
-
-本策略可从以下方面进行优化:  
-
-1. 增加突破指标,过滤假突破
-2. 增加止损策略,降低单笔亏损
-3. 结合趋势指标,检验趋势方向
-4. 参数优化,找到最佳参数组合
-
-## 总结  
-
-本策略属于原始简单型的趋势跟踪策略。通过candle结构判断,可有效跟踪趋势方向。同时设置快速止损机制,可锁定利润。该策略可补充趋势跟踪组合,但仍需优化以降低风险。未来值得进一步研究结合其他指标的效果。
-
-||
 
 
 ## Overview  
@@ -110,7 +60,6 @@ This strategy can be optimized in the following aspects:
 ## Summary
 This strategy belongs to the original simple trend tracking strategy. By judging candle structures, it can effectively track trend directions. At the same time, setting a fast stop loss mechanism can lock in profits. This strategy can supplement the trend tracking portfolio, but still needs to be optimized to reduce risks. It is worth further researching the effect of combining with other indicators in the future.
 
-[/trans]
 
 > Strategy Arguments
 

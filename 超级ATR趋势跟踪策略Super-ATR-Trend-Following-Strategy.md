@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/170dc3c75c659180f6c.png)
-[trans]
-### 概述
-
-超级ATR趋势跟踪策略是一种基于ATR指标的趋势跟踪策略。它使用ATR指标来测量市场的波动性,并以ATR的若干倍作为止损线,实现趋势跟踪。
-
-### 策略原理
-
-该策略首先计算ATR指标,其中ATR指标是过去N天内的股价波动幅度的移动平均,用来表示市场风险和波动性。策略允许我们更改ATR的计算方法,可以选择普通ATR或者SMA方式计算。
-
-然后根据ATR值乘以一个倍数作为通道上下轨,即计算上轨:`close - Multiplier * ATR`;计算下轨:`close + Multiplier * ATR`。这构成了基于ATR指标的趋势通道。
-
-进而我们判断当前价格是否突破通道上下轨。如果价格突破上轨,则判断为进入下降趋势;如果价格突破下轨,则判断为进入上涨趋势。在趋势突破时,我们 correspondingly 进行买入和卖出。
-
-此外,策略还设定了交易时间窗口,只在指定的日期时间段内交易。
-
-### 策略优势
-
-这种基于指标通道的趋势跟踪策略,具有以下几个优点:
-
-1. 使用ATR指标自动调整止损位置,能够有效控制风险
-2. ATR指标考虑了股价波动性,止损线更合理
-3. 采用通道突破判断入场,增加了入场精确度 
-4. 允许调整ATR计算方式,增加了策略灵活性
-5. 设置交易时间窗口,避免重大事件的策略失效
-
-总的来说,这是一个简单实用的趋势跟踪策略,能够有效控制风险,同时获得较好的收益。
-
-### 风险分析
-
-该策略也存在一些风险,主要有:
-
-1. 市场出现剧烈变动时,ATR指标可能来不及反应市场变化,导致止损过于宽松
-2. 多空意见不一致时,价格可能在通道内震荡,增加交易风险
-3. 固定的倍数设置可能不适合全部品种,需要针对不同品种调整
-4. setWindow限制了交易机会,如果没设定好,可能错过较好交易机会
-
-为了控制这些风险,我们可以采取以下措施:
-
-1. 结合其他指标判断市场状态,避免单一依赖ATR指标
-2. 增加过滤条件,避免无效突破引入交易风险 
-3. 根据不同品种历史特征选择合适的倍数
-4. 优化和测试setWindow的参数,确保其设置合理
-
-### 优化方向 
-
-这种策略还有进一步优化的空间:
-
-1. 可以引入机器学习算法,实现倍数的动态优化
-2. 可以结合情绪指标等判断多空杠杆,优化通道范围
-3. 增加交易量或波动确认,避免无效突破
-4. 利用高级基于时间的策略框架进行Backtest
-
-通过这些优化,可以进一步提高策略的稳定性和收益率。
-
-### 总结
-
-本策略overall是一个非常实用的趋势跟踪策略。它使用ATR指标构建自适应通道,并以通道突破判断买卖时机。策略简单实用,能有效控制风险,适合跟踪中长线趋势。我们也提出了进一步的风险控制和策略优化建议,这将使该策略更加强大和稳健。
-
-||
 
 ### Overview
 
@@ -127,7 +68,6 @@ These optimizations can further improve the stability and profitability of the s
 
 Overall this is a very practical trend following strategy. It builds an adaptive channel using ATR indicator and determines entries by channel breakouts. The strategy is simple and effective to control risks, suitable for tracking mid-long term trends. We also proposed further risk control and optimization suggestions to make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15cdd47682466fbf957.png)
 
-[trans]
-#### 概述
-这是一个基于支撑位突破的动态ATR趋势跟踪策略。该策略综合运用了EMA均线系统、ATR波动率指标以及智能资金概念(SMC)来捕捉市场趋势。策略通过动态计算仓位大小和止损止盈位置,实现了良好的风险管理。
-
-#### 策略原理
-策略主要基于以下几个核心组件构建:
-1. 使用50和200周期的EMA均线系统来确认市场趋势方向
-2. 利用ATR指标动态调整止损和获利目标
-3. 通过订单块(Order Block)和失衡区域(Imbalance Zone)分析来寻找最佳入场点
-4. 基于账户风险百分比自动计算开仓量
-5. 通过观察近20根K线的波动范围来判断市场是否处于盘整状态
-
-#### 策略优势
-1. 风险管理完善,通过动态计算保证每笔交易风险可控
-2. 趋势判断系统可靠,避免在盘整市场交易
-3. 止损止盈设置合理,风险收益比为1:3
-4. 充分考虑市场波动性,能适应不同市场环境
-5. 代码结构清晰,易于维护和优化
-
-#### 策略风险
-1. EMA指标具有滞后性,可能导致入场时机延迟
-2. 在剧烈波动市场中可能触发虚假信号
-3. 策略依赖趋势持续性,在震荡市场表现可能欠佳
-4. 止损位置较宽,在某些情况下可能承受较大损失
-
-#### 策略优化方向
-1. 可以引入量价关系分析,提高趋势判断准确性
-2. 可以增加市场情绪指标,优化入场时机
-3. 考虑加入多时间周期分析,提高系统稳定性
-4. 可以细化订单块和失衡区域的判断标准
-5. 优化止损方式,考虑采用移动止损
-
-#### 总结
-该策略是一个较为完整的趋势跟踪系统,通过合理的风险管理和多重信号确认来提高交易的稳定性。虽然存在一定的滞后性,但整体而言是一个可靠的交易系统。建议在实盘使用前进行充分的回测验证,并根据具体交易品种和市场环境进行参数优化。
-
-|| 
 
 #### Overview
 This is a dynamic ATR trend following strategy based on support breakout. The strategy incorporates EMA system, ATR volatility indicator, and Smart Money Concept (SMC) to capture market trends. It achieves effective risk management through dynamic position sizing and stop-loss/take-profit placement.
@@ -81,7 +45,6 @@ The strategy is built on several core components:
 
 #### Summary
 This strategy is a comprehensive trend following system that achieves trading stability through proper risk management and multiple signal confirmation. Despite some lag in signals, it represents a reliable trading system overall. It's recommended to conduct thorough backtesting before live implementation and optimize parameters according to specific trading instruments and market conditions.
-[/trans]
 
 
 

@@ -11,115 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13b90cadc852da13483.png)
 
-[trans]
-
-## 概述
-
-该策略运用霍尔指标判断趋势方向,再结合随机指标进行入场。当霍尔中轨上穿下轨时看涨入场,下穿时看空入场。同时,当随机指标K线从超买区下穿D线时做多,从超卖区上穿时做空。
-
-## 策略原理
-
-该交易策略主要利用霍尔指标判断市场趋势方向,再利用随机指标进行具体的入场。
-
-首先,策略中定义了霍尔指标的计算方法,包括中轨、上轨和下轨的计算公式。中轨采用加权移动平均线WMA计算,上轨和下轨分别是中轨的偏移。
-
-然后,根据中轨与上下轨的关系判断趋势方向。当中轨上穿下轨时,代表着买盘较强,属于看涨的趋势;当中轨下穿上轨时,卖盘较强,属于看空的趋势。
-
-此外,策略中还定义了随机指标的计算方法,包括K值和D值的计算公式。K值采用的是RSI的SMA平滑,D值则是K值的再次SMA平滑。
-
-在判断趋势方向后,如果看涨,则当随机指标的K线从超卖区域下穿D线时做多;如果看空,则当K线从超买区上穿D线时做空。
-
-这样,结合霍尔指标的趋势判断和随机指标的超买超卖判断,可以进行比较稳定和准确的入场。
-
-## 优势分析
-
-该策略最大的优势在于结合趋势判断和超买超卖判断,可以对市场进行多维度的分析,入场准确性较高。
-
-具体来说,主要有以下几点优势:
-
-1. 霍尔指标可以有效判断市场趋势方向,进行大级别的定位;
-
-2. 随机指标判断超买超卖,可以掌握买卖力量的变化,把握较好的入场时机;
-
-3. 两者配合使用,可以发挥各自的优势,相互验证信号,减少假信号;
-
-4. 通过参数调整,可以灵活适应不同品种和时间周期,适用性强;
-
-5. 采用中轨偏移形成上下轨构建交易通道,可以发现潜在支持与阻力。
-
-6.  STOP LOSS, EXIT ON TARGETS percent used to scale positions 大笔头寸调控
-
-7.  Use of hull data Dictionary gives multiple asset class flexibility
-
-8. 选定的优化方向可以提高策略稳定性和收益率
-
-## 风险分析
-
-该策略也存在一定的风险需要注意,主要有:
-
-1. 霍尔指标存在滞后性,可能会错过趋势转折点,导致不必要的亏损。
-
-2. 随机指标参数设置不当可能会产生多余信号,应适当筛选K线与D线的交叉信号。
-
-3. 霍尔指标与随机指标配合使用,如果参数匹配不当,也可能出现错误信号。
-
-4. 上下轨宽度过大过小都会影响交易信号质量,需要仔细测试寻找最佳参数。 
-
-5. 近期行情不稳定,中长线指标效果可能不佳。
-
-6. Data mismatches between hull and stoch causing false signals
-
-7. Sharp trend changes not caught by hull can cause losses
-
-8. Testing on more timeframes/symbols needed to verify robustness
-
-针对这些风险,可以从以下几点进行优化:
-
-1. 适当缩短霍尔指标长度,提高对趋势变化的敏感性。
-
-2. 优化随机指标的参数,减少假信号。
-
-3. 调整上下轨参数,寻找最佳通道宽度。
-
-4. 增加其他指标验证信号,如MACD等。
-
-5. 增加止损策略,以控制风险。
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 测试更多品种和更多时间周期参数,验证策略稳定性。
-
-2. 增加止损机制。如尾随止损,移动止损等,可以更好控制风险。
-
-3. 优化入场条件逻辑,设置更严格的过滤条件,减少假信号。
-
-4. 研究如何利用霍尔指标通道更好确定支持与阻力位。
-
-5. 探索是否可以加入其他指标的验证信号。
-
-6. 参数优化。如霍尔指标长度,随机指标K、D平滑参数等的优化。
-
-7. 增加仓位管理功能。根据回撤、连胜次数等调整仓位大小。
-
-8. 增加了止损,止盈规则。实盘必须。
-
-9. Optimize hull length parameter for better trend sensitivity
-
-10. Add additional filters or confirming indicators to improve signal quality 
-
-11. Explore using hull bands to identify dynamic support/resistance levels
-
-12. Parameter optimization for stoch RSI lengths, overbought/oversold levels
-
-13. Introduce better position sizing and risk management rules
-
-## 总结
-
-整体来说,该策略整合趋势判断和超买超卖判断进行入场是一个行之有效的思路。但由于指标本身存在的问题,其交易信号也并非完全可靠,需要进一步优化。如果能够找到最佳的参数组合,并辅以其他验证指标和风险控制手段,该策略的效果还是可以期待的。总之,在参数调整、止损机制、仓位管理等方面都需要更多的测试和优化,才能使该策略稳定可靠并能够在实盘中获利。
-
-||
 
 ## Overview
 
@@ -225,7 +116,6 @@ Some ways this strategy could be improved:
 
 Overall this is an effective approach combining trend and momentum. However, inherent indicator weaknesses mean signals should not be blindly trusted without further optimization and risk controls. With refined parameters, additional filters, and stop losses, this strategy offers potential. More extensive testing is needed for parameters, risk management, and position sizing to make it robust and profitable for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

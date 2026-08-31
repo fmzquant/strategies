@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略基于动态摆动指标(DMI)进行交易。DMI通过计算价格与不同长度均线的百分比偏离来判断趋势。
-
-具体交易逻辑是:
-
-1. 计算价格与长周期均线(如200日)的百分比偏离,作为第1 DMI
-
-2. 计算价格与中周期均线(如50日)的百分比偏离,作为第2 DMI
-
-3. 计算价格与短周期均线(如20日)的百分比偏离,作为第3 DMI
-
-4. 当第3 DMI高于第1 DMI时看跌;当第3 DMI低于第2 DMI时看涨
-
-5. 根据DMI关系产生交易信号
-
-DMI通过动态比较不同均线周期的相对强度,判断市场趋势转折点。参数优化可以适应不同周期。
-
-## 策略优势
-
-- DMI结合多周期判断,比较全面 
-
-- 比较相对强度,避免绝对数值判断
-
-- 可灵活调整周期参数适应市场
-
-## 策略风险
-
-- DMI有一定滞后性,可能错过转折
-
-- 需要谨慎设定周期参数
-
-- 可能产生多次无效信号
-
-## 总结
-
-DMI策略通过比较多均线周期的强弱关系来判断转折。可通过参数优化适应不同市场环境。但滞后性存在,需辅助其他指标进行判断。
-
-
-||
 
 ## Strategy Logic 
 
@@ -91,7 +49,6 @@ By comparing relative strength dynamically across MA periods, DMI aims to identi
 
 DMI judges turning points by comparing multi-MA period strength dynamics. Optimization can suit different market environments. But lag limitations necessitate additional filters.
 
-[/trans]
 
 > Strategy Arguments
 

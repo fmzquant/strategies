@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9e33d4abd8b7a3bb43.png)
 
-[trans]
-
-## 概述
-
-本策略的核心思想是同时利用相对强弱指数(RSI)和不同时间周期的移动平均线来识别趋势反转点,以捕捉中长线趋势的同时进行短线交易。该策略综合多种交易信号,旨在提高交易成功率。
-
-## 策略原理
-
-1. 计算RSI指标,以及快线EMA和慢线WMA移动平均线。
-2. 当RSI指标线突破WMA移动平均线时,产生买入/卖出信号。
-3. 当EMA快线突破WMA慢线时,产生买入/卖出信号。 
-4. 当RSI和EMA同时突破WMA时,产生强烈的买入/卖出信号。
-5. 同时,当价格突破辅助的移动平均线时,可以增强主信号。
-6. 设置止损、止盈条件。
-
-该策略综合了多种技术指标的突破信号,不同参数设置的移动平均线来识别不同周期的趋势,从而提高策略的可靠性。RSI指标判断超买超卖状态,EMA快线判断短期趋势,WMA慢线判断中期趋势,价格与辅助平均线的突破验证趋势。多种信号的综合提升了策略效果。
-
-## 优势分析
-
-- 利用RSI指标的反转特征,可以在超买超卖区抓取反转机会。
-- 辅助移动平均线作为趋势过滤器,避免假突破。 
-- 多时间周期结合,既可跟踪长线趋势,也可捕捉短线机会。
-- 综合多种指标信号,可提高交易成功率。
-- 设置止损止盈策略,可以主动控制风险。
-
-## 风险分析
-
-- RSI指标容易产生假信号,需要辅助移动平均线过滤。
-- 大周期趋势下的反弹可能会触发反向交易信号,需要谨慎对待。
-- 需优化参数设置,如RSI周期长度、移动平均线周期等。
-- 停损点设置需要谨慎,避免被套。
-
-风险可以通过参数优化、严格的止损策略、以及考虑大周期趋势等方法减轻。
-
-## 优化方向
-
-- 优化RSI参数,找到最佳周期长度。
-- 测试不同类型的移动平均线组合。
-- 加入波动率指标如ATR,动态调整止损止盈位。
-- 增加交易量管理模块。
-- 采用机器学习技术进行参数优化和信号质量评估。
-
-## 总结
-
-本策略整合了趋势跟踪和极点反转交易思路,加入多时间框架分析和多种指标综合利用,目的是提高交易胜率。关键是要控制好风险,优化参数设置,并适时考虑大周期趋势对交易的影响。总体来说,该策略具有较强的实用性和拟合性。后续可采用更多高级技术进一步提升策略质量。
-
-||
 
 
 ## Overview
@@ -104,7 +57,6 @@ Risks can be mitigated through parameter optimization, strict stop loss strategy
 
 This strategy integrates trend following and extreme reversal trading ideas, adds multi-timeframe analysis and synthesized indicators, aiming to improve trading success rate. Key is to control risk, optimize parameters, and consider impacts of major trends. Overall this is a practical strategy with strong adaptability. More advanced techniques can be used to further improve strategy quality.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9b636e63b8ca085910.png)
-[trans]
-
-## 概述
-
-该策略的名称为“Trend Following with EMA”,即基于趋势和均线的量化交易策略。它结合了趋势跟踪和指数移动平均线(EMA)两种技术指标,用于识别股票或者其他金融产品的价格趋势,并据此进行买入和卖出操作。
-
-## 策略原理  
-
-该策略的主要逻辑是:
-
-1. 使用长度为180周期的低点和收盘价的交叉来判断价格上升趋势。当低点上穿收盘价时,表示价格开始上升,形成趋势,此时做多;
-
-2. 当价格从下降趋势转为上升趋势时,即收盘价上穿开盘价,并且EMA线下方时,也做多;  
-
-3. 当价格从上升趋势转为下降趋势时,即收盘价下穿开盘价时,平掉多头仓位;
-
-4. 使用长度为180周期的高点和EMA的交叉来判断价格下降趋势。当高点下穿EMA线且高点低于EMA线时,做空;
-
-5. 当价格从上升趋势转为下降趋势时,即收盘价下穿开盘价,并且EMA线上方时,也做空;
-
-6. 当价格从下降趋势转为上升趋势时,即收盘价上穿开盘价时,平掉空头仓位。
-
-## 策略优势分析
-
-该策略结合趋势跟踪和均线指标,可以有效捕捉价格趋势的转折点,具有以下优势:  
-
-1. 趋势跟踪部分可以确定价格趋势的方向,减少错误操作的概率;
-2. 均线部分可以有效滤波价格小幅波动的噪音,识别出较大幅度的趋势;  
-3. 结合两种指标可以提高交易信号的可靠性,避免假阳性;
-4. 参数设置合理灵活,可调整周期长度以适应不同品种和交易风格。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 在价格波动剧烈的场景下,EMA均线会有较大滞后,可能错过最佳入场时机;
-2. 趋势判断指标对参数敏感,不同周期设置会导致交易信号和收益不同;
-3. 多头空头仓位的切换频率可能过高,增加交易滑点和手续费的损耗。  
-
-对应风险的解决方案是:
-
-1. 优化EMA均线的周期参数,降低滞后概率;
-2. 进行参数优化,找到最适合该品种的周期参数;
-3. 设置止损止盈条件,避免过于频繁切换仓位。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加基于波动率的仓位管理模块,可以根据市场波动情况动态调整仓位;
-2. 增加机器学习模型判断价格趋势,取代简单交叉判断,提高准确性;  
-3. 结合 fundamentals 数据refine 交易信号,避免在公司业绩变化时产生错误信号;
-4. 进行多品种参数优化,寻找最佳周期参数组合,提高稳定性和最大化收益。
-
-## 总结
-
-该策略整体来说是一种典型的趋势跟踪策略,利用价格本身的特征指标判断方向并跟踪趋势。它简单有效,容易实现,适合作为量化交易的入门策略。但也存在一些问题,比如指标滞后、参数敏感性等。这些问题都是可以通过引入更多数据源、使用机器学习等方式得到改进。所以该策略有很大的拓展与优化空间,是一种值得推荐的高频量化交易策略。
-
-||
 
 ## Overview  
 
@@ -126,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 In general, this is a typical trend following strategy that uses the characteristics of price itself to determine direction and track trends. It is simple, effective, easy to implement, and suitable as a beginner quantitative trading strategy. However, there are some problems like indicator lag and parameter sensitivity. These issues can be improved by introducing more data sources and using machine learning. So there is great potential for expansion and optimization of this strategy. It is a recommended high-frequency quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

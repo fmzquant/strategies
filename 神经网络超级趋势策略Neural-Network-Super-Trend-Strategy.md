@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略融合了神经网络模型、RSI指标和超级趋势指标来进行交易。
-
-具体逻辑是:
-
-1. 构建神经网络模型,输入包括成交量变化率、布林带、RSI等多维数据
-
-2. 网络预测得到未来价格变化率
-
-3. 计算RSI指标值,并将RSI与预测价格变化率进行组合
-
-4. 根据RSI指标值生成动态止损线
-
-5. 当价格跌破上行止损线则做空;当价格突破下行止损线则做多
-
-6. 结合超级趋势指标的趋势判断进行过滤
-
-该策略充分利用神经网络对复杂数据的模拟能力,并辅以RSI和超级趋势等指标进行信号验证,在提高判断准确性的同时控制交易风险。
-
-## 策略优势
-
-- 神经网络对多维数据建模判断趋势
-
-- RSI止损保护利润,超级趋势辅助判断
-
-- 多指标组合验证,提高信号质量
-
-## 策略风险
-
-- 需要大量数据进行神经网络训练
-
-- RSI和超级趋势参数需优化调整
-
-- 效果依赖模型判断,存在不确定性
-
-## 总结
-
-该策略通过机器学习技术辅以传统指标判断,在追求高效的同时控制风险。但其参数调整和模型可解释性仍需完善。
-
-||
 
 ## Strategy Logic
 
@@ -94,7 +51,6 @@ The strategy leverages neural networks' ability to model complex data, with addi
 
 This strategy combines machine learning with traditional techniques for efficiency with risk controls. But parameters and model interpretability need improvement.
 
-[/trans]
 
 > Strategy Arguments
 

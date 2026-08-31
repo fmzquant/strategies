@@ -11,78 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14ad4971bad24aabe4e.png)
 
-[trans]
-
-
-## 概述
-
-双轨跟踪均线策略是一种典型的移动均线交叉策略。它通过计算不同周期的移动均线,判断市场趋势,利用均线交叉进行买入和卖出操作。该策略简单实用,适用于中长线持仓交易。
-
-## 策略原理
-
-该策略主要利用20周期和50周期的指数移动均线(EMA)判断市场趋势。具体逻辑是:
-
-1. 计算20周期EMA和50周期EMA。
-2. 当20周期EMA上穿50周期EMA时,视为市场处于上涨趋势,可以买入。
-3. 当20周期EMA下穿50周期EMA时,视为市场处于下跌趋势,可以卖出。 
-4. 一旦买入,如果20周期EMA重新下穿50周期EMA,应立即卖出,止损。
-5. 一旦卖出,如果20周期EMA重新上穿50周期EMA,应立即买入,确保不漏买点。
-
-通过这样的逻辑,双轨均线策略能够跟踪市场趋势的变化,dynamically调整仓位,实现跟踪市场切赚取利润的目的。
-
-## 策略优势分析
-
-双轨均线策略具有以下优势:
-
-1. 操作简单,容易实施。仅需要计算和比较两个均线的大小关系,不需要复杂的预测和建模。
-
-2. 顺应市场趋势,避免强行逆市操作。利用均线的趋势跟踪特性,只有在趋势明确时才进入场内。
-
-3. 自动止损,风险控制。当市场突然逆转时,能够快速止损,保护资金。
-
-4. 回补亏损,不漏买点。当止损后市场重新转 bull,也能及时追涨回补。
-
-5. 参数灵活,适用性强。均线参数可调,适用于不同市场环境。
-
-6. 资金利用效率高。跟踪趋势切换仓位,保持资金效率最大化利用。
-
-## 风险分析
-
-双轨均线策略也存在一些风险:
-
-1. 频繁交易,容易被交易费用消耗。双均线频繁交叉可能导致过于频繁交易。
-
-2. 震荡市场虚假信号多。震荡行情中均线可能产生多个虚假交叉,导致亏损。
-
-3. 设定合理参数很关键。参数设置不当,止损幅度过大或过小都可能带来损失。
-
-4. 突发事件难以应对。重大黑天鹅事件发生时,技术指标难以应对,可能造成较大损失。
-
-5. 错过市场关键点位。双均线策略无法判断市场关键支撑与关键阻力点位。
-
-针对以上风险,我们可以通过优化参数设定、结合其他指标过滤信号、设置止损止盈、运用资金管理等方法进行风险控制。
-
-## 优化方向
-
-双轨均线策略可以从以下几个方面进行优化:
-
-1. 优化均线参数,适应不同市场环境。可以测试不同短期长期均线的组合,找到一组适合当前市场的Parameters。
-
-2. 加入成交量指标进行信号过滤。例如突破时要求成交量放大,避免无量突破。
-
-3. 结合其他指标进行信号验证。例如MACD,Stochastic等指标与均线方向一致时,Entry signal的可靠性更高。
-
-4. 动态调整止损幅度。当波动加大时,可以适当放宽止损范围,减少虚拟止损被触发的概率。
-
-5. 优化资金管理策略。例如风险评估后设定合理的仓位大小,避免单笔损失过大。
-
-6. 区分趋势市和震荡市采用不同Entry logic。在震荡市中,可以收紧Entry条件,等待更可靠Entry机会。
-
-## 总结
-
-双轨均线策略是一个非常典型和实用的趋势跟踪策略。它具有操作简单,顺应趋势,自动止损,回补亏损等优点,非常适合中长线持仓交易。我们也要注意它存在的频繁交易,容易产生虚假信号等问题,可以通过参数优化、加入过滤器、资金管理等方法进行改进,使策略更稳定可靠。如果您希望立足趋势交易,顺应市场,双均线策略是一个不错的选择。
-
-|| 
 
 ## Overview
 
@@ -152,7 +80,6 @@ The double moving average strategy can be enhanced in several aspects:
 
 The double moving average crossover is a very typical and practical trend following strategy. It has the advantages of easy implementation, following trends, automatic stop loss, makeup losing trades etc., making it very suitable for medium/long-term position trading. We should also pay attention to the risks like over-trading and false signals. These can be improved via parameter tuning, adding filters and proper capital management. For traders looking to ride the trend, this is a simple yet solid strategy.
 
-[/trans]
 
 
 

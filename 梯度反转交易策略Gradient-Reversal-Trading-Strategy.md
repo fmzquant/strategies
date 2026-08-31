@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-梯度反转交易策略是一种利用均线系统发出买卖信号的趋势追踪策略。它通过计算不同周期的移动平均线,判断当前价格趋势方向,在趋势反转点进行买入或卖出操作。该策略旨在捕捉中长线趋势,在趋势发生转折时进行交易。
-
-## 策略原理  
-
-该策略通过计算两条移动平均线,一条较长周期的均线作为基准线,另一条较短周期的均线与之交叉产生交易信号。具体操作逻辑如下:
-
-1. 计算一条基准均线,周期参数为len1,代表较长周期趋势的均线。
-
-2. 计算一条信号均线,周期参数为len2,代表较短周期趋势的均线,len2<len1。
-
-3. 当短均线从上方向下跌穿长均线时,做空交易,表明趋势反转,股价可能向下。
-
-4. 当短均线从下方向上突破长均线时,做多交易,表明趋势反转,股价可能向上。 
-
-5. 当价格重新回到长均线附近时,平仓套现。
-
-6. 这样,通过移动平均线的交叉来捕捉中长线趋势的转折点,进行趋势交易。
-
-## 策略优势
-
-1. 利用均线交叉系统,可以有效捕捉中间周期的趋势反转。
-
-2. 交易信号简单明确,容易掌握。
-
-3. 可自定义周期参数,适应不同品种和交易者。
-
-4. 可设置止损止盈,控制每单风险。
-
-5. 无需预测股价具体数值,只关心趋势方向。
-
-## 策略风险
-
-1. 在震荡行情中,均线交叉频繁,会产生较多虚假信号。
-
-2. 无法获利于短期价格波动,仅适合中长线趋势交易。 
-
-3. 均线系统滞后于价格变化,无法及时捕捉趋势转折。
-
-4. 交易频率可能不高,无法盈利充足。
-
-5. 需适时调整参数,以针对市场调整交易频率。
-
-## 优化方向
-
-1. 结合其他技术指标如MACD、KD等进行确认,过滤虚假信号。
-
-2. 加入趋势过滤器,只在趋势明确时才发出信号。
-
-3. 多时间框架交易,不同周期均线同时作用,组合出更多交易机会。 
-
-4. 动态优化参数,让周期参数跟随市场变化。
-
-5. 加入机器学习模型,辅助判断趋势反转。
-
-## 总结
-
-梯度反转交易策略整体来说是一种简单实用的趋势跟踪策略。它通过均线交叉判断中期趋势反转点,以捕捉较长时间周期的价格趋势。该策略易于实现,交易信号明确,但也存在一些局限性。通过不断优化参数设定、组合其他技术指标以及引入机器学习等方式,可以使该策略的效果得到提升,更好地把握市场机会。
-
-||
 
 
 
@@ -135,7 +72,6 @@ The strategy calculates two moving averages, one longer period MA acts as the ba
 
 The Gradient Reversal Trading Strategy is an easy-to-use trend following strategy overall. It catches mid-term trend reversal points by identifying MA crossovers, in order to trade the longer-term price trends. The strategy is easy to implement with clear trading signals, but also has some limitations. It can be improved by optimizing parameters, combining other indicators, and introducing machine learning to better seize market opportunities.
 
-[/trans]
 
 > Strategy Arguments
 

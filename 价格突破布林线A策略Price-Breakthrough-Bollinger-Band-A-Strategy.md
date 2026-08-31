@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13a6183a5ed0ad738b1.png)
-[trans]
-## 概述
-
-该策略运用布林线指标判断价格的波动幅度,结合K线形态进行价格突破操作。布林线的上下轨可以大致判断价格的上升和下降趋势,将其与K线形态指标相结合,可以找出比较明显的买卖时机。该策略主要判断布林线下轨突破做多,上轨突破做空,同时结合Stoch指标判断超买超卖状态,利用K线形态提供备选买卖信号。
-
-## 策略原理
-
-该策略主要由以下几部分指标组成:
-
-1. 布林线指标,包括布林线中轨、上轨、下轨。布林线通过价格的标准差计算出价格的波动范围, 从而判断价格的波动趋势。
-
-2. Stoch指标,判断股票是否处于超买超卖状态。K线和D线可以判断是否向上突破和向下突破。
-
-3. K线形态,判断一些常见的大阳线、大阴线等形态作为备选买卖时机。
-
-买入条件:价格上穿布林线下轨,Stoch指标显示超卖(K<20, D<20),快速移动均线向上突破慢速移动均线。
-
-卖出条件:价格下穿布林线上轨,或盈利后止损。
-
-该策略同时结合了趋势分析和超买超卖判断,降低了ecausefalse胜率,可以在趋势出现时及时进入市场。但也存在被套的风险,需要适时止损。
-
-## 优势分析
-
-1. 结合布林线和Stoch指标,可以在股价出现明显低点时买入,降低了风险。
-
-2. K线形态作为辅助条件,避免在震荡行情中错买入。
-
-3. 采用双重条件判断,提高了策略的稳定性和可靠性。
-
-4. 止损机制可以避免大幅亏损。
-
-## 风险分析
-
-1. 布林线交易时,容易被套。行情出现断层时,可能造成较大损失。
-
-2. Stoch指标发出假信号的概率较大,单独使用Stoch时,亏损风险较大。
-
-3. 震荡行情中,容易产生错误交易信号。
-
-4. 需要适时进行止损,控制风险。
-
-5. 需要关注突破的强度,防止冲高回落。
-
-## 优化方向
-
-1. 优化股票池,选择波动较大、趋势明显的股票。
-
-2. 优化布林线参数,调整中轨周期,优化买卖点把握。
-
-3. 优化Stoch参数,调整K线和D线周期,提高指标可靠性。 
-
-4. 增加成交量的条件判断,避免冲高回落。
-
-5. 增加止损策略,如跟踪止损、移动止损等,控制亏损风险。
-
-6. 评估增加其他技术指标,如MACD、KDJ等,提高策略稳定性。
-
-7. 测试不同持仓时间,优化获利回撤比。
-
-## 总结
-
-该策略整合布林线、Stoch指标与基本面技术指标,在控制风险的前提下,在股价低点买入,涨到历史高点附近卖出,实现了比较稳定的盈利模式。但也存在被套、止损失效等风险。通过优化参数以及增加其他判断指标,可以进一步增强策略稳定性和持续盈利能力。该策略适用于判断股价在超买超卖区域震荡时进行交易的策略投资者。
-
-||
 
 
 ## Overview
@@ -138,7 +74,6 @@ The strategy combines both trend analysis and overbought/oversold judgment, whic
 
 The strategy integrates Bollinger Band, Stoch indicator with technical fundamentals indicators. Under the premise of controlling risks, it buys at price lows and sells near historical highs, realizing a relatively stable profit model. But it also carries risks like being trapped, ineffective stop loss etc. Further enhancing stability and profitability can be achieved by optimizing parameters and adding other judgment indicators. The strategy suits investors who trade when prices oscillate around overbought and oversold zones.
 
-[/trans]
 
 > Strategy Arguments
 

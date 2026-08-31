@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14952cfa85809f19fcf.png)
-[trans]
-
-## 概述
-
-本文介绍了一个组合使用双均线策略和随机指标的量化交易策略。该策略综合利用了移动均线的趋势跟踪能力和随机指标的超买超卖特征,形成交易信号。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 双均线策略
-
-    使用快速移动均线和慢速移动均线形成金叉买入信号和死叉卖出信号。快速均线能更快捕捉价格变化趋势,慢速均线滤波假信号。
-
-2. 随机指标
-
-    利用随机指标的震荡特性识别超买超卖情况。当随机指标高于慢线时为超买信号,随机指标低于慢线时为超卖信号。
-
-两部分信号综合后形成最终交易信号。双均线策略追踪主要趋势,随机指标辅助避免不利行情。
-
-## 策略优势分析  
-
-- 综合双均线和随机指标的优点,更稳定。
-- 均线趋势跟踪,随机指标确认,效果好。  
-- 可自定义参数,适应不同市场行情。
-
-## 策略风险分析
-
-- 双均线容易产生误信号。
-- 随机指标参数设置不当可能错过趋势。  
-- 需要调整参数以适应行情变化。
-
-可通过优化参数组合来降低风险,也可加入止损来控制亏损。
-
-## 策略优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 测试不同均线参数对策略效果的影响。
-2. 测试不同随机指标参数对策略稳定性的影响。 
-3. 加入趋势过滤指标提高策略胜率。
-4. 建立动态追踪止损机制来控制亏损。
-
-## 总结
-
-本策略综合运用双均线策略和随机指标优势。在追踪市场主要趋势的同时避免不利行情的反转。可通过参数组合优化获得更好的策略效果。加入止损和趋势过滤可使策略更完善。
-
-||
 
 ## Overview  
 
@@ -104,7 +56,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy combines the advantages of dual moving averages and stochastic. While tracking the main market trend, it avoids unfavorable reversals. Better strategy results can be obtained through parameter optimization. Adding stops and trend filters can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

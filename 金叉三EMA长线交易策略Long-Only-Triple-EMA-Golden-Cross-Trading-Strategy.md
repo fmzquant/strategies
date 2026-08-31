@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略基于三条不同周期的EMA均线进行交易信号判断,采用8周期、50周期和200周期三条EMA均线进行金叉、死叉判断,以发挥不同EMA均线的优势,达到更好的交易效果。
-
-## 策略原理
-
-该策略通过计算8周期、50周期和200周期三条EMA均线,并设置布林带通道进行突破判断。具体逻辑是:
-
-1. 计算8周期EMA、50周期EMA和200周期EMA三条均线。
-2. 判断8周期EMA上穿50周期EMA形成金叉时,做多;50周期EMA下穿8周期EMA形成死叉时,平仓。
-3. 可选择仅在价格高于200周期EMA时才进行做多操作,避免震荡行情的误操作。
-4. 设置一个可选的止盈EMA均线,当价格下穿该均线时平仓止盈。
-
-通过快速周期EMA的运算判断底部,中周期EMA确保趋势,慢周期EMA过滤震荡,三者相辅相成,判断格局转换的同时兼顾交易频率。
-
-## 策略优势
-
-1. 三EMA均线合理判断趋势,充分发挥不同周期EMA的优势。8周期EMA判断短期底部反弹机会,50周期EMA判断中期趋势方向,200周期EMA过滤震荡确保大趋势。
-
-2. 可选择仅在价格高于200周期EMA时做多,避免震荡行情产生错误信号。
-
-3. 可选止盈EMA均线设定合理止盈位置。
-
-4. 可视化设置如皮带颜色、EMA线显示等,提高策略的可调整性。
-
-5. 包含金叉死叉判断逻辑,简洁易懂。
-
-## 风险及解决
-
-1. EMA均线具有滞后性,可能错过仓位建立的最佳时机。可以适当缩短EMA周期、或结合其他指标如MACD判断时机。
-
-2. 震荡行情中EMA均线可能产生错误信号。可以采用长周期EMA滤除震荡,或增加其他过滤条件。
-
-3. 止盈位置固定,无法根据市场波动调整。可以改为动态止盈,根据ATR等指标确定止盈位置。
-
-4. 未考虑止损 exiting criteria, 存在亏损风险。可以设置移动止损或固定点值止损来控制风险。
-
-## 策略优化
-
-1. EMA周期可进行优化,找到最佳参数组合。
-
-2. 可以加入MACD等指标判断做多做空时机。
-
-3. 增加动态止盈条件,根据市场波动程度调整止盈位置。 
-
-4. 加入止损逻辑,设置移动止损或固定点值止损。
-
-5. 优化入场条件,如增加量能指标等过滤器。
-
-## 总结
-
-该策略基于EMA均线的稳定过滤判断趋势方向,结合不同周期EMA的优势实现交易机会捕捉。优化止盈止损策略、加入更多指标判断可以提高策略胜率。整体来说该策略较为简单实用,适用于EMA均线判断的趋势跟踪交易。
-
-||
 
 
 ## Overview
@@ -124,7 +67,6 @@ The fast EMA identifies bottoms, the medium EMA determines trend, and the slow E
 
 This strategy capitalizes on EMA's trend filtering to identify high-probability moves. Optimizing exits, adding indicators and filters can improve performance. Overall it is simple and practical for EMA-based trend following.
 
-[/trans]
 
 > Strategy Arguments
 

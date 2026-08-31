@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f5e2c68e545780a7eb.png)
-[trans]
-
-## 概述
-
-双重反转RSI历史警报策略通过结合123反转策略和RSI历史警报策略,实现更准确的交易信号产生。123反转策略判断价格反转点,RSI历史警报策略判断超买超卖点。两种策略信号综合后,可以产生更可靠的交易信号。
-
-## 策略原理
-
-### 123反转策略
-
-123反转策略基于该假设:股票价格反转信号往往出现在股票价格反转前2天。
-
-具体判断规则是:
-
-- 买入信号:前一天收盘价<前两天收盘价 且 当前收盘价>前一天收盘价 且 9日慢速K线低于50
-- 卖出信号:前一天收盘价>前两天收盘价 且 当前收盘价<前一天收盘价 且 9日快速K线高于50
-
-该策略借助股价反转前2天的价格关系判断可能的反转点。同时,K线指标滤除部分噪音信号。
-
-### RSI历史警报策略 
-
-RSI历史警报策略是在RSI指标的基础上进行修改:
-
-- 将RSI值缩放到-100到100
-- 当RSI值超过预设的买入/卖出警报线时,产生交易信号
-
-该策略通过判断RSI指标的绝对值大小,提示超买超卖状态,从而产生交易信号。
-
-## 策略优势
-
-该策略结合两种不同类型的策略思路,可以互补优势,产生更可靠的信号。具体优势有:
-
-1. 123反转策略擅长判断价格反转点。RSI历史警报策略擅长判断超买超卖点。两者结合可以更全面判断交易时机。
-2. 123反转策略和RSI历史警报策略使用不同指标作为输入。这可以降低错误信号的概率,提高可靠性。
-3. 两种策略都各有自己的优化空间,可以通过参数调整进一步提升策略效果。
-
-## 策略风险
-
-该策略主要面临以下风险:
-
-1. 股价反转不一定发生。即使符合123反转策略的判断条件,价格也可能继续原趋势运行。
-2. RSI指标发出虚假信号的概率较大。RSI绝对值超过警报线不一定代表真正的超买超卖状态。
-3. 两种策略都可能同时发出错误信号。这时wrong direction风险会加倍。
-
-对应解决方法是:
-
-1. 适当调整123反转策略的参数,确保其只在比较确定的反转点发信号。
-2. 调整RSI历史警报策略的警报线位置,降低虚假信号概率。
-3. 增加其他指标的确认,避免wrong direction风险过大。
-
-## 策略优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 使用不同的参数组合测试123反转策略和RSI历史警报策略,找到最佳参数。
-2. 增加其他指标判断,进行多因子验证,过滤掉更多假信号。例如可以引入均线指标、波动率指标等。 
-3. 测试不同的持仓时间范围。现有策略使用 Momentum 持仓,可以测试优化为趋势跟踪持仓。
-4. 针对长线和短线分别优化参数组合。
-
-## 总结
-
-双重反转RSI历史警报策略通过结合价格反转策略和超买超卖判断策略,可以产生更可靠的交易信号。相比单一策略,具有更低假信号概率、更全面判断的优点。该策略还有很大的优化空间,通过参数调整、多因子验证、持仓优化等手段,可以进一步提升策略的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -136,7 +72,6 @@ The strategy can be optimized in aspects:
 
 The Dual Reversion RSI HistoAlert strategy combines price reversal and overbought/oversold judgment strategies for more reliable trading signals compared to single strategy usage. It has lower false signal probability and more comprehensive judgement. There is also large room for optimization via parameter tuning, multifactor verification, position holding scheme etc. for further enhancing stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

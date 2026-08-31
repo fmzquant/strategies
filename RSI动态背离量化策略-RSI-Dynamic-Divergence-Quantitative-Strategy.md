@@ -13,51 +13,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d7f2223dabae5f1bed1a.png)
 
 
-[trans]  
-#### 概述  
-RSI双枢轴背离量化策略是一种通过检测价格行为与相对强弱指数(RSI)之间的常规看涨和看跌背离来识别潜在反转机会的高级交易策略。该策略采用自动化枢轴点检测算法，结合两种不同的止损/止盈管理方法，在确认背离信号时自动建立头寸。策略核心在于通过精确的数学计算验证价格与RSI指标之间的背离现象，并采用动态风险管理机制确保每笔交易都遵循预设的风险回报比。  
-
-#### 策略原理  
-1. RSI计算模块：采用Wilder平滑方法计算14周期(可调)RSI值，使用收盘价作为默认输入源(可配置)。  
-2. 枢轴点检测：  
-   - 使用左右各5周期(可调)的滑动窗口检测RSI指标的局部高点和低点  
-   - 通过ta.barssince函数确保枢轴点之间间隔5-60根K线(可调范围)  
-3. 背离确认逻辑：  
-   - 看涨背离：价格创新低而RSI形成更高的低点  
-   - 看跌背离：价格创新高而RSI形成更低的高点  
-4. 交易执行系统：  
-   - 采用双模式止损机制：基于最近20周期(可调)摆动点或ATR波动幅度  
-   - 动态止盈计算：根据风险金额乘以预设的回报风险比(默认2:1)  
-5. 可视化系统：在图表上标记所有有效背离信号，并实时显示当前持仓的止损(红色)和止盈(绿色)水平线。  
-
-#### 优势分析  
-1. 多维度验证机制：要求价格和RSI必须同时满足特定形态，且时间间隔在预设范围内，大幅降低假信号概率。  
-2. 自适应风险管理：  
-   - 摆动点模式适合趋势市场，能有效抓住波段行情  
-   - ATR模式适合震荡市场，根据波动率自动调整止损幅度  
-3. 参数高度可配置：所有关键参数(RSI周期、枢轴检测范围、风险回报比等)均可根据市场特性调整。  
-4. 科学的资金管理：默认采用10%的仓位比例，防止单笔交易过度风险暴露。  
-5. 实时视觉反馈：通过图表标记和动态止损/止盈线，提供直观的交易决策支持。  
-
-#### 风险分析  
-1. 滞后性风险：RSI作为滞后指标，在剧烈单边行情中可能产生延迟信号。缓解方案：结合趋势过滤器或缩短RSI周期。  
-2. 震荡市场风险：在无明确趋势时可能产生连续假信号。缓解方案：启用ATR模式并增大乘数，或附加波动率过滤器。  
-3. 参数过拟合风险：特定参数组合可能在历史数据表现良好但实盘失效。缓解方案：进行多周期多品种压力测试。  
-4. 极端行情风险：跳空缺口可能导致止损失效。缓解方案：避免重大经济事件前后交易，或使用期权对冲。  
-5. 时间框架依赖性：不同时间周期表现差异较大。缓解方案：在目标时间框架进行充分回测优化。  
-
-#### 优化方向  
-1. 复合指标验证：增加MACD或成交量指标作为二次确认，提升信号质量。  
-2. 动态参数调整：根据市场波动率自动调整RSI周期和ATR乘数。  
-3. 机器学习优化：使用遗传算法优化关键参数组合。  
-4. 多时间框架分析：引入更高时间框架的趋势方向过滤。  
-5. 仓位动态管理：根据波动率调整仓位大小，实现风险均衡。  
-6. 事件过滤器：集成经济日历数据，避免重要数据发布前后的交易。  
-
-#### 总结  
-RSI双枢轴背离量化策略通过系统化的背离识别和严格的风险管理，提供了一种结构化的反转交易方法。其核心价值在于将传统技术分析概念转化为可量化的交易规则，并通过双模式止损机制适应不同市场环境。策略表现出色需要三个关键要素：适当的参数优化、严格的风险控制和一致性的执行纪律。该策略特别适合有一定波动性但趋势不极端的市场环境，是中级交易者向量化交易过渡的优秀模板。  
-
-||  
 
 #### Overview  
 The RSI Dual-Pivot Divergence Quantification Strategy is an advanced trading methodology that identifies potential reversal opportunities by detecting regular bullish and bearish divergences between price action and the Relative Strength Index (RSI). This strategy employs an automated pivot detection algorithm combined with two distinct stop-loss/take-profit management approaches to automatically establish positions when divergence signals are confirmed. The core innovation lies in its precise mathematical validation of price-RSI divergence phenomena and dynamic risk management mechanisms that ensure each trade adheres to predetermined risk-reward ratios.  
@@ -101,7 +56,6 @@ The RSI Dual-Pivot Divergence Quantification Strategy is an advanced trading met
 
 #### Conclusion  
 The RSI Dual-Pivot Divergence Quantification Strategy provides a structured approach to reversal trading through systematic divergence identification and rigorous risk management. Its core value lies in transforming traditional technical analysis concepts into quantifiable trading rules with dual-mode stop mechanisms adaptable to varying market conditions. Strategy excellence requires three key elements: appropriate parameter optimization, strict risk control, and consistent execution discipline. Particularly effective in moderately volatile, non-extreme trending environments, this strategy serves as an excellent template for intermediate traders transitioning to quantitative trading methodologies.  
-[/trans]
 
 
 

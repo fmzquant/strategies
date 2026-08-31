@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e3501fdb289e3df06b.png)
-[trans]
-
-## 概述
-
-双重趋势追踪策略是一种同时结合双重指标判断趋势的量化交易策略。该策略首先利用123反转指标判断价格反转信号,然后再结合方向趋势指标(DTI)判断价格趋势方向,从而实现双重确认下单信号。
-
-## 策略原理
-
-该策略主要由两部分组成:
-
-1. 123反转指标
-	
-	123反转指标的判断原理是:
-	
-	- 当收盘价连续2天上涨,并且9日慢速K线低于50时,做多;
-	
-	- 当收盘价连续2天下跌,并且9日快速K线高于50时,做空。
-	
-	这样可以捕捉到价格反转的时机点。
-
-2. 方向趋势指标(DTI)
-
-	DTI指标判断原理是:计算一段时间价格波动的绝对值均线,再除以价格的平均波幅。
-	
-	- 当DTI高于超买线时,表明目前是下跌趋势;
-	
-	- 当DTI低于超卖线时,表明目前是上涨趋势。
-	
-3. 两者结合
-
-	首先利用123反转指标判断价格是否出现反转信号。然后再结合DTI指标判断反转后价格的总体趋势方向。
-	
-	这样可以避免单纯依靠反转信号所带来的假反转问题,从而提高策略的稳定性和盈利能力。
-	
-## 策略优势
-
-1. 双重指标确认,避免假反转带来的风险
-
-2. 结合反转与趋势判断,兼顾操作灵活性与稳定性
-
-3. 参数优化空间大,可以灵活调整适应不同品种
-
-## 风险分析
-
-1. DTI参数设置需要经验,不恰当会误判趋势方向
-
-2. 反转不一定代表新的趋势形成,可能出现震荡RANGE市
-
-3. 需要有效止损,控制单笔损失
-
-   ​	解决方法:参数优化测试 + 合理止损 + 结合其他指标
-
-## 策略优化方向  
-
-1. 对DTI参数进行测试,找到最佳参数组合
-
-2. 结合其他指标过滤假反转信号
-
-3. 优化止损策略,找到最佳止损点
-
-## 总结
-
-双重趋势追踪策略通过123反转与DTI双重指标确认,可以有效判断价格反转实质性并捕捉新的趋势方向,从而提高策略获利概率。但参数设置及止损策略仍需不断测试优化,才能将策略盈利空间最大化。总的来说,该策略结合了趋势与反转交易的优点,是一种值得推荐的量化策略。
-
-||
 
 ## Overview  
 
@@ -138,7 +73,6 @@ The strategy consists of two main parts:
 
 The combo trend tracking strategy effectively determines the essentiality of price reversals and captures new trend directions through the double confirmation of 123 reversals and DTI, thereby improving the profitability of strategies. However, parameter settings and stop loss strategies still require continuous testing and optimization in order to maximize the profit space of strategies. Overall, by combining the advantages of trend trading and reversal trading, this is a worthwhile quantitative strategy to recommend.
 
-[/trans]
 
 > Strategy Arguments
 

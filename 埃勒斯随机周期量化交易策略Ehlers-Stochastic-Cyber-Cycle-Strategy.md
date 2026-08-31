@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b9580b66201c0a1539.png)
 
-[trans]
-
-## 概述
-
-埃勒斯随机周期策略是一种运用埃勒斯的随机周期指标来产生交易信号的量化交易策略。该策略结合了随机指标和周期指标的优点,旨在抓住市场中的周期性机会。
-
-## 策略原理
-
-该策略首先构建一个 smoothed 周期指标,然后基于该指标构建一个随机指标值。交易信号的产生是根据这个随机指标值的移动平均线的交叉来决定的。
-
-具体而言,smoothed 周期指标的计算方法是:
-
-```
-smooth = (src + 2 * src[1] + 2 * src[2] + src[3]) / 6
-```
-
-其中 src 是输入的价格数据,比如收盘价。该指标结合了当前价格和之前3个时间段的价格,构建出一个平滑的周期信号。
-
-基于该 smoothed 指标,然后可以计算出随机指标 cycle:
-
-```
-cycle := (1 - .5 * alpha) * (1 - .5 * alpha) * 
-           (smooth - 2 * smooth[1] + smooth[2]) + 
-           2 * (1 - alpha) * cycle[1] - 
-           (1 - alpha) * (1 - alpha) * cycle[2]
-```
-
-该计算公式中包含了平滑后的周期信号的二阶差分项,以及之前两个周期的值。α是平滑因子,调节了新旧周期值的权重。
-
-最后,根据这个 cycle 指标计算出一个 0-100 的随机值 value1。并根据 value1 的 10 日移动平均构建出信号值 signal。当 signal 的移动平均线上穿或下穿时,发出交易信号。
-
-## 策略优势
-
-该策略结合随机指标和周期指标,综合了两者的优点。相比简单的移动平均等趋势策略,该策略可以更好地捕捉周期性机会,从而获得较佳的效果。
-
-主要优势有:
-
-1. 周期指标可以识别循环模式,随机指标提供xFB交易时机
-2. 双重指标设计,可以有效过滤假信号
-3. 可自定义参数,适应不同市场环境
-
-## 策略风险
-
-该策略主要存在以下风险:
-
-1. 参数设置不当可能导致交易频繁,增加交易费用和滑点成本
-2. 无法有效处理价格剧烈波动的市场,可能造成较大亏损
-3. 周期指标对曲线拟合的依赖性强,拟合不当可能产生错误信号
-
-可以通过优化参数设置、设置止损点、结合其他过滤指标等方法来控制风险。
-
-## 策略优化方向 
-
-该策略还可以从以下几个方向进行优化:
-
-1. 结合其他技术指标进行信号过滤,如布林带、RSI等,减少错误信号
-2. 加入自适应退出机制,根据市场波动程度动态调整止损点
-3. 利用机器学习方法自动优化参数,使之能够动态适应市场
-4. 优化资金利用率,通过杠杆、复利等手段增强资金使用效率
-
-## 总结
-
-埃勒斯随机周期策略综合运用随机指标和周期指标的优势,通过双重信号设计有效控制风险,能够在周期性较强的市场中获得较好收益。通过进一步优化,该策略可以成为一个值得推荐的量化交易策略。
-
-||
 
 ## Overview
 
@@ -139,7 +74,6 @@ This strategy can also be optimized in the following aspects:
 
 The Ehlers Stochastic Cyber Cycle Strategy integrates the advantages of stochastic and cycle indicators through dual signal design to effectively control risks, and can achieve good returns in markets with strong cyclicality. With further optimization, this strategy can become a worthwhile quantitative trading strategy to recommend.
 
-[/trans]
 
 > Strategy Arguments
 

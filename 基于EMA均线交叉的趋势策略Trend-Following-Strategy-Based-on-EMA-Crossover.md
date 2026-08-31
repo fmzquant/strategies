@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种利用EMA均线交叉形成交易信号的趋势追踪策略。该策略通过优化均线参数组合,以提高策略稳定性。
-
-一、策略原理
-
-该策略主要遵循以下核心规则:
-
-1. 设置快线EMA和慢线EMA,快线反应价格变化,慢线判断趋势;
-
-2. 根据快线上穿慢线做多,下穿做空;
-
-3. 设置EMA参数比例,慢线周期≥快线3倍,以减少虚假信号;
-
-4. 可选择只做多模式,避免逆势交易。
-
-5. 可定制回测周期进行参数优化测试。
-
-通过调整EMA均线参数,可在保持敏感性的同时提高稳定性,锁定趋势交易机会。
-
-二、策略优势
-
-该策略最大优势是规则简单,容易实施,适合时间有限的交易者。
-
-另一优势是可通过参数优化降低频繁无效交易。
-
-最后,可选择只做多模式,无需逆势交易,适合股市等品种。
-
-三、潜在风险 
-
-但该策略也存在以下问题:
-
-首先,EMA均线本身存在滞后问题,可能错过最佳点位。
-
-其次,参数设置不当可能过度过滤导致漏单。
-
-最后,止盈止损机制有待改进及优化。
-
-四、内容总结
-
-本文详细介绍了一种基于EMA均线交叉的趋势交易策略。它通过调整均线参数组合来提升策略稳定性。该策略易于使用且规则简单清晰,但也需要注意防控均线滞后等问题。
-
-||
 
 This article explains in detail a trend following strategy using EMA crossover to generate trading signals. It aims to improve strategy robustness through optimizing moving average parameters.
 
@@ -94,7 +51,6 @@ IV. Summary
 
 In summary, this article has explained a trend following strategy based on EMA crossovers. It aims to improve robustness by tuning EMA parameters. With simple and clear rules, it is easy to implement but risks like EMA lag need prevention.
 
-[/trans]
 
 > Strategy Arguments
 

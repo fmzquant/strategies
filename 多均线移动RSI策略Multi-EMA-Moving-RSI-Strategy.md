@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略利用多组移动平均线与RSI指标进行组合交易。当快速EMA下穿慢速EMA,并且RSI显示超卖时做空;当价格重新上穿均线时平仓。
-
-具体交易逻辑:
-
-1. 计算4组不同周期的指数移动平均线,例如9日、26日、100日和55日均线
-
-2. 当9日EMA下穿26日EMA时,考虑做空信号
-
-3. 同时,RSI指标低于阈值(如40)时激活做空信号,避免超卖反弹
-
-4. 入场做空后,当价格上穿55日或100日EMA时平空仓
-
-5. 可设置不同均线周期组合,优化参数
-
-该策略充分利用多均线判断趋势,并辅助RSI指标来过滤假信号,在超卖点位做空。
-
-## 策略优势 
-
-- 多均线组合判断,提高准确性
-
-- RSI指标避免超卖反弹的风险
-
-- 较短均线做策略,较长均线止损,回撤控制
-
-## 策略风险
-
-- 需要反复测试确定合适的参数
-
-- RSI参数设置需要审慎评估
-
-- 仅做空策略,可能错过多头机会
-
-## 总结
-
-该策略综合运用多均线的优势,辅以RSI指标过滤信号。参数优化和止损设置对策略效果至关重要。但仅做空交易亦是一大局限。
-
-||
 
 ## Strategy Logic
 
@@ -90,7 +49,6 @@ The strategy utilizes multiple EMAs for trend and adds RSI for signal confirmati
 
 This strategy combines the power of multiple EMAs with RSI confirmation and filtering. Parameter optimization and stop loss are critical. But being SHORT-only is a key limitation.
 
-[/trans]
 
 > Strategy Arguments
 

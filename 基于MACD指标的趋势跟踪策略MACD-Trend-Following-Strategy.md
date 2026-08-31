@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/96418c6ef2eed7422d.png)
-[trans]
-
-
-## 概述
-
-该策略基于MACD指标实现趋势跟踪交易。策略利用MACD指标识别趋势方向,配合动态止损来锁定利润。
-
-## 策略原理
-
-1. 计算快线、慢线和MACD指标。快线采用12周期指数移动平均线,慢线采用26周期指数移动平均线。MACD 为快线和慢线的差值。
-
-2. 设置买入线和卖出线。当MACD上穿买入线时生成买入信号;当MACD下穿卖出线时生成卖出信号。
-
-3. 开仓后设置动态止损,跟踪止损线。止损线初始值为开仓价格的95%,随着价格运行止损线上移,来锁定利润。
-
-4. 当触发止损或反向信号时平仓。
-
-## 优势分析
-
-1. 使用MACD指标识别趋势方向,可以有效跟踪趋势。
-
-2. 动态止损机制可以持续锁定利润,避免亏损扩大。
-
-3. 策略逻辑简单清晰,容易理解实现,适合量化交易的自动执行。
-
-## 风险分析
-
-1. MACD指标存在滞后,可能错过短期趋势反转。
-
-2. 止损过于宽松可能错过部分利润,过于严格可能过早止损。
-
-3. parameter tuning问题,MACD参数及买卖线需要不断测试优化。
-
-4. 趋势行情中效果较好,震荡行情中存在亏损风险。
-
-## 优化方向
-
-1. 优化MACD参数,寻找最佳参数组合。
-
-2. 测试不同的止损方式,比如点数止损、ATR止损等。
-
-3. 增加过滤条件,利用其它指标避免误交易。例如布林带、RSI等。
-
-4. 结合趋势判断指标,识别趋势和震荡行情,动态调整策略参数。
-
-## 总结
-
-该策略整体思路清晰,使用MACD指标跟踪趋势,并采用动态止损来锁定利润,可以有效跟踪趋势行情。但MACD指标存在滞后问题,止损点设置也需要优化。下一步将进一步测试参数设定,优化止损机制,并配合其它指标进行过滤,使策略更适合不同行情,提高策略的稳定性。
-
-||
 
 
 ## Overview
@@ -108,7 +58,6 @@ This strategy implements trend following trading  on the MACD indicator. It iden
 
 The strategy has clear logic of using MACD to track trends and dynamic stop loss to lock in profits. It can effectively track trending markets. But MACD has lagging issue, and stop loss points need to be optimized. Next step is to further test parameters, optimize stop loss mechanism, add filters with other indicators, to make it robust across different market conditions, improving stability.
 
-[/trans]
 
 > Strategy Arguments
 

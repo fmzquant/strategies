@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c3f62caf17bc207ba5.png)
-[trans]
-
-
-## 概述
-
-反转捕捉策略是一个利用波动率指标布林线与动量指标RSI结合的反转交易策略。它设定了布林线通道和RSI的超买超卖线作为信号,在趋势方向转变的时候寻找反转机会进行交易。
-
-## 策略原理
-
-该策略使用布林线作为主要技术指标,辅以RSI等动量指标来验证交易信号。具体逻辑是:
-
-1. 判断大周期趋势方向,确定是看涨还是看跌。使用50日EMA与21日EMA的金叉死叉来判断。
-2. 在下跌趋势中,当价格上涨突破布林下轨,同时RSI指标刚刚从超卖区域反弹,出现金叉形态,说明超卖区域已经筑底,判断为买入信号。
-3. 在上涨趋势中,当价格下跌突破布林上轨,同时RSI指标刚刚从超买区域回落,出现死叉形态,说明超买区域已经开始回调,判断为卖出信号。
-4. 以上买入和卖出信号必须同时满足,避免假信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 结合波动率指标和动量指标,信号较为可靠。
-2. 反转交易风险较小,适合短线操作。
-3. 程序化规则清晰,容易实现自动交易。
-4. 结合趋势交易,避免在震荡市场无序开仓。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 布林线通道突破假信号风险,需要RSI指标进行过滤。
-2. 反转失败的风险,需要及时止损。
-3. 反转时间点把握不准风险,可能出现提前入场或错过最佳点位。
-
-针对以上风险,可以设置止损位置来控制风险敞口,同时优化参数,调整布林线周期或RSI参数。
-
-## 优化方向  
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 优化布林带参数,调整周期长度和标准差大小,寻找最佳参数组合。  
-2. 优化移动平均线周期,确定趋势判断的最佳周期长度。
-3. 调整RSI参数,寻找最佳超买超卖区域范围。  
-4. 增加其他指标结合,如KDJ、MACD等,丰富系统入场理由。
-5. 增加机器学习算法,利用AI技术自动寻找最佳参数。
-
-## 总结
-
-反转捕捉策略整体来说是一个效果较好的短线交易策略。它结合趋势判断和反转信号,既可过滤震荡市场的假信号,有避免在趋势市场与趋势的对冲,风险可控。通过不断优化参数和模型,可以获得更好的策略效果。
-
-|| 
 
 ## Overview  
 
@@ -107,7 +57,6 @@ The main optimization directions includes:
 
 The Reversal-Catcher strategy is an effective short-term trading strategy overall. By combining trend filtering and reversal signals, it can avoid false signals during market consolidation and avoid fighting against trend. Through continuous parameters and model optimization, better strategy performance can be achieved.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,79 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于SoftKill21的Amazing scalper for majors with risk management策略进行修改,使用三重指数移动平均线替代原有的简单移动平均线,以降低滞后。该策略适用于主要货币对的1分钟周期,采用趋势跟踪方法,根据快速EMA、标准EMA和缓慢EMA的黄金交叉和死叉进行买入和卖出操作。同时结合伦敦和纽约交易时段,以及风险管理原则确定仓位大小。
-
-## 策略原理 
-
-本策略使用三条不同周期的指数移动平均线:25周期快速EMA、50周期标准EMA和100周期缓慢EMA。当快速EMA上穿标准EMA和缓慢EMA时,产生买入信号;当快速EMA下穿标准EMA和缓慢EMA时,产生卖出信号。为降低滞后,使用二次指数平滑技术计算EMA。策略还根据伦敦和纽约时段的开市时间,分别判断是否符合进场条件。此外,策略使用账户权益的固定百分比确定每个订单的仓位大小,以控制风险。
-
-具体来说,策略首先计算三条EMA线,然后判断快速EMA是否与标准EMA和缓慢EMA形成黄金交叉或死叉,如果同时满足与伦敦或纽约时段开市时间匹配的条件,则产生买入或卖出信号。在确定仓位大小时,策略先计算账户权益的固定百分比作为风险敞口,再转换为合约数和标准手数,从而动态调整每个订单的仓位。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用三重EMA,能够有效平滑价格数据,识别趋势方向。快速EMA对价格变化敏感,标准EMA稳定跟踪,慢速EMA过滤噪音。三者配合使用,能够过滤假突破,确定趋势方向。
-
-2. 应用二次指数平滑技术计算EMA,降低滞后性,使信号更加灵敏。
-
-3. 结合主要交易时段,避免在非主要交易时间出现误导信号。
-
-4. 采用风险管理原则,根据账户权益调整仓位。避免单笔损失过大对账户造成冲击。
-
-5. 策略逻辑简单清晰,容易理解实现,适合新手学习。
-
-6. 可针对不同货币对、时间周期进行优化调整,适用面广。
-
-## 风险分析
-
-该策略也存在一些可能的风险:
-
-1. EMA无法有效过滤突发事件造成的短期假突破,可能产生错误信号。建议结合其他指标进行分析过滤。
-
-2. 固定百分比仓位无法对市场波动进行动态调整,存在仓位过大或过小的问题。可以考虑引入波动率等指标动态调整仓位。
-
-3. 仅考虑两个主要交易时段,可能错过其他时段的交易机会。可以测试不同时段的效果。 
-
-4. 不具备止损机制,无法有效控制单边亏损。可以设置移动止损或时间止损。
-
-5. EMA交叉具有一定滞后性,可能错过最佳入场时机。可以考虑降低EMA周期或结合其他先行指标。
-
-6. 效果可能受到交易成本的影响。建议适当调整止损和止盈位置。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同EMA周期参数,寻找最优参数组合。可以引入自适应EMA等技术动态优化EMA周期。
-
-2. 增加其他过滤指标,如RSI、布林带等,提高信号的质量。
-
-3. 引入动态仓位管理机制,根据市场波动性和盈利情况调整仓位。
-
-4. 加入移动止损、时间止损来限制亏损。适当调整止损点位。
-
-5. 测试不同交易时段,找到最佳交易时间。可以结合波动率等指标筛选时段。
-
-6. 优化止盈和止损水平,平衡获利大小和胜率。引入抛物线止损等智能止损。 
-
-7. 尝试修改改进EMA计算方式,如线性加权EMA等,降低滞后。
-
-8. 结合自动机器学习方法寻找最优参数。
-
-9. 对交易成本进行建模,调整系统以获得净利润最大化。
-
-通过以上优化,可以提高系统获利能力,控制回撤,扩展适用范围,从而获得一个更强大和稳定的交易策略。
-
-## 总结
-
-本策略整体思路清晰,使用三重EMA识别趋势,配合主要交易时段进行操作,并采用账户比例确定仓位,属于典型的趋势跟踪型策略。策略优化空间较大,通过参数优化、机制改进、技术引入等手段,可以进一步扩展该策略在更多市场中的适用性,提高策略稳健性。作为新手学习폟榫,该策略是一个很好的起点。通过学习和改进,可以提高对量化交易系统的理解。如果处理得当,该策略可以转化为一个成熟可靠的量化策略。
-
-|| 
 
 ## Overview
 
@@ -153,7 +80,6 @@ Through the above optimizations, the system's profitability can be improved, dra
 
 The overall logic of this strategy is clear, using triple EMAs to identify trends, combining with major sessions for execution, and adopting position sizing based on account percentage. It belongs to a typical trend following system. There is large room for optimization via parameter tuning, mechanism improvements, technology introduction etc. to further expand its applicability across more markets and improve robustness. As a learning 웽e for beginners, it provides a good starting point. With practice and enhancements, it can transform into a mature and reliable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

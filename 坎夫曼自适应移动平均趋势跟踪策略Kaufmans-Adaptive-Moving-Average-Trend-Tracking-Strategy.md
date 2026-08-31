@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18fcf961760176b1c98.png)
-[trans]
-
-## 概述
-
-该策略运用坎夫曼自适应移动平均线(KAMA)来判断趋势方向,以捕捉中长线趋势为主。当KAMA线上涨时做多,当KAMA线下跌时做空。该策略融合了移动平均线的趋势跟踪功能和坎夫曼自适应平均线的动态调整特性,旨在提高交易信号的质量。
-
-## 策略原理
-
-该策略的核心指标是坎夫曼自适应移动平均线(KAMA)。KAMA根据市场波动度的大小来动态调整自己的加权因子,从而提高曲线的灵敏度。具体来说,当市场波动加大时,KAMA的曲线变得更加平滑;当市场波动减小时,KAMA的曲线变得更加灵敏。这样可以过滤掉部分噪音,同时又可以及时捕捉新的趋势转折。
-
-策略首先计算KAMA的值。然后判断KAMA线的多空状态:当close价格上穿KAMA线时产生买入信号;当close价格下穿KAMA线时产生卖出信号。根据这些交易信号开仓做多做空。
-
-## 优势分析
-
-该策略最大的优势在于利用KAMA指标进行趋势判断。KAMA指标本身就具有很强的趋势跟踪能力,它可以动态调整参数来适应市场状况,从而产生更可靠的交易信号。相比简单移动平均线和指数移动平均线,KAMA指标可以更好地识别趋势,减少虚假信号。
-
-另外,该策略只利用KAMA的多空状态来判断趋势方向。没有设置额外的过滤条件,这简化了策略逻辑,也使参数较少,降低了过度优化的风险,有利于参数稳定性和跨市场适应性。
-
-## 风险分析
-
-该策略主要风险在于KAMA本身作为滞后指标,交易信号产生时市场趋势可能已经发生反转。这会导致止损风险。另外,KAMA曲线当中也会出现短期的震荡态势,这可能产生一些频繁的错误信号。
-
-为降低风险,可以考虑结合其他指标来确认交易信号,比如波动率指标、成交量指标等。也可以适当调整参数,Identification使KAMA曲线更加平滑。
-
-## 优化方向  
-
-该策略优化空间还很大,主要可以从以下几个方面入手:
-
-1. 结合其他指标进行信号过滤,如MACD、震荡指标等,提高信号质量
-
-2. 增加止损策略,利用移动止损或余额曲线止损来控制单笔损失
-
-3. 优化参数,使KAMA更有效地捕捉趋势
-
-4. 增加多时间周期分析,利用更高时间周期确定大趋势方向
-
-5. 利用机器学习方法自动优化参数,使参数适应不同品种
-
-## 总结
-
-该策略整体思路清晰,通过KAMA指标判断趋势方向,具有趋势跟踪能力强、逻辑简单、参数较少等优点。但也存在滞后识别趋势反转的风险。可以通过多种方式来优化该策略,使其效果更好,适应性更广。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ There is still large room for optimizing this strategy, mainly in the following 
 
 The overall logic of this strategy is clear, using KAMA indicator to determine trend direction. It has advantages like strong trend tracking capability, simple logic and fewer parameters. But it also has the risk of lagging in identifying trend reversals. The strategy can be improved in many ways to make it more effective and adaptable.
 
-[/trans]
 
 > Strategy Arguments
 

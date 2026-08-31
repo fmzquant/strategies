@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/168d899ce904ef1ea68.png)
-[trans]
-
-基于SuperTrend指标的趋势跟踪策略。该策略利用SuperTrend指标判断趋势方向,结合ATR指标设定止损止盈,实现低风险趋势跟踪。
-
-#### 策略原理
-
-该策略的核心指标是SuperTrend,SuperTrend指标结合ATR,根据价格的突破来判断趋势方向。具体计算方法如下:
-
-上轨线:上轨线=当前价-(ATR乘以乘数)
-下轨线:下轨线=当前价+(ATR乘以乘数)
-
-当价格高于上轨线时,为看涨趋势;当价格低于下轨线时,为看跌趋势。
-
-策略基于SuperTrend指标判断趋势方向,在看涨趋势时做多,看跌趋势时做空。同时,策略利用ATR指标的平均波动范围来设置止损止盈位置,控制风险。
-
-#### 策略优势
-
-- 利用SuperTrend指标判断趋势,可准确捕捉市场趋势
-- ATR止损止盈,有效控制单笔损失
-- 结合趋势和止损,整体实现高胜率交易
-- 容易入市容易止损,适合短线跟踪
-
-#### 策略风险
-
-- SuperTrend指标存在repaint问题,不能完全依赖信号入市
-- ATR指标对剧烈行情无法完全适应,止损过密容易被止损
-- 策略本身无法判断趋势质量,需要人工校验趋势
-
-风险解决方法:
-1)人工校验趋势质量,避免在假突破上做反向操作
-2)适当宽松止损点,防止在正常波动中被小幅止损
-
-#### 策略优化方向 
-
-- 增加多因子校验,判断趋势质量
-- 结合波动率指标动态调整ATR参数
-- 增加机器学习模型辅助判断交易时机
-- 优化止损机制,防止正常波动被止损
-
-总结:本策略利用SuperTrend指标判断趋势方向,ATR指标设置止损止盈,实现低风险趋势跟踪交易。策略思路清晰易于理解,可根据自身风险偏好调整参数,是一种通用型的趋势跟踪策略。但策略本身无法判断趋势质量,建议与其他指标或模型配合使用,降低误操作风险。
-
-||
 
 The strategy uses the SuperTrend indicator to determine the trend direction and combines the ATR indicator to set stop loss and take profit to achieve low risk trend following.
 
@@ -92,7 +50,6 @@ Risk Mitigation Methods:
 
 In summary, this strategy uses the SuperTrend indicator to determine the trend direction and sets stop loss and take profit with the ATR indicator to achieve low risk trend following trading. The strategy idea is clear and easy to understand. Parameters can be adjusted according to personal risk preferences. It is a versatile trend tracking strategy. However, the strategy itself cannot judge the quality of the trend, so it is recommended to use with other indicators or models to reduce the risk of misoperation.
 
-[/trans]
 
 > Strategy Arguments
 

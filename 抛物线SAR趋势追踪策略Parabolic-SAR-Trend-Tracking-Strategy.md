@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/106026b1544025a12dc.png)
 
-[trans]
-
-## 概述
-
-该策略利用抛物线SAR(止损反转)指标结合EMA均线进行过滤从而提高交易信号的准确性。策略适用于追踪趋势的交易者。
-
-## 策略原理
-
-当SAR位于价格之下且价格高于慢速EMA均线加偏移量时产生做多信号;当SAR位于价格之上且价格低于慢速EMA均线减偏移量时产生做空信号。同时,通过快速EMA均线和慢速EMA均线的交叉来进行额外过滤。这样可以避免SAR指标单独使用时可能出现的假信号。
-
-具体来说,做多信号的触发条件是:1) SAR位于昨日收盘价之下且位于当前收盘价之上;2) 当前收盘价高于慢速EMA均线加偏移量或快速EMA均线下穿慢速EMA均线;3) 当前收盘价高于SAR值和慢速EMA均线加偏移量。
-
-做空信号的触发条件是:1) SAR位于昨日收盘价之上且位于当前收盘价之下;2) 当前收盘价低于慢速EMA均线减偏移量或快速EMA均线上穿慢速EMA均线;3) 当前收盘价低于SAR值和慢速EMA均线减偏移量。
-
-## 优势分析
-
-该策略结合SAR指标和EMA均线过滤,可以较好地识别趋势方向,减少假信号。
-
-优势如下:
-
-1. SAR指标可以快速响应价格变化,识别趋势反转点。
-2. EMA均线过滤可以进一步确认趋势方向,避免SAR指标单独使用时可能出现的假信号。
-3. 结合快慢EMA均线交叉作为辅助判断条件,可以提高信号准确性。
-4. 通过参数调优可以提高策略盈利能力。
-
-## 风险分析
-
-该策略也存在一定的风险,主要如下:
-
-1. 在盘整行情中,SAR指标和EMA均线可能发出错误信号,从而影响策略收益。可以通过参数优化减少此风险。
-2. EMA均线有滞后性,可能错过趋势反转的最佳入场点位。可以适当缩短EMA周期以降低滞后性。
-3. 大幅震荡行情中止损点容易被突破,给策略带来较大亏损。可以适当放宽止损范围。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化SAR指标的步长和最大值参数,使其更加灵敏地响应价格变化。
-2. 优化慢速EMA和快速EMA的周期参数,找到最佳参数组合。
-3. 优化EMA偏移量参数,降低误信号率。
-4. 添加其他指标进行过滤,如MACD、KDJ等,提高信号准确性。
-5. 优化止损策略,降低单笔损失。
-
-## 总结
-
-本策略综合利用SAR指标和EMA均线的优势,设计了一个较为灵活的趋势追踪策略。总的来说,该策略成功识别趋势方向的能力较强,在追踪趋势中可以获得较好的效果。通过参数优化和风险管理,可以进一步增强策略稳定性和盈利能力。该策略适用于有良好风险管理意识和参数优化能力的投资者。
-
-||
 
 ## Overview
 
@@ -111,7 +63,6 @@ This strategy can be optimized from the following aspects:
 
 This strategy combines the strengths of SAR and EMA to design a flexible trend following system. Overall it has good trend detection capability and works well in tracking trends. Further enhancements in parameter optimization and risk management can improve stability and profitability. It suits investors with good risk management awareness and optimization skills.
 
-[/trans]
 
 > Strategy Arguments
 

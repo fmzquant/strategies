@@ -10,98 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18ada0b2e7e11fc2588.png)
-[trans]
-
-## 概述
-
-这是一个利用不同时间轴上的关键价位进行双重突破形成交易信号的策略。它可以在趋势价格突破关键支撑或阻力位时进入做多或做空头寸,以捕捉中长线趋势。
-
-## 策略原理
-
-该策略同时在两个不同的时间轴(tf和tf2)上分析价格行情,tf时间轴更长,反映中长线趋势;tf2时间轴更短,反映短期动向。策略监测以下交易信号:
-
-1. 当价格在tf时间轴上突破级别(level)向上时,记录up1=true
-2. 当价格在tf时间轴上突破级别向下时,记录dn1=true  
-3. 当价格在tf2时间轴上突破级别(level2)向上时,记录up2=true
-4. 当价格在tf2时间轴上突破级别向下时,记录dn2=true
-
-交易信号的形成条件是:up1和up2同时为true,表示中长线和短期均看涨,这时做多;dn1和dn2同时为true,表示中长线和短期均看跌,这时做空。
-
-该策略还加入了一些过滤条件,如反向套和色彩K线过滤,防止非真正趋势突破形成错误信号。
-
-整体来看,该策略充分利用了多时间段分析的优势,在确保中长线趋势符合预期的同时,避免被短期市场噪音干扰,形成高质量的交易信号。
-
-## 策略优势分析
-
-1. 突破关键支撑或阻力位,捕捉中长线趋势
-
-   该策略监测在两个时间轴上的关键价位突破,可以在趋势开始阶段捕捉到明确的进入时机。
-
-2. 双重确认降低错误信号
-
-   在两个不同时间轴上同时突破,可以大幅降低随机波动带来的错误信号,提高信号质量。
-
-3. 反向套和色彩K线过滤
-
-   增加反向套和色彩K线判断,可以过滤掉一些低质量的突破信号,防止严重亏损。
-
-4. 简洁的参数设定
-
-   该策略只需要两个时间轴参数即可工作,参数选择灵活,适合不同品种。
-
-5. 易于理解和优化
-
-   策略结构清晰,容易理解原理;也可以根据行情特点调整参数,进行策略优化。
-
-## 策略风险分析
-
-1. 双重突破造成延迟入场
-
-   相比单一突破,双重突破可能造成一定的入场延迟,错过早期强势行情的利润。
-
-2. 关键支撑阻力位选取
-
-   不同品种和市场周期,选择合适的关键价位非常重要,否则可能得到错误信号。
-
-3. 突破失败
-
-   即使双重突破,也可能出现突破失败然后快速回调的情况,带来亏损。
-
-4. 趋势反转损失
-
-   在趋势晚期入场可能遭遇突然反转,无法及时止损出场而造成较大亏损。
-
-5. 参数优化困难
-
-   虽然简单,但要找到最佳参数组合仍需大量反复测试,优化难度较大。
-
-## 策略优化方向  
-
-1. 增加止损策略
-
-   可以设置移动止损或时间止损,在亏损扩大前止损出场。
-
-2. 优化过滤条件
-
-   可以测试不同的反向套幅度参数,或试验其它过滤方式。
-
-3. 动态关键价位
-
-   可以使关键价位随市场变化而动态变化,而不是静态设置。
-
-4. 多品种参数优化
-
-   可以通过机器学习方式,优化不同品种的最佳参数组合。
-
-5. 增加量价确认
-
-   可以添加交易量的确认,避免无量突破的假信号。
-
-## 总结
-
-该策略整体来看是一种简单实用的趋势追踪策略。它同时利用两个时间轴分析,在中长线符合预期时进行入场,可以有效过滤掉部分噪音。策略信号清晰易读,参数设置也比较简单直观。但同时也存在入场时机不佳,关键价位选择困难等问题。总体而言,该策略适合用作趋势验证工具,与其他因子组合使用效果更好,但直接作为主交易系统仍有很大优化空间。
-
-||
 
 
 ## Overview
@@ -193,7 +101,6 @@ Overall, the strategy takes full advantage of multi-timeframe analysis, ensuring
 
 Overall this is a simple and practical trend following strategy. By analyzing two timeframes it enters on mid-to-long term direction conformity to filter noise effectively. The signals are clear and easy to interpret, with intuitive parameter settings. But it also has issues like mistimed entry, difficulty selecting key levels. In summary, this strategy works better as a trend validation tool to combine with other factors, but still has much room for optimization as a standalone trading system.
 
-[/trans]
 
 > Strategy Arguments
 

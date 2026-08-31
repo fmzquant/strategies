@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1298c4ef5259bb88875.png)
-[trans]
-#### 概述
-该策略主要利用相对强弱指数(RSI)来判断市场超买超卖情况,结合价格在200日简单移动平均线(SMA)之上作为趋势过滤条件,以此来决定是否进场交易。该策略通过三重RSI指标共同构建开仓条件,只有当短期RSI小于35且连续三个周期呈下降趋势,同时第三周期RSI小于60,且当前收盘价在200日SMA之上时,才会做多。平仓条件为RSI上穿50。
-
-#### 策略原理
-1. 计算指定周期的RSI指标
-2. 判断是否满足以下开仓条件:
-   - 当前RSI小于35
-   - 当前RSI小于前一周期RSI,前一周期RSI小于前二周期RSI,前二周期RSI小于前三周期RSI
-   - 前三周期RSI小于60
-   - 当前收盘价大于200日SMA
-3. 若同时满足上述四个条件,则开仓做多
-4. 持仓过程中,若RSI上穿50,则平仓
-5. 重复步骤2-4,进行下一次交易
-
-#### 策略优势
-1. 通过RSI判断超买超卖,在超卖区域开仓,能够捕捉到市场反转机会
-2. 通过三重RSI共同构建开仓信号,降低了假信号概率,提高了信号可靠性
-3. 加入价格在200日均线之上作为趋势条件,避免在下跌趋势中交易
-4. 平仓条件简单明了,能够及时兑现利润
-5. 策略逻辑清晰,易于理解和实现
-
-#### 策略风险
-1. RSI指标存在信号滞后性,可能错过最佳开仓时机
-2. 开仓条件相对严格,交易频率较低,可能错失部分行情
-3. 对于震荡市可能表现不佳,陷入频繁开平仓
-4. 策略只能捕捉到单边上涨行情,对于趋势反转后的下跌行情无法把握
-
-#### 策略优化方向
-1. 可以考虑加入移动止损或固定止损,控制单笔交易风险
-2. 研究RSI与其他辅助指标的结合,提高开平仓信号的可靠性和及时性
-3. 对开仓条件进行优化,在保证信号可靠性的同时提高交易频率
-4. 引入仓位管理,根据市场趋势强度和波动率动态调整仓位
-5. 考虑短线和中线结合,开发出适应不同市场状态的策略版本
-   
-#### 总结
-该策略通过三重RSI构建开仓条件,结合价格在长期均线之上作为趋势过滤,以此捕捉超卖反转行情。策略逻辑简单明了,易于实现和优化。但是策略也存在信号滞后、交易频率低、只能捕捉单边行情等风险和不足,需要在实际应用中不断调试和改进。通过引入止损止盈、仓位管理、结合其他指标等方法,可以进一步提升策略的稳定性和收益性。
-
-|| 
 
 #### Overview
 This strategy mainly uses the Relative Strength Index (RSI) to determine overbought and oversold conditions in the market, combined with the price above the 200-day Simple Moving Average (SMA) as a trend filter, to decide whether to enter a trade. The strategy constructs entry conditions through three RSI indicators. Only when the short-term RSI is below 35 and shows a downward trend for three consecutive periods, while the third-period RSI is below 60, and the current closing price is above the 200-day SMA, will it go long. The exit condition is when the RSI crosses above 50.
@@ -86,7 +47,6 @@ This strategy mainly uses the Relative Strength Index (RSI) to determine overbou
    
 #### Summary
 This strategy constructs entry conditions through a triple RSI, combined with the price above the long-term moving average as a trend filter, to capture oversold reversal setups. The strategy logic is simple and clear, easy to implement and optimize. However, the strategy also has risks and shortcomings such as signal lag, low trading frequency, and only being able to capture unilateral market moves. It needs continuous debugging and improvement in actual application. By introducing stop loss and profit taking, position management, combining with other indicators and other methods, the stability and profitability of the strategy can be further improved.
-[/trans]
 
 
 

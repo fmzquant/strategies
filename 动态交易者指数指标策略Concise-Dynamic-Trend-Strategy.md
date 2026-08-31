@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16395a710eae0a93fa6.png)
-[trans]
-
-## 概述
-
-该策略基于动态交易者指数(TDI)指标以及价格行动通道(PAC)指标,结合布林带通道、相对强强指数(RSI)以及MACD指标,实现了一个趋势跟踪系统。
-
-该策略主要用于发现趋势,并在趋势方向发生重大转变时产生交易信号。它融合了多个指标,旨在提高signals再现率和信号质量。
-
-## 策略原理
-
-该策略核心部分是TDI指标。TDI由多个子指标叠加而成,主要包括:
-
-- 相对强强指数(RSI):反应价格的强弱程度  
-- 布林带通道:反应价格波动范围  
-- RSI价格线:RSI的简单移动平均线,反应RSI的价格趋势  
-- RSI交易信号线:RSI的另一个简单移动平均线,用于产生交易信号
-
-当RSI价格线和RSI交易信号线出现“黄金交叉”时为买入信号;当两线出现“死亡交叉”时为卖出信号。交易信号线穿越中线也会产生较弱信号。
-
-此外,策略还结合了价格行动通道指标。该指标基于时间周期内的最高价、最低价计算得出价格通道。当价格接近通道上沿或下沿时,表示可能存在反转机会。
-
-为过滤误报,策略还引入MACD指标。只有当MACD柱颜色与交易信号方向一致时,才会触发入场信号。
-
-## 策略优势
-
-相比单一指标,该策略综合多个指标优势:
-
-- TDI指标对趋势变化较为敏感  
-- 价格行动通道清晰反映支撑与压力  
-- MACD可有效过滤误报  
-
-另外,相比移动平均线等趋势跟踪指标,TDI对趋势反转更加敏感,可减少不必要损失。
-
-该策略还可通过参数调整自适应不同市场环境。
-
-## 策略风险
-
-- 多指标叠加,参数调整复杂  
-- 交易频率可能过高,增加交易成本和滑点风险  
-- 反转识别并非100%准确,可能错过价格继续向一个方向运行的趋势  
-- 实盘交易中价格变化远比回测复杂,信号效果难以复制  
-
-可通过扩大止损幅度降低单笔损失。优化参数组合改善信号质量。适当放宽入场条件减少交易频率。
-
-## 优化方向  
-
-- 调整TDI各参数,寻找最佳组合  
-- 调整价格行动通道长度,优化支持阻力识别  
-- 调整MACD参数,优化入场过滤效果  
-- 添加仓位管理和移动止损策略  
-
-## 总结  
-
-该策略综合运用多种指标判断趋势和反转机会。可通过参数调整自适应不同品种。具有一定的实战价值,但信号效果接近完美依然有一定难度。建议在复杂多变的实盘中谨慎使用。
-
-|| 
 
 ## Overview
 This strategy is built upon the Traders Dynamic Index (TDI) and the Price Action Channel (PAC) indicators, along with Bollinger Bands, Relative Strength Index (RSI) and MACD, to implement a trend-following system.
@@ -116,7 +60,6 @@ Risks can be mitigated by expanding stop-loss ranges to limit losses, optimizing
 
 ## Conclusion
 The strategy synthesizes various indicators for assessing trend and reversals, and is adaptable across products when well-tuned. It has merits for live trading but reliably replicating signal performance could be challenging given the complexities of real markets. Caution is advised when deploying live.
-[/trans]
 
 > Strategy Arguments
 

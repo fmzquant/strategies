@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1bdbc5242543b5629d9.png)
 
-[trans]
-
-## 概述
-
-均线回归交易策略通过计算股价的线性回归线和均线的交叉来决定买入和卖出信号。该策略结合了均线和线性回归分析,既考虑了股价趋势,也考虑了统计学特征,可以有效判断股价反转点,实现低买高卖。
-
-## 策略原理
-
-该策略首先计算n日股价的线性回归线和m日均线。线性回归线反映了股价的长期统计趋势,均线反映了股价的短期动向。
-
-当均线上穿线性回归线时,表示股价上涨势头增强,产生买入信号。当均线下穿线性回归线时,表示股价上涨乏力,产生卖出信号。
-
-具体来说,策略通过以下几步判断交易信号:
-
-1. 计算n日股价线性回归线lrLine
-
-2. 计算线性回归线的m日简单移动平均线lrMA
-
-3. 计算股价的m日指数移动平均线ema
-
-4. 当ema上穿lrMA时,产生买入信号longEntry
-
-5. 当ema下穿lrMA时,产生卖出信号longExit
-
-6. 同时结合大盘判断,只有大盘为牛市时才考虑买入信号
-
-7. 根据信号执行买入卖出交易
-
-通过均线和回归线的交叉判定买卖时机,可以有效过滤假破和捕捉反转点,实现低买高卖。
-
-## 策略优势
-
-- 回归线反映长期趋势,均线反映短期动向,结合双重指标可以准确判断买卖点
-- 回归线计算简单,容易实现
-- 利用了大盘判断,可以过滤不适宜的交易信号
-- 可自定义参数调整买卖策略
-- 实现了低买高卖,收益Space较大 
-
-## 策略风险
-
-- 股价剧烈波动时,均线和回归线交叉频繁,可能产生错误信号
-- 大盘判断不准确时,也会误判买卖时机
-- 参数设置不当也会影响策略效果
-- 交易频繁,交易成本较高
-
-需要注意的参数调整,适当增大均线和回归线周期参数,降低交易频率。合理设置止损策略控制风险。优化大盘判断规则,提高准确率。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 均线指标优化:尝试不同类型的均线,如加权移动平均线等,找到适合该股票的最佳均线。
-
-2. 回归线优化:调整回归线计算周期,寻找最能反映该股票长期趋势的周期参数。
-
-3. 大盘判断优化:测试不同的大盘判断指标,找到最适合策略的大盘信号。
-
-4. 参数优化:通过不同的参数组合反复回测,寻找最佳参数配置。
-
-5. 止损策略优化:测试不同的止损方式,设置最佳的止损逻辑以控制风险。
-
-6. 交易成本优化:根据不同的交易手续费模式,调整交易频率以减少交易成本。
-
-通过以上几点优化,可以进一步提升策略的稳定性和收益率。
-
-## 总结
-
-该均线回归交易策略集成均线分析和线性回归分析的优点,可以有效识别股价反转点,指导低买高卖。策略较为简单可靠,适合用于中长线选股交易。通过参数优化和风险控制可以进一步提高策略稳定性。该策略为股市分析提供了一个可行的技术交易方案。
-
-||
 
 
 ## Overview
@@ -150,7 +80,6 @@ These optimizations can further improve the stability and profitability of the s
 
 The Linear Regression MA strategy integrates strengths of trend analysis and linear regression for effective reversal identification and buying low selling high. The straightforward strategy is suitable for stock picking over medium to long term horizons. With parameter tuning and risk control, the strategy can achieve even higher stability. It provides a viable technical trading framework for market analysis.
 
-[/trans]
 
 > Strategy Arguments
 

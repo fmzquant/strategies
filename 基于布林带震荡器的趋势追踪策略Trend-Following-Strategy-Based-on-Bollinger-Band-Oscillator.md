@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略的核心思想是利用布林带震荡器指标来识别趋势,并在趋势变化时及时入场。当价格突破布林带上轨时做多,当价格跌破布林带下轨时做空,采用趋势跟踪方式来获利。
-
-## 策略原理
-
-该策略主要基于布林带震荡器指标来判断趋势方向。布林带震荡器的计算公式为:
-
-```
-BBO = (收盘价 - N日移动平均价) / (2 * N日标准差) * 100
-```
-
-其中收盘价是当日的收盘价,N日移动平均价是收盘价的N日简单移动平均线,N日标准差是收盘价的N日标准差。
-
-该策略首先计算65日的布林带震荡器,然后计算布林带震荡器的30日均线。当布林带震荡器上穿其均线时,认为趋势开始变化,做多;当布林带震荡器下穿其均线时,认为趋势开始变化,做空。
-
-进入仓位后,策略采用移动止损、固定止盈和移动追踪止损来控制风险和获利。具体参数可根据回测结果进行优化。
-
-## 策略优势
-
-1. 使用布林带震荡器指标判断趋势,该指标对趋势变化比较敏感。
-
-2. 采用移动止损来控制 individual loss,可以在趋势再次转向时及时止损。
-
-3. 采用固定止盈来锁定 profit,可以在趋势方向正确时及时卖出获利。 
-
-4. 采用移动追踪止损来跟踪优势价格,可以最大化单笔盈利。
-
-5. 策略较为简单和直观,容易理解和实现。
-
-## 策略风险
-
-1. 布林带震荡器存在假突破的可能,可能发出错误信号。
-
-2. 移动止损或追踪止损设置不当可能过早止损或止盈。
-
-3. 固定止盈设置不当可能过早止盈,错失更大利润。
-
-4. 布林带参数和移动均线参数需要优化,否则可能导致过拟合。
-
-5. 回撤可能较大,需要充足的资金支持。
-
-## 策略优化
-
-1. 对布林带参数和移动均线参数进行优化,找到最佳参数组合。
-
-2. 测试不同的移动止损方式,如ATR止损、百分比止损等。
-
-3. 对固定止盈和追踪止损参数进行测试和优化。
-
-4. 增加其他过滤条件,避免布林带震荡器发出错误信号。
-
-5. 优化仓位管理,不同市场适合不同的仓位规模。
-
-6. 测试在不同品种和时间周期使用该策略的效果。
-
-## 总结
-
-该策略利用布林带震荡器指标判断趋势方向,在趋势开始变化时进入仓位,并采用移动止损、固定止盈和追踪止损来控制风险和获利。策略较为简单直观,容易实现,但需要对参数进行优化,同时要防范假突破和不适当的止损止盈设置。如果优化得当,该策略可以在趋势行情中获得较好的效果。
-
-|| 
 
 ## Overview
 
@@ -133,7 +70,6 @@ After entering positions, the strategy uses moving stop loss, fixed take profit 
 
 The strategy identifies trend changes using BBO and enters positions accordingly. It controls risks and locks in profits with various types of exits. The strategy is simple and intuitive but requires parameter optimization. It can perform well in trending markets if optimized properly, but false signals and improper exits need to be watched out for.
 
-[/trans]
 
 > Strategy Arguments
 

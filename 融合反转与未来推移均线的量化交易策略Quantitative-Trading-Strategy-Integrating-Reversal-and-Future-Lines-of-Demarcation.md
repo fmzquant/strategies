@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d9b9e71f60848aaaf8.png)
-[trans]
-
-## 概述
-
-该策略融合了123反转策略和未来推移均线策略,实现了当两个策略同时发出信号时进行 entrada 或 salida 的量化交易策略。该策略主要应用于股指期货市场,通过捕捉短期反转信号和中长期趋势信号的组合,实现了中短期持仓交易。
-
-## 策略原理  
-
-### 123反转策略
-
-123反转策略源自《我如何在期货市场上将资金翻三番》一书。该策略在连续两天收盘价出现反转时并且9日慢速K线低于50时做多;在连续两天收盘价出现反转时并且9日快速K线高于50时做空。
-
-### 未来推移均线策略
-
-未来推移均线策略(Future Lines of Demarcation,FLD)是一种基于价格波动周期性规律的趋势跟踪策略。FLD线基于价格的中值、高值或低值向未来平移约半个周期绘制,当价格线穿过FLD线时产生交易信号。
-
-## 优势分析
-
-该策略结合反转策略和趋势跟踪策略,能同时捕捉短期市场反转机会与中长期趋势走向,实现了多时间尺度的量化交易。反转策略提供了短期获利机会,趋势跟踪部分能确保整体交易方向与趋势一致,有效控制了交易风险。此外,未来推移均线的自适应特性也增强了策略的稳定性。
-
-## 风险分析  
-
-该策略主要面临反转信号假突破的风险以及FLD线判断出现错误的风险。对于前者,可以通过调整参数确认反转信号,或增加其他辅助判定指标来提高判断准确率。对于后者,则需要优化参数,确保其能更准确描述市场的波段规律。此外,也需要警惕大周期趋势反转时FLD线出错的可能性。
-
-## 优化方向
-
-1. 改进反转策略,增加其他指标过滤确认信号,降低假突破概率
-2. 对比不同FLD线参数看是否能更准确描述周期规律
-3. 添加止损逻辑,以控制单笔损失风险
-4. 测试不同品种参数效果
-
-## 总结  
-
-该策略结合反转与趋势的交易理念,在中短期时间框架实现稳定盈利。未来可从确认信号准确性、描述趋势准确性、控制风险等方面进行优化,使策略参数范围更广、稳定性更强。
-
-||
 
 
 ## Overview
@@ -81,7 +45,6 @@ The main risks of this strategy come from false breakouts of reversal signals an
 
 This strategy combines reversal and trend-following concepts for stable profits over medium-short term time frames. Future optimizations in aspects of signal accuracy, trend description capability and risk control will expand its parameter universe and improve stability.
 
-[/trans]
 
 > Strategy Arguments
 

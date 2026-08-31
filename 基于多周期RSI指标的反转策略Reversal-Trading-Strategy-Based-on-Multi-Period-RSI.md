@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种利用多周期RSI指标判断反转点的量化交易策略。该策略同时分析多条RSI指标,识别市场拐点的形成。
-
-一、策略原理
-
-该策略使用3组不同参数设置的RSI指标,具体逻辑如下:
-
-1. 分别计算2周期、7周期、14周期的RSI值;
-
-2. 当RSI-2小于10、RSI-7小于20、RSI-14小于30时,判断为底部形成;
-
-3. 当RSI-2大于90、RSI-7大于80、RSI-14大于70时,判断为顶部形成。
-
-4. 根据RSI指标一致性,产生买入卖出信号。
-
-5. 可预设指标一致性要求的参数,从而控制信号频繁程度。
-
-这样,多周期RSI指标的集合分析,可以提升对反转点位的判断准确性。
-
-二、策略优势
-
-该策略最大优势是利用多周期RSI指标进行集合分析,这可以提高对关键点位的判断准确性,滤除假信号。
-
-另一优势是可通过调整一致性参数,控制交易频率,适应不同市场环境。
-
-最后,不同周期RSI的组合也提供了更多参数空间进行优化。
-
-三、潜在风险
-
-但该策略也存在以下风险:
-
-首先,RSI指标对价格反转的判断,本身存在滞后问题。
-
-其次,多指标组合带来的信号判断困难,需要设置清晰的过滤规则。
-
-最后,反转交易本身带有一定的失败率,这需要有心理准备。
-
-四、内容总结
-
-本文详细介绍了一种基于多周期RSI指标识别反转点的量化交易策略。它通过判断RSI指标的一致性,提高了对市场转折点的识别能力。但也需要防控滞后问题和信号判断错误。总体来说,它提供了一种参数灵活的RSI策略优化思路。
-
-||
 
 This article explains in detail a quantitative trading strategy that utilizes multi-period RSI indicators to identify reversal points. It analyzes multiple RSI indicators simultaneously to spot market turning points.
 
@@ -94,7 +51,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative strategy of identifying reversals based on multi-period RSI analysis. It improves recognition of market turning points by judging RSI unanimity. But risks like lagging and wrong signals need to be managed. Overall it provides a flexible RSI strategy optimization approach.
 
-[/trans]
 
 > Strategy Arguments
 

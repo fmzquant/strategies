@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e043de80898806e175.png)
 
-[trans]
-#### 概述
-该策略是一个基于双区间滤波器的动量交易策略。策略通过计算快速和慢速两个周期的平滑区间,得到一个综合的区间滤波器,用于判断当前价格的走势。当价格上穿/下穿该区间时,策略会产生买入/卖出信号。同时,该策略还设置了四个梯度止盈和一个止损,用于控制风险和锁定利润。
-
-#### 策略原理
-1. 计算快速和慢速两个周期的平滑区间。快速区间使用较短的周期和较小的倍数,慢速区间使用较长的周期和较大的倍数。
-2. 将快速和慢速区间的均值作为综合区间滤波器(TRF)。
-3. 计算当前价格与上一个价格的关系,判断上升趋势(upward)和下降趋势(downward)。
-4. 计算动态上轨(FUB)和下轨(FLB),作为趋势的参考。
-5. 根据收盘价与TRF的关系,产生买入和卖出信号。
-6. 设置四个梯度止盈和一个止损,对应不同的仓位比例和获利/亏损百分比。
-
-#### 优势分析
-1. 双区间滤波器结合了快速和慢速两种周期,能够适应不同的市场节奏,捕捉更多的交易机会。
-2. 动态上下轨的设计有助于顺应当前趋势,减少虚假信号。
-3. 四个梯度止盈的设置可以在趋势延续时获得更多利润,同时也能在趋势反转时及时锁定部分盈利。
-4. 止损的设置有助于控制单笔交易的最大亏损,保护账户安全。
-
-#### 风险分析
-1. 当市场出现震荡或者区间行情时,该策略可能会产生较多的虚假信号,导致频繁交易和手续费损失。
-2. 梯度止盈的设置可能会导致部分利润被提前锁定,无法完全享受趋势行情的收益。
-3. 止损的设置可能无法完全避免黑天鹅事件带来的极端损失。
-
-#### 优化方向
-1. 可以考虑引入更多的技术指标或者市场情绪指标,作为趋势判断的辅助条件,减少虚假信号。
-2. 对于止盈和止损的设置,可以根据不同的市场环境和交易品种进行动态调整,提高策略的适应性。
-3. 在回测的基础上,可以进一步优化参数设置,如快速和慢速区间的周期选择、止盈和止损的百分比设置等,提高策略的稳定性和盈利能力。
-
-#### 总结
-双区间滤波动量交易策略通过快慢两个周期的平滑区间构建综合滤波器,同时结合动态上下轨,对价格走势进行判断,产生买卖信号。策略还设置了四个梯度止盈和一个止损,用于控制风险和锁定利润。该策略适合在趋势行情中使用,但在震荡市场中可能会产生较多虚假信号。未来可以考虑引入更多指标、优化止盈止损设置、动态调整参数等方式,提高策略的适应性和稳定性。
-
-|| 
 
 #### Overview
 This strategy is a momentum trading strategy based on a dual range filter. The strategy calculates smooth ranges for fast and slow periods to obtain a comprehensive range filter, which is used to determine the current price trend. When the price crosses above/below this range, the strategy generates buy/sell signals. Additionally, the strategy sets four gradient take-profit levels and one stop-loss level to control risk and lock in profits.
@@ -73,7 +41,6 @@ This strategy is a momentum trading strategy based on a dual range filter. The s
 
 #### Summary
 The dual range filter momentum trading strategy constructs a comprehensive filter using smooth ranges from fast and slow periods, combined with dynamic upper and lower bands to determine price trends and generate buy/sell signals. The strategy also sets four gradient take-profit levels and one stop-loss level to control risk and lock in profits. This strategy is suitable for use in trending markets but may generate more false signals in fluctuating markets. In the future, consider introducing more indicators, optimizing take-profit and stop-loss settings, and dynamically adjusting parameters to improve the strategy's adaptability and stability.
-[/trans]
 
 > Strategy Arguments
 

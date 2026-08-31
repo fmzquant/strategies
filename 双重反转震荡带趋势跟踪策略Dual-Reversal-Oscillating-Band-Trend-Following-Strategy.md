@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/933e954c86de47462d.png)
-[trans]
-
-## 概述
-
-双重反转震荡带趋势跟踪策略通过结合双重反转信号和震荡带指标,实现趋势跟踪交易。它首先利用123反转系统生成反转信号,然后结合Fractal Chaos Bands指标过滤信号,实现趋势跟踪。该策略既可以识别反转机会,又可以跟踪趋势,是一种非常全面的交易策略。
-
-## 策略原理
-
-### 123反转系统
-
-123反转系统来源于Ulf Jensen的《我如何在期货市场获得三倍收益》一书中第183页的内容。它的交易信号是:
-
-当收盘价连续2日高于前一日收盘价,且9日Slow K线低于50时,做多;当收盘价连续2日低于前一日收盘价,且9日Fast K线高于50时,做空。
-
-该部分主要利用Stochastic oscillator指标在超买超卖区域生成信号。当股票连续上涨但Stochastic oscillator指标显示仍有更多空间上涨时,采取看涨策略;当股票连续下跌但Stochastic oscillator指标显示仍有更多空间下跌时,采取看跌策略。
-
-### Fractal Chaos Bands指标
-
-Fractal Chaos Bands指标通过绘制股票价格的最高点和最低点,形成上轨和下轨,来判断市场的趋势。具体规则是:
-
-当价格上涨突破上轨时,做多;当价格下跌突破下轨时,做空。
-
-该部分主要作为趋势过滤,与123反转信号配合使用。只有当两者信号一致时,才会开仓。
-
-## 策略优势
-
-1. 结合反转和趋势,全面捕捉机会
-
-双重反转震荡带趋势跟踪策略既可以捕捉反转机会,也可以跟踪趋势,非常全面。无论市场是否处于震荡或趋势状态,都可以获得交易信号。
-
-2. 减少假信号,提高胜率
-
-相比单一指标,该策略通过双重指标的结合过滤,可以大大减少假信号,提高实际交易的胜率和盈利率。
-
-3. 参数调节灵活,适应性强
-
-双重反转震荡带趋势跟踪策略的参数都很好理解,用户可以根据自己的需要和市场环境进行调整,非常灵活。无论震荡市还是趋势市,都可以通过参数调整适应。
-
-
-## 风险及优化
-
-1. 大趋势下无法适应
-
-策略本身更依赖于中短线交易机会。在大的行情趋势下,该策略可能会产生过多反向信号而停损出局。这是可以通过参数调整来优化的。
-
-2. 需要边际资金支持
-
-双重反转震荡带趋势跟踪策略属于频繁交易类型,需要有足够的边际资金来支持开仓保证金的需求。对于资金不足的用户来说,可能需要适当调小仓位。
-
-3. 可结合更多指标过滤
-
-该策略可以在现有基础上,引入更多不同类型的指标来丰富信号源,提高策略的稳健性。比如加上量能指标、波动率指标等来检验反转和趋势信号。
-
-## 总结
-
-双重反转震荡带趋势跟踪策略成功结合反转交易和趋势跟踪的优点,既可以捕捉反转,又可以跟随趋势,非常全面和高效。相比单一指标,它可以大大减少假信号,提高实际交易的胜率和盈利水平。此外,该策略参数调节灵活,用户可以根据自己的风格和市场环境进行优化。总的来说,这是一种非常出色的量化策略,值得实盘验证。
-
-||
 
 ## Overview
 
@@ -123,7 +65,6 @@ The strategy can introduce more different types of indicators on the existing ba
 
 The Dual Reversal Oscillating Band Trend Following Strategy successfully combines the advantages of reversal trading and trend following. It can capture both reversals and follow trends, making it very comprehensive and efficient. Compared with a single indicator, it can greatly reduce false signals and improve the actual trading win rate and profit level. In addition, this strategy has flexible parameter adjustment for users to optimize according to their own style and market environment. In general, this is an excellent quantitative strategy that is worth live trading verification.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cd3fba91d2e3a0d066.png)
-[trans]
-## 概述
-
-本策略的核心思想是利用动态斜率判断价格趋势方向,结合突破判断进行交易信号产生。具体来说,它会实时跟踪价格新高点和新低点,根据不同时间段内价格变化计算动态斜率,再结合价格对趋势线的突破情况判断多空信号。
-
-## 策略原理  
-
-本策略主要分为以下几个步骤:
-
-1. 判断最高价和最低价:跟踪一定周期(如20根K线)内的最高价和最低价,判断是否创新高或新低
-
-2. 计算动态斜率:记录创新高或新低的K线编号,计算从创新高低点到一定周期(如9根K线)后的高低点的动态斜率
-
-3. 绘制趋势线:根据动态斜率,绘制上升和下降的趋势线
-
-4. 延长和更新趋势线:当价格突破趋势线时,会延长和更新趋势线
-
-5. 交易信号:结合价格对趋势线的突破,判断做多和做空信号
-
-## 策略优势
-
-本策略具有以下优势:
- 
-1. 动态判断趋势方向,灵活应对市场变化
-
-2. 能够合理控制止损,回撤小
-
-3. 突破交易信号清晰,实现简单
- 
-4. 可自定义参数,适应性强
-
-5. 代码结构清晰,易于理解和二次开发
-
-## 风险及解决方案
-
-本策略也存在一些风险:
-
-1. 趋势震荡时多头空,建议加入过滤条件
-
-2. 突破假信号可能较多,可适当调整参数或加入过滤条件
-
-3. 行情剧烈变动时止损风险,可加大止损幅度
-
-4. 优化空间有限,盈利能力受限,适合短线交易
-
-## 优化方向
-
-本策略可优化的地方包括:
-
-1. 加入更多技术指标判断过滤信号
-
-2. 优化参数组合,寻找最佳参数
-
-3. 尝试改进止损策略,降低风险
-
-4. 增加自动调整入场幅度的功能
-
-5. 尝试与其他策略组合,发掘更多机会
-
-## 总结
-
-本策略整体来说是一个基于动态斜率判断趋势并突破交易的高效短线策略。它判断准确,风险可控,适合用来捕捉市场中的短线机会。通过进一步优化参数和加入过滤条件,可以使策略的胜率和盈利水平得到提高。
-
-||
 
 ## Overview
 
@@ -137,7 +73,6 @@ Areas for optimizing the strategy include:
 
 Overall this is an efficient short-term strategy based on using dynamic slope to determine trends and trading breakouts. It has accurate judgments, controllable risks, and is suitable for capturing short-term opportunities in the market. Further optimizations on parameters and adding filters can improve the win rate and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-MACD真级别策略使用MACD指标和真级别带指标来判断买卖信号。它在MACD基础上,增加了真级别带的使用,能够更准确定位趋势的开始和结束。
-
-## 原理
-
-该策略首先计算MACD指标,然后计算14个不同周期的真级别带。真级别带是根据价格的线性回归线和不同长度周期的标准差计算得到的。之后从中挑选出最高的上轨和最低的下轨,判断是否突破作为买卖信号。
-
-具体来说,策略的入场信号是MACD指标金叉或价格突破选择的真级别下轨,出场信号是MACD指标死叉或价格突破选择的真级别上轨。
-
-使用真级别带的优势在于,它结合了趋势的方向和波动范围,可以更准确判断趋势的开始和结束。相比仅使用MACD,增加了真级别带过滤可以减少假信号。
-
-## 优势分析
-
-1. 使用MACD判断趋势方向,能够有效跟踪趋势。
-
-2. 增加真级别带指标,可以过滤假突破,确认趋势。真级别带同时考虑了价格趋势和波动范围,判断更准确。
-
-3. 真级别带包含多周期,可以全面判断趋势变化。
-
-4. 可调整真级别带参数,适应不同市场环境。
-
-5. 支持做多做空操作,可以全方位捕捉趋势机会。
-
-## 风险分析
-
-1. MACD作为单一指标,可能产生较多假信号,需要真级别带进行过滤。
-
-2. 真级带参数设置不当可能导致漏入漏出。需要根据市场调整参数。
-
-3. 多空操作需要充足资金支持,否则可能爆仓。
-
-4. 突破交易本身具有被套利的风险,需要及时止损。
-
-5. 任何指标策略都存在对农产品、数字货币等高波动品种不适用的风险。
-
-## 优化方向
-
-1. 测试更多周期参数,找到对市场更合适的参数。
-
-2. 增加止损策略,可以降低亏损风险。
-
-3. 结合其他指标过滤入场,例如成交量,KDJ等,可以减少假突破。 
-
-4. 优化入场点选择,例如突破高点、低点等,可以提高获利率。
-
-5. 增加机器学习算法,利用模型训练判断趋势概率,减少人工参数调整。
-
-## 总结
-
-MACD真级别策略整合了趋势判断和范围判断,在MACD基础上增加真级别带指标,可以更准确定位趋势的开始和结束。相比单一MACD策略,可以有效过滤假信号,捕捉趋势机会。同时也存在一定的风险,需要对参数和止损进行优化。总体来说,该策略适合趋势交易,能够在中长期内稳定捕捉市场趋势。
-
-||
 
 
 ## Overview
@@ -118,7 +63,6 @@ The advantage of using TrueLevel bands is that it combines the trend direction a
 
 The MACD TrueLevel strategy integrates trend and range analysis. It adds TrueLevel bands on top of MACD to more accurately locate the start and end of trends compared to just MACD. It can effectively filter false signals and catch trends. There are still risks that need parameter and stop loss optimization. Overall it suits trend trading and steadily catches market trends over the medium to long term.
 
-[/trans]
 
 > Strategy Arguments
 

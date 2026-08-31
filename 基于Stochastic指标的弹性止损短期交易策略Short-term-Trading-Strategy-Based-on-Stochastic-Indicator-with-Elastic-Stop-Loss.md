@@ -9,89 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于Stochastic oscillator指标判断市场的超买超卖状态,结合弹性止损原理开展短期交易。在Stochastic指标上金叉时做多,死叉时做空,同时设置基于前期枢轴点的弹性止损,在保证盈利的同时控制风险。
-
-## 策略原理
-
-### 入场原理
-
-Stochastic oscillator指标包含%K线和%D线。当%K线从下向上突破%D线时,为金叉信号,做多;当%K线从上向下突破%D线时,为死叉信号,做空。本策略就是根据Stochastic指标的金叉死叉信号判断入场。
-
-具体来说,在Stochastic指标金叉时,如果%K线值小于80(未超买),则做多;在Stochastic指标死叉时,如果%K线值大于20(未超卖),则做空。
-
-```pine
-GoLong=crossover(k,d) and k<80 
-GoShort=crossunder(k,d) and k>20
-```
-
-### 止损原理 
-
-本策略使用弹性止损的方法,根据前期的枢轴点设置止损价位,代码如下:
-
-```pine 
-piv_high = pivothigh(high,1,1)
-piv_low = pivotlow(low,1,1)
-
-stoploss_long=valuewhen(piv_low,piv_low,0) 
-stoploss_short=valuewhen(piv_high,piv_high,0)
-```
-
-枢轴点代表了重要的支撑阻力,如果价格突破枢轴点,则退出仓位,使止损价位“弹性”跟随枢轴点变化。
-
-此外,止损价位也会考虑当前期间内最低价和最高价,进一步优化止损位置,如下代码所示:
-
-```pine
-if GoLong 
-    stoploss_long := low<pl ? low : pl
-if GoShort  
-    stoploss_short := high>ph ? high : ph   
-```
-
-### 策略优势
-
-1. 使用Stochastic指标判断市场超买超卖状态,避免追高杀跌;
-
-2. 应用弹性止损原理,可以根据市场变化优化止损位置;
-
-3. 结合枢轴点突破实现止损,使止损更有效;
-
-4. 考虑当期最高最低价进行止损优化,使止损更精准。
-
-## 风险及解决方法
-
-1. Stochastic指标发出假信号的风险
-
-    - 解决方法:结合其他指标进行确认,避免错信
-
-2. 止损被突破造成损失扩大的风险
-
-    - 解决方法:适当缩小止损距离,或使用 Chandelier Exit 等止损方式
-
-3. 交易频繁造成交易费用增加的风险
-
-    - 解决方法:适当放宽入场条件,减少交易次数
-
-## 优化思路
-
-1. 优化止损策略,如使用 Chandelier Exit、移动止损、振荡止损等方式
-
-2. 优化入场条件,结合其他指标避免 Stochastic 指标的假信号
-
-3. 优化止盈方式,如使用移动止盈、振荡止盈等,实现更高的盈利率
-
-4. 添加位置管理,如固定每单数量、固定投资比例等,控制单笔风险
-
-5. 优化参数设定,如 K、D 期数、平滑周期等,针对不同市场调整参数
-
-## 总结
-
-本策略通过 Stochastic 指标判断超买超卖状态入场,并使用弹性止损方式进行风险管理。策略具有避免追高杀跌、止损有效等优势,但也存在一定的假信号风险。未来可通过优化入场条件、止损策略、止盈方式、风险管理等方面进一步完善该策略。
-
-||
 
 
 ## Overview
@@ -174,7 +91,6 @@ if GoShort
 
 This strategy enters based on Stochastic overbought/oversold and manages risk with elastic stop loss. It has the advantage of avoiding chasing momentum, effective stops, but also has some false signal risks. Future improvements can be made on entries, stops, exits, risk management etc.
 
-[/trans]
 
 > Strategy Arguments
 

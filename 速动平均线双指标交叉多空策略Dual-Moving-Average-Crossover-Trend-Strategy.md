@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b43c81902cebfe1e50.png)
-[trans]
-
-## 概述
-
-速动平均线双指标交叉多空策略(Dual Moving Average Crossover Trend Strategy)是一个利用快速移动平均线和慢速移动平均线交叉形成买卖信号的趋势跟踪策略。该策略同时结合MACD,RSI等多个指标来确定趋势方向,具有较强的趋势跟踪能力。
-
-## 策略原理
-
-该策略主要基于以下几个指标进行判断:
-
-1. 快速移动平均线和慢速移动平均线:快速线上穿慢速线为买入信号,快速线下穿慢速线为卖出信号。
-
-2. MACD:当MACD线高于Signal线且MACD最低值上升时为多头信号。
-
-3. RSI:RSI高于50为多头信号,低于50为空头信号。 
-
-4. 度量 oscillator (AO):当AO上穿0轴线为买入信号,AO下穿0轴线为卖出信号。
-
-5. 日线级别的三条移动平均线:日线级别较短周期移动平均线上穿较长周期移动平均线为买入信号。
-
-该策略综合多个时间周期和多个指标,形成买入和卖出的判断逻辑。当多个指标同时出现买入信号时产生买入指令,当多个指标同时出现卖出信号时产生卖出指令,实现对趋势的跟踪。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 多指标组合判断,避免错信号,提高判断精准度。
-
-2. 结合多个时间周期判断,能够识别更大级别的趋势方向。 
-
-3. 指标参数经过优化, Parameters tuning, 具有较好的收益率。
-
-4. 采用移动止损来控制风险,防止亏损扩大。
-
-5. 自动跟踪趋势运行,无需人工干预,降低操作成本。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 在震荡行情中可能产生较多无效交易信号。可通过优化指标参数来减少无效信号。
-
-2. 突发事件可能导致快速回撤。可设置移动止损来控制损失。
-
-3. 多空信号判定规则较复杂,参数优化需要大量历史数据支持。
-
-4. 跟踪止损设置不当可能导致过早止损。需要反复测试确定最优参数。
- 
-## 优化方向 
-
-该策略可从以下几个方向进行优化:
-
-1. 测试更多指标的组合,寻找更稳定和精确的交易信号。比如波动率指标,OBV指标等。
-
-2. 优化指标参数,减少无效交易次数。采用机器学习和遗传算法自动寻优参数。
-
-3. 增加模型集成技术,整合更多独立策略模型判断结果。提高稳定性。
-
-4. 在高频级别进入,低频级别退出。降低被套风险。
-
-5. 增加量化风控模块,严格控制单次止损比例,最大回撤比例等。
-
-
-## 总结
-
-速动平均线双指标交叉多空策略通过快速移动均线和慢速移动均线的交叉形成交易信号,并结合MACD,RSI等多个指标判断趋势方向,实现自动化的趋势跟踪。该策略优化空间较大,通过引入更多指标,调整参数以及模型集成等手段可望获得更好的策略效果。
-
-|| 
 
 ## Overview  
 
@@ -142,7 +74,6 @@ The strategy can be improved from the following aspects:
 ## Summary
 The Dual Moving Average Crossover Trend strategy uses fast and slow MA crosses as trading signals, together with MACD, RSI to judge trend direction for automated trend tracking. Significant optimization space exists by incorporating more indicators, parameters tuning, model ensembles etc for better strategy efficacy.  
 
-[/trans]
 
 > Strategy Arguments
 

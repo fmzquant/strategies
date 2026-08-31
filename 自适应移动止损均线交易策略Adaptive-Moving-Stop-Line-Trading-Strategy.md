@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1300e9c43e724f504fa.png)
-[trans]
-### 概述
-
-本策略的核心思想是利用T3均线和ATR自适应移动止损来捕捉趋势上的进出场点,属于趋势跟踪类策略。当价格突破T3均线时产生交易信号,并在突破点使用ATR值设置止损位和止盈位,实现自动止损止盈。
-
-### 策略原理  
-
-该策略主要由T3均线指标、ATR指标和ATR移动止损机制组成。
-
-T3均线是一种具有平滑性的移动平均线,可以减少曲线的滞后性,使其更快地对价格变动做出反应。当价格从均线下方向上突破时,产生买入信号;当价格从均线上方向下突破时,产生卖出信号。
-
-ATR指标用于计算市场波动程度和设置止损位。ATR值越大,表示市场波动越大,此时需要设置更宽的止损;ATR值越小,表示市场波动越小,可以设置更窄的止损。
-
-ATR移动止损机制,是根据ATR值实时调整止损线的位置,使止损线能够跟随价格运行并保持在合理范围内。这样既防止止损距离过近被震出,也防止止损距离过宽无法有效控制风险。
-
-综合利用T3指标判断方向、ATR指标计算波动性和ATR移动止损机制,该策略实现了较为高效的趋势捕捉和风险控制。
-
-
-### 优势
-
-该策略具有以下优势:
-
-1. T3均线的应用提高了捕捉趋势的准确性。
-
-2. ATR指标动态计算市场波动率,止损位和止盈位更合理。
-
-3. ATR移动止损机制,使止损线能够实时跟随价格运行,有效控制风险。
-
-4. 整合指标判断和止损机制,实现自动化趋势跟踪交易。
-
-5. 可以通过webhook连接外部交易平台,实现自动化下单。
-
-
-### 风险及解决方法
-
-该策略也存在一些风险:  
-
-1. T3均线参数设置不当,可能错过较优趋势机会。可以测试不同周期的参数,找到最优参数。
-
-2. ATR值计算不准确,止损距离过大或过小,无法有效控制风险。可以结合市场波动率特征调整ATR周期参数。  
-
-3. 在剧烈波动中,止损线可能被突破导致过度亏损。可以设置合理的总亏损线,避免单笔亏损过大。
-
-4. 双向反复行情中,可能出现止损频繁被触发的情况。可以适当放宽ATR移动止损的距离。
-
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 对T3均线参数进行优化,找到最合适的平滑周期。
-
-2. 测试不同的ATR周期参数,计算出最能反映市场波动率的ATR值。 
-
-3. 优化ATR移动止损距离的弹性区间,防止止损过于敏感。
-
-4. 添加适当过滤条件,避免双向震荡市的频繁交易。
-
-5. 结合趋势判断指标,提高获利方向的判断准确率。
-
-6. 利用机器学习方法自动优化参数。
-
-
-### 总结  
-
-本策略整合运用T3均线判断趋势方向、ATR指标计算止损止盈和ATR移动止损机制调整止损距离,实现对趋势的自动跟踪与高效风险控制,是一种可靠的趋势跟踪策略。在实际应用中,仍需要不断测试与优化,找到最适合当前市场环境的参数组合,从而获得较好的策略效果。
-
-||
 
 ### Overview
 
@@ -141,7 +73,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy integrates the use of the T3 line to determine trend direction, ATR indicator to calculate stops/targets and ATR trailing stop mechanism to adjust stop distance. It achieves automated trend tracking and efficient risk control. It is a reliable trend following strategy. In practical applications, continuous testing and optimization is still needed to find the most suitable parameter combinations for current market conditions, thereby obtaining better strategy results.
 
-[/trans]
 
 > Strategy Arguments
 

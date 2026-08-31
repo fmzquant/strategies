@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eb736c3cb47fc69d50.png)
-[trans]
-## 概述
-
-本策略名称为“指标组合突破趋势追踪策略”。该策略综合运用多种指标,识别市场趋势方向,进行趋势追踪操作。主要包括以下几个部分:
-
-1. 使用波浪趋势指标判断市场主要趋势
-2. 结合RSI指标和资金流指标过滤掉部分假信号
-3. EMA指标判断具体的操作方向
-4. 入场采用突破追踪方法,确保跟趋势运行
-
-## 策略原理
-
-该策略主要判断大趋势的方向和力度,并设置多空双向交易。具体操作原理如下:
-
-多头入场信号:
-1. 价格高于200日EMA,表明处于多头市场
-2. 价格回调到50日EMA附近形成支撑
-3. 波浪指标反转为上升趋势,并出现买入信号
-4. RSI和MFI均显示超买
-5. 连续3根K线依次突破50日EMA,表明突破上行
-
-空头入场信号:
-与多头入场信号相反
-
-止盈止损方式:
-提供两种可选方案:最低价/最高价止损、ATR止损
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 综合多种指标判断大趋势,避免假突破
-2. 采用EMA判断操作方向,容易跟踪趋势
-3. 追踪止损方法实现持续盈利
-4. 可同时做多做空,跟随市场任意方向运行 
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. 指标发出错误信号的概率
-2. 止损点设置过小,增加止损风险
-3. 交易次数较多,交易费用是一种隐藏损失
-
-为降低上述风险,可以从以下几个方面进行优化:
-1. 调整指标参数,过滤错误信号
-2. 适当放宽止损点
-3. 优化指标参数,减少交易次数
-
-## 策略优化方向
-
-从代码层面看,该策略主要可优化的方向包括:
-
-1. 调整波浪指标、RSI和MFI的参数,筛选出最佳参数组合
-2. 测试不同EMA周期参数的表现效果
-3. 调整止盈止损的收益风险比例因子,得到最佳配置
-
-通过参数调整和测试,可使策略在最大化收益的同时,降低回撤和风险。
-
-## 总结
-
-本策略综合运用多种指标判断大趋势方向,采用EMA指标作为具体操作信号,并使用追踪止损方式锁定利润。通过参数优化,可以获得较好的稳定收益。但也应注意一定的系统风险,需要持续关注指标效果和市场环境的变化。
-
-||
 
 ## Overview
 
@@ -137,7 +73,6 @@ Through parameter adjustment and testing, the strategy can maximize returns whil
 
 The strategy integrates multiple indicators to determine the major trend direction, uses EMA indicator as specific operation signal, and uses trailing stop loss to lock in profits. Through parameter optimization, relatively good steady profits can be obtained. But the certain system risks should also be noted, the effectiveness of indicators and changes in market environment need to be continuously monitored.
 
-[/trans]
 
 > Strategy Arguments
 

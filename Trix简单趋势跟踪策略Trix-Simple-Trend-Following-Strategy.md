@@ -9,78 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-Trix简单趋势跟踪策略是一种基于Trix指标的简单趋势跟踪策略。它利用Trix指标判断价格趋势,并结合移动平均线进行买入和卖出。该策略适用于中长线交易,可以在较大的趋势中获得收益。
-
-## 策略原理
-
-该策略主要基于Trix指标。Trix指标是一种能够识别价格变化趋势的技术分析工具。它通过对价格的三重平滑移动平均线计算其速度变化,当Trix上穿其移动平均线时为买入信号,下穿其移动平均线时为卖出信号。
-
-具体来说,该策略首先计算两组不同参数的Trix指标,分别命名为Trix和Trix1。Trix参数为(7,4,4),Trix1参数为(4,4,4)。然后计算Trix的20日简单移动平均,获得中间带。
-
-当快速均线EMA13上穿慢速均线SMA68,且Trix低于中间带时为买入信号;当Trix1上穿Trix时触发买入。当Trix重新回穿上中间带时平仓。
-
-当EMA13下穿SMA68,且Trix高于中间带时为卖出信号;当Trix1下穿Trix时触发卖出。当Trix重新回穿下中间带时平仓。
-
-## 策略优势
-
-这是一个非常简单的趋势跟踪策略,具有以下优势:
-
-1. 使用Trix指标可以有效识别价格趋势,减少假信号。
-
-2. 结合快慢均线系统有助于判断趋势方向。
-
-3. 采用两组不同参数Trix指标进行组合,可以提高信号质量。
-
-4. 中间带过滤增加了过滤效果,避免在震荡行情中频繁开仓。
-
-5. 适用于中长线趋势交易,不会被短期波动干扰。
-
-6. 易于理解和实现,适合新手学习。
-
-## 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. 在稳定趋势中无法及时追趋势,错过部分利润。
-
-2. 大幅震荡行情下,Trix指标可能产生错误信号。
-
-3. 快慢均线头寸管理不当可能导致亏损加剧。
-
-4. 缺乏止损策略,无法有效控制单笔损失。
-
-5. 参数设置不当可能导致交易频率过高或信号质量差。
-
-6. 交易手续费可能占据部分盈利。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损策略,如跟踪止损或ATR止损,控制单笔损失。
-
-2. 优化Trix参数,寻找更合适的参数组合,提高信号质量。
-
-3. 添加其他指标过滤,如MACD、KDJ等,避免错误信号。
-
-4. 根据市场情况动态调整快慢均线参数,提高灵活性。
-
-5. 加入趋势判断指标,如ADX,避免逆势交易。
-
-6. 区分牛熊行情,采用不同的参数组合。
-
-7. 优化入场时机,在趋势确认后再入场。
-
-## 总结
-
-Trix简单趋势跟踪策略 overall, 这是一个易于实现的趋势跟踪策略。它利用Trix指标判断趋势方向,以及与移动平均线组合产生交易信号。该策略优点是简单易用,可以有效跟踪中长线趋势,适合新手学习。但也存在一些风险,需要注意防范。通过适当优化,可以提高策略效果。总体来说,该策略为初学者提供了一个简单实用的趋势交易思路。
-
-||
 
 ## Overview
 
@@ -150,7 +78,6 @@ This strategy can be optimized in the following aspects:
 
 In summary, this is an easy to implement trend following strategy. It uses the Trix indicator to determine trend direction and generates trading signals in combination with moving averages. The advantages are its simplicity and ability to effectively track medium-to-long term trends, making it suitable for beginners to learn. But risks exist and need to be prevented. With proper optimizations, the strategy's effectiveness can be improved. Overall, it provides beginners with a simple and practical trend trading idea.
 
-[/trans]
 
 > Strategy Arguments
 

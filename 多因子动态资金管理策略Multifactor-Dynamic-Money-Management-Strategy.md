@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1efccebef172067cffb.png)
 
-[trans]
-
-## 概述 
-
-本策略综合运用MACD,RSI,PSAR等多种技术指标以及动态资金管理原理,实现多时间框架下的趋势跟踪和反转交易。策略可适用于短线、中线以及长线交易。
-
-## 原理
-
-策略使用PSAR指标判断趋势方向。EMA快慢线与BB中线交叉作为第一确认点。MACD柱形图方向作为第二确认点。RSI过买过卖区域作为第三确认点。满足以上条件时产生交易信号。 
-
-入场后设置止损止盈点。止损点按ATR值的一定倍数设置。止盈点同理。同时设置浮亏百分比止损。当亏损达到账户总权益的一定比例时止损出场。
-
-浮盈也有百分比设置。当盈利达到账户总权益一定比例时止盈出场。
-
-动态资金管理根据账户总权益、ATR、设置的止损倍数计算仓位大小。同时设置最小交易量。
-
-## 优势
-
-1. 多因子确认,避免假突破,提高入场准确率。 
-
-2. 动态资金管理控制单笔风险,有效保护账户。
-
-3. 止损止盈点按ATR设置,可根据市场波动程度调整。
-
-4. 百分比浮亏浮盈设置锁定盈利,避免回吐。
-
-## 风险
-
-1. 多因子组合可能错过部分交易机会。
-
-2. 百分比设置过高可能导致亏损扩大。
-
-3. ATR数值设置不当可能导致止损止盈过于宽松或过于激进。
-
-4. 资金管理设置不当可能导致单笔仓位过大。
-
-## 优化方向
-
-1. 调整入场因子权重,优化信号准确率。
-
-2. 测试不同百分比参数设置,找到最佳组合。
-
-3. 根据不同品种特点选择合理ATR倍数。
-
-4. 根据回测结果动态调整资金管理参数。
-
-5. 优化时间段设置,测试交易时段。
-
-## 总结
-
-本策略综合运用多种技术指标进行趋势判断,加入动态资金管理控制风险,实现多时间框架下稳定盈利。可根据回测结果继续优化因子权重、风控参数以及资金管理设定,从而获取更好效果。
-
-||
 
 
 ## Overview
@@ -116,7 +63,6 @@ Dynamic money management calculates position size based on total account equity,
 
 This strategy integrates multiple technical indicators for trend determination and adds dynamic money management to control risks, realizing steady profits across multiple timeframes. It can be further optimized by adjusting factor weights, risk control parameters and money management settings based on backtest results.
 
-[/trans]
 
 > Strategy Arguments
 

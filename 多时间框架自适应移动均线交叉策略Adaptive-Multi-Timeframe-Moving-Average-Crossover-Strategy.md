@@ -9,64 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略是一个利用多时间框架自适应移动均线交叉原理的趋势跟踪策略。该策略同时利用快线、慢线和MACD指标进行交易信号判断,旨在获取中长线趋势的额外利润。
-
-## 原理
-
-该策略主要基于双移动均线交叉系统与MACD指标的组合应用。双移动均线交叉系统由快线EMA和慢线EMA组成,它们分别计算短期均线和长期均线。当快线上穿慢线时产生买入信号,表示行情由跌转涨,可以建立多头仓位。当快线下穿慢线时产生卖出信号,表示行情由涨转跌,此时可以平仓离场。MACD指标由DIF线和DEA线组成,它们分别是短期EMA与长期EMA的差值线和该差值的均线。HIST线即DIF线与DEA线的差值,代表MACD线的动量。当MACD HIST柱变红时为做空信号,当变绿时为做多信号。
-
-该策略融合双移动均线的趋势判断和MACD的动量转换信号,在获取中长线趋势利润的同时,能够有效过滤假突破。具体来说,当快线上穿慢线时,如果MACD柱同时转绿,则产生更加可靠的做多信号;相反,当快线下穿慢线时,如果MACD柱同时转红,则产生较强的做空信号。
-
-此外,该策略还引入了参数自适应功能。在参数优化过程中,快线周期、慢线周期和MACD参数会根据不同时间段的效果进行自动调整,以保证策略在不同行情环境下都能获得较优表现。
-
-## 优势
-
-1. 融合双均线系统和MACD指标,综合多种因素进行决策,避免被噪声虚假信号误导。
-
-2. 应用自适应参数功能,使策略能够动态调整参数以适应市场变化,自动优化交易决策。
-
-3. 较好地把握中长线趋势,过滤震荡市的假突破,在趋势行情中获得额外利润。
-
-4. 采用跨时间框架分析的方式,能够识别更大级别的趋势方向。
-
-5. 策略逻辑清晰简单,代码结构优化,易于理解和修改,适合不同需求的调整。
-
-## 风险
-
-1. 双均线系统存在卡顿whipsaw的风险,不适用于震荡行情,应选择趋势比较明显的股票和时间段运行。
-
-2. MACD具有滞后性,不适合追踪急剧变化的趋势,应与其他指标结合使用。
-
-3. 参数优化需要足够大的回测周期,并进行严格的风险评估,避免过拟合。
-
-4. 长线持仓时,需要关注突发事件带来的系统性风险,适时止损离场。
-
-5. 自适应参数功能存在过优化的可能,需进行充分验证,避免参数调整过于频繁。
-
-## 优化方向
-
-1. 可以测试不同快慢均线的组合,选择能够过滤噪声并顺应趋势的均线参数。
-
-2. 可以试验MACD的多组参数,找到能够提前反应趋势转换点的组合参数。 
-
-3. 可以加入趋势指标作为过滤器,在趋势不明朗时暂停交易,避免whipsaw。
-
-4. 可以引入止损机制,设定移动止损或挂单止损,控制单笔损失。
-
-5. 可以尝试加入机器学习算法,利用更大量的数据训练参数自适应规则,提高策略稳定性。
-
-6. 可以尝试多品种套利,在相关品种间形成交易组合,以分散市场系统性风险。
-
-## 总结
-
-本策略整合双移动均线交叉和MACD动量指标,实现了趋势跟踪和节奏控制的有机结合。自适应参数的引入使策略更具鲁棒性,能够平稳适应市场变化。相比单一指标策略,该策略形成了较强的决策效果,能够在中长线趋势中获取较丰厚的交易收益。下一步可以通过参数优化、风险控制等手段进一步增强策略的效果。总体上,该策略形成了一套可靠的趋势跟踪交易体系,值得深入研究与应用。
-
-
-||
 
 
 
@@ -124,7 +66,6 @@ In addition, the strategy also incorporates adaptive parameter functionality. Du
 
 This strategy combines dual moving average crossover and MACD momentum indicator, achieving organic integration of trend following and rhythm control. The introduction of adaptive parameters makes the strategy more robust to adapt smoothly to market changes. Compared with single indicator strategies, this strategy forms stronger decision making effects, capable of capturing relatively ample trading profits from medium-to-long term trends. Next steps may include parameter optimization, risk control etc. to further enhance the strategy. Overall, the strategy forms a reliable trend following trading system, worthy of in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1086dec7654fb1ae173.png)
 
-[trans]
-
-## 概述
-这是一个利用不同K线形态作为交易信号的策略。它可以检测9种常见的蜡烛形态,并根据这些形态产生买入和卖出信号。
-
-## 策略原理
-该策略的核心逻辑是识别不同的K线形态,包括十字星、锤头、启明星等。当识别到bullish的形态时,会产生买入信号;当识别到bearish的形态时,会产生卖出信号。
-
-比如,当检测到三只上涨的白色实体K线时,就是“三只白兵”的信号,表示市场目前为bull趋势,这个时候会产生买入信号。
-
-又比如,当一根长阴线的K线完全吞噬前一根阳线的实体时,形成了熊ISHengulfing的形态,预示着趋势反转,这个时候会产生卖出信号。
-
-## 优势分析
-这种基于形态识别的策略,可以抓住短期的反转点,特别适合短线交易。识别准确的形态信号,可以及时捕捉到价格的反转,进入利润方向。
-
-相比于单纯的移动平均线等技术指标策略,K线形态策略结合了对价格行情和市场情绪的判断,交易信号更加准确可靠。
-
-## 风险分析
-该策略主要依赖于对K线形态的准确判断。如果判断失误,很容易形成错误的交易信号,从而导致亏损。 
-
-此外,任何技术分析策略都无法完全规避系统性风险,例如政策影响、黑天鹅事件等都可能对交易造成影响。
-
-可以通过止损来控制风险。当价格向相反方向突破某个范围时,可以及时止损退出。
-
-## 优化方向
-可以扩充识别的K线形态种类,再多加入一些高效的形态信号,例如锤子线、倒锤子线、分离线等,用以确认交易信号。
-
-可以结合其他指标进行过滤,避免在不确定的市场环境中产生交易信号。例如MACD、RSI等指标发出的讯号,可以避开低质量的K线形态信号。
-
-可以优化止损逻辑,当价格向相反方向突破一定幅度时止损。同时结合波动率指标,来动态调整止损范围。
-
-## 总结
-这是一个非常实用的短线交易策略。它识别常见的K线形态来产生交易信号,可以抓住价格短期的反转机会。同时也需要注意一些潜在的风险,适当进行优化以控制风险和提高效率。
-
-||
 
 ## Overview
 This is a strategy that utilizes different candlestick patterns as trading signals. It can detect 9 common candlestick patterns and generate buy and sell signals based on those patterns.  
@@ -79,7 +44,6 @@ The stop loss logic can be optimized to trigger when price breaks out of a range
 ## Summary  
 This is a very practical short-term trading strategy. It identifies common candlestick patterns to generate trading signals and capture short-term reversal opportunities. Also need to notice potential risks and optimize properly to control risks and improve efficiency.
 
-[/trans]
 
 > Strategy Arguments
 

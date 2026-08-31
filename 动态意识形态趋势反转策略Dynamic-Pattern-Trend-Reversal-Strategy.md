@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/78219b73ae4b431b2f.png)
-[trans]
-
-## 概述
-
-动态意识形态趋势反转策略利用线性回归预测价格,并结合移动平均线形成的意识形态进行交易信号生成。当预测价格从下向上穿过移动平均线时产生买入信号;当预测价格从上向下穿过移动平均线时产生卖出信号,实现对趋势反转的捕捉。
-
-## 策略原理
-
-1. 基于交易量计算股票价格的线性回归,得到价格的预测值
-2. 计算 diferentes 条件下的移动平均线
-3. 当预测价格从下向上穿过移动平均线时,产生买入信号
-4. 当预测价格从上向下穿过移动平均线时,产生卖出信号
-5. 结合MACD指标判断趋势反转的时机
-
-以上信号结合多种confirmation,避免假突破,从而提高信号的准确性。
-
-## 优势分析
-
-- 利用线性回归预测价格趋势,提高信号准确性
-- 结合移动平均线形成意识形态,捕捉趋势反转
-- 基于交易量计算线性回归,更具有经济意义
-- 结合MACD等指标进行多重confirmation,减少假信号
-
-## 风险分析 
-
-- 线性回归的参数设置会对结果产生很大影响
-- 移动平均线设置也会影响信号质量
-- 虽有confirmation机制,仍然存在假信号风险
-- 代码可进一步优化,以减少交易次数,提高盈利率
-
-## 优化方向
-
-- 优化线性回归和移动平均线的参数
-- 增加confirmation条件,降低假信号率
-- 结合更多因子判断趋势反转质量
-- 优化止损策略,降低单次交易风险
-
-## 总结
-
-动态意识形态趋势反转策略整合线性回归预测和移动平均线形成的意识形态,对趋势反转时机进行捕捉。相比单一指标,具有更高的可靠性。同时,策略可通过参数调整和confirmation条件优化来进一步提升信号质量和盈利水平。
-||
 
 ## Overview
 
@@ -91,7 +50,6 @@ The combination of above signals with multiple confirmations avoids false breako
 
 The Dynamic Pattern Trend Reversal strategy integrates linear regression prediction and moving average patterns to capture trend reversals. Compared to single indicator strategies, it has higher reliability. Further improvements on parameters, confirmations and other optimizations can enhance signal quality and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

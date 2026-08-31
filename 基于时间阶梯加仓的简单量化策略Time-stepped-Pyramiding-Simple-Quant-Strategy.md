@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17fa4e937ac813559b3.png)
-[trans]
-
-## 概述
-
-该策略是一个利用时间阶梯加仓方式进行量化交易的简单策略。策略的主要思路是每天在固定的时间开仓建立多头头寸,然后对每个头寸设置不同的止盈止损条件,从而实现分批止盈或止损。
-
-## 策略原理
-
-该策略主要基于三个关键逻辑:
-
-1. 时间阶梯加仓
-
-   利用`sessionTime`参数设置一个日内交易时间段,在这个时间段内,每天开市时FIXED阶梯式逐步加仓,加仓数量为资金池最大头寸数量的平均分配。
-
-2. 个体化止盈止损
-
-   对每单开仓订单,分别设置对应的止盈点`takeProfit`和止损点`stopLoss`,使得每个订单都有独立的止盈止损逻辑,从而实现分批止盈止损。
-
-3. 时间段结束平仓
-
-   当日内交易时间段结束时,可选择是否对该时间段内所有未止盈止损的订单进行平仓。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 风险分散,将资金池内资金等份分配给不同订单,有效控制单笔订单亏损。
-
-2. 分批止盈止损,不同订单有独立止盈止损逻辑,防止全部订单同时止损。
-
-3. 灵活配置,可自定义最大加仓次数、每日交易时间段、止盈止损比例等参数。
-
-4. 易于理解,策略逻辑简单清晰。
-
-## 策略风险
-
-该策略也存在一定风险:
-
-1. 有被套的风险,如果全部订单未到止盈线就先触发了对应的止损线,会出现较大亏损。可通过合理配置止损比例进行规避。
-
-2. 无法限制每日开仓总额,如果遇到特殊行情,过多订单同时加仓可能超出资金承受能力。可考虑添加每日加仓总金额的最大限制。
-
-3. 时间段配置不当可能错过行情机会,建议配置交易时间段要参考目标交易品种的活跃时间段。
-
-## 策略优化
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加开仓条件判断逻辑,在满足特定技术指标信号时才开仓,避免盲目加仓。
-
-2. 增加每日加仓总金额的限制,防止超出资金池承受能力。
-
-3. 对不同订单设置不同的止盈止损比例,实现分差止盈止损。
-
-4. 增加订单数量与资金池余额联动的逻辑,让订单数量与可用资金挂钩。
-
-
-## 总结
-
-该策略整体是一个非常简单的利用时间阶梯加仓思路进行量化交易的策略模板,策略逻辑清晰,同时也存在一定的风险与优化空间,开发者可以在这个基础上进行适当优化,使其成为一个较为稳定可靠的量化策略。
-
-
-|| 
 
 ## Overview
 
@@ -132,7 +69,6 @@ The strategy can be enhanced from the following aspects:
 
 In conclusion, this is a very simple quant trading strategy template utilizing the time-stepped pyramiding methodology. The logic is simple and clear while there are also some risks and rooms for enhancement. Developers can optimize it properly to make it a relatively stable and reliable quant strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/206f14fbd0837d975ed.png)
-[trans]
-
-## 概述
-
-该策略通过计算最近一定时间段内的最高价和最低价,结合当前价格,形成一个动态的中轴线。然后根据最近的波动率生成红色下行通道和绿色上行通道。这三条通道线构成一个可交易范围。当价格接近通道边界时,做反向操作,目标是回到中轴线上获利。同时,策略内部包含一个趋势计算,用于过滤不顺趋势的交易,防止被大趋势捣毁。
-
-## 策略原理
-
-1. 计算最近N周期内的最高价和最低价,结合当前收盘价形成动态中轴线
-2. 根据ATR和乘数生成动态通道带,带宽随市场波动率变化
-3. 当价格从下方通道线反弹时做多,从上方通道线反弹时做空
-4. 有止盈和止损逻辑,目标回到中轴线停利
-5. 同时计算趋势指数,用于过滤不顺势的交易
-
-## 优势分析
-
-1. 通道线位置动态变化,能实时捕捉市场波动率
-2. 顺势交易概率较大,有利于把握趋势
-3. 有止损逻辑控制单笔损失
-
-## 风险分析
-
-1. 参数优化不当可能导致过度交易
-2. 大趋势下无法完全滤除逆势交易
-3. 单边突破通道线可能继续运行
-
-## 优化方向  
-
-1. 调整通道线的参数,使其更符合不同品种的特点
-2. 调整趋势指数参数,提高顺势概率
-3. 增加机器学习元素,使参数动态优化
-
-## 总结
-
-该策略主要依赖市场的震荡特征获利。通过动态通道捕捉价格反转点,并结合趋势过滤,可以有效利用反转交易获利,同时控制风险。关键在与参数的调节,需要使通道线既能实时跟踪价格,又不会过于敏感。同时趋势指数也需要选取合适周期才能发挥过滤作用。该策略理论顺势且有止损,实际运用中通过参数优化可以获得不错回报。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ This strategy calculates the recent highest and lowest prices over a certain per
 
 This strategy mainly relies on the oscillation of the market to make profits. By capturing price reversal points dynamically with the bands, combined with trend filtering, it can effectively profit from mean-reversion while controlling risks. The key lies in parameter tuning to make the bands responsive yet not oversensitive. The trend index also needs proper periods to play its role. With theoretical favorable trend and stops, this strategy can achieve decent returns through optimization.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b61de209aea886e071.png)
-[trans]
-
-
-## 概述
-
-该策略基于5分钟开盘价的涨跌幅进行交易决策,使用两阶跨度突破设定不同的触发条件,旨在在震荡趋势中捕捉较大的价格变动。
-
-## 策略原理
-
-策略基于每天2时整5分钟K线的开盘价计算当下5分钟K线的涨跌幅百分比,当涨跌幅超过设定的第一阶跨度时,做出相应的买入或卖出决策。同时设置止损位和止盈位退出仓位。
-
-如果止损被触发,当涨跌幅继续扩大并超过第二阶跨度的触发条件时,会撤销之前的订单,使用第二阶跨度下新的买入或卖出指令,并继续跟踪止损和止盈。
-
-通过两阶跨度的设定,可以在震荡行情中过滤掉部分噪音,只在较大幅度的价格变动时进行交易。同时第二阶跨度的激活可以减少止损过于频繁被触发的情况。
-
-## 策略优势
-
-- 使用两阶跨度设定不同的触发条件,可以有效过滤震荡市场中的噪音,只在较大幅度变动时进行交易
-- 第二阶跨度的激活可以有效避免止损过于频繁被触发
-- 基于开盘价计算当期涨跌幅,可以利用新的交易日开盘后的趋势获利
-- 策略逻辑简单清晰,容易理解实现
-
-## 风险及对策
-
-- 大幅震荡行情中可能频繁打开仓位又止损退出,交易成本增加
-- 第二阶跨度设置过大,可能错过较好的交易机会
-- 跨度设置过小,可能增加不必要的交易次数
-
-对策:
-
-- 优化跨度参数,找到最佳平衡点
-- 增加每日交易次数限制,避免过于频繁交易
-- 结合趋势判断,在趋势明显时使用更激进的参数
-
-## 优化方向 
-
-- 优化两阶跨度的数值,找到最佳参数组合
-- 研究不同品种、不同时间段的参数区别
-- 结合趋势指标,在趋势明显时使用更激进参数
-- 增加每日交易次数限制,避免过度交易
-- 优化止盈止损点位,实现更好的风险回报比
-
-## 总结
-
-该策略通过两阶跨度突破来捕捉价格跳动,在震荡行情中有效过滤噪音。策略Concept简单清晰,通过参数优化可以得到较好的效果。下一步可以考虑与趋势判断指标结合,在趋势行情中发挥策略优势。总体来说,策略思路新颖,有效利用突破原理,在优化调整后可获得不错的效果。
-
-||
 
 ## Overview
 
@@ -101,7 +54,6 @@ Mitigations:
 
 This strategy captures price spikes using a two-stage breakout in ranging markets, filtering out noise effectively. The concept is simple and clear, and can achieve good results through parameter optimization. Next step is to combine with trend indicators to maximize performance during trending markets. Overall this is a novel strategy that makes good use of breakout principles, and can achieve solid results after tuning.
 
-[/trans]
 
 > Strategy Arguments
 

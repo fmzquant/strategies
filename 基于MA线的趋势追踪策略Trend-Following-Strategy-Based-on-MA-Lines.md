@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19d8fa0ea20e6ca6de6.png)
-[trans]
-### 概述
-
-该策略通过计算不同周期的MA移动平均线,判断市场趋势方向,在趋势向上时做多,趋势向下时做空,实现趋势追踪。
-
-### 策略原理
-
-1. 计算20周期、60周期和120周期的MA线
-2. 比较MA20、MA60和MA120的大小关系,判断目前的趋势方向
-   - 如果MA20>MA60>MA120,判断为趋势向上
-   - 如果MA20<MA60<MA120,判断为趋势向下
-3. 在MA20上穿MA60时做多入市,在MA20下穿MA60时做空入市
-4. 以MA60作为止盈止损的参考线
-   - 多头止盈线为MA60的3倍
-   - 空头止盈线为MA60的0.9倍
-
-### 优势分析
-
-1. 使用不同周期的MA组合判断趋势,避免whipsaws
-2. 只在趋势转折点入场,增加胜率
-3. 有清晰的止盈止损规则,降低风险
-
-### 风险分析
-
-1. 在震荡行情中,MA线交叉可能频繁,造成过于频繁交易
-2. 止盈止损参数需要优化,否则可能过早止损或止盈不足
-
-### 优化方向
-
-1. 增加判断震荡行情的指标,避免震荡市频繁交易
-2. 优化MA周期参数组合,找到最佳参数
-3. 测试并优化止盈止损系数,确保最大化收益和降低风险之间的平衡
-
-### 总结
-
-该策略整体思路清晰,使用MA判断趋势非常经典,在参数优化和指标优化后,可以成为一个非常实用的趋势追踪策略。
-
-||
 
 ### Overview
 
@@ -85,7 +47,6 @@ This strategy calculates moving averages (MA) of different periods to determine 
 
 The strategy has a clear logic of using MAs to determine trends. After parameter optimization and indicator optimization, it can become a very practical trend following strategy.
 
-[/trans]
 
 
 

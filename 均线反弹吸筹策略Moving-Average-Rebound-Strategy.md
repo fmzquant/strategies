@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c8ccdc05512fb628d4.png)
-[trans]
-
-## 概述
-
-均线反弹吸筹策略是一种同时结合技术指标和价格形态,在支撑阻力位进行做多做空操盘的策略。该策略使用均线指标识别市场趋势方向,使用基于价格极值的形态指标辅助确定反转点,结合前期高点低点判断关键的支撑和阻力位置,在这些位进行反向操作,属于典型的意义反转策略。
-
-## 策略原理
-
-该策略主要通过以下几个步骤判断操作时机:
-
-1. 使用三均线Alligator指标判断趋势方向。当价格线突破该指标的Lip Lines时,认为出现了较强的突破信号。
-
-2. 使用Peak-Trough模式指标识别价格在超买超卖区域反转的时机。突破Peak-Trough某一方向的极值点时,判断为可能的反转信号。
-
-3. 结合支撑和阻力位判断反转操作的具体入场点。在价格接近前期的支撑或阻力位时开仓做多做空。
-
-4. 使用EMA均线指标辅助判断长期趋势方向。例如在震荡行情中,短期操作以跳空反转为主,在趋势行情中则以顺势操作为主。
-
-5. 采用移动止损方式,控制单笔损失。
-
-## 策略优势
-
-该策略具有以下几个优势:
-
-1. 同时结合多种指标信号,提高判断的准确性。
-
-2. 利用关键支撑阻力进行反转,是高概率操作。
-
-3. 采用移动止损方式,可以限制单笔亏损。
-
-## 策略风险
-
-该策略也存在以下风险:
-
-1. 多指标组合判断,操作频率可能较高,需要关注交易成本控制。
-
-2. 关键位失败是最大风险,如果价格没有在预想的支持或阻力位附近反转,那么亏损可能会比较大。
-
-3. 在行情剧烈波动时,移动止损可能会被突破,导致亏损扩大。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 对多指标权重进行优化调整,找到最佳参数组合。
-
-2. 增加机器学习算法,辅助判断关键位的成功率。
-
-3. 加入交易量指标,避免在价格剧烈波动但成交量不足时被套。
-
-4. 优化移动止损模型,在保证止损有效性的同时,尽量减少无谓止损的概率。
-
-## 总结
-
-综上所述,该均线反弹吸筹策略同时利用均线、价格形态、支撑阻力位等多重指标进行判断,是一种典型的技术策略。它具有判断准确度较高,高概率操作的优势,但也需要注意关键位失败和移动止损被突破的风险。通过持续优化多指标权重、应用机器学习和成交量指标等手段,可以在一定程度上提升策略的效果。
-
-||
 
 ##Overview
 The Moving Average Rebound Strategy is a strategy that combines technical indicators and price patterns to trade long and short around support and resistance levels. The strategy uses moving averages to identify market trend direction, pattern indicators to assist in determining turning points, and previous swing highs/lows to spot key support and resistance levels for counter-trend trading.
@@ -117,7 +60,6 @@ Areas for improvement:
 ## Summary 
 In summary, the Moving Average Rebound Strategy utilizes a confluence of indicators including moving averages, price patterns and support/resistance for entries. A typical technical strategy with higher accuracy from multiple signals. Monitor risks around failure of key levels and stop loss slippage. Further optimization on indicator weights, machine learning and volume can enhance performance.
 
-[/trans]
 
 > Strategy Arguments
 

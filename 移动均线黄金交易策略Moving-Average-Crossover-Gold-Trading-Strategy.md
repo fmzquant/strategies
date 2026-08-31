@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/178b530327af43bf59b.png)
-[trans]
-## 概述
-
-该策略是基于XAUUSD黄金1分钟时间范围内的30日和200日移动均线交叉实现的。当短期均线从下方上穿长期均线时生成买入信号;当短期均线从上方下穿长期均线时生成卖出信号。
-
-该策略同时设置了4万点的止损和止盈位,用于控制单笔交易的风险和回报。当出现反向信号时,会平仓现有头寸并按相反方向开仓。这有助于避免积累期的大幅亏损和捕捉趋势反转带来的利润。
-
-## 策略原理
-
-该策略使用30日和200日的移动均线交叉来判断趋势方向。当短期均线上穿长期均线时表示牛市来临,做多;当短期均线下穿长期均线时表示熊市来临,做空。
-
-同时设置4万点的止损和止盈来控制单笔交易的风险。此外,在出现反向信号时会主动平仓原有头寸并按相反方向开新单,以捕捉潜在趋势反转机会。
-
-## 优势分析
-
-该策略具有如下优势:
-
-1. 使用移动均线交叉判断趋势方向准确性高
-2. 设置止损止盈控制单笔交易风险
-3. 主动平仓反向开仓可有效控制亏损和捕捉反转
-4. 可用于日内和跨市交易
-5. 适用于高波动性品种如黄金
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 若跨趋势震荡过大 may 被套牢
-2. 参数设置不当 may 过频交易或漏单
-3. 反向开仓需谨慎,确保趋势反转
-
-可以通过优化移动均线周期参数、设置止损范围、判断反转信号可靠性等方法来控制和降低风险。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 优化移动均线交叉周期,寻找最佳参数组合
-2. 动态调整止损止盈幅度,优化风险回报率 
-3. 增加量价碎形等指标过滤反转信号 
-4. 增加交易品种和时间范围,进行多品种综合优化
-
-## 总结
-
-该移动均线交叉策略整体效果良好,使用移动均线判断趋势方向的方法准确性较高,同时带止损止盈控制风险,在趋势性品种如黄金中效果尤为明显。可以通过多种方式进行优化与改进,应用范围广泛。
-
-||
 
 ## Overview
 
@@ -103,7 +56,6 @@ The strategy can be optimized in the following aspects:
 
 The overall effect of this moving average crossover strategy is good. Using moving averages to determine trend direction is quite accurate. With stop loss and take profit to control risk, the effect is especially significant on trending products like gold. It can be optimized and improved in various ways and has wide application scenarios.
 
-[/trans]
 
 
 

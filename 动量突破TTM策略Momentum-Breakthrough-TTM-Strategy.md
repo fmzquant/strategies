@@ -12,51 +12,6 @@ ChaoZhang
 ![IMG](https://www.fmz.com/upload/asset/9d0aadc6b199f6fb6b.png)
 
 
-[trans]
-
-## 概述
-
-该策略是一个利用动量指标RSI结合布林带指标BB的二进制期权突破交易策略。在时间上,利用TTM指标判断市场是否处于盘整状态,从而提高入场的可靠性。
-
-## 策略原理
-
-策略的基本逻辑是在TTM指标集合形成突破的基础上,结合布林带和RSI指标判定价格的突破方向。具体来说,策略使用20周期的BB和30周期的RSI。当市场突破缩量后,在RSI处于一定波动区间(30-70)且BB有较大突破(0.15倍波动范围)的情况下确定开仓方向。此外,策略还检查开仓前一根K线的开仓方向,以避免不必要的反复开仓。
-
-## 优势分析
-
-该策略主要有以下几点优势:
-
-1. 利用TTM指标判断市场的交易状态,避免在盘整市场无意义的交易。 TTMS指标的集合压缩、膨胀能更好的判断主要趋势方向,为开仓提供参考。
-
-2. RSI与BB的结合使用,可以使得开仓更加可靠。RSI指标判断价格有无超买超卖现象;而BB指标判断价格是否已经发生较大突破。两者结合使用,使得策略可以在较强势的方向性行情中获利。
-
-3. 策略逻辑考虑了一定的优化,例如避免反复开仓等。这可以一定程度上减少不必要的盈亏来回切换。
-
-## 风险分析
-
-该策略主要存在以下风险:  
-
-1. 突破失败风险。当TTM指标判断趋势准确性不高时,RSI和BB依然可能发生错误突破。此时策略根据指标清单开仓,最终可能被套。为控制该风险,可以考虑降低仓位规模。
-
-2. 市场震荡时,容易形成亏损。当市场处于震荡状态,TTM指标的表现并不理想。RSI和BB指标也可能出现多次错误信号。这时就很容极易形成损失。为控制该风险,应避免在明显震荡市场使用该策略。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化TTM指标参数,调整指标的长度和因子。这可以提高TTM指标对盘整和突破的判断。
-
-2. 优化RSI和BB的参数。适当缩短周期数,可能获取更及时更精确的突破信号。同时BB的通道带宽度也可以测试不同的取值。 
-
-3. 增加止损逻辑。该策略没有设置止损位,为防止单笔亏损过大,可以考虑加上移动止损或期望止损。
-
-4. 可以测试不同的品种参数。当前策略是在1分钟线上运行,对于其他品种参数(如5分钟),指标参数可以重新测试优化,获取更好的参数组合。
-
-## 总结  
-
-该策略是一个利用TTM判断趋势准确性,结合RSI和BB判定突破方向的二进制期权策略。相比简单的突破策略,其入场时机和指标参数优化都更有优势,可以提高盈利概率。但该策略也存在一定的失败风险和震荡市的适应性问题。这需要我们在使用中,调整仓位规模并避免在震荡市使用。通过进一步的参数和止损优化,该策略可以成为一个可靠的期权交易策略。
-
-||
 
 ## Overview  
 
@@ -100,7 +55,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy utilizes TTM to determine trend accuracy and uses RSI and BB to determine breakthrough directions. Compared with simple breakthrough strategies, its entry timing and indicator parameter optimization are more advantageous, which can increase profitability. But this strategy also poses certain risks of failure and adaptability issues in oscillating markets. This requires us to adjust position sizing during use and avoid using it in oscillating markets. With further parameter and stop loss optimization, this strategy can become a reliable option trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

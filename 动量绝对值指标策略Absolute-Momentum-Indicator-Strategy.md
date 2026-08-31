@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bcea81cfe1913af0aa.png)
-[trans]
-## 概述
-
-动量绝对值指标策略是基于Tushar Chande开发的动量指标CMO的改进版本。该策略通过计算价格的绝对动量值,判断市场目前是否处于超买或超卖状态,以捕捉市场中期的价格波动。
-
-## 策略原理  
-
-该策略的核心指标是经过改进的CMO指标,称为AbsCMO。AbsCMO的计算公式为:
-
-```
-AbsCMO =  abs(100 * (最新收盘价 - Length周期前的收盘价) / (Length周期内价格波动绝对值的简单移动平均 * Length))
-```
-
-其中,Length代表平均期间长度。AbsCMO值区间为0至100。该指标结合了动量方向性和强度 monumentality,能清晰判断市场中期趋势和超买超卖区域。  
-
-当AbsCMO上穿指定的上轨(默认70)时,表示市场步入超买,做空;当AbsCMO下穿指定的下轨(默认20)时,表示市场步入超卖,做多。
-
-## 优势分析
-
-与其他动量指标相比,AbsCMO指标具有如下优势:
-
-1. 反映价格绝对动量,判断市场中期趋势更加准确;
-2. 结合方向性和强度,识别超买超卖更为明确;
-3. 限定范围在0-100,更适合多个品种之间比较;
-4. 对于短期剧烈波动不敏感,反应市场中期趋势;
-5. 可自定义参数,适应性强。
-
-## 风险分析  
-
-该策略主要存在以下风险:  
-
-1. 中期指标,对短期波动反应不够灵敏;
-2. 默认参数可能不适合全部品种,需要优化;  
-3. 长期持仓可能带来较大的回撤。
-
-可以通过适当缩短持仓周期,优化参数,或与其他指标组合使用来减少风险。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 优化AbsCMO的参数,适应更多品种;
-2. 结合其他指标过滤假信号; 
-3. 制定止损和止盈规则,控制风险;
-4. 结合深度学习等技术寻找更佳入场点。
-
-## 总结  
-
-动量绝对值指标策略整体来说是一个比较实用的中期交易策略。它反应价格中期绝对动量特性,判断市场中期趋势的判断力较强。但该策略对短期剧烈波动不敏感,存在一定的风险。通过参数优化、指标过滤、止损机制等进一步完善,可以使该策略的实盘表现更加稳定可靠。
-
-||
 
 ## Overview
 
@@ -111,7 +60,6 @@ This strategy can be optimized from the following aspects:
 
 In summary, the Absolute Momentum Indicator Strategy is a useful medium-term trading strategy. It reflects the absolute momentum characteristics of price over the medium term and has strong predictive power of medium-term trends. However, this strategy is less sensitive to short-term fluctuations and carries certain risks. Further improvements like parameter optimization, indicator filters, stop loss mechanisms can make its live performance more steady and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

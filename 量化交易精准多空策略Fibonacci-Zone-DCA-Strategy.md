@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6e35d4b3480f47c011.png)
 
-[trans]
-
-### 概述
-
-本文主要介绍了一个基于布林通道、ADX指标结合K线进行多空判断的量化交易策略。该策略采用布林通道判断市场趋势和波动性,并结合ADX指标判断市场趋势强弱,在强劲趋势市场选择方向做多做空,在震荡行情则盘整观望,最大程度规避风险。
-
-### 策略原理  
-
-- 1. 根据布林通道上下轨判断市场趋势方向。价格位于上轨之上为多头行情,位于下轨之下为空头行情。
-
-- 2. 布林通道带宽度反映了市场波动性和风险。布林带越宽表示市场越震荡,风险越大,这时应避免建仓。
-
-- 3. ADX指标判断市场趋势强弱。ADX值大于25时表示趋势行情,这时判断布林通道方向选择建仓方向。ADX小于25时表示震荡行情,这时应避免交易。
-
-- 4. 在决定做多做空方向后,根据ATR指标设定止损位。ATR用于衡量市场波动幅度,根据ATR倍数设置止损距离。
-
-- 5. 止盈根据布林上下轨来设置。多头止盈为下轨,空头止盈为上轨。或者根据ATR指标的ATR倍数来设置固定止盈距离。
-
-- 6. 在止损位和止盈位之间进行盈亏管理,设置移动止损来锁定盈利。
-
-### 策略优势
-
-1. 结合布林通道和ADX指标判断方向,能清晰判断多空并进行选择性建仓,避免在震荡行情无谓交易。
-
-2. 利用布林带宽度判断波动率风险,布林带收窄时机会高但风险也小。布林带变宽时避免交易。
-
-3. ATR止损设置让风险可控,最大程度避免止损被追杀。
-
-4. 根据布林通道设置止盈位,没有止盈追高止盈追低的风险。
-
-5. 移动止盈在盈利后及时止盈确保利润,并继续跟踪趋势运行。
-
-### 策略风险
-
-1. 布林通道和ADX指标都存在压力的可能性。如果出现背离则可能造成错误判断。
-
-2. ATR指标仅能反映历史波动,无法预测未来波动。实际止损被追的风险仍存在。
-
-3. 布林通道区域划分主观,可能出现漏掉机会的情况。
-
-4. 移动止损只能在盘中进行,存在间隔期无法移动的风险。
-
-5. 回测数据拟合风险。真实市场中难以复制测试报告。
-
-### 策略优化
-
-1. 整合更多指标进行互信,避免布林通道和ADX指标出现虚假信号。
-
-2. ATR止损可再加入跳空止损。或者利用深度学习算法预测市场波动设置止损。
-
-3. 优化布林通道的通道参数,使其能拥抱更大的行情机会。
-
-4. 利用更高效的程序化交易系统进行无人值守移动止损。
-
-5. 在更长的时间周期和更多品种组合进行回测,确保策略稳健性。
-
-### 总结
-
-本策略整合布林通道、ADX指标等多个指标信号,在判断明确趋势方向后进行选择性建仓,并采用ATR指标优化止损止盈设置,最大限度控制风险与盈利比,是一个值得推荐的量化交易策略。我们看到该策略还有很多可优化的空间,期待未来迭代版本的产出。
-
-|| 
 
 ### Overview  
 
@@ -128,7 +67,6 @@ This article mainly introduces a quantitative trading strategy based on Fibonacc
 ### Conclusion
 This strategy combines Fibonacci statistics and indicators like ADX for identifying high probability setups to go long or avoid trading altogether. The dynamic DCA position sizing ensures good entries while managing risks. With further optimizations, it has the potential to be a robust mechanical trading system. We look forward to more advanced versions in future.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1635bdbda8d4a8b76e0.png)
-[trans]
-
-## 概述
-
-多时间框架RSI均线交叉策略是一种多时间框架的趋势跟踪策略。该策略同时使用多个时间框架的RSI指标,并对每个时间框架的RSI进行加权移动平均处理,最终合并为两个综合信号指标,当两个信号指标发生金叉时做多,发生死叉时做空,属于典型的双均线交叉策略。
-
-## 原理
-
-该策略首先在多个时间框架(1分钟、5分钟、15分钟等)分别计算RSI指标,然后对每个时间框架的RSI进行长度为15的加权移动平均(VMA)处理,得到各个时间框架的RSI均线。 
-
-之后,把所有时间框架的RSI均线进行等权重合并,分别合并成快线和慢线两个信号。快线长度为100周期的EMA,慢线长度为150周期的EMA。
-
-当快线从下向上突破慢线时产生买入信号;当快线从上向下突破慢线时产生卖出信号。这样,多时间框架RSI的综合交叉信号,可以有效跟踪趋势,同时过滤掉短期市场噪音。
-
-## 优势
-
-1. 多时间框架综合,可以平滑价格曲线,有效过滤假突破。
-
-2. RSI指标可以反映超买超卖状态,避免追高杀跌。 
-
-3. 双均线较单一均线系统有更好的持仓效果。
-
-4. 采用VMA而不是SMA,可以降低短期波动对均线的影响。
-
-## 风险
-
-1. 多时间框架策略,对参数调优要求较高,不当设置可能进场过早或过晚。
-
-2. 均线系统对曲线拟合效果不佳,在趋势转折点表现较差。
-
-3. RSI指标容易形成背离,应注意反转信号。
-
-解决方法:调整时间框架参数设置;结合其他指标判断趋势,如MACD等;警惕RSI背离信号出现。
-
-## 优化方向 
-
-1. 优化时间框架的数量及参数设置,使之更好地捕捉趋势。
-
-2. 考虑加入止损机制,以控制风险。
-
-3. 结合其他指标判断趋势和背离,提高决策质量。
-
-4. 测试不同持仓周期参数,寻找最佳持仓效果。
-
-## 总结
-
-多时间框架RSI均线交叉策略通过多个时间范围内RSI指标的综合判断,利用均线系统平滑价格曲线并产生交易信号,属于典型的多时间框架趋势跟踪策略。该策略优势在于可以有效跟踪趋势同时过滤噪音,但需要注意参数调优和风险控制。通过进一步优化,该策略可以成为一个较强的趋势跟踪体系。
-
-||
 
 ## Overview
 
@@ -106,7 +57,6 @@ Solutions: Optimize timeframe parameters; Combine with other indicators like MAC
 
 The Multi-Timeframe RSI Moving Average Crossover Strategy generates trading signals by combining RSI indicators from multiple timeframes using a moving average system, which is a typical multi-timeframe trend following strategy. Its strength lies in effectively tracking trends and filtering out noise, but parameter tuning and risk control need attention. With further optimization, it can become a robust trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/154b74d9abb6533a575.png)
-[trans]
-
-## 概述
-
-动量突破均线策略是一个利用均线交叉信号与动量指标结合的股票交易策略。该策略综合运用了指数移动平均线(EMA)、简单移动平均线(SMA)、移动平均聚散指数(MACD)以及修改后相对强弱指数(StockRSI)等多重技术指标,在确认长期趋势为上涨的前提下,形成买入信号。当短期动量指标显示反转信号时,策略采取止损。
-
-## 策略原理
-
-该策略主要由以下组成部分:
-
-1. **EMA/SMA均线交叉**: 设置9周期的EMA快线与21周期的SMA慢线,当快线上穿慢线时产生买入信号。
-
-2. **MACD指标**: MACD指标包括MACD线、信号线和MACD柱。当柱子为正且与EMA/SMA产生的买入信号同步时,作为额外确认。
-
-3. **StockRSI指标**: StockRSI为改进版RSI指标。指标线高于OVERBOUGHT线(80) 或低于OVERSOLD线(20)时产生买入信号。  
-
-4. **布林带**: 布林中轨为20日SMA,带宽为上下各两个标准差。要求价格处于布林带内时才产生交易信号。   
-
-5. **止损和止盈位**: 根据过去14天的ATR计算止损和止盈价格。    
-
-该策略要求上述指标中必须至少有2个指标同时发出买入信号,且股价处于布林带内而长期趋势为上涨,才产生最终的买入信号。当MACD指标向下反转,StockRSI进入超买区域后产生卖出信号。
-
-## 优势分析
-
-该策略结合均线交叉、动量指标与波动率指标的各项优点,具有以下主要优势:
-
-1. **回测结果优秀**: 多重指标且均为成熟指标,策略结果优于大盘和单一指标。
-
-2. **参数经过优化**: 主要参数如EMA周期、布林带通道已得到优化,可提高系统稳定性。  
-
-3. **自动止损/止盈**: 布林带和ATR可实时调整止损位,有利于风险控制。   
-
-4. **实施难度不高**: 代码较为简洁,指标容易获取,实际操作难度不大。
-
-## 风险分析
-
-尽管该策略表现不错,但仍存在以下主要风险:  
-
-1. **指标发出错误信号**: 当市场出现异常波动或指标失效时,可能出现错误信号。此时应结合长期趋势判断。
-
-2. **参数不当**: 参数设置不当可能导致过于频繁交易或反应不灵敏。应根据不同品种、市场环境调整。  
-
-3. **止损过小或过大**: 止损过小容易被套,过大则亏损过大。应平衡止损与止盈。
-
-针对上述风险,可采取如下措施加以应对:
-
-1. **人工干预和修改**: 出现异常情况下,可人工确认信号,修改参数或暂停策略。   
-
-2. **优化参数设置**: 采用更科学客观的方法如遗传算法等来优化参数。
-
-3. **结合波动率调整止损**: 可根据波动率自动调整止损幅度,如1-3倍ATR。
-
-## 优化方向  
-
-该策略还可从以下方面进一步优化:  
-
-1. **增加止损机制的稳定性**: 可加入追踪止损或指数移动平均线进行止损。
-
-2. **结合交易量过滤**: 加入成交量指标,避免出现无效突破。
-
-3. **动态调整参数**: 可根据市场环境自动优化均线周期、通道宽度等。  
-
-4. **引入机器学习算法**: 使用RNN、LSTM等算法实现参数的动态优化。
-
-## 总结
-
-动量突破均线策略综合运用技术指标的优势,在长短跑配合的情况下,取得了良好收益。该策略止损控制到位,实施难度也不大。下一步将进一步完善止损机制,并使用更为智能化的方法进行参数优化与信号过滤,力求取得更加稳定的超额收益。
-
-|| 
 
 
 ## Overview
@@ -146,7 +77,6 @@ The strategy can be further improved in the following areas:
 ## Conclusion  
 
 The Momentum Breakout Moving Average Strategy capitalizes on the strengths of combining multiple technical indicators, and has achieved decent profitability with long and short term confirmation. With good risk control procedures in implementation, this strategy has ample potential for further improvements on areas like stop loss mechanisms and signal filtering to achieve more consistent alpha returns.  
-[/trans]
 
 
 

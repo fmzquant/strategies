@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d5016c45234b78bfac.png)
 
-[trans]
-
-
-### 概述
-
-春秋叠加动量策略主要是通过计算不同周期的变化率ROC,并按比例赋权叠加,形成一个综合动量指标,以判断行情趋势方向的策略。该策略将短期、中期和长期的动量指标进行叠加,能够平衡短期和长期趋势,避免产生假信号。
-
-### 策略原理  
-
-该策略首先计算10日、15日、20日等不同周期的ROC指标,然后对ROC进行平滑处理,并按照1-4的比例进行赋权叠加,计算公式如下:
-
-```
-roc1 = (sma(roc(close,10),10)*1)  
-roc2 = (sma(roc(close,15),10)*2)
-...
-osc = roc1+roc2+roc3+roc4+...
-```
-
-其中,roc1-roc12代表不同周期ROC的计算,分别对应10日、15日至530日周期。 Computes the Rate of Change (ROC) over the specified period.
-
-接着对osc进行a天(默认10天)的SMA平滑处理,得到oscsmt。
-
-然后比较osc与oscsmt的大小关系,当osc上穿oscsmt时为看涨信号,进入做多方向;当osc下穿oscsmt时为看跌信号,进入做空方向。
-
-最后,可选择反转交易方向。
-
-### 策略优势
-
-1. 将短期和长期动量指标进行叠加,能够同时捕捉短期和长期趋势,避免产生假信号。
-
-2. 通过差价比较osc和oscsmt,可以减少平盘区域的无谓交易。
-
-3. 可自定义参数,调整计算ROC的周期参数,以及SMA的平滑参数。
-
-4. 可选择反转交易方向,满足不同交易风格。
-
-5. 可视化指标,直观判断买卖点。
-
-### 策略风险及优化
-
-1. ROC指标对突发异常价格非常敏感,可能产生错误信号。可适当增大SMA平滑参数a,降低ROC指标的灵敏度。
-
-2. 默认参数可能不适用于所有品种,需要根据不同品种特点优化参数,找到最佳参数组合。
-
-3. 仅基于osc和oscsmt的差价比较产生交易信号,可结合其他指标过滤信号,降低错误交易概率。
-
-4. 本策略更适合中长线交易,短线交易效果可能不佳。可调整ROC的计算周期,优化本策略的使用场景。
-
-### 总结
-
-春秋叠加动量策略通过计算多个周期的ROC指标,并进行叠加得到综合动量指标,能够同时兼顾短期和长期趋势,避免产生假信号。相比单一ROC指标,该策略可大大提高信号质量和可靠性。但本策略也存在一定监控风险,需优化参数并结合其他指标使用,方能发挥最大效用。
-
-||
 
 
 ## Overview
@@ -115,7 +62,6 @@ Finally, it can choose to reverse the trading direction.
 
 The Momentum Stacking Strategy calculates multiple ROC periods to get a comprehensive momentum indicator, capturing both short-term and long-term trends, avoiding false signals. Compared to a single ROC, it greatly improves signal quality and reliability. But it still carries some monitoring risks. Parameters need optimization and combining other indicators to maximize usefulness.
 
-[/trans]
 
 > Strategy Arguments
 

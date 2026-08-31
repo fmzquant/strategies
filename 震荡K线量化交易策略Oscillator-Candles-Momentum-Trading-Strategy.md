@@ -9,75 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个基于指标的动量策略,使用RSI、Stoch、MACD等 oscillators 指标构造策略交易信号。策略的主要思路是当价格出现震荡时,利用指标识别趋势方向,根据指标信号进行入场。同时,策略还会利用延迟超趋指标进行止损。
-
-## 策略原理
-
-该策略首先调用自定义函数f_getOscilatorValues获取不同的oscillators指标的值,包括RSI、Stoch、MACD等。然后,通过f_getSupertrend函数计算延迟超趋指标的值,用于追踪止损。 
-
-在计算指标后,策略会调用f_getBuySellStops函数,根据指标值计算入场止损位和止盈位。具体来说,它会计算ATR指标,并以ATR乘以一个止损系数作为入场止损位,以ATR乘以一个止盈系数作为止盈位。在趋势发生反转时,止损位和止盈位会进行调整。
-
-之后,策略会判断K线的实体方向,如果是上涨K线,则以绿色绘制,下跌K线则以红色绘制。 在绘制K线和指标后,策略会判断是否符合入场条件。入场条件为当指标显示超买时,价格突破上轨时做多;当指标显示超卖时,价格突破下轨时做空。此外,策略还引入了高周期均线过滤条件,价格需要突破均线才能入场。
-
-在入场后,止损位会进行追踪,追踪止损位是上轨或下轨 whichever is closer. 当止损位被触发后平仓。当价格达到止盈位时,部分止盈。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 使用oscillators指标识别趋势的方向性,可以及时捕捉市场的短线反转机会。
-
-2. 应用延迟超趋止损策略,可以在亏损扩大前止损出场,限制单笔损失。
-
-3. 根据ATR计算风险度量的止损位和止盈位,可以动态调整仓位规模。
-
-4. 结合高周期均线进行过滤,避免被套。
-
-5. 部分止盈策略,让利润继续运行且锁定部分利润。
-
-6. 策略思路简单清晰,容易理解实现,适合量化交易初学者。
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. oscillators指标存在滞后问题,可能导致入场信号偏迟、出场信号偏早。可以通过调整指标参数优化,或者加入趋势 following 指标辅助判断。
-
-2. 停损点靠近,可能会被突破止损。可以适当放宽止损范围,或使用 Chandelier Stop 等动态止损策略。
-
-3. 部分止盈后,剩余头寸可能会被追盘止损。可将部分止盈比例降低,留足余地。
-
-4. 回测数据拟合风险。应该在不同市场中多次验证,避免过拟合。
-
-5. 高周期均线作为过滤条件也可能发生失效。应采用趋势分类等方法辅助判断大周期走势。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的oscillators指标的参数组合,选择能够提供较好质量信号的组合,如快速K线的Stoch指标等。
-
-2. 尝试将部分止盈改为移动止盈,根据ATR或移动平均线设置止盈位置。
-
-3. 对大周期趋势判断加入机器学习算法,取代高周期均线过滤法,提高判断准确率。
-
-4. 增加量能指标等做为入场过滤条件,避免不必要的反转交易。 
-
-5. 对指标进行集成和权重优化,筛选出对当前品种最适合的指标组合。
-
-6. 增加机器学习风控模块,对止损位、止盈位、仓位等进行动态优化。
-
-7. 添加三角套利或期现套利的交易信号,利用期货和现货之间的价差获利。
-
-## 总结
-
-该策略整体是一个非常适合量化交易初学者学习的策略,思路清晰,关键点立足于指标分析与风险控制。但仍需要针对实盘进行参数优化与风险规避,才能获得稳定的回报。此外,可以从趋势判断、止损优化、集成学习等方面进行策略提升,使策略更具鲁棒性。总体来说,该策略作为一个可以运行与优化的策略模板还是非常有参考价值的。
-
-||
 
 ## Overview
 
@@ -144,7 +75,6 @@ The strategy can be optimized in the following aspects:
 ## Conclusion
 
 Overall this is a great strategy for quant trading beginners with clear logic focusing on indicators and risk management. But parameter optimization and risk reduction are still needed for live trading. It can also be enhanced in aspects like trend analysis, stop loss optimization, ensemble models etc to improve robustness. As a trading strategy template, it provides valuable reference.
-[/trans]
 
 > Strategy Arguments
 

@@ -11,70 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ca653fb4b4cefec13d.png)
 
-[trans]
-
-## 概述
-
-三重超趋势均线突破策略是一种比较常见的利用多个不同参数设置的超趋势均线以及 defines 趋势的 EMA 来识别趋势方向并进行交易的策略。该策略的主要思想是当至少两个超趋势均线线在 defines 大趋势的 EMA 线上方呈现多头状态时建立多头;当至少两个超趋势均线线在 defines 大趋势的 EMA 线下方呈现空头状态时建立空头。
-
-## 策略原理
-
-该策略通过设置三条不同参数的超趋势均线,以及一条定义大趋势方向的 EMA 来判断建仓和平仓:
-
-1. 设置三条超趋势均线 supertrend1、supertrend2、supertrend3,颜色分别为绿色表示上涨趋势,红色表示下跌趋势。
-
-2. 设置一条 EMA 平滑移动平均线 ematrend 来定义大趋势,当三条超趋势均线全部高于该 EMA 时定义为大盘多头行情,反之定义为空头行情。
-
-3. 当至少两条超趋势均线在大盘多头的情况下同时显示多头(绿色),即方向值小于0时判断为多头信号;当至少两条超趋势均线在大盘空头的情况下同时显示空头(红色),即方向值大于0时判断为空头信号。
-
-4. 随后在信号发出时开仓做多/做空。
-
-5. 设置止损止盈条件。其中固定止盈设置为风险回报比,即盈亏比为3;设置移动止损为下跌一个ATR即止损。
-
-6. 当止损或止盈条件触发时平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用三重超趋势均线结合趋势判断EMA,能够有效识别趋势信号。
-
-2. 多空条件判断规则明确,容易理解和实现。
-
-3. 设置移动止损与固定止盈,有效控制风险。
-
-4. 可根据需要调整超参数,优化策略。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 超参数设置不当可能导致错失良好交易机会。可以测试不同的ATR周期、ATR倍数、EMA周期参数。
-
-2. 突破失败的概率存在,可通过调整超参数降低概率。
-
-3. 止损或止盈设置过于宽松会增加亏损概率。应适当缩紧止损范围。
-
-4. 回测数据容易产生过拟合问题。应注意多市场多周期测试。
-
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试最佳超参数组合。可以组合测试不同的ATR周期、ATR倍数、EMA平均线周期,找到最佳参数。
-
-2. 增加交易品种。可以增加股票、数字货币等不同品种来验证策略有效性。
-
-3. 结合其他指标过滤信号。例如可以添加RSI,MACD等指标避免错读趋势信号。
-
-4. 优化止损止盈机制。可以测试追踪止损,或是基于ATR/波动率变化的止损方式。
-
-## 总结
-
-三重超趋势均线突破策略整体来说是一种较为简单实用的趋势跟踪策略。它同时结合多条超趋势均线以及趋势判断EMA来发掘机会,有效控制风险。通过参数优化和规则优化,可以获得更好的效果。该策略易于理解,值得学习借鉴。
-
-||
 
 ## Overview  
 
@@ -136,7 +72,6 @@ Some ways this strategy can be optimized:
 
 In summary, the triple supertrend breakout strategy is a relatively simple and practical trend following strategy. It combines multiple supertrend lines and a trend-judging EMA to discover opportunities and manages risk effectively. Through parameter and logic optimization, better results can be achieved. This strategy is easy to understand and worth learning from.
 
-[/trans]
 
 > Strategy Arguments
 

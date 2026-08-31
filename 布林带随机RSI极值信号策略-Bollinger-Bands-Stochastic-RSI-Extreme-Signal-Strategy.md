@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1202122673f6f340dd7.png)
 
-[trans]
-#### 概述
-该策略使用布林带和随机RSI指标来生成可能表明价格反转的信号。默认情况下,看跌信号显示为红色箭头,看涨信号显示为绿色箭头。在发出信号之前,该策略会寻找以下情况:(看涨)蜡烛线在布林带上轨之上收盘,随后的蜡烛线在上轨内收盘,随机RSI低于预设阈值(默认为10);(看跌)蜡烛线在布林带下轨之下收盘,随后的蜡烛线在下轨内收盘,随机RSI高于预设阈值(默认为90)。
-
-#### 策略原理
-该策略的核心原理是利用布林带和随机RSI这两个技术指标来捕捉潜在的价格反转信号。布林带由一条中轨(通常是移动平均线)和两条上下轨道(中轨加减标准差)组成,可以反映价格的波动情况。当价格突破上轨或下轨时,通常意味着市场情绪过于乐观或悲观,价格可能会出现反转。随机RSI是在RSI指标的基础上再次应用随机指标,更加灵敏地反映了市场的超买超卖状态。当随机RSI达到极值区域(如超过90或低于10)时,也预示着潜在的反转。该策略结合布林带突破和随机RSI极值这两个条件,可以比较可靠地捕捉到价格反转的时机。
-
-#### 策略优势
-1. 双重确认:该策略同时使用布林带和随机RSI两个指标,形成了双重确认机制,可以有效过滤掉假信号,提高信号的可靠性。
-2. 及时捕捉反转:布林带突破和随机RSI极值是市场情绪逆转的重要标志,策略能够及时捕捉到这些关键时刻,为投资者提供及时的交易信号。
-3. 参数灵活:策略的参数设置较为灵活,如布林带的周期和宽度,随机RSI的周期和超买超卖阈值等,可以根据不同市场和品种进行优化调整。
-4. 适用范围广:该策略可以适用于各类金融市场和交易品种,如股票、期货、外汇、加密货币等,通过参数调整可以适应不同的市场特征。
-
-#### 策略风险
-1. 震荡市中表现欠佳:在震荡市场中,价格经常在布林带上下轨附近波动,随机RSI也频繁进入超买超卖区域,可能会给出较多的假信号,导致频繁交易和资金损耗。
-2. 趋势市中滞后:在强趋势市场中,价格可能长时间突破布林带上轨或下轨,随机RSI也可能长时间维持在超买超卖区域,此时该策略可能会发出滞后的反转信号,错失趋势交易机会。
-3. 参数设置敏感:该策略的表现对于参数设置较为敏感,不同的参数组合可能带来显著不同的结果,参数设置需要根据市场状况不断调试和优化,增加了使用难度。
-
-#### 策略优化方向
-1. 加入趋势确认:在当前策略的基础上,可以加入一些趋势确认指标,如移动平均线,MACD等,用于甄别当前的趋势方向和强度,在趋势明确的情况下避免逆势交易,提高策略的适应性。
-2. 动态调整参数:可以根据市场波动率的变化,动态调整布林带的宽度和随机RSI的超买超卖阈值,在波动率较高时使用较宽的布林带和较高的阈值,降低交易频率;在波动率较低时使用较窄的布林带和较低的阈值,提高交易灵敏度。
-3. 引入止损止盈:在策略产生交易信号后,可以设置相应的止损和止盈规则,控制单次交易的风险敞口和盈利目标,提高策略的风险收益比。
-4. 结合其他技术指标:可以将该策略与其他技术指标相结合,如支撑阻力位,交易量等,形成更加稳健的信号确认机制,提高策略的可靠性和盈利能力。
-
-#### 总结
-布林带随机RSI极值信号策略通过结合布林带和随机RSI两个技术指标,以价格突破布林带上下轨和随机RSI达到超买超卖极值区域作为潜在的反转信号,形成了一套简单易用的交易策略。该策略具有信号可靠,适用范围广等优势,但在震荡市中表现欠佳,趋势市中可能滞后,对参数设置也比较敏感。因此在实际应用中,可以考虑从趋势确认,动态参数,止损止盈,结合其他指标等方面对策略进行优化和改进,以提高其适应性和盈利能力,更好地服务于量化交易实践。
-
-|| 
 
 #### Overview
 This strategy uses Bollinger Bands and Stochastic RSI indicators to generate signals that may indicate price reversals. By default, bearish signals are shown as red arrows and bullish signals as green arrows. Before sending a signal, the strategy looks for the following conditions: (bullish) the candle closes above the upper Bollinger Band, the subsequent candle closes inside the upper band, and the Stochastic RSI is below a preset threshold (default 10); (bearish) the candle closes below the lower Bollinger Band, the subsequent candle closes inside the lower band, and the Stochastic RSI is above a preset threshold (default 90).
@@ -65,7 +37,6 @@ The core principle of this strategy is to use Bollinger Bands and Stochastic RSI
 
 #### Summary
 The Bollinger Bands Stochastic RSI Extreme Signal Strategy combines two technical indicators, Bollinger Bands and Stochastic RSI, using price breakouts of the upper and lower Bollinger Bands and Stochastic RSI reaching overbought/oversold extreme areas as potential reversal signals, forming a simple and easy-to-use trading strategy. The strategy has advantages such as reliable signals and wide applicability, but it performs poorly in rangebound markets, may lag in trending markets, and is quite sensitive to parameter settings. Therefore, in practical applications, we can consider optimizing and improving the strategy from aspects such as trend confirmation, dynamic parameters, stop-loss and take-profit, and combining with other indicators, in order to improve its adaptability and profitability and better serve quantitative trading practice.
-[/trans]
 
 > Strategy Arguments
 

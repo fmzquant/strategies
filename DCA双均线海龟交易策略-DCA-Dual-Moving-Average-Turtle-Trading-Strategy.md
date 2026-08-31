@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8c106d842892738e54.png)
 
-[trans]
-#### 概述
-DCA双均线海龟交易策略是一个基于双均线交叉和DCA(Dollar Cost Averaging,定额成本平均法)的量化交易策略。该策略使用两条不同周期的简单移动平均线(SMA)作为买卖信号,同时采用DCA方法降低买入成本。当快速SMA上穿慢速SMA时产生买入信号,反之则产生卖出信号。该策略旨在捕捉市场的中长期趋势,并通过DCA方法降低市场波动带来的风险。
-
-#### 策略原理
-1. 计算快速SMA和慢速SMA。
-2. 当快速SMA上穿慢速SMA时,产生买入信号,策略以固定金额(DCA金额)进行买入。
-3. 当快速SMA下穿慢速SMA时,产生卖出信号,策略卖出所有持仓。
-4. 在每个DCA间隔(如14天),策略会再次以固定金额买入,降低持仓成本。
-5. 策略通过DCA方法降低买入成本,同时利用SMA交叉捕捉市场趋势。
-
-#### 策略优势
-1. 双均线交叉能够有效捕捉市场的中长期趋势。
-2. DCA方法可以降低买入成本,减少市场波动带来的风险。
-3. 策略逻辑简单,易于实现和优化。
-4. 适用于大多数市场和资产,通用性强。
-
-#### 策略风险
-1. 在市场震荡或趋势不明确时,频繁的交叉可能导致过多的交易信号,增加交易成本。
-2. DCA方法虽然能降低买入成本,但在持续下跌的市场中,可能会增加潜在损失。
-3. 策略依赖于历史数据,在市场发生重大变化时,可能失去效力。
-
-#### 策略优化方向
-1. 优化SMA周期参数,找到更适合特定市场和资产的参数组合。
-2. 引入其他技术指标,如RSI、MACD等,辅助判断市场趋势和信号的可靠性。
-3. 优化DCA金额和间隔,根据市场特点和风险偏好,调整DCA参数。
-4. 加入止损和止盈机制,控制单笔交易的风险和收益。
-
-#### 总结
-DCA双均线海龟交易策略通过双均线交叉捕捉市场趋势,并利用DCA方法降低买入成本和风险。该策略逻辑简单,适用范围广,但在实际应用中需要注意优化参数和控制风险。通过引入其他技术指标、优化DCA参数以及加入止损止盈机制,可以进一步提升策略的表现和稳定性。
-
-|| 
 
 #### Overview
 The DCA Dual Moving Average Turtle Trading Strategy is a quantitative trading strategy based on the crossover of two moving averages and Dollar Cost Averaging (DCA). The strategy uses two Simple Moving Averages (SMAs) with different periods as buy and sell signals. When the fast SMA crosses above the slow SMA, a buy signal is generated, and when the fast SMA crosses below the slow SMA, a sell signal is generated. The strategy aims to capture medium to long-term market trends while reducing risks associated with market volatility through the use of DCA.
@@ -73,7 +41,6 @@ The DCA Dual Moving Average Turtle Trading Strategy is a quantitative trading st
 
 #### Summary
 The DCA Dual Moving Average Turtle Trading Strategy captures market trends through dual moving average crossovers and reduces buying costs and risks using the DCA method. The strategy is simple, widely applicable, but requires attention to parameter optimization and risk control in practical applications. By introducing other technical indicators, optimizing DCA parameters, and incorporating stop-loss and take-profit mechanisms, the strategy's performance and stability can be further enhanced.
-[/trans]
 
 > Strategy Arguments
 

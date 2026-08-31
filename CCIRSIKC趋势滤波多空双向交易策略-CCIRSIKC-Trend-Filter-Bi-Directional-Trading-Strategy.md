@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a9ea437fbea8fd3397.png)
 
-[trans]
-#### 概述
-本策略采用CCI、RSI和肯特纳通道(KC)三种技术指标,结合趋势过滤器,实现在AUDNZD和GBPNZD货币对上的多空双向交易。策略通过CCI和RSI来判断超买超卖情况,KC作为止损止盈的参考依据,同时使用移动平均线作为趋势过滤,在顺势的情况下进行开仓操作。该策略已经在过去5年的历史数据上进行了回测,取得了稳定的收益。
-
-#### 策略原理
-1. 计算CCI、RSI和KC指标。KC上轨为中线加上ATR,下轨为中线减去ATR。
-2. 根据输入参数选择移动平均线类型(SMA、EMA、SMMA、CMA或TMA)和趋势过滤方法(关闭、正向或反向)。
-3. 多头开仓条件:允许做多、CCI<超卖线、收盘价<KC下轨、RSI<超卖线、成交量>50周期均量*倍数、当前无多头仓位。
-4. 空头开仓条件:允许做空、CCI>超买线、收盘价>KC上轨、RSI>超买线、成交量>50周期均量*倍数、当前无空头仓位。
-5. 多头平仓条件:CCI>0。空头平仓条件:CCI<0。
-6. 开仓时发出警报,平仓时也发出警报。
-
-#### 策略优势
-1. 结合多个指标进行综合判断,提高信号准确性。
-2. 采用趋势过滤方法,可以根据市场趋势灵活调整,顺势而为。
-3. 移动平均线类型可选,适应不同的市场特点。
-4. 已经过长时间的历史数据验证,稳定性好,适合长期使用。
-5. 双向交易,适应各种行情,获利机会多。
-6. 自动化程度高,不需要人工干预,省时省力。
-
-#### 策略风险
-1. 缺乏传统的止损止盈,遇到极端行情可能出现较大回撤。
-2. 在震荡市可能出现频繁开平仓,交易成本增加。 
-3. 使用了相对较短的CCI周期,可能出现噪音信号。
-4. 在趋势不明朗或市场波动加大时,趋势过滤作用有限。
-5. 固定仓位,不能自适应市场波动率的变化。
-
-#### 策略优化方向 
-1. 可以考虑增加移动止损或固定点数止损,控制单笔交易风险。
-2. RSI和CCI的参数可以进一步优化,以减少噪音信号。
-3. 可以考虑引入波动率指标如ATR,根据市场波动调整仓位和止损。
-4. 增加更多货币对,并根据每个品种特点单独优化参数。
-5. 尝试引入机器学习等人工智能技术,自适应优化参数。
-
-#### 总结
-该策略采用了多个经典指标,trading view上编写和回测都比较方便。回测效果不错,但实盘中还需注意控制风险,调整参数。建议先小资金测试,积累经验后再逐步加大投入。机械化程度高,适合稳健型投资者长期使用。
-
-|| 
 
 #### Overview
 This strategy combines three technical indicators: CCI, RSI, and Keltner Channels (KC), along with a trend filter to achieve bi-directional trading on AUDNZD and GBPNZD currency pairs. It uses CCI and RSI to determine overbought and oversold conditions, KC as a reference for stop-loss and take-profit, and a moving average as a trend filter to open positions in line with the trend. The strategy has been backtested on historical data over the past 5 years, achieving stable returns.
@@ -85,7 +47,6 @@ This strategy combines three technical indicators: CCI, RSI, and Keltner Channel
 
 #### Summary
 This strategy employs multiple classic indicators and is relatively easy to code and backtest on TradingView. While the backtesting results are good, risk control and parameter adjustments are still necessary for live trading. It is recommended to start with small funds for testing and gradually increase investment as experience accumulates. With a high degree of automation, it is suitable for conservative investors to use over the long term.
-[/trans]
 
 
 

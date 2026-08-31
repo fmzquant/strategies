@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1866d15489b3d4952f1.png)
-[trans]
-
-## 概述
-
-本策略通过结合相对强弱指标(RSI)和布林线通道来识别交易机会,属于量化交易中的均值回复策略。当RSI低于设定阈值时买入,当价格上穿布林线通道中轨时平仓,没有做空机会。
-
-## 策略原理  
-
-1. 使用RSI指标判断市场是否处于超卖状态。RSI低于30时,被视为超卖信号。
-
-2. 使用布林线通道判断价格是否开始反弹上行。当价格从布林线下轨反弹上穿布林线中轨时,做多方向结束。 
-
-3. 结合RSI超卖信号和布林线出圈信号,可以设定买入点位。当两种信号同时触发时买入,等待价格上穿布林线中轨时平仓套现。
-
-## 优势分析
-
-1. 该策略结合均值反转型指标RSI和通道指标布林线,可以更准确定位买入时机。
-
-2. RSI指标可以过滤掉许多假突破的情况,减少不必要的交易。
-
-3. 布林线通道作为止损指标,可以控制单笔交易的风险。
-
-## 风险分析  
-
-1. RSI指标可能发出错误信号,导致错过买入机会。
-
-2. 布林线通道参数设置不当可能导致止损过于宽松或严格。
-
-3. 交易品种选择不当,如交易小市值股票时流动性风险较大。
-
-## 优化方向
-
-1. 可以测试不同参数组合,如RSI周期、布林线通道周期和倍数,寻找最优参数。 
-
-2. 可以结合其他指标如KD、MACD等,设定更严格的买入条件以过滤信号。
-
-3. 可以根据不同交易品种设定止损幅度,如设置波动率止损。
-
-## 总结
-
-本策略首先利用RSI低位买入,再利用布林线通道高位止损的思路,属于均值回复交易策略。相比单一使用RSI或布林线等指标,本策略可以更准确定位买入卖出点位,从而获得更好的策略效果。下一步可以通过参数优化、信号过滤、止损策略等进一步完善。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ This strategy combines Relative Strength Index (RSI) and Bollinger Bands to iden
 
 This strategy utilizes the logic of buying at RSI lows and selling at Bollinger highs, belonging to mean reversion strategies. Compared to using single indicators like RSI or Bollinger Bands, this strategy can locate entry and exit points more precisely, thus achieving better results. Next steps could be improving through parameter optimization, signal filtering, stop loss strategies etc.
 
-[/trans]
 
 > Strategy Arguments
 

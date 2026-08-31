@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f3365a0b6328506795.png)
-[trans]
-
-## 概述
-
-本策略基于动量指标RSI和价格的Exponential Moving Average(EMA)以及Simple Moving Average(SMA)构建交易信号。它属于趋势跟踪类型的策略。
-
-## 策略原理
-
-该策略使用3个条件来产生交易信号:
-
-1. RSI > 45: RSI值大于45视为好的买入信号
-2. EMA(RSI) > SMA(RSI): EMA线大于SMA线表示RSI正在加速向上,属于好的动量信号
-3. EMA(收盘价) > SMA(收盘价): EMA线大于SMA线表示价格趋势正在加速向上
-
-满足以上3个条件中任意2个,则产生买入信号;如果全部不满足,则产生卖出信号。
-
-该策略同时提供了“总是买入”模式,用于测试系统本身相对大盘的表现。
-
-## 策略优势分析
-
-1. 使用动量指标RSI判断市场态势,可以减少交易市场震荡期的头寸
-2. 结合EMA和SMA判断趋势方向,可以及时捕捉价格变化趋势
-3. 条件规则简单清晰,容易理解和优化
-4. 提供“总是买入”模式检验系统优势
-
-## 策略风险分析 
-
-1. 依赖参数设置,参数不当将导致交易频繁或错过良好交易机会
-2. 大盘遇到重大消息时,短期价格可能出现巨幅波动,将导致止损
-3. 策略本身无法判断趋势即将反转的时机,需要配合其他指标判断
-
-## 优化方向
-
-1. 优化RSI,EMA和SMA的参数,找到最佳参数组合
-2. 增加Volume,MACD等其他技术指标判断规则
-3. 增加趋势反转判断指标,降低亏损概率
-
-## 总结
-
-本策略整体来说属于中频交易策略,旨在捕捉中期价格趋势,而避开短期市场震荡,其优势和风险点都较为明显。通过参数优化和规则丰富,可以进一步增强策略稳定性,是值得深入研究和优化的高效率量化交易策略。
-
-|| 
 
 ## Overview
 
@@ -92,7 +50,6 @@ The strategy also provides an "always buy" mode for testing the system's perform
 
 In summary, this strategy belongs to a medium-frequency trading strategy that aims to capture mid-term price trends while avoiding short-term market fluctuations. Its advantages and risk points are quite obvious. Further enhancing stability through parameter optimization and enriching rules makes it a worthwhile high-efficiency quantitative trading strategy to research and optimize.
 
-[/trans]
 
 > Strategy Arguments
 

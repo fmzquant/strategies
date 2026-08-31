@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本策略名为Super BitMoon,是一种适用于比特币的短线量化动量交易策略。该策略同时具有做多和做空能力,可以在比特币出现突破关键支撑或阻力位的时候进行交易。
-
-策略运作原理:
-1. 使用ATR指标计算近期的波动范围和止损位。当价格突破上一根K线的止损位时,判断为趋势发生反转。
-2. 使用权重移动平均线WVF和布林带指标判断比特币是否处于超买或超卖状态。如果WVF下穿布林带上轨,表明市场可能处于超卖状态,可以做多。
-3. 使用RSI指标判断比特币是否超卖。如果RSI低于两道超卖线,可以进行逢低做多。
-
-具体交易策略:
-1. 如果WVF下穿布林带上轨,同时价格高于ATR止损价位,则做多比特币。
-2. 如果RSI低于50或30超卖线,则做空比特币。
-
-该策略优势在于:
-1. 同时具有做多做空能力,可以双向交易。
-2. 使用ATR止损来控制风险,避免亏损扩大。
-3. 同时使用WVF,布林带和RSI指标进行判断,提高信号准确率。
-
-该策略风险:
-1. 布林带和RSI参数设置不当可能导致错误信号。
-2. 突发事件造成价格窜涨或跳水可能导致止损被触发。
-3. 交易费用会对盈利产生一定影响。
-
-总之,Super BitMoon是一个非常适合短线Indicatorscombos的量化动量策略,同时兼具趋势跟踪和反转交易的特点。通过合理的参数优化,可望获得较好的风险收益比。但交易者还需要充分考虑费用控制和资金管理等因素,以降低实盘交易的风险。
-
-|| 
 
 This strategy is called Super BitMoon. It is a short-term quantitative momentum trading strategy suitable for Bitcoin. The strategy has both long and short capabilities, allowing it to trade when Bitcoin breaks through key support or resistance levels. 
 
@@ -60,7 +34,6 @@ Risks of this strategy:
 
 In summary, Super BitMoon is a solid quantitative momentum strategy ideal for short-term Indicators combos trading, with both trend following and mean reversion characteristics. With proper parameter tuning, it can achieve good risk-reward ratio. But traders still need to consider cost control and money management to reduce risks in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

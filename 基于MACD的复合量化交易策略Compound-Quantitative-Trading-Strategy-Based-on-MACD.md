@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1382626e30b892b39ea.png)
-[trans]
-
-## 概述
-
-该策略是一个基于MACD指标的复合量化交易策略。它综合使用了MACD,KDJ等多个指标,通过指标之间的组合来产生交易信号。
-
-## 策略原理
-
-该策略的核心指标是MACD。MACD代表指数移动平均线,是一种趋势跟踪指标。它由一个快速移动平均线(EMA)和一个慢速移动平均线(EMA)组成。快线默认参数为12,慢线默认参数为26。策略会计算两条EMA线之间的差值,即DIF。然后再对DIF求一个9日的EMA,得到DEA指标。当DIF上穿DEA时产生买入信号,下穿时产生卖出信号。
-
-该策略还引入了KDJ指标。KDJ指标包括K值、D值和J值。其中,K值指随机值,D值是K值的移动平均线,J值指确定性值。KDJ指标反映市场的超买超卖状态。当J值大于100时代表超买,小于10时代表超卖。策略会结合KDJ指标,避免在市场转折点发出错误信号。
-
-## 策略优势
-
-该策略综合运用MACD和KDJ等多个指标,可以有效过滤市场噪音,识别趋势方向。MACD指标可以及时捕捉短期价格变动,KDJ指标可以确认中长期趋势。两者的结合可以平衡追求敏捷和稳定之间的关系。
-
-另外,策略加入了时间选择器,可以自行选择回测的时间范围。这为评估策略表现提供了更大的灵活性。
-
-## 策略风险及解决方法
-
-- 当市场长期震荡时,MACD将出现多次误报。这时可以适当调整EMA线的参数,过滤部分噪音。
-
-- KDJ指标参数设置不当也会影响结果。可以测试多组参数,选择更稳定的参数组合。
-
-- 回测时间选择不当,会高估或低估策略收益。应选择有代表性的时间范围进行测试。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 增加止损机制。当价格触发止损线时,强制平仓止损。
-
-2. 增加更多指标过滤器。结合RSI、布林带等其他指标,可以提高信号的准确性。
-
-3. 优化指标参数。改变EMA和KDJ参数的组合,寻找最优参数。
-
-4. 利用机器学习技术自动优化。使用神经网络等进行策略参数训练和优化。
-
-## 总结
-
-该策略是一个典型的以趋势跟踪为主,辅以超买超卖控制的量化策略。它融合多种指标优势,可以有效平衡稳定性和灵敏度。通过持续优化和调整,进一步扩大策略适用场景,从而获得长期稳定收益。
-
-||
 
 
 ## Overview
@@ -95,7 +52,6 @@ The strategy can be optimized in the following aspects:
 
 This is a typical quantitative strategy that mainly follows the trend, supplemented by overbought and oversold control. It combines the advantages of multiple indicators and effectively balances stability and sensitivity. Through continuous optimization and adjustment, the applicability of the strategy can be further expanded to obtain long-term steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

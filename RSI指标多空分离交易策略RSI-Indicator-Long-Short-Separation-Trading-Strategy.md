@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1659aa1477f9dd416a3.png)
-[trans]
-## 概述
-
-该策略通过RSI指标识别多空分离现象,据此进行交易决策。其核心思想是当价格出现新低但RSI指标出现新高时,构成“多头分离”信号,表明底部已经形成,做多;当价格出现新高但RSI指标出现新低时,构成“空头分离”信号,表明顶部已经形成,做空。
-
-## 策略原理
-
-该策略主要运用RSI指标识别价格与RSI之间的多空分离现象,具体方法如下:
-
-1. 使用RSI指标参数为13,源数据为收盘价
-2. 定义多头分离的向左回溯范围为14天,向右回溯范围为2天
-3. 定义空头分离的向左回溯范围为47天,向右回溯范围为1天  
-4. 当价格创下更低的低点,但RSI指标创下更高的低点时,满足多头分离条件,产生做多信号
-5. 当价格创下更高的高点,但RSI指标创下更低的高点时,满足空头分离条件,产生做空信号
-
-通过识别价格和RSI指标之间的多空分离现象,可以提前捕捉到价格走势的转折点,据此进行交易决策。
-
-## 策略优势
-
-该策略主要具有以下优势:
-
-1. 识别价格和RSI指标之间的多空分离现象,可以提前判断价格趋势的转折点,把握交易机会  
-2. 由于利用的是指标分析,因此不受主观情绪影响  
-3. 采用固定回溯区间识别分离现象,避免调参频繁  
-4. 结合日线RSI等额外条件,可以减少误交易概率  
-
-## 风险及解决方法
-
-该策略也存在一定的风险:  
-
-1. RSI指标发生背离不一定预示着价格立即反转,可能存在时间差,这会导致止损被触发的风险。解决方法是适当放宽止损幅度,给价格足够的时间去确认分离信号。  
-
-2. 分离现象持续过长时间也会增加风险。解决方法是结合更长期的日线或周线RSI指标作为过滤条件。
-
-3. 分离幅度过小也无法确认趋势转折,需要适当放大回溯区间来搜寻更明显的RSI分离。
-
-## 策略优化方向  
-
-该策略还可以从以下几个方向进行优化:
-
-1. 优化RSI参数,寻找最佳的参数组合
-
-2. 尝试其他的技术指标如MACD、KD等来识别多空分离现象
-
-3. 增加适当的震荡期过滤条件,避免震荡期的增多误交易  
-
-4. 结合更多时间周期的RSI指标,寻找最佳的组合信号
-
-## 总结  
-
-RSI多空分离交易策略通过识别RSI指标与价格之间的多空分离现象,判断价格走势的转折点,据此建立交易信号。该策略简单实用,通过优化参数设置和增加过滤条件,可以进一步提高盈利概率。总的来说,RSI多空分离策略是一个很有效的量化交易策略。
-
-||
 
 ## Overview  
 
@@ -115,7 +62,6 @@ The strategy can be improved in the following aspects:
 
 The RSI long short separation trading strategy judges trend inflections by identifying divergence between price and RSI to generate trading signals. The strategy is simple and practical. Further improving parameters and adding filters can increase profitability. Overall an effective quantitative trading strategy.  
 
-[/trans]
 
 > Strategy Arguments
 

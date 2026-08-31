@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16e512ae1870d04d4f5.png)
-[trans]
-
-
-## 概述
-
-双移动均线趋势跟踪策略通过计算价格的双重指数移动平均线,形成快线和慢线,根据两线的交叉形态判断价格趋势,实现趋势跟踪交易。该策略属于基于趋势跟踪的量化交易策略。
-
-## 策略原理
-
-该策略首先计算价格的双重指数移动平均线,包括快速线和慢速线。快速线参数为4周期,慢速线参数为8周期。两线交叉时产生买入和卖出信号。当快线从下方上穿慢线时,产生买入信号;当快线从上方下穿慢线时,产生卖出信号。此外,该策略还计算MACD指标,以发散红色柱线作为卖出信号,聚合绿色柱线作为买入信号。综合双移动均线交叉和MACD指标,可以判断价格趋势方向,实现趋势跟踪交易。
-
-## 优势分析
-
-该策略首先可以顺应价格趋势进行交易,避免 Transaction Costs。其次,双移动均线过滤掉价格的部分噪音,能够顺利把握价格趋势。再者,该策略参数优化灵活,移动均线周期和MACD参数都可以进行调整,适应不同品种和参数。最后,策略逻辑简单清晰,容易理解和实现,适合量化交易的算法设计。
-
-## 风险分析 
-
-该策略依赖参数优化,如果参数设置不当,将产生大量错误信号。此外,双移动均线具有滞后性,可能错过价格转折点位。另外,趋势交易容易形成“追高杀跌”的模式,存在一定的风险。此外,交易品种的流动性和手续费也会影响策略收益。为降低风险,可以适当优化参数,结合其他指标过滤信号,控制仓位规模。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化双移动均线的周期参数,寻找最佳参数组合
-
-2. 增加其他指标过滤信号,例如RSI,KD等,提高信号质量
-
-3. 增加止损策略,在趋势反转时及时止损
-
-4. 根据市场情况动态调整仓位大小,控制风险
-
-5. 针对不同交易品种参数进行优化
-
-6. 结合高级策略,如机器学习等提升策略效果
-
-## 总结
-
-本策略整体来说是一个基于双移动均线的简单趋势跟踪策略。策略思路清晰,易于实现,参数调整灵活,适合作为量化交易的入门策略。但该策略存在追涨杀跌、信号滞后等问题,需要进一步优化来控制风险,提高稳定性。总体而言,本策略为初学者提供了一个学习算法交易的好机会,也为高级策略打下基础。
-
-||
 
 
 ## Overview
@@ -88,7 +48,6 @@ The following aspects of the strategy can be improved:
 
 In summary, this is a simple dual moving average trend following strategy. The strategy logic is straightforward and easy to implement. The flexible parameter tuning makes it suitable as an introductory quantitative trading strategy. However, the risks of chasing trends and signal lagging need to be addressed through further enhancements to improve stability and risk control. Overall, this strategy provides a great learning opportunity for beginners and establishes a foundation for advanced strategies.
 
-[/trans]
 
 > Strategy Arguments
 

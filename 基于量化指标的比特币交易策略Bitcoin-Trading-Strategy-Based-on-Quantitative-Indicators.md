@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/175760f3533e358cbd7.png)
-[trans]
-
-## 概述
-
-这个策略采用多种量化指标来判断比特币的买卖时机,实现自动化交易。主要包括赫尔指标(Hull)、相对强弱指数(RSI)、布林带(BB)和成交量振荡器(VO)。
-
-## 策略原理
-
-1. 使用修改后的赫尔移动平均线判断市场主要趋势方向,结合布林带辅助判断突破买卖点。
-
-2. RSI指标结合自适应波动范围判断超买超卖区域,发出交易信号。同时设置两组参数作为Duplicate信号验证。
-
-3. 成交量振荡器判断买卖力道,避免虚假突破。
-
-4. 根据止损价/止盈价比例参数预设止损止盈位,实现风险管理。
-
-## 优势分析
-
-1. 赫尔曲线能更快捕捉趋势转换,布林带辅助判断能减少假信号。
-
-2. RSI指标参数优化设定及Duplicate信号验证,可靠性更高。
-
-3. 成交量振荡器结合趋势及指标信号,避免不准确交易。
-
-4. 预设止损止盈方法可自动控制单笔损益,有效控制总体风险。
-
-## 风险分析
-
-1. 参数设置不当可能导致交易频率过高或信号效果变差。
-
-2. 突发事件导致市场剧烈波动时,止损可能被突破,造成较大损失。
-
-3. 交易品种换成其他币种时,参数需要重新测试优化。
-
-4. 成交量数据缺失时,成交量振荡器会失效。
-
-## 优化方向
-
-1. 对RSI参数进行更多组合测试,找到最佳参数。
-
-2. 尝试其他指标如MACD、KD等与RSI组合,提升信号准确率。 
-
-3. 增加模型预测模块,结合机器学习判断市场方向。
-
-4. 测试换成其他交易品种参数效果。
-
-5. 优化止损止盈算法,实现盈利最大化。
-
-## 总结
-
-本策略综合运用多种量化技术指标判断买卖时机。通过参数优化、风险控制等方法,实现了比特币的自动化交易。效果较好,但仍需持续测试与优化,适应市场变化。可为投资者提供参考,辅助交易决策。
-
-||
 
 
 ## Overview
@@ -115,7 +62,6 @@ This strategy uses multiple quantitative indicators to determine the timing of b
 
 This strategy combines multiple quantitative technical indicators to determine entry and exit timing. Through parameter optimization, risk control and other methods, it has achieved automated Bitcoin trading with good results. But it still requires continuous testing and optimization to adapt to market changes. It can serve as a reference for investors to assist in trading decisions.
 
-[/trans]
 
 > Strategy Arguments
 

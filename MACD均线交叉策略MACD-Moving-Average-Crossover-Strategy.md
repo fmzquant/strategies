@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略融合MACD指标和移动平均线指标,在二者给出同向信号时进行做多交易。
-
-具体交易逻辑是:
-
-1. 计算FAST MACD值,一般取12日指数移动平均线
-
-2. 计算SLOW MACD值,一般取26日指数移动平均线 
-
-3. MACD值为FAST减SLOW
-
-4. 计算MACD的信号线,一般取9日移动平均线
-
-5. 计算9日与26日移动平均线
-
-6. 当MACD上穿信号线时,考虑做多
-
-7. 当9日均线上穿26日均线时,进行做多
-
-8. 当MACD下穿信号线且9日均线下穿26日均线时,平仓
-
-该策略充分发挥MACD的超买超卖判断和均线的趋势跟踪能力,结合二者进行交易,以提高成功率。
-
-## 策略优势
-
-- MACD判断超买超卖,均线判断趋势
-
-- 二者组合验证,提供高概率做多机会 
-
-- 操作规则清晰,易于实施
-
-## 策略风险
-
-- 需反复测试确定最佳参数
-
-- 仅做多,无法利用空头机会
-
-- 随大趋势做多,可能扩大损失
-
-## 总结
-
-该策略充分发挥MACD和均线指标的优势,组合二者判断市场节奏。但仅做多和参数优化等问题需注意。
-
-||
 
 ## Strategy Logic
 
@@ -102,7 +55,6 @@ The strategy taps MACD’s overbought-oversold gauge and MA’s trend following 
 
 This strategy utilizes MACD and MA’s strengths in judging market rhythm. But LONG-only limitations and parameter optimization warrant caution.
 
-[/trans]
 
 > Strategy Arguments
 

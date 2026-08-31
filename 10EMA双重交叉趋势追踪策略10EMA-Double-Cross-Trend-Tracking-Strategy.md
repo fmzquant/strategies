@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13247113d03535be2c3.png)
-[trans]
-
-## 概述
-
-该策略是一个基于10EMA和50EMA双重交叉的趋势追踪策略。它结合了小时线的10EMA作为辅助判断,在牛熊交替的市场中 dynamically 找到趋势方向,实现自动追踪止损。
-
-## 策略原理
-
-策略的核心逻辑是基于10EMA和50EMA的金叉死叉。具体来说,当10EMA从下方上穿50EMA形成金叉时,判断行情进入上涨趋势;当10EMA从上方下穿50EMA形成死叉时,判断行情进入下跌趋势。
-
-在金叉死叉后的1-5根K线内开仓做多做空。此外,策略还引入小时线的10EMA作为辅助判断,只有当小时线的10EMA处于上升趋势时才在金叉后开多仓,只有小时线的10EMA处于下降趋势时才在死叉后开空仓,从而过滤掉部分假signals。
-
-在开仓后,策略采用追踪止损+限价停利的出场方式。追踪止损能够锁定利润并最大限度确保交易盈利;限价停利确保在价格达到目标点时关闭头寸获得利润。
-
-## 策略优势
-
-该策略最大的优势在于利用EMA交叉判断主要趋势方向的同时,还引入辅助指标过滤信号,能有效地过滤假交叉从而提高信号的可靠性。此外双重EMA交叉结合追踪止损和限价止盈,既能最大化追踪趋势收益,又能有效控制交易风险,整体风险收益比良好。
-
-相比单一指标策略,该策略能更准确判断趋势方向和 amplitudes。与传统止损止盈相比,该策略采用更为先进的追踪止损技术,能更好地锁定利润。
-
-## 风险分析
-
-该策略主要面临 intermittent whipsaw 和趋势反转的风险。当出现连续的假交叉信号时,可能导致策略被套利。此外,在开仓后价格反转也会产生损失。
-
-为了降低 whipsaw 的风险,策略加入辅助指标进行信号过滤。为了控制趋势反转的风险,策略采用较为宽容的止损范围,同时限价止盈设置也能帮助减少此类风险。当止损被触发时,还可考虑重新进入趋势方向。
-
-## 优化方向
-
-该策略还有几个可优化的方向:第一,可以测试不同参数组合,如EMA周期、开仓延迟根数等,寻找最优参数;第二,可以引入更多辅助指标,如MACD、BOLL等进行信号过滤,提高信号质量;第三,可以优化止损止盈逻辑,如采用时间止损、振荡止损等其他止损方式;第四,可以结合更多行情条件开启策略交易,如只在某些时间段或涨跌幅度下触发信号等。
-
-## 总结
-
-该10EMA双重交叉趋势追踪策略,通过EMA golden cross 和 death cross 判断当前趋势方向,设置追踪止损和限价止盈来锁定利润和控制风险,同时结合辅助指标过滤信号提高信号质量,是一种较为完备的趋势交易策略。相比单一指标和传统止盈止损,该策略具有判断准确、止盈止损优化等优势,能够有效获取趋势收益的同时控制风险,是一种适合常规交易账户的策略。当然该策略也还有一定改进空间,通过参数优化、加入更多辅助指标等方式可进一步增强策略表现。
-
-||
 
 ## Overview
 
@@ -79,7 +44,6 @@ There are several optimization directions for this strategy: first, different pa
 
 This 10EMA double cross trend tracking strategy judges the current trend direction through EMA golden crosses and death crosses, sets up tracking stop loss and limit profit taking to lock in profits and control risks, while combining auxiliary indicators to filter signals and improve signal quality. Compared with single indicator and traditional stop loss strategies, this strategy has advantages like accurate judgement, optimized stop profit mechanism, etc. It can effectively capture trend gains while controlling risks, making it suitable for conventional trading accounts. Of course there is still room for improvement for this strategy, such as further enhancing strategy performance through parameter optimization and introducing more auxiliary indicators.
 
-[/trans]
 
 > Strategy Arguments
 

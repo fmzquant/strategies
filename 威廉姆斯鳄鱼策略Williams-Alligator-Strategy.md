@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ac69f44667ed580f1b.png)
 
-[trans]
-
-## 概述
-
-威廉姆斯鳄鱼策略是一种趋势跟踪策略,它利用三条不同周期的移动平均线形成的“鳄鱼口”形态判断趋势方向。当快线高于中线、中线高于慢线时,形成上升趋势的鳄鱼口,做多;当快线低于中线、中线低于慢线时,形成下降趋势的鳄鱼口,做空。该策略以Bill Williams发明的鳄鱼指标为基础,结合了移动平均线的趋势判断能力,可以有效捕捉市场趋势。
-
-## 策略原理
-
-该策略使用3条不同周期长度的SMA移动平均线,即快线sma1、中线sma2和慢线sma3。其中,sma1周期最短,sma3周期最长。
-
-当sma1上穿sma2,且sma2上穿sma3时,表明市场处于上升趋势,形成上升鳄鱼口,根据趋势交易理论,这时应该入场做多。
-
-反之,当sma1下穿sma2,且sma2下穿sma3时,表明市场处于下降趋势,形成下降鳄鱼口,这时应该入场做空。
-
-做多和做空的出场条件为三条均线重新排列,快线低于中线或中线低于慢线,此时应平仓。
-
-该策略还绘制了背景颜色来标识趋势方向,绿色代表上升趋势,红色代表下降趋势。
-
-整体来说,该策略利用移动平均线的优势,以“鳄鱼口”形态判断趋势方向,并顺势入场,是一种较为典型的趋势跟踪策略。
-
-## 优势分析
-
-- 使用鳄鱼口判断,可以有效识别趋势方向。
-- 采用不同周期线组合,可以提高形态判断的准确性。 
-- 顺势入场交易,符合趋势交易理论。
-- 设置背景颜色辅助判断,直观可视。
-- 交易逻辑简单清晰,容易实施。
-
-## 风险分析
-
-- 大周期震荡市场中,存在多次调整风险。
-- 三线排列顺序改变时,平仓风险较大。
-- 无法判断趋势强弱,存在不适合趋势入场的情况。
-- 未考虑止损,大幅回撤风险较大。
-- 固定周期无法适应市场变化,应采用自适应周期。
-
-针对以上风险,可采取如下措施进一步优化:
-
-1. 增加趋势过滤条件,避免震荡市场频繁开仓。
-
-2. 优化出场条件,结合趋势指标判断平仓时机。 
-
-3. 增加止损策略,控制单笔损失。
-
-4. 使用自适应移动平均线,使周期能动态调整。
-
-## 优化方向
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 增加趋势强弱判断,避免平稳或者震荡趋势过早入场。可以引入MACD,KDJ等辅助判断。
-
-2. 优化移动平均线周期参数,寻找最佳组合。可以通过回测多组参数找到最优参数。
-
-3. 利用自适应移动平均线,使周期能根据市场动能自适应变化。
-
-4. 增加止损策略,如跟踪止损、余额止损等,控制风险。
-
-5. 优化入场条件,可以考虑成交量,布林带等指标进行过滤,提高入场准确率。
-
-6. 优化出场条件,在三线交叉时结合趋势指标判断趋势反转概率,降低出场风险。
-
-## 总结
-
-威廉姆斯鳄鱼策略是一个典型的趋势跟踪策略。它通过快中慢三条移动平均线形成鳄鱼口判断趋势方向,并顺势入场。该策略优点是交易逻辑简单清晰,易于操作;缺点是对趋势判断准确性和风险控制能力较弱。未来可通过引入辅助指标、优化参数、止损等方式进行提升,使策略更适应复杂的市场环境。
-
-||
 
 
 ## Overview
@@ -144,7 +77,6 @@ The strategy can be further optimized in the following aspects:
 
 Williams' Alligator Strategy is a typical trend following strategy. It uses the alligator mouth formed by three moving averages to determine trend and trade accordingly. The advantages are its simple and clear logic. The disadvantages are weaker trend accuracy and risk control. Future improvements can be made by incorporating additional indicators, optimizing parameters, adding stop loss to make it more robust for complex market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

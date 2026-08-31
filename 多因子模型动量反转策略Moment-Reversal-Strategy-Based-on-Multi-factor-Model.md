@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1957ba2455488691cf2.png)
 
-[trans]
-
-### 概述
-
-多因子模型动量反转策略通过结合多因子模型和动量反转策略,实现了更稳定和更高的回报。该策略使用123反转和联响指标作为两个独立的信号,并在二者信号一致时开仓建立头寸。
-
-### 策略原理  
-
-多因子模型动量反转策略由两个子策略组成:123反转策略和联响指标策略。
-
-123反转策略基于价格在2天内连续上涨或下跌,并结合STOCH指标判断市场是否过冷或过热来产生交易信号。具体来说,当价格连续2天上涨,同时9日STOCH慢线低于50时看多;当价格连续2天下跌,同时9日STOCH快线高于50时看空。  
-
-联响指标策略则利用不同周期均线和震荡指标的叠加来判断趋势方向和力度。包括线性加权、正弦相加等方法综合判断多空态势。该指标经过等级划分,返回1到9表示强势多头,-1到-9表示强势空头。
-
-最后,策略在二者信号一致时选择建立多头或空头仓位。
-
-### 优势分析
-
-多因子模型动量反转策略结合了反转因子和势能因子,能捕捉反转机会的同时顺势而为、避免假突破,从而具有更高的胜率。策略优势具体体现在:  
-
-1. 123反转策略作为反转信号源,能抓住短期反转带来超额收益。  
-
-2. 联响指标判断趋势方向和力度,避免反转空间过大带来的亏损风险。  
-
-3. 二者结合,一定程度上互补优势、弥补不足,提高信号质量。  
-
-4. 相比单一模型,多因子结合能够提高策略稳定性。
-
-### 风险分析  
-
-尽管多因子模型动量反转策略有一定优势,但仍存在以下一些风险:
-
-1. 反转未完成,价格再次调头回落带来的损失。可以适当调整止损防范。  
-
-2. 二者信号不一致时无法确定方向。可以通过参数调整使二者匹配度更高。
-
-3. 模型过于复杂,参数众多,不易调节和优化。  
-
-4. 需同时关注多个子模型,实盘操作难度和心理压力较大。可以引入一定的自动交易元素减轻操作负担。
-
-### 优化方向  
-
-多因子模型动量反转策略可从以下几个方面进行优化:
-
-1. 调整123反转策略的参数,使反转信号更准确可靠。  
-
-2. 调整联响指标的参数,使判断的趋势更接近真实趋势。
-
-3. 引入机器学习算法自动优化参数组合。
-
-4. 增加仓位管理模块,让仓位调整更加量化和系统化。
-
-5. 增加止损模块。通过事先设置止损价格有效控制单笔损失。
-
-
-### 总结  
-
-多因子模型动量反转策略综合运用了反转因子和势能因子,在保证较高信号质量的基础上,通过多因子叠加获得更高胜率。该策略具有捕捉反转机会、顺势而为的双重优势,是一种高效稳定的量化策略。未来可从参数调整、风险控制等方面不断优化,使策略的收益风险比进一步提高。
-
-||
 
 ### Overview  
 
@@ -128,7 +68,6 @@ The Moment Reversal Strategy Based on Multi-factor Model can be optimized in the
 
 The Moment Reversal Strategy Based on Multi-factor Model comprehensively employs reversal factors and momentum factors. On the basis of ensuring relatively high signal quality, it obtains higher win rate through multi-factor stacking. The strategy has the dual advantages of capturing reversal opportunities and following the trend. It is an efficient and stable quantitative strategy. Follow-up optimizations can be made in aspects such as parameter adjustment and risk control to further improve the strategy's risk-reward ratio.
 
-[/trans]
 
 > Strategy Arguments
 

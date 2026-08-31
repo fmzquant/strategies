@@ -9,79 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-延迟 RSI 交易策略运用常规 RSI 指标识别超买超卖情况,并在进入信号出现后延迟一定周期后再入场,以避免假突破造成不必要的亏损。该策略主要思想是利用RSI指标判断市场的超买超卖现象,在这一判断的基础上,通过延迟入场实现更准确的入场时机把握。
-
-## 策略原理
-
-该策略使用长度为21周期的RSI指标判断超买超卖情况。当RSI指标上穿用户设定的超买线(默认60)时,认为行情超买;当RSI指标下穿用户设定的超卖线(默认40)时,认为行情超卖。 
-
-判断超买超卖信号出现后,策略不会立即入场,而是开始计算延迟周期。当延迟周期数(默认15周期)满足后,再按照超买信号做空,超卖信号做多。
-
-该策略允许用户调整延迟周期数,来实现不同的入场时机。延迟周期越长,可避免更多假突破,但也可能错过较好的入场点。用户需要根据具体品种来调整延迟周期参数。
-
-此外,该策略还实现了止损、止盈、反向交易等选项。用户可以选择固定止损,追踪止损,固定止盈等方式管理仓位。还可以选择反向交易逻辑,即根据超买信号做多,超卖信号做空。
-
-## 策略优势
-
-1. 利用 RSI 指标判断超买超卖情况,可准确抓住反转机会。RSI 是一种较为成熟的超买超卖指标,可以有效识别反转机会。
-
-2. 延迟入场机制可避免假突破引发亏损。许多突破不一定代表发生实质性反转,延迟入场可以验证突破的有效性。
-
-3. 可调整延迟周期数,精确把握入场时机。用户可以根据不同品种特性来调整延迟周期,实现最佳入场点。
-
-4. 实现止损、止盈管理,可控制风险。策略提供多种止损止盈方式,可以与延迟入场配合来控制风险。
-
-5. 提供反向交易选项,适应不同品种特性。用户可以选择正向或反向交易逻辑,以对冲不确定性。
-
-## 策略风险
-
-1. RSI 发出假信号的风险。RSI 信号并不总是有效,在某些市场情况下也会出现错误信号。
-
-2. 延迟过多错过入场时机的风险。延迟周期设置过长会错过较好入场点。
-
-3. 反向交易增加亏损风险。反向交易虽可对冲不确定性,但也可能扩大总体亏损。
-
-4. 追踪止损被套风险。追踪止损在价格变动剧烈时,可能会过于接近当前价格,被价格突破套牢。
-
-5. 止盈预估不准造成盈利不足。固定止盈无法实现最大盈利,需要合理预估来设置。
-
-针对上述风险,优化建议如下:
-
-1. 结合其他指标过滤 RSI 信号,提升可靠性。例如 KDJ、MACD 等指标。
-
-2. 根据不同品种历史数据测试取最佳延迟周期参数。不宜一概而论。
-
-3. 谨慎使用反向交易功能,最好结合趋势交易等方式。
-
-4. 追踪止损时设置较宽的间距,避免过于接近当下价格。
-
-5. 测试不同的止盈倍数,找到最优参数。也可以考虑动态止盈。
-
-## 优化方向
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 结合多种指标过滤入场信号。例如 KDJ,MACD 等指标与 RSI 结合,可以形成更可靠的交易信号。
-
-2. 动态调整延迟周期数。可以根据市场波动程度,动态改变延迟周期数,在保证避免假突破的同时,也可提高入场准确率。
-
-3. 优化止损止盈策略。可以研究动态止损、盈利回撤比例止损、时间止损等,使止损止盈更符合市场波动特点。 
-
-4. 结合趋势因素。可以判断突破方向与大趋势方向的吻合性,避免逆势交易。也可以根据突破力度来调整延迟周期数。
-
-5. 利用机器学习寻找最优参数组合。通过大量训练和回测数据,机器学习可以自动调整参数,获得最佳参数组合。
-
-综上,该策略仍有许多可优化空间,通过指标组合、动态调参、趋势判断等方式可使策略更稳健可靠。机器学习的应用也是未来可期的优化方向。
-
-## 总结
-
-延迟 RSI 策略 overall 利用 RSI 指标判断超买超卖情况,并在信号出现后延迟一定周期再入场,可以有效避免假突破造成不必要亏损。该策略具有指标判定准确、延迟入场避免假突破、可调整延迟周期、实现止盈止损管理等优点。但也存在 RSI 信号不可靠、延迟过多错过机会等风险。可通过指标组合优化信号准确性,动态调整延迟周期把握入场时机,优化止盈止损策略等方式进一步改进。该策略有广阔的优化空间,值得探索。
-
-|| 
 
 ## Overview
 
@@ -153,7 +80,6 @@ In conclusion, the strategy has ample room for optimization via indicator combos
 
 The Delayed RSI strategy overall utilizes RSI to identify overbought/oversold conditions, and delays entry for a period after signal occurs to avoid unnecessary losses from fakeouts. The strategy has advantages like accurate signal identification, delayed entry to avoid false breaks, adjustable delay period, SL/TP implementation etc. But risks like unreliable RSI signals, missed opportunities from excess delay exist. These can be improved further through optimizing signal accuracy via indicator combos, dynamic delay period tuning, better SL/TP strategies etc. The strategy has broad optimization opportunities and is worth exploring.
 
-[/trans]
 
 > Strategy Arguments
 

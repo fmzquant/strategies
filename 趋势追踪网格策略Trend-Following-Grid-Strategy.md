@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f6218f28d9ff096bad.png)
-[trans]
-
-#### 概述
-
-该策略是一种只做多不做空,选择大趋势向上时段的趋势追踪网格策略。默认网格大小为1倍ATR,向下追踪建立1、2、3级网格进行追单,第5格止损。当空仓时如果价格突破上一网格,则整个网格向上移动追踪价格。
-
-#### 策略原理
-
-1. 使用EMA均线判断大趋势方向,EMA12大于EMA144则判断为大趋势向上
-2. 只在大趋势向上时开仓做多
-3. 网格大小默认为1倍ATR,可调整倍数
-4. 向下追踪价格建立1、2、3级网格,分别开仓做多
-5. 第5格设置止损点
-6. 开仓后设置止损点和止盈点
-7. 当价格上涨突破止盈点平仓
-8. 当价格下跌触发止损点平仓
-9. 当仓位全部平仓后,如果价格重新突破最后一个网格,则重新计算网格位置和数量,向上追踪
-
-该策略通过EMA判断大趋势方向,再结合网格策略进行追踪,能够在大趋势向上行情中获得更大收益。网格设置多个价格点,分批建仓,能够降低单仓风险。止盈止损设置让利益能够得到锁定,也控制了最大亏损。当仓位全部平仓后,能够重新计算网格高点,实现再次开仓,从而将利润最大化。
-
-#### 优势分析
-
-1. 利用EMA判断大趋势方向,避免逆势开仓
-2. 网格策略能够分批建仓,降低单仓风险
-3. 止盈止损设置锁定利润,控制最大亏损
-4. 仓位平仓后可以重新计算网格继续追涨,扩大获利空间
-
-该策略主要优势在于把趋势交易和网格交易结合,既确保了趋势方向的正确性,也实现了网格策略的风险分散。此外,仓位平仓后重新计算网格可以无限追涨,从而在行情出现一波大涨时获得巨大利润。
-
-#### 风险分析
-
-1. 大趋势判断可能出错,进错方向
-2. 行情出现大幅震荡,网格亏损过重
-3. 亏损达到止损点过快,仓位全部平仓
-4. 反弹后无法重新进入最佳入场点
-
-主要的风险在于大趋势判断错误,这样会导致逆势建仓而大幅亏损。此外,如果行情出现剧烈震荡,多个网格同时被套牢的情况下亏损会加重。另外价格快速下跌触发止损也会导致仓位全部平仓,失去后续获利机会。价格反弹后很难再恰好进入初始最佳网格位置。
-
-可以通过优化EMA参数提高大趋势判断准确性。调整网格间距和首单数量也可以控制总体亏损。止损点位置的设置需要考虑到行情波动频率。此外,也可以考虑部分仓位获利后就止盈了,而不是全部平仓。
-
-#### 优化方向
-
-该策略还可以从以下几个方向进行优化:
-
-1. 优化EMA参数,提高大趋势判断的准确性
-2. 调整网格间距和数量,优化获利风险比
-3. 改进止盈止损逻辑,如部分仓位止盈、移动止损 等
-4. 增加重新入场条件限制,避免反弹过程中过早重新入场
-5. 结合更多指标判断入场时机,如K线形态、指标灵敏度等
-6. 增加行情异常判断,避免异常行情中巨亏
-
-通过这些优化措施,可以使策略在大行情中获得更大收益,同时可以控制风险,减少平常震荡走势中的损失。
-
-#### 总结
-
-该策略是趋势交易和网格交易的有机结合。它利用EMA判断大方向,再用网格策略分批建仓追涨。风险控制到位,有止盈止损和重新计算网格的追踪机制。总体来说,该策略能够在行情大趋势中获得不错的盈利,同时也控制了风险。如果进一步优化参数,提高判断准确性,收益可以更高。值得在实盘中进行详细测试和优化后投入使用。
-
-||
 
 #### Overview 
 
@@ -123,7 +65,6 @@ With these optimization measures, the strategy can obtain greater profits during
 #### Summary
 
 This strategy combines trend trading and grid trading organically. It uses EMA to determine major direction and uses grid trading to open positions separately for chasing trends. With proper risk management including stop loss, take profit and grid recalculation mechanisms, this strategy can produce decent profits during major trends, while also controlling risks. Further optimizations on parameters and judgment accuracy can lead to higher profits. It is worth detailed testing and optimization for live trading.
-[/trans]
 
 > Strategy Arguments
 

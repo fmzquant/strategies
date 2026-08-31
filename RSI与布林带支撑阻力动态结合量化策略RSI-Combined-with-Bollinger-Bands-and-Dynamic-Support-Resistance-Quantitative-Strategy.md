@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14d3aeb93aa864e61eb.png)
-[trans]
-
-## 概述
-该策略运用RSI指标判断市场超买超卖的同时,结合布林带上下轨来判断价格震荡范围。此外,基于高低点生成动态支撑阻力,发现价格接近支撑阻力时才实施买入卖出操作。用户可自行设定趋势过滤条件,例如简单移动均线判断价格与趋势方向一致时才交易。该策略综合运用多种技术指标,判断力较强,可以有效把握市场机会。
-
-## 策略原理  
-该策略主要由RSI指标、布林带、动态支撑阻力 3部分组成。
-
-RSI部分用于判断超买超卖。RSI低于30时为超卖区域,此时将发出买入信号。RSI高于70时为超卖区域,此时将发出卖出信号。
-
-布林带是根据价格均线及标准差计算上下轨,用于判断价格是否脱离常态震荡区间。价格接近上轨时卖出,接近下轨时买入。
-
-支撑阻力部分运用动态计算方法,以一定周期内的最高最低价(或开收盘价)为基准,限定一定百分比内的范围,并记录价格历史翻转点作为关键支撑阻力位。当价格升至关键阻力位附近时,发出卖出信号;当价格跌至关键支撑位时,发出买入信号。
-
-综上,该策略同时满足RSI超买超卖、价格脱离常态区间、接近动态支撑阻力 3个条件时,才会实施买入卖出操作。
-
-## 策略优势  
-1. 基本面指标与技术指标相结合。RSI判断基本面超买超卖的同时,运用布林带判断价格技术形态。
-
-2. 动态支撑阻力计算,更贴近价格运动的真实支撑阻力。
-
-3. 用户可添加趋势过滤器,配合RSI及布林带,判断力大大提高,可过滤掉大部分噪音信号。
-
-## 策略风险
-1. RSI参数设定不当可能导致误判。RSI长度过短会增加噪声;RSI超买超卖阈值设定不当也易造成失误。
-
-2. 布林带参数如长度、 StdDev倍数设定不当也会影响判断准确性。
-
-3. 动态支撑阻力因计算历史高低点而产生滞后。用户应适当优化支撑阻力参数,使支撑阻力水平更贴近当前价格。 
-
-4. 本策略较复杂,多指标组合可能产生互相干扰。用户应测试指标参数,减少指标冲突。另外可适当简化组合条件,减少误判概率。
-
-## 策略优化方向
-1. 测试RSI参数设置,优化RSI长度、超买超卖阈值。
-
-2. 测试布林带参数设置,优化布林带长度、StdDev 倍数。
-
-3. 优化动态支撑阻力参数,使支撑阻力水平更贴近价格。可尝试更短周期、更少历史高低点等设定。 
-
-4. 添加或测试其它辅助指标,如 KDJ、MACD等与RSI形成组合,提高判断准确度。
-
-5. 测试趋势过滤器参数,优化过滤器长度,提高持仓时间,减少不必要反向操作。
-
-
-## 总结
-本策略综合运用RSI、布林带、动态支撑阻力等多个指标,充分发挥各指标优势,相互验证,判断力较强。同时可添加趋势过滤器进一步减少噪声。该策略参数设置灵活,用户可根据自己需要调整参数组合。在进行参数优化测试后,效果会更加明显。这是一个非常有潜力的量化策略
-
-||
 
 ## Overview
 This strategy uses the RSI indicator to judge the overbought/oversold levels in the market, combined with Bollinger Bands to determine the price fluctuation range. In addition, dynamic support/resistance are generated based on high/low prices to trigger buy/sell orders only when the price is close to support/resistance levels. Users can set a trend filter condition, such as simple moving average, to ensure the price trend aligns with trade directions. This strategy integrates multiple technical indicators for robust signal accuracy and captures market opportunities effectively.
@@ -103,7 +55,6 @@ In summary, this strategy initiates buy/sell trades only when RSI overbought/ove
 ## Conclusion  
 This strategy leverages the strengths of multiple indicators like RSI, Bollinger Bands and Dynamic S/R, with extensive cross verification for robust signal accuracy. Adding a trend filter further reduces noise. With flexible parameter tuning, users can optimize this strategy to best suit their needs. Proper parameter testing and optimization will lead to more pronounced performance. This is a highly promising quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

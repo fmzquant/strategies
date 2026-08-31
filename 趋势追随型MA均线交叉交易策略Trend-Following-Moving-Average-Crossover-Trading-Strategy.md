@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e5a2c0501c930cd61b.png)
 
-[trans]
-
-
-## 概述
-
-本策略是一个基于移动平均线的趋势追随型交易策略。它使用三条不同参数设置的Hull移动平均线,判断价格趋势方向,并结合快速ATR滤波器实现潜在趋势反转的提前识别。当快中慢三条均线发生向上或向下交叉时,発出买入或卖出信号。该策略同时具有移动止损和移动止盈功能,可以有效控制风险。
-
-## 策略原理
-
-该策略使用三条Hull移动平均线判断价格趋势,包括一条较快的Hull MA,一条中速的Hull MA和一条较慢的Hull MA。根据它们的交叉情况判断趋势方向:
-
-1. 当快线上穿中线时,表示价格进入上升趋势,发出买入信号。
-
-2. 当快线下穿中线时,表示价格进入下跌趋势,发出卖出信号。
-
-为了提高识别趋势反转的灵敏度,策略引入了基于RSI的快速ATR滤波器。该滤波器能够测量价位的变动性,当价格趋势发生转变时,它的数值会发生明显变化。因此,我们可以根据ATR滤波器的上下突破情况提前判断价格趋势的反转。
-
-具体来说,filtr函数实现了该快速ATR滤波器的计算逻辑。它基于RSI的数值,计算ATR的大小。当ATR数值上穿或下穿RSI曲线时,就可能预示着价格趋势的转变。
-
-此外,策略中设置了移动止损和移动止盈条件,可以按照设定的止损百分比和止盈百分比,实现自动的风险管理。
-
-## 优势分析
-
-- 使用三条Hull MA均线判断趋势方向,可以有效过滤市场噪音,识别中长线趋势
-
-- 快速ATR滤波器的应用,可以提高对趋势反转的提前判断能力
-
-- 自动把握趋势反转机会,及时调整仓位,不漏买不漏卖
-
-- 移动止损止盈设置了风险与回报的动态平衡
-
-- 可自定义参数,适用于不同市场和交易品种
-
-## 风险分析 
-
-- MA交叉策略容易产生多头假信号和空头假信号,需要ATR滤波器进行辅助验证
-
-- 大幅震荡市场中,MA容易发生频繁交叉,应密切关注ATR曲线走势
-
-- 停损点过小易被止损,过大又难以控制损失。需根据具体情况调整参数
-
-- 本策略更适合趋势性行情,不宜用于震荡行情
-
-- 可通过参数优化,选择最佳的MA和ATR周期组合,降低假信号率
-
-## 优化方向
-
-- 可尝试将MA类型改为DEMA、TEMA等EMA变体,看是否能过滤更多噪音
-
-- ATR滤波器可改用Keltner通道MIDDLE线,检验对趋势反转判断的提高
-
-- 可测试不同的MA参数组合,找到最佳参数对
-
-- 可测试ATR周期参数,找到最佳的平滑效果
-
-- 可加入量能指标,辅助判断真假突破的可能性
-
-- 可测试是否加入MACD等其他指标,提高信号的可靠性 
-
-## 总结
-
-本策略整合了移动平均线判断趋势方向、ATR滤波器提前探测反转和自动止损止盈管理风险的多项功能。它可以自动跟踪趋势,及时把握反转机会,通过参数优化可以适用于不同品种和周期,是一种非常实用的趋势追随型交易策略。其优点是简单清晰的策略逻辑和高效的风险控制手段。但也需要注意错觉信号和止损点设置的问题。通过进一步优化,可望得到更好的策略效果。
-
-
-|| 
 
 ## Overview
 
@@ -137,7 +72,6 @@ In addition, the strategy sets trailing stop loss and take profit conditions to 
 
 This strategy integrates moving averages for trend direction, ATR filter for early reversal detection and automatic stop loss/take profit for risk management. It can automatically track trends and timely seize reversal opportunities. Through parameter optimization it can be applied to different instruments and timeframes and is a very practical trend following trading strategy. Its advantages are the simple and clear strategy logic and efficient risk control means. But the issues of false signals and stop loss point settings also need attention. Further optimizations may lead to better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

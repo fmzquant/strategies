@@ -9,13 +9,6 @@ Zero
 
 > Strategy Description
 
-[trans]
-思路：通道自适应策略，固定止损+浮动止盈
-适用软件：发明者最最化/文华财经
-数据周期：多周期
-数据合约：指数合约
-交易合约：商品期货/数字货币
-||
 ATR, also known as Average true range, was invented by J. Welles Wilder. The ATR indicator is mainly used to measure the intensity of market volatility, that is, the indicator to show the market change rate.
 
 This indicator is mainly used to measure price fluctuations. 
@@ -32,7 +25,6 @@ Data cycle: multiple cycles
 Data contract: index contract
 
 Trading Contract: Commodity Futures /Digital Currency
-[/trans]
 
 
 

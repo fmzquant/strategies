@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/207fa87c14544977ee5.png)
-[trans]
-### 一、策略概述
-
-RSI金叉超级做空策略运用ATR波带、双RSI指标以及EMA均线的金叉死叉来实现趋势判断和entries。ATR波带用来判断价格是否处于超买超卖状态,双RSI指标用来确认价格趋势,EMA均线金叉用来寻找entries机会。本策略设计简单,容易实现,是一个高效灵活的做空策略。
-
-### 二、策略原理  
-
-该策略使用ATR波带、双RSI指标和EMA均线三个部件共同实现entries信号。当价格打开高于上ATR波带时我们判断为超买,此时如果快周期RSI低于慢周期RSI表明趋势由牛转熊,而且如果EMA均线发生死叉表明趋势进一步转弱,综合这三个信号我们可以确定一个较强有力的做空机会。
-
-具体来说,价格打开时判断是否高于上ATR波带即`open>upper_band`,如果满足则可能处于超买区域。然后我们判断快速RSI是否低于慢速RSI即`rsi1<rsi2`,如果成立则表示趋势转弱由牛转熊。最后我们检测EMA均线是否发生死叉即`ta.crossover(longSMA, shortSMA)`成立,如果三个条件都满足,我们就发出做空信号进行入场。
-
-相反,如果价格打开时低于下ATR波带,快速RSI高于慢速RSI并且发生EMA金叉,则产生做多入场信号。
-
-该策略主要创新点是引入双RSI指标进行趋势判断,相比单一RSI可靠性更高,同时结合ATR波带和EMA均线进行信号过滤,使信号更加准确可靠,这是该策略的核心亮点。
-
-### 三、策略优势  
-
-该策略具有以下优势:
-
-1. 使用双RSI指标判断趋势更准确可靠
-2. ATR波带判断超买超卖区域,避免假突破
-3. EMA均线发生明确金叉/死叉时入场,增加信号准确度  
-4. 多种指标组合进行互相验证,可靠性较高
-5. 策略设计简单易实现
-6. 可同时获利超买超卖两边状况
-7. 可调参数较多,可根据不同市场调整
-
-### 四、策略风险
-
-该策略也存在一些风险需要注意:  
-
-1. EMA均线容易产生错诊,可能 smoothed MA 更稳定
-2. 震荡行情中容易被套住止损
-3. 参数设置不当可能增加错误信号
-4. 突破ATR波带时机言之尚早,可能是假突破
-
-以上风险主要可从以下几个方面进行优化处理:
-1. 测试使用 smoothed MA 代替 EMA 均线
-2. 适当宽松止损幅度,避免震荡市被频繁止损
-3. 调整参数组合找到最佳平衡
-4. 在突破波带时引入更多指标进行二次验证
-
-### 五、策略优化方向  
-
-该策略可从以下方面进行进一步优化:  
-
-1. 测试使用 Smoothed MA 代替 EMA 均线,看是否可以减少错诊信号
-2. 增加波动率指标如 Keltner 通道进行二次验证,避免假突破
-3. 增加更多趋势指标如 ADX 进行大趋势判断 
-4. 根据具体品种特点调整参数设置找到最佳组合
-5. 测试不同时间周期参数下的表现
-6. 增加机器学习算法自动优化参数  
-
-这些优化措施可以进一步提高策略的稳定性、灵活性与盈利能力。
-
-### 六、总结  
-
-RSI金叉超级做空策略整体来说是一个非常高效实用的短线做空策略。它同时利用三种指标的优势进行集成实现 entries 信号,通过参数调整可以适应不同品种和市场环境。本策略核心创新在于运用双RSI指标判断趋势转势,与ATR波带和EMA均线互相验证形成高准确度entries时机。整体来说,该策略实用性非常强,值得投资者积极运用,但也需要关注可能存在的一些风险因素。通过不断测试与优化,相信该策略可以成为投资者盈利工具中的一大利器。
-
-||
 
 ### I. Strategy Overview  
 
@@ -129,7 +69,6 @@ These opportunities can make the strategy more stable, flexible and profitable.
 
 Overall, the RSI Golden Cross Short strategy is a highly effective short-term short strategy. It combines multiple indicators to generate entry signals, and is adjustable across assets and markets. Its novelty lies in using double RSI for trend identification, validated by ATR bands and EMA crossovers. This produces high-accuracy entry signals. The strategy has immense practical utility for investors, if risks are monitored and parameters optimized continually through testing. It has the potential to become a powerful profit engine in the trader's arsenal.  
 
-[/trans]
 
 > Strategy Arguments
 

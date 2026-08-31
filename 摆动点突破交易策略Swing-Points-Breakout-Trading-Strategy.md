@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过识别价格的摆动高点和低点,进行趋势性的突破交易。该策略属于趋势跟踪类策略,旨在捕捉中长线趋势带来的价格波动。
-
-策略原理:
-
-1. 计算指定周期的摆动高点(swing high)和摆动低点(swing low)。
-
-2. 当价格超过摆动高点时,进行买入操作。
-
-3. 当价格跌破摆动低点时,进行卖出操作。
-
-4. 设置止损点为前一摆动低点(多单)或前一摆动高点(空单),以控制风险。
-
-5. 当价格重新跌破止损点时,止损退出仓位。
-
-该策略的优势包括:
-
-1. 识别摆动点可以有效判定趋势。趋势交易属于高胜率操作。
-
-2. 突破摆动点造成价格 behaviors 加速,利于追踪趋势。
-
-3. 止损点设置在关键支撑阻力位,可控制风险。
-
-该策略的风险包括:
-
-1. 识别摆动点常存在滞后,可能错过最佳入场时点。
-
-2. 止损点过于接近,容易被震荡市场击出。应放宽止损范围。
-
-3. 突破容易形成头部效应,必须设置止损以应对回调。
-
-总之,摆动点突破策略通过跟踪中长线趋势,采取趋势性突破操作。该策略可获得较高胜率,但须注意入场时点选择与止损点设置,以优化策略效果。投资者应考虑本策略的风险特性,运用适当的资金管理方式,以obtain 长期稳定收益。
-
-||
 
 
 
@@ -79,7 +44,6 @@ Risks:
 
 In summary, the swing points breakout strategy follows medium/long-term trends using trend-based breakout trading. It can achieve high win rate but requires careful entry timing and stop loss placement to optimize performance. Investors should consider its risks and apply appropriate money management for long-term steady gains.
 
-[/trans]
 
 > Strategy Arguments
 

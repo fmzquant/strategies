@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f81fd248a2aa8548b1.png)
 
-[trans]
-
-
-## 概述
-
-本策略基于RSI指标设计了一个简单的趋势跟随交易系统,可以在特定日期范围内,通过RSI指标判断市场趋势方向,实现自动做多做空。
-
-## 策略原理
-
-该策略使用RSI指标判断市场趋势,以及布林带通道判断超买超卖区域。
-
-首先,计算RSI值,然后通过RSI的移动平均线及标准差计算出布林带上下轨。RSI指标在0-1之间波动,布林带通过标准差确定超买超卖区间,RSI高于上轨时为超买区,低于下轨时为超卖区。
-
-当RSI从下轨突破到上轨时产生买入信号,从上轨突破到下轨时产生卖出信号,实现趋势跟随。策略进场后,不设置止损止盈,直到指定日期结束时平仓。
-
-该策略简单有效地利用RSI指标判断趋势方向,辅以布林带确定具体的交易时机。通过限定交易日期范围,可以避免不必要的风险。
-
-## 优势分析
-
-- 使用RSI指标判断趋势方向简单有效
-- 结合布林带确认交易信号,避免假突破
-- 限定交易日期范围,有助于规避市场风险
-- 不设置止损止盈,最大限度跟踪趋势
-- 可灵活调整参数,适用于多种市场环境
-
-## 风险及优化
-
-- 市场可能出现剧烈波动,导致亏损
-- 未设置止损止盈,无法有效控制风险
-- 参数设置不当可能导致交易频繁或错过机会
-
-优化方向:
-
-- 加入止损止盈策略,控制风险
-- 优化参数设置,提高胜率
-- 结合其他指标过滤信号,避免假突破
-- 动态调整仓位规模
-
-## 总结
-
-本策略总体来说是一个非常简单直接的趋势跟随策略。使用RSI判断趋势,布林带过滤信号,限定交易日期范围,可以有效跟踪趋势并控制风险。但策略可以进一步优化,在保持简单有效的基础上,通过止损止盈、参数优化、信号过滤等方法进一步完善,使策略更适合实盘交易。
-
-
-||
 
 
 ## Overview
@@ -96,7 +52,6 @@ Optimization Directions:
 
 In summary, this is a very simple and direct trend following strategy. Using RSI to determine trend, Bollinger Bands to filter signals, and defining trading date range, can effectively follow trends and control risks. But the strategy can be further optimized. While keeping it simple and effective, methods like stop loss, parameter optimization and signal filtering can be added to make it more suitable for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

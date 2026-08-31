@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/20eecff5cbdbffce8fa.png)
-[trans]
-
-## 概述
-
-动态网格交易策略通过计算移动平均线及其上下轨,动态设定网格交易区间。当价格突破网格区间时,按照固定间距设定的网格线发出交易信号,实现盈利。
-
-## 策略原理
-
-该策略首先计算定义期间n的移动平均线,以及移动平均线上下轨。上轨为移动平均线*(1 + 输入参数std),下轨为移动平均线*(1 - 输入参数std)。这样可以构建出一个动态调整的交易区间带。
-
-然后在区间带内,我们定义m条等间距的网格线。当价格上涨突破某条网格线时,在该网格线发出做多信号;当价格下跌突破某条网格线时,在该网格线对应的上一根网格线发出平仓信号。通过这个反向操作,可以在价格波动的时候获利。
-
-具体来说,我们用一个bool型数组order_array来记录每条网格线的交易状态。当某一根网格线触发做多条件时,把order_array中对应的状态置为true,表示该网格线已有持仓。当价格下跌突破网格线时,把order_array中对应的上一根网格线状态置为false,发出平仓信号。
-
-## 优势分析
-
-该策略有以下几个优势:
-
-1. 利用移动平均线构建动态调整的交易区间,可以根据市场波动性调整区间范围,使策略更加适应市场。
-
-2. 网格设计可以自动进行止盈止损,防止极端行情导致的亏损扩大。
-
-3. 网格数量和资金分配采用等间距和等额分配,可以很好控制单笔仓位规模,降低单笔仓位风险。
-
-4. 做多和平仓信号设置合理,可以顺势交易,及时止盈止损。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 当市场出现长期疲软,无法突破网格线时,策略将陷入无方向的震荡交易中,多空交替可能造成账户资金流失。
-
-2. 选择的参数std和网格数量可能并不完全合理,需要根据不同交易品种分析确定。如果参数设定不当,将导致交易区间和网格过大或过小,影响策略效果。
-
-3. 策略没有考虑到一些极端行情的情况,如价格跳空、短线爆炸式上涨或下跌等情况。这些情况可能会导致策略突破多个网格,造成超出风险控制的亏损。
-
-## 优化方向 
-
-该策略还可以从以下几个方面进行优化:
-
-1. 可以引入机器学习算法,训练模型预测移动平均线上下轨,使交易区间更加智能和动态。
-
-2. 可以根据不同交易标的的特点,优化网格数量、资金分配比例、仓位规模等参数,使用自适应参数。
-
-3. 可以设置条件单,在一定距离的网格线上设置备用止损单,可以起到事先止损的作用,控制极端行情下的亏损。
-
-4. 对极端行情情况设计异常处理机制,如加大首次开仓仓位,跳过中间网格直接止损等,可以应对价格跳空等异常情况。
-
-## 总结
-
-动态网格交易策略整体设计合理,可以利用网格构建自动止盈止损系统,适合那些价格波动比较频繁的交易品种。但该策略也存在一定的市场风险,需要对参数及异常情况进行优化处理,才能使策略更加稳健。
-||
 
 ## Overview
 
@@ -113,7 +61,6 @@ The strategy can also be optimized in the following aspects:
 
 The dynamic grid trading strategy is designed reasonably as a whole. It can construct an automatic take profit stop loss system with grids which is suitable for trading varieties with frequent price fluctuations. However, there are still certain market risks in this strategy. Parameters and exceptional situations need to be optimized before the strategy becomes more robust.
 
-[/trans]
 
 > Strategy Arguments
 

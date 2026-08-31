@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b35c7aa861b2b1802f.png)
-[trans]
-
-
-## 概述
-
-本策略基于技术指标判断市场趋势,当出现连续N根K线收阴时做空,是一种短线交易策略。
-
-## 策略原理
-
-本策略使用nCounter变量统计连续收阴根数。当close价格低于open价格时,增加nCounter值;当close价格高于open价格时,重置nCounter为0。当nCounter达到输入参数nLength时,标志着出现连续N根K线收阴,输出信号C2=1。
-
-出现信号时,如果当前没有持仓,则开仓做空;如果已经持有做空单,则继续持有。开仓后,使用posprice记录开仓价格。以开仓价格为基准,设置止盈和止损条件:如果价格达到止盈点(开仓价格+输入参数takeprofit),平仓并重置;如果价格达到止损点(开仓价格-输入参数stoploss),平仓并重置。
-
-## 优势分析
-
-本策略主要优势有:
-
-1. 规则简单清晰,容易理解实现。
-2. 可自定义参数,灵活应对不同市场条件。
-3. 采用止盈止损机制,可以有效控制风险。
-
-## 风险分析
-
-本策略主要风险有:
-
-1. 连续N根K线收阴不能完全确定趋势反转,可能出现假破。可以适当调整N值或结合其他指标验证。
-2. 止盈止损设置不当可能造成过早离场或亏损扩大。应根据市场波动程度设定合理参数。
-
-## 优化方向 
-
-本策略可以从以下几个方面进行优化:
-
-1. 增加趋势过滤,避免不明确市场上出现的短期调整被误判。例如结合均线等指标判断整体趋势。
-
-2. 增加量能验证,例如交易量放大能更好确认趋势转折。
-
-3. 优化止盈止损策略,例如运用游离止损、比例止损等方式,使止损更加智能化。
-
-4. 利用机器学习方法优化参数,使nLength值能根据实时市场变化进行调整。
-
-## 总结
-
-本策略基于收盘价与开盘价的大小关系判断短期趋势,当检测到连续N根K线收阴时产生交易信号。策略简单直观,参数可调,带有止盈止损机制,可以过滤掉部分噪音交易。但也存在一定假信号风险,建议结合其他滤波指标优化。通过参数调整、风险管理和模型优化,本策略可以成为一个非常实用的短线选择工具。
-
-||
 
 
 ## Overview
@@ -98,7 +53,6 @@ The strategy can be improved from the following aspects:
 
 This strategy identifies short-term trend simply based on the relationship between close price and open price. Trading signals are generated when detecting N consecutive bars closing below opening price. The strategy is intuitive, customizable and equipped with effective risk management. However, certain level of false signals exist. It is recommended to combine additional filters for optimization. With parameter tuning, risk management and model enhancement, this can be a very practical tool for short-term trading.
 
-[/trans]
 
 > Strategy Arguments
 

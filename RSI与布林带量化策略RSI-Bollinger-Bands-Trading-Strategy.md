@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c8e5796c71ea6263bb.png)
-[trans]
-
-### 概述
-该策略主要利用相对强弱指标(RSI)与布林带进行交易信号判断。具体来说,是在RSI低位与布林带下轨交叉时做多,RSI高位与布林带上轨交叉时做空。
-
-### 策略原理 
-该策略首先计算RSI指标和布林带。RSI指标反映交易品的相对强弱,当RSI低于超卖区(默认30)时代表交易品处于超卖区,此时买入。布林带包括上轨、中轨和下轨,能很好反映价格的波动范围。布林带下轨附近买入,上轨附近卖出,可以获取比较稳定的信号。该策略结合RSI指标与布林带进行交易信号判断,当RSI指标从超卖区上升到超卖区之上(默认30),并且价格从布林带下轨之下上升到布林带下轨之上时产生买入信号;当RSI指标从超买区下降到超买区之下(默认70),并且价格从布林带上轨之上下降到布林带上轨之下时产生卖出信号。
-
-### 策略优势
-1. 结合RSI指标与布林带,提高信号判断准确性
-2. RSI指标过滤了部分噪音信号
-3. 布林带反映了目前市场波动的大体区间,信号比较可靠
-4. 交易策略较为严格,避免了无效交易的出现
-
-### 策略风险
-1. 布林带参数设置不当可能会使交易信号不准确
-2. RSI超买超卖区参数设置不合适也可能影响信号判断 
-3. 策略较为严格,可能会错过部分交易机会
-
-风险解决方法:
-1. 对布林带参数和RSI参数进行优化,找到最佳参数组合
-2. 适当放宽策略的交易条件,增加一定量的无效交易以获取更多机会
-
-### 策略优化方向  
-1. 对RSI参数和布林带参数进行测试与优化,找到最优参数
-2. 增加止损策略,以控制交易风险
-3. 考虑加入其它技术指标进行信号验证,如MACD等
-4. 测试不同品种和时间周期的参数优化效果
-
-
-### 总结
-该策略整体较为稳健,有效地结合了RSI指标和布林带止损。通过对参数的测试与优化,可以进一步提高策略的效果。同时也需要警惕由于策略较为严格可能带来的信号漏失风险。总的来说,该策略为一可靠的量化交易策略。
-
-||
 
 ### Overview
 This strategy mainly uses the Relative Strength Index (RSI) combined with Bollinger Bands for trading signal judgment. Specifically, it goes long when the RSI crosses above the oversold level and below the lower Bollinger Band, and goes short when the RSI crosses below the overbought level and above the upper Bollinger Band.  
@@ -75,7 +41,6 @@ Solutions:
 ### Summary
 The overall strategy is robust, effectively combines RSI and Bollinger Bands for stop loss. Further improvement can be achieved by testing and optimizing parameters. Also need to be aware of potential signal missing risks due to strict rules. In general, this is a reliable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1c1ab9816a5c9cabdee.png)
 
-[trans]
-#### 概述
-该策略基于技术分析中的反转形态(锤头线、吞没形态和十字星)以及支撑位和阻力位,在1小时图表上进行交易。策略通过识别潜在的市场反转点,并在预定的止盈和止损水平执行交易。
-
-该策略的主要思路是在支撑位附近出现看涨反转形态(如锤头线、看涨吞没形态或十字星)时开多仓,在阻力位附近出现看跌反转形态(如锤头线、看跌吞没形态或十字星)时开空仓。同时设置止盈和止损水平,以控制风险和锁定利润。
-
-#### 策略原理
-1. 通过 ta.lowest() 和 ta.highest() 函数分别计算指定回望期内的最低价和最高价,确定支撑位和阻力位。
-2. 判断当前蜡烛图是否形成锤头线、吞没形态或十字星。
-3. 如果在支撑位附近出现看涨反转形态,开多仓;如果在阻力位附近出现看跌反转形态,开空仓。
-4. 设置止盈价格为开仓价格的3%,止损价格为开仓价格的1%。
-5. 当价格达到止盈或止损水平时,平仓。
-
-#### 策略优势
-1. 结合反转形态和关键支撑阻力位,提高交易信号的可靠性。
-2. 设置明确的止盈和止损水平,有效控制风险。
-3. 适用于趋势和震荡市场,可捕捉潜在的反转机会。
-4. 代码简洁,易于理解和实现。
-
-#### 策略风险
-1. 在震荡市场中,频繁出现反转信号,可能导致过度交易和手续费损失。
-2. 支撑位和阻力位的判断依赖于回望期的选择,不同的回望期可能导致不同的结果。
-3. 反转形态的可靠性并非绝对,虚假信号可能导致亏损。
-
-解决方法:
-1. 通过调整反转形态的参数和确认条件,减少虚假信号。
-2. 结合其他技术指标或市场情绪指标,提高信号的可靠性。
-3. 适当调整止盈和止损水平,以应对不同的市场状况。
-
-#### 策略优化方向
-1. 引入交易量指标,确认反转形态的有效性。高交易量的反转形态可能更可靠。
-2. 考虑多个时间框架的支撑阻力位,提高支撑阻力位的准确性。
-3. 结合趋势指标,如移动平均线,在趋势方向上进行交易,避免逆势交易。
-4. 优化止盈和止损水平,根据市场波动性动态调整,以获得更好的风险回报比。
-
-#### 总结
-该策略通过识别支撑位和阻力位附近的反转形态,捕捉潜在的交易机会。它简单易用,适用于不同的市场环境。然而,策略的成功依赖于对反转形态和支撑阻力位的准确判断。通过优化交易信号的确认条件,结合其他技术指标,以及动态调整止盈止损水平,可以进一步提高策略的表现。
-
-|| 
 
 #### Overview
 This strategy is based on reversal patterns (hammer, engulfing, and doji) and support and resistance levels in technical analysis, trading on a 1-hour chart. The strategy identifies potential market reversal points and executes trades with predefined take profit and stop loss levels.
@@ -87,7 +48,6 @@ Solutions:
 
 #### Summary
 This strategy captures potential trading opportunities by identifying reversal patterns near support and resistance levels. It is simple to use and applicable to different market environments. However, the success of the strategy depends on the accurate identification of reversal patterns and support and resistance levels. By optimizing the confirmation conditions of trading signals, incorporating other technical indicators, and dynamically adjusting take profit and stop loss levels, the performance of the strategy can be further improved.
-[/trans]
 
 
 

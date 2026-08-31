@@ -11,65 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/914ad1a68606d9041f.png)
-[trans]
-
-## 概述
-
-本策略通过组合使用3条不同周期的简单移动平均线(SMA)与Kaufman自适应移动平均线,形成长线入场信号。当短周期SMA上穿较长周期的SMA时产生买入信号。此外,策略还结合K线实体颜色判断主趋势,只在多头趋势中产生买入信号,避免假突破。
-
-## 策略原理
-
-本策略使用3条不同周期的SMA,包括SMA 4、SMA 9和SMA 18。这3条SMA的交叉组合是经典的判断趋势方向的技术指标。当SMA 4上穿SMA 9,并且SMA 9上穿SMA 18时,产生长线的买入信号。
-
-为了过滤假突破,本策略还引入了Kaufman自适应移动平均线。只有当收盘价高于自适应移动平均线,即处于多头趋势时,SMA的金叉信号才生效启动长线。
-
-此外,本策略还使用100周期的SMA判断主趋势。当价格上穿100周期SMA时,确认进入多头趋势。策略只在主多头趋势中产生买入信号。
-
-综上,本策略的买入信号来自以下几部分的组合:
-1. SMA 4上穿SMA 9,并且SMA 9上穿SMA 18,形成短周期SMA的金叉
-2. 收盘价高于Kaufman自适应移动平均线,处于多头趋势
-3. 价格上穿100周期SMA,确认主多头
-
-当上述3个条件同时满足时,产生长线买入信号。
-
-## 优势分析
-
-本策略具有以下几点优势:
-
-1. 使用3重SMA交叉判断趋势,可以有效过滤噪音,提高信号的可靠性
-2. 引入自适应移动平均线,避免在无明确趋势时假突破
-3. 结合主趋势判断,加大获利概率,避免在震荡行情中反复打开头寸
-4. 长短周期SMA交叉,形成长线信号,利于抓取较大的趋势行情
-5. 适用于高周期择时,如4小时或日线级别,信号更加可靠
-
-## 风险分析
-
-本策略也存在一些风险:
-
-1. 长线策略,无法在短期内及时止损,存在一定回撤风险
-2. 入场信号相对稀少,可能错过部分涨幅
-3. 当短期、中期和长期趋势不一致时,会产生信号错误
-
-可以通过以下方式优化:
-1. 适当缩短中长期SMA的周期,增加入场机会
-2. 加入其它辅助指标,如成交量指标,确认趋势的可靠性
-3. 采取科学止损,合理控制回撤
-
-## 优化方向  
-
-本策略还有进一步优化的空间:
-
-1. 可以测试更多组合的SMA周期,寻找最优参数
-2. 可以加入成交量的确认,避免虚假突破
-3. 可以添加波动率指标,在震荡加大的场景过滤入场
-4. 可以引入机器学习算法,自适应寻找最优参数
-5. 可以引入情绪指标,在市场恐慌或亢奋时避免建仓
-
-## 总结
-
-本策略通过多重SMA交叉形成长线信号,同时结合自适应移动平均线和主趋势判断,可在趋势行情中获取较大收益,具有稳定的逻辑和较强的实战效果。但也存在一定的风险,需要继续优化以降低回撤和提高胜率。本策略为长线持仓策略,适合有耐心和风险控制能力的投资者。
-
-|| 
 
 ## Overview  
 
@@ -143,7 +84,6 @@ There is further room for optimizing this strategy:
 
 This strategy forms long-line signals through multiple SMA crosses, combined with adaptive moving averages and main trend determinations. It can capture significant profits during trending moves with stable logic and strong practical results. But there are also risks that need to be reduced through further optimizations. As a long-term position holding strategy, it suits investors with patience and risk control capabilities. 
 
-[/trans]
 
 > Strategy Arguments
 

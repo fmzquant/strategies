@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6238e3f54677832e02.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是结合内部柱线形态以及移动平均线指标来实现自动化交易。当出现内部柱线形态时表明当前趋势可能发生转折,此时我们利用移动平均线的位置来判断最终的交易方向。
-
-## 策略原理
-
-1. 寻找内部柱线形态。内部柱线形态是指某根K线的最高价和最低价都在前一根K线的实体部分之间。根据实体颜色我们可以判断内部柱为多头内部柱或空头内部柱。
-
-2. 判断移动平均线位置。当寻找到内部柱线时,如果价格高于移动平均线则为多头信号,价格低于移动平均线则为空头信号。 
-
-3. 结合内部柱线形态和移动平均线的多空信号,得到最终的交易方向。即看跌内部柱下破平均线做空,看涨内部柱上破平均线做多。
-
-## 策略优势
-
-1. 结合技术指标和价格形态,提高交易决策的准确性。
-
-2. 内部柱线形态本身包含较强的价格转折信号,能提早确定趋势转折点。
-
-3. 移动平均线滤除了部分噪音,避免了在区间震荡中被套。
-
-4. 实现全自动交易,大大降低了人工交易的时间和精力成本。
-
-## 策略风险及解决方法
-
-1. 当价格在平均线附近震荡时,会出现较多错误信号,从而导致过度交易。可以通过优化移动平均线参数或增加过滤条件来减少错误信号。
-
-2. 该策略更适用于有比较明显趋势的市场,在震荡行情中效果可能会打折扣。可以结合趋势判断指标如ADX来控制算法的开启。
-
-3. 存在一定的时间滞后。可以适当缩短参数,或优化移动平均线的计算方式来降低滞后。
-
-4. 回撤风险较大。可以设置止损来控制亏损风险,同时适当调整仓位管理也有助于降低回撤。
-
-## 策略优化方向
-
-1. 优化内部柱判定周期参数,寻找最佳参数组合。
-
-2. 尝试不同类型的移动平均线,如EMA、SMA等,确定最适合的移动平均线指标。 
-
-3. 增加像MACD、KDJ等辅助指标,丰富多空判断依据,提高信号准确性。
-
-4. 加入ADX、ATR等过滤指标,控制算法开启的环境,避免不适宜的市场中运行。
-
-5. 优化仓位管理策略,如风险仓位控制、错失利润回补仓位等,以控制风险并追求更高收益。
-
-## 总结
-
-本策略通过动态跟踪内部柱线信号与移动平均线指标,实现了一套全自动的量化交易方案。策略信号生成简单清晰,容易理解与跟踪。在趋势明显的市场中表现较为出色。通过进一步优化参数与规则,可以进一步增强策略的稳定性与收益性。
-
-|| 
 
 ## Overview
 
@@ -110,7 +59,6 @@ The core idea of this strategy is to combine inside bar patterns and moving aver
 
 This strategy implements a fully-automated quantitative trading solution by dynamically tracking inside bar signals and moving average indicators. The signal generation is simple and clear for easy understanding and tracking. It performs well in markets with obvious trends. Further optimization of parameters and rules can enhance the stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

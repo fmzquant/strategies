@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c37c8c6a6f7f29ce1f.png)
-[trans]
-
-## 概述
-
-该策略基于布林带指标进行交易信号判断和止盈止损设置。当价格触及布林带中轨时开仓做多做空,并设置0.5%的止盈和3%的止损,属于短线交易策略。
-
-## 策略原理
-
-布林带中轨为收盘价的N日简单移动平均线。上轨为中轨+K倍的N日收盘价标准差,下轨为中轨-K倍的N日收盘价标准差。当价格从下向上穿过中轨时做多,当价格从上向下穿过中轨时做空。每次交易固定数量开仓,并设置0.5%的止盈和3%的止损。
-
-## 优势分析
-
-1. 使用布林带指标判断交易信号,可以有效捕捉价格的突破。
-2. 采用短线交易方式,每个交易周期很短,可以快速切换多空方向。
-3. 固定数量开仓且设置止盈止损,可以很好控制单笔交易的风险。
-
-## 风险分析
-
-1. 布林带指标对市场波动性较敏感,参数设置不当可能导致交易信号增多但胜率不高。
-2. 短线交易交易频繁,如果有比较高的手续费会大幅降低盈利空间。
-3. 止盈止损幅度设置不当,可能过早止损或错过更大利润。
-
-风险解决方法:
-
-1. 优化布林带参数,找到最佳参数组合。
-2. 选择手续费较低的证券品种进行交易。 
-3. 通过回测优化止盈止损的参数设置。
-
-## 优化方向  
-
-1. 结合其他指标过滤信号,提高交易胜率。比如K线形态,MACD等。
-2. 增加止盈方式,设置移动止盈或分批止盈,扩大每个交易的利润空间。
-3. 优化布林带参数以及止盈止损幅度,找到最优参数组合。
-
-## 总结
-
-该策略整体思路清晰,使用布林带判断交易信号效果不错。但交易频繁且利润空间有限,建议结合趋势判断指标过滤信号,同时通过优化参数以提高策略效果。
-
-||
 
 ## Overview
 
@@ -86,7 +47,6 @@ Solutions:
 
 The overall logic of this strategy is clear. Using Bollinger Bands to determine signals is effective. However, high trading frequency and limited profit space per trade. It's recommended to combine trend indicators to filter signals and optimize parameters to improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d4c19aa3be3f8e76eb.png)
-[trans]
-### 概述
-
-本策略运用三条不同周期的移动平均线,识别市场趋势方向。当三条移动平均线方向一致时,进入仓位。同时,结合最近N根K线的最高价或最低价,设定止损止盈。
-
-### 策略原理
-
-1. 计算长期、中期、短期三条移动平均线。用户可以自行设置周期。默认为20日、10日、5日。
-
-2. 比较三条移动平均线的方向。当短期移动平均线上穿中期,中期上穿长期时,判断为多头市场。当短期移动平均线下穿中期,中期下穿长期时,判断为空头市场。
-
-3. 在多头市场中,如果价格突破最近N根K线内的最高价,做多;在空头市场中,如果价格突破最近N根K线内的最低价,做空。N也为用户自定义参数。
-
-4. 进入仓位后,设置止损止盈。多头市场止损为最近N根K线内的最低价,空头市场止损为最近N根K线内的最高价。
-
-### 优势分析
-
-本策略结合移动平均线指标和K线图形,能较好判断市场走势。同时,止损止盈设置合理,有利于规避较大亏损。
-
-相比单一移动平均线等指标,本策略运用三条移动平均线,判断市场走势的可靠性更高。同时,突破最近N根K线最高价或最低价进入仓位,是比较常见的突破策略。整体而言,策略思路清晰,易于实施。
-
-### 风险分析
-
-该策略可能存在的主要风险有:
-
-1. 三条移动平均线方向判断失误的概率。如果中短期移动平均线造成错误信号,可能导致不必要的亏损。
-
-2. 突破进入时机选择不当,容易被套。应适当优化入场时机选择。
-
-3. 止损距离设置过小,扩大止损距离有助于给予价格更多Running Room。
-
-### 优化方向 
-
-本策略可从以下几个方向进行优化:
-
-1. 增加其他指标过滤,确保移动平均线信号的可靠性。例如增加成交量的多空判断。
-
-2. 优化移动平均线的周期参数,使其更好适应不同品种。
-
-3. 增加机器学习算法,实现参数的自动优化。
-
-4. 在高频数据上测试该策略的有效性。
-
-### 总结
-
-本策略总体较为简单通用,思路清晰,实际可行性强。作为移动平均线交叉系统的范例,是初学者常见的选择。通过适当优化,可将系统运用到更广泛的品种和时间周期上,从而获得稳定收益。
-
-||
 
 ### Overview
 
@@ -105,7 +57,6 @@ The directions to optimize this strategy include:
 
 This strategy is relatively simple and universal. The idea is clear with strong feasibility. As an example of a moving average crossover system, it is a common choice for beginners. Through proper optimization, the system can be applied to more products and time frames to obtain steady returns.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略仅使用阿隆指标来判断市场趋势方向,以发出简单的买入和卖出信号。它结合阿隆指标的趋势捕捉能力,目标是开发一个纯粹依赖该指标判断的机械交易系统。
-
-## 策略原理
-
-1. 计算7日内最高价所在的柱形和最低价所在的柱形
-
-2. 计算最高价柱形和总柱形数量的比值作为上轨
-
-3. 计算最低价柱形和总柱形数量的比值作为下轨 
-
-4. 当上轨值大于下轨值时产生买入信号
-
-5. 当下轨值大于上轨值时产生卖出信号
-
-6. 在策略参数中控制具体的入场方向
-
-7. 在指定的时间段内完成订单的开平
-
-## 优势分析
-
-1. 完全依赖阿隆指标判断,实现纯粹的指标驱动交易
-
-2. 指标参数简单,容易理解和优化
-
-3. 可灵活选择做多做空方向,适应不同品种
-
-4. 可自定义时间段进行回测或实盘交易
-
-5. 操作信号非常清晰,容易掌握和执行
-
-## 风险分析
-
-1. 作为单一指标,容易产生错误信号
-
-2. 无法 accurattly 判定市场真实趋势中涨和跌的力度
-
-3. 存在一定的滞后,无法及时捕捉转折
-
-4. 无法根据市场变化进行动态调整
-
-5. 存在一定程度的回撤风险
-
-## 优化方向
-
-1. 测试不同的品种和周期参数
-
-2. 增加过滤条件,提高信号质量
-
-3. 结合趋势指标,确定大趋势方向
-
-4. 开发动态出场机制,根据趋势调整
-
-5. 优化参数,进行多组指标组合测试
-
-6. 增加仓位和风险管理
-
-## 总结
-
-该策略通过阿隆指标提供简单的趋势判断买卖信号。在避免误导信号及风险控制方面还有优化空间。但其思路简单清晰,可作为量化交易的基础策略进行改进。整体来说,该策略可实用性强,值得进一步测试和优化。
-
-|| 
 
 ## Overview 
 
@@ -137,7 +72,6 @@ This strategy purely uses the Aroon indicator to determine market trend directio
 
 This strategy provides simple trend signals based on Aroon. There is room for improvement in avoiding misleading signals and risk control. But the logic is simple and clear, serving as basic quant strategy for enhancement. Overall a practical strategy worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

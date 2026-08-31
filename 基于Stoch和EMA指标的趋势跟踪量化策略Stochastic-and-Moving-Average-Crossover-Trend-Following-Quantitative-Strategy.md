@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14a6ce95456462b04b6.png)
-[trans]
-## 概述
-
-该策略主要利用Stoch指标在超买超卖区域发生的交叉作为入场信号,同时结合EMA指标判断当前趋势方向,只在EMA持续上升的趋势中进行做多操作,在EMA持续下跌的趋势中进行做空操作,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-该策略主要由三部分组成:
-
-1. EMA指标判断趋势方向
-
-   使用一快一慢两个不同参数的EMA,当快EMA位于慢EMA之上时判断为上升趋势,当快EMA位于慢EMA之下时判断为下跌趋势。
-
-2. Stoch指标判断买卖信号
-
-   Stoch指标由%K线和%D线组成,%K线在超买区之上与%D线发生黄金交叉时产生买入信号,%K线在超卖区之下与%D线发生死亡交叉时产生卖出信号。该策略仅在Stoch指标交叉发生在超买超卖区域时才发出交易信号。
-
-3. 风险管理机制
-
-   该策略同时设定了止损和止盈机制。在持有做多仓位时,如果价格跌破设定的止损位则会止损平仓;如果价格涨破设定的止盈位则会止盈平仓。做空仓位同理。
-
-整体来说,该策略属于比较典型的量化交易策略,利用指标组合判断趋势方向和交易信号,同时辅以严格的风险管理规则,可以有效减少交易风险。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 利用EMA判断主次级别的趋势,避免在震荡不明的市场中被套。
-
-2. Stoch指标的特点在于其能够很好地反映目前是否处在超买或者超卖区域,因此结合交叉信号的产生可以进行超买超卖区域交易。
-
-3. 该策略明确了做多和做空的可能产生的环境,使信号产生得到进一步过滤,降低错误信号的概率,同时也避免在复杂的市场中盲目开仓。
-
-4. 严格的风险管理机制有助于控制单次交易的损失,既控制了整体的最大回撤,同时也为盈利交易留出了足够的空间。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. EMA、Stoch等指标都存在一定的滞后性,这会导致该策略难以及时抓住市场反转的机会。
-
-2. 单纯依赖指标容易对市场形成先入为主的判断,从而错过市场实际提供的交易机会。
-
-3. 风险管理机制本身也可能成为策略盈利空间的限制,在大趋势中止损和止盈位的设置需要特别慎重。
-
-4. 在参数选择上该策略也存在一定的风险,不同参数对结果的影响需要通过大量的回测和优化来获得最佳参数组合。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 尝试不同类型的EMA,例如加权移动平均线、 Hull MA等指标来判断趋势,进行比较分析。
-
-2. 尝试结合其他指标来产生交易信号,例如MACD、KDJ等,构建多指标的交易体系。 
-
-3. 优化止损和止盈的设置,使其更加适应市场的实际波动情况。可以设定更宽松的止损位和更严格的止盈位。
-
-4. 测试不同品种和不同周期下该策略表现的差异性,寻找最佳品种和周期组合。
-
-5. 考虑加入机器学习或神经网络模型来辅助判断趋势方向和交易信号,实现策略的智能化。
-
-## 总结
-
-总的来说,该策略利用常见指标进行组合,构建了一套比较成熟的趋势跟踪交易策略。它既考虑了趋势判断和具体交易信号的产生,也设置了风险管理机制。通过继续优化,相信该策略可以取得更好的实盘效果。与此同时,我们也要意识到单一策略的局限性,继续学习和探索市场奥秘,才能取得长期稳定的收益。
-
-||
 
 ## Overview  
 
@@ -141,7 +75,6 @@ The strategy can be optimized in the following aspects:
 
 In conclusion, this strategy combines commonly used indicators to form a relatively mature trend following system, taking into account trend determination, trading signals, and risk management. With further optimization, I believe this strategy can achieve better live trading results. At the same time, we should also be aware of limitations of single strategies and continue to learn market intricacies in pursuit of long-term steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

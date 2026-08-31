@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fe91028c2cc78aaa45.png)
 
-[trans]
-
-## 概述
-
-本策略基于均线、ATR指标、布林带进行多空判断,同时结合力量指标实现突破交易,属于突破类策略。
-
-## 策略原理
-
-1. 计算布林带中的中线、上线、下线。中线为close的sma均线,上下线为中线正负stdDev标准差。
-
-2. 计算快速ATR和慢速ATR。快速ATR参数为20,慢速ATR参数为50。
-
-3. 计算力量指标XFORCE,为volume*(close-前一close)的累积。计算XFORCE的快EMA和慢EMA。
-
-4. 判断多头信号:快速XFORCE上穿慢速XFORCE,且快速ATR>慢速ATR,且收盘价>开盘价。
-
-5. 判断空头信号:快速XFORCE下穿慢速XFORCE,且快速ATR>慢速ATR,且收盘价<开盘价。 
-
-6. 当触发多头信号时做多,触发空头信号时做空。
-
-## 策略优势分析
-
-1. 均线提供趋势判断,布林带提供突破买卖点。
-
-2. ATR指标判断市场波动率,实现波动率交易。
-
-3. 力量指标判断力量方向,实现力量突破。
-
-4. 多指标组合,提供更全面判断。
-
-5. 规则清晰简单,容易理解实现。
-
-6. 回测表现良好,收益稳定。
-
-## 策略风险分析
-
-1. 布林带上下线过宽过窄都会产生错误信号。
-
-2. ATR参数设置不当,无法抓取市场波动。
-
-3. 力量指标作用有限,无法判断真实趋势反转。
-
-4. 多指标组合,参数调整及权重分配难度大。
-
-5. 突破信号时点易误判,存在背离现象。
-
-6. 回撤可能较大,可通过止损来控制。
-
-## 策略优化方向 
-
-1. 优化布林带参数,适应不同周期及股票特性。
-
-2. 优化ATR参数,更好捕捉市场波动率。 
-
-3. 增加如MACD等趋势指标,提供趋势校验。
-
-4. 增加止损策略,如跟踪止损控制回撤。
-
-5. 增加机器学习算法,利用AI判断反转信号。
-
-6. 多周期结合,不同周期综合判断,降低误判率。
-
-## 总结
-
-本策略整合均线、ATR、布林带和力量指标,形成一套较为完整的突破交易体系。通过参数优化,引入趋势判断指标进行确认,增加止损策略,以及加入AI判断,可以进一步增强策略稳定性和收益水平。但任何策略都不能完美,需要根据回测结果不断优化调整,才能适应市场的变化。
-
-||
 
 ## Overview
 
@@ -143,7 +76,6 @@ This strategy uses moving average, ATR, Bollinger Bands for trend judgment and b
 
 This strategy integrates moving average, ATR, Bollinger Bands and Force Index to form a complete breakout trading system. Further improvements on parameters optimization, adding trend filter, stop loss strategy and AI algorithms can enhance stability and profitability. But no strategy is perfect, continuous optimizations against backtest results are needed to adapt to changing market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

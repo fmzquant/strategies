@@ -10,76 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f786fc4fb68eeb7849.png)
-[trans]
-
-## 概述
-
-这个策略的主要思想是利用EMA指标的金叉和死叉信号来进行买入和卖出操作。它同时绘制了多组快慢EMA,并利用其交叉进行交易信号的判断。
-
-## 策略原理
-
-这个策略首先定义了多组EMA均线,包括快速EMA均线ema1到ema6和慢速EMA均线ema7到ema12。其次定义了买入信号buy_signal和卖出信号sell_signal:
-
-- 买入信号buy_signal为ema1上穿ema3时生成
-- 卖出信号sell_signal为ema1下穿ema3时生成 
-
-这样,当短期EMA均线上穿长期EMA均线时,表示市场处于上升趋势,买入;当短期EMA均线下穿长期EMA均线时,表示市场处于下降趋势,卖出。
-
-策略通过监测EMA均线的交叉来判断趋势方向,以此制定买入卖出决策。
-
-## 优势分析
-
-这个策略有以下几个优势:
-
-1. 使用EMA均线指标判断趋势,EMA均线对价格变动较为平滑,可以过滤掉短期市场噪音,使交易信号更可靠。
-
-2. 同时绘制多组EMA均线,可以更准确判断趋势的变化。快慢EMA线的交叉可以避免错过重要的趋势转折点。
-
-3. 策略简单清晰,通过EMA交叉发出交易信号,易于理解实现,适合量化交易。
-
-4. 可自定义EMA周期参数,可以根据不同品种和市场调整参数,灵活应对市场变化。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. EMA均线具有滞后性,可能会延迟发出交易信号。
-
-2. 选取不当的EMA参数组合可能会产生错误的交易信号。
-
-3. EMA交叉无法有效过滤震荡区间造成的虚假信号。
-
-4. 存在过拟合风险,EMA参数可优化空间有限。
-
-对策:
-
-1. 结合其他指标进行过滤,避免在震荡区间发出错误信号。
-
-2. 测试不同周期参数的稳定性,防止出现过拟合。
-
-3. 适当调整策略参数组合或增加Exit机制,控制风险。
-
-## 优化方向
-
-这个策略还可以从以下几个方面进行优化:
-
-1. 增加止损策略,在亏损达到一定幅度后止损退出。
-
-2. 加入重新进入市场的机制,即设置重新买入卖出的信号。
-
-3. 优化买入卖出的EMA交叉周期参数组合,寻找最优参数。
-
-4. 加入其他指标判断,进行多因子验证,提高信号质量。
-
-5. 测试不同品种参数优化,寻找最佳适用范围。
-
-6. 考虑实盘交易中的滑点因素,进行回测调优。
-
-## 总结
-
-这个策略利用EMA均线的快慢交叉判断趋势方向,根据交叉信号进行买入和卖出,是一个较简单的趋势跟踪策略。它有判断趋势变化的优势,但也存在滞后性和震荡区间的风险。通过止损、参数优化、多因子验证等方法可以进一步增强策略效果,在回测和实盘中不断改进。
-
-||
 
 ## Overview 
 
@@ -149,7 +79,6 @@ The strategy can be further optimized in the following aspects:
 
 This is a simple trend following strategy based on EMA crossover. It can identify trend changes but also has risks like lagging effects and whipsaws. Enhancements with stop loss, parameter optimization, multifactorial validation etc. can further improve strategy performance in backtesting and live trading.
 
-[/trans]
 
 > Strategy Arguments
 

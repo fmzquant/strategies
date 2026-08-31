@@ -13,48 +13,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8bf2206fec2ba89ece7.png)
 
 
-[trans]
-#### 概述
-
-这是一个创新的多时间框架自适应KDJ震荡指标策略，旨在通过动态调整指标参数和跨多个时间框架分析市场趋势，提供更精确和灵活的交易信号。该策略结合了volatility-based长度计算、跨多个时间框架的权重分配以及自适应趋势判断，为交易者提供了一个复杂而强大的分析工具。
-
-#### 策略原理
-
-策略的核心原理包括以下关键技术：
-
-1. 多时间框架分析：同时使用1分钟、5分钟和15分钟三个时间框架
-2. 自适应swing长度计算：基于市场波动率动态调整指标参数
-3. 动态权重分配：为不同时间框架分配不同的权重系数
-4. 趋势判断机制：通过计算smoothAvgTotal的平均值确定市场趋势方向
-5. 智能信号生成：结合主要信号和预期信号，提高信号准确性
-
-#### 策略优势
-
-1. 高度灵活性：可自定义时间框架和权重配置
-2. 动态适应性：根据市场波动率调整指标参数
-3. 多维度分析：综合多个时间框架信息
-4. 低延迟信号：包含主要信号和预期信号
-5. 内置趋势过滤：减少不利市场条件下的错误信号
-
-#### 策略风险
-
-1. 参数过度拟合风险
-2. 多时间框架可能增加信号复杂性
-3. 在极端市场条件下信号可靠性可能降低
-4. 需要额外确认指标验证信号
-
-#### 策略优化方向
-
-1. 引入机器学习算法动态调整权重
-2. 增加附加过滤条件
-3. 优化止损机制
-4. 开发跨品种适应性
-
-#### 总结
-
-该多时间框架自适应KDJ震荡指标策略通过创新的设计，为交易者提供了一个灵活、动态且多维度的市场分析工具，具有显著的技术优势和潜在的性能提升空间。
-
-|| 
 
 #### Overview
 
@@ -95,7 +53,6 @@ The core principles of the strategy include the following key technologies:
 #### Summary
 
 The multi-timeframe adaptive KDJ oscillator strategy provides traders with a flexible, dynamic, and multi-dimensional market analysis tool through innovative design, offering significant technical advantages and potential performance improvement space.
-[/trans]
 
 
 

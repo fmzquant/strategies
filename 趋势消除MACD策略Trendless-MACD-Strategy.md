@@ -11,100 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17bc569daa955e78c8e.png)
 
-[trans]
-
-
-### 概述
-
-该策略采用消除股票价格的趋势,从而更清晰地观察MACD指标的形态。通过计算DEMA快线和DEMA慢线,进而得到MACD直线和信号线,判断它们的交叉来产生交易信号。该策略还结合了月份、日期的条件过滤,以及止损平仓逻辑,形成一个较为完整的策略系统。
-
-### 策略原理
-
-首先,计算价格的EMA,以消除价格的趋势,得到趋势消除后的价格EMA。然后基于EMA分别计算快线DEMA、慢线DEMA和MACD直线。其中,快线DEMA计算方法是:先计算快线的EMA1,再计算EMA1的EMA2,然后计算DEMA=(2*EMA1-EMA2)。慢线DEMA和信号线的计算同理。得到MACD直线(快线DEMA - 慢线DEMA)和信号线之后,如果MACD直线上穿信号线,产生买入信号;如果MACD直线下穿信号线,产生卖出信号。最后,结合月份、日期条件过滤信号,并设置止损逻辑。
-
-该策略的核心逻辑是:
-
-1. 消除价格趋势,更清晰看到MACD指标形态
-
-2. 计算DEMA快线、慢线,得到MACD直线和信号线
-
-3. MACD直线和信号线交叉产生交易信号
-
-4. 加入日期、月份条件过滤
-
-5. 设置止损逻辑
-
-### 优势分析
-
-该策略的主要优势有:
-
-1. 消除价格趋势,能更清楚看到MACD指标的交叉情况,避免被趋势误导。
-
-2. 使用DEMA算法计算MACD指标,可以过滤掉一些噪音,使信号更清晰。
-
-3. 结合日期和月份进行过滤,可以减少一些不必要的交易。 
-
-4. 设置止损逻辑,可以及时止损,控制风险。
-
-5. 使用交叉产生信号,可以减少错误交易。
-
-6. 整体来说,该策略结合趋势消除、DEMA计算和条件过滤,可以产生较为清晰和可靠的交易信号。
-
-### 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 消除趋势以后,MACD交叉信号可能会增多,需要实盘验证是否可行。
-
-2. DEMA算法虽过滤了部分噪音,但指标计算还是可能出现较多假信号。
-
-3. 日期和月份过滤条件可能过于死板,错过了一些交易机会。
-
-4. 止损位置设置需要考虑是否合理,过于宽松会增加风险,过于严格会频繁止损。
-
-5. 该策略主要依靠MACD指标,如果市场不适合使用该指标,效果可能会受到影响。
-
-6. 策略参数优化空间还很大,需要通过回测和实盘进一步测试。
-
-对策:
-
-1. 增加其他指标确认,避免假信号。
-
-2. 优化日期过滤条件,适当放宽。
-
-3. 细致测试并优化止损点位。 
-
-4. 加入趋势判断机制,避免逆势交易。
-
-5. 全面回测和优化参数,提高稳定性。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的价格平均线,寻找更合适的替代EMA的线型。
-
-2. 尝试不同的参数组合,优化MACD的快线长度、慢线长度和信号线长度。
-
-3. 增加量能指标等辅助判断指标,避免假信号。
-
-4. 优化止损策略,设置合理的移动止损或挂单止损。
-
-5. 优化日期、月份过滤条件,使其更具弹性。
-
-6. 添加趋势判断,避免逆势操作。
-
-7. 进行全面的参数优化,提高策略稳定性。
-
-8. 在更长的时间周期进行回测,检查策略的长期效果。
-
-9. 进行实盘验证,根据实盘情况进一步修改策略参数。
-
-### 总结
-
-总体来说,该策略采用消除趋势的思路,计算DEMA形式的MACD指标,并结合日期过滤产生交易信号,是一个简单但可行的策略思路。它最大的优势是可以清晰看到MACD形态,避免被价格趋势影响判断。但是该策略也存在一定的风险,需要进行参数优化和风控手段的加入,方可实际应用。该策略还有较大的优化空间,如果经过充分验证和优化,可以成为一个稳定可靠的短线策略。
-
-||
 
 
 ### Overview
@@ -197,7 +103,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this strategy uses the idea of eliminating the trend and calculating DEMA MACD combined with date filters to generate trading signals, which is a simple but feasible strategy idea. Its biggest advantage is revealing the MACD pattern clearly without being affected by the price trend. However, there are still some risks of this strategy that need parameter optimization and risk control measures to be implemented for practical application. There is also large room for optimization, and with sufficient verification and optimization, this strategy can become a stable and reliable short-term trading system.
 
-[/trans]
 
 > Strategy Arguments
 

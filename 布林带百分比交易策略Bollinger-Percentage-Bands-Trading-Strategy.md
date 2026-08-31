@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c56b673315c58a2f32.png)
-[trans]
-
-## 概述
-该策略基于布林带指标,结合移动平均线和ATR技术指标,实现了一个短周期的突破系统。策略通过计算布林带通道内价格的相对位置百分比,来判断价格的超买超卖情况,结合新的高低点突破来产生交易信号。
-
-## 策略原理
-1. 计算布林带通道及价格在通道内的相对位置百分比
-2. 对开盘价、收盘价、最高价、最低价分别计算移动平均线
-3. 计算ATR指标,并结合ATR设定止损线
-4. 判断价格是否处于新高或新低点附近
-5. 结合年度最高最低价判断大级别行情
-6. 通过布林带百分比变化和新高新低判断是否发出交易信号
-
-该策略使用布林带通道判断市场波动率,布林带通道宽度通过标准差确定。价格从布林带下轨突破时为买点,价格从布林带上轨突破时为卖点。移动平均线可平滑布林带波动,减少假突破。ATR指标与移动止损线结合,固定止损幅度。新高新低判断可避免追顶跌破。年度高低判断可排除大级别横盘整理。总体来说,该策略综合运用多种技术分析工具判断市场节奏和入场时机。
-
-## 策略优势
-1. 严格的布林带通道突破判断,可减少假信号
-2. 移动平均线平滑价格,识别真正趋势
-3. ATR指标动态跟踪止损,可限制单笔损失
-4. 新高新低和年度高低判断,使信号更可靠 
-5. 多种技术指标有效结合,提高策略效率
-
-## 策略风险及解决方法
-1. 布林带通道参数设置不当可能导致过多假突破,应测试不同参数组合以取得最佳效果
-2. 收盘价为基准线可能出现回撤超过ATR设定的止损幅度,可考虑使用更大波幅的最高最低价计算百分比
-3. 严格的布林带过滤可能错过较长线上的趋势机会,宜适当放宽过滤条件和持仓时间
-4. ATR指标较慢跟踪大幅价格波动,应考虑更高频的波动率指标如真实波幅等
-5. 新高新低突破容易受到短期噪声的干扰,应评估统计显著性和趋势可持续性
-
-## 策略优化方向
-1. 测试不同参数组合判断最佳布林带参数和移动平均线长度
-2. 采用模型组合结合不同布林带参数或移动平均线判断信号
-3. 测试不同时间段及不同品种参数适配性,提高稳健性
-4. 结合更多大级别条件判断,如日线级别布林带信号或季节性因素
-5. 评估趋势跟随型机会,以扩大策略覆盖面和盈利空间
-
-## 总结
-该策略综合运用布林带百分比、移动平均线、ATR指标、新高新低和年度高低等多种技术工具,在短周期上搭建了一个相对严格和高效的突破交易策略。其突出优势在于利用各类工具来减少噪声,识别真正的趋势信号。当然策略也存在一定的参数设定难度和严格条件下错失机会的可能。总体上是一种拥有独特交易风格和突出效率的布林带突破策略,值得进一步研究和基于实盘数据的验证。
-
-||
 
 ## Overview
 This strategy is based on the Bollinger Bands indicator, combined with moving averages and the ATR technical indicator, to implement a short-term breakout system. The strategy calculates the relative percentage position of prices within the Bollinger Bands channel to judge overbought and oversold situations, combined with new highs and lows breakouts to generate trading signals.  
@@ -88,7 +48,6 @@ This strategy uses Bollinger Bands channel to judge market volatility, with chan
 ## Conclusion
 This strategy effectively combines Bollinger percentage bands, moving averages, ATR indicator, new highs/lows and yearly highs/lows to construct a relatively strict and efficient short-term breakout trading system. Its outstanding advantage lies in using various tools to reduce noise and identify true trend signals. Of course the strategy also faces some parameter tuning difficulties and missed opportunities under strict conditions. Overall it represents a unique trading style and high-efficiency Bollinger breakout strategy that warrants further research and validation on real trading data.
 
-[/trans]
 
 > Strategy Arguments
 

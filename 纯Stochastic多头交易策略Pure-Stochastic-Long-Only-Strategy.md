@@ -9,62 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略仅基于Stochastic指标给出entry和exit的信号,属于典型的只做多不做空的Stochastic指标策略。它在超卖区K线上穿D线且收盘价超过前一日最高价时做多入场,在止盈或止损条件触发时平仓,简单易行。
-
-## 策略原理
-
-该策略的主要逻辑是:
-
-1. 计算Stochastic的K值和D值
-2. 当K线在超卖区上穿D线且收盘价突破前一日最高价时,做多入场
-3. 设置移动止损为收盘价下穿快速EMA
-4. K线下穿D线或K线进入超买区时,平仓止盈
-
-Stochastic K值在超卖区突破D值代表价格可能反转上涨。结合收盘价突破前一日最高价,可以有效确认入场信号。
-
-EMA追踪止损可以锁定利润。K线在超买区出现卖出信号时,也选择止盈前平仓。
-
-该策略仅做多,适合股市等单边行情品种, operatio简单,易于实施。
-
-## 优势分析
-
-- 使用Stochastic指标识别超卖区域
-- K线与D线组合可避免假信号
-- 收盘价突破增加入场确定性 
-- 止损止盈策略结合,风险可控
-- 逻辑简单,易于实现的止盈策略
-
-## 风险及应对
-
-- Stochastic可能出现错误信号
-- 存在一定的亏损风险
-- 不能在趋势顶部止盈
-
-应对措施:
-
-1. 优化Stochastic参数,提高准确度
-2. 采用移动止损加以控制风险
-3. 结合其他指标预测趋势反转
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行扩展:
-
-1. 增加做空机会,使策略全市场适用
-2. 根据波动率调整止损幅度
-3. 采用机器学习优化参数
-4. 整合移动止盈策略,动态追踪止盈点
-5. 组合其他策略,建立多因子系统
-
-## 总结
-
-该策略是一个纯Stochastic多头策略,使用指标识别超卖区入场,止损止盈结合控制风险。该策略简单实用,适合股市等单边行情品种。通过扩展做空机会、参数优化等维度,可以将策略优化成一个更全面可靠的系统。
-
-|| 
 
 ## Overview
 
@@ -119,7 +63,6 @@ The strategy can be enhanced by:
 
 This is a pure Stochastic long strategy using the indicator for oversold entries and managed exits. Simple and practical, it fits instruments like equities well. Expanding to the short side, parameter optimization can make it a more robust system.
 
-[/trans]
 
 > Strategy Arguments
 

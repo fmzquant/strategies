@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1252fe5088b3732f1ce.png)
-[trans]
-
-## 概述
-该策略基于枢轴点和斐波那契回撤比率自动识别股价的ABC波段,并给出长短仓信号。策略利用枢轴点判断股价波段,然后计算ABC波段之间的斐波那契回撤比例,如果符合一定条件就产生交易信号。
-
-## 策略原理
-1. 计算股票的枢轴高点和低点
-2. 判断价格是否从上一波段高点下落或从上一波段低点上涨
-3. 计算当前波段与上一波段之间的斐波那契回撤比例
-4. 如果上涨波段和下跌波段的回撤比例都在适当范围内,则判定可能形成ABC波段
-5. 在ABC波段确认后,做多时设置止损为C点位,止盈为1.5倍波动;做空时设置止损为A点位,止盈为1.5倍波动
-
-## 优势分析
-1. 利用枢轴点判断关键支撑阻力区域,提高信号准确率
-2. 应用斐波那契回撤识别ABC形态,自动捕捉趋势转换点
-3. 止盈止损清晰合理,避免出现巨大亏损
-
-## 风险分析
-1. 枢轴点和斐波那契回撤并不能保证每次都精确判断趋势转换点,可能出现误判
-2. C点和A点止损可能被突破,造成损失扩大
-3. 需要参数优化,比如斐波那契回撤比率的范围
-
-## 优化方向
-1. 可以结合更多技术指标辅助判断ABC形态,提高信号准确率
-2. 可以优化斐波那契回撤比率的范围,以适应更多市场情况
-3. 可以结合机器学习方法训练判断ABC形态的模型
-
-## 总结
-该策略基于枢轴点判断关键支撑阻力区域,并利用斐波那契回撤比例自动识别ABC形态,在波段转折点给出长短仓交易信号。策略逻辑清晰简洁,止盈止损设置合理,能够有效控制风险。但是也存在一定误判风险,需要进一步优化和改进以适应更多市场情况。
-
-||
 
 ## Overview
 This strategy automatically identifies ABC patterns in stock prices based on pivot points and Fibonacci retracement ratios, and generates long/short signals. It uses pivot points to determine price waves and calculates Fibonacci retracement ratios between ABC waves. If the ratios meet certain criteria, trading signals are generated.
@@ -69,7 +38,6 @@ This strategy automatically identifies ABC patterns in stock prices based on piv
 
 ## Conclusion
 This strategy identifies ABC patterns for generating long/short signals at trend turning points, based on pivot point confirmation of key support/resistance levels, and Fibonacci retracement ratio calculations. The logic is simple and clean, with sensible profit/loss rules that effectively control risks. However, certain misjudgement risks remain, requiring further optimizations and improvements to suit more market conditions.  
-[/trans]
 
 > Strategy Arguments
 

@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个基于SMA移动平均线交叉的简单趋势跟踪策略,适用于较高时间周期的比特币和其他加密货币交易。
-
-## 策略原理
-
-该策略基于两个不同周期的SMA移动平均线。一个是10周期的SMA,另一个是100周期的SMA。策略持续监测这两个SMA的值,当较短周期的10周期SMA从下方上穿较长周期的100周期SMA时,表明价格趋势变为上升,这时策略采取做多方向进入场内。相反,当10周期SMA从上方下穿100周期SMA时,则表明价格趋势转为下跌,这时策略采取做空方向进入场内。
-
-具体来说,该策略通过比较10周期SMA和100周期SMA的数值,来确定它们的交叉情况。如果10周期SMA上穿100周期SMA,则设置longCondition条件为真。此时,策略通过strategy.entry函数采取做多方向进入场内。相反,如果10周期SMA下穿100周期SMA,则设置shortCondition条件为真。此时,策略通过strategy.entry采取做空方向进入场内。
-
-通过这个简单的SMA交叉判断,该策略可以抓住价格趋势的转折点,实现及时入场和退出场内。当短周期SMA上穿长周期SMA时抓住上涨机会,当短周期SMA下穿长周期SMA时抓住下跌机会。
-
-## 策略优势
-
-1. 策略思路简单清晰,容易理解和实现,适合新手学习。
-
-2. 基于SMA交叉判断,可以有效捕捉价格趋势的转折点,及时入场。
-
-3. 移动平均线可以有效过滤市场噪音,识别趋势方向。
-
-4. 可以通过调整SMA周期来适应不同市场环境。例如牛市中可缩短周期,熊市中可放长周期。
-
-5. 该策略经过长时间验证,在加密货币市场中效果较好。
-
-## 策略风险
-
-1. SMA交叉出现滞后,可能导致入场点偏晚和止损风险。
-
-2. 短周期SMA容易产生假突破,可能导致不必要的反复交易。
-
-3. 长期持仓时,需设置止损点以控制风险。
-
-4. 若无效过滤震荡市,则会频繁交易亏损。需配合其他指标判断。
-
-5. 参数设置不当也会影响策略效果。需根据市场调整SMA周期。
-
-## 策略优化
-
-1. 可以引入其他指标结合SMA判断,如RSI、布林带等,提高策略准确性。
-
-2. 可以添加止损机制。如价格突破SMA止损。
-
-3. 可以根据市场情况动态调整SMA参数,在趋势牛市中适当缩短周期,熊市中适当放长周期。
-
-4. 可以针对长短周期SMA交叉的强弱程度设定不同的头寸规模。
-
-5. 可以设定重新入场的机制。如价格重回SMA时再次入场。
-
-6. 可以通过回测和模拟演练评估参数设置和策略效果。
-
-## 总结
-
-该SMA移动平均线交叉策略整体思路简单清晰,易于理解和实现,通过两条不同周期SMA的交叉判断来捕捉价格趋势转折点,是一种较为经典的趋势跟踪策略。该策略优点是思路直接,交易信号明确,可以有效跟踪趋势;缺点是可能滞后入场和产生假突破。我们可以通过引入其他指标进行优化,并配合止损机制来控制风险,从而全面提高该策略的实战效果。通过持续优化与验证,该策略可以成为加密货币交易中一个非常实用的趋势策略选择。
-
-||
 
 ## Overview
 
@@ -121,7 +64,6 @@ Through this simple SMA crossover system, the strategy can capture trend reversa
 
 The SMA crossover strategy has simple and clear logic, easy to understand and implement. It captures trend reversal points through crossover of two SMAs with different periods. It is a classical trend following strategy. The advantages are direct logic and clear trading signals, able to track trends effectively. The disadvantages are possible lagging entry and false breakouts. We can optimize it by introducing other indicators and stop loss mechanisms to control risks and improve practical results. With continuous optimization and verification, this strategy can become a very useful trend following strategy for crypto trading.
 
-[/trans]
 
 > Strategy Arguments
 

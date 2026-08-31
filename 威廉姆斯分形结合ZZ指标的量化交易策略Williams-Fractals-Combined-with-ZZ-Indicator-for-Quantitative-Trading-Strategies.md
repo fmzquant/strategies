@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d011174f0062069e97.png)
-[trans] 
-
-### 概述
-
-这是一个结合使用Bill Williams的分形理论和ZZ指标的量化交易策略。该策略通过计算威廉姆斯分形来判断市场趋势,并结合ZZ指标绘制支撑阻力线,以发现潜在的突破点,从而实现趋势跟踪交易。
-
-### 策略原理
-
-该策略首先计算威廉姆斯分形,判断当前是上涨分形还是下跌分形。如果是上涨分形,则认为目前处于上涨趋势;如果是下跌分形,则认为目前处于下跌趋势。
-
-然后根据分形点绘制ZZ指标的支撑线和阻力线。如果价格突破上涨分形对应的阻力线,则做多;如果价格突破下跌分形对应的支撑线,则做空。
-
-通过这样的组合,可以在趋势发生转变的时候及时捕捉,实现趋势跟踪交易。
-
-### 策略优势分析
-
-这种策略结合使用了威廉姆斯分形和ZZ指标两种不同的技术分析方法,以发掘更多的交易机会。
-
-它能够及时判断市场趋势的转变,并设置好的止损止盈条件,有助于把握主要趋势的方向。此外,ZZ指标可以过滤掉部分假突破的情况,避免不必要的损失。
-
-总的来说,这种策略既考虑了趋势判断,也考虑了具体的入场点选择,做到了风险和收益的平衡。
-
-### 策略风险分析
-
-这种策略最大的风险在于分形判断和ZZ指标可能会发出错误的交易信号,导致不必要的亏损。例如,突破阻力线后,价格可能会很快回落,无法持续上涨。
-
-此外,分形的计算方式可能因为时间周期设置不当而判断失误。如果时间周期太短,则会增加假突破的概率。
-
-要降低这些风险,可以适当调整分形的计算参数,也可以通过增加过滤条件来减少错误信号。此外,可以设置较大的止损幅度,以控制单笔损失。
-
-### 策略优化方向
-
-这种策略可以通过以下几个方面来进行进一步优化:
-
-1. 增加动量指标过滤,例如MACD或者布林带指标,可以避免部分假突破。
-
-2. 优化分形参数设置,调整对高低点的计算方式,缩小时间周期,以获得更准确的趋势判断。 
-
-3. 增加机器学习算法判断趋势准确性,利用AI判断力避免人工设置的局限性。
-
-4. 增加自适应止损机制,可以根据市场波动程度来调整止损幅度。
-
-5. 利用深度学习算法来优化整体参数设置。
-
-### 总结
-
-本策略通过威廉姆斯分形理论和ZZ指标的巧妙结合,实现了对市场趋势变化的及时判断和捕捉。它保持了较高的胜率,有望获得长期稳定的超额收益。下一步通过引入更多过滤手段和AI判断力,有望进一步提高策略的稳定性和收益率。
-
-||
 
 ### Overview
 
@@ -106,7 +57,6 @@ This strategy can be further optimized in the following aspects:
 
 By skillfully combining Williams' fractal theory and the ZZ indicator, this strategy achieves timely detection and capturing of changes in market trends. It maintains high win rate and expects to obtain long-term excess returns. Next step by introducing more filters and AI capabilities, it is expected to further improve strategy stability and return rate.
 
-[/trans]
 
 > Strategy Arguments
 

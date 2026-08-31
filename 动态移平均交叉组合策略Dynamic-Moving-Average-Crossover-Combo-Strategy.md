@@ -10,96 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f1a6a411ed45086a23.png)
-[trans]
-## 概述
-
-动态移平均交叉组合策略(Dynamic Moving Average Crossover Combo Strategy)是一个集成了多个技术指标和市场阶段检测的复合交易策略。它动态计算市场的波动性,根据价格与长期移动平均线的距离和波动性判断市场的三个阶段:震荡、趋势和整理。在不同市场阶段,策略采用不同的入市出场规则,同时结合EMA/SMA交叉、MACD和Bollinger Bands等多个指标发出买入和卖出信号。
-
-## 策略原理
-
-### 计算市场波动性
-
-使用ATR(平均真实波动幅度)指标计算最近14天的市场日内波动性。然后用100日简单移动平均线滤波,得到平均波动性。
-
-### 判断市场阶段 
-
-计算价格相对200日简单移动平均线的距离。如果距离超过平均波动性的1.5倍,且方向明确,则判断为趋势行情。如果当前波动性超过平均波动性的1.5倍,则判断为震荡行情。
-
-### EMA/SMA交叉
-
-快速EMA周期为10天,慢速SMA周期为30天。当快速EMA上穿慢速SMA时,产生买入信号。
-
-### MACD
-
-计算12、26、9参数MACD。当MACD柱变为正值时产生买入信号。
-
-### Bollinger Bands
-
-计算20日内的标准差Channel。如果Channel宽度小于自身的20日SMA,则判断为整理期。  
-
-### 入场规则
-
-震荡期:快慢线交叉或MACD柱变正,且收盘价在Bollinger Bands内,则入场做多。
-
-趋势期:快慢线交叉或MACD柱变正则入场做多。  
-
-整理期:快慢线交叉,且收盘价高于Lower Band则入场做多。
-
-### 出场规则  
-
-满足以下条件则出场平仓:MACD连续两根K线为负,且收盘价连续两日下跌。
-
-震荡期:另外当StockRSI进入超买区则出场。  
-
-整理期:另外当价格低于Upper Band则出场。
-
-## 优势分析
-
-这是一个结合市场环境判断的智能交易策略,具有以下优势:
-
-1. 系统化操作,减少主观干预。
-
-2. 结合市场环境调整策略参数,更具适应性。
-
-3. 多指标组合,增加信号确定性。
-
-4. Bollinger Bands自动止损,降低风险。
-
-5. 全方位条件判断,过滤假信号。
-
-6. 动态止损止盈,追踪趋势获利。
-
-## 风险分析
-
-主要风险如下:  
-
-1. 参数设置不当可能导致策略失效。建议优化参数组合。
-
-2. 突发事件造成模型失效。建议及时更新策略逻辑。
-
-3. 交易费用压缩获利空间。建议选择低手续费券商。
-
-4. 多指标组合提高策略复杂度。建议选择核心指标。
-
-## 优化方向  
-
-可以从以下几个维度继续优化:
-
-1. 优化市场环境判断标准,提高准确率。  
-
-2. 增加机器学习模块,实现参数自适应。
-
-3. 结合文本处理判断重大事件风险。 
-
-4. 多市场回测,寻找最佳组合参数。
-
-5. 增加止盈的 trailing stop 策略。
-
-## 总结
-
-动态移平均交叉组合策略是一个多指标智能交易策略。它能够结合市场环境调整参数,实现条件判断式的系统化交易。具有较强的适应性和确定性。但参数设置和新增模块都需要谨慎,避免增加策略复杂性。整体而言,这是一个可行性较强的量化策略思路。
-
-||
 
 ## Overview
 
@@ -189,7 +99,6 @@ Potential directions of optimization:
 
 The Dynamic Moving Average Crossover Combo strategy is an intelligent multi-indicator quantitative trading system. It adjusts parameters dynamically based on market conditions to implement systematic rule-based trading. The strategy is highly adaptive and deterministic. But parameters and additional modules need to be introduced carefully to avoid over complexity. Overall this is a feasible quantitative strategy idea.
 
-[/trans]
 
 
 

@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b610e42659c8185d7e.png)
-[trans]
-## 概述
-
-该策略是基于Stoch RSI指标设计的趋势追踪策略。它结合了RSI和Stoch指标的优点,通过Stoch RSI的交叉来产生交易信号,采用趋势追踪机制,dynamically调整止损和止盈线,实现优化资金管理。
-
-## 策略原理
-
-策略通过计算RSI的Stoch K和D线,当Stoch RSI的K线从低位向上突破20时产生买入信号。随后设置一个以前几根K线最低价为基准的止损位,并随价格上涨dynamically调整止损线。同时设定一个基于最高价的止盈线,在价格达到止盈线时平仓套利。
-
-## 优势分析
-
-该策略结合Stoch RSI指标判断市场趋势和交叉产生信号,避免了单一RSI指标的局限性。同时,趋势追踪机制使止损线可以随价格运行不断上调,避免了过早止损退出的风险,可以持续捕捉趋势行情。此外,RSI指标本身就具有较好的胜率。
-
-## 风险分析
-
-该策略主要依赖Stoch RSI指标判断趋势和交叉产生信号,如果指标本身发出错误信号,将面临一定的风险。此外,在震荡行情中,止损线和止盈线可能被频繁触发,从而影响策略盈利能力。可以通过参数优化降低风险。
-
-## 优化方向
-
-- 优化Stoch RSI的参数,调整K线和D线的平滑速度,降低错误信号概率
-- 优化止损线和止盈线的设置,提高参数稳定性
-- 增加过滤条件,避免在震荡行情中被套
-- 增加仓位管理机制,根据市场情况调整仓位大小
-
-## 总结
-
-本策略整合了Stoch RSI指标的优势,设计了趋势追踪机制,可以有效识别趋势行情, dynamically调整止损止盈增加获利概率。通过参数优化可以进一步增强策略稳定性和跟踪能力。总体来说,该策略可以获利的同时控制风险,值得实盘验证。
-
-||
 
 ## Overview
 
@@ -67,7 +38,6 @@ This strategy relies mainly on the Stoch RSI indicator for trend and crossover s
 
 This strategy integrates the advantages of the Stoch RSI indicator and adopts a trend tracking mechanism to effectively identify trending moves and dynamically adjust stops and targets to improve profit capture probability. Further enhancement in stability and tracking ability could be achieved through parameter optimization. Overall speaking, this strategy allows profits while controlling risks and is worth live testing.
 
-[/trans]
 
 > Strategy Arguments
 

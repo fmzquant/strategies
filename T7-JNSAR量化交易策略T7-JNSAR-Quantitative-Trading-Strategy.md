@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-T7 JNSAR是一种针对NIFTY指数的日内趋势跟踪交易系统。它利用变化的JNSAR线产生买卖信号,属于趋势追踪类策略。该策略原创者为印度交易员Illango,我对其进行了优化改进并编程实现。
-
-## 策略原理 
-
-- 计算JNSAR线:利用5日高、低、收盘价的指数移动平均计算出JNSAR值,绘制成线图。
-
-- 产生信号:当日收盘价高于JNSAR线时产生做多信号;当日收盘价低于JNSAR线时产生做空信号。
-
-- 入场:在产生信号的第二天开盘价入场。 
-
-- 出场:反向信号产生时平仓。
-
-- 只交易NIFTY指数,不交易个股。
-
-- 无论盈亏都交易每一个信号。
-
-## 优势分析
-
-- JNSAR线能较好地描绘趋势和关键支撑阻力。
-
-- 仅基于客观指标产生信号,避免主观情绪影响。
-
-- 利用趋势追踪来获利,历史回测收益较好。
-
-- 可通过期货或期权来交易,交易成本较低。
-
-- 规则简单清晰,容易实现自动交易。
-
-## 风险分析
-
-- 作为趋势跟踪策略,在盘整市场中存在较多止损的可能。
-
-- 无法有效判断趋势结束点,可能出现超买超卖现象。
-
-- SIGNAL产生滞后,可能出现假突破导致亏损。
-
-- 需承受较大的回撤和连续亏损的风险。
-
-- 仅适用于NIFTY,不适用于其他品种。
-
-- 需要较强的心理素质持续交易所有信号。
-
-## 优化方向 
-
-- 测试不同参数找寻最佳JNSAR线设置
-
-- 添加止损机制来控制风险
-
-- 结合其他指标判断趋势终结点
-
-- 开发动态仓位管理方法
-
-- 优化信号产生逻辑
-
-- 尝试应用机器学习模型
-
-## 总结
-
-T7 JNSAR为NIFTY提供了简单有效的趋势跟踪策略。遵循交易规则,控制风险,心态持续交易所有信号,可以获得长期正收益。通过参数优化、止损管理等方法可以进一步提高策略的健壮性。
-
-|| 
 
 ## Overview
 
@@ -136,7 +71,6 @@ T7 JNSAR is a trend following day trading system for NIFTY index. It generates b
 ## Summary
 
 T7 JNSAR provides a simple and effective trend following strategy for NIFTY. By following the trading rules, managing risks and trading all signals with persistence, it can achieve long-term positive results. Further enhancements through parameter optimization, stop loss management etc. can improve its robustness.
-[/trans]
 
 > Strategy Arguments
 

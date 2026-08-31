@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11093890092d3ace955.png)
-[trans]
-
-### 概述
-
-本策略综合运用MACD、RSI、ADX等多个动量技术指标,识别价格反转信号,采用反向策略,在强势趋势逆转时进行反向入场。策略同时设置止损和止盈,以锁定利润和控制风险。
-
-### 策略原理
-
-本策略首先结合对比MACD指标的快慢均线是否发生金叉死叉来判断价格趋势;然后结合RSI指标来过滤假突破,确保真正价格反转发生后才产生交易信号;最后利用ADX指标再次验证价格是否进入趋势状态。只有当以上多个条件同时满足时,才会产生买入或卖出信号。
-
-具体来说,当MACD快线上穿慢线,RSI高于50并回升,ADX高于20时为买入信号;当MACD快线下穿慢线,RSI低于50并回落,ADX高于20时为卖出信号。
-
-### 优势分析
-
-本策略最大的优势在于利用多种指标进行组合,能有效过滤震荡市和误差信号,真正锁定趋势反转点,从而获得较高的胜率。另外设置止损止盈以锁定利润和控制风险,可以有效抵御意外事件的影响。
-
-### 风险分析
-
-本策略最大的风险在于趋势反转判断错误,比如价格出现深度回调从而造成误判。此外,反转后新的趋势可能持续性不足以获得足够利润。
-
-解决方法是进一步优化参数,调整止损幅度,或结合更多辅助指标进行信号过滤。
-
-### 优化方向
-
-本策略可以通过以下几个方向进行进一步优化:
-
-1. 优化MACD、RSI参数组合,提高价格反转判断准确性
-
-2. 增加更多指标过滤,如KD、BOLL等,形成指标环绕效应
-
-3. 动态调整止损幅度,不同市场情况下作出调整
-
-4. 根据反转后的实际走势,实时修改止盈位置
-
-### 总结
-
-本策略综合运用多种动量指标识别潜在的价格反转机会。通过参数优化,组合更多辅助指标,动态调整止损止盈策略,可以进一步提高策略的稳定性和可靠性,锁定市场提供的各类交易机会。
-
-|| 
 
 ### Overview
 
@@ -86,7 +47,6 @@ This strategy can be further optimized in the following directions:
 
 This strategy combines multiple momentum indicators to identify potential price reversal opportunities. Through parameter optimization, incorporating more auxiliary indicators, dynamically adjusting stop loss and take profit strategies, the stability and reliability of the strategy can be further improved to lock the various trading opportunities provided by the markets.
 
-[/trans]
 
 > Strategy Arguments
 

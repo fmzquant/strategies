@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/136c97400e475f5e645.png)
 
-[trans]
-#### 概述
-该策略基于MACD指标,利用MACD指标中的MACD线和Signal线的交叉来判断交易信号。当MACD线上穿Signal线时产生做多信号,当MACD线下穿Signal线时产生做空信号。同时使用前一根K线的最低价作为多头止损位,前一根K线的最高价作为空头止损位。止盈位设置为4倍ATR(平均真实波幅)。
-
-#### 策略原理
-MACD指标由DIF线和DEA线组成,DIF线是快速均线和慢速均线的差值,DEA线是DIF线的移动平均线。当DIF线上穿DEA线时,表明股价已经脱离超卖区域并开始向上,产生做多信号;当DIF线下穿DEA线时,表明股价已经脱离超买区域并开始向下,产生做空信号。同时,策略使用前一根K线的最低价和最高价分别作为多头止损位和空头止损位,以控制风险。止盈位设置为4倍ATR,以获取更多利润。
-
-#### 优势分析
-1. MACD指标能够较好地捕捉股价的趋势变化,特别是中长期趋势。
-2. 止损位的设置能够有效控制风险,避免单笔交易的损失过大。
-3. 止盈位的设置能够让利润充分扩大,提高策略收益。
-4. 代码逻辑清晰,容易理解和实现。
-
-#### 风险分析
-1. MACD指标有滞后性,可能错过最佳建仓时机。
-2. 止损位的设置相对简单,可能无法应对某些极端行情。
-3. 止盈位的设置可能导致错过更大的利润空间。
-4. 缺乏仓位管理,风险控制能力有限。
-
-#### 优化方向 
-1. 可以考虑加入其他指标,如RSI、布林带等,以提高信号准确性。
-2. 可以优化止损位的设置,如使用ATR或百分比止损,以更好地控制风险。
-3. 可以优化止盈位的设置,如使用移动止盈或部分止盈,以获取更多利润。
-4. 可以加入仓位管理,如基于风险比例调整仓位大小,以提高风险控制能力。
-
-#### 总结
-该策略基于MACD指标,通过MACD线和Signal线的交叉来判断交易信号,同时使用前一根K线的最低价和最高价作为止损位,止盈位设置为4倍ATR。策略逻辑清晰,容易实现,能够较好地捕捉股价趋势。但是,该策略也存在一些风险,如指标滞后、止损位设置简单等。未来可以考虑加入其他指标、优化止损止盈位设置、加入仓位管理等方面进行优化,以提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy is based on the MACD indicator and uses the crossover of the MACD line and Signal line to determine trading signals. When the MACD line crosses above the Signal line, it generates a long signal, and when the MACD line crosses below the Signal line, it generates a short signal. The strategy also uses the lowest price of the previous candle as the stop loss for long positions and the highest price of the previous candle as the stop loss for short positions. The take profit is set at 4 times the ATR (Average True Range).
@@ -67,7 +38,6 @@ The MACD indicator consists of the DIF line and the DEA line. The DIF line is th
 
 #### Summary
 This strategy is based on the MACD indicator and uses the crossover of the MACD line and Signal line to determine trading signals. It also uses the lowest price and highest price of the previous candle as stop loss, and sets the take profit at 4 times the ATR. The strategy logic is clear and easy to implement, and can capture price trends well. However, the strategy also has some risks, such as indicator lag and simple stop loss setting. In the future, other indicators can be added, stop loss and take profit settings can be optimized, and position management can be added to improve the robustness and profitability of the strategy.
-[/trans]
 
 
 

@@ -11,54 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/dc75ee7169f31da13f.png)
-[trans]
-
-## 概述
-
-该策略结合RSI指标和加权移动平均线,实现趋势跟踪交易。当RSI高于60时看涨,当RSI低于40时看空,同时要求移动平均线满足趋势条件。采用40周期的RSI作为趋势跟踪指标。加权移动平均线通过不同权重降低短期波动的影响。策略同时设置止损和移动止盈来控制风险。
-
-## 策略原理
-
-该策略首先计算RSI和加权移动平均线。RSI长度为20周期,加权移动平均线长度为20,权重设置较大以减少短期波动的影响。当RSI大于60并且加权移动平均线的变化率小于-1%时,执行做多操作;当RSI小于40并且加权移动平均线的变化率大于1%时,执行做空操作。
-
-做多做空后,会同时设置止损单和移动止盈单。止损距离当前价格3倍ATR;移动止盈初激活价格距离当前价格4倍ATR,之后以3%的幅度进行移动。当价格触及止损或移动止盈激活价时,会关闭对应的头寸。
-
-该策略还加入资金管理规则,通过固定比例法调整头寸。每当盈利或亏损达到固定金额时,就增加或减少固定数量的交易量。
-
-## 优势分析
-
-- 使用RSI指标进行趋势判断,能够有效跟踪趋势
-- 加权移动平均线通过不同权重降低短期波动的影响,避免被套
-- 采用移动止盈,让利润最大化
-- 固定比例法资金管理有效控制风险
-
-该策略整体优势在于能够跟踪趋势,同时采取止损和移动止盈措施来控制风险,从而在强势行情中获得较好收益。
-
-## 风险分析
-
-- RSI指标发出错误信号可能导致不必要的交易
-- 突破止损或移动止盈价格时会被迫止损,无法持续跟踪趋势
-- 资金管理规则可能过于激进,带来较大亏损
-
-该策略主要风险在于RSI指标的可靠性以及止损移动止盈设置是否合理。如果参数设置不当,可能导致不必要平仓或超出承受能力的亏损。此外,突破止损或止盈价格时也可能被迫止损,失去继续跟踪趋势的机会。
-
-可以考虑优化RSI参数,或改用其他指标辅助判断。调整止损移动止盈参数以适应不同品种和波动情况。最后要审慎设置资金管理规则,不能过于激进以避免超出风险承受能力。
-
-## 优化方向
-
-- 尝试其他指标结合RSI进行信号确认,如KD、MACD等
-- 根据不同品种特点和波动范围优化止损移动止盈参数
-- 尝试其他资金管理方法,如固定量交易、 Kelly公式等
-- 添加开仓条件,如突破布林线、RSI背离等
-- 考虑加入离场价格,在强势趋势中追加仓位
-
-该策略可以从多个方面进行优化。首先是寻找能够辅助或确认RSI指标的其他技术指标,提高信号可靠性。其次,根据具体品种特点优化止损移动止盈参数非常关键。可以测试不同参数在历史数据上的收益效果。资金管理也可以调整为其他类型方法。最后,开仓和加仓条件都可以进一步优化,在趋势较强时适当追加仓位。
-
-## 总结
-
-该RSI趋势跟踪策略整体思路清晰,核心在于使用RSI判断趋势方向,并辅助以加权移动平均线提高判断准确性。策略优势在于能够跟踪趋势并最大限度锁定利润,同时也设置了止损和资金管理来控制风险。但RSI指标可靠性较低以及参数设置都存在可优化空间。我们可以从优化信号指标、止损移动止盈参数以及资金管理方法等方面入手,使策略更适合不同品种并获得更佳效果。[/trans]
-
-||
 
 
 ## Overview
@@ -106,7 +58,6 @@ There are many aspects to optimize. First is identifying other indicators to sup
 
 The RSI trend following strategy has clear logic, using RSI for trend direction and weighted MA for confirmation. Its strength lies in trend trading, maximizing profits with stops/money management controlling risks. But RSI reliability and parameter optimization need improvement. We can look into enhancing signal indicators, stop/trailing parameters, money management methods etc to make the strategy more robust across different products.
 
-[/trans]
 
 > Strategy Arguments
 

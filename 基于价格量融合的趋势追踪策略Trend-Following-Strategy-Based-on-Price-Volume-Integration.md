@@ -10,24 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略名称为“基于价格量融合的趋势追踪策略”。该策略同时考量价格和交易量指标,判断趋势方向,以发挥量价合力的交易信号效果。
-
-策略的交易逻辑如下:
-
-首先计算价格的5日移动平均线和交易量的15日移动平均线。
-
-当价格的5日移动平均线上涨且交易量的15日移动平均线也上涨时,认为量价合力上攻,产生买入信号。
-
-当价格的5日移动平均线下跌,或交易量的15日移动平均线下跌,则平掉多单。
-
-该策略的优势在于同时结合价格和交易量变化判断趋势方向。只有当两者同向看涨时才进行买入,可以有效过滤假信号。
-
-但移动平均线参数需要优化调整,时间周期也需要匹配不同品种的特点。止损策略同样重要,可以减少单笔亏损的风险。
-
-总体来说,合理运用价格和交易量指标的集成,可以提高趋势交易策略的效果。但交易者还需关注更多市场信息,保持灵活性,根据实际情况调整策略的参数。
-
-||
 
 
 This strategy is named “Trend Following Strategy Based on Price-Volume Integration”. It considers both price and volume indicators to determine trend direction and generate signals aligned with price-volume forces.
@@ -45,7 +27,6 @@ The advantage of this strategy is jointly using price and volume changes to judg
 But parameters of moving averages need optimization and tuning to match different products' characteristics. Stop loss is also crucial to reduce single trade loss risks.
 
 In conclusion, properly integrating price and volume indicators can improve trend trading strategy performance. But traders still need to watch more market information, maintaining flexibility to adjust strategy parameters based on actual conditions.
-[/trans]
 
 
 

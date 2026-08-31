@@ -10,76 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a6712cd272dc701d0d.png)
-[trans]
-
-
-## 概述
-
-本策略综合运用多种指标识别趋势方向,采用趋势追踪方式,在中短线上捕捉趋势机会。策略专门为追踪趋势而设计,旨在增加胜率,降低回撤。
-
-## 策略原理
-
-1. 使用WVAP指标判断价格比例;
-
-2. RSI指标判断多空动量; 
-
-3. QQE指标识别价格突破;
-
-4. ADX指标判断趋势力度;
-
-5. Coral Trend Indicator判断基本面走势;
-
-6. LSMA指标辅助判断趋势;
-
-7. 结合多种指标信号发出交易信号。
-
-该策略主要依靠RSI,QQE,ADX等多个指标判断趋势方向和力度,并以Coral Trend Indicator的曲线作为基本面趋势判断标准。当RSI等指标发出买入信号时,若Coral Trend Indicator也显示上升曲线,则高概率符合趋势向上,则策略会选择买入。WVAP等指标主要用来判断价位是否合理,避免买入高点。
-
-## 策略优势
-
-1. 多指标组合,提高判断准确性;
-
-2. 强调趋势追踪,增加盈利概率;
-
-3. 采用突破思路,筛选 Trading Range 市场;
-
-4. 结合基本面指标,避免逆势交易;
-
-5. 交易时间和手数设置合理,降低风险;
-
-6. 策略思路清晰,容易理解与优化。
-
-该策略最大优势是多指标组合判断,能在一定程度上减少单一指标误判的概率,提高判断准确性。同时强调趋势追踪与突破思路,对于筛选靠谱中短线机会具有帮助。此外,策略加入基本面指标,能避免逆势操作。这些设计都提高了策略的稳定性和盈利概率。
-
-## 策略风险
-
-1. 多空判断存在时滞,可能错过最佳入场时机; 
-
-2. 回撤控制并不完善,存在较大回撤风险;
-
-3. 当基本面发生转折时,策略可能错过信号;
-
-4. 未考虑交易成本,实际应用时收益存在下滑风险。
-
-该策略最大的风险在于多指标组合判断可能存在时滞,导致错过最佳入场时机,从而影响获利空间。此外,策略的回撤控制并不理想,存在较大回撤风险。当市场基本面发生转折而指标还未反映时,也容易形成损失。实际应用时,交易成本也会对收益造成一定影响。
-
-## 策略优化方向
-
-1. 加入止损策略,优化回撤控制;
-
-2. 优化参数设置,缩短指标延迟;
-
-3. 增加基本面指标应用,提高准确性; 
-
-4. 结合机器学习算法,实现动态参数优化。
-
-该策略的优化重点应考虑回撤控制,可以加入移动止损策略来锁定利润,降低回撤。同时可以优化参数设定,缩短指标延迟,增强策略对市场变化的敏感性。此外,可以进一步增加基本面判断指标,提高准确性。如果能运用机器学习方法实现参数动态优化,也将大幅提升策略稳定性。
-
-## 总结
-
-本策略综合多种指标判断趋势方向,采用趋势追踪思路设计,旨在提高判断准确性,增加盈利概率。策略具有指标组合判断、强调趋势追踪、结合基本面等优势,但也存在误判时滞、回撤控制不足等问题。未来可通过优化参数设定、完善止损策略、增加基本面指标等方式进行改进,使策略在实际应用中达到更好效果。
-
-||
 
 ## Overview
 
@@ -147,7 +77,6 @@ Priorities for optimization include better drawdown control via stop loss to loc
 
 This strategy combines multiple indicators to determine trend direction and uses a trend tracking approach in its design to improve accuracy and profitability. Its strengths include indicator combos, emphasis on trend tracking, and incorporation of fundamental factors. But issues like judgment delay, inadequate drawdown control remain. Future improvements could come from parameter optimization, stop loss integration, more fundamental indicators, and machine learning for dynamic optimization, to make the strategy more effective in practice.
 
-[/trans]
 
 > Strategy Arguments
 

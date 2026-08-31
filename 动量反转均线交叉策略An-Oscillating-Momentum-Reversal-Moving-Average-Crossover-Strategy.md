@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/135f8dba53251c93515.png)
-[trans]
-
-## 概述
-
-本策略是一个基于MACD指标的动量反转交易策略。它通过计算快速移动平均线和慢速移动平均线的差值,生成MACD指标。当MACD指标由正转负时,产生卖出信号;当MACD指标由负转正时,产生买入信号。该策略同时结合MACD指标的信号线平滑处理,过滤掉部分噪音交易信号。
-
-## 策略原理
-
-本策略的核心指标是MACD,它由快速移动平均线、慢速移动平均线和信号线组成。首先计算快速EMA和慢速EMA,快速EMA参数设置为12天,慢速EMA参数设置为26天,然后计算两者的差值作为MACD指标。MACD指标通过动量概念反映股票价格变化趋势,当快速EMA上涨幅度大于慢速EMA时,说明股票处于上涨趋势,MACD为正;反之,股票处于下跌趋势,MACD为负。
-
-为了过滤噪音,本策略引入信号线指标,对MACD进行额外的平滑处理。信号线参数设置为9日EMA。最后,计算MACD和信号线的差值作为交易信号。当差值由正变负时,产生卖出信号;当差值由负变正时,产生买入信号。
-
-## 优势分析
-
-本策略主要有以下优势:
-
-1. 使用MACD指标判断股票价格反转点,能捕捉到股票价格短期反转机会。
-
-2. 结合信号线平滑处理,过滤掉部分噪音交易信号,减少假信号。
-
-3. 策略参数自由设定,交易者可根据实际情况调整参数,灵活应对市场变化。
-
-4. 计算逻辑简单清晰,容易理解实现,适合初学者学习研究。
-
-5. 指标和信号组合多样,策略优化空间大,有很强的拓展性。
-
-## 风险分析
-
-本策略也存在一定的风险:
-
-1. 由于追踪股价短期反转,可能增加交易频率和交易成本。
-
-2. MACD指标在股价长期单边上涨或下跌过程中,容易产生假信号。
-
-3. 如果参数不当,信号产生滞后,可能错过最佳入场点位。
-
-4. 该策略较为简单,在复杂的市场条件下交易效果会打折扣。
-
-针对上述风险,可通过以下方式进行改进:
-
-1. 优化参数,降低交易频率。例如增大信号线周期参数。
-
-2. 增加过滤条件,避免在长期趋势中套牢。例如结合其他跟踪指标判断长短期趋势。 
-
-3. 使用限价单,追踪最优价格。
-
-4. 加入更多因素判断市场状态,避免在异常市场交易。
-
-## 优化方向  
-
-本策略可从以下方面进行优化:
-
-1. 优化MACD参数和信号线参数,寻找最佳参数组合。
-
-2. 增加其他辅助指标判断长短期趋势,避免逆势交易。例如加入移动平均线指标、Bollinger Bands指标等。
-
-3. 结合交易量指标,例如能量潮指标,避免虚假突破。
-
-4. 根据不同股票特点分组设定参数,使策略更具适应性。
-
-5. 增加止损和止盈价格设定,控制单笔亏损和盈利水平。
-
-6. 评估股票质量,例如财务指标、评级变化等,选择优质股票池。
-
-这些优化举措可以增强策略的稳定性、赢率和盈利水平。同时也为策略的持续开发和改进奠定基础。
-
-## 总结
-
-本策略是一个典型的短期反转交易策略。它使用简单清晰的MACD指标反映股票动量变化,并辅以信号线确定具体的入场点位。在合适的参数设定下,能够抓住短期价格反转的机会,获取超额收益。
-
-当然,任何单一指标和简单策略都难以完美适应各种复杂的市场情况。投资者应该注意风险,根据自身情况和风险偏好选择策略,同时也要持续关注市场行情、优化策略参数和交易规则。只有不断学习、不断完善,才能获得长期稳定的投资回报。
-
-|| 
 
 ## Overview
 
@@ -154,7 +81,6 @@ This is a typical short-term reversal trading strategy. It uses simple and clear
 
 Of course, any single indicator and simple strategy can hardly perfectly adapt to various complex market conditions. Investors should pay attention to risks and choose strategies according to their own conditions and risk appetite. Meanwhile, they should also keep an eye on market conditions, optimize strategy parameters and trading rules. Only through continuous learning and improvement can one obtain long-term stable investment returns.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10dbbd8b88ebe5ae02a.png)
 
-[trans]
-
-## 概述
-
-双指标略逆反转交易策略是一种结合动量指标和趋势指标的短线交易策略。该策略首先利用一个反转型指标生成交易信号,然后与一个趋势型指标进行组合,从而产生更可靠的交易信号。该策略旨在捕捉短期价格反转,在中短线趋势背景下进行交易。
-
-## 原理
-
-该策略由两个子策略组成。
-
-第一个子策略是123反转策略。它监测价格是否出现了高点回落的形态。具体来说,它会在以下情况产生买入信号:前两天收盘价下跌,当日收盘价高于前一日收盘价,且Stochastic慢线低于50。它会在以下情况产生卖出信号:前两天收盘价上涨,当日收盘价低于前一日收盘价,且Stochastic快线高于50。
-
-第二个子策略是ergodic随机指标(EMDI)。它是一个趋势型指标,识别中长线趋势的方向。它结合了移动平均线和MACD的思想,利用一次性指数平滑移动平均线和MACD的快慢线交叉产生买入和卖出信号。 
-
-该策略将两个子策略的信号进行组合。只有当两个子策略产生一致信号时,该策略才会打开头寸。也就是说,它只在短期略逆反转的同时存在较强的中长线趋势支持时进行交易。
-
-## 优势
-
-- 组合多个指标,可以有效过滤假信号,提高信号的可靠性。
-- 反转策略与趋势策略的组合,既可以捕捉短期机会,也避免逆势交易。
-- 采用Stochastic指标的参数设置较为稳健,可以减少whipsaws。 
-- Ergodic指标平滑参数设置合理,可以较好识别趋势。
-- 该策略交易频率适中,既可以获得较多交易机会,也不会过于频繁交易。
-- 适用于中短线交易,时间周期灵活。
-
-## 风险
-
-- 反转信号可能存在误报,需要趋势指标进行验证。
-- 交易频率不高,可能错过部分短线机会。
-- 反转后可能再次反转,需要及时止损。  
-- 参数设置不当可能对交易结果产生较大影响。
-- 过于依赖技术指标,存在模型过拟合风险。
-
-## 优化方向 
-
-- 可以测试不同参数设置,优化子策略的表现。
-- 可以引入更多指标,构建多因子模型。  
-- 可以结合机器学习方法,实现动态参数优化。
-- 可以研究不同的止损方式,以控制风险。
-- 可以研究机会成本,调整策略的交易频率。
-- 可以在不同市场环境中测试策略健壮性。
-
-## 总结
-
-双指标略逆反转交易策略试图通过反转和趋势指标的组合,在中短线上捕捉价格短期反转机会。它可以有效过滤误报信号,在一定程度上控制交易风险。但是该策略也存在一些问题,比如可能错过短期机会、参数敏感以及过拟合风险等。通过引入更多指标、优化参数设置、调整交易频率以及在不同市场中测试,可以进一步增强该策略的稳定性和盈利能力。总体来说,双指标略逆反转交易策略是一个简单实用的量化策略思路,值得探索和应用。
-
-|| 
 
 ## Overview
 
@@ -117,7 +70,6 @@ The strategy combines the signals from the two sub-strategies. It will only open
 
 The Dual Indicator Slight Reversal Trading Strategy attempts to capture short-term reversal opportunities on medium-term timeframes using combinations of reversal and trend-following indicators. It can effectively filter false signals and control risks to some extent. However, issues like missing short-term opportunities, parameter sensitivity, and overfitting risks remain. Further enhancing stability and profitability can be achieved by incorporating more indicators, optimizing parameters, adjusting trading frequency, and testing across markets. Overall, the strategy represents a simple and practical quantitative approach worth exploring and applying.
 
-[/trans]
 
 > Strategy Arguments
 

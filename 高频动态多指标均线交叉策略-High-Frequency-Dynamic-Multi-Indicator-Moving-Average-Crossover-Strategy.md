@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10cc1c2de66465afa23.png)
 
-[trans]
-#### 概述
-本策略是一个基于多重技术指标的高频交易系统，采用5分钟时间框架，结合了均线系统、动量指标和成交量分析。该策略通过动态调整的方式来适应市场波动，利用多重信号确认来提高交易的准确性和可靠性。策略的核心在于通过多维度的技术指标组合来捕捉短期市场趋势，同时运用动态止损来控制风险。
-
-#### 策略原理
-策略采用双均线系统(9周期和21周期EMA)作为主要趋势判断工具，并结合RSI指标进行动量确认。当价格位于双均线之上且RSI处于40-65区间时，系统会寻找做多机会；当价格位于双均线之下且RSI处于35-60区间时，系统会寻找做空机会。同时，策略引入了成交量确认机制，要求当前成交量需要大于20周期移动平均成交量的1.2倍。VWAP的使用则进一步确保了交易方向与日内主流趋势保持一致。
-
-#### 策略优势
-1. 多重信号确认机制显著提高了交易的可靠性
-2. 动态止盈止损设置能够适应不同市场环境
-3. 采用较为保守的RSI阈值，避免在极端区域交易
-4. 成交量确认机制有效过滤了虚假信号
-5. VWAP的使用帮助确保交易方向与主流资金一致
-6. 快速响应的均线系统适合捕捉短期市场机会
-
-#### 策略风险
-1. 在横盘震荡市场可能产生频繁的假信号
-2. 多重条件的限制可能导致错过部分交易机会
-3. 高频交易可能面临较高的交易成本
-4. 在市场快速转向时可能反应较慢
-5. 对行情数据的实时性要求较高
-
-#### 策略优化方向
-1. 引入自适应的参数调整机制，使策略能够根据市场状态动态调整指标参数
-2. 增加市场环境识别模块，在不同市场条件下采用不同的交易策略
-3. 优化成交量过滤条件，可考虑使用相对成交量或者成交量剖面分析
-4. 完善止损机制，可以考虑加入追踪止损功能
-5. 增加交易时间过滤，避开波动较大的开盘和收盘时段
-
-#### 总结
-该策略通过多重技术指标的组合使用，构建了一个相对完整的交易系统。策略的优势在于其多维度的信号确认机制和动态的风险控制方法。虽然存在一些潜在风险，但通过合理的参数优化和风险管理，策略仍具有较好的应用价值。建议交易者在实盘使用前进行充分的回测，并根据具体市场情况进行适当的参数调整。
-
-|| 
 
 #### Overview
 This strategy is a high-frequency trading system based on multiple technical indicators, utilizing a 5-minute timeframe and combining moving averages, momentum indicators, and volume analysis. The strategy adapts to market volatility through dynamic adjustments and uses multiple signal confirmations to improve trading accuracy and reliability. The core concept lies in capturing short-term market trends through a multi-dimensional combination of technical indicators while employing dynamic stop-loss mechanisms for risk control.
@@ -75,7 +42,6 @@ The strategy employs a dual moving average system (9-period and 21-period EMAs) 
 
 #### Summary
 This strategy constructs a relatively complete trading system through the combination of multiple technical indicators. Its strengths lie in its multi-dimensional signal confirmation mechanism and dynamic risk control methods. While some potential risks exist, the strategy maintains good practical value through proper parameter optimization and risk management. Traders are advised to conduct thorough backtesting before live implementation and adjust parameters according to specific market conditions.
-[/trans]
 
 
 

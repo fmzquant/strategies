@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17ce5841e6fec85846f.png)
-[trans]
-## 概述
-
-动态回归通道策略是一种利用线性回归分析价格趋势,并结合动态止损来实现趋势跟踪的量化交易策略。该策略运用线性回归绘制价格通道,判断价格突破通道的信号,发出买入和卖出指令。同时,策略会跟踪价格实时更新止损位置,锁定利润。
-
-## 策略原理
-
-该策略首先计算价格的线性回归曲线,判断价格是否突破上行或下行回归通道。当价格超过通道上轨时,产生买入信号;当价格跌破通道下轨时,产生卖出信号。 
-
-在入市后,策略会实时跟踪价格突破止损均线的情况。如果是做多订单,价格跌破止损均线,会发出止损卖出指令;如果是做空订单,价格超过止损均线,会发出止损买入指令。这样可以锁定利润,控制风险。
-
-需要注意的是,如果价格重新突破通道实施反向操作,策略会立即平仓原有头寸,改为反向交易。
-
-## 优势分析
-
-该策略结合趋势和反转交易思路,能够顺应价格总体走势,同时抓住短期调整机会。实时更新的止损策略也可以有效控制风险,是一种较为均衡的交易方法。
-
-相比简单的移动均线策略,动态回归通道策略对价格变化更为敏感,可以减少误交易。此外,该策略仅在价格突破通道上下轨时出手,有利于避免无序的激进交易。
-
-## 风险分析
-
-该策略主要面临回归曲线拟合不精确带来的风险。如果回归通道范围设定不当,过于宽泛,会增加无效交易的概率。过于窄小的通道则会错过交易机会。
-
-此外,止损位置的设定也很关键。止损过于靠近,容易被短期价格波动触发;而过于宽松的止损无法起到风险控制的效果。需要根据不同品种来调整参数。
-
-## 优化方向
-
-可以考虑根据不同周期或品种自动优化参数,使回归通道和止损线更贴合价格趋势。例如可以结合机器学习算法来训练最优参数。
-
-另一方面,可以尝试不同类型的回归方法,如多项式回归、局部加权回归等,使拟合效果更好。或者结合多个回归指标构建交易规则,提高策略稳定性。
-
-## 总结
-
-动态回归通道策略综合运用了趋势和反转分析方法,在顺应价格总体走势的同时,抓住短期调整机会进行交易。关键的回归通道和止损位置设定对策略效果有重要影响。通过参数优化和模型迭代,可以进一步完善该交易策略。
-
-||
 
 ## Overview
 
@@ -81,7 +45,6 @@ Alternatively, different types of regression such as polynomial regression and l
 
 The Dynamic Regression Channel Strategy skillfully utilizes both trend following and mean reversion techniques, riding the overall price trend while capturing short-term reversals. Proper tuning of the key regression channel and stop loss parameters is vital to strategy performance. Further refinements can be made through parameter optimization and model iteration.
 
-[/trans]
 
 > Strategy Arguments
 

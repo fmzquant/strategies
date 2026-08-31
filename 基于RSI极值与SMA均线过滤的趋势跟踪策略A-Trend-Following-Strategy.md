@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/af1ac74b0f6970576d.png)
 
-[trans]
-
-### 概述
-
-本策略结合Relative Strength Index(RSI)指标的极值以及Simple Moving Average(SMA)均线的过滤,实现了对趋势的跟踪。当RSI达到超买或超卖的极值时,结合SMA均线的方向判断做多做空方向。该策略适用于美股指数、欧洲指数、亚洲指数以及黄金白银等品种,通过简单的RSI与SMA判断规则,实现了对趋势的捕捉。
-
-### 策略原理  
-
-1. 计算RSI指标值,设置超买阈值上限为65,超卖阈值下限为45。
-2. 计算200日SMA均线,判断趋势方向。
-3. 当RSI低于45(超卖)且价格高于SMA时,做多;当RSI高于65(超买)且价格低于SMA时,做空。
-4. 当RSI高于75(强超买)且价格高于SMA时,平多单;当RSI低于25(强超卖)且价格低于SMA时,平空单。
-
-该策略通过RSI的超买超卖范围判断入场时机,再结合SMA的趋势过滤,实现了对趋势的有效捕捉。RSI的极值表明价格可能反转,而SMA的方向判断确保了交易方向与趋势一致。两者结合使用,既保证了交易合理,也提高了胜率。
-
-### 策略优势
-
-1. 策略思路简单清晰,容易理解掌握。
-2. 基于RSI和SMA两个广为人知的指标,易于操作。
-3. RSI极值表明可能反转点,SMA过滤确保交易方向正确。
-4. 参数设置合理,避免了过度交易。
-5. 可广泛适用于股指、商品等多个品种。
-6. 可在趋势中捕捉较大幅度的价格波动。
-
-相比单一使用RSI指标,该策略增加了SMA的趋势判断,避免盲目做多做空。相比单一使用SMA系统,该策略在SMA方向的基础上,利用RSI极值进场,提高了选时的效率。整体来说,该策略集两者优点于一体,是一种非常实用的趋势跟踪策略。
-
-### 风险及解决
-
-1. SMA均线产生死叉时,存在趋势反转的风险。解决方法是适当缩短SMA周期,增加对趋势变化的敏感性。
-
-2. RSI出现背离时,存在错过交易机会的风险。解决方法是结合其他指标如MACD判断异动,防止背离。 
-
-3. 震荡行情中,RSI和SMA均可能产生错误信号。解决方法是在震荡市检测到后,暂停策略交易。
-
-4. 参数设置不当可能导致过度交易或漏买漏卖。解决方法是优化参数,寻找最佳参数组合。
-
-5. 单一品种测试不足以评估策略效果,需要多品种回测验证。
-
-6. 回测不等于实盘,实盘中需控制好资金管理和风险管理。
-
-### 优化方向
-
-1. 优化RSI参数,寻找不同品种的最佳RSI周期参数。
-
-2. 优化SMA周期参数,集成多组SMA均线。
-
-3. 增加止损机制,提高风险控制能力。 
-
-4. 增加其他指标判断,实现多因子验证。
-
-5. 结合波动率指标,改进入场节奏。
-
-6. 开发参数自适应系统,实现动态参数优化。
-
-7. 测试不同资金管理方式,找出最优资金管理。
-
-8. 根据不同市场条件创建交易策略集,实现策略集成。
-
-### 总结
-
-该RSI极值与SMA过滤策略,集两者之长,通过简单的指标判断实现了趋势跟踪。策略思路清晰易懂,参数设置合理,可广泛适用于多种品种。相比单一RSI和SMA策略,该策略显著提高了选时效率和胜率。但策略也存在一定改进空间,可通过参数优化、止损机制等方法进一步增强策略的稳健性和适应性。总体来说,该策略为趋势交易者提供了一个非常实用和有效的交易工具。
-
-|| 
 
 ### Overview
 
@@ -143,7 +80,6 @@ Compared to RSI alone, the strategy adds SMA trend filter to avoid blind long/sh
 
 The RSI extremes with SMA filter strategy combines the strengths of both for effective trend following. The logic is clear and parameters solid. It works across multiple products to significantly improve timing efficiency and win rate compared to RSI or SMA systems alone. There is room for improvements like parameter optimization and stop loss to further enhance robustness and adaptiveness. Overall, it provides trend traders with a very useful and effective tool.
 
-[/trans]
 
 > Strategy Arguments
 

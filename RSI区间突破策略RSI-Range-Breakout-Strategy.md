@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-RSI区间突破策略是一种典型的趋势跟踪策略。它使用相对强弱指数(RSI)作为主要的技术指标,在RSI处于超买或超卖状态时,寻找突破进入区间的机会建立仓位,实现跟踪趋势运行的目的。
-
-## 策略原理
-
-该策略主要依靠RSI指标判断市场的超买超卖状态。RSI指标的计算公式是:RSI=(上涨平均数值/上涨平均数值+下跌平均数值)×100。其中,上涨平均数值是过去N天内收盘涨幅的简单移动平均,下跌平均数值是过去N天内收盘跌幅的简单移动平均。
-
-当RSI大于设定的超买线(默认80)时,表示市场处于超买状态;当RSI小于设定的超卖区间(默认35)时,表示市场处于超卖区间。策略在RSI向下突破超买线时寻找做空机会;在RSI向上突破超卖区间时,寻找做多机会。
-
-具体来说,策略通过两个SMA均线判断RSI指标的趋势。当快线从下向上突破慢线,同时RSI突破超卖区间时,做多;当快线从上向下突破慢线,同时RSI突破超买线时,做空。策略还设定了止损线和止盈线来控制风险。
-
-## 策略优势
-
-- 利用RSI指标判断市场超买超卖状态,具有一定的趋势判断能力
-- 结合双SMA均线,可避免RSI指标震荡造成的假突破
-- 设定止损止盈,可控制单笔损失
-- 突破入场,不存在频繁开仓套利
-
-## 风险及解决方案
-
-- RSI指标存在滞后性,可能错过趋势反转点
-  - 适当调整RSI的参数,优化指标的灵敏度
-- 超买超卖区间设置不当,增大了获利空间的难度
-  - 针对不同市场调整参数,确保参数设置合理  
-- 止损点过于接近,容易被隔夜间隔震荡止损
-  - 适当放宽止损距离,避免被套
-- 止盈设置过小,无法充分捕捉趋势运行
-  - 根据市场波动情况,灵活调整止盈线
-
-## 优化方向
-
-- 结合其他指标确定入场时机,例如KDJ、MACD等,避免RSI指标的滞后性问题
-- 增加对大级别趋势的判断,避免逆势操作
-- 优化止损止盈策略,例如随价格追踪止损、移动止盈等
-- 区分不同品种参数设置,根据市场特点确定合理的参数
-- 增加仓位管理策略,通过加仓方式调整仓位
-
-## 总结
-
-RSI区间突破策略整体来说是一个典型的趋势跟踪策略。它通过RSI指标判断买卖点,双SMA平均线过滤信号,并设定止损止盈来控制风险。但RSI指标存在滞后性问题,此外参数设置不当也会影响策略表现。通过进一步优化,可充分发挥该策略的趋势跟踪能力。
-
-||
 
 ## Overview
 
@@ -97,7 +52,6 @@ Specifically, the strategy uses two SMA lines to determine the trend of the RSI 
 
 The RSI range breakout strategy is a typical trend following strategy overall. It determines trading signals through RSI indicator, filters signals with double SMA lines, and sets stop loss and take profit to control risks. But RSI indicator has lagging issues, and improper parameter settings also affect strategy performance. The trend following capability can be fully realized through further optimization.
 
-[/trans]
 
 > Strategy Arguments
 

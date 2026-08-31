@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ca19b487c9ed499589.png)
-[trans]
-## 概述
-
-这个交易策略通过结合三个强大的技术指标——相对强强指数(RSI)、布林带和支撑阻力位,实现自动化的交易决策。该机器人能够智能地根据市场条件识别潜在的入市和出市点,从而自动下单,无需人工干预。
-
-## 策略原理
-
-该交易机器人的核心逻辑基于 RSI、布林带和支撑阻力位三个指标实现。
-
-首先,RSI 用于判断市场趋势的强弱。当 RSI 值大于 70 时,代表市场处于超买状态;当 RSI 值小于 30 时,代表市场处于超卖状态。
-
-其次,布林带代表了市场的波动范围。布林带上轨和下轨之间就是市场正常波动的范围。当价格触及布林带上轨时,代表市场进入相对高位区域,这样的市场容易反转下跌;当价格触及布林带下轨时,代表市场进入相对低位区域,这样的市场容易反弹上涨。
-
-最后,根据布林带上下轨位,可推导出关键的支撑阻力位。支撑位在布林带下轨附近,阻力位在布林带上轨附近。这代表着,当价格上涨至阻力位时,很可能会遇到卖盘而下跌;当价格下跌至支撑位时,很可能会遇到买盘而反弹。
-
-综合这三个指标,该机器人的入市逻辑是:当价格触及布林带下轨(超卖区域)并且位于支撑位时,发出买入信号;当价格触及布林带上轨(超买区域)并且高点大于阻力位时,发出卖出信号。出市逻辑则是移动均线的方向转换。
-
-## 策略优势
-
-1. 该策略集成多个指标,能够全面判断市场状态,信号比较可靠;
-
-2. 实现全自动化交易,无需人工干预,避免错过交易机会;
-
-3. 提供实时信号提示,随时随地掌握交易情况;
-
-4. 清晰的图表标记直观显示交易点位;
-
-5. 参数可调整,能够针对不同品种和时间周期进行优化。
-
-## 风险及解决方法
-
-1. 市场出现异常波动可能导致止损风险。可以设置止损位以控制最大损失。
-
-2. 机器人参数设置不当可能导致交易频率过高或信号质量差。应根据回测结果调整参数,找到最优设置。
-
-3. 系统故障可能导致信号传输中断或下单延迟。应采用稳定可靠的主机和网络进行搭建。
-
-## 优化方向 
-
-1. 增加止损逻辑。在一定幅度损失后主动止损,有助于进一步控制风险。
-
-2. 增加资金管理模块。根据账户资金情况动态调整每笔下单的资金比例,更加智能化。
-
-3. 结合机器学习技术。收集历史数据,使用神经网络等对参数进行训练和优化,实现策略的持续演进。
-
-4. 进行全品种参数优化。现有参数可能更适合某几个品种,可以通过优化找到每个品种对应的最佳参数组合。
-
-## 总结
-
-该交易策略具有较强的适应性和普适性。它结合多个指标判断市场状态,能够有效地把握趋势反转点,实现自动化交易。通过持续优化,可望获得更稳定的超额收益。它是一个可靠的量化交易解决方案。
-
-||
 
 ## Overview  
 
@@ -114,7 +62,6 @@ By consolidating these indicators, the entry logic is defined as: go long when t
 
 The strategy demonstrates strong adaptability and versatility. By monitoring multiple indicators to assess market conditions, it can reliably pinpoint trend reversal levels for automated execution. Continual improvements to the algorithm will elevate strategy performance to consistently generate alpha. An excelent algo-trading solution suitable for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

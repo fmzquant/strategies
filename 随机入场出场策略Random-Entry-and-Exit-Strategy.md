@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-随机入场出场策略是一种通过在交易过程中随机决定入场和出场时间的策略。该策略利用随机数生成器来模拟入场和出场的决策。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 每根K线都会随机生成一个0到100之间的数字。
-
-2. 如果随机数小于设定的入场概率阈值,则开仓入场。默认入场概率为10%。
-
-3. 如果随机数小于设定的出场概率阈值,则平仓出场。默认出场概率为3%。
-
-4. 可以选择三种方向:只做多、只做空、随机方向。默认为只做多。
-
-5. 也可以设置交易开始的年份,避开特大行情剧变的年份。
-
-通过设置不同的入场概率、出场概率和方向参数,可以模拟不同类型交易者的随机交易行为,考察在随机交易下不同市场的表现。
-
-## 优势分析
-
-- 模拟真实交易者随机决策的行为,接近真实市场情况。
-
-- 可以测试在随机交易下不同市场的表现差异。
-
-- 可以找到哪些市场即使随机交易也能获得正收益。
-
-- 可以将随机交易作为基准策略,用于检验其他策略的优势。
-
-## 风险分析
-
-- 无法利用市场趋势获利,无法确定入场时机。
-
-- 随机出场可能在不利位置止损。
-
-- 在具有明确方向性的市场表现不佳。
-
-- 需优化入场出场概率,以免过于频繁或保仓时间过短。
-
-- 可考虑加入止损机制,避免亏损扩大。
-
-## 优化方向 
-
-- 调整入场出场概率,找到适合不同市场的组合。
-
-- 加入止损策略,控制单笔亏损。
-
-- 优化仓位管理,降低单笔风险。
-
-- 在趋势明确时,可改为趋势跟踪策略。
-
-- 结合统计学分析寻找哪些市场随机交易效果较好。
-
-## 总结
-
-随机入场出场策略通过模拟交易者的随机决策,测试了不同市场在随机交易下的表现。该策略原理简单,可以作为基准来检验其他策略的效果。但其本身存在无法捕捉趋势,止损管理不完善等问题。我们可以通过调整参数组合、加入止损、优化仓位管理等方式来改进该策略,使其成为具有实际价值的量化交易策略。
-
-|| 
 
 ## Overview
 
@@ -129,7 +68,6 @@ By setting different combinations of entry probability, exit probability and dir
 
 The random entry and exit strategy tests different markets' performance under simulated random trader decisions. The strategy logic is simple and can serve as a benchmark to examine other strategies. However, it has its flaws like failing to capture trends and lack of proper stop loss management. We can improve the strategy by adjusting parameter combinations, adding stops, optimizing position sizing etc, to turn it into a viable quant trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

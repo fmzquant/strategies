@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7d40088943fb372215.png)
-[trans]
-## 概述
-
-黄金森林1分钟突破策略是一种短线量化交易策略,致力于捕捉价格在1分钟时间框架内的突破信号,实现快速盈利。该策略融合均线、ATR、RSI等多个指标,形成交易信号,以期在短时间内实现更高的盈亏比。
-
-## 策略原理 
-
-该策略主要基于以下几个要素形成交易信号:
-
-1. ATR指标 - 计算价格的平均真实波动范围,用来设置价格通道;
-2. 均线指标 - 计算快速EMA和慢速EMA,形成金叉死叉信号;  
-3. RSI指标 - 计算快慢RSI,判断超买超卖区域;
-4. 价格与通道的关系 - 当价格突破上下通道时,发出交易信号。
-
-具体来说,策略会计算ATR的N周期平均值,以及快速EMA、慢速EMA和快慢RSI。结合价格突破ATR通道,以及EMA形成金叉和RSI达到超买超卖水平这三个条件,策略会发出买入或卖出的信号。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 捕捉价格的短期趋势;
-2. 响应迅速,适合高频交易;
-3. 利用多种指标进行滤波,可靠性较高;
-4.  parametric,用户可以自行优化参数。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 短线交易风险高,需要严格的止损;
-2. 参数优化不当可能导致过拟合;
-3. 交易频率过高,交易成本增大。
-
-为了控制风险,应采取止损策略,同时优化参数时做好回测,避免过拟合。此外,调整交易频率,控制交易成本。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1.测试更短周期(5分钟、15分钟)的参数设置;  
-
-2.加入更多过滤指标,例如交易量指标等,提高信号质量;
-
-3.优化ATR通道和均线参数,寻找最佳参数组合。
-
-## 总结
-
-黄金森林1分钟突破策略,专注于抓住短期价格趋势,通过多指标联合过滤,具有响应迅速、盈亏比高的特点。该策略可根据用户风险偏好,通过参数优化获得更好的表现。但用户需要注意控制交易风险,包括严格止损和合理交易频率等。总体而言,该策略适合有一定量化交易基础与风险承受能力的投资者进行短线操作。
-
-||
 
 ## Overview
 
@@ -109,7 +59,6 @@ The strategy can be optimized through:
 
 The Gem Forest 1 Minute Breakout Strategy focuses on capturing short-term trends by filtering with multiple indicators, featuring fast response and high risk-reward characteristics. It can be adapted to users' risk preferences through parameter optimization for better results. However, users should control trading risks via strict stop loss, reasonable trade frequencies etc. Overall, this strategy suits investors with certain quant trading knowledge and risk tolerance for short-term trading.
 
-[/trans]
 
 > Strategy Arguments
 

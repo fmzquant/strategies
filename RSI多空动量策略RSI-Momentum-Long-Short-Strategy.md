@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/170f858ca2195a0c150.png)
 
-[trans]
-
-## 概述
-
-RSI多空动量策略是一种典型的以Larry Connors RSI指标为基础,使用RSI指标的超买超卖信号来决定买入卖出的动量策略。该策略主要判断价格是否处于超买或超卖状态,并以此作为买入卖出信号。
-
-## 策略原理
-
-该策略通过计算一段时间内的价格上涨动量和下跌动量,来构建RSI指标。当RSI指标低于超卖线10时视为超卖,当指标高于超买线90时视为超买。策略在RSI指标从低位上穿超卖线时产生买入信号,在RSI指标从高位下穿超买线时产生卖出信号。
-
-策略额外加入了均线判断规则,要求5日均线高于200日均线时才能产生买入信号,5日均线低于200日均线时才能产生卖出信号。这可以过滤掉短期反弹造成的假信号。
-
-另外,策略还增加了止盈机制。当持有多头头寸时,如果RSI指标上穿超买线90,会强制平掉所有多头;当持有空头头寸时,如果RSI指标下穿超卖线10,会强制平掉所有空头。这可以锁定盈利,避免亏损扩大。
-
-## 策略优势
-
-1. 使用RSI指标判断超买超卖状态,可以捕捉到价格反转的时机。
-
-2. 增加均线过滤,可以减少短期噪音造成的错误交易。
-
-3. 设置止盈机制,可以很好控制风险,避免亏损扩大。
-
-4. 策略规则简单清晰,容易理解实现。
-
-5. RSI是一种常用且实用的技术指标,许多股票和数字货币都适用。
-
-## 策略风险
-
-1. RSI指标存在反转失败的可能。价格超买超卖不一定会发生反转。
-
-2. 均线过滤也可能过滤掉较好的交易机会。
-
-3. 止盈设置不当也会过早止盈,无法持有较长线的趋势。
-
-4. 需要适当调整参数,如计算RSI的周期长度、超买超卖阈值、均线参数等。
-
-可通过优化参数、组合其他指标、适当宽松止盈以减少上述风险。
-
-## 策略优化方向
-
-1. 可以测试不同周期的RSI指标效果。
-
-2. 可以增加其他指标,如KDJ、MACD等与RSI形成组合。
-
-3. 可以根据市场情况调整超买超卖阈值。
-
-4. 可以根据具体持仓时间调整止盈激活的RSI数值。
-
-5. 可以添加止损策略,在亏损达到一定比例时止损。
-
-6. 可以优化均线系统,改为动态追踪止损。
-
-## 总结
-
-RSI多空动量策略利用RSI指标判断超买超卖状态作为信号,加入均线和止盈规则进行筛选过滤,可以有效抓住短期反转机会。该策略简单实用,值得进一步测试优化,以适应更广泛的市场情况。总体来说,该策略提供了一个不错的思路,可以作为量化交易策略开发的参考。
-
-|| 
 
 
 ## Overview
@@ -124,7 +67,6 @@ Risks can be reduced via parameter optimization, combining other indicators, fle
 
 The RSI Momentum Long Short Strategy catches short-term reversal opportunities by using RSI to identify overbought/oversold levels, filtered by MAs and profit-taking rules. The strategy is simple and practical, worth further testing and enhancement to adapt to diverse markets. Overall it provides a good framework that can serve as a reference for quantitative trading strategy development.
 
-[/trans]
 
 > Strategy Arguments
 

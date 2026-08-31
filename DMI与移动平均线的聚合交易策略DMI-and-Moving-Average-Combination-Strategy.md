@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略结合了123反转策略、DMI策略和移动平均线策略,实现了不同类型策略的有效聚合,形成一个强大的组合策略。该策略可以在趋势反转点进行反向操作,又可以在趋势延续时顺势操作,同时还利用移动平均线进行过滤,可以有效识别市场趋势方向,提高策略胜率。
-
-## 策略原理
-
-1. 123反转策略:当收盘价连续2天低于前一日收盘价后转为高于前一日收盘价,且9日慢速K线低于50时做多;当收盘价连续2天高于前一日收盘价后转为低于前一日收盘价,且9日快速K线高于50时做空。
-
-2. DMI策略:当+DI线上穿-DI线时做多;当-DI线下穿+DI线时做空。
-
-3. 移动平均线策略:当收盘价上穿移动平均线时做多;当收盘价下穿移动平均线时做空。
-
-4. 三种策略信号发出同向信号时开仓,否则平仓。
-
-该策略结合趋势策略和反转策略,能及时捕捉价格反转机会的同时不错过趋势运行机会。移动平均线过滤可以减少虚假信号。多种策略相互验证,可以提高信号的可靠性。
-
-## 策略优势分析
-
-1. 结合多种策略,提高胜率。123反转策略可捕捉转折点,DMI策略可捕捉趋势,移动平均线可过滤信号。
-
-2. 反转策略与趋势策略结合,既可捕捉反转又可捕捉趋势,弹性交易。
-
-3. 使用移动平均线过滤,可减少因短期波动产生的虚假信号。
-
-4. 多策略组合可相互验证信号,避免单一策略因受某种市场环境影响而失效。
-
-5. 策略参数较多,可以通过优化找到最佳参数组合,提高策略稳定性。
-
-## 风险分析
-
-1. 反转策略容易在震荡趋势中被套住。可通过结合趋势策略来规避。
-
-2. DMI策略可能会漏掉趋势初期的机会。可适当缩短DMI的参数来提高灵敏度。
-
-3. 移动平均线存在滞后性,可能会延迟生成信号。可适当缩短周期来加快反应速度。 
-
-4. 多策略组合虽可提高胜率,但也增加了策略复杂度。需仔细测试各参数设定。
-
-5. 策略对交易成本敏感。建议适当放宽止损范围,避免过于频繁开平仓。
-
-## 策略优化方向
-
-1. 对各策略参数进行优化,找到最佳参数组合。
-
-2. 添加其他指标过滤信号,如MACD、RSI等,进一步提升策略稳定性。
-
-3. 增加止损策略,如趋势止损、震荡止损等,控制风险。
-
-4. 优化仓位管理,如固定仓位、动态仓位等,提高策略收益率。
-
-5. 针对特定品种进行参数调整,提高策略适应性。
-
-6. 增加机器学习模型辅助决策,利用更多历史数据提升策略表现。
-
-## 总结
-
-本策略通过有效结合反转策略、趋势策略和移动平均线过滤,形成一个灵活多变的聚合策略。它既可捕捉价格转折点,又可捕捉趋势的延续,通过多策略组合提高信号的稳定性和可靠性。在优化参数设定、止损策略、仓位管理等方面还有进一步改进的空间,具有很强的实用性和拓展性。如果能熟练掌握该策略的运用,相信可以在实盘交易中获得可观的收益。
-
-||
 
 ## Overview
 
@@ -129,7 +68,6 @@ The strategy combines trend strategies and reversal strategies, which can captur
 
 This strategy forms a flexible combination system by effectively combining reversal, trend and MA filter strategies. It can capture both reversal and trend-following opportunities, and improves signal reliability through multiple strategies. There is still room for further improvements in parameters, stop loss, position sizing and so on. With skilled application, this practical and expandable strategy can generate considerable profits in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

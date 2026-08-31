@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d14256c08e12850b67.png)
-[trans]
-
-## 概述
-
-本策略基于动量指标RSI和趋势跟踪止损指标SuperTrend,设计了一个中长线的动量交易策略。该策略主要用于识别股票价格中存在的趋势性动量,并配合止损来锁定盈利,降低大幅回撤的概率。
-
-## 原理
-
-1. 使用RSI识别股票中的趋势性动量
-
-    RSI指标可以有效识别股票价格中的趋势,RSI高于60时为超买区,表示当前股票处于强势上涨趋势中;RSI低于40时为超卖区,表示当前股票处于下跌趋势中。
-
-    本策略在RSI大于60时产生买入信号,表示识别到股票价格中的上涨动量,可以买入做多。
-
-2. 使用SuperTrend进行趋势跟踪止损
-
-    SuperTrend是一个趋势跟踪止损指标,它基于ATR和价格本身计算出一个动态止损线。当价格突破此止损线时,表示趋势发生反转,应当止损了结当前头寸。
-
-    本策略使用SuperTrend指标计算出的止损线作为策略的停损位,在价格突破该止损线时立即平仓止损。
-
-## 优势
-
-1. 识别趋势性动量,profit from momentum
-
-    使用RSI指标可以有效识别出股票价格中存在的趋势性动量,这样可以在价格形成趋势的早期就进场,潜在获利空间更大。
-
-2. 止损控制风险,锁定盈利
-
-    通过SuperTrend指标的止损线,可以及时止损离场,避免回撤过大。同时也可以随着趋势的推进逐步抬高止损线锁定盈利。
-
-3. 策略逻辑清晰简单
-
-    本策略使用了两个指标的组合,每一个指标都具有明确的意义,策略逻辑简单清晰,容易理解和验证。
-
-## 风险
-
-1. 虚假突破导致的止损被触发
-
-    在盘整时期,价格可能出现一些短期的突破又快速回调的虚假突破情况。这可能会导致止损线被触发,产生一些不必要的损失。
-
-2. 表现跟随大盘,具有一定相关性
-
-    本策略识别的是股票中的趋势性动量,所以它的表现会一定程度上跟随大盘 market 的走势。在大盘出现调整时,策略可能会产生额外的损失。
-
-3. 无法识别趋势反转
-
-    本策略专注于识别并跟踪趋势,无法有效识别趋势反转情况。一旦出现突然的趋势反转,策略可能难以及时止损,导致较大的损失。
-
-## 优化方向
-
-1. 优化RSI参数,提高识别准确率
-
-    可以测试不同的RSI参数,找到最佳的参数组合,以提高RSI对趋势的识别准确率。
-
-2. 优化止损策略,降低止损率
-
-    可以尝试不同类型的止损方式,如离场前等待一定周期等,避免被高频的虚假突破止损出局。
-
-3. 增加趋势反转信号
-
-    可以考虑加入像MACD等指标,提前识别趋势反转情况,避免强势趋势反转后的大幅损失。
-
-4. 考虑适当的对冲手段
-
-    在大盘面临较大调整时,可以考虑加入一定的对冲组合,降低策略的市场相关性。
-
-## 总结
-
-本策略通过RSI识别趋势性动量以及SuperTrend的趋势跟踪止损这两个关键要素,构建了一个简单实用的中长线动量策略。该策略能够有效跟踪趋势,同时止损控制风险。通过优化参数以及增加反转信号等手段,可以进一步增强策略的表现。总体来说,本策略具有较强的实用性。
-
-||
 
 ## Overview
 
@@ -150,7 +79,6 @@ This strategy is based on the momentum indicator RSI and the trend tracking stop
 
 This strategy builds a simple and practical medium-to-long term momentum strategy with the two key elements of identifying trend momentum using RSI and trend tracking stop loss using SuperTrend. The strategy can effectively track trends while controlling risk with stop loss. Further enhancements can be made through optimizing parameters and adding reversal signals. Overall, the strategy has strong practical utility.
 
-[/trans]
 
 
 

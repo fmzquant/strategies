@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7318f9bbbffe47a533.png)
-[trans]
-
-## 概述
-
-本策略通过计算两组不同参数的EMA指标,并设置买入信号为两组EMA指标发生黄金交叉时,设置卖出信号为另外两组EMA指标发生死亡交叉时,从而实现高效的短线交易策略。
-
-## 策略原理
-
-该策略使用4个EMA指标,分别是9周期的EMA1,26周期的EMA2,100周期的EMA3和55周期的EMA4。买入信号设置为EMA1上穿EMA2时,表示短线EMA上穿长线EMA,属于典型的黄金交叉信号。卖出信号设置为EMA3下穿EMA4时,属于死亡交叉信号。这样可以在短线EMA指标发生黄金交叉时快速入市,并在长线EMA指标发生死亡交叉时快速止损止盈出场,实现高效的短线交易。
-
-## 策略优势
-
-1. 使用双EMA交叉实现快进快出,能够快速锁定短线利润
-2. 交易信号简单清晰,容易实施
-3. 参数可调,可以根据不同市场调整参数
-4. 获利空间大,适合短线scalping交易
-
-## 风险分析
-
-1. 双EMA交叉可能出现误信号,需要结合其他指标过滤
-2. EMA参数设置不当可能导致过于敏感或迟钝
-3. 需要密切关注大级别轮动,及时止盈
-
-## 优化方向
-
-1. 可以加入MACD,KDJ等其他指标进行信号过滤,提高信号准确率
-2. 可以测试更多组合,找到最优EMA参数
-3. 可以设置移动止损来锁定利润
-
-## 总结
-
-本策略整体来说是一种非常典型和有效的短线交易策略。优点是快进快出,适合scalping,获利空间大。同时也存在一些风险,需要注意防范。如果参数调整得当,并辅助其他指标进行信号过滤,可以成为非常实用的短线交易策略。
-
-||
 
 ## Overview
 
@@ -76,7 +42,6 @@ The strategy uses 4 EMA indicators, EMA1 with a period of 9, EMA2 with a period 
 
 Overall, this is a very typical and effective short-term trading strategy. The advantages are fast entry and exit, suitable for scalping and large profit range. There are also some risks that need attention and prevention. With proper parameter adjustment and assistance of other indicators for signal filtering, it can become a very practical short-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

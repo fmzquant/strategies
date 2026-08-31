@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-这是一个结合一张烟云指标和MACD指标的数字货币交易策略。它利用一张烟云指标判断整体趋势方向和支持阻力位置,再结合MACD指标判断短期趋势和动量,形成交易信号。该策略可以有效识别中长期趋势,并在趋势方向发生转变时及时调整仓位。
-
-## 策略原理
-
-该策略使用一张烟云指标的转换线和基准线交叉来判断中期趋势,使用MACD指标判断短期趋势和动量。
-
-当转换线上穿基准线时为牛市信号,价格在云层之上为强势信号;当转换线下穿基准线时为熊市信号,价格在云层之下为弱势信号。
-
-MACDhistogram为零轴以上时为多头动量信号,零轴以下为空头动量信号。MACD线上穿信号线时为买入信号,下穿信号线时为卖出信号。
-
-具体交易规则如下:
-
-多头入场信号:转换线上穿基准线,价格上穿云层,MACD线上穿信号线,做多
-多头出场信号:转换线下穿基准线,价格下穿云层,MACD线下穿信号线,平多仓
-
-空头入场信号:转换线下穿基准线,价格下穿云层,MACD线下穿信号线,做空
-空头出场信号:转换线上穿基准线,价格上穿云层,MACD线上穿信号线,平空仓
-
-## 策略优势
-
-1. 一张烟云指标可判断中长期趋势,MACD可判断短期趋势,二者结合可以捕捉不同级别的交易机会。
-
-2. 一张烟云自带的云层可明确判断支撑与阻力位置。
-
-3. MACD可有效判断短期超买超卖情况,避免在震荡行情中被套。
-
-4. 策略参数经过优化,可以适用于多种数字货币,具有一定的稳定性。
-
-## 策略风险
-
-1. 一张烟云与MACD可产生假信号,需要组合其他指标进行确认。
-
-2. 震荡行情中容易产生背离,应适当调整参数或暂停交易。
-
-3. 云层太厚时,需等待明确突破再入场,可能错过部分机会。
-
-4. 回测数据不足,参数数据拟合需要更长时间周期验证。
-
-可通过组合其他指标确认信号、调整参数适应市场环境、或在特定周期暂停交易来控制风险。
-
-## 策略优化方向 
-
-1. 优化一张烟云参数,调整转换线、基准线周期,使之更贴近不同品种的特征。
-
-2. 优化MACD参数,调整长短周期和平滑参数,获得更准确的交易信号。
-
-3. 增加止损策略,在亏损达到一定比例时止损。
-
-4. 增加仓位管理,根据市场情况调整每笔交易的仓位比例。
-
-5. 测试不同的数字货币品种数据,评估策略稳定性。
-
-6. 增加其他指标过滤,避免出现假信号。
-
-## 总结
-
-该策略整合一张烟云与MACD两个指标的优势,通过转换线和基准线判断中期趋势方向,MACD判断短期超买超卖情况,形成交易信号。策略参数可针对不同品种进行优化,可加入其他指标或止损策略来控制风险,对不同品种效果较好。但需警惕震荡行情中的假信号,通过参数调整和风控来提高策略稳定性。
-
-||
 
 ## Overview
 
@@ -133,7 +70,6 @@ Risks can be managed by confirming signals with other indicators, adjusting para
 
 This strategy combines the strengths of the Ichimoku Cloud and MACD indicators, using conversion and base lines to determine medium-term trend direction, and the MACD to gauge short-term overbought/oversold levels, generating trading signals. The parameters can be optimized for different assets, and other indicators or stop losses added to manage risk. It works well for different cryptocurrencies, but false signals in choppy markets need to be watched out for through parameter tuning and risk management to improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

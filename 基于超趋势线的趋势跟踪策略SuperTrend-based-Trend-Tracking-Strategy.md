@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11a6b4451a355e17d87.png)
-[trans]
-
-## 概述
-
-本策略是基于平均真实波动范围(Average True Range, ATR)指标构建的超趋势线,用于判断市场趋势方向并给出交易信号的趋势跟踪策略。该策略同时具有趋势判断和趋势跟踪双重功能,可用于股指期货、外汇和数字货币等领域。
-
-## 策略原理  
-
-该策略通过计算一定周期内的ATR指标,并将其与价格比较,判断价格是否处于上升趋势通道内。具体来说,策略首先计算ATR指标,然后根据ATR值乘以系数构建上轨和下轨。当价格高于上轨时,判断为上升趋势;当价格低于下轨时,判断为下降趋势。在上升趋势时,如果价格由下降趋势转为上升趋势,产生买入信号;在下降趋势时,如果价格由上升趋势转为下降趋势,产生卖出信号。
-
-该策略的关键在于构建趋势判断标准——超趋势线。超趋势线是基于ATR指标动态变化的,能够有效过滤市场噪音,判断主要趋势方向。同时,超趋势线具有一定的滞后性,这有助于确认趋势转折点,避免产生错误交易信号。
-
-## 策略优势
-
-该策略最大的优势在于结合趋势判断和趋势跟踪的能力。具体来说,主要优势有:
-
-1. 使用ATR构建的超趋势线,可有效识别市场趋势,过滤噪音。
-2. 超趋势线具有一定滞后性,有助于减少错误信号。  
-3. 可同时给出趋势判断和交易信号,操作简单。
-4. 可Parametrization参数进行优化,适应更广泛的市场。
-5. 可视化指标,直观判断当前趋势状态。
-
-## 风险分析  
-
-该策略主要存在以下风险:  
-
-1. ATR参数设置不当,可能导致超趋势线过于敏感或滞后。
-2. 无法完全避免噪音的影响,个别情况下可能产生错误信号。  
-3. 行情剧烈波动时,超趋势线判断准确率会有所下降。
-4. 无法预测趋势反转点,只能追踪已发生的趋势。
-
-对策方面,可通过调整ATR周期、超趋势线系数等参数进行优化,也可以结合其他指标进行验证,降低错误信号概率。此外,可设置止损点,控制单笔损失。
-
-## 优化方向  
-
-该策略还有进一步优化的空间:  
-
-1. 结合机器学习算法,实现参数的自动优化。
-2. 增加指数平滑移动平均线等指标判断和验证。  
-3. 设置止损止盈策略,优化资金管理。
-4. 结合情绪指标、消息面分析等方法预测潜在的趋势反转。
-5. 利用深度学习技术分析更大量的历史数据,提高判断准确性。
-
-通过深度优化,有望进一步提高策略的稳定性、适应性和盈利空间。
-
-## 总结  
-
-本策略整体上具有稳定、可靠、收益良好的特点。构建超趋势线判断主要趋势,同时给出交易信号是策略的最大亮点。但也存在一定程度的滞后性和误判风险。通过参数和模型优化,有望获得更好的策略表现。总体上,该策略是基于趋势的一个典型代表,值得实盘验证与应用。
-
-||
 
 
 ## Overview
@@ -109,7 +59,6 @@ In-depth optimization promises to further lift stability, adaptiveness and profi
 
 The strategy demonstrates great stability, reliability and profitability overall. Constructing the SuperTrend line for major trend judgment and trading signals is its biggest highlight. But certain degree of lagging effect and misjudgment risks do exist. Parameter and model optimization promises better strategy performance. In summary, as a typical trend-based strategy, it is worthwhile to verify and utilize it in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

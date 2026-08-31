@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/129a29a4cd960a5145f.png)
-[trans]
-
-## 概述
-该策略是基于市场最低点进行反转操作的策略。它利用200日EMA的最低点,结合卡马列拉支撑阻力位判断市场最低点,当价格反弹时进行做多操作。
-
-## 策略原理  
-1. 计算200日EMA的最低价EMA200Lows,当价格关闭低于该EMA时,认为处于市场最低点附近。
-2. 计算卡马列拉支撑3(S3)的9日EMA即ema_s3_9,作为重要的支撑位。
-3. 再计算卡马列拉中枢的9日EMA即ema_center_9,作为判断反转的信号。  
-4. 当ema_center_9上穿ema200Lows时,并且前3根K线都低于ema200Lows时,进行做多操作。
-5. 止损方式为ATR止损,并追踪最低价移动。
-6. 目标利润为ema_h4_9(卡马列拉阻力4)和ema_s3_9(卡马列拉支撑3)。
-
-## 优势分析
-1. 使用200日EMA最低点判断市场最低区域,避免在中途出现更低点。  
-2. 卡马列拉支撑位与中枢结合,可以更准确判断反转点。 
-3. ATR止损方式让止损更合理,追踪更低点有利锁定更大利润。
-
-## 风险分析  
-1. 长期持仓风险大。本策略更适合短线操作。  
-2. 大行情下,止损可能较大。可根据ATR参数调整。
-3. 卡马列拉反转判断不一定百分百可靠,可能出现误判。
-
-## 优化方向
-1. 可以考虑结合其他指标,如RSI等判断反转信号。  
-2. 可以研究不同品种参数调整,寻找更优参数。
-3. 可以尝试机器学习方法动态调整ATR 止损。
-
-## 总结  
-该策略利用EMA最低点与卡马列拉指标判断市场最低区域与反转点。通过ATR止损获取利润。整体来说,策略较完整,有一定的实战价值。后期通过进一步优化,可以使策略更加稳定可靠。
-
-||
 
 ## Overview  
 This strategy is based on market bottoms for reversal trading. It uses the lowest points of the 200-day EMA combined with Camarilla support/resistance levels to determine market bottoms. It goes long when prices bounce back.  
@@ -72,7 +40,6 @@ This strategy is based on market bottoms for reversal trading. It uses the lowes
 ## Summary
 This strategy identifies market bottoms and reversals using EMA lows and Camarilla levels. It locks in profits with ATR trailing stops. Overall it is fairly complete with practical value. Further optimizations will improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

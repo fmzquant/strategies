@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8c1a342448c153134a.png)
-[trans]
-
-## 概述
-
-彩云策略是一种集成了一云图、MACD、资金流量指标(CMF)和真实力度指数(TSI)多种技术指标的量化交易策略。该策略旨在发掘市场中的中长线交易机会。
-
-## 策略原理
-
-彩云策略的核心思想是结合一云图的多空信号、MACD的多空指标、CMF的资金流动指标和TSI的力度指数判断市场的趋势和超买超卖区域。一云图能清晰判断趋势方向和关键支持阻力;MACD反映市场买卖力量对比和超买超卖现象;CMF判断资金流入流出;TSI显示市场的真实买卖力度。
-
-具体来说,该策略主要基于以下几项指标进行判断:
-
-1. 一云图的转折点十kan线上穿 и云支撑线,视为多头信号
-2. 一云图的延迟影线 cx 上穿0轴,视为多头确认
-3. MACD 的离差突破0轴向上,显示买入力量增强
-4. CMF指标>0.1,表示资金流入
-5. TSI指标>0,显示买入力度强于卖出力度
-
-当上述5项同时成立时产生做多信号;当一云图十kan线下穿 云支撑线等条件逆转时产生做空信号。
-
-该策略综合判断了多个指标的多空情况,从而避免了单一指标判断带来的噪音。同时利用一云图判断关键支撑与阻力区域,并结合延迟影线的实体方向判断实际资金流动的方向,所以能在趋势靠后的阶段进入,在关键点前退出,从而获取较大盈利。
-
-## 优势分析
-
-彩云策略最大的优势在于综合运用多种指标判断市场的超买超卖现象,从而准确判断买卖点。具体优势如下:
-
-1. **多指标综合判断,增加信号准确性**。单一指标容易产生错误信号,而本策略通过整合一云图、MACD、CMF、TSI等指标,能有效过滤噪音,提高信号的可靠性。
-
-2. **一云图判断关键支撑阻力区域**。一云图能清晰显示关键的支撑和阻力位置,策略能在这些位部署买卖点,从而在趋势靠后的阶段进入市场。
-
-3. **延迟影线判断资金流向**。延迟影线能显示实体背离的情况,判断真实资金的流入流出,避免被套利的虚假移动误导。
-
-4. **MACD显示超买超卖现象**。MACD比较快速地显示行情的超买超卖现象,结合一云图的位置判断,能精确捕捉买卖点。 
-
-5. **CMF显示资金流动情况**。CMFIndicator通过成交量变化反映大资金的流动情况,避免被套利的小资金流失误导。
-
-6. **TSI显示买卖力度强弱**。TSI能剔除价格变动的幅度因素,准确显示真实买卖力度的强弱,从而判断底部反弹与顶部下跌的时机。
-
-## 风险及优化分析
-
-尽管彩云策略有诸多优点,但也存在一些风险需要注意。主要的风险及优化方向如下:
-
-1. **指标参数优化**。现有参数可能不是最优参数组合,可以通过更系统的优化方法寻找更佳的参数,以获得更稳定的收益。
-
-2. **止损策略缺失**。目前没有设置止损机制,行情剧烈反转时无法有效控制亏损。可以设置合理的移动止损或挂单止损。 
-
-3. **交易频率过高**。多个指标结合判断容易造成交易频率过高的情况出现。可以适当调整参数,合理控制交易频率。
-
-4. **效果波动大**。多指标结合判断容易形成效果角力,在特定行情下策略效果可能会有较大波动。可以引入模型组合的方法,设定权重配置不同的指标。
-
-5. **指标发散风险**。如果不同指标出现分歧信号,将难以判断最终入场。这种情况需要人工经验进行审视分析。
-
-## 总结
-
-彩云策略是一个多指标整合的量化交易策略。它充分利用一云图、MACD、CMF、TSI等指标的互补优势,在判断买卖时机上具有独特优势。同时策略也存在一些可优化的方面,若能进一步完善止损机制、参数优化、权重配置等,将能大幅提高策略运作的稳定性。
-
-||
 ## Overview   
 
 The Kairou strategy is a quantitative trading strategy integrating multiple technical indicators including Ichimoku Cloud, MACD, Chaikin Money Flow (CMF), and True Strength Index (TSI). This strategy aims to discover medium and long-term trading opportunities in the market.  
@@ -121,7 +64,6 @@ Despite its advantages, the Kairou strategy also carries some risks worth noting
 
 The Kairou strategy is a multi-indicator quantitative trading strategy. It takes full advantage of the complementary strengths of Ichimoku Cloud, MACD, CMF, TSI and more to uniquely determine entry and exit timing. There is also room for optimizations in aspects like stop loss mechanisms, parameter tuning, weight allocation etc. to significantly enhance the stability of strategy operations.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,49 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-Parabolic SAR扇形跟踪止损策略是一个基于Parabolic SAR指标的交易策略。该策略旨在识别趋势的反转点,在趋势反转时及时止损退出仓位。
-
-## 策略原理  
-
-Parabolic SAR指标能够识别价格趋势并给出潜在的反转信号。当SAR点上穿K线时代表着由多头进入空头;当SAR点下穿K线时代表由空头进入多头。
-
-该策略基于Parabolic SAR指标的这一特性,在SAR点穿越K线时识别出趋势反转,并相应地进行做多或做空操作。具体来说,策略逻辑如下:
-
-1. 计算Parabolic SAR值。
-
-2. 判断是否有趋势反转信号。如果SAR点从上方穿越到K线下方,代表空头信号,做空;如果SAR点从下方穿越到K线上方,代表多头信号,做多。
-
-3. 在穿越发生时开仓,并以反向的SAR点再次穿越K线时平仓止损。
-
-## 策略优势
-
-- 利用Parabolic SAR指标识别趋势反转点,避免在趋势中反向操作。
-
-- 在识别到反转信号时快速开仓,捕捉趋势的更替。
-
-- 设定SAR再次穿越K线的止损点,可以快速止损,及时控制亏损。
-
-- 策略思路简单清晰,容易实现。
-
-## 风险及应对
-
-- Parabolic SAR指标可能会产生大量假信号,造成不必要的交易。可以适当调整SAR的参数,降低假信号率。
-
-- 快速反转的市场中,容易被套。可以考虑增加过滤条件,避开剧烈波动的时间段。 
-
-- 止损点过于靠近可能会过于频繁止损。可以适当放宽止损范围,给予价格一定的回调空间。
-
-- 仅依靠一个指标易受特定市场限制,可考虑加入其它指标或过滤条件来提高拟合性。
-
-## 总结
-
-Parabolic SAR扇形跟踪止损策略利用Parabolic SAR指标的趋势识别能力,在趋势反转时快速止损切换方向。策略思路简单清晰,容易掌握。但仅依靠Parabolic SAR一个指标也存在一定局限性,实际应用中需要综合考虑市场环境,适当调整参数,并配合其他技术指标来实现。
-
-||
 
 
 
@@ -95,7 +52,6 @@ Based on this feature of the Parabolic SAR indicator, this strategy identifies t
 
 The Parabolic SAR trailing stop loss strategy utilizes the trend identification capability of the Parabolic SAR indicator to quickly stop out and reverse direction when trends reverse. The strategy logic is simple and clear. However, reliance on only the Parabolic SAR indicator has limitations. In practice, market conditions should be considered, parameters tuned accordingly, and other technical indicators combined to improve performance.
 
-[/trans]
 
 > Strategy Arguments
 

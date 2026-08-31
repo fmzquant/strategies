@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c682eb812ab1584f1c.png)
 
-[trans]
-
-
-### 概述(Overview)
-
-本策略基于超趋势指标,利用超趋势线判断趋势方向,并以超趋势线作为止损线,实现跟踪超趋势走势的自动交易策略。该策略适用于趋势性比较明显的品种,能够捕捉中长线趋势,在强势趋势中进行追踪。
-
-### 策略原理(Strategy Principle)
-
-超趋势指标由平均真实振幅(ATR)和指定乘数计算而成,能够有效地判断价格趋势方向。当价格高于上超趋势线时为上涨趋势,当价格低于下超趋势线时为下跌趋势。
-
-本策略首先计算上超趋势线和下超趋势线。上超趋势线计算为最高价和最低价的平均值减去ATR的N倍。下超趋势线计算为最高价和最低价的平均值加上ATR的N倍。其中N为用户设定的乘数参数。 
-
-然后计算价格相对趋势的方向。当价格高于上一根K线的下超趋势线时,定义为上涨趋势,当价格低于上一根K线的上超趋势线时,定义为下跌趋势。
-
-根据判断出的趋势方向,选择上超趋势线或下超趋势线作为超趋势线。当为上涨趋势时,超趋势线取上超趋势线,当为下跌趋势时,超趋势线取下超趋势线。
-
-最后,策略以超趋势线作为止损线,当价格上穿超趋势线时做多,当价格下穿超趋势线时做空,一旦价格触碰超趋势线则止损出场。
-
-### 优势分析(Advantage Analysis)
-
-该策略主要有以下几点优势:
-
-1. 使用超趋势指标判断价格趋势方向,可以有效跟踪趋势。
-
-2. 超趋势线作为止损线,可以限制亏损。
-
-3. 策略回撤较小,Sharpe比达到2.51,表现稳定。
-
-4. 交易次数多达1988次,可进行参数优化,提高胜率。
-
-5. 实现全自动交易,不需要人工干预。
-
-### 风险分析(Risk Analysis) 
-
-该策略也存在一些风险:
-
-1. 超趋势指标对价格变化敏感,可能产生较多 whipsaw 信号,降低盈利。
-
-2. 在震荡趋势中容易止损,不适合横盘品种。
-
-3. 未考虑重大经济事件的影响,在此期间可能造成较大亏损。
-
-4. 盈亏比只有41%,交易胜率有待提高。
-
-5. 需要优化参数以适应不同品种和时间周期。
-
-6. 需要严格的资金管理,防止单笔亏损过大。
-
-### 优化方向(Optimization Directions)
-
-该策略可从以下几个方向进行优化:
-
-1. 结合其他指标进行过滤,避免 whipsaw,提高胜率。例如MA,MACD等。
-
-2. 增加趋势确认,避免超趋势线误判产生错误信号。例如加入通道突破确认。
-
-3. 调整参数以适应不同品种和时间周期。例如调整ATR周期参数。
-
-4. 加入热门经济事件避开策略,避开重大新闻发布期间。
-
-5. 优化止损策略,通过移动止损、响尾止损等方式优化止损。
-
-6. 优化仓位管理,根据市场情况调整xpos来控制风险敞口。
-
-### 总结(Conclusion)
-
-本策略基于超趋势指标设计了一个简单的趋势跟踪策略,表现尚可,但交易信号较多,胜率有待提高。通过配合其他指标进行过滤优化,调整参数适应不同品种,严格资金管理,该策略可以成为一个具有温和回撤的稳定趋势跟踪策略。但需要注意防范误判带来的风险。
-
-||
 
 ## Following the Supertrend Strategy
 
@@ -150,7 +80,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy designed a simple trend following strategy based on the Supertrend indicator with decent performance, but more trading signals and room for improving win rate. By optimizing with other indicators for filtration, adjusting parameters for different products, and applying prudent money management, this strategy can become a stable trend following strategy with mild drawdown. But be aware of the risks associated with misjudgments.
 
-[/trans]
 
 > Strategy Arguments
 

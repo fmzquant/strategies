@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c945890971f640da5c.png)
 
-[trans]
-## 概述
-本策略是将123形态回转策略和枢轴点策略进行组合,以期获得更高的胜率。其中123形态回转策略判断趋势反转点,而枢轴点策略确定关键支持与阻力位。两者结合,既可以捕捉趋势,又可以确定具体的入场与出场价格。
-
-## 策略原理
-### 123形态回转策略
-该策略基于随机指标判断趋势反转点。具体原理是:
-当收盘价连续2天低于之前收盘价,并且9日慢速STO指标低于50时,做多;当收盘价连续2天高于之前收盘价,并且9日快速STO指标高于50时,做空。
-
-### 枢轴点策略 
-该策略根据前一天的最高价、最低价与收盘价计算出3条支撑线与3条阻力线。具体计算方法为:
-中枢点=(最高+最低+收盘)/3
-支撑1=2*中枢点-最高
-阻力1=2*中枢点-最低
-支撑2=中枢点-(阻力1-支撑1)
-阻力2=中枢点+(阻力1-支撑1)
-支撑3=最低-2*(最高-中枢点)  
-阻力3=最高+2*(中枢点-最低)
-并根据支撑与阻力位判断入场与出场。
-
-## 策略优势
-1. 结合两种不同类型策略的优点,既可以判断趋势反转,又可以锁定具体价格位,胜率较高
-2. 123形态策略可以有效判断短期内趋势反转点
-3. 枢轴点策略可以利用关键支撑阻力位过滤假突破
-
-## 风险与对冲
-1. 双随机指标存在一定滞后,可能错过短线反转
-2. 枢轴点并非百分之百有效,可能出现突破继续运行
-3. 可以适当调整参数,或与其他指标组合使用来对冲风险
-
-## 策略优化方向 
-1. 可以测试不同参数对策略效果的影响
-2. 可以尝试与其他指标或形态组合,提高策略效果 
-3. 可以结合机器学习算法动态优化参数
-
-## 总结
-本策略巧妙地将趋势判断与关键价格位结合,既可判断趋势反转点,又可利用支撑阻力过滤信号。通过参数与策略组合优化,可以进一步提升效果。该策略值得量化交易者进一步研究与应用。
-
-||
 
 ## Overview
 This strategy combines the 123 reversal pattern strategy and the pivot point strategy to achieve a higher win rate. The 123 reversal pattern strategy identifies trend reversal points, while the pivot point strategy determines key support and resistance levels. By combining the two, it can capture trends while identifying specific entry and exit prices.
@@ -87,7 +48,6 @@ It then identifies entry and exit based on the support and resistance levels.
 
 ## Summary  
 This strategy ingeniously combines trend identification and key price levels, enabling it to spot reversals while utilizing S/R to filter signals. Further improvements can be made through parameter tuning and combination with other strategies. It deserves more research and application by quant traders.
-[/trans]
 
 > Strategy Arguments
 

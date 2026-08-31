@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13120e0aa416c2c1de9.png)
-[trans]
-#### 概述
-该策略结合了VWAP(成交量加权平均价)和超级趋势指标。通过比较价格与VWAP的相对位置,以及超级趋势指标的方向,来判断买卖信号。当价格上穿VWAP且超级趋势为正时,产生买入信号;当价格下穿VWAP且超级趋势为负时,产生卖出信号。该策略还通过记录上一次的信号状态,避免产生重复信号,直到出现相反方向的信号为止。
-
-#### 策略原理
-1. 计算VWAP指标,使用ta.vwap函数,可以自定义VWAP的长度。
-2. 计算超级趋势指标,使用ta.supertrend函数,可以自定义ATR周期和乘数。
-3. 判断买入条件:当前价格上穿VWAP,且超级趋势方向为正。
-4. 判断卖出条件:当前价格下穿VWAP,且超级趋势方向为负。
-5. 记录上一次信号状态,避免连续出现同向信号。只有当前信号与上一次信号不同时,才会产生新的交易信号。
-
-#### 策略优势
-1. 结合了VWAP和超级趋势两个指标,可以更全面地判断市场趋势和潜在的转折点。
-2. VWAP指标考虑了成交量因素,能够更好地反映市场的真实走势。
-3. 超级趋势指标具有趋势追踪和过滤震荡的特点,有助于捕捉主要趋势。
-4. 通过避免重复信号的机制,可以减少交易频率,降低交易成本。
-
-#### 策略风险
-1. 在市场波动较大或趋势不明确时,该策略可能会产生较多的虚假信号。
-2. 策略的表现依赖于VWAP和超级趋势参数的选择,不同的参数设置可能导致不同的结果。
-3. 该策略没有考虑风险管理和仓位控制,实际应用时需要结合其他措施来控制风险。
-
-#### 策略优化方向
-1. 加入趋势确认机制,例如使用均线或者其他趋势指标,以进一步过滤信号。
-2. 优化参数选择,通过对历史数据进行回测,找到最佳的VWAP长度、ATR周期和乘数组合。
-3. 引入风险管理措施,如设置止损和止盈,控制单笔交易风险。
-4. 考虑加入资金管理策略,如固定比例或者凯利公式,以优化仓位大小。
-
-#### 总结
-VWAP与超级趋势买卖策略通过结合两个不同类型的指标,力求全面捕捉市场趋势和潜在转折点。策略逻辑清晰,易于实现和优化。但是,该策略的表现依赖于参数选择,且缺乏风险管理措施。在实际应用中,需要进一步优化和完善,以适应不同的市场环境和交易需求。
-
-|| 
 
 #### Overview
 This strategy combines the VWAP (Volume Weighted Average Price) and Supertrend indicators. It determines buy and sell signals by comparing the price's position relative to the VWAP and the direction of the Supertrend indicator. A buy signal is generated when the price crosses above the VWAP and the Supertrend is positive, while a sell signal is generated when the price crosses below the VWAP and the Supertrend is negative. The strategy also avoids generating duplicate signals by recording the previous signal state until an opposite signal appears.
@@ -72,7 +40,6 @@ This strategy combines the VWAP (Volume Weighted Average Price) and Supertrend i
 
 #### Summary
 The VWAP and Supertrend Buy/Sell Strategy aims to comprehensively capture market trends and potential turning points by combining two different types of indicators. The strategy logic is clear and easy to implement and optimize. However, the strategy's performance depends on parameter selection and lacks risk management measures. In practical applications, further optimization and refinement are needed to adapt to different market conditions and trading requirements.
-[/trans]
 
 
 

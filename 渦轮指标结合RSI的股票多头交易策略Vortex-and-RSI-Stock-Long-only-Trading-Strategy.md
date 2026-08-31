@@ -9,75 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略运用渦轮指标判断市场趋势方向,识别多头机会,同时利用RSI指标作为过滤器,结合止损止盈管理,构建一个较为完整的股票多头交易策略系统。该策略可以有效识别股票上涨趋势,并可自定义参数进行优化。
-
-## 策略原理
-
-1. 计算渦轮指标的正向指标VIP和负向指标VIM。
-
-2. 当VIP上穿VIM,并且收盘价高于前一日的最高价时,判断为买入信号。
-
-3. 计算RSI指标值。当RSI指标下穿70时,判断为卖出信号。
-
-4. 当VIM下穿VIP,并且收盘价低于前一日的最低价时,也判断为卖出信号。
-
-5. 设置止损止盈规则:止损幅度为初始资金的stop_loss%,止盈幅度为初始资金的Target_profit%。
-
-渦轮指标可有效判断多头和空头趋势,结合RSI指标避免过热的风险,再配合止损止盈管理,使整个交易系统较为稳健完整。
-
-## 策略优势分析
-
-1. 渦轮指标判断趋势方向准确,信号明确。
-
-2. RSI指标可有效避免过热风险,防止追高。
-
-3. 动态止损止盈设置了明确的风险回报比。
-
-4. 可根据市场调整止损止盈参数,适应性强。
-
-5. 策略信号规则简单清晰,易于实施。
-
-6. 可扩展至其他指标,优化空间大。
-
-## 风险分析
-
-1. 渦轮指标存在滞后,可能错过机会。
-
-2. 止损幅度过小可能被套住。
-
-3. 止盈幅度过大可能限制收益。
-
-4. RSI过度依赖容易形成死叉。
-
-5. 未考虑交易费用的影响。
-
-6. 未设置仓位管理模块。
-
-## 策略优化方向
-
-1. 测试优化渦轮指标和RSI的参数。
-
-2. 尝试其他类似OBV等指标代替或结合渦轮指标。 
-
-3. 优化止损止盈策略,如移动止损、缩量止损等。
-
-4. 增加仓位管理模块,限制单笔亏损。
-
-5. 考虑结合更多指标,如KD、MACD等判断入场时机。
-
-6. 利用机器学习算法寻找更优参数。
-
-7. 增加基本面因素,提高策略胜率。
-
-## 总结
-
-本策略整合渦轮指标的趋势判断与RSI指标的过热控制,形成一个较为稳定的股票多头交易策略。止损止盈设置也使风险收益可控。通过进一步优化参数以及新增模块,可以使策略更加稳健,适用于实盘。该策略有较强的趋势跟踪能力和扩展空间,适合积极股民使用。
-
-|| 
 
 ## Overview 
 
@@ -145,7 +76,6 @@ Vortex indicator judges bullish/bearish trends well. Adding RSI prevents overhea
 
 This strategy integrates Vortex for trend and RSI for overheating control into a stable long-only stock system. The stop loss/take profit settings also keep risk manageable. Further improvements in parameter tuning and new modules can make it more robust for live trading. With strong trend following capacity and expandability, this strategy suits active investors well.
 
-[/trans]
 
 > Strategy Arguments
 

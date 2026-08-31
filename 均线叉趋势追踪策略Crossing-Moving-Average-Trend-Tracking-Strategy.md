@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14031aea307fa2258e7.png)
 
-[trans]
-### 概述
-
-该策略通过计算双均线的交叉来判断价格趋势,并结合一定的参数限制来发出买入和卖出信号。主要分为三部分:第一,通过计算快速均线和慢速均线的交叉来判断价格趋势;第二,结合一定的参数限制来避免错误交易;第三,利用止盈止损来控制风险。
-
-### 策略原理
-
-该策略的核心在于计算快速均线和慢速均线。快速均线参数为均线周期的一半,反应价格变化更加敏感;慢速均线参数为均线周期,反应价格变化更加平稳。当快速均线上穿慢速均线时,认为价格进入上升趋势;当快速均线下穿慢速均线时,认为价格进入下降趋势。
-
-此外,策略还设置了一定的参数来避免错误交易。如设置了决策阈值,只有快慢均线差值超过一定幅度时才会发出交易信号;confidence参数用于波动过滤,只有价格波动达到一定程度才会发出信号。
-
-最后,策略采用止盈止损来控制风险。 openprofit小于止损点就退出仓位,超过止盈点就退出仓位,有效控制单笔损失。
-
-### 优势分析
-
-该策略最大的优势在于结合均线指标判断价格趋势和波动特征。双均线交叉判断价格趋势是经典有效的技术指标方法,参数优化后可准确抓取趋势;波动性指标confidence可有效过滤震荡市,避免频繁错误交易。
-
-此外,决策阈值、止盈止损等参数设置也可大大降低交易风险,避免追高杀跌。
-
-### 风险分析
-
-该策略主要风险在于双均线指标发出错误信号的可能。快速均线和慢速均线均为加权移动平均线,对突发事件反应较慢,可能错过短期价格反转。此时就要依赖参数confidence进行双重过滤。
-
-此外,止盈止损点设置不当也会增大风险。止盈点过高、止损点过低都可能造成超出预期的损失。这需要根据不同品种特点和波动率来设置合理的参数。
-
-### 优化方向 
-
-该策略可从以下几个方面进行优化:
-
-1. 优化均线周期,设置自适应均线,使其能更好地对不同周期的价格波动进行建模;
-
-2. 设置止盈止损动态跟踪机制,通过行情实时计算波动率,使止盈止损点能够动态变化;
-
-3. 增加机器学习模型判断价格趋势方向,利用更多历史数据判断当前价格走向,减少错误信号。
-
-### 总结
-
-该策略整体来说是一种经典简单有效的趋势交易策略。采用双均线交叉判定趋势,参数设置进行风险控制,可配置性强,适用于多品种交易。如果能引入机器学习等更加智能的判断手段,整体效果会更好,值得进一步研究。
-
-|| 
 
 ### Overview
 
@@ -90,7 +50,6 @@ The strategy can be optimized in the following aspects:
 
 In general, this is a classic simple and effective trend trading strategy. It uses double moving average cross to determine trends, sets parameters to control risks, and has high configurability for multi-product trading. If more intelligent judgment means like machine learning can be introduced, the overall effect could be even better for further research.
 
-[/trans]
 
 > Strategy Arguments
 

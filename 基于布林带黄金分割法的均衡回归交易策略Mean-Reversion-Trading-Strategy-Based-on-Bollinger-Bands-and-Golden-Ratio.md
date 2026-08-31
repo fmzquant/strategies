@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1626699f83c0d48f3d4.png)
-[trans]
-
-
-## 概述
-
-本策略利用布林带的黄金分割线,结合均线形态判断进行回归交易。当价格接触布林带黄金分割线时看作买入信号,利用价格的均衡回归特征获得获利。
-
-## 策略原理
-
-1. 计算布林带的中轨、上轨和黄金分割下轨
-
-- 中轨:n周期的加权移动平均线vwma
-- 上轨:中轨 + k * n周期的标准差
-- 黄金分割下轨:中轨 - 0.618 * n周期的标准差 
-
-2. 判断形态
-
-- 50日均线上穿200日均线,符合趋势向上
-- 价格接触或低于黄金分割下轨,作为买入信号
-
-3. 退出
-
-- 价格上穿布林带上轨,认为价格已经离开下轨回归,此时平仓
-
-4. 止损
-
-- 设定固定百分比止损,如5%
-
-## 策略优势
-
-1. 使用vwma而不是sma作为布林带的中轨,可以更好地反映价格的移动趋势
-
-2. 黄金分割是重要的支撑/阻力区域,这为回归提供依据
-
-3. 均线多头排列,确保大趋势向上
-
-4. 固定止损确保单笔损失控制
-
-## 策略风险
-
-1. 黄金分割线不是确定的支撑,价格可能直接跌穿
-
-2. 固定止损可能过于武断,应考虑根据市场波动调整
-
-3. 均线多头排列也可能是假突破,应结合更多指标判断
-
-4. 回归长度不确定,需要设定合理的止盈离场点
-
-## 优化方向
-
-1. 可以测试不同参数组合,如布林带周期、标准差倍数、固定止损百分比等
-
-2. 可以加入更多指标判断市场趋势和回归概率,如MACD、KD等
-
-3. 可以考虑动态止损,根据ATR止损或跟踪止损
-
-4. 可以优化止盈策略,如移动止盈、分批止盈等
-
-## 总结
-
-本策略利用布林带黄金分割线进行均衡回归交易,具有交易逻辑清晰、参数设定简单、回撤可控等优点。但也存在一定的风险,需要进一步测试和优化,加入更多技术指标判断和止损/止盈工具,才能实际应用。总体来说,该策略提供了一种利用黄金分割法则进行量化交易的思路,值得进一步探索。
-
-||
 
 
 ## Overview
@@ -134,7 +71,6 @@ This strategy uses the golden ratio line of Bollinger Bands combined with moving
 
 This strategy trades mean reversions using BB golden ratio line, with clear logic, simple parameters, and controllable drawdown. But also has risks, requires further testing and optimization, adding more technical indicators for trend and better stops/exits before actual use. Overall provides idea of using golden ratio in quant trading, worth exploring further.
 
-[/trans]
 
 > Strategy Arguments
 

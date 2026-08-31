@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c67b21fa1fb0093e23.png)
-[trans]
-
-### 概述
-
-本策略基于相对强弱指数(RSI)指标进行超买超卖的判断,在RSI达到超买超卖区域时建立反向头寸,实现低买高卖的目的。策略简单高效,通过捕捉市场短期的超买超卖现象来获取利润。
-
-### 策略原理
-
-该策略仅使用RSI指标作为建仓信号。当RSI下穿设定的低点(默认20)时做多,当RSI上穿设定的高点(默认80)时做空。每次交易固定资金(默认100美元),无论行情如何只追求获利1%后止盈。如果亏损达到3%则止损。为控制交易频率,策略还设置了在亏损后会暂停24根K线不进行交易。
-
-具体来说,策略的核心逻辑是:
-
-1. 使用RSI指标判断超买超卖
-2. RSI下穿20时做多
-3. RSI上穿80时做空 
-4. 每次开仓100美元
-5. 止盈或止损后平仓
-6. 若亏损则在下一根K线暂停24根K线不交易
-
-可见该策略非常简单 mechanical,几乎不存在参数优化的空间。它纯粹利用RSI指标的数学特征,在超买超卖区域反向建仓获得反转利润。
-
-### 优势分析
-
-该策略最大的优势在于简单和高效。
-
-1. 使用单一指标RSI,无需复杂技术分析。
-2. 完全的机械交易系统,不受个人情绪影响。
-3. 利用市场短期偏离的数学特征获利,不需要预测市场走势。
-4. 资金管理规范,止盈止损机制控制风险。
-
-此外,策略还设置了止盈止损比例以锁定利润和控制风险,以及暂停交易机制来降低交易频率。这使得策略以最小的风险获得稳定利润。
-
-### 风险分析
-
-该策略的主要风险来自:
-
-1. 趋势行情下无法获利。当趋势非常强劲时,RSI可能长期处于超买或超卖区域,反转机会不多,该策略将难以获利。
-
-2. 止损设置过大可能导致亏损扩大。目前止损为3%,可能需要调整至1-2%更为合理。
-
-3. 交易频率过高容易获利后继续建仓,应适当控制开仓频率。
-
-4. 固定每次开仓资金100美元可能风险过度集中,需要优化为资金百分比。
-
-### 优化方向
-
-根据上述分析,该策略可以从以下几个方面进行优化:
-
-1. 增加趋势判断指标,如MA,在趋势不明朗时暂停交易。
-
-2. 优化止损止盈比例,将止损调整为1-2%更合理,止盈可以设置为浮动止盈。
-
-3. 增加开仓频率限制,如一定时间内只允许开仓1-2次。
-
-4. 将固定资金100美元修改为资金百分比,如1%。
-
-5. 优化参数组合,如RSI周期、超买超卖区域等参数的组合优化。
-
-6. 增加仓位控制, initial capital增加时不提高单笔交易资金。
-
-通过以上几点优化,可以有效降低交易风险,提高策略稳定性和可靠性。
-
-### 总结
-
-本策略总体来说非常简单直接,通过RSI指标判断超买超卖获得短期反转利润。优点是简单高效,无需预测,交易逻辑清晰,容易回测和验证。但可能难以对付趋势行情,存在一定亏损风险。通过引入趋势判断、优化参数设置、控制仓位等方法可以进一步增强策略的稳定性和盈利能力。该策略思路新颖,具有实际交易价值,如果合理应用可以获得较好效果。
-
-||
 
 
 ## Overview
@@ -143,7 +76,6 @@ With these optimizations, the risks can be reduced and stability improved signif
 
 In summary, this is a simple and straightforward strategy using RSI to trade overbought/oversold conditions for short-term mean reversion. The pros are simplicity, efficiency, no prediction needed, clear logic, easy to test. The cons are inability to profit in strong trends and potential losses. With additions like trend filter, optimized parameters, position sizing etc., it can be further enhanced for stability and profitability. The logic is innovative and valuable for practical trading if applied properly.
 
-[/trans]
 
 > Strategy Arguments
 

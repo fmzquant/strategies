@@ -11,74 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/215fb8a0482df7bb8f2.png)
-[trans]
-
-
-## 概述
-
-本策略基于平均随机指标进行交易信号判断,属于趋势跟踪策略。该策略通过计算平均随机指标%K和%D的移动平均值,在它们发生金叉时做多,发生死叉时做空,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-1. 计算平均随机指标%K和%D的值。其中%K是根据一定周期内的收盘价计算出的随机值的移动平均,反映当前价格与一定周期内的最高价和最低价的相对位置。%D是%K的移动平均,用于确认趋势。 
-
-2. 对%K和%D分别进行指数平滑移动平均(EMA),得到平均随机指标的平均值\_avg\_k和\_avg\_d。
-
-3. 判断交易信号:
-
-   - 买入信号:当\_avg\_k上穿\_avg\_d,且\_avg\_d \< 20时,做多
-
-   - 卖出信号:当\_avg\_k下穿\_avg\_d,且\_avg\_d > 80时,做空
-
-4. 持仓管理:
-
-   - 多单止损:当\_avg\_d \> 80时平仓
-
-   - 空单止损:当\_avg\_d \< 20时平仓
-
-5. 允许同向订单最大3个,属于加仓策略
-
-## 策略优势
-
-1. 使用双重均线判断金叉死叉,可以有效过滤假突破,提高信号质量
-
-2. 应用平均随机指标,能够有效跟踪价格趋势
-
-3. 结合超买超卖区间判断,可以避免在震荡行情中频繁交易
-
-4. 允许加仓,可以在趋势行情中获得更多收益
-
-5. 止损策略可以控制单笔损失
-
-## 策略风险
-
-1. 双均线交易策略容易产生频繁交易,如果交易费用过高会影响盈利
-
-2. 使用固定止损点可能会过早止损退出趋势
-
-3. 加仓次数过多可能会导致亏损扩大
-
-4. 不能有效判断趋势反转点,在趋势反转时可能出现较大亏损
-
-5. 需要优化参数周期,不同周期效果差异很大
-
-## 优化方向
-
-1. 可以考虑引入趋势判断指标,避免逆势交易
-
-2. 动态调整止损点,让止损更贴合趋势
-
-3. 优化加仓策略,例如每单递增加仓手数
-
-4. 结合其他指标判断趋势反转,提前退出利润
-
-5. 针对不同品种分别测试参数优化,提高参数适应性
-
-## 总结
-
-本策略整体来说是一个典型的趋势跟踪策略,使用平均随机指标判断趋势方向,在趋势出现时进行加仓交易。策略优势是跟踪能力强,适合趋势行情,但需要注意防止逆势交易。通过引入趋势判断、优化止损策略、控制加仓次数等方式可以进一步优化,在参数选取合适的前提下,可以获得不错的跟踪效果。
-
-||
 
 
 ## Overview 
@@ -145,7 +77,6 @@ This strategy is based on the Average Stochastic Oscillator for trading signal j
 
 In summary, this is a typical trend following strategy. It uses Average Stochastic Oscillator to determine trend direction and pyramids when trend occurs. The advantage is strong tracking ability suitable for trending market. But it is important to avoid counter trend trading. Further optimization can be done by introducing trend judgment, optimizing stop loss strategy, controlling pyramiding times, etc. With proper parameter selection, good tracking results can be achieved.
 
-[/trans]
 
 > Strategy Arguments
 

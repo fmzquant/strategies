@@ -9,81 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-猎户座交易策略(Orion Trading Strategy)是一个集成多种技术指标的量化交易策略。该策略旨在提前识别市场的高点和低点,以便交易者及时做出买入和卖出决策。该策略通过独特的预测曲线机制,尝试在价格实际转折前提前发出交易信号。
-
-## 策略原理
-
-该策略的核心是独创的猎户座信号曲线。该曲线综合多个技术指标,包括MACD、WPR、Stoch、RSI等,计算出一个综合信号。然后通过超平滑处理生成最终曲线。
-
-关键是该曲线还配备了一个预测模型,它分析曲线的斜率变化情况,尝试预测1-2根K线之后的潜在转折。当预测曲线与实际曲线发生背离时,即可提前发出交易信号。
-
-此外,策略还使用动量波指标判断更大级别上的趋势方向。当动量波改变方向时,提示可能出现较大级别的转折。
-
-最后,策略在信号产生时,给出相应的买入卖出建议。用户可以自行决定是否按此入场。
-
-## 优势分析
-
-- 多指标综合判断,提高准确率
-
-融合多个指标有助于确认趋势和发现转折点,避免单一指标误判风险。
-
-- 预测模型提前发现反转机会
-
-预测曲线可提前反转实际信号,为交易决策提供先机。
-
-- 动量波判断大趋势方向
-
-结合更高时间框架的动量波指标,可避免逆势操作。
-
-- 可自定义参数,适应不同品种
-
-用户可调整指标参数,适应不同品种的特点。
-
-## 风险分析
-
-- 预测模型可能造成过度交易
-
-预测模型容易发出假信号,如果盲目跟随,可能导致过度交易。
-
-- 多参数组合难以优化
-
-参数数量多,要找到最优组合需要大量数据集和长时间测试。
-
-- 需谨慎评估指标效果
-
-各个指标对信号提升的实际作用需谨慎评估,避免使用冗余指标。
-
-- 需考虑实盘交易成本因素
-
-频繁交易会产生更多成本,这需要考虑在实盘条件下进行回测。
-
-## 优化方向
-
-- 评估预测模型效果,调整参数
-
-评估预测模型准确率,优化调整预测参数以提高准确性。
-
-- 简化模型,减少冗余指标
-
-采用指标效果评估和模型简化方法,减少不必要的复杂度。
-
-- 多市场回测验证稳定性
-
-在更多市场中回测,验证参数优化结果和稳定性。
-
-- 考虑实盘成本进行策略调整
-
-根据回测引入实盘成本因素,调整策略参数以降低交易频率。
-
-## 总结
-
-猎户座策略综合运用多种指标和独特预测曲线,试图提前发现市场转折点。该策略具有一定优势,但可扩展性也存在局限性。需要保持谨慎态度,从交易信号效果和成本效果等方面不断优化调整,力求在交易自动化中获取长期稳定收益。
-
-||
 
 ## Overview
 
@@ -144,7 +69,6 @@ Introduce real-world costs into backtest to adjust strategy parameters for lower
 ## Summary
 The Orion strategy synthesizes multiple indicators and a unique prediction curve to try identifying turns early. It has merits but scalability is also limited. Cautious attitude is needed. Continuous optimizations from aspects like signal efficacy and cost effectiveness are required to achieve steady long-term gains in automated trading.
 
-[/trans]
 
 > Strategy Arguments
 

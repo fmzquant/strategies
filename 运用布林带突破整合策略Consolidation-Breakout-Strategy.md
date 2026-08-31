@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15edec9f1c0cf8da958.png)
-[trans]
-
-## 概述
-
-该策略运用布林带指标判断价格是否处于整合期,以及使用突破判断入场和出场。整体来说,该策略主要利用价格整合带来的剧烈行情进行获利。
-
-## 策略原理
-
-该策略首先计算20日内的收盘价的简单移动平均线作为布林带的中轨,并计算标准差的2倍作为布林带的带宽。当价格高于上轨时判定为突破上轨,当价格低于下轨时判定为突破下轨。
-
-当价格位于布林带中轨上下时,判断为整合期。当检测到突破信号时,做多头入场。当再次突破下轨时,平仓。做空同理。
-
-止损设定为ATR指标的2倍。
-
-## 优势分析
-
-该策略主要依赖布林带的整合与突破属性,具有以下优势:
-
-1. 利用价格整合带来的剧烈行情,潜在获利空间大
-2. 布林带指标直观,参数优化简单
-3. 随大趋势运行,避免追顶杀跌
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 突破信号可能出现假突破,造成亏损
-2. 止损设置过大,单笔亏损扩大
-3. 布林带参数设置不当,失去指标效用
-
-对策:
-
-1. 结合价量指标过滤假突破
-2. 优化止损区间,降低单笔亏损
-3. 测试不同布林带参数,选择最优参数
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 整合判定规则可以引入更多指标,避免错误信号
-2. 增加趋势过滤,根据趋势方向决定做多做空
-3. 增加止损方式,如追踪止损等,更好控制风险
-
-## 总结
-
-该策略整体较为简单直接,通过捕捉价格整合带来的能量聚集实现较大盈利。优化空间较大,可从入场规则、止损方式等方面进行调整,在控制风险的前提下获得更稳定收益。
-
-||
 
 ## Overview  
 
@@ -106,7 +57,6 @@ Some ways to improve the strategy:
 
 The strategy is simple and straight forward, profiting from energy buildup during consolidations. Huge optimization space exists around entry rules, stop loss methods etc to obtain more steady profits while controlling risks.
 
-[/trans]
 
 > Strategy Arguments
 

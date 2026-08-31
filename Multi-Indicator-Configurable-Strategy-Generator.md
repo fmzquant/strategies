@@ -10,18 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-多指标可配置策略生成器
-
-该策略生成器通过组合使用EMA、RSI、Stochastic、MACD和ADX等多种指标,实现高度可配置的算法交易策略。用户可以自由选择开启或关闭每种指标,并自定义各指标的参数,从而产生适合不同市场环境的交易信号。
-
-该策略的优势在于指标组合使用可以形成有效的过滤机制,不同指标可相互验证,减少错误信号。同时,可配置性极强,用户可以针对特定品种和周期进行详尽测试和参数优化,从而获得稳定的交易策略。
-
-但是,过多参数组合也可能导致过度优化和曲线拟合的风险。此外,多指标组合继承了各指标自身的滞后性,可能错过最佳入场时点。因此,实盘过程中仍需持续观察测试结果并及时调整。
-
-总之,该多指标策略生成器使得量化交易策略的建立变得更加便捷高效。但获得长期稳定策略的关键在于严格的统计验证,而非依赖参数优化。只有做到这一点,才能将生成的策略成功应用至实盘中。
-
-||
 
 This strategy generator combines various indicators like EMA, RSI, Stochastic, MACD and ADX to create highly configurable algorithmic trading strategies. Users can freely choose to enable or disable each indicator and customize their parameters, generating trading signals suitable for different market environments.
 
@@ -31,7 +19,6 @@ However, too many parameter combinations also risk overfitting and curve fitting
 
 In summary, the multi-indicator strategy generator makes building quantitative trading strategies much more efficient. But the key to obtaining stable long-term strategies lies in strict statistical verification, not reliance on parameter optimization. Only by achieving this can the generated strategies be successfully applied in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

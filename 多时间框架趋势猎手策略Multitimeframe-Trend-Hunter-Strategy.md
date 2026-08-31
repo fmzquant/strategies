@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fd91bf5107fab48144.png)
-[trans]
-## 概述
-多时间框架趋势猎手策略(Multitimeframe Trend Hunter Strategy)是一个利用多种指标配合实现自动化交易信号的策略。该策略综合利用移动平均线、超级趋势指标和一云图指标等,在多个时间框架内判断趋势方向,以发现潜在的交易机会。
-
-## 策略原理
-该策略的核心原理是同时在高时间框架和低时间框架判断趋势方向。策略首先在高时间框架计算出关键的移动平均线、超级趋势线和一云图的转换线、基准线等。然后在低时间框架计算出超级趋势线。当高低时间框架的超级趋势线方向一致时,即确认当前整体趋势方向。此外,该策略还要判断价格是否突破移动平均线或一云图的云,以进一步验证趋势的可靠性。
-
-在满足一定条件后,该策略会产生买入或卖出的交易信号。用户可以根据自己的需要选择是否只交易长单、短单或都交易。此外,用户还可以配置移动平均线参数、超级趋势参数、一云图参数等,对策略的表现进行优化。
-
-## 优势分析
-该策略最大的优势在于多时间框架和多指标的结合,这可以大大提高判断趋势方向的准确性,并及时发现反转机会。具体优势如下:
-
-1. 利用高低时间框架确认趋势,避免被市场噪音误导
-2. 移动平均线作为中长线指标,判断主要趋势方向  
-3. 超级趋势线作为短期指标,及时捕捉趋势反转
-4. 一云图判断支持阻力区域,发现潜在机会
-
-## 风险分析
-该策略的主要风险在于参数设置不当可能导致过于频繁交易或漏失机会。此外,指标发出错误信号也会造成损失。具体风险及解决方法如下:
-
-1. 参数设置风险:多进行回测和优化,找到最佳参数组合
-2. 信号错误风险:结合更多指标进行验证,避免错误信号
-3. 回撤风险:适当调整仓位管理,控制单笔损失
-
-## 优化方向  
-该策略还有进一步优化的空间:
-
-1. 增加更多指标结合,如布林带、RSI等,提高判断准确性
-2. 集成机器学习模型,实现更智能化的交易策略
-3. 结合量化技术,如高频交易、arly bird等,进一步提升策略表现
-4. 优化仓位管理策略,通过动态调整仓位,降低回撤风险
-
-## 总结
-综上所述,多时间框架趋势猎手策略利用多指标和多时间框架判断趋势,能及时抓住反转机会,是一种表现较佳的量化交易策略。该策略集成度高、应用广泛,未来仍有很大的优化空间,值得量化交易者继续研究和应用。
-
-||
 
 ## Overview
 The Multitimeframe Trend Hunter Strategy is a strategy that utilizes multiple indicators to generate automated trading signals. This strategy incorporates moving averages, Supertrend indicator, Ichimoku Cloud and more across multiple timeframes to determine trend direction and discover potential trading opportunities.   
@@ -80,7 +44,6 @@ There is further room to optimize this strategy:
 
 ## Conclusion  
 In conclusion, the Multitimeframe Trend Hunter Strategy leverages multiple indicators across timeframes to determine trend and capture reversals timely. It is an effective quant trading strategy with wide applications and much room for future optimizations, worthwhile for quant traders to continually research and apply.
-[/trans]
 
 > Strategy Arguments
 

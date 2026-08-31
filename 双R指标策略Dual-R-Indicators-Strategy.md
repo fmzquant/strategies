@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略运用双R指标结合SMA均线,实现对USDJPY的趋势判断和交易信号产生。其中,双R指标包括Parabolic SAR止损指标和RSI超买超卖指标。该策略通过双R指标判断行情趋势和超买超卖情况,结合SMA均线实现买卖点判断。
-
-## 原理
-
-该策略主要运用了三个技术指标:
-
-1. Parabolic SAR止损指标:该指标展示了当前价格的止损点,可以用来判断价格趋势和可能的反转点。代码中通过参数设置计算SAR值并绘制。
-
-2. RSI超买超卖指标:该指标判断价格是否超买超卖。代码中设置RSI参数及超买超卖阈值,并计算绘制RSI曲线。
-
-3. SMA均线:计算并绘制10日线和20日线的SMA均线。
-
-结合三个指标,判断买卖点逻辑如下:
-
-当收盘价上穿182日SMA均线,且10日SMA线上穿20日SMA线,且RSI指标由低位向上突破30超卖线时,做多;
-
-当收盘价下穿182日SMA均线,且10日SMA线下穿20日SMA线,且RSI指标由高位向下突破70超买线时,做空。
-
-## 优势
-
-该策略具有以下优势:
-
-1. 运用双R指标判断趋势方向,可以有效确认交易信号。RSI指标判断超买超卖情况,SAR止损指标判断价格趋势转折点,二者结合使用更加可靠。
-
-2. 结合SMA均线进行入市,可以有效过滤假突破。仅仅依靠RSI指标容易造成错失交易机会,加入SMA均线判断可以减少此风险。
-
-3. 时间周期选择15分钟,可以及时捕捉短期价格突破。日内交易以捕捉短期趋势为主,15分钟能够充分把握机会。
-
-4. 回测数据足够充分,对策略有效性验证充分。2个半月的15分钟数据可以基本判断该策略的可靠性。
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 回测数据时间段太短,无法完全代表未来表现。仅仅2个半月的数据不足以完全判断策略的长期有效性。
-
-2. RSI指标存在错触发问题。RSI指标本身可能出现脱离价格实际走势的情况,导致产生错误信号。
-
-3. SMA均线存在滞后问题。SMA均线对价格变化响应较慢,可能错过较好入场点位。
-
-4. 日内短线交易风险较大。日内交易受新闻事件影响较大,且存在过夜仓位风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加回测历史数据时间段,使之更长,如增至6个月或1年,可以更充分验证策略效果。
-
-2. 尝试运用其他指标替代或结合RSI指标,如KDJ、MACD等,使信号更可靠。
-
-3. 尝试SMA均线组合优化,如改为5日及20日组合,或加入更长期均线,使突破更可靠。 
-
-4. 设置止损机制以控制单笔损失。如设置日内止损或移动止损。
-
-5. 优化止盈策略,如移动止盈或分批止盈,锁定更多利润。
-
-## 总结
-
-本策略整体运用双R指标判断超买超卖情况,结合SMA均线过滤来实现日内USDJPY交易策略。该策略具有及时捕捉短期趋势的优势,但也存在回测数据不足等风险。未来可以通过增加数据时间段、优化指标参数、设置止损止盈来进一步改进策略效果。
-
-
-
-||
 
 
 ## Overview
@@ -140,7 +73,6 @@ Some ways to optimize the strategy:
 
 The strategy overall uses dual R indicators for overbought-oversold and SMA for filters to implement USDJPY intraday trading. It has advantage of catching short-term trends but also risks like insufficient backtest data. It can be further improved by expanding timeframe, optimizing parameters, adding stop loss/take profit.
 
-[/trans]
 
 > Strategy Arguments
 

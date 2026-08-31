@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ae8468696c2cc6b1a.png)
-[trans]
-
-## 概述
-
-该策略是基于双重因子模型的组合反转交易策略。它整合了123形态反转和增量指数两个因子,实现了策略信号的加成效应。当两个因子同时发出买入或卖出信号时,该策略才会进行相应的做多或做空操作。
-
-## 策略原理
-
-### 123反转因子
-
-该因子基于价格的123形态进行操作。当前两天的收盘价关系为“低-高”并且Stoch指标低于50时,判断为底部反转信号,做多;当前两天收盘价关系为“高-低”并且Stoch指标高于50时,判断为顶部反转信号,做空。
-
-### 增量指数因子 
-
-该因子基于价格波动范围的增加或减小来判断趋势反转。波动范围增大则指数上涨,范围减小则指数下降。当指数上穿某一阈值时产生做空信号,下穿时产生做多信号。
-
-双因子同方向信号才会打开仓位,实现策略盈利,避免单一因子带来的假信号风险。
-
-## 优势分析
-
-- 双因子模型,结合价格形态和波动性指标,提高信号准确性
-- 123形态判断局部 extremum,增量指数捕捉全局趋势反转点,优势互补 
-- 只在双因子发出同向信号时开仓,有效过滤假信号,提高策略稳定性
-
-## 风险分析
-
-- 双因子同时发出错误信号的概率存在,带来亏损风险
-- 反转失败概率存在,需要设置止损以控制损失
-- 参数优化不当可能导致过拟合
-
-可以通过扩大训练集、严格止损、多因子组合过滤等手段降低风险。
-
-## 优化方向
-
-- 测试更多价格和波动性指标的组合
-- 增加机器学习模型判断信号质量,动态调整仓位
-- 结合交易量,布林带等因子发掘更多 Alpha
-- 采用 walk forward 方法进行滚动优化,提高稳健性
-
-## 总结
-
-该策略结合价格形态和波动性指标两个因子,只在双因子发出同向信号时开仓,避免单一因子带来的假信号风险,从而提高策略整体稳定性。但也存在一定概率双因子同时发出错误信号的风险。我们可以通过扩大训练集、设置止损、因子组合优化等手段进一步提升策略表现和风险调整收益率。
-
-||
 
 ## Overview
 
@@ -96,7 +52,6 @@ Risks can be reduced via expanding training set, strict stop loss, multi-factor 
 
 This strategy combines two factors, price pattern and volatility indicator, to only take signals when they agree, avoiding false signals from a single factor and improving stability. But risks remain for concurrent wrong signals. We can further enhance performance and risk-adjusted returns by expanding dataset, setting stop loss, optimizing factor combinations and more.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,48 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1379c2aadf995b85673.png)
 
-[trans]
-#### 概述
-这是一个基于海龟交易法则的趋势跟踪策略。该策略使用ATR(平均真实波幅)来确定趋势方向和交易头寸规模。当价格突破过去一段时间的最高价或最低价时,策略会开仓做多或做空。持仓头寸会一直持有,直到价格突破过去一段时间的最低价或最高价,策略才会平仓。该策略的目的是捕捉强劲的趋势行情,同时严格控制风险。
-
-#### 策略原理
-该策略的核心是利用ATR指标来确定趋势方向和交易头寸规模。ATR指标可以衡量市场波动性,从而帮助我们确定合适的止损位和头寸规模。策略的主要步骤如下:
-1. 计算ATR指标值。
-2. 确定多头和空头的突破价格水平。多头突破价格为过去一段时间的最高价,空头突破价格为过去一段时间的最低价。
-3. 如果价格突破多头突破价格,开仓做多;如果价格突破空头突破价格,开仓做空。
-4. 根据ATR指标值和账户余额,计算每次交易的头寸规模。
-5. 持有头寸,直到价格突破过去一段时间的最低价(多头持仓)或最高价(空头持仓),平仓了结。
-
-通过这种方式,该策略能够捕捉强劲的趋势行情,同时严格控制风险。ATR指标的使用可以帮助我们动态调整头寸规模,从而更好地适应市场波动。
-
-#### 策略优势
-1. 趋势跟踪:该策略的目标是捕捉强劲的趋势行情,从而获取可观的利润。
-2. 风险控制:通过使用ATR指标来确定头寸规模和止损位,该策略可以有效控制风险。
-3. 适应性强:ATR指标可以动态调整,从而使策略能够适应不同的市场环境。
-4. 简单易用:该策略的逻辑清晰,易于理解和实现。
-
-#### 策略风险
-1. 趋势反转:当市场趋势突然反转时,该策略可能会遭受较大损失。
-2. 震荡市场:在震荡市场中,该策略可能会频繁开仓平仓,导致高昂的交易成本。
-3. 参数敏感性:该策略的表现可能对参数设置较为敏感,不恰当的参数可能导致策略表现不佳。
-
-为了应对这些风险,可以考虑以下解决方法:
-1. 引入趋势确认机制,避免在趋势反转时过早开仓。
-2. 在震荡市场中减小头寸规模,或暂停交易。
-3. 对参数进行优化,寻找最佳的参数组合。
-
-#### 策略优化方向
-1. 引入更多指标:除了ATR指标外,可以考虑引入其他趋势确认指标,如移动平均线,以提高趋势判断的准确性。
-2. 动态调整参数:根据不同的市场环境,动态调整策略参数,如ATR周期、突破价格周期等,以适应市场变化。
-3. 加入止盈机制:在获得一定利润后,可以考虑部分平仓,以锁定利润,降低风险。
-4. 多空头寸管理:可以考虑分别对多头和空头头寸进行管理,如采用不同的止损止盈标准,以提高策略的灵活性。
-
-通过以上优化,可以进一步提高该策略的稳定性和盈利能力。
-
-#### 总结
-TURTLE-ATR布林带突破策略是一个基于海龟交易法则的趋势跟踪策略。该策略利用ATR指标来确定趋势方向和交易头寸规模,通过突破过去一段时间的最高价或最低价来开仓,并持有头寸直到趋势反转。该策略的优势在于能够捕捉强劲的趋势行情,同时严格控制风险。但是,该策略也面临着趋势反转、震荡市场和参数敏感性等风险。为了进一步提高策略的表现,可以考虑引入更多指标、动态调整参数、加入止盈机制和优化头寸管理等方面进行优化。总的来说,TURTLE-ATR布林带突破策略是一个简单易用、适应性强的趋势跟踪策略,值得进一步研究和应用。
-
-|| 
 
 #### Overview
 This is a trend-following strategy based on the Turtle Trading rules. The strategy uses ATR (Average True Range) to determine the trend direction and trading position size. When the price breaks out of the highest or lowest price over a certain period, the strategy will open a long or short position. The position will be held until the price breaks out of the lowest or highest price over a certain period, at which point the strategy will close the position. The goal of this strategy is to capture strong trending markets while strictly controlling risk.
@@ -93,7 +51,6 @@ Through the above optimizations, the stability and profitability of the strategy
 
 #### Summary
 The TURTLE-ATR Bollinger Bands Breakout Strategy is a trend-following strategy based on the Turtle Trading rules. The strategy utilizes the ATR indicator to determine trend direction and trading position size, opening positions when the price breaks out of the highest or lowest price over a certain period and holding positions until the trend reverses. The strategy's advantages lie in its ability to capture strong trending markets while strictly controlling risk. However, the strategy also faces risks such as trend reversals, choppy markets, and parameter sensitivity. To further improve the strategy's performance, optimizations can be considered in areas such as introducing more indicators, dynamically adjusting parameters, incorporating take-profit mechanisms, and optimizing position management. Overall, the TURTLE-ATR Bollinger Bands Breakout Strategy is a simple, adaptable trend-following strategy that is worth further research and application.
-[/trans]
 
 
 

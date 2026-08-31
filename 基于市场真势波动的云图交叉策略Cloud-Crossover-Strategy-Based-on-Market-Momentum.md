@@ -9,65 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略的主要思想是利用云图的延迟穿越线技术判断市场的真实趋势,实现低风险交易。当延迟穿越线上穿基准线时做多,下穿时做空。
-
-## 策略原理  
-
-该策略通过计算转换线、基准线、延迟穿越线等指标判断市场趋势。
-
-转换线是过去9天的中价线,反映最近9天的平均价位。基准线是过去26天的中价线,反映较长期的平均价位。延迟穿越线是价格延迟26天后的关闭价。
-
-当短期平均价转换线上穿长期平均价基准线时,表示短期价位突破长期价位,属于多头信号。当延迟穿越线也上穿基准线时,验证了多头趋势,这个买入信号强度更大。
-
-当短期平均价转换线下穿长期平均价基准线时,表示短期价位跌破长期价位,属于空头信号。当延迟穿越线也下穿基准线时,验证了空头趋势,这个卖出信号强度更大。
-
-通过计算这些指标并观察其交叉情况,可以判断未来趋势方向。当延迟穿越线上穿基准线时做多,下穿时做空,可以利用云图判断市场真势,过滤掉部分假突破做反向操作。
-
-## 策略优势
-
-1. 延迟穿越线有去噪作用,可以过滤许多假突破。
-
-2. 结合短期和长期均线,实现多空切换。
-
-3. 入场时机精准,回撤小。
-
-4. 容易掌握,适合初学者。
-
-5. 可在不同品种和周期上广泛应用。
-
-## 策略风险
-
-1. 延迟穿越线滞后于价格变化,可能错过部分机会。
-
-2. 长短周期指标发散时会产生错误信号。
-
-3. 震荡行情中容易被套。
-
-4. 参数优化不当会影响效果。
-
-需要优化参数组合,配合止损来控制风险。可以考虑加入其他指标过滤信号。
-
-## 优化方向
-
-1. 优化转换线、基准线等均线参数,提高策略稳定性。
-
-2. 增加容差设置,避免频繁交易。 
-
-3. 结合波动率、成交量等指标进行过滤,确保交易顺势而为。
-
-4. 根据品种特性和交易者风险偏好调整持仓规模。
-
-5. 大周期进行趋势判断,小周期进行具体入场。
-
-## 总结
-
-该策略利用云图的延迟穿越线技术判断市场真势,实现低风险交易。策略简单易懂,容易掌握。但也存在一定风险,需要针对性优化。通过参数调整、止损规避、信号过滤等手段可以进一步提高策略效果。总体来说,该策略为初学者提供了一个有效的交易工具。
-
-|| 
 
 ## Overview
 
@@ -125,7 +66,6 @@ Risk management by stop loss and parameter optimization is needed. Other indicat
 
 This strategy uses the delayed crossover line of the Ichimoku Cloud to determine market momentum for low-risk trading. The strategy is simple and easy to understand. But it also has some risks, requiring custom optimization. Further improvements can be made through parameter tuning, risk management, signal filtering etc. Overall, it provides an effective trading tool for beginners.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略利用Williams Fractal指标识别价格高点和低点,并结合ABCD形态判断趋势方向,在确认趋势后进行入场,以追踪中短线趋势获利。
-
-## 策略原理
-
-1. 使用Williams Fractal指标识别价格高低点,根据不同的形态判断是牛市的ABCD形态还是熊市的ABCD形态。
-
-2. ABCD形态判断标准:
-
-    - AB和CD之间距离相近,BC和CD之间距离符合一定比例要求(0.382-0.886和1.13-2.618之间)。
-
-    - D点低于C点为牛市形态,D点高于C点为熊市形态。
-
-3. 通过barssince函数判断上一个方向的Fractal距离当前最近,来判断目前的总体趋势方向。
-
-4. 在识别到ABCD形态时入场做多/做空,并设置止损和止盈,跟踪中短线趋势。
-
-## 策略优势分析
-
-1. 使用Williams Fractal指标辅助判断,可以更准确识别转折点。
-
-2. ABCD形态判断标准简单可靠,容易程序化。
-
-3. 结合barssince函数判断大趋势方向,可以有效减少假突破带来的损失。 
-
-4. 设置止损止盈后可以跟踪中短线趋势获利。
-
-## 策略风险分析
-
-1. Williams Fractal存在滞后,可能错过转折点而造成损失。
-
-2. 中短线上存在多个重叠的ABCD形态,可能造成识别错误。
-
-3. 大趋势判断不准确时,中短线交易容易被套牢。
-
-4. 止损设置过小容易被击出,设置过大则跟踪效果不佳。
-
-对应优化方法:
-
-1. 可以试验使用其他指标辅助判断,寻找更有效识别转折点的方式。
-
-2. 优化ABCD形态的参数,使判断更严格可靠。
-
-3. 优化大趋势判断的方法,防止错误判断大趋势。 
-
-4. 测试不同的止损止盈比例,找到最佳止损止盈点。
-
-## 策略优化方向
-
-1. 可以尝试使用MACD,KDJ等其他指标辅助判断趋势,寻找更准确的入场时机。
-
-2. 可以根据不同品种不同周期进行参数优化,找到最适合该品种周期的止损止盈点。
-
-3. 可以根据市场变化优化取整周期,寻找最佳的参数组合。
-
-4. 可以结合均线等指标过滤入场信号,提高策略的稳定性。
-
-5. 可以引入机器学习算法,利用更多数据训练模型,以提高识别准确性。
-
-## 总结
-
-本策略整体思路清晰可靠,利用Williams Fractal指标和ABCD形态判断中短线趋势方向,再结合趋势过滤和止损止盈设置跟踪趋势获利。策略优化空间还很大,可从入场信号、参数优化、趋势判断等方面进行改进,使策略更适合不同市场环境。总体来说,该策略作为 discretionary + quant 结合的策略模式,具有很强的实用性。
-
-|| 
 
 ## Overview
 
@@ -141,7 +74,6 @@ Possible solutions:
 
 The strategy logic is clear and reliable overall, using Williams Fractal and ABCD patterns to determine medium-term trend direction, combining with trend filtering, stop loss and take profit to follow trends for profit. There is still much room for optimization in areas like entry signals, parameter tuning, trend identification etc to make it adaptable to different market conditions. As a discretionary + quant combo model, it has strong practical value.
 
-[/trans]
 
 > Strategy Arguments
 

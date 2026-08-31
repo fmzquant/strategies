@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1264238b32a4cea9bbc.png)
-[trans]
-
-
-### 概述
-
-RSI真实区域突破策略是一种利用 RSI 指标与真实区域震荡区间进行结合,实现突破交易的量化策略。该策略通过计算真实区域的上下限带,并结合 RSI 指标的过买过卖信号进行突破交易。在强势行情中,它能够提前捕捉趋势方向;而在震荡行情中,它能够有效过滤噪音,锁定较大方向性机会。
-
-### 策略原理
-
-该策略首先需要手动设置14个不同参数的真实区域上下限。真实区域的计算方式是以收盘价为基础,计算一定周期内的标准差和线性回归值,上限线为 线性回归线+n倍标准差,下限线为线性回归线-n倍标准差。参数n可以通过界面调节。这样可以画出14条不同参数的真实区域上下限线。 
-
-之后,策略在每个周期内会实时计算14条限位线中最高的作为真实区域上限,最低的作为真实区域下限。再结合RSI指标的数值,判断其是否进入超买或超卖区间。当RSI指标进入超买区或价格跌破真实区域上限时,做空;当RSI指标进入超卖区或价格涨破真实区域下限时,做多。
-
-最后,策略还设置了入场线和出场线。入场线代表真实区域下限,出场线代表真实区域上限。这样在开仓后,价格再次触碰出场线就会止损出场。
-
-总的来说,该策略同时利用了趋势指标RSI和自适应真实区域通道的优势,能够有效判断市场趋势方向,在震荡行情中发现较大方向性机会,并以真实区域出场线进行风险控制。
-
-### 策略优势
-
-1. 使用自适应真实区域。该区域上下限能够实时变化,适应市场波动。
-
-2. 真实区域参数可调。用户可以选择不同的参数组合,适应不同市场环境。 
-
-3. 结合RSI指标判定超买超卖现象,避免在震荡行情中错失方向。
-
-4. 入场线和出场线设定合理,可以控制风险。
-
-### 策略风险
-
-1. RSI指标参数设置需要谨慎。RSI周期过短易产生误导信号,过长则无法及时捕捉转折。
-
-2. 真实区域参数设置需要测试优化。参数过大过小都会影响策略表现。
-
-3. 震荡剧烈行情中止损风险较大。价格可能在真实区域内频繁触碰出场线造成过多损失。
-
-4. 真实区域需要一定周期形成。在数据不足情况下,该策略可能无法正常工作。
-
-可以通过优化RSI参数,调整真实区域参数,并结合其它指标确认入场时机来降低误交易风险。也可以适当放宽出场线降低止损风险。总体来说,需要针对不同市场环境做出适当调整。
-
-### 策略优化方向 
-
-1. 优化RSI参数设置,寻找最佳参数组合。可以测试不同的RSI周期参数。
-
-2. 优化真实区域参数,找到最适合当前市场环境的参数设置。
-
-3. 增加其它指标过滤,例如MACD,KD等,避免在震荡行情中产生错误交易。
-
-4. 设置不同的交易时间或品种,适应策略适用的具体交易环境。
-
-5. 优化止损策略,例如选用振荡止损,或根据ATR来设置止损幅度。
-
-6. 进行参数组合测试,找到策略最大稳定收益的参数设置。
-
-7. 增加机器学习算法,利用大数据自动优化参数。
-
-### 总结
-
-RSI真实区域突破策略综合运用了趋势指标和自适应通道技术的优势。它能够有效判断市场趋势方向,在震荡行情中捕捉较大方向性机会。同时设置止损线进行风险控制。该策略参数优化空间大,可以通过调整参数适应不同的市场环境,是一个非常灵活的突破策略。总体而言,它融合了多个指标的优势,在趋势判断和风险控制方面都有一定优势,是一个值得推荐的量化策略。
-
-||
 
 ### Overview
 
@@ -127,7 +67,6 @@ Risks can be mitigated by optimizing RSI parameters, adjusting True Level settin
 
 The RSI True Level breakout strategy combines the strengths of a trend indicator and adaptive channels. It can effectively determine trend direction and catch big opportunities in range-bound markets while controlling risk with stop loss. The high parameter customization allows tuning it for different market conditions. Overall, by integrating multiple indicators, it has advantages in trend determination and risk control. With further optimization, it is a recommended quantitative trading strategy.
 
-[/trans]
 
 
 

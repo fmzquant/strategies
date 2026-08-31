@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fca9fc5800d445f52b.png)
-[trans]
-
-## 概述
-
-MACD趋势追踪短线策略是一个结合移动平均线、MACD指标和威廉指标的短线交易策略。该策略运用三种指标的不同组合,形成多空仓位的进入和退出条件,以捕捉短线价格的趋势性特征。
-
-## 策略原理  
-
-该策略的主要交易逻辑基于以下几点:
-
-1. 当价格上穿Exponential Moving Average(EMA)均线时看多,当价格下穿时看空;
-
-2. 当MACD的快线高于慢线时看多,当快线低于慢线时看空;  
-
-3. 威廉指标的快速移动平均线高于慢速移动平均线时看多,反之看空;
-
-4. 结合这三种情况的组合条件判断入场;
-
-5. 在反向情况下判断出场。
-
-通过EMA判断大趋势方向和MACD判断短期价格动能的组合,该策略可在不错的入场点捕捉价格的趋势特征,从而获利。而威廉指标则可用来进一步验证品种的超买超卖情况,避免假突破。
-
-## 策略优势
-
-这种多指标组合结构是一个典型的短线趋势追踪策略,主要具有以下几点优势:  
-
-1. 三种指标互相验证,可减少假信号的概率;
-
-2. EMA判断主趋势方向,MACD判断短线动能强弱;
-
-3. 威廉指标避免在剧烈波动中追高杀跌;
-
-4. 反向指标组合判断退出,跟风险控制紧密结合。
-
-## 策略风险
-
-该策略也存在以下主要风险:  
-
-1. 多指标组合结构复杂,参数调优难度较大;
-
-2. 短线操作频繁,交易成本可能较高;
-
-3. 无法正确判断真正趋势反转点,存在亏损风险。
-
-对策主要在参数调优和止损方面,寻找最佳参数组合,并设定合适的止损水平,控制单笔交易最大损失。
-
-## 策略优化方向  
-
-该策略主要可从以下几个方面进行优化:
-
-1. 测试更多指标参数组合,寻找最优参数; 
-
-2. 加入更多数据源,如成交量等辅助判断;
-
-3. 设定动态止损或跟踪止损加强风险控制;
-
-4. 结合机器学习模型判断真正趋势反转点。
-
-## 总结
-
-MACD趋势追踪短线策略综合运用多种指标的优势,在判断短线趋势的同时控制风险。通过参数优化、止损水平设定以及更多数据源的引入,能进一步提高策略胜率与盈利水平。该策略思路值得进一步拓展与深入研究。
-
-|| 
 
 ## Overview  
 
@@ -133,7 +70,6 @@ Main aspects to enhance the strategy:
 ## Conclusion
 This MACD trend following intraday strategy effectively combines indicators for identifying short-term trends and managing risks. Further improvements on tuning parameters, setting stop loss levels and incorporating more data feeds can lift strategy win rate and profitability. The concepts are worth researching for strategy advancement.
 
-[/trans]
 
 > Strategy Arguments
 

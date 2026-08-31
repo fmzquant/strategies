@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略名称为**移动平均线交叉趋势追踪策略**。该策略利用多组移动平均线指标的金叉死叉形态,判断市场趋势转折点,进行趋势追踪操作。
-
-## 策略原理
-
-1. 计算多组不同参数的移动平均线,例如MA(5)、MA(10)等。
-
-2. 当短周期移动平均线上穿长周期移动平均线时,产生买入信号。
-
-3. 当短周期移动平均线下穿长周期移动平均线时,产生卖出信号。
-
-4.  crossover是交叉函数,用来判断交叉关系,长短周期均可以灵活设置。
-
-## 具体交易规则 
-
-1. 设置多组移动平均线,如MA(8)、MA(13)、MA(21)等。
-
-2. 当MA(8)上穿MA(13)时,做多入场。
-
-3. 当MA(8)下穿MA(13)时,做空入场。
-
-4. 可设置移动平均线类型,如EMA、SMA等。
-
-5. 可添加其他过滤条件,避免假突破。
-
-## 策略优势
-
-1. 使用趋势追踪,避免逆势交易。
-
-2. 可灵活组合MA周期,适应不同周期。
-
-3. 可添加辅助指标过滤信号。
-
-4. 回撤较小,可设置止损进一步控制风险。
-
-## 策略风险
-
-1. 大周期下行时,持仓亏损扩大的风险。
-
-2. MA周期设置不当,可能错过交易机会。
-
-3. 需要及时止损,防止回撤过大。
-
-4. 交易费用也会影响盈利水平。
-
-## 总结
-
-移动平均线交叉趋势追踪策略,以趋势为王,追求 Prints。通过参数优化,可得到长短周期结合效果。辅助技术分析能提高效果。需要严格止损来控制风险,实盘时还需考虑交易成本影响。
-
-||
 
 This strategy is called the **Moving Average Crossover Trend Following Strategy**. It uses golden crosses and death crosses of multiple moving averages to determine market turning points and follow trends. 
 
@@ -109,7 +58,6 @@ This strategy is called the **Moving Average Crossover Trend Following Strategy*
 
 The MA Crossover Trend Following Strategy follows the trend for profits. Parameter optimization provides short and long term effects. Additional technical analysis improves performance. Strict stops are musts for risk control. Trading costs should also be considered when trading live.
 
-[/trans]
 
 > Strategy Arguments
 

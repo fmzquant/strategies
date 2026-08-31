@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1151192daee70101edc.png)
-[trans]
-
-## 概述
-
-本策略基于动态均线指标,实现对价格趋势的实时跟踪,通过均线的突破来发出交易信号。策略优点是参数设置简单,信号判断清晰,适合中长线持仓。
-
-## 策略原理
-
-该策略使用动态均线指标,包括ALMA、EMA、SMA等多种类型的均线。基本原理是,当价格上穿均线时,做多;当价格下穿均线时,做空。即以均线作为价格趋势的晴雨表,发生方向转换时就可发出交易信号。
-
-具体来说,策略使用高低点形成的均线,然后把低点均线作为做多信号线,把高点均线作为做空信号线。当收盘价高于低点均线时,做多;当收盘价低于高点均线时,做空。
-
-这样利用均线指标判断价格趋势,再结合突破原理发出信号,形成一个简单实用的趋势跟踪策略。
-
-## 策略优势
-
-- 使用均线指标判断,参数设置简单,容易操作
-- 信号判断规则清晰,不会产生假信号
-- 可自由选择均线算法,灵活应对市场变化
-- 可调整均线参数,适应不同周期的趋势
-- 可在多时间框架下验证信号,提高可靠性
-
-## 风险及解决
-
-- 均线指标滞后,可能错过部分机会
-    - 适当缩短均线周期,或使用指数移动平均线EMA
-- 短期内震荡较大,停损风险
-    - 适当放宽止损幅度,确保有足够的机动空间
-- 长期持有风险,可能无法及时止盈
-    - 结合其它指标判断,避免追高杀跌
-
-## 策略优化
-
-- 根据不同品种特点,调整均线算法及参数
-- 增加副指标判断,提高策略效果
-- 增加止损止盈机制
-- 评估多时间框架下信号可靠性
-- 结合机器学习技术寻找更优参数
-
-## 总结
-
-该策略利用均线指标判断价格趋势方向,基于突破理论发出交易信号。优点是简单易用,适合中长线持仓,可通过参数调整适应市场变化。需要注意防范短期震荡和长期持有带来的风险,可通过止损止盈来解决。有优化空间在于利用更多指标提高策略效果,以及运用机器学习寻找更优参数。
-
-||
 
 ## Overview  
 
@@ -96,7 +52,6 @@ By judging the price trend with MA and combining with the breakout principle to 
 
 This strategy judges the trend direction with MA and generates signals based on the breakout principles. It is simple to use and suitable for medium-to-long-term holding. The parameters can also be adjusted to adapt to market changes. Risks from short-term fluctuations and long holding need to be managed with stop loss/profit taking. There is room for improvement by incorporating more indicators and finding optimal parameters through machine learning.
 
-[/trans]
 
 > Strategy Arguments
 

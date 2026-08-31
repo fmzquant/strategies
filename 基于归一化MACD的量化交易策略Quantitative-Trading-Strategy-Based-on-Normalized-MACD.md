@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种基于归一化MACD指标的量化交易策略。该策略对经典MACD策略进行了优化,以提高信号质量。
-
-一、策略原理
-
-该策略的核心思路是对传统MACD指标进行归一化处理,以降低误差率。具体步骤如下:
-
-1. 计算短期和长期Hull移动平均线,根据其交叉关系判断大趋势;
-
-2. 计算MACD指标的差值; 
-
-3. 对MACD指标进行一定周期内的归一化处理;
-
-4. 计算归一化MACD的均线,形成交易触发器;
-
-5. 当归一化MACD上穿触发器均线时做多,下穿时做空;
-
-6. 结合均线关系进行过滤,避免错失大趋势;
-
-7. 设置止损止盈点,控制单笔交易风险。
-
-归一化处理可以缩小MACD差值的绝对幅度,从而减少噪声,提高信号质量。趋势过滤也避免因局部调整而反向操作。止损止盈控制了单笔亏损。
-
-二、策略优势
-
-该策略相比简单MACD策略,最大的优势就是进行了归一化处理,这可以有效降低MACD的误差率,提高信号准确度。
-
-另一个优势是加入了趋势判断的过滤器,避免在趋势中反向操作。这增强了策略的稳定性。
-
-最后,设置止损止盈条件,也让每笔交易的风险收益可控,实现积极的资金管理。
-
-三、潜在风险
-
-尽管该策略进行了优化,但实际运用中也应注意以下风险:
-
-首先是参数优化难度较大,不恰当设置可能导致过拟合。
-
-其次,止损设置过于接近有可能被突破导致损失扩大。
-
-最后,在趋势突变时,信号可能存在滞后,无法及时反应。
-
-四、内容总结
-
-本文详细介绍了一种对MACD指标进行归一化处理的量化交易策略。该策略对经典MACD策略进行了改进,可以有效提高信号质量,并加入风险管理机制。但依然需要注意参数优化难度及止损设置等问题。总体来说,该策略提供了一种可行的MACD策略优化思路。
-
-||
 
 This article explains in detail a quantitative trading strategy based on normalized MACD indicator. It optimizes the classic MACD strategy to improve signal quality.
 
@@ -102,7 +55,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative trading strategy that normalizes the MACD indicator. It improves the classic MACD strategy to effectively enhance signal quality and incorporates risk management mechanisms. But parameter optimization difficulty and stop loss setting still need to be handled with prudence. Overall, it provides a viable approach to optimize MACD strategies.
 
-[/trans]
 
 > Strategy Arguments
 

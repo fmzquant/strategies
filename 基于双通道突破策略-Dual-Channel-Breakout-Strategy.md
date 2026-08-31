@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a656fe906fed023b28.png)
-[trans]
-
-该策略名称来源于其采用布林带和凯特纳通道两个指标构建交易信号。它监测价格突破通道边界的情况,在价格突破下行通道时做多,突破上行通道时做空。
-
-#### 策略原理  
-
-该策略结合使用布林带和凯特纳通道两个指标。布林带是以股价的移动平均线及其标准差构建的自适应通道。凯特纳通道则利用真实波幅计算通道范围。
-
-策略的交易逻辑是,当收盘价格低于布林带下限和凯特纳通道下限时,采取做多头寻求反转;当收盘价格高于布林带上限和凯特纳通道上限时,采取做空头寻求反转。做多做空后设置止损和止盈退出。
-
-#### 优势分析
-
-该策略结合布林带和凯特纳通道,能有效识别异常波动。同时利用双通道设定过滤条件,避免虚假信号。止损止盈设置也有利于风险控制。
-
-相比单一使用布林带或凯特纳通道,该策略能过滤掉更多噪音,信号质量较高。双通道突破也使其能及时捕捉价格反转机会。
-
-#### 风险分析  
-
-该策略主要风险在于通道指标本身存在滞后。价格可能在通道边界触发信号前就开始反转。这会导致入场过晚,或在反弹中被套。
-
-此外,止损设置过小也会增加被止损风险。止盈设置过大时则可能错过理想退出点。这需要根据市场情况调整参数。
-
-#### 优化方向
-
-该策略可通过引入动量指标等辅助过滤条件优化。也可以测试不同参数组合寻找最佳参数。
-
-加入自适应止损止盈机制是另一个优化方向。这可以帮助策略更好地适应市场环境的变化。
-
-#### 总结
-
-该双通道突破策略整合布林带和凯特纳通道指标的优点,能有效识别反转机会。同时通过双通道过滤和止损止盈设置控制风险。它是一个质量较高、风险可控的量化交易策略。
-
-||
 
 The strategy is named after its use of two indicators, Bollinger Bands and Keltner Channels, to generate trading signals. It monitors price breakouts beyond channel boundaries, going long on downside breakouts and short on upside breakouts.
 
@@ -74,7 +41,6 @@ Incorporating adaptive stops and take profits is another enhancement route, help
 
 This dual channel breakout strategy combines the strengths of Bollinger Bands and Keltner Channels to effectively identify reversal opportunities, while controlling risks via dual channel filters and stop/take profit settings. It is a quality, risk-managed quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

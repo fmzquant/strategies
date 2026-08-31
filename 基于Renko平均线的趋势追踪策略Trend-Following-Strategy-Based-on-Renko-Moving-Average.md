@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e80092d94d2c9fdbc0.png)
-[trans]
-### 概述
-
-这是一个利用Renko平均线进行趋势判断和追踪的交易策略。该策略的核心逻辑是当价格突破22周期的HL2平均线时,做出相应的买入或卖出操作。同时,该策略还设置了止损、止盈、移动止损等风险管理机制。
-
-### 策略原理
-
-当Renko柱线收盘价上穿22周期HL2平均线时,做多;当Renko柱线收盘价下穿22周期HL2平均线时,做空。这样通过判断价格与平均线的关系,来捕捉趋势的方向。
-
-HL2平均线(Highest High + Lowest Low)/2)是一种趋势型平均线,它结合最高价和最低价的信息,可以更准确地判断趋势的发展方向。22是一个经验值,用于平衡平均线的灵敏度。
-
-此外,策略还设置了只在特定交易时段开仓的限制,以规避市场可能存在的剧烈波动。
-
-### 优势分析
-
-这是一个较为简单直观的趋势追踪策略,具有如下优势:
-
-1. 使用Renko柱线作为交易信号,可以有效过滤市场噪音,捕捉主要趋势。
-
-2. HL2平均线结合最高价和最低价信息,对趋势判断更为准确可靠。
-
-3. 设定固定的止损、止盈点位,可以很好控制单笔交易的风险。
-
-4. 移动止损可以随着趋势的发展来锁定利润,实现趋势跟踪。
-
-5. 限制交易时间段,可以一定程度规避剧烈行情的冲击。
-
-### 风险分析
-
-该策略也存在一些风险,主要体现在:  
-
-1. 平均线策略容易产生较多的虚假信号。
-
-2. 无法有效应对突发事件导致的断头风险。
-
-3. Renko设置不当可能导致错过较好的交易机会。
-
-4. 固定的止损、止盈难以适应市场的变化。
-
-### 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加其他指标或条件来过滤信号,减少虚假信号。例如量能指标、震荡指标等。
-
-2. 可以测试不同参数的平均线,寻找更合适的周期数值。
-
-3. Renko的箱体大小也可以进行测试优化,以获得最佳的参数。
-
-4. 增加基于波动率的自适应止损机制。
-
-5. 可以测试不同的交易时间段设置,优化这一条件。
-
-### 总结  
-
-总的来说,这是一个利用Renko平均线进行趋势判断和追踪的简单实用策略。它有较直观的交易逻辑、风险控制机制,适合追求稳定收益的交易者。但也存在一些改进空间,通过参数优化、增加过滤条件、自适应止损等手段可以获得更好的策略效果。
-
-||
 
 ### Overview
 
@@ -125,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 In conclusion, this is a simple and practical strategy for trend identification and tracking using Renko moving average. It has intuitive trading logic and risk control mechanisms, suitable for traders seeking steady returns. But there is still room for improvement by parameter optimization, adding filter conditions, adaptive stop loss etc. to obtain better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11778eeb8dd21b36777.png)
-[trans]
-
-### 概述
-
-该策略主要通过计算价格的双重EMA动量和DEMA动量的交叉以识别趋势,并结合ATR波动率指标来过滤假突破,实现了一个双动量指标与波动率过滤的量化交易策略。
-
-### 策略原理
-
-该策略主要包含以下几个部分:
-
-1. 计算价格的EMA和DEMA作为双重动量指标。其中较长周期的EMA反映长期趋势,DEMA作为更敏感的短期动量指标。当DEMA上穿EMA时生成买入信号。 
-
-2. 计算ATR波动率指标。通过ATR的大小判断市场的波动率和流动性情况。波动率过大时过滤掉动量指标的信号,避免假突破。
-
-3. ATR波动率通过参数化移动平均线来判断高低。当ATR波动率低于移动平均线时,允许动量指标信号的触发。
-
-4. 通过参数控制ATR时间周期、ATR长度、ATR移动平均线类型和长度等。
-
-5. 建立多头仓位的止损、止盈和追踪止损规则。
-
-### 优势分析
-
-这种双EMA过滤的策略,可以明显减少普通EMA金叉死叉策略中的假信号和频繁交易。加入ATR波动率指标后,可以有效过滤细微波动带来的误导信号,避免被套。
-
-相比单一动量指标,该策略采用双指标设计,可以提高判断效果。DEMA作为更加灵敏的短期动量指标,配合稳定的长线EMA,形成比较可靠的组合信号。
-
-通过调节ATR参数,可以针对不同标的物设定合适的波动率条件,提高策略的适用性。
-
-### 风险分析
-
-该策略最大的风险在于参数设置不当可能导致交易信号过于稀少。DEMA和EMA长度设置过长,或者ATR波动率界限设置过高,都可能减弱策略的实际运作效果。这需要通过反复测试来调整至最佳参数组合。
-
-另一个潜在风险是,在极端行情中,价格波动可能突破ATR参数的约束,从而带来亏损。这需要人为监控市场异常情况,暂停策略运行。
-
-### 优化方向 
-
-1. 测试不同的动量指标参数组合,找到最佳参数。
-
-2. 尝试将动量指标由双EMA调整为MACD或其他指标。
-
-3. 测试不同的波动率指标设定,如整体历史ATR,市场波动率指数等。
-
-4. 增加对交易量的过滤,避免价格不真实突破的风险。
-
-5. 优化止损止盈机制,使盈亏比更优。
-
-### 总结
-
-该策略整合了动量指标与波动率分析,在扎实的理论基础上设计。通过参数调整和规则优化,可以成为一个稳定可靠的量化交易策略。其交易信号清晰,风险可控,值得实盘验证与应用。
-
-||
 
 ### Overview
 
@@ -110,7 +59,6 @@ Another potential risk is that in extreme market conditions, price swings may br
 
 This strategy integrates momentum analysis and volatility research with a solid theoretical basis. Through parameter tuning and logic optimization, it can become a stable and reliable algorithmic trading system. With clear trade signals and controllable risks, it is worth verifying and implementing in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

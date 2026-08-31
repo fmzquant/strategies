@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c66de221f3e3936631.png)
-[trans]
-
-## 概述
-
-指数平滑随机指标异动策略是在传统的随机指标基础上,增加了一个指数权重参数,可以调整随机指标的灵敏度,从而产生交易信号。当指标从超买区反转时做多,从超卖区反转时做空。该策略优化后,可以成为一个非常稳定的趋势跟踪策略。
-
-## 策略原理
-
-指数平滑随机指标异动策略的核心在于指数权重参数ex。传统随机指标的计算公式是:
-
-```
-s=100 * (close - 最低价) / (最高价 - 最低价) 
-```
-
-增加指数参数后,计算公式变为:
-
-```
-exp= ex<10? (ex)/(10-ex) : 99  
-
-s=100 * (close - 最低价) / (最高价 - 最低价)
-
-ks=s>50? math.pow(math.abs(s-50),exp)/math.pow(50,exp-1)+50  
-     :-math.pow(math.abs(s-50),exp)/math.pow(50,exp-1)+50
-```
-
-调整exp的值,可以改变s对ks的影响力度,增大exp值使指标变得更不敏感,减小exp值使指标变得更敏感。
-
-当ks从超买区反转时产生买入信号;当ks从超卖区反转时产生卖出信号。
-
-## 策略优势
-
-指数平滑随机指标异动策略相比传统随机策略,具有以下优势:
-
-1. 通过调整指数权重,可以自由调整随机指标的灵敏度,从而控制交易频率。
-2. 增加指数权重后,可以过滤掉部分噪音,产生更稳定的交易信号。  
-3. 结合不同时间周期指标,可以实现多时间框架的确认,提高信号的可靠性。
-
-## 策略风险
-
-指数平滑随机指标异动策略也存在以下风险:  
-
-1. 在指数权重过大时,会过滤掉较多信号,错过部分交易机会。
-2. 指标容易产生扰动和错误交叉,需调参确保交叉信号的可靠性。
-3. 需根据不同市场确定最佳的参数范围,不当的参数设置可能影响策略表现。
-
-## 策略优化方向  
-
-指数平滑随机指标异动策略可以从以下几个方面进行优化:
-
-1. 结合其他指标过滤信号,例如MACD、移动均线等,可以减少错误信号。
-2. 增加止损机制,可以有效控制风险。
-3. 优化指数权重参数,找到最佳的参数组合。不同市场可以设置不同的参数。
-4. 增加复合화,例如与季节性指标、市场结构指标等结合,可以进一步提高策略的稳定性。
-
-## 总结
-指数平滑随机指标异动策略通过调整随机指标的灵敏度,产生更可靠的交易信号。该策略可以有效跟踪中长线趋势,也可以优化为短线策略。通过复合化和参数优化,可望获得更好的稳定收益。
-
-||
 
 ## Overview
 The Exponential Smoothed Stochastic Oscillator strategy is a modified version of the traditional stochastic indicator by adding an exponential weight parameter to adjust the sensitivity of the stochastic and generate trading signals. It goes long when the indicator crosses over from overbought levels and goes short when the indicator crosses under from oversold levels. The optimized strategy can become a very stable trend following strategy.  
@@ -119,7 +61,6 @@ The Exponential Smoothed Stochastic Oscillator strategy can be optimized from th
 ## Conclusion  
 The Exponential Smoothed Stochastic Oscillator strategy generates more reliable trading signals by adjusting the sensitivity of the stochastic indicator. It can effectively track medium-to-long term trends and can also be optimized into a short-term strategy. With further composability and parameter optimization, it has the potential to achieve more consistent profitable returns.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1206b06c3be24162c8d.png)
-[trans]
-
-
-## 概述(Overview)
-
-该策略采用三重移动平均线组合,根据移动平均线的顺序关系判断趋势方向,实现趋势追踪。当快速移动平均线、中速移动平均线、慢速移动平均线依次排列时,做多;当慢速移动平均线、中速移动平均线、快速移动平均线依次排列时,做空。
-
-## 策略原理(Strategy Principle) 
-
-该策略使用三条不同周期的移动平均线,包括快速移动平均线、中速移动平均线和慢速移动平均线。
-
-入场条件:
-1. 做多:当快速移动平均线 > 中速移动平均线 > 慢速移动平均线时,认为行情处于上涨趋势,做多。
-2. 做空:当慢速移动平均线 < 中速移动平均线 < 快速移动平均线时,认为行情处于下跌趋势,做空。
-
-出场条件:
-1. 移动平均线出场:三条移动平均线顺序发生反转时平仓。
-2. 止盈止损出场:设定固定止盈止损点,如止盈幅度为12%,止损幅度为1%,达到止盈或止损价格后平仓。
-
-该策略简单直接,利用三条移动平均线判断市场趋势方向,实现趋势跟踪交易,适合趋势性较强的市场。
-
-## 优势分析(Advantage Analysis)
-
-- 使用三条移动平均线判断趋势,过滤市场噪音,识别趋势方向。
-- 采用不同周期移动平均线,可以更准确判断趋势转折点。
-- 结合移动平均线指标和固定止盈止损管理资金风险。
-- 策略思路简单直观,容易理解实现。
-- 可方便优化移动平均线周期参数,适应不同周期行情。
-
-## 风险及改进(Risks and Improvements)
-
-- 大周期行情中,移动平均线可能产生较多误判,导致不必要的亏损。
-- 可考虑加入其他指标或过滤条件,提高获利率。
-- 可优化移动平均线周期参数组合,适应更广泛市场行情。
-- 可结合趋势强弱指标,避免追顶杀跌。
-- 可加入自动止损,避免亏损扩大。
-
-## 总结(Conclusion)
-
-该三重移动平均线趋势跟随策略整体思路清晰易懂,利用移动平均线判别趋势方向,实现简单的趋势跟随交易。策略优点是容易实现,通过调整移动平均线周期参数可适应不同周期行情。但是也存在一定的误判风险,可通过加入其他指标或条件进行优化,减少不必要的损失,提高策略获利率。总体来说,该策略适合对趋势交易有兴趣的初学者进行学习和实践。
-
-||
 
 
 ## Overview
@@ -92,7 +50,6 @@ The strategy is simple and direct, using three moving averages to determine mark
 
 The triple moving average trend following strategy has a clear and easy-to-understand logic, using moving averages to determine the trend direction for simple trend following trading. The advantage is that it is easy to implement, and adjusting the MA period parameters can adapt to market conditions of different cycles. However, there are also certain risks of false signals, which can be improved by adding other indicators or conditions to reduce unnecessary losses and improve strategy profitability. Overall, this strategy is suitable for beginners interested in trend trading to learn and practice.
 
-[/trans]
 
 > Strategy Arguments
 

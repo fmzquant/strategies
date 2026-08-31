@@ -9,39 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略利用MACD指标的差值曲线突破进行交易决策。MACD由快、慢EMA组成,差值曲线突破零轴时产生交易信号。该策略属于典型的跟踪型量化交易策略。
-
-策略原理:
-
-1. 计算快線EMA和慢线EMA,两者差值形成MACD曲线。
-
-2. 对MACD曲线进行EMA平滑,得到MACD信号线。
-
-3. 当MACD上穿信号线时做多,下穿信号线时做空。
-
-4. 设置百分比止损止盈点,进行风险管理。
-
-该策略的优势:
-
-1. MACD指标优于单一EMA,可以更清晰判断趋势。
-
-2. 突破交易方式及时捕捉转折机会。
-
-3. 止损止盈机制有助控制交易风险。
-
-该策略的风险:
-
-1. MACD曲线零轴附近可能出现较多假突破信号。
-
-2. 需要优化参数以匹配不同交易品种。
-
-3. 趋势交易易受突发事件影响,必须设置止损。
-
-总之,该策略利用MACD差值曲线的突破关系进行判断。MACD指标的优点有利于提高效果,但需警惕假突破风险,采取适当的风险管理措施以获得长期稳定回报。
-
-||
 
 This strategy trades MACD crossover signals for entry and exit decisions. MACD is composed of fast and slow EMAs, and crossover of the MACD line over zero generates trade signals. It is a typical trend-following quantitative strategy.
 
@@ -73,7 +40,6 @@ Risks:
 
 In summary, this strategy trades based on MACD and signal line crossover. MACD's strengths benefit performance but false breakout risks remain. Prudent risk controls are still required for steady gains over the long run.
 
-[/trans]
 
 > Strategy Arguments
 

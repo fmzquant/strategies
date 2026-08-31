@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a414547ab37c8a8268.png)
-[trans]
-
-
-## 概述
-
-本策略是将双重震荡反转策略和信噪比优化策略组合在一起,形成一个更强大更稳定的交易策略。策略致力于在趋势反转点发出更准确的交易信号。
-
-## 策略原理
-
-双重震荡反转策略通过计算最近14天的快速和慢速K值,判断价格是否出现了连续两个交易日的反转。若反转发生时,快速K低于50表示买入信号,快速K高于50表示卖出信号。
-
-信噪比优化策略则是计算最近21天的信噪比指标,并用29天简单移动平均进行平滑。当信噪比上穿其移动平均线时为卖出信号,下穿为买入信号。
-
-最后,仅在双重震荡反转策略和信噪比优化策略同时发出相同的买入或卖出信号时,本策略才进行相应的买入或卖出操作。
-
-## 策略优势分析
-
-1. 组合多个策略,可以发出更准确的交易信号,避免单一策略的假信号。
-
-2. 双重震荡反转策略可以抓住趋势反转点,信噪比优化策略可以过滤假信号,两者相结合可以在反转点准确交易。
-
-3. 计算参数经过优化,如14天快慢stoch参数,21天信噪比周期等,可以 stab体现最近趋势而不被过多噪音影响。
-
-4. 运用双重确认信号,可以大幅降低交易风险,减少不必要的损失。
-
-## 策略风险分析
-
-1. 反转信号可能滞后,无法在绝对低点买入,高点卖出。可通过调整参数缩短滞后。
-
-2. 双重信号确认可能错过部分交易机会,可适当放宽确认条件,但风险也会提高。
-
-3. 信噪比参数需要优化,如果周期设置不当,可能错过重要信号或发出错误信号。
-
-4. 需要同时监控多个指标,增加了策略复杂度,代码优化和计算资源都需要考量。
-
-## 策略优化方向 
-
-1. 测试更多指标的组合,寻找更好的组合信号。如MACD,RSI等。
-
-2. 优化双重震荡反转策略的参数,使反转信号更准确及时。
-
-3. 优化信噪比的参数周期,寻找最佳平衡点。
-
-4. 添加止损策略,以控制单笔交易可能的损失。
-
-5. 考虑以机器学习等方法自动优化参数,使策略更具适应性。
-
-## 总结
-
-本策略通过组合双重震荡反转策略和信噪比优化策略,在趋势反转点给出稳定的交易信号。参数经过优化,可以大幅降低假信号的概率,且采用双重确认原则,可以减少交易风险。策略可继续优化指标参数,加入止损措施等来获得更好的效果。总体来说,该策略稳定性好,具有实际交易价值。
-
-||
 
 # 
 
@@ -113,7 +61,6 @@ Finally, this strategy only initiates buy or sell trades when both strategies is
 
 This strategy combines dual oscillation reversal and signal-to-noise ratio strategies to provide stable signals at trend reversal points. Optimized parameters significantly reduce false signals, and dual confirmation lowers trading risks. Further optimizations like indicator parameters, stop loss can improve performance. Overall, this is a stable strategy with practical trading value.
 
-[/trans]
 
 > Strategy Arguments
 

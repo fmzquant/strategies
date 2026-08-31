@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9438a5d4a7647b6034.png)
 
-[trans]
-
-## 概述
-
-这是一个利用双Stochastics指标与成交量加权移动平均线的组合来识别趋势的策略。该策略运用两个不同周期的Stochastics指标,一个是短周期的,一个是长周期的,再结合成交量加权移动平均线来判断目前的趋势方向。
-
-## 策略原理
-
-该策略主要通过如下几个部分来实现对趋势的判断:
-
-1. 计算一个短周期的Stochastics指标,周期长度为input(30),平滑参数为2
-
-2. 计算一个长周期的Stochastics指标,周期长度为input(90),平滑参数为2  
-
-3. 将短周期和长周期的Stochastics指标相加,得到一个综合的Stochastics曲线ts
-
-4. 对ts曲线计算一个成交量加权移动平均线tsl,周期长度为input(30)
-
-5. 比较tsl当前值与其1周期前的值,当tsl上扬时,认为是上升趋势,当tsl下挫时,认为是下降趋势
-
-6. 再结合Stochastics曲线的位置来判断是否为多头或空头信号
-
-- 当tsl上扬且ts在中间区时为多头信号
-- 当tsl下挫且ts在中间区时为空头信号
-
-## 策略优势分析  
-
-该策略结合了趋势判断和超买超卖判断,可以比较可靠地识别趋势方向。具体优势如下:
-
-1. 双Stochastics指标可以同时反映短期和长期的超买超卖情况,避免漏掉某些信号
-
-2. 成交量加权可以过滤掉一些虚假的突破信号
-
-3. Stochastics曲线的位置再次验证了趋势信号的可靠性
-
-4. 参数可调,可以根据不同市场适当调整周期长度
-
-5. 策略思路清晰简洁,容易理解和修改
-
-## 风险及改进分析
-
-该策略也存在一些风险需要注意:
-
-1. Stochastics指标容易发出假信号,需要结合较长周期指标过滤
-
-2. 固定周期参数不适应所有市场情况,可以考虑动态优化参数
-
-3. 仅基于技术指标,可结合基本面因素提高准确率 
-
-4. 成交量数据不准确也会影响结果,需要验证成交量数据质量
-
-5. 回测时间不足,需要更长的历史数据验证效果
-
-6. 可优化入场点位,现在是 crosses under最低值直接做多,可设置缓冲区
-
-## 总结
-
-总体来说,该策略利用双Stochastics指标和成交量加权移动平均线进行趋势判断,在理论上可以比较可靠地识别趋势转折点。但参数设置需要针对具体市场进行优化,且存在一定假信号风险。建议结合其他因素如基本面、长期趋势等来综合判断,以提高策略Profit Factor。该策略思路简单清晰,为量化交易提供了一个模板,可根据需求进行修改优化,具有很强的应用价值。
-
-||
 
 ## Overview
 
@@ -129,7 +69,6 @@ There are also some risks to note for this strategy:
 
 In summary, this strategy identifies trends using dual Stochastics and VWMA, which can reliably identify trend reversals in theory. But parameter tuning is needed for specific markets, and false signals risk exists. Recommend combining other factors like fundamentals, long-term trends etc for judgment, to improve strategy Profit Factor. The logic is simple and clear, providing a template for quant trading, which can be modified as needed. It has great application value.
 
-[/trans]
 
 > Strategy Arguments
 

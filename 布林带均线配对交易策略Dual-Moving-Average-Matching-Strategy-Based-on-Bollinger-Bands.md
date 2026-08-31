@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/133d67602c6573b6335.png)
 
-[trans]
-
-### 概述
-
-布林带均线配对交易策略是一种随市量价运行的趋势追踪策略。它利用布林带和移动均线的交叉作为交易信号,实现了一种可以自动识别市场趋势,并配合止盈止损规则进行交易的量化策略。
-
-### 策略原理
-
-该策略主要基于布林带指标和移动均线指标的交叉信号进行交易。具体来说,它同时使用了布林带中轨、布林带上轨、以及长度为5到200天的7条移动平均线。当价格从下向上突破布林带中轨和下轨时产生买入信号;当价格从上向下跌破布林带上轨时产生卖出信号,实现了趋势追踪。
-
-此外,策略还引入了moveToFract的多空判断指标。该指标通过计算短期和长期移动平均线顺序排列的情况,判断目前市场走势是向上还是向下,从而避免在震荡行情中产生错误信号。最后,结合可配置的止盈止损规则,形成了一个较为完整的趋势追踪交易策略。
-
-### 优势分析
-
-1. 配置灵活,可以自定义参数组合,适应不同市场环境
-2. 结合两种不同指标作为过滤,可以减少错误信号
-3. 趋势判断指标可避免震荡市做反向操作
-4. 跟踪止损设定让利润最大化
-
-### 风险分析
-
-1. 须适当调整参数,以符合不同周期以避免过度交易
-2. 追踪止损在快速下跌中可能扩大损失
-3. 须确保资金充足,否则无法承受连续亏损的风险
-
-### 优化方向  
-
-1. 加入黄金交叉、死叉的判断,可进一步优化
-2. 不同品种参数不一,可考虑机器学习训练最佳参数
-3. 结合波动率指数,判断趋势震荡加强风控
-
-### 总结
-
-本策略总体来说是一个非常实用的趋势追踪策略。它利用指标交叉进行决策,又加入了趋势判断模块,可以有效滤除错误信号。配置止盈止损后,可以充分跟踪趋势进行交易,获得较好收益。通过调整参数组合和加入更多滤波器,该策略可以进一步优化,适应更多市场环境,具有很大的改进空间和应用前景。
-
-|| 
 
 ## Overview  
 
@@ -82,7 +46,6 @@ In addition, the strategy also introduces the moveToFract indicator for judging 
 
 In general, this is a very practical trend following strategy. It uses indicator crossover for decision making, and also incorporates a trend judging module to effectively filter out wrong signals. After configuring stop profit and stop loss, it can fully follow trends for trading and obtain good returns. By adjusting parameter combinations and adding more filters, this strategy can be further optimized to adapt to more market environments, and has great room for improvement and application prospects.
 
-[/trans]
 
 > Strategy Arguments
 

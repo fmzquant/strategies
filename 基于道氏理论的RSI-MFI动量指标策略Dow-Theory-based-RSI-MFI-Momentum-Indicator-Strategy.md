@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d34532a51123d5e866.png)
-[trans]
-
-## 概述
-
-本策略采用相对强弱指标(RSI)或资金流量指标(MFI)判断市场bull还是bear,并结合道氏理论的牛熊系数,计算出调整后的概率分布。根据不同的市场类型,采用不同的入场和出场逻辑。
-
-## 策略原理
-
-1. 计算RSI或MFI判断市场目前是什么状态(bull或bear)
-2. 计算道氏理论的牛熊系数,反映当前价格和成交量的相关性
-3. 调整RSI/MFI概率分布,确定精准的多空分布
-4. 根据当前sessionId和概率判断是否入场
-5. 当盈利回撤或盘整市场时止损
-
-## 优势分析
-
-1. 结合道氏理论,能更准确判断市场类型
-2. 考虑到盘整因素,避免盲目入场
-3. 损益比高,回撤低
-
-## 风险分析 
-
-1. 参数不当时,会产生多次误判
-2. 需要足够的历史数据支持
-3. 止损逻辑简单,无法针对特殊行情优化
-
-## 优化方向
-
-1. 可以考虑结合更多指标判断market session
-2. 增加基于波动率、历史数据等更严谨的止损逻辑
-3. 可以尝试机器学习等确定更好的参数
-
-## 总结
-
-本策略总体来说回测结果良好,有一定的实战价值。但仍需进一步测试和调整,特别是止损逻辑。作为辅助判断指标使用效果会更好,不能盲目跟单。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ This strategy uses Relative Strength Index (RSI) or Money Flow Index (MFI) to ju
 
 The overall backtest result of this strategy is good and has certain practical value. But further test and adjustment is still needed, especially for the stop loss logic. It works better as an assist judgement indicator, cannot follow blindly.
 
-[/trans]
 
 > Strategy Arguments
 

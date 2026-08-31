@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c4c656f71fc2e16ad6.png)
-[trans]
-
-## 概述
-
-渔夫指标移动止损策略是一种融合了渔夫指标和移动止损机制的量化交易策略。该策略利用渔夫指标产生买入和卖出信号,同时设置追踪止损来锁定利润,在保护利润的同时争取更大收益。
-
-## 策略原理
-
-1. 输入日期范围,限定回测或实盘的时间段
-2. 输入渔夫指标的参数,默认为2周期
-3. 输入止盈止损比例,默认为5%止盈,2%止损
-4. 计算渔夫指标的主线和信号线
-5. 当主线上穿信号线时产生买入信号
-6. 设置追踪止损,进入长仓后价格下跌2%时止损
-7. 价格上涨超过5%时止盈
-
-## 优势分析
-
-1. 渔夫指标容易判断趋势,买入信号准确
-2. 追踪止损机制可以锁定大部分利润,同时避免超过设置的止损点
-3. 可自定义参数,适应不同市场环境
-4. 简单易用,容易理解实现
-
-## 风险分析
-
-1. 参数设置不当可能导致过于激进交易,应谨慎测试
-2. 止损点过大可能导致 Outiliers的影响,导致超出预期的损失
-3. 止盈点过小可能导致利润太早切出,影响盈利能力
-4. 应根据不同品种确定合适的参数
-
-可以通过调整止损止盈比例,测试不同参数组合来优化参数;结合其他指标过滤信号;设置仓位管理规则来控制单笔风险。
-
-## 优化方向  
-
-1. 优化渔夫指标的参数,测试不同参数对策略的影响
-2. 结合其他指标,如MACD,KD等过滤信号,提高信号质量
-3. 增加开仓前的条件判断,例如突破布林带上轨等
-4. 增加仓位管理模块,控制单笔仓位带来的风险
-5. 优化移动止损的方式,如平滑移动止损,Chandelier Exit等
-
-## 总结
-
-渔夫指标移动止损策略整合了趋势判断和止损管理,通过参数优化,指标组合以及止损方式的改进,可以适应大部分品种,在防止超出可承受损失的前提下获得较好收益,值得探索和实践。
-
-||
 
 ## Overview  
 
@@ -98,7 +53,6 @@ Risks can be addressed by adjusting stop/profit ratios, testing parameters, usin
 
 The Fisher Yurik trailing stop strategy combines trend identification and risk management. With parameter tuning, indicator combinations, and stop loss enhancements, it can suit most instruments for good profits within acceptable risk tolerances.
 
-[/trans]
 
 > Strategy Arguments
 

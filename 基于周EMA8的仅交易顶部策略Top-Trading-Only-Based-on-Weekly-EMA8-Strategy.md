@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/192e69c46a4838aa184.png)
-[trans]
-
-## 概述
-
-该策略是一个基于著名巴西加密货币YouTuberAugusto Backes的EMA8设置而改编的策略。该策略旨在利用周EMA8的支撑,在价格出现特定形态时进行高概率且风险收益比较高的交易。
-
-## 策略原理
-
-- 该策略适用于日线周期,利用周EMA8作为支撑和长期趋势判断标准
-- 当日K线在上穿越且收盘于周EMA8之上时,产生买入信号。触发买入信号的日K线必须同时构成吞噬形态、锤子形态或缩量昇动作等特定形态。
-- 当日K线在下穿越且收盘于周EMA8之下时,产生卖出平仓信号。触发卖出信号的日K线同样必须构成相应的陷阱形态、锤子形态或放量跌动作。
-- 进场信号及平仓信号均在K线收盘时执行,无中间止损,全仓交易
-
-该策略通过高效利用EMA作为支撑、合理控制仓位频率,在大级别趋势中捕捉中短线价格可靠突破口,实现高风险收益比的交易目标。
-
-
-## 优势分析
-
-- 利用EMA辅助判断大级别趋势和中线支撑,提高交易可靠性
-- 仅在关键点附近交易,降低无效交易频率,获得更高胜率
-- 交易点位准确,信号明确,风险收益比高
-- 适合中线投资者,不需要频繁操作
-
-
-## 风险分析
-
-- 全仓交易风险大。当出现超预期行情时,可能面临较大亏损
-- 仓位频率较低,需要具备足够的心理承受能力和资金实力
-- 与趋势交易相比,获利空间有限,适合中短线操作
-
-可以通过以下几点进行优化:
-
-- 增加仓位管理模块,例如根据波动率或资金规模设置仓位百分比上限
-- 增加止损模块,进一步控制单笔损失
-- 寻找更加合理的交易过滤器和平仓条件,提高获利交易的成功率
-
-## 总结
-
-该策略总体来说是一个非常实用的中短线交易策略。它利用关键的技术指标辅助判断,在大级别趋势中捕捉可靠的中短线交易机会。策略逻辑简洁明了,实施要求不高,非常适合中长期投资者使用。如果搭配合理的仓位和风险管理机制,可以获得非常理想的投资回报。
-
-
-||
 
 ## Overview
 
@@ -89,7 +47,6 @@ Improvements:
 
 In summary, this is a very practical swing trading strategy. It utilizes key technical indicators to identify reliable opportunities in major trends. The logic is simple and easy to implement for mid-to-long term traders. With proper position sizing and risk management, it can achieve fantastic returns over time.
 
-[/trans]
 
 > Strategy Arguments
 

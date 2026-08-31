@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d7f34bf091a108b7bc.png)
-[trans]
-
-## 概述
-
-趋势追踪移动平均RSI策略是一种同时利用趋势分析和超买超卖指标的股票自动交易策略。该策略运用简单移动平均线判断市场趋势方向,并结合相对强弱指数(RSI)指标发出交易信号,实现对趋势的判断与跟踪。
-
-## 策略原理  
-
-该策略主要由三部分组成:
-
-1. 趋势判断:计算长期趋势的200日简单移动平均线,计算短期趋势的30日和50日简单移动平均线。当短期移动平均线上穿长期移动平均线时为看涨信号,下穿为看跌信号,判断市场长短期趋势。  
-
-2. 超买超卖判断:计算14日RSI指标,RSI高于80为超买区,低于20为超卖区。当RSI指标从超买区下跌或从超卖区上涨时,发出交易信号。   
-
-3. 入场与出场:当判断到超买超卖信号时,如果与趋势判断的信号方向一致,则入场做多/空。当短期与长期移动平均线发生黄金交叉时,判断趋势反转,此时平仓离场。
-
-通过该策略,可以在股票价格出现反转时及时入场,同时结合趋势判断过滤掉部分噪音交易,在回撤控制方面相对比较优秀。
-
-## 优势分析
-
-该策略具有以下几点优势:
-
-1. 结合趋势判断和超买超卖指标,过滤噪音,识别行情反转点。
-2. 同时考量长短期两个时间段内的趋势方向,判断更为准确。  
-3. 采用移动平均线作为止损方式,可以根据市场波动程度来设定止损点。
-4. 入场条件严格,可以有效避免假突破。
-
-## 风险及解决方法
-
-该策略也存在一些风险:  
-
-1. 如果行情出现长期震荡,将打开大量无效交易。解决方法是加入更多过滤条件,避免无谓交易。
-2. 存在一定的时间滞后风险。解决方法是适当缩短移动平均线的周期参数。
-3. RSI指标发出信号的效果会受到股票和市场的影响。解决方法是结合K线形态等更多因素判断效果。
-
-## 优化方向  
-
-该策略还可从以下几个方面进行优化:
-
-1. 加入更多滤波条件,如成交量,K线形态等,进一步提升信号的有效性。  
-2. 优化移动平均线和RSI的参数周期,使其更符合不同股票的特征。
-3. 建立动态移动平均线,根据市场波动性和风险偏好自动调整参数。
-4. 采用机器学习等更为先进的技术判断行情趋势,提高判断准确率。
-
-## 总结  
-
-趋势追踪移动平均RSI策略总体来说是一个非常实用的策略思路,同时结合趋势分析和超买超卖指标,在一定程度上过滤了市场噪音,使交易信号更加准确有效。通过不断优化手段和参数,该策略可以成为一个稳定盈利的长期交易系统。
-
-||
 
 ## Overview  
 
@@ -106,7 +57,6 @@ The strategy can be further optimized in the following aspects:
 
 In general, the Trend Tracking Moving Average RSI Strategy is a very practical strategy idea, filtering out market noise to some extent by combining trend analysis and overbought-oversold indicators, making trading signals more accurate and valid. As optimization tools and parameters continue to be enhanced, this strategy can become a steadily profitable long-term trading system.
 
-[/trans]
 
 > Strategy Arguments
 

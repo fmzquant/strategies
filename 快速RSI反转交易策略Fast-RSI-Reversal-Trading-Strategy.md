@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/157bcd5750de7105a73.png)
-[trans]
-## 概述
-
-快速RSI反转交易策略通过组合使用快速RSI指标、K线实体过滤、最大最小价过滤和SMA均线过滤来判断趋势反转点,实现低风险的反转交易。该策略旨在捕捉短期反转机会。
-
-## 策略原理
-
-该策略主要基于以下几个指标进行判断:
-
-1. **快速RSI指标**:通过 RMA 函数计算 RSI,使其更加灵敏,以捕捉更快的超买超卖信号。
-
-2. **K线实体过滤**:要求K线实体大小超过EMA实体均线的1/5,以过滤变动不大的情况。
-
-3. **最大最小价过滤**:判断价格创新高或创新低,以确认趋势反转。 
-
-4. **SMA均线过滤**:要求价格突破SMA均线,增加判断依据。
-
-当上述多个条件同时触发时产生交易信号。具体逻辑是:
-
-多头入场:快速RSI指标低于超卖区域 AND K线实体大于EMA实体均线1/5 AND 有最小值突破 AND 价格上穿SMA均线
-
-空头入场:快速RSI指标高于超卖区域 AND K线实体大于EMA实体均线1/5 AND 有最大值突破 AND 价格下穿SMA均线  
-
-平仓退出:快速RSI指标回归正常区域
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 捕捉短期反转带来的波动
-2. 快速RSI指标灵敏度高
-3. 多重过滤减少假信号
-4. 风险可控,回撤小
-
-## 风险及优化
-
-该策略也存在一些风险:
-
-1. 反转失败带来的风险
-2. 参数优化空间有限
-
-可通过以下方式进一步优化:
-
-1. 结合交易量过滤
-2. 增加止损策略
-3. 优化参数组合
-
-## 总结
-
-该策略总体来说是一个低风险的短期反转交易策略。它通过快速RSI指标判断买卖点,并使用多重过滤器减少假信号,从而实现风险可控的反转交易,适合短线操作。该策略可进一步优化,具有很大的发展潜力。
-
-||
 
 ## Overview
 
@@ -113,7 +61,6 @@ Can further optimize by:
 
 Overall this is a low-risk short-term mean reversal trading strategy. It identifies trading signals with Fast RSI and uses multiple filters to reduce false signals, achieving controllable risk reversal trading. The strategy can be further optimized and has great potential.
 
-[/trans]
 
 > Strategy Arguments
 

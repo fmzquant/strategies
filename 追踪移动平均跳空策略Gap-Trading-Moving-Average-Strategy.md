@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18de5be830768bb0c80.png)
 
-[trans]
-
-本文针对Noro编写的追踪移动平均跳空策略进行详细分析。该策略通过计算关闭价与简单移动平均的偏离程度,判断市场趋势发生转折的时机,实现低买高卖。
-
-#### 策略原理
-
-该策略首先计算3日简单移动平均sma。然后计算收盘价close与sma的比值,再减去1,得到一个指标ind。当ind上穿预设参数limit时,表明收盘价已明显超过sma,考虑做多;当ind下穿-limit时,表明收盘价已大幅低于sma,考虑做空。
-
-策略还绘制了0轴、limit轴和-limit轴。 ind指标在不同区域时,用不同颜色进行着色,辅助判断。当ind指标穿过limit或-limit时,表示出现做多或做空信号。 
-
-策略在产生做多或做空信号时,会先平掉当前方向相反的持仓,然后开仓做多或做空。当ind指标回到0轴之间时,会平掉所有持仓。
-
-#### 策略优势
-
-1. 使用跳空原理,当价格出现明显离开移动平均线时,采取逆势操作,这与趋势跟踪有所不同,跳空策略追求捕捉转折点。
-
-2. 绘制指标轴线,直观判断指标的位置和穿越。
-
-3. 优化了平仓逻辑,在平当前仓位后才反向开新仓,避免不必要的反向持仓。
-
-4. 设定交易时间范围,避免不必要的过夜仓位。
-
-5. 允许设置进入多空两边的交易开关,可仅做多或仅做空。
-
-#### 策略风险
-
-1. 追踪移动平均线策略容易产生多次亏损交易,适合耐心持仓。
-
-2. 移动平均线作为判断指标缺乏灵活性,不能及时反映价格变化。
-
-3. 预设参数limit较静态,不同品种和市场环境下需要调整。
-
-4. 追踪移动平均线无法识别趋势内波动,应结合波动指标等使用。
-
-5. 需要优化持仓规则,如设置止损、止盈;或只在趋势初期捕捉跳空。
-
-#### 策略优化方向 
-
-1. 可以测试不同参数设置,如sma周期;或采用指数移动平均等自适应移动平均线。
-
-2. 可以加入移动平均线方向、角度等判定,避免平台期无谓交易。
-
-3. 可以考虑与波动率指标结合,如布林带,在波动加大时暂停交易。
-
-4. 可以设定仓位管理规则,如固定数量开仓、递增加仓、资金管理等方式。
-
-5. 可以设置止损止盈线,或在固定比例止损时暂停新订单,控制单笔风险。
-
-#### 总结
-
-本文对Noro编写的追踪移动平均跳空策略进行了详细分析。该策略利用价格跳空移动平均线的特征,设计了指标轴线和颜色绘制,判断入场时机。同时优化了平仓顺序逻辑,设定了交易时间范围。但该策略存在追踪移动平均线的固有缺点,需要进一步优化参数设置、止损规则、与其他指标结合等方面,以提高稳定性。
-
-||
 
 
 This article provides an in-depth analysis of the moving average gap trading strategy coded by Noro. The strategy identifies trend reversals by calculating the deviation between closing price and simple moving average, and achieves buy low and sell high.
@@ -116,7 +63,6 @@ Upon long/short signal, the strategy will close opposite position first, then op
 
 This article comprehensively analyzed Noro's moving average gap trading strategy. It utilizes the price gap from moving average feature and implements indicator axes and colors for entry timing. It also optimizes the close logic and defines trading time range. However, inherent weaknesses of moving average tracking remains, requiring further optimizations in parameters, stop loss rules, combining indicators etc. to improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

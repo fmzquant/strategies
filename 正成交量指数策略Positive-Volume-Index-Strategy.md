@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-正成交量指数策略通过比较昨日和今日的成交量,在成交量放大的情况下计算价格变化,形成正成交量指数,并与其均线进行比较,产生交易信号。该策略遵循成交量放大,价格同步放大的市场规律。
-
-## 策略原理 
-
-该策略首先计算价格的日内涨跌幅xROC。然后比较今日成交量volume是否大于昨日volume[1]。如果大于,则今日正成交量指数nRes为昨日指数nRes[1]加上xROC;如果今日成交量小于或等于昨日,则今日指数维持昨日水平nRes[1]。
-
-计算出正成交量指数nRes后,与其N日指数移动平均线nResEMA进行比较。如果nRes大于nResEMA,则为看多信号,如果nRes小于nResEMA,则为看空信号。
-
-该策略遵循正成交量指数与其均线的关系,产生交易信号。当指数上穿均线时,为买入信号;当指数下穿均线时,为卖出信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用成交量变化,能捕捉市场积极性的变化。
-
-2. 具有一定的趋势跟踪能力。指数上涨预示可能进入多头市场。
-
-3. 计算方式简单,容易实现与回测。
-
-4. 可以通过调整均线参数来控制交易频率。
-
-## 风险分析
-
-该策略的风险主要有:
-
-1. 成交量放大不一定代表价格放大,存在背离的可能。
-
-2. 需设置合理止损来控制亏损。
-
-3. 指数与均线产生交易信号滞后于价格变化。
-
-4. 成交量异常或策略过优化都可能产生错误信号。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试添加其他技术指标进行信号过滤,如MACD、KDJ等。
-
-2. 优化均线参数,寻找最佳平衡点。
-
-3. 加入止损策略,如移动止损,控制风险。
-
-4. 可以考虑加入分批建仓退出机制,逐步减少风险。
-
-5. 针对具体品种进行参数优化,提高策略稳定性。
-
-## 总结
-
-正成交量指数策略基于成交量变化来设计交易信号,具有一定的市场跟随能力。但需注意成交量放大不一定代表价格放大的问题。通过参数优化,止损设置,以及添加其他技术指标等手段,可以控制风险,提高策略效果。该策略适合探索量价关系,辅助判断市场时点的选择。
-
-||
 
 ## Overview
 
@@ -121,7 +64,6 @@ The strategy can be optimized in the following aspects:
 
 The positive volume index strategy designs trades based on volume change, with some market following capability. But divergence between volume and price should be noted. By optimizing parameters, setting stop loss, adding indicators etc, the strategy can be improved to control risks and enhance performance. It is suitable for exploring price-volume relationship and assisting market timing.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,79 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略通过追踪RSI指标错过的超买超卖信号实现反转交易。当RSI指标从超买区域回落时产生追踪做多信号,从超卖区域反弹时产生追踪做空信号,以捕捉反转机会。
-
-## 策略原理
-
-### 信号判定
-
-RSI指标用于判断超买超卖。当RSI上穿设定的超买线时为超买信号,下穿超卖线时为超卖信号。
-
-```pine
-overbought = rsi > uplimit 
-oversold = rsi < dnlimit
-```
-
-若前一根K线RSI指标处于超买状态,当前K线RSI指标退出超买状态,产生追踪做多信号`up1`;若前一根K线RSI指标处于超卖状态,当前K线RSI指标退出超卖状态,产生追踪做空信号`dn1`。
-
-```pine
-up1 = bar == -1 and strategy.position_size == 0 and overbought[1] and overbought == false
-dn1 = bar == 1 and strategy.position_size == 0 and oversold[1] and oversold == false 
-```
-
-### 退出判定
-
-当持仓方向与K线实体方向一致时,并且实体突破其10周期平均值的一半时,产生退出信号。
-
-```pine
-exit = (((strategy.position_size > 0 and bar == 1) or 
-         (strategy.position_size < 0 and bar == -1)) and 
-        body > abody / 2)
-```
-
-## 策略优势
-
-1. 追踪RSI指标错过的反转信号,避免需要及时捕捉超买超卖点的困难。
-
-2. 利用RSI指标的反转属性,捕捉反转机会。
-
-3. 结合K线实体方向和大小进行退出判断,避免反弹后继续追踪。
-
-## 风险及解决方法
-
-1. RSI指标发出假信号的风险
-
-   - 解决方法:结合其他指标进行确认,避免错信。
-
-2. 追踪信号时,价格可能已经发生一定回调,亏损风险大
-
-   - 解决方法:降低入场仓位,或优化入场时机。
-
-3. 部分反弹无法获利就发出退出信号的风险
-
-   - 解决方法:优化退出判定逻辑,提高持仓获利机会。
-
-## 优化思路
-
-1. 优化参数设定,如超买超卖线、回看周期等,针对不同市场调整。
-
-2. 调整仓位管理方式,如追踪信号时降低仓位。
-
-3. 优化入场时机,在追踪信号基础上,添加其他条件限制。
-
-4. 优化退出方式,提高获利概率,如引入移动止盈等方式。
-
-5. 优化止损方式,降低亏损风险,如引入移动止损、扇形止损等。
-
-## 总结
-
-本策略基于RSI指标的超买超卖信号实现追踪反转交易。策略具有追踪反转信号的优势,但也存在一定的假信号风险和亏损风险。通过持续优化,可以进一步提高策略的稳定性和收益率。
-
-||
 
 
 ## Overview
@@ -154,7 +81,6 @@ exit = (((strategy.position_size > 0 and bar == 1) or
 
 This strategy implements reversal trading by tracking RSI overbought/oversold signals. It has the advantage of catching reversal signals but also has risks of false signals and losses. Further optimizations can improve the strategy's stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

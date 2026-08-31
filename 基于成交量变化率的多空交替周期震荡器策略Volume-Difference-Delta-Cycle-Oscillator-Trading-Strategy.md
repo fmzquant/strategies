@@ -10,76 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1faf5767f2ebed49edd.png)
-[trans]
-
-
-## 概述
-
-该策略通过计算成交量变化率的变化率,来判断多空周期的转换,属于量价背离类策略。它结合成交量的动量指标和价格的布林带,判断成交量变化对价格的领先效应,以捕捉趋势的转折点。
-
-## 策略原理
-
-1. 计算成交量变化率的变化率(成交量差值指标的变化率),得到基于成交量动量的指标nresult。
-
-2. 对nresult计算布林带,得到代表成交量动量标准差的bbr。
-
-3. 对收盘价计算布林带,得到代表价格标准差的bbr1。 
-
-4. 计算两者的差值hist,即成交量动量标准差减去价格标准差,作为最终指标。
-
-5. 当hist上穿0时为空头入场点,下穿0时为多头入场点。
-
-该策略通过计算成交量变化率的变化率,放大了成交量变化对价格的领先效应。当成交量出现反转,而价格还没有反转时,hist会上穿或下穿0,产生交易信号。它能提前判断价格趋势的转折点。
-
-## 策略优势
-
-1. 该策略是基于成交量变化率的量价背离策略,能够提前反映价格趋势的转折点。
-
-2. 计算成交量变化率的变化率,放大了成交量变化对价格的领先效应,交易效果更优。
-
-3. 结合成交量动量指标与价格指标的布林带,使交易信号更可靠。
-
-4. 采用三次指数平滑处理Hist数据,使信号更准确、平滑。
-
-5. 设置超买超卖线,并配合长空停损限价单,可有效控制风险。
-
-6. 可自定义的参数较多,如布林带长度、标准差倍数、Hist数据平滑参数等,可进行策略优化。
-
-## 策略风险
-
-1. 成交量数据不一定能真实反映市场交易情况,可能被操纵。
-
-2. 量价背离不一定持续,价格可能出现突破不反转的情况。
-
-3. 参数设置不当可能导致交易频繁或信号不准。
-
-4. 需注意防止成交量异常的假信号。
-
-5. 需警惕趋势坚强时的反转信号产生错误交易。
-
-可通过优化参数,结合其他指标进行过滤,设置止损止盈确保风险可控。
-
-## 策略优化方向
-
-1. 优化布林带参数,使信号更稳定。
-
-2. 结合趋势指标过滤信号,避免逆势交易。 
-
-3. 增加其他指标确认,如MACD等,防止假信号。
-
-4. 利用AI技术对参数进行自适应优化。
-
-5. 增加止损止盈动态调整模块,优化资金管理。
-
-6. 结合机器学习判断量价背离成功率,提高信号质量。
-
-## 总结
-
-该策略通过计算成交量变化率的变化率,放大成交量变化对价格的领先效应,能够提前判断价格趋势的转折点。相比单一的成交量指标,具有更高的可靠性和准确性。但也需要注意防范成交量被操纵和量价背离突破的风险,通过参数优化、指标过滤等手段控制风险。未来可运用AI技术进行自适应参数优化,进一步提升策略的稳定性和收益率。
-
-
-
-||
 
 
 ## Overview
@@ -146,7 +76,6 @@ Risks can be mitigated by optimizing parameters, adding other filters, and setti
 
 This strategy amplifies the leading effect of volume change on price by calculating the rate of change of volume change, enabling early detection of trend turning points. Compared to single volume indicators, it has higher reliability and accuracy. But risks like volume manipulation and divergence breakout should be guarded against via parameter optimization, indicator filters etc. In the future, AI can be leveraged for adaptive parameter optimization to further improve strategy stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

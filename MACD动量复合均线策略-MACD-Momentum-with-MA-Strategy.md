@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/df5feb02abd9129658.png)
-[trans]
-### 概述
-
-趋势捕手-MACD动量复合均线策略是一种精妙的交易工具,专为追踪市场趋势的交易者设计。该策略建立在平均真实波动范围(ATR)、简单移动平均线(SMA)和移动平均聚散指标(MACD)的强大组合基础之上,通过过滤和精确确认交易信号进入。
-
-### 策略原理
-
-#### ATR止损
-
-利用ATR指标动态调整止损价位。可自定义ATR长度和ATR乘数,策略随市场波动自动调整,提供平衡的风险管理。
-
-#### SMA趋势过滤
-
-采用SMA作为趋势过滤器。通过调整SMA周期参数,用户可以将策略与首选的市场趋势时间范围对齐,增强策略的适应性。
-
-#### MACD确认信号
-
-整合MACD指标细化入市信号。策略通过比较MACD线与信号线,区分潜在的多头和空头信号,确保交易与基本面势头一致。
-
-#### 入市逻辑
-
-**多头:**当价格收盘高于SMA,并且前一周期低于SMA时,同时MACD线上穿信号线时,做多。入市价设置为当前价格加上ATR止损距离。
-
-**空头:**当价格收盘低于SMA,并且前一周期高于SMA时,同时MACD线下穿信号线时,做空。入市价设置为当前价格减去ATR止损距离。
-
-### 策略优势
-
-该策略汲取市场波动、趋势和动量指标的精髓,构建系统的入市和风险管理机制。其指标的融合提高了策略在不同市况下的适应性,是参与趋势性行情的理想工具。
-
-通过跟踪市场趋势动力,趋势捕手策略可协助交易者发现盈利机会。调整参数以匹配个人交易风格,观察策略如何在揭示市场有利交易点方面发挥重要作用。
-
-### 风险分析
-
-趋势捕手策略依赖指标组合判断市场状态,存在某些市况下判断失误的可能。此外,趋势反转可能导致亏损增加。
-
-可通过适当调整参数降低假信号,或设置更宽松的止损距离。当出现异常行情时,亦可暂停策略,避免异常波动带来的损失。
-
-### 优化思路
-
-#### 参数优化
-
-可对ATR长度、SMA周期和MACD参数进行测试和优化,找出最适合自身风格的数值。
-
-#### 增加过滤器
-
-可加入其他指标作为辅助过滤器,如KDJ、OBV等,提高策略准确性。或增加附加条件如交易量放大,避免被套。
-
-#### 止损策略
-
-可设置曲线止损或振荡止损,通过追踪价格实时调整止损距离,降低亏损风险。
-
-### 总结
-
-趋势捕手-MACD动量复合均线策略汇聚市场波动、趋势和动量等多重指标判断力,构建精准的入市确认机制和风险控制体系。通过参数调整可配合个人交易方式,助力抓住市场机会。该策略值得量化交易者深入研究和应用。
-
-||
 
 ### Overview
 
@@ -121,7 +65,6 @@ Trailing or volatility stops that dynamically adjust stop distance minimizes los
 
 The Trend Hunter strategy amalgamates volatility, trend and momentum dynamics into a precise entry confirmation and risk management system. Parameter adjustments cater to individual trading styles, aiding in capitalizing on opportunities. Worthwhile for quants to further explore and apply.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1137f5e4061730e286c.png)
-[trans]
-## 概述
-
-本策略通过组合使用多种不同周期的SMA均线,实现对趋势的判断和跟踪。核心思路是:比较不同周期SMA的上涨和下跌方向,判断趋势;当短周期SMA上穿较长周期SMA时,做多;当短周期SMA下穿较长周期SMA时,做空。同时,结合ZeroLagEMA指标进行入场和出场的确认。
-
-## 策略原理
-
-1. 使用5个不同周期的SMA均线,分别是10周期、20周期、50周期、100周期和200周期。
-2. 比较这5条均线的上涨和下跌方向,判断趋势方向。例如,当10周期、20周期、100周期和200周期SMA均线同时上涨时,判断为上涨趋势;当均线同时下跌时,判断为下跌趋势。
-3. 比较不同周期SMA的数值,形成交易信号。例如,当10周期SMA上穿20周期SMA时做多,形成入场信号;当10周期SMA下穿20周期SMA时做空,形成入场信号。  
-4. 使用ZeroLagEMA作为入场确认和出场信号。当快速周期ZeroLagEMA上穿慢速周期时做多;下穿时平多仓。做空信号的判断方式相反。
-
-## 策略优势
-
-1. 使用多种不同周期SMA均线组合,可以有效判断市场趋势方向。
-2. 周期SMA数值的比较可以产生交易信号,形成量化入场和出场规则。
-3. ZeroLagEMA滤波可以避免不必要的交易,提高策略稳定性。
-4. 结合趋势判断和交易信号,实现了趋势跟踪交易。
-
-## 策略风险及解决方案
-
-1. 当市场进入震荡整理阶段时,SMA均线信号可能出现频繁交叉,带来较多无效交易和亏损的风险。
-   - 解决方法:增加ZeroLagEMA的滤波参数,避免无效信号的入场。
-2. 由于参考了较多周期的SMA,判断信号有一定滞后性,无法对短期剧烈价格变动做出及时反应。
-   - 解决方法:结合更加灵敏的指标,如MACD等,辅助判断。
-
-## 策略优化方向 
-
-1. 优化SMA周期参数,找到最佳参数组合。
-2. 增加止损策略,如跟踪止损,进一步控制单笔亏损。
-3. 增加仓位数管理机制,让策略在趋势较强时加大头寸,在震荡时减小头寸。
-4. 结合更多辅助指标判断,如MACD,KDJ等,提高策略整体稳定性。
-
-## 总结
-
-本策略通过组合多个周期SMA均线,实现了对市场趋势方向的有效判断,并产生了量化交易信号。同时,ZeroLagEMA的应用提高了策略的顺利率。总的来说,策略实现了基于趋势跟踪的量化交易思路,效果显著。通过进一步优化SMA周期参数、止损策略、头寸管理等,可以进一步增强策略效果,值得实盘验证与应用。
-
-||
 
 ## Overview  
 
@@ -85,7 +47,6 @@ This strategy combines multiple SMA lines with different periods to identify and
 
 This strategy effectively determines the market trend by combining multiple-period SMAs, and generates quantified trading signals. ZeroLagEMA improves win rate. In summary, the strategy achieved quantitative trend following trading, with remarkable results. Further optimizing periods, stop loss, position sizing etc. can strengthen the strategy for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

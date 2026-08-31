@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ea70e915d48d78ac52.png)
-[trans]
-## 概述
-
-该策略的主要思想是基于每周的价格趋势来确定多空方向,在看涨的情况下,当出现阳线形态之后进入多单;当价格上涨至预设的止盈点时止盈,如果下跌至预设的止损点则止损。
-
-## 策略原理
-
-该策略首先定义了判断每周趋势的条件:
-
-```
-isUptrend = close > close[1] 
-
-isDowntrend = close < close[1]
-```
-
-如果当前收盘价大于前一日的收盘价则判断为看涨趋势,反之则看跌。
-
-然后定义日内交易信号:
-
-```
-buyCondition = getPrevDayClose() > getPrevDayOpen() and getPrevDayOpen() > getPrevDayClose()[1] and isUptrend
-```
-
-即前一日收盘价大于开盘价(阳线),且前一日开盘价大于前前日收盘价(缺口涨),且处于看涨趋势,满足多头入场条件。
-
-入场后,止损点设置为前一日收盘价再减去1.382倍的前一日实体线长度:
-
-```
-stopLoss = getPrevDayClose() - 1.382 * (getPrevDayClose() - getPrevDayOpen()) 
-```
-
-止盈点则设置为前一日收盘价加上2倍止损点与收盘价的差额:
-
-```
-takeProfit = getPrevDayClose() + 2 * (getPrevDayClose() - stopLoss)
-```
-
-以此实现止损追利。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 基于趋势交易,避免逆势做空带来的风险
-2. 采用日内阳线及缺口的组合信号,避免多头入场过早
-3. 止损定位合理,控制单笔损失
-4. 止盈空间较大,盈利潜力高
-
-## 风险分析 
-
-该策略也存在一些风险:
-
-1. 无法判断趋势反转点,可能错过100000000000000000000转机会
-2. 止损过于接近,被套可能性较大
-3. 没有考虑成本控制,交易频率过高时收益可能下降
-
-为控制这些风险,可以考虑加入如下优化:
-
-1. 在止损点附近设置trailers,追踪止损
-2. 加入成本控制模块,限制开仓频率
-3. 增加对SUPPORT/RESISTANCE的判断
-
-## 优化方向
-
-该策略还可以从以下方向进行优化:
-
-1. 基于更多因素判断趋势,如移动平均线方向、成交量变化等
-2. 优化入场信号,结合更多K线形态
-3. 动态追踪止损止盈,根据价格波动自动调整
-4. 加入量化模块,控制仓位规模
-5. 多时间周期组合,利用更高级别的趋势过滤
-
-## 总结
-
-该策略整体来说较为实用,核心思路突出趋势交易,同时控制风险。可以作为日内短线交易的基础策略,也可根据不同市场和品种进行模块化优化,实现多样化的交易组合。在实际运用中,仍需要注意控制成本和防范被套风险,保持适当的心态很关键。
-
-||
 
 ## Overview
 
@@ -162,7 +85,6 @@ The strategy can also be optimized in the following ways:
 
 Overall this is quite a practical strategy, highlighting trading along trends while controlling risks. It can serve as a basic intraday trading strategy and can be modularly optimized for different markets and products to create diversified trading portfolios. In actual usage, controlling costs and avoiding traps remain critical, so maintaining proper mentality is key.
 
-[/trans]
 
 
 

@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans] 
-Noro快速RSI突破策略详解
-
-本文将详细解析Noro快速RSI突破策略的原理,阐述其交易信号形成机制,并分析该策略的优势以及潜在风险。
-
-一、策略概览
-
-该策略以RSI指标为主要交易信号,结合K线实体过滤和最小价/最大价突破辅助判断,形成完整的多空决策体系。策略名“Noro快速RSI突破策略”。
-
-二、策略详细解析
-
-1. RSI快速线设置
-
-该策略使用length为7的RSI快速线,通过RSI的快速震荡捕捉市场趋势的迹象。同时设置了RSI上限为70,下限为30,RSI超过上下限时产生交易信号。
-
-2. K线实体过滤
-
-策略用K线实体大小sma来过滤RSI信号,仅在实体大于5日平均实体大小的柱线上考虑RSI信号,避免被震荡市调整砸板。
-
-3. 最小价/最大价突破
-
-策略判断最近mmbars内是否出现最小价下穿或最大价上突,并结合RSI位置来判断底部反弹和头部下沉机会。
-
-4. 交易信号汇总
-
-做多信号:RSI下穿30限位,实体大于平均实体大小,以及最小价突破底部支撑。
-
-做空信号:RSI上穿70限位,实体大于平均实体大小,以及最大价突破头部压力。 
-
-平仓信号:持仓方向与K线实体方向相反时,RSI重新突破限位时平仓。
-
-三、策略优势
-
-1. RSI指标参数优化,能快速捕捉趋势转换。
-
-2. 结合K线及最小价最大价突破,避免被震荡市无谓切换。
-
-3. 有止损机制,RSI重新突破限位时止损出场。
-
-四、策略风险
-
-1. RSI容易产生错觉信号,需结合辅助判断。
-
-2. 回测数据拟合风险,参数优化过于严密可能只适合特定市场周期。
-
-3. 止损机制可能过于机械,无法控制单笔止损过大的风险。
-
-五、总结
-
-本策略整合多种技术指标信号,形成较为稳健的趋势跟踪体系。但仍需注意回测超优化及止损风险,谨慎评估策略的实盘效果。用于实盘时,建议适当调整参数,并控制单笔仓位规模。
-
-||
 
 This article will detail the logic behind Noro's Fast RSI Breakthrough Strategy, explain how trading signals are generated, and analyze the advantages and potential risks of this strategy. 
 
@@ -110,7 +58,6 @@ V. Conclusion
 
 This strategy integrates multiple technical indicators for robust trend following. But risks of backtest overfitting and stop loss should be noted, and live performance should be evaluated cautiously. Fine tune of parameters and control of position sizing recommended for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

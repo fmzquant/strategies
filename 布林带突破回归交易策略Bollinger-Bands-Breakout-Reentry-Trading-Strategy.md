@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/dc331251141e495381.png)
-[trans]
-
-## 概述
-该策略基于布林带指标,主要思想是在价格突破布林带上轨或下轨后,等待价格回归到布林带内部,然后在回归点建立与突破方向相同的头寸。该策略利用了价格在极端区域往往会出现反转的特点,通过布林带突破和回归的组合条件来捕捉市场转折点,以期获得更高的胜率。
-
-## 策略原理
-1. 计算布林带的中轨、上轨和下轨。中轨为移动平均线,上轨和下轨为中轨加减一定标准差。
-2. 判断价格是否突破布林带的上轨或下轨。如果收盘价超过上轨,则认为是向上突破;如果收盘价跌破下轨,则认为是向下突破。
-3. 如果发生向上突破,记录该突破K线的最高价为peak。如果发生向下突破,记录该突破K线的最低价为peak。peak用于后续判断价格是否回归。
-4. 在发生突破后,等待价格回归到布林带内部。如果此时收盘价位于上轨和下轨之间,则认为价格已经回归。
-5. 在价格回归时,如果前一根K线为向上突破(break_up\[1\] and inside),则开多头;如果前一根K线为向下突破(break_down\[1\] and inside),则开空头。
-6. 持仓管理:如果多头持仓时,收盘价上穿中轨,则平多;如果空头持仓时,收盘价下穿中轨,则平空。
-
-## 优势分析
-1. 布林带有很强的自适应性,能够根据价格波动情况动态调整,对于捕捉趋势和波动很有帮助。
-2. 相比单纯的布林带突破策略,增加了回归条件,能够一定程度上避免追高杀跌,提高进场质量。
-3. 平仓条件以中轨为参考,简单易用,能够较好地保护利润。
-4. 可以自定义布林带的参数,如长度、偏差倍数等,灵活性高。
-
-## 风险分析
-1. 布林带参数选择不当可能导致过早或过晚进场,影响策略表现。可以通过优化参数来缓解。
-2. 价格在布林带附近震荡时可能会出现频繁开平仓,导致交易成本增加。
-3. 如果趋势很强,价格长时间不回归布林带内部,可能会错失趋势利润。
-4. 单纯使用布林带指标可能对于某些品种或某些行情并不奏效,需要配合其他信号。
-
-## 优化方向  
-1. 可以考虑引入更多过滤条件,如价格在布林带上方运行一段时间后再突破更可靠,或者MA角度、ADX等趋势判断指标用于辅助判断。
-2. 针对震荡行情,可以增加限价单和计时器,避免盲目开仓。
-3. 平仓方面可以再结合ATR或均线,控制好出场时机。
-4. 对不同标的和周期进行参数优化和特征分析,选择适合的交易标的和周期。
-5. 可以考虑加入仓位管理,如波动率收缩时加大仓位,波动率放大时减少仓位。
-
-## 总结
-布林带突破回归交易策略是一个简单实用的量化交易策略。它利用价格对极端情况的反应,通过布林带工具构建开平仓条件,能够在一定程度上捕捉趋势起始点和终结点,控制频繁交易。同时该策略也存在参数选择、震荡行情下表现不佳、对趋势把握不足等问题。通过细节的优化以及与其他信号的结合,有望进一步提升该策略的适应性和鲁棒性。
-
-|| 
 
 ## Overview
 This strategy is based on the Bollinger Bands indicator. The main idea is to wait for the price to re-enter the Bollinger Bands after breaking out of the upper or lower band, and then establish a position in the same direction as the breakout at the re-entry point. The strategy takes advantage of the characteristic that prices often reverse when they are in extreme areas. By combining the conditions of Bollinger Band breakout and re-entry, it aims to capture market turning points and achieve a higher win rate.
@@ -79,7 +43,6 @@ This strategy is based on the Bollinger Bands indicator. The main idea is to wai
 
 ## Summary
 The Bollinger Bands Breakout Reentry Trading Strategy is a simple and practical quantitative trading strategy. It utilizes the reaction of prices to extreme situations and constructs entry and exit conditions through the Bollinger Bands tool, which can capture trend starting and ending points to a certain extent and control frequent trading. At the same time, this strategy also has issues such as parameter selection, poor performance in oscillating markets, and insufficient trend capture. Through optimization of details and combination with other signals, it is expected to further improve the adaptability and robustness of this strategy. 
-[/trans]
 
 > Strategy Arguments
 

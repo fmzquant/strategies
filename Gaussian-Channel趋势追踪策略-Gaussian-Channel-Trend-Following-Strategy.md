@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13b423346a335cb9cd1.png)
 
-[trans]
-#### 概述
-Gaussian Channel趋势追踪策略是一个基于Gaussian Channel指标的趋势跟踪交易策略。该策略旨在捕捉市场的主要趋势,在上升趋势中买入并持有头寸,在下降趋势中平仓观望。策略使用Gaussian Channel指标来识别趋势的方向和强度,通过分析价格与通道上下轨的关系来确定买卖时机。策略的主要目标是在趋势持续期间获得尽可能多的利润,同时尽量避免在震荡市中频繁交易。
-
-#### 策略原理
-Gaussian Channel趋势追踪策略的核心是Gaussian Channel指标,该指标由Ehlers提出,是一种利用高斯滤波技术和真实范围(True Range)相结合的趋势分析工具。指标首先根据样本周期和极点数计算β和α值,然后对数据进行滤波处理,得到平滑曲线(中轨)。接着,策略使用平滑后的真实范围乘以一个倍数,得到上下通道。当价格上穿/下穿通道上轨/下轨时,产生买入/卖出信号。此外,策略还提供了降低指标延迟的功能,以及快速反应模式。
-
-#### 策略优势
-1. 趋势跟踪:该策略善于捕捉市场主要趋势,在趋势方向进行投资,有助于获得长期稳定的收益。
-2. 减少交易频率:策略只在确认趋势时入场,趋势持续期间保持持仓,从而减少了不必要的交易次数和交易成本。
-3. 降低延迟:通过降低延迟模式和快速反应模式,策略可以更及时地对市场变化做出反应。
-4. 参数灵活:用户可以根据自己的需求调整策略参数,如样本周期、极点数、真实范围倍数等,以优化策略表现。
-
-#### 策略风险
-1. 参数优化风险:不恰当的参数设置可能导致策略表现不佳。建议在不同市场环境下进行参数优化和回测,以找到最佳参数组合。
-2. 趋势转折风险:当市场趋势发生突然转折时,策略可能会产生较大回撤。可以通过设置止损或引入其他指标来控制风险。
-3. 震荡市风险:在震荡市场中,策略可能会出现频繁的交易信号,导致收益受损。可以通过优化参数或结合其他技术指标来过滤信号。
-
-#### 策略优化方向
-1. 引入其他技术指标:结合其他趋势类或震荡类指标,如MACD、RSI等,以提高信号准确性和可靠性。
-2. 动态参数优化:根据市场状态的变化,动态调整策略参数,以适应不同的市场环境。
-3. 加入风险控制模块:设置合理的止损和止盈规则,控制单笔交易风险和总体回撤水平。
-4. 多时间框分析:结合不同时间周期的信号,如日线、4小时线等,以获取更全面的市场信息。
-
-#### 总结
-Gaussian Channel趋势追踪策略是一个基于高斯滤波技术的趋势跟踪交易策略,通过捕捉市场主要趋势来获取长期稳定收益。策略使用Gaussian Channel指标来识别趋势方向和强度,同时提供降低延迟和快速反应的功能。策略的优势在于良好的趋势跟踪能力和较低的交易频率,但同时也面临参数优化、趋势转折和震荡市等风险。未来可以通过引入其他技术指标、动态参数优化、加入风险控制模块和多时间框分析等方式对策略进行优化,以进一步提高其稳健性和盈利能力。
-
-|| 
 
 #### Overview
 The Gaussian Channel Trend Following Strategy is a trend-following trading strategy based on the Gaussian Channel indicator. The strategy aims to capture the main trends in the market, buying and holding positions during uptrends and closing positions during downtrends. It uses the Gaussian Channel indicator to identify the direction and strength of the trend by analyzing the relationship between price and the upper and lower bands of the channel. The main goal of the strategy is to maximize profits during sustained trends while minimizing trading frequency during range-bound markets.
@@ -65,7 +37,6 @@ The core of the Gaussian Channel Trend Following Strategy is the Gaussian Channe
 
 #### Summary
 The Gaussian Channel Trend Following Strategy is a trend-following trading strategy based on Gaussian filtering techniques, which aims to capture the main market trends for long-term stable returns. The strategy uses the Gaussian Channel indicator to identify trend direction and strength while offering features to reduce lag and provide fast response. The advantages of the strategy lie in its strong trend-following ability and low trading frequency. However, it also faces risks such as parameter optimization, trend reversals, and range-bound markets. Future optimizations can include incorporating other technical indicators, dynamic parameter optimization, adding risk control modules, and multi-timeframe analysis to further improve the strategy's robustness and profitability.
-[/trans]
 
 > Strategy Arguments
 

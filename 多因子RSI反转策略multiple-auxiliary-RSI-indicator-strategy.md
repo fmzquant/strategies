@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1c7c89e208bfa8d08d7.png)
 
-[trans]
-
-## 概述
-本策略运用RSI指标识别超买超卖现象,结合多种辅助因子如MACD、Stochastic指标等入场。该策略旨在捕捉短期反转机会,属于反转策略。
-
-## 策略原理  
-本策略主要利用RSI指标判断市场是否处于超买或超卖状态。当RSI指标超过设定的超买线时,表明市场可能处于超买状态,这时策略选择做空;当RSI指标低于设定的超卖线时,表明市场有可能处于超卖状态,策略此时选择做多。这样通过捕捉行情由一个极端状态切换到另一个极端状态的反转过程中产生的短期交易机会获利。
-
-另外,策略还引入了MACD、Stochastic等多个辅助因子。这些辅助因子的作用是过滤掉一些可能出现的假阳性交易信号。只有当RSI指标发出信号、并且辅助因子也支持该信号时,策略才会采取真正的交易行动。这种多因子配合的方式可以提高策略信号的可靠性,从而也提高了策略的稳定性。
-
-## 优势分析
-这套策略最大的优势在于捕捉效率高,实现了多因子验证提高了信号质量。具体来说主要体现在以下几个方面:
-
-1. RSI指标本身对市场 regimes 的识别能力较强,可以有效识别超买超卖现象。
-2. 借助多种辅助工具进行多因子验证,提高了信号质量,过滤了大量假阳性。
-3. 策略对参数不敏感,容易优化。
-
-## 风险及解决方法
-该策略也面临一定的风险,主要集中在两个方面:
-
-1. 反转失败风险。反转信号本身依赖的就是统计套利机会,不排除个别反转失败的概率。可以通过降低仓位,或设置止损来控制风险。
-2. 多头行情下的亏损风险。策略整体上仍以逆市操作为主,在多头行情下难免会出现一定亏损。这需要我们对大趋势判断要准确,必要时通过人工干预来跳过不利的行情环境。
-
-## 优化方向  
-本策略后续需要从以下几个方面进行优化:
-
-1. 测试不同品种,寻找最佳参数组合。策略对参数并不敏感,但仍建议针对不同品种寻找最优参数。
-2. 增加自适应退出机制。可以测试加入动态止损、时间退出等方式,使策略更适应市场的变化。 
-3. 引入机器学习算法。可以尝试让模型学习判断反转成功的概率,从而提高策略胜率。
-
-## 总结
-本策略整体而言是一个短线反转策略。利用RSI指标判断超买超卖的能力,同时借助多种辅助工具进行多因子验证,从而提高了信号的质量。该策略捕捉效率高,稳定性也较好。值得进一步测试和优化,最终实现盈利。
-
-||
 
 ## Overview  
 This strategy uses the RSI indicator to identify overbought and oversold conditions, and enters trades combining multiple auxiliary factors such as MACD, Stochastic indicators, etc. The goal of this strategy is to capture short-term reversal opportunities. It belongs to mean reversion strategies.  
@@ -77,7 +43,6 @@ The following aspects need to be optimized for this strategy going forward:
 ## Conclusion  
 In conclusion, this is a short-term mean reversion strategy. By leveraging RSI’s capabilities of gauging overbought/oversold conditions, and combining multiple auxiliary tools for multi-factor confirmation, the signal quality is improved. The strategy has high capturing efficiency and good stability. It deserves further testing and optimization for eventual profitability.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1238db321ac633adc6e.png)
-[trans]
-
-
-## 概述
-
-震荡突破策略运用布林带和随机指标,识别资产价格达到超买超卖区域时的潜在反转点,适合日内交易者利用小幅价格波动获利。该策略主要思想是在特定资产价格突破布林带上下轨,且随机指标显示超买超卖信号时,寻找交易机会。
-
-## 策略原理
-
-该策略同时使用布林带和随机指标作为主要技术指标。布林带通过计算指定周期(如20天)的均线及标准差,得到上轨和下轨。价格到达上轨时被认为超买,到达下轨时被认为超卖。随机指标RSI则判断价格是否过度超买或超卖。RSI低于20时为超卖,高于80时为超买。
-
-具体交易策略是:当价格突破布林带下轨,同时随机指标RSI低于20时,做多;当价格突破布林带上轨,同时随机指标RSI高于80时,做空。做多时的止损价格设在当前K线低点之下若干点,做空止损价格设在当前K线高点之上若干点。目标利润设在最近几根K线平均波动点数之外。
-
-代码通过交叉函数实现布林带轨道突破判断,RSI高低位判断,并绘制形状标记突破信号。进场后设置止损和止盈,跟踪价格变动退出。
-
-## 优势分析
-
-该策略结合布林带判定支撑压力区域,和RSI判断超买超卖区域,可以提高交易信号质量。相比单一指标,可以减少错误信号。
-
-利用K线突破布林带上下轨道,配合RSI过滤,可以捕捉反转机会。这类反转交易潜在获利空间较大。
-
-止损距离较小,有利于控制单笔损失。止盈根据平均波动设定,可以较好平衡获利大小。
-
-该策略交易频次较高,适合日内短线交易,可以充分利用小范围市场波动获利。
-
-## 风险分析
-
-布林带轨道突破假设价格会发生回归均线的反转,但部分突破可能是假突破,无法形成趋势反转。这会导致亏损。
-
-RSI具有滞后性,可能出现提前触发超买超卖信号,从而错过部分交易机会的情况。
-
-止损距离较小,追求控制单笔损失,但也限制了单笔盈利空间。
-
-高频交易需要较强心理质量,过于频繁止损可能影响总体盈利。
-
-## 优化方向
-
-可以测试调整布林带参数,如增大周期长度,来提高突破信号质量。
-
-可以尝试以K线收盘价突破布林带作为信号,而不是直接突破判定,减少假突破。 
-
-可以结合其他指标如MACD、KD等与RSI形成组合,提升超买超卖判定的准确性。
-
-可以根据不同品种特点设定动态止损距离,而不是固定点数止损。
-
-## 总结
-
-该策略整合布林带判定支撑压力区域,和RSI指标判断超买超卖区域,在理论上可以较好发现反转机会。实际操作中,关键是找到合适的参数配置,控制风险,持续优化。 
-
-
-|| 
 
 ## Overview
 
@@ -98,7 +47,6 @@ Consider dynamic stops based on volatility instead of fixed pips.
 
 The strategy seeks to identify reversals by combining Bollinger Bands for support/resistance and Stochastic for overbought/oversold conditions. Fine tuning parameters, controlling risk, and ongoing optimization are key for real-world performance. Transaction costs should be considered. Past performance is no guarantee of future results.
 
-[/trans]
 
 > Strategy Arguments
 

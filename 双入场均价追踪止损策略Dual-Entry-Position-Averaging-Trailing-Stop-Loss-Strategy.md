@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a45cf906cfa1e9dd20.png)
-[trans]
-
-### 概述
-
-该策略采用双入场的方式,在第一个入场点入场后,如果价格没有达到第一个止盈点,则在更高的价格再次入场,实现加仓的效果。同时,策略采用均价追踪止损的方式,实时更新止损线的位置,把止损线设置为入场均价的一定百分比以上,从而锁定利润,控制风险。
-
-### 策略原理  
-
-策略首先判断价格是否低于200日简单移动平均线,如果是,则符合入场条件。策略在每天的14:29 - 15:00之间入场,形成第一个入场点。之后策略会绘制第一个止盈线和止损线。  
-
-如果价格上涨,但没有达到第一个止盈目标,则在第一个入场点比入场价格高5%的位置再次入场,实现加仓的效果。这个时候,策略会更新止损线的位置,将其设置为当前持仓的平均入场价的1.15倍。同时也会绘制出第二个止盈线。  
-
-该策略可以通过两个止盈目标和追踪止损来锁定利润,同时通过加仓来获得更多利润。  
-
-### 优势分析
-
-该策略具有以下几个优势:  
-
-1. 采用双入场加仓的方式,可以在不增加风险的前提下获得更高的收益。  
-
-2. 实时更新止损线位置,采用均价追踪止损方式,可以很好的控制风险,锁定利润。  
-
-3. 在跌势中开仓,具有一定的逆市操作能力。  
-
-4. 入场时间和点位设置合理,避免被套。  
-
-5. 参数设置合理,止盈止损点位够紧,收益风险比高。
-
-### 风险分析  
-
-该策略也存在一些风险:  
-
-1. 双入场加仓方式可能会放大损失。如果两个入场点最后都止损了,损失会加大。  
-
-2. 如果止损点位设置不当,无法有效控制风险,可能导致超出可承受的损失。  
-
-3. 如果入场时间选择不当,可能导致迎头入场,被套的概率大大增加。  
-
-4. 参数设置如果不当,止盈点过远或者止损点过近,都可能导致收益下降。
-
-这些风险可以通过合理的参数优化,严格的风险控制来减少和规避。
-
-### 优化方向  
-
-该策略还可以从以下几个方向进行优化:  
-
-1. 测试不同的技术指标作为入场条件,寻找更好的入场点位。  
-
-2. 对止盈止损点位进行测试和优化,使收益风险比最大化。  
-
-3. 测试不同的加仓方式,确定最优加仓倍数。  
-
-4. 加入趋势判断规则,避免逆势入场。  
-
-5. 优化入场时间段的选择,确保不会迎头入场。
-
-### 总结  
-
-该策略总体来说非常实用,具有较强的实战意义。采用双入场加仓的方式可以在控制风险的前提下获得更高收益,均价追踪止损可以很好地锁定利润,控制风险。通过合理参数优化和严格风险控制,该策略可以获得稳定持续的Alpha。
-
-||
 
 
 ### Overview
@@ -132,7 +71,6 @@ The strategy can also be optimized in the following aspects:
 
 Overall, this strategy is very practical and has strong practical significance. The dual entry add-on method can obtain higher returns while controlling risks. The position averaging trailing stop loss can lock in profits and control risks effectively. With reasonable parameter optimization and strict risk control, this strategy can achieve steady and consistent Alpha.
 
-[/trans]
 
 > Strategy Arguments
 

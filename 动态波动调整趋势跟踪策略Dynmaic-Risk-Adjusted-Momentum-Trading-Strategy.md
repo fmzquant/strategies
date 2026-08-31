@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6901cab4d6304b2240.png)
-[trans]
-### 概述
-
-这个独特的规则化系统化交易策略属于趋势跟随类别。它使用经过价格归一化的价格序列来生成交易信号,而不是直接使用股票价格。该策略采用高级持仓调整和风险管理技术,这些技术通常只在机构投资组合管理中使用,是商品交易顾问(CTA)和管理期货基金等头寸调整的证明技术。
-
-### 策略原理  
-
-“归一化价格”是根据整个价格时间序列计算得出的经过波动率调整的价格累积日收益率。波动率调整窗口期由用户定义。基于归一化价格计算出赫尔移动平均线,并作为主要趋势判断指标。赫尔移动平均线窗口期也由用户定义,默认100天,以保证趋势判断的敏感性,同时避免过于频繁交易。  
-
-交易策略核心非常简单,归一化价格向上跨越赫尔移动平均线做多,向下跨越做空。新的交易信号会主动平掉旧的反向头寸。  
-
-持仓规模基于最近价格波动率和用户定义的年化风险目标。实质上是根据波动率调整仓位大小,波动率低时持仓较大,波动率高时持仓较小。最近波动率为14天价格对数收益率标准差,外推到一年期预期波动率。然后根据用户设置的年化风险目标调整仓位。默认风险目标是保守的10%。初始资金应设置为单笔最大承担损失资金(例如总资金10万元,单笔损失控制在10%,则初始资金设定为1万元)。杠杆限制可独立设置,用于在交易标的本身波动率不能达到风险目标的情况下,同时避免波动率过低时的资金利用率下降。  
-
-止损基于最近价格平均真实波动幅度的倍数设置,用户可配置。
-
-### 策略优势  
-
-- 利用价格归一化处理降低假信号概率  
-- 仓位动态调整,有效控制风险  
-- 实时止损进一步避免巨额损失  
-- 交易策略简单直观,容易理解实现  
-
-### 策略风险  
-
-- 赫尔移动平均线作为主要指标,存在一定滞后  
-- 利用波动率调整仓位控制风险的同时可能限制盈利空间  
-- 止损过于接近可能被突破造成损失  
-
-风险控制措施包括利用不同移动平均线组合、调整仓位风险目标等。
-
-### 策略优化  
-
-- 测试不同类型移动平均线指标效果  
-- 优化移动平均线参数  
-- 尝试只做多或者只做空  
-- 调整止损幅度寻找最佳点  
-- 测试其他止损方式
-
-### 总结  
-
-该策略整合多种技术控制风险,如Prices归一化、动态调仓、止损等。运用简单的趋势跟随原则进行交易。可根据市场和个人情况进行参数调整优化。值得进一步测试验证,具有实际应用潜力。
-
-||
 
 ### Overview  
 
@@ -95,7 +52,6 @@ Risk controls measures include alternate moving average selections, adjusting ri
 
 The strategy integrates various techniques like normalisation, dynamic position adjustment, hard stops to control risks. Trading is based on simple trend following rules. Parameters can be adjusted for personal preferences and market regimes. Worth further testing and verification for viable real world application.
 
-[/trans]
 
 > Strategy Arguments
 

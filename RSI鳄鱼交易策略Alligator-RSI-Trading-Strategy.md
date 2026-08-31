@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/165aa5b033d02b9b393.png)
-[trans]
-
-## 概述
-
-RSI鳄鱼交易策略是一种利用相对强弱指数(RSI)的多重均线组合来判断市场趋势和发出交易信号的量化交易策略。该策略借鉴了鳄鱼的捕食原理,当短期RSI线交叉长期RSI线时展开交易。
-
-## 策略原理
-
-RSI鳄鱼交易策略同时利用5日、13日和34日三条RSI均线。其中,5日RSI线被称为“牙齿”线,13日线被称为“嘴唇”线,34日线被称为“下巴”线。当“牙齿”线或“嘴唇”线上穿“下巴”线时,发出做多信号;当“牙齿”线或“嘴唇”线下穿“下巴”线时,发出做空信号。
-
-交易策略的关键在于捕捉短期RSI线与长期RSI线的交叉,以判断市场短期趋势与长期趋势的关系,寻找反转机会。当短期RSI线交叉长期RSI线时,说明短期价格已经发生反转,这时占有相反方向的头寸,可以获利于即将发生的长期趋势反转。
-
-## 策略优势分析
-
-RSI鳄鱼交易策略具有以下优势:
-
-1. 捕捉市场反转, profit from trend reversals
-2. 利用多重RSI均线确认信号,avoid false signals
-3. 简单易懂的交易逻辑,easy to understand and implement
-4. 可细调的参数,adjustable parameters
-5. 适用于不同市场和时间周期,works on various markets and timeframes
-
-## 风险分析
-
-RSI鳄鱼交易策略也存在以下风险:
-
-1. 容易产生错误信号,prone to false signals
-2. 无法过滤震荡市场,struggles during range-bound markets  
-3. 回撤可能比较大,potentially large drawdowns
-4. 需要费时调整参数,time-consuming parameter tuning
-5. 交易频繁,potentially overtrading
-
-可以通过组合其他指标,优化参数以及适当调整持仓规模来缓解这些风险。
-
-## 策略优化方向
-
-RSI鳄鱼交易策略可以从以下几个方面进行优化:
-
-1. 组合其他技术指标,如布林带,K线形态等,以过滤错误信号
-2. 优化RSI参数,找到最佳均线参数组合
-3. 根据市场状态调整持仓规模和止损位置
-4. 测试不同交易品种和时间周期的参数效果 
-5. 增加机器学习算法,实时优化参数
-
-## 总结
-
-RSI鳄鱼交易策略利用多重RSI均线交叉来捕捉市场反转机会。它简单实用,适用于自动化交易,但也存在一定缺陷。通过参数优化和指标组合可以强化该策略,使其成为稳定盈利的算法交易策略。
-
-|| 
 
 ## Overview
 
@@ -106,7 +57,6 @@ The Alligator RSI trading strategy can be optimized in the following ways:
 
 The Alligator RSI trading strategy uses RSI MA crosses to capture market reversal opportunities. It is simple, usable for algo-trading but has some flaws. Parameter optimization and indicator combinations can enhance this strategy to make it a steady profitable algorithmic trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

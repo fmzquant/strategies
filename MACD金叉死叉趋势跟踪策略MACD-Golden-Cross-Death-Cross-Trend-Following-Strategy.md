@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d4e0456214e3ae52cc.png)
-[trans]
-
-## 概述
-
-该策略通过MACD指标的金叉死叉来判断趋势方向,配合ATR指标进行止损止盈,实现趋势跟踪交易。策略名称中的“金叉死叉”二字突出使用MACD指标的金叉死叉信号。
-
-## 策略原理
-
-当MACD线从下向上穿过Signal线而变为正值时产生买入信号,这就是金叉信号,表示股价上涨趋势形成。当MACD线从上向下穿过Signal线而变为负值时产生卖出信号,这就是死叉信号,表示股价下跌趋势形成。
-
-该策略就是利用这一原理,在金叉时做多,在死叉时做空,实现趋势跟踪。同时,策略还引入ATR指标计算止损止盈位,完成交易系统的构建。
-
-具体来说,策略首先计算快速移动平均线、慢速移动平均线、MACD差值、Signal线等标准MACD指标。然后根据选择的五种信号(延续信号、反转信号、柱状图信号、MACD零轴交叉、Signal零轴交叉)判断金叉死叉。最后结合ATR指标设置止损止盈,完成入场和出场逻辑。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用MACD指标判断趋势方向准确可靠,多年来MACD指标在判断趋势中表现突出。
-
-2. 结合ATR指标的止损止盈设置可以有效控制单笔交易的风险回报比,降低亏损的概率。
-
-3. 提供五种可选信号,可以针对不同市场采用更为合适的信号,提高策略的适应性。
-
-4. 可输入参数较多,可以通过参数优化获得更好的交易结果。
-
-## 风险及解决方法
-
-该策略也存在一些风险:
-
-1. MACD指标容易产生误信号,可能造成不必要的亏损。可以结合其他指标过滤信号。
-
-2. ATR指标仅对最近一段时间的波动进行建模,无法对极端行情做出准确止损。可以引入动态止损来解决。
-
-3. 选定信号的效果可能不稳定,需要进行大量回测确定最佳参数。
-
-4. 信号参数和风险管理参数需要同时优化,否则难以取得最优结果。建议采用步进优化的方法。
-
-## 优化建议
-
-该策略还可以从以下方面进行优化:
-
-1. 尝试其他移动平均线,如TMA、hullMA等,过滤MACD信号。
-
-2. 尝试动态止损机制,能更好地处理极端行情的波动。
-
-3. 对MACD指标传统参数组合进行穷举优化,找到更佳参数。
-
-4. 利用机器学习方法寻找最优的ATR乘数,实现更优的风险管理。
-
-5. 对五种信号类型分别进行回测,确定最优信号。
-
-6. 训练神经网络判断信号类型的效果,寻找新的基于MACD的信号。
-
-
-## 总结
-
-该MACD金叉死叉趋势跟踪策略,利用MACD指标判断趋势方向,配合ATR指标进行止损止盈,能够有效获取趋势交易机会。策略具有指标参数可优化、止损机制完备、信号类型可选等多项优势。下一步工作将在提高信号质量、完善止损机制以及参数选择优化等方面入手,以获得更优异的回测和实盘结果。
-
-|| 
 
 ## Overview  
 
@@ -127,7 +67,6 @@ The strategy can also be optimized in the following aspects:
 
 The MACD golden cross death cross trend following strategy utilizes the MACD indicator to determine trend direction and sets stop loss and take profit with the ATR indicator, which can effectively capture trend trading opportunities. The strategy has multiple advantages like tunable parameters, complete stop mechanisms and optional signal types. The next step is to improve signal quality, stop loss mechanisms and parameter selection optimization in order to obtain better backtest and live results.
 
-[/trans]
 
 > Strategy Arguments
 

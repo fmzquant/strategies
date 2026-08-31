@@ -11,20 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-加密货币RSI曲线跟踪策略
-
-该策略专门为加密货币市场设计,通过组合使用超长周期RSI指标和RVI指标来判断入场和出场时机。
-
-具体来说,当RVI指标显示处于买入区,并且超长周期RSI指标上穿超买线时,做多入场。平仓条件为RVI指标进入卖出区,RSI指标下穿超卖区时止损出场。
-
-这种策略的优势在于超长周期RSI可以更准确地判断趋势,避免被套。RVI指标辅助判断买卖压力,提高入场精确性。止损方式可以及时止损,降低回撤。
-
-但是,RSI和RVI指标都具有滞后性,无法及时捕捉转折点。需要适当放宽参数,或加入移动止损来应对突发事件。此外,RSI指标对复杂行情解析能力较弱。
-
-总的来说,加密货币RSI曲线跟踪策略可配合强势趋势行情获得不错效果。但交易者仍需积极管理仓位,优化参数,并关注基本面因素,方可获得长期稳定收益。
-
-||
 
 This strategy is designed for the cryptocurrency market, using a combination of ultra-long period RSI and RVI indicators to determine entries and exits. 
 
@@ -36,7 +22,6 @@ However, both RSI and RVI have lagging issues, and cannot promptly capture turni
 
 In summary, the cryptocurrency RSI curve tracking strategy can produce decent results when combined with strong trending moves. But active position management, parameter tuning, and monitoring fundamentals are still essential for traders to achieve long-term steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

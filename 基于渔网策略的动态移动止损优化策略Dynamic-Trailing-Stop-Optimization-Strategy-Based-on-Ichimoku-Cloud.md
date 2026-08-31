@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19baeb154a5a4b59bc5.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是结合渔网策略和动态移动止损机制,实现更高效的止损退出。渔网策略通过 K 线指标判断市场趋势和位置,dynamically确定买入卖出时机。而动态止损机制则可以根据市场波动幅度, flexibility设置止损点,有效控制风险。
-
-## 原理
-
-本策略主要基于以下几个模块:
-
-1. 渔网指标模块
-   
-   通过 Fisher 应变和 Stoch 指标计算出渔网指标,判断市场趋势和买卖点。
-   
-2. 动态止损模块
-
-   根据 ATR 和 RSI 指标动态计算止损点,实现动态跟踪止损。
-   
-3. 移动止损跟踪模块
-
-   设置固定止损位移点数,当价格达到止损点时退出仓位。
-
-## 优势分析
-
-本策略最大的优势在于风险控制能力出色。动态止损机制可以根据市场波动程度设置合适的止损幅度,有效避免过大滑点造成的损失,又可以比固定止损更好地跟踪趋势。此外,渔网指标判断买卖时机准确可靠,可以过滤掉部分噪音交易。
-
-## 风险分析
-
-本策略的主要风险在于止损点设置不当可能造成过于激进退出。 此外,如果使用过于激进的参数设置,也可能造成 whipsaw 交易过于频繁。 为降低这些风险,应合理选择参数,避免设置过大的移动幅度。
-
-## 优化方向
-
-本策略的优化空间主要集中在以下几个方面:
-
-1. 渔网指标参数优化,找到更优参数组合判断趋势;
-
-2. 动态止损参数优化,找到更平衡的止损幅度;
-
-3. 增加基于波动率的仓位管理模块,根据市场波动程度调整仓位。
-
-通过参数搜寻和规则优化,本策略可以获得更高的Risk Adjusted Return。
-
-## 总结
-
-本策略综合运用渔网指标和动态止损技术,既可以比较准确地判断市场走势,有利于选时决策,又可以动态调整止损幅度,有效控制风险。通过持续的模块扩展和参数优化,本策略可以成为一个可以长期应用的有效策略框架。
-
-||
 
 ## Overview
 
@@ -101,7 +54,6 @@ Through parameter search and rules optimization, higher risk adjusted returns ca
 ## Conclusion  
 
 This strategy combines Ichimoku Cloud and dynamic trailing stop techniques, which can accurately determine market trends for timing decisions, and also dynamically adjusts stop loss range to effectively control risks. With continuous module expansion and parameter optimization, this strategy can become an effective long-term strategy framework.
-[/trans]
 
 > Strategy Arguments
 

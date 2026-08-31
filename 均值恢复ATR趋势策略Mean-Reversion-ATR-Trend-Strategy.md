@@ -9,56 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略利用价格波动率的高低来判断进入或退出头寸的时机,目标是在价格波动率较高时建立多头头寸,并在价格趋势转向有利时获利了结头寸。
-
-## 策略原理
-
-1. 使用ATR指标衡量价格波动率。计算最近20个周期的ATR值,并计算其移动平均值和标准差。如果当前ATR值超过平均值加上一个标准差,认为价格波动率较高。
-
-2. 使用一阶对数价格变化率确定价格趋势。计算最近20个周期的对数收盘价变化率,计算其移动平均值,如果当前变化率连续3日均大于平均值且为正,认为价格处于上涨趋势。
-
-3. 当价格波动率较高,且价格出现上涨趋势时,做多开仓。当价格出现回落,止损价格被触发时平仓。 止损价格动态调整,始终维持在最低价减去ATR的2倍之间。
-
-## 优势分析
-
-1. 利用价格波动率高低和趋势判断做多做空时机,避免在震荡市场频繁交易。
-
-2. 动态调整止损价格,避免止损过于宽松带来大额亏损。
-
-3. 回测显示,在2015-2021年间,策略年化收益率达到159%,远超过Buy and Hold策略的120%。
-
-## 风险分析 
-
-1. ATR参数设置过于激进可能导致进入机会过少。参数可适当扩大区间提高进入频率。
-
-2. 趋势判断指标可能产生误判,与实际趋势不符,应增加确认因子避免潜在亏损。
-
-3. 回测周期仅6年,需扩大样本区间并做稳健性检验,避免过拟合。
-
-4. 无法判断极端行情下的表现,如快速熔断行情,需人工干预或设置编程停损。
-
-## 优化方向
-
-1. 增加趋势确认指标,如MACD,KDJ等,判断趋势方向更准确。
-
-2. ATR参数可根据不同品种、市场情况做自适应调整,优化波动率判断。
-
-3. 增加突破判断模块,配置趋势加速因子,在出现突破时加大仓位。
-
-4. 测试不同止损方式,如百分比止损、波动止损等的效果。
-
-5. 对交易次数、收益曲线稳定性、最大回撤等进行评估,确保策略稳健。
-
-## 总结
-
-该策略整合价格波动率和趋势判断的优点,在波动加剧的情况下判断价格可能反转的时机进场,设置动态止损来控制风险,从回测结果看实现了较好的超额收益。但样本区间仅6年,关键参数设置需要根据不同市场调整,且需引入更多确认因子以减少误判概率,此外还需要对策略进行更全面的稳健性检验,才能真正运用于实盘交易。总体来说,该策略提供了一种利用波动率进行逆向操作的思路,但还需要深入优化与检验,方能成为稳定可靠的量化策略。
-
-|| 
 
 ## Overview
 
@@ -106,7 +56,6 @@ This strategy utilizes the highs and lows of price volatility to determine the t
 
 This strategy combines the advantages of gauging volatility and trend to determine possible reversal points to enter on amplified volatility, and uses dynamic stops to control risk. Backtest shows decent alpha generated. But 6-year sample is limited, key parameters need market-specific tuning, and more confirming factors are needed to reduce false signals. Comprehensive robustness check also required before applying to live trading. Overall this provides an idea of mean reversion on volatility but still needs refinement and rigorous verification to become a robust quant strategy.
 
-[/trans]
 
 > Strategy Arguments
 

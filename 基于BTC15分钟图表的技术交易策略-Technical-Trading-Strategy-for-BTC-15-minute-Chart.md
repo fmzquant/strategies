@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11590b16387ece92d5d.png)
 
-[trans]
-#### 概述
-PipShiesty Swagger是一个专为TradingView设计的技术交易策略。该策略利用WaveTrend震荡指标(WT)和成交量加权平均价格(VWAP)来识别潜在的交易信号,管理风险,并在价格图表上可视化超买和超卖条件。该策略使用一系列指数移动平均线(EMA)计算震荡指标,并通过简单移动平均线(SMA)生成信号线,以确认交易信号并过滤噪音。同时,该策略还包括风险管理参数,如每笔交易的风险百分比和基于平均真实范围(ATR)的止损倍数,以管理风险和保护资本。
-
-#### 策略原理
-PipShiesty Swagger策略的核心是WaveTrend震荡指标(WT)和成交量加权平均价格(VWAP)。WT使用通道长度和平均长度两个主要参数,通过一系列指数移动平均线(EMA)应用于平均价格来计算。这样可以生成一个复合指数,然后进一步平滑处理。VWAP在指定时间段内计算,用作基准来了解相对于成交量的平均交易价格,有助于确定整体趋势方向。该策略定义了识别超买和超卖条件的特定水平。当震荡指标超过这些水平时,表明潜在的市场转折点。策略还包括一条信号线,它是WaveTrend震荡指标的简单移动平均线(SMA),有助于确认交易信号并过滤噪音。
-
-#### 策略优势
-1. PipShiesty Swagger策略结合了多个技术指标,如WaveTrend震荡指标、VWAP和ATR,提供了全面的市场分析。
-2. 该策略能够识别潜在的看涨和看跌背离,为交易者提供潜在的交易机会。
-3. 通过定义超买和超卖水平,该策略可以帮助交易者识别潜在的市场转折点。
-4. 该策略包含风险管理参数,如每笔交易的风险百分比和基于ATR的止损倍数,有助于管理风险和保护资本。
-5. 该策略在图表上提供清晰的视觉指示,如WaveTrend震荡指标、信号线、VWAP和背景颜色,使交易者能够轻松解读市场状况。
-
-#### 策略风险
-1. PipShiesty Swagger策略依赖于技术指标,可能会产生误导性信号,尤其是在市场波动较大或趋势不明确时。
-2. 该策略的表现可能受到参数选择的影响,如通道长度、平均长度和超买/超卖水平。不恰当的参数设置可能导致次优结果。
-3. 尽管该策略包含风险管理参数,但仍然存在潜在的资本损失风险,特别是在剧烈的市场波动期间。
-4. 该策略主要关注BTC的15分钟图表,可能无法捕捉到其他时间范围内的重要市场变动。
-
-#### 策略优化方向
-1. 考虑纳入其他技术指标或市场情绪指标,以提高信号的可靠性和准确性。
-2. 对策略参数进行优化和敏感性分析,以确定最佳设置并提高策略性能。
-3. 引入动态止损和止盈机制,以更好地管理风险并最大限度地提高潜在回报。
-4. 将该策略扩展到其他时间范围和交易工具,以捕捉更广泛的市场机会。
-
-#### 总结
-PipShiesty Swagger是一个强大的技术交易策略,专为TradingView上的BTC15分钟图表设计。它利用WaveTrend震荡指标和VWAP来识别潜在的交易信号,同时结合风险管理参数来保护资本。尽管该策略展示了前景,但交易者在实施时仍需谨慎,并考虑优化策略以提高其性能和适应性。通过不断完善和调整,PipShiesty Swagger可能成为交易者在动态加密货币市场中的宝贵工具。
-
-|| 
 
 #### Overview
 PipShiesty Swagger is a technical trading strategy designed specifically for TradingView. The strategy leverages the WaveTrend Oscillator (WT) and Volume Weighted Average Price (VWAP) to identify potential trade signals, manage risk, and visualize overbought and oversold conditions on a price chart. The oscillator is calculated using a series of exponential moving averages (EMA) applied to the average price, resulting in a composite index that is further smoothed. The strategy also includes a signal line, which is a simple moving average (SMA) of the WaveTrend Oscillator, to confirm trade signals and filter out noise. Additionally, the strategy incorporates risk management parameters, such as a risk percentage per trade and a stop loss multiplier based on the Average True Range (ATR), to manage risk and protect capital.
@@ -69,7 +39,6 @@ The core of the PipShiesty Swagger strategy lies in the WaveTrend Oscillator (WT
 
 #### Summary
 PipShiesty Swagger is a powerful technical trading strategy designed for the BTC 15-minute chart on TradingView. It utilizes the WaveTrend Oscillator and VWAP to identify potential trading signals while incorporating risk management parameters to protect capital. Although the strategy shows promise, traders should exercise caution when implementing it and consider optimizing the strategy to improve its performance and adaptability. With continuous refinement and adjustment, PipShiesty Swagger could become a valuable tool for traders navigating the dynamic cryptocurrency market.
-[/trans]
 
 
 

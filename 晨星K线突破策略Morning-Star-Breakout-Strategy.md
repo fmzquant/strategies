@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略利用晨星K线形态进行做多方向的趋势追踪交易。主要交易信号来自晨星线突破均线的点位。
-
-具体交易逻辑是:
-
-1. 计算60日指数移动平均线EMA60
-
-2. 判断出现晨星K线形态,包括第一根阴线,第二根十字线或封口线,第三根阳线并上破前两K线最高点
-
-3. 多头信号为晨星线形态出现在EMA60上方时的突破点位
-
-4. 设置目标利润或跟踪止损作为退出策略
-
-5. 止损设定为过去100根K线最低点
-
-6. 可调整晨星线判定容限等参数
-
-该策略充分利用晨星线的趋势转折特性,匹配趋势方向进行追踪。可在高波动市场获得较好效果。
-
-## 策略优势
-
-- 晨星线有效判断短期趋势反转
-
-- 突破点位入场及跟踪止损,持续跟踪趋势
-
-- 设置回顾窗口避免止损过大
-
-## 策略风险 
-
-- 参数设置需要反复测试优化
-
-- 停损过近可能导致过频止损
-
-- 仅做多方向,错失空头机会
-
-## 总结
-
-该策略识别晨星K线特征,匹配趋势方向进行追踪。通过参数调整可适应不同市场情况。但仅做多和止损设置需要审慎评估。
-
-||
 
 ## Strategy Logic
 
@@ -94,7 +51,6 @@ The strategy capitalizes on the trend reversal nature of Morning Stars in the di
 
 This strategy identifies Morning Star patterns and trades breakouts in alignment with the trend. Parameter tuning adapts it to varying market conditions. But LONG-only and stop loss needs prudent assessment.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d37574303a15711b36.png)
-[trans]
-
-神圣十字策略(Holy Grail Strategy)是一个结合双均线系统和ADX指标的量化交易策略。它旨在识别趋势的方向和力度,并在趋势发生转折时进行交易。
-
-### 策略原理
-
-该策略同时使用20日指数移动平均线(EMA)和ADX指标来识别入场时机。具体来说,它会在以下两种情况下发出交易信号:
-
-1. 当ADX值低于30时(表示趋势较弱),并且价格从下方突破20日EMA时,做多;
-
-2. 当ADX值高于30时(表示趋势较强),并且价格从上方突破20日EMA时,做空。
-
-可以看出,该策略依赖ADX判断趋势的力度和方向,再结合移动平均线的支持阻力来寻找反转机会。它融合了趋势跟随和逆势交易的理念。
-
-### 优势分析
-
-神圣十字策略最大的优势在于,它同时考量了趋势的方向和力度,可以有效避开假突破,从而减少止损的概率。具体来说,该策略有以下几个优势:
-
-1. 使用双均线系统,可以有效识别趋势;
-2. 借助ADX评估趋势力度,可以避开盘整和无效突破; 
-3. 结合反转及趋势交易理念,既可以捕捉趋势,也可以在拐点位置反转;
-4. 操作规则清晰简单,容易实施。
-
-### 风险分析
-
-神圣十字策略也存在一些风险,主要集中在以下几个方面:
-
-1. ADX作为辅助判断指标,也会发出错误信号;
-2. 双均线交叉无法完全避免小升浪造成的亏损;  
-3. 参数设置(如ADX目标值、均线周期等)不当可能导致信号过于频繁或保守。
-
-为降低上述风险,可以调整参数组合以达到最佳效果,也可以设置止损来控制单笔损失。此外,让策略在不同品种和周期上进行回测,也很有必要。
-
-### 优化方向 
-
-神圣十字策略还有许多优化的方向:
-
-1. 尝试不同类型的移动平均线,如加权移动平均线等;
-2. ADX值目标线可以作为参数进行优化;
-3. 可以测试不同周期参数,如10日、30日EMA;
-4. 可以加入其他辅助指标,如RSI、布林带等来确认交易信号。
-
-调整参数或加入新指标都有可能提高策略的盈利率或胜率。但任何优化都需要足够的回测以确保其稳健性。
-
-### 总结
-
-总的来说,神圣十字策略结合双均线和ADX指标的优点,使用清晰的交易规则来捕捉趋势转折。它有望取得不错的效果。但交易者仍需要对参数组合和止损规则进行优化,从而适应不同的市场环境。此外,无论如何改进,也无法完全避免止损,这是每一个交易策略都会面临的困境。
-||
 
 ## Holy Grail Strategy
 
@@ -107,7 +59,6 @@ Adjusting parameters or adding new indicators may increase the profitability or 
 
 In summary, the Holy Grail strategy combines the advantages of double moving averages and the ADX indicator, and uses clear trading rules to capture trend reversals. It has the potential to perform well. However, traders still need to optimize parameter combinations and stop loss rules to adapt to different market environments. Moreover, no matter how improved, it is impossible to completely avoid stop loss, which is a dilemma faced by every trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

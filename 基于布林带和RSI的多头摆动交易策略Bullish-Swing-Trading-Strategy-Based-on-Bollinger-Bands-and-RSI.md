@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f7f39b4b0ebdb0e9dc.png)
-[trans]
-## 概述
-
-该策略基于布林带(Bollinger Band)和相对强弱指数(RSI)两个技术指标,用于在上升趋势中进行多头摆动交易。策略逻辑简单但有效:当价格跌破布林带下轨且RSI低于35时开多,当RSI上穿69时平多。同时设置了止盈止损。
-
-## 策略原理 
-
-1. 计算RSI:使用RMA(Relative Moving Average)分别计算价格上涨和下跌的平均幅度,然后用上涨幅度除以总幅度得到RSI。RSI反映了一段时间内价格的强弱。
-
-2. 计算布林带:使用SMA(Simple Moving Average)计算价格均线,再加减标准差得到上下轨。布林带能够动态反映价格的波动区间。
-
-3. 开多:当价格跌破布林带下轨且RSI小于35时,判断为超卖,此时开多。这两个条件能捕捉到向上反转的时机。  
-
-4. 平多:当RSI上穿69时,判断为超买,此时平掉多头仓位,锁定利润。
-
-5. 止盈止损:开仓后,根据用户设置的百分比计算止盈价和止损价。触及止盈价或止损价时平仓。这能够控制每笔交易的风险和回报。
-
-## 优势分析
-
-1. 布林带能够客观反映价格运行的区间,与价格走势同步调整,不受固定阈值的限制。
-
-2. RSI能够比较直观地反映多空力量对比,也相对客观,经常被用于判断超买超卖。
-
-3. 在上升趋势中使用,更加适合摆动交易。通过布林带下轨和低RSI捕捉价格反弹,通过高RSI及时平仓,能够有效把握波段行情。
-
-4. 止盈止损的设置使得策略风险可控,投资者可以根据自己的风险偏好灵活设置参数。
-
-5. 策略逻辑和代码都相对简单,容易理解和实现,回测效果也比较稳定。
-
-## 风险分析
-
-1. 对于震荡行情,布林带和RSI可能会发出较多的交易信号,导致交易频率过高,手续费成本增加。
-
-2. RSI等单一指标容易受到短期价格波动的影响,产生误导性信号。因此RSI信号最好结合价格走势等进行分析。
-
-3. 布林带和RSI参数的选择对策略表现有较大影响,不同市场和品种可能需要不同的参数。使用者需要根据具体情况进行适当的调整。
-
-4. 在突发事件等异常行情下,布林带和RSI可能失效。此时如果没有其他风控手段,可能给策略带来较大回撤。
-
-## 优化方向
-
-1. 可以考虑引入移动平均线等其他技术指标作为过滤,例如只在MA多头排列时才开仓,提高信号的可靠性。
-
-2. 可以对RSI的上下阈值、布林带的参数等进行优化,找出在各个品种、各个周期表现最佳的参数组合。
-
-3. 可以在回测的基础上进行前向测试,并做好模拟交易,实盘前充分验证策略的有效性和稳定性。
-
-4. 可以通过仓位管理、动态止盈止损等方法,进一步控制策略回撤,提高风险调整后收益。
-
-5. 可以将该策略纳入投资组合,配合其他策略进行对冲,而不是孤立地使用,以提高投资组合的稳定性。
-
-## 总结
-
-本文介绍了一个基于布林带和RSI两个技术指标的多头摆动交易策略。该策略适用于捕捉上升趋势中的波段行情,逻辑和实现都相对简单。通过布林带下轨和低RSI开多,高RSI平多,同时设置了止盈止损。策略优点是能够客观反映价格的波动区间和多空力量对比,风险也相对可控。但是在具体使用中需要注意控制交易频率、结合更多指标过滤信号、做好参数优化以及仓位管理等。此外,策略在异常行情下可能失效,需要有其他风控手段作为补充。通过引入其他过滤指标、动态止盈止损、资金管理、投资组合配置等方法,可以进一步提升该策略的稳定性和盈利能力。总的来说,该策略可以作为趋势投资者的一个有益补充,但需要根据自身特点审慎使用。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ This strategy utilizes two technical indicators, Bollinger Bands and Relative St
 ## Summary
 
 This article introduces a bullish swing trading strategy based on two technical indicators, Bollinger Bands and RSI. The strategy is suitable for capturing short-term market movements in uptrends, and its logic and implementation are relatively simple. It opens long positions when the price breaks below the lower Bollinger Band and RSI is low, closes positions when RSI is high, and sets take profit and stop loss levels. The strategy's advantages are that it can objectively reflect the range of price fluctuations and the balance of bullish and bearish forces, and its risks are relatively controllable. However, when using it in practice, one needs to pay attention to controlling trading frequency, combining more indicators to filter signals, optimizing parameters, and managing positions. In addition, the strategy may fail in abnormal market conditions and requires other risk control measures as a supplement. By introducing other filtering indicators, dynamic take profit and stop loss, money management, portfolio allocation, and other methods, the stability and profitability of the strategy can be further improved. Overall, the strategy can serve as a useful complement for trend investors, but should be used prudently according to one's own characteristics.
-[/trans]
 
 > Strategy Arguments
 

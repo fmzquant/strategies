@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e86ad2f4902a8af556.png)
-[trans]
-
-## 概述
-
-本策略融合了123反转和SMA弹力振荡器两个子策略,形成双轨道筛选信号的趋势追踪策略。123反转策略通过K线形态判断潜在转折点;SMA弹力振荡器则利用移动平均线判定趋势方向。两者互为验证,形成双重确认机制,可有效过滤掉错误信号,捕捉较强的趋势方向,实现趋势跟踪交易。
-
-## 策略原理
-
-1. 123反转策略
-
-该策略源自于Ulf Jensen的《我如何在期货市场上获得三倍回报》一书中P183的系统。属于反转类型策略。当收盘价连续2日高于前一日收盘价,且9日随机指标的慢线低于50时,做多;当收盘价连续2日低于前一日收盘价,且9日随机指标的快线高于50时,做空。
-
-2. SMA弹性振荡器
-
-该指标类似William Blau开发的TSI指标,不同的是SMA振荡器包含一个信号线。SMA弹性指标使用价格减去前一日价格的双移动平均,再绘制SMA的指数移动平均线作为信号线,用于发出交易信号。可调节指标参数进行优化。
-
-双重确认:只有当123反转和SMA弹性指标同向发出信号时,才开仓。当两者信号方向不一致时,保持空仓。
-
-## 策略优势
-
-1. 融合多种指标,形成双重确认机制,可有效过滤错误信号。
-
-2. 123反转策略利用K线形态判定潜在反转点。SMA弹性振荡器通过趋势判断发出信号,两者互为验证,弥补单一指标的不足。
-
-3. SMA弹性振荡器参数可调节,可以针对不同品种和周期进行优化,灵活性强。
-
-4. 整体作为趋势跟踪策略,可顺势而为,持续捕捉较强势头的方向。
-
-## 策略风险
-
-1. 反转策略与趋势策略的整合与平衡需要不断优化,否则可能错过转折点或产生重大亏损。
-
-2. 反转策略本身存在一定的错误交易风险,需要调整参数以降低失败率。
-
-3. 纯跟踪策略无法判断趋势反转点,存在潜在亏损风险。需适时降低仓位规避风险。
-
-4. 不同品种和周期参数需要反复优化测试,不宜生搬硬套。
-
-## 策略优化
-
-1. 调整123反转的参数,降低错误交易频率。
-
-2. 调整SMA弹性振荡器参数,优化指标的敏感度。
-
-3. 添加止损策略,降低单次亏损。
-
-4. 结合其它指标判断潜在反转,适时减仓。
-
-5. 测试不同品种参数优化,提升稳定性。
-
-## 总结
-
-本策略通过双重确认机制,整合反转与趋势策略的优势,形成较强的趋势跟踪效果。可有效滤除噪音,顺势而为,持续捕捉优质的趋势机会。同时也存在一定的回撤风险,需要不断优化参数,控制风险。关键在于反转与趋势的平衡,以及止损风控的搭配使用。如果用于长线追踪,效果可能更佳。总体来说,本策略具有一定的实战价值,可作为策略组合的一部分,也可单独使用。
-
-||
 
 
 ## Overview
@@ -120,7 +65,6 @@ Dual confirmation: open positions only when 123 Reversal and SMA Ergodic give si
 
 This strategy integrates the advantages of reversal and trend strategies through dual confirmation mechanism, forming strong trend tracking effect. It can effectively filter out noise, follow the trend, and continuously capture high quality trend opportunities. Meanwhile, certain drawdown risks exist. Parameters need continuous optimization and risk control using stop loss. The key is balancing reversal and trend, plus stop loss. It may work better for long term tracking. Overall, this strategy has practical value, and can be used as part of strategy portfolio, or independently.
 
-[/trans]
 
 > Strategy Arguments
 

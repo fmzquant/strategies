@@ -11,31 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11c248c27f93420e8d0.png)
 
-[trans]
-
-## 概述
-该策略是针对银行指数和指数的5分钟K线设计的突破追踪策略。它可以在突破发生时产生信号,进行买入或卖出操作。
-
-## 策略原理
-该策略通过计算最高价和最低价指标,判断价格是否突破最高价最低价区间。如果价格突破该区间,会产生买入信号或卖出信号。为了过滤掉部分噪音,它还使用了辅助指标进行确认。
-
-优势分析:
-1. 该策略响应迅速,可以在突破发生时立即进入市场。
-2. 通过高低价区间和辅助指标进行双重过滤,可以避免部分假突破。 
-3. 该策略非复制指标,不会产生滞后。
-
-风险分析:
-1. 如果行情出现巨幅震荡,该策略可能会产生反向信号,导致亏损。
-2. 单纯的突破策略容易被套,需要警惕突破失败的情况。
-
-优化方向:
-1. 可以结合趋势指标,避免逆势操作。
-2. 可以加入止损机制,控制单笔亏损。
-
-## 总结
-该策略通过判断价格突破高低价区间的方式寻找交易机会。它响应迅速,避免滞后,但也面临突破失败、被套等风险。通过优化,可以使该策略在趋势行情中获取更好的效果。
-
-||
 
 
 ## Overview
@@ -59,7 +34,6 @@ Optimization Directions:
 
 ## Summary 
 This strategy looks for trading opportunities by judging whether prices break through the high and low price range. It responds quickly and avoids lagging but also faces risks such as breakthrough failures and traps. Through optimization, this strategy can achieve better performance in trending markets.  
-[/trans]
 
 > Strategy Arguments
 

@@ -9,55 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略旨在捕捉趋势中的小回调,在回调结束时开仓做多,以获利。它综合运用EMA均线、MACD指标、RSI指标等技术指标判断趋势和回调结束时机,同时利用ATR指标设置止损止盈价格。
-
-## 原理
-
-该策略首先计算EMA均线、MACD指标和RSI指标,以判断目前的趋势方向和力度。 
-
-它运用3条EMA均线(短期21周期、中期50周期、长期200周期),当短期均线上穿中长两条时,判断为上升趋势。
-
-MACD指标判断趋势力度,MACD线或histo柱上穿0轴时,认为上升趋势转强。
-
-RSI指标判断是否过热和超卖,RSI值上穿50时,判断回调可能结束。
-
-然后利用SuperTrend指标判断具体的回调买点。当SuperTrend从下向上翻转时,产生买入信号。
-
-最后,根据ATR指标设定回撤止损和盈利止盈的价格。
-
-## 优势
-
-- 利用多指标组合判断,使交易信号更可靠。
-- 捕捉趋势中的短线机会,具有高胜率。
-- 设置止损止盈机制,有效控制风险。
-
-## 风险
-
-- 回调时间过长,可能造成亏损扩大。
-- 多指标组合,参数设置较复杂,需要反复测试优化。
-- 止损设置过于宽松,亏损可能扩大。
-
-风险管理措施:
-
-- 优化参数,确保指标顺势使用。
-- 适当调整止损点,防止过大亏损。
-- 避免回调时间过长的股票。
-
-## 优化方向 
-
-- 测试不同参数组合,找到指标最佳状态值。
-- 结合股票的日内波动情况,调整止损止盈设定。
-- 添加量价指标,避免量能不足情况。
-
-## 总结
-
-该策略综合运用多种技术指标判断趋势和回调,具有较强的可靠性。通过严格的止损机制控制风险,回撤处置及时。在持续调整参数和股票池的基础上,可以获得较好的回报。
-
-||
 
 ## Overview
 
@@ -105,7 +56,6 @@ Risk management:
 
 The strategy combines multiple indicators reliably for trend and pullback identification. Strict stop loss mechanism controls risk and allows timely liquidation. With persistent parameter and universe tuning, it can achieve good returns.
 
-[/trans]
 
 > Strategy Arguments
 

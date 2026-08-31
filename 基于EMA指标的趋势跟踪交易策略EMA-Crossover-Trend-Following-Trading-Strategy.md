@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f742b2bb8d46ac708d.png)
-[trans]
-## 概述
-
-该策略利用EMA快线和慢线的金叉和死叉来判断趋势,并结合预设的止盈比例来实现趋势跟踪交易。该策略适用于任意时间周期,可以实现指数和个股的趋势捕捉。
-
-## 策略原理
-
-该策略使用长度为3和30的EMA线作为交易信号。当3EMA上穿30EMA时,表明价格开始上涨,符合买入条件;当3EMA下穿30EMA时,表明价格开始下跌,符合卖出条件。 
-
-同时,策略还设置了止盈条件。当价格上涨达到策略进入价按照设置的止盈比例后,就会 EXIT。这样可以锁定更多利润,实现趋势跟踪交易。
-
-## 优势分析
-
-1. 使用EMA指标判断趋势方向简单易行,容易掌握;
-2. 结合趋势指标和止盈方式,可以有效控制风险,锁定利润; 
-3. 可适用于任意周期和任意品种,灵活性强。
-
-## 风险分析 
-
-1. EMA线本身对价格变化有滞后性,可能出现误判;
-2. 止盈比例设置过大,可能导致无法及时止盈,错过反转机会;
-3. 停止追踪过早,可能无法捕捉到趋势的全部行情。
-
-## 优化方向
-
-1. 可以测试不同参数组合的EMA,寻找最佳参数;
-2. 可以结合其他指标验证EMA信号,提高准确率;
-3. 动态调整止盈比例,在牛市中适当放宽,在熊市中适当收紧。
-
-## 总结
-
-该策略总体来说是一个非常实用的趋势跟踪策略。它利用简单的EMA指标判断趋势方向,设置合理的止盈规则,可以有效控制风险,适合长线追踪股票和指数的中长线走势。通过参数优化和配套指标验证,可以进一步提升策略的稳定性和Profit Factor。
-
-||
 
 ## Overview
 
@@ -77,7 +43,6 @@ In addition, a profit target is configured in the strategy. When price rises to 
 
 In conclusion, this is a very practical trend following strategy. It adopts simple EMA indicators to determine the trend direction and sets reasonable profit taking rules to effectively control risks, suitable for long term tracking of stock and index mid-to-long term trends. Further improvements on stability and profit factor can be achieved through parameter optimization and supplementary signal verification indicators.
 
-[/trans]
 
 > Strategy Arguments
 

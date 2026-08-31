@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1007c87ee2140ff4f5c.png)
 
-[trans]
-
-### 概述
-
-该策略运用三条不同参数设置的平滑移动平均线,实现对价格趋势的判断和跟踪。当短期移动平均线上穿中期线,中期线上穿长期线时做多;当短期移动平均线下穿中期线,中期线下穿长期线时做空。
-
-### 原理
-
-1. 计算三条平滑移动平均线:长期线长度13周期,位移8周期;中期线长度8周期,位移5周期;短期线长度5周期,位移3周期。均使用收盘价的中值计算。
-
-2. 比较三线的大小关系:当短期线上穿中期线,中期线上穿长期线时,做多;当短期线下穿中期线,中期线下穿长期线时,做空。
-
-3. 可选择反向交易。
-
-4. 绘图显示三条移动平均线。
-
-### 优势
-
-1. 使用三条移动平均线,能对趋势进行多层判定,提高信号的可靠性。
-
-2. 不同周期线的组合,既考虑了短期动量,也兼顾了中长期趋势。
-
-3. 采用收盘价中值计算移动平均线,能减少假突破。 
-
-4. 线的位移设置区分突破的力度,避免 Whipsaws。
-
-5. 可选择反向交易,适应不同市场环境。
-
-### 风险
-
-1. 多条移动平均线组合使用需要参数优化,不当设置可能降低信号质量。
-
-2. 短线上穿中线不一定代表趋势转折,需要进一步确认。
-
-3. 三线交叉信号可能滞后,需要结合其他指标判断入场时机。 
-
-4. 反向交易时,需要警惕止损位置,降低风险。
-
-### 优化方向
-
-1. 优化移动平均线的长度和位移参数,使其更符合不同周期行情。
-
-2. 增加其他指标过滤,如交易量能量指标,提高信号的可靠性。
-
-3. 优化止损策略,设置合理的止损位置。
-
-4. 结合趋势线和支撑阻力位辅助判断。
-
-### 总结
-
-该策略通过三条不同长度和位移的移动平均线组合,实现对趋势转折的判断。使用多条移动平均线能提高信号质量,不同周期线的配合兼顾短中长期特征。参数优化、指标过滤、止损策略等都能进一步增强策略的稳定性和实战效果。
-
-||
 
 
 ### Overview
@@ -116,7 +63,6 @@ This strategy uses three moving average lines with different parameter settings 
 
 This strategy determines trend reversals using a combination of MAs of varying lengths and displacements. Using multiple MAs improves signal quality, while different period MAs incorporate short, medium and long term features. Parameter optimization, signal filtering, stop loss and other enhancements can further improve robustness and real-world performance.
 
-[/trans]
 
 > Strategy Arguments
 

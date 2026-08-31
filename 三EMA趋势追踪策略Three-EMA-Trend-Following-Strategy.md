@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b940064ababd737a51.png)
-[trans]
-
-## 概述
-
-三EMA趋势追踪策略通过计算不同周期的EMA均线,判断价格趋势方向,实现趋势追踪。该策略简单易于实现,在趋势明显的品种中效果显著。
-
-## 策略原理
-
-该策略通过计算三条不同周期的EMA均线,具体为10周期、20周期和30周期的EMA。代码中通过ema函数计算出三条均线。
-
-策略主要判断三条均线的方向。如果三条均线同时上涨,则产生做多信号;如果三条均线同时下跌,则产生做空信号。
-
-做多和做空信号的具体判定逻辑是,如果ema1、ema2和ema3在过去一根K线上同时上涨,则enter_long为真,产生做多信号。如果ema1、ema2和ema3在过去一根K线上同时下跌,则enter_short为真,产生做空信号。
-
-根据做多和做空信号,策略会建立对应的做多和做空仓位。平仓逻辑与入场信号相反,如果ema1、ema2和ema3当前K线没有同时上涨,则exit_long为真,平掉做多仓位。如果ema1、ema2和ema3当前K线没有同时下跌,则exit_short为真,平掉做空仓位。
-
-这样,通过判断三条EMA均线的方向一致性,可以判断价格总体趋势,实现趋势追踪。
-
-## 策略优势
-
-- 使用三条EMA均线,可以比较准确地判断趋势方向。相比单一均线,三条均线判断趋势更可靠,出现错误信号的概率更小。
-
-- EMA对价格变化更为敏感,可以及时反映趋势转折。相比SMA等其他均线,EMA更适合判断趋势方向。 
-
-- 不同周期EMA结合使用,可以兼顾短期和中长期趋势。10周期EMA判断短期趋势,20周期和30周期EMA判断中长期趋势。
-
-- 策略实现简单,容易理解,适合初学者学习。且参数优化空间大,可以针对不同品种调整参数。
-
-- 策略仅基于EMA均线运作,资源占用少,适合大批量并发运行。
-
-## 策略风险
-
-- 三条EMA均线方向一致是判断趋势的必要但不充分条件。EMA均线方向假突破时,会产生错误信号。
-
-- 趋势转折时,EMA均线交叉滞后,无法及时反映趋势转折点,可能导致损失。
-
-- EMA对价格变化敏感,多头和空头转换频繁时,会频繁开仓平仓,增加交易费用。
-
-- 大幅震荡市场中,EMA均线产生多次方向转变,无法准确判断趋势,该策略效果不佳。
-
-- 可适当扩大三条EMA均线周期差距,降低错误信号概率。或加入其他指标过滤假突破。
-
-- 可结合量能指标等确认趋势,识别趋势转折点,减少损失。也可以适当放宽止损点位。
-
-- 可适当增加EMA参数,降低开平仓频率。或采用其他均线指标替代。
-
-- 识别震荡市场后,可以暂停策略,避免无效交易。
-
-## 优化方向
-
-- 周期优化:调整三条EMA的周期参数,适应不同品种特性。
-
-- 过滤条件:加入MA、BOLL等指标,避免EMA假突破。
-
-- 止损策略: trailing stop逐步追踪止损,保护利润。
-
-- 资金管理:优化仓位管理,降低单笔损失对总体的影响。
-
-- 市场态势判断:根据波动率等指标判断市场震荡程度,控制策略参与度。
-
-- 参数自适应:使EMA周期参数可根据市场变化自动优化,提高策略鲁棒性。
-
-## 总结
-
-三EMA趋势追踪策略通过EMA均线方向判断价格趋势,实现自动跟踪趋势进行交易。该策略简单实用,参数调整空间大,可针对品种特点进行优化。同时也存在一定风险,需要注意防范EMA假突破,以及震荡市场的影响。通过持续优化,该策略可以成为稳定可靠的趋势跟踪策略。
-
-|| 
 
 ## Overview
 
@@ -142,7 +75,6 @@ By judging the direction consistency of the three EMA lines, the overall trend c
 
 The Three EMA trend following strategy trades by identifying trend direction via EMA lines. It is simple and practical with large optimization space. Risks like false breakouts and oscillation should be noted. With continuous optimizations, this strategy can become a robust trend following solution.
 
-[/trans]
 
 > Strategy Arguments
 

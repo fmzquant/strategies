@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b6b70c9a4e4aecb0d7.png)
-[trans]
-
-## 概述
-
-持有朴素策略是一种定期购买加密货币的策略,通过重复购买并持有加密货币来实现资产增值。该策略主要包括定期购买信号、持有信号和退出信号三个主要组成部分。
-
-## 策略原理
-
-该策略的基本逻辑是:
-
-1. 在启动时,发送购买信号,进行首次购买。
-
-2. 每隔一定蜡烛个数,发送购买信号,以Quote货币购买更多的Base货币。
-
-3. 当蜡烛计数达到预设值时,发送退出指令,平仓头寸。
-
-4. 在退出时间到达时,发送退出信号,停止策略,平仓所有头寸。
-
-通过重复购买并持有加密货币,可以实现成本平均和持续增持的效果。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 可以定期购买加密货币,降低购买的时间风险。
-
-2. 通过重复购买,可以降低加密货币的平均持有成本。
-
-3. 通过持续增持头寸,可以获得组合的成长收益。
-
-4. 可以自定义购买和退出的时机,实现自动化运作。
-
-5. 操作简单,容易掌握使用。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 加密货币市场的系统性风险,价格可能出现大幅波动。
-
-2. 退出时机不当可能导致无法及时止损。
-
-3. 资金管理不当也会导致无法承受损失。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 根据市场情况,动态调整购买的时间间隔和金额。
-
-2. 加入止损信号,在价格跌破支撑位时平仓止损。 
-
-3. 结合更多因素判断市场行情,选取最佳的进出场时机。
-
-## 总结
-
-该持有朴素策略通过定期购买并持有加密货币的方式,实现了成本平均和组合增值的效果。在掌握使用方法的前提下,是一种相对简单的量化策略。通过引入更多优化,可以使该策略更加智能化和适应市场环境的变化。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ The following aspects of the strategy can be optimized:
 
 The Simple Holder strategy achieves the effect of cost averaging and portfolio growth through periodic buying and holding of cryptocurrencies. It is a relatively simple quantitative strategy once the usage is mastered. Incorporating further optimizations can enhance the strategy's intelligence and adaptability to changing market environments.
 
-[/trans]
 
 > Strategy Arguments
 

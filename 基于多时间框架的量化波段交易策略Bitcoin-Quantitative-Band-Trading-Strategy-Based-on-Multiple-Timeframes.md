@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/173f2399e5157402059.png)
-[trans]
-
-## 概述
-
-本策略通过结合不同时间框架下的量化指标,实现对比特币价格波段的识别,从而进行追踪交易。策略采用5分钟时间框架,长期持有波段获利。
-
-## 策略原理   
-
-1. 基于日线时间框架计算的RSI指标,采用成交量进行加权计算,过滤假突破。
-2. 对日线RSI指标进行EMA平滑处理,构建量化波段指标。 
-3. 5分钟时间框架采用线性回归指标和HMA指标构建交易信号。 
-4. 策略通过量化波段指标和交易信号的组合,实现不同时间框架之间的耦合,识别价格中长线波段。
-
-## 优势分析  
-
-1. 采用成交量加权的RSI指标,能有效识别真实波段,过滤假突破。
-2. HMA指标对价格变化更加敏感,能及时捕捉转折。  
-3. 多时间框架结合,识别中长线波段更准确。  
-4. 5分钟时间框架进行交易,更高操作频率。
-5. 波段追踪策略,无需精确选点,持有时间更长。
-
-## 风险分析
-
-1. 量化指标可能发出错误信号,建议结合基本面分析。
-2. 波段可能中途反转,应设置止损退出机制。
-3. 交易信号延迟,可能错过最佳入场点位。
-4. 盈利波段需要较长持有期,需承担一定资金压力。
-
-## 优化方向
-
-1. 测试不同参数的RSI指标效果。
-2. 尝试引入其他辅助波段指标。  
-3. 优化HMA指标的长度参数。
-4. 添加止损和止盈策略。
-5. 调整波段交易的持有周期。
-
-## 总结  
-
-本策略通过多时间框架耦合和波段追踪方式,实现了对比特币中长线趋势的有效捕捉。相较于短线交易,中长线波段交易回撤较小,获利空间更大。下一步,通过参数调整和风险管理策略的添加,可望进一步提高策略收益率和稳定性。
-
-||
 
 ## Overview  
 
@@ -89,7 +48,6 @@ This strategy identifies the price bands of Bitcoin by combining quantitative in
 ## Conclusion   
 
 This strategy effectively captures Bitcoin's mid-to-long-term trends by coupling timeframes and band tracking. Compared to short-term trading, mid-to-long-term band trading sees smaller drawdowns and greater profit potential. Next steps involve further enhancing profitability and stability through parameter tuning and risk management additions.  
-[/trans]
 
 > Strategy Arguments
 

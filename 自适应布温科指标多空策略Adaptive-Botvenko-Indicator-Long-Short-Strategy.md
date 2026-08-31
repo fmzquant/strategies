@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/be66a6e169652eb030.png)
-[trans]
-
-## 概述(Overview)
-
-该策略基于布温科指标开发自动识别市场趋势并建立多空头寸。它集成了布温科指标、移动平均线和水平支撑线等技术指标,可以自动识别突破信号并建立头寸。
-
-## 策略原理(Strategy Principle) 
-
-该策略的核心指标是布温科指标,它通过计算不同交易日收盘价的对数差值,判断市场趋势和重要支撑/阻力位。当指标上穿某一水平线时做多,下穿时做空。
-
-此外,该策略集成了21日、55日等多根移动平均线组成的“EMA防护带”。根据这些均线的排序关系判断目前是多头市场、空头市场还是盘整市场,并相应限制做空或者做多操作。
-
-通过布温科指标识别交易信号,移动平均线判断市场阶段,两者结合使用,可以避免不适当的头寸建立。
-
-## 优势分析(Advantage Analysis)
-
-该策略最大的优势是可以自动识别市场的多空趋势,布温科指标对两个时间段价格的差值非常敏感,可以快速定位关键支撑阻力;与此同时,移动平均线的排序又可以有效判断目前所处的行情,是看多还是看空。
-
-这种结合快速指标与趋势指标的思路,使得策略可以快速定位买卖点,同时防止不适当的买卖。这就是该策略的最大优势。
-
-## 风险分析(Risk Analysis)
-
-该策略的风险主要来自两个方面,一是布温科指标本身对价格变动非常敏感,可能会产生许多不必要的交易信号;二是移动平均线在横盘时会排序混乱,导致头寸建立混乱。
-
-针对第一点风险,可以适当调整布温科指标参数,增加指标计算周期,减少不必要交易;针对第二点风险,可以增加更多移动平均线,使得判断趋势更加准确。
-
-## 优化方向(Optimization Directions) 
-
-该策略的主要优化方向是参数调整与过滤条件增加。
-
-针对布温科指标,可以尝试不同周期参数,找到最佳参数组合;针对移动平均线,可以继续加入更多均线,形成更完整的趋势判断体系。此外还可以加入波动率指标、交易量指标等过滤条件,降低虚假信号。
-
-通过参数与条件的综合调整,可以进一步提升策略的稳定性与盈利能力。
-
-## 总结(Summary)
-
-该自适应布温科多空策略成功结合了快速指标与趋势指标,可以自动识别市场关键点并建立正确头寸。它的优点是快速定位与防止不适当头寸建立的能力。下一步可以通过参数与条件优化,进一步提升策略稳定性与盈利水平。
-
-|| 
 
 ## Overview
 
@@ -86,7 +47,6 @@ Through comprehensive adjustments of parameters and filter conditions, the stabi
 
 The adaptive Botvenko long/short strategy successfully combines fast and trend indicators to automatically identify key market points and establish correct positions. Its advantages lie in fast location and prevention of inappropriate positions. Next step is to further improve stability and profitability through parameter and condition optimization.
 
-[/trans]
 
 > Strategy Arguments
 

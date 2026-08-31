@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略基于著名的海龟交易系统改编,在行情出现空头趋势时,在关键支持位进行空头加仓。属于典型的趋势突破加仓策略。
-
-策略原理:
-
-1. 设置10日低点、20日低点和55日低点作为关键支持线。
-
-2. 当价格突破20日或55日支持线时,进行空头入场。
-
-3. 在持仓期间,每下破一定ATR时进行空头加仓。
-
-4. 当价格重新突破10日或20日高点时,进行止盈退出。
-
-5. 设置ATR止损,价格突破时止损退出。
-
-6. 可自定义多级加仓和止损的ATR倍数。
-
-该策略的优势:
-
-1. 支持线突破可确定虚弱的趋势转折点。
-
-2. 加仓方式可在趋势中积累数量,追求更高收益。
-
-3. ATR止损可根据市场波动率调整止损距离。
-
-该策略的风险:
-
-1. 关键支持线判定存在滞后,可能错过最佳入场点位。
-
-2. 加仓方式风险积累较快,需要谨慎资金管理。
-
-3. 无法限制单向亏损大小,存在较大回撤。
-
-总之,该策略在空头加仓的同时设置移动止损。搭配优化参数可获取较强势行情增量,但需要警惕风险集中问题。
-
-||
 
 This strategy adapts the famous Turtle system for short trading, pyramiding on key support breaks in downtrends. It is a typical trend-following breakout pyramiding system.
 
@@ -81,7 +44,6 @@ Risks:
 
 In summary, this strategy pyramids shorts while using ATR trailing stops. With optimized parameters, it can capture strong moves incrementally but requires managing concentrated risks.
 
-[/trans]
 
 > Strategy Arguments
 

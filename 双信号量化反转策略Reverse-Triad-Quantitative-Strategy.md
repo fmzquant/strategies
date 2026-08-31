@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19571168c2fa4d6bafc.png)
-[trans]
-
-## 概述
-
-双信号量化反转策略通过结合123反转策略和加速器振荡器指标,实现对趋势反转的判断,获取更准确的交易信号。该策略主要用于股指、外汇、贵金属和能源品种的短线和中线交易。
-
-## 策略原理
-
-该策略由两段独立的代码逻辑组成。
-
-第一部分为123反转策略,其判断反转信号的原理是:当收盘价连续两天低于上一收盘价,且9日STOCH指标K线低于D线时产生多头信号;当收盘价连续两天高于上一收盘价,且9日STOCH指号K线高于D线时产生空头信号。
-
-第二部分为加速器振荡器指标。该指标通过计算绝对价格振荡器和其5周期移动平均线的差值,反映绝对价格振荡器的变化速度,可以提前判断趋势反转点。
-
-最后,该策略将两个指标的信号进行组合:当两指标信号同向时(双多或双空),输出该方向的交易信号;当两指标信号不一致时,输出零信号。
-
-## 优势分析
-
-该策略结合双重指标判断,可以过滤掉一定的假信号,信号准确可靠。同时利用绝对价格振荡器反映变化加速度的特点,可以提前捕捉到潜在的趋势反转点,从而争取更大的利润空间。
-
-## 风险分析
-
-该策略最大的风险在于指标发出信号前价格已经出现明显的反转,导致错过最佳入场点。此外,行情剧烈波动时,指标参数需要进行优化调整。
-
-针对入场点风险,可以结合更多反转指标进行组合,确保信号的可靠性;针对参数优化问题,可以建立动态调整机制,确保参数的合理性。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加过滤条件,避免在高波动阶段产生错误信号
-
-2. 结合更多反转指标,形成多重验证机制
-
-3. 建立参数自适应机制,动态调整指标参数
-
-4. 优化止损策略,以控制单笔止损
-
-## 总结
-
-双信号量化反转策略通过双重验证提高信号准确率,有助于把握市场关键的反转点;同时也需要注意防范指标滞后和参数失效的风险,持续对策略进行验证和优化,使之能适应多变的市场环境。该策略适合有一定量化交易经验的投资者使用。
-
-|| 
 ## Overview
 
 The Reverse Triad Quantitative Strategy combines the 123 Reversal Strategy and the Accelerator Oscillator to judge trend reversals and generate more accurate trading signals. This strategy is mainly used for short-term and medium-term trading of stock indices, forex, precious metals and energy products.  
@@ -93,7 +50,6 @@ The following aspects of this strategy can be optimized:
 
 The Reverse Triad Quantitative Strategy improves signal accuracy through dual verification, which is helpful to grasp the key reversal points of the market. At the same time, attention should also be paid to preventing risks such as indicator lagging and parameter failure. Continuous verification and optimization of the strategy is needed to adapt it to the ever-changing market environment. This strategy is suitable for investors with some quantitative trading experience.
 
-[/trans]
 
 > Strategy Arguments
 

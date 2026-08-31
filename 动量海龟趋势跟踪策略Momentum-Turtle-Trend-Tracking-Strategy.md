@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1e3de510a555ede9ddd.png)
 
-[trans]
-
-## 概述
-
-动量海龟趋势跟踪策略是一个基于海龟交易法则的趋势跟踪策略。它使用海龟指标来识别趋势,并结合动量指标过滤掉部分噪音交易。这个策略的主要优点是能够抓住强劲的价格趋势,实现超额收益。
-
-## 策略原理
-
-这个策略使用海龟指标中的基本突破系统来判断趋势方向。具体来说,当收盘价高于过去20天的最高价时为看涨信号,这个时候做多;当收盘价低于过去20天的最低价时为看跌信号,策略进行空头。
-
-为了过滤掉部分噪音交易,这个策略还加入了动量因子。如果价格波动度不足5个ATR,那么策略不会进入交易。这可以避免因为空头做多带来小幅度交易的损失。
-
-在开仓后,策略使用海龟原则中的N值突破 exit 来止损。这个系统基于最近20天的最高价和最低价来设置止损位。例如多单的止损价格为过去20天最低价之下2N的ATR。策略的止盈方式比较简单,设置为账户总资产的10%。
-
-## 优势分析
-
-这个策略最大的优势在于它同时结合趋势跟踪和动量管理。海龟交易系统可以准确抓住价格中期趋势,避免被市场噪音干扰。而加入ATR动量过滤则可以进一步减少无谓的交易次数,从而大幅提高盈利空间。
-
-具体来说,这个策略有以下几个优点:
-
-1. 海龟指标判断趋势准确可靠,可以有效跟踪中期趋势
-2. 动量过滤机制可以减少不必要的交易,避免输在交易次数上
-3. 风险控制措施到位,可以在趋势反转时及时止损
-4. 总体而言,策略参数优化充分,与海龟原则契合度高
-
-## 风险分析
-
-尽管这个策略的优化空间很大,但它也存在一些潜在风险需要防范:
-
-1. 无法解决长期持仓的超额波动问题。海龟系统的position sizing没有考虑波动率因素,可能导致单笔损失过大。
-2. 当行情出现剧烈反转时,止损价格可能会被突破,导致超出预期的损失。
-3. 系统并没有设置盈利目标,容易出现超额持仓的情况。这会带来抱单的风险。
-
-## 优化方向 
-
-根据上述风险分析,这个策略还有以下几个主要的优化方向:
-
-1. 可以考虑加入波动率调整的动态仓位算法,这样可以在持仓亏损达到一定幅度时主动减仓。
-2. 增加反转机制,在形成类似头肩顶和双顶的形态时考虑减仓或反向做空。
-3. 增加盈利目标设置。当累计盈利达到账户总资产的一定比例时,可以部分减仓回血。
-
-## 总结
-
-动量海龟趋势跟踪策略总体而言是一个非常实用的中长线趋势跟踪方案。它同时结合了海龟指标判断趋势和ATR指标的震荡过滤,可以有效锁定强劲的价格趋势。此外,策略的风险控制和参数优化也做的非常到位,可以降低回撤幅度。如果继续加入动态仓位管理、反转机制和盈利目标等模块,这个策略的效果还可以得到进一步的提升。
-|| 
 
 ## Overview
 
@@ -99,7 +54,6 @@ Based on the above risks, the main optimization opportunities include:
 ## Conclusion  
 
 Overall the Momentum Turtle Trend Tracking strategy is a robust system for mid to long term trend following. It combines Turtle indicators for trend identification and ATR filters for volatility management to capture strong trends. Additionally risk controls and parameter tuning are solid to reduce drawdowns. Further enhancements like dynamic sizing, reversals and profit taking can improve performance.  
-[/trans]
 
 > Strategy Arguments
 

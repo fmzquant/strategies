@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15bb4bc10a443896c7f.png)
 
-[trans]
-
-## 概述
-
-均线交叉策略是一个基于移动均线的交易策略。它使用快速移动均线和慢速移动均线的交叉作为买入和卖出信号。当快速均线从下方向上突破慢速均线时,产生买入信号;当快速均线从上方向下跌破慢速均线时,产生卖出信号。
-
-## 策略原理
-
-该策略使用sma函数计算指定周期的简单移动平均线,作为快速均线和慢速均线。策略默认快速均线周期为18天,可以通过参数调整。
-
-当快速均线从下方向上突破慢速均线时,使用crossunder函数检测到交叉信号,产生买入信号。当快速均线从上方向下跌破慢速均线时,使用crossover函数检测到交叉信号,产生卖出信号。
-
-策略通过track信号和exit信号实现自动交易。多头入场在快速均线从下方突破慢速均线时触发;空头入场在快速均线从上方跌破慢速均线时触发。对应的exit信号也在反向交叉时产生。
-
-## 优势分析
-
-- 使用移动均线交叉具有较强的趋势跟踪能力,可以有效捕捉价格趋势
-- 均线策略较为简单直接,逻辑清晰,容易理解实现
-- 可以通过调整均线参数优化策略,适应不同市场环境
-- 策略实现自动化交易,无需人工干预,降低操作成本
-
-## 风险及解决方法
-
-- 当价格处于震荡区间时,会出现多次无效交叉信号,带来交易频繁的风险。可以通过增加过滤条件避免。
-- 需关注参数优化问题,不同参数对策略表现有较大影响。可以通过回测优化参数,或引入自适应均线。  
-- 存在一定的错失信号风险,可以结合其他指标过滤信号或作为辅助条件。
-- 可引入止损策略控制单笔损失。
-
-## 优化方向  
-
-- 可以引入自适应均线或动态优化均线参数,使均线参数动态调整,更好跟踪市场。
-- 可以增加过滤条件,避免在价格震荡、趋势不明时的错误信号。例如引入交易量过滤。
-- 可以结合其他指标,例如布林带作为过滤或入场的辅助条件,提高策略表现。 
-- 可以引入止损策略,以控制单笔损失在可承受范围。
-
-## 总结
-
-均线交叉策略整体来说是一个较为经典和简单的趋势跟踪策略。它主要使用均线交叉作为交易信号,原理简单直接,容易理解实现,可通过参数调整适应市场。但也存在一些缺点,如易受震荡和趋势转向的影响, signaling频繁等。这些问题可以通过增加过滤条件、动态调整参数、引入止损等方式得到改进。该策略有着广泛的优化空间和方向,是量化交易的基础策略之一。
-
-|| 
 
 ## Overview  
 
@@ -89,7 +49,6 @@ The strategy realizes automated trading through track signals and exit signals. 
 
 The MA crossover strategy is a classic and simple trend-following strategy. It mainly uses MA crossovers as trading signals with easy logic and implementation. It can be adapted through parameter tuning. But it also has drawbacks like susceptibility to oscillations and trend reversals, high signal frequency etc. These can be improved through filters, dynamic parameters, stop loss etc. The strategy has extensive optimization space and directions, and is one of the fundamental quantitative trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

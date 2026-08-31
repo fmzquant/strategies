@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15f45942ea170c9d1f2.png)
-[trans]
-
-#### 概述
-
-WaveTrend Cross LazyBear策略是一个基于WaveTrend指标的交易策略。该策略使用两条不同周期的WaveTrend指标线,当较快周期的WaveTrend指标线上穿较慢周期的WaveTrend指标线时产生买入信号,当较快周期的WaveTrend指标线下穿较慢周期的WaveTrend指标线时产生卖出信号。该策略还设置了超买和超卖区域,用于辅助判断市场状态。
-
-#### 策略原理
-
-该策略的核心是WaveTrend指标,该指标由以下步骤计算得出:
-
-1. 计算典型价格(AP)，其等于最高价、最低价和收盘价的均值。 
-2. 计算AP的指数移动平均线(ESA),周期为n1。
-3. 计算AP与ESA的差值的绝对值的指数移动平均值d,周期为n1。
-4. 计算指标CI,其等于(AP - ESA) / (0.015 * d)。
-5. 计算CI的指数移动平均线TCI,周期为n2,得到WaveTrend指标。
-
-该策略使用两条不同周期(默认为10和21)的WaveTrend指标线,分别记为WT1和WT2。当WT1上穿WT2时,产生买入信号;当WT1下穿WT2时,产生卖出信号。此外,该策略还设置了4个辅助判断的水平:超买水平1、超买水平2、超卖水平1和超卖水平2,用于辅助判断市场状态。
-
-#### 策略优势
-
-1. WaveTrend指标结合了动量和波动率的特点,能够较好地捕捉市场趋势。
-2. 双重周期的WaveTrend指标能够有效过滤掉一些噪音信号。
-3. 超买超卖水平的设置可以在一定程度上防止策略在市场波动较大时频繁交易。
-4. 策略逻辑清晰,易于理解和实现。
-
-#### 策略风险
-
-1. 该策略在震荡市中可能会出现较多的假信号。
-2. 参数的选择对策略表现有较大影响,不同的参数可能导致策略表现差异较大。
-3. 策略未考虑风险控制,在极端行情下可能出现较大回撤。
-
-#### 策略优化方向
-
-1. 可以考虑加入趋势过滤条件,如长期均线的方向,以减少震荡市中的假信号。
-2. 可以优化超买超卖水平的设置,使其能够更加动态地适应不同的市场状态。
-3. 可以加入止损和止盈机制,控制单次交易的风险。
-4. 可以通过参数优化来寻找最佳的参数组合。
-
-#### 总结
-
-WaveTrend Cross LazyBear策略是一个基于WaveTrend指标的趋势追踪策略,通过双重周期的指标设计和超买超卖水平的辅助判断,在捕捉趋势的同时也兼顾了一定的风险控制。但是,该策略在震荡市中可能出现较多假信号,且缺乏严格的风险管理措施,实际应用中还需要进一步的优化和改进。
-
-|| 
 
 #### Overview
 
@@ -94,7 +51,6 @@ The strategy uses two WaveTrend indicator lines with different periods (default 
 
 The WaveTrend Cross LazyBear strategy is a trend-tracking strategy based on the WaveTrend indicator. Through the design of dual-period indicators and the auxiliary judgment of overbought and oversold levels, it captures trends while also taking into account certain risk control. However, the strategy may generate more false signals in oscillating markets and lacks strict risk management measures. Further optimization and improvement are needed in practical applications.
 
-[/trans]
 
 > Strategy Arguments
 

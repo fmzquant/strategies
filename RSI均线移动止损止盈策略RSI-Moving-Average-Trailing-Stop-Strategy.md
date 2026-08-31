@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略融合RSI指标和移动平均线,进行趋势判断和交易信号产生,并采用移动止损止盈方式来锁定利润和控制风险。属于典型的趋势跟踪交易策略。
-
-策略原理:
-
-1. 计算RSI指标,判断超买超卖情况。RSI高于50为多头信号。
-
-2. 计算快慢移动平均线, golden cross 形态为多头信号。
-
-3. RSI连续上涨也可作为追踪做多的交易信号。
-
-4. 在入场后,设置移动止损线和止盈线。
-
-5. 止损线固定跟踪价格下方,止盈线固定跟踪价格上方。
-
-6. 价格触及止损止盈线则平仓。
-
-该策略的优势:
-
-1. RSI指标判断超买超卖,避免追高杀跌。
-
-2. 移动平均线识别趋势方向。组合提高判断准确性。
-
-3. 移动止损止盈方式,可根据实时价格变化调整止损位置。
-
-该策略的风险:
-
-1. RSI指标和均线在震荡行情中易产生错误信号。
-
-2. 移动止损止盈需要谨慎设定幅度,过大过小均有问题。
-
-3. 无法限制单笔亏损大小,有产生大亏损的风险。
-
-总之,该策略汇集RSI和均线指标的优点,并采用移动止损止盈方式进行风险管理。在参数优化和风险控制方面提高,可获得较好效果。
-
-||
 
 This strategy combines RSI and moving averages for trend bias and adds trailing stops for risk management. It aims to follow trends with adaptive exits.
 
@@ -81,7 +44,6 @@ Risks:
 
 In summary, this strategy combines RSI and MAs then uses trailing stops for risk management. With robust optimization and risk controls, it can achieve good results.
 
-[/trans]
 
 > Strategy Arguments
 

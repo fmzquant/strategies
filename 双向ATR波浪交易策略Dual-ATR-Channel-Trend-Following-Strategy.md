@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/142b2a7468e6ecec468.png)
 
-[trans]
-## 概述
-
-双向ATR波浪交易策略是一种趋势跟踪策略,结合均线、ATR和多个技术指标,在趋势方向建立之后进行趋势跟踪交易。
-
-## 策略原理
-
-该策略使用Kijun线作为主要的均线指标,判断价格趋势方向。策略同时结合ATR通道,限制价格活动范围。当价格接近上轨时不做多,当价格接近下轨时不做空,避免追高杀跌。 
-
-当Kijun线发生向上突破时产生买入信号,当发生向下突破时产生卖出信号。为过滤误信号,策略还引入多个技术指标进行确认,包括Aroon指标、RSI指标、MACD指标和PSAR指标。满足所有指标的确认条件时,才生成买入和卖出信号。
-
-入市后,策略采用止损和止盈方式管理仓位。止损点为0.5 ATR,止盈点为0.5%。当价格再次突破Kijun线反向时,选择立即止损退出。
-
-## 策略优势
-
-- 使用Kijun线判断趋势方向,避免被震荡市场套牢
-- ATR通道限制价格活动范围,有利控制风险
-- 多个技术指标确认,可大幅过滤误信号
-- 结合止损止盈风险管理,有利锁定盈利
-
-## 策略风险
-
-- 多个指标确认造成信号延迟,可能错失趋势开始阶段
-- 止损点过小可能频繁被止损出场
-- Kijun线和ATR参数不合理可能导致频繁错误信号
-- 依赖参数优化和历史数据拟合结果,实盘可能效果不佳
-
-## 优化方向
-
-- 尝试更先进的趋势判断指标,如Ichimoku云图等
-- 调整止损止盈点,优化盈亏比
-- 测试不同市场的最佳参数组合
-- 增加自动调参功能,根据实时市场调整参数
-- 测试不同Confirmation指标组合的效果
-
-## 总结
-
-双向ATR波浪交易策略综合使用均线、ATR通道以及多个辅助技术指标,在确定趋势方向后进行趋势跟踪操作。相比单一指标策略,可以大大提高信号质量和获利概率。同时止损止盈机制控制风险。通过参数优化和组合测试,该策略可望取得稳定的盈利。但需要注意过于依赖历史数据的问题,实盘效果仍需验证。持续优化是确保策略效果的关键。
-
-
-||
 
 
 
@@ -94,7 +53,6 @@ Once in a trade, the strategy uses stop loss and take profit to manage positions
 
 The dual ATR channel trend following strategy combines moving averages, ATR channels and multiple technical indicators to trade in the direction of the trend once established. Compared to single indicator strategies, it can greatly improve signal quality and win rate. The stop loss and take profit mechanisms also control risk. Through parameter optimization and combinatorial testing, this strategy has the potential to achieve steady profits. But its reliance on historical data is a concern and live performance requires further verification. Continuous optimization is key to ensuring robustness.
 
-[/trans]
 
 > Strategy Arguments
 

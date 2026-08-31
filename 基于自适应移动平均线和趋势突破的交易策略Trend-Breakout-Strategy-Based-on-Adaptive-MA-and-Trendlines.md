@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过自适应移动平均线和趋势线突破来判断入场,并利用RSI指标来决定出场。其目标是在符合趋势条件时进入市场,在超买区域止盈退出,同时控制每月只做一次交易。
-
-## 策略原理
-
-1. 计算长度为99的自适应移动平均线,判断总体趋势方向
-
-2. 计算长度为14的本地峰值,画出上轨代表压力线
-
-3. 当收盘价突破上轨时,并且当前月还未有订单,则做多入场
-
-4. 计算14周期RSI,当RSI超过70(超买区)时平仓止盈
-
-5. 跟踪上次入场的月份,确保每月仅交易一次
-
-## 优势分析
-
-1. 自适应移动平均线可以动态跟踪趋势变化 
-
-2. 结合趋势线突破可以提高入场精确度
-
-3. RSI指标可以有效判断超买超卖现象,实时控制风险
-
-4. 每月仅交易一次可以减少交易频率和手续费
-
-5. 规则简单清晰,易于理解执行
-
-## 风险分析
-
-1. 参数设定不当可能导致错失较佳入场点
-
-2. 固定的出场指标无法及时跟随市场变化
-
-3. 存在一定程度的回撤风险 
-
-4. 无法对长期持仓做风险控制
-
-5. 过滤条件过多可能导致无法入场
-
-## 优化方向
-
-1. 测试不同参数设定寻找最优参数
-
-2. 增加其他过滤指标提高策略稳定性
-
-3. 开发动态止损和跟踪止损策略
-
-4. 优化入场逻辑,识别更强势突破
-
-5. 测试适用的品种和周期参数
-
-6. 结合趋势指标过滤假突破信号
-
-## 总结 
-
-该策略整合趋势分析和超买超卖指标,实现了较为稳定的趋势跟踪效果。通过进一步优化参数设定、动态出场机制等,可以成为一个可靠的量化交易系统。总体来说,该策略易操作性较强,值得进一步改进和验证。
-
-||
 
 ## Overview
 
@@ -129,7 +68,6 @@ This strategy uses an adaptive moving average and trendline breakouts for entrie
 
 This strategy integrates trend analysis and oscillators for steady trend following effect. Further optimizations on parameters, dynamic exits etc. can make it a reliable quant system. Overall it has good operability and is worth improving and verifying.
 
-[/trans]
 
 > Strategy Arguments
 

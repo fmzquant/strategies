@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f54e9433bd162d887f.png)
-[trans]
-
-
-## 概述
-
-DAKELAX-XRPUSDT是一个用于币安的XRPUSDT的交易机器人策略,它是一个简单的反转到均线的策略,在2019年5-8月的H1时间周期进行回测表现较好,实时运行也较好。
-
-## 策略原理
-
-该策略首先计算20个周期的SMA均线和上轨、下轨波动带。其中上轨为SMA均线加1.5倍标准差,下轨为SMA均线减2.2倍标准差。然后计算波动带收缩率,如果收缩率大于1.3则用黑色填充,如果小于0.1则用黄色填充,否则用红色填充。
-
-当收盘价低于下轨时,以20个币的数量做多;当收盘价高于上轨时,平掉所有仓位。
-
-该策略还计算7日EMA快线、18日EMA慢线,当快线上穿慢线时判断为买入信号,当快线下穿慢线时判断为卖出信号。
-
-## 优势分析
-
-- 使用波动带及其收缩率判断趋势和波动,非常直观
-- 结合均线金叉死叉进行判断,可以增强信号
-- 回测表现较好,实盘也较为稳定
-
-## 风险分析
-
-- 波动带收缩后突破失败的概率较大,容易止损
-- 固定数量买入,没有考虑仓位管理,存在超买超卖风险
-- 在震荡行情中,金叉死叉较多,容易造成亏损
-- 仅考虑日线因素,没有结合更高时间周期,可能漏掉更大方向
-
-可以考虑动态调整买入数量或设置止损来控制风险。优化金叉死叉策略,避免在震荡行情中被套牢。结合更高级别的趋势指标来确定大方向。
-
-## 优化方向 
-
-- 根据波动带宽度调整买入数量,波动带收窄时少买,扩大时可适当增加
-
-- 在波动带收缩但还未触发信号时,可以考虑积累空仓建立仓位
-
-- 整体结合长线INDICATOR指标判断趋势方向,大趋势不明朗时可暂停策略
-
-- 可以结合止损来控制风险,止损点可设定为最近波动带低点
-
-- 优化金叉死叉策略参数,调整均线周期,避免被套
-
-## 总结
-
-DAKELAX-XRPUSDT是一个利用波动带收缩结合均线策略的交易机器人程序。该策略直观易懂,回测效果较好,但存在一定的风险。通过调整买入数量,停止策略,设置止损以及优化均线策略等方式可以降低风险。整体而言,该策略思路清晰易操作,为Bollinger Band策略的参考范例,但需要针对不同币种和市场环境进行优化调整才能在实盘中稳定获利。
-
-||
 
 
 ## Overview
@@ -102,7 +55,6 @@ Consider dynamic position sizing or stop loss to control risks. Optimize crossov
 
 DAKELAX-XRPUSDT is a trading bot strategy using Bollinger Band contraction with EMA crossover. It is intuitive and has good backtest results but contains some risks. These can be reduced through position sizing, stopping strategy, adding stop loss and optimizing crossover logic. Overall it provides a clear example of a Bollinger Band strategy, but requires pair-specific optimization for stable live profits.
 
-[/trans]
 
 > Strategy Arguments
 

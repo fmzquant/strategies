@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19fdd9be2cc59cd469a.png)
-[trans]
-## 概述
-
-该策略采用双时间框架和动量指标的组合,实现自适应止盈止损。主要时间框架监控趋势方向,辅助时间框架用于确认信号。当两者方向一致时,生成交易信号。入市后,采用递进止盈方式更新止盈位和止损位。
-
-## 策略原理
-
-1. 主时间框架采用线性回归指标Sqqueeze Momentum(SQM)判断趋势,辅助时间框架采用SQM指标的EMA组合过滤假信号。
-
-2. 当主图SQM向上突破、辅助图SQM也向上时,做多;当主图SQM向下突破、辅助图SQM也向下时,做空。
-
-3. 进场后,依据输入参数设定初始止盈位和止损位。当价格达到止盈位时,更新止盈位和止损位。具体方式是:止盈位按设置比例递增,止损位按比例递减,实现渐进止盈。
-
-## 策略优势
-
-1. 双时间框架过滤假信号,确保信号准确性。
-
-2. SQM指标判断趋势方向,避免被市场噪音干扰。
-
-3. 自适应止盈止损机制,最大程度锁定获利,有效控制风险。
-
-## 风险分析
-
-1. SQM指标参数设置不当,可能错过趋势转折点,带来亏损。
-
-2. 辅助图时间框架选择不当,无法有效过滤噪音,产生误交易。 
-
-3. 止损幅度设置过大,单笔亏损可能比较惨重。
-
-## 优化方向
-
-1. SQM指标参数需要根据不同市场调整,确保其灵敏度。
-
-2. 辅助图时间框架也需要测试不同周期,看哪个周期过滤效果最好。
-
-3. 停损幅度可设置波动范围,而不是固定值,这样可以根据市场波动程度作调整。
-
-## 总结
-
-该策略整体来说非常实用,双时间框架配合动量指标判断趋势,并利用自适应止盈止损方式实现稳定盈利。通过优化SQM指标参数、辅助图周期和止损幅度的设置,可以使策略效果更好,值得在实盘中应用和优化。
-
-||
 
 ## Overview
 
@@ -93,7 +51,6 @@ This strategy combines dual time frames and momentum indicators to achieve adapt
 
 Overall this is a very practical strategy. The combination of dual time frames with a momentum indicator to determine trends, together with the adaptive take profit and stop loss method can generate stable profits. By optimizing the SQM parameters, secondary time frame period, and stop loss amplitude, strategy results can be further improved for productive live application and enhancement.
 
-[/trans]
 
 > Strategy Arguments
 

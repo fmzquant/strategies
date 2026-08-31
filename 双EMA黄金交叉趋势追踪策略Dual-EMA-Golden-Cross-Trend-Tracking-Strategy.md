@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1acf6111fc6efb34d8e.png)
 
-[trans]
-
-
-## 概述
-该策略通过计算快线EMA和慢线EMA,并比较两条EMA的大小关系来判断行情趋势方向,属于简单的趋势追踪策略。当快线EMA上穿慢线EMA时做多,当快线EMA下穿慢线EMA时做空,属于典型的双EMA黄金交叉策略。
-
-## 策略原理
-该策略的核心指标是快线EMA和慢线EMA。快线EMA长度设置为21周期,慢线EMA长度设置为55周期。快线EMA能更快速地响应价格变动,反映最近短期趋势;慢线EMA对价格变动响应更缓慢,能过滤掉部分噪音,反映中长期趋势。
-
-当快线EMA上穿慢线EMA时,表示短期趋势转为上涨,中长期趋势可能出现转折,这是做多的信号。当快线EMA下穿慢线EMA时,表示短期趋势转为下跌,中长期趋势可能出现转折,这是做空的信号。
-
-通过快慢EMA的比较,可以捕捉短期和中长期两个时间尺度上的趋势转折点,属于典型的趋势追踪策略。
-
-## 策略优势
-1. 思路简单清晰,容易理解和实现
-2. 参数调节灵活,快线和慢线EMA周期可自定义
-3. 可配置ATR止损止盈,可控的风险
-
-## 策略风险
-1. 双EMA交叉时点选择可能不当,存在错过最佳入场点的风险
-2. 行情震荡时,可能出现多次无效信号,带来亏损风险
-3. ATR参数设置不当,可能造成止损止盈过于宽松或过于激进
-
-风险应对措施:
-1. 优化EMA快慢线参数,寻找最优参数组合
-2. 增加过滤机制,避免行情震荡带来的无效信号
-3. 测试并优化ATR参数,确保止损止盈设置合理
-
-## 策略优化方向  
-1. 基于统计方法测试不同EMA周期参数的稳定性  
-2. 增加过滤条件,结合其他指标避免无效信号  
-3. 优化ATR参数以获取最佳止损止盈比率
-
-## 总结
-本策略通过快线EMA和慢线EMA的交叉来判断行情趋势,简单清晰,容易实现。同时结合ATR来设置止损止盈,可控风险。通过参数优化和增加过滤条件,可以进一步增强策略稳定性和盈利能力。
-
-||
 
 ## Overview
 This strategy calculates fast EMA line and slow EMA line and compares the size relationship between the two EMAs to determine the trend direction of the market. It belongs to a simple trend tracking strategy. When the fast EMA crosses above the slow EMA, go long. When the fast EMA crosses below the slow EMA, go short. It is a typical dual EMA golden cross strategy.
@@ -81,7 +44,6 @@ Risk Management:
 
 ## Summary  
 This strategy judges trend based on EMA crossovers, which is simple and clear to implement. With ATR-based stops, risks are controllable. Further improvements on stability and profitability can be made through parameter optimization and filtering conditions.
-[/trans]
 
 > Strategy Arguments
 

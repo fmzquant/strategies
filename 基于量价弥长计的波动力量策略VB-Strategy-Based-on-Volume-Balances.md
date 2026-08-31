@@ -11,91 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d72859e4e4de7ba887.png)
 
-[trans]
-
-该策略基于量价弥长计指标设计交易信号,可实现对市场买卖力量的判断。
-
-### 策略原理
-
-量价弥长计指标(VB)反映了成交量变化对价格的推动力。它的构造思路是:
-
-1. 计算典型价格的日内波动率代表价格变动力量。
-
-2. 通过成交量和价格波动力量的乘积,判断收盘时的买卖力量。
-
-3. 指标数值在0轴上下波动,多空力量的测量依据是指标数值的正负。
-
-本策略构建VB指标,并设定信号线。当VB指标上穿信号线时产生买入信号;当VB指标下穿信号线时产生卖出信号。
-
-代码主要步骤如下:
-
-1. 计算典型价格的日内波动率inter作为价格变动力量。
-
-2. 设置波动力量的截断范围coef,超出该范围的波动力量归为coef。
-
-3. 计算截断后的量化力量vcp。
-
-4. 求和vcp获得量化指标vfi。
-
-5. 设置信号线长度signalLength,获得信号线vfima。
-
-6. 比较VB指标vfi和信号线vfima,产生交易信号。
-
-### 策略优势
-
-该策略具有以下优势:
-
-1. 利用量价关系判断市场买卖力量,不受价格本身的影响。
-
-2. 可设置参数控制量化力量的计算范围,避免异常波动的影响。
-
-3. 结合VB指标本身与信号线的比较,可设定合理的入场时机。
-
-4. 指标计算方法简单清晰,易于实盘操作。
-
-5. 可自定义指标参数和信号线参数,优化策略效果。
-
-### 策略风险
-
-该策略也存在一些风险:
-
-1. VB指标对价格异常波动敏感,需要适当设置截断参数。
-
-2. 股价背离指标信号的概率较大,应避免盲目跟单。
-
-3. 需要适当优化指标参数及信号线参数,防止产生假信号。
-
-4. 适用于具有明显量价特征的品种,不宜应用于流动性差的品种。
-
-5. 需关注指标发散的情况,可能预示着市场反转。
-
-可通过调整参数范围、结合其它指标进行过滤、适当宽松止损来控制风险。
-
-### 策略优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 优化量化力量的计算参数,平衡灵敏度和平稳度。
-
-2. 优化信号线参数,平衡延迟和噪音。
-
-3. 增加Volume Spread Analysis等指标进行效果验证。 
-
-4. 增加趋势及支撑阻力指标,避免不利方向交易。
-
-5. 设定动态止损机制,根据市场波动程度调整止损点。
-
-6. 采用机器学习方法训练最优参数组合。
-
-7. 在多品种及不同周期上进行回测,评估策略稳健性。
-
-8. 比较不同指标参数对收益曲线的影响,寻找最优参数。
-
-### 总结
-
-该策略基于量价弥长计指标,对买卖力量进行判断。它具有指标设计简单、参数可调整等优点,也存在一定的假信号风险。通过参数优化、规避不利市场等措施,可以提高策略稳定性。后续可从多角度继续优化和验证该策略,提升实盘效果。
-
-||
 
 This strategy is designed based on the Volume Balances indicator to determine the buying and selling power in the market.
 
@@ -178,7 +93,6 @@ The strategy can be optimized in the following aspects:
 ### Summary
 This strategy judges buying/selling power based on the Volume Balances indicator. It has advantages like simple indicator design and adjustable parameters, and also risks like false signals. Further optimization and verification from multiple aspects can improve live performance.
 
-[/trans]
 
 > Strategy Arguments
 

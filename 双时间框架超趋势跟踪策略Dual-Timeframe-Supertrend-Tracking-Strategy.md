@@ -9,91 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一种双时间框架的超趋势跟踪策略。它同时应用两个不同周期的超趋势指标,一个做为主时间框架判断趋势方向,一个做为辅助时间框架来过滤入场。当两个时间框架的超趋势指标同向时才入场,做到更准确地捕捉趋势转折点。
-
-## 策略原理
-
-该策略的核心指标是超趋势指标。超趋势指标通过计算价格离散离差来判断价格相对趋势的方向。策略使用两个时间周期的超趋势指标,分别计算主时间框架和辅助时间框架的超趋势线。
-
-具体交易逻辑是:
-
-1. 判断主时间框架超趋势线的方向作为大趋势方向。 
-
-2. 等待辅助时间框架超趋势线发出立场同向信号时入场。
-
-3. 设置止损止盈点位。
-
-4. 主时间框架超趋势线再次转折时平仓。
-
-这样通过组合两个周期指标,可以过滤掉一些背离信号,使入场更为精准。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 双时间框架组合,可以更准确判断趋势。
-
-2. 超趋势指标对趋势变化敏感,入场准确。
-
-3. 设置止损止盈点位,可以控制风险。
-
-4. 策略逻辑简单直接,容易理解。
-
-5. 可自行优化参数,适应不同品种。
-
-## 风险分析
-
-该策略的风险主要有:
-
-1. 超趋势指标存在滞后可能误判信号。
-
-2. 止损止盈设置不当可能造成过度追涨或者刻意止损。
-
-3. 双时间框架组合可能错过较短的反转机会。
-
-4. 参数优化依赖历史数据,过拟合风险存在。
-
-5. 没有考虑交易成本的影响。
-
-对应解决方法:
-
-1. 适当调整指标参数,引入其他指标组合验证。
-
-2. 根据回测数据动态优化止损止盈位置。
-
-3. 测试更短周期作为辅助判断。
-
-4. 扩大数据回测范围,多市场回测验证。
-
-5. 加入手续费、滑点等交易成本计算。
-
-## 优化方向 
-
-该策略可从以下方面进一步优化:
-
-1.测试更多指标的组合效果,寻找最优组合。
-
-2.引入机器学习方法来动态优化参数。
-
-3.优化止损止盈策略,改进盈亏比。
-
-4.尝试多种时间周期的组合效果。
-
-5.根据交易次数调整止盈止损区间。
-
-6.加入手续费和滑点的计算逻辑。
-
-7.开发图形化参数优化工具。
-
-## 总结
-
-该策略通过双时间框架超趋势指标实现了较为准确的趋势判断和entries。设置止损止盈控制风险。策略逻辑简单清晰,易于拓展优化。后期可以从引入更多指标、动态优化参数、加入交易成本计算等方面进行改进,使策略更加稳健。总体来说,该策略提供了一种双时间框架跟踪趋势的思路,具有很好的参考价值。
-
-||
 
 
 ## Overview
@@ -178,7 +93,6 @@ The strategy can be further optimized by:
 
 This strategy achieves relatively accurate trend judgment and entries by using dual timeframe Supertrend indicators. It controls risks by setting stop loss and take profit. The strategy logic is simple and clear, easy to expand and optimize. It can be further improved by introducing more indicators, dynamically optimizing parameters, adding transaction costs etc to make it more robust. Overall, this strategy provides a useful dual timeframe trend tracking idea that holds good reference value.
 
-[/trans]
 
 > Strategy Arguments
 

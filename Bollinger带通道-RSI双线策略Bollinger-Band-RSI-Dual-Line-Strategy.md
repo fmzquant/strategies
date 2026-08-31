@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1718937808d5911aac0.png)
-[trans]
-
-## 概述
-
-本策略将布林线与相对强弱指标(RSI)相结合,在RSI指标超买超卖的同时,需要对应的突破布林线的上下轨,这样使得本策略的交易信号更加严格和可靠。
-
-## 策略原理
-
-1. 使用布林线,根据前期n天的收盘价计算出中轨线、上轨线和下轨线。
-2. 计算RSI指标,判断市场是否过度看涨或看跌。
-3. 只有当RSI指标显示超买(高于rsi_overbought参数),且价格突破布林线上轨时,做空头交易。
-4. 只有当RSI指标显示超卖(低于rsi_oversold参数),且价格突破布林线下轨时,做多头交易。
-
-这样,本策略同时利用布林线的通道特征和RSI指标的超买超卖信号,避免单一指标判断错误,更加可靠。
-
-## 策略优势
-
-1. 综合利用布林线与RSI指标的优势,判断更加严格,避免失误。
-2. 布林线设定动态通道,能够把握市场波动规律。
-3. RSI判断超买超卖情况,避免追高杀跌。
-
-## 策略风险
-
-1. 布林线参数若设定不当,上下轨无法有效包住价格。
-2. RSI参数若设定不当,无法有效判断真实的超买超卖情况。
-3. 策略本身无法判断趋势方向,需要搭配其他指标使用。
-
-针对以上风险,应该优化参数,严格测试模型,并辅以其他指标判断大趋势。
-
-## 策略优化方向 
-
-1. 测试不同周期参数的布林线,找到最佳周期参数。
-2. 测试不同参数RSI指标,确定较优参数。 
-3. 可以加入移动均线等其他指标判断总体趋势。
-
-## 总结
-
-本策略成功结合了布林线与RSI指标的优势,在两者同时出现信号时发出交易指令,这样可以有效避免单一指标判断失误的情况,使得交易更加可靠。同时,也要优化参数,严格测试,并辅以其他指标判断大趋势,从而进一步提高策略的稳定性和收益率。
-
-||
 
 
 ## Overview
@@ -89,7 +49,6 @@ To address the above risks, parameters should be optimized, models strictly test
 
 This strategy successfully combines the strengths of Bollinger Bands and RSI, issuing trading signals only when both indicators agree. This avoids acting on misleading signals from any single indicator, making trades more reliable. Nonetheless, parameters should be optimized, models strictly tested, and major trends determined with other indicators, to further enhance the strategy's stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

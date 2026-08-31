@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bbbf7ca5a8d4e242d4.png)
-[trans]
-## 概述
-本策略是一个结合动量指标和趋势指标的多因子判断型量化交易策略。策略通过计算多种平均线的数学组合,判断市场的总体趋势和动量方向,根据阈值条件发出交易信号。
-
-## 策略原理
-1. 计算多组平均线和动量指标
-   - 计算Harmonics平均线、短期平均线、中期平均线、长期平均线等多组平均线
-   - 计算各平均线间的差值,反映价格变化趋势
-   - 计算各平均线的一阶导数,反映价格变化动量
-   - 计算正弦余弦指标,判断趋势方向
-2. 综合判断交易信号
-   - 将动量指标、趋势指标等多因子进行加权运算
-   - 根据结果值距离阈值远近,判断当前市场状态
-   - 发出做多做空交易信号
-
-## 优势分析
-1. 多因子判断,提高信号准确率
-   - 综合考虑价格、趋势、动量多个因素
-   - 不同因子可配置不同权重
-2. 参数可调,适应不同市场
-   - 平均线参数、交易区间边界可自定义
-   - 可适应不同周期和市场环境
-3. 代码结构清晰,易于理解
-   - 命名规范,注释完整
-   - 易于二次开发和优化
-
-## 风险分析
-1. 参数优化难度大
-   - 需要大量历史数据回测寻找最优参数
-2. 交易频率可能过高
-   - 多因子组合判断,可能产生过多交易
-3. 效果与市场相关性大
-   - 趋势判断策略,容易受到非理性行为影响
-
-## 优化方向 
-1. 加入止损逻辑
-   - 可避免非理性行为带来的较大亏损
-2. 优化参数设置
-   - 寻找最优参数组合,提高策略稳定性
-3. 增加机器学习元素
-   - 使用深度学习判断当前市场状态,辅助策略决策
-
-## 总结
-本策略通过动量指标和趋势指标的多因子组合,对市场状态进行判断,根据设置的阈值发出交易信号。策略优势在于可配置性强,适合不同市场环境,且容易理解;劣势是参数优化难度大,交易频率可能过高,效果与市场相关性强。未来可通过加入止损、参数优化和机器学习等手段进行进一步优化。
-
-||
 
 ## Overview  
 This strategy is a multi-factor judged quantitative trading strategy that combines momentum indicators and trend indicators. The strategy judges the overall trend and momentum direction of the market by calculating mathematical combinations of multiple moving averages, and generates trading signals based on threshold conditions.
@@ -101,7 +55,6 @@ This strategy is a multi-factor judged quantitative trading strategy that combin
 ## Summary
 This strategy judges the market state through the multi-factor combination of momentum indicators and trend indicators, and issues trading signals based on set thresholds. The advantages of the strategy are strong configurability, adaptability to different market environments, and easy understanding; the disadvantages are the difficulty in parameter optimization, possibly too high trading frequency, and high correlation with the market. Future optimizations can be made by adding stop loss, parameter optimization and machine learning.
 
-[/trans]
 
 > Strategy Arguments
 

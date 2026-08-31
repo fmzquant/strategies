@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10861f32baeebcb497f.png)
-[trans]
-## 概述
-
-该策略是一个基于价格动量指标MACD和均线的突破买入策略,适用于白银(XAG/USD, XAG/EUR)的1小时时间周期。关键点在于结合价格趋势和动量指标判断趋势反转的时机。 
-
-## 策略原理
-
-当MACD柱状线由负转正且连续上升突破信号线时,表示短期涨势较强;同时如果收盘价突破上升趋势的均线,则产生多头信号。类似的,MACD柱状线由正转负且跌破信号线,并且收盘价跌破下降趋势的均线时,产生空头信号。 
-
-具体来说,该策略判断长仓入场信号的条件是:
-1) MACD柱状线为正
-2) 当前柱状线高于上一根柱状线 
-3) 收盘价高于均线
-4) 收盘价高于近3根K线的最高价
-
-判断短仓入场信号的条件则刚好相反。
-
-一旦开仓,在下一根K线收盘时无条件平仓。该策略不设置止盈止损点,追求捕捉趋势爆发的始动点。
-
-## 优势分析
-
-该策略结合了价格和动量指标,能较为准确地判断趋势反转的时机,胜率较高。无条件下一根K线收盘平仓的方式,可以有效规避反转失败后的再次损失。
-
-不设置止盈止损,全仓开仓,满足追求高收益的投资者的需求。
-
-## 风险分析
-
-无止损设置容易被套牢,亏损风险大。若反转信号失败,无法及时止损,可能面临较大的资金损失。
-
-无条件下一根K线收盘就平仓的方式,很难持续捕捉趋势行情的利润。
-
-## 优化方向 
-
-可以考虑在胜率较高的突破买入基础上,增加适当的止损策略,降低亏损风险。
-
-也可以结合高级技巧,在平仓后设置再开仓的机制,尝试持续捕捉趋势利润。
-
-## 总结
-
-该策略总体来说属于积极进攻型的高风险策略,由于无止损设置,需要投资者承受较大的亏损风险。但相对的,成功反转后第一时间全仓开仓也可以获得高额收益。适合有较强心理承受能力的积极投资者。
-
-||
 
 ## Overview  
 
@@ -93,7 +51,6 @@ It’s also possible to combine advanced techniques to re-enter positions after 
 
 In general, this strategy belongs to an aggressive high-risk strategy. Due to no stop loss setting, investors need to bear greater risk of loss. But if the reversal is successful, the opportunity to open positions with full lots in the first place can also result in high returns. It is suitable for aggressive investors with relatively strong psychological endurance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fa438e57f097a6738f.png)
-[trans]
-
-## 概述
-
-该策略是一个利用RSI指标判断趋势,配合MACD指标进行入市的趋势追踪型多头策略。该策略同时结合EMA均线作为趋势过滤器,以及紧急止损机制来控制风险。
-
-## 策略原理
-
-该策略主要依赖RSI指标判断趋势方向。当RSI指标上穿设定的RSI长线(默认21)时,认为行情可能反转为涨趋势。此时如果MACD已经处于下降趋势,那么可以判断目前处于反转点,是一个较好的做多时机。
-
-另外,该策略还引入EMA均线(默认200周期)作为趋势过滤器。只有当价格高于EMA均线时才会考虑做多。这可以有效过滤趋势不明或者下降趋势中的假反转。
-
-在止损方面,该策略同时设置了常规止损线和紧急止损线。当RSI下穿常规止损线(默认86)时平仓;如果价格大幅下挫,RSI下穿紧急止损线(默认73)时无条件平仓,以控制最大损失。
-
-## 优势分析
-
-- 使用RSI判断反转点,配合MACD滤除误入。
-- 引入EMA均线判断大趋势。
-- 同时使用常规止损和紧急止损,控制风险。
-
-## 风险分析
-
-- RSI反转信号可能出现误判。
-- 大盘趋势变化时,EMA均线无法及时响应。
-- 单一止损指标可能将获利交易截止。
-
-## 优化方向
-
-- 可以引入价量指标或者阳线/阴线比例作为辅助判断指标,提高入场准确率。
-- 均线系统可以调整为动态追踪最近N日趋势。 
-- 增加移动止损或者统计止损,让止损更加灵活。
-
-## 总结
-
-本策略总体来说是一个较为传统的趋势追踪型多头策略。利用RSI识别反转点,MACD过滤误判,EMA判断大趋势,止损控制风险。该策略较为简单直观,容易理解,在判断行情反转上具有一定优势,可以作为量化交易的入门策略之一。但该策略可优化空间较大,后续可以从入场信号、趋势判断、止损机制等多个方面进行进一步完善。
-
-|| 
 
 ## Overview
 
@@ -82,7 +45,6 @@ On the stop loss side, the strategy also sets regular stop loss line and emergen
 
 In summary, this strategy is a relatively traditional trend following bull strategy. It identifies reversal points with RSI, filters misjudgments with MACD, determines major trend with EMA and controls risks with stop loss. The strategy is quite simple and intuitive, easy to understand, and has some advantage in judging market reversals, making it a good starting point strategy for algo trading. But there are still large rooms for further improvements by optimizing entry signals, trend judges and stop loss mechanisms.
 
-[/trans]
 
 > Strategy Arguments
 

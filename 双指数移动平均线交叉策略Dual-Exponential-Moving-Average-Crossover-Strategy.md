@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/144aa818025ca6c2c72.png)
 
-[trans]
-
-### 概述
-
-双指数移动平均线交叉策略(Dual Exponential Moving Average Crossover Strategy)是一种典型的趋势跟踪策略。它利用不同参数的双指数移动平均线的金叉和死叉来判断行情趋势,并相应做多做空。
-
-### 策略原理
-
-该策略同时使用3条不同参数的双指数移动平均线:DEMA(8)、DEMA(20)和 DEMA(63)。其中:
-
-- DEMA(8)反应最快,用于捕捉短期趋势;
-- DEMA(20)速度稍慢,用于识别中期趋势;
-- DEMA(63)反应最慢,用于判断长期趋势方向。
-
-当快线DEMA(8)上穿中线DEMA(20)和慢线DEMA(63)时,表示行情由下向上反转,做多;当快线DEMA(8)下穿中线DEMA(20)和慢线 DEMA(63)时,表示行情由上向下反转,做空。
-
-### 优势分析
-
-相比单一移动平均线,双指数移动平均线对价格变化更为敏感,可以更早发现趋势转折点。该策略综合多个时间段双指数线,能够有效跟踪市场趋势方向。
-
-多时间段DEM线组合,提高了交易信号质量,避免了假突破。同时,策略只在三条线发生交叉时才产生信号,避免过于频繁交易。 
-
-### 风险分析
-
-该策略主要面临以下风险:
-
-1. 三条线交叉信号较少,容易漏过部分交易机会;
-2. 行情剧烈波动时,DEM线交叉延迟,无法及时反应价格变化;  
-3. 无法有效应对特大的非趋势性行情。
-
-可通过优化移动平均线参数、添加过滤条件等方式进一步改进和控制风险。
-
-### 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 优化移动平均线参数,使其更符合不同市场的特点;
-2. 增加成交量、波动率等过滤条件,避免错误信号;
-3. 结合其他指标过滤假信号,例如MACD、KDJ等;  
-4. 增加止损策略,控制单笔亏损;
-5. 优化仓位管理,让盈利比例大于亏损比例。
-
-### 总结
-
-双指数移动平均线交叉策略整体思路清晰,通过多时间段DEM的组合使用,有效判断市场趋势方向,是一种典型的趋势跟踪策略。该策略可根据实际需要,通过参数优化、增加过滤条件、止损管理等方式进行改进,从而获得更好的策略效果。
-
-||
 
 ### Overview
 
@@ -108,7 +61,6 @@ The strategy can be optimized from the following aspects:
 
 The DEMA crossover strategy has a clear overall idea. By combining multi-timeframe DEMAs, it can effectively determine the market trend direction and is a typical trend-following strategy. The strategy can be improved by parameter optimization, adding filters, stop loss management etc. according to actual needs, so as to obtain better strategy results.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16d612cc8d52842ebe4.png)
 
-[trans]
-#### 概述
-本策略是一个结合了多时间周期RSI指标和动态网格交易系统的复合型策略。它通过分析三个不同时间周期的RSI指标值来识别市场超买超卖状态,并使用基于ATR的动态网格系统来进行仓位管理。策略还包含每日止盈、最大回撤保护等风险控制机制,能够有效地平衡收益和风险。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键部分:
-1. 多时间周期分析 - 同时监测当前周期、60分钟和240分钟三个时间周期的RSI指标,只有当三个周期都出现超买或超卖信号时才会触发交易。
-2. 动态网格系统 - 使用ATR作为波动率参考,动态计算网格间距。当价格向不利方向移动时,按照设定的乘数因子增加仓位。
-3. 仓位管理 - 基于账户权益的1%作为基础仓位,并通过lot_multiplier参数控制网格加仓的幅度。
-4. 风险控制 - 包括每日止盈目标、2%账户权益的最大回撤保护,以及反向信号平仓机制。
-
-#### 策略优势
-1. 多维度信号确认 - 通过分析多个时间周期的RSI指标,有效降低假信号。
-2. 灵活的仓位管理 - 动态网格系统能够根据市场波动自适应调整网格间距。
-3. 完善的风险控制 - 每日止盈和最大回撤保护机制有效控制风险。
-4. 高度可定制 - 提供多个可调参数,便于根据不同市场环境优化策略。
-
-#### 策略风险
-1. 趋势风险 - 在强趋势市场中,网格策略可能面临持续损失。建议增加趋势过滤器。
-2. 资金管理风险 - 多重网格可能导致资金使用过度。建议严格控制最大网格层数。
-3. 参数敏感性 - 策略表现对参数设置较为敏感。建议进行充分的参数优化测试。
-
-#### 策略优化方向
-1. 趋势识别增强 - 可以添加移动平均线等趋势指标作为过滤器。
-2. 动态参数调整 - 根据市场波动率自动调整RSI阈值和网格参数。
-3. 止损优化 - 可以为每个网格位设置独立的止损位。
-4. 时间过滤 - 添加交易时间过滤,避开低流动性时段。
-
-#### 总结
-该策略通过结合多时间周期RSI分析和动态网格交易系统,创造了一个均衡的交易方案。完善的风险控制机制和灵活的参数设置使其适用于不同的市场环境。通过建议的优化方向,策略的稳定性和盈利能力还可以进一步提升。
-
-|| 
 
 #### Overview
 This strategy is a sophisticated trading system that combines multi-timeframe RSI analysis with a dynamic grid trading system. It identifies market overbought and oversold conditions by analyzing RSI values across three different timeframes while using an ATR-based dynamic grid system for position management. The strategy also incorporates daily profit targets and maximum drawdown protection mechanisms to effectively balance returns and risks.
@@ -73,7 +41,6 @@ The core logic includes several key components:
 
 #### Summary
 This strategy creates a balanced trading approach by combining multi-timeframe RSI analysis with a dynamic grid trading system. Its comprehensive risk control mechanisms and flexible parameter settings make it suitable for various market environments. The strategy's stability and profitability can be further enhanced through the suggested optimization directions.
-[/trans]
 
 
 

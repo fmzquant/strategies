@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fdc1947004aa613314.png)
-[trans]
-
-### 概述
-
-该策略通过结合交易量和RSI指标来确定买入时机,采用分批设置止盈目标逐步获利的方式管理头寸。该策略适用于震荡行情,可以有效锁定小幅度涨落震荡中重复出现的买点。
-
-### 策略原理
-
-该策略使用两个指标来识别买入时机:交易量和RSI。具体逻辑是,当交易量超过最近70天交易量平均值的2.5倍,同时RSI低于30(超卖水平)时,发出买入信号。
-
-一旦买入头寸建立,该策略会设置5个不同的止盈目标(0.4%、0.6%、0.8%、1.0%和1.2%),并按照头寸比例(20%、40%、60%、80%和100%)逐步止盈,直到全部头寸平仓。同时设置5%的止损点。
-
-这样,通过分批设置止盈可以锁定小幅度涨势,避免因等待更大涨幅而错失利润。止损可以控制单笔损失。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 使用双重指标识别买点,避免假突破。交易量放大可以确认底部承压力度,RSI超卖可以判断Addon反弹概率。
-
-2. 采用分批止盈策略,可以最大限度锁定小幅震荡中的获利机会,无需等待大幅上涨也可以获利。
-
-3. 适用于震荡行情,特别是价格在机构unfinished区域反复横跳的市场。这类市场短期难有确定方向,该策略可以频繁获利。
-
-4. 停损点设置得较宽,给予市场足够的决策空间。避免因短期价格调整被五未平仓。
-
-### 风险分析
-
-该策略的主要风险有:
-
-1. 双重指标确认信号存在误判风险,可能买入假突破点位。可通过参数优化降低风险。
-
-2. 分批止盈可能因持仓量过小错失大涨机会。可通过调整止盈点位和头寸比例优化。
-
-3. 停损幅度较大,单笔亏损可能较大。可降低仓位数管理风险。
-
-4. 适合震荡市场,强势市存在较大方向性风险。需关注大级别市场结构。
-
-5. 较高交易频率导致交易成本增加。优选低手续费交易平台。
-
-### 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 优化交易量和RSI参数组合,降低误判率。还可以引入MACD,KDJ等其它指标进行确认。
-
-2. 测试不同止盈幅度和头寸比例,找到最优参数组合。还可以引入动态止盈机制。
-
-3. 优化仓位管理策略,通过风险仓位管理系统减小单笔亏损的概率。
-
-4. 增加趋势判断模块,能够识别趋势转向并及时止损。避免持仓过于passive。
-
-5. 引入算法交易和量化回测系统,快速遍历不同参数,寻找最优参数组合。
-
-6. 借鉴机构级high频交易策略的滑点控制和成本控制模型,降低交易次数同时保证盈利率。
-
-### 总结
-
-该双重指标反转买点策略,通过交易量放量加RSI超卖判断底部,采用分批息盈的方法锁定震荡行情中的小幅获利。优点是频繁获利,无需等待大幅行情;缺点是容易误判信号和高交易频率。可通过多指标优化确认信号质量,通过风险控制和成本控制提高策略稳定性。该策略适合短期locking小幅度利润。
-
-||
 
 ### Overview
 
@@ -130,7 +69,6 @@ Possible optimization directions include:
 
 This dual indicator mean reversion strategy identifies bottom signals with volume surges and oversold RSI for buying, taking gradual profits amid ranges via staged exits. It profits frequently without requiring huge runs. Downsides include signal misinterpretation risks and high turnover. Confirmation optimization and risk/cost controls improve robustness. Excellent for short-term gains harvesting in choppy markets.
 
-[/trans]
 
 > Strategy Arguments
 

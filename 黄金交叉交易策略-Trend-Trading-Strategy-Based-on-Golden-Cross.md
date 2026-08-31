@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12a8d705a363ab47375.png)
-[trans]
-
-
-## 概述
-
-黄金交叉交易策略是一种中长线趋势跟踪策略。它通过计算股价的SR指标和SR信号指标,识别股价的趋势方向,并结合神经网络绘制趋势通道,实现趋势跟踪操作。当SR指标上穿SR信号时生成买入信号;当SR指标下穿SR信号时生成卖出信号。该策略还使用自适应线性回归滤波技术优化通道曲线,有效抑制错误信号。
-
-## 策略原理
-
-该策略的核心指标是SR指标和SR信号指标。SR指标是以8周期为参数的WMA均线和SMA均线的二次合成。SR信号指标是以20周期为参数计算的SR指标。SR指标和SR信号的金叉死叉交给判断趋势方向。
-
-该策略使用神经网络算法自动绘制股票价位的上下限,形成自适应通道。上限是以SR指标的历史极大值作为输入,下限是以历史极小值作为输入,然后分别计算出回归曲线作为通道上下限。通道曲线经过自适应线性回归滤波后更加平滑。
-
-当SR指标上穿SR信号时,产生买入信号;当SR指标下穿SR信号时,产生卖出信号。做多做空信号发出后,股票价格与通道上下限的关系决定止损止盈位置。
-
-## 优势分析
-
-- 使用双线性合成技术消除价格震荡的影响, Accurately判断趋势方向;
-- 自适应通道算法优化入场出场时机,避免假性突破;
-- 通道曲线应用自适应线性回归滤波技术,避免曲线被极值影响;
-- 止损止盈位置随通道动态变化,自动跟踪趋势获利。
-
-## 风险分析
-
-该策略主要 based on 趋势跟踪,存在如下主要风险:
-
-- 震荡趋势中产生大量错误信号和过多无效操作;
-- 突发事件导致 fast 向下突破通道下限造成较大亏损;
-- 参数设置不当容易 caused 策略失效。
-
-为控制风险,建议组合其他策略,避免单一策略操作;同时优化参数设置,适应不同市场环境。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化SR指标和信号指标的参数,提高交叉信号的稳定性;
-
-2. 优化自适应通道的长度周期,平滑通道曲线;
-
-3. 增加其他过滤指标,避免误操作。例如量能指标、波动率指标等;
-
-4. 结合深度学习算法实时优化通道曲线,提高自适应性。
-
-## 总结
-
-黄金交叉交易策略是一种有效跟踪中长线趋势的量化策略。它正确判断趋势方向的概率大、操作风险小。随着算法模型优化空间巨大,该策略有望成为跟踪股票趋势变化的有力工具。
-
-||
 
 ## Overview
 
@@ -105,7 +56,6 @@ This strategy can be optimized in the following aspects:
 
 The golden cross trading strategy is an effective quantitative strategy to track medium-to-long-term trends. It has a high probability of correctly determining the trend direction and low operating risks. With huge room for optimizing the algorithm model, this strategy has the potential to become a powerful tool to track changes in stock trends.
 
-[/trans]
 
 > Strategy Arguments
 

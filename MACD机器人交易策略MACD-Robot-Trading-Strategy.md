@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11fb6a9203eba221a41.png)
-[trans]
-
-### 概述
-
-本策略名为MACD机器人交易策略。该策略通过计算MACD指标的快线和慢线的关系,判断市场买卖时机,采取追踪止损来控制风险。
-
-### 策略原理  
-
-该策略主要基于MACD指标开发。MACD指标是由快线和慢线组成,快线是短期平均线,慢线是长期平均线,二者关系反映市场买卖状态。当快线上穿慢线时为买入信号,下穿为卖出信号。 
-
-本策略中,快线和慢线分别采用EMA算法计算,周期可自定义。为了提高信号质量,又加入了信号线,采用EMA算法对MACD值进行再一次平滑处理。 
-
-在判定买入时机时,不仅看快慢线金叉,还要判断MACD绝对值是否大于自定义的买入线。满足则发出买入信号,采用追踪止损来控制风险。 
-
-在判定卖出时机时,要同时满足快慢线死叉和信号线为正数的条件,则发出卖出信号,平掉仓位。
-
-### 优势分析
-
-该策略具有以下几个优势:
-
-1. 使用MACD指标判断买卖时机,可靠性较高  
-2. 增加信号线提高信号质量
-3. 追踪止损有效控制风险  
-4. 买入线可自定义调整策略灵敏度
-5. 条件全部基于指标计算,不受外部影响  
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. MACD指标存在滞后,可能错过短线操作机会
-2. 止损点设置不当可能造成不必要的亏损
-3.  Parameter Tuning需要花费大量时间测试调整
-4.  交易成本和滑点的影响 
-
-可通过适当调整参数、组合其他指标等方式来减少这些风险。
-
-### 优化方向  
-
-该策略可从以下几个方向进行优化:
-
-1. 结合其它指标过滤信号,例如KDJ、RSI等
-2. 增加机器学习算法判断买卖点 
-3. 采用动态止损代替静态止损
-4. 对MACD参数以及买入线进行测试优化
-5. 考虑交易成本的影响调整策略 
-
-### 总结
-
-本策略overall来说是一个可靠性较高的趋势跟踪策略。通过MACD指标判断趋势,采取追踪止损控制风险,可以获得稳定的投资回报。NEXT STEP是进一步优化参数,组合其他指标,结合机器学习等方式提高策略profitability。
-
-||
 
 
 ### Overview
@@ -114,7 +62,6 @@ The strategy can be optimized in the following directions:
 
 Overall, this is a trend-following strategy with high reliability. By judging the trend through MACD indicator and controlling risks with trailing stop loss, stable investment returns can be obtained. NEXT STEP is to further optimize parameters, combine other indicators, and incorporate machine learning to improve strategy profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ff00eedcd6cdb4ced7.png)
 
-[trans]
-
-## 概述
-
-均价成交量价值(VWAP)策略是一个跟踪股票在特定时间内的平均价格的策略。该策略使用VWAP作为一个基准,当价格高于或低于VWAP时开仓做多或做空。它还设置了止损和止盈条件来管理交易。
-
-## 策略原理
-
-该策略首先计算典型价格(最高价、最低价和收盘价的平均值)与成交量的乘积之和,以及成交量之和。然后用乘积之和除以成交量之和,计算出VWAP值。当价格上穿VWAP时,做多;当价格下穿时,做空。
-
-做多仓位的止盈条件是价格较入场价上涨3%时止盈;止损条件是价格较入场价下跌1%时止损。做空仓位也是类似的条件。
-
-## 优势分析
-
-VWAP策略的主要优势有:
-
-1. 使用了VWAP这个公认的重要统计指标作为交易信号的基准,使策略更有效;
-
-2. 同时使用vwap信号与止盈止损,可以在趋势中获利,也可以减少损失;
-
-3. 策略逻辑简单清晰,容易理解和实现。
-
-## 风险分析 
-
-该策略也存在一些风险:
-
-1. VWAP无法预测未来价格,因此VWAP信号可能发生滞后;
-
-2. 止损条件设置过于宽松,可能增加损失;
-
-3. 回测时间越长,交易信号越多,实盘效果可能会有差异。
-
-这些风险可以通过调整参数、优化止损算法等方法来降低。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 对VWAP参数进行优化,找到最佳计算周期;
-
-2. 可以测试其他跟踪止损算法,如移动止损、指数移动止损等;
-
-3. 可以结合其他指标作为过滤器,避免VWAP信号错误;例如量能指标、布林带指标等。
-
-## 总结
-
-总的来说,均价成交量价值策略利用了vwap这个重要指标的predictive力,设置了止盈止损条件,可以获取长期正收益。但仍需进一步优化和组合其他策略,以减少市场波动带来的风险,提高策略盈利空间。
-
-
-|| 
 
 ## Overview
 
@@ -109,7 +59,6 @@ Some ways to optimize the strategy include:
 
 In summary, the VWAP strategy utilizes the predictive power of this important statistic, with stop loss/profit taking to achieve long-term positive expectancy. But further optimizations and combination with other strategies are needed to reduce market fluctuation risks for larger profitability.
 
-[/trans]
 
 > Strategy Arguments
 

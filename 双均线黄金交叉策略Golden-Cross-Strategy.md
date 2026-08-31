@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-### 策略概述
-
-双均线黄金交叉策略是通过快速均线上穿慢速均线产生做多信号,快速均线下穿慢速均线产生做空信号的简单量化策略。该策略捕捉双均线的黄金交叉来判断市场的长期趋势转折点。
-
-### 策略原理
-
-1. 计算50周期的快速简单移动平均线,作为短期趋势的代表。
-
-2. 计算200周期的慢速简单移动平均线,作为长期趋势的代表。 
-
-3. 当快速均线上穿慢速均线时,认为开始进入上升长期趋势,这时做多。
-
-4. 当快速均线下穿慢速均线时,认为开始进入下跌长期趋势,这时平掉多单持有。
-
-交叉代表着市场供需关系和心理面发生转变,可以作为长线判断趋势转换的信号。快慢均线周期的组合可以根据不同品种和周期进行调整。
-
-### 策略优势
-
-- 使用双均线判断主趋势转折点
-
-- 黄金交叉形成清晰的做多做空信号
-
-- 参数调整灵活,适用于多种市场
-
-- 回测和实盘调整简单
-
-- 可与其他因子组合使用
-
-### 风险警示
-
-- 均线具有一定的滞后性
-
-- 需要防止出现假突破
-
-- 无法判断具体的入场和出场的时机 
-
-- 趋势内部震荡可能导致亏损
-
-### 总结
-
-双均线黄金交叉策略通过比较快慢均线的黄金交叉情况,判断长线趋势的变化,是一种广泛应用的长线策略思路。可根据不同市场情况调整参数,并与其他因子组合使用,以提高策略效果。
-
-
-||
 
 
 ### Strategy Overview
@@ -100,7 +54,6 @@ Crossovers represent changes in market supply/demand dynamics and psychology, se
 
 The golden cross strategy judges long-term trend shifts by comparing fast and slow moving average golden crosses, forming a widely used long-term strategy concept. Parameters can be adjusted and combined with other factors to improve strategy performance for different markets.
 
-[/trans]
 
 > Strategy Arguments
 

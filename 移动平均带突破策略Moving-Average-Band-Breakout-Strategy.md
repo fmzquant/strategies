@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-该策略基于移动平均线形成交易通道,当价格突破通道上下轨时产生交易信号。属于典型的趋势跟踪策略,通过参数优化实现简单有效的长短持仓操作。
-
-## 策略原理
-
-1. 计算移动平均线,可选择SMA/EMA/WMA/RMA等多种类型。
-
-2. 通道上轨为移动平均线的一定比例增量。下轨为一定比例减量。
-
-3. 价格突破上轨时做多;突破下轨时做空。可选择仅做多、仅做空或双向交易。 
-
-4. 设置止盈止损点。止盈点为入场价格的一定比例增量。止损点为一定比例减量。
-
-## 优势分析
-
-1. 移动平均线计算简单,容易实现趋势判断。
-
-2. 可调参数实现不同持仓时间和风险偏好。
-
-3. 做多做空可选,适应多种市场情况。
-
-4. 止盈止损固定比例,可控性强。
-
-## 风险分析
-
-1. 趋势突变时容易被套。
-
-2. 参数设置不当可能导致过于频繁或滞后交易。
-
-3. 固定比例止盈止损不够灵活。
-
-4. 双向交易增加交易频率和手续费成本。
-
-## 优化方向
-
-1. 优化移动平均线参数,平衡延迟和噪音。
-
-2. 优化通道带宽度,匹配市场波动频率。
-
-3. 测试不同止盈止损设置。动态止损更有效。
-
-4. 增加趋势、振荡指标等判断大市。
-
-5. 加入时间段过滤,避开重大事件影响。
-
-## 总结
-
-该策略通过移动平均线通道实现简单的趋势跟随,但需要强化参数优化和风险控制。在此基础上,可引入更多技术指标进一步完善策略逻辑。
-
-|| 
 
 ## Overview
 
@@ -112,7 +60,6 @@ This strategy uses moving averages to form a price channel and generate signals 
 
 The strategy achieves simple trend following through moving average channels, but needs stronger parameter optimization and risk control. More technical indicators can then be introduced to further improve strategy logic.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/996cf9689c07f63d05.png)
-[trans]
-
-## 概述
-
-该策略基于海因阿希均线进行交易信号的生成。其中,买入和卖出信号的产生考虑到了海因阿希收盘价与75百分位价格水平的交叉以及海因阿希收盘价高于移动平均线这两个因素。
-
-## 策略原理
-
-该策略使用海因阿希均线替代普通K线进行分析,这种均线过滤掉市场噪音,更有利于发现趋势和反转信号。具体来说,该策略结合百分位数通道和移动平均线来产生交易信号:
-
-1. 当海因阿希收盘价上穿75百分位价格时产生买入信号。
-2. 当海因阿希收盘价下穿5日移动平均线时产生卖出信号。
-
-此外,该策略还设定了止损距离和追踪止损来控制单边风险。
-
-## 策略优势
-
-1. 使用海因阿希均线可更清晰地识别趋势,并及时发现反转信号。
-2. 结合百分位数通道,可确定价格是否处于“过热”或“超卖”状态,从而判断买入和卖出的时机。
-3. 设置止损和追踪止损有助于主动控制风险,避免超出可承受的损失。
-
-## 策略风险
-
-1. 海因阿希均线本身会产生滞后,可能错过短线操作的最佳点位。
-2. 百分位数通道并不能完全确定价格的转折点,存在一定的假信号率。
-3. 止损距离设定不当可能过于宽松或过于紧绷,进而影响策略表现。
-
-为降低上述风险,可以适当调整移动平均线周期或调整止损比例等。
-
-## 策略优化
-
-1. 测试不同移动平均线组合,找到最佳参数。
-2. 测试不同百分位数通道参数,确保捕捉价格的“热区”。
-3. 结合其他指标对买卖信号进行验证,过滤假信号。 
-4. 动态调整止损距离。
-
-## 总结
-
-本策略整合海因阿希均线、百分位数通道和移动平均线多个指标,形成交易系统。该系统能有效识别趋势方向,并设置止损来控制风险,是一个值得考量的量化交易策略。通过优化参数以及加入其他辅助指标,有望进一步提高系统的稳定性。
-
-|| 
 
 
 ## Overview
@@ -91,7 +50,6 @@ To mitigate the risks, parameters like moving average periods and stop loss perc
 
 This strategy combines Heikin Ashi candles, percentile channels and moving averages to form a systematic approach, capable of identifying trends and controlling risk via stop loss. Further performance improvement can be expected by optimizing parameters and incorporating complementary indicators.
 
-[/trans]
 
 > Strategy Arguments
 

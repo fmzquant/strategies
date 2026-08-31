@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a2a134a6be2b9cafd9.png)
 
-[trans]
-
-
-### 概述
-
-该策略是一种较为复杂的动量突破策略,同时结合了多种技术指标进行判断,实现不同方向和阶段的多次分批进场,以达到套利的目的。
-
-### 原理
-
-该策略主要结合了动量指标MACD、超买超卖指标RSI以及布林带进行多空方向判断。当MACD线高于0且RSI低于超卖线时为多头信号,当MACD线低于0且RSI高于超买线时为空头信号。同时结合布林带上下轨进行突破判断,进一步确认交易信号。 
-
-在具体的实现上,策略首先判断MACD线和RSI的表现,确认基本面;然后根据布林带上轨、下轨的突破,采取不同数量的分批建仓。在多头阶段,会在布林带下轨附近逐步加仓做多,加仓幅度越来越大;在空头阶段,会在布林带上轨附近逐步加空,加空量也逐渐放大。这样通过不同方向和不同价格的分批套利,可获得更大的累积盈利。
-
-同时,策略还会结合对最高价和最低价的跟踪来设置止损和止盈,对订单进行相应管理。总体来说,该策略综合运用了多种分析工具,通过分批套利获得更佳回报。
-
-### 优势
-
-1. 结合多种指标判断,避免单一工具的误判
-2. 采用分批加仓的方式,可放大盈利幅度
-3. 设置止损止盈点,有助于避免冲高回落带来的亏损
-4. 回撤可控,不会出现大幅度亏损的情况
-
-### 风险及解决
-
-1. 布林带上下轨突破不是百分百可靠的交易信号,可能存在一定的假信号风险。可考虑增加其他指标进行确认,如K线形态、成交量等。
-
-2. 逐步加仓需要准确掌握市场节奏,如果出现急速调头可能造成较大损失。可适当减少加仓次数,或设置更为宽松的止损点。
-
-3. 需要关注交易品种的流动性情况,流动性较差的品种不宜采用较大数量的分批套利。
-
-4. 回测数据不等于实盘,实盘中手续费、滑点等成本还需考虑在内。可以适当放宽止损止盈幅度留有余地。
-
-### 优化方向
-
-1. 可以测试不同参数组合,如布林带周期、标准差倍数、RSI参数等,寻找最优参数。
-
-2. 可以探索其他套利方式,如fixed fraction、kelly criterion等资金管理策略。
-
-3. 可以结合机器学习等方法实现参数的动态优化。
-
-4. 可以引入更多数据源,如文本情绪分析、社交数据等辅助判断市场行情。
-
-5. 可以探索futures时间价差进行套利,进一步扩大收益空间。
-
-### 总结
-
-本策略综合运用多种技术指标,采取分批套利方式,设置止损止盈管理风险,是一种较完整的趋势跟踪策略。但仍需警惕假信号和急速调头的风险,适当调整参数及资金管理方式则可获得更稳定的超额收益。如果进一步结合机器学习等手段进行动态优化,该策略的表现还具有提升的空间,是值得长期跟踪和积累的。
-
-|| 
 
 ### Overview
 
@@ -109,7 +60,6 @@ Meanwhile, the strategy also tracks the highest and lowest price to set stop los
 
 This strategy comprehensively uses multiple technical indicators, takes staged pyramiding, manages risks with stop loss and take profit, making it a relatively complete trend following strategy. But risks like false signals and rapid reversals should be alerted, properly adjusting parameters and position sizing can lead to more steady excess returns. Further optimization with machine learning etc. can improve strategy performance. It is worth long-term tracking and accumulating.
 
-[/trans]
 
 > Strategy Arguments
 

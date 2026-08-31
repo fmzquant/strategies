@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略综合运用均量线、布林带和时间段量等多种指标,识别价格趋势的启动和结束,进行趋势追踪操作。策略通过多种指标确认,可有效过滤假突破。
-
-## 策略原理
-
-该策略包含以下关键步骤:
-
-1. 计算快速均量线和慢速均量线。均量线计算使用VWAP而不是收盘价,可更准确反映真实交易价格。
-
-2. 计算均量线的平均值,并以该平均值为基础绘制布林带。布林带可判断价格波动率是否扩大,提示趋势启动。
-
-3. 引入时间段量(TSV)指标,判断交易量是否在扩大,从而确认趋势存在。
-
-4. 当快速均量线上穿慢速均量线,价格高于布林上轨且TSV大于0时,产生买入信号;反之出现卖出信号。
-
-5. 使用均量线回撤以及布林下轨作为止损平仓信号。
-
-## 策略优势
-
-- 使用多种指标确认,可有效过滤假突破,识别趋势开始
-
-- 均量线计算方法可更准确反映真实交易价格
-
-- 结合波动率指标判断趋势存在与否
-
-- 增加交易量指标,确认趋势发展中
-
-- 设置合理的止损和止盈标准,可控制风险
-
-- 参数可配置,可以灵活调整至最佳状态
-
-## 策略风险
-
-- 多指标组合判断,存在参数优化难度大的问题
-
-- 均量线和布林带都存在滞后问题,可能带来止损不够及时
-
-- 时间段量指标对参数设置敏感,不同市场需要调整
-
-- 在盘整市场中,存在产生较多假信号的可能性
-
-- 未考虑交易成本的影响,实际盈亏会弱于回测结果
-
-## 策略优化方向
-
-- 尝试采用机器学习方法自动优化参数组合
-
-- 设置动态移动止损或追踪止损,更好地锁定利润
-
-- 引入交易量能量指标,避免量能背离导致的失误交易
-
-- 结合波浪理论,判断目前处于趋势的早中后期,动态调整策略参数
-
-- 考虑实际交易成本影响,设置最小止盈幅度以控制成本效率
-
-## 总结
-
-本策略综合考量多种指标提供良好的趋势识别能力,可以有效判断真实趋势的启动和结束。通过参数优化、止损优化以及过滤器优化,可以进一步提升策略的稳定性。但整体来说,作为趋势追踪策略,其回撤和盈亏比例仍然需要承担一定风险。需要交易者耐心等待机会,且具备严格的风险管理意识。
-
-|| 
 
 ## Overview
 
@@ -133,7 +70,6 @@ The strategy involves the following key steps:
 
 This strategy provides good trend identification by integrating multiple indicators. It can effectively determine the start and end of real trends. Further improvements in stability can be achieved through parameter optimization, stop loss optimization and filter optimization. But overall, as a trend following strategy, it still carries certain levels of drawdown and risk-reward ratios. Traders need patience to wait for opportunities and strict risk management mindset.
 
-[/trans]
 
 > Strategy Arguments
 

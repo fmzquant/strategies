@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b28de5ca210cbe9cfd.png)
-[trans]
-
-## 概述
-
-双向RSI突破策略是一个利用RSI指标识别价格反转点的算法交易策略。它通过比较RSI指标与设定的上下阈值,判断行情是否超买超卖并发出交易信号。
-
-## 策略原理
-
-该策略主要依赖RSI指标判断行情。RSI指标基于一定周期内收盘价的变化计算得出,它反映了股票的买卖力道。当RSI上穿设定的上阈值(默认75)时,表示股票进入超买区域;当RSI下穿设定的下阈值(默认25)时,表示股票进入超卖区域。
-
-策略判断规则:
-
-1. 当RSI上穿上阈值时,做空;
-2. 当RSI下穿下阈值时,做多;
-3. 止损或止盈后平仓。
-
-其交易逻辑简单清晰,参考参数设定合理,可配置空间大,适合用来捕捉行情中的较大趋势。
-
-## 优势分析
-
-该策略具有如下优势:
-
-1. 逻辑简单,容易理解和实现;
-2. 参考参数设定合理,可进行个性化配置;
-3. 可配置反转交易逻辑,灵活应对行情;
-4. 能有效识别价格反转点,捕捉大趋势。
-
-总体来说,该策略参考参数设定合理,实现简单,通过RSI指标可有效判断价格反转,适合中长线捕捉行情大趋势,是一款易于掌握使用的量化策略。
-
-## 风险分析
-
-尽管该策略较为简单可靠,我们也不能忽视其面临的潜在风险:
-
-1. RSI指标发出错误信号的概率较大。RSI并不能完美预测价格反转,可能出现误判。
-2. 趋势行情中连续止损的可能。RSI指标难以区分正常范围调整与趋势反转。
-3. 震荡行情中亏损较多。RSI指标无法有效判断震荡走势,此环境下策略损失加大。
-
-为控制风险,我们需要注意以下几点:
-
-1. 适当调整参数,防止误判率过高;
-2. 结合其他指标确认交易信号,提高准确性;  
-3. 加大止盈比例,减小单笔止损;
-4. 注意规避震荡行情的交易。
-
-## 优化方向  
-
-考虑到该策略主要面临反转误判和震荡行情亏损的风险,我们可以从以下几个方面进行优化:
-
-1. 结合其他指标进行信号过滤。例如KDJ、MACD等指标可发挥过滤作用,避免误判。
-2. 增加条件单次止损额度。适当放大单次止损空间,有助于策略跟大趋势运行。
-3. 设定开仓频率限制。加入每定周期只做一次或N次交易的逻辑閾値,可控制过于密集开仓。
-4. 设置行情状态判断。判断策略只在趋势行情下运行,避开震荡行情,可大幅优化策略收益风险比。
-
-## 总结  
-
-双向RSI突破策略总体而言是一个简单实用的量化策略。它通过RSI指标判断价格反转,实现了简单的趋势跟踪。尽管存在一定误判风险,但可通过参数调整和信号过滤进行优化,在捕捉中长线趋势中发挥重要作用。其逻辑简明,适合量化交易的初学者参考学习。通过优化应用,本策略可望获取较为稳定的量化收益。
-
-
-||
 
 ## Overview
 
@@ -124,7 +65,6 @@ Considering the main risks faced by this strategy are reversal misjudgements and
 ## Conclusion   
 
 In summary, the dual RSI breakout strategy is a simple and practical quantitative strategy. It identifies price reversals via RSI to achieve simple trend following. Although certain misjudgement risks exist, optimizations like parameter tuning, signal filtering can help mitigate this and allow it to play an important role in catching medium- to long-term trends. Its logic is straightforward, making it suitable for beginner quants to reference and learn from. With further optimizations, this strategy shows promise in obtaining relatively stable quantitative returns.
-[/trans]
 
 > Strategy Arguments
 

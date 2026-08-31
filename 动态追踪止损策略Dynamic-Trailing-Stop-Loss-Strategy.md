@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1157348bf106fa1d47a.png)
-[trans]
-
-## 概述
-
-动态追踪止损策略是一个利用追踪止损机制的量化交易策略。该策略基于趋势跟踪理论,设置追踪止损线,实现止损确认和追踪止损调整。主要用于控制单笔交易的止损,最大限度锁定盈利,降低交易风险。
-
-## 策略原理  
-
-动态追踪止损策略的核心在于设定三个关键参数:初始止损距离、追踪止损距离和追踪止损触发距离。当买入信号触发后,根据买入价格和设定的初始止损距离计算出初始止损价。随后每根K线都会判断是否达到追踪止损触发条件,如果达到则会设置新的追踪止损价。新的追踪止损价会基于当前收盘价和追踪止损距离计算。这样,只要价格向有利方向运行,追踪止损线就会不断上调锁定盈利。当价格反转触发追踪止损线时,发出卖出信号。
-
-该策略同时设有低位止损,无论是否启动追踪止损,如果价格跌破低位止损则会直接止损。低位止损用于防范突发事件的价格跳空。所以,动态追踪止损策略通过上下双线形式的动态止损机制,使止损线能够自动跟踪有利走势,同时防止损失过大。
-
-## 策略优势  
-
-1. 通过追踪止损不断锁定盈利,避免给回补过多机会。
-
-2. 采用上下双线止损结构,既确保止损线能及时跟进,又防止损失过大。
-
-3. 利用持续判断机制进行止损调整,操作简单,容易实现。
-
-4. 可根据市场和个股特点,调整参数优化止损效果。
-
-5. 无需预测市场走向,跟随趋势运行即可。
-
-## 策略风险  
-
-1. 参数设置不当可能导致止损过于宽松或过于紧迫。过于宽松则无法有效止损,过于紧迫则容易被价格普通波动击出。
-
-2. 突发事件造成价格跳空下跌时,可能导致止损无效,应配合其它防护措施。
-
-3. 交易费用和滑点可能对止损线触发后的实际卖出价格产生影响。
-
-4. 适应性并不强,在特定阶段,例如震荡区间中效果并不佳。
-
-对策:
-1. 建议根据回测和实盘结果不断优化参数。
-2. 可设置更宽的低位止损防范跳空。
-3. 计算止损价时考虑交易费用和滑点影响。 
-4. 可结合趋势和波动判断指标使用。
-
-## 策略优化方向  
-
-1. 将追踪止损线调整为百分比变化方式,可以更好跟踪不同价格水平下的股价变动。
-
-2. 添加波动率指标,判断大幅波动时暂停追踪止损,避免普通波动触发止损。
-
-3. 利用机器学习方法自动优化参数。训练样本选择最近一段时间内参数组合的收益率。
-
-4. 增加开仓条件判断,结合趋势、支持阻力等指标,避免在震荡行情开仓。
-
-
-## 总结  
-
-动态追踪止损策略通过双线止损机制,设置追踪止损线,实现止损确认和追踪止损调整。可根据价格变化自动调整止损距离,用于锁定盈利、减少回吐和控制损失。该策略操作简单,易于实现,可根据市场情况优化参数,与其他策略组合使用效果更佳。但也存在一定局限性,建议调整完善后再投入实盘运用。
-
-||
 
 ## Overview  
 
@@ -120,7 +64,6 @@ Countermeasures:
 
 The dynamic trailing stop loss strategy sets trailing stop loss lines through a double-line stop loss mechanism to confirm stop loss and adjust trailing stop loss based on price changes. It can automatically adjust stop loss distance to lock in profits, reduce pullbacks and control losses. With simple operation and easy implementation, this strategy can be further optimized based on market conditions and used together with other strategies for better performance. But it also has some limitations. It is advisable to improve and test it sufficiently before applying it in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

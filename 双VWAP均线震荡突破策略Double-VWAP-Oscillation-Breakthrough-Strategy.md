@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1358a08a97fbd446183.png)
 
-[trans]
-
-## 概述
-
-双VWAP均线震荡突破策略通过双VWAP均线分析市场趋势性,在震荡市场中寻找突破的机会。它结合ADX指标判断市场是否震荡,并利用两条不同标准差的VWAP均线寻找突破口下单入场。
-
-## 策略原理  
-
-该策略主要由以下几部分组成:
-
-1. VWAP设置:计算VWAP均线及其带宽。内部VWAP带宽通过`stDevMultiplier`控制,默认为1;外部VWAP带宽通过`stDevMultiplier`控制,默认为2。
-
-2. ADX设置:计算ADX值判断市场是否震荡。当ADX低于阈值时判断为震荡市场。ADX参数可配置。
-
-3. 入场设置:在震荡市场中,价格突破外部VWAP带宽时入场。可配置止损价位和止盈价格。
-
-4. 限制入场:可选EMA均线或时间段过滤,避免非理想时段入场。
-
-5. 获利方式:跟踪止损或止盈价格断裂时平仓。可选择价格突破外VWAP exiting。  
-
-该策略通过ADX指标判断震荡行情,在价格突破VWAP带宽时寻找入场机会。双VWAP带提供更多过滤,确保入场强力。跟踪止损使获利更稳定。
-
-## 优势分析
-
-1. 双VWAP带提供额外入场过滤,确保入场时机强势。
-
-2. ADX指标判断震荡市场,避免趋势行情下错入。
-
-3. 跟踪止损锁住盈利,避免套牢。
-
-4. 可配置化参数丰富,适应性强。
-
-5. 思路清晰易理解,容易复制和修改。
-
-## 风险及解决  
-
-1. 参数设置不当可能导致过于激进入场或平仓。优化参数组合确保策略稳定。
-
-2. 跟踪止损容易过于激进或保守。结合波动率指标动态调整止损位置。
-
-3. 表现敏感于交易时段。可通过时间过滤器优化,确保高效入场。
-
-4. VWAP指标对异常价格敏感。结合其他指标确认价格合理性。
-
-## 优化方向
-
-1. 动态调整止损幅度。可以根据波动率等指标实时调整止损位置。
-
-2. 多 timeframe 确认入场时机。添加更高 timeframe 的趋势及机构指标,避免逆势入场。
-
-3. 考虑仓位管理。根据波动率和账户资金动态调整仓位百分比。
-
-4. 测试不同 VWAP 周期表现。VWAP 周期设定决定了策略的持仓周期,可作优化。
-
-## 总结  
-
-双 VWAP 均线震荡突破策略通过 ADX 判断市场震荡利用双 VWAP 带提供额外的入场过滤。策略思路清晰,较容易实施。通过参数调整、止损优化、仓位管理等手段可显著提高策略稳定性。
-
-||
 
 
 ## Overview  
@@ -127,7 +68,6 @@ The strategy identifies oscillating markets using the ADX indicator and seeks en
 ## Summary  
 
 The double VWAP oscillation breakout strategy identifies oscillation with ADX and provides additional entry filters with the VWAP bands. The logic is simple to implement. Parameters tuning, stop loss optimization and position sizing can significantly improve stability.  
-[/trans]
 
 > Strategy Arguments
 

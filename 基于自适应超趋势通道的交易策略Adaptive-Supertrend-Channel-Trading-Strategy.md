@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过构建双层超趋势通道,结合价格突破通道进行交易信号产生。同时利用价格波动率调整通道宽度,实现自适应效果。属于趋势跟踪类策略。
-
-## 策略原理
-
-1. 计算价格的标准差和波动率ATR,根据波动率调整超趋势通道的宽度。
-
-2. 构建双层超趋势通道,内层通道更为灵敏,外层通道更稳定。
-
-3. 当价格突破内层或外层超趋势通道时,产生买入或卖出信号。
-
-4. 采用双层通道结构,可以过滤掉部分假突破。
-
-5. 波动率ATR用于调整通道宽度,当波动加大时通道宽度增加,实现自适应效果。
-
-## 优势分析
-
-1. 超趋势通道简单易用,可以较好跟踪趋势。
-
-2. 双层通道结构可以提高信号质量,过滤假突破。
-
-3. 波动率自适应调整通道宽度,使通道更符合不同市场环境。
-
-4. 易于实施,参数调整也较为简单。
-
-5. 可视化通道及突破情况,形成直观的交易信号。
-
-## 风险分析
-
-1. 突破信号可能出现误判,导致不必要的亏损。
-
-2. 无法判断趋势方向,存在逆势交易风险。
-
-3. 自适应调整可能过于灵敏,调整幅度过大。
-
-4. 参数优化不当可能导致过度优化。
-
-5. 作为趋势追踪策略,uddle行情下容易获利不足或亏损。
-
-## 优化方向
-
-1. 测试不同参数对通道自适应效果的影响。
-
-2. 尝试结合均线等指标判断大趋势方向。
-
-3. 优化突破确认机制,避免假突破。
-
-4. 添加止损策略,控制单笔亏损。
-
-5. 评估调整通道参数对交易频率的影响。
-
-6. 可以通过机器学习算法动态优化参数。
-
-## 总结
-
-该策略使用双层自适应超趋势通道捕捉价格趋势。优点是简单直观,可以有效跟踪趋势。但也存在一些突破误判和趋势判断错误的风险。通过参数优化以及配套机制的补充,可以进一步改进策略效果,将其打造成一个稳定高效的趋势追踪系统。
-
-||
 
 
 ## Overview
@@ -130,7 +69,6 @@ This strategy builds double-layer supertrend channels and generates trading sign
 
 This strategy uses adaptive double supertrend channels to capture price trends. It is simple and intuitive in tracking trends. But risks include false breakouts and incorrect trend direction. Further parameter tuning and supplementary mechanisms can improve strategy performance, making it a robust trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

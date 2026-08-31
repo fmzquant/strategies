@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e3a972c0e317a95312.png)
 
-[trans]
-
-### 概述
-
-该策略将逆向交易方法(买入低点)与趋势跟踪逻辑(只有当价格高于MA200时)相结合。策略旨在找到购买资产低点时获利最可能的最佳时机。长期移动平均线上方的价格表示提高了从购买短期价格疲软的资产中获利的可能性。
-
-### 策略原理  
-
-该策略通过计算价格在回顾期内的总体变化百分比,来判断价格是否处于相对低点。当总体变化百分比小于-3%时,认为价格处于低点。此外,策略还设置了200天简单移动平均线作为判断趋势的指标。只有当价格高于200天移动平均线时,才会发出买入信号。这样,策略同时利用MEAN回归原理,以及多空配对原理,在趋势向上时买入低点,实现获利。
-
-
-### 优势分析
-
-该策略结合了趋势交易和逆向交易的优点。一方面,使用长期移动平均线判断趋势,避免在趋势下降期间盲目买入。另一方面,逆向买入低点又使其能在短期调整的时候获得较好的入场时机。这两者的结合,既保证了交易的安全性,也提高了获利概率。此外,策略参数优化空间大,可根据不同市场调整参数,具有较强的适应性。
-
-
-### 风险分析  
-
-该策略最大的风险在于买入信号发出后,价格可能继续下跌,导致亏损扩大。此外,如果市场长期横盘,价格无法突破移动平均线,也会导致策略失效。为降低这些风险,可适当缩短移动平均线周期,并优化买入条件,确保有足够的安全边际。
-
-
-### 优化方向  
-
-该策略可从以下几个方面进行优化:1)优化移动平均线周期,适应不同市场;2)优化买入条件,确保有足够边际;3)增加止损策略,控制亏损;4)结合其他指标判断趋势及低点,提高准确性。
-
-
-### 总结  
-
-该策略整体来说是一种典型的结合趋势跟踪和逆向交易思想的策略。它既保证了交易安全性,也提高了获利概率。具有较强的实战价值。通过参数优化和止损策略优化,可以进一步增强策略稳定性和实战效果。
-
-||
 
 ### Overview  
 
@@ -71,7 +40,6 @@ The strategy can be optimized in several aspects: 1) optimize the moving average
 
 In general, this is a typical strategy that combines trend following and contrarian trading ideas. It ensures both trading security and higher winning probability, with strong practical value. Further enhancements on stability and real trading effects can be achieved through parameter optimization and stop loss optimization.
 
-[/trans]
 
 > Strategy Arguments
 

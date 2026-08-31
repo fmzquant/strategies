@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/170f43cae2d1f660954.png)
-[trans]
-
-## 概述
-
-该策略融合了多重ATR动态止损和改进型Renko砖块,旨在捕捉Intraday的趋势行情。它结合了趋势指标和砖块指标,实现了多时间框架分析,可以有效识别趋势方向并及时止损。
-
-## 策略原理
-
-该策略的核心在于多重ATR止损机制。它设置了3组ATR动态止损,参数分别为5倍ATR、10倍ATR和15倍ATR。当价格跌破这3组止损线时,说明趋势发生转变,此时平仓。这种多重止损设定,可以有效过滤掉短期波动带来的虚假信号。 
-
-另一核心部分是改进型Renko砖块。该砖块根据ATR值划分增量,并结合SMA指标判断趋势方向。它比普通Renko砖块更敏感,可以更早确认趋势变化。当砖块颜色发生改变时,表示趋势转变,可作为止损信号。
-
-入场条件为当价格突破3组ATR止损向上时做多,当价格跌破3组ATR止损向下时做空。出场条件为价格触发任一组ATR止损或Renko砖块颜色发生变化时平仓。
-
-## 策略优势
-
-- 多重ATR止损,有效控制风险
-- 改进型Renko砖块,更加敏感,可提前止损
-- 结合趋势指标和砖块指标,确保捕捉趋势
-- 多时间框架分析,判断趋势方向更可靠 
--  Parameters可调整,适应不同市场环境
-
-## 策略风险及优化
-
-该策略主要风险在于止损被突破造成损失扩大。可通过以下方法优化:
-
-- 调整ATR止损的倍数,在趋势较强的市场可适当放宽;趋势较弱时应适当收紧
-- 调整Renko砖块的ATR周期参数,以平衡灵敏度与稳定性
-- 增加其他止损指标,如Donchian通道,确保止损更可靠
-- 增加过滤器,避免在盘整中频繁交易
-
-## 总结
-
-该策略整体来说适合 Intraday 强势趋势行情,特点是止损设置科学,砖块指标可提前识别趋势转变。通过参数调整可适应不同市场环境,是一款值得实盘验证的趋势追踪策略。
-
-||
 
 ## Overview
 
@@ -80,7 +44,6 @@ Main risk is stop loss penetration causing extended losses. Can optimize via:
 
 This strategy works well for strong intraday trends. Its scientific stop loss mechanism and early trend change detection by improved Renko bricks are noteworthy. Fine-tuned parameters can adapt it to varying market conditions. Worth live testing as a trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

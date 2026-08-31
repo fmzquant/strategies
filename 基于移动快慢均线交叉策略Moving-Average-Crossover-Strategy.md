@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f717d68821fa05cab8.png)
-[trans]
-
-
-## 概述
-
-移动平均线交叉策略是一种基于移动平均线的简单有效的量化交易策略。该策略利用快速移动平均线和慢速移动平均线的交叉作为买入和卖出信号。当快线从下方向上突破慢线时,产生买入信号;当快线从上方向下跌破慢线时,产生卖出信号。
-
-## 策略原理  
-
-该策略的核心逻辑在于利用移动平均线来判断市场趋势。移动平均线本身就具有滤波随机市场噪音的功能。快速移动平均线能较快地响应价格变化,反映最新趋势;而慢速移动平均线对最新价格变化响应较慢,代表着中长期趋势。快线突破慢线意味着短期趋势反转到与中长期一致,因此产生交易信号。
-
-具体来说,该策略首先定义快速移动平均线sig1和慢速移动平均线sig2。然后根据sig1和sig2的交叉关系判断买卖点。当sig1从下方突破sig2时产生买入信号longCondition;当sig1从上方向下跌破sig2时产生卖出信号shortCondition。策略接着在满足买入和卖出条件时下单,并设置止损和止盈退出订单。
-
-## 优势分析
-
-该策略优势显著:
-
-1. 逻辑简单,容易理解和实现
-2. 参数调整灵活,不同市场条件下可调优
-3. 可结合其他指标过滤信号,提高稳定性  
-4. 绩效良好,举例EMA15-EMA30组合在EURCHF日线数据上获胜率可达83%
-
-## 风险分析  
-
-该策略也存在一定风险:  
-
-1.  whipsaw效应严重,止损设置很重要  
-2. 大盘震荡行情效果不佳  
-3. 需要反复测试调参才能适应不同品种和周期  
-
-优化措施:
-
-1. 增加其他指标判断,避免whipsaw
-2. 调整移动平均线类型和参数,适应不同品种  
-3. 优化止损止盈比例,控制风险
-
-## 总结
-
-移动平均线交叉策略整体而言是一种逻辑简单、实用性强的量化策略。通过参数调优和适当优化,能够在多种市场环境下稳定盈利。值得量化交易者重点研究和应用。
-
-|| 
 
 ## Overview
 
@@ -89,7 +48,6 @@ Optimization measures:
 
 In general, the moving average crossover strategy is a quant strategy with simple logic, strong practicality and stability. With parameter tuning and proper optimizations, it can generate steady profits in various market environments. Worth focusing on and applying for quantitative traders.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18194a5612321700ac5.png)
-[trans]
-
-## 概述
-
-Alpha趋势跟踪止损策略是在Alpha趋势策略的基础上加入了跟踪止损机制,可以更有效地控制风险,提高整体回报率。
-
-## 策略原理
-
-该策略首先利用Alpha指标判断价格趋势,当Alpha指标上扬时为看涨信号,Alpha指标下跌时为看跌信号。策略根据Alpha指标的金叉死叉来产生买入和卖出信号。
-
-同时,策略启用了跟踪止损机制。跟踪止损值默认为当日收盘价的10%,当持有多头头寸时,如果价格下跌超过止损值则止损退出;当持有空头头寸时,如果价格上涨超过止损值则止损退出。这样可以更好地锁定盈利,降低风险。
-
-## 优势分析
-
-1. Alpha趋势判断价格趋势的能力较强,效果好于普通移动平均线等指标。
-
-2. 启用跟踪止损机制,可以有效地控制单笔亏损,减少风险。
-
-3. 该策略风险控制能力较强,即使行情不利也能尽量减少损失。
-
-4. 该策略参考数较少,计算效率高,适合高频交易。
-
-## 风险分析
-
-1. 该策略在横盘调整时会产生较多不必要的交易信号,这会增加交易成本和滑点损失。
-
-2. 启用跟踪止损时需要合理设置止损比例,比例过大过小都不利于策略盈利。
-
-3. 标的价格剧烈波动时,会导致止损被触发的概率较大,增加了套牢风险。
-
-4. 优化止损参数时需要综合考虑标的特性、交易频率等多种因素,不能只追求最大化收益。
-
-以上风险可以通过调整Alpha指标参数,设置DYNAMIC止损,缩短交易周期等方法进行缓解。
-
-## 优化方向  
-
-1. 可以测试不同的指标参数,寻找更适合的Alpha指标参数组合。
-
-2. 尝试基于ATR动态设置止损幅度,使其能更好地适应市场波动。
-
-3. 可以结合其他指标筛选信号,如MACD、KD等,过滤掉一些误信号。
-
-4. 可以基于真实盘和回测结果自动优化参数,使用机器学习等技术提高参数选择的智能化。
-
-## 总结
-
-Alpha趋势跟踪止损策略融合了趋势判断与风险控制,可以有效判别价格趋势,并锁定盈利降低风险。相比于简单的趋势跟踪策略,该策略可以获得更高的稳定收益。通过多方面的优化,有望获得更出色的绩效。
-
-||
 
 ## Overview
 
@@ -106,7 +57,6 @@ The above risks could be alleviated by adjusting the Alpha indicator parameters,
 
 The Alpha Trend Strategy with Trailing Stop Loss combines trend determination and risk control. It can effectively identify price trends and lock in profits to reduce risks. Compared to simple trend tracking strategies, this strategy can obtain higher steady returns. With various aspects of optimization, it has the potential to achieve even better performance.
 
-[/trans]
 
 > Strategy Arguments
 

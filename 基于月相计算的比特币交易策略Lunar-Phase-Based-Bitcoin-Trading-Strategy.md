@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b7d266631abad693bd.png)
 
-[trans]
-
-## 概述
-
-本策略基于月相周期作为交易信号,结合RSI、MACD、OBV等多个指标来识别比特币等数字货币的交易机会。该策略主要优势是利用月相阶段这一外部因素作为交易启发信号,与大多数只依赖技术指标的策略不同,可以在一定程度上避免被市场操纵。
-
-## 策略原理
-
-该策略的核心逻辑是根据月相周期的不同阶段来判断是否符合做多或做空的条件。月相计算公式为:
-
-月相周期长度=29.5305882天
-已知某次满月时间,可以计算从该满月开始到当前时间的天数
-月相年龄=距离已知满月的天数%月相周期长度
-月相值=(1 + cos(月相年龄/月相周期长度*2*π))/2
-
-根据月相值的大小可以判断当前是什么月相。月相在0到1之间变化,值越大表示离满月越近,值越小表示离新月越近。
-
-策略根据月相阈值判断是否符合做多或做空条件。如果月相值大于做多阈值(默认0.51),则有机会做多;如果月相值小于做空阈值(默认0.49),则有机会做空。
-
-此外,策略还结合交易量、RSI、MACD等指标来避免在非理想情况下发出交易信号。只有在交易量放大、RSI和MACD符合条件时,才会打开仓位。
-
-## 优势分析
-
-该策略主要有以下几个优势:
-
-1. 利用月相提供独特的交易信号,可以在一定程度上规避市场操纵
-2. 结合多种指标判断市场状况,避免在不利环境中交易
-3. 采用平均真实波幅ATR来计算合理交易量,有效控制单笔交易最大损失  
-4. 设置回撤止损来预防大额亏损
-5. 应用OBV判断资金流向,避免逆势交易
-6. 设置移动止损来锁定盈利
-
-总的来说,该策略充分利用月相的独特优势,并辅以多种技术指标来识别高概率交易机会,通过风险控制手段有效控制交易风险。
-
-## 风险分析
-
-该策略主要存在以下风险:  
-
-1. 月相与市场走势可能偶尔会失效  
-2. 回撤止损点设置不当可能造成策略过早停止 
-3. MACD、RSI等指标发出错误信号的概率  
-4. 移动止损点设置不当可能使策略错过更大利润
-
-为控制这些风险,可以采取以下措施:
-
-1. 调整月相阈值,确保月相信号有效率
-2. 测试多组回撤止损参数,选择最优参数
-3. 调整MACD和RSI的参数,确保它们能高效发出信号  
-4. 测试多组移动止损参数,追求最大利润
-
-通过参数优化和综合指标应用,可以在很大程度上规避交易风险。
-
-## 优化方向 
-
-该策略仍有进一步优化的空间:  
-
-1. 可以测试不同月相参数,寻找最佳阈值;
-2. 可以尝试结合更多指标进行组合交易,提高策略效率;  
-3. 可以优化止损机制参数,平衡风险和收益;
-4. 可以扩展更多交易品种,验证策略的泛化能力。
-
-## 总结
-
-本策略通过月相独特的交易信号,配合主流技术指标,实现了高效的比特币交易。相比单一指标策略,本策略可以更好抵御市场操纵风险,具有独特优势。通过止损预防风险和优化参数,可以稳定获取较好收益。该策略仍可进一步提升,具有很大的应用前景。
-
-||
 
 ## Overview  
 
@@ -141,7 +75,6 @@ There is still room for further optimization of this strategy:
 
 This strategy realizes efficient Bitcoin trading through unique lunar phase trading signals, combined with mainstream technical indicators. Compared to single indicator strategies, this strategy can better hedge against market manipulation risks and has unique advantages. By leveraging stop loss to prevent risks and parameter optimization, steady and good returns can be obtained stably. There is still large room for improving this strategy and it has promising application prospects.   
 
-[/trans]
 
 
 > Strategy Arguments

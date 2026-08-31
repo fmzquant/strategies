@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a0e22f7a52c5846796.png)
 
-[trans]
-
-## 概述
-
-双向交叉零轴Qstick指标回测策略是基于Tushar Chande开发的Qstick技术指标的趋势跟踪和交易信号生成策略。该策略通过计算股票的开盘价和收盘价的移动平均差值,判断市场的买入压力和卖出压力,并在该差值指标交叉零轴时生成交易信号。
-
-## 策略原理
-
-双向交叉零轴Qstick策略的核心指标是Qstick。Qstick指标是通过计算一定周期内收盘价与开盘价的差值的移动平均来获得的。当Qstick大于0时,表示该周期内收盘价整体高于开盘价,多头力量占优;当Qstick小于0时,表示该周期内开盘价整体高于收盘价,空头力量占优。
-
-该策略的交易信号来自Qstick指标何时穿过零轴。当Qstick从下方向上穿过零轴时产生买入信号,这表示买入压力开始高于卖出压力,可以建立多头头寸;相反,当Qstick从上方向下穿过零轴时产生卖出信号,表示卖出压力开始加大,需要清仓卖出头寸。此外,该策略也可绘制Qstick值的移动平均线作为信号线,Qstick指标何时穿过该信号线也会产生交易信号。
-
-该策略允许选择反转交易。即当原本应该产生买入信号时,实际采取卖出操作;当原本应该产生卖出信号时,实际采取买入操作。这可以用于反转跟随市场意识形态的主流投资者。
-
-## 优势分析
-
-双向交叉零轴Qstick策略具有以下优势:
-
-1. 使用简单直观的指标判断市场买卖压力,信号生成清晰
-2. 采用移动平均差值指标,可有效滤除市场噪音
-3. 可绘制信号线,避免错误信号
-4. 支持反转交易,可用于跟踪主流投资者
-5. 可自定义参数,适应不同股票和市场环境  
-
-## 风险分析
-
-双向交叉零轴Qstick策略也存在一些风险:  
-
-1. Qstick指标延迟识别趋势转折点,可能错过最佳入场点
-2. 信号频繁,交易成本较高  
-3. 反转交易风险大,需要谨慎运用
-
-可以通过以下方法降低风险:
-
-1. 优化Qstick周期参数,降低指标延迟  
-2. 增大信号线周期参数,减少错误信号
-3. 只在特定阶段采取反转交易,并控制仓位规模
-
-## 优化方向  
-
-双向交叉零轴Qstick策略可以从以下几个方面进行优化:  
-
-1. 结合其他指标过滤信号,例如成交量指标、波动率指标等,避免在非趋势环境下产生错误信号
-2. 增加止损策略,在亏损达到一定比例时止损
-3. 进一步研究确定最佳的Qstick和信号线周期参数组合
-4. 通过机器学习方法自动确定最优参数
-5. 在特定行业或个股中测试该策略的效果
-
-## 总结  
-
-双向交叉零轴Qstick策略利用简单的指标判断买卖压力变化,在Qstick指标交叉零轴时产生交易信号,可有效捕捉价格趋势。该策略直观易懂,适合初学者使用,也可通过多种手段进行优化,适应高级交易员的需要。但是该策略也存在一定缺陷,需要谨慎运用。总体来说,这是一个非常实用的趋势跟踪和信号生成策略。
-
-||
 
 ## Overview  
 
@@ -115,7 +62,6 @@ The bi-directional crossing zero axis Qstick strategy can be optimized in the fo
 
 The bi-directional crossing zero axis Qstick strategy utilizes simple indicators to determine changes in buying and selling pressure, and generates trading signals when the Qstick indicator crosses the zero axis, which can effectively capture price trends. This strategy is intuitive and easy to understand, suitable for beginners, and can also be optimized in many ways to meet the needs of advanced traders. However, this strategy also has certain flaws and needs to be used cautiously. In general, this is a very practical trend tracking and signal generation strategy.
 
-[/trans]
 
 > Strategy Arguments
 

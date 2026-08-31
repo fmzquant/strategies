@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12e828a0afa37f8fd84.png)
-[trans]
-
-## 概述
-
-本策略通过结合动态RSI指标、CCI指标以及多重MA均线,实现多因子驱动的量化交易策略。该策略综合考虑了趋势、超买超卖等多个维度,进行判断和交易信号产生。
-
-## 策略原理
-
-### 技术指标
-
-- MA均线:计算一定周期内的收盘价平均值,判断价格趋势
-- RSI相对强弱指标:判断超买超卖区域
-- CCI顺势指标:判断超买超卖状态
-- Stoch KDJ指标:判断随机指标与主趋势偏离情况
-
-### 交易信号
-
-买入信号:MA12上穿MA26,CCI低于100(超卖),Stoch KDJ低于80(超卖)
-
-卖出信号:RSI下穿动态阈值,Stoch KDJ高于80(超买)
-
-## 策略优势
-
-1. 多因子驱动,综合判断,降低假信号
-2. 动态阈值sellable,实时检测超买超卖
-3. 结合趋势、随机、主流多种技术指标
-4. 采用多组参数调优,灵活度高
-
-## 策略风险
-
-1. 多因子组合过于复杂,参数调优难度大
-2. 策略表现与参数选择高度相关
-3. 需严格按照量化流程进行参数优化
-4. 存在较高的曲线拟合风险
-
-## 策略优化
-
-1. 更多数据集测试策略稳健性
-2. 多组参数组合测试寻找最优参数
-3. 增加止损机制降低最大回撤 
-4. 增加仓位控制,避免追涨杀跌
-5. 测试不同品种合约的适应性
-
-## 总结
-
-本策略综合运用多种技术指标与多因子驱动判断,通过参数调优与严格的统计验证寻找最佳参数,可以获得较好的策略效果。但复杂程度较高,需防止过拟合风险,同时要控制仓位和止损来降低最大回撤。本策略可进一步扩展至其他品种和时间周期进行优化测试。
-
-||
 
 ## Overview
 
@@ -104,7 +56,6 @@ Sell signal: RSI crosses below dynamic threshold, Stoch KDJ above 80 (overbought
 
 This strategy combines multiple technical indicators and multi-factor driven judgments with parameter tuning and statistical validation to achieve good results. But higher complexity, need to prevent overfitting, and control position sizing and stop loss to reduce maximum drawdown. Can further expand strategy across products and timeframes.
 
-[/trans]
 
 > Strategy Arguments
 

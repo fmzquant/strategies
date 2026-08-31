@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a474deee97b1563108.png)
 
-[trans]
-#### 概述
-N Bars 突破策略是一种基于价格突破的量化交易策略。该策略的主要思路是,当收盘价突破过去N个交易日的最高价时开多仓,当收盘价跌破过去N个交易日的最低价时平多仓。该策略通过比较当前价格与过去N个交易日的最高最低价,捕捉强势突破行情,达到趋势跟踪的效果。
-
-#### 策略原理
-1. 计算过去N个交易日的最高价(highest)和最低价(lowest)。
-2. 如果当前收盘价高于highest,则开多仓(long)。
-3. 如果当前收盘价低于lowest,则平多仓(short)。
-4. 可以选择使用收盘价(close)或者高低价(high/low)作为信号源(source)。
-5. 根据信号源的不同,使用ta.highest和ta.lowest计算最高价和最低价。
-6. 使用ta.crossover和ta.crossunder判断价格突破情况。
-
-#### 策略优势
-1. 逻辑简单清晰,易于实现和优化。
-2. 可以有效捕捉强势突破行情,趋势跟踪能力强。
-3. 参数调优空间大,可以根据不同品种和周期进行优化。
-4. 适用性广,对多数品种和周期都有不错的表现。
-5. 可以灵活选择信号源,提高策略适应性。
-
-#### 策略风险
-1. 对震荡行情和小幅波动行情表现较差,频繁开平仓导致较高的交易成本。
-2. 参数选择不当可能导致过拟合风险。
-3. 趋势转折时可能出现较大回撤。
-4. 单一信号源可能面临信号失真的风险。
-
-#### 策略优化方向  
-1. 增加趋势过滤条件,如ma趋势方向、adx等,减少震荡行情下的交易。
-2. 优化参数选择,如N值、信号源等,提高策略稳定性和盈利能力。
-3. 增加止损和移动止损逻辑,控制单笔交易风险。
-4. 结合多个信号源,提高信号可靠性,如同时考虑收盘价和高低价突破。
-5. 根据不同品种和周期,分别优化参数和逻辑。
-
-#### 总结
-N Bars 突破策略是一个简单实用的量化交易策略,通过捕捉价格突破行情,实现了较好的趋势跟踪效果。该策略逻辑清晰,优化空间大,适用性广,是一个值得进一步研究和优化的量化策略。通过合理的参数优化和逻辑改进,可以进一步提高该策略的稳定性和盈利能力,更好地适应不同市场环境。
-
-|| 
 
 #### Overview
 The N Bars Breakout Strategy is a quantitative trading strategy based on price breakouts. The main idea of this strategy is to open a long position when the closing price breaks above the highest high of the past N bars, and close the long position when the closing price breaks below the lowest low of the past N bars. By comparing the current price with the highest and lowest prices of the past N bars, this strategy aims to capture strong breakout moves and achieve the effect of trend following.
@@ -81,7 +45,6 @@ The N Bars Breakout Strategy is a quantitative trading strategy based on price b
 
 #### Summary
 The N Bars Breakout Strategy is a simple and practical quantitative trading strategy that achieves good trend-following effects by capturing price breakouts. The strategy has clear logic, large optimization space, and wide applicability, making it a quantitative strategy worth further research and optimization. Through reasonable parameter optimization and logic improvement, the stability and profitability of this strategy can be further enhanced to better adapt to different market environments.
-[/trans]
 
 > Strategy Arguments
 

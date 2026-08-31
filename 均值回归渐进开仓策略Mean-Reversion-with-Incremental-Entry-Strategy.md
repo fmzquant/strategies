@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d4d55de4742fc476d7.png)
-[trans]
-## 概述
-
-均值回归渐进开仓策略是HedgerLabs设计的一个先进的量化交易策略脚本,专注于金融市场的均值回归技术。该策略针对于更喜欢系统化方法,并且强调基于价格相对移动平均线的渐进开仓方式的交易者。
-
-## 策略原理  
-
-该策略的核心是简单移动平均线(SMA)。所有入场和出场交易都围绕着移动平均线进行。交易者可以自定义MA长度,使其适用于不同的交易风格和时间范围。
-
-该策略的独特之处在于其渐进开仓机制。当价格从移动平均线上偏离超过一定百分比时,该策略会启动第一个头寸。随后,随着价格继续从移动平均线偏离的程度越来越大,该策略会以交易者定义的渐进方式增加头寸。这种方法可以在市场波动加大时获得更高收益。
-
-该策略还会智能管理头寸。当价格低于移动平均线时做多,高于时做空,以适应不同市场条件。平仓点设定在价格触及移动平均线时,旨在抓住潜在的反转点以实现最优关闭头寸。  
-
-通过启用`calc_on_every_tick`,该策略可以不断评估市场条件并做出及时反应。
-
-## 优势分析
-
-均值回归渐进开仓策略具有以下优势:
-
-1. 系统化程度高,可以减少主观误操作的风险
-2. 渐进开仓可以在市场大幅波动时获得更高收益
-3. 可以自定义参数如MA周期等以适应不同品种
-4. 头寸管理机制较为智能,可以自动调整多空仓位
-5. 出场点选择合理,有利于抓住反转 并关闭头寸
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 依赖技术指标,可能发生平假信号的风险
-2. 无法判断市场趋势,容易被套住
-3. MA参数设置不当可能导致频繁止损
-4. 渐进开仓会加大仓位风险  
-
-可以通过适当优化 exits,更好判断趋势,或适当缩减开仓幅度来缓解上述风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:  
-
-1. 增加剔除趋势条件,避免逆势开仓
-2. 结合波动率指标优化开仓幅度
-3. 优化移动止损以锁定利润
-4. 尝试不同类型的移动平均线
-5. 添加过滤器减少无效信号
-
-## 总结  
-
-均值回归渐进开仓策略专注于均值回归交易技术,采用系统化渐进开仓管理头寸,可自定义参数适用于不同交易品种。该策略在波动市中表现较好,适合关注短线操作的量化交易者。
-
-||
 
 ## Overview
 
@@ -113,7 +62,6 @@ The strategy can be enhanced by:
 
 The Mean Reversion with Incremental Entry strategy focuses on mean reversion techniques using a systemized incremental position sizing approach. With customizable settings, it is adaptable across different trading instruments. It performs well in ranging markets and suits short-term systematic traders.
 
-[/trans]
 
 > Strategy Arguments
 

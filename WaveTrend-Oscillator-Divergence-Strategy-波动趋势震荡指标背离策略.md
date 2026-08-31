@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10cd391a3ffbeeb2711.png)
-[trans]
-#### 概述
-这个策略结合了WaveTrend震荡指标(WT)和成交量加权平均价格(VWAP),通过识别价格和指标的背离来捕捉潜在的趋势反转机会。该策略使用ATR(Average True Range)来确定止损位置,并根据账户风险百分比动态调整头寸规模。该策略的主要优势在于其趋势跟踪能力和风险管理措施,但在震荡市场中可能会遭受亏损。优化方向包括增加额外的过滤条件和改进进出场规则。
-
-#### 策略原理
-1. 计算WaveTrend震荡指标(WT):通过比较当前价格与其通道和平均值之间的差异,生成动量振荡指标。
-2. 计算成交量加权平均价格(VWAP):使用成交量作为权重计算移动平均价格。
-3. 识别价格和WT指标的背离:当价格创新高/新低而指标未能创新高/新低时,表明可能发生趋势反转。
-4. 进场条件:当识别到看涨背离时,开仓做多;当识别到看跌背离时,平仓。
-5. 止损:基于ATR(Average True Range)设置动态止损位置。
-6. 头寸规模:根据账户风险百分比和止损距离动态调整每笔交易的头寸规模。
-7. 背景颜色:根据指标的超买/超卖水平改变背景颜色,提供额外的视觉提示。
-
-#### 优势分析
-1. 趋势跟踪:通过识别价格和指标背离,该策略能够捕捉潜在的趋势反转机会。
-2. 风险管理:使用基于ATR的动态止损和根据风险百分比调整头寸规模,有助于控制潜在损失。
-3. 视觉提示:背景颜色根据指标的超买/超卖状态变化,为交易者提供额外的视觉信号。
-4. 灵活性:该策略的参数(如通道长度、平均长度、超买/超卖等级)可以根据不同的市场条件和交易风格进行调整。
-
-#### 风险分析
-1. 震荡市场:在没有明确趋势的市场条件下,该策略可能会遭受连续亏损。
-2. 参数优化:该策略的表现在很大程度上取决于参数的选择,不当的参数设置可能导致次优结果。
-3. 过度交易:频繁的进出场信号可能导致较高的交易成本,影响策略的整体表现。
-
-#### 优化方向
-1. 趋势过滤:在发生背离时,引入额外的趋势确认指标(如移动平均线),以过滤掉潜在的假信号。
-2. 动态参数:根据市场波动性调整指标参数,在波动较低时使用较短的通道和平均长度,在波动较高时使用较长的参数。
-3. 止盈:引入基于风险回报比或目标价格的动态止盈水平,以更好地管理已获利的头寸。
-4. 多空过滤:根据市场的总体趋势方向(如长期移动平均线)过滤交易信号,只在趋势方向上进行交易。
-
-#### 总结
-WaveTrend Oscillator Divergence Strategy结合了波动趋势指标和成交量加权平均价格,以识别潜在的趋势反转机会。该策略的优势在于其趋势跟踪能力和风险管理措施,但在震荡市场中可能面临风险。通过引入额外的过滤条件、动态参数调整和改进的进出场规则,可以进一步优化该策略的表现。在实施该策略之前,全面的回测和前瞻性分析是至关重要的。
-
-|| 
 
 #### Overview
 This strategy combines the WaveTrend Oscillator (WT) and the Volume Weighted Average Price (VWAP) to capture potential trend reversal opportunities by identifying divergences between price and the indicator. The strategy uses the Average True Range (ATR) to determine stop-loss levels and dynamically adjusts position sizing based on account risk percentage. The main strengths of the strategy lie in its trend-following capabilities and risk management measures, but it may suffer losses in choppy markets. Optimization directions include adding additional filters and improving entry and exit rules.
@@ -76,7 +42,6 @@ This strategy combines the WaveTrend Oscillator (WT) and the Volume Weighted Ave
 
 #### Summary
 The WaveTrend Oscillator Divergence Strategy combines the WaveTrend indicator and the Volume Weighted Average Price to identify potential trend reversal opportunities. The strategy's strengths lie in its trend-following capabilities and risk management measures, but it may face risks in choppy markets. The strategy can be further optimized by introducing additional filters, dynamic parameter adjustments, and improved entry and exit rules. Thorough backtesting and forward-looking analysis are crucial before implementing the strategy.
-[/trans]
 
 
 

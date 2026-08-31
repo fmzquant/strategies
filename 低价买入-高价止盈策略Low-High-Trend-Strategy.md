@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1aafd8bcaf988ccd385.png)
-[trans]
-
-## 概述
-
-该策略基于市场的低点买入、高点卖出的思想设计。它会追踪过去一定周期内的最高价和最低价,在价格突破最低价时建立多头头寸,在价格跌破最高价或达到止盈条件时平仓。同时,该策略加入了可选的趋势过滤器,只有在价格处于上升趋势时才会买入。
-
-## 策略原理
-
-### 最低价和最高价计算
-
-- 最低价(lowcriteria):调用ta.lowest函数,基于用户设定的回看周期(默认20根K线)计算过去一定周期内的最低价,并绘制最低价线。
-
-- 最高价(highcriteria):调用ta.highest函数,基于用户设定的回看周期(默认10根K线)计算过去一定周期内的最高价,并绘制最高价线。
-
-### 入场信号
-
-当现价突破最低价线时,即发出买入信号,建立多头头寸。
-
-### 出场信号
-
-提供两种出场方式可选:
-
-1. 固定止盈:当价格达到设定的止盈水平(如超过入场价8%)时,平仓套利。
-
-2. 最高价突破:当价格跌破最高价线时,判断趋势反转,平仓止损。
-
-### 趋势过滤器
-
-加入EMA均线判断趋势方向,只有在价格高于EMA均线(称为上升趋势)时才会买入。该过滤器可选择开启或关闭。
-
-## 优势分析
-
-- 利用突破低点买入、突破高点卖出的策略,符合市场基本规律。
-
-- 增加趋势判断机制,可避免价格震荡时频繁开仓。
-
-- 提供两种出场选择,既可追求高止盈,也可减少亏损。
-
-- 可自定义参数,适应更广泛的市场环境。
-
-- 策略优化空间大,可通过参数调整、过滤器设计等进一步完善。
-
-## 风险分析
-
-- 固定止盈无法根据市场实际走势调整,可能导致过早止盈或止盈幅度过小。
-
-- 突破最高价卖出时,可能已产生较大亏损,无法有效控制损失。
-
-- EMA趋势判断仅从一定历史周期判断,可能滞后于实际趋势转变。
-
-- 回测数据无法代表未来,实盘效果存在不确定性。
-
-## 优化方向  
-
-- 增加止盈方式:如移动止盈、级差止盈等,使止盈水平能根据市场走势实时调整。
-
-- 优化出场信号:比如改为分批出场,或增加其他指标判断。
-
-- 优化趋势判断:如加入更多指标,或机器学习判断。
-
-- 优化参数:通过更广泛的回测找到最佳参数组合。
-
-- 增加止损方式:使损失控制更加灵活有效。
-
-## 总结
-
-本策略总体运用了经典的低买高卖原则,在一定条件下可以取得较好的效果。但策略本身仍有优化空间,通过参数调整、出场优化、止损方式改进等可以获得更稳定的收益。本文对策略的原理、优势、风险、优化方向等进行了全面深入的分析,旨在提供策略思路的同时也提醒投资者注意风险,谨慎对待量化交易。
-
-|| 
 
 ## Overview  
 
@@ -146,7 +77,6 @@ Add an EMA line to determine the trend direction. Allow buying only when the pri
 
 This strategy generally applies the classic low buy high sell principle and can perform well under certain conditions. But there is still room for improving via parameter tuning, exit optimization, stop loss mechanisms etc. This article provides an in-depth analysis on the strategy's logic, pros, cons and optimization directions, aiming to share the strategy idea as well as remind investors of the risks and trade cautiously with quantitative strategies.
 
-[/trans]
 
 > Strategy Arguments
 

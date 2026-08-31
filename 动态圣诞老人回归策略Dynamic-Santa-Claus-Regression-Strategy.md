@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d127675f9b8d126b82.png)
-[trans]
-
-## 概述
-
-动态圣诞老人回归策略是一种根据价格和柱线索引之间的动态回归关系,识别潜在入场和出场点的量化交易策略。该策略使用长度可调的参数动态均线,绘制价格的回归趋势线。通过分析回归线的方向,判断是否入场或出场。
-
-## 策略原理 
-
-该策略的核心是计算价格和柱线索引之间的线性回归关系。首先计算长度为N的简单移动平均线和标准差。然后基于样本相关系数和标准差比值,求出回归线的斜率k和截距b。这样就得到了一个动态调整的线性回归方程:
-
-y = kx + b
-
-其中,x为柱线索引,y为价格。
-
-根据回归线当前时刻与上一时刻的大小关系,判断趋势方向。如果回归线上涨且收盘价高于开盘价和前一时刻最高价,则产生买入信号;如果回归线下跌且收盘价低于开盘价和前一时刻最低价,则产生卖出信号。
-
-## 策略优势
-
-1. 动态参数设定,可以通过调整N的值来适应不同周期的价格变动
-2. 回归关系考虑了时间因素的影响,更能反映价格的趋势性
-3. 结合多种条件判断产生交易信号,避免误导
-4. 直观展示价格回归趋势,清晰可读
-
-## 风险及解决方法
-
-1. N值设置不当,可能导致回归线过于平滑或敏感
-- 解决方法:调整N值,找到最佳平衡点
-
-2. 短期内价格震荡,回归关系判断失败
-- 解决方法:结合其他指标过滤入场点
-
-3. 环比只考虑一个时点,可能漏掉局部极值
-- 解决方法:设置适当宽松区间,避免误判
-
-## 优化方向 
-
-1. 增加动态退出机制,根据回归关系调整止损点
-2. 结合交易量等指标进行信号验证,减少错误交易
-3. 利用机器学习方法自动优化参数,适应更广泛的市场环境
-4. 增加图形展示,更直观地呈现策略效果
-
-## 总结
-
-动态圣诞老人回归策略利用价格和时间的动态回归关系,实现了一个灵活、直观、参数可调的量化交易系统。该策略逻辑清晰、易于理解,通过参数优化可以适用于不同的交易产品和周期。本策略的创新之处在于引入时间因素建立动态模型,使判断更具有趋势性。总的来说,该策略为量化交易提供了一个值得参考的样本。
-
-||
 
 ## Overview
 
@@ -100,7 +54,6 @@ According to the magnitude relationship between the current and previous values 
 
 The Dynamic Santa Claus Regression Strategy utilizes the dynamic regression relationship between price and time to implement a flexible, intuitive, and adjustable quantitative trading system. The logic of this strategy is clear and easy to understand. Through parameter optimization, it can be applied to different trading products and cycles. The innovation of this strategy lies in the introduction of time factors to establish a dynamic model, making judgments more trending. In summary, this strategy provides a worthwhile sample for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

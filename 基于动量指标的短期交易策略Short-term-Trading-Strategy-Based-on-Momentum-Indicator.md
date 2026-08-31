@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b176d126530061f913.png)
-[trans]
-## 概述
-
-本策略名称为“基于动量指标的短期交易策略”。该策略利用动量指标Mass Index来识别市场趋势的转折点,以捕捉短期交易机会。
-
-## 策略原理 
-
-该策略使用两组不同参数的指数移动平均线EMA来平滑价格的最高价和最低价的差值,得到指标Mass Index。当Mass Index上穿某一阈值时做空;当Mass Index下穿某一阈值时做多。
-
-具体来说,首先计算最高价和最低价的差值xPrice。然后计算xPrice的9周期和25周期的EMA,分别命名为xEMA和xSmoothXAvg。接着计算这两个EMA的比值之和,得到Mass Index。当Mass Index大于某个阈值时做空,小于某个阈值时做多。
-
-该策略利用Mass Index的上下突破来判断趋势转折点,从而进行短期交易。当市场震荡加剧时,Mass Index将上升;当市场震荡减弱时,Mass Index将下降。监测其突破某一水平可以有效捕捉到短期交易机会。
-
-## 策略优势
-
-该策略具有如下优势:
-
-1. 使用动量指标Mass Index,可以有效识别短期内的波动和趋势转折
-2. 较为精确地定位买入卖出的时机,避免追高杀跌
-3. 交易策略和参数简单明了,容易实施
-4. 可灵活调整参数,适用于不同市场环境
-
-## 策略风险及解决方法
-
-该策略也存在一些风险:  
-
-1. 可能出现虚假突破,导致不必要的交易。可适当调整参数降低误报率。
-2. 未考虑长期趋势判断,可能与主趋势发生背离。可结合趋势指标避免做反趋势操作。  
-3. 数据曲线拟合风险。可适当扩大样本区间,检验参数稳健性。
-
-## 策略优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 结合股票基本面分析,避免交易波动过大的低质股票
-2. 增加止损机制,严格控制单笔损失
-3. 结合波动率指标,在市场震荡加剧时降低仓位规模
-4. 增加条件单功能,优化入场出场时机
-
-## 总结
-
-本策略基于Mass Index指标设计了一个较为简单的短期交易策略,可以有效识别市场的转折点,从而精确做多做空。该策略交易策略和参数设置简单直观,容易实施,且可根据不同市场环境进行调整优化,具有较强的实用性。但也应注意数据过拟合和指标失效的风险,需结合趋势判断和止损措施来应对市场的不确定性。
-
-||
 
 ## Overview
 
@@ -98,7 +54,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy designs a simple short-term trading strategy based on the Mass Index indicator, which can effectively identify turning points in the market for precise long and short trades. The trading strategy and parameter settings are simple and intuitive, easy to implement, and adjustable for different market environments, making it highly practical. But risks of overfitting and failure of indicators should also be noticed. Trend analysis and stop loss should be combined to cope with market uncertainty.
 
-[/trans]
 
 > Strategy Arguments
 

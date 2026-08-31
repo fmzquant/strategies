@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略基于RSI指标的均线回归特征设计。RSI超买超卖时会发生回归,形成交易机会。该策略通过RSI指标判断超买超卖状态,采取均线回归方式建立多空仓位,达到系统化交易目的。
-
-策略原理:
-
-1. 计算RSI指标值,设置超买线和超卖线,典型参数为超买线60,超卖线30。
-
-2. 当RSI从上向下跌破超买线时,进行卖出操作,建立短仓。
-
-3. 当RSI从下向上突破超卖线时,进行买入操作,建立多仓。
-
-4. 多仓止损线为入场价乘以(1-止损比例),短仓止损线为入场价乘以(1+止损比例)。
-
-5. 当价格击穿止损线时,进行止损退出。
-
-该策略的优势包括:
-
-1. 利用RSI指标的回归特征,可以顺势捕捉趋势回调带来的交易机会。
-
-2. 采用突破建仓方式,可以及时捕捉趋势转折。
-
-3. 设置止损线,可以控制单笔损失。
-
-该策略的风险包括:
-
-1. RSI指标发出假信号的概率较大,应结合其他指标确认。
-
-2. 止损点靠近入场点会频繁被止损,应适当放宽止损范围。 
-
-3. 回归交易时机选择不当可能导致持仓时间过长。
-
-总之,RSI均线回归策略通过捕捉RSI指标的回归机会进行交易。该策略可以顺势而为,有效控制单笔损失。但RSI指标的可靠性较低,投资者需审慎采用,并辅助以其他技术指标进行确认,优化止损机制,以期获得长期稳定回报。
-
-||
 
 
 This strategy is based on the mean reversion characteristics of the RSI indicator. Overbought and oversold RSI tends to revert back, creating trading opportunities. The strategy identifies overbought/oversold states using RSI to establish long/short positions in a systematic way. 
@@ -78,7 +43,6 @@ Risks:
 
 In summary, the RSI mean reversion strategy trades RSI overextensions. It follows the trend with controlled loss on single trades. But RSI reliability is low. Investors should use it prudently with other confirming indicators, optimized stops, and expect modest long-term returns.
 
-[/trans]
 
 > Strategy Arguments
 

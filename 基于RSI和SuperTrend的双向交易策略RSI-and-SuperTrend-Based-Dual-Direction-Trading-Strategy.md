@@ -11,89 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18285e488624cd6f8d5.png)
 
-[trans]
-
-## 概述
-
-这是一个综合运用RSI指标和SuperTrend指标的双向交易策略。该策略旨在识别市场的强弱势,并在趋势方向发生转变时及时进行换仓,以获取更高的收益。
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 使用RSI指标判断当前市场的强弱势。RSI高于50时为强势市场,低于50时为弱势市场。
-
-2. 利用SuperTrend指标作为趋势过滤器。只有当价格突破SuperTrend时,才会发出交易信号。
-
-3. 在RSI指标发出强势信号时,如果价格突破上轨,则做多;如果价格跌破下轨,则平仓。
-
-4. 在RSI指标发出弱势信号时,如果价格突破下轨,则做空;如果价格突破上轨,则平仓。
-
-5. 通过RSI指标的多空转换来捕捉趋势变化点,及时进行换仓操作。
-
-### 具体实现
-
-1. 计算RSI指标值,长度为14,以50作为界限判断强弱势。
-
-2. 计算SuperTrend指标,长度为10,乘数为2。
-
-3. 当RSI高于50而价格突破SuperTrend上轨时,做多。当RSI低于50而价格跌破SuperTrend下轨时,做空。
-
-4. 当已做多时,如果RSI转弱且价格跌破SuperTrend上轨,则平仓。当已做空时,如果RSI转强且价格突破SuperTrend下轨,则平仓。
-
-5. 可配置只做多或只做空。
-
-## 策略优势
-
-这种策略结合了趋势跟踪和超买超卖判断,有以下优势:
-
-1. 可以及时捕捉趋势变化,减少无谓开仓。
-
-2. RSI指标可以有效判断超买超卖区域,避免在市场转头前追高杀低。
-
-3. SuperTrend较好地滤除了市场中的噪音,跟踪中长线趋势。
-
-4. 结合RSI和SuperTrend两个指标,可以提高策略的稳定性。
-
-5. 该策略参数优化空间大,可以根据不同品种和周期进行调整。
-
-6. 支持只做多或只做空模式,可以灵活应对不同行情类型。
-
-## 策略风险
-
-这种策略也存在一些风险:
-
-1. RSI指标容易产生虚假信号,需要结合价格实体验证。
-
-2. SuperTrend指标参数设置不当可能导致漏点或追高杀低。
-
-3. 双指标组合存在发散风险,需调整参数达到最佳匹配。
-
-4. 行情剧烈变动时,止损可能被秒出,需要合理设置止损位置。
-
-5. 需避免在重要支持阻力区域附近进行反向开仓。
-
-## 策略优化
-
-这种策略还可以从以下方面进行优化:
-
-1. 调整RSI参数,寻找最佳长度以过滤虚假信号。
-
-2. 优化SuperTrend参数,提高对趋势的跟踪效果。
-
-3. 测试不同品种不同周期的参数组合,寻找最优参数。 
-
-4. 增加其他指标过滤,如MACD、KDJ等,提高信号准确率。
-
-5. 增加重要支撑阻力位、布林线、运动平均线等判断,定性策略信号。
-
-6. 优化止损策略,在保证止损有效性的前提下,尽量减小止损被秒出概率。
-
-## 总结
-
-该策略整合RSI和SuperTrend两个指标的优势,能够有效识别市场中期趋势的变化,并进行熊市牛市之间的切换操作。通过参数优化,可以适应更广泛的市场情况。但也需要注意一些常见问题,如虚假信号、ParameterSet,等等。总体来说,该策略思路清晰,易于实现,有很强的实用性。
-
-||
 
 
 ## Overview
@@ -176,7 +93,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy integrates the strengths of RSI and SuperTrend to effectively identify mid-term trend changes between bull and bear markets. The strategy is easy to implement with clear logic and has strong practical value. With parameter tuning it can adapt to more market conditions. Common issues like false signals and bad parameters need to be watched out for. Overall this is a solid trend following strategy.
 
-[/trans]
 
 
 > Strategy Arguments

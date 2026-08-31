@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17da033e71d890788b5.png)
-[trans]
-## 概述
-
-该策略结合布林带指标和交易量指标,在高交易量环境下,识别强势突破布林带上轨的机会,进行买入操作。同时结合移动平均线指标,确定趋势方向,减少抱死仓位的风险。
-
-## 策略原理
-
-1. 使用布林带指标判断价格是否突破布林带上轨。
-2. 使用交易量指标判断当前交易量是否明显高于过去一段时间的平均交易量。
-3. 在交易量活跃,价格突破布林带上轨的情况下,进行买入操作。
-4. 使用移动平均线指标判断短期和中期趋势,在趋势不利时及时平仓止损。
-
-该策略主要考虑三方面因素:价位、动量和趋势。当价格突破布林带上轨进入买入区域,大量资金涌入导致交易量激增,说明有较强的行情支持和动能,这时开仓做多。然后结合移动平均线判断行情走势,避免抱死仓位。通过价位选择、资金及时追踪和减少空仓风险的方式,获取行情带来的收益。
-
-## 策略优势
-
-1. 交易信号准确,避免虚假突破。结合交易量指标,只在真实强势行情中买入,减少头寸风险。
-
-2. 通过移动平均线判断趋势方向,能够及时止损,减少空仓损失。
-
-3. 实现了综合多种指标进行决策的量化策略,参数可以灵活调整,适应不同品种和周期。
-
-4. 代码结构清晰,增加了策略可读性。分模块组织指标计算、交易信号、开平仓逻辑等,便于后期维护。
-
-## 策略风险
-
-1. 布林带作为波动范围指标,对极端行情可能失效。如果出现异常波动,会错过买入信号或者产生虚假信号。
-
-2. 当交易量不足时,策略无法获利。如果市场整体交易量不足,即使产生买入信号也难以获利。
-
-3. 移动平均线作为趋势判断指标也可能失效,无法完全保证止损。
-
-4. 参数设置不当也会影响策略收益。例如交易时间窗口设置过短,会错过走势反转等。
-
-## 策略优化方向  
-
-1. 可以考虑加入更多判断趋势、支持阻力位的技术指标,提高止损效果,例如K线形态、通道指标、关键支撑位等。
-
-2. 增加机器学习模型判断真实突破的可能性,降低虚假信号率。例如LSTM等深度学习模型。
-
-3. 优化资金管理策略,例如动态调整仓位,跟踪止损线等。减少单笔损失的影响。
-
-4. 测试更多品种和时间周期参数。调整布林带参数、交易量参数等,优化适应市场的策略。
-
-
-## 总结
-
-该策略整合布林带指标和交易量指标,在强势行情中识别买入时机。同时使用移动平均线指标判断趋势,及时止损。相比单一技术指标,具有更高的准确性和止损能力。通过模块化设计、趋势判断和止损策略的加入,形成一个易于优化维护的突破交易策略。
-
-||
 
 ## Overview
 
@@ -109,7 +59,6 @@ This strategy mainly considers three factors: price level, momentum and trend. W
 
 This strategy integrates Bollinger Band and trading volume indicators to identify strong momentum buying opportunities, with moving averages ensuring effective stop loss. Compared to single indicator strategies, it has higher accuracy and risk control capabilities. With modular design, trend filters and stop loss mechanisms, it forms an easy-to-optimize momentum breakout trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

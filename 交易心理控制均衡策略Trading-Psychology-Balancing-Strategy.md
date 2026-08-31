@@ -10,78 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1af9cd959d17abd59eb.png)
-[trans]
-## 概述
-
-此策略的目的是通过设置不同的参数,平衡交易者的心理和交易表现,以获得更稳定的回报。它使用均线、布林带、Keltner通道等指标判断市场趋势和波动率,结合PSAR指标判断反转信号,采用TTM挤压指标判断动量。交易信号由这些指标组合产生。同时,策略采用高低止损和风险回报止盈方式管理风险。
-
-## 策略原理  
-
-该策略的主要逻辑如下:
-
-1. 判断趋势:采用EMA均线判断价格趋势方向,价格在EMA上方为涨势,下方为跌势
-
-2. 判断反转:采用PSAR判断价格反转点。PSAR点出现在价格上方为看涨信号,出现在价格下方为看跌信号
-
-3. 判断动量:采用TTM Squeeze指标判断市场的波动率和动量。TTM Squeeze指标通过比较布林带和Keltner通道的宽度来测量波动率,挤压意味着波动率极低。挤压解除则意味着波动率增加和价格即将产生较大方向性移动的信号
-
-4. 产生交易信号:当价格上穿EMA均线、PSAR点,并且TTM Squeeze 指标解除挤压时,产生看多信号;当价格下穿EMA均线、PSAR点,并且TTM Squeeze指标进入挤压时,产生看空信号
-
-5. 止损方式:采用高低点止损。根据最近一定周期的最高价或最低价乘以设置倍数作为止损点
-
-6. 止盈方式:采用风险回报比自动止盈。根据止损点距离当前价的比率乘以设置的风险回报比参数得到止盈点
-
-通过参数设置,可以控制交易频率、仓位管理、止损点位和止盈点位,平衡交易心理。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多指标判断,提高信号准确率
-
-2. 反转为主,顺势为辅,捕捉反转点,减少冲高杀跌、冲低杀涨的概率
-
-3. TTMSqueeze 指标可有效判断趋势中的调整,避免调整期无效交易
-
-4. 高低止损方式简单实用,可根据市场调整止损距离
-
-5. 风险回报比止盈方式将盈亏比例关系数值化,便于调整
-
-6. 各种参数设置灵活,可根据个人风险偏好微调
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 多指标组合判断,虽提高信号准确度,但也增加了跳过 Entry 点位的可能
-
-2. 反转为主的策略,在趋势行情中表现可能不佳
-
-3. 高低止损有时会被突破,无法全面规避风险
-
-4. 风险回报比止盈也可能因价格跳空或调整失效
-
-5. 参数设置不当可能导致亏损或频繁停损
-
-## 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 添加或调整指标权重,使信号更准确
-
-2. 优化反转和趋势判断的指标参数,提高获利概率
-
-3. 优化高低止损的参数,使止损更合理
-
-4. 测试不同的风险回报比例,取得最优结果
-
-5. 调整仓位数参数,降低单笔损失的影响  
-
-## 总结
-
-该策略整体来说,通过指标集合判断和参数调整,能够有效平衡交易心理,获得稳定的正收益。虽然仍有一定改进空间,但已具备实盘应用价值。通过市场反馈和参数微调,这一策略有望成为控制交易心理、获得长期稳定盈利的有效工具。
-
-||
 
 ## Overview  
 
@@ -153,7 +81,6 @@ Possible improvement areas cover:
 
 In summary, through indicator combos and tunable settings, this strategy is capable of balancing trading psychology and securing steady positive results. Despite some remaining upside, it has already demonstrated practical applicability. Further live market feedback and calibration will likely enhance it into an effective tool for managing emotions and achieving long-term stable profits.
 
-[/trans]
 
 > Strategy Arguments
 

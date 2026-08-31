@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过判断价格对布林带通道的突破情况进行交易。该策略属于通道突破类策略的一种,旨在捕捉价格突破通道形成的趋势交易机会。
-
-策略原理:
-
-1. 计算布林带通道,中轨为n日简单移动均线,上下轨为中轨之上下若干倍标准差。 
-
-2. 当价格从上向下突破下轨时,进行短仓入场。当价格从下向上突破上轨时,进行多仓入场。
-
-3. 设置止损线为相反方向轨线之外,进行风险控制。
-
-4. 根据最大回撤情况调整通道带宽,优化参数。
-
-5. 结合交易量过滤判断,避免虚假突破。
-
-该策略的优势:
-
-1. 突破通道可有效判断趋势转折点。
-
-2. 布林带参数优化简单实际,不易过优化。
-
-3. 结合交易量可过滤假突破,提高质量。
-
-该策略的风险:
-
-1. 布林带滞后问题较突出,可能错过最佳入场点。 
-
-2. 突破后容易出现反转,须设置合理止损。
-
-3. 优化中追求低频交易可能错失机会。
-
-总之,该策略通过判断布林带的突破情况进行交易,是一种典型的通道突破策略。Relative 简单的规则有利于参数优化,但滞后及止损设置问题仍需警惕,始能获得长期稳定收益。
-
-||
 
 This strategy trades the price breakout of Bollinger Bands. It aims to capture trend opportunities from channel breakouts.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this is a typical channel breakout strategy trading Bollinger breaks. The relatively simple rules benefit optimization but lag and stop placement issues remain that impact long-term steady gains.
 
-[/trans]
 
 > Strategy Arguments
 

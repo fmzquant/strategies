@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ae1d8e408827795469.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是利用随机数模拟硬币掷色子等概率事件,根据事件结果决定做多头或空头,从而实现随机交易。这种交易策略可以用于模拟测试,也可以作为基础框架用于更复杂的策略开发。
-
-## 策略原理
-
-1. 通过`flip`变量模拟随机事件,根据`coinLabel`随机数大小决定做多或做空。
-
-2. 利用`risk`和`ratio`设置止损止盈线。
-
-3. 按照设置的最大周期数随机触发下一次交易信号。
-
-4. 通过`plotBox`变量控制是否显示平仓盒。
-
-5. `stoppedOut`和`takeProfit`变量用于检测止损或止盈。
-
-6. 提供回测功能测试策略表现。
-
-## 优势分析
-
-1. 代码结构清晰,易于理解和二次开发。
-
-2. UI交互友好,各种参数都可以通过图形界面调整。
-
-3. 随机性强,不受市场波动影响,可靠性高。
-
-4. 可通过参数优化获得更好的收益回报率。
-
-5. 可作为其他策略演示或测试使用。
-
-## 风险分析
-
-1. 随机交易无法对市场进行判断,存在一定盈利风险。
-
-2. 无法确定最佳参数组合,需要反复测试。
-
-3. 存在因随机信号过于密集而可能带来的超级相关风险。
-
-4. 建议结合止损止盈机制以控制风险。
-
-5. 可通过适当延长交易间隔来降低风险。
-
-## 优化方向
-
-1. 结合更复杂因子产生随机信号。
-
-2. 增加交易品种,扩大测试范围。 
-
-3. 优化 UI 交互,增加策略控制功能。
-
-4. 提供更多测试工具和指标,便于参数优化。
-
-5. 可作为交易信号或止损止盈组件加入到其他策略。
-
-
-## 总结
-
-本策略总体框架完整,基于随机事件产生交易信号,可靠性较高。同时提供了参数调整、回测以及绘图功能。既可以用来测试新手开发策略,也可作为其他策略的基础模块。通过适当优化,可以使策略表现更加突出。
-
-||
 
 ## Overview
 
@@ -131,7 +69,6 @@ The core idea of this strategy is to simulate probability events such as coin fl
 
 The overall framework of this strategy is complete, generating trading signals based on random events, with high reliability. At the same time, it provides parameter adjustment, backtesting, and charting capabilities. It can be used to test novice strategy development, and also as a basic module for other strategies. Through appropriate optimization, the strategy performance can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

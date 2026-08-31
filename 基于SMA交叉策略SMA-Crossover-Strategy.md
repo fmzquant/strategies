@@ -12,55 +12,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10da72776961cfeef3e.png)
 
-[trans]
-
-## 概述
-
-该策略基于快速移动平均线和慢速移动平均线的交叉原理生成交易信号。当快速移动平均线从下方上穿慢速移动平均线时,产生买入信号;当快速移动平均线从上方下穿慢速移动平均线时,产生卖出信号。
-
-## 原理
-
-该策略使用sma函数计算快速移动平均线和慢速移动平均线。其中fast_SMA为快速移动平均线,周期长度为fast_SMA_input;slow_SMA为慢速移动平均线,周期长度为slow_SMA_input。
-
-策略使用cross和crossunder函数判断快速移动平均线和慢速移动平均线的交叉情况。当快速移动平均线上穿慢速移动平均线时,LONG变量为true,产生买入信号;当快速移动平均线下穿慢速移动平均线时,SHORT变量为true,产生卖出信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略原理简单,容易理解和实现。
-2. 可自定义移动平均线周期,适用于不同市场环境。
-3. 可过滤部分市场噪音,产生较为可靠的交易信号。
-4. 可同时捕捉趋势的启动和转折。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 如果设置不当,会产生过多交易信号,导致交易频繁。
-2. 在横盘市场中可能会产生大量无效信号。
-3. 无法判断趋势的持续时间,可能会过早反转。
-
-风险控制方法:
-
-1. 合理设置移动平均线参数,平衡过滤效果和灵敏度。
-2. 结合趋势指标过滤无效信号。
-3. 设置止损点,控制单笔损失。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 增加过滤条件,在突破移动平均线时检查成交量或波动性指标,避免假突破。
-2. 结合趋势指标,识别趋势的方向和力度。
-3. 增加机器学习模型,自动优化移动平均线参数。
-4. 结合支持阻力位、布林带等技术指标绘制交易区域,提高入场精确度。
-
-## 总结
-
-该策略利用移动平均线的优势,简单有效地产生交易信号。虽然存在一些风险,但可通过参数优化、增加过滤条件等方式进行改进。移动平均线交叉策略值得进一步研究与应用。
-
-||
 
 ## Overview
 
@@ -108,7 +59,6 @@ This strategy can be optimized from the following aspects:
 
 This strategy effectively generates trading signals by leveraging the advantages of moving averages. Although there are some risks, they can be improved by parameter optimization, adding filters etc. The moving average crossover strategy is worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

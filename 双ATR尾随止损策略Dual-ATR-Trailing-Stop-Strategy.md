@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ddade956a93f884908.png)
-[trans]
-
-## 概述
-
-双ATR尾随止损策略是基于平均真实波幅(ATR)指标的一个短线交易策略。该策略同时设置快速ATR线和慢速ATR线两个止损线,根据两条止损线的交叉情况判断入场和出场。策略简单易懂,响应迅速,适合高波动的市场。
-
-## 策略原理  
-
-该策略主要利用ATR指标来设置两条止损线。一条是快速ATR线,ATR周期短,乘数小,反应迅速;另一条是慢速ATR线,ATR周期长,乘数大,起到过滤的作用。当快速ATR线上穿慢速ATR线时产生买入信号;当快速ATR线下穿慢速ATR线时产生卖出信号。这样通过两条ATR线交叉决定入场出场,可以有效控制止损。
-
-具体操作逻辑是:计算快速ATR线和慢速ATR线;快速线价格高于慢速线则用快速线尾随止损,否则用慢速线尾随止损。Kline颜色表示目前使用的止损线,绿色和蓝色表示用快速线止损,红色和黄色表示用慢速线止损。当市场价格触碰到止损线则出场。
-
-## 优势分析
-
-双ATR尾随止损策略具有以下优势:
-
-1. 操作逻辑简单清晰,容易理解实现。
-2. 快速响应市场变化,适合高波动的市场。  
-3. 双ATR止损控制风险,有效止损。
-4. ATR指标参数化,可以调整止损幅度。
-5. 可视化的Kline颜色清晰表示止损情况。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 容易出现过频交易的情况。
-2. ATR指标对曲线拟合性差,可能出现放大损失。
-3. 无法有效过滤横盘和趋势两个市场阶段。
-
-可以通过优化ATR周期,调整ATR乘数,结合其他指标过滤等方法来减小这些风险。
-
-## 优化方向  
-
-双ATR尾随止损策略可进一步优化的方向包括:
-
-1. 优化ATR参数,调整止损幅度。
-2. 增加过滤指标,避免无效交易。例如增加均线指标判断趋势。  
-3. 增加开仓条件,避免误交易。例如增加交易量能量指标。
-4. 增加持仓时间 exits,避免过于频繁交易。
-
-## 总结
-
-双ATR尾随止损策略整体易于理解实现,特别适合高波动率的场景,可以有效进行风险控制。优化空间也较大,可通过参数调整、加入过滤器等方法进行提升。是一种值得推荐的短线策略。
-
-||
 
 ## Overview
 
@@ -100,7 +54,6 @@ The optimization directions are:
 
 The Dual ATR Trailing Stop Strategy is easy to understand and implement, especially suitable for high volatility scenarios, and can effectively control risks. There is also large room for optimization. It is a recommended short-term strategy worth trying.
 
-[/trans]
 
 > Strategy Arguments
 

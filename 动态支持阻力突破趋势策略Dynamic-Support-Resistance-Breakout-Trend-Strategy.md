@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5d2296c9e095a86b13.png)
-[trans]
-
-## 概述
-
-该策略基于长期支持阻力的突破来判断趋势方向,以支持阻力的突破作为入场时机。它使用折线定义高点和低点,以2根K线确认高点/低点,因此有2根K线的滞后。它计算一定周期(默认21)内高点和低点的SMA差值,作为辅助支持阻力位。这一思想来源于synapticEx的Nebula-Advanced-Dynamic-Support-Resistance指标。当价格突破动态支持阻力时,做多做空。
-
-## 策略原理
-
-该策略使用以下逻辑判断趋势和交易信号:
-
-1. 使用折线判断高低点:当前5根K线中,第5根K线低点低于第4根,第4根低于第3根,第3根高于第2根,第2根高于第1根时,确认第3根K线的低点为最低低点。判断高点同理。
-
-2. 计算一定周期(默认21)内高点个数hn和低点个数ln。如果hn>0和ln>0,则计算一定周期内高点的平均值hsum/hn和低点的平均值lsum/ln。它们之间的差额r作为辅助支持阻力位。
-
-3. 比较收盘价与动态阻力lvalr和支持位hvalr,判断趋势方向。收盘价超过两者之一则有效突破。
-
-4. 当有效突破动态阻力线时,做多;当有效突破动态支持线时,做空。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用折线判断支持阻力更为准确,可避免错误突破。
-
-2. 基于长期统计的支持阻力更有参考价值,可减少头寸风险。
-
-3. 引入辅助支持阻力提高突破的有效性。
-
-4. 策略逻辑简单清晰,容易理解实现,适合量化交易。
-
-5. 可自定义支持阻力统计周期,适应不同周期和品种。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 折线确定支持阻力点有2根K线的滞后,可能错过最佳入场点。
-
-2. 预测的支持阻力仅供参考,价格仍可能出现无法解释的突破。
-
-3. 统计周期长度不当可能导致支持阻力失效。
-
-4. 突破后价格调整可能触发止损。
-
-5. 作多做空后价格可能产生剧烈波动,带来更大亏损。
-
-对应的风险控制和优化手段有:
-
-1. 适当缩短统计周期,减少滞后。
-
-2. 结合更多因素预测支持阻力位。
-
-3. 测试不同周期参数的稳定性。 
-
-4. 设置合理止损位。
-
-5. 利用仓位控制方法限制单笔亏损。
-
-## 优化方向  
-
-该策略可以从以下方面进行优化:
-
-1. 利用机器学习方法预测支持阻力。可以提高支持阻力突破的成功率。
-
-2. 结合交易量CONF指标判断突破的有效性。大量未平仓合约参与突破更有说服力。  
-
-3. 根据不同周期分类统计支持阻力。例如按照日线、周线等分别统计,提高支持阻力位的有效性。
-
-4. 在盈利仓位加仓,设置游离停损平衡盈亏。这可以在保证利润的同时争取更大收益。
-
-5. 结合均线指标判断趋势,避免在无明确趋势时盲目做多做空。
-
-## 总结
-
-该策略整体来说是一种较为稳健可靠的趋势跟踪策略。它正确判断趋势方向的概率较大,而且具有一定的风险控制措施。但由于存在一定滞后,无法百分之百确保每一次的做多做空都能够盈利。因此,它更适合有经验的量化交易者结合自己的策略进行应用。通过优化统计周期参数以及与其他指标或模型的组合,该策略可以成为高效的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -162,7 +85,6 @@ The strategy can be optimized from aspects below:
 
 In conclusion, this is a robust trend following strategy. It has high accuracy in determining trend direction and proper risk control. But the lag makes it impossible to profit from every long/short signal. So it fits experienced quant traders to combine with their own strategies. By optimizing statistic periods and integrating other indicators or models, it can become an efficient trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

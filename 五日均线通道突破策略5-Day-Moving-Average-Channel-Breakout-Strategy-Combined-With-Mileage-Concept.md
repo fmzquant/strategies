@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6e33118eeec9206213.png)
-[trans]
-
-## 概述
-本策略结合了5日移动平均线通道和行车理念买卖点,实现了通道突破和短线交易的双重功能。策略首先计算5日高点和低点的移动平均线作为通道上下轨,然后结合通道突破信号和行车理念的形态特征判断入场和出场时机。
-
-## 策略原理
-1. 计算5日内的最高价和最低价的移动平均线作为通道上轨和下轨
-2. 当收盘价上穿上轨时,产生买入信号
-3. 当收盘价下穿下轨时,产生卖出信号
-4. 结合行车理念的形态特征,判断价格是否符合行车买入和卖出的特征
-   - 买入特征:收盘价>开盘价,最高价-收盘价<收盘价-开盘价,开盘价-最低价<收盘价-开盘价
-   - 卖出特征:开盘价-收盘价>昨日的开盘价-收盘价,并连续3根K线形态如此  
-5. 最终买入条件 = 通道突破信号 与 行车买入特征同时满足
-6. 最终卖出条件 = 通道突破信号 与 行车卖出特征同时满足
-
-## 策略优势
-1. 结合了通道突破策略和行车理念,实现了多级判断,避免了误操作的风险
-2. 通道突破策略可以捕捉中间周期的趋势
-3. 行车理念可以判断短线的反转机会
-4. 参数简单易调整,适合多市场环境
-
-## 策略风险
-1. 大幅震荡市场中,通道可能被频繁突破,从而产生错误信号
-2. 行车理念特征判断不严格时,可能买进超过真实反转点,卖出不足
-3. 参数设置不当也会影响交易信号的质量
-
-## 策略优化方向 
-1. 可以测试不同参数下的通道,寻找更好的参数组合
-2. 可以调整通道周期,测试是否更短或更长周期效果更好
-3. 可以优化行车理念的特征判断,设置更严格的条件以过滤noise
-4. 可以测试增加止损策略,以控制单笔损失
-
-## 总结
-本策略综合运用了通道突破策略和行车理念短线交易策略,实现了多级判断和风险控制。优化后可望取得更佳的策略表现。值得注意的是参数设置和风险控制对策略效果有重要影响,需要充分测试和验证。
-
-||
 
 ## Overview 
 This strategy combines the 5-day moving average channel and the mileage concept buy and sell signals to achieve both channel breakout and short-term trading functionalities. It first calculates the 5-day moving averages of highest high and lowest low as the channel bands, and then determines the entry and exit based on the channel breakout signals and mileage concept candlestick patterns.
@@ -79,7 +43,6 @@ This strategy combines the 5-day moving average channel and the mileage concept 
 
 ## Conclusion
 This strategy synthesizes channel breakout and mileage concept short-term trading, achieving multi-layer confirmation and risk control. Further optimizations may improve strategy performance. Note that parameter tuning and risk management significantly impact results, requiring thorough testing and validation.
-[/trans]
 
 > Strategy Arguments
 

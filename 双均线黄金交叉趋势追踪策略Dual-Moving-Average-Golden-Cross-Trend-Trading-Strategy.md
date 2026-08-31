@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e58e42b80ae4a28c2f.png)
-[trans]
-## 概述
-
-双均线黄金交叉趋势追踪策略通过计算价格的双均线(DEMA和TEMA),并检测其交叉形成黄金交叉信号,来判断市场总体走势和发出交易信号。该策略结合趋势指标和突破信号,旨在追踪中长线趋势,在趋势开始阶段就能捕捉到信号。
-
-## 策略原理
-
-该策略的核心指标是长度为200的DEMA和长度为9和50的两个TEMA。DEMA作为判断总体趋势的指标,两个TEMA的交叉作为产生买卖信号的指标。
-
-当短期9周期TEMA上穿中期50周期TEMA时,产生买入信号,表示短期上升趋势开始,可以买入;当短期9周期TEMA下穿中期50周期TEMA时,产生卖出信号,表示短期下跌趋势开始,可以卖出。
-
-为过滤假突破,该策略增加了DEMA指标的判断,只有当价格高于DEMA时,TEMA交叉的信号才有效,这样可以在趋势开始时就捕捉到信号。
-
-## 优势分析
-
-该策略结合均线判断趋势和均线交叉判断信号的优点,既考虑了短期和中期两个时间维度的信息,又同时判断了两种不同类型的技术指标信号,从而提高了信号的可靠性,减少了噪音和假信号。
-
-在判断信号的有效性时加入DEMA指标作为过滤器,可以避免在盘整和无明显趋势时依然产生信号导致不必要的头寸。这大大减少了损失的风险。
-
-## 风险分析
-
-由于该策略采用了较为稳定的参数设置,长期测试表现良好,但在特定市场环境下仍存在一定风险:
-
-1. 市场出现剧烈波动时,均线交叉信号可能滞后,无法及时反映价格变动。此时会错过最佳入场时机或止损点。
-
-2. 当趋势反转时,由于DEMA指标设置较长,可能无法及时转换信号判断。这会导致亏损放大。
-
-3. 由于基于均线指标和趋势判断,所以该策略更适合中长线操作。短线操作时,存在获利不足的风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进一步优化:
-
-1. 优化DEMA和TEMA的参数,使其更好地适应不同品种和市场环境。可以测试更多组合,找到最佳参数。
-
-2. 增加由其他指标组成的过滤器和确认机制,例如交易量,波动率等指标,进一步提高信号质量。
-
-3. 增加止损機制,当价格突破DEMA时止损。这可以减少损失。
-
-4. 优化止损和止盈点设置,使其更加适应市场的平均波动范围。
-
-## 总结
-
-双均线黄金交叉趋势追踪策略综合考虑了多个时间维度的趋势判断和交叉信号,在判断信号有效性时增加过滤条件,可以有效追踪中长线趋势,及时捕捉机会,避免低效交易。该策略稳定性较好,适合多种市场环境,是一种值得长期持有使用的量化策略。未来通过参数和模块优化,可以进一步增强策略的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -101,7 +55,6 @@ Further enhancements for the strategy include:
 
 The Dual Moving Average Golden Cross Trend Trading Strategy comprehensively considers multiple timeframe trends and crossover signals. The additional filter improves signal effectiveness to track medium-to-long trends for timely opportunity captures and avoid low-efficiency trades. This stable strategy suits various markets regimes and offers a robust algorithm worth long-term deployment. Future optimizations on parameters and modules can further boost its stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

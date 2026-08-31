@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15645d00a8541a95ae9.png)
 
-[trans]
-
-### 概述
-
-该策略是一个非空头(只做多头,不做空头)的简单日内动量策略。它利用SMA、EMA和成交量指标尝试在最佳时机(即价格和动量同时上涨时)进入市场。它的优点是实现了简单,且对趋势具有一定的识别能力。
-
-### 策略原理
-
-该策略的交易 Einty 信号生成逻辑是:同时满足SMA指标高于EMA指标和连续3根K线或者连续4根K线形成上涨趋势,且中间K线最低价高于开始上涨K线的开盘价时产生 Entry 信号。
-
-Exit 信号生成逻辑是:当SMA指标下穿EMA指号时产生 Exit 信号。
-
-该策略只做多头,不做空头。其Entry和Exit逻辑对持续上涨的趋势具有一定的识别能力。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 策略逻辑简单,容易理解和实现;
-
-2. 利用了SMA、EMA和成交量等常用技术指标,参数调整灵活;  
-
-3. 对持续上涨的趋势有一定的识别能力,可以抓住趋势中的部分机会。
-
-### 风险分析
-
-该策略也存在以下风险:  
-
-1. 无法识别ို向下或盘整的市场,可能带来较大的回撤;
-
-2. 无法利用空头机会,无法对衰退趋势进行对冲,可能错过较好的盈利机会;  
-
-3. 成交量指标对高频数据效果不佳,需要调整参数;
-
-4. 可利用止损来控制风险。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加空头交易机会,实现多空头双向交易,利用衰退趋势套利;
-
-2. 利用更先进的指标如 MACD、RSI 等组合策略,提高对趋势的判断能力;  
-
-3. 优化止损逻辑,降低回撤风险;  
-
-4. 调整参数,测试不同周期的数据,寻找最佳参数组合。
-
-### 总结  
-
-该策略整体而言是一个非常简单的趋势追踪策略,通过 SMA、EMA 和成交量指标判断入场时机。它的优点是简单和容易实现,适合入门学习,但不能识别盘整和下跌趋势,存在一定的风险。通过引入空头、优化指标和止损等手段可以获得改进。
-
-||
 
 
 ### Overview
@@ -117,7 +64,6 @@ This strategy can be optimized in the following aspects:
 
 In summary this is a very simple trend following strategy utilizing SMA, EMA and volume for entry timing. Its advantage is being simple and easy to implement, good for beginners to learn, but it cannot detect consolidation or downtrends and has risks. Improvements can be made by introducing shorting, optimizing indicators and stop loss etc.
 
-[/trans]
 
 > Strategy Arguments
 

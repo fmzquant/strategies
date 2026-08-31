@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13d66d894c5a0145baf.png)
 
-[trans]
-
-
-## 概述
-
-该策略基于技术分析大师约翰·埃勒斯的思想,使用埃勒斯引领指标来判断价格的历史周期情况,发出买入和卖出信号。策略结合去趋势合成价格和埃勒斯引领指标,利用指标线穿越去趋势合成价格产生交易信号。
-
-## 策略原理
-
-该策略首先计算去趋势合成价格(Detrended Synthetic Price,DSP),DSP通过减去一个3阶巴特沃斯滤波器和2阶巴特沃斯滤波器的值,得到一个与真实价格主导周期同步的函数。 
-
-然后计算埃勒斯引领指标(Ehlers Leading Indicator,ELI),ELI是通过减去去趋势合成价格的简单移动平均和去趋势合成价格得到的,它可以提前发出周期转折点的信号。
-
-最后,当埃勒斯引领指标线穿越去趋势合成价格时,产生买入和卖出信号。如果ELI上穿DSP,产生买入信号;如果ELI下穿DSP,产生卖出信号。
-
-## 优势分析
-
-该策略最大的优势在于利用埃勒斯引领指标提前判断价格走势的转折点,可以在价格开始反转前就开仓建立头寸,从而获取更高的获利空间。
-
-另外,该策略结合去趋势价格进行交易信号判断,可过滤掉价格中无关的低频信息,使策略更加专注于价格周期性规律,不会被短期市场噪音干扰。
-
-## 风险及优化
-
-该策略主要风险在于埃勒斯引领指标存在错误识别信号的可能,导致超前开仓亏损。可以通过调整指标参数来优化指标的灵敏度。
-
-另外,交易者需要关注该策略只适用于具有明显周期规律的品种,对于价格走势较为混乱的品种效果会打折扣。建议考察品种的周期规律性再决定是否使用该策略。
-
-可以通过结合其他指标进行确认,或者调整持仓管理策略来控制风险。例如设置止损线,或缩小单笔交易规模等。
-
-## 总结
-
-该策略利用埃勒斯引领指标判断价格周期性,在价格开始新一轮周期前建立头寸,是一种典型的趋势跟随策略。该策略对周期性明显的品种效果很好,但也存在一定的假信号风险。通过参数调优和风险管理可以使策略更稳定可靠。
-
-||
 
 
 ## Overview
@@ -77,7 +43,6 @@ Risks can be managed by confirming signals with other indicators, or adjusting p
 
 This strategy identifies cyclicality in prices using the Ehlers Leading Indicator, entering positions early before new cycles start, making it a typical trend following strategy. It is very effective for products with clear cyclicality, but also carries certain risks of false signals. Optimization through parameter tuning and risk management can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/182d2da53252b30f088.png)
-[trans]
-
-## 概述
-
-该策略是一个使用布林带作为entries,移动平均线作为close, 以及简单止损百分比作为止损的做市商策略。它在2022年6月份xtbtusd合约上获得了极高的盈利。
-
-## 策略原理
-
-该策略使用布林带的上下轨作为建仓的机会区域。具体来说,当价格低于下轨时,会开多单建仓;当价格高于上轨时,会开空单建仓。
-
-此外,该策略还使用移动平均线作为平仓的基准。当持有多单时,如果价格高于移动平均线,会选择平仓;同样地,当持有空单时,如果价格低于移动平均线,也会选择平仓。
-
-对于止损,该策略使用的是入场价乘以一定百分比这种简单的滚动止损方式。这可以有效避免单边行情下的巨额亏损。
-
-## 优势分析
-
-该策略的主要优势有以下几点:
-
-1. 使用布林带可以有效捕捉价格的波动性,在波动加剧时获得更多交易机会。
-2. 做市商策略可以通过双向交易获得买卖双方的手续费收入。
-3. 采用百分比止损可以主动控制风险,有效避免单边行情下的超大亏损。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 布林带并不总是一个可靠的入场指标,有时会发出错误信号。
-2. 做市商策略容易在震荡行情中被套牢。
-3. 百分比止损可能过于武断,无法灵活应对复杂行情。
-
-为了降低这些风险,我们可以考虑结合其他指标进行过滤,优化止损策略的设定,或适当限制头寸规模。
-
-## 优化方向  
-
-该策略还有进一步优化的空间:
-
-1. 可以测试不同参数组合找出最优参数。 
-2. 可以加入更多过滤指标进行多因子验证。
-3. 可以使用机器学习方法自动优化参数。
-4. 可以考虑使用更精细的止损方式,如抛物线止损。
-
-## 总结
-
-该策略整体来说是一个非常赚钱的高频做市商策略。它利用布林带提供交易机会,同时控制风险。但我们也需要意识到它存在的问题与不足,并在实盘中谨慎验证。通过进一步优化,该策略有望产生更稳定的超高收益。
-
-||
 
 ## Overview
 
@@ -103,7 +57,6 @@ There is room for further optimization:
 
 Overall this is a very profitable high-frequency market making strategy. It capitalizes on Bollinger Bands for trading signals and controls risk. But we also need to be aware of its flaws and verify carefully in live trading. With further optimizations, this strategy has the potential to generate even more stable and outsized returns.
 
-[/trans]
 
 > Strategy Arguments
 

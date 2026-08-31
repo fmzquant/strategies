@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15f98682e9ad037ec9f.png)
-[trans]
-## 概述
-本策略采用双向自适应布林带指标来识别趋势方向,并结合市价单进行追踪止损,实现高效率的趋势追踪交易。
-
-## 策略原理  
-1. 根据一定周期计算布林中轨,上轨和下轨
-2. 判断价格突破上轨则做多追踪,突破下轨则做空追踪
-3. 采用市价单快速进场
-4. 设置止损位置,止盈位置进行持仓管理 
-
-## 优势分析
-1. 自适应布林带指标,对市场波动敏感,能快速判断趋势转向
-2. 采用市价单快速进入场内,减少滑点风险
-3. 自动止损止盈,严格控制风险,锁定利润
-
-## 风险分析 
-1. 布林带本身具有滞后性,不能完全避免假突破 
-2. 采用市价单无法控制成交价格  
-3. 需要合理设置止损位和止盈位
-
-## 优化方向
-1. 调整布林带的参数,优化判断趋势的灵敏度
-2. 加入成交量或MACD等指标过滤假突破  
-3. 优化止损位和止盈位的设置 
-
-## 总结
-本策略充分利用布林带判断趋势方向和变化的优势,结合快速出场的市价单进行双向追踪,在控制风险的前提下获得超额收益。通过进一步优化布林带参数,加入辅助过滤指标,调整止损止盈逻辑等手段,可以获得更好的策略表现。该策略思路清晰易于实现,是一种高效可靠的趋势追踪交易策略。
-
-||
 
 ## Overview  
 This strategy uses adaptive Bollinger Bands indicator to identify the trend direction and market orders to track the trend with stop loss for efficient trend trading.  
@@ -67,7 +38,6 @@ This strategy uses adaptive Bollinger Bands indicator to identify the trend dire
 ## Summary  
 This strategy makes full use of Bollinger Bands’ advantage in judging trend directions and combines fast-exit market orders for trend tracking from both sides, gaining excess returns under controlled risk. Further improvements like optimizing Bollinger parameters, adding filtering indicators and adjusting stop loss/take profit logic can lead to better strategy performance. With clear logic and easy implementation, it is an efficient and reliable trend tracking trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

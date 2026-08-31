@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10190282778ff6dd649.png)
-[trans]
-
-### 概述
-
-该策略运用双EMA指标的金叉死叉,判断当前趋势方向,并结合RSI指标避免错失买卖机会,属于典型的趋势跟踪策略。
-
-### 策略原理
-
-1. 计算10期和20期的EMA均线,分别命名为ma00和ma01
-2. 当ma00上穿ma01时产生买入信号
-3. 当ma00下穿ma01时产生卖出信号
-4. 同时,当价格上穿ma00时,如果ma00高于ma01也会产生买入信号
-5. 类似当价格下穿ma00时,如果ma00低于ma01也会产生卖出信号
-6. 通过这种双重判断,可以避免错过部分买卖点
-7. 设置止损和止盈价格,实现风险控制
-
-### 优势分析
-
-1. 使用双EMA判断,可以有效过滤假突破
-2. 双重条件判断避免漏单
-3. 止损止盈设置有利于风险控制
-
-### 风险分析
-
-1. 双EMA均线策略属于趋势跟踪策略,在震荡行情下买卖频繁,容易止损
-2. 不能准确判断趋势反转点,可能导致亏损
-3. 停损点设置不当可能扩大亏损
-
-### 优化方向
-
-1. 可以适当优化EMA周期,寻找最佳参数组合
-2. 可以加入其他指标判断,提高策略稳定性
-3. 可以设置动态止损,根据市场波动实时调整止损点
-
-||
 
 ### Overview
 
@@ -78,7 +43,6 @@ This strategy uses the golden cross and death cross of dual EMA indicators to de
 2. Other indicators can be added to improve strategy stability
 3. Dynamic stops can be set to adjust stop loss points in real time based on market fluctuations
 
-[/trans]
 
 > Strategy Arguments
 

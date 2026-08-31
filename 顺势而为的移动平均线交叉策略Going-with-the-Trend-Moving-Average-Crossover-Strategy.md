@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ffbab85df56629181d.png)
 
-[trans]
-
-## 概述
-
-该策略运用简单移动平均线的金叉死叉进行判断,顺势而为,及时抓住市场趋势转换的时机。当短期均线上穿长期均线时做多,当短期均线下穿长期均线时做空,属于典型的趋势跟踪策略。
-
-## 原理解析  
-
-1. 计算10日简单移动平均线shortSMA和30日简单移动平均线longSMA
-
-2. 当shortSMA上穿longSMA时,产生买入信号
-
-3. 当shortSMA下穿longSMA时,产生卖出信号
-
-4. RSI大于50时才能产生买入信号,小于50时才能产生卖出信号,避免假突破
-
-5. 采用ATR止损,止盈移动追踪
-
-该策略主要运用两个移动平均线的交叉作为 entry timing,判断趋势转折点。短期均线能更快反映价格变化,长期均线提供支持和阻力。当短期均线上穿长期均线时,说明价格开始上涨,此时做多;当短期均线下穿长期均线时,说明价格开始下跌,此时做空。同时结合RSI指标过滤假突破。ATR止损止盈追踪价格,优化资金管理。
-
-## 优势分析
-
-1. 操作简单,容易理解学习
-
-2. 顺应市场趋势而为,及时捕捉市场的转折点
-
-3. 双均线交叉是经典且有效的趋势判定方法
-
-4. 合理止损止盈,降低个别波段的损失
-
-5. RSI指标可有效过滤假突破,减少交易风险
-
-6. 无需预测后市,只需跟随趋势即可获利
-
-## 风险分析
-
-1. 双均线容易产生错误信号,可能造成不必要的损失
-
-2. 双均线的延后性,无法及时捕捉趋势反转点
-
-3. 盲目跟随趋势会放大亏损,应适当控制仓位规模
-
-4. 没有完全过滤震荡行情,容易被套牢
-
-5. 参数设置不当会增加交易频率,降低盈利水平
-
-可以通过选择合适的参数组合,引入其他过滤指标,适当控制仓位规模等措施来降低风险。
-
-## 优化方向
-
-1. 优化移动平均线参数,提高信号准确率
-
-2. 增加其他指标判断,如MACD、布林线等,提高策略胜率
-
-3. 结合趋势判断指标,减少震荡行情交易
-
-4. 优化止损止盈策略,缩小单笔亏损,扩大单笔盈利
-
-5. 优化资金管理,不同行情采用不同仓位
-
-6. 针对趋势和震荡行情制定不同交易策略
-
-通过测试不同参数组合,引入辅助指标判断趋势和筛选信号,不断优化止损止盈策略,可以持续改进策略表现。
-
-## 总结
-
-该策略采用经典的移动平均线交叉系统,判断价格趋势转折点进行交易,非常适合初学者学习。但也存在一些缺点需要注意,如容易产生错误信号,延迟识别趋势反转点等。通过不断测试和优化参数设置,引入其他判断指标,可以提高策略的稳定性和profitability。关键是要控制好仓位规模,遵循趋势交易的原则,将损失控制在可承受范围,让利润最大化。总的来说,该策略思路清晰易懂,值得进一步研究改进,以提升实战交易效果。
-
-|| 
 
 
 ## Overview
@@ -148,7 +79,6 @@ Continuous testing of different parameter sets, introducing auxiliary indicators
 
 This strategy employs the classic moving average crossover system to identify trend turning points for trading. It is very suitable for beginners to learn. But some weaknesses like false signals and lagging identification of reversals need to be noted. Through relentless testing and optimization of parameters, adding other indicators, the stability and profitability of the strategy can be enhanced. Most importantly, position sizing should be controlled to follow the trend trading principle, keeping losses within acceptable range and maximizing profits. Overall, the strategy logic is clear and easy to understand. It is worth researching further to improve practical trading performance.
 
-[/trans]
 
 
 

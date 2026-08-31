@@ -9,39 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过快、慢两EMA的交叉情况来判断价格趋势,进行趋势追踪操作。属于中长线趋势交易策略。
-
-策略原理:
-
-1. 分别计算一快一慢两EMA,典型参数为快线13周期,慢线48周期。
-
-2. 当快线从下方向上突破慢线时,进行做多入场。
-
-3. 当价格从上向下突破快线时,进行多单止损退出。
-
-4. 可选择加入做空操作规则,进行双向交易。
-
-该策略的优势:
-
-1. 快慢EMA配合,可有效识别中长线趋势。
-
-2. 突破交易方式,可在趋势开始阶段及时入场。
-
-3. 止损方式简单直接,可控制单笔损失。
-
-该策略的风险:
-
-1. EMA均线存在滞后问题,可能错过最佳入场点位。
-
-2. 须适当放宽止损幅度,避免过于频繁止损。
-
-3. 震荡行情中难以判断明确趋势方向。
-
-总之,该策略利用EMA交叉进行趋势判断和追踪。在参数优化和风险控制方面尚可提升,但整体思路简单实用。可通过优化适应不同市场类型。
-
-||
 
 This strategy trades the crossover of fast and slow EMAs to determine and track price trends. It aims to capture intermediate-term trends.
 
@@ -73,7 +40,6 @@ Risks:
 
 In summary, this strategy uses EMA crosses for trend identification and tracking. Optimization on parameters and risk controls can further improve performance for a wide range of markets.
 
-[/trans]
 
 > Strategy Arguments
 

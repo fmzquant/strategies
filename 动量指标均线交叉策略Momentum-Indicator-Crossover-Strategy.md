@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ee732c8cd593db81f.png)
-[trans]
-## 概述
-
-该策略运用RSI指标与其均线的交叉作为交易信号,属于常见的动量指标策略。其核心原理是追踪RSI指标与RSI的简单移动平均线SMA_RSI之间的差值,再对这个差值计算简单移动平均线SMA_RSI2,当SMA_RSI2上穿阈值时做多,下穿阈值时平仓。
-
-## 策略原理  
-
-该策略使用3个参数计算RSI指标与其两个不同周期的简单移动平均线。首先计算常规RSI指标,周期为length。然后计算RSI的length2周期简单移动平均线SMA_RSI。最后计算RSI与SMA_RSI的差值delta,再对delta计算length3周期的简单移动平均线SMA_RSI2。当SMA_RSI2上穿用户设定的阈值时,进行多头交易;当SMA_RSI2下穿阈值时,平仓头寸。
-
-这样,就构成了基于RSI指标均线交叉的交易策略信号。由于SMA_RSI2是差值delta的均线,能够反映RSI指标的动量和变化趋势,掌握住了RSI指标本身的精髓。
-
-## 优势分析  
-
-该策略结合了RSI指标与其均线的优点,能够顺应价格趋势,避免被噪音误导。采用差值delta再平滑的思路,使得交易信号更加清晰。总体来说,该策略回撤较小,获利稳定。
-
-具体优势如下:
-
-1. 运用差值delta平滑价格波动,减少假信号
-2. 均线交叉形式简单直接,容易掌握
-3. 可调参数较多,可根据市场调整
-4. 获利稳定,回撤较小
-
-## 风险及改进
-
-该策略也存在一些风险,主要体现在:
-
-1. 大幅行情中,止损可能较大
-2. 震荡趋势中容易获利不稳定 
-
-可以从以下几个方面进行改进:
-
-1. 优化参数,提高稳定性
-2. 加入止损机制,控制单笔损失
-3. 与其他指标组合,提升信号质量
-
-## 总结
-
-本策略整体较为简单通用,通过差值运算增加了RSI指标本身的实用性,利用均线交叉进行判断,回撤控制能力较强,是一种非常实用的动量指标策略。
-
-||
 
 ## Overview  
 
@@ -90,7 +50,6 @@ Improvements can be made in the following aspects:
 
 This strategy is relatively simple and universal. By increasing the practicality of the RSI indicator itself through delta arithmetic operations and using crossover to judge, it has good drawdown control and is a very practical momentum indicator strategy.
 
-[/trans]
 
 > Strategy Arguments
 

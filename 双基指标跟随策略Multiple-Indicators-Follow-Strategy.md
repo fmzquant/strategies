@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/121c2631bed1ec27937.png)
-[trans]
-## 概述
-
-双基指标跟随策略是一种数字货币量化交易策略。该策略通过结合123反转指标和Qstick指标两个基础指标的信号,产生交易信号,根据两个指标的一致性决定是否入场。
-
-## 策略原理  
-
-该策略由两部分组成:
-
-1. 123反转指标
-
-该指标的交易信号来自最后两个K线的收盘价。如果最后两个K线的收盘价出现反转(即收盘价从上涨转为下跌或从下跌转为上涨),且同时满足随机指标的条件,则产生交易信号。
-
-具体来说,如果前两日收盘价下跌,今日收盘价上涨,同时9日随机慢线低于50,产生买入信号;如果前两日收盘价上涨,今日收盘价下跌,同时9日随机快线高于50,产生卖出信号。
-
-2. Qstick指标
-
-该指标通过计算开盘价与收盘价的差值的简单移动平均,判断多头和空头的力量。其通过零轴的穿越产生交易信号。
-
-如果Qstick上穿零轴,表示多头力量增加,产生买入信号;如果Qstick下穿零轴,表示空头力量增加,产生卖出信号。
-
-双基指标跟随策略则综合考虑123反转指标和Qstick指标的交易信号,当两者信号一致时,采取相应的交易行动。
-
-
-## 优势分析
-
-双基指标跟随策略结合两个不同类型指标的信号,可以提高交易信号的准确性。相比单一指标,能够有效减少错误信号并获取更高胜率。
-
-另外,该策略仅在两种指标信号一致时才入场,可以有效控制风险,防止双基差异常。
-
-
-## 风险及解决方法
-
-1. 指标信号产生时间存在差异,无法完美配合
-
-可以通过参数优化,调整两个指标的参数,使其信号产生的频率和节奏更加协调。
-
-2. 双基差异常导致超短线运行
-
-可以设置最小持仓周期,避免频繁撤销委托和建立委托。
-
-
-## 优化方向 
-
-1. 对两个指标的长度参数进行优化,找到最佳参数组合
-
-2. 测试不同的随机指标参数配置
-
-3.加入止损策略 
-
-
-## 总结
-
-双基指标跟随策略通过组合多个基础指标的优势,能够提高信号质量,在控制风险的同时获取较高收益。该策略有进一步参数优化和策略优化的空间,通过测试可以使策略更加稳定可靠。
-
-||
 
 ## Overview  
 
@@ -121,7 +65,6 @@ Can set minimum holding period to avoid frequently canceling and creating orders
 
 By combining the advantages of multiple basic indicators, the Multiple Indicators Follow strategy can improve signal quality. While controlling risks, it can achieve relatively higher returns. There is room for further parameter and strategy optimization for this strategy. Through testing, the strategy can be made more stable and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

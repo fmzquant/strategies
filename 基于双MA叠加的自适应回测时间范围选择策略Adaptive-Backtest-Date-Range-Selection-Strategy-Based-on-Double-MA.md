@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1695c14f69ad1b346e5.png)
-[trans]
-
-## 概述
-
-该策略的核心思想是实现一个可以灵活选择回测时间范围的框架,让用户可以根据不同的需求,自动或手动设置回测的起止时间。
-
-策略通过输入参数提供了四种日期范围选择方式:使用全部历史数据、最近指定天数、最近指定周数或手动指定日期范围。策略会根据选择的日期范围动态设置回测窗口,而交易逻辑保持不变,这样可以比较不同时间窗口下策略表现的差异。
-
-## 策略原理
-
-该策略由回测日期范围选择模块和双MA交易策略模块组成。
-
-### 回测日期范围选择模块
-
-1. 提供四种日期范围选择方式:全部历史数据(ALL)、最近指定天数(DAYS)、最近指定周数(WEEKS)、手动指定日期范围(MANUAL)。
-2. 根据选择的范围,通过时间戳转换动态设置回测起止时间。
-3. 使用时间条件window()函数过滤K线,仅在选择的日期范围内进行回测。
-
-### 双MA交易策略模块  
-
-1. 快速MA期间为fastMA,默认14;慢速MA期间为slowMA,默认28。
-2. 当快速MA上穿慢速MA时,做多;当快速MA下穿慢速MA时,平仓。
-3. 绘制快慢MA的曲线。
-
-## 策略优势分析
-
-1. 可以灵活选择不同的回测时间范围,没有限制,满足不同的实验需求。
-2. 可以在相同的时间范围内测试不同周期参数的效果,结果具有可比性。
-3. 修改交易逻辑简单,可以用作其他策略的框架。
-4. 双MA策略简单易懂,容易入门。
-
-## 风险和解决方法分析  
-
-1. 双MA策略较为粗糙,存在频繁买卖的问题。可以考虑加入止损机制等优化。
-2. 手动设置日期范围需要谨慎,避免使用错误的日期。可以显示提示信息。 
-3. 全历史回测时间过长会增加测试周期。可以考虑增加滑点或手续费降低频繁交易。
-
-## 策略优化方向  
-
-1. 增加止损逻辑判断,降低亏损的风险。
-2. 加入股票池过滤,优选指数相关性强的股票,提高稳定性。  
-3. 增加交易信号的滤波器,过滤掉一定周期内不稳定的信号,减少不必要的交易。
-4. 测试不同分类指数相关股票的表现,找到最佳品种。
-
-## 总结
-
-该策略作为一个通用的回测日期范围框架,优点是灵活、可定制,可以满足用户不同的测试需求。配合简单有效的双MA交易逻辑,可以快速对策略进行验证和比较。后续可通过增加过滤器、止损逻辑等进行优化,使策略向实盘应用又近了一步。总体来说,该策略框架具有很好的拓展性和参考价值。
-
-||
 
 ## Overview
 
@@ -105,7 +56,6 @@ The strategy consists of two modules: backtest date range selection and double M
 ## Conclusion  
 
 As a flexible and customizable framework for date range selection, the advantages are meeting different test needs of users. Combined with simple but effective double MA trading logic, it can quickly verify and compare strategies. Follow-up optimizations like adding filters or stop loss logic can make the strategy more practical for live trading. In summary, the strategy framework has good scalability and reference value.  
-[/trans]
 
 > Strategy Arguments
 

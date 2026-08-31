@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12962520c89bb7a119f.png)
-[trans]
-
-## 概述
-
-该策略是基于RSI指标识别超买超卖情况下的多空反转机会。它会在RSI进入超买或超卖区域后,监测价格与RSI之间是否出现背离,以判断未来可能的反转机会。
-
-## 策略原理
-
-该策略使用RSI指标判断市场的超买超卖情况。当RSI进入预设的超买区或超卖区域后,会开启反转背离的监测。
-
-具体来说,如果RSI进入超买区,则会监测价格是否出现继续走高(形成低点更高),而RSI形成低点更低的常规多头背离;或者价格出现低点更低,RSI形成低点更高的隐藏多头背离。这两种情况都预示着未来可能出现向下反转。
-
-同理,如果RSI进入超卖区域,则会监测价格是否出现继续走低(形成高点更低),而RSI形成高点更高的常规空头背离;或者价格出现高点更高,RSI形成高点更低的隐藏空头背离。这两种情况也预示着未来可能出现向上反转。
-
-一旦监测到上述反转信号,则会根据配置的参数,采取做多或做空的仓位操作。
-
-## 策略优势
-
-该策略最大的优势在于能够识别市场的极端情况,这时反转的概率较大,采用反转操作的获利空间较大。与简单跟踪趋势的策略相比,这种逆市操作的策略胜率和盈利率都会更高。
-
-另外,策略同时集成了常规和隐藏背离的监测,可以识别更多的反转机会,避免因偶然情况导致错失良机。
-
-## 策略风险
-
-该策略面临的最大风险是超买超卖到更加极端的情况,即所谓“笔直上升,90度下跌”。这时继续做多或做空的概率更大,采取反转操作就很容易止损。
-
-另外,如果参数设置不当,对超买超卖的判断存在误区,也很容易导致失误。
-
-应对方法是合理设置超买超卖区域的界限参数,避免过于极端。另外在实盘中要适当缩小仓位规模,控制单笔止损数量。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 结合其他指标判断超买超卖程度,避免仅凭RSI单一指标出现判断失误
-
-2. 增加对突破前整理行情的判断逻辑,这时反转概率更大
-
-3. 优化反转后目标利润的设置,实现更科学的 Position Sizing
-
-4. 结合最近几年的历史行情数据,使用机器学习方法自动优化参数
-
-5. 增加止损逻辑的优化,如及时止盈、分批止损、跟踪止损等
-
-## 总结
-
-该策略总体来说是一种典型的统计套利策略。它试图捕捉市场从极端情况反转回均衡状态的机会。相比追随市场趋势的策略,它的胜率与盈利率会更高,但是也面临更大的风险。通过参数优化与风险控制,可以使这种策略稳定盈利。
-
-||
 
 ## Overview
 
@@ -105,7 +56,6 @@ The strategy can be optimized in the following aspects:
 ## Conclusion  
 
 In conclusion, this is a typical statistical arbitrage strategy. It tries to capture opportunities when the market rebounds from extreme situations back to equilibrium. Compared to trend-following strategies, it has higher win rates and profitability but also faces greater risks. With parameter optimization and risk control this type of strategies can profit steadily.  
-[/trans]
 
 > Strategy Arguments
 

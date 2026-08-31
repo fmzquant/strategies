@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1769a080022cf8397b4.png)
-[trans]
-
-### 概述
-
-超趋势吞噬弹策略是一种趋势跟踪策略,它结合了平均真实波幅(ATR)、超趋势指标和吞噬形态来识别趋势方向,并在吞噬形态确认趋势的同时寻找具有优惠比率的入场机会。
-
-### 策略原理
-
-该策略首先利用ATR和超趋势指标判断CURRENT市场趋势方向。具体来说,当价格低于上轨时定义为下跌趋势,当价格高于下轨时定义为上升趋势。 
-
-在确认趋势方向的同时,策略还会判断K线是否形成吞噬形态。根据代码逻辑,在上升趋势中,前一根K线收盘价高于当前K线开盘价而当前K线收盘价又低于开盘价的情形会触发多头吞噬;在下跌趋势中,前一根K线收盘价低于当前K线开盘价而当前K线收盘价又高于开盘价的情形会触发空头吞噬。
-
-当吞噬形态与趋势方向一致时,即会产生交易信号。此外,策略还会基于吞噬形态计算止损价位和止盈价位。进场后,如果价格触及止损或止盈价位,则会退出当前头寸。
-
-### 优势分析
-
-该策略结合趋势跟踪和形态识别的优点,可以在趋势行情中识别反转信号,从而在市场转折点捕捉较大行情。此外,止损机制也能有效控制亏损风险。
-
-### 风险分析
-
-该策略最大的风险在于吞噬形态可能是假破,从而产生错误信号。此外,止损和止盈设置也可能过于武断,无法实现盈亏平衡。建议优化参数组合并适当调整止损止盈位置。
-
-### 优化方向 
-
-可以考虑实时优化ATR的参数以便更好地捕捉市场波动率的变化。此外,也可以研究其他指标识别趋势,进一步提高策略的稳定性。从止损止盈方面考虑,动态追踪也是一个可行的优化思路。
-
-### 总结
-
-超趋势吞噬弹策略整合趋势跟踪和形态识别的优势,对吞噬形态作为反转信号进行策略,可在市场转折点获得较高效益。但该策略也存在一定的假信号风险,需要进一步测试和优化以控制风险。
-
-|| 
 
 ### Overview  
 
@@ -70,7 +39,6 @@ Consider optimizing ATR parameters in real time for better capturing changes in 
 
 The SuperTrend Engulfing strategy integrates the advantages of trend following and pattern recognition, using engulfing patterns as reversal signals. It can obtain higher returns at market turning points. But the strategy also has certain risks of fake signals. Further testing and optimization are needed to control risks.
 
-[/trans]
 
 > Strategy Arguments
 

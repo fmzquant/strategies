@@ -10,36 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/148b79eb6d07576c669.png)
-[trans]
-## 概述
-
-动态三均线趋势跟踪策略运用多个时间周期的动态平滑移动平均线来识别市场趋势,实现不同时间周期之间的趋势一致性过滤,从而提高交易信号的可靠性。
-
-## 策略原理
-
-该策略使用3条不同参数设置的动态平滑移动平均线。第一条移动平均线计算当前周期价格的趋势方向,第二条移动平均线计算较高时间周期价格的趋势方向,第三条移动平均线计算再高一级时间周期价格的趋势方向。当第一条移动平均线发生向上穿越第二条移动平均线时产生买入信号,而第三条移动平均线也呈上涨趋势时,验证买入信号的可靠性。整个策略通过不同时间周期之间的趋势过滤,实现了多时间框架之间的趋势一致性,从而确保交易信号的可靠性。
-
-移动平均线使用动态平滑功能,可以自动计算并应用不同时间周期之间适当的平滑因子,从而使高时间周期的移动平均线在低时间周期图表上呈现流畅的趋势线,而不是锯齿形的折线。这种动态平滑使策略可以在高时间周期判断整体趋势方向的同时,还可以在低时间周期进行交易执行,实现高效的趋势跟踪。
-
-## 策略优势
-
-该策略最大的优势在于多时间框架的趋势过滤机制。通过计算不同时间周期价格的平均趋势方向,并要求不同周期之间保持一致,可以有效过滤掉 vieleity 的短期价格波动对交易信号的干扰,确保每一个交易信号都置于大趋势之中,从而显著提高盈利概率。
-
-另一个优势是动态平滑功能的应用。这使得策略可以同时识别高时间周期的整体趋势和低时间周期的具体交易点。策略可以在高时间周期确定大趋势方向的同时,在低时间周期进行具体的交易执行。这种多时间框架的运用,有助于把握市场机会的同时控制交易风险。
-
-## 风险及优化
-
-该策略的主要风险在于交易信号较少。严格的趋势过滤条件会减少交易机会的数量,这对某些追求高频交易的投资者可能不太适合。可以通过降低过滤条件的严格度来获得更多交易机会。
-
-此外,参数设置也需要仔细测试优化,特别是移动平均线的周期长度。不同市场需要设置不同的周期参数才能达到最佳效果。可以通过回测寻找最优参数组合。
-
-未来的优化方向还可以考虑加入更多的技术指标进行滤波,或者增加机器学习算法自动优化参数。这些都将是提高策略效果的有效方法。
-
-## 总结
-
-本策略总的来说是一个非常实用的趋势跟踪策略。多时间框架趋势过滤的机制为每个交易决策提供了良好的大方向支持,有效减少交易风险。而动态平滑功能的添加也使这种多时间框架方法可以高效实现。整个策略框架合理、运行高效,值得学习和应用。
-
-||
 
 ## Overview
 
@@ -69,7 +39,6 @@ Future optimization directions may also consider incorporating more technical in
 
 In conclusion, this is a very practical trend tracking strategy. The inter-timeframe trend filtering provides good directional guidance to support each trading decision, effectively reducing trading risks. The addition of dynamic smoothing also enables efficient implementation of this multi-timeframe approach. The entire strategy framework is reasonable and efficient, worthy of learning and application.
 
-[/trans]
 
 > Strategy Arguments
 

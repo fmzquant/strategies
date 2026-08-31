@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1045022a6c7c839ea8c.png)
-[trans]
-
-
-## 概述
-
-ADX智能趋势跟踪策略利用平均趋向指数(ADX)来判断趋势的力量,在趋势较弱的时候进行趋势捕捉,在强势趋势中进行跟踪获利。该策略判断趋势力量的同时结合价格突破来产生交易信号,属于趋势跟踪策略的一种。
-
-## 策略原理
-
-该策略主要基于平均趋向指数(ADX)来判断目前的趋势力量。ADX通过计算一定周期内价格波动的 DIRECTIONAL INDICATOR 的平均值来表示趋势的力量。当ADX值低于设定阈值时,我们认为行情正在整理,这时进行方框范围判定,如果价格突破方框上下轨,产生交易信号。 
-
-具体来说,策略首先计算14周期的ADX值,低于18时认为趋势较弱。然后计算过去20根K线的最高价和最低价形成的方框范围。当价格突破该方框时,产生买入和卖出信号。止损距离为方框大小的50%,止盈距离为方框大小的100%。
-
-该策略同时结合了趋势力量判断和突破信号,能够在趋势较弱而进入整理的情况下进行捕捉,避免在无序行情中频繁交易。而当出现强势趋势时,止盈范围较大,能够获得更多利润。
-
-## 策略优势
-
-1. 结合趋势力量判断,能够避免在无序行情中频繁交易。
-2. 方框突破增加了一定的过滤,避免在震荡行情中被套。 
-3. 在趋势行情中,能够获得更大的止盈空间。
-4. 可自定义ADX参数、方框参数、止损止盈系数等,适应不同品种。
-
-## 策略风险
-
-1. ADX参数设置不当可能错过趋势或判断错误。
-2. 方框范围过大过小都可能影响效果。
-3. 止损止盈系数不当可能造成过小止损或止盈太早。
-
-可以通过调整ADX参数、方框参数、止损止盈系数等来优化,使之更适合不同的品种和行情环境。同时严格的资金管理也很重要,控制单笔止损比例,避免单笔大损失。
-
-## 策略优化方向 
-
-1. ADX参数可以测试不同周期效果。
-2. 方框参数可以测试不同长度,判断最佳范围大小。
-3. 止损止盈系数可以微调,优化风险收益比。
-4. 可以测试仅做多、仅做空的单边交易效果。
-5. 可以加入其他指标进行组合,如增加量能指标等。
-
-
-## 总结
-
-ADX智能趋势跟踪策略总体来说是一种较为稳定的趋势策略。它同时结合了趋势力量判断和价格突破信号,在一定程度上避免了常见趋势跟踪策略中追高杀跌的问题。通过参数优化和严格的资金管理,可以使该策略稳定获利。
-
-|| 
 
 ## Overview  
 
@@ -96,7 +52,6 @@ Parameters like ADX, box range, stop loss coefficients can be optimized to make 
 
 The ADX Intelligent Trend Tracking Strategy is generally a relatively stable trend tracking strategy. It combines trend strength judgment and price breakthrough signals to avoid the issues like chasing highs and killing lows that are common in typical trend following strategies. Through parameter optimization and strict money management, the strategy can profit steadily.  
 
-[/trans]
 
 > Strategy Arguments
 

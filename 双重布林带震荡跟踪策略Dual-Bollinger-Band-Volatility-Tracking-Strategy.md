@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/860bb07ccc824c5a53.png)
 
-[trans]
-
-## 概述
-
-双重布林带震荡跟踪策略是一种通过构建双重布林带,捕捉价格震荡进行跟踪的量化交易策略。该策略借助布林带的上下轨,实时捕捉市场的震荡机会。
-
-## 策略原理
-
-该策略首先计算N天的均线作为基准线,然后在均线的基础上按照标准差的若干倍计算出上下轨构建布林带。策略采用双重布林带,即上轨和下轨都是标准差的若干倍。在双重布林带形成后,当价格突破上轨时发出买入信号,当价格跌破下轨时发出卖出信号,通过这样的方式捕捉布林带上的价格震荡机会。
-
-该策略同时设置了时间窗口,使得回测更加 TARGET,防止前期数据对测试产生影响。整个策略运作流程为:构建双重布林带、价格与轨道的交叉作为交易信号、设置时间窗口防止前期数据影响。
-
-## 优势分析
-
-该策略最大的优势在于能实时捕捉价格的震荡,通过布林带上下轨的突破来判断OPERATION方向。相比其他指标,布林带对市场的反应更为灵敏,可以在较短时间内形成交易信号。此外,双重布林带设置了更宽的通道,价格突破的可能性更大,可以抓住更多的交易机会。
-
-## 风险分析
-
-该策略主要的风险在于布林带构建依赖的参数N日和标准差倍数的设置。如果参数设置不当,将导致布林带变得太宽或太窄,从而错过交易机会或产生错误信号。此外,双边交易中没有设置止损,可能导致亏损扩大。
-
-解决方法是优化参数,实时评估布林带的形态;另外是根据历史数据制定止损策略,控制单次亏损。
-
-## 优化方向  
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 优化布林带的参数,调整N日和标准差倍数,使布林带能更好地适应不同市场的特征。
-
-2. 增加续单机制,在原有订单获得一定利润后再次追加订单,扩大获利空间。
-
-3. 设置止损策略,当价格向不利方向突破布林带上下轨时止损出场,控制亏损。
-
-4. 结合其他指标筛选信号,避免在震荡市场中产生错误信号。
-
-## 总结
-
-双重布林带震荡跟踪策略通过构建双向布林带实时捕捉价格的震荡,能够在短期内抓住较多交易机会。该策略优势在于对市场变化灵敏,交易信号生成快速;风险主要来自参数设置不当和缺乏止损。我们可以通过多方位优化使该策略更稳定和高效。
-
-||
 
 
 ## Overview
@@ -88,7 +49,6 @@ The main aspects to optimize for this strategy:
 
 The Dual Bollinger Band Volatility Tracking strategy captures price volatility in real time by constructing double-sided Bollinger Bands, being able to seize more short-term trading opportunities. The advantages of this strategy are sensitivity to market changes and fast signal generation. The main risks come from inappropriate parameter settings and lack of stop loss. We can make the strategy more stable and efficient through multi-dimensional optimization.
 
-[/trans]
 
 > Strategy Arguments
 

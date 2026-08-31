@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e2aed77596eddcd70c.png)
-[trans]
-
-## 概述
-
-跟踪线策略是一种基于布林带指标和平均真实波动范围(ATR)的趋势跟踪策略。它会动态调整趋势判断线,在突破布林带上轨时向上调整,突破布林带下轨时向下调整,从而实现对趋势的判断和跟踪。
-
-## 策略原理
-
-该策略首先计算布林带的上下轨,以及平均真实波动范围。然后判断价格是否突破布林带上轨或者下轨。
-
-当价格突破上轨时,如果开启ATR过滤,则将趋势判断线设置为最低价减去ATR;如果不开启ATR过滤,则直接设置为最低价。
-
-当价格突破下轨时,如果开启ATR过滤,则将趋势判断线设置为最高价加上ATR;如果不开启ATR过滤,则直接设置为最高价。
-
-这样,趋势判断线就可以根据价格突破布林带上下轨来动态调整,从而实现对趋势的判断。
-
-当当前趋势判断线高于上一个趋势判断线时,表示目前处于上涨趋势;当当前趋势判断线低于上一个趋势判断线时,表示目前处于下跌趋势。
-
-根据趋势判断,该策略可以进行做多做空操作。
-
-## 优势分析
-
-- 动态调整趋势判断线,能够灵活地捕捉价格趋势
-- 结合布林带指标,能在价格突破时及时判断趋势转折
-- ATR参数的引入,可以过滤部分假突破信号
-
-## 风险分析
-
-- 布林带参数选择不当,可能导致频繁的假突破
-- ATR参数选择过大,可能导致错过趋势转折机会
-- 需考虑止损,以防止极端行情带来的损失
-
-可以通过参数调整、引入止损来规避部分风险。也可结合其它指标进行过滤,提高突破的有效性。
-
-## 优化方向  
-
-- 优化布林带和ATR的参数,寻找最佳配置
-- 添加其它指标判断来过滤假突破 
-- 针对特定交易品种选择布林带周期和ATR周期
-
-## 总结
-
-跟踪线策略致力于在波动行情下捕捉价格趋势,是一种有效的趋势跟踪策略。通过参数调整和优化,是可以获得不错的收益的。不过也需要考虑风控止损和防范假突破。建议将本策略与其它指标或策略组合使用,可以进一步提升收益率。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ Some risks can be mitigated via parameter tuning, introducing stop loss. Can als
 
 The Follow Line strategy aims to capture price trends in volatile markets. It is an effective trend tracking strategy. Proper parameter tuning and optimizations can lead to decent profits. However, risks need to be managed via stop loss and preventing false breakouts. It is recommended to combine this strategy with other indicators or strategies to further improve profitability.
 
-[/trans]
 
 > Strategy Arguments
 

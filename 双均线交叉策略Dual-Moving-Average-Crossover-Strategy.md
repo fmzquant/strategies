@@ -10,21 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略的名称为“双均线交叉策略”,它的核心原理是使用两条不同参数的线性回归线,根据其交叉情况来产生买入和卖出信号。
-
-该策略首先计算一短期和一长期两条线性回归线。短期线性回归线参数为100天,长期线性回归线参数为150天。当短期线性回归线从下方向上突破长期线性回归线时,产生买入信号;当短期线性回归线从上方向下跌破长期线性回归线时,产生卖出信号。
-
-线性回归线能够反映价格的长期趋势方向。短期线性回归线参数小,对价格变化更敏感,能捕捉到短期价格反转时机;长期线性回归线参数大,代表价格的长期均衡趋势。当两条均线发生交叉时,代表短期和长期趋势发生转折,因此可以据此产生交易信号。
-
-该策略的优点是利用了均线交叉的经典技术分析策略,加入了线性回归分析,可以同时识别长短期两个时间维度上的价格转折。但线性回归线容易受到异常数据的影响,存在一定的滞后性。此外,均线交叉本身也会产生较多的假信号。
-
-为了过滤一些假信号,该策略加入了时间条件限制,只在指定的日期区间内执行策略交易信号。这可以一定程度上减少无效交易的次数。但时间窗口的设定也存在主观性,需要经过回测优化。
-
-总体来说,双均线交叉策略融合多种分析方法,可以捕捉复合型的交易机会,但需要积极管理风险,防范过度交易。结合其他技术指标继续优化该策略,可以进一步提升稳定性。
-
-
-||
 
 This strategy is named "Dual Moving Average Crossover Strategy". Its core principle is using two linear regression lines with different parameters and generating trading signals based on their crossover situations.
 
@@ -38,7 +23,6 @@ To filter out some false signals, this strategy incorporates time condition limi
 
 In conclusion, the dual moving average crossover strategy combines multiple analytical techniques and can capture complex trading opportunities. But risk management is crucial to prevent overtrading. Further optimizing the strategy by incorporating other technical indicators can improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

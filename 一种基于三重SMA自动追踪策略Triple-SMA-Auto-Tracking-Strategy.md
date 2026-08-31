@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17d9bc0882a12c923ba.png)
-[trans]
-## 概述
-
-三重SMA策略是一种基于三条不同周期的简单移动平均线进行趋势判断和entries的策略。它可以自动追踪趋势,利用趋势中的回调进行加仓建仓。
-
-## 策略原理
-
-该策略使用三条不同周期的SMA作为主要的趋势判断指标,包括200周期、400周期和600周期的SMA。价格在三条SMA之上时判断为上涨趋势,反之则为空头趋势。
-
-作为entries指标,策略结合使用close价格和StochClose振荡器。只有当价格与三重SMA的方向一致时才会发出信号。StochClose指标用于判断是否过量或超卖,当StochClose上穿95时做多,下穿5时做空。
-
-止损标准为当价格触及最慢的SMA时止损。
-
-策略可以进行加仓,最大加仓次数为10次。并设置了三个不同比例的止盈,分别为1%、2%和6%。
-
-## 优势分析
-
-三重SMA策略最大的优势在于,通过组合使用三条不同周期的SMA,能较好地判断趋势的方向和力度。比单一SMA具有更强的过滤假信号的能力。
-
-另外,结合StochClose指标判断是否超买超卖,可以避免在趋势反转点附近进场,从而减少错误的entries。 
-
-止损标准简单直接,将最慢周期的SMA作为止损线,可以最大限度避免止损过早。
-
-允许加仓也使得策略可以持续追踪趋势获利。
-
-## 风险分析
-
-该策略主要的风险在于,三条SMA未必能完全过滤掉所有假信号,价格突破后如果不能形成趋势再次回调,则可能造成损失。这种情况通常发生在重要支撑阻力附近。 
-
-此外,StochClose指标本身也会产生错误信号,导致不适当的entries。这种情况通常会在价格震荡区间发生。
-
-为降低这些风险,可以适当调整SMA的周期;或者增加其他指标进行组合判断,如KDJ、MACD等,确保进入的信号质量。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加或调整SMA的周期数,找到更适合具体品种的周期参数
-
-2. 增加其他指标进行组合判断,如KDJ、MACD等,提高entries质量
-
-3. 优化止盈止损标准,使其更加贴合市场的波动范围
-
-4. 优化加仓的次数和比例,找到更适合的加仓策略   
-
-5. 测试不同的品种参数,使策略参数全面适应更多品种
-
-## 总结
-
-三重SMA策略整体而言是一个非常实用的趋势跟踪策略。它通过组合应用三条不同周期的SMA以及StochClose指标,实现了较好的趋势判断效果,能有效避免错误信号。同时允许适当加仓,从而能始终跟踪趋势参与profit。通过参数调整和优化,该策略可以成为一个强劲的趋势跟踪机器。
-
-||
 
 ## Overview
 
@@ -113,7 +61,6 @@ The strategy can be optimized in the following aspects:
 
 In conclusion, the Triple SMA strategy is a very practical trend-following approach. By combining triple SMAs and StochClose, it achieves solid trend identification and avoids false signals. Allowing pyramiding also enables tracking trends. With parameter tuning and optimizations, it can become a powerful trend tracker.
 
-[/trans]
 
 > Strategy Arguments
 

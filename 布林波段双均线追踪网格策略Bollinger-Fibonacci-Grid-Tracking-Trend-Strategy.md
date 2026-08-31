@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14f8a4ba0ba252bc19d.png)
-[trans]
-
-## 概述
-
-本策略运用布林通道指标绘制出基于ATR和Fibonacci回归的波段作为网格的价格通道。结合双EMA均线判断整体趋势方向,在趋势方向选择性地在布林波段价格上设置追踪止损网格,实现趋势追踪套利。
-
-## 策略原理
-
-1. 使用布林通道中轴线及基于ATR和4条Fibonacci回归线绘制上下轨构建价格波段。
-
-2. 快线EMA和慢线SMA组成双均线判断整体趋势方向。快线突破慢线为多头市场,反之为空头市场。
-
-3. 在多头市场中仅做多,选择布林下轨附近价格突破通道下沿开仓做多;在空头市场中仅做空,选择布林上轨附近价格突破通道上沿开仓做空。
-
-4. 设置止损条件:出现大幅反转K线即退出当前方向仓位。
-
-## 优势分析
-
-1. 使用双均线判断大级别趋势,避免逆势交易。
-
-2. 布林ATR通道网格设置了多条开仓价格,增加了开仓成功率。
-
-3. Fibonacci回归波段设置了价格离散度,不同波段仓位数量不同,实现了资金分散。
-
-4. 实时止损条件便于快速止损,降低盈利回吐。
-
-## 风险分析
-
-1. 大级别趋势判断错误,可能导致逆势亏损。可适当调整均线参数,或者增加其他指标进行辅助判断。
-
-2. 波动过大时,价格可能直接突破网格区,无法开仓。可调整波段参数,增加开仓机会。
-
-3. 止损条件较为主观,不同交易者的识别标准可能存在误差。建议测试并优化止损条件。
-
-## 优化方向 
-
-1. 增加apo指标进行双均线趋势判断的辅助分析。
-
-2. 使用市场波动率指标优化布林波段参数,使其更好地适应市场的动态变化。
-
-3. 调小止损幅度,并加入OTHER方式的止损条件设定,降低误差。
-
-## 总结
-
-本策略整体思路清晰,使用布林ATR通道和双均线结合实现了策略交易信号的全面综合判断,最大程度地减少了误判风险。策略优势明显,可实际应用;但细节点如参数设置和止损条件仍有优化空间,有待进一步完善。相信在不断优化中,本策略的盈利水平和稳定性都将不断提升。
-
-||
 
 
 ## Overview
@@ -109,7 +62,6 @@ This strategy uses the Bollinger Bands indicator to draw price channels based on
 
 The overall idea of this strategy is clear, combining Bollinger ATR channel and double moving averages to achieve comprehensive judgment of strategy trading signals, maximizing the risk reduction of misjudgment. The advantages of the strategy are obvious and can be applied in actual trading; but there is still room for optimization in details such as parameter settings and stop loss conditions, which need to be further improved. It is believed that with continuous optimization, the profitability and stability of this strategy will continue to increase.
 
-[/trans]
 
 > Strategy Arguments
 

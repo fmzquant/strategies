@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/200e63f721bf03311f2.png)
-[trans]
-### 概述
-
-玻尔福重复索纳策略是一种基于玻尔福带的量化交易策略。该策略利用玻尔福带上下轨之间的价格区间,判断市场波动范围,识别潜在的入场和退场时机。
-
-### 策略原理
-
-该策略主要依据以下几个指标进行判断:
-
-1. 玻尔福中线:简单移动平均线SMA,代表市场总体趋势。
-
-2. 玻尔福上轨:中线+ N倍标准差。上轨代表市场波动的上限。
-
-3. 玻尔福下轨:中线- N倍标准差。下轨代表市场波动的下限。
-
-当收盘价高于下轨,且开盘价低于下轨时,判断为潜在的底部,可以考虑入场。当收盘价高于上轨,且开盘价低于上轨时,判断为潜在的突破上轨的信号,也可入场。
-
-当收盘价低于上轨,且开盘价高于上轨时,判断为已经进入玻尔带上部,应考虑退场。当收盘价高于开盘价,且上下轨距离超过2倍中线时,判断为波动加大的信号,也应退场。
-
-### 优势分析
-
-1. 利用双轨组合判断,提高信号准确性。收盘价与开盘价的组合判断,可以滤除部分假信号。
-
-2. 基于标准差计算波动范围,自动适应市场变化。不需要手动设置固定价格区间。
-
-3. 结合中线趋势判断,避免在没有趋势的市场中反复震荡。
-
-4. 采用中轨突破来判断趋势反转时点。可以及时抓住潜在机会。
- 
-### 风险分析
-
-1. 中短线操作策略,不适合长线持有。需要密切关注市场情况,及时止损。
-
-2. 玻尔福带仅在一定时间框架下有效。如果采用不当的参数设置,容易产生假信号。
-
-3. 在盘整市场中,中线震荡较大,上下轨交替触发可能较频繁。这时应降低仓位规模,或暂时停止操作。
-
-### 优化方向
-
-1. 调整参数,适应更长的时间周期。可以通过增大周期长度,使用指数移动平均等方法优化中轨的算法。
-
-2. 增加波动判断指标,如ATR,进一步避免假突破。可以设置ATRprebuilt值作为过滤条件,只有在波动大于一定幅度时才产生交易信号。
-
-3. 结合其它指标,实现Barry过滤效果。例如增加成交量的判断规则,只在成交量放大时进行操作。
-
-### 总结
-
-玻尔福重复索纳策略通过定义价格通道,自动识别市场中的范围极值点作为潜在交易机会。它非常适合捕捉中短期价格反转,可作为趋势跟踪策略的补充。通过合理优化,能有效控制风险,提高盈利概率。
-
-||
 
 ### Summary
 
@@ -109,7 +59,6 @@ When the closing price is lower than the upper rail and the opening price is hig
 
 The Bollinger Bands repetitive zona strategy automatically identifies potential extremes in the market to define price channels as potential trading opportunities. It is very suitable for capturing medium-term price reversals and can supplement trend tracking strategies. Through reasonable optimization, risks can be effectively controlled and profitability improved.
 
-[/trans]
 
 > Strategy Arguments
 

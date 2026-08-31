@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14f33a8d7100195e3f4.png)
 
-[trans]
-
-## 概述
-
-低点扫描智能追踪法是一种非反演的Forex交易策略。它使用低点扫描器寻找最低点,并结合Hull移动平均线进行交易信号判断,可以实现高胜率。
-
-## 原理分析 
-
-该策略首先使用低点扫描器寻找最低点。低点扫描器通过计算价格和交易量的RSI值,再与其WMA曲线比较,判断RSI值低于WMA时为最低点。
-
-然后,策略使用Hull移动平均线进行交易信号判断。它计算两个不同周期的Hull MA,当短周期Hull MA上穿长周期Hull MA时做多,下穿时做空。
-
-最后,策略结合最低点扫描和Hull MA的信号,只在最低点扫描器给出最低点信号时,才发出Hull MA的交易信号,形成入场策略。
-
-这样,通过识别市场最低点再追踪趋势,可以有效避开错误的入场时机,提高交易系统的胜率。
-
-## 优势分析
-
-低点扫描智能追踪法的优势主要有:
-
-1. 使用低点扫描器,可以准确识别市场最低点,避免在高点买入造成打击。
-
-2. Hull MA是一种优良的趋势跟踪指标,可以顺势而为,捕捉较大行情。
-
-3. 结合低点扫描和Hull MA互为验证,可以过滤掉大量噪音,减少虚假信号。
-
-4. 采用渐进止损出场机制,可以最大限度锁定利润,避免回吐。
-
-5. 该策略非反演指标驱动,不会操纵历史数据,真实可靠。
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 最低点扫描器可能会漏掉部分最低点,导致错过交易机会。可以适当调整参数,扩大扫描范围。
-
-2. 行情可能出现剧烈反转,造成止损被击出。可以适当放宽止损范围,合理控制仓位规模。 
-
-3. 参数设置不当可能导致产生过多或过少交易信号。应多次反复优化,找到最佳参数组合。
-
-4. 该策略仅适用于趋势明显的Forex品种,不适合用于盘整、震荡市场的交易。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化低点扫描器的参数,使其可以更准确地识别最低点。
-
-2. 优化Hull MA的参数,使其可以更精确地跟踪趋势。
-
-3. 增加其他指标过滤,如MACD、KDJ等,提高信号的可靠性。 
-
-4. 增加机器学习模型预测结果,辅助交易信号判断。
-
-5. 优化止损机制,使其可以根据市场波动程度动态调整。
-
-6. 优化仓位管理策略,让系统可以根据资金管理规则动态调整仓位。
-
-## 总结
-
-低点扫描智能追踪法是一种高胜率的非反演Forex交易策略。它能够准确识别市场最低点,在趋势明确时顺势入场,并采用渐进止损锁定利润。该策略优化空间较大,可以从多方面进行改进,使其成为一个强大的自动交易系统。
-
-||
 
 ## Overview
 
@@ -135,7 +72,6 @@ The strategy can be optimized in the following aspects:
 
 The Low Scanner Smart Tracking Method is a high winning rate non-repainting Forex trading strategy. It can accurately identify market low points and enter the trend when the trend is clear, locking in profits with progressive stop loss. The strategy has large room for optimization and can be improved in many ways to become a powerful automated trading system.
 
-[/trans]
 
 > Strategy Arguments
 

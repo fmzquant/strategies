@@ -10,36 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11f3cdfec2349ed50bb.png)
-[trans]
-
-## 概述
-该策略运用双波带指标识别盘整区域,配合突破策略实现低买高卖的交易策略。当价格突破中立区时,表明价格开始启动新的趋势,这时入场做多;当价格再次跌破中立区时,表明价格趋势结束,这时平仓。
-
-## 策略原理
-该策略使用两个布林带。内层布林带的上下轨为20日简单移动均线±1倍标准差;外层布林带的上下轨为20日简单移动均线±2倍标准差。当价格位于内外布林带之间时,定义为中立区。
-
-当价格连续两个K线都位于中立区时,认为处于盘整;当价格连续两个K线盘整后,第三根K线收盘价超过内布林带上轨时,产生做多信号。
-
-做多后,设置止损线为最低价-2倍ATR,以锁定利润和控制风险;当价格跌破内布林带上轨时,平仓。
-
-## 优势分析
-该策略结合指标和趋势两个因素,能够识别盘整区域并判断价格是否启动新一轮趋势,实现低买高卖,收益空间大。止损策略可以锁定利润和控制风险,使得策略稳定性较高。
-
-## 风险分析
-该策略依赖价格突破布林带上轨形成的做多信号,如果出现假突破,则会形成错单和亏损。此外,止损点过于接近也可能被秒止损。
-
-可以通过优化布林带的参数、增加过滤条件等方法来减少假突破的概率。此外可以适当放宽止损点,确保有足够的空间。
-
-## 优化方向
-1. 优化布林带的参数,调整布林带的宽度,降低假突破概率
-2. 增加其他指标过滤,例如成交量,避免低量的假突破
-3. 调整止损策略,防止被套和秒止损
-4. 增加分批建仓策略,降低单笔风险
-
-## 总结
-该策略整合双波带指标和趋势策略,实现低买高卖,收益空间大。同时,止损策略也使得策略较为稳定。通过进一步优化,可以提高策略效果,值得实盘验证。
-
-||
 
 ## Overview 
 This strategy uses double Bollinger Bands to identify consolidation zones and breakout signals to implement low-buy-high-sell trading strategy. When price breaks through the neutral zone, it signals the start of a new trend and time to enter long position. When price breaks back below the neutral zone, it signals the end of the trend and time to close position.
@@ -68,7 +38,6 @@ Solutions include optimizing BB parameters, adding filters to reduce false signa
 ## Conclusion
 This strategy integrates double BBs and trend strategies for low-buy-high-sell trading with large profit potential. The stop loss strategy also enhances stability. Further optimizations can improve strategy performance for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

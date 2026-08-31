@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f4046dbc10d2b3b9c8.png)
 
-[trans]
-
-## 概述
-本策略基于Keltner通道指标设计了一个回抽交易策略。该策略通过比较价格与Keltner通道上下轨的关系,判断价格可能反转的时机,采取适当的做多做空操作。
-
-## 策略原理
-本策略使用Keltner通道指标判断价格趋势。Keltner通道由均线和平均真实波幅(ATR)构成。通道上轨等于均线加上ATR的N倍;下轨等于均线减去ATR的N倍。当价格从下向上突破通道下轨时,认为多头力量增强,可以做多;当价格从上向下突破通道上轨时,认为空头力量增强,可以做空。 
-
-另外,本策略判断回抽机会的依据是价格重新触碰或突破通道边界。比如,价格上涨突破下轨后,在没有触碰上轨的情况下再次下跌触碰下轨,这就是一个做多回抽的机会。策略会在这个时候开仓做多。
-
-## 优势分析
-这是一个利用价格回抽特性进行交易的策略。它的优势在于:
-
-1. 使用Keltner通道判断价格趋势方向,可以有效过滤噪音。
-2. adopt回抽策略,可以在反转前进入场内,捕捉较大行情。
-
-## 风险分析
-该策略的主要风险在于:
-
-1. 市场长期单边行情时,回抽机会可能不多,无法获利。
-2. 回抽信号判断不准确时,可能导致亏损。
-
-对策:
-1. 优化参数,调整通道宽度,适应市场环境。
-2. 加大仓位管理,降低单笔损失。
-
-## 优化方向
-该策略可以从以下几个方面进行优化:
-
-1. 基于交易量的突破过滤,避免虚假突破。
-2. 根据波动率调整仓位大小。
-3. 更新止损方式,移动止损以锁定更多利润。
-
-## 总结
-本策略整合了趋势判断和回抽交易的方法,在捕捉反转行情方面具有独特优势。通过参数调整和功能扩展,可以进一步增强策略的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -84,7 +47,6 @@ The strategy can be optimized in the following aspects:
 ## Summary  
 This strategy integrates trend judgment and pullback trading methods, and has unique advantages in capturing reversal trends. By adjusting parameters and expanding functions, the stability and profitability of the strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

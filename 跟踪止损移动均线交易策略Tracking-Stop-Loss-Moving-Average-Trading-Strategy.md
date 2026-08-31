@@ -10,31 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a7748dca2e41280b0b.png)
-[trans]
-
-## 概述
-本策略是一个基于移动均线的跟踪止损交易策略。它使用两个不同周期的EMA均线进行金叉死叉判断,在发生金叉时做多,发生死叉时做空。同时,策略利用百分比或固定点数的方式来 trailing 止损和止盈位。这使得策略可以在保持盈利的同时有效控制风险。
-
-## 策略原理  
-本策略使用快慢两条EMA均线。快线周期短,反应敏感;慢线周期长,反应稳定。两线向上交叉时产生金叉信号买入;向下交叉时则产生死叉信号卖出。这是移动均线策略的基本原理。
-
-在此基础上,本策略采用 trailing 的方式移动止损位和止盈位。具体来说,交易后止损位和止盈位会随着价格的运行不断向有利方向移动,以锁定盈利,同时控制风险。移动的幅度可以按百分比或固定点数来设置。这使得止盈止损更加灵活和智能。
-
-## 策略优势  
-1. 运用双EMA形成交易信号,回报稳定。
-2. trailing 止损止盈机制锁定盈利并有效控制风险。  
-3. 可以选择百分比或固定点数方式来 trailing,灵活度高。
-4. 在长时间框架内,跟踪止损收益表现良好。
-
-## 策略风险与优化  
-1. 在震荡行情中,可能出现止损过于频繁而影响盈利的情况。可以适当放宽止损位,或增加移动止损的启动幅度。
-2. EMA均线本身具有一定的滞后性,可能miss部分交易机会。可以考虑加入 Momentum 等指标提高策略的敏感度。  
-3. 回测数据不充分可能导致过拟合。应该在更长的时间框架和更多品种中进行充分验证。
-
-## 总结  
-本策略整合运用了移动均线形成交易信号和趋势跟踪两大技术优势。在长线上表现较为稳定优异,属于具有实战价值的量化策略之一。通过参数调整和组合优化,本策略可以进一步增强效果,值得实盘验证。
-
-||
 
 ## Overview  
 This is a tracking stop loss trading strategy based on moving average. It uses two EMA lines with different periods to generate golden cross and dead cross signals for long and short trades. Meanwhile, the strategy utilizes percentage or fixed points method to trail stop loss and take profit levels. This allows the strategy to lock in profits while effectively controlling risks.  
@@ -58,7 +33,6 @@ On top of that, the strategy trails stop loss and profit target once trade is en
 ## Conclusion
 The strategy integrates the strengths of moving average signaling and trend tracking techniques. It demonstrates steady and stellar performance over long term and possesses practical value for live trading. Further improvements can be achieved through parameter tuning and combination optimization. The strategy merits real-world verification.
 
-[/trans]
 
 > Strategy Arguments
 

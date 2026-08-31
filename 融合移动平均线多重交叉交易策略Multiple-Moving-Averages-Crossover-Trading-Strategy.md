@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f14f9e313f8e45207a.png)
 
-[trans]
-
-### 概述
-
-该策略是一个基于三条移动平均线(MA1、MA2、MA3)交叉的交易策略。通过设置三条移动平均线的类型、周期、价格数据源和分辨率、以及是否允许交易它们之间的交叉,可以得到灵活的交易策略组合。
-
-### 原理
-
-该策略主要利用三条移动平均线之间产生的交叉和抄底信号作为交易信号。当较短周期的移动平均线由下向上穿过较长周期的移动平均线时,产生长仓开仓信号;而当较短周期的移动平均线由上向下穿过较长周期的移动平均线时,产生平仓信号。
-
-用户可以自由选择三条移动平均线的类型(SMA、EMA等)、周期、价格数据源(收盘价、最高价等)、K线分辨率(分钟线、日线等)。同时还可以选择是否开启每个移动平均线之间交叉的交易,来决定是否对某些交叉采取交易行动。 
-
-该策略目前仅做多,使用市价单开仓和平仓。每次交易投入资金为账户总权益的100%。
-
-### 优势
-
-1. 可以自由选择移动平均线的类型、周期等参数进行优化和组合,降低曲线拟合风险
-2. 多重移动平均线交叉可以形成多个交易机会,提高交易频率
-3. 同时利用长、中、短周期移动平均线,能够在趋势和反转之间平衡
-4. 支持不同K线分辨率,可以进行多时间框架分析
-5. 自带预测功能,可以测试参数拟合效果
-
-### 风险
-
-1. 大量参数组合可能导致过优化
-2. 交易频率较高,可能增加交易费用和滑点成本
-3. 采用市价单无法限制入场点位
-4. 多重移动平均线可能出现冲突信号
-5. 回测和实盘表现可能存在差异
-
-### 优化建议
-
-1. 利用walks forward分析得到有效的参数范围
-2. 在回测中加入交易费用和滑点成本
-3. 尝试限价单替代市价单
-4. 增加过滤条件,避免冲突信号
-5. 在模拟真实环境的回测中验证策略
-
-
-### 总结
-
-该策略综合运用了移动平均线的平滑特性和交叉信号的模式识别能力。用户可以灵活地选择参数,在趋势跟随和反转识别之间进行平衡。同时也需要注意控制过优化风险,在模拟真实环境的复杂市场中验证策略健壮性。总的来说,该策略提供了一种运用多重移动平均线进行交易的有效范例。
-
-||
 
 
 Overview
@@ -95,7 +51,6 @@ Optimization Suggestions
 Summary
 The strategy comprehensively leverages the smoothing trait of MAs and pattern recognition power of crossover signals. Users can flexibly choose parameters to balance between trend following and reversal identification. Also the risk of overfitting should be controlled by validating strategy robustness under complex market conditions simulated in backtest. In conclusion, this strategy provides an effective example of utilizing multiple MAs for trading.
 
-[/trans]
 
 > Strategy Arguments
 

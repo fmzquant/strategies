@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19d896963817e1d58ec.png)
-[trans]
-#### 概述
-该策略结合了MACD指标和有限的马丁格尔资金管理方法,旨在捕捉市场趋势变化时的交易机会。当MACD快线与慢线发生金叉时产生买入信号,死叉时产生卖出信号。同时,策略采用了有限的马丁格尔方法来控制回撤,最多加仓3次。策略对单笔交易设置了1%的固定止盈止损。
-
-#### 策略原理
-1. 计算MACD指标的快线、慢线和信号线。
-2. 判断快线与慢线的交叉情况,金叉做多,死叉做空。
-3. 设置固定的单笔交易量(0.01)。
-4. 记录上一笔交易的净利润。
-5. 若当前净利润小于上一笔交易,且加仓次数小于3次,则将下一笔交易量翻倍,加仓次数加1;否则重置交易量和加仓次数。
-6. 对每笔多单,当价格上涨1%时止盈,下跌1%时止损;空单则反之。
-7. 在图表上标记买卖点。
-
-#### 策略优势
-1. 结合了趋势跟踪指标MACD和马丁格尔资金管理,能较好地把握趋势行情。
-2. 设置了固定止盈止损,控制了单笔交易风险。
-3. 采用有限的马丁格尔加仓,在趋势延续时能获得更高收益。
-4. 加仓次数最多为3次,避免了过度加仓导致的爆仓风险。
-5. 图表标记买卖信号,方便观察策略效果。
-
-#### 策略风险
-1. MACD指标可能出现信号与价格背离的情况,导致误判。
-2. 固定的止盈止损比例,可能错失更大的利润空间或承担更大损失。
-3. 马丁格尔加仓虽然限制在3次以内,但在震荡行情下连续亏损时,仍有爆仓的风险。
-4. 策略未考虑市场异常波动的情况,如瞬间跳空,可能导致无法按预期成交。
-
-#### 策略优化方向
-1. 可以考虑引入趋势确认指标,如MA,过滤MACD的信号。
-2. 优化止盈止损的设置,如采用ATR或百分比作为动态止损。
-3. 对加仓次数和加仓比例进行优化,控制回撤风险。
-4. 设置异常行情的应对机制,如价格跳空时暂停交易等。
-5. 考虑引入仓位管理,根据市场波动状况动态调整仓位。
-
-#### 总结
-该策略通过MACD指标捕捉趋势,同时采用有限马丁格尔控制回撤,能在趋势行情中取得不错的效果。但策略也存在一定的风险,如信号失效、固定止损等。通过引入其他指标、优化参数设置、仓位管理等方法,可以进一步提升该策略的稳健性和收益性。
-
-|| 
 
 #### Overview
 This strategy combines the MACD indicator with a limited Martingale money management method to capture trading opportunities when market trends change. A buy signal is generated when the MACD fast line crosses above the slow line, and a sell signal is generated when the fast line crosses below the slow line. At the same time, the strategy uses a limited Martingale method to control drawdowns, with a maximum of 3 additional positions. The strategy sets a fixed take profit and stop loss of 1% for each trade.
@@ -83,7 +46,6 @@ This strategy combines the MACD indicator with a limited Martingale money manage
 #### Summary
 This strategy captures trends through the MACD indicator while using limited Martingale to control drawdowns, which can achieve good results in trending markets. However, the strategy also has certain risks, such as signal failure and fixed stop losses. By introducing other indicators, optimizing parameter settings, position sizing, and other methods, the robustness and profitability of this strategy can be further improved.
 
-[/trans]
 
 
 

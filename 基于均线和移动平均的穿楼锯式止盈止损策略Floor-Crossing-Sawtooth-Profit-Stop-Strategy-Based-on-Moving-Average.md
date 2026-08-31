@@ -10,91 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16550a719cc025b8aed.png)
-[trans]
-
-## 概述
-
-本策略基于均线和移动平均线的金叉死叉进行开仓,并采用穿楼的方式设置止盈止损。其主要特点是:
-
-1. 使用均线系统过滤震荡市
-2. 采用移动止盈止损,实现动态管理资金
-3. 可配置仓位过滤,避免单边开仓
-
-## 策略原理
-
-本策略主要由四部分组成:
-
-1. 均线系统
-
-   使用均线的黄金交叉和死叉来判断趋势,过滤震荡市场。
-
-2. 移动止盈止损
-
-   使用一定比例的移动止盈止损来锁定利润和控制风险,实现资金的动态管理。
-
-3. 仓位过滤
-
-   可配置是否开启仓位过滤。如果上一仓位为多头,则下一个信号必须为空头才能开仓,避免单边持仓。
-
-4. ATR止损
-
-   使用ATR来限制最大止损范围,避免止损过大。
-
-具体来说,策略首先计算均线,并在均线出现黄金交叉时做多,死叉时做空。入场后,以一定比例设置移动止盈和止损线。如果价格触碰止盈线则止盈;如果触碰止损线或者超过ATR止损范围则止损。
-
-## 策略优势
-
-本策略主要有以下优势:
-
-1. 可配置性强
-
-   策略中多处参数都是可配置的,用户可以根据自己的交易风格进行调整。
-
-2. 资金管理优良
-
-   采用移动止盈止损和ATR止损,可以有效控制单次止损幅度,实现优秀的资金管理。
-
-3. 适合趋势市
-
-   均线策略本身就较适合趋势性较强的市场,可有效过滤震荡。
-
-## 风险及对策  
-
-本策略也存在一些风险,主要有:
-
-1. 趋势判断错误
-
-   均线本身对复杂行情的判断并不完美,可能出现误判的情况。此时应适当调整均线参数,或结合其他指标来判断。
-
-2. 止损过于激进
-
-   移动止损可能在震荡中被否定,应结合ATR参数来设置止损范围。
-
-3. 单边开仓风险
-
-   开启仓位过滤会对交易频率带来一定影响,长时间单边持仓可能带来额外风险。
-
-## 策略优化方向  
-
-本策略的主要优化方向有:
-
-1. 参数优化
-
-   调整均线期数、ATR参数、止盈止损比例等参数,优化策略效果。
-
-2. 增加指标
-
-   增加CMF、OBV等指标来判断资金流向,避免止损过大。
-
-3. 组合其他策略
-
-   结合突破等策略,在趋势稳定后进行追踪,可获得更好的效果。
-
-## 总结
-
-本策略总体来说,通过均线过滤和移动止盈止损的方式,实现了基于趋势的动态资金管理。可配置性强,适合理性投资者按自己风格调整使用。作为一种通用型量化策略,它的优化余地还很大,值得深入研究。
-
-|| 
 
 ## Overview
 
@@ -180,7 +95,6 @@ The main optimization directions are:
 
 In summary, through the moving average filter and moving take profit and stop loss, this strategy realizes dynamic capital management based on trends. It has high configurability, suitable for rational investors to adjust and use according to their own styles. As a universal quantitative strategy, it still has great potential for optimization and is worth in-depth research.
 
-[/trans]
 
 > Strategy Arguments
 

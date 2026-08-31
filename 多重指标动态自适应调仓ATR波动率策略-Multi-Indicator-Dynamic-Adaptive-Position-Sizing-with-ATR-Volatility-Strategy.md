@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1091c674d8dbd378ac5.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标和动态风险管理的量化交易策略。它结合了EMA趋势跟踪、ATR波动率、RSI超买超卖以及K线形态识别等多个维度,通过自适应调仓和动态止损来实现收益风险的平衡。策略采用了分批止盈和移动止损的方式来保护盈利。
-
-#### 策略原理
-策略主要通过以下几个方面来实现交易：
-1. 使用5周期和10周期的EMA均线交叉来确定趋势方向
-2. 通过RSI指标判断超买超卖区域,避免追涨杀跌
-3. 利用ATR指标动态调整止损位置和仓位大小
-4. 结合K线形态(吞没、锤子、流星)作为辅助入场信号
-5. 采用基于ATR的动态滑点补偿机制
-6. 通过交易量确认来过滤虚假信号
-
-#### 策略优势
-1. 多重信号交叉验证,提高交易可靠性
-2. 动态风险管理,根据市场波动自适应调整
-3. 分批止盈策略,合理锁定部分利润
-4. 采用移动止损,保护既有盈利
-5. 设置每日止损限制,控制风险暴露
-6. 滑点动态补偿,提高订单成交率
-
-#### 策略风险
-1. 多重指标可能导致信号滞后
-2. 频繁交易可能产生较高成本
-3. 在震荡市场中可能频繁止损
-4. K线形态识别存在主观因素
-5. 参数优化可能导致过度拟合
-
-#### 策略优化方向
-1. 引入市场波动周期判断,动态调整参数
-2. 增加趋势强度过滤器,减少假信号
-3. 优化仓位管理算法,提高资金利用效率
-4. 加入更多的市场情绪指标
-5. 开发自适应参数优化系统
-
-#### 总结
-这是一个综合了多个技术指标的成熟策略系统,通过动态风险管理和多重信号验证来提高交易的稳定性。策略的核心优势在于其自适应性和完善的风险控制体系,但仍需要在实盘中进行充分验证和持续优化。
-
-|| 
 
 #### Overview
 This strategy is a quantitative trading system combining multiple technical indicators with dynamic risk management. It integrates EMA trend following, ATR volatility, RSI overbought/oversold conditions, and candlestick pattern recognition, achieving balanced returns through adaptive position sizing and dynamic stop-loss mechanisms.
@@ -87,7 +48,6 @@ The strategy implements trading through:
 
 #### Summary
 This is a sophisticated strategy system combining multiple technical indicators, enhancing trading stability through dynamic risk management and multiple signal validation. The core strengths lie in its adaptability and comprehensive risk control system, though it requires thorough validation and continuous optimization in live trading.
-[/trans]
 
 
 

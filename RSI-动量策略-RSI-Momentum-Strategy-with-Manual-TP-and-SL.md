@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12ef6f30c64b99fdf10.png)
 
-[trans]
-#### 概述
-该策略是一个基于相对强弱指数(RSI)的动量策略,结合了手动设置止盈(TP)和止损(SL)的功能。策略的主要思路是通过RSI指标来捕捉市场的超买和超卖状态,同时考虑日线收盘价相对于近期最高价和最低价的位置,以此来判断进场时机。一旦达到预设的止盈或止损水平,策略就会自动平仓。
-
-#### 策略原理
-1. 计算指定周期的RSI指标值。
-2. 判断RSI是否突破了预设的超卖和超买阈值,分别作为多头和空头进场的条件之一。
-3. 判断日线收盘价是否高于近50根K线最高收盘价的70%,作为多头进场的另一个条件;判断日线收盘价是否低于近50根K线最低收盘价的130%,作为空头进场的另一个条件。
-4. 当多头或空头的两个进场条件同时满足时,策略会发出相应的进场信号。
-5. 根据进场价格和预设的止盈止损百分比,计算出多头和空头的止盈和止损价位。
-6. 当价格达到止盈或止损价位时,策略会自动平仓。
-
-#### 策略优势
-1. 结合RSI指标和价格水平,能够较好地捕捉市场的短期动量变化。
-2. 手动设置止盈止损水平,允许交易者根据自己的风险偏好和市场波动性来管理仓位。
-3. 适用于震荡市场,在RSI信号较为可靠的情况下可能表现良好。
-4. 提供了一个基于RSI信号的结构化交易方法,同时允许交易者自定义风险管理参数。
-
-#### 策略风险
-1. 在趋势市场中,RSI指标可能长时间处于超买或超卖状态,导致策略表现欠佳。
-2. 固定的止盈止损百分比可能无法适应不同的市场条件和波动性。
-3. 策略的表现很大程度上取决于参数的选择,不恰当的参数设置可能导致频繁的交易或错失良机。
-4. 仅依赖技术指标进行交易决策,忽略了基本面因素和市场情绪的影响。
-
-#### 策略优化方向
-1. 对RSI的参数(如长度、超买超卖阈值)进行优化,以适应不同的市场状况。
-2. 引入自适应的止盈止损机制,根据市场波动性动态调整止盈止损水平。
-3. 结合其他技术指标或市场情绪指标,以提高信号的可靠性和稳健性。
-4. 对策略进行分段优化,针对不同的市场趋势(如上涨、下跌、震荡)采用不同的参数设置。
-
-#### 总结
-该策略提供了一个基于RSI动量指标的交易框架,同时引入了手动止盈止损的功能,使得交易者可以根据自己的风险偏好和市场观点来管理仓位。然而,策略的表现很大程度上依赖于参数的选择和市场状况。因此,交易者应当谨慎使用该策略,对其进行充分的回测和优化,并结合其他形式的分析和风险管理技术,以获得更稳健的交易表现。
-
-|| 
 
 #### Overview
 This strategy is a momentum-based approach that utilizes the Relative Strength Index (RSI) indicator in combination with manual take profit (TP) and stop loss (SL) levels. The main idea behind the strategy is to capture overbought and oversold market conditions using the RSI indicator, while also considering the position of the daily closing price relative to the highest and lowest prices in the recent past. Once the predefined TP or SL levels are reached, the strategy automatically closes the position.
@@ -77,7 +43,6 @@ This strategy is a momentum-based approach that utilizes the Relative Strength I
 
 #### Summary
 This strategy offers a trading framework based on the RSI momentum indicator while incorporating manual take profit and stop loss functionality, allowing traders to manage their positions according to their risk preferences and market outlook. However, the strategy's performance largely depends on parameter selection and market conditions. Therefore, traders should exercise caution when using this strategy, conduct thorough backtesting and optimization, and combine it with other forms of analysis and risk management techniques to achieve more robust trading results.
-[/trans]
 
 > Strategy Arguments
 

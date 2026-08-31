@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b2d091e4781c33ddba.png)
 
-[trans]
-
-
-## 概述
-
-本策略通过组合使用移动平均线、MACD指标以及K线形态,实现对低波动股票的交易信号生成。它可以打印买入或卖出信号,以提示某些条件已经满足。我将其用作省时工具,以帮助识别哪些图表需要关注。您可以根据需要调整输入和属性。我建议允许两个或三个订单。
-
-## 策略原理
-
-该策略主要基于三个指标进行交易信号判断:
-
-1. 移动平均线:计算快线、慢线和基准线三条移动平均线,当快线上穿慢线时产生买入信号。
-
-2. MACD指标:计算MACD柱线和信号线,当MACD柱线上穿0时产生买入信号。 
-
-3. K线形态:计算单根K线的涨幅比例,当涨幅超过一定比例时判断为庄家 markup行为,产生买入信号。
-
-在卖出信号判断上,策略设置了止损位和止盈位,当价格触及止损位时产生卖出信号,当价格触及止盈位时产生卖出信号。
-
-## 策略优势
-
-1. 组合使用了三种不同类型的技术指标,可以相互验证,避免假信号。
-
-2. 流动性好,适合低波动股票。移动平均线指标可以识别中长线趋势,MACD指标可以识别短线momentum,K线形态可以识别庄家行为。
-
-3. 设置了止损和止盈条件,可以最大限度锁住盈利,防止亏损扩大。
-
-4. 策略简单清晰,容易实施。输入参数直观易调整,可以灵活适应不同的市场环境。
-
-5. 指标参数经过优化测试,具有较强的稳定性和盈利能力。
-
-## 策略风险
-
-1. 作为追踪中长线趋势的趋势策略,在震荡盘整的市场中交易效果不佳,可能产生频繁的小额盈亏。
-
-2. K线形态比较主观,难以准确判断庄家行为,可能会产生一些误判。
-
-3. 止损和止盈设置需要根据不同股票调整,设置过小可能会过早止损,设置过大可能会限制盈利。
-
-4. 该策略相对复杂,且需要同时兼顾多个指标,对交易者的技术要求较高。需持续跟踪优化参数。
-
-## 优化方向
-
-1. 增加对市场状态的判断,在趋势明确的阶段追踪趋势,在震荡期避免交易。可以加入ATR指标等辅助判断。
-
-2. 优化移动平均线参数,调整周期使其更贴合所交易股票的特性。也可以尝试不同类型的移动平均线。
-
-3. 可以引入机器学习等方法,对庄家行为建立模型进行判断,减少误判。
-
-4. 开发止损和止盈策略,使其能够动态调整,而不是使用固定设置。
-
-5. 简化策略,去掉一些过于主观的指标,降低误判概率。也可以考虑同类型指标取平均,使结果更稳定。
-
-## 总结
-
-本策略整合了移动平均线、MACD指标和庄家行为判断,形成一个较为完整的低风险股票交易策略。它具有一定的优势,但也存在一些可以改进的问题。虽然比较复杂,但对交易者技术要求不算太高。通过持续优化和测试,本策略可以成为一个非常实用的量化交易工具。它为低波动股票的短中线交易提供了一个参考方案。
-
-||
 ## Overview
 
 This strategy generates trading signals for low volatility stocks by combining moving averages, MACD indicator and candlestick patterns. It can print buy or sell signals to alert when certain conditions are met. I use it as a time saver to help identify which charts to look at. You can adjust the inputs and settings to suit your needs. I would suggest allowing two or three orders.
@@ -123,7 +65,6 @@ For sell signals, the strategy sets a stop loss level and take profit level. It 
 
 This strategy integrates moving averages, MACD and market maker behavior judgment into a relatively complete low risk stock trading strategy. It has certain advantages but also some aspects that can be improved. Although complex, the technical requirement is not too demanding for traders. With continuous optimization and testing, this strategy can become a very practical quantitative trading tool. It provides a reference solution for short-mid term trading of low volatility stocks.
 
-[/trans]
 
 > Strategy Arguments
 

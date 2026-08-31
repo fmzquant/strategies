@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1366f18ebbe18554b9f.png)
-[trans]
-#### 概述
-Fisher变换动态阈值趋势跟踪策略基于Fisher变换指标来识别价格趋势的变化。该策略使用Fisher变换将价格归一化到一个标准尺度,以便更容易地检测潜在的趋势反转点。通过动态调整阈值,该策略能够适应不同的市场条件,提高趋势识别的准确性。当Fisher变换值越过正负阈值时,策略会产生买卖信号,以跟踪市场趋势。
-
-#### 策略原理
-1. 计算Fisher变换值:根据历史最高价和最低价,对当前价格进行归一化处理,得到介于-0.999到0.999之间的Fisher变换值。
-2. 动态阈值:根据Fisher变换值的历史波动情况,动态调整买卖信号的阈值,以适应不同的市场状态。
-3. 趋势判断:通过比较当前Fisher变换值与前两个周期的值,判断价格趋势的变化。
-4. 买卖信号:当Fisher变换值由下往上穿越负阈值时,产生买入信号;当Fisher变换值由上往下穿越正阈值时,产生卖出信号。
-
-#### 优势分析
-1. 动态阈值调整:根据市场波动情况自适应调整买卖阈值,提高趋势判断的准确性。
-2. 趋势跟踪:通过Fisher变换指标的趋势判断,可以较好地捕捉市场趋势,实现趋势跟踪交易。
-3. 减少价格噪音:Fisher变换将价格归一化处理,有助于减少价格噪音对趋势判断的影响。
-4. 直观的图表展示:策略在图表上绘制Fisher变换曲线和阈值线,方便交易者直观地观察市场趋势和买卖信号。
-
-#### 风险分析
-1. 参数优化风险:策略的表现依赖于Fisher变换周期、动态阈值计算方式等参数的选择,不同参数可能导致不同的交易结果。
-2. 趋势识别滞后:Fisher变换指标对价格趋势的判断存在一定的滞后性,可能错过部分趋势行情。
-3. 震荡市中表现欠佳:在震荡市场环境下,频繁的趋势变化可能导致该策略产生较多的虚假信号,交易表现可能欠佳。
-4. 极端行情风险:在极端行情下(如快速大幅变化),Fisher变换指标可能失效,导致策略作出错误的交易决策。
-
-#### 优化方向
-1. 参数优化:对Fisher变换周期、动态阈值计算方式等关键参数进行优化,提高策略在不同市场状态下的适应性。
-2. 信号过滤:在趋势识别的基础上,引入其他技术指标或市场情绪指标,对交易信号进行二次确认,提高信号可靠性。
-3. 止损止盈:设置合理的止损止盈规则,控制单次交易风险,提高策略的风险收益比。
-4. 仓位管理:根据市场趋势强度、价格波动率等因素,动态调整仓位大小,降低持仓风险。
-
-#### 总结
-Fisher变换动态阈值趋势跟踪策略通过Fisher变换指标和动态阈值,识别价格趋势的变化,自适应不同的市场状态。该策略能够较好地捕捉市场趋势,实现趋势跟踪交易。策略的优势在于动态阈值调整、减少价格噪音干扰以及直观的图表展示。但同时也存在参数优化风险、趋势识别滞后、震荡市表现欠佳、极端行情风险等问题。通过参数优化、信号过滤、止损止盈、仓位管理等措施,可以进一步提升该策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 The Fisher Transform Dynamic Threshold Trend Following Strategy utilizes the Fisher Transform indicator to identify changes in price trends. The strategy uses the Fisher Transform to normalize prices to a standard scale, making it easier to detect potential trend reversal points. By dynamically adjusting thresholds, the strategy adapts to different market conditions and improves the accuracy of trend recognition. When the Fisher Transform value crosses positive or negative thresholds, the strategy generates buy or sell signals to follow market trends.
@@ -72,7 +40,6 @@ The Fisher Transform Dynamic Threshold Trend Following Strategy utilizes the Fis
 
 #### Summary
 The Fisher Transform Dynamic Threshold Trend Following Strategy identifies changes in price trends using the Fisher Transform indicator and dynamic thresholds, adapting to different market states. The strategy effectively captures market trends and enables trend-following trading. Its advantages include dynamic threshold adjustment, reduced price noise interference, and intuitive chart display. However, it also faces challenges such as parameter optimization risk, trend recognition lag, poor performance in choppy markets, and extreme market risk. Through measures like parameter optimization, signal filtering, stop-loss and take-profit, and position management, the strategy's robustness and profitability can be further enhanced.
-[/trans]
 
 
 

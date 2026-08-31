@@ -11,85 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c74a022cae13633155.png)
 
-[trans]
-
-## 概述
-
-该策略基于EMA(指数移动平均线)和MAMA(MESA自适应移动平均线)两个指标,根据它们的交叉情况来判断行情趋势和产生交易信号。EMA常用于判断市场趋势方向,而MAMA可以更准确地捕捉市场转折点,两者配合使用可以提高策略的性能。
-
-## 策略原理
-
-1. 计算快速EMA和慢速EMA,它们分别反映市场短期和长期趋势
-2. 计算MAMA和FAMA线,它们分别为自适应移动平均线
-3. 当快速EMA上穿慢速EMA时,产生买入信号
-4. 当快速EMA下穿慢速EMA时,产生卖出信号
-5. 当MAMA上穿FAMA时,产生买入信号
-6. 当MAMA下穿FAMA时,产生卖出信号
-7. MAMA和FAMA的交叉可用于验证EMA交叉信号或提前捕捉趋势转折
-
-具体来说,策略首先计算快速EMA(fl)和慢速EMA(sl),分别反映短期和长期趋势。 
-
-然后根据John Ehlers的公式计算MAMA和FAMA:
-1. 计算价格的 Hilbert Transform 并提取信号的相位信息
-2. 根据相位信息计算信号的瞬时周期p
-3. 根据p值计算α权重
-4. 根据α权重计算MAMA和FAMA
-
-最后,策略根据EMA和MAMA/FAMA的交叉情况来产生交易信号:
-- EMA金叉时做多
-- EMA死叉时做空
-- MAMA上穿FAMA时做多
-- MAMA下穿FAMA时做空
-
-## 优势分析
-
-该策略结合EMA和MAMA指标的优势,可以提高交易信号的准确性。
-
-EMA的优势:
-- 能够有效平滑价格数据,减少噪音
-- 能跟踪市场趋势且有一定的滞后性
-- 参数灵活,可调整对短期和长期趋势的敏感度
-
-MAMA的优势:
-- 自适应参数,不需要人为指定周期
-- 响应迅速,可提前捕捉趋势转折
-- 准确识别支撑和阻力区域
-
-两者配合使用的优势:
-- EMA判断主要趋势方向
-- MAMA验证信号并提前捕捉转折
-- 提高信号的准确性和胜率
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-- EMA和MAMA均为后期确认指标, Entry 点稍有滞后,可能带来滑点风险
-- 大幅震荡行情中,EMA和MAMA交叉频繁,会产生多头套和空头套
-- EMA和MAMA参数设置不当,可能错过趋势或产生假信号
-
-对应措施:
-
-- 采用止损来控制亏损
-- 合理选择参数,避免过于灵敏
-- 与其他指标组合使用,确认信号
-
-## 优化方向
-
-该策略可从以下方面进行优化:
-
-- 优化EMA周期参数,使其更符合不同品种的特点
-- 调整MAMA参数α的灵敏度,优化捕捉转折的速度
-- 增加其他指标过滤,如MACD、RSI等,避免假信号
-- 增加止损策略,以控制风险
-- 进行回测优化,选择最佳的参数组合
-- 增加自动止盈,让利润最大化
-
-## 总结
-
-该策略整合EMA和MAMA两个指标的优势,能够顺势而为,及时捕捉趋势转折,是一种可靠的跟踪趋势类策略。通过参数优化和风险控制,可以提高策略的胜率和盈利能力。但用户仍需根据自身风险偏好谨慎操作。
-
-||
 
 ## Overview
 
@@ -181,7 +102,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy integrates the strengths of EMA and MAMA indicators to follow the trend and capture turns timely. With parameter optimization and risk control, it can achieve improved win rate and profitability. But users should still apply caution based on personal risk preference.
 
-[/trans]
 
 > Strategy Arguments
 

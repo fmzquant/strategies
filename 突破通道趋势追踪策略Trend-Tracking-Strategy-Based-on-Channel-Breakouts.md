@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e9cdfa81d6de251bf4.png)
-[trans]
-
-## 概述
-
-这个策略是基于通道突破理论设计的趋势追踪策略。它通过计算一定周期的最高价和最低价构建通道,当价格突破通道时产生交易信号。该策略适用于趋势性行情,可以捕捉价格的趋势方向,进行趋势追踪。
-
-## 策略原理  
-
-该策略首先计算长度为length的周期内的最高价和最低价,构建通道上轨和下轨。当收盘价突破上轨时,做多;当收盘价突破下轨时,做空。平仓条件为收盘价回落到通道内。
-
-该策略同时绘制长度为length*2的EMA指标判断趋势方向。当价格突破通道上轨时,如果EMA处于上升趋势,则增强做多决策的效力。
-
-## 优势分析
-
-- 该策略能够捕捉价格趋势,适合趋势性行情,收益潜力大。
-- 通过通道来判断突破,可以减少假突破的概率,提高信号质量。  
-- 结合EMA判断可避免逆势交易,确保追踪主趋势。
-
-## 风险分析 
-
-- 突破通道策略容易在价格震荡时产生频繁交易,可能带来较大的交易费用。
--  当趋势反转时,该策略无法及时平仓,可能带来较大亏损。
--  该策略对参数设置敏感,不同的参数会带来完全不同的结果。
-
-## 优化方向
-
-- 可以结合其他指标判断趋势,避免假突破。例如MACD,RSI等。
-- 可以通过机器学习算法自动优化参数,提高参数鲁棒性。
-- 可以设置止损来控制最大回撤。
-
-## 总结
-
-该策略整体来说是一个 based on channel breakouts to capture trends 的简单趋势追踪策略。它具有较强的趋势追踪能力,可以在趋势行情中获得不错的收益。但也存在一定的风险,需要进一步优化以提高稳定性。通过参数调整、止损设置以及结合其他指标判断,可以将该策略运用于实盘交易。
-
-||
 
 ## Overview
 
@@ -78,7 +43,6 @@ The strategy also plots an EMA indicator with length *2 to determine the trend d
 
 In summary, this is a simple trend tracking strategy based on channel breakouts to capture trends. It has strong trend tracking capability and can achieve good returns in trending markets. But it also has some risks and needs further optimization to improve stability. Through parameter tuning, stop loss setting and combining with other indicators, this strategy can be applied to live trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9e75fbc8a1b5e34401.png)
 
-[trans]
-
-## 概述
-
-本文主要分析一种名为“应用贝叶斯条件判断的RSI交易策略”的量化交易策略。该策略通过计算RSI指标的概率分布,应用贝叶斯法则推算RSI指标继续上涨或下跌的概率,以判断未来价格趋势,实现盈利。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 计算一定周期内收盘价是否上涨的概率分布A
-2. 计算相应周期内RSI指标是否继续上涨的概率分布B 
-3. 应用贝叶斯法则,计算A和B同时发生的概率
-4. 当该概率高于阈值时,判断趋势会继续,采取交易信号
-
-具体而言,策略先定义参数p为计算RSI指标的周期参数,r为预测未来价格变化的时间范围。然后在p周期内,统计收盘价是否上涨的次数,计算概率分布A。同时在p周期内,统计该周期结束后r周期内,RSI是否继续上涨的次数,计算概率分布B。
-
-之后,应用贝叶斯法则公式,计算同时满足“收盘价上涨”和“RSI继续上涨”这两个条件的概率,作为最终概率判断指标。当该概率高于给定阈值时,判断趋势会持续上涨,采取做多交易;当概率低于阈值时,判断趋势反转,采取平仓。
-
-这样,策略综合考虑了价格信息和技术指标信息,应用概率统计和贝叶斯法则,对未来趋势做出判断,实现交易信号的产生。
-
-## 策略优势
-
-该策略主要有以下优势:
-
-1. **结合多种信息**:策略不仅考虑价格信息,也结合了RSI等技术指标信息,综合判断未来趋势,提高判断准确率。
-
-2. **概率预测**:通过统计概率分布,对价格和RSI变化方向做出概率预测,而不是简单的数值比较,使判断更科学。 
-
-3. **贝叶斯优化**:运用贝叶斯法则计算相关概率,对原始统计概率进行优化,使判断更准确。
-
-4. **灵活参数**:提供多种参数进行调整优化,能够针对不同市场和资产进行参数拟合,提高策略适应性。
-
-5. **简单有效**:策略思路清晰,通过简单统计与概率运算实现交易信号判断,易于理解与优化,且效果明显。
-
-## 策略风险
-
-该策略也存在以下主要风险:
-
-1. **参数依赖**:策略效果依赖参数设置,不同市场需要调整大量参数才能达到最佳效果,增加策略运维难度。
-
-2. **概率错误**:由于统计时间和样本有限,计算所得概率可能与真实趋势不符,导致判断产生偏差。
-
-3. **特殊事件**:重大突发事件可能影响市场价格与RSI指标的相关性,使策略失效。
-
-4. **技术指标失效**:在某些市场情况下,RSI等技术指标可能会产生失效信号,导致策略判断失败。
-
-对应风险的解决方法包括:优化参数设置流程、调整统计时间和样本量、结合更多auxiliary信息、人工干预异常情况等。
-
-## 策略优化
-
-该策略的主要优化方向有:
-
-1. **多时间框架**:可以在多种时间周期(日线、周线等)上运行策略,综合判断,提高稳定性。
-
-2. **更多指标**:加入更多技术指标信号,如K线形态、运动平均线等,丰富判断依据。
-
-3. **模型优化**:应用机器学习等方法,对贝叶斯模型进行优化,使计算更准确。
-
-4. **动态参数**:加入参数的动态优化模块,使参数可以根据实时市场变化进行调整。
-
-5. **风控机制**:设定最大回撤、做单频次等风控指标,避免极端市场中巨额亏损。
-
-6. **集成改进**:与其它类型策略或模型集成,形成投票机制,提高判断的稳定性。
-
-## 总结
-
-本策略首先统计价格和RSI指标的概率分布,然后利用贝叶斯法则计算复合概率,在概率高于给定阈值时产生交易信号,实现盈利。该策略综合多源信息,应用概率预测和贝叶斯优化,判断效果较好。主要优化方向包括时间框架扩展、指标增多、参数动态化等。总体来说,该策略思路独特,效果显著,非常值得探索与应用。
-
-||
 
 ## Overview
 
@@ -149,7 +79,6 @@ The main optimization directions of this strategy include:
 
 This strategy first statistically calculates probability distributions of price and RSI, then uses Bayesian rules to compute combined probabilities, generating trading signals when probabilities exceed set thresholds, thus profiting. This strategy combines multi-source information, leverages probability prediction and Bayesian optimization for decent judgment performance. Main optimization directions include timeframe expansion, more indicators, dynamic parameters etc. In conclusion, this strategy has a unique idea and remarkable effect that is worth exploring and applying.
 
-[/trans]
 
 > Strategy Arguments
 

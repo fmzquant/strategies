@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/3c0a2cb923ea10560a.png)
-[trans]
-
-## 概述
-
-该策略通过计算快速EMA周期和慢速EMA周期的指数移动平均线,并绘制在图表上,实时监控其交叉情况,判断价格趋势的转向。结合RSI超买超卖指标避免虚假信号,形成交易信号。当快速EMA向上突破慢速EMA时产生买入信号;当快速EMA向下跌破慢速EMA时产生卖出信号。
-
-## 策略原理   
-
-1. 计算快速EMA周期和慢速EMA周期的指数移动平均线
-2. 绘制在图表上,实时监控交叉情况
-3. 快速EMA向上突破慢速EMA时判断为上升趋势,形成买入信号
-4. 快速EMA向下跌破慢速EMA时判断为下降趋势,形成卖出信号
-5. 结合RSI指标避免虚假信号
-6. 设置趋势过滤条件,只在趋势变化时交易
-
-## 优势分析
-
-1. 使用EMA判断趋势转向,对小范围波动不敏感
-2. RSI指标过滤可避免反转虚假信号
-3. 可自定义EMA周期和RSI参数,适应不同市场
-4. 代码直观简洁,容易理解实现
-
-## 风险分析  
-
-1. EMA具有滞后性,可能错过转折点
-2. 大幅震荡市场中EMA判断失效  
-3. 需要适当调整EMA参数和RSI参数
-4. 可结合其他指标验证信号
-
-## 优化方向
-
-1. 结合其他指标验证信号确定度  
-2. 增加止损策略控制风险
-3. 测试不同周期参数的稳定性
-4. 增加货币强度指标避免货币风险
-5. 考虑交易成本优化获利比
-
-## 总结
-
-该策略整体思路清晰,使用EMA判断趋势转向,结合RSI指标过滤信号,可以有效捕捉中长线趋势。但EMA和RSI参数的调整及止损策略仍需优化,且面临错过反转点和震荡市的风险。如果参数优化和风险控制到位,该策略可以用于发现中长线趋势转折点,制定投资决策。
-
-||
 
 
 ## Overview
@@ -93,7 +51,6 @@ This strategy calculates the exponential moving average (EMA) of fast and slow p
 
 The strategy has a clear logic using EMA crossovers to determine trend reversal, filtered by RSI to capture mid- to long-term trends. However, optimization of EMA/RSI parameters and stop loss, as well as the risk of missing reversals and failure in volatile markets remain. With tuned parameters and risk controls, it could serve to identify turning points and formulate investment decisions.
 
-[/trans]
 
 > Strategy Arguments
 

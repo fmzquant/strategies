@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13c6d14e89a7fa34ca7.png)
-[trans]
-## 概述
-
-这个交易策略结合使用了相对强弱指标(RSI)和随机相对强弱指标(Stochastic RSI)两个技术指标来产生交易信号。策略额外利用更高时间框架的加密货币价格走势来确认趋势,以提高信号的可靠性。
-
-## 策略名称
-
-多时间框架RSI-SRSI交易策略(Multi Timeframe RSI-SRSI Trading Strategy)
-
-## 策略原理
-
-该策略根据RSI指标值高低来判断超买超卖现象。当RSI低于30时为超卖信号,高于70时为超买信号。Stochastic RSI指标则观察RSI指标本身的波动情况。Stochastic RSI低于5为超卖信号,高于50为超买信号。
-
-策略同时结合更高时间框架(例如周线)的加密货币价格走势。只有当更高时间框架的RSI高于阈值时(例如45),才产生买入交易信号。这个设定能过滤掉整体处于下跌趋势时出现的非persistent的超卖信号。
-
-买入和卖出信号在触发后,需要经过一定周期(如8根K线)的确认,避免产生误导性的信号。
-
-## 策略优势
-
-- 利用RSI指标判断超买超卖的经典技术分析方法
-- 结合Stochastic RSI指标识别RSI本身的反转信号
-- 应用多时间框架技术过滤误导信号,提升信号质量
-
-## 策略风险及解决方法
-
-- RSI指标容易产生虚假信号
-  - 结合其他指标过滤误导信号
-  - 应用趋势确认技术
-- 阈值参数设置不当易产生过多交易信号
-  - 优化参数组合找到最佳参数
-- 买卖信号需要一定确认时间
-  - 找到平衡确认周期,既过滤误导信号,又不错过机会
-
-## 策略优化方向
-
-- 测试更多指标的组合,寻找更强信号
-  - 例如将MACD指标加入策略
-- 尝试机器学习方法寻找最优参数
-  - 使用遗传算法/进化算法自动寻优
-- 增加止损策略控制单笔交易风险
-  - 当价格跌破支持位时止损
-
-## 总结
-
-该策略主要依靠RSI和Stochastic RSI两个经典交易指标产生交易信号。同时,引入更高时间框架进行趋势确认,能有效过滤误导信号,提高信号质量。通过参数优化,止损策略等手段能进一步增强策略表现。该策略思路简单直接,容易理解实现,是量化交易的一个很好的起点。
-
-||
 
 ## Overview
 
@@ -103,7 +56,6 @@ The buy and sell signals need to be confirmed for a number of periods (e.g. 8 ba
 
 The strategy mainly relies on the two classic technical indicators, RSI and Stochastic RSI, to generate trading signals. Additionally, the introduction of trend confirmation from higher timeframes helps filter fake signals effectively and improves signal quality. Further performance improvement can be achieved by optimizing parameters, adding stop loss and other means. The logic is simple and easy to understand. It serves a good starting point for quant trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bd842b1c344d3e8d11.png)
-[trans]
-
-### 概述
-
-本策略的核心思想是通过分析麦克D指标的未来走势,实现对价格趋势的预测。该策略充分利用了麦克D指标的快速均线和慢速均线构成的交叉产生的交易信号。
-
-### 策略原理  
-
-1. 计算麦克D指标的差值(历史值),并据此判断麦克D线和信号线的上涨和下跌。
-2. 通过设置看涨期权,使用4小时时间范围内的麦克D指标的未来值,判断麦克D指标的未来走势,以预测价格趋势。  
-3. 在麦克D指标差值大于0(代表多头市场)且预计会继续上涨时,做多;当麦克D指标差值小于0(代表空头市场)且预计会继续下跌时,做空。
-4. 该策略同时结合了趋势跟踪和趋势反转两种交易方式,在捕捉趋势的同时,也把握了趋势反转的时点。
-
-### 策略优势分析
-
-1. 利用麦克D指标判断市场趋势的优势,可以有效过滤震荡,捕捉长线趋势。  
-2. 借助麦克D指标未来走势的预测,可以及早把握价格转折点,增强策略的前瞻性。
-3. 同时融合趋势跟踪和趋势反转交易方式,可以在跟踪趋势过程中适时反转头寸,获取更大收益。  
-4. 策略参数可调,用户可以根据不同时间周期和市场环境进行优化,提高策略稳定性。
-
-### 策略风险分析
-
-1. 依赖对麦克D指标未来走势的预测,如果预测不准会导致交易失败。
-2. 需要配合止损来控制单笔损失。止损幅度设置不当也会影响策略效果。
-3. 麦克D指标因滞后性而可能错过价格快速反转的机会。这在高波动行情下的策略表现需要关注。
-4. 需要关注交易成本的影响。
-
-### 策略优化方向  
-
-1. 结合其他指标进行预测,降低对单一麦克D指标的依赖,提高预测准确性。比如考察成交量的变化。
-2. 加入机器学习算法,训练模型预测麦克D指标未来走势。
-3. 优化参数设定,寻找最佳的参数组合。
-4. 不同市场环境适合不同的参数配置,可以加入自适应系统自动优化参数。
-
-### 总结  
-
-本策略充分发挥麦克D指标判断趋势优势的同时,又增加了对指标未来走势的预测分析,在捕捉趋势的基础上把握关键的转折点。相比简单追踪趋势,本策略的运用前瞻性更强,获利空间更大。当然也存在一定的风险,需要进一步优化和完善。总体来说,该策略值得深入研究和应用。
-
-||
 
 ### Overview
 
@@ -86,7 +47,6 @@ The core idea of this strategy is to predict price trends by analyzing the futur
 
 While giving full play to the MacD indicator’s advantage of determining trends, this strategy also incorporates predictions of the indicator's future trends. Building upon capturing trends, it also seizes critical turning points. Compared to simply chasing trends, this strategy has greater foresight and profit potential. Of course, there are also certain risks that need further optimization and improvement. Overall, the strategy deserves in-depth research and application.  
 
-[/trans]
 
 > Strategy Arguments
 

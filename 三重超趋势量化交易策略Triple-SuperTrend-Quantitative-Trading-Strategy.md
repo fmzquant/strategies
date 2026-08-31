@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/db9d0b569071ecf016.png)
-[trans]
-
-
-## 概述
-
-三重超趋势量化交易策略是一种结合三重超趋势指标的短线交易策略。该策略适用于如加密货币、外汇等高频交易市场的日内交易和短线套利。
-
-## 策略原理
-
-- 使用200日移动平均线判断总体市场趋势方向。价格在上时做多,价格在下时做空。
-- 使用三重超趋势指标判断细分市场趋势方向。超趋势指标能准确判断细分市场的多空趋势。  
-- 采用布林带判断超买超卖的Stoch RSI指标构建入场信号。Stoch RSI可以识别反转机会。  
-- 根据超趋势止损,超趋势止盈确定风险回报比为1.5倍。
-
-## 策略优势
-
-- 多重趋势指标验证,提高决策准确性。
-- 超买超卖指标识别反转机会,把握反转启动。  
-- 止损止盈机制控制风险与收益比例。
-- 适合高频短线交易,可获利空间大。
-
-## 策略风险
-
-- 大周期行情不利时,短线交易亏损风险较大。  
-- 反转失败的概率依然存在,会造成错误决策。
-- 需要频繁盯市,不适合离场交易。
-
-## 策略优化
-
-- 优化移动平均线参数,适应更长周期。
-- 优化 Stoch RSI 参数,降低错误信号率。   
-- 优化超趋势ATR周期参数,提高止损效果。
-- 增加仓位管理,根据回撤幅度加大仓位。
-
-## 总结
-
-三重超趋势量化交易策略,利用多重趋势指标验证提高决策准确性,止损止盈控制风险收益比,适合高频短线交易。优化参数可适应更长交易周期,减少错误信号发出概率,提高止损止盈效果。加入仓位管理可在行情回调时进行加仓,扩大盈利空间。
-
-||
 
 ## Overview
 
@@ -85,7 +46,6 @@ The Triple SuperTrend quantitative trading strategy combines three SuperTrend in
 
 The triple SuperTrend strategy improves decision accuracy through multiple trend verifications and controls risk/reward ratios using stops and limits. It is suitable for high-frequency short-term trading. Optimizing parameters can adapt it to longer periods, reduce false signals, and improve stops. Adding position sizing allows adding size during pullbacks to maximize profits.
 
-[/trans]
 
 > Strategy Arguments
 

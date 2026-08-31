@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1dacc20fc2030448ae6.png)
 
-[trans]
-
-### 概述
-
-惯性指标交易策略是基于相对波动指数(RVI)的趋势跟踪型算法交易策略。该策略通过计算证券的RVI,来测量市场、股票或货币对的动量和趋势。它可以判断长期趋势的方向,作为建立trading position的信号。
-
-### 策略原理  
-
-该策略的核心指标是**惯性指标**(Inertia Indicator),它取值范围在0到100之间。指标大于50代表正向惯性,小于50代表负向惯性。只要惯性值持续大于50,就可以判断长期趋势向上;反之,则为下降趋势。
-
-指标的计算过程如下:   
-
-1. 计算指定周期内的股票收盘价标准差StdDev   
-2. 根据今日收盘价与昨日收盘价的比较,计算向上波动u和向下波动d    
-3. 计算并平滑u和d,得到指标nU和nD
-4. 计算相对波动指数nRVI = 100 * nU / (nU + nD)   
-5. 对nRVI进行指数移动平均,得到最终的惯性值nRes
-
-如果nRes大于50代表正向惯性,会产生买入信号;如果小于50代表负向惯性,会产生卖出信号。
-
-### 优势分析
-
-该策略最大的优势在于能够顺势而为,捕捉市场趋势,避免在震荡行情中频繁开仓。另外,相对简单的指标计算,对计算资源要求不高,适合算法交易。
-
-### 风险分析  
-
-该策略最大的风险在于,指标本身存在滞后,无法做到百分百捕捉转折点。这可能导致错过较优开仓时机。另外,指标的参数设置也会影响策略表现,需要经过大量回测找到最优参数。
-
-为降低风险,可以考虑与其他技术指标或基本面指标结合使用,利用更多因素来决定开仓。同时要控制单笔交易的头寸规模。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 参数优化。改变周期参数和平滑参数的设置,找到最优参数组合。
-
-2. 结合其他指标。与移动平均线、RSI等指标结合使用,利用更多因素决策。
-
-3. 动态仓位管理。根据市场状况和指标数值,动态调整每个交易的头寸规模。
-
-4. 自动止损策略。设定止损位置,能够有效控制单笔交易的最大损失。
-
-### 总结  
-
-惯性指标交易策略整体来说是一种较为简单可靠的趋势跟踪策略。它根据惯性指标判断价格趋势方向,并顺势建立trading position。通过参数优化、指标组合等方式进一步增强策略效果,是一种适合量化交易的算法策略。
-
-||
 
 ### Overview  
 
@@ -103,7 +56,6 @@ The strategy can be optimized in the following aspects:
 
 The inertia indicator trading strategy is a relatively simple and reliable trend following strategy. It determines the price trend direction based on the inertia indicator and follows the trend to establish trading positions. By further enhancing strategy performance through parameter optimization, indicator combinations, it is an algorithmic strategy suitable for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

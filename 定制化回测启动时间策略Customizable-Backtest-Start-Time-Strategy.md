@@ -9,92 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略的目的是允许用户自定义回测的启动时间,从而实现更加灵活和定制化的回测。
-
-## 策略原理
-
-该策略通过使用pine脚本的time和timestamp函数来实现定制化的回测启动时间。
-
-首先,它让用户在设置中输入自定义的回测启动年份、月份、日期、小时和分钟。然后,它使用这些输入生成一个时间戳,并将其存储在startTime变量中。
-
-在策略的条件判断中,它新增了一个startTime条件。只有当当前的时间大于或等于 startTime时,策略才会启动。
-
-例如:
-
-```pine
-longCondition = crossover(sma(close, 14), sma(close, 28)) 
-
-if (longCondition and startTime) 
-
-  strategy.entry("My Long Entry Id", strategy.long)
-```
-
-这样就可以实现定制化的回测启动时间。用户可以根据需要灵活配置回测的开始时间,而不仅仅局限于硬编码的时间。
-
-## 优势分析
-
-这种定制化回测启动时间的策略有以下优势:
-
-1. 更加灵活:用户可以完全自定义回测的启动时间,不再限制在某个固定的时间点。
-
-2. 更加真实:可以将回测的启动时间设置为策略实际运行的时间,从而使回测更加贴近真实市场情况。
-
-3. 方便事件驱动回测:可以根据某个事件的发生时间来设置启动时间,以针对特定事件进行回测。
-
-4. 便于条件调整:可以非常方便地调整回测的启动条件,从而针对不同阶段进行有针对性的回测。
-
-5. 可重复可靠:使回测的启动时间参数化,可以重复运行获得可靠的回测结果。
-
-## 风险分析
-
-使用定制化回测启动时间也存在一些风险:
-
-1. 回测结果依赖启动时间:不同的启动时间可能会导致回测结果出现很大差异。
-
-2. 需要谨慎选择启动时间:不合理的启动时间可能会造成回测失真,无法反映真实情况。
-
-3. 增加曲线拟合风险:容易通过调整启动时间来拟合历史数据,从而产生过拟合风险。
-
-4. 降低回测结果可比性:该策略的回测结果与固定启动时间的回测结果不太具备可比性。
-
-对应解决方法:
-
-1. 多次回测,评估启动时间变化对结果的影响。
-
-2. 选择重大事件发生时间作为启动时间,缩小回测失真。
-
-3. 谨慎调整启动时间,避免过度拟合历史数据。 
-
-4. 保存固定启动时间的回测作为基准,与定制回测进行对比。
-
-## 优化方向
-
-该定制化回测启动时间策略还可以从以下方面进行优化:
-
-1. 支持启动和结束时间定制化,实现完整的回测时间窗口灵活配置。
-
-2. 支持多种时间模式:具体日期,相对日期,事件驱动等,使回测时间配置更智能方便。
-
-3. 支持图形化配置界面,使时间参数设置更加直观。
-
-4. 支持不同时间粒度配置:年、月、日、时、分、秒等。
-
-5. 记录回测时间配置,使得回测结果可复现、可追踪和可比。
-
-6. 增加时间配置不当的校验,避免不合理的时间配置影响回测质量。
-
-7. 提供启动时间绑定功能,一键同步复制启动时间到多个策略中。
-
-## 总结
-
-本策略实现了自定义和灵活的回测启动时间配置,可以减少回测的限制,使之更贴近实盘情况。但也需要警惕回测结果对启动时间的依赖性,采取多次回测、事件驱动等措施减少回测失真。本策略还有很多优化的方向,将来可望实现更智能和便捷的回测时间配置。
-
-||
 
 ## Overview
 
@@ -178,7 +92,6 @@ This customizable backtest start time strategy can also be improved in the follo
 
 This strategy enables customizable and flexible configuration of backtest start times to reduce limitations and make backtests more realistic. But the dependency of results on start times needs to be watched out for using multiple backtests, event-driven models, etc. to reduce distortion. This strategy also has many directions for improvement to achieve smarter and more convenient backtest time configuration in the future.
 
-[/trans]
 
 > Strategy Arguments
 

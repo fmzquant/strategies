@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e79a2fb69d8ce9f325.png)
-[trans]
-
-## 概述
-
-该策略通过计算移动平均线和价格变化率,结合一定周期内的K线,判断目前处于上涨趋势还是下跌趋势,并相应做多或做空。
-
-## 策略原理
-
-该策略首先计算长度为l的简单移动平均线a和长度为l的价格变化率r。然后计算当前K线价格与移动平均线的差值k。最后计算k在过去s根K线的总和sum。
-
-当sum>0时,表示目前处于上涨趋势,该策略会做多。当sum<0时,表示目前处于下跌趋势,该策略会做空。
-
-做多做空后,会一直持有头寸,直到趋势发生逆转(sum从正变负或从负变正),这时就会平仓。
-
-## 优势分析
-
-该策略最大的优势是能够抓住趋势,适合趋势交易。具体来说,有以下几点优势:
-
-1. 使用移动平均线判断整体趋势方向,可以有效过滤市场噪音,锁定主要趋势。
-
-2. 应用价格变化率指标衡量动量强度,避免错过强劲行情。 
-
-3. 考量一定周期内多个K线,可以更准确判断趋势,避免被 einzelne Ausreißer in die Irre führen。
-
-4. 只要趋势不变,就持续持有头寸,最大程度享受趋势行情带来的利润。
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 无法准确判断趋势结束时间,可能预早停损或错过部分利润。
-
-2. 无法有效控制单笔损失大小,极端行情下亏损可能较大。
-
-3. 策略参数不当可能导致过于频繁交易或漏掉部分交易机会。
-
-4. 长期持仓可能面临隔夜利息和保证金风险。
-
-为控制风险,可以设置止损点、仅交易高流动性商品、优化参数以及合理使用杠杆。
-
-## 优化方向
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 测试不同长度的移动平均线和价格变化率,找到最佳参数组合。
-
-2. 尝试其他指标如MACD等判断趋势,进一步提高准确率。
-
-3. 增加仓位管理机制,例如盈利后部分止盈等,控制单笔亏损。
-
-4. 结合波动率指标设定动态止损,降低极端行情的风险。 
-
-5. 优化开仓和平仓逻辑,过滤假突破提高交易效率。
-
-## 总结
-
-该策略整体思路清晰、易于实现,通过跟踪趋势进行长线持仓交易,回撤控制相对合理,适合追求稳定收益的投资者。如能进一步优化止损和仓位管理等机制,可望获得较好的长期稳定回报。
-
-||
 
 
 ## Overview
@@ -127,7 +68,6 @@ The main aspects to optimize this strategy include:
 
 The overall logic of this strategy is clear and easy to implement. By tracking trends for long-term holding trading, drawdown control is relatively reasonable. It is suitable for investors seeking stable returns. Further optimizing the stop loss and position management can expect good long-term steady returns.
 
-[/trans]
 
 > Strategy Arguments
 

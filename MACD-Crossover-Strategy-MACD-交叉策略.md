@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11463961011dbd7f689.png)
 
-[trans]
-#### 概述
-该策略使用两条不同周期的指数移动平均线(EMA)进行交叉,当快速EMA从下往上穿越慢速EMA时产生买入信号,当快速EMA从上往下穿越慢速EMA时产生卖出信号。该策略可以应用于各种金融工具和时间周期,例如黄金在2小时周期上最有效,比特币在日线图上最有效等。
-
-#### 策略原理
-1. 计算快速EMA(默认周期为12)和慢速EMA(默认周期为26)。
-2. 定义多头区域(快速EMA在慢速EMA上方且价格在快速EMA上方)和空头区域(快速EMA在慢速EMA下方且价格在快速EMA下方)。  
-3. 当从空头区域转换为多头区域时买入,当从多头区域转换为空头区域时卖出。
-4. 在图表上用绿色和红色标记多头区域和空头区域,用箭头标记买卖信号。
-
-#### 策略优势
-1. 简单易懂,适合初学者学习。
-2. 适用性广,可以用于各种金融工具和时间周期。
-3. 趋势跟踪能力强,能够捕捉到中长期趋势。
-4. 参数可调,增加了灵活性。
-
-#### 策略风险
-1. 在震荡市容易产生错误信号,导致亏损。
-2. 趋势转折时反应较慢,会造成一定滑点。 
-3. 参数选择不当会影响策略效果。
-
-#### 策略优化方向  
-1. 加入趋势过滤,比如只在ADX大于某个值时交易,减少震荡市的亏损。
-2. 优化进出场时机,比如使用ATR决定止损止盈,减少单笔亏损。
-3. 对参数进行优化,找到最佳参数组合,提高稳定性和盈利能力。
-4. 结合其他指标辅助判断,如MACD、RSI等,提高信号准确率。
-
-#### 总结
-MACD交叉策略是一个基于趋势跟踪的简单策略,优点是简单实用、适用范围广,缺点是难以把握趋势转折、参数选择有难度。通过趋势过滤、优化进出场点、参数优选和组合其他指标可以改进该策略的表现,值得进一步研究和测试。
-
-||
 
 #### Overview
 This strategy uses the crossover of two exponential moving averages (EMAs) with different periods to generate trading signals. When the fast EMA crosses above the slow EMA, it generates a buy signal, and when the fast EMA crosses below the slow EMA, it generates a sell signal. This strategy can be applied to various financial instruments and time frames, such as gold being most effective on the 2-hour time frame and Bitcoin being most effective on the daily chart, etc.
@@ -71,7 +40,6 @@ This strategy uses the crossover of two exponential moving averages (EMAs) with 
 
 #### Summary
 The MACD crossover strategy is a simple strategy based on trend following. Its advantages are simplicity, practicality, and wide applicability, while its disadvantages are difficulty in grasping trend reversals and parameter selection. Through trend filtering, optimizing entry and exit points, parameter optimization, and combining other indicators, the performance of this strategy can be improved, which is worth further research and testing.
-[/trans]
 
 > Strategy Arguments
 

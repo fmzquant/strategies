@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ef31ab46610ecf0e96.png)
-[trans]
-## 概述
-
-本策略通过跟踪价格的连续上涨或下跌期数来识别支撑阻力位,然后结合移动平均线作为进场和止损信号来构建长仓和短仓交易策略。该策略可以同时做多做空,也可只做单边。
-
-## 原理
-
-1. 支撑阻力位识别
-    - 当收盘价连续4天高于前4天的收盘价时,记录该点为下行支撑位
-    - 当收盘价连续4天低于前4天的收盘价时,记录该点为上行阻力位
-2. 信号生成
-    - 在识别到支撑位后,如果价格上涨期数达到设置的长仓阈值(默认9天),产生做多信号
-    - 在识别到阻力位后,如果价格下跌期数达到设置的短仓阈值(默认9天),产生做空信号
-3. 移动平均线过滤和止损
-    - 进场时要求价格高于或低于设置期限的移动平均线,用来过滤信号
-    - 止损位设置为进场时的移动平均线
-
-## 优势
-
-1. 使用支撑阻力位判断较为可靠,不会被短期波动误导
-2. 结合移动平均线过滤可以减少假信号
-3. 双向交易,可以提高操作频率,增加盈利机会
-4. 参数可调,可以根据不同品种和市场情况优化
-
-## 风险与解决方法
-
-1. 在趋势市场中,短期内可能出现多次亏损交易
-    - 可以适当调高移动平均线周期,减少交易频率
-2. 支持位或阻力位判断失误的概率
-    - 可以适当调整判定支撑阻力位的长度阈值
-3. 大幅震荡市场中,止损可能过于频繁被触发
-    - 可以适当放宽止损范围
-    - 增加趋势判断指标
-
-## 优化方向  
-
-1. 加入更多技术指标判断,提高策略稳定性  
-    - 增加趋势、动量等判断指标
-2. 优化支撑阻力位判断逻辑
-    - 测试不同参数对结论的影响  
-3. 针对具体品种和周期进行参数优化
-    - 不同品种参数可调范围不一样  
-4. 开发自适应止损机制
-    - 根据市场波动程度动态调整止损幅度
-
-## 总结
-
-本策略整体来说较为简单可靠,通过对支撑阻力位的正确判断可以在较大概率上捕捉价格反转机会。同时结合移动平均线确保了进入的时机,避免被套。最后,本策略方向判断相对保守,但具备较强的适应性和扩展性,用户可以根据自己对市场的理解选择合适的参数进行优化,从而获得更出色的表现。
-
-||
 
 ## Overview  
 
@@ -109,7 +59,6 @@ This strategy identifies support and resistance levels by tracking the consecuti
 
 The strategy is relatively simple and reliable. By correctly identifying S/R levels it captures price reversal opportunities with high probability. Combining with MA ensures proper entry timing and avoids traps. Finally, the directional judgement is conservative but adaptable. Users can optimize parameters according to their market understanding and achieve even better results.
 
-[/trans]
 
 > Strategy Arguments
 

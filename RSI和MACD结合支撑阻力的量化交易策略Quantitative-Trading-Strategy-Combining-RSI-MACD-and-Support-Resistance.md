@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12931d843ccc4cfa6d0.png)
 
-[trans]
-
-## 概述
-
-该策略基于RSI和MACD指标,结合支撑阻力面进行交易信号判断。其名称为“熊猫吐舌头”策略。该策略通过RSI指标判断超买超卖,MACD指标判断多空趋势,并结合100周期内的最高价和最低价绘制出支撑阻力面,在支撑附近产生买入信号,在阻力附近产生卖出信号,属于常见的趋势追踪型策略。
-
-## 策略原理
-
-该策略主要基于RSI和MACD两个指标,RSI指标判断超买超卖状态,MACD指标判断多空趋势状态。首先计算14周期的RSI值,并指定超买线为70,超卖线为30。然后计算12日快线,26日慢线的MACD值,以及9日信号线。在RSI低于30时视为超卖;RSI高于70时视为超买。MACD快慢线金叉时为买入信号,死叉时为卖出信号。
-
-此外,该策略还计算了100周期内的最高价和最低价,作为支撑阻力位。在产生买入信号时,需要价格接近支撑位,即收盘价高出支撑位1%内时才会实际发出买入;在卖出信号产生时也需要收盘价低于阻力位1%内才会实际发出卖出信号。
-
-## 策略优势
-
-该策略结合了趋势分析和超买超卖判断,避免了只依赖单一指标而引起的假信号。同时引入支撑阻力位作为滤波,可以减少常见支撑阻力位置上的反弹造成的错误交易。MACD快慢线结合RSI指标,可以比较准确地判断价格走势和超买超卖状态。相比简单的移动平均线策略,该策略可以更加灵活地捕捉价格的长期趋势。
-
-## 策略风险
-
-该策略主要存在以下几种风险:
-
-1)强势行情中,策略可能会漏掉大部分利润,因为它倾向于在反转周期结束后才进场;
-
-2)RSI和MACD参数设置不当可能导致交易信号错误;
-
-3)支撑阻力检测算法简单,可能高估或低估真实支撑阻力位;
-
-4)止损机制缺失。极端行情中,无法有效控制损失。
-
-针对这些风险,可通过引入自适应MACD,优化RSI参数,使其更贴近不同品种的特点;改进支撑阻力判断算法,增加市场modeling判断等方式进行优化。
-
-## 策略优化方向 
-
-该策略可以从以下几个维度进行优化:
-
-1)引入止损机制,比如画布AMO指标结合移动止损
-
-2)使用自适应MACD,让MACD参数实时优化
-
-3)引入市场分型判断,确定更科学支撑阻力位
-
-4)结合更多数据,建立市场状态判断,不同状态使用不同参数
-
-5)使用机器学习算法对策略进行端对端优化
-
-通过这些改进,可以进一步降低回撤,提高策略稳定性。
-
-## 总结
-
-本策略综合运用RSI和MACD指标判断超买超卖状态,在支撑和阻力附近进行交易,属于体现较好的趋势跟踪策略。同时结合支撑阻力判断减少风险。该策略的优势是策略信号稳定,风险可控,适合中长期持有。但部分参数如指标参数、支撑阻力范围等仍可进一步优化,提高盈利水平。总体来说,该策略对于跟踪行情趋势具有很好的表现,属于易于实施且风险可控的量化策略。
-
-||
 
 ## Overview
 
@@ -109,7 +58,6 @@ Through these improvements, we can further reduce drawdown and improve stability
 
 ## Conclusion
 The strategy integrates RSI and MACD indicators to determine OB/OS statuses, and trade around support/resistance levels, representing a trend-following approach. By incorporating support/resistance filter, the risk is reduced. The advantage lies in stable signals and controllable risk suitable for long-term holding. Still some components e.g. indicator parameters, S/R range can be further tuned to improve profitability. Overall it shows good performance in following market trends with easy implementation and risk control.
-[/trans]
 
 > Strategy Arguments
 

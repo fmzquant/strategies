@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c89ff74fc5ab8f8d01.png)
 
-[trans]
-
-## 概述
-
-全方位自动交易移动平均彩虹策略是一种典型的多时间周期移动平均线组合策略。它采用12条不同周期的移动平均线,通过移动平均线的排列顺序和价格的关系来判断行情走势方向,以及确定建仓、止损、止盈条件,实现自动交易。该策略可以自动识别趋势,并且有完善的止损机制来控制风险。
-
-## 原理
-
-该策略使用12条移动平均线,包括3周期、5周期、8周期一直到55周期,移动平均线类型可以选择EMA、SMA、RMA等。策略首先判断短周期和长周期移动平均线(1-4周期 Lines 和 5-8周期 Lines)的排列关系,如果短周期上方则判断为上涨趋势环境,如果短周期下方则判断为下跌趋势环境。
-
-在上涨趋势中,如果价格突破上一个低点对应的移动平均线,就判断为符合建仓信号,做多;止损位于上一个低点对应的移动平均线,止盈距离止损的1.6倍。在下跌趋势中,如果价格突破上一个高点对应的移动平均线,就判断为符合建仓信号,做空;止损位于上一个高点对应的移动平均线,止盈距离止损的1.6倍。
-
-该策略还具有趋势反转检测功能。在持仓期间,如果短周期移动平均线发生排列变化,同时价格超过最近一个高点或低点,则判断为可能发生了趋势反转,这时退出当前头寸,转换至相反方向头寸,以新的高点或低点作为止损和止盈位置。
-
-## 优势
-
-1. 该策略综合运用多重时间周期分析,能较好判断趋势方向。
-
-2. 策略加入移动平均线顺逆排列关系判断,避免被震荡市场误导。
-
-3. 策略具有完善的止损机制,可以有效控制单笔交易的风险。
-
-4. 该策略具有趋势反转检测功能,可以及时捕捉趋势反转机会,降低系统性风险。
-
-5. 该策略参数设置灵活,移动平均线周期和类型都可以自定义。
-
-6. 策略采用跟踪止损方式,能锁定最大程度利润。
-
-## 风险
-
-1. 多重移动平均线组合策略,参数设置会影响策略表现,需要进行优化测试。
-
-2. 震荡行情中,移动平均线将发出错误信号,应适当调整参数或暂时不交易。
-
-3. 存在一定的滞后性,在趋势转折点附近可能会有错失良机的风险。
-
-4. 需关注其他技术指标情况,避免在重要支撑位附近逢低开仓做空。
-
-5. 系统性风险需要关注,反转检测机制并不能完全规避该风险。
-
-6. 回撤控制需要加入额外机制,可以考虑加入动态仓位管理。
-
-## 优化方向 
-
-1. 测试不同类型移动平均线和参数设置,找到最佳组合。
-
-2. 优化反转检测机制,设定更精确的反转触发条件。
-
-3. 加入动态仓位管理机制,当回撤过大时降低仓位。
-
-4. 考虑加入机器学习算法,利用大数据训练判断关键点位。
-
-5. 结合其他指标信号进行综合判断,提高决策准确性。
-
-6. 建立多品种交易 portfolio,利用非相关关系分散风险。
-
-## 总结
-
-全方位自动交易移动平均彩虹策略整体来说是一个扎实的趋势跟踪策略,具有较强的趋势识别能力和风险控制能力。通过参数优化、加入动态仓位管理等进一步优化,可以成为一个非常实用的量化交易策略。该策略思路清晰易懂,同时又具有一定的灵活性,值得深入研究使用和持续优化。
-
-||
 
 ## Overview
 
@@ -131,7 +70,6 @@ This strategy also has a trend reversal detection feature. During the holding pe
 
 The Comprehensive Automated Trading Moving Average Rainbow Strategy is overall a solid trend following strategy, with strong abilities in trend identification and risk control. With further optimizations such as parameter tuning, adding dynamic position sizing etc., it can become a very practical quantitative trading strategy. The strategy logic is clear and easy to understand, while also having certain flexibility, making it worthwhile for in-depth research, usage and continuous improvement.
 
-[/trans]
 
 > Strategy Arguments
 

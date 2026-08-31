@@ -11,68 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/865a3b9a78772e5a04.png)
 
-[trans]
-
-
-### 概述
-
-该策略是一种趋势跟踪交易策略,使用简单移动平均线判断市场趋势方向,并在移动平均线上按照趋势方向放置限价单,实现趋势跟踪交易。
-
-### 策略原理
-
-1. 计算简单移动平均线SMA,以及计算趋势方向trend。
-
-2. 如果启用了反锯齿过滤,则使用低点高于SMA判断为上涨趋势,使用高点低于SMA判断为下跌趋势。如果没有启用反锯齿过滤,则使用收盘价高于SMA判断为上涨趋势,收盘价低于SMA判断为下跌趋势。
-
-3. 根据趋势方向trend和启用的交易方向参数needlong、needshort,在SMA价格上放置限价单,具体逻辑是:
-
-   - 如果需要做多(needlong为true)且处于上涨趋势,在SMA价格放置做多限价单
-
-   - 如果需要做空(needshort为true)且处于下跌趋势,在SMA价格放置做空限价单
-
-4. 设置止损逻辑,如果持仓方向与趋势方向不符,则止损退出。
-
-5. 根据日期范围参数,只在指定的日期范围内交易。
-
-### 优势分析
-
-1. 使用SMA判断趋势,可以有效过滤市场噪音,锁定较长线的趋势。
-
-2. 在SMA价格放置限价单,可以在趋势开始阶段获得较好的入场点位。
-
-3. 可选择只做多或只做空,灵活调整到个人交易风格。
-
-4. 可设置止损退出机制,避免亏损扩大。
-
-5. 支持设置交易时间范围,可避开重大事件导致的剧烈波动。
-
-### 风险分析
-
-1. SMA作为趋势判断指标,存在滞后问题,可能错过趋势转折点,从而出现损失。
-
-2. 限价单入场存在不够灵活的问题,可能因趋势短期调整而无法进入场内。
-
-3. 需要合理设置SMA周期参数,如果设置不当,会得到错误的趋势判断。
-
-4. 需要考虑交易时段参数的合理性,避免错过交易机会或风险时间段。
-
-### 优化方向
-
-1. 可以考虑加入其他指标判断,进行多指标验证,避免SMA滞后问题。
-
-2. 可以设置成限价单追踪模式,当价格突破SMA时改为市价单追踪,提高跟踪灵活性。 
-
-3. 动态优化SMA周期参数,让其自适应不同周期的市场环境。
-
-4. 设置止损位置成趋势内最低价/最高价,而不是严格的SMA位置,让止损更灵活。
-
-5. 增加算法交易元素,使交易时段更加智能灵活,避开重大风险时段。
-
-### 总结
-
-本策略整体是一个较为简单的趋势跟踪策略,核心思路是使用SMA判断趋势方向,并在SMA价格放置限价单进行跟踪交易,可通过一定优化提高策略的灵活性、适应性和智能性。该策略易于理解实现,适合算法交易入门学习,但实盘中需要注意风险,谨慎评估回测结果,并进行严格的监控与优化。
-
-||
 
 ### Summary
 
@@ -132,7 +70,6 @@ This strategy is a trend following trading strategy that uses simple moving aver
 
 Overall this is a relatively simple trend following strategy, with the core idea of determining trend direction with SMA and placing limit orders at SMA price to follow the trend. With certain optimizations it can improve flexibility, adaptability and intelligence. The strategy is easy to understand and implement, suitable for algorithmic trading beginners, but requires risk awareness, cautious backtest evaluation, strict monitoring and optimization for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

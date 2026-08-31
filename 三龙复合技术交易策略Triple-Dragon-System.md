@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14d32d714992989aaf3.png)
-[trans]
-
-## 概述
-
-三龙系统是一个结合延伸价格量趋势指标、唐奇安通道指标和抛物线SAR指标的复合技术交易策略。该策略利用三种指标的互补优势识别市场趋势方向和潜在买卖信号。
-
-## 策略原理
-
-该策略首先利用延伸价格量趋势指标和唐奇安通道判断市场趋势方向。当延伸价格量趋势指标位于基线之上且价格高于唐奇安通道上轨时,表示处于上升趋势;反之,延伸价格量趋势指标位于基线之下且价格低于唐奇安通道下轨时,表示处于下降趋势。
-
-识别市场趋势方向后,该策略引入抛物线SAR指标识别具体的买入和卖出时机。当抛物线SAR指标下穿价格时,产生买入信号;当抛物线SAR指标上穿价格时,产生卖出信号。
-
-为进一步验证信号,该策略还会在多个时间周期内确认趋势方向,避免在市场剧烈波动期间进入场内。此外,该策略还设置了多重止盈水平,以锁定利润并控制风险。
-
-## 优势分析
-
-三龙系统最大的优势在于指标组合使用互补性强的三种不同类型指标,可以更全面准确判断市场走势。具体来说,主要优势有:
-
-1. 延伸价格量趋势指标可以准确识别趋势变化点和趋势力度,基本面好;
-2. 唐奇安通道指标可以清晰判断趋势方向,较好抓住趋势;  
-3. 抛物线SAR结合趋势指标使用,可以更准确找出买卖点位。
-
-通过指标有机结合,可以充分发挥各指标优势,使三龙系统对大中长线走势判断准确,对买卖点识别更加精准,从而可以获取较优风险收益比。
-
-## 风险分析
-
-三龙系统作为一个指标组合策略,整体风险可控,但仍有一定风险需要注意:
-
-1. 延伸价格量趋势指标对假突破和巨量反转情况下判断失误风险;
-2. 在震荡盘整理过程中,唐奇安通道可能收窄,产生错误信号的概率较大;
-3. 抛物线SAR参数设置不当也会对买卖点识别产生一定影响。
-
-针对以上风险,我们建议适当调整指标参数设置,并辅助参考其他指标判断,降低单一指标失效的概率。此外,合理止损和位置管理也对策略整体风险控制至关重要。
-
-## 策略优化
-
-三龙系统仍有进一步优化的空间:  
-
-1. 可以引入机器学习算法自动优化指标参数;
-2. 可考虑引入波动率指标辅助判断,提高策略稳定性; 
-3. 可以结合情绪指标判断公众情绪波动对策略的影响。
-
-通过算法化参数优化、多指标组合判断和行为量化分析,有望进一步提升三龙系统的收益率和稳定性。我们将持续关注行业前沿技术,不断优化改进策略系统。
-
-## 总结
-
-三龙系统是一种技术指标组合策略,通过延伸价格量趋势指标、唐奇安通道指标和抛物线SAR指标三者优势互补判断市场走势和找出买卖点。该策略判断精准,风险可控,经多重验证,是一种适合中长线投资者的有效策略系统。我们将持续优化三龙系统,以期获得更优风险收益比。
-
-
-||
 
 
 ## Overview
@@ -108,7 +58,6 @@ Through algorithmic parameter optimization, multi-indicator combination judgemen
 
 The Triple Dragon System is a technical indicator portfolio strategy that leverages the complementary strengths of EPVT, Donchian Channels and Parabolic SAR to determine market trends and identify trading opportunities. This strategy has precise judgements, controllable risks, multiple layers of validation, and is an effective system suitable for medium-long term investors. We will continue optimizing the Triple Dragon System for superior risk-reward ratios.
 
-[/trans]
 
 > Strategy Arguments
 

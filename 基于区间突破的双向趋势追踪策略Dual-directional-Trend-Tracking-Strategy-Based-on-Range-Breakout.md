@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ecd6633ccc6092d9ee.png)
-[trans]
-## 概述
-
-该策略通过计算最后一个涨停价和最后一个跌停价,结合当前价格判断价格是否进入某个定域,从而产生交易信号。当价格超过上一个涨停价一定比例时做多,当价格低于上一个跌停价一定比例时做空。
-
-## 策略原理
-
-策略首先计算最后一个涨停价lastbull和最后一个跌停价lastbear。然后计算当前价格close相对于lastbull的变化比例ddl,以及相对于lastbear的变化比例dds。
-
-当ddl低于配置的做多信号阈值signallong时产生做多信号up,当dds高于配置的做空信号阈值signalshort时产生做空信号dn。
-
-收到做多信号时若需做多参数needlong为真就开多仓,收到做空信号时若需做空参数needshort为真就开空仓。开仓系数capital由账户权益计算。
-
-平仓条件是开多仓后价格上涨就平多仓,开空仓后价格下跌就平空仓。
-
-## 优势分析
-
-该策略结合趋势和区间判断,既能捕捉趋势也能利用区间突破产生交易信号,做多做空切换灵活。相比简单趋势跟踪策略,它可以在盘整区间突破后快速捕捉新的趋势方向。
-
-参数可配置空间大,可以灵活调整做多做空的参数,适应不同品种。可以配置开仓时间段来避开重要时间节点。
-
-## 风险分析
-
-策略中没有止损机制,无法有效控制单笔损失。品种交易范围波动较大时,仓位计算易受价格影响。
-
-可以设置止损来限制单笔损失。可以根据不同品种设置仓位算法使仓位更稳定。
-
-## 优化方向
-
-1. 增加移动止损来控制单笔损失风险
-2. 改进仓位计算方法,例如用ATR计算,使仓位大小更稳定
-3. 增加开仓过滤,例如突破黄金交叉时才开仓
-4. 结合多个品种交易,设定关联关系,降低系统性风险
-
-## 总结
-
-该策略整合趋势判断和区间突破产生交易信号,既能捕捉新的趋势方向又能利用区间震荡特征。参数设置灵活,可调整空间大,适合不同品种。策略优化空间较大,可从多角度进行改进以适应更复杂的市场环境。
-
-||
 
 ## Overview
 
@@ -87,7 +48,6 @@ Stop loss can be added to limit the per trade loss. The position sizing algorith
 
 This strategy combines trend analysis and range breakout to generate trading signals, which can catch new trends and take advantage of range bound characteristics. The parameters are highly configurable for different products. There is large room for optimization to adapt more complex market environments.
 
-[/trans]
 
 > Strategy Arguments
 

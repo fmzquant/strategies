@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d104d62a3777157ba5.png)
-[trans]
-## 概述
-
-内部收敛突破策略是一种基于K线形态的趋势跟踪策略。该策略利用内部收敛和外部扩张的K线形式来判断趋势,并在突破点进行长空开仓。
-
-## 策略原理
-
-该策略主要判断以下两种K线形态:
-
-1. 内部收敛K线:当日K线的最高价低于昨日最高价,最低价高于昨日最低价,表明范围在收敛。
-
-2. 外部扩张K线:当日K线的最高价高于昨日最高价,最低价低于昨日最低价,表明范围在扩大。
-
-当判断到上述两种形态时,视为策略的入场信号。在入场K线的次日,如果开盘价高于上一日最高价,则做多;如果开盘价低点上一日最低价,则做空。
-
-做多做空后,会设置止盈止损点。具体的止盈止损算法是:
-
-止盈点=(当前close价格 × 目标止盈百分比)/最小变动价位 
-
-止损点=(当前close价格 × 止损百分比)/最小变动价位
-
-这样,我们就可以挂出止盈单和止损单,实现盈利后退出市场,避免超过可承受的损失。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 内部收敛外部扩张K线形态较为可靠,判断趋势方向的成功率较高。
-
-2. 突破入场增加判断的确定性,避免了部分假突破。
-
-3. 全自动化交易,不需要人工干预,降低了操作风险。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. K线形态判断不完全可靠,可能出现错误信号。
-
-2. 突破入场容易被套,应适当调整止损点。
-
-3.参数设置不当可能导致亏损加大,需要仔细测试优化参数。
-
-## 优化方向
-
-该策略还可以从以下方向进行优化:
-
-1.加入更多过滤条件,避免错误信号。例如可以添加交易量过滤。
-
-2. 优化止盈止损算法,实现动态止盈止损。
-
-3. 添加自动止损防反功能。
-
-4. 利用机器学习方法自动优化参数。
-
-## 总结
-
-内部收敛突破策略整体来说是一种较为可靠、容易实现的趋势策略。该策略充分利用了内部收敛外部扩张形态的判断优势,以及突破的确定性优势。同时,策略算法简单清晰,容易理解,适合量化入门选择。通过不断优化和调整,可以使该策略更加稳定和智能化,从而获得更好的交易效果。
-
-||
 
 ## Overview
 
@@ -128,7 +68,6 @@ Some ways to improve the strategy include:
 
 The inside bar breakout strategy is an overall reliable and easy-to-implement trend following method. It takes advantage of the predictive power of inside bar and outside patterns combined with the higher certainty of breakout entries. With simple straightforward logic, it is beginner friendly in algorithmic trading. Further enhancements in optimization and automation will lead to more stable and intelligent trading results.
 
-[/trans]
 
 > Strategy Arguments
 

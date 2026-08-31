@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/155d0eace762da9195d.png)
-[trans]
-
-
-## 概述
-
-该策略采用VWMA指标判断趋势方向,并使用ATR指标设定止损线实现趋势跟踪。策略适用于具有明显趋势的市场环境。
-
-## 策略原理
-
-1. 使用VWMA指标判断趋势方向。当价格高于VWMA时判断为上升趋势,做多;当价格低于VWMA时判断为下降趋势,做空。
-
-2. 为过滤假突破,加入RSI oscillator判断。只有当RSI高于30时才会发出做多信号。
-
-3. 使用ATR指标计算止损线。ATR长度设置为与VWMA相同,倍数设置为3.5。止损线会根据价格实时更新。
-
-4. ATR倍数的设置会影响止损线的收缩幅度。倍数越大,止损线更新频率越低,跟踪趋势的效果较好。
-
-5. 根据策略内的止损百分比和账户权益计算仓位大小。
-
-6. 当价格跌破止损线时止损退出做多头寸。
-
-## 策略优势
-
-1. 使用VWMA指标判断趋势方向,可以持续捕捉趋势机会。
-
-2. 增加RSI filter,可以过滤掉部分假突破signals。
-
-3. ATR止损线实现趋势跟踪,避免被反转Stopping out。
-
-4. 根据账户权益和止损百分比计算仓位,有利于风险控制。
-
-## 策略风险
-
-1. 在趋势转折点存在亏损风险。应适当缩小仓位,降低单笔亏损。
-
-2. ATR参数设置不当,会导致止损线过于敏感或迟钝。应测试确定合适的参数。
-
-3. 如果趋势反转过快,止损线更新可能来不及,会扩大亏损。
-
-4. 在低波动市场中,应降低仓位并增加止损线收缩频率。
-
-## 优化方向
-
-1. 可以测试不同的VWMA参数组合,选择产生signal最佳的参数。
-
-2. 可以测试RSI oscillator的其他参数设定,如超买超卖线等。
-
-3. 可以测试ATR的倍数参数,找到在回撤和跟踪之间做tradeoff的最佳点。 
-
-4. 可以结合其他指标过滤signal,例如MACD,KD等,提高信号质量。
-
-5. 可以根据市场波动情况优化仓位管理和止损百分比。
-
-## 总结
-
-该策略整体偏趋势,适合用来捕捉明显的价格趋势。策略具有趋势判断、信号过滤、止损跟踪等方面的优势,也存在趋势反转风险。通过优化参数设定和仓位管理,可以获得更好的策略效果。
-
-||
 
 
 ## Overview
@@ -124,7 +66,6 @@ This strategy uses VWMA to determine the trend direction and sets stop loss with
 
 The strategy has an overall trend-following bias and catches obvious price trends well. It has advantages in trend determination, signal filtering, stop loss trailing etc. It also has risks in trend reversal. Fine tuning parameters and position sizing can lead to better performance.
 
-[/trans]
 
 > Strategy Arguments
 

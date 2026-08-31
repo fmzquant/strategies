@@ -9,68 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用增强型波动带指标判断价格反转点,在价格接近波动带下限时做多,在绿色K线出现时平仓止盈,旨在捕捉波动带下沿反弹机会。
-
-## 策略原理
-
-1. 计算常规波动带的参数basis和dev,及上限upperBB和下限lowerBB。
-
-2. 计算SMA均线和偏离SMA特定百分比的上下轨upex2和dnex2。
-
-3. 计算upex2、dnex2与upperBB、lowerBB的均值,生成曲线upex3和dnex3。
-
-4. 取upex3与upperBB中的较大值作为新上轨upex,dnex3与lowerBB中的较小值作为新下轨dnex。
-
-5. 当价格低于dnex时,做多入场;当K线为绿色(收盘价大于开盘价)时,平仓止盈。
-
-## 优势分析
-
-1. 增强型波动带提高了原始波动带指标的灵敏度,可以更早捕捉到价格反转机会。
-
-2. 结合K线信号过滤,避免在盘整中频繁止损。
-
-3. 回测显示2008-2018年间该策略稳定盈利,收益曲线平顺,最大回撤不到20%。
-
-4. 可配置资金利用率、交易时段等参数,风险可控。
-
-## 风险分析
-
-1. 波动带参数设置不当可能导致交易频率过高或错失机会。
-
-2. 仅做多方向,无法在趋势反转时获利。
-
-3. K线过滤信号可能滞后,无法及时止损离场。
-
-4. 回测数据仅10年,需扩大样本区间检验稳健性。
-
-5. 无法适应大幅跳空或间隙行情。
-
-## 优化方向  
-
-1.测试不同参数组合,优化波动带参数。
-
-2.结合其它指标信号进行滤波,提高获利 trades 的比例。
-
-3.加入做空策略,在价格超过上轨时考虑做空。
-
-4.设置止损条件以控制单笔损失。
-
-5.开发自动调参程序,根据市场变化优化参数。
-
-6.针对跳空与间隙行情特点优化入场规则。
-
-7.扩大回测时间范围,检验参数稳健性。
-
-## 总结
-
-该策略利用增强波动带判断价格反转点,在波动带下轨附近位置做多,并配合K线过滤信号快速止盈,回测表现良好。但该策略仅做多方向,Optimization
-样本区间有限,关键参数需要进一步优化,在市场环境改变时可能面临收益下滑风险。下一步需要引入多种过滤信号提升获利trades比例,增加做空机会,并使用更长的回测周期对参数组合进行稳健性检验,以提高策略的适应性和稳定性。
-
-|| 
 
 ## Overview
 
@@ -130,7 +68,6 @@ This strategy uses an enhanced Bollinger Bands indicator to identify price rever
 
 This strategy identifies reversal points with enhanced BB and goes long near lower band with candle filter for quick profit taking. Backtest performance is good. But long only, limited sample, param tuning needed. May face drawdown when market changes. Next steps are confirming signals to boost win rate, short trades, longer backtest for robustness, to improve adaptiveness and stability.
 
-[/trans]
 
 > Strategy Arguments
 

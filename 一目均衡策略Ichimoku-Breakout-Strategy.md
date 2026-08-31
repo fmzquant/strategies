@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-一目均衡策略运用均线的理念,采用一目均线和价格的关系来判断趋势方向,属于趋势跟踪策略。当价格上穿均线时做多,下穿时做空,跟随趋势运行。
-
-### 原理解析
-
-该策略主要基于一目均线的理念,核心运用`donchian()`函数计算一定周期内的最高价和最低价的平均值,作为均值线。然后判断价格是否突破该均值线,从而产生交易信号。
-
-具体来说,策略首先计算`Ten`周期的一目均线`TS`,作为参考线。当价格上穿均线时,认为进入趋势行情,产生做多信号;当价格下穿均线时,认为趋势反转,产生做空信号。
-
-此外,策略还计算`Kij`周期的均值线`KS`,和`TS`线结合,形成过滤条件,避免错信号。只有当`TS`线上穿`KS`线时,才会触发做多信号。
-
-代码中还绘制了云图,判断云图的位置关系,辅助判断趋势方向。并计算`Chikou`线,判断其与价格的关系,作为辅助条件。
-
-### 优势分析
-
-- 使用均线判断趋势,原理简单易懂
-- 结合云图增加判断依据,提高准确性 
-- 增加`Chikou`线作为辅助条件,进一步过滤信号
-- 采用不同参数均线组合,可以灵活调整
-
-### 风险分析
-
-- 均线策略对参数敏感,不同周期参数效果差异大
-- 纯跟踪均线,无法判断趋势和区间,存在亏损风险
-- 无法处理盘整周期,容易发出错误信号
-- 云图辅助判断不稳定,可能产生误导
-
-可以考虑结合趋势指标如MACD判断,再产生信号;采用均线多组合系统,提高稳定性;或加入止损策略控制风险。
-
-### 优化方向
-
-- 增加动量指标组合,判断趋势强弱
-- 考虑多均线系统,如多均线黄金交叉
-- 增加通道和波动率指标,判断盘整区间
-- 优化参数,寻找最佳周期组合
-- 加入止损策略,控制单笔损失
-
-### 总结
-
-一目均衡策略整体来说比较简单直接,适合作为初学者入门,通过均线理解趋势;同时也可进行多指标组合,丰富系统效果。但本策略的实盘效果还有待验证,仍需不断优化测试,才能用于实盘交易。关键是要控制风险,不能盲目跟随均线,在实盘中需审时度势运用。
-
-||
 
 
 ## Overview
@@ -98,7 +53,6 @@ Consider combining with momentum indicators like MACD for trend strength. Adopt 
 
 The Ichimoku Breakout Strategy is relatively simple and straightforward, suitable for beginners to understand trend using moving averages. It can also be expanded with multiple indicators for enriched systems. However, its practical performance requires further verification and optimization before applying in live trading, especially in risk control. The key is to apply it wisely based on market conditions, and not blindly follow the lines.
 
-[/trans]
 
 > Strategy Arguments
 

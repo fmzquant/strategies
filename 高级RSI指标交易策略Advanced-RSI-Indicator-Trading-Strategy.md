@@ -10,84 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b48c171eaa29eec000.png)
-[trans]
-## 概述
-
-S&P500高级RSI指标交易策略(S&P500 Advanced RSI Indicator Trading Strategy)是一个用于S&P500指数的中长期趋势跟踪策略。该策略结合多种过滤器,在RSI超买超卖信号的基础上进行交易,以控制风险并减少假信号。
-
-## 策略原理 
-
-该策略的核心指标是RSI,以2周期RSI值为基础判断价格超买超卖。当RSI指标低于设置的超卖线时做多,当RSI指标高于设置的超卖线时平仓。此外,策略还设置了一系列辅助过滤器进行风险控制:
-
-1. 每周RSI过滤器:要求每周RSI低于设置线,避免在牛市中过于激进做多
-
-2. MA过滤器:要求价格高于指定周期MA,确保只在趋势启动后买入
-
-3. 二次RSI过滤器:要求二次RSI指标也低于超卖线,避免假突破
-
-4. ATR突破过滤器:避免价格快速下跌后仍做多,控制风险
-
-以上多重过滤器结合使用,可有效识别价格中长线反转点,控制交易频率并降低风险。
-
-## 优势分析
-
-S&P500高级RSI指标交易策略具有以下几点优势:
-
-1. 结合多种辅助指标过滤,减少假信号,可靠性较高
-
-2. 通过ATR突破过滤器控制风险,避免价格急跌后追买
-
-3. 每周RSI过滤器可避免在牛市中买入,防止过于激进
-
-4. MA过滤器要求价格高于趋势均线后买入,确保趋势启动后再入场
-
-5. 二次RSI过滤器避免RSI指标产生假突破做多
-
-6. 适用于中长线持仓,不会过于频繁交易
-
-## 风险分析
-
-该策略的主要风险来自以下几个方面:
-
-1. 使用RSI作为主要指标,会存在一定的滞后性
-
-2. 过滤条件过于严格,可能错过部分机会
-
-3. 在特大行情中,止损条件可能会被突破
-
-4. 基于简单的RSI指标和过滤器,对复杂行情的判断能力较弱
-
-对应缓解方法如下:
-
-1. 适当调整参数,防止错过机会
-
-2. 加大仓位规模,以弥补一定的漏买概率
-
-3. 可适当放宽过滤条件,增加交易频率
-
-4. 可考虑结合更多指标判断复杂行情
-
-## 优化方向
-
-该策略还可从以下几个方向进行优化:
-
-1. 测试调整RSI参数,寻找最优超买超卖线
-
-2. 测试MA均线周期参数,确定最优的参数
-
-3. 测试调整ATR参数,优化价格突破过滤判断
-
-4. 尝试结合其他指标判断,提高对复杂行情的判断能力
-
-5. 优化每周RSI参数,确定每周RSI的最优参数
-
-6. 优化二次RSI的参数,寻找最佳的二次RSI周期和超买超卖线
-
-## 总结
-
-S&P500高级RSI指标交易策略通过RSI指标判断价格中长线趋势反转点,并设置多种过滤器条件控制风险。该策略充分利用RSI指标的效用之处,可有效锁定中长线趋势,避免过于频繁出入场。随着参数不断优化,策略表现有望不断改进。总体来说,该策略适用于中长线价值投资,是一种相对稳定的量化策略。
-
-||
 
 ## Overview  
 
@@ -165,7 +87,6 @@ The strategy can be further optimized in the following directions:
 
 The S&P500 Advanced RSI Indicator Trading Strategy identifies medium to long term trend reversal points using RSI and multiple filter conditions to control risk. It utilizes the strengths of RSI effectively to lock in medium/long term trends and avoid overtrading. As parameters continue to be optimized, strategy performance can continue improving. Overall it is suitable for medium to long term value investing and is a relatively stable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

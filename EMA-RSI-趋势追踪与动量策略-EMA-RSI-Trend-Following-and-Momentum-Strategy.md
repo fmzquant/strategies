@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b746e2bf9f503ec849.png)
 
-[trans]
-#### 概述
-Bybit EMA RSI 趋势追踪与动量策略是一个结合了指数移动平均线(EMA)和相对强弱指数(RSI)的量化交易策略。该策略利用两条不同周期的EMA来判断市场趋势,同时使用RSI指标来确认趋势的有效性。当快速EMA上穿慢速EMA且RSI低于特定下限时,策略产生做多信号;反之,当快速EMA下穿慢速EMA且RSI高于特定上限时,策略产生做空信号。该策略还根据Bybit账户等级设置不同的手续费比例,并内置止盈止损功能,可以有效控制风险。
-
-#### 策略原理
-1. 计算快速EMA和慢速EMA,周期分别为90和300。
-2. 计算RSI指标,周期为5。
-3. 当快速EMA上穿慢速EMA且RSI低于45时,产生做多信号;当快速EMA下穿慢速EMA且RSI高于85时,产生做空信号。
-4. 根据Bybit账户等级设置不同的手续费比例,从VIP 0的0.075%到VIP 4的0.035%不等。
-5. 计算包含手续费的开仓价格。
-6. 根据设定的止盈止损百分比(5%和3%)计算止盈价和止损价。
-7. 在图表上绘制开仓价、止盈线和止损线。
-8. 根据交易信号执行开仓操作。
-
-#### 策略优势
-1. 结合趋势追踪和动量指标,能够较好地捕捉市场趋势。
-2. 内置止盈止损功能,可以有效控制风险。
-3. 根据Bybit账户等级设置不同的手续费比例,适应不同用户的交易条件。
-4. 在图表上绘制开仓价、止盈线和止损线,提供直观的交易信号确认。
-
-#### 策略风险
-1. EMA和RSI参数的选择可能不适用于所有市场环境,需要根据实际情况进行优化。
-2. 在震荡市场中,该策略可能产生频繁的交易信号,导致高昂的交易成本。
-3. 止盈止损的设置可能过于保守或激进,需要根据个人风险偏好进行调整。
-
-#### 策略优化方向
-1. 对EMA和RSI的参数进行优化,以适应不同的市场环境。可以通过回测和参数扫描来寻找最佳参数组合。
-2. 引入其他技术指标,如布林带、MACD等,以提高交易信号的准确性。
-3. 优化止盈止损的设置,例如采用移动止损或动态止损方法,以更好地保护利润和控制风险。
-4. 考虑市场波动性和交易量等因素,对交易信号进行过滤,减少频繁交易带来的成本。
-
-#### 总结
-Bybit EMA RSI 趋势追踪与动量策略是一个结合了趋势追踪和动量指标的量化交易策略,通过EMA和RSI的配合使用,可以较好地捕捉市场趋势。该策略内置止盈止损功能和根据Bybit账户等级设置手续费的功能,可以有效控制风险并适应不同用户的交易条件。然而,该策略仍有优化空间,如参数优化、引入其他技术指标、优化止盈止损设置等。通过不断优化和改进,该策略有望在实际交易中取得更好的效果。
-
-|| 
 
 #### Overview
 The Bybit EMA RSI Trend-Following and Momentum Strategy is a quantitative trading strategy that combines Exponential Moving Averages (EMA) and the Relative Strength Index (RSI). The strategy uses two EMAs with different periods to determine market trends and the RSI indicator to confirm the validity of the trends. When the fast EMA crosses above the slow EMA and the RSI is below a specific lower threshold, the strategy generates a long signal. Conversely, when the fast EMA crosses below the slow EMA and the RSI is above a specific upper threshold, the strategy generates a short signal. The strategy also sets different commission percentages based on the Bybit account level and includes built-in take profit and stop loss functions to effectively manage risk.
@@ -79,7 +44,6 @@ The Bybit EMA RSI Trend-Following and Momentum Strategy is a quantitative tradin
 
 #### Summary
 The Bybit EMA RSI Trend-Following and Momentum Strategy is a quantitative trading strategy that combines trend-following and momentum indicators. By using EMAs and RSI together, it can effectively capture market trends. The strategy includes built-in take profit and stop loss functions and sets commission percentages based on the Bybit account level, effectively managing risk and adapting to different users' trading conditions. However, there is still room for optimization in the strategy, such as parameter optimization, introducing other technical indicators, and optimizing take profit and stop loss settings. With continuous optimization and improvement, the strategy is expected to achieve better results in actual trading.
-[/trans]
 
 > Strategy Arguments
 

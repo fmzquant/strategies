@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f5a4909be98a223c29.png)
-[trans]
-
-## 概述
-
-这是一个基于BankNifty 5分钟K线的超级趋势指标交易策略。该策略主要利用超级趋势指标识别趋势,结合交易时段和风险管理规则进行交易。
-
-## 策略原理
-
-该策略首先定义了交易时段和日期范围等输入变量。交易时段设置为印度交易时段,从上午9:15到下午3:10。
-
-然后计算超级趋势指标及其方向。超级趋势指标可以识别趋势的方向。
-
-在每个交易时段开始时,策略要等待3根K线形成,然后才会考虑进场。这是为了过滤假突破。 
-
-多头信号是超级趋势指标方向变化由下向上时;空头信号是超级趋势指标方向变化由上向下时。
-
-进场后会设置止损,固定止损点数和追踪止损百分比都可以通过输入变量调整。
-
-在交易时段结束时,策略会平掉所有未平仓的头寸。
-
-## 策略优势
-
-这是一个利用指标识别趋势的简单交易策略。它具有如下优势:
-
-1. 利用超级趋势指标判断趋势方向,可以有效识别趋势
-2. 结合交易时段,可以避开市场最剧烈波动的开盘和收盘时段
-3. 设置追踪止损,可以锁定利润
-4. 可以通过输入变量自由调整的参数较多,适应性强
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 超级趋势指标存在滞后,可能错过最佳进场时机
-2. 单一指标判断容易受假突破影响,胜率可能不高  
-3. 没有考虑大盘趋势,可能与大盘产生背离
-4. 止损点数设定不当可能造成超出预期的损失
-
-可以通过优化超级趋势指标的参数或增加其他指标判断来减少这些风险。
-
-## 策略优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加其他指标判断,形成组合交易策略,可以提高策略稳定性
-2. 添加对大盘走势的判断,避免与大盘产生背离
-3. 优化超级趋势指标的参数,找到最适合的长度和因子
-4. 调整止损策略,例如随着趋势走势逐步调整止损点
-5. 测试不同的交易品种,寻找最匹配该策略的品种
-
-## 总结
-
-本策略是一个基于BankNifty 5分钟线的超级趋势指标交易策略。它利用超级趋势指标判断趋势方向,结合交易时段和风险管理规则进行交易。相比复杂的量化策略,该策略规则简单清晰,容易理解和实施。作为一个示例策略,它为日后进行优化和改进提供了基础和方向。通过不断地完善和提高,希望该策略可以成为一个可靠稳定盈利的量化交易策略。
-
-||
 
 ## Overview
 
@@ -118,7 +63,6 @@ The strategy can also be optimized in the following aspects:
 
 In summary, this is a Supertrend indicator trading strategy based on the BankNifty 5-minute chart. It utilizes the Supertrend indicator to determine the trend direction and combines trading sessions and risk management rules to trade. Compared to complex quantitative strategies, this strategy has simple and clear rules that are easy to understand and implement. As a sample strategy, it provides a foundation and direction for future optimization and improvement. Through continuous refinement and enhancement, it is hoped that the strategy can become a reliable and profitable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

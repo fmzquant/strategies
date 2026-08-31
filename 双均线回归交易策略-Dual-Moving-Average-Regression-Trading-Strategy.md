@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/128f1faff075c31350f.png)
 
-[trans]
-#### 概述
-该策略使用两种不同长度的线性回归线作为交易信号,同时结合了ATR作为止损和部分止盈。当较短周期的线性回归线从下向上穿越较长周期的线性回归线时,产生做多信号;反之,当较短周期的线性回归线从上向下穿越较长周期的线性回归线时,产生做空信号。该策略在开仓后,使用ATR作为跟踪止损,同时采用了分批止盈的方法来实现利润最大化。
-
-#### 策略原理
-1. 计算两个不同周期(默认为20和40)的线性回归线,作为交易信号
-2. 当较短周期的线性回归线从下向上穿越较长周期的线性回归线时,如果当前没有持仓,则开多仓
-3. 当较短周期的线性回归线从上向下穿越较长周期的线性回归线时,如果当前没有持仓,则开空仓 
-4. 一旦开仓,使用ATR计算跟踪止损价位,当价格触及该止损价位时,平掉所有仓位
-5. 同时该策略采用了分批止盈的方法,根据开仓价计算16个不同百分比的止盈位(从5%到80%),每个止盈位根据输入的百分比平掉相应数量的仓位
-6. 直到所有仓位都已平仓
-
-#### 优势分析
-1. 使用线性回归作为趋势判断和交易信号,能更好地捕捉到趋势
-2. 两个不同周期的线性回归结合,形成更加可靠的信号确认
-3. 采用ATR作为止损,可以更好地控制风险,与价格波动保持同步
-4. 分批止盈的方法能够在趋势延续时获取更多利润,同时也兼顾了风险控制
-5. 代码模块化程度高,输入参数较多,策略可定制性强
-
-#### 风险分析
-1. 线性回归信号可能出现错误信号,导致亏损
-2. 分批止盈可能导致持仓时间较长,面临回撤风险
-3. 参数设置不当可能导致策略表现不佳
-4. 极端行情下,策略可能面临较大回撤
-
-#### 优化方向
-1. 可以考虑引入更多指标或者过滤条件,提高信号准确性,如趋势确认指标、波动率指标等
-2. 优化止盈和止损的位置和策略,可以考虑动态止盈止损
-3. 对参数进行优化,找到最佳参数组合
-4. 加入仓位管理,根据市场波动状况调整仓位大小
-
-#### 总结
-该双均线回归策略结合了趋势跟踪和止盈止损策略,能够有效捕捉趋势行情,同时控制回撤。但是该策略在震荡行情中表现可能欠佳,同时面临参数优化的问题。总的来说,该策略是一个趋势跟踪策略的典型代表,可以作为基础策略进行优化和改进。
-
-|| 
 
 #### Overview
 This strategy uses two linear regression lines with different lengths as trading signals, combined with ATR for stop loss and partial profit taking. When the shorter-period linear regression line crosses above the longer-period linear regression line from below, it generates a long signal; conversely, when the shorter-period linear regression line crosses below the longer-period linear regression line from above, it generates a short signal. After opening a position, the strategy uses ATR as a trailing stop loss, while employing a partial profit-taking method to maximize profits.
@@ -79,7 +44,6 @@ This strategy uses two linear regression lines with different lengths as trading
 
 #### Summary
 This dual moving average regression strategy combines trend-following and take-profit/stop-loss strategies, which can effectively capture trending markets while controlling drawdowns. However, the strategy may underperform in ranging markets and faces the problem of parameter optimization. Overall, this strategy is a typical representative of a trend-following strategy and can be used as a base strategy for optimization and improvement.
-[/trans]
 
 
 

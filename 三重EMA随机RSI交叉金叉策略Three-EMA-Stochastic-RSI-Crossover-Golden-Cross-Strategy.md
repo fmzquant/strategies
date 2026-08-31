@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14657e61c90dcfad8c7.png)
-[trans]
-### 概述
-
-三重EMA随机RSI交叉金叉策略是一种趋势跟踪策略。它结合了三重指数移动平均线指标和随机指数相对强弱指标,通过双重指标的交叉信号来判断入场时机。
-
-### 策略原理
-
-该策略的信号判断基于以下逻辑:
-
-1. 三重EMA判断趋势:8日线在上,14日线在中,50日线在下构成多头趋势,反之构成空头趋势。
-
-2. 随机RSI指标判断交叉:K线从下方向上穿过D线产生金叉信号,表示强势进入。
-
-3. 只做多头,空头暂不考虑。
-
-当三重EMA呈现上行趋势,且随机RSI出现金叉时,做多。在此基础上设置止损和止盈线来锁定利润。
-
-### 优势分析
-
-该策略结合双重指标判断,能有效锁定趋势。主要优势如下:
-
-1. 三重EMA过滤掉短期噪音,锁定中长线趋势。
-
-2. 随机RSI金叉确认强势进入。
-
-3. ATR智能止损止盈,锁定利润。
-
-4. 策略逻辑简单清晰,容易理解和实施。
-
-### 风险分析
-
-该策略主要风险如下:
-
-1. 大盘震荡时容易被套。当三重EMA指标在震荡中产生多次金叉死叉时,会频繁开仓建仓带来交易风险。可通过优化EMA参数或增加其他过滤指标来解决。
-
-2. 没有做空机会。只做多会错过底部反弹机会。可考虑加入 MACD 等指标,在空头趋势中寻找做空机会。
-
-### 优化方向 
-
-该策略主要可优化的方向包括:
-
-1. 优化EMA参数,改进趋势判断。
-
-2. 增加MACD等指标,判断空头趋势,增加做空机会。 
-
-3. 增加波动率指标,如ATR,改进止损止盈设定。
-
-4. 结合交易量指标,避免虚假突破。
-
-5. 利用机器学习等技术进行参数优化。
-
-### 总结
-
-总的来说,该三重EMA随机RSI交叉策略结合双重指标判断,可以有效过滤震荡、锁定趋势,是一种简单实用的趋势跟踪策略。通过继续优化参数、增加过滤指标、利用先进技术等手段,可以获得更好的策略表现。
-
-||
 
 ### Overview 
 
@@ -121,7 +65,6 @@ The main optimization directions include:
 
 In summary, the Three EMA Stochastic RSI Crossover strategy effectively filters out consolidation and locks in trends by combining dual indicator determination, making it a simple and practical trend following strategy. Further improvements on parameters, filters, technologies will lead to better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

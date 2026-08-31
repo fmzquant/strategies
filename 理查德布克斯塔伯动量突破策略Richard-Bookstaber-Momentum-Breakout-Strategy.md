@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6e0be50af68a063a3b.png)
-[trans]
-
-
-### 概述
-
-动量突破策略基于理查德·布克斯塔伯在1984年提出的概念,即一旦出现大的波动,市场往往会持续这个方向运行。因此,该策略使用ATR来测量波动性,当收盘价变化超过ATR倍数阈值时,发出交易信号。
-
-### 策略原理
-
-该策略首先计算ATR指标来测量市场波动性。然后计算每日收盘价变化的绝对值。当收盘价变化超过ATR指标值的若干倍时,产生交易信号。具体来说,如果收盘价上涨幅度大于ATR上轨,做多;如果收盘价下跌幅度大于ATR上轨,做空。
-
-该策略利用ATR指标来动态确定突破阈值。当市场波动加大时,阈值会上升,可以减少错误交易。当市场波动减小时,阈值会下降,可以及时捕捉突破机会。
-
-### 优势分析
-
-- 动态ATR止损可以有效控制风险,使止损点随市场波动性变化。
-- 利用突破产生交易信号,可以抓住市场趋势的轮换。  
-- 参数优化空间大,可以针对不同品种和周期进行调整。
-- 策略思路简单清晰,容易理解和实现。
-
-### 风险分析
-
-- ATR指标对突发事件反应迟缓,可能错过首次突破。  
-- 多空平衡性差,只做多或只做空时效果明显好于双向交易。
-- 策略参数容易过优化,实际效果可能不佳。
-- 交易频繁,交易成本可能较高。
-
-可以考虑结合其他指标筛选交易时机,提高效率。也可以针对品种特点选择更优参数。使用马丁格尔算法等技术控制交易频率。
-
-### 优化方向 
-
-- 可以考虑结合其他指标判断趋势方向,避免错误交易。例如RSI、MACD等。
-- 可以添加仓位管理模块,根据市场情况调整仓位。
-- 可以针对不同的品种选择最优的参数组合。
-- 可以结合机器学习技术自动优化参数。
-
-### 总结
-
-动量突破策略简单直接,利用突破产生交易信号。ATR止损使其可以适应市场的波动性。该策略依靠参数优化可以获得不错的效果。但也存在一些问题,如错过首次突破、频繁交易等。这需要进一步结合其他技术进行改进,才能在复杂的市场中稳定获利。总体来说,动量突破策略思路清晰,值得进一步研究与应用。
-
-||
 
 
 ### Overview
@@ -90,7 +49,6 @@ Consider combining other indicators to select trading opportunities to improve e
 
 The momentum breakout strategy is simple and direct, generating trading signals from breakouts. ATR stop loss allows it to adapt to market volatility. The strategy relies on parameter optimization for decent results. But there are also some problems like missing initial breakouts, frequent trading, etc. Further improvements by combining with other techniques are needed for stable profits in complex markets. Overall, the momentum breakout strategy has clear logic and is worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

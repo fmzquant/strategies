@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1efdb30d53ef7b8dbec.png)
-[trans]
-
-
-## 概述
-
-本策略通过组合使用双重叠加平均线指标和Stochastic指标来识别趋势反转的机会,实现高效的短线交易。当价格进入超买超卖区域时策略选择做空;当价格进入超卖区域时策略选择做多,以捕捉中短线趋势的反转。
-
-## 策略原理
-
-该策略主要基于双重叠加平均线和Stochastic指标的组合使用。
-
-双重叠加平均线由快速移动平均线、慢速移动平均线和超慢速移动平均线组成。当快速移动平均线上穿慢速移动平均线时,视为买入信号;当快速移动平均线下穿慢速移动平均线时,视为卖出信号。双重叠加平均线能识别出中短线趋势的反转点。 
-
-Stochastic指标包含K值和D值,K值表示当前收盘价相对N天内的最高价和最低价的位置,D值是K值的M日简单移动平均。当K值和D值都超过80时为超买区,小于20时为超卖区。Stochastic指标能识别出短期的超买超卖区域。
-
-本策略通过结合双重叠加平均线和Stochastic指标,在Stochastic指标显示超买或超卖区域时,treeview看是否与双重平均线信号一致,如果一致则选择该点进行反转交易,以期捕捉短线趋势的转折点。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 组合使用双重叠加平均线和Stochastic指标,能够同时识别出中短线和短线的趋势转折点。
-
-2. 利用Stochastic指标的超买超卖信号选择更有效的双叠加平均线反转交易机会。
-
-3. 交易策略规则清晰,容易实施。
-
-4. 可调整的交易时间和月份参数,适应不同品种和时间段。 
-
-5. 设置止损来控制风险。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 双重叠加平均线可能产生假突破,Stochastic指标也可能出现失效的异同K线形态,导致交易信号错误。可适当调整参数,或者增加其他指标进行组合验证。
-
-2. 只基于技术指标,没有考虑基本面因素,在重大经济事件发生时容易失败。可加入经济事件风险控制。
-
-3. 难以把握移动平均线反转的精确时点,可能出现止损过小或过大的问题。应优化止损策略。
-
-4. 参数设定不当可能导致交易频率过高或信号效果不佳。应针对不同品种和周期进行参数优化测试。
-
-5. 仅适合短线交易,不适合长线持有。应控制仓位规模。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试更多指标的组合,如KDJ、MACD等,增强信号的有效性。
-
-2. 加入交易量指标分析,避免虚假突破。
-
-3. 优化双平均线参数,识别更精确的反转时点。
-
-4. 优化止损策略,降低止损被触发的可能。
-
-5. 增加经济事件风险控制模块,避免重大事件对交易的影响。
-
-6. 利用机器学习技术自动优化参数,提高参数的适应性。
-
-7. 在更多品种和周期进行回测,寻找最佳的应用方向。
-
-## 总结
-
-本策略通过双重叠加平均线和Stochastic异同K线形态的组合运用,实现了在中短线趋势反转点进行交易的目的。相比单一使用某个指标,该策略能提高 trades 盈利能力,且策略规则清晰易操作。但该策略也存在一定的风险,需要对参数及止损进行优化,并且加入更多验证指标和风控手段。总体来说,本策略为一种可靠、适中频率的短线交易策略。
-
-||
 
 ## Overview
 
@@ -143,7 +75,6 @@ The strategy can be optimized in several aspects:
 
 This strategy trades at medium-term trend reversal points identified by the double MA crossover and Stochastic bull/bear divergences. Compared to using a single indicator, it can improve trade profitability with clear rules. But it also has risks that require parameter and stop loss optimization, and more filters and risk controls. Overall it is a reliable, medium-frequency short-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

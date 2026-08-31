@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1fef8dd6294f7e35bde.png)
-[trans]
-
-## 概述
-
-多时间框架MACD策略(Multi Timeframe MACD Strategy)是一个利用MACD指标在多个时间框架上实现趋势跟踪的量化交易策略。该策略通过在不同的时间周期(3分钟、5分钟、15分钟、30分钟)上计算MACD指标,判断不同周期之间的价格走势是否一致,来发出交易信号。
-
-## 策略原理  
-
-该策略的核心逻辑是计算MACD指标在多个时间框架(3分钟、5分钟、15分钟、30分钟)上的交叉情况。首先在每个时间框架上计算MACD指标,根据MACD指标判断该时间框架下的价格走势(上升or下降)。然后将多个时间框架下的价格走势进行综合判断:
-
-1. 当所有时间框架下价格均上升时,产生买入信号;  
-2. 当所有时间框架下价格均下降时,产生卖出信号。
-
-通过跨时间框架判断趋势的方式,可以有效滤除短期市场噪音,使交易信号更加可靠。
-
-## 策略优势
-
-本策略具有以下优势:
-
-1. 跨时间框架检测趋势,过滤噪音,使交易信号更加可靠;  
-2. MACD指标参数可自定义设置,适应不同市场环境;
-3. 可灵活配置需要综合判断的时间框架,自主定义交易规则。
-
-## 策略风险及解决方案
-
-本策略也存在以下风险:  
-
-1. 在所有时间框架判断趋势一致性时,可能会错过局部反转的机会;  
-2. MACD指标参数设置不当可能导致交易信号效果不佳。  
-
-对应解决方案:
-
-1. 可以适当放宽综合判断规则,允许个别时间框架价格出现反转,抓住更多机会;
-2. 需要根据不同市场调整MACD指标参数,使交易信号更契合当前行情。
-
-## 优化方向  
-
-本策略可以从以下几个方面继续优化:
-
-1. 增加或减少需要综合判断的时间框架数量,寻找最佳组合;
-2. 测试不同的MACD指标参数设置;  
-3. 根据实际回测情况调整具体的入场和出场规则。
-
-## 总结
-
-多时间框架MACD策略利用MACD指标的趋势判断功能,实现了跨时间框架进行价格走势检测,可有效过滤噪音,提高信号质量。该策略可以通过参数调整和规则优化,灵活适应不同品种和行情环境,具有很强的实用性。
-
-|| 
 
 ## Overview  
 
@@ -104,7 +56,6 @@ This strategy can be further optimized in the following aspects:
 
 The Multi Timeframe MACD Strategy utilizes the trend judgment capability of the MACD indicator to detect price movements across time frames, which can effectively filter out noise and improve signal quality. This strategy can be flexibly adapted to different products and market environments through parameter tuning and rule optimization, and has strong practicality.  
 
-[/trans]
 
 > Strategy Arguments
 

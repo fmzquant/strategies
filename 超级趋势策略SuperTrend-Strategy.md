@@ -9,91 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-超级趋势策略是一种基于平均真实波幅计算的趋势跟踪策略。它利用平均真实波幅来设置止损线,通过判断价格是否突破止损线来判断趋势方向,以此产生交易信号。
-
-## 策略原理
-
-该策略首先计算一定周期内的平均真实波幅ATR。然后根据ATR值乘以一个缩放系数来计算长线止损线和短线止损线。具体计算方法如下:
-
-```
-atr = mult * atr(length) 
-
-longStop = hl2 - atr
-
-shortStop = hl2 + atr
-```
-
-其中length为计算ATR的周期长度,mult为ATR的缩放系数。 
-
-计算出止损线后,策略持续判断价格是否突破上一根K线的止损线,以判定趋势方向:
-
-```
-dir := dir == -1 and close > shortStopPrev ? 1 : 
-         dir == 1 and close < longStopPrev ? -1 : dir
-```
-
-当突破长线止损线时,认为趋势转多,当突破短线止损线时,认为趋势转空。
-
-根据趋势方向变化情况,产生买入和卖出信号:
-
-```
-buySignal = dir == 1 and dir[1] == -1 
-
-sellSignal = dir == -1 and dir[1] == 1
-```
-
-最后,在买入和卖出信号出现时,进行相应的交易操作。
-
-## 策略优势
-
-1. 使用平均真实波幅计算止损线,可以有效滤除市场噪音,捕捉较为可靠的趋势信号。
-
-2. 策略参数较少,容易理解和操作。ATR周期和倍数系数可以进行调整,适应不同市场环境。
-
-3. 采用突破止损线判断趋势方向变化,可以有效控制风险,及时止损。
-
-4. 可配置做多或双向交易,可满足不同交易风格。
-
-5. 可以在任何时间周期内使用,适用于多种交易品种。
-
-## 策略风险
-
-1. 在震荡行情中,ATR值可能被拉高,导致止损线过宽,产生更多虚假信号。
-
-2. 无法确定最佳的参数组合,ATR周期和倍数需要根据市场情况进行优化。
-
-3. 无法确定交易品种的最佳交易周期,需要针对每种交易品种进行测试。
-
-4. 无法确定最佳的入场时机,存在一定的滞后。
-
-5. 存在一定的空仓风险,在趋势较弱时可能处于空仓状态。
-
-6. 存在止损被突破的风险,应适当宽松止损线。
-
-## 策略优化方向
-
-1. 可以考虑结合其他指标进行过滤,避免在震荡行情中产生错误信号。例如MACD、RSI等。
-
-2. 可以采用机器学习或遗传算法来寻找最佳的参数组合。
-
-3. 可以针对不同品种进行参数优化,确定最佳的ATR周期和倍数系数。
-
-4. 可以结合量能指标判断入场时机,例如成交量,避免过早入场。
-
-5. 可以考虑采用锁仓策略,在空仓时仍能持有头寸。
-
-6. 可以适当放宽止损范围,并结合趋势力度指标优化止损位置。
-
-## 总结
-
-超级趋势策略通过平均真实波幅计算动态止损线,判断价格突破来发现趋势变化,属于一种较为可靠和风险可控的趋势跟踪策略。该策略简单易用,适用于多种交易品种,但需要针对参数和策略规则进行优化,才能在不同市场中获得较好的效果。与其他技术指标和策略组合使用可以获得更好的交易表现。总体来说,超级趋势策略基于较为科学的概念,值得交易者进一步研究和应用。
-
-|| 
 
 
 ## Overview
@@ -177,7 +92,6 @@ Finally, corresponding trading actions are taken when buy or sell signals appear
 
 The SuperTrend strategy uses dynamic stop loss lines calculated from ATR to detect trend changes when price breakout occurs. It is a relatively reliable and risk-controlled trend following system. The strategy is simple to use and applicable to various instruments, but parameters and rules need optimization for better performance across different markets. Combining with other technical indicators and strategies can further improve trading results. In general, SuperTrend is based on scientifically sound concepts and is worth further research and application by traders.
 
-[/trans]
 
 > Strategy Arguments
 

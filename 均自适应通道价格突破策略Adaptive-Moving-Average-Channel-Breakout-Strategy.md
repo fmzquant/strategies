@@ -10,81 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c4fe3c03d4677bdc9e.png)
-[trans]
-
-## 概述[Overview]
-
-均自适应通道价格突破策略是基于均自适应移动平均线(AMA)和自适应通道范围来进行买卖信号判断的长线突破策略。该策略利用AMA计算当前价格的趋势方向,并结合动态调整的通道范围来发现价格突破信号,从而进行适时买入和卖出。
-
-## 策略原理[Strategy Principle]  
-
-该策略的核心指标是均自适应移动平均线(AMA),用于捕捉价格趋势。AMA的计算公式为:
-
-AMA(t) = α(t-1) * P(t) + [1 - α(t-1)] * AMA(t-1)
-
-其中,P(t)为当期价格,α(t)为平滑常数,其值范围在0到1之间。α(t)由一定规则动态调整,用以控制AMA对价格变化的敏感程度。具体来说,α(t)的值与AMA和价格的偏差幅度SNRT成正比,SNRT计算公式如下:
-
-SNRT = (P(t) - AMA(t-1)) / AMA(t-1)
-
-这样,当价格波动加大时,α(t)将增大,使得AMA更敏感地跟随价格;当价格波动减小时,α(t)将减小,使得AMA有更高的平滑性。
-
-基于AMA,策略再建立自适应通道范围,用于发现价格突破信号。通道范围的上下轨分别为:
-
-上轨:H(t) = (1 + β*H(t-1)) * AMA(t)  
-
-下轨:L(t) = (1 - β*L(t-1)) * AMA(t)  
-
-其中β为可调参数,控制通道宽度。最后,策略通过观察价格是否突破上下轨来产生交易信号:
-
-- 当价格上穿上轨时,做多;
-
-- 当价格下穿下轨时,做空;
-
-- 否则为空仓。
-
-## 优势分析[Advantage Analysis]
-
-该策略具有以下优势:
-
-1. 使用AMA而不是普通移动平均线,可以更灵活地捕捉价格趋势,尤其适用于波动较大的市场。
-
-2. 自适应通道范围可以动态调整,在行情不确定时扩大通道宽度,在明确趋势时收窄通道追踪价格。
-
-3. 采用价格突破交易信号,可以在趋势开始阶段及时捕捉,具有较高的胜率。
-
-4. 策略逻辑简单明确,容易理解和实现,适合量化交易。
-
-## 风险分析[Risk Analysis]  
-
-该策略也存在以下风险:
-
-1. AMA参数设定不当可能导致错失价格趋势或者产生假信号。
-
-2. 自适应通道参数如β需要谨慎设定,否则会出现过多频繁交易或者漏掉趋势。 
-
-3. 价格突破信号容易被假突破欺骗,应该结合更多指标进行过滤。
-
-4. 策略本身未考虑资金管理和止损机制,存在一定亏损风险。
-
-## 优化方向[Optimization Directions]
-
-该策略可以从以下方面进行优化:
-
-1. 优化AMA的α值计算方式,使其对价格变化更敏感。
-
-2. 增加通道突破后的进一步确认,避免假突破产生错误信号。
-
-3. 结合交易量或波动性指标进行过滤,确保突破的有效性。 
-
-4. 增加跟踪止损机制,以锁定利润和控制风险。
-
-5. 优化资金管理,确定不同资产合理的仓位管理。
-
-## 总结[Conclusion]  
-
-均自适应通道价格突破策略整体来说是一个简单实用的趋势跟踪突破策略。它通过灵活应用均自适应移动平均线来跟踪价格趋势,并辅以自适应通道发现突破信号。该策略具有一定的优势,但也存在可能的风险。通过对参数优化、增加过滤条件、改进止损机制等方式,可以使策略更稳健可靠。总体来说,该策略为量化交易提供了一个不错的基础模型。
-
-||
 
 
 ## Overview
@@ -159,7 +84,6 @@ The strategy can be optimized by:
 
 In summary, the Adaptive Moving Average Channel Breakout Strategy is a simple and practical trend-following breakout strategy. It uses the flexible AMA to track price trends and an adaptive channel to detect breakout signals. The strategy has some advantages but also potential risks. With optimizations like parameter tuning, adding filters, and improving stops, it can become more robust. Overall, it provides a solid baseline model for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

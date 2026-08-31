@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/da6a9e363c71691548.png)
 
-[trans]
-
-## 概述
-
-双趋势震荡策略是一种结合趋势和震荡的量化交易策略。它利用两个指标的组合来识别趋势的方向和力度,并在趋势震荡的时候寻找较好的入场时机。
-
-## 策略原理
-
-该策略主要利用了两个公开指标:Trend Surfers和Mawreez's Trend Oscillator。
-
-Trend Surfers是一个趋势跟踪止损指标。它通过计算一定周期内的最高价和最低价,来判断价格走势并给出建议的止损位置。比如,当价格突破最近168根K线的最高价时,就是看涨信号;当价格跌破最近168根K线的最低价时,就是看跌信号。
-
-Mawreez's Trend Oscillator则是一个双线震荡指标。它类似MACD,通过DI的差值来判断趋势的方向和力度。该指标曲线在0轴以上为看涨,以下为看跌。
-
-该策略的交易规则是:
-
-多头入场:Trend Surfers突破最高线和Mawreez's Trend Oscillator指标为看涨时买入
-空头入场:Trend Surfers跌破最低线和Mawreez's Trend Oscillator指标为看跌时卖出
-
-止损方式为趋势跟踪止损加固定止损。
-
-## 优势分析
-
-该策略结合了趋势和震荡指标,既可以捕捉趋势,也可以在震荡中寻找较好价格入场,具有以下优势:
-
-1. 双重指标过滤,可以有效避免假突破
-2. 结合趋势和震荡,容易抓住价格在震荡区间中的低位吸筹布局或高位轻装上阵
-3. 采用多重止损方式,可以很好控制风险
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 双重指标组合,容易漏单
-2. 趋势指标和震荡指标可能会发出冲突信号
-3. 固定止损可能会过早止损
-
-针对这些风险,可以采取以下措施加以规避:
-
-1. 适当宽松指标参数,降低滤波率
-2. 增加趋势判断规则,避免指标冲突
-3. 动态调整止损位置
-
-## 优化方向 
-
-该策略还有进一步优化的空间:
-
-1. 测试不同参数组合和周期参数,寻找最佳参数
-2. 增加波动率、交易量等辅助判断规则
-3. 采用机器学习技术动态优化指标和参数
-
-## 总结
-
-双趋势震荡策略综合运用趋势跟踪和震荡指标的优点,既可以识别趋势方向,又可以把握震荡机会,通过参数和规则优化,可以将策略盈利能力进一步提升。该策略有良好的发展前景。
-
-|| 
 
 ## Overview
 
@@ -120,7 +64,6 @@ There is room for further optimization of this strategy:
 ## Summary  
 
 The Trend and Oscillation Double Strategy integrates the advantages of trend tracking and oscillation indicators. It can identify trend directions and seize oscillation opportunities. With parameter and rule optimization, the profitability of this strategy can be further enhanced. This strategy has good prospects for development.
-[/trans]
 
 > Strategy Arguments
 

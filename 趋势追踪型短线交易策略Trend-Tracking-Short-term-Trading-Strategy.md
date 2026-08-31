@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1607418858f17f61dc4.png)
-[trans]
-
-## 概述
-本策略基于趋势判断指标ADX平均趋向指数以及均线组合,实现对趋势的判断和跟踪。当判断出现趋势反转时,采用突破操作,进行短线交易。
-
-## 策略原理
-1. 使用ADX平均趋向指数判断趋势走向。当ADX大于20时,表示目前处于趋势状况。
-2. EMA作为趋势判断指标,EMA金叉表示上涨趋势,死叉表示下跌趋势。
-3. VWAP作为重要参考价位,价格在VWAP上方时为多头市场,下方为空头市场。
-4. 根据上述多个指标综合判断市场趋势和反转情况,进行突破操作,追踪趋势进行短线交易。
-
-## 优势分析 
-1. 综合多个指标判断趋势走向,对大趋势判断准确。
-2. VWAP作为重要参考价位,避免在无效区域交易。 
-3. ADX判断趋势存在时再进行操作,减少无效交易。
-4. 突破操作成功率较高,符合趋势运行。
-
-## 风险分析
-1. 突破失败导致止损的概率存在。可以通过优化止损位置来降低风险。
-2. 交易次数较多,单笔交易可能出现亏损。可以适当调整仓位数,降低单笔亏损比例。
-3. 对交易时间和交易品种的选择也会影响策略表现。可以测试不同的交易时间和不同的交易品种。
-
-## 优化方向
-1. 优化ADX参数,找到更好区分趋势和盘整的ADX值。
-2. 优化均线参数组合,找到代表趋势更好的均线组合。  
-3. 优化止损位置。适当放宽止损范围,避免止损成本过高。
-4. 优化仓位大小。降低单笔交易风险。
-
-## 总结
-本策略综合运用均线指标、趋势判断指标和重要参考价位,对大趋势做精准判断;并在判断到趋势反转时,采用突破操作追踪趋势运行,实现短线交易。通过参数优化,可以进一步提高策略表现。
-
-|| 
 
 
 ## Overview
@@ -72,7 +40,6 @@ This strategy uses the trend judging indicator ADX and moving averages to determ
 
 ## Conclusion
 This strategy comprehensively utilizes moving averages, trend indicators and key price levels to accurately determine market trends. It identifies trend reversals to trade breakouts and track the new trend direction for short-term profits. Further optimization can improve performance.
-[/trans]
 
 > Strategy Arguments
 

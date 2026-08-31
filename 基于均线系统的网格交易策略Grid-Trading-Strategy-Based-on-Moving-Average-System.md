@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19fe61e0678d9f69c91.png)
-[trans]
-
-### 概述
-
-本策略运用均线理论构建网格交易系统,通过多组不同参数的JMA均线组合判断市场趋势,并在趋势转折点开启网格交易,旨在获取市场中长线趋势转换的利润。
-
-### 策略原理
-
-1. 利用1-20周期不等的JMA均线组成均线组合,判断市场趋势。当短周期均线高于长周期均线时判断为上升趋势,反之,下降趋势。
-
-2. 在趋势转折点,即短均线从上穿下长均线或从下穿上长均线时,开启网格交易。在上升趋势中逐步建立空单;在下降趋势中逐步建立多单。
-
-3. 可选择是否按K线实体颜色过滤,若启用,只在红K线买入,绿K线卖出,否则不考虑K线颜色,只在趋势转折时交易。
-
-4. 止损方式为跟踪止损或到期止损。到期止损指策略运行周期结束时,平仓所有头寸。
-
-### 优势分析
-
-1. 利用均线系统判断趋势,可有效判断市场中长线走势转折点。
-
-2. 网格交易可在无明确趋势时获取震荡市场利润。同时可配置止损以控制风险。
-
-3. JMA均线参数可自定义,可针对不同周期优化,灵活度高。
-
-4. 可选择是否按K线实体颜色过滤,避免被假突破误导。
-
-### 风险分析
-
-1. 大幅震荡且无明显趋势市场中,止损风险较大。
-
-2. 均线系统判断误差 may lead to 交易信号错误。
-
-3. 若启用K线过滤,有 may miss 一些trading opportunities 的风险。
-
-4. 若网格间距设置过大,则无法获取足够利润;若太小,则头寸过多,费用压力大。
-
-### 优化方向
-
-1. 可以测试更多组合的参数,找到对不同品种更契合的JMA均线组合。
-
-2. 可以结合别的指标进行Filter,如BOLL通道,KD等,提高信号质量。
-
-3. 可以优化网格交易的配置,如网格间距,建仓数量等参数。
-
-4. 可以考虑更多类型的止损方式,如跳空止损,追踪止损等。
-
-### 总结
-
-本策略以JMA均线理论判断趋势转折,在转折点开启网格交易。可获取市场中长线行情转换的利润。可通过参数优化获得更好的策略表现。总体来说,该策略适合中长期持有,逐步跟踪趋势行情获利。
-
-||
 
 ### Overview  
 
@@ -110,7 +59,6 @@ This strategy uses moving average theory to build a grid trading system by judgi
 
 This strategy judges reversals using JMA theory and opens grid trades at turning points to capture profits from long-term trend shifts. Performance can be further improved through parameter optimization. Overall it is suitable for medium-long term holdings to gradually track and profit from trending moves.
 
-[/trans]
 
 > Strategy Arguments
 

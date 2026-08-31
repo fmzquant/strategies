@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/621737919855699c23.png)
-[trans]
-#### 概述
-该策略是一个基于EMA和SMA两条移动平均线的交叉策略。当较慢的EMA从下向上穿过较快的SMA时,产生买入信号;当较慢的EMA从上向下穿过较快的SMA时,产生卖出信号。该策略旨在捕捉牛市中的上涨趋势,同时提供一定的支撑。
-
-#### 策略原理
-该策略使用两条移动平均线:20周期的SMA和21周期的EMA。当EMA从下向上穿过SMA时,表明市场可能正在转向上涨趋势,因此产生买入信号。反之,当EMA从上向下穿过SMA时,表明市场可能正在转向下跌趋势,因此产生卖出信号。为了确认信号,该策略还要求当前收盘价高于前一个收盘价(买入信号)或低于前一个收盘价(卖出信号)。
-
-#### 优势分析
-1. 简单易懂:该策略基于两条常用的移动平均线,原理简单,易于理解和实现。
-2. 趋势跟踪:通过移动平均线的交叉,该策略能够较好地捕捉市场的趋势变化,特别是在牛市中的上涨趋势。
-3. 支撑作用:较慢的EMA可以作为一定的支撑位,在价格回撤时提供支撑。
-
-#### 风险分析
-1. 假信号:在市场波动较大或震荡行情中,该策略可能产生较多的假信号,导致频繁交易和高昂的交易成本。
-2. 滞后性:移动平均线具有一定的滞后性,可能导致错过最佳的入场和出场时机。
-3. 趋势识别:该策略对于趋势的识别能力有限,在市场转折点或趋势不明确时,可能表现不佳。
-
-#### 优化方向
-1. 结合其他指标:可以考虑结合其他技术指标,如RSI、MACD等,以提高信号的可靠性和准确性。
-2. 优化参数:可以通过优化移动平均线的周期参数,以适应不同的市场状况和交易品种。
-3. 加入止损和止盈:为了控制风险和保护利润,可以在策略中加入合适的止损和止盈机制。
-
-#### 总结
-均线交叉牛市支撑带策略是一个简单易懂的趋势跟踪策略,特别适用于牛市行情。然而,该策略也存在一定的局限性,如假信号、滞后性和趋势识别能力有限等。通过结合其他指标、优化参数和加入止损止盈等方法,可以进一步提高该策略的表现和稳健性。
-
-|| 
 
 #### Overview
 This strategy is a crossover strategy based on two moving averages, EMA and SMA. When the slower EMA crosses above the faster SMA, it generates a buy signal; when the slower EMA crosses below the faster SMA, it generates a sell signal. The strategy aims to capture upward trends in bull markets while providing some support.
@@ -60,7 +34,6 @@ The strategy uses two moving averages: a 20-period SMA and a 21-period EMA. When
 
 #### Summary
 The EMA-SMA Crossover Bull Market Support Band Strategy is a simple and easy-to-understand trend-following strategy that is particularly suitable for bull markets. However, the strategy also has certain limitations, such as false signals, lag, and limited trend recognition ability. By combining with other indicators, optimizing parameters, and adding stop-loss and take-profit, the performance and robustness of the strategy can be further improved.
-[/trans]
 
 
 

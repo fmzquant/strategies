@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bc3fa8edb4c69a5e55.png)
 
-[trans]
-
-## 概述
-
-动量指标决策交易策略是一种趋势跟踪策略。它使用双指数移动平均线构建动量指标,然后结合价格的变化率指标来产生交易信号。当动量指标上涨时,产生做多信号;当动量指标下跌时,产生做空信号。该策略适用于追踪市场中期趋势的交易者。
-
-## 策略原理  
-
-该策略使用双指数移动平均线指标Decision Point oscillator来测量动量。首先计算价格的每日变化率,然后使用长度为31天和20天的双指数移动平均线分别平滑价格变化率,最后用9天的平滑移动平均线来发出交易信号。当快线高于慢线时为多头市场,当快线低于慢线时为空头市场。  
-
-该策略还引入价格变化率指标,以避免在盘整市场中产生错误信号。具体来说,是计算近30天价格的百分比变化率,通过其移动平均线来判断市场是否处于活跃状态。只有在市场活跃时,才会发出交易信号。
-
-## 优势分析
-
-该策略结合动量指标和价格变化率指标,可以有效识别中期趋势,避免在震荡行情中频繁交易。相比简单跟踪移动平均线等趋势策略,它可以大幅度降低错误交易的概率。此外,风险控制方面设置了止损点,可以及时止损,有效控制单笔损失。
-
-## 风险分析  
-
-该策略主要 BASE在中长线趋势交易,无法捕捉短期价格波动。当出现剧烈行情时,止损点可能会被突破,导致较大亏损。此外,参数设置不当也会对策略产生影响。例如双指数移动平均线参数设置过短,会增加错误交易的概率。
-
-要防范风险,可以适当调整止损点,扩大止损幅度。也可以在剧烈行情来临时,暂时关闭策略,避免止损被突破的概率。参数调整方面,应该进行详细的回测,选择最优参数。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加其他过滤指标,如波动率指标,可以避免行情剧烈波动期间的交易。
-
-2. 增加机器学习模型,辅助判断趋势方向和力度,可以提高信号的准确性。
-
-3. 尝试不同的动量指标,如相对强弱指标、Stochastic oscillator等,优化买卖时机。
-
-4. 实盘运行过程中,结合最近期行情特点,动态调整参数,追求最优参数组合。
-
-## 总结
-
-动量指标决策交易策略整体来说是一种稳健的中长期趋势跟踪策略。它结合双指数移动平均线动量指标和价格变化率指标,可以有效识别趋势,避免错误交易。同时,设置止损点来控制风险。如果参数调整合理,回测效果良好,则适合中长线追求超额收益的投资者。当然,交易者仍需警惕行情剧烈波动给策略带来的冲击风险。
-
-||
 
 ## Overview
 
@@ -87,7 +48,6 @@ The strategy can be optimized in the following aspects:
 
 The Momentum Indicator Decision Trading Strategy is generally a steady mid-long term trend following strategy. It effectively identifies trends and avoids wrong trades by combining double exponential moving average momentum indicator and price rate of change indicator. Meanwhile, it controls risk by setting stop loss points. If parameters are tuned properly and backtest results are good, it suits mid-long term investors who pursue excess returns. Of course, traders still need to be aware of the risk brought by sharp market fluctuations to the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

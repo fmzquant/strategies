@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b40a5649698bbeb882.png)
-[trans]
-
-### 概述
-
-该策略运用移动平均线指标(MACD)构建多空信号,在趋势好的条件下进行反转交易,通过动态设置离场位获取收益。
-
-### 策略原理
-
-该策略主要基于MACD指标的金叉做多信号、死叉做空信号。具体来说,当MACD线从下向上穿过信号线时产生金叉做多信号;当MACD线从上向下穿过信号线时产生死叉做空信号。
-
-在金叉信号来时,如果收盘价高于EMA均线,则做多;在死叉信号来时,如果收盘价低于EMA均线,则做空。这样可以保证大趋势下进行反转交易。 
-
-入场后,策略利用止损位和止盈位进行动态止盈止损。具体来说,多单止损位设置为入场价*(1-最大跌幅);止盈位设置为入场价*(1+TARGET_STOP_RATIO*最大跌幅)。空单设置相反。其中最大跌幅动态计算,表示swing low到收盘价的百分比下跌空间;TARGET_STOP_RATIO默认为2,表示盈亏比为2。
-
-这样设置离场位的优点是,能够根据市场波动情况来动态调整盈亏比和止损位。在大幅波动中离场快速止损,在小幅波动中追踪止盈。
-
-### 策略优势
-
-1. 利用MACD指标构建多空信号,可以有效判断价格反转时机。
-
-2. 结合EMA均线做过滤器,进场时选择趋势向上状态,避免逆势交易。 
-
-3. 动态离场控制系统,能够实时调整盈亏比、止损点,追求高盈利同时控制风险。
-
-4. 由于考量市场波动,离场速度快,可以减少盯市时间,较为适合忙碌投资者使用。
-
-
-### 策略风险及解决
-
-1. MACD指标在横盘整理的市场中会频繁造成虚假信号。解决方法是加入均线作为过滤器,避免逆势交易。
-
-2. 极端大幅波动的市场中,DYNAMIC STOP会造成过于宽松的止损,但在大部分场景中表现较好。如果遇到极端行情,可以考虑固定盈亏比。
-
-3. 盈利空间有限,需要频繁交易追求利润。这需要投资者有一定的心理承受能力和时间投入。如果无暇操作,可以考虑调整到高周期。
-
-
-### 优化方向
-
-1. 根据具体品种特点,调整MACD参数,优化金叉死叉交易效果。
-
-2. 测试不同的移动平均线作为趋势判断指标,寻找更佳的过滤器。
-
-3. 对TARGET_STOP_RATIO、最大跌幅计算方法进行测试,优化止盈止损策略。
-
-4. 增加其他条件判断,如交易量变化、波动率等,提高信号质量。
-
-5. 尝试机器学习算法提炼更多特征,建立动态多因子模型,实现更智能的止盈止损。
-
-
-### 总结
-
-该策略整体具有较强的实用性。以MACD为核心交易信号,增加趋势判断和动态离场控制两个辅助模块,可以显著提高MACD本身的交易效果。止盈止损策略是策略优化的重点方向,本策略在这方面进行了大量创新,值得进一步研究与应用。
-
-
-||
 
 ### Overview
 
@@ -113,7 +58,6 @@ The advantage of this dynamic stop strategy is that it can adjust stop loss and 
 ### Conclusion
 This strategy has strong practical value overall. With MACD as core trading signal, the add-on modules of trend filter and dynamic exit control can significantly improve MACD performance itself. Exit control is essential for strategy optimization and this strategy innovates substantially in this area. Well worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

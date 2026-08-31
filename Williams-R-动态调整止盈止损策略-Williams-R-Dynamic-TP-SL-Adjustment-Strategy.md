@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/693ea875fea3e9b203.png)
-[trans]
-#### 概述
-该策略基于 Williams %R 指标,通过动态调整止盈止损水平来优化交易表现。当 Williams %R 穿越超卖区(-80)时产生买入信号,穿越超买区(-20)时产生卖出信号。同时使用指数移动平均线(EMA)平滑 Williams %R 数值以减少噪音。该策略提供了灵活的参数设置,包括指标周期、止盈止损(TP/SL)水平、交易时间和交易方向的选择,以适应不同的市场环境和交易者偏好。
-
-#### 策略原理 
-1. 计算给定周期的 Williams %R 指标值。
-2. 计算 Williams %R 的指数移动平均线(EMA)。
-3. 当 Williams %R 从下向上穿越-80水平时,触发买入信号;从上向下穿越-20水平时,触发卖出信号。
-4. 买入后,设置止盈和止损水平,直到达到止盈/止损价位或 Williams %R 触发反向信号才平仓。
-5. 卖出后,设置止盈和止损水平,直到达到止盈/止损价位或 Williams %R 触发反向信号才平仓。
-6. 可选择在指定时间范围内交易(如9:00-11:00)以及是否在整点附近(前X分钟至后Y分钟)进行交易。
-7. 可选择交易方向为仅做多、仅做空或双向交易。
-
-#### 优势分析
-1. 动态止盈止损:根据用户设置动态调整止盈止损水平,可以更好地保护利润和控制风险。
-2. 灵活参数:用户可以根据自己的偏好设置各种参数,如指标周期、止盈止损水平、交易时间等,以适应不同的市场状况。
-3. 平滑指标:引入EMA平滑Williams %R 数值,可以有效降低指标噪音,提高信号可靠性。
-4. 限制交易时间:可选择在特定时间范围内交易,避开市场波动大的时段,降低风险。
-5. 自定义交易方向:可根据市场趋势和个人判断,选择仅做多、仅做空或双向交易。
-
-#### 风险分析
-1. 参数设置不当:如果止盈止损设置过于宽松或过于严格,可能导致利润损失或频繁止损。
-2. 趋势识别错误:Williams %R 指标在震荡市中表现欠佳,可能产生错误信号。
-3. 时间限制效果有限:限制交易时间可能使策略错过一些好的交易机会。
-4. 过度优化:过度优化参数可能导致策略在未来实际交易中表现不佳。
-
-#### 优化方向
-1. 结合其他指标:如趋势指标、波动率指标等,提高信号确认的准确性。
-2. 动态参数优化:根据市场状况实时调整参数,如在趋势市和震荡市使用不同的参数设置。
-3. 改进止盈止损方法:如采用追踪止损、部分止盈等方法,以更好地保护利润和控制风险。
-4. 加入资金管理:根据账户余额和风险偏好,动态调整每笔交易的仓位大小。
-
-#### 总结
-Williams %R 动态调整止盈止损策略通过简单而有效的方式捕捉价格的超买超卖状态,同时提供灵活的参数设置以适应不同的市场环境和交易风格。该策略动态调整止盈止损水平,可更好地控制风险和保护利润。但在实际应用中仍需注意参数设置、信号确认、交易时间选择等因素,以进一步提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy is based on the Williams %R indicator and optimizes trading performance by dynamically adjusting take profit and stop loss levels. Buy signals are generated when the Williams %R crosses above the oversold area (-80), and sell signals are generated when it crosses below the overbought area (-20). An Exponential Moving Average (EMA) is used to smooth the Williams %R values and reduce noise. The strategy offers flexible parameter settings, including indicator periods, take profit/stop loss (TP/SL) levels, trading hours, and trade direction choices, to adapt to different market conditions and trader preferences.
@@ -80,7 +44,6 @@ This strategy is based on the Williams %R indicator and optimizes trading perfor
 
 #### Summary
 The Williams %R Dynamic TP/SL Adjustment Strategy captures overbought and oversold price conditions in a simple and effective way while providing flexible parameter settings to adapt to different market environments and trading styles. The strategy dynamically adjusts take profit and stop loss levels, which can better control risks and protect profits. However, when applying the strategy in practice, attention should still be paid to factors such as parameter settings, signal confirmation, and trading time selection to further improve the robustness and profitability of the strategy.
-[/trans]
 
 
 

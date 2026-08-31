@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6314600bfe7988c227.png)
 
-[trans]
-
-### 概述
-
-该策略融合了4小时时间周期和日线时间周期上的突破信号,在发出交易信号前会校验K线形态,从而实现更可靠的突破交易策略。
-
-### 策略原理
-
-双重确认突破策略通过组合使用短周期和长周期的突破信号,在考虑长短周期趋势一致性的前提下,识别更有效的突破点。具体来说,该策略在4小时和日线时间周期上分别计算平均线,当短周期的平均线突破长周期的平均线时产生买入信号,相反的突破产生卖出信号。此外,该策略还会在交易信号发出前,对当前K线的形态进行校验,避免在apsing的K线上打开仓位。
-
-通过上述双重确认和K线过滤的机制,可以有效避免多头止损或空头被套的风险,提高交易信号的质量。
-
-### 优势分析
-
-1. 双时间周期突破,可提高信号质量。4小时和日线的结合,使信号同时兼具追踪短期趋势和参考长期趋势的优点。
-
-2. K线形态校验,可避免错信号。在发出信号前校验形态,可过滤一些假突破或者异动突破,避免亏损。
-
-3. 自动优化,灵活方便。该策略的突破参数和周期参数可自定义设置,用户可以根据不同交易品种和市场选择最佳参数组合。
-
-### 风险分析
-
-1. 双突破策略对暴涨暴跌的行情追随能力较弱。当短周期和长周期同时出现剧烈行情时,该策略有可能错过最优点位。  
-
-2. K线形态验证机制可能会错过部分机会。极端行情下K线常常出现扭曲,校验机制会使策略保守,错过一定机会。
-
-3. 参数不当也会产生错误信号。用户需要根据具体品种选择合适的双突破参数和K线参数,不恰当的参数会使策略效果大打折扣。
-
-针对上述风险,可通过调整参数组合、设置止损止盈条件等方法进行改进和优化。
-
-### 优化方向 
-
-1. 结合波动率指标对突破进行二次验证。例如在 Bollinger Bands 挤压时发出的突破信号,质量会更高。
-
-2. 增加止损止盈模块。适当的止盈止损设置可以锁定利润并主动规避风险。
-
-3. 优化双突破参数。参数可参考品种的日内波动率、日线波动率等特征进行调整。
-
-4. 优化 K 线校验参数。不同周期和参数组合的 K 线校验,可以获得更稳定的结果。
-
-### 总结
-
-双重确认突破策略通过融合双时间周期和K线形态验证的机制,实现了资金效率和信号质量的有效平衡,是一个值得推荐的短线突破策略。使用者可根据自身需要,调整相关参数以获得更好的效果。
-
-|| 
 
 ### Overview
 
@@ -99,7 +54,6 @@ To address these risks, methods like parameter tuning, stop loss/profit setting 
 
 The dual confirmation breakout strategy strikes an efficient balance between capital efficiency and signal quality by combining dual timeframes and K line verification mechanisms, making it a recommended short-term breakout strategy. Users can adjust relevant parameters according to their own needs for better results.  
 
-[/trans]
 
 > Strategy Arguments
 

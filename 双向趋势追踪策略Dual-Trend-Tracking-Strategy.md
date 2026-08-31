@@ -9,59 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于Aroon 指标实现双向趋势的识别和追踪。Aroon指标能够有效判断市场趋势的方向,结合RSI指标实现对超买超卖区域的判断,形成较为完整的追踪策略。
-
-## 策略原理
-
-1. 使用Aroon指标判断价格趋势方向。指标超过0线为上涨趋势,低于0线为下跌趋势。
-
-2. 当Aroon指标从下方突破0线时,进行买入操作。
-
-3. 如果已建仓,并且收盘价低于买入价格,同时RSI低于30,视为超卖,进行加仓。
-
-4. 当Aroon指标从上方跌破0线时,进行全部卖出。
-
-5. 设置5%的止损点,如果亏损超过该点,进行止损卖出。
-
-## 优势分析
-
-1. 使用Aroon指标判断趋势方向能够有效捕捉市场轮动点位。
-
-2. RSI指标辅助判断超买超卖区域,避免在市场转折点追高杀跌。
-
-3. 双向交易,能够在上涨和下跌两种市场环境中均能获利。
-
-4. 设定止损点有助于控制风险。
-
-## 风险分析
-
-1. Aroon指标存在滞后,可能错过短期和突发性反转。
-
-2. 不能有效处理盘整市场,会产生较多不必要交易。
-
-3. 双向交易增加交易频率和手续费成本。
-
-4. 需要适当调整参数才能适应不同周期和品种。
-
-## 优化方向
-
-1. 结合其他指标过滤信号,降低因滞后产生错误交易的概率。
-
-2. 增加定量研究,优化参数组合以匹配不同品种。
-
-3. 增加止盈策略,提高盈利因子。
-
-4. 考虑仅在趋势明确时交易,减少无效交易。
-
-## 总结
-
-该策略整合Aroon和RSI两个指标,形成较为完整的双向趋势交易策略。但仍需进一步优化参数设定,结合其他过滤指标以减少错误交易概率。在参数优化和风险控制到位后,该策略有望获取较为稳定的超额收益。
-
-|| 
 
 ## Overview
 
@@ -113,7 +60,6 @@ This strategy is based on the Aroon indicator to identify and track trends in bo
 
 This strategy integrates the Aroon and RSI indicators to form a relatively complete dual-directional trend trading system. But further optimization of parameters and combining with other filtering indicators are still needed to reduce errors. With proper parameter tuning and risk control, this strategy has the potential to achieve relatively steady excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

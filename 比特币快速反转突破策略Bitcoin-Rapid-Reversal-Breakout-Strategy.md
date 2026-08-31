@@ -9,89 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略适用于高波动的数字货币如比特币。它利用Parabolic SAR指标判断价格反转点,结合SMA均线过滤假突破,在突破发生时快速做出交易决策,实现盈利。该策略适合短线交易,可以捕捉市场中的快速调整机会。
-
-### 策略原理
-
-该策略基于Parabolic SAR指标判断价格反转点。Parabolic SAR指标能 sensitively 识别市场的 Trend 变化,SAR点出现在价格曲线之上时为持续看涨信号,而 SAR 点下落到价格曲线之下时为持续看跌信号。
-
-具体来说,策略长仓条件为:
-
-1. 当前K线开盘价高于Parabolic SAR
-2. 前一K线开盘价低于Parabolic SAR
-3. 当前K线开盘价高于50周期SMA均线
-
-满足上述三个条件时,认为出现看涨反转信号,做多开仓。
-
-短仓条件为:
-
-1. 当前K线开盘价低于Parabolic SAR
-2. 前一K线开盘价高于Parabolic SAR
-3. 当前K线开盘价低于50周期SMA均线  
-
-满足上述三个条件时,认为出现看跌反转信号,做空开仓。
-
-此外,策略还设置了止盈止损条件,进行风险管理。
-
-### 策略优势
-
-相比传统突破策略,该策略具有以下优势:
-
-1. 利用Parabolic SAR指标判断反转时点更为敏感,可以提早捕捉转势。
-
-2. 结合SMA均线进行过滤,避免被小范围震荡的假突破欺骗。
-
-3. 反应迅速,一旦识别到反转信号,立即进入场内,捕捉早期趋势。
-
-4. 适合如比特币等高波动数字货币,可以捕捉快速调整提供的交易机会。
-
-5. 设置了止盈止损策略,可以控制单笔亏损风险。
-
-6. 回测效果良好,可以获得较高胜率。
-
-### 策略风险
-
-尽管该策略有一定优势,但也存在以下风险:
-
-1. Parabolic SAR并非完美指标,也会出现误判的情况。
-
-2. 磁盘图形、小型三角形等组合格局时,可能出现失效的情况。
-
-3. 没有考虑交易量的效果,存在被套牢的风险。
-
-4. Params设置不当也会导致过于灵敏或过于迟钝。
-
-5. 停损位置设置过小,可能会被追穿Stop loss。
-
-6. 回撤风险仍然存在,适合采取仓位管理。
-
-### 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 结合更多指标判断,如交易量,布林带等,提高信号的可靠性。
-
-2. 加入趋势线等图形判断,避免被反向震荡套牢。
-
-3. 优化参数设置,在不同市场周期采用不同参数组合。
-
-4. 采用时间止损,避免止损过小被追穿的风险。
-
-5. 增加仓位管理策略,在回撤时降低仓位。
-
-6. 结合高级策略,如马丁格尔,设置动态止盈止损距离。
-
-7. 根据市场波动率设定止盈止损幅度。
-
-### 总结
-
-该策略利用Parabolic SAR指标判断价格反转,快速做出交易决策,可谓短线突破策略中的“急先锋”。它反应迅速,适合捕捉短线调整机会。但也存在一定局限性,需要配合优化以减少不必要的套牢风险。如果利用得当,它可以成为数字货币交易中一个非常实用的策略选择。
-
-||
 
 
 ### Overview
@@ -174,7 +91,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy uses Parabolic SAR to determine price reversals and makes quick trading decisions, acting like a "vanguard" among short-term breakout strategies. It reacts swiftly to capture short-term adjustment opportunities. But there are also limitations, requiring optimizations to reduce unnecessary whipsaw risks. When utilized properly, it can become a very practical strategy choice for crypto trading.
 
-[/trans]
 
 
 

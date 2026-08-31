@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13db636103c1c63475f.png)
 
-[trans]
-
-### 概述
-
-该策略是一个基于K线中的熊转形态来判断市场反转信号的策略。当出现熊转形态时做空,目标获利后平仓。
-
-### 策略原理
-
-该策略的核心判断逻辑在于识别K线中是否出现了熊转形态。熊转形态是指一个向上涨升的K线后,紧接着一个收盘价格低于前一日收盘价格的阴线,并且该阴线的实体部分完全包裹住前一日的阳线实体。根据技术分析理论,这种形态通常预示着当前上涨趋势即将反转。
-
-因此,该策略的具体交易逻辑是:
-
-1. 监测到熊转形态出现时(前一日为阳线并且实体满足大小要求,当前为阴线并且实体完全包住前一日阳线实体),做空头入场
-2. 若亏损超过设定的止损点则止损退出仓位
-3. 若盈利超过设定的止盈点则止盈退出仓位
-
-通过这种方式,可以在 judged出现熊转信号时捕捉到价格反转机会。
-
-### 优势分析
-
-该策略最大的优势在于能较早地判断市场趋势反转,采用的是熊转形态这一比较有效的反转信号,成功率较高。且策略思路简单清晰易于理解,容易实施。
-
-另外,策略加入了止损止盈机制来控制风险和锁定利润,可以有效防止过度亏损的情况发生。
-
-### 风险分析
-
-该策略的主要风险在于熊转形态发出的反转信号不一定总是可靠的。虽然大多情况下是准确的,但也会出现误判的情况。这会导致在实际交易中无法完全避免亏损的发生。
-
-此外,设置固定的止损止盈点也具有一定的盲目性,不够灵活。可能会在行情剧烈波动时被套住导致损失或错过更大利润。
-
-### 优化方向
-
-该策略可以通过以下几个方面进行进一步优化:
-
-1. 增加对交易时段的选择。只在活跃交易的时段运作策略,可以减少误判概率
-2. 增加对突破力度的判断。结合交易量或者平均真实波幅来确定熊转信号的可靠性
-3. 采用动态止损止盈方式,并结合波动率指标来更加灵活地设置止损止盈点
-4. 增加整体市场趋势判断,避免在盘整时造成不必要的亏损
-
-### 总结
-
-该熊转魔法蜡烛反转策略通过识别熊转形态来判断市场反转时机。策略思路清晰易操作,成功率较高。但也存在一定误判风险。可以通过进一步优化来改善策略效果,降低风险。
-
-||
 
 ### Overview 
 
@@ -97,7 +53,6 @@ This strategy can be further optimized in the following aspects:
 
 This bearish engulfing reversal strategy captures market reversal timing by identifying the bearish engulfing pattern. The strategy logic is simple and easy to follow with relatively high success rate. But certain misjudgement risks still exist. Further optimizations can be done to improve strategy performance and reduce risks.
 
-[/trans]
 
 > Strategy Arguments
 

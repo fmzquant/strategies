@@ -10,78 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/212f0636fd4694a03fa.png)
-[trans]
-
-## 概述
-
-穿刺短线反转策略是一个基于短线形态的趋势交易策略。它利用短线形态作为信号,结合移动平均线判断趋势方向,实现高胜率的进入。同时,它使用了独特的追踪止损机制,可实现超高收益率。
-
-## 策略原理
-
-### 入场信号
-
-该策略入场信号为短线形态穿刺。具体来说,符合以下两个条件时产生信号:
-
-1. 形成特定短线形态:多头信号为阳线短线,空头信号为阴线短线
-2. 短线形态刺破移动平均线:阳线刺破向下趋势的移动平均线,或阴线刺破向上趋势的移动平均线
-
-这样的组合信号可过滤掉大部分噪音,从而提高入场 precision。
-
-### 趋势判断
-
-该策略使用三条不同周期的移动平均线来判断趋势。具体来说,快线、中线和慢线同向排列时定义为趋势,否则定义为盘整。
-
-多头入场时,要求快线 > 中线 > 慢线;空头入场时,要求快线 < 中线 < 慢线。
-
-### 止损机制 
-
-该策略使用了独特的追踪止损机制。开仓后,会根据用户设定的点数和偏移量来追踪最优止损点。这可锁定最大程度收益,同时控制风险。
-
-## 优势分析
-
-### 高效率入场
-
-短线穿刺信号可使策略只在高概率机会点开仓,避免过多噪音交易。同时结合趋势判断,可过滤大部分非主流方向操作。这保证了策略的高 precision。
-
-### 超强止盈
-
-独特的追踪止损机制是该策略最大亮点。它可在保证最大盈利的前提下,将每单止损精准控制在一个小范围,保证高胜率和超强盈利能力。
-
-模拟结果显示,使用此机制后,多种货币对实现超过1000%以上的总收益率,最大盈利单次超过100倍,收益飙升至前所未见的新高度。
-
-## 风险分析
-
-### 过优化风险  
-
-鉴于测试结果近乎“圣杯”,这很有可能是对市场的过度模拟从而产生的结果。实盘中止损机制可能无法如测试般精确生效,会面临一定回撤。
-
-此外,测试周期仅两年,市场结构变化也可能影响实盘表现。
-
-### 追踪止损风险
-
-追踪止损过于灵敏可能造成过多止损触发。此外,市场突发事件也可能导致止损无效。这都是使用追踪止损需要面临的风险。
-
-## 优化方向
-
-### 调整追踪止损参数
-
-追踪止损是整个策略收益爆发的关键。为使其既灵敏又可靠,可以尝试适当放宽追踪止损点数,使之不那么敏感。
-
-增加测试时间窗口也可检验参数稳健性。
-
-### 优化移动平均线周期
-
-当前移动平均线周期并非最优参数组合。可以通过优化测试,找到更佳参数,以产生更好效果。
-
-例如,增加快线和中线周期差距,或调整三线交叉方式等。
-
-## 总结
-
-穿刺短线反转策略通过高效率入场和超强止盈,取得了惊人的模拟测试指标。但是我们也要清醒认识到其中的过拟合风险,并做好风险控制准备。
-
-通过适当调整参数或优化,这套策略也许能够在实盘中取得可观收益,成为一个强大的趋势系统。它的独特追踪止损概念,也为我们提供了宝贵启示,有可能催生更多创新型策略。
-
-||
 
 ## Overview
 
@@ -151,7 +79,6 @@ For example, increasing the difference between fast and medium MA periods, or mo
 The Piercing Pin Bar Reversal Strategy achieved astonishing backtest results through high-efficiency entry and extreme profit taking. However we must also recognize the overfit risks, and be prepared for risk control accordingly.  
 
 With proper parameter tuning or optimization, this strategy may be able to deliver considerable profits in live trading, becoming a powerful trend following system. Its unique trailing stop concept also provides valuable inspiration, that may give rise to more innovative strategies.
-[/trans]
 
 > Strategy Arguments
 

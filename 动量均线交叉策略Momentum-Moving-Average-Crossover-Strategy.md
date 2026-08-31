@@ -9,77 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略运用快速移动平均线和慢速移动平均线的交叉原理,判断市场趋势方向,以发出买入和卖出信号。策略简单易懂,容易实施,适用于中短线交易。
-
-## 策略原理
-
-该策略使用两个移动平均线,一个快速线一个慢速线。快速线参数为3日EMA,慢速线参数为15日EMA。策略判断快速线从下方向上突破慢速线时,认为目前处于上升趋势,该时刻为买入信号。反之,当快速线从上方向下跌破慢速线时,认为目前处于下降趋势,该时刻为卖出信号。 
-
-策略还设置了一个较快的参数为3日的EMA作为快速退出线。当价格跌破该快速退出线时,则判定趋势反转,应退出原有的多头头寸。同理,当价格重新突破该退出线时,则重新转为看涨,因此为重新入场的信号。
-
-具体操作信号设置如下:
-
-1. 快速线由下向上突破慢速线,做多
-
-2. 快速线由上向下跌破慢速线,做空
-
-3. 价格跌破快速退出线,平仓多单
-
-4. 价格重新突破快速退出线,重新做多
-
-## 策略优势
-
-- 使用简单,仅需要配置好两个移动平均线的参数,非常容易实施
-
-- 回测数据充足,使用的指标都较为常见,可评估策略有效性
-
-- 可配置参数较多,可以通过调整参数来优化策略
-
-- 采用快速移出平均线设置止损,可更好控制风险
-
-- 策略思路清晰,判断买卖点的信号非常明确
-
-- 操作频次适中,避免过于频繁交易
-
-## 策略风险
-
-- 作为趋势跟随策略,在趋势不明显时,会产生更多虚假信号
-
-- 移动平均线本身具有滞后性,可能错过转折点
-
-- 固定参数设置无法适应市场变化,应配合参数优化使用
-
-- 止损设置可能过于疲软,无法及时止损
-
-- 策略信号频繁,交易成本可能较高
-
-- 交易信号可能出现背离,应结合其它指标确认
-
-可通过参数优化,辅助以其它指标确认,适当放宽止损标准,及时更新参数等方法来控制风险。
-
-## 策略优化
-
-- 可以测试优化移动平均线参数,使其更符合当前市场特征
-
-- 可以引入更多指标进行组合,形成更强大的策略系统 
-
-- 可以设定自适应的参数设置,根据市场实时调整参数
-
-- 可以引入机器学习算法,实现更智能化的策略优化
-
-- 可以设定动态止损、跟踪止损来更好的控制风险
-
-- 可以结合量能指标,避免出现背离导致错失套机
-
-## 总结
-
-本策略整体是一个较为简单的双移动平均线交叉策略。它利用快速均线和慢速均线间的交叉关系判断市场趋势和买卖时机。策略优点是思路清晰,易于实施,通过参数优化可以适应不同市场。但也存在一些风险,需要引入更多指标进行验证,并做好风险控制。如果用于中短线交易,且通过持续优化调整,该策略可以成为一个非常实用的量化交易系统。
-
-|| 
 
 ## Overview
 
@@ -149,7 +78,6 @@ Risks can be managed by parameter optimization, adding filters, relaxing stop lo
 
 This is a relatively simple dual moving average crossover strategy. It determines market trend and trading signals based on the interaction between fast and slow moving averages. The strategy is easy to implement and can be adapted via optimization. But it also has some risks. More filters are needed to confirm signals and manage risks. When properly optimized and applied to medium-term trading, it can become a very practical quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/843b7cbcfbd23fcd21.png)
 
-[trans]
-#### 概述
-该策略结合了向量蜡烛图(Vector Candles)的概念与传统的通道突破(Channel Breakout)和巧克力酱(Chocolate Sauce, ChoCH)模式识别,旨在捕捉市场的突破性行情。策略通过比较收盘价与前一根K线的高低点,并结合成交量放大的向量蜡烛图来确认信号,同时采用了一定数量的确认K线来过滤噪音。
-
-#### 策略原理
-1. 计算过去一定数量K线的平均成交量,并根据成交量放大倍数定义四种不同颜色(红、绿、蓝、紫)的向量蜡烛图。
-2. 当收盘价低于前一根K线低点,且为红色向量蜡烛图时,识别为红色ChoCH信号;当收盘价高于前一根K线高点,且为绿色向量蜡烛图时,识别为绿色BOS信号。
-3. 在一定数量的确认K线内,如果红色向量蜡烛图出现次数达到设定阈值,则确认红色ChoCH信号;如果绿色向量蜡烛图出现次数达到设定阈值,则确认绿色BOS信号。
-4. 当确认红色ChoCH信号时开仓做多,当确认绿色BOS信号时平仓。
-
-#### 策略优势
-1. 结合了向量蜡烛图与传统的通道突破和ChoCH模式,提高了信号的可靠性。
-2. 引入确认K线机制,有效过滤了噪音和假信号。
-3. 通过向量蜡烛图的颜色区分,使得信号更加直观和易于识别。
-4. 参数可调,灵活性较高,可根据不同市场环境和交易风格进行优化。
-
-#### 策略风险
-1. 在震荡市中,频繁的突破和回撤可能导致策略产生较多的假信号和亏损交易。
-2. 确认K线的数量设置不当可能导致信号滞后或过早入场。
-3. 单纯依赖于技术指标而忽视基本面因素,可能面临意外风险。
-4. 策略未设置止损,在行情急剧反转时可能承担较大损失。
-
-#### 策略优化方向
-1. 引入趋势确认指标,如移动平均线,在突破信号出现后确认趋势方向,提高信号质量。
-2. 对于震荡市,可以考虑引入范围交易策略,如在通道内部设置做多和做空的触发条件。
-3. 优化确认K线的数量,找到合适的平衡点,既能有效过滤噪音,又不会过于滞后。
-4. 设置合理的止损和止盈规则,控制单笔交易风险和总体回撤。
-5. 与其他技术指标或市场情绪指标相结合,提供更多的交易决策依据。
-
-#### 总结
-该策略创新性地将向量蜡烛图与经典的通道突破和ChoCH模式相结合,通过颜色区分和确认K线机制,提高了信号的可靠性和识别度。策略优势在于规则明确、信号直观,同时具有一定的灵活性和可优化空间。然而,策略也存在一些局限性和风险,如在震荡市表现欠佳,对市场趋势把握不足,以及缺乏止损止盈管理等。未来可以从趋势确认、范围交易、参数优化、风险控制等方面对策略进行完善,以期获得更稳健的交易表现。
-
-|| 
 
 #### Overview
 This strategy combines the concept of Vector Candles with traditional Channel Breakout and Chocolate Sauce (ChoCH) pattern recognition to capture breakout movements in the market. The strategy confirms signals by comparing the closing price with the high and low of the previous candle and using volume-amplified Vector Candles, while also employing a certain number of confirmation candles to filter out noise.
@@ -75,7 +42,6 @@ This strategy combines the concept of Vector Candles with traditional Channel Br
 
 #### Conclusion
 This strategy innovatively combines Vector Candles with classic Channel Breakout and ChoCH patterns, enhancing signal reliability and recognizability through color differentiation and a confirmation candle mechanism. The strategy's advantages lie in its clear rules, intuitive signals, and a certain degree of flexibility and optimization potential. However, the strategy also has some limitations and risks, such as subpar performance in choppy markets, insufficient grasp of market trends, and a lack of stop-loss and take-profit management. In the future, the strategy can be refined in terms of trend confirmation, range trading, parameter optimization, risk control, and other aspects to achieve more robust trading performance.
-[/trans]
 
 > Strategy Arguments
 

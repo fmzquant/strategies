@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/111c29d7c1aa9328a27.png)
-[trans]
-
-## 概述
-
-该策略基于平均趋向指标DI+和DI-,利用两个不同时间框架的DI指标判断趋势方向,进而做多做空。当较大时间框架和较小时间框架的DI+均高于DI-时判断为看涨趋势,做多;当两个时间框架DI-均高于DI+时,判断为看跌趋势,做空。
-
-## 原理
-
-该策略主要基于以下几点原理:
-
-1. 计算DI+和DI-。通过获取高价、收盘价、低价,计算出DI+和DI-。
-
-2. 比较两个时间框架的DI+和DI-。分别在主图的时间框架(如1小时)和较大的时间框架(如日线)计算DI+和DI-,并比较大小关系。
-
-3. 判断趋势方向。当较大时间框架和较小时间框架的DI+均大于DI-时,判断为多头趋势;当两个时间框架的DI-均大于DI+时,判断为空头趋势。
-
-4. 发出交易信号。多头信号为两个时间框架DI+>DI-,做多;空头信号为两个时间框架DI->DI+,做空。
-
-5. 设置止损。基于ATR计算止损位,实现趋势跟踪止损。
-
-6. 退出条件。止损触发或价格反转时平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用双时间框架DI判断趋势,可以过滤掉部分假突破。
-
-2. ATR动态跟踪止损,可以最大限度保护利润,避免止损过小。
-
-3. 及时止损,可以控制单笔止损。
-
-4. 按趋势交易,可以持续捕捉趋势机会。
-
-5. 规则清晰易懂,便于实盘操作。
-
-## 风险及解决方法
-
-该策略也存在以下风险:
-
-1. DI指标存在滞后,可能错过入场时机。可以适当优化参数,或结合其他指标判断。
-
-2. 双时间框架判断可能存在上下游分歧。可以增加时间框架验证信号。
-
-3. 止损过于激进可能造成过频交易。可以适当放宽ATR倍数。
-
-4. 震荡行情中可能产生频繁买卖。可以通过增加过滤条件减少交易频率。
-
-5. 参数优化依赖历史数据,实盘可能存在过优化。应谨慎评估参数鲁棒性。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化DI计算参数,寻找最佳参数组合。
-
-2. 增加其他指标过滤,提高信号准确率。如MACD,KDJ等。
-
-3. 优化止损策略,适应更多市场条件。可改为移动止损或挂单止损。
-
-4. 增加交易时间过滤,避开重要新闻事件。
-
-5. 测试不同品种参数健壮性,提高适应性。
-
-6. 增加机器学习成分,利用历史数据训练判断模型。
-
-## 总结
-
-该策略整体来说是一个典型的趋势跟踪策略,利用DI指标判断趋势方向,设定止损来锁定盈利,在趋势中持续盈利。该策略优势在于策略思路清晰,易于实盘操作。同时也存在一些改进空间,如优化参数,增加过滤条件等。如果继续优化测试,该策略可以成为一个非常实用的趋势跟踪策略。
-
-|| 
 
 ## Overview
 
@@ -151,7 +80,6 @@ The strategy can be improved in the following aspects:
 
 In summary, this is a typical trend following strategy that uses DI to determine trend direction and set stop loss to lock in profits along the trend. The advantage lies in its clear logic and ease of implementation for live trading. There are also rooms for improvement via parameter optimization, adding filters etc. With further optimization and robustness test, it can become a very practical trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

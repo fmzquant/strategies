@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略基于交易量指标(VFI)实现趋势跟踪交易。策略通过计算股价波动和交易量变化,判断市场趋势方向,实现低买高卖。
-
-### 策略原理
-
-1. 计算VFI指标:根据股价的对数变化和交易量计算VFI值,通过平滑处理消除震荡。
-
-2. 判断趋势方向:VFI指标上穿0轴为看涨信号,下穿0轴为看跌信号。
-
-3. 交易信号:快速EMA上穿慢速EMA,且VFI上穿买入线时做多;VFI下穿卖出线时平仓。
-
-4. 止损方式:设定固定止损比例。
-
-该策略主要依靠VFI指标判断趋势方向,与均线系统配合发出交易信号。VFI指标通过股价波动和交易量变化反映市场情绪,是一种趋势跟踪指标。与单一价格指标相比,VFI指标 judgments更全面,能更好地识别趋势转折点,过滤震荡。
-
-### 策略优势
-
-1. VFI指标判断趋势优于单一价格指标,能有效过滤震荡市和假突破。
-
-2. 均线系统辅助判断,避免VFI指标在震荡市中发出错误信号。
-
-3. 设定固定止损点控制风险,有利于风险管理。
-
-4. 采用趋势跟踪模式,无需猜测市场转折点,跟踪趋势即可获得超额收益。
-
-5. 参数设置灵活,可根据市场调整参数,适应不同周期和品种。
-
-### 策略风险
-
-1. 大幅震荡市场中,VFI指标可能发出错误信号。
-
-2. 固定止损点可能过大或过小,导致止损过早或止损过晚。
-
-3. 若买入卖出参数设定不当,可能导致交易频繁或漏单。
-
-4. 趋势跟踪策略无法抓住反转,需要及时止损。
-
-5. 参数不当可能导致进场过早或过晚。
-
-### 策略优化
-
-1. 调整VFI参数,优化指标计算。
-
-2. 调整均线周期,优化发信号时机。 
-
-3. 动态调整止损点,优化止损方式。
-
-4. 结合其他指标滤波,提高信号质量。
-
-5. 针对大周期和小周期分别优化参数组合。
-
-6. 测试不同品种参数健壮性,提高参数适应性。
-
-### 总结
-
-该策略基于VFI指标判断趋势方向,与均线系统配合过滤误差信号。通过趋势跟踪实现低买高卖,无需预测具体反转点。策略优势是判断趋势优于单一价格指标,能有效过滤震荡。主要风险在于震荡市中可能发出错误信号。通过调整参数和加入其他指标辅助,可以提高策略稳定性。总体来说,该策略以VFI指标为基础,进行参数和止损优化后,可以成为一个可靠的趋势跟踪策略。
-
-||
 
 
 ### Overview
@@ -130,7 +69,6 @@ This strategy mainly relies on VFI to determine the trend direction, combined wi
 
 This strategy determines the trend direction with VFI and uses moving averages to filter out wrong signals. It realizes low buying/high selling through trend following without predicting reversals. The advantage lies in its superior trend detection over single price indicators and ability to filter out consolidations. The main risk is generating incorrect signals during fluctuations. Optimizing parameters, adding supplementary indicators and stop loss techniques can improve its stability. Overall, with parameter tuning and stop loss optimizations, this VFI based strategy can become a reliable trend following system.
 
-[/trans]
 
 
 > Strategy Arguments

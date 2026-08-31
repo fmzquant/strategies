@@ -11,27 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于RSI指标的双重超买超卖策略”。该策略同时运用RSI指标和Stoch RSI指标判断超买超卖情况,实现更可靠的交易信号。
-
-RSI指标反映价格的超买超卖水平。RSI高于70表示超买,低于30表示超卖。Stoch RSI指标看RSI指标自身是否进入超买或超卖状态。
-
-本策略的交易逻辑:
-
-当RSI指标上穿用户设定的超买线时,表示入局超买,考虑做空;
-
-当RSI指标下穿用户设定的超卖线时,表示入局超卖,考虑做多;
-
-同时,Stoch RSI也必须显示超买或超卖信号时,才确认对应的入场信号。
-
-该双重条件组合,可以过滤更多不确定信号,避免假突破。
-
-本策略优点是利用RSI的各种派生指标,更准确判断超买超卖区域。但需注意过优化带来的曲线拟合风险。止损策略也必不可少。
-
-总体而言,指标组合使用需要谨慎权衡。合理使用可以提高效果,但也可能带来过度优化的风险。交易者仍需保持判断的灵活性。
-
-
-||
 
 
 This strategy is named “Dual Overbought/Oversold Strategy Based on RSI Indicator”. It uses both the RSI indicator and the Stoch RSI indicator to determine overbought and oversold conditions for more reliable trade signals.
@@ -52,7 +31,6 @@ The advantage of this strategy is utilizing RSI’s various derived indicators f
 
 In summary, indicator combinations need careful balancing. Reasonable usage can improve results but may also bring overoptimization risks. Traders still need flexible judgment.
 
-[/trans]
 
 > Strategy Arguments
 

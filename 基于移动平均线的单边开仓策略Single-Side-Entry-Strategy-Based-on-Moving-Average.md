@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18ab44eece8b6ce3cae.png)
 
-[trans]
-
-### 概述
-
-该策略通过计算不同类型的移动平均线,判断价格趋势方向,实现单边开仓。当价格突破移动平均线时开仓做多或做空。
-
-### 策略原理  
-
-该策略允许选择7种不同的移动平均线类型,包括简单移动平均线(SMA)、指数移动平均线(EMA)、成交量加权平均线(VWMA)、双指数移动平均线(DEMA)、三指数移动平均线(TEMA)、考夫曼自适应移动平均线(KAMA)和价格通道中线。通过计算所选移动平均线和收盘价的关系来判断价格趋势方向。
-
-当收盘价从下向上突破移动平均线时,判断为涨势,开仓做多;当收盘价从上向下突破移动平均线时,判断为跌势,开仓做空。这样可以捕捉价格趋势的转折点,实现单边开仓。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 可以选择多种移动平均线类型,灵活适应不同品种和周期。
-
-2. 单边开仓,可以有效控制风险。
-
-3. 顺势开仓,容易获利。
-
-4. 容易理解和实现。
-
-### 风险分析  
-
-该策略也存在一些风险:  
-
-1. 当价格在移动平均线附近震荡时,会出现多次错误信号和反向开仓。可以设置适当的止损来控制风险。  
-
-2. 无法完全避免因价格快速上涨或下跌带来的风险。可以结合其他指标判断趋势信号。
-
-3. 分析师需要选择合适的移动平均线参数,不合适的参数容易产生交易信号的滞后。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 结合其他技术指标判断趋势信号,例如MACD、RSI等,形成交易组合。  
-
-2. 添加止损逻辑。移动止损或挂单止损。
-
-3. 对参数进行测试和优化,选择最佳的参数组合。例如移动平均线周期、移动平均线类型等参数。
-
-4. 可以考虑挂单立即成交类型的进入策略,追踪趋势运行。
-
-## 总结  
-
-该策略基于移动平均线判断价格趋势方向,实现单边开仓。使用简单,容易实现,可以有效控制风险。但也可能出现错误信号和反向开仓的风险。通过组合其他指标判断信号,优化参数,添加止损等方式可以不断改进该策略,使之更稳定和可靠。
-
-|| 
 
 ### Overview  
 
@@ -114,7 +63,6 @@ The strategy can be optimized from the following aspects:
 
 The strategy determines the price trend direction based on moving averages, and implements single-side entry. It is simple to use and implement, and can effectively control risks. But there are also risks of false signals and reverse entries. It can be continually improved by combining other signal indicators, optimizing parameters, adding stop loss, to make the strategy more stable and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,30 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f1ba19e9a5000be40f.png)
 
-[trans]
-
-## 策略名称
-极速双向RSI趋势策略
-
-## 概述
-该策略是一个利用RSI指标判断价格趋势的快速策略。它同时具有做多和做空能力,可以捕捉较快的短线价位。
-
-## 策略原理
-该策略使用改进的RSI指标判断价格的超买超卖状态,配合K线实体过滤噪音。当RSI处于超买或超卖区域,并且K线实体体积大于平均体积的1/3时,做多或做空。交易信号触发后等待K线反转以及RSI回调到安全区域时平仓。
-
-## 优势分析
-该策略响应迅速,可以捕捉较快的短线趋势;同时实体过滤有助于去噪,避免被假突破误导。该策略适用于高波动率品种,能够获得较高收益。
-
-## 风险分析
-该策略对价格变化响应比较敏感,容易被市场中的假信号误导;此外,高波动率市场中止损可能会较频繁触发。可以适当放宽止损幅度,优化RSI参数以降低误信号概率。
-
-## 优化方向  
-可以测试不同周期指标参数来优化策略,寻找最佳参数组合。此外还可以考虑加入海龟交易法则等其它指标来辅助过滤信号。结合机器学习方法训练出更好的RSI阈值可能也是一个不错的尝试。
-
-## 总结
-该策略整体来说是一个高效灵敏的短线策略。通过一些参数和模型优化,有望进一步增强稳定性和盈利能力。该策略值得量化交易者继续研究和跟踪。
-
-||
 
 
 ## Strategy Name
@@ -58,7 +34,6 @@ We can test different periodic parameters of the indicators to optimize the stra
 ## Summary  
 Overall, this is an efficient and responsive short-term strategy. With some parameter and model optimization, it has the potential to further enhance stability and profitability. It merits continued research and tracking by quant traders.
 
-[/trans]
 
 > Strategy Arguments
 

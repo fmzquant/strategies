@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/171bc0f959082c4028d.png)
 
-[trans]
-
-
-### 概述
-
-本策略采用碎石移动平均线作为主要技术指标,结合布林带双轨,实现识别市场趋势的breaker策略。当价格突破布林带上轨时看空,当价格突破布林带下轨时看多,属于流行的双轨突破系统。
-
-### 策略原理
-
-1. 计算碎石移动平均线(CBMA):采用自适应EMA平滑碎石移动平均线,可以有效跟踪价格变化。
-
-2. 设置布林带参数:选取碎石移动平均线作为中轨,上下轨采用标准差 stomach 倍数设置,可根据市场调整。
-
-3. 突破交易:价格上破上轨时看空,下破下轨时看多,采用趋势跟踪breaker策略。
-
-4. 采用cancel闪电下单模式,一次只做单边方向交易。
-
-5. 设置固定交易量,可根据资金调整。
-
-### 优势分析
-
-1. 碎石移动平均线平滑性好,能有效跟踪价格。
-
-2. 自适应EMA算法优化了移动平均线的实时性。 
-
-3. 布林带上下轨明确了突破的方向信号。
-
-4. 采用趋势跟踪模式,避免whipsaw。
-
-5. 固定交易量可控制单次亏损。
-
-### 风险分析 
-
-1. 布林带参数设置需要优化,幅度过大过小都存在问题。
-
-2. 突破信号可能出现假突破。
-
-3. 需要设置止损来控制损失。
-
-4. 固定交易量无法根据市场调整仓位。
-
-5. 仅做单边方向交易,无法获利更大。
-
-### 优化方向
-
-1. 动态优化布林带参数,使布林带更贴合市场情况。
-
-2. 加入更多指标进行滤波,避免假突破。 
-
-3. 加入跟踪止损来锁定利润。
-
-4. 对冲交易,同时做多做空获利更大。 
-
-5. 加入仓位管理系统。
-
-### 总结
-
-本策略作为一款breaker趋势跟踪策略,采用自适应移动平均线技术指标,结合布林带双轨设置了清晰的突破信号。策略简单易操作,固定交易量可控制风险,具有一定的实盘价值。但也存在一些问题,如假突破和参数优化等,这需要通过加入更多技术指标来优化,在控制风险的同时,进一步提升策略的实盘效果。总体来说,本策略作为入门的突破系统还不错,有较大的优化空间。
-
-||
 
 ## Overview
 
@@ -128,7 +68,6 @@ This strategy uses CBMA as the major technical indicator combined with Bollinger
 
 This strategy is a breaker trend following system using adaptive moving average technology combined with Bollinger Bands for clear breakout signals. It has simple logic and fixed order size controls risk, having some practical value. But issues like false breakouts and parameter optimization remain, which need more indicators to improve and enhance real trading performance while controlling risk. Overall it is a decent starter breakout system with much room for improvement.
 
-[/trans]
 
 > Strategy Arguments
 

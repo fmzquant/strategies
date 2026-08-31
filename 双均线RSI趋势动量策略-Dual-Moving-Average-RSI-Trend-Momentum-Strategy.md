@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/db22dda680df8f0891.png)
 
-[trans]
-#### 概述
-本策略是一个结合了双均线和RSI指标的趋势跟踪交易系统。策略通过短期和长期移动平均线的交叉来确定市场趋势方向,同时利用RSI指标在超买超卖区域寻找更优的入场时机,实现趋势跟踪与动量反转的完美结合。策略采用百分比资金管理方式,每次交易投入账户总额的10%,有效控制风险。
-
-#### 策略原理
-策略使用10周期和50周期的简单移动平均线(SMA)来识别趋势。当短期均线上穿长期均线且RSI低于30时,系统发出做多信号；当短期均线下穿长期均线且RSI高于70时,系统发出做空信号。平仓方面,当RSI超过70时平掉多单,当RSI低于30时平掉空单。这种设计既保证了趋势方向的准确性,又能在价格超涨超跌时及时止盈。
-
-#### 策略优势
-1. 结合趋势和动量双重确认,提高交易成功率
-2. 采用百分比资金管理,有效控制风险
-3. 设置明确的入场和出场条件,避免主观判断
-4. 充分利用RSI指标的超买超卖特性
-5. 策略逻辑清晰,易于理解和执行
-6. 适用于不同市场环境,具有较强的适应性
-
-#### 策略风险
-1. 在震荡市场中可能产生过多假信号
-2. RSI指标在强趋势中可能长期处于超买超卖区域
-3. 双均线系统存在一定滞后性
-4. 固定的参数设置可能不适合所有市场环境
-建议通过以下方式管理风险：
-- 设置止损位
-- 动态调整参数
-- 增加趋势确认指标
-- 控制单笔交易规模
-
-#### 策略优化方向
-1. 引入自适应参数机制,根据市场波动率动态调整均线周期
-2. 增加趋势强度过滤器,避免在弱趋势中交易
-3. 优化资金管理系统,根据市场波动调整仓位大小
-4. 加入更多技术指标进行交易确认
-5. 开发动态止损机制,提高资金利用效率
-
-#### 总结
-这是一个将趋势跟踪与动量反转完美结合的量化交易策略。通过双均线判断趋势方向,利用RSI寻找最优入场点,既保证了交易方向的准确性,又能在价格超涨超跌时及时获利了结。策略的成功关键在于参数的合理设置和风险的有效控制。通过不断优化和改进,策略有望在不同市场环境下都能取得稳定收益。
-
-|| 
 
 #### Overview
 This strategy is a trend-following trading system that combines dual moving averages with the RSI indicator. It determines market trend direction through crossovers of short-term and long-term moving averages while utilizing RSI indicator for optimal entry points in overbought and oversold areas, achieving a perfect combination of trend following and momentum reversal. The strategy employs percentage-based money management, investing 10% of the total account balance per trade for effective risk control.
@@ -83,7 +46,6 @@ Risk management recommendations:
 
 #### Summary
 This is a quantitative trading strategy that perfectly combines trend following with momentum reversal. It uses dual moving averages to determine trend direction and RSI to find optimal entry points, ensuring both directional accuracy and timely profit-taking at price extremes. The key to strategy success lies in reasonable parameter settings and effective risk control. Through continuous optimization and improvement, the strategy has the potential to achieve stable returns across different market environments.
-[/trans]
 
 
 

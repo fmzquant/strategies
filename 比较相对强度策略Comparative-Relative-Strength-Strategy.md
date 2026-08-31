@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-比较相对强度策略是通过计算两个市场的相对强弱来产生交易信号。当被比较市场对基准市场显示出强势的时候,可以看作买入信号;而显露疲软时,为卖出信号。
-
-具体交易逻辑是:
-
-1. 选择被比较市场,例如特定股票
-
-2. 选择基准市场,例如标普500指数
-
-3. 计算被比较市场相对基准市场的强弱比
-
-4. 当比率大于超买线时,做多该被比较市场
-
-5. 当比率小于超卖区域时,做空该被比较市场
-
-6. 设置回调线,价格回落时平仓
-
-通过计算两个市场的相对强弱关系,该策略可以发现被低估的机会,也可避开被高估的局面。
-
-## 策略优势
-
-- 比较相对强弱,识别被低估机会
-
-- 设置回调线,避免继续跟涨杀跌
-
-- 操作规则简单清晰
-
-## 策略风险
-
-- 需要选择合适的比较基准市场
-
-- 超买超卖区域需要优化判断
-
-- 仅做多或做空无法获全市场机会
-
-## 总结
-
-比较相对强度策略通过比对两个市场的强弱来发现套利机会。但其参数设定和止损策略需要审慎评估。
-
-
-||
 
 ## Strategy Logic 
 
@@ -95,7 +51,6 @@ By comparing relative strength, the strategy aims to uncover undervalued opportu
 
 The relative strength strategy identifies arbitrage chances by comparing two markets. But parameter tuning and stop strategies require prudent assessment.
 
-[/trans]
 
 > Strategy Arguments
 

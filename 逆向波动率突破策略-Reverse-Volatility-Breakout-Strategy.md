@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ab198bc8452d91636a.png)
-[trans]
-#### 概述
-逆向波动率突破策略是一种反转交易策略,它利用ATR、布林带、RSI和MACD等多个技术指标来识别市场的极端状态,并在市场出现反转信号时进行交易。与传统的突破策略不同,该策略在出现看涨信号时进行卖出,在出现看跌信号时进行买入,从而试图捕捉市场的反转机会。
-
-#### 策略原理
-该策略使用了以下指标来判断交易信号:
-1. ATR(平均真实波动范围):用于衡量市场波动性。
-2. 布林带:由中轨、上轨和下轨组成,反映价格的波动范围。
-3. RSI(相对强弱指数):衡量价格走势的动量。
-4. MACD(移动平均聚散):由MACD线和信号线组成,用于判断趋势。
-
-策略的核心逻辑如下:
-- 当收盘价突破布林带上轨,RSI大于50,且MACD线在信号线之上时,产生卖出信号。
-- 当收盘价跌破布林带下轨,RSI小于50,且MACD线在信号线之下时,产生买入信号。
-
-#### 策略优势
-1. 结合多个技术指标,提高了交易信号的可靠性。
-2. 逆向交易的思路可以在市场出现反转时获利。
-3. 适用于波动较大的市场环境。
-
-#### 策略风险
-1. 逆向交易可能面临较大的风险,因为它与主流趋势相反。
-2. 如果市场持续单边趋势,该策略可能会产生连续亏损。
-3. 参数设置不当可能导致交易信号失效。
-
-#### 策略优化方向
-1. 对指标参数进行优化,找到最适合当前市场的参数组合。
-2. 引入止损和止盈机制,控制单笔交易的风险。
-3. 结合其他指标或市场情绪数据,提高交易信号的准确性。
-4. 对交易信号进行过滤,避免频繁交易和假信号。
-
-#### 总结
-逆向波动率突破策略是一种有趣的尝试,它利用多个技术指标捕捉市场的极端状态,并在市场出现反转信号时进行逆向交易。然而,该策略也存在一定的风险,需要谨慎应用。通过优化指标参数、引入风控措施和结合其他分析方法,可以进一步提高该策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 The Reverse Volatility Breakout Strategy is a reversal trading strategy that utilizes multiple technical indicators such as ATR, Bollinger Bands, RSI, and MACD to identify extreme market conditions and execute trades when reversal signals appear. Unlike traditional breakout strategies, this strategy sells when bullish signals occur and buys when bearish signals occur, attempting to capture market reversal opportunities.
@@ -78,7 +43,6 @@ The core logic of the strategy is as follows:
 
 #### Summary
 The Reverse Volatility Breakout Strategy is an interesting attempt that utilizes multiple technical indicators to capture extreme market conditions and execute reverse trades when reversal signals appear. However, this strategy also carries certain risks and needs to be applied cautiously. By optimizing indicator parameters, introducing risk control measures, and combining other analysis methods, the robustness and profitability of this strategy can be further improved.
-[/trans]
 
 
 

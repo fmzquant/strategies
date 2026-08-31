@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c485416b0d6677f217.png)
 
-[trans]
-
-## 概述
-
-该策略综合运用多种技术指标识别趋势方向,在趋势发生动量突破时进行追踪,追求获得超额收益。
-
-## 策略原理
-
-1. 使用Donchian通道判断整体趋势方向。当价格突破该通道时,确认趋势发生转变。
-
-2. Hull移动平均线辅助判断趋势方向。该指标对价格变化敏感,可提前发现趋势转折。
-
-3. 半轨道系统发出买入和卖出信号。该系统基于价格通道和平均真实波动范围,可避免假突破。 
-
-4. 当Donchian通道、Hull指标和半轨道系统同时发出信号时,判断趋势发生有力的动量突破,此时进入场内。
-
-5. 平仓条件:当上述指标发出反向信号时,判定趋势反转,立即止损退出。
-
-## 优势分析
-
-- 多指标组合,判断力更强。Donchian通道判定基本面,Hull指标和半轨道判定细节,把握趋势精确转折点。
-
-- 动量突破参与,追求超额收益。只在趋势发生强力突破时入场,避免在震荡中被套。
-
-- 严格止损,保障资金安全。一旦指标发出反向信号,立即止损,避免亏损扩大。
-
-- 参数调节灵活,适应各类市场。可调整通道长度、波动区间等参数,针对不同周期进行优化。
-
-- 易于理解和实现,新手也能掌握。指标和条件组合简单明了,容易编程实现。
-
-## 风险分析
-
-- 错过趋势初期机会。进入时机较晚,初期涨幅无法捕捉。
-
-- 突破失败回调损失。入场后可能出现突破失败和反转,造成损失。
-
-- 指标发出错误信号。由于参数设置不当,指标判断可能发生错误。
-
-- 交易次数有限。仅在明确趋势突破时才入场,年化交易次数有限。
-
-## 优化方向
-
-- 优化参数组合。testing不同参数找出最佳组合。
-
-- 增加止损线性回撤条件。避免止损过早,错过趋势机会。
-
-- 增加其它指标过滤。如MACD,KDJ等辅助判断,减少错误信号。
-
-- 优化交易时间段。不同时间段参数可进行优化。
-
-- 扩大资金利用效率。通过杠杆、定投等方式提升资金使用效率。
-
-## 总结
-
-本策略综合多种指标判断趋势发生动量突破的时机,通过追踪已形成的趋势实现超额收益。严格的止损机制控制风险,灵活的参数调节适应不同市场环境。虽然交易频率较低,但每个交易都力求获得高回报。通过参数优化、辅助指标引入等方式,本策略可获得持续改进。
-
-|| 
 
 # Overview
 
@@ -123,7 +66,6 @@ This strategy combines multiple technical indicators to identify trend direction
 
 This strategy combines multiple indicators to identify momentum breakout of established trend, and profit from trend tracking. Strict stop loss manages risk. Flexible parameters adapt to different market environments. Although trade frequency is low, each trade targets high profitability. The strategy can be improved continuously through parameter tuning, additional filters etc.
 
-[/trans]
 
 > Strategy Arguments
 

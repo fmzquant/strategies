@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d35e774b3780813c4d.png)
-[trans]
-
-## 概述
-质数波带回测策略通过识别价格附近的最高和最低质数,并将这两个质数系列绘制为一个波带,来判断市场趋势。该策略由模数金融工程公司开发。
-
-## 策略原理
-1. 根据输入的容差百分比percent,遍历一个指定价格的正负波动范围,寻找最高和最低的质数。
-2. 使用highest和lowest函数获取最近N根K线中的质数波带最高点和最低点。
-3. 判断收盘价是否突破质数波带最高点和最低点,决定做多或者做空方向。
-4. 可选择反转交易信号。
-
-## 优势分析
-1. 利用质数的随机且不规则分布特性,捕捉市场中的随机性。
-2. 质数波带具有一定的滞后性,可以过滤掉部分噪音。
-3. 质数波带上下限灵活,可以通过调整容差百分比来适应不同周期和不同交易品种。
-
-## 风险分析
-1. 质数波带并不能完全契合价格运动,存在一定程度的滞后。
-2. 物极必反的价格反转可能导致错误信号。
-3. 容差百分比设置过大会过滤掉部分有效讯号。
-
-可以通过适当调整参数、结合其他指标等方式来规避风险。
-
-## 优化方向 
-1. 可以结合移动平均线等指标,设定双重条件触发信号。
-2. 可以研究其他随机数的使用,如斐波那契数等。
-3. 可以引入机器学习算法,实现参数的自动优化。
-
-## 总结
-质数波带回测策略overall是一个非常创新和具有实用价值的策略。它利用质数的特性捕捉市场随机性,同时也考虑到价格滞后识别趋势,研究价值很高。下一步可以从提高信号质量、扩展随机数类型、自动优化等方面进行优化,使策略效果更加出色。
-
-||
 
 ## Overview
 The Prime Number Bands backtest strategy judges market trends by identifying the highest and lowest prime numbers around a price and plotting these two prime number series as a band. This strategy was developed by Modulus Financial Engineering Inc.
@@ -72,7 +40,6 @@ Risks can be avoided by properly adjusting parameters, combining with other indi
 ## Summary  
 The prime number bands backtest strategy overall is a very innovative strategy with practical value. It uses the characteristics of prime numbers to capture market randomness while also considering price lag in identifying trends, very worthwhile for research. Next steps are to optimize from aspects of improving signal quality, expanding random number types, automatic optimization, etc. to make the strategy effect more remarkable.
 
-[/trans]
 
 > Strategy Arguments
 

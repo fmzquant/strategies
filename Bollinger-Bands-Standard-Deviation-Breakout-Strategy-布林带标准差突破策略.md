@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17e887c1d237c9befce.png)
 
-[trans]
-#### 概述
-该策略基于布林带指标,当收盘价突破上轨时开多头仓位,当收盘价跌破下轨时开空头仓位。多头平仓条件为价格跌破中轨,空头平仓条件为价格突破中轨。该策略利用价格相对于布林带上下轨的位置来判断趋势方向和开平仓时机。
-
-#### 策略原理
-1. 计算布林带上中下轨。中轨为收盘价的简单移动平均线,上下轨为中轨加减一定倍数的标准差。
-2. 当收盘价突破上轨时,开多头仓位。
-3. 当收盘价跌破下轨时,开空头仓位。 
-4. 当持有多头仓位时,如果收盘价跌破中轨,则平多头仓位。
-5. 当持有空头仓位时,如果收盘价突破中轨,则平空头仓位。
-
-#### 策略优势
-1. 布林带能够有效反映价格的波动范围和趋势方向,利用价格相对于布林带的位置开平仓,能够捕捉趋势行情。
-2. 上下轨距离中轨一定标准差,能够自适应价格波动率的变化,标准差越大,上下轨距离中轨越远。
-3. 平仓条件使用中轨,而不是反向突破上下轨,可以尽早止损止盈。
-4. 参数可调整,可以优化布林带周期、标准差倍数等参数来适应不同品种和周期。
-
-#### 策略风险
-1. 震荡市中,价格在上下轨附近反复波动,可能会发生频繁开平仓,导致交易成本增加。
-2. 当价格加速趋势运动时,开仓点相对滞后,跟风能力较弱。
-3. 趋势转折初期,回撤触及中轨平仓,而趋势继续发展时,会错失后续行情。
-
-#### 策略优化方向  
-1. 可以结合ATR等止损指标,控制回撤。
-2. 可以使用多空仓位动态比例调整,根据趋势强度灵活配置仓位。
-3. 开仓条件可以结合更多过滤条件,如量价指标,以提高开仓信号可靠性。
-
-#### 总结
-该策略是一个经典的趋势追踪型策略,通过布林带来捕捉趋势行情。策略逻辑清晰,优势明显,同时也存在一定风险。通过优化止损止盈、仓位管理和开仓过滤等,可以改进策略绩效,提高适应性。但是任何策略都有其局限性,需要结合实际市场状况灵活运用。
-
-|| 
 
 #### Overview
 This strategy is based on the Bollinger Bands indicator. It enters a long position when the closing price breaks above the upper band and enters a short position when the closing price breaks below the lower band. The exit condition for the long position is when the price falls below the middle band, and the exit condition for the short position is when the price breaks above the middle band. The strategy uses the position of the price relative to the upper and lower bands of the Bollinger Bands to determine the trend direction and the timing of entries and exits.
@@ -72,7 +41,6 @@ This strategy is based on the Bollinger Bands indicator. It enters a long positi
 #### Summary
 This strategy is a classic trend-following strategy that captures trending markets using Bollinger Bands. The strategy logic is clear, and the advantages are obvious, but it also has certain risks. By optimizing stop-loss, profit-taking, position management, and entry filters, the strategy performance can be improved, and adaptability can be enhanced. However, every strategy has its limitations and needs to be flexibly applied in conjunction with actual market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

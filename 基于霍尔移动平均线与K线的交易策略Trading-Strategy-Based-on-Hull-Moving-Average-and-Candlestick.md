@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-这个策略的核心思想是比较霍尔移动平均线(Hull Moving Average,HMA)与K线的数值,来产生买入和卖出信号。当HMA高于K线时买入,当HMA低于K线时卖出。
-
-## 原理
-
-首先,策略通过hma()函数计算出一定周期的HMA。然后,获取上一根K线的开盘价作为比较基准。如果HMA高于上一K线的开盘价,则产生买入信号;如果HMA低于上一K线的开盘价,则产生卖出信号。
-
-策略的入场条件是,只有当价格向相反方向突破HMA时才进入场内。也就是说,只有当价格从下方突破HMA时才买入;只有当价格从上方突破HMA时才卖出。这可以避免被震荡的市场反复触发信号。
-
-策略的出场条件是,当价格重新回落到HMA的另一侧时止损出场。例如,买入后价格跌破HMA,则止损卖出。
-
-总体来说,这个策略利用HMA的平滑特点,识别主要趋势方向产生信号。同时,要求价格突破来过滤假信号,可以避免被市场震荡反复套牢。
-
-## 优势分析
-
-1. 使用HMA而不是SMA,可以更好地识别趋势,过滤震荡。
-
-2. 突破机制可以减少被套和反复开仓的概率。
-
-3. 采用上一K线价格而不是当前价格判断,可以避免回溯曲线绘制。
-
-4. 规则简单清晰,适合参数优化和机器人交易。
-
-5. 可灵活应用在任何品种和周期,具有普适性。
-
-## 风险及改进
-
-1. HMA参数设置不当可能导致错失趋势或者过度敏感。可以 teste不同周期参数寻找最佳值。
-
-2. 单一指标容易被突破重试甩出局内,可以考虑结合其他指标过滤信号。
-
-3. 止损点靠近HMA,容易被再次突破卡死,可以适当拉远至支撑阻力位。
-
-4. 无法判断趋势方向和力度,考虑加入趋势分类指标。
-
-5. 固定止损点导致风险收益波动大,可以试试随动止损或者资金管理。
-
-## 总结
-
-这个策略整体来说较为简单实用,核心思路清晰。以HMA判断主趋势方向,以突破过滤误信号。可以避免震荡市反复开仓套牢。通过参数优化可以获得不错的效果。但是作为基于单一指标的策略,可靠性和胜率还有一定局限。建议与其他技术指标或资金管理方法配合使用,可大幅提高稳定性。总的来说,该策略为量化交易提供了一个简单有效的思路,值得深入研究和应用。
-
-||
 
 ## Overview
 
@@ -96,7 +51,6 @@ In summary, this strategy identifies the major trend direction using the smoothn
 ## Conclusion
 
 This strategy is relatively simple and practical overall with a clear core idea. It identifies the major trend with HMA and filters fake signals with breakout. It avoids being whipsawed by choppy markets. Proper parameter optimization can achieve decent results. However, reliability and win rate are still limited as a single indicator strategy. It's recommended to combine with other technical indicators or money management methods to significantly improve robustness. In conclusion, this strategy provides a simple and effective approach for quantitative trading, which is worth in-depth research and application.
-[/trans]
 
 > Strategy Arguments
 

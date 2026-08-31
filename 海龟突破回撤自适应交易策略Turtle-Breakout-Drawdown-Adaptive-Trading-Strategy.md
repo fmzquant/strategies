@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bcfbb60d39271bf699.png)
-[trans]
-
-## 概述
-
-该策略主要基于趋势突破原理,结合通道突破的方法,采用快线慢线双轨突破来判断趋势方向。策略同时具有突破 entries 和回撤 exits 双重保护,可以有效应对行情突变。策略最大的优势在于可以实时监测账户回撤,当回撤超过一定比例时,会主动降低持仓规模。这使得策略可以有效控制市场风险和账户抗风险能力。
-
-## 策略原理  
-
-1. 快慢线双轨:分别采用快线和慢线构建通道。快线响应速度更快,慢线平滑程度更高。结合双轨突破判断趋势方向。  
-
-2. 突破 entries:当价格突破向上通道时做多,突破向下通道时做空。采用止损单止损方式减小风险。 
-
-3. 回撤 exits:实时监控最大回撤。一旦达到回撤退出点会主动止损平仓。回撤退出点可根据市场环境进行调整。
-
-4. 持仓规模自适应:持仓数量根据账户权益实时调整,规避市场风险。账户回撤越大,持仓越少。抗风险能力更强。
-
-## 策略优势  
-
-1. 双轨通道+突破entries,判断趋势更准确。  
-
-2. 止损止盈机制,有效控制单笔损失。  
-
-3. 实时监控账户回撤,主动调整持仓规模,降低市场风险。
-
-4. 持仓规模与账户权益挂钩,抗风险能力强,可以应对行情突变。
-
-## 策略风险  
-
-1. 大幅震荡行情中,回撤控制可能失效,导致亏损扩大。 
-
-2. 快线进入中性区域时,可能出现多次无效突破信号。
-
-3. 慢线过于平滑,无法及时捕捉快速反转行情。  
-
-4. 多空混合使用时,双向持仓存在套牢风险。
-
-## 策略优化方向  
-
-1. 对于大幅震荡行情,可以设置更高的回撤容忍度,避免过度止损。  
-
-2. 增加中性区域过滤,避免中性区域无效信号。 
-
-3. 对慢线通道进行参数优化,提高对快速行情的响应速度。  
-
-4. 添加开仓排序规则,避免双向持仓套牢。 
-
-## 总结  
-
-该策略整体来说是一种适合中长线趋势交易的有效策略。策略最大的优势在于实时回撤监控和动态调整持仓。这使得策略可以自动调节仓位规模,具有很强的适应市场的能力。当出现大幅行情突变或价格震荡时,策略可以自动降低仓位规模,有效防止亏损扩大。这是很多传统策略难以做到的。整体来说,该策略的思路新颖,具有较强的实用性。值得探索和优化应用。
-
-|| 
 
 ## Overview  
 
@@ -110,7 +59,6 @@ This strategy is mainly based on the trend breakout principle, combined with the
 
 Overall, this is an effective strategy suitable for medium and long term trend trading. The biggest advantage of the strategy is real-time drawdown monitoring and dynamic adjustment of positions. This allows the strategy to automatically adjust the position size with strong adaptability to the market. When there is a sharp market change or price fluctuation, the strategy can automatically reduce the position size to effectively prevent the loss from expanding. This is difficult for many traditional strategies. In general, the idea of this strategy is innovative with strong practicality. It is worth exploring and optimizing for application.
 
-[/trans]
 
 > Strategy Arguments
 

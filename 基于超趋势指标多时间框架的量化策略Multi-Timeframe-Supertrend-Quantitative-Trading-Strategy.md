@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-本文将详细介绍一种基于超趋势指标和多时间框架判断的量化交易策略。该策略综合运用超趋势指标在不同周期判断趋势,以提高交易信号的质量。
-
-一、策略原理
-
-该策略的核心部分包括:
-
-1. 在当前周期计算超趋势指标,判断价格趋势方向;
-
-2. 在高时间框架(如日线)计算超趋势指标,判断大趋势;
-
-3. 结合两个时间框架下超趋势指标的方向一致性,形成交易信号;
-
-4. 根据信号设置合理的止损止盈;
-
-5. 以一定比例分批出场,锁定盈利。
-
-当高低周期超趋势指标方向一致时,视为大趋势发生,根据指标关系形成买入卖出信号。并设置止损止盈管理每笔交易的风险收益。
-
-二、策略优势
-
-该策略最大的优势是利用多时间框架判断,可以过滤掉部分假信号,提高信号的可靠度。
-
-此外,合理的止损止盈设置也使每单交易实现风险可控,避免亏损过大。
-
-最后,分批出场的方式锁定盈利,也是该策略的一大特点。
-
-三、潜在风险
-
-但我们也应当注意以下风险:
-
-首先,超趋势指标本身存在滞后问题,可能错过最佳入场点位。 
-
-其次,止损过于激进面临被套的风险,需要合理设置。
-
-最后,分批出场带来的滑点成本也影响应考虑。
-
-四、内容总结
-
-本文详细介绍了一种基于超趋势指标和多时间框架判断的量化策略。它使用高低周期组合提高信号质量,并采用止损止盈和分批出场方式进行风险管理。总体来说,该策略使用指标较为合理,可通过参数优化获得良好效果。
-
-||
 
 This article explains in detail a quantitative trading strategy using the Supertrend indicator across multiple timeframes. It combines Supertrend signals on different periods to improve the reliability of trade signals.
 
@@ -94,7 +51,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative strategy using Supertrend across multiple timeframes. It improves signal quality through the combination of high and low period analysis, and manages risks via stop loss, take profit and scaling out. Overall with proper tuning this strategy offers a reasonable approach utilizing the indicator.
 
-[/trans]
 
 > Strategy Arguments
 

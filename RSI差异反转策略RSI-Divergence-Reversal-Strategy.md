@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略是基于RSI指标的反转策略。它计算两条不同周期的RSI曲线,并在两条RSI曲线发生金叉或死叉时进行买入或卖出操作。
-
-### 策略原理
-
-1. 计算两条RSI曲线:一条短周期RSI曲线,一条长周期RSI曲线。
-
-2. 当短周期RSI上穿长周期RSI时,判定为看涨信号,做多。
-
-3. 当短周期RSI下穿长周期RSI时,判定为看跌信号,做空。
-
-4. 发出买入信号时,设置止损价为最新价格。 
-
-5. 发出卖出信号时,设置止损价为最新价格。
-
-6. 如果价格触及止损价,则止损退出当前头寸。
-
-### 优势分析
-
-1. 使用RSI指标判断趋势反转点,具有一定的可靠性。
-
-2. 双RSI曲线组合可过滤掉部分噪音交易信号。
-
-3. 设置止损来控制每个头寸的损失。
-
-4. 策略逻辑简单直观,容易实现。
-
-5. RSI参数可自定义,适用于不同市场环境。
-
-### 风险分析
-
-1. RSI指标存在滞后,可能错过突发趋势的反转时点。
-
-2. 止损设置不当可能造成不必要的损失。
-
-3. 双RSI组合仍无法完全避免假突破带来的风险。
-
-- 风险1可以结合其他指标如布林带确认反转。
-
-- 风险2可以采用跟踪止损或挂单止损优化止损策略。
-
-- 风险3可以增加趋势过滤条件,避免假突破。
-
-### 优化方向
-
-1. 测试不同参数的RSI周期组合效果。
-
-2. 评估与其他指标如MACD、KD等组合效果。
-
-3. 增加止损策略如跟踪止损、挂单止损。
-
-4. 加入趋势过滤,避免反向操作。
-
-5. 评估在不同品种和周期的效果。
-
-### 总结
-
-该策略通过RSI差异交叉实现简单的反转交易。双RSI过滤和止损控制了风险。后续可通过多指标组合、优化止损策略等进一步改进效果。
-
-||
 
 ### Overview
 
@@ -133,7 +70,6 @@ This strategy is a reversal strategy based on the RSI indicator. It calculates t
 
 This strategy executes simple reversal trades using RSI divergences. Dual RSI and stops control risks. Further improvements can be made through combining indicators, optimizing stops and more.
 
-[/trans]
 
 > Strategy Arguments
 

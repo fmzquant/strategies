@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b0346e70d6d2afca54.png)
 
-[trans]
-
-## 概述
-该策略通过计算快速移动平均线、慢速移动平均线和成交量加权平均价,识别它们之间的交叉信号,以捕捉价格走势。当快速MA从下方上穿VWAP和慢速MA时产生买入信号;当快速MA从上方下穿VWAP和慢速MA时产生卖出信号。
-
-## 策略原理  
-该策略结合了移动平均线和成交量加权平均价的优点。移动平均线能够有效地过滤市场噪音,判断趋势方向。成交量加权平均价能更准确地反映大资金的意图。快速MA能捕捉短期趋势,慢速MA过滤假信号。当快速MA上穿慢速MA和VWAP时,表示短期趋势转 bullish,产生买入信号;下穿时则看空,产生卖出信号。
-
-## 优势分析
-- 利用双重MA过滤减少假信号
-- VWAP能准确判断大资金意图  
-- 灵活设置MA参数,适应不同周期
-- 结合止损止盈,有效控制风险
-
-## 风险分析
-- 大幅度震荡市场中可能出现多次错误信号
-- VWAP参数设置不当时无法准确判断资金意图  
-- 停损点过近无法追踪趋势,过远则风险过大
-
-## 优化方向 
-- 优化MA和VWAP的参数,适应不同行情
-- 结合其他指标如RSI进行信号过滤
-- 动态调整止损止盈比率
-
-## 总结
-该策略整合了移动平均线和VWAP的优势,通过双重过滤识别交叉信号,配合灵活的止损止盈机制,能够有效控制风险,是一种值得推荐的趋势跟踪策略。
-
-||
 
 ## Overview
 This strategy identifies crossovers between fast moving average, slow moving average and volume weighted average price (VWAP) to capture potential price movements. It triggers buy signals when fast MA crosses above VWAP and slow MA, and sell signals when fast MA crosses below VWAP and slow MA.  
@@ -65,7 +37,6 @@ The strategy combines the strengths of moving averages and VWAP. Moving averages
 ## Conclusion
 This strategy integrates the strengths of moving averages and VWAP, identifies crossover signals through dual filtering, and effectively controls risks with flexible stop loss/take profit mechanisms. It is a recommended trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

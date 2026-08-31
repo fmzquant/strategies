@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b34713affda44efb44.png)
 
-[trans]
-#### 概述
-该策略名为"DCA Booster (1 minute)",是一个在1分钟时间框架上运行的高频交易策略。该策略结合了布林带和DCA(Dollar-Cost Averaging,美元成本平均法)两种技术,目的是利用市场波动进行多次买卖,试图获得利润。策略的主要思路是:当价格连续两个周期低于布林带下轨时,开始按照DCA方式分批建仓;当价格上穿布林带上轨时,平掉所有仓位。同时,该策略允许金字塔式加仓,即如果价格持续下跌,策略会继续加仓。
-
-#### 策略原理
-1. 计算布林带:使用简单移动平均线和标准差计算布林带的上下轨。
-2. 设置DCA参数:将固定金额分成多份,作为每次建仓的资金量。
-3. 建仓条件:当收盘价连续两个周期低于布林带下轨时,开始建仓。根据价格是否持续低于下轨,策略最多可以建立5个仓位。
-4. 平仓条件:当价格上穿布林带上轨时,平掉所有仓位。
-5. 金字塔加仓:如果价格持续下跌,策略会继续加仓,最多可以加到5个仓位。
-6. 仓位管理:策略会记录每个仓位的建仓情况,并在平仓条件满足时平掉对应的仓位。
-
-#### 策略优势
-1. 结合了布林带和DCA两种技术,能够有效捕捉市场波动,并降低买入成本。
-2. 允许金字塔加仓,可以在价格持续下跌时继续建仓,增加获利机会。
-3. 平仓条件简单明了,能够快速锁定利润。
-4. 适合在1分钟等短时间框架上使用,可以进行高频交易。
-
-#### 策略风险
-1. 如果市场波动剧烈,价格快速突破布林带上轨,可能导致策略来不及平仓,从而造成损失。
-2. 金字塔加仓可能会在价格持续下跌时造成过度暴露,增加风险。
-3. 策略在震荡市中表现可能不佳,因为频繁的买卖可能会产生较高的交易成本。
-
-#### 策略优化方向
-1. 可以考虑在平仓条件中加入止损,以控制单次交易的最大损失。
-2. 可以优化金字塔加仓的逻辑,例如根据价格下跌的幅度来调整加仓量,避免过度暴露。
-3. 可以结合其他指标,如RSI、MACD等,以提高入场和出场的准确性。
-4. 可以对参数进行优化,如布林带的周期和标准差倍数,以适应不同的市场状况。
-
-#### 总结
-"DCA Booster (1 minute)"是一个结合布林带和DCA的高频交易策略,通过在价格低于布林带下轨时分批建仓,在价格上穿布林带上轨时平仓,以此来捕捉市场波动,试图获利。该策略允许金字塔加仓,但同时也面临着市场剧烈波动和过度暴露的风险。通过引入止损、优化加仓逻辑、结合其他指标以及参数优化等方法,可以进一步改进该策略的表现。
-
-|| 
 
 #### Overview
 The strategy named "DCA Booster (1 minute)" is a high-frequency trading strategy that operates on a one-minute timeframe. The strategy combines Bollinger Bands and Dollar-Cost Averaging (DCA) techniques to capitalize on market fluctuations by making multiple buys and sells, aiming to generate profits. The main idea of the strategy is: when the price falls below the lower Bollinger Band for two consecutive periods, it starts building positions using DCA; when the price rises above the upper Bollinger Band, it closes all positions. Additionally, the strategy allows pyramiding, meaning it can continue adding positions if the price keeps falling.
@@ -75,7 +42,6 @@ The strategy named "DCA Booster (1 minute)" is a high-frequency trading strategy
 
 #### Summary
 "DCA Booster (1 minute)" is a high-frequency trading strategy that combines Bollinger Bands and DCA. It aims to capture market fluctuations and generate profits by building positions when the price is below the lower Bollinger Band and closing positions when the price crosses above the upper Bollinger Band. The strategy allows pyramiding but also faces risks such as drastic market volatility and overexposure. By introducing stop-losses, optimizing the pyramiding logic, incorporating other indicators, and optimizing parameters, the performance of this strategy can be further improved.
-[/trans]
 
 > Strategy Arguments
 

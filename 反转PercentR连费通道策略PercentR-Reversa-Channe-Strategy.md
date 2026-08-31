@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1503c838a714f59f4ec.png)
 
-[trans]
-### 策略概述
-
-这是一个基于拉鲁连费通道指标的反转交易策略。它通过计算过去一定时间周期内的最高价和最低价,来确定当前价格是否处在超买超卖区域。如果价格接近上轨或下轨,则进行反向开仓,等待价格回归中线。
-
-### 策略原理
-
-该策略主要基于两个指标:**百分比R指标(%R)**和**拉鲁连费通道上下轨**。
-
-百分比R指标是显示当前收盘价距离最近一段时间的最高价和最低价的距离,数值区间为0至-100,数值接近0表示当前收盘价接近最近一段时间的最高点,数值接近-100表示当前收盘价接近最近一段时间的最低点。
-
-拉鲁连费通道由上轨、中线和下轨组成。上轨等于最近一段时间的最高价,下轨等于最近一段时间的最低价,中线为上下轨的平均值。如果价格超过上轨则视为超买,如果价格低于下轨则视为超卖。
-
-该策略首先计算**百分比R指标**和**拉鲁连费通道的上下轨**,然后利用两个指标判断目前是否处于超买超卖状态:
-
-1. 当百分比R低于-87时,认为处于超卖状态。
-2. 当百分比R高于-20时,认为处于超买状态。 
-
-如果当前既不处于超买也不处于超卖状态,则在开市时做多开仓。当天收市前平仓退出。
-
-这样通过捕捉价格的反转,可以在短线内获利。
-
-### 策略优势
-
-1. 策略简单清晰,容易理解实现。
-2. 利用百分比R指标判断超买超卖状态,比较可靠。
-3. 每日开市做单,收市平仓,避免过夜风险。
-4. 反转交易策略,适合短线获利。
-
-### 策略风险
-
-1. 反转未成功,无法获利退出。
-2. 参数设置不当,无法正确判断超买超卖状态。
-3. 单日交易时间太短,交易信号可能较少。
-
-可以通过优化参数,调整做单时间,或与其他指标组合来降低风险。
-
-### 策略优化
-
-1. 可以引入止损机制,设定止损线,避免亏损扩大。
-2. 可以优化百分比R的参数,使超买超卖判断更准确。  
-3. 可以在多个时间周期同时使用该策略,实现多周期交易。
-4. 可以与其他指标组合,例如KDJ,MACD等,使交易信号更可靠。
-
-### 总结
-
-该策略整体来说较为简单实用,通过反转交易思路设计,适合短线频繁交易。优化空间较大,可以引入更多技术指标组合使用,也可以建立自动止损机制来控制风险。
-
-||
 
 ### Strategy Overview
 
@@ -108,7 +59,6 @@ Risks can be reduced by optimizing parameters, adjusting order placement time, o
 
 In general, this strategy is quite simple and practical. It is designed based on the reversal trading idea and suitable for short term frequent trading. There is large room for optimization. More technical indicators can be introduced for combination. And automatic stop loss mechanisms can also be established to control risks.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/129e281b8eacb15d51f.png)
-[trans]
-## 概述
-
-该策略通过结合Hull指标和LSMA(最小二乘移动平均线)指标来识别趋势方向和趋势反转点,实现对趋势的跟踪。当Hull指标显示上升趋势而LSMA上穿Hull指标时做多;当Hull指标显示下降趋势而LSMA下穿Hull指标时做空。该策略适用于中低频交易,可在1分钟时间框架使用。
-
-## 策略原理
-
-- Hull指标用于判断价值的趋势方向。当中轨线(MHULL)在下轨线(LHULL)之上时,表示上升趋势;反之则表示下降趋势。
-
-- LSMA指标用于识别趋势反转点。当LSMA指标上穿MHULL时,表示上升趋势形成或加速;当LSMA指标下穿MHULL时,表示下降趋势形成或加速。  
-
-- 结合两者,当Hull指标显示上升趋势(MHULL > LHULL)且LSMA上穿MHULL时,做多;当Hull指标显示下降趋势(MHULL < LHULL)且LSMA下穿MHULL时,做空。
-
-- 止损设置为最近的波动点。做多止损为最近最低点,做空止损为最近最高点。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. Hull指标反应迅速,能及时捕捉趋势转换;LSMA平滑性强,识别反转信号准确可靠。两者组合使用效果好。
-
-2. 通过LSMA的穿越来过滤Hull指标判断的假信号,降低了错误交易的概率。
-
-3. 采用波动点作为止损位,最大程度保护了资金安全。
-
-4. 适用于中低频交易,可在1分钟甚至更低的时间框架使用,适用性广。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 在震荡行情中,Hull指标和LSMA可能出现多次交叉造成交易过于频繁。应适当调整参数以降低交易频率。
-
-2. 止损设置为波动点可能会因短期价格调整触发,应适当加宽止损位间距。  
-
-3. 因LSMA指标滞后性,可能略有误判的风险。应结合其他指标如K线形态来确认。
-
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 优化Hull指标和LSMA的参数,使其组合更匹配不同品种和时间周期。
-
-2. 增加基于波动率、交易量等的过滤条件,避免震荡行情下的错误交易。  
-
-3. 增加机器学习算法判断趋势倾向的辅助判断。
-
-4. 结合深度学习等技术判断关键支撑阻力区域,使止损更加合理。
-
-## 总结
-
-该策略通过Hull指标和LSMA的组合应用,对趋势方向变化进行判断,实施趋势跟踪交易。优点是操作简单,响应迅速,可广泛适用于中低频量化交易。通过进一步优化过滤条件、辅助判断和止损算法等,可望获得更好的策略效果。
-
-||
 
 ## Overview
 
@@ -119,7 +64,6 @@ The strategy can be optimized in the following aspects:
 By combining Hull and LSMA, this strategy effectively judges trend direction changes for trend following trading. It has the advantage of being simple to implement, responsive and widely applicable to medium-low frequency algo trading. Further improvements in filtering conditions, auxiliary judgements and stop loss algorithms can potentially yield better strategy performance.
 
 
-[/trans]
 
 > Strategy Arguments
 

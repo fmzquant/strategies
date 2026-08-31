@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/110b3437ca7e3e94835.png)
-[trans]
-## 概述
-本策略的核心思想是利用枢轴点进行量化交易。它寻找重要的枢轴高点和低点,当价格突破这些关键点时,进行逆转交易。
-
-## 策略原理
-该策略首先定义了寻找枢轴高点和低点的函数pivotHighSig()和pivotLowSig()。这两个函数会在左侧和右侧寻找符合条件的枢轴点。
-
-具体来说,对于枢轴高点,它会在左侧寻找连续多个更高的高点,在右侧寻找连续多个更低的高点。这样枢轴高点就处在一个相对更高的位置。枢轴低点的判断条件相反,它会在左右两侧寻找更高和更低的低点。
-
-找到枢轴高低点后,策略会进一步挑选出枢轴的枢轴点,也就是枢轴点中的重要点。这通过定义枢轴高低点的多个历史变量如ph1,ph2等实现。
-
-最后,当价格突破枢轴的枢轴点时,进行逆转交易。
-
-## 策略优势
-这种基于枢轴点的量化策略有以下几个优势:
-
-1. 利用了市场的支撑阻力区域,这些区域往往是价格反转的机会点
-2. 同时找重要的高点和低点,实现了多空双边交易
-3. 枢轴点是比较突出的 extremum 点,突破这样的点信号较强
-4. 利用枢轴的枢轴点,使信号更加可靠 
-
-## 风险及解决方法
-该策略也存在一些风险:
-
-1. 误判枢轴点,导致错误信号。解决方法是调整左右区间参数,确保枢轴点识别更加准确。
-2. 突破假突破。解决方法是结合更多因素过滤信号,如量能,成交量等。
-
-## 优化方向
-这种策略还可以从以下几个方向进行优化:
-
-1. 增加止损策略,使策略更加稳定
-2. 结合更多指标进行信号过滤
-3. 开发反转PRED策略,利用ml进一步优化枢轴点预测
-4. 增加参数自适应功能
-
-## 总结
-本策略overall表现良好,核心思路是发现重要的枢轴点并在其突破时进行反转交易。通过进一步优化,这种策略可以获得更加稳定可靠的信号,从而获得良好的收益。
-
-||
 
 ## Overview
 The core idea of this strategy is to use pivot points for quantitative trading. It looks for important swing highs and lows and makes reversal trades when prices break through these key levels.   
@@ -86,7 +47,6 @@ This strategy can be improved in the following areas:
 
 ## Conclusion
 Overall this strategy performs well. The core idea is to detect important pivot points and trade their breakouts. Further enhancements can generate more solid and reliable signals for higher and more consistent profits.  
-[/trans]
 
 > Strategy Arguments
 

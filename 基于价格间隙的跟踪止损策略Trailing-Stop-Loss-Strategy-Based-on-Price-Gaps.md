@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19d786e4e5ea7170dfd.png)
-[trans]
-
-## 概述
-
-该策略采用价格间隙原理,在突破低点时买入,设置止损单和止盈单,以跟踪最低价止损,实现盈利。
-
-## 策略原理
-
-当价格跌破最近N小时内的最低点时定位间隙,按照设置的百分比进入做多,同时设置止损和止盈单。之后会根据行情移动止损线和止盈线。具体逻辑如下:
-
-1. 计算N小时内的最低点作为绑定价格
-2. 实时价低于绑定价格乘以买入设置百分比时做多入场
-3. 设置止盈单为入场价格乘以卖出设置百分比 
-4. 设置止损单为入场价格减去入场价格乘以止损百分比
-5. 多单数量为策略权益的百分比
-6. 跟踪最低价移动止损线
-7. 止盈或止损平仓
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 采用价格间隙思想,在突破低点时入场,提高胜率
-2. 自动跟踪止损,可以锁住大部分利润
-3. 可配置止盈止损百分比,适应不同市场
-4. 适用于具有明显回转特征的品种
-5. 操作简单,容易实施
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. 间隙突破不一定成功,可能再次下探
-2. 止损或止盈设置不当可能造成过早止损或止盈失去更大行情
-3. 需要定期优化参数以适应市场变化
-4. 适用品种有限,对某些品种可能效果不佳
-5. 存在一定的人工干预需求
-
-## 策略优化方向
-
-该策略还可以从以下方面进行优化:
-
-1. 增加机器学习算法,实现参数的自动优化
-2. 增加更多止损止盈方式,如移动止损、挂单止损等
-3. 优化止损止盈逻辑,实现更智能更顺畅的止损止盈
-4. 结合更多指标判断信号可靠性,过滤误信号
-5. 扩大适用更多品种,提高策略通用性
-
-## 总结
-
-本策略整体而言是一个基于价格间隙思想的简单有效的跟踪止损策略。它减少了误入场的概率,能够有效锁住利润,在参数优化与过滤方面还有很大优化空间,值得进一步研究与改进。
-||
 
 ## Overview
 
@@ -113,7 +61,6 @@ The strategy can be improved in the following aspects:
 
 In conclusion, this is a simple and effective trailing stop loss strategy based on price gaps. It reduces false entries and locks in profits effectively. There is still much room for improvements in parameters tuning and signal filtering. It is worth further research and refinement.
 
-[/trans]
 
 > Strategy Arguments
 

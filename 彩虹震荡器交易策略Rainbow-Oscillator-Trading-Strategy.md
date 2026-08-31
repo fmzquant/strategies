@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14e36a681b5895a1bf0.png)
-[trans]
-### 概述
-
-彩虹震荡器交易策略主要利用多个指数平滑移动平均线和震荡指标构建多层震荡通道,形成级别明确的多空信号,属于趋势跟踪类策略。该策略综合利用RSI、CCI、Stochastic和MA组合指标判断市场总体走势和超买超卖区域,属于多因子评级型策略。  
-
-### 策略原理
-
-1. 计算RSI、CCI、Stochastic三个指标值的加权平均,构建综合震荡指标Magic;
-2. 对Magic指标做多次指数平滑处理,得到sampledMagicFast和sampledMagicSlow两条曲线; 
-3. sampledMagicFast代表快速平均线,sampledMagicSlow代表慢速平均线;
-4. 当sampledMagicFast上穿sampledMagicSlow时产生买入信号;
-5. 当sampledMagicFast下穿sampledMagicSlow时产生卖出信号;
-6. 计算最后一个bar的sampledMagicFast相对于前一个bar的变化方向,判断目前趋势;
-7. 根据趋势方向和sampledMagicFast与sampledMagicSlow的交叉情况判断入场和出场时机。
-
-### 策略优势
-
-1. 综合多个指标判断市场总体走势,提高信号准确性;
-2. 基于smoothed MA指标,有效抑制信号噪声; 
-3. 震荡信号层层递进清晰,容易操作;
-4. 结合趋势过滤,可配置成趋势跟踪或反转操作;
-5. 可自定义超买超卖区域强度,适应性强。
-
-### 策略风险 
-
-1. 参数设置失误可能导致曲线过于平滑,错过最佳入场时机;
-2. 超买超卖区域设置不当可能导致空仓时间过长;
-3. 多因子评级中某些指标失效会削弱信号有效性。
-
-对应解决方法:
-
-1. 优化参数,使曲线平滑度适中;  
-2. 调整超买超卖区域强度,降低空仓率;
-3. 测试每个指标的预测能力,按权重调整。
-
-### 策略优化方向
-
-1. 基于行情特点动态调整指标参数;
-2. 引入机器学习方法自动优化指标权重组合;  
-3. 增加volume和波动率等因子过滤入场信号。
-
-### 总结
-
-彩虹震荡器策略综合多种指标信号,通过指数平滑处理提高稳定性。该策略可配置成适应趋势和震荡市,也可仅用于特定品种的震荡走势。通过参数优化和指标扩展,可进一步提升信号质量。总体来说,该策略逻辑清晰,使用简单,容易掌握。
-
-||
 
 ### Overview
 
@@ -101,7 +55,6 @@ Solutions:
 
 The Rainbow Oscillator strategy combines signals from multiple indicators and uses exponential smoothing to improve stability. It can be configured for both trending and sideways markets, or for specific products. Further improvements can be made by parameter tuning and indicator expansion. Overall this is a clear, easy-to-use strategy.
 
-[/trans]
 
 > Strategy Arguments
 

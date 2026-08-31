@@ -9,86 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-相对波动指数(RVI)是一个改进自相对强弱指数(RSI)的技术指标。它通过计算10天内收盘价标准差来测量波动性的方向,从而判断市场趋势和力度。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 计算10天内的收盘价标准差StdDev。
-
-2. 计算10天内收盘价较前一日收高的部分u。
-
-3. 计算10天内收盘价较前一日收低的部分d。 
-
-4. 使用指数平滑方法计算u和d的14日指数移动平均nU和nD。
-
-5. 计算nU和nD的比值,再乘以100得到波动指数nRes。
-
-6. 当nRes低于买入区时做空,当高于卖出区时做多。
-
-7. 可以在代码中设置买入区、卖出区参数,及反向交易。
-
-该策略通过比较10天内收盘价波动性的多空差异,来判断市场下一步的可能走势。当多头波动性较大时为看涨信号,当空头波动性较大时为看跌信号。
-
-## 优势分析
-
-相对波动指数回测策略具有以下优势:
-
-1. 使用收盘价标准差计算波动性,相比价格本身更能反映市场波动信息。
-
-2. 计算方法简单清晰,易于理解实现。
-
-3. 买卖信号生成明确,不需要二次判断。
-
-4. 可灵活设置买入区、卖出区参数,调整策略灵敏度。
-
-5. 支持反向交易,可用于不同类型市场。
-
-6. 可视化展示指标线和买卖区,形成直观的交易信号。
-
-7. 回测验证了该策略的有效性。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 买卖信号可能出现误报,应结合趋势及支撑阻力判断。
-
-2. 仅考虑收盘价波动性,无法反映盘中价格行情。
-
-3. 参数设置不当可能导致过于频繁交易或收益下降。
-
-4. 实盘中交易成本会影响最终收益率。
-
-5. 反向交易模式下,亏损风险会加大。
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 结合其他技术指标过滤误报信号。比如MACD,KD等。
-
-2. 增加开仓仓位比例的动态调整。
-
-3. 优化买入区、卖出区的范围,使信号更准确。
-
-4. 增加止损机制来控制单笔亏损。
-
-5. 在高波动行情中降低仓位规模。
-
-6. 测试不同的指标参数设置。如计算天数,指数平滑参数等。
-
-## 总结
-
-相对波动指数回测策略通过对比多空波动性来判断市场方向,实现了一个较为简单直观的趋势跟踪策略。该策略优点是逻辑清晰、易于实现,回测效果良好,可以通过适当优化来改进其交易表现。但交易中仍需注意风险控制,并结合其它指标来验证交易信号。整体来说,该策略为量化交易提供了一个有价值的思路。
-
-||
 
 
 ## Overview
@@ -167,7 +87,6 @@ The strategy can be optimized in the following aspects:
 
 The RVI backtesting strategy judges market direction by comparing upside/downside volatility, implementing a simple and intuitive trend following strategy. The advantages are clear logic, easy implementation, good backtesting results. It can be improved through proper optimizations. Still need risk control in live trading, and combine other indicators to verify signals. Overall this strategy provides a valuable idea for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

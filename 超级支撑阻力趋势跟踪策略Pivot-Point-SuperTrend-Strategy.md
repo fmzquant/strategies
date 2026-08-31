@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8a047e7b1d676a445e.png)
-[trans]
-## 概述
-
-超级支撑阻力趋势跟踪策略是一种创新型的趋势跟踪策略,它将支撑阻力点和超级趋势这两个流行指标进行了融合,同时加入了一个额外的趋势过滤器来提高精确度。这个策略的灵感来源于Lonesome TheBlue的“支撑阻力点超级趋势”脚本,其目标是为交易者提供一个可靠的趋势跟踪工具,同时最大限度地减少假信号。
-
-## 策略原理
-
-该策略的基础在于支撑阻力点和超级趋势指标的融合,以及一个强大的趋势过滤器的添加。它首先在指定周期内计算支撑高点和低点,这些关键的参考点对趋势分析至关重要。通过加权平均计算,这些支撑阻力点形成一个中线,进一步完善了整个指标。
-
-接下来,根据中线和用户定义的ATR因子生成上下轨。这些波段会根据市场波动进行自我调整,为策略增加了灵活性。“支撑阻力点超级趋势”策略的核心在于准确识别主导趋势,该指标在价格与超级趋势波段互动时会平滑地在多头和空头信号之间转换。
-
-引入策略的额外趋势过滤器进一步增强了其能力。该过滤器基于移动平均线,动态评估趋势的力度和方向。通过将该趋势过滤器与原始的支撑阻力点超级趋势信号相结合,策略旨在做出更明智和可靠的交易决策。
-
-## 优势分析
-
-1. 提高精确度:趋势过滤器的加入通过在生成信号之前确认整体趋势方向来提高策略的准确性。
-
-2. 趋势延续:支撑阻力点和超级趋势以及趋势过滤器的整合,旨在在强劲的市场趋势期间延长交易,从而潜在地最大化获利机会。  
-
-3. 减少虚假信号:策略的加权平均计算再加上趋势过滤器有助于最小化假信号并减少不确定或盘整市场条件下的跳空。
-
-4. 支撑阻力见解:该策略继续根据支撑阻力点提供额外的支持和阻力位,为交易者提供有价值的上下文信息。
-
-## 风险分析
-
-1. 参数依赖:该策略对ATR周期和ATR倍数的参数很敏感,不适当的参数设置可能导致多余交易或错失良机。
-
-2. 趋势反转:在趋势反转点附近,策略可能会产生错误信号,导致不必要的损失。应结合止损来管理风险。
-
-3. 过度优化:参数可以通过优化得到最佳组合,但并不具有前瞻性。应考虑行情和品种差异对参数选择的影响。
-
-4. 空仓风险:当价格脱离上下轨时,策略会进入空仓状态。这可能错过趋势再次形成后的机会。
-
-## 优化方向  
-
-1. 结合其他指标:可以考虑加入成交量或波动率指标等,提高策略的稳健性。
-
-2. 动态参数:可以研究自动优化或根据市场环境调整参数的方法,使策略更具适应性。  
-
-3. 止损策略:研究如何在维持策略逻辑的前提下,设计止损机制,有效控制单笔损失。
-
-4. 品种适应性:评估策略 Parameter în diferite piețe și instrumente, optimizați parametrii în funcție de specificul fiecăruia.
-
-## 总结
-
-超级支撑阻力趋势跟踪策略是一个非常有前途的量化策略。它在简洁性、趋势跟踪能力等多个维度上展现出独特优势。同时,策略也有可以改进的空间,通过参数、止损、品种适应性等多方面优化,可以使其成为一个更加通用和可靠的量化工具。总的来说,该策略为交易者提供了一个高效捕捉市场趋势的有力工具。
-
-||
 
 ## Overview  
 
@@ -104,7 +56,6 @@ The additional trend filter introduced into the strategy further enhances its ca
 ## Summary  
 
 The Pivot Point SuperTrend strategy demonstrates unique strengths across dimensions like simplicity and trend following capability. At the same time, aspects like parameters, stop losses, cross-asset optimization offer room for improving it into an even more universal and reliable tool. Overall, it empowers traders with an efficient means of capturing market trends.
-[/trans]
 
 > Strategy Arguments
 

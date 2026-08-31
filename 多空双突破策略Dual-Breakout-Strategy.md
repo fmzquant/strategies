@@ -11,52 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ac1bfb5c630b1a3269.png)
 
-[trans]
-
-
-### 概述
-
-该策略使用布林带指标来寻找多空突破点,并结合ADX指标来过滤低波动的不利行情,实现趋势跟踪。
-
-### 策略原理
-
-该策略主要基于布林带指标来判断多空方向。布林带中线为N日收盘价的移动平均线,带宽通过标准差计算得到。当价格突破下轨时,判断为多头信号;当价格突破上轨时,判断为空头信号。 
-
-为了避免非趋势行情的无效突破带来的错误交易,该策略融合ADX指标来过滤低波动行情。只有当ADX值低于设定阈值时,才会发出买卖信号。当ADX值高于阈值时,则平掉所有头寸,等待行情转趋势。
-
-该策略还设定了回调止损和向上追踪止盈。具体来说,每次开仓后,会记录此前N日的最低价作为该方向的回调止损位,最高价作为向上追踪止盈位。这可以锁定盈利,同时尽量减少反转带来的损失。
-
-从代码逻辑来看,该策略首先计算布林带及ADX指标参数。然后判断价格是否突破布林带上下轨,同时ADX值是否低于阈值,如果满足则产生买卖信号。之后根据是否持仓以及持仓方向,实时更新和跟踪止损止盈位。
-
-### 优势分析
-
-- 利用布林带判断明确的多空突破点,可以抓住趋势机会
-- 综合ADX指标过滤,避免在无明确趋势时随波逐流
-- 回调止损可以有效控制单笔损失
-- 向上追踪止盈可以锁定大部分利润
-
-### 风险分析
-
-- 布林带突破没有考虑量能关系,可能产生假突破
-- ADX过滤判断不当也可能错过趋势机会
-- 止损止盈过于接近可能被反转止出
-- 参数设定不当也会影响策略表现
-
-可以考虑结合其他指标判断량能支持,确保突破 VALID ;优化ADX过滤条件,利用ADX曲线斜率来判断趋势转折点;适当放宽止损止盈范围,防止过于接近被止出。
-
-### 优化方向
-
-- 优化布林带长度参数,寻找最佳突破效果
-- 优化ADX过滤条件,平衡趋势判断和误判率 
-- 添加其他指标判断量能支持度,避免假突破
-- 优化回调止损幅度,防止过于敏感被止损
-- 优化追踪止盈幅度,适当拉大间距
-
-### 总结
-
-该策略整体思路清晰简洁,利用布林带判断明确的多空突破信号,并用ADX指标来过滤无明确趋势的 Choppy 行情,从而锁定趋势机会。同时设置回调止损和追踪止盈来控制风险和锁定利润。该策略易于理解实施,值得进一步测试和优化,可以成为基础趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -101,7 +55,6 @@ Consider combining with other indicators to confirm breakout with volume; optimi
 
 The strategy has a clear and simple logic, using Bollinger Bands for obvious breakout signals, filtered by ADX for trending conditions, to capture trend opportunities. Stop loss and take profit are used to control risk and lock in profits. Easy to understand and implement, the strategy is worth further testing and optimization as a basic trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

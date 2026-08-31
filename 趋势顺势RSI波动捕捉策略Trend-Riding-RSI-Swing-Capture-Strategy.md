@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/196badeecad7ec89cb4.png)
-[trans]
-
-## 概述
-
-趋势顺势RSI波动捕捉策略(Trend Riding RSI Swing Capture Strategy)是一个融合RSI、MACD和交易量分析的波动交易策略。该策略通过识别市场趋势的支撑位,在超买超卖现象出现时进行反向开仓,达到低买高卖的目的。
-
-## 原理
-
-该策略的核心指标为RSI、MACD和交易量。具体逻辑是:
-
-1. 判断RSI是否进入超买或超卖区间,来确认即将反转的时机;
-
-2. 利用MACD的金叉死叉来判断价格趋势和能量的变化,作为入场的辅助条件;
-
-3. 借助交易量的突破来判断真实的突破,避免虚假信号。
-
-以上三个条件同时满足时才会发出交易信号,做多做空方向取决于价格突破的方向。这样能有效过滤假突破,提高信号的可靠性。
-
-## 优势
-
-该策略最大的优势在于其出色的风险管理。策略中设置了移动止损、固定止损、固定交易量等严格的资金管理规则,能有效控制单笔交易的风险,确保资金安全。此外,策略还会结合交易量来过滤虚假突破,避免不必要的反转交易。所以无论行情如何,该策略都能稳定盈利。
-
-## 风险
-
-任何交易策略都无法完全规避市场风险,该策略也不例外。主要的风险集中在:
-
-1. 止损被突破。极端行情下,价格可能出现瞬间大幅波动的情况。如果止损位被直接突破,将面临巨额亏损。
-
-2. 参数设置不当。RSI、MACD等参数设置不当可能导致交易信号质量降低,产生过多错误信号。
-
-针对上述风险,可通过优化止损算法,引入追踪止损等方式进行缓解;同时要对关键参数进行反复测试、优化,确保其稳定可靠。
-
-## 优化方向  
-
-基于目前的策略框架,有以下几点主要的优化方向:  
-
-1. 增加机器学习算法,实现止损位动态追踪。避免止损被突破的风险。  
-
-2. 加入更多过滤指标,如布林带、KD等,提升信号的质量。减少不必要的反转交易。
-
-3. 优化资金管理策略,实时调整仓位。使之能更好地控制突发事件的影响。
-
-4. 利用高级数据分析,自动寻找最优参数。减少手工测试的工作量。
-
-5. 增加基于订单流的交易信号。利用更深层次的市场数据提升策略的效果。
-
-## 总结  
-
-趋势顺势RSI波动捕捉策略总的来说是一个非常实用的短线交易策略。它既考虑到了价格行情的趋势性,又关注超买超卖现象,再配合交易量过滤,形成了一套相对稳定的交易体系。在严格的风险管理下,该策略能够在各种行情中稳定盈利,值得投资者深入研究实践。
-
-||
 
 ## Overview   
 
@@ -110,7 +59,6 @@ The main optimization directions based on the current strategy framework:
 
 In summary, the Trend Riding RSI Swing Capture Strategy is a highly practical short-term trading strategy. It takes into account both price trend and overbought/oversold scenarios, and with volume filtering, forms a relatively stable trading system. Under strict risk control, this strategy can achieve steady profits across various market conditions, making itself worthy of in-depth research and practice for investors.
 
-[/trans]
 
 > Strategy Arguments
 

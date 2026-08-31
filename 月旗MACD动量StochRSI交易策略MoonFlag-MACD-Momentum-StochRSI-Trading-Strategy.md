@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/af4d780104ea56dc3a.png)
-[trans]
-## 概述
-
-月旗MACD动量StochRSI交易策略是一个利用MACD、动量和StochRSI三个指标进行判断的量化交易策略。该策略主要适用于比特币和以太坊的日线交易。
-
-## 策略原理
-
-该策略使用以下几个关键指标进行判断:
-
-1. MACD指标:快速SMA周期为50,慢速SMA周期为200,代表着市场中常用的50日线和200日线。该指标判断市场的长期趋势方向。
-
-2. 自创的动量指标:本质上与Stoch指标类似,用于判断市场的短期动量方向。
-
-3. StochRSI指标:判断市场力度和超买超卖情况。
-
-在进入多头时,需要同时满足MACD>0(代表着中长期趋势向上)、自创动量指标>0(代表着短期动量向上)和收盘价较前一日收高(代表着当前处于上升趋势)3个条件。
-
-平多头信号略复杂,需要同时满足MACD<0、自创动量指标<0、收盘价较前一日收低和StochRSI>20的4个条件。
-
-该策略综合判断了中长期趋势、短期动量和当前趋势,是一种较为稳健的突破系统。
-
-## 策略优势
-
-1. 多指标综合判断,避免产生假信号
-
-2. MACD参数选择考虑了市场重要的50日线和200日线
-
-3. 各指标参数测试变化后,策略效果变化不大,避免过拟合风险
-
-4. 回测数据充分,可靠性较高
-
-## 策略风险
-
-1. 突破系统容易被套利,可能会增加交易次数和滑点成本
-
-2. 综合多指标判断的复杂度较高,参数调整和优化难度大
-
-3. 日内短线操作风险较大
-
-## 策略优化
-
-1. 结合更多指标,如成交量的分析
-
-2. 增加机器学习算法,实现动态参数优化
-
-3. 降低交易频率,转换至更高周期进行判断
-
-## 总结
-
-月旗MACD动量StochRSI交易策略综合多种指标判断市场趋势和力度,回测效果较好,可靠性较高,适合有经验的量化交易者在高质量数字货币上应用和优化。
-
-||
 
 ## Overview  
 
@@ -113,7 +61,6 @@ The strategy comprehensively judges the medium-to-long-term trend, short-term mo
 
 The MoonFlag MACD Momentum StochRSI Trading Strategy comprehensively judges market trends and strength with multiple indicators, has good backtest results and high reliability, suitable for experienced quantitative traders to apply and optimize on quality cryptocurrencies.
 
-[/trans]
 
 > Strategy Arguments
 

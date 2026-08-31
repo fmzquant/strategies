@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17997fae09a4a0064ba.png)
-[trans]
-## 概述
-这是一个利用三重叠加超趋势指标进行交易决策的策略。它可以在趋势行情中捕捉较大的方向性机会。
-
-## 策略原理
-该策略利用ta.supertrend()函数计算三个不同参数设置的超趋势指标。分别计算10日3倍ATR的超趋势1,14日2倍ATR的超趋势2,以及20日2.5倍ATR的超趋势3。当价格上穿所有三条超趋势时生成买入信号。当价格下穿所有三条超趋势时生成卖出信号。
-
-超趋势指标结合ATR指标,能够有效跟踪价格变化趋势。三重叠加超趋势的策略,让信号更加可靠,从而在趋势行情中获取更大的收益。
-
-## 策略优势
-1. 三重过滤机制,避免假信号,提高信号质量
-2. 超趋势指标本身就具有较好的去噪功能  
-3. 可配置多个超参数组合,适应更广泛的市场环境
-4. 历史测试表现良好,收益风险比高
-
-## 策略风险
-1. 多重过滤信号可能错过部分机会
-2. 震荡行情中表现并不出色  
-3. 需优化三组超参数的组合
-4. 集中交易时间易受突发事件影响
-
-可以考虑以下几点来降低风险:
-1. 调整过滤条件,保留一两个超趋势
-2. 增加止损策略
-3. 优化超参数,提高胜率
-
-## 策略优化方向  
-1. 测试更多参数组合,寻找最佳超参数
-2. 增加机器学习算法,实时优化参数  
-3. 增加止损策略,控制单笔损失
-4. 结合其他指标,识别趋势和震荡
-5. 扩展交易时间,避开单一时间节点的风险
-
-## 总结
-本策略通过三重叠加超趋势进行决策,能有效识别趋势方向。它具有信号质量高,参数可优化等优点。同时也存在一定的风险,需要对参数和退出时机进行调整,以适应不同市场环境。总的来说,该策略表现突出,值得进一步研究和应用。
-
-||
 
 ## Overview  
 This is a strategy that makes trading decisions based on three overlapping SuperTrend indicators. It can capture larger directional opportunities in trending markets.  
@@ -83,7 +46,6 @@ The following can be considered to reduce risks:
 ## Conclusion
 This strategy makes decisions based on three overlapping SuperTrends, which can effectively identify trend direction. It has advantages like high signal quality and configurable parameters. At the same time, there are also certain risks. Parameters and exit timing need to be adjusted to adapt to different market environments. Overall, the strategy performs exceptionally well and is worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

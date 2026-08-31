@@ -9,85 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-双动量反转策略融合了反转策略和动量策略的优势,利用两类指标的信号进行组合,在突破点进行反向操作,以期获利。
-
-## 策略原理
-
-该策略由两部分组成:
-
-第一部分是123反转策略。它的原理是:
-
-- 当收盘价连续2天高于前一日收盘价,并且9日平均慢速K线低于50时,做多; 
-
-- 当收盘价连续2天低于前一日收盘价,并且9日平均快速K线高于50时,做空。
-
-第二部分是滤波动量指标。该指标的计算步骤为:
-
-1. 计算价格变动值xMom = close - close[1]
-
-2. 计算价格变动绝对值 xMomAbs = abs(close - close[1]) 
-
-3. 对价格变动值进行滤波,如果小于阈值Filter则记为0
-
-4. 对价格变动绝对值进行滤波,如果小于阈值Filter则记为0
-
-5. 计算最后n天内滤波后的价格变动值之和nSum
-
-6. 计算最后n天内滤波后的价格变动绝对值之和nAbsSum
-
-7. 计算动量值:nRes = 100 * nSum / nAbsSum
-
-8. 判断动量值与界限TopBand和LowBand的关系,输出交易信号
-
-该指标的特点是过滤掉小幅波动,只提取大趋势中的动量信息。
-
-最后,当两类指标信号一致时产生交易信号,做多或做空。
-
-## 优势分析
-
-该策略融合两种不同类型指标的优势,可以提高信号的质量:
-
-1. 123反转策略可以在转折点捕捉反转趋势,避免被套。
-
-2. 滤波动量指标只关注大幅波动,可以过滤噪音,抓住主要趋势。
-
-3. 两者结合可以验证信号,降低错误交易概率,提高胜率。
-
-## 风险分析 
-
-该策略主要存在以下风险:
-
-1. 单一时间周期分析,可能错过更大级别的趋势。
-
-2. 参数设置过于死板,不能适应市场变化。
-
-3. 双重验证可能错过部分机会,降低盈利空间。
-
-4. 质量不高的交易信号也会被验证通过,导致亏损。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加多时间周期验证,避免被套。
-
-2. 设置自适应参数,根据市场调整指标参数。
-
-3. 优化过滤阈值,减少信号误报率。 
-
-4. 增加止损策略,控制单笔亏损。
-
-5. 调整仓位管理,优化资金利用效率。
-
-## 总结
-
-综上所述,双动量反转策略结合反转策略和滤波动量指标的优点,在一定程度上可以提高信号质量和盈利效率。但该策略也存在一些问题,如忽略更大级别趋势、参数死板、信号误报等风险。通过多时间框架验证、自适应参数、设置止损等方法可以对该策略进行优化,减少风险,提高稳定盈利能力。
-
-|| 
 
 ## Overview
 
@@ -165,7 +86,6 @@ The strategy can be optimized in several aspects:
 
 In conclusion, the Momentum Reversal strategy combines the strengths of reversal and filtered momentum strategies to improve signal quality and profitability to some extent. However, it also has some flaws like ignoring larger trends, static parameters, false signals etc. Methods like multi-timeframe validation, adaptive parameters, stop loss can optimize the strategy by reducing risks and improving steady profitability.
 
-[/trans]
 
 > Strategy Arguments
 

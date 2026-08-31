@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1dcbdb058d97f0282f7.png)
-[trans]
-
-## 概述
-
-本策略结合使用了博林带和相对强弱指数(RSI)的技术指标,在RSI指标发生金叉或死叉时,判断价格是否触及或突破博林带上轨或下轨,以发出买入和卖出信号。
-
-## 策略原理
-
-1. 计算20周期的SMA作为基线,上轨为基线+2倍标准差,下轨为基线-2倍标准差,构建博林带。
-
-2. 计算14周期RSI值,RSI高于70为超买区,低30以下为超卖区。
-
-3. 当RSI指标下穿30时,如价格低于下轨,产生买入信号;当RSI指标上穿70时,如价格高于上轨,产生卖出信号。
-
-## 优势分析
-
-1. 博林带利用标准差范围来判断价格波动和未来走势,有较强的趋势判断能力。
-
-2. RSI指标判断超买超卖情况,结合博林带轨道判断,可以有效发现反转机会。
-
-3. RSI指标容易形成突破信号,与博林带结合,信号更加准确可靠。
-
-## 风险分析
-
-1. 博林带并不是百分之百准确,价格有可能会突破上下轨继续运行。
-
-2. RSI指标也可能形成假突破信号,与博林带判断结果不一致。
-
-3. 适当调整参数非常重要,参数设置不当可能导致交易信号过于频繁或稀少。
-
-## 优化方向
-
-1. 可以测试不同周期的参数,寻找最佳参数组合。
-
-2. 可以结合其他指标,如KD,MACD等,提高信号的可靠性。 
-
-3. 可以基于回测结果,优化止损止盈策略,控制风险。
-
-## 总结
-
-本策略集成博林带的趋势分析和RSI指标的超买超卖判断,形成交易信号。总的来说,策略思路清晰,易于实施,具有一定的实战价值。但也存在一定的风险,需要注意参数调整和指标整合,不断优化,使之适应不同市场环境。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ This strategy combines the Bollinger Bands and Relative Strength Index (RSI) tec
 
 This strategy integrates Bollinger Bands' trend analysis and RSI's overbought-oversold judgment to generate trading signals. Overall, the strategy logic is clear and easy to implement with certain practical value. But it also has some risks. Parameters tuning and indicators integration are needed to continuously optimize it to adapt to different market environments.
 
-[/trans]
 
 > Strategy Arguments
 

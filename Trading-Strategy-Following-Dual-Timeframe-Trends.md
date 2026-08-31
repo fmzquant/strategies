@@ -11,28 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-双重趋势跟随交易策略
-双重趋势跟随交易策略通过在多个时间周期判断趋势方向,实现在趋势开始时及早进入市场。该策略同时使用MACD和随机指数平滑移动平均线(SRSI)作为判断指标,在日线和4小时线形成一致信号时发出交易指令。
-
-策略原理:
-
-1. 在日线上计算MACD和SRSI指标,当MACD上穿信号线且SRSI%K上穿信号线时,判断为看涨信号。
-
-2. 在4小时线上计算MACD和SRSI指标,当MACD上穿信号线且SRSI%K上穿信号线时,判断为看涨信号。 
-
-3. 仅在日线和4小时线上的看涨信号同时出现时,做多入场。
-
-4. 若日线和4小时线上的看涨信号同时消失,平多仓位。
-
-5. 若日线和4小时线上的看跌信号(MACD和SRSI指标下穿)同时出现,做空入场。
-
-6. 若日线和4小时线上的看跌信号同时消失,平空仓位。
-
-7. 持续监控双重信号,实现趋势跟随。
-
-该策略的优势是能在趋势开始早期就进入市场,通过双重过滤提高信号的可靠性,避免在震荡期错
-||
 Trading Strategy Following Dual Timeframe Trends
 
 This trading strategy identifies trend direction across multiple timeframes to get into trends early. It uses both MACD and Stochastic RSI (SRSI) as indicators, and enters trades when consistent signals are triggered on the daily and 4-hour timeframes.
@@ -59,7 +37,6 @@ However, a potential risk is that strong trends can build on one timeframe befor
 
 Overall, the Dual Timeframe Trends Following strategy aims to capture trend moves in early stages. The dual confirmation helps avoid whipsaws but may occasionally miss initial entries. Careful parameter tuning and risk management is required.
 
-[/trans]
 
 > Strategy Arguments
 

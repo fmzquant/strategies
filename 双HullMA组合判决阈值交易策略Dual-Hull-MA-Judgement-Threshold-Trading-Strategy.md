@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过组合使用双Hull移动平均线和日K线比较,设定多空条件判决阈值进行交易。还设置了止损止盈价格进行风险管理。
-
-策略原理:
-
-1. 计算双Hull移动平均线,并比较当前值与前一周期大小关系。
-
-2. 计算日K线收盘价变化率,设定多空判决阈值。
-
-3. 当快线上穿慢线,且日变化率超过阈值时做多。当快线下穿慢线,且日变化率低于阈值时做空。
-
-4. 设置固定止损止盈价格。价格触及止损止盈时主动平仓。
-
-5. 还可设置最大开仓数量。
-
-该策略的优势:
-
-1. 双HullMA可提高判断准确性。日K线变化率确认龙头方向。
-
-2. 阈值设置避免被反向小幅价格影响。
-
-3. 止损止盈有助锁定利润,控制风险。
-
-该策略的风险:
-
-1. 过高过低的阈值设置会错过交易机会。需谨慎测试。
-
-2. 固定止损止盈价格无法灵活调整,存在不合理设置风险。
-
-3. HullMA及日变化率均存在滞后问题。
-
-总之,该策略通过双指标判决和风险管理措施进行交易,可在一定程度上提高稳定性。但仍需关注参数优化问题,寻找最佳配置。
-
-||
 
 This strategy trades based on a combination of dual Hull Moving Averages and daily candle comparison, with judgement thresholds for long/short conditions. It also uses fixed stop loss/take profit for risk management. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this dual-indicator judgement system with risk controls can improve stability to some extent. But optimization is still required to find the ideal configurations.
 
-[/trans]
 
 > Strategy Arguments
 

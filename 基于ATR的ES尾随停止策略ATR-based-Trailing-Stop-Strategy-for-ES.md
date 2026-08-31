@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16887f43aaf994086b9.png)
-[trans]
-
-## 概述
-
-本策略是一个应用于E-mini S&P500期货(ES)的尾随停止策略。它使用10日ATR作为参考,以3倍ATR作为止损范围来设置多头和空头的止损线。策略通过ATR线的方向变化来判断趋势,并在趋势转折点generate入场信号。一旦入场后,它会实时调整止损线,让止损线尾随价格运行,实现盈利的保护。
-
-## 策略原理
-
-本策略使用hl2作为价格源。首先计算10日ATR,并让用户选择是使用SMA方式计算ATR还是内置的ATR函数。计算出ATR后,向上向下各添加3倍ATR作为范围。这两个范围线就是止损线。
-
-判断趋势的方法是,当价格超过上边界,则为多头;当价格跌破下边界,则为空头。当价格重新回调进入范围时,则确认趋势转折。这时如果由空转多,generate多头入场信号;如果由多转空,generate空头入场信号。
-
-入场后,多头止损线设置为上边界下移1点,空头止损线设置为下边界上移1点,进行盈利的尾随保护。
-
-## 策略优势
-
-1. 使用ATR能够自动适应市场波动率的变化,降低止损被触发的概率
-2. 追踪趋势的方法简单有效,避免追顶和追底的风险
-3. 尾随止损保证了盈利的保护,避免获利后再次亏损
-
-## 风险分析
-
-1. ATR参数设定不当可能导致止损范围过大或过小
-2. 标的波动性陡变时,可能出现异常止损
-3. TAILING止损可能过于保守,未能持续追踪趋势
-
-## 优化方向
-
-1. 可以考虑结合波动率指标对ATR参数进行优化
-2. 可以测试不同的TAILING止损算法,如余额百分比止损等
-3. 可以结合趋势指标过滤入场信号,避免非主趋势入场
-
-## 总结
-
-本策略整体来说是一种较为普适的趋势跟踪策略。它解决了止损范围确定难的问题,通过ATR动态调整降低了风险。同时尾随止损进行盈利保护。但ATR参数、止损算法等仍有优化空间。通过进一步测试和调整参数,本策略可以成为鲁棒性较高的跟踪止损策略。
-
-||
 
 
 ## Overview
@@ -83,7 +46,6 @@ After entering, the long stop loss line is set to the upper boundary minus 1 tic
 
 In general, this is a robust trend following strategy. It solves the problem of determining stop loss range and reduces risks by adjusting stops dynamically based on ATR. At the same time, trailing stops lock in profits. But there is still room for optimizing parameters like ATR periods, stop algorithms etc. With further testing and tuning, this strategy can become a trend following strategy with high robustness.
 
-[/trans]
 
 > Strategy Arguments
 

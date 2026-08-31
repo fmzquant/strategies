@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c673feb61bc6c01e2b.png)
-[trans]
-
-## 概述
-
-本策略综合运用多种技术指标,实现动量反转与双轨配对,形成交易信号。策略运用123形态判断反转点,与ergodic CSI指标形成配对信号,实现趋势跟踪。该策略旨在捕捉中短线趋势,获得较高盈利。
-
-## 策略原理
-
-该策略包含两部分:
-
-1. 123形态判断反转点
-2. ergodic CSI指标生成配对信号
-
-123形态判断是通过最近3根K线的收盘价关系来判断价格反转。具体判断逻辑是:
-如果前两根K线后一根收盘价上涨,且当前快慢stoch指标都低于50,则为买入信号。
-如果前两根K线后一根收盘价下跌,且当前快慢stoch指标都高于50,则为卖出信号。
-
-ergodic CSI指标考虑了价格、真实波幅、趋势指标等多因素,综合判断行情走势,生成买入卖出区域。
-当指标高于买入区域时产生买入信号,低于卖出区域时产生卖出信号。
-
-最后,123形态的反转信号与ergodic CSI的轨道信号进行“与”运算,得到最终策略信号。
-
-## 策略优势
-
-1. 捕捉中短线趋势,盈利潜力较大
-2. 反转形态判断,可有效抓住转折点
-3. 双轨配对,可减少假信号
-
-## 策略风险 
-
-1. 个股行情可能出现背离,导致止损
-2. 反转形态容易受震荡市的影响
-3. 参数优化空间有限,效果波动大
-
-## 优化方向
-
-1. 优化参数,提高策略盈利效果
-2. 增加止损逻辑,降低单笔亏损
-3. 结合多因子模型,提升选股质量
-
-## 总结
-
-本策略通过反转形态与双轨配对,实现了对中短线趋势的有效跟踪。相比单一技术指标,具有更高的稳定性和盈利水平。下一步将进一步优化参数,并增加止损与选股模块,以减少回撤和提高整体效果。
-
-
-|| 
 
 ## Overview
 
@@ -99,7 +53,6 @@ Finally, the reversal signals from 123 pattern and zone signals from ergodic CSI
 
 This strategy effectively tracks medium-short term trends by combining reversal patterns and dual-rail matching. Compared to single technical indicators, it has higher stability and profit levels. Next steps are to further optimize parameters, add stop loss and stock selection modules to reduce drawdowns and improve overall performance.
 
-[/trans]
 
 > Strategy Arguments
 

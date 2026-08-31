@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1696cb77142639c95d5.png)
-[trans]
-
-### 概述
-
-本策略通过组合使用反转趋势策略和T3-CCI指标,实现在市场反转点位发出交易信号,属于短线量化交易策略。
-
-### 策略原理
-
-1. 反转趋势策略部分:使用2日收盘价比较判断价格反转信号,结合9日慢线K线指标判断超买超卖区域,发出做多做空信号。
-
-2. T3-CCI部分:使用T3均线做CCI指标的再平滑,减少错误信号,判断超买超卖区域,配合反转趋势策略过滤入场时机。
-
-两部分信号综合判定最终交易方向。
-
-### 优势分析
-
-1. 使用两种指标和价格比较判断,可有效识别潜在反转点位。
-
-2. T3均线的应用提高CCI信号的质量,减少假信号。
-
-3. 组合使用不同类型策略,可望提高策略整体稳定性。
-
-### 风险分析
-
-1. 反转失败的情况下,会产生错误信号和损失。需要及时止损控制风险。
-
-2. 参数设置不当也会影响策略表现,需要根据不同市场调整参数。
-
-3. 反转信号时效性较差,无法及时捕捉快速反转。
-
-### 优化方向
-
-1. 增加趋势过滤,避免反转失败带来损失。
-
-2. 尝试机器学习方法自动优化参数。
-
-3. 增加止损机制。
-
-4. 探索更加高效判断反转时机的指标。
-
-
-### 总结
-
-本策略综合运用多种技术指标判断潜在反转点位。可有效发掘市场反转机会,属于适合短线操作的量化策略。通过参数调整、止损保护、与趋势判断的组合等多种优化手段,可望进一步增强策略稳定性。
-
-||
 
 ### Overview 
 
@@ -99,7 +53,6 @@ The final trading direction is determined by the integrated signals from both pa
 
 This strategy combines multiple technical indicators to judge potential reversal points. It can effectively tap market reversal opportunities and is suitable for short-term operations. Through measures such as parameter adjustment, stop loss protection, combination with trend judgment and other optimization methods, the stability of the strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

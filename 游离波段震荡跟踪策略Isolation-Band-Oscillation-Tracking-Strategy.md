@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8c43e74f95969a8921.png)
-[trans]
-## 概述
-
-这个策略的主要思想是基于ATR指标计算出长线和短线的止损位,当价格突破这些止损线时生成交易信号。它同时具有趋势跟踪和震荡捕捉的功能。
-
-## 策略原理
-
-该策略使用ATR指标的N周期ATR乘以一个系数来计算长短两边的止损线。具体计算公式如下:
-
-```
-长线止损 = 最高价 - ATR * 系数
-短线止损 = 最低价 + ATR * 系数
-```
-
-当价格上涨突破长线止损线时做多,当价格下跌突破短线止损线时做空。做多做空后会实时跟踪价格的波动来移动止损线。
-
-这种以ATR波带作为止损位设置的方法,可以在保证止损风险的前提下充分捕捉价格趋势。当价格出现较大幅度的突破时产生信号,可以有效滤除假突破。
-
-## 优势分析
-
-这种策略最大的优势在于可以自动调整止损位,捕捉价格趋势的同时控制风险。具体优势如下:
-
-1. 基于ATR指标设置浮动止损,可以根据市场波动性调整止损幅度,有效控制单笔损失。
-
-2. 采用突破方式产生信号,可以滤除部分噪音,避免追顶和追底。
-
-3. 实时调整止损线追踪价格波动,防止止损过于宽松,锁定更多盈利。
-
-## 风险分析
-
-该策略也存在一些风险,主要集中在止损位设置和信号产生方式上。具体风险点如下:
-
-1. ATR周期和系数不当可能导致止损过宽或过窄。
-
-2. 突破信号方式可能漏掉趋势初期机会。
-
-3. 趋势末期止损追踪可能有所滞后,无法完美退出。
-
-对策主要是调整参数使止损更合理,或者辅助其他指标判断趋势和信号。
-
-## 优化方向 
-
-该策略可以从以下几个方面继续优化:
-
-1. 设置第二层止损,进一步控制风险。
-
-2. 结合其他指标判断趋势,提高信号质量。
-
-3. 添加移动止盈策略,在趋势进一步延续时提高获利。
-
-4. 优化ATR周期和系数参数,使止损更贴近实际价格波动。
-
-## 总结
-
-这个策略整体来说非常实用,可以自动调整止损位有效控制风险,同时通过趋势跟踪可以获得不错的盈利。我们可以在原有基础上进一步结合其他分析方法来优化和改进策略,使其更稳定和智能。
-
-||
 
 ## Overview
 
@@ -123,7 +66,6 @@ The strategy can be further optimized in the following aspects:
 
 Overall, this strategy is very practical. It can effectively control risks by automatically adjusting the stop-loss level, while obtaining good profits through trend tracking. We can further optimize and improve the strategy by combining other analytical methods on the existing basis to make it more stable and intelligent.
 
-[/trans]
 
 > Strategy Arguments
 

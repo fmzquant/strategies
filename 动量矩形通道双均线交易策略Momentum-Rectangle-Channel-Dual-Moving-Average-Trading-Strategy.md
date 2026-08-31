@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/168ef3bf42cc4be5551.png)
-[trans]
-### 概述
-
-本策略基于动量指标矩形通道和双均线指标,实现了一个较为完整的股票交易系统。策略首先使用快速EMA和慢速EMA构建双均线交易信号。然后结合矩形通道指标进一步验证交易信号,实现更准确的入场。此外,策略还使用了SAR指标来辅助判断趋势方向。
-
-### 策略原理  
-
-1. 计算快速EMA周期5日和慢速EMA周期50日的均线。快速EMA反映最近价格变化,慢速EMA反映长期趋势。
-
-2. 将EMA转换为TEMA(三重指数移动平均线),利用TEMA的加权计算方法,提高曲线的灵敏度,更快捕捉价格变化。  
-
-3. 当快速TEMA上穿慢速TEMA时产生买入信号;当快速TEMA下穿慢速TEMA时产生卖出信号。双均线交叉原理被广泛应用于量化交易。
-
-4. 计算价格通道宽度,形成通道区域。只有当价格突破通道才考虑发出交易信号。这可以过滤假信号,验证真正趋势的开始。  
-
-5. SAR指标判断整体趋势方向,与双均线交易信号组合使用,可以避免不必要的反向操作。
-
-
-### 策略优势
-
-1. 双均线交叉结合通道突破,可以有效识别趋势的开始,过滤噪音,使买卖信号更加准确可靠。
-
-2. TEMA曲线比EMA曲线更加灵敏,可以更快速捕捉价格变化。  
-
-3. 多种指标组合使用,可以形成指标间的验证机制,避免单一指标的局限性,使策略更加全面和稳健。  
-
-4. 策略参数设置灵活,EMA周期、通道宽度等都可以根据市场行情进行调整优化,适应性强。
-
-### 策略风险  
-
-1. 股价短期内存在剧烈波动的概率,容易引发止损。
-
-2. 突发事件导致股价出现缺口,无法按预期价格成交。  
-
-3. 双均线交叉并不能完全避免假信号的出现,仍有一定的误判率。
-
-4. 参数设置不当可能导致过于频繁或滞后的交易信号。
-
-### 优化方向
-
-1. 可以结合更多指标,如KD、MACD等进行验证,使策略更加全面可靠。  
-
-2. 可以设置动态周期,根据市场波动程度来调整EMA 和通道参数,使策略更加灵活。
-
-3. 可以建立机器学习模型,训练大量历史数据,自动优化参数设置,减少人工干预。
-
-4. 可以结合文本分析、新闻情感等判断市场气氛,避免在重大消息发布时无谓交易。
-
-### 总结  
-
-本策略通过快慢TEMA均线交叉形成交易信号,再结合价格通道和SAR指标进行验证,可以有效识别股价趋势的开始,在合理位置进行买卖操作。多种指标组合互相验证,可以提高信号的可靠性,是一种较为稳健和高效的股票交易策略。通过不断优化参数设置、增加新的验证指标等手段,策略的效果还可继续改进。
-
-||
 
 ### Overview
 
@@ -114,7 +61,6 @@ This strategy is based on momentum indicators of Rectangle Channel and Dual Movi
 
 This strategy forms trading signals through fast-slow TEMA moving average crossover, and then verifies them with price channel and SAR indicator, which can effectively identify the beginning of stock price trends and make buy and sell operations at reasonable positions. The combination of multiple indicators to verify each other can improve the reliability of signals and is a relatively robust and efficient stock trading strategy. By continuously optimizing parameter settings, adding new verification indicators, etc., the effect of the strategy can be further improved.  
 
-[/trans]
 
 > Strategy Arguments
 

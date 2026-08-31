@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e1d7482bf8258a29e2.png)
-[trans]
-## 概述
-该策略利用平均线双重过滤以及추세方向多重确认机制,设计了一个较为稳定的追踪系统。主要由三部分组成:
-
-1. 基于改进型双峰波动跟踪器的优化趋势跟踪系统,确定大趋势方向。
-
-2. 基于多周期均线组合的副趋势过滤系统,进一步过滤掉部分噪音。
-
-3. Alpha指数提供最终确认,确保交易信号的可靠性。
-
-通过上述三重保护,能使策略对大趋势的判断更加准确,对短期市场噪音也有很强的过滤能力。
-
-## 原理
-### 主趋势跟踪
-使用改进的双峰波动跟踪系统TOTT和Close Series双重趋势过滤计算主要趋势方向。TOTT本身对噪音就有很强的过滤能力。Close Series提供额外层次确认。二者结合,能对大趋势判断非常准确。
-
-### 副趋势过滤
-除了主趋势判断系统,策略还设置了基于EMA线组合的多周期副趋势过滤系统。根据EMA均线关系的Golden Cross和Dead Cross许多确认级别,进一步提高对主要趋势方向的判断的可靠性,过滤更多噪音。
-
-### Alpha确认
-在进入和平仓时,策略还会检查Alpha指数值,确保最终交易信号的可靠性。Alpha能反映市场买卖力量,是很好的确认指标。
-
-## 优势
-- 多重保护设计,对大趋势判断更精准
-- 强大的噪音过滤能力
-- 交易信号稳定可靠
-- 参数优化空间大
-
-## 风险
-- 信号生成频率可能偏低
-- 追踪系统中运用均线,在市场剧烈变动时可被突破
-
-要降低上述风险,可以调整参数优化追踪系统的灵敏度,或结合更多反转指标作为最终过滤。
-
-## 优化方向 
-- 调整双峰波动跟踪系统参数,寻找更佳参数组合
-- 尝试不同类型均线的参数优化
-- 优化EMA线组合的均线周期
-- 更新Alpha过滤机制
-- 增加止损机制
-
-## 总结
-该策略总体设计思路稳健,措施得当,多重保护和强大的噪音过滤为其赢得了稳定的表现。通过持续的参数优化和机制改进,策略的表现还有进一步提升的空间。
-
-||
 
 ## Overview
 This strategy uses average double filtering and multi-level trend direction confirmation mechanisms to design a relatively stable tracking system. It consists of three main parts:
@@ -98,7 +53,6 @@ To mitigate the risks, parameters can be adjusted to optimize tracker sensitivit
 
 ## Conclusion
 The overall design of this strategy is robust, with proper measures and multiple protections. The powerful noise filtering gives it stable performance. There is room for further improvement through continuous parameter optimization and mechanism enhancements.  
-[/trans]
 
 > Strategy Arguments
 

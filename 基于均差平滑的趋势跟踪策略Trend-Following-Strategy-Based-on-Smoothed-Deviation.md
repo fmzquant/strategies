@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15fe7902ea1b0bbb750.png)
-[trans]
-## 概述
-
-该策略是一种利用短期高低点和短期与长期平均成本之间均差判断趋势的指标策略。策略旨在增加短线敏感度,通过增大前后的均值平滑函数来降低盘整的损耗,以减少盘整中的小损失,同时在波段出现时保持大盈利。
-
-## 策略原理
-
-1. 计算短期成本:利用ta.highest和ta.lowest函数计算最近shortTerm根K线的最高价和最低价,然后求平均作为短期成本
-
-2. 计算长期成本:利用ta.sma函数计算最近longTerm根K线的收盘价的简单移动平均作为长期成本
-
-3. 计算均差:短期成本减去长期成本
-
-4. 平滑均差:对均差进行平滑处理,以减少误判,这里采用ta.sma进行简单移动平均
-
-5. 判断趋势:设定阈值threshold,当平滑均差大于threshold则判断为上涨趋势,当小于负的threshold则判断为下跌趋势
-
-6. 进出场:做多时跟踪上涨趋势,做空时跟踪下跌趋势
-
-## 优势分析
-
-1. 增加短期敏感度,可以快速捕捉短线机会
-2. 平滑处理,减少误判概率
-3. 设定通道,减少无谓开仓
-4. 紧跟趋势,及时止损止盈
-
-## 风险分析
-
-1. 短期专注容易被套,需要适当放大止损范围
-2. 需要反复测试参数,如短长期天数、均差平滑参数等,不当设置可能导致过于敏感或迟钝
-3. 需要合理设定通道宽度,过大过小都存在问题
-4. 震荡行情中容易被反复开仓套牢
-
-风险解决方法:
-
-1. 适当放大止损幅度,避免套牢
-2. 优化参数设置,平衡敏感度和误判率
-3. 测试并优化通道参数
-4. 加入过滤条件,避免震荡行情下无谓开仓
-
-## 优化方向
-
-1. 对短期高低点进行优化,如计算PA或加权等更平滑的短期成本
-2. 测试不同的长期成本计算方法
-3. 尝试不同的均差平滑算法
-4. 优化通道参数
-5. 添加开仓过滤,如突破,成交量放大等
-6. 反转 加入反转交易机会
-
-## 总结
-
-该策略整体是一个非常简单直接的趋势跟踪策略。相比常见的移动平均等指标,其通过计算短长期成本的均差,可以更快地判断趋势转折。同时平滑处理也使其参数优化空间较大,可以通过调整平滑参数来平衡敏感度与误判率。总的来说,该策略具有敏捷、直接、可定制性强等特点,是一种值得深度挖掘的有潜力的策略思路。通过继续优化参数以及加入辅助判断条件,有望进一步增强策略表现。
-
-||
 
 ## Overview
 
@@ -117,7 +63,6 @@ Risk Resolution:
 
 Overall this is a very simple and direct trend following strategy. Compared to common indicators like moving averages, by calculating the deviation between short and long term costs, it can judge trend changes faster. Meanwhile, the smoothing processing also provides greater flexibility in parameter optimization, allowing sensitivity and misjudgement rates to be balanced by adjusting the smoothing parameters. In summary, this strategy has characteristics like agility, directness and high customizability. It is a promising strategy worth deeper exploration. By continuing to optimize parameters and adding auxiliary judgement conditions, there is potential to further enhance the strategy's performance.
 
-[/trans]
 
 > Strategy Arguments
 

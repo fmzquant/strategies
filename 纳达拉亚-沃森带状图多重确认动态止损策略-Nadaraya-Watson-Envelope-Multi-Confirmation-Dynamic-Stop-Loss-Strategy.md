@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/87563679c672d20f09.png)
 
-[trans]
-#### 概述
-该策略利用纳达拉亚-沃森带状图对价格进行平滑处理,并根据平滑后的价格计算上下轨。然后使用ADX和DI指标判断趋势强度和方向,RSI指标确认趋势动能,同时通过价格突破上下轨来识别潜在的突破点。最后结合趋势、突破点和动能等多重信号来执行交易,并采用动态止损来管理风险。
-
-#### 策略原理
-1. 使用纳达拉亚-沃森带状图对价格进行平滑处理,计算上下轨。
-2. 利用ADX和DI指标判断趋势强度和方向。当ADX大于阈值,且+DI大于-DI时表示上升趋势,反之为下降趋势。
-3. 判断价格是否突破带状图上轨或下轨,分别表示潜在的向上突破和向下突破。
-4. 使用RSI指标确认趋势动能。当RSI大于70表示上升动能,小于30表示下降动能。
-5. 结合趋势、突破点和动能等多重信号来执行交易:
-   - 当存在强上升趋势、向上突破和上升动能时开多仓。
-   - 当存在强下降趋势、向下突破和下降动能时开空仓。
-6. 采用动态止损来管理风险,止损价格根据最高价/最低价和收盘价计算得出。
-7. 通过在图表上标注趋势线、突破点和动能信号,直观展示策略信号。
-
-#### 策略优势
-1. 纳达拉亚-沃森带状图可以有效平滑价格数据,减少噪音干扰。
-2. 多重信号确认机制提高了信号可靠性,趋势、突破点和动能信号互为补充,共同验证交易机会。
-3. 动态止损管理可以更好地适应市场波动,降低风险。止损价格根据最高价/最低价和收盘价计算得出,可以跟随市场调整。
-4. 在图表上直观标注趋势线、突破点和动能信号,方便用户观察和解读策略信号。
-
-#### 策略风险
-1. 在震荡市场或趋势转折期,频繁的突破信号可能导致过度交易和亏损。
-2. 动态止损在趋势反转时可能无法及时止损,导致回撤加大。
-3. 策略参数如纳达拉亚-沃森带状图的带宽、ADX的阈值等需要根据不同市场和标的进行优化,参数设置不当可能影响策略效果。
-
-#### 策略优化方向
-1. 引入更多有效的趋势判断指标,如MACD、均线系统等,提高趋势判断的准确性和稳定性。
-2. 优化动态止损计算方法,如考虑ATR、SAR等与波动率相关的指标,使止损更加灵活有效。
-3. 针对不同市场特点,如趋势型、震荡型等,设置不同的参数组合,提高策略的适应性。
-4. 加入仓位管理模块,根据市场趋势、波动率等因素动态调整仓位,控制风险。
-
-#### 总结
-该策略通过纳达拉亚-沃森带状图平滑价格,结合ADX、DI等趋势指标和RSI动能指标,以及价格突破点等多重信号,构建了一个较为完善的交易系统。动态止损管理可以一定程度上适应市场变化,控制风险。但在实际应用中仍需注意优化趋势判断、动态止损和参数设置等方面,以提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy utilizes the Nadaraya-Watson envelope to smooth the price data and calculate upper and lower bands based on the smoothed price. It then uses the ADX and DI indicators to determine trend strength and direction, and the RSI indicator to confirm trend momentum. Potential breakouts are identified when the price crosses above or below the envelope bands. Finally, it executes trades based on the combined signals of trend, breakout, and momentum, while employing dynamic stop-loss to manage risk.
@@ -81,7 +45,6 @@ This strategy utilizes the Nadaraya-Watson envelope to smooth the price data and
 
 #### Summary
 This strategy combines the Nadaraya-Watson envelope for price smoothing with trend indicators like ADX and DI, the RSI momentum indicator, and price breakout points to create a comprehensive trading system. Dynamic stop-loss management helps adapt to market changes and control risk to a certain extent. However, in practical application, attention should be paid to optimizing trend identification, dynamic stop-loss, and parameter settings to improve the strategy's robustness and profitability.
-[/trans]
 
 
 

@@ -11,107 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16bd4de29fdda2c7d6f.png)
 
-[trans]
-
-## 概述
-
-动态价格通道突破策略是一种基于Donchian价格通道指标的量化交易策略。该策略根据价格通道的上限线和下限线来判断市场趋势方向,在价格突破通道时建立做多或做空仓位。
-
-本策略的主要思想是Using breakouts of the Donchan price channel.当价格突破通道上限时,建立做多头寻求趋势;当价格跌破通道下限时,建立做空头寻求趋势。
-
-## 策略原理
-
-### 指标计算
-
-价格通道由以下公式计算:
-
-上限线 = 最高价的N周期最高值 
-
-下限线 = 最低价的N周期最低值
-
-中线 = (上限线 + 下限线)/2
-
-其中N代表通道周期长度,本策略中默认为50。
-
-### 入场规则
-
-当最新K线的最高价突破通道上限线时,建立做多仓位;
-
-当最新K线的最低价跌破通道下限线时,建立做空仓位。
-
-示例:
-
-上一根K线高点未超过通道上限;
-当前K线高点突破通道上限;
-==> 建立做多仓位
-
-### 出场规则
-
-出场规则有两种可选:
-
-1. 通道出场
-
-平多:止损价格为通道下限;  
-
-平空:止损价格为通道上限;
-
-2. 中心线出场
-
-无论多头仓位还是空头仓位,当价格重新跌破通道中线时,平掉所有仓位。
-
-### 风险控制
-
-风险控制采用比例止损方式,根据通道幅度和设置的可承受风险百分比计算具体止损距离。
-
-做多止损距离 = 入场价 * (1 - 可承受风险百分比)
-
-做空止损距离 = 入场价 * (1 + 可承受风险百分比)
-
-例如设置做多风险为2%,入场价为10,000美元,则多单止损线为10,000 * (1 - 2%) = 9,800美元。
-
-## 优势分析
-
-### 捕捉趋势突破
-
-当价格突破通道上下限时,很大概率开始新的方向性趋势。这时入场可以捕捉到较大幅度的价格变动。
-
-### 风险可控
-
-采用比例止损可以将单次损失控制在可承受范围内。
-
-### 参数优化空间大
-
-通道周期长度、风险比例、止损方式等参数可以进行优化组合,适应更多市场环境。
-
-## 风险分析
-
-### 突破失败
-
-价格突破通道上下限不意味着必然形成趋势,存在失败突破的概率,这时容易止损。
-
-### 震荡行情
-
-当市场处于宽幅震荡时,价格可能频繁触发通道上下限,导致过于频繁交易而增加交易费用和滑点损失。
-
-## 优化方向 
-
-### 动态通道
-
-可以考虑将价格通道的长度做成一个变量,根据市场波动率自动调整。市场震荡时增大通道长度,趋势明确时减小通道长度。
-
-### 优化入场机会
-
-结合其他指标过滤入场时机,例如量能指标、移动平均线等,避免在震荡行情中无效突破。
-
-### 参数规整
-
-使用更多历史数据对参数组合进行测试优化,确定最优参数以适应更广泛的市场情况。
-
-## 总结
-
-动态价格通道策略总的来说是一个较简单直观的趋势追踪策略。它的优势在于标志明确,容易掌握;风险控制比较合理。但也存在一些问题有待进一步优化,如失败突破和震荡市的处理等。本策略更适合作为趋势交易的辅助工具,和其他技术指标或模型组合使用效果会更好。
-
-||
 
 ## Overview
 
@@ -211,7 +110,6 @@ Use more historical data to test and optimize parameter combinations to determin
 
 The Dynamic Price Channel Strategy is generally a relatively simple and intuitive trend tracking strategy. Its advantages are clear signals and easy to grasp; The risk control is relatively reasonable. But there are still some problems to be further optimized, such as handling failed breakouts and oscillating markets. This strategy is more suitable as an auxiliary tool for trend trading, and the effect will be better when combined with other technical indicators or models.
 
-[/trans]
 
 > Strategy Arguments
 

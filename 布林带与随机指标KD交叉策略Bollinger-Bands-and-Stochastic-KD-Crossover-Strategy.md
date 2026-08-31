@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8442344634cc29c41a.png)
-[trans]
-
-## 概述
-
-该策略结合了布林带和随机指标KD两个技术指标,通过判断价格是否跌破布林带下轨以及随机指标KD是否金叉来决定买入时机,并通过判断价格是否跌破布林带中轨或者价格是否突破布林带上轨来决定卖出时机。该策略力求捕捉市场超卖后的反弹行情,同时控制回撤风险。
-
-## 策略原理
-
-1. 计算布林带:使用价格的简单移动平均线作为布林带中轨,上下轨的计算方式为中轨加减价格标准差的固定倍数。
-
-2. 计算随机指标KD:随机指标K值为当前收盘价在最近N个周期最高价最低价区间的相对位置,D值为K值的M日简单移动平均。
-
-3. 买入条件:当前收盘价跌破布林带下轨,且随机指标KD金叉(K值上穿D值)时,策略买入。
-
-4. 卖出条件:当前收盘价跌破布林带中轨或者突破布林带上轨时,策略卖出。
-
-通过布林带判断价格是否处于相对低位,再结合随机指标KD金叉确认反转信号,以此作为买入时机;当价格重新回归至布林带中轨附近或者超买至上轨时,及时卖出以控制风险并锁定利润。
-
-## 优势分析
-
-1. 结合价格和动量指标,能较好地捕捉超卖后的反弹行情。
-
-2. 布林带能动态刻画价格的相对高低位置,与固定阈值相比更加客观有效。
-
-3. 随机指标KD能反映价格的超买超卖状态以及动量变化,与布林带形成有效互补。
-
-4. 设置明确的止损位和止盈位,控制单笔交易风险敞口。
-
-5. 参数可调,适用于不同市场和周期。
-
-## 风险分析
-
-1. 对于震荡市或趋势不明朗时,该策略表现可能欠佳,需要结合趋势判断指标甄别。
-
-2. 随机指标KD在某些情况下可能出现骗线,需要结合其他方法进一步确认。
-
-3. 布林带和随机指标KD参数的选取需要根据回测进行优化,不恰当的参数可能导致过早止损或持仓时间过长。
-
-4. 缺乏仓位管理和资金管理方面的考虑,回撤控制能力有限。
-
-## 优化方向
-
-1. 引入趋势判断指标如移动平均线,仅在趋势明确时采用该策略。
-
-2. 对随机指标KD金叉信号进行二次确认,如判断K值是否位于低位区。
-
-3. 对布林带和随机指标KD参数进行优化,找出最佳参数组合。
-
-4. 在策略中加入仓位管理和资金管理模块,如采用凯利公式计算仓位、设置总体止损线等。
-
-5. 不同市场和周期分别进行参数优化和回测,提高策略的适用性。
-
-## 总结
-
-本文介绍了一种基于布林带和随机指标KD的交易策略。该策略通过比较价格与布林带的位置关系以及随机指标KD的交叉信号来判断买卖时机,力求捕捉超卖后的反弹行情并控制回撤风险。策略优点在于能动态刻画价格相对高低位置,并结合价格超买超卖状态进行决策,信号明确且互为补充。但该策略也存在一定局限性,如对于震荡市表现欠佳、随机指标KD存在骗线可能、缺乏仓位管理等问题。未来可以从趋势判断、信号确认、参数优化、资金管理等方面对策略进行完善,提高其适用性和稳健性。总的来说,该策略提供了一个布林带和随机指标KD联用的思路,但在实盘应用中还需要根据具体市场特点和风险偏好进行调整和优化。
-
-|| 
 
 ## Overview
 
@@ -121,7 +64,6 @@ By using Bollinger Bands to determine if the price is at a relatively low level 
 ## Conclusion
 
 This article introduces a trading strategy based on Bollinger Bands and Stochastic KD. The strategy determines entry and exit points by comparing the price's position relative to the Bollinger Bands and the crossover signals of the Stochastic KD, aiming to capture the rebound after oversold conditions while controlling drawdown risk. The strategy's advantages lie in its ability to dynamically depict the relative high and low levels of price and make decisions based on the overbought and oversold status of the price, providing clear and complementary signals. However, the strategy also has certain limitations, such as underperforming in range-bound markets, the possibility of false signals from Stochastic KD, and lack of position sizing, among others. In the future, the strategy can be refined in terms of trend identification, signal confirmation, parameter optimization, and money management to improve its adaptability and robustness. Overall, the strategy provides an idea of combining Bollinger Bands and Stochastic KD, but it needs to be adjusted and optimized according to specific market characteristics and risk preferences when applied to real trading. 
-[/trans]
 
 > Strategy Arguments
 

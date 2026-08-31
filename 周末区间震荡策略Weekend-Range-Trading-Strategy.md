@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略专门针对周末的价格波动进行交易,通过事先设定的涨跌幅区间判断多空方向。属于典型的震荡交易策略。
-
-策略原理:
-
-1. 参考上周周五收盘价,设定涨跌幅区间,例如区间上限为收盘价上涨4.5%。
-
-2. 当价格超过区间上限时,进行做空操作;当价格低于下限时,做多操作。
-
-3. 在已有仓位的情况下,根据超过新一层区间继续加仓,比如加空或加多。
-
-4. 累计盈利达到一定比例时,平仓止盈,例如10%。
-
-5. 每次最多持有两个方向的仓位。周一开盘前全部平仓。
-
-该策略的优势:
-
-1. 设定固定的涨跌幅区间,进行机械化操作。
-
-2. 分阶段加仓可获得较好成本价。
-
-3. 周期性规律稳定,不受基本面影响。
-
-该策略的风险:
-
-1. 无法限制单笔亏损大小,存在大单亏损的风险。 
-
-2. 固定的参数无法适应不同时间段的市场波动率。
-
-3. 周期性规律可能发生变化,带来模型失效风险。
-
-总之,该策略利用周期性规律进行频繁交易,但存在一定盈利锁定困难的问题。需警惕参数失效及单笔亏损过大的风险,谨慎操作。
-
-||
 
 This strategy specifically trades the weekend price swings by determining long/short direction based on pre-set percentage bands. It is a typical range trading system.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy frequently trades the weekend cycle but faces challenges locking in profits consistently. Exercise caution on parameter failure and outsized losses when applying.
 
-[/trans]
 
 > Strategy Arguments
 

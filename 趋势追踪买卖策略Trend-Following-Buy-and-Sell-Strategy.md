@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c95443fc38295b404d.png)
 
-[trans]
-
-
-## 概述
-
-趋势追踪买卖策略是一种简单的趋势跟随日内交易策略。该策略的基本思想是根据移动平均线判断趋势方向,在趋势中的震荡进行买进和卖出。
-
-## 策略原理
-
-该策略使用简单移动平均线SMA判断趋势方向。在上升趋势中,当K线出现低点时(“回调”),策略会在突破此前K线的最高点时做多;在下跌趋势中,当K线出现高点时(“反弹”),策略会在突破此前K线的最低点时做空。 
-
-该策略还利用 Blanchflower意氏指标%K和%D进行趋势判断。当%K上穿%D时平仓做反方向交易。此外,策略还利用MACD和Signal曲线作为过滤条件,只有在MACD和Signal符合趋势方向时才会执行交易。
-
-该策略可以仅做多、仅做空或同时做多做空。起始日期可以设定回测的开始月份和年份。所有参数如移动平均线周期、K周期、D周期、MACD参数等都可以自定义。
-
-## 优势分析
-
-- 使用移动平均线判断趋势方向可以有效过滤震荡,避免错误交易
-- Blanchflower指标的应用可以及时判断趋势反转,以控制风险
-- MACD和Signal的过滤减少了不符合趋势方向的noise交易
-- 可自定义参数以适应不同品种的价格行为
-- 可仅做多、仅做空或双向交易,可以灵活调整适应市场环境
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-- 大幅突破移动平均线造成巨额亏损的风险。可以适当增大移动平均线周期以降低风险。
-- 在震荡趋势中交易频繁造成 overtrading。可以加大%K周期降低交易频率。 
-- MACD和Signal参数设置不当造成过滤无效。应根据具体品种优化参数。
-- 双向交易时多空仓位积累过大造成亏损。应限制仓位规模。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-- 优化移动平均线周期,在保持对趋势判断的同时尽量过滤震荡
-- 优化%K,%D参数,在保持捕捉趋势反转的同时减少whipsaw
-- 优化MACD参数,使其过滤效果更好地减少noise交易
-- 增加仓位控制,如固定数量开仓、浮动仓位等
-- 增加止损策略,如移动止损、时间止损、ATR止损等
-
-## 总结
-
-趋势追踪买卖策略整体思路清晰简单,通过移动平均线判断趋势方向,并利用指标过滤以锁定趋势中的交易机会。该策略可以通过参数优化得到不错的效果,但仍需要Combine代码封装以减少过优化风险并提高稳定性。此外,适当优化以控制风险也很重要。总体来说,该策略作为日内交易策略还是比较实用的。
-
-||
 
 
 ## Overview
@@ -103,7 +56,6 @@ The strategy can be improved in the following aspects:
 
 The Trend Following Buy and Sell Strategy has a simple and straightforward logic to trade pullbacks in trends identified by SMA and filtered by indicators. Fine tuning parameters and risk controls can lead to decent results, but Combine encapsulation is still needed to prevent overfitting and improve robustness. Overall it is a practical intraday trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

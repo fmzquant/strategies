@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/157ca95d206025fec65.png)
-[trans]
-#### 概述
-
-本策略运用50周期平滑移动平均线(SMMA)和20周期简单移动平均线(SMA)的交叉信号来判断买入和卖出时机。当快线SMA向上突破慢线SMMA时产生买入信号;当SMA向下跌破SMMA时产生卖出信号。同时,策略preset了固定止盈位和动态止损位来锁定利润和控制风险。
-
-#### 策略原理
-
-1. 计算并绘制50周期SMMA和20周期SMA。
-2. 当SMA从下向上突破SMMA时,产生买入信号;相反,SMA从上向下突破SMMA时,产生卖出信号。
-3. 在买入和卖出信号发生时,分别建立"Buy"和"Sell"的仓位。
-4. 为每个仓位设置了固定150个点的止盈位。
-5. 在产生信号的下一根K线收盘价设置动态止损位。
-6. 如果价格触碰止盈位,则止盈;如果触碰止损位,则止损。
-
-#### 优势分析
-
-1. 双均线策略容易操作,原理简单,容易理解。
-2. SMMA是对SMA的改进,能更好地抓住趋势。
-3. 结合不同周期的SMA和SMMA,可以在滤波震荡的同时捕捉趋势。  
-4. 采用动态止损可以根据行情变化调整止损位置,有效控制风险。
-5. 预设止盈位有助于及时锁定利润。
-
-#### 风险分析
-
-1. 双均线策略容易产生虚假信号,被套利。可以适当过滤信号,避免过于频繁交易。
-2. 固定止盈易错过大行情。可以设定移动止盈或盈利比例止盈。
-3. 动态止损在行情剧烈波动时可能会过于靠近,应适当放宽止损幅度。
-4. 需注意不同品种和周期参数的差异性。
-
-#### 优化方向  
-
-1.可以测试不同参数(周期数、过滤条件等)的组合,寻找最佳参数;
-
-2.可以结合其他因子过滤信号,例如成交量突增;  
-
-3.可以采用参数优化工具寻找最优参数;
-
-4. 可以考虑结合移动止盈、比例止盈等其他止盈方式;
-
-5. 可以结合市场波动率计算动态止损幅度。
-
-#### 总结
-本策略整体运行简单,通过双均线捕捉趋势方向;灵活运用固定止盈和动态止损来锁定利润和控制风险,可谓风险和收益并重。本策略可进一步通过参数和规则优化来适应更广泛的市场环境。
-
-||
 
 #### Overview
 
@@ -99,7 +54,6 @@ This strategy uses the crossover signals between the 50-period Smoothed Moving A
 #### Conclusion
 This strategy has relatively simple logic, capturing trend directions via dual moving averages. Flexible usage of fixed take profit and dynamic stop loss for profit taking and risk control strikes a balance between risk and reward. Further parameter and logic optimization can adapt this strategy to a wider range of market conditions.
 
-[/trans]
 
 
 

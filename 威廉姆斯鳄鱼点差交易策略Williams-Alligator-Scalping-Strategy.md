@@ -9,91 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于Bill Williams的鳄鱼指标,但是使用另一种价格输入——Heiken Ashi蜡烛线。这是一个短线scalping策略,适用于1分钟到5分钟时间框架。
-
-## 策略原理
-
-该策略的主要交易原理有:
-
-1. 使用Heiken Ashi蜡烛线而不是标准蜡烛线作为价格输入。Heiken Ashi可以过滤市场噪音,识别趋势。
-
-2. 应用Bill Williams鳄鱼指标中的三条均线:下颚线、牙齿线、唇线。它们类似于移动平均线,可以判断趋势方向。
-
-3. 当三条均线排列为:下颚线最低,牙齿线居中,唇线最高时,表示多头趋势;当排列顺序为:下颚线最高,牙齿线居中,唇线最低时,表示空头趋势。
-
-4. 根据Heiken Ashi实体方向和鳄鱼线排列情况判断入场。实体向上且鳄鱼线排列看多,则做多;实体向下且鳄鱼线排列看空,则做空。
-
-5. 当鳄鱼线排列顺序发生变化时,表示趋势反转,应及时止损离场。
-
-6. 采用固定止盈、止损点数设置风险管理。可选目标利润点数、止损点数、追踪止损来控制每单损益。
-
-该策略结合双重过滤器,既使用Heiken Ashi识别趋势,也使用鳄鱼线判断反转,形成高概率的短线交易策略。
-
-## 优势分析
-
-该策略具有以下主要优势:
-
-1. 双重指标过滤减少假信号。Heiken Ashi和鳄鱼线的组合可提高信号质量。
-
-2. 清晰直观的趋势判断。鳄鱼线的排列明确可靠,不会产生模棱两可情况。
-
-3. 高效的短线交易捕捉。适合1分钟到5分钟周期的scalping交易。
-
-4. 简单的参数设定。无须复杂优化,少量参数即可使用。
-
-5. 严格的风险管理。使用止盈止损点数控制每单损益。
-
-6. 明确的入场退出机制。根据鳄鱼线排列变化来开平仓。
-
-7. 容易复制实施。新手交易者也可以轻松使用该策略。
-
-## 风险分析
-
-该策略的主要风险有:  
-
-1. 回撤风险。鳄鱼线产生频繁信号,将增加交易频率和滑点成本。
-
-2. 震荡行情风险。盘整行情中鳄鱼线将频繁交叉,产生错误信号。
-
-3. 过优化风险。参数优化不当可能导致曲线过拟合。
-
-4. 指标失效风险。市场极端情况下鳄鱼线可能完全失效。
-
-5. 止损被突破风险。快速突破可能触发止损造成损失。
-
-6. 交易频率过高风险。高频交易增加交易成本和不必要的滑点损失。
- 
-可通过 expectancy Expectancy 治理,优化止损策略,控制交易频率等方法来缓解上述风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 整合其他指标进行信号过滤,提高胜率。例如结合RSI等强弱指标。
-
-2. 设置ATR动态止损,以控制单笔亏损风险。
-
-3. 添加仓位管理模块,优化每次开仓规模。可在趋势更明朗时加大仓位。
-
-4. 结合图形形态等技术分析方法,提高入场的准确性。
-
-5. 按照市场类型(股票、外汇等)进行参数优化,使之更符合该品种。
-
-6. 增加机器学习模块,实现参数的自适应优化。
-
-7. 进行Expectancy胜率计算,优化止盈止损比例。
-
-通过持续改进,该策略可以成为一套稳定的短线交易策略。
-
-## 总结  
-
-该策略使用Heiken Ashi配合Bill Williams鳄鱼指标,形成高概率的短线交易策略。它具有指标双重过滤、简单参数设置、明确的入场退出机制等优势,可有效捕捉趋势变化进行scalping交易。但也需要警惕震荡 markets 市场中产生的 whipsaws 误交易,并控制止损风险。通过不断优化,该策略可成为相对稳定的短线交易系统。
-
-||
 
 
 ## Overview
@@ -178,7 +93,6 @@ With continuous improvements, the strategy can become a robust short term tradin
 
 The strategy combines Heiken Ashi with Williams' Alligator to create a high probability short term trading strategy. It benefits from dual indicator filtering, straightforward parameters, and well-defined entry/exit mechanics to effectively scalp trends and reversals. But whipsaws in ranging markets and stop loss risks need active management. With ongoing refinements, it can evolve into a relatively stable short term trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1768190150193bd0ccd.png)
 
-[trans]
-#### 概述
-这是一个结合双均线交叉、RSI超买超卖以及风险收益比的量化交易策略。该策略通过短期和长期移动平均线的交叉来确定市场趋势方向,同时利用RSI指标识别超买超卖区域,实现更精准的交易信号过滤。策略还集成了基于ATR的动态止损设置和固定风险收益比的获利目标管理系统。
-
-#### 策略原理
-策略采用9日和21日两条移动平均线作为趋势判断的基础,通过RSI指标的超买超卖区域(35/65)进行信号确认。在多头入场条件下,要求短期均线位于长期均线之上且RSI处于超卖区域(低于35);空头入场则需要短期均线位于长期均线之下且RSI处于超买区域(高于65)。策略使用1.5倍ATR值设置止损距离,并基于2:1的风险收益比自动计算获利目标。为防止过度持仓,策略设置了最短3小时的持仓时间限制。
-
-#### 策略优势
-1. 多重信号确认机制显著提升了交易的可靠性
-2. 动态止损设置能够根据市场波动性自适应调整
-3. 固定风险收益比有助于长期稳定获利
-4. 最短持仓时间限制有效避免了过度交易
-5. 可视化标记系统便于策略监控和回测分析
-6. 背景颜色变化直观显示当前持仓状态
-
-#### 策略风险
-1. 双均线系统在震荡市可能产生假信号
-2. RSI指标在强势趋势中可能错过部分交易机会
-3. 固定的风险收益比可能在某些市场环境下不够灵活
-4. ATR止损在波动性突变时可能不够及时
-5. 最短持仓时间可能导致错过及时止损机会
-
-#### 策略优化方向
-1. 引入自适应的均线周期选择机制,根据市场状态动态调整
-2. 增加趋势强度过滤器,提高信号质量
-3. 开发动态风险收益比调整系统,适应不同市场环境
-4. 整合成交量指标,提升信号可靠性
-5. 添加市场波动性分析模块,优化交易时机选择
-6. 引入机器学习算法优化参数选择
-
-#### 总结
-本策略通过多重技术指标的协同配合,构建了一个相对完整的交易系统。它不仅关注入场信号的质量,还注重风险管理和利润目标的设定。虽然存在一些需要优化的地方,但整体框架设计合理,具有良好的实用价值和扩展空间。策略的模块化设计也为后续优化提供了便利条件。
-
-|| 
 
 #### Overview
 This is a quantitative trading strategy that combines dual moving average crossover, RSI overbought/oversold conditions, and risk-reward ratio management. The strategy determines market trend direction through short-term and long-term moving average crossovers while using RSI indicator to identify overbought/oversold zones for more precise trade signal filtering. It also integrates ATR-based dynamic stop-loss settings and a fixed risk-reward ratio profit target management system.
@@ -77,7 +43,6 @@ The strategy employs 9-day and 21-day moving averages as the foundation for tren
 
 #### Summary
 This strategy constructs a relatively complete trading system through the coordination of multiple technical indicators. It focuses not only on entry signal quality but also on risk management and profit target setting. While there are areas for optimization, the overall framework design is reasonable with good practical value and room for expansion. The modular design also provides convenience for subsequent optimizations.
-[/trans]
 
 
 

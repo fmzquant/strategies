@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11be9ee78d7176ac20a.png)
-[trans]
-### 概述
-
-本策略运用Keltner通道指标,结合移动平均线,设定动态突破买入和卖出价格,实现低买高卖的突破操作。策略可自动识别通道突破买入和卖出机会。
-
-### 策略原理
-
-1. 计算通道中轨:运用指数移动平均线计算价格中轨
-2. 计算通道带宽:运用真实波幅或平均真实波幅或价格振幅的移动平均计算通道带宽
-3. 通道上轨线和下轨线:中轨线±N倍的通道带宽
-4. 入场顺序:当价格触碰上轨线时,设置突破买入价格,等待突破;当价格触碰下轨线时,设置突破卖出价格,等待突破
-5. 出场顺序:买入后回落至中轨时或最高价超过入场价时止损;卖出后反弹至中轨时或最低价低于入场价时止损
-
-### 优势分析
-
-1. 使用动态通道,能够快速捕捉市场趋势变化
-2. 运用中轨利于判断价格走势方向
-3. N倍带宽设置让通道范围合理,避免频繁调整仓位
-4. 运用突破机制,符合趋势理论,顺势而为
-5. 设定止损条件严格控制风险
-
-### 风险分析 
-
-1. 中轨线计算方法选择会影响通道范围与价格匹配效果  
-2. N倍数设置过大过小都会影响策略收益率
-3. 突破买卖容易形成虚假信号,应严格止损
-
-### 优化方向
-
-1. 尝试不同的中轨线计算方法,寻找最佳参数
-2. 测试不同的N值,找到最优倍数
-3. 加大突破幅度,避免虚假信号
-4. 优化止损逻辑,严格控制单笔损失
-
-### 总结
-
-本策略总体运用科学合理,通过动态通道指标判断价格走势和方向,设置合理参数捕捉突破信号,实现低买高卖,进而获取超额收益。同时对策略风险进行持续优化,使之能够在多种市场中稳定运行。
-
-||
 
 ### Overview
 
@@ -87,7 +48,6 @@ This strategy uses the Keltner Channel indicator, combined with moving average l
 
 The overall strategy uses scientific and reasonable methods to judge price trends and directions through dynamic channel indicators, sets reasonable parameters to capture breakthrough signals, achieves low-buy-high-sell, and gains excess returns. At the same time, continuously optimize the risks of the strategy so that it can run stably in various markets.
 
-[/trans]
 
 > Strategy Arguments
 

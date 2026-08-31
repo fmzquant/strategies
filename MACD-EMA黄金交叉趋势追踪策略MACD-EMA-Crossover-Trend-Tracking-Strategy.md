@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14274a17bd9bd8765a6.png)
-[trans]
-
-## 概述
-
-该策略通过计算MACD指标及其移动平均线信号线的交叉来确定趋势方向,并结合EMA指标判断当前趋势强弱,实现趋势追踪。当MACD线从下向上突破信号线时做多,从上向下突破做空,同时EMA线也可判断趋势强弱从而过滤假突破。
-
-## 策略原理
-
-该策略主要基于MACD指标判断趋势方向和入场时机。MACD线突破信号线表明价格趋势发生反转,因此根据突破方向来判断做多做空。具体判断逻辑是,当收盘价高于EMA平均线,且MACD线从下方突破信号线时,做多;当收盘价低于EMA平均线,且MACD线从上方向下突破信号线时,做空。
-
-EMA均线的作用是辅助判断趋势,如果价格高于EMA均线说明处于上涨趋势,此时MACD下方突破容易形成运行的黄金交叉信号;如果价格低于EMA均线说明处于下跌趋势,此时MACD上方突破容易形成死叉信号。EMA的长度也决定了判断趋势的中长期程度。
-
-通过上述方式,可以在价格开始反转形成新趋势时及时进入场内,实现趋势追踪效果。
-
-## 优势分析  
-
-该策略结合双重判断条件,既考虑到价格的趋势方向,又利用指标判断具体的入场时机,避免假突破的风险,增强了策略的可靠性。相比单一采用MACD指标,该策略可以更准确判断新趋势的启动。
-
-EMA均线的运用也使策略在一定程度上过滤掉短期波动的影响,锁定中长线趋势。这对于发挥MACD指标判断反转的效果很有帮助。 
-
-此外,策略同时设定做多和做空条件,可以适用于涨跌莲花的市场环境,这也增强了策略的适应性。
-
-## 风险分析
-
-该策略主要风险在于MACD指标本身判断 Fakeout 的概率较大,信号可能会被错误识别。此时就需要EMA均线的辅助功能,但是在特殊行情中也有失效的可能。
-
-此外,策略中采用了盈亏比例来设置止损止盈条件,这存在一定程度的主观性,如果设置不当也会影响策略效果。
-
-最后,策略中简单设置了开仓数量为100%的账户权益,没有考虑资金管理问题,这在实盘中也存在一定的风险。
-
-
-## 优化方向  
-
-该策略主要有以下几个优化方向:
-
-1. 增加其他指标判断,形成多个指标组合,可以进一步避免MACD发出错误信号的概率。例如可以考虑KDJ、BOLL等。
-
-2. EMA均线长度可以进行多组合优化,找到判断趋势方向最佳参数。
-
-3. MACD参数也可以进行进一步优化,找到确定反转时机最准确的参数取值。
-
-4. 增加资金管理模块,例如盈亏比例可以作为动态输入,也可以设置滑点止损等。
-
-5. 测试不同品种合约的效果,寻找最匹配的交易品种。例如加密货币、股指期货等。
-
-
-## 总结
-
-该MACD EMA黄金交叉趋势追踪策略整体来说较为简单实用,通过双重指标判断确保信号的可靠性,设置合理的止损止盈方式锁定利润。主要优化空间在参数选择、指标组合、资金管理等方面。如果进一步优化测试,相信该策略可以成为高效的趋势追踪策略之一。
-
-||
 
 ## Overview  
 
@@ -112,7 +61,6 @@ The main optimization directions for this strategy include:
 
 Overall, this MACD EMA Crossover Trend Tracking strategy is relatively simple and practical. It ensures signal reliability through dual indicator conditions and locks in profits through reasonable stop loss and take profit methods. The main optimization space lies in parameter selection, indicator combinations, capital management, etc. With further optimization and testing, it is believed that this strategy can become one of the most efficient trend tracking strategies.
 
-[/trans]
 
 > Strategy Arguments
 

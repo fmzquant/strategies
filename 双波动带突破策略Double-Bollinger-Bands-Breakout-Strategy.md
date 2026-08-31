@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11d6e890201cab34787.png)
 
-[trans]
-
-## 概述
-
-双波动带突破策略是一种趋势跟踪策略。它利用波动带的上下轨来判断价格趋势,并在价格突破内部波动带时建立多头头寸,在价格跌破外部波动带时平仓。
-
-## 策略原理
-
-该策略首先计算指定周期内的均线及标准差,通过调整标准差数值构建双波动带。内部波动带由均线正负一个标准差构成,外部波动带则由均线正负1.5个标准差构成。
-
-当价格突破内部上轨时,认为行情开始牛市,因此做多;当价格跌破内部下轨时,认为行情开始熊市,因此做空。
-
-做多后的止盈退出条件是价格跌破外部下轨。做空后的止盈退出条件是价格突破外部上轨。
-
-该策略同时设定了止盈、止损、跟踪止损等退出机制。
-
-## 优势分析
-
-双波动带突破策略具有以下优势:
-
-1. 利用双波动带判断价格走势,可以有效跟踪趋势;
-2. 突破内部波动带建仓,避免了不必要的反转交易; 
-3. 设定止盈、止损和跟踪止损,可以有效控制风险;
-4. 参数可调,可以针对不同品种进行优化。
-
-## 风险分析
-
-双波动带突破策略也存在一定的风险:
-
-1. 当行情震荡时,可能出现频繁的建仓和止损;
-2. 参数设置不当可能导致过于容易建仓或难以止盈;
-3. 突破有时具有虚假信号的特点,可能出现假突破的风险。
-
-针对以上风险,可以适当调整参数,或结合其他指标进行过滤,或人工监控突破的效果,降低风险。
-
-## 优化方向 
-
-双波动带突破策略可以从以下几个方面进行优化:
-
-1. 优化均线和标准差的参数,使波动带更符合不同品种的特点;
-2. 增加Volume和MACD等指标过滤,避免虚假突破;
-3. 利用机器学习方法动态优化参数;
-4. 在高频区间内进行策略复制,扩大获利空间。
-
-## 总结
-
-双波动带突破策略overall通过判断价格相对波动带的位置变化,选时建立交易信号,是一个较为典型的趋势跟踪策略。该策略利用双波动带设置获利区域,并设定科学的退出机制控制风险,在参数优化和风险控制到位的情况下,可以获得较好的效果。
-
-|| 
 
 ## Overview
 
@@ -107,7 +58,6 @@ The Double Bollinger Bands Breakout strategy can be optimized in several ways:
 
 The Double Bollinger Bands Breakout strategy overall judges changes in price relative to Bollinger Bands to time entries in a typical trend following approach. The strategy sets profit targets using the double bands and scientific exit mechanisms to control risk. With optimized parameters and risk controls, it can achieve good results.
 
-[/trans]
 
 > Strategy Arguments
 

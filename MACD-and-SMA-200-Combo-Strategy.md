@@ -9,19 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-MACD与SMA 200组合策略
-
-该策略将经典的MACD指标与200周期SMA移动平均线组合使用,形成交易信号。
-
-具体来说,当MACD的直方图和MACD动量均高于0,快速移动平均线高于慢速移动平均线时做多。同时价格高于200周期SMA作为追踪多头的第二条件。反之当直方图和MACD动量低于0,快速移动平均线低于慢速移动平均线并且价格低于200周期SMA时做空。
-
-这种策略的优势是同时利用MACD判断短期趋势和波动节奏,以及SMA判断长期趋势方向。组合使用提高判断准确性,避免被套。但MACD和SMA均有滞后问题,无法及时捕捉转折。
-
-总体来说,MACD与SMA 200组合策略适用于中长期持仓。能够有效捕捉主要趋势转换点。但需要关注指标发出信号时的时间节点,防止追高杀跌之嫌。
-
-||
 
 This strategy combines the classic MACD indicator with the 200-period SMA moving average to generate trading signals.
 
@@ -31,7 +18,6 @@ The advantage of this strategy is utilizing MACD for short-term trend and rhythm
 
 In summary, the MACD & SMA 200 combo strategy suits medium-long term holding. It effectively captures major trend change points. But attention is needed on timing of indicator signals to avoid chasing tops/bottoms.
 
-[/trans]
 
 > Strategy Arguments
 

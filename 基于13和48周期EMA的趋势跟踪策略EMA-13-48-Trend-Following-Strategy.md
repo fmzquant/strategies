@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1222a2d1c76b6591fd0.png)
-[trans]
-
-## 概述
-
-本策略基于13周期和48周期的指数移动平均线(EMA)构建交易信号,属于双EMA金叉死叉类型的趋势跟踪策略。当短期EMA上穿长期EMA时做多,当短期EMA下穿长期EMA时平仓。该策略通过 Capture较长周期的趋势,避免被市场短期波动所误导,从而取得稳定收益。
-
-## 策略原理
-
-本策略使用13周期EMA作为短期EMA,48周期EMA作为长期EMA。假设短期EMA为快线,长期EMA为慢线。
-
-当快线从下方上穿慢线时,产生买入信号。此时短期趋势开始强于长期趋势,代表趋势开始变强,做多能够顺势而为。 
-
-当快线从上方下穿慢线时,产生平仓信号。此时短期趋势开始弱于长期趋势,代表趋势开始变弱,做多可能面临回撤,因此选择平仓止损。
-
-通过这样的金叉死叉操作,能够顺势而为,及时止损,避免把短期波动当成趋势反转所造成的不必要损失。
-
-## 策略优势
-
--  Capture长周期趋势,避免被短期市场噪音误导。13周期和48周期的参数选择,能够平滑价格数据,识别出较长的趋势方向。
-
--  回撤控制能力较强。当短期趋势变弱时能够快速止损,有效控制亏损。
-
--  实现简单,逻辑清晰。双EMA交叉是常见的趋势策略,容易理解掌握。
-
--  可扩展性强。可以在原有基础上引入其他辅助指标进行优化。
-
-## 策略风险
-
--  当短期行情震荡频繁时,可能产生多次不必要的交易信号。
-
--  EMA参数设置不当时,识别趋势能力较差,可能Capture错方向。
-
--  无法判断趋势的强弱,在趋势最后阶段也会追高造成损失。
-
--  无法确定具体入场点位,存在后期调整风险。
-
-## 策略优化方向 
-
-- 引入辅助指标判断趋势强弱,避免追高。例如引入成交量指标、波动率指标等。
-
-- 优化EMA参数,使得Capture的趋势周期更符合不同品种的特点。
-
-- 增加止损方式,如移动止损、百分比止损等,降低风险。
-
-- 增加过滤条件,避免趋势震荡期无效交易。例如引入DMI、KDJ等判断趋势状况。
-
-- 结合其它入场指标精确入场点位。例如MACD信号,明确具体买卖时机。
-
-## 总结
-
-本策略通过13周期和48周期EMA形成的金叉死叉系统,能够识别较长周期的趋势方向,顺势而为,在趋势结束前止损。是一种较为简单实用的趋势跟踪策略。但可能Capture错方向和追顶的风险依然存在。可以通过引入辅助指标、优化参数、增加止损方式等进行改进,使策略更稳定可靠。
-
-||
 
 
 ## Overview
@@ -115,7 +62,6 @@ Through such crossover operations, this strategy can trend-follow, cut loss in t
 
 This strategy identifies longer cycle trend directions through the crossover system formed by 13-period and 48-period EMAs, trend-following accordingly and cutting loss before trend ends. It is a simple and practical trend following strategy. But risks like capturing wrong directions and chasing tops still exist. Improvements can be made by introducing assist indicators, optimizing parameters, adding stop loss methods etc, to make the strategy more stable and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

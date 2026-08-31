@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于移动平均线识别出关键的支撐和阻力价格区域,在这些区域发生突破时进行交易操作。策略简单有效,容易理解和实施。
-
-## 策略原理
-
-该策略使用长度为50周期的简单移动平均线SMA,来识别出关键的支撐和阻力区域。具体来说:
-
-- 当收盘价从下方突破SMA时,取过去50周期内的最高价作为阻力位R
-- 当收盘价从上方跌破SMA时,取过去50周期内的最低价作为支撐位S
-- 收盘价超过阻力R时,做多
-- 收盘价跌破支撐S时,做空
-
-也就是说,该策略利用长度为50周期的SMA分割价格区域,当价格突破这些区域时,以相反方向进行交易。突破阻力做多,跌穿支撐做空。策略简单明了,容易操作。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用移动平均线识别支撐阻力具有一定的可靠性,可以有效过滤假突破。
-2. 50周期长度不长不短,可以识别出较为重要的中期支撐阻力。
-3. 仅使用SMA一条指标,系统开销小,容易实现。
-4. 突破交易策略简单有效,容易操作。
-5. 可配置参数少,不容易过度优化。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 仍存在一定的假突破风险,移动平均线无法完全过滤。
-2. 固定周期无法适应市场各个周期,可能错过较短周期的机会。
-3. 突破后可能出现回调测试前高低,需要有一定的止损技巧。
-4. 长期持仓时,需要关注更大级别的趋势方向。
-
-针对这些风险,可以通过适当调整移动平均线周期,或加入趋势过滤指标等进行优化。同时做好止损管理非常重要。
-
-## 优化方向
-
-该策略可以考虑从以下几个方向进行优化:
-
-1. 增加例如MACD等指标,辅助判断趋势方向和力度。
-2. 加入MA周期的自适应优化,让周期能够动态调整。
-3. 优化突破识别,例如要求同时突破MA和布林带上下轨等。
-4. 增加止损机制,以控制单笔损失。
-5. 尝试不同的MA周期参数,寻找最优参数组合。
-
-通过这些优化,可以使策略更具弹性,在不同市场周期中都能发挥效果。
-
-## 总结
-
-整体来说,该策略利用简单移动平均线识别支撐阻力区域,进行价格突破操作,简单高效。优化空间也较大,可从多个维度进行改进。虽然存在一定的假突破风险,但配置合理的止损可以有效控制。该策略思路清晰易懂,非常适合作为初学者的入门策略来实践。
-
-||
 
 
 ## Overview
@@ -118,7 +63,6 @@ These improvements can make the strategy more robust across different market cyc
 
 Overall, the strategy identifies support/resistance with SMAs and trades breakouts, keeping things simple and effective. There is also significant room for optimization across multiple dimensions. While false breakouts remain a risk, prudent stop loss usage can effectively control this. The strategy is easy to understand for beginners and great for gaining practical experience.
 
-[/trans]
 
 > Strategy Arguments
 

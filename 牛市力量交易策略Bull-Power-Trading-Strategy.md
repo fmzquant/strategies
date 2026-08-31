@@ -10,97 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8720436b76ac76473f.png)
-[trans]
-
-## 概述
-
-牛市力量交易策略是基于“公牛熊平衡指标”的一个趋势跟踪策略。该策略通过计算当前K线与前一K线的关系,判断目前的市场是处于多头还是空头的状态,从而进行相应的买入或卖出操作。
-
-## 策略原理
-
-该策略的核心指标是value,它通过比较当前K线的收盘价、开盘价、最高价和最低价,来判断市场的多空状态。
-
-具体计算公式如下:
-
-如果收盘价 < 开盘价:
-
-    如果前一K线的收盘价 < 当前K线的开盘价:
-        value = max(最高价 - 前一K线收盘价,收盘价 - 最低价) 
-    否则:
-        value = max(最高价 - 开盘价,收盘价 - 最低价)
-
-如果收盘价 > 开盘价:
-
-    如果前一K线的收盘价 > 当前K线的开盘价:
-        value = 最高价 - 最低价
-    否则:
-        value = max(开盘价 - 前一K线收盘价,最高价 - 最低价)
-
-如果收盘价 == 开盘价:
-
-    如果最高价 - 收盘价 > 收盘价 - 最低价:
-        如果前一K线的收盘价 < 当前K线的开盘价:
-            value = max(最高价 - 前一K线收盘价,收盘价 - 最低价)
-        否则:
-            value = 最高价 - 开盘价
-
-    如果最高价 - 收盘价 < 收盘价 - 最低价: 
-        如果前一K线的收盘价 > 当前K线的开盘价:
-            value = 最高价 - 最低价
-        否则:
-            value = max(开盘价 - 前一K线收盘价,最高价 - 最低价)
-    
-    否则:
-        如果前一K线的收盘价 > 当前K线的开盘价:
-            value = max(最高价 - 开盘价,收盘价 - 最低价)
-        否则:
-            value = max(开盘价 - 前一K线收盘价,最高价 - 最低价)
-
-该公式的主要思想是,通过比较价格的大小关系,判断当前K线的多空状态。如果收盘价低于开盘价,代表空头;如果收盘价高于开盘价,代表多头。
-
-将计算出的value值与输入的两个参数SellLevel和BuyLevel进行比较。如果value大于SellLevel,表示市场空头;如果value小于BuyLevel,表示市场多头。
-
-根据比较结果,进行相应的买入或卖出操作。
-
-## 策略优势
-
-1. 该策略响应迅速,能够快速捕捉趋势的转折点,及时调整仓位。
-
-2. 通过动态计算当前K线与前一K线的关系,实时判断市场多空,不依赖固定指标。
-
-3. 策略参数较少,SellLevel和BuyLevel直接影响具体的交易逻辑,容易理解和调整。
-
-4. 可灵活调整反向交易和正常交易逻辑,适用于不同市场环境。
-
-## 策略风险
-
-1. 该策略对突发事件反应灵敏,可能会产生过多无效交易。
-
-2. value指标计算复杂,在某些极端情况下会失效,导致错误信号。
-
-3. 仅基于一个自定义指标操作,系统性风险较大。
-
-4. 未考虑止损逻辑,可能带来较大亏损。
-
-可通过适当放宽买卖条件,加入止损机制,或者与其他指标组合使用来减小这些风险。
-
-## 策略优化方向 
-
-1. 结合其他指标过滤交易信号,例如MACD、KDJ等,避免错误交易。
-
-2. 加入流动性指标,避免高波动期的错位交易。 
-
-3. 优化参数SellLevel和BuyLevel的设定,适应不同周期和品种。
-
-4. 增加止损策略,控制单笔亏损。
-
-5. 结合VIX指标判断市场波动率,不同市场环境使用不同参数。
-
-## 总结
-
-牛市力量交易策略是基于当前K线与前一K线价格关系的实时多空判断指标,能够快速响应市场变化,捕捉趋势转折点。策略简单易于理解和实现,但仅基于一个自定义复杂指标,可通过多种方式进行优化,使其参数更好地适应市场环境,过滤假信号,控制风险。总体来说,该策略适合追求高响应速度的短线操作者。
-
-||
 
 ## Overview
 
@@ -190,7 +99,6 @@ These risks can be reduced by relaxing buy/sell criteria, adding stop loss mecha
 
 The Bull Power trading strategy makes real-time judgment of market bullish/bearish status based on price relationships between the current K-line and previous K-line. It captures trend changes quickly. The strategy itself is simple to understand but relies solely on a complex custom indicator. It can be optimized in various ways to make parameters adaptive to market conditions, filter false signals and control risks. In summary, this strategy suits short-term traders pursuing high response speed.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/157bc32bf38e4509773.png)
 
-[trans]
-
-### 概述
-
-该策略主要用于自动化BTC的长线投资。通过双EMA和LSMA的交叉来判断趋势方向,并使用ATR指标计算动态止损,实现对BTC多头趋势的有效跟踪。
-
-### 策略原理
-
-1. 使用25期EMA和100期LSMA构成双均线,它们的交叉用来判断行情趋势。EMA快速响应价格变化,LSMA滤波假突破。
-
-2. 当快速EMA上穿缓慢LSMA时判断为仍处于多头趋势,这时做多;反之当快速EMA下穿缓慢LSMA时判断为进入空头,此时平仓。
-
-3. 进入做多后,使用ATR指标计算的动态止损不断调整,实现对BTC上涨趋势的有效跟踪。具体来说,止损线初始点为进场价格,之后每次调整都会向上滑移固定比例的ATR幅度。
-
-4. 止损线能够有效锁定BTC上涨带来的浮盈,同时防止止损点过于靠近最新价格导致频繁止损。此外,策略还设置了两个不同比例的移动止盈,用于锁定更多利润。
-
-### 优势分析
-
-1. 使用双均线判断趋势更可靠,能有效防止产生假信号。
-
-2. ATR动态跟踪止损,既能锁定大部分利润,也可避免频繁小止损。
-
-3. 无论多头行情是否结束,只要均线发出退出信号就会止损了结,风险控制到位。
-
-4. 自动化程度高,无需人工干预,便于实盘长时间运行。
-
-### 风险分析 
-
-1. 仍需关注突发重大消息面,避免巨额滑点损失。
-
-2. 虽然双均线结合能减少假信号,但在震荡行情中也难以完全避免。
-
-3. ATR参数设置不当也会影响止损效果,需要根据不同品种调整。
-
-4. 均线周期不合理或者未能及时更新也会导致信号产生滞后。
-
-5. 保证服务器稳定性,避免异常宕机导致自动交易中断。
-
-### 优化方向
-
-1. 可以尝试加入更多指标判断趋势,如布林带。或者使用机器学习模型预测价格。
-
-2. ATR动态止损的计算方法还可进行调整优化,使止损更平滑。
-
-3. 可以添加基于交易量、日内轮动 FEATURE的报警机制来防范重大消息面的冲击。
-
-4. 不同币种参数不尽相同,可以使用更多历史数据训练出个性化参数。
-
-### 总结
-
-本策略总体来说是一个非常实用的BTC自动投资程序。使用双EMA判断大趋势非常可靠,再辅以ATR跟踪止损,既可以获得不错的盈利,有效期也可以拉的很长。随着参数不断优化调整,本策略的效果还大有提升空间,非常值得实盘验证。
-
-||
 
 ### Overview
 
@@ -115,7 +62,6 @@ This strategy is mainly used for the automated long-term investment in BTC. It u
 
 Overall, this is a very practical automated BTC investment program. Using dual EMAs to determine the major trend is very reliable. With ATR trailing stop loss, it can achieve decent profits and the validity period can be very long. As parameters continue to be optimized, there is still much room for improvement in the performance of this strategy. It is well worth live trading verification.
 
-[/trans]
 
 > Strategy Arguments
 

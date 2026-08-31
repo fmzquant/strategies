@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/128851a669ab157747b.png)
-[trans]
-### 概述
-
-本策略基于EMA均线和RSI指标的隐藏背离信号开启多头仓位,通过识别隐藏多头背离形成的特征点,判断当前处于上升趋势的开始,作为开仓信号。同时,结合EMA均线的黄金交叉以及K线收盘价格位于EMA均线之上,可确保趋势向上。此策略适合追踪中长线趋势,在盘整结束后的重新上涨阶段打开多头仓位。
-
-### 策略原理
-
-1. EMA均线策略:利用50周期与250周期EMA均线进行黄金交叉判断趋势,价格上穿50EMA时视为多头信号。
-
-2. RSI隐藏背离策略:RSI指标出现较低低点,而价格出现较高低点的隐藏多头背离信号,预示着反转的开始。配合限定背离点数量,可过滤假信号。 
-
-3. K线收盘策略:K线收盘价格超过50EMA时开仓做多。
-
-综合以上三个策略判断当前为趋势开始上涨点,开启做多仓位。
-
-### 优势分析
-
-1. 使用EMA均线判断趋势方向,配合RSI指标的反转信号,可在趋势开始阶段打开仓位。
-
-2. 双重确认机制,利用EMA、RSI和K线收盘价格的组合判断,可有效过滤假信号。
-
-3. 追踪中长线趋势,适合在盘整后判断新的上涨趋势开始。
-
-### 风险分析 
-
-1. EMA均线产生死叉时,需要及时平仓。
-
-2. RSI隐藏背离信号判断需要一定的经验,参数设置不当可能错过信号或判断错误。
-
-3. 对交易品种的参数需要优化设置。
-
-### 优化方向
-
-1. 动态调整EMA均线的参数,优化判断趋势的精准度。
-
-2. 调整RSI参数,优化判断隐藏背离的准确性。
-
-3. 加入止损机制,利用ATR止损或百分比止损等方式控制风险。
-
-4. 开发空头交易策略,使策略可在下跌趋势中打开空头做空仓位。
-
-### 总结
-
-本策略综合运用EMA均线判断大趋势,配合RSI指标增加判断准确性,在盘整结束后判断新的上涨趋势开始,属于较为保守的趋势追踪策略。通过优化参数设置以及加入止损手段,能够获得较好的效果。与简单的移动平均线策略相比,判断上涨趋势的准确性更高,胜率会较高,属于实用型策略。
-
-||
 
 ### Overview
 
@@ -101,7 +55,6 @@ The combination of the above three strategies identifies the start of an upward 
 
 This strategy combines EMA lines for trend determination and RSI signals for increase accuracy. It identifies new upward trends after consolidations. With proper parameter tuning and risk management, it could achieve good results. Compared to simple moving average strategies, it has higher accuracy in catching trends with better win rates. Overall it is a practical trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

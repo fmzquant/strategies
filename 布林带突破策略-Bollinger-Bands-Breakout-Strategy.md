@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1c2f5b86fe0530cb8a5.png)
 
-[trans]
-#### 概述
-该策略利用布林带作为买卖信号,当价格突破下轨时买入,突破上轨时卖出。同时使用金字塔式加仓方式,当持仓数低于设定值时继续买入,高于设定值时卖出。该策略适用于有明显趋势的市场行情。
-
-#### 策略原理
-1. 计算布林带上轨、中轨和下轨。中轨为收盘价的简单移动平均线,上下轨为中轨加减收盘价标准差的倍数。
-2. 当收盘价低于或等于下轨时,产生买入信号;高于或等于上轨时,产生卖出信号。
-3. 若当前持仓数小于设定的金字塔加仓数,则继续买入;大于设定数则卖出。
-4. 在图表上绘制布林带的上中下轨。
-
-#### 策略优势
-1. 布林带能够量化价格的波动区间,提供明确的买卖信号,易于操作。
-2. 金字塔加仓方式能够放大趋势行情的收益。
-3. 布林带具有一定的趋势识别和风险控制能力,适合趋势交易者使用。
-
-#### 策略风险
-1. 当市场处于震荡行情时,频繁的买卖信号可能导致亏损。
-2. 金字塔加仓方式如果遇到趋势反转,放大了下跌风险。
-3. 布林带参数的选择需要根据不同市场和周期进行优化,不恰当的参数可能导致策略失效。
-
-#### 策略优化方向  
-1. 可以结合其他指标如RSI、MACD等,对布林带信号进行二次确认,提高信号准确性。
-2. 对金字塔加仓的数量和比例进行控制,设置止损位置,降低下跌风险。
-3. 对布林带的参数如周期、倍数等进行优化测试,选择最佳参数组合。
-4. 在震荡市可以考虑使用布林带通道策略,在上下轨间进行高抛低吸。
-
-#### 总结
-布林带突破策略利用价格相对布林带的位置产生趋势跟踪信号,同时通过金字塔加仓放大趋势收益。但在震荡市表现欠佳,并且金字塔加仓可能放大亏损。因此实际运用中需要结合其他指标验证信号,控制加仓风险,并对参数进行优化。同时要根据市场特点灵活调整策略。
-
-|| 
 
 #### Overview
 This strategy uses Bollinger Bands as buy and sell signals. It buys when the price breaks below the lower band and sells when it breaks above the upper band. It also employs a pyramiding approach, continuing to buy when the number of open positions is below a set value and selling when above it. The strategy is suitable for market conditions with clear trends.
@@ -70,7 +40,6 @@ This strategy uses Bollinger Bands as buy and sell signals. It buys when the pri
 #### Summary
 The Bollinger Bands Breakout strategy uses the position of the price relative to the Bollinger Bands to generate trend-following signals, while amplifying trend profits through pyramiding. However, it performs poorly in rangebound markets, and pyramiding may amplify losses. Therefore, in actual use, it needs to be combined with other indicators to verify signals, control pyramiding risks, and optimize parameters. At the same time, the strategy should be flexibly adjusted according to market characteristics.
 
-[/trans]
 
 > Strategy Arguments
 

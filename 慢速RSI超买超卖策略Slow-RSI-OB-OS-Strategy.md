@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fc051de612e6c7fecf.png)
-[trans]
-
-## 概述
-
-慢速RSI超买超卖策略通过延长RSI的回看周期,降低RSI曲线的波动性,从而开启全新的交易机会。该策略同样也适用于MACD等其他技术指标。
-
-## 策略原理
-
-该策略的核心思路是延长RSI的回看周期长度,默认为500周期,然后再通过SMA平滑RSI曲线,默认周期为250。这样可以大幅降低RSI曲线的波动性,缓慢RSI的反应速度,从而产生新的交易机会。
-
-过长的回看周期削弱了RSI曲线的波动性,因此判断超买超卖的标准也需要调整。策略设置了自定义的超买线52和超卖线48。当加权RSI从下方突破超卖线时产生做多信号;当从上方跌破超买线时产生做空信号。
-
-## 策略优势
-
-1. 创新性强,通过延长周期开辟新的交易思路
-2. 可大幅降低虚假信号,提高稳定性 
-3. 可自定义超买超卖阈值,适应不同市场
-4. 可播种加仓,提高收益率
-
-## 策略风险
-
-1. 周期过长可能错过短线机会
-2. 需要耐心等待入场机会出现
-3. 超买超卖阈值设置不当可能增加损失
-4. 存在被套利的风险
-
-解决方法:
-
-1. 适当缩短周期,增加交易频率
-2. 采用分批建仓的方式,分散风险
-3. 优化阈值参数,适应不同市场环境
-4. 设置止损点,避免巨额损失
-
-## 策略优化方向 
-
-1. 优化RSI的参数,找到最佳周期组合
-2. 测试不同的SMA平滑周期参数
-3. 优化超买超卖的参数,拟合不同市场
-4. 添加止损策略,控制单笔损失
-
-## 总结
-
-慢速RSI超买超卖策略通过延长周期和利用均线抑制波动的方式,成功开辟了新的交易思路。该策略在参数优化和风险控制到位的情况下,有望取得稳定而高效的超额收益。总体来说,该策略具有很强的创新性和运用价值。
-
-||
 
 
 ## Overview
@@ -99,7 +54,6 @@ Solutions:
 
 The Slow RSI OB/OS strategy successfully explored new trading ideas by extending periods and using SMA to suppress fluctuations. With proper parameter tuning and risk control, the strategy has the potential to achieve steady and profitable excess returns. In conclusion, the strategy is highly innovative and valuable to use.
 
-[/trans]
 
 > Strategy Arguments
 

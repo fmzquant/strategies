@@ -9,64 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略运用海洋理论中的网格交易方法,在设定的价格范围内均匀分布网格线,根据价格与网格线的关系进行买入和卖出操作。策略具有自动计算网格价格区间、均匀分布网格线等特点,可以有效控制风险。
-
-## 策略原理
-
-该策略首先根据用户选择或默认设置计算价格网格的上下限,即网格的最高价和最低价。计算方式有两种,一是查找回测周期内的最高价和最低价,二是计算一定周期的均线。然后根据用户设置的网格数量,均匀分布网格线。
-
-交易信号的产生依赖于价格与网格线的关系。当价格低于下方网格线时,在该网格线处按固定数量开仓做多;当价格高于上方网格线时,在该网格线处按固定数量平仓。这样随着价格的波动,仓位也在网格内波动,实现获利。
-
-具体来说,策略维护一个网格线价格数组和一个bool数组表示每个网格线是否有挂单。当价格低于某一网格线且该线未有挂单时,在该线价位做多;当价格高于某一网格线且下方网格线有挂单时,在下方网格线处平仓。通过这种方式,实现网格交易。
-
-## 策略优势
-
-1. 自动计算网格区间,避免手动设置的困难。可以选择不同计算方式。
-
-2. 均匀分布网格线,避免网格密集导致过度交易。网格线数量可调。
-
-3. 采用网格交易方法,可以有效控制风险,价格波动在网格内则一直可以获利。
-
-4. 对价格没有方向预期,适用于震荡行情。
-
-5. 手续费率和仓位数可自定义设置,适应不同交易品种。
-
-6. 可视化展示网格线,容易掌握交易情况。
-
-## 策略风险
-
-1. 突破网格区间风险。价格突破网格上下限会导致亏损扩大。
-
-2. 过于宽松的网格间距风险。网格过宽难以获利,但过窄又增加手续费。需权衡。
-
-3. 持仓时间过长风险。长时间持仓难以获利 yet增加手续费损失。
-
-4. 参数设置不当风险。如回测周期或均线周期等参数设置不当,会影响网格区间计算。
-
-5. 市场系统性风险。该策略更适合震荡行情,不适合长期单边行情。
-
-## 策略优化
-
-1. 优化网格参数设置。综合考虑行情特点、交易成本等因素,优化网格数量、回测周期等参数。
-
-2. 网格区间动态调整。当市场发生较大变化时,可以引入动态调整网格区间的机制。
-
-3. 加入止损机制。设定合理的止损线,避免亏损过大。止损线也可以动态调整。
-
-4. 结合其他指标过滤交易。如布林线,趋势指标等,避免不适宜的交易。
-
-5. 优化资金利用效率。加入冷热分析,在波动较小时减少交易。
-
-## 总结
-
-该策略利用网格交易原理,实现了风险可控的震荡行情交易。策略具有自动计算网格、均匀分布网格等优点,可以通过调整参数适应不同市场环境。风险可控且易于操作。但策略也存在一定局限性,需要持续优化以适应市场变化。总体来说,该策略为网格交易提供了一种较为标准化和可参数化的实现思路。
-
-||
 
 ## Overview
 
@@ -122,7 +64,6 @@ Specifically, the strategy maintains a grid line price array and a bool array in
 
 The strategy realizes risk-controllable range trading by leveraging grid trading principles. The automatic grid calculation and uniform distribution offer advantages that suit various markets through parameter tuning. Risks are limited and easy to operate. However, limitations exist and continuous improvements are needed to adapt to evolving markets. Overall, the strategy provides a standardized and parametric approach to implementing grid trading.
 
-[/trans]
 
 > Strategy Arguments
 

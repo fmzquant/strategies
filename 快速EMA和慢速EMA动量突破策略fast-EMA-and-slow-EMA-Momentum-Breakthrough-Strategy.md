@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12c37e35111d4697acd.png)
-[trans]
-
-## 概述
-
-这个策略通过计算快速EMA和慢速EMA,并在快速EMA上穿慢速EMA时做多,在快速EMA下穿慢速EMA时做空,实现获利。该策略属于动量跟踪类策略。
-
-## 策略原理
-
-该策略主要是利用EMA指标的 organisations 概念。EMA即指数移动平均线,它是根据历史价格走势来预测未来价格走势的技术指标。EMA指标分为快线和慢线,快线对最近价格变化更敏感,慢线对历史价格变化更敏感。当短期价格变化超过一定幅度时,快线会上穿或下穿慢线,产生买入或卖出信号。
-
-具体来说,该策略选取长度为37的EMA作为快线,长度为175的EMA作为慢线。当快线上穿慢线时产生买入信号,做多;当快线下穿慢线时产生卖出信号,做空。做多后通过慢线下穿快线的方式来实现止损或止盈。
-
-## 策略优势
-
-这种EMA交叉策略具有如下优势:
-
-1. 原理简单,容易理解实现
-2. 能够有效捕捉市场中的短期趋势
-3. 回撤风险较 contro 为低
-4. 可通过调整EMA周期来适应不同品种
-
-## 策略风险
-
-该策略也存在一些潜在风险:
-
-1. 容易产生假信号,可能入场过早或过晚
-2. EMA指标滞后,可能错过关键转折点
-3. 震荡行情中容易止损
-4. 回测数据拟合风险,实盘实施效果存疑
-
-为降低这些风险,可以考虑优化入场时机选择,设置止损位置,结合其他指标进行过滤等。
-
-## 策略优化方向 
-
-该策略还有进一步优化的空间:
-
-1. 优化EMA周期参数,适应不同品种特性
-2. 增加成交量指标过滤,避免在震荡行情中错入
-3. 设置移动止损,根据趋势逐步调整止损位置
-4. 结合波动率指标,根据市场波动度动态调整仓位
-
-## 总结
-
-该EMA交叉策略整体来说较为简单直接,适合初学者掌握。但其实盘效果还需要实际验证,投资者在使用时也需要注意防范回测过拟合的风险。通过参数优化、指标组合等方式还可以进一步增强该策略的稳定性和实战效果。
-
-|| 
 
 ## Overview  
 
@@ -100,7 +54,6 @@ There is room for further optimization of this strategy:
 
 In general, this simple EMA crossover strategy is easy for beginners to grasp. But its actual effect needs practical verification, and investors should also be aware of the risks of backtest overfitting when using it. By optimizing parameters, combining indicators, etc., the stability and practical effect of this strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,53 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/5c1befdc76383edf19.png)
-[trans]
-## 概述
-本策略通过使用平滑移动平均线构建平滑价格带,并整合多种平滑移动平均线,以实现实时过滤趋势的功能,属于典型的趋势跟随型策略。
-
-## 策略原理    
-1. 通过构建平滑价格带,使用平滑移动平均线跟踪价格变化,实现对价格变化的平滑跟踪。  
-2. 策略支持输入多种不同类型的移动平均线作为平滑移动平均线的计算类型,如EMA、SMMA、KAMA等。
-3. 支持对这些移动平均线进行1-5次的叠加平滑,以获得更加平滑的价格带。
-4. 同时支持在价格和移动平均线之间使用布林带,更好地捕捉价格的变化。
-5. 通过启用附加的移动平均线过滤器,可以更好地过滤震荡,识别趋势方向。过滤器也支持多种移动平均线类型。
-6. 结合形态识别指标,实现对买入卖出信号的自动识别。    
-
-该策略通过构建平滑价格带捕捉价格趋势,并整合移动平均线过滤器确认趋势方向,属于典型的趋势跟随策略。通过调整参数可以灵活适应不同品种不同周期的市场环境。
-
-## 策略优势
-1. 构建价格带可以更平滑地跟踪价格的变化趋势,有效减少错失机会的概率。
-2. 支持多种移动平均线类型,可以根据不同周期及品种选择合适的移动平均线,提高策略的适应性。  
-3. 1-5次的叠加平滑,可以显著提高价格变化的跟踪能力,更准确抓取趋势转折点。    
-4. 移动平均线过滤器可以有效减少无效信号,提高胜率。
-5. 通过调整移动平均线长度,可以适应不同时间周期,甚至可以通过多时间框架验证,进一步提升策略效果。
-6. 支持黑化玻璃显示,可以清晰直观地观察价格带的走势。
-
-## 策略风险
-1. 跟踪长期趋势较强,但对短期波动的跟踪和反应较差,容易在震荡行情中产生较多的无效信号。
-2. 在暴涨暴跌的价格快速变化中,平滑移动平均线会有一定的滞后性,可能错过最佳入场时机。  
-3. 多重叠加的移动平均可能过于平滑价格变化,导致买点卖点识别不准。
-4. 如果启用的移动平均线长度参数设置不当,可能导致产生大量假信号。
-
-解决方法:
-1. 适当缩短移动平均线长度,加快对价格变化的反应。    
-2. 调整叠加次数,降低过度平滑的可能。
-3. 优化和测试移动平均线组合,选择最佳参数。  
-4. 结合其他指标进行多时间框架验证,降低假信号率。
-
-## 策略优化方向  
-1. 测试优化移动平均线类型的组合,选择最佳参数。
-2. 测试优化移动平均线长度参数,适应更广泛的品种和时间周期。  
-3. 尝试不同的叠加平滑次数,找到最佳平衡点。  
-4. 尝试添加布林带作为辅助指标。
-5. 测试不同的附加移动平均线作为过滤器。
-6. 结合其他指标进行多时间框架验证。
-
-## 总结
-本策略属于典型的趋势跟随策略,通过构建平滑移动平均带持续跟踪价格趋势,结合辅助过滤器避免无效信号。策略优势在于平滑价格带的构建,可以更好地捕捉价格趋势的转折。同时也存在一定的滞后性风险。通过参数优化和指标优化,可以不断提升策略效果,值得进一步研究。
-
-
-||
 
 ## Overview
 This strategy constructs a smooth price band using smooth moving averages and integrates various smooth moving averages to filter the trend in real time. It belongs to a typical trend following strategy.
@@ -103,7 +56,6 @@ Solutions:
 ## Conclusion
 This strategy belongs to a typical trend following strategy that continuously tracks price trends by constructing smooth moving average bands and avoids invalid signals with assisting filters. Its advantage lies in constructing smooth price bands to better capture turns in price trends. It also has certain risks of lagging. By parameter optimization and indicator optimization, the strategy performance can be continuously improved and is worth further research.  
 
-[/trans]
 
 > Strategy Arguments
 

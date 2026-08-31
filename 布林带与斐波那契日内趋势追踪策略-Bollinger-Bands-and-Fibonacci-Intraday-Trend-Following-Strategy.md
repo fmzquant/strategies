@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b13c5ec476b540194d.png)
 
-[trans]
-#### 概述
-本策略是一个结合布林带和斐波那契回调水平的日内交易系统。它通过布林带指标识别超买超卖状态,同时利用斐波那契回调水平来确认潜在的支撑和阻力位,从而在市场波动中捕捉交易机会。策略采用基于20个周期的布林带和0.236、0.382、0.618三个关键的斐波那契水平进行信号生成。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 利用布林带上下轨(标准差为2)标识价格的超买超卖区域
-2. 通过最近20个周期的最高价和最低价计算斐波那契回调水平
-3. 在价格突破布林带下轨且位于斐波那契0.236或0.382支撑位上方时产生买入信号
-4. 在价格突破布林带上轨且位于斐波那契0.618阻力位下方时产生卖出信号
-5. 使用固定的止损和止盈点数来控制风险和锁定利润
-
-#### 策略优势
-1. 结合了趋势和支撑阻力的双重确认机制,提高了交易信号的可靠性
-2. 布林带能够动态适应市场波动率的变化,使策略具有良好的适应性
-3. 斐波那契水平为入场和出场提供了清晰的参考框架
-4. 固定的止损止盈设置有助于严格的风险控制
-5. 策略参数可根据不同市场条件灵活调整
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假突破信号
-2. 固定的止损止盈设置可能不适合所有市场环境
-3. 斐波那契水平的有效性受市场结构影响较大
-4. 在快速趋势市场中,可能错过部分行情
-5. 需要持续监控和调整参数以适应市场变化
-
-#### 策略优化方向
-1. 引入成交量指标来确认突破的有效性
-2. 根据市场波动率动态调整止损止盈水平
-3. 增加趋势过滤器以避免在横盘市场中交易
-4. 优化斐波那契水平的计算周期
-5. 考虑加入时间过滤器以避免在低流动性时段交易
-
-#### 总结
-这是一个结合技术分析经典工具的完整交易系统,通过布林带和斐波那契回调的协同作用,为交易者提供了一个系统化的交易框架。虽然存在一定的局限性,但通过适当的参数优化和风险管理,该策略能够在日内交易中发挥良好的效果。关键是要根据具体的交易品种和市场条件进行相应的调整和优化。
-
-||
 
 #### Overview
 This strategy is an intraday trading system that combines Bollinger Bands and Fibonacci retracement levels. It identifies overbought and oversold conditions using Bollinger Bands while utilizing Fibonacci retracement levels to confirm potential support and resistance zones, thereby capturing trading opportunities in market fluctuations. The strategy employs Bollinger Bands based on a 20-period window and three key Fibonacci levels: 0.236, 0.382, and 0.618.
@@ -83,7 +46,6 @@ The core logic of the strategy is based on the following key elements:
 
 #### Summary
 This is a complete trading system combining classic technical analysis tools, providing traders with a systematic trading framework through the synergy of Bollinger Bands and Fibonacci retracements. While it has certain limitations, the strategy can perform well in intraday trading through appropriate parameter optimization and risk management. The key is to make corresponding adjustments and optimizations based on specific trading instruments and market conditions.
-[/trans]
 
 
 

@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/177c5bdb71e581a2b8a.png)
-[trans]
-
-## 概述
-
-该策略的主要思想是结合支撑阻力位和成交量的突破来确定入场时机,并使用ATR指标实现获利后动态调整止损追踪价格,从而获取更多的潜在利润。
-
-## 策略原理
-
-该策略主要由以下几部分逻辑组成:
-
-1. 使用ta.pivothigh和ta.pivotlow函数计算出L_Bars根K线的最高价和R_Bars根K线的最低价,作为阻力线和支撑线。
-
-2. 当收盘价上穿阻力线且成交量突破volumeRange的阈值时,做多;当收盘价下穿支撑线且成交量突破volumeRange的阈值时,做空。
-
-3. 做多之后,以close-ATR_LO作为长止损;做空之后,以close+ATR_SH作为短止损,实现动态调整跟踪止损。
-
-4. 在交易时间内(0915-1445),每天做第一个交易信号,收益或亏损达到risk的额度后不再开新单。
-
-## 策略优势
-
-1. 运用支撑阻力理论,结合成交量指标,使入场时机更加精准。
-
-2. 使用ATR指标跟踪止损,能够根据市场波动程度来灵活调整止损位置,实现获利后降低盈利回吐的可能。
-
-3. 适当控制单日交易次数和单笔交易风险,有助于把握趋势,避免止损过多。
-
-## 策略风险
-
-1. 支撑阻力可能失效,无法提供有效的入场信号。
-
-2. ATR指标设定过大,可能导致止损距离过远,增加亏损风险。
-
-3. 成交量指标设定过小,可能导致错过机会;设定过大,可能导致误判信号。
-
-**解决方法:**
-
-- 根据不同品种特点,调整支撑阻力参数
-
-- 优化ATR倍数和成交量阈值参数
-
-- 结合其他指标判断入场时机
-
-## 策略优化方向 
-
-1. 结合其他指标判断入场时机,例如移动平均线等
-
-2. 对ATR倍数和成交量阈值参数进行优化
-
-3. 结合机器学习算法实现动态参数优化
-
-4. 扩展到其他品种,寻找参数规律
-
-## 总结
-
-该策略整合了多种分析工具,通过对支撑阻力、成交量和止损方法的运用,实现了回测阶段较好的效果。但实盘中可能会面临更多不确定性,需要通过参数优化和引入其他判断指标来进一步增强实盘表现。总的来说,该策略思路清晰、易于理解,为量化交易策略提供了一个很好的参考案例。
-
-||
 
 ## Overview
 
@@ -122,7 +65,6 @@ The strategy consists of the following main logics:
 
 The strategy integrates various analytical tools, applying support/resistance, volume, and stop loss methods, and achieved good backtest results. But more uncertainties may exist in live trading, requiring further enhancements like parameter optimization and additional entry confirmation indicators to improve real-world performance. Overall, the strategy has clear logic and easy understanding, providing a good reference case for quantitative trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

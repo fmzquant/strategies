@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16fae42bd960bf52f99.png)
-[trans]
-
-## 概述
-
-该策略是一个基于移动平均线和相对强弱指标的动量反转策略。它利用快速移动平均线和慢速移动平均线的交叉以及超买超卖信号来判断Entry和Exit。
-
-## 策略原理
-
-该策略使用14日移动平均线作为快速信号线,28日移动平均线作为慢速线。同时结合RSI指标判断市场是否超买超卖。
-
-当14日移动平均线上穿28日移动平均线且RSI低于30或者RSI低于13时,判断行情反转,做多入场。当14日移动平均线下穿28日移动平均线时,判断动量反转失效,部分止盈出场。
-
-此外,策略还设置部分止盈机制。当持仓收益达到设定的止盈点(默认8%)时,会部分止盈(默认卖出50%)。
-
-## 优势分析
-
-该策略结合移动平均线的优势,同时避免 whipsaw 带来的损失。
-
-1. 利用快慢移动平均线过滤掉部分噪音。
-
-2. RSI指标判断超买超卖,避免追高。
-
-3. 部分止盈机制锁定部分利润,降低风险。
-
-## 风险分析
-
-1. 双移动平均线交叉策略容易产生 whipsaw,从而带来损失。此策略通过 RSI 指标进行辅助判断,可过滤掉部分 whipsaw。
-
-2. 部分止盈可能导致错过更大行情。可通过调整止盈点来平衡风险和收益。
-
-## 优化方向
-
-1. 可测试不同参数的移动平均线组合,寻找最优参数。
-
-2. 可测试不同的 RSI 阈值。
-
-3. 可调整部分止盈的止盈点和卖出比例,平衡风险收益。
-
-## 总结
-
-该策略整体来说是一个典型的反转策略。它利用快慢均线的交叉判断市场反转并结合 RSI 指标过滤信号。同时设置部分止盈来锁定部分利润。该策略简单实用,可通过参数调整来适应不同市场。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ The strategy combines the advantages of moving averages while avoiding whipsaw l
 
 Overall this is a typical mean reversion strategy. It uses fast/slow MA crosses to determine market turns supplemented by RSI to filter signals. It also implements partial profit taking to lock in some profits. The strategy is simple yet practical. Parameters can be adjusted to suit different market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

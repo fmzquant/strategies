@@ -11,82 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/195f8a278bf14e17775.png)
 
-[trans]
-
-## 概述
-
-聚变策略是一个结合123形态反转策略与高低位突破策略的量化交易策略。该策略通过不同时间周期上指标信号的综合判断,实现多时间周期资金优势组合,在中长线获取超额收益的目标。
-
-## 策略原理
-
-聚变策略由两部分组成:
-
-1. 123反转策略  
-该策略来自于Ulf Jensen的《我如何在期货市场上获得三倍收益》一书中P183的思想。它通过判断价格连续2日收盘价与前一日收盘价的关系,结合Stochastic指标判断市场的超买超卖情况,产生买入和卖出信号。具体来说,当连续2日收盘价较前一日收盘价上涨,且Stochastic Slow指标低于50时产生买入信号;当连续2日收盘价较前一日收盘价下跌,且Stochastic Fast指标高于50时产生卖出信号。该策略借助Stochastic指标判断市场超买超卖状况,避免在市场高位买入和低位卖出。
-
-2. 高低位突破策略  
-该策略通过判断价格是否突破不同周期的高低位来确定交易信号。它计算当前周期及过去周期的最高价和最低价,当价格突破最高价时产生买入信号,突破最低价时产生卖出信号。该策略的优势在于能够识别出不同周期线形态特征,在趋势形成时较早进入市场。
-
-聚变策略将上述两种策略进行组合,当两种策略的信号方向一致时,产生实际的交易信号。这样可以过滤掉一些因单一策略判断错误产生的无效信号,提高信号的可靠性。
-
-## 策略优势
-
-1. 多时间周期综合判断,提高信号准确性  
-该策略融合了日线和更高时间周期的形态特征,能够提高交易信号判断的准确性,避免被市场短期波动误导。
-
-2. 充分利用Stochastic指标的超买超卖判断  
-StochasticSlow指标的应用避免了在超买区急于买入,StochasticFast指标的应用避免了在超卖区急于卖出,减少不必要的亏损。
-
-3. 及时捕捉趋势特征,降低错过机会的概率  
-高低位突破策略能够识别更长线周期内价格突破关键区域,较早进入趋势,降低错过机会的概率。
-
-4. 多策略组合,可以灵活优化  
-策略由多个子策略组成,优化空间大,可以通过调整子策略参数或引入新的子策略进行优化,使策略更稳定可靠。
-
-5. 策略逻辑清晰易理解  
-策略结构简单清晰,容易理解和修改,也便于后期维护。
-
-## 策略风险
-
-1. 多时间周期综合增加信号滞后  
-虽然多时间周期综合判断可以提高信号准确性,但是也会一定程度增加信号的滞后,可能错过短线交易机会。
-
-2. 123形态无法识别更长线趋势反转  
-123反转策略仅根据近几日行情判断,无法识别更长时间周期内的关键趋势反转点。
-
-3. 周期参数设置不当可能导致虚假信号  
-Stochastic指标和高低位突破 周期参数设置不当都可能导致产生过多虚假交易信号。
-
-4. 仅基于技术指标,对特殊行情的适应性较差  
-该策略仅基于技术指标,不考虑基本面信息,在重大黑天鹅事件发生时适应性较差。
-
-对应风险的解决方法:
-
-1. 适当缩短计算周期,降低信号滞后。
-
-2. 尝试引入更长周期指标或形态作为滤波器。 
-
-3. 优化参数设置,在回测中测试参数稳健性。
-
-4. 考虑结合基本面因素过滤信号。
-
-## 策略优化方向 
-
-1. 测试并优化各个子策略的参数,使之更稳健。
-
-2. 增加其他辅助决策逻辑,如基本面、资金流向等指标进行组合。
-
-3. 引入止损策略,以控制单笔交易最大损失。
-
-4. 针对特定品种进行参数细化,提高策略对该品种的适配性。
-
-5. 增加机器学习模型辅助决策。
-
-## 总结
-
-综上所述,聚变策略整合多时间尺度的技术指标优势,旨在提高信号判断的准确性和时间liness。相比单一技术指标策略,它具有更敏锐的趋势判断能力和更稳健的信号产生。但该策略也存在一定的滞后性,以及对特殊行情的适应性较弱等问题。未来可通过引入更多辅助工具,优化参数设定,提升策略的稳定性和收益率。
-
-||
 ## Overview
 
 The Fusion strategy combines a 123 reversal pattern strategy and a high low breakout strategy into a quantitative trading system. By synthesizing indicator signals across different timeframes, it aims to achieve multi-timeframe capital advantage and generate excess returns in the medium to long term.
@@ -159,7 +83,6 @@ Corresponding solutions:
 ## Conclusion
 
 In summary, the Fusion strategy combines the advantages of multi-timeframe technical indicators, aiming for more accurate and timely signal generation. Compared to single indicator strategies, it has superior trend sensing ability and more robust signal production. But it also suffers from lags and inadequate adaptivity to extreme events. Future improvements could come from more auxiliary tools, better parameter optimization and upgrading stability and profitability.
-[/trans]
 
 > Strategy Arguments
 

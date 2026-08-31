@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1767cffa0bc8a78a8d2.png)
-[trans]
-
-### 概述
-
-本策略基于前一天的收盘价以及ATR指标设定多空头开仓价位和止损价位,实现对趋势的追踪。当价格突破开仓价位时开仓做多做空,止损或止盈后清仓。
-
-### 策略原理
-
-本策略使用前一天的收盘价、最高价、最低价以及ATR指标计算入场价位和止损价位。具体计算公式如下:
-
-多头开仓价位 TPup = 前一天收盘价 + ATR \* 0.8
-空头开仓价位 TPdown = 前一天收盘价 - ATR \* 0.8  
-
-多头止损价位 slup = 前一天收盘价 + ATR \* 0.2
-空头止损价位 sldown = 前一天收盘价 - ATR \* 0.2
-
-多头止盈价位 profitlevelup = 前一天最低价 + ATR \* 1.7  
-空头止盈价位 profitleveldown = 前一天最高价 - ATR \* 1.7
-
-当价格突破多头开仓价位 TPup 时,按照 10 手数做多;当价格突破空头开仓价位 TPdown 时,按照 10 手数做空。之后设置止损和止盈,价格触及止损价位后止损清仓,触及止盈价位后止盈清仓。
-
-### 优势分析
-
-本策略主要优势有:
-
-1. 使用ATR指标设定动态的开仓价位和止损价位,可以根据市场波动度进行调整,使交易更加适应市场环境。
-
-2. 利用前一天收盘价确定方向,再结合ATR指标确定具体的交易价位,避免被噪音太多的实时价格误导。
-
-3. 同时设置止损和止盈机制,可以很好控制单笔交易的风险。
-
-### 风险分析
-
-本策略主要风险有:  
-
-1. ATR指标设定的价位可能过于理想化,无法真正反映市场情况,导致频繁止损。可以适当调整ATR参数或加大止损幅度。
-
-2. 前一天收盘价无法确定未来趋势,如果出现剧烈反转,会误导交易方向选择。可以考虑结合其他指标确认趋势。  
-
-3. 止损和止盈位置可能被操纵触发,无法真正止损。可以设置成分批止损,避免被套。
-
-### 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化ATR参数,使交易价位更符合市场波动性。
-
-2. 增加趋势判断机制,避免交易反转市。例如结合MA等指标。
-
-3. 调整止盈幅度,在保持盈利性的同时减少盈利点被触发的概率。  
-
-4. 设置成分批止损和止盈,降低被套和损失的概率。
-
-5. 增加仓位管理机制,可以加大趋势阶段的仓位。
-
-### 总结  
-
-本策略基于前一天收盘价和ATR指标设定动态的交易价位,实现对趋势的有效跟踪。同时设置止损和止盈机制控制单笔交易的风险。优化方向包括参数优化、判断机制增加、止盈调整以及仓位管理等。总体来说,本策略较好地实现了追趋势交易的效果。
-
-||
 
 ### Overview  
 
@@ -128,7 +68,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy sets dynamic trade levels based on previous day's close and ATR to effectively track trends. It also uses stop loss and take profit to control single trade risks. Optimization directions include parameter tuning, judging mechanism enhancement, take profit adjustment and position sizing etc. In general, this strategy achieves good trend following effects.
 
-[/trans]
 
 > Strategy Arguments
 

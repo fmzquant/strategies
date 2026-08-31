@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eb0c0c3e4e79b939b7.png)
-[trans]
-
-### 概述
-
-Ichimoku Kinko Hyo交易策略是一个基于Ichimoku技术指标的趋势跟踪策略。该策略利用Ichimoku的转换线、基准线、领先线1、领先线2等指标判断趋势方向,以及进场和止损的时机。
-
-### 策略原理
-
-该策略主要判断以下四个条件来决定交易方向:
-
-1. 关闭价上穿基准线上方26期平均值时,做多
-2. 关闭价下穿基准线下方26期平均值时,做空
-3. 止盈条件:百分之3.5
-4. 止损条件:百分之1.5
-
-具体来说,策略首先计算出转换线、基准线、领先线1和领先线2。然后判断关闭价是否突破云图的上沿或下沿,来决定做多还是做空。
-
-如果关闭价上穿云图的上沿,即上穿领先线1和领先线2的较大值的26期平均值时,表示股价进入上升趋势,这时做多。
-
-如果关闭价下穿云图的下沿,即下穿领先线1和领先线2的较小值的26期平均值时,表示股价进入下降趋势,这时做空。
-
-进场后设置止盈和止损条件。止盈条件为入场价的3.5%,止损条件为入场价的1.5%。
-
-### 优势分析
-
-Ichimoku Kinko Hyo交易策略具有以下优势:
-
-1. 能够识别趋势的变化,及早进入趋势
-2. 使用云图判断支撑和阻力区域,进场较为准确
-3. 同时考虑价格和交易量,不易被假突破误导 
-4. 止盈止损条件明确,可以控制交易风险
-
-### 风险分析
-
-Ichimoku Kinko Hyo交易策略也存在一些风险:
-
-1. 在盘整行情中,容易产生多次小幅亏损
-2. 若大趋势发生转变,止损可能较大
-3. 需同时满足多个条件才能进场,机会较少
-4. 参数设置不当可能导致曲解指标信号
-
-对策:
-
-1. 可适当放宽进场条件,增加交易机会
-2. 优化参数,使之更符合市场特点
-3. 结合其他指标过滤假信号
-
-### 优化方向 
-
-Ichimoku Kinko Hyo交易策略可以从以下几个方面进行优化:
-
-1. 优化转换线、基准线等参数,使之更贴合不同周期的市场行情
-2. 优化入场条件,避免错过较好的机会
-3. 优化止盈止损策略,实现更高的风险调整收益
-4. 结合其他指标进行信号过滤,以减少套利次数
-5. 动态调整仓位,根据市场波动程度来确定具体投入资金量
-
-### 总结
-
-Ichimoku Kinko Hyo交易策略overall relatively good strategy that can capture potential trends in a timely manner. But it still needs further optimization and combination with other indicators to form a robust trading system. By adjusting parameters, improving entry and exit techniques, and controlling risks, Ichimoku strategy can achieve higher risk-adjusted returns in trending markets.
-
-||
 
 
 ### Overview
@@ -133,7 +71,6 @@ The Ichimoku Kinko Hyo trading strategy can be optimized in the following aspect
 
 The Ichimoku Kinko Hyo trading strategy is an overall relatively good strategy that can capture potential trends in a timely manner. But it still needs further optimization and combination with other indicators to form a robust trading system. By adjusting parameters, improving entry and exit techniques, and controlling risks, Ichimoku strategy can achieve higher risk-adjusted returns in trending markets.
 
-[/trans]
 
 > Strategy Arguments
 

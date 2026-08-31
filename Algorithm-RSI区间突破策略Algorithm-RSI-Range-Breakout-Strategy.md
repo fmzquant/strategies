@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f88984418e70930447.png)
 
-[trans]
-
-
-## 概述
-
-本策略通过监控RSI指标在不同区间的突破,实现低买高卖的目的。当RSI位于低位区间时买入,当RSI位于高位区间时卖出,从而在超买超卖现象出现时进行反向操作。
-
-## 策略原理  
-
-1. 设置RSI的长度为14周期
-
-2. 设置买入信号的RSI区间:
-   - 区间1: RSI <= 27
-   - 区间2: RSI <= 18
-
-3. 设置卖出信号的RSI区间:
-   - 区间1: RSI >= 68 
-   - 区间2: RSI >= 80
-
-4. 当RSI进入买入区间时,做多入场:
-   - 如果RSI进入区间1(27以下),做多1手
-   - 如果RSI进入区间2(18以下),额外做多1手
-
-5. 当RSI进入卖出区间时,做空入场:
-   - 如果RSI进入区间1(68以上),做空1手
-   - 如果RSI进入区间2(80以上),额外做空1手 
-
-6. 每次开仓固定止盈2500点,止损5000点
-
-7. RSI离开信号区间后,平掉相关仓位
-
-## 优势分析
-
-1. 双区间设定使策略能更清楚判断超买超卖现象,避免错过反转机会
-
-2. 采用固定止盈止损点数设置,不会过于追涨杀跌
-
-3. RSI是一种比较成熟的超买超卖判断指标,相比其他指标更有优势
-
-4. 本策略参数设置合理时,能够有效捕捉趋势反转点,获取超额收益
-
-## 风险分析
-
-1. RSI指标可能出现失效的市场,从而导致系统持续做空亏损
-
-2. 固定止盈止损点数设置可能与市场波动幅度不匹配,无法获利或过早止损
-
-3. 区间设置不合理可能导致错过交易机会或频繁交易亏损
-
-4. 本策略较依赖参数优化,需要注意测试周期及滑点控制
-
-## 优化方向
-
-1. 可以测试不同长度周期的RSI指标效果
-
-2. 可以优化买卖区间的数值,使其更符合不同品种的特点
-
-3. 可以研究动态止盈止损方式,使止盈更有效,止损更合理 
-
-4. 可以考虑结合其他指标进行组合交易,提高系统稳定性
-
-5. 可以探索机器学习方式自动优化区间参数,使策略更具鲁棒性
-
-## 总结
-
-本策略基于RSI指标的超买超卖判断原理设计。通过设置双买卖区间发挥RSI指标的效用,在保持一定的稳定性的同时,能够有效捕捉市场的超买超卖现象进行反向操作。但本策略也存在一定的参数依赖性,需要针对不同品种进行优化测试。如果参数设定得当,本策略可以获取不错的超额收益。总体来说,本策略是一个利用成熟指标的简单有效的交易策略,值得进一步研究优化,也为量化交易策略提供了思路。
-
-
-
-||
 
 ## Overview
 
@@ -146,7 +76,6 @@ This strategy monitors the breakout of RSI indicator in different ranges to impl
 
 This strategy is based on RSI's overbought and oversold principles. By adopting double trading ranges, it utilizes RSI indicator effectively, capturing market extremes with decent stability. However, it has some parameter reliance and needs optimization across products. If tuned properly, this strategy can yield good excess returns. In summary, it is a simple yet effective trading strategy using a mature indicator, worth researching for improvements and providing insights for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

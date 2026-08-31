@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17fd4f7cc610fcfa283.png)
-[trans]
-
-### 概述
-
-该策略是一种基于三条移动平均线的趋势跟踪交易策略。它同时采用三条不同周期的移动平均线进行多空决策,属于典型的跟踪趋势型策略。
-
-### 策略原理
-
-1. 该策略使用3条移动平均线:MA1、MA2和MA3,3条移动平均线周期由用户设置,一般设置为MA1 < MA2 < MA3,例如MA1为50周期,MA2为100周期,MA3为200周期。
-
-2. 策略以MA1为主要交易决策参考线。当短周期MA1上穿长周期MA2或MA3时,做多;当MA1下穿MA2或MA3时,做空。
-
-3. 策略可以选择只交易MA1和MA2的交叉,或只交易MA1和MA3的交叉,或同时交易两个交叉。
-
-4. 交叉信号出现时,使用市价单开仓。止盈止损设置为close的一定百分比,例如30%止盈,15%止损。
-
-5. 策略优化方面,可以调整MA线的周期参数,调整止盈止损百分比,增加其他指标过滤信号等。
-
-### 优势分析
-
-1. 使用多组移动平均线进行决策,可以有效过滤假突破。
-
-2. 采用不同周期MA组合,可以在趋势中动态调整仓位,实现趋势跟踪。
-
-3. 可灵活选择只交易Golden Cross或只交易Death Cross或两者都交易,交易方式多样。 
-
-4. 停损机制可以有效控制单笔损失。
-
-### 风险分析
-
-1. 跟踪趋势型策略,在震荡行情中容易止损。
-
-2. 若MA周期设置不当,可能出现频繁交易,降低胜率。
-
-3. 在突破失败后,若不及时止损,可能带来较大亏损。
-
-4. 若止盈止损设置过于宽松,单笔盈亏可能过大。
-
-### 优化方向
-
-1. 优化MA的参数,找到最佳的参数组合。
-
-2. 增加其他指标进行过滤,优化入场时机。例如MACD,KDJ等。
-
-3. 优化止盈止损点,使策略收益风险比优化。
-
-4. 增加仓位管理,例如固定数量开仓或资金管理。
-
-5. 针对突破增加止损线滑点,优化止损策略。
-
-### 总结
-
-本策略整体是一个典型的趋势跟踪策略,通过多组MA交叉进行判断,属于一个相对稳定的趋势跟踪策略。可以通过参数优化,指标过滤,仓位管理等方法进行进一步提升。但核心思路简单清晰,适合初学者学习和实践。如果参数优化得当,在趋势明显的市场中,该策略可以获得较稳定的盈利。
-
-||
 
 
 ### Overview
@@ -119,7 +64,6 @@ This strategy is a trend-following trading strategy based on three moving averag
 
 In general this is a typical trend-following strategy by judging the crossover of multiple MA lines. It is a relatively stable trend tracking strategy. Further improvements can be made through parameter tuning, indicator filtering, position sizing etc. But the core idea is simple and clear, suitable for beginners to learn and practice. If parameters are properly optimized, it can achieve steady profits in strong trending markets.
 
-[/trans]
 
 > Strategy Arguments
 

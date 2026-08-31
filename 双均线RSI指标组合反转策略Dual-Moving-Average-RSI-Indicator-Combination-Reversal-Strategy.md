@@ -10,78 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a1891ae0ee82932bf0.png)
-[trans]
-
-
-## 概述
-
-本策略通过组合使用双均线、相对强弱指标(RSI)以及抛物线指标(PSAR),实现对价格反转点的判断,在反转点发生时进行买入和卖出操作,属于反转交易策略。
-
-## 原理
-
-本策略主要通过以下技术指标判断价格反转点:
-
-1. 双均线: 计算快速移动均线(MA快线)和慢速移动均线(MA慢线)。当快线上穿慢线时,判断为多头市场,做多;当快线下穿慢线时,判断为空头市场,做空。
-
-2. RSI指标:RSI通过计算一段时间内的平均收盘涨幅和平均收盘跌幅,来判断超买超卖状况。RSI大于70时为超买区,小于30时为超卖区。
-
-3. PSAR指标:抛物线SAR指标判断趋势的方向。SAR点下方为多头市场,上方为空头市场。
-
-4. ADX指标:ADX通过计算价格变动的方向性强度,判断趋势的力度。ADX值大于20表示趋势行情,小于20表示盘整。 
-
-根据以上指标判断买入和卖出信号的逻辑如下:
-
-买入信号:快线上穿慢线,RSI小于30(超卖区),SAR点在价格上方,ADX大于20,发出买入信号。
-
-卖出信号:快线下穿慢线,RSI大于70(超买区),SAR点在价格下方,ADX大于20,发出卖出信号。
-
-当发生买入和卖出信号时,分别以10%的仓位建立多仓和空仓。当反转信号失效时,及时止损平仓。
-
-## 优势
-
-- 使用双均线判断大趋势方向,又加入RSI和SAR等指标滤除错误信号,可以比较准确地判断反转点。
-
-- 采用多种指标组合判断,避免单一技术指标造成的错误信号。
-
-- 设置止损条件,可以有效控制风险。
-
-- 策略操作简单清晰,容易实施。
-
-- 该策略对市场涨跌都有应对方案,可适用于不同行情。
-
-## 风险及解决
-
-- 双均线生成空头信号时,行情可能出现假破,需要结合其他指标进行判断。可适当拉长均线周期,或加入布林带指标判断突破的真伪。
-
-- RSI指标因参数设置不当可能产生错误信号。应适当调整RSI参数,同时加入其他指标确认RSI信号。
-
-- ADX值低于20时,应暂停交易,避免无方向性市场的反转交易。或适当降低ADX的周期参数。
-
-- SetStringry止损点设置过小,可能造成无谓止损。应根据市场波动程度合理设置止损点。
-
-- 交易频率可能过高,可适当调整双均线周期,降低交易频率。
-
-## 优化方向
-
-- 测试不同长度周期的均线组合,寻找最佳参数。
-
-- 测试RSI的不同参数设置,优化超买超卖判断。 
-
-- 尝试加入其他指标,如布林带、KDJ等,丰富买卖信号的判断逻辑。
-
-- 根据不同品种和市场情况设置动态止损机制。
-
-- 添加仓位管理策略,让盈利能更好地跟踪趋势。
-
-- 测试不同ADX参数,找到最佳判定趋势力度的数值。
-
-- 加入自动止损模块,让策略可以自动止损。
-
-## 总结
-
-本策略通过双均线判断大方向,结合RSI、SAR等指标进行反转信号过滤,在优化参数设定后,可以有效判断价格反转点,从而在反转前后捕捉趋势。在实盘中应注意控制风险,合理设置止损条件,并继续优化参数,使策略更稳定和利润更高。总体来说,该策略交叉指标结合使用,思路清晰易操作,属于一种可靠的反转交易策略。
-
-||
 
 ## Overview
 
@@ -151,7 +79,6 @@ When buy or sell signal occurs, take a position with 10% of equity respectively.
 
 This strategy identifies major trend direction using dual MAs, and uses RSI, SAR for additional signal filtering. It can effectively determine reversal points after parameter optimization, and catch trends around reversals. In practice, risk management by proper stop loss, and ongoing parameter optimization are important. Overall, the strategy combines indicators with clear logic and easy operation, making it a reliable reversal trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14635fc82214fdaede9.png)
-[trans]
-
-## 概述
-
-本策略名称为“基于Donchian通道的海龟交易策略”。该策略借鉴了著名的“海龟交易法”的主要思想,通过Donchian通道来判断市场趋势,结合移动平均线进行过滤,实现了一个较为简单的趋势跟踪策略。
-
-## 策略原理
-
-该策略的主要判断指标是Donchian通道。Donchian通道由最高价和最低价的N日内波动范围构成,如果价格突破通道上轨,则为长signal;如果下破通道下轨,则为短signal。本策略使用快速Donchian通道(10日)来发出信号,使用慢速Donchian通道(20日)来止损。
-
-另外,该策略还引入了两条移动平均线(50日线和125日线)来过滤信号。只有当快速移动平均线上穿慢速移动平均线时,才会进行多头交易;当快速移动平均线下穿慢速移动平均线时,才会进行空头交易。这可以有效过滤掉部分假信号。 
-
-本策略的开仓条件为:价格上穿Donchian通道上轨,且快速移动平均线上穿慢速移动平均线,满足这两个条件才会开多单;价格下穿Donchian通道下轨,且快速移动平均线下穿慢速移动平均线,则开空单。平仓条件则为价格触碰相反方向的慢速Donchian通道边界。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 使用Donchian通道判断趋势方向,回测效果较好,成功捕捉大趋势;
-
-2. 增加移动平均线的过滤,可以过滤掉部分假信号,避免亏损;
-
-3. 采用快慢Donchian通道和快慢移动平均线的组合,可以平衡交易频率和止损精度;
-
-4. 风险控制到位,有止损机制来控制单笔损失。
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. 在震荡行情中,可能会出现较多小亏损的单子;
-
-2. 当趋势发生转折时,移动平均线的过滤会提高建仓成本;
-
-3. 在陡峭行情中,可能会出现止损被追的情况。
-
-对策与解决方法:
-1. 可以适当调整参数,缩短Donchian周期,降低移动平均线周期来适应不同市场。
-
-2. 增加对大级别趋势的判断,避免逆大趋势建仓。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加对突破强度的判断。例如引入成交量,只有在成交量放大的情况下才开仓;
-
-2. 增加对热点区域的判断。结合支撑压力位、波段、格局等判断价格热点,避开热点区域建仓;  
-
-3. 优化止损策略。可以引入追踪止损、振幅止损、时间止损等,使止损更加智能化。
-
-## 总结
-
-本策略总体来说是一个非常典型和简单的趋势跟踪策略。通过Donchian通道判断方向,移动平均线过滤信号,实现了较好的回测效果。该策略适用于追捧大趋势的投资者,风险控制到位,容易实盘操作。通过一些参数和规则优化,可以进一步提高策略胜率和盈利能力。
-
-|| 
 
 ## Overview  
 
@@ -121,7 +65,6 @@ The strategy can be optimized in the following aspects:
 
 In general, this strategy is a very typical and simple trend following strategy. It realizes good backtest results by determining direction through Donchian Channel and filtering signals through moving averages. This strategy is suitable for investors who chase big trends, with good risk control and easy to implement in real trading. By optimizing some parameters and rules, the win rate and profitability can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

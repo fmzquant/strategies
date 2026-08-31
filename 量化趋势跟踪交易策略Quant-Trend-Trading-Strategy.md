@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-这种策略通过集成多个指标包括均线、区间滤波器、ADX、抛物线止损、量价rancesar、MACD和交易量,构建长线和短线的交易信号。具体来说,策略会同时监控快线JMA、中线MACD、慢线ADX、量价指标RSI、止损指标SAR以及区间滤波器,只有当快中慢多个时间轴上的趋势指标都发出一致信号时,才会做出交易决策。这可以过滤掉部分假信号,避免不必要的失误交易。 
-
-进入信号条件包括:
-1. 快线JMA上涨且中线MACD大于0
-2. 慢线ADX上的+DI线超过-DI线,表明目前处于趋势状态
-3. SAR下穿价格,给出看涨信号 
-4. RSI高于中轨,表明目前处于超买状态
-5. 区间滤波器价格突破上轨
-6. 成交量大幅放量
-
-只要上述条件同时满足,就表明大趋势进入看涨状态,这时策略会选择适当时机建立好多单,进行趋势跟踪。
-
-止盈条件也会同时监控多个指标,包括移动止盈、缩量止盈、时间止盈等。这保证了跟踪止盈的顺畅进行,避免过早离场或者止盈过于滞后。 
-
-整体来说,这种多指标集成的量化策略,可以充分发掘市场中的趋势机会,使得资金配置效率大大提高。同时,策略参数优化空间也非常大,用户可以根据自身需求,对参数组合进行调整,从而获得更加可靠的交易系统。
-
-当然,这类趋势跟踪策略也存在一定的风险。具体来说主要有:
-
-1. 回撤风险:跟踪过程中可能出现一定程度的回撤,需要心理承受能力
-
-2. 震荡风险:震荡行情中,可能产生多次小幅止损,降低盈利水平
-
-3. 突破失败风险:跟踪的趋势突破信号可能是假突破,需要及时止损控制损失
-
-4. 参数风险:参数设置不当也可能导致策略效果差强人意
-
-5. 过优化风险:针对历史数据过度优化,可能导致参数不具有普适性
-
-6. 交易成本风险:交易次数较多时,手续费也会对盈利造成一定影响
-
-
-总体来说,这种量化趋势跟踪策略,可以通过参数调整获得稳定而高效的交易系统,值得推荐。但用户在使用过程中,也要注意控制交易风险,进行适度优化,以获得长期稳定收益。
-
-||
 
 This strategy integrates multiple indicators including moving averages, range filters, ADX, parabolic SAR, volume-weighted RSI, MACD, and trading volume to construct long and short trading signals. Specifically, the strategy monitors fast line JMA, medium line MACD, slow line ADX, volume-weighted indicator RSI, stop-loss indicator SAR, and range filter at the same time. It only makes trading decisions when trend indicators on multiple timeframes give consistent signals. This filters out some false signals and avoids unnecessary loss trades.
 
@@ -78,7 +43,6 @@ Of course, this type of trend tracking strategy also carries certain risks, main
 6. Transaction cost risk: High trading frequency may also have a certain impact on profits.
 
 In summary, by adjusting parameters, this quantitative trend tracking strategy can obtain a stable and efficient trading system worth recommending. But users should also pay attention to controlling trading risks and proper optimization during use for long-term steady gains.
-[/trans]
 
 > Strategy Arguments
 

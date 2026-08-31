@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a0f99262449774597f.png)
-[trans]
-
-
-## 概述
-
-本策略名为**加权量化移动平均线交叉策略**(Weighted Quantitative Moving Average Crossover Strategy),其基本思路是结合价格、交易量等多种指标,设计快速线和慢速线,并在它们发生金叉和死叉时发出买入和卖出信号。
-
-## 策略原理  
-
-本策略的核心指标是量化移动平均线(Quantitative Moving Average,QMA)。QMA通过计算一段时间内的加权平均价格来测量趋势方向,它与普通移动平均线的不同之处在于其中价格的权重(权重=价格*交易量)会随着时间的推移而衰减。这样,最近期价格的权重更大,可以更快速地响应市场变化。  
-
-具体来说,本策略构建了快速QMA线和慢速QMA线。快速线参数设置为25天,慢速线参数设置为29天。当快速线从下方上穿慢速线时产生买入信号;当快速线从上方下穿慢速线时产生卖出信号。
-
-## 优势分析
-
-相比普通移动平均线,本策略具有以下优势:  
-
-1. 更快捷地响应市场,可以及时抓住短线机会
-2. 结合了价格和交易量多个维度,具有更强的稳定性 
-3. 参数设置灵活,可适应不同市场环境
-
-## 风险分析  
-
-本策略也存在一些风险:  
-
-1. 短线操作频繁,容易增大交易成本和滑点  
-2. PARAMETERS过度优化,可能导致曲线拟合
-3. 交易量不足时,指标效果可能会打折扣
-
-可以通过适当调整参数频率,严格的walk forward analysis,以及结合其他指标来缓解上述风险。
-
-## 优化方向  
-
-本策略仍有进一步优化的空间:  
-
-1. 动态调整QMA的参数,使其能根据市场波动程度进行自适应  
-2. 结合波动率、交易量等指标过滤入场机会
-3. 增加止损策略,控制单笔损失  
-
-## 总结  
-
-本策略总体来说是一个稳定性较好的短期交易策略。相比单一价格平均,其指标更能反映市场供需关系。通过参数调整和风控手段的引入,本策略可以长期稳定运作,获得良好收益。
-
-||
 
 ## Overview
 
@@ -95,7 +51,6 @@ There is still room for further optimization of this strategy:
 
 In general, this is a stable short-term trading strategy. Compared with single price average, its indicator can better reflect the supply-demand relationship in the market. With proper parameter tuning and risk management, this strategy can operate steadily for the long run and gain sound profit.
 
-[/trans]
 
 > Strategy Arguments
 

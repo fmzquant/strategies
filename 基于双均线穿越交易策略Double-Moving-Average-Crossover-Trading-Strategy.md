@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/170922912c9402bfcb6.png)
-[trans]
-# 
-
-## 概述
-本策略基于移动平均线的黄金交叉和死亡交叉来产生买入和卖出信号。具体来说,该策略同时使用5日指数移动平均线(EMA)和34日双指数移动平均线(DEMA)。当短期5日EMA从下方上穿越长期34日DEMA时,产生买入信号;当短期5日EMA从上方下穿越长期34日DEMA时,产生卖出信号。
-
-## 策略原理
-1. 计算5日EMA和34日DEMA
-2. 当短期5日EMA从下方上穿越长期34日DEMA时,产生买入信号
-3. 当短期5日EMA从上方下穿越长期34日DEMA时,产生卖出信号  
-4. 可以选择只在特定交易时间段交易
-5. 可以选择是否使用追踪止损
-
-本策略同时融合了趋势跟踪和均线交叉两个Factor,具有稳定的效果。移动平均线作为一种趋势跟踪指标,能有效识别市场趋势;EMA与DEMA的组合使用能够有效平滑价格数据来产生交易信号;短期和长期均线的交叉则可在大趋势变化的时候提前给出交易信号。
-
-## 优势分析
-1. 策略思路简单清晰,容易理解实现
-2. 移动平均线组合使用,既考虑了对趋势判断,也考虑到对价格数据平滑处理
-3. 短期和长期均线交叉,可以在大的市场转折点提前给出交易信号
-4. 可以通过参数优化,调整均线的长度,适应不同品种和周期
-5. 整合两个因子,可以提高策略稳定性
-
-## 风险分析
-1. 在震荡行情中,可能出现较多误信号
-2. 均线长度不当可能导致信号滞后
-3. 交易时间和止损设置不当,可能影响策略收益
-
-可以通过调整均线长度,优化交易时间,和设置合理止损来降低这些风险。
-
-## 优化方向  
-1. 调整均线长度参数,适应不同交易品种和周期
-2. 优化交易时间参数,在主要活跃时间段交易
-3. 比较固定止损和追踪止损两种方案优劣
-4. 测试不同取价方式对策略的影响 
-
-## 总结
-本策略通过双均线交叉产生交易信号,同时结合趋势跟踪和数据平滑处理,是一种简单实用的趋势跟踪策略。通过参数调优和规则优化,可以适应不同品种和交易周期,在大趋势变化的时候提前给出交易信号,避免误信号。值得推荐和应用。
-
-|| 
 
 ## Overview  
 This strategy generates buy and sell signals based on the golden cross and death cross of moving averages. Specifically, it uses a 5-day exponential moving average (EMA) and a 34-day double exponential moving average (DEMA). When the short-term 5-day EMA crosses above the long-term 34-day DEMA, a buy signal is generated. When the short-term 5-day EMA crosses below the long-term 34-day DEMA, a sell signal is generated.  
@@ -85,7 +46,6 @@ These risks can be reduced by adjusting moving average lengths, optimizing tradi
 ## Conclusion
 This strategy generates trading signals through double moving average crossovers, combined with trend following and data smoothing techniques. It is a simple and practical trend following strategy. Through parameter tuning and logic refinement, it can adapt to different products and timeframes, provide early signals at major trend changes, and avoid false signals. Worth recommending and applying.
 
-[/trans]
 
 > Strategy Arguments
 

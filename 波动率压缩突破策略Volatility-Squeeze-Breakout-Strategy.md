@@ -9,27 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-#### 概述
-波动率压缩突破策略是一种结合布林带（Bollinger Bands, BB）和凯尔特纳通道（Keltner Channel, KC）的交易系统。它旨在通过监测价格突破和趋势信号，捕捉市场的主要移动。策略关注市场的压缩期（低波动率）和随后的突破（高波动率），试图在大规模价格移动开始之前进入市场。
-
-#### 策略原理
-波动率压缩突破策略的核心是识别市场波动率的减少和增加。布林带是通过计算价格的标准偏差而形成的，而凯尔特纳通道则是基于平均真实范围（ATR）。当布林带在凯尔特纳通道内部压缩时，它表明市场波动率降低，可能会有一次大规模的价格突破。策略通过检查布林带是否处于凯尔特纳通道内部，以及价格是否突破布林带的上限或下限，来发出交易信号。此外，策略还考虑了指数移动平均线（EMA）的趋势排列，以增强信号的有效性。
-
-#### 策略优势
-该策略的主要优势在于它结合了波动率指标和趋势指标，提供了一种全面的市场视角。通过布林带和凯尔特纳通道的组合，策略能够有效地识别潜在的大规模市场移动。此外，EMA趋势排列的使用可以帮助确认市场方向，减少错误信号。
-
-#### 策略风险
-波动率压缩突破策略的主要风险在于假突破信号和市场的不确定性。在高波动率的市场条件下，布林带可能会频繁地被突破，从而产生误导性的信号。此外，如果没有正确地确定市场趋势，策略可能会产生不利的交易。为了降低这些风险，可以通过调整参数、结合其他指标或采用更严格的入场条件来优化策略。
-
-#### 策略优化方向
-该策略可以通过多种方式进行优化。首先，可以通过调整布林带和凯尔特纳通道的参数来适应不同的市场条件。其次，可以引入其他技术指标，如相对强弱指数（RSI）或移动平均收敛发散（MACD），以提供额外的交易信号确认。最后，可以考虑将此策略与其他类型的交易系统结合，以形成一个更加全面和多元化的交易框架。
-
-#### 总结
-波动率压缩突破策略是一个强大且灵活的交易系统，结合了布林带和凯尔特纳通道的优点。通过监测市场波动率和趋势信号，它能够有效地识别大规模的市场移动。虽然策略具有一定的风险，但通过适当的优化和参数调整，可以大大提高其效率和准确性。总的来说，这个策略提供了一种独特的视角，用于捕捉和利用市场的主要趋势和突破。
-
-||
 
 #### Overview
 The Volatility Squeeze Breakout Strategy is a trading system that integrates Bollinger Bands (BB) and Keltner Channel (KC) to capture major market movements by monitoring breakout and trend signals. This strategy focuses on periods of market compression (low volatility) and subsequent breakouts (high volatility), aiming to enter the market before the start of major price movements.
@@ -50,7 +29,6 @@ This strategy can be optimized in several ways. Firstly, adjusting the
 
 #### Conclusion
 The Volatility Squeeze Breakout Strategy is a powerful and flexible trading system that combines the strengths of Bollinger Bands and Keltner Channel. By monitoring market volatility and trend signals, it can effectively identify major market movements. While the strategy carries certain risks, these can be significantly mitigated through proper optimization and parameter adjustments. Overall, this strategy provides a unique perspective for capturing and capitalizing on major market trends and breakouts.
-[/trans]
 
 > Strategy Arguments
 

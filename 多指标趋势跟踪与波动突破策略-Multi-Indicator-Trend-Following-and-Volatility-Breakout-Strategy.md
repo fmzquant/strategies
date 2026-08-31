@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/124d3bba602b7861829.png)
 
-[trans]
-#### 概述
-这是一个结合了多个技术指标的趋势跟踪与波动突破策略。该策略通过整合均线系统(EMA)、趋势强度指标(ADX)、市场波动指标(ATR)、量价分析(OBV)以及一些辅助指标如Ichimoku云图和随机指标(Stochastic)来捕捉市场趋势和突破机会。策略设置了严格的时间过滤器,仅在特定交易时段内运行,以提高交易效率。
-
-#### 策略原理
-策略的核心逻辑基于多层技术指标的综合判断:
-1. 使用50周期和200周期EMA构建趋势跟踪系统
-2. 通过ADX指标确认趋势强度
-3. 利用Ichimoku云图提供额外的趋势确认
-4. 结合Stochastic指标识别超买超卖区域
-5. 使用ATR动态设置止损和获利目标
-6. 通过OBV验证成交量支持度
-
-策略在满足以下条件时发出买入信号:
-- 处于允许交易时间段内
-- 价格位于短期EMA之上
-- 短期EMA位于长期EMA之上
-- ADX高于设定阈值
-- 价格位于云图上方
-- Stochastic指标处于超卖区域
-
-#### 策略优势
-1. 多层技术指标交叉验证,提高信号可靠性
-2. 结合趋势跟踪和波动突破,增加策略适应性
-3. 通过时间过滤器避免低效交易时段
-4. 动态止损和获利目标设置,适应市场波动
-5. 量价结合分析,提供更全面的市场视角
-6. 系统化的进出场规则,减少主观判断
-
-#### 策略风险
-1. 多指标系统可能导致信号滞后
-2. 在横盘市场中可能产生过多假信号
-3. 参数优化难度较大,过度优化风险高
-4. 交易时间限制可能错过重要行情
-5. 止损设置过大可能导致单笔损失较高
-
-风险控制建议:
-- 定期检查并优化参数设置
-- 考虑加入波动率过滤器
-- 实施更严格的资金管理规则
-- 增加趋势确认的辅助指标
-
-#### 策略优化方向
-1. 引入自适应参数系统,根据市场状态动态调整指标参数
-2. 增加市场状态分类机制,在不同市场环境下使用不同的信号生成规则
-3. 优化时间过滤器设置,根据历史数据分析最佳交易时段
-4. 改进止损策略,考虑使用跟踪止损
-5. 加入市场情绪指标,提高信号质量
-
-#### 总结
-该策略通过综合运用多个技术指标,构建了一个完整的交易系统。策略的优势在于多层指标交叉验证和严格的风险控制,但同时也面临参数优化和信号滞后等挑战。通过持续优化和改进,策略有望在不同市场环境下保持稳定表现。
-
-|| 
 
 #### Overview
 This is a comprehensive trading strategy that combines trend following and volatility breakout approaches using multiple technical indicators. The strategy integrates an EMA system, ADX for trend strength, ATR for volatility measurement, OBV for volume analysis, and supplementary indicators like Ichimoku Cloud and Stochastic oscillator to capture market trends and breakout opportunities. A time filter is implemented to optimize trading efficiency by operating only during specific trading hours.
@@ -115,7 +62,6 @@ Risk control suggestions:
 
 #### Summary
 The strategy constructs a complete trading system through the comprehensive application of multiple technical indicators. Its strengths lie in multi-layer indicator cross-validation and strict risk control, while facing challenges in parameter optimization and signal lag. Through continuous optimization and improvement, the strategy shows potential for stable performance across different market conditions.
-[/trans]
 
 
 

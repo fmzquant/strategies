@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ca642dd9163504f03e.png)
 
-[trans]
-#### 概述
-该策略结合唐奇安通道、拉里威廉斯大交易指数(LWTI)和成交量移动平均线三个指标来进行交易。当价格突破唐奇安通道上轨,LWTI为绿色,成交量大于移动平均线时做多;当价格突破唐奇安通道下轨,LWTI为红色,成交量大于移动平均线时做空。策略在开仓后,当价格触及止损或止盈位置,或者价格回到唐奇安通道中轨时平仓。为了防止在同一趋势方向内重复开仓,该策略使用一个交易计数器,只有当价格突破唐奇安通道中轨后,才允许再次开仓。
-
-#### 策略原理
-1. 唐奇安通道:当价格突破通道上轨时产生做多信号,突破下轨时产生做空信号。
-2. 拉里威廉斯大交易指数:LWTI颜色为绿色时只允许做多,红色时只允许做空。
-3. 成交量:当前成交量大于成交量移动平均线时,才允许开仓。
-4. 交易计数器:防止在同一趋势方向内重复开仓,只有当价格突破唐奇安通道中轨后,才允许再次开仓。
-5. 止盈止损:开仓时根据ATR计算止盈止损距离,止盈距离为止损距离乘以风险收益比。
-
-#### 策略优势
-1. 结合多个指标共同确认交易信号,可以有效过滤伪信号,提高信号质量。
-2. 动态止盈止损 - 根据波动率动态调整止盈止损距离,可以更好地适应市场变化。
-3. 通过交易计数器防止在同一趋势内重复开仓,控制交易频率。
-4. 风险收益比止盈 - 根据预设的风险收益比设置止盈位置,让盈利空间大于风险。
-
-#### 策略风险
-1. 参数风险 - 不同参数设置对策略表现影响很大,需要根据不同市场特点和周期进行优化。
-2. 震荡市风险 - 在震荡市场环境下,频繁的波动可能导致策略频繁开平仓,表现不佳。
-3. 趋势风险 - 如果趋势持续性不强,可能出现频繁开平仓,导致亏损加大。
-4. 黑天鹅风险 - 极端行情下指标可能失效,策略表现不佳。
-
-#### 策略优化方向 
-1. 针对不同品种和周期进行参数优化,找到最佳参数组合。
-2. 增加趋势过滤条件,比如使用均线或者动量指标,只在趋势明确时开仓,减少震荡环境下的交易次数。
-3. 针对震荡市环境,可以考虑使用范围突破策略。
-4. 对止盈止损逻辑进行优化,引入移动止盈或者尾随止损等方法。
-5. 针对极端行情,可以考虑引入固定资金管理和最大回撤限制等措施。
-
-#### 总结
-唐奇安通道和拉里威廉斯大交易指数策略是一个经典的趋势跟踪交易策略。通过唐奇安通道捕捉趋势方向,使用LWTI、成交量等指标过滤信号,动态止盈止损,风险控制严格,整体是一个具有稳健收益的策略框架。但需要注意的是,该策略对参数比较敏感,在震荡市环境下表现不佳,建议在趋势型市场中使用。在实际应用中,还需要根据交易标的和市场特点,对参数和逻辑进行进一步优化,并配合严格的资金管理,才能取得良好稳定的回报。
-
-|| 
 
 #### Overview
 This strategy combines three indicators - Donchian Channel, Larry Williams Large Trade Index (LWTI), and Volume Moving Average to generate trading signals. It enters a long position when the price breaks above the upper band of the Donchian Channel, LWTI is green, and volume is greater than the moving average. It enters a short position when the price breaks below the lower band of the Donchian Channel, LWTI is red, and volume is greater than the moving average. The strategy exits positions when the price reaches the stop loss or take profit levels, or when the price returns to the middle band of the Donchian Channel. To prevent repeated entries in the same trend direction, the strategy employs a trade counter that only allows new entries after the price crosses the middle band of the Donchian Channel.
@@ -77,7 +43,6 @@ This strategy combines three indicators - Donchian Channel, Larry Williams Large
 
 #### Summary
 The Donchian Channel and Larry Williams Large Trade Index strategy is a classic trend-following trading strategy. It captures trend direction using the Donchian Channel, filters signals using LWTI, volume, and other indicators, and employs dynamic stop loss and take profit with strict risk control. Overall, it is a strategy framework with the potential for steady returns. However, it is important to note that the strategy is sensitive to parameters and performs poorly in choppy market conditions. It is recommended for use in trending markets. In practical application, further optimization of parameters and logic based on trading instruments and market characteristics, along with strict money management, is necessary to achieve good and stable returns.
-[/trans]
 
 > Strategy Arguments
 

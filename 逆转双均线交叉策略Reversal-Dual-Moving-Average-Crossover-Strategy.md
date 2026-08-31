@@ -10,20 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1141994386990960ad3.png)
-[trans]
-概述:本策略是基于均线交叉的经典交易策略,指标选用双均线,包括简单移动平均线(SMA)、指数移动平均线(EMA),线性加权移动平均线(VWMA)和震荡加权移动平均线(HMA)。
-
-原理:策略的核心逻辑是双均线交叉。通过计算两个不同参数的均线,当快速均线上穿慢速均线时产生买入信号;当快速均线下穿慢速均线时产生卖出信号。均线交叉代表了价格的短期与长期趋势的转折。
-
-优势分析:双均线交叉策略优点主要在于简单易操作,通过一个信号即可获知最基本的趋势判断,无须过多参数选择与调整,非常适合新手交易者。且不同类型的均线都有测试,可以选择不同的组合来优化。
-
-风险分析:本策略的主要风险在于常见的均线交叉策略会有大量的虚假信号,从而导致小额获利多次平仓的问题,影响了整体收益。此外,固定快慢均线长度设置也会在某些周期下失效。
-
-优化方向:1)尝试不同周期测试,确定最佳均线交叉周期组合。2)考虑引入第二组均线的参数以及 RSI 指标的辅助判断减少虚假信号。3)引入基于 MA 指标增量变化的条件判定而非简单交叉,得到更加可靠的交叉判断。
-
-总结:本策略采用传统均线交叉策略的框架,进行双均线测试以找寻最佳均线周期组合,同时增加了基于均线 ROC 和价格的止损判定。总的来说是一个简单易用且符合量化交易逻辑的双均线策略。此外丰富的优化思路也为本策略的后继发展提供了空间。
-
-|| 
 
 Overview: This strategy is based on the classic trading strategy of moving average crossover. It uses dual moving averages, including Simple Moving Average (SMA), Exponential Moving Average (EMA), Variable Weighted Moving Average (VWMA) and Hull Moving Average (HMA).  
 
@@ -37,7 +23,6 @@ Optimization Directions: 1) Test different periods to determine the optimal comb
 
 Summary: This strategy adopts the framework of the traditional moving average crossover strategy to test dual moving averages to find the optimal combination of moving average periods. At the same time, it adds stop-loss judgments based on the ROC and price of the moving average. Overall it is a simple and easy-to-use dual moving average strategy that conforms to quantitative trading logic. In addition, the rich optimization ideas also provide room for the further development of this strategy.
 
-[/trans]
 
 > Strategy Arguments
 

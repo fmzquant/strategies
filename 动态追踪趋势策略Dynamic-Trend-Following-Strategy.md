@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c37256dd443057e129.png)
 
-[trans]
-
-### 概述
-
-这个策略的主要思想是动态追踪市场趋势,在趋势向上时进行买入,在趋势向下时进行卖出。它通过计算多个指标的组合来判断趋势方向,比如线性回归,修改后的Hull移动平均线等。
-
-### 策略原理  
-
-这个策略运用了多种技术指标来判断趋势方向。首先,它计算了一个范围通道,通道的上下限是根据close的简单移动平均和一个输入参数计算的。然后,它计算了修改后的Hull移动平均线,该指标被认为能更准确地描绘趋势。此外,还计算了线性回归指标。当修改后的Hull移动平均线上穿线性回归时 Generates buy signals,下穿时generates sell signals。这样,就可以动态地追踪趋势的变化。
-
-为了降低错误信号,该策略还设计了多个过滤器。比如使用EMA来判断是否处在下降趋势,以及使用一个窗口指标来判断RSI的变化情况。这些过滤器可以避免在震荡行情中产生交易信号。
-
-在入场和止损方面,该策略记录了最后一个开仓价,并设定了止盈止损的百分比。例如,若最后开多仓的价格是100美元,则设置止盈目标为102美元,止损价格为95美元。这样就实现了动态跟踪。
-
-### 优势分析
-
-这个策略有以下几个优势:
-
-1. 动态追踪趋势变化,能够顺利捕捉较长线的方向;
-2. 使用了多个滤波器,可以减少噪音,避免在震荡行情中频繁交易;
-3. 自动调整止盈止损位置,实现趋势跟踪;
-4. 可以通过参数优化自动找到最佳参数组合。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 依然无法完全避免被套行情的风险。当趋势发生转折时,可能会面临较大的浮亏。
-2. 参数设置不当可能导致策略表现不佳。需要通过优化找到最佳参数组合。
-3. 数据处理时间过长可能会导致信号滞后。需要优化指标计算,使其尽可能实时。
-
-为控制风险,可以设置止损, trail stop 或使用期权等方式锁定利润。此外,必须对参数组合进行反复测试,找到可靠的参数范围。最后,也要关注指标计算时间,力求信号的实时性。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试更多指标的组合,寻找判断趋势更可靠的方式;  
-2. 调整参数范围,找到最佳参数;
-3. 优化信号过滤器,在去噪声与滞后之间找到平衡;  
-4. 尝试机器学习等方式自动生成交易规则。
-
-在优化过程中,必须充分利用回测和模拟交易,评估信号质量和策略稳定性。只有经过充分验证的优化方案才能应用于实盘。  
-
-### 总结  
-
-这个策略overall是一个较好的趋势跟踪策略。它使用多个指标判断趋势,设置了过滤器来减少错误信号,可以自动调整止盈止损追踪趋势。如果参数设置得当,它可以顺利捕捉中长线趋势。下一步的工作是找到最优参数,并继续对策略进行验证和优化。
-
-||
 
 ### Overview  
 
@@ -107,7 +58,6 @@ During optimization, backtesting and paper trading should be utilized extensivel
 
 Overall this is a decent trend following strategy. It uses multiple indicators to gauge trends, sets up filters to reduce false signals, and can automatically adjust stops and targets to follow trends. With proper parameter tuning, it can smoothly catch mid to long-term trends. Next steps would be finding optimal parameters, and continue validating and improving the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

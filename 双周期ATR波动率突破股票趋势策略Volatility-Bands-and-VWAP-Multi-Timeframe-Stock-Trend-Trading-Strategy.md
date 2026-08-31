@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1c2b068567a8db801ea.png)
 
-[trans]
-本策略通过计算价格的ATR波动率,结合不同周期的VWAP均价,设定长仓入场和出场条件,实现股票的趋势跟踪交易。
-
-## 策略概述
-
-该策略主要应用于股票类产品的趋势追踪,通过计算ATR波动率并结合不同周期的VWAP价格,设定买入卖出条件,实现对趋势的判断和跟踪。策略较为灵活,可在长线和短线之间切换,适用于捕捉中长线趋势。
-
-## 策略原理  
-
-策略利用ATR指标计算价格波动率,并结合价格是否突破波动率通道判断趋势方向。同时引入不同周期的VWAP价格判断长短线趋势一致性。具体逻辑如下:  
-
-1. 计算价格的ATR波动率通道
-2. 判断价格是否突破波动率通道
-   1. 突破上轨时判断为看多趋势
-   2. 突破下轨时判断为看空趋势
-3. 引入周线和日线VWAP价格
-   1. 价格突破波动率上轨时,如果日线和周线VWAP均在价格上方,则产生长仓信号
-   2. 价格突破波动率下轨时,如果日线和周线VWAP均在价格下方,则产生空仓信号
-
-以上为策略的核心逻辑。ATR波动率判断短期趋势,VWAP价格判断长期趋势,二者结合判断趋势一致性,从而产生交易信号。
-
-## 策略优势
-
-- 利用ATR和VWAP的组合判断趋势,更加可靠 
-- 可配置ATR周期参数,调整策略的灵敏度
-- 引入不同周期VWAP,判断长短线趋势一致性  
-- 可灵活在长线和短线之间切换
-- 适用于追踪股票中长线趋势
-
-## 策略风险与优化
-
-- 作为趋势跟踪策略,在震荡调整阶段会产生更多交易,带来滑点风险
-- ATR和VWAP参数设置会影响策略表现,需要针对不同品种谨慎测试
-- 可考虑加入止损机制,控制单笔损失
-- 可结合均线等指标过滤入场信号,减少不必要交易
-
-## 总结
-
-本策略通过ATR波动率和VWAP双重判断,实现对股票趋势的跟踪。策略优化空间较大,可调整参数或加入其他技术指标优化信号。总体来说,策略逻辑清晰易懂,表现稳健,适合追踪中长线趋势。
-
-||
 
 This strategy calculates the ATR volatility of price and combines different period VWAP to set long entry and exit conditions for stock trend trading.  
 
@@ -92,7 +51,6 @@ The above is the core logic of the strategy. The ATR volatility judges the short
 
 The strategy realizes stock trend tracking through dual confirmation of ATR volatility and VWAP. There is ample room for optimization by adjusting parameters or incorporating other technical indicators. Overall, the strategy logic is clear and robust for tracking medium to long term trends.
 
-[/trans]
 
 > Strategy Arguments
 

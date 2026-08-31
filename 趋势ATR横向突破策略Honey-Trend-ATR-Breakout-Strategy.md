@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16b6ce8bb9ea3e486d7.png)
-[trans]
-
-## 概述
-
-蜜蜂趋势ATR横向突破策略是一种基于ATR指标与布林带进行交易信号生成的中短线突破型策略。它主要监测股价在一定宽度的上下ATR通道内的趋势变化,在下穿下轨或上穿上轨时,结合趋势过滤进行交易决策。
-
-## 策略原理  
-
-该策略主要由三部分组成:
-
-1. ATR通道:通过ATR指标计算股价的波动范围,并以该范围上下形成通道。通道宽度通过ATR lookback周期和ATRdivisor因子控制。
-
-2. 蜜蜂线:以股价中枢线为基准线。中枢线计算方法为:昨日高低收的平均值。
-
-3. 趋势过滤:通过离差动向指标计算价格趋势,并设定信号周期,当 pricesig '>': pricesig[3] 时为趋势向上,当 pricesig '<' pricesig[3]时为趋势向下。
-
-具体交易信号生成逻辑为:
-
-多头信号: pricesig > pricesig[3] 且 价格下穿下轨 时做多;  
-
-空头信号: pricesig < pricesig[3] 且 价格上穿上轨 时做空;
-
-其他情况无交易。
-
-该策略同时设定止盈止损条件,以控制交易风险。
-
-## 优势分析
-
-蜜蜂趋势ATR突破策略具有如下优势:
-
-1. 采用ATR指标计算股价波动范围,能动态捕捉市场变化;
-
-2. 结合中枢线评估股价横盘并设置通道突破交易点,避免追高杀跌;  
-
-3. 离差动向指标进行趋势判断,避免逆势交易,提高胜率;
-
-4. 设置止盈止损条件控制单笔风险;
-
-5. 策略参数设定灵活,可调整通道宽度、ATR周期等因素优化策略。
-
-## 风险分析  
-
-该策略也存在一定风险:  
-
-1. 中短线交易波动大,风险相对较高,需要谨慎资金管理;  
-
-2. 股价剧烈波动时,ATR通道范围计算可能不准,容易造成错误交易;
-
-3. 离差动向指标对趋势判断也可能犯错,从而影响交易信号的准确性。  
-
-针对以上风险,可通过适当调整ATR通道参数、加大趋势过滤信号周期等方式进行优化和改进。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 调整ATR通道宽度,降低或提高参数atrDivisor,压缩或放大通道范围。
-
-2. 调整ATR lookback周期参数,改变通道对最近波动的敏感度。
-
-3. 调整趋势信号周期参数,改善多空趋势判断的准确性。 
-
-4. 加入其他指标进行多因子验证,提高交易信号质量。
-
-5. 优化止盈止损算法,改进风险控制。
-
-## 总结  
-
-蜜蜂趋势ATR突破策略整合运用股价波动范围分析和趋势判断指标,在捕捉市场热点的同时控制交易风险,是一种灵活度高、适应性强的量化策略。该策略可通过参数调整与信号优化不断改进,具有广阔的运用前景。
-
-||
 
 ## Overview  
 
@@ -150,7 +79,6 @@ The strategy can be optimized in the following aspects:
 
 The Honey Trend ATR Breakout Strategy integrates the analysis of price fluctuation range and trend judgment indicators. While capturing market hotspots, it also controls trading risks. It is a flexible and adaptable quantitative strategy. This strategy can be continuously improved through parameter adjustment and signal optimization, with broad application prospects.
 
-[/trans]
 
 > Strategy Arguments
 

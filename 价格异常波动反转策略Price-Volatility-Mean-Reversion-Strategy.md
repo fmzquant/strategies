@@ -9,74 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算价格的标准差,判断价格是否出现异常大幅波动。当价格出现异常大幅波动时,则判断为价格反转的机会,采取反向操作。
-
-## 原理
-
-该策略主要使用两个指标:
-
-1. VixFix 指标:计算价格在一定周期内的标准差,判断价格是否出现异常波动。具体计算方法是:
-
-```pine
-wvf = ((highest(close, pd)-low)/(highest(close, pd)))*100 
-sDev = mult * stdev(wvf, bbl)
-midLine = sma(wvf, bbl)  
-lowerBand = midLine - sDev
-upperBand = midLine + sDev
-```
-
-其中,wvf 是价格波动率,sDev 是标准差,midLine 是平均线,lowerBand 和 upperBand 分别是下限线和上限线。当价格超过上限线,则认为出现异常波动。
-
-2. RSI 指标:计算价格的相对强弱指数,判断价格反转的时机。具体计算方法是:
-
-```pine
-fastup = rma(max(change(close), 0), 7)  
-fastdown = rma(-min(change(close), 0), 7)
-fastrsi = fastdown == 0 ? 100 : fastup == 0 ? 0 : 100 - (100 / (1 + fastup / fastdown)) 
-```
-
-当RSI低于某一数值时,表示价格处于超卖状态,可能出现反弹。当RSI超过某一数值时,表示价格处于超买状态,可能出现回落。
-
-## 入场和出场
-
-该策略的入场和出场逻辑如下:
-
-多仓入场:当价格超过上限线或波动率超过阈值,且RSI低于某一数值时,做多。
-
-空仓入场:当价格超过上限线或波动率超过阈值,且RSI超过某一数值时,做空。 
-
-出场条件:开仓方向与K线实体方向相反时平仓。
-
-## 优势
-
-- 利用价格异常波动的统计特性,判断价格反转的时机,覆盖面广。
-- 结合RSI指标判断超买超卖状态,可以提高入场的精确度。
-- 采用突破标准差下限作为入场信号,可以减少错失机会。
-- 采用实体反转作为止损方式,可以快速止损,降低亏损。
-
-## 风险
-
-- 标准差下限可能会调整,需要优化参数。
-- 突破标准差下限不一定产生反转,存在被套的风险。
-- RSI参数需要优化,如果不合适可能导致信号不精确。 
-- 实体方向判定止损可能会过于激进,需要调整参数。
-
-## 优化思路
-
-- 优化计算标准差的周期参数,使其更能捕捉价格异常波动。
-- 优化RSI的参数,找到更好的超买超卖判定标准。
-- 尝试其他指标结合,如KDJ、MACD等判断反转时机。
-- 优化止损方式,设置价格回调幅度作为止损标准。
-
-## 总结
-
-该策略通过计算价格波动率的标准差,判断价格是否出现异常波动,从而捕捉反转机会。在入场时机选择上,则结合RSI指标判断价格的超买超卖状态,提高精确度。在止损方式上采用简单的实体方向止损。整体来说,该策略利用统计数据判断异常波动,效果较好,但需要进一步优化参数,提高稳定性。如果能够合理优化止损机制,降低亏损,该策略的效果会更好。
-
-||
 
 
 ## Overview
@@ -144,7 +76,6 @@ Exit: When candlestick body direction is opposite of position direction, close p
 
 The strategy detects anomalous price volatility through calculating standard deviation of price volatility, to capture reversal opportunities. RSI is combined to judge overbought/oversold status for improving entry precision. Simple candlestick body direction stop loss is used. Overall, the strategy is effective in using statistical data to detect anomalous volatility, but needs further parameter optimization to improve stability. If the stop loss mechanism can be reasonably optimized to reduce losses, the strategy would perform even better.
 
-[/trans]
 
 > Strategy Arguments
 

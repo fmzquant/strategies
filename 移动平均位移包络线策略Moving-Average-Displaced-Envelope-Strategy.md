@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15e93b609a51ed804a3.png)
-[trans]
-
-该策略基于移动平均线位移包络线指标进行交易信号生成。其中,包络线通过移动平均线的百分比因子来计算。如果前期高点突破上轨,则产生卖出信号;如果前期低点跌破下轨,则产生买入信号。
-
-## 策略原理
-
-该策略使用 displaced exponential moving average (EMA)作为核心指标,并在其一定周期之后,通过百分比因子扩大形成上下轨。这构成了完整的移动平均位移包络线系统。具体来说,包络线系统由以下组成:
-
-* EMA(Price, Period) - 核心指数移动平均线
-* top = sEMA\[disp\] \* ((100 + perAb)/100) - 上轨
-* bott = sEMA\[disp\] \* ((100 - perBl)/100) - 下轨
-
-其中Percent above和Percent below分别控制上下轨相对核心指数移动平均线的百分比区间。Displacement参数用于控制上下轨线与核心指数移动平均线之间的周期位移。
-
-通过这种方式,我们可以通过调整上述参数,形成合适的交易区间。如果价格突破区间,则产生交易信号。具体来说:
-
-* 如果收盘价低于下轨bott,则产生买入信号
-* 如果收盘价高于上轨top,则产生卖出信号
-
-需要注意的是,该策略还提供了reverse参数,如果设置为true,则信号方向与上述相反。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 使用指数移动平均线作为基础指标,可减少曲线的滞后性,提高对价格变化的敏感性
-2. 可调参数较多,可以通过参数优化获得更好的交易结果
-3. 提供reverse模式,可以适应不同类型的市场
-4. 规则简单清晰,容易理解和实现
-
-## 风险与防范
-
-该策略也存在一些风险,主要包括:
-
-1. 在震荡行情中容易产生虚假信号
-2. 参数设置不当可能导致过度交易或信号遗漏
-3. 不能有效过滤市场噪音,可能产生一些无价值信号
-
-为防范这些风险,我们可以从以下几个方面进行优化:
-
-1. 结合其他指标过滤信号,例如交易量、波动率等
-2. 增加参数优化流程,寻找最佳参数组合
-3. 适当调整止损策略,控制单笔损失
-
-## 优化思路
-
-该策略还有很大的优化空间,主要可以考虑从以下几个方面进行:
-
-1. 增加机器学习模型,实现参数的自动优化和调整
-2. 将止损、移动止损、 trailing stop等功能加入,可有效控制风险
-3. 结合情绪指标、投资者情绪进行信号过滤,提升信号质量
-4. 增加模型组合,结合其他技术指标识别趋势,提高整体准确率
-5. 继承该策略模板,开发其他类型的指数均线系统,扩大适用范围
-
-通过这些优化,可以进一步增强策略的稳定性、适应性和效果。
-
-## 总结
-
-移动平均位移包络线策略利用简单的指数移动平均系统与参数化区间,形成清晰的交易规则,易于解释和实施,属于一种较为典型的趋势跟踪策略。通过参数调整和优化,该策略可以产生较好的效果。但也需要充分考虑市场环境的影响,并防范潜在的风险。本策略为基础模板,后续仍有很大的拓展与优化空间。
-
-||
 
 This strategy generates trading signals based on the Moving Average Displaced Envelope indicator. The envelope bands are calculated by percentage factors of the moving average. If the previous high breaks above the upper band, a sell signal is generated. If the previous low breaks below the lower band, a buy signal is generated.
 
@@ -130,7 +69,6 @@ With these optimizations, the stability, adaptability and performance of the str
 
 The moving average displaced envelope strategy utilizes simple exponential moving average systems and parameterized bands to form clear trading rules that are easy to interpret and implement. It is a typical trend following system. Through parameter tuning and optimizations, good results can be achieved. But the impacts of market environments should also be fully considered and potential risks should be prevented. This strategy serves as a basic template and has much room for expansions and optimizations.
 
-[/trans]
 
 > Strategy Arguments
 

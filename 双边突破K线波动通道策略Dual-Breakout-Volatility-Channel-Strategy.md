@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fd6efbd795890d4367.png)
-[trans]
-## 概述
-
-双边突破K线波动通道策略通过计算通道中轨、上轨和下轨,结合趋向指标和量价指标判断行情方向和力度,在通道两边同时设置突破信号,实现低买高卖的主要目的。
-
-## 策略原理
-
-该策略的核心指标是基于统计学的K线波动通道。通道中轨采用平均线算法,上下轨采用平均真实波幅的计算方法,能动态捕捉价格波动的边界。与此同时,策略加入DMI和交易量的判断规则,避免虚假突破带来损失。 
-
-具体来说,当价格从下轨突破进入通道,DMI的+DI线超过-DI线和设定的ADX基准线,且成交量放大时产生买入信号。反之,价格从上轨往下突破通道时,判断规则与上述相反,产生卖出信号。
-
-## 优势分析
-
-该策略最大的优势是捕捉价格的主要突破方向,采用双边突破判断可以有效避开盘整和震荡的行情,减小止损次数。与简单移动平均线策略相比,K线通道突破判断对价格波动的适应性更强。
-
-此外,辅助指标DMI和成交量的引入也起到良好的过滤作用,避免出现虚假信号。所以从胜率和盈亏比角度来看,该策略都有一定的优势。
-
-## 风险分析
-
-双边突破策略最大的风险在于无法判断行情反转,如果行情出现V型反转,止损点有可能会被轻易触发。此外,参数设置不当也会对交易系统产生负面影响。
-
-针对风险,我们可以通过进一步优化指标参数,缩小止损幅度来降低风险。当然,交易系统永远不可能完全避免亏损,关键是要控制风险。
-
-## 优化方向 
-
-该策略还具有很强的优化潜力,主要可以从以下几个方面进行改进:
-
-1. 优化参数,如DMI的DI和ADX长度、K线通道的周期和倍数设置等参数细调
-
-2. 增加过滤条件,如结合MACD等其他指标避免虚假突破
-
-3. 实现止盈止损自动跟踪,从而进一步控制风险
-
-4. 针对不同品种参数设置和过滤规则进行优化
-
-## 总结
-
-双边突破K线波动通道策略总的来说是一种行之有效的突破系统。它能有效判断主要趋势方向和力度,在优化和风险控制方面也有很大的潜力。如果系统性地进行改进与优化,该策略可以长期稳定盈利。
-
-||
 
 ## Overview
 
@@ -89,7 +49,6 @@ The strategy also has great potential for optimization, which can be improved in
 
 In general, the dual breakout volatility channel strategy is an effective breakout system. It can effectively determine the main trend direction and momentum, and has great potential in optimization and risk control. If improved and optimized systematically, the strategy can profit steadily in the long run.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9012c0d4b2e95ac656.png)
-[trans]
-## 概述
-
-三色交叉趋势追踪策略是一种基于K线形态的趋势追踪交易策略。该策略通过识别特定的三色K线形态来判断当前趋势的方向,并在识别到形态时选择性地进行做多或做空。
-
-## 策略原理
-
-该策略的核心逻辑是:连续出现三根同色K线(三根红色或三根绿色),然后反转为一根不同颜色的K线,最后再反转回原先三根K线的颜色时,说明原先的趋势正在持续,因此在这个时候进行追踪入场。
-
-具体来说,策略通过检测最近五根K线的情况来判断是否符合入场条件。如果最近五根K线为:第五根K线低点低于前一根低点(若做多则判断高点高于前一根高点),第四根为阳线(若做多则为阴线),第三根为阴线(若做多则为阳线),第二根为阴线(若做多则为阳线),第一根为阴线(若做多则为阳线),那么就进行做空追踪;相反,如果最近五根K线为:第五根K线高点高于前一根高点,第四根为阴线,第三根为阳线,第二根为阳线,第一根为阳线,那么就进行做多追踪。通过这种特定K线形态的判断,可以在趋势持续时获取额外利润。
-
-## 策略优势
-
-- 利用K线形态判断趋势方向,容易操作
-- 可以在趋势持续阶段获利
-- 策略规则简单清晰
-
-## 策略风险
-
-- K线形态判断错误可能导致损失
-- 无法判断趋势反转点,可能顺势亏损
-- 可能频繁打开头寸,增加交易成本
-
-## 策略优化方向
-
-- 结合其他指标判断K线形态的可靠性
-- 设置止损点,控制单笔亏损
-- 优化开仓条件,降低错误判断概率
-- 考虑调整仓位大小,降低风险
-
-## 总结
-
-三色交叉趋势追踪策略通过识别特定K线形态来判断当前趋势方向,在趋势持续时选择性地打开仓位。该策略简单清晰,易于操作,能够在趋势阶段获得额外收益。但也存在一定的风险,需要进一步优化以提高稳定性。总体来说,该策略为量化交易策略组合中一个有效的补充组成部分。
-
-||
 
 ## Overview
 
@@ -79,7 +44,6 @@ Specifically, the strategy detects the situation of the most recent five candles
 
 The Three Color Cross Trend Tracking Strategy identifies current trend direction by recognizing specific candlestick patterns, and selectively opens positions when the trend persists. This strategy is simple, clear, easy to operate, and capable of gaining additional profits during trend stages. But it also carries some risks, and needs further optimization to improve stability. Overall, it serves as an effective complementary component in quantitative trading strategy portfolios.
 
-[/trans]
 
 
 

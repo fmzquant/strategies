@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a2951a838fc5be28e5.png)
-[trans]
-
-## 概述
-
-本策略通过结合布铺猎手(Boom Hunter)、赫尔套件(Hull Suite)和波动率振荡器(Volatility Oscillator)三个指标,实现在多时间框架下进行趋势追踪和突破交易的量化策略。该策略适用于比特币等具有高波动性和突发性价格行情的数字资产。
-
-## 原理
-
-该策略的核心逻辑基于以下三个指标:
-
-1. **布铺猎手(Boom Hunter)**:一种利用指标压缩技术实现的振荡器,通过两个指标 (Quotient1和Quotient2) 的交叉来判断买入和卖出信号。
-
-2. **赫尔套件(Hull Suite)**:一组平滑移动均线指标,通过中轨和上下轨的关系来判断趋势方向。
-
-3. **波动率振荡器(Volatility Oscillator)**:一种量化价格波动信息的振荡器指标。
-
-本策略的入场逻辑为,在布铺猎手的两个Quotient指标发生向上或向下交叉的同时,价格要突破赫尔中轨并与上轨或下轨发生背离, meanwhile波动率指标位于超买超卖区域。这样可以过滤掉一些假突破信号,提高入场的准确性。
-
-止损通过查找一定周期内(默认20根K线)的最低谷或最高峰来设定,利润则通过止损百分比乘以配置的止盈比例(默认3倍)来获得。仓位根据账号总资产的百分比(默认3%)和具体标的的止损幅度来计算。
-
-## 优势
-
-- 利用压缩指标技术提取价格中的主要交易信号,提高盈利概率
-- 多指标组合验证,避免假突破,准确判断趋势方向
-- 动态止损止盈设定,实现风险可控的趋势追踪
-- 采用波动率指标确保高波动环境下的交易
-- 多时间框架分析,提高策略稳定性
-
-## 风险
-
-- 布铺猎手指标可能存在压缩失真,导致产生错误信号
-- 赫尔套件中轨会有滞后,无法及时跟踪价格变化
-- 波动率下降时会错过交易机会或引发亏损平仓
-
-解决方法:
-
-1. 调整压缩指标的参数,平衡指标的灵敏度
-2. 尝试使用EHMA等指数移动平均线来代替中轨指标
-3. 增加其他判断指标,避免波动率的误导
-
-## 优化
-
-该策略可以从以下几个方面进行优化:
-
-1. **参数优化**:通过更改指标参数如周期长度、压缩系数等来获得最佳参数组合
-
-2. **时间框架优化**:测试不同的时间周期(1分钟、5分钟、30分钟等),找到最适合的交易周期
-
-3. **仓位优化**:改变每次交易的仓位大小和比例,找到最优的资金利用方案
-
-4. **止损优化**:根据不同的交易对调整止损位置,实现最佳的风险回报比
-
-5. **条件优化**:增加或减少指标过滤条件,获得更准确的入场时机
-
-## 总结
-
-本策略通过布铺猎手、赫尔套件和波动率振荡器三个指标的组合运用,实现了多时间框架下的趋势追踪交易,能够有效识别价格的突发行为,适用于具有高波动性的数字资产。该策略风险可控,通过参数、滤波条件及止损等多方面优化,具有较强的实战性和可扩展性。
-
-||
 
 ## Overview
 
@@ -125,7 +66,6 @@ This strategy can be optimized in the following aspects:
 ## Conclusion  
 
 This strategy combines Boom Hunter, Hull Suite and Volatility Oscillator to implement multi-timeframe trend tracking trading, effectively identifying abrupt price behaviors suitable for highly volatile digital assets. With controllable risks, strong practicality and extensibility through parameter tuning, filter conditions and stop loss optimization, it is an exemplary quantitative model.  
-[/trans]
 
 > Strategy Arguments
 

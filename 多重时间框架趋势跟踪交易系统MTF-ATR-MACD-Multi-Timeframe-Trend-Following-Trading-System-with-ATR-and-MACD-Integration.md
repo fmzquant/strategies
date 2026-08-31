@@ -11,52 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17784b9d8f19bab39cb.png)
 
-[trans]
-#### 概述
-该策略是一个综合性的趋势跟踪交易系统,结合了多重时间框架分析、均线系统、动量指标和波动率指标。系统通过短期与长期指数移动平均线(EMA)的交叉来识别趋势方向,使用相对强弱指标(RSI)进行超买超卖判断,结合MACD进行动量确认,并利用更高时间框架EMA作为趋势过滤器。系统采用基于ATR的动态止损和获利方案,可以根据市场波动性自适应调整。
-
-#### 策略原理
-策略采用多层验证机制进行交易决策:
-1. 趋势识别层:使用9期和21期EMA的交叉来捕捉趋势变化
-2. 动量确认层:通过MACD指标(12,26,9)的交叉和方向验证趋势动量
-3. 超买超卖过滤:利用RSI(14)指标在70/30水平进行过滤
-4. 高时间框架确认:可选择性地使用日线级别EMA作为趋势过滤器
-5. 风险管理层:使用1.5倍ATR作为追踪止损,2倍ATR设置获利目标
-
-系统在满足多重条件后才会开仓:EMA交叉、RSI未到极值、MACD方向正确且高时间框架趋势确认。出场采用追踪止损和固定获利目标相结合的方式。
-
-#### 策略优势
-1. 多重验证机制显著降低假信号
-2. 高时间框架趋势过滤提升胜率
-3. 基于波动率的动态止损适应性强
-4. 完整的风险管理体系
-5. 参数可根据不同市场特征灵活调整
-6. 支持双向交易,可适应不同市场环境
-7. 指标组合既照顾趋势又关注动量
-
-#### 策略风险
-1. 多重条件可能导致错过部分交易机会
-2. 在震荡市场中可能频繁交易
-3. 参数优化可能导致过度拟合
-4. 高时间框架确认可能导致入场延迟
-解决方案:
-- 根据不同市场特征动态调整参数
-- 增加交易方向选择的灵活性
-- 引入波动率过滤机制
-- 优化参数自适应机制
-
-#### 策略优化方向
-1. 引入波动率过滤机制,在高波动期间调整仓位
-2. 开发参数自适应机制,根据市场状态动态调整
-3. 增加成交量指标确认信号有效性
-4. 优化高时间框架趋势判断逻辑
-5. 完善止损方案,考虑增加时间止损
-6. 开发策略性能评估模块
-
-#### 总结
-该策略是一个完整的趋势跟踪交易系统,通过多重技术指标的组合和严格的风险管理制度,能够在趋势市场中获得稳定收益。系统的可扩展性强,通过优化可以适应不同的市场环境。建议在实盘交易前进行充分的回测和参数优化。
-
-|| 
 
 #### Overview
 This strategy is a comprehensive trend following trading system that combines multi-timeframe analysis, moving averages, momentum indicators, and volatility indicators. The system identifies trend direction through crossovers of short-term and long-term exponential moving averages (EMA), uses the Relative Strength Index (RSI) for overbought/oversold conditions, incorporates MACD for momentum confirmation, and utilizes higher timeframe EMA as a trend filter. The system employs ATR-based dynamic stop-loss and take-profit mechanisms that adapt to market volatility.
@@ -101,7 +55,6 @@ Solutions:
 
 #### Summary
 This strategy is a complete trend following trading system that can achieve stable returns in trending markets through the combination of multiple technical indicators and strict risk management protocols. The system is highly extensible and can adapt to different market environments through optimization. Thorough backtesting and parameter optimization are recommended before live trading.
-[/trans]
 
 
 

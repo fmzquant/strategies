@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1001827e928503709c0.png)
-[trans]
-
-## 概述
-
-本策略结合了123反转策略和心理线策略,形成一个多因子量化交易策略。该策略综合考虑了技术形态、市场心理等多个维度,在判断市场走势时能够做出更准确的决策。
-
-## 原理
-
-### 123反转策略
-
-123反转策略判断当天收盘价与前一日相比,如果上涨,并且慢速K线低于50时,做多;如果下跌,并且快速K线高于50时,做空。该策略利用了短期反转的特点来获利。
-
-### 心理线策略 
-
-心理线策略统计一定周期内的涨跌比例,如果涨幅大于50%则表示多头掌控市场;如果涨幅小于50%则表示空头掌控市场。根据涨跌比例来判断市场心理面。
-
-本策略则是结合上述两种策略的信号,当二者给出同向信号时开仓做单,不同向信号时平仓。
-
-## 优势
-
-该策略结合多种因子,可以更准确判断市场走势,避免单一技术指标造成的误判。同时结合市场心理因素,也使策略更具有韧性,能够应对更加复杂的行情。
-
-## 风险与解决
-
-该策略中各个因子参数的设定会对策略表现产生较大影响。不合理的参数组合可能会使策略效果大打折扣。此外,如果行情出现剧烈变化也会导致策略失效。为降低风险,我们需要对各类市场行情进行大量回测,找出最优参数;同时也要控制仓位规模,保证单笔损失不会过大。
-
-## 优化方向
-
-我们可以在现有的基础上继续添加其他判断因子,如波动率、成交量等指标,形成更加立体化的策略逻辑;或者加入机器学习算法,实现策略的参数自适应优化。这都将是本策略进一步优化的方向。
-
-## 总结
-
-本策略综合考虑技术形态和市场心理等多因子,通过不同因子间的验证确保信号的有效性。同时留有大量优化空间,可望获得更出色的表现。这是一个值得长期跟踪、积累和优化的优质量化策略。
-
-||
 
 ## Overview
 
@@ -78,7 +43,6 @@ On the existing basis, we can continue to add other judgment factors such as vol
 
 This strategy comprehensively considers multiple factors such as technical patterns and market psychology. Validation between different factors ensures the validity of signals. At the same time, it leaves ample room for optimization and is expected to achieve superior performance. This is a high-quality quantitative strategy worth long-term tracking, accumulation and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

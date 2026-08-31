@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16ec00fc8fedb3abb86.png)
-[trans]
-
-## 概述
-
-该策略结合了超级趋势指标和MACD指标,通过捕捉小趋势来获取利润。策略使用超级趋势指标来判断当前市场趋势,同时使用MACD指标作为进场和出场的辅助条件。策略逻辑清晰,易于理解和实现。
-
-## 策略原理
-
-1. 使用ta.supertrend函数计算超级趋势指标,参数为ATR周期和乘数因子。
-2. 根据超级趋势指标的方向变化来判断多空趋势,当direction从大于0变为小于等于0时,视为上涨趋势;反之,则视为下跌趋势。
-3. 使用request.security函数获取30分钟周期的MACD指标值,包括MACD线、信号线和柱状图。
-4. 在上涨趋势中,如果MACD柱状图大于0,则开多仓,同时平掉之前的空仓。
-5. 在下跌趋势中,如果MACD柱状图小于0,则开空仓,同时平掉之前的多仓。
-
-## 优势分析
-
-1. 结合了趋势跟踪和动量指标,能够较好地适应不同的市场状况。
-2. 使用了更长周期的MACD指标作为辅助条件,可以有效过滤掉一些假信号。
-3. 策略逻辑简单明了,易于理解和实现,适合初学者学习。
-4. 策略参数可调,可以根据不同的市场和品种进行优化。
-
-## 风险分析
-
-1. 策略在震荡市场中可能会出现较多的交易信号,导致频繁交易和高滑点成本。
-2. 超级趋势指标对参数较为敏感,不同的参数设置可能会得到不同的结果。
-3. MACD指标可能会出现与价格背离的情况,导致错误的交易信号。
-4. 策略缺乏止损措施,在行情持续性不强或突发事件时可能会承担较大风险。
-
-## 优化方向
-
-1. 可以考虑加入更多的过滤条件,如价格突破重要支撑或阻力位、交易量变化等,以提高信号的可靠性。
-2. 对于震荡市场,可以考虑使用更短周期的MACD指标或其他适合震荡市的指标来判断趋势。
-3. 可以加入止损措施,如固定点数止损、移动止损等,以控制单笔交易的最大风险。
-4. 可以对不同市场和品种进行参数优化,找到最适合的参数组合。
-
-## 总结
-
-该策略通过结合超级趋势指标和MACD指标,在捕捉小趋势的同时也考虑了趋势的持续性,是一个较为全面和均衡的策略。策略优势在于逻辑清晰,易于理解和实现,同时通过使用更长周期的MACD指标作为辅助条件,可以有效过滤掉一些假信号。但策略也存在一些风险,如在震荡市场中可能出现频繁交易,对参数设置较为敏感,以及缺乏止损措施等。针对这些风险,可以从加入更多过滤条件、优化参数、加入止损等方面进行优化和改进。总的来说,该策略可以作为一个基础性的策略框架,通过不断优化和改进,有望成为一个稳定盈利的策略。
-
-|| 
 
 ## Overview
 
@@ -87,7 +47,6 @@ This strategy combines the SuperTrend indicator and the MACD indicator to captur
 ## Conclusion
 
 By combining the SuperTrend indicator and MACD indicator, this strategy captures small trends while also considering trend continuity, making it a relatively comprehensive and balanced strategy. The strategy's strengths lie in its clear logic, ease of understanding and implementation, and the use of a longer timeframe MACD indicator as an auxiliary condition to effectively filter out false signals. However, the strategy also has some risks, such as the potential for frequent trading in choppy markets, sensitivity to parameter settings, and lack of stop-loss measures. To address these risks, improvements can be made by adding more filtering conditions, optimizing parameters, incorporating stop-losses, etc. Overall, this strategy can serve as a basic strategy framework that, with continuous optimization and improvement, has the potential to become a consistently profitable strategy.
-[/trans]
 
 > Strategy Arguments
 

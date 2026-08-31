@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/4519923478ba5e7f04.png)
-[trans]
-
-## 概述
-
-这是一个利用双重趋势过滤器进行量化交易的策略。该策略同时结合全局趋势过滤器和本地趋势过滤器,确保只在趋势方向正确时开仓。此外,策略还设置了其他多个过滤条件,如RSI过滤器、价格过滤器、斜率过滤器等,用来进一步提高交易信号的可靠性。在出场方面,策略preset了止损价位和止盈价位。总体而言,这是一个稳定、精准的量化交易策略。
-
-## 策略原理
-
-该策略的核心逻辑基于双重趋势过滤器。全局趋势过滤器基于高周期EMA判断市场总体走势,本地趋势过滤器基于低周期EMA判断局部走势。只有当两者判断趋势一致时,才会开仓。
-
-具体来说,策略通过计算BTCUSDT的EMA线,判断总体市场处于上升趋势还是下降趋势,这就是全局趋势过滤器。同时,策略计算本合约的EMA线,判断局部市场的走势,这是本地趋势过滤器。当两者判断趋势一致时,再结合其他多个辅助过滤器,策略会产生交易信号并预设止盈止损价格开仓。
-
-在确定交易信号后,策略会立即下单开仓。同时,策略预先设置好止盈价格和止损价格。当价格触发止盈或止损时,策略会自动止盈或止损。
-
-## 优势分析
-
-这是一个稳定可靠的量化交易策略,主要优势有:
-
-1. 采用双重趋势过滤机制,能过滤掉大部分假信号,使交易信号更加可靠精准。
-
-2. 结合多个辅助过滤器,如RSI过滤器、价格过滤器等,进一步提高信号质量。
-
-3. 自动运算止盈止损价位,无需人工监控,降低交易风险。
-
-4. 策略参数可以自定义调整,适应更多交易品种,有较强适应性。
-
-5. 策略思路清晰易理解,便于优化改进,有较大拓展空间。
-
-## 风险分析
-
-尽管该策略有许多优势,但仍存在一定的交易风险,主要集中在:
-
-1. 双重趋势过滤器确定入场时点不精准。可以通过调整过滤器参数进行优化。
-
-2. 止盈止损价格设定不准确,可能过早止盈或止损。可以测试不同参数组合寻找最优解。  
-
-3. 交易品种和周期的选择不当,可能导致策略无效。建议针对不同交易品种分别进行参数调优和测试。
-
-4. 存在一定的过拟合风险。需要在更多市场环境中进行回测,确保策略稳健性。
-
-## 优化方向  
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 调整双重过滤器的参数,找到最佳参数组合;
-
-2. 测试并选择最佳的辅助过滤器; 
-
-3. 优化止盈止损算法,使其更加智能化;
-
-4. 尝试引入机器学习等手段,实现策略的动态调参;
-
-5. 在更多交易品种和更长周期内进行回测,提高策略的稳定性。
-
-## 总结
-
-该策略整体来说是一个稳定、精准、易于优化的量化交易策略。它采用双重趋势过滤器结合多个辅助过滤器产生交易信号,可以过滤掉大部分噪音,使信号更加精准可靠。同时,策略内置止盈止损设定,可以降低交易风险。这是一个非常有实战价值的策略,在优化和验证后,可以直接投入实盘运用。它也具有很大的拓展潜力,是一款值得深入研究的量化策略。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ The main directions for optimizing this strategy include:
 
 In conclusion, this is an overall stable, accurate and easily optimizable quantitative trading strategy. It produces trading signals by combining double trend filters and multiple auxiliary filters, filtering out most noise and generating more reliable signals. Also, the inbuilt stop loss and take profit presetting helps lower trading risks. This is a strategy with great practical value. After optimization and validation, it can be directly applied for live trading. Moreover, it has huge potential for expansions and is worth in-depth researching.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1252a6e9769352411d3.png)
-[trans]
-
-## 概述
-
-该策略是基于布林带和移动平均线的交叉进行买入和卖出操盘的策略。主要运用5分钟时间周期布林带指标判断价格震荡区间,结合移动平均线判定趋势方向,根据布林带上下轨和中间轨的交叉情况制定交易策略。该策略适用于AUD/NZD的外汇品种。
-
-## 策略原理  
-
-1. 使用布林带指标判断价格的上下限。布林带中轨是20周期的简单移动平均线,上轨线是中轨加上标准差的两倍,下轨线是中轨减去标准差的两倍。 
-
-2. 当收盘价从下轨线向上突破时,表明价格开始进入涨势,这个时候进行买入开仓。 
-
-3. 当收盘价超过布林带的中轨线时,说明价格已经上涨到中轨以上,此时平仓离场,结束本轮交易。
-
-4. 当收盘价从上轨线向下突破时,表明价格开始进入跌势,进行卖出开仓。  
-
-5. 当收盘价跌破布林带中轨线时,说明价格已经下跌到中轨以下,此时平仓离场,结束本轮交易。
-
-## 优势分析
-
-1. 规避错过反转的风险。该策略充分利用了布林带的特性,能够及时捕捉价格从下轨反弹和从上轨下跌的机会,避免错过反转机会带来的亏损。
-
-2. 获利能力较强。通过在关键点位进行买入卖出,并设置合理止损,能够在牛熊转换时快速切换方向获得较好收益。
-
-3. 操作频率适中。基于5分钟线形成交易信号,既能捕捉短期趋势,也不会过于频繁交易而增加交易成本。
-
-## 风险分析
-
-1. 布林带收敛过快风险。当市场价格剧烈波动时,布林带上下轨收敛过快,容易形成虚假突破从而发出错误信号。此时需要调整参数或暂停交易。  
-
-2. 止损风险。止损过小容易被突破,止损过大又容易造成过大亏损。需要适当调整止损价位。
-
-3. 交易成本过高风险。如果交易频率过高,交易成本也会明显增加,需要适当调整参数,降低交易频率。
-
-## 优化方向  
-
-1. 优化布林带参数。可以测试不同的周期参数、标准差参数,找到最适合该品种震荡范围的参数组合。
-
-2. 结合其他指标过滤虚假信号。可以加入像KDJ,MACD等其他因子,避免布林带单一指标判断造成错误信号的问题。
-
-3. 优化止损策略。可以通过跟踪价格实时变化来实现更精准的止损。也可以使用存量线等其他止损策略。
-
-## 总结  
-
-该策略整体较为稳定,具有一定的盈利能力。通过参数调整和止损策略优化可以进一步减少交易风险,在波动行情中获得良好收益。该策略值得进一步测试和优化,具有很好的实战应用前景。
-
-||
 
 ## Overview
 
@@ -101,7 +54,6 @@ This is a trading strategy based on the crossover of Bollinger Bands and moving 
 ## Conclusion   
 
 This strategy is relatively stable overall with some profitability. By optimizing parameters and stop loss strategies, trading risks can be further reduced to gain good returns in volatile market conditions. This strategy is worth further testing and optimization and has very good practical application prospects.  
-[/trans]
 
 > Strategy Arguments
 

@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/146989f202a618da986.png)
 
-[trans]
-
-### 概述
-
-该策略利用RSI和EMA指标来决定入场和退出。它在熊市中表现良好,可以捕捉底部反弹机会。
-
-### 策略原理
-
-该策略基于以下买入和卖出条件:
-
-买入条件:
-1. RSI < 40
-2. RSI 比昨日下降3点 
-3. 50日EMA下穿100日EMA
-
-卖出条件:  
-1. RSI > 65
-2. 9日EMA上穿50日EMA
-
-这样可以在跌势中买入,在反弹中高位卖出,捕捉底部反弹机会。
-
-### 优势分析  
-
-该策略具有以下优势:
-
-1. 利用RSI捕捉超跌机会
-2. EMA形态判断趋势变化点
-3. 回测结果良好,特别在熊市中表现抗跌  
-4. 可配置参数调整策略
-
-### 风险分析
-
-该策略也存在以下风险:  
-
-1. 参数设置不当可能导致过早买入或迟滞卖出  
-2. 反弹不一定能及时出现或无法持续  
-3. 交易费用和滑点也会影响实际盈利
-
-可通过调整参数优化策略,或结合其他指标判断多空格局。
-
-### 优化方向  
-
-该策略可以从以下方向进行优化:
-
-1. 根据不同币种分别测试参数组合
-2. 结合交易量变化判断买卖信号效力  
-3. 增加止损点,降低单笔亏损风险
-4. 考虑动态调整仓位规模
-
-### 总结
-
-该捕捉底部策略整体来说逻辑清晰,在熊市中能较好发挥作用。通过参数调整和优化空间还大,可望获得更好回测指标。但实盘过程中也需要关注风险,无法完全规避亏损情况。
-
-||
 
 ### Overview
 
@@ -118,7 +64,6 @@ The strategy can be improved in the following ways:
 
 The bottom catching strategy has clear logic and works well in bear markets. More parameter tuning and optimizations can lead to better backtest results. But risks need to be monitored in live trading, and losses cannot be entirely avoided.
 
-[/trans]
 
 > Strategy Arguments
 

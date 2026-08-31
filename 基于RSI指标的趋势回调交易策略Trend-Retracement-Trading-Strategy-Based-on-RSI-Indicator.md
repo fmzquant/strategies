@@ -11,18 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于RSI指标的趋势回调交易策略”。该策略利用RSI指标判断超买超卖情况,并结合优化参数设定进行趋势回调交易,以达到在强势趋势中捕捉局部反转的目的。
-
-RSI指标判断价格是否超买或超卖。RSI高于70表示超买,低于30表示超卖。本策略在RSI达到96时产生卖出信号,RSI跌破4时产生买入信号,这些参数经过优化设定,比传统RSI参数更适合捕捉强势趋势中的暂时反转。 
-
-入场后,策略采用止盈止损机制。当反转后RSI上升至80时止盈平多单,当RSI下跌至20时止盈平空单,有效锁定反弹利润。此外,运用追踪止损确保入场后优先保本。
-
-该策略的优势在于利用RSI指标灵敏 judgementesult 捕捉趋势中的临时反转和回调,通过参数优化和止盈止损提高策略效果。但任何单一指标都无法完美,需与趋势及支撑阻力分析配合使用。
-
-总体来说,RSI指标是简单实用的超买超卖判断工具。通过参数优化和严格的风险管理,可以提高其在趋势回调交易中的效果。但交易者仍需保持策略调整的灵活性,不同市场需要不同的参数设置。
-
-||
 
 
 
@@ -36,7 +24,6 @@ The advantage of this strategy is utilizing RSI's sensitivity in judgementesulti
 
 In conclusion, the RSI is a simple and practical tool for gauging overbought/oversold conditions. Through parameter optimization and strict risk management, its effectiveness can be enhanced for trend retracement trading. But traders still need flexibility in strategy adjustment, as different markets require different parameter settings.
 
-[/trans]
 
 > Strategy Arguments
 

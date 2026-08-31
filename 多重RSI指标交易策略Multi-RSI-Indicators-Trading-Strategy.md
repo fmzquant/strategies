@@ -11,32 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1355e777cb725e4f0af.png)
 
-[trans]
-
-### 概述
-
-多重RSI指标交易策略通过组合使用多个RSI指标来识别交易机会,实现趋势跟踪。策略灵活运用1-5个RSI指标,根据指标数值判断入场和出场时机。
-
-### 策略原理  
-
-该策略通过输入参数选择使用1-5个RSI指标,每个RSI指标都可以独立配置参数期数和限值。当任意一个RSI指标数值低于对应限值时产生买入信号,信号强度由触发信号的RSI指标期数决定,期数越高信号越强。当RSI指标回升超过限值时产生平仓信号。策略可以灵活使用颜色过滤器,以及设置交易时间段进行限制。
-
-### 优势分析
-
-该策略最大优势在于可以同时评估多个周期的RSI指标,从长短多个维度判断趋势和反转机会,提高交易决策的准确性。另外,策略允许自由配置各RSI指标的参数,可以针对不同市场调整,可以大大扩展策略的适应性。通过颜色过滤,也可以有效过滤假突破。此外,还加入了交易时间和仓位控制模块,可以有效控制风险。
-
-### 风险分析  
-
-该策略主要风险在于多重RSI指标组合判断时,可能会出现信号冲突的情况。例如短周期RSI产生买入信号,但长周期RSI仍处于超卖状态,这时究竟以哪个信号为准需要结合交易者自己的经验进行决策。此外,RSI指标容易受到震荡行情的误导,这点需要通过辅助指标或大资金的账户进行验证。 
-
-### 优化方向
-
-该策略可以考虑加入移动平均线或布林带等趋势辅助指标来验证RSI信号,提高判断的准确性。此外,也可以思考加入一定的机器学习算法,利用多因子评分的方法来自动判断Entry和Close信号的可靠性。从风险控制角度考虑,也可以设置浮亏线或最大回撤线来止损。
-
-### 总结
-
-多重RSI指标交易策略整体来说非常有创新性,其指标组合和参数设置的灵活性为快速适应市场变化提供了可能。加入的模块化功能设计也使得策略优化空间很大。如果再配合机器学习或风险控制手段,效果可以进一步提升。
-||
 
 ### Overview  
 
@@ -61,7 +35,6 @@ The strategy can consider adding trend assisting indicators like moving averages
 ### Summary  
 
 In summary, the multi RSI indicators trading strategy is very innovative. Its flexibility in indicators combination and parameters makes it adaptable to evolving markets. Further improvements can be achieved by incorporating machine learning algorithms and more risk control measures given its modular design.
-[/trans]
 
 > Strategy Arguments
 

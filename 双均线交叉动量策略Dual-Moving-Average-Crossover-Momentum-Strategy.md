@@ -10,96 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/73205a6706c2c7f32b.png)
-[trans]
-
-## 概述
-
-该策略运用双均线交叉原理,结合MACD指标的趋势判断和背景突出交叉点,辅以形态点进场,目的是捕捉市场中期趋势。主要逻辑是在均线方向发生转换时进场,通过MACD背景色突出交叉点,配合MACD直方图颜色变化判断力度进入。
-
-## 策略原理
-
-策略使用快速EMA和慢速EMA构建双均线,快慢线交叉判断趋势方向。同时,计算MACD和Signal,其差值作为直方图绘制。
-
-根据代码,快线长度为12,慢线长度为26,表示短期和长期趋势。Signal长度为9,进行额外平滑处理。
-
-交叉逻辑:
-
-- trend_up = macd > signal:快线上穿慢线,代表短期上升趋势
-- trend_dn = macd < signal:快线下穿慢线,代表短期下降趋势
-
-交叉点判断:
-
-- cross_UP = signal[1] >= macd[1] and signal < macd:快线从下方上穿慢线 
-- cross_DN = signal[1] <= macd[1] and signal > macd:快线从上方下穿慢线
-
-直方图颜色变化判断趋势力度:
-
-- histA_IsUp = 直方图柱子增长且大于0,代表上升力度增强
-- histA_IsDown = 直方图柱子减小且大于0,代表上升力度减弱
-- 下方同理
-
-## 策略优势
-
-1. 使用双均线判断中期趋势方向,避免被短期市场噪音干扰
-
-2. MACD指标辅助判断短期趋势和力度,提高获利概率
-
-3. 直方图颜色变化判定力度大小,可把握较好的入场时机
-
-4. 交叉点背景色标记,一目了然
-
-5. 可自定义均线周期,适应不同市场环境
-
-6. 可调整MACD参数,优化指标效果
-
-7. 提供多种入场确认:均线方向、指标交叉、形态突破
-
-## 策略风险
-
-1. 双均线判断中期趋势对短期波动不敏感,可能错过短线机会
-
-2. MACD参数设置不当,指标效果不佳,发出错误信号
-
-3. 仅凭均线和MACD信号入场,存在一定盲目性
-
-4. 未考虑止损退出机制,存在亏损扩大风险
-
-5. 缺乏严格的资金管理和仓位控制
-
-可能的解决方案:
-
-1. 结合其他指标限定短期波动范围,控制风险
-
-2. 优化MACD参数,测试不同市场的效果
-
-3. 增加形态、Momentum等因素确认信号
-
-4. 建立止损机制,避免单笔亏损过大
-
-5. 加入资金管理模块,根据资金规模控制单笔仓位
-
-## 策略优化方向 
-
-1. 测试优化均线参数组合,适应更多市场情况
-
-2. 尝试不同类型均线,如VWAP、布林带中线等
-
-3. 增加成交量的考量,避免假突破
-
-4. 结合RSI等指标,确认超买超卖情况
-
-5. 建立完善的止损机制,如移动止损、震荡止损等
-
-6. 加入仓位管理机制,根据资金大小控制单笔仓位
-
-7. 可以考虑结合机器学习算法进行参数优化
-
-8. 扩展策略 Universe,深化组合投资方向 
-
-## 总结
-
-该策略整合双均线趋势判断和MACD动量指标,加入形态特征,构建了一个相对稳定的中期交易策略。核心优势在于把握主要趋势方向,避免被短期市场噪音干扰。但也存在一些可优化空间,如止损机制、风险管理等方面。总体来说,该策略作为概念验证具有很好的参考价值,但实盘落地还需经过全面的测试和优化调整。
-||
 
 ## Overview
 
@@ -193,7 +103,6 @@ Possible solutions:
 
 This strategy integrates dual moving average trend filtering and MACD momentum, adds pattern features, building a relatively stable mid-term trading system. The key advantage lies in capturing the major trend while avoiding short-term noise. But there are also areas that could be improved, like adding stop loss mechanisms and risk management. Overall this serves as a valuable conceptual example, but requires comprehensive testing and refinements for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

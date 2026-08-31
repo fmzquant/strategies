@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8a528a6bbc068fb910.png)
-[trans]
-
-## 概述
-
-双移动均线趋势跟踪策略(Dual Moving Average Trend Tracking Strategy)是一个利用快速移动平均线和慢速移动平均线组合判断趋势方向,并结合K线实体颜色作为入场信号的量化交易策略。该策略同时具有趋势跟踪和反转交易的特点。
-
-## 策略原理
-
-该策略使用长度为20的慢速移动平均线判断整体趋势方向,当价格上穿时判断为上涨趋势,当价格下穿时判断为下跌趋势。同时使用长度为5的快速移动平均线作为入场过滤器,只有当价格突破快速移动平均线时才发出交易信号。此外,该策略还检查最近N根K线的实体颜色,当实体颜色连续变红时结合上涨趋势发出做多信号,当实体颜色连续变绿时结合下跌趋势发出做空信号,以防止假突破。
-
-该策略综合判断了三个维度的信息:整体趋势、短期均线和K线实体,从而提高了交易信号的可靠性。当三者方向一致时,才会发出交易信号,有效过滤了部分噪音。
-
-## 策略优势
-
-1. 同时具有趋势跟踪和反转交易的特点,可以适应不同市场环境。
-
-2. 交易信号发出前进行多维度判断,有效过滤假信号,提高胜率。
-
-3. 参数优化空间大,可以通过调整移动平均线长度、K线实体颜色判断根数等参数进行优化。
-
-4. 策略逻辑清晰简洁,容易理解,适合新手学习。
-
-## 策略风险
-
-1. 大幅震荡行情中,容易形成osing streak,带来较大回撤。可以适当调整移动平均线参数或加入止损来规避。
-
-2. 在横盘整理阶段,容易形成whipsaw,带来损失。可以适当调整K线实体颜色判断的根数或关闭反转交易。
-
-3. 需要充分回测确保参数设置合理,否则会大幅影响策略表现。
-
-## 优化方向
-
-1. 尝试不同类型的移动平均线,如指数移动平均线、Kaufman自适应移动平均线等。
-
-2. 增加交易量控制,如固定交易量或根据账户权益调整。
-
-3. 增加止损机制。当价格重新跌破慢速移动平均线时,可以考虑止损退出。
-
-4. 可以测试不同品种,判断策略稳定性和适应性。
-
-## 总结
-
-双移动均线趋势跟踪策略结合趋势判断和反转交易,可以有效抓取中长线趋势之余,也可以在短线获取额外收益。通过参数优化和机制增强,可以进一步扩大获利空间。该策略逻辑简单清晰,非常适合新手学习研究。但任何策略都需要在不同品种和参数下进行充分验证,确保其稳定性和盈利能力。
-
-||
 
 ## Overview  
 
@@ -98,7 +53,6 @@ The strategy examines price action using three dimensions - trend, short-term MA
 
 The Dual MA strategy profits from trend trades while extracting mean reversion alpha in shorter time frames. Performance and profit potential can be improved further through optimization. Despite its simplicity, it allows beginners to grasp key concepts around combining trend and mean reversion. Comprehensive validation is must across instruments and parameters.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bf5ee403800598ea39.png)
-[trans]
-
-
-## 概述
-
-双线追踪反转均线系统融合了123形态反转策略和一目均衡表策略,旨在发掘反转机会,追踪趋势,以获取超额收益。
-
-## 策略原理
-
-该策略由两个子策略组成:
-
-1. 123形态反转策略
-
-该策略基于价格形态进行交易。具体逻辑是:
-
-- 当收盘价连续两日上涨,且9日慢速K线低于50时,做多
-- 当收盘价连续两日下跌,且9日快速K线高于50时,做空
-
-该策略利用价格突破上一日收盘价的方式判断反转,并利用股票K线组合指标滤除震荡盘整。
-
-2. 一目均衡表策略
-
-该策略基于一目均衡表的五线交叉进行交易。具体逻辑是:
-
-- 当收盘价高于基准线时做多
-- 当收盘价低于转换线时做空
-
-其中,基准线为过去26日的最高价和最低价的中点,转换线为过去9日的最高价和最低价的中点。该策略利用均线交叉系统发掘趋势。
-
-最终策略根据两个子策略的信号进行合并,当两者同向看多或看空时开仓,不同向时平仓。
-
-## 优势分析
-
-- 结合反转和趋势,既可捕捉反转机会,也可跟踪趋势,策略灵活。
-- 123形态简单实用,可有效识别临界反转点。
-- 一目均衡表参数经过优化,突破风险小。
-- 两种不同类型策略合并,可实现策略优化。
-
-## 风险分析 
-
-- 反转策略容易被陷阱,存在亏损风险。可适当缩短交易周期,或增加止损来控制风险。
-- 一目均衡表在震荡行情中容易被套,可适当调整参数或增加过滤条件以减少不必要交易。
-- 两种策略合并时,参数匹配不当可能导致信号过于频繁或稀疏,需要仔细测试优化。
-
-## 优化方向
-
-- 测试更多指标组合,寻找更好的过滤手段。例如结合量能指标等。
-- 优化一目均衡表的参数,使之更契合具体产品特性。
-- 增加止损机制。可以根据ATR来设定持仓止损。
-- 增加money management模块,实现风险控制。
-- 在回测中收集更多数据,对策略展开多方位测试,发现问题并不断优化。
-
-## 总结
-
-双线追踪反转均线系统综合运用反转和趋势策略的优点,通过参数优化和策略合并实现超额收益。该策略有一定的交易优势,但也存在被套和止损风险。我们需要在回测中持续优化策略逻辑,并辅以严格的风险管理措施,以提高策略的稳定性和实盘表现。总体来说,该策略为我们提供了一个不错的思路,即用不同类型策略进行组合,以获得更优的整体效果。
-
-|| 
 
 ## Overview
 
@@ -132,7 +75,6 @@ The final strategy combines the signals from the two sub-strategies, entering wh
 
 The Dual Moving Average Reversal Tracking System combines the strengths of reversal and trend-following strategies through optimization and combination for alpha generation. It has trading merits but risks like whipsaws and stop loss exist. We need to keep improving the logic in backtests and implement proper risk control for stability and real-world performance. Overall it provides a good approach of combining different strategies for better overall results.
 
-[/trans]
 
 > Strategy Arguments
 

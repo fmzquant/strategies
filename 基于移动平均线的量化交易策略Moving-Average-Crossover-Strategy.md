@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7422a3ce910453942a.png)
-[trans]
-### 概述
-
-移动平均交叉策略是一个基于移动平均线的量化交易策略。该策略通过计算一段时间内的证券平均价格,利用价格的移动平均线的交叉来产生交易信号,实现盈利。
-
-### 策略原理
-
-该策略主要利用快速移动平均线和慢速移动平均线的交叉来判断价格趋势和产生交易信号。具体来说,是运用两个不同周期长度的移动平均线,例如10日线和20日线。
-
-当快速移动平均线从下方向上突破慢速移动平均线时,认为行情由跌转为涨,产生买入信号。当快速移动平均线从上方向下跌破慢速移动平均线时,认为行情由涨转为跌,产生卖出信号。
-
-通过捕捉价格趋势的转折点,该策略可以在行情转好时买入,行情转坏时卖出,实现盈利。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 概念简单,容易理解和实现
-2. 可定制性强,可以调整移动平均线的周期等参数
-3. 回测效果较好,特别适合趋势性行情
-4. 可融入止盈止损逻辑,控制风险
-
-### 风险分析
-
-该策略也存在以下风险:
-
-1. 在盘整行情中容易产生错误信号和过度交易
-2. 需要调试参数,不同的参数组合回测效果差异大
-3. 没有考虑交易成本和滑点,实盘效果可能弱于回测
-4. 存在时间滞后,可能漏掉价格快速反转的机会
-
-可通过适当优化来减轻这些风险。
-
-### 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 结合其他指标过滤信号,例如量能指标、震动指标等,避免在盘整中错误交易
-2. 添加自适应移动平均线,让周期参数动态变化,更好跟踪价格
-3. 优化移动平均线的周期参数,寻找最佳参数组合
-4. 设定再次入场条件,避免频繁交易
-5. 考虑实际交易成本和滑点,调整止盈止损点
-
-通过以上优化,可以大大提高策略的实盘效果。
-
-### 总结
-
-移动平均交叉策略整体来说是一种易于掌握和实施的量化交易策略。它利用价格平均线的交叉原理,简单且直观地判断市场走势和产生交易信号。通过参数调优和与其他技术指标的配合,可以强化该策略的实盘效果,使其成为可靠的量化盈利工具。
-
-||
 
 ### Overview
 
@@ -109,7 +59,6 @@ The above optimizations can greatly improve the actual performance of the strate
 
 In summary, the moving average crossover strategy is an easy to grasp and implement quantitative trading strategy. It judges market trends and generates trading signals through the intuitive principle of price average line crossovers. With parameter tuning and combinations with other technical indicators, it can strengthen the actual performance of this strategy and make it a reliable profit generator.
 
-[/trans]
 
 > Strategy Arguments
 

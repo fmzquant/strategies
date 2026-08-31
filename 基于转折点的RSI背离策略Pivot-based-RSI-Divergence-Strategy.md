@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/890267203cf8dfee5f.png)
-[trans]
-
-## 概述
-
-该策略名为“基于转折点的RSI背离策略”(Pivot-based RSI Divergence Strategy)。它利用RSI指标在不同周期上的背离来判断买入卖出点,并在此基础上增加了长线RSI作为过滤条件,从而提高策略的稳定性。
-
-## 策略原理
-
-该策略主要判断短线RSI(如5日RSI)与价格出现“隐藏型多头背离”或“常规型多头背离”时机会买入;出现“隐藏型空头背离”或“常规型空头背离”时机会卖出。
-
-所谓“常规型多头背离”是指:价格创新低而RSI未创新低;“隐藏型多头背离”则相反,价格未创新低而RSI创新低。两者定义中的“新低”和“新高”是相对于一定滚动窗口的历史极值而言的。
-
-此外,策略还引入长线RSI(如50日RSI)作为过滤条件。只有当长RSI大于50时,才考虑买入信号;当长RSI小于30时,考虑止损或止盈退出。
-
-## 策略优势
-
-该策略最大的优势在于同时利用短线RSI的背离信号和长线RSI的过滤,能够在一定程度上避免被套和错过行情。具体来说,主要具有以下几个优势:
-
-1. 短线RSI背离信号能提前判断价格反转机会,及时捕捉行情转折点;
-2. 长线RSI过滤条件避免在趋势不确定时盲目做多;
-3. 多种类型的止盈方式,分批止盈有利于减少风险;
-4. Pyramiding机制允许加仓,进一步提高盈利空间。
-
-## 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. RSI背离并不总是有效,有可能出现假信号;
-2. 加仓后风险会放大。如果判断错误,亏损会加速扩大;
-3. 止盈设置不当也可能导致过早止盈或盈利不足。
-
-对应风险管理措施包括:合理设定止损止盈条件、控制每个头寸大小、分批减仓以平滑盈亏曲线等。
-
-## 优化方向  
-
-该策略还存在进一步优化的空间:  
-
-1. RSI参数可以进一步优化,找到最佳参数组合;
-2. 可以测试其他指标的背离信号,如MACD、KD等;  
-3. 可以在特定品种(如原油、贵金属等)上专门优化参数,提高适应性。
-
-## 总结
-
-本策略综合运用短线与长线RSI的多空背离信号,在控制风险的同时,提高盈利效率。它体现了量化交易策略设计的多项原则,包括何时入场、何时离场、分批建仓减仓、设置止损止盈等。这是一个可供参考借鉴的RSI背离策略范例。
-
-||
 
 
 ## Overview  
@@ -101,7 +55,6 @@ There is room for further optimization of the strategy:
 
 This strategy combines the long/short RSI divergence signals of short-term and long-term to improve profitability while controlling risks. It reflects multiple principles in quantitative strategy design, including when to enter, when to exit, partial profit-taking, stop loss/take profit setting, etc. This is an exemplary RSI divergence strategy for reference.
 
-[/trans]
 
 > Strategy Arguments
 

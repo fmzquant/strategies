@@ -9,25 +9,6 @@
 
 > Strategy Description
 
-[trans]
-- 策略名称：传统均线指标与KD指标的交易策略
-- 数据周期：15M，30M等
-- 支持：商品期货、数字货币
-- 指标使用了EMA，KD线，其中KD线使用的是默认参数（指标参数固定3，3，9）
-- 官方网站：www.quantinfo.com
-
-![IMG](https://www.fmz.com/upload/asset/f842e44b0b8451cb562b8d5bd888e4c0.png) 
-
-- 主图
-  EMA均线，公式：MAC^^EMA(C,N);
-
-
-- 副图
-
-  KD线中的K线，公式：K:SMA(RSV,M1,1);//RSV的移动平均值
-  KD线中的D线，公式：D:SMA(K,M2,1);//K的移动平均值
-
-||
 
 - Data Cycle: 15M, 30M, etc.
 - Support: Commodity Futures
@@ -43,7 +24,6 @@
   K line in KD, formula: K: SMA (RSV, M1, 1); //RSV moving average
   D line in KD, formula: D: SMA (K, M2, 1); //K moving average value
 
-[/trans]
 
 > Strategy Arguments
 

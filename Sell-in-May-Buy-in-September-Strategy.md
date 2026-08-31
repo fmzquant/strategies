@@ -10,24 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-五卖九买策略
-
-该交易策略简单遵循“五月卖出,九月买入”这句老牌交易格言形成交易信号。
-
-具体来说,它仅仅根据日期月份来决定何时开仓做多和平仓。当月份进入9月时,开仓做多;当月份进入5月时,将全部多单平仓。
-
-这种以月份切换来决定策略调仓的方式,其优势在于非常简单易行,无需复杂技术分析和计算。但其弊端也显而易见:
-
-首先,固定按月份交易完全忽视市场实际情况,无法根据行情灵活调整。可能在牛市中过早平仓止盈,也可能在熊市中错过及时止损。
-
-其次,固定月份无法做到灵活的资金管理。无法根据具体每次交易情况来评估是否需要加仓或减仓。
-
-最后,不考虑滑点成本。实际操作中,频繁按月开平仓将产生较多交易成本摩擦。
-
-总体来说,这种简单固定的“五卖九买”策略带有一定娱乐性质,不宜运用于实盘交易中。交易者需要建立系统的交易体系,才能在市场中立足。
-
-|| 
 
 This trading strategy simply follows the classic market saying “Sell in May, buy in September” to generate trade signals. 
 
@@ -43,7 +25,6 @@ Finally, it does not consider slippage costs. Frequent monthly opening and closi
 
 In summary, this simple fixed “Sell in May, Buy in September” strategy has some entertainment value, but is not suitable for live trading. Traders need to establish systematic trading frameworks to survive in the markets.
 
-[/trans]
 
 
 

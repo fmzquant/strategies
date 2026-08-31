@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/101c228d67d7f7cd717.png)
-[trans]
-### 概述
-
-该策略基于Kaufman自适应移动平均线(KAMA)设计,可以动态调整交易头寸,自动跟踪市场趋势。策略的主要功能包括:
-
-1. 动态计算交易步长(以点子为单位),自适应市场波动率
-2. 根据KAMA方向产生买入和卖出信号
-3. 信号产生后,设置一个止损距离,并随价格移动进行调整
-4. 可选等待K线收盘确认信号,过滤假信号
-
-通过这些功能的运用,策略试图获取趋势的额外收益,同时控制风险。
-
-### 策略原理  
-
-该策略基于Kaufman自适应移动平均线指标工作。KAMA通过计算价格动量和波动率的比值,动态调整平均线的权重及平滑度,从而更快地响应价格变化。
-
-当KAMA上穿下行止损线时,表示趋势反转,产生买入信号;当KAMA下穿上行止损线时,表示趋势反转,产生卖出信号。进入仓位后,策略会根据ATR计算出一个动态的止损距离,并设立止损线。KAMA向有利方向移动时,止损线也会跟随调整,将止损线移至更有利的位置,以锁定更多利润。
-
-这样,策略可以跟踪趋势运行,逐步移动止损线,直至止损线被触发或反向信号被触发而平仓。
-
-### 策略优势
-
-相比传统移动平均线策略,该策略具有以下优势:
-
-1. KAMA指标灵敏度高,可以更快捕捉价格趋势;
-2. 动态计算止损距离,随趋势调整,可以锁更高利润; 
-3. 有可选的K线收盘确认,可过滤假信号,减少不必要开仓。
-
-总的来说,策略响应迅速,可控性强,是典型的趋势跟踪策略。
-
-### 策略风险
-
-该策略也存在一些风险:
-
-1. 趋势反转风险。KAMA指标可灵活应对价格波动,但对突发性趋势反转可能响应不够及时。
-2. 止损过于激进。动态止损距离如果设置过大,可能过于激进,让利润来不及锁定。
-3. 假信号风险。启用K线收盘确认可以减少假信号,但并不能完全消除。
-
-针对这些风险,可通过优化止损距离、设置最大止损百分比等方法进行控制。也可以结合其他指标作为确认,避免错误交易。
-
-### 策略优化方向  
-
-该策略可优化的方向包括:
-
-1. 优化KAMA参数:调整平均线长度,优化平滑度;
-2. 优化动态止损:根据不同品种特点,测试最佳止损距离和步长;
-3. 增加过滤指标:结合其他趋势指标,确认交易信号,提高信号的可靠性。
-
-例如,可以测试增加MACD作为辅助确认指标,在KAMA金叉的同时,也要求MACDDif也为正并扩大。这可以过滤掉一些假信号,避免不必要的反复开仓。
-
-### 总结  
-
-本策略整体运作顺畅,使用动态止损跟踪趋势运行,最大程度锁定趋势利润。KAMA指标的自适应性也让策略可以跟上市场的快速变化。通过一定优化,策略可以成为高效的趋势跟踪程序,适合于中长线操作。
-
-||
 
 ### Overview
 
@@ -118,7 +63,6 @@ For example, MACD can be added as an auxiliary confirmation indicator, requiring
 ### Conclusion   
 
 The overall operation of this strategy is smooth. By using a dynamic stop loss to track trends and maximize trend profits, coupled with the adaptiveness of the KAMA indicator to swiftly respond to rapid market changes, this strategy can become an efficient trend tracking system after some optimization, suitable for medium- to long-term trading.  
-[/trans]
 
 > Strategy Arguments
 

@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans] 
-
-## 策略原理
-
-机械化交易策略采用一套系统化和规则化的方法来进行交易,其目的是捕捉金融市场上的短期价格波动。该策略注重根据特定条件执行交易,并预设目标利润点和止损点。
-
-关键特征:
-
-目标利润:策略允许你根据入场价格设定一个目标利润百分比。这个目标代表每次交易的预期利润水平。
-
-止损:策略包含一个根据入场价格设定的止损百分比。这个水平代表每次交易可承受的最大损失,有助于风险管理。
-
-入场条件:策略在特定时间触发交易。在这个例子中,入场条件是基于蜡烛时间为16点(即下午4点)。这个基于时间的入场条件提供了一套执行交易的系统化方法。 
-
-仓位管理:策略根据可用资金的固定百分比来确定仓位大小。这种方法可以保证一致的风险管理,并允许潜在的组合多样化。
-
-执行逻辑:
-
-当满足入场条件时,即蜡烛时间为16点,策略会启动做多头寸,使用strategy.entry功能。它使用strategy.exit功能来设置退出条件,包括盈利目标的限价单和止损目标的止损单。
-
-目标利润和止损:
-
-目标利润水平的计算是在入场价格的基础上增加入场价格的一个百分比。这代表着这次交易的预期利润目标。相反,止损水平是通过从入场价格中减去入场价格的一个百分比来计算的。这个水平是这次交易的最大可承受损失。
-
-通过使用这种机械化交易策略,交易者可以建立起一套原则性的系统化交易方式。预设的目标利润和止损水平提供了清晰的退出规则,有助于风险管理,并可能最大化收益。当然,任何交易策略都无法保证盈利,因此仍需谨慎分析和监控市场条件。
-
-
-
-||
 
 ## Strategy Logic
 
@@ -64,7 +35,6 @@ The take profit level is calculated by adding a percentage of the entry price to
 
 By using this mechanical trading strategy, traders can establish a disciplined and systematic approach to their trading decisions. The predefined profit target and stop loss levels provide clear exit rules, helping to manage risk and potentially maximize returns. However, no trading strategy is guaranteed to be profitable, and careful analysis and monitoring of market conditions are always recommended.
 
-[/trans]
 
 > Strategy Arguments
 

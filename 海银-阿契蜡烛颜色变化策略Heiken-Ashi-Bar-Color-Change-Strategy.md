@@ -9,49 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-### 概述
-
-该策略通过分析海因-阿契蜡烛的颜色变化,判断市场趋势,实现自动买入卖出。当蜡烛颜色从红变绿时发出买入信号,当蜡烛颜色从绿变红时发出卖出信号,属于趋势跟踪策略。
-
-### 策略原理
-
-首先计算海银-阿契蜡烛的开盘价、收盘价、最高价、最低价。蜡烛的颜色根据收盘价和开盘价判断,如果收盘价大于开盘价则为绿色,否则为红色。当本根K线的收盘价大于开盘价,且上一根K线的收盘价小于等于上一根K线的开盘价时,产生买入信号。当本根K线的收盘价小于等于开盘价,且上一根K线的收盘价大于上一根K线的开盘价时,产生卖出信号。
-
-这样通过海银-阿契蜡烛颜色的变化判断趋势,当颜色从红变绿时进入多头市场,从绿变红时进入空头市场,以捕捉市场趋势的变化。
-
-### 策略优势
-
-1. 使用海因-阿契蜡烛能过滤市场噪音,识别趋势
-2. 通过蜡烛颜色变化判断趋势变化点,令入场时机更准确 
-3. 策略思路简单清晰,易于实现与优化
-4. 可配置移动止损,严格控制风险
-
-### 风险及解决方案
-
-1. 存在一定的滞后,无法在转折点实时入场
-2. 可能出现止损被击穿的风险
-
-解决方法:
-
-1. 结合其他指标如布林带判断,优化入场时机
-2. 采用移动止损或及时止损,严格控制风险
-
-### 优化思路
-
-1. 优化止损策略,避免止损被击穿
-2. 增加移动平均线等指标判断,提高入场的准确性
-3. 添加仓位控制,避免亏损过大
-4. 结合RSI等指标避免过度交易
-5. 测试不同交易品种的parameter,寻找最优参数
-
-### 总结
-
-海银-阿契蜡烛颜色变化策略通过分析蜡烛颜色的变化判断趋势,在红变绿时做多,绿变红时做空,属于较为简单的趋势跟踪策略。该策略优势是识别趋势变化点的能力较强,但入场时机存在滞后,需要进一步优化,在策略框架合理的情况下,参数优化和严格的风险控制是该策略成功的关键。总体来说,该策略思路清晰易操作,值得进一步研究与应用。
-
-|| 
 
 ### Overview
 
@@ -92,7 +49,6 @@ Solutions:
 
 The Heiken Ashi bar color change strategy judges trends by analyzing candle color changes, going long when red changes to green, and going short when green changes to red. This is a relatively simple trend following strategy. The advantage is its strong ability to identify trend change points, but entry timing has some lag, requiring further optimization. With reasonable strategy framework, parameter optimization and strict risk control are key to success. Overall, the strategy has clear, easy logic, and is worth researching and applying further.
 
-[/trans]
 
 
 

@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10ec51b33944b7bdd21.png)
-[trans]
-#### 概述
-该策略使用两条指数移动平均线(EMA)来捕捉价格趋势的变化。当短期EMA从下方向上穿越长期EMA时,产生买入信号;当短期EMA从上方向下穿越长期EMA时,产生卖出信号。该策略同时设置了每日止损和止盈限制,以控制单日亏损和盈利。
-
-#### 策略原理
-1. 计算短期EMA(默认周期为9)和长期EMA(默认周期为21)。
-2. 当短期EMA向上穿越长期EMA时,开仓做多;当短期EMA向下穿越长期EMA时,开仓做空。
-3. 记录每个交易日开始时的账户权益,并计算当前账户权益与之的差值,即当日盈亏。
-4. 如果当日亏损超过最大允许亏损(账户初始资金的0.25%),平掉所有仓位。
-5. 如果当日盈利超过最大允许盈利(账户初始资金的2%),平掉所有仓位。
-
-#### 策略优势
-1. 简单易懂:该策略逻辑清晰,仅使用两条移动平均线即可产生交易信号,易于理解和实现。
-2. 趋势跟踪:通过EMA快慢线的交叉,能够较好地捕捉价格趋势的变化,适合在趋势市场中使用。
-3. 风险控制:设置了每日止损和止盈限制,可以有效控制单日亏损和盈利,防止账户出现过大波动。
-
-#### 策略风险
-1. 参数优化:该策略的表现很大程度上取决于EMA周期的选择,不同的参数设置可能导致截然不同的结果。因此,需要在不同市场环境下进行参数优化和回测。
-2. 震荡市:在震荡市场中,价格频繁在EMA上下波动,可能会产生较多的虚假信号,导致频繁交易和资金损耗。
-3. 趋势转折:当市场趋势发生转折时,该策略可能会延迟入场或出场,错过最佳交易时机。
-
-#### 策略优化方向
-1. 引入其他技术指标,如RSI、MACD等,以辅助判断趋势强度和方向,提高信号准确性。
-2. 优化止损和止盈规则,如采用移动止损或动态止盈,以更好地保护利润和控制风险。
-3. 根据市场波动性动态调整EMA周期,以适应不同的市场状态。
-4. 结合基本面分析,如经济数据、重大事件等,对交易信号进行过滤和确认。
-
-#### 总结
-EMA双均线交叉策略是一个简单易懂、适合趋势市场的交易策略。通过快慢均线的交叉,可以较好地捕捉价格趋势的变化。同时,每日止损和止盈的设置可以有效控制风险。但该策略在震荡市或趋势转折时可能表现欠佳,需要结合其他技术指标和分析方法进行优化和改进。
-
-|| 
 
 #### Overview
 This strategy uses two exponential moving averages (EMAs) to capture changes in price trends. When the short-term EMA crosses above the long-term EMA from below, a buy signal is generated; when the short-term EMA crosses below the long-term EMA from above, a sell signal is generated. The strategy also sets daily stop-loss and take-profit limits to control single-day losses and profits.
@@ -71,7 +40,6 @@ This strategy uses two exponential moving averages (EMAs) to capture changes in 
 #### Summary
 The EMA dual moving average crossover strategy is a simple, easy-to-understand trading strategy suitable for trending markets. By using the crossover of fast and slow moving averages, it can capture changes in price trends relatively well. At the same time, the daily stop-loss and take-profit settings can effectively control risks. However, the strategy may underperform in choppy markets or during trend reversals and needs to be optimized and improved by combining other technical indicators and analysis methods.
 
-[/trans]
 
 
 

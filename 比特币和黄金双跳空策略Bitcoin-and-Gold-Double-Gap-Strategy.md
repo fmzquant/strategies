@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19d8898d91bf2914fed.png)
-[trans]
-
-#### 概述
-
-双跳空策略是一种用于比特币和黄金短线交易的量化策略。它结合使用了移动平均线、布林带和ATR止损来识别突破信号并管理风险。
-
-#### 策略原理
-
-双跳空策略使用快速EMA和慢速EMA的交叉来判断趋势方向。当快速EMA向上突破慢速EMA时生成买入信号;当快速EMA向下突破慢速EMA时生成卖出信号。为了避免假突破,策略要求突破信号必须发生在布林带上轨或中轨附近,这就是“双跳空”的由来。
-
-具体来说,在判断买入信号时,需要满足以下两个条件:1)快速EMA上穿慢速EMA;2)收盘价接近或低于布林带上轨或中轨。判断卖出信号也是类似,需要快速EMA下穿慢速EMA并且接近布林带下轨或中轨。
-
-此外,双跳空策略还使用ATR指标计算动态止损,以控制单笔交易的风险。具体的止损位置为最近两根K线的最低点再减去N倍ATR。
-
-#### 策略优势  
-
-- 利用双重过滤条件识别高概率突破信号
-- 快速EMA crossover判断主要趋势,布林带过滤假突破
-- 动态ATR止损有效控制单笔交易风险 
-- 适合比特币等高波动标的的短线交易
-
-#### 策略风险
-
-- 快速EMA和慢速EMA参数设置不当可能产生大量假信号
-- 布林带参数不当也会使过滤效果大打折扣  
-- 止损位置设定过tight可能增加止损被触发概率
-- 短线交易需要较高的交易频次,不适合资金量小的投资者
-
-#### 策略优化
-
-双跳空策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线的参数,寻找最佳的快慢EMA长度组合
-2. 优化布林带参数,降低假突破率
-3. 根据不同交易品种和市场环境调整ATR止损的倍数
-4. 增加重新进入信号,即在止损退出后再次进入
-5. 结合其它指标作为辅助,例如RSI,KD等
-
-#### 总结
-
-双跳空策略同时利用趋势跟踪和突破过滤,可有效识别短线机会。结合动态止损管理风险,非常适合波动率较大的数字货币和贵金属品种的短线交易。通过参数优化和规则优化,可以进一步提高策略的稳定性和盈利能力。
-
-||
 
 #### Overview  
 
@@ -94,7 +51,6 @@ The Double Gap strategy can be optimized from the following aspects:
 
 The Double Gap strategy effectively identifies short-term opportunities using both trend following and breakout filtering. With dynamic stop loss management, it is well suited for short-term trading of high volatility digital currencies and precious metals. Further improvements in stability and profitability can be achieved through parameter and logic optimization.  
 
-[/trans]
 
 > Strategy Arguments
 

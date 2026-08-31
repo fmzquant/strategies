@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e5ad2b791819d43e10.png)
-[trans]
-
-## 概述
-
-移动平均线交叉策略是一种非常经典和常用的技术分析策略。该策略的核心思想是利用不同期间的移动平均线之间的交叉作为买卖信号。当短期移动平均线从下方上穿较长期的移动平均线时,产生买入信号;当短期移动平均线从上方下穿较长期的移动平均线时,产生卖出信号。
-
-## 策略原理
-
-该策略通过input设置输入移动平均线的类型(SMA,EMA,WMA,RMA)和周期长度,以及回测的时间范围。
-
-在variant函数中计算不同类型的移动平均线。计算出的移动平均线通过ma变量保存。
-
-当close价格上穿ma时,产生买入信号;当close价格下穿ma时,产生卖出信号。
-
-为了设置止损,通过atr计算出14周期的平均真实波动幅度。以穿越点作为参考,向上或向下加减2倍atr作为止损范围。
-
-具体入场和出场逻辑如下:
-
-多头入场:close上穿ma且在回测时间内,止损点为入场点close
-多头出场:close下穿 ma减去2倍atr时止损出场,或最高价超过入场点close加2倍atr时止盈出场
-空头入场:close下穿ma且在回测时间内,止损点为入场点close
-空头出场:close上穿ma加上2倍atr时止损出场,或最低价低于入场点close减2倍atr时止盈出场
-
-## 策略优势
-
-1. 策略思路简单明晰,容易理解和实现
-2. 应用广泛,适用于不同市场和品种
-3. 参数设置灵活,移动平均线类型和周期可调
-4. 采用ATR止损,有助于控制风险
-
-## 策略风险
-
-1. 移动平均线策略容易产生频繁交易和止损,降低盈利空间
-2. 大幅震荡行情中,移动平均线产生误导信号的可能性较大
-3. ATR止损范围可能过大或过小,无法达到防止巨额亏损的效果
-
-针对风险,可以从以下方面进行优化:
-
-1. 调整移动平均线周期,采用较长周期平均线
-2. 增加过滤条件,避免在震荡行情中频繁交易
-3. 优化ATR的参数或采用其他止损方式
-4. 结合趋势指标判断大趋势,避免逆势操作
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加过滤条件,如交易量,波动率等,避免非理性突破
-2. 采用自适应ATR止损方式,让止损范围随市场波动率变化
-3. 结合 Stoch,RSI等指标进行多因子验证,提高信号质量
-4. 增加趋势判断,避免逆势操作
-5. 采用时间EXIT,避免长期兑现亏损
-6. 优化移动平均线周期参数,寻找最佳参数组合
-
-## 总结
-
-移动平均线交叉策略是一个非常典型和常用的技术分析策略。该策略核心思路简单,容易实现,适用于各个市场,是量化交易的入门策略之一。但该策略也存在一些问题,如产生频繁信号,容易止损等。通过适当优化,可以大大提高该策略的实盘表现。总体来说,移动平均线交叉策略提供了一个非常好的策略开发框架,是量化交易策略学习的基石。
-
-||
 
 ## Overview
 
@@ -127,7 +68,6 @@ This strategy can be optimized in the following aspects:
 
 The moving average crossover strategy is a very typical and commonly used technical analysis strategy. The core idea of the strategy is simple and easy to implement, suitable for various markets, and is one of the entry-level quant trading strategies. However, the strategy also has some problems like generating frequent signals and being prone to stop loss. With proper optimizations, the performance can be greatly improved. Overall, the moving average crossover strategy provides a very good framework for strategy development and is the cornerstone of quantitative trading strategy learning.
 
-[/trans]
 
 > Strategy Arguments
 

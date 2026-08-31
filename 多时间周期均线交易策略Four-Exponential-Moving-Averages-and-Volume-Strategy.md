@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略结合多种不同参数设置的EMA均线以及EOM量能指标,实现多时间周期的趋势判断,构建长线和短线共同判断的交易策略。该策略旨在利用不同周期均线的多时间周期共振,发掘更长效的趋势走势。
-
-## 策略原理
-
-该策略使用4组不同周期的参数EMA均线,分别是13周期、21周期、50周期和180周期的EMA。这4组EMA均线构建了多个时间维度,用于判断价格趋势和发掘更长效的趋势模式。
-
-策略使用EOM量能指标来确认趋势。EOM指标结合了交易量和价格波动幅度,可以有效判断买卖力道。策略判断EOM大于0时为多头市场,EOM小于0时为空头市场。
-
-策略设置两个选项,选项1是当短期EMA站上长期EMA时做多,短期EMA站下长期EMA时平仓。选项2是当短期EMA上穿中期EMA时做多,短期EMA下穿中期EMA时平仓。两个选项可以更全面判断趋势的确认。
-
-## 策略优势
-
-- 利用多时间周期EMA判断趋势,能发掘更长线的趋势模式
-- EOM量能指标有效判断买卖力道,避免被暂时回调误导
-- 两种可选入场方式,可以更全面确认趋势
-- 采用分层换手止损,降低单笔损失
-
-## 策略风险
-
-- EMA均线具有滞后性,可能错过快速反转
-- 量能指标可能发出错误信号
-- 多重条件判断造成入场不明确
-- 分层换手止损可能过于机械化
-
-## 优化方向
-
-- 可以测试更多组合的参数EMA周期,寻找最优参数
-- 可以加入其他指标进行入场确认,如MACD等
-- 可以采用移动止损来追踪趋势运行
-- 可以根据市场状态调整定位仓位比例
-
-## 总结
-
-本策略整合多时间周期EMA判断和量能指标过滤,实现了趋势跟踪和 Noise去除。优化空间还很大,通过测试不同参数组合和加入更多指标可以进一步提高策略稳定性。同时,采用动态止损和仓位管理也可以大幅优化策略表现。
-
-|| 
 
 ## Overview
 
@@ -88,7 +47,6 @@ The strategy has two options. Option 1 goes long when shorter EMA crosses above 
 
 This strategy integrates multi-timeframe EMA trend determination and volume indicator filtering to achieve trend following and noise removal. There is still large room for optimization by testing different parameter combinations and adding more indicators to further improve robustness. Meanwhile, dynamic stop loss and position sizing can also significantly optimize performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ec3d7f330bc279ff87.png)
-[trans]
-
-## 概述
-
-该策略通过计算不同时间周期的支点作为关键价格区域,结合黄金分割线原理判断趋势方向,实现高买低卖的交易策略。
-
-## 策略原理
-
-1. 计算不同时间周期的收盘价、最高价、最低价的支点。包括经典支点和黄金分割支点。
-
-2. 根据价格突破上下轨,判断目前所处的价格区域。分为5个买入区域和5个卖出区域。
-
-3. 在买入区域发出买入信号,在卖出区域发出卖出信号,采取高买低卖策略。
-
-## 优势分析
-
-1. 利用多时间周期判断趋势,避免被市场噪音误导。
-
-2. 同时结合经典支点和黄金分割支点,提高支点的可靠性。 
-
-3. 通过价格区域判断入市时机,最大程度规避亏损的风险。
-
-4. 采用高买低卖策略,符合趋势交易的规则,避免逆势交易。
-
-## 风险分析
-
-1. 支点有可能失效,需要注意支点的突破。
-
-2. 须防止止损追踪不利,加重亏损。
-
-3. 交易费用也会影响最终收益。
-
-## 优化方向  
-
-1. 可以测试不同的参数,如时间周期参数、交易方向参数等,优化策略。
-
-2. 可以结合其他指标来确定趋势,避免假突破。 
-
-3. 可以添加止损机制来控制单笔亏损。
-
-## 总结
-
-该策略整合了经典技术分析方法与趋势交易策略,利用支点区域判断入市时机,并采取高买低卖原则,能有效控制交易风险,值得实盘验证与优化。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ This strategy calculates pivot points across different timeframes as key price l
 
 This strategy integrates classical technical analysis and trend trading by using pivot point zones to time entries and buying high and selling low to effectively manage trade risks. Worth live trading and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略是基于Noro自制的波带指标来判断趋势方向,并结合特定规则产生交易信号的趋势跟踪策略。当价格突破波带时产生交易信号。另外结合辅助指标CryptoBottom来提高信号质量。
-
-### 策略原理
-
-1. 计算Noro波带。根据用户定义周期计算最近高点、低点,并计算中线、上下轨。
-
-2. 判断趋势方向。价格位于上轨之上为看涨,位于下轨之下为看跌。
-
-3. 生成交易信号。看涨时,价格突破下轨产生买入信号;看跌时,价格突破上轨产生卖出信号。
-
-4. 整合CryptoBottom。当辅助指标CryptoBottom发出信号时,增加买入机会。
-
-5. 开仓规则。用户可以选择只进行多头交易或空头交易。不选时则全仓交易。
-
-6. 绘制Noro波带。可以显示或隐藏波带绘制。
-
-### 优势分析
-
-1. Noro波带有效判断趋势方向。
-
-2. 结合波带突破产生信号,可避免假突破。
-
-3. CryptoBottom提高买入信号质量。
-
-4. 可自定义只做多或只做空。
-
-5. 参数可调整适应不同周期。
-
-### 风险分析
-
-1. 参数设定不当可能导致波带判断失效。
-
-2. 突破信号存在滞后。
-
-3. CryptoBottom并非完全可靠。
-
-4. 只做多或只做空可能错过部分机会。
-
-- 风险1可以通过参数优化找到最佳设置。
-
-- 风险2可以结合其他指标进行确认。
-
-- 风险3需要检验CryptoBottom的效果。
-
-- 风险4需要评估仅做多或仅做空的收益效果。
-
-### 优化方向
-
-1. 测试不同参数对Noro波带的影响。
-
-2. 尝试其它突破指标替代Noro波带。
-
-3. 评估止损策略。
-
-4. 测试仅做多或仅做空的效果。 
-
-5. 优化CryptoBottom的参数。
-
-### 总结
-
-该策略通过Noro波带判断趋势方向,并结合突破信号产生交易机会。CryptoBottom提升买入效果。参数优化和止损可以进一步完善该策略。
-
-||
 
 ### Overview
 
@@ -141,7 +74,6 @@ This strategy uses custom Noro Bands indicator to determine trend direction and 
 
 This strategy uses Noro Bands to determine trend and breakout signals to time entries. CryptoBottom improves buying. Parameter optimization and stops can further refine the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

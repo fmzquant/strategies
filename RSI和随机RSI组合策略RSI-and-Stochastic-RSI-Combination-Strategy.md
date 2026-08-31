@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d01229e7dc4b238896.png)
-[trans]
-
-## 概述
-
-该策略名称为RSI和随机RSI组合策略,它结合了相对强弱指标(RSI)和随机RSI指标的优点,旨在发现超买超卖的机会。该策略适用于5分钟线,在EOS/BTC和BTC/USDT品种效果较好,不适用于所有加密货币。
-
-## 策略原理
-
-该策略同时使用RSI指标和随机RSI指标。其中RSI长度为10周期,超买线为60,超卖线为20。随机RSI参数包括K线的平滑周期为3,D线的平滑周期为3,RSI计算周期长度为14,随机RSI计算周期长度为14。当随机RSI的K值和D值同时低于20时为超卖;当随机RSI的K值和D值同时高于80时为超买。策略在超买超卖时机发出交易信号。
-
-## 优势分析
-
-该策略结合RSI指标和随机RSI指标的优势。RSI指标能够有效识别超买超卖情况。随机RSI指标结合动量指标,能够更早地发现价格转折点。两者组合使用效果更好,既考虑了价格超买超卖信息,也考虑了动量因素,从而能够在较优时机发出交易信号。
-
-## 风险分析 
-
-该策略可能存在交易次数过多、幅度不足的风险。解决方法是适当调整参数,降低交易频率,选择交易幅度大的品种。另外,交易费用也会影响最终盈利。建议选择手续费较低的交易平台,或适当放大交易位置规模。
-
-## 优化方向
-
-该策略的参数可以进一步优化,如调整RSI参数、随机RSI参数、超买超卖阈值等。此外,可以考虑结合其他指标过滤信号,例如EMA均线指标等,从而提高信号质量。也可以尝试多品种组合,利用不同品种之间的相关性,获得更稳定的整体收益。
-
-## 总结
-
-该策略整合RSI指标和随机RSI指标的优势,能够在相对超买超卖时发出交易信号。策略参数可进一步优化,交易规则可根据不同品种进行调整,也可以考虑与其他策略或指标组合使用。总体来说,该策略适用于发掘短线交易机会的量化交易者。
-
-||
 
 
 ## Overview
@@ -63,7 +36,6 @@ Parameters of this strategy can be further optimized, such as adjusting RSI para
 
 The strategy integrates the advantages of RSI indicator and Stochastic RSI indicator to generate trading signals at relative overbought and oversold levels. Parameters can be further tuned and trading rules can be customized for different products. Combinations with other strategies or indicators can also be explored. Overall speaking, this strategy suits quantitative traders looking to identify short-term trading opportunities.
 
-[/trans]
 
 > Strategy Arguments
 

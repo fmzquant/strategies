@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12472fbe51399e5028a.png)
-[trans]
-## 概述
-
-本策略基于动态通道和均线的趋势跟踪原理设计。它计算价格的动态通道,通过通道上下轨判断价格趋势方向,结合均线滤波价格离散度,产生交易信号。该策略适用于中短线趋势交易。
-
-## 原理
-
-该策略主要基于以下原理:
-
-1. 计算动态价格通道。通过最高价和最低价计算通道中线,通道上轨为中线+价格离散度均线,下轨为中线-价格离散度均线。
-
-2. 判断趋势方向。当价格上穿上轨时,定义为看涨;当价格下破下轨时,定义为看跌。
-
-3. 滤波噪音。使用一定周期的价格离散度均线,滤波价格随机波动带来的噪音。
-
-4. 产生交易信号。看涨时,在该周期收盘价低于开盘价时产生买入信号;看跌时,在该周期收盘价高于开盘时产生卖出信号。
-
-## 优势
-
-该策略具有以下优势:
-
-1. 动态通道能实时捕捉价格趋势;
-2. 均线滤波能减少假信号;
-3. 结合趋势方向和K线实体方向产生交易信号,避免被套。
-
-## 风险
-
-该策略也存在以下风险:
-
-1. Params选取不当可能导致过度优化;
-2. 震荡盘整理时容易产生错误信号;
-3. 无法预测价格剧烈波动。
-
-对应解决方法:
-
-1. 严格的Params选择和测试;
-2. 增加过滤条件,识别震荡盘整理;
-3. 设置止损止盈,控制风险。
-
-## 优化方向  
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同周期参数的稳定性;
-2. 增加VOLUME或波动度指标判断力度;
-3. 结合波段、通道等判断进入和退出。
-
-## 总结
-
-本策略整合动态通道和均线趋势判断的思想,在中短线捕捉趋势方向中表现不俗。但也存在一定局限性,需要进一步测试优化以适应更多市场情况。
-
-||
 
 ## Overview
 
@@ -113,7 +61,6 @@ The strategy can be optimized in following aspects:
 
 This strategy integrates the ideas of dynamic channel and MA trend judgment, and performs well in capturing trend directions in medium and short term. But there are still some limitations, which need further testing and optimization to adapt more market situations.
 
-[/trans]
 
 > Strategy Arguments
 

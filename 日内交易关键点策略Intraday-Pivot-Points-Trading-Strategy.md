@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1866cf12c2aec15acf2.png)
-[trans]
-
-## 概述
-这是一个印度日内交易的关键点策略,主要利用开盘价、最高价、最低价和收盘价计算出关键的支撑和阻力点,在这些点发生价格突破时进行交易。
-
-## 策略原理
-1. 计算前一交易日的最高价、最低价和收盘价
-2. 根据公式计算出主要的支撑点S1、阻力点R1和关键点PP
-3. 当价格突破这些关键点时进入做多或做空头寸
-4. 设置止损退出机制
-
-主要关键点计算公式如下:
-```
-PP = (最高价+最低价+收盘价)/3
-R1 = 2*PP - 最低价  
-S1 = 2*PP - 最高价
-```
-
-## 优势分析
-1. 利用关键点提供高概率的突破口,增大盈利机会
-2. 关键点易于确定,交易规则清晰
-3. 停损点容易设定,有效控制风险
-
-## 风险分析
-1. 关键点可能出现假突破,造成亏损
-2. 关键点的有效性需要验证,不一定每次都有效
-3. 停损点设置不当可能扩大损失
-
-风险解决方法:
-1.  combining with other indicators to filter false breakouts 
-2. backtesting  to validate strategy over long timeframes
-3. optimize stop loss placement  
-
-## 优化方向  
-1. 结合其他技术指标过滤假突破信号
-2. 针对不同品种参数优化
-3. 动态调整止损点
-
-## 总结
-该策略整体较为简单直接,通过历史数据容易验证有效性。作为日内交易策略,它利用关键点提供高概率突破口,可以获得不错的效果。但由于依赖关键点,也存在一定的假突破风险,这需要进一步优化来减少。总的来说,这是一个易于实现、风险可控的日内交易策略。
-
-
-||
 
 
 ## Overview
@@ -93,7 +50,6 @@ Risk Mitigations:
    
 ## Conclusion  
 Overall this is a simple and straightforward strategy which can be easily validated with historical data. As an intraday strategy, it provides high probability breakout opportunities at key levels resulting in good performance. But there are some false breakout risks relying on pivot points that need further optimization. In summary, this is an easy to implement, controllable risk intraday trading strategy.  
-[/trans]
 
 > Strategy Arguments
 

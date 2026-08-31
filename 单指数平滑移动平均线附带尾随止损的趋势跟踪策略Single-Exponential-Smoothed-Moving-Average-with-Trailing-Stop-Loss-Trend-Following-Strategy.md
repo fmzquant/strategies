@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1538770623ef02d0da4.png)
-[trans]
-
-## 概述
-
-该策略结合使用了单指数平滑移动平均线(SESMA)和附带尾随止损的唐奇阶梯围绕机制,形成一个非常稳定和高效的趋势跟踪策略。SESMA作为主线,用于识别价格趋势方向。尾随止损机制则可有效降低策略风险,同时保护策略利润。
-
-## 策略原理
-
-该策略由两个核心指标组成:
-
-1. 单指数平滑移动平均线(SESMA):SESMA借鉴了EMA的思想,同时改进了参数,使得曲线更加光滑,延迟降低。通过SESMA的方向和价位关系来判断价格趋势。
-
-2. 尾随止损机制:结合最高价、最低价以及ATR指标,实时计算出多头和空头的止损线。这是一个动态调整的止损机制,可根据市场波动性和趋势调整止损幅度。止损线同价位的关系用于判断平仓退出的时机。  
-
-该策略的入场依据是价格突破SESMA。而出场信号则由止损线来触发。可设定是否显示标记。
-
-## 策略优势
-
-1. SESMA计算方法改进,可有效减少延迟,提高顺势捕获能力。
-2. 尾随止损机制可根据实时波动调整止损幅度,避免止损过于宽松或过于紧挨。 
-3. 附带视觉辅助判断 Entry 和 Exit 时机的标记。
-4. 可自定义参数,适用于不同品种和参数优化。
-
-## 风险及优化方向  
-
-1. 在趋势反转时,可能出现止损被触发导致过早退出。可适当放宽止损幅度。
-2. SESMA 参数可进行优化,找到最佳长度。
-3. ATR 参数也可测试不同的周期长度。
-4. 测试是否显示标记的效果。
-
-## 总结
-
-该策略整合了趋势判断与风险控制指标,形成一个较为稳健的趋势跟踪策略。相比于简单的移动平均线策略,该策略可更加灵活地捕捉趋势,同时可减少回撤。通过参数优化,可使策略在不同市场中达到更好的效果。
-
-||
 
 ## Overview  
 
@@ -78,7 +43,6 @@ The entry signal of this strategy is triggered when price crosses over SESMA. Th
 
 This strategy integrates trend judging and risk control indicators to form a relatively robust trend following strategy. Compared to simple moving average strategies, this strategy can capture trends more flexibly while reducing drawdowns. Through parameter optimization, the strategy can achieve better results in different markets.
 
-[/trans]
 
 > Strategy Arguments
 

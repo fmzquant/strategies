@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/164dff19347f7fc015d.png)
-[trans]
-
-#### 概述
-
-超趋势均线BOLL指标策略是一种常见的基于ATR平均真实波动幅度的追踪止损指标策略。该策略使用超趋势均线指标在图表上绘制多空趋势通道,并结合布林带指标发出买卖信号。
-
-#### 策略原理
-
-该策略使用两个主要参数——周期和乘数,分别默认为10和3,来计算超趋势均线。具体计算公式如下:
-
-上轨线:收盘价 - (乘数 × ATR平均真实波动幅度)
-下轨线:收盘价 + (乘数 × ATR平均真实波动幅度)
-
-当收盘价高于上一周期的上轨时,视为多头信号;当收盘价跌破上一周期的下轨时,视为空头信号。
-
-该策略还结合布林带指标,以中轨 为基准线,上下轨分别离中轨两个标准差。当价格从下向上突破中轨时产生买入信号;从上向下跌破中轨时产生卖出信号。
-
-#### 策略优势
-
-1. 使用ATA动态计算波动幅度,能快速捕捉市场变化趋势
-2. 结合布林带指标,使交易信号更可靠
-3. 可自定义参数,适应不同市场环境
-
-#### 策略风险
-
-1. 在震荡行情中容易产生错误信号
-2. 参数设置不当可能导致交易频繁
-3. 无法判断趋势转折点,存在一定的滞后性
-
-#### 优化方向
-
-1. 优化ATR周期参数,以 filters 减少噪音交易
-2. 结合其他指标判断支持阻力位,降低获利回吐概率 
-3. 增加资金管理模块,控制单笔损失
-
-#### 总结
-
-超趋势均线BOLL指标策略整合了多种技术指标的优点,使用动态追踪止损机制,能有效跟踪市场趋势。该策略参数可自定义,适应性强,是一种值得推荐的突破追踪策略。但也应注意防范止损失命中及交易频繁的风险,需要进一步优化以适应更加复杂的市场环境。
-
-||
 
 
 #### Overview 
@@ -89,7 +49,6 @@ The strategy also incorporates the Bollinger Bands indicator, using the middle b
 
 The Supertrend Bollinger Bands strategy integrates the strengths of multiple technical indicators and utilizes a dynamic trailing stop mechanism to effectively track market trends. This highly customizable strategy adapts well to different markets, making it a recommended breakout chasing strategy. However, risks like whipsaws and over-trading should be addressed by further optimizations to suit more complex market environments.
 
-[/trans]
 
 > Strategy Arguments
 

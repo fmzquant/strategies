@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19495dc99fc35cec4d7.png)
 
-[trans]
-
-## 概述
-
-本策略称为“日线收盘价比较策略”,是基于日线收盘价进行交易决策的量化策略。该策略通过计算当前日线收盘价和前一日线收盘价的差值,据此产生交易信号。当差值超过设定的阈值时,进行买入或卖出操作。
-
-## 策略原理
-
-该策略的核心逻辑是比较当前K线的收盘价和前一根K线的收盘价。 specifically:
-
-1. 计算当前日线收盘价和前一日线收盘价的差值(today - yesterday)
-2. 计算差值与前一日收盘价的比例(difference / yesterday's close)  
-3. 如果比例大于设定的正阈值,则产生买入信号;如果比例小于设定的负阈值,则产生卖出信号
-4. 根据信号进入做多或空仓部位
-
-该策略没有设置止损和止盈条件,依赖阈值条件形成的交易信号进行入场和平仓。
-
-## 优势分析
-
-- 思路简单容易理解,适合量化交易的入门学习
-- 仅基于日线收盘价交易,避免过于频繁交易
-- 可通过调整阈值来控制交易频率
-
-## 风险分析  
-
-- 没有止损设置,无法控制单笔损失
-- 可能会产生连续的交易信号导致过度交易
-- 回撤可能较大,无法很好控制总体亏损 
-
-## 优化方向
-
-- 增加止损逻辑,控制单笔损失
-- 增加开仓次数限制,避免过度交易
-- 优化参数,寻找最佳交易频率
-
-## 总结
-
-本策略通过比较日线收盘价形成交易信号,思路简单,适合入门学习。但该策略存在一定风险,需要进一步优化以用于实盘交易。
-
-
-||
 
 
 ## Overview
@@ -91,7 +50,6 @@ The strategy does not set stop loss or take profit conditions, and relies on the
 
 This strategy generates trading signals by comparing daily close prices. The logic is simple and suitable for beginners to learn. But it contains certain risks and needs further optimization for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

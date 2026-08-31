@@ -12,55 +12,6 @@ ChaoZhang
 ![IMG](https://www.fmz.com/upload/asset/f071d5236b56952b57.png)
 这里是我尝试根据您的要求写的文章:
 
-[trans]
-
-## 概述
-
-本策略综合应用了123形态反转策略和熊力指标策略,当二者同向做多或做空信号出现时,产生交易信号,属于突破反转型交易策略。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123形态反转策略
-
-    当收盘价连续2日下跌后第3日收盘价突破向上,并且低位stoch指标从低位反弹时产生买入信号;当收盘价连续2日上涨后第3日收盘价突破向下,并且高位stoch指标从高位回落时产生卖出信号。
-
-2. 熊力指标策略
-
-    熊力指标反映多空力量对比,当指标大于设定的卖出界线时产生卖出信号,当指标小于设定的买入界线时产生买入信号。
-
-综合信号时,若二者给出同向信号,产生实际交易信号。
-
-## 策略优势
-
-1. 结合反转信号和指标过滤,避免假突破,提高信号质量。
-
-2. 多种时间周期适用,灵活应对不同市场环境。
-
-3. 可单独使用组成部分策略,也可组合使用,策略模块化设计。
-
-## 策略风险
-
-1. 反转信号可能出现回调深度较大情况。
-
-2. 熊力指标参数设置需要反复测试优化。
-
-3. 多因子综合策略参数调优复杂,需要大量历史数据测试。
-
-## 策略优化
-
-1. join量化模块连接更多数据源,获取更长时间段更丰富数据。
-
-2. 应用机器学习方法自动搜索和评估参数组合。
-
-3. 增加止损机制以控制单笔损失。
-
-## 总结
-
-本策略综合运用反转技术分析和量化指标,通过双重确认提高信号质量,模块化程度高,可扩展性强,属于实用型策略。后续可通过引入更多先进技术手段进行优化,从而适应更加复杂的市场环境。
-
-||
 
 ## Overview  
 
@@ -108,7 +59,6 @@ When combining the signals, actual trading signals are generated if the two give
 
 This strategy combines reversal technical analysis and quantitative indicators to improve signal quality through double confirmation. It has high modularity and expandability. Further optimization with advanced technologies can adapt it to more sophisticated market environments.
 
-[/trans]
 
 > Strategy Arguments
 

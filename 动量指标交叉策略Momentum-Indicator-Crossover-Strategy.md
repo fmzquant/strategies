@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/147479f23fdf96aecd8.png)
 
-[trans]
-
-## 概述
-
-动量指标交叉策略(Momentum Indicator Crossover Strategy)是一个结合指数移动平均线(Exponential Moving Average,EMA)和相对强弱指标(Relative Strength Index,RSI)信号的交易方法。该策略旨在利用两条EMA线的交叉产生买入和卖出信号,从而在金融市场中进行交易。
-
-## 策略原理
-
-该策略的核心是EMA的快慢线交叉系统。策略中定义了三条不同参数的EMA线:`ema1`、`ema2`和`ema3`。其中,`ema1`代表短期趋势,`ema2`代表中期趋势,`ema3`代表长期趋势。当短期趋势上穿中期趋势时,产生买入信号;当短期趋势下穿中期趋势时,产生卖出信号。
-
-为过滤错诊信号,策略还定义了两个附加条件:`bodybar1 > bodybar2`和`close > entrybar`(买入信号)或`close < entrybar`(卖出信号)。这确保最近两根K线的实体 길度关系符合信号方向,并且价格突破入场点,避免重复入场。
-
-另外,策略结合RSI指标evalue,RSI高位区域用于定义超买信号,RSI低位区域用于定义超卖信号。这有助于避免在价格过热和过冷的市场中产生错误信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用方法简单易行,用户无需掌握复杂指标就可以使用。
-2. 可以根据投入资金的百分比灵活调整仓位大小。
-3. EMA交叉结合RSI过滤,可以提高信号的可靠性。
-4. 交易逻辑清晰,易于理解和调整。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. EMA交叉并不能完全过滤市场噪音,容易产生假信号。
-2. 固定参数的EMA线无法实时适应市场变化。
-3. 没有止损逻辑,无法控制单笔损失。
-4. RSI过滤条件单一,可能错过部分机会。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 基于市场波动率和交易品种设定自适应EMA参数,提高参数的实时性。
-2. 结合其他指标如MACD、布林带等进行多重过滤,减少假信号。 
-3. 增加跟踪止损、获利止盈功能,控制交易风险。
-4. 优化RSI的过滤逻辑,提高策略整体稳定性。
-5. 结合机器学习技术动态优化策略参数。
-
-## 总结
-
-动量指标交叉策略整合了EMA和RSI的优势,基于指标交叉形成交易信号。该策略简单实用,适合初学者使用,也可根据实际需要进行扩展和优化,提升策略效果。通过严格的风险管理,该策略有望取得稳定的超额收益。
-
-||
 
 
 ## Overview  
@@ -104,7 +57,6 @@ The strategy can be optimized in the following aspects:
 
 The Momentum Indicator Crossover Strategy integrates the strengths of EMA and RSI and forms trading signals based on indicator crossovers. The strategy is simple and practical, suitable for beginners, and can also be expanded and optimized according to actual needs to improve strategy performance. With strict risk management, the strategy promises stable excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

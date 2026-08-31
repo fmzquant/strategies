@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19c9df53d11ee49bcd7.png)
-[trans]
-
-## 概述
-
-本策略名称为MACD趋势跟随策略,它是一个利用MACD指标判断价格趋势,并跟随趋势进行交易的量化策略。该策略旨在捕捉中长期趋势,在趋势发生转折时及时调整仓位。
-
-## 策略原理
-
-该策略使用MACD指标判断价格趋势。MACD指标是一种突破指标,由快线EMA(12日)和慢线EMA(26日)组成,它们的差离值构成MACD柱状线,该柱状线的9日EMA构成MACD的信号线。当MACD线上穿信号线时为金叉,说明价格处于上涨趋势;当MACD线下穿信号线时为死叉,说明价格处于下跌趋势。
-
-该策略先计算出MACD线和信号线,然后计算出MACD线与信号线的差值delta。当delta上穿0时产生买入信号,当delta下穿0时产生卖出信号,根据这两个信号调整仓位。为过滤噪音,策略还引入了一个EMA均线,只有当价格突破该均线时才会产生真正的交易信号。
-
-具体来说,策略逻辑如下:
-1. 计算MACD线、信号线和差值delta
-2. 判断delta上穿或下穿0时,确认趋势转折
-3. 计算EMA均线,作为过滤器
-4. 当delta上穿0且价格高于EMA时,产生买入信号
-5. 当delta下穿0且价格低于EMA时,产生卖出信号
-
-通过这样的设计,该策略能够顺应中长线趋势进行交易,在趋势发生转变时及时调整仓位,避免被短期市场噪音误导。
-
-## 策略优势
-
-该策略具有以下几点优势:
-
-1. 使用MACD判断趋势转折点,准确判定买入和卖出时机
-2. 采用EMA过滤器,避免被短期市场噪音干扰
-3. 只跟随中长线趋势进行交易,避免被震荡市场套牢
-4. 交易逻辑简单清晰,代码容易理解和修改
-5. 可以通过参数调整自由控制策略的交易频率
-6. 资金利用率高,可以充分跟踪中长线趋势
-
-## 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. MACD作为趋势跟随指标,在震荡行情中容易产生错误信号
-2. EMA滤波器可能过滤掉部分有效交易机会
-3. 参数设置不当可能导致交易频率过高或过低
-4. 无法响应短期市场变化,对突发事件反应不敏感  
-5. 存在一定的滞后,可能错过趋势转折的最佳时间点
-
-对策:
-
-1. 优化参数,调整EMA滤波器参数减少误判
-2. 结合其他指标作为辅助,发现更多交易机会
-3. 设置止损来控制单笔损失
-4. 适当缩短持仓时间,保证策略的灵活性
-
-## 策略优化
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加其他指标判断,形成指标组合,提高准确率
-2. 添加止盈止损机制,更好控制风险
-3. 结合交易量指标,避免虚假突破
-4. 根据市场环境自适应调整参数,提高策略的适应性
-5. 优化买入和卖出的具体逻辑,改进进入和退出的时机
-6. 分阶段建仓,更好跟踪趋势,降低风险
-
-通过指标组合、止损止盈、自适应参数等方法的优化,可以大幅提升该策略的效果。
-
-## 总结
-
-总体来说,该MACD趋势跟随策略通过简单有效的MACD指标判断中长线趋势,设计了较为清晰的趋势跟随交易逻辑。它具有捕捉趋势的能力,以及一定的风险控制措施。通过进一步的优化和改进,该策略可以成为一个非常实用的量化交易系统。它适用于追求长线稳定收益而非短期盈利的投资者。
-||
 
 ## Overview 
 
@@ -142,7 +76,6 @@ Significant improvement can be achieved through methods like indicator combos, a
 
 In summary, the MACD Trend Following Strategy utilizes the simple and effective MACD indicator to identify mid-to-long-term trends, and implements a clear trend following logic. It has the capacity to capture trends as well as reasonable risk control measures. With further optimizations, the strategy can become a very practical quant trading system. It suits investors seeking steady long-term gains over short-term profits.
 
-[/trans]
 
 > Strategy Arguments
 

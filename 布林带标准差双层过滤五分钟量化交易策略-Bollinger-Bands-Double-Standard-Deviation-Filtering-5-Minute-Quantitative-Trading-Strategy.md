@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f949dd7c0f7e1e4088.png)
 
-[trans]
-#### 概述
-该策略基于布林带指标,通过双层标准差过滤,在5分钟时间框架上实现快速交易。当价格跌破下轨时买入,突破上轨时卖出。上下轨由不同标准差设定,并使用不同颜色标识,直观显示趋势强弱。
-
-#### 策略原理 
-1. 计算布林带基准线、上轨1、上轨2、下轨1和下轨2。
-2. 当收盘价从下轨1下方向上穿越时,产生买入信号。
-3. 当收盘价从上轨1上方向下穿越时,产生卖出信号。
-4. 买入后,当出现卖出信号时平仓。卖出后,当出现买入信号时平仓。
-5. 上轨2和下轨2标识趋势强度,提供辅助判断。
-
-#### 策略优势
-1. 双层标准差设置提高了趋势判断的准确性。 
-2. 5分钟级别的交易频率高,适合快进快出。
-3. 趋势强度辅助判断有助于风险控制。
-4. 参数可调,适应不同市场。
-
-#### 策略风险
-1. 频繁交易可能导致高额手续费。
-2. 趋势判断误差会带来亏损。
-3. 缺乏止损措施,风险暴露较大。
-4. 对单边趋势把握不足。
-
-#### 策略优化方向  
-1. 引入止损和止盈机制,控制单笔交易风险。
-2. 优化布林带参数,提高趋势捕捉能力。
-3. 加入趋势判断辅助指标,如MA,提高胜率。
-4. 针对震荡行情设置过滤条件。
-
-#### 总结
-该策略利用布林带的统计特性,双层过滤增强趋势判断,适合在5分钟级别快速捕捉趋势机会。但频繁交易和风控措施不足的问题仍需优化。未来可继续完善止损止盈、参数优选和辅助判断等方面,提升整体稳健性和盈利能力。
-
-||
 
 #### Overview
 This strategy is based on the Bollinger Bands indicator and uses double standard deviation filtering to achieve fast trading on a 5-minute timeframe. It buys when the price breaks below the lower band and sells when it breaks above the upper band. The upper and lower bands are set by different standard deviations and marked with different colors, visually showing the strength of the trend.
@@ -75,7 +42,6 @@ This strategy is based on the Bollinger Bands indicator and uses double standard
 
 #### Summary
 This strategy uses the statistical properties of Bollinger Bands, with double-layer filtering to enhance trend judgment, suitable for quickly capturing trend opportunities at the 5-minute level. However, issues with frequent trading and insufficient risk control measures still need optimization. In the future, improvements can continue to be made in terms of stop-loss and take-profit, parameter optimization, and auxiliary judgment to enhance overall robustness and profitability.
-[/trans]
 
 > Strategy Arguments
 

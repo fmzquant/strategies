@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14b59777f9bf5d971ca.png)
-[trans]
-
-## 策略概述
-
-比特币动量跟踪止损策略是一种基于动量的长仓策略,旨在捕捉比特币的上涨趋势,同时通过动态调整止损来规避下跌风险。该策略使用了简单而巧妙的动量跟踪止损技术,在高度看跌的波动期内收紧止损以保护敞口利润,而在持续看涨的动量期间放宽止损以让利润奔跑。只要比特币价格高于20周均线(EMA),该策略就会一直持仓,当价格跌破20周均线时就会平仓止损。该策略只交易一个头寸,不做空,但如果你知道自己在做什么,可以很容易地调整它来做任何你喜欢的事情。
-
-## 策略原理
-
-1. 比特币当前价格必须高于高级别时间框架的EMA(20周EMA)
-2. 比特币不能处于"警戒"状态,即比特币最近的波峰减去当前K线的最低价大于1.5倍的ATR,或者当日收盘价低于当日20EMA
-3. 止损设置为最近波峰减去1个ATR,如果处于警戒状态,则减去ATR的20%(即0.2 ATR)
-4. 当价格收盘低于止损价时,在下一根K线开盘平仓
-
-该策略使用周线图表和20周EMA作为趋势过滤器,只在价格高于20周EMA时入场。5周期ATR用于动态调整跟踪止损的距离,在警戒状态下会收紧止损。警戒状态通过两个条件定义:近期波峰到当前最低价的距离大于1.5倍ATR,或者当日收盘价低于当日20EMA。这种动态止损调整方法可以在趋势强劲时给予更大的回撤空间,在趋势减弱时快速锁定利润。
-
-## 策略优势
-
-1. 简单有效:该策略逻辑简单清晰,容易理解和实施,同时能够有效捕捉比特币的主要上涨趋势。
-
-2. 动态止损:根据市场波动状况动态调整止损位置,既能控制回撤,又能让利润奔跑,是一种较为平衡和稳健的止损方法。
-
-3. 趋势过滤:通过高级别均线(20周EMA)过滤,只在明确的上涨趋势中入场,大大提高了策略胜率和盈亏比。
-
-4. 仓位管理:默认全仓交易,能够最大程度地利用资金,提高资金利用效率。同时也可灵活调整仓位大小。
-
-5. 适用性广:该策略逻辑可以方便地移植到其他标的和市场中,具有较好的通用性。
-
-## 策略风险
-
-1. 参数适用性:该策略参数是基于比特币市场的特点设置的,对其他市场的适用性有待验证,可能需要针对不同标的进行参数优化。
-
-2. 趋势识别:该策略主要依赖高级别EMA和ATR等技术指标判断趋势,对行情的把握不如基本面分析全面,在市场转折点容易出现失误。
-
-3. 止损风险:虽然动态止损可以一定程度上控制风险,但在极端行情下(如暴跌或快速深幅震荡),仍可能出现较大的回撤。而且止损位比较靠近,在震荡行情中可能会频繁止损。
-
-4. 盈利空间:策略在单边上涨趋势中表现出色,但在震荡市更容易陷入频繁止损的困境,整体盈利空间可能有限。
-
-5. 实盘表现:该策略在回测中表现良好,但实盘受到滑点、手续费等因素影响,可能与理论收益存在一定差距,需谨慎评估。
-
-## 优化方向
-
-1. 趋势判断:可以尝试引入更多高级别均线、波动率指标甚至基本面数据,提高趋势识别的准确性和可靠性。
-
-2. 动态参数:止损位和ATR参数可以进一步优化,引入与价格或波动率相关的动态调整机制,以适应不同的市场状态。
-
-3. 仓位管理:可以根据趋势强度、波动率等指标,动态调整仓位大小,在趋势强劲时加大仓位,在高波动率时减小仓位,提高收益风险比。
-
-4. 多空机制:在熊市中引入做空机制,扩大策略的适用范围和潜在盈利空间。但需要重新设计入场、止损等规则。
-
-5. 组合策略:将该策略与其他策略(如反转、均值回归等)进行组合,互补优势,提高策略稳定性和盈利能力。
-
-## 策略总结
-
-比特币动量跟踪止损策略是一个简单有效的动量策略,它利用高级别均线和ATR指标,捕捉比特币强劲的上涨趋势,并通过动态调整止损的方式控制下行风险。该策略逻辑清晰,易于实施和优化,适用于追求稳健收益的中长线投资者。但在震荡市中表现一般,整体盈利空间有限。
-该策略可以作为一个基础模板,投资者可以根据自己的需求和经验,在趋势判断、参数优化、仓位管理、多空机制等方面进一步完善,或与其他策略进行组合,以期获得更高的收益风险比。但需要注意,该策略在实盘中的表现可能与回测结果存在差异,需要谨慎评估和控制风险。任何策略在使用前都需要进行充分的历史数据回测和模拟交易,并根据市场变化进行动态调整。
-
-|| 
 
 ## Strategy Overview
 
@@ -121,7 +64,6 @@ The strategy uses the weekly chart and the 20-week EMA as a trend filter, only e
 
 The Bitcoin Momentum Trailing Stop Strategy is a simple and effective momentum strategy that captures Bitcoin's strong uptrends using higher-level moving averages and ATR indicators while controlling downside risk through dynamically adjusted stop-losses. The strategy logic is clear, easy to implement and optimize, and suitable for medium to long-term investors seeking steady returns. However, it performs averagely in rangebound markets with limited overall profit potential.
 This strategy can serve as a basic template, and investors can further refine it based on their own needs and experience in areas such as trend determination, parameter optimization, position management, and long/short mechanisms, or combine it with other strategies to achieve a higher risk-reward ratio. However, it should be noted that the live performance of the strategy may differ from backtesting results, requiring careful risk assessment and control. Any strategy should be thoroughly backtested on historical data and forward tested before use, and dynamically adjusted based on market changes.
-[/trans]
 
 > Strategy Arguments
 

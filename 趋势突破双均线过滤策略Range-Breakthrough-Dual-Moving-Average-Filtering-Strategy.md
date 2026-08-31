@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e2eddffa37fe5c91cd.png)
-[trans]
-
-## 概述
-
-这是一个利用均线和布林通道进行趋势判断,并结合突破过滤和止损原理的策略。它可以在趋势变化时及时捕捉信号,通过双均线过滤减少错误信号,设置止损来控制风险。
-
-## 策略原理
-
-该策略主要由以下几部分组成:
-
-1. 趋势判断:使用MACD判断价格趋势,区分多头和空头趋势。
-
-2. 范围过滤:使用布林通道判断价格波动范围,过滤掉不突破范围的信号。
-
-3. 双均线确认:快速EMA和慢速EMA组成的双均线,用于确认趋势信号。只有快速EMA>慢速EMA时才产生买入信号。
-
-4. 止损机制:设定止损点,在价格向不利方向突破止损点时平仓止损。
-
-进入信号的判断逻辑是:
-
-1. MACD判断为向上趋势
-2. 价格突破布林通道上轨
-3. 快速EMA高于慢速EMA
-
-当以上3个条件同时满足时产生买入信号。
-
-平仓逻辑分两种,止盈平仓和止损平仓。止盈点为进入价乘以一定比例,止损点为进入价乘以一定比例。当价格突破其中一个点时平仓。
-
-## 优势分析
-
-这种策略具有以下优势:
-
-1. 能及时捕捉趋势变化,traceback较少。
-2. 通过双均线过滤错误信号,提高信号质量。 
-3. 止损机制有效控制单笔损失。
-4. 参数优化空间大,可以调整至最佳状态。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 在震荡行情中产生的错误信号可能造成损失。
-2. 止损点设置不当可能造成不必要的损失。
-3. 参数不当可能导致策略效果不佳。
-
-针对这些风险,可以通过优化参数,调整止损位置等方式进行优化和改进。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 调整双均线长度,寻找最佳参数组合。
-2. 测试不同的止损方式,如追踪止损、震荡止损等。 
-3. 对MACD参数进行测试寻找最优参数。
-4. 利用机器学习对参数进行自动优化。
-5. 增加附加条件过滤信号。
-
-通过测试不同的参数设置,评估收益率和夏普比率,可以找到该策略的最佳状态。
-
-## 总结
-
-这是一个利用趋势判断、范围过滤、双均线确认和止损思想的量化策略。它能够有效判断趋势方向,在利润最大化和风险控制之间找到平衡。通过参数优化和机器学习等方式,该策略还有很大的改进空间,能够得到更好的效果。
-
-|| 
 
 ## Overview  
 
@@ -136,7 +72,6 @@ By testing different parameter settings and evaluating returns and Sharpe ratios
 
 This is a quantitative strategy that utilizes trend judgment, range filtering, dual moving average confirmation and stop loss ideas. It can effectively determine the trend direction and strike a balance between profit maximization and risk control. Through parameter optimization, machine learning and other means, the strategy has great room for improvement to achieve better results.
 
-[/trans]
 
 > Strategy Arguments
 

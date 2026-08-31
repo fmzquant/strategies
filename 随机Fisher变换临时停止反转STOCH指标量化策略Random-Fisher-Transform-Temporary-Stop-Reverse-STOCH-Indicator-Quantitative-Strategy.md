@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12f7e4a803d43f54589.png)
-[trans]
-
-## 概述
-
-本策略的核心思想是结合随机Fisher变换和临时停止反转STOCH指标来做出买卖决策。该策略适用于中短期操作,能在平稳行情中获得不错的收益。
-
-## 策略原理  
-
-本策略首先计算标准的STOCH指标,然后对其进行Fisher变换得到INVLine。当INVLine上穿过下行阈值线dl时,产生买入信号;当INVLine下穿过上行阈值线ul时,产生卖出信号。同时,该策略还设置了追踪止损机制,以锁定利润和减少损失。
-
-具体来说,该策略的核心逻辑是:
-
-1. 计算STOCH指标:采用标准公式,计算stock的快速STOCH值
-2. Fisher变换:对STOCH值进行Fisher变换,得到INVLine
-3. 产生交易信号:INVLine上穿dl线时买入,下穿ul线时卖出
-4. 追踪止损:启用临时停止追踪机制,以便及时止损
-
-## 优势分析
-
-本策略主要具有以下优势:
-
-1. Fisher变换有效提高了STOCH指标的灵敏度,能更早发现趋势反转机会
-2. 临时停止追踪机制能够有效控制风险,锁定利润
-3. 适合中短期操作,特别是最近比较流行的快速量化交易
-4. 在平稳行情中表现较好,收益稳定
-
-## 风险分析  
-
-本策略也存在一些风险:  
-
-1. STOCH指标容易产生假信号,可能导致不必要的交易
-2. Fisher变换也会放大STOCH指标的噪音,带来更多假信号
-3. 在震荡行情中容易止损退出,无法持续盈利
-4. 需要较短的持仓期才能获得Alpha,不适合持仓太久
-
-为降低这些风险,可以考虑优化以下几个方面:
-
-1. 调整STOCH参数,平滑曲线,减少噪音
-2. 优化阈值线的位置,降低误交易概率 
-3. 增加过滤条件,避免在震荡行情中交易
-4. 调整持仓的时间长度,与操作周期相匹配
-
-## 优化方向  
-
-本策略主要可以从以下几个方向进行优化:
-
-1. 优化Fisher变换的参数,平滑INVLine曲线
-2. 优化STOCH指标的长度period,寻找最佳参数组合
-3. 优化阈值线的参数,降低误交易概率
-4. 增加量价确认,避免不必要的追踪止损
-5. 增加日内突破过滤,减少震荡市假信号
-6. 结合趋势指标,避免逆势交易
-
-## 总结  
-
-本策略综合运用随机Fisher变换和STOCH指标,实现了一个简单实用的短线量化策略。其优势在于操作频率高,适合最近比较流行的高频量化交易。同时,该策略也存在一些普遍的技术指标策略风险,需要对参数和过滤条件进行优化,降低风险,提高稳定性。总的来说,本策略为简单的量化交易提供了一个不错的思路,值得进一步深入研究。
-
-||
 
 ## Overview
 
@@ -124,7 +66,6 @@ The main directions for optimizing this strategy include:
 
 This strategy combines the Random Fisher Transform and the STOCH indicator to implement a simple and practical short-term quantitative strategy. Its advantage lies in the high operation frequency, which is suitable for the currently popular high-frequency quantitative trading. At the same time, this strategy also has some common technical indicator strategy risks. Parameters and filter conditions need to be optimized to reduce risks and improve stability. In general, this strategy provides a good idea for simple quantitative trading and is worth further in-depth research.
 
-[/trans]
 
 > Strategy Arguments
 

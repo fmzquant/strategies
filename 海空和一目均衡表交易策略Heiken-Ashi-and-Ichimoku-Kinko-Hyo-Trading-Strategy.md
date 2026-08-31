@@ -9,44 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合使用海空和一目均衡表指标判断趋势方向并进行趋势跟踪。海空平滑K线数据降低噪音。一目均衡表通过转换线、基准线等多种信号综合判断趋势强弱。结合双重指标提高策略稳定性。
-
-## 策略原理
-
-计算海空的收盘价,并绘制转换线、基准线等一目均衡表指标。当收盘价高于前两日且高于云图上沿和延迟线时做多。当收盘价低于前两日且低于云图下沿和延迟线时做空。一目均衡表的转换线和基准线交叉也作为辅助信号。
-
-## 优势分析
-
-- 海空过滤假突破,提高信号质量
-- 一目均衡表多个指标信号相互验证 
-- 延迟线避免被套,确保止盈
-- 顺势而为,持仓时间长,获利空间大
-
-## 风险分析
-
-- 海空指标平滑程度无法完美优化
-- 一目均衡表参数设置对结果影响显著
-- 持仓时间过长可能亏损扩大
-- 交易频次较低,不适合短线交易
-
-可适当调整平滑参数,缩短持仓周期,优化一目均衡表参数等来控制风险。
-
-## 优化方向
-
-- 测试不同的海空平滑参数
-- 优化一目均衡表的周期参数
-- 设置离场后的再入场策略
-- 在不同品种中测试参数健壮性
-
-## 总结
-
-该策略综合多个指标判断趋势方向,回撤控制能力较强。可通过调参等方法进一步提升效果。
-
-||
 
 ## Overview
 
@@ -83,7 +45,6 @@ Risks can be controlled by adjusting smoothness, holding period, optimizing Ichi
 
 This strategy comprehensively uses multiple indicators to determine trend direction with controlled drawdowns. Performance can be further improved via tuning parameters etc.
 
-[/trans]
 
 > Strategy Arguments
 

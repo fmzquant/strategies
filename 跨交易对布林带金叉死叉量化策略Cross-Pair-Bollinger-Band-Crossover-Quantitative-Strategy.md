@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15a8b77a40093a1b4a7.png)
-[trans]
-
-### 概述
-
-本策略通过比较 MACD 指标的快线和慢线的交叉来产生买入和卖出信号。在产生买入信号时,会按一定比例占用账户权益进行买入开仓。之后会在特定回撤点追加仓位。当仓位盈利达到配置的止盈点时,会全部卖出平仓。卖出信号和买入信号逻辑类似。
-
-### 策略原理
-
-本策略的核心逻辑是比较 MACD 快线和慢线的交叉来判断趋势。MACD 是移动平均线的差值,通过计算短期和长期平均线之间的差值,来判断市场趋势和能量。快线和慢线交叉是金叉和死叉。
-
-当快线上穿慢线时,产生金叉,表示市场处于看涨趋势,这时策略会开仓做多;当快线下穿慢线时,产生死叉,表示看跌趋势,这时策略会开仓做空。
-
-在开仓后,策略会在特定回撤点追加做多或做空仓位。这可以通过马丁格尔原理增加盈利空间。当仓位累计盈利达到配置的止盈点后,策略会全部卖出或买入平仓。
-
-### 优势分析
-
-本策略具有以下优势:
-
-1. 使用 MACD 指标判断市场趋势,这是一种经典且可靠的技术分析指标。
-
-2. 采用分批开仓的方式,可以控制单笔交易风险。
-
-3. 追加开仓可以通过马丁格尔原理扩大盈利空间。
-
-4. 配置止盈点来限制亏损。
-
-### 风险分析
-
-本策略也存在一定的风险:
-
-1. MACD 指标并不能完美预测市场走势,可能出现错误信号。
-
-2. 全仓追加仓位存在回撤扩大的风险。可以适当调整每次追加的仓位百分比。
-
-3. 止盈点设置过小可能导致盈利空间受限。可以根据不同品种调整。
-
-4. 需要合理配置开仓资金比例,以免单个品种交易超过账户限制。
-
-### 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 测试不同参数的 MACD 指标,找到对特定交易品种更加适合的指标参数。
-
-2. 优化每次追加开仓的资金百分比和回撤幅度参数,找到最优参数组合。
-
-3. 分别测试长线和短线操作止盈点参数,确定最优止盈水平。
-
-4. 评估账户加仓能力,设定合理的单品种最大仓位限制。
-
-5. 增加止损逻辑。当市场发生剧烈变动是,止损可以有效控制亏损。
-
-### 总结
-
-本策略总体来说是一个典型的趋势跟踪策略。它利用 MACD 指标判断市场趋势方向,采取分批加仓的方式跟踪趋势,在盈利达到一定水平后止盈离场。这种策略简单实用,容易实现,适合量化交易初学者。通过参数优化和风控逻辑扩展,可以使策略更加稳健。
-
-|| 
 
 ### Overview
 This strategy generates buy and sell signals by comparing the crossover of the MACD indicator's fast line and slow line. When a buy signal is generated, it will open a position with a certain percentage of the account equity. Additional positions will then be added at specific retracement points. When the accumulated profit of the positions reaches the configured take profit point, all positions will be closed. The logic for sell signals is similar to buy signals.
@@ -116,7 +59,6 @@ This strategy can be optimized in the following aspects:
 ### Summary 
 In summary, this is a typical trend following strategy. It uses MACD indicator to determine market trend direction, takes the approach of adding positions in batches to follow the trend, and takes profit when accumulated profit reaches a certain level. This simple and practical strategy is easy to implement and suitable for quantitative trading beginners. By optimizing parameters and expanding risk control logic, the strategy can become more robust.
 
-[/trans]
 
 > Strategy Arguments
 

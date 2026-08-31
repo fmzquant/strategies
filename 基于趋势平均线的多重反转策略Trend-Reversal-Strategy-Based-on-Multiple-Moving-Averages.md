@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16e98c5254acc1669ae.png)
-[trans]
-
-## 概述
-
-该策略通过计算多种趋势指标,在它们发生反转时进行买入和卖出操作。主要的趋势指标有TDI、TCF、TTF和TII。策略会在配置中选择使用哪一个指标来产生交易信号。
-
-## 策略原理
-
-- ### TDI指标
-
-  TDI指标基于价格的变化 momentum 来计算。通过 summing 和 smoothing 技术构建。当 TDI 方向指标上穿 TDI 曲线时做多,下穿时清仓。
-
-- ### TCF指标
-  
-  TCF指标计算价格的正变化和负变化,来判断多头和空头的力量。当正变化力量大于负变化力量时做多,否则清仓。
-  
-- ### TTF指标
-
-  TTF指标通过比较高点和低点的力量来判断趋势。做多的信号是 TTF 指标上穿 100, 反之则清仓。
-
-- ### TII指标
-
-  TII指标结合了均线和价格区间来判断趋势反转。它同时考虑短期和长期趋势。做多信号是 TII 指标上穿 80,清仓是下穿 80。
-
-进入做多和平仓的 logic 根据配置的指标来选择合适的交易信号。
-
-## 策略优势
-
-该策略融合了多种常用的趋势交易指标,可以灵活适应市场环境。具体优势有:
-
-1. 利用趋势反转信号,可以及时捕捉趋势转变机会
-2. 配置不同指标,可以针对性优化
-3. 丰富的指标组合,可以组合使用来确认信号
-
-## 策略风险
-
-该策略主要面临以下风险:
-
-1. 趋势指标产生的交易信号可能出现误报导致亏损
-2. 单一指标无法完全判断趋势,容易受到市场噪音的影响
-3. 配置错误的指标参数和交易参数可能导致曲解市场,产生错误交易
-
-可以采取以下方法降低风险:
-
-1. 优化指标参数,找到最佳参数组合
-2. 组合多个指标信号进行交易,提高信号质量
-3. 调整仓位管理策略,控制单笔损失
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同市场周期的最优指标和参数组合
-2. 增加或删减指标,找到最优指标组合
-3. 对交易信号进行过滤,去除误报信号
-4. 优化仓位管理策略,比如可变仓位,跟踪止损等
-5. 增加机器学习评分指标,辅助判断信号质量
-
-## 总结
-
-该策略结合多种趋势反转指标的优势,通过配置指标和参数进行优化,可以适应不同市场环境,在趋势反转点进行操作。关键是找到最优参数和指标组合,同时控制风险。通过持续优化和验证,可以构建稳定具有 alpha 的策略。
-
-||
 
 
 ## Overview
@@ -135,7 +72,6 @@ The strategy can be enhanced in several areas:
 
 By combining multiple trend reversal indicators and optimizing configurations, this strategy is adaptable to varying market environments foroperating at trend turning points. The key is finding the optimum parameters and indicators while controlling risk. Continued optimizations and validations can build a steady alpha strategy.
 
-[/trans]
 
 > Strategy Arguments
 

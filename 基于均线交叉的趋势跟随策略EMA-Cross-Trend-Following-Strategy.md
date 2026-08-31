@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b44a0fc2fd496b1242.png)
-[trans]
-## 概述
-
-本策略是一个基于EMA均线交叉来生成交易信号的趋势跟随策略。利用快慢均线的交叉来判断价格趋势的变化,在趋势开始的时候进入市场,在趋势结束的时候退出市场,从而获利。
-
-## 策略原理
-
-该策略使用快速EMA和慢速EMA两个均线。快速EMA参数设置为20,反应价格变化比较灵敏;慢速EMA参数设置为50,对价格变化响应比较平稳。
-
-当快速EMA从下方向上穿过慢速EMA的时候,表示价格开始上涨,属于买点信号;当快速EMA从上方向下穿过慢速EMA的时候,表示价格开始下跌,属于卖点信号。
-
-根据这两个信号,我们可以做出相应的交易决策:买点信号出现时做多头入场,卖点信号出现时做空头入场;相反的信号出现时对应的多/空头平仓。
-
-## 优势分析
-
-- 利用均线交叉判断价格趋势变化,是一种较为可靠的技术指标
-- 快慢均线配合使用,可以有效过滤掉部分噪音,跟踪趋势
-- 策略逻辑简单清晰,容易理解和实现
-- 可通过调整均线参数来优化策略
-
-## 风险分析
-
-- 均线具有滞后性,可能错过价格变化的最佳时间点
--  whipsaw效应可能导致过于频繁交易,增加交易成本和滑点损失
-- 退市的時候,如果是由于非技术性原因引起,可能无法及時抛出头寸
-
-优化方法:
-
-- 优化均线参数,找到最佳 parameter
-- 增加过滤条件,避免 whipsaw 带来的损失
-- 设置止损策略,控制单笔损失
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化均线参数,找到最佳参数组合。可以通过遍历不同的参数,回测不同的组合,找到收益最优的参数。
-
-2. 增加其他技术指标作为过滤条件,避免错 trades。例如可以加入MACD,KDJ等指标,当它们的信号与均线信号一致时才入场。
-
-3. 增加止损策略,例如设置固定止损或追踪止损,控制单笔损失。
-
-4. 可以考虑结合其他策略,例如趋势跟踪策略,在趋势中乘胜追击;或者mean reversion策略,在价格过度扩张的时候介入反转。
-
-## 总结
-
-本策略是一个非常典型的趋势跟随策略。通过快慢均线交叉来判断价格趋势的变化,简单有效地捕捉价格趋势。同时也存在一些问题,如延迟入场、whipsaw带来的损失等。这些问题都有对应的解决方案。总的来说,这是一个良好的策略框架,通过参数优化、增加过滤条件、止损策略等手段,可以进一步完善,在实盘中获得良好收益。
-
-||
 
 ## Overview
 
@@ -107,7 +58,6 @@ The strategy can be improved in the following aspects:
 
 This is a very typical trend following strategy. It captures price trends effectively through simple fast and slow EMA crossovers. There are also some issues like lagging entry, whipsaw losses. But these problems all have solutions. Overall it provides a good strategy framework that can be further enhanced through parameter tuning, filtering, stop loss etc for good practical performance.
 
-[/trans]
 
 > Strategy Arguments
 

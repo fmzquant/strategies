@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b442941fd17807024a.png)
-[trans]
-
-## 概述
-
-本策略基于技术分析大师John Ehlers设计的费雪转换指标,实现自动识别价格趋势反转点,进行长短仓自动交易。其最大优势在于识别价格反转的准确性和及时性。
-
-## 策略原理
-
-本策略使用费雪转换公式进行价格标准化,生成近似高斯分布的价格序列。费雪转换公式为:y = 0.5 * ln((1+x)/(1-x))。通过此转换,可以将价格极值转换为相对更为罕见的事件。当最新费雪转换值高于或低于前一期时,表示可能出现价格反转。本策略即根据该指标的转折点来发出交易信号。
-
-具体来说,策略步骤如下:
-
-1. 计算中价HL2;
-2. 计算Length周期内的最高价xMaxH和最低价xMinL;  
-3. 计算标准化价格nValue1=(xHL2 - xMinL) / (xMaxH - xMinL) - 0.5;
-4. 对nValue1进行平滑处理,得到nValue2,防止取极值;
-5. 对nValue2应用费雪转换公式,得到费雪转换指标nFish;
-6. 比较nFish与前一期值,判断是否发生转折,并设置交易方向pos;
-7. 根据pos设置多空仓方向,发出交易信号。
-
-## 优势分析
-
-本策略最大的优势在于其交易信号的准确性和及时性。由于费雪转换产生的价格序列近似符合高斯分布,价格出现反转时,费雪转换指标能够快速识别并做出相应反应。这能确保及时抓住反转机会。此外,Ehlers费雪转换指标本身也经过长期验证,反转信号的准确性也非常可靠。
-
-## 风险分析 
-
-本策略最大的风险在于费雪转换后的价格序列不一定完全符合理论上的高斯分布。当市场出现异常波动时,如断层、跳空等情况,会导致费雪转换指标发出错误信号。此时如果仍机械交易,可能造成较大损失。
-
-为降低此风险,可以考虑结合其它指标进行交易信号过滤,避免在市场异常时仍然交易。或者可以适当调整参数,缩小交易频率和单笔盈亏规模。
-
-## 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化Length参数,找到不同市场条件下的最优参数组合;
-2. 增加止损机制,限制单笔损失; 
-3. 增加交易过滤,避免异常市场下的错误交易;
-4. 结合其他指标进行组合策略,提高信号的准确性。
-
-## 总结
-
-本策略基于Ehlers设计的费雪转换指标,能够快速准确地识别价格反转点,从而及时抓住交易机会。它最大的优势在于交易信号的准确及时。同时也存在一定风险,需要对参数及交易规则进行优化,降低风险。总的来说,本策略值得进一步研究和应用。
-
-||
 
 ## Overview
 
@@ -96,7 +52,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy leverages Ehlers’ Fisher Transform indicator to quickly and accurately identify price reversal points for timely trade entries. Its biggest strength lies in the accuracy and timeliness of trading signals. There are also risks that need parameter tuning and trade rule optimizations to mitigate. Overall this strategy warrants further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

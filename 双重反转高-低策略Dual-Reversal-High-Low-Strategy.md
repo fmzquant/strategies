@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1837f219c147c5b1edc.png)
-[trans]
-
-## 概述
-双重反转高-低策略,是一个结合双重信号的量化策略。它融合了一个基于反转的日内策略和一个利用昨日最高价与移动平均线差值的趋势判断策略。该策略旨在实现更稳定的买入卖出信号,进一步规避错误信号的发出。
-
-## 策略原理
-首先,反转策略部分。该策略于连续两日收盘价出现反转时判断形成信号,同时结合随机指标判断超买超卖状态。具体来说,连续两日收盘价从上涨转为下跌,且快速随机指标高于慢速随机指标时为卖出信号;连续两日收盘价从下跌转为上涨,且快速随机指标低于慢速随机指标时为买入信号。
-
-再者,高-低策略部分。该策略利用昨日最高价与一个长度为13的指数移动平均线的值之差判断趋势。当最高价高于移动平均线时生成买入信号;当最高价低于移动平均线时生成卖出信号。
-
-最后,本策略将两个信号进行整合。当两个信号同时出现买入信号时采取买入操作;当两个信号同时出现卖出信号时采取卖出操作。
-
-## 优势分析
-该策略结合双重信号指标,可以有效减少错误信号和不必要的交易次数。反转部分可以判断超买超卖现象,避免追高杀跌。高-低部分可以判断价格趋势背离现象,规避假突破。两者结合判断时,只有当双信号同向时才产生实际的交易信号,可以显著提高信号的可靠性,并减少无效交易的次数。
-
-另外,反转部分和高低部分使用不同类型的指标和判断标准,两者可以起到互相验证的效果,进一步减少错误信号。当市场出现特殊情况时,单一指标容易发出错误信号,而结合判断则可以抵消部分错误。这种多指标综合判断的策略,可以获得更可靠、更稳定的交易信号。
-
-## 风险分析
-该策略最大的风险在于,强势趋势市场下,持续合理的单边信号可能被忽略。当趋势十分明显时,反转部分的信号判断可能是错误的,这会导致高-低部分单边信号无法兑现成交易。这在趋势牛市和熊市中尤为明显。
-
-此外,参数设置不当也会对策略造成影响。反转部分中的参数设置需要考量周期均线系统,与高低部分的移动平均线周期需要协调设置。如果两者周期不当,则会出现平凡无奇的假信号或者直接无信号的情况。
-
-## 优化方向 
-第一,可以测试修改高-低部分移动平均线的长度参数,使其与反转部分周期指标更加协调。现在高-低部分使用13周期指标判断可能过于敏感,可以尝试拉长周期获得更稳定判断。
-
-第二,反转部分也可以测试改为采用K线实体的方式判定,现在仅用收盘价容易受影响。考虑实体更大的K线的反转可能具有更强的信号作用。
-
-最后,还可以尝试只在盘中出现反转信号时才考虑采取交易,现在的日内持仓方式风险较大。改为采取临时反转交易可以规避部分持仓风险。
-
-## 总结
-双重反转高-低策略综合多个指标信号,在发出买卖信号前进行了双重验证。这种严格的信号过滤机制,可以有效减少无效信号和错误信号对实际交易的影响。策略成功控制了无效交易的频率,使每一次的交易都更加可靠,避免了随波逐流的盲目交易。通过参数优化,或可在某些市场中获得更佳的表现。
-
-||
 
 ## Overview
 The Dual Reversal High-Low strategy is a quantitative strategy that combines dual signals. It integrates a reversal-based intraday strategy and a trend judgment strategy that utilizes the difference between yesterday's highest price and a moving average. The strategy aims to achieve more stable buy and sell signals to further avoid the issuance of incorrect signals.
@@ -73,7 +40,6 @@ Finally, it can also try to only consider taking trades when reversal signals ap
 
 ## Conclusion  
 The dual reversal high-low strategy integrates signals from multiple indicators and conducts dual verification before issuing buy and sell signals. This strict signal filtering mechanism can effectively reduce the impact of invalid and incorrect signals on actual trading. The strategy successfully controls the frequency of ineffective trades, making each trade more reliable, and avoids blindly following short-term market moves. Through parameter optimization, it may achieve better performance in certain markets.
-[/trans]
 
 > Strategy Arguments
 

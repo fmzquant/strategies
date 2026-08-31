@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/113992239eac0067852.png)
-[trans]
-
-该策略主要应用多时间框架(MTF)的MA线交叉来判断趋势方向,并结合特定条件过滤信号,在趋势方向较清晰时选择买入做多或卖出做空,属于趋势跟踪类型策略。
-
-### 策略原理
-
-1. 输入用户自定义的回测时间范围。
-
-2. 输入是否使用阳线阴线合成的Heikin-Ashi蜡烛图,默认使用。
-
-3. 分别定义慢速MA线、快速MA线和可选的第三条震荡上涨时使用的MA线。
-
-4. 对于每条MA线都可自定义MA类型、时间周期和参数等。
-
-5. 根据快速MA上穿慢速MA形成买入信号,下穿形成卖出信号。
-
-6. 可选择使用第三条MA线作为多头方向过滤器,只有当收盘价超过第三MA才产生买入信号。
-
-7. 采用strategy.entry模块进行自动交易。
-
-8. 可自定义每手交易数量或使用固定交易量。
-
-### 策略优势
-
-1. 使用MTF架构,不同MA线可采用不同周期,识别多时间尺度上的趋势特征。
-
-2. 可自定义MA类型,可选择平滑类MA提高稳定性,也可选择响应敏捷的MA。 
-
-3. 结合Heikin-Ashi可过滤假突破。
-
-4. 可额外添加第三条MA线作为多头方向过滤器,避免震荡行情交易。
-
-5. 可灵活调整MA周期参数,适合不同市场环境。
-
-6. 使用strategy.entry模块可自动下单,无需手动干预交易。
-
-7. 支持回测优化参数,寻找最佳参数组合。
-
-
-### 策略风险
-
-1. MA交叉策略对突破假信号敏感,可能产生不必要交易。可以适当调整MA周期或增加过滤条件来降低风险。
-
-2. 在震荡行情中,MA线交叉频繁,容易造成亏损。可以适当加宽MA间距或延长MA周期来降低风险。
-
-3. 固定交易量无法控制风险,可以考虑按账户资金的百分比设定交易量。
-
-4. 交易费用和滑点也会影响策略盈利能力。可以适当调整参数,确保胜率足够高。
-
-
-### 优化方向
-
-1. 测试不同的MA类型,寻找最佳参数组合。Smooth MA可提高稳定性,快速MA可提升敏捷性。
-
-2. 优化MA的参数,适当拉长周期有利于识别趋势,缩短周期可提高敏感度。找到最佳平衡点。
-
-3. 优化开仓条件,可考虑加强多头过滤,避免在震荡市中开仓。
-
-4. 可针对特定品种优化MA周期参数,找到最符合该品种交易环境的参数。
-
-5. 可以考虑结合其他指标作为过滤器提高策略稳定性,例如交易量能量指标等。
-
-6. 针对回测数据进行参数组合优化,寻找最佳参数以提高策略效果。
-
-### 总结
-
-多时间框架MA交叉策略整体属于较为常见的趋势跟踪策略。其优点是实现简单,参数调整灵活,可适应不同市场环境。但也存在一定的假信号风险。可通过参数优化以及添加辅助过滤条件来改进,在回测中寻找最佳参数组合。该策略更适合趋势明显的市场,在震荡行情中应审慎使用或停止交易。整体来说,作为一种较为传统的趋势跟踪策略,多时间框架MA交叉策略依然值得专门研究与应用。
-
-||
 
 This strategy mainly uses MA line crossovers across multiple timeframes to determine trend direction, and trades long or short when the trend is clear after filtering signals with specific criteria. It belongs to the trend following strategy category.
 
@@ -144,7 +75,6 @@ This strategy mainly uses MA line crossovers across multiple timeframes to deter
 
 The MTF MA crossover strategy is a common trend following system. Benefits include simplicity, flexibility and adaptability. But false signals remain a risk. Parameters and filters can be optimized via backtesting to find best combinations. More suitable for trending markets. Use cautiously or stop trading during choppy conditions. As a traditional trend following technique, MTF MA crossovers are still worth dedicated research and application.
 
-[/trans]
 
 > Strategy Arguments
 

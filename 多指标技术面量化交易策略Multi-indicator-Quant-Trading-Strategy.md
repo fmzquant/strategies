@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1092eed1f0a42b6e9b3.png)
-[trans]
-## 概述
-
-该策略综合运用多种技术指标,包括抛物线转向系统、缠论出口、零滞后简单移动平均线、指数移动平均线、顺势均线等,识别图表上的潜在买入和卖出点。
-
-## 策略原理
-
-### 主要指标
-
-1. 抛物线转向系统:用于确定止损点和潜在进入点
-2. 缠论出口策略:用于确定趋势方向
-3. 零滞后简单移动平均线:提供低滞后移动平均线
-4. 指数移动平均线:跟踪价格趋势和波动
-5. 平滑均线:生成更平滑的均线
-
-### 交易信号
-
-1. 当抛物线转向系统显示上升趋势并且价格超过第99条指数移动平均线时,做多;当显示下降趋势并且价格低于第99条指数移动平均时,做空
-2. 结合缠论出口策略的信号,进一步确认趋势方向
-3. 平滑均线配合抛物线信号,避免假突破
-
-### 风险管理 
-
-1. 设定止损和止盈
-2. 考虑重置购买条件,灵活调整仓位
-
-## 优势分析
-
-该策略最大的优势在于指标组合全面,能够有效识别趋势方向。抛物线系统确定潜在反转点;缠论出口策略判断主要趋势;移动平均线过滤假信号。多种指标相互验证,大大提高信号准确性。
-
-另外,策略加入了止损和止盈机制来控制风险。平滑均线也用来避免短期噪声的干扰。这些都使得该策略稳定性很强。
-
-## 风险分析
-
-由于依赖较多指标判断,当这些指标发出冲突信号时,该策略会面临一定困难。此外,参数设置不当也会对交易产生不利影响。
-
-此外,技术面交易本身存在一定风险,无法完全避免亏损。需要谨慎操作,切忌盲目跟随。
-
-## 优化方向
-
-1. 对指标参数进行测试和优化,找到最佳组合
-2. 加入机器学习算法,利用大数据训练模型,进一步提升信号准确性
-3. 结合情绪指标、消息面信息等判断市场状况,动态调整仓位和止损线
-4. 优化重置购买条件逻辑,使信号检测更加灵活连贯
-
-## 总结
-
-该策略整合多种技术指标,通过指标组合识别交易信号。优势是信号准确性高、稳定性强。同时,风险控制措施到位。整体而言,是一套值得考虑的交易方案。后续通过参数优化、模型训练、情绪指标引入等手段可进一步完善。
-
-||
 
 ## Overview  
 
@@ -109,7 +59,6 @@ There are inherent risks in technical trading that can cause losses. Cautious op
 
 This strategy integrates indicators for signal identification. Strengths include high accuracy, stability and sound risk control. Overall a worthwhile trading scheme. Further improvements can be made through parameter tuning, model training and sentiment indicator integration.  
 
-[/trans]
 
 > Strategy Arguments
 

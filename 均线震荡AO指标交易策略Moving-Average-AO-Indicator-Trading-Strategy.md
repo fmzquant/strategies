@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过组合运用均线系统和AO摇摆指标,识别趋势方向并进行趋势交易。该策略属于短线震荡交易类型,旨在捕捉短线价格的反转机会。
-
-策略原理: 
-
-1. 计算快速EMA均线和慢速SMA均线,构建均线系统。
-
-2. 计算AO摇摆指标的快线和慢线,并得到差值。
-
-3. 当快线上穿慢线,且收盘价高于慢线,且AO为上涨状态时,做多。
-
-4. 当快线下穿慢线,且收盘价低于慢线,且AO为下跌状态时,做空。
-
-5. AO通过差值比较确定多空状态,避免假信号。
-
-该策略的优势:
-
-1. 均线系统判断主要趋势,AO指标识别反转时点。
-
-2. AO通过差值比较,可有效过滤假信号。
-
-3. 组合使用指标,可提高信号准确性。
-
-该策略的风险: 
-
-1. 需优化均线和AO参数以匹配市场行情。
-
-2. 均线和AO均存在滞后问题,可能错过最佳入场点位。
-
-3. 震荡行情中止损难以设置,亏损风险较大。
-
-总之,该策略综合均线系统和AO指标的优点进行交易。可在一定程度上提高信号质量,但需警惕滞后问题,并采取适当止损策略,方能获得长期稳定收益。
-
-||
 
 This strategy combines moving averages and the AO oscillator to identify trends and trade pullbacks. It aims to capture short-term reversals in price oscillation. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy combines the strengths of MAs and AO for trading. This can improve signal quality to some extent but proper stops are still required to manage risks for steady returns.
 
-[/trans]
 
 > Strategy Arguments
 

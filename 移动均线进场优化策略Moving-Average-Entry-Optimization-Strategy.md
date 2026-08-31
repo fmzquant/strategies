@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略在基本移动均线系统的基础上,对信号发出后的具体进场时点进行了优化。
-
-主要逻辑是:
-
-1. 计算一定周期(如20日)的移动平均线
-
-2. 当价格上穿均线时产生做多信号,下穿时做空信号
-
-3. 收到信号后,不立即进场,而是等待更好的价位
-
-4. 如果在指定天数内(如3天)出现更优价位,则入场
-
-5. 如果没有,在第5天以收盘价入场,避免错过
-
-这种策略在发出信号后不急于进场,而是寻找盘整之后重新趋势的机会,从而能以更好的价位建立仓位。
-
-## 策略优势
-
-- 进场优化,争取更优入场点
-
-- 设定最大等待天数,避免错过
-
-- 规则简单清晰,易于实施
-
-## 策略风险
-
-- 等待时间和阈值需要反复测试优化
-
-- 可能错过短线Trend中的部分机会
-
-- 需要关注时间和价格的双重条件
-
-## 总结
-
-该策略通过简单的进场优化,在保证不错过趋势的前提下,获得更佳的入场点位。但优化等待时间和入场条件对策略效果至关重要。
-
-
-||
 
 ## Strategy Logic 
 
@@ -91,7 +49,6 @@ This seeks to capitalize on resumption of trends after consolidations rather tha
 
 This strategy aims to get better entry levels through simple entry optimization while ensuring trends are not missed. But optimizing wait time and entry criteria is crucial.
 
-[/trans]
 
 > Strategy Arguments
 

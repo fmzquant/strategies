@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/178f816ec574dacad58.png)
-[trans]
-## 概述
-本策略名称为“量化交易动量方向收敛策略”,是根据William Blau在其著作《动量,方向和收敛》(Momentum, Direction and Divergence)一书中描述的技术指标而设计的量化交易策略。该策略聚焦于动量、方向和收敛这三个关键层面,通过计算股票价格的动量指标,判断市场趋势方向,并寻找价格和指标之间的背离现象,以获取交易机会。
-
-## 策略原理  
-本策略的核心指标是应急动量指数(Ergotic TSI),它计算公式如下:
-
-```
-Val1 = 100 * EMA(EMA(EMA(价格变化量,r),s),u)  
-
-Val2 = EMA(EMA(EMA(价格变化量的绝对值,r),s),u)
-
-Ergotic TSI = 如果Val2不等于0,则为Val1/Val2,否则为0
-```
-
-其中,r、s、u为平滑参数。该指标反映了价格变化量占价格变化量绝对值的比例,属于动量震荡指标。然后我们计算Ergotic TSI的EMA平滑移动平均线作为信号线。当TSI上穿信号线时做多,下穿信号线时做空。
-
-## 优势分析
-本策略主要有以下优势:  
-1. 捕捉价格变化趋势的能力强  
-2. 对价格震荡有很好的过滤作用  
-3. 具有较好的背离特征  
-4. 参数设置灵活,可调整平滑度  
-
-## 风险分析
-本策略也存在一些风险:  
-1. 在趋势反转点时会产生错误信号  
-2. 参数设置不当会错过交易机会或增加虚假信号  
-3. 需要适当调整参数以适应不同品种和交易环境  
-可以通过优化参数,组合其他指标进行确认,设定止损来控制风险。
-
-## 优化方向  
-本策略可以从以下几个方面进行优化:  
-1. 测试不同的价格输入,如开盘价、收盘价、中间价等  
-2. 调整平滑参数r、s、u的值,寻找最佳参数组合   
-3. 增加其他指标或过滤条件进一步确认信号  
-4. 设定止损点和退出机制  
-
-## 总结
-本策略综合考虑了动量变化、趋势判断和背离特征,可以有效捕捉趋势机会。通过参数优化、信号过滤及风险控制的手段,可以获得较好的策略表现。总体来说,该策略设计得较为合理,值得进一步研究与实践。
-
-||
 
 ## Overview  
 The name of this strategy is Ergotic Momentum Direction Convergence Trading Strategy. It is a quantitative trading strategy designed based on the technical indicator described in William Blau's book "Momentum, Direction and Divergence". This strategy focuses on three key aspects - momentum, direction and divergence, by calculating price momentum indicators of stocks, determining market trend direction, and finding divergences between price and indicators to spot trading opportunities.  
@@ -92,7 +50,6 @@ This strategy can be optimized in the following aspects:
 
 ## Conclusion  
 This strategy integrates considerations of momentum change, trend judgment and divergence features. It can effectively capture trend opportunities. With parameter optimization, signal filtering and risk control methods, good strategy performance can be achieved. Overall, the strategy is designed reasonably and worth further research and practice.  
-[/trans]
 
 > Strategy Arguments
 

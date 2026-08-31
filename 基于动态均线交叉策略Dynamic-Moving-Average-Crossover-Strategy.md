@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12a42f07c147df3f6c0.png)
-[trans]
-## 概述
-
-动态均线交叉策略(Dynamic Moving Average Crossover Strategy)是一种典型的趋势跟踪策略。该策略通过计算快速移动平均线(Fast MA)和慢速移动平均线(Slow MA),并在它们交叉时产生买入和卖出信号,以捕捉市场趋势的转折点。
-
-## 策略原理 
-
-该策略的核心逻辑是:当快速移动平均线从下方上穿越慢速移动平均线时,产生买入信号;当快速移动平均线从上方下穿慢速移动平均线时,产生卖出信号。
-
-移动平均线能有效地滤波市场噪音,捕捉价格趋势。快速移动平均线更加灵敏,能及时捕捉趋势的变化;慢速移动平均线更加稳定,有效滤除短期波动的影响。当快慢均线发生金叉(由下向上穿越)时,表示市场步入多头行情;当发生死叉(由上向下穿越)时,表示步入空头行情。
-
-该策略会在均线交叉时立即发出交易信号,采取趋势追踪策略,跟踪市场趋势赚取较大盈利。同时,策略会设置止损位和止盈位,严格控制风险。
-
-## 优势分析
-
-- 策略回测表现良好,跟踪趋势捕捉较大行情
-- 均线交叉产生清晰信号,容易实施
-- 设置止损止盈,严格控制风险
-
-## 风险分析
-
-- 容易产生损失严重的信号错误交易
-- 交易频繁,持仓时间较短
-- 需要合理设置参数
-
-可以通过优化参数,调整均线周期长度,或加入过滤条件等方法来改善。
-
-## 优化方向 
-
-- 调整均线参数,寻找最佳参数组合
-- 加入量能指标等过滤条件,减少错误信号
-- 优化止损止盈设定
-- 结合其他指标判断趋势方向
-
-## 总结
-
-动态均线交叉策略整体效果较好,通过调整参数优化可以进一步改善策略表现。该策略容易实施,适合初学者实战练习。但也需要警惕产生错误信号的风险,需辅助其他指标判断效果才会更好。
-
-||
 
 ## Overview
 
@@ -87,7 +48,6 @@ Improvements can be made by optimizing parameters, adjusting the moving average 
 
 The Dynamic Moving Average Crossover Strategy overall performs quite well. Further improvements can be made by optimizing parameters. The strategy is easy to implement and suitable for beginner's practice. But the risk of false signals should be watched out for, and needs to be used together with other indicators to perform better.
 
-[/trans]
 
 > Strategy Arguments
 

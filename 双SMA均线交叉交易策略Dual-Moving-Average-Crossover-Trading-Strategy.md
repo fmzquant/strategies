@@ -11,81 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/175d55caef25feaf078.png)
 
-[trans]
-
-## 概述
-
-本策略基于双SMA均线的交叉信号来判断入场和退出。具体而言,短期SMA为14周期,长期SMA为28周期。当短期SMA上穿长期SMA时看多入场;当短期SMA下穿长期SMA时看空入场。
-
-## 策略原理
-
-1. 输入参数
-
-    - 均线设置:设置快线和慢线的周期长度
-    - 止盈止损:设置止盈比例和止损比例
-    - 资金管理:设置初始资金、手续费模式、手续费率等
-
-2. 变量
-
-    定义了一些中间变量,用于保存止盈价格、止损价格、仓位数量等。这可以避免重复计算。
-
-3. 信号判断
-
-    通过SMA的交叉来判断看多和看空信号。
-
-4. 入场规则
-
-    当判断到入场信号后,先平掉之前的反向头寸,然后按照策略逻辑下单。
-
-5. 出场规则
-    
-    设置了止盈和止损出场规则。
-
-6. 资金管理
-    
-    利用仓位数量来控制仓位风险。
-
-## 优势
-
-1. 操作简单,容易理解
-
-2. 回撤可控
-
-3. 容易优化参数
-
-## 风险及解决
-
-1. 双线交叉信号滞后
-
-    可适当缩短均线周期,或结合其他指标判断
-
-2. 震荡行情止损风险大
-
-    可放宽止损幅度,或使用曲线止损
-
-3. 参数不当可扩大损失
-
-    应充分回测优化参数
-
-## 优化思路
-
-1. 结合其他指标判断
-
-    例如MACD、KD等,避免均线信号滞后
-
-2. 优化平均线参数
-
-    测试更多周期参数的组合
-
-3. 测试不同的止盈止损策略
-
-    试验固定值止盈止损、移动止盈等策略
-
-## 总结
-
-本策略整体思路清晰易懂,回测结果良好,操作也较为简单,适合新手 traders 使用。但仍有优化空间,建议结合更多指标判断和资金管理策略,会使策略更稳健。
-
-||
 ## Overview
 
 This strategy determines entries and exits based on the crossover signals of dual simple moving averages (SMA). Specifically, the short term SMA has a period of 14, while the long term SMA has a period of 28. A long signal is triggered when the short term SMA crosses over the long term SMA. Conversely, a short signal is triggered when the short term SMA crosses below the long term SMA. 
@@ -156,7 +81,6 @@ This strategy determines entries and exits based on the crossover signals of dua
 
 The strategy has clear and simple logic, promising backtest results, and is easy to operate - suitable for novice traders. There is still room for improvement via additional indicators, money management techniques etc to make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

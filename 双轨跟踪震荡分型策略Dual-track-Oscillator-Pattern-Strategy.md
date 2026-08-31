@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c9f49b562205745aad.png)
-[trans]
-
-## 概述
-
-双轨跟踪震荡分型策略是一种基于布林带和EMA指标的量化交易策略。该策略 attempts to capture short-term price fluctuations through identifying oscillator patterns based on Bollinger Bands and EMA. 
-
-## 策略原理
-
-该策略同时使用布林带和EMA作为技术指标。布林带包含上轨、中轨和下轨,能够判断价格是否处于震荡区间。EMA是一种趋势跟踪指标,能够判断价格趋势。
-
-该策略首先计算布林带的中轨,也就是价格的n日简单移动均线,其中n值默认为20天。布林带上轨和下轨分别为中轨加/减两个标准差。然后计算9日EMA。 
-
-当价格上穿EMA时,视为买入信号;当价格下穿EMA时,视为卖出信号。这样,EMA作为快速均线,能够捕捉价格短期趋势;而布林带中轨作为慢速均线,能过滤掉部分假信号。
-
-所以,该策略通过EMA和布林带的双轨跟踪,尽可能捕捉价格的短期震荡。当EMA上穿中轨时买入,EMA下穿中轨时卖出。
-
-## 策略优势分析
-
-这种双轨跟踪策略有以下几个优势:
-
-1. 使用EMA和布林带中轨双轨跟踪,能够同时判断趋势和震荡,更准确地捕捉短期价格波动。
-
-2. EMA作为快速均线,布林带中轨作为慢速均线,二者配合使用,可以有效过滤假信号,提高信号质量。
-
-3. 指标参数可调整,n值和布林带标准差可根据市场调整,适应性强。
-
-4. 策略思路简单清晰易于实现,非常适合短期震荡行情。
-
-5. 可适当优化参数,结合其他指标过滤,进一步提高策略稳定性。
-
-## 风险分析
-
-该策略也存在一些潜在风险:
-
-1. 布林带上下轨容易形成支撑和压力,可能会提前触发止损。
-
-2. EMA和布林带中轨交叉时,价格可能出现背离,发出错误信号。
-
-3. 大幅趋势行情时,EMA容易形成san杯底买点或三山顶卖点,可能错过趋势。
-
-4. 震荡行情减弱时,交易信号将明显减少,无法持续盈利。
-
-5. 参数设置不当可能导致过度交易或漏失交易机会。
-
-6. 交易费用会降低实际盈利,需要控制好仓位规模。
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加成交量等指标,过滤信号质量不佳的交叉信号。
-
-2. 结合RSI等超买超卖指标,避免买卖点出现在极端区域。
-
-3. 根据ATR值来设置止损和止盈,使止损更合理。
-
-4. 增加对趋势的判断,避免趋势行情下产生错误信号。
-
-5. 优化参数,如EMA周期、布林带参数等,使之更符合不同市场环境。
-
-6. 采用机器学习方法动态优化参数,使策略更具鲁棒性。
-
-7. 采用算法交易,设置更严格的入场和出场条件,减少人为干预。
-
-## 总结
-
-双轨跟踪震荡分型策略同时利用EMA和布林带双轨跟踪价格,通过EMA上穿中轨买入,EMA下穿中轨卖出,捕捉短期价格震荡,是一个较为简单实用的短线策略。该策略具有趋势判断和滤除假信号的优势,但也存在一定的风险。通过不断优化参数设置、入场出场条件等,该策略可以变得更稳定可靠,适用于更多市场环境,是一个值得学习和应用的策略思路。
-
-||
 
 
 ## Overview
@@ -147,7 +78,6 @@ The strategy can be optimized in the following aspects:
 
 The Dual-track Oscillator Pattern strategy tracks price using dual bands of EMA and Bollinger Bands middle line. It buys when EMA crosses above middle band, and sells when EMA crosses below middle band, to capture short-term price oscillations. This simple short-term strategy has the advantage of filtering false signals and judging trends, but also has some risks. By continuously optimizing parameters, entry/exit rules etc., it can become more robust and applicable to more market environments, making it a worthwhile strategy approach to learn and apply.
 
-[/trans]
 
 > Strategy Arguments
 

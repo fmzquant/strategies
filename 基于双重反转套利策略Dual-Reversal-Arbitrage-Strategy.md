@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9856eb45981572d81a.png)
-[trans]
-## 概述
-双重反转套利策略是一种融合双反转指标的套利算法。它整合了123反转系统和Gann摆线振荡指标两个子策略,在两个子策略同时发出信号时,产生交易信号,实现套利操作。
-
-## 策略原理
-该策略由两个子策略组成:
-
-1. 123反转系统:它源自Ulf Jensen的《我如何在期货市场上三倍盈利》一书第183页。它的交易规则是:当收盘价比前一日收盘价高,且比前两日收盘价低时,在慢速K线低于50时做多;当收盘价比前一日收盘价低,且比前两日收盘价高时,在快速K线高于50时做空。
-
-2. Gann摆线振荡指标:它源自Robert Krausz的《发现W.D.甘能的宝藏》一书。它通过计算一定周期内的最高价和最低价的涨跌情况,判断市场摆动方向。
-
-该套利策略的交易逻辑是:当两个子策略的信号方向一致时,产生实际的交易信号。做多信号是当两个子策略同时发出做多信号时;做空信号是当两个子策略同时发出做空信号时。
-
-## 优势分析
-该策略最大的优势在于整合两个子策略的信号,可以有效过滤假信号,提高交易信号的准确率。两个子策略各有自己的优点,123反转系统可以抓住突发性反转行情,而Gann摆线振荡指标可以判断趋势反转的熟期。把两者结合,可以使交易信号更加可靠,从而提高策略的稳定性。
-
-## 风险分析
-该策略的主要风险在于,两个子策略发出的交易信号方向不一致的概率较大,从而导致交易信号较少的问题。此外,子策略本身也会存在一定的假信号风险。这两个因素结合,可能导致策略交易次数不足,无法充分把握市场机会。
-
-为降低风险,可以调整子策略的参数,使其交易频率适当提高,或者结合其他指标来辅助判断,过滤假信号。当两个子策略之间存在较大的信号偏差时,也可以考虑只跟随较为可靠的一方。
-
-## 优化方向 
-该策略可从以下几个方面进行优化:
-1. 调整子策略的参数,优化交易频率;
-2. 增加其他技术指标判断,提高信号质量; 
-3. 根据不同品种、周期优化子策略权重;
-4. 加入止损机制,控制单笔损失。
-
-## 总结
-双重反转套利策略通过集成两种不同类型的反转策略,形成较强的交易信号。它可以有效滤除噪音,提高信号质量,适合捕捉市场中的反转机会。但子策略发出信号不一致的概率较大,可能导致交易频率不足的问题。此外,组合策略本身参数设置较为复杂,需要充分测试优化,才能发挥最大效果。
-
-||
 
 ## Overview
 The dual reversal arbitrage strategy is an arbitrage algorithm that integrates dual reversal indicators. It combines the 123 reversal system and the Gann swing oscillator sub-strategies and generates trading signals when both sub-strategies give out signals at the same time to carry out arbitrage operations.
@@ -73,7 +41,6 @@ The strategy can be optimized in the following aspects:
 ## Summary
 The dual reversal arbitrage strategy forms relatively strong trading signals by integrating two different types of reversal strategies. It can effectively filter out noise and improve signal quality, suitable for capturing reversal opportunities in the market. However, the probability of inconsistent signals from the sub-strategies is relatively large, which may lead to insufficient trading frequency. In addition, the parameter settings of combination strategies themselves are quite complex, requiring sufficient testing and optimization in order to achieve the best results.
 
-[/trans]
 
 > Strategy Arguments
 

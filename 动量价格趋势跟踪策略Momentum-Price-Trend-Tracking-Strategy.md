@@ -10,81 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10e4642e6218c0faba0.png)
-[trans]
-
-## 概述
-
-动量价格趋势跟踪策略运用多种动量指标来识别价格的趋势,在趋势开始阶段建立仓位,通过设置止盈止损来锁定盈利,实现对价格趋势的跟踪。
-
-## 策略原理
-
-动量价格趋势跟踪策略主要应用以下技术指标:
-
-1. ROC指标:该指标通过计算某一时间段价格变动速度的百分比,来判断价格动量。当ROC为正时,说明价格在上涨;当ROC为负时,说明价格在下跌。策略通过ROC指标判断价格趋势方向。
-
-2.多空能量指标:该指标反映多头和空头力量对比关系。多空能量>0代表多头力量大于空头力量,价格上涨;反之价格下跌。策略利用该指标判断多空力量比较,预测价格方向。 
-
-3.背离指标:该指标通过计算价格与成交量背离情况,来判断趋势反转。策略利用背离信号作为入场时机。
-
-4.Donchian通道:该指标通过价格最高价和最低价构建通道,通道边界可作为支持和阻力位。策略利用通道判断趋势方向。
-
-5.移动平均线:该指标能滤掉价格supportedare忽高忽低的震荡,揭示主要趋势方向。策略利用其判断价格总体走势。
-
-策略根据以上多个指标判断价格趋势和反转时机,在趋势开始阶段根据指标信号建立多头或空头仓位。然后根据止盈止损点来及时平仓锁定盈利,实现对价格趋势的捕捉。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 应用多种指标 判断趋势,减少误判概率。
-
-2. 利用指标背离实现精准捕捉趋势反转点。
-
-3. 结合通道、移动均线判断大趋势方向。
-
-4. 设置止盈止损点,能够及时止盈,避免回撤扩大。
-
-5. 可根据参数调整,适用于不同周期和品种的交易。
-
-6. 策略逻辑清晰易理解,便于后期优化。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 多指标组合判断增加了错误信号的概率,需要调整参数优化指标权重。
-
-2. 止损点设置过小可能增加止损概率,设置过大可能扩大回撤。需要综合考虑确定合理的止损点。
-
-3. 不同市场周期参数需要调整,盲目应用可能导致不适应市场环境。
-
-4. 需要足够的资金支持多单位同向交易,否则难以获取 excess returns。
-
-5. 程序交易存在回测过拟合风险,实盘效果存有一定的不确定性。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化指标参数,找到不同周期及品种的参数最优组合。
-
-2. 增加机器学习算法,自动寻找最优参数。
-
-3. 增加自适应止损机制,根据市场情况调整止损点。 
-
-4. 结合高频因子和基本面指标,提高策略的 alpha。
-
-5. 开发自动测试框架,调整参数组合并验证交易效果。
-
-6. 引入风险管理模块,控制仓位规模,降低回撤。
-
-7. 增加模拟交易和实盘验证环节,提高策略的稳定性。
-
-## 总结
-
-本策略综合运用多种动量指标判断价格趋势,并设置止盈止损来锁定收益。该策略能够有效捕捉价格趋势,具有较强的稳定性。通过调整参数、优化结构以及风险控制,本策略可以进一步增强效果并降低交易风险。本策略为量化交易提供了一个可靠、易于操作的趋势跟踪方案。
-
-||
 
 
 ## Overview
@@ -159,7 +84,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy combines multiple momentum indicators to determine price trends and uses stop profit/loss to lock in profits. It can effectively capture trends with strong stability. Further enhancements in parameter tuning, structure optimization and risk control will improve its performance and risk management. The strategy provides a reliable and easy-to-use trend following solution for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略通过TEMA、DEMA和HMA三种不同类型的移动平均线的组合应用,在中短期均线TEMA和DEMA发出金叉/死叉信号时入场,并利用长期均线HMA来判断趋势方向,过滤掉逆势交易信号。
-
-### 策略原理
-
-1. 计算TEMA、DEMA和HMA三条移动平均线
-2. 当TEMA上穿DEMA时,做多入场
-3. 当TEMA下穿DEMA时,做空入场
-4. 计算长期HMA的趋势方向,只在HMA显示同向趋势时才入场
-
-具体来说,该策略同时利用双指数移动平均线DEMA判断中期趋势,三指数移动平均线TEMA判断短期趋势,以及致密型移动平均线HMA判断长期趋势。只有当短中期在同一方向上启动(TEMA和DEMA同向突破)且长期主趋势也是同向(HMA方向与突破一致)时,才产生交易信号。
-
-### 优势分析
-
-1. 组合多种均线,提高判断准确性
-2. HMA的趋势过滤可避免逆势交易
-3. TEMA和DEMA可形成较明确的交易信号
-4. 可自定义三条均线的参数,适应不同周期
-5. 顺势交易,回撤风险较小
-
-### 风险分析 
-
-1. 三线组合较复杂,需要调优多个参数
-2. HMA趋势判断可能滞后于价格
-3. 存在一定程度的滞后交易风险
-4. 参数不当可能增加不必要的反向交易
-
-可通过多组参数测试找到最佳参数组合,引入止损策略,适当放宽入场条件等方式管理风险。
-
-### 优化方向
-
-1. 测试不同均线周期参数找出最优组合
-2. 评估加入MACD等指标作为辅助判断
-3. 加入移动止损以锁定利润,降低回撤
-4. 研究不同品种的参数偏好,建立参数优化体系
-5. 放宽入场条件,在长期趋势存在时采取趋势交易
-
-### 总结
-
-本策略通过组合运用多种均线指标判断趋势。优点是信号生成明确,可配置空间大;缺点是存在滞后风险及多参数依赖。通过Parameter优化、止损策略等可控制风险,发挥组合均线的优势。该策略可助力交易者全面掌握趋势交易技巧。
-
-|| 
 
 ### Overview 
 
@@ -97,7 +52,6 @@ Risks can be managed by parameter optimization, stop loss, relaxing entry rules 
 
 This strategy generates signals by combining multiple moving average indicators to determine trend. Pros are clear signals and high configurability; Cons are lagging risks and parameter dependency. Risks can be controlled via parameter optimization, stop loss etc. to utilize the power of a combined moving average system. It helps traders comprehensively master trend trading techniques.
 
-[/trans]
 
 > Strategy Arguments
 

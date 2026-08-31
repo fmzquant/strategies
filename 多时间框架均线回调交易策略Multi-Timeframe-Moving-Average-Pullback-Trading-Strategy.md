@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1fae39a31e778b69fef.png)
-[trans]
-
-## 概述
-
-该策略采用多时间框架均线的方法,利用长期均线判断大趋势方向,短期均线判断短期趋势方向,在长线和短线确认趋势一致时,进场做多/空;当短线回调到长线附近时,判断形成短期调整进入机会,此时做反向操作。该策略主要适用于中长线趋势性股票。
-
-## 策略原理  
-
-该策略使用200日简单移动均线判断长期趋势方向,使用10日简单移动均线判断短期趋势方向。当股价高于200日均线且低于10日均线时,说明目前处于长线上升和短线回调阶段,此时做多;当股价低于200日均线且高于10日均线时,说明目前处于长线下降和短线反弹阶段,此时做空。
-
-具体来说,当满足如下条件时,做多入场:收盘价>200日均线 且 收盘价<10日均线;当满足如下条件时,做空入场:收盘价<200日均线 且 收盘价>10日均线。
-
-入场后设置止损机制,如果从买入价回撤超过10%,则止损出场。同时,如果设置了i_lowerClose选项,则会等待较低的收盘价出现后再出场,这可以避免止损过于敏感。
-
-## 优势分析
-
-该策略结合多时间框架均线,可以在较大概率上捕捉中长线趋势的方向。当短期均线回调到长期均线时,utsch策略提供较好的入场时机。与单一均线系统相比,可以减少因短期调整而被套的概率。
-
-该策略风险可控。设置了10%的止损比例以控制亏损;同时设置了时间过滤条件,可以避免在特定时间段交易。
-
-## 风险分析  
-
-该策略依然存在被套的风险。当短线调整的时间过长或调整幅度过大时,可能触发止损而被套出场。这时就面临亏损的风险。
-
-该策略对交易品种的适配性较差。对于波动性大,调整时间长的股票,该策略容易被止损出场,效果不佳。
-
-在市场整体发生重大调整时,该策略也会面临较大亏损。例如金融危机期间,该策略可能难以获利。
-
-## 优化方向  
-
-可以引入更多均线系统,形成多重筛选机制。例如加入50日均线,只有当收盘价处于50日均线与200日均线之间时才考虑入场。这可以进一步筛选出趋势性较好的品种。
-
-可以设置浮动止损。具体来说,入场后,可以根据股票的波动范围,设置可变化的止损幅度,而不是固定的10%止损。这可以减少不必要的止损被触发的概率。
-
-可以结合其他指标判断市场状况。例如MACD,在MACD显示市场脱离时,可以暂停该策略,避免亏损。这可以根据大市场判断来控制策略的启动与关闭。
-
-
-## 总结  
-
-该策略整体来说是一种典型的多时间框架均线策略。它结合长短期均线,在大概率捕捉中长线趋势的同时,抓住短线回调机会入场。策略风险也在可控范围内。通过引入更多指标、优化止损方式等,可以进一步增强该策略的稳定性。
-
-||
 
 ## Overview
 
@@ -91,7 +49,6 @@ Other indicators gauging market conditions can also be incorporated. For example
 
 In conclusion this is a typical multi timeframe moving average strategy. It capitalizes on the mid-long term trend direction indicated by the long term moving average, while taking advantage of short term pullback opportunities revealed by the short term moving average. The risk factors are defined and well capped. Further enhancements like additional filters, adaptive stop loss and market timing mechanism could improve its stability.
 
-[/trans]
 
 > Strategy Arguments
 

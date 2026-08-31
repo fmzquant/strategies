@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用绝对价格振荡器(APO)指标生成交易信号,实现趋势跟踪交易。APO指标计算两个不同期限的指数移动平均线之差得到oscillator,根据其值上穿或下穿进行做多做空。
-
-## 策略原理 
-
-- APO指标由一个短期和长期EMA构成,计算二者差值。
-
-- 当APO上穿入买入区(默认3)时做多,当APO下穿卖出区(默认-3)时做空。
-
-- 可选择反转信号,APO上穿时做空,下穿时做多。 
-
-- 指标曲线表示价格动量,可寻找背离形成的趋势反转信号。
-
-该策略属于趋势跟踪策略,利用APO指标确定价格趋势方向,产生持续的做多做空信号。指标参数优化后可追踪到大趋势的中期走势。
-
-## 策略优势
-
-- 使用简单的移动平均指标组合,易于实现。
-
-- 利用APO指标判断价格动量和方向。
-
-- 默认参数产生中期持续信号,避免过度交易。
-
-- 可寻找价格与APO背离的趋势反转机会。
-
-## 策略风险
-
-- 在盘整市场中容易产生假信号和 whipsaws。
-
-- 存在一定的滞后,可能错过快速反转。
-
-- 没有止损和仓位管理,风险控制不完善。
-
-应对风险措施:
-
-- 优化参数,测试不同品种合适的参数组合。
-
-- 增加其他过滤器,避免在震荡市中交易。
-
-- 设定止损策略,如跟踪止损等方式。
-
-## 策略优化方向
-
-- 对每个交易品种单独进行参数优化,寻找最佳参数对。
-
-- 增加价格行情或交易量等过滤条件,减少假信号。 
-
-- 根据波动率或余额比例进行动态仓位管理。
-
-- 优化止盈方式,设置趋势跟踪止盈。
-
-- 应用机器学习算法判断指标背离信号的成功率。
-
-## 总结
-
-该策略以APO指标为基础,实现了基于移动平均线交叉的趋势跟踪交易。优化参数和风险控制后,可成为一个有效的量化交易系统。核心思路简单可靠,值得进一步发展与提高。
-
-|| 
 
 ## Overview
 
@@ -129,7 +68,6 @@ Mitigations:
 
 This EMA crossover system using APO provides a solid foundation for trend following. With optimizations in parameters, risk management and filters, it can become an effective quantitative strategy. The core concept is simple and robust for further development.
 
-[/trans]
 
 > Strategy Arguments
 

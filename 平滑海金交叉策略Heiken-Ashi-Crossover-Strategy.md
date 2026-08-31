@@ -11,70 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b6399d563addf22c55.png)
 
-[trans]
-## 概述
-
-平滑海金交叉策略是一种同时应用海金交叉原理和平滑技术的量化交易策略。该策略通过计算4个周期的平均价格来产生平滑价,再根据平滑价格计算海金交叉,以发出交易信号。相比原版海金交叉,该策略通过平滑能过滤掉短期的市场噪音,避免产生错误信号。
-
-## 策略原理  
-
-该策略主要应用以下原理:
-
-1. 海金交叉原理  
-
-   海金交叉指短期移动平均线上穿或下穿长期移动平均线时产生买入或卖出信号。该策略中,短期移动平均线为平滑收盘价(haclose),长期移动平均线为平滑开盘价(haopen)。  
-
-2. 平滑技术
-
-   为了过滤噪音,该策略采用4个周期的平均价格来计算平滑价。即:  
-
-   haclose = (open + high + low + close) / 4  
-
-   haopen = 前一期haopen + 当前haclose的平均值
-
-根据上述平滑价格计算的海金交叉,可产生更可靠的交易信号。 
-
-当haclose上穿haopen时为多头信号;当haclose下穿haopen时为空头信号。
-
-## 优势分析
-
-相比原版海金交叉策略,平滑海金交叉策略具有以下优势:  
-
-1. 平滑技术过滤了短期市场噪音,避免产生错误信号,提高信号质量。
-
-2. 使用4个周期的平均价格计算平滑价,能更好地反映中长期趋势,产生更可靠的交易信号。
-
-3. 结合海金交叉的快速交叉特点,该策略可以及时捕捉中长期趋势的转折点。
-
-## 风险分析  
-
-该策略也存在一些风险:
-
-1. 在市场剧烈波动时,平滑技术可能过滤掉部分有效信号,导致错失交易机会。
-
-2. 4周期的平均计算也会带来 certain程度的滞后,可能错过短线机会。
-
-3. 该策略对交易频率和持仓时间有一定要求,不适合过于频繁或过于长期的交易。
-
-针对上述风险,可通过适当优化平滑参数或组合其他指标来解决。
-
-## 优化方向  
-
-该策略可从以下几个方向进行优化:  
-
-1. 优化平滑参数,如调整平均周期等,找到最佳参数组合。
-
-2. 结合其他指标,如成交量,布林带等,提高信号的准确性。  
-
-3. 增加止损策略,以控制风险,如移动止损、缩量止损等。
-
-4. 优化资金管理策略,设定合理的头寸大小和止损位,控制单笔损失。
-
-## 总结
-
-平滑海金交叉策略融合海金交叉原理和平滑技术,能有效发掘中长期趋势的转折点,避免被短期市场噪音干扰。相比原版海金交叉策略,该策略通过平滑处理过滤掉部分噪音,能产生更高质量的交易信号。如果配以适当的止损和资金管理手段,该策略可以获得较为稳定的投资回报。但交易者也需注意防范滞后、漏单等风险,需要对策略进行定制优化。
-
-||
 
 ## Overview  
 
@@ -136,7 +72,6 @@ This strategy can be optimized in the following aspects:
 
 The Heiken Ashi Crossover Strategy combines the Heiken Ashi crossover principle and smoothing techniques, which can effectively detect trend turning points in the medium-to-long term without being interfered by short-term market noises. Compared with the original Heiken Ashi crossover, this strategy filters out some noise by smoothing techniques and thus can generate higher quality trading signals. With proper stop loss and money management, this strategy can earn relatively steady returns from the market. However, traders should also be aware of the risks like lag and missing signals, and optimize the strategy accordingly.
 
-[/trans]
 
 > Strategy Arguments
 

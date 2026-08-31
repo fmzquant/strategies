@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12a67e2c5b72767179b.png)
-[trans]
-
-## 概述
-
-该策略基于快速均线和慢速均线的交叉来决定做多做空。当快速均线上穿慢速均线时做多,当快速均线下穿慢速均线时平仓。为了追求更高的利润,该策略采用了追踪止损机制。做多之后,并不直接在成交价下方设置止损价,而是在成交价下方设立一个追踪止损价,这个追踪止损价会随着价格上涨而上移,直到价格下跌触发止损价的下限。
-
-## 策略原理
-
-该策略使用快速简单移动平均线(SMA)和慢速SMA来决定做多和平仓的时机。当快速SMA上穿慢速SMA时,判断趋势变为上涨,此时做多;当快速SMA下穿慢速SMA时,判断趋势反转,准备平仓。
-
-为了追求更高的利润,该策略引入了追踪止损机制。做多之后,并不会在固定价格设置止损单,而是设立一个追踪止损价,它会随着价格上涨而向上追踪,每次价格上涨一定比例后,追踪止损价就会向上调整一定幅度。当价格出现回调,触碰到追踪止损价时,会触发止损单,将头寸平仓。
-
-具体来说,追踪止损价的计算公式为:
-
-追踪止损价 = 价格 × (1 - 止损追踪百分比)
-
-其中,止损追踪百分比由策略参数“Deviation %”设定。策略会在开仓后每次K线收盘时计算新的追踪止损价。新的追踪止损价不能低于上一根K线的追踪止损价,以确保止损价只能上移,不能回落。
-
-当价格下跌,触及追踪止损价时,会触发平仓信号,头寸会使用市价单平仓。
-
-## 策略优势
-
-- 使用双均线判断趋势方向,回测效果较好
-- 采用追踪止损,可以追求更高的利润
-- 可自定义均线周期和止损追踪幅度
-- 在趋势向上时,止损线会不断上移,确保了大部分利润
-- 在趋势反转时,能够快速止损,避免造成更大的亏损
-
-## 风险及解决方案
-
-- 均线交叉时机选择不当,可能造成虚拟信号。可以测试不同参数,找到最佳均线组合
-- 追踪止损过于激进,可能造成止损过早被击穿。可以适当调整止损追踪百分比参数
-- 价格出现跳空缺口,也可能直接击穿止损价。建议组合其他指标判断趋势,避免在震荡行情中交易
-
-## 优化方向
-
-- 可以测试不同均线周期参数,找到最佳参数组合
-- 可以测试不同的止损追踪百分比参数,找到最佳止损水平
-- 可以加入其他指标判断,在震荡行情中暂停交易,避免受突发事件影响
-
-## 总结
-
-本策略综合利用均线指标判断趋势方向,以及追踪止损机制锁定利润,在训练数据中表现不俗。通过优化参数组合,控制风险,有望获得稳定收益。但任何策略都无法完全避免亏损,建议适当调整仓位管理,测试不同品种,分散风险。
-
-|| 
 
 ## Overview
 
@@ -98,7 +53,6 @@ When the price drops and hits the trailing stop loss price, it triggers the clos
 
 This strategy combines moving average indicators to judge trend direction and trailing stop loss mechanism to lock in profits, performing well on training data. By optimizing parameters and controlling risks, it has the potential to achieve steady profits. However, no strategy can completely avoid losses. It's recommended to adjust position sizing, test different products, and diversify risks.
 
-[/trans]
 
 > Strategy Arguments
 

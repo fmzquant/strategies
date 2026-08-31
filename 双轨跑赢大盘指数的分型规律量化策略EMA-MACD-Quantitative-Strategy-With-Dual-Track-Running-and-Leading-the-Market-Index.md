@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e4520306f202adfb6a.png)
-[trans]
-
-## 概述
-
-本策略主要利用EMA移动平均线和MACD指标,判断行情分型的变化,进行追涨杀跌的操作。核心思路是当短期EMA线从下方突破长期EMA线而MACD同时上穿0轴向上时,做多;当短期EMA从上方突破长期EMA而MACD同时下穿0轴向下时,做空。
-
-## 原理
-
-该策略融合了移动平均线指标和MACD指标。
-
-首先,它使用了两个不同长度周期的EMA指标,一个是25周期EMA线,一个是50周期EMA线。25周期EMA线能反映短期趋势,50周期EMA线能反映中长期趋势。当短期EMA线从下方上穿长期EMA线时,表示行情从下跌转为上涨,属于金叉信号,做多判断。当短期EMA从上方下穿长期EMA时,表示行情从上涨转为下跌,属于死叉信号,做空判断。
-
-其次,该策略同时结合MACD指标判信号。MACD指标包括DIF线和DEA线,代表短期和长期指数平滑移动平均线的差值,通过双EMA算出。本策略设置DIF为12日EMA减26日EMA。DEA线为DIF的9日指数移动平均。DIF线代表动量,DEA线代表MACD的平均值。当DIF从下方上穿DEA线时产生买入信号。当DIF从上方下穿DEA时产生卖出信号。 
-
-综合这两个指标,当发生25日EMA金叉50日EMA,同时MACD的DIF线上穿DEA线时,产生买入信号,做多;当发生25日EMA死叉50日EMA,同时MACD的DIF线下穿DEA线时,产生卖出信号,做空。
-
-## 优势分析
-
-这是一个非常典型的双轨策略,同时结合MACD指标产生更可靠的交易信号,具有以下优势:
-
-1. 使用双EMA均线,能避免whipsaws现象和假突破,产生更可靠的交易信号。
-
-2. 融合MACD指标,能进一步验证交易信号,避免EMA双轨假信号的风险,提高策略的实战效果。
-
-3. 采用25和50日线作为快慢线,参数选择更为准确,能捕捉到中短线明显的趋势变化。
-
-4. 利用追涨杀跌思路,能跑赢大盘指数,在行情大幅上涨和下跌时获得较大收益。
-
-5. 策略逻辑简单清晰,容易理解和实施,适合量化初学者使用。
-
-6. 可谨慎适当优化参数,使策略更好地适应不同品种和行情环境。
-
-## 风险分析
-
-该策略也存在一些风险需要警惕:
-
-1. EMA均线产生假信号的可能性依然存在,如遇剧烈行情,仍会出现whipsaw现象。
-
-2. MACD指标参数需要不断优化和调整,否则会产生错误信号或者信号滞后。
-
-3. 需要警惕止损点设置是否合理,避免无效突破造成较大亏损。
-
-4. 需要关注行情和政策环境变化,避免系统性风险造成较大亏损。
-
-5. 需要控制仓位规模和杠杆水平,防止单边大行情爆仓。
-
-## 优化方向
-
-该策略还可以从以下几个维度进行优化:
-
-1. 测试更加准确和实战有效的参数组合,如测试20日和60日EMA均线作为交易轨,DIF为10日EMA和20日EMA差值等。
-
-2. 增加成交量指标的确认,避免低量假突破。
-
-3. 结合波动率指标如ATR确定更科学的止损方式。
-
-4. 利用机器学习算法自动优化参数,使策略参数动态适应市场环境变化。
-
-5. 增加仓位控制模块,让仓位规模可随交易表现和衡量指标动态变化。
-
-6. 可在更长周期的图表上绘制该策略信号,辅助决策更长线方向的操作。
-
-
-## 总结
-
-本策略整合了移动平均线指标和MACD指标的优点,通过双EMA均线判断质量比较高的K线分型,配合DIF和DEA判断MACD动量方向的匹配,形成了一个稳定、实战效果较好的追涨杀跌型量化策略。该策略逻辑简单清晰,易于理解和优化,非常适合量化学习者入门和实战。通过不断测试和优化参数,该策略可以成为跑赢指数的价值策略之一。
-
-||
 
 ## Overview
 
@@ -143,7 +75,6 @@ This strategy can also be optimized in the following aspects:
 
 This strategy integrates the strengths of moving average line indicators and MACD indicators by judging higher quality candlestick patterns through dual EMA lines combined with DIF and DEA matching on MACD momentum direction, forming a steady and efficient momentum trading strategy. The logic is simple and easy to understand and optimize, very suitable for quant traders to get started and implementation. Through continuous testing and optimizing, this strategy can become one of the value strategies that outperforms indices.    
 
-[/trans]
 
 > Strategy Arguments
 

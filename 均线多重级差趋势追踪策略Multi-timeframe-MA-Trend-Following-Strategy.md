@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10292efb98de1ca2948.png)
-[trans]
-
-### 概述
-
-该策略基于均线的多时间框架级差,追踪中长线趋势,采用级差仓位追涨模式,实现资金的指数增长。策略最大优势是能抓住中长线趋势,进行分批分阶段的追涨,从而获取超额收益。
-
-### 策略原理  
-
-1. 基于9日均线,100日均线和200日均线构建多时间框架。
-2. 当短周期均线从下向上突破长周期均线时产生买入信号。
-3. 采用7级差仓位追涨模式,每次开新仓时判断之前的仓位是否已满,如果已经有6个仓位了,则不再增仓。
-4. 每个仓位设置固定止盈止损点为3%,进行风险控制。
-
-以上就是该策略的基本交易逻辑。
-
-### 策略优势
-
-1. 能够有效抓住中长线趋势,最大程度享受行情的指数级增长。
-2. 采用多时间周期均线进行级差,能够有效避免被短线市场噪音干扰。 
-3. 设置固定止盈止损点,有效控制每个仓位的风险。
-4. 采用级差追涨模式,分批建仓,能够把握趋势机会,获得超额收益。
-
-### 策略风险及解决方法
-
-1. 存在被终结的风险。如果行情出现转势,无法及时止损退出,可能面临巨额亏损。解决方法是缩短均线周期,加快止损速度。  
-2. 存在仓位风险。如果突发事件导致亏损超过承受范围,会面临追加保证金或爆仓的风险。解决方法是适当减少初始仓位比例。
-3. 存在亏损过大的风险。如果行情剧烈下跌,级差追涨转为空头,可能亏损高达700%以上。解决方法是加大固定止损比例,加快止损速度。
-
-### 策略优化方向  
-
-1. 可以测试不同参数的均线组合,寻找更优参数。  
-2. 可以优化建仓的仓位数。测试不同的级差仓位数,找到最优解。
-3. 可以测试固定止损止盈的设置。适当放大止盈范围,追求更高收益率。
-
-### 总结
-
-该策略总体来说非常适合捕捉行情中长线趋势,采用分批分阶段追涨的方式,能获得风险收益比极高的超额收益。同时也存在一定操作风险,需要通过调整参数等方法加以控制,在获利和风险之间找到平衡。总的来说,该策略非常值得实盘验证,根据实盘结果进一步调整优化。
-
-||
 
 ### Overview  
 
@@ -86,7 +47,6 @@ Above is the basic trading logic.
 
 The strategy is very suitable to catch mid-long term trends. Pyramid entries in batches can achieve very high risk-reward ratio. There are also some operation risks, which should be controlled by parameter tuning. Overall this is a promising strategy worth live trading verification and further optimization.
 
-[/trans]
 
 > Strategy Arguments
 

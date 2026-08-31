@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8f006a820500287a67.png)
-[trans]
-
-## 概述
-
-该策略是一个基于SAR指标、CCI指标和EMA指标组合的黄金M5交易策略。它综合利用了三种不同的技术指标来识别黄金的趋势方向和超买超卖情况,以捕捉中间回调提供的交易机会。
-
-## 策略原理
-
-1. SAR指标用于判断黄金的趋势方向和可能的反转点。当SAR点下降穿过价格时,表示多头趋势形成;当SAR点上涨穿过价格时,表示空头趋势形成。
-
-2. CCI指标用于判断市场的超买超卖情况。CCI大于100时表示多头趋势加强,CCI小于-100时表示空头趋势加强。
-
-3. EMA快慢线组合用于判断价格中短期的转折点。快线上涨时有利于做多,快线下跌时有利于做空。
-
-4. 具体入场规则:当SAR指标向上穿过5分钟EMA均线,CCI指标大于100时做多黄金;当SAR指标向下穿过5分钟EMA均线,CCI指标小于-100时做空黄金。
-
-5. 止损 EXIT 规则:止盈点为开仓价格加7个点,止损点为1分钟EMA均线。
-
-## 策略优势分析
-
-1. 该策略综合运用了三种指标识别趋势方向和重要支持阻力,提高了获利概率。
-
-2. CCI指标可以有效过滤常见的假突破。SAR反转点与趋势方向判断相结合,避免在震荡市中反复开仓。 
-
-3. EMA快慢线交叉以及与SAR指标的组合运用,可以有效识别价格短期调整提供的低风险交易机会。
-
-4. 策略参数经过优化,适合黄金这种高波动品种,也适用于小额账户。
-
-## 风险分析 
-
-1. 该策略主要基于技术指标,如果遇到重大黑天鹅事件,技术指标失效的概率较大。
-
-2. 黄金这类商品波动较大,止损点设定为EMA均线,可能会被突破止损,给账户带来较大的单笔损失。
-
-3. CCI指标和SAR指标都可能产生假信号,这会导致不必要的亏损。
-
-4. 如果遇到剧烈行情,交易系统平台故障的概率会增加,可能会造成无法止损。
-
-## 优化方向
-
-1. 可以测试不同参数组合优化CCI指标参数,使其更符合黄金的特点。
-
-2. 可以结合更多指标,例如K线形态,布林带等来提升策略稳定性。
-
-3. 可以通过机器学习等手段来动态优化SAR指标的参数,使其更好地适应市场的变化。
-
-4. 可以测试不同的止损方式,例如跟踪止损,降低止损被击穿的概率。
-
-5. 可以优化仓位管理,例如固定份额,动态调整做单量等方式来控制单笔损失。
-
-
-## 总结
-
-该策略整体来说是一种较为稳定的黄金交易策略。它结合多种指标来识别黄金的趋势方向、重要的支持阻力位以及超买超卖区域。在回调过程中打开仓位,利用黄金的高波动率获利。同时策略参数也进行了优化,可用于小额账户盘面交易。但该策略也存在一定的风险,建议进行适当的风险管理。如果进一步优化,该策略的稳定性和盈利能力还具有很大的提升空间。
-
-||
 
 ## Overview 
 
@@ -119,7 +63,6 @@ This is a gold trading strategy on M5 timeframe based on the combination of Para
 
 Overall a stable gold trading strategy combining multiple indicators to identify trends, key support/resistance levels and overbought/oversold zones for low risk entries during retracements. Optimized parameters allow small account trading capitalizing on gold’s high volatility. Has risks which can be addressed through proper risk management. Significant potential to further improve stability and profitability through enhancement.
 
-[/trans]
 
 > Strategy Arguments
 

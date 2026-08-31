@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/156c65ea016f5d61668.png)
 
-[trans]
-
-## 概述
-
-这个策略是一个简单的仅做多,使用RSI指标判断超买超卖的策略。我们对其进行了增强,添加了止损止盈,同时集成了概率模块进行概率增强,只有当最近一段时间盈利交易的概率大于等于51%时才会开仓。这大大提高了策略的表现。
-
-## 策略原理
-
-该策略使用RSI指标判断市场超买超卖。具体来说,当RSI下破设定的超卖区间下限时做多;当RSI上破设定的超卖区间上限时平仓。此外,我们设定了止损止盈比例。
-
-关键的是,我们集成了一个概率判断模块。该模块会统计最近一段时间(通过lookback参数设定)内,做多交易是盈是亏的比例。只有当近期盈利交易的概率大于等于51%时,才会开仓做多。这就大大减少了可能出现的亏损交易。
-
-## 优势分析
-
-这是一个概率增强的RSI策略,相比普通的RSI策略有以下优势:
-
-1. 增加止损止盈设置,可以限制单笔损失,锁定盈利
-2. 集成概率模块,避免盈利概率较低的市场 vrf
-3. 概率模块参数可调,可以针对不同市场环境进行优化
-4. 仅做多机制简单易理解,容易实施
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 仅做多,无法利用跌市获利
-2. 概率模块判断不当可能错过较好机会
-3. 无法确定最佳参数组合,不同市场环境下表现差异大
-4. 止损设置过于宽松,单笔损失依然可能较大
-
-对应解决方法:
-1. 可以考虑加入做空机制
-2. 优化概率模块参数,降低误判概率
-3. 采用机器学习方法动态优化参数
-4. 设定更保守的止损水平,缩小单笔损失空间
-
-## 优化方向 
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 增加做空模块,实现双向交易
-2. 使用机器学习方法动态优化参数设置
-3. 尝试其他指标判断超买超卖
-4. 优化止损止盈策略,实现盈亏比优化
-5. 结合其他因子过滤信号,提高概率
-
-## 总结
-
-该策略是一个简单的RSI策略,集成概率判断模块进行增强。相比普通RSI策略,可以过滤掉部分亏损交易,整体回撤和盈亏比有所优化。后续可从做空、动态优化等方面进行改进,使策略更加稳健。
-
-||
 
 
 ## Overview
@@ -113,7 +62,6 @@ The strategy could be further optimized in below aspects:
 
 This is a simple RSI strategy enhanced by integrated probability module. Compared to vanilla RSI strategies, it filters out some losing trades and improves overall drawdown and profit ratio. Next step could be improving it by adding short, dynamic optimization etc to make it more robust.
 
-[/trans]
 
 > Strategy Arguments
 

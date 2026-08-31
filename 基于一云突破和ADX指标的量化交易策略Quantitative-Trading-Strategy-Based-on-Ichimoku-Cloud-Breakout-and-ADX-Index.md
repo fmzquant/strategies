@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d1bbce4d14765ebaee.png)
-[trans]
-## 概述
-
-本策略的名称叫做“基于一云突破和ADX指标的量化交易策略”。它结合了一云图形技术分析和平均趋向指数(ADX)指标来决定何时建立多头或空头头寸。具体来说,它在价格突破云图形的关键区域,且ADX指标显示强劲趋势时建立头寸。
-
-## 策略原理  
-
-该策略使用乌盘指标中的“一云图形”以确定关键支持和阻力区域。它同时结合ADX指标判断趋势强度。具体交易策略规则如下:  
-
-多头建仓信号: 
-- 天线线转向上穿基准线 
--  迟行线转向上穿0轴  
--  价格高于云图形上沿 
-- ADX值低于45(表明趋势未过度扩张)  
-- +DI值高于-DI值(表明为上涨趋势)
-
-空头建仓信号:  
-- 天线线转向下穿基准线 
-- 迟行线转向下穿0轴  
-- 价格低于云图形下沿  
-- ADX值高于45(表明趋势可能反转)
-- +DI值低于-DI值(表明为下跌趋势)
-
-## 优势分析  
-
-该策略结合图形技术分析和趋势分析指标,能有效判断市场走势和强势区域。具体优势如下:  
-
-1. 使用一云图形判断关键支持阻力区域,能抓住强势趋势
-2. 结合ADX指数判断真实趋势强度,避免错误交易  
-3. 规则清晰易操作,容易实盘
-
-## 风险和解决方法  
-
-该策略也存在一些风险,主要集中在ADX指数判定上的不稳定性。具体风险和解决方法如下:  
-
-1. ADX计算有滞后性,可能错过快速反转。可以适当降低ADX参数,使其更灵敏  
-2. ADX在震荡行情中效果不佳。可以增加其他指标过滤,如BOLL通道等
-3. 一云图形也可能出现失效。可以适当调整参数或增加其他指标辅助
-
-## 策略优化建议  
-
-该策略还可以从以下几个方面进行优化:  
-
-1. 调整一云图形参数,适应更多品种  
-2. 增加止损策略,控制单笔损失  
-3. 结合更多指标,形成指标组合过滤信号
-4. 增加模型预测模块,利用机器学习进一步判断趋势信号 effector  
-
-## 总结  
-
-本策略结合一云图形技术分析和ADX趋势判断指标,形成了一套清晰完整的量化交易策略。它判断关键支持阻力区域同时兼顾趋势判断,能有效抓住市场机会。该策略易于实盘,也存在可优化的空间,整体是一套优质的量化策略。
-
-||
 
 ## Overview  
 
@@ -114,7 +61,6 @@ The strategy can be further optimized in the following ways:
 ## Conclusion  
 
 This strategy combines Ichimoku cloud charting and ADX trend index to form a complete quantitative trading system. It identifies key support/resistance levels while also judging trend. It can effectively capture market opportunities. The strategy is easy to implement in live trading and also has room for optimization. Overall it is a quality quantitative strategy.  
-[/trans]
 
 > Strategy Arguments
 

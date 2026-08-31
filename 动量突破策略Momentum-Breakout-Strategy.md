@@ -11,95 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/145de93eea9a0294b3f.png)
 
-[trans]
-
-### 概述
-
-该策略是一个基于随机震荡指标K线和D线的动量突破交易策略。它利用K线从超卖区域回落进入超买区作为买入信号,以追踪止损方式止损。
-
-### 策略原理
-
-该策略主要由以下几部分组成:
-
-1. 指标设置
-
-   使用RSI指标的14周期Smoothed Stoch指标的K线和D线,分别对其做3周期的SMA平滑处理。
-
-2. 信号生成
-
-   当K线上穿20作为买入信号时,进行买入开仓。 
-
-3. 止损方式
-
-   采用追踪止损方式,设置固定跟踪止损距离。同时设置回测期内20周期内最低点作为止损位。
-
-4. 仓位计算
-
-   根据回测期内20周期内最低点和当前收盘价计算出止损点之间的点数距离。再根据可承受的美元止损金额和点数距离计算出每个点的值。最后根据点值计算出具体的仓位大小。
-
-这样,该策略利用超买区反转的动量突破作为入场信号,采用精确计算的仓位管理和追踪止损,实现了动量反转交易,有效控制了风险。
-
-### 策略优势
-
-该策略具有以下几点优势:
-
-1. 入场信号明确,突破超卖区域,动量较强。
-
-2. 采用追踪止损,可以根据行情走势灵活止损。
-
-3. 根据精确计算的仓位入场,有效控制了单笔损失。
-
-4. 回测周期内计算止损位,实现精准止损。
-
-5. 仓位计算方式简单清晰,易于操作。
-
-6. 策略逻辑简单清晰,容易理解实现。
-
-7. 代码结构清晰,易于阅读和二次开发。
-
-### 策略风险
-
-该策略也存在一些风险:
-
-1. 股票本身波动风险。如遇剧烈行情,止损可能触发较多。
-
-2. 可能存在过量交易的风险。
-
-3. 单边持仓,无法利用反方向行情。
-
-4. 无法有效过滤行情背景。如在震荡行情中,可能出现止损频繁被触发。
-
-可以通过以下方式优化管理风险:
-
-1. 优化参数,调整入场条件,避免过于频繁交易。
-
-2. 采用期限分散,分批建仓的方式,降低单边风险。
-
-3. 增加对大级别行情背景的判断,避免在不利行情高频交易。
-
-4. 优化止损策略,防止止损过于敏感。
-
-### 策略优化
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化止损策略,可以考虑动态追踪止损、分批止损、移动止损等方式,使止损更加平滑。
-
-2. 增加对大级别趋势的判断,避免交易震荡趋势。可以结合均线、通道突破等方式判断趋势。
-
-3. 可以考虑双向持仓,加入反向头寸,利用反弹行情获利。
-
-4. 可以通过机器学习等方式对参数自动优化,使参数更好地适应不同阶段行情。
-
-5. 优化仓位管理策略,可以考虑固定比例、固定资金等 OTHER方式,使资金利用更加合理。
-
-6. 增加更多过滤条件,在更优质机会下进行交易。如结合成交量,布林线等指标进行优化。
-
-### 总结
-
-该策略整体是一个较为简单清晰的动量突破策略。它采取了较为谨慎的止损方式,有效控制了单笔损失。但仍需针对具体市场行情进行优化调整,使策略参数更好地适应市场,过滤无效交易信号,在回报与风险之间取得更好平衡。同时增强对大级别趋势的判断和仓位管理也是该策略需要优化的方向。整体来说,该策略作为一个基础的动量突破策略还是较为实用的,值得进一步研究优化,以适应具体交易品种的行情特点。
-
-||
 
 
 ### Overview
@@ -188,7 +99,6 @@ Below aspects of the strategy can be optimized:
 
 Overall this is a simple and clear momentum breakout strategy. It adopts a prudent stop loss approach to effectively control single trade risk. But optimizations are still needed to adapt the strategy better to specific market conditions, filter ineffective signals, and achieve a better balance between return and risk. Enhancing analysis of larger time frame trends and position sizing are important optimization directions for this strategy. In summary, as a basic momentum breakout strategy, it is still practical and worth researching further to adapt it to the market conditions of specific trading instruments.
 
-[/trans]
 
 > Strategy Arguments
 

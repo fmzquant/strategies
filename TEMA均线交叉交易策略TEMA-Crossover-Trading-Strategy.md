@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略采用两条不同周期的TEMA指标进行交叉交易,捕捉中间周期的价格趋势。TEMA指标可有效过滤价格噪音,识别趋势反转。
-
-策略原理:
-
-1. 分别计算一快一慢两条TEMA均线。典型参数为快线5周期,慢线8周期。
-
-2. 当快线从下方向上突破慢线时,进行做多操作。
-
-3. 当快线从上方向下突破慢线时,进行做空平仓操作。
-
-4. 可选择根据K线实体方向进行过滤,避免反向交易。 
-
-5. 设置回测周期,模拟历史交易信号。
-
-该策略的优势:
-
-1. TEMA指标对价格噪音的过滤作用强。
-
-2. 快慢TEMA配合,可捕捉中间周期趋势。
-
-3. 方向过滤避免逆势建仓,可提高获胜概率。
-
-该策略的风险:
-
-1. TEMA仍存在滞后问题,可能错过最佳入场时点。
-
-2. 需要对参数组合进行优化,以达到最佳匹配度。
-
-3. 震荡 Musikschule下难以持续获取信号。
-
-总之,该策略通过两TEMA交叉进行跟踪交易,可有效过滤噪音,提高稳定性。但TEMA滞后问题依然存在,需优化参数以顺应市场节奏。
-
-||
 
 This strategy trades the crossover between two TEMA lines of different periods to capture intermediate-term trends. TEMA filters noise well for identifying trend reversals. 
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy crosses TEMA lines to trade trends with noise filtering for stability. But TEMA lag persists, requiring optimization to match market pace. 
 
-[/trans]
 
 > Strategy Arguments
 

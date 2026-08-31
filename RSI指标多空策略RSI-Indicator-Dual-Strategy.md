@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于相对强弱指数(RSI)指标进行判断,当RSI高于设定上限时做空,当RSI低于设定下限时做多,属于典型的RSI反转交易策略。策略同时具有参数优化、止损策略等功能,可以通过调整参数适应不同市场环境。
-
-## 策略原理
-
-策略的核心逻辑包括:
-
-1. 计算RSI指标值
-2. 设置RSI上限和下限
-3. RSI上穿上限时,看空入场
-4. RSI下穿下限时,看多入场
-5. 设置止盈、止损条件
-6. RSI重新进入区间时或触发止损止盈条件时平仓
-
-RSI指标能显示市场是处于超买还是超卖状态。当RSI高于70时被视为超买,当RSI低于30时被视为超卖。交易策略就是根据RSI的超买超卖状态来判断该建立空头头寸还是多头头寸。
-
-此策略运用RSI指标的经典逻辑,根据RSI的数值与预设上下限的关系来判断建仓方向。同时,策略具有可调整的参数,可以对RSI上下限、止盈止损幅度等进行优化,从而适应市场的变化。
-
-## 策略优势 
-
-- 使用RSI指标可以有效判断市场超买超卖状态
-- RSI指标理论依据被广泛接受
-- 策略参数可调整,能适应不同品种和市场环境
-- 集成止盈止损机制,可以控制风险
-
-## 策略风险及应对  
-
-- RSI发出假信号的可能,导致不必要的亏损
-- 需要持续优化RSI参数区间
-- 震荡行情中止损可能被frequent触发
-
-应对措施:
-
-1. 结合其他指标进行多因子确认,避免假信号
-2. 根据不同品种特性优化RSI参数区间
-3. 调整止损位置,降低被套风险
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行扩展与优化:
-
-1. 采用机器学习自动优化RSI参数区间
-
-2. 增加交易量的确认,避免虚假突破
-
-3. 结合移动均线等指标进行多因子验证
-
-4. 设置自适应止损策略,根据市场波动调整止损幅度
-
-5. 研究交易量变化,判断资金流入流出
-
-6. 组合其他非相关策略,降低整体回撤
-
-## 总结  
-
-该策略使用RSI指标判断超买超卖,是一个简单实用的反转策略。策略可根据市场变化调整参数,也可进行多维度扩展与优化。通过参数优化、多因子验证、自适应止损等改进,可以使策略更稳健可靠。
-
-||
 
 ## Overview
 
@@ -127,7 +66,6 @@ The strategy can be enhanced through:
 
 This is a simple and practical mean reversion strategy using RSI for overbought/oversold detection. Customizable parameters allow adaptation to changing markets. Enhancements like adaptive stops, multi-factor confirmation, and parameter optimization can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

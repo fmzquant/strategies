@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d9c5fa1e678ba8f8ec.png)
-[trans]
-
-
-## 概述
-
-该策略通过多次设置RSI指标的参数,实现价格的多次突破,从而实现更准确的入场和退出信号。
-
-## 策略原理
-
-该策略设置了两组RSI参数,分别是RSI周期为7,限制为25的RSI指标和RSI周期为14,限制为25的RSI指标。当价格突破任意一组RSI的限制时,执行做多或做空操作。 
-
-策略首先计算两组RSI指标的值,然后判断价格是否突破RSI的上限或下限。如果突破上限,则产生做多信号,如果突破下限,则产生做空信号。
-
-如果已经持有仓位,那么会继续判断当前RSI是否在正常范围内。如果RSI正常了,同时实体突破均线的一半,则产生退出信号。
-
-该策略还使用了马丁格尔加仓系统。每次亏损后,下次交易量会加倍。
-
-## 优势分析
-
-- 使用两组RSI指标,可以更准确判断突破信号,避免假突破。
-
-- 同时检查实体突破,避免在震荡中错交易。
-
-- 采用马丁格尔加仓,可以在亏损后快速止损。
-
-- 可自定义RSI参数组合,优化入场机会。
-
-- 可限定交易时间段,避免重大事件的影响。
-
-## 风险分析
-
-- 双RSI指标无法完全避免假突破现象。
-
-- 马丁格尔会在亏损时加大仓位,容易爆仓。
-
-- 未考虑交易成本的影响。
-
-- 可优化的参数较多,需要大量测试找到最佳参数组合。
-
-可以设置止损来限制亏损;优化RSI参数组合;加入成本考量;适当放宽突破判定。
-
-## 策略优化方向
-
-- 加入止损机制,可以限制最大亏损。
-
-- 优化RSI参数组合,找到最佳的参数以减少假突破。 
-
-- 考虑交易成本的影响,防止过于频繁交易。
-
-- 放宽实体突破判定,获得更多交易机会。
-
-- 加入更多指标过滤,避免被套。
-
-## 总结
-
-该策略使用双RSI指标判断价格突破,加入实体突破判定,避免在震荡市中被套。同时采用马丁格尔加仓以快速止损。该策略可以通过参数优化以及加入更多指标过滤来获得更准确的交易信号。但需要注意风险控制,防止亏损扩大。总体来说,该策略提供了一个相对稳定的突破系统,适合追求高效率交易的投资者。
-
-|| 
 
 ## Overview
 
@@ -123,7 +65,6 @@ Can set stop loss to limit losses; optimize RSI parameters; add cost considerati
 
 This strategy uses dual RSI to determine price breakthrough, adds body breakthrough filter to avoid whipsaws. It also uses Martingale to quickly cut losses. The strategy can be improved by optimizing parameters and adding filters for more accurate signals. Risk management is important to limit losses. Overall this strategy provides a relatively stable breakthrough system suitable for high efficiency trading.
 
-[/trans]
 
 
 > Strategy Arguments

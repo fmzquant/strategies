@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/187d54c57fe7604338a.png)
 
-[trans]
-
-## 概述
-
-本策略使用TEMA, VWMACD和HMA三个指标来捕捉比特币的下跌行情。它的主要逻辑是在VWMACD下穿0轴、价格低于HMA均线和快线TEMA低于慢线TEMA时做空。当VWMACD上穿0轴、价格高于HMA均线或快线TEMA上穿慢线TEMA时平仓。
-
-## 原理
-
-首先计算VWMACD(和普通MACD的区别只在于计算移动平均线的方式不同)并画成柱状图。然后添加HMA作为趋势过滤器。接着创建并添加快线TEMA(5周期)和慢线TEMA(8周期),并计算两者的差值绘制在0轴附近。这是做空决策的关键。
-
-具体入场规则是:当VWMACD低于0轴、价格低于HMA均线和快线TEMA低于慢线TEMA时做空。
-
-具体出场规则是:当VWMACD上穿0轴、价格高于HMA均线或快线TEMA上穿慢线TEMA时平仓。
-
-## 优势分析
-
-- 使用了三个指标组合,提高了交易信号的可靠性
-- VWMACD能识别背离提供较准的趋势判断
-- HMAfilt作为趋势滤波器,避免被噪音误导
-- 快慢TEMA组合,捕捉短期反转点位
-- 采用短周期参数,适合高频交易,捕捉短期下跌行情
-
-## 风险分析 
-
-- 多指标组合,参数设置较复杂,需要经验进行调优
-- 虽有HMA滤波器,但仍需防止震荡市场的假突破
-- 短周期参数容易被市场噪音干扰,出现失误信号
-- 需严格控制止损,避免出现超出预期的大幅度损失
-- 需关注交易成本控制,高频交易容易被手续费摩擦损耗
-
-## 优化方向
-
-- 可以测试不同周期的参数组合,寻找最佳参数
-- 可以添加其他指标,如RSI,KD等辅助判断
-- 可以根据不同市场情况使用自适应参数
-- 可以优化止损策略,如随价格移动止损
-- 可以结合量能指标,避免量能不足的假突破
-
-## 总结
-
-本策略采用VWMACD,HMA和快慢TEMA的组合, Ziel在捕捉比特币短期下跌行情。它的优势是信号较可靠,适合高频交易。但也存在参数调优复杂,容易被噪音干扰等风险。通过继续优化参数组合、加入辅助指标等方式,可以使策略更稳定可靠。总体来说,本策略利用多指标确认和短周期参数的特点,能够对比特币的短期下跌行情做出较准确判断,属于一个行之有效的高频做空策略。
-
-||
 
 
 ## Overview
@@ -96,7 +53,6 @@ The specific exit rule is: when VWMACD crosses above 0, price is above HMA or fa
 
 This strategy uses the combination of VWMACD, HMA and fast/slow TEMA to capture short-term downtrends of Bitcoin. Its advantages are relatively reliable signals and suitability for high frequency trading. But it also has risks like complex parameter tuning, prone to noise interference. Further optimizing parameter combos and adding auxiliary indicators can make the strategy more stable and reliable. Overall, by utilizing multiple indicator confirmation and short period parameters, this strategy can make relatively accurate judgements on Bitcoin's short-term downtrends, and is an effective high frequency short strategy.
 
-[/trans]
 
 > Strategy Arguments
 

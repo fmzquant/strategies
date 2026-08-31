@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/145d2fdb3688f8d594b.png)
-[trans]
-
-## 概述
-
-该策略是基于布林通道指标的突破交易策略。它通过计算布林通道的上下轨,并结合动态调整的买入卖出阈值,实现对币安BTCUSDT的自动化交易。
-
-## 策略原理  
-
-该策略的核心指标是布林通道。布林通道由一个N日移动平均线及其上下两个标准差通道构成。本策略中的布林通道长度为20日,标准差倍数为2。当价格接近或触及布林通道下轨时,视为过度超售,这时策略会开仓做多;当价格接近或触及布林通道上轨时,视为过度看涨,这时策略会平仓了结多单。
-
-除布林通道指标外,本策略还引入两个可调参数:买入阈值和卖出阈值。买入阈值默认为布林下轨之下58个点,是打开多单的条件。卖出阈值默认为布林下轨之上470个点,是平仓的条件。这两个阈值可以根据实际情况和回测结果进行动态调整,使策略更具灵活性。
-
-在满足买入条件时,策略会使用账户权益的10%开仓做多。做多后,若价格上涨幅度达到止损条件(-125%),会止损平仓。在价格上涨后触发卖出阈值时,策略会选择全部平仓,回收利润。
-
-## 优势分析
-
-该策略具有以下几个主要优势:
-
-1. 使用布林通道指标,可以抓住价格异常离开轨道的机会,从而在反转时获利
-2. 引入动态调整的买入卖出阈值,优化入场出场机会
-3. 采取部分仓位做多,可以控制风险
-4. 设置止损条件,避免亏损进一步扩大
-5. 回测数据采用5分钟线,可以及时捕捉较短周期的交易机会
-
-## 风险分析
-
-该策略也存在一定的风险:  
-
-1. 布林带指标本身并不是百分百可靠,价格可能长时间低位震荡后再次下跌
-2. 阈值设定不当可能导致错过最佳入场或出场点
-3. 止损设置过于宽松,无法及时止损,或者过于严格,止损过于灵敏
-4. 回测周期选择不当,可能把一些偶然的利润当作稳定收益
-
-对策:
-
-1. 结合更多指标判断行情,避免布林通道发出错误信号
-2. 测试并优化阈值参数,找到最佳参数组合
-3. 测试并优化止损条件,找到平衡点
-4. 采用更长的回测周期,检验策略的稳定性
-
-## 优化方向  
-
-该策略还可从以下几个方向进行优化:
-
-1. 尝试结合其他指标,例如KD、RSI等,设定更严格的入场规则,避免入场过早或过晚
-2. 测试不同的布林通道参数组合,优化布林通道的长度和标准差倍数
-3. 优化买入卖出阈值,找到最佳参数以提高获利率
-4. 尝试基于ATR动态调整止损比例,让止损更符合市场波动性
-5. 优化仓位管理,例如获利后可适当加仓,控制单笔亏损风险
-
-## 总结  
-
-本策略overall是一个较为简单实用的突破策略。它采用布林通道指标判断行情反转机会,并设置动态阈值进行入场出场。同时,策略还运用了合理的仓位管理、止损条件等来控制风险。在优化几个关键参数后,该策略可以获得较为稳定的回报。它既适合定量交易,也可作为选股或判断市场情绪的辅助工具。总的来说,本策略具有较强的实用性和拓展性。
-
-||
 
 ## Overview  
 
@@ -118,7 +63,6 @@ The strategy can be further optimized in the following aspects:
 
 In summary, this is an overall simple and practical breakout strategy. It adopts Bollinger Bands to identify reversal opportunities and sets dynamic thresholds for entry and exit. Meanwhile, reasonable position sizing and stop loss conditions are utilized to control risks. After optimizing several key parameters, this strategy can yield relatively steady returns. It is suitable for algorithmic trading and can also serve as an auxiliary tool for stock picking or gauging market sentiment. Generally speaking, this strategy has strong practicality and extensibility.
 
-[/trans]
 
 > Strategy Arguments
 

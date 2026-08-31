@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b18e3fed1a156606fb.png)
-[trans]
-### 概述
-
-该策略通过计算通道均线,在价格突破通道均线时建立多头或空头头寸,追踪股票价格趋势,属于趋势追踪类策略。
-
-### 策略原理  
-
-该策略首先计算20日高点平均值作为通道上轨,20日低点平均值作为通道下轨,并计算通道中线。通道中线代表近期价格平均趋势。当价格上穿通道中线时,建立多头头寸;当价格下穿通道中线时,建立空头头寸。追踪价格趋势,直到价格重新回落到通道区间反向时,平仓头寸。
-
-### 优势分析
-
-- 利用通道追踪价格趋势,避免资金被横盘市锁定;
-- 通过通道上下轨判断买卖点位,入场容易控制;
-- 通道范围过滤掉部分噪音,加大获利概率;
-- 可配置通道参数,调整策略的灵敏度;
-
-### 风险分析
-
-- 大幅突破通道中线过后可能出现回调测试中线的情况,此时会被套;
-- 震荡类型股票不适合该策略,容易出现高频交易套利;
-- 参数设置不当也可能影响策略效果;
-
-### 优化方向
-
-- 优化通道周期参数,测试不同参数对策略效果的影响;
-- 增加止盈止损策略,控制单次亏损和全部亏损; 
-- 结合其他指标作为辅助判断,避免错误信号;
-- 分阶段建仓,降低突破回调测试中线的被套概率;
-
-### 总结  
-
-该策略整体来说较为简单直接,通过基本的价格通道来判断股票价格趋势,属于趋势追踪类型策略。优点是容易操作,充分利用价格趋势带来的投资机会,避免资金被锁定。缺点是参数设置不当可能影响效果,且存在一定回调测试的风险。通过合理优化,可以提高策略稳定性,增强实盘表现。
-
-||
 
 ### Overview
 
@@ -77,7 +43,6 @@ The strategy first calculates the 20-day high average as the upper rail of the c
 
 In general, this strategy is relatively simple and straightforward. It judges stock price trends through basic price channels and belongs to the trend following type. The advantages are easy operation, full use of investment opportunities brought by price trends, and avoiding fund lock-ups. The disadvantages are that improper parameter settings may affect performance and there are certain risks of pullback tests. Through reasonable optimization, the stability of the strategy can be improved and real trading performance can be enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/124c76bc31ac5562b35.png)
-[trans]
-## 概述
-
-均线回归突破策略是一种典型的跟踪趋势的量化交易策略。该策略利用移动平均线及其标准差通道来判断市场走势,并在价格突破标准差通道时产生交易信号。
-
-## 策略原理
-
-该策略首先计算N日(默认50日)的简单移动平均线SMA,然后基于SMA计算该周期价格的标准差StdDev。 以SMA为中轴,上下各以StdDev的2倍作为上下轨构建“标准差通道”。当价格上穿上轨时,做空;当价格下穿下轨时,做多。
-
-进入市场后,策略会设置止损止盈位。具体来说,做多后,止损线为进场时的收盘价的(100 - 止损百分比);做空后,止盈线为进场时的收盘价的(100 + 止盈百分比)。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 跟踪趋势能力强。使用标准差通道能够动态跟踪市场波动。
-2. 回撤控制能力强。使用移动止损能够有效控制单笔损失。
-3. 实现简单。省去了大量参数优化,非常容易实现。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 趋势反转风险。跟踪趋势策略容易发生亏损退出然后反转的情况。
-2. 参数敏感风险。移动平均线周期和标准差倍数的参数选择会对策略表现产生较大影响。
-3. 止损过于激进易造成额外损失。止损点设置不当可能造成额外损失。
-
-对应风险的解决方案如下:
-
-1. 结合波动率指标避免假突破。
-2. 对参数进行优化寻找最优参数组合。 
-3. 调整止损机制,防止过于激进。
-
-## 优化方向  
-
-该策略还存在进一步优化的空间:
-
-1.利用多个时间周期的均线进行验证,避免曲线过于敏感。
-
-2.结合其他指标如MACD等判断趋势和背离现象。
-
-3.引入机器学习算法动态优化参数。
-
-## 总结
-
-均线回归突破策略整体来说是一个非常实用的量化交易策略。它具有跟踪趋势、控制回撤的优点,实现简单,适合量化交易的需要。同时也需要注意一些参数选择和止损设置问题,配合多时间轴分析和参数优化,可以获得更好的策略表现。
-
-||
 
 ## Overview  
 
@@ -111,7 +63,6 @@ There is still room for further optimization of the strategy:
 
 Overall, the moving average regression breakthrough strategy is a very practical quantitative trading strategy. It has the advantages of tracking trends and controlling drawdowns, simple implementation, and meets the needs of quantitative trading. At the same time, attention should also be paid to issues such as parameter selection and stop loss settings. With multi-time axis analysis and parameter optimization, better strategy performance can be obtained.
 
-[/trans]
 
 > Strategy Arguments
 

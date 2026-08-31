@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/950930282427a69e64.png)
 
-[trans]
-
-### 概述
-
-这是一个结合多种技术指标的跟踪止损交易策略。主要使用 Supertrend、Stochastic、200日移动平均线和ATR止损这些指标来识别交易信号和设置止损位。该策略适合中长线趋势交易,可以有效控制风险。
-
-### 策略原理
-
-当Stochastic K线从超买区下落、Supertrend指示趋势向上、价格突破200日移动平均线时,做多;当Stochastic K线从超卖区上涨、Supertrend指示趋势向下、价格跌破200日移动平均线时,做空。交易后使用ATR指标动态设置止损位。
-
-具体来说,当Stochastic K值上穿80时,视为超买信号;当Stochastic K值下穿20时,视为超卖信号。Supertrend指标决定价格趋势方向,Supertrend指示向上时代表价格处于上涨趋势,Supertrend指示向下时代表价格处于下跌趋势。ATR指标用来计算真实波幅。
-
-做多信号触发条件:Stochastic K线从超买区下落(小于80)、Supertrend指示向上、价格高于200日移动平均线。
-
-做空信号触发条件:Stochastic K线从超卖区上涨(大于20)、Supertrend指示向下、价格低于200日移动平均线。  
-
-入场后,设置ATR止损来跟踪价格波动控制风险。多单止损为最低价减去ATR值乘以系数;空单止损为最高价加上ATR值乘以系数。
-
-### 策略优势
-
-这种策略结合多种指标判断趋势方向和入场时机,可以有效过滤假信号。同时,采用ATR动态跟踪止损,可以根据市场波动情况来控制风险,最大程度保存资金。
-
-相比简单移动平均线等趋势跟踪策略,这种策略可以更好地捕捉转折点。相比单一止损方式,这种ATR动态止损可以更加灵活。所以,这种策略整体来说具有较好的风险收益比。
-
-### 策略风险 
-
-该策略主要依赖指标判断,如果指标发出错误信号,则可能导致由于反向操作亏损。另外在震荡行情中,止损可能被频繁触发,带来损失。
-
-此外,ATR止损虽然可以根据波动调整止损位,但无法完全避免止损被击穿的概率。如果遇到价格跳空,止损单可能会被直接触发。
-
-### 策略优化
-
-这种策略可以从以下几个维度进行优化:
-
-1. 调整指标参数,优化买卖信号的准确率。例如可以测试不同参数的Stochastic指标,或者调整Supertrend指标的ATR周期和乘数参数。
-
-2. 测试其他止损方式的效果。例如可以尝试比ATR止损更加灵活的自适应智能止损算法,或者考虑让止损跟随一个移动止损位。
-
-3. 增加过滤条件,在更加可靠的情况下入场。例如可以增加交易量能量指标等过滤器,避免在量能不足时依据指标错误入场。
-
-4. 优化资金管理策略,例如动态调整仓位。
-
-### 总结
-
-Stochastic Supertrend跟踪止损交易策略综合运用了多种指标判断趋势方向,并采用ATR智能跟踪来控制风险。这种策略可以有效过滤噪音别入场,具有较好的风险收益比。我们可以通过调整参数、修改止损方式以及增加过滤条件等方法来不断优化这一策略,使其能够适应更加复杂的市场环境。
-
-||
 
 ### Overview
 
@@ -103,7 +56,6 @@ This strategy can be optimized in the following aspects:
 
 The Stochastic Supertrend tracking stop loss trading strategy combines multiple indicators to determine trend direction and adopts intelligent ATR tracking to control risks. This strategy can effectively filter noise and has good risk-reward ratio. We can continuously optimize this strategy by adjusting parameters, modifying stop loss methods and adding filters to adapt to more complex market environments.
 
-[/trans]
 
 > Strategy Arguments
 

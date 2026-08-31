@@ -11,82 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/89207d15da3c930a41.png)
 
-[trans]
-
-
-## 概述
-
-一云延迟交叉双线交易策略是一种常见的一云K线技术分析交易策略。该策略利用K线云带和两条基准线的交叉来判断市场的转折点。一云延迟交叉交易策略已被证明是一种可盈利的交易策略。
-
-## 策略原理
-
-该策略主要使用一云K线的5条基准线,需要首先理解这些线的含义:
-
-天线,也称为转化线,代表最近9根K线的中点,计算公式为:
-
-基线,也称为标准线,代表最近26根K线的中点,计算公式为:
-
-延迟线,也称为迟行线,落后于价格(正如其名字所示)。延迟线绘制在26周期之前。
-
-先导1,也称为预先1,代表云带的一个边界,是转化线和基准线的中点:。该值绘制在26周期之后,是更快的云带边界。
-
-先导2,也称为预先2,代表云带的另一个边界,是最近52根K线的中点:。该值绘制在52周期之后,是更慢的云带边界。
-
-使用一云K线交易的规则非常简单:
-
-当转化线上穿基线时,采取买入信号。 
-
-当转化线下穿基线时,采取卖出信号。
-
-## 优势分析
-
-一云延迟交叉双线交易策略有以下优势:
-
-1. 使用转化线和基线的交叉来判断买入和卖出时机,策略规则简单清晰。
-
-2. 利用云带及其边界判断趋势方向,能减少假信号。 
-
-3. 延迟线落后价格,能验证趋势。
-
-4. 多种线条组合使用,综合判断市场,提高决策准确性。
-
-5. 可用于多种时间周期的交易分析。
-
-## 风险分析
-
-一云延迟交叉双线交易策略也存在以下风险:
-
-1. 线条参数设置不当可能导致产生过多假信号。
-
-2. 牛熊转换时,线条交叉信号可能较滞后,无法及时抓住转折点。
-
-3. 行情剧烈波动时,一云K线可能失效。
-
-4. 需要组合更多指标来验证信号,单独使用时效果可能受限。
-
-5. 需要频繁监控,不能全权自动交易。
-
-## 优化方向
-
-一云延迟交叉双线交易策略可以从以下几个方面进行优化:
-
-1. 优化线条参数,改善延迟线设置,使信号更准确。
-
-2. 结合趋势指数等指标,提前判断趋势反转。
-
-3. 增加 FILTER 来过滤假信号。
-
-4. 优化策略自动止盈止损点,严格控制风险。
-
-5. 测试不同品种和时间周期的参数效果。
-
-6. 进行回测优化,选择最佳参数组合。
-
-## 总结
-
-一云延迟交叉双线交易策略利用简单的转化线和基线交叉来产生交易信号。该策略有效利用云带判断趋势方向,可以过滤部分噪音。但参数设置不当也会产生假信号,需要进一步优化。此策略易于实施,但最佳效果还需结合其他指标来实现。通过不断测试和优化,可以使该策略对市场变化做出及时反应,在降低风险的同时提高盈利能力。
-
-||
 
 
 ## Overview
@@ -161,7 +85,6 @@ The Ichimoku Lagging Cross Dual Line trading strategy can be optimized in the fo
 
 The Ichimoku Lagging Cross Dual Line trading strategy uses simple conversion and base line crossovers to generate trade signals. It effectively uses the cloud bands to determine trend direction and filter out some noise. However, improper parameter settings can also produce false signals, requiring further optimizations. This strategy is easy to implement but best effects would need incorporating other indicators. With continuous testing and optimizations, this strategy can adapt to market changes timely, improving profitability while reducing risks.
 
-[/trans]
 
 > Strategy Arguments
 

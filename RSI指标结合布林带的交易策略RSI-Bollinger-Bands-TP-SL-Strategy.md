@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ce21d5668f0ed83c85.png)
-[trans]
-
-## 一、策略概述
-
-本策略名称为RSI布林带止盈止损策略(RSI Bollinger Bands TP/SL Strategy)。该策略融合了RSI指标和布林带指标,实现了趋势定位和突破交易。当RSI指标出现超买超卖信号,并且价格触及或突破布林带上轨或下轨时,进行做多或做空操作。同时,策略还设置了止盈止损点,可以提高稳定性。
-
-## 二、策略原理
-
-### 1. RSI指标判断逆转
-
-RSI指标可以判断股票是否处于超买超卖区间。当RSI大于设定的超买线时为超买,小于设定的超卖区间时为超卖。本策略设置超买线为50,超卖线为50。
-
-### 2. 布林带判断趋势
-
-布林带通过计算股价的标准差,得到股价的上下轨。上轨为阻力线,下轨为支撑线。当股价上穿下轨时为买点,下穿上轨时为卖点。
-
-### 3. RSI指标与布林带指标结合
-
-当RSI指标出现底部反转信号,同时股价突破布林带下轨时,认为行情由下向上反转,做多;当RSI指标出现顶部反转信号,同时股价跌破布林带上轨时,认为行情由上向下反转,做空。
-
-## 三、策略优势
-
-### 1. 双重指标过滤增加信号准确率
-
-RSI指标和布林带指标都用于判断趋势和逆转点。两者结合使用,可以提高真正买卖信号的识别准确率,避免假突破。
-
-### 2. 止盈止损机制控制风险 
-
-策略设置了止盈止损点,做多止盈点为入场价*(1+止盈比例),止损点为入场价*(1-止损比例);做空则相反,这可以锁定盈利,最大程度避免亏损,控制风险。
-
-### 3. 可自定义买卖方向
-
-策略可选择只做多、只做空或双向交易,用户可以根据市场环境选择不同方向,灵活控制风险。
-
-## 四、策略风险
-
-### 1. 布林带参数敏感
-
-布林带的标准差大小影响布林带的宽度从而影响交易信号产生。如果参数设置不当,可能产生大量错误信号。
-
-### 2. 止盈止损带来的风险
-
-如果行情出现V型反转,止盈止损设置可能过于激进,造成不必要的亏损。
-
-### 3. RSI参数敏感 
-
-RSI的参数也会影响RSI曲线的形态。如果RSI参数设置错误,则RSI反转信号准确性降低。
-
-## 五、策略优化方向 
-
-### 1. 优化RSI参数
-
-可以测试更多种RSI长度参数,找到最佳参数组合。
-
-### 2. 优化布林带参数 
-
-可以测试更多种布林带长度和标准差参数,找到最佳参数组合。
-
-### 3. 测试不同的止盈止损比例
-
-可以通过回测找到最佳的止盈止损比例参数。
-
-## 六、总结
-
-本策略综合运用RSI指标和布林带指标判断趋势和逆转,加入止盈止损机制控制风险,可以自动识别买卖点并及时止损止盈。该策略也存在一定的风险,主要可通过参数优化等方法进行改进。总体而言,该策略具有较强的实用性。
-
-||
 
 ## I. Strategy Overview  
 
@@ -142,7 +75,6 @@ Backtesting can help find the optimal TP/SL ratio.
 
 This strategy leverages RSI and Bollinger Bands to identify trends and reversals, and sets TP/SL to control risks. It can automatically detect trading signals and manage exits. There are still some risks that can be improved by parameter optimization. In general, this is a practical strategy with strong applicability.
 
-[/trans]
 
 > Strategy Arguments
 

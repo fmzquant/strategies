@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/af0f8644a635ea5078.png)
-[trans]
-
-## 概述
-
-双重反转动量策略通过结合价格反转信号和波动率反转信号,实现趋势交易。它主要基于123形态判断价格反转点,同时辅助采用Donchian通道波动率来过滤虚假信号。该策略适用于中长线持仓,通过双重反转过滤,可以有效抓住市场转折点,实现超额收益。
-
-## 策略原理  
-
-价格反转部分采用123形态判断。该形态含义是前两根K线价格出现反向(上涨或下跌),第三根K线再次反转(下跌或上涨),因此称为123形态。当价格出现三根K线反转现象时,通常预示着短期趋势即将出现转折。为了进一步验证价格反转的可靠性,该策略还采用了随机指标判断,只有当随机指标也出现反转时(快线回落或快速上升),才会触发交易信号。
-
-波动率反转部分采用Donchian通道波动率。Donchian通道主要反映价格的波动范围。当价格波动加大时,Donchian通道宽度也会扩大;当价格波动减小时,Donchian通道宽度也会收窄。Donchian通道波动率(宽度)可以有效衡量市场的波动程度和风险水平。该策略采用Donchian通道波动率的反转来过滤虚假信号,只有当波动率和价格同时反转时,才会发出交易信号,避免被迂回操作套住。
-
-综上,该策略通过双重反转验证,既确保了交易信号的可靠性,也控制了风险,是一种相对稳健的趋势策略。
-
-## 策略优势
-
-- 双重过滤机制,确保交易信号可靠性,避免假断裂
-- 控制风险,降低亏损概率
-- 适合中长线持仓,避开市场Noise,抓住超额收益
-- 参数优化空间大,可调整至最优状态
-- 风格独特,与常见技术指标组合使用效果好
-
-## 策略风险
-
-- 依赖参数优化,参数不当会影响策略表现 
-- 止损策略还需进一步提升,最大回撤控制有待改进
-- 交易频率可能偏低,无法适应高频算法交易
-- 需选择合适品种和时间周期,适用范围有限
-- 可采用机器学习等方式寻找最优参数
-
-## 优化方向 
-
-- 增加自适应止损模块,可以大幅减少最大回撤
-- 加入交易量指标,确保在高量突破时入场
-- 优化参数以取得最佳稳定性
-- 尝试不同品种和时间周期,寻找最佳适配环境
-- 尝试与其它指标或策略组合,取得1+1>2的协同效应
-
-## 总结
-
-双重反转动量策略通过价格反转和波动率反转的双重验证,实现了较好的风险控制。相比单一指标,它过滤了大量噪声,稳定性更优。通过参数优化、止损模块增强、量能引入等手段,该策略可以进一步提升信号质量和收益稳定性。它适合作为股票、数字货币等中长线策略的组成部分,与其他模块合理搭配,可以获得良好超额收益。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ In summary, this strategy ensures the reliability of trading signals and control
 
 The Reversal Momentum strategy achieves good risk control through dual confirmation of price reversal and volatility reversal. Compared to single indicators, it filters out a lot of noise and has better stability. By enhancing parameters optimization, stop loss modules, introducing volume, etc., this strategy can further improve signal quality and profit stability. It is suitable as a component of medium-to-long term strategies for stocks, cryptocurrencies, etc., and can obtain good excess returns when properly combined with other modules.
 
-[/trans]
 
 > Strategy Arguments
 

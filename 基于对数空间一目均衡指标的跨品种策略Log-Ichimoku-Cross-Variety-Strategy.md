@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7918dd5f9c2170c039.png)
-[trans]
-
-## 概述
-
-本策略是一种面向加密货币的简单交易策略,它使用对数空间一目均衡指标来生成交易信号。该策略适用于跨加密货币品种的交易。
-
-## 策略原理
-
-该策略使用自定义的对数空间一目均衡指标作为主要的交易指标。一目均衡指标通常包含前转线、基准线和延迟线。本策略中,这些线都是在对数价格的空间中计算的。
-
-具体来说,前转线是最近9个周期对数低点和对数高点的平均值。基准线是最近26个周期的同类平均值。延迟线1是前转线和基准线的平均值,延迟线2是最近52个周期的同类平均值。
-
-当延迟线1上穿延迟线2时,做多;当延迟线1下穿延迟线2时,做空。
-
-## 优势分析
-
-这种策略的主要优势在于,使用对数价格空间中的一目均衡指标,可以更好地识别加密货币中的趋势变化。在对数坐标下,百分比变化更加一致,有助于生成更可靠的交易信号。
-
-另一个优势是,该策略适用于跨加密货币品种的交易。使用对数空间一目均衡指标可以增强不同品种之间价格变化的可比性。
-
-## 风险分析
-
-该策略的主要风险在于一目均衡指标本身也可能生成错误信号。尤其是在加密货币市场的高波动时期,一目均衡指标的表现会变得不可靠。
-
-此外,对数转换也可能在极端行情时失效。当价格出现异常波动时,对数坐标的可比性也会下降。
-
-## 优化方向
-
-该策略可以通过以下方式进行优化:
-
-1. 结合其他指标来验证一目均衡指标的信号,降低错误信号的概率
-
-2. 更新一目均衡指标参数的最优值,使其更适合加密货币品种
-
-3. 在开仓前设置必要的过滤条件,例如交易量过滤,避免被假突破误导
-
-4. 优化开仓策略,设置止损和止盈条件,控制风险
-
-## 总结
-
-本策略利用对数空间一目均衡指标的优点,设计了一个面向加密货币、适用于跨品种交易的量化策略。该策略有利于识别趋势变化,但也存在一定的风险。通过进一步优化,可以使策略 parameters 更加符合加密货币市场,并设定必要的开仓条件及风险控制机制,从而获得更好的策略表现。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ The strategy can be enhanced by:
 
 This strategy utilizes the logarithmic Ichimoku indicator to design a quantitative strategy tailored to cryptocurrencies and cross-variety trading. While advantageous for capturing trends, it has risks. Further optimizations to parameters, filters and risk controls can enhance strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

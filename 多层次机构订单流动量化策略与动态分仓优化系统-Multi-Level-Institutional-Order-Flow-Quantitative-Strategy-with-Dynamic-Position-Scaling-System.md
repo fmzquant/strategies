@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f0bb985d366f5b4d0d.png)
 
-[trans]
-#### 概述
-该策略是一个基于机构订单流的智能交易系统,通过识别市场中的订单区块(Order Blocks)来预测潜在的价格反转点。系统采用动态分仓管理方案,通过三层目标位来优化头寸管理,实现收益最大化。策略的核心在于捕捉机构交易行为所产生的价格痕迹,通过对高低点的统计分析来识别重要的价格水平。
-
-#### 策略原理
-策略基于以下几个关键要素:
-1. 订单区块识别 - 利用20个周期的回溯窗口,通过分析蜡烛图形态识别买卖订单区块。买入区块在前一根看跌蜡烛和当前看涨蜡烛的配合下确认,卖出区块则相反。
-2. 交易时间控制 - 将交易限制在09:30-16:00的主要交易时段内,避开波动性较大的开盘和收盘时段。
-3. 入场逻辑 - 当价格突破买入订单区块且在交易时段内时开仓做多,突破卖出订单区块时开仓做空。
-4. 分仓管理 - 采用50%-30%-20%的三层分仓方案,分别对应0.5%、1.0%和1.5%的目标位。
-
-#### 策略优势
-1. 智能订单识别 - 通过对高低点的动态分析,准确捕捉大资金建仓和平仓的关键价位。
-2. 风险分散 - 三层分仓设计有效分散风险,既保证了盈利落袋为安,又给予趋势充分发展空间。
-3. 时间过滤 - 通过交易时间限制,避开了市场波动较大的时段,提高了交易的稳定性。
-4. 可视化支持 - 策略提供清晰的订单区块可视化,便于交易者理解市场结构。
-
-#### 策略风险
-1. 假突破风险 - 在横盘市场中可能产生多次假突破信号,建议结合波动率指标进行过滤。
-2. 滑点影响 - 在流动性不足的市场中,分仓止盈可能面临滑点影响,建议适当调整目标位间距。
-3. 趋势依赖 - 策略在趋势市场表现较好,但在震荡市场可能产生频繁交易。
-
-#### 策略优化方向
-1. 波动率自适应 - 建议引入ATR指标,根据市场波动动态调整目标位百分比。
-2. 订单流量分析 - 可以结合成交量分析,增加订单区块的确认度。
-3. 动态时间窗口 - 考虑根据市场状态动态调整回溯周期,提高策略适应性。
-4. 风险控制增强 - 添加最大回撤限制和每日损失限制,提高策略的稳健性。
-
-#### 总结
-该策略通过机构订单流分析和动态分仓管理,构建了一个完整的交易系统。通过订单区块的识别和多层次止盈设置,既捕捉了大资金运作的机会,又实现了有效的风险控制。建议交易者在实盘中注意市场环境的选择,并根据具体情况调整参数设置。
-
-||
 
 #### Overview
 This strategy is an intelligent trading system based on institutional order flow, which predicts potential price reversal points by identifying Order Blocks in the market. The system employs a dynamic position scaling management approach with three-tier targets to optimize position management and maximize returns. The core of the strategy lies in capturing price footprints left by institutional trading behavior through statistical analysis of highs and lows.
@@ -73,7 +41,6 @@ The strategy is based on several key elements:
 
 #### Summary
 This strategy constructs a complete trading system through institutional order flow analysis and dynamic position management. Through order block identification and multi-level profit-taking settings, it captures opportunities from large capital operations while implementing effective risk control. Traders are advised to carefully consider market conditions and adjust parameters according to specific circumstances in live trading.
-[/trans]
 
 
 

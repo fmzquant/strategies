@@ -11,97 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17752b3ac3bd9f0e5fd.png)
 
-[trans]
-
-## 概述
-
-本策略通过组合使用动量指标CMO和反转指标Stochastic,实现多因子模型,以发掘不同市场环境下的交易机会。
-
-## 原理分析
-
-该策略由两个子策略组成:
-
-1. 123反转策略
-
-    - 使用9日Stochastic指标判断超买超卖
-    - 如果收盘价连续2日上涨,且Stochastic低于50,做多
-    - 如果收盘价连续2日下跌,且Stochastic高于50,做空
-
-2. CMO绝对值策略
-
-    - 计算CMO的绝对值
-    - CMO绝对值高于70时,认为处于超买状态,做空
-    - CMO绝对值低于20时,认为处于超卖状态,做多
-
-最后,如果两个子策略信号一致,则发出交易信号。
-
-该策略充分利用了动量指标CMO和反转指标Stochastic的优势。CMO能较好地识别趋势,Stochastic则可发现短期反转机会。两者结合使用,能在不同阶段发掘交易机会。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 多因子模型,结合动量和反转,能适应不同市场环境
-
-2. CMO识别趋势能力强,Stochastic判断反转点准确
-
-3. 只在两个信号一致时交易,避免错信号,提高获利概率
-
-4. 参数优化空间大,可以针对不同品种和周期进行调整
-
-5. 采用长短周期指标结合,能发现更多交易机会 
-
-6. 规则简单清晰,容易理解实现,适合算法交易
-
-## 风险分析
-
-本策略也存在以下风险:
-
-1. 子策略发出错误信号的概率存在,需要优化参数
-
-2. 突发事件导致趋势反转,会产生较大亏损
-
-3. 交易频率可能过高,交易成本是需要考虑的因素
-
-4. 子策略均为延迟指标,存在时间滞后问题
-
-5. 需针对不同品种调整参数,对参数优化要求较高
-
-对策:
-
-1. 优化子策略参数,降低错误信号概率
-
-2. 设置止损,控制单笔亏损
-
-3. 调整开仓条件,降低交易频率
-
-4. 使用实时tick数据,减少滞后问题
-
-5. 利用机器学习方法自动优化参数
-
-## 优化方向
-
-本策略可以从以下方面进行优化:
-
-1. 引入更多因子,如波动率、量价等,形成系统性的多因子模型
-
-2. 构建动态参数优化机制,根据市场情况调整参数
-
-3. 优化开仓逻辑,引入概率和指数平滑等方法
-
-4. 在短期内对冲长期仓位,实现双重目标
-
-5. 利用深度学习提取更多特征,建立非线性交易规则
-
-6. 探索无参数模型,避免人工选择参数带来的偏差
-
-7. 结合高频数据、新闻事件,减少信号滞后问题
-
-## 总结
-
-本策略通过运用动量指标CMO和反转指标Stochastic,实现多因子模型,在穿越式市场中发掘更多交易机会。相比单一指标,多因子组合能够适应更加复杂的市场环境。同时,本策略参数优化空间大、规则简单,适合算法交易开发。但是也需要注意风险控制,对参数选择和模型优化要求较高。总体来说,多因子动量反转策略是一个可供参考和拓展的系统化交易思路。
-
-||
 
 
 ## Overview
@@ -196,7 +105,6 @@ The strategy can be improved in the following aspects:
 
 The strategy utilizes momentum indicator CMO and reversal indicator Stochastic to construct a multi-factor model for trading opportunities in trending and sideways markets. Compared to single-factor models, the multi-factor approach adapts better to complex market environments. Meanwhile, the large parameter tuning space and simple rules make it easy to optimize and automate, suitable for algo trading development. However, risk management is crucial, and high demand on parameter selection and model optimization is required. Overall, the momentum reversal combo strategy provides a systematic trading idea worthy of reference and exploration.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10f981ad1cbdc4f634f.png)
-[trans]
-## 概述
-
-本策略是一个基于简单移动平均线(SMA)交叉的长线追涨策略。它通过计算不同周期的SMA,在短期SMA上穿长期SMA时生成买入信号,进行追涨操作。同时,它也会根据进入价格的一定比例来设置止盈止损位,对仓位进行风险管理。
-
-## 策略原理
-
-该策略主要基于SMA指标的“金叉”交叉信号来判断入市时机。具体来说,它分别计算9日线和21日线这两个不同周期的SMA。当短期的9日线从下方上穿较长期的21日线时,表示股价从盘整阶段进入升浪阶段,属于追涨的良好时机点,这时策略会生成买入信号,进行追涨操作。
-
-此外,策略还会根据入场价格的1.5%和1%这两个比例来动态设置止盈位和止损位。也就是说,止盈位置会比入场价格高1.5%,止损位置会比入场价格低1%。通过这种方式,可以对仓位进行设定盈亏比的风险管理。
-
-## 策略优势
-
-- 使用SMA指标判断入场时机,滤除短期市场噪音,捕捉中长线走势。
-- 周期参数可调,可以通过调整周期来适应不同波段的行情。  
-- 风险管理机制完善,可以通过调整盈亏比来控制单笔损失。
-- 实现简单,容易理解,适合量化交易的初学者。
-
-## 风险及解决方案
-
-- SMA交叉信号可能出现假突破,导致不必要的亏损。可以结合其他指标过滤信号。
-- 止盈止损位置比较单一,可能出现预期止盈而实际亏损的情况。可以考虑动态追踪止盈止损位。 
-- 盈亏比固定设置,无法根据市场波动性调整。可以结合ATR指标动态设置盈亏比。
-- 存在一定的时间滞后问题。可以考虑减少SMA的周期参数,或者引入其他先导指标。
-
-## 优化方向
-
-- 增加其他指标过滤SMA交叉信号,避免假突破。例如KDJ指标、波动率指标等。
-- 动态追踪止盈止损位。例如运用Chandelier Exit算法。
-- 利用ATR指标等根据市场波动率动态调整盈亏比。
-- 减少SMA周期或引入其他先导指标,降低滞后性。
-
-## 总结
-
-本策略是一个基于SMA交叉的中长线追涨策略。它使用SMA指标判断行情趋势,设置止盈止损控制风险。优点是简单易行,适合量化交易的初学者。同时也存在一些可优化空间,如增加其他指标过滤信号、动态追踪止盈止损以及根据市场波动率调整盈亏比等。通过不断优化,可以使策略更稳健,适应更多市场环境。
-
-||
 
 ## Overview
 
@@ -81,7 +44,6 @@ In addition, the strategy also dynamically sets the take profit and stop loss ba
 
 ## Conclusion
 This is a medium-long term trend following strategy based on SMA crossover. It identifies trends with SMA and controls risks by setting take profit and stop loss. The advantage is it is simple and easy to implement, suitable for beginners in quantitative trading. Meanwhile, there are also rooms for enhancement, such as adding other signal filters, trailing take profit/stop loss dynamically, adjusting risk-reward ratios based on volatility etc. Through continuous improvements, the strategy can become more robust and adapt to more market environments.  
-[/trans]
 
 
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14e6b42ec06654e6abb.png)
-[trans]
-
-## 概述
-
-动量回拉策略(Momentum Pullback Strategy)是一种识别RSI极端值作为动量信号的长短仓策略。与大多数RSI策略不同,该策略在极端RSI读数的方向上寻找首次回拉进行入场。
-
-它在5日EMA(最低价)/5日EMA(最高价)的首次回拉点进行做多/空,并在滚动12根K线的最高点/最低点平仓。该滚动高点/低点机制意味着如果价格进入长期整理,止盈目标会随着每根新K线的出现而降低。最佳交易通常来自2-6根K线内完成。
-
-建议的止损距离为入场价格的X倍ATR(可在用户输入参数中调整)。
-
-该策略对各个时间周期和市场的稳健性较强,胜率在60%-70%之间,盈利交易规模较大。需要避免在重大经济新闻导致的波动中产生信号。
-
-## 策略原理
-
-1. 计算6日RSI值,寻找超过90以上(超买)和10以下(超卖)的极端点
-
-2. 当RSI超买时,在6根K线内回拉至5日EMA(最低线)进行做多入场
-
-3. 当RSI超卖时,在6根K线内回拉至5日EMA(最高线)进行空头入场 
-
-4. 出场策略为移动止盈,长仓以过去12根K线的最高点为第一个出场目标,随后新K线出现时更新为新的12根K线最高点,实现滚动出场。空头相反,以滚动12根K线最低点止损。
-
-5. 止损距离为入场价格X倍ATR,可自定义。
-
-## 优势分析
-
-该策略结合RSI极值作为势能信号和回拉入场,可捕捉趋势中的潜在反转点,胜率较高。
-
-启用了移动止盈机制,可根据价格实际走势来锁定部分利润,减少回撤。
-
-ATR止损可有效控制单笔损失。
-
-较强的稳健性,可适用于不同市场和参数组合,容易实盘复制。
-
-## 风险分析
-
-如果ATR数值设置过大,可能导致止损距离过远,单笔亏损扩大。
-
-如果发生██╗盘整理,移动止盈机制会缩减盈利空间。
-
-如果回拉距离过深超过6根K线,会错过入场时机。
-
-如果遇到重大经济事件,交易可能遭遇滑点或假突破。
-
-## 优化方向  
-
-可以测试缩短入场根数,如从6根调整为4根K线,提高入场成功率。
-
-可以测试增加ATR倍数,进一步控制单笔止损。
-
-可以结合量能指标,避免整理背驰带来的损失。
-
-可以在回拉突破60分钟级别的中轴后入场,可过滤掉部分噪音。
-
-## 总结
-
-动量回拉策略总体来说是一个非常实用的短线捕捉策略。它结合趋势、反转、止损多个方面,既可便捷实盘操作,也具备一定的Alpha。通过参数调整和结合其他指标,可进一步提升稳定性。总的来说,该策略是量化交易的一大福音,值得学习和运用。
-
-|| 
 
 ## Overview
 
@@ -126,7 +67,6 @@ Enter on pullback break of 60min mid-point to filter noise.
 
 The Momentum Pullback Strategy is an overall very practical short-term mean reversion approach, incorporating elements of trend, reversal and risk management for easy real trading while still carrying alpha-generating potential. Further stability enhancements are possible through parameter tuning and combining additional indicators. It represents a great boon for quant trading and is well worth learning and applying.
 
-[/trans]
 
 > Strategy Arguments
 

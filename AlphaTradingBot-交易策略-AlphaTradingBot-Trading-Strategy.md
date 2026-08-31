@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13bf253153f1471ce21.png)
-[trans]
-#### 概述
-AlphaTradingBot是一款基于Zigzag指标和fibonacci数列的日内交易策略。该策略通过识别市场的高点(HH)和低点(LL)来判断趋势,并结合fibonacci回撤和扩张来设置入场点位、止盈和止损。该策略只在设定的日期区间内运行,可以分别做多和做空,具有一定的趋势把握能力和盈亏比把控。
-
-#### 策略原理 
-1. 通过Zigzag指标识别市场的高点(HH)、低点(LL)、较高低点(HL)和较低高点(LH)。
-2. 当出现HH时,视为上升趋势开始,开始寻找做多机会;当出现LL时,视为下降趋势开始,开始寻找做空机会。
-3. 在上升趋势中,如果出现HL,则以HL和之前的LL形成的区间作为多头的fibonacci回撤区间。若价格突破前高,则在回撤23.6%-38.2% (可设置)之间的区域开多单,止损设在回撤61.8%处,止盈以RR值(可设置)计算。
-4. 在下降趋势中,如果出现LH,则以LH和之前的HH形成的区间作为空头的fibonacci回撤区间。若价格突破前低,则在回撤61.8%-76.4% (可设置)之间的区域开空单,止损设在回撤38.2%处,止盈以RR值(可设置)计算。
-5. 订单管理:每次信号只开一单,直到该单平仓。如果单笔亏损达到账户总额的X%(可设置),则策略停止运行。
-
-#### 优势分析
-1. 趋势跟踪能力强。通过Zigzag有效识别趋势,可以在趋势初期介入。
-2. 回撤逻辑清晰。利用fibonacci回撤设置进场区间,在趋势回撤时介入,胜率相对较高。
-3. 风险可控。通过设置单笔最大亏损比例来控制每笔交易风险,同时严格的止损制度也保证了总风险可控。
-4. 盈亏比可优化。可根据市场特点和个人偏好,调整RR值来优化策略的盈亏比。
-
-#### 风险分析
-1. 频繁交易。由于Zigzag灵敏度较高,可能会频繁产生信号,导致过度交易。
-2. 趋势把握不精准。Zigzag判断的趋势仍可能出现偏差,导致入场时机不够理想。
-3. 震荡行情表现欠佳。在震荡市中,该策略可能产生较多的亏损交易。
-4. 运行周期有限。策略只在指定日期区间内运行,可能错失部分行情。
-
-#### 优化方向
-1. 引入更多技术指标,如MA、MACD等,提高趋势判断的精确度。
-2. 优化仓位管理,如根据ATR等指标动态调整头寸。
-3. 优化止盈止损逻辑,如根据市场波动率动态调整止损位。
-4. 引入市场情绪指标,在极度乐观或悲观时避免入场。
-5. 放宽日期限制,增加策略的普适性。
-
-#### 总结
-AlphaTradingBot是一款基于zigzag指标和fibonacci回撤的趋势跟踪日内策略。它通过高低点判断趋势,并在趋势回撤时入场,以追求更高的胜率和盈亏比。该策略的优势在于趋势把握能力强,回撤逻辑清晰,风险可测,但同时也存在过度交易、趋势判断偏差、震荡行情表现欠佳等风险。未来可从技术指标、仓位管理、止盈止损、市场情绪等方面对该策略进行优化,以提升策略的稳健性和盈利性。
-||
 #### Overview
 AlphaTradingBot is a day trading strategy based on the Zigzag indicator and Fibonacci sequence. The strategy identifies the high points (HH) and low points (LL) of the market to determine the trend, and uses Fibonacci retracements and expansions to set entry points, take-profits, and stop-losses. The strategy only runs within a specified date range and can go both long and short, with some ability to grasp trends and control risk-reward ratio.
 
@@ -74,7 +41,6 @@ AlphaTradingBot is a day trading strategy based on the Zigzag indicator and Fibo
 
 #### Summary
 AlphaTradingBot is a trend-following intraday strategy based on the Zigzag indicator and Fibonacci retracements. It determines trends through high and low points and enters during trend retracements, aiming to pursue a higher win rate and risk-reward ratio. The strategy's advantages lie in its strong trend-grasping ability, clear retracement logic, and measurable risk, but it also faces risks such as over-trading, trend misjudgment, and poor performance in range-bound markets. In the future, the strategy can be optimized in terms of technical indicators, position management, take-profit and stop-loss, and market sentiment to improve its robustness and profitability.
-[/trans]
 
 > Strategy Arguments
 

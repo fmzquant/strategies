@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ac51030ac10a407833.png)
-[trans]
-## 概述
-
-突破回调交易策略通过计算价格的绝对强度指标和MACD指标,实现在特定趋势下的突破回调交易,属于短线交易策略。该策略综合多个指标对大趋势、中期趋势和短期趋势进行判断,通过趋势同向且指标互补确认信号,进行趋势跟踪交易。
-
-## 策略原理  
-
-该策略主要基于价格绝对强度指标和MACD指标实现突破回调交易。首先计算价格的9周期、21周期和50周期EMA,判断大趋势方向;然后计算价格的绝对强度指标,反映短期调整力度;最后计算MACD指标判断短期趋势方向。当大趋势为上涨,且短期出现调整时买入;当大趋势为下跌,且短期出现反弹时卖出。
-
-具体来说,品种大趋势为上涨需满足9日EMA高于21日EMA,21日EMA高于50日EMA。短期调整判断标准为绝对强度指标差值低于0,MACDDIFF小于0。品种大趋势为下跌需满足9日EMA低于21日EMA,21日EMA低于50日EMA。短期反弹判断标准为绝对强度指标差值高于0,MACDDIFF高于0。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 结合大趋势和短期调整,避免假突破
-2. 多个指标组合使用,可靠性较高  
-3. 绝对强度指标反映调整力度,判断回调质量
-4. MACD可判断短期趋势和超买超卖区域
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 大趋势判断错误,可能导致交易失败
-2. 回调时间和力度判断错误,可能无效回调
-3. 极端行情下指标发散,产生错误信号
-
-针对以上风险,可通过优化参数,判断不同周期指标;调整持仓规则,控制单笔亏损;结合更多指标过滤信号,提高准确率等方法进行改进。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 测试更多指标的组合,寻找更匹配的交易策略
-2. 优化指标参数,提高指标的敏感性
-3. 调整止损方式,降低单笔亏损最大值
-4. 增加过滤条件,在更有效的区域发出信号
-5. 结合更多时间周期指标判断,提高判断准确性
-
-## 总结  
-
-综上所述,突破回调交易策略整体是一个较为稳定的短线交易策略。它结合大中短多重趋势判断,避免在震荡行情中错误交易。同时指标组合使用也提高了判断的准确性。通过后续的测试和优化,该策略可以成为一个值得长期持有的稳定策略。
-
-||
 
 ## Overview  
 
@@ -99,7 +54,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, the breakthrough callback trading strategy is generally a relatively stable short-term trading strategy. It combines multi-timeframe trend judgments to avoid erroneous transactions in oscillating markets. At the same time, the combined use of indicators also improves the accuracy of judgments. Through subsequent testing and optimization, this strategy can become a stable strategy worth holding for the long term.
 
-[/trans]
 
 > Strategy Arguments
 

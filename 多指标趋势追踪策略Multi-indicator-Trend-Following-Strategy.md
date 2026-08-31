@@ -10,82 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9635afdd039e3c8c39.png)
-[trans]
-
-## 概述
-
-本策略通过结合3个开源指标实现多时间轴的趋势判断,并设置止损止盈以锁定利润。具体来说,策略使用AK MACD BB指标判断短期趋势方向,SSL指标过滤掉部分假信号,最后结合成交量指标VSF判断真实买卖盘力度,从而判断入场时机。同时,策略预设止损止盈点以锁定利润,可大幅降低单笔交易的亏损风险。
-
-## 策略原理
-
-1. AK MACD BB指标
-
-    该指标将布林带应用于MACD指标,MACD指标线突破布林带上轨时产生买入讯号,下轨时产生卖出讯号。
-
-2. SSL指标
-
-    SSL指标判断价格是否突破均线,并检测回试信号。价格上穿均线且SSL指标为蓝色时为上升趋势,价格下穿均线且SSL指标为红色时为下降趋势,发出交易信号。
-
-3. VSF指标
-
-    VSF指标判断买卖双方力量。策略只在买方力量或卖方力量大于50%时发出信号,避免无效突破。
-
-4. 止损止盈
-
-    策略含有4档 progressive take profit,从1.5倍到3倍利润间隔设置。同时设置2%固定止损,有效控制单笔交易最大亏损。
-
-## 优势分析
-
-1. 多指标组合,判断准确 
-
-    通过不同指标判断多时间轴趋势,可过滤假信号,判断更准确。
-
-2. 自动止盈止损,风险可控
-
-    策略内置止盈止损设置,可将单笔交易亏损控制在2%左右,避免出现巨亏。
-
-3. 回测数据优异
-
-    根据发布者回测,100笔交易中,获利交易达到74%,427%总盈利。
-
-## 风险及对策分析
-
-1. 市场剧烈波动风险
-
-    在大级别区间震荡时,可能出现多次小幅亏损。此时可调整固定止损幅度,或暂停交易。
-
-2. 多头空头受限风险
-
-    目前策略可做多可做空。若限制只做多或只做空,则无法获利的机会将减少一半。
-
-3. 交易时段风险
-
-    策略使用5分钟数据进行判断,如果在一个交易日中只有几个小时数据,则样本量不足,信号可能不可靠。
-
-## 策略优化方向 
-
-1. 优化止损止盈参数
-
-    可以测试不同的止损止盈水平,找到最优参数。止损过小无法有效控制风险,止损过大则可能错失更大利润。
-
-2. 增加自动位置调整 
-
-    可设置追踪止损或移动止损来锁定利润。或根据特定条件加仓以获利更多。
-
-3. 结合其他指标
-
-    可测试不同指标的组合,判断哪些指标组合效果最好。也可以加入更多指标进行交叉验证。
-
-4. 参数优化
-
-    可通过不同参数进行回测,找到参数优化方向。本策略中,改变布林带参数或均线参数可能会产生更好结果。
-
-
-## 总结
-
-本策略整合多个指标判断趋势方向,设置自动止盈止损,能够在强势趋势中获利且将单笔交易亏损控制在很小的范围。从发布者的回测数据来看,其获利率和盈利率都非常理想。通过一定的优化,有望进一步提高策略的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -162,7 +86,6 @@ This strategy combines 3 open-source indicators to determine the trend across mu
 This strategy integrates multiple indicators to determine the trend direction, and sets automatic stop loss and take profit points, allowing profits to be made during strong trends while keeping the loss per trade very small. Judging from the backtest data published by the author, its profit rate and return are very ideal. With certain optimizations, there is potential to further improve the stability and profitability of the strategy.
 
 
-[/trans]
 
 > Strategy Arguments
 

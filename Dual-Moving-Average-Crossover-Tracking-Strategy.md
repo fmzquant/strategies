@@ -10,18 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans] 
-双均线交叉追踪策略
-
-该策略通过计算两组移动平均线SMA和EMA的交叉情况,判断市场趋势方向并进行追踪交易。
-
-具体来说,它使用一快一慢两组移动平均线,当快线上穿慢线时做多,当快线下穿慢线时做空。平仓条件为价格重新跌破慢线或超过快线。此外,该策略还提供自定义均线周期长度、 barred关闭等参数进行优化。
-
-这种双均线策略的优点是交易规则简单清晰,只需要跟踪两个均线的动态变化。使用EMA可更敏感地捕捉趋势转折。但在盘整行情中也容易被套取反。
-
-总体来说,双均线交叉追踪策略适用于趋势行情,能够顺势而为谋利。但必须适当调整参数,严格控制止损和仓位,才能长期稳定运用该策略。
-
-||
 
 This strategy calculates crossover between two groups of moving averages SMA and EMA to determine market trend direction for tracking trades.
 
@@ -31,7 +19,6 @@ The advantage of this dual MA strategy is simple and clear rules based on two dy
 
 In general, the dual MA crossover tracking strategy suits trending markets for trading in the direction of momentum. But proper parameter tuning, strict stop loss and position sizing is crucial for long-term stability of this strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/143517842f7d9dddfca.png)
-[trans]
-
-## 概述
-
-均值回归动量策略是一种追踪短期价格平均的趋势交易策略。它结合了均值回归指标和动量指标,实现了对市场中期趋势的判断。
-
-## 策略原理
-
-该策略首先计算价格的均值回归线和标准差。然后结合Upper Threshold和Lower Threshold参数设定好的阈值,计算价格是否超出了均值回归线一个标准差范围。如果超出,则产生交易信号。 
-
-对于多头信号,需要价格低于均值回归线一个标准差,Close价格低于LENGTH周期的SMA均线,且高于TREND SMA均线,满足这三个条件就进行做多方向的开仓。平仓条件是价格上穿LENGTH周期的SMA均线。
-
-对于空头信号,需要价格高于均值回归线一个标准差,Close价格高于LENGTH周期的SMA均线,且低于TREND SMA均线,满足这三个条件就进行做空方向的开仓。平仓条件是价格下穿LENGTH周期的SMA均线。
-
-该策略同时结合Percent Profit Target和Percent Stop Loss,实现止盈止损管理。
-
-Exit方式可以选择移动平均线突破或者线性回归突破。
-
-通过多空双边交易、趋势过滤、止盈止损等组合,实现了对市场中期趋势的判断和跟踪。
-
-## 策略优势
-
-1. 均值回归指标能够有效判断价格是否偏离价值中心
-
-2. 动量指标SMA能过滤掉短期市场噪音
-
-3. 多空双边交易,能够全方位捕捉趋势机会
-
-4. 止盈止损机制能够有效控制风险
-
-5. 可选择的Exit方式,能够灵活适应市场环境
-
-6. 完整的趋势交易策略,较好地把握中期趋势
-
-## 策略风险
-
-1. 均值回归指标对参数设置敏感,阈值设定不当可能导致虚假信号
-
-2. 大幅震荡行情中可能出现止损过于频繁的情况
-
-3. 震荡趋势时,交易频率可能过高,增加交易费用和滑点风险
-
-4. 交易品种流动性不足时,滑点控制可能不理想
-
-5. 多空双边交易风险较大,需要谨慎资金管理
-
-可以通过参数优化、止损方式调整、资金管理等方法来控制这些风险。
-
-## 策略优化方向 
-
-1. 优化均值回归和动量指标的参数设定,使其更符合不同品种的特点
-
-2. 增加趋势判断指标,提高对趋势的识别能力
-
-3. 优化止损策略,使其更能适应市场大幅波动
-
-4. 增加仓位管理模块,根据市场条件调整仓位规模
-
-5. 增加更多风控模块,如最大回撤控制、净值曲线控制等
-
-6. 考虑结合机器学习方法,使策略参数自动优化
-
-## 总结
-
-综上所述,均值回归动量策略通过简单有效的指标设计,实现了对中期价值回归趋势的捕捉。策略具有较强的适应性和普适性,但也存在一定的风险。通过持续优化和组合其他策略,能够取得更好的绩效。该策略整体较完整,是一种值得考虑的趋势交易方法。
-
-||
 
 
 ## Overview
@@ -143,7 +76,6 @@ These risks can be controlled through parameter optimization, stop loss adjustme
 
 In summary, the mean reversion momentum strategy captures mid-term mean reversion trends through simple and effective indicator design. The strategy has strong adaptability and versatility, but also has some risks. By continuous optimization and combining with other strategies, better performance can be achieved. Overall the strategy is quite complete, and is a trend trading method worth considering.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11ea8dec289591b6f4e.png)
-[trans]
-### 概述
-
-本策略名为“炫彩闪电”,是一个基于三条移动平均线的趋势跟随策略。它通过计算快线、中线和慢线的交叉来判断价格趋势,并以ATR值设置目标价位和止损价位。
-
-### 策略原理  
-
-该策略使用以下三条移动平均线:
-
-1. 13日加权移动平均线,用于判断短期趋势
-2. 55日指数移动平均线,用于判断中期趋势  
-3. 110日简单移动平均线,用于判断长期趋势
-
-当快线上穿中线,中线上穿慢线时,判断为看多趋势;当快线下穿中线,中线下穿慢线时,判断为空头趋势。
-
-为过滤掉部分噪音交易,策略还设置了多个辅助条件:  
-
-1. 前5根K线低点都在中线之上
-2. 前2根K线有低点跌破中线 
-3. 前1根K线收盘价在中线之上
-
-符合这些条件时,会发出做多或做空的信号。每次只持有一个头寸,平仓或止损后才可再次开仓。
-
-目标价位和止损价位根据ATR值的一定倍数设置。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 使用三条移动平均线组合判断趋势,避免了单一指标判断失误的概率。 
-2. 设置多个辅助条件过滤噪音交易,可以提高信号质量。  
-3. ATR动态止损,有利于控制单笔亏损。
-
-### 风险分析  
-
-该策略也存在以下风险:  
-
-1. 移动平均线组合可能发出错误信号,需要充分回测。
-2. ATR倍数设置不当可能导致止损过于宽松或严格。 
-3. 无法有效过滤突发事件的价格震荡。
-
-为控制风险,建议适当调整移动平均线参数,优化ATR倍数,并设置最大持仓时间,避免单笔损失过大。
-
-### 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 测试不同长度或类型的移动平均线。
-2. 优化辅助条件的参数。  
-3. 尝试其他指标预测趋势。如MACD,DMI等。  
-4. 结合量能指标如成交量,价差等过滤信号。  
-
-### 总结  
-
-本策略“炫彩闪电”整体是一个稳定的趋势跟随策略。它主要依靠移动平均线判断趋势方向,并有一定的技术指标组合作为辅助,可以过滤部分噪音。虽然仍有进一步优化的空间,但整体风险可控,适合跟随中长线趋势进行投资。
-
-||
 
 ### Overview  
 
@@ -123,7 +66,6 @@ Possible optimizations for this strategy:
 
 The "Dazzling Bolts" strategy is generally a steady trend following system. It mainly uses moving average crossovers to determine trend direction, with certain technical indicator combinations as auxiliary means to filter some noise. Although there is room for further optimization, its overall risk is controlled and it is suitable for investing along medium-to-long term trends.  
 
-[/trans]
 
 > Strategy Arguments
 

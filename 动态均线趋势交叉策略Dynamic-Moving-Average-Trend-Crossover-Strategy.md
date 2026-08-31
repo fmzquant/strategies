@@ -10,29 +10,6 @@ ChaoZhang
 > Strategy Description
 
  ![IMG](https://www.fmz.com/upload/asset/1363553ddb9b70c97d9.png)
-[trans]
-
-### 概述
-动态均线趋势交叉策略是一种基于MACD（移动平均收敛发散指标）的交易系统。该策略依据短期与长期移动平均线的差异来判断市场趋势，从而作出买入或卖出的决策。其主要思想是通过监测短期和长期趋势之间的关系，来预测市场的潜在变化。
-
-### 策略原理
-该策略使用了两个不同周期的指数移动平均线（EMA）：快速EMA（8日）和慢速EMA（16日）。MACD值由这两条EMA的差值构成。此外，策略还引入了一个信号线，即MACD的简单移动平均线（11日）。当MACD线上穿信号线时，代表多头趋势，策略执行买入操作；当MACD线下穿信号线时，代表空头趋势，执行卖出操作。
-
-在代码层面，策略首先计算快速和慢速EMA，然后得出MACD值。随后，计算MACD的SMA，作为信号线。通过比较MACD和信号线的位置，策略确定当前的持仓状态。此外，策略还提供了反向交易的选项，允许用户在相反的信号出现时进入市场。
-
-### 策略优势
-动态均线趋势交叉策略的主要优势在于其简洁性和对市场趋势变化的敏感性。通过使用不同周期的EMA，该策略能够有效捕捉到短期和长期趋势之间的偏差，从而及时响应市场变化。此外，信号线的加入进一步提高了策略的准确性，使投资者能够更快地识别趋势转变。
-
-### 风险分析
-尽管动态均线趋势交叉策略在多数情况下表现良好，但它也存在一些风险。最主要的风险是在市场波动性较大或趋势不明显时，该策略可能产生误导性信号。此外，策略对历史数据的依赖也可能导致延迟反应。为减轻这些风险，投资者可以结合其他技术指标或市场分析来辅助决策。
-
-### 优化方向
-该策略的优化方向主要包括调整EMA周期长度、引入其他技术指标以及考虑市场波动性因素。调整周期长度可以使策略更适应不同市场条件。引入如RSI、布林带等其他指标可以提供更全面的市场视角。考虑市场波动性因素，如通过ATR调整交易策略，可以增强策略的适应性和稳健性。
-
-### 总结
-动态均线趋势交叉策略是一种以MACD为核心的量化交易策略。它通过分析短期与长期趋势的关系，来把握市场动向。虽然这种策略简洁有效，但也需要注意其局限性和潜在风险。通过不断优化和结合其他分析工具，投资者可以更好地利用这一策略，实现有效的市场操作。
-
-||
 
 ### Overview
 The Dynamic Moving Average Trend Crossover Strategy is a trading system based on the Moving Average Convergence Divergence (MACD) indicator. This strategy relies on the difference between short-term and long-term moving averages to make buy or sell decisions, with the main idea being the monitoring of the relationship between short-term and long-term trends to predict potential market changes.
@@ -55,7 +32,6 @@ Optimization of this strategy can include adjusting the lengths of the EMA perio
 
 ### Conclusion
 The Dynamic Moving Average Trend Crossover Strategy is a quantitative trading strategy centered around the MACD. It aims to grasp market movements by analyzing the relationship between short-term and long-term trends. While this strategy is straightforward and effective, it is important to be aware of its limitations and potential risks. By continuously optimizing and integrating other analytical tools, investors can better utilize this strategy for effective market operations.
-[/trans]
 
 > Strategy Arguments
 

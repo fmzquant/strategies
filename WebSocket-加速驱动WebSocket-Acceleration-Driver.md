@@ -9,29 +9,6 @@ WebSocket-加速驱动WebSocket-Acceleration-Driver
 
 > Strategy Description
 
-[trans]
-基于WebSocket的实时行情数据加速模板类库
-
-#### 描述：
-该策略通过多线程WebSocket连接优化了多个交易所的实时数据处理。在FMZ量化交易平台中使用WebSocket连接获取深度订单簿和交易数据，显著降低了获取市场数据的延迟，并提高了高频交易系统的性能。
-
-主要特点：
-- **多交易所支持**：该策略支持币安、OKX、Bybit、Bitget等多个交易所的WebSocket连接，提供比传统REST API轮询更快、更稳定的数据流。
-- **可定制订阅**：允许订阅特定市场频道（如深度、交易等），并高效处理接收的数据，供交易策略即时使用。
-- **高级错误处理**：内置错误跟踪和WebSocket重连机制，确保数据流的可靠性和持续性。
-- **CRC32校验**：对于OKX等交易所，集成了CRC32校验功能，确保接收到的订单簿数据的完整性。
-
-此基于WebSocket的解决方案取代了传统的API轮询，适用于需要最小化延迟、最大化市场响应速度的交易者。
-
-#### 使用方法：
-1. **初始化**：使用 `$.setupWebsocket()` 初始化目标交易所的WebSocket连接。
-2. **订阅**：系统会自动为你交易的品种订阅相关频道（如深度、交易等）。
-3. **数据获取**：通过调用 `GetDepth()` 和 `GetTrades()` 函数，自动使用WebSocket实时数据进行市场深度和交易记录的返回。
-4. **错误处理**：策略包括一个追踪机制，用于记录连接和数据错误，并在连接中断时自动尝试重新连接。
-
-此脚本旨在FMZ量化平台上运行，为多个交易所提供快速、可靠且可扩展的市场数据访问。
-
-||
 
 ### WebSocket Acceleration Strategy 
 
@@ -58,7 +35,6 @@ This WebSocket-based solution replaces the traditional API polling with real-tim
 This script is designed to run on the FMZ quant platform, providing fast, reliable, and scalable access to market data across multiple exchanges.
 
 
-[/trans]
 
 ``` javascript
 function main() {

@@ -10,98 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1654f0e82a49dc4a3ee.png)
-[trans]
-## 概述
-本策略运用超趋势指标来判断价格趋势,并在趋势转换时进入做多或做空头寸。该策略允许调整ATR周期和ATR乘数来优化参数。此外,该策略还提供了选项来更改ATR计算方法,从而产生略有不同的结果。 
-
-策略还内置了回测日期范围设置和只在某些时间段内交易的功能。这对于日内交易股票尤其有用。当启用时间范围选项时,可选择在时间段开始时立即进入当前头寸,或等待趋势转换后再进入首单。
-
-该策略也可基于百分比设置止损位和止盈位。在大多数情况下,由于超趋势本身提供的基于ATR的止损,不需要额外设置止损。因此可以仅启用止盈位来优化退出机制。
-
-最后,该策略具有自定义的交易入场和退出的警报信息功能,可用于自动交易服务。
-
-## 策略原理
-
-超趋势策略基于以下主要原理运行:
-
-1. 计算ATR值:可以选择使用SMA计算,也可以使用内置的ATR指标计算。SMA版本的公式为:
-    ```
-    atr2 = sma(tr, Periods) 
-    ```
-
-2. 计算上轨和下轨:上轨为价格减去ATR乘数与ATR的乘积,下轨为价格加上ATR乘数与ATR的乘积。
-    ```
-    up = close - (Multiplier * atr)
-    dn = close + (Multiplier * atr)
-    ```
-
-3. 判断价格与上下轨的关系,计算趋势方向。当价格上穿下轨时趋势为多头,当价格下穿上轨时趋势为空头。
-    ```
-    trend := trend == -1 and close > dn ? 1 : trend == 1 and close < up ? -1 : trend 
-    ```
-
-4. 在趋势转换时产生交易信号,如从多头转为空头时产生卖出信号:
-    ```
-    sellSignal = trend == -1 and trend[1] == 1
-    ```
-
-5. 根据交易信号和其他条件过滤,选择是否入场。
-
-6. 设置止损和止盈以锁定利润或规避风险。
-
-以上是超趋势策略的关键要点,结合参数优化,可以获得较好的交易结果。
-
-## 策略优势
-
-本超趋势策略有以下几个优势:
-
-1. 超趋势指标本身能有效判断价格趋势,是一种常用的跟踪止损工具。
-
-2. ATR参数可调,可以优化到不同品种获得最佳参数组合。SMA计算方式也提供了另一种选择。
-
-3. 可设置回测和实盘交易的时间范围,适应不同交易时段需求。
-
-4. 提供选择立即进入首单或等待信号的选项,可根据品种特点选择。 
-
-5. 内置的止损止盈设定可以提高策略抗风险能力或锁定更多利润。
-
-6. 自定义的交易提示信息,可集成至自动或机器人交易系统,实现无人值守。
-
-## 策略风险
-
-本策略也存在一些风险:
-
-1. 超趋势指标可能产生较多虚假信号,需要结合其他指标过滤。
-
-2. ATR参数不当可能导致交易频繁或错过趋势。需要参数优化得到最佳平衡。
-
-3. 停损点过近可能过早退出有利头寸,止盈点过远可能无法锁定足够利润。
-
-4. 时间范围设定不当,可能错过主要交易时段或无谓占用保证金。
-
-针对以上风险,可以通过适当调整参数或添加过滤条件来解决,提高策略稳定性。
-
-## 策略优化方向 
-
-本策略可从以下几个方面进行进一步优化:
-
-1. 尝试不同的ATR周期参数,找到合适的平衡点。一般10-20之间比较理想。
-
-2. 测试不同的ATR乘数参数,一般2-5比较适合,可逐步调整找到最佳值。 
-
-3. 尝试添加其他指标判断多空向,如MACD,KD等,过滤假信号。
-
-4. 对止损止盈参数进行优化,找到最优参数组合。可引入动态止盈止损。
-
-5. 测试不同的交易时间范围设置。日内短线品种适合较短时间段。
-
-6. 尝试自动选择合约,跟踪高流动性或波动率较大的标的。
-
-## 总结
-
-本超趋势策略整体来说是一种较为常见和实用的趋势跟踪策略。它具有参数可调、高效跟踪趋势的特点,也存在一定的风险需要规避。通过参数优化和 CONDITIONS 添加,可以将该策略优化为一个可靠的量化交易系统,获得稳定的Alpha。
-
-||
 
 ## Overview
 This strategy uses the Supertrend indicator to determine price trends and enters long or short positions when the trends change. The strategy allows adjusting the ATR period and multiplier to optimize parameters. It also provides the option to change the ATR calculation method for slightly different results. 
@@ -195,7 +103,6 @@ Some ways the strategy can be further optimized:
 ## Conclusion
 Overall this is a fairly common and practical trend following strategy. It efficiently tracks trends with customizable parameters, but also has inherent risks to manage. With optimization and additional conditions, it can be refined into a robust quant trading system with consistent alpha.
 
-[/trans]
 
 > Strategy Arguments
 

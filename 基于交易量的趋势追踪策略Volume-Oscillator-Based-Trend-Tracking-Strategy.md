@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17bf34d03353ce21c60.png)
-[trans]
-
-
-## 概述
-
-基于交易量的趋势追踪策略通过计算交易量的多空比例,判断当前趋势方向,实现追踪趋势交易。该策略受到交易量指标(On-Balance Volume, OBV)的启发,通过计算close与open的关系判断交易量正负,再取N日移动平均构建指标,指标上穿上轨做多,下穿下轨做空。
-
-## 原理
-
-该策略主要通过以下步骤构建:
-
-1. 计算交易量正负:如果收盘价高于开盘价,该根K线的交易量记为正;如果收盘价低于开盘价,该根K线的交易量记为负;如果收盘价等于开盘价,该根K线的交易量记为0。
-
-2. 累加N日交易量正负值,得到累积交易量。
-
-3. 计算累积交易量的N日移动平均,得到最终指标值。 
-
-4. 当指标上穿上轨时做多;当指标下穿下轨时做空。
-
-这样通过交易量正负性判断趋势方向,再结合移动平均产生交易信号,可以有效跟踪趋势,捕捉中长线走势。
-
-## 优势
-
-- 基于交易量判断趋势更有说服力,交易量能反映市场参与者意愿。
-
-- 结合移动平均平滑曲线,有利于跟踪趋势,减少频繁交易。
-
-- 通过调整移动平均天数,可以适应不同周期的市场节奏。
-
-- 通过上下轨组合,可以明确判断做多做空时机。
-
-- 策略逻辑简单清晰,容易理解实现。
-
-## 风险
-
-- 存在指标发出错误信号的风险,跟踪趋势时也可能被困在震荡行情中。
-
-- 在剧烈行情中,指标可能出现背离。
-
-- 上下轨静态设定,无法动态适应市场波动。
-
-- 未考虑止损策略,存在亏损扩大的风险。
-
-- 移动平均存在滞后,可能错过趋势转折点。
-
-## 优化思路
-
-- 可以考虑结合其他指标进行组合交易,避免错误信号。
-
-- 动态计算上下轨参数,使之能自适应市场波动。
-
-- 增加止损机制,控制单笔亏损。
-
-- 调整移动平均类型,适应市场节奏。
-
-- 优化移动平均周期参数,提高顺势捕捉效果。
-
-- 可以考虑在突破上下轨时,采用追踪止损来锁定利润。
-
-## 总结
-
-基于交易量的趋势追踪策略通过计算交易量正负性判断趋势,移平均产生交易信号,从而有效跟踪中长线趋势。该策略优势在于趋势判断准确,符合大多数交易者的长线操作习惯。但是也存在一定问题,需要进一步优化,使之能更好地应对市场的复杂性。总体而言,该策略为量化交易提供了一种简单实用的趋势追踪方案,契合大部分量化交易者的需求。
-
-||
 
 ## Overview
 
@@ -135,7 +71,6 @@ By judging the trend direction through volume positivity/negativity and generati
 
 The volume oscillator strategy effectively tracks medium- to long-term trends by judging trends via volume positivity/negativity and generating signals with moving averages. Its advantage lies in accurate trend determination and alignment with most traders' long-term practices. However, some problems remain that require further enhancements to handle market complexity better. Overall, this simple and practical trend tracking approach caters well to the needs of most quant traders.
 
-[/trans]
 
 > Strategy Arguments
 

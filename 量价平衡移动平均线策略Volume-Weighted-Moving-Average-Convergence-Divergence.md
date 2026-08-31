@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f8caec5f7706a7c006.png)
-[trans]
-
-## 概述
-
-本策略为经典MACD指标的改进版本,使用了11种不同类型的移动平均线来平滑价格曲线,以减少误导信号。指标由快线、慢线和柱线组成。快线和慢线分别采用价格的快速移动平均线和慢速移动平均线。柱线则表示快线和慢线之间的差值。当快线从下向上突破慢线时产生买进信号,相反产生卖出信号。
-
-## 策略原理
-
-1. 计算快速移动平均线MA12。允许选择11种不同的移动平均线计算方法,默认为变化率线VAR。
-
-2. 计算慢速移动平均线MA26。允许选择11种不同的移动平均线计算方法,默认为变化率线VAR。
-
-3. 计算快慢线差值SRC2 = MA12 - MA26。
-
-4. 对SRC2计算触发线MATR,采用长度为9的移动平均线,可选择11种计算方法,默认为变化率线VAR。
-
-5. 计算MACD柱线HIST = SRC2 - MATR。当柱子由负数变为正数时产生买入信号,由正数变为负数时产生卖出信号。
-
-## 优势分析
-
-1. 可选择11种不同的移动平均线来计算快慢线和触发线,大幅度减少了常见移动平均线的滞后性,提高了预测信号的准确性。
-
-2. 变化率线VAR可自动调整移动平均线的权重,从而更好地适应市场变化。
-
-3. 应用了缓冲区原理的双移动平均线可有效过滤市场噪音。
-
-4. MACD柱线作为触发信号可克服传统MACD快慢线交叉时带来的滞后问题。
-
-## 风险分析
-
-1. MACD指标对趋势震荡行情的判断能力较弱。
-
-2. 移动平均线本身会产生一定的滞后。VAR变化率线可部分减轻但无法完全解决。
-
-3. 误差积累会导致出现错误信号或错过有效信号的情况。
-
-## 优化方向
-
-1. 针对具体市场行情选择匹配的移动平均线计算方法。结合回测结果选择比较准确的组合。
-
-2. 优化快慢线和触发线的长度参数,寻找最佳参数组合以减少错误信号。
-
-3. 添加附加指标判断来确认买卖信号,可考虑RSI,布林带等指标。
-
-## 总结
-
-本策略为MACD经典指标的优化版本。采用多种移动平均线模式计算MACD的快慢线和柱线,大大增强了指标的实用性。同时也存在一定的局限性,需要根据实际情况针对性地不断优化,才能在交易中发挥最大效用。
-
-
-||
 
 
 ## Overview
@@ -108,7 +58,6 @@ This strategy is an improved version of the classic MACD indicator, using 11 dif
 
 This strategy is an optimized version for the classic MACD indicator. By using multiple moving average patterns to compute the MACD fast line, slow line and histogram, it greatly enhances the utility of this indicator. Meanwhile, it also has certain limitations. Continuous optimization catered to actual market conditions is needed to maximize the efficacy in trading.   
 
-[/trans]
 
 > Strategy Arguments
 

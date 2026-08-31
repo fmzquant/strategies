@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/132c26b260629bb8548.png)
-[trans]
-
-
-### 概述
-
-本策略运用经典的一目均衡指标中转线和基准线构成的金叉、死叉信号,判断市场的趋势方向,以发现潜在的买入和卖出机会。当转线上穿基准线时,视为买入信号;当转线下穿基准线时,视为卖出信号。结合 Ichimoku 云图的先导Span B线判断长期趋势方向,可有效过滤掉部分不理想的交易信号。
-
-### 策略原理
-
-该策略主要基于以下几点原理:
-
-1. 一目均衡指标中的转线代表近期的价格动量,基准线代表中长期的价格走势。当转线上穿基准线时,代表近期动量强于中长期趋势,属于建仓的良好时机;反之,则代表需警惕平仓。
-
-2. Ichimoku 云图的先导 Span B 线能够有效判断大盘长期趋势的方向。策略只在 Span B线的方向与交易信号一致时才发出交易信号。这能过滤掉部分与大趋势不符的交易机会,避免随机的交易风险。
-
-3. 结合转线与基准线的交叉信号和 Ichimoku 云图的判断,可以在大趋势向上的条件下捕捉中短期价格的强势反弹,实现超额收益。
-
-4. 当买入信号被触发后,若价格跌破云图的 Senkou Span A 或 Senkou Span B 线,说明中长期趋势发生变化,应及时止损平仓。
-
-### 策略优势
-
-本策略最大的优势在于:
-
-1. 一目均衡指标参数设置灵活,能够对不同周期的价格变动进行有效跟踪。
-
-2. Ichimoku 云图判断大趋势的能力强,有利于避免随机交易。 
-
-3. 转线与基准线的交叉系统简单清晰,容易判断和实现自动交易。
-
-4. 仅基于两个指标,实现了多时间维度的综合判断,不会产生假信号。
-
-5. 策略方式简单积极,适合追踪中短期强势反弹,可获较高收益。
-
-### 策略风险
-
-本策略的主要风险在于:
-
-1. 一目均衡指标对参数设置较为敏感,不同周期参数不当会产生错误交易信号。
-
-2. 存在一定的随机交易风险,中短期信号可能与大趋势不一致。
-
-3. 仅基于两个指标组合使用,存在切入点选择的局限性。
-
-4. 追涨杀跌的交易方式,可能带来一定程度的资金亏损风险。
-
-5. 存在一定的过优化风险,需要针对不同品种谨慎优化参数。
-
-### 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 测试不同的一目均衡指标参数组合,寻找最佳周期参数。
-
-2. 增加其他指标过滤信号,如 MACD、RSI 等,提高策略稳定性。 
-
-3. 增加止损策略,如趋势线止损、移动止损等,控制风险。
-
-4. 优化仓位管理,根据市场波动程度动态调整仓位。
-
-5. 测试不同品种参数健壮性,防止过拟合。
-
-6. 采用机器学习算法自动优化参数,实现动态调整。
-
-### 总结
-
-本策略整合运用一目均衡指标和 Ichimoku 云图判断系统,实现了对中短期趋势的有效跟踪。策略方式简单清晰,易于实盘操作。但仍需注意参数优化、仓位控制等问题,降低交易风险。总体来说,本策略具有较高的盈利能力,值得进行试验与修正,以发掘其潜力。
-
-||
 
 
 ## Overview
@@ -144,7 +76,6 @@ The strategy can be enhanced via:
 
 This strategy effectively combines Ichimoku Kinko Hyo and crossover systems for mid-term trend tracking. The approach is simple and clear for practical application. Careful parameter optimization, position sizing and risk control can reduce trading risks. Overall, it demonstrates strong profit potential worth experimenting with and refining further.
 
-[/trans]
 
 > Strategy Arguments
 

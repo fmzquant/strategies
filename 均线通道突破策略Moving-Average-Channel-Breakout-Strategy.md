@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d2ce4aa21034f682dc.png)
-[trans]
-## 概述
-
-该策略通过计算Keltner通道的中轨、上轨和下轨,以中轨为基础, ABOVE中轨和下轨填充颜色。在通道方向判断后,进行突破买卖。属于趋势跟踪策略的一种。
-
-## 策略原理  
-
-核心指标为Keltner通道。通道中轨为典型价格(最高价+最低价+收盘价)/3的N日加权移动平均线。通道上轨线和下轨线分别离中轨线一个交易范围的N日加权移动平均线。 其中,交易范围可以选用真实波幅ATR,也可以直接采用振幅(最高价-最低价)。该策略采用后者。  
-
-具体来说,策略主要判断价格是否突破上轨或下轨,以中轨为分界进行多头或空头决策。 若收盘价大于上轨,做多;若收盘价小于下轨,做空。止损线为中轨 MA 值。
-
-## 优势分析
-
-1. 使用Keltner通道指标,对价格波动范围有较好判断,避免假突破。
-2. 采用中轨均线作为支撑位,可以减少亏损。
-3. 突破上轨做多下轨做空,属于趋势跟踪策略,符合大部分股票的价格变化规律。  
-
-## 风险分析
-
-1. 突破通道策略对参数很敏感,需要反复测试寻找最佳参数组合。  
-2. 股票价格短期内出现大幅波动时,会增加交易风险。可适当放宽通道宽度来降低误交易风险。
-3. 效果与参数设置和品种相关性较大,需要调整适应不同品种。
-
-## 优化方向  
-
-1. 结合其他指标过滤信号,避免误交易。例如量能指标、波动率指标等。
-2. 优化参数,寻找最佳参数组合。主要调整平均线参数和通道倍数。
-3. 不同品种参数设置会有较大差异,需要分类优化。
-
-## 总结  
-
-该策略整体来说较为简单直接,属于常见的价格突破策略的一种。优点是思路清晰,容易理解实现,适合初学者学习。但也存在一定局限性,对参数敏感,效果参差不齐,需要反复测试优化。如果能够结合其他更复杂判断指标,可以形成较强大的交易策略。
-
-||
 
 ## Overview
 
@@ -77,7 +43,6 @@ Specifically, the strategy mainly judges whether the price breaks through the up
 
 In general, this strategy is relatively simple and direct, and it is a common price breakthrough strategy. The advantage is that the idea is clear and easy to understand and implement, which is suitable for beginners to learn. But there are also certain limitations. It is sensitive to parameters, the results are uneven, and repeated testing and optimization are required. If it can be combined with more complex judgment indicators, it can form a more powerful trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/162584adc117aebc6e2.png)
-[trans]
-
-
-## 概述
-
-这个策略利用布林带的动态上下轨,实现当价格突破布林带上轨的时候做多,当价格跌破布林带下轨的时候平仓。与传统的突破策略不同的是,布林带上下轨会根据历史波动率动态变化,可以更好地判断市场的超买超卖状态。
-
-## 策略原理
-
-该策略主要依靠布林带指标判断价格的突破。布林带包含三条线:
-
-1. 中线:n天移动平均线
-2. 上轨:中线 + k * n天标准差
-3. 下轨:中线 - k * n天标准差
-
-当价格上涨超过上轨时,认为市场处于超买状况,可以做多。当价格下跌超过下轨时,认为市场处于超卖状况,应该平仓。
-
-该策略允许自定义布林带的参数:中线长度n和标准差的倍数k。默认中线长度为20天,标准差倍数为2。
-
-股票每日收盘后,会检查当天的收盘价是否突破上轨。如果是,则第二天开盘时执行做多信号。做多后,会实时监控价格是否突破下轨,如果突破则平仓。
-
-该策略还引入了均线过滤器,只有当价格高于均线时,才会生成做多信号。可以选择在当前周期或更高周期绘制均线,以控制进入的时间点。
-
-止损方式也提供了两个选择:固定百分比止损或跟踪布林带下轨。后者可以提供更大的空间让利润运行。
-
-## 策略优势
-
-- 利用布林带判断市场 SUPERBUY/SUPPERSELL
-- 均线过滤,避免逆势交易
-- 可自定义布林带参数,适应不同周期
-- 提供两种止损方式选择
-- 支持回测优化参数,实盘验证策略
-
-## 策略风险
-
-- 布林带并不能完全判断超买超卖
-- 均线过滤可能错过较快突破机会 
-- 固定止损可能过于保守,跟踪止损可能过于激进
-- 需要优化参数以适应不同品种和周期
-- 无法限制亏损大小,须考虑资金管理
-
-## 策略优化
-
-- 测试不同的均线参数组合
-- 尝试不同的布林带参数
-- 比较固定百分比止损和下轨跟踪止损的收益率
-- 增加资金管理模块,限制单笔损失
-- 结合其他指标验证布林带信号
-
-## 总结
-
-该策略利用布林带的动态上下轨判断超买超卖,参考均线过滤信号,采用止损保护资金。相比传统固定轨道突破,更能适应市场的波动。通过参数优化和风险控制,可以进一步提高策略稳定性和收益率。总体来说,该策略利用布林带的动态特性,获取了突破策略的优点,值得实盘验证和长期跟踪优化。
-
-||
 
 
 ## Overview
@@ -116,7 +62,6 @@ Two stop loss choices are provided: fixed percentage stop loss or trailing the l
 
 The strategy identifies overbought/oversold conditions using Bollinger Bands' dynamic bands, refers to moving average filters, and uses stops to protect capital. Compared to traditional fixed-level breakouts, it adapts better to market fluctuations. With further parameter optimization and risk controls, the strategy can achieve higher stability and returns. Overall, by utilizing the dynamic nature of Bollinger Bands, the strategy captures the strengths of breakout strategies and is worth live trading and long-term optimization.
 
-[/trans]
 
 > Strategy Arguments
 

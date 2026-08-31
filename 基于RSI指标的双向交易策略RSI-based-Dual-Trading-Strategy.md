@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f370b90691fce8255b.png)
-[trans]
-
-## 概述
-
-该策略基于相对强弱指标(RSI)设计了一个双向交易策略。通过比较RSI指标与预设的买入和卖出阈值,策略在RSI指标超卖时买入,超买时卖出,以此捕捉市场的波动机会。
-
-## 策略原理
-
-相对强弱指标(RSI)是一种衡量市场超买超卖的技术指标。该指标通过比较一段时间内价格上涨日的平均涨幅和下跌日的平均跌幅,来判断市场的超买超卖状态。
-
-这个策略的核心是通过比较RSI指标与预设的买入阈值(默认为30)和卖出阈值(默认为70)来产生交易信号。当RSI指标从下向上突破买入阈值时,策略会产生买入信号;当RSI指标从上向下突破卖出阈值时,策略会产生卖出信号。
-
-通过这种方式,策略试图在市场超卖时买入,超买时卖出,以此捕捉市场波动带来的交易机会。同时,由于RSI指标对市场的趋势性行情和震荡性行情都有一定的适应性,因此该策略在不同的市场环境下都有一定的适用性。
-
-## 优势分析
-
-1. 简单易用:该策略只使用了一个技术指标,策略逻辑清晰明了,适合新手QuantConnect用户学习和使用。
-
-2. 适应性强:RSI指标对市场的趋势性行情和震荡性行情都有一定的适应性,因此该策略在不同的市场环境下都有一定的适用性。
-
-3. 参数灵活:策略的买入阈值和卖出阈值可以根据用户的风险偏好和市场特点进行灵活调整,以优化策略表现。
-
-## 风险分析
-
-1. 震荡市风险:在震荡市中,价格在买入阈值和卖出阈值之间来回波动,可能会产生频繁的交易信号,导致交易成本增加,并降低策略收益。
-
-2. 趋势市风险:在单边趋势市中,RSI指标可能长期处于超买或超卖区间,导致策略错失趋势行情带来的投资机会。
-
-3. 参数优化风险:策略的表现对买入阈值和卖出阈值的设置比较敏感,不恰当的参数设置可能导致策略表现不佳。
-
-## 优化方向
-
-1. 结合其他技术指标:可以考虑将RSI指标与其他趋势类或波动类指标结合使用,以提高策略的稳定性和可靠性。例如,可以使用移动平均线来确认RSI信号的有效性。
-
-2. 优化出场机制:现有策略的出场机制比较简单,可以考虑引入移动止损、目标止赢等出场机制,以降低单笔交易的风险敞口,提高策略收益。
-
-3. 参数优化:可以使用样本外数据对策略参数(如RSI的计算周期、买入阈值和卖出阈值等)进行优化,以提高策略的样本外表现。
-
-## 总结
-
-该策略基于RSI指标设计了一个简单易用的双向交易策略。通过比较RSI指标与预设的买入阈值和卖出阈值,策略可以在市场超买和超卖时产生交易信号,以捕捉市场波动带来的交易机会。尽管该策略逻辑简单清晰,适合新手用户学习,但在实际应用中仍然存在一些风险,如震荡市风险、趋势市风险和参数优化风险等。为了进一步提高策略表现,可以考虑从结合其他技术指标、优化出场机制和参数优化等方面对策略进行改进和优化。总的来说,该策略为QuantConnect用户提供了一个基于RSI指标的双向交易策略模板,用户可以在此基础上根据自己的需求和经验进行优化和改进。
-
-|| 
 
 ## Overview
 
@@ -93,7 +50,6 @@ In this way, the strategy attempts to buy when the market is oversold and sell w
 ## Summary
 
 This strategy designs a simple and easy-to-use dual trading strategy based on the RSI indicator. By comparing the RSI indicator with preset buying and selling thresholds, the strategy can generate trading signals when the market is overbought and oversold to capture trading opportunities brought by market fluctuations. Although the strategy logic is simple and clear, suitable for novice users to learn, there are still some risks in practical applications, such as oscillating market risk, trending market risk, and parameter optimization risk. To further improve strategy performance, we can consider improving and optimizing the strategy from aspects such as combining other technical indicators, optimizing exit mechanisms, and parameter optimization. In general, this strategy provides QuantConnect users with a dual trading strategy template based on the RSI indicator, which users can optimize and improve based on their own needs and experience.
-[/trans]
 
 > Strategy Arguments
 

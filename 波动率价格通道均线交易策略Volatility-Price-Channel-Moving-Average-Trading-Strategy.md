@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/144fbf58470c14ff121.png)
-[trans]
-
-## 概述
-
-该策略基于超级趋势指标和价格通道指标,结合均线信号进行交易。其核心思想是利用价格通道判断当前价格是否处于异常状态,超级趋势判断当前趋势方向,并与均线信号组合产生交易信号。
-
-## 策略原理
-
-1. 计算超级趋势指标。其中上轨线和下轨线分别为当前价格加/减去ATR指标的N倍。当价格高于上轨时为看涨,价格低于下轨时为看跌。
-
-2. 计算价格通道指标。其中价格通道线为价格的N日内标准差的M倍。价格高于/低于通道线视为异常状态。 
-
-3. 计算均线。分别取开盘价、收盘价和超级趋势的平均线。
-
-4. 产生交易信号:
-
-   - 买入信号:收盘价上穿超级趋势线且高于开盘价均线
-
-   - 卖出信号:收盘价下穿超级趋势线且低于开盘价均线
-   
-5. 设置止损止盈价格通道。
-
-## 策略优势分析
-
-1. 结合多个指标,避免假信号。
-
-2. 利用价格通道判断价格异常状态,可过滤掉一些不理想的入场点。
-
-3. 均线结合判断趋势方向,避免逆势操作。
-
-4. 设置止损止盈范围,控制风险。
-
-## 风险分析
-
-1. 参数设置过于主观,需要优化。
-
-2. 止损止盈范围可能设置过大过小。
-
-3. 价格通道参数可能不适合全部品种,需要根据不同品种分别测试。
-
-4. 在趋势剧烈变化时,可能产生较大亏损。
-
-## 优化方向
-
-1. 对参数进行测试优化,找到最佳参数组合。
-
-2. 测试不同的均线周期,选取最优参数。
-
-3. 对多种品种进行回测,根据表现分别选择参数。
-
-4. 优化止损策略,避免单次损失过大。
-
-## 总结
-
-本策略综合多种指标判断价格异常和趋势方向,在理论上可以过滤掉一定假信号。但参数设置依然比较主观,有一定优化空间。此外在具体实盘中,还需要考虑手续费、滑点等交易成本的影响。总体来说,本策略作为趋势跟踪策略较为适合,但需要针对不同品种进行参数优化调整。
-
-|| 
 
 ## Overview  
 
@@ -122,7 +65,6 @@ This strategy is based on the Super Trend indicator and price channel indicator,
 
 This strategy combines multiple indicators to judge price abnormalities and trend directions, which can theoretically filter out some false signals. However, parameter settings are still relatively subjective with room for optimization. In addition, trading costs like commissions and slippage should be considered in actual trading. Overall, this strategy is more suitable as a trend following strategy, but parameters need to be optimized and adjusted for different products.
 
-[/trans]
 
 > Strategy Arguments
 

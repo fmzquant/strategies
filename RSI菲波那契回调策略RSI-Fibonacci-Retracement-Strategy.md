@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9a1384f26bd223605f.png)
-[trans]
-
-## 概述
-
-RSI菲波那契回调策略通过计算RSI指标与设置的菲波那契回调级别的交叉作为交易信号,在超买超卖区域发生反转时入场,属于趋势跟踪策略。
-
-## 原理
-
-该策略基于RSI指标与菲波那契回调级别的交叉实现。首先计算RSI指标的值,然后设置菲波那契回调级别(38.2%、50%、61.8%),当RSI指标上穿菲波那契级别时生成买入信号,下穿时生成卖出信号。
-
-RSI指标用于判断市场是超买还是超卖。RSI大于70时为超买区,小于30时为超卖区。当RSI从超买区下降到菲波那契回调区时,属于反转信号,做多;当RSI从超卖区上升到菲波那契回调区时,属于反转信号,做空。
-
-菲波那契回调区在本策略中主要作为参考,与RSI形成交易信号。趋势市场中,回调后的继续运行常常会触碰菲波那契回调级别,这些级别相当于支持阻力。与RSI交叉做为交易信号,可以捕捉反转机会。
-
-## 优势
-
-1. 使用RSI判断超买超卖形态,配合菲波那契回调区捕捉反转机会,可以过滤部分噪音。
-
-2. 趋势跟踪性质,可捕捉中长线趋势。
-
-3. 可以通过调整菲波那契回调区来适应不同市场情况。
-
-## 风险
-
-1. 多空头寸持有时间可能较长,需要有足够的资金支持。
-
-2. 回调过程中可能出现再次探高探底现象,需要设置止损来控制风险。
-
-3. 参数设置不当可能导致交易频繁或捕捉不到足够反转机会。
-
-## 优化方向
-
-1. 可以考虑结合其他指标过滤入场时机。例如MACD、布林带等指标判断趋势方向。
-
-2. 可以优化RSI参数以及菲波那契回调区设置。
-
-3. 可以设置动态止损来锁定利润。
-
-## 总结
-
-RSI菲波那契回调策略整体作为一个趋势跟踪策略,具有很好的稳定性。相比单一RSI策略,加入菲波那契回调区可以有效过滤部分噪声交易。通过参数优化可以适应不同市场的交易品种。总体来说是一个可靠、易于优化的策略思路。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ The Fibonacci retracement levels in this strategy mainly serve as a reference, f
 
 The RSI Fibonacci Retracement strategy has good stability in general as a trend following strategy. Compared to single RSI strategies, adding the Fibonacci retracement area can effectively filter out some noisy trades. By parameter optimization it can adapt to different trading instruments across various markets. In conclusion this is a reliable and easy-to-optimize strategy idea.
 
-[/trans]
 
 > Strategy Arguments
 

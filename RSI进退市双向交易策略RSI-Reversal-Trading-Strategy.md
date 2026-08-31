@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略运用RSI指标判断市场趋势,在超买超卖区域发出交易信号,旨在捕捉市场的短线调整走势。它同时结合均线指标和止盈止损逻辑,对交易信号进行过滤,控制风险。
-
-## 策略原理
-
-1. 计算RSI(14)指标值,设置超买线为67,超卖线为44。
-
-2. 当RSI上穿超买线时,发出卖出信号;当RSI下穿超卖线时,发出买入信号。
-
-3. 叠加均线过滤,只有当收盘价低于昨日均价时,才会在RSI超买发出卖出信号;只有当收盘价高于昨日均价时,才会在RSI超卖发出买入信号。
-
-4. 设置止盈止损逻辑。可选择固定点数止盈止损,或根据RSI值止盈。
-
-## 优势分析
-
-1. 利用RSI指标判断超买超卖,捕捉短线调整机会。
-
-2. 结合均线进行过滤,避免在趋势行情中进行反向操作。
-
-3. 设置止盈止损,控制单笔损失。
-
-4. 可在趋势反转前夕捕捉反转机会。
-
-## 风险及解决
-
-1. RSI具有滞后性,可能出现背离导致虚假信号。解决方法是适当调整参数或与其他指标组合使用。
-
-2. 固定止损点数可能过大或过小。可选择更为灵活的 trailing stop 动态止损。
-
-3. 固定止盈可能过早止盈或止盈点数过小。可考虑根据RSI值或ATR止盈。
-
-4. 无法有效过滤震荡趋势行情,可能导致频繁开仓和损失。可适当调整RSI参数或增加其他过滤条件。
-
-## 优化方向
-
-1. 测试不同周期参数的RSI指标效果。
-
-2. 调整RSI的参数,测试不同的超买超卖线。
-
-3. 尝试不同类型的移动平均线或其它过滤指标。
-
-4. 测试固定止盈止损与动态止盈止损的效果。
-
-5. 优化止盈止损的值,使之更符合市场波动规律。
-
-6. 新增进场过滤条件,避免震荡行情开仓。
-
-7. 考虑结合多个时间周期进行验证,提高信号质量。
-
-## 总结
-
-本策略利用RSI指标判断超买超卖状况,结合均线及止盈止损进行双向交易。可在短期内捕捉市场反转机会。经过参数优化和过滤条件补充,可进一步提高策略盈利效果并控制风险。此策略适合对短线变化敏感、追求高频率交易的投资者。
-
-||
 
 ## Overview
 
@@ -120,7 +63,6 @@ This strategy uses the RSI indicator to judge market trends and generate trading
 ## Summary
 
 This strategy trades reversals using RSI combined with moving averages and profit-taking/stop-loss logic. It aims to capture short-term turns in the market. Further parameter optimization and additional filters can improve profitability while reducing risks. It suits investors who are sensitive to short-term moves and seek frequent trading.
-[/trans]
 
 > Strategy Arguments
 

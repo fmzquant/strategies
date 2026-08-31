@@ -11,82 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13a2033720991ec72f2.png)
 
-[trans]
-
-## 概述
-
-该策略是一个多因子组合策略,结合使用反转因子和动量因子,目的是发掘市场中的反转机会。策略首先使用久负反转因子识别盘整下跌后的反转机会,然后利用动量指标进行二次筛选,过滤掉大趋势下的反转假信号,从而锁定短线反转套利机会。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123反转因子
-
-    该部分运用日内反转思想,判断前一日收盘价与前二日收盘价的关系,配合慢速K线识别反转机会。具体逻辑是:
-
-    - 买入信号:连续两日收盘价下跌后当日收盘价上涨,且九日慢速K线低于50,则产生买入信号;
-
-    - 卖出信号:连续两日收盘价上涨后当日收盘价下跌,且九日快速K线高于50,则产生卖出信号。
-
-2. 埃尔格迪克动量震荡指标(ETSI)
-
-    该部分利用三EMA平滑价格动量的方法构建动量指标。指标公式如下:
-
-    ```
-    xPrice1 = close - close[1]  
-    xPrice2 = abs(close - close[1])
-    xSMA_R = EMA(EMA(EMA(xPrice1,r), s), u) 
-    xSMA_aR = EMA(EMA(EMA(xPrice2, r), s), u)
-    xTSI = xSMA_R / xSMA_aR * 100
-    xEMA_TSI = EMA(xTSI, N)
-    ```
-
-    其中,xSMA_R是价格动量的EMA平滑值,xSMA_aR是价格波动幅度的EMA平滑值,xTSI是两者的比值构成的动量指标,xEMA_TSI是xTSI的再次EMA平滑。该指标判断xTSI和xEMA_TSI的关系,作为交易信号方向。
-
-最后,策略将两部分信号进行AND运算,只有当两部分因子同向发出信号时,才产生实际的交易指令。
-
-## 策略优势
-
-该策略最大的优势在于多因子设计,可以过滤假信号,发掘高质量交易机会。具体来说,主要有以下三点:
-
-1. 123反转因子可以识别盘整下跌后的短期反弹点位。
-
-2. 埃尔格迪克动量指标可以有效判断大趋势方向,避免反转信号发生在大趋势下,从而过滤假信号。
-
-3. 两部分信号采用AND运算,可以提高信号质量,增强策略稳定性。
-
-## 策略风险
-
-尽管策略采用多因子设计以控制风险,但仍存在以下主要风险:
-
-1. 反转信号可能发生在震荡趋势中,无法获利。
-
-2. 两因子之间参数设定存在主观性,可能过拟合特定品种。
-
-3. 反转后价格再次调头可能增加亏损风险。
-
-这些风险可以通过优化参数以适应更多品种,控制反转后持仓时间,实时监控指标关系变化等方式加以缓解。
-
-## 策略优化
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 调整两因子的参数,寻找更匹配的数据样本。
-
-2. 增加止损策略,控制单笔损失。
-
-3. 针对趋势品种和震荡品种使用不同参数组合。
-
-4. 增加因子权重机制,让表现更好的因子拥有更大权重。
-
-5. 增加机器学习算法,实现参数的自动优化和更新。
-
-## 总结
-
-该策略成功地结合反转因子和动量指标,实现多因子优化设计。它可以有效识别短期反转机会,并利用动量指标对信号进行二次验证,从而提高策略胜率。虽然策略仍存在一定改进空间,但其核心思路为量化策略的设计提供了良好参考。
-
-||
 
 ## Overview
 
@@ -161,7 +85,6 @@ The main aspects for optimizing this strategy include:
 
 The strategy successfully combines reversal factors and momentum indicators to achieve multi-factor optimized design. It can effectively identify short-term reversal opportunities and use momentum indicators to conduct secondary verification of the signals, thereby improving the win rate of the strategy. Although there is still room for improvement in the strategy, its core idea provides a good reference for the design of quantitative strategies.
 
-[/trans]
 
 > Strategy Arguments
 

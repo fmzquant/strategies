@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/124da8d8f33af09df22.png)
 
-[trans]
-
-## 概述
-
-该策略通过计算20日简单移动平均线(EMA20)和50日简单移动平均线(EMA50)的金叉和死叉来判断入场和出场时机。当EMA20上穿EMA50时,做多;当EMA20下穿EMA50时,做空。同时结合止损止盈机制来控制风险报酬。
-
-## 策略原理
-
-该策略的核心指标是20日EMA和50日EMA。EMA20代表短期趋势,EMA50代表中期趋势。当短期趋势上穿中期趋势时,表示行情由下跌转为上涨,做多能够获利;当短期趋势下穿中期趋势时,表示行情由上涨转为下跌,做空能够获利。因此,通过EMA20和EMA50的金叉死叉形态来判断入场和出场时机。
-
-具体来说,首先计算20日EMA和50日EMA的值。然后在图表上画出EMA20和EMA50的线段。当发生EMA20上穿EMA50时,做多;当发生EMA20下穿EMA50时,做空。同时,输入止损比例和风险回报比来计算止损价位和止盈价位。如此可以有效控制单次交易的风险和回报。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA金叉死叉判断入场时机,可以有效捕捉趋势的转折点。
-2. 做多做空规则清晰简单,容易操作。  
-3. 利用止损止盈来控制风险报酬比,有利于获取稳定收益。
-4. 资金使用效率高,无须长时间持仓。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. EMA具有滞后性,可能错过价格反转的最佳时机。
-2. 止损点设置不当可能造成不必要的损失。
-3. 突发事件可能使EMA产生错误信号。
-4. 回测数据拟合风险。实盘效果可能与回测结果有差异。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1.测试不同参数的EMA组合,寻找最佳参数。
-
-2.结合其他指标进行信号过滤和验证。
-
-3.动态调整止损止盈比例。不同行情下可以采用不同的止损止盈设置。
-
-4.适当缩短持仓周期。降低受突发事件影响的概率。
-
-## 总结
-
-该EMA金叉死叉短线交易策略,通过简单的指标判定入场时机,利用止损止盈控制风险。易操作性强,适合短线活跃交易。但也存在一些问题,通过参数优化、信号过滤等手段可以进一步提高策略profit因子。
-
-|| 
 
 ## Overview  
 
@@ -104,7 +57,6 @@ The strategy can be optimized in the following aspects:
 
 The EMA golden cross and death cross swing trading strategy determines entry timing through simple indicators and controls risks using stop loss and take profit. It has high ease of operation and is suitable for active short-term trading. But there are also some problems that can be further improved by parameter optimization, signal filtering and other means to increase the profit factor of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

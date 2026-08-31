@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ec072ccc04f27bb1bd.png)
 
-[trans]
-### 概述
-
-本策略采用两个移动平均线来判断价格的趋势和突破。当价格上穿上轨时做空,当价格下穿下轨时做多,设置止损exit来控制风险。
-
-### 策略原理
-
-1. 使用sma()函数计算短期和长期两个移动平均线,分别作为交易策略的上下轨。
-2. 计算买入价位和卖出价位:买入价为下轨乘以一个小于1的系数,卖出价为上轨乘以一个大于1的系数。
-3. 当价格上穿上轨时,以市价单开空仓;当价格下穿下轨时,以限价单开多仓。
-4. 设置年份、月份和日期范围来控制策略的交易周期。
-5. 回测结束或超出日期范围时,平掉所有仓位。
-
-### 优势分析
-
-本策略具有如下优势:
-
-1. 使用双轨系统,可以过滤市场噪音,识别趋势。
-2. 采用价格突破判断入场时机,可以减少虚假信号。 
-3. 利用限价单减少市场冲击成本。
-4. 可以方便地调整交易周期,控制策略风险。
-
-### 风险分析
-
-本策略也存在一些风险:
-
-1. 双轨突破容易产生连续亏损的风险。可以设置止损Exit来控制损失。
-2. 交易标的进入盘整时,容易产生过多交易的风险。可以适当放宽上下轨间距。
-3. 限价单可能导致部分买入机会被错过。可以考虑改为使用市价单。
-
-### 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 测试不同长度的移动平均线组合,找到最佳参数。
-2. 增加Volumes指标判断成交量突破。
-3. 增加自适应止损机制,实时调整止损价位。
-4. 增加机器学习模型判断趋势方向。
-
-### 总结
-
-本策略整体思路清晰易懂,通过双轨系统识别趋势,价格突破判断入场时机,可以过滤噪音实现稳定盈利,也存在一些改进优化的空间。总体而言,是一种可复现的具有实战价值的量化交易策略。
-
-||
 
 ### Overview
 
@@ -98,7 +54,6 @@ This strategy can be optimized in the following aspects:
 
 The overall idea of this strategy is clear and easy to understand. By using the double rail system to identify trends and using price breakthroughs to determine entry timing, it can filter noise and achieve stable profits. There is also room for improvement and optimization. Overall, it is a reproducible quantitative trading strategy with practical value.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1aec01c59a7e0c560c6.png)
-[trans]
-## 概述
-
-该策略结合了埃利奥特波动理论和200日均线指标,实现了趋势追踪和盈利回吐的自动化交易。其基本逻辑是在埃利奥特5浪构成的波动模式出现时,判断趋势方向,并以200日均线作为辅助条件发出交易信号。
-
-## 策略原理  
-
-埃利奥特波动理论将市场的价格波动分为5浪构成的波段,奇数波为动力浪,偶数波为回调浪。当Wave1、Wave3、Wave5的高点依次上推,并且Wave2、Wave4依次有效回调时,判断为上涨浪组合,属于多头市场,该策略在此时做多。相反,当Wave1、Wave3、Wave5的低点依次下推,并且Wave2、Wave4依次有效回调时,判断为空头浪组合,属于空头市场,该策略在此时做空。
-
-该策略同时引入200日均线指标,作为辅助判断条件。只有在判断出多头或空头浪组合的同时,当天收盘价超过上方200日均线时方可做多,当天收盘价跌破下方200日均线时方可做空。
-
-做多做空信号发出后,以相反方向的五浪退出仓位。
-
-## 优势分析
-
-- 利用埃利奥特波动理论判断市场趋势和关键点,可以及时捕捉市场转折。
-- 基于200日均线指标进行过滤,避免在震荡行情中被套牢。
-- 整体上,该策略可以在股市或期货市场的中长线上取得较好的盈利。
-
-## 风险分析  
-
-- 在实盘中,价格波动可能无法完美符合埃利奥特理论中的五浪类型,所以存在一定的误判风险。
-- 仅凭五浪形态无法判断该波段在更大的市场格局中所处的位置和意义。
-- 在震荡行情中容易产生错误交易信号并亏损。
-- 未考虑股价波动对200日均线位置的动态影响。
-
-## 优化方向
-
-- 可以结合更多指标进行过滤,如MACD、KDJ等,降低误判率。 
-- 优化五浪形态识别算法,提高准确率。
-- 增加对当前波段在更大级别上涨或下跌浪的判断,避免逆势操作。
-- 结合交易量变化等指标判断真正的趋势转折点。
-- 考虑股价波动对200日均线位置影响的动态调整。
-
-## 总结
-
-该策略整合波动理论与趋势跟踪指标的优点,在捕捉市场关键点和控制交易风险上表现出色。但由于仅考虑价格信息,在复杂行情下效果仍有待优化。在实盘过程中需要严格监控并持续调整,方能取得长期稳定收益。
-
-||
 
 ## Overview
 
@@ -88,7 +49,6 @@ After the long and short signals are issued, the opposite direction five waves e
 
 This strategy integrates the advantages of wave theory and trend-following indicators, and performs well in capturing market key points and controlling trading risks. However, relying solely on price information means there is room for improving effectiveness in complex market conditions. Strict monitoring and continuous adjustment during live trading are necessary to achieve long-term steady profits.
 
-[/trans]
 
 
 

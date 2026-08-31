@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/103121df2e4eda3a4c9.png)
 
-[trans]
-## 概述
-
-该策略基于ADX指标判断市场趋势,结合DMI指标判断多空方向,利用ADX斜率判断趋势力度,设定ADX关键值过滤非趋势市场,辅助移动平均线过滤交易信号。
-
-## 策略原理  
-
-1. 计算ADX、DI+、DI-指标。
-2. ADX斜率>0,表明趋势递增;关键值设定为23,用于过滤非趋势市场。
-3. DI+高于DI-,表明多头力量大于空头力量,为看多信号。
-4. 启用移动平均线过滤时,只有收盘价高于移动平均线时,才产生多头信号。
-5. 当ADX斜率<0时平仓,表明趋势消退。  
-
-## 优势分析
-
-1. 辅助MA过滤,可减少非趋势市场的噪声交易。 
-2. ADX斜率判断力度,可准确判断趋势的发展。
-3. DI判断方向配合ADX判断力度,形成比较完整的趋势交易决策体系。  
-4. 回撤和盈亏比有望优于简单的移动平均线策略。
-
-## 风险分析 
-
-1. ADX指标设定不同参数,结果会有较大差异。
-2. DMI尚未完全确定多空方向前,可能发出错误信号。  
-3. 存在一定的滞后,降低策略效率。
-
-## 优化方向
-
-1. 优化ADX参数组合,寻找最佳参数。  
-2. 增加止损策略,避免单笔亏损扩大。
-3. 尝试结合其他指标过滤信号。例如RSI、布林带。
-
-## 总结
-
-该策略充分利用ADX判断趋势和趋势力度的优势,配合DMI指标判断方向,形成完整的趋势跟踪体系。同时辅助移动平均线可有效过滤非趋势市场的噪声。参数优化和指标组合还可进一步提高策略稳定性和效率。总体而言,该策略结合趋势判断和方向判断的特点,可望获得良好的回报。
-
-||
 
 ## Overview  
 
@@ -84,7 +47,6 @@ This strategy uses the ADX indicator to determine the market trend, combines wit
 
 This strategy fully utilizes ADX’s strength in determining trend and momentum, combined with DMI for direction analysis, forming a complete trend following system. The MA filter effectively reduces noise. Further parameter tuning and indicator combinations may improve robustness and efficiency. In summary, by incorporating trend, momentum and direction analysis, this strategy has the potential to achieve strong returns.  
 
-[/trans]
 
 > Strategy Arguments
 

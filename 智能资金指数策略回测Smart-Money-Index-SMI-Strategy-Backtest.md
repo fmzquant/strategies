@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略是基于智能资金指数(SMI)的量化交易策略。该指数反映了机构资金的运作情况,通过观察SMI指标的变化来判断市场未来的可能趋势。属于基于投资者情绪进行交易的策略类型。
-
-## 策略原理
-
-该策略的核心指标是智能资金指数(SMI)。其计算公式为:
-
-SMI = SMA(今日收盘价 - 今日开盘价 + 昨日收盘价 - 昨日开盘价,N)
-
-其中N为参数周期数。
-
-SMI反映了机构资金的流入流出情况。当SMI上涨意味着资金净流入,说明智能资金看涨;当SMI下跌意味着资金净流出,说明智能资金看跌。
-
-交易策略则是当SMI上涨做多,SMI下跌做空。通过这样来跟随智能资金的操作方向。
-
-## 策略优势
-
-- 基于智能资金指数,捕捉机构资金操作
-- SMI指标计算简单,易于实现
-- 反映投资者情绪,对市场变化敏感
-- 可在多品种和多时间框架使用
-- 参数可优化,适应能力强
-
-## 策略风险
-
-- SMI指标本身可能出现滞后
-- 仅基于单一指标,容易被套
-- 无法区分多空市场,需辅以技术分析
-- 无法有效控制止损,存在较大回撤
-- 需针对品种和周期优化参数
-
-可以通过以下措施来降低风险:
-
-- 优化SMI的周期参数
-- 结合图形技术指标进行确认
-- 设置止损止盈规则,控制风险
-- 根据不同品种和周期进行参数优化
-- 适当调整仓位管理系统
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试计算SMI的最佳周期数
-
-2. 在SMI信号基础上加入MACD等指标过滤
-
-3. 加入移动止损或固定点位止损 
-
-4. 根据不同品种分别寻找optimal123参数
-
-5. 对冲基金等不同周期分析寻找最佳周期
-
-6. 根据市场波动程度调整仓位大小
-
-## 总结
-
-本策略通过智能资金指数反映市场参与者情绪,进行趋势跟踪交易。这可以及时捕捉到机构资金的操作方向。但SMI本身可能滞后,需进行优化;并且仅依赖单一指标容易被套,需要加入辅助技术指标进行过滤。通过参数调整、止损完善、动态仓位等方法,可以使该策略更稳健可靠。
-
-|| 
 
 ## Overview
 
@@ -133,7 +70,6 @@ The strategy can be improved by:
 
 This strategy uses the Smart Money Index to reflect market participant sentiment for trend trading. It can capture moves of institutional funds in a timely manner. However, SMI may lag and sole reliance on one indicator can be risky. Improvements can be made through parameter tuning, adding filters, implementing stops, and dynamic position sizing. This can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

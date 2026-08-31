@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1027409f8e007535a66.png)
-[trans]
-## 概述
-
-该策略通过计算两条不同参数设置的移动平均线,并比较其交叉情况来判断价格趋势方向,从而实现趋势追踪交易。当快速移动平均线从下方突破慢速移动平均线时,判断为看涨信号;当快速移动平均线从上方下破慢速移动平均线时,判断为看跌信号。该策略可以通过参数设置实现对不同周期的趋势判断。
-
-## 策略原理
-
-本策略使用两组不同参数设置的移动平均线进行比较,第一个移动平均线参数由len1和type1设置,第二个移动平均线参数由len2和type2设置。其中len1和len2分别代表两条移动平均线的周期长度,type1和type2代表移动平均线的算法类型。
-
-当快速移动平均线从下方突破慢速移动平均线形成金叉时,判断为看涨信号;当快速移动平均线从上方下破慢速移动平均线形成死叉时,判断为看跌信号。
-
-根据交叉信号的方向,执行做多或做空操作。当看涨信号触发时,如果needlong参数为true,则按照default_qty_value的数量或仓位percentage_of_equity的百分比做多;当看跌信号触发时,如果needshort参数为true,则按照default_qty_value的数量或仓位percentage_of_equity的百分比做空。
-
-## 策略优势
-
-1. 支持7种不同类型的移动平均线进行组合,能灵活适应市场环境
-2. 可自定义两条移动平均线的参数,实现对长期趋势和中短期趋势的判断
-3. 策略信号判断规则简单清晰,容易理解实现
-4. 支持做多和做空操作,可以进行趋势追踪交易
-
-## 风险及解决
-
-1. 移动平均线具有滞后性,可能错过价格反转点
-解决方法:适当缩短移动平均线周期,或与其他指标组合使用
-
-2. 不适用于具有高波动率和频繁反转的市场
-解决方法:增加过滤条件,避免在震荡行情中交易
-
-3. 存在一定的假信号风险
-解决方法:加入其他过滤指标进行组合,提高信号的可靠性
-
-## 优化方向  
-
-1. 优化移动平均线的周期组合,分别测试长短周期参数对策略收益率的影响
-2. 测试不同类型移动平均线的绩效表现,找出最佳移动平均线算法
-3. 加入交易量VARIABLE或布林通道等指标进行组合,提高信号质量
-4. 优化仓位管理策略,改进固定仓位percentage_of_equity的方式
-
-## 总结
-
-本策略通过比较两条移动平均线的交叉情况判断价格趋势,并进行相应的看涨看跌操作,从而实现对趋势的捕捉和跟踪获利。策略优点是信号规则简单清晰,参数可调节,适用性强,能对多种市场环境进行优化调整。需要注意防范移动平均线滞后以及震荡行情的风险,可通过加入其它指标进行过滤以提高信号质量。
-
-||
 
 ## Overview
 
@@ -95,7 +52,6 @@ Solution: Add other filtering indicators for combination to improve signal relia
 
 This strategy judges the price trend by comparing the crossovers of two moving averages, and makes corresponding long and short operations to capture and profit from trends. The advantage is that the signal rules are simple and clear, the parameters are adjustable, the applicability is strong, and it can be optimized and adjusted for various market environments. Pay attention to prevent the lagging risks of moving averages and choppy markets, which can be reduced by adding other indicators for filtering to improve signal quality.
 
-[/trans]
 
 > Strategy Arguments
 

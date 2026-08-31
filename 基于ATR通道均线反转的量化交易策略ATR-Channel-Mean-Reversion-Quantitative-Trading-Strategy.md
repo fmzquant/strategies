@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16eef11d52550f68057.png)
-[trans]
-
-## 概述
-
-该策略是一个仅做多的策略,它利用价格突破ATR通道下限来确定入场时机,并以ATR通道均线或ATR通道上限作为止盈退出。同时,它还会利用ATR来计算止损价格。该策略适合做快速短线交易。
-
-## 策略原理
-
-当价格跌破ATR通道下限时,表明价格出现了异常的下跌。此时策略会在下一根K线开盘的时候做多入场。止损价格为入场价减去ATR止损系数乘以ATR。止盈价格为ATR通道均线或ATR通道上限,如果当前K线收盘价低于前一根K线的最低价,则以前一根K线最低价作为止盈价格。
-
-具体来说,该策略主要包含以下逻辑:
-
-1. 计算ATR和ATR通道均线
-2. 确定时间过滤条件
-3. 当价格低于ATR通道下限时,标记可以做多入场
-4. 在下一根K线开盘时做多入场
-5. 记录入场价
-6. 计算止损价格
-7. 当价格高于ATR通道均线或ATR通道上限时,平仓止盈
-8. 当价格低于止损价时,止损退出
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用ATR通道来确定入场和止盈,可靠性较高
-2. 做多仅在异常下跌后才入场,避免追高
-3. 止损规则严格,有效控制风险
-4. 适合快速短线交易,无须长时间持仓
-5. 简单易懂的规则,容易实现和优化
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 频繁交易带来的交易费用和滑点风险
-2. 可能出现止损连续被触发的情况
-3. 参数优化不当可能影响策略效果
-4. 标的价格波动较大时,止损可能过大
-
-可以通过调整ATR周期,缩小止损系数等方法来降低上述风险。同时选择交易费用较低的券商也很重要。
-
-## 优化方向
-
-该策略还可以从以下方面进行优化:
-
-1. 增加其他指标过滤,避免错失最佳入场时机
-2. 优化ATR周期参数
-3. 考虑加入再入场机制
-4. 动态调整止损幅度
-5. 加入趋势判断规则,避免逆势入场
-
-## 总结
-
-该策略整体而言是一个简单实用的短线突破均线反转策略。它有着清晰的入场规则、严格的止损机制以及完善的止盈方式。同时也提供了一些参数调整的优化空间。如果交易者能够选择合适的标的并配合止损来控制风险,该策略应该能够获得不错的效果。
-
-|| 
 
 ## Overview
 
@@ -122,7 +65,6 @@ The strategy can be improved by:
 
 In summary, this is a simple and practical mean reversion strategy based on ATR channel. It has clear entry rules, strict stop loss, and reasonable take profit. There is also room for parameter tuning. If traders can choose the right symbol and control risk with stop loss, this strategy can achieve good results.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10e44ccd5c3cead82a2.png)
-[trans]
-
-## 概述
-
-该策略通过计算不同周期的移动平均线,并在较短周期的移动平均线上穿越较长周期的移动平均线时发出交易信号,属于典型的移动平均线交叉策略。策略同时支持做多和做空,可实现双向交易。
-
-## 策略原理
-
-该策略基于不同周期移动平均线之间的交叉来判断行情趋势和发出交易信号。策略使用了8周期、13周期和21周期三条移动平均线,其中8周期线为较短周期线,21周期线为较长周期线。当8周期线上穿21周期线时产生做多信号;当8周期线下穿21周期线时产生做空信号。
-
-在具体交易执行时,该策略还加入了一个判断条件来避免曲折行情下交易被套。即仅在K线收盘价高于(做多信号)或低于(做空信号)交叉点时才会下单。这可以有效过滤掉部分假信号。
-
-## 策略优势
-
-1. 应用移动平均线交叉原理,可以有效跟踪市场趋势
-2. 设置了交易过滤条件,可以过滤掉部分假信号,避免套牢
-3. 支持双向交易,可以在市场上下行阶段都获得收益
-4. 采用跨周期移动平均线交叉,可以在较大级别之间捕捉转折
-5. 策略逻辑简单清晰,容易理解和修改优化
-
-## 策略风险
-
-1. 大幅震荡行情下可能出现失效和产生大量假信号
-2. 无法在行情平穿时做出判断,会错过部分机会
-3. 跨周期交叉判断滞后,可能无法及时捕捉短期趋势转折
-4. 未考虑股价波动率的影响,不同波动率下参数需要调整
-5. 没有设置止损止盈,存在无限亏损的风险
-
-### 风险解决方案
-
-1. 结合其他指标判断行情,避免震荡行情的影响
-2. 降低移动平均线周期,提高判断敏感度
-3. 加入止损止盈机制,严格控制交易风险和收益回撤
-
-## 优化方向  
-
-1. 结合其它技术指标如MACD、KDJ等进行判断,提高效果
-2. 测试不同参数设定对策略总体效果的影响
-3. 根据市场类型和波动率设定自适应参数
-4. 优化移动平均线计算方式,采用DEMA、ZLEMA等指标
-5. 添加止损止盈逻辑
-6. 量化回测指标优化,确定最优参数  
-
-## 总结
-
-该策略整体思路清晰,通过简单有效的移动平均线交叉判定长短周期趋势关系,捕捉轮动机会。策略可以双向交易,同时容易理解和优化。但也存在一些风险需要进一步完善,如无法有效处理特定行情,和缺乏止损止盈控制交易风险等问题。通过后续的技术指标结合和参数优化,可以进一步增强策略稳定性和盈利水平。
-
-||
 
 ## Overview
 
@@ -104,7 +56,6 @@ In actual trading execution, the strategy also includes a filtering condition to
 
 The strategy has a clear logic of using simple moving average crossover to determine relationships between short-term and long-term trends and capture rotation opportunities. It supports two-way trading and is easy to understand and optimize. But some risks exist like ineffective handling of specific market conditions and lack of risk control. Subsequent technical indicator combos and parameter optimization can further improve strategy stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14cd36d3d939251e251.png)
-[trans]
-
-## 概述
-
-该策略基于TEMA指标的多时间框架交叉来识别市场趋势方向,并结合更低时间框架的TEMA指标交叉来寻找具体的入市和出场时机。策略可配置仅做多、仅做空或双向交易。
-
-## 策略原理
-
-策略使用两个TEMA指标,一个基于5和15周期的快慢线,另一个基于用户自定义的高周期时间框架,例如日线或周线。高周期TEMA指标交叉确定总体趋势方向,当快线上穿慢线时看涨,下穿看跌;低周期TEMA指标交叉用于寻找具体的入市和出场时机。
-
-当高周期TEMA快线上穿慢线时,低周期TEMA快线上穿慢线就可入场做多;当低周期TEMA快线下穿慢线时,就应该出场了。类似的,当高周期TEMA快线下穿慢线时,低周期TEMA快线下穿慢线就可入场做空;快线上穿慢线时就应该出场。   
-
-## 策略优势
-
-1. 基于TEMA指标交叉,避免被噪声误导
-2. 多时间框架设定,结合高低周期判断,提高准确性  
-3. 可单边交易,也可双向交易,灵活配置
-4. 规则清晰,容易理解实施
-
-## 风险分析
-
-1. TEMA指标存在滞后,可能错过价格变化最初的时机
-2. 高周期趋势判断中,短期调整可能导致不必要的反向操作
-3. 高周期Setting选择不当,可能无法反映真实趋势
-4. 低周期Setting选择不当,可能增大止损风险
-
-风险解决方法:
-
-1. 适当调整TEMA参数,取得平衡
-2. 适当放宽止损幅度
-3. 优化高低周期参数Setting
-4. 测试不同品种参数健壮性
-
-## 优化方向  
-
-1. 动态调整TEMA参数,优化指标灵敏度
-2. 增加动量指标过滤,避免错过趋势
-3. 增加波动率指标,动态调整止损幅度  
-4. 机器学习方法优化参数
-
-## 总结
-
-该策略整体概念清晰易理解,基于TEMA指标多时间框架交叉判断趋势方向,并结合低周期交叉寻找入场时机。有一定的优势,同时也存在一些改进空间。总体来说,该策略为量化交易实践提供了有价值的参考。
-
-||
 
 
 ## Overview
@@ -99,7 +54,6 @@ Risk Solutions:
 
 The strategy overall is simple and clear in logic, identifying trend bias via TEMA crossover on multiple timeframes, and relying on additional crossover on lower TF to time entries. It has certain merits while also has some space for improvements. On the whole, it provides valuable reference for quant trading practices.
 
-[/trans]
 
 > Strategy Arguments
 

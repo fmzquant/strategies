@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/123e7ab094a8b464614.png)
-[trans]
-
-## 概述
-
-该策略基于近期最高价和最低价设置止损点,以快速切入趋势并严格控制风险。当价格出现连续上涨时开多单,连续下跌时开空单。持仓时,多单止损位置为最近几根K线的最低价,空单止损位置为最近几根K线的最高价。这种动态止损方式能高效捕捉趋势,同时严格限制损失。
-
-## 策略原理
-
-1. 通过`input`函数设置最高价和最低价参考周期`hiLen`和`loLen`,默认为20。
-2. 用`ta.highest(high, hiLen)[1]`计算前一根K线为止的最高价`hiHighs`,用`ta.lowest(low, loLen)[1]`计算前一根K线为止的最低价`loLows`。
-3. 画出止损位置,多单止损位置为`loLows`,空单止损位置为`hiHighs`,不持仓时不画,方便直观确认。  
-4. 定义交易信号条件:
-   - 最近3根K线收盘价连续上涨为`higherCloses`
-   - 最近3根K线收盘价连续下跌为`lowerCloses`
-   - 当前无持仓为`isFlat`
-5. 开仓:满足`isFlat`和`higherCloses`时开多单,满足`isFlat`和`lowerCloses`时开空单。
-6. 止损:多单持仓时,止损价格为`loLows`,空单持仓时,止损价格为`hiHighs`。
-
-简言之,该策略用近期最高最低价设置移动止损,快速切入强劲趋势并严格限损,能高效捕捉趋势收益。
-
-## 优势分析
-
-1. 简单有效:该策略逻辑清晰简单,基于价格本身设置止损,能有效捕捉趋势。
-2. 快速切入:连续三根K线同向运动即可开仓,能快速切入新趋势。
-3. 止损严格:止损位置为近期最高价或最低价,与当前价格紧密相关,风险控制严格。
-4. 移动止损:止损位置会随着价格不断更新,既能锁定利润,又能保留趋势空间。
-5. 适应性强:适用于各类市场与品种,参数也可灵活调整。
-
-## 风险分析
-
-1. 震荡市风险:震荡市场会导致频繁开仓止损,策略表现不佳。解决办法是避开震荡市,或增大开仓条件以过滤。  
-2. 趋势末期风险:当趋势即将反转时,有可能刚开仓就遇到反转,导致亏损。解决办法是配合趋势判断指标,及时了结。
-3. 极端行情风险:极端超跌反弹或超涨杀跌时,移动止损可能无法很好地保护头寸。解决办法是设置固定止损位。
-4. 参数风险:参数设置不当会导致开仓止损过于频繁。解决办法是做好参数优化。
-
-## 优化方向
-
-1. 趋势判断:增加趋势判断指标,如均线,只在大趋势方向开仓,提高胜率。
-2. 结合波动:根据ATR等波动指标调整参数,应对不同波动。
-3. 动量确认:加入动量指标确认,如MACD,只在动量支持下开仓。
-4. 优化止损:可以结合百分比止损,避免极端行情;也可增加保护性止损,降低单笔亏损。 
-5. 仓位管理:可以优化仓位管理,如根据风险水平调整仓位,提高风险收益比。
-
-## 总结
-
-该最高最低价格止损策略基于价格本身设置动态止损,能高效捕捉强劲趋势,严格控制风险。其优点是简单有效,快速切入,止损严格,适应性强。但在震荡市、趋势末期、极端行情下表现欠佳,参数设置也需要注意。未来可通过增加趋势和动量判断、优化止损和仓位管理等方式改进。总的来说,这是一个兼顾趋势捕捉和风险控制的简单有效策略,值得在实践中深入研究和优化。
-
-|| 
 
 ## Overview
 
@@ -104,7 +56,6 @@ In short, this strategy uses recent highest highs and lowest lows to set trailin
 
 This highest high/lowest low stop strategy sets dynamic stops based on prices themselves to efficiently capture strong trends and strictly control risks. Its advantages are simplicity, effectiveness, quick entries, strict stops, and high adaptability. However, it performs poorly in choppy markets, trend ends, and extreme movements, and requires attention to parameter settings. Future improvements can add trend and momentum confirmation, optimize stops and position sizing. Overall, it is a simple and effective strategy balancing trend-capturing and risk control that deserves in-depth research and optimization in practice.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10dc30bea7a6146cd22.png)
 
-[trans]
-
-## 概述
-
-该策略名为“基于Heikin Ashi ROC百分位数的交易策略”,其目的是提供一个基于Heikin Ashi ROC及其百分位数的易于使用的交易框架。
-
-## 策略原理
-
-该策略通过计算Heikin Ashi收盘价的ROC及其不同时间段内的最高值和最低值,来生成用于交易的上下轨。具体来说,它计算过去rocLength周期的Heikin Ashi收盘价的ROC。然后计算过去50周期ROC的最高值 rocHigh和最低值 rocLow。之后根据 rocHigh 计算出上轨upperKillLine,根据rocLow计算出下轨lowerKillLine。这两个轨线表示roc的特定百分位数。当ROC上穿下轨时做多;当ROC下穿上轨时平多仓。反之,当ROC下穿上轨时做空;当ROC上穿下轨时平空仓。
-
-## 优势分析
-
-该策略最大的优势在于利用ROC指标的强大趋势跟踪能力,配合Heikin Ashi平滑价格信息的特性,能够有效识别趋势的变化。相比单纯的移动平均线等指标,ROC对价格变化的响应更加敏锐,使策略可以及时入场。此外,使用百分位数生成的上下轨,可以有效过滤震荡,避免假突破造成不必要的交易。总体上,该策略结合趋势跟踪和震荡过滤两大功能,可以在大趋势下获取较好的风险回报比。
-
-## 风险分析
-
-该策略的主要风险在于参数设置不当可能导致交易频繁或者不够敏感。rocLength和计算百分位数的周期需要谨慎设置,否则可能导致上下轨过于疲软或僵硬,从而错过交易机会或引发不必要的损失。此外,百分位数的设定也需要根据不同市场反复测试调整,找到最佳参数组合。在趋势反转时,该策略由于依赖趋势指标也会面临一定亏损。应适当缩短持仓时间,或设置止损来控制风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:1)结合其他指标过滤入场信号,如RSI等;2)利用机器学习方法动态优化参数;3)设置止损止盈自动原粗退出机制;4)进行组合,与其他非趋势策略进行组合,以平衡策略风险。
-
-## 总结
-
-综上所述,该策略利用ROC指标的强大趋势跟踪能力,配合Heikin Ashi特性进行趋势判断和趋势跟踪,并通过ROC百分位数形成的上下轨进行止损筛选,从而实
-现了较好的趋势跟踪效果。其优势在于及时识别趋势变化并跟踪大趋势,同时通过上下轨过滤震荡。但参数设置不当可能影响策略表现,且面临趋势反转的风险。通过进一步优化参数选择和设置止损、止盈,该策略可以获得更稳定的效果。
-
-||
 
 
 
@@ -66,7 +38,6 @@ The strategy can be optimized in the following ways: 1) Add filters with other i
 
 In summary, this strategy utilizes the powerful trend tracking capability of the ROC indicator, combined with Heikin Ashi for trend identification and following. The upper and lower rails generated from ROC percentiles allow for effective loss filtering. This achieves good trend tracking performance. The advantages lie in its timely identification of trend changes and following of major trends, while filtering out consolidations with the rails. However, improper parameter settings may impact performance, and trend reversal risks remain. Further optimizing parameter selection and setting stops can help obtain more consistent results.
 
-[/trans]
 
 > Strategy Arguments
 

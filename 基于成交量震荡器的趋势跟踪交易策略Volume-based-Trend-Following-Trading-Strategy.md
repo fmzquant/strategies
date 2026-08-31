@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1828ea6a40ecc9c85cc.png)
-[trans]
-
-### 概述
-
-本策略是基于修改后的成交量震荡器指标进行交易的趋势跟踪策略。它利用成交量的均线,识别成交量增加的 Signals,从而判断进入或退出仓位。同时结合价格本身的趋势判断,避免在价格震荡时产生错误Signals。
-
-### 策略原理
-
-1. 计算成交量的均线vol_sum,长度为vol_length,进行vol_smooth长度的均线平滑。
-2. 当vol_sum上涨超过阈值threshold时产生买入Signal,下跌超过阈值时产生卖出Signal。
-3. 为过滤误操作,仅当与过去direction根K线的收盘价进行比较,价格趋势上涨时,才进行买入操作。价格趋势下跌时,才进行卖出操作。
-4. 设置两个阈值threshold和threshold2。threshold用来产生交易Signal,threshold2用来止损。
-5. 通过状态机管理订单的开平仓逻辑。
-
-### 优势分析  
-
-1. 使用成交量指标,可以捕捉市场买卖力道的变化,从而提高信号的准确性。
-2. 结合价格趋势判断,可以避免在价格震荡的时候产生错误信号。
-3. 使用两个阈值进行开仓和止损,可以更好控制风险。
-
-### 风险分析
-
-1. 成交量指标本身会有滞后,可能会错过价格转折点。 
-2. 错误的参数设置会导致交易频率过高或信号产生滞后。
-3. 在成交量激增的场景下,止损点可能会被突破。
-
-可以通过调整参数,优化指标计算方式,结合其他指标进行确认来控制这些风险。
-
-### 优化方向  
-
-1. 可以考虑将指标参数进行自适应优化,根据市场情况自动调整。
-2. 可以结合其他指标,例如价格震荡指数,进一步验证信号以提高准确率。  
-3. 可以研究将机器学习模型运用到信号判断中,利用模型判断提高准确性。
-
-### 总结
-
-本策略通过改进后的成交量震荡器,辅助以价格趋势判断,设立两个阈值进行开仓和止损,整体是一个较为稳定的趋势跟踪策略。优化空间主要在参数调整、信号过滤以及止损策略方面。总的来说,该策略有一定的实用价值,值得进一步研究优化。
-
-||
 
 ### Overview
 
@@ -86,7 +47,6 @@ Risks can be mitigated by tuning parameters, optimizing indicator calculation, a
 
 This strategy utilizes an improved volume oscillator with price trend to determine entries and exits with two stop loss threshold values. It is a stable trend following system with optimization space in parameter tuning, signal filtering and stop loss strategies. Overall it has practical value worth further research and optimization.
 
-[/trans]
 
 
 > Strategy Arguments

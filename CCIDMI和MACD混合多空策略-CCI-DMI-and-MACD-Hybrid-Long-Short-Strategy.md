@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/5d1c5ccb3625d66e19.png)
 
-[trans]
-#### 概述
-该策略结合了三个技术指标:顺势指标(CCI)、方向运动指数(DMI)和移动平均线聚散指标(MACD),用于判断市场的超买超卖状态以及趋势方向。当CCI从超卖区域向上突破,同时DI+大于DI-且MACD大于信号线时,产生买入信号;当CCI从超买区域向下突破,同时DI-大于DI+且MACD小于信号线时,产生卖出信号。
-
-#### 策略原理
-1. 计算CCI指标,用于判断市场的超买超卖状态。当CCI从超卖区(-100以下)向上突破时,表明市场由超卖转向,可能出现上涨;当CCI从超买区(100以上)向下突破时,表明市场由超买转向,可能出现下跌。
-2. 计算DMI指标,用于判断市场的趋势方向。当DI+大于DI-时,表明上升趋势占优;当DI-大于DI+时,表明下降趋势占优。
-3. 计算MACD指标,用于判断市场的趋势强度。当MACD大于信号线时,表明上升动能较强;当MACD小于信号线时,表明下降动能较强。
-4. 结合以上三个指标,当CCI从超卖区向上突破,同时DI+大于DI-且MACD大于信号线时,产生买入信号;当CCI从超买区向下突破,同时DI-大于DI+且MACD小于信号线时,产生卖出信号。
-
-#### 策略优势
-1. 结合了多个技术指标,从不同角度对市场进行分析,提高了信号的可靠性。
-2. 同时考虑了市场的超买超卖状态、趋势方向和趋势强度,能够捕捉到市场的主要趋势。
-3. 设置了明确的进场和出场条件,易于实现自动化交易。
-
-#### 策略风险
-1. 在市场震荡或者趋势不明朗时,该策略可能会产生较多的假信号,导致频繁交易和高昂的交易成本。
-2. 该策略依赖于历史数据,对于市场突发事件或者重大消息的反应可能较为迟缓。
-3. 策略参数(如CCI的超买超卖阈值、MACD的快慢线周期等)需要根据不同的市场和品种进行优化,否则可能影响策略表现。
-
-#### 策略优化方向
-1. 引入更多的技术指标或者市场情绪指标,提高信号的可靠性和稳定性。
-2. 对策略参数进行优化,可以使用遗传算法等智能优化方法,寻找最优参数组合。
-3. 加入风险控制模块,如止损止盈、仓位管理等,提高策略的风险收益比。
-4. 针对不同的市场环境,设置不同的交易规则,提高策略的适应性。
-
-#### 总结
-该策略通过将CCI、DMI和MACD三个技术指标结合起来,对市场的超买超卖状态、趋势方向和趋势强度进行综合判断,产生买卖信号。策略思路清晰,易于实现,但在实际应用中需要注意优化策略参数、控制交易频率和风险,以提高策略的稳定性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy combines three technical indicators: Commodity Channel Index (CCI), Directional Movement Index (DMI), and Moving Average Convergence Divergence (MACD) to determine the overbought and oversold conditions of the market and the trend direction. When CCI breaks above the oversold area, DI+ is greater than DI-, and MACD is above the signal line, a buy signal is generated. When CCI breaks below the overbought area, DI- is greater than DI+, and MACD is below the signal line, a sell signal is generated.
@@ -69,7 +39,6 @@ This strategy combines three technical indicators: Commodity Channel Index (CCI)
 
 #### Summary
 By combining the three technical indicators of CCI, DMI, and MACD, this strategy makes a comprehensive judgment on the overbought and oversold conditions, trend direction, and trend strength of the market to generate buy and sell signals. The strategy is clear and easy to implement, but in practical applications, attention needs to be paid to optimizing strategy parameters, controlling trading frequency and risk to improve the stability and profitability of the strategy.
-[/trans]
 
 > Strategy Arguments
 

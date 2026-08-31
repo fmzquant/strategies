@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d45458adf81e209658.png)
-[trans]
-
-## 概述
-
-该策略通过识别异常涨幅的K线,判断当前市场是否存在突发性的单边行情。当识别到异常涨幅K线时,会在该K线的高点附近设置买入止盈单,同时会在之前K线的低点附近设置止损单,形成高杠杆风险控制的长单。策略会实时监控止损线,如果价格向下突破止损线,会立即撤单止损。
-
-## 策略原理
-
-该策略主要判断异常涨幅K线的形成,当出现close>open并且high<high[1]且low>low[1]的K线时,认为存在当前周期异常涨幅行情。此时会设置长单入场信号,入场价格为当前K线的最高价附近。同时设置止损价格为上一根K线的最低价附近,形成高杠杆风险控制模式。通过持续监控价格突破止损线情况,实现风险控制。
-
-## 优势分析
-
-该策略最大优势是能捕捉行情的短线异常突发行情,实现超高频交易。同时,通过设置较大止损幅度,可以使用高杠杆进行风险控制交易,从而获得更大收益。此外,策略实现了自动监控止损线,当价格向下突破止损线时,能够快速止损,有效控制交易风险。
-
-## 风险分析
-
-该策略主要风险在于异常涨幅判断不准确,无法有效捕捉行情突发行情,导致交易信号误判的概率较大。此外,止损位置设置也会对交易风险和收益有很大影响。如果止损过于宽松,交易亏损风险会加大,如果止损过于窄隘,则可能无法有效跟踪行情获利。需要通过大量回测优化止损位置。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 异常涨幅判断标准可以引入更多指标或深度学习模型辅助判断,提高策略交易信号判断的准确性。
-
-2. 停损位置设置可以进行大量统计和优化分析,找到更优止损位置,以平衡交易风险和收益水平。
-
-3. 可以引入更多高频交易风控机制,如成交量过滤、区间突破验证等,避免被套牢的概率。
-
-4. 策略入场标准可以进行调整,不必局限于异常涨幅K线,可以结合更多指标和模型进行判定,形成多重验证机制。
-
-## 总结
-
-该策略整体是一个典型的高频交易策略,属于短线突破类策略。它通过捕捉行情的突发性异常波动实现超高频交易。同时使用止损风控和高杠杆机制控制风险。该策略优化空间较大,可从多个角度进行调整和优化,最终目标是在控制风险的前提下,获得更高的超高频交易收益。
-
-||
 
 ## Overview  
 
@@ -77,7 +42,6 @@ The strategy can be optimized in the following aspects:
 ## Summary   
 
 This strategy is a typical high-frequency trading strategy, belonging to a short-term breakout strategy. It captures the bursting volatility in market movements to achieve ultra-high frequency trading. At the same time, it uses stop loss risk control and high leverage mechanisms to control risks. The strategy has large room for optimization, and can be adjusted and optimized from multiple angles. The ultimate goal is to obtain higher returns from ultra-high frequency trading while controlling risks.
-[/trans]
 
 > Strategy Arguments
 

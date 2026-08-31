@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17584e1fd22c67c94c9.png)
-[trans]
-####  概述
-这个策略结合了布林带(Bollinger Bands)和5日指数移动平均线(5-day EMA)来生成交易信号。当价格超出布林带上轨且收盘价低于5日EMA时,开空头仓位;当价格跌破布林带下轨且收盘价高于5日EMA时,开多头仓位。同时,当出现反向信号时,策略会平掉现有仓位并开立新的反向仓位。这个策略旨在捕捉市场的波动性和趋势变化,通过布林带来判断价格的相对高低,并利用EMA作为趋势的滤网,以此来产生交易信号。
-
-#### 策略原理 
-1. 计算布林带的上轨、中轨和下轨。上轨为中轨加上两倍标准差,下轨为中轨减去两倍标准差,中轨为收盘价的简单移动平均线。
-2. 计算5日EMA作为趋势的参考。  
-3. 当开盘价大于布林带上轨且收盘价小于5日EMA时,开空头仓位。
-4. 当开盘价小于布林带下轨且收盘价大于5日EMA时,开多头仓位。
-5. 如果已有空头仓位,当触发多头信号时,平掉空头并开多头仓位。
-6. 如果已有多头仓位,当触发空头信号时,平掉多头并开空头仓位。
-7. 如果持有多头仓位,当触发空头平仓信号时,平掉多头仓位。
-8. 如果持有空头仓位,当触发多头平仓信号时,平掉空头仓位。
-
-#### 策略优势
-1. 同时利用价格的波动性和趋势特征来产生信号,可以在趋势和震荡行情中把握机会。
-2. 布林带能够灵活调整参数,适应不同的市场状况和品种特征。
-3. 5日EMA作为趋势过滤,可以有效降低噪音和频繁交易。
-4. 及时止损和反向开仓的机制,可以更好地控制风险,并积极把握新的趋势机会。
-5. 逻辑清晰,容易理解和实现,便于进一步优化。
-
-#### 策略风险
-1. 参数选择不当可能导致信号失真或者过度交易。需要根据品种和周期进行优化测试。
-2. 在震荡市可能出现频繁的交易信号,导致过度交易和成本增加。
-3. 趋势转折点的把握存在滞后,可能错过最佳入场时机。
-4. 单一技术指标组合可能面临失效的风险,需要与其他信号进行验证。
-5. 极端行情下可能面临失控的风险,需要严格的风控措施。
-
-#### 策略优化方向
-1. 对布林带的参数如长度、倍数等进行优化,找到最佳的参数组合。
-2. 对EMA的周期进行优化测试,选择最佳的趋势周期。
-3. 加入其他趋势类指标如MACD等作为辅助判断,提高趋势把握的准确性。
-4. 引入波动率指标如ATR等作为止损和仓位管理的依据,控制单笔风险。
-5. 对交易的时间段进行限制,避开特定时间的非有效波动。
-6. 根据行情特征,设置适当的止盈止损策略。
-
-#### 总结
-该策略通过布林带和EMA的结合,可以比较有效地捕捉趋势性机会和波动性机会,适用于中长周期的交易策略。但是需要注意参数的优化,仓位的控制以及风险的管理,并且要与其他技术指标和基本面分析相结合,才能更好地发挥策略的效力。策略的表现可能会受到市场状态的影响,需要根据实际情况进行调整和优化。
-
-|| 
 
 #### Overview
 This strategy combines Bollinger Bands and the 5-day Exponential Moving Average (EMA) to generate trading signals. When the price breaks above the upper Bollinger Band and closes below the 5-day EMA, a short position is opened. Conversely, when the price breaks below the lower Bollinger Band and closes above the 5-day EMA, a long position is opened. Additionally, when a reverse signal appears, the strategy closes the current position and opens a new position in the opposite direction. The strategy aims to capture market volatility and trend changes by using Bollinger Bands to gauge relative price levels and the EMA as a trend filter to generate trading signals.
@@ -88,7 +48,6 @@ This strategy combines Bollinger Bands and the 5-day Exponential Moving Average 
 
 #### Summary
 By combining Bollinger Bands and EMA, this strategy can effectively capture trending and volatility opportunities, suitable for medium to long-term trading strategies. However, attention should be paid to parameter optimization, position control, and risk management. It should also be combined with other technical indicators and fundamental analysis for better performance. The strategy's performance may be influenced by market conditions and require adjustments and optimizations based on actual situations.
-[/trans]
 
 
 

@@ -10,23 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略名称为“多指标融合反转交易策略”。该策略综合应用多种技术指标,识别价格在短期内出现反转的时机,进行反向交易以获利。
-
-首先,该策略使用123反转形态判断短期价格反转。123反转形态是指价格连续三日收盘有明显的高低缺口,第三日收盘反转前两日趋势的形态。根据统计,延续123反转形态发出信号的获利率较高。
-
-其次,该策略加入随机指标RSI判定反转信号的可靠性。RSI低于50代表超卖形态,高于50代表超买形态。结合RSI指标可以避免仅凭123反转形态产生过多不可靠信号。
-
-最后,该策略再引入CMO指标的多周期叉差判定。CMO叉差结合不同周期指数移动平均线,判断价格动能反转。其信号再次确认123反转交易时机。
-
-上述多指标综合运用,可以提高价格反转捕捉的成功率,避免出现过多不确定信号。当RSI和CMO均支持123形态时,发出强烈的反转交易信号。
-
-该策略适合用于盘整震荡市场,捕捉短期价格脉动。但多指标组合也容易出现不同指标互相对冲的情况,需要进行参数优化。止损策略也需要配合使用,控制单笔交易的最大亏损。
-
-总体而言,多指标融合反转交易策略,综合各种工具提高对市场反转时机的判断准确性。但任何单一策略难以完美,需要交易者根据当下市场情况进行细致验证和调整,始终保持交易意识的灵活性。
-
-
-||
 
 This strategy is named “Multi-indicator Combined Reversal Trading Strategy”. It integrates various technical indicators to identify opportunities for short-term price reversals and trade against the previous trend for profits.
 
@@ -42,7 +25,6 @@ This strategy suits ranging, oscillating markets to capture short-term price flu
 
 In conclusion, the multi-indicator combined reversal trading strategy integrates various tools to improve judgment accuracy of market reversals. But no single strategy is perfect. Traders need to validate and adjust based on current market conditions, maintaining flexible trading mindset.
 
-[/trans]
 
 > Strategy Arguments
 

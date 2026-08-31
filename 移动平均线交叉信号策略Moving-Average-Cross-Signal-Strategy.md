@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7f3881d2090b224a1f.png)
-[trans]
-
-### 概述
-
-该策略通过计算并绘制不同类型的移动平均线,实现移动平均线之间的交叉信号,用于发出买入和卖出信号。
-
-### 策略原理  
-
-1. 策略允许选择不同类型的移动平均线,包括SMA、EMA、WMA等。
-2. 策略计算出主要移动平均线,也允许选择第二条移动平均线。
-3. 通过主要移动平均线和第二移动平均线的交叉情况来判断市场的多空状态。
-4. 当主要移动平均线上穿其自身指定周期的移动平均线时,产生买入信号;当主要移动平均线下穿其自身指定周期的移动平均线时,产生卖出信号。
-5. 这样,通过移动平均线的交叉情况,可以较为清晰地判断市场的多空状态。
-
-### 策略优势
-
-1. 可自定义移动平均线类型,满足不同需求。
-2. 可添加第二条移动平均线,使信号更加清晰。 
-3. 可自定义移动平均线周期,适用于不同时间周期。
-4. 可平滑颜色渲染,使图形更清晰。
-5. 使用了交叉信号机制,对多空态势判断准确。
-
-### 策略风险与优化
-
-1. 移动平均线具有滞后性,可能出现假信号。可以适当选用曲线拟合移动平均线。
-2. 移动平均线周期设置不当,可能导致错失交易机会。可以测试更多组合寻找最佳参数。  
-3. 建议结合其他指标如交易量能量指标等进行验证,可减少风险。
-4. 可考虑把取信号的移动平均线改为curl平均线,可提高信号准确率。
-5. 可结合LSTM等深度学习模型进行策略优化。
-
-### 总结
-
-该策略总体思路清晰,使用移动平均线交叉原理判断市场多空态势,可自定义参数满足不同需求。同时也存在一些问题,但可通过优化模型和参数进行改进。总体而言,该策略是基于移动平均线的交易策略的典型代表。
-
-||
 
 ### Overview  
 
@@ -78,7 +43,6 @@ This strategy calculates and plots different types of moving averages to impleme
 
 The overall idea of ​​the strategy is clear, using the principle of moving average cross to judge market trend, customizable parameters to meet different needs. There are also some problems, but they can be improved by optimizing models and parameters. Overall, this strategy is a typical representative of trading strategies based on moving averages.
 
-[/trans]
 
 > Strategy Arguments
 

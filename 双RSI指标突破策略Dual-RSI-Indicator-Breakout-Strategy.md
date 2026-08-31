@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-双RSI指标突破策略运用两个相对强弱指数(RSI)指标进行交易,一个快速RSI和一个慢速RSI,两者可以同方向交易。
-
-具体逻辑是:
-
-1. 分别计算快速RSI(例如16周期)和慢速RSI(例如31周期)
-
-2. 当快速RSI低于超卖线(如30)时生成买入信号
-
-3. 当慢速RSI低于超卖线(如30)时也生成买入信号
-
-4. 快速RSI和慢速RSI可以在同一天同时发出买入信号
-
-5. 快速RSI上穿70时平仓
-
-6. 慢速RSI上穿68时平仓
-
-7. 设置回撤止损线
-
-双RSI指标能在超买超卖区域发现较佳机会。快慢速线结合可以实现多级进场,跟踪趋势运行。止损可控制风险。
-
-## 策略优势
-
-- 快慢RSI互相验证,减少假信号
-
-- 多级进场可按次充分跟踪趋势
-
-- 设置不同的利润取利点和止损点
-
-- 回撤止损进一步控制风险
-
-## 策略风险
-
-- 需反复测试优化RSI参数
-
-- 双重入场会增大交易风险系数
-
-- 止损过于接近,可能被震出
-
-## 总结
-
-双RSI指标策略综合运用双时间轴指标,在控制风险前提下,实现多点进场以跟踪趋势。参数优化和严格止损是关键所在。总体而言,该策略适合追踪中长线方向性行情。
-
-
-||
 
 ## Strategy Logic
 
@@ -103,7 +55,6 @@ The dual RSI identifies opportunities in overbought/oversold regions. Combining 
 
 The dual RSI strategy utilizes two timeframes for entries while controlling risk. Parameter optimization and strict stops are key. Overall it suits trend-following of mid- to long-term directional moves.
 
-[/trans]
 
 > Strategy Arguments
 

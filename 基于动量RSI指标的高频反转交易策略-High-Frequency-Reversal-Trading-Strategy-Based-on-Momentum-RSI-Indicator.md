@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/155c62cc43d579b3267.png)
-[trans]
-#### 概述
-该策略利用RSI指标衡量价格动量,通过计算RSI变化的标准差来确定进场时机。在RSI动量超过标准差阈值且小于前一刻动量乘以衰竭因子时开多仓,反之开空仓。该策略使用限价单平仓,通过设置止盈和止损点数来控制风险。策略在每个价格变动时执行,以捕捉所有潜在的价格波动。
-
-#### 策略原理
-1. 计算RSI指标,衡量价格动量。
-2. 计算RSI变化的标准差,确定进场阈值。
-3. 计算RSI动量,即RSI的变化量。
-4. 当RSI动量超过标准差阈值且小于前一刻动量乘以衰竭因子时,开多仓。
-5. 当RSI动量低于负的标准差阈值且大于前一刻动量乘以衰竭因子时,开空仓。
-6. 使用限价单平仓,设置止盈和止损点数。
-7. 策略在每个价格变动时执行,以捕捉所有潜在的价格波动。
-
-#### 策略优势
-1. 高频执行,能够捕捉更多的交易机会。
-2. 使用RSI动量和标准差阈值,能够在价格趋势明确时进场交易。
-3. 引入衰竭因子,避免在极端行情下进场,降低风险。
-4. 使用限价单平仓,能够更好地控制风险。
-5. 程序化交易,执行效率高,避免了人为情绪干扰。
-
-#### 策略风险
-1. 高频交易可能导致较高的交易成本。
-2. RSI指标可能出现钝化,导致交易信号失效。
-3. 标准差阈值和衰竭因子的设置需要根据市场状况进行优化,否则可能导致频繁交易或错失交易机会。
-4. 限价单平仓可能导致持仓时间过长,承担更多的风险。
-5. 策略在极端行情下可能表现不佳。
-
-#### 策略优化方向
-1. 引入更多指标,如价格行为指标,以提高交易信号的准确性。
-2. 优化标准差阈值和衰竭因子的设置,使其能够适应不同的市场状况。
-3. 引入仓位管理,根据市场波动性调整仓位大小,以控制风险。
-4. 考虑引入趋势过滤,在趋势明确时进行交易,避免在震荡市中频繁交易。
-5. 优化止盈和止损点数的设置,提高策略的盈亏比。
-
-#### 总结
-该策略利用RSI动量和标准差阈值,在高频环境下进行反转交易。通过引入衰竭因子和限价单平仓,策略能够在控制风险的同时捕捉价格波动带来的交易机会。但是,策略在实际应用中还需要进一步优化,如引入更多指标、优化参数设置、引入仓位管理和趋势过滤等,以提高策略的稳定性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy utilizes the RSI indicator to measure price momentum and determines entry timings by calculating the standard deviation of changes in RSI. It enters a long position when the RSI momentum exceeds the standard deviation threshold and is less than the previous momentum multiplied by an exhaustion factor, and enters a short position under the opposite conditions. The strategy uses limit orders for exit, controlling risk by setting profit target and stop loss ticks. The strategy executes on every price tick to capture all potential price movements.
@@ -84,7 +46,6 @@ This strategy utilizes the RSI indicator to measure price momentum and determine
 
 #### Summary
 This strategy utilizes RSI momentum and standard deviation thresholds to perform reversal trading in a high-frequency environment. By introducing an exhaustion factor and limit order exit, the strategy is able to capture trading opportunities brought by price movements while controlling risk. However, the strategy still needs further optimization in actual application, such as introducing more indicators, optimizing parameter settings, introducing position management and trend filtering, etc., to improve the stability and profitability of the strategy.
-[/trans]
 
 > Strategy Arguments
 

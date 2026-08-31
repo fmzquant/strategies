@@ -9,39 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过观察价格与长周期均线(如200日线)的关系,在价格突破均线时建仓做多,在价格跌破均线时平仓,属于长线震荡突破操作策略。该策略追求长期持有并减少交易频率。
-
-策略原理:
-
-1. 计算一条长周期的移动平均线,典型参数为200日线。
-
-2. 当收盘价从下方突破该均线时,进行买入做多操作。
-
-3. 当收盘价从上方跌破该均线时,进行卖出平仓操作。
-
-4. 在做多状态则持续持有,直至价格跌破均线止损。
-
-该策略的优势:
-
-1. 长线均线可有效识别价格中长线趋势。
-
-2. 突破交易方式可及时捕捉股价长线反转。
-
-3. 减少交易频率,有助于降低交易成本和风险。
-
-该策略的风险:
-
-1. 长周期均线滞后问题较严重,入场时点不佳。
-
-2. 无法限制突破后的回调波动带来的亏损。
-
-3. 频繁出现小幅震荡突破可能带来连续小额损失。
-
-总之,该HODL策略通过长周期均线震荡来判断持有时机,可减少交易频率。但在参数优化与止损设置方面仍有改进空间,以控制回撤并获得长期稳定收益。
-
-||
 
 This strategy observes price oscillation around long-period moving averages (e.g. 200-day) to determine hold signals, trading breakouts for position entry and using break below as stop loss. It aims to minimize trading frequency for long-term holding. 
 
@@ -73,7 +40,6 @@ Risks:
 
 In summary, this HODL strategy uses long MA oscillation to determine hold timing, minimizing trade frequency. But parameter optimization and stop loss placement could improve performance and risk control for steady long-term gains. 
 
-[/trans]
 
 > Strategy Arguments
 

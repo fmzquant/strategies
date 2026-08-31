@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]  
-
-本策略围绕交易周期性规律设计,在周一尾盘买入,并在周三开盘前止盈退出,捕捉该波段的价格趋势行情。属于典型的机械交易策略。
-
-策略原理:
-
-1. 每周一收盘前执行买入操作,开启多头仓位。
-
-2. 每周三开盘前执行止盈退出多头仓位。
-
-3. 设置止损百分比,避免亏损扩大。
-
-4. 设置止盈百分比目标,锁定盈利。
-
-5. 绘制止盈止损线,直观展示盈亏情况。
-
-该策略的优势:
-
-1. 周期交易方式回撤风险较小,历史表现较优。
-
-2. 规则固定明确,便于算法化交易执行。
-
-3. 止盈止损设置简单实用。
-
-该策略的风险:
-
-1. 无法适应突发事件对周期模式的影响。
-
-2. 滞后止损 Unable 限制单笔亏损扩大。
-
-3. 锁定盈利后无法跟踪进一步行情。
-
-总之,该策略采用机械化的周期交易方式,回测效果显著,但难以应对周期模式突变,投资者需谨慎使用。
-
-||
 
 This strategy trades the weekly cyclical pattern by entering long on Monday close and taking profit before Wednesday open to capture the price swing during this period. It is a typical mechanical system.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this mechanical cyclical system has impressive backtests but struggles to adapt when the pattern changes. Investors should apply prudent discretion.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/efc7411f52f0ae1400.png)
-[trans]
-
-## 概述
-
-该策略是一个利用抛物线滑点值(Parabolic SAR)与K线进行交叉操作,实现动量追踪和止损的Swing交易策略。策略会在看涨和看跌形势下建立做多和做空仓位,在价格反转时平掉这些仓位止损。
-
-## 策略原理
-
-该策略主要依靠抛物线指标(Parabolic SAR)判断当前是价格上涨趋势还是下跌趋势。当Parabolic SAR指标在K线下方时,表示目前处于价格上涨状态,这时策略会在每根K线收盘时检查Parabolic SAR值是否上穿K线最低价,如果没有上穿,说明上涨趋势继续,策略会建立做多仓位;如果Parabolic SAR上穿K线最低价,说明上涨趋势反转为下跌,这时策略会平掉做多仓位止损。相反,当Parabolic SAR指标在K线上方时,表示目前处于价格下跌状态。这时,策略会在每根K线收盘时检查Parabolic SAR值是否下穿K线最高价,如果没有下穿,则建立做空头寸;如果下穿,说明下跌趋势反转为上涨,这时平掉做空头寸止损。
-
-通过这样的操作原理,该策略能够在确认的价格趋势下顺势建立仓位,并在第一时间止损,从而锁定盈利。同时,抛物线作为动量指标,能够更准确地判断趋势是否反转,这也使得止损更为精确。
-
-## 策略优势
-
-1. 利用抛物线判断趋势和反转点,是一个比较先进和准确的技术指标,能够提高判断精准度
-2. 采用动量追踪和反转止损的操作方式,能够充分利用价格趋势带来的机会
-3. 反转止损规则比较严格,风险控制能力较强
-4. 该策略参数经过优化,特别适合应用在GBP/JPY这个具有强劲 추세的货币对上
-
-## 策略风险
-
-1. 如其他任何单一指标策略,该策略可能会出现抛物线误判价格趋势和反转点的情况。如果指标失效,可能导致不必要的亏损。
-2. 该策略是完全依赖抛物线的指示进行操作,如果指标参数设置不当,止损点设置过于宽松,则无法有效控制风险。
-3. 任何单一策略都可能由于市场结构或环境变化而逐步失效,需要及时检验和优化策略。
-
-提高策略健壮性的方法包括:优化止损点设置使其足够严格;结合其他指标判断作为确认;调整指标参数适应市场环境变化;根据不同品种选择最优参数组合等。
-
-## 策略优化方向  
-
-1. 该策略可以测试并优化抛物线的参数组合,以获得更好的指标表现
-2. 可以结合其他判断指标,例如MACD,KD等,形成多指标确认体系,提高操作信号的可靠性
-3. 可以测试不同的止损方式,如轧差止损、时间止损、价格止损等的效果
-4. 根据不同的品种特点,优化参数,使策略在不同品种上都能获得良好回报
-
-## 总结
-
-该抛物线Swing策略整体来说是一个效果较好的短线操作策略。它利用抛物线指标判断趋势方向和 prices 的动量变化,配合Swing交易方式,在品种上涨和下跌阶段反复建立做多和做空仓位。严格的止损机制也使得该策略风险控制能力较强。但作为单一指标策略,抛物线的失效也会对策略产生较大的影响。所以这是一个有一定优势和潜力,但也存在一定风险的策略,需要根据实际情况检验和不断优化,才能使其产生持续稳定的超额收益。
-
-||
 
 ## Overview
 
@@ -88,7 +49,6 @@ Methods to enhance robustness include: optimizing stop loss points to make them 
 
 In general, this Parabolic SAR swing strategy is quite an effective short-term trading strategy. It takes advantage of Parabolic SAR to determine trend direction and momentum changes, together with swing trading methods, to repeatedly establish long and short positions during uptrends and downtrends. The strict stop loss mechanism also gives this strategy decent risk control capability. But as a single indicator strategy, the invalidity of Parabolic SAR will have a significant impact. So this is a strategy with some strength and potential, but also has some risks. It needs backtests, optimizations and enhancements to generate stable excess returns in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

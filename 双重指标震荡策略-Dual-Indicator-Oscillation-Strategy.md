@@ -11,27 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8d433aaa4f5a560222.png)
 
-[trans]
-
-## 概述
-本策略通过组合使用随机指标RSI和指定参数的随机震荡指标Stochastic Oscillator,在一定震荡区间内进行买入和卖出操作。
-
-## 策略原理
-代码中首先定义了Stochastic Oscillator的K值、D值和SD值等参数,以及RSI指标的周期参数。在每根K线计算出Stochastic Oscillator和RSI的值之后,如果RSI小于低档20并且K值也低于20时就是超买信号而做空;如果RSI大于高档80并且K值也高于80时就是超卖信号而做多。这样通过双重指标确认,可以过滤掉一些假信号。此外还设置了止损和止盈条件。
-
-## 优势分析
-这种双重指标过滤的策略,可以有效减少普通Stochastic策略中 whipsaws 带来的不必要交易。同时结合趋势指标RSI,可以避免在没有明确趋势时盲目交易。所以这种组合指标策略可以提高信号质量,减少假信号,更好控制风险。
-
-## 风险分析
-该策略最大的风险在于指定的参数不一定适用于所有品种和所有时间段,如在细分的时间周期内,RSI和Stochastic的参数需要调整。另外在趋势剧烈变化时,Stochastic型策略会产生较大亏损。因此这种策略更适用于震荡盘整理的市场环境。
-
-## 优化方向 
-可以测试更多指标的组合,如将MACD指标与Stochastic或RSI组合,形成多重指标过滤;调整RSI和Stochastic的具体参数值,寻找最佳参数组合;可以根据最近N天的波动情况动态调整止损止盈幅度。通过参数优化和指标优化,可以持续改进策略表现。
-
-## 总结
-本策略综合运用随机震荡指标Stochastic和趋势强度指标RSI进行双重指标过滤,可以有效识别超买超卖情况,适合震荡盘整理的市场,效果优于单一Stochastic指标策略。通过参数和指标组合优化,策略效果还有进一步提升空间。
-
-||
 
 ## Overview
 This strategy combines the stochastic indicator RSI and Stochastic Oscillator with specified parameters to make buy and sell operations within a certain oscillation range.
@@ -51,7 +30,6 @@ More combinations of indicators can be tested, such as combining MACD with Stoch
 ## Conclusion  
 This strategy integrates the stochastic indicator Stochastic and trend strength indicator RSI for dual indicator filtering, which can effectively identify overbought and oversold situations suitable for range-bound oscillation markets, performing better than single Stochastic indicator strategies. There is further room for performance improvement through parameter and indicator combination optimization.
 
-[/trans]
 
 > Strategy Arguments
 

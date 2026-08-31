@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ce636f56d217fda343.png)
-[trans]
-## 概述
-
-移动均线交叉趋势追踪策略是一种追踪市场趋势的量化交易策略。该策略通过计算快速移动均线和慢速移动均线,并在它们发生交叉时生成交易信号,以捕捉市场趋势的转折点。  
-
-## 策略原理
-
-该策略的核心原理是使用不同参数的指数移动均线(EMA)实现对市场趋势的判断。策略中定义了一个快速EMA和一个慢速EMA。当快速EMA从下方上穿慢速EMA时,表示市场趋势转bull;当快速EMA从上方下穿慢速EMA时,表示市场趋势转bear。
-
-在上穿时,策略会开多单,在下穿时,策略会开空单。策略会一直持有仓位,直到止盈止损触发或者再次发生交叉反向信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略逻辑简单清晰,容易理解实现,适合初学者学习;
-2. 利用EMA平滑价格,可以有效过滤市场Noise,识别趋势;  
-3. 可以灵活调整参数,适应不同周期的市场;
-4. 可以将策略扩展为多时间周期版本,提高稳定性。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 在震荡行情中,可能出现多次止损,影响盈利;
-2. 无法有效识别趋势类型(牛熊),可能亏损严重; 
-3. EMA参数设置不当,会导致交易频率过高或识别延迟。
-
-为了降低风险,可以考虑结合其他指标判断趋势类型,或者设置止损比例更宽松一些。
-
-## 优化方向  
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加对趋势类型的判断,避免反向开仓;
-2. 增加多时间周期判断,提高信号质量; 
-3. 动态调整止损止盈比例,优化退出点;
-4. 结合其他指标过滤信号,减少误差交易。
-
-## 总结
-
-移动均线交叉趋势追踪策略整体来说是一种简单实用的趋势交易策略。该策略核心思想清晰,易于实践,同时也存在一定的优化空间。通过参数调整、多周期判断、动态止损等方式,可以不断提升策略的稳定性和盈利水平。
-
-||
 
 ## Overview   
 
@@ -97,7 +53,6 @@ The strategy can also be optimized in the following aspects:
 
 In summary, the Moving Average Crossover Trend Following Strategy is a simple and practical trend trading strategy. The core ideas of the strategy are clear and easy to implement, and there is also room for optimization. By adjusting parameters, adding multi-timeframe analysis, dynamic stops etc, the stability and profitability of the strategy can be continuously improved.
 
-[/trans]
 
 > Strategy Arguments
 

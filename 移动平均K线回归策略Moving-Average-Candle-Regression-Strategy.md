@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略集成多种技术指标和策略,主要用于判断指数的入场时机和退出点。
-
-主要交易逻辑:
-
-1. 计算移动平均K线,包括开盘价、收盘价、最高价、最低价的移动平均线
-
-2. 计算移动平均K线的动量,以及动量的线性回归
-
-3. 计算移动平均K线本身的线性回归
-
-4. 计算超级趋势判断总体走势方向
-
-5. 当动量回归从负向转正,或回归强烈时,判断为入场时点
-
-6. 当动量从正向转负,或回归转弱时,判断为退出点
-
-该策略综合运用多种技术指标,判断市场的长短期走势和节奏,以确定指数的交易时机。
-
-## 策略优势
-
-- 移动平均K线反映市场中长期走势
-
-- 回归分析判断趋势转折
-
-- 超级趋势辅助判断总体方向
-
-- 多指标组合提高判断准确性
-
-## 策略风险
-
-- 参数优化较为复杂
-
-- 多指标组合难以权衡
-
-- 信号稀少,交易频率偏低
-
-## 总结
-
-该策略致力于发掘市场的长短期节奏,以确定指数交易的最佳时机。但其参数调整和模型优化仍有待完善。
-
-
-||
 
 
 ## Strategy Logic
@@ -100,7 +54,6 @@ The strategy synthesizes various indicators to assess short- and long-term marke
 
 This strategy aims to uncover market timing signals by analyzing short- and long-term patterns. But parameter tuning and model optimization needs improvement. 
 
-[/trans]
 
 > Strategy Arguments
 

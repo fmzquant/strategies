@@ -9,89 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是基于Faytterro Estimator的交易信号进行交易的策略。Faytterro Estimator是一个通过计算价格的收敛离散率来判断趋势的指标。该策略结合Faytterro Estimator的交易信号,以及一些附加条件,在理想的点位发出不同大小的买入和卖出信号。
-
-## 策略原理
-
-该策略的核心是Faytterro Estimator。它的计算方法是:先计算价格的收敛离散率CR,然后构建一个二次函数,该二次函数通过设置不同的系数,能够反映CR的曲线特征。通过观察二次函数曲线的拐点,判断价格趋势的变化。
-
-具体来说,策略首先计算价格的收敛离散率CR。然后构建一个长度为2*len的数组dizi,依次填充二次函数值。其中二次函数系数反映CR的值。之后,通过观察下标为len+1+5和len+1+4的两个值,判断二次函数是否出现拐点,如果出现拐点就发出买入或卖出信号。
-
-在此基础上,策略还设置了一些附加条件,如设置价格突破的最小间距,避免频繁交易;设置不同大小的入场信号等。这些条件都是为了过滤掉一些不理想的交易点位。
-
-## 优势分析
-
-该策略具有以下几点优势:
-
-1. 使用Faytterro Estimator指标判断趋势,该指标对价格波动具有敏感度,能提早捕捉到趋势的变化。
-
-2. 构建二次函数反映CR曲线特征,寻找拐点信号,判断方法直观有效。
-
-3. 设置不同大小的入场信号,能在理想点位进行pyramid交易,提高盈利空间。
-
-4. 增加最小间距设置,有效过滤信号,避免频繁无效交易。
-
-5. 可调参数较多,能针对不同品种进行优化,适应性强。
-
-6. 策略思路清晰易懂,代码易读性高,便于学习借鉴。
-
-## 风险分析 
-
-该策略也存在一些风险需要注意:
-
-1. Faytterro Estimator对曲线fitting有风险,在某些品种效果可能不佳。
-
-2. 仅依靠二次函数拐点判断信号可能过于粗放,导致误判。
-
-3. 频繁pyramid交易会加重手续费负担。
-
-4. 大量可调参数增加了调优难度。
-
-5. 无法有效处理价格震荡期的误判问题。
-
-6. 没有止损机制,可能导致亏损扩大。
-
-对应风险的解决方案如下:
-
-1. 针对不同品种优化参数,提高健壮性。
-
-2. 增加其他指标过滤,避免仅靠拐点造成误判。 
-
-3. 合理设置止损,控制单笔亏损。
-
-4. 通过大数据方法自动调优参数。
-
-5. 增加震荡识别机制,避开震荡阶段。 
-
-6. 设置合理的止损逻辑。
-
-## 优化方向
-
-该策略的优化方向包括:
-
-1. 增加止损逻辑,控制单笔亏损。可以设置移动止损或时间止损。
-
-2. 增加其他指标组合,避免Faytterro Estimator单一指标判断误判风险。例如结合MACD、KDJ等指标进行过滤。
-
-3. 增加确认机制,避免因价格短期回调被stop loss出场。可以考虑二次入场确认。
-
-4. 优化 adjustable parameters,针对不同品种设定合理参数。可以使用遗传算法、贝叶斯优化等方法。
-
-5. 增加对震荡行情的识别,在震荡期避免交易。可以用ATR、DMI等指标识别。
-
-6. 优化pyramid逻辑,防止追涨杀跌。比如根据趋势强度动态调整加仓幅度。
-
-7. 测试不同时间周期的参数设置,寻找最佳周期。
-
-## 总结
-
-本策略基于 Faytterro Estimator 的交易信号进行决策,在其基础上增加逻辑判断,并设置不同大小入场信号,形成具有 pyramid 特性的趋势跟踪策略。该策略直观易懂,具有较强的趋势捕捉能力。但也存在指标误判、无止损、参数调优难等问题。未来的优化方向包括增加过滤机制、止损逻辑、参数优化等,以提高策略的稳定性和适应性。总体来说,本策略提供了一种利用指标判断趋势变化的思路,值得学习和借鉴。
-
-||
 
 
 ## Overview
@@ -174,7 +91,6 @@ The optimization directions include:
 
 This strategy makes decisions based on the trading signals of Faytterro Estimator, and adds logic judgments and different sized entry signals on top of it to form a trend-following strategy with pyramid characteristics. The strategy is intuitive and easy to understand, with strong trend catching capabilities. But it also has problems like indicator misjudgements, no stop loss, difficulty in parameter optimization. Future optimizations include adding filtration mechanisms, stop loss logic, parameter optimization etc to improve robustness and adaptability. Overall, this strategy provides a way of using indicators to judge trend changes that is worth learning from.
 
-[/trans]
 
 > Strategy Arguments
 

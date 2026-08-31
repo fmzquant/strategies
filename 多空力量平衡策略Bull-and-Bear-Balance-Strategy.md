@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c391ba63e21887730a.png)
-[trans]
-
-
-## 概述
-
-多空力量平衡策略是一种改进的趋势跟踪策略。它通过分析当前K线与前一根K线的关系,计算多空力量的平衡情况,从而判断目前的趋势方向。当多空力量失衡时,该策略会发出交易信号。其思路来源于传统的老阳线指标,但进行了改进,可以更准确地判断趋势。
-
-## 策略原理
-
-该策略的核心指标是nBBB,它反映当前K线与前一根K线的多空力量平衡情况。nBBB的计算公式如下:
-
-nBBB = value2 - value
-
-其中,value和value2分别计算当前K线和前一根K线的多空力量。它们的计算过程比较复杂,涉及对收盘价、开盘价、最高价、最低价的关系进行判断。但总的来说,value反映当前K线的多空力量,value2反映前一K线的多空力量。两者之差就反映了多空力量的变化情况。
-
-当nBBB低于设置的门限SellLevel时,发出做空信号;当nBBB高于门限BuyLevel时,发出做多信号。门限可以通过参数调整。
-
-## 策略优势
-
-这种策略有以下几点优势:
-
-1. 基于K线反转的判断,能够识别较强的趋势转折点。
-
-2. 通过计算多空力量平衡,判断信号更准确可靠。
-
-3. 采用当前K线与前一K线比较的思路,可以过滤掉部分噪音,使信号更清晰。
-
-4. 可适用于不同时间周期,灵活性较强。
-
-5. 计算指标nBBB直观可视,形成的交易信号简单明确。
-
-## 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. 多空力量指标nBBB可能会产生错误信号,需要结合价格实体方向、成交量等进行验证。
-
-2. 仅凭借nBBB指标决策存在一定盲区,最好辅助其他技术指标决策。
-
-3. 参数SellLevel和BuyLevel的设定会直接影响策略表现,需要谨慎测试优化。 
-
-4. 行情剧烈波动时,指标发出的信号可能有滞后,需要注意判断风险。
-
-5. 该策略更适合中长线操作,短线操作可能会被套。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化SellLevel和BuyLevel参数,使信号更匹配实际行情。可以通过历史数据回测来确定最佳参数。
-
-2. 增加止损策略,如移动止损、震荡止损等,可以有效控制风险。
-
-3. 结合其他指标,如成交量, stochastic等进行辅助,可以提高决策准确性。
-
-4. 增加机器学习成分,利用AI技术自动优化参数,并辅助发出更准确的交易信号。
-
-5. 不同交易品种和时间周期的参数可以进行分别优化,使策略针对性更强。
-
-## 总结
-
-多空力量平衡策略通过计算多空力量变化,判断趋势转折点,是一个相对简单实用的趋势跟踪策略。它有一定的优势,但也存在风险。通过参数优化、止损策略、辅助指标等手段可以适当改进该策略,使其效果更好。总体来说,这是一个值得深入研究和运用的量化策略思路。
-
-||
 
 
 ## Overview 
@@ -136,7 +72,6 @@ Some ways to enhance the strategy:
 
 The Bull and Bear Balance Strategy judges trend reversals by measuring changes in bull/bear force, making it a relatively simple and practical trend following strategy. It has certain advantages but also risks. With parameter optimization, stop losses, additional indicators etc., it can be improved further. Overall it presents an interesting quantitative approach worth deeper research and application.
 
-[/trans]
 
 > Strategy Arguments
 

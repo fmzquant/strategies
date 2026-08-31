@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/102a63d4edde152d134.png)
-[trans]
-
-
-## 概述
-
-本策略基于Relative Strength Index(RSI)指标设计,通过RSI指标判断超买超卖情况,实现趋势追踪。当RSI低于超卖线时做多,当RSI高于超买线时做空,通过追踪行情的主要趋势来获利。
-
-## 策略原理
-
-本策略使用RSI指标判断市场的超买超卖情况。RSI指标基于一定时间周期内的涨跌幅进行计算,当RSI低于30时被视为超卖,当RSI高于70时被视为超买。
-
-具体来说,本策略首先定义RSI计算参数length=14,超买线overBought=70,超卖线overSold=30。然后根据close价格计算出RSI值vrsi。判断vrsi是否高于超买线或低于超卖线,如果发生黄金交叉做多,如果发生死亡交叉做空。做多做空后设置止损点为etoroStopTicks ticks,在窗口期内触发止损后平仓。
-
-通过这种方式,本策略能够捕捉市场的主要趋势,在超卖点买入,在超买点卖出,实现趋势追踪。
-
-## 策略优势
-
-- 利用RSI指标判断超买超卖情况,有利于捕捉市场趋势
-- 回测窗口设定灵活,可以选择不同的时间范围进行测试
-- 止损点设置合理,可以控制单笔损失
-
-## 策略风险
-
-- RSI存在拉胯现象,可能产生错误信号
-- 止损点 static,无法动态跟踪市场波动 
-- 无法判断趋势反转点,可能反向开仓
-
-风险解决方法:
-
-- 结合其他指标过滤 RSI 信号,避免错误开仓
-- 动态调整止损点,实时跟踪市场波动
-- 增加趋势判断指标,避免反向开仓
-
-## 策略优化方向 
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化RSI参数,寻找最优参数组合
-
-可以测试不同的RSI计算周期length,不同的超买超卖阈值,找到最优参数以减少错误信号。
-
-2. 增加趋势判断指标,避免逆势交易
-
-可以加入均线、MACD等指标判断趋势方向,避免在趋势反转点产生错误信号。
-
-3. 动态止损
-
-可以根据ATR等指标设定动态止损点,让止损更加贴近市场波动。
-
-4. 优化入场规则
-
-可以在RSI信号基础上增加其它条件,如突破某一价格位、交易量放大等作为入场信号,提高入场精确度。
-
-## 总结
-
-本策略通过RSI指标判断超买超卖情况,实现了对趋势的捕捉。相比传统的跟踪止损策略,具有利用指标判断市场Timing的优势。但RSI指标存在拉胯现象,无法判断趋势反转点,这是本策略需要优化的方向。通过参数优化、增加趋势判断、动态止损等手段,可以进一步提升策略的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -124,7 +66,6 @@ Add other conditions like breakout, volume increase to RSI signal to improve ent
 
 The strategy catches the trend by identifying overbought and oversold situations using RSI. Compared to traditional tracking stop strategies, it has the advantage of timing the market with indicators. However, problems like RSI divergence and inability to detect trend reversal need to be addressed. Further improvements on parameter optimization, trend judging, dynamic stop loss can enhance the stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

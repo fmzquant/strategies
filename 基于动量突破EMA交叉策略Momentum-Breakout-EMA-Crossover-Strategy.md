@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ee9c0f4ed4da1ca1d.png)
-[trans]
-
-## 概述
-
-动量突破EMA交叉策略充分利用动量指标与移动平均线的交叉信号,识别股价中的趋势与反转机会。该策略采用快速EMA线与慢速EMA线的金叉与死叉,判断市场潜在的多头与空头机会。此外,该策略还引入中长线趋势判断指标——中轨SMA指标,对原有EMA交叉信号进行过滤,以确保仅在市场总体趋势方向一致时,才产生交易信号。
-
-## 策略原理  
-
-该策略主要由三部分组成:
-
-1. 快速EMA线(9日线)与慢速EMA线(21日线)的交叉运算。EMA交叉金叉为买入信号,死叉为卖出信号。该部分利用EMA指标对股价的趋势性与反转性进行判断。
-
-2. 中长线趋势判断指标:50日SMA指标。该指标反映了中长线的价格走势,可用来识别总体趋势的方向。  
-
-3. 动量指标:以收盘价与SMA中轨的比较,作为决定是否发出交易信号的动量过滤条件。仅在收盘价突破中轨方向时,才产生实际的交易信号。
-
-在具体实施时,该策略以9日EMA与21日EMA的交叉作为基本判断buy/sell的输入信号。而后在该信号发出时,再检验收盘价是否突破50日SMA中轨,以判断总体趋势的方向。仅当基本交易信号与总体趋势方向一致的时候,才会最终产生实际的买入与卖出信号,并对应建立看多或看空的头寸。
-
-## 策略优势  
-
-1. 能有效识别股价中的趋势性机会,捕捉中长线精确的涨跌方向。  
-
-2. 借助动量指标有效过滤掉部分噪音与反转信号,减少不必要的头寸打开与关闭。
-
-3. EMA交叉与SMA过滤器的配合使用,可产生比较理想的稳定盈利模式。
-
-## 策略风险  
-
-1. 在震荡格局中,EMA交叉信号可能过于频繁,造成频繁交易与滑点损耗。 
-
-2. SMA中轨指标的参数设定可能不当,未能有效确认中长线趋势。
-
-3. EMA与SMA参数选择不当,响应速度与稳定性失衡,可能出现平滑后的延迟。
-
-### 风险解决思路
-
-1. 优化参数,寻找最佳的参数组合;
-
-2. 增加其他指标验证信号,确保交易信号的质量; 
-
-3. 适当调整仓位管理,控制单次交易风险。
-
-## 策略优化方向  
-
-1. 测试更多参数组合,寻找最优参数;
-
-2. 增加价格突破,成交量等条件来确定趋势;   
-
-3. 尝试不同的MA指标,如KDJ,MACD等判断潜在趋势;
-
-4. 优化仓位管理方式,通过风险管理进一步控制回撤。
-
-## 总结  
-
-动量突破EMA交叉策略中,EMA交叉为基础信号,SMA中轨与价格关系的比较作为确认过滤器。这种思路充分利用指标联合使用的优势,提高了信号质量。有效解决了单一使用EMA时,出现过多反转信号的问题。该策略较好地平衡了捕捉趋势性机会与识别反转机会,实现了盈利模式的优化。未来可从参数选择与组合、仓位管理等方面进行深入优化。
-
-||
 
 ## Overview   
 
@@ -122,7 +65,6 @@ In implementation, this strategy takes the crossover of 9-day EMA and 21-day EMA
 
 In the momentum breakout EMA crossover strategy, EMA crossover is the basis signal, and the comparison between the SMA middle rail and the price relationship serves as a confirmation filter. This idea takes full advantage of the benefits of combined use of indicators to improve signal quality. It effectively solves the problem of too many reversal signals that occur when EMAs are used alone. The strategy strikes a good balance between capturing trend opportunities and identifying reversal opportunities, achieving optimization of the profit model. Further in-depth optimization can be done in areas such as parameter selection and portfolio and position management.
 
-[/trans]
 
 > Strategy Arguments
 

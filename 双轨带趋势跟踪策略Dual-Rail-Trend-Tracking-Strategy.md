@@ -9,79 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-双轨带趋势跟踪策略是一种基于布林带的短线交易策略。该策略利用布林带上下轨作为买入和卖出的信号,实现短线交易。
-
-## 策略原理
-
-该策略主要包括以下几个部分:
-
-1. 计算布林带的中轨、上轨和下轨。中轨是收盘价的n日简单移动平均线,布林带宽度由收盘价的n日标准差的2倍决定。
-
-2. 当收盘价由下向上穿过下轨时,做多;当收盘价由上向下穿过上轨时,平仓。
-
-3. n值默认为20天,也可以根据市场调整。布林带宽度变化由标准差倍数控制,默认为2倍。
-
-4. 该策略简单直接,容易实现。能够有效跟踪市场趋势,Profit from the volatility of the market.
-
-## 优势分析
-
-双轨带策略具有以下优势:
-
-1. 容易实现,逻辑简单直观。
-
-2. 能够及时跟踪市场变化,捕捉短线交易机会。
-
-3. 利用布林带的统计特性,有一定的数学依据。
-
-4. 防止了过早进入,也防止了过晚退出。
-
-5. 可以通过调整布林带的参数来适应不同市场的特点。
-
-6. 无需预测市场走势,只需要跟随市场。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 布林带指标并不能准确预测趋势反转点。
-
-2. 可能会出现较多的假信号。
-
-3. 不能有效过滤震荡市场的噪音。
-
-4. 需要合理确定布林带参数,否则会影响策略表现。
-
-5. 应避免在横盘整理时使用该策略。
-
-6. 存在一定的延迟,应关注跟踪误差。
-
-可通过调整参数、结合其他指标等方式来降低风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 结合其他指标进行过滤,例如MACD,KDJ等,避免出现假信号。
-
-2. 动态调整布林带参数,根据市场情况变化布林带宽度。
-
-3. 设置止损止盈条件,合理控制单笔交易的风险。
-
-4. 优化入场退出点位,例如让收盘价完全突破布林带才入场。
-
-5. 进行参数优化,优化移动均线长度、标准差倍数等参数。
-
-6. 区分多头市场和空头市场,进行方向性交易。
-
-## 总结
-
-双轨带策略是一种简单实用的短线交易策略。它利用布林带的统计特性,能够有效捕捉市场的短期趋势。该策略容易操作,逻辑简单,但也存在一些缺陷。通过进一步优化,可以使该策略在实盘交易中获得更好的表现。总体来说,双轨带策略适合追求短线交易机会的投资者。
-
-|| 
 
 
 ## Overview
@@ -154,7 +81,6 @@ This strategy can be optimized in the following aspects:
 
 The Dual Rail strategy is a simple and practical short-term trading strategy. It utilizes the statistical properties of Bollinger Bands to effectively capture short-term trends. The strategy is easy to implement with simple logic, but also has some flaws. Further optimizations can improve its performance in live trading. Overall, the Dual Rail strategy suits investors looking for short-term trading opportunities.
 
-[/trans]
 
 > Strategy Arguments
 

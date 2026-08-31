@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f5b5904d700ceef718.png)
-[trans]
-
-## 概述
-
-该策略综合运用价格反转策略和相对强弱指数(RSI)指标,实现趋势判断与超买超卖判定的有机结合。其中,价格反转部分判断价格是否出现反转信号,RSI部分用于判断市场是否超买超卖。两部分信号结合,可以有效过滤假信号,提高信号质量。
-
-## 策略原理
-
-价格反转部分运用123形态判断价格反转。具体来说,当收盘价连续2日低于前一日收盘价,且9日随机指标低通道线高于50时,产生买入信号;当收盘价连续2日高于前一日收盘价,且9日随机指标高通道线低于50时,产生卖出信号。
-
-RSI部分根据相对强弱指数是否高于70或低于30来判断市场是否超买超卖。RSI高于70为超买信号,RSI低于30为超卖信号。
-
-最后,价格反转信号和RSI信号进行逻辑“与”运算。即两者同为买入信号或卖出信号时,才产生实际的交易信号入市。从而有效过滤掉单一指标的假信号,提高信号质量。
-
-## 策略优势
-
-1. 综合运用多指标判断,有效过滤假信号
-
-   该策略同时运用价格形态指标和超买超卖指标,两者信号需同向才入市。这样可以最大程度过滤单一指标可能产生的假信号,确保每次入市信号的可靠性。
-
-2. 反转为主,趋势为辅的交易方式
-
-   价格反转部分以123形态判断反转情况。这是一种典型的反转交易方式。同时,RSI指标又可判断趋势,起到辅助确认的作用。反转为主,趋势为辅的结合,既可捕捉反转机会,也可避免与趋势对冲。
-
-3. 简单参数设定,易于实盘操作
-
-   该策略只运用两个常用指标,参数数量适中。使策略整体结构简洁清晰,实盘操作难度不高,容易掌握。这对实盘交易者而言是非常重要的。
-
-
-## 风险分析
-
-1. 反转失败风险
-
-   价格反转交易本身存在失败的概率,无法完全避免。当价格形成123信号,但是之后再次反转回去的情况。这时就会造成交易失败。
-
-2. 交易频率过高风险
-
-   策略本身判断标准较为宽松,容易产生较多交易信号。如果不加以控制,会导致操作频率过高,增加交易费用和心理压力。
-
-3. RSI区间设定不当
-
-   RSI指标的超买超卖区间默认为30-70。这只是经验参数,如果实际行情不符合,就容易错过正确信号或者发出错误信号。
-
-### 风险解决
-
-1. 适当调整持仓规模,控制单笔损失。
-
-2. 增加过滤条件,降低交易频率。例如加入移动均线判断。
-
-3. 测试不同市场后动态调整RSI参数区间,设定合理数值。
-
-## 策略优化
-
-1. 增加移动均线指标判断
-
-   在现有基础上,加入移动均线判断规则,一定程度可过滤掉小范围的噪音。
-
-2. 优化RSI参数设定
-
-   通过回测历史数据,测试确定RSI超买超卖值的最佳参数组合。
-
-3. 评估盈亏比作为持仓exit
-
-   除了现有的止损方式,可加入目标利润与止损关系的退出机制,以锁定盈利。
-
-
-## 总结
-
-该策略运用价格反转判断和RSI指标判断双重确认,实现反转为主趋势为辅的交易思路。同时参数设定简单,易于掌握实盘。通过优化可加入更多过滤条件,降低交易频率的同时保持信号捕捉质量。该策略整体运行效果良好,具有实战运用的价值。
-
-||
 
 
 ## Overview
@@ -149,7 +78,6 @@ Finally, a logical "AND" operation is performed on the price reversal signal and
 
 This strategy uses double confirmation of price reversal judgment and RSI indicator judgment to implement a trading idea of reversal-based and trend-assisted. At the same time, the parameter settings are simple and easy to grasp for live trading. Through optimization, more filtering conditions can be added to reduce the trading frequency while maintaining the signal capture quality. The overall performance of this strategy is good and it has value for practical use.
 
-[/trans]
 
 > Strategy Arguments
 

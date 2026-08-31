@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/110a1b3b5c9bf530647.png)
-[trans]
-## 概述
-本策略是一个基于年内调整的RSI震荡交易策略,通过追踪RSI指标在设定的上下轨之间的震荡特征,在RSI指标触碰上下轨时发出交易信号。
-
-## 策略原理
-1. 设置MA均线长度、RSI参数、上下轨、止盈止损参数、交易周期范围
-2. 计算RSI指标值,RSI=(上涨平均值)/(上涨平均值+下跌平均值)*100
-3. 绘制RSI指标和上下轨
-4. RSI指标上穿下轨为做多信号,下穿上轨为做空信号
-5. 开仓建立OCO挂单
-6. 按照设置的止盈止损逻辑进行止损和止盈
-
-## 策略优势分析
-1. 通过设置年度内的交易周期,可以避免一些不合适的外部环境。
-2. RSI指标可以有效反映超买超卖情况,通过设定合理区间进行震荡交易,可以过滤掉部分噪音。 
-3. OCO挂单结合止盈止损设定,可以实现高效的风险控制。
-
-## 策略风险分析
-1. RSI临界判断准确性无法保证,可能存在一定的误判风险。
-2. 年内交易周期设置不当可能错过更好的交易机会或进入不适当交易环境。
-3. 止损点设定过大可能造成较大亏损,止盈点设定过小可能造成利润太小。
-
-可以通过调整RSI参数、交易周期时间范围、止盈止损比例等方法进行优化。
-
-## 策略优化方向  
-1. 测试不同市场不同周期下RSI参数的最优值
-2. 分析整体行情周期规律,设定最佳的年内交易时间段
-3. 通过回测确定合理的止盈止损比例
-4. 优化交易品种选择和加大持仓规模
-5. 结合其他更优交易技巧或指标进行优化
-
-
-## 总结
-本策略通过RSI指标在年内指定周期的震荡特征进行趋势跟踪交易,有效控制了交易风险。通过参数优化和规则优化,可以获得更高的策略效果。
-
-||
 
 ## Overview  
 This strategy is an RSI oscillation tracking strategy based on annual adjustments. By tracking the oscillation characteristics of the RSI indicator between the set upper and lower bands, trading signals are issued when the RSI indicator touches the upper and lower bands.
@@ -80,7 +44,6 @@ Methods like adjusting RSI parameters, trading cycle range, stop loss/profit rat
 ## Summary
 This strategy tracks trend by RSI's annual cycle oscillation features, effectively controlling trading risks. Further performance improvement can be achieved by parameter tuning and logic optimization.
 
-[/trans]
 
 > Strategy Arguments
 

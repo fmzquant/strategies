@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1e0f1941706a9f448c7.png)
 
-[trans]
-
-### 概述
-
-该策略融合了移动平均线交叉和动量指标,实现了对趋势的有效跟踪与及时反转。策略首先使用快速移动平均线和慢速移动平均线形成金叉做多和死叉做空信号。然后结合一定参数的动量指标,在金叉做多时,如果快速移动平均线上的动量指标再次上扬,则视为趋势继续,保持做多;当动量指标下降时,则视为趋势反转,平仓。在死叉做空时,也采用相同的原理跟踪趋势反转。同时,策略还引入ADX指标,用于过滤非趋势状态下的错误信号。
-
-### 策略原理
-
-该策略的核心逻辑基于移动平均线交叉形成的趋势信号,以及动量指标判定趋势反转。关键部分的代码逻辑如下:
-
-1. 计算快速移动平均线price1和慢速移动平均线price2。其中price1为5周期HMA,price2为7周期HMA。
-
-2. 当price1上穿price2时生成做多信号,当price1下穿price2时生成做空信号。这是基于移动平均线的常规用法。
-
-3. 在做多信号触发后,如果快速移动平均线price1的动量指标roc1再次上扬,则视为趋势继续,保持做多状态。
-
-4. 当动量指标roc1下降时,则认为趋势反转,执行平仓。做空信号的处理逻辑相同。
-
-5. 引入ADX阈值,用于过滤非趋势状态下的错误信号,只有ADX高于阈值时才会产生实际的做多做空信号。
-
-### 优势分析
-
-相比简单的移动平均线策略,该策略最大的优势在于引入了动量指标判定趋势反转,可以更及时、精准地跟踪趋势与反转。具体优势如下:
-
-1. 移动平均线本身对价格变化响应滞后,而动量指标可以更快捕捉到反转信号,有利于及时止损或反向开仓。
-
-2. 基于动量指标判定的反转信号更加可靠,可以减少趋势交易中不必要的反复开平仓。
-
-3. ADX指标的应用避免了非趋势市场中的错误信号,让策略更专注于趋势阶段,从而提高获利概率。
-
-4. 策略逻辑清晰简单,容易理解和跟踪,适合算法交易初学者学习。
-
-5. 指标参数优化空间大,可以通过调整移动平均线周期、动量参数等实现针对不同市场的优化。
-
-### 风险分析
-
-该策略主要风险来源于以下几个方面:
-
-1. 移动平均线本身对价格变化响应滞后,可能导致信号产生滞后,错过最佳入场时机。
-
-2. 假突破造成不必要的开仓或平仓,需要进一步优化指标参数或引入附加过滤条件。 
-
-3. 趋势反转判断依赖动量指标,当市场剧烈变化时,动量指标的效果可能会打折扣。
-
-4. ADX指数无法完美判断趋势和盘整,阈值设置过高或过低都会导致问题。
-
-5. 策略未考虑交易成本,实际运用时需注意设置止损点以控制风险。
-
-### 优化方向
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 尝试其它类型的移动平均线,或调整移动平均线参数,优化指标的平滑效果。
-
-2. 优化动量指标的长度参数,使其可以更敏感地捕捉到价格反转。
-
-3. 尝试在动量指标反转时设置价格过滤,避免被短期小波动误导。
-
-4. 进一步增强ADX的使用,比如不同ADX水平使用不同参数等。
-
-5. 引入交易量指标等辅助条件,提高信号质量,过滤假突破。
-
-6. 添加止损机制来控制单笔损失。评估真实市场的手续费水平,设定合理的止盈止损。
-
-### 总结
-
-该策略整合移动平均线指标和动量指标的优势,实现了对趋势的跟踪与反转的捕捉。相比纯趋势跟踪,该策略可以更灵活地应对市场不同阶段,在保持趋势交易的同时,避免冲高回落带来的损失。通过参数优化和辅助条件引入,策略效果还有进一步提升的空间。总体来说,该策略逻辑清晰、简单可靠,非常适合算法交易初学者学习和运用。
-
-|| 
 
 
 ### Overview
@@ -148,7 +79,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy combines the advantages of MA and momentum indicators to track trends and capture reversals. Compared to pure trend following strategies, it can be more flexible in dealing with different market stages, avoiding losses from trend climax while keeping trend trading. Further improvements can be made through parameter optimization and introducing auxiliary conditions. Overall speaking, the strategy has clear and simple logic, very suitable for algo trading beginners to learn and apply.
 
-[/trans]
 
 > Strategy Arguments
 

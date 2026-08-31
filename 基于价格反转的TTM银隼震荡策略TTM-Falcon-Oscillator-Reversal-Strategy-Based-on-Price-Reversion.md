@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/199c24b66a7a5b726af.png)
-[trans]
-
-## 概述
-
-该策略名称为“基于价格反转的TTM银隼震荡策略”(TTM Falcon Oscillator Reversal Strategy)。它是一个利用价格反转信号来寻找买卖点的震荡指标。
-
-该策略的主要思想是利用价格形态判断趋势反转,当价格出现三根K线形成新的高点或低点时,判断为价格反转信号,采取相应的做多做空操作。
-
-## 策略原理
-
-该策略通过观察K线的收盘价变化判断价格反转。具体逻辑是:
-1. 当第一根K线的收盘价低于第二根K线的收盘价时,记录信号为1;当第一根K线的收盘价高于第二根K线的收盘价时,记录信号为0。
-2. 如果上一个信号为1(代表价格下跌),同时第二根K线和第三根K线中有任意一根K线的收盘价低于第一根K线的收盘价,则判断为价格反转信号,发出卖出信号。
-3. 如果上一个信号为0(代表价格上涨),同时第二根K线和第三根K线中有任意一根K线的收盘价高于第一根K线的收盘价,则判断为价格反转信号,发出买入信号。
-
-通过这个方法,该策略能快速判断价格反转,在反转点前后及时入场。
-
-## 策略优势
-
-该策略主要有以下优势:
-
-1. 反应迅速。通过仅比较三根K线的大小关系来判断价格反转,能够快速判断市场反转点,及时入场。
-
-2. 减少交易频率。相比其他震荡策略,该策略只在价格明确反转时才发出信号,可以有效减少不必要的交易次数。
-
-3.  parameter优化空间大。策略优化潜力大,可调整K线周期参数以适应不同市场环境。
-
-4. 可量化回测。该策略可直接在量化平台中实现自动回测,大幅提高测试效率。
-
-5. 逻辑简单易理解。新手交易者也易于理解和掌握该策略的核心逻辑。
-
-## 策略风险
-
-该策略也存在一定的风险,主要体现在:  
-
-1. 价格震荡范围大。当价格波动过于剧烈时,反转信号可能不准确,容易追高杀低。
-
-2. 参数优化难度大。K线周期参数的选择对策略表现有很大影响,需要大量优化找到最佳参数组合。  
-
-3. 交易次数过于频繁。在某些市场环境下,反转信号可能过于频繁,造成交易次数过多。
-
-4. 反转时间无法确定。该策略无法判断价格反转后新的趋势会持续多久,存在无法持有趋势的风险。
-
-对应解决方法是:适当调整参数缩小价格波动范围,在多种市场环境中充分优化测试,并设置止损以控制单笔损失。
-
-## 策略优化方向  
-
-该策略主要可从以下几个方向进行优化:
-
-1. K线周期优化。适当调整K线的时间周期参数,找到最佳的参数组合。
-
-2. 增加过滤条件。在发出信号前增加其他辅助条件判断,避免错误信号。
-
-3. 增加止损机制。设置合理的止损点,控制单笔损失。
-
-4. 结合其他指标。融合均线、波动率等其他指标信号,提高决策准确性。 
-
-5. 参数自适应优化。让参数能根据市场环境变化而动态调整,使策略更具鲁棒性。
-
-通过这些优化,可以大幅提升策略的稳定性、胜率和盈利能力。
-
-## 总结  
-
-总的来说,该策略利用价格形态判断反转点的思路非常简单直接,逻辑清晰易于理解,且参数优化空间较大,可按照个人偏好进行调整。但也存在一定概率上signal过于频繁和持仓时间控制不当的风险。通过严格的回测和稳健的参数优化,该策略可以成为高效盈利的震荡类交易策略之一。
-||
 
 ## Overview  
 
@@ -141,7 +76,6 @@ Through these optimizations, the stability, win rate and profitability of the st
 ## Conclusion  
 
 In summary, the idea of this strategy to determine reversal points by price patterns is very simple and straightforward, with clear and easy to understand logic, and relatively large space for parameter optimization that can be adjusted according to personal preferences. But there are also certain risks that the signals may be too frequent and the holding period control improper. Through rigorous backtesting and robust parameter optimization, this strategy can become one of the efficient and profitable oscillator trading strategies.  
-[/trans]
 
 > Strategy Arguments
 

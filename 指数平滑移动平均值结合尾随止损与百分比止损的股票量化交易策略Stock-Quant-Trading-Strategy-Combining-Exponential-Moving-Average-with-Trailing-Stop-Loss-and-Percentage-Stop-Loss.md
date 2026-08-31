@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d3147e559aec5cfb97.png)
 
-[trans]
-
-## 概述
-
-本策略的核心是将指数平滑移动平均线作为买卖信号,结合尾随止损和百分比止损来锁定利润并控制风险。策略简单可实施,适用于股票及其他金融产品的量化交易。
-
-## 策略原理  
-
-1. 计算快速EMA和慢速EMA,快速EMA周期为20天,慢速EMA周期为50天。当快速EMA上穿慢速EMA时生成买入信号;当快速EMA下穿慢速EMA时生成卖出信号。
-
-2. 入场后设置尾随止损,根据持仓方向分别设置多仓尾随止损和空仓尾随止损的百分比,例如7%。尾随止损会每根K线自动调整,锁定最大可能利润。
-
-3. 同时设置止损位置,根据持仓方向和入场价分别设置多仓止损价和空仓止损价的百分比,例如2%。止损位置固定不变,防止过大损失。 
-
-4. 比较尾随止损价和止损价,选择更靠近市价的那个为本笔交易的止损位置,发出止损单。
-
-## 策略优势
-
-1. 移动平均信号简单易懂,容易实施。
-
-2. 尾随止损能最大限度锁定利润,同时防止误判带来不必要的损失。
-
-3. 百分比止损直观易调整,可以控制每笔交易的最大损失。
-
-4. 结合尾随止损和固定止损,既锁定利润,也控制风险。
-
-## 风险及对策  
-
-1. 移动平均策略容易产生假信号,引入urther强过滤条件。
-
-2. 尾随止损有时会过早止损,适当放宽止损幅度。
-
-3. 固定止损位置设置不当可能过于激进或保守,需测试调整百分比参数。
-
-4. 机械地止损可能错过市场反转机会,可以结合技术指标判断止损。
-
-## 优化思路
-
-1. 尝试不同参数的EMA组合,寻找最佳平衡。
-
-2. 加入成交量等指标过滤假信号。
-
-3. 测试更多股票找到适合的止损参数。
-
-4. 尝试加入移动止损,根据市场调整止损位置。
-
-5. 结合RSI等指标判断止损时机。
-
-## 总结
-
-该策略整合了移动平均交易信号、尾随止损和百分比止损,通过参数优化,能够适用于多种股票和商品,取得稳定收益的同时严格控制风险,值得量化交易者研究实践并不断优化。
-
-|| 
 
 ## Overview
 
@@ -115,7 +62,6 @@ The core of this strategy is using exponential moving average crossovers as trad
 
 This strategy integrates moving average trading signals, trailing stops and percentage stops. Through parameter optimization, it can achieve stable profits with strict risk control across various stocks and commodities, worth researching and continuously improving for quant traders.
 
-[/trans]
 
 > Strategy Arguments
 

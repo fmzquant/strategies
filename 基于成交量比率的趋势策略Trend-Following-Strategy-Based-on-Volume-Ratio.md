@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种基于成交量比率判断趋势方向的量化策略。该策略通过计算多空成交量均线,产生买入卖出信号。
-
-一、策略原理
-
-该策略的核心指标是多空成交量。具体计算步骤如下:
-
-1. 计算当日成交量(Volume)。
-
-2. 判断K线为多头时,将成交量记为多方成交量(Bull Volume)。
-
-3. 判断K线为空头时,将成交量记为空方成交量(Bear Volume)。
-
-4. 分别计算多方和空方成交量的移动平均线。
-
-5. 当多方移动平均线上穿空方移动平均线时,产生买入信号;相反产生卖出信号。
-
-6. 还通过价格变化率指标进行过滤,只在价格出现明确趋势时才交易。
-
-7. 根据信号设置止损止盈点,以锁定盈利。
-
-这样,通过成交量的多空比例判断趋势方向,再辅助以价格变化率指标进行过滤,可以提高信号质量。止损止盈设置也使每单交易有可控的盈亏。
-
-二、策略优势
-
-该策略最大的优势是利用成交量判断趋势方向,这是最基本的趋势判断方法之一。成交量能反映市场参与者行为。
-
-此外,成交量指标也能提前反映突破信号,比较灵敏。与仅利用价格指标相比,它可以更早捕捉到趋势转折。
-
-最后,结合价格变化率指标进行过滤也提高了信号质量。
-
-三、潜在风险
-
-尽管该策略有一定优势,但实盘中也应注意以下风险:
-
-首先,需谨慎设置成交量指标参数,避免出现假信号。
-
-其次,仅依靠一个指标容易被突破价格invalidates。应多种指标组合进行验证。
-
-最后,止损设置过于接近可能导致止损被突破的风险。
-
-四、内容总结
-
-本文详细介绍了一种利用成交量比率判断趋势的量化策略。它可以通过计算多空成交量均线产生交易信号。该策略具有一定的先行性,但也需要配合其他指标进行验证。此外,适当参数设置并严格的资金管理也是其可行性的关键。总体来说,该策略提供了一种独特的利用成交量判断趋势的思路,但需要进一步完善。
-
-||
 
 This article explains in detail a quantitative trend following strategy based on volume ratio analysis. It generates buy and sell signals by calculating the moving averages of bullish and bearish volume. 
 
@@ -100,7 +53,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative strategy using volume ratio to determine trends. It generates trading signals by calculating moving averages of bullish and bearish volume. The strategy has a certain degree of lead and sensitivity, but needs to be combined with other indicators for verification. In addition, proper parameter tuning and prudent money management are also key to its viability. Overall, it provides a unique approach of using volume for trend analysis, but requires further enhancements.
 
-[/trans]
 
 > Strategy Arguments
 

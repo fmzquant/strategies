@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13045d0004e03237fc3.png)
-[trans]
-
-## 概述
-
-该策略为趋势追踪反转策略与埃勒斯先导指标策略的组合,目的是获得更可靠的交易信号。趋势追踪反转策略判断趋势反转点,埃勒斯先导指标策略判断周期性转折点。组合信号更准确判定入市时机。
-
-## 策略原理
-
-### 趋势追踪反转策略
-
-该策略源自Ulf Jensen的《我如何在期货市场上将资金翻三番》一书第183页。它属于反转类型策略。当收盘价连续2日高于前一日收盘价,且9日Stochastic慢速线低于50时,做多;当收盘价连续2日低于前一日收盘价,且9日Stochastic快速线高于50时,做空。
-
-### 埃勒斯先导指标策略
-
-该策略使用日内数据,绘制单日去趋势化合成价格(Detrended Synthetic Price, DSP)和日内埃勒斯先导指标(Ehlers Leading Indicator, ELI)。DSP能捕捉价格主导周期,计算方法是2阶巴特沃斯滤波减去3阶滤波。ELI可提前指示周期转折点,计算方法是去趋势化合成价格减去其简单移动平均。当ELI穿过去趋势化合成价格时产生买卖信号。
-
-## 优势分析
-
-该组合策略最大优势是结合趋势反转判断和周期性转折判断,交易信号更可靠。趋势反转策略能判断突破上下轨的趋势反转点。埃勒斯先导指标又能提前指示周期性低谷和高点。两者结合能更准确抓住入市时机。
-
-另一个优势是参数调整灵活。趋势反转策略中的股票指标参数可按市场调整;埃勒斯先导指标中的周期长度也可调整适应不同周期。
-
-## 风险分析
-
-该策略最大风险是错过趋势 persisting。因为策略等待反转信号出现才入场,可能错过早期强劲趋势阶段。此外,反转信号可能是假突破,被套也是可能。
-
-解决方法是调整参数,缩短反转判断周期,及时捕捉趋势反转。另外可以引入止损来控制亏损。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 引入止损策略,以控制单笔亏损。
-
-2. 优化参数,调整反转信号周期,适应不同市场环境。
-
-3. 增加其他指标过滤,提高信号质量,减少假信号。
-
-4. 增加资金管理模块,控制整体仓位和风险。
-
-5. 测试不同品种参数效果,优化适合哪些品种。
-
-6. 增加机器学习模块,使参数可自适应调整。
-
-## 总结
-
-该策略结合趋势反转判断和周期性转折判断,能更可靠抓住入市时机。最大优势是信号质量好,可调整性强。最大风险是错过早期趋势,可通过调整参数、止损来控制。未来可从止损、参数优化、信号过滤等方面进行改进,使策略更适应不同市场环境。
-
-|| 
 
 ## Overview
 
@@ -106,7 +57,6 @@ The strategy can be improved in the following aspects:
 
 The strategy combines trend reversal and cyclical turning point detection for more reliable market entry. The biggest advantage is high signal quality and flexibility. The main risk is missing early trends, which can be mitigated via parameter tuning and stop loss. Future improvements can focus on stop loss, parameter optimization, signal filtering etc. to make the strategy robust across market environments.
 
-[/trans]
 
 > Strategy Arguments
 

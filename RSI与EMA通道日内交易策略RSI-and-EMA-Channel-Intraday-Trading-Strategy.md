@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/136367159039e37e2d8.png)
 
-[trans]
-
-## 概述
-
-该策略通过结合相对强弱指标(RSI)和5日指数移动平均线(EMA)的通道,实现日内短线交易。当价格突破EMA通道上沿,并RSI从低位抬头时,做多;当价格跌破EMA通道下沿,并RSI从高位回落时,做空。实现低买高卖,获利离场。
-
-## 策略原理
-
-1. 使用5日EMA的最高价和最低价画出价格通道。EMA能更快地响应价格变化,通道范围更符合当前市场波动。
-
-2. RSI能提示超买超卖现象。RSI指标参数为6。超短周期更适合日内operation。
-
-3. 买入条件:价格突破上轨,且RSI从30以下抬头上涨超过70,说明股价获得支撑,市场恢复看涨,做多信号。
-
-4. 卖出条件:价格跌破下轨,且RSI从70以上回落跌破30,说明股价遭到重击,市场转为看跌,做空信号。
-
-5. 止盈策略:买入后,首先在风险回报1:1处止盈50%,其余在1:2处止盈;做空后,首先在风险回报1:1处止盈50%,其余在1:2处止盈。
-
-## 优势分析
-
-1. 使用EMA通道绘制动态支撑和压力。能快速响应价格变化,提高交易胜率。
-
-2. RSI指标避免在没有明确信号时盲目交易,能减少不必要交易,降低回撤。 
-
-3. 风险回报比例清晰。止盈位置直接反映获利水平,避免过度贪婪。
-
-4. 策略简单清晰,容易理解和实施,适合日内短线交易。
-
-## 风险分析
-
-1. 日内操作需要更频繁地盯盘,比较消耗时间和精力。
-
-2. 突破止损风险。价格可能出现跳空或V型反转,无法止损。
-
-3. 需要选择流动性好、波动较大的股票。交易量小的股票无法获利。
-
-4. 参数优化空间有限。RSI周期和EMA天数都比较短,优化效果甚微。
-
-## 优化方向 
-
-1. 可以测试添加其他指标过滤信号,如增加MACD做多做空的确认信号。
-
-2. 可以基于机器学习技术自动优化RSI和EMA的参数。
-
-3. 可以结合均线系统,在更高时间周期判断市场趋势方向,避免逆势交易。
-
-4. 可以通过动态调整止盈比例,根据市场波动程度变化止盈位置。
-
-## 总结
-
-该策略整合EMA通道和RSI指标,形成的规则系统可以清晰地对买入和卖出时机作出判断,实现日内短线交易。使用动态止盈策略,可以锁定合理利润。该策略优点是简单易懂,实施难度不大,但日内操作比较辛苦,需要选择合适品种谨慎交易。可以通过多指标组合、参数优化、止盈优化等方法进一步完善。
-
-||
 
 
 ## Overview
@@ -116,7 +63,6 @@ This strategy combines the Relative Strength Index (RSI) and the 5-day Exponenti
 
 The strategy integrates the EMA channel and RSI indicator into a systematic framework that can clearly judge entry and exit timing, realizing intraday short-term trading. The dynamic take profit strategy can lock in reasonable profits. The advantage of this strategy is that it is simple and easy to understand and implement, but intraday operations are quite tiring. Need to choose suitable products and trade cautiously. Can further improve through multi-indicator combinations, parameter optimization, take profit optimization, etc.
 
-[/trans]
 
 
 

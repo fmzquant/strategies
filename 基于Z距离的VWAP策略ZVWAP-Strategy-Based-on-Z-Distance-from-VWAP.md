@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14fb2a3f84dccd3bb75.png)
-[trans]
-
-
-## 概述
-
-该策略基于LazyBear的Z距离VWAP指标,通过计算价格与VWAP的Z距离来判断是否超买超卖,以及进行入场出场。策略加入EMA均线以及Z距离回归0轴的判断,可过滤掉部分噪声信号。
-
-## 策略原理
-
-1. 计算VWAP的值
-2. 计算价格与VWAP的Z距离
-3. 设置超买线(2.5)和超卖线(-0.5)
-4. 当快线大于慢线,Z距离低于超卖线,且Z距离上穿0轴时做多
-5. 当Z距离超过超买线时平仓
-6. 加入止损逻辑
-
-关键函数:
-
-- calc_zvwap:计算价格与VWAP的Z距离
-- VWAP值:vwap(hlc3)
-- 快线:ema(close,fastEma)  
-- 慢线:ema(close,slowEma)
-
-## 优势分析
-
-1. 使用Z距离更直观判断超买超卖
-2. 结合EMA过滤假突破,避免被套
-3. 允许加仓,可以利用趋势获利
-4. 有止损逻辑,可以控制风险
-
-## 风险分析
-
-1. 需确保参数设置合理,如超买超卖线位置,EMA周期等
-2. Z距离指标有滞后,可能错过关键买卖点
-3. 允许加仓会增大损失风险
-4. 止损位置需要合理设置
-
-解决方法:
-1. 通过回测优化参数设置
-2. 结合额外指标过滤信号
-3. 合理设置加仓条件
-4. 动态调整止损位置
-
-## 优化方向 
-
-1. 优化EMA周期参数
-2. 测试不同的超买超卖判断标准
-3. 加入其他指标过滤信号噪音
-4. 测试不同的止损方式
-5. 优化入场、加仓和止损逻辑
-
-## 总结
-
-该策略利用Z距离判定价格与VWAP的关系,结合EMA过滤噪音信号,以捕捉趋势机会。策略允许加仓追踪趋势,同时设置止损控制风险。通过参数优化及加入其他指标可以提高策略稳定性。但Z距离指标存在滞后问题,在优化时需考量。总体来说,该策略以简单清晰的逻辑捕捉趋势,经过充分优化后可成为高效的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -120,7 +64,6 @@ Solutions:
 
 The strategy uses Z-distance to determine price-VWAP relationship and adds EMA to filter signals, aiming to capture trend opportunities. It allows pyramiding to follow trends and has a stop loss to control risk. Optimization and adding other indicators can improve robustness. However, lagging issue of Z-distance should be considered during optimization. Overall, this is a trend-following strategy with simple, clear logic. When fully optimized, it can be an efficient tool to trade trends.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/104479c444551d16a95.png)
-[trans]
-
-## 概述
-
-该策略基于移动平均线的金叉原理来进行交易。策略运用两个移动平均线,当短期移动平均线从下方向上突破长期移动平均线时产生买入信号。当价格跌破另一个移动平均线时产生卖出信号。该策略适用于趋势性市场,能够有效过滤掉部分噪音交易,抓住主要趋势进行交易。
-
-## 策略原理
-
-该策略使用用户自定义的短期移动平均线周期、长期移动平均线周期、退出移动平均线周期以及各移动平均线的计算方式。
-
-当短期移动平均线从下方向上突破长期移动平均线时,产生买入信号。这表示短期趋势转换为上升趋势,可以买入。
-
-当收盘价跌破退出移动平均线时,产生卖出信号。这表示趋势反转,应该退出头寸。
-
-所以该策略的交易信号来源于短期移动平均线和长期移动平均线的交叉以及收盘价与退出移动平均线的关系。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 简单易懂,容易实现。
-
-2. 可自定义参数,适应不同市场情况。
-
-3. 使用移动平均线过滤噪音,抓住主要趋势。
-
-4. 可结合趋势、支持阻力等技术指标进一步优化。
-
-5. 损益比例可控,具有止损机制。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 趋势性不强的盘整市场中容易产生虚假信号。
-
-2. 参数设置不当可能错过趋势或者产生过多无效交易。
-
-3. 止损位置设置不合理可能扩大损失。
-
-4. 突破失败可能产生损失。
-
-5. 需适时调整参数以适应市场变化。
-
-对应风险的解决方法包括:优化参数设置、结合其他指标过滤信号、调整止损位置、确定趋势后再参与等。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 开发趋势判断机制,确定趋势后再产生交易信号。
-
-2. 结合交易量或者波动指标来过滤信号。
-
-3. 动态优化移动平均线周期参数。
-
-4. 优化止损机制,实现移动止损。
-
-5. 结合支持阻力以及其它指标进一步确认交易信号。
-
-6. 根据不同品种、周期调整参数。
-
-## 总结
-
-该移动平均线金叉交易策略整体来说是一种简单实用的趋势跟踪策略。它可根据市场情况调整参数,在趋势行情中抓住主要趋势方向。但也要注意防范趋势判断失误等风险,需不断优化以适应市场变化。总体而言,该策略具有良好的实用性。
-
-||
 
 
 ## Overview
@@ -143,7 +76,6 @@ This strategy can be improved by:
 
 Overall this moving average crossover strategy is a simple and practical trend following system. It can be adjusted to market conditions by tweaking parameters and catch the main trend direction in trending markets. But risks like trend misidentification should be noted, and constant optimization is needed to adapt to changing markets. In general, this strategy has good viability.
 
-[/trans]
 
 > Strategy Arguments
 

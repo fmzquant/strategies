@@ -9,62 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-黄金交叉策略是一种简单的市场指标,可以帮助长期投资者确定入场时机。该策略基于短期和长期移动平均线的交叉来产生交易信号。当短期移动平均线上穿长期移动平均线时,形成黄金交叉,表示市场进入牛市,可以做多;当短期移动平均线下穿长期移动平均线时,形成死亡交叉,表示市场进入熊市,应平仓。
-
-## 策略原理
-
-该策略使用sma函数计算短期和长期的简单移动平均线。短期移动平均线长度设置为50天,长期移动平均线长度设置为200天。策略通过crossover和crossunder函数判断短期线是否上穿或下穿长期线,以产生交易信号。
-
-当短期线上穿长期线时,表明市场趋势由下跌转为上涨,产生黄金交叉,这是做多的信号。策略会通过strategy.entry函数开仓做多。当短期线下穿长期线时,表明市场趋势由上涨转为下跌,形成死亡交叉,这是平仓的信号。策略会通过strategy.close_all函数平掉所有头寸。
-
-通过抓住市场趋势转折点的黄金/死亡交叉来确定入场时机和平仓时机,可以有效过滤市场 noise,是一个简单实用的趋势跟踪策略。
-
-## 优势分析
-
-- 该策略容易理解和实现,适合初学者学习;
-- 使用移动平均线可以有效滤波市场噪音,捕捉市场趋势;  
-- 黄金交叉是公认的强力的涨市信号,可以有效抓住涨势;
-- 死亡交叉是较强的跌市信号,可以减少亏损;
-- 参数优化空间大,可以通过调整移动平均线长度来适应不同市场;
-- 可视化的交叉信号,直观易读。
-
-## 风险分析
-
-- 移动平均线存在滞后,可能错过趋势反转的最佳时机;
-- 简单的均线交叉并不能完全避免假信号;
-- 未考虑突发事件的影响,如重大利空新闻;  
-- 没有止损机制,无法有效控制单笔损失;
-- 买入死叉时有亏损风险,平仓黄金交叉时有错过利润风险。
-
-可以设置止损来控制风险,优化移动平均线参数来减少假信号,结合其他指标来确认信号可靠性,开发突发事件处理机制来应对重大新闻。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线参数,调整短期和长期均线的长度,使其更好地匹配不同市场的特点;
-
-2. 增加成交量的条件判断,只在成交量放大的情况下才产生信号;
-
-3. 结合其它指标,如MACD、RSI等来确认黄金/死亡交叉信号,避免假信号;
-
-4. 增加止损策略,如跟踪止损、比例止损等,控制单笔亏损;
-
-5. 增加仓位管理策略,如固定仓位、指数增仓等,控制整体风险;
-
-6. 优化入场时机,当交叉发生后再观察一段时间,过滤假交叉。
-
-通过以上优化,可以使策略参数更符合市场统计特性,过滤假信号,控制风险,在保持简单的同时,进一步提高策略的稳定性和盈利能力。
-
-## 总结
-
-黄金交叉策略是一个既简单又实用的趋势跟踪策略。它直观地通过移动平均线交叉来捕捉市场趋势,可以有效为长线投资者识别入场和退出的时机。该策略容易实现,适合初学者学习,也可以进行多方面的拓展与优化,使其成为一个灵活可靠的量化交易策略。总体来说,黄金交叉策略结合简洁性和实用性,是量化交易体系中很有价值的一员。
-
-||
 
 
 ## Overview
@@ -120,7 +64,6 @@ Through the above optimizations, the strategy parameters can better match market
 
 The Golden Cross strategy is a simple yet practical trend following strategy. It intuitively captures market trends through moving average crosses and can effectively identify entry and exit points for long-term investors. Easy to implement, suitable for beginners to learn, and adaptable to various optimizations, the strategy can become a flexible and reliable trading system. Overall, combining simplicity and practicality, the Golden Cross strategy is a valuable addition to the quantitative trading toolkit.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16ce40fe21e910b0e60.png)
-[trans]
-####概述
-该策略结合了布林带和相对强弱指标(RSI)两个技术指标,通过布林带捕捉价格的波动范围,并利用RSI指标确认价格的超买超卖状态,以此作为交易信号的判断依据。当价格突破布林带下轨且RSI低于30时,产生做多信号;当价格突破布林带上轨且RSI高于70时,产生做空信号。
-
-####策略原理
-1. 计算布林带上轨、中轨和下轨。中轨为收盘价的简单移动平均线,上下轨为中轨加减一定的标准差。
-
-2. 计算RSI指标。RSI用于衡量一段时间内价格的涨跌幅度,以此判断价格的超买超卖状态。
-
-3. 产生交易信号。当收盘价突破布林带下轨且RSI低于30时,产生做多信号;当收盘价突破布林带上轨且RSI高于70时,产生做空信号。
-
-4. 执行交易。根据交易信号设置限价单,突破布林带上轨做空,下轨做多。同时,取消之前方向的挂单。
-
-####优势分析
-1. 布林带能够很好地量化价格的波动范围,RSI指标能够很好地量化价格的超买超卖程度,二者结合能够比较可靠地预测价格的反转时机。
-
-2. 限价单的设置能够避免错误开仓或追高杀跌,止损单的设置能够控制风险。
-
-3. 取消之前方向挂单的设置可防止策略过于频繁交易。
-
-####风险分析
-1. 趋势性行情下可能会出现较大回撤。布林带和RSI指标更适合用于判断震荡市的反转点,对于趋势行情的把握能力较弱。
-
-2. 参数设置对策略表现影响较大。布林带的参数设置会影响到价格突破的频率,RSI指标的参数设置会影响到超买超卖信号的灵敏度,需要根据不同市场特点和交易周期进行优化。
-
-####优化方向
-1. 可以考虑增加趋势判断指标,如MAC 布林带和RSI指标结合趋势指标可进行多空仓位的自适应调整。D等,与
-
-2. 可以考虑使用动态参数优化的方法,根据价格的波动率、趋势强度等特征,自适应调整布林带和RSI指标的参数,提高策略的适应性。
-
-3. 可以在策略中加入资金管理和仓位管理模块,根据账户资金量、风险偏好、历史回撤等因素,动态调整每次交易的资金量和杠杆率。
-
-####总结
-该策略通过布林带和RSI指标的结合,可以比较有效地捕捉价格的超买超卖状态,并以此作为交易信号。但是,该策略在趋势性行情下表现可能欠佳,并且策略表现对参数设置较为敏感。未来可以考虑引入趋势判断、动态参数优化、资金管理等模块,以进一步提升策略的稳健性和盈利能力。
-
-||
 
 ####Overview
 This strategy combines two technical indicators, Bollinger Bands and Relative Strength Index (RSI). It uses Bollinger Bands to capture the price fluctuation range and RSI to confirm the overbought and oversold status of the price, which serves as the basis for judging trading signals. When the price breaks through the lower band of Bollinger Bands and RSI is below 30, a long signal is generated; when the price breaks through the upper band and RSI is above 70, a short signal is generated.
@@ -81,7 +45,6 @@ This strategy combines two technical indicators, Bollinger Bands and Relative St
 ####Summary
 By combining Bollinger Bands and RSI indicators, this strategy can effectively capture the overbought and oversold status of prices and use it as a trading signal. However, the strategy may perform poorly in trending markets, and the strategy performance is more sensitive to parameter settings. In the future, we can consider introducing trend judgment, dynamic parameter optimization, and fund management modules to further improve the robustness and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

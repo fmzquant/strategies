@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]  
-
-本策略融合韦氏波浪指标和布林带指标,判断市场趋势方向,并在关键 SUPPORT 位进行突破交易。属于典型的趋势突破策略。
-
-策略原理:
-
-1. 计算韦氏波浪,通过柱状图走势判断价格趋势。
-
-2. 计算布林带上下轨,并当价格突破轨道时进入场内。
-
-3. 当韦氏波浪显示多头趋势,价格突破布林带上轨时做多。
-
-4. 当韦氏波浪显示空头趋势,价格突破布林带下轨时做空。
-
-5. 在反向趋势出现时设置止盈止损退出场内头寸。
-
-该策略的优势:
-
-1. 韦氏波浪指标可有效判断主要趋势方向。
-
-2. 布林带可发现关键的 SUPPORT 阻力位。
-
-3. 组合使用指标,可提高判断准确性。
-
-该策略的风险:
-
-1. 韦氏波浪和布林带均存在滞后问题,入场点位不佳。
-
-2. 突破交易容易被套,需要止损保护。
-
-3. 震荡行情中难以发现持续趋势和明确突破点。
-
-总之,该策略融合韦氏波浪和布林带判断趋势方向,在关键点位进行突破交易。能在一定程度上提高准确性,但需警惕滞后及震荡市的问题。 
-
-||
 
 This strategy combines the Weis Wave indicator and Bollinger Bands to determine market trend, trading breakouts at key support/resistance levels. It is a typical trend-following breakout system.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy combines Weis Wave and BB for trend bias and trades breakouts. It can improve accuracy somewhat but requires caution on lags and ranging price action.
 
-[/trans]
 
 > Strategy Arguments
 

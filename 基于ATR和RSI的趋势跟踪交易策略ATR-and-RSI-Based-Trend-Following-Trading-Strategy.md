@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于平均真实波动幅度(ATR)和相对强弱指数(RSI)设计了一个具有趋势跟踪功能的交易系统。该系统可以自动识别趋势方向,并具有止损和止盈功能。
-
-## 策略原理
-
-1. 计算ATR和RSI。ATR反映最近一段时间内的平均价格波动幅度。RSI反映多空双方力量对比。
-
-2. 当ATR大于其移动平均线时,认为处于高波动期,适合交易。
-
-3. 当RSI高于超买线时,做多;当RSI低于超卖区时,做空。
-
-4. 做多后,以高点乘以固定比例作为追踪止损位。做空后,以低点乘以固定比例作为追踪止损位。
-
-5. 盈利比例止盈。
-
-## 优势分析
-
-1. 追踪止损可以最大限度挂单止损,减少亏损。
-
-2. RSI可以有效判断多空力量,避免在震荡行情反复打开头寸。
-
-3. ATR作为波动度指标,可以过滤掉震荡行情,只在趋势行情交易。
-
-4. 盈利比例止盈可以锁定部分利润。
-
-## 风险分析
-
-1. ATR和RSI均为滞后指标,可能导致入场时点偏后。可以适当优化参数,使系统更灵敏。
-
-2. 固定盈亏比止损止盈容易过度优化,应结合回测结果谨慎设置。
-
-3. 大周期震荡行情中,ATR可能长期大于移动平均线,导致过度交易。可以增加其他过滤条件。
-
-## 优化方向
-
-1. 优化ATR和RSI的参数,使系统更敏感。
-
-2. 增加MA等指标判断趋势方向,避免错入震荡行情。 
-
-3. 尝试动态止损止盈比例,而不是固定设置。
-
-4. 考虑加入交易量控制措施。
-
-## 总结
-
-本策略整合ATR和RSI两个指标的优势,设计了一个简单实用的趋势跟踪交易系统。通过参数优化和增加过滤条件,可以进一步提高系统稳定性。总体来说,该策略具有较强的实盘应用价值。
-
-||
 
 ## Overview
 
@@ -109,7 +58,6 @@ This strategy designs a trading system with trend following function based on Av
 
 This strategy integrates the advantages of ATR and RSI indicators and designs a simple and practical trend following trading system. Further improving system stability by parameter optimization and adding filters. Overall, this strategy has strong practical value for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8b02629ed907cd4661.png)
 
-[trans]
-
-## 概述
-
-该策略是一个结合Hull移动平均线、渔人转向指标以及商品通道指数的自适应多因子策略。它能够智能识别趋势,自动调整参数,适应不同品种和周期。
-
-## 策略原理
-
-该策略的核心逻辑基于渔人转向指标的金叉死叉来判断入场和出场。渔人转向指标结合了移动平均线和震荡指标的优点,能更准确判断趋势转折点。
-
-策略首先计算Hull移动平均线和渔人转向指标。然后结合商品通道指数辅助判断,形成入场条件。当渔人转向指标从零轴下方上穿或从设定参数范围外上穿时设定为金叉条件,形成做多信号;当渔人转向从零轴上方下穿或参数范围外下穿时设定为死叉条件,形成做空信号。
-
-出场条件则相反,金叉做多单以死叉平仓;死叉做空单以金叉平仓。这样利用指标之间的交叉来捕捉趋势转折点。
-
-## 优势分析
-
-该策略最大的优势在于多因子自适应。它同时利用了移动平均线、震荡指标和趋势指标的优势,能够在跌涨市中都获得不错的表现。而参数设置又可以根据品种和周期进行调整,实现自适应。
-
-另外,策略加入了自动止损机制。当价格重新回破Hull移动平均线时,会自动止损出场。这大大降低了策略的损失风险。
-
-## 风险及解决方案
-
-该策略最大的风险在于指标之间产生误差信号。当价格出现区间震荡时,指标可能产生一些不必要的交叉。这会导致不必要的入场和止损。 
-
-解决方法是适当调整指标参数,过滤掉一些小信号。或者结合更多辅助指标来确认。比如增加成交量指标判断真信号。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加机器学习算法,实现参数的自动优化。可以根据历史数据训练,实时调整指标参数。
-
-2. 增加更多指标组合进行评分,取多数决策略,提高决策的准确性。
-
-3. 增加突破确认机制,利用价格重要级别和通道进行再次确认,避免误操作。
-
-4. 增加风险评估模块,能够根据市场环境自动调整仓位规模和止损幅度。
-
-## 总结
-
-该策略整体来说是一个非常好的多因子自适应框架。它结合移动平均线的趋势判断、震荡指标的超买超卖判定和趋势指标的交叉应用,形成了一套完整的入场出场机制。如果能够进一步优化,增加自适应和智能化成分,将会成为一个极具商业价值的策略产品。
-
-||
 
 ## Overview  
 
@@ -95,7 +52,6 @@ The strategy can be optimized in the following directions:
 
 Overall, this is a very good adaptive multi-factor framework. It combines the trend judgment of moving averages, the overbought and oversold judgments of oscillators, and the application of indicator crosses, forming a complete entry and exit mechanism. If it can be further optimized and increased adaptive and intelligent components, it will become a strategy product with extremely high commercial value.
 
-[/trans]
 
 > Strategy Arguments
 

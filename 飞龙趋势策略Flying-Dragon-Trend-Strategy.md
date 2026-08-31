@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19388da460def6108e3.png)
 
-[trans]
-
-## 概述
-
-飞龙趋势策略通过调整移动平均线的类型、长度和偏移量,绘制不同颜色的趋势带,实现趋势的判断和交易信号的生成。该策略可在不同的时间周期内找到最佳的参数组合,在趋势判断准确性和交易风险之间取得平衡。
-
-## 策略原理
-
-该策略使用两个移动平均线绘制趋势带,编号为MA1和MA4。MA1为快速移动平均线,MA4为慢速移动平均线。同时,MA1设置了3个偏移量(Offset1、Offset2、Offset3),形成MA2、MA3。当价格线穿过不同的移动平均线时,会形成不同程度的交易信号。
-
-用户可以选择5种风险等级,不同风险等级下,穿越不同的移动平均线才会形成交易信号,风险从高到低依次为:MA1 Offset1、MA2、MA3、MA4、全部趋势带颜色一致。趋势带颜色表示目前趋势方向,绿色为上涨趋势,红色为下跌趋势。
-
-此外,该策略允许使用止损,并可以选择长仓、短仓或双向交易。
-
-## 优势分析
-
-- 可以在不同时间周期内找到最佳参数组合,适应更广泛的市场环境
-- 提供多种可选的移动平均线类型,可以针对不同品种进行优化
-- 可调整的偏移量是该策略的核心所在,使趋势判断更准确
-- 可选择的风险等级,可以在风险和回报之间找到平衡
-- 多种参数可以灵活组合,优化空间较大
-- 直观的趋势带,形成清晰的视觉交易信号
-- 支持止损功能,可以控制风险
-
-## 风险分析 
-
-- 在高风险等级下,容易产生错误信号,应降低风险等级或调整参数
-- 趋势反转时,可能出现连续止损退出场外的风险
-- 不同品种需要分别测试和优化参数,不可全部适用同一参数
-- 高频交易时,需要调整为快速移动平均线带领慢速移动平均线
-- 参数优化不当可能导致过于灵敏或迟钝,要多次测试优化
-
-可以通过逐步降低风险等级,增加参数组合测试,针对不同品种分别优化参数来控制和减少风险。
-
-## 优化方向
-
-- 尝试不同类型的移动平均线组合
-- 测试更多的长度参数,找到最佳长度
-- 小心调整偏移量,这是优化关键
-- 根据不同品种分段优化参数
-- 优化止损点位,并考虑是否需要止盈
-- 尝试不同的开仓规则组合
-- 评估是否需要过滤器进行优化
-- 考虑加入趋势力度指标等进行辅助
-
-## 总结
-
-飞龙趋势策略通过移动平均线的巧妙组合设计了一个可视化的趋势交易系统。该策略参数可调性强,可以针对不同品种、市场环境进行细致优化,在稳定和灵敏之间找到最佳平衡。多组参数组合提供了足够的优化空间。总体来说,该策略思路新颖,逻辑合理,具有很强的实用性。如果以正确的方法优化参数,可以成为一个非常强大的趋势跟随系统。
-
-|| 
 
 ## Overview
 
@@ -109,7 +59,6 @@ Risks can be managed by gradually lowering risk levels, testing more parameter c
 
 The Flying Dragon Trend strategy cleverly combines moving averages into a visualizable trend trading system. Its high parameter tunability enables fine-grained optimization for different products and market regimes to strike an optimum balance between stability and sensitivity. The abundant parameter combinations provide sufficient optimization space. In summary, this strategy has a novel logic and high practical utility. When optimized properly, it can become a very powerful trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

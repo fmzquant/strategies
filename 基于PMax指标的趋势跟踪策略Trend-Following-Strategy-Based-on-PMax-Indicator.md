@@ -11,21 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于PMax指标的趋势跟踪策略”。该策略利用PMax指标判定价格趋势方向,并以其移动平均线作为关键参考,产生买入和卖出信号。
-
-PMax指标综合了支撑阻力指标SuperTrend和趋势变化指标MOST的优势。它使用平均真实波幅ATR构建价格通道,同时结合移动平均线判断趋势方向。
-
-当价格上穿PMax线时,代表短期趋势转涨;当价格下穿PMax线时,代表短期趋势转跌。当移动平均线上穿PMax线时产生买入信号;移动平均线下穿PMax线时产生卖出信号。
-
-移动平均线参数直接影响对趋势敏感性。周期短,对细微变动更敏感;周期长,只捕捉主要趋势。所以需要根据市场调整移动平均线参数。
-
-该策略的优势在于PMax指标对趋势变化较为敏感,配合移动平均线进行filtration,可以有效识别中长期趋势的主要反转点位。但需要注意防止过度交易造成不必要损失。
-
-总之,PMax指标与移动平均线的结合,形成了一套较为成熟的趋势跟踪策略。通过参数优化,可以适应不同市场的特点,捕捉主要的方向性机会。但交易者仍需要保持灵活性,根据实际情况调整策略参数。
-
-
-||
 
 
 
@@ -41,7 +26,6 @@ The advantage of this strategy is PMax is sensitive in detecting trend changes. 
 
 In conclusion, the combination of PMax and moving averages forms a relatively mature trend following strategy. Through parameter optimization it can adapt to different market characteristics and capture significant directional opportunities. But traders still need flexibility in adjusting strategy parameters according to actual conditions.
 
-[/trans]
 
 > Strategy Arguments
 

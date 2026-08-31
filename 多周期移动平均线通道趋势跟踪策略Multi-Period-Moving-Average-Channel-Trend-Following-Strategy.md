@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/151c4cd44f373181065.png)
-[trans]
-## 概述
-
-该策略是一种swing策略,适用于像加密货币和股票这样的趋势性市场,使用较大的时间框架,如8小时。该策略使用包括SMA、EMA、VWMA、ALMA、SMMA、LSMA和VWMA在内的多种移动平均线,分别应用于高点和低点,形成两个平均线通道。
-
-当收盘价高于应用于高点的平均线时做多;当收盘价低于应用于低点的平均线时做空。
-
-## 策略原理
-
-该策略使用7种不同的移动平均线指标,包括SMA、EMA、VWMA、ALMA、SMMA、LSMA和VWMA。这些移动平均线分别应用于K线的最高价和最低价,生成两条平均线。
-
-应用于最高价的平均线被称为avg_high,应用于最低价的平均线被称为avg_low。这两条平均线构成一个通道。
-
-当收盘价大于avg_high时,做多;当收盘价低于avg_low时,做空。
-
-做多时,止损线为avg_low,止盈线为开仓价*(1+tp_long);做空时,止损线为avg_high,止盈线为开仓价*(1-tp_short)。
-
-## 优势分析
-
-该策略最大的优势在于利用多种移动平均线指标提高获利概率。不同周期和计算方式的移动平均线指标对价格的反应速度不同,结合使用可以形成更为可靠的交易信号。
-
-另一个优势是采用通道方式交易。上下通道限制了止损范围,降低了风险,更适合swing策略。
-
-## 风险分析
-
-该策略主要面临两方面的风险:
-
-1. 多种移动平均线指标组合使用,参数设置较为复杂,需要大量测试和优化来找到最佳参数组合。
-
-2. 在横盘和无明确趋势的市场中,该策略容易产生亏损和多次无效突破的交易信号。
-
-为降低这些风险,需要选择趋势明显的交易品种,同时对参数组合进行大量回测和优化,找到最适合当前市场状况的参数设置。
-
-## 优化方向 
-
-该策略还需要从以下几个方面进行优化:
-
-1. 测试更多种类的移动平均线,寻找更好的组合。可以考虑SMA、EMA、KAMA、TEMA等。
-
-2. 对移动平均线长度和通道宽度进行参数优化,找到最佳参数设置。
-
-3. 测试不同的止盈止损设置。可以考虑trailing stop或动态止损等方式。
-
-4. 结合趋势判断指标,避免无明确趋势的市场中频繁交易。例如ADX,ATR等。
-
-5. 优化 entry 和 exit 逻辑,设置额外 filter 条件,减少无效交易。
-
-## 总结
-
-该策略通过多种移动平均线指标提高获利概率,采用上下通道方式降低风险,是一种swing趋势跟踪策略。该策略适用于趋势性明显的交易品种,在参数优化后效果较好。但市场转折时容易承受较大亏损,需要进一步优化以降低风险。
-
-||
 
 ## Overview  
 
@@ -112,7 +60,6 @@ Areas for further optimization:
 ## Summary  
 This swing trend following strategy improves profitability using multiple MAs and reduces risk via channels. It works well for trending products after parameter optimization. But can suffer big losses at trend reversals. Further optimizations needed to mitigate downside risks.
 
-[/trans]
 
 > Strategy Arguments
 

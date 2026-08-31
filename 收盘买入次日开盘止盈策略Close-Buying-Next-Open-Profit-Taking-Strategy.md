@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/130e546569155869723.png)
 
-[trans]
-
-## 概述
-
-该策略的主要思想是在当天收盘前买入,次日开盘后判断价格是否高于买入价格,如果高于则止盈卖出,如果没有高于则继续持有直到止损或止盈。
-
-## 策略原理
-
-该策略首先设置了200日简单移动平均线作为市场状态判断的指标,只有当价格高于200日线时才允许交易。另外设置了每天的买入时间为收盘前半小时内,卖出时间为次日开盘后半小时内。在买入时间如果市场状态符合就市价买入,在卖出时间判断价格是否高于买入价格,如果高于就市价卖出止盈,如果没有高于则继续持有直到止损或者在明天的卖出时间再次判断。同时设置了5%的止损线来防止亏损扩大。
-
-## 优势分析
-
-该策略有以下几个优势:
-
-1. 利用了收盘效应,收盘时波动较大,容易形成较大的缺口,次日开盘价格可能会有较大幅度的涨跌。
-
-2. 通过较短的持有期限,可以快速止损止盈,降低风险。
-
-3. 比较简单的逻辑,容易理解和实现。
-
-4. 可以灵活设置止损线和市场状态判断指标来控制风险。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 收盘时买入可能价格高位买入,增加亏损风险。
-
-2. 持有期短,容易被套牢。如果次日没有涨跌停可能会被套持。
-
-3. 依赖较大的缺口出现,如果没有缺口则可能亏损或套持。
-
-4. 如果选错标的,例如股指横盘,则可能多次亏损。
-
-对应解决方法:
-
-1. 可以结合技术指标判断收盘时是否处于相对低位。 
-
-2. 可以适当拉长持有期,例如持有2-3天。
-
-3. 选择有效突破时机位才买入。
-
-4. 做好标的筛选,选择有上涨趋势的标的。
-
-## 优化方向  
-
-该策略还可以从以下几个方面来优化:
-
-1. 在买入条件上加入更多技术指标判断,确保收盘买入时机确定性更高。
-
-2. 测试不同的持有周期,找到最优止盈时间。
-
-3. 对止损线进行优化,找到最优止损点。
-
-4. 测试在具体哪些标的和市场环境下表现更好,采用动态的标的和仓位管理。
-
-## 总结
-
-本策略整体思路清晰,利用收盘效应形成的缺口来进行快节奏的止盈止损交易。具有操作简单,容易实现等优点。但也存在被套风险较大,选股和止损mgmt很关键。后期可从确定买入信号、优化持有周期和止损点、动态仓位管理等方面进行优化,在控制风险的前提下,提高系统稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -131,7 +70,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy has clear logic, utilizing the closing gap effect for quick stop loss/profit trading. It is easy to implement and understand. But it also has high trap risks. Position sizing, stop loss management and stock picking are critical. It can be further optimized on improving buying certainty, optimal holding period and stop loss point, and dynamic position sizing to improve stability and profitability while controlling risk.
 
-[/trans]
 
 > Strategy Arguments
 

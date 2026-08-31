@@ -10,80 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8f0d3f4af156e3c55a.png)
-[trans]
-
-
-## 概述
-
-该策略利用EMA指标识别股票价格趋势,并结合标准差计算买入卖出信号,实现追踪趋势的交易策略。主要思想是计算当前价格与EMA的差值,设定阈值买入。
-
-## 策略原理
-
-策略首先计算close价格与长度为ema_length的EMA的差值v。然后计算v的ema_length周期的标准差dev。再确定买入方向系数k,k为1表示买入看涨,k为-1表示买入看跌。然后计算买入信号阈值dev_limit,它是k乘以dev再乘以限制factor。当v越过dev_limit就产生买入信号。退出信号是v回穿0轴。
-
-该策略提供两种模式:
-
-1. 买入看跌,当v下穿负的dev_limit就买入,即追踪下跌趋势。
-
-2. 买入看涨,当v上穿正的dev_limit就买入,即追踪上涨趋势。 
-
-综上,该策略通过动态计算价格与EMA差值的标准差,设定买入阈值实现追踪趋势。factor参数控制买入信号的灵敏度。ema_length控制EMA周期。买入模式控制买入方向。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA指标识别价格趋势方向,EMA指标平滑价格,识别趋势效果好。
-
-2. 结合标准差计算动态阈值,相比固定阈值更能适应市场变化。
-
-3. 两种买入模式可以选择追踪上涨趋势或下跌趋势。
-
-4. factor参数提供调整买入灵敏度的空间。ema_length参数可调整EMA周期优化参数。
-
-5. 策略逻辑清晰简单,容易理解和修改。
-
-6. 可灵活设置仓位管理,实现追涨跌趋势的积极策略。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. EMA指标存在滞后,可能错过趋势转折点。
-
-2. 依赖参数优化,如果参数设置不当,可能过于灵敏或迟钝。
-
-3. 追逐趋势带来的风险,如果趋势反转可能造成较大损失。
-
-4. 多空转换频繁造成交易频繁。
-
-5. 大幅震荡行情中信号频繁,交易费用成本增加。
-
-针对这些风险,可以考虑加入止损策略控制风险,优化参数组合测试寻找最佳参数,加入过滤条件避免过于频繁交易等。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同EMA周期的参数效果,寻找最优EMA周期长度。
-
-2. 测试factor的不同取值,寻找最佳阈值灵敏度。
-
-3. 优化开仓仓位管理策略,比如随趋势加仓方式。
-
-4. 添加其他指标过滤,避免在震荡行情下出错交易。
-
-5. 增加止损策略控制单笔损失。
-
-6. 针对两个买入模式分别优化参数,寻找最佳参数组合。
-
-7. 研究趋势反转信号,设置关闭趋势追踪。
-
-## 总结
-
-该策略基于EMA识别趋势方向,并动态计算阈值产生买入卖出信号,实现对趋势的追踪。策略逻辑简单清晰,可灵活配置仓位管理积极追踪趋势。同时策略也存在一定风险,需要对参数组合进行优化测试,并辅以StopIteration损策略控制风险。该策略可作为学习指标结合应用、优化参数设置的良好案例。
-
-||
 
 ## Overview
 
@@ -155,7 +81,6 @@ The strategy can be optimized by:
 
 The strategy identifies trends with EMA and generates dynamic threshold orders to follow trends. The logic is simple and clear. Position sizing can be aggressive for trend chasing. It has risks that need to be addressed through parameter optimization and stop loss. It serves as a good example to learn indicator combination and parameter tuning.
 
-[/trans]
 
 > Strategy Arguments
 

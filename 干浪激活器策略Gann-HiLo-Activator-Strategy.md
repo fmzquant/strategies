@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于干浪指标实现简单的趋势跟踪操作。当价格收盘突破上轨时做多,收盘跌破下轨时做空。属于典型的趋势追踪策略。
-
-## 策略原理
-
-1. 计算指定周期的最高价和最低价的加权移动平均线,获得上轨和下轨。
-
-2. 收盘价格高于上轨时,进行做多操作。
-
-3. 收盘价格低于下轨时,进行做空操作。
-
-4. 平仓信号为价格收盘反向突破上轨或下轨。
-
-5. 可选择策略生效的起始时间,默认为全周期。
-
-## 优势分析
-
-1. 干浪指标参数简单,容易实现。
-
-2. 突破上下轨形成明确的交易信号。
-
-3. 可灵活选择策略生效时间段。
-
-4. 策略逻辑简单清晰,容易理解。
-
-5. 回测效果良好,可与趋势市场配合使用。
-
-## 风险分析
-
-1. 作为空头策略,存在无限亏损风险。
-
-2. 参数不当可能导致策略频繁止损再入场。
-
-3. 无法有效处理盘整震荡市,容易被套。 
-
-4. 仅基于指标,应增加过滤以避免失效。
-
-## 优化方向
-
-1. 优化参数组合,降低错误信号。
-
-2. 增加移动止损确保风险可控。
-
-3. 加入EMA等指标判断大市和入场时机。
-
-4. 结合交易量,避开震荡假突破。 
-
-5. 加入时间段过滤,缩小策略生效范围。
-
-## 总结
-
-该策略通过干浪通道完成简单的趋势跟踪,但可进一步增强指标逻辑、参数优化、风险控制等使策略更稳健。
-
-|| 
 
 
 ## Overview
@@ -122,7 +65,6 @@ Strategy based on the Gann HiLo Activator indicator for simple trend following o
 
 The strategy achieves simple trend following through Gann HiLo bands but can be improved further through enhancing indicator logic, parameter optimization, risk control etc. to make it more robust.
 
-[/trans]
 
 > Strategy Arguments
 

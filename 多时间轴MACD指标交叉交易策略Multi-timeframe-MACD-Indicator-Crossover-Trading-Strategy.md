@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f9a26b90f06ceaa92f.png)
-[trans]
-### 概述
-
-多时间轴MACD指标交叉交易策略是一种趋势跟踪策略。它通过计算不同参数设置的MACD指标,在价格突破该指标时产生交易信号,实现股票、指数、外汇等金融产品的自动化交易。
-
-### 策略原理
-
-该策略同时计算3条移动平均线:一条加权移动平均线WMA以及两条指数移动平均线EMA。这三条移动平均线的参数设置不同,分别为25天、50天和100天。这样可以让移动平均线覆盖不同的价格走势周期。
-
-在计算出移动平均线后,策略会监测价格是否突破或跌破某条移动平均线。如果价格同时突破或跌破所有3条移动平均线,那么就产生交易信号。
-
-例如,当价格同时高于所有3条移动平均线时,产生买入信号;当价格同时低于所有3条移动平均线时,产生卖出信号。监测价格与移动平均线的关系可以判断价格走势的转折点。
-
-通过多时间轴指标的交叉判断,可以过滤掉一些假信号,使交易信号更加可靠。
-
-### 优势分析
-
-- 利用多时间轴分析价格趋势,过滤假信号
-- 参数容易优化,可以适应不同周期的行情
-- 可用于股票、指数、外汇等多个品种,适用面广
-
-### 风险分析
-
-- 大周期指标判断存在滞后,可能错过短线机会
-- 突破失败时存在亏损风险
-- PARAMETERS 后期少量调整,以优化止损止盈
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:  
-
-1. 优化移动平均线的周期参数,适应更多行情周期
-2. 增加其他技术指标过滤,例如RSI指标判断超买超卖
-3. 增加止损机制,可参考ATR指标设定止损距离
-4. 可扩展至期货等其他品种,优化参数
-
-### 总结
-
-多时间轴MACD指标交叉交易策略整体思路清晰,通过移动平均线多周期判断价格趋势,在价格出现显著转折时产生交易信号。策略优化空间大,可针对不同品种和行情周期调整参数,从而获得良好的交易效果。该策略适合对趋势型股票、指数和外汇进行程序化交易。
-
-||
 
 ### Overview
 
@@ -91,7 +50,6 @@ The strategy can be optimized in the following aspects:
 
 The Multi-timeframe MACD Indicator Crossover Trading Strategy has a clear logic flow. It determines price trends over multiple periods using moving averages and generates trading signals when significant reversals occur. The strategy has large optimization space and parameters can be adjusted for different products and market cycles, enabling good trading performance. It is suitable for automated trading of trending stocks, indices and forex.
 
-[/trans]
 
 > Strategy Arguments
 

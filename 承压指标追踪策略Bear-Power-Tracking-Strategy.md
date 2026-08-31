@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e8630507958d459a5d.png)
-[trans]
-
-### 概述
-
-承压指标追踪策略是根据Alexander Elder博士的Elder Ray指标设计的,用于测量市场的买入和卖出压力。该策略采用13日指数移动平均线来表示市场价值的共识,使用承压指标来测量卖方将价格推低共识价值的能力。
-
-### 策略原理
-
-该策略的核心指标是承压指标,它由当日最低价减去13日指数移动平均线计算得到。当承压指标上穿指定阈值时做多,下穿时做空。它反映了卖方将价格压低平均共识价值的能力。 
-
-另外,多空方向还可以通过“交易反转”参数切换。该参数为布尔类型,默认为False。当其为True时,信号发出时做反向操作。
-
-该策略简单实用,通过一个指标判断多空方向,容易实现。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 使用单一指标,实现简单,容易理解和应用
-2. 可灵活调整参数,适用于不同市场环境
-3. 可选择反转交易,丰富策略类型
-
-### 风险分析
-
-该策略也存在一些风险:
-
-1. 单一指标容易产生假信号
-2. 未考虑止损,可能造成较大损失
-3. 参数不当可能导致过于频繁交易
-
-可通过多指标确认,设置止损,调整参数等方式进一步优化。
-
-### 优化方向  
-
-该策略可优化的几个方向:
-
-1. 增加其他指标过滤信号,如MACD,KDJ等,避免假突破
-2. 加入移动止损来限制亏损
-3. 优化指标参数,调整入场退出点
-4. 可以考虑结合股票基本面选股
-5. 可以和其他策略组合使用
-
-### 总结
-
-承压指标追踪策略概念简单,通过比较单一指标和指定阈值来判断 entrada 和 salida,容易操作。但作为基于指标的策略,可优化空间还很大,可从指标、止损、股票筛选等方面进行综合优化,使策略更稳定可靠。
-
-||
 
 ### Overview
 
@@ -104,7 +57,6 @@ Some directions to optimize the strategy:
 
 The Bear Power Tracking Strategy has a simple concept of judging entry and exit by comparing one indicator to a threshold. As a indicator-based strategy, there is still large room for optimization in aspects like indicators, stop loss and stock selection to make it more steady and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

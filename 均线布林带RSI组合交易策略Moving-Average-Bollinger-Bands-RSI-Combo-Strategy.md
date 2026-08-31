@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过组合运用均线、布林带和RSI指标,对价格趋势和超买超卖现象进行判断,以发现交易机会。该策略汇集多个指标的优势,追求提高交易决策的准确性。
-
-策略原理:
-
-1. 计算均线及其布林带,判断价格中长线走势。
-
-2. 计算RSI指标,判断是否进入超买或超卖状态。
-
-3. 当价格由下向上突破布林带下轨,且RSI出现多头交叉时,做多。
-
-4. 当价格由上向下突破布林带上轨,且RSI出现空头交叉时,做空。
-
-5. 设置止损线,控制单笔损失。
-
-该策略的优势:
-
-1. 多指标组合验证,可减少错误交易概率。
-
-2. RSI指标可补充均线系统的不足。
-
-3. 均线布林带可识别突破点位。
-
-该策略的风险:
-
-1. 多指标组合需要费时进行参数优化。
-
-2. RSI与布林带存在一定程度的重复。
-
-3. 突破交易易形成头部效应,出现反转。
-
-总之,该策略通过组合均线、布林带与RSI指标,在判断趋势的同时识别反转交易机会。组合使用指标可提高效果,但需要关注参数优化问题,控制风险。
-
-||
 
 This strategy combines moving averages, Bollinger Bands and RSI to assess price trends and overbought/oversold levels for trade signals. It harnesses strengths of multiple indicators to improve accuracy.
 
@@ -75,7 +40,6 @@ Risks:
 
 In summary, this strategy combines MAs, BBs and RSI to identify both trend and reversal trade opportunities. Using multiple indicators can improve results but requires parameter optimization and risk control.
 
-[/trans]
 
 > Strategy Arguments
 

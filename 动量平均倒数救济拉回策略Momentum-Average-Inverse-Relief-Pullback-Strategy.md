@@ -10,76 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/df7cc5ab67264e2e3b.png)
-[trans]
-## 概述
-
-动量平均倒数救济拉回策略(Momentum Average Inverse Relief Pullback Strategy)是一种简单的在移动平均线附近进行反转操作的策略。该策略采用 50 期指数移动平均线作为主要的趋势判断指标,并结合形态学的吞没规则来寻找反转机会。在突破移动平均线后,等待第二根或第三根反向K线的形成,如果符合反转形态,则在下一根K线收盘时进行反向开仓,并设置一分钟的止损计时器。
-
-## 原理
-
-该策略主要基于两个假设:
-
-1. 50期EMA可以有效判断市场趋势方向。当价格上穿时,视为多头行情;下穿时,视为空头行情。
-
-2. 在趋势突破EMA后,常出现短期的调整反弹,利用反转K线吞没的形态特征,可以捕捉到反弹结束的时机,从而进行反向操作。
-
-具体来说,策略首先计算50期EMA,然后判断价格是否突破该EMA。如果突破多头,则等待2-3根向下的阴线K线,如果下一根K线为多头吞没,则在该K线收盘时做多;如果突破空头,则等待2-3根向上的阳线,如果下一根K线为空头吞没,则在该K线收盘时做空。做多做空后,设置1分钟计时器,超时后平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 操作逻辑简单清晰,容易理解实现,适合初学者。
-
-2. 充分利用了移动平均线的趋势判断和K线形态的特征,使交易信号更有效。
-
-3. 设置了止损时间,可以控制单次交易的损失。
-
-4. 程序化规则明确,避免了主观判断的影响,使策略更可靠。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 50日EMA无法完全准确判断趋势,可能出现误断。
-
-2. K线形态判断同样有一定的误判概率。
-
-3. 止损时间设置不当,可能增加损失或减少盈利。
-
-4. 机器交易中可能存在滑点、串单等问题,从而影响获利。
-
-对策:
-
-1. 优化移动平均线的周期参数,找到更合适的数值。
-
-2. 结合其他指标进行组合判断,提高信号的可靠性。  
-
-3. 测试和优化止损时间参数,找到最优参数。
-
-4. 在策略中设置滑点控制,避免严重的滑点损失。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线周期参数,找到最佳参数。
-
-2. 更换其他类型的移动平均线,如加权移动平均线等。
-
-3. 增加volume和波幅等过滤器,避免在盘整中出现错误信号。 
-
-4. 结合 Stochastics, MACD等其他指标进行组合策略,提高信号质量。
-
-5. 根据不同品种特点和交易时段设定最佳的止损时间。
-
-6. 添加止盈策略,在利润达到一定标准后主动止盈。
-
-## 总结
-
-动量平均倒数救济拉回策略是一个简单实用的短线交易策略,它主要使用移动平均线来判断趋势,并使用K线吞没来发现反转机会,从而进行短线操作。该策略具有操作清晰、实现简易的优点,但也存在一些参数优化空间。通过一定的测试和调整,该策略可以成为初学者量化交易的良好起点。
-
-||
 
 ## Overview
 
@@ -148,7 +78,6 @@ Some ways to enhance the strategy:
 ## Conclusion
 
 The Momentum Average Inverse Relief Pullback Strategy is a simple and practical short term trading strategy. It uses EMA crossovers to determine trends and candlestick patterns to identify reversals for executing tactical trades. Despite some parameter optimization space, its clarity in logic makes it a good starting point strategy for novice quants. With proper testing and refinements, it can evolve into a robust tactical system.
-[/trans]
 
 > Strategy Arguments
 

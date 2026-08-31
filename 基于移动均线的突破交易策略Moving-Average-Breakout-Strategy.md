@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/181fc3206aa0567c75d.png)
-[trans]
-
-## 概述
-
-这是一个基于移动均线的突破交易策略。它通过计算一定周期的平均价格作为均线,当价格突破均线时产生交易信号。
-
-## 策略原理
-
-该策略主要基于移动均线指标。它使用sma函数计算一定周期内的平均收盘价,得到移动均线。当最新收盘价从下向上突破移动均线时,产生买入信号;当最新收闭从上向下突破移动均线时,产生卖出信号。
-
-具体来说,它在策略中定义了移动平均线的计算源(近期收盘价)和周期长度,得到移动均线数据序列。然后它设置了两个条件:价格上穿均线时创建买入订单;价格下穿均线时创建卖出订单。订单创建后,它还设置了止盈止损:当订单获利达到设定比例时平仓一部分头寸,当订单达到设定止盈或止损价格时平掉全部头寸。
-
-## 优势分析
-
-这是一个简单实用的趋势跟踪策略。它有以下优势:
-
-1. 思路清晰,易于理解和调整参数。
-2. 移动均线是一种常用且可靠的技术指标,可过滤市场噪音,识别趋势。
-3. 同时设置止盈止损,可以锁定部分利润,控制风险。
-4. 只需要简单参数即可运行,适用于量化入门。
-
-## 风险分析
-
-尽管该策略有很多优点,但也存在一些风险:
-
-1. 移动均线容易产生滞后,可能错过短期行情反转。
-2. 没有考虑大盘环境,容易被套牢。
-3. 没有进行参数优化,参数设定不当会影响策略表现。
-4. 没有结合其他指标进行过滤,存在一定的误报率。
-
-为了控制这些风险,我们可以结合其他指标进行过滤优化,引入大盘短期趋势判断,或者使用机器学习方法寻找最佳参数组合。
-
-## 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 增加其他技术指标判断,组成交易系统,提高策略胜率。比如加入MACD,KD等辅助判断指标。
-
-2. 加入止损机制。使用跟踪止损或时间止损来锁定利润,避免亏损扩大。
-
-3. 进行参数优化。改变移动均线的周期参数,找到最佳参数组合。还可以测试不同类型的移动均线。
-
-4. 增加机器学习判断。使用随机森林、LSTM等算法结合多个因子判断趋势方向。
-
-5. 优化进入退出逻辑。设置趋势过滤条件,避免趋势结束时反向操作。考虑使用分批平仓逻辑。
-
-## 总结
-
-这个移动均线突破策略总体来说非常适合作为量化交易的入门策略。它思路简单,易于理解和操作,有一定的实战效果。同时也为后续测试和优化留有很大空间。我们可以在此基础上,引入更多技术指标和模型,开发出效果更好的量化策略。
-
-|| 
 
 ## Overview
 
@@ -110,7 +59,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, this moving average breakout strategy is very suitable as a beginner quant trading strategy. It has simple logic, easy to understand and operate, with some practical effects. At the same time, it leaves much room for further testing and optimization. We can introduce more technical indicators and models on this basis to develop better quant strategies.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16de3f0ed3999df6d62.png)
-[trans]
-## 概述
-
-动量震荡策略是一种结合随机动量指标和相对强弱指标的量化交易策略。该策略运用随机动量指标判断市场超买超卖区域,配合快速RSI指标过滤信号,再通过实体过滤实现更可靠的交易信号选择。
-
-## 策略原理
-
-### 随机动量指标
-随机动量指数(SMI)是一种量化交易中常用的技术指标,它结合了动量指标和震荡指标的优点。
-
-具体来说,SMI的计算公式为:
-
-SMI = (Close - (HH + LL)/2)/(0.5*(HH - LL)) * 100
-
-其中,HH是过去N天的最高价,LL是过去N天的最低价。
-
-这样,SMI结合了动量的趋势判断和震荡的反转判断。当SMI高于80时为超买,低于20时为超卖。策略会在超买超卖区域发出交易信号。
-
-### 快速RSI
-
-相对强弱指数(RSI)是一种常用的超买超卖指标。该策略中使用周期为7的快速RSI,来判断短期内的超买超卖状况。
-
-当快速RSI低于20时为超卖,高于80时为超买。策略会在超买超卖区域发出交易信号。
-
-### 实体过滤
-
-该策略还加入了实体过滤器,通过计算K线实体的大小,来过滤部分信号。只有当K线实体超过一定阈值时,才会发出交易信号。
-
-这可以过滤掉一些假信号,提高信号的可靠性。
-
-## 策略优势
-
-### 多指标组合
-该策略结合了随机动量指标、快速RSI指标和实体过滤器三个部分。通过多指标联立,可以提高信号准确率,增强策略稳健性。
-
-### 超买超卖判断
-随机动量指标和快速RSI指标都能准确判断市场的超买超卖状态,策略在超买超卖区域开仓,遵循买入低位、卖出高位的交易原则。
-
-### 双向交易
-策略可进行多头和空头双向交易,最大限度捕捉市场上的交易机会。
-
-### 风险控制
-实体过滤器的加入,可以过滤掉大部分噪音,避免在震荡行情中被套。
-
-## 策略风险
-
-### 多空切换风险
-策略进行双向交易,多空头频繁切换是一个潜在的风险点。适当优化开仓逻辑可以降低此风险。
-
-### 跟风风险
-指标给出信号时,可能会在短时间内聚集大量跟风交易者,导致行情反转风险。可以通过优化指标参数降低此风险。
-
-### 市场系统性风险
-极端行情下,所有模型都可能失效。这需要通过合理设置止损来控制此类风险。
-
-## 策略优化
-
-### 参数优化
-可以通过测试不同的参数组合,如SMI周期、RSI周期、实体过滤器阈值等,寻找最佳参数以提高策略收益率。
-
-### 动态止损
-建立基于ATR或波动率的动态止损机制,可以更好地控制个股和整体的风险。
-
-### 机器学习
-引入机器学习算法,通过模型预测指标值的未来走势。这可以提前判断指标的转折点,增强策略的前瞻性。
-
-## 总结
-
-综上所述,该策略整合随机动量指标、快速RSI指标和实体过滤器,实现了一套较为完整的超买超卖判断体系。多指标组合提高了信号准确性,双向交易和风险控制机制也使策略更加平衡。通过持续优化参数和模型,该策略有望获取较好的收益率。
-
-||
 
 ## Overview
 
@@ -162,7 +91,6 @@ Models predicting future indicator levels could identify turning points earlier.
 
 In summary, by integrating the SMI, fast RSI, and body filter, this strategy has created a fairly comprehensive overbought/oversold system. The multi-signal approach improves accuracy, while two-way trade capability and risk controls contribute to balance. With continual parameter and model optimization, it shows promise for capturing gains over the long run.
 
-[/trans]
 
 > Strategy Arguments
 

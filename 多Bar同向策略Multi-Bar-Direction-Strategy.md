@@ -11,77 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1867ec6139578f637e0.png)
 
-[trans]
-
-## 概述
-
-多Bar同向策略通过统计多个Bar的走势概率,识别趋势出现的信号,在出现反转信号时进行反向交易。该策略主要应用于中短线交易。
-
-## 策略原理
-
-该策略首先设置起始统计时间和结束统计时间,用于提取历史数据。然后设置交易时间,用于识别符合条件的K线。策略统计从2根K线到7根K线内出现同向上涨或下跌的概率。如果上涨或下跌达到一定比例阈值,则产生交易信号。
-
-例如,策略统计3根K线内出现下跌的概率,如果下跌概率低于50%,则当前3根K线符合条件,产生看涨信号。策略允许设置2根到7根K线的统计参数。
-
-具体来说,策略逻辑如下:
-
-1. 设置回测时间范围,包括开始日期、结束日期、交易时间范围。
-
-2. 统计2根到7根K线内同向上涨或下跌的数量。
-
-3. 计算相邻K线数量上涨或下跌继续的概率。
-
-4. 如果概率低于50%,则认为目前K线符合反转信号形态。
-
-5. 在交易时间范围内,产生看涨或看跌信号。
-
-6. 进行回测,验证策略效果。
-
-## 策略优势
-
-- 通过统计多根K线概率,避免因单一K线产生错误信号
-- 可自定义K线数量,识别不同时间段内的反转信号
-- 设置明确的交易时间范围,避免非交易时间产生信号
-- 直观显示每段K线数量的统计结果,便于判断效果
-- 可优化的参数较多,适合针对不同市场进行优化
-
-## 策略风险
-
-- 统计的K线数量并不能完全确定趋势反转点,存在一定误判概率
-- 需要较长的统计时间段,可能错过短线的交易机会
-- 静态阈值容易受到市场变化的影响,需要动态调整
-- 回测时间范围的选择会影响结果,需要防止过拟合
-
-可以通过以下方法降低风险:
-
-1. 优化K线数量的参数,针对不同周期使用不同数量
-2. 结合其他指标 validated_hvgggjhjj tjgtdfnjnjhggvft
-3. 使用动态阈值,考虑市场波动的影响
-4. 扩大回测时间范围,进行多次回测验证
-
-## 策略优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化K线数量。可以测试从2根到10根不同参数,选择最优参数。
-
-2. 优化反转阈值。可以测试40%到60%不同参数,考虑到市场变化。
-
-3. 增加止损策略。可以在形成信号后设置止损点,控制风险。
-
-4. 结合其他指标。例如可以结合RSI等指标验证反转信号。
-
-5. 增加期货、外汇等不同品种。针对不同交易品种参数进行测试。
-
-6. 进行步进优化。逐步调整参数,找到最优参数组合。
-
-7. 增加机器学习模型。使用算法自动寻找最优参数。
-
-## 总结
-
-多Bar同向策略通过统计分析多根K线的概率来识别潜在的反转信号,实现了较为准确的信号处理。但策略效果与参数选择有关,需要进行充分优化。此外,反转信号本身存在一定误判可能,需要结合其他因素进行验证。总体来说,该策略为一种简单有效的统计策略,值得进一步研究与优化。
-
-||
 
 
 ## Overview
@@ -162,7 +91,6 @@ The strategy can be optimized in the following aspects:
 
 The Multi-Bar Direction strategy identifies potential reversal signals by statistically analyzing candlestick probabilities. But the performance depends on parameter tuning based on sufficient optimizations. In addition, reversal signals have misjudgement risks and need validation. Overall, this is a simple and effective statistical strategy worthwhile for further research and optimization.
 
-[/trans]
 
 
 > Strategy Arguments

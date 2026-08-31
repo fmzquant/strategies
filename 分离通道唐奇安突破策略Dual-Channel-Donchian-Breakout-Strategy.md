@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/161aff24c004b03288a.png)
-[trans]
-
-本策略基于唐奇安通道指标,实现买入上轨突破和卖出下轨突破的交易策略。
-
-#### 策略原理
-
-策略通过计算不同参数的上轨和下轨,分别实现买入和卖出信号。
-
-上轨计算公式:上轨 = 最高值(长度1)
-下轨计算公式:下轨 = 最低值(长度2)
-中轴计算公式:中轴 = (上轨 + 下轨)/ 2
-
-当收盘价超过上轨时,产生买入信号;当收盘价低于下轨时,产生卖出信号。
-
-该策略的优点是可以通过调整上轨和下轨的参数,实现更灵活的交易规则。
-
-#### 策略优势
-
-1. 可以自定义上下轨参数,使买入和卖出规则可以独立控制,更加灵活。
-
-2. 通过中轴指标衡量上下轨平均位置,可以更清晰判断价格突破。
-
-3. 唐奇安通道具有趋势跟踪性能,可以有效捕捉趋势机会。
-
-4. 策略操作简单,容易实施。
-
-#### 策略风险
-
-1. 容易产生虚假突破,需要结合其他指标过滤。
-
-2. 无法判断趋势背驰,需要人工或其他指标结合。
-
-3. 上下轨参数设置不当可能导致过于激进或保守,需要注意参数调整。
-
-#### 策略优化方向
-
-1. 可以考虑结合移动平均线等指标过滤虚假突破。
-
-2. 可以结合波动率指标判断真实突破概率。
-
-3. 可以动态调整上下轨参数,实现自适应交易规则。
-
-
-#### 总结
-
-本策略通过双轨道唐奇安通道实现灵活的突破操作。策略简单易操作,但存在一定虚假突破概率。可以通过参数优化及結合其他指标进行过滤,从而改进策略效果。
-
-||
 
 
 This strategy is based on the Donchian Channel indicator to implement trading signals on upper and lower band breakouts. 
@@ -104,7 +56,6 @@ The advantage of this strategy is the flexibility to customize upper and lower b
 
 This strategy implements flexible breakout trading via dual-band Donchian Channel. Simple logic but contains certain false breakout probabilities. Can be improved by parameter tuning, filters and supplementary indicators.
 
-[/trans]
 
 > Strategy Arguments
 

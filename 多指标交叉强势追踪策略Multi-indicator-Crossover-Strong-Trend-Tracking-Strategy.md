@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16fc044cf96bd32f187.png)
-[trans]
-
-## 概述
-
-该策略整合了RSI、MF、CCI、Stoch RSI等多种强势指标,通过指标交叉实现强势趋势的识别与追踪。策略首先计算多个周期指标,然后取指标的平均值,当多个指标都突破强势阈值时产生买入信号,当指标都跌破弱势阈值时产生卖出信号,从而捕捉股价的趋势转换点,追踪强势趋势。
-
-## 策略原理
-
-该策略同时计算RSI、MF、CCI、Stoch RSI四种强势指标。其中,RSI通过计算一定周期内的涨跌变化判断强弱;MF也考虑涨跌比例;CCI通过计算价格偏离均线的程度判断是否超买超卖;Stoch RSI 在RSI的基础上加入KDJ计算方法。
-
-策略设置50为指标的中性区域。当RSI、MF、CCI、Stoch RSI的K、D线都上穿50时产生买入信号,表明股价处于强势上涨趋势;当指标都下破50时产生卖出信号,表明股价进入盘整或下跌趋势。进场后设置较宽的止损范围,以追踪强势趋势。
-
-该策略的优点是指标全面,包含多种计算股价强弱的方法,指标之间可以互相验证,避免出现错位。通过指标的平均值判断,可以过滤掉部分噪音。
-
-## 策略优势
-
-1. 指标全面,包含RSI、MF、CCI、Stoch RSI多种强势判断方法,可以互相验证,提高识别准确率。
-
-2. 计算指标的平均值,可以过滤掉部分噪音,使信号更可靠。
-
-3. 采用指标的多重交叉作为入场时机,可以有效识别股价强势转换点。
-
-4. 设置较宽的止损范围,可以持续追踪强势趋势,获得超额收益。
-
-5. 策略思路清晰易懂,参数设置合理,实盘操作容易。
-
-## 策略风险
-
-1. 强势反转风险。股价出现突然反转时,可能导致策略止损。
-
-2. 走势波动风险。股价在强势趋势中可能出现较大幅度的回调,需要设定合理的止损范围。
-
-3. 多头行情风险。策略以追踪强势为主,在空头行情中效果可能不佳。
-
-4. 参数优化风险。指标参数需要根据不同品种进行测试优化,否则可能出现效果不佳。
-
-5. 可以通过合理止损、参数测试、调整仓位等方法来控制风险。
-
-## 策略优化方向 
-
-1. 可以测试不同的参数组合,选择对特定品种更适合的RSI、CCI等指标周期。
-
-2. 可以引入更多类型的指标,如波动率指标、成交量指标等,丰富多指标交叉逻辑。
-
-3. 可以根据市场情况,自动调整每次交易的仓位百分比。
-
-4. 可以设置动态止损,根据市场波动程度来trailing stop loss。
-
-5. 可以探索指标分级交叉的可能性,先通过一级指标交叉进入场内,再通过二级指标交叉追踪趋势。
-
-## 总结
-
-该策略通过RSI、MF、CCI、Stoch RSI多种强势指标的交叉实现对强势趋势的识别与追踪。策略指标全面互补,计算指标平均值可以有效过滤误报。采用指标交叉判断入场时机较为可靠,设置宽止损范围可以持续追踪趋势。但股价可能出现反转需要警惕,参数测试与优化也较为重要。整体来说,该策略思路简单清晰,通过多指标验证与止损优化,可以获得较好的跟踪强势趋势的效果。
-
-
-|| 
 
 
 ## Overview
@@ -120,7 +64,6 @@ The advantage of this strategy is that the indicators are comprehensive, contain
 
 This strategy identifies and tracks strong trends by crossovers of RSI, MF, CCI, Stoch RSI and other strong momentum indicators. The comprehensive and complementary indicators with average value calculation effectively filter out false signals. The indicator crossover entry timing is reliable, and wide stop loss range allows persistent trend tracking. But reversal risks need caution, and parameter optimization is important. Overall, the strategy has a simple and clear concept, and can achieve good trend tracking effect through indicator verification, stop loss optimization.
 
-[/trans]
 
 > Strategy Arguments
 

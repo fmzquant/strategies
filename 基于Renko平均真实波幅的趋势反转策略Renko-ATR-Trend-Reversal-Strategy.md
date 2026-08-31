@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ca35924c33e5c2d66d.png)
-[trans]
-
-## 概述
-
-基于Renko平均真实波幅的趋势反转策略(Renko ATR Trend Reversal Strategy)是一种独特的交易策略,旨在利用Renko图表结合平均真实波幅(ATR)指标来识别金融市场的趋势反转点。该策略消除了Renko图的滞后绘制问题,能够准确地捕捉转折点,为交易决策提供清晰的信号。
-
-## 策略原理
-
-### Renko砖块生成
-
-该策略首先计算一定周期内的ATR的值,并以此ATR为基准设置Renko图的砖块大小。当价格变动超过一个ATR时,则绘制新的Renko砖块。通过这种方式,Renko图能够自动适应市场的波动程度,在高波动时设置较大的砖块大小,在低波动时设置较小的砖块大小。
-
-### 买入和卖出信号生成
-
-当Renko开盘价下穿收盘价时,产生买入信号;当Renko开盘价上穿收盘价时,产生卖出信号。这些信号标志着潜在的趋势反转点。
-
-### 止损和止盈设置
-
-该策略会根据用户定义的止损百分比和止盈百分比,以Renko开盘价为基准动态设置每单的止损价位和止盈价位,控制每单交易的风险和收益。
-
-## 优势分析
-
-### 消除滞后绘制
-
-该策略通过手动计算Renko的开盘价和收盘价消除了滞后绘制的问题,使信号的产生更加准确和及时。
-
-### 自动适应市场波动率 
-
-基于ATR指标的Renko砖块大小设置使得策略可以自动适应不同市场条件下的价格波动率。
-
-### 动态止损止盈设定
-
-该策略为每单交易设定了动态的止损和止盈机制,可以根据市场波动程度来控制风险。
-
-### 简化的图表视图
-
-Renko图本身可以滤除市场噪音,识别趋势反转时提供清晰简洁的视觉效果。
-
-## 风险分析
-
-### 参数优化风险
-
-用户需要对ATR周期、止损百分比和止盈百分比等参数进行优化,以适应不同的市场环境。如果参数设置不当,会导致策略效果不佳。
-
-### 突发事件风险 
-
-重大经济事件或者政策出台可能导致快速放量,从而使止损或止盈水平被突破,造成较大损失。
-
-### 反转失败风险
-
-在某些情况下,交易信号判定的反转可能失败,无法推动价格朝反转方向发展,从而导致亏损。
-
-## 优化方向
-
-### 结合多个时间周期
-
-可以在更高的时间周期上判断大趋势,避免逆势交易。也可以在更低的时间周期过滤假信号。
-
-### 结合其他指标
-
-与动量指标、波动率指标等结合使用,可以提高信号的质量,避免错误信号。
-
-### 动态调整止盈比率
-
-可以根据市场波动程度以及最新价格与入场点的距离动态调整止盈的比率。
-
-## 总结
-
-基于Renko平均真实波幅的趋势反转策略成功地利用Renko图表结合ATR指标自动识别金融市场中的转折点。该策略具有消除滞后绘制、自动适应市场波动率以及动态止损止盈等优点。同时,用户也需要警惕参数设置与优化风险,以及突发事件和反转失败的风险。通过多时间周期分析、指标组合以及止盈调整等方式可以继续优化该策略,提高效果。
-
-||
 
 ## Overview
 
@@ -150,7 +79,6 @@ Take profit ratios can be dynamically adjusted based on market volatility and th
 
 The Renko ATR Trend Reversal Strategy successfully utilizes Renko charts with ATR indicator to automatically spot trend reversal points in financial markets. Key advantages include repainting elimination, auto-adaptivity to changing volatility, and dynamic stop loss/take profit. However, users need to be wary of parameter optimization risks, event risks and failed reversal risks. Further enhancements may include using multiple timeframes, combining other indicators, and dynamic take profit adjustment.
 
-[/trans]
 
 > Strategy Arguments
 

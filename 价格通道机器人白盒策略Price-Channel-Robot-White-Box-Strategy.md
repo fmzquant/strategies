@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b8ca85bd0157792ac6.png)
-[trans]
-### 概述
-
-价格通道机器人白盒策略是一种基于价格通道指标的简单的机械化交易策略。它使用价格通道的上下限来判断入场和出场时机。该策略 longtime 为多头,shortime 为空头。
-
-### 策略原理  
-
-价格通道机器人白盒策略的核心逻辑是:
-
-1. 使用highest和lowest函数计算最近len根K线的最高价和最低价,定义为价格通道的上限和下限
-2. 计算价格通道中间价:(最高价+最低价)/2
-3. 当价格上穿价格通道上限时,开多仓
-4. 当价格下破价格通道下限时,开空仓  
-5. 当价格回落到价格通道中间价时,平仓
-
-该策略还具有一些可配置的参数:
-
-- 价格通道长度len:默认50根K线
-- 开仓类型:多头、空头可单独配置
-- 开仓量:默认为账户权益的100%
-- 止损:可选择是否使用价格通道中间价作为止损
-- 交易时间:可配置只在指定日期范围内交易
-
-通过这些参数的调整,可以使策略更好地适应不同品种和市场环境。
-
-### 优势分析
-
-价格通道机器人白盒策略具有以下优势:
-
-1. 策略逻辑简单,容易理解和实现
-2. 充分利用价格通道指标判断趋势和反转
-3. 可配置的参数较多,适应性强  
-4. 内置止损机制,可以限制亏损
-5. 支持时间过滤,避免重大事件的影响
-
-总的来说,该策略是一个简单实用的趋势追踪策略,在参数调优后,可以获得不错的效果。
-
-### 风险分析
-
-价格通道机器人白盒策略也存在一些风险:  
-
-1. 价格通道指标对参数len敏感,不同时间周期和品种需要独立测试和优化
-2. 追踪止损有被套利的风险,需要根据市场波动率调整止损距离
-3. 在横盘和震荡行情下,会产生较多无谓交易,增加交易成本和滑点损失
-
-为了降低这些风险,需要从以下几个方面进行优化:
-
-1. 使用Walk Forward Analysis方法自动优化参数
-2. 在止损价格加入缓冲区,避免被套利的概率
-3. 增加趋势判断指标,避免横盘震荡市场的交易
-
-### 优化方向 
-
-价格通道机器人白盒策略还有进一步优化的空间:
-
-1. 增加对大周期趋势的判断,避免逆势交易
-2. 结合不同品种之间的价差来设定参数,利用套利机会
-3. 在止损价格中加入随机缓冲区,降低被套利概率
-4. 根据市场波动率动态调整价格通道参数len
-5. 针对特定品种使用深度学习方法训练agent优化策略  
-
-通过这些优化手段,有望进一步提高策略的稳定性和盈利能力。
-
-### 总结
-
-价格通道机器人白盒策略是一个简单但实用的追踪趋势策略。它通过价格通道指标判断趋势方向和反转点,并以此制定交易决策。该策略易于理解和实现,在参数调优后能够获得不错回报。同时也存在一定的风险,需要对参数和止损进行优化以降低风险。总体来说,该策略具有广阔的应用前景和优化潜力,值得探索和实践。
-
-||
 
 ### Overview
 
@@ -145,7 +77,6 @@ These optimization techniques could help further improve the stability and profi
 
 The Price Channel Robot White Box Strategy is a simple yet practical trend following strategy. It identifies trend direction and reversal points using the price channel indicator to make trading decisions. The strategy is easy to understand and implement, and can achieve decent returns after parameter tuning. There are also certain risks that need to be mitigated through optimizing parameters and stop loss. Overall, the strategy has broad application prospects and optimization potential, worth exploring and practicing.
 
-[/trans]
 
 > Strategy Arguments
 

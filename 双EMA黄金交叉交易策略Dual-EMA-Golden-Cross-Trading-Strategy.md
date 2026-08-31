@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/21afc298e7eff9af1f6.png)
-[trans]
-
-## 概述
-
-本策略结合了双EMA黄金交叉、标准化ATR噪音过滤器和ADX趋势指标,旨在为交易者提供更可靠的买入信号。该策略综合多个指标过滤虚假信号,识别更可靠的交易机会。
-
-## 策略原理
-
-该策略使用8周期和20周期的EMA构建双EMA黄金交叉系统。当短周期EMA上穿长周期EMA时生成买入信号。
-
-此外,策略还设置了多个辅助指标进行过滤:
-
-1. 14周期ATR,经过标准化处理,过滤掉市场中过小的价格波动。
-
-2. 14周期ADX,用来识别趋势的力度。只有在强势趋势中才会考虑交易信号。
-
-3. 14周期成交量SMA,过滤掉成交量较小的时间点。
-
-4. 4/14周期Super Trend指标,判断多空市场方向。
-
-在满足趋势方向、ATR标准化值、ADX值和成交量条件后,EMA黄金交叉才会最终触发买入信号。
-
-## 策略优势
-
-1. 多指标组合,可靠性较高
-
-   该策略集成了EMA、ATR、ADX、Super Trend等多个指标,通过指标互补形成较强的信号过滤体系,可靠性较高。
-
-2. 参数可调节空间大
-
-   ATR标准化值阈值、ADX阈值、持仓周期等参数都可根据实际情况优化调整,策略灵活度较高。
-
-3. 可区分多空市场
-
-   通过Super Trend指标判断多空市,针对多空市场使用不同的参数标准,避免错失机会。
-
-## 策略风险
-
-1. 参数优化难度大
-
-   策略参数组合复杂,优化难度较大,需要大量回测找到最优参数。
-
-2. 指标错触发风险
-
-   尽管有多重过滤,由于指标本质带有滞后性,仍有错触发风险。需要充分考虑止损理论。
-
-3. 交易频率偏低
-
-   受到多重指标和滤波的影响,策略交易频率会比较低,可能长期无交易的情况。
-
-## 策略优化方向  
-
-1. 优化参数组合
-
-   通过大量回测数据找到指标参数的最优组合。
-
-2. 增加机器学习
-
-   基于大量历史数据,运用机器学习算法自动优化策略参数,实现策略的自适应性。
-   
-3. 考虑更多市场因素
-
-   结合更多指标判断市场结构、情绪等因素,丰富策略的多样性。
-
-## 总结
-
-本策略综合考虑了趋势、波动性和量价因素,通过多指标过滤和参数调节形成交易体系。综合而言,该策略可靠性较高,可通过进一步优化其参数组合和建模方式提升策略的交易效率。
-
-||
 
 ## Overview
 
@@ -146,7 +77,6 @@ Only when the trend direction, normalized ATR value, ADX level and volume condit
 
 This strategy comprehensively considers trend, volatility and volume price factors. Through multi-indicator filtering and parameter tuning, it forms a reliable trading system. The reliability is high and can be further improved via optimization.
 
-[/trans]
 
 
 

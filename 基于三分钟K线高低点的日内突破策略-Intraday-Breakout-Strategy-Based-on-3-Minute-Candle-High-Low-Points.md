@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12772965f126061f98d.png)
-[trans]
-#### 概述
-该策略的主要思路是利用三分钟K线的高低点作为突破点,当价格突破三分钟K线的高点时做多,突破低点时做空。该策略适用于日内交易,每日收盘时平仓,第二天继续交易。该策略的优势在于简单易懂,容易实现,风险也相对较低。但是该策略也存在一些风险,如市场波动较大时,可能会出现较大的回撤。
-
-#### 策略原理
-1. 获取每日开盘后前三分钟的K线数据,记录第三根K线的最高价和最低价。
-2. 当价格突破第三根K线的最高价时,开多单,目标价格为开仓价加100点,直到收盘或达到目标价格平仓。
-3. 当价格突破第三根K线的最低价时,开空单,目标价格为开仓价减100点,直到收盘或达到目标价格平仓。
-4. 每日收盘时平仓,第二天继续交易。
-
-#### 策略优势
-1. 简单易懂,易于实现。
-2. 适用于日内交易,资金利用率高。
-3. 风险相对较低,止损位置明确。
-4. 适用于趋势性较强的市场。
-
-#### 策略风险
-1. 市场波动较大时,可能会出现较大的回撤。
-2. 开盘时间段价格波动较大,风险较高。
-3. 突破点位置不好把握,容易出现误判。
-
-#### 策略优化方向
-1. 可以考虑加入移动平均线等指标,过滤震荡市中的噪音信号。
-2. 可以考虑优化开仓时间,避开开盘时间段。
-3. 可以考虑优化止盈止损点位,提高策略稳定性。
-4. 可以考虑加入仓位管理,控制回撤风险。
-
-#### 总结
-该策略基于三分钟K线的高低点突破,适用于日内交易。优势是简单易懂,易于实现,风险相对较低。但是也存在一些风险,如市场波动较大时,可能会出现较大的回撤。可以考虑从过滤信号、优化开仓时间、优化止盈止损点位、加入仓位管理等方面对该策略进行优化,以提高策略的稳定性和盈利能力。
-
-||
 
 #### Overview
 The main idea of this strategy is to use the high and low points of the three-minute candle as breakout points. When the price breaks through the high of the three-minute candle, it goes long, and when it breaks through the low, it goes short. This strategy is suitable for intraday trading, closing positions at the end of each day and continuing trading the next day. The advantage of this strategy is that it is simple, easy to understand, and easy to implement, with relatively low risk. However, there are also some risks associated with this strategy, such as the possibility of large drawdowns when market volatility is high.
@@ -70,7 +39,6 @@ The main idea of this strategy is to use the high and low points of the three-mi
 
 #### Summary
 This strategy is based on the breakout of the high and low points of the three-minute candle and is suitable for intraday trading. The advantage is that it is simple, easy to understand, and easy to implement, with relatively low risk. However, there are also some risks, such as the possibility of large drawdowns when market volatility is high. To improve the stability and profitability of the strategy, consider optimizing it in terms of filtering signals, optimizing opening times, optimizing take-profit and stop-loss points, and adding position management.
-[/trans]
 
 
 

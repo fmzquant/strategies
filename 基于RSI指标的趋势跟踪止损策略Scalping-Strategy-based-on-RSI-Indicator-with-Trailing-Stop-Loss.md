@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b398270b341c2162f3.png)
-[trans]
-
-## 概述
-
-本策略名称为“基于RSI指标的趋势跟踪止损策略”。该策略利用RSI指标判断超买超卖情况,结合快慢MA指标判断趋势方向,设定入场条件。同时使用百分比跟踪止损机制,实现止损退出。
-
-## 策略原理  
-
-该策略主要通过RSI指标和MA指标判断入场时机。RSI指标参数设置为2周期,判断超买超卖情况。快慢MA分别设置为50周期和200周期,判断趋势方向。具体入场逻辑为:
-
-多头入场:快MA上穿慢MA,且价格高于慢MA,同时RSI低于超卖区域(默认10%)时做多;  
-空头入场:快MA下穿慢MA,且价格低于慢MA,同时RSI高于超买区域(默认90%)时做空。
-
-此外,策略还设定了一个可选的波动率过滤器。该过滤器计算快慢MA的斜率差值,当差值超过设定阈值时才会开仓。其目的是避免价格震荡期无明确方向时开仓。
-
-exit上,策略采用百分比跟踪止损方式。根据输入的止损百分比,结合每跳价差计算出止损价位,实现动态调整止损。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. RSI指标参数设置为2周期,能快速捕捉超买超卖情况,判断反转机会。
-2. 快慢MA能有效识别趋势方向和转折点。
-3. 结合RSI和MA双重指标判断,可避免假突破。
-4. 设置波动率过滤器,可过滤震荡市无明确方向时期。
-5. 采用百分比跟踪止损方式,可根据市场波动性调整止损幅度,有效控制风险。
-
-## 风险分析  
-
-该策略也存在一定风险,主要体现在:  
-
-1. RSI和MA指标存在一定滞后性,可能错过部分反转机会。 
-2. 百分比止损在缩量下跌中容易被触发。
-3. 无法有效处理夜盘和盘前波动较大的品种。
-
-针对上述风险,可从以下方面进行优化:
-
-1. 调整RSI参数,设置为1周期,可减少滞后性。
-2. 根据不同品种特点调整MA周期参数。  
-3. 调整百分比止损水平,兼顾止损与震荡容忍度。
-
-## 策略优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 增加其他指标判断,如增加成交量指标,避免虚假突破。
-2. 增加机器学习模型判断,利用模型预测结果辅助决策。
-3. 优化复利次数和仓位管理,进一步提升策略收益率。
-4. 设定夜盘和盘前波动过滤机制。根据波动幅度设定是否参与下个交易日决策。
-
-## 总结  
-
-本策略整体来说是一款较为稳定的趋势跟踪策略。它结合RSI和MA双重指标判断,在保证一定稳定性的同时,也能捕捉比较明确的趋势反转机会。同时设置波动率过滤器可避免部分风险,百分比止损方式也能有效控制单笔损失。该策略可作为多品种通用策略使用,也可针对特定品种进行参数调整和模型优化,从而获得更好的策略效果。
-
-||
 
 # Overview
 This strategy is named "Scalping Strategy based on RSI Indicator with Trailing Stop Loss". It utilizes the RSI indicator to determine overbought and oversold conditions, combines with fast and slow Moving Averages (MA) to determine the trend direction, and sets the entry conditions. It also uses percentage trailing stop loss mechanism to exit positions.  
@@ -114,7 +59,6 @@ The optimization directions for this strategy are:
 ## Conclusion
 In general, this is a relatively stable trend following strategy. By combining dual RSI and MA indicators, it ensures certain stability while capturing clearer trend reversal opportunities. The volatility filter avoids some risks, and percentage stop loss also effectively controls single trade loss. This strategy can be used as a multi-symbol generic strategy, and can also be optimized on parameters and models for specific symbols to achieve better results.
 
-[/trans]
 
 > Strategy Arguments
 

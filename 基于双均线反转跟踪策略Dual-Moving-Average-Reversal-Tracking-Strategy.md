@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/143f3aeacfa8a18a828.png)
-[trans]
-## 概述
-
-双均线反转跟踪策略是一种利用移动平均线交叉作为交易信号的量化交易策略。该策略结合了MACD指标的快慢均线差值及其信号线,以及成交量的多空比例判断,形成交易信号,以捕捉市场反转机会。
-
-## 策略原理
-
-该策略主要判断快线和慢线的关系,当快线上穿慢线时生成做多信号,快线下穿慢线时生成做空信号。此外,还会结合MACD差值的多空状态、差值和信号线的关系、成交量的多空情况等综合判断市场的多空状态。
-
-具体来说,策略会判断MACD差值的大小和方向、差值和信号线的交叉情况、差值和信号线方向一致或相反的情况等。这些情况反映了市场的subidabubb急跌反弹特征。此外,成交量的多空分布也会作为辅助判断指标。
-
-当判断到差值和信号线显示市场反转信号,且成交量对应确认市场反转时,就会产生交易策略。
-
-## 策略优势 
-
-- 利用双均线交叉判断市场反转点,爬虫理论依据稳固
-- 结合成交量判断,避免假突破
-- MACD指标判断 subsection 态势,识别反弹特征
-- Parameters 部分控制策略灵活度高
-
-## 风险及解决方法
-
-- 双均线交叉造成 whipsaw 问题
-  - 调整均线参数,增大Threshold
-
-- 成交量无法完全过滤假突破
-  - 结合副指标如OBV判断真实成交量趋势
-
-- 无法判断subsection调整的深度与力度 
-  - 增加止损,评估重要支持位
-
-## 优化方向
-
-- 利用机器学习模型代替规则判断
-  - 提高策略鲁棒性,降低过拟合
-
-- 增加止损止盈技巧
-  - 锁定部分利润,降低风险
-
-- 结合情绪指标、消息面分析
-  - 提高模型判断准确性
-
-- 移植到其他品种、市场
-  - 测试策略扩展性
-  
-
-## 总结
-
-双均线反转跟踪策略综合考量了均线指标、MACD指标和成交量指标,通过捕捉其反转信号,选择合适的反转点建立持仓。策略优化空间还很大,可通过机器学习和风控手段进一步增强策略稳定性和收益率。
-
-|| 
 
 ## Overview  
 
@@ -105,7 +54,6 @@ When the difference and signal line show market reversal signals, and trading vo
 
 The Dual Moving Average Reversal Tracking strategy comprehensively considers indicators like moving averages, MACD, and trading volumes. By capturing their reversal signals, appropriate reversal points are selected  to establish positions. There is still large room for optimizing this strategy, robustness and profitability can be further improved by techniques like machine learning and risk management.  
 
-[/trans]
 
 > Strategy Arguments
 

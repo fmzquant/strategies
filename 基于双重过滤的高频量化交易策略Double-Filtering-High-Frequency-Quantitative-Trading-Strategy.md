@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/173883084fc3fd124c3.png)
-[trans]
-
-## 概述
-
-该策略名称为“双重过滤量化”,它采用多时间框架技术,实现了基于双重过滤思想的高频量化交易策略。策略利用不同时间框架上的指标进行判断,实现更严谨的交易信号过滤,能过滤掉大量的假信号,从而获取更高的胜率。
-
-## 策略原理  
-
-该策略的核心原理是:
-
-1. 利用周线、日线判断市场趋势方向,作为策略方向过滤条件,只有符合趋势条件才能交易。
-
-2. 4小时级别构建通道,判断卖点和买点,发出交易信号。
-
-3. 周线、日线与4小时判断的方向一致性,能过滤掉大量假信号,提高交易信号的可靠性。
-
-4. 利用Fibonacci回撤点确定止盈止损位置,实现迅速止盈止损。
-
-具体来说,策略首先在周线和日线上判断趋势优先方向,判断优先方向的原理是:当前K线收盘价在周期线上滞后角度较大的一侧,就判断为该周期线方向;然后在4小时级别构建A B C D通道,通过通道方向和折返点判断买卖点,发出交易信号;最后一定要当前周期线判断的优先方向与4小时的交易信号方向一致,这样能过滤掉很多假信号,从而提高交易信号的可靠性。
-
-## 策略优势  
-
-该策略主要具有以下优势:
-
-1. 基于多时间框架的双重信号过滤机制,能过滤掉大量噪音,获取高可靠性的交易机会。
-
-2. 利用通道构建买卖点判定,交易信号清晰。
-
-3. Fibonacci回撤点设置止盈止损位置,能快速止盈止损。  
-
-4. 策略参数较少,容易理解掌握。
-
-5. 可扩展性良好,容易进行优化改进。
-
-## 策略风险  
-
-该策略主要存在以下风险:  
-
-1. 监控时间框架过多,增加了复杂度,容易出错。
-
-2. 未考虑特殊行情的突发事件,如重大新闻事件造成的行情剧烈波动。  
-
-3. 回撤点设置止盈止损存在盈利不足的可能。
-
-4. 参数设置不当可能导致过度交易或漏单。
-
-对策:
-
-1. 加强异常情况和重大新闻事件的监控。
-
-2. 优化止盈止损逻辑,确保盈利达到一定水平。  
-
-3. 详细测试与优化参数,减少过度交易和漏单概率。
-
-## 策略优化方向  
-
-该策略的主要优化方向有:
-
-1. 增加机器学习模型判断趋势优先方向的可能性,利用更多的数据提高判断准确性。  
-
-2. 测试其他指标构建通道,判断买卖点。
-
-3. 尝试更先进的止盈止损方式,如移动止盈、跳跃止盈等。
-
-4. 利用回测结果推导最优参数,使参数设置更加符合量化投资原则。
-
-5. 增加对重大突发事件的监控和响应机制。
-
-## 总结  
-
-该策略整体来说,核心思想是基于双重过滤减少噪音的高频量化交易策略。它利用多时间框架判断和通道判定买卖点的方法,实现了交易信号的双重可靠性过滤。同时,策略参数较少,容易掌握;可扩展性良好,容易进行优化改进。下一步将从判断准确性、止盈止损方式、参数优化等方面进行优化,使策略效果更好。
-
-||
 
 
 ## Overview
@@ -155,7 +82,6 @@ The main optimization directions of this strategy are:
 
 In general, the core idea of ​​this strategy is a high-frequency quantitative trading strategy based on double filtering to reduce noise. It uses multi-timeframe judgment and channel determination of buying and selling points to achieve double reliability filtering of trading signals. At the same time, the strategy has few parameters and is easy to master; scalability is good and easy to optimize and improve. Next, optimization will be carried out from aspects such as judgment accuracy, profit-taking and stop-loss methods, and parameter optimization to make the strategy work better.
 
-[/trans]
 
 > Strategy Arguments
 

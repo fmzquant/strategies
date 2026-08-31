@@ -11,85 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/84541a1f7cf0615308.png)
-[trans]
-
-## 概述
-
-该策略的主要思路是在周一盘中,利用当天的反转行情进行趋势追踪,实现盈利。
-
-## 原理
-
-该策略的核心逻辑是:
-
-1. 判断是否为周一交易日,如果是则继续执行后续逻辑;
-
-2. 判断当天的K线是否出现了自下而上的反转形态,具体来说是:第1根K线收盘价<第2根K线收盘价,且第2根K线收盘价<第3根K线收盘价;
-
-3. 如果上述反转形态成立,则在第3根K线收盘时开多仓,进行趋势追踪; 
-
-4. 止盈条件是当天高点突破,或者止损退出;
-
-5. 持仓6小时后强制平仓退出。
-
-整个策略利用了周一特定时间段的反转行情,通过识别反转K线形态,实现低买高卖的盈利模式。同时设置了止盈止损条件,控制了风险。
-
-## 优势
-
-该策略最大的优势在于:
-
-1. 利用周一盘中特定阶段的反转行情,these reversals during Monday trading session,实现盈利;makes profits
-
-2. 通过识别特定K线形态,实现了较为明确的入场信号;By identifying specific candlestick patterns, it has clear entry signals
-
-3. 设置了止盈止损条件,可以很好控制风险;Stop loss and take profit conditions are set to control risks
-
-4. 采用趋势追踪模式,可以最大化获利;The trend following approach maximizes profits
-
-5. 策略逻辑简单清晰,容易理解和实现;The logic is simple and easy to understand and implement
-
-## 风险
-
-该策略也存在一定的风险:
-
-1. 周一反转行情不明显时,会导致亏损;Losses can occur if Monday reversals are not significant
-
-2. 反转后可能再次回调从而止损;Price may retrace after reversal leading to stop loss
-
-3. 行情突然变化导致止损成本过大;Sudden market changes may lead to large stop loss
-
-4. 持仓时间过长也可能导致亏损;Holding positions too long may also cause losses
-
-对应的解决方法是:优化止损策略,适当缩短持仓时间,严格控制单笔亏损。
-
-The solutions are: Optimizing stop loss strategy, shortening holding time, strictly controlling single loss.
-
-## 优化方向
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 利用机器学习方法识别更准确的反转形态;Use machine learning to identify reversal patterns more accurately
-
-2. 优化止损策略,例如移动止损、分批止损等;Optimizing stop loss such as trailing stop loss, partial stop loss etc
-
-3. 结合更多因素判断趋势强度,如交易量变化等;Incorporate more factors to judge trend strength, e.g. volume changes
-
-4. 动态调整持仓时间;Dynamically adjust holding time 
-
-5. 采用算法自动确定合理的参数;Use algorithms to determine optimal parameters
-
-6. 增加立场切换机制,实现多空双向交易;Add position switching mechanism for two-way trading
-
-通过这些优化,可以提高策略的胜率和盈利水平。
-
-These optimizations can improve the win rate and profitability of the strategy.
-
-## 总结
-
-总而言之,该策略通过利用周一特定阶段的反转行情,设定明确的入场退出机制,实现了简单的趋势追踪盈利模式。相比固定止损止盈,该策略可以取得更好的效果。当然,仍需要进一步优化来应对市场的不确定性。该策略为日内短线交易提供了一个参考思路和模板。
-
-In summary, this strategy utilizes the reversal during Monday trading session, with clear entry and exit mechanisms, to implement a simple trend following profitable model. Compared to fixed stop loss and take profit, this strategy can achieve better results. However, further optimizations are still needed to deal with market uncertainty. The strategy provides a reference idea and template for intraday trading.
-
-||
 
 
 ## Overview
@@ -162,7 +83,6 @@ These can increase the win rate and profitability.
 
 In conclusion, the strategy capitalizes on Monday reversals, with clear entry/exit rules, to implement a simple trend following strategy. It can achieve better results than fixed stop loss/take profit. Further optimizations are needed to address market uncertainty. The strategy provides a reference for intraday trading.
 
-[/trans]
 
 > Strategy Arguments
 

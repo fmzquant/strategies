@@ -9,22 +9,6 @@
 
 > Strategy Description
 
-[trans]
-
-# 多平台期货资金费率获取与监控策略
-
-### 描述：
-该策略用于从多个期货平台（如OKCoin、Binance、Bitget等）获取和监控资金费率。通过并行线程轮询各交易所的永续合约市场，并获取资金费率数据，同时使用延迟机制优化请求频率。
-
-### 功能：
-- **多平台支持**：同步多个交易平台的资金费率，并为每个平台设定不同的请求延迟。
-- **特定符号获取**：支持获取特定交易对（如BTC/USDT, ETH/USDT）的资金费率。
-- **针对不同平台优化**：区分无需逐个市场查询的平台（如Binance）和需要遍历所有市场的平台（如OKCoin）。
-
-### 使用方法：
-您可以根据需要调整平台列表、符号列表和轮询间隔，以满足特定的交易需求。
-
-||
 
 # Multi-Platform Futures Funding Rate Retrieval and Monitoring Strategy
 
@@ -39,7 +23,6 @@ This strategy retrieves and monitors funding rates across multiple futures platf
 ### Usage:
 You can adjust the platform list, symbol list, and polling intervals to suit your specific trading requirements.
 
-[/trans]
 
 
 

@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f8cae4528e6c8aff06.png)
-[trans]
-## 概述
-
-RSI均线双金叉震荡策略是一种同时利用RSI指标与均线的金叉死叉信号来决定买入卖出的量化交易策略。该策略运用RSI指标判断市场是否被高估或低估,并结合均线的趋势判断,在RSI指标显示超买超卖现象的同时发出交易信号。这可以有效过滤假信号,提高策略的稳定性。
-
-## 策略原理  
-
-该策略主要基于RSI指标与均线的组合使用。首先计算一定周期的RSI值,并设置超买超卖线。其次,计算快速均线及慢速均线。当RSI指标上穿上慢速均线,同时RSI值低于超卖线及下轨时产生买入信号;当RSI指标下穿下慢速均线,同时RSI值高于超买线及上轨时产生卖出信号。
-
-## 优势分析
-
-这种策略最大的优势就是同时利用RSI指标判断超买超卖现象,以及均线判断趋势方向,能有效避免假突破。此外,RSI与BOLL通道的组合运用也可以进一步过滤噪音,使交易信号更加准确。
-
-## 风险分析  
-
-该策略可能存在的风险主要有:操作频率过高,容易迭仓;参数设置不当可能导致信号精确度降低。此外,震荡行情下也可能出现亏损。
-
-## 优化方向
-
-可以考虑调整RSI参数或均线周期参数以适应不同周期;结合其他指标过滤信号;设置止损止盈点以控制风险;优化每次交易的仓位管理。
-
-## 总结  
-
-RSI均线双金叉震荡策略整体来说是一种较为稳定可靠的短线交易策略。通过参数调优与风险控制的配合,可以获得较好的收益回报率。该策略易于理解与实现,非常适合量化交易初学者学习与应用。
-
-||
 
 ## Overview  
 
@@ -61,7 +35,6 @@ Consider adjusting RSI or moving average period parameters to suit different cyc
 
 In general, the RSI moving average double cross oscillation strategy is a relatively stable and reliable short-term trading strategy. With proper parameter tuning and risk control, it can achieve good return on investment. The strategy is easy to understand and implement, very suitable for beginners to learn and apply quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

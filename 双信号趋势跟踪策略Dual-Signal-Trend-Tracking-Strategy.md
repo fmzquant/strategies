@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/152c854182209303462.png)
-[trans]
-
-## 概述
-
-该策略通过组合使用双EMA和Awesome Oscillator两个指标,实现对趋势的识别和跟踪。其中EMA快速判断近期趋势方向,Awesome Oscillator过滤假突破提供入场时机。策略名称“双信号趋势跟踪策略”可以准确概括策略的主要功能。
-
-## 策略原理
-
-该策略主要运用双EMA和Awesome Oscillator两个技术指标进行信号过滤,具体逻辑如下:
-
-1. 计算2周期和20周期的EMA,当2周期EMA由下向上突破20周期EMA时,判断为上涨趋势;当2周期EMA由上向下突破20周期EMA时,判断为下跌趋势。
-
-2. 计算Awesome Oscillator,它由快速移动平均线减去慢速移动平均线得到,再用快速移动平均线减去MACD柱状图得到柱状图。当AO柱状图由红变蓝时视为买入信号,由蓝变红则为卖出信号。 
-
-3. 只有当EMA显示上涨趋势,且AO同时显示买入信号时,才生成最终的买入信号;只有当EMA显示下跌趋势,且AO同时显示卖出信号时,才生成最终的卖出信号。
-
-4. 通过该双信号过滤机制,可以有效减少假突破操作,跟踪趋势中期方向。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 双线联合过滤,可以减少噪音导致的错误交易。EMA判断大趋势方向,AO过滤进场时机,二者搭配可以提高信号的可靠性。
-
-2. 响应 Sensitivity 极快,可以及时捕捉短期内的趋势反转。2周期EMA对突破极为敏感,可以快速判断近期内趋势是否转变。
-
-3. Awesome Oscillator 对MACD进行再次滤波,可以有效识别趋势中的假突破,避免不必要的反向操作。
-
-4. 策略方向明确,实现对中期趋势的跟踪。EMA确定基本趋势方向,AO进一步过滤确保符合大趋势方向交易,可以持续捕捉中期趋势行情。
-
-5. 策略参数选择合理,2周期和20周期EMA捕捉不同周期价格变化,5周期和34周期AO参数经过优化,可以较好地识别短期内的形态特征。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 在震荡行情中,EMA和AO可能发出较多错误信号,导致不必要的空头交易。可以通过调整EMA周期参数来降低误判风险。
-
-2. AO在某些情况下可能滞后EMA,导致信号发生时间差,可以适当优化AO参数,使其更快地响应突破。 
-
-3. 兼顾短中期特征的EMA和AO参数设定,对数据质量和计算力要求较高,需要根据不同品种特点调整。
-
-4. 频繁交易会产生更多手续费和滑点成本。可以适当放宽策略 Exit 标准,延长持仓周期。
-
-5. 策略没有考虑大周期趋势和关键支撑阻力位,应组合更多因素确保交易方向正确。
-
-## 优化方向
-
-该策略可以通过以下几个方面进行优化:
-
-1. 引入趋势判断指标,辅助EMA判断大趋势方向,例如常用的moving average ribbons、ATR等指标补充判断。
-
-2. 增加关键支撑阻力位识别机制,如Fibonacci回撤线,只在关键位附近发出信号。避免不利位置建仓。
-
-3. 优化EMA和AO参数组合,提高两者结合效果。例如使用类遗传算法自动寻找最佳参数对。
-
-4. 增加止损 Exit 机制。当价格突破最近Swing High/Low时,及时止损离场,控制单笔损失。
-
-5. 前期数据集验证,使用历史数据测评策略效果。检验是否可以稳定盈利,回测结果是否符合预期。
-
-6. 实盘模拟调参,逐步调整参数提高实盘指标效果。验证参数健壮性,得到更好的稳定参数组合。
-
-## 总结
-
-本策略整体思路清晰,以EMA判断大趋势方向,AO过滤信号的组合使用两种指标进行双重验证。可以有效识别趋势,跟踪中期行情。但也存在一定的风险与不足,需要继续优化测试以提高稳定性。关键是要选择合适的品种与参数,结合交易者的风格与法则进行应用。总体来说,该策略思路合理,具有实用价值。
-
-||
 
 
 ## Overview
@@ -143,7 +76,6 @@ The strategy can be optimized through several aspects:
 
 The overall strategy idea is clear, combining EMA for overall trend and AO for signal filtering. It can effectively identify and track trends but also has some risks and limitations for further optimization and testing to improve stability. The key is choosing suitable products and parameters combined with proper trading principles and styles. Overall this strategy has sound logic and practical value.
 
-[/trans]
 
 > Strategy Arguments
 

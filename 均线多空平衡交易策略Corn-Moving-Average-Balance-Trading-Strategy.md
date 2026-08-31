@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f96ecc4bf002e18b63.png)
-[trans]
-
-## 概述
-
-均线多空平衡交易策略是一种利用不同周期的移动平均线 golden和death交叉进行多空平衡交易的策略。该策略同时结合K线显示颜色、背景颜色、形状标记等多种视觉效果来辅助观察趋势变化。该策略适用于对移动均线理论较为熟悉的中高级交易者。
-
-## 策略原理
-
-该策略首先定义了两个用户可调整的参数:活跃均线周期len1和基准均线周期len2。活跃均线周期短,可捕捉短期趋势变化;基准均线周期长,可过滤掉短期市场噪音。用户可以自由选择5种不同类型的移动平均线:EMA指数移动平均线、SMA简单移动平均线、WMA加权移动平均线、DEMA双指数移动平均线和VWMA成交量加权移动平均线。代码通过if逻辑判断用户的选择,计算出不同类型的均线。
-
-当短期均线上穿长期均线时生成金叉信号,开多单;短期均线下穿长期均线时生成死叉信号,开空单。多空平衡交易增加了获利机会。此外,K线的颜色也显示了目前的多空趋势情况。
-
-形状标记直观显示了金叉和死叉的位置。背景颜色辅助判断趋势方向。该策略同时具有“多空平衡”和“仅多头”两种交易模式可选。
-
-## 策略优势
-
-1. 同时结合均线多种指标,交易信号更可靠
-2. 多空平衡交易,增加获利机会
-3. 可自定义均线类型和周期长度,适应不同市场环境
-4. 结合多种视觉效果,直观判断趋势变化
-5. 代码结构清晰,容易理解和二次开发
-
-## 风险及解决方案
-
-1. 均线产生误导信号的风险
-
-    - 采用不同周期均线组合,降低误导信号
-    - 增加其他 Exit 出场条件,如止损线
-
-2. 特定周期更适合该策略的风险
-
-    - 测试不同周期参数,找到最佳周期
-    - 优化代码,使周期参数可动态调整
-
-3. 多空交易增加亏损风险
-
-    - 适当调整仓位管理
-    - 仅选择多头交易模式
-
-## 优化方向 
-
-1. 增加止损线,以控制单笔亏损
-2. 添加重新进入市场的条件
-3. 优化仓位管理策略
-4. 探索新的交易信号,如波动率指标
-5. 动态优化周期参数
-6. 优化移动平均线类型的权重
-
-## 总结
-
-均线多空平衡交易策略整合了均线指标的优势,实现了多空平衡交易。该策略视觉效果丰富,便于掌握市场趋势;而参数可自定义,适应能力强。但需要注意误导信号和仓位管理问题。该策略为中高级交易者提供了一个可定制和优化的参考框架。
-
-|| 
 
 ## Overview
 
@@ -114,7 +61,6 @@ The shape markers visually show the positions of golden and dead crosses. The ba
 
 The Corn Moving Average Balance Trading Strategy integrates the strengths of moving average indicators and enables long and short balance trading. It has rich visual effects for trend spotting and customizable parameters for adaptability. But misleading signals and position sizing need to be watched out for. This strategy provides intermediate to advanced traders a customizable framework for reference.
 
-[/trans]
 
 > Strategy Arguments
 

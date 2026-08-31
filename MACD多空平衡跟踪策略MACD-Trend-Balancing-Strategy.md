@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/149a996a1338eb01c78.png)
 
-[trans]
-
-
-## 概述
-
-该策略是一个利用MACD指标识别多空方向的趋势跟踪策略。它通过计算快速移动平均线和慢速移动平均线的差值,生成MACD主线。策略使用MACD主线和信号线的黄金交叉来产生买入信号,死叉来产生卖出信号,实现多空平衡跟踪。
-
-## 策略原理
-
-代码首先设置了回测的起止时间,用于测试策略的历史表现。
-
-然后是MACD指标的计算,包括快速移动平均线、慢速移动平均线和MACD均线的长度设置。快速线反应更敏感,慢速线反应更稳定。它们的差值形成MACD主线,再通过均线形成MACD信号线。当差值上穿零轴时产生多头信号,下穿零轴时产生空头信号。
-
-根据多头和空头信号,记录最后一次产生信号的时间。当快线和慢线发生正交时就确认并记录买入/卖出信号,这时就可以开仓了。
-
-进场后,持续跟踪持仓的最高价和最低价。设定一个止损百分比,当亏损达到该百分比时止损退出。
-
-## 策略优势
-
-1. MACD指标能有效识别趋势,属于技术分析的经典指标之一。
-
-2. 快慢平均线的差值设计,可以提早捕捉到价格变化的动量和方向。
-
-3. 利用均线的滤波作用,可以过滤掉部分假信号。
-
-4. 策略加入了止损机制来控制风险。
-
-## 策略风险
-
-1. MACD指标容易产生假信号,指标本身可优化空间有限。
-
-2. 止损点设置不当可能过于活跃或保守,需要针对不同品种单独优化。
-
-3. 固定数量头寸容易使杠杆过高,可以考虑根据资金规模设定风险敞口。
-
-4. 回测时间窗口选择合理性需要验证,避免过拟合。
-
-## 策略优化
-
-1. 优化快慢均线参数组合,找到最佳参数对不同品种进行拟合。
-
-2. 增加其他指标过滤,如K线形态、布林带、RSI等来验证信号。 
-
-3. 可以根据回撤、夏普比率等指标评估不同止损点的效果。
-
-4. 优化止损策略,如移动止损、挂单止损等方式。
-
-5. 尝试根据资金变化、波动率等设定动态仓位。
-
-## 总结
-
-MACD多空平衡策略是一个基于经典技术指标的趋势跟踪策略。它具有对价格变化动量的敏感捕捉能力,可以通过参数优化很好地适应不同品种。结合更多滤波指标、止损方式以及动态仓位管理,可以继续提升策略的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -117,7 +63,6 @@ After entering a position, continuously track the highest and lowest price of th
 
 The MACD trend balancing strategy is based on the classic MACD indicator. It has the ability to sensitively capture price momentum and can be well-adapted to different products through parameter optimization. Further enhancements on filtering signals, stop loss techniques and dynamic position sizing can continue improving the stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

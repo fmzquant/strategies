@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d852ec85e6bf00135e.png)
 
-[trans]
-
-## 概述
-该策略是一个基于布林带的动量波动追踪策略。它结合布林带指标判断市场趋势和反转点,通过设置多空仓位追踪市场波动。
-
-## 策略原理
-该策略的核心指标是布林带。布林带由中轨、上轨和下轨组成。中轨是n天的移动平均线,上下轨分别是中轨加减标准差的偏移。当价格接近上下轨时视为超买超卖的信号。策略加入趋势偏离作为建仓的依据,即当价格反向突破中轨时开仓。为防止假突破造成亏损,策略要求开仓突破幅度大于均值。平仓条件是突破中轨后价格再次回折。
-
-该策略同时加入了趋势性建仓和反转型建仓,分别对应不同的交易机会。趋势性建仓要求中轨作为支撑阻力参考,形成突破偏离的效果。反转型建仓则直接在布林带上下轨附近反转形成。策略通过组合这两种启示,能够兼顾趋势追踪和反转操作。
-
-## 优势分析
-该策略结合布林带的超买超卖特征,加入反转点判断。这使得其能够同时适用于趋势市和震荡市,捕捉不同类型的交易机会。策略的止损 Exit 设置防止了亏损扩大。多空双向交易的特点也增强了策略的适用性。
-
-相比简单布林带策略,该策略加入的趋势逻辑判断使得建仓更稳定,同时也抓住了反转机会。这让信噪比得到提升。其次,多空双向交易也比较全面的利用了不同市场的交易机会。
-
-## 风险分析
-该策略主要依赖布林带的超买超卖特征。所以当价格出现剧烈波动时,布林带区间会不断增加,容易导致多次亏损建仓。这是潜在的风险点。此外,反转判断依然有一定的不确定性和误差,会造成失败的建仓和停损。
-
-针对布林带失效的情况,可以缩短n天参数,使布林带更灵敏。或者减小它的幅度范围,降低造成亏损的可能。对于反转曲线判断,则可通过优化突破的参数来减少错误。
-
-## 优化方向
-该策略可优化的方向主要有以下几个:
-1. 布林带的参数可根据不同市场调整,找到最佳的参数组合。
-2. 趋势偏离的幅度和均值的计算方式可以测试其他选项。
-3. 加入更多过滤器判断建仓信号,减少误判概率。
-4. 可测试止损方式,如trail停损等其他模式。
-5. 可以针对特定品种、周期进行参数调优。
-
-
-## 总结
-该策略对布林带标准策略进行了有效的扩展与优化。加入的趋势偏离判断提高了稳定性,利用好了反转机会。多空双向交易和止损设置也让策略更加健壮。通过参数优化和加入更多过滤器,可进一步提高效果
-
-||
 
 
 ## Overview
@@ -75,7 +42,6 @@ The main directions to optimize this strategy include:
 ## Conclusion
 This strategy makes effective expansions and optimizations to standard Bollinger strategies. The added trend deviation improves stability and utilizes reversal opportunities well. The ability to trade both directions and stop losses also makes the strategy more robust. Further improvements can be achieved through parameter optimization and adding more filters.
 
-[/trans]
 
 > Strategy Arguments
 

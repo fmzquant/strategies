@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14c4c42736daa78aad8.png)
-[trans]
-
-### 概述
-
-该策略主要利用移动平均线HMA和EMA形成的均线盘整来判断买入时机。当HMA上穿EMA时视为盘整结束,形成新的上涨趋势,因此在HMA上穿EMA的同时买入。
-
-该策略同时结合RSI指标来检测超买超卖情况。当RSI低于70时允许买入,RSI高于80时考虑部分止盈。
-
-### 策略原理
-
-该策略使用200周期的EMA和HMA构建均线系统。其中,HMA指标是根据EMA改进设计的更加灵敏的移动平均线指标。当HMA上穿EMA时,表示盘整阶段结束,股价开始上涨。此时若RSI指标显示没有超买,则产生买入信号。
-
-在已建仓的情况下,若股价回落,HMA再度下穿EMA,表明新的盘整开始,则全部平仓。同时,如果RSI上穿80时,会部分止盈20%,防止亏损。
-
-该策略的成交逻辑比较简单,主要就是HMA和EMA的多空交叉,结合RSI的高低位判断,形成较为稳健的交易策略。
-
-### 优势分析
-
-该策略最大的优势在于,利用EMA和HMA的盘整交易形态,可以过滤掉大部分False Break,从而提高获利率。同时,RSI指标的辅助也可以有效控制风险,这两者的结合使得该策略非常适合盘整震荡市。
-
-另外,该策略仅仅使用3个指标且逻辑简单,这使得其参数优化和回测较为方便,有利于策略的验证和改进。
-
-### 风险分析
-
-尽管该策略有一定的优点,但仍存在一些风险需要注意。例如,持仓时间可能会比较长,需要有足够的资金支持。如果遇到横盘整理的时段,无法很快止损退出,容易出现亏损扩大的情况。
-
-另外,该策略主要依赖均线指标,如果价格出现异常突破,止损措施可能来不及起作用,会带来更大的风险。此外,参数设置也会影响策略表现,需要进行大量测试去找到最优参数。
-
-### 优化方向
-
-考虑到上述风险,该策略可以从以下几个方面进行优化:
-
-1. 结合波动率指标,根据市场波动情况动态调整仓位。
-
-2. 增加趋势指标判断,避免不必要的反转交易。
-
-3. 优化移动平均线参数,使之更贴近当前市场特征。
-
-4. 采用时间止损,最大程度避免单笔损失过大的问题。
-
-### 总结
-
-本策略总体来说是一个比较经典简单的盘整震荡策略。它主要应用于股指和热门个股的短线和中期交易,可以获取比较稳定的 Alpha 值。随着参数的优化和风控措施的加强,该策略的表现还具有很大的提升空间。
-
-||
 
 ### Overview
 
@@ -97,7 +52,6 @@ Considering the above risks, this strategy can be optimized in the following asp
 ### Summary  
 
 Overall, this is a relatively classic simple consolidation and volatility strategy. It is mainly used for short-term and medium-term trading of stock indexes and hot stocks, and can obtain relatively stable alpha values. With the optimization of parameters and strengthening risk control measures, the performance of this strategy still has great room for improvement.
-[/trans]
 
 > Strategy Arguments
 

@@ -9,88 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略将动量指标与相对强弱指标(RSI)相结合,辅以可调尾随停损机制,旨在捕捉趋势方向,同时控制风险。当价格存在较强势头时,买入做多;当价格存在较弱势头时,卖出做空。策略同时设置止盈止损条件,利用尾随停损追踪最高盈利水平,能够锁定利润并减少亏损。
-
-## 策略原理
-
-### 动量线和RSI指标判断入场
-
-- 使用动量指标ADX判断价格趋势方向
-
-    - ADX大于20表示趋势存在
-
-    - 当+DI线上穿-DI线时为看涨信号
-
-    - 当-DI线下穿+DI线时为看跌信号
-
-- RSI指标判断超买超卖
-
-    - RSI高于70为超买区,看跌信号
-
-    - RSI低于30为超卖区,看涨信号
-
-当ADX判断趋势存在,且RSI指标发出确认信号时,做出相应的多空操作。
-
-### 可调尾随停损机制
-
-策略采用动态可调整的尾随停损机制,包括两个参数:
-
-- 激活比例:开仓后价格达到设定比例时激活尾随停损
-
-- 跟踪比例:尾随停损距离最近最高收益的比例距离
-
-当价格达到激活条件后,尾随停损线会跟踪最高盈利水平。当价格回落,止损线会随之下移。如果回落幅度超过设定跟踪比例,则止损线会被触发,关闭所有仓位。
-
-### 优势分析
-
-- 动量指标判断趋势方向,避免企业费力冲顶
-
-- RSI指标确保不会错过反转机会
-
-- 可调尾随停损,既能锁定盈利,又能减少亏损
-
-- 策略思路清晰简洁,容易理解实现
-
-- 可广泛适用于不同市场和时间周期
-
-### 风险及对策 
-
-- ADX判断假突破产生错误信号
-
-    - 调整ADX参数,确保真正趋势突破
-
-- RSI产生多次假信号
-
-    - 调整超买超卖参数,防止频繁交易
-
-- 可调停损参数设置不当
-
-    - 优化参数,找到最佳停损水平
-
-- 大幅度跳空难以止损
-
-    - 考虑结合限价单,防止错过止损
-
-### 优化思路
-
-- 测试不同ADX和RSI参数组合优化入场
-
-- 回测不同止损激活点和跟踪幅度找最优参数
-
-- 考虑加入其他指标进行过滤,提高信号质量
-
-- 测试不同市场确定通用参数设置
-
-## 总结
-
-该策略整合动量分析、RSI指标和尾随停损机制,能够有效判断趋势方向、识别反转点位和控制交易风险。策略思路清晰,实施简单,可广泛用于股票、外汇、数字货币等市场的趋势交易。通过参数优化和指标过滤,可以进一步提高策略表现。该策略为交易者提供了一个简单可靠的量化交易方案。
-
-|| 
 
 
 ## Overview
@@ -171,7 +89,6 @@ Once activated, the trailing stop will follow the highest profit level. As price
 
 This strategy integrates momentum analysis, RSI and trailing stops to effectively determine trend direction, spot reversals, and control risk. The straightforward logic makes it simple to implement across stock, forex, crypto, and other trending markets. Further improvements can come through parameter optimization and adding filters. Overall it provides traders with a robust quantitative trading framework.
 
-[/trans]
 
 > Strategy Arguments
 

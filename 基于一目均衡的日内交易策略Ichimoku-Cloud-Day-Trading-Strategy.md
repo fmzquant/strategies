@@ -11,79 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12a2e3fe75428019ad4.png)
 
-[trans]
-
-## 概述
-
-该策略运用一目均衡线实现日内股票交易,属于短线交易策略。它利用一目均衡线的转换线、基准线以及先行线组合进行买卖信号判断,并辅以抛物线SAR进行止损追踪,实现双重保护。
-
-## 原理
-
-一目均衡线由转换线、基准线、先行1线和先行2线组成。转换线为当日收盘价和过去9日的最高价最低价均价的平均值,反映最近一段时间内的股价均衡态势。基准线为过去26日的最高价最低价均价,代表中长期的均衡态势。先行1线为基准线和转换线的均价,反映未来走势的态势。先行2线为过去52日的最高价最低价均价。这些均衡线组合起来,形成买卖讯号。
-
-当收盘价从下方突破基准线且高于先行2线时,产生买进讯号。当收盘价从上方跌破基准线且低于先行1线时,产生卖出讯号。抛物线SAR用于追踪止损,当价格低于SAR时发出止损信号。
-
-该策略利用均衡线的组合,判断股价的未来趋势和目前趋势的持续性,属于典型的趋势跟踪策略。当出现买进和卖出讯号时,及时追随趋势进行交易。同时,SAR止损让利机制可避免亏损扩大。
-
-## 优势
-
-1. 利用均衡线判断未来趋势,提高判断准确性
-
-均衡线包含不同周期价格信息,能提前反映趋势变化,利用组合判断增加准确性。相比单一指标,能更准确判断买卖点。
-
-2. SAR止损追踪,双重保护
-
-SAR能灵活跟踪股票运行,进行止损。与均衡线组合,能在获利后及时止损,避免亏损扩大。
-
-3. 简单参数设定,容易实施
-
-该策略只有少量参数,不依赖曲线拟合等复杂技术指标,简单实用,容易实施。参数默认值就可达到不错效果。
-
-4. 适用于日内短线交易
-
-利用日内价格变化判断买卖点,属于短线交易策略。可充分利用股票日内波动获利。
-
-## 风险
-
-1. 回撤风险
-
-跟踪趋势买卖带来较高回撤。需要合理设置止损点,控制单次亏损。
-
-2. 震荡行情风险
-
-震荡行情中,均衡线产生的讯号可能频繁,不利于获利。可适当调整参数,过滤掉一些讯号。
-
-3. 过优化风险
-
-简单的参数容易过优化,实盘效果可能不理想。应进行稳健性测试,防止过拟合。
-
-4. 效果因标的不同有所区别
-
-效果与选股标的有关,应选择趋势明显的股票进行交易,使策略发挥最大效果。
-
-## 优化方向
-
-1. 结合其他指标过滤信号
-
-可以结合移动平均线等其他指标,过滤掉一些不确定信号,避免虚拟交易。
-
-2. 动态调整止损点
-
-可以根据市场波动程度,动态调整SAR的参数,使止损更灵活。
-
-3. 优化参数组合
-
-可以通过更系统的优化和组合测试,寻找更佳的参数组合,提高策略效果。
-
-4. 根据市场环境调整持仓
-
-可以根据大盘走势等市场环境,动态调整策略的仓位和头寸,控制风险。
-
-## 总结
-
-该策略利用均衡线的买卖信号,配合抛物线SAR实现止损追踪,是一种较为简单实用的短线交易策略。有效利用均衡线预测未来趋势的功能,对突破进行买卖操作。同时止损机制避免亏损加大。实施时需要注意回撤控制,选股以及参数优化等问题。如果解决了这些问题,它是一个易于实施且效果不俗的日内交易策略。
-
-||
 
 
 ## Overview
@@ -156,7 +83,6 @@ Position sizing and leverage can be dynamically adjusted based on market conditi
 
 This strategy utilizes Ichimoku Cloud's trading signals and Parabolic SAR for stop loss trailing. It is a simple and practical short-term trading strategy. It capitalizes on Ichimoku Cloud's trend prediction capability for breakout trading. The stop loss mechanism avoids enlarging losses. Proper drawdown control, stock selection and parameter tuning are needed for implementation. With these addressed, it is an easy to implement strategy with respectable performance for intraday trading.
 
-[/trans]
 
 > Strategy Arguments
 

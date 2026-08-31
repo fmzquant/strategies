@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/61059f2b1be7e56e34.png)
 
-[trans]
-#### 概述
-该策略是一个基于枢轴点分析的高级交易系统,通过识别市场中的关键转折点来预测潜在的趋势反转。策略采用创新的"枢轴的枢轴"方法,结合波动率指标ATR进行仓位管理,形成了一个完整的交易体系。该策略适用于多个市场,可以根据不同市场的特点进行参数优化。
-
-#### 策略原理 
-策略的核心是通过两个层次的枢轴点分析来识别市场反转机会。第一层枢轴点是基本的高低点,第二层枢轴点则是在第一层枢轴点中筛选出的显著转折点。当价格突破这些关键水平时,系统会产生交易信号。同时,策略使用ATR指标来度量市场波动性,用于确定止损止盈位置和仓位大小。
-
-#### 策略优势
-1. 适应性强:策略可以适应不同的市场环境,通过调整参数来适应不同的波动率水平。
-2. 风险管理完善:使用ATR进行动态止损设置,能够根据市场波动性自动调整保护措施。
-3. 多层次确认:通过两层枢轴点分析,降低了假突破的风险。
-4. 灵活的仓位管理:根据账户规模和市场波动性动态调整仓位大小。
-5. 清晰的入场规则:有明确的信号确认机制,减少主观判断。
-
-#### 策略风险
-1. 滑点风险:在高波动市场中可能面临较大滑点。
-2. 假突破风险:市场震荡时可能产生错误信号。
-3. 过度杠杆风险:不当的杠杆使用可能带来严重损失。
-4. 参数优化风险:过度优化可能导致过拟合。
-
-#### 策略优化方向
-1. 信号过滤:可以添加趋势过滤器,只在主趋势方向交易。
-2. 动态参数:根据市场状态自动调整枢轴点参数。
-3. 多时间周期:增加多时间周期确认来提高准确率。
-4. 智能止损:开发更智能的止损策略,如跟踪止损。
-5. 风险控制:增加更多的风险控制措施,如相关性分析。
-
-#### 总结
-这是一个设计完善的趋势反转交易策略,通过双层枢轴点分析和ATR波动率管理,构建了一个稳健的交易系统。策略的优势在于其适应性强且风险管理完善,但仍需要交易者谨慎使用杠杆并持续优化参数。通过建议的优化方向,策略还有提升空间。该策略适合稳健型交易者使用,是一个值得深入研究和实践的交易系统。 
-
-|| 
 
 #### Overview
 This strategy is an advanced trading system based on pivot point analysis that predicts potential trend reversals by identifying key turning points in the market. The strategy employs an innovative "pivot of pivot" approach combined with the ATR indicator for position management, forming a complete trading system. The strategy is applicable to multiple markets and can be optimized according to different market characteristics.
@@ -71,7 +40,6 @@ The core of the strategy is to identify market reversal opportunities through tw
 
 #### Summary
 This is a well-designed trend reversal trading strategy that builds a robust trading system through dual-layer pivot point analysis and ATR volatility management. The strategy's strengths lie in its adaptability and comprehensive risk management, but traders still need to use leverage cautiously and continuously optimize parameters. Through the suggested optimization directions, the strategy has room for improvement. This strategy is suitable for conservative traders and is a trading system worth studying and practicing in depth.
-[/trans]
 
 
 

@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8f3663bf3e117cdf31.png)
-[trans]
-### 概述
-
-三根K线反转趋势策略(Three Candle Reversal Trend Strategy)是一种短线交易策略,它通过识别三根连续的阳线或阴线,紧随其后的一根吞噬式K线来判断短线趋势的反转,结合多种技术指标来过滤入场时机。该策略以1:3的止损止盈比率进行交易,有利于获取超额收益。
-
-### 策略原理  
-
-该策略的核心逻辑是识别三根连续的阳线或阴线的K线形态,该形态通常预示着短期趋势的反转。当检测到三根阴线之后,待到下一根吞噬式的阳线出现时,做多;反之,当检测到三根阳线之后,待到下一根吞噬式的阴线出现时,做空。这样可以及时抓住短线趋势反转的机会。  
-
-此外,策略还引入了多种技术指标来过滤入场时机。采用两支不同参数设置的SMA均线,仅在快线上穿越慢线时开始考虑入场。另外,通过线性回归指标判断市场的震荡与趋势状态,只有在趋势状态下才进行交易。策略也提供了一个开关,可以选择是否在均线发生黄金交叉时结合K线形态入场。通过这些指标的综合判断,可以过滤掉大部分噪音,提高入场的准确性。
-
-在止损止盈设置上,策略要求风险回报比例不低于1:3。通过计算最近N根K线波动幅度的ATR指标,结合波动幅度的百分比进行止损位设置,进而计算出止盈位水平。这样可以在承担一定风险的前提下获取适当的超额回报。
-
-### 策略优势
-
-三根K线反转趋势策略具有如下优势:
-
-1. 识别短期趋势反转点,及时把握机会
-2. 多种指标过滤,提高入场准确率  
-3. 止损止盈机制合理,风险回报比适中
-4. 简单的参数设置,容易理解操作
-
-### 策略风险 
-
-该策略也存在一些风险需要注意:  
-
-1. 短期反转不一定代表长期趋势反转,需要关注更高时间周期的趋势。可以设置更长周期的均线作为过滤条件。
-2. 单一的K线形态信号可能出现误判,可以考虑加入其它辅助判断信号。
-3. 停损点设置可能过于乐观,可以适当紧缩止损范围。
-4. 回测数据不足,实盘表现存有一定不确定性。
-
-### 策略优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 调整均线和线性回归参数,优化判断趋势状态的效果
-2. 加入stoch指标等其他辅助判断指标,优化信号的准确率  
-3. 优化ATR参数和止损幅度参数的设置,平衡风险和收益
-4. 增加趋势突破点追踪机制,提高获利能力  
-5. 构建更为严密的资金管理策略,控制交易风险  
-
-### 总结
-
-整体来说,三根K线反转趋势策略利用简单的价格形态结合多种辅助指标判断,建立在适度风险收益平衡基础之上的短线交易策略。它以较低的复杂度获取了不错的表现,值得投资者关注和测试,也有许多可供改进的空间。通过参数优化和规则补充,有望成长为一种稳定ှ高效的量化交易策略。
-
-||
 
 ### Overview  
 
@@ -101,7 +55,6 @@ The strategy can be enhanced in the following aspects:
 
 In conclusion, the Three Candle Reversal Trend Strategy is a simple short-term trading strategy that capitalizes on price patterns and multiple indicators to capture reversing opportunities, built on properly balanced risk-reward profiles. It delivers respectable results with relatively low complexity, and is worth investor attention and testing. There is also ample room for improvement via parameter tuning and rule supplementation for the strategy to grow into a stable high-efficiency algo trading system.
 
-[/trans]
 
 > Strategy Arguments
 

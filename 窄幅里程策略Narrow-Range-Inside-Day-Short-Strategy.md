@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略结合狭幅(NR7)和里程确定做空时机。
-
-交易逻辑是:
-
-1. 识别NR7,即最高价最低价范围处于近7日最窄
-
-2. 识别里程,即最高价低于前一日,最低价高于前一日
-
-3. 当NR7和里程同日出现时,并且收盘价低于开盘价
-
-4. 并且简单移动平均线方向向下时,做空
-
-5. 当下一交易日再次收盘价低于开盘价时,平仓
-
-该策略充分利用狭幅和里程表示盘整态势。结合均线判断和收盘价位置,可提高做空效率。
-
-## 策略优势
-
-- 狭幅和里程判定反转时机
-
-- 条件组合避免假信号
-
-- 可选多空操作
-
-## 策略风险
-
-- NR7和里程组合较为少见
-
-- 需要优化均线参数
-
-- 仅做空无法利用多头机会
-
-## 总结
-
-该策略通过高效的反转识别和验证方式进行做空。但交易频率较低,需评估策略效果。参数优化和多空交易可扩展策略。
-
-
-||
 
 ## Strategy Logic
 
@@ -91,7 +49,6 @@ The strategy capitalizes on NR7 and inside days indicating congestion. Combined 
 
 This strategy shorts by efficiently identifying and confirming reversals. But lower frequency needs evaluation. Parameter tuning and long/short trading can expand strategy.
 
-[/trans]
 
 > Strategy Arguments
 

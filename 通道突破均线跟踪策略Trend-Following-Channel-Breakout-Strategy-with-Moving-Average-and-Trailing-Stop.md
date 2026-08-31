@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13164582a3c222519a5.png)
 
-[trans]
-
-### 概述
-
-该策略是一个基于价格Channel的突破策略,结合了均线指标和跟踪止损/止盈来进行入场和退出。它使用高低价的均线构建价格Channel,在价格突破Channel时入场做多/空,并使用固定止损或 trailing stop来控制风险。
-
-### 策略原理
-
-该策略通过计算高低价的均线,形成一个价格Channel。具体来说,是计算长度为10的高价和低价的SMA均线,形成Channel的上轨和下轨。当价格从下轨突破到上轨时,做多入场;当价格从上轨突破到下轨时,做空入场。 
-
-在入场后,策略采用固定止损或 trailing stop来退出持仓。trailing stop 包括两个参数:固定止盈位和 activating offset。当价格达到激活偏移量时,止盈位会被 trail 跟踪价格。这可以锁定利润,同时保持让利空间。
-
-该策略同时结合了时间段过滤,只在指定的历史日期内进行回测,可以测试不同市场阶段的表现。
-
-### 优势分析
-
-该策略采用价格Channel和趋势跟踪止损,可以捕捉中长线趋势的方向。相比单纯的移动均线策略,它减少了因价格震荡造成的无效交易。通过 trailing stop,可以dynamically trail 价格来锁定利润。
-
-整体来说,该策略逻辑清晰,使用指标和参数较少,回测容易,适合中长线趋势交易,可以在强势行情中获利。
-
-### 风险分析
-
-该策略在震荡行情中容易被套住退出,无法持久获利。此外,在极端行情中,价格可能直接突破止损位造成较大亏损。
-
-参数设置比较主观,不同市场阶段需要调整参数。固定的止盈位和激活偏移量,无法根据市场波动程度做调整。
-
-### 优化方向  
-
-可以考虑结合其他指标过滤入场信号,例如成交量,布林带等,避免被套。或使用动态止损,根据ATR 或价格波动程度来设置止损位。
-
-退出规则可以优化为移动止损或 Chandelier Exit。当价格重新进入Channel时也可以考虑部分退出。入场过滤和退出规则的优化可以大幅提高策略稳定性。
-
-### 总结
-
-本策略整体是一个基于价格Channel、趋势跟踪、止损/止盈管理的量化策略。它具有清晰的逻辑结构、简单的参数结构,容易理解和回测,适合用来学习量化交易。该策略可以通过多种方式进行优化,提高稳定性和盈利能力。其核心思路为捕捉价格趋势的方向,并通过止损和止盈来控制风险,可以运用到多种品种和时间周期。
-
-||
 
 ### Overview
 
@@ -83,7 +46,6 @@ Exit rules may be upgraded to trailing stop or Chandelier Exit. Partial profit t
 
 In summary, this is a quantitative strategy based on price Channel, trend following, stop loss/profit taking management. It has clear logic flow, simple parameter structure, easy to understand and backtest. It is suitable to learn algorithmic trading concepts. The strategy can be enhanced in various aspects to improve stability and profitability. The core idea is to capture trend direction, and manage risks via stop loss and take profit. It can be applied to various products over different timeframes.
 
-[/trans]
 
 > Strategy Arguments
 

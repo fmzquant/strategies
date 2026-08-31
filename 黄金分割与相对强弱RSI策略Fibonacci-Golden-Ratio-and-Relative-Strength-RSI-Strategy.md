@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ecd7b008a7cd35139.png)
-[trans]
-
-### 概述
-
-黄金分割与相对强弱指标(RSI)策略是一种Intraday(盘内)交易策略。它结合了Fibonacci黄金分割法则与RSI指标,在价格接近黄金分割关键点时,判断RSI是否过度买入或卖出,以发出买入或卖出信号。
-
-### 策略原理
-
-1. 根据一定长度的K线计算出价格的中轴线。
-
-2. 根据中轴线和标准差计算出黄金分割关键点,包括0.618级别和1级别。 
-
-3. 当价格接近黄金分割关键点时,检查RSI指标是否进入超买或超卖区域。
-
-4. 如果同时满足黄金分割法则和RSI条件,则发出买入或卖出信号。
-
-5. 设置止损和止盈以控制风险。
-
-### 优势分析
-
-1. 结合多个指标,可以提高信号质量,降低假信号。
-
-2. 利用黄金分割法则的支持/阻力特性,提高入场质量。
-
-3. RSI指标可以判断市场心理面,避免极端情况的反转。
-
-4. 适合高频Intraday交易,收益可以通过多次较小交易累积。
-
-### 风险分析 
-
-1. 黄金分割法则并不能百分之百确保价格会反转。
-
-2. RSI指标可能发出误导信号,需要结合价格行情判断。
-
-3. 止损点设定过小可能被价格震荡止损。
-
-4. 高频交易需要更多交易成本和更严格的风险控制。
-
-解决方法:
-
-1. 严格遵守止损规则,控制单笔损失。
-
-2. 适当放宽RSI参数,避免误导。 
-
-3. 优化止损点,在保证止损的同时尽量减少被止损概率。
-
-### 优化方向
-
-1. 测试不同长度周期的参数优化结果。
-
-2. 尝试结合其他指标如MACD、布林带等提高信号质量。 
-
-3. 研究不同的止损策略,寻找最优配置。
-
-4. 评估确定最佳的持仓时间,以平衡收益和成本。
-
-## 总结
-
-黄金分割与RSI策略通过双重确认,能过滤掉一些噪声交易。与使用单一指标相比,它可以产生更高质量的交易信号。通过参数优化和规则严格遵守,该策略可以成为有效的Intraday交易工具。
-
-||
 
 ### Overview
 
@@ -130,7 +69,6 @@ Solutions:
 
 The Fibonacci golden ratio and RSI strategy filters noise trades through dual confirmation. Compared to single indicator strategies, it generates higher quality trading signals. With parameter optimization and strict rule following, this strategy can become an effective intraday trading tool.
 
-[/trans]
 
 > Strategy Arguments
 

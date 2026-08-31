@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11f92c69a06139fb365.png)
-[trans]
-
-## 概述
-
-该策略的主要思想是根据系统信号动态加仓,在牛市中逐步建立头寸,以控制风险并获得较低的平均入场价。
-
-## 策略原理
-
-该策略首先设置启动资金和DCA配置百分比。在每根K线收盘时,它会根据价格变动计算调整后的配置百分比。如果价格上涨,它会降低百分比;如果价格下跌,它会增加百分比。这样可以在价格较低时增加头寸。然后根据调整后的百分比和剩余资金计算订单大小。在每根K线收盘时,它会下单加仓,直到启动资金用完。
-
-这样,它可以在行情波动时,控制风险,获得较低的平均入场价。同时,它还会统计平均入场价和中位数价格,这样可以判断目前的入场情况。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 可以动态加仓,在行情下跌时加大仓位,在行情上涨时减小仓位,从而控制风险。
-
-2. 获得了比中位数价格更低的平均入场价,有利于获得更高的收益空间。
-
-3. 适合牛市中波动的行情,可以获得较好的风险收益比。
-
-4. 可以预设启动资金和DCA百分比,控制每次加仓的资金数量,避免风险过大。 
-
-5. 提供平均入场价和中位数价格的统计,可以直观判断入场的优劣。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 在行情出现断崖式下跌时,该策略会持续加仓,从而可能带来较大的资金损失。可以设置止损来控制风险。
-
-2. 如果行情出现急速上涨,该策略的加仓幅度会下降,可能错过大部分上涨机会。这时需要利用其他信号进行敏捷的LSI。
-
-3. 参数设置不当也会带来一定风险。启动资金过大、DCA百分比过高都会扩大损失。
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 可以添加止损逻辑,在大幅下跌时停止加仓。
-
-2. 可以根据波动率或其他指标动态调整DCA百分比。
-
-3. 可以添加机器学习模型,预测价格变动,从而指导加仓决策。
-
-4. 可以结合其他技术指标判断市场结构,在结构转折点停止加仓。
-
-5. 可以添加资金管理模块,根据账户资金情况动态调整每次加仓资金。
-
-## 总结
-
-该策略是一个非常实用的动态加仓策略。它可以根据行情波动灵活调整仓位,在牛市中获得较低的平均入场价。同时,它内置了参数设置以控制风险。如果与其他技术指标或模型结合,可以获得更好的效果。该策略适用于追求长线投资收益的投资者。
-
-||
 
 ## Overview
 
@@ -118,7 +63,6 @@ Some ways to optimize the strategy:
 
 This is a very practical dynamic position scaling strategy. It flexibly adjusts the position size based on price fluctuations to achieve good average entries in bull markets, while restricting risk via configurable parameters. Combining it with other indicators or models can further improve its performance. It suits investors seeking long-term gains.
 
-[/trans]
 
 > Strategy Arguments
 

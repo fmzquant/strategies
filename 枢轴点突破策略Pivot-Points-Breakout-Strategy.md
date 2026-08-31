@@ -11,83 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/161eec6574e30bf6e4b.png)
 
-[trans]
-
-## 概述
-
-枢轴点突破策略(Pivot Points Breakout Strategy)是一种基于前一天的最高价、最低价、收盘价计算出的枢轴点,以及上轨和下轨来判断市场趋势和进行交易操作的量化交易策略。该策略的主要思路是,如果价格突破上轨,做多;如果价格突破下轨,做空。
-
-## 策略原理  
-
-枢轴点突破策略的计算公式如下:
-
-枢轴点价格(Pivot Price,PP)=(前一天的最高价+前一天的最低价+前一天的收盘价)/3
-
-上轨阻力线(First Resistance,R1)= (枢轴点价格*2)-前一天的最低价
-
-下轨支撑线(First Support,S1)= (枢轴点价格*2)-前一天的最高价
-
-交易信号的判断逻辑是:
-
-如果收盘价>上轨阻力线R1,做多
-
-如果收盘价<下轨支撑线S1,做空
-
-该策略的主要优点有:
-
-1. 使用前一天的数据计算枢轴点,响应灵敏
-2. 突破上下轨形成强势趋势的概率大
-3. 策略规则简单明确,容易实现
-
-## 优势分析
-
-枢轴点突破策略具有以下几个优势:
-
-1. 计算公式简单,易于实现。只需要前一日的最高价、最低价和收盘价即可计算出枢轴点和上下轨。
-
-2. 响应迅速。枢轴点和上下轨每日更新,能快速捕捉到价格变化。
-
-3. 捕捉趋势早。价格突破上下轨代表发生较大变化,可能形成新趋势。
-
-4. 回撤小。设置止损可以限制亏损风险。
-
-5. 容易优化。可以调整参数,如使用不同周期数据计算枢轴点。
-
-## 风险分析  
-
-枢轴点突破策略也存在一些风险:  
-
-1. 错误突破风险。价格可能出现一时的错误突破,导致交易亏损。  
-
-2. 市场震荡风险。当市场长期震荡时,价格可能多次触碰上下轨带来损失。
-
-3.  param风险。如果参数设置不当,如交易周期太短,也可能增加损失。
-
-对策:
-
-1. 设置止损止盈,严格控制风险。
-
-2. 优化参数,调整周期长度。
-
-3. 结合其他指标过滤信号。
-
-## 优化方向  
-
-枢轴点突破策略还可以从以下几个方面进行优化:
-
-1. 周期优化。可以测试使用更长周期如周线或月线数据计算枢轴点。
-
-2. 参数优化。可以测试调整上轨和下轨参数的数值,如1.5或2.5等。
-
-3. 过滤优化。结合移动平均线等指标过滤误差信号。  
-
-4. 风控优化。设置动态止损止盈机制,根据市场变化调整止损位。
-
-## 总结  
-
-枢轴点突破策略整体来说是一种较为简单实用的趋势跟踪策略。它快速响应市场变化,可以有效捕捉新趋势的形成。但也存在一定的错误信号风险。通过参数优化、信号过滤以及风控手段,可以在保持其优势的同时,控制潜在风险,提高策略稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -164,7 +87,6 @@ The Pivot Points Breakout Strategy can also be optimized in the following aspect
 
 Overall, the Pivot Points Breakout Strategy is a relatively simple and practical trend following strategy. It responds quickly to market changes and can effectively capture new trend formations. But there are also certain risks of wrong signals. By optimizing parameters, filtering signals and implementing risk control measures, the advantages can be maintained while controlling potential risks to improve the stability and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

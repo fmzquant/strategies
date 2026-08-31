@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e07bfa4a3a229cea3d.png)
 
-[trans]
-#### 概述
-该策略是一个基于连续三根阴线和双均线的交易策略。策略的主要思路是:当连续出现三根阴线,并且当前收盘价高于200日均线时,开仓做多;当10日均线与价格发生交叉,或者价格达到止盈或止损点位时,平仓。该策略只在指定的时间范围内运行。
-
-#### 策略原理
-1. 计算连续阴线的数量。如果收盘价下跌,连续阴线数加1;否则,连续阴线数重置为0。
-2. 计算10日均线和200日均线。
-3. 判断当前收盘价是否高于10日均线。
-4. 判断是否满足进场条件:连续三根阴线、当前时间在指定范围内,且当前收盘价高于200日均线。
-5. 判断是否满足出场条件:10日均线与价格发生交叉,或者价格达到止盈或止损点位。
-6. 如果满足进场条件且当前无持仓,则开仓做多。
-7. 如果满足出场条件且当前有持仓,则平仓。
-
-#### 策略优势
-1. 考虑了价格走势和均线因素,能够在趋势和震荡行情中把握机会。
-2. 设置了止盈止损,可以有效控制风险。
-3. 限定了策略运行的时间范围,可以避免在某些特定时期承担过大风险。
-4. 代码逻辑清晰,可读性强,便于理解和优化。
-
-#### 策略风险
-1. 对于连续阴线的判断可能过于简单,容易引发错误信号。
-2. 止盈止损的设置可能不够灵活,在行情波动较大时,可能导致频繁交易或者错失机会。
-3. 对于突发事件、重大消息等非常规因素考虑不足,可能承担额外风险。
-
-#### 策略优化方向
-1. 可以考虑引入更多技术指标,如RSI、MACD等,构建更稳健的信号判断逻辑。
-2. 可以优化止盈止损的设置,引入动态止盈止损或者基于ATR等波动率指标的止损。
-3. 可以研究不同参数设置对策略的影响,如连续阴线根数、均线周期等,寻找最优参数组合。
-4. 可以加入仓位管理,根据不同市场环境动态调整仓位,提高资金利用效率。
-
-#### 总结
-该策略通过连续阴线和双均线的组合,构建了一个简单易懂的交易模型。策略在把握趋势性机会的同时,也设置了一定的风控措施。但是,策略在信号判断和风险控制方面还有进一步优化的空间。通过引入更多技术指标、优化参数设置、动态止盈止损和仓位管理等措施,可以进一步提升策略的稳健性和盈利能力。
-
-||
 
 #### Overview
 This strategy is a trading strategy based on three consecutive bearish candles and dual moving averages. The main idea of the strategy is: when there are three consecutive bearish candles and the current closing price is higher than the 200-day moving average, open a long position; when the 10-day moving average crosses with the price, or the price reaches the take-profit or stop-loss level, close the position. The strategy only runs within a specified time range.
@@ -77,7 +43,6 @@ This strategy is a trading strategy based on three consecutive bearish candles a
 
 #### Summary
 This strategy constructs a simple and easy-to-understand trading model through the combination of consecutive bearish candles and dual moving averages. While capturing trending opportunities, the strategy also sets certain risk control measures. However, there is further room for optimization in signal judgment and risk control. By introducing more technical indicators, optimizing parameter settings, implementing dynamic take-profit/stop-loss and position management, the robustness and profitability of the strategy can be further improved.
-[/trans]
 
 
 

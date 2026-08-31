@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12320890232746430db.png)
 
-[trans]
-
-## 概述
-
-该策略通过结合RSI指标和价格均线,在股价跌破均线时寻找超卖机会建仓做多。随着股价进一步下跌,策略会按预设的百分比逐层加仓,以达到平均持仓成本的目的。当仓位盈利达到配置的止盈百分比时,策略会选择平仓。同时,策略引入了渐进式止盈机制,根据已经实现的单笔仓位利润,动态调整整体头寸的止盈价格。这可以有效降低亏损风险,实现渐进退出。
-
-## 策略原理
-
-1. 当RSI指标低于超卖线29,并且收盘价低于均线时,做多开启首单。
-
-2. 当股价较首单跌幅达到2%时加仓做多;当跌幅达到3%时第三次加仓,以此类推至最多8次加仓。这实现了分批建仓的效果。
-
-3. 每次开仓后,会记录当时的开仓价格。这些价格点即为进场的参考价格。并在图表上绘制这些价格线。
-
-4. 开仓后,会计算出持仓的平均价格。以平均价格的3%作为每笔仓位的止盈价格,4%作为整体头寸的止盈价格。
-
-5. 当价格上涨超过某笔仓位的止盈价格时,会选择平仓该仓位。
-
-6. 渐进式止盈的计算方式:每平掉一笔仓位,会在整体止盈价格中扣除该仓位实现的利润。这样可以使止盈线缓慢下移,只有当所有仓位的利润足以弥补最大亏损时,才会全部止盈。
-
-7. 当价格触发渐进止盈线时,选择全部平仓。
-
-## 优势分析
-
-1. RSI指标可以较准确判断超卖区,有利于抓住反转机会。
-
-2. 多次分批加仓,可以在低点平均持仓成本。
-
-3. 渐进止盈可以减少亏损风险,实现渐进退出。即使出现亏损也可以控制在一定范围。
-
-4. 可配置的止盈比例和加仓比例,可以根据市场调整策略风险。
-
-5. 在图表描绘开仓参考线和止盈线,可以直观判断仓位分布。
-
-## 风险分析
-
-1. 在震荡行情中,可能多次触发开仓和止盈,交易频繁造成滑点损失。可以适当放宽RSI参数,减少交易次数。
-
-2. 加仓次数和比例设定不当可能导致过度交易,应根据资金情况谨慎配置。
-
-3. 若市场继续下跌加仓,可能面临无底洞风险。应预设加仓次数上限,且最后一层加仓比例保守。
-
-4. 若止盈比例设置过小,可能导致止盈过早。应根据历史回测数据设定适当的止盈比例。
-
-## 优化方向 
-
-1. 可以引入MACD等指标过滤RSI信号,减少无效交易。
-
-2. 可以根据ATR设置止损,避免极端行情带来的巨额亏损。
-
-3. 可以优化加仓次数、比例、止盈比例等参数,使策略更适应不同品种。
-
-4. 可以根据波动率智能调整止盈比例,在波动大时适当放宽。
-
-## 总结
-
-该策略充分利用RSI指标判断超卖区,配合价格均线进行反转交易。同时使用智能加仓和渐进止盈机制,在控制风险的前提下,实现高效的做多策略。通过优化指标参数、止盈机制等,可以使策略更稳定、高效。该策略可广泛运用于股指期货、数字货币等具有趋势反转特征的金融品种,具有实际投资价值。
-
-||
 
 # Progressive Take Profit Strategy
 
@@ -129,7 +70,6 @@ This strategy combines RSI indicator and price moving average to identify overso
 
 The strategy fully utilizes RSI for identifying oversold, combining with MA for reversal trading. The pyramiding and progressive take profit mechanisms control risk while allowing effective long entries. Further optimizations on indicators, take profit etc. can make the strategy more robust. It can be widely applied on trending instruments like index futures and crypto for great investment value.
 
-[/trans]
 
 > Strategy Arguments
 

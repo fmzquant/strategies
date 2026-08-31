@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个相对简单的微利策略,主要运用Renko砖和TEMA指标识别趋势,进行反转交易。策略逻辑简单直观,通过参数优化可以获取稳定收益。
-
-## 策略原理
-
-1. 使用Renko砖替代K线,能更清晰地识别价格走势。 
-
-2. TEMA指标相比EMA延迟更小,可以提早捕捉到趋势转折。
-
-3. 当TEMA上穿短期SMA时做多,下穿时平仓。Renko砖使穿越更可靠。
-
-4. 价格高于长期SMA时不追涨,避免持仓过重。
-
-5. 设置止盈条件,只有达到最小收益要求才会平仓。
-
-## 优势分析
-
-1. Renko砖和TEMA指标组合简单有效。
-
-2. 清晰识别趋势,避免反复冲突交易。
-
-3. TEMA减小延迟,让入场更及时。
-
-4. 合理止盈止损控制风险。
-
-5. 适合高频小资金交易。
-
-## 风险分析
-
-1. 无法及时重新累积仓位,难以持续获利。
-
-2. 参数设定不当可能错过交易机会。
-
-3. 无法控制单向持仓量,存在亏损扩大的风险。
-
-4. 难以获取充分利润,更适合小额套利。
-
-## 优化方向
-
-1. 优化SMA和TEMA参数,找到最佳组合。
-
-2. 测试不同止盈条件,平衡收益和风险。
-
-3. 添加开仓次数限制,控制单向仓位。
-
-4. 结合波动率指标设定止损点。
-
-5. 评估配合其他策略,实现盈利放大。
-
-## 总结
-
-该策略运用Renko砖和TEMA指标判断趋势简单有效,适合高频小资金套利,但扩大盈利空间有限。通过参数优化及风险控制手段可提高效果,也可尝试与其他策略配合使用,对改进空间较大。
-
-|| 
 
 ## Overview
 
@@ -121,7 +64,6 @@ This is a relatively simple micro-profit strategy that mainly uses Renko boxes a
 
 The strategy effectively identifies trends with Renko and TEMA, suitable for high-frequency small capital scalping, but has limited potential to amplify profits. It can be improved via parameter optimization and risk control means, or combining with other strategies, leaving large room for enhancements.
 
-[/trans]
 
 > Strategy Arguments
 

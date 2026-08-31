@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16ff330734f8bf0be54.png)
-[trans]
-
-#### 概述
-
-本策略首先在高时间框架上计算ADX和SMA,识别趋势方向和趋势变化。然后在低时间框架上计算RSI,识别超买超卖现象,形成交易信号。
-
-#### 策略原理
-
-1. 在高时间框架上计算ADX判断趋势力度。ADX上涨代表趋势加强。
-
-2. 在高时间框架上计算SMA判断趋势方向。SMA上涨代表价格上涨,SMA下降代表价格下跌。
-
-3. 在低时间框架上计算RSI判断超买超卖现象。RSI高于阈值代表超买,RSI低于阈值代表超卖。
-
-4. 当ADX上涨,SMA上涨,低时间框架RSI超买时,认为趋势正在加强向上,这时可以做空。
-
-5. 当ADX上涨,SMA下降,低时间框架RSI超卖时,认为趋势正在加强向下,这时可以做多。
-
-#### 优势分析
-
-1. 结合了趋势判断和反转交易,可以在较大的趋势中捕捉反转机会。
-
-2. 利用不同时间框架上的指标组合,可以提高信号的可靠性。
-
-3. RSI策略 simplicity自己,容易理解和实现。
-
-#### 风险分析
-
-1. RSI产生假信号的可能性存在,使交易出现亏损。可通过参数优化降低假信号概率。
-
-2. 大周期趋势判断可能错误,使策略不适用该市场环境。可考虑结合更多指标判断趋势。
-
-3. 交易频率可能过高,交易成本影响盈利能力。可适当调整RSI参数,降低交易次数。
-
-#### 优化方向 
-
-1. 测试更多参数组合,寻找RSI参数和ADX,SMA参数的最佳匹配。
-
-2. 增加止损机制,以控制单笔亏损。
-
-3. 考虑结合波动率指标,在波动平缓时降低仓位。
-
-4. 优化进入和退出的具体价格,例如突破前一根K线的最高价进入做空。
-
-#### 总结
-
-本策略整合趋势判断和反转交易信号,在大周期趋势中寻找局部反转机会。相比单一使用RSI,可靠性更高,避免被套。整体而言是一种较为保守的策略,适合降低假信号概率的投资者。通过参数测试和机制优化,可期待获得更好的策略表现。
-
-||
 
 
 #### Overview
@@ -107,7 +58,6 @@ This strategy first calculates ADX and SMA on higher timeframes to identify tren
 
 This strategy combines trend judgment and reversal signals to find local reversals within major trends. Compared to solely using RSI, it is more reliable and avoids being trapped. Overall a relatively conservative strategy suitable for investors looking to reduce false signals. Further parameter testing and mechanism optimization can improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

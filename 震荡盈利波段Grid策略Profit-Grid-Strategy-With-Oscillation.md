@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15fd7335d0cead19160.png)
-[trans]
-## 概述
-
-震荡盈利波段Grid策略是一种趋势跟踪策略,它根据价格的波动自动建立网格,在价格波动的时候可以持续盈利。
-
-## 策略原理
-
-该策略的核心思想是建立一个价格波段网格,当价格进入不同的波段时,会产生新的交易信号。例如,如果网格间距设置为500美元,那么当价格上涨超过500美元时会产生新的做多信号。
-
-具体来说,该策略通过追踪价格的新高价或新低价来不断移动建立新的网格。在代码中,我们定义了一个变量`re_grid`来存储当前的网格价位。价格只要突破这个网格价位超过设置的网格间距,就会重新计算下一个网格价位。
-
-这样,当价格出现足够大的波动时,就会产生新的交易信号,我们可以通过做多或做空来获利。当价格开始向反方向移动超过网格间距时,原来的头寸会止损。
-
-## 优势分析
-
-该策略最大的优势在于可以自动跟踪价格趋势,持续获利。只要价格保持足够大的波动,我们的头寸规模会不断增大,利润也会越来越多。
-
-另外,通过合理设置网格参数,可以有效控制风险。此外,结合Ichimoku 云图等技术指标过滤信号,可以提高策略稳定性。
-
-## 风险分析
-
-该策略主要的风险在于价格可能会突然反转,导致止损。这时之前积累的利润可能会减少或者亏损。
-
-为了控制这种风险,我们可以设置止损线,合理调整网格参数,选择趋势性较强的交易品种,结合多个技术指标进行信号过滤等方法。
-
-## 优化方向
-
-我们可以从以下几个方面继续优化该策略:
-
-1. 优化网格参数,找到最佳的网格间距、仓位规模等参数组合
-
-2. 增加或调整止损机制,更好地控制风险
-
-3. 测试不同的交易品种,选择波动较大、趋势更明显的品种
-
-4. 增加更多技术指标判断,提高策略稳定性
-
-## 总结
-
-该震荡盈利波段Grid策略通过建立价格网格自动跟踪趋势,可以有效地持续获利。同时也存在一定的回撤风险。通过参数优化、止损设置、品种选择等手段可以有效控制风险,提高策略稳定性。
-
-||
 
 ## Overview
 
@@ -93,7 +51,6 @@ We can optimize the strategy from the following aspects:
 
 The profit grid strategy with oscillation can effectively generate persistent profits by automatically tracking trends through establishing price grids. At the same time, certain drawdown risks exist. By parameter optimization, stop loss setting, product selection etc, the risks can be effectively controlled and strategy made more robust.
 
-[/trans]
 
 > Strategy Arguments
 

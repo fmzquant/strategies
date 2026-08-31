@@ -9,77 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略综合运用多种技术指标,对价格趋势进行判断,以发出买入和卖出信号。
-
-## 策略原理
-
-该策略主要基于以下几种技术指标对价格趋势进行判断:
-
-1. 超级趋势指标(SuperTrend):根据ATR计算上轨和下轨,价格突破上轨做多,突破下轨做空;
-
-2. 简单移动平均线(SMA):价格上穿SMA做多,下穿SMA做空; 
-
-3. 动量指标(Momentum):价格动量为正做多,为负做空;
-
-4. MACD:DIFF向上突破DEA线做多,向下突破DEA线做空;
-
-5. 多空力量(Bull and Bear):多头力量大于空头力量做多,反之做空;
-
-6. RSI:RSI上穿30线做多,下穿70线做空;
-
-7. 阳线阴线:连续N根阴线做空,连续N根阳线做多;
-
-8. CCI:CCI大于100做多,小于-100做空;
-
-9. DMI: DMI多头线大于空头线做多,反之做空; 
-
-10. 市场波浪:判断价格在上升浪做多,下降浪做空;
-
-11. 随机指标:随机指标上穿20线做多,下穿80线做空。
-
-这些Indicator计算出的结果,根据向上或向下的方向给出1或-1的点数。把所有Indicator的点数加总,得到总点数。 当总点数上穿0线时产生买入信号;当总点数下穿0线时产生卖出信号。
-
-## 优势分析
-
-这种多Indicator组合策略最大的优势在于可靠性高,由于综合运用多种Indicator判断趋势方向,可以有效减少假信号,使信号更可靠。与单一Indicator相比,这种组合策略可靠性和稳定性会更好。
-
-另一个优势是策略的灵活性和可定制性强。Indicator的种类、参数设置都可以根据不同市场调整,使策略更适应不同的行情环境。还可以根据回测结果,调整Indicator的权重。
-
-## 风险分析 
-
-这类组合策略也存在一些风险需要注意:
-
-1. 如果选用的Indicator间相关性太高,会产生重复信号的风险。这就需要根据不同市场环境,选择相关性较低的Indicator进行组合。
-
-2. 如果Indicator数量太多,计算时间太长,会影响信号发出的及时性。需要权衡Indicator数量与及时性之间的关系。
-
-3. Indicator参数设置不当也会影响策略效果,需要充分回测寻找最佳参数。
-
-4. 不同市场阶段,Indicator的效果也会有所不同。需要通过滚动回测不断检查其有效性。
-
-## 优化方向
-
-这种策略可以从以下几个方面进行优化:
-
-1. 优化Indicator的种类和数量,选择最优组合;
-
-2. 优化每个Indicator的参数设置;
-
-3. 调整Indicator的权重比例,提高关键Indicator的权重;
-
-4. 增加条件过滤,例如交易量激增等,避免假突破;
-
-5. 采用模型组合的方法,通过机器学习算法自动寻找最优策略组合。
-
-## 总结
-
-综上所述,这种多Indicator组合策略利用各类Indicator的优势,组合判断趋势方向,可以减少假信号,提高信号的可靠性。通过优化Indicator的选取、参数设定、权重分配等,可以不断提升策略的稳定性。这类组合策略适用于对指标信号稳定性要求高的策略交易者。
-
-||
 
 
 ## Overview
@@ -150,7 +79,6 @@ This strategy can be improved in several ways:
 
 In summary, this multi-indicator strategy combines the strengths of various indicators to improve signal reliability and reduce false signals. Fine-tuning the indicator selection, parameters, and weights can further enhance the stability. It suits traders who require stable indicator signals.
 
-[/trans]
 
 > Strategy Arguments
 

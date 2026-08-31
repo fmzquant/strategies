@@ -11,48 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18b9dabaeb5e5761cc6.png)
 
-[trans]
-
-### 概述
-
-该策略基于经典的Bollinger波带指标,当价格收盘突破上轨时做多,当价格收盘突破下轨时做空,属于趋势跟踪突破策略。
-
-### 策略原理  
-
-1. 基准线为55日简单移动平均线。
-2. 上轨和下轨分别为基准线上下各一个标准差。 
-3. 当价格收盘突破上轨时产生做多信号。
-4. 当价格收盘突破下轨时产生做空信号。
-5. 采用标准差而不是经典的两倍标准差,降低了风险。
-
-### 优势分析
-
-1. 使用标准差而不是固定值降低了风险。
-2. 55日移动平均线能较好地体现中期趋势。  
-3. 收盘突破过滤假突破。
-4. 易于通过多时间周期分析来确定趋势方向。
-
-### 风险分析 
-
-1. 容易产生震荡小利。
-2. 需要考虑手续费的影响。
-3. 突破信号可能是假突破。  
-4. 可能出现亏损滑点。
-
-可通过设置止损,考虑交易手续费,或添加指标过滤来降低风险。
-
-### 优化方向
-
-1. 优化基准线参数,寻找最佳均线。
-2. 优化标准差大小,找到最佳参数。
-3. 添加量价指标等辅助判断。  
-4. 添加止损机制。
-
-### 总结  
-
-该策略整体逻辑清晰,通过标准差带宽度调整风险,收盘突破避免假突破。但仍需注意防止震荡亏损,可通过止损、增加过滤器等方式进行优化。
-
-||
 
 ### Overview  
 
@@ -93,7 +51,6 @@ Risks can be mitigated by setting stop loss, considering transaction fees, or ad
 
 The overall logic of this strategy is clear. It adjusts risk through the standard deviation band width and avoids false breakouts using close breakout. But it is still necessary to prevent oscillating losses by using stop loss, adding filters etc.
 
-[/trans]
 
 > Strategy Arguments
 

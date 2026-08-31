@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算高点和低点的简单移动均线,并与当前收盘价进行对比来判断买入和卖出时机。它的目标是捕捉价格突破均线的信号,以获取趋势的早期机会。
-
-## 策略原理
-
-1. 计算长度为4的高点简单移动平均线
-
-2. 计算长度为4的低点简单移动平均线 
-
-3. 当收盘价突破高点均线时,做多入场
-
-4. 当收盘价突破低点均线时,做空入场
-
-5. 使用固定止损和止盈策略进行风险管理
-
-## 优势分析
-
-1. 使用简单指标,容易理解实现
-
-2. 及时捕捉价格突破均线的信号 
-
-3. 可以快速过滤掉部分噪音,识别趋势
-
-4. 计算量小,可以降低策略运转消耗
-
-5. 适合作为基础策略进行扩展
-
-## 风险分析
-
-1. 需要合理的参数设定,避免过于灵敏
-
-2. 无法应对大幅突破带来的风险
-
-3. 存在一定程度的震荡套利风险
-
-4. 无法自动调整止损止盈位置
-
-5. 难以判断趋势背景的长短
-
-## 优化方向
-
-1. 测试不同参数对信号质量的影响
-
-2. 增加过滤条件,确保突破的有效性
-
-3. 结合趋势分析,避免被套
-
-4. 开发动态止损止盈策略
-
-5. 优化止损机制,提高策略胜率
-
-6. 在不同周期测试策略健壮性
-
-## 总结
-
-该策略通过简单的指标研判价格动能,给出了基本的趋势交易思路。配合参数优化、风险控制等进一步完善,其交易逻辑可延展性强,可发展为较为稳健的量化系统。总体来说,该策略易于上手实践,适合作为量化交易的入门策略。
-
-|| 
 
 ## Overview
 
@@ -129,7 +68,6 @@ This strategy uses simple moving averages of high points and low points compared
 
 This strategy uses simple indicators to gauge price momentum and provides a basic trend trading framework. With further improvements like parameter optimization and risk controls, the trading logic is highly extensible into a robust quant system. Overall an easy to use strategy suitable for beginners to start quant trading.
 
-[/trans]
 
 > Strategy Arguments
 

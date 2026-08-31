@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/150399007bfa67af2ef.png)
 
-[trans]
-
-### 概述
-
-本策略通过计算快线EMA和慢线EMA的差值形成MACD震荡器,再通过计算MACD的均线形成信号线,从而构建一个双重滤波系统。当MACD线从下方上穿信号线时产生买入信号,当MACD线从上方下穿信号线时产生卖出信号,利用价格的短期中期波动获利。
-
-### 策略原理
-
-本策略的核心指标是MACD震荡器,它由快线EMA(一般设置为12日EMA)减去慢线EMA(一般设置为26日EMA)计算得到。快线EMA更加灵敏,能捕捉价格的短期波动;慢线EMA对价格变化的响应更加缓慢。两者相减可形成一个代表短期和中期周期价格变化差值的震荡器。再对MACD震荡器计算其本身的EMA(一般设置为9日),得到信号线。当MACD从信号线下方向上穿过时,代表短期行情的向上动力强于中期行情,产生买入信号;当MACD从信号线上方向下穿过时,代表短期行情的向下动力强于中期行情,产生卖出信号。
-
-本策略设置输入参数分别为快线长度、慢线长度、价格源、信号线长度平滑周期。可根据不同市场调整参数,寻找最佳参数组合。背景色块显示了回测的时间范围。策略在该时间范围内开仓,之外不操作。
-
-### 优势分析
-
-1. MACD指标经典且易于理解,能有效抓取短中期倒挂机会。
-
-2. 双EMA构建的MACD系统相对单一MA系统有更好的平滑性。
-
-3. 可调参数较多,可以针对不同市场进行参数优化。
-
-4. 结合成交量指标可识别高质量信号。
-
-### 风险分析
-
-1. 在震荡行情中,MACD指标会产生更多错误信号。
-
-2. 无法判断趋势,可能与趋势交叉产生损失。
-
-3. 回测时间范围限制可能忽略了极端行情的情况。
-
-4. 参数设置需要combine更多市场数据进行优化,否则可能overfit某一市场段。
-
-可通过结合趋势判断指标,设置止损机制来控制风险。同时扩大回测范围和市场样本空间进行参数优化。
-
-### 优化方向 
-
-1. 测试不同价格源,如收盘价、均价、重置价等。
-
-2. 基于更多历史数据寻找最佳参数组合。
-
-3. 整合其他指标判断信号质量。例如成交量信号。
-
-4. 结合趋势和波段判断,避免与趋势产生重大冲突。
-
-### 总结
-
-本策略通过构建双EMA滤波器,捕捉价格中短线周期的倒挂现象,属于经典且实用的择时策略。可通过参数优化、信号过滤、止损手段控制风险。同时结合趋势判断指标,避免追顶杀底,可以获得稳定收益。
-
-||
 
 ### Overview
 
@@ -107,7 +58,6 @@ Risks can be controlled by incorporating trend indicators and stop loss mechanis
 
 This strategy captures short-to-medium-term reversal opportunities by constructing a dual EMA filter system. It belongs to a classic and practical market timing strategy. Risks can be controlled via parameter optimization, signal filtering and stop loss means. Incorporating trend analysis tools to avoid buying peaks and selling bottoms can lead to steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

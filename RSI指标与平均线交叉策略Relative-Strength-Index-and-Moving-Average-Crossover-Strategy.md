@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/32041c05f0b7369606.png)
-[trans]
-
-## 概述
-
-RSI指标与平均线交叉策略是一种结合相对强弱指标(RSI)和移动平均线的量化交易策略。该策略利用RSI指标判断证券价值的超买超卖情况,并结合RSI与其平均线的黄金交叉及死叉信号来决定建立看涨或看跌仓位。
-
-## 策略原理  
-
-1. 计算RSI指标值。RSI指标基于一段时间内的涨跌幅,通过比较平均收盘涨幅和平均收盘跌幅,来判断证券是否超买或超卖。
-
-2. 计算RSI指标的移动平均线MA。采用指数移动平均线EMA或简单移动平均线SMA。
-
-3. 当RSI指标上穿其移动平均线时,产生黄金交叉信号,做多;当RSI指标下穿其移动平均线时,产生死叉信号,做空。
-
-4. 当RSI高于超买线时,认为证券超买,做空;当RSI低于超卖线时,认为证券超卖,做多。
-
-## 优势分析
-
-1. 结合指标与平均线交叉信号,避免做单只依靠一个指标,提高决策的准确性。  
-
-2. 利用RSI指标判断超买超卖的时机,设置超买超卖线,确定建仓和止损的时机。
-
-3. 运用指标与平均线交叉做多做空,可以及时捕捉市场转折点。
-
-## 风险分析 
-
-1. RSI指标在震荡行情中容易产生错误信号。  
-
-2. RSI超买超卖的判断依据可以调整,设置不当可能导致过于宽松或严格。
-
-3. 均线系统对短期异常波动过于敏感,可能被套住止损。
-
-## 优化方向
-
-1. 调整RSI参数,寻找最佳长度参数。
-
-2. 优化移动平均线参数,寻找最佳均线周期。  
-
-3. 测试不同的超买超卖线参数,优化建仓机会。
-
-4. 结合其他指标过滤信号,避免错误交易。
-
-## 总结
-
-RSI指标与平均线交叉策略,利用RSI判断超买超卖与移动平均线交叉信号相结合,能够有效判断市场热点区域,在关键点位捕捉反转机会。通过参数优化和信号过滤,可以改进策略表现,减少交易风险。该策略适合中短线交易者,可以提供较好的超额收益。
-
-|| 
 
 ## Overview  
 
@@ -102,7 +55,6 @@ The Relative Strength Index (RSI) and Moving Average Crossover strategy combines
 
 The RSI and Moving Average Crossover Strategy combines RSI overbought/oversold levels with MA crossover signals to identify market turning points and capture reversals. Performance and risk management can be enhanced through parameter optimization and signal filtering. This medium-term trading strategy offers strong alpha generation potential for experienced investors.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过识别RSI指标上的W形态,结合趋势判断条件,实现低买高卖的突破操作。相比常见的RSI超买超卖区域判断,W形态识别能更清晰定位买入时点。
-
-## 策略原理
-
-1. 使用RSI(5)判断W形态,找到潜在买入机会。W形态出现在超卖区域时,预示着即将反转。
-
-2. EMA20上穿EMA50判断为趋势上行,作为入场的大方向判断。
-
-3. 当识别到W形态且趋势上行时,进行买入。
-
-4. 如果已经持仓,当RSI再次跌破20时,可以加仓。 
-
-5. 当RSI上穿75时,表示超买区域,进行止盈退出。
-
-6. 设置8%的止损点,如果亏损超过该点,进行止损退出。
-
-## 优势分析
-
-1. W形态识别增加入场的确定性。
-
-2. 结合趋势判断过滤无效信号,避免错过反转机会。
-
-3. RSI参数设置为5日能及时捕捉短线机会。 
-
-4. 设定止盈止损点,可以控制风险。
-
-## 风险分析
-
-1. W形态识别依赖参数设置,可能漏识或误判形态。
-
-2. 作为反转信号,存在被套住的风险。
-
-3. RSI容易产生假突破,应适当过滤信号。
-
-4. 若止损点设置过大,可能会过早止损。
-
-## 优化方向
-
-1. 测试不同RSI周期参数,找到最优参数组合。
-
-2. 增加形态判定条件,提高识别准确率。
-
-3. 结合其他指标进行信号过滤,减少错误交易。
-
-4. 动态调整止损位置,优化止损策略。
-
-5. 优化止盈策略,在保证盈利的前提下延长持仓周期。
-
-## 总结
-
-该策略利用RSI W形态实现高效的反转突破操作。但需要进一步优化参数设定,并辅以其他技术指标进行信号过滤,从而提升策略稳定性和盈利水平。
-
-||  
 
 ## Overview
 
@@ -121,7 +64,6 @@ This strategy identifies W patterns on the RSI indicator combined with trend con
 
 This strategy utilizes RSI W patterns for efficient reversal breakout trading. But further parameter optimization and adding other technical indicators for signal filtering can improve strategy stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

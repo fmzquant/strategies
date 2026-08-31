@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6d31a3f9c61e912914.png)
 
-[trans]
-#### 概述
-Khaled Tamim的Avellaneda-Stoikov策略是一种基于Avellaneda-Stoikov模型的量化交易策略。该策略通过计算中间价、买入价和卖出价,同时考虑交易费用,来确定买入和卖出信号。策略的主要思路是在价格低于买入价一定阈值时买入,在价格高于卖出价一定阈值时卖出,以此来获取价差收益。
-
-#### 策略原理
-该策略的核心是Avellaneda-Stoikov模型,通过以下步骤来计算买入价和卖出价:
-1. 计算中间价,即当前价格与前一个价格的平均值。
-2. 计算买入价,即中间价减去一个包含Gamma、Sigma、T和k的平方根项,再减去交易费用。
-3. 计算卖出价,即中间价加上一个包含Gamma、Sigma、T和k的平方根项,再加上交易费用。
-4. 当价格低于买入价减去阈值M时,产生买入信号;当价格高于卖出价加上阈值M时,产生卖出信号。
-
-#### 策略优势
-1. 该策略基于Avellaneda-Stoikov模型,是一种经典的做市商策略,有坚实的理论基础。
-2. 策略考虑了交易费用的影响,更加贴近实际交易情况。
-3. 通过阈值M的设置,可以灵活调整策略的敏感度,适应不同的市场环境。
-4. 策略逻辑清晰,易于理解和实现。
-
-#### 策略风险
-1. 策略的表现依赖于Gamma、Sigma、T、k和M等参数的选择,参数设置不当可能导致策略表现不佳。
-2. 策略没有考虑市场流动性的影响,在流动性不足的情况下,可能无法按照预期价格成交。
-3. 该策略为高频交易策略,需要较低的交易延迟和较高的执行效率,实现难度较高。
-
-#### 策略优化方向
-1. 引入机器学习算法,动态调整策略参数,以适应不同的市场状况。
-2. 结合其他技术指标或市场微观结构信息,提高信号的准确性。
-3. 优化交易执行算法,降低交易成本,提高策略收益。
-4. 考虑引入风险管理模块,控制策略的回撤和风险敞口。
-
-#### 总结
-Khaled Tamim的Avellaneda-Stoikov策略是一种基于经典做市商模型的量化交易策略,通过计算买入价和卖出价,同时考虑交易费用,来产生交易信号。该策略优势在于理论基础扎实,逻辑清晰,同时考虑了交易费用的影响。但策略的表现依赖于参数选择,并且需要较高的执行效率。未来可以通过引入机器学习算法、优化交易执行、引入风险管理等方式来进一步优化该策略。
-
-||
 
 #### Overview
 Khaled Tamim's Avellaneda-Stoikov Strategy is a quantitative trading strategy based on the Avellaneda-Stoikov model. The strategy determines buy and sell signals by calculating the mid-price, bid price, and ask price while considering transaction costs. The main idea of the strategy is to buy when the price is below the bid price by a certain threshold and sell when the price is above the ask price by a certain threshold, thereby capturing the spread profit.
@@ -73,7 +41,6 @@ The core of this strategy is the Avellaneda-Stoikov model, which calculates the 
 
 #### Summary
 Khaled Tamim's Avellaneda-Stoikov Strategy is a quantitative trading strategy based on the classic market-making model. It generates trading signals by calculating bid and ask prices while considering transaction costs. The strategy's advantages lie in its solid theoretical foundation, clear logic, and consideration of transaction costs. However, the strategy's performance depends on parameter selection and requires high execution efficiency. In the future, the strategy can be further optimized by introducing machine learning algorithms, optimizing trade execution, introducing risk management, and other methods.
-[/trans]
 
 > Strategy Arguments
 

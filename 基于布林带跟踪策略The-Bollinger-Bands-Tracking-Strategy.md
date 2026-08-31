@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/165facfe4eff8b01043.png)
-[trans]
-
-## 概述
-
-布林带跟踪策略是一种基于布林带的量化交易策略。该策略通过计算某只股票的布林带上下轨,并设置买入和卖出条件来实现对市场的跟踪。当价格触碰布林带下轨时,认为股票被低估, Therefore corresponding more space for growth, thus a buying signa提出买入信号;当价格上升触碰布林带上轨时,认为股票被高估,提出卖出信号。
-
-## 策略原理  
-
-该策略的核心指标是布林带。布林带由中轨、上轨和下轨三条线组成。中轨线是n天收盘价的移动平均线;上轨线是中轨线+k倍的n天收盘价标准差;下轨线是中轨线-k倍的n天收盘价标准差。k值一般设置为2。当股价低于下轨时,是比较低价位, Therefore considered to be lowervalued,提出买入信号;当股价高于上轨时,是比较高价位,认为股价被高估,提出卖出信号。
-
-具体来说,该策略首先计算20日收盘价的移动平均线作为中轨,再计算20日收盘价标准差的2倍作为带宽,中轨+带宽为上轨,中轨-带宽为下轨。之后设置买入条件为收盘价低于下轨, 卖出条件为收盘价高于上轨。当收盘价低于下轨时,产生买入信号;当收盘价高于上轨时,产生卖出信号。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 原理简单,容易理解和实现。
-2. 可跟踪市场走势,自动发出买入和卖出信号。
-3. 回撤风险相对较小,具有一定的跟踪止损功能。 
-4. 可过滤假突破,避免在震荡行情中mistakencisisions错误操作。
-5. 可通过调整参数如周期、标准差倍数等来适应不同股票和市场环境。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 布林带并不是完美的买卖点指标,买卖信号可能滞后。
-2. 无法预测极端行情, black swan events like-those面对金融危机等黑天鹅事件效果可能不佳。
-3. 股价可能长期运行在布林带一侧,导致信号不足。
-4. 参数设置如周期长度需要优化,否则可能过于灵敏或迟钝。
-
-对应解决方法如下:
-1. 组合其他指标确认买卖时机
-2. 设置止损止盈,控制最大损失
-3. 优化参数,提高参数的适应性
-4. 采用复合策略,避免单一依赖
-
-## 优化方向  
-
-该策略的主要优化方向包括:
-1. 优化布林带参数,如试验不同的周期长度、标准差倍数参数,fitting最佳参数。 
-2. 结合其他指标 filtergenerating买卖判断,如KDJ,MACD等,避免布林带滞后问题。
-3. 应用机器学习算法 guide最优参数设定。
-4. 利用deep learning深度学习预测股价突破上下轨的可能性。
-5. 采用复合策略,设置备用交易策略, diverseavoiding过度依赖单一策略风险。  
-
-## 总结  
-
-布林带跟踪策略整体来说是一种较为简单实用的量化交易策略。它可以自动跟踪股价趋势,Also provide买卖信号。优点是易于实现,风险较小,能过滤假突破。但也存在一定的滞后性, black swaninability to面对极端行情的风险。该策略可以通过优化参数和指标、Using more advanced techniques如机器学习等来进一步增强。总体而言,布林带策略组合其他技术策略,能够形成稳健高效的量化交易体系。
-
-||
 
 ## Overview  
 
@@ -112,7 +61,6 @@ The main optimization directions for this strategy includes:
 
 Overall, Bollinger Bands tracking strategy is a relatively simple and practical quantitative trading strategy. It can automatically track price trends and also provide buy and sell signals. The pros are easy implementation, smaller risks, filtering false breakouts. The cons are certain lagging, inability to face extreme market conditions like black swans. This strategy can be further enhanced through optimizing parameters and indicators, using more advanced techniques like machine learning. In summary, combining Bollinger Bands strategies with other technical strategies can form a robust and efficient quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

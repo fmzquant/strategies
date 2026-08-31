@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/177be8025d7c172f991.png)
 
-[trans]
-
-## 概述
-
-双线交叉反转策略是一种趋势跟踪策略,它结合了123反转策略和DiNapoli去趋势振荡器策略,通过双线交叉产生交易信号,实现追踪市场趋势的功能。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123反转策略:该策略运用 stochastic 指标产生信号。当收盘价连续两日下跌后上涨,并且 stochastic 快线低于慢线且快线低于50时,产生买入信号;当收盘价连续两日上涨后下跌,并且 stochastic 快线高于慢线且快线高于50时,产生卖出信号。
-
-2. DiNapoli去趋势振荡器策略:该策略利用价格的移动平均线,当价格高于或低于移动平均线一定幅度时,产生交易信号。具体为,当价格超过移动平均线正Trigger值时产生买入信号,当价格低于移动平均线负Trigger值时产生卖出信号。
-
-上述两种策略各自产生独立的交易信号后,本策略将它们整合,当两者的交易信号一致时,即双线交叉形成同向信号时,本策略才会产生实际的交易指令,否则不进行任何操作。
-
-## 优势分析
-
-该策略结合双线交易信号,可有效跟踪市场趋势,具有以下优势:
-
-1. 充分利用stochastic指标判断力度与趋势性的优点,避免因某单一指标信号误导带来损失。
-
-2. DiNapoli指标可有效识别趋势,避免因随机波动带来不必要开仓。
-
-3. 双线交叉可有效减少虚假信号,提高信号质量,为判断行情走向提供有力依据。
-
-4. 策略参数可调,用户可根据个人偏好,选择参数组合,灵活适应不同市场环境。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 在牛市中,策略可能因指标参数设置过于谨慎,导致错过买入良机。可适当调整参数使策略更趋积极。
-
-2. 在熊市中,双线交叉信号可能延迟,带来超买超卖现象,应适当缩短平均线周期,使策略更趋敏感。 
-
-3. 若遇巨额单边行情,双线交叉信号可能迟钝,应设置止损以控制亏损。
-
-## 优化方向 
-
-该策略可从以下方向进行优化:
-
-1. 对stochastic指标和DiNapoli指标的参数进行测试与优化,找到最佳参数组合。
-
-2. 添加Volume指标等其它辅助判断指标,丰富策略内在逻辑,提升信号准确性。
-
-3. 利用机器学习方法训练和优化策略参数与信号生成规则,使之更全面适应市场变化。
-
-4. 结合高级技术指标判断局部结构,区分中短线与中长线信号,使策略多时间框架运作。
-
-## 总结
-
-双线交叉反转策略综合运用两种指标形成双线交叉交易信号,可有效跟踪市场趋势,在控制风险的前提下获得较好收益,是一种可靠的趋势追踪策略。该策略可通过参数优化与辅助指标加入等方式得到持续改进与升级,具有广阔的应用前景。
-
-||
 
 
 ## Overview
@@ -120,7 +65,6 @@ The strategy can be optimized in the following ways:
 
 The Dual Moving Average Crossover Reversal strategy integrates two indicators to form dual moving average crossover trading signals, which can effectively track market trends and obtain relatively good returns while controlling risks. It is a reliable trend following strategy. The strategy can be continuously improved and upgraded through parameter optimization and adding auxiliary indicators. It has broad application prospects.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a9be1b313d3475bec3.png)
-[trans]
-该策略通过计算移动平均线和价格差值来判断市场趋势方向,在符合趋势条件时开仓做多,避免在震荡行情中频繁开仓。
-
-### 策略概述
-
-1. 使用20周期的简单移动平均线判断市场总体走势
-2. 使用3周期的最高价与最低价差值判断最近价格波动幅度
-3. 当价格高于移动平均线且差值大于自身20周期平均值时,做多开仓
-4. 当价格跌破开仓价格的98%时,平仓止损
-
-### 策略原理
-
-该策略结合移动平均线和价格波动幅度判断,旨在捕捉趋势行情中的价格上涨机会。
-
-当价格上涨突破移动平均线时,表示当前处于多头行情。此时若最近3周期的最高价与最低价差值大于自身的20周期平均值,说明最近波动范围加大,价格可能出现较大幅度上涨,这时做多开仓。
-
-在开仓后,设定一个固定比例的止损价格,当价格跌破该价格时主动止损平仓,控制下side风险。
-
-### 策略优势
-
-1. 结合趋势和波动判断,避免在震荡行情中频繁开仓
-2. 利用价格差值判断来确定更有力的突破信号 
-3. 设定止损价格有助于控制风险
-
-### 策略风险
-
-1. 移动平均线和差值判断参数设置不当可能错过交易机会
-2. 止损位置设置过于宽松,可能带来较大亏损
-3. 突破信号可能是假突破,需要结合更多因素判断
-
-风险解决方法:
-
-1. 对参数进行优化,确定最佳参数组合
-2. 设置多级止损,或根据市场波动调整止损位置
-3. 结合交易量等指标来验证突破信号的可靠性
-
-### 策略优化方向  
-
-1. 增加波动力度指标,如布林带通道,更准确判断 entry 时机
-2. 增加交易量的分析来验证 entry 信号
-3. 结合股指期货判断整体市场环境,避免不利行情的交易
-4. 设置移动止损、跟踪止损来锁定更大利润
-
-### 总结
-
-本策略通过简单有效的指标判断来实现在趋势行情中高效开仓的思路,可有效过滤震荡小行情,避免无谓交易。同时,策略风险控制也比较到位,能够很好控制潜在亏损。通过进一步优化,可望获得更好的交易效果。
-
-||
 
 This strategy judges market trend direction by calculating moving average and price difference to determine long entry, avoiding frequent opening during shocks.
 
@@ -105,7 +57,6 @@ Risk Solutions:
 
 This strategy effectively filters out shocks and volatility before entering in trending markets with simple but useful indicators, avoiding unnecessary trades. Also, risk is well controlled to limit losses. Further optimizations can lead to even better results.
 
-[/trans]
 
 > Strategy Arguments
 

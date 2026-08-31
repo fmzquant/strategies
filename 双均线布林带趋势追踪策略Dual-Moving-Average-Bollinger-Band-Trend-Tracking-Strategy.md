@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c1eb3e0bde68044cae.png)
-[trans]
-
-## 概述
-
-该策略通过计算两条不同周期的指数移动平均线(EMA)来判断市场趋势方向,在趋势方向确定的前提下,结合自适应布林带来发现超买超卖机会,实现趋势跟踪交易。
-
-## 策略原理
-
-1. 计算200周期和30周期EMA,200EMA大于30EMA判断为长线趋势向上,否则判断为长线趋势向下。
-
-2. 在确定趋势方向后,计算布林带的基线、上轨和下轨。基线采用可配置周期(如8周期)的SMA,带宽采用同周期最高价和最低价的极差的可配置倍数(如1.3和1.1)。
-
-3. 在长线向上时,当价格由下向上突破下轨时,判断为买点;在长线向下时,当价格由上向下突破上轨时,判断为卖点。
-
-4. 为过滤假突破,在发生突破时检查前一根K线的变动率是否小于可配置值(如3%),同时检查布林带上下轨间是否大于可配置距离要求(如2.2%)。
-
-5. 在开仓后设定可配置的止损(如3%)和止盈(如10%),以锁定盈利。
-
-## 策略优势
-
-1. 双EMA判断主趋势,避免在主趋势不明时无序开仓。
-
-2. 自适应布林带设定开仓点,根据趋势自动调整带宽参数,进一步锁定趋势。
-
-3. 变动率和最小带宽检查机制有效过滤假突破。
-
-4. 止损止盈设置合理,锁定盈利风险可控。
-
-## 策略风险
-
-1. 双EMA无法准确判断转折点,可能错过趋势转折机会。
-
-2. 布林带参数设置不当可能导致虚假信号。
-
-3. 固定止损止盈难以适应市场波动。
-
-## 优化方向
-
-1. 结合其他指标判断趋势,确定主次趋势转换点。
-
-2. 采用动态调整布林带参数的方法。
-
-3. 设置条件单止盈止损,根据特定条件调整止损线。
-
-## 总结
-
-本策略综合运用双EMA判断主趋势和布林带发现机会的方法实现了趋势跟踪交易。策略优势在于合理设定开仓和止损条件,能有效锁定趋势获利。同时也存在一定风险,如无法判断转折点和布林带参数设置不当。这些问题均有进一步优化的空间,使策略能更好地把握趋势获利。
-
-|| 
 
 
 ## Overview
@@ -108,7 +59,6 @@ This strategy determines the general market trend direction by calculating two e
 
 This strategy implements trend trading by judging the major trend using dual EMAs and identifying opportunities with Bollinger Bands. Its strength lies in reasonably setting entry, stop loss and take profit conditions to lock in trend profits. There are also some risks, like failing to catch trend turning points and improper BB parameter settings. Further optimizations in these aspects will empower the strategy to seize trend profits better.
 
-[/trans]
 
 > Strategy Arguments
 

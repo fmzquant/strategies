@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f9d196f5835d4b7f00.png)
-[trans]
-
-## 概述
-
-重心回测交易策略是一种基于移动平均线的交易策略。它计算出价格的“中心”,即重心位置,并构建价格通道,作为资产报价的走廊。该策略可以在输入设置中将做多改为做空。
-
-## 策略原理
-
-该策略通过线性回归函数计算重心位置。具体来说,它计算长度为Length周期的收盘价的线性回归值,即价格“中心”。然后在此基础上向上和向下移动Percent%构建价格通道。价格通道上下边界分别作为做多和做空信号。当价格突破上轨时,做多;当价格跌破下轨时,做空。SignalLine参数用于选择使用第一条通道还是第二条通道的上下轨作为交易信号。reverse参数用于将做多做空反转。
-
-## 优势分析
-
-这是一个非常简单的突破策略,优势主要有:
-
-1. 思路清晰,容易理解实现。
-2. 回测结果良好,具有一定的实战可行性。
-3. 参数设置灵活,可以通过调整参数适应不同市场环境。
-4. 可配置反转做法,适合双向操作。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 回测过程中可能存在过拟合风险。实盘中参数需要重新优化。
-2. 突破失败可能导致较大亏损。
-3. 交易频率可能比较高,需要控制好资金使用率。
-
-可以通过调整参数Bands、Length等来控制风险。也可以设置止损来限制最大亏损。
-
-## 优化方向
-
-该策略还可进一步优化:
-
-1. 结合趋势指标过滤信号,避免逆势交易。
-2. 增加止损机制。
-3. 优化参数设置,提高盈亏比。
-4. 增加仓位控制,降低风险。
-
-## 总结
-
-重心回测交易策略是一个简单的突破策略。它有清晰的思路,较强的实战性,灵活的参数设置。同时也存在一定的风险,需要适当优化控制。该策略适合作为基础策略来实战和优化,也很适合新手学习。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ The strategy can be further optimized in the following ways:
 
 The Center of Gravity backtesting trading strategy is a simple breakout strategy. It has clear logic, good practicability, and flexible parameter settings. At the same time, there are also certain risks that need to be properly optimized and controlled. The strategy is suitable as a basic strategy for live trading and optimization, and is also very suitable for beginners to learn.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1656adb19685df662d3.png)
-[trans]
-
-## 概述
-
-该策略运用高斯分布的思想,基于海克力蜡烛的10周期指数移动平均线计算Z值,再对该Z值的20周期指数移动平均线设定阈值,根据曲线穿越的情况判断建仓与平仓。
-
-## 策略原理
-
-1. 计算海克力蜡烛收盘价的10周期指数移动平均线。
-
-2. 基于上述移动平均线数据,计算25周期内的Z值。Z值反映数据偏离平均值的标准差个数,可判断数据是常态还是异常。
-
-3. 对Z值的20周期指数移动平均线再次计算,得到曲线emaScore。该曲线反映了Z值的长期趋势。
-
-4. 根据emaScore数据的分布情况,设定上下阈值。考虑到曲线会有一定波动,这里选取分布的90%和10%数据作为阈值。
-
-5. 当emaScore上穿中线或下阈值时,做多;当emaScore下穿上阈值、下阈值或100周期内最高点时,做空。
-
-## 优势分析
-
-1. 应用高斯分布思想,通过Z值判断常态性,可过滤假突破。
-
-2. 双层滤波,运算exeScore曲线,判断长期趋势EXTENSIVE511.
-
-3. 设定合理的阈值,降低错误交易概率。
-
-4. 结合百周期最高最低点,可抓住反转机会。
-
-## 风险分析
-
-1. Z值与移动平均线组合使用,对参数敏感,需要优化。
-
-2. 阈值设定合理与否关系巨大,过宽或过窄都会失效。
-
-3. 百周期最高最低点容易产生错误信号,可适当放宽触发条件。
-
-4. 海克力蜡烛本身就有一定滞后,需评估是否适合该策略。
-
-## 优化方向 
-
-1. 测试不同周期的移动平均线、Z值参数。
-
-2. 利用walk forward analysis方法自动优化参数。
-
-3. 尝试不同的阈值设定方法,如标准差倍数。
-
-4. 改进最高最低点判断逻辑,防止错误信号。
-
-5. 尝试其他类型蜡烛或典型价格等替代海克力蜡烛。
-
-## 总结
-
-该策略基于高斯分布的思想,通过双重指数移动平均和动态阈值设定,有效判断价格异常并产生交易信号。主要优势是可过滤假突破,抓住反转。但参数设置和组合运用都对结果影响巨大,仍需继续测试与优化,寻找最佳参数与组合方式。
-
-||
 
 ## Overview  
 
@@ -117,7 +62,6 @@ This strategy applies the idea of Gaussian distribution and calculates the Z-sco
 ## Summary   
 
 This strategy judges price abnormality and generates trading signals based on the idea of Gaussian distribution, double exponential moving averages and dynamic threshold setting. The main advantages are filtering false breakouts and catching reversals. However, huge impact exists regarding parameters selection and combination. Further tests and optimization are needed to find the best parameters and combinations.  
-[/trans]
 
 
 

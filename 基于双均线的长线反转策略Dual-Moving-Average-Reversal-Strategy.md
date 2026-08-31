@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f75c2cfe80a4a1e673.png)
-[trans]
-## 概述
-
-该策略主要利用了14和28日的简单移动平均线形成的黄金交叉和死亡交叉进行反转操作。当快均线从下方向上突破慢均线时,表明行情开始反转,可以建立多头仓位;当快均线从上方向下跌破慢均线时,表明行情开始反转,可以建立空头仓位。
-
-由于其利用简单移动平均线来判断市场趋势变化的原理,我将该策略命名为“基于双均线的长线反转策略”。
-
-## 策略原理
-
-该策略的核心逻辑在于利用 14 日和 28 日两条不同期限的简单移动平均线来判断市场趋势,具体规则如下:
-
-1. 定义快线为 14 日简单移动平均线,慢线定义为 28 日简单移动平均线。
-
-2. 当快线从下方向上突破慢线时,为多头信号,做多入场。
-
-3. 当快线从上方向下跌破慢线时,为空头信号,做空入场。 
-
-4. 做多/做空后,快线重新跌破慢线时,为平仓信号。
-
-该策略同时结合止损、止盈、跟踪止盈进行风险管理。针对做多和做空情况,分别定义了长仓止损价格、做多止盈价格、做空止盈价格、长仓跟踪止盈价格。这些参数都通过百分比形式设置,使策略更加灵活。
-
-## 优势分析
-
-- 利用双均线判断市场主要趋势的策略,原理简单清晰,容易理解和验证。
-- 快慢均线的周期设置为 14 和 28 日 ,分别代表短期和中期趋势转换,能较好发现反转机会。  
-- 结合止盈、止损和跟踪止盈来控制风险,使盈利能够锁定,避免亏损扩大。
-- 可同时做多做空,满足不同市场环境的需要。
-
-## 风险与改进
-
-- 双均线交叉具有一定滞后性,可能错过最佳入场时机。
-- 长短均线交叉容易发生误信号,应避免设置太短的均线周期。
-- 停损距离设置太小可能增加止损被冲击的概率。应根据不同品种合理设置止损距离。
-- 可引入更多指标进行组合,提高策略的稳健性。例如加入布林带判定趋势,或引入MACD校验入场时机。
-
-## 优化方向 
-
-- 测试不同的均线参数组合,寻找更匹配该品种特性的均线周期。
-- 测试不同的止损距离设置,找到最优止损位置。
-- 测试加入其他指标进行优化,寻找最优参数组合以减少误信号。
-- 优化仓位管理规则,使盈利更加丰厚。
-
-## 总结
-
-该策略整体来说是一个非常经典的基于双均线判断趋势反转的策略。它有着操作原理简单,较易掌握等优势;同时也存在一些后期可以持续优化的方向。总体而言,该策略从原理和操作上都较为成熟,是量化交易的一个很好的入门策略。
-
-||
 
 ## Overview
 
@@ -112,7 +65,6 @@ This strategy also incorporates stop loss, take profit and trailing stop loss fo
 
 Overall this is a very classic strategy based on dual moving averages to determine trend reversals. It has advantages like simple operating principles and relatively easy to grasp. At the same time, there are also some directions that can be continuously optimized afterwards. In general, this strategy is quite mature in terms of principles and operations, making it a very good introductory quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

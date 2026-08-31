@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15593b7294f644ce99a.png)
 
-[trans]
-
-#### 概述
-
-本文介绍了一个基于多条移动平均线的趋势交易策略——"基于多均线的趋势交易策略"。该策略主要应用于纳斯达克期货市场，通过分析价格相对于长、中、短期移动平均线的位置，捕捉市场的上涨趋势，并在特定的时间点平仓所有头寸。
-
-该策略使用了三条简单移动平均线(SMA)：长期(默认为200周期)、中期(默认为21周期)和短期(默认为9周期)。当价格高于长期和中期均线，且在短期均线上出现交叉时，策略会触发买入信号。同时，策略还设置了固定点数的止盈和止损，以控制风险。此外，该策略会在每个交易日的17:00平仓所有头寸。
-
-#### 策略原理
-
-1. 计算长期(默认200周期)、中期(默认21周期)和短期(默认9周期)的简单移动平均线。
-
-2. 判断当前价格是否高于长期均线和中期均线。
-
-3. 判断当前价格是否在短期均线上方交叉。
-
-4. 当条件2和条件3同时满足，且当前无持仓时，触发买入信号。
-
-5. 买入后，设置固定点数的止盈和止损位，当价格触及止盈或止损价位时平仓。
-
-6. 在每个交易日的17:00，平仓所有头寸。
-
-#### 策略优势
-
-1. 简单易懂：该策略基于移动平均线，原理简单，易于理解和实现。
-
-2. 趋势跟踪：通过分析价格相对于不同周期均线的位置，策略能够有效捕捉市场的上涨趋势。
-
-3. 风险控制：策略设置了固定点数的止盈和止损，有助于控制单笔交易的风险。
-
-4. 自动平仓：策略会在每个交易日的特定时间自动平仓，避免隔夜风险。
-
-#### 策略风险
-
-1. 参数优化：策略的表现可能对均线周期参数敏感，需要根据不同市场和品种进行优化。
-
-2. 震荡市：在震荡市场环境下，频繁的交叉信号可能导致策略表现欠佳。
-
-3. 滑点风险：在市场波动剧烈时，固定点数的止盈和止损可能无法按预期执行，导致滑点风险。
-
-#### 策略优化方向
-
-1. 动态止盈止损：根据市场波动性或价格走势，动态调整止盈和止损点位，以优化风险收益比。
-
-2. 趋势过滤：引入其他技术指标，如ADX等，以确认趋势强度，过滤震荡市中的虚假信号。
-
-3. 多品种适应：对策略进行改进，以适应不同的期货品种和市场特点。
-
-4. 资金管理：引入更为复杂的资金管理规则，如仓位管理和风险控制，提升策略的稳健性。
-
-#### 总结
-
-"基于多均线的趋势交易策略"是一个简单易懂的趋势跟踪策略，通过分析价格相对于不同周期均线的位置，捕捉市场的上涨趋势。该策略设置了固定点数的止盈止损，并在每日特定时间自动平仓，以控制风险。然而，策略在震荡市中表现可能欠佳，并面临参数优化和滑点风险等问题。未来可以通过引入动态止盈止损、趋势过滤、多品种适应和资金管理等方面的优化，进一步提升策略的稳健性和适应性。
-
-|| 
 
 #### Overview
 
@@ -119,7 +64,6 @@ The strategy employs three simple moving averages (SMAs): long-term (default 200
 
 The "Multi-Moving Average Trend Trading Strategy" is a simple and easy-to-understand trend-following strategy that captures upward market trends by analyzing the price position relative to moving averages of different periods. The strategy incorporates fixed-point stop-gain and stop-loss levels and automatically closes all positions at a specific time each day to manage risk. However, the strategy may underperform in choppy markets and faces challenges such as parameter optimization and slippage risk. Future optimizations can focus on dynamic stop-gain and stop-loss levels, trend filters, multi-instrument adaptation, and money management to further improve the strategy's robustness and adaptability.
 
-[/trans]
 
 
 

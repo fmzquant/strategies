@@ -16,68 +16,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-这是一种创新的海坎阿西(Heikin-Ashi)非重绘趋势确认策略，旨在解决传统交易视图(TradingView)中海坎阿西策略存在的重绘问题。通过手动计算海坎阿西蜡烛和多重趋势确认机制，该策略提供了一种更加可靠和透明的交易方法。
-
-#### 策略原理
-策略的核心原理包括三个关键步骤：
-1. 手动非重绘海坎阿西蜡烛计算：
-   - 使用独特的公式计算收盘价、开盘价、最高价和最低价
-   - 确保历史价格数据在后续K线更新时保持稳定
-   - 避免传统海坎阿西策略中常见的重绘问题
-
-2. 多重趋势确认：
-   - 要求连续多根蜡烛确认趋势方向
-   - 长入场信号：需要连续X根看涨蜡烛
-   - 空入场信号：需要连续X根看跌蜡烛
-   - 通过多重确认过滤掉假信号，提高策略可靠性
-
-3. 灵活交易模式：
-   - 支持传统趋势跟随模式
-   - 提供趋势反转交易选项
-   - 可自定义交易模式（全部、仅多、仅空）
-
-#### 策略优势
-1. 消除重绘问题：历史数据保持稳定，回测结果与实盘执行高度一致
-2. 多重趋势确认：通过连续蜡烛过滤假信号，降低不必要交易
-3. 高度可定制：
-   - 灵活的入场和出场阈值设置
-   - 支持趋势跟随和反转交易
-   - 可隐藏标准K线，提供清晰可视化
-4. 适用于中长期交易：特别适合摆动交易和趋势跟随
-
-#### 策略风险
-1. 性能局限性：
-   - 不适合高频scalping交易
-   - 在趋势不明显的震荡市场表现可能较差
-   - 需要针对不同时间框架调整参数
-
-2. 潜在风险控制：
-   - 建议设置适当的止损机制
-   - 在不同市场条件下持续优化参数
-   - 结合其他技术指标进行交叉验证
-
-#### 策略优化方向
-1. 参数动态调整：
-   - 开发自适应入场和出场阈值算法
-   - 根据市场波动性实时调整连续蜡烛数量
-   - 引入机器学习算法优化参数选择
-
-2. 风险管理增强：
-   - 集成动态仓位管理
-   - 添加相关性过滤器
-   - 开发更智能的止损机制
-
-3. 指标组合：
-   - 结合其他技术指标（如RSI、MACD）
-   - 开发多指标确认系统
-   - 提高信号的准确性和可靠性
-
-#### 总结
-海坎阿西非重绘趋势确认策略通过创新的蜡烛计算和多重趋势确认方法，为交易者提供了一个更加可靠和透明的交易工具。通过消除重绘问题、过滤假信号和提供灵活的交易模式，该策略展现了量化交易中的技术创新潜力。
-
-|| 
 #### Overview
 This is an innovative Heikin-Ashi Non-Repainting Trend Confirmation Strategy designed to address the repainting issues in traditional TradingView Heikin-Ashi strategies. By manually calculating Heikin-Ashi candles and implementing multi-stage trend confirmation mechanisms, the strategy offers a more reliable and transparent trading approach.
 
@@ -137,7 +75,6 @@ The strategy's core principles include three key steps:
 
 #### Conclusion
 The Heikin-Ashi Non-Repainting Trend Confirmation Strategy provides traders with a more reliable and transparent trading tool through innovative candle calculation and multi-stage trend confirmation methods. By eliminating repainting issues, filtering false signals, and offering flexible trading modes, the strategy demonstrates the technical innovation potential in quantitative trading.
-[/trans]
 
 
 

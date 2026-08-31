@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略通过计算真实波动范围的移动平均值,反映市场的波动率,根据波动率与其移动平均线的关系来判断趋势方向。当波动率上穿移动平均线时看空,下穿时看多,并设置跟踪止损。
-
-### 策略原理 
-
-利用ATR函数计算指定周期内的真实波动范围。然后计算ATR的简单移动平均值,作为波动率的移动平均线。当ATR上穿其移动平均线时,认为市场波动率增加,采取看空策略;当ATR下穿其移动平均线时,认为市场波动率减小,采取看多策略。 
-
-在持仓时,会设置一个固定比例的跟踪止损位置,根据价格变动来动态调整止损位置,在防止止损被套的同时保护利润。
-
-### 优势分析
-
-该策略通过波动率指标判断市场走势,避免被噪音误导。当波动率上升时看空,下降时看多,实现了对冲操作。跟踪止损可以根据实时价格变动调整止损位置,能够在保护利润的同时减少不必要的止损。
-
-### 风险分析
-
-该策略仅基于一个波动率指标,存在一定的滞后。且跟踪止损只考虑价格向不利方向变动,无法防范利润回吐。当价格出现剧烈波动时,止损线可能被突破,造成较大亏损。
-
-可以适当优化ATR和均线的周期参数,也可以加入其他指标进行综合判断。止损方式也可以改为动态止损,根据市场波动程度来调整止损幅度。
-
-### 优化方向
-
-1. 测试不同的ATR和均线周期参数组合,找到最优参数。
-
-2. 增加其他指标判断,形成策略组合,提高策略准确性。
-
-3. 设置动态止损策略,根据市场波动程度调整止损幅度。
-
-4. 优化资金管理策略,不同品种可以设定不同的仓位规模。
-
-5. 应用机器学习技术,辅助判断市场波动率的转折点。
-
-6. 结合高级别均线指标,识别更大级别的趋势方向。
-
-### 总结
-
-该策略利用波动率指标判断市场走势较为简单直接,但仅靠单一指标容易受限。适当引入多个指标判断并优化参数,能够提高策略稳定性。总体来说,该策略提供了一种基于市场波动率进行交易的思路。
-
-||
 
 ### Overview
 
@@ -89,7 +48,6 @@ Parameter tuning on ATR and moving average periods could help, as could incorpor
 
 The strategy judges market trends simply and directly via volatility, but a single indicator has limitations. Introducing multiple indicators and parameter optimization can improve robustness. Overall, the strategy provides a volatility-based trading idea.
 
-[/trans]
 
 > Strategy Arguments
 

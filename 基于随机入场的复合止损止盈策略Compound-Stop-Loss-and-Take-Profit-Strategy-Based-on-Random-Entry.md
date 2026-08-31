@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/93469038a6408a5e25.png)
 
-[trans]
-## 概述
-
-本策略的主要思想是通过随机数来决定入场点,设置了三个止盈点和一个止损点来管理风险,以控制每次交易的盈亏。
-
-## 策略原理  
-
-该策略使用随机数rd_number_entry在11到13之间来决定做多入场点,使用rd_number_exit在20到22之间来决定平仓。做多后设置stop loss为入场价减去atr(14)* slx。同时设置了三个止盈点,第一个止盈点为入场价加上atr(14)* tpx,第二个止盈点为入场价加上2* tpx,第三个止盈点为入场价加上3* tpx。做空的原理类似,区别在于入场决定在rd_number_entry取值不同,止盈止损方向相反。
-
-该策略可以通过调整tpx(止盈系数)和slx(止损系数)来控制风险。
-
-## 优势分析  
-
-该策略具有以下优势:
-
-1. 使用随机入场可以减少曲拟合的概率
-2. 设置多个止盈止损点,可以控制单笔交易的风险
-3. 利用atr来设置止盈止损,可以基于市场波动来设置盈亏点
-4. 可以通过调整系数来控制交易风险
-
-## 风险分析
-
-该策略也存在以下风险:  
-
-1. 随机入场可能错过行情
-2. 止损点过小容易被止损
-3. 止盈空间过大,可能获利不足
-4. 参数不当可能导致亏损加大
-
-可以通过调整止盈止损系数,优化随机入场逻辑来降低风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 改进随机入场逻辑,结合趋势指标判断
-2. 优化止盈止损系数,使盈亏比更合理
-3. 增加仓位控制,不同阶段采用不同的止盈空间
-4. 结合机器学习算法优化参数
-
-## 总结  
-
-本策略以随机入场为基础,设置多个止盈止损点控制单笔交易风险,由于随机性强可以减少曲拟合概率,通过参数优化可以降低交易风险。后续优化空间还很大,值得进一步研究。
-
-||
 
 ## Overview  
 
@@ -102,7 +57,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy is based on random entry and sets multiple take profit and stop loss points to control the risk of a single trade. Due to the high randomness, the probability of curve fitting can be reduced. The trading risk can be reduced through parameter optimization. There is still much room for further optimization and research.
 
-[/trans]
 
 > Strategy Arguments
 

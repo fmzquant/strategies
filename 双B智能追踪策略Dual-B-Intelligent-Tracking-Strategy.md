@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/122179aea3639a5e3e3.png)
-[trans]
-这是一种使用布林带指标进行交易的策略。该策略旨在利用布林带指标识别价格剧烈波动的时机,并相应做出买入或卖出决策。
-
-### 策略原理
-
-该策略通过计算布林带的上轨、中轨和下轨线,判断当前价格是否处于波动区间,以判断建仓或平仓的时机。当价格接近上轨时,视为多头极限区域,策略选择卖出平仓;当价格下探近下轨时,则视为空头极限区域,策略选择买入建仓。
-
-此外,策略还引入趋势反转因子,如果出现反转信号,也会触发对应买入或卖出决策。具体来说,策略逻辑如下:
-
-1. 计算布林带的上轨、中轨、下轨
-2. 判断价格是否突破轨道与反转信号
-   1. 突破中轨作为趋势信号
-   2. 上轨或下轨附近作为反转信号
-3. 发出买入、卖出或平仓指令
-
-以上是该策略的基本交易逻辑。通过利用布林带的特性,结合趋势和反转因子,策略试图在波动加剧时抓住反转点位进行交易。
-
-### 策略优势
-
-相比普通的移动平均线策略,该策略有以下几点优势:
-
-1. 更加灵敏,能够捕捉价格剧烈波动的时机
-2. 同时结合趋势和反转因子,避免过早反转带来的亏损
-3. 具有一定的 FILTER 效果,避免在非波动区域无谓买卖
-4. 通过中轨判断主要趋势方向,减少交易次数
-5. 增加反转过滤条件,降低了误判概率
-
-总的来说,该策略较好地结合了布林带与价格实体判断,在合理反转点进行交易,既保证了一定的盈利水平,也控制了风险。
-
-### 风险与优化
-
-然而,该策略也存在一定风险,主要体现在:
-
-1. 布林带参数设置不当,无法充分捕捉价格波动
-2. 反转信号判断不准确,漏失反转或误判反转
-3. 趋势不明显时,中轨信号效果不佳
-
-对应地,未来可从以下几个方面进行优化:
-
-1. 根据不同品种参数自适应优化布林带参数
-2. 增加机器学习模型判断反转概率
-3. 在趋势不明时,切换至其他指标判断
-4. 结合更多价格形态来过滤交易信号
-
-### 总结
-
-本策略总体来说是一种典型的布林带交易策略模板。它规避了仅使用布林带容易产生的较多无效交易的缺点,通过引入趋势反转判断来有效过滤信号,在理论上可以获得较好的策略表现。但是参数设置与信号过滤方面仍需进一步优化与改进,才能使策略参数鲁棒化并降低误判概率。
-
-||
 
 This is a trading strategy that uses Bollinger Bands. The strategy aims to identify opportunities when prices fluctuate violently using Bollinger Bands and make corresponding buy or sell decisions.
 
@@ -107,7 +58,6 @@ Accordingly, future optimizations can focus on:
 
 In conclusion, this is a typical Bollinger Bands trading strategy template. It avoids excessive ineffective trades common for using Bollinger Bands alone by introducing trend reversal judgement to filter signals, which can theoretically lead to good strategy performance. But parameters and signal filtering still need further optimization and improvement for robustness and to reduce misjudgements.
 
-[/trans]
 
 > Strategy Arguments
 

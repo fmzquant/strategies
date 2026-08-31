@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c5820774c1f3cee91b.png)
-[trans]
-## 概述
-该策略通过WaveTrend指标判断价格趋势和超买超卖情况,结合RSI指标过滤信号,采用趋势追踪方式,在超买超卖位做反向操作。
-
-## 策略原理
-该策略使用WaveTrend指标判断价格趋势方向。WaveTrend指标基于Rainbow指标改进而来,通过计算Heikin-Ashi均线和价格绝对值之间的差值,来判断价格趋势方向。结合RSI指标判断超买超卖情况发出交易信号。
-
-具体来说,策略中的WaveTrend公式为:
-```
-esa = ema(hlc3, 10) 
-d = ema(abs(hlc3 - esa), 10)
-ci = (hlc3 - esa) / (0.015 * d)
-wt = ema(ci, 21)
-```
-其中,esa是计算的Heikin-Ashi均线,d是Heikin-Ashi均线和价格绝对值之差的均值。ci就是所谓的适应性区间,反映价格波动力度。wt是ci的均线,判断价格趋势方向,多为空头的关键指标。
-
-RSI指标用于判断超买超卖,代码中RSI的计算公式为:
-```
-rsiup = rma(max(change(close), 0), 14) 
-rsidown = rma(-min(change(close), 0), 14) 
-rsi = rsidown == 0 ? 100 : rsiup == 0 ? 0 : 100 - (100 / (1 + rsiup / rsidown))
-```
-其标准值为0-100,高于70为超买区,低于30为超卖区。
-
-结合这两个指标,当RSI低于25,WaveTrend低于-60时为超卖区,做多信号;当RSI高于75,WaveTrend高于60时为超买区,做空信号。
-
-## 优势分析
-该策略具有以下优势:
-
-1. 使用WaveTrend指标判断价格趋势方向准确可靠。
-2. RSI指标过滤能避免不必要的交易,提高胜率。 
-3. 采用趋势追踪方式,可以最大化捕捉价格趋势所带来的利润。
-4. 策略思路清晰易懂,参数设置灵活,可根据不同品种和市场调整。
-5. 策略实现简单,容易实盘验证,利于框架优化。
-
-## 风险分析
-该策略也存在一些风险:
-
-1. WaveTrend和RSI指标都存在一定滞后,可能错过价格反转点。
-2. 虽有过滤条件,但仍可能在震荡行情中产生错误信号。
-3. 追踪止损策略有待完善,无法有效控制单笔损失。
-4. 参数设置合理与品种特性和交易频率匹配非常关键。
-
-对策:
-1. 结合额外判断指标进行优化,提高信号准确率。 
-2. 加入止损策略,控制单笔损失。
-3. 寻找最佳参数组合,调整策略适应市场品种。
-
-## 优化方向  
-该策略可从以下几个方向进行优化:
-
-1. 更换judgment指标或增加judgment指标,优化信号的准确率。例如加入MACD,KD等判断指标。
-
-2. 优化参数设置,适应不同交易品种。例如调整平滑周期,寻找最佳参数组合。
-
-3. 加入追踪止损策略,有效控制单笔损失。例如余额百分比止损,移动止损等。
-
-4. 考虑不同加仓策略。例如使用马丁格尔加仓替代原有的固定数量加仓。
-
-5. 优化适应性区间参数,寻找最佳参数提高判断准确性。
-
-## 总结
-该策略整体思路清晰,使用波动力度指标判断价格趋势,并有效过滤噪音交易信号。策略优化空间较大,可从多个角度进行改进,使策略更稳定可靠。通过参数调整优化,可适应不同交易品种,值得进一步测试实盘验证。
-
-||
 
 ## Overview
 This strategy uses the WaveTrend indicator to determine price trends and overbought/oversold situations. It combines the RSI indicator to filter signals and adopts a trend tracking method to make counter-trend operations at overbought/oversold levels.
@@ -139,7 +74,6 @@ The strategy can be optimized in the following directions:
 ## Conclusion  
 The overall idea of the strategy is clear, using volatility indicators to determine price trends and filter noise effectively. There is room for optimization in multiple aspects to make the strategy more robust. Through parameter tuning, it can be adapted to different products and is worth further live testing.
 
-[/trans]
 
 > Strategy Arguments
 

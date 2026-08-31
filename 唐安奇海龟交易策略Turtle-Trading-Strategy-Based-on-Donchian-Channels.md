@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/da65fe1b269e54a44d.png)
-[trans]
-## 概述
-
-唐安奇海龟交易策略是一个非常简化的海龟交易策略。它与原始的海龟交易策略有很大不同。该策略使用两个唐奇安通道,快速通道和缓慢通道。通道周期由用户设置,默认值为快速通道20根K线,缓慢通道50根K线。策略利用缓慢通道的上下轨来进行入场,快速通道的中轨来设置止损。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 计算快速通道:取最近fast根K线的最高价为通道上轨,最低价为通道下轨。通道中轨为上下轨的平均值。
-
-2. 计算缓慢通道:取最近slow根K线的最高价为通道上轨,最低价为通道下轨。 
-
-3. 当无持仓时,做多信号为价格触及缓慢通道上轨;做空信号为价格触及缓慢通道下轨。
-
-4. 开仓后以快速通道中轨作为止损线。
-
-5. 持仓过程中,交易信号与开仓信号相反时,平仓离场。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 规则简单易执行。唐奇安通道和移动止损容易理解,适合初学者。
-
-2. 可自定义参数。用户可以根据交易品种和时间周期调整参数,适应不同市场环境。
-
-3. 冲突交易信号少。仅依赖价格突破通道上下轨Generate,避免常见指标产生虚假信号的状况。
-
-4. 自动止损管理风险。快速通道中轨移动止损,可以限制单笔止损。
-
-## 风险分析
-
-该策略面临以下风险:
-
-1. 价格震荡趋势不明显时,会产生较多止损。这会影响策略盈利能力。
-
-2. 回撤可能较大。当趋势产生转折时,在전运动方向上的浮亏都会化为实际亏损。
-
-3. 参数设置不当可能导致过于激进或保守。这需要通过反复测试得出适合的数值。
-
-4. 机械化交易依赖程度高。需确保服务器稳定性,避免异常导致无法正常自动化交易。
-
-
-为降低上述风险,可通过优化参数设置、适当限制仓位规模、增加风控模块等方式进行改进。
-
-## 优化方向 
-
-该策略可从以下几个方向进行优化:
-
-1. 增加开仓过滤条件,避免趋势转折点错过信号。例如结合趋势指数等指标判断趋势分析。
-
-2. 优化参数设置,使之更贴合不同交易品种。例如快慢通道周期、仓位大小等。
-
-3. 增加风控模块。例如最大回撤、日内损失限制等。避免风险事件导致较大亏损。
-
-4. 优化止损策略。例如trailing stop等动态止损方式,让止损更贴合市场趋势。
-
-## 总结
-
-唐安奇海龟交易策略整体是一个非常简单的趋势跟踪策略。它的优点是易于理解,容易自动化执行,适合程序化交易。但也存在一定的风险,需要进一步优化使其 parameters 更符合实际市场情况。通过参数调整、优化开仓信号、增加风控模块等手段,可以使该策略的实战效果更佳。
-
-||
 
 ## Overview
 
@@ -133,7 +70,6 @@ The strategies can be improved in the following aspects:
 ## Conclusion
 
 In summary, the Tang Anqi Turtle Trading Strategy is a simple trend following system. Its advantages lie in its ease of understanding and automation. But it also carries certain risks, and further optimizations on parameters and risk management are needed to make it more practical. With measures like parameter tuning, adding filters, and risk control modules, the strategy can achieve better results in live trading.
-[/trans]
 
 > Strategy Arguments
 

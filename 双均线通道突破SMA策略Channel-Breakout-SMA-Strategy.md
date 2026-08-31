@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1adc180d76f82166ec4.png)
 
-[trans]
-
-本策略基于通道突破原理,并利用均线交叉作为退出信号,适用于期货和指数交易。
-
-### 策略原理
-
-1. 计算一定周期内的最高价和最低价,构建上下通道。
-
-2. 当价格突破上通道时,做多;当价格突破下通道时,做空。
-
-3. 计算快速期和慢速期两条SMA均线。
-
-4. 做多时,快速期SMA上穿慢速期SMA,平多仓;做空时,快速期SMA下穿慢速期SMA,平空仓。
-
-### 优势分析
-
-1. 结合通道和均线系统,可以提高获利概率。
-
-2. 利用通道判断轮动ankel定阶段,利用均线判断趋势结束。
-
-3. 均线过滤可以避免whipsaw,减少不必要交易。
-
-4. 通道范围参数可调,适应不同周期和波动率市场。
-
-### 风险分析
-
-1. 通道范围设定不当,可能错过突破机会或产生更多假突破。
-
-2. 均线参数设定不当,可能过早或过晚退出仓位。
-
-3. 需考虑合理仓位规模管理,避免单笔损失过大。
-
-4. 需留意突破后是否有效,防止追高杀跌。
-
-### 优化方向
-
-1. 测试不同参数下策略收益率和胜率,优化通道范围和均线周期。
-
-2. 结合趋势指标过滤突破信号,提高突破成功率。 
-
-3. 增加仓位管理机制,比如固定份额、马丁格尔等。
-
-4. 增加止损机制来控制单笔损失。
-
-### 总结
-
-本策略利用通道判断市场轮动和热点,均线判断趋势结束,合理参数设定可以在强势市场实现稳定收益。但需要防止whipsaw可能带来的亏损,同时优化仓位和风险管理非常关键。通过参数调整、信号过滤及风险控制手段的运用,可以进一步增强策略稳定性。
-
-|| 
 
 ## Overview
 
@@ -109,7 +60,6 @@ This strategy is based on channel breakout and uses moving average crossover as 
 
 This strategy capitalizes on channel and SMA to achieve steady gains in strong trends. But whipsaw losses must be avoided and position sizing is critical. Further enhancements on parameter tuning, signal filtering and risk management will improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

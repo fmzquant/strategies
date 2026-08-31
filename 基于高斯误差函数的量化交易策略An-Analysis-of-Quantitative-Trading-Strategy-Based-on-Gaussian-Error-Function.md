@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/5c0e4b62f5761f9026.png)
 
-[trans]
-## 概述
-
-该策略是一个基于高斯误差函数来计算价格变化的P-Signal指标的量化交易策略。它使用P-Signal指标判断价格趋势和转折点,以此来决定入场和退出的时机。
-
-## 策略原理
-
-该策略的核心指标是P-Signal。P-Signal的计算公式如下:
-
-```
-fPSignal(ser, int) => 
-    nStDev = stdev(ser, int)
-    nSma = sma(ser, int)
-    fErf(nStDev > 0 ? nSma/nStDev/sqrt(2) : 1.0)
-```
-
-这里ser代表价格序列,int代表参数nPoints,也就是看多少根K线。该公式由三部分组成:
-
-1. nStDev是价格的标准差;
-2. nSma是价格的简单移动平均; 
-3. fErf是高斯误差函数。
-
-整个公式的意思是,用价格的移动平均除以价格的标准差,再除以sqrt(2)做标准化,然后通过高斯误差函数映射到(-1, 1)区间。也就是如果价格波动大于平均值,P-Signal接近1;如果价格波动小于平均值,P-Signal接近-1。
-
-策略使用P-Signal的数值和其变化的符号来决定入场和退出:
-
-```
-strategy.entry("long", strategy.long, 1, when = nPSignal < 0 and ndPSignal > 0)  
-
-strategy.close("long", when = nPSignal > 0 and ndPSignal < 0)
-```
-
-当P-Signal小于0且变化为正的时候做多;当P-Signal大于0且变化为负的时候平仓。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 使用高斯误差函数拟合价格分布。高斯误差函数能很好地拟合正常分布,这与大多数金融时间序列分布特征相符。
-2. 利用价格的标准差自动调整参数。这使得策略参数范围更广,对市场变化更加鲁棒。
-3. P-Signal指标结合趋势和反转Trade的优点。它既考虑价格波动趋势,也关注价格反转点,这对捕捉趋势交易和反转交易机会都有帮助。
-
-## 风险分析
-
-该策略也存在一些风险,主要体现在:
-
-1. 高频交易风险。该策略是典型的高频交易策略,会产生较多交易,承担更高的交易成本和滑点风险。
-2. 震荡行情下表现不佳。P-Signal指标在价格没有明显趋势和规律的市场中,会产生大量虚假信号。
-3. 参数优化有难度。公式中多个参数之间关系复杂,使参数优化比较困难。
-
-为降低这些风险,可以考虑增加过滤条件,减少交易频率;优化参数组合和交易成本设定;实盘磨合,选择合适品种。
-
-## 优化方向 
-
-该策略还有进一步优化的空间,主要方向有:
-
-1. 增加过滤条件,避免虚假信号。例如结合其他指标,做AND或OR条件,过滤掉一部分Noise。
-2. 优化参数组合。在不同品种和周期调整nPoints的大小,改进策略稳定性。
-3. 考虑动态参数。让nPoints参数根据市场波动程度做自适应调整,这可能改善策略鲁棒性。
-4. 结合机器学习方法。使用AI算法对参数、过滤条件以及多品种择时进行优化。
-
-## 总结
-
-整体来说,该策略核心思路新颖,利用高斯函数拟合价格分布,自动调整参数范畴。但作为一个高频交易策略,还需要进一步的测试和优化,特别是风险控制和参数调整方面,才能在实盘中稳定盈利。
-
-||
 
 ## Overview
 
@@ -142,7 +76,6 @@ There is room for further enhancement:
 
 In conclusion, the core idea of this strategy is innovative, fitting price distribution with Gaussian function and automatically adjusting parameters. But as a high frequency trading strategy, it requires further testing and optimization on risk control and parameter tuning before stable profitability in live trading, especially as a high frequency trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

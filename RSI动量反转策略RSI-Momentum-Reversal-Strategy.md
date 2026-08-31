@@ -11,117 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1347518822230fd7697.png)
 
-[trans]
-
-## 概述
-
-RSI动量反转策略通过结合RSI指标和K线实体方向,识别超买超卖现象,进行反转交易。该策略同时使用常规RSI和快速RSI,并配合K线实体过滤,可以有效识别反转机会。
-
-## 策略原理
-
-该策略主要通过以下几个部分实现:
-
-1. Connors RSI指标
-
-    计算常规RSI、RSI胜率指标、RSI巴黎沙尔指标,取三者平均作为Connors RSI。
-
-2. 快速RSI指标
-
-    使用价格变动计算快速RSI,反映超短线循环。
-
-3. K线实体过滤
-
-    需实体阳线做多,阴线做空,防止假突破。
-
-4. 多空条件
-
-    Connors RSI低于20时,快速RSI低于25时,实体阳线出现,做多。
-
-    Connors RSI高于80时,快速RSI高于75时,实体阴线出现,做空。
-
-5. 止损退出
-
-    实体转向时止损退出。
-
-通过Connors RSI判断长线趋势反转点,快速RSI判断短线反转点,K线实体确保突破效力,这样可以有效发现反转机会,在超买超卖都及时开仓做反向操作。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 结合长短线指标
-
-    Connors RSI反映长线循环,快速RSI反映短线循环,二者结合可以更准确判断反转点。
-
-2. 实体过滤
-
-    仅在实体突破时操作,可以减少假突破带来的亏损。
-
-3. 参数可调
-
-    RSI参数、交易品种、交易时间段都可以自由调整,适应不同市场。
-
-4. 简单直观
-
-    RSI和K线实体都是基础指标,策略逻辑简单易懂。
-
-5. 容易实施
-
-    仅使用内置指标,代码量少,实施难度低。
-
-## 风险分析
-
-该策略面临以下主要风险:
-
-1. 反转失败风险
-
-    反转信号发出后价格继续原趋势运行,导致亏损。
-
-2. 震荡行情风险
-
-    震荡行情中反复触发信号,造成过多无效交易。
-
-3. 突破假突破风险
-
-    实体过滤并不能完全避免突破假突破的情况。
-
-4. 参数设定风险
-
-    RSI参数设定不当,可能错过交易机会或造成多次无效交易。
-
-5. 特殊行情风险
-
-    特殊行情中RSI指标失效,产生错误信号。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损机制
-
-    优化止损策略,让止损更为合理,减少单笔损失。
-
-2. 集成多个指标
-
-    增加MACD、KD等指标过滤,使信号更可靠。
-
-3. 增加概率过滤
-
-    结合趋势、支撑阻力等判断概率,避免低概率交易。
-
-4. 优化参数设置
-
-    针对不同交易品种、周期进行参数测试,找到最优参数。 
-
-5. 规避特殊行情
-
-   识别特殊行情,暂停交易,避免巨大亏损。
-
-## 总结
-
-RSI动量反转策略通过Connors RSI和快速RSI判断长短线反转,配合K线实体过滤增加信号有效性。该策略具有指标组合、参数调节灵活等优势,可以捕捉反转机会,在超买超卖时及时介入交易。但该策略也存在一定的反转失败、突破假突破等风险,需要进一步优化止损、指标组合等方面,以减少风险提高盈利能力。
-
-||
 
 
 ## Overview
@@ -232,7 +121,6 @@ The strategy can be optimized from the following aspects:
 
 The RSI momentum reversal strategy identifies long and short-term reversals using Connors RSI and fast RSI, with candlestick body filters to increase signal validity. The advantages like indicator combinations and adjustable parameters allow capturing reversals and trading counter-trend when overbought or oversold. But risks like failed reversals and false breakouts remain, requiring further optimizations in stop loss, indicator combinations to reduce risks and improve profitability.
 
-[/trans]
 
 > Strategy Arguments
 

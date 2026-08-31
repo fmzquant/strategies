@@ -13,61 +13,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8cf5d7709d1854817bc.png)
 
 
-[trans]
-#### 概述
-
-PowerZone交易策略是一种创新的自动化交易方法，专注于捕捉市场中强劲的价格运动。该策略通过识别特定的价格区域（称为"PowerZones"），为交易者提供明确的入场和出场信号，同时内置风险管理机制。
-
-#### 策略原理
-
-策略的核心在于识别两种关键的PowerZone类型：
-1. 牛市PowerZone（Bullish PowerZone）：
-   - 初始为一根熊市K线（收盘价低于开盘价）
-   - 随后连续数根K线（默认5根）呈现上涨趋势
-   - 总体价格变动超过预设阈值（默认2%）
-
-2. 熊市PowerZone（Bearish PowerZone）：
-   - 初始为一根牛市K线（收盘价高于开盘价）
-   - 随后连续数根K线呈现下跌趋势
-   - 总体价格变动超过预设阈值
-
-#### 策略优势
-
-1. 自动化识别趋势转折点
-2. 内置灵活的参数定制功能
-3. 清晰的可视化展示
-4. 自动风险管理（止盈止损）
-5. 适用于多种市场环境
-6. 代码精简，易于理解和修改
-
-#### 策略风险
-
-1. 参数设置不当可能导致过度交易
-2. 在震荡市场中可能产生错误信号
-3. 固定仓位可能增加单笔亏损风险
-4. 缺乏复杂的过滤机制
-5. 未考虑更广泛的市场趋势和周期
-
-#### 策略优化方向
-
-1. 引入附加过滤条件
-   - 结合趋势指标（如EMA）
-   - 整合动量指标（如RSI）
-   - 添加成交量确认机制
-
-2. 动态仓位管理
-   - 根据市场波动性调整仓位大小
-   - 实施风险百分比仓位控制
-
-3. 多时间框架验证
-   - 在不同时间周期交叉验证信号
-   - 提高信号的可靠性
-
-#### 总结
-
-PowerZone交易策略通过系统化地识别价格强势区域，为交易者提供了一种结构化的交易方法。其核心优势在于自动化、可视化和灵活性，但同时需要谨慎调整参数，并持续优化风险管理机制。
-
-|| 
 
 #### Overview
 
@@ -121,7 +66,6 @@ The core of the strategy lies in identifying two key PowerZone types:
 #### Conclusion
 
 The PowerZone Trading Strategy provides traders with a structured trading method by systematically identifying price strength zones. Its core advantages lie in automation, visualization, and flexibility, but careful parameter adjustment and continuous risk management optimization are essential.
-[/trans]
 
 
 

@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c8a90d884d702376f7.png)
-[trans]
-## 概述
-
-该策略是一个利用多个时间框架指标同意的趋势跟踪策略。它会在日线、10日线、15日线和30日线同时看涨或看跌时开仓做多或做空,使用动态止损方式止损。
-
-## 策略原理
-
-该策略使用日线、10日线、15日线和30日线四个时间框架判断趋势方向。当四个时间框架的收盘价都高于开盘价时判定为看涨,当四个时间框架的收盘价都低于开盘价时判定为看跌。
-
-当判断为看涨时,做多入场;当判断为看跌时,做空入场。入场后使用KC通道进行动态止损。
-
-具体来说,策略通过比较不同时间框架下的开盘价和收盘价来判断趋势方向。如果开盘价低于收盘价,则该时间框架看涨,用绿色表示。如果开盘价高于收盘价,则该时间框架看跌,用红色表示。
-
-当四个时间框架均看涨时,策略会开仓做多;当四个时间框架均看跌时,策略会开仓做空。平仓条件为止损或趋势反转。
-
-## 策略优势
-
-1. 使用多个时间框架判断趋势,可以有效过滤假突破,确定趋势方向
-
-2. 动态止损方式可以最大限度保护资金
-
-3. 入场条件严格,可以减少不必要的交易,避免过多滑点成本
-
-4. 多时间框架结合,可以平衡获利速度和稳定性
-
-## 策略风险
-
-1. 入场条件太严格,可能错过部分机会
-
-2. 止损幅度设置不当可能过于激进或保守
-
-3. 时间框架选择不当,可能与更长期或更短期趋势不符
-
-4. 突发事件导致快速反转,无法止损
-
-## 优化方向
-
-1. 优化时间框架的选择,平衡获利速度和稳定性
-
-2. 测试不同的参数设置,优化止损幅度
-
-3. 增加机器学习算法,辅助判断趋势反转点
-
-4. 增加关注重大事件,避免突发事件造成损失
-
-## 总结
-
-该策略整合多时间框架判断趋势方向,严格入场条件结合动态止损,旨在获得稳定收益。存在可能错过机会以及风险控制不当的问题。下一步将继续优化参数设置,提高策略稳定性。
-
-||
 
 ## Overview
 
@@ -109,7 +59,6 @@ When all four timeframes agree on a bullish signal, the strategy will open a lon
 
 This strategy integrates judgments across multiple timeframes, with strict entry criteria and dynamic stops, aiming for steady returns. It has the risk of missing opportunities and improper risk control. Next step is to continue optimizing parameters for higher stability.
 
-[/trans]
 
 > Strategy Arguments
 

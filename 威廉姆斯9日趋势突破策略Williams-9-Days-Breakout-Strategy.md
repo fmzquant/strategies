@@ -11,58 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1e3de40bcbcc0bf8ddd.png)
 
-[trans]
-
-
-### 概述
-
-该策略基于拉里·威廉姆斯的9日突破理念,通过监测9日移动平均线的方向判断趋势,在突破点进行入场,跟随趋势运行。
-
-### 策略原理
-
-- 使用9日指数移动平均线EMA作为判断趋势的指标
-- 当价格从EMA下方突破上方时,判断为看涨,进行买入
-- 当价格从EMA上方突破下方时,判断为看跌,进行卖出
-- 买入信号:开盘价低于9日EMA,收盘价高于9日EMA
-- 卖出信号:开盘价高于9日EMA,收盘价低于9日EMA
-
-具体来说:
-
-1. 计算9日EMA
-2. 判断当日K线是否满足买入条件,即开盘价低于9日EMA,收盘价高于9日EMA
-3. 如果满足,则在收盘价位置入场做多,止损价设为之前高点
-4. 判断当日K线是否满足卖出条件,即开盘价高于9日EMA,收盘价低于9日EMA
-5. 如果满足,则在之前做多入场点出场卖出,止盈价设为之前低点
-
-以上构成了完整的买入和卖出逻辑。
-
-### 优势分析
-
-这是一个较为简单的趋势跟踪策略,具有以下优势:
-
-1. 以EMA判断趋势方向,可以有效滤除价格小幅波动的噪音
-2. 在EMA突破点入场,可以及时捕捉趋势转折
-3. 采用之前高点作为止损,之前低点作为止盈,可以锁定趋势获利
-4. 交易规则清晰简单,容易理解实现,适合新手学习
-5. 资金使用效率高,不需要全程持仓,只在趋势突破点短期持仓
-
-### 风险及优化
-
-该策略也存在一些风险与不足,可以从以下方面进一步优化:
-
-1. EMA周期设定为9日,对不同品种和市场情况可能不够灵活,可以引入自适应EMA周期
-2. 仅用9日EMA判断趋势可能过于简单,可以引入多重时间周期EMA或其他指标进行组合判断
-3. 未考虑交易成本和滑点,实盘中这两者会对盈亏产生较大影响
-4. 没有设置止损止盈比例,无法控制单笔交易风险收益比
-5. 入场信号可能出现多次震荡,产生多个不必要的小单,可以设置过滤条件
-
-综上,该策略可以从动态参数优化、多因子判断、交易成本管理、风险收益控制等方面进行改进,使策略更稳健适应不同市场状态。
-
-### 总结
-
-威廉姆斯9日突破策略是一个较为经典的短期趋势策略,核心思想简单清晰,以EMA判断趋势方向,在突破点入场,跟随趋势运行并适时止盈止损。该策略易于理解实现,资金使用效率高,但也存在一些不足之处。我们可以通过多角度优化,使策略参数更加动态灵活,判断规则更严谨全面,风险收益控制更完善,从而适应更广泛的市场情况,提高策略稳定性和盈利能力。
-
-||
 
 
 ### Overview
@@ -113,7 +61,6 @@ In summary, the strategy can be improved through dynamic parameter optimization,
 
 The Williams 9-day breakout strategy is a relatively classic short-term trend following strategy. The core idea is simple and clear, using EMA to determine trend direction, taking positions at breakout points, following the trend and managing risks. The strategy is easy to understand and implement, with high capital usage efficiency, but also has some deficiencies. We can optimize it from multiple perspectives to make the parameters more dynamic, judgement rules more rigorous, risk control more complete, thereby adapting to a wider range of market conditions and improving the stability and profitability.
 
-[/trans]
 
 
 

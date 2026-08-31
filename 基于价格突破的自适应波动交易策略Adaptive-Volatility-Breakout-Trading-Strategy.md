@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11d426eb442d65271b3.png)
-[trans]
-
-## 概述
-
-该策略基于价格突破点来识别市场趋势,并结合自适应指标对大趋势进行判断,以捕捉短期价格反转机会。当价格从基准突破通道突破时产生买入/卖出信号。该策略适合于高波动率的数字货币交易。
-
-## 策略原理  
-
-1. 识别价格极值点作为通道边界。当价格创出新高或新低时,把该点作为通道边界。
-2. 计算自适应波动指标MA,判断整体趋势方向。MA值越大表示目前处于震荡阶段。
-3. 当价格向上突破通道上沿时,产生买入信号;当价格向下突破通道下沿时,产生卖出信号。  
-4. 设置止损点。长仓头寸止损点设置为入场价格的1%。
-
-## 优势分析  
-
-1. 价格通道具有自适应性,能准确判断趋势转折点。
-2. 波动指标判断大趋势,避免在震荡趋势中错过大方向。  
-3. 反转策略,适合捕捉价格短期反弹。
-
-## 风险分析
-
-1. 大幅度持续下跌行情中,容易触发多个止损点,造成较大亏损。
-2. 震荡盘整中,频繁买入卖出交易增加交易费用。
-3. 需要人工确定入场时间,全自动交易有过拟合风险。
-
-## 优化方向  
-
-1. 优化MA的参数,使其更好地判断整体走势。
-2. 增加量能指标,避免量能衰竭的反转信号。 
-3. 增加机器学习模型,实现参数的动态优化。
-
-## 总结  
-
-该策略整体思路清晰,具有一定的实用价值。但仍需注意控制交易风险,防止在特定行情下造成较大损失。下一步可从整体框架、指标参数、风险控制等多个维度进行优化,使策略参数和交易信号更加可靠。
-
-||  
 
 
 ## Overview  
@@ -81,7 +45,6 @@ This strategy identifies market trends based on price breakthrough points and us
 
 The overall logic of this strategy is clear and has some practical value. However, trading risks should still be controlled to prevent large losses in certain market conditions. Next steps include optimizing multiple dimensions such as the overall framework, indicator parameters, and risk control to make the strategy parameters and trading signals more reliable.
 
-[/trans]
 
 > Strategy Arguments
 

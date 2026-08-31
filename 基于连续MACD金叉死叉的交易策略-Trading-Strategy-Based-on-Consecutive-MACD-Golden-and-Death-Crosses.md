@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/138d87076b2183cdd38.png)
 
-[trans]
-#### 概述
-该策略基于MACD指标的连续金叉和死叉信号进行交易。当出现连续的金叉信号时,开多头仓位;当出现连续的死叉信号时,开空头仓位。同时,策略允许用户设置止盈和止损点位,以控制风险。此外,策略还提供了回测时间范围的选择,方便用户在指定时间段内评估策略表现。
-
-#### 策略原理
-该策略的核心是利用MACD指标的金叉和死叉信号来判断市场趋势的转折点。MACD指标由快速移动平均线(EMA)和慢速移动平均线(EMA)构成,当快速EMA与慢速EMA交叉时,形成金叉或死叉信号。连续的金叉信号表明市场可能进入上升趋势,此时开多头仓位;连续的死叉信号则表明市场可能进入下降趋势,此时开空头仓位。通过捕捉这些趋势转折点,策略试图在市场趋势中获利。
-
-#### 策略优势
-1. 简单易懂:该策略基于广泛使用的MACD指标,指标原理简单,易于理解和实现。
-2. 趋势跟踪:通过捕捉连续的金叉和死叉信号,策略能够跟踪市场的主要趋势,有助于在趋势中获利。
-3. 风险控制:策略允许用户设置止盈和止损点位,帮助控制潜在的风险和损失。
-4. 灵活回测:策略提供了回测时间范围的选择,用户可以根据需要评估不同时间段内的策略表现。
-
-#### 策略风险
-1. 参数敏感性:MACD指标的表现取决于快速EMA和慢速EMA的周期选择,不同的参数设置可能导致不同的交易信号。
-2. 市场噪音:在震荡或不明朗的市场条件下,MACD指标可能产生较多的虚假信号,导致频繁交易和潜在损失。
-3. 趋势延迟:MACD指标是一个滞后指标,交易信号可能在趋势已经确立后才出现,错过最佳入场时机。
-4. 止损风险:如果市场剧烈波动,价格可能快速突破止损位,导致比预期更大的损失。
-
-#### 策略优化方向
-1. 结合其他指标:考虑将MACD指标与其他技术指标(如RSI、布林带等)结合使用,以提高信号的可靠性和过滤掉虚假信号。
-2. 优化参数:通过对不同的快速EMA和慢速EMA周期进行回测和优化,找到最适合特定市场和资产的参数组合。
-3. 动态止盈止损:根据市场波动性或价格水平,动态调整止盈和止损点位,以更好地适应市场变化并控制风险。
-4. 引入仓位管理:根据信号强度或市场环境,调整每笔交易的仓位大小,以优化风险回报比。
-
-#### 总结
-该策略基于连续的MACD金叉和死叉信号进行交易,试图捕捉市场趋势的转折点。它简单易懂,可以跟踪主要趋势,并提供风险控制和灵活回测的功能。然而,策略的表现可能受到参数选择、市场噪音和趋势延迟等因素的影响。为了进一步改进,可以考虑与其他指标结合使用,优化参数,引入动态止盈止损和仓位管理。总体而言,该策略为趋势交易提供了一个基本框架,但在实际应用中需要谨慎评估和调整,以适应具体的市场环境和个人风险偏好。
-
-|| 
 
 #### Overview
 This strategy is based on the consecutive golden cross and death cross signals of the MACD indicator for trading. When consecutive golden cross signals appear, it opens a long position; when consecutive death cross signals appear, it opens a short position. At the same time, the strategy allows users to set take-profit and stop-loss levels to control risk. Additionally, the strategy provides the option to select the backtest time range, allowing users to evaluate the strategy's performance within a specified time period.
@@ -67,7 +38,6 @@ The core of this strategy is to use the golden cross and death cross signals of 
 
 #### Summary
 This strategy trades based on consecutive MACD golden cross and death cross signals, attempting to capture turning points in market trends. It is simple and easy to understand, can track main trends, and provides risk control and flexible backtesting capabilities. However, the strategy's performance may be influenced by factors such as parameter selection, market noise, and trend lag. To further improve, one can consider combining it with other indicators, optimizing parameters, introducing dynamic take-profit and stop-loss, and position management. Overall, the strategy provides a basic framework for trend trading, but in practical application, it needs to be carefully evaluated and adjusted to suit specific market conditions and personal risk preferences.
-[/trans]
 
 > Strategy Arguments
 

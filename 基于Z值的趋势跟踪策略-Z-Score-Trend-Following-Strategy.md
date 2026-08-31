@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/663dd636fd495fd501.png)
 
-[trans]
-#### 概述
-"基于Z值的趋势跟踪策略"利用了Z值这一统计学指标,通过衡量价格偏离其移动平均线的程度,并以标准差作为归一化尺度,来捕捉趋势性机会。该策略以其简洁性和有效性著称,尤其适用于价格运动常常回归均值的市场。与依赖多个指标的复杂系统不同,"Z值趋势策略"聚焦于明确、统计学上显著的价格变动,非常适合偏好精简、数据驱动型方法的交易者。
-
-#### 策略原理  
-该策略的核心在于Z值的计算。Z值通过计算当前价格与用户定义长度的价格指数移动平均线(EMA)之差,再除以同样长度的价格标准差而得:
-
-z = (x - μ) / σ
-
-其中,x为当前价格,μ为EMA均值,σ为标准差。
-
-交易信号基于Z值穿越预定阈值而生成:
-- 多头入场:当Z值向上穿越正阈值。  
-- 多头出场:当Z值向下穿越负阈值。
-- 空头入场:当Z值向下穿越负阈值。
-- 空头出场:当Z值向上穿越正阈值。
-
-#### 策略优势
-1. 简洁有效:该策略仅依赖少数参数,易于理解和实施,同时在捕捉趋势性机会方面卓有成效。
-2. 统计学基础:Z值作为成熟的统计学工具,为该策略提供了扎实的理论基础。
-3. 适应性强:通过调整阈值、EMA和标准差的计算周期等参数,该策略可灵活适应不同的交易风格和市场环境。
-4. 明确信号:基于Z值穿越阈值的交易信号简单明了,有利于快速决策和执行。
-
-#### 策略风险
-1. 参数敏感:不恰当的参数设置(如阈值过高或过低)可能导致交易信号失真,错失机会或招致损失。
-2. 趋势识别:在震荡或盘整市,该策略可能面临频繁的虚假信号,表现欠佳。
-3. 滞后效应:作为趋势跟踪策略,其入场和出场信号均存在一定滞后,可能错失最佳时机。
-
-上述风险可通过持续的市场分析、参数优化和在回测的基础上审慎地实施,予以控制和缓释。
-
-#### 策略优化方向 
-1. 动态阈值:引入与波动率相关的动态阈值,可有效适应不同市场状态,提升信号质量。
-2. 组合指标:综合其他技术指标如RSI、MACD等,对交易信号进行二次确认,提高可靠性。
-3. 仓位管理:纳入ATR等仓位控制机制,在震荡市中及时减仓,趋势市中及时加仓,优化收益风险比。
-4. 多时间尺度:跨越多个时间尺度计算Z值,捕捉不同级别的趋势,丰富策略维度。
-
-#### 总结
-"基于Z值的趋势跟踪策略"以其简洁、稳健、灵活的特点,为捕捉趋势性机会提供了独特视角。通过合理的参数设置、审慎的风险管理和持续的优化,该策略有望成为量化交易者的得力助手,在多变的市场中稳健前行。
-
-|| 
 
 #### Overview
 The "Z-Score Trend Following Strategy" leverages the Z-score, a statistical measure that gauges the deviation of a price from its moving average, normalized against its standard deviation. This strategy stands out due to its simplicity and effectiveness, particularly in markets where price movements often revert to a mean. Unlike more complex systems that might rely on a multitude of indicators, the Z-Trend strategy focuses on clear, statistically significant price movements, making it ideal for traders who prefer a streamlined, data-driven approach.
@@ -89,7 +49,6 @@ These risks can be managed and mitigated through ongoing market analysis, parame
 
 #### Summary
 The "Z-Score Trend Following Strategy," with its simplicity, robustness, and flexibility, offers a unique perspective for capturing trending opportunities. Through proper parameter settings, prudent risk management, and continuous optimization, this strategy can be a powerful tool for quantitative traders to navigate the ever-changing markets with confidence.
-[/trans]
 
 
 > Strategy Arguments

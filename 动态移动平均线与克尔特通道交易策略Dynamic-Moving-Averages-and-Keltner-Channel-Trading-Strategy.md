@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cc33b2d4467d879071.png)
-[trans]
-
-概述:
-本策略综合运用动态移动平均线、超级趋势指标、潜在支持与阻力位和克尔特通道,对价格变动进行多层次判断,实现自动化的趋势追踪交易。策略优点是交易信号生成清晰,胜率较高,同时结合风险管理措施,可控制单笔交易风险。
-
-策略原理:
-本策略运用动态移动平均线判断价格中短期趋势方向。具体来说,根据用户选择,脚本采用简单移动平均线或指数移动平均线。当最高价、最低价和收盘价均高于昨日时,判定为多头趋势;当最高价、最低价和收盘价均低于昨日时,判定为空头趋势。基于此,结合动态移动平均线的位置,生成买入和卖出信号。
-
-此外,策略还运用超级趋势指标识别长期趋势。超级趋势指标结合平均真实波动幅度,当价格运行于上轨之上且昨日收盘价低于上轨时产生买入信号。当价格跌破下轨且昨日收盘价高于下轨时产生卖出信号。
-
-为过滤假信号,本策略运用克尔特通道绘制通道上下轨。结合通道范围与超级趋势指标,可实现趋势追踪交易。具体来说,当价格由下向上突破上轨,且昨日收盘价低于上轨时产生强势买入信号;当价格由上向下跌破下轨,且昨日收盘价高于下轨时产生强势卖出信号。
-
-此外,脚本还辅助绘制了潜在支持与阻力位,进一步确定关键价格位。总体而言,多层指标组合,严格的突破条件,从根本上提高了交易信号的质量。
-
-策略优势:
-
-1. 多策略指标组合,交易信号生成清晰。克尔特通道确定关键价格范围,结合动态移动平均线和超级趋势指标严格判定趋势方向,有效过滤市场假突破。
-
-2. 严格的突破条件确保交易信号质量。价格需真正突破通道上下轨,同时结合昨日收盘价的位置,避免被套。
-
-3. 超级趋势指标可捕捉长期趋势,追踪长线方向性行情。
-
-4. 潜在支持与阻力位辅助判断价格关键点,可发现反转机会。
-
-5. 整体交易频率适中,不会过于密集交易。只在关键点发出高质量信号,胜率较高。
-
-策略风险:
-
-1. 在震荡行情中,指标可能发出误导信号,导致无效突破交易亏损。可通过调整参数优化,或人工干预退出SetPosition。
-
-2. 突破通道上下轨的止损点可能过大,单笔亏损风险偏高。可适当缩小止损范围,或采用时间止损。
-
-3. 追踪长线趋势时,可能错过部分中短线反转机会。可辅助采用震荡指标判断局部调整。
-
-4. 移动平均线系统有时对突发事件反应较慢。这时可考虑降低移动平均线参数,或采用其他指标辅助。
-
-策略优化方向:
-根据不同市场环境和交易偏好,本策略可从以下几个方向进行优化:
-
-1. 调整移动平均线参数,优化指标系统对价格变动的敏感度。
-
-2. 调整超级趋势指标的ATR周期和因子参数,优化超级趋势指标的作用。
-
-3. 调整止损点,平衡每单盈亏比例。也可利用时间止损进一步控制单笔亏损风险。
-
-4. 增加其他辅助指标,如布林带、KD指标等,进一步判断局部调整与反转机会。
-
-5. 利用open、close等变量绘制K线图形,直观判断价格行情。
-
-6. 进行参数优化、回测比对不同参数组合的效果。
-
-总结:
-本策略综合运用动态移动平均线、超级趋势指标和克尔特通道等多重指标,实现自动化的趋势跟踪交易。关键优势有:信号生成清晰,胜率较高;追踪长线趋势,捕捉方向性机会;止损点合理,控制单笔亏损风险。有效的多指标组合严格过滤假突破,确保发出的交易信号质量较高,适合自动化交易。通过参数调整和优化,本策略可适应不同市场环境,并可辅助人工决策找到交易时机。
-
-||
 
 Overview:
 This strategy integrates dynamic moving averages, Super Trend indicator, potential support and resistance levels, and Keltner Channels to conduct multi-level judgments on price fluctuations and achieve automated trend-following trading. The advantages of this strategy are clear trading signal generation, relatively high win rate, and incorporation of risk management measures to control per trade risks.
@@ -118,7 +63,6 @@ Based on different market environments and trading preferences, this strategy ca
 Conclusion:
 This strategy integrates dynamic moving averages, Super Trend indicator, Keltner Channels and other multiple indicators to achieve automated trend-following trading. Key advantages include: clear signal generation, relatively high win rate; tracking long-term trends and capturing directional opportunities; reasonable stop loss points to control per trade risks. Effective multi-indicator combinations strictly filter false breakouts and ensure relatively high quality of trading signals, suitable for automated trading. Through parameter tuning and optimization, this strategy can adapt to different market environments and assist manual decisions in finding trading opportunities.
 
-[/trans]
 
 > Strategy Arguments
 

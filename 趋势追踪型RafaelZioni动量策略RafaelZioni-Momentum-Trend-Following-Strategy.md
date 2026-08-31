@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b5464c2fb470403247.png)
-[trans]
-
-## 概述
-
-该策略基于RafaelZioni的SuperB指标,通过动量指标识别趋势,实现对上升趋势和下降趋势的自动跟踪,属于趋势追踪型策略。
-
-## 策略原理
-
-该策略使用RafaelZioni的SuperB指标识别价格趋势。SuperB指标基于价格波动范围、成交量和开盘价与收盘价之间的价差计算得到的SpreadVol指标。SpreadVol指标反映价格的动量特征。该策略使用SpreadVol指标的移动平均线和标准差确定阈值,当SpreadVol高于上轨时为上升趋势,低于下轨时为下降趋势。
-
-该策略通过追踪最高价最低价实时判断趋势转折。在上升趋势中,最高价一直创新高,判断为持续上升;当价格跌破最高价一定比例时,转为下降趋势。在下降趋势中,判断方法类似。这样可以对趋势转折点进行及时判断。
-
-## 优势
-
-该策略结合动量指标判断趋势方向,再通过最高价最低价实时跟踪,可以快速识别新的趋势方向,实现对上升和下降趋势的自动跟踪,避免漏买点和超买点的风险。
-
-RafaelZioni的SuperB指标反映价格变动的力度和速度,可以准确判断真正的趋势,有效过滤假突破。判断规则简单清晰,容易理解和验证。
-
-只做多头仓位,降低操作频繁带来的交易成本和滑点损失。
-
-## 风险
-
-该策略对突破前的盘整区域容易产生多次误交易。可以通过优化参数,降低对盘整区域的敏感度。
-
-在趋势震荡时,止损线容易被触发。可以适当放宽止损范围,以便持仓时间更长。
-
-多空转换时,需要及时切换仓位。如果切换不够及时,可能带来较大亏损。
-
-## 优化建议
-
-优化SuperB指标的参数,寻找更好的参数组合,提高指标的稳定性。
-
-优化最高价最低价跟踪的比例因子,降低对盘整区域的反应灵敏度。
-
-增加持仓时间标准,避免趋势震荡期间被止损。
-
-## 总结
-
-该策略利用RafaelZioni的SuperB指标判断价格趋势方向,并通过追踪最高价和最低价实时判断趋势转折,实现对上升和下降趋势的自动跟踪,避免漏买超买的风险,属于趋势追踪型的动量策略。该策略结合动量指标判断真趋势,判断规则简单清晰,可根据优化建议进一步改进和优化,值得研究和应用。
-
-||
 
 
 ## Overview
@@ -91,7 +50,6 @@ Increase the holding time criteria to avoid being stopped out during trend shock
 
 This strategy utilizes the SuperB indicator developed by RafaelZioni to determine the price trend direction, and judges trend reversals by tracking high and low prices in real time, realizing automatic tracking of upward and downward trends, avoiding missing buying points and overbuying risks. It belongs to a momentum strategy with trend following characteristics. This strategy combines momentum indicators to determine true trends with simple and clear rules. It can be further improved and optimized according to the optimization suggestions and is worth researching and applying.
 
-[/trans]
 
 > Strategy Arguments
 

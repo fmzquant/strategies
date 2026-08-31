@@ -11,93 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/112cd8ad34c6cf1ff1d.png)
 
-[trans]
-
-### 概述
-
-该策略主要利用均线交叉原理,结合RSI指标反转信号,以及自定义的双线追踪算法实现均线交叉追踪交易。策略追踪两个不同周期的均线交叉,一个快速均线追踪短期趋势,另一个慢速均线追踪长期趋势。当快速均线向上穿过慢速均线时,表示短期趋势向上,可以买入;当快速均线向下穿过慢速均线时,表示短期趋势结束,应该平仓。
-
-### 策略原理
-
-1. 计算两组不同参数的VWAP均线,分别代表长期趋势和短期趋势
-
-    - 慢速天幕线和基准线计算长期趋势
-    - 快速天幕线和基准线计算短期趋势
-
-2. 分别取两组天幕线和基准线的平均值作为慢速均线和快速均线
-
-3. 计算布林带指标判断盘整和突破
-
-    - 中线为快速均线和慢速均线的平均值
-    - 布林带上下轨用于判断突破
-
-4. 计算TSV指标判断交易量能量
-
-    - TSV大于0表示上涨力量大于下跌力量
-    - TSV大于其EMA表示力量增强
-
-5. 计算RSI指标判断超买超卖
-
-    - RSI低于30时为超卖区间,可以买入
-    - RSI高于70时为超买区间,应该卖出
-
-6. 入场条件:
-
-    - 快速均线上穿慢速均线
-    - 关闭价上穿布林带上轨
-    - TSV大于0且大于其EMA
-    - RSI低于30
-
-7. 出场条件:
-
-    - 快速均线下穿慢速均线
-    - RSI高于70
-
-### 优势分析
-
-1. 使用双均线系统,可以同时捕捉长短期趋势
-
-2. RSI指标避免买入超买区域,卖出超卖区域
-
-3. TSV指标确保有足够的交易量支撑趋势
-
-4. 利用布林带判断关键的突破点
-
-5. 多种指标组合,可以有效过滤假突破
-
-### 风险分析
-
-1. 均线系统容易产生错误信号,需要辅助指标过滤
-
-2. RSI指标参数需要优化,否则可能错过买卖点
-
-3. TSV指标对参数也很敏感,需要仔细测试
-
-4. 突破布林带上轨有可能是假突破,需要验证
-
-5. 多指标组合,参数优化难度大,容易过度优化
-
-6. 训练和测试数据不充分可能导致曲线拟合
-
-### 优化方向
-
-1. 测试更多周期参数,寻找最佳参数组合
-
-2. 尝试其他指标如MACD、KD替代或结合RSI
-
-3. 参数优化要充分利用walk forward分析
-
-4. 增加止损策略,以控制单笔损失
-
-5. 考虑加入机器学习模型辅助信号判断
-
-6. 针对不同市场调整参数,不要过度依赖单一参数组合
-
-### 总结
-
-本策略通过双均线系统捕捉长短期趋势,同时使用RSI、TSV、布林带等多种指标过滤信号。策略优势是可以顺势而为,捕捉长期上升浪潮。但也存在一定的假信号风险,需要进一步优化参数并控制止损来降低风险。总体来说,该策略结合趋势跟踪和反转指标,在长线上升市场中效果较好,但需要针对不同市场做getParameter调整。
-
-||
 
 
 ### Overview
@@ -184,7 +97,6 @@ This strategy mainly utilizes the moving average crossover principle, combined w
 
 This strategy captures long and short term trends using dual moving averages, and filters signals with RSI, TSV, Bollinger Bands and more. The advantage is trading in line with long-term upward momentum. But it also carries false signal risks, requiring further parameter tuning and stop losses to reduce risks. Overall, combining trend following and mean reversion yields good results in long-term uptrends, but parameters need adjustment for different markets.
 
-[/trans]
 
 > Strategy Arguments
 

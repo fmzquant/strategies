@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10abd0bdc623e94e525.png)
 
-[trans]
-#### 概述
-该策略基于布林带和ATR指标,通过布林带捕捉价格的波动范围,利用价格突破布林带上下轨作为建仓信号,同时使用ATR作为移动止损,最后以价格突破简单移动平均线作为平仓信号。该策略试图捕捉趋势行情,跟随趋势方向建仓,并在趋势反转时及时平仓。
-
-#### 策略原理
-1. 计算布林带:使用收盘价计算简单移动平均线(SMA)作为布林带中轨,并根据波动率(标准差)计算上下轨。
-2. 计算ATR:使用真实波幅(TR)的移动平均值计算ATR,作为移动止损的依据。
-3. 产生交易信号:当价格向下突破布林带下轨时产生做多信号,向上突破布林带上轨时产生做空信号;当价格向上突破ATR移动止损时产生做多信号,向下突破ATR移动止损时产生做空信号。
-4. 平仓:当做多仓位时,如果价格向上突破简单移动平均线,则平多;当做空仓位时,如果价格向下突破简单移动平均线,则平空。
-
-#### 策略优势
-1. 趋势跟踪:通过布林带和ATR移动止损捕捉趋势行情,适应不同市场环境。
-2. 及时止损:使用ATR作为移动止损,可以根据市场波动情况动态调整止损位置,控制风险。
-3. 简单易用:策略逻辑清晰,参数较少,易于理解和应用。
-
-#### 策略风险
-1. 参数敏感:布林带和ATR的参数选择会影响策略表现,需要根据不同市场和品种进行优化。
-2. 震荡市:在震荡市场环境下,频繁的交易信号可能导致过多的交易次数和成本。
-3. 趋势反转:当趋势反转时,策略可能会产生较大回撤。
-
-#### 策略优化方向
-1. 参数优化:对布林带和ATR的参数进行优化,找到适合不同市场和品种的最佳参数组合。
-2. 过滤器:添加其他技术指标或价格行为模式作为过滤器,减少误判和提高信号质量。
-3. 仓位管理:根据市场波动率或账户风险进行仓位动态调整,提高资金利用效率和收益风险比。
-
-#### 总结
-布林带ATR趋势跟踪策略通过布林带和ATR指标捕捉趋势行情,具有趋势跟踪、及时止损和简单易用的优势。但同时也存在参数敏感、震荡市和趋势反转等风险。可以通过参数优化、添加过滤器和仓位管理等方式进一步优化策略表现。
-
-|| 
 
 #### Overview
 This strategy is based on Bollinger Bands and the ATR indicator. It captures price fluctuations using Bollinger Bands, uses price breakouts above or below the bands as entry signals, and employs ATR as a trailing stop loss. The strategy closes positions when the price crosses the simple moving average. It aims to capture trending markets, enter positions in the direction of the trend, and promptly close positions when the trend reverses.
@@ -67,7 +38,6 @@ This strategy is based on Bollinger Bands and the ATR indicator. It captures pri
 
 #### Summary
 The Bollinger Band ATR Trend Following Strategy captures trending markets using Bollinger Bands and the ATR indicator. It has the advantages of trend following, timely stop loss, and simplicity. However, it also faces risks such as parameter sensitivity, choppy markets, and trend reversals. The strategy's performance can be further optimized through parameter optimization, adding filters, and position management.
-[/trans]
 
 
 

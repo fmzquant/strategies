@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/732a07d27f3d5d1e21.png)
-[trans]
-
-
-本策略通过计算K线的阳阴影长度比率,判断目前趋势方向,配合平均真实波幅ATR进行趋势识别,在突破点进行反向开仓,设置止损止盈,捕捉短期趋势。
-
-### 策略原理
-
-该策略主要通过计算K线的阳阴影长度比率,判断目前的趋势方向,当阴线长度过长时判断为向下趋势,当阳线长度过长时判断为向上趋势。
-
-策略具体逻辑是:
-
-1. 计算K线的下阴影长度:close-low(收盘价-最低价)
-2. 计算K线的上阴影长度:high-open(最高价-开盘价) 
-3. 取下阴影和上阴影的最大值作为阴影长度
-4. 计算K线实体长度:high-low(最高价-最低价)
-5. 计算阴影长度与实体长度之比
-6. 当比率大于0.5并且下阴影大于上阴影时,判断为向下趋势,设置多单进场
-7. 当比率大于0.5并且上阴影大于下阴影时,判断为向上趋势,设置空单进场
-8. 进场时要同时判断K线实体长度是否大于0.75倍的ATR平均真实波幅,避免无效突破
-9. 进场后设置止损止盈,止损为入场价乘以系数,止盈为入场价乘以2倍系数,实现盈亏比为2:1
-
-以上就是策略的基本交易逻辑,通过识别趋势突破点进行反向开仓,设置止损止盈后进行盈利优化。
-
-### 策略优势
-
-1. 使用阳阴影比率判断趋势方向,区分度高
-2. 结合ATR指标进行有效突破判断,避免头假信号
-3. 设置止损止盈,有利于风险控制
-4. 实现2:1盈亏比,符合量化交易标准
-5. 适用于高波动股票的短线交易
-6. 策略逻辑简单清晰,容易理解实现
-
-### 策略风险
-
-1. 股价剧烈波动时,止损可能被突破,造成损失扩大
-2. 效果与参数设定密切相关,需要优化参数
-3. 趋势产生转折时,可能形成损失
-4. 同步扩大止损和止盈范围会增加亏损概率
-5. 突破失败时会损失较大资金
-
-可通过合理止损,优化参数,及时止损来控制风险。
-
-### 策略优化
-
-策略可从以下几个方面进行优化:
-
-1. 优化阳阴影比率参数,找出最佳数值
-2. 优化ATR参数,找出最好的K线长度判定
-3. 优化止损止盈系数,实现最佳风险收益比
-4. 增加仓位管理,例如逐步加仓
-5. 增加跟踪止损,实现盈利保护
-6. 结合其他指标过滤入场信号
-7. 优化回测时间段,测试不同市场阶段的效果
-
-通过多方位测试与优化,可将策略效果最大化。
-
-总体来说,该策略通过趋势识别与风险控制的方式,利用短期价格波动获利,是一个效果稳定的短线突破策略。优化后可成为量化交易的关键部分。
-
-||
 
 This strategy judges the current trend direction by calculating the ratio of bullish/bearish shadow length, and identifies trend with ATR indicator. It opens reverse position on breakout points and sets stop loss and take profit to capture short-term trends.  
 
@@ -125,7 +66,6 @@ With multi-faceted testing and optimization, the strategy performance can be max
 
 Overall, this strategy profits from short-term price swings through trend identification and risk management. When optimized, it can become a robust short-term breakout strategy for quant trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -12,53 +12,6 @@ ChaoZhang
 ![IMG](https://www.fmz.com/upload/asset/133b22e7906f5d5ad59.png)
 
 
-[trans]
-
-
-## 概述
-
-双均线反转交易策略通过计算短期和长期两个不同周期的简单移动平均线,并根据价格与移动平均线的关系来产生交易信号。当短期均线上穿长期均线时,做多;当短期均线下穿长期均线时,做空。该策略属于趋势跟踪策略。
-
-## 策略原理
-
-该策略通过输入参数设置两条不同周期长度的简单移动平均线,短周期线被称为快线,长周期线被称为慢线。快线响应价格变化更迅速,能捕捉短期趋势;慢线 响应价格变化更缓慢,能过滤掉短期市场噪音,捕捉主要趋势。当快线上穿慢线时,表明价格上涨势头增强,做多;当快线下穿慢线时,表明价格下跌势头增强,做空。 
-
-具体来说,策略通过sma()函数计算两条均线,并将计算结果赋值给xSMA(慢线)和快线。策略使用close价格计算均线。当close价格上穿xSMA时,做多;当close价格下穿xSMA时,做空。策略还设置了交易时间范围限制,只有在指定的时间范围内才会发出交易信号。
-
-对每笔交易设置止盈止损点,并在到达止盈止损点时立即止盈止损。同时,策略通过barcolor函数将价格与慢线的关系显示在K线上:当做多时,K线为绿色;当做空时,K线为红色;当平仓时,K线为蓝色。
-
-## 优势分析
-
-- 使用双均线系统,可以有效跟踪趋势,并避免被短期市场噪音误导
-- 采用快慢均线配合,可以提高交易信号质量
-- 设置止盈止损点,可以控制单笔交易的风险
-- 限制交易时间范围,可以避免重大事件带来的巨大波动
-- 在K线上标记交易信号,形成视觉辅助,提高直观性
-
-## 风险分析
-
-- 双均线系统容易产生较多虚假信号,交易频繁带来交易成本压力
-- 需要合理设置均线参数,否则平滑效果不佳或产生等待时机过多问题 
-- 均线系统存在时滞,可能错过趋势转折点
-- 固定止盈止损点可能过于武断,无法动态调整
-- 限定交易时间范围可能错过其他时间段的交易机会
-
-可以通过调整均线参数,优化止盈止损策略,取消时间限制或设置更合理的交易时间段来降低风险。也可以考虑结合其他指标作为过滤条件,避免出现太多虚假信号。
-
-## 优化方向
-
-- 可以测试不同均线周期的组合,寻找最佳参数
-- 可以考虑将止盈止损改为动态追踪,比如与ATR挂钩
-- 可以引入其他指标,如MACD、KD等作为过滤信号
-- 可以对交易时间范围进行优化,使其能捕捉更多交易机会
-- 可以结合突破策略,在均线附近寻找突破信号
-- 可以建立动态离场机制,当价格进入区间时主动止损
-
-## 总结
-
-双均线反转交易策略overall是一种简单实用的趋势跟踪策略。它充分利用均线的平滑作用识别趋势方向,并配合快慢均线产生交易信号。该策略易于实现,思路清晰,适合初学者掌握。但其可能产生较多虚假信号和时滞问题。可以通过参数优化、引入辅助指标等方法来改进,使策略更稳定可靠。如果使用得当,该策略可以产生稳定的盈利,值得进行全面测试和优化。
-
-||
 
 
 ## Overview
@@ -104,7 +57,6 @@ Risk can be reduced by adjusting MA parameters, optimizing take profit/stop loss
 
 The dual moving average reversal trading strategy overall is a simple and practical trend following strategy. It takes full advantage of the smoothing effect of MAs to identify trend direction, and uses fast/slow MAs to generate trading signals. The strategy is easy to implement with clear logic, suitable for beginners to grasp. However, it may generate excessive false signals and lag issues. Improvements can be made via parameter optimization, adding auxiliary indicators etc to make the strategy more robust. If used properly, this strategy can deliver steady profits and is worth comprehensive testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

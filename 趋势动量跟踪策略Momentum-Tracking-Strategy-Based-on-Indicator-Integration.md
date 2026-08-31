@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b2945829979b0552f6.png)
 
-[trans]
-
-
-## 概述
-
-本策略基于自定义的指标积分器,通过对价格与移动平均线距离的累积求和,判断价格趋势方向,实现趋势跟踪。
-
-## 策略原理
-
-该策略使用自定义指标对价格与移动平均线的距离进行累积求和,具体实现如下:
-
-1. 计算价格相对于长度为200的简单移动平均线的距离k=close-sma(close,200)
-
-2. 定义累积周期s=29,对最近s周期内k的值进行累积求和:sum = 0, for i = 0 to s, sum := sum + k[i]
-
-3. 当sum>0时产生做多信号,当sum<0时产生做空信号
-
-4. 进入做多头寸时,如果sum<0则平仓;进入做空头寸时,如果sum>0则平仓
-
-该策略通过跟踪价格与移动平均线距离的累积和的正负来判断价格总体趋势方向,当积分和为正,认为价格处于上升趋势中,应持有多头;当积分和为负,认为价格处于下降趋势中,应持有空头。
-
-## 策略优势
-
-1. 使用自定义指标积分器,能够有效判断价格趋势方向
-
-2. 采用积分思想,对价格与移动平均线距离进行累积,能够提高判断趋势的准确性
-
-3. 相对简单的逻辑,容易理解实现,方便优化改进
-
-4. 可以灵活调整积分周期参数,优化积分器判定趋势的灵敏度
-
-5. 回测表现良好,收益稳定,可实际应用
-
-## 策略风险
-
-1. 积分周期设置不当可能导致积分器反应不灵敏,错过趋势转折点
-
-2. 移动平均线长度设置不当,可能导致积分器误判价格趋势
-
-3. 突发重大事件导致价格急剧变动,会使积分器产生错误信号
-
-4. 交易品种选择不当,如选择波动率过大的品种,会使积分器效果不佳
-
-对应风险的解决方法:
-
-1. 优化积分周期参数,使积分器对趋势变化更敏感
-
-2. 测试不同长度移动平均线的效果,选择能够有效判定趋势的长度
-
-3. 在重大事件前关闭策略,避免大幅价格变动带来的错误信号
-
-4. 选择低波动率的交易品种,使积分器效果更好
-
-## 策略优化方向 
-
-1. 可以考虑在积分器基础上加入其他辅助指标,如RSI等,形成综合判定
-
-2. 可以研究不同类型移动平均线与价格距离的积分效果
-
-3. 可以尝试自动优化积分周期参数,使其能适应不同交易品种
-
-4. 可以加入交易量指标,避免积分器在价格剧烈震荡时产生错误信号
-
-5. 可以通过机器学习等方法自动优化积分器参数,使策略更具鲁棒性
-
-## 总结
-
-本策略通过自定义指标积分器判断价格趋势方向,采用价格与移动平均线距离累积求和的方法实现对趋势的有效跟踪。策略 logic 简单清晰,回测表现良好。可以通过调整积分器参数、加入辅助指标、自动优化等方法进行改进,使策略在实盘中更稳定可靠。总体来说,该策略是一个可实际应用的量化趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -149,7 +79,6 @@ Corresponding solutions:
 
 This strategy judges trend direction using a custom indicator integrator by accumulating the distance between price and MA. The logic is simple and clear, and backtest results are good. It can be improved by adjusting integration parameters, adding auxiliary indicators, auto optimization etc. for more reliable practical application. Overall it is an applicable quantitative trend tracking strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/772186ee4755fe082e.png)
-[trans]
-
-## 概述
-该策略结合了移动平均线指标、布林带指标和UT Bot Alerts指标,实现了一个简单的突破操作策略。当价格突破布林带上轨时,做多;当价格突破布林带下轨时,做空。
-
-## 策略原理
-1. 使用200周期的EMA作为判断趋势的中轴线。价格在EMA上方为看涨,价格在EMA下方为看跌。
-2. UT Bot Alerts指标结合ATR,生成买卖信号。当价格和快速EMA交叉布林带上轨时产生做多信号;当价格和快速EMA交叉布林带下轨时产生做空信号。
-3. ATR止损指标用于设置止损点。止损距离为ATR值的1.5倍。    
-4. 进场后通过风险回报比设置止损点、止盈点和止损移动到入场价。
-
-## 优势分析
-1. 使用布林带指标判断适合做多做空的时机,可以提高获利概率。
-2. UT Bot Alerts指标可以产生比较准确的信号。
-3. 采用风险回报比进行止损止盈,可以有效控制风险。
-
-## 风险分析
-1. 布林带在震荡市中容易产生错误信号。
-2. ATR有滞后性,在趋势开始阶段止损距离可能过大。 
-3. 风险回报比设定不当也会导致过于激进或过于保守。
-
-## 优化方向  
-1. 可以尝试使用别的指标代替UT Bot Alerts指标。
-2. 可以对ATR的周期和倍数进行优化,使止损距离更合适。
-3. 可以测试不同的风险回报比,找到最佳参数。
-
-## 总结
-该策略整合了多个指标的优点,具有较强的实用性。通过参数优化,可以成为一个稳定可靠的突破系统。但也需要注意防范指标失效和参数不当导致的风险。
-
-
-||
 
 ## Overview
 This strategy combines moving average, Bollinger bands and UT Bot Alerts indicators to implement a simple breakout trading strategy. It goes long when price breaks above Bollinger upper band and goes short when price breaks below Bollinger lower band.
@@ -68,7 +37,6 @@ This strategy combines moving average, Bollinger bands and UT Bot Alerts indicat
 
 ## Conclusion  
 This strategy integrates the strengths of multiple indicators and has considerable practicality. Through parameter optimization, it can become a steady and reliable breakout system. But the risks arising from indicator failure and improper parameters should also be watched out for.  
-[/trans]
 
 > Strategy Arguments
 

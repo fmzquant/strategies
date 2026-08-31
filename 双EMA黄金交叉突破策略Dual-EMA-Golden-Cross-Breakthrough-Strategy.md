@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/162925f4585534cd7a8.png)
 
-[trans]
-
-### 概述
-
-该策略是基于5分钟和34分钟的指数移动平均线(EMA)进行黄金交叉和死亡交叉操作的趋势跟踪策略。当快线从下方上穿慢线时,进行长仓开仓;当快线从上方下穿慢线时,进行空仓开仓。并设置止盈止损来控制风险。
-
-### 策略原理  
-
-1. 快线EMA5和慢线EMA34构成交易信号。EMA5反应 Price 的最近变化,EMA34反应 Price 的中期变化。  
-2. 当快线上穿慢线时,为黄金交叉,表示短期行情好于中期行情,持有多单。  
-3. 当快线下穿慢线时,为死亡交叉,表示短期行情差于中期行情,持有空单。
-4. 设置止盈止损来锁定利润和控制风险。
-
-### 优势分析
-
-1. 使用双EMA过滤假突破,避免被套。
-2. 追踪中期趋势,增强盈利机会。  
-3. 设置止盈止损有效控制风险。
-
-### 风险分析
-
-1. 双EMA具有滞后性,可能错过短期交易机会。  
-2. 止损点设置过大,亏损扩大的风险。
-3. 止盈点设置过小,未能最大化盈利的机会。 
-
-### 优化方向  
-
-1. 优化EMA参数,寻找最佳参数组合。  
-2. 优化止盈止损点,锁定更大利润。
-3. 增加其他指标过滤,如MACD,KDJ等,提高信号准确性。  
-
-### 总结  
-
-本策略通过双EMA移动平均线的黄金交叉和死亡交叉产生交易信号,并设置止盈止损来控制风险,是一种简单有效的中期趋势跟踪策略。优化止盈止损参数,引入其他指标过滤信号,可以进一步增强策略的稳定盈利能力。
-
-||
 
 ### Overview  
 
@@ -81,7 +45,6 @@ This strategy is a trend following strategy based on golden cross and death cros
 
 This strategy generates trading signals from golden crosses and death crosses of the dual EMA lines, and sets stop profit and stop loss to control risks. It is a simple and effective mid-term trend following strategy. Further enhancing stable profitability can be achieved by optimizing stop profit/loss parameters and introducing other indicators to filter signals.
 
-[/trans]
 
 > Strategy Arguments
 

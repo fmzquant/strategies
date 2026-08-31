@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/550f6d2fc5464ca01e.png)
 
-[trans]
-
-## 概述
-
-该策略综合运用了股票技术指标STC、移动平均线MA和平均真实波动率ATR,结合多种技术指标判断趋势,实现了较为稳定的趋势追踪交易。
-
-## 策略原理
-
-1. STC指标判断趋势反转。该指标利用快线减慢线,再进行二次平滑处理,形成一致的趋势信号。当指标上穿0轴时为买入信号,下穿0轴时为卖出信号。
-
-2. 移动平均线MA判断趋势方向。股票价格上穿MA时,视为仍在上涨行情中,为持有多单信号。价格下穿MA时,视为下跌行情,为持有空单信号。
-
-3. ATR指标设定止损止盈。ATR可根据市场波动率,动态调整止损止盈点位。并以ATR作为交易方向信号,多头阶段ATR上涨,空头阶段ATR下跌。
-
-4. 策略以STC判断反转为主要买卖点选取时机,以MA作为辅助判断趋势,用ATR进行止损止盈。当STC发出买入信号,如果MA也为上涨趋势,ATR为上升,则开多单;如果STC发出卖出信号,如果MA 为下跌趋势,ATR为下降,则开空单。
-
-## 优势分析
-
-1. 该策略综合运用多种指标判断趋势和反转点,提高了交易信号的准确性。
-
-2. STC指标可捕捉反转信号,避免交易被套。MA指标过滤不稳定的反转信号,确保��随主要趋势。
-
-3. ATR指标可根据市场波动率设定止损止盈位,回避巨大亏损。并利用ATR作为辅助判断趋势的信号。
-
-4. 多指标组合,可形成较强的趋势追踪能力,历史回测具有较好的稳定盈利能力。
-
-## 风险分析
-
-1. STC指标存在时间滞后,可能错过价格反转的最佳时点。
-
-2. MA指标在价格剧烈变动时,其位置倾向滞后,可能产生错误信号。
-
-3. ATR止损可能被秒出,应适当放宽ATR倍数,或在大趋势中暂时关闭。
-
-4. 多指标组合虽提高了胜率,但也增多了触发止损的机会,应适当调整参数,降低不必要止损。
-
-## 优化方向
-
-1. 调整STC参数,寻找更快响应反转的参数组合
-
-2. 优化MA周期参数,使其能更好跟踪趋势
-
-3. 测试不同的ATR倍数的参数对策略影响
-
-4. 尝试其他指标替换STC,寻找更好的匹配指标
-
-5. 增加机器学习算法,自动优化多个参数
-
-6. 增加对大周期趋势的判断,区分大周期不同阶段
-
-## 总结
-
-STC MA ATR策略综合运用三种指标捕捉趋势反转点,实现稳定的趋势追踪交易。指标组合过滤假信号,止损止盈控制风险,具有较强的拟合性和稳定性。通过参数优化和算法引入,可以进一步增强策略的表现。该策略整体来看是一个可靠、适中的策略选择。
-
-||
 
 ## Overview
 
@@ -119,7 +64,6 @@ This strategy combines the technical indicators STC, Moving Average MA and Avera
 
 The STC MA ATR strategy combines 3 indicators to capture trend reversal points for stable trend tracking trading. Indicator combos filter false signals and control risks with stop loss/take profit. It has strong robustness and stability. Further improvements can be achieved through parameter optimization and algorithm introduction. Overall it is a reliable and moderate strategy choice.
 
-[/trans]
 
 > Strategy Arguments
 

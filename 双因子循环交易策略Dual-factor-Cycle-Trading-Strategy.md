@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1013f134bacbb73cf9a.png)
 
-[trans]
-
-## 概述
-双因子循环交易策略是一种量化交易策略。它结合了两种不同类型的技术指标来产生交易信号,以追踪市场趋势,获取超额收益。
-
-这种策略的优点是可以通过组合不同的因子来寻找交易机会,双重确认可以提高信号的可靠性,降低错误交易的概率。同时,策略充分利用了循环交易的优势,即及时止损和反向开仓,可以有效控制风险。
-
-## 策略原理
-该策略由两部分组成:
-
-1. 123反转策略
-该策略来源于Ulf Jensen的《我如何在期货市场上将资金翻了三番》一书。它的交易逻辑是:当收盘价连续两日高于前一日收盘价,且9日慢速K线低于50时做多;当收盘价连续两日低于前一日收盘价,且9日快速K线高于50时做空。
-
-2. 看涨/看跌支撑阻力策略
-该策略通过判断价格是否打破关键的支撑或阻力来产生信号。当价格突破上一个交易日的最高价时看涨,当价格跌破上一个交易日的最低价时看跌。
-
-综合以上两种策略的信号,当双方信号一致时进入仓位,否则清仓。同时设置了反向开仓模式,以便在市场变化时及时止损并反向交易,实现资金的循环运作。
-
-## 优势分析
-这种双因子循环交易策略具有以下优势:
-
-1. 多因子设计确保信号可靠性高。123反转策略与支撑阻力策略互为验证,可以减少错误信号。
-
-2. 循环交易机制使策略可以顺应市场变化,有效控制单边损失。
-
-3. 采用9日 stochastics 指标可过滤掉市场上的杂音,使信号更清晰。
-
-4. 比单一因子策略风险更低,回撤更小。多因子可形成合力,抑制非理性波动对策略的影响。
-
-## 风险分析
-该策略也存在一些风险:
-
-1. 在震荡行情中无法很好捕捉趋势,会频繁止损反向开仓从而增加交易成本。可适当放宽止损线来应对。
-
-2. Stochastics 参数设置会影响信号质量。参数不当可能导致信号错位、品质下降。需对参数进行反复测试优化。 
-
-3. 双因子设计虽提高信号质量,但也增加了市场“噪音”对策略的影响。这要求我们在构建和验证策略时更为审慎。
-
-## 优化方向 
-我们可以从以下几个方面来进一步优化这个策略:
-
-1. 测试不同长度周期的 Stochastics,找到剔除市场噪音的最佳参数组合
-
-2. 加入趋势过滤器,过滤掉震荡行情,只在明确趋势下打开仓位
-
-3. 优化止损线设置算法,降低交易成本的同时保证止损有效
-
-4. 测试不同的因子组合,找到交易信号更明确,策略更稳定的因子组合
-
-## 总结
-本策略通过双因子设计获得了较高的信号质量和风险调整收益。同时利用循环交易机制有效控制了单边行情的损失。该策略可谓风险和收益之间取得了很好的平衡。我们仍需要在参数优化,风控设置等方面进行深入的研究,以获得更好的策略表现。
-
-||
 
 
 ## Overview
@@ -118,7 +65,6 @@ We can further optimize this strategy from the following aspects:
 ## Summary 
 Through dual-factor design, this strategy has obtained higher signal quality and risk-adjusted returns. At the same time, the use of cycle trading effectively controls the losses in unilateral market. The strategy has struck a good balance between risk and return. More in-depth research is still needed on parameter optimization, risk control settings, etc. to achieve better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

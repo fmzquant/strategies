@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16373ac354208d29cc8.png)
-[trans]
-
-## 概述
-该策略运用支撑、阻力以及趋势线这三个技术指标来自动化入场和止损。策略首先识别关键的支撑和阻力位,然后结合趋势方向判断入场时机。
-
-## 策略原理
-1. 识别关键支撑位和阻力位。
-2. 利用趋势线判断市场趋势方向。当价格高于昨日收盘价时定义为上涨趋势,否则为下跌趋势。
-3. 当价格接近支撑位且属于上涨趋势时,发出买入信号。
-4. 当价格接近阻力位且属于下跌趋势时,发出卖出信号。  
-5. 止盈目标根据风险回报比例计算,止损位设置在支撑位附近。
-6. 可选择使用跟踪止损来锁定利润。
-
-## 优势分析
-1. 充分利用支撑、阻力和趋势三个强大指标的优势。
-2. 自动判断入场时机,避免主观错误。
-3. 风险可控,止损控制在关键支撑位附近。
-4. 可选跟踪止损锁定利润,避免盈利回吐。
-
-## 风险分析
-1. 突破失败风险。价格突破支撑或阻力位后可能再次回调,造成钝化。
-2. 趋势判断失败风险。使用趋势线判断趋势方向可能会有错误。
-3. 止损被打破风险。尽管止损距离支撑位不远,但在剧烈波动中仍可能被直接推破。  
-
-应对方法:
-1. 适当放宽支撑阻力判定幅度。
-2. 采用多种指标验证趋势判断。 
-3. 采用范围止损或及时人工干预。
-
-## 优化方向  
-1. 加入更多指标验证入场信号,提高准确率。例如量价指标、移动平均线等。
-2. 优化支撑阻力位和止损位的设置。可以测试不同参数对结果的影响。  
-3. 尝试机器学习方法自动优化参数。
-
-## 总结
-本策略整合多种技术指标的优势,在合理参数设置的前提下,可以获得较好的回报风险比。关键是参数设置和入场顺序的优化。总体而言,该策略框架合理,有很大的改进空间。
-
-|| 
 
 ## Overview
 This strategy utilizes three technical indicators - support, resistance and trendlines - to automate entries and stop losses. It first identifies key support and resistance levels, then combines trend direction to determine entry timing.
@@ -84,7 +46,6 @@ Solutions:
 ## Conclusion  
 This strategy combines the power of multiple technical tools. With proper parameter tuning, it can achieve good risk-adjusted returns. The key is to optimize the parameters and entry sequence. Overall the strategy framework is sound and has lots of potential for improvements.\
 
-[/trans] 
 
 > Strategy Arguments
 

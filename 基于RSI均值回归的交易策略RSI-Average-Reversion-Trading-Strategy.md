@@ -9,72 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略利用多种价格输入计算RSI均值,判断价格是否处于超买超卖状态,属于反转交易类策略。
-
-## 策略原理
-
-1. 分别基于收盘价、开盘价、最高价等计算RSI值。
-
-2. 对多个RSI值取算术平均,获得RSI均值。
-
-3. RSI均值高于0.5为超买信号,低于0.5为超卖信号。
-
-4. RSI均值回归0.5中线时产生反转交易信号。
-
-5. 设定RSI均值退出阈值,如突破0.65区域平仓做多,突破0.35区域平仓做空。
-
-6. 交易逻辑简单清晰易于实现。
-
-## 优势分析
-
-1. 利用多种价格信息计算RSI均值,提高稳定性。
-
-2. RSI均值回归中线产生交易信号,兼具趋势和反转特征。
-
-3. 直观的RSI均值曲线,形成清晰的视觉交易信号。
-
-4. 默认参数简单实用,适合反转交易者。
-
-5. 代码简洁,容易理解修改,适合技术实力初级者。
-
-
-## 风险分析
-
-1. RSI指标容易形成假反转信号,导致亏损。
-
-2. RSI参数和中线阈值设定不当会影响策略表现。
-
-3. 仅基于单一RSI指标,系统性风险较大。
-
-4. 无法确定价格反转 sustaining 能力。
-
-5. 趋势行情下容易造成亏损。
-
-
-## 优化方向
-
-1. 测试优化RSI周期参数,提高指标灵敏度。
-
-2. 评估不同价格输入对RSI均值的影响。
-
-3. 添加趋势过滤器,避免逆势交易。
-
-4. 结合其他因子来确认反转信号。
-
-5. 建立动态止损机制来控制风险。
-
-6. 优化入场、止损、止盈策略,提高策略效率。
-
-## 总结
-
-该策略利用RSI均值反转交易,简单易行,适合初学者。但存在信号误判和趋势风险。通过多因子优化和风险管理方面改进,可以使策略更稳健高效,成为可靠的反转交易系统。
-
-||
 
 ## Overview 
 
@@ -138,7 +72,6 @@ This strategy uses RSI average based on multiple price inputs to determine overb
 
 This strategy trades RSI mean reversion simply and viably for beginners. But risks include signal errors and trends exist. Multi-factor optimization and risk management improvements can make the strategy more robust and efficient as a reliable reversal system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e6a662d9005fbcf118.png)
-[trans]
-## 概述
-该策略利用布林带的上下轨,实现动态止损。当价格突破布林带上轨时做空,突破下轨时做多,并设置动态止损,追踪价格运行。
-
-## 原理
-该策略的核心在于布林带的上下轨。布林带中轨为n日移动平均线,上轨为中轨+k*n日标准差,下轨为中轨-k*n日标准差。当价格从下轨反弹向上时,做多;当价格从上轨向下回落时,做空。同时,策略设置止损位,在价格运行过程中,动态调整止损位,并设置止盈位,实现谨慎的风险控制。
-
-## 优势
-1. 利用布林带具有较强的回归中轨性质,捕捉中长线趋势;
-2. 做多做空信号清晰,容易操作;  
-3. 设置动态滑点止损,最大程度锁定盈利,控制风险;
-4. 可根据市场调整参数,适应不同行情。
-
-## 风险及解决 
-1. 布林带在震荡行情中会有多次做多做空信号,容易被套。解决方法是合理设置止损位,控制单笔损失。
-2. 参数设置不当可能导致胜率下降。解决方法是根据不同品种合理优化参数。
-
-## 优化方向
-1. 优化移动平均线参数,适应品种特性;
-2. 加入趋势过滤,避免震荡行情;
-3. 结合其他指标作为过滤条件,提高策略稳定性。
-
-## 总结
-该策略利用布林带的回归属性,配合动态滑点止损,在控制风险的前提下获取中长线趋势利润,是一种适应性强、稳定性高的量化策略。通过参数优化和规则优化,可以适应更多品种,在实盘中获得稳定收益。
-
-||
 
 ## Overview
 This strategy utilizes the upper and lower rails of Bollinger Bands to implement dynamic stop loss. It goes short when the price breaks through the upper rail and goes long when the price breaks through the lower rail. And it sets dynamic stop loss to track the price movement.
@@ -60,7 +34,6 @@ The core of this strategy lies in the upper and lower rails of Bollinger Bands. 
 
 ## Conclusion
 This strategy utilizes Bollinger Bands' regression attributes along with dynamic sliding stop loss to obtain medium and long term trend profits while controlling risks. It is a highly adaptable and stable quantitative strategy. Through parameter optimization and logic optimization, it can be adapted to more products and obtain steady profits in live trading.  
-[/trans]
 
 > Strategy Arguments
 

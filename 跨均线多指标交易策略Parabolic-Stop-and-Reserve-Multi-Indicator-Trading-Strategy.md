@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5a20bfe19bff492512.png)
-[trans]
-
-## 概述
-
-这个策略结合了多种技术指标,包括帕拉波利克 SAR,三重指数移动平均线 (TEMA),普通指数移动平均线 (EMA),相对强弱指标 (RSI),平衡量指标 (OBV) 等,用于识别股票价格的反转信号,并结合趋势过滤和止损设置产生买入和卖出信号。
-
-## 策略原理
-
-该策略运用帕拉波利克 SAR 作为主要的价格反转信号指标。SAR 在价格上方呈现多头状态,在价格下方呈现空头状态。当 SAR 从价格下方突破到上方时产生卖出信号,从价格上方突破到下方时产生买入信号。
-
-为了过滤假信号,该策略使用 TEMA 或者 EMA 技术指标作为确认信号。只有在 SAR 信号和 TEMA(快线上穿慢线)或者 EMA(快线上穿慢线)同时出现时,才会产生买入信号;只有 SAR 信号和 TEMA(快线下穿慢线)或者 EMA(快线下穿慢线)同时出现的情况下,才会产生卖出信号。
-
-该策略还提供了 RSI 指标和 OBV 指标作为选择的确认信号。
-
-另外,该策略提供了三重 EMA 技术指标图形显示,可以更清晰地观察价格趋势;提供模态指标 eMAMA 的显示,用来辅助判断趋势转折点。
-
-该策略还在图表下方提供了一个汇总指标的信息表,可以快速查看多个指标的最新情况。
-
-## 优势分析
-
-该策略结合 SAR、EMA/TEMA、RSI、OBV 等多种指标,可以有效发现价格反转信号,避免假突破。加入三重 EMA 和模态平均线 eMAMA 的趋势判断,可以提高精确度。
-
-图表显示指标丰富,可以全面观察市场情况。加入的指标汇总表,可以快速获取多个指标的最新状态。
-
-交易逻辑规则清晰,参数可调整,可以适应不同交易品种。
-
-## 风险分析
-
-该策略依赖指标转换发出信号,如果指标设置不当,会产生大量噪音交易信号。指标参数需要根据不同交易品种优化设置。
-
-在横盘整理的市场中,SAR 指标可能会产生频繁的假信号。这时需要关注趋势判断指标的确认。
-
-交易品种选择不当也会导致策略失败。需要选择具有明显趋势的品种来应用该策略。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化 SAR 参数,降低噪音信号
-2. 优化移动平均线参数,提高趋势判断的准确性
-3. 更换确认指标,测试 RSI、OBV 等指标的效果
-4. 增加附加指标,丰富多时间框架分析
-5. 优化止损策略,限制单笔损失
-
-## 总结
-
-该跨均线多指标交易策略,集成多种常用技术分析指标,形成买卖决策信号,可以有效识别价格反转点,具有参数可调、易于优化的特点,适合有经验的量化交易者应用。但需要根据不同品种特点优化参数,选择趋势明显的交易品种,才能发挥策略效果,避免产生大量噪音信号。
-
-|| 
 
 ## Overview  
 
@@ -106,7 +57,6 @@ The strategy can be enhanced from the following aspects:
 
 The Parabolic Stop and Reserve Multi-Indicator Trading Strategy integrates various commonly used technical indicators to form systematic buy and sell signals. It can effectively identify price reversal points. The configurable parameters make it easy to optimize for different trading instruments. Experienced quant traders can take advantage of this strategy. However parameter tuning based on specific instrument characteristics is a must. In addition trending instruments should be selected to avoid excessive noisy signals.
 
-[/trans]
 
 > Strategy Arguments
 

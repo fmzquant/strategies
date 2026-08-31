@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14b7b09181043830ca8.png)
-[trans]
-
-## 概述
-
-本策略通过MACD指标和RSI指标的组合使用实现双确认入场机制,在获利能力和风险控制之间取得平衡,旨在在中长线上取得稳定收益。
-
-## 策略原理
-
-该策略主要利用MACD指标判断市场趋势和入场时机。MACD线突破信号线视为买入訊号,MACD线跌破信号线则为卖出訊号。另外,RSI指标的过买超卖区域用于过滤假突破。当MACD买入訊号出现而RSI指标没有进入过买区时,Such策略才会发出买入訊号。卖出訊号的判断也类似。
-
-为了确保交易訊号的可靠性,本策略还加入成交量的判断。只有当成交量大于20天平均成交量时,策略才会发出交易訊号。这可以避免在市场交易量不足时产生的错误訊号。
-
-最后,策略还利用K线实体的方向作为追踪止损和确认的方式。当K线实体方向发生转变时平掉当前头寸。这可以锁定profit,防止profit回吐。
-
-## 优势分析
-
-- 利用MACD判断市场趋势和入场时机,可以在趋势开始阶段入场,获利空间大
-- RSI指标避免在超买超卖区域入场,可以减少损失
-- 成交量的判断可以进一步过滤假訊号,提高获利概率
-- K线实体追踪止损方式合理,可以很好控制风险
-
-## 风险分析
-
-- MACD指标存在滞后性,可能错过短線趋势反转
-- 成交量规则可能错过低量启动的趋势
-- K线止损方式可能被短期冲高冲低击出
-
-## 优化方向
-
-- 可以考虑加入更多过滤指标,如布林带判断,进一步提升信号质量
-- 可以测试添加轨道止损来锁定长线获利
-- 可以尝试MACD的参数组合优化,提高指标的敏感度
-
-## 总结
-
-本策略整体来说稳定性和获利能力均衡。MACD判断主趋势,RSI和成交量双重过滤提高信号质量,K线追踪止损控制风险。通过参数优化和加入其他技术指标,本策略可以进一步改善。值得注意的是不要过度追求复杂度,保持策略的简单和稳定非常重要。
-
-||
 
 ## Overview 
 
@@ -84,7 +46,6 @@ Finally, the strategy also uses the direction of candlestick bodies as a way of 
 
 Overall this strategy balances stability and profitability. MACD judges the main trend, RSI and volume provide dual filtering to improve signal quality, candlestick tracking stops control risk. The strategy can be further improved through parameter optimization and incorporating additional technical indicators. Notably, avoiding excessive complexity and maintaining simplicity and stability is very important.
 
-[/trans]
 
 
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-### 策略概述
-
-窄幅震荡内收突破策略是一种识别窄幅震荡和内部收盘突破的长线做多策略。它在满足价格震荡收窄和内部收盘的双重条件时,判断均线方向,产生做多信号,以捕捉突破后的价格趋势。
-
-### 策略原理
-
-1. 使用NR7判定过去7日内价格震荡最窄的一天
-
-2. 使用内部收盘判断前一日高点低于当前日,前一日低点高于当前日
-
-3. 当出现NR7和内部收盘的同时出现,且收盘价高于开盘价,进入做多
-
-4. 平仓条件为随后一天收盘价高于开盘价
-
-该策略同时利用价格震荡缩小和内部收盘两大信号,判断市场进入积累震荡阶段。当均线方向向上时,价格很可能出现突破。这种多重条件过滤,可以提高实际交易的准确性。
-
-另外,该策略仅做多,避免被困于震荡区间,可减少不必要的交易次数。
-
-### 策略优势
-
-- 同时判断震荡收窄和内部收盘两大信号
-
-- 均线方向确定大趋势existence
-
-- 多重条件过滤,提高信号准确率
-
-- 仅做多,避免震荡困扰
-
-- 回测参数可优化,策略灵活
-
-### 风险警示
-
-- 需要适当调整均线参数,优化交易信号
-
-- 买点可能滞后,需要关注突破时机
-
-- 仅做多无法获利于下跌行情
-
-- 仍需防范震荡范围再次扩大
-
-### 总结
-
-窄幅震荡内收突破策略对市场结构进行了深入判断,在高概率情况下产生交易信号。它具有较强的适应性,可通过调整参数得到优化。该策略值得进行回测验证和实盘调整,可成为量化交易体系中的一个关键模块。
-
-||
 
 ### Strategy Overview
 
@@ -102,7 +55,6 @@ Also, the long-only approach avoids consolidation traps and unnecessary trades.
 
 The narrow range inside day breakout strategy thoroughly examines market structure and generates high-probability signals. With parameter tuning, it is highly adaptive. The strategy is worth backtesting, live optimization, and integration into overall quant systems.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18ca01137acd88a90c4.png)
-[trans]
-
-
-## 概述
-
-该策略基于移动止损的思想,利用Distance Close Bars(DCB)指标判断价格走势,结合快速RSI指标进行过滤,实现移动止损和跟踪止损。策略同时还使用了马丁格尔增仓原理,适合中长线趋势交易。
-
-## 原理
-
-1. 计算lastg和lastr分别代表最后一个涨幅K线的收盘价和最后一个跌幅K线的收盘价。
-
-2. 计算dist为lastg和lastr的价差。
-
-3. 计算adist为dist的30周期简单移动平均。
-
-4. 当dist大于adist的两倍时生成交易信号。
-
-5. 结合快速RSI指标过滤 signal,避免假突破。
-
-6. 若有信号且无持仓,按固定百分比入场开仓。
-
-7. 使用马丁格尔原理,亏损后加仓。
-
-8. 价格触发止损或止盈后平仓。
-
-## 优势
-
-1. 采用DCB指标判断趋势方向,能够有效捕捉中长线趋势。
-
-2. 快速RSI指标过滤可避免假突破带来亏损。
-
-3. 移动止损止盈机制可锁定盈利,有效控制风险。
-
-4. 马丁格尔原理可在亏损后加大仓位,追求更高收益。
-
-5. 策略参数设置合理,适合不同市场环境。
-
-## 风险
-
-1. DCB指标可能发出错误信号,需要结合其他指标过滤。
-
-2. 马丁格尔加仓会加剧亏损,需要严格的资金管理。
-
-3. 止损点设置不合理可能造成超过预期的损失。
-
-4. 需要严格控制仓位数量,避免超出资金负担能力。
-
-5. 交易合约设置不当可能导致极端行情下巨额亏损。
-
-## 优化思路
-
-1. 优化DCB参数,寻找最佳参数组合。
-
-2. 尝试其他指标替代快速RSI进行过滤。
-
-3. 优化止损止盈参数,提高策略胜率。 
-
-4. 优化马丁格尔参数,降低加仓风险。
-
-5. 测试不同交易品种,选择最佳品种套利。
-
-6. 结合机器学习等技术动态优化策略参数。
-
-## 总结
-
-该策略 Overall是一个较为成熟的趋势跟踪策略。采用DCB判定趋势方向,快速RSI过滤信号可避免错误开仓。同时止损止盈机制可有效控制单笔亏损。但策略也存在一定风险,需要进一步优化参数以降低风险,提升稳定性。总体来说,该策略思路清晰易懂,适合中长线趋势交易者。
-
-|| 
 
 ## Overview
 
@@ -143,7 +75,6 @@ This strategy utilizes the Distance Close Bars (DCB) indicator to determine pric
 
 This is an overall mature trend following strategy. DCB determines trend direction and fast RSI filters signals to avoid wrong entries. Stop loss and take profit effectively controls single trade loss. But there are still risks, parameters need further optimization to reduce risk and improve stability. The logic is clear and easy to understand, suitable for mid-long term trend traders.
 
-[/trans]
 
 > Strategy Arguments
 

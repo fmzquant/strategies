@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-本文将详细介绍一种利用波动带识别反转进行长线量化交易的策略。该策略通过判断价格突破波动带进行买入,实现顺势跟踪操作。
-
-一、策略原理
-
-该策略的核心指标是波动带,具体计算步骤是:
-
-1. 计算中轨、上轨和下轨的移动均线;
-
-2. 当价格由下向上突破下轨时,产生买入信号;
-
-3. 当价格突破上轨时,产生卖出信号;
-
-4. 可选择在卖出信号时或突破上轨时止盈退出。
-
-5. 止损设置为固定百分比止损。
-
-这样,它可以在价格处于下行阶段时买入,随后通过止盈或止损退出,实现反转操作。
-
-二、策略优势
-
-该策略最大的优势是利用波动带识别反转点位,这是一种较为成熟的技术分析方法。
-
-另一优势是设定了止损机制,可以控制单笔交易的风险。
-
-最后,分批建仓也有助于在反转后分阶段获利。
-
-三、潜在风险
-
-但该策略也存在一些潜在问题:
-
-首先,移动均线计算存在滞后,可能错过最佳买入时机。
-
-其次,止盈和止损点的设置需要仔细测试优化。
-
-最后,长线持仓需要承受一定的回撤压力。
-
-四、内容总结
-
-本文详细介绍了一种利用波动带反转的长线量化交易策略。它可以有效识别价格反转机会,实现长线持仓。但也需要防控移动均线滞后等问题,并优化止盈止损点。总体来说,它提供了一种成熟的长线交易方法。
-
-||
 
 This article explains in detail a long-term quantitative trading strategy using volatility bands to identify reversals. It takes long positions when prices break through the lower band to ride the upside move.
 
@@ -94,7 +51,6 @@ IV. Summary
 
 In summary, this article has explained a long-term quantitative trading strategy using volatility bands to capitalize on reversals. It can effectively detect reversal opportunities for long-term holdings. But risks like MA lags need prevention, and optimization is required for exits. Overall it provides a robust long-term trading approach.
 
-[/trans]
 
 > Strategy Arguments
 

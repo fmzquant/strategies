@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a409f640a71b723273.png)
 
-[trans]
-
-## 概述
-
-这个策略是将两种动量指标组合使用,以发掘更多交易机会。第一种指标是乌尔夫·詹森在他的书中提出的快慢随机指标的反转策略。第二种指标是John Ehlers提出的去趋势合成价格。该策略综合利用两种指标的信号,在两种指标同时发出买入或卖出信号时下单。
-
-## 策略原理
-
-第一部分的快慢随机指标反转策略的原理是:当收盘价连续两天低于前一日收盘价,而快线高于慢线时做多;当收盘价连续两天高于前一日收盘价,而快线低于慢线时做空。
-
-第二部分的去趋势合成价格的计算公式是:
-
-DSP = EMA(HL/2, 0.25周期) - EMA(HL/2, 0.5周期) 
-
-其中HL/2是计算高低价中点,0.25周期EMA代表价格的短期趋势,0.5周期EMA代表价格的长期趋势。去趋势合成价格代表了价格相对其主导周期的涨跌幅度。当DSP上穿阈值时看涨,下穿阈值时看跌。
-
-该策略将两种指标信号综合考虑。只有两种指标同时发出买入或卖出信号时,才会开仓。
-
-## 优势分析
-
-- 利用两种指标过滤不确定信号,可以减少错误交易
-- 两种指标互为验证,可提高信号的可靠性
-- 快慢随机指标反转策略可捕捉短期反转机会
-- 去趋势合成价格可识别中长线趋势
-- 组合两种指标,既可捕捉反转,也可跟随趋势,灵活度高
-
-## 风险分析
-
-- 快慢随机指标在震荡市中表现不佳
-- 去趋势合成价格在趋势转折点前可能发出错误信号
-- 仅在两指标同时发出信号时交易,可能错过部分机会
-- 需要正确设置各参数,以发挥组合效果
-
-## 优化方向
-
-- 可以测试不同的参数,优化指标的效果
-- 可以尝试不同的指标权重,如延迟去趋势合成价格信号
-- 可以加入止损以控制风险
-- 可以综合更多不同类型的指标,构建多因子模型
-
-## 总结
-
-该策略综合运用两种不同的动量指标,通过双重过滤提高信号质量,在保持交易频率的同时控制风险。但需要注意指标本身的局限性,并适当优化参数。如果能持续优化,该策略有望获取超越大盘的超额收益。
-
-||
 
 
 ## Overview
@@ -100,7 +55,6 @@ This strategy combines the signals from both indicators. It only enters position
 
 The strategy combines two different momentum indicators and improves signal quality through double filtering while maintaining trade frequency and controlling risks. But the limitations of the individual indicators need to be noted and parameters properly tuned. With continuous optimizations, the strategy has the potential to generate alpha over the broad market.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14e89823c4c7220be9d.png)
-[trans]
-
-## 概述
-连续阴跌-阳涨反转策略是一种基于价格阴跌和阳涨连续性的量化交易策略。该策略通过识别连续X根阴线跌破最低点,随后连续Y根阳线上涨的形态,来捕捉短期趋势反转机会。策略的主要思想是,当价格经历连续的阴跌后,表明空头动能已经释放,随后如果出现连续的阳涨,则意味着多头力量开始积聚,价格可能迎来一波反弹行情。因此,该策略试图抓住这种由空头转多头的价格反转机会,从而获取利润。
-
-## 策略原理
-连续阴跌-阳涨反转策略的原理可以分为以下几个步骤:
-
-1. 参数设置:设置连续阴跌根数(consecutiveBarsDown)和连续阳涨根数(consecutiveBarsUp)。
-2. 判断市场趋势:统计当前价格连续阴跌(dns)和连续阳涨(ups)的根数。
-3. 入场条件:当满足以下条件时开仓做多:
-   - 当前交易时间在回测区间内(date())
-   - 前两根K线连续阴跌达到consecutiveBarsDown设定值
-   - 当前K线连续阳涨达到consecutiveBarsUp设定值
-   - 当前没有持仓(not active)
-4. 设置止损:开仓后,将止损价格(stop_loss)设置为最近三根K线收盘价的最低点。
-5. 出场条件:当满足以下条件时平仓:
-   - 当前交易时间在回测区间内(date())
-   - 当前有持仓(active)
-   - 收盘价低于止损价(close < stop_loss)或者低于最高价减去2倍ATR(close < high - 2 * atr(7))
-6. 复位变量:平仓后,重置变量active为false,entry_bar_index为一个很大的值。
-   
-该策略利用连续阴跌和阳涨的形态,试图捕捉由空头向多头转变的反转机会。同时,设置了严格的止损条件,以控制风险。
-
-## 优势分析
-连续阴跌-阳涨反转策略具有以下优势:
-
-1. 趋势敏感性:通过统计连续阴跌和阳涨的根数,策略对价格趋势的变化较为敏感,能够快速识别潜在的反转机会。
-2. 形态简单明了:该策略基于简单的连续阴跌和阳涨形态,规则清晰,易于理解和实现。
-3. 止损严格:策略在开仓时设置了相对严格的止损条件(最近三根K线收盘价的最低点),能够在趋势无法延续时及时出场,控制损失。
-4. 参数可调:连续阴跌和阳涨的根数可以根据市场特点和交易品种进行调整,增加了策略的灵活性。
-
-## 风险分析
-尽管连续阴跌-阳涨反转策略有一些优势,但仍存在以下风险:
-
-1. 频繁交易:当市场波动较大时,价格可能会频繁触发策略的入场和出场条件,导致交易次数增加,手续费成本上升。
-2. 止损位置:策略的止损位置是最近三根K线收盘价的最低点,这可能会导致止损位置过于靠近入场价,从而在正常的市场波动中触发止损,造成不必要的损失。
-3. 趋势延续风险:该策略主要捕捉反转机会,但当市场趋势强烈持续时,反转形态可能失效,导致策略出现连续亏损。
-   
-为了应对这些风险,可以考虑以下优化措施:
-- 根据市场波动特点,动态调整连续阴跌和阳涨的根数要求,减少频繁交易。
-- 优化止损位置的设置方式,如使用ATR或者百分比止损,给予价格更多的波动空间。
-- 在趋势强烈持续的市场环境下,考虑减少交易或者逆向交易,避免逆势操作。
-
-## 优化方向
-连续阴跌-阳涨反转策略还有以下几个可以优化的方向:
-
-1. 引入更多指标:除了连续阴跌和阳涨的根数外,可以结合其他技术指标如RSI、MACD等,以提高入场和出场信号的准确性。通过多指标共同确认,可以减少伪信号,提高策略的盈利能力。
-2. 优化止损和止盈:目前策略使用的是固定的止损位置(最近三根K线收盘价的最低点),可以考虑使用动态止损或者移动止损的方法,如ATR止损或者跟踪止损。同时,可以加入止盈条件,如目标利润达到一定比例时平仓,以锁定已有利润。
-3. 适应不同市场环境:该策略在震荡市场中表现可能更好,而在趋势市场中可能面临风险。可以考虑根据市场环境的变化,动态调整策略参数或者停止交易,以适应不同的市场状态。
-4. 加入仓位管理:目前策略是全仓操作,可以引入仓位管理的概念,根据市场风险和个人风险承受能力,调整每次交易的仓位大小,以控制整体风险。
-5. 结合其他策略:连续阴跌-阳涨反转策略可以与其他策略相结合,如趋势跟踪策略、均值回归策略等,形成策略组合,提高整体收益的稳定性。
-
-通过以上优化措施,连续阴跌-阳涨反转策略可以更好地适应市场变化,控制风险,提高盈利能力和稳定性。
-
-## 总结
-连续阴跌-阳涨反转策略是一种基于价格连续性的量化交易策略,通过识别连续阴跌和阳涨的形态,捕捉市场短期反转机会。该策略规则简单明了,对价格趋势的变化较为敏感,且设有严格的止损条件以控制风险。同时,策略参数可以根据市场特点进行调整,增加了灵活性。
-
-然而,该策略也存在一些风险,如频繁交易、止损位置设置可能过于严格、以及在强趋势市场中表现可能欠佳等。为了应对这些风险,可以考虑动态调整参数、优化止损位置、在不同市场环境下采取不同策略等措施。
-
-此外,该策略还有一些优化的方向,如引入更多指标、优化止损和止盈、适应不同市场环境、加入仓位管理以及与其他策略相结合等。通过不断优化和改进,连续阴跌-阳涨反转策略可以成为一个更加稳健和有效的量化交易策略。
-
-总的来说,连续阴跌-阳涨反转策略提供了一种简单而有效的交易思路,通过捕捉市场短期反转机会来获取利润。但在实际应用中,需要结合具体市场环境和个人风险偏好,对策略进行适当的优化和调整,以达到更好的交易效果。
-
-|| 
 
 ## Overview
 The Consecutive Downs-Ups Reversal Strategy is a quantitative trading strategy based on the continuity of price downs and ups. The strategy identifies the pattern of X consecutive down candles breaking the lowest point, followed by Y consecutive up candles, to capture short-term trend reversal opportunities. The main idea behind the strategy is that after the price experiences consecutive downs, it indicates that the bearish momentum has been released. Subsequently, if consecutive ups occur, it suggests that bullish strength is starting to accumulate, and the price may usher in a rebound. Therefore, this strategy attempts to seize the price reversal opportunity from bearish to bullish, thereby generating profits.
@@ -139,7 +74,6 @@ In addition, the strategy has some optimization directions, such as introducing 
 Overall, the Consecutive Downs-Ups Reversal Strategy provides a simple and effective trading idea by capturing short-term market reversal opportunities to generate profits. However, in practical application, it is necessary to combine specific market conditions and personal risk preferences to appropriately optimize and adjust the strategy to achieve better trading results.
 
 In conclusion, the Consecutive Downs-Ups Reversal Strategy offers a straightforward approach to profit from short-term market reversals. But in real-world implementation, it requires proper optimization and adaptation based on market conditions and individual risk tolerance to maximize its effectiveness as a quantitative trading strategy.
-[/trans]
 
 > Strategy Arguments
 

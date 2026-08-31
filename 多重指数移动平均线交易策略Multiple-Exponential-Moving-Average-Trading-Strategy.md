@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/140aebfd27c87f8ca6a.png)
-[trans]
-
-## 概述(Overview)
-
-该策略综合利用了多条指数移动平均线(Exponential Moving Average, EMA)来识别潜在的市场交易入场点和出场点。通过比较不同周期的EMA走势,判断当前市场趋势,在趋势形成初期介入交易,趋势结束初期平仓。
-
-## 策略原理(Strategy Principle)
-
-该策略使用了4条不同周期的EMA作为核心指标,分别为超短期EMA(默认8期)、短期EMA(默认13期)、中期EMA(默认21期)和长期EMA(默认55期)。当长期EMA位于其他三条EMA下方时,判断当前可能处于上升趋势初期,此时策略开多仓;当长期EMA位于其他三条EMA上方时,判断当前可能处于下降趋势初期,此时策略平掉所有多仓。通过EMA的这种多空排列组合来识别趋势转折点,捕捉初生趋势。
-
-EMA相比简单移动平均线(SMA)更加重视近期价格,因此EMA走势更灵敏,能更快速地反应价格变化。不同周期EMA的交叉情况则反映了不同时间尺度下的趋势强弱。长期EMA是最稳健的,代表大的市场趋势;中短期EMA相对灵敏,反映市场中短期趋势。它们共同构成了该策略的核心逻辑。
-
-## 优势分析(Advantage Analysis) 
-
-1. 适用性广:该策略基于价格本身的EMA指标,适用于多数流动性好、走势相对光滑的品种,如各类期货、外汇、主流数字货币等。
-
-2. 趋势跟踪:通过比较不同周期EMA的位置关系来判断趋势,一定程度上能捕捉趋势形成初期,跟踪趋势。
-
-3. 参数灵活:EMA的周期参数可以根据品种特点、Investment Horizon等灵活调整,具有一定的适应性。
-
-4. 逻辑清晰:策略基于简单的EMA多空排列组合产生交易信号,逻辑清晰明了,容易理解和实现。
-
-## 风险分析(Risk Analysis)
-
-1. EMA延迟:EMA本质上是一种趋势跟踪指标,存在一定的延迟性,在震荡市可能会发生较多虚假信号。
-
-2. 参数敏感:EMA周期参数的选择对策略表现有较大影响,并且参数优化后未必能在样本外数据上保持良好表现。
-
-3. 缺乏过滤:该策略缺乏对交易信号的进一步过滤,全部信号生成后都会进行交易,可能会发生一些低质量交易。
-
-4. 固定仓位:目前策略每次开仓都是固定1个单位,缺乏基于风险的动态仓位控制,风险管理方面不够完善。
-
-## 优化方向(Optimization Direction)
-
-1. 引入趋势过滤:在EMA信号基础上,增加ATR、ADX等趋势强度过滤指标,过滤掉弱趋势和震荡期的信号。
-
-2. 引入波动率过滤:在趋势过滤基础上,可进一步引入波动率过滤,如布林带宽度等,过滤掉高波动率可能导致的低质量信号。
-
-3. 优化止损:目前策略缺乏明确的止损逻辑,可以在引入趋势和波动率过滤后,增加基于ATR或百分比的动态止损,控制单笔最大亏损。
-
-4. 动态仓位:可以基于品种波动率、账户价值比例等,对策略每次开仓的数量进行动态控制,在降低风险的同时追求更高的绝对收益。
-
-5. 优化参数:不同品种、不同周期,EMA的最优参数可能不同,需要根据品种特点分别进行参数寻优,提高策略的适用性。
-
-## 总结(Summary)
-
-该策略通过比较4条不同周期EMA的多空排列组合来识别趋势转折点,捕捉趋势形成初期,思路简单清晰。它的优势在于适用范围广、逻辑清晰、参数灵活,能较好地跟踪趋势;但同时也存在EMA指标固有的延迟性,以及参数敏感、缺乏过滤、固定仓位等问题。未来可以从引入趋势和波动率过滤、优化止损、动态仓位、参数优化等方面来提高该策略的稳健性和盈利能力,使其更加完善和可靠。
-
-|| 
 
 ## Overview
 
@@ -106,7 +57,6 @@ Compared to Simple Moving Average (SMA), EMA places more emphasis on recent pric
 
 This strategy identifies trend turning points by comparing the long and short arrangement combinations of 4 EMAs with different periods to capture the beginning of trend formation. The idea is simple and clear. Its advantages lie in its wide range of applicability, clear logic, and flexible parameters, and it can track trends well; but at the same time, it also has the inherent lag of EMA indicators, as well as problems such as parameter sensitivity, lack of filtering, and fixed position. In the future, the robustness and profitability of this strategy can be improved from aspects such as introducing trend and volatility filtering, optimizing stop-loss, dynamic position, and parameter optimization to make it more complete and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

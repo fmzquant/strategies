@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f00cc98309db94d9bc.png)
-[trans]
-
-## 概述
-
-本策略使用两条移动平均线的交叉作为交易信号,并结合波幅指标BB和自定义动能指标进行过滤,旨在提高MA交叉信号的可靠性,减少假信号。
-
-## 原理
-
-1. 使用50周期EMA和200周期SMA形成金叉死叉信号。
-
-2. 当价格在上升趋势时,要求价格高于200日线且自定义动能指标值小于25才产生买入信号。
-
-3. 当价格在下降趋势时,要求价格低于200日线且自定义动能指标值大于75才产生卖出信号。
-
-4. 自定义动能指标根据BB中线与上下轨的距离映射到0-100范围。通过回溯统计距离最大最小值,进行归一化处理。
-
-5. 动能指标能体现价格相对波幅的位置信息,设置阈值进行过滤,可有效减少假交叉。
-
-## 优势分析
-
-1. 利用EMA和SMA的优势,捕捉中长线趋势。
-
-2. 增加动能指标进行滤波,可靠性更高,减少假信号。
-
-3. BB上下轨距离反映波动力度,结合回溯统计进行标准化处理,避免参数依赖。
-
-4. 可自定义EMA和SMA周期及动能指标阈值,适应不同市场环境。
-
-5. 策略思路清晰易懂,参数调优空间大,实操性强。
-
-## 风险分析
-
-1. EMA和SMA本身存在滞后性,可能错过短线机会。
-
-2. 双线交叉本质上是趋势跟踪策略,不适合震荡行情。
-
-3. 动能指标阈值需要反复回测确定合适参数,存在曲优化风险。
-
-4. 大周期均线策略,收益相对稳定但绝对收益可能有限。
-
-5. 可适当缩短均线周期,或增加其他指标辅助判断,提高策略的适应性。
-
-## 优化方向
-
-1. 测试不同均线组合,寻找最佳参数。
-
-2. 增加其他指标判断,如MACD,KD等辅助判断。 
-
-3. 优化动能指标的参数,如回溯周期,映射范围等。
-
-4. 添加止损机制来控制风险。
-
-5. 不同品种参数不一致,可考虑采用机器学习特征提取。
-
-6. 加入量能指标,避免不合理的交叉信号。
-
-## 总结
-
-本策略集大周期趋势跟踪和自定义动能指标双重过滤的优势于一身,可靠性高,实战价值强。通过参数优化和辅助技术指标补强,可望获得更出色的表现。该策略思路新颖,可为其他趋势跟踪策略提供借鉴,是量化交易策略库中一个有价值的补充。
-
-||
 
 ## Overview
 
@@ -130,7 +69,6 @@ This strategy uses moving average crossovers as trading signals, combined with v
 
 This strategy combines the strengths of long-term trend following and dual momentum threshold filtering for high reliability and practical value. Further improvements are possible through parameter optimization and complementary techniques. The innovative concept provides valuable insights for other trend systems. A valuable addition to the algorithmic trading strategy library.
 
-[/trans]
 
 > Strategy Arguments
 

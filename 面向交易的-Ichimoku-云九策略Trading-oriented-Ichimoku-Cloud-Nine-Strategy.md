@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12d2261c6ce4229dfe3.png)
-[trans]
-## 概述
-
-Ichimoku 云九策略是基于 Ichimoku 云指标并结合 Williams 分型的一个交易策略。该策略利用 Ichimoku 云指标提供的多个交易信号来产生交易信号。这是一个面向实际交易的策略。
-
-## 策略原理
-
-该策略主要基于以下几个 Ichimoku 信号进行入场:
-
-1. 云层突破:当价格收盘突破云层上边缘或下边缘时产生信号
-2. TK 交叉:当转向线(Tenkan)与基准线(Kijun)交叉时产生信号  
-3. 云层扭转:当 Senkou Span A 线和 Senkou Span B 线交叉时产生信号
-4. 边沿交叉:当价格从一侧云层进入另一侧云层时产生信号  
-
-此外,该策略还会在以下情况平仓:
-
-1. 价格收盘进入云层时平仓 
-2. TK 反向交叉时平仓
-3. Williams 分型被突破时部分平仓
-
-该策略融合了 Ichimoku 云图的多个交易信号,旨在提高交易信号的可靠性,同时利用分型来设置止损,控制风险。
-
-## 策略优势
-
-相比单一信号的策略,该策略综合利用 Ichimoku 云图的多个信号,可以过滤掉一些错位信号,提高信号的准确率。同时,策略参数可以灵活配置,适用于不同品种和参数优化。
-
-另外,策略中引入 Williams 分型突破来设置止损,可以更主动地控制风险,锁定利润,避免巨额亏损。
-
-## 策略风险
-
-该策略主要面临以下风险:
-
-1. 云图指标存在滞后性,不能及时反映价格变化
-2. 多重信号可能过于保守,错过部分机会  
-3. 分型止损可能被突破造成损失
-
-针对滞后性问题,可以适当调整参数,或关闭部分过滤信号。针对分型止损风险,可以调整分型的时间周期,或只部分止损。
-
-## 策略优化方向 
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 调整 Ichimoku 参数,适应不同周期和品种
-2. 调整或关闭部分过滤信号,保留核心信号 
-3. 调整分型的参数,使用更大时间周期的分型,或只采用部分止损
-4. 增加其他指标过滤,如量能指标等
-
-## 总结
-
-Ichimoku 云九策略通过集成 Ichimoku 云图多个交易信号,在发挥云图指标优势的同时,提高信号的准确率和胜率。策略还采用分型作为止损方式来控制风险。该策略可以通过参数和信号优化,适用于多品种的算法交易。
-
-||
 
 ## Overview  
 
@@ -113,7 +61,6 @@ Main areas for optimization:
 
 The Ichimoku Cloud Nine strategy improves Ichimoku trading by combining signals to increase accuracy and win rate. Usage of fractals manages risk. Parameters and signals can be optimized for automated trading across different products.  
 
-[/trans]
 
 > Strategy Arguments
 

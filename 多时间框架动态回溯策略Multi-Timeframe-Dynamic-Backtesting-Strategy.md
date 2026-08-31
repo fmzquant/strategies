@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/cc31db9fca4cff7673.png)
 
-[trans]
-
-## 概述
-该策略运用多时间框架动态回溯机制,通过比较不同时间周期的最高价和最低价,判断价格趋势,实现低风险套利。
-
-## 策略原理
-该策略通过调用自定义函数f_get_htfHighLow,获取不同时间周期的最高价nhigh和最低价nlow。具体来说,根据用户设定的时间周期resolution、时间周期乘数HTFMultiplier、回溯参数lookahead与gaps,以及偏移量offset,调用security函数获取不同时间周期的最高价和最低价。
-
-例如,offset为0时,获得当前K线的最高价和最低价;offset为1时,获得上一K线的最高价和最低价。通过比较两K线之间价格的变化,判断趋势方向。
-
-如果最高价上涨且最低价上涨,则判断为看涨趋势;如果最高价下跌且最低价下跌,则判断为看跌趋势。根据趋势方向进行 longing或shorting,实现套利交易。
-
-## 策略优势
-1. 运用多时间框架分析,提高判断准确性
-2. 应用动态回溯机制,避免repainting
-3. 灵活设置不同参数组合,适应市场变化
-4. 仅在趋势明确时开仓,有效控制风险
-
-## 策略风险
-1. 多时间框架判断可能存在误判风险
-2. 回溯参数设置不当可能导致repainting
-3. 交易频率可能过高,增加交易成本和滑点风险
-
-解决方法:
-1. 优化时间周期参数,提高判断准确性
-2. 严格测试回溯参数,避免repainting
-3. 适当调整开仓条件,控制交易频率
-
-## 策略优化方向 
-1. 增加机器学习模块,利用AI判断趋势
-2. 结合股价波动率,动态调整仓位
-3. 加入止损机制,有效控制亏损风险
-
-## 总结
-该策略整体思路清晰,利用多时间框架动态回溯判断股价趋势,最大程度减少人为判断错误,是一种典型的程序化交易策略。通过参数优化与功能扩展,可进一步增强策略稳定性与盈利空间,值得深入研究与跟踪。
-
-||
 
 ## Overview 
 This strategy employs a multi timeframe dynamic backtesting mechanism to determine price trends by comparing the highest and lowest prices across different time periods, thereby achieving low-risk arbitrage.
@@ -83,7 +46,6 @@ Solutions:
 ## Conclusion
 The strategy logic is clear, using multi timeframe dynamic backtesting to determine trends and minimize human bias. With refinement through parameter optimization and feature expansion, it demonstrates significant potential for improved stability and profitability worthy of further research and tracking.
 
-[/trans]
 
 > Strategy Arguments
 

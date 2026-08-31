@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e19f87adbaa30cba1a.png)
 
-[trans]
-
-## 概述
-
-该策略的主要思想是设置两个止盈点,当第一个止盈点被触发时,将止损点移至入场价格,防止止损被刮边。
-
-## 策略原理
-
-本策略基于布林带指标和Stochastic指标入场。当价格超出布林带上轨时做空,当Stochastic指标显示超卖时做多。
-
-具体来说,策略的入场逻辑是:
-
-1. 当收盘价低于布林带下轨,且Stochastic K线下穿D线时做多入场
-
-2. 当收盘价高于布林带上轨,且Stochastic K线上穿D线时做空入场
-
-该策略设置两个止盈点,第一个止盈点固定为200点,第二个止盈点固定为500点。
-
-当价格移动过程中第一个止盈点被触发时,本策略会将止损点移至入场价格。这样可以锁定第一阶段的利润,同时防止止损被价格波动刮边。
-
-当第二个止盈点被触发或者止损点被触发时,本策略会全部平仓。
-
-## 策略优势
-
-这种两阶段止损策略最大的优势在于可以实现盈利的锁定,同时防止止损被价格波动刮边。通过移动止损点到入场价格,可以减小止损被刮边的概率,保护利润。
-
-另一个优势是该策略采用了布林带指标判断价格波动范围和Stochastic指标判断超买超卖的组合策略,这两个指标互为补充,可以提高入场的准确率。
-
-## 策略风险
-
-该策略主要的风险在于布林带指标和Stochastic指标都可能产生错误信号。如果布林带范围计算错误,将导致错失入场时机或者产生错误信号。如果Stochastic指标产生假突破,也会导致错误入场。
-
-此外,移动止损点到入场价格也存在被再次刮边的风险。如果行情出现V型反转,止损点有可能会被第二次触发。
-
-为降低这些风险,可以调整布林带参数,优化Stochastic指标参数组合,并适当提高止损点间距。
-
-## 策略优化方向
-
-这种两阶段止损策略还可以进一步优化:
-
-1. 可以测试不同的参数组合,优化布林带参数和Stochastic参数,找到最优参数组合。
-
-2. 可以测试不同的止盈止损点设置,优化止盈止损点的大小,找到最优配置。
-
-3. 可以加入其它指标,例如移动平均线等,形成多指标组合策略,提高入场准确率。
-
-4. 可以研究不同的止损点移动逻辑,例如移动到一定间距之外,而不是入场价格。
-
-5. 可以增加止损点移动次数,设置三个或更多阶段的止损移动。
-
-## 总结
-
-本策略采用布林带指标和Stochastic指标判断入场时机,设置两个止盈点,在第一个止盈点达到后移动止损点到入场价格,形成两阶段止损策略。这种策略可以有效锁定利润并防止止损被刮边。策略优势突出,但也存在一定改进空间,通过参数优化、多指标组合、止损点逻辑调整等方式可以进一步完善该策略。
-
-||
 
 ## Overview
 
@@ -118,7 +63,6 @@ Further optimizations for this strategy:
 ## Conclusion
 
 This strategy uses Bollinger Bands and Stochastic for entries, sets two take profit targets, and moves stop loss to entry after first target reached to form a two-stage stop loss. This effectively locks in profits and prevents stop loss hunting. Strategy has clear advantages but also room for improvements via parameter optimization, multi-indicator systems, and stop loss logic adjustments.
-[/trans]
 
 
 > Strategy Arguments

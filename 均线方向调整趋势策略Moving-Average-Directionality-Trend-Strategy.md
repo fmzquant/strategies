@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略通过判断多条均线的方向调整情况,确定行情的长线趋势方向,进行相应的做多或做空操作。
-
-主要交易逻辑:
-
-1. 计算多组不同周期的移动平均线,如5日、20日、50日等
-
-2. 比较各均线的方向态势,判断是否存在一致的调整方向
-
-3. 当均线全部向上调整,判断为长线看涨,当均线全部向下调整,判断为长线看跌
-
-4. 在看涨信号时,价格突破下行止损线则建立做多头寸
-
-5. 在看跌信号时,价格突破上行止损线则建立做空头寸 
-
-6. 设置回撤止损来控制风险
-
-该策略强调判断长期趋势的走势态势,在趋势确认后才进行交易,以控制非系统风险。
-
-## 策略优势
-
-- 多均线组合判断长期趋势走势
-
-- 突破止损线加仓,顺势而为
-
-- 回撤止损策略控制风险 
-
-## 策略风险
-
-- 均线指标本身滞后于价格
-
-- 趋势判断不当可能导致持续亏损
-
-- 仅做多或做空无法利用机会 
-
-## 总结
-
-该策略强调通过均线态势判断长期走势,以减少非系统风险。但判断准确性和止损策略优化是关键所在。
-
-
-||
 
 ## Strategy Logic
 
@@ -94,7 +50,6 @@ The strategy emphasizes confirming the long-term trend before trading to reduce 
 ## Summary 
 This strategy stresses determining the secular trend via MA directionality to minimize non-systematic risks. But judgement accuracy and stop tuning are critical.
 
-[/trans]
 
 > Strategy Arguments
 

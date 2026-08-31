@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/136e2744bf83b85722c.png)
-[trans]
-## 一、策略名称
-本策略名称为**基于SMA和ATR的趋势追踪策略**。
-
-## 二、策略概述
-本策略利用SMA指标判断价格趋势方向,并利用ATR指标设置止损位置来追踪趋势。当价格跌破上升趋势时做空,当价格突破下跌趋势时做多,实现趋势交易。
-
-## 三、策略原理
-### 1. 进入信号
-(1)当收盘价上涨且高于SMA时,做多
-(2)当收盘价下跌且低于SMA时,做空
-
-### 2. 止损设置 
-利用ATR指标的数值乘以设置的止损倍数作为止损位置。
-
-### 3. 止损更新
-每根K线收盘后检查止损位置,并更新为更靠近当前价位的止损值。
-
-### 4. 退出信号
-价格触碰止损线后主动止损退出。
-
-## 四、策略优势
-### 1. 趋势追踪能力强
-利用ATR指标的动态止损设定能够实现对趋势的自动追踪。
-
-### 2. 回撤控制能力好  
-严格的止损规则有助于控制单笔交易的最大回撤。
-
-### 3. 参数设置简单
-只有3个参数,方便调整和优化。
-
-## 五、策略风险
-### 1. 可能出现止损过于宽松
-如果止损倍数设置过大,可能导致止损位置过于宽松,从而增加回撤。
-
-### 2. 假突破带来的风险
-价格出现假突破时,可能导致错开趋势方向,应结合其他指标过滤信号。 
-
-### 3. 参数优化风险
-过度依赖参数优化可能导致曲线优化。应谨慎评估参数稳定性。
-
-## 六、策略优化方向 
-### 1. 优化止损算法
-可以测试其他型的止损算法,如移动止损、比例止损等。
-
-### 2. 增加过滤信号 
-可以加入其他指标过滤假突破。例如增加成交量条件等。
-
-### 3. 评估参数稳定性
-通过历史回测评估参数对不同品种和周期的适应性。
-
-## 七、总结
-本策略整体思路清晰,通过SMA判断趋势方向,并利用ATR进行趋势追踪,回撤控制能力良好,适合中长线趋势交易。但实盘中仍需要适当调整参数,并防范过优化的风险。
-
-|| 
 
 ## I. Strategy Name
 The strategy is named **SMA and ATR Based Trend Tracking Strategy**.  
@@ -118,7 +63,6 @@ Back-testing history to evaluate parameters' adaptability to different products 
 
 ## VII. Summary  
 The overall idea of this strategy is clear. It judges trend direction through SMA and uses ATR to track trends with good drawdown control. It is suitable for medium-long term trend trading. But parameters still need proper adjustment in live trading, and risks of over-optimization should be prevented.  
-[/trans]
 
 > Strategy Arguments
 

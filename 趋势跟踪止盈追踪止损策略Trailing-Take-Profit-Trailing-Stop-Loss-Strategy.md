@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/120326a030cd10c24c6.png)
-[trans]
-
-## 概述
-
-趋势跟踪止盈追踪止损策略是一种量化交易策略,它结合了趋势跟踪、部分止盈、全程追踪止损等功能,旨在在牛市行情中捕捉价格上涨趋势,并采用智能止盈方式获利,同时利用追踪止损来控制下行风险。
-
-## 策略原理
-
-该策略以快速移动平均线与慢速移动平均线的金叉作为买入信号。当快速移动平均线上穿慢速移动平均线时,表示价格上涨趋势形成,这时策略会开仓做多。  
-
-之后,策略会设置一个止盈价格,它等于开仓价格乘以设定的止盈比例。当价格达到该止盈价格时,策略会部分平仓,默认卖出50%的头寸。这实现了部分止盈,锁定了部分利润。  
-
-接下来,策略还会启动趋势跟踪止盈机制。价格继续上涨时,止盈价格会以设定的步进比例 trailingTakeProfitDeviationPerc 来追踪价格。这使得止盈价格能够紧跟价格上涨趋势,实现趋势跟踪止盈。  
-
-同时,策略也会启动追踪止损。当价格达到止盈价格后,止损价格会开始上移跟踪,它总是维持在高点乘以设定止损跌幅比例的水平。这使得止损价格能够上移追踪,从而锁定更多利润,同时也控制了下行风险。  
-
-当价格出现回调,如果下破追踪止损价格,则策略会停止追踪,直接市价平仓剩余全部头寸。至此,整个交易周期完成。
-
-## 优势分析
-
-该策略集成了趋势跟踪、部分止盈、全程追踪止损等多项功能,具有以下优势:
-
-1. 能够有效捕捉价格上涨趋势,买入信号准确;
-2. 部分止盈机制使得可以锁定部分利润,避免盈利全部收回;  
-3. 趋势跟踪止盈机制使得止盈价格能紧贴价格上涨;
-4. 开启追踪止损后,可以锁定更多利润,同时控制下行风险;
-5. 策略参数可配置,可以调整至自己可承受的风险水平。
-
-## 风险分析
-
-该策略也存在一定的风险,主要体现在以下几个方面:  
-
-1. 买入后价格可能出现大幅下跌,无法止盈或止损,导致损失扩大;
-2. 趋势结束时,止盈价格无法及时跟踪,可能错过了最好的止盈点;  
-3. 止损价格设定过宽,价格出现剧烈下跌导致损失过大;
-4. 交易频率可能过高,交易成本和滑点损耗也较大。
-
-对应地,可以从以下几个方面来优化和改进:
-
-1. 合理设置移动平均线参数,避免产生错误信号;
-2. 适当缩小部分止盈比例,减少风险;
-3. 适当收紧止损幅度,控制单笔损失;
-4. 调整步进比例参数,优化跟踪止盈的效果。
-
-## 优化方向  
-
-该策略还有进一步优化的空间:  
-
-1. 可以引入更多指标判断趋势,避免假突破; 
-2. 增加仓位管理模块,让头寸大小更合理;
-3. 增加止盈止损动态调整机制,让参数更自动化;
-4. 增加过滤机制,避免高동能品种的错误交易。
-
-这些优化可以使策略更稳定、更高效,绩效也会得到提升。
-
-## 总结
-
-趋势跟踪止盈追踪止损策略综合运用了趋势跟踪、智能止盈、全程追踪止损等技术手段,在捕捉价格上涨趋势的基础上,还实现了止盈价格的趋势跟踪和追踪止损水平的上移。这使得策略可以随着趋势运行,在牛市中获取更多利润。同时,策略也考虑到了风险控制,采用部分止盈和止损保护了资金安全。总体而言,该策略稳定性较高,是量化交易的一种常见策略类型。
-
-||
 
 ## Overview
 
@@ -128,7 +68,6 @@ These optimizations can make the strategy more robust and improve performance.
 
 The Trailing Take Profit Trailing Stop Loss Strategy skillfully utilizes a combination of trend tracking, intelligent take profit, full-cycle trailing stops and more. Building on capturing upside trends, it realizes take profit price trailing and raising trailing stop levels. This allows the strategy to follow trends while profiting in bull markets. Also, risks are controlled via partial take profits and stop losses to protect capital. In conclusion, this is a stable strategy type commonly seen in quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

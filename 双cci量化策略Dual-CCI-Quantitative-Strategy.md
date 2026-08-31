@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1aed7b59dc8594c9caf.png)
-[trans]
-
-## 概述
-
-该策略通过结合经典技术指标CCI和自主研发的VCI、MCI双指数形成交易信号,属于典型的量化交易策略。其通过识别Volume和Price的变化趋势,判断当前行情主要交易方向和力度,形成交易信号。可以广泛应用于数字货币、外汇以及股票等金融工具。
-
-## 策略原理  
-
-1. 计算ohlc4均线,并结合cci指标判断价位;
-2. 计算obv指标衡量资金流向;  
-3. 计算VCI指数,即通过obv指标的方差测量资金流量分布;
-4. 计算MCI指数,即通过价格的方差测量价格分布;
-5. VCI与MCI指数进行比较,判断市场买卖态势;
-  - VCI > MCI,买方意愿强;
-  - VCI < MCI, 卖方意愿强;  
-6. 根据VCI和MCI的比较形成做多做空信号;
-
-## 优势分析
-
-1. 该策略综合考虑了价格、交易量以及资金流向多个维度,判断市场买卖态势,信号较为准确;
-2. VCI和MCI通过动态标准差计算,能够适应市场的实时变化;  
-3. 策略参数经过大量回测优化,具有较强的稳定性;
-
-## 风险分析  
-
-1. 价格和交易量指标计算滞后,不能提前捕捉突发事件;  
-2. 单一策略无法完全覆盖复杂多变的市场情况;
-3. 需要与其他辅助指标结合使用,不能单独判断市场;
-
-## 优化方向
-
-1. 结合深度学习等预测模型,提高信号判断的准确性;  
-2. 增加止损等风险控制模块,提高策略的稳定性;
-3. 可尝试不同参数组合,测试在特定市场中的适用性;  
-
-## 总结
-
-该策略通过双cci指数的比较形成交易信号,考虑了价格和交易量等多个因素,对市场买卖力度进行评估,是一种典型且实用的量化交易策略。但仍需与其他辅助工具配合使用,才能发挥策略最大效用。值得进一步优化提高适用场景,减少风险。
-
-||
 
 ## Overview  
 
@@ -88,7 +48,6 @@ This strategy combines the classic technical indicator CCI and self-developed VC
 
 This strategy forms trading signals by comparing dual CCI indices, taking into account factors such as price and trading volume to assess market sentiment. It is a typical and practical quantitative trading strategy. But it still needs to be used with other auxiliary tools to maximize the effectiveness of the strategy. It is worthwhile to further optimize and expand applicable scenarios while reducing risks.
 
-[/trans]
 
 > Strategy Arguments
 

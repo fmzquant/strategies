@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c280605256cbb0371a.png)
-[trans]
-
-## 概述
-
-本策略的名称为“RSI指标与包容形态量化交易策略”。该策略的主要思路是同时利用RSI指标和包容形态来识别市场趋势,发出买入和卖出信号。
-
-当RSI指标显示多空头极端状态并且出现向上或向下的包容形态时,我们认为是建立仓位的机会。RSI指标可以有效识别超买超卖现象,包容形态则可以进一步验证趋势的可靠性。
-
-## 策略原理
-
-首先,我们设置RSI指标的参数,包括RSI的周期长度(一般为9或14)、超买水平(一般为70)和超卖水平(一般为30)。 
-
-然后,我们识别包容形态,判断是否出现了向上或向下的大阳线或大阴线包住了前一根K线。这表示目前的趋势正在发生转折。
-
-此后,如果RSI显示超卖区域(超买或超卖),并且出现向上的阳包或向下的阴包,那么就产生买入信号或卖出信号。最后,我们利用RSI金叉和死叉来确定止盈止损。
-
-## 策略优势
-
-这种策略结合了趋势指标RSI和特征技术指标包容形态,综合判断市场走势,较单一指标具有更强确认效果,可以有效过滤噪音交易信号。
-
-RSI指标对市场中出现的多头空头状态的判断非常准确和清晰,而包容形态中蕴含的量价特征则可以进一步验证趋势转折的可靠性。
-
-这种策略可以及时抓住超买超卖现象带来的反转机会,同时也避免在盘整时造成不必要的交易亏损。
-
-## 策略风险
-
-这种策略最大的风险在于,RSI指标和包容形态出现错误信号的概率并不低。RSI指标容易形成失真,发生背离。而包容形态的识别可以通过调整K线窗口大小等参数进行操纵。
-
-此外,反转信号出现时,不能完全排除震荡盘整的可能性。仓位建立后,市场短期内可能出现回调甚至反转。这都可能导致止损而亏损离场。
-
-为了降低风险,我们要对RSI指标的设置参数进行优化,寻找最佳参数组合。此外选择具有代表性和流动性较好的交易品种也很重要。在仓位建立之后,需要控制好仓位规模并及时止损。
-
-## 策略优化方向
-
-这种策略可以从以下几个方面进行进一步优化:
-
-1. 结合更多指标进行组合,例如KDJ、MACD等,形成多指标验证体系,提高信号的准确性。
-
-2. 对交易品种的流动性、振幅、交易成本等进行考量,选择最优品种,降低交易成本和滑点风险。 
-
-3. 利用机器学习等方法对参数进行训练和优化。例如利用深度学习对RSI背离情况进行识别。
-
-4. 增加止损策略,通过移动止损、均线止损等方式来保护利润。
-
-## 总结
-
-本策略利用RSI指标和包容形态的优势,设计出一套同时兼顾趋势判断和特征验证的量化交易体系。这可以有效利用反转机会且具有较强的可靠性。通过持续优化,这套策略可以成为一个稳定可靠的量化策略。
-
-
-||
 
 
 ## Overview
@@ -108,7 +58,6 @@ This strategy can be further optimized in the following aspects:
 
 This strategy utilizes the strengths of RSI indicator and engulfing patterns, and designs a quantitative trading system that takes into account both trend judgment and feature verification. It can effectively capture reversal opportunities while having high reliability. Through continuous optimization, this strategy can become a stable and reliable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

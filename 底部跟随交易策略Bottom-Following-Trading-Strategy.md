@@ -9,60 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-底部跟随交易策略是一个低风险、低收益的加密货币交易策略。它通过识别加密货币处于超卖状态的时候建立持仓,在价格重新回稳后平仓获利。这个策略适用于短线和中线交易,可以提供稳定的资金增长。
-
-## 原理
-
-这个策略主要依靠快速RSI指标判断加密货币是否处于超卖状态。当快速RSI低于10时,说明资产已经严重超卖。这时,如果交易量明显放大,价格已经触底回升,那么就是建立做多头仓的信号。 
-
-一旦价格重新回稳,快速RSI回到中立区,做多头仓位就可以平仓套利了。为控制风险,可以事先设置好止损价位。
-
-## 优势
-
-- 该策略具有精准判断底部的能力,可以抓住反弹的最佳时机。
-
-- 采用快速RSI指标,可以快速判断超卖超买状态。
-
-- 只在显著底部附近建仓,有效控制风险。
-
-- 利用止损来锁定利润,避免亏损扩大。
-
-- 适用于大部分加密货币,灵活性强。
-
-## 风险
-
-- 如果判断错误,在非底部建仓,可能造成较大损失。
-
-- 即使抓住底部,行情可能反弹不足,无法盈利。
-
-- 停止损失设置过于宽松,可能造成较大亏损。
-
-- 停止损失设置过于激进,可能过早止损。
-
-- 交易量不足,无法在合适位置建立足够大的仓位。
-
-## 应对风险的方法
-
-- 采用多种指标确认底部,提高判断准确率。
-
-- 分批建仓,降低单笔仓位占比。
-
-- 根据波动范围合理设置止损距离。
-
-- 抓住突破上行通道或重要压力位作为止盈依据。
-
-- 选择交易量充足的交易对,确保可以获得足够流动性。
-
-## 总结
-
-底部跟随交易策略通过抓住加密货币的超卖底部,可以获得较低风险的资金增长。该策略运用快速RSI判断时点,并配合止损来控制风险。如果进行优化改进,有望获得更加稳定的收益。这是一个值得推荐的低风险加密货币交易策略。
-
-||
 
 ## Overview
 
@@ -114,7 +60,6 @@ Once prices stabilize and the fast RSI returns to the neutral zone, long positio
 
 The bottom following strategy capitalizes on oversold bottoms of cryptocurrencies for low-risk capital growth. It utilizes fast RSI for timing and stop-loss for risk control. Further optimizations may lead to more consistent profits. It is a recommended low-risk crypto trading strategy worth considering.
 
-[/trans]
 
 
 

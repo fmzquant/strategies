@@ -9,75 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-多级移势均线交易策略通过设置多个不同参数的移势均线,实现多级进场和止损。策略首先计算出3条长线和3条短线,长线低于短线时做多,短线低于长线时做空。策略可以设置移动均线计算周期长度、离差比例、可交易时间范围等参数,适用于中长线趋势交易。
-
-## 策略原理  
-
-1. 计算参数中的 src 源价格的 len 周期的简单移动均线,作为基准均线。
-
-2. 根据 long 和 short 参数设置对应的长线和短线的数量。
-
-3. longline1等长线为基准均线按 longlevel1等参数设置的比例进行偏移。shortline1等短线同理。
-
-4. 在可交易时间内,判断价格与均线的关系,实现多级进场。
-
-5. 当价格触及基准均线时,执行止损。
-
-6. 在结束时间强制平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多级进场,可以不同阶段获取趋势进行获利。
-
-2. 可自定义的参数较多,可以根据不同品种和交易风格进行调整。
-
-3. 基于均线系统,对突破判断比较可靠。
-
-4. 设置可交易时间范围,可以避开重大数据发布等影响大的时段。
-
-5. 有止损机制,可以控制单笔损失。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 多次加仓的风险比较大,需要充足的资金支持。
-
-2. 参数设置不当可能导致超短线操作,应适当设置参数。 
-
-3. 固定离场时间可能错过最后阶段的趋势获利。可以设置追踪止损来优化。
-
-4. 没有考虑夜盘和隔夜持仓的情况。可以加入持仓成本控制。
-
-5. 没有考虑仓位数控制,可能导致单向持仓过大。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加移动止损来代替固定离场时间。
-
-2. 考虑隔夜持仓情况,加入持仓手续费和滑点控制。 
-
-3. 加入追踪止损来获取最后阶段的获利。
-
-4. 根据仓位情况调整下单手数,控制单向仓位。
-
-5. 测试不同参数对不同品种的效果,建立参数优化机制。
-
-6. 测试止损点位的最优化,减少不必要的止损。
-
-## 总结
-
-多级移势均线策略通过均线多级进场,实现趋势跟踪获利。设置的可交易时间和止损点较好控制了风险。通过持仓成本控制、参数优化、止损优化等方式可以进一步增强策略效果,值得进一步研究和优化。
-
-||
 
 ## Overview  
 
@@ -145,7 +76,6 @@ The strategy can be improved in the following aspects:
 
 The multi-level shift moving average strategy profits from trends through multi-level entry based on moving averages. The tradable times and stop loss controls risk well. Further improvements on carry cost control, parameter optimization, stop loss optimization etc. can enhance the strategy and are worth researching.
 
-[/trans]
 
 > Strategy Arguments
 

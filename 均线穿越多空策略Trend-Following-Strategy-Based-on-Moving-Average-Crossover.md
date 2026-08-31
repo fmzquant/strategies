@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1186010fe636f555290.png)
 
-[trans]
-
-## 概述
-
-本策略主要利用移动均线的金叉死叉以及K线突破均线进行多空决策。当短期移动均线上穿较长期移动均线时做多,当短期移动均线下穿较长期移动均线时做空。同时结合K线的收盘价突破均线作为进场信号。
-
-## 策略原理
-
-1. 计算两条不同周期的移动均线EMA1和EMA2。EMA1周期短,EMA2周期长。
-
-2. 判断EMA1是否上穿EMA2,如果是,做多。
-
-3. 判断EMA1是否下穿EMA2,如果是,做空。 
-
-4. 判断收盘价是否突破EMA1,作为进场信号。
-
-5. 止损退出机制:设定固定止损点或通过Donchian通道设定止损。
-
-主要使用以下函数:
-
-- ema(): 计算指数移动均线
-- crossover(): 判断EMA1是否上穿EMA2
-- crossunder(): 判断EMA1是否下穿EMA2
-- rising()/falling(): 判断价格是否上涨/下跌
-- valuewhen(): 根据条件返回不同值
-
-## 优势分析
-
-1. 策略思路简单,容易理解实现。
-
-2. 利用均线系统的趋势跟踪特性,能够有效跟踪趋势。
-
-3. 结合K线收盘价的突破作为入场时机,可以避免假突破。 
-
-4. 可灵活运用不同参数的均线组合,适应不同周期。
-
-5. 可设置止损机制控制风险。
-
-## 风险分析
-
-1. 当市场处于震荡行情时,均线将产生频繁的金叉死叉信号,容易止损。
-
-2. 固定止损点可能过于死板,无法根据市场变化调整。
-
-3. 均线系统较滞后,在趋势转折点时容易错过反转信号。
-
-4. 需要精准判断均线斜度来过滤假突破。
-
-5. 需谨慎选择参数,过于频繁或滞后的参数组合将影响策略效果。
-
-## 优化方向
-
-1. 可利用MACD指标的零轴交叉来确定趋势,过滤震荡。
-
-2. 可以加入Donchian通道来设定动态止损线,改善固定止损问题。
-
-3. 可以加入布林带指标判断强弱趋势,避免在震荡市场无效交易。
-
-4. 优化均线参数组合,测试不同周期策略的实际效果。
-
-5. 可考虑加入锚定移动均线避免滞后。
-
-## 总结
-
-本策略整体思路简单清晰,利用例行的均线金叉死叉交易策略,同时结合K线突破来进场,可有效过滤假信号。优化空间在于运用其他指标来判断趋势强弱、设置动态止损等。整体而言,基于均线的趋势跟踪策略经典易懂,值得探索其优化空间。
-
-|| 
 
 ## Overview
 
@@ -143,7 +76,6 @@ Main functions used:
 
 The overall logic of this strategy is simple and clear, utilizing classic moving average crossover trading techniques, and combining candlestick breakout for entry to effectively filter false signals. Optimization spaces include using other indicators for trend strength, dynamic stops etc. In general, trend following strategies based on moving averages are classic and intuitive, with valuable exploration spaces for optimization.
 
-[/trans]
 
 > Strategy Arguments
 

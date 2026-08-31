@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/150399dd281e20a0def.png)
-[trans]
-
-### 概述
-
-唐氏趋势策略是一种基于唐氏通道指标识别市场趋势的趋势跟随策略。该策略利用唐氏通道上下轨来判断价格走势,以发现潜在的入市和退出点。当价格高于上轨时,代表上涨趋势;当价格低于下轨时,代表下跌趋势。该策略的关键参数是唐氏通道的长度,它决定了计算高点和低点的回望周期。
-
-为了更准确地生成交易信号,该策略额外使用两条移动平均线,一条快线(5日线)和一条慢线(45日线)。当快线上穿慢线时生成买入信号;当快线下穿慢线时生成卖出信号。
-
-### 策略原理
-
-该策略的核心指标是唐氏通道。唐氏通道由给定周期内的最高价和最低价绘制,上轨线和下轨线分别连接这些高点和低点。通道宽度反映了市场的波动性。
-
-策略利用唐氏通道判断价格趋势方向。具体来说,价格高于上轨表示行情处于上涨趋势,该策略将在下一次价格接近上轨时考虑建立多头头寸。相反,价格低于下轨表示行情处于下跌趋势,策略将在下一次价格接近下轨时考虑建立空头头寸。 
-
-为过滤假突破,该策略结合快速移动平均线(5日线)和慢速移动平均线(45日线)产生交易信号。当快线从下方上穿慢线时,产生买入信号;当快线从上方下穿慢线时,产生卖出信号。 
-
-入场后的止损退出根据价格再次接近唐氏通道设置。
-
-### 优势分析
-
-该策略显著的优势在于它只在趋势明确形成后才入场,从而有效减少了因错买入假突破造成的损失。 唐氏通道本身就具有很强的趋势识别能力,再结合双移动平均线进行过滤,可靠性较高。
-
-另外,唐氏通道参数的调整也为该策略提供了灵活性。通道长度越长,代表参考的历史数据时间越长,对趋势判断越保守,避免假突破的概率越高,但可能错过部分短线机会。我们可以根据市场环境和个人偏好选择通道参数。
-
-该策略最大回撤控制得也较好。由于其趋势跟随属性,在市场大幅波动时也能有效控制亏损。
-
-### 风险分析
-
-该策略的主要风险在于趋势判断失误,从而在错位的时间建立多头或空头头寸。这可能发生在价格隐藏了一个更大的止跌反弹或下跌行情的情况下。我们可以通过适当调整移动平均线参数来减少这样的情况。
-
-另一个潜在风险是在震荡行情中过于频繁地进行买卖。这将增加交易次数和手续费的支出。我们可以通过增加止损幅度或适当延长持仓时间来解决。
-
-### 优化方向
-
-该策略具有很大的优化空间,主要集中在以下几个方面:
-
-1. 唐氏通道长度。我们可以测试不同的参数值,找到最优参数。
-
-2. 移动平均线期数。我们可以尝试更多组合,找到一组匹配的快慢均线。
-
-3. 止损方式。我们可以尝试绝对点数止损或ATR止损。
-
-4. 入场过滤条件。我们可以在基本交易信号之外添加RSI,MACD等指标进行过滤。
-
-
-### 总结
-
-综上所述,唐氏趋势策略利用唐氏通道判断趋势方向,再辅以双移动平均线进行入场,是一个稳定的趋势跟随策略。它只在趋势明确形成后进场,有效控制了损失。同时参数优化空间较大,可根据市场环境进行调整。如果风险得到有效控制,该策略有望获得稳定的长线收益。
-
-||
 
 
 ### Overview
@@ -110,7 +60,6 @@ This strategy has great optimization space, mainly focused on the following aspe
 
 In summary, the Donchian Trend strategy utilizes the Donchian Channels to determine the trend direction, supplemented by dual moving averages for entry, making it a steady trend following strategy. It only enters the market after the trend is clearly formed, effectively controlling losses. At the same time, the strategy has large optimization space on parameters, which can be adjusted based on market conditions. If risks are effectively controlled, this strategy has the potential to achieve steady long-term returns.
 
-[/trans]
 
 > Strategy Arguments
 

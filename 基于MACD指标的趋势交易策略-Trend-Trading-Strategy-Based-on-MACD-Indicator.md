@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/196a1a2b261653f67cd.png)
-[trans]
-## 概述
-
-该策略的核心是基于安德鲁·亚伯拉罕在1998年9月《交易趋势》杂志TASC专栏中发表的文章中开发的指标。该指标利用平均真实波动范围和价格通道判断市场趋势方向,结合MACD指标进行交易信号过滤,旨在捕捉中长线趋势。
-
-## 策略原理
-
-该策略首先计算21日平均真实波动范围(ATR)的加权移动平均作为基准波动范围。然后计算过去21日的最高价和最低价,以当前K线收盘价与基准波动范围上下限进行比较,判断价格是否突破通道,从而判断趋势方向。
-
-具体来说,定义通道上限为过去21日最高价减去3倍基准ATR,通道下限为过去21日最低价加上3倍基准ATR。当收盘价高于通道上限时,判断为看涨趋势;当收盘价低于通道下限时,判断为看跌趋势。
-
-在判定趋势方向的同时,该策略还引入MACD指标进行过滤。只有当MACD柱状线为正时才产生买入信号,避免错过买点。
-
-## 策略优势
-
-该策略结合趋势判断和指标过滤,能有效判断市场中长线趋势方向,避免被市场短期波动误导。具体优势如下:
-
-1. 使用价格通道判断趋势,准确判定长线趋势方向
-2. 基准波动范围能动态调整,适应市场变化
-3. MACD指标过滤增加决策依据,避免错失买点
-4. 可配置参数,灵活调整策略风格
-
-## 策略风险
-
-该策略也存在一定风险,主要体现在以下几个方面:  
-
-1. 价格通道范围无法完全避免被突破的风险  
-2. MACD指标可能产生误导 signal的风险
-3.  Parameters设置不当可能导致strategy不稳定
-
-对此,可通过优化参数设置、严格 position sizing、及时止损来降低风险。
-
-## 策略优化方向 
-
-该策略主要可从以下几个方面进行优化:
-
-1.测试不同参数组合,寻找最佳parameter
-
-可以测试不同的Length parameter或Multiplier parameter的组合,找到基于回测数据产生最佳收益率的parameter组合。
-
-2.结合其他指标过滤signal
-
-可测试结合RSI, KDJ等其他指标来过滤signal,看是否可以提高收益率。
-
-3.动态调整参数
-
-可以根据市场情况来动态调整parameter,比如在趋势明显时适当放宽通道范围,在震荡时适当收紧通道范围。
-
-## 总结
-
-该策略整体来说是一种相对稳健的趋势追踪策略。它结合价格通道判定趋势方向和MACD指标过滤信号的方法,可以有效判断市场中长线趋势,产生稳定收益。通过参数优化、风险管理和适当修正,该策略可以成为量化交易体系中的重要组成部分。
-
-||
 
 ## Overview  
 
@@ -115,7 +62,6 @@ The strategy can be optimized in the following main aspects:
 
 In summary, this is an overall robust trend following strategy. By combining price channel trend determination and MACD filtering, it can effectively identify mid-long term trends and generate steady returns. With parameter optimization, risk management, and appropriate adjustments, this strategy can become an integral part of a trading system.  
 
-[/trans]
 
 > Strategy Arguments
 

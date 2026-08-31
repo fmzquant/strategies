@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5808212311efbfc128.png)
-[trans]
-####  概述
-这是一个基于超级趋势指标和ATR指标的策略。该策略的主要思路是:利用超级趋势指标判断当前市场的趋势方向,当超级趋势指标发生变化时进行交易。同时,该策略使用ATR指标计算止损和止盈价格,并根据账户余额的一定比例计算仓位大小,以控制风险。
-
-#### 策略原理
-该策略的原理如下:
-1. 计算超级趋势指标的值,当超级趋势指标发生变化时,产生买入或卖出信号。
-2. 使用ATR指标计算止损和止盈价格,止损价格为当前价格加减ATR值乘以一个倍数,止盈价格为止损价格乘以一个风险收益比。
-3. 根据账户余额的一定比例和止损价格计算仓位大小,以控制每笔交易的风险。
-4. 当产生买入信号时,开仓做多,止损价格为信号产生时的价格减去ATR值乘以一个倍数,止盈价格为信号产生时的价格加上ATR值乘以一个倍数乘以风险收益比。
-5. 当产生卖出信号时,开仓做空,止损价格为信号产生时的价格加上ATR值乘以一个倍数,止盈价格为信号产生时的价格减去ATR值乘以一个倍数乘以风险收益比。
-
-#### 策略优势
-该策略的优势如下:
-1. 结合了趋势跟踪和波动率指标,能够有效捕捉趋势,同时控制风险。
-2. 仓位大小根据账户余额和风险程度自动计算,无需手动调整,易于实施。
-3. 参数可以灵活调整,适用于不同的市场和品种。
-
-#### 策略风险
-该策略的风险如下:
-1. 在震荡市场中,频繁的买卖信号可能导致较高的交易成本和滑点。
-2. 固定的止损和止盈比例可能无法适应市场的变化,导致止损过早或者利润太小。
-3. 仓位大小的计算依赖于历史波动率,在波动率突然放大时,可能导致较大的回撤。
-
-针对以上风险,可以采取以下措施:
-1. 增加信号过滤条件,减少交易频率。
-2. 优化止损和止盈的计算方法,例如使用移动止损或者动态止盈。
-3. 在仓位计算中引入风险控制因子,例如波动率突破时减少仓位。
-
-#### 策略优化方向
-该策略可以在以下方面进行优化:
-1. 引入更多的技术指标,例如MACD、RSI等,作为趋势判断和信号过滤的辅助条件,提高信号的准确性。
-2. 对于不同的市场和品种,优化超级趋势指标和ATR指标的参数,找到最佳的参数组合。
-3. 在仓位计算中引入更多的风险控制因素,例如账户最大回撤、单笔交易最大风险等,提高策略的稳健性。
-4. 增加止盈策略,例如部分止盈、移动止盈等,让利润持续增长。
-
-以上优化可以提高策略的盈利能力和稳定性,同时降低策略的风险,使策略更加适应不同的市场环境。
-
-#### 总结
-该策略结合了超级趋势指标和ATR指标,能够有效捕捉趋势,同时控制风险。通过计算最佳仓位大小,使得每笔交易的风险是可控的。但是该策略在震荡市场中可能会产生较高的交易成本和回撤。通过引入更多的技术指标、优化参数、增加风险控制因素和改进止盈策略,可以进一步提高该策略的性能。总的来说,该策略是一个简单有效的趋势跟踪策略,适合在趋势市场中使用。
-
-|| 
 
 #### Overview
 This is a strategy based on the Supertrend indicator and ATR indicator. The main idea of this strategy is to use the Supertrend indicator to determine the current market trend direction and make trades when the Supertrend indicator changes. At the same time, this strategy uses the ATR indicator to calculate stop loss and take profit prices, and calculates the position size based on a certain percentage of the account balance to control risk.
@@ -92,7 +50,6 @@ The above optimizations can improve the profitability and stability of the strat
 
 #### Summary
 This strategy combines the Supertrend indicator and ATR indicator to effectively capture trends while controlling risk. By calculating the optimal position size, the risk of each trade is controllable. However, this strategy may generate high transaction costs and drawdowns in a volatile market. By introducing more technical indicators, optimizing parameters, adding risk control factors, and improving take profit strategies, the performance of this strategy can be further improved. Overall, this strategy is a simple and effective trend-following strategy suitable for use in trending markets.
-[/trans]
 
 > Strategy Arguments
 

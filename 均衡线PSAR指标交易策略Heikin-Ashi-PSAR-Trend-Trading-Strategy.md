@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略结合使用均衡线图形和PSAR指标,进行趋势判断和交易信号产生。该策略借助均衡线降噪的特点,配合PSAR指标判断趋势反转点,实现对中长线趋势的捕捉。
-
-策略原理:
-
-1. 计算均衡线的开盘价、收盘价、最高价、最低价。
-
-2. 根据均衡线实体颜色判断多头和空头趋势。
-
-3. 计算PSAR指标,当其由上向下或下向上突破时,确定趋势反转。
-
-4. 均衡线多头时,PSAR向下突破做多;均衡线空头时,PSAR向上突破做空。 
-
-5. PSAR根据新高新低和加速因子进行自适应调整。
-
-该策略的优势:
-
-1. 均衡线过滤噪音,PSAR捕捉反转。组合提高精确度。
-
-2. PSAR参数自适应,可应对市场变化。
-
-3. 规则清晰易行,有利于参数优化。
-
-该策略的风险:
-
-1. 均衡线和PSAR均存在滞后问题,可能错过最佳入场点位。
-
-2. 震荡趋势下PSAR容易产生错误信号。
-
-3. 需要严格的资金管理,以对冲反转交易的风险。
-
-总之,该策略通过均衡线判断大趋势,PSAR识别具体入场时点,进行趋势追踪操作。滞后问题和假反转风险需要警惕,但可通过优化获得长期稳定回报。
-
-||
 
 This strategy combines Heikin-Ashi candlesticks and the PSAR indicator for trend identification and trade signals. It uses Heikin-Ashi noise filtering with PSAR for trend reversal detection, aiming to capture medium-long term trends.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy pairs Heikin-Ashi for trend context with PSAR for timing. Lag and false signals require caution but can be overcome through optimization for long-term steady gains.
 
-[/trans]
 
 > Strategy Arguments
 

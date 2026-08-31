@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18fbfe3f1d266dde5a8.png)
-[trans]
-
-## 概述
-
-该策略通过计算两个不同周期的动能加权移动平均线(MAEMA),在它们交叉时产生买入和卖出信号。其中,短周期线用于判断市场趋势和短期反转信号,而长周期线用于确定主要趋势方向。
-
-## 原理
-
-1. 计算快线(80周期)和慢线(144周期)的MAEMA。
-2. 快线反映短期趋势和反转点。慢线反映主要趋势方向。
-3. 当快线上穿慢线时,产生买入信号。当快线下穿慢线时,产生卖出信号。
-4. 该策略同时绘制了3个预测点,表示下一个周期的可能值,从而判断未来的交叉趋势。
-5. 策略中充分利用MAEMA指标本身的动量性和预测功能。
-
-## 优势分析
-
-1. MAEMA本身集成了动量因子,能更快捕捉趋势的变化。
-2. 双均线策略,判断不同时间段内的趋势方向。
-3. 结合快慢线的交叉以及MAEMA自身的预测点,使买卖信号更可靠。
-4. 自动绘图完整,直观反映市场波动。
-
-## 风险分析
-
-1. 市场出现异常波动时,MAEMA指标的灵敏度可能过高,产生错误信号。可以适当放宽停损点。
-2. 均线系统对于横盘市容易产生虚假信号。可以增加其他过滤器。
-3. 快线和慢线的周期设置需要根据不同品种确定最佳参数。
-
-## 优化方向  
-
-1. 优化MAEMA快线和慢线的周期参数,找到最佳参数组合。
-2. 增加过滤条件,避免在震荡行情中打开仓位。例如引入DMI、MACD等判断趋势性。
-3. 根据回测结果不断调整ATR系数、移动止损点来降低False positive并控制风险。
-
-## 总结
-该策略利用动能加权移动平均线双均线交叉判断市场趋势变化,基本原理清晰简单。结合MAEMA自身的动量和预测功能,识别反转信号的效果较好。需要注意参数优化以及加强过滤条件,加强稳定性。
-
-|| 
 
 ## Overview
 
@@ -83,7 +46,6 @@ This strategy generates buy and sell signals when two Moving Average of Exponent
 
 The strategy judges changes in market trend using MAEMA dual moving average crossovers. The basic principles are simple and clear. Combined with the momentum and predictive capabilities of MAEMA itself, it is effective in identifying reversal signals. Attention should be paid to parameter optimization and enhancing filters to improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

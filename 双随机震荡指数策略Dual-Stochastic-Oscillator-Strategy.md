@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略运用两组不同参数设置的随机指标,实现多空条件判断,属于典型的均线交叉系统。利用快速指标判断短期趋势和入场时机,慢速指标确定大趋势方向,两者结合形成交易信号。
-
-## 策略原理
-
-1. 快速随机指标K值表示短期趋势方向,K线交叉其移动平均线SM1构成入场信号。
-
-2. 慢速随机指标K值反映大趋势情况。当快速指标显示反转信号时,查看慢速指标判断大方向的合理性。
-
-3. K快速上穿SM1时视为看涨信号;当慢速K大于50时,表示大趋势向上,满足做多条件。
-
-4. K快速下穿SM1时视为看跌信号;当慢速K小于50时,表示大趋势向下,满足做空条件。
-
-5. 设置止盈止损点,以固定比例止盈止损。
-
-## 优势分析
-
-1. 双随机指标过滤噪音,提高成功率。快慢配合降低被套风险。
-
-2. SM1参数较小,K指标灵敏,适合捕捉短线机会。
-
-3. 大周期判断大趋势,小周期捕捉反转。多空策略符合多数市场情况。  
-
-4. 固定止盈止损点,风险收益可控,不容易起伏过大。
-
-## 风险分析
-
-1. 指标之间产生背离时会漏失交易机会或产生错误信号。
-
-2. 固定止盈止损点不够灵活,无法根据市场变化调整。
-
-3.  lbl指标参数需要反复优化测试,不恰当会失效。
-
-4. 短周期交易需要较高交易频率,增大交易成本。
-
-## 优化方向 
-
-1. 增加其他指标或过滤条件,确保指标信号质量。
-
-2. 测试不同参数组合,找到最佳参数配置。
-
-3. 结合波动率指标等,使止盈止损水平动态调整。
-
-4. 采用时间段过滤,避开关键事件,控制非理性波动。
-
-5. 优化资金管理策略,选时加减仓,提高资金使用效率。
-
-## 总结
-
-该策略整合快慢随机指标形成多空交易体系。但需进一步优化参数设定,并辅以趋势、波动率等指标作为过滤条件。在严格控制风险的情况下,该策略可获取较为稳定的超额收益。
-
-|| 
 
 ## Overview
 
@@ -117,7 +62,6 @@ This strategy uses two stochastic oscillators with different parameters to deter
 
 This strategy integrates fast and slow stochastic oscillators into a dual directional system. Further parameter optimization and adding filters like trend and volatility indicators can improve it. With proper risk control, this strategy can achieve relatively steady excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

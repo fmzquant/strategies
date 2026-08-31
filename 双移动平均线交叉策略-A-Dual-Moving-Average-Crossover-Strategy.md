@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1000a72e171678e1dce.png)
-[trans]
-
-## 概述
-
-双移动平均线交叉策略是一种常见的量化交易策略。它利用快速移动平均线和慢速移动平均线的交叉作为买入和卖出的信号。当快速移动平均线从下方上穿慢速移动平均线时,产生买入信号;当快速移动平均线从上方下穿慢速移动平均线时,产生卖出信号。
-
-## 策略原理  
-
-该策略的核心逻辑是计算两组移动平均线,一组是快速移动平均线,参数为10天,另一组是慢速移动平均线,参数为30天。快速移动平均线能更快地响应价格变化,而慢速移动平均线更能体现长期趋势。 当快速移动平均线上穿慢速移动平均线时,表示短期价格开始突破长期趋势,属于金叉信号,买入;当快速移动平均线下穿慢速移动平均线时,表示短期价格开始跌破长期趋势,属于死叉信号,卖出。
-
-该策略同时设置了止损和止盈机制。止损设定为价格低于买入价一定比例时止损;止盈设定为价格高于买入价一定比例时止盈。
-
-## 优势分析
-
-双移动平均线交叉策略具有以下优势:
-
-1. 思路简单,容易理解和实现;
-
-2. 可自定义快慢平均线的参数,适应不同市场;  
-
-3. 同时包含止损和止盈设定,可以限制损失;
-
-4. 可在趋势市和区间市中都获得不错的效果。
-
-## 风险分析  
-
-双移动平均线交叉策略也存在以下风险:  
-
-1. 双平均线交叉产生信号时,可能为假突破,存在亏损风险;
-
-2. 止损和止盈参数设置不当可能带来过大损失或者预期利润减少; 
-
-3. 只依赖技术指标,没有考虑基本面因素。
-
-对应解决方法:
-
-1. 结合其它技术指标过滤信号;  
-
-2. 测试并优化止损止盈参数;
-
-3. 结合基本面分析。
-
-## 优化方向  
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同参数的平均线组合,寻找最佳参数;
-
-2. 增加量价确认指标,避免假突破;  
-
-3. 动态调整止损止盈幅度,让止盈更优化;
-
-4. 结合交易量变化、成交额变化等指标进行优化。
-
-## 总结  
-
-双移动平均线交叉策略整体来说是一种简单实用的量化交易策略。它容易理解和实现,可以获得稳定收益,适用于大多数市场环境。通过参数优化、增加信号过滤和动态止盈,可以使该策略更加可靠和盈利。它是量化交易的基础策略之一,值得掌握和应用。
-
-||
 
 ## Overview  
 
@@ -128,7 +69,6 @@ The strategy can be optimized from the following aspects:
 
 In summary, the dual moving average crossover strategy is a simple and practical quantitative trading strategy. It is easy to understand and implement and can generate stable profits in most market environments. By optimizing parameters, adding signal filters and dynamic profit taking mechanisms, the strategy can become more reliable and profitable. As one of the fundamental quantitative trading strategies, it is worthwhile learning and applying.  
 
-[/trans]
 
 > Strategy Arguments
 

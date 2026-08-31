@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cd7326171c51453832.png)
-[trans]
-
-## 概述
-
-多重移动平均线综合策略是一种非常全面和通用的技术分析策略。它结合了多重时间周期的移动平均线,以提供对市场趋势的全面洞察。该策略通过生成清晰的买入和卖出信号,有助于识别潜在的入场和退出点。它还提供了强大的可定制性,允许用户根据自己的交易偏好和目标调整移动平均线长度。
-
-## 原理
-
-该策略的核心是计算和跟踪多条不同长度期间的移动平均线,具体包括10日、20日、30日直至100日的移动平均线。这些移动平均线被设定为当天的收盘价与过去一定周期(如10日、20日等)的收盘价的平均值。例如20日移动平均线是过去20日收盘价的平均值。
-
-当今天的收盘价高于所有这些移动平均线时,产生买入信号。当今天的收盘价低于所有这些移动平均线时,产生卖出信号。这样,只有当所有周期的移动平均线都指向同一个方向时,才会产生信号,从而过滤了很多噪音交易机会,使得信号更加可靠。
-
-## 优势
-
-1. 提供多时间尺度的洞察,能够适应不同的市场环境
-
-2. 通过多个确认,过滤 Noise,信号较为可靠
-
-3. 交易规则清晰,易于理解和实施
-
-4. 具备高度的自定义性,用户可以调整参数满足个性化需求
-
-5. 为入场、止损、止盈提供明确的指引,有助于风险管理
-
-## 风险及解决方法
-
-1. 当市场处于震荡期时,多个移动平均线可能互相交叉,导致无明确信号产生。可通过调整移动平均线周期数量和长度来降低交叉概率。
-
-2. 未来期价格突破多个移动平均线的可能性较低,可能错过部分交易机会。可适当减少移动平均线数量,降低突破难度。
-
-3. 信号产生滞后,无法在价格转折点前捕捉趋势。结合其他先行指标如MACD可提高对趋势转折的判断。
-
-4. 交易次数可能不多,难以获得稳定收益。可以适当缩短移动平均线长度或与其他策略/指标组合使用。
-
-
-## 优化方向
-
-1. 参数调整:调整移动平均线周期数及长度,寻找最佳参数组合。例如可测试5日、10日和20日移动平均线的组合。
-
-2. 结合其他指标:与MACD、RSI等其他指标组合使用,提高策略的韧性。不同指标可实现互补。
-
-3. 策略组合:与其他策略如突破系统、趋势跟踪系统组合,提高稳定性。不同策略可分散风险。
-
-4. 自动寻优:采用算法自动测试不同参数,寻找期望最大化的参数组合。降低人工干预,提高效率。
-
-
-## 总结
-
-多重移动平均线综合策略是一种非常全面和强大的策略工具。它提供多时间尺度洞察,信号较为可靠,易于理解使用,并具备高度自定义性。同时也存在一定局限性,但可通过调整参数、与其他模型组合等方式获得优化,从而适应更加复杂的市场情况。该策略既可作为学习工具辅助技术分析思维建立,也可供实盘交易使用。用户可根据自身需要进行调整,将其专属化。
-
-|| 
 
 ## Overview
 
@@ -108,7 +57,6 @@ When today’s closing price is above all these moving averages, a buy signal is
 
 The Multiple Moving Average Comprehensive Strategy is a very versatile and powerful analytical tool. It provides multi-timescale insights, reliable signals, ease of use and understandability, and high customizability. At the same time, it has some limitations which can be addressed via parameter tuning, model combinations etc for adaptation to more complex market regimes. The strategy can serve as both a learning tool to aid technical analysis skill development as well as practical trading implementation after adjustments tailored to individual needs.
 
-[/trans]
 
 
 

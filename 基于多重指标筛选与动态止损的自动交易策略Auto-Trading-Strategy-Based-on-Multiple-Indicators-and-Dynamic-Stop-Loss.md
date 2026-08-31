@@ -9,36 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过组合使用快线、中线、慢线以及MACD等多个指标对交易信号进行综合判断,同时采用基于ATR的动态止损机制来控制风险水平。策略适用于中短线自动化交易。
-
-## 策略原理
-
-该策略主要运用了EMA均线、MACD指标以及ATR指标。EMA均线的快线、中线和慢线构成趋势判断体系,MACD指标辅助生成交易信号,ATR指标用于设置止损线。具体来说,通过快线、中线和慢线的多空排列组合判断趋势方向,再结合MACD指标的零轴交叉为入场信号, Enter多头时快线需上穿中线,Exit多头时快线下穿中线;Enter空头时快线下穿中线,Exit空头时快线上穿中线。此外,止损线根据ATR指标动态调整,能够据市场波动情况来控制风险。
-
-## 优势分析
-
-- 多指标组合判断,交易信号准确可靠。
-- 快中慢线体系判断趋势方向清晰。 
-- MACD指标辅助入场,避免假突破。
-- 动态止损更好控制风险。
-- 策略较为机械化,适合自动化交易。
-
-## 风险及优化
-
-- 参数设置较复杂,需要大量测试优化。
-- 多指标组合判定逻辑较复杂,难以手工操作。
-- 应加入其他过滤条件,如交易量能量等,避免被套。
-- 可以考虑改进为机器学习交易策略,利用算法优化参数。
-
-## 总结
-
-该策略集多个指标优势于一身,既可以较准确判断趋势,又可以控制回撤。通过参数优化以及加入其他过滤条件,可以进一步增强策略稳定性。总体来说,策略较典型且可靠,适合中短线自动化交易,具有较大的实用价值。
-
-||
 
 ## Overview
 
@@ -67,7 +37,6 @@ The strategy mainly utilizes EMA, MACD and ATR indicators. EMA fast, medium and 
 
 The strategy combines advantages of multiple indicators for accurate trend judgment and drawdown control. Further enhancements like parameter optimization and adding filters can improve robustness. Overall it is a typical and reliable strategy suitable for medium-term automated trading with great practical value.
 
-[/trans]
 
 > Strategy Arguments
 

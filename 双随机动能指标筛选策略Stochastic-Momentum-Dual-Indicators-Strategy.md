@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略使用双随机动能指标(SMI和RSI)进行多空判断,辅以马丁格尔和身体过滤进行交易信号筛选,旨在捕捉中短线趋势,追踪价格波动。
-
-## 策略原理
-
-该策略使用双随机动能指标SMI和RSI进行多空判断。SMI通过K线实体价差和收盘价的移动平均计算得到,可以有效识别反转点。RSI通过多空动量比较确定超买超卖。策略在SMI低于-50和RSI低于20时做多;SMI高于50和RSI高于80时做空。
-
-为过滤假突破,策略还使用10周期身体均线的1/3作为突破过滤条件。当实体突破均线1/3时,认为突破有效。
-
-此外,策略采用可选的马丁格尔策略,即亏损交易时按比例加仓,以期望追回前期亏损。
-
-Backtest功能通过输入起止时间来回测策略效果。
-
-## 优势分析
-
-该策略综合运用双随机指标和过滤器,可以有效识别反转点,捕捉中短线趋势,追踪价格波动。
-
-- SMI对反转点识别能力强,可有效判定超买超卖
-- RSI叠加使用,可避免漏单
-- 身体过滤去除假突破,提高信号准确率  
-- 可选马丁格尔追击策略,可追回部分亏损
-
-## 风险分析
-
-- SMI和RSI作为滞后指标,信号延迟存在追高杀跌风险
-- 马丁格尔存在加速亏损的风险
-- 大幅震荡市场中,过滤器会过滤掉部分 valid 信号
-
-可通过优化SMI和RSI参数,降低追高杀跌概率。合理使用马丁格尔策略,控制加仓比例和次数。根据市场情况选择是否开启过滤器,降低过滤valid信号概率。
-
-## 优化方向
-
-- 优化SMI和RSI参数组合,找到最佳判定效果
-- 调整过滤器参数,降低过滤valid信号概率
-- 优化马丁格尔的加仓次数和比例
-- 结合趋势指标,避免反向操作
-- 增加止损策略,控制单笔亏损
-
-## 总结
-
-该策略综合运用双随机指标捕捉反转点,辅助以过滤器和马丁格尔进行交易信号筛选和追击,能有效识别中短线趋势,追踪价格波动,适合追求高胜率的投资者。使用时需注意指标滞后及震荡市的风险,可通过参数优化和止损来控制风险。
-
-|| 
 
 ## Overview
 
@@ -99,7 +53,6 @@ Risks can be mitigated by optimizing SMI and RSI parameters to lower chasing/kil
 
 The strategy combines dual stochastic indicators to capture reversal points, with filters and martingale for trade signal selection and chase. It can effectively identify mid-term trends and track price fluctuations, suitable for investors pursuing high win rate. Pay attention to indicator lagging and ranging market risks, manage risks by parameter optimization and stop loss.
 
-[/trans]
 
 > Strategy Arguments
 

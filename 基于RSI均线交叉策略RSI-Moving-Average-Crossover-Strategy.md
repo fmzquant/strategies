@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18094372b81879e8fc4.png)
-[trans]
-
-## 概述
-
-RSI均线交叉策略通过计算快速RSI和慢速RSI的均线交叉来判断入场和退出的时机。当快速RSI的均线从下方向上突破慢速RSI的均线时,为买入信号;当快速RSI的均线从上方向下跌破慢速RSI的均线时,为卖出信号。该策略结合RSI指标和移动平均线的优点,可以有效过滤市场噪音,抓住价格趋势反转的时机。
-
-## 策略原理
-
-本策略首先分别计算长度为100和40的RSI指标,其中长度为100的RSI代表快速RSI,长度为40的RSI代表慢速RSI。然后分别计算这两个RSI的21日简单移动平均线,长度为100 RSI的均线代表快速均线,长度为40 RSI的均线代表慢速均线。
-
-在计算出快慢均线后,本策略以快速均线上穿慢速均线作为买入信号,表明股价的上涨势头正在形成;以快速均线下穿慢速均线作为卖出信号,表明股价上涨趋势可能结束。此外,本策略还会结合200日移动平均线来过滤信号,只有当收盘价格高于200日线时,才会发出买入信号。
-
-## 优势分析
-
-RSI均线交叉策略结合双RSI和移动平均线,可以有效发现反转机会。具体优势包括:
-
-1. 使用双RSI指标可以更准确判断反转,双RSI分别描述快速周期和慢速周期的价格信息,交叉信号更具价值。
-
-2. 均线指标可以有效过滤震荡,抓住反转趋势的关键时机。
-
-3. 结合200日线可以进一步避免虚假信号,确保在相对强势的行情中操作。
-
-4. 策略思路简单清晰,容易理解和验证,也便于参数优化。
-
-5. 可同时用于股票和数字货币交易,适用范围广。
-
-## 风险分析
-
-RSI均线交叉策略也存在一定的风险,主要包括:
-
-1. 双RSI均线交叉并不能完全避免假突破,需要结合其他指标验证。
-
-2. 在震荡行情中,停损可能被频繁触发。可以适当放宽止损范围,或等待更明确的反转信号。
-
-3. 参数设置需要不断测试和优化,如果参数选择不当,可能错过最佳交易时机或增加虚假信号。
-
-4. 策略本身并没有考虑大级别趋势解析,如果行情发生结构性调整,该策略可能产生大额亏损。建议与趋势和形态分析方法配合使用。
-
-## 优化方向
-
-RSI均线交叉策略具有很强的优化空间,主要优化方向包括:
-
-1. 测试不同周期参数的组合,寻找最佳的参数组合。
-
-2. 添加其他指标进行信号过滤,如KDJ、MACD等,减少虚假信号。 
-
-3. 优化止损机制,测试固定止损、跟踪止损、 Chandelier Exit 等止损方式。
-
-4. 结合更高级别的趋势分析指标,避免逆势操作。如加入ADX指标判断趋势强度。
-
-5. 测试在不同品种(股票、外汇、加密货币等)的效果,寻找最佳适用对象。
-
-6. 尝试机器学习和遗传算法等方法寻找最优参数。
-
-## 总结
-
-RSI均线交叉策略整合双RSI指标和移动平均线的优点,通过快慢RSI均线的交叉判断买卖时机,可有效抓住反转机会。该策略简单实用,适用于多种交易品种,优化空间大。但也存在一定的风险,需要结合趋势分析和优化止损来控制。如果参数和过滤指标设置合理,RSI均线交叉策略可以成为一种非常有效的量化交易策略。
-
-||
 
 ## Overview
 
@@ -114,7 +55,6 @@ There is great room for optimization:
 
 The RSI Moving Average Crossover Strategy effectively combines the strengths of dual RSI setups and moving averages to identify high-probability reversal trades. The logic is simple and applicable across markets, with great optimization flexibility. Proper optimizations in stop loss, filter tools and trend analysis integration are advised to control risks. When set up optimally, this can be a very effective quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

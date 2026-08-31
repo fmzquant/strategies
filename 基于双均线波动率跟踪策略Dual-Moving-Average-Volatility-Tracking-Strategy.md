@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/124a9e4a96ad6f09453.png)
-[trans]
-### 概述
-
-双均线波动率跟踪策略融合了金叉死叉策略和均线波动率指标追踪策略两大思路。通过计算不同周期的简单移动均线交叉实现金叉死叉判定,同时结合Bollinger波动带和VIDYA指标判断市场趋势和波动率,实现了对趋势的清晰判断和对关键点的高效捕捉。
-
-### 策略原理
-
-该策略的核心指标包括简单移动平均线、Bollinger波动带和VIDYA波动率指数均线。策略通过设置快线SMA和慢线LMA的不同周期,快慢线的黄金交叉作为做多信号,死叉作为平仓信号。同时,Bollinger波动带判断持仓过程中价格突破上下轨的情况。VIDYA指数移动平均线结合波动率信息,判断当前趋势方向和强度。
-
-具体来说,做多的信号逻辑为快线上穿慢线,且价格高于VIDYA曲线,表明具备趋势上行和波动放大的前提;平仓信号为快线下穿慢线或价格低于VIDYA曲线,表明趋势反转或波动趋于收缩。
-
-### 优势分析
-
-双均线波动率跟踪策略最大的优势在于结合双重指标判断市场状态,能够提高决策的准确性。具体来说,优势体现在:
-
-1. 金叉死叉策略简单有效,能清晰判断趋势转折点;
-2. 波动率指标VIDYA能动态跟踪市场波动变化;  
-3. Bollinger波动带判断让策略及时响应价格震荡。
-
-综上,该策略整合了趋势、回归和波动率等多个维度的信息,对市场变化的响应速度更快,从而获得超额收益的可能性更大。
-
-### 风险分析
-
-尽管该策略有许多优点,但也存在一定的风险需要警惕:  
-
-1. 参数设置不当可能导致过于频繁交易,增加交易成本和滑点损失;
-2. 双重指标判断中出现信号冲突时需要明确优先级,否则可能错过最佳入场时机;
-3. 策略回测存在过拟合风险,实盘表现可能与回测结果有较大差异。
-
-为降低上述风险,建议优化参数设置,明确指标信号的优先级,增加滑点控制,并在不同市场环境中多次验证策略稳健性。
-
-### 优化方向  
-
-该策略的主要优化方向集中在参数设定与过滤条件上,可以从以下几个维度进行:  
-
-1. 优化快线和慢线的均线周期参数;
-2. 调整Bollinger波动带的带宽参数;
-3. 优化VIDYA中的α平滑参数;
-4. 增加价格或交易量异常过滤条件。
-
-通过参数优化与规则优化的结合,可以进一步提升策略的稳定性与收益率。
-
-### 总结
-
-双均线波动率跟踪策略综合运用多种指标判断市场状态,在捕捉趋势转折的同时关注价格波动情况,是一种风险收益兼顾的有效策略。该策略优化空间较大,值得进一步探索与验证,期待在实盘中取得可观的超额收益。
-
-||
 
 ### Overview  
 
@@ -103,7 +56,6 @@ The combination of parameter optimization and rule refinement could further enha
 
 The Dual Moving Average Volatility Tracking strategy utilizes multiple indicators to determine market conditions, capturing trend turning points while monitoring price fluctuation situations. It is an attractive strategy balancing risk and return. More exploration on parameter optimization and walk-forward analysis are expected to achieve satisfactory profits in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

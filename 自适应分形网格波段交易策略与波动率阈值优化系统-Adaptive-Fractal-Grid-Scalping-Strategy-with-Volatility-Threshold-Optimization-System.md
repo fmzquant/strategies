@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11640731917880248ae.png)
 
-[trans]
-#### 概述
-该策略是一个基于分形理论和自适应网格的短线交易系统,结合了波动率阈值来优化交易时机。系统通过动态调整网格水平,在高波动期间捕捉市场微观结构变化,同时在低波动期间避免过度交易。策略集成了多重技术指标,包括平均真实波幅(ATR)、简单移动平均线(SMA)和分形突破点,构建了一个全面的交易决策框架。
-
-#### 策略原理
-策略的核心是通过分形识别和波动率聚类来建立动态交易网格。具体实现包括以下几个关键步骤:
-1. 使用枢轴高点(Pivot High)和枢轴低点(Pivot Low)识别局部极值点作为分形突破信号
-2. 利用ATR指标度量市场波动性,并设定最小波动阈值作为交易触发条件
-3. 基于ATR值和用户定义的乘数动态调整网格水平
-4. 使用SMA确定趋势方向,为交易决策提供方向性偏差
-5. 在网格水平设置限价订单,并根据ATR值调整止损和获利点位
-
-#### 策略优势
-1. 自适应性强 - 网格水平会根据市场波动性自动调整,适应不同市场环境
-2. 风险控制完善 - 集成了波动率阈值和追踪止损机制,有效控制风险
-3. 交易机会精准 - 通过分形突破和趋势方向双重确认,提高交易质量
-4. 可视化支持 - 提供分形点位和网格水平的图形化展示,便于监控
-5. 参数灵活 - 允许交易者根据个人风险偏好和市场条件调整各项参数
-
-#### 策略风险
-1. 参数敏感性 - 不同参数组合可能导致策略表现差异较大,需要充分测试
-2. 市场环境依赖 - 在波动性极低的市场中可能出现交易机会减少的情况
-3. 假突破风险 - 分形突破信号可能出现假突破,需要结合其他指标确认
-4. 滑点影响 - 在执行限价订单时可能遇到滑点,影响实际执行效果
-5. 资金管理要求 - 需要合理设置资金规模,避免过度承担风险
-
-#### 策略优化方向
-1. 引入更多技术指标 - 可以考虑添加RSI、MACD等指标进行信号确认
-2. 优化止损机制 - 可以开发更复杂的动态止损算法,提高风险控制效率
-3. 完善波动率模型 - 考虑使用更先进的波动率预测模型,如GARCH族模型
-4. 增加市场环境过滤 - 添加市场环境识别模块,在不同市场阶段采用不同参数
-5. 开发自适应参数系统 - 实现参数的自动优化,提高策略适应性
-
-#### 总结
-这是一个结合了分形理论、网格交易和波动率过滤的综合性策略系统。通过多重技术指标的配合使用,实现了对市场微观结构的有效捕捉。策略的优势在于其自适应性和风险控制能力,但同时也需要注意参数优化和市场环境适应性的问题。通过持续优化和完善,该策略有望在不同市场环境下保持稳定的表现。
-
-|| 
 
 #### Overview
 This strategy is a scalping system based on fractal theory and adaptive grid, combined with volatility threshold for trade timing optimization. The system dynamically adjusts grid levels to capture market microstructure changes during high volatility periods while avoiding overtrading during low volatility periods. The strategy integrates multiple technical indicators, including Average True Range (ATR), Simple Moving Average (SMA), and fractal breakout points, building a comprehensive trading decision framework.
@@ -83,7 +46,6 @@ The core of the strategy lies in establishing dynamic trading grids through frac
 
 #### Summary
 This is a comprehensive strategy system combining fractal theory, grid trading, and volatility filtering. Through the coordinated use of multiple technical indicators, it achieves effective capture of market microstructure. The strategy's strengths lie in its adaptability and risk control capabilities, while attention needs to be paid to parameter optimization and market environment adaptability. Through continuous optimization and improvement, the strategy has the potential to maintain stable performance across different market environments.
-[/trans]
 
 
 

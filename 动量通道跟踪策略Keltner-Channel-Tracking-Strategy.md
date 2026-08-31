@@ -11,68 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/e3b0c079fd0d658d0b.png)
-[trans]
-
-### 概述
-
-本策略基于动量通道指标设计交易信号,根据价格突破通道上下轨来产生买入和卖出信号。策略只做多头交易,如果出现卖出信号,则平仓至空仓状态。
-
-### 策略原理  
-
-本策略使用SMA平均线及ATR真实波动幅度构建动量通道。通道的上轨和下轨分别为:
-
-上轨 = SMA + ATR * 系数
-下轨 = SMA - ATR * 系数
-
-当价格上穿上轨时,产生买入信号;当价格下穿下轨时,产生卖出信号。
-
-由于只做多头,所以如果出现卖出信号,则取消之前的开仓订单,平仓至空仓状态。
-
-具体来说,策略逻辑如下:
-
-1. 使用SMA和ATR构建动量通道
-2. 当价格上穿上轨时,设定开仓价格并下单做多
-3. 当价格下穿下轨时,平掉之前的做多单,使仓位为空仓
-
-### 优势分析
-
-本策略具有以下优势:
-
-1. 策略逻辑简单清晰,容易理解实现
-2. 动量通道指标直观,对市场趋势判断准确
-3. 只做多头交易,避免追踪止损风险
-4. 条件单下单,有利于精准entries
-
-### 风险分析 
-
-本策略也存在一些风险:  
-
-1. 市场震荡时,可能出现频繁开平仓
-2. 只做多头,无法利用空头机会
-3. 没有退出机制,需要人工判断退出点
-
-对策:
-
-1. 优化通道参数,降低误差信号
-2. 增加空头模块,做双向交易
-3. 加入移动止损, trailing stop等退出机制
-
-### 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化参数,调整通道周期,波动率系数等参数
-2. 增加空头模块,根据价格下穿下轨产生卖出信号
-3. 加入止损机制,结合ATR尾随止损
-4. 考虑加入更多过滤条件,避免错误信号
-5. 测试不同品种合约的效果
-
-### 总结  
-
-本策略基于动量通道指标,简单有效地捕捉市场趋势。策略逻辑清晰易懂,通过价格突破通道上下轨来产生交易信号。虽然只做多头和没有退出机制等不足,但可通过参数优化、增加空头模块、加入止损等方式进行改进。总体而言,本策略具有非常大的改进空间,是值得深度研究和应用的量化策略。
-
-
-|| 
 
 ### Overview  
 
@@ -132,7 +70,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy effectively catches market trends with simple Keltner Channel rules. The logic is clear and easy to understand. Although the lack of exits and short module, it has great potential for improvements like parameter tuning, adding stops, going short etc. Overall a valuable quant strategy worth in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

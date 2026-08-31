@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17c58bb6e177cdd54fc.png)
-[trans]
-
-## 概述
-
-三重叠加随机动量策略是一种典型的短线交易策略。它通过计算三条不同参数设置的随机动量指标,并进行多重叠加,形成交易信号。当三条随机动量指标同时显示超买或超卖信号时,进行买入或卖出。该策略结合了多时间周期分析的优势,可以有效过滤市场噪音,提高信号质量。
-
-## 策略原理
-
-该策略的核心指标是随机动量指标(SMI)。SMI指标的计算公式如下:
-
-```
-SMI = 100 * EMA(EMA(收盘价-最高价和最低价的中点,N1),N2) / 0.5 * EMA(EMA(最高价-最低价,N1),N2)
-```
-
-其中,N1和N2分别是参数长度。SMI指标的取值范围在-100到100之间,当SMI高于0时表示收盘价位于当日价格范围的上半段,低于0时表示收盘价位于价格范围的下半段。
-
-和传统stoch指标类似,SMI指标超过预设的超买线(如40)和超卖线(如-40)时,表明可能形成反转信号。当SMI指标上穿其移动平均线时,产生买入信号;当SMI指标下穿其移动平均线时,产生卖出信号。
-
-该策略采用三组不同参数设置的SMI指标进行叠加,分别設定为:
-
-- SMI1: %K长度10周期,%K平滑周期3周期
-- SMI2: %K长度20周期,%K平滑周期3周期  
-- SMI3: %K长度5周期,%K平滑周期3周期
-
-当三条SMI指标同时显示超买或超卖时,发出交易信号。这可以有效过滤假Signals,提高信号质量。
-
-## 策略优势
-
-- 多时间周期分析,综合判断,有效过滤噪声
-- SMI指标增强了stoch指标的易用性
-- 采用三重叠加,可靠性较单一指标高  
-- 参数设置灵活,可调整
-- 适用于高频短线交易
-
-## 策略风险
-
-- 多重指标叠加,存在一定滞后
-- 短线操作频繁,交易成本较高
-- 回测数据拟合风险
-- 市场结构变化后参数失效风险
-
-风险缓解措施:
-
-- 优化参数,降低滞后
-- 适当调整持仓时间,降低交易成本
-- 增加统计检验,检验稳健性
-- 动态调整参数
-
-## 策略优化
-
-- 测试不同的SMI参数组合
-- 增加统计指标,评估参数稳定性
-- 结合其他辅助指标,如成交量,布林带等
-- 根据市场环境动态切换参数
-- 优化止损策略
-
-## 总结
-
-三重叠加随机动量策略通过采用三组不同参数设置的SMI指标,在多个时间周期上进行综合判断,形成高质量的超买超卖交易信号。相比单一指标,该策略可过滤更多噪声,提升稳定性。下一步可通过参数优化、统计检验、辅助指标等方法进行改进,使策略更具鲁棒性。
-
-||
 
 ## Overview  
 
@@ -130,7 +69,6 @@ Risk Mitigations:
 
 The Triple Overlapping Stochastic Momentum strategy combines robust signal generation across multiple timeframes by overlaying three SMI indicators with unique parameters. Compared to single oscillators, this multi-indicator approach filters more noise and improves consistency. Further refinements can be made going forward through parameter optimization, statistical validation, auxiliary indicators etc. to enhance strategy robustness.
 
-[/trans]
 
 > Strategy Arguments
 

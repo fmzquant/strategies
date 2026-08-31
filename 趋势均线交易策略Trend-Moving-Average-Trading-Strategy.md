@@ -9,80 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略采用快速均线和慢速均线的组合来判断趋势方向,以捕捉中长线趋势进行趋势交易。当快速均线上穿慢速均线时做多,当快速均线下穿慢速均线时做空,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-该策略主要依靠均线的金叉死叉来判断行情趋势。具体来说,策略使用5周期的快速均线和21周期的慢速均线。
-
-当快速均线上穿慢速均线时,表示市场趋势转多,该策略会在下一根K线开盘时做多;当快速均线下穿慢速均线时,表示市场趋势转空,该策略会在下一根K线开盘时做空。
-
-此外,策略还设置了“bars”参数来过滤假突破。该参数默认值为2,也就是说快速均线需要连续2根K线在慢速均线之上才会发出做多信号,能够有效过滤假突破。
-
-对于加密货币,策略还加入了极值判断逻辑。只有当快速均线和慢速均线同时处于极端区域时,才会发出交易信号。这也是为了进一步避免假突破。
-
-策略退出规则简单直接,当价格触发止损点就会退出当前头寸。
-
-## 策略优势
-
-- 使用双均线系统,可以有效跟踪趋势
-- 快速均线长度较短,可以及时捕捉趋势变化
-- 慢速均线长度较长,可以确定主方向
-- “bars”参数可以过滤掉部分假突破
-- 极值判断可以避免关键点附近的零星假突破
-- 采用移动止损来控制风险
-
-## 策略风险
-
-- 双均线策略容易在趋势转折点产生损失
-- 移动止损可能会过早停损
-- “bars”参数过滤程度还不够,可能会错过买点
-- 极值判断在某些情况下会错过买点
-- 该策略更适合强势趋势市场,不适合盘整震荡市场
-
-可以通过以下方法降低风险:
-
-- 优化“bars”参数,找到平衡点
-- 尝试其他指标进行过滤,如MACD
-- 调整止损点位,防止过早停损
-- 考虑加入重入机制
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 均线参数优化
-  
-  可以测试更多组合,找到更适合当前市场的均线参数。例如调整快线为10周期,慢线为50周期。
-  
-2. 加入其他指标判断
-  
-  可以测试加入MACD,KDJ等其他指标,设置更严格的条件,避免假突破。
-  
-3. 优化入场机制
-
-  目前的入场过于简单依赖均线,可以优化为如下:
-
-  - 快线上穿慢线时,等MACDDIFF也上穿0才入场
-  - 快线上穿慢线时,判断KDJ是否也金叉了才入场
-  
-4. 优化止损机制
-
-  可以测试其他止损方式,例如随价格追踪止损,避免止损过早被触发。
-
-5. 加入重入机制
-
-  当头寸止损后,可以重新入场,这样可以减少停在场外错过趋势的情况。
-
-## 总结
-
-本策略作为一个基础的趋势跟踪策略,核心思路简单直接,采用双均线判断趋势方向,以及移动止损来控制风险。优点是容易理解和实现,可以顺应趋势获利,风险也可以得到控制。但同时也存在一些缺陷,在盘整市场中信号不准,而且止损容易过早被触发等问题。这需要我们在实盘中不断调整优化,加入其他技术指标进行过滤,使策略更加适应不同市场环境。总的来说,本策略作为趋势跟踪入门策略还是非常适合新手的,值得学习和运用。但我们也要注意其局限性,并不断学习其他更高级的策略思路。只有不断优化策略,才能在复杂多变的市场中持续获得稳定收益。
-
-|| 
 
 ## Overview
 
@@ -155,7 +81,6 @@ The strategy can be improved from the following aspects:
 
 In summary, this basic trend-following strategy has simple and straightforward logic - using dual MAs for trend direction and moving stops for risk management. The pros are easy to understand, can profit from trends, and manages risks. But limitations exist too, like bad signals during consolidations, premature stop outs, etc. Live tuning and optimization are needed, such as adding filters, adjusting stops, to make it adaptable to different market environments. As an introductory trend trading strategy, it is suitable for beginners to learn and apply. But its limitations should be noted, and more advanced strategies should be explored. Only through continuous improvements can one achieve sustainable profits in ever-changing markets.
 
-[/trans]
 
 > Strategy Arguments
 

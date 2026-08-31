@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b1dedf58fc53b572ab.png)
-[trans]
-### 概述
-
-本策略是一个基于K线实时变化的双向追踪网格交易策略。它可以在牛市和熊市中都获得稳定的利润。
-
-### 策略原理
-
-1. 根据用户设置的网格数量,自动计算价格网格区间和每个网格价格。
-
-2. 当价格突破网格价格时,按照固定数量开仓做多;当价格跌破网格价格时,平仓做多仓位,做空开仓。
-
-3. 这样,价格在网格区间震荡时,可以通过追踪价格变化来获得利润。
-
-### 优势分析
-
-1. 自动计算合理的网格区间,无需人工确定支持阻力。
-
-2. 双向交易,可适应行情多变的市场环境。
-
-3. 固定开仓数量,有利于风险控制。
-
-4. 代码直观简洁,容易理解和修改。
-
-### 风险分析
-
-1. 行情剧烈波动可能导致亏损扩大。
-
-2. 交易费用的累积也会影响最终利润。
-
-3. 需要合理确定网格数量,太多网格交易次数增多但每次利润有限。
-
-### 优化方向
-
-1. 加入止损策略,避免亏损扩大。
-
-2. 增加网格数量动态调整功能。
-
-3. 考虑加入杠杆,放大交易量。
-
-### 总结
-
-本策略整体思路清晰简洁,通过双向追踪网格交易获得稳定收益,同时也存在一定的交易风险。通过不断优化,可望获得更好的效果。
-
-||
 
 ### Overview
 
@@ -97,7 +53,6 @@ This strategy is a bi-directional grid trading strategy based on real-time track
 
 The strategy has an overall clear and simple logic to generate steady income through bi-directional grid trading, but also bears certain trading risks. Further optimizations may lead to better results.
 
-[/trans]
 
 > Strategy Arguments
 

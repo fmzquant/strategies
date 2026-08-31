@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e19dc4a68c8652971c.png)
-[trans]
-### 概述
-
-双EMA均线追踪策略(Dual Exponential Moving Average Trend Following Strategy)是一种基于均线交叉的趋势跟踪策略。该策略通过计算快线EMA和慢线EMA,并根据它们的交叉情况来判断当前趋势方向。当快线上穿慢线时,判断为看涨;当快线下穿慢线时,判断为看跌。根据判断出的趋势方向,该策略可以进行看涨或看跌操作。
-
-### 策略原理  
-
-该策略的核心逻辑在于计算两条不同周期的EMA均线,一条作为空头线,一条作为多头线。具体来说,策略通过talib指标计算出一条8周期的快速EMA均线,作为多头线;另外计算出一条21周期的慢速EMA均线,作为空头线。然后判断快速EMA线和慢速EMA线的交叉关系,当快线上穿慢线时,判断为看涨,可以做多;当快线下穿慢线时,判断为看跌,可以做空。
-
-在具体实施交易操作时,该策略既可以只做多,也可以只做空;还可以在快慢线发生交叉时,同时进行双向交易。此外,策略还设置有止损和止盈价格。在开仓后,如果价格运行方向不利,将止损退出;如果价格运行达到预期目标,将止盈收场。
-
-### 优势分析
-
-双EMA均线追踪策略的最大优势在于使用了均线交叉的强大趋势判断能力。EMA均线作为一种常用的趋势判断工具,通过均线交叉来识别价格变化趋势和转折时机,可以避免被短线市场噪音所迷惑,把握主要的趋势方向。
-
-另外,策略灵活的交易方向设置,既可以适应单向行情,也能捕捉价格在震荡区间的双向机会,增加了策略的实用性。同时设置止损止盈,可以有效控制风险,locking住部分利润。
-
-### 风险分析
-
-双EMA均线追踪策略最大的风险在于,震荡行情下的多次小幅度交叉造成交叉信号的频繁触发和虚假信号。这将导致策略频繁开仓和损失。这种情况下,可以适当增大EMA周期,减少交叉次数和虚假信号发生概率。
-
-另一方面,止损范围设置过小也会增加策略被击出的概率。这种情况下,可以适当扩大止损范围,但也需要权衡被套利盘的风险。
-
-### 优化方向
-
-该策略可以从以下几个方面进一步优化:
-
-1. 动态调整EMA均线周期。可以根据市场波动率和最优参数回测结果,让EMA周期动态变化,避免固定周期下的过拟合问题。
-
-2. 增加过滤条件过滤虚假信号。例如可以结合交易量,过滤小幅震荡时产生的假交叉。也可以结合其他指标,如MACD、KDJ等,避免在不确定的时段产生信号。
-
-3. 优化止损止盈策略,结合ATR等指标,可以实现止损止盈的动态跟踪。避免止损过小和止盈过早的问题。
-
-4. 测试不同的持仓时间。持仓时间过长,容易被突发事件影响;持仓时间过短,则交易成本和滑点成本较高。找到最佳持仓天数,可以提高策略盈利能力。
-
-
-### 总结  
-
-双EMA均线追踪策略整体来说是一个稳健实用的趋势跟踪策略。它利用EMA均线交叉判断价格趋势,可以有效把握行情方向。同时 Settings灵活的交易方向设置提高了策略适应性;以及止损止盈设置控制了风险。通过进一步优化和完善,该策略可以成为量化交易的有力工具。
-
-||
 
 ### Overview  
 
@@ -90,7 +49,6 @@ This strategy can be further optimized in the following aspects:
 
 In general, the Dual EMA Trend Following Strategy is a robust and practical trend trading system. It catches trend directions effectively through EMA crossover system. Meanwhile, the flexible settings on trade directions make it adaptable; the configured stop loss and take profit control risks. With further optimizations and enhancements, this strategy can become a powerful tool for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

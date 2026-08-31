@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/77457626432c7a9c0a.png)
-[trans]
-
-
-## 概述
-
-本策略是基于vitelot的Smeared变异通道指数(Smeared VCI)指标进行交易的趋势跟踪策略。该策略结合了移动平均线的趋势判断和变异通道指数的超买超卖判断,以捕捉价格的主要趋势方向。当价格运行进入超买或超卖状态时,进行反向操作以获利。
-
-## 策略原理  
-
-该策略使用vitelot的Smeared VCI指标判断趋势方向。Smeared VCI指标是在变异通道指数(VCI)的基础上进行平滑处理得到的。它由快速EMA、慢速EMA和平滑周期三个参数组成。当快速EMA高于慢速EMA时为看涨,否则为看跌。加入平滑处理后,可以过滤掉部分噪音。 
-
-策略中设置两个条件:
-
-1. Smeared VCI上穿Trigger线为做多信号;下穿为做空信号
-
-2. 只在回测时间窗口内交易
-
-当两条件同时满足时,进行做多或做空操作。平仓条件为止损或反向信号出现时平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用了趋势跟踪型指标,可以有效跟踪趋势
-
-2. 加入平滑处理,可以减少假信号
-
-3. 采用时间窗口回测,可以针对特定时间内的行情进行测试
-
-4. 设置止损点,可以控制风险
-
-5. 采用指标参数进行多空判断,规则简单清晰
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 趋势判断可能发生错误,从而产生损失
-
-2. 指标参数设置不合适可能导致获利不佳
-
-3. 止损点设置过小可能导致小止损
-
-4. 回测时间窗口不合理可能导致测试结果偏差
-
-5. 多空切换过于频繁可能带来交易费用pressure
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同参数组合,寻找最佳参数
-
-2. 利用其他指标进行辅助判断,提高准确率 
-
-3.优化止损算法,实现动态跟踪止损
-
-4. 优化开仓条件,避免频繁交易
-
-5. 测试更长时间窗口,验证策略稳定性
-
-6. 结合交易量等其他因素,提高决策准确性
-
-## 总结
-
-本策略整体来说是一个较为简单的趋势跟踪策略。它利用Smeared VCI指标判断趋势方向,在指标发送交易信号时开仓;通过止损来控制风险。该策略具有趋势跟踪能力,但也存在一定的风险。通过参数优化、止损优化以及辅助条件添加等方法,可以进一步完善该策略,使其成为一个稳定可靠的交易系统。
-
-||
 
 
 ## Overview
@@ -144,7 +76,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a relatively simple trend following strategy. It uses the Smeared VCI indicator to determine trend direction and open positions when trading signals are generated. Risk is controlled by stop loss. The strategy has trend following capability but also has some risks. Further improvements can be made through parameter optimization, stop loss optimization and adding confirming conditions to make it a stable and reliable trading system.
 
-[/trans]
 
 > Strategy Arguments
 

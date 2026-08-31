@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略融合运用MACD指标和StochRSI指标在多个时间周期进行判断,提高交易决策的稳定性和可靠性。属于典型的多时间轴组合策略。
-
-策略原理:
-
-1. 在日线和4小时周期计算MACD和StochRSI指标。
-
-2. 当日线和4小时周期的多头指标同时出现做多信号时,进行做多操作。
-
-3. 当日线和4小时周期的空头指标同时出现做空信号时,进行做空操作。
-
-4. 在一个方向入场后,等待另一方向指标出现才可平仓。
-
-5. 通过多时间轴组合,进行指标结果验证,减少错误交易。
-
-该策略的优势:
-
-1. 多时段组合判断,可提高信号的稳定性。
-
-2. MACD与StochRSI可相互验证,提高准确率。
-
-3. 清晰的入场和出场规则,便于回测和实盘。
-
-该策略的风险:
-
-1. 多时间轴组合判断存在滞后问题。
-
-2. 指标参数优化较为复杂,需同时考量多个周期。
-
-3. 交易频率可能较低,无法充分捕捉市场机会。
-
-总之,该策略通过多个周期指标组合进行判断,可在一定程度上提高信号质量,但需注意参数优化和滞后问题,寻求回报与风险之间的平衡。
-
-||
 
 This strategy combines the MACD and StochRSI indicators across multiple timeframes for improved reliability in trade signals. It is a typical multi-timeframe combination approach.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this multi-timeframe approach can improve signal quality but requires balancing optimization and lag against risk-adjusted returns.
 
-[/trans]
 
 > Strategy Arguments
 

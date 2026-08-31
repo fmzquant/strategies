@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14370d8f66999d20eab.png)
-[trans]
-
-
-## 概述
-
-该策略主要将高低指标、均线指标与超级趋势指标相结合,判断市场趋势而建仓。
-
-## 策略原理
-
-1. 通过高低指标判断最近一定周期内价格是否创出新高或新低,并累加得分。当分数上涨时,代表着多头力量增强;当分数下降时,代表着空头力量增强。
-
-2. 通过均线指标,判断价格是否处于由下往上的阶梯型上升趋势,或者由上往下的阶梯型下降趋势。当均线呈现阶梯型上升,代表着多头力量增强;当均线呈现阶梯型下降,代表着空头力量增强。 
-
-3. 结合高低指标和均线指标的判断结果,确定市场趋势;再结合超级趋势指标的方向,寻找建仓机会。具体来说,当高低指标和均线指标都显示多头力量增强,且超级趋势指标方向为向下时,进行长仓建仓;当高低指标和均线指标都显示空头力量增强,且超级趋势指标方向为向上时,进行空仓建仓。
-
-## 策略优势 
-
-1. 高低指标能有效判断价格走势和力量变化,均线指标能有效判断价格趋势,两者结合能更准确判断市场走向。
-
-2. 结合超级趋势指标进行建仓,可避免建仓过早或过晚。超级趋势指标可有效识别价格反转点。
-
-3. 多种指标相互验证,可减少假信号。
-
-## 策略风险
-
-1. 若高低指标和均线指标发出错误信号,可能造成亏损建仓。
-
-2. 若参与度不高,超级趋势指标参数设置不当,可能发出错误信号。
-
-3. 若趋势反转过快,止损设置不当,可能造成较大亏损。
-
-4. 可通过优化指标参数,调整止损点位等方式降低风险。
-
-## 策略优化
-
-1. 可测试不同类型的均线指标,寻找最佳参数组合。
-
-2. 可优化高低指标和均线指标的参数,使信号更稳定可靠。 
-
-3. 可结合其他指标进行验证,如MACD,KD等,减少假信号。
-
-4. 可结合机器学习算法自动优化参数和信号权重。
-
-5. 可结合情绪分析等判断市场热度,避免交易低热度品种。
-
-
-## 总结
-
-该策略通过高低指标和均线指标判断市场趋势和力量,再结合超级趋势指标过滤信号,在多空力量对抗且超级趋势指标反转时建仓,实现低风险交易。策略优势在于多指标验证和及时建仓,可有效控制风险。存在的问题在于假信号和趋势判断错误。可通过参数优化、止损设置、信号过滤等多种方式进行改进,使策略更稳健可靠。
-||
 ## Overview
 
 This strategy mainly combines the High Low Index, Moving Average Index and Super Trend Index to determine the market trend and open positions.  
@@ -106,7 +56,6 @@ This strategy mainly combines the High Low Index, Moving Average Index and Super
 
 This strategy determines market trends and momentum through the High Low Index and Moving Average Index, and then filters the signals using the Super Trend Index, opening positions when bullish and bearish forces confront each other and the Super Trend Index reverses. Its advantages lie in multiple signal verification and timely opening of positions, which can effectively control risks. Existing problems include false signals and trend misjudgment. Various improvements can be made through parameter optimization, stop loss settings, signal filtering, etc. to make the strategy more robust and reliable.
 
-[/trans]
 
 > Strategy Arguments
 

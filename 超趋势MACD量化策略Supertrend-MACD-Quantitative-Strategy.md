@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8d2297487404885343.png)
-[trans]
-
-## 概述
-
-该策略综合利用了超趋势指标和MACD指标的潜在趋势反转信号,配合RSI指标的超买超卖信号,形成了一个较为稳定和高效的开仓及平仓信号体系。策略名称为“超趋势MACD量化策略”。
-
-## 策略原理
-
-该策略的核心逻辑在于综合利用超趋势指标和MACD指标作为开仓信号的判定标准。
-
-超趋势部分,策略采用超趋势指标的方向改变作为潜在反转信号。当超趋势指标方向从上转向下时产生买入信号;当超趋势指标方向从下转向上时产生卖出信号。
-
-MACD部分,策略采用MACD指标在较低时间框架(日线)上的斜率和零轴交叉来判断潜在反转机会。当MACD斜率绝对值较大(大于阈值)且斜率保持同向上升时产生信号;如果MACD指标交叉零轴时也会产生辅助信号。MACD部分信号较超趋势部分更加平滑。
-
-在开仓信号上,策略要求超趋势信号和MACD信号保持一致方向才会发出开仓指令。
-
-此外,在平仓部分策略还引入了RSI指标的超买超卖信号。当RSI指标大于80时产生卖出信号,小于20时产生买入信号,来辅助判断反转时机。
-
-## 优势分析
-
-该策略最大的优势在于指标信号的多样性。不同指标之间可以形成互补,使整体信号更加平稳和可靠。
-
-超趋势指标的反转信号可以捕捉比较有力的短期趋势;MACD斜率可以判断中长期趋势力度,避免被假反转误导;而RSI则可以在区间震荡行情中提示超买超卖的最佳开仓和平仓时机。多个指标信号的叠加,可以过滤掉一些噪声交易,取得更高的胜率。
-
-此外,策略的时间框架设定也较为合理。超趋势采用小时级时间框架, MACD指标采用日线,这样既保证了交易频率,也兼顾了趋势判断的稳定性。
-
-## 风险分析
-
-该策略的主要风险在于指标之间产生混淆信号的概率较大。比如超趋势产生假反转,而MACD信号并未同步产生。这时就可能导致不必要的亏损。
-
-此外,RSI指标用于判断平仓的时机也可能会过早或过晚,使得策略的持仓时间无法获得最大化。 
-
-最后,MACD指标的斜率阈值设置过大也会导致错过较弱的反转机会。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 引入止损机制。当亏损超过一定比例时止损。
-
-2. 对MACD斜率的判断加入动态阈值。当市场波动较大时提高斜率阈值,市场稳定时降低阈值。
-
-3. 对于RSI指标平仓判断加入回调条件。即RSI超过80后要求有一次明显回调再考虑平仓。
-
-4. Testing MACD with volume and see if it improves signal reliability  
-
-5. Trying automated parameter tuning to find optimal settings
-
-## 总结
-
-“超趋势MACD量化策略”综合多个指标提供开仓和平仓信号。其优点是信号稳定,胜率较高,通过参数优化还可进一步提升。风险和优化方向也主要集中在参数设定 overfitting 的问题上。整体而言,该策略具有很强的实战应用价值。
-
-||
 
 ## Overview
 
@@ -113,7 +60,6 @@ This strategy can be further optimized from the following aspects:
 ## Conclusion  
 
 The “Supertrend MACD Quantitative Strategy” combines signals from multiple indicators to provide entry and exit signals. Its advantages lie in stable signals and relatively high win rate. Further improvements can be achieved through parameter optimization. Risks and optimization directions mainly center around parameter overfitting issues. Overall, this strategy has strong practical value for live trading.  
-[/trans]
 
 > Strategy Arguments
 

@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f668e550c1ab221966.png)
-[trans]
-
-### 概述
-
-该策略通过计算不同周期的均线和方差,来判断价格的趋势和波动性,实现对高点和低点的识别。
-
-### 策略原理  
-
-该策略的核心逻辑是计算近期不同周期的均线和方差。具体来说,分别计算最近5日、4日和3日的均线(ma,mb,mc)和方差(da,db,dc)。然后比较大小,选择方差最大的一个周期代表当前趋势。最后,用代表趋势的周期的均线乘以其方差的平方,作为最终输出的曲线wg。
-
-这样,当价格出现向上突破或向下突破时,代表趋势的周期和方差会发生较大变化。从而使得最终输出的wg也产生较大变化,实现对高点和低点的识别。
-
-### 优势分析
-
-这种基于不同周期判断趋势变化的思路行之有效,可以清楚地识别出价格的转折点。相比单一周期判断,这种组合多个周期的方法可以提高判断的准确性和及时性。
-
-计算均线和方差也非常简单有效,代码量不大,且对突发的价格变化非常敏感,从而可以快速发现突破。
-
-### 风险分析
-
-该策略中使用的周期较短,对于中长线而言,判断可能不够准确和全面。短期内的价格震荡可能导致误判。  
-
-此外,均线和方差的权重设置也会影响判断效果,如果权重设置不当,则信号可能偏差。  
-
-### 优化方向
-
-可以尝试加入更多不同周期的计算,组成周期组合,使判断更全面。比如加入 10 日、20 日等中长期周期判断。
-
-也可以试验不同的权重设置方案,提高权重设定的灵活性。加入参数优化,使权重可以根据市场环境自动调整,减少误判概率。
-
-此外,还可以结合其他指标,比如成交量的异常等,避免被套利交易误导判断。
-
-### 总结
-
-该策略整体思路清晰易懂,使用均线和方差判断价格趋势和波动性,然后组合输出能清楚识别高点低点的曲线。这种基于多周期组合判断的方法,可以有效获取市场的长短期特征,提高对转折点的判断准确性。优化空间也很大,可从周期、权重、指标等多个方面进行调整,使策略更稳定和全面。
-
-||
 
 ### Overview  
 
@@ -82,7 +45,6 @@ In addition, other indicators could be incorporated, like abnormal trading volum
 
 The overall logic of this strategy is clear and easy to understand, using moving averages and variances to judge price trend and volatility, and then combining them to output a curve that can clearly identify highs and lows. Such multi-period combined judgment can effectively capture both short- and long-term market characteristics, improving the accuracy of inflection point detection. There is also large room for optimization, from aspects like periods, weights and indicators etc, to make the strategy more robust and comprehensive.
 
-[/trans]
 
 
 

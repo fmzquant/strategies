@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/101c4bd245a7f199d15.png)
-[trans]
-### 概述
-
-本策略结合使用Aroon指标和绝对力度指标(ASH),旨在识别市场趋势和潜在交易机会。Aroon有助于识别趋势的强度和方向,而ASH提供动量实力的洞察。通过组合这些指标,策略试图捕捉以太坊市场中的可盈利交易机会。
-
-### 策略原理
-
-该策略使用两个Aroon指标参数组:
-
-- 多头仓位:Aroon周期为56(上轨)和20(下轨)
-- 空头仓位:Aroon周期为17(上轨)和55(下轨)
-
-ASH的长度为9根K线,使用收盘价作为数据源。
-
-策略包含特定的进入和退出交易条件:
-
-1. 多头仓位进入:当Aroon指标上穿下轨时,表示潜在上涨趋势,因此开多仓。  
-2. 多头仓位退出:当Aroon指标下穿下轨时,平多仓。
-3. 空头仓位进入:当Aroon指标下穿上轨时,表示潜在下跌趋势,因此开空仓。 
-4. 空头仓位退出:当Aroon指标上穿上轨时,平空仓。
-
-### 优势分析
-
-本策略最大的优势在于结合运用两个指标的优势。Aroon指标可以有效判断趋势方向和强度,ASH指标提供额外的动量洞察,有助于判断进入和退出时机。
-
-此外,使用两个不同参数组的Aroon指标进行多空判断,可以灵活适应市场态势的变化。
-
-### 风险分析
-
-该策略主要的风险在于指标本身的局限性。Aroon指标对于震荡盘整市较弱,容易产生错误信号。ASH指标对于短期过度反转也较为敏感。
-
-此外,参数设置如果不当,也会影响策略表现。需要对Aroon指标的长短周期以及ASH指标的长度进行优化和测试,找到最佳参数组合。
-
-### 优化方向
-
-可以考虑添加过滤器,如价格突破、交易量增加等,避免在震荡行情中产生错误信号。
-
-可以测试不同的指标参数组合和权重,找到最优参数。也可以尝试结合其他指标,如RSI、KD等,形成更强大的指标组合,提高策略表现。
-
-### 总结
-
-本策略整合运用Aroon和ASH两个指标的优势,通过双指标确认,在判断趋势和捕捉转折点时效果较好。但参数设置和指标本身局限仍需优化。总体来说,思路新颖,值得进一步改进和验证。
-
-||
 
 ### Overview
 
@@ -97,7 +53,6 @@ Different parameter combinations and weights could be tested to find optimal set
 
 The strategy effectively combines the strengths of Aroon and ASH for dual-confirmation of trends and turning points. But parameters and indicator limitations still need refinement. The creative concept shows promise for further improvements and testing.
 
-[/trans]
 
 > Strategy Arguments
 

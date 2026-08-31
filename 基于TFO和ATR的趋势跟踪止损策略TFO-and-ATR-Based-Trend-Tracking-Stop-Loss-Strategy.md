@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14d3d06c1464e88c7e8.png)
-[trans]
-
-## 概述
-
-该策略是基于Dr. John Ehlers的趋势弹性振荡器(Trend Flex Oscillator,TFO)和平均真实波动范围(Average True Range,ATR)指标设计的一个趋势跟踪止损策略。它适用于多头市场,当Oversold后的价格出现反转时会打开多头仓位。它通常会在几天内平仓,除非被熊市捕获,在这种情况下它会固守仓位。该策略通过简单的回测来调整可配置的参数,但是不应该完全相信回测结果。
-
-## 策略原理  
-
-该策略结合了TFO和ATR两个指标,在符合买入条件时开多仓,在符合卖出条件时平仓。
-
-买入条件:当TFO低于某个阈值(表示过度空头),并且上一根K线的TFO值低于当前K线时(表示TFO反转上涨),同时ATR高于设定的波动门槛时(表示市场波动加大),满足这三个条件则开多仓。
-
-平仓条件:当TFO高于某个阈值(表示过度多头)时,同时ATR高于设定门槛时,满足条件则平掉所有多仓。此外,该策略还设置了跟踪止损,当价格跌破设定的跟踪止损价位时,也会平掉所有多仓。用户可以选择让策略根据指标信号平仓,或只按照止损价位平仓。
-
-该策略最多可同时开15个多头仓位。其参数可以调整,适用于不同时间周期。
-
-## 策略优势
-
-1. 结合趋势和波动度判断市场方向,比较稳定。TFO能捕捉突破趋势的早期信号,ATR能把握市场波动加大的时机。
-
-2. 设置了可调的买卖参数和止损参数,操作灵活。用户可以根据市场调整参数,实现最优化。  
-
-3. 内置了止损功能,可以减少极端行情的损失。止损策略是量化交易中非常重要的一环。
-
-4. 支持追加开仓和部分平仓,可以通过加大仓位来放大盈利。适合看多的行情。
-
-## 策略风险 
-
-1. 该策略只做多,不做空,无法在跌市中盈利。如果遇到惨烈的熊市行情,可能造成巨额损失。  
-
-2. 参数设置不当可能导致过度交易或漏买漏卖。需要反复测试找到最佳参数组合。
-
-3. 在极端行情时,止损可能无效,无法阻止巨额亏损的发生。这是所有止损策略都可能面临的问题。
-
-4. 回测并不能完全反映实盘交易情况,实盘结果会与之存在一定偏差。
-
-## 策略优化
-
-1. 可以考虑在卖出条件中加入移动止损线,让策略及时止损,有效控制下行风险。
-
-2. 可以扩展做空机制,在TFO反转下跌且ATR足够大时开空仓,使策略能适用于空头市场。
-
-3. 可以加入更多过滤条件,例如成交量变化,减少异常行情对策略的影响。
-
-4. 可以测试不同时间周期的参数设置和回测结果,寻找最佳周期及参数组合。
-
-## 总结
-
-该策略整合了趋势分析和波动度监测的优势,通过TFO和ATR的指标组合判断市场方向;设置了追加开仓、部分平仓、移动止损等机制,可以放大获利并控制风险,适合多头行情;还有可扩展的优化空间,通过加入更多指标过滤和参数调优可以进一步改进策略表现。基本实现了一个量化策略的基本功能要求,值得深入研究和应用。
-
-||
 
 ## Overview
 
@@ -109,7 +58,6 @@ The strategy allows up to 15 simultaneous long positions. Parameters can be adju
 ## Conclusion
 
 This strategy combines the strengths of trend and volatility analysis using TFO and ATR to determine market direction. Mechanisms like pyramiding, partial close and trailing stop loss allow profit compounding while controlling risk during bull markets. There is room for improvements via more indicators filters and parameter optimization. It achieves the basic goals of a quant strategy and merits further research and application.  
-[/trans]
 
 > Strategy Arguments
 

@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1689817df5b092da7a8.png)
 
-[trans]
-#### 概述
-该策略主要利用最高价、最低价和指数移动平均线(EMA)来确认趋势逆转,从而产生交易信号。策略首先计算指定回看期内的最高价和最低价,然后判断当前收盘价是否低于最高价对应的最低价(看跌逆转确认)或高于最低价对应的最高价(看涨逆转确认)。一旦出现逆转确认信号,策略就会产生相应的开仓信号。该策略的主要优点是能够捕捉趋势逆转的机会,而主要风险则在于逆转确认信号出现后,价格可能出现反复震荡而不是单边趋势行情。
-
-#### 策略原理
-1. 计算指定回看期内的最高价(find_highest)和最低价(find_lowest)。
-2. 计算指定回看期内收盘价的EMA。
-3. 遍历回看期内的每根K线,找出最高价对应的最低价(dnRv),以及最低价对应的最高价(upRv)。
-4. 判断当前收盘价是否低于dnRv(看跌逆转确认)或高于upRv(看涨逆转确认)。
-5. 如果出现看跌逆转确认信号(dnRv_signal)且之前未触发过该信号,则产生做空开仓信号。
-6. 如果出现看涨逆转确认信号(upRv_signal)且之前未触发过该信号,则产生做多开仓信号。
-
-#### 策略优势
-1. 逆转确认信号能够帮助策略捕捉趋势逆转的机会,从而提高策略的潜在收益。
-2. 通过EMA的使用,策略能够适应不同的市场状况和波动周期。
-3. 回看期的可调整性使得策略具有灵活性,可以根据不同的交易品种和周期进行优化。
-
-#### 策略风险
-1. 逆转确认信号出现后,价格可能出现反复震荡而不是单边趋势行情,导致策略出现频繁的开仓和平仓,增加交易成本。
-2. 策略缺乏明确的止损和止盈机制,可能导致单笔交易的风险敞口过大。
-3. 策略未考虑交易品种的特性和市场环境,可能在某些情况下表现欠佳。
-
-#### 策略优化方向
-1. 引入止损和止盈机制,控制单笔交易的风险敞口。可以根据ATR、百分比或固定点数等方式设置动态或静态的止损止盈水平。
-2. 结合其他技术指标或市场环境因素,如RSI、MACD、波动率等,以提高逆转确认信号的可靠性和过滤掉假信号。
-3. 对不同的交易品种和周期进行参数优化,找到最适合的回看期和EMA周期,提高策略的适应性和稳定性。
-4. 考虑引入仓位管理和风险控制机制,如根据市场波动率或账户净值调整仓位大小,以控制整体风险。
-
-#### 总结
-多时间框架逆转确认交易策略通过最高价、最低价和EMA来识别潜在的趋势逆转机会,并产生相应的开仓信号。该策略的优点是能够捕捉趋势逆转,但也存在频繁交易和风险控制不足的问题。通过引入止损止盈、结合其他指标、参数优化和仓位管理等方法,可以进一步提升策略的表现和稳定性。在实际应用中,需要根据具体的交易品种和市场环境来调整策略参数和风控措施。
-
-|| 
 
 #### Overview
 This strategy primarily utilizes the highest price, lowest price, and Exponential Moving Average (EMA) to confirm trend reversals and generate trading signals. The strategy first calculates the highest and lowest prices within a specified lookback period, then determines whether the current closing price is below the lowest price corresponding to the highest price (bearish reversal confirmation) or above the highest price corresponding to the lowest price (bullish reversal confirmation). Once a reversal confirmation signal appears, the strategy generates a corresponding entry signal. The main advantage of this strategy is its ability to capture trend reversal opportunities, while the main risk is that after a reversal confirmation signal appears, prices may experience repeated fluctuations rather than a unidirectional trend.
@@ -73,7 +41,6 @@ This strategy primarily utilizes the highest price, lowest price, and Exponentia
 
 #### Summary
 The Multi-Timeframe Reversal Confirmation Trading Strategy identifies potential trend reversal opportunities using the highest price, lowest price, and EMA, generating corresponding entry signals. The strategy's advantage is its ability to capture trend reversals, but it also faces issues of frequent trading and insufficient risk control. By introducing stop-loss and take-profit mechanisms, combining other indicators, parameter optimization, and position sizing, the strategy's performance and stability can be further improved. In practical applications, strategy parameters and risk control measures need to be adjusted according to specific trading instruments and market environments.
-[/trans]
 
 
 

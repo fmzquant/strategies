@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c145165b1221647f54.png)
-[trans]
-
-## 概述
-
-动量轮回策略是一种基于相对强弱指标(RSI)的量化交易策略。该策略通过RSI指标交叉发出买卖信号,实现获利。当RSI上穿用户设定的阈值时产生买入信号; 当RSI下穿阈值时产生卖出信号,实施逐步获利。
-
-## 策略原理  
-
-该策略基于RSI指标定制。RSI指标反映股票的市场动量和超买超卖情况。该策略首先计算RSI值,然后根据RSI与设定买入阈值和卖出阈值的关系进行交易。 
-
-具体来说,如果RSI上穿设定的买入阈值(默认60),则产生买入信号。策略此时会开仓买入股票。如果之后RSI下穿设定的卖出阈值(默认80),则产生卖出信号。策略此时会平掉之前的多仓。如此,通过RSI阈值之间的交叉运行,实现获利回撤的动量轮回。
-
-该策略使用Pine Script语言编写,代码结构清晰。使用现代化的条件判断结构实现策略入场和出场逻辑。同时绘制RSI指标曲线,并在买卖点标记信号。
-
-## 策略优势
-
-- 利用股票价格动量特征,能够有效捕捉市场短期趋势
-- RSI指标参数可调,对市场变化敏感
-- 采用现代编程风格,代码清晰简洁
-- 直观显示RSI曲线和买卖点,便于查看策略运行情况 
-- 可自定义RSI参数及买入卖出阈值,适应个性化需求
-
-## 策略风险
-
-- 短期操作风险大,需要密切关注市场变化
-- 可能出现虚假信号,RSI指标发出错误信号的概率存在
-- 匆忙入场有追高杀跌风险,应审慎操作
-- 未考虑止损机制,无法有效控制单笔损失
-
-针对上述风险,我们可以设置止损线,优化RSI参数,结合其他指标进行滤波等方法进行改进。
-
-## 策略优化方向  
-
-我们可以从以下几个方面继续优化该策略:
-
-1. 结合移动平均线等指标构建过滤机制,减少虚假信号
-2. 添加止损逻辑,控制单笔损失
-3. 优化RSI参数,identifying适合的股票和市场环境
-4. 开发能够动态调整参数的自适应交易系统
-5. 测试不同的持仓时间,寻找最优策略参数组合
-
-## 总结
-
-本策略作为一个基础示例,展示了如何利用RSI指标进行量化交易。我们可以在此基础上进行扩展,结合更多指标和风控手段来建立交易体系。在实际运用时,需要对参数进行反复优化测试,并结合个人风险偏好进行调整。采用严谨的方法论和风控体系,本策略可以成为有效的量化投资工具。
-
-||
 
 ## Overview
 
@@ -100,7 +54,6 @@ There are a few ways we can further optimize the strategy:
 
 This basic example demonstrates using RSI for quant trading. We can build on it with more indicators and risk management techniques. In practice, rigorous optimization and customization based on personal risk tolerance is needed before application. With sound methodology, this strategy can become an effective quantitative investment tool.
 
-[/trans]
 
 > Strategy Arguments
 

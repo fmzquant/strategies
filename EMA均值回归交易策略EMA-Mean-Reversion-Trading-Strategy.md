@@ -11,104 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/fbcc48d4c013b9ec07.png)
-[trans]
-
-
-## 概述
-
-EMA均值回归交易策略基于价格离开均线的程度来进行开仓和平仓操作的交易策略。它使用EMA均线距离当前价格的百分比差作为开仓信号,并使用跟踪止损来管理仓位。
-
-## 策略原理
-
-该策略使用EMA作为均线指标,并计算当前价格离EMA的百分比差距。当价格足够远离EMA时(默认为9%),会开仓做多;当价格足够接近EMA时(默认为1%),会平仓。开仓后,它会使用运行止损来锁定盈利,随着盈利增加逐步调高止损线。
-
-具体来说,策略主要包括以下组件:
-
-1. 计算EMA均线。可以配置周期(默认200)、数据源(收盘价)、计算方式(EMA、SMA、RMA、WMA)。
-
-2. 计算当前价格离EMA的百分比差距。注意正负值的处理。
-
-3. 根据差距比例开仓。做多开仓阈值为9%(可配置),做空开仓阈值为9%(可配置)。
-
-4. 支持梯形开仓。可以配置梯形的阶梯数和每阶梯度。
-
-5. 开仓后跟踪止损。可配置启动止损的阈值(默认盈利1%)和跟踪幅度(默认1%)。
-
-6. 根据差距比例平仓。多仓平仓阈值为1%(可配置),空仓同理。
-
-7. 未成交单撤销。当价格重新接近EMA时,会撤销未成交订单。
-
-8. 可配置止损百分比。
-
-9. 支持回测和实时交易。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用均线回归概念,在价格脱离均线时开仓,回归时平仓,符合趋势交易理论。
-
-2. 可以对开仓、止损、平仓的参数进行细致配置,适应不同市场环境。
-
-3. 梯形开仓可以分批建仓,降低单笔成本。
-
-4. 运行止损可以锁定盈利,管理风险。
-
-5. 优化空间大,可以调整均线参数或开仓平仓差距来适应不同行情。
-
-6. 支持主流编程语言Pine Script,可直接在TradingView使用。
-
-7. 直观的图表展示,便于观察分析。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 回测数据拟合风险。参数优化可能过度拟合回测数据,实盘效果存疑。
-
-2. 均线失效风险。价格可能长期大幅离开均线,无法回归。
-
-3. 止损被追穿风险。行情剧烈,止损点可能被突破。
-
-4. 交易频繁,交易费用负担较重。
-
-5. 需要较长观察周期,突发事件影响大。
-
-对应风险管理:
-
-1. 多进行参数调优,确保稳健参数。多市场验证有效性。
-
-2. 合理配置均线周期,不能过短或过长。
-
-3. 适当放宽止损幅度,防止被套。
-
-4. 适当放宽开仓条件,降低交易频率。
-
-5. 结合更多指标,提高突发事件的适应能力。
-
-## 优化方向
-
-该策略可以在以下方面进行优化:
-
-1. 增加过滤条件,如交易量,布林带,RSI等指标,减少虚假信号。
-
-2. 增加复合均线,如双EMA系统,提高顺势交易概率。
-
-3. 优化止损策略,如自适应止损、Chandelier Exit等,进一步限制风险。
-
-4. 增加自动参数优化功能,自动寻找更优参数组合。
-
-5. 增加机器学习预测,辅助判断价格离开均线的概率。
-
-6. 考虑跨时段交易,利用夜盘或盘前信息提前布局。
-
-7. 整合股票池,自动选股并交易,扩大策略容量。
-
-## 总结
-
-EMA均值回归策略是一个基于价格均线回归特征的趋势跟踪策略。它合理利用均线的统计特性来判断趋势转折,并以止损来控制风险。相比传统均线交易策略,它更注重动态跟踪止损,而非死板开仓平仓。该策略可以丰富趋势跟踪策略组合,但需要注意回测优化问题,并控制交易频率。如能继续优化止损机制、提高开仓质量,其实战效果可能更优。
-
-||
 
 
 ## Overview
@@ -205,7 +107,6 @@ The strategy can be improved in the following aspects:
 
 The EMA mean reversion strategy trades based on the mean reverting behavior of prices around a moving average. It utilizes the statistical properties of EMA rationally to identify trend changes and uses stop loss to control risk. Compared to traditional moving average strategies, it focuses more on dynamic trailing stops than rigid entry and exit rules. The strategy can complement trend following strategies, but requires caution on curve fitting and controlling trade frequency. Further improvements on stop loss and entry quality may lead to better live performance.
 
-[/trans]
 
 > Strategy Arguments
 

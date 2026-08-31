@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-### 策略概述
-
-Renko反转追踪策略是一种利用Renko图形来判断市场反转的短线策略。它通过监控相邻Renko颜色的变化来捕捉短期反转机会。当出现连续同色Renko后下一Renko变色时产生交易信号。
-
-### 策略原理
-
-1. 使用传统不修复Renko。
-
-2. 监控相邻两Renko的颜色变化。
-
-3. 当前一Renko和前两Renko颜色相同,当前Renko颜色反转时,产生信号。
-
-4. 做多信号:两阴砖后出现一阳砖,看涨;
-
-5. 做空信号:两阳砖后出现一阴砖,看跌。
-
-6. 入场方式可选择市价单或止损单。
-
-7. 设置止盈止损点位为Renko大小的一定倍数。
-
-该策略核心为抓住Renko颜色反转造成的短期回调机会。连续同色Renko代表趋势形成,下一Renko变色预示可能的反转。
-
-Renko大小和止盈止损系数可调整以优化策略效果。
-
-### 策略优势
-
-- Renko直接显示反转信息
-
-- 规则简单清晰,易于操作
-
-- 多空机会对称
-
-- 可灵活调整Renko大小
-
-- 止盈止损严格控制风险
-
-### 风险警示
-
-- 需要一定数量的连续Renko才能形成信号
-
-- Renko大小直接影响收益和回撤
-
-- 无法判断趋势持续时间
-
-- 可能出现连续止损的情况
-
-### 总结
-
-Renko反转追踪策略对传统技术指标进行创新运用,通过直接Renko变色判断短期反转机会。该策略简单实用,可通过参数调整获得稳定收益,值得进行回测验证和实盘优化后应用。
-
-
-||
 
 ### Strategy Overview
 
@@ -115,7 +61,6 @@ Brick size and stop loss/take profit coefficients can be tuned for optimization.
 
 The Renko reversal tracking strategy innovatively applies traditional technical indicators by directly using brick color flips to identify short-term reversals. Simple and practical, this strategy can achieve steady returns through parameter tuning, and is worth backtesting, live optimization, and application.
 
-[/trans]
 
 > Strategy Arguments
 

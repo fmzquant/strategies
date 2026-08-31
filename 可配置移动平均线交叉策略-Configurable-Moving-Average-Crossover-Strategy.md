@@ -16,51 +16,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-
-本文介绍了一种灵活且强大的移动平均线交叉交易策略，该策略允许交易者根据不同市场条件自定义移动平均线参数和类型。策略的核心是利用不同周期和类型的移动平均线进行趋势跟踪和信号生成。
-
-#### 策略原理
-
-策略通过计算三个不同周期的移动平均线（快线、慢线和退出线）来生成交易信号。主要原理包括：
-
-1. 移动平均线类型选择：支持简单移动平均线(SMA)、指数移动平均线(EMA)、加权移动平均线(WMA)和赫尔移动平均线(HMA)。
-2. 入场条件：
-   - 多头入场：收盘价高于快线，快线高于慢线，且收盘价高于退出线
-   - 空头入场：收盘价低于快线，快线低于慢线，且收盘价低于退出线
-3. 出场条件：
-   - 多头出场：进入至少两根K线后，收盘价低于退出线
-   - 空头出场：进入至少两根K线后，收盘价高于退出线
-
-#### 策略优势
-
-1. 高度可配置性：交易者可灵活调整移动平均线周期和类型
-2. 多市场适应性：通过调整参数可适用于不同流动性的交易品种
-3. 趋势跟踪能力强：利用多个移动平均线过滤假信号
-4. 风险控制：默认设置为账户权益10%的仓位管理
-5. 灵活的交易方向：可选择是否启用空头交易
-
-#### 策略风险
-
-1. 参数敏感性：不同市场可能需要不同的移动平均线参数
-2. 趋势性市场表现更佳：在震荡市场可能产生更多无效信号
-3. 交易成本：策略默认设置0.06%的交易佣金，实际交易中需考虑
-4. 回测局限性：目前仅在部分品种（如BTCUSD和NIFTY）进行了初步验证
-
-#### 策略优化方向
-
-1. 动态参数调整：引入自适应移动平均线周期
-2. 结合其他技术指标：增加RSI、MACD等指标进行信号过滤
-3. 止损机制：添加基于波动率的止损策略
-4. 多时间框架验证：在不同时间周期进行全面回测
-5. 机器学习优化：使用算法自动寻找最优参数组合
-
-#### 总结
-
-可配置移动平均线交叉策略(MA-X)提供了一个灵活的趋势跟踪框架。通过合理配置和持续优化，该策略可以成为量化交易工具箱中的有力工具。交易者需要根据具体市场特征进行个性化调整，并进行充分的回测和验证。
-
-|| 
 
 #### Overview
 
@@ -104,7 +59,6 @@ The strategy generates trading signals by calculating three moving averages of d
 #### Summary
 
 The Configurable Moving Average Crossover Strategy (MA-X) provides a flexible trend-tracking framework. Through reasonable configuration and continuous optimization, this strategy can become a powerful tool in the quantitative trading toolbox. Traders need to make personalized adjustments based on specific market characteristics and conduct thorough backtesting and verification.
-[/trans]
 
 
 

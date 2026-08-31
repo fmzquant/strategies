@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d9c4c2cd72501497ed.png)
-[trans]
-
-## 概述
-
-该策略的核心思想是利用EMA和WMA的交叉作为入场信号,并结合基于点数计算的止损止盈来进行交易。其最大的优势在于可以非常灵活和精确的控制风险,通过调整点数大小来控制止损止盈的幅度。
-
-## 策略原理
-
-当EMA由下向上突破WMA时产生做多信号;当EMA由上向下跌破WMA时,产生做空信号。进入仓位后,会实时计算入场点位,并在此基础上设置止损和止盈。例如设置止损20点,止盈100点,那么具体的止损价位会是入场价减去20点*合约价值,止盈价位是入场价加上100点*合约价值。这样来控制风险和盈利。
-
-同时,策略还会结合当前盘口与历史止损进行比较,调整移动止损位置,实现流动止损追价。
-
-## 优势分析
-
-相比普通的固定点数或百分比止损,该策略最大的优势在于可以非常灵活和精确的控制风险。调整点数的大小就可以直接影响到止损幅度的大小。这对于不同品种非常适用,可以根据市场的波动频率和幅度来微调。
-
-另外,流动止损也是一个非常实用的功能。它可以根据行情的实时变化来跟踪调整止损位置,在保证风险控制的同时,可以尽可能追求更大的盈利。
-
-## 风险分析
-
-该策略的风险主要来自于EMA和WMA这两个指标本身。当行情出现剧烈变动时,它们常常会发出错误信号,容易止损。这时,建议适当放宽止损点数,或考虑替换其他指标组合。
-
-另一个风险点在于止损止盈难以同时兼顾。如果追求更高止盈,通常需要承担更大风险,这很容易在行情转向时止损。所以,止损止盈的设置需要仔细测试和评估。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 测试不同参数的EMA和WMA组合,找到最佳参数;
-2. 尝试其他指标如MACD、KDJ等替换或结合,看是否可以提高胜率; 
-3. 评估不同止损止盈点数的风险收益情况,找到最优配置;
-4. 研究不同品种的特点,调整参数适应不同市场;
-5.加入机器学习算法,实现参数的动态优化。
-
-## 总结
-
-该策略核心思路简单清晰,以EMA和WMA指标为基础,运用基于点数计算的止损止盈机制进行风险控制。策略优势在于风险控制精确灵活,可按不同市场适当调整。后续可从入场信号、参数选择、止损机制等方面进行深度优化,使策略更适应复杂多变的市场环境。
-
-||
 
 ## Overview
 
@@ -86,7 +47,6 @@ This strategy can be optimized in the following aspects:
 
 The core idea of this strategy is simple and clear, using EMA and WMA as basis, and employing points based stop loss and take profit mechanism for risk control. The advantage of the strategy lies in precise and flexible risk control, which can be adjusted accordingly for different markets. Follow-up optimizations can be done in entry signals, parameter selection, stop loss mechanism etc., to make the strategy adapt better to the complex and ever-changing market environments.
 
-[/trans]
 
 > Strategy Arguments
 

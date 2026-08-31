@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/150898a74e6fa95c99f.png)
 
-[trans]
-
-## 概述
-
-拉回反转霸王策略是一个利用均线、MACD、RSI和ADX等指标捕捉趋势反转,在回拉阶段进行入场的策略。它专门针对激进型霸王,利用其常见的拉回特征进行反转操作。
-
-## 策略原理
-
-该策略利用EMA均线判断整体趋势方向,以及构建趋势强弱区域。当价格从强势区域拉回至弱势区域时,策略判断趋势存在反转机会。
-
-为过滤误入,策略加入MACD指标判断短期反转信号。MACD绝对值大于一定幅度时,认为反转机会增大。同时,要求ADX值高于某水平,确保目前处于趋势市场而非盘整市场。
-
-最后,RSI指标的作用是避免买入超买区域,和卖出超卖区域。RSI值限定在一定范围内时,才产生信号。
-
-每次EMA均线交叉时,策略交易次数清零。同时可设定每次交叉的最大交易数,避免反复交易。 
-
-当条件满足时,根据止损与止盈比例设定委托单,进行反转交易。
-
-## 优势分析
-
-该策略最大优势是利用EMA构建的强弱区域,捕捉激进霸王的拉回特征。运用多种指标过滤误入,可靠度较高。
-
-相比单一震荡指标,该策略加入趋势判断,能减少不必要反转。同时控制每次EMA交叉的最大交易数,可避免反复交易增大亏损。
-
-## 风险分析
-
-该策略最大风险在于霸王没有拉回的情况。如果霸王直接突破EMA继续上涨或下跌,该策略就会产生错误信号并入场反向。此时需要止损来控制损失。
-
-另外,指标参数不合理也会导致信号质量下降。需要反复测试优化参数,使之适合不同市场情况。
-
-最后,止损幅度设定过大,或者反转后继续激进震荡,都可能扩大单笔损失。这需要合理止损,以及加强风险管理。
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同市场及参数,使EMA能更准确判断趋势;
-
-2. 优化MACD参数,使其反转信号更准确可靠;
-
-3. 调整RSI参数范围,避免过于激进的超买超卖区域;
-
-4. 优化止损止盈比例,降低单次亏损风险。
-
-## 总结
-
-拉回反转霸王策略专门针对激进霸王的拉回特征进行反转操做,能有效抓住短期反转机会。它利用EMA多重过滤判断趋势方向及强弱;并用MACD、RSI等指标进行入场确认,可靠性较高。通过参数测试与优化,能够适应不同市场环境,是一个非常实用的趋势反转策略。
-
-||
 
 
 ## Overview
@@ -108,7 +59,6 @@ The strategy can be optimized in the following aspects:
 
 The Hulk Pullback Reversal Strategy specifically targets pullback patterns of aggressive trend-followers, effectively capturing short-term reversal opportunities. It utilizes EMAs for multi-layered trend direction and strength filtering, with MACD, RSI for high-reliability entry confirmation. Proper parameter testing and optimizations enable adaptation to varying market environments, making it a very practical trend reversal strategy.
 
-[/trans]
 
 > Strategy Arguments
 

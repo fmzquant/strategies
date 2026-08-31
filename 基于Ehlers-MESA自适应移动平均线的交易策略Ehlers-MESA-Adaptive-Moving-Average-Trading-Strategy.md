@@ -9,87 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于Ehlers MESA自适应移动平均线,设计了一个跟踪两个平均线交叉的趋势交易策略。当快线上穿慢线时做多,当快线下穿慢线时做空,属于典型的双移动平均线交叉策略。
-
-## 策略原理
-
-本策略的核心是计算两个自适应移动平均线:MAMA线和FAMA线。其中,MAMA线计算公式如下:
-
-```pine
-alpha = fl / dphase 
-alpha = iff(alpha < sl, sl, iff(alpha > fl, fl, alpha))
-mama = alpha*src + (1 - alpha)*nz(mama[1])
-```
-
-其中fl是快限制,sl是慢限制,dphase是相位差。alpha根据相位差动态调整,实现自适应平滑参数。
-
-FAMA线计算公式如下:
-
-```pine 
-fama = .5*alpha*mama + (1 - .5*alpha)*nz(fama[1]) 
-```
-
-FAMA线是MAMA线的低通滤波平滑线。
-
-策略通过比较MAMA线和FAMA线的大小关系,判断目前是处于上升趋势还是下降趋势,以此产生交易信号。
-
-## 策略优势分析
-
-该策略有以下几点优势:
-
-1. 使用自适应移动平均线,参数会根据市场变化自动调整,无需人为设置固定参数。
-
-2. 增加低通滤波器FAMA线,可以过滤假突破。
-
-3. 采用双移动平均线设计,可以跟踪市场中长线趋势。
-
-4. 策略逻辑简单清晰,容易理解和修改。
-
-5. 可视化指标直观,可以清楚看到交易信号。
-
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 双线交叉策略容易产生多次交易信号,建议适当控制间距和回撤。
-
-2. MAMA和FAMA线计算复杂,参数设置不当可能导致曲线畸变。
-
-3. 自适应参数可能导致过度优化,需要联合其他技术指标验证。 
-
-4. 双线交叉存在时间滞后,可能错过趋势转换点。
-
-5. 需关注假突破导致的止损风险。
-
-## 策略优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化参数设置,找到最佳的快限制、慢限制参数组合。
-
-2. 增加止损策略,严格控制单笔止损。
-
-3. 结合其他指标过滤信号,例如MACD、RSI等,避免假突破。
-
-4. 增加趋势判断指标,避免逆势交易。
-
-5. 优化入场节奏,调整双线交叉的间距要求,减少过于频繁交易。
-
-6. 优化止盈策略,根据趋势强度采取不同的止盈方式。
-
-7. 测试不同品种参数设置差异,寻找最佳参数组合。
-
-
-## 总结
-
-本策略 overall 是一种典型的趋势跟踪策略,利用 Ehlers MESA 自适应移动平均线构建了一个可视化指标,并以双线交叉方式产生交易信号。策略具有参数自适应、滤波假突破、可视化等优势,也存在时间滞后、多次交易等风险。未来可从参数优化、止损策略、信号过滤等方面进行改进,使策略更稳健可靠。
-
-||
 
 
 ## Overview
@@ -168,7 +87,6 @@ The strategy can be optimized in the following areas:
 
 Overall this is a typical trend following strategy, using the Ehlers MESA adaptive moving averages to construct a visualized indicator and generate trading signals through dual line crossovers. The strategy has advantages like adaptive parameters, filtering of false breakouts and visualization, but also risks like time lags and excessive trading. Future improvements can be made through parameter optimization, stop loss strategies, signal filtering etc to make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

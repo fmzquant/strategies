@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ef5fb852b1eb7d7768.png)
-[trans]
-
-## 概述
-
-该策略采用EMA均线 golden cross 生成交易信号,即快速EMA线上穿慢速EMA线时产生买入信号,快速EMA线下穿慢速EMA线时产生卖出信号,属于典型的趋势跟踪策略。同时,策略利用ATR指标设定动态止损位,在保证盈利的同时控制风险。
-
-## 策略原理
-
-1. 定义快速EMA均线周期为13,慢速EMA均线周期为48。
-2. 当快速EMA线上穿慢速EMA线时,产生买入信号;当快速EMA线下穿慢速EMA线时,产生卖出信号。
-3. 通过ta.crossover和ta.crossunder函数判断均线金叉死叉。
-4. 采用ATR指标计算动态止损位,止损位距离为close的1.5倍ATR。
-5. 通过颜色变化、买卖标记、止损线直观显示交易信号和止损位。
-
-## 策略优势分析
-
-1. 基于EMA均线的金叉死叉产生信号,避免错过市场主要趋势,收益较为可观。
-2. ATR动态跟踪止损,既确保了充分顺势获利,也控制了回撤风险,整体风险收益比较平衡。
-3. 直观的信号显示和止损显示,操作简单,适合多数人。
-4. 可调整的参数较少,容易掌握和优化。
-
-## 策略风险分析
-
-1. 突发事件造成暴跌可能触发止损。
-2. 震荡行情中可能产生频繁无效信号。
-3. 参数设置不当可能导致过于激进入场或止损过于宽松。
-4. 需适当优化EMA参数和ATR参数。
-
-解决方法:
-1. 可适当放宽ATR倍数,确保止损离最近高点有一定缓冲。
-2. 可考虑在信号产生后有确认机制,如价格突破前高点等。
-3. 建议参数优化要全面考量多种市场情况。
-
-## 策略优化方向
-
-1. 可以测试不同的参数组合,寻找最佳参数。
-2. 可以考虑加入其他指标进行信号过滤,例如成交量指标、波动率指标等,提高信号质量。
-3. 可以根据大级别趋势调整EMA参数,更好捕捉主要趋势。
-4. 可以考虑动态调整ATR止损倍数,在趋势行情中扩大止损范围。
-5. 可以结合机器学习算法自适应优化参数。
-
-## 总结
-该策略整体较为简单易用,基于EMA均线产生信号,顺势而为,再辅以ATR指标追踪止损,可以有效控制风险。虽然会有一定假信号,但捕捉主要趋势的能力较强,收益较为稳定,适合作为量化交易的基础策略之一。通过参数优化和功能扩展还具有很大的改进空间,值得深入研究。
-||
 
 ## Overview
 
@@ -96,7 +52,6 @@ Solutions:
 
 ## Conclusion
 The strategy is relatively simple and easy to use. It generates signals based on EMA crossovers, follows the trend, and uses ATR trailing stop loss to effectively control risks. Although there may be some false signals, it has strong capabilities in capturing main trends and returns are relatively stable. It is suitable as a basic quantitative trading strategy. There is also great potential for improvements through parameter optimization and function extensions.
-[/trans]
 
 > Strategy Arguments
 

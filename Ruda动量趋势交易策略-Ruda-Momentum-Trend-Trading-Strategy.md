@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d56483cba8a45b2649.png)
-[trans]
-#### 概述
-Ruda动量趋势交易策略是一个基于动量和趋势指标的量化交易策略。该策略使用OBV(On Balance Volume)、EMA(Exponential Moving Average)和K线实体比例等指标来判断买入和卖出时机。当短期EMA上穿长期EMA,OBV创新高,且K线实体比例大于设定阈值时,策略会在次日开盘价买入;当价格跌破止损价或收盘价跌破短期EMA时,策略会平仓。
-
-#### 策略原理
-1. 计算两条EMA线,短期EMA参数为5,长期EMA参数为21。当短期EMA上穿长期EMA时,认为趋势向上,反之则趋势向下。
-2. 计算OBV指标,当OBV创10日新高时,认为多头动能强劲。
-3. 计算K线实体占比,当实体占比大于设定阈值(默认50%)时,认为趋势确立。
-4. 当趋势向上、多头动能强劲且趋势确立时,策略在次日开盘价买入,止损价为当日最低价和开盘价-1%的最小值。
-5. 当价格跌破止损价或收盘价跌破短期EMA时,策略平仓。
-
-#### 优势分析
-1. 结合趋势和动量指标,能够捕捉强势品种。
-2. 使用次日开盘价买入和动态止损,可以避免部分假突破。
-3. 止损和止盈条件明确,风险可控。
-
-#### 风险分析
-1. 趋势和动量指标存在滞后性,可能出现追高买入和止损过早的情况。
-2. 参数固定,缺乏自适应性,不同市场状态下表现可能差异较大。
-3. 单一市场和品种回测,策略稳定性和适用性有待进一步验证。
-
-#### 优化方向
-1. 对趋势和动量指标的参数进行优化,提高指标灵敏度和有效性。
-2. 引入市场状态判断,根据当前市场特征动态调整参数。
-3. 扩大回测范围,增加不同市场和品种的测试,提高策略稳健性。
-4. 考虑引入仓位管理和风险控制模块,提高收益风险比。
-
-#### 总结
-Ruda动量趋势交易策略是一个简单易用的量化交易策略,通过趋势和动量指标的结合,能够捕捉强势品种和趋势机会。但该策略也存在一定局限性,如指标滞后、参数固定等问题。未来可以从优化指标参数、引入自适应机制、扩大回测范围和加强风险管理等方面对策略进行优化和改进,以提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 The Ruda Momentum Trend Trading Strategy is a quantitative trading strategy based on momentum and trend indicators. The strategy uses indicators such as OBV (On Balance Volume), EMA (Exponential Moving Average), and candlestick body ratio to determine buy and sell signals. When the short-term EMA crosses above the long-term EMA, OBV reaches a new high, and the candlestick body ratio is greater than the set threshold, the strategy buys at the next day's opening price; when the price falls below the stop-loss price or the closing price falls below the short-term EMA, the strategy closes the position.
@@ -70,7 +39,6 @@ The Ruda Momentum Trend Trading Strategy is a quantitative trading strategy base
 
 #### Summary
 The Ruda Momentum Trend Trading Strategy is a simple and easy-to-use quantitative trading strategy that captures strong instruments and trend opportunities by combining trend and momentum indicators. However, the strategy also has certain limitations, such as indicator lag and fixed parameters. In the future, the strategy can be optimized and improved by optimizing indicator parameters, introducing adaptive mechanisms, expanding the backtesting scope, and strengthening risk management to enhance the strategy's robustness and profitability.
-[/trans]
 
 > Strategy Arguments
 

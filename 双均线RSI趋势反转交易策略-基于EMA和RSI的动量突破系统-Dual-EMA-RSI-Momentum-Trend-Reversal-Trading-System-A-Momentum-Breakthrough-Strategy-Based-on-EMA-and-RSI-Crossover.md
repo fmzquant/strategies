@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/103c91b1cb9850cf712.png)
 
-[trans]
-#### 概述
-该策略是一个结合了指数移动平均线(EMA)和相对强弱指标(RSI)的趋势反转交易系统。通过9周期和21周期EMA的交叉信号,配合RSI指标在50水平的突破确认,为交易者提供准确的趋势转折点。系统设计了完整的风险控制机制,包括固定止盈止损比率,能有效控制回撤。
-
-#### 策略原理
-策略的核心逻辑基于快速EMA(9周期)与慢速EMA(21周期)的交叉,并使用RSI指标进行动量确认。当快速EMA向上穿越慢速EMA,同时RSI大于50时,系统发出做多信号;当快速EMA向下穿越慢速EMA,同时RSI小于50时,系统发出平仓信号。通过EMA交叉捕捉价格趋势变化,RSI则用于过滤假突破,提高信号质量。系统还集成了基于风险收益比的止盈止损机制,帮助交易者进行风险管理。
-
-#### 策略优势
-1. 双重确认机制：通过EMA交叉和RSI确认相结合,大大降低了假信号的概率
-2. 可视化清晰：利用绿色和红色箭头标注买卖点,交易信号直观明确
-3. 风险管理完善：内置止盈止损功能,可根据市场波动度灵活调整风险收益比
-4. 适应性强：核心参数均可调整,能适应不同市场环境和交易品种
-5. 执行简单：交易规则明确,适合自动化交易系统实现
-
-#### 策略风险
-1. 横盘市场效果欠佳：在区间震荡行情下可能产生频繁假信号
-2. 滞后性风险：移动平均线具有一定滞后性,可能错过最佳入场时机
-3. RSI误判：在极端行情下,RSI指标可能产生误导性信号
-4. 参数敏感性：不同市场环境可能需要调整参数,增加了策略维护成本
-解决方案：建议在趋势明确的市场环境下使用,可通过增加ATR指标进行波动率过滤,并结合更长周期趋势判断。
-
-#### 策略优化方向
-1. 引入波动率过滤：建议添加ATR指标,在低波动率环境下停止交易
-2. 优化止盈止损：可考虑使用动态止损,如跟踪止损或基于ATR的止损设置
-3. 增加趋势强度过滤：可引入更长周期的趋势指标,只在主趋势方向交易
-4. 完善交易量确认：建议加入成交量分析,提高信号可靠性
-5. 市场环境分类：可根据不同市场环境动态调整参数,提高策略适应性
-
-#### 总结
-该策略通过结合EMA交叉和RSI动量确认,构建了一个稳健的趋势跟踪系统。完善的风险控制机制和清晰的可视化界面使其具有很好的实用性。虽然在横盘市场表现略显不足,但通过建议的优化方向,策略的整体性能有望得到进一步提升。建议交易者在实盘使用前进行充分的回测,并根据具体交易品种特点调整参数。
-
-|| 
 
 #### Overview
 This strategy is a trend reversal trading system that combines Exponential Moving Averages (EMA) and Relative Strength Index (RSI). It identifies trend reversal points through the crossover signals of 9-period and 21-period EMAs, confirmed by RSI breakthroughs at the 50 level. The system includes a comprehensive risk management mechanism with fixed risk-reward ratios to effectively control drawdowns.
@@ -73,7 +41,6 @@ Solutions: Recommended for use in clear trending markets, consider adding ATR fo
 
 #### Summary
 This strategy builds a robust trend-following system by combining EMA crossovers and RSI momentum confirmation. Its comprehensive risk control mechanism and clear visualization interface make it highly practical. While performance may be suboptimal in sideways markets, the suggested optimization directions offer potential for further improvement. Traders are advised to conduct thorough backtesting and adjust parameters according to specific trading instrument characteristics before live implementation.
-[/trans]
 
 
 

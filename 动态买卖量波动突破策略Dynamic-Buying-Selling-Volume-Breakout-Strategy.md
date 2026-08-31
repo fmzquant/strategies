@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/139cd49422931c76044.png)
 
-[trans]
-
-## 概述
-本策略通过自定义时间周期的买卖量进行多空判断,结合周线VWAP、布林带进行过滤,实现高概率的趋势追踪。同时引入动态止盈止损机制,能有效控制单边风险。
-
-## 策略原理  
-1. 计算自定义时间周期内的买卖量指标
-- BV:买量,通过低点买入造成的量
-- SV:卖量,通过高点卖出造成的量 
-2. 对买卖量进行处理
-- 利用20周期EMA进行平滑
-- 对处理后的买卖量进行正负分离
-3. 判断指标方向
-- 指标大于0为看涨,小于0为看跌
-4. 结合周线VWAP、布林带判断背离
-- 价格在VWAP之上且指标看涨为做多信号
-- 价格在VWAP之下且指标看跌为做空信号
-5. 动态止盈止损
-- 按日ATR设置止盈止损百分比
-
-## 策略优势
-1. 买卖量能反映市场真实动力,捕捉趋势潜在能量
-2. 周线VWAP判断大周期趋势方向,布林带判断突破信号
-3. 动态ATR设置止盈止损,能最大限度锁定利润,避免超调
-
-## 策略风险 
-1. 买卖量数据存在一定误差,可能导致判断失误
-2. 单一指标结合判断,容易产生误信号
-3. 布林带 Parameter设置不当,会缩小有效突破
-
-## 策略优化方向
-1. 多时间周期买卖量指标进行优化
-2. 增加交易量等辅助指标进行过滤
-3. 动态调整布林带 Parameter,提高突破效率
-
-## 总结
-本策略充分利用买卖量的预测性,辅以VWAP和布林带产生高概率信号,通过动态止盈止损有效控制风险,是一种高效稳定的量化交易策略。随着参数及规则的不断优化,预计效果会更加明显。
-
-||
 
 ## Overview
 This strategy determines long and short through customized timeframe buying and selling volume, combined with weekly VWAP and Bollinger Bands for filtering, to realize high probability trend tracking. It also introduces dynamic take profit and stop loss mechanism to effectively control one-sided risk.
@@ -86,7 +47,6 @@ This strategy determines long and short through customized timeframe buying and 
 
 ## Conclusion
 This strategy makes full use of the predictability of buying and selling volume, generating high probability signals supplemented by VWAP and Bollinger Bands, while effectively controlling risk through dynamic take profit and stop loss. As parameters and rules continue to be optimized, performance is expected to become more significant.
-[/trans]
 
 > Strategy Arguments
 

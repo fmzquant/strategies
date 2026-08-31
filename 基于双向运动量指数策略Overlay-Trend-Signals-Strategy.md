@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15ddca237f70ec00059.png)
-[trans]
-### 概述
-
-该策略通过计算双向运动量指数DI+、DI-以及平均方向指数ADX,结合指数移动平均线EMA产生交易信号。当DI+上穿DI-且ADX高于20时产生买入信号;当DI-下穿DI+且ADX高于25时产生卖出信号。交易止损信号为DI-上穿DI+且ADX高于30。
-
-### 策略原理
-
-1. 计算DI+、DI-、ADX
-    - 调用ta.dmi()函数计算DI+、DI-、ADX
-    - DI+/DI-反映价格的方向性
-    - ADX反映价格变动的平均幅度  
-
-2. 计算指数移动平均线EMA
-    - 调用自定义my_ema()函数计算EMA
-    - EMA能有效平滑价格数据
-
-3. 交易信号生成
-    - 买入信号:DI+上穿DI-且ADX>20且收盘价>EMA
-        - 说明价格趋势向上且变动幅度较大
-    - 卖出信号:DI-下穿DI+且ADX>25且收盘价<EMA  
-        - 说明价格趋势向下且变动幅度较大
-
-4. 交易止损
-    - 买入止损:DI-上穿DI+且ADX>30
-        - 说明价格趋势反转
-    - 卖出止损:DI+下穿DI-且ADX>30
-        - 说明价格趋势反转
-
-综上,该策略综合运动量指标与趋势指标,在价格趋势性较强时产生交易信号。同时设置止损条件限制损失。
-
-### 优势分析
-
-1. 使用双DI避免虚假信号
-    - 单一DI容易产生错误信号,结合DI+和DI-可确保趋势性
-2. ADX条件确保价格变动幅度较大
-    - 只在价格波动加剧时交易,避免震荡市
-3. EMA条件配合DI 
-    - EMA可有效识别价格中长线趋势
-4. 严格止损条件
-    - 及时止损,避免巨额损失
-
-### 风险分析
-
-1. 频繁止损
-    - 若行情出现剧烈震荡,止损会过于频繁
-2. 参数依赖
-    - DI和ADX参数需要优化找到最佳组合
-3. 交易频率低 
-    - 较严格的交易条件会降低交易频率
-
-可通过扩大止损幅度,调整参数组合,或加入附加过滤条件提高交易频率来优化。
-
-### 优化方向  
-
-1. 参数优化
-    - 优化DI和ADX参数,找到最佳参数组合
-2. 增加过滤器
-    - 如加入成交量,背离等条件过滤信号
-3. 扩大止损幅度
-    - 适当放宽止损条件,减少频繁止损
-
-### 总结  
-
-该策略整合运动量指标与趋势分析指标,在价格趋势性较强时产生交易信号。设置严格的止损条件控制风险。可通过参数优化,增加信号过滤器以及适当扩大止损幅度来进一步提高策略效果。
-
-||
 
 ### Overview  
 
@@ -141,7 +75,6 @@ Can optimize by expanding stop loss, tuning parameters, adding filters to increa
 
 This strategy combines momentum and trend analysis indicators to trade strong trends, with strict stops to control risk. Can further improve performance through parameter optimization, additional filters, and relaxed stops.
 
-[/trans]
 
 > Strategy Arguments
 

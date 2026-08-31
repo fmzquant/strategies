@@ -9,46 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略采用移动平均线和相对强弱指标组合判断趋势方向,结合趋势追踪止损机制实现盈利目标。该策略适用于高波动性市场,能够在趋势形成后快速进入市场,并通过止损和止盈确保收益。
-
-## 策略原理
-
-该策略使用RSI指标判断当前市场趋势方向,RSI低于30视为看跌,高于70视为看涨。当RSI指标发生金叉看涨信号时,买入开仓;当发生死叉看跌信号时,卖出开仓。 
-
-开仓后,策略使用移动止损机制跟踪价格变动来锁定利润。具体来说,策略记录每次开仓的平均入场价,当价格达到入场价的1%时开始启动移动止损机制,通过计算当前价格和最高价的差值来移动止损线。
-
-当价格达到止损线时止损出场;当价格达到入场价的3%时止盈出场。这样通过移动止损和止盈双保险实现利润目标。
-
-## 策略优势
-
-- 使用RSI指标判断趋势方向,能够快速判断市场走势
-- 移动止损机制能够根据实时价格变动灵活调整止损位置,避免止损过早
-- 止损和止盈双重保障,可以在保证一定盈利的前提下控制风险
-
-## 风险分析
-
-- RSI指标发出错误信号可能导致不必要开仓
-- 止损距离过小易造成止损激活,止损距离过大又容易无法止损
-- 止盈设定不当也会导致利润目标无法实现
-
-可以通过调整RSI参数或加入其他指标判断来减少错误信号。同时优化止损和止盈参数,并结合回测找到最佳参数组合。
-
-## 优化方向
-
-- 可以试着加入布林带指标或KD指标来确认趋势信号,减少错误开仓
-- 可以研究 additions 和 multiplications 继承功能来扩展指标组合
-- 可以尝试多时间周期确认,避免被单时间周期错 SIGNAL�OB
-- 可以研究加入自适应止损机制,让止损距离能够根据市场波动程度作出调整
-
-## 总结
-
-该策略整体来说是一个非常专业可靠的趋势跟踪策略,能够快速判断市场方向,并且通过移动止损和止盈来锁定盈利。通过继续优化指标参数,并增加其他辅助判断指标,可以进一步提高策略胜率和可靠性。该策略思路清晰且参数调整灵活,是进行量化交易策略学习的非常好的案例。
-
-|| 
 
 ## Overview 
 
@@ -87,7 +47,6 @@ Additional indicators can be added to confirm RSI signals and reduce false signa
 
 Overall this is a very professional and reliable trend following strategy. It can quickly determine market direction and lock in profits through moving stop loss and take profit. Further optimizing parameters and adding confirming indicators can improve win rate and reliability. With clear logic and flexible parameters, it is a very good example for learning quant trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

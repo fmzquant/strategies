@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13ead24c23a6401b169.png)
-[trans]
-
-## 概述
-
-该策略运用多周期自适应移动平均线和折线风险评价指标,结合市场运行中的分型点进行走势预测与交易信号输出。策略名称为“多周期自适应走势预测策略”。
-
-## 策略原理
-
-策略的核心逻辑是分为两条主线。第一条主线是利用不同参数的自适应移动平均线nAMA构建多周期过滤判断系统,第二条主线是利用不同参数的折线风险评价系统out构建多周期风险评价体系。最后将两条主线进行组合,当短周期线超过长周期线时产生买入信号。当短周期线低于长周期线时产生卖出信号。
-
-具体来说,第一条主线中,分别设置10周期和4、24参数的自适应移动平均线。第二条主线中,分别设置7周期和4、300参数的折线风险评价线。最后将第一条主线中的10周期线与第二条主线中的31周期线进行比较组合,形成交易信号。当10周期线上穿31周期线时产生买入信号。当10周期线下穿31周期线时产生卖出信号。
-
-此外,策略中还设置了量价确认模块。仅在成交量大于6周期平均成交量时,交易信号才有效。这可以一定程度上过滤虚假信号。最后,策略中绘制不同周期级别的分型点,作为参考信号。
-
-## 策略优势分析
-
-该策略最大的优势在于多周期自适应结构的运用,可以根据市场运行自适应参数,动态调整周期。无论是在趋势章节,还是在震荡区域,都可以找到合适的参数周期组合,从而提高策略的顺势捕捉能力。
-
-此外,策略运用折线风险评价体系进行多周期联立过滤,可以有效控制交易风险,避免在高风险阶段建立仓位。同时,策略还设置量价过滤条件,避免在量能不足时产生错误信号。
-
-## 策略风险分析
-
-该策略最大的风险在于需要多个周期线的同向判断,所以对短期 reversing market 的捕捉能力较差。当短周期线和长周期线同时变化时,容易产生不明确的信号。可以通过缩短参数周期进行优化。
-
-此外,自适应移动平均线和折线风险评价系统的主力周期相对于大盘而言偏短,在更长级别的驱动下存在一定的滞后性。可以适当延长主力周期降低滞后性。
-
-## 策略优化方向
-
-1. 缩短自适应移动平均线和折线风险评价线的主力周期参数,改为5周期和20周期,提高对短期market reversing的捕捉。
-
-2. 增加主力周期参数至20周期和50周期,降低更长级别市场驱动下的滞后性。
-
-3. 优化交易通道参数,改为0.5倍ATR通道,降低噪音交易的可能性。
-
-4. 增加MACD等结果验证指标,提高信号的可靠性。
-
-## 总结
-
-该策略综合运用自适应移动平均线、折线风险评价和量价分析等多种技术指标,构建多周期自适应的交易决策系统。通过参数的优化调整,可以适用于不同类型的市场,自动识别趋势和区域。策略逻辑清晰,价值可挖掘,是一种值得推荐的量化方法。
-
-||
 
 ## Overview
 
@@ -91,7 +50,6 @@ In addition, the main cycle phase of the adaptive moving average and zigzag risk
 
 This strategy comprehensively uses multiple technical indicators such as adaptive moving averages, zigzag risk assessments, and volume-price analysis to construct a multi-cycle adaptive trading decision system. Through optimization and adjustment of parameters, it can be applied to different types of markets, automatically identifying trends and ranges. The strategy logic is clear and valuable to dig into, which is a recommended quant method.
 
-[/trans]
 
 > Strategy Arguments
 

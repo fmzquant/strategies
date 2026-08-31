@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/195a3ef84fc21fca3ca.png)
 
-[trans]
-#### 概述
-本策略是一个结合了多重指数移动平均线(EMA)、Camarilla支撑阻力位和中枢范围(CPR)的趋势跟踪交易系统。该策略通过分析价格与多条均线的关系以及重要价格区间来识别市场趋势和潜在的交易机会。系统采用了严格的资金管理和风险控制措施,包括百分比持仓规模和多样化的退出机制。
-
-#### 策略原理
-策略主要基于以下几个核心组件:
-1. 多重均线系统(EMA20/50/100/200)用于确认趋势方向和强度
-2. Camarilla支撑阻力位(R3/S3)用于识别关键价格水平
-3. 中枢范围(CPR)用于确定日内交易区间
-4. 入场信号基于价格与EMA200的交叉以及EMA20的确认
-5. 出场策略包括固定点数和百分比移动两种模式
-6. 资金管理系统根据账户规模动态调整持仓大小
-
-#### 策略优势
-1. 多维度技术指标的结合提供了更可靠的交易信号
-2. 灵活的退出机制适应不同市场环境
-3. 完善的资金管理系统有效控制风险
-4. 趋势跟踪特性有助于捕捉大行情
-5. 可视化组件便于交易者理解市场结构
-
-#### 策略风险
-1. 在震荡市场中可能产生虚假信号
-2. 多重指标可能导致交易信号滞后
-3. 固定退出点位可能在高波动市场中表现欠佳
-4. 需要较大的资金规模以承受回撤
-5. 交易成本可能影响策略整体收益
-
-#### 策略优化方向
-1. 引入波动率指标动态调整进出场参数
-2. 增加市场状态识别模块以适应不同市场环境
-3. 优化资金管理系统,加入动态持仓管理
-4. 添加交易时间过滤器提高信号质量
-5. 考虑加入成交量分析增强信号可靠性
-
-#### 总结
-该策略通过整合多个经典技术分析工具,构建了一个完整的交易系统。系统的优势在于多维度的市场分析和严格的风险管理,但同时也需要注意应对不同市场环境的适应性。通过持续优化和改进,策略有望在保持稳定性的同时提升盈利能力。
-
-|| 
 
 #### Overview
 This strategy is a trend following trading system that combines multiple Exponential Moving Averages (EMA), Camarilla Support/Resistance levels, and Central Pivot Range (CPR). The system identifies market trends and potential trading opportunities by analyzing price relationships with multiple moving averages and key price zones. It implements strict money management and risk control measures, including percentage-based position sizing and diverse exit mechanisms.
@@ -86,7 +48,6 @@ The strategy is based on several core components:
 #### Summary
 The strategy integrates multiple classic technical analysis tools to build a complete trading system. Its strengths lie in multi-dimensional market analysis and strict risk management, while attention needs to be paid to adaptability in different market environments. Through continuous optimization and improvement, the strategy has the potential to enhance profitability while maintaining stability.
 
-[/trans]
 
 
 

@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15f8d998a0bb60965aa.png)
-[trans]
-
-## 概述
-
-Noro的快速RSI切换策略是一种利用RSI指标识别超买超卖机会的量化交易策略。该策略同时结合了K线形态、均线过滤和止损方法,以控制风险。
-
-该策略主要基于以下几个关键组件:
-
-1. 快速RSI指标:用于识别超买超卖机会
-2. K线形态:结合K线实体和阴阳线,辅助判断趋势
-3. 均线过滤:利用SMA均线进行过滤,避免虚假信号
-4. 止损机制:结合RSI极限区域,实现止损
-
-## 策略原理
-
-Noro的快速RSI切换策略主要判断以下几种买卖信号:
-
-1. 快速RSI超买超卖信号:当快速RSI上穿其上限或下穿其下限时,产生交易信号。
-
-2. K线形态信号:结合K线实体大小、阴阳线方向等,判断趋势,辅助快速RSI产生信号。
-
-3. 均线过滤信号:结合SMA均线方向,避免出现假突破。
-
-4. 止损信号:当快速RSI回穿其上限或下限时,平仓止损。
-
-具体来说,该策略基于快速RSI的超买超卖区间来判断交易机会。当快速RSI下穿其下限,视为超卖信号;当快速RSI上穿其上限,视为超买信号。
-
-为了避免噪音,策略加入以下辅助判断:
-
-1. K线实体大小:K线实体越大,趋势越明显
-2. 阴阳线:判断K线趋势方向
-3. SMA均线:过滤假突破信号
-4. 止损:快速RSI回穿限定区域时止损
-
-所以,该策略同时结合快速RSI、K线形态、均线和止损来实现交易决策。
-
-## 策略优势
-
-该策略具有以下几点优势:
-
-1. 快速RSI灵敏度高:可以快速捕捉超买超卖机会
-2. K线及均线辅助判断:避免噪音交易
-3. 自动止损:可以及时止损,控制风险
-4. 适合短线交易:适用于短线周期如1小时、30分钟等
-5. 容易优化:可以调整参数,适应不同市场
-
-## 策略风险
-
-该策略也存在一定的风险:
-
-1. 可能出现连续止损:在震荡行情中,会出现较多止损信号
-2. 参数需要优化:不同周期和品种,需要调整参数
-3. 无法完全避免亏损:及时止损也会带来一定程度的亏损
-
-为降低风险,可以从以下几个方面进行优化:
-
-1. 优化快速RSI参数,降低噪音交易
-2. 优化止损位置,控制单笔亏损
-3. 增加资金管理模块,分散风险
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止盈策略:在利润到达一定水平后止盈,锁定部分利润
-2. 增加资金管理:加入仓位控制、风险分散等管理手段
-3. 不同周期参数优化:调整指标参数,测试不同周期的效果
-4. 增加机器学习:使用算法自动优化参数,适应市场变化
-5. 不同品种测试:在更多品种中测试策略健壮性  
-
-通过止盈、风险管理、参数优化、机器学习等手段进一步完善该策略,能够大幅提高策略稳定性。
-
-## 总结
-
-总的来说,Noro的快速RSI切换策略结合快速RSI指标与辅助K线技术指标,实现了一个对超买超卖进行判断的短线交易策略。该策略响应敏捷、易优化,同时加入了止损模块来控制风险。通过进一步的机器学习及参数优化,有望获得更好的策略效果。
-
-|| 
 
 ## Overview  
 
@@ -164,7 +87,6 @@ By incorporating profit taking, risk management, parameter optimization, machine
 
 In summary, Noro’s Fast Scalping RSI Switching Strategy combines the fast RSI indicator with supplementary candlestick analysis to identify overbought and oversold trading opportunities. With quick signal response times, ease of optimization and incorporated stop loss modules, this short-term trading strategy has strong potential to generate positive results after further machine learning and parameter tuning.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b3b73ee751e86013d4.png)
 
-[trans]
-
-## 概述
-
-Ichimoku Kumo Twist策略利用Ichimoku指标的转换线、基准线和导线构建交易信号,属于趋势跟踪策略。它通过Ichimoku云带的扭转寻找短期和中期趋势的反转点,以获取较低风险的突破点位和超买超卖机会。该策略既可用于日内交易,也可用于持仓数周的中长线交易。
-
-## 策略原理
-
-该策略主要使用Ichimoku指标的三条均线 - 转换线、基准线和导线1,以及K线的最高价和最低价计算云带上下界。转换线计算过去9根K线的最高价和最低价中点,代表一目均衡图的短期均线;基准线计算过去26根K线的最高价和最低价中点,代表长期均线。导线1为转换线和基准线的平均线,导线2为过去52根K线的中点价。
-
-当导线1上穿导线2时产生买入信号,而导线1下穿导线2时产生卖出信号。该交易策略就是追踪短期和中期均线的金叉死叉,以捕捉趋势的变化。
-
-## 优势分析
-
-- Ichimoku云带扭转策略同时结合短期和中期趋势,可以有效识别趋势反转点。
-
-- 基于均线的策略,具有一定的滞后性,可以过滤掉部分噪音。
-
-- 利用云带判断强弱趋势的明显程度,实现较优的 entries 和 exits。
-
-- 无需参数优化,使用 Ichimoku 标准参数即可。
-
-## 风险分析
-
-- Ichimoku原理比较复杂,对参数调整不敏感,不易过度优化。
-
-- 在盘整市场中,可能出现多次错误信号。
-
-- 当短期和中期趋势背离时,会出现策略失效的情况。
-
-- 必须搭配止损来控制风险,否则可能造成较大亏损。
-
-## 优化方向
-
-- 可以测试转换线和基准线的不同参数组合,找到最佳平衡点。
-
-- 结合其他指标过滤入场信号,避免在明显不利形态中建仓。
-
-- 增加止损策略,设置动态止损或尾随止损。
-
-- 优化仓位管理,根据市场情况调整仓位规模。
-
-- 在回测中加入交易手续费,使回测结果更准确。
-
-## 总结
-
-Ichimoku云带扭转策略整体来说是一种适中的趋势策略。它可以有效识别趋势转折点,在符合趋势的方向打开头寸。但该策略也存在一定监控成本,必须搭配严格的风险管理措施才能长期使用。通过不断优化参数设置、入场过滤器、止损方式等,可以继续提高该策略的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -108,7 +59,6 @@ Buy signals are generated when the leading span 1 crosses over leading span 2, w
 
 Overall, the Ichimoku cloud twist strategy is a moderate trend following strategy. It can effectively identify turns in trend and take positions in alignment with the trend direction. But monitoring is required and strict risk controls are necessary for long-term use. Continued improvements in parameter tuning, entry filters, stop loss mechanics, and more can further enhance this strategy's stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

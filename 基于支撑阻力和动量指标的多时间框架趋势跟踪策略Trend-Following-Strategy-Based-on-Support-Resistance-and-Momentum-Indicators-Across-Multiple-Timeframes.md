@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ef597b9d4836c32f6e.png)
-[trans]
-
-## 策略概述
-
-该策略综合利用支撑阻力位、超级趋势指标以及移动平均线等多个技术指标,在多个时间框架上综合判断趋势方向,实现了一个趋势跟踪交易系统。该策略的主要思想是:首先利用枢轴点来判断当前价格所处的支撑阻力位置,然后用超级趋势指标判断当前的趋势方向,最后用移动平均线过滤背离行情。同时,策略还支持风险控制,如设置交易时间窗口、限制最大仓位等。
-
-## 策略原理
-
-1. 首先根据过去一定周期的最高最低价计算枢轴点,获得当前价格的支撑阻力位。
-2. 利用超级趋势指标(Supertrend)判断趋势。超级趋势由动态支撑阻力计算得到,是一个趋势跟踪指标。
-3. 使用ATR止损。该策略在原超级趋势基础上加入了ATR作为止损位。
-4. 以移动平均线作为趋势过滤。只有当趋势向上且价格在均线上方时做多,趋势向下且价格在均线下方时做空。
-5. 设置交易时间窗口。只在特定的时间区间内开仓,可避免在重要时间点交易。
-6. 多空仓位分别管理。多头和空头信号分别触发各自的开平仓逻辑。
-
-综上,该策略在枢轴点支撑阻力、超级趋势方向、均线方向三个条件共振时开仓,任一条件失效则平仓。这有效地抓住了趋势行情,同时控制了风险。
-
-## 优势分析
-
-1. 基于支撑阻力位交易的优势在于符合市场供需规律,枢轴点能动态反应市场平衡。
-2. 超级趋势能够有效捕捉趋势,并及时止损。ATR止损进一步控制了风险。  
-3. 均线过滤避免了逆势交易。在趋势和均线共振时入场,胜率会更高。
-4. 自定义交易时间窗口在一定程度上避免了在重要时间点交易,如开盘和收盘前。
-5. 多头和空头信号各自独立运作,可同时持有多空仓位,更充分地利用了市场机会。
-
-## 风险分析
-
-1. 频繁交易的风险。该策略可能会在震荡市频繁开平仓,造成过多的交易成本。
-2. 仍可能出现逆势交易。虽然该策略采取了均线过滤,但如果均线本身与大趋势相悖,仍可能出现逆势交易。
-3. 参数的最优化问题。策略含有诸多参数,如超级趋势的周期和乘数、均线周期等。不同参数将得到不同结果,如何选择最优参数组合是个挑战。
-4. 极端行情下可能失效。在极端行情下,如暴涨暴跌、流动性危机等,该策略可能无法及时止损。
-
-## 优化方向
-
-1. 引入更多中长期均线,提高趋势判断的可靠性,减少频繁交易。
-2. 可以考虑引入波动率指标,如布林带,在高波动率市场减少交易。  
-3. 对各项参数进行优化,找到最佳参数组合,提高策略稳定性。
-4. 在极端行情下设置硬止损,控制风险。此外,可考虑加入市场异常波动的判断,如价格跳空、成交量激增等,在异常时减少或停止交易。
-
-## 总结
-
-该策略综合了支撑阻力、趋势跟踪、动量过滤等多种技术分析方法,能够在趋势行情中有效获利,同时控制回撤风险。其优势在于信号明确简洁,逻辑清晰,适合在中长周期内运用。但是,该策略也存在频繁交易、参数优化难度大、极端行情下风险控制不足等问题。未来可以通过引入更多技术指标、优化参数、设置硬止损、判断异常行情等方式进一步改进。总的来说,该策略是一个较为成熟的趋势跟踪策略,经过适当优化和改进后,可以成为一个稳健的交易系统。策略思路可供借鉴,但仍需结合实际交易经验和市场特点,审慎运用。量化交易既需要数理逻辑,又离不开人的主观判断,只有二者有机结合,才能创造理想的回报。
-
-||
 
 ## Strategy Overview
 
@@ -96,7 +52,6 @@ In summary, this strategy enters a position when the pivot point support/resista
 
 This strategy integrates various technical analysis methods such as support/resistance, trend tracking, and momentum filtering to effectively profit from trending markets while controlling drawdown risk. Its advantages lie in clear and concise signals, clear logic, and suitability for medium- to long-term application. However, this strategy also has problems such as frequent trading, difficulty in parameter optimization, and insufficient risk control under extreme market conditions. In the future, it can be further improved by introducing more technical indicators, optimizing parameters, setting hard stop losses, and judging abnormal market conditions. In general, this strategy is a relatively mature trend-following strategy that, with appropriate optimization and improvement, can become a robust trading system. The strategy ideas can be used for reference, but they still need to be used prudently in combination with actual trading experience and market characteristics. Quantitative trading requires both mathematical logic and human subjective judgment, and only when the two are organically combined can ideal returns be created.
 
-[/trans]
 
 > Strategy Arguments
 

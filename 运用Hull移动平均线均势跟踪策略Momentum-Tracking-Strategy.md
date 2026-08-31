@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1fbf3eabca88d8951e0.png)
-[trans]
-
-### 概述
-
-均势跟踪策略运用Hull移动平均线作为主要入市指标,判断价格趋势方向。同时,该策略结合其他多种指标,如基准线、确认指标等,来验证价格趋势和过滤假信号。在入市后,策略利用平均真实波幅计算出动态止损,以跟踪趋势获利。
-
-### 策略原理
-
-均势跟踪策略的核心是Hull移动平均线。Hull移动平均线对价格变化更为敏感,可以有效判断趋势方向。当价格向上突破Hull线时,证实上涨趋势形成,做多;当价格向下跌破Hull线时,证实下跌趋势形成,做空。
-
-此外,策略还引入了基准线指标,用于判断长短趋势;确认指标,用于过滤假突破。只有当基准线和确认指标都验证了趋势方向时,才会出发交易信号。
-
-在入市后,策略利用ATR和 Hull EMA 计算出的平均真实波幅来设定止损位置。随着趋势的继续,止损线也会不断向上/下移位,以锁定趋势获利。
-
-### 优势分析
-
-均势跟踪策略结合趋势判断和风险控制的优点,可以在趋势行情中获得较好收益。相比固定止损策略,它可以通过移动止损来跟踪趋势运行,避免被市场正常波动止损。
-
-许多指标的组合运用也使策略对市场变化更敏感,同时可以有效过滤假信号。此外,策略也提供了多个参数进行调整,用户可以根据自己对市场的判断进行优化。
-
-### 风险分析
-
-该策略主要依赖于趋势指标,在盘整时容易产生错误信号和止损。此外,多指标组合也可能出现指标冲突的情况。参数设置不当也会导致策略表现不佳。
-
-可以考虑在策略中加入附加判断模块,在指标出现分歧时暂停交易;或采用投票机制,综合多个指标的判断结果。参数设置方面,可以通过回测优化方法找到最佳参数。
-
-### 优化方向  
-
-均势跟踪策略可从以下几个方向进行优化:
-
-1. 增加判断模块,如波动率module,在高波动时暂停交易;
-2. 增加机器学习模块,利用机器学习算法判断指标权重;  
-3. 优化指标参数,找到最佳参数组合;
-4. 优化移动止损算法,使止损更好地跟踪趋势;
-5. 加入风险管理模块,如违背止损、动态仓位调整等。
-
-### 总结
-
-均势跟踪策略总体来说是一个优秀的趋势跟踪策略。它成功地结合了趋势判断与动态止损,可以有效跟踪趋势获利。通过进一步优化,有望获得更好的策略表现。该策略为量化交易策略的构建提供了一个良好参考。
-
-||
 
 
 ## Overview
@@ -91,7 +50,6 @@ The Momentum Tracking strategy can be optimized in the following directions:
 
 In summary, the Momentum Tracking strategy is an excellent trend tracking strategy. It successfully combines trend judgment and dynamic stop loss, which can effectively track and profit from trends. With further optimization, it is expected to achieve better strategy performance. The strategy provides a good reference for the construction of quantitative trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

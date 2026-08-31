@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10c4f81155d54f49795.png)
 
-[trans]
-
-## 概述
-
-本策略名为“双EMA与RSI组合策略”,它融合了双EMA指标和RSI指标的优势,形成一个较为完整的交易决策依据。该策略运用双EMA判断价格趋势和破趋势信号,同时辅以RSI指标判断超买超卖情况,实现低买高卖,获取价格差价。
-
-## 策略原理
-
-该策略首先运用双EMA指标判断价格整体趋势,EMA指标能比较好地反映价格的趋势性,双EMA指标结合就能判断出价格上升和下降的趋势。策略中设置快线EMA周期为34,判断短期趋势和入场;设置慢线EMA周期较长,判断长期趋势。当价格站上快线EMA时为买入时机,站上慢线EMA时为卖出时机。这样利用不同周期EMA的组合,判断价格的短期和长期趋势,实现低吸高抛。
-
-同时,策略还引入RSI指标判断超买超卖情况。RSI通过价格的涨跌变化判断市场是否进入超买或超卖状态。RSI低位买入,高位卖出,与EMA指标互相验证,可以减少假信号,提高盈利概率。
-
-## 策略优势
-
-1. EMA指标判断主要趋势,RSI指标判断超买超卖,两者组合互相验证,可以减少假信号。
-2. 短周期EMA判断具体入场,长周期EMA判断大趋势,高效控制获利和损失。  
-3. 无需预测,只跟随趋势,简单高效。
-4. 适用于各种周期和市场环境。
-
-## 风险及对策 
-
-1. 市场出现剧烈波动时,EMA和RSI产生错误信号的概率较大。可适当放宽入场条件,增加资金储备。
-2. 趋势末期反转可能带来较大亏损。可设置止损点,或减小仓位规避风险。
-3. 参数设置不当会影响策略效果。应适时优化参数,使之适应市场环境。
-
-## 优化方向
-
-1. 优化EMA和RSI的参数,使得指标反应更为灵敏和及时。
-2. 增加止损机制。当亏损超过一定幅度时止损出场。
-3. 增加仓位管理。根据资金使用情况和市场环境动态调整仓位。
-4. 测试更长周期的EMA参数,用来识别更大级别的趋势。
-
-## 总结
-
-本策略综合运用双EMA和RSI两个指标设计交易规则,根据不同指标判断短期和长期趋势,并辅以超买超卖判断,简单高效地实现低买高卖。相比单一指标,该策略可靠性更高,适应性更强。但也应注意防范指标失效的风险,适时止损和仓位管理。总的来说,该策略较易实施操作,值得推荐。
-
-||
 
 ## Overview
 
@@ -83,7 +46,6 @@ At the same time, the strategy also introduces the RSI indicator to judge overbo
 
 This strategy combines the use of dual EMA and RSI indicators to design trading rules, judging short-term and long-term trends based on different indicators, and supplemented by overbought and oversold judgments, simply and efficiently implementing low buying and high selling. Compared with a single indicator, this strategy is more reliable and adaptable. But we should also be aware of the risks of indicator failure, timely stop-loss and position management. In general, this strategy is relatively easy to implement and recommend.
 
-[/trans]
 
 
 

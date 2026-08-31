@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b5ef41c0b59bc24a9e.png)
-[trans]
-## 概述
-
-该策略通过组合使用移动平均线、MACD指标和RSI指标来识别股票价格趋势,实现低买高卖,获利。当短期移动平均线上穿长期移动平均线,并且收盘价高于50日移动平均线时产生买入信号。当短期移动平均线下穿长期移动平均线,并且收盘价低于50日移动平均线时产生卖出信号。另外,该策略还会通过RSI指标判断是否处于超买超卖区域来修正入场信号,并通过MACD指标的直方图来修正中长线趋势判断。
-
-## 策略原理
-
-该策略主要依赖双移动平均线策略,即当短期移动平均线(3日EMA)上穿长期移动平均线(30日EMA)时产生买入信号,当短期移动平均线下穿长期移动平均线时产生卖出信号。这是判断股价短期和长期趋势的常用技巧。
-
-另外,该策略还引入50日移动平均线,只有当价格高于50日线时才产生买入信号,低于时才产生卖出信号,这是为了避免频繁交易, filter掉一些假信号。 
-
-此外,RSI指标被用来判断是否超买超卖。如果RSI高于70则被认为是超买区,这时即使短期涨势强劲也可能面临回调。如果RSI低于30则被认为是超卖区,这时即使短期跌势猛烈也可能出现反弹。所以,该策略会修正入场信号,只有非超买超卖区才会进场。
-
-最后,MACD直方图被用来判断中长期趋势。如果MACD直方图>0,则代表中长线为上涨趋势,这时进场信号更可信;如果MACD直方图<0,则代表中长线为下跌趋势,这时即使短期产生买入信号也可能面临调整。
-
-## 策略优势
-
-该策略最大的优势是多指标组合,使进入和退出信号更加准确可靠。单一指标容易产生假信号,而该策略通过移动平均线判断短期趋势、RSI判断超买超卖、MACD判断中长期趋势,使每次交易的成功概率大大提高。
-
-另一个优势是兼顾趋势交易和逆势交易。Follow the trend,follow the momentum是所有趋势交易者的信条。但高级策略不会死扣趋势,适当的逆势交易也能获得丰厚的超额收益。该策略在非超买超卖区域仍然选择逆势进场,这为策略再添活力。
-
-## 策略风险
-
-该策略的主要风险来自突发事件导致快速调整。任何量化策略都难以应对重大利空或利好消息导致的剧烈价格波动。这时停损点可能被突破,造成较大损失。此外,政策风险也会对策略造成冲击。
-
-另一个风险是多头走势中短期调整造成止损出场。即使中长线仍属牛市,短期调整时也可能被止损了结长仓。这时就错过了后续的上涨行情。
-
-## 策略优化
-
-该策略可以从以下几个维度进行优化:
-
-1. 参数优化。可以测试更多组合的参数,寻找最优参数。
-
-2. 增加更多指标。可以测试加入布林线、KDJ等其他指标,丰富多指标组合,提高信号质量。
-
-3. 优化止损机制。可以测试追踪止损、区间突破止损等更先进的止损方式,减少止损被冲击的概率。
-
-4. 适应更多市场环境。可以优化策略的部分参数,使其能够在更多类型的市场中获得稳定收益。
-
-## 总结
-
-该策略通过运用移动平均线、RSI指标和MACD指标的组合,实现了高质量信号的产生,避免了单一指标的局限性,使每次买卖决策都具有很强的信心度。同时,策略还兼顾趋势交易和逆势交易,在保证顺势出击的同时,也能在关键时候选择高效的逆势操作。总体来说,该策略稳健、高效,是非常棒的量化策略。
-
-||
 
 ## Overview  
 
@@ -97,7 +53,6 @@ The strategy can be optimized in the following dimensions:
 
 In conclusion, by combining moving averages, RSI and MACD, this strategy manages to generate high-quality signals and avoid limitations of single indicators. It makes every trade confidently by confirming the trend. Also, the strategy balances trend trading and contrarian trading, excelling in both chasing the momentum and taking anticyclical positions when appropriate. It is a solid and efficient quantitative strategy overall.
 
-[/trans]
 
 > Strategy Arguments
 

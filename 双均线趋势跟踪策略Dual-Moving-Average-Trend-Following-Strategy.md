@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略使用长期RMA均线和短期EMA均线组合进行趋势判断,并以高低点突破实现趋势跟踪止损。还设置了无交易区间来过滤假突破。
-
-## 策略原理
-
-1. 使用长周期RMA和短周期EMA判断趋势方向。短期EMA下穿长期RMA为看空信号,上穿为看多信号。
-
-2. 当价格突破最近一定周期的最高价时,采取跟踪最高价的方式止损。当价格突破最近一定周期的最低价时,采取跟踪最低价的方式止损。
-
-3. 设置无交易区间,价格进入该区间则不开仓,避免被套。区间范围由RMA均线的一定比例确定。
-
-4. 入场后设置止盈价格,以一定比例退出盈利。
-
-## 策略优势
-
-1. 双均线组合判断趋势方向准确可靠。
-
-2. 跟踪止损方式使止损追随趋势运行。
-
-3. 设置无交易区间有效过滤假突破信号。
-
-4. 止盈设置让策略在积累足够盈利后主动平仓。
-
-## 策略风险
-
-1. 双均线产生死叉时可能存在延迟,导致亏损扩大。
-
-2. 跟踪止损点过于靠近价格可能被前期噪音击出。
-
-3. 无交易区间设置过宽导致错过交易机会。
-
-4. 没有及时止损可能导致亏损进一步扩大。
-
-对应解决方法:
-
-1. 优化均线参数,降低延迟概率。
-
-2. 适当放宽止损点,防止过于灵敏。
-
-3. 测试调整无交易区间范围,防止错过机会。
-
-4. 添加其他止损方式,限制最大亏损。
-
-## 策略优化方向
-
-1. 测试其他均线指标组合,寻找更匹配的组合。
-
-2. 增加价差、MACD等判断指标,提高策略稳定性。 
-
-3. 引入机器学习算法优化参数,使策略更智能化。
-
-4. 结合趋势强弱指标,避免逆势交易。
-
-5. 优化资金管理策略,提高策略胜率。
-
-## 总结
-
-本策略利用双均线判断趋势方向,并以高低点跟踪止损与无交易区间过滤来锁定趋势获利。策略框架简单清晰,可扩展性强,可通过调整参数区间、优化止盈止损策略、引入其他辅助判断指标等方式进行优化,使策略在不同市场中都能发挥良好效果。
-
-|| 
 
 ## Overview
 
@@ -133,7 +70,6 @@ Possible Solutions:
 
 This strategy uses dual moving average crossovers to determine trend direction and combines trailing stops and no-trade zones to lock in trend profits. The framework is simple and extensible. It can be improved by adjusting parameter ranges, optimizing exits, and incorporating additional filters and signals to make it robust across different markets.
 
-[/trans]
 
 > Strategy Arguments
 

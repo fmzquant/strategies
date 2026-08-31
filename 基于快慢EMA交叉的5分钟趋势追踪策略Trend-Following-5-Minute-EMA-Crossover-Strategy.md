@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/163948ecadbf5e6c6a7.png)
-[trans]
-
-
-## 概述
-
-该策略是基于5分钟时间框架的快慢EMA交叉系统,结合限价单和跟踪止损来自动捕捉趋势。该策略适用于中短线趋势交易,通过EMA过滤来判断整体趋势方向,再结合快慢EMA交叉来定位具体的入场时机。其优点是对趋势判断准确,能有效跟踪趋势;缺点是会出现部分假突破,容易被套住。
-
-## 策略原理
-
-1. 使用快速EMA和慢速EMA,当快速EMA上穿慢速EMA时做多,下穿时做空
-2. 使用EMA宏观过滤器,只有当价格在EMA之上才可做多,在EMA之下才可做空,避免假突破
-3. 入场时使用限价单,确保价格达到期望位置后再入场
-4. 入场后使用动态跟踪止损,锁定利润,止损退出
-
-具体来说:
-
-1. 根据快速EMA和慢速EMA的长度,分别计算出快慢EMA
-2. 如果启用EMA过滤器,只有当价格高于EMA才可以做多,低于EMA才可以做空
-3. 当快速EMA上穿慢速EMA时,做多;当快速EMA下穿慢速EMA时,做空
-4. 多单入场时下限单,空单入场时上限单
-5. 入场后启动跟踪止损,根据运行最高价来跟踪,进行止损和止盈
-
-以上就是该策略的基本交易逻辑。
-
-## 策略优势
-
-1. 使用EMA判断整体趋势方向,避免逆势交易
-2. 快慢EMA结合限价单,可以有效防止追高杀跌
-3. 动态跟踪止损,可以很好地锁定利润
-4. 风险控制到位,每单止损固定在2%左右
-5. 回撤较小,顺势捕捉趋势较好
-6. 策略简单清晰,容易理解和优化
-
-## 策略风险
-
-1. 存在一定的趋势假突破风险,可能被套住
-2. EMA周期设置不当可能导致错过趋势
-3. 止损幅度设置过大,可能超出正常波动范围被止损
-4. 追踪止损过于激进,可能提前离场
-5. 止损和止盈比例设置不合理,可能错过更大行情
-
-对策:
-1. 优化EMA参数,找到最佳周期长度
-2. 适当放宽止损幅度,防止过于频繁止损
-3. 审慎设置追踪止损的开始点和跟踪幅度
-4. 测试不同的止损止盈比例,找到最优参数
-
-## 策略优化方向
-
-1. 优化EMA周期参数,找到最佳参数组合
-2. 尝试不同的EMA类型,如加权移动平均线
-3. 测试MACD等其他指标,看是否可以提高效果 
-4. 尝试在更高级的时间框架进行EMA过滤
-5. 优化入场时的限价区间
-6. 优化止损止盈的点位和比例
-7. 尝试更复杂的追踪止损方式
-8. 加入趋势指标,判断趋势强弱
-9. 考虑加入更多滤波器,进一步避免假突破
-
-## 总结
-
-该策略整体来说是一个非常适合中短线趋势交易的策略,其快慢EMA交叉判断入场时机,限价单避免追高杀跌,动态跟踪止损锁定利润的流程非常清晰合理、易于操作。通过一定的参数优化,可以进一步提高策略的胜率和盈利能力。当然也需要注意防范EMA周期不当、止损过于频繁等风险。总体来说,该策略简单高效,非常适合用于量化趋势交易。
-
-|| 
 
 ## Overview
 
@@ -136,7 +72,6 @@ Solutions:
 
 Overall this is a very effective medium-term trend following strategy. Its clear logic of using EMA crossovers for entries, limit orders to prevent chasing, and trailing stops to lock profits is simple and robust. With proper parameter tuning it can achieve higher win rates and profitability. Risks like improper EMA periods and excessive stops need to be monitored. But in general this is an efficient quantifiable trend trading system.
 
-[/trans]
 
 > Strategy Arguments
 

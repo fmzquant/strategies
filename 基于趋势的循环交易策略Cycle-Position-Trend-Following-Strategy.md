@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ef13e2c581df250fb4.png)
-[trans]
-
-
-## 概述
-
-基于趋势的循环交易策略是一个依据200日简单移动平均线来判断趋势方向的量化交易策略。该策略提供两个模式 "跟踪上升趋势"和"跟踪下降趋势" 可以根据交易者的偏好进行选择。策略允许交易者自定义止损位和止盈位,提供更大的灵活性。
-
-## 策略原理
-
-该策略的核心指标是200日简单移动平均线。策略分为两个模式:
-
-1. 跟踪上升趋势模式:当收盘价高于200日移动平均线时做多;当止损或止盈触发时平仓。
-
-2. 跟踪下降趋势模式:当收盘价低于200日移动平均线时做多;当止损或止盈触发时平仓。
-
-做多条件通过`longCondition`变量定义,基于收盘价和200日移动平均线的关系。平仓条件通过`closeCondition`变量定义,基于止损、止盈价位和移动平均线的关系。
-
-具体来说,如果满足做多条件,则通过`strategy.entry`开仓做多;如果满足平仓条件,则通过`strategy.exit`平仓。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 简单明晰的交易逻辑,容易理解实现。
-
-2. 提供两个可选模式,可以根据不同市场环境选择合适的模式。
-
-3. 可以通过自定义止损位和止盈位调整策略的风险收益特征。
-
-4. 使用广为人知的技术指标——200日移动平均线判断趋势方向。
-
-5. 自动生成交易信号,无需人工干预,降低操作风险。
-
-## 策略风险
-
-该策略也存在以下风险:
-
-1. 过于依赖单一技术指标,容易产生错误信号。可以考虑加入其他指标进行验证,如MACD、KDJ等。
-
-2. 止损和止盈过小,容易被市场波动止损;过大,可能错过理想退出点位。应适当测试和优化参数。
-
-3. 采用按收盘价判断信号方式,存在看涨/看跌偏差。可考虑改为按K线实体判断或在信号生成后下一根K线确认。
-
-4. 未考虑交易费用的影响。实盘时需预留一定交易费用空间。
-
-## 策略优化
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加其他技术指标验证信号,避免错误信号。例如MACD指标。
-
-2. 优化止损止盈参数,找到最佳参数组合。可以通过回测多组参数进行对比。
-
-3. 加入趋势过滤,只在趋势明确时交易。例如引入ADX指标。
-
-4. 改进入场方式,考虑K线实体关系或加入确认机制。
-
-5. 考虑交易量的影响。在大量出现时验证信号可靠性。
-
-6. 测试不同移动平均线参数,寻找最优参数。
-
-## 总结
-
-综上所述,该策略整体思路清晰易懂,有一定的实用价值。但仅依赖单一指标存在一定盲区,需要加入更多判断条件进行验证,也需要对参数进行测试优化,才能在实盘中获得更好的效果。此外,也需要关注实盘中的滑点、手续费等交易费用的影响。
-
-|| 
 
 
 ## Overview
@@ -140,7 +74,6 @@ Some ways to improve the strategy:
 
 In conclusion, the strategy has clear and understandable logic with practical value. But reliance on a single indicator has limitations. More conditions should be added for confirmation. Parameters also need testing and optimization for better live performance. Furthermore, trading costs like slippage and commissions require consideration in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

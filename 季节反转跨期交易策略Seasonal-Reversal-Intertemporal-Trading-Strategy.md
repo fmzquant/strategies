@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19eec6b8c9fb6b5248a.png)
-[trans]
-
-## 概述
-
-该策略是一种基于季节效应的反转交易策略。它在特定的进入月份建立头寸,并在离开月份平仓,以捕获季节效应造成的价格反转。
-
-## 策略原理
-
-该策略的核心逻辑是根据用户选择的进入月份和离开月份建立季节头寸。具体来说,如果当前月份等于进入月份,且没有建立头寸,则按照多头或空头方向入市。如果头寸已建立,且当前月份等于离开月份,则平仓头寸。
-
-例如,如果选择10月入市,1月离场。那么每年的10月,如果没有持仓,则按照多头或空头方向建立新头寸;如果已有持仓,则每年1月份会平掉该头寸。依靠这样的逻辑,可以捕捉到由于季节效应造成的价格反转。
-
-需要注意的是,该策略默认每次交易风险资金的25%,并按照0.5%的手续费计算。这会对最终收益产生一定影响。
-
-## 优势分析
-
-该策略最大的优势在于利用季节效应产生的市场反转来获利。许多商品和金融市场都存在较为明显的季节性价格波动。如果选择合适的入市和离场时间,可以有效捕捉这样的季节效应造成的反转机会。
-
-此外,该策略非常简单明了,容易理解和实施,适合量化交易的初学者。它只依赖两个参数,极大降低了策略优化难度。
-
-## 风险分析
-
-尽管该策略效果显著,但依然存在一定的风险。首先,选择不当的入市和离场时间可能导致无法捕捉到价格反转,从而亏损;其次,市场环境变化也可能导致季节效应的减弱;最后,默认的止损逻辑较弱,无法有效控制单笔损失。
-
-为了降低风险,可以考虑优化入市和离场时间的选择,结合更多分析判断市场环境,并设置止损来控制风险。当然,任何交易策略都无法完全规避市场风险,需要交易者谨慎对待。
-
-## 优化方向 
-
-该策略还有许多优化的空间。首先,可以引入止损逻辑,设置合理的止损幅度。其次,可以测试更多不同的入市离场组合,寻找最优参数。再者,可以结合更多的因素判断行情,避免在不利环境中交易。最后,引入指数加权算法,调整头寸规模,在盈利时加大头寸,亏损时减小头寸。
-
-通过以上几点优化,可以进一步提高策略的稳定性、增强策略的跟踪性能。当然,任何优化都需要严格的回测验证,避免过度优化。
-
-## 总结
-
-该季节反转跨期交易策略整体而言非常实用。它通过选择合适的入市和离场月份,有效捕捉了季节效应造成的价格反转,从而获利。同时,该策略也非常简单,容易理解和实施,适合量化交易的初学者。当然,交易者还需要注意一定的市场风险,并有针对性地持续优化策略,使其能适应市场环境的变化。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ Through the above optimizations, the stability of the strategy can be further im
 
 Overall, this seasonal reversal intertemporal trading strategy is very practical. By selecting appropriate entry and exit months, it effectively captures price reversals caused by seasonal effects to make profits. At the same time, this strategy is also very simple and easy to understand and implement, suitable for beginners in quantitative trading. Of course, traders also need to be aware of certain market risks and continuously optimize strategies in a targeted manner to adapt them to changes in market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b99c06a6aa8598d0f5.png)
-[trans]
-
-### 概述
-
-本策略名称为“反向拉斯维加斯定量交易策略”,其基本思路是利用拉斯维加斯算法,当价格上涨时做空,当价格下跌时做多,与原有算法相反,形成一个反向操作的策略。
-
-### 策略原理  
-
-该策略的核心逻辑是计算当前价格和前一个周期的价格,当当前价格大于前一个价格时触发做空信号,当当前价格小于前一个价格时触发做多信号。做空做多的仓位根据累积盈利的资金总额计算,每次交易结束后,将盈利累积到下一次的操作资金中,形成再投资。
-
-具体来说,策略通过current_price和previous_price变量记录当前价格和前一个周期的收盘价格。然后定义long_condition和short_condition判断条件,当current_price大于previous_price时触发long_condition,当current_price小于previous_price时触发short_condition。在条件触发时,根据capital_actual变量确定仓位大小position_size。执行做空或做多交易后,通过ganancias变量记录本次交易盈亏,累积到ganancias_acumuladas中。最后,通过capital_actual := capital_actual + ganancias_acumuladas的方式,将盈利再投资到下一次交易中。
-
-### 策略优势分析
-
-该策略最大的优势在于利用反向操作的思路,当市场出现系统性错误时,其盈利潜力会非常大。另外,其再投资机制也会放大盈利。如果运气好,连续交易取得盈利,通过再投资可以迅速积累资金优势。
-
-具体来说,其优势主要有:
-
-1. 利用反向操作,当市场判断出现系统性错误时,其盈利空间巨大。
-
-2. 再投资机制放大盈利,运气好时资金快速增长。
-
-3. 策略逻辑简单,容易理解和跟踪。
-
-4. 可通过参数调整扩大体验不同交易结果。
-
-### 风险分析
-
-该策略最大的风险在于其反向操作的特性,如果坚持错误的市场判断,其将面临巨大的损失。另外杠杆效应也会被再投资机制放大损失。
-
-具体风险点包括:
-
-1. 如果市场走势判断错误,平仓亏损会被放大。
-
-2. 杠杆交易风险太高,单次交易亏损可能超过本金。
-
-3. 追涨杀跌的心理作祟,过度交易亏损加重。
-
-4. 参数设置不当也可能导致意外大亏损。
-
-对应的解决方法包括:
-
-1. 做好风险控制,止损退出、分批建仓。
-
-2. 谨慎使用杠杆,控制单笔损失。
-
-3. 加强心理调控,避免过度交易。
-
-4. 调参测试后再投入运行。
-
-### 策略优化方向  
-
-该策略的优化空间主要集中在再投资机制和参数调整上。
-
-再投资机制可设置部分比例再投资,而不是全额再投资,控制单次亏损影响。
-
-参数调整可尝试不同周期长度及平移大小,寻找最佳参数组合。
-
-另外建议结合止损机制控制损失。具体优化建议如下:
-
-1. 设置再投资比例,防止亏损过大。
-
-2. 测试不同周期参数,寻找最佳参数。 
-
-3. 加入止损逻辑。初期可设定固定止损位,后期可结合ATR动态止损。
-
-4. 可以考虑加入开平仓的时间或技术指标条件来控制交易频率。
-
-### 总结  
-
-本策略名称为“反向拉斯维加斯定量交易策略”,其通过反向操作的思路,配合再投资机制,试图在市场出错时获利。该策略具有较高盈利空间的优势,但也面临巨大风险。我们对风险进行了详细分析,并给出了优化建议。总体而言,如果管理得当,该策略可以在一定条件下获利,但需要谨慎看待。
-
-||
 
 ### Overview
 
@@ -154,7 +81,6 @@ In addition, it is recommended to incorporate a stop loss mechanism to control l
 
 The name of this strategy is “Inverse Las Vegas Algorithmic Trading Strategy”. Through the idea of inverse operations, combined with a profit reinvestment mechanism, it attempts to profit when the market makes mistakes. The strategy has the advantage of high profit potential, but also faces huge risks. We analyzed the risks in detail and gave optimization suggestions. In general, with proper management, the strategy can profit under certain conditions, but needs to be treated cautiously.
 
-[/trans]
 
 > Strategy Arguments
 

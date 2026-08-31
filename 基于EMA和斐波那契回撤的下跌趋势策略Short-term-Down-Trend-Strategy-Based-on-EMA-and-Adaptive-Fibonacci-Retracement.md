@@ -9,65 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略运用EMA指标判断趋势方向,并结合自适应斐波那契回撤自动确定反转点,实现低买高卖,捕捉下跌趋势行情。策略操作频繁,适合短线交易。
-
-## 策略原理
-
-1. 使用9日EMA和21日EMA形成金叉死叉,判断趋势方向。21日EMA下穿55日EMA视为下跌趋势启动信号。
-
-2. 设置自适应斐波那契回撤指标,长度为100周期,根据最近价格震荡范围自动确定关键回撤比例。
-
-3. 当价格突破0.236斐波那契回撤时,视为反转信号,平仓原有仓位。
-
-4. 当9日EMA下穿21日EMA,并且价格低于自适应斐波那契最高点时,做空入场。
-
-5. 多头获利退出条件为突破200日EMA。空头止损退出条件为突破0.236斐波那契回撤。
-
-## 策略优势
-
-- 使用EMA判断趋势方向,操作信号简单清晰
-
-- 自适应斐波那契回撤,不需要人工确定参数
-
-- 策略操作频繁,可捕捉短线变化,实现高频策略
-
-- 利用关键回撤点确定反转,及时止损
-
-- 可配置参数,优化策略以适应不同周期
-
-## 策略风险
-
-- EMA指标存在滞后,需要组合其他指标进行确认
-
-- 自适应斐波那契可能过度优化,回撤点不稳定
-
-- 高频交易增加交易成本和滑点成本
-
-- 无法有效过滤震荡趋势,存在过多错误信号
-
-- 回撤管理和盈亏比控制有待改进
-
-## 策略优化方向
-
-- 增加量能指标,避免量价背离所导致的失误信号
-
-- 优化EMA周期参数,使其更符合当前市场环境
-
-- 设置动态止损以更好控制风险
-
-- 结合趋势强弱指标,避免在震荡期反复交易
-
-- 考虑实际交易成本的影响,设置最小止盈幅度
-
-## 总结
-
-本策略利用EMA判别趋势方向,并使用自适应斐波那契回撤动态确定反转点,可自动适应不同市场变化。但该策略更依赖指标提示,缺乏趋势分段和波浪判断逻辑,优化空间较大。整体来说,作为一个高频短线交易策略,可以捕捉较快的价格变动,但需要交易者承担频繁停损带来的风险,以及防范过度交易的问题。
-
-|| 
 
 ## Overview
 
@@ -125,7 +66,6 @@ This strategy uses EMA to determine trend direction and adaptive Fibonacci retra
 
 This strategy identifies trend direction with EMA and determines reversal levels dynamically using adaptive Fibonacci retracement, which automatically adapts to different market conditions. But it relies more on indicator cues without trend segmentation and Elliott Wave logic, leaving room for optimization. Overall, as a high frequency short-term trading strategy, it can capture fast price changes but involves risks of frequent stop loss and overtrading that traders need to manage.
 
-[/trans]
 
 > Strategy Arguments
 

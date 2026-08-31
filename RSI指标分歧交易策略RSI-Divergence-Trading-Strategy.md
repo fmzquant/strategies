@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/207f2040e5d0e5104ed.png)
-[trans]
-
-## 概述
-RSI指标分歧交易策略通过分析RSI指标与价格的背离,发现价值分歧的机会,在背离出现时做多做空。
-
-## 策略原理
-该策略基于RSI指标与价格出现背离时的价值分歧。RSI指标反映强弱势,价格反映供需关系。当二者出现分歧时,说明市场存在误价,可以做空买入或做多卖出获利。
-
-具体来说,常规的多头分歧是RSI形成更高低点,而价格形成更低低点。这表示市场虽然表面看跌,但实际已经具有蓄力反弹的迹象。当RSI背离价格,向上突破50分界线时,可以捕捉这个反弹机会。
-
-常规的空头分歧则相反,RSI形成更低高点,价格却形成更高高点。这表示市场表面看涨,但实际内在已经显示疲软迹象。当RSI背离价格,向下突破50分界线时,可以做空获利。
-
-此外,还有隐藏的多头分歧和空头分歧情况。这时RSI和价格的关系与常规分歧相反,但原理相同,也可获利。
-
-## 策略优势
-1. 捕捉价值分歧,发现市场误差定价
-2. 结合指标与价格背离,提高胜率
-3. 区分多种分歧情况,覆盖更多机会
-
-## 风险分析
-1. 特殊市场情况下也会出现假象分歧,需要识别
-2. 突破50分界线的胜率并不高,可适当优化
-3. 多空方向选择错误可能导致较大亏损
-
-## 优化方向
-1. 优化RSI参数,提高指标预测准确性
-2. 结合其他指标信号判断背离分歧
-3. 评估做多做空获利风险比,控制单笔盈亏
-
-## 总结
-RSI指标分歧策略通过分析价值与价格的背离,发现市场误差定价,是一种典型的统计套利策略。该策略优势在于及时发现趋势反转机会,风险在于 分歧识别的准确性。通过不断优化,能够在实战中取得稳定收益。
-
-||
 
 ## Overview
 The RSI divergence trading strategy captures mispricing opportunities by analyzing the divergence between the RSI indicator and price. It goes long or short when the divergence appears.
@@ -73,7 +40,6 @@ There are also hidden bullish and bearish divergences where the relationship bet
 
 ## Summary
 The RSI divergence strategy arbitrages market mispricing through analyzing divergence between value and price signals. Its advantage lies in timely catching trend reversal opportunities, while its risk comes from the accuracy of divergence recognition. With continuous optimization, steady gains can be achieved in live trading.
-[/trans]
 
 > Strategy Arguments
 

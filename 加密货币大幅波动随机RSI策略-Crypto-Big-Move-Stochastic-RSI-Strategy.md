@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f26f96d820f470a05b.png)
 
-[trans]
-
-#### 概述
-
-"加密货币大幅波动随机RSI策略"是一个专为TradingView平台设计的复杂交易算法,利用随机RSI的强大功能,结合显著价格变动检测,以把握市场趋势。该策略专为加密货币市场量身定制,并针对15分钟交易时间框架进行了优化。
-
-该策略的主要思路是利用随机RSI指标和价格大幅波动检测,在市场出现显著波动且随机RSI指标达到超卖或超买区域时产生交易信号。通过结合这两个条件,策略能够在趋势初期就捕捉到交易机会,同时又能避免在震荡市中频繁交易。
-
-#### 策略原理
-
-1. 计算RSI指标和随机RSI指标。RSI指标用于衡量价格的超买超卖状态,而随机RSI指标则将RSI值进一步处理,得到更加平滑和可靠的超买超卖信号。
-
-2. 检测显著价格波动。策略会比较当前收盘价和lookbackPeriod个周期之前的收盘价,计算其变化百分比。如果变化百分比超过bigMoveThreshold设定的阈值,则认为发生了显著价格波动。
-
-3. 根据随机RSI水平和大幅价格波动来确定进场条件。当随机RSI的K线或D线低于3时,且发生显著上涨,则产生做多信号;当随机RSI的K线或D线高于97时,且发生显著下跌,则产生做空信号。
-
-4. 执行交易。如果触发做多信号,则策略开仓做多;如果触发做空信号,则策略开仓做空。
-
-5. 绘制进场信号以便视觉确认。策略会在图表上标记做多和做空信号,以方便用户查看和验证交易。
-
-#### 策略优势
-
-1. 结合随机RSI和价格大幅波动两个条件,能够在趋势初期就捕捉到交易机会,同时避免在震荡市频繁交易,从而提高策略的盈利能力和稳定性。
-
-2. 随机RSI指标对RSI值进行平滑处理,能够给出更加可靠的超买超卖信号,有助于提高策略的准确性。
-
-3. 通过参数优化,可以灵活调整策略在不同市场状况下的表现,从而适应不同的交易品种和周期。
-
-4. 策略逻辑清晰,易于理解和实现,可以作为进一步开发和优化的基础。
-
-#### 策略风险
-
-1. 策略在趋势型市场中表现良好,但在震荡市中可能会出现较多的假信号,导致频繁交易和资金损失。
-
-2. 随机RSI指标有一定的滞后性,在市场快速变化时,可能会错过最佳的进场时机。
-
-3. 策略依赖于对历史数据进行回测和优化,在实盘交易中可能会出现与历史数据不一致的情况,从而影响策略表现。
-
-4. 策略缺乏明确的止损和止盈机制,在市场出现剧烈波动或黑天鹅事件时,可能会承受较大的风险。
-
-#### 策略优化方向
-
-1. 引入更多的技术指标,如移动平均线、布林带等,以提高交易信号的可靠性和准确性。
-
-2. 结合基本面分析,如新闻事件、经济数据等,对交易信号进行过滤和确认,以减少假信号的出现。
-
-3. 优化参数设置,如调整随机RSI的时间周期、超买超卖阈值等,以适应不同的市场状况和交易品种。
-
-4. 引入风险管理机制,如设置合理的止损和止盈位,控制单笔交易的风险敞口,以提高策略的稳健性和长期表现。
-
-5. 结合多时间框架分析,如在较高时间框架上确认趋势方向,在较低时间框架上寻找进场点,以提高交易的准确性和盈利潜力。
-
-#### 总结
-
-"加密货币大幅波动随机RSI策略"是一个利用随机RSI指标和价格大幅波动检测来捕捉交易机会的量化交易策略。该策略能够在趋势初期就产生交易信号,同时避免在震荡市中频繁交易,具有一定的盈利潜力和稳定性。然而,策略也存在一些局限性和风险,如在震荡市中可能出现较多假信号,缺乏明确的风险管理机制等。未来可以通过引入更多技术指标、优化参数设置、结合基本面分析和风险管理等方面来进一步优化和完善该策略,以提高其在实盘交易中的表现和稳健性。
-
-|| 
 
 #### Overview
 
@@ -123,7 +66,6 @@ The main idea behind the strategy is to use the Stochastic RSI indicator and sig
 
 The "Crypto Big Move Stochastic RSI Strategy" is a quantitative trading strategy that utilizes the Stochastic RSI indicator and significant price movement detection to capture trading opportunities. The strategy can generate trading signals early in the trend while avoiding frequent trades in choppy markets, showing some profit potential and stability. However, the strategy also has limitations and risks, such as generating more false signals in choppy markets and lacking explicit risk management mechanisms. In the future, the strategy can be further optimized and improved by introducing more technical indicators, optimizing parameter settings, incorporating fundamental analysis and risk management, and enhancing its performance and robustness in live trading.
 
-[/trans]
 
 
 

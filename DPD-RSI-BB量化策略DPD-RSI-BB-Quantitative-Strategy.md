@@ -11,68 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/633655fd2cf832b905.png)
 
-[trans]
-
-## 概述
-
-DPD-RSI-BB量化策略是一种同时结合DPD、RSI和布林带三个指标的股票交易策略。该策略利用DPD判断趋势,RSI判断超买超卖,布林带判断支撑压力位进行入场。
-
-## 策略原理
-
-该策略主要由以下几部分组成:
-
-1. DPD指标判断趋势
-
-   使用双EMA平均线构建DEMA均线,并计算价格与DEMA的差价比例作为趋势判断指标,当差价比例低于设定阈值时作为看涨信号。
-
-2. RSI指标判断超买超卖
-
-   计算一定周期内的RSI值,RSI高于设定上限判断为超买区,RSI低于设定下限判断为超卖区。
-
-3. 布林带判断支撑压力
-
-   计算一定周期的中轨、上轨和下轨,价格接近上轨作为看跌信号,价格接近下轨作为看涨信号。
-
-4. 综合判断
-
-   当DPD差价比例低于阈值,RSI低于超卖区下限,且价格低于布林带上轨时,产生看涨信号;当RSI高于超买区上限,DPD差价比例高于阈值,且价格高于布林带上轨时,产生看跌信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多指标综合判断,避免单一指标产生的误信号。
-
-2. 利用RSI指标判断超买超卖情况,设置事先止损止盈点。
-
-3. DPD指标能较好判断价格趋势,布林带能判断支撑压力位。
-
-4. 不同参数的灵活设定,可针对不同股票进行优化。
-
-## 风险及优化
-
-该策略也存在一些风险:
-
-1. 多指标组合判断会使策略较为复杂,参数设定较难。
-
-2. DPD、RSI等指标存在一定延迟,可能错过最佳入场时点。
-
-3. 需要优化参数以适应不同周期和股票特性。
-
-可从以下方面进行优化:
-
-1. 调整指标参数,优化入场退出点位。
-
-2. 增加止损机制,严格控制单笔损失。
-
-3. 测试不同股票和周期参数,评估策略效果。
-
-## 总结
-
-DPD-RSI-BB策略综合多个指标判断,回避单一指标产生的假信号。通过参数优化,可成为一个较强的股票交易策略。但该策略也有可能因复杂度大而难以完全回避市场风险,需谨慎使用。
-
-
-||
 
 
 ## Overview
@@ -133,7 +71,6 @@ The following aspects can be optimized:
 
 The DPD-RSI-BB strategy combines multiple indicators for judgments to avoid false signals from a single indicator. Through parameter optimization, it can become a relatively strong stock trading strategy. But due to its complexity, it may still fail to completely hedge against market risks and should be used with caution.
 
-[/trans]
 
 > Strategy Arguments
 

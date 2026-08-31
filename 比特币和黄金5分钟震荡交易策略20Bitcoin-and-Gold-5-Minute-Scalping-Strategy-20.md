@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/132e5a3fadbadb85c25.png)
 
-[trans]
-
-## 概述
-
-该策略是一种5分钟震荡交易策略,旨在捕捉比特币和黄金市场的短期价格波动,实现盈利。它结合使用EMA均线、布林带指标以及止损方法来实现入场和出场。
-
-## 策略原理
-
-该策略使用快速EMA指标和慢速EMA指标构建趋势判断系统。当快速EMA上穿慢速EMA时产生买入信号;当快速EMA下穿慢速EMA时产生卖出信号,捕捉短期趋势的转折。 
-
-同时,该策略结合布林带指标判断价格波动区间。只有当价格接近布林带上轨或中轨时,才产生交易信号。这能过滤掉大部分假信号。 
-
-入场后,该策略使用ATR指标计算止损位。并且设定止损为入场蜡烛的低点再减去n倍ATR,用于控制每个交易的风险。
-
-## 优势分析
-
-该策略最大的优势在于 capturing short-term swings and price volatility, taking small but consistent profits 每次只追求小利润,但持续盈利。通过快速EMA和慢速EMA的配合,能快速判断短期趋势;布林带和ATR止损能有效控制风险,是一种相对稳定的震荡策略。
-
-另外, 5分钟周期操作使得该策略交易频率较高,这也增大了其盈利空间。同时也方便进行人工监控或优化。
-
-## 风险分析
-
-该策略主要风险在于 whipsaws leading to multiple small losses 抄底反转造成的小额连续亏损。当价格在一个范围内震荡时,EMA交叉信号可能频繁出现,造成不必要的交易和连续小额亏损。
-
-此外,作为一个短期震荡策略,它也面临着高交易频率带来的交易成本风险。如果交易成本过高,可能会侵蚀利润空间。
-
-## 优化方向
-
-该策略可以通过以下方式进行优化:
-
-1. 增加其他oscillators作为辅助判断指标,如RSI, Stochastics等,避免在震荡市场中被套。
-
-2. 增加machine learning模型判断趋势方向,提高入场的准确性。
-
-3. 利用遗传算法、随机森林等方法自动优化参数,使之更符合当下市场情况。
-
-4. 结合深度学习判断关键支持位和关键压力位,设定更优的止损位置。
-
-5. 测试不同交易品种如股指、外汇、加密货币等,选择交易效果最好的品种作为主要交易标的。
-
-## 总结
-
-总的来说,该策略作为一个短期频繁交易策略,能够有效捕捉价格短期震荡和趋势反转,通过快速EMA判断,布林带过滤和ATR止损来控制风险,可以获得稳定收益。如果进一步优化和改进,在降低交易频率的同时保持盈利能力,将是一个非常具有潜力的量化策略。
-
-||
 
 ## Overview
 
@@ -99,7 +54,6 @@ The strategy can be optimized in the following ways:
 
 In summary, as a short-term frequent trading strategy, this strategy can effectively capture short-term price swings and trend reversals by using fast EMA to judge, Bollinger Bands to filter and ATR for stop loss to control risks, allowing steady gains. If further optimized and improved to reduce trading frequency while maintaining profitability, it will be a highly promising quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

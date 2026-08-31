@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/110de81942aa476240a.png)
-[trans]
-### 概述
-
-本策略基于K线的开高低数据设计 Entries,以寻找趋势的反转点。 Entries后会根据ATR指标设定止损线,并追踪止损。策略还会根据风险回报比例计算Target位,在达到Target或被止损后平仓。
-
-### 策略原理
-
-该策略的 Entries 信号来自开高低点。当某根K线的开盘价等于最低价时产生买入信号,当开盘价等于最高价时产生卖出信号,表示可能存在趋势反转机会。
-
-Entries后会根据ATR指标计算动态追踪止损。买入后止损线为最近N根K线内的最低价减去1倍ATR;卖出后止损线为最近N根K线内的最高价加上1倍ATR。止损线会动态更新,追踪价格运行。 
-
-目标利润按照设置的风险回报比率计算。买入的目标价为Entry价格加上(Entry价格与止损价差额的风险回报比倍数);卖出目标价为Entry价格减去(止损价与Entry价差额的风险回报比倍数)。
-
-当价格触及止损价或目标价时,发出平仓指令。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. Entries信号简单清晰,容易判断,避免多次震荡。
-
-2. 动态ATR止损,最大程度锁定盈利,避免追高杀低。
-
-3. 风险回报率控制,避免利润遗留和超短线操作。
-
-4. 适用于不同品种,容易优化。
-
-### 风险分析 
-
-该策略也存在一定的风险:
-
-1. Entries信号可能存在一定程度的滞后,错过行情最佳点位。
-
-2. 止损价靠近或者过于宽松,可能被套或失去盈利。
-
-3. 无趋势判断模块,在震荡行情中容易被套。
-
-4. 无法处理隔夜建仓的情况。
-
-对应优化方向:
-1. 结合其他指标判断趋势,避免震荡行情的套利。
-
-2. 调整ATR参数或加入波动率控制,优化止损线位。
-
-3.增加趋势判断或过滤模块,减少Entries信号的误差。 
-
-4. 加入隔夜处理模块,处理特定品种的隔夜仓位。
-
-### 总结
-
-本策略总体来说较为简单直接,Entries信号清晰,止损思路合理,风险控制到位。但也存在一定Limitation,如趋势判断不足,信号滞后等问题。这些问题也为未来的优化提供了方向。通过结合更多指标判断和风控模块,该策略可以进一步增强效果,变得更加通用。
-
-||
 
 ### Overview
 
@@ -115,7 +62,6 @@ The optimization directions are:
 ### Conclusion
 
 In conclusion, this is a simple and straightforward strategy with clear entry logic, reasonable stop loss methodology and good risk control. But there are some limitations like insufficient trend bias, signal lagging etc. These flaws also point out directions for future optimization. By incorporating more indicators filters and risk management modules, this strategy can be further enhanced and made more robust.
-[/trans]
 
 > Strategy Arguments
 

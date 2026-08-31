@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1309afcc075cbc7cb6e.png)
-[trans]
-
-策略名称:动量驱动的线性MACD策略
-
-概述:这是一个利用线性回归预测股票价格,并与MACD指标结合的量化策略。它利用线性回归分析历史价格和交易量,预测未来价格趋势。在获利机会出现时,它结合MACD指标判断入场时机。
-
-策略原理:
-1. 计算价格的线性回归系数:根据历史交易量拟合一条线性回归线,用于预测未来价格。
-2. 绘制预测价格:根据步骤1中的回归系数,绘制价格的预测线。
-3. 生成买入信号:当预测价格处于开盘价和收盘价之间,且MACD上涨时,产生买入信号。
-4. 生成卖出信号:当MACD下降,同时价格低于预测价格时,产生卖出信号。
-
-优势分析:
-这是一个结合了统计预测和技术指标判断的策略。它利用线性回归得出价格预测,避免主观臆测。同时,MACD指标可有效判断市场买卖力道,精准捕捉机会。整体来说,这是一个系统化程度高,预测准确,风险可控的策略。
-
-风险分析:
-线性回归仅依赖历史数据,对突发事件如重大利空消息反应不敏感,可能产生错误信号。此外,参数设置如回归周期长度等,也会影响策略表现。我们建议采用vwma平滑预测价格,降低曲线抖动对策略的影响。
-
-优化方向: 
-我们认为该策略可从以下几个方面进行优化:
-1.	加入止损机制。当价格突破止损线时平仓,有效控制个别错误信号带来的损失。
-2.	引入机器学习模型。使用更高效的模型预测价格趋势,提升策略准确性。
-3. 结合情绪指标。引入市场恐惧指数等情绪指标,判断市场买卖氛围,提高策略胜率。
-4.	多时框结合。不同时间周期预测可能互相验证,形成组合策略,降低单一时框的局限性。
-
-总结:
-本策略通过线性回归预测价格与MACD指标判断,形成系统化的量化交易策略。它具有预测逻辑清晰,风险可控,优化空间广阔等优势。我们相信,通过持续优化与迭代,它的表现将越来越出色。它为我们提供了利用科学预测方法进行量化交易的思路,值得我们深入研究与应用。
-
-|| 
 
 Strategy Name: Momentum-driven Linear MACD Strategy  
 
@@ -66,7 +37,6 @@ We believe this strategy can be optimized in the following aspects:
 Conclusion:  
 This strategy generates systematic trading signals by predicting prices with linear regression and determining entries with MACD indicator. Its advantages include clear predictive logic, controllable risks, and ample optimization space. We believe its performance will continue to excel through continuous optimizations and iterations. It provides inspirations on leveraging scientific prediction models to conduct quantitative trading and deserves further research and applications.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d01f6ebb4bfeb56389.png)
-[trans]
-
-### 概述
-
-本策略通过组合使用双重Hull移动平均线指标、容量加权移动平均线指标、MACD指标和真实力度指数指标,实现对趋势的精确判断。它能够自动适应市场环境的变化,具有较强的适应性。
-
-### 策略原理   
-
-该策略的核心指标是双重Hull移动平均线,它由两个参数keh和teh控制计算。这两个参数分别确定了快线和慢线的周期。快线和慢线构成金叉死叉,判断目前趋势。   
-
-辅助判断指标有容量加权移动平均线meh1。当价格高于meh1时,为看涨形势;价格低于meh1时,为看跌形势。
-
-另一个辅助判断指标是MACD。它由快速移动平均线减去慢速移动平均线得到MACD,再用MACD的移动平均线得到讯号线。当MACD高于讯号线时为看涨形势。  
-
-最后一个辅助判断指标是TSI,它通过价格变化率的双重平滑计算得到。其绝对值大小代表价格变化的势头。在买入和卖出条件中,对TSI的讯号线进行判断,控制Entries和Exits的时机。
-
-综合这几个指标的信号,可以准确判断趋势,并且自动调整参数,与市场达到同步。
-
-### 策略优势
-
-1. 使用双重Hull移动平均线作为主要判断指标,辅以其他多个指标组合使用,可以提高判断准确性,降低假信号。
-
-2. 应用TSI指标判断入市和出市的时机,可以控制风险。
-
-3. 多种参数可以自行调整,适应性强,可以自动适应市场变化。
-
-4. 采用指标组合和参数自适应的思路,使策略稳定性好,连续盈利能力强。
-
-### 风险分析
-
-1. 虽然加入了TSI指标判断时机,但gorithm使用的指标还是趋势类型,如果遇到震荡抽头市场,会增大盈亏波动。
-
-2. 参数设置不当可能导致策略失效,需要根据自己的经验合理设定参数。
-
-3. 多指标组合增加了计算量,在数据量大的股票和时间段上报错的可能性会增大,需要控制数据范围。 
-
-4. 需要监控指标的计算效果,防止异常数据的干扰。
-
-### 策略优化方向  
-
-1. 可以测试添加其他辅助指标,如BOLL指标等,使信号更加准确可靠。
-
-2. 优化入市出市逻辑,设置止损止盈条件,控制单笔盈亏。
-
-3. 对交易品种参数进行训练和优化,使其更好地适应不同品种。
-
-4. 增加参数自适应模块,使策略参数可以根据最近交易效果自动调整。
-
-### 总结  
-
-本策略集成了多种指标的优势,采用指标组合判断趋势方向,在控制风险的同时,提高了判断的准确性。通过参数优化和逻辑优化,可以使策略更好地适应市场变化,在降低连续亏损的基础上获取更大利润。本策略稳定性好,可以长期应用在股票和加密货币等品种上。
-
-||
 
 ### Overview  
 
@@ -115,7 +62,6 @@ By combining the signals of these indicators, the trend can be accurately judged
 
 This strategy integrates the advantages of multiple indicators and uses indicator combinations to judge trend direction. While controlling risks, it improves the accuracy of judgments. Through parameter optimization and logic optimization, the strategy can be better adapted to market changes, while reducing consecutive losses and gaining greater profits. This strategy is stable and can be used for stocks, cryptocurrencies and other varieties for long term.
 
-[/trans]
 
 > Strategy Arguments
 

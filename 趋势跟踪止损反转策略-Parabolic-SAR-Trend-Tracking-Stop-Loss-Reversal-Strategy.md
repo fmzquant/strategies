@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15c4b506bdd7fd218e9.png)
-[trans]
-
-## 概述
-
-趋势跟踪止损反转策略是一个利用 Parabolic SAR 指标来识别趋势,并在趋势反转时进入反向头寸的策略。该策略同时结合了止损和止盈机制来控制风险。
-
-## 策略原理
-
-该策略使用 Parabolic SAR 指标来判断当前市场趋势。Parabolic SAR  full name is “Parabolic Stop and Reverse”,表示抛物线止损反转。它的指标线在价格图上像一系列抛物线,这些抛物线点代表可能的反转点。
-
-当 SAR 点下降且低于价格时,代表看涨趋势;当 SAR 点上升且高于价格时,代表看跌趋势。该策略就是根据 SAR 点位置来判断目前的趋势方向。
-
-具体来说,当 SAR 点上升趋势且高于价格时,策略会做空头寸;当 SAR 点下降趋势且低于价格时,策略会做多头寸。也就是在 SAR 点显示趋势反转时,进入反向头寸。
-
-此外,该策略还设置了止损和止盈机制。做多时,有可能设置止损价格来限制亏损;同时有可能设置止盈价格,在价格达到一定目标利润后平仓。做空也是类似的机制。
-
-## 优势分析
-
-该策略结合趋势指标和止损/止盈机制,有以下主要优势:
-
-1. 能够及时捕捉趋势反转机会,实现反向操作。
-2. 设置止损和止盈后,可以主动控制风险和盈利。
-3. Parabolic SAR 是相当常用的趋势反转指标,效果较好。
-4. 策略规则简单清晰,容易理解和实现。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:  
-
-1. Parabolic SAR 指标并不完美,有时候会发出错误信号。
-2. 设置止损或止盈价格需要合理,否则可能过早止损或止盈。 
-3. 交易手续费也会影响最终利润。
-4. 反转后新的趋势lengthening可能比较短暂。
-
-针对这些风险,可以通过调整参数优化,或配合其他指标过滤来解决。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化 Parabolic SAR 的参数,寻找最佳参数组合。
-2. 尝试不同的止损止盈策略,如尾随止损等。
-3. 增加指标或条件来过滤反转交易信号。
-4. 添加仓位控制,根据市场情况扩大或缩小仓位。
-5. 针对不同交易品种调整参数。
-
-## 总结
-
-该趋势跟踪止损反转策略,整体来说是一个较为经典的交易策略思路。它起到了识别趋势反转的功能,同时辅以止损和止盈手段控制风险。通过优化可以成为一个值得实盘的策略思路。
-
-||
 
 ## Overview  
 
@@ -110,7 +59,6 @@ The strategy can be optimized in the following aspects:
 
 In general, this is a rather classical trend tracking stop loss reversal strategy. It identifies trend reversals and also controls risks with stop loss and take profit means. After optimizations it can become a worthwhile strategy for live trading.
 
-[/trans]
 
 > Strategy Arguments
 

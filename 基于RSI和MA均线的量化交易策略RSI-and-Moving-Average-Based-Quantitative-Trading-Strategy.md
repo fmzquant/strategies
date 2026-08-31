@@ -10,79 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/3e09140e19b4cb4a0d.png)
-[trans]
-
-## 概述
-
-本策略名为“双均线策略”,其核心思想是同时利用相对强弱指标(RSI)和移动平均线(MA)这两个指标来产生交易信号。具体来说,当RSI线从上向下跨过MA线时生成买入信号;当RSI线从下向上跨过MA线时生成卖出信号。该策略相对简单,但通过结合两个不同类型的指标,可以有效减少假信号,提高信号的可靠性。
-
-## 原理
-
-双均线策略的基本逻辑是:
-
-1. 计算RSI值,以反映股票的超买超卖情况
-2. 计算MA值,以判断价格平均趋势
-3. 当RSI从高点下降,由超买区域进入超卖区域,并下穿MA时,产生买入信号
-4. 当RSI从低点上升,由超卖区域进入超买区域,并上穿MA时,产生卖出信号
-
-以上交易信号发生时,我们会在图表上画出相关标记,方便视觉判断。这就是双均线策略的整体工作流程。
-
-## 优势
-
-双均线策略最大的优势在于能有效结合趋势指标和超买超卖指标,使交易信号更加可靠。具体来说,主要有以下几个方面的优势:
-
-1. 减少假信号。RSI和MA的结合使用,可以相互验证信号,避免单一指标产生的假信号。
-
-2. 提高胜率。相比单一RSI或MA策略,双均线策略可以获得更高的盈利机会。
-
-3. 适应性强。该策略仅用两个参数,操作简单,使用成本低,适合不同市场环境。
-
-4. 容易优化。通过调整RSI和MA的周期参数,可以方便优化,适应更多品种。
-
-
-## 风险
-
-尽管双均线策略有许多优点,但在实际应用中也不能完全避免风险。主要的风险包括:
-
-1. MA采用了历史均价,可能滞后于最新价格变化。
-
-2. RSI可能出现假突破的情况,产生错误信号。
-
-3. 无法适应快速变化的趋势市场,容易止损。
-
-4. 参数设置不当也会大幅影响策略表现。
-
-对此,我们主要从以下几个方面进行风险控制:
-
-1. 采用自适应MA,根据最新价格变化调整周期参数。
-
-2. 增加止损机制,控制单笔亏损。
-
-3. 优化参数,选择最佳参数组合测试。
-
-4. 采用步进止损,锁定部分利润,降低风险。
-
-## 优化方向 
-
-针对双均线策略可能存在的问题,我们考虑从以下几个维度进行优化:
-
-1. 利用自适应MA代替普通MA,可以更快捕捉价格变化趋势。
-
-2. 增加成交量指标的验证,避免假突破。例如收盘价与成交量齐齐上涨时才买入。
-
-3. 结合其他指标 filt过滤无效信号。例如MACD 或KD指标的 verifies 。
-
-4. 优化参数设置区间,寻找最优参数组合。可以通过回测寻找策略Highest 盈利的参数区间。
-
-5. 采用机器学习技术进行参数自适应优化。让策略能够根据实时市场状况选择最优参数。
-
-通过以上几点优化,有望大幅提升双均线策略的实盘表现。
-
-## 总结
-
-双均线策略整合了RSI和MA两个指标的优点,通过二者配合,可以产生更加准确和可靠的交易信号。相比单一技术指标策略,双均线策略具有信号准确度高、假信号少、容易优化等优势。但也不能完全避免误操作风险,我们提出了一些具体的风险控制手段。此外,这一策略也存在可以继续优化的维度,若结合自适应指标、其他辅助验证指标、参数寻优等手段,有望进一步提高策略收益率。总体来说,本策略为量化交易提供了一个简洁实用的技术分析方案。
-
-||
 
 
 ## Overview
@@ -154,7 +81,6 @@ Through the above optimizations, it is expected to greatly improve the live perf
 ## Summary 
 
 The dual moving average strategy integrates the advantages of RSI and MA indicators. Through the cooperation of the two, more accurate and reliable trading signals can be generated. Compared with single technical indicator strategies, dual moving average strategies have higher signal accuracy, fewer false signals, easy optimization and other advantages. But the risk of misoperation cannot be completely avoided. We have also proposed some specific risk control measures. In addition, there are dimensions that can be further optimized for this strategy. By combining adaptive indicators, other auxiliary verification indicators, parameter optimization and other means, it is expected to further improve the strategy's rate of return. In general, this strategy provides a simple and practical technical analysis solution for quantitative trading.  
-[/trans]
 
 > Strategy Arguments
 

@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/136b69f496fff16d058.png)
-[trans]
-
-## 概述
-
-移动平均与相对强弱指标策略(Moving Average Relative Strength Index Strategy)是一种同时利用移动平均线和相对强弱指标作为交易信号的量化交易策略。该策略通过比较价格的移动平均线和相对强弱指标的数值,产生交易信号,以捕捉市场趋势中的机会。
-
-## 策略原理
-
-该策略主要基于两个指标:
-
-1. 简单移动平均线(SMA):反映价格的平均趋势。
-2. 相对强弱指标(RSI):反映价格的强弱态势。
-
-策略的核心逻辑是:
-
-当RSI指标线低于移动平均线时为超卖区域,视为股票被低估,产生买入信号;当RSI指标线高于移动平均线时为超买区域,视为股票被高估,产生卖出信号。
-
-也就是说,移动平均线在一定程度上反映股票的公允价值,RSI指标代表股票目前的强弱态势。RSI指标高于或低于移动平均线,意味着存在反转的机会。
-
-具体来说,该策略通过以下步骤产生交易信号:
-
-1. 计算股票的RSI指标值,以及简单移动平均线
-2. 比较RSI指标值与移动平均线的大小关系 
-3. 当RSI指标上穿移动平均线时,产生卖出信号
-4. 当RSI指标下穿移动平均线时,产生买入信号
-5. 设置止损点和移动止损来控制风险
-
-## 策略优势
-
-该策略结合移动平均线的趋势判断和RSI指标的超买超卖判断,综合利用不同指标的优势,可以有效判断市场的转折点。
-
-主要优势有:
-
-1. 移动平均线能够有效地指示价格趋势
-2. RSI指标可以反映超买超卖现象
-3. 结合双重指标,判断市场转折点的准确性更高
-4. 可以设置止损点来控制风险
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 指标产生错误信号的概率存在,可能导致不必要的亏损
-2. 行情剧烈震荡时,止损可能被突破,造成较大亏损
-3. 参数设置不当也会影响策略表现
-
-为了控制风险,可以通过以下方式进行优化:
-
-1. 调整移动平均线和RSI的参数,使指标信号更可靠 
-2. 适当宽松止损点,避免止损过于频繁被触发
-3. 采用移动止损DYNAMIC止损等方式,使止损更加灵活
-
-## 策略优化方向 
-
-该策略还可进一步优化的方向包括:
-
-1. 测试不同周期的参数组合,寻找最佳参数
-2. 增加其他指标过滤,如成交量指标等,提高信号的可靠性
-3. 优化止损策略,使止损更加动态和合理
-4. 结合深度学习等技术,建立自适应参数优化机制
-5. 增加仓位管理模块,根据市场情况动态调整仓位
-
-通过参数优化、指标优化、风险管理优化等方式,可以不断提升该策略的稳定性和盈利能力。
-
-## 总结
-
-移动平均与相对强弱指标策略同时利用价格趋势判断和超买超卖判断,可以有效判断市场转折点,抓住反转机会。该策略简单实用,风险可控,是一种实用的量化交易策略。通过持续优化,可以获得更加出色的效果。
-
-||
 
 
 
@@ -148,7 +79,6 @@ Through parameter optimization, indicator optimization, risk management optimiza
 
 The Moving Average RSI Strategy utilizes both price trend and overbought/oversold analysis to effectively identify market turning points and capture reversal opportunities. This simple, practical strategy has controllable risks and is useful for quantitative trading. Further optimization can lead to even better results.
 
-[/trans]
 
 > Strategy Arguments
 

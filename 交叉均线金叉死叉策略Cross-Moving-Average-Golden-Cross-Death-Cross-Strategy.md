@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/db21560b7a7df2f192.png)
 
-[trans]
-这是一个非常经典的移动平均线金叉死叉策略。该策略借助TENKAN和KIJUN两条不同周期的移动平均线,形成金叉和死叉信号,进行长短操作。
-
-## 策略原理
-
-该策略主要基于一种叫“一目均衡表”的日本股票技术分析方法,用TENKAN线和KIJUN线等多条移动平均线来判断市场趋势方向。
-
-首先,TENKAN线是9日线,代表短期趋势;KIJUN线是26日线,代表中期趋势。当短期上穿中期时,产生买入信号;当短期下穿中期时,产生卖出信号。这样,就构成了经典的移动平均线金叉死叉策略。
-
-然后,该策略还引入空中线和光云线。空中线是短期和中期移动平均线的平均数,光云线B是52日移动平均线。它们构成“云带”,判断长期趋势方向。价格在光云上的空间就是多头市场,价格在光云下的空间就是空头市场。
-
-最后,为过滤假信号,该策略还检测价格是否与OTO线(26日价格的延迟线)的关系——只有当价格在OTO线之下才产生买入信号;只有当价格在OTO线之上才产生卖出信号。
-
-## 策略优势
-
-这是一个非常典型的移动平均线策略,优势主要体现在三个方面:
-
-1. 使用两条不同周期的均线,可以有效判断短期和中期两个时间维度的趋势方向。
-
-2. 借助光云线判断长期趋势,避免在长期看跌市场中仍看多。
-
-3. 检测价格与延迟价格的关系,可以过滤掉很多假信号,减少不必要的交易。
-
-所以,该策略综合利用均线的多种功能,可以顺势而为,及时抓住短中长三个时间维度的趋势机会。
-
-## 策略风险 
-
-该策略的主要风险在于:
-
-1. 均线策略容易产生大量假信号。如果不能很好地设定参数,则会因为频繁交易而被套牢。
-
-2. 该策略偏重技术面,没有考虑基本面因素。如果公司业绩或市场政策发生重大变化,技术信号也可能会失效。
-
-3. 该策略只考虑了买入卖出的决策,没有设置止损机制。一旦判断错误,亏损可能会加大。
-
-所以,我们需要寻找更先进的均线系统,或合理设定止损,或加入基本面信号,来进一步完善该策略,降低风险。
-
-## 策略优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 寻找更稳定和高效的参数组合。我们可以通过更多的数据回测,找到让策略绩效更优异的参数值。
-
-2. 增加止损机制。合理的止损可以有效控制策略的最大损失。
-
-3. 加入基本面信号。例如业绩预期revision的数据可以判断公司前景,从而提高策略效果。
-
-4. 优化OTO线策略。现有的实现很简单,我们可以寻找更稳定和精确判断价格与历史价格关系的方法。
-
-5. 结合选股信号。加入像PE,ROE等因子的评分,可以过滤掉一些质量比较差的标的。
-
-
-## 总结
-
-这是一个非常典型和实用的移动平均线策略。它同时关注了短、中、长三个时间维度的趋势,运用均线的不同功能来设计交易信号,效果不错。我们可以在此基础上,通过参数优化、止损、选股等方法进行改进,使其绩效更出色。总的来说,这是一个值得重点研究和长期跟踪的量化策略。
-
-||  
 
 This is a very classic moving average golden cross death cross strategy. The strategy utilizes two moving averages, TENKAN and KIJUN, with different time periods to form golden cross and death cross signals for long and short trades.
 
@@ -124,7 +67,6 @@ This strategy can also be improved in the following aspects:
 
 This is a very typical and practical moving average strategy. By simultaneously monitoring short, medium and long-term trends, utilizing various functions of moving averages, it generates trade signals with solid performance. We can further improve it by parameter tuning, adding stop loss, stock selection etc. Overall this is a promising quantitative strategy worthy of research and tracking.
 
-[/trans]
 
 > Strategy Arguments
 

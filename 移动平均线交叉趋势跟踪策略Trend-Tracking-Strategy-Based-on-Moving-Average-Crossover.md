@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13e1811ad82bbdcccfe.png)
-[trans]
-## 概述
-
-该策略通过计算不同周期的EMA移动平均线,判断它们的交叉情况,结合RSI指标判断行情趋势,实现趋势跟踪交易。其核心思想是:当短期EMA线从下方上穿较长周期的EMA线时产生买入信号;当短期EMA从上方下穿较长周期EMA线时产生卖出信号,通过这样的EMA交叉形成的交易信号,跟踪市场趋势运行。
-
-## 策略原理
-
-该策略主要利用EMA的快慢特性,计算5条不同周期的EMA线,包括9日线、21日线、51日线、100日线和200日线。短周期EMA线能更快地响应价格变化,较长周期EMA线对噪声相对不敏感,能反映市场趋势。 当短周期EMA线从下方上穿较长周期EMA线时,表示价格开始上涨,属于买入信号;当短周期EMA从上方下穿较长周期EMA线时,表示价格开始下跌,属于卖出信号。因此,通过EMA线的交叉情况,可以判断行情的涨跌趋势。 
-
-此外,该策略还引入RSI指标辅助判断。只有当RSI大于65时,才会发出买入信号;只有当RSI小于40时,才会发出卖出信号。这可以过滤掉一些错误的信号,避免交易被巨大的价格震荡所误导。
-
-## 策略优势
-
-该策略最大的优势在于可以有效跟踪市场趋势。通过EMA的快慢特性设定多组EMA均线,判断它们的交叉情况,形成买入和卖出信号,可以捕捉中长线的行情走势。这种趋势跟踪策略胜率较高,适合长线持有。
-
-此外,该策略还引入RSI指标进行辅助判断,可以有效地过滤噪声,避免被短期市场波动所误导,从而提高信号的可靠性。RSI参数设置为14,可以捕捉较为明确的超买超卖情况。
-
-总的来说,该策略融合了移动平均线的趋势跟踪和RSI的超买超卖判断,既可以捕捉行情趋势,有可以有效滤除错误信号,是一种可靠性较高的趋势跟踪策略。
-
-## 策略风险
-
-该策略最大的风险在于会存在一定的滞后。EMA本身对价格变化有一定滞后性,特别是较长周期的EMA,这意味着买入和卖出信号的产生会有一定延迟。如遇到价格剧烈反转的情况,会产生较大的浮亏。
-
-此外,当市场处于盘整震荡时,EMA均线交叉信号会频繁出现,这时RSI参数设置为14可能会过滤掉过多信号,导致错过交易机会的情况。
-
-要降低这些风险,可以适当缩短较长EMA的周期参数,并适当放宽RSI的超买超卖阈值,使信号参数设置更加灵敏。当然也需要承担更高的误导风险。需要根据实际市场情况调整参数,寻找最佳平衡点。
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. EMA周期参数优化。可以测试更多种EMA周期参数的组合,寻找最佳参数对,使信号更加灵敏和可靠。
-
-2. RSI参数优化。可以适当扩大RSI超买超卖区区间,使信号触发更加频繁,或缩小区间来减少误导风险。
-
-3. 增加止损机制。可以设置移动止损或挂单止损来锁定利润,这可以有效抑制亏损风险。
-
-4. 结合其他指标。可以引入像KDJ、MACD等其他指标来使信号更加可靠,提高策略效果。
-
-5. 优化仓位管理。可以根据市场波动程度来动态调整仓位大小,在趋势更加明确时加大仓位。
-
-## 总结
-
-该策略通过计算多组EMA均线并判断其交叉情况,结合RSI指标进行辅助判断,实现了对市场趋势的有效捕捉和跟踪。它融合了趋势跟踪和超买超卖判断两大思路,可以捕捉中长线行情的同时有效过滤误导信号。通过参数优化和策略组合,可以形成一个稳定、高效的量化交易系统。它代表了移动平均线策略和指标融合策略的典型案例。
-
-||
 
 ## Overview  
 
@@ -103,7 +57,6 @@ This strategy can be optimized from the following aspects:
 
 This strategy calculates multiple groups of EMA lines to determine crossover situations combined with RSI indicator to effectively capture and track market trends. By integrating the ideas of trend tracking and overbought/oversold judgement, it can capture mid-long term trends with effective false signal filtering. After parameter optimization and strategy integration, it can form a steady and efficient quantitative trading system, representing a typical case of moving average strategies and indicator fusion strategies.
 
-[/trans]
 
 
 

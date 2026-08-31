@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1048ef43605ab822f4e.png)
-[trans]
-
-
-### 概述
-
-动量分析式Ichimoku云雾闪电交易策略是一种快节奏的交易方法,利用Ichimoku云指标的组成部分,但采用了适合5分钟时间范围的参数设置。该策略旨在从频繁且更为突出的小幅价格波动中获利。
-
-### 策略原理
-
-该策略使用转换线、基准线和云雾作为动量和趋势信号。具体来说:
-
-- **转换线**:代表过去9期间最高价和最低价的中点,用来判断动量。
-- **基准线**:反映过去26期间最高价和最低价的中点,表示更长期的价格运动趋势。  
-- **云雾**:预先绘制26期后的支撑和阻力水平,代表整体市场情绪。
-
-多头进场的条件是转换线上穿基准线,并且收盘价高于云雾的两条边。空头进场条件与此相反。
-
-多头出场的条件是转换线下穿基准线,或者价格跌破云雾。空头出场条件与此相反。
-
-### 策略优势分析
-
-该策略最大的优势在于,Ichimoku云指标提供了清晰直观的动量和趋势信号。结合严格的风险管理规则,可以快速止损,让利润继续运行,这是成功的闪电交易策略的基石。
-
-此外,通过积累大量小额盈利的交易,最终可以获得可观的总体收益。
-
-### 风险分析
-
-闪电交易策略,包括此策略,需要快速的决策,通常需要自动化交易系统,且更容易受到交易成本的影响。因此,此策略可能更适合有经验的交易者,或者那些能够密切监控和快速执行交易的人。
-
-此外,如果不能及时止损,小额损失也可能会积累成大额损失。
-
-### 优化方向
-
-该策略可以通过调整转换线和基准线的周期数进行优化,以适应不同的市场环境。例如,在波动性较大的市场中,可以缩短周期;而在趋势性较强的市场中,可以加长周期。
-
-此外,可以测试不同的参数组合,寻找最佳的参数设定。例如可以测试5分钟、15分钟、30分钟等不同的时间范围。
-
-最后,可以结合其他指标进行优化。例如可以结合momentum动量指标判断趋势强弱;也可以结合ATR指标设定策略止损范围。
-
-### 总结
-
-动量分析式Ichimoku云雾闪电交易策略利用Ichimoku云指标判断趋势和动量的变化,在小时和分钟级别捕捉价格的短期波动,具有交易频率高、单笔盈利较小的特点。该策略最大的优势在于Ichimoku云指标直观清晰,结合严格的止损原则,可以较为安全和稳定地获得收益。但作为一种闪电交易策略,也需要警惕积累小额损失导致的较大亏损风险,因此只适合经验丰富并能够密切监控市场的交易者。通过不断测试和优化参数设定,该策略可以获得更好的效果。
-
-|| 
 
 ### Overview
 
@@ -95,7 +51,6 @@ Finally, other indicators can also be incorporated for optimization. For example
 
 The Momentum Analysis Ichimoku Cloud Fog Lightning Trading Strategy utilizes the Ichimoku Cloud to determine changes in momentum and trends, capturing short-term fluctuations in prices on the hourly and minute levels. Characteristics include high trading frequency and smaller per trade profit targets. The biggest advantage of this strategy is the Ichimoku Cloud provides clear and intuitive signals, which when combined with strict stop loss principles, can achieve relatively safe and steady profits. But as a lightning trading strategy, also beware of the risk of accumulated small losses leading to larger drawdowns, therefore it is only suitable for experienced traders who can closely monitor the markets. Through continual testing and optimization of parameters, even better results can be achieved with this strategy.
 
-[/trans]
 
 > Strategy Arguments
 

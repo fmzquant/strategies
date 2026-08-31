@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b9c5af1a3a724570cc.png)
-[trans]
-## 概述
-
-马鲁博蜡烛线段均衡策略是一种基于日内时段的量化交易策略。该策略通过识别马鲁博蜡烛形态以及考察蜡烛线段的均衡情况,判断市场趋势和寻找交易机会。
-
-## 策略原理
-
-该策略的核心逻辑基于以下几个要点:
-
-1. 识别马鲁博白色多头和黑色空头蜡烛。马鲁博蜡烛是一种特殊的蜡烛线图模式,指开盘价与收盘价之间不存在影线的长体蜡烛,分为白色多头和黑色空头两种。
-
-2. 计算蜡烛实体的平均线段长度,并和当前蜡烛实体长度比较,判断线段是长还是短。
-
-3. 判断蜡烛线段是否平衡,即上影线和下影线长度大致相等。
-
-4. 在识别到马鲁博白色多头蜡烛时做多;识别到马鲁博黑色空头蜡烛时做空。
-
-5. 通过考察之前两根蜡烛的收盘情况判断趋势反转,作为平仓信号。
-
-该策略主要依靠马鲁博蜡烛本身提供的强势单边趋势信号以及线段均衡条件判断做多做空时机。当识别到马鲁博蜡烛时,表示市场存在强势单边趋势;而线段均衡情况也证实这种趋势的可靠性。在强势趋势反转时及时平仓以捕捉趋势获利。
-
-## 优势分析
-
-马鲁博蜡烛线段均衡策略具有以下几个优势:
-
-1. 识别高概率的强势趋势,马鲁博蜡烛本身就提供了极具爆发力的单边行情信号。
-
-2. 线段均衡有效过滤假突破,避免被套。当出现线段不均衡的时候,说明可能存在假突破的风险,这时会跳过交易信号。
-
-3. 采用之前两根蜡烛判断趋势反转,可以及时捕捉趋势获取更高收益。
-
-4. 策略简单清晰,容易理解和实现,适合初学者学习。
-
-5. 可在任何品种和任何时间段使用,适用性强。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 无法有效过滤震荡趋势,在震荡行情中可能出现较多的虚拟信号和套牢的风险。可以通过参数调节缩短持仓周期或者增大止损来缓解。
-
-2. 依赖参数设定,不同参数可能导致结果差异较大。可以通过回测优化参数。
-
-3. 无法判断次强势趋势,只依赖于极端的马鲁博蜡烛进行判断,会错过次强势机会。可以通过松弛线段均衡条件来改善。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化马鲁博蜡烛判定的线段比例阈值,调整识别灵敏度。
-
-2. 优化均衡阈值参数,识别更平衡或者更不平衡的均衡型态。
-
-3. 增加收盘价与移动平均线比较作为辅助判断指标。
-
-4. 增加成交量的突发性指标判断。
-
-5. 松弛线段均衡要求,识别更多次强势马鲁博蜡烛机会。
-
-## 总结
-
-马鲁博蜡烛线段均衡策略通过识别特定蜡烛模式并辅以均衡判断发掘高概率单边趋势机会。策略简单易懂,拥有较高的胜率,既适合新手学习,也适合高级交易员寻找潜在机会。通过一些参数和信号优化可以获得更好的效果,整体是一个非常实用的日间量化策略。
-
-||
 
 ## Overview
 
@@ -137,7 +73,6 @@ The strategy can be optimized in the following aspects:
 
 The Marubozu candle range balance strategy identifies high-probability one-sided trend opportunities by recognizing specific candle patterns coupled with balanced judgements. The strategy is simple and clear with high win rate. It is suitable for both beginners to learn and advanced traders to find potential opportunities. Further improvements can be made through signal and parameter optimizations. Overall it is a very practical intraday quantitative strategy.
 
-[/trans]
 
 
 

@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16aa979e4245648a699.png)
-[trans]
-
-## 概述
-
-这个策略基于史蒂夫·卡尼什(Steve Karnish)开发的CCT波动带震荡器(CCT Bollinger Band Oscillator)指标,通过识别价格突破均线并结合回撤机制来实现反转交易。
-
-## 策略原理
-
-该策略使用高价作为源数据,然后计算CCT波动带震荡器的值。震荡器的值在-200到200之间波动,0代表平均价格减去2倍标准差,100代表平均价格加上2倍标准差。当震荡器交叉或下穿其EMA均线时生成交易信号。具体来说,如果震荡器上穿其EMA均线,且两者之间间距大于设定的边际值,则做多;如果震荡器下穿其EMA均线,且两者之间间距小于负的设定边际值,则做空。仓位根据设定的百分比计算。此外,策略还使用回撤止损来止损,根据价格变化的百分比或跳动点数来trailing。
-
-## 优势分析
-
-- 使用了具有一定市场影响力的CCT波动带震荡器指标,可以减少假信号
-- 结合EMA均线和边际条件过滤信号,避免在震荡过程中产生过多无效交易
-- 使用回撤止损机制,可以在亏损过大时及时止损
-
-## 风险分析 
-
-- CCT震荡器本身会产生一定的滞后,从而错过价格反转的最佳时间点
-- 边际值设置过大和EMA周期设置过短都会增加交易频率和风险 
-- 回撤止损设置过于宽松会增加亏损风险
-
-风险控制方法:
-
-- 调整EMA均线周期,使用较长周期滤波
-- 适当调整边际值以平衡风险和收益
-- 降低仓位比例以控制单笔损失
-- 适当缩小回撤止损范围,加快止损速度
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 更换其他波动指标,如布林带指标、Keltner通道等,判断买卖点
-2. 增加其他过滤指标,如MACD、RSI等,确保交易信号的可靠性
-3. 使用机器学习算法自动优化参数,如EMA周期、边际值等
-4. 增加仓位管理机制,如固定比例仓位、马丁格尔等,控制交易风险
-5. 优化回撤止损机制,使用波动止损或ATR止损等方式
-
-## 总结
-
-本策略整体来说是一个基于CCT波动带指标判断价格反转的量化交易策略。它有一定的优势,但也存在改进的空间。通过参数优化、增加过滤指标、使用Feature工程、引入机器学习等方式,可以进一步增强该策略的稳定性和盈利能力。
-
-||
 
 ## Overview 
 
@@ -96,7 +52,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a quantitative trading strategy for identifying price reversals using the CCT Bollinger Band indicator. It has certain advantages but also room for improvement. By optimizing parameters, adding filters, using Feature engineering, introducing machine learning, etc, the stability and profitability of this strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

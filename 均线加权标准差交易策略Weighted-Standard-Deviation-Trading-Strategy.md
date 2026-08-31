@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5d12a6715b43b18723.png)
-[trans]
-
-## 概述
-
-本策略运用加权标准差指标,结合移动平均线,实现对加密货币的趋势交易。策略根据一定周期内的收盘价及成交量,计算出价格的加权标准差通道。当价格突破通道上下轨时,做多做空。同时,设置止损止盈条件,降低单笔损失。
-
-## 策略原理
-
-代码中定义了两个自定义函数,分别从时间序列和数组计算加权标准差。主要步骤是:
-
-1. 根据收盘价和成交量,计算加权平均价
-2. 计算每根K线与平均价的误差的平方
-3. 按照样本量及权重调整后的平均值,计算方差
-4. 开方得到标准差
-
-这样,我们便得到了一个中心在加权平均价,上下距离为一个标准差的通道。当价格从下方突破该通道底部时,做多;当从上方突破通道顶部时,做空。
-
-## 优势分析
-
-这套策略最大的优势在于,融合了移动平均线和波动率分析。移动平均线判断市场趋势方向,标准差界定合理区间,二者相互验证,可靠性较高。另外,成交量权重可过滤假突破,实际突破概率更大。
-
-该策略还设置了止损止盈点,有利于把握趋势,而避免反转造成 Loss 过大。这是许多新手无法掌握的要点。
-
-## 风险分析
-
-主要风险在于,市场可能出现剧烈波动。这时标准差通道也会大幅波动,不利于判断。此外,如果选择周期过短,容易被噪音干扰,出错率较大。
-
-对策是,可适当调整周期参数,平滑曲线。也可以考虑结合其他指标,如 RSI 等,增加突破的确认效果。
-
-## 优化方向  
-
-1. 优化周期参数。可以测试 5 分钟、15 分钟、30 分钟等不同周期,寻找最佳组合
-2. 优化止损止盈比例。测试不同的止损止盈点,取得最优回报率
-3. 增加过滤条件。比如结合成交量,避免虚假突破带来 Loss
-4. 增加蜡烛指标。如通过收盘价位置、影线长度等确认K线实体,减少错误率
-
-## 总结
-
-本策略成功利用加权标准差指标,辅以移动平均线判断方向,实现对加密货币的趋势跟踪。同时,合理的止损止盈设置有助于把握市场节奏,避免过度反转带来损失。通过参数调整与多指标验证,可进一步优化,并形成可靠的量化交易策略。
-
-||
 
 
 ## Overview
@@ -91,7 +50,6 @@ The remedy is to smooth the parameters and period settings appropriately. Consid
 
 This strategy successfully employs the weighted standard deviation indicator together with MA to track cryptocurrency trends. Reasonable stop loss/take profit setups also help trade market rhythm and avoid excessive reversal losses. Further optimizations via parameter tuning and multi-indicator confirmation can improve reliability for a solid algo trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略是一个适用于日内交易的基于超级趋势指标的短线策略。用户可以定义日内交易时段,策略只在该时段内运行。策略通过双倍数量反向开仓来实现信号反转。当日内交易时段结束且持仓未平仓时,强制平仓。
-
-### 策略原理
-
-1. 计算超级趋势指标。根据用户定义的乘数和ATR周期计算出超级趋势线。
-
-2. 绘制超级趋势线。绘制超级趋势线作为支撑线和阻力线。
-
-3. 判定长短条件。收盘价高于超级趋势线为做多条件,收盘价低于超级趋势线为做空条件。 
-
-4. 交易时段判定。根据用户定义的日内交易时段,判断当前价格条是否在交易时段内。
-
-5. 发出交易信号。只有在交易时段内且满足做多做空条件时,发出相应的买入卖出信号。
-
-6. 反向开仓。当超级趋势指标方向转变时,使用双倍数量反向开仓。
-
-7. 平仓离场。当超级趋势信号不变且交易时段结束时,强制平仓。
-
-### 优势分析
-
-1. 使用超级趋势指标识别趋势,可减少假信号。
-
-2. 结合超级趋势指标和收盘价进行交易,避免被腰斩。 
-
-3. 反向开仓及时止损,可减少亏损。
-
-4. 日内时段交易,可避免隔夜风险。
-
-5. 强制平仓机制,可避免忘记平仓的风险。
-
-### 风险分析
-
-1. 超级趋势指标参数设定不当可能导致策略效果不佳。
-
-2. 反向开仓会增加交易频率和交易费用。
-
-3. 日内时段结束时强制平仓可能会造成损失。
-
-- 风险1可通过参数优化找到最佳参数组合。
-
-- 风险2可以设置止损来控制亏损。
-
-- 风险3可以设置止损或使用趋势过滤来避免强平亏损。
-
-### 优化方向 
-
-1. 尝试不同的趋势指标,如MA,KDJ等。
-
-2. 增加止损逻辑。
-
-3. 增加趋势过滤,避免强平亏损。 
-
-4. 优化乘数和ATR周期参数。
-
-5. 测试不同的交易品种。
-
-### 总结
-
-该策略整合超级趋势指标和日内交易时段管理,旨在捕捉短线趋势突破。反向开仓和强制平仓机制可有效控制风险。后续可通过参数优化、止损以及趋势过滤进一步改进策略效果。
-
-||
 
 
 ### Overview
@@ -140,7 +75,6 @@ The strategy reverses the position using double quantity when the signal changes
 
 This strategy combines Supertrend and intraday session management to capitalize on short-term trend breaks. Position reversal and forced exit effectively controls risk. Further improvements can be made through parameter optimization, stop loss and trend filtering.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,49 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略的核心思路是使RSI指标的平滑周期变得动态,根据价格和动量之间的相关性自动调整,从而改善RSI指标的实用性。
-
-## 策略原理
-
-该策略首先计算价格的动量,然后计算价格和动量之间的相关性系数。相关性系数接近1时,表示价格和动量高度正相关;相关性系数接近-1时,表示价格和动量高度负相关。
-
-根据价格和动量的相关性,可以调整RSI指标的平滑周期长度。当相关性较高时,使用较短的RSI周期;当相关性较低时,使用较长的RSI周期。
-
-具体来说,本策略将RSI周期长度设置为一个范围,默认是20-50。在计算价格和动量的相关系数后,通过线性映射的方法,将相关系数映射到20-50这个范围,作为RSI的最终平滑周期长度。
-
-这样可以根据市场情况,自动调整RSI指标的参数,当价格变化和动量变化强烈相关时,使用更短期的RSI,使其更灵敏;当相关性不强时,使用更长期的RSI,以减少噪音对信号的影响。
-
-## 优势分析
-
-- 动态调整参数,适应市场变化
-- 避免使用固定周期指标的局限性
-- 平滑周期自动优化,无需人工选择最佳参数
-- 可配置RSI周期的范围,适用于不同品种
-
-## 风险分析
-
-- 相关性计算本身引入了滞后,可能错过价格转折点
-- 仅关注价格和动量的相关性过于单一,忽略其他因素
-- 默认的RSI周期范围可能不适合所有品种,需要优化
-- 可考虑结合其他因素如波动率等来调整RSI周期
-
-## 优化方向
-
-- 尝试不同的Related性计算方法,降低滞后
-- 考虑引入更多因素来决定RSI周期,不要仅仅依赖相关性
-- 对不同品种进行回测,找到最佳的默认RSI周期范围
-- 可以设置相关性因子权重,而不是完全依赖线性映射
-- 添加过滤条件,避免在特定市场环境下使用不合适的RSI周期
-
-## 总结
-
-该策略通过动态调整RSI平滑周期的思路值得学习,但具体实现还有很大改进空间。关键是要找到影响RSI参数选择的决定性因素,并将其转化为可量化的指标。同时,不要完全依赖模型,还需要根据经验和回测对参数范围进行优化。整体来说,这是一个非常创新的思路,在继续优化和改进后具有实际运用的潜力。
-
-||
 
 
 ## Overview
@@ -94,7 +51,6 @@ This allows the RSI parameters to be automatically adjusted based on market cond
 
 The idea of dynamically adjusting RSI smoothing period is worth learning from, but the specific implementation has much room for improvement. The key is to identify the decisive factors affecting RSI parameter selection, and convert them into quantifiable indicators. Also, don't purely rely on the model, empirical optimization of parameter ranges is needed. Overall this is a very innovative idea, with practical potential after further optimizations and improvements.
 
-[/trans]
 
 > Strategy Arguments
 

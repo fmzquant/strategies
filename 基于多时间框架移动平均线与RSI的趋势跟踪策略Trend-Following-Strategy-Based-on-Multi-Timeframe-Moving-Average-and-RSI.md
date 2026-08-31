@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9d3934477094d8b73c.png)
-[trans]
-
-### 概述
-
-本策略基于多时间框架移动平均线以识别趋势方向,并结合相对强度指数(RSI)来判断超买超卖情况,从而产生交易信号。当长线、中线、短线的快慢均线都处于同一方向时,认为趋势形成,此时再通过RSI判断是否超买超卖,并产生交易信号。此外,策略还采用追踪止损来控制风险。
-
-### 策略原理
-
-基本原理是通过快慢均线的黄金交叉和死亡交叉来判断趋势,当快线上穿慢线时为黄金交叉,表示牛市来临;当快线下穿慢线时为死亡交叉,表示熊市来临。本策略在不同的时间框架上使用该基本原理,判断长、中、短三个周期是否同向,如果都是多头市场或者空头市场就产生交易信号。此外,RSI指标判断是否处于超买或超卖状态,避免在市场转折点错过止损。追踪止损设置一定的后移点数,让盈利可以扩大,同时可以抵御部分回调,控制风险。
-
-### 优势分析
-
-1. 使用多时间框架判断趋势,可以有效过滤短期市场噪音,识别中长线趋势。
-
-2. RSI指标结合判断超买超卖情况,避免在市场转折点后继续坚持原有方向,错过止损。
-
-3. 追踪止损同时考虑扩大盈利和控制风险,收益风险比高。
-
-### 风险分析
-
-1. 多时间框架判断可能存在时间滞后,导致入场较晚,可能错过行情初期阶段。
-
-2. RSI指标仅判断超买超卖情况,如果行情出现断头反弹,无法很好判断市场转折点。
-
-3. 追踪止损后移点数设置不当,可能出现过于激进或过于保守,需要调整参数。
-
-### 优化方向
-
-1. 可以考虑结合更多指标判断市场转折点,如布林带、KDJ等,使交易信号更加精确。
-
-2. 可以设置动态追踪止损,根据市场波动性和风险偏好来调整后移点数。
-
-3. 可以在更短周期时间框架中引入类似策略判断资金进出,优化资金使用效率。
-
-
-### 总结
-
-本策略总体而言优势大于劣势,对中长线趋势判断准确,收益风险比高,值得实盘验证与优化调整。作为一种趋势跟踪策略,它可以在震荡行情中识别主要趋势方向,高效跟踪中长线趋势。通过参数调整和指标优化,可以进一步提升策略的稳定性和获利能力。
-
-||
 
 ### Overview
 
@@ -88,7 +48,6 @@ The basic logic is to judge the trend through golden cross and death cross of fa
 
 In general, this strategy has more pros than cons. It accurately determines medium-long term trends and delivers high return/risk payoff. As a trend following system, it can identify the major trend direction amid consolidations. Further improvements on parameters and indicators can enhance its stability and profitability.  
 
-[/trans]
 
 > Strategy Arguments
 

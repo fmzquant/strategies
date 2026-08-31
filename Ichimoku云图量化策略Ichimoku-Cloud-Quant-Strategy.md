@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/801ec15c9d0ca8263a.png)
-[trans]
-### 概述
-
-这是一个仅做多的Ichimoku云图量化策略。策略通过Ichimoku指标判断趋势方向,配合K线形态、移动平均线和 Stochastic RSI 指标过滤信号,在趋势向上时选择较好的入场点做多。
-
-### 策略原理
-
-该策略主要判断标准如下:
-
-1. Ichimoku先导线1上穿先导线2,表示趋势转多
-2. K线收盘价上穿先导线1,符合追踪趋势的条件
-3. K线为阳线,趋势向上
-4. 启用移动平均线时,要求快线上穿慢线
-5. 启用Stochastic RSI时,要求K线上穿D线
-
-当以上条件同时满足时,策略会开仓做多;当价格跌破先导线1时,策略会平仓离场。
-
-该策略主要利用Ichimoku云图判断主趋势方向,再结合辅助指标过滤信号,在趋势向上时选择较好点位入场。
-
-### 策略优势
-
-1. 利用Ichimoku云图判断主趋势,回测表明其判断准确率很高
-2. 结合多种辅助指标过滤入场点位,可显著提高获利率
-3. 仅做多策略,适用于判断为多头行情的币种
-4. 参数优化空间大,可调整指标参数进一步优化
-
-### 策略风险
-
-1. Ichimoku云图判断失败的概率存在,可能误判趋势方向
-2. 行情突变时止损点可能被突破,导致亏损扩大
-3. 针对多头行情设计,不适合行情暗藏转势迹象的币种
-4. 参数设置不当可能导致过于激进入场或过于保守
-
-对策:
-
-1. 结合更多指标判断趋势,提高判断准确率
-2. 设置合理止损点,严格控制单笔亏损
-3. 根据不同币种行情选择适用策略
-4. 仔细测试与优化参数,使策略更稳定
-
-### 策略优化方向 
-
-1. 优化辅助指标参数设置,进一步提高策略稳定性
-2. 增加止损机制,例如追踪止损、指数移动平均线止损等
-3. 增加仓位管理,例如固定仓位、仓位平均等
-4. 针对具体币种进行参数调整优化
-
-### 总结
-
-该Ichimoku云图量化策略通过判断趋势方向,实现高胜率且风险可控的仅多头做单策略。策略优势明显,在多头行情中效果突出。下一步可从指标优化、止损机制、仓位管理等方面进行改进,使策略更加完善稳定。
-||
 
 ### Overview
 
@@ -112,7 +61,6 @@ Countermeasures:
 
 This Ichimoku cloud quant strategy achieves a high win rate yet risk-controllable only-long strategy by judging trend directions. The advantages of the strategy are obvious and it shows outstanding performance in bull markets. The next step is to improve aspects like indicator optimization, stop loss mechanism, position management to make the strategy more comprehensive and stable.
 
-[/trans]
 
 > Strategy Arguments
 

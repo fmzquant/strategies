@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1392a708bd02ecb62e7.png)
 
-[trans]
-
-## 概述
-
-双均线反转与ATR trailing stop组合策略是一个非常实用的量化交易策略。该策略首先利用双均线形成的死叉和Golden交叉来判断市场趋势和反转点。同时,策略还会结合平均真实波幅来设置trail stop,在保证获利的同时控制风险。
-
-## 策略原理
-
-### 双均线反转策略
-
-双均线反转策略利用快线和慢线的交叉来判断市场趋势。当快线从上向下穿过慢线时,形成死叉,表示市场由涨转为跌;当快线从下向上穿过慢线时,形成Golden交叉,表示市场由跌转为涨。策略在死叉时做空,在Golden交叉时做多。
-
-具体来说,策略选用9日STOCH指标的快线作为快线,3日EMA作为慢线。当close低于前一日close,且快线高于50而上穿慢线时清仓做空;当close高于前一日close,且快线低于50而下穿慢线时清仓做多。
-
-### ATR Trailing Stop策略
-
-ATR Trailing Stop策略利用平均真实波幅来设置止损点。ATR指标可以有效反映市场的短期波动性。策略根据ATR的值来设置trail stop,当价格走势反转时止损退出。
-
-具体来说,策略选用5日ATR,止损点设为close减去ATR的3.5倍。当价格达到该止损点时平仓止损。
-
-## 优势分析
-
-双均线反转与ATR trailing stop组合策略结合了均线策略判断趋势和反转的优势,以及ATR trail stop策略控制风险的优势,使其成为一个非常实用的策略。
-
-具体来说,该策略有以下优势:
-
-1. 利用双均线形成的死叉和Golden交叉来判断市场趋势转折点,精准判断反转信号。
-
-2. 结合STOCH指标来确认反转信号,避免错误信号。
-
-3. ATR trailing stop根据市场波动灵活设置止损点,最大程度锁定利润。
-
-4. 该策略融合了多种指标和技术分析方法,进行组合使用,使策略更加稳健。
-
-5. 策略思路清晰易理解,参数调整灵活,容易实盘操作。
-
-## 风险分析
-
-虽然该策略有许多优势,但也存在一定的风险需要注意:
-
-1. 双均线生成的信号可能存在滞后,无法在反转点前后准确买入和卖出。可以适当缩短均线周期或结合其他指标进行优化。
-
-2. ATR指标对市场大幅波动不敏感,无法及时更新止损点。可以考虑结合动量指标或波动率指标进行调整。
-
-3. 多种参数和条件的组合使用增加了策略复杂度。参数不当可能造成过于激进的交易而增加风险。需谨慎评估并逐步调整参数。
-
-## 优化方向  
-
-根据上述风险分析,该策略可以从以下几个方面进行优化:
-
-1. 调整均线周期参数,缩短周期以提前捕捉反转机会。
-
-2. 添加其他指标判断反转信号,如MACD,KD等,形成多重确认。 
-
-3. 动态调整ATR周期或引入市场波动率,实时更新止损点。
-
-4. 评估股票和期货市场的差异,分别调整参数,使之更符合两种市场的特点。
-
-5. 在回测时加入交易成本和滑点的考量,使策略更加接近实盘交易环境。
-
-6. 可以考虑加入机器学习模型来动态优化多个参数。
-
-## 总结  
-
-双均线反转与ATR trailing stop组合策略是一个高效实用的量化策略。它融合了均线判断市场反转和ATR setting trail stop控制风险的双重优势。在确保获利的同时可以减少不必要的损失。该策略参数调整灵活,易于实盘操作。同时也可以从多个角度进行扩展与优化,使其适用于更广泛的市场环境。总体来说,该策略为量化交易提供了一个非常出色的策略框架。
-
-||
 
 ## Overview  
 
@@ -142,7 +75,6 @@ According to the above risk analysis, the strategy can be optimized in the follo
 ## Summary   
 
 The combination strategy of dual moving average reversal and ATR trailing stop is an efficient and practical quantitative strategy. It combines the dual advantages of determining market reversal with moving averages and controlling risks by setting ATR trail stops. It ensures profit while reducing unnecessary losses. The strategy has flexible parameter adjustment and is easy to operate in live trading. At the same time, it can also be extended and optimized in multiple aspects to adapt to more extensive market environments. Overall, the strategy provides an excellent strategic framework for quantitative trading.  
-[/trans]
 
 > Strategy Arguments
 

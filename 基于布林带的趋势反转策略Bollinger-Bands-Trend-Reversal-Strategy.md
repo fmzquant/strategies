@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/179b736ae9513263b9a.png)
 
-[trans]
-
-
-## 概述
-
-该策略基于布林带指标和移动平均线,判断价格是否接近布林带上下轨时进行LONG或SHORT平仓,从而获利。当价格突破布林带上轨时看空;当价格跌破布林带下轨时看多。它结合了趋势反转和突破两种交易策略的优点,可以在趋势震荡时获得较好收益。
-
-## 原理
-
-该策略主要判断以下两个入场信号:
-
-1. 多头信号:当收盘价触及下轨,且收盘价高于EMA均线,前K线实体为阴线,当前K线实体为阳线时做多。
-
-2. 空头信号:当收盘价触及上轨,且收盘价低于EMA均线,前K线实体为阳线,当前K线实体为阴线时做空。 
-
-止损方式:固定止损。止损点为入场价格到对手方轨距的风险回报系数倍。
-
-止盈方式:目标盈利为对手方轨。也就是做多止盈为下轨,做空止盈为上轨。
-
-## 优势
-
-1. 结合趋势和反转策略的优点,在趋势震荡行情中表现较好。
-
-2. 利用布林带指标判断超买超卖区域,精确判断反转机会。
-
-3. 固定止损点设定合理,有助于风险控制。
-
-4. 移动止盈方式让利润能最大化。
-
-## 风险
-
-1. 突破型策略容易被套利,需警惕假突破。
-
-2. 行情过于震荡时,止损可能会频繁被触发。
-
-3. 固定止损无法根据市场波动调整,可能过于宽松或过于激进。
-
-4. 布林带参数设置不当时,效果可能会差强人意。
-
-## 优化思路
-
-1. 可以考虑結合RSI指标過濾入場信號,例如RSI高於50再做多,RSI低於50再做空,可避免錯誤訊號。
-
-2. 增加自动调整固定止损距离的功能,使止损更具弹性。例如根据ATR指标动态设置止损距离。
-
-3. 优化布林带参数,寻找最佳参数组合。
-
-4. 可以测试不同EMA均线参数,优化均线的护城河效应。
-
-## 总结
-
-该策略综合考虑趋势和反转,利用布林带判定超买超卖点位入场,通过移动止盈让利润最大化。在趋势震荡行情中表现较好。但需要注意防范被套现象,同时要调整参数优化策略效果。整体来说是一个比较实用的高效策略。
-
-||
 
 
 ## Overview
@@ -117,7 +63,6 @@ The take profit uses dynamic take profit. Long take profit is set at the lower b
 
 The strategy combines trend and reversal, entering overbought/oversold levels identified by Bollinger Bands. It maximizes profits through dynamic take profit. Performs well during range-bound markets. Be wary of stop runs. Fine tune parameters to optimize performance. Overall a practical and effective strategy.
 
-[/trans]
 
 > Strategy Arguments
 

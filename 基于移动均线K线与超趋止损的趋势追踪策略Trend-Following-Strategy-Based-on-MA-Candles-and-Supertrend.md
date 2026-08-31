@@ -11,28 +11,6 @@ ChaoZhang
 
 
 
-[trans]  
-本策略名称为“基于移动均线K线与超趋止损的趋势追踪策略”。该策略运用移动均线绘制趋势K线,并结合超趋止损机制产生交易信号,实现对趋势的追踪。
-
-具体来说,策略的交易逻辑如下:
-
-1. 用移动均线计算出开高低收价格,绘制出趋势K线。
-
-2. 在趋势K线上应用超趋止损技术,得到做多和做空的止损位。
-
-3. 当价格突破做多止损位时,产生买入信号;当价格跌破做空止损位时,产生卖出信号。
-
-4. 结合更高时间周期的年内最高价和最低价判断,避免在震荡市场中产生过多无效信号。 
-
-5. 当超趋止损反转时,平仓止损。
-
-该策略的优点是同时融合多种技术指标,提高了判断准确性。但移动均线和超趋止损的参数都需要优化。止损策略也是必不可少的。
-
-总体来说,指标和模型的集成应用在一定程度上弥补了单一指标的不足,但任何策略都不可能完美。交易者仍需保持足够的灵活性应对市场变化。
-
-
-
-||
 
 
 
@@ -54,7 +32,6 @@ The advantage of this strategy is integrating multiple technical indicators impr
 
 In general, integrating indicators and models partially compensates for limitations of individual ones. But no strategy can be perfect. Traders still need enough flexibility to adapt to market changes.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略根据K线的连续上涨或下跌突破进行交易。该策略判断近期K线走势是否呈现持续上涨或下跌态势,以捕捉短期趋势机会。
-
-策略原理:
-
-1. 判断当前K线与固定周期前的K线比较,如5周期前。
-
-2. 当连续多个K线收盘价较开盘价上涨时,进行做多入场。
-
-3. 当连续多个K线收盘价较开盘价下跌时,进行做空入场。 
-
-4. 设置止损线,避免亏损扩大。
-
-5. 可自定义历史回测周期,优化参数。
-
-该策略的优势:
-
-1. 连续上涨下跌可判断短期趋势。
-
-2. 实盘时可加入消息提醒,便于监控。
-
-3. 回测参数优化简单,易于实盘。
-
-该策略的风险:
-
-1. 无法判断中长线整体走势,存在被套风险。
-
-2. 止损点靠近,可能导致过频繁止损。
-
-3. 需警惕反转风险,适时主动止损。
-
-总之,该策略通过判断K线趋势性突破进行短线操盘,可在参数优化后获得良好回测效果,但实盘时仍需警惕反转风险,适时止损。
-
-||
 
 This strategy trades consecutive upside or downside bar breakouts, judging if recent price action exhibits persistence in one direction. It aims to capture short-term trend opportunities.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this short-term tactical strategy has potential based on backtests, but requires caution on reversals and disciplined loss cutting when live trading.
 
-[/trans]
 
 > Strategy Arguments
 

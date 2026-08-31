@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ed69e5bc5a4a48830.png)
-[trans]
-
-### 概述
-
-本策略结合了双波带指标和强势指数指标,实现了突破交易模式。当快速EMA突破波带通道时,结合AO指标的多空方向信号,产生买入和卖出信号。
-
-### 策略原理
-
-1. 使用布林带的中轨、上轨和下轨判断价格通道。
-2. 快速EMA跨越中轨时,判断为通道突破。
-3. 强势指数AO指标判断多头和空头的方向。
-4. 当快速EMA向上突破中轨,且AO为正时,产生买入信号。
-5. 当快速EMA向下突破中轨,且AO为负时,产生卖出信号。
-
-### 优势分析
-
-1. 双波带指标判断价格通道,避免错误信号。
-2. AO指标判断趋势方向,使交易信号更加准确。
-3. 结合通道突破的模式交易,可以在趋势开始阶段捕获更大利润。
-
-### 风险分析
-
-1. 布林带参数不当可能导致通道太宽或太窄。
-2. AO指标参数设置会影响判断的准确性。
-3. 突破信号可能是假突破,需要确保有足够的突破力度。
-
-#### 解决方法
-
-1. 优化布林带和AO指标的参数,找到最佳组合。
-2. 增加突破的力度条件,避免假突破。
-3. 与其他指标组合使用,确保交易信号的可靠性。
-
-### 优化方向  
-
-1. 优化布林带的参数,找到最适合的通道范围。
-2. 优化AO指标的长短期均线参数,提高判断准确率。  
-3. 增加volume或其他指标过滤,确保突破的可靠性。
-4. 优化突破力度参数,降低假突破率。
-
-### 总结
-
-本策略综合考虑了价格通道、趋势方向和突破模式,是一种较为稳定和高效的交易策略。通过参数优化和组合指标过滤,可以进一步增强策略的稳健性和收益率。其突破交易模式可以捕获趋势的早期机会,具有很大的实用价值。
-
-||
 
 ### Overview
 
@@ -96,7 +52,6 @@ This strategy combines the Bollinger Bands indicator and the Awesome Oscillator 
 
 This strategy comprehensively considers the price channel, trend direction and breakout model. It can be more robust and profitable through parameter optimization and indicator combinations. Its breakout model captures early trend opportunities and is very practical.
 
-[/trans]
 
 > Strategy Arguments
 

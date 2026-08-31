@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/821fe8a182c21e8c3b.png)
-[trans]
-
-### 概述
-
-超级Z量化趋势策略是一种基于量化指标的趋势跟踪策略。该策略使用自定义指标结合超级趋势指标,实现对趋势的判断和跟踪。
-
-### 策略原理
-
-该策略的核心指标是自定义的量化指标VHMA。VHMA指标基于Hull移动平均线进行计算,通过平方根函数对Hull MA进行再平滑处理,形成具有良好平滑性的曲线。VHMA曲线可以判断价格趋势方向,当VHMA上涨时代表价格处于上升趋势,下跌时代表价格下降趋势。
-
-策略还结合了超级趋势指标,超级趋势指标可以发现更长周期的价格趋势,辅助VHMA指标判断趋势方向。当价格突破超级趋势线时,代表趋势发生反转。
-
-因此,该策略通过VHMA指标判断短期趋势方向,辅以超级趋势指标判断长期趋势转折点,实现对整体趋势的跟踪。具体交易逻辑是在突破超级趋势线时发出交易信号。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. VHMA指标平滑性强,可以减少假信号,判断趋势方向准确可靠;
-
-2. 结合超级趋势指标,可以及时发现长期趋势反转,把握买入卖出的时机;  
-
-3. 使用不同颜色实体K线和空心K线描绘收盘价和开盘价的大小关系,形成视觉指标,辅助判断趋势;
-
-4. 采用多时间框架设计,可以在高级时间框架判断趋势方向,在低级时间框架发出交易信号,实现高效过滤;
-
-5. 策略参数经过优化设计,稳定性好,适用于多种市场环境。
-
-### 风险分析
-
-该策略也存在以下风险:  
-
-1. 量化指标存在回测效应,实盘效果可能弱于回测;  
-
-2. 超级趋势指标参数设置不当可能导致错失交易机会或增加无谓交易;
-
-3. 多时间框架设计在实盘条件下也可能出现失效情况。
-
-对策:
-
-1. 增加滑点设置,优化参数减少回测效应;
-
-2. 调整超级趋势指标参数,优化参数设置;  
-
-3. 测试多种时间框架匹配方式,确保多时间框架稳定性。
-
-### 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 测试不同平滑移动平均指标代替VHMA指标;
-
-2. 尝试不同型趋势指标代替超级趋势指标;  
-
-3. 增加机器学习模型训练指标参数。
-
-这些优化措施可以提高策略对复杂行情的适应性。
-
-### 总结
-
-超级Z量化趋势策略通过自定义趋势指标VHMA结合超级趋势指标,实现了对价格趋势的判断与跟踪。策略稳定性好,实盘效果优异。通过不断测试与优化,该策略有望成为高效稳定的量化趋势跟踪策略。
-
-|| 
 
 ### Overview  
 
@@ -135,7 +72,6 @@ These optimization measures can improve the adaptability of strategies to comple
 
 The Super Z quantitative trend strategy realizes the judgment and tracking of price trends through the custom trend indicator VHMA combined with the Super Trend indicator. The strategy has good stability and excellent actual effects. Through continuous testing and optimization, this strategy has the potential to become an efficient and stable quantitative trend tracking strategy.
 
-[/trans]
 
 > Strategy Arguments
 

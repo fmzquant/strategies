@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14bc1166cf899fd1d62.png)
-[trans]
-
-## 概述
-
-该策略的核心思想是根据唐奇安通道的价格突破情况来进行买卖操作,属于趋势跟踪类型的量化策略。它可以自动识别价格通道,当价格突破通道上沿时开仓做多,当价格回落至通道下沿附近或止损点时平仓。该策略旨在捕捉中长线的价格趋势,适用于股指期货等金融衍生品的算法交易。
-
-## 原理
-
-该策略基于唐奇安通道指标,唐奇安通道是通过一个给定周期内的最高价和最低价画出的通道区域。其计算方法是:
-
-上轨 = 近n周期内的最高价 
-下轨 = 近n周期内的最低价
-
-当价格突破上轨时认为进入多头趋势,当价格跌破下轨时认为进入空头趋势。该策略仅考虑突破上轨的情况。
-
-具体交易逻辑是:
-
-1. 使用n周期最高价画出唐奇安通道上轨
-2. 当收盘价突破上轨时,做多入场
-3. 止盈方式为收盘价回落至通道下轨附近或设定的止损点
-
-## 优势
-
-该策略具有以下优势:
-
-1. 策略思路清晰,易于理解和实现
-2. 唐奇安通道指标成熟可靠,容易判断趋势方向
-3. 自动识别通道,无需人工判断走势
-4. 可配置参数,适应性强
-5. 含有止损机制,可以限制 losses
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 唐奇安通道可能出现平假破,导致不必要的亏损
-2. 止损位置设置不当可能扩大 losses
-3. 临近通道时需要注意反转风险
-4. 参数设置(周期长度等)不当会影响策略效果
-
-对应解决方法:
-
-1. 结合其他指标过滤平假破
-2. 优化止损位置,平滑退出
-3. 考虑通道附近加大交易量或扩大止盈范围
-4. 测试不同参数,找到最优参数
-
-## 优化方向 
-
-该策略还可从以下方面进行优化:
-
-1. 增加其他指标判断,避免平假破,例如MACD、KD等
-2. 优化止损机制,例如随价格波动的移动止损
-3. 优化参与度控制,例如只在波动加大时交易
-4. 参数优化,寻找最优参数组合
-
-## 总结
-
-该策略整体思路清晰,易于理解和实现,利用成熟的唐奇安通道指标自动识别趋势方向。同时配置较为灵活,可根据实际需要调整。通过止损和参数优化,可以取得较好的效果。总体来说,该策略既易于上手,又具备一定的效率,适合作为量化交易的入门策略之一。
-
-||
 
 ## Overview
 
@@ -130,7 +69,6 @@ This strategy can be further optimized in the following areas:
 
 The overall idea of this strategy is clear and easy to understand and implement. It utilizes mature Donchian Channels to automatically identify trend direction. The configuration is also highly flexible to cater for different needs. With proper stop loss and parameter optimization, good results can be achieved. In conclusion, this strategy has a low learning curve yet reasonable efficiency. It is suitable as a starter quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

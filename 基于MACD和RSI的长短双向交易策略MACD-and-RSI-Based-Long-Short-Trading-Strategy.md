@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略结合MACD和RSI两个指标,实现在趋势方向不明确的情况下,同时进行做多做空交易,以获取超额收益。
-
-## 策略原理
-
-1. 计算快速EMA(12日线)和慢速EMA(26日线)
-2. 计算MACD收敛离差(快速EMA减去慢速EMA)
-3. 计算MACD的9日移动平均作为信号线signal
-4. 计算14日RSI
-5. 当MACD<-0.1,RSI<27且快速EMA低于慢速EMA时,做多
-6. 当MACD>0.125,RSI>81且快速EMA高于慢速EMA时,做空
-7. 设置止盈、止损、移动止损来管理仓位
-
-## 优势分析
-
-1. 同时进行多空交易,可以在非趋势行情中获取超额收益
-2. 结合趋势方向指标EMA和反转指标RSI,可以提高信号质量
-3. 采用移动止损来锁定盈利,可以有效控制亏损风险
-
-## 风险分析
-
-1. 双向交易需要更多资金来支撑保证金要求
-2. 行情剧烈反转时,可能同时止损多空头寸
-3. 参数设置不当可能导致过于频繁交易
-
-风险解决方法:
-
-1. 充足的资金支持,控制仓位规模
-2. 合理设置止损距离,避免过密集止损
-3. 优化参数,降低交易频率
-
-## 优化方向 
-
-1. 可以考虑结合波动率指标,优化入场时机
-2. 可以测试不同参数组合,寻找最佳参数
-3. 可以根据市场条件优化止损策略,如尾随止损等
-4. 可以结合机器学习算法自动优化参数
-
-## 总结
-
-本策略通过MACD和RSI的组合,实现双向交易。使用移动止损来锁定盈利,可以在非趋势行情中获取超额收益。该策略可以进一步优化参数设置、止损策略等,以获得更稳定的超额收益。
-
-||
 
 
 ## Overview
@@ -100,7 +54,6 @@ Risk Solutions:
 
 This strategy implements dual-directional trading with MACD and RSI combination. Using trailing stop loss to lock in profits can generate excess returns in non-trending markets. The strategy can be further optimized on parameters, stop loss strategies etc. to obtain more consistent excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

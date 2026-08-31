@@ -9,87 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-这个策略的核心思想是利用“内含在周期之间”的K线形态来确定趋势方向,并以此作为入场信号。当出现一个包含前一个K线的内含在周期之间形态时,我们可以推断出当前是一个趋势转换的时点,这个时候我们可以选择在突破前高点时做多,或在突破前低点时做空,并设置好止损和止盈。
-
-### 策略原理
-
-1. 判断是否出现内含在周期之间的K线形态。具体判断逻辑是:当前K线的高点低于前一个K线的高点,并且当前K线的低点高于前一个K线的低点。
-
-2. 判断前一个K线的涨跌情况。如果收盘价高于开盘价,则为涨;如果收盘价低于开盘价,则为跌。
-
-3. 如果前一个K线为涨势,并且出现了内含在周期之间的形态,我们在前一个K线高点的10%范围内设置买入停止单。
-
-4. 如果前一个K线为跌势,并且出现了内含在周期之间的形态,我们在前一个K线低点的10%范围内设置卖出停止单。 
-
-5. 一旦停止单被触发形成仓位,我们会设置止损单和止盈单。具体的止损距离和止盈距离均为前一个K线振幅的一定比例。
-
-6. 如果再次出现内含在周期之间的形态,我们会优先平仓,然后重新设置新的挂单。
-
-### 策略优势分析
-
-这种策略的优势有:
-
-1. 运用了K线内在逻辑,入场时机把握准确。内含在周期之间形态往往意味着即将出现趋势反转或者加速,这为我们提供了一个较好的入场时机。
-
-2. 策略规则清晰易懂,容易实际操作。
-
-3. 利用前一个周期的高低点设定止损止盈位置,可以控制风险。
-
-4. 每次重新出现符合形态时,会重新设定新的挂单,可以追随新的趋势。
-
-### 策略风险分析
-
-这种策略也存在一些风险:
-
-1. 内含在周期之间形态不一定会导致趋势反转或者加速,存在一定的假信号风险。
-
-2. 止损距离可能设置过小,无法承受行情中较大的震荡。
-
-3. 止盈距离可能设置过大,无法及时获利。
-
-4. 该策略更依赖趋势行情,在盘整行情中获利空间有限。
-
-5. 交易次数可能过于频繁,交易成本较高。
-
-对策:
-
-1. 可以结合其它指标过滤内含在周期之间形态的确认信号,降低假信号率。
-
-2. 可以适当放宽止损距离,但不要超过前一个K线振幅的50%。
-
-3. 可以缩短止盈距离至前一个K线振幅的50%左右。
-
-4. 优化资金管理,降低单笔仓位,应对盘整行情。
-
-5. 适当放宽入场条件,减少交易次数。
-
-### 策略优化方向
-
-这种策略可以从以下几个方面进行优化:
-
-1. 结合趋势指标判断趋势方向,避免在盘整中频繁交易。例如加入MACD判断趋势,只有在MACD同向的时候才考虑入场。
-
-2. 优化止损止盈策略,采用移动止损或盈利保护止损等方式,让止损更有弹性。
-
-3. 测试不同的止损止盈比例设置,找到最优参数组合。
-
-4. 加入重新入场机制,在止损退出后再次捕捉趋势。
-
-5. 优化仓位管理,根据市场波动程度调整单笔仓位。
-
-6. 优化资金管理,例如固定资金利用率等。
-
-7. 测试该策略在不同品种和时间周期上的效果。
-
-### 总结
-
-综上所述,这是一个利用内含在周期之间形态判断趋势转折点,设置挂单捕捉反转趋势的策略。它具有入场时机清晰,策略规则简单,可控风险等优势,但也存在一定的假信号风险和优化空间。我们可以通过结合趋势指标、优化止损止盈、调整仓位等方式进一步提高策略的稳定性和盈利能力。这种策略更适合趋势性行情,在具体运用中还需要针对不同市场的特点进行优化测试,以发挥其最大效用。
-
-|| 
 
 ### Overview
 
@@ -169,7 +88,6 @@ Some ways to optimize the strategy:
 
 In summary, this is a strategy that uses the contained between cycles pattern to determine trend turning points and place pending orders to capture trend reversals. It has the advantages of clear entry signals, simple rules, and controllable risks, but also has some false signal risks and room for optimization. We can further improve its stability and profitability by combining trend filters, optimizing stops, adjusting position sizes etc. It is more suitable for trending markets, and needs to be optimized and tested for different market conditions before actual usage to maximize its effectiveness.
 
-[/trans]
 
 
 > Strategy Arguments

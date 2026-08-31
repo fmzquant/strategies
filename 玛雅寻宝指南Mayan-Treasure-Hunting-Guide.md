@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d71e9bf31fb7d3f991.png)
-[trans]
-## 概述
-
-玛雅寻宝指南是一个基于EMA指标的简单股票交易策略。该策略结合了EMA均线指标和价格高低点判断,设定买入和卖出条件,实现自动化交易。
-
-## 策略原理
-
-该策略的核心依据是EMA均线指标。EMA即指数移动平均线,是一种常用的趋势判断指标。EMA线能平滑价格波动,判断价格趋势方向。
-
-当股价上涨时会站上EMA线,这时视为买入信号。当股价下跌时会站在EMA线下方,这时作为卖出信号。本策略设置20日EMA线作为判断依据。
-
-此外,策略还结合价格当日最高价和最低价进行辅助判断。在EMA金叉时刻,如果收盘价低于当日最高价,则产生买入信号;如果收盘价高于当日最低价,则产生卖出信号。这可以过滤掉部分不稳定的交易信号。
-
-## 策略优势
-
-该策略优势主要体现在利用EMA指标判断主要买卖点上。EMA指标是一种常用且实用的技术指标,可以有效平滑价格波动,判断大致的股价走势。相比复杂指标,EMA简单且直观,容易实现自动化交易。
-
-此外,结合当日高低点进行辅助判断,可以进一步提高信号质量,过滤掉部分假信号。这种组合使用技术指标的思想值得推广应用。
-
-总体来说,该策略简单实用,容易理解和使用,非常适合量化交易的自动化实现。这是该策略的最大优势。
-
-## 策略风险 
-
-尽管该策略使用简单有效的EMA指标,但任何技术指标都可能出现失效情况。特别是在价格剧烈波动时,EMA线可能产生滞后,导致交易信号延迟,从而错过最佳买卖时机。这是该策略面临的主要风险。
-
-此外,辅助判断条件虽可过滤假信号,但也可能过滤掉部分真实信号,导致获得信号不足的情况。这同样会影响策略效果。
-
-最后,该策略仅基于技术指标设计交易规则,没有考虑基本面因素。如果公司基本面发生重大变化,行情可能出现技术指标无法预测的大幅波动。这时策略交易信号可能完全失效。
-
-## 策略优化
-
-该策略可从以下几个方面进行优化:
-
-1. 调整EMA参数,适应更多行情环境。可以设置自适应EMA长度,根据市场波动程度动态调整。
-
-2. 增加其他技术指标进行组合。比如加入 MACD 指标判断买卖点,提高信号准确性。或使用 K 线形态等图形指标进行辅助。
-
-3. 增加机器学习模型预测行情,辅助人工智能判断买卖点。这可以克服纯规则交易的局限性。
-
-4. 考虑公司基本面和宏观政策面。加入这些因素后,策略可以应对更复杂的行情环境。
-
-## 总结
-
-玛雅寻宝指南是一个简单直观的股市交易策略。它使用广泛认可的EMA均线指标判断价格趋势、确认交易信号。同时辅以价格高低点进行过滤提高信号质量。该策略容易理解使用,适合自动化量化交易。但也存在技术指标失效等潜在风险。未来可从调参优化、增强信号、引入机器学习等多个角度进行改进,使策略效果更佳。
-
-||
 
 ## Overview
 
@@ -101,7 +55,6 @@ The strategy can be optimized in the following aspects:
 
 The Mayan Treasure Hunting Guide is a simple and intuitive stock trading strategy. It uses the widely recognized EMA line to determine price trends and confirm trading signals. At the same time, it uses price highs and lows to filter and improve signal quality. The strategy is easy to understand and use, suitable for automated quantitative trading. But it also has potential risks such as technical indicator failure. Future improvements can be made from multiple perspectives like parameter tuning, signal enhancement, and introducing machine learning to improve strategy effectiveness.
 
-[/trans]
 
 > Strategy Arguments
 

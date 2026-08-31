@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a4765b58d5b7d33406.png)
 
-[trans]
-#### 概述
-趋势捕捉策略是一种利用独特方法检测趋势形成,并在趋势方向上开仓的策略。它通过计算一定范围内最高价和最低价的差值与该范围内所有K线长度之和的比值,得到一个称为"限度"的百分比值。该值越接近100,表示趋势越强。当该值超过设定的限度,并且移动平均线向上时,策略开多单;当该值超过设定的限度,并且移动平均线向下时,策略开空单。开仓后,策略在价格达到一定水平时平掉部分仓位,并将剩余仓位移动到认为趋势结束的点位。
-
-#### 策略原理
-1. 计算一定范围内最高价和最低价的差值,以及该范围内所有K线长度之和。
-2. 将差值除以K线长度之和,再乘以100得到一个百分比值,称为"限度"。
-3. 当限度超过设定值,并且移动平均线向上时,开多单;当限度超过设定值,并且移动平均线向下时,开空单。
-4. 开仓后,当价格达到止盈位平掉部分仓位,剩余仓位移动到止损位。
-5. 当移动平均线向下穿越时,平掉多单;当移动平均线向上穿越时,平掉空单。
-
-#### 策略优势
-1. 策略使用独特的方法检测趋势形成,通过计算限度值来判断趋势强度,有助于在趋势初期就开仓。
-2. 策略在开仓后,通过平掉部分仓位和移动剩余仓位的止损位来控制风险。
-3. 策略使用移动平均线的向上和向下穿越来判断趋势结束,有助于及时平仓。
-
-#### 策略风险
-1. 策略在趋势初期开仓,如果趋势不能持续,可能会造成损失。
-2. 策略使用固定的止盈和止损位,在某些情况下可能不够灵活。
-3. 策略只使用了移动平均线来判断趋势,可能会错过一些趋势机会。
-
-#### 策略优化方向
-1. 可以考虑使用其他指标来辅助判断趋势,如MACD、RSI等,以提高开仓的准确性。
-2. 可以根据市场波动性来动态调整止盈和止损位,以更好地控制风险。
-3. 可以考虑在趋势确认后再开仓,以降低趋势初期的风险。
-
-#### 总结
-趋势捕捉策略使用独特的方法来检测趋势形成,并在趋势方向上开仓。它通过计算限度值来判断趋势强度,使用移动平均线的穿越来判断趋势结束。策略在开仓后通过平掉部分仓位和移动止损位来控制风险。但是,策略在趋势初期开仓可能面临一定风险,使用固定的止盈止损位可能不够灵活,只使用移动平均线判断趋势可能会错过一些机会。未来可以考虑引入其他指标、动态调整止盈止损位、在趋势确认后再开仓等方式来优化策略。
-
-|| 
 
 #### Overview
 The Trend Catcher Strategy is a strategy that detects trend formations using its own unique method and opens positions in the direction of the trend. It calculates a percentage value called the "limit" by dividing the difference between the highest and lowest prices in a certain range by the sum of the lengths of the candles in that range. The closer this value is to 100, the stronger the trend. When this value exceeds a set limit and the moving average is rising, the strategy opens a long position; when this value exceeds a set limit and the moving average is falling, the strategy opens a short position. After opening a position, the strategy closes a part of the position when the price reaches a certain level and moves the remaining position to a point where it believes the trend is over.
@@ -70,7 +40,6 @@ The Trend Catcher Strategy is a strategy that detects trend formations using its
 #### Summary
 The Trend Catcher Strategy uses a unique method to detect trend formations and opens positions in the direction of the trend. It calculates the limit value to determine the strength of the trend and uses the crossing of the moving average to determine the end of the trend. The strategy controls risk by closing a part of the position and moving the stop loss level after opening a position. However, the strategy may face certain risks when opening positions at the beginning of the trend, using fixed take profit and stop loss levels may not be flexible enough, and only using the moving average to determine trends may miss some opportunities. In the future, we can consider introducing other indicators, dynamically adjusting take profit and stop loss levels, and opening positions only after the trend is confirmed to optimize the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

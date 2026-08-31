@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bf1a3adca96ea2007d.png)
-[trans]
-
-### 概述
-
-本策略通过建立一个动态调整的交易网格,在波动行情中实现稳定盈利。策略会根据设定的网格数量,自动计算网格间距和上下界价格。当价格突破每条网格线时,会分批建仓做多或做空。在价格重新触及原有网格线时,逐步止盈平仓。该策略同时支持手动和自动调整网格参数,可以自适应市场环境的变化。
-
-### 策略原理   
-
-1.  根据输入参数计算网格界限和网格线价格数组。
-
-2.  当价格低于某一网格线且该网格线没有对应的挂单时,在该网格线价格点建立做多单;当价格高于上一个网格线(第一个除外)且上一个网格线存在对应的持仓单时,平掉上一个网格线对应的做多单。
-
-3. 如果启用自动调整网格参数,会根据最近一定数量的K线数据,定期重新计算网格的上下限价格、网格间距和网格数组。
-
-### 优势分析
-
-1. 实现了波动行情中盈利的目标。在涨跌行情中,能够在不同价格点分批建立持仓和止盈平仓,从而总体实现盈利。
-
-2. 可以选择手动或自动调整网格参数。手动调整需要人工干预,但更加可控;自动调整减轻了操作工作量,使策略可以自适应市场环境的变化。 
-
-3. 通过限制最大网格数量,可以控制单边风险。当价格突破所有网格线后,这一方向的风险就得到控制。
-
-4. 可以通过调整网格间距,控制每单的盈亏幅度。降低网格间距可以减小单笔盈亏。
-
-### 风险分析
-
-1. 大幅波动行情下,存在被套利的风险。如果价格在多个网格间快速来回波动,则可能面临套利的风险。
-
-2. 需要合理设置初始资金量。如果初始资金不足,无法支撑足够数量的网格线。
-
-3. 过大或过小网格数量都不利于策略收益。网格数量过少无法充分利用波动;过多则单笔盈亏过小。需要测试确定最佳参数。
-
-4. 自动调整网格参数存在被操纵的风险。网格参数计算依赖一定K线数量,可能会受到短期操作影响。
-
-### 优化方向 
-
-1. 增加止损逻辑。如设置浮动止损或跟踪止损,进一步控制单边亏损风险。
-
-2. 加入算法优化网格参数。可以测试不同市场阶段参数设置,然后用机器学习方法训练模型,实现参数的自动优化。
-
-3. 结合更多指标判断行情。如MACD,KD等判断目前处于상涨趋势还是下跌趋势,以调整网格数量或参数。
-
-4. 优化回撤控制。如设定最大回撤比例,当达到阈值时关闭策略,避免亏损进一步扩大。
-
-### 总结  
-
-本策略充分利用了波动行情的特征,通过动态网格交易实现了稳定盈利的目标。策略既考虑到参数设置的灵活性,也减轻了操作的工作强度。可以说在波动性行情中,本策略是理想的盈利选择。未来通过进一步优化,可以使策略的应用场景更广,回撤控制更优,从而产生更持续稳定的收益。
-
-||
 
 ### Overview
 
@@ -105,7 +56,6 @@ This strategy establishes a dynamic trading grid to achieve steady profits amid 
 ### Conclusion  
 
 This strategy fully utilizes the characteristics of volatile markets and achieves steady profits through dynamic grid trading framework that offers both parameter flexibility and ease of operation. With further enhancements in loss control and automatic parameter optimization, it can become an ideal model for creating durable profits from market fluctuations.  
-[/trans]
 
 > Strategy Arguments
 

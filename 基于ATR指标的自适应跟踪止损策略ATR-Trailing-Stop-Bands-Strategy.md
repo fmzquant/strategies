@@ -11,95 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13597c3de6e3f62e876.png)
 
-[trans]
-
-## 概述
-
-本策略的核心思想是利用平均真实波幅(ATR)指标来设定一个自适应的跟踪止损线,让获利的头寸得到最大程度的保护,同时避免过早止损。ATR指标能够动态捕捉市场的波动程度,根据市场波动调整止损距离,在保证止损的同时尽量减少止损被触发的概率。本策略同时加入布林带,可视化止损线的上下限,并可选择是否加入影线保护来抵御震荡市的影响。
-
-## 策略原理
-
-本策略使用ATR指标的N周期平均值乘以一个倍数作为基础止损距离。ATR值越大,表示市场波动越大,止损距离就设定的越宽;ATR值越小,止损距离就设定的越窄。这样可根据市场波动程度动态调整止损距离。
-
-具体来说,策略使用以下核心逻辑:
-
-1. 计算ATR周期(nATRPeriod)的ATR值。
-
-2. 根据ATR值乘以倍数(nATRMultip)得到基础止损距离nLoss。
-
-3. 根据当前高点、低点和上一周期的止损线更新止损线xATRTrailingStop。
-
-4. 如果当前低点触发了上一周期止损线,则止损线上移至低点以下nLoss的距离。
-
-5. 如果当前高点触发了上一周期止损线,则止损线下移至高点以上nLoss的距离。 
-
-6. 如果未触发止损,则根据收盘价离止损线的距离调整止损线。
-
-7. 加入可选的影线保护距离,进一步优化止损线。
-
-8. 绘制布林带轨道来可视化止损线的上下限。
-
-9. 根据止损线颜色判定持仓方向。
-
-该策略灵活运用ATR指标,让止损线能够根据市场波动自适应调整,既可确保止损距离合理,也可尽量避免过于激进的止损造成不必要的头寸损失。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 利用ATR指标动态调整止损距离,能够自适应不同市况。
-
-2. 倍数参数可自定义,实现止损距离的灵活调整。
-
-3. 加入布林带轨道,形成止损线的可视化上下限。
-
-4. 可选影线保护功能,避免震荡市的whipsaw。
-
-5. 可作为跟踪止损使用,让获利头寸最大限度回撤。
-
-6. 策略思路清晰易懂,参数少易优化。
-
-7. 可在多种品种和周期使用,适用面较广。
-
-## 风险分析
-
-本策略也存在一些风险需要注意:
-
-1. ATR指标对市场突发事件反应滞后,可能导致止损距离过大。
-
-2. 倍数设置过大也会导致止损距离过宽,增加亏损风险。
-
-3. 影线保护功能在震荡增大时会使止损线过于宽松。
-
-4. 未考虑进场规则,不能作为 Entries/Exits 策略。
-
-5. 需反复测试优化参数,适应不同品种和周期。
-
-6. 突破止损可能导致亏损扩大,需要有效的资金管理。
-
-## 优化方向
-
-本策略可从以下几个方面进行优化:
-
-1. 测试不同的ATR周期参数,优化止损距离。
-
-2. 调整倍数参数,在止损距离和止损概率间找到平衡。 
-
-3. 优化影线保护周期参数,防止 whipsaw。
-
-4. 尝试在止损基础上加入入场条件,使之成为 Entries/Exits 策略。
-
-5. 加入趋势判断指标,根据趋势调整止损距离。
-
-6. 结合波浪理论,根据波浪位置调整止损距离。
-
-7. 加入仓位控制,限制单笔损失。
-
-## 总结
-
-本策略利用ATR指标的自适应特性,设计了一个能够动态调整的止损机制。在保证止损的同时,也尽可能减少不必要的止损触发。策略思路简单清晰,可根据自身需要进行灵活优化。作为跟踪止损工具使用效果更佳,可最大限度保护头寸获利。在参数优化和风险控制到位的情况下,本策略可以成为量化交易中的一个有效止损工具。
-
-||
 
 
 ## Overview
@@ -188,7 +99,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy utilizes the adaptive characteristic of ATR indicator to design a dynamic stop loss mechanism. While ensuring stop loss, it also minimizes unnecessary stop loss triggers. The strategy logic is simple and clear, allowing flexible optimization based on needs. It works best as trailing stop loss to maximize protection of profits. With proper parameter optimization and risk control, this strategy can be an effective stop loss tool in quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

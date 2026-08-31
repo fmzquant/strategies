@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12aace36d15f5841a56.png)
-[trans]
-## 概述
-
-底部猎人策略是一种用于数字货币的短线交易策略。该策略通过识别下跌趋势中的底部,确定合适的买入时机。
-
-## 策略原理
-
-该策略结合多种技术指标来识别底部,具体来说,使用MACD指标判断底部反转信号,使用RSI指标判断超卖状态,使用布林带判断价格是否低于下轨。满足全部条件时产生买入信号。
-
-首先,该策略使用MACD指标的故意发散来判断底部。所谓故意发散是指价格创新低而MACD指标没有创新低。这种情况代表着成交量的减弱,通常预示着即将出现的趋势反转。
-
-其次,策略要求RSI指标低于31.1。RSI低于30代表着超卖状态,这为买入提供了机会。
-
-最后,该策略要求收盘价低于布林带的中轨。这表示价格已经低于常态范围,从而也为买入提供了更好的机会。
-
-当上述全部条件同时满足时,该策略产生买入信号,建立好仓。
-
-## 优势分析
-
-底部猎人策略具有以下优势:
-
-1. 使用多种指标判断底部,保证了底部识别的准确性
-2. 利用MACD指标的故意发散来判断反转信号,这是一种经验丰富的交易技巧
-3. 同时判断超卖和异动,避免了假突破的风险
-4. 仓位控制保守,只在关键点建仓,避免过度交易
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 市场可能进一步下跌,无法及时止损
-2. 多重条件组合判断底部,在些场景下可能因此错过底部
-3. 需要人工确定参数,如RSI的阈值,这可能影响策略表现
-
-针对上述风险,可以通过实时跟踪止损,调整参数区间等方式进行优化。
-
-## 优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加自适应止损机制,根据市场波动程度来灵活调整止损位置
-2. 对买入信号的判断条件进行测试与优化,确定最佳参数
-3. 增加机器学习算法,自动识别参数及交易规则
-4. 增加趋势判断模块,避免在趋势市场中误入震荡市
-5. 结合交易量变化等指标,提高对底部的判断能力
-
-## 总结
-
-底部猎人策略通过捕捉关键底部来进行买入,以期获得超额利润。该策略判断底部的依据稳健,同时结合多种过滤条件来避免假信号。如果参数调整得当、止损控制到位,该策略可以在数字货币市场的短线交易中获得不错的效果。
-
-||
 
 ## Overview
 
@@ -111,7 +60,6 @@ The strategy can be optimized in the following directions:
 
 The Bottom Hunter strategy buys on key bottoms in order to achieve excess returns. The rationale for determining the bottom is robust, while combining multiple filter conditions to avoid false signals. With proper parameter tuning and stop loss control, this strategy can perform well in short-term cryptocurrency trading.
 
-[/trans]
 
 > Strategy Arguments
 

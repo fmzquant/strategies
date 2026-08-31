@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1acc076ae5ae95b22c4.png)
-[trans]
-
-## 概述
-本策略通过计算双向平滑移动平均线,结合趋势指标,实现了一个可以自动追踪价格趋势的交叉交易策略。该策略旨在追踪长期趋势,在强势趋势中获取更大的收益。
-
-## 策略原理
-1. 计算价格的双向平滑移动平均线,包括开盘价平均线和收盘价平均线。
-2. 利用相关系数和ATR指标计算价格趋势指标。 
-3. 将价格趋势指标与双向移动平均线进行组合,得到一个综合的趋势判断。
-4. 当开盘价平均线和收盘价平均线发生金叉时做多;当发生死叉时平仓。
-5. 同时结合趋势指标,只有在趋势指标也同时做多时才开仓做多,只有在趋势指标也同时做空时才开仓做空。
-
-## 策略优势
-1. 双向移动平均线追踪价格趋势更加平滑和稳定。
-2. 结合趋势指标,可以更好地判断趋势方向,避免错误交易。 
-3. 利用金叉和死叉来确定具体的交易时机,更加明确。
-4. 可以通过参数调整自由选择平滑程度,适应更多市场环境。
-5. 多种指标相互验证,可以减少假信号。
-
-## 策略风险
-1. 在趋势转折点错过反转的风险。可以通过调整移动平均线周期来降低。
-2. 双向移动平均线本身滞后性较大,需要与趋势指标相互验证。
-3. 移动平均线周期不当可能导致交易频率过高或遗漏良好交易时机。
-4. 需要反复测试优化参数,以适应不同周期和市场环境。
-
-## 策略优化方向  
-1. 测试更多种类的移动平均线指标。
-2. 尝试其他类型的趋势指标。 
-3. 优化移动平均线和趋势指标的参数。  
-4. 尝试与其他指标组合,如波动率指标。
-5. 增加止损策略。
-
-## 总结
-本策略从多个维度预测价格趋势,在参数优化后可以稳定地追踪长线趋势。但需要注意防止过度优化和测 fitting。总体来说,该策略以较低的风险实现了长线趋势的追踪,值得进一步研究和应用。
-
-||
 
 
 ## Overview
@@ -81,7 +45,6 @@ This strategy calculates bi-directional smoothed moving averages combined with a
 ## Conclusion
 With parameter tuning, this multi-dimensional trend strategy can steadily track long-term trends with relatively low risk. But be cautious of overfitting. Overall it delivers long-term trend tracking with controllable risks and is worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

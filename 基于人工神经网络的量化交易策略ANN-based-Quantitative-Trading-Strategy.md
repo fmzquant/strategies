@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1063f65cfd84e9efd9f.png)
-[trans]
-
-## 概述
-
-本策略利用人工神经网络对未来价格变化进行预测,根据预测结果生成交易信号,属于趋势跟踪策略。策略优点是可以识别复杂的非线性趋势,适合中长线交易。但是也存在回测效果良好,实盘效果不佳的风险。
-
-## 策略原理
-
-该策略使用人工神经网络(ANN)预测未来一日的涨跌幅。
-
-输入层只有一个输入节点,是过去一日的涨跌幅百分比。
-
-隐含层包含2层,第一层有5个节点,第二层有33个节点,都使用双曲正切(tanh)作为激活函数。
-
-输出层只有一个输出节点,经过线性激活函数后直接作为最终的预测结果。
-
-如果预测结果大于threshold参数的值,则生成买入信号,如果小于负的threshold参数的值,则生成卖出信号。
-
-## 策略优势
-
-- 使用ANN模型进行预测,可以拟合复杂的非线性趋势
-- 输入只使用一日的数据,不需要大量历史数据
-- 可以识别更长时间尺度上的趋势
-- 使用多个隐含层,拟合能力强
-- 激活函数和参数经过优化,预测效果较好
-
-## 策略风险
-
-- ANN算法存在过拟合风险,实盘效果可能不如回测
-- 需要较长的历史数据进行训练,不适合最近上市的股票
-- 参数和结构需要反复优化,效果不稳定
-- 只预测一日涨跌,无法判断长期趋势
-- 当市场进入震荡期,效果可能会变差
-
-## 优化方向
-
-- 增加输入变量,如成交量等信息
-- 尝试不同的ANN结构和激活函数
-- 优化ANN的参数,提高拟合精度
-- 增加训练集样本量,避免过拟合
-- 预测多个时间尺度,判断长短期趋势
--  combine with other models, ensemble learning
-- 使用波动率等指标加强风险控制
-
-## 总结
-
-本策略利用ANN模型进行价格变化预测,可以识别复杂的非线性趋势,适合中长线交易。但是ANN模型的黑盒特性也给实盘带来很大挑战。我们需要从输入特征、模型结构、参数优化、 ensemble learning等方面进行优化,同时辅以传统技术分析指标加强操作效果,降低实盘风险。人工智能策略仍需与传统策略完美结合,才能发挥最大效果。
-
-||
 
 
 ## Overview
@@ -107,7 +58,6 @@ If the prediction is greater than the threshold parameter, a long signal is gene
 
 This ANN-based strategy can identify complex nonlinear trends and is suitable for medium-to-long term trading. However, the black-box nature of ANN models also poses significant challenges for live trading. We need to optimize across input features, model architecture, parameter tuning, ensemble learning etc. while combining with traditional technical analysis for robust real-world performance. AI strategies still need to blend with conventional techniques to maximize performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,88 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18570a8fd65b8c926ed.png)
-[trans]
-
-
-## 概述
-
-这是一个短周期(1-5分钟)的外汇黄金交易策略,主要利用潮位理论中的量价关系和多重 Stairstep EMA 来预测趋势反转点,进行短周期的趋势跟踪交易。该策略适用于高频交易。
-
-## 原理
-
-该策略的交易信号来源于两部分:
-
-1. 基于交易量平均价的量价关系判断。具体来说,策略通过计算不同周期(可配置)的交易量平均价EMA,来判断多空趋势的变化。如果短周期EMA上穿较长周期的EMA,认为是看涨信号;如果短周期EMA下穿较长周期的EMA,认为是看跌信号。
-
-2. 基于Stairstep EMA判断的反转信号。Stairstep EMA指的是设置不同参数的多重EMA均线,例如10日线、20日线、50日线等,根据它们的排列顺序来判断趋势反转。如果短周期EMA先于长周期EMA转折,说明趋势在反转。
-
-策略会综合这两种信号来决定入场。具体来说,如果量价关系判断为看涨,并且Stairstep EMA显示多重EMA均已转折看涨,那么将入场做多;相反,如果量价关系判断为看跌,并且Stairstep EMA显示多重EMA均已转折看跌,那么将入场做空。
-
-## 优势
-
-这种策略结合了交易量平均价和多重EMA的优势,可以提高信号的准确性和稳定性:
-
-1. 基于交易量平均价判断量价关系,可以比单纯的价格EMA判断更准确,避免被增强的价格震荡误导。
-
-2. Stairstep EMA可以通过不同参数EMA的排列顺序增加判断的维度,避免单一EMA带来的噪音。
-
-3. 两种信号的结合可以实现互相验证,减少假信号。
-
-4. 适用于高频短周期交易,可以快速抓取小范围的反转机会。
-
-5. 策略参数可以灵活配置,适应不同品种和周期的优化。
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 过于依赖技术指标,存在被异动行情误导的可能。
-
-2. 短周期操作对交易成本比较敏感,需要控制好滑点和手续费。 
-
-3. 短周期EMA参数需要经常优化,否则可能失效。
-
-4. 量价背离不一定产生反转,存在误判风险。
-
-5. 多重EMA排列顺序的判断并不完全可靠,也可能产生误判。
-
-对应措施:
-
-1. 结合更多基本面因素进行判断。 
-
-2. 调整仓位确保单笔止损不会过大。
-
-3. 定期重新测试和优化参数。
-
-4. 在关键支持阻力区域附近交易,提高成功率。
-
-5. 与其他指标结合使用,进行多维度验证。
-
-## 优化方向 
-
-该策略还可以从以下方面进行优化:
-
-1. 测试不同的量价关系计算方式,寻找更稳定的参数。
-
-2. 增加更多层次的Stairstep EMA指标判断。
-
-3. 结合其他指标信号进行过滤,例如RSI,MACD等。
-
-4. 优化止损机制,例如移动止损、挂单止损等。
-
-5. 根据不同品种特点优化参数,制定适合该品种的参数集。
-
-6. 增加机器学习算法,利用大数据训练判断模型。
-
-7. 探索不同的exit策略,例如固定退出,趋势跟踪退出等。
-
-8. 引入自适应参数机制,根据市场变化自动调整参数。
-
-## 总结
-
-本策略综合利用交易量平均价和Stairstep EMA两种指标优势进行短周期趋势跟踪交易。该策略具有较高的稳定性和准确性,但也需要注意风险控制和参数优化。如果持续优化测试,配合其他技术指标使用,可以成为高效的短周期交易策略。
-
-||
 
 # 
 
@@ -173,7 +91,6 @@ This strategy can also be optimized in the following aspects:
 
 This strategy combines the advantages of volume average price and Stairstep EMA for short-term trend tracking trading. The strategy has high stability and accuracy, but risk control and parameter optimization need to be noted. With continuous optimization and testing, combined with other technical indicators, it can become an efficient short-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

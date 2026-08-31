@@ -9,53 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-这是一个仅做多不做空的策略,它根据用户设置的连续上涨天数和连续下跌天数来决定 entries 和 exits。其交易逻辑非常简单直接。
-
-策略原理
-
-首先,我们需要设置两个参数:
-
-consecutiveBarsUp: 连续上涨天数 
-consecutiveBarsDown: 连续下跌天数
-
-然后我们记录两个变量:
-
-ups: 目前连续上涨天数
-dns: 目前连续下跌天数  
-
-每天我们根据收盘价和前一日收盘价的比较,来判断该日是上涨还是下跌,如果上涨天数,则ups加1,下跌天数则dns加1。
-
-当ups达到consecutiveBarsUp时,我们做多;当dns达到consecutiveBarsDown时,我们平仓。
-
-这样就完成了一个简单的连续涨跌策略。我们只在见底后连续上涨一定天数时做多,在连续下跌一定天数后平仓。避免了在震荡行情中频繁交易。
-
-策略优势
-
-1. 逻辑简单,容易理解和实现
-
-2. 通过设置连续上涨和下跌天数,可以 filtering 一些短线震荡,避免频繁交易
-
-3. 仅做多,可以减少交易频率,降低交易成本和滑点影响 
-
-4. 容易设置止损,可以有效控制单笔损失
-
-潜在风险
-
-1. 无法在见顶的时候做空,可能错过做空机会
-
-2. 需要连续上涨一定天数才入场,可能错过买入最低点
-
-3. 存在一定的时间滞后,无法实时捕捉转折点
-
-4. 如果不设置止损,可能带来较大的单笔损失风险
-
-总结
-
-连续涨跌N天策略以其简单的交易逻辑和较低的交易频率大受投资人欢迎。通过合理设置参数,可有效过滤震荡,避免频繁交易。但也存在一定时间滞后和无法做空的限制。需要投资人综合考量后实施。总体来说,该策略适合追踪中长线趋势的投资人,可以提供稳定的投资回报。
-
-||
 Consecutive Up/Down N Days Strategy 
 
 This article will introduce in detail the trading logic, pros, potential risks and summary of the Consecutive Up/Down N Days strategy.
@@ -104,7 +57,6 @@ Summary
 
 The consecutive up/down days strategy is widely popular for its simplicity and low frequency trading. With proper parameter tuning, it can filter out whipsaws effectively. But it also has limitations like time lag and inability to short. Investors need to consider carefully before adopting. Overall it suits investors seeking stable returns when tracking medium-long term trends.
 
-[/trans]
 
 > Strategy Arguments
 

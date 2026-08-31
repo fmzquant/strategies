@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11fded547fd60513c19.png)
-[trans]
-
-## 概述
-
-这是一个基于布林带通道的反转型震荡趋势策略。它利用布林带上下通道作为趋势判断,并在价格接近通道边界时寻找反转机会入场。
-
-## 策略原理
-
-该策略使用布林带指标作为主要技术指标。布林带由n日移动平均线及其上下波动范围构成,布林带上轨=n日移动平均线 + m×n日标准差,布林带下轨=n日移动平均线 - m×n日标准差。其中n和m为参数。 
-
-当价格接近上轨时,表示当前处于上升趋势,但是可能会触顶反转;当价格接近下轨时,表示当前处于下跌趋势,但是可能会触底反转。这时候如果有效突破布林带上下轨,则可能开始反转。
-
-本策略的具体交易规则如下:
-
-1. 当收盘价大于布林带上轨时,做多入场;当收盘价小于布林带下轨时,做空入场。
-
-2. 止盈止损以n日移动平均线为信号。当多单收盘价下破n日均线时止盈出场;当空单收盘价上破n日均线时止损出场。 
-
-3. 采用固定交易量,每次交易数值固定。
-
-4. 采用固定比率资金管理法,设定固定盈亏比率和订单调整幅度。当实现固定比率盈利时按固定幅度增加仓位,当亏损时减少仓位。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用布林带通道判断趋势方向,采取逆势交易策略,在价格可能反转的时间点入场,避开大部分震荡,提高胜率。
-
-2. 移动平均线作为止盈止损信号较为可靠,可以锁定大部分利润。
-
-3. 固定交易量策略简单易行,不需要复杂计算。
-
-4. 固定比率资金管理策略可以通过仓位调整扩大盈利同时控制风险。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 布林带判断产生错误信号的概率存在,可能在趋势中反向做单亏损。
-
-2. 移动平均线滞后性可能导致止盈不够充分。
-
-3. 固定交易量无法根据市场情况调整仓位,存在仓位过大过小的问题。
-
-4. 固定比率资金管理方法扩大仓位幅度较大,可能导致亏损扩大。
-
-对策:优化布林带参数,提高信号准确率;结合其他指标判断趋势;适当缩小固定仓位大小;降低固定比率资金管理的仓位调整幅度。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化布林带的参数,如调整n值和m值,提高布林带通道判断准确性。
-
-2. 增加其他指标判断,如MACD,KD等,避免布林带错误信号。
-
-3. 将固定交易量调整为动态交易量,根据市场情况灵活调整仓位。
-
-4. 降低固定比率资金管理法的仓位调整幅度,优化资金曲线。
-
-5. 添加止损策略,如移动止损、区间突破止损等,进一步控制风险。
-
-6. 进行参数优化,自动优化参数组合,寻找最佳参数对策略进行优化。
-
-## 总结
-
-该策略整体是一个较为典型的布林带反转策略。它利用布林带判断趋势反转点,配合移动平均线设置止盈止损,固定交易量和固定比率资金管理控制风险。相比传统布林带策略,该策略作为一个反转策略,在理论上可以避开部分震荡,提高盈利概率。但由于布林带和移动平均线等指标本身存在缺陷,实际运用时仍需要进一步优化,才能使策略参数化并减少交易风险。
-
-|| 
 
 
 ## Overview
@@ -147,7 +78,6 @@ The strategy can be improved from the following aspects:
 
 In summary, this is a typical Bollinger Bands reversal strategy. It identifies reversal points by Bollinger Bands, sets profit taking/stop loss by moving average, controls risk by fixed quantity and fractional position sizing. As a reversal strategy, it theoretically avoids some whipsaws and improves profitability compared to traditional Bollinger Bands strategies. However, flaws in Bollinger Bands, moving averages require further optimization and risk management for robust practical application.
 
-[/trans]
 
 > Strategy Arguments
 

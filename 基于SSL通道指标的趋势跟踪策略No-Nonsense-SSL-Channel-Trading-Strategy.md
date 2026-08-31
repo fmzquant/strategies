@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a26113bf609b3a0719.png)
-[trans]
-
-### 概述
-
-该策略是一个基于SSL通道指标的趋势跟踪策略。它结合了止损和止盈管理来锁定利润,以实现稳定的资金增长。
-
-### 策略原理
-
-代码的主要逻辑是使用SSL上轨和下轨的黄金交叉来判断趋势方向。具体来说,当SSL上轨线从下方向上突破SSL下轨线时,做多;当SSL下轨线从上方向下突破SSL上轨线时,做空。
-
-进入仓位后,策略会使用ATR指标乘以系数来设置止损和止盈价格。例如,止损价格为价格减去ATR * 1.5,止盈价格为价格加上ATR * 1。这可以有效控制单笔损失,并锁定利润。
-
-当SSL通道发生叉掉时,平仓。这样可以跟踪趋势的转折点,及时止损。
-
-### 优势分析
-
-1. 使用SSL通道判断趋势方向准确性高
-2. 止损和止盈设置合理,可以有效控制风险
-3. 及时止损,跟踪趋势转折点
-
-### 风险分析
-
-1. 趋势交易容易形成过度交易
-2. SSL通道判断失败的概率存在
-3. 需要优化ATR系数
-
-对应的解决方法:
-
-1. 适当调整持仓周期
-2. 结合其他指标进行确认
-3. 测试不同的ATR系数组合
-
-### 优化方向  
-
-1. 优化ATR参数,找到最优参数组合
-2. 增加其他指标过滤和确认信号
-3. 根据不同市场调整持仓周期
-4. 优化止损止盈策略
-
-### 总结
-
-该策略整体思路清晰,使用SSL通道判断趋势,并设置了合理的止损止盈。但仍需进一步测试和优化,结合其他指标过滤假信号,找到最佳参数组合。与此同时,要根据不同市场调整参数,使策略更具弹性。总的来说,该策略为实现steady Income提供了一个可靠的框架。
-
-||
 
 ### Overview
 
@@ -98,7 +54,6 @@ The corresponding solutions:
 
 The overall logic of this strategy is clear, using the SSL channel to determine the trend, and setting reasonable stop loss and take profit. But further testing and optimization is still needed, incorporating other indicators to filter out false signals and find the best parameter combination. At the same time, parameters should be adjusted according to different markets to make the strategy more flexible. Overall, this strategy provides a reliable framework for achieving steady income.
 
-[/trans]
 
 > Strategy Arguments
 

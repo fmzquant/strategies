@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d5d669b93c6f8669d7.png)
-[trans]
-
-### 概述
-
-本策略综合运用Ichimoku Kinko Hyo指标以及多种其它技术指标,实现多种交易信号的结合,以发挥Ichimoku系统的优势,同时通过多信号确认进行入场,能有效过滤假信号,在追求高胜率的同时控制风险。
-
-### 策略原理
-
-本策略主要分为以下几个部分:
-
-1. Ichimoku Kinko Hyo指标的计算,包括转向线(Tenkan-sen)、基准线(Kijun-sen)、先行线(Senkou Span A)、滞后线(Senkou Span B)、云叠(Kumo)等的计算公式。
-
-2. 多种过滤器的设定,包括Kumo云叠过滤器、Kijun基准线过滤器、MACD过滤器、RSI过滤器、Bill WilliamsARGUMENTS fractals过滤器、SuperTrend过滤器、Parabolic SAR过滤器和ADX过滤器等。这些过滤器用于确认趋势方向,避免交易受到震荡市的影响。
-
-3. 多种交易信号的设定,包括前期收盘价突破基准线信号、Chikou幅与价格或云叠的关系信号、转向线与基准线或云叠的关系信号等共23种Ichimoku原生交易信号。此外,还加入多种其它技术指标信号,如MACD、RSI、Fractals等。这些交易信号用于寻找潜在的交易机会。
-
-4. 两级过滤器的设定,用于过滤入场信号。分别选择一种过滤器作為第一级和第二级过滤器,可有效避免假信号。
-
-5. 两级过滤器的设定,用于过滤出场信号。类似入场过滤器。
-
-6. 多信号集合作为最终的入场和出场信号。根据用户选择的具体交易信号,同时结合一级和二级入场过滤器以及出场过滤器,形成最终的交易决策。
-
-7. 止盈止损设置。可以选择是否启用以及具体止盈止损点位。
-
-8. 回测周期设置。可以设置回测的起止时间。
-
-### 策略优势
-
-本策略具有以下优势:
-
-1. 综合运用Ichimoku多种指标和多种交易信号的优势,兼顾趋势跟踪和信号过滤。
-
-2. 通过两级过滤器设定避免入场时被套,有效控制风险。
-
-3. 提供多种交易信号可供选择,可以针对不同市场环境进行优化。
-
-4. 提供多种过滤器可供选择,可以针对个股特点进行优化。
-
-5. 可设置止盈止损点位,有助于锁定盈利和控制风险。
-
-6. 可设置不同的回测周期进行验证,方便针对策略进行优化。
-
-### 策略风险
-
-本策略也存在一些风险:
-
-1. Ichimoku系统对买卖信号判定比较慢,可能会错过短线交易机会。可以适当缩短周期优化。
-
-2. 多重过滤可能过于谨慎,导致入场不确定性。可以测试调整过滤参数。
-
-3. 单一止损点位设置不够灵活,无法应对复杂行情。可以考虑动态止损。
-
-4. 回测周期设置不够精确,无法完全模拟实盘环境。需要多次调整验证。
-
-### 策略优化方向 
-
-本策略可以从以下方面进行优化:
-
-1. 调整Ichimoku系统参数,如调短转向线周期适应短线交易。
-
-2. 测试不同的交易信号组合,识别最适合个股的信号选择。
-
-3. 优化过滤器参数,平衡过滤效果与入场确定性。
-
-4. 尝试动态止损方式,使止损更贴近市场变化。
-
-5. 设置更长的回测周期,或使用tick回测数据使模拟更准确。
-
-6. 增加仓位管理模块,通过加仓方式优化资金利用效率。
-
-7. 增加自动参数优化功能,实现更智能的策略调整。
-
-### 总结
-
-本策略通过Ichimoku系统提供的多种指标与交易信号,并配合使用其它技术指标进行信号过滤和确认,实现了一套融合趋势跟踪和突破信号的量化交易策略。策略充分发挥Ichimoku系统的优势,同时设计了参数化的模块用于调整和优化,可以更好地适应市场的变化。通过不断测试与优化,本策略有望达到较高的稳定盈利能力。
-
-||
 
 ### Overview
 
@@ -162,7 +85,6 @@ Possible ways to optimize the strategy:
 
 This strategy combines Ichimoku’s indicators and signals with additional filters and confirmations from other technical indicators, realizing a quantitative system fusing trend following and breakout signals. It fully leverages Ichimoku’s strengths while utilizing parameterized modules for adjustments and optimizations to adapt to changing markets. Further testing and optimization will likely lead to strong and steady profitability.
 
-[/trans]
 
 > Strategy Arguments
 

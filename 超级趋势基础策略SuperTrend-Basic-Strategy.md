@@ -9,107 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-超级趋势基础策略是一种基于三个强大指标的可靠且盈利的算法交易策略:超级趋势指标(ATR)、相对强弱指数(RSI)和指数移动平均线(EMA)。该策略旨在辨识市场趋势的方向和强度,在最佳的入场点进入市场,在到达止损点或止盈点时退出市场。
-
-## 策略原理
-
-该策略使用超级趋势指标判断价格是否处于上升或下降趋势中。超级趋势指标基于平均真实波幅和一个因子,当价格高于超级趋势时为上升趋势,当价格低于超级趋势时为下降趋势。 
-
-相对强弱指数用于检测是否过热和超买或超卖的状况。当RSI高于50时为强势市场,反之为弱势。RSI可过滤假性突破。
-
-指数移动平均线用于判断长期趋势方向。当价格高于EMA时为上升趋势,低于时为下降趋势。可用于确认交易方向。 
-
-该策略的交易信号如下:
-
-多头入场:价格高于超级趋势且RSI高于50且价格高于EMA时做多
-多头出场:价格收盘低于超级趋势或止损或止盈
-
-空头入场:价格低于超级趋势且RSI低于50且价格低于EMA时做空  
-空头出场:价格收盘高于超级趋势或止损或止盈
-
-止损和止盈可设定为入场价的百分比。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用三个指标组合,可靠判断趋势方向
-
-2. 超级趋势指标可清晰判断上升趋势和下降趋势
-
-3. RSI指标可过滤假突破,避免超买超卖
-
-4. EMA可用于确认大趋势方向
-
-5. 策略信号简单明确,容易操作
-
-6. 可自定义ATR周期、RSI参数和EMA周期进行优化
-
-7. 可设定止损止盈来控制风险
-
-8. 可仅做多或仅做空以适应不同市场环境
-
-9. 可在任何时间周期使用
-
-## 风险分析
-
-该策略主要风险如下:
-
-1. 大趋势反转时超级趋势指标会产生滞后,可能导致损失
-
-2. 设定的止损止盈过小可能无法抓住大行情
-
-3. EMA无法判断趋势反转点
-
-4. 无法判断背离现象
-
-5. 会有一定程度的波动风险和时间交易风险
-
-对应解决方法:
-
-1. 结合其它指标判断趋势反转
-
-2. 优化止损止盈参数
-
-3. 结合其它指标判断趋势反转
-
-4. 结合背离指标
-
-5. 适当调整仓位管理
-
-## 优化方向
-
-该策略可从以下方面进行优化:
-
-1. 优化ATR周期参数,以平衡灵敏度和稳定性
-
-2. 优化RSI参数,提高准确率
-
-3. 优化EMA周期,使其适应不同市场
-
-4. 增加其他指标判断反转,如MACD、KD等
-
-5. 增加背离指标判断反转
-
-6. 结合波浪理论判断反转
-
-7. 使用机器学习等算法动态优化参数
-
-8. 增加高级止损算法,如跟踪止损、移动止损等
-
-9. 优化仓位管理,适应不同波动率市场
-
-10. 测试更复杂的进出场条件组合
-
-## 总结
-
-超级趋势基础策略整合超级趋势、RSI和EMA三大指标,形成一个简单实用的趋势跟踪策略。它可清晰识别趋势方向,过滤假信号,确认大趋势。同时有清晰的入场出场规则和止损止盈设置。该策略易于操作,可靠获利,适用于任何时间周期。通过优化指标参数、增加趋势判断工具、改进止损算法等方式,可以将该策略优化为一个更强大的交易系统。
-
-|| 
 
 ## Overview
 
@@ -209,7 +108,6 @@ Ways to optimize the strategy:
 
 The SuperTrend basic strategy integrates SuperTrend, RSI and EMA into a simple and practical trend following system. It identifies trend direction clearly, filters out false signals and confirms overall trend. Clear entry, exit rules and stop loss/take profit configuration. Easy to use, reliable profitability. Applicable to any timeframe. It can be further optimized by tuning parameters, adding reversal tools, enhancing stops to become a more powerful trading system.
 
-[/trans]
 
 
 > Strategy Arguments

@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/203eca0410d866683ef.png)
 
-[trans]
-
-## 概述
-
-KST指标获利策略是一种应用于SPY 30分钟周期的选股策略。该策略利用KST指标的多空交叉来判断入场和出场时机。
-
-## 策略原理  
-
-该策略主要基于KST指标。KST指标由以下几部分组成:
-
-1. ROC长度分别为11、15、20、33的4个不同长度的ROC曲线。
-2. 对上述ROC曲线分别应用长度为9、14、8、15的SMA平滑。
-3. 对平滑后的4个ROC曲线求加权和,权重分别为1、2、3、4。
-4. 对终的KST曲线再应用长度为9的SMA求得Signal曲线。  
-
-根据KST曲线和Signal曲线的金叉死叉来判断买卖点:
-
-- KST上穿Signal为买入信号
-- KST下穿Signal为卖出信号
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 利用KST指标综合考虑了不同时间周期内的价格变动,使得策略更加稳定和可靠。
-
-2. KST指标对ROC曲线进行了加权平均,使得更长周期的价格变化起主导作用,有利于捕捉市场趋势。
-
-3. 应用在SPY这种高流动性标的具有良好的实盘效果。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. KST指标和MA指标一样,在震荡行情中容易产生假信号。可通过调整参数优化。
-
-2.  Entry和Exit完全依赖指标,没有结合股票基本面和大市分析,容易在重大事件发生时产生大亏损。
-
-3.  选股范围仅限于SPY一个标的,可通过扩大选股范围分散单一标的带来的风险。
-
-## 优化方向  
-
-该策略可从以下几个方向进行优化:
-
-1. 优化KST指标参数,寻找最佳参数组合。
-
-2. 结合波动率指标避免震荡行情的假信号。  
-
-3. 增加止损策略控制单次亏损。
-
-4. 扩大股票池,适当纳入参数满足条件的个股,提高策略稳定性。
-
-## 总结  
-
-该策略利用KST指标判断股票短线趋势,在SPY上取得了不错效果。我们可通过参数优化、风控措施等方法来提升策略稳定性和实战效果。也可以尝试扩大选股范围,使策略更具普适性。
-
-||
 
 ## Overview  
 
@@ -123,7 +66,6 @@ Possible ways to optimize the strategy:
 
 This strategy identifies short-term trends in SPY using the KST indicator, with good backtest results. We can improve its stability and real-world performance through parameter tuning, risk controls and expanding stock selection criteria. Making it more universally applicable.
 
-[/trans]
 
 > Strategy Arguments
 

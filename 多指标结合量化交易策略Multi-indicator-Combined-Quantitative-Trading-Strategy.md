@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1d7bdca6fea9d343cf2.png)
 
-[trans]
-### 概述
-
-该策略运用了RSI、StochRSI和布林带三种股价技术指标,并结合交易的时间和方向条件,实现判断买入和卖出信号的量化交易策略。
-
-### 策略原理
-
-当RSI指标小于低位区域并且StochRSI指标K线上穿D线时,视为买入信号。同时股价较布林带下线廉价或穿过布林带下线也作为买入依据。
-
-当RSI指标超过高位区域并且StochRSI指标K线下穿D线时,视为卖出信号。同时股价高于布林带上线或跌穿布林带上线也作为卖出依据。
-
-通过 RSI 指标判断股价是否超买超卖,StochRSI 判断股价动能,布林带判断股价是否高位运行和廉价,多指标组合判断买卖。
-
-### 优势分析
-
-这是一个多指标组合的策略,指标覆盖面广,判断依据全面。在判断信号前都需要当前股价或指标和其阈值发生交叉,对虚假信号有一定的过滤。 
-
-在下单前增加了时间条件限制,可以避免特定的时间段带来更大的风险。
-
-通过多种指标的综合判断,能够匹配更多类型的走势,提高策略的有效率。
-
-### 风险分析
-
-该策略主要依赖三种指标,如果指标发出错误信号,策略会造成损失。指标应该互相验证,不能完全依赖某个指标。比如某个时间段RSI震荡,会增加发出虚假信号的可能。
-
-策略加入的时间判断条件可能也会错过有利行情。
-
-如果选股不当,例如 exaggeration效应严重的股票,指标的有效性会大打折扣,应该研究股票对这些指标的适用性。
-
-### 优化方向
-
-1. 增加最大回撤等风控手段,可以对损失进行限制。
-
-2. 调整指标的参数,更好的与选定的股票匹配。比如加快RSI参数以检测更快的价格变动。
-
-3. 增加过滤机制,例如股价在布林带中部时暂缓交易,避免震荡行情。并且在开盘和收盘附近阻止下单,避开跳空的风险。
-
-4. 选股时可以参考公司基本面,避选财务造假严重的股票。也可以增加行业和市值的判断,选取大盘股。
-
-### 总结
-
-这是一个典型的多变量技术指标策略,指标组合较为均衡,覆盖面广,同时下单条件严谨,可以有效选股实现盈利,回撤也会控制在一定范围内。通过指标和参数优化,可以更好的适配市场,同时增加风控机制最大限度规避风险,进一步提高策略的稳定可靠性。
-
-||
 
 ### Overview
 
@@ -98,7 +54,6 @@ If the stock selection is inappropriate, for example, stocks with severe exagger
 
 This is a typical multi-variable technical indicator strategy with a balanced mix of indicators and extensive coverage. At the same time, the order conditions are rigorous, which can effectively select stocks to achieve profit, and the drawdown will be controlled within a certain range. Through the optimization of indicators and parameters, it can better adapt to the market. At the same time increase risk control mechanism to minimize risk to further improve the stability and reliability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

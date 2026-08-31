@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9c2b339fa35f1e6849.png)
-[trans]
-
-## 概述
-
-该策略是一个基于平均真实波幅(ATR)和价格突破的ETF自动交易策略。它使用ATR来计算止损位和止盈位,并在价格突破一定周期最高价或最低价时开仓做多或做空。 
-
-## 策略原理
-
-该策略主要基于以下原理:
-
-1. 使用一定周期(如20根K线)的最高价和最低价来判断价格走势和方向。当价格突破周期最高价时,做多;当价格突破周期最低价时,做空。
-
-2. 使用ATR来动态计算止损位。止损位距离入场价一个ATR周期的ATR值乘以系数(如2)。
-
-3. 使用ATR来计算止盈位。止盈距离入场价为一个ATR周期的ATR值乘以系数(如1)。
-
-4. 使用ATRtrailer多因子来跟踪止损。当价格向不利方向突破trailer止损位时,平仓止损。
-
-该策略简单可靠,既考虑了价格趋势的方向,有利于及时捕捉价格趋势;又设置了止损和止盈位,有利于把握盈利机会并控制风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略思路简单清晰,容易理解和实施。
-
-2. 利用ATR计算止盈止损位,可以动态调整仓位规模,灵活控制风险。
-
-3. 周期突破判断策略容易捕捉价格趋势,收益较好。
-
-4. Trailer止损可以及时止损,避免承担过大风险。
-
-5. 适用于趋势较明显的品种,如ETF、股票等。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 价格震荡时,可能出现较多的错误信号和反向开仓。
-
-2. 周期参数设置不当可能错过价格趋势或虚惊交易次数过多。
-
-3. 系数参数设置不当,可能导致止损或止盈过于激进或保守,影响盈利。
-
-4. ETF本身具有的风险,如政策风险、溢价风险等也会对策略带来影响。
-
-对应解决方法:
-1. 优化参数,降低虚拟交易率。
-2. 结合多个因子和过滤器来确定交易信号。
-3. 按不同市场调整参数。
-4. 分散投资,控制单只ETF的仓位。
-
-## 优化方向 
-
-该策略可以从以下几个方面进一步优化:
-
-1. 结合移动均线等指标来过滤虚假信号。
-
-2. 增加适应性参数优化模块,根据不同周期和品种自动优化参数。
-
-3. 增加机器学习模型预测下一根K线的高点和低点,来判断突破信号。
-
-4. 考虑交易量溢出等指标,防范假突破。 
-
-5. 优化开仓仓位大小和比例,不同品种和市场环境适应性开仓。
-
-## 总结
-
-该策略整体思路清晰简洁,核心机制突破和ATR动态止盈止损可以有效控制风险和锁定盈利。通过参数优化和结合更多过滤指标,可以进一步增强策略Profit因子和风险控制能力,是一个值得入手和持续优化的量化策略。
-
-|| 
 
 ## Overview
 
@@ -150,7 +79,6 @@ The strategy can be further optimized from the following aspects:
 
 The strategy has clear and simple logic. The core mechanisms of breakout and adaptive ATR stop loss/take profit can effectively control risks and lock in profits. Further enhancing Profit factors and risk control capabilities through parameter optimization and integrating more filters can make it a profitable and optimizable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

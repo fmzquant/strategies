@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fc109ad90d90afd7c4.png)
 
-[trans]
-
-## 概述
-
-对冲震荡反转策略是一种利用布林带、包络线、ADX和随机指标等多个指标来识别市场反转点,在反转点附近进行对冲操作的短线交易策略。该策略主要通过布林带和包络线判断价格是否过度扩张来确认交易信号,同时利用ADX判断趋势力度和随机指标判断超买超卖区域,在反转点附近建立对冲头寸。
-
-## 策略原理
-
-对冲震荡反转策略基于以下几个判断规则:
-
-1. 当收盘价超过布林带上轨且超过包络线上轨,说明价格可能处于超买状态,这时如果ADX小于30说明趋势力度不强,同时随机指标大于50说明处于超买区域,这样就可以考虑做空。
-
-2. 当收盘价低于布林带下轨且低于包络线下轨,说明价格可能处于超卖区域,这时如果ADX小于30说明趋势力度不强,同时随机指标小于50说明处于超卖区域,这样就可以考虑做多。
-
-3. 做空的止损退出条件是收盘价格低于布林带下轨或包络线下轨或者随机指标小于50。
-
-4. 做多的止损退出条件是收盘价格高于布林带上轨或包络线上轨或者随机指标大于50。
-
-通过这些判断规则,我们可以在反转点附近建立对冲头寸,利用价格的短期震荡来获利。
-
-## 优势分析
-
-这种对冲震荡反转策略具有以下几个优势:
-
-1. 利用多个指标判断,可以有效确认交易信号,避免假突破。
-
-2. 在趋势转折点附近交易,具有比较高的成功率。
-
-3. 采用对冲操作方式,可以有效控制风险。
-
-4. 交易频率较高,适合短线操作。
-
-5. 收益来源主要是价格震荡,不完全依赖趋势反转。
-
-## 风险分析
-
-这种对冲震荡反转策略也存在一些风险需要注意:
-
-1. 反转失败的概率仍然存在,将带来较大亏损。
-
-2. 交易频繁容易出现过优化的情况。
-
-3. 反转时间点把握不准会造成亏损扩大。
-
-4. 趋势Mutation突变的概率存在,需要警惕。
-
-针对这些风险,我们需要优化指标参数,严格控制止损,同时结合趋势和基本面分析来确定大方向。
-
-## 优化方向 
-
-这种对冲震荡反转策略还可以从以下几个方向进行优化:
-
-1. 优化指标参数,提高交易信号质量。
-
-2. 增加基本面因素判断,避免打反趋势。
-
-3. 结合V形反转形态判断来提高成功率。
-
-4. 动态调整止损幅度。
-
-5. 优化资金管理,严格控制单笔损失。
-
-## 总结
-
-对冲震荡反转策略通过多重指标判断在反转点附近进行对冲操作,具有交易频率高、风险容易控制的优点。但反转交易的风险也不能忽视,我们需要不断优化策略,严格遵守交易规律,充分利用这种高效的短线交易策略。
-
-||
 
 ## Overview
 
@@ -143,7 +76,6 @@ This Hedging Oscillation Reversal strategy can also be optimized in the followin
 
 The Hedging Oscillation Reversal strategy takes hedging positions around reversal points based on multiple indicator judgments, which has the advantages of high trading frequency and easy risk control. However, the risks of reversal trading cannot be ignored. We need to continuously optimize the strategy, strictly follow the trading rules, and make full use of this efficient short-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

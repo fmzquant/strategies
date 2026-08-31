@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c6c638dd52abd301d8.png)
-[trans]
-## 概述
-该策略是基于双重均线交叉的趋势跟踪策略。它结合了快速简单移动平均线(SMA)和缓慢加权移动平均线(VWMA),利用两条平均线的交叉形成买入和卖出信号。
-
-当快速SMA向上穿过缓慢VWMA时,产生买入信号;当快速SMA向下穿过缓慢VWMA时,产生卖出信号。策略采用止损机制控制风险。
-
-## 策略原理  
-该策略的核心逻辑基于双重均线交叉系统。具体来说,它同时运用了以下技术指标:
-
-1. 简单移动平均线(SMA):对最近n天的收盘价取算术平均值,能反映最近期间的平均价格。
-2. 加权移动平均线(VWMA):对最近n天的收盘价进行加权平均,赋予近期价格更大权重,能更快速地响应价格变动。  
-
-双重均线中的快速SMA参数设置较短,能快速响应价格变化;缓慢VWMA参数较长,具有滤波作用。当短期和长期趋势向同一方向发展时,快速SMA向上穿越缓慢VWMA产生买入信号;向下穿越时产生卖出信号。
-
-该策略同时设置止损机制。当价格向不利方向运行时,及时止损以控制风险。
-
-## 优势分析
-
-1. 响应迅速,跟踪市场趋势的变化
-2. 回撤控制好,止损机制有效控制风险
-3. 简单直观,容易理解实现
-4. 可以通过调整参数进行优化,适应不同市场环境
-
-## 风险分析
-
-1. 双重均线策略容易产生多头市场的假信号
-2. 需要选择合适的参数,不当设置可能导致亏损
-3. 偶尔可能会头疼 Markt 的突发事件而造成损失
-
-风险控制的方法:
-
-1. 采用趋势过滤指标进行确认
-2. 优化参数设置
-3. 采取止损策略,合理控制单笔损失
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 结合其他技术指标进行确认,例如RSI,布林线等,提高信号的准确性
-2. 优化均线参数的长度,根据不同周期调整参数
-3. 结合交易量指标,在大量能量进出的点位进行交易
-4. 根据回测结果进行参数调整,选择最优参数
-5. 采用动态止损,根据市场波动程度来调整止损点
-
-## 总结
-
-该策略整体来说是一个非常实用的趋势跟踪策略。它采用简单直观的双重均线交叉来产生交易信号,通过快速均线和缓慢均线的配合,能够有效捕捉市场趋势的变化。止损机制也使其具有良好的风险控制。通过配合其他指标和参数优化,可以进一步提高策略的交易效果。
-
-||
 
 
 ## Overview
@@ -109,7 +59,6 @@ The strategy can be enhanced in the following aspects:
 ## Conclusion
 In conclusion, this is a very practical trend following strategy. It uses intuitive dual moving average crossovers to generate trading signals, capturing trend changes effectively with the coordination of fast and slow moving averages. The stop loss mechanism also ensures good risk control. With complementary indicators and parameter optimization, the strategy can achieve even better trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11b42fbd318f4ddcab1.png)
-[trans]
-
-## 概述
-
-该策略根据周五收盘价设定长仓和空仓的入场条件,在周六和周日开盘时做多做空,周一开盘前平仓。策略通过捕捉周五收盘价附近的价格波动来实现盈利。
-
-## 原理
-
-1. 记录周五的收盘价作为参考价
-2. 周六周日开盘时:
-   - 如果价格高于周五收盘价的4.5%,做空
-   - 如果价格低于周五收盘价的4.5%,做多
-3. 止盈设置为初始资金的3%
-4. 周一开盘前平仓所有头寸
-
-## 优势分析
-
-1. 利用周六周日的低交易量导致的价格波动进行交易,降低市场风险
-2. 明确的入场和出场条件,降低策略实施难度
-3. 短线操作,追求稳定的小盈利
-4. 周期短,资金周转快
-
-## 风险分析
-
-1. 周六周日价格波动可能小于预期,无法打开仓位
-2. 波动过大导致止损
-3. 周一重大事件导致价格跳空,无法及时止损
-
-风险解决方案:
-
-1. 调整入场条件的波动幅度
-2. 合理设置止损点
-3. 提前平仓,不持仓过周末
-
-## 优化方向 
-
-1. 根据不同品种的特点调整入场幅度
-2. 根据回测结果优化止盈条件
-3. 根据资金规模选择不同的杠杆
-4. 结合均线指标过滤入场时机
-
-## 总结
-
-该策略作为一个短线交易策略,具有非常明确的交易逻辑和风险控制措施。通过合理的参数设置和不断测试优化,可以获得稳定的投资收益。同时也需要注意周未价格波动过大导致的亏损风险,通过风险管理来控制损失。
-
-||
 
 
 ## Overview
@@ -101,7 +55,6 @@ Risk Solutions:
 
 This short-term trading strategy has very clear logic and risk control measures. With proper parameter tuning and continuous testing and optimization, it can generate steady investment returns. At the same time, the risk of large weekend losses due to excessive volatility needs to be managed via proper risk control.
 
-[/trans]
 
 > Strategy Arguments
 

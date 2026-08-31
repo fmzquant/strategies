@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-Joker移动止盈策略是一个基于移动平均线的趋势跟踪策略。它结合了移动止损和移动止盈的特点,旨在在行情向有利方向发展时最大限度锁定收益,同时也能在行情转向不利时尽早止损。
-
-## 策略原理
-
-该策略使用快速移动平均线和慢速移动平均线构建趋势过滤器。当快速移动平均线上穿慢速移动平均线时,做多;当快速移动平均线下穿慢速移动平均线时,做空。 
-
-策略首先根据配置的止盈百分比计算出开仓后的首个止盈价格。如果启用了移动止盈功能,则根据交易品种的最小变动价位和配置的移动止盈百分比计算出移动止盈的步进大小。
-
-当持仓方向与信号方向一致时,如果没有启用移动止盈,则使用限价单submitter方式止盈;如果启用了移动止盈,则使用追踪止盈方式,根据步进大小不断调整止盈价格。
-
-## 优势分析
-
-- 利用移动平均线判断主要趋势方向,避免被市场 Noise 对策略造成过多干扰。
-
-- 启用移动止盈后可以根据行情走势调整止盈位置,保证止盈位置始终紧贴价格。这比设置一个固定的止盈价格更加灵活和高效。
-
-- 移动止盈可以锁定更多利润,降低策略抛盘的风险。它也避免了只设置固定止盈就可能出现的止盈位置过于保守,锁定利润过早的问题。
-
-- 移动止盈依然保留了设置止损止盈的优点,可以在行情转向不利时尽早止损。
-
-## 风险分析
-
-- 移动平均线在价格剧烈波动时,容易形成错误信号或信号滞后。这可能导致策略反向建仓亏损。可以适当调整移动平均线参数,或者增加Filter来优化。
-
-- 止盈比例设置过大也会提高策略持仓时间和实际止盈价格与理论价格的偏差。可以适当调低止盈比例降低此风险。
-
-- 移动止盈的步进比例设置过小,会导致移动频率过高,增加交易费用和滑点风险。可以适当调整移动止盈步进来优化。
-
-- 移动止盈只考虑单边移动,不考虑回撤。这意味着价格再次回头,移动止盈不会下调。这会导致止盈最终执行价格偏离理论价格。可以考虑双边移动止盈机制来优化。
-
-## 优化方向
-
-- 可以考虑根据市场波动率动态调整移动平均线参数,在波动加大时增大周期,减小周期在波动减小时。
-
-- 可以研究不同品种、市场的特点,设置不同的默认止盈比例,降低止盈偏差风险。
-
-- 可以研究双边移动止盈机制,在价格达到新的高点时向上移动止盈,在出现回撤时向下移动止盈,使止盈更贴近价格。
-
-- 可以考虑与趋势力度指标结合,在趋势力度较弱时降低止盈比例,在趋势力度强劲时增加止盈比例。
-
-- 可以考虑与机器学习模型结合,利用模型预测出的价格区间来动态设置止盈比例。
-
-## 总结
-
-Joker移动止盈策略整体结构清晰,使用移动平均线判断趋势方向,然后动态调整止盈位置锁定利润。它兼具移动止损和移动止盈的优势,可以有效跟踪趋势的同时控制风险。通过参数调优和止盈机制改进还可进一步完善策略,使其能适应更加复杂的市场环境。总体来说,该策略值得进一步研究和应用。
-
-||
 
 
 
@@ -111,7 +60,6 @@ When the position direction matches the signal, a limit order is used for take p
 
 The Joker Trailing Take Profit strategy has a clear structure and uses moving averages to define trend direction and trailing to lock in profits. It combines the advantages of trailing stops and trailing take profits to follow trends smoothly while controlling risks. Further improvements can be made through parameter optimization and enhancing the take profit mechanism to adapt to more complex market environments. Overall, this is a strategy worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

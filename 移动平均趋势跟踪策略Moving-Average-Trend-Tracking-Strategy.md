@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17196add57260196fb3.png)
-[trans]
-#### 概述
-
-该策略基于DMI指标构建,通过监测+DI和-DI的交叉来判断股价趋势方向,配合ADX指标来识别趋势强弱,从而实现趋势跟踪。当+DI上穿-DI时作多头入场,当止损价触发或-DI下穿+DI时平仓。
-
-#### 策略原理
-
-该策略使用DMI指标的两个组成部分:+DI和-DI。+DI测量上升动量,+DI上穿-DI表明买盘的上升动量加强。-DI测量下降动量,-DI下穿+DI表明卖盘的下降动量加强。
-
-当+DI上穿-DI时,表示上升趋势形成,这时策略作多头入场。入场后,线性移动止损跟踪最高价的一定比例。当价格出现回落,止损价格会随之下降,在一定程度上锁住了之前的盈利。
-
-当-DI下穿+DI时,表示下降趋势取代,这时策略平仓。可通过ADX指标识别趋势的强弱,ADX越高,表明股价趋势越明显。因此,策略采用ADX作为辅助判断指标,只在ADX在某个区间内的时候才入场。
-
-总的来说,该策略捕捉股价趋势转折点,实现移动平均趋势跟踪。
-
-#### 策略优势分析
-
-该策略的优势主要体现在三个方面:
-
-1. 利用DMI指标判断股价趋势方向准确可靠。DMI比简单移动平均线等指标判断趋势转折更准确。
-
-2. 应用ADX指标识别趋势的强弱,避免在震荡行情中频繁交易。使策略更稳健。
-
-3. 线性移动止损机制,能够动态调整止损位置,在趋势反转时提前止损。并锁定部分利润,有效控制风险。
-
-4. 策略规则简单清晰,容易理解和实施,适合量化交易。
-
-#### 风险分析
-
-该策略的主要风险有:
-
-1. DMI指标在某些特殊市场中失效的可能性。DMI并不适用所有的市场,当趋势不明显时,容易产生错误信号。
-
-2. 股价出现跳空回落,超过止损点后再跌破的风险。留有一定缓冲余地可以降低这种风险。
-
-3. ADX参数设置不当的风险。ADX参数直接影响策略择时的结果,如果设置过大或过小都会影响绩效。
-
-4. 因为使用了线性移动止损方法,在快速上涨中易被止损出场的风险。这时可以根据具体情况调整止损跟踪参数。
-
-可以通过参数调优,严格止损,优化程序框架等方式进一步降低风险。
-
-#### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 利用MACD、KDJ等其他指标进行辅助判断,提高策略的稳定性。
-
-2. 测试不同的止损方式,如曲线移动止损、时间移动止损等方法。
-
-3. 增加仓位管理机制,在趋势方向确定后逐步加仓,提高盈利率。
-
-4. 结合高频因子、机器学习等方法动态优化DMI和ADX的参数,使策略更加智能化。
-
-5. 增加程序化风控模块,利用风险预算等方法严密控制最大回撤。
-
-通过多种手段配合,能够有效提升策略的效率、稳定性与安全性。
-
-#### 总结
-
-该策略整体运行逻辑清晰易懂,利用DMI指标判断股价趋势方向,ADX指标辅助判断趋势强度,线性移动止损方式有效控制风险。策略表现相对稳定,但仍需防范一定的风险。通过持续优化测试,逐步完善策略的稳健性与效率。相信该策略有望成为移动平均跟踪类策略的优秀代表。
-
-||
 
 #### Overview
 
@@ -133,7 +71,6 @@ Various means can be combined to effectively enhance strategy efficiency, stabil
 
 The overall logic of this strategy is clear and easy to understand, using the DMI indicator to determine price trend direction and the ADX indicator as an ancillary gauge of trend strength, with linear trailing stops effectively controlling risk. The strategy is relatively stable but still calls for caution against certain risks. Through continuous optimization and testing, incremental improvements can be made to strategy robustness and efficiency. It is believed that this strategy has the potential to become an excellent representative of moving average trend tracking strategies.
 
-[/trans]
 
 > Strategy Arguments
 

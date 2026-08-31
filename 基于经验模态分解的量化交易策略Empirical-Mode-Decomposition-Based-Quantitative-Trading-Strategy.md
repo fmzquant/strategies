@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a32ef6715c546b7e4d.png)
-[trans]
-
-## 概述
-
-本策略基于经验模态分解(Empirical Mode Decomposition,EMD)方法,对价格序列进行分解,提取不同波段的特征,并结合均值进行交易信号生成。该策略主要适用于中长线持仓。
-
-## 策略原理
-
-1. 使用EMD方法对价格做带通滤波,提取价格中的波动特征
-2. 计算得到峰值序列和谷值序列的移动平均
-3. 当均值线超过一定比例的峰值线和谷值线时生成交易信号
-4. 根据交易信号做多头或空头
-
-## 优势分析
-
-1. 使用EMD方法能有效分解价格序列,提取有用特征
-2. 峰谷线控制了策略只在价格波动大于一定幅度时才交易
-3. 结合均值线,可以有效滤除假突破
-
-## 风险分析 
-
-1. EMD方法参数选择不当可能导致过拟合
-2. 需要较长周期才能形成交易信号,无法适应高频交易
-3. 无法应对价格剧烈波动的市场环境
-
-## 优化方向
-
-1. 优化EMD模型的参数,提高对市场的适应性
-2. 结合其他指标作为止损止盈信号
-3. 尝试不同的价格序列作为策略输入
-
-## 总结
-
-本策略利用经验模态分解方法对价格序列进行特征提取,并基于提取的特征生成交易信号,实现了一个稳定的中长线交易策略。该策略优势在于能够有效识别价格中的周期性特征,并在大幅波动中发出交易指令。但也存在一定风险,需要进一步优化以适应更加复杂的市场环境。
-
-||
 
 
 ## Overview
@@ -81,7 +45,6 @@ This strategy is based on the Empirical Mode Decomposition (EMD) method to decom
 
 This strategy uses the empirical mode decomposition method to extract features from the price series and generates trading signals based on the extracted features, realizing a stable medium and long term trading strategy. The advantage of this strategy is that it can effectively identify periodic features in prices and issue trading orders during large fluctuations. But there are also certain risks, and further optimization is needed to adapt to more complex market environments.
 
-[/trans]
 
 > Strategy Arguments
 

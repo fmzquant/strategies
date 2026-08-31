@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过观察均线动量的持续情况,在连续上涨阶段做多,实现持续追涨操作。该策略属于趋势跟踪类策略,旨在持续捕捉多头行情的升势动能。
-
-策略原理: 
-
-1. 计算加权移动平均线,以反映价格动量。
-
-2. 当加权移动平均线连续5日上涨时,进行做多入场。
-
-3. 当加权移动平均线连续4日下跌时,进行多单离场。
-
-4. 通过持续上涨天数判断持久趋势,避免被短期调整反转。
-
-5. 设定最大止损,控制单日最大损失。
-
-该策略的优势:
-
-1. 跟踪持续上涨动能,可持久捕捉行情热点。
-
-2. 连续天数判断,有利于跳过短期调整震荡。 
-
-3. 最大止损设置可限制尾部风险。
-
-该策略的风险:
-
-1. 无法限制持续上涨后出现的回调损失。
-
-2. 若出现深度调整,可能带来较大亏损。
-
-3. 停损设定过于宽松,亦存在损失过大的风险。
-
-总之,该策略在判断到持续上涨后进行追涨,可有效捕捉行情热点。但需警惕深度回调的风险,适当调整止损参数,并做好充分的风险管理。
-
-||
 
 This strategy trades long during sustained momentum by observing persistent moving average uptrends, aiming to continuously ride the momentum of bull runs. It is a trend-following strategy focused on capturing upside momentum.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy persists in trading the momentum after identifying sustained uptrends, benefiting from hot trends. But deep pullback risks remain, requiring calibrated stops and prudent risk management.
 
-[/trans]
 
 > Strategy Arguments
 

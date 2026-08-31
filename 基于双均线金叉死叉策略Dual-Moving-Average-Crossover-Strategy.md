@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1155b1ddb5d164aa192.png)
-[trans]
-
-## 概述
-该策略是一种典型的移动平均线交叉策略,它同时使用两组均线,一组快均线,一组慢均线。当快均线上穿慢均线时产生买入信号;当快均线下穿慢均线时产生卖出信号。该策略同时使用EMA和SMA两种均线,组成两组快慢均线,快均线采用EMA计算,慢均线采用SMA计算。通过多组均线的确认,可以过滤掉一些假信号,提高信号的可靠性。
-
-## 策略原理
-
-该策略的主要逻辑是基于两组快慢均线的交叉来判断入场和出场时机。
-
-首先,分别计算两组快慢均线:
-
-- 第一组快速EMA,长度为8天
-- 第二组快速EMA,长度为21天  
-- 第一组慢速SMA,长度为50天
-- 第二组慢速SMA,长度为200天
-
-然后,判断快速EMA是否已经金叉或死叉慢速SMA:
-
-- 如果8日EMA上穿50日SMA,为金叉信号
-- 如果8日EMA下穿50日SMA,为死叉信号
-
-为了过滤假信号,增加了第二组EMA与SMA的确认:  
-
-- 只有当21日EMA也已经上穿或下穿50日SMA时,才会发出交易信号
-
-这样,通过两组快慢均线的确认,可以过滤掉许多假信号,从而提高信号的可靠性。
-
-当判断产生买入信号时,做多入场;当判断产生卖出信号时,做空入场。
-
-此外,该策略还设置了止盈止损逻辑。持仓时,会根据设置的盈亏比例来跟踪止盈和止损价格。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 使用双均线组合,可以有效过滤假信号,提高信号准确率
-2. 采用EMA和SMA的组合,结合了EMA对最新价格 변化的敏感性和SMA的平滑性
-3. 设置止盈止损,可以锁定利润,控制风险
-4. 简单明了的原理,容易理解和修改
-5. 可自定义参数,适用于不同市场环境
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 均线策略容易产生较多震荡小利润和小亏损
-2. 在趋势剧烈变化时,可能会产生较大亏损
-3. 参数设置不当也会使盈利成效不佳
-
-为了控制风险,建议:
-
-1. 适当调整参数组合,使之适应不同市场环境
-2. 根据回测结果优化参数,使策略更加适应目标市场  
-3. 设置止损以控制单笔亏损大小
-
-## 优化方向  
-
-该策略还可从以下几个方面进行优化:  
-
-1. 测试更多的快慢均线组合,寻找最佳参数组合
-2. 利用机器学习或遗传算法自动寻优参数
-3. 增加趋势判断指标,避免逆势交易
-4. 增加移动止损或游移止损,更好地锁定利润
-5. 结合交易量或波动性指标加强信号的可靠性
-6. 多策略/多品种组合,利用非相关性分散风险
-
-## 总结  
-
-整体来说,该双均线金叉死叉策略通过快慢均线的交叉形成交易信号,设置止盈止损控制风险,具有简单、直观、容易实现等特点。该策略可根据市场和需求进行参数优化,也可与其他技术指标或策略组合使用,在量化交易中具有很好的实用性。
-
-||
 
 ## Overview
 This strategy is a typical moving average crossover strategy that uses two sets of moving averages, one fast and one slow. When the fast moving average crosses over the slow moving average, a buy signal is generated. When the fast crosses below the slow, a sell signal is generated. The strategy uses both EMA and SMA for the moving averages, with EMAs as the fast lines and SMAs as the slow lines. Using multiple moving averages can help filter out false signals and improve reliability. 
@@ -149,7 +78,6 @@ The strategy can be further optimized by:
 ## Conclusion
 In summary, the dual MA crossover strategy generates signals with fast/slow MA crosses, sets take profit and stop loss to control risks, and is simple, intuitive and easy to implement. The parameters can be tuned and combined with other indicators for better performance. It has great utility in quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

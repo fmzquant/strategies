@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8354486a6ef9e8b807.png)
-[trans]
-## 概述
-双重反转策略是一个结合123反转和三日反转形态的量化策略,用于提高交易信号质量,减少风险。该策略采用差价指标与k线形态指标相结合的交易方式,当两种指标同时发出信号时进行交易,从而提高信号准确率。
-
-## 策略原理  
-双重反转策略结合了两种不同类型的交易策略,首先是123反转策略,该策略运用差价指标,在连续两天收盘价反转,且随机指标触发阈值时发出信号。另一种是三日反转形态策略,该策略观察三日k线,在中间日最低,且最后一日收盘价高于前一日最高价时发出信号。当两种策略同时发出同向信号时,即进行买入或卖出操作。  
-
-具体来说,123反转策略运用9日随机指标判断超买超卖现象。在价格连续两日下跌,且随机指标低于50时为买入信号;连续两日上涨,随机指标高于50时为卖出信号。三日反转形态策略则检测价格在三日内是否出现先高后低再高的模式。这显示了短期的超卖被反转的信号。  
-
-双重反转策略要求两种策略同时发出信号才会开仓。这将大大降低假信号率,使得系统只在高概率机会下进行交易。  
-
-## 优势分析
-相较于单一策略,双重反转策略有以下优势:  
-1. 提高信号质量,减少假信号  
-2. 双重指标验证,回撤概率更低  
-3. 充分发掘短期和中期反转机会  
-4. 容易理解与实施  
-
-## 风险与解决  
-双重反转策略的主要风险在于错过部分机会。因其对信号要求苛刻,一些单一指标交易机会将被错过。可以通过调整参数,放宽其中一个指标的条件,部分增加交易频率来解决。  
-
-另一个风险是某些极端行情中,双重指标同时失效的概率较大。针对这种情况,可以增加止损机制,迅速平掉持仓减少损失。或者根据历史经验证明失效的极端行情特征打消交易信号,避免开仓。
-
-## 优化建议  
-双重反转策略可以从以下几个方面继续优化:  
-1. 调整随机指标参数,提高对超买超卖的判断准确率  
-2. 测试不同交易品种下的效果,寻找最佳适用对象  
-3. 增加机器学习模型辅助判断,提高信号准确率  
-4. 结合更多市场统计特征,如交易量变化、日内波动等找出最佳开仓时机
-
-## 总结  
-双重反转策略成功结合了反转交易思想与k线形态分析。它充分发掘价格短期中期回归本质的规律,有效抓住反转提供的机会。相较于简单追随趋势的方法,本策略在控制风险与收益之间找到了平衡点。通过不断优化与创新,相信其投资价值会持续得到验证。
-
-||
 
 ## Overview
 The dual reversal strategy is a quantitative strategy that combines the 123 reversal and three-bar reversal pattern to improve signal quality and reduce risk. It adopts a trading approach using a combination of price differential indicators and candlestick pattern indicators, opening positions only when both indicate a signal, thereby increasing signal accuracy.
@@ -77,7 +43,6 @@ Further optimizations for the dual reversal strategy include:
 ## Conclusion
 The dual reversal strategy successfully combines mean-reversion principles with candlestick pattern analysis, fully capturing the cyclicality in prices. Compared to simple trend-following methods, it strikes a balance between risk and reward. With continual enhancements, the strategy's value will be validated over time.
 
-[/trans]
 
 > Strategy Arguments
 

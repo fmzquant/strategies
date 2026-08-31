@@ -9,76 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-这是一个结合ADX和RSI指标的趋势跟踪策略。策略利用RSI判断超买超卖情况发出交易信号,同时用ADX判断市场趋势,过滤掉趋势不明显的交易,可以有效避免震荡市场的套牢。
-
-### 策略原理
-
-1. 使用7周期RSI判断超买超卖
-
- - RSI低于30时视为超卖
- - RSI高于70时视为超买
-
-2. 使用ADX判断趋势
-
- - ADX高于30则认为趋势明显
- - ADX低于30则认为趋势不明显
-
-3. 入场规则
-
- - 当RSI低于30且ADX高于30时做多
- - 当RSI高于70且ADX高于30时做空
-
-4. 止盈止损
-
- - 有可选的止盈止损方式,可以选择收盘止盈止损或振荡止盈止损
- - 收盘止盈止损方式是以收盘价格为标准
- - 振荡止盈止损方式是以近期价格波动的最高最低点为标准
-
-### 优势分析
-
-1. RSI指标可以有效判断超买超卖点,减少买点陷阱和卖点陷阱
-
-2. ADX指标可以过滤掉趋势不明显的情况,避免在震荡行情中被套牢
-
-3. 可选的止盈止损方式可以更好地控制风险
-
-4. 策略简单明了,容易理解实现,适合新手学习
-
-5. 策略参数优化空间大,可以通过调整RSI周期、超买超卖区间、ADX平滑周期等参数进行优化
-
-### 风险分析
-
-1. RSI存在回调风险,超买超卖信号可能出现回调再反转
-
-2. ADX判断趋势存在滞后,可能错过趋势转折点
-
-3. 止盈止损点设定不合理可能带来亏损
-
-4. 策略较为朴素,存在超优化风险
-
-5. 需要进行参数优化以达到更好的效果
-
-### 优化方向
-
-1. 可以优化RSI的参数,调整超买超卖区間,找到最佳参数组合
-
-2. 可以测试不同周期的ADX,找到判断趋势最佳的参数
-
-3. 可以测试不同的止盈止损方式,找到最适合策略的设置
-
-4. 可以加入趋势过滤指标,避免逆势交易
-
-5. 可以结合其它指标进行组合,使策略更具优势
-
-### 总结
-
-本策略整合了RSI和ADX两个经典指标的优势,可以有效发现趋势且避开震荡,是一种简单实用的趋势跟踪策略。策略优化空间较大,通过调整参数组合可以获得更好的效果。总体来说,该策略适合作为新手学习算法交易的入门策略,也可以作为模块集成到更复杂的策略系统中。
-
-||
 
 
 ### Overview
@@ -148,7 +78,6 @@ This is a trend-following strategy that combines the ADX and RSI indicators. It 
 
 This strategy combines the strengths of the classic RSI and ADX indicators to identify trends and avoid whipsaws. It has much room for optimization to achieve better performance. Overall, it serves well as a beginner's introductory algorithm trading strategy, and can also be incorporated into more complex trading systems.
 
-[/trans]
 
 > Strategy Arguments
 

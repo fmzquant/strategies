@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17feedfc0552c428c69.png)
-[trans]
-
-## 概述
-
-该策略是一个将多个时间范围(1分钟、5分钟、15分钟、1小时和4小时)结合使用的突破策略,它检测图表上的支持和阻力区域。
-
-## 策略原理
-
-该策略使用布林带和价格通道来确定支持和阻力区域。首先,它根据每个时间范围的收盘价格计算出简单移动平均线(SMA)和标准差(STDEV),以此确定上下轨。然后它检测“突破方块”,这是根据价格从支持或阻力水平的突破情况以及交易量来确定的。当价格在高交易量突破支持或阻力水平时,就形成一个突破方块。
-
-一旦检测到突破方块,如果价格突破下轨,则产生买入信号;如果突破上轨,则产生卖出信号。该策略还为每个时间范围绘制价格通道,表示支持和阻力水平。
-
-此外,该策略为每个时间范围设置了止盈限制级别。这意味着为仓位指定的价格水平应以盈利的方式平仓。同时也设置了止损水平以限制亏损。
-
-## 优势分析
-
-- 利用多时间范围分析,更全面判断市场走势
-- 结合突破方块、布林带通道和交易量,使信号更加可靠 
-- 设置止盈止损,有助于风险控制
-
-## 风险分析
-
-- 布林带参数设置不当可能导致虚假信号
-- 突破可能是短期的市场噪音,从而产生套牢风险
-- 多时间范围判断增加了策略复杂度
-
-可以通过优化布林带参数,增加持仓时间或设置止损进一步规避风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化布林带参数,使上下轨更好反映真实的支持与阻力
-
-2. 增加机器学习算法判断突破方向和力度
-
-3. 增加股价波动率指标来确定最佳买入卖出时机
-
-4. 结合更多指标如MACD、KD等判断趋势和能量
-
-## 总结
-
-该策略整合多时间范围技术指标分析,通过突破交易、止盈止损管理风险,是一种灵活可靠的突破系统交易策略。但参数设置和风险控制仍需根据实际市场不断测试与优化。
-
-|| 
 
 ## Overview 
 
@@ -98,7 +53,6 @@ This strategy can be optimized in several aspects:
 
 This strategy integrates multi-timeframe technical analysis, manages risks through breakout trading and profit stop loss management. It is a flexible and reliable breakout system. But parameter tuning and risk control according to actual markets need continual testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

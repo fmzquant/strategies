@@ -10,22 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-该策略通过计算特定周期的最高价和最低价的简单移动平均线,并以此为基础发出买入和卖出信号。
-
-双峰回转交易策略运用了技术分析中的支持与阻力理论。该策略假设,价格在突破阻力或支持时,市场力量和价格动量会发生变化。具体来说,价格超过最近一段时期的最高点时,被视为突破上方阻力;而价格跌破最近一段时间的最低点时,则被视为下方支持被击穿。这两个界限的中间点被视为价值的中枢部分。
-
-双峰回转交易策略首先计算指定周期(默认29天)的最高价和最低价的简单移动平均。这生成两条轨道,代表着价格的上下限。然后,它计算这两条轨道之间的中间点,以确定买入和卖出的阈值。
-
-当价格上涨突破上轨时,生成买入信号;当价格下跌突破下轨时,生成卖出信号。交易者随后会以反向方式关闭头寸,也就是在价格重新跌破上轨时卖出,价格重新涨破下轨时买入。
-
-该策略的优势在于,它利用了突破引发的短期动量。当价格突破上下限时,短期内往往存在较大的价格波动。这为交易者提供了在突破发生后进行交易的机会。
-
-然而,该策略也存在一些风险。首先,选定的周期长度会对结果产生很大影响。如果周期太短,轨道会过于灵敏,产生大量虚假信号。如果周期过长,则无法及时捕捉新的趋势。此外,价格突破上下限后不一定会延续趋势,存在回调的可能。交易者需要调整止损点,控制风险。
-
-总体来说,双峰回转交易策略通过监测价格突破动力阈值的方式寻求交易机会。它把握了突破短期动量的优势,但也需要注意参数优化和风险控制。如果运用得当,该策略可以成为量化交易的有利工具。
-
-||
 
 This strategy generates buy and sell signals based on simple moving averages of the highest high and lowest low prices over a specified period.
 
@@ -40,7 +24,6 @@ The advantage of this strategy is that it capitalizes on the momentum triggered 
 However, there are also some risks with this strategy. First, the selected lookback period has a big impact on the results. If the period is too short, the bands will be too sensitive and generate many false signals. If the period is too long, it will fail to capture new trends in a timely manner. Also, prices breaking the upper or lower limit do not always continue the trend, and some reversion is possible. Traders need to adjust stop losses to control risk.
 
 In summary, the Dual Peak Reversal Trading Strategy seeks trading opportunities by monitoring price breakouts past momentum thresholds. It capitalizes on the advantage of breakout momentum in the short term, but also needs to pay attention to parameter optimization and risk control. When used properly, this strategy can be a beneficial tool for quantitative trading.
-[/trans]
 
 > Strategy Arguments
 

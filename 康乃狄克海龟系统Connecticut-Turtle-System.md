@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/149e13738c253e5c940.png)
-[trans]
-
-## 概述
-
-该策略是基于著名的海龟交易系统开发的,尽可能遵循原始规则。它是一个追踪趋势的系统,通过双均线形成进入和退出信号。
-
-## 策略原理
-
-- 使用最高价计算 N1 日线和 N2 日线(默认 20 日和 55 日)构建双均线。
-- 使用最低价计算 N3 日线和 N4 日线(默认 10 日和 20 日)构建双均线。  
-- 当收盘价超过 N2 日线时,做多;当收盘价低于 N4 日线时,平仓。
-- 做多后,每上涨一个 N 倍ATR(默认1倍),加仓一次,最多加仓5次。  
-- 设置一个固定止损,默认为入场价以下 N 倍ATR(默认 2 倍)。
-- 仅在上一交易为胜出后才允许进入新仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-- 遵循趋势交易原则,能够捕捉中长线趋势。 
-- 双均线形成过滤条件,避免在震荡中频繁交易。
-- 追踪止损设定合理,避免止损过于宽松或过于窄。
-- 采用参数化设置,方便调整系统的风险收益特征。
-- 允许加仓,能够在趋势中获得更多收益。
-
-## 风险分析 
-
-该策略也存在一些风险:
-
-- 在趋势反转时无法及时止损,可能带来较大亏损。
-- 加仓次数过多可能带来过度交易的风险。
-- 参数设置不当可能导致系统过于激进或保守。
-- 回测数据拟合风险,实盘效果可能弱于回测。
-
-可以通过以下方式降低风险:
-
-- 增加反转信号判断,如MACD背离等,减少逆势损失。
-- 优化参数,使系统的参数稳健。
-- 增加 Position Sizing 方法。在大亏损出现时降低仓位。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-- 增加空头交易逻辑,使策略能够在下跌行情中也获得收益。
-- 增加止损线优化模块,使止损线能随价格波动适当调整。
-- 增加仓位管理模块,优化每次加仓仓位的大小。
-- 结合趋势指数如ADX判断趋势强弱,避免错误交易。
-- 优化参数以获得更平稳的收益曲线。
-- 考虑实盘交易的滑点,手续费等交易成本。
-
-## 总结
-
-本策略通过追踪趋势获得收益,具有一定的回测优势。但实盘效果仍需检验,需要进一步优化参数稳健性,完善止损和仓位管理模块,才能使策略更适合实盘交易。总体来说,该策略思路合理,有很大的改进潜力。
-
-||
 
 
 ## Overview
@@ -121,7 +65,6 @@ The strategy can be improved in the following ways:
 
 The strategy profits by following the trend and has good backtest results. But real performance needs to be validated. Further optimization on parameter robustness, stop loss and position sizing is needed before applying it in live trading. Overall it has sound logic and much potential for improvement.
 
-[/trans]
 
 > Strategy Arguments
 

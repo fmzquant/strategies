@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7e4da9b90f24915d09.png)
-[trans]
-
-## 概述
-
-双均线震荡突破策略通过计算两条不同周期的均线,形成通道,判断价格震荡走势。当价格突破通道时,形成交易信号。该策略同时结合市场主流动向判断,避免错误突破。
-
-## 策略原理
-
-该策略主要通过两条移动均线形成上下通道,通道范围由平均真实波动范围ATR确定。具体来说,策略主要包括以下步骤:
-
-1. 计算两条均线,均线1周期短,均线2周期长。均线1反映当前价格趋势,均线2反映主流价格趋势。
-
-2. 在均线1上下各加一个ATR形成通道,ATR能反映当前市场波动性。
-
-3. 当价格从下向上突破通道时,形成买入信号;当价格从上向下突破通道时,形成卖出信号。
-
-4. 结合主流价格趋势判断,只有当短周期突破的方向与长周期趋势一致时,才产生真正的交易信号。
-
-通过上述步骤,该策略能捕捉价格震荡趋势中的突破点,同时结合主流趋势避免错误信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 运用双均线形成通道,能反映当前价格震荡范围。
-
-2. ATR参数的引入,使通道范围能实时跟踪市场波动率。
-
-3. 结合主流价格趋势判断,避免在震荡市场中产生错误信号。
-
-4. 策略判断规则清晰简单,容易理解实现,适合用来学习研究。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 在突破失败后容易形成错失良机。可以通过获利后移仓来降低此风险。
-
-2. 主流判断存在时间滞后,无法完全避免错误信号。可以适当调整均线参数来降低。
-
-3. 大幅震荡市场中,止损点容易被突破。可以通过实时调整ATR来应对市场波动。
-
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 计算均线的参数可进行优化,找到不同品种最优参数组合。
-
-2. ATR参数也可进行优化,使通道更好跟踪当下波动性。
-
-3. 增加附加过滤条件,如量能指标、波动指标等,进一步避免错误信号。
-
-4. 通过机器学习技术自动优化各参数,实现参数的动态调整。
-
-## 总结
-
-双均线震荡突破策略通过双均线通道和主流方向判断,实现了对震荡趋势的捕捉。该策略判断规则简单清晰,容易理解和实现,是理解和学习突破策略的绝佳案例。通过不断优化参数设定和信号过滤,该策略可以进一步增强稳定性和盈利能力。
-
-||  
 
 ## Overview
 
@@ -127,7 +67,6 @@ Ways to optimize this strategy:
 
 This dual MA oscillation breakthrough strategy captures oscillating trends through the double MA channel and mainstream filtering. With its simple and clear rules, it is an excellent example to learn breakthrough trading strategies. Further optimizations in parameters and signal filtering can enhance its profitability and stability.
 
-[/trans]
 
 > Strategy Arguments
 

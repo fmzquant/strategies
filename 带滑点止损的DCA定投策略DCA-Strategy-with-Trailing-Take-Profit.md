@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13aa367f64e0285816f.png)
-[trans]
-#### 概述
-
-该策略将美元成本平均法(Dollar Cost Averaging, DCA)与交易所平台上的止盈滑点(Trailing Take Profit)功能相结合。它设置了1%的价格偏差用于购买,并针对每次出售目标0.5%的利润。这种微小利润的理由是为了确保交易机器人平稳运行,避免在市场缓慢期被困住的风险。根据回测结果,该机器人已被证明足够适应市场波动和操纵。尽管年化收益率(Annual Percentage Rate, APR)可能不会特别高,但它提供了一个满意和安全的长期投资选择,通常优于传统的买入并持有(Buy and Hold, HODL)策略。
-
-#### 策略原理
-
-该策略首先设置了滑点止损百分比、最大DCA订单数、价格偏差百分比等可配置参数。然后它会追踪上次买入价格、买入次数、初始买入价格和滑点止损价格等变量。在买入逻辑上,如果当前价格低于上次买入价格的(1 - 价格偏差百分比),且买入次数还没有达到最大DCA订单数,则会发出买入信号并记录本次买入价格。在卖出逻辑上,如果当前价格高于上次买入价格的(1 + 止盈百分比),则会设置一个滑点止损价格。如果价格继续上涨突破该滑点止损价格,则更新滑点止损价格为当前价格的(1 - 滑点百分比)。如果价格下跌突破滑点止损价格,则发出卖出信号,同时重置相关变量,准备开始新一轮的DCA买入。
-
-#### 策略优势
-
-1. 结合了DCA定投和滑点止损,既确保了定期定额买入的成本平均效果,也锁定了部分利润避免回撤。
-
-2. 滑点止损机制灵活,可以根据市场情况来调整止盈幅度和滑点比例,降低风险。
-
-3. 回测表现优于传统的买入持有策略,年化收益率平稳,适合长线投资。
-
-4. 实现简单,参数设置灵活,易于在主流交易所平台上实际应用。
-
-#### 策略风险
-
-1. DCA买入次数有限,如果行情长期下跌,亏损可能扩大。
-
-2. 滑点止损设置不当可能导致利润频繁锁定,或亏损扩大。
-
-3. 交易成本会对利润产生一定影响。高滑点止损设置会增加交易次数。 
-
-4. 需要足够的资金支持频繁的DCA买入。初始资金不足可能导致买入次数不enough。
-
-#### 策略优化
-
-1. 可以设置浮动滑点止损,当利润达到一定比例时逐步减小滑点。
-
-2. 结合均线指标,在关键支持位附近加大买入份额。
-
-3. 加入重新平衡机制,根据总资产调整每次DCA购买金额。
-
-4. 优化参数设置,测试不同持仓周期下的收益率。
-
-#### 总结
-
-该策略整合了DCA定投和滑点止损方法,实现了长期稳定收益的量化交易。回测表现良好,适合那些追求稳健增长的投资者。代码简洁易于理解实现。通过优化参数设置和结合其他指标,可以获得更好的实盘效果。总的来说,该策略为投资者提供了一个相对安全平稳的自动化量化交易方案。
-
-||
 
 #### Overview
 
@@ -97,7 +53,6 @@ The strategy first sets configurable parameters like trailing stop percentage, m
 
 This strategy combines DCA and trailing stops for steady algorithmic trading returns over long periods. Backtested results are strong and suitable for investors focused on stable growth. Simple and clean code makes it easy to understand and implement. Further performance gains can be achieved through parameter optimization and incorporating additional indicators. Overall it provides investors with a relatively safe and consistent quantified trading solution.
 
-[/trans]
 
 > Strategy Arguments
 

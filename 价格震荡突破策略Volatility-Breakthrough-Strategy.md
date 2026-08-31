@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ee9d0469967007f329.png)
-[trans]
-
-## 概述
-
-震荡突破策略是一个利用价格震荡形态,在价格突破关键支撑或阻力位时进行买卖操作的策略。该策略结合多种技术指标识别关键交易机会。
-
-## 策略原理
-
-该策略主要基于布林带中线、48日简单移动平均线(SMA)、MACD和ADX四个技术指标。具体逻辑是:
-
-1. 当收盘价上穿或下穿48日SMA时,考虑交易机会;
-
-2. 当收盘价突破布林带中线时,作为进场信号; 
-
-3. MACD要大于或小于0,作为确定趋势方向的辅助指标;
-
-4. ADX要大于25,以过滤掉非趋势行情。
-
-满足以上四个条件时,做多或做空。
-
-## 策略优势
-
-这是一个结合趋势和震荡指标的策略。其主要优势有:
-
-1. 48日SMA过滤掉过度频繁交易,锁定中长线趋势;
-
-2. 布林带中线突破把握关键支撑阻力突破点,具有很强的止损功能;
-
-3. MACD判断大趋势方向,避免逆势交易;
-
-4. ADX过滤非趋势市场,提高策略胜率。
-
-综上,该策略在控制交易频率、把握关键点、判断趋势和过滤无效行情等多个方面做了优化,胜率较高。
-
-## 策略风险
-
-该策略主要存在以下风险:
-
-1. 震荡市场中,布林带中线频繁触发交易机会,可能过度交易;
-
-2. ADX指标在判断趋势和无效行情时,也存在一定误差; 
-
-3. 回撤风险较大,适合有一定风险承受能力的投资者。
-
-## 策略优化
-
-该策略可从以下几个方面进行进一步优化:
-
-1. 增加ATR指标,设定止损位,减小单笔止损;
-
-2. 优化布林带参数,降低中线触发频率;
-
-3. 增加交易量或趋势强度指标判断趋势强弱,避免弱势逆转。
-
-## 总结
-
-综上所述,该震荡突破策略整体较为成熟,有效把握震荡行情中的关键交易点。它结合趋势和震荡指标,把握风险与收益之间的平衡。通过进一步优化,可望获得更稳定的超额收益。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ This strategy can be further optimized in the following aspects:
 
 In summary, this Volatility Breakthrough Strategy is relatively mature as a whole, effectively capturing key trading points in volatile markets. It combines trend and volatility indicators, balancing between risk and return. With further optimization, it is expected to obtain more steady excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

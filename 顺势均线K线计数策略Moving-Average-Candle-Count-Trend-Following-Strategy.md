@@ -9,59 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述 
-
-本文将介绍一种基于K线计数的追随趋势策略。该策略通过统计K线的方向,判断行情走势,并在固定根K线后入场。
-
-## 策略原理
-
-该策略基于以下原理:
-
-1. 统计K线的方向,判断行情Bias。当N根连续K线方向相同时,判断趋势形成。
-
-2. 在上涨趋势中,当出现N根连续阴线时做多;在下跌趋势中,当出现N根连续阳线时做空。
-
-3. N的值较小,可使策略更快捕捉趋势;但N值过小也更容易被震荡市场误导。
-
-4. 可设定固定止盈止损点,以锁定利润和控制风险。
-
-5. 反转K线出现时,平仓止盈。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用K线统计判断趋势,简单直接,容易操作。
-
-2. 顺势入场,可充分捕捉趋势行情。
-
-3. 固定止盈止损点,可以有效控制风险。
-
-4. K线计数参数可调,适用于不同市场环境。
-
-5. 策略思路简单清晰,容易修改和优化。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 在震荡行情中,K线计数可能发出错误信号。
-
-2. 固定止盈止损点可能过于死板,无法充分获利。
-
-3. 反转信号判断不当可能导致过早止损。
-
-4. 应适当调整参数,并控制仓位规模。
-
-5. 交易者需谨慎评估计数参数的合理性。
-
-## 总结
-
-该策略整合了K线统计和趋势追随的理念。在参数设定合理的前提下,可产生不错的效果。但交易者仍需审慎评估市场环境,并适当调整参数,才能取得长期利润。
-
-||
 
 ## Overview
 
@@ -113,7 +60,6 @@ There are also risks to consider:
 
 This strategy combines candle counting and trend following. With proper tuning, it can produce decent results. But traders should evaluate markets carefully and adjust parameters for long-term profits.
 
-[/trans]
 
 > Strategy Arguments
 

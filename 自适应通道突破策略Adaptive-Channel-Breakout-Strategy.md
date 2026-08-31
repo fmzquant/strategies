@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a02903c6a69880274f.png)
-[trans]
-## 概述
-
-自适应通道突破策略(Adaptive Channel Breakout Strategy)是一种追踪市场价格通道的趋势策略。它通过计算指定周期的最高价和最低价来确定价格通道,并在价格突破通道时发出交易信号。
-
-该策略的优点是可以自动适应市场变化,通过扩大通道来过滤噪音,在趋势明确时产生交易信号。但是也存在追高杀跌的风险。通过优化参数可以减少不必要的交易,提高盈利率。
-
-## 策略原理  
-
-该策略基于通道突破理论。它同时计算两组不同周期(入市长度和出市长度)的最高价和最低价,形成通道。当价格超过通道时就产生信号。
-
-具体来说,策略先计算20周期(入市长度)的最高价upper和最低价lower,形成价格通道。然后它再计算10周期(出市长度)的最高价sup和最低价sdown。在买入信号触发(价格超过上轨)后,以10周期的最低价sdown为止损线。在卖出信号触发(价格跌破下轨)后,以10周期的最高价sup为止盈线。这样就形成了一个自适应的通道。
-
-当价格突破通道时,表明趋势正在形成,这时策略会发出交易信号。同时,止盈止损线也会随价格变化进行调整,从而锁定利润,避免损失。
-
-## 策略优势
-
-- 自动适应市场变化。该策略的通道会根据最近价格自动调整,在趋势开始时 Expanding了通道范围来过滤噪音。
-- 强势断裂交易。仅在价格高位突破上轨或低位跌破下轨时才入场,避免追高杀跌。  
-- 风险控制机制。采用不同周期计算的止盈止损线,可以灵活锁定利润,避免损失扩大。
-- 策略简单易实现。仅需两个参数,testdata容易取得,适合量化交易。  
-
-## 风险分析
-
-该策略主要存在以下风险:  
-
-- 追高杀跌风险。当通道范围过大时,存在追高买入和杀跌卖出的风险。可以通过优化参数减少不必要交易。
-- 止损风险。固定周期的止损线可能过于死板,可以考虑采用自适应ATR止损。 
-- 交易频率过高风险。参数设置不当可能导致交易次数过于频繁。可以考虑加入过滤条件以控制交易频率。
-- 市场异常风险。该策略基于历史数据判断未来趋势,当市场发生重大变化时可能失效或亏损。
-
-## 策略优化
-
-该策略还存在以下优化空间:  
-
-- 结合趋势指标过滤信号。可以引入EMA或MACD等趋势指标,只在趋势方向与通道突破方向一致时才入场。
-- 引入自适应ATR止损。使用平均真实波幅计算的自适应止损线,可以更好控制单笔损失。
-- 优化参数组合。可以通过更多组合测试找出参数优化组合,进一步提高策略盈利率。 
-- 结合机器学习技术。使用神经网络或遗传算法生成动态参数,使策略更具鲁棒性。
-
-## 总结  
-
-自适应通道突破策略整体思路清晰,具有较强的可行性。它能够自动跟踪市场变化,在趋势形成时产生交易信号。同时设置两套周期的通道和止盈止损机制控制风险。该策略可以通过参数优化、引入过滤条件等方式进一步提升稳定性和盈利能力。值得进一步实盘验证和优化改进。
-
-||
 
 ## Overview
 
@@ -99,7 +54,6 @@ The potential optimizations of this strategy include:
 
 The Adaptive Channel Breakout Strategy has clear logic and strong feasibility overall. It can automatically track market changes and generate trading signals when trends form. The dual-channel and stop loss/take profit mechanisms also help control risks. This strategy can be further enhanced in stability and profitability through parameter optimization, filtering conditions, etc. It is worth further live trading verification and refinement.
 
-[/trans]
 
 > Strategy Arguments
 

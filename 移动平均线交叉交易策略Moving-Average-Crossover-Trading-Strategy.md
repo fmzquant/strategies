@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c0b459113bd7fc17e4.png)
-[trans]
-
-### 概述
-
-移动平均线交叉交易策略通过计算不同周期的移动平均线,在它们发生金叉或死叉时进行买入或卖出操作,属于技术分析类交易策略。该策略简单易行,资金占用少,回撤较小,适合中长线操作。
-
-### 策略原理  
-
-该策略通过计算20周期和50周期的指数移动平均线(EMA)。当20周期EMA上穿50周期EMA时,进行买入操作。当20周期EMA下穿50周期EMA时,进行卖出操作。
-
-EMA指指数移动平均线,它对最近的数据给予较大权重。EMA的计算公式为:
-
-EMAtoday = (Pricetoday * k) + EMAyesterday * (1-k)
-
-其中,k = 2/(周期数+1)
-
-这样,当短期EMA上穿长期EMA时,表示价格走势转 bullish,LONG;当短期EMA下穿长期EMA时,表示价格走势转 bearish,SHORT。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 操作简单,容易理解执行。
-2. 资金占用少,回撤较小,有利于资金管理。
-3. 参数调整灵活,可针对不同市场定制。
-4. 可在任何品种上应用,适用于日内和趋势交易。
-
-### 风险及优化
-
-该策略也存在以下风险:  
-
-1. 价格震荡时,会出现频繁的交易信号,需要考虑过滤手段。
-2. 在突破买卖点挂单易被套牢,需要考虑止盈止损。 
-3. 交易受困于参数优化,需要更多历史数据验证。
-
-因此,该策略可从以下几个方面进行优化:
-
-1. 加入布林线指标等过滤器,减少虚假信号。
-2. 加入止盈止损逻辑,避免套牢。
-3. 针对不同品种寻找最佳参数组合。
-4. 结合交易量指标等确认买卖信号。
-
-### 总结
-
-移动平均线交叉交易策略属于简单有效的技术交易策略,它易于理解实施,历经市场检验。通过参数优化、加入辅助条件等手段,可以进一步减少交易风险,提高策略稳定性。该策略可以成为量化交易的一个基础模块。
-
-||
 
 ### Overview
 
@@ -102,7 +55,6 @@ Enhancements:
 
 The moving average crossover strategy is a simple yet effective technical strategy that is proven by the market. Further improvements on risk control and robustness can be achieved by parameter tuning, adding filters etc. It serves as a fundamental building block for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

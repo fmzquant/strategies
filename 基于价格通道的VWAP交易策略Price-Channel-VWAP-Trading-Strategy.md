@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b39fdf6004987758ec.png)
-[trans]
-## 概述
-
-本策略名称为“Price Channel VWAP Trading Strategy”,它是一个基于价格通道来实现VWAP交易的策略。该策略的主要思想是:在价格通道内,利用VWAP指标的均线及其上下偏移通道线来进行买卖点判断,在突破通道线时按照固定头寸占总资产的百分比进行开仓,在回归VWAP均线时平仓。
-
-## 策略原理  
-
-该策略通过VWAP指标计算当前价格的平均成交价。VWAP代表价格的平均价,是成交额和成交量的比值。VWAP指标反映了当前价格和历史成交平均价的偏离程度。  
-
-策略使用VWAP指标的均线及其偏移通道线。偏移通道线的比例通过参数“longlevel1”和“shortlevel1”设置。当价格突破上偏移通道线时,按照参数“lotsizelong”的头寸百分比开多单;当价格突破下偏移通道线时,按照参数“lotsizeshort”的头寸百分比开空单。开仓后当价格回归到VWAP均线附近时,选择平仓离场。
-
-该策略的参数设置充分反映了通道交易的思路。用户可以根据自己的偏好,调整通道宽度和头寸占比大小,从而实现不同程度的交易频率。
-
-## 优势分析
-
-该交易策略具有以下几个优势:
-
-1. 使用VWAP指标判断价值中枢,能捕捉市场主流方向  
-2. 通道范围内交易,避免noise干扰,使操作更明确  
-3. 不同层级通道组合操作,分批分步部署,降低风险  
-4. 回归操作及时止盈,避免快速反转带来的亏损
-
-由于VWAP指标能很好地反映价格的平均水平,基于其通道线进行交易,可以有效锁定价值中枢,避免被短期波动带偏。同时采用不同参数通道进行组合,分批建仓,能够有效控制风险,防止单边风险集中爆仓。最后,通过及时止盈回归VWAP均线附近平仓,可以减少价格反转造成的损失。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:  
-
-1. VWAP指标对高频交易不敏感,无法反映极端价格异常  
-2. 通道宽度参数设置不当可能导致过于激进交易  
-3. 回归操作平仓范围如果太宽可能带来套牢损失  
-
-VWAP指标对高频交易波动不敏感,如果遇到价格极端跳空或短期异常,依然会引发不必要的交易信号和亏损。此外,如果通道参数设置过于宽松,会容易形成价格穿透无效信号。最后,回归操作的平仓范围如果设置太宽,可能错过最佳止盈时机而套牢损失。 
-
-对策是合理评估参数设置,适当调整通道参数;同时结合其他指标判断价格异常,避免盲目跟单;最后评估不同层级通道及回归范围的参数优化,实现更好的止盈效果。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加通道的层级,进行参数组合优化  
-2. 结合交易量指标判断突破的有效性  
-3. 增加止损策略,设置回撤比例止损
-
-可以增加更多层级的通道线,并组合参数进行优化,实现更稳定的交易效果。此外,可以加入交易量的判断规则,避免无效的价格跳空造成交易亏损。最后,也可以设置止损规则,当持仓亏损达到一定比例时止损离场,有效控制风险。
-
-## 总结  
-
-本策略将VWAP指标与价格通道结合,实现了相对稳定的交易策略。策略参数设置灵活,用户可以根据自己的偏好进行调整。该策略能有效判断价值中枢方向,通过参数组合及分批建仓,实现稳定的盈利效果。虽然策略也存在一定改进空间,但总体来说是一种实用性较强的量化交易策略。
-
-||  
 
 ## Overview  
 
@@ -111,7 +60,6 @@ More levels of channel lines can be added and parameters combined for optimizati
 
 This strategy combines the VWAP indicator with price channels to achieve a relatively stable trading strategy. The strategy parameter settings are flexible for users to adjust according to their own preferences. This strategy can effectively determine the direction of value midpoints. Through parameter combination and batch building of positions, stable profitability can be achieved. Although there is still room for improvement in the strategy, overall it is a quantitative trading strategy with high practicality.
 
-[/trans]
 
 > Strategy Arguments
 

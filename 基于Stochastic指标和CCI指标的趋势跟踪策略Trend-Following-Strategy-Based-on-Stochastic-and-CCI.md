@@ -11,52 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14ebb69cac019a9886b.png)
 
-[trans]
-
-## 概述
-
-该策略结合了Stochastic指标和CCI指标,以识别趋势方向,利用Rate of Change指标过滤掉震荡趋势,实现对趋势的跟踪。策略采用突破入场,止损出场的交易方式。
-
-## 策略原理
-
-1. Stochastic指标判断多空形态  
-    当Stochastic指标上穿其最近一个bar时为买入信号,下穿其最近一个bar时为卖出信号
-2. CCI指标判断趋势方向  
-    CCI大于0为多头市场,小于0为空头市场
-3. Rate of Change指标过滤震荡趋势  
-    设置Rate of Change的参数,判断价格是否处于活跃的趋势中
-4. 入场和出场规则  
-    买入信号:Stochastic上穿最近一个bar且CCI大于0且价格趋势活跃  
-    卖出信号:Stochastic下穿最近一个bar且CCI小于0且价格趋势活跃  
-    止损 exit: 长线 3% 止损,短线 3% 止损
-
-## 优势分析
-
-1. 结合Stochastic指标和CCI指标判断趋势方向,精确率较高  
-2. Rate of Change指标可有效滤掉震荡趋势,避免无效交易
-3. 多空双向交易,可捕捉不同类型的趋势
-4. 突破入场追趋势,及时把握趋势机会 
-5. 严格止损规避重大损失,有效控制风险
-
-## 风险分析
-
-1. 策略参数设置不当可能导致过于保守或激进  
-2. 指标作用有限,极端行情下可能失效
-3. 突破入场会略过趋势初期,部分利润被切割  
-4. 止损过小容易被突破,过大则风险控制不当
-
-## 优化方向
-
-1. 参数优化。改进参数设置,寻找最优参数组合  
-2. 多标配合。加入更多判断趋势的指标,提高决策效果  
-3. 积极止损。设置追踪止损或时间步移止损,减少止损被突破概率
-4. 风险评估。加入最大回撤等风险指标约束,全面控制风险敞口
-
-## 总结
-
-该策略整合 Stochastic、CCI 和 Rate of Change 三大指标判断趋势方向,以突破追踪的方式把握趋势机会。策略优势在于指标搭配判断准确,有效过滤震荡行情,通过严格的止损控制风险。下一步可从参数优化、多标配合、止损策略等方面进行改进,使策略更稳健、灵活。
-
-|| 
 
 ## Overview
 
@@ -101,7 +55,6 @@ This strategy combines Stochastic indicator and CCI indicator to identify trend 
 
 This strategy judges trend direction by integrating Stochastic, CCI and Rate of Change indicators, and catches trend opportunity with breakout tracking. Its pros lie in accurate judgment empowered by indicator combination, filtering of range-bound market, and strict stop loss for risk control. The next step is to further improve the strategy via parameter optimization, multiple indicators, stop loss strategy to make it more robust and flexible.
 
-[/trans]
 
 > Strategy Arguments
 

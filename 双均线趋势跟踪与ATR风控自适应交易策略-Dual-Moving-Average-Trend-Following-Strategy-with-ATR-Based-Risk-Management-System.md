@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c624134d4e3e68577a.png)
 
-[trans]
-#### 概述
-本策略是一个结合了经典双均线趋势跟踪和ATR动态风控的自适应交易系统。策略提供了两种交易模式:基础模式采用简单的双均线交叉进行趋势跟踪,高级模式增加了更高时间框架的趋势过滤和基于ATR的动态止损机制。策略通过简单的下拉菜单即可在两种模式间切换,既照顾到初学者的易用性,又满足资深交易者对风险控制的需求。
-
-#### 策略原理
-策略1(基础模式)采用21日和49日双均线系统,当快速均线向上穿越慢速均线时产生做多信号。获利目标可以选择百分比或点数方式,同时提供可选的移动止损功能来锁定利润。策略2(高级模式)在双均线系统基础上增加了日线级别的趋势过滤,只有当价格处于更高时间框架均线之上时才允许入场。同时引入了基于14周期ATR的动态止损,止损距离随市场波动性自动调整,并提供部分获利了结功能保护既得利润。
-
-#### 策略优势
-1. 策略具有极强的适应性,可根据交易者经验水平和市场环境灵活切换
-2. 高级模式中的多时间框架分析提高了信号质量
-3. ATR动态止损能够适应不同市场波动条件
-4. 部分获利机制平衡了利润保护和趋势延续
-5. 参数配置灵活,便于根据不同市场特征优化
-
-#### 策略风险
-1. 双均线系统在震荡市可能产生频繁假信号
-2. 趋势过滤可能造成信号滞后,错过一些交易机会
-3. ATR止损在波动率突变时可能不够及时
-4. 部分获利可能过早减仓,影响大趋势利润
-
-#### 策略优化方向
-1. 可以增加成交量和波动率指标过滤假信号
-2. 考虑引入动态参数自适应机制,根据市场状态自动调整均线周期
-3. 对ATR计算周期进行优化,平衡灵敏度和稳定性
-4. 增加市场状态识别模块,自动选择最优策略模式
-5. 引入更多止损方案供选择,如追踪止损、时间止损等
-
-#### 总结
-这是一个设计合理、功能完善的交易策略系统。通过双均线趋势跟踪和ATR风控的结合,既保证了策略的可靠性,又提供了良好的风险管理。双模式设计满足不同层次交易者需求,丰富的参数设置提供了充分的优化空间。建议交易者在实盘中从保守参数开始,逐步调整优化以达到最佳效果。
-
-|| 
 
 #### Overview
 This strategy combines classic dual moving average trend following with ATR-based dynamic risk management. It offers two trading modes: a basic mode using simple moving average crossovers for trend following, and an advanced mode incorporating higher timeframe trend filtering and ATR-based dynamic stop-loss mechanisms. Traders can switch between modes via a simple dropdown menu, catering to both beginners' ease of use and experienced traders' risk management needs.
@@ -71,7 +40,6 @@ Strategy 1 (Basic Mode) employs a 21 and 49-day dual moving average system, gene
 
 #### Summary
 This is a well-designed and comprehensive trading system. The combination of dual moving average trend following and ATR-based risk management ensures both reliability and effective risk control. The dual-mode design meets the needs of different trader levels, while rich parameter settings provide ample optimization opportunities. Traders are advised to start with conservative parameters in live trading and gradually optimize for best results.
-[/trans]
 
 
 

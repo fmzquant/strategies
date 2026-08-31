@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6f370dfc90bdd3f010.png)
 
-[trans]
-
-### 概述
-
-该策略通过计算EMA指数移动平均线和MACD指标,结合二者的交叉信号来判断入场和出场。当价格上穿EMA线且MACD线上穿信号线时做多;当价格下穿EMA线且MACD线下穿信号线时做空。
-
-### 策略原理
-
-该策略使用EMA指数移动平均线判断当前趋势方向。同时使用MACD指标的双均线交叉来产生买卖信号。只有当价格突破EMA线时,才判断MACD的金叉死叉信号。这样可以避免错误的信号。
-
-该策略主要基于移动平均线交易策略与MACD交易策略的优点。移动平均线能比较好地判断趋势方向。MACD指数平滑移动平均线的快慢线交叉则可以提示买卖点位。二者结合使用,可以提高信号的准确性。
-
-### 优势分析
-
-该策略结合EMA和MACD双重指标判断,可以有效过滤掉一些错误信号,提高信号质量。同时,EMA判断主趋势,MACD判断具体买卖点位,二者互补,可以取得较好收益。
-
-另外,该策略仅在价格突破EMA均线时才考虑MACD信号,避免了在震荡行情中出现错误交易。这也增强了策略的稳定性。
-
-### 风险分析
-
-该策略主要风险在于参数设置。如果EMA和MACD的参数设置不当,则会错过信号或者产生错误信号。此外,如果行情趋势发生转折,策略会产生一定亏损。
-
-为降低风险,应适当调整参数,使EMA和MACD的参数匹配当前市场周期。同时建议采用止损来控制单笔损失。当市场进入磨底或者触及支撑位时,应考虑适当停止交易,避免持续亏损。
-
-### 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 动态优化参数,使EMA和MACD的参数能根据实时行情和周期进行调整,保证参数的有效性
-
-2. 增加其他指标结合,如BOLL通道或KD指标等,丰富策略信号
-
-3. 采用机器学习方法自动优化策略参数,并根据回测结果调整参数
-
-4. 在突破EMA均线时,判断方向强度,避免假突破
-
-5. 增加止盈止损策略,以锁定利润并切损
-
-### 总结
-
-该均线交叉量化策略结合EMA和MACD双重指标,可以有效产生高质量信号。优化参数设置、增加止损止盈、加入其他指标等都可以进一步增强策略稳定性和盈利能力。该策略有效而简单,对于量化交易者具有很好的参考和应用价值。
-
-||
 
 ### Overview  
 
@@ -95,7 +52,6 @@ The following aspects of the strategy can be optimized:
 
 The moving average crossover quantitative strategy combines dual EMA and MACD indicators to effectively generate high quality signals. Optimizing parameter settings, adding stop loss/profit taking, adding other indicators, etc. can further enhance the stability and profitability of the strategy. This effective and simple strategy has great reference and application value for quantitative traders.
 
-[/trans]
 
 > Strategy Arguments
 

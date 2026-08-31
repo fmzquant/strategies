@@ -10,26 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略名称为“自适应ATR追踪止损策略”。该策略使用ATR指标设定止损点,并在入场后将止损从紧固转为宽松,目的是追踪趋势运行而又控制风险。
-
-策略的具体逻辑如下:
-
-1. 计算一定周期内的最高价和最低价范围作为入场信号,当价格突破该范围时产生入场信号。
-
-2. 入场后,最初采用较紧的ATR止损,止损点固定为ATR值的1.5倍。这可以限制入场后的损失。
-
-3. 在持仓阶段,将止损转为更宽松的ATR值4倍。止损继续追踪价格运行,但有更大空间allows需势继续延伸。
-
-4. 最后止损点始终跟踪最低价(多单)或最高价(空单),随价格波动调整,实现追踪止损效果。
-
-5. 价格跌破止损点(多单)或上破止损点(空单)时止损出场。
-
-该策略的优势在于,采用自适应的止损机制,既保证了风险控制,也avoids过早止损。但ATR参数和倍数需优化,并配合趋势判断使用止损策略。
-
-总体来说,动态追踪止损是提高策略获利概率的重要手段。灵活运用止损,能更好地维持趋势获利和控制风险。
-
-||
 
 This strategy is named "Adaptive ATR Trailing Stop Loss Strategy". It uses the ATR indicator to set stop loss levels, and switches from a tight stop to a loose stop after entry to follow trends while controlling risk.
 
@@ -49,7 +29,6 @@ The advantage of this strategy is using an adaptive stop loss mechanism to ensur
 
 In conclusion, dynamic trailing stops are important means to improve profitability. Flexible stop loss application can better maintain trend profits and control risks.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种应用ATR作为止损、均线作为入场的量化交易策略。该策略同时结合威廉指标进行信号验证,以控制交易风险。
-
-一、策略原理
-
-该策略的核心指标包括:
-
-1. ATR作为止损指标,它能动态反映市场波动程度;
-
-2. 一目均衡线判断趋势方向提供入场信号;
-
-3. 威廉指标进行额外验证,避免假入场。
-
-具体交易逻辑如下:
-
-当价格跌破一目均衡线而后收复时,做多;当价格突破均线而后跌破时,做空。这可以进行趋势追踪。
-
-同时,检查威廉指标是否与方向一致,若不一致则放弃入场。这可以过滤假信号。
-
-每次入场时候,设置以ATR计算的止损点。ATR能动态反映市场波动程度,进而设置合理的止损幅度。
-
-当止损或止盈水平触发时,平仓盈利。
-
-二、策略优势
-
-该策略主要优势如下:
-
-首先,ATR止损根据市场波动度设置风险控制,可以有效规避大额亏损;
-
-其次,均线入场结合威廉指标验证,可以提高信号质量;
-
-最后,止损止盈设置也使每单交易具有定义的风险回报。
-
-三、潜在风险
-
-然而,我们也应考虑以下风险:
-
-首先,在趋势突变时,均线信号可能滞后,无法及时反应;
-
-其次,止损过于激进可能造成止损被突破;
-
-最后,参数优化不当也可能导致过拟合。
-
-四、内容总结
-
-本文详细介绍了一种以ATR为止损、均线为入场依据的量化交易策略。它可以通过动态止损和信号过滤实现良好的风险控制效果。但我们也要防范趋势突变、止损被突破等问题的发生。总体来说,该策略提供了一种简单有效的趋势跟踪方法。
-
-||
 
 This article explains in detail a quantitative trading strategy that uses ATR for stop loss and Kijun-Sen breakouts for entry, with additional signal validation using the Williams %R indicator to control trading risk.
 
@@ -106,7 +57,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative trading strategy using ATR for stop loss and Kijun-Sen for entry signals. It can achieve effective risk control through dynamic stops and signal filtering. But risks like trend transitions and stop loss invalidation need to be prevented. Overall, it provides a simple and effective trend following methodology.
 
-[/trans]
 
 > Strategy Arguments
 

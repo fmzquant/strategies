@@ -11,30 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于三重指标云形态的趋势跟踪策略”。该策略利用三种不同类型的趋势指标,整合形成云形态,在价格突破云形态时进行趋势跟踪交易。
-
-策略采用以下三种指标:
-
-考夫曼自适应移动平均线,能灵敏捕捉市场波动;
-
-赫尔移动平均线,具有平滑转折特点,可过滤假信号; 
-
-超趋止损机制,建立价格通道,避免追高杀跌。
-
-这三者共同形成云形态,云顶为三者的最高值连线,云底为最低值连线。
-
-具体交易逻辑:
-
-当K线高点突破云顶时,表明突破上升趋势通道,产生买入信号;
-
-当K线收盘价或低点下破云底时,表示下跌趋势开始,平掉多单。
-
-该策略的优势是指标组合判定趋势状态较为准确,降低假信号。但参数优化仍然关键。止损策略也必不可少。
-
-总体来说,多指标集成判断趋势是一种常见而有效的方法。但交易者仍需保持足够的判断力与策略调整的灵活性。
-
-||
 
 
 This strategy is named “Trend Following Strategy Based on Triple Indicator Cloud Pattern”. It integrates three different types of trend indicators to form a cloud pattern, trading breakouts of the cloud to follow trends.
@@ -58,7 +34,6 @@ When close or low breaks below cloud bottom, it flags the start of a downtrend f
 The advantage of this strategy is the indicator combo judges trend status more accurately, reducing false signals. But parameter optimization remains critical. Stop loss is also essential.
 
 In summary, using multiple indicators to determine trends is a common and effective approach. But traders still need sound discretion and flexibility in strategy adjustment.
-[/trans]
 
 > Strategy Arguments
 

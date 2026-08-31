@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16cdd1d9c9b1713a667.png)
-[trans]
-
-## 概述
-
-这个策略的主要思想是使用不同周期的 Ratio OCHL Averager 指标构建多条均线,根据均线的交叉形态产生买卖信号。它能够动态捕捉价格趋势,适合中短期交易。
-
-## 策略原理
-
-该策略使用了两个不同周期的 Ratio OCHL Averager 指标,分别作为快线和慢线。Ratio OCHL Averager 指标的计算公式如下:
-
-```
-b = abs(close-open)/(high - low) 
-c = min(max(b, 0), 1)
-Ratio OCHL Averager = c*close + (1-c)*前一日Ratio OCHL Averager
-```
-
-其中 b 是代表当日价格波动情况的比率,c 是对 b 做标准化处理后的值。Ratio OCHL Averager 指标综合了开盘价、收盘价、最高价和最低价四个价格构建均线。
-
-该策略设置快线周期短,慢线周期长。当快线上穿慢线时产生买入信号,反之当快线下穿慢线时产生卖出信号。利用均线交叉原理捕捉趋势。
-
-## 策略优势
-
-1. Ratio OCHL Averager 指标能够平滑价格数据,有效过滤市场噪音,使交易信号更可靠。
-
-2. 双均线交叉结合不同周期判断趋势方向,可以较好地判定新的趋势开始。
-
-3. 通过调整快线和慢线的周期参数,可以适应不同市场环境。
-
-4. 策略思路简单直观,容易理解实现。
-
-5. 可以灵活设置止损止盈标准,控制风险。
-
-## 策略风险
-
-1. 均线交叉策略可能产生较多的虚假信号,需要组合其他技术指标进行过滤。
-
-2. 需要合理选择快线和慢线的周期参数,参数选择不当可能影响策略效果。
-
-3. 双均线交叉策略属于趋势跟踪策略,不适合震荡行情,应于趋势行情使用。
-
-4. 需要适当调整止损点以降低亏损风险,止盈点也要合理设置。
-
-## 优化方向
-
-1. 可以考虑结合动量指标等进行信号过滤,提高信号质量。例如 MACD,KDJ等。
-
-2. 可以测试不同的快线和慢线周期参数组合,寻找最优参数。
-
-3. 可以基于回测结果优化止损止盈点,找到最佳设置。
-
-4. 可以考虑在特定市场环境下动态调整参数,例如大盘震荡时增大周期参数。
-
-## 总结
-
-该策略整体思路清晰易懂,通过快慢均线交叉判断趋势方向,是一种适合中短期交易的动态跟踪策略。优化空间还很大,通过参数调整、信号过滤等方式可进一步改进策略效果。总体来说,它是一个灵活实用的趋势交易策略。
-
-||
 
 
 ## Overview
@@ -123,7 +66,6 @@ The strategy sets a shorter period for the fast line and a longer period for the
 
 The strategy has a clear logic of using fast and slow moving average crossover to determine trend direction. It is a dynamic trend following strategy suitable for medium-term trading. There is still much room for optimization by parameters tuning, signal filtration etc. Overall it is a flexible and practical trend trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/612a45d52c3468b80f.png)
 
-[trans]
-
-## 概述
-
-这个策略利用线性回归函数和最小二乘法计算出价格通道,通道由两条绿色和红色线组成。它采用基于近期ATR的动态止损来放置止损单。
-
-## 策略原理
-
-该策略使用长度为25,平移5的线性回归计算出中心线xLG。然后在中心线上下各取价格的6%做为通道范围,通道上线是xLG1r,通道下线是xLG1s。
-
-当价格高于xLG1r时,做多;当价格低于xLG1s时,做空。并记录最后做多和做空的时间。当最后做多时间大于最后做空时间时产生做多信号;当最后做空时间大于最后做多时间时产生做空信号。
-
-动态ATR止损使用ATR周期1,倍数2来计算。在做多时,止损线为收盘价减去ATR值与倍数的乘积;在做空时,止损线为收盘价加上ATR值与倍数的乘积。
-
-## 优势分析
-
-- 使用线性回归通道,能跟踪长期趋势
-- 基于ATR计算止损,可以动态调整,避免止损过大过小
-- 采用价格突破产生信号,可以减少虚假信号
-
-## 风险及改进
-
-- 线性回归通道参数需要优化,现在的通道范围可能过窄
-- ATR倍数也需要测试以获得最佳参数
-- 可以考虑在突破时增加确认机制,避免假突破
-
-## 优化思路
-
-- 测试不同的回归长度周期,找到较优的参数
-- 尝试不同的ATR周期和ATR止损倍数
-- 在突破信号时,增加额外确认条件,如交易量突破
-
-## 总结
-
-该策略整合了趋势跟踪、动态止损和突破信号等多种技术指标,形成一个具有较强适应性的趋势跟踪体系。通过优化参数和增加信号过滤,可以进一步增强策略稳定性和盈利能力。该策略可以为量化交易者提供一个非常有价值的思路。
-
-||
 
 
 ## Overview
@@ -84,7 +47,6 @@ The dynamic ATR stop loss uses ATR period of 1 and multiplier of 2. For long tra
 
 This strategy combines multiple techniques like trend following, dynamic stops and breakout signals to create an adaptive trend tracking system. Further enhancements in parameter optimization and signal filtering can improve robustness and profitability. It provides a valuable approach for quant traders.
 
-[/trans]
 
 > Strategy Arguments
 

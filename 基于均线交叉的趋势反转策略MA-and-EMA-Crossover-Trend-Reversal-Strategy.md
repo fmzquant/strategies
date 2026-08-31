@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用EMA和MA均线的交叉来判断趋势反转,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-1. 分别计算指定周期的EMA指数均线和MA简单移动均线。
-
-2. 当EMA从下方上穿MA时,产生买入信号。
-
-3. 当EMA从上方下穿MA时,产生卖出信号。
-
-4. 可以设置仅在特定月份的特定日期段交易。
-
-5. 每次仅持有单向仓位,不做反向开仓。
-
-6. 规则简单清晰,易于实施。
-
-## 优势分析
-
-1. EMA和MA交叉易于捕捉趋势反转机会。
-
-2. 设置日期过滤,可以避开重大事件造成的失误交易。
-
-3. 仅做单向仓位,可以减少无谓的反向开平仓。
-
-4. 资金利用效率较高。
-
-5. 适合短线趋势交易。
-
-## 风险分析
-
-1. 均线交叉可能出现假信号,导致不必要的亏损。
-
-2. 无法有效控制单笔亏损的大小。
-
-3. 无止损策略,存在更大的资金亏损风险。 
-
-4. 日期设置过于死板,可能错失交易机会。
-
-5. 参数设置不当也会影响策略表现。
-
-## 优化方向
-
-1. 测试不同均线周期,寻找最优参数。
-
-2. 评估交叉时需增加其他过滤条件。
-
-3. 建立止损机制,控制单笔损失。
-
-4. 优化日期过滤规则,保持一定灵活性。
-
-5. 研究如何设置合理的止盈位置。
-
-6. 考虑采用动态仓位管理策略。
-
-## 总结
-
-该策略基于EMA和MA均线交叉进行趋势反转交易,简单高效,但存在一些改进空间。通过参数优化、风险控制等手段进一步完善,可以将其打造成一个稳定的短线交易系统。
-
-||
 
 
 ## Overview
@@ -134,7 +71,6 @@ This strategy uses EMA and MA crossover to determine trend reversals, belonging 
 
 This strategy trades EMA and MA crossover reversals simply and efficiently but has some room for improvement. Further refinements like parameter optimization and risk controls can turn it into a steady short-term system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9364f1a8b08ff22007.png)
 
-[trans]
-## 概述
-
-该策略基于动态计算的尾随止损机制,根据股票价格的最高价和最低价来设定长仓和短仓的止损线。当价格触及止损线时,平仓当前头寸,并按相反方向开新仓。策略简单易懂,能有效控制 einzel风险。
-
-## 策略原理  
-
-该策略主要通过以下几个步骤实现:
-
-1. 输入参数:选择做多或做空,计算周期长度, trailing stop 的滑点设置
-2. 计算最高价和最低价:基于输入长度计算出周期内的最高价和最低价
-3. 计算尾随止损线:做多时,最低价减去滑点作为止损线;做空时,最高价加上滑点作为止损线
-4. 打开和平仓:价格触碰止损线时,平仓当前方向,并按相反方向开新仓
-
-以上是策略的基本运行逻辑。当价格运行的时候,止损线会不断更新,从而实现动态跟踪。通过这种跟踪止损方法,可以有效控制单笔损失。
-
-## 优势分析
-
-该策略主要有以下几点优势:
-
-1. 策略简单清晰,容易理解和实现
-2. 应用动态尾随止损,可以有效控制单笔损失
-3. 可灵活选择做多或做空方向,适用于不同市场环境
-4. 计算周期和滑点可自定义,便于优化
-
-总的来说,该策略通过简单的尾随止损机制,能够有效管理Positions,是一种典型的 Risk Management 策略。
-
-## 风险分析 
-
-该策略也存在一些风险需要注意:  
-
-1. 当价格波动较大时,止损线可能被频繁触发,导致过于频繁交易
-2. 计算最高价和最低价的周期不合理可能导致不适当的止损线
-3. 滑点设置过大,可能导致止损线过松,无法及时止损
-
-对于这些风险,可以通过调整计算周期、适当缩小滑点幅度等方法进行优化,使止损线设置更加合理。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损线优化机制,使其可以动态调整,避免止损线过松或过紧
-2. 增加开仓条件判断,避免在不适当的时候打开Positions
-3. 结合趋势指标,采用趋势跟踪方式,使盈利空间更大
-4. 添加仓位管理模块,通过风险评级动态调整仓位
-
-## 总结
-
-该交易策略通过简单的尾随止损方法,实现了Positions 的动态管理。策略易于理解和实现,能够有效控制单笔损失。我们分析了策略的优势、可能的风险和后续的优化方向。总的来说,这是一个非常典型和实用的 Risk Management 策略。
-
-||
 
 ## Overview
 
@@ -112,7 +61,6 @@ The strategy can be upgraded from the following aspects:
 
 The trading strategy realizes dynamic positions management through simple trailing stop loss methods. It is easy to understand and implement, and can effectively control single trade loss. We analyzed the advantages, potential risks and future optimization directions. In conclusion, this is a highly typical and practical Risk Management strategy.
 
-[/trans]
 
 > Strategy Arguments
 

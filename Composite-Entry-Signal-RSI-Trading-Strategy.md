@@ -10,18 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-复合买卖点RSI交易策略
-
-该交易策略通过结合RSI、价格变化率ROC和均线MA等多种指标,形成综合的买卖点判断机制。
-
-具体来说,它计算3周期RSI,2周期RSI变化率,以及100周期价格变化率,取这3者的平均值作为综合RSI指标。当该复合RSI指标线突破40时生成买入信号,突破70时生成卖出信号。
-
-这种策略的优势在于综合多个指标的优点,RSI判断超买超卖,RSI变化率显示势头,ROC反映价格变化率。但每个指标都存在滞后,组合使用也无法完全规避错误信号的风险。
-
-总的来说,该复合买卖点RSI策略融合多种指标的优势,可以提高判断的准确性。但实盘应用时,仍需关注参数优化、止损设置等风险控制手段,才能获得长期稳定的效果。
-
-||
 
 This trading strategy combines RSI, rate of change ROC, and moving average MA to form an integrated mechanism for identifying entry signals. 
 
@@ -31,7 +19,6 @@ The advantage of this strategy is it synergizes the strengths of multiple indica
 
 In summary, this composite entry signal RSI strategy fuses the strengths of multiple indicators to improve judgment accuracy. But for practical application, attention is still needed on risk controls like parameter optimization and stop loss settings, in order to achieve long-term stability.
 
-[/trans]
 
 
 

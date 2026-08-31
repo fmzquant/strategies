@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1aceb1e7d7227219099.png)
-[trans]
-
-### 概述
-本策略运用双指数平均线指标判断市场趋势方向,结合布林带指标判断超买超卖现象,实现低买高卖,获利退出。
-
-### 策略原理
-本策略使用双指数平均线判断市场总体走势,布林带判断具体入场时机。
-
-双指数平均线的运算法则是,分别计算一短期和一长期的指数平均线,当短期线从下向上突破长期线 becoming为看多信号; 当短期线从上向下跌破长期线时,为看空信号。
-
-布林带指标则判断价格是否处于超买或超卖状态。布林带中轨为n天收盘价的移动平均线,带宽则为移动平均线前n天的标准差幅度。价格接近上轨时为超买,接近下轨时为超卖。
-
-本策略规则为:
-当短均线从下向上突破长均线,并且收盘价突破布林带上轨时,做多;当短均线从上向下跌破长均线,并且收盘价跌破布林带下轨时,做空。
-
-做多后的止损点为之前n天内最低价,止盈点则为开仓价格的1.6倍;做空后的止损点为之前n天最高价,止盈点为开仓价格的1.6倍。
-
-此外,本策略还考虑EMA多空指标判断总体走势,避免逆势开仓。
-
-### 优势分析
-1. 使用双指数平均线判断总体走势,布林带判断具体买卖点位,指标搭配合理;
-2. 做多停损点采用之前n天最低价,做空停损采用之前n天最高价,有利于减少止损被追杀的概率;  
-3. 止盈点采用开仓价点的1.6倍,有利于获得足够盈利;
-4. 考虑EMA总体走势指标,避免逆势开仓,可减少系统性损失。
-
-### 风险分析
-1. 布林带参数优化不当可能导致交易频率过高或信号稀少;
-2. 止损点过于宽松可能带来更大亏损;
-3. 止盈点过于宽松可能错过更大利润。
-
-针对以上风险,优化布林带参数组合,测试不同止损止盈水平,选择最优参数。
-
-### 优化方向 
-1. 优化布林带参数,寻找最佳参数组合;
-2. 测试不同的止损幅度参数,降低止损被追的概率;
-3. 测试不同的止盈倍数参数,争取获得更大收益。
-
-### 总结
-本策略运用双指数平均线判断市场总体走势,布林带判断具体买卖时机,在回测数据中表现不俗。通过参数优化及规则修改可望获得更佳效果。其止损止盈机制也可移植至其他策略中,具有借鉴价值。
-
-||
 
 ### Overview  
 This strategy uses dual moving average lines to determine market trend direction combined with Bollinger Bands to identify overbought and oversold conditions, in order to achieve buying low and selling high for profit taking.
@@ -90,7 +49,6 @@ To address the above risks, optimize combinations of Bollinger parameters and te
 ### Conclusion
 This strategy has performed creditably in backtests by confirming overall trend using dual moving averages and relying on Bollinger Bands for specific entry signals. Additional performance improvements may be anticipated through continued parameter optimization and rule modifications. The stop loss/profit taking mechanism is also transferable to other systems for adaption.
 
-[/trans]
 
 > Strategy Arguments
 

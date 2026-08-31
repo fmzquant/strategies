@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-### 概述
-
-该策略基于平均真实波幅(ATR)指标设定动态止损线,追踪股票价格变化,实现止损保护的同时最大限度锁定利润。
-
-### 策略原理  
-
-该策略主要通过以下步骤实现:
-
-1. 计算ATR指标,ATR周期由nATRPeriod参数设定,默认为5;
-
-2. 根据ATR值计算止损线,止损幅度由nATRMultip参数设定,默认为ATR的3.5倍; 
-
-3. 当股价上涨时,如果高于此前止损线,则将止损线上调至股价减去止损幅度;当股价下跌时,如果低于此前止损线,则将止损线下调至股价加上止损幅度;
-
-4. 判断股价是否突破止损线,突破则发出买入或卖出信号;
-
-5. 根据突破止损线的信号,进入做多或空仓位,在再次触碰止损线时平仓。
-
-在股价上涨时,止损线会不断上调,从而锁定利润;在股价下跌时,止损线会不断下调,从而止损。ATR指标能更准确反映股价波动程度,根据ATR动态调整止损线,可以避免止损过于激进或保守。
-
-### 优势分析
-
-- 动态调整止损线,及时止损,避免亏损扩大
-- 止损线调整较为平滑,避免过早止损
-- 利用ATR指标反映最新波动情况,计算更合理的止损幅度
-- 追踪止损线,能够很好地锁定利润
-
-### 风险分析
-
-- ATR指标参数设置需要谨慎,ATR周期过短可能造成止损线波动过大,过长则无法及时反映价格波动
-- 止损幅度参数需要根据具体股票波动情况设定,过大或过小都会影响策略效果
-- 追踪止损可能会减少获利空间,在股价再次上涨前就止损
-- 频繁地调整仓位会产生较高交易成本
-
-可通过参数优化,调整ATR周期参数和止损幅度,找到平衡止损和追踪的最佳参数组合。也可以结合其他技术指标过滤入市时机,减少不必要的止损。
-
-### 优化方向
-
-- 优化ATR周期参数,使止损线变化更贴近价格波动
-- 优化止损幅度参数,使止损更趋合理
-- 增加其他指标判断过滤入场时机
-- 只在股价出现明确上涨趋势时才进入做多仓位
-- 考虑加入再入场机制,避免预期继续上涨的股票止损后无法再参与
-
-### 总结
-
-该策略通过动态调整ATR止损线的方法,实现了持仓过程中的止损和利润锁定。相比固定止损位置,能更好适应股价波动情况,避免止损过于激进或保守。ATR指标使得止损线调整更具有针对性。但参数设置和再入场策略还需要进一步优化,以减少不必要止损并扩大获利空间。该策略整体来说是一个较好的动态追踪止损思路,值得进一步研究和应用。
-
-||
 
 ### Overview
 
@@ -110,7 +58,6 @@ Parameters can be optimized by adjusting ATR period and stop loss magnitude to f
 
 The strategy realizes stop loss and profit taking during holding through dynamic ATR trailing stop loss line. Compared with fixed stop loss points, it adapts better to price fluctuation, avoiding over-aggressive or over-conservative stop loss. The ATR indicator makes the stop loss line adjustment more targeted. But parameters and re-entry strategies need further optimization to reduce unnecessary stops and expand profit margin. Overall this is a good dynamic trailing stop loss idea worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

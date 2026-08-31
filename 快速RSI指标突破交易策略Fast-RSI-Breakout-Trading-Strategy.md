@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略运用快速RSI指标识别超买超卖现象,进行反转交易。该策略同时结合K线实体大小滤波,避免被卡住。策略追求快速判断超买超卖现象,及时捕捉反转机会。
-
-策略原理:
-
-1. 计算快速RSI指标值,设置超买超卖阈值。
-
-2. 计算K线实体大小的EMA均值,判断实体大小。
-
-3. RSI上穿超买线且实体大于均值一半时做多。RSI下穿超卖线且实体大于均值一半时做空。
-
-4. RSI回穿原阈值线且实体大于均值时平仓。
-
-5. 还可结合最小值最大值进行额外验证。
-
-该策略的优势:
-
-1. 快速RSI判断超买超卖迅速,避免滞后。
-
-2. 实体大小滤波可跳过不明显的K线。
-
-3. 最小值最大值验证可提高信号质量。
-
-该策略的风险:
-
-1. 实体大小滤波可能过滤掉部分有效信号。
-
-2. RSI对震荡行情中可能出现假信号。
-
-3. 需严格资金管理,应对反转交易的风险。
-
-总之,该策略利用快速RSI与K线实体大小指标进行组合交易,在快速判断超买超卖的同时进行风险控制,可获得较佳效果。但需警惕过滤的问题,同时部署好资金管理手段。
-
-||
 
 This strategy trades RSI extremes using the fast RSI indicator and filters entries based on candle body size to avoid whipsaws. It aims for quick identification of overbought/oversold levels to capture reversals swiftly.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy combines fast RSI and body size filtering for quicker but more robust overbought/oversold detection. But over-filtering issues remain so prudent risk controls are still needed.
 
-[/trans]
 
 > Strategy Arguments
 

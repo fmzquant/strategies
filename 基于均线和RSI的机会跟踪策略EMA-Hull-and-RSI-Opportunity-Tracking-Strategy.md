@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/132bb571707eaf0804f.png)
-[trans]
-## 概述
-
-该策略基于移动均线、Hull移动均线和相对强弱指数(RSI)构建交易信号,属于典型的机会跟踪策略。它可以自动识别市场机会,进行长空切换,适用于中短期交易。
-
-## 策略原理  
-
-1. 计算50周期的指数移动平均线(EMA)作为判断趋势的均线指标。
-2. 计算7日的Hull移动平均作为更敏感和先入的均线指标,与EMA形成金叉死叉。
-3. 设置RSI的超买线和超卖线分别为60和45,RSI高于60为超买讯号,RSI低于45为超卖区域。    
-4. 当超买态同时发生向上穿越EMA时,则为做空信号。
-5. 当超卖区域同时发生向下穿越EMA时,则为做多信号。
-
-## 策略优势
-
-1. 组合使用EMA、Hull和RSI三种指标,综合判断市场的趋势、动量和超买超卖区域,提高信号的准确性。
-2. EMA为中长期趋势判断,Hull为短期先导性指标,RSI判断超买超卖区域,不同周期指标配合使用,把握不同级别的交易机会。  
-3. 交易信号同时满足趋势、动量和超买超卖区域三个条件后才触发,可有效过滤假信号。
-
-## 策略风险 
-
-1. 仅利用三个指标组合判断可能会漏掉一些交易机会。
-2. EMA和Hull的周期设定需要反复测试优化,不适当的参数选择可能影响应号质量。
-3. RSI的参数也需要调整,不同的股票和外汇对超买超卖判断标准会有所不同。
-
-## 策略优化
-
-1. 可以引入更多辅助指标,如布林线、KC线等,形成多重共振进行决策。  
-2. 可以针对不同品种设置不同的参数组合进行优化。
-3. 可以结合高级别时间周期做决策,避免被短期的假突破误导。
-4. 可以引入止损策略管理风险。  
-
-## 总结
-
-该策略利用EMA、Hull和RSI三种指标的组合来捕捉中短期交易机会。策略信号的产生需要满足趋势、动量和超买超卖三个维度,从而过滤很多假信号。同时,可以通过参数优化和引入更多辅助指标等方式来进一步提高策略的稳定性和交易绩效。
-
-||  
 
 ## Overview  
 
@@ -83,7 +46,6 @@ This strategy constructs trading signals based on moving averages, Hull moving a
 
 This strategy uses the combination of EMA, Hull and RSI across timeframes to capture medium and short term trading opportunities. Entry signals must meet criteria in trend, momentum and overbought/oversold dimensions simultaneously in order to filter out false signals. The strategy can be further enhanced through parameter optimization and introducing more auxiliary indicators to improve stability and trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

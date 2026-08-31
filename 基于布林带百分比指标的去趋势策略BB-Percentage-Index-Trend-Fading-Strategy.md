@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/136129542750acc54fc.png) 
-[trans]
-
-
-## 概述
-
-该策略基于布林带百分比指标结合RSI和MFI指标,通过检测金融产品价格突破布林带上下轨,结合RSI过卖超买和MFI超卖超买信号,制定做多做空决策。是一个典型的去趋势交易策略。
-
-## 策略原理  
-
-1. 计算布林带百分比(BB%)。BB%表示价格相对布林带中轨的标准差,通过布林带通道判断市场方向。
-2. 结合RSI和MFI指标判断超买超卖。RSI通过比较一段时间内的平均涨幅和平均跌幅,判断超买超卖。MFI通过比较上涨交易量和下跌交易量,判断超买超卖。  
-3. 当价格从下向上突破布林带下轨时,做多;当价格从上向下突破布林带上轨时,做空。同时结合RSI和MFI指标的超卖超买信号过滤。
-
-## 策略优势
-
-1. 去趋势交易,避开市场走势,降低收益波动。
-2. 结合多个指标过滤信号,提高决策准确性。  
-3.  Parameter化设置灵活,可调整策略风险收益特征。
-4. 适用于大宗商品、外汇、加密货币等高波动标的。
-
-## 风险及解决  
-
-1. 布林带突破产生假信号的概率较大,需要多个指标组合过滤。
-2. 突破信号判断需要适当放宽,避免漏失良好机会。  
-3. 调整参数设置控制风险,如调整仓位规模,升高止损线等。
-
-## 优化方向  
-
-1. 增加基于波动率的止损机制,如ATR指标。
-2. 引入机器学习模型辅助判断突破信号质量。  
-3. 优化参与品种选择机制,动态调整参与标的。
-4. 结合情绪指标、消息面等更多因素完善决策体系。
-
-## 总结
-
-该策略主要应用于高波动的非趋势性品种,通过布林带通道与指标组合判断,实现去趋势交易。可通过调整参数控制风险收益特征。后续可引入更多辅助指标和模型优化决策质量,从而获得更好的策略表现。
-
-||
 
 
 
@@ -85,7 +47,6 @@ This strategy is based on the BB percentage index combined with RSI and MFI indi
 
 This strategy is mainly applied to high volatility non-trending instruments. It implements trend fading trading through Bollinger channel and indicator combinations. Risk-return characteristics can be controlled by adjusting parameters. Further improvements can be made by introducing more auxiliary indicators and models to optimize decision quality, thereby achieving better strategy performance.  
 
-[/trans]
 
 > Strategy Arguments
 

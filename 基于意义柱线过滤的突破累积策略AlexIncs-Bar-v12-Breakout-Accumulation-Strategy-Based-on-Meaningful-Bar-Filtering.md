@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19893ba1e8a5cdb8add.png)
-[trans]
-## 概述
-
-该策略通过判断K线的“意义柱线”来预测趋势,并结合突破信号发出交易信号。策略会过滤掉过小的K线,只对“意义柱线”做分析,可以避免被过于频繁的小涨跌干扰,使信号更加平稳可靠。
-
-## 策略原理  
-
-1. 判断当前K线的实体长度body,如果大于过去6根K线body平均值的3倍,就认为是“意义柱线”。
-
-2. 如果连续3根“意义柱线”都是阳线,则判断为多头信号;如果连续3根“意义柱线”都是阴线,则判断为空头信号。
-
-3. 在判断信号的同时,如果价格突破之前高点或低点,也会产生附加的交易信号。
-
-4. 使用SMA均线作为过滤器,只有价格突破SMA时才开仓。
-
-5. 持仓后,如果价格再次突破入场点或SMA均线,则平仓。
-
-## 优势分析
-
-1. 使用“意义柱线”判断趋势,可过滤掉过多不必要的干扰,使信号更加清晰。  
-
-2. 结合趋势信号和突破信号,可提高信号质量,减少假信号。  
-
-3. SMA均线过滤可避免追高杀跌。Closing以下买入,Closing以上卖出,增加信号的可靠性。
-
-4. 设定止盈止损条件,可以及时止损止盈,有利于资金保全。
-
-## 风险分析  
-
-1. 本策略较为激进,使用3根K线判断信号,可能会误判短期震荡为趋势反转。  
-
-2. 测试数据不充足,不同品种和不同周期效果可能会有所差异。
-
-3. 未加入夜盘隔夜仓位控制,存在隔夜仓位风险。
-
-## 优化方向  
-
-1. 对“意义柱线”的参数可进一步优化,如判断的K线数量、“意义”的定义等。  
-
-2. 可测试不同周期参数对效果的影响,寻找最佳周期。
-
-3. 可加入ATR止损来控制风险。
-
-4. 可考虑加入隔夜仓位控制逻辑。
-
-## 总结  
-
-本策略利用“意义柱线”滤波和趋势判断,结合突破形成交易信号,可有效过滤掉过多不必要的小幅波动,信号更加清晰可靠。但由于判断周期较短,可能存在一定的误判风险。可通过参数优化和风控手段进一步完善。
-
-||
 
 ## Overview  
 
@@ -109,7 +59,6 @@ This strategy predicts trends by judging the "meaningful bar" of K-lines, and ge
 
 This strategy utilizes “meaningful bar” filtering and trend judgment to generate trading signals combined with breakouts. It effectively filters out unnecessary minor fluctuations for clearer and more reliable signals. However, due to short judging cycles, certain misjudgment risks exist. Further improvements can be made through parameter optimization and risk control.
 
-[/trans]
 
 > Strategy Arguments
 

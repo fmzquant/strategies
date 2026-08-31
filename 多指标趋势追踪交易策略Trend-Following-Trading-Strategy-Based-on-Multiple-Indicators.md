@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f7df4de0b770f757f0.png)
-[trans]
-
-## 概述
-
-多指标趋势追踪交易策略是一种同时结合MACD、随机指标和SMA移动平均线的量化交易策略。该策略致力于识别市场的趋势方向,在趋势开始建立时及时进入市场,然后利用多种指标的组合信号判断何时退出市场。
-
-## 策略原理
-
-该策略同时使用MACD、随机指标和SMA三种技术指标来判断市场的趋势方向和强弱。当MACD差值上穿0轴线、随机指标%K线上穿%D线且高于超买线、SMA快线上穿慢线时,买入信号被触发;当相反的情况发生时,识别到卖出信号。
-
-通过组合多种指标,可以过滤假信号,识别真正的趋势开始和结束。同时,不同指标之间可以形成验证,降低错误交易的概率。
-
-## 策略优势分析
-
-该策略最大的优势在于指标组合使用,可以有效过滤噪音,锁定真实趋势的开始和结束。相比单一使用MACD、随机指标或SMA等,识别效果要好很多。
-
-另外,该策略对参数调节灵活,可以根据不同品种和周期进行调整,适应性强。
-
-## 策略风险分析 
-
-该策略主要的风险在于多指标组合增加了交易频率,可能带来过度交易的风险。此外,参数设置不当也会带来错误交易的风险。
-
-为降低风险,应适当控制交易频率,选用长周期,并优化参数组合。必要时可以考虑止损来控制单笔损失。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同商品和不同周期参数的效果
-2. 增加指标的权重和过滤条件,降低错误信号
-3. 结合止损来控制风险
-4. 进一步优化指标参数,提高盈利因子
-
-## 总结
-
-多指标趋势追踪交易策略通过指标的组合验证提高了信号的准确性,能有效识别趋势的开始和结束。参数优化和风险控制是该策略成功的关键。总体来说,该策略回撤小、盈利空间大,是一种非常实用的量化交易策略。
-
-|| 
 
 # Overview
 
@@ -84,7 +46,6 @@ The strategy can be optimized in the following aspects:
 
 The trend following trading strategy based on multiple indicators improves signal accuracy through composite validation of indicators, and can effectively identify the beginning and ending of trends. Parameter optimization and risk control are the keys to the success of this strategy. In general, this strategy has small drawdowns and large profit potential, making it a very practical quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

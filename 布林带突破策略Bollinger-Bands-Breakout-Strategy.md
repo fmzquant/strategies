@@ -9,85 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于布林带指标,当价格突破布林带下轨时做多,当价格触碰布林带上轨时平仓。该策略利用布林带的包含性原理,追踪价格异常突破,实现低买高卖的目的。
-
-## 策略原理
-
-1. 计算布林带的中线SMA,取近期收盘价的简单移动平均。
-
-2. 计算标准差StdDev,反映价格波动范围。
-
-3. 中线SMA加上标准差上偏移,得到布林带上轨。
-
-4. 中线SMA减去标准差下偏移,得到布林带下轨。 
-
-5. 当收盘价从下向上突破下轨时,做多入场。
-
-6. 当价格触碰上轨时,认为价格异常,平仓离场。
-
-## 优势分析
-
-该策略最大优点是利用布林带指标的统计特性,有效跟踪市场异常波动,实现趋势捕捉。与常规移动平均策略相比,布林带策略更具优势:
-
-1. 布林带上下轨可自动适应市场波动。
-
-2. 突破作为入场信号更可靠。
-
-3. 回归中轴作为止盈信号合理。
-
-4. 参数优化空间大,可针对不同市场进行调整。
-
-5. 可捕捉中长线趋势,也可用于短线。
-
-## 风险分析
-
-该策略潜在风险主要有:
-
-1. 布林带在横盘市场中效果不佳,须避免错入。
-
-2. 突破信号可能是假突破,须审慎判断。
-
-3. 止盈位置过于理想化,可优化至实际行情。
-
-4. 参数设定不当可能导致过于频繁或保守交易。
-
-5. 回测周期需足够长,避免曲拟合。
-
-对应风险处理措施:
-
-1. 结合交易量指标过滤信号。
-
-2. 优化参数,测试不同市场的数据效果。 
-
-3. 增设移动止损,轮动止盈位置。
-
-4. 评估信号背离,避免追高杀跌。
-
-## 优化方向 
-
-该策略可从以下方面进行优化:
-
-1. 尝试不同大小的布林带参数,寻找最佳组合。
-
-2. 增加均线、MACD等指标过滤突破信号。 
-
-3. 应用机器学习算法优化布林带参数。
-
-4. 在突破入场的同时,评估其强弱并调整仓位。
-
-5. 回测更长周期数据,测试策略稳定性。
-
-6. 添加止损机制来控制风险。
-
-## 总结
-
-布林带策略总体来说是一个可靠的趋势跟踪策略。它能够有效捕捉价格异常波动。但我们也要注意其与实际行情偏差,并不断优化参数。如果用于实盘,一定要严格进行风险管理,控制单笔损失。
-
-|| 
 
 ## Overview
 
@@ -165,7 +86,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, the Bollinger Bands strategy is an overall reliable trend following strategy. It can effectively capture abnormal price fluctuations. But we should also note its deviation from actual price and constantly optimize the parameters. If used for live trading, strict risk management is a must to control loss per trade.
 
-[/trans]
 
 > Strategy Arguments
 

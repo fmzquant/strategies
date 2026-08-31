@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/150477f408b60aa5de1.png)
-[trans]
-## 概述
-
-本策略的核心思想是利用ATR指标计算出的价格波动范围来判断价格突破,以及EMA指标判断整体趋势方向,实现趋势跟随交易。当价格从ATR范围上沿或下沿突破时,如果突破方向与EMA方向一致,则入场做多或做空。平仓条件为价格回破ATR范围。
-
-## 策略原理
-
-首先,该策略使用ATR指标计算出一定周期内的价格波动范围。ATR范围的上限为SMA+ATR,下限为SMA-ATR。其中SMA代表当日收盘价的简单移动平均,ATR代表真实波幅平均值。
-
-当价格从ATR范围上沿或下沿突破时,就形成交易机会。此时需要判断方向,如果是向上突破则做多,如果是向下突破则做空。为了确保突破方向与趋势方向一致,策略利用EMA指标判断整体趋势方向。只有当突破方向与EMA方向一致时,才会入场。
-
-最后,策略以价格回破ATR范围作为平仓信号。做多后价格跌破下限就平仓;做空后价格涨破上限就平仓。
-
-## 策略优势
-
-1. 利用ATR指标判断突破,可以有效抓取价格趋势性突破。ATR范围根据波动率设定,不会对正常波动产生过多干扰。
-
-2. 增加EMA指标作为方向判断,避免与趋势方向相反交易,可大幅提高获利率。
-
-3. 采用价格回破ATR范围作为止损方式,可以最大限度控制亏损风险。
-
-## 策略风险
-
-1. 在震荡行情中,ATR范围可能被频繁打穿,容易造成过多无效交易和扩大亏损。
-
-2. EMA作为判断趋势方向的指标,存在一定滞后性。所以可能错过价格短期反转的机会。
-
-3. 止损方式为价格回破,容易因突发事件造成扩大亏损。
-
-## 策略优化方向
-
-1. 可以考虑结合其他指标判断趋势和回撤,避免EMA单一判断错误。例如MACD,KDJ等。
-
-2. 可以考虑根据市场波动率实时调整ATR参数,使ATR范围更贴近真实波动。
-
-3. 可以结合移动止损方式,实时调整止损点,最大限度控制单笔亏损风险。
-
-## 总结
-
-本策略整体思路清晰,利用ATR指标判断价格突破并配合EMA判断方向,可以有效跟随趋势;止损方式直接,容易操作。但同时也存在一定风险,优化空间较大,有待进一步测试和调整。总体来说,本策略适合追求高胜率的趋势交易者。
-
-||
 
 ## Overview
 
@@ -97,7 +55,6 @@ Finally, the strategy uses the price breaking through the ATR range again as the
 
 The overall idea of this strategy is clear, using the ATR indicator to determine price breakthroughs and cooperating with EMA to determine direction, it can effectively follow trends; The stop loss method is straightforward and easy to operate. But at the same time, there are certain risks and large room for optimization that need further testing and adjustment. In general, this strategy is suitable for trend traders pursuing high win rates.
 
-[/trans]
 
 > Strategy Arguments
 

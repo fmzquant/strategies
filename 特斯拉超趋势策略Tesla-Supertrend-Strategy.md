@@ -10,76 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11aa48b5a21f8a2d34e.png)
-[trans]
-
-
-## 概述
-
-特斯拉超趋势策略是一种自定义的交易视图策略脚本,旨在为特斯拉股票或者其他相关资产生成交易信号。该策略结合多种技术指标和条件来识别潜在的多头和空头机会。
-
-## 策略原理
-
-该策略主要基于以下几个关键指标:
-
-**超趋势指标:** 超趋势指标结合价格数据和平均真实范围来识别显著的价格趋势方向。策略使用默认长度为10的超趋势指标判断多头或空头趋势。
-
-**相对强弱指标(RSI):** 策略采用不同周期(21、3、10和28)的RSI条件来评估市场的超买超卖状态。这些RSI条件有助于确认潜在交易信号的强度。
-
-**平均方向性指数(ADX):** 平均方向指数用于衡量趋势的力度。可自定义参数来微调ADX信号的平滑度和DI长度。
-
-**交易逻辑:**
-
-**做多入场信号:** 当以下条件同时满足时,产生做多入场信号:
-
-- 超趋势指标从空头转为多头
-- RSI(21)低于75(避免超买状态)  
-- RSI(3)高于65(表示短期力度较强)
-- RSI(28)高于49(表示长期力度较强)
-- ADX高于21(表示显著趋势)
-
-**退出信号:** 当以下任意条件满足时,平仓做多头寻:
-
-- 超趋势指标从多头转为空头
-- RSI(10)低于42(表示潜在弱势)
-
-## 优势分析
-
-该策略具有以下优势:
-
-- 利用超趋势指标识别主要趋势方向,有助于避免交易市场噪音。
-- 综合多个周期的RSI指标判断过热和超卖状态,可提高信号质量。  
-- ADX指标确保只在趋势足够明显时入场,避免无方向震荡市场的假信号。
-- 结合趋势、强度和波动率指标,提供较高质量的入场和退出点。
-- 可自定义指标参数,优化策略以适应不同交易品种和市场环境。
-- 可在交易视图平台直接应用,无需编程即可自动化交易。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-- 如同任何技术指标策略,该策略可能会生成假信号,止损措施必不可少。
-- 过于依赖指标条件而忽略基本面或更长期趋势的风险。
-- 优化过度以适应历史数据可能导致曲拟合,应谨慎回测。
-- 实盘交易中需考虑操盘手段,如分批建仓、动态止损等风险控制。
-- 面对突发事件,指标可能会失效,需要人工干预或暂停交易。
-
-## 优化方向
-
-该策略还可以从以下方面进行优化:
-
-- 尝试不同的趋势、强弱指标组合,寻找更优参数。
-- 增加进场条件,如成交量突破,确保强势反转。  
-- 测试不同持仓时间来寻找更佳的盈利回撤比。
-- 结合 IMPLIED VOL ATM 选时开启交易,避免低波动率的无效市场。
-- 增加机器学习模型判断指标信号质量,提高胜率。
-- 根据不同品种特点调整参数,使策略更具鲁棒性。
-
-## 总结
-
-总体来说,特斯拉超趋势策略通过多指标组合判断强势趋势,目标识别高质量的入场和退出点。相比单一指标,该策略可过滤噪音信号,在趋势明显且强势时进行交易。但策略优化和风险控制仍需谨慎进行,不能依赖历史数据表现盲目实盘。通过不断测试和调整,该策略有望成为交易特斯拉或其他品种的有利工具。
-
-
-||
 
 
 
@@ -148,7 +78,6 @@ The strategy can also be improved in the following aspects:
 
 In summary, the Tesla Supertrend Strategy aims to identify quality entry and exit points by judging strong trend with a combination of indicators. Compared to single indicators, it can filter out false signals and trade when the trend and strength align. However, optimization and risk control must be done prudently without relying solely on historical performance for live trading. With continual testing and tuning, this strategy has the potential to become a valuable tool for trading Tesla or other assets.
 
-[/trans]
 
 > Strategy Arguments
 

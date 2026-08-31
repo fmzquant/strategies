@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ad148182da72f8d171.png)
-[trans]
-
-
-## 概述
-
-该策略结合双EMA指标和Williams指标来识别趋势方向,在趋势较强时进行追踪。其基本思路是:
-
-1. 使用双EMA组合过滤除最强劲的趋势
-2. Williams指标确认当前处于超买超卖区域
-3. 结合RSI指标避免追高杀跌
-
-## 原理
-
-该策略运用双EMA指标中的短期EMA和长期EMA。当短期EMA向上穿越长期EMA时产生买入信号,短期EMA向下穿越长期EMA时产生卖出信号,利用双EMA捕捉中长期趋势。
-
-此外,该策略还结合Williams指标来识别反转情况。Williams指标通过判定周期高点和低点,判断价格是否处于超买或超卖状态。当Williams指标显示超买时,产生卖出信号;当显示超卖时,产生买入信号。
-
-代码中具体判断逻辑为:
-
-多头入场:短期EMA上穿中期EMA和长期EMA,且Williams指标显示超卖区域,并在超卖区域形成最低点,表示反转机会,此时产生买入信号。
-
-空头入场:短期EMA下穿中期EMA和长期EMA,且Williams指标显示超买区,并在超卖区形成最高点,表示反转机会,此时产生卖出信号。
-
-此外,策略中还引入RSI指标,进一步确认交易信号,避免盲目追涨杀跌。
-
-## 优势
-
-该策略最大优势在于利用双EMA过滤掉大量无效趋势,仅仅选择最强劲的中长期趋势进行跟踪,从而过滤噪音,减少无效交易。
-
-此外,Williams指标的引入也具有非常好的效果。其一是能够识别反转机会,从而及时平仓;其二是能够进一步确认趋势信号的有效性。
-
-双EMA和Willams的组合使用,使得该策略能够在中长期品种中获得不错的跟踪盈利,同时也能够识别反转并限制亏损。
-
-## 风险
-
-该策略主要风险在于难以识别趋势反转点。尽管引入Williams指标以及RSI指标来确保反转交易的有效性,但是反转交易的难度仍然较大,无法完全避免追涨杀跌的风险。
-
-此外,双EMA组合本身也存在一定滞后性。当短期趋势和中长期趋势脱节时,也可能给策略带来一定的识别困难。
-
-## 优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试更多EMA周期组合,寻找更佳参数
-
-2. 增加自适应退出机制,利用ATR、volatility index等指标判断趋势反转
-
-3. 增加机器学习元素,利用LSTM等进行趋势和反转预测
-
-4. 利用波浪理论等方法进一步完善反转交易规则
-
-5. 引入自适应仓位管理,根据市场情况调整仓位规模
-
-## 总结
-
-本策略成功结合双EMA和Williams指标捕捉中长期趋势,在大趋势中获取更高收益。同时,Williams指标的引入也使得策略能够识别反转情况,并及时止损。下一步,通过引入更多指标和模型进行优化,进一步增强策略的稳定性。
-
-||
 
 ## Overview
 
@@ -123,7 +65,6 @@ This strategy can be optimized in the following ways:
 
 This strategy successfully combines dual EMA and Williams Indicator to capture medium and long-term trends and achieve higher returns during major trends. Meanwhile, introducing Williams Indicator also allows the strategy to identify reversals and cut losses in time. Next step is to further enhance stability of strategy by introducing more indicators and models for optimization.
 
-[/trans]
 
 > Strategy Arguments
 

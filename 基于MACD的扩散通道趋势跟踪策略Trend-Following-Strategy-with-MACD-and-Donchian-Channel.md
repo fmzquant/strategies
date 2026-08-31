@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cc72357a8e84612932.png)
-[trans]
-
-## 概述
-
-该策略结合了扩散通道指标和MACD指标对趋势进行判断,属于典型的趋势跟踪策略。当价格突破上轨且MACD指标出现金叉时做多,当价格跌破下轨且MACD指标出现死叉时做空,使用ATR指标计算止损位。
-
-## 策略原理
-
-1. 计算MACD指标,包括快线、慢线和histogram。
-
-2. 计算上下扩散通道。上轨为N日内的最高价,下轨为N日内的最低价。
-
-3. 当价格突破上轨,且MACD快线向上突破慢线时,做多。
-
-4. 当价格跌破下轨,且MACD快线向下突破慢线时,做空。 
-
-5. 使用ATR指标计算本策略的止损位,设定为价格到止损位距离为ATR的值乘以一个系数。
-
-6. 当价格出现反转信号时,平掉当前仓位。
-
-## 优势分析
-
-该策略结合趋势判断指标和通道指标,可以有效跟踪趋势。MACD指标可以判断价格趋势和力度,扩散通道指标判断方向。ATR止损可以限制单笔损失。
-
-优势如下:
-
-1. 策略参数简单,容易实现。
-
-2. 可以顺势开仓,及时捕捉趋势机会。
-
-3. ATR止损可以控制风险。
-
-4. 回撤可以得到一定控制。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 扩散通道参数设置不当可能造成虚假信号。
-
-2. MACD参数设置不当也可能导致 Viticulture Administration System 提示信号滞后。
-
-3. 止损设置过大可能造成亏损扩大。
-
-4. 行情剧烈反转时,可能导致亏损。
-
-5. 该策略容易产生过度交易。
-
-对应解决方法:
-
-1. 优化参数,谨慎选股。
-
-2. 严格止损,追踪止损。
-
-3. 适当调整仓位管理。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化MACD参数,提高指标的灵敏度。
-
-2. 优化止损算法,使止损更贴近价格。
-
-3. 增加仓位管理机制,根据趋势强弱调整仓位。
-
-4. 增加过滤条件,避免虚假信号。
-
-5. 增加对交易品种的选择标准。
-
-6. 增加对交易时间段的判断。
-
-## 总结
-
-该策略整体来说是一个典型的趋势跟踪策略。它融合了扩散通道指标判断趋势方向和MACD指标判断趋势力度。可以顺势而为,有效控制风险。通过优化参数设置、止损方式、仓位管理等方面,可以进一步增强策略的稳定性和收益率。该策略适合对趋势判断要求较高的投资者使用。
-
-|| 
 
 ## Overview
 
@@ -162,7 +85,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a typical trend following strategy. It combines Donchian Channel for trend direction and MACD for trend strength. It can follow the trend effectively and control risk. By optimizing parameters, stop loss, position sizing etc, the stability and profitability can be further improved. The strategy suits investors who require high accuracy in trend judgment.
 
-[/trans]
 
 > Strategy Arguments
 

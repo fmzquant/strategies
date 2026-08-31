@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/112e7b7a7509279d403.png)
-[trans]
-### 概述
-
-KDJ阳线突破买入策略是基于KDJ指标的一个量化交易策略。该策略主要利用KDJ指标的J线和D线的黄金交叉形成买入信号,在J线上穿D线时做多入场。该策略较为简单,容易实施,适合量化交易的初学者。
-
-### 策略原理  
-
-该策略使用的主要技术指标是KDJ指标。KDJ指标包含K线、D线和J线。其中:   
-
-K值=(当日收盘价-N日内最低价)÷(N日内最高价-最低价)×100;
-
-D值=K值的M日移动平均;  
-
-J值=3K-2D。
-
-根据KDJ指标的设定,当J值上穿D值时,表明股价反转上涨,可以做多;当J值下穿D值时,表明股价反转下跌,可以做空。
-
-该策略就是利用上述规则,在J线上穿D线时,即金叉形成时,判断为买入信号,做多入场。 exitsignal为J线大于100时退出做多头寸。
-
-### 策略优势
-
-1. 使用KDJ指标判断买入时机,该指标综合考虑了股价涨跌信息,较为可靠。
-
-2. 策略信号判断规则简单清晰,容易理解实施,适合量化交易初学者。  
-
-3. 采用了止盈止损策略,可以有效控制风险。
-
-4. 策略参数优化空间大,实施灵活。
-
-### 策略风险
-
-1. KDJ指标容易形成虚假信号,可能导致亏损。
-
-2. 买入后市场短线调整可能使止损退出,无法捕捉大趋势。
-
-3. 参数设置不当可能导致交易频繁或信号不明显。
-
-4. 需关注交易成本对总体盈利的影响。
-
-主要风险控制方法:合理优化参数,跟踪指数增强,适当放宽止损范围等。
-
-### 优化方向  
-
-1. 优化KDJ的参数,寻找最佳参数组合。
-
-2. 增加过滤条件,避免虚假信号。可结合其他指标或形态进行过滤。
-
-3. 可以根据市场类型(牛熊市)选择不同的参数设置。
-
-4. 可以适当放宽止损幅度,以减少止损退出的概率。
-
-5. 可以结合交易量等指标分析,避免被套。
-
-### 总结
-
-KDJ阳线突破买入策略整体较为简单实用,容易上手实施,特别适合量化交易的初学者。该策略有一定的交易优势,但也存在一些风险,需要针对性地进行优化,才能全面发挥策略价值。总体而言,该策略值得重点研究与应用。
-
-||
 
 ### Overview
 
@@ -125,7 +67,6 @@ Main risk management methods: Optimize parameters properly, track indexes to enh
 
 The KDJ Golden Cross Long Entry Strategy is relatively simple and practical overall, easy for beginners to get started and implement. The strategy has certain trading advantages but also has some risks. It needs targeted optimization in order to fully realize the strategy value. Overall, the strategy deserves key research and application.
 
-[/trans]
 
 > Strategy Arguments
 

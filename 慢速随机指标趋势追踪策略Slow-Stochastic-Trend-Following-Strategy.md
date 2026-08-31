@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d01028fab0c3c84e98.png)
-[trans]
-
-### 概述
-
-该策略是基于慢速随机指标的趋势追踪策略。它使用了一个长期的K线均线,来平滑慢速随机指标,从而过滤掉市场 noise,锁定主要趋势。策略通过慢速随机指标的超买超卖线,来判断入场和出场时机。
-
-### 策略原理
-
-该策略首先计算一个长度为400周期的K值SMA平滑线,然后再计算一个长度为275周期的SMA线来进一步平滑K线。这使得最终的K线变得非常平滑,基本上只反映了市场的主要趋势方向。策略以这个超平滑慢速随机指标的K值作为交易信号。
-
-当K线从下方上穿23这一超卖区间时,做多;当K线从上方下穿78.5这一超卖区间时,做空。平仓信号为K线再次穿越各自的超卖区间。这样,策略就实现了追踪主要趋势的效果。
-
-### 优势分析
-
-该策略最大的优势,就是使用超平滑慢速随机指标来锁定市场主要趋势,避免被市场 noise 带偏。超平滑使它只对较大的趋势变化敏感,从而过滤掉高频的反转和震荡。
-
-另外,相比常见的移动平均线策略,该策略能更快地捕捉趋势转折点, profit 窗口更大。
-
-### 风险分析
-
-该策略的主要风险在于,市场可能会长期震荡在超买超卖区间,导致多次误入场亏损。这时需要适当调整参数,使K线更加平滑,或者加大超买超卖区间范围。
-
-此外,如果趋势突变,巨大行情来袭,超平滑的K线可能会延迟识别信号,造成部分潜在利润的损失。这种情况下,需要缩短K线均线参数,使其更灵敏。
-
-### 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整K值和D值的平滑周期,找到最佳参数组合
-
-2. 测试不同的价格输入,如收盘价、典型价等
-
-3. 增加交易量或仓位控制,如ATR止损,资金利用率控制等
-
-4. 增加例如MACD等指标的辅助判断,避免误入场
-
-5. 使用机器学习对参数进行优化
-
-### 总结
-
-该慢速随机指标趋势追踪策略,通过超平滑处理实现了对市场主要趋势的捕捉,回避了高频的市场 noise 对交易的干扰。同时也存在一定的滞后识别信号的风险。我们可以通过调整参数或增加辅助条件来对策略进行优化,提高策略的稳定性和profitability。
-
-||
 
 ### Overview
 
@@ -90,7 +47,6 @@ The strategy can be optimized in the following aspects:
 
 The slow stochastic trend following strategy achieves capturing major market trends and avoids high frequency noise interference through ultra-smoothing processing. There are also risks of delayed signal recognition. We can optimize the strategy by adjusting parameters or adding auxiliary conditions to improve stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

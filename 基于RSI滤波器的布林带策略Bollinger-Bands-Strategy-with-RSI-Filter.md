@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19fc9ce9aaf4188f7ae.png)
 
-[trans]
-
-## 概述
-
-本策略名称为“基于RSI滤波器的布林带策略”。它是一个利用布林带原理,结合RSI指标作为滤波器判断入场的量化策略。该策略可以有效判断市场趋势,实现低买高卖,获取较好的收益。
-
-## 策略原理  
-
-本策略的核心指标是布林带。布林带由中线、上线和下线组成。中线是n日移动平均线,上线是中线加上k倍的n日标准差,下线是中线减去k倍的n日标准差。当价格接近上线时,代表市场被高估,应考虑做空;当价格接近下线时,代表市场被低估,应考虑做多。  
-
-本策略在布林带的基础上,加入RSI指标作为入场过滤器。RSI可以判断市场是处于超买还是超卖状态。当RSI高于70时代表超买,低于30时代表超卖。本策略只有在布林带发出交易信号的同时,RSI也符合超买超卖条件时,才会考虑入场。  
-
-具体来说,当价格从下向上突破布林带下线,同时RSI低于超卖线30时,产生买入信号;当价格从上向下突破布林带上线,同时RSI高于超买线70时,产生卖出信号。
-
-## 优势分析
-
-本策略结合布林带和RSI指标,可以有效判断市场的超买超卖现象,避免假突破造成不必要的损失。同时,RSI指标作为滤波器,可以过滤掉部分噪音交易信号,让入场时机更加准确。
-
-本策略只需较少的参数,实现过程简单清晰,适合不同水平的量化交易者使用。中长线持有效果更好,避免被市场短期波动干扰。
-
-总的来说,本策略具有如下优势:
-
-1. 结合布林带和RSI,判断能力更强
-2. 减少假突破造成的损失 
-3. 参数简单,容易实施
-4. 中长线持有,回撤更小
-
-## 风险分析
-
-本策略也存在一些风险需要警惕:  
-
-1. 布林带参数设置不当,将导致交易信号的效果变差
-2. 趋势市场中,布林带常常伴随价格运行,不宜使用
-3. RSI容易产生背离,影响交易信号准确性 
-4. 交易次数可能较少,容易出现长期亏损
-
-为了控制这些风险,建议:
-
-1. 优化布林带参数,选择最佳参数组合
-2. 关注大级别市场结构,避免使用于震荡趋势中
-3. 结合其他指标确认RSI信号,防止误信号
-4. 适当调整持仓时间,防止出现巨额亏损
-
-## 优化方向  
-
-本策略还有进一步优化的空间:  
-
-1. 可以测试不同的RSI参数设置
-2. 可以加入止损策略,更好控制风险
-3. 可以结合其他指标进行组合验证
-4. 可以通过机器学习方法自动优化参数  
-
-这些优化可以使策略更稳定、参数更优化、风险控制更好。
-
-## 总结
-
-本策略名称为“基于RSI滤波器的布林带策略”。它整合布林带判断超买超卖的能力,以及RSI判断市场Momentum的能力,形成一个较强的量化策略。本策略在判断市场的长短机会上具有独特优势,可以带来较好的超额收益。 
-
-尽管如此,本策略也存在一定的改进空间,通过参数优化、风险控制等手段,可以使策略效果更出色,适应更多不同的市场情况,这也是未来的一大研究方向。
-||
 
 ## Overview  
 
@@ -129,7 +69,6 @@ These enhancements can improve stability, optimize parameters, and strengthen ri
 The “Bollinger Bands Strategy with RSI Filter” integrates Bollinger Bands’ overbought/oversold identification with RSI’s momentum gauge to form a robust quantitative strategy. The strategy has unique advantages in determining market opportunities across timeframes, capable of generating significant alpha. 
 
 Nonetheless, there is room for improvement via parameter optimization and risk control to adapt performance across diverse market conditions, an area warranting further research.  
-[/trans]
 
 > Strategy Arguments
 

@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/139be9673b8ec283a53.png)
 
-[trans]
-
-## 概述
-
-该策略是一个非常简单的短线交易策略,主要适用于股指的日线交易。它只进行多头交易,在股指处于长期上涨通道,短期出现反转信号时建仓做多。
-
-## 策略原理
-
-该策略主要基于均线和RSI指标判断趋势和超买超卖现象。具体交易信号为:股指收盘价上抵长期200日均线且高于其之上,作为长期趋势判断;收盘价跌破10日均线构成短期调整信号;RSI3期指标小于30作为超卖信号。满足上述三个条件时,认为短期调整反转的概率较大,因此做多建仓。
-
-建仓后,根据止损、止盈和短期趋势判断来平仓。如收盘价重新站上10日均线,判断短期调整已经结束,此时主动止盈;如收盘价格出现新的低点,止损退出;收盘价格上涨10%时止盈。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 逻辑简单,容易理解和实现,适合初学者;
-2. 充分利用股指的长期上涨趋势,避免逆势交易; 
-3. 利用RSI指标判断短期反转点位,提高获利概率;
-4. 有止损和止盈机制控制风险;
-5. 数据需求少,日线数据即可,适合零成本实现。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 长期持续下跌的熊市会导致亏损;
-2. 反转失败可能造成较大亏损; 
-3. 参数设置不当也会影响效果,如均线周期设置不当;
-4. 交易频率可能较低,无法对所有调整都捕捉;
-5. 收益上限有限,超过市场指数收益不多。
-
-针对上述风险,可以通过优化周期参数、调整止损止盈比例、增加其他指标判断等方法来改进。
-
-## 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 增加对长短期趋势的多因子判断,如MACD,KD等,提高判断准确性;
-2. 加入交易量的分析。如大量上涨时建仓; 
-3. 优化参数设置。通过Walk Forward Analysis等方法优化最佳参数; 
-4. 结合更多反转因子。如Fibonacci回测线、支撑阻力位等判断反转高度;
-5. 综合考虑利益比优化。如调整仓位和止盈止损比例,实现更大收益。
-
-## 总结
-
-该策略总体来说是一个非常简单实用的短线交易策略。它利用股指长期上涨通道和短期调整反转的组合策略,在控制风险的前提下获取超额收益。通过持续优化和把控参数,可以获得更好的效果。
-
-||
 
 ## Overview  
 
@@ -107,7 +58,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a very simple and practical short-term trading strategy. It combines the long-term uptrend and short-term pullback reversal of the index to obtain excess returns while controlling risks. By continuously optimizing and parameter tuning, better results can be achieved.
 
-[/trans]
 
 > Strategy Arguments
 

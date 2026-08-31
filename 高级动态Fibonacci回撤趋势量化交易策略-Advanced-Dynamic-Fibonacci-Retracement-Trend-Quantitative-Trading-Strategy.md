@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/921440288c3d6c5e56.png)
 
-[trans]
-#### 概述
-该策略是一个基于Fibonacci回撤原理的高级趋势跟踪系统。它通过动态计算重要的Fibonacci回撤水平(23.6%, 38.2%, 50%, 61.8%, 78.6%)来识别潜在的支撑和阻力区域。系统采用了100个周期的回溯窗口来确定最高点和最低点,并以此为基础计算各个回撤水平。策略集成了精确的入场信号和风险管理机制,通过在关键Fibonacci水平的突破来触发交易信号。
-
-#### 策略原理
-策略的核心逻辑建立在价格在主要趋势中会在关键的Fibonacci回撤水平附近发生反转的理论基础上。具体来说:
-1. 系统通过滚动窗口持续计算最高点和最低点,确保回撤水平的动态更新
-2. 当价格向上突破61.8%回撤水平时,触发做多信号,表明上升趋势的延续
-3. 当价格跌破38.2%回撤水平时,系统识别为看跌信号
-4. 止盈设置在100%回撤水平(最高点),止损设置在0%回撤水平(最低点)
-5. 策略通过plot函数在图表上标示各个关键水平,便于可视化分析
-
-#### 策略优势
-1. 动态适应性强 - 策略能够根据市场条件自动调整回撤水平
-2. 风险管理完善 - 通过预设的止盈止损位置严格控制风险
-3. 信号明确客观 - 入场和出场信号基于客观的价格突破,减少主观判断
-4. 可视化程度高 - 在图表上清晰展示各个关键价位,便于分析和验证
-5. 参数可调整性 - 回溯周期和Fibonacci水平均可根据需要灵活调整
-
-#### 风险分析
-1. 震荡市场风险 - 在横盘整理阶段可能产生虚假信号
-2. 滞后性风险 - 基于历史数据计算可能导致信号滞后
-3. 跳空风险 - 价格跳空可能导致止损失效
-4. 参数敏感性 - 不同的回溯周期设置会影响策略表现
-建议通过以下方式控制风险:
-- 结合趋势指标确认市场环境
-- 适当调整止损位置
-- 采用移动止损方式
-- 定期优化策略参数
-
-#### 策略优化方向
-1. 增加趋势过滤器,仅在明确趋势中交易
-2. 引入成交量确认信号
-3. 优化止盈止损机制,如采用移动止损
-4. 增加市场波动率过滤条件
-5. 开发自适应的回溯周期调整机制
-
-#### 总结
-这是一个建立在经典技术分析理论基础上的系统化交易策略。通过程序化实现使其具备了客观性和可重复性。策略的核心优势在于将Fibonacci理论与严格的风险控制相结合,适合在trending市场中应用。通过持续优化和完善,该策略有望在各类市场环境中保持稳定的表现。
-
-||
 
 #### Overview
 This strategy is an advanced trend-following system based on Fibonacci retracement principles. It identifies potential support and resistance zones by dynamically calculating key Fibonacci retracement levels (23.6%, 38.2%, 50%, 61.8%, 78.6%). The system uses a 100-period lookback window to determine the highest and lowest points, which serve as the basis for calculating retracement levels. The strategy incorporates precise entry signals and risk management mechanisms, triggering trading signals at key Fibonacci level breakouts.
@@ -91,7 +50,6 @@ Recommended risk control measures:
 
 #### Summary
 This is a systematic trading strategy built on classic technical analysis theory. Its programmatic implementation provides objectivity and repeatability. The core advantage lies in combining Fibonacci theory with strict risk control, suitable for trending markets. Through continuous optimization and improvement, the strategy has the potential to maintain stable performance across various market conditions.
-[/trans]
 
 
 

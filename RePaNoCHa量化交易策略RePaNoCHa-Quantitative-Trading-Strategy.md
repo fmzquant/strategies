@@ -9,91 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-RePaNoCHa策略是一个集成多种指标和风险管理机制的量化交易策略。它主要通过判断趋势方向和潜在反转点,发出买入和卖出信号。该策略同时具有移动止损、固定止损和止盈设置来锁定利润和控制风险。
-
-## 策略原理
-
-该策略集成以下多个指标:
-
-- T3平均线:衡量价格趋势方向。
-
-- 平均波动范围指标:识别价格波动并设置目标区域。 
-
-- ADX指标:判断趋势强弱。
-
-- SAR指标:显示潜在的反转点。
-
-- RSI指标:判断超买超卖区域。
-
-- MACD指标:显示价格动量。
-
-当上述多个指标给出一致信号时,策略判断趋势启动,产生买入和卖出信号。入场后,策略采用线性移动止损追踪最高价/最低价的一定百分比,并随着利润增加而逐步上移,用于锁定利润。同时也具有固定百分比止损来限制最大损失。
-
-具体来说,当价格高于目标区域上轨、T3上涨、ADX看涨、SAR看涨、RSI高于中线、MACD正值时,产生做多信号。相反条件产生做空信号。止盈和止损分别固定设置为入场价格的1%和3%。移动止损根据当前收益水平,相对入场点线性设置止损距离。
-
-## 优势分析
-
-- 多种指标综合判断,提高准确率
-
-考量趋势、超买超卖、反转等多个指标,可避免单一指标误判带来的风险。
-
-- 移动止损机制灵活跟踪,锁定盈利
-
-移动止损距离随利润变化调整,可较好跟踪价格波动锁定利润。
-
-- 固定止损控制最大损失
-
-设置固定止损百分比,可以限制每单最大损失,避免亏损扩大。
-
-- 可自定义的参数组合
-
-指标参数可自由调整,可根据不同交易品种定制最优参数。
-
-## 风险分析
-
-- 多指标组合提高决策难度
-
-过多指标可能造成指标排斥,决策判断难度增加,需要仔细评估指标效果。
-
-- 市场剧烈波动被套或止损
-
-在价格剧烈波动时段,容易被套或频繁触发止损,止盈难以奏效。
-
-- 频繁交易增加交易成本
-
-较短线操作会增加交易频率和滑点成本,影响实际盈利。
-
-- 参数优化难度大
-
-需要测试各种指标参数组合,优化难度较大,需足够历史数据支持。
-
-## 优化方向
-
-- 评估指标实际效果,避免冗余
-
-通过对照测试,检查各指标对信号提升的实际贡献,去除冗余指标。
-
-- 优化移动止损算法
-
-测试不同止损 trailing 算法,寻找更好地跟踪收益的止损方式。
-
-- 考虑实盘滑点和手续费
-
-将实际交易成本引入回测,辅助决策是否入场。
-
-- 分时段参数优化
-
-分别优化高波动和低波动时段的参数,提高策略稳定性。
-
-## 总结
-
-RePaNoCHa策略通过集成多种指标和止损/止盈机制,实现了较为稳定的量化交易决策和盈亏管理。但其交易频率较高,且参数优化过程较为复杂。需要在回测中加入更多实盘因素,并采用对照测试等方法简化模型,降低过优化风险,从而在相对频繁的交易中获得长期稳定收益。
-
-||
 
 ## Overview
 
@@ -165,7 +80,6 @@ Optimize parameters separately for high/low volatility sessions to improve robus
 
 The RePaNoCHa strategy realizes relatively stable automated trading decisions and profit management through integrating multiple indicators and stop mechanisms. But its high trading frequency and complex optimization process needs further improvement. More real-world factors should be introduced into backtests, and techniques like benchmark testing should be adopted to simplify the model and reduce overfitting risks, in order to achieve consistent long-term returns from its relatively active trading approach.
 
-[/trans]
 
 > Strategy Arguments
 

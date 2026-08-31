@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/161da426ec0b2bce95f.png)
-[trans]
-## 概述
-
-动态CCI突破策略是一个利用CCI指标识别超卖超买的短线交易策略。它结合CCI指标和WMA平均线,在CCI指标从超卖区域反弹的时候做多,在CCI指标从超买区域回落的时候做空,获利后退出。
-
-## 策略原理
-
-该策略使用CCI指标判断市场的超买超卖情况。CCI指标可以有效识别价格异常情况。当CCI指标低于-100的时候,视为市场超卖;当高于100的时候,则为市场超买。策略会在CCI指标由低于-100上穿为做多信号;由高于100下穿为做空信号。 
-
-同时,策略还结合WMA均线判断趋势方向。只有当收盘价高于WMA均线时,做多信号才有效;只有当收盘价低于WMA均线时,做空信号才有效。这样可以过滤掉部分不明确的交易信号。 
-
-入场后,策略采用止损方法控制风险。有三种可选的止损方式:固定策略止损、价格波动范围止损、ATR止损。做多的时候,价格下跌到止损线就会止损退出;做空的时候,价格上涨到止损线就会止损退出。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 利用CCI指标识别反转机会,可以及时捕捉超卖超买的机会。
-2. 结合均线判断方向,避免做反趋势的交易。
-3. 采用多种可选的止损方式,可以根据市场调整止损。
-4. 策略信号简单明确,容易实现。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. CCI指标容易产生假信号,无法完全避免。
-2. 止损方式不当可能造成过度止损。
-3. 无法识别趋势,在震荡行情中会产生过多不必要交易。
-4. 无法判断整体市场走势,可能做反向操作。
-
-针对上述风险,主要的优化方式有:
-
-1. 结合其它指标过滤CCI指标信号。
-2. 根据回测优化止损的位置。
-3. 增加趋势判断指标,避免震荡行情。
-4. 判断大级别的支持位和压力位,决定操作方向。
-
-## 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1.  CC指标参数优化:调整CCI指标的周期参数,优化指标参数。
-
-2. 止损方式优化:测试不同的止损方式,选择最优止损。可以加入追踪止损方式。
-
-3. 过滤指标优化:加入MACD、RSI等其它指标,构建多指标过滤体系,减少虚假信号。
-
-4. 趋势判断优化:加入移动平均线等趋势判断指标,避免逆势操作。
-
-5. 自动止盈优化:建立动态止盈方式,让策略可以根据市场波动自动止盈。
-
-## 总结
-
-动态CCI突破策略整体是一个非常实用的短线交易策略。它利用CCI指标判定超买超卖,并辅以均线判断方向的方式进入场内。风险控制采用止损方式。该策略信号简单明确,容易实现,适合短线交易。通过不断测试和优化参数,可以让策略效果更加出色。
-
-||
 
 ## Overview  
 
@@ -133,7 +76,6 @@ The main aspects for optimizing this strategy include:
 
 Overall, the DCCI Breakout Strategy is a very practical short-term trading system. It identifies overbought/oversold situations using the CCI indicator and incorporates the moving average for directional bias. Risk is managed through stop losses. The simple and clear signals make this strategy easy to implement for short-term trading. Continual testing and optimization can further improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

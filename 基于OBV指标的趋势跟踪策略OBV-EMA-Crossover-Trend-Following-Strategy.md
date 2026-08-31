@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a04fc9786fc20fc829.png)
-[trans]
-## 概述
-
-该策略采用双EMA均线跨度来判断OBV指标的多空趋势,根据趋势方向进行长短做法。其中,OBV指标可以更清晰地反映出价格和成交量的关系,判断市场参与者的意愿,因此可以用于捕捉市场趋势。该策略结合移动平均线的指标平滑处理,可以有效滤除市场噪音,捕捉主要趋势。
-
-## 策略原理
-
-该策略主要基于OBV指标是否处于上升趋势来判断多头入场时机。具体来说,是计算OBV的6日EMA和24日EMA,当6日EMA上穿24日EMA时产生多头信号。同理,当6日EMA下穿24日EMA时,产生空头信号。此外,策略还设置了3%的止损。
-
-该策略判断趋势的关键在于OBV指标。OBV指标体现大资金的集合性意愿,可以有效反映市场参与者的态度。结合移动平均线处理,可以滤除部分噪声,使得信号更加清晰可靠。策略采用快速EMA线和慢速EMA线构建交易信号,可以平滑价格数据,同时也能较敏感地捕捉趋势变化。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 基于成交量的OBV指标可以清晰判断市场参与者意愿,信号较为可靠。
-
-2. 双EMA均线处理可以滤除部分噪音,使得信号更加清晰。
-
-3. 采用快慢EMA线组合可以兼顾平滑价格和捕捉趋势变化。
-
-4. 策略操作简单,容易实施。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. OBV指标在某些时候会发出错误信号,此时策略可能亏损。
-
-2. 在剧烈行情中,EMA线处理有滞后,可能错过最优入场点。  
-
-3. 固定的止损设置可能过于死板,无法适应市场的变化。
-
-对策:
-
-1. 结合其他指标进行确认,避免错误信号。
-
-2. 优化参数设置,使EMA线更灵敏。  
-
-3. 设置动态止损。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化EMA参数组合,找到更匹配的均线参数。
-
-2. 增加其他指标进行信号确认,如MACD、RSI等,提高信号准确率。
-
-3. 设置动态止损,能够根据市场波动实时调整止损点。
-
-4. 进行参数组合优化,找到最佳参数组合。
-
-## 总结
-
-该策略整体来说是一种较为简单可靠的趋势跟踪策略。它结合OBV指标和双EMA均线实现了对趋势的判断。优点是操作简单,信号清晰,能够有效跟踪趋势;缺点是可能出现错误信号,且EMA线处理有滞后。通过结合其他指标进行优化,可以获得更好的效果。
-
-||
 
 ## Overview
 
@@ -124,7 +66,6 @@ The strategy can be optimized in the following aspects:
 ## Conclusion  
 
 In general, this strategy is a relatively simple and reliable trend following strategy. It combines OBV indicator and dual EMA lines to judge the trend. The advantages are simple operation, clear signals, and ability to effectively track trends. The disadvantages are possible wrong signals and lagging of EMA line processing. Optimization with other indicators can achieve better results.
-[/trans]
 
 > Strategy Arguments
 

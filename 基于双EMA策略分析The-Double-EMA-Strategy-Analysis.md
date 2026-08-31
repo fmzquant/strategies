@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/194a4748bdee0f685c8.png)
-[trans]
-
-## 概述
-
-双EMA策略是一种趋势追踪策略,它通过计算不同周期的EMA,识别价格的趋势方向,以此来决定建仓或平仓。该策略简单实用,适用于趋势性较强的市场。
-
-## 策略原理
-
-该策略主要基于两个EMA指标,一个是短周期9日EMA,另一个是较长周期的21日EMA。它们的交叉为建仓和平仓信号。
-
-当短期EMA上穿长期EMA时,被视为价格进入上升趋势,该策略会在此时开多单,追踪价格上涨。当短期EMA下穿长期EMA时,被视为价格进入下降趋势,该策略会在此时开空单,追踪价格下跌。
-
-EMA指标能够有效过滤价格数据中的噪声,识别出价格趋势的主要方向。因此,该策略使用双EMA指标作为建仓和平仓的依据,以期望能够抓住较长的价格趋势周期。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 策略思路简单清晰,易于理解和实施。
-2. 能够有效识别价格趋势,及时建仓追踪趋势。
-3. 使用EMA指标过滤噪声,避免被短期价格震荡干扰。
-4. 可配置EMA参数,调整策略的敏感度。
-
-## 策略风险
-
-该策略也存在一些风险:  
-
-1. 在趋势反转时,EMA指标的滞后特性可能导致损失加大。
-2. EMA参数设置不当时,会提高假信号率。
-3. 本策略更适合强趋势市,在盘整时易受损。
-
-## 策略优化
-
-该策略可以从以下方面进行优化:
-
-1. 结合其他指标判断趋势反转,降低损失。例如MACD、KDJ等。
-2. 添加止损逻辑,好的止损策略可以大幅降低策略最大回撤。
-3. 优化EMA参数,使之更加契合不同品种的价格特性。
-4. 结合机器学习算法实现EMA参数的自动优化。
-
-## 总结
-
-双EMA策略整体而言是一个非常实用的趋势追踪策略。它操作简便,易于理解,在强趋势市场中表现优异。同时该策略也存在一些风险,可以从多种维度进行优化提高策略稳定性。总的来说,双EMA策略是量化交易的一个重要参考模板。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, the double EMA strategy is a very useful trend following strategy. It is easy to operate, understand, and performs excellently in strong trending markets. The strategy also has some risks that can be mitigated through various enhancements to improve its stability. Overall, double EMAs serve as an important reference template for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

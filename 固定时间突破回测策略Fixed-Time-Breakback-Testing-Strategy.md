@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ea46f2648a23eea77c.png)
-[trans]
-
-## 概述
-
-该策略的主要思想是在固定的时间点(这里是每天UTC+5时区的08:35)开市后5分钟K线收盘时,判断该5分钟K线的收盘价是否较开盘价上涨或下跌,如果上涨就做多,如果下跌就做空,并设置长短仓的止盈目标。
-
-## 策略原理
-
-该策略的具体原理是:
-
-1. 设置期望的交易时间,这里是UTC+5时区的每天08:35。
-
-2. 在该时间点,判断当前5分钟K线的收盘价是否高于开盘价。如果收盘价高于开盘价,表示该5分钟K线收阳线,做多。
-
-3. 如果收盘价低于开盘价,表示该5分钟K线收阴线,做空。
-
-4. 做多后,设置以1000美元为止盈退出做多单。做空后,设置以500美元为止盈退出做空单。
-
-## 优势分析
-
-该策略有以下主要优势:
-
-1. 策略思路清晰简单,容易理解和实现。
-
-2. 固定的交易时间可以避免过夜风险。
-
-3. 利用5分钟级别判断趋势判断精确。
-
-4. 设置了止盈目标,可以锁定盈利。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 固定交易时间可能错过市场其他时间段的交易机会。可以设置多个交易时间点。
-
-2. 5分钟判断可能不够准确,可以结合多个时间周期判断。 
-
-3. 收盘价与开盘价之间波动太大,设置止损可以降低风险。
-
-4. 止盈设置可能过于武断,可以根据历史数据测试设置更优化的止盈点。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 设置多个交易时间点,覆盖更多交易机会。
-
-2. 增加止损逻辑,降低亏损风险。
-
-3. 结合更多周期指标判断趋势,提高判断准确性。
-
-4. 用回测历史数据测试最优止盈点。
-
-5. 动态调整仓位大小,根据具体情况管理风险。
-
-## 总结
-
-整体来说,该固定时间突破回测策略思路简单清晰,通过在固定时间点判断趋势方向入场,并设置止盈止损来锁定利润和控制风险,是一个基础而实用的量化交易策略。通过多组合参数优化和风控手段增强,可以成为一个可靠的量化交易系统。
-
-|| 
 
 ## Overview
 
@@ -130,7 +69,6 @@ The strategy can be optimized in the following aspects:
 
 In general, the idea of this fixed time breakback testing strategy is simple and clear. By judging the trend direction at fixed time points and setting profit targets and stop losses to lock in profits and control risks, it is a basic and practical quantitative trading strategy. With more parameter optimization and risk control measures, it can become a reliable quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

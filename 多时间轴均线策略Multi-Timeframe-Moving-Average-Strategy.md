@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/87513dd40ffba5590e.png)
-[trans]
-
-## 概述
-
-本策略运用不同时间轴的移动平均线和指数移动平均线作为买卖信号,实现追涨杀跌的目的。根据短期均线的位置和走势判断市场趋势和转折点,根据长期均线判断大趋势。该策略同时使用简单移动平均线(SMA)和指数移动平均线(EMA)作为技术指标,能够有效过滤市场噪音,判断价格走势。
-
-## 策略原理  
-
-本策略使用5日、13日、21日的SMA,以及75日、90日、200日的EMA作为买卖信号。具体逻辑是:
-
-当短期SMA(5日线、13日线、21日线)顺序排列(5日线在上、13日线其次、21日线最下),并且所有短期SMA高于长期EMA(75日线、90日线、200日线)时,做多;
-
-当短期SMA(5日线、13日线、21日线)顺序排列(5日线在下、13日线其次、21日线最上),并且所有短期SMA低于长期EMA(75日线、90日线、200日线)时,做空。
-
-这样通过组合使用不同周期的SMA和EMA,可以有效判断价格短期和长期趋势,实现以短带长的趋势策略。
-
-## 优势分析  
-
-该策略具有以下优势:
-
-1. 使用双重均线指标,能有效过滤市场噪音,准确判断价格趋势。
-
-2. 多时间轴设置,短周期判定短期趋势,长周期确定大趋势,实现以快带慢。  
-
-3. SMA对价格变化敏感,EMA对价格变化平滑,两者结合使用效果更好。
-
-4. 追涨杀跌的逻辑简单直接,容易操作。
-
-## 风险分析  
-
-该策略也存在一定的风险:  
-
-1. 多时间轴设置较复杂,参数调整和优化难度大。
-
-2. 短期和长期指标可能会出现背离,发出错误信号。
-
-3. 仅基于均线指标,在剧烈行情时效果可能不佳。
-
-4. 存在一定的滞后,无法及时捕捉转折点。
-
-## 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 增加其他技术指标过滤信号,如KDJ、MACD等,提高策略准确性。
-
-2. 对短期和长期均线的周期和数量进行测试和优化,找到最佳参数组合。
-
-3. 增加止损机制,以控制风险和 DD。
-
-4. 结合量能指标,避免价格剧烈拉升下的假突破。
-
-## 总结  
-
-本策略通过运用双重均线和多时间轴分析,实现简单有效的趋势追踪。策略思路清晰易于理解,有一定的实用价值。但也存在一些问题有待改进,如参数优化、风险控制等。总体来说,本策略为量化交易提供了valuable的思路,值得深入研究和探讨。
-
-||
 
 ## Overview
 
@@ -124,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy realizes simple and effective trend tracking by using dual moving averages and multi timeframe analysis. The strategy idea is clear and easy to understand with certain practical value. But there is still room for improvement such as parameter optimization, risk control etc. Overall, the strategy provides valuable ideas for quantitative trading, which is worth in-depth research and discussion.
 
-[/trans]
 
 
 

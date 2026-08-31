@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13d8ce7d4da5c38b589.png)
 
-[trans]
-#### 概述
-该策略是一个基于技术指标的日内多头交易策略。主要利用三种技术指标来判断多头入场时机:1. 摆动低点 2. 看涨K线形态 3. 极度超卖。同时使用ATR(Average True Range)指标来计算止损和止盈价格。该策略适用于所有周期和所有标的。
-
-#### 策略原理
-该策略主要基于以下原理:
-1. 在上涨趋势中,股价经常会出现回调,形成局部低点,这些局部低点往往是很好的买入机会。策略使用摆动低点来捕捉这些买入机会。
-2. 某些特殊的K线形态往往预示着趋势反转或者趋势延续,策略使用看涨三线敲击形态来判断反转买入时机。
-3. 当股价连续数日下跌后,空头力量逐渐衰竭,继续下跌的空间有限,股价随时可能反弹向上,策略使用极度超卖指标来捕捉这些反转买入机会。
-4. 股价波动具有周期性和相似性,可以用ATR指标来衡量,并以此计算合适的止盈止损距离。
-
-#### 策略优势
-1. 组合三种经典技术指标,形成严谨的量化交易系统,规避主观性的弊端。
-2. 止盈止损位的设置基于ATR波动率指标,能够客观量化,规避主观性的弊端,同时止损位和目标价和行情波动率相匹配,可以有效控制风险和锁定利润。
-3. 适用范围广,对周期和标的无限制,可以充分利用优势来获利。
-
-#### 策略风险
-1. 对单边上涨行情判断准确性高,但是若遇到震荡行情,频繁入场可能导致亏损加大。
-2. 止盈位过远,获利速度慢,资金利用率低。
-3. 极度超卖指标判断反转能力有限,在趋势行情中可能失效。
-
-#### 策略优化方向 
-1. 可以考虑增加趋势判断指标,比如MA,MACD等,来判断大的趋势方向,在上升趋势中使用该策略,下降趋势中停用。
-2. 可以考虑优化算法,寻找最优参数,特别是ATR倍数的选取,止盈倍数可以小一些,加快获利速度。
-3. 极度超卖指标可以优化,比如改成KDJ,RSI等更加成熟的超卖指标。
-
-#### 总结
-该日内多头突破策略是一个基于摆动低点、看涨形态和超卖反转的量化交易策略。利用三种技术指标从不同角度捕捉多头买点。同时使用ATR波动率指标计算动态止盈止损位。在上涨行情中能够充分捕捉利润,但是在震荡行情中面临频繁交易风险。策略还有一些优化空间,可以考虑引入趋势判断、优化参数和指标等方法进一步提高策略效果。
-
-|| 
 
 #### Overview
 This strategy is an intraday bullish trading strategy based on technical indicators. It mainly uses three technical indicators to determine the timing of long entries: 1. Swing low 2. Bullish candlestick pattern 3. Extreme oversold. At the same time, it uses the ATR (Average True Range) indicator to calculate stop-loss and take-profit prices. This strategy is applicable to all timeframes and all underlying assets.
@@ -69,7 +39,6 @@ The strategy is mainly based on the following principles:
 
 #### Summary
 This intraday bullish breakout strategy is a quantitative trading strategy based on swing lows, bullish patterns, and oversold reversals. It uses three technical indicators to capture long entry points from different angles. At the same time, it uses the ATR volatility indicator to calculate dynamic stop-loss and take-profit levels. It can fully capture profits in uptrends but faces the risk of frequent trading in volatile markets. The strategy still has room for optimization, such as introducing trend judgments, optimizing parameters and indicators, to further improve the strategy's performance.
-[/trans]
 
 > Strategy Arguments
 

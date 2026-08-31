@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/157be87a48d6302da71.png)
 
-[trans]
-
-## 概述
-
-光环突破策略是一种趋势跟踪策略,它结合了移动平均线和ADX指标来判断价格走势和趋势强度,在突破移动平均线时进入场内。该策略简单实用,能有效跟踪趋势,获利潜力大。
-
-## 策略原理
-
-该策略主要基于三个指标:
-
-1. SMA移动平均线:计算一定周期的收盘价的简单移动平均值,判断价格趋势方向。
-
-2. ADX平均趋向指数:测量趋势的强度,ADX越高表示趋势越明显。
-
-3. 光环条件:当收盘价高于开盘价,而收盘价接近最低价时为看涨光环,当收盘价低于开盘价,而收盘价接近最高价时为看跌光环。
-
-策略逻辑:
-
-1. 计算N周期的SMA值,判断价格总体趋势。
-
-2. 计算M周期的ADX值,判断趋势强度。只有在ADX高于设定阈值时才产生交易信号。
-
-3. 当价格形成看涨光环,并且收盘价高于SMA,且ADX高于阈值时,做多。
-
-4. 当价格形成看跌光环,并且收盘价低于SMA,且ADX高于阈值时,做空。
-
-5. 止损或止盈退出仓位。
-
-## 策略优势
-
-1. 结合趋势方向和强度指标,能有效跟踪趋势。
-
-2. 光环条件过滤掉大部分无效突破,提高entries的胜率。
-
-3. 采用SMA而非EMA,有利于把握中长线趋势。
-
-4. ADX指标避免在无明显趋势时交易,有利于把握高概率操作。
-
-5. 策略规则简单清晰易于实现。
-
-## 策略风险
-
-1. SMA系滞后指标,可能出现早期入场或晚期入场导致stops被触发。可以适当优化SMA周期参数。
-
-2. ADX作用是过滤震荡市,但在趋势反转时可能误判产生损失。可以降低ADX条件形成的风险。
-
-3. 光环虽可过滤假突破,但实际操作中仍需注意风险管理,适当调整止损位置。
-
-4. 策略未考虑多空平衡因素,需要人工干预或优化 logic。
-
-## 策略优化方向
-
-1. 优化SMA和ADX的参数,找到最佳参数组合。
-
-2. 增加其他指标判断趋势,如布林带,KDJ等,提高entry质量。 
-
-3. 增加平仓条件,如趋势反转,回撤比例等,完善exit logic。
-
-4. 增加对多空比例的判断,避免单边交易过度。
-
-5. 优化止损策略,改进固定止损为追踪止损或分批止损。
-
-6. 优化资金管理策略,更好的控制单笔风险。
-
-## 总结
-
-光环突破策略整合移动平均线和ADX指标判断趋势方向和强度,在光环条件过滤下产生交易信号,是一种简单实用的趋势跟踪策略。该策略具有把握趋势、过滤噪音的优势,但也存在趋势判断滞后、止损风险等问题。我们可以通过优化参数、完善enter和exit逻辑、改进风险管理等手段,进一步提升策略的效率和稳定性。
-
-
-|| 
 
 
 ## Overview
@@ -150,7 +80,6 @@ The trading logic is:
 
 The Glory Hole strategy integrates SMA and ADX to determine trend direction and strength. It generates signals on glory hole condition to effectively track trends. The strategy has the advantage of capturing trends and filtering noise, but also lagging trend determination and stop loss risks. Further improvements in parameter optimization, enter/exit logic, and risk management will enhance its efficiency and stability.
 
-[/trans]
 
 > Strategy Arguments
 

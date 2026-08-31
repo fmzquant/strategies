@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b7c7a1ce73d916a1c8.png)
-[trans]
-
-## 概述
-
-本策略基于10日简单移动平均线(SMA)、30日SMA和相对强弱指数(RSI)指标,结合平均真实波幅(ATR)指标设定止损和止盈水平,实现白银价格的短期交易。该策略适用于1小时线上操作。
-
-## 策略原理
-
-当10日SMA从下向上突破30日SMA时,表示价格短期上涨趋势形成,在RSI高于50时看涨入市。当10日SMA从上向下跌破30日SMA时,表示价格短期下跌趋势形成,在RSI低于50时看跌入市。
-
-止损水平设置为最近低点减去3倍ATR。止盈水平设置为最近高点加上3倍ATR。这样可以利用ATR指标的特性,在行情波动加大时止损幅度较大,波动减小时止损幅度较小,从而实现风险控制。
-
-## 策略优势分析
-
-该策略结合多种指标判断短期趋势和资金的流入流出情况,可以有效过滤虚假信号。同时,ATR止损机制使得止损水平能够动态调整,从而控制风险。
-
-相比长期交易策略,短线操作具有资金周转快、频繁开仓等优势。该策略利用1小时均线系统判断短期趋势变化,配合RSI指标确定买卖时机,可以捕捉价格短期涨跌。
-
-## 风险及对策分析  
-
-该策略主要面临止损被击穿、多头行情中频繁停损等风险。针对这些风险,可以调整ATR倍数或设置价格过滤来规避止损被击穿。同时建议采用锁仓或加仓方式来减少多头行情中频繁停损的情况。
-
-另外,短线操作对交易者的心理素质要求较高,需要警惕过度交易和情绪化操作的风险。建议交易者适当控制仓位规模并制定严格的风险管理规则。
-
-## 策略优化方向
-
-该策略还可以通过以下方式进一步优化:
-
-1. 增加其他指标过滤,如KDJ指标判断过买过卖情况
-2. 测试不同参数组合,如SMA周期、ATR倍数、RSI阈值等
-3. 增加机器学习算法,实现参数的动态优化
-4. 结合股票池技术,扩展至类似模式的其他品种
-5. 增加自动止损模块,实现止损水平的动态跟踪
-
-## 总结
-
-本策略整合多个指标判断短期趋势和资金流向,利用ATR指标优化止损机制。该策略具有资金周转快、频繁开仓等优势,适合白银等品种的短线操作。我们还需要防范过度交易和情绪化操作的风险,并继续优化策略以提高稳定性及胜率。
-
-||
 
 ## Overview
 
@@ -87,7 +48,6 @@ This strategy can be further optimized in the following ways:
 
 This strategy integrates multiple indicators to determine short-term trends and capital flows, and optimizes the stop loss mechanism using the ATR indicator. It has advantages like fast capital turnover and frequent position opening, making it suitable for short-term trading of assets like silver. We still need to guard against risks like overtrading and emotional decisions, and continue optimizing the strategy to improve robustness and win rate.
 
-[/trans]
 
 
 

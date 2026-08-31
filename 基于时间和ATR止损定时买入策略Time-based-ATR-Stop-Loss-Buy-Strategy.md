@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d21064b565fc14ad9a.png)
-[trans]
-
-### 概述
-
-本策略的核心思想是结合时间和ATR指标设定买入时机和止损点。策略在指定的时间点发出定时买入信号,以当时的收盘价作为买入价格,然后以买入价格加上ATR数值作为止损点。这样可以过滤掉一些不适宜的买入时机,同时利用ATR来控制风险。
-
-### 策略原理  
-
-本策略主要由以下几个部分组成:
-
-1. 输入参数:包括买入时间timeTrade和ATR参数atrLength。timeTrade决定了买入时间,atrLength决定了ATR的周期参数。
-
-2. 计算ATR指标:根据atrLength参数计算ATR指标的值atrValue。
-
-3. 定义买入条件:当小时和分钟的组合等于timeTrade时生成买入信号。
-
-4. 发出买入指令:符合买入条件时做多,记录买入价格buyprice。 
-
-5. 设置止损点:止损点为买入价格加上ATR值。当价格突破该止损点时止损退出。
-
-6. 绘图:画出止损水平线。
-
-### 优势分析
-
-本策略最大的优势在于利用时间和ATR指标双重确认买入时机和止损点。这避免了盲目追随市场买入,并有效控制了风险。其次,利用ATR设置的止损点是动态变化的,能够根据市场波动程度来设定合理的止损范围。最后,策略逻辑简单,容易理解和跟踪。
-
-### 风险分析
-
-本策略主要存在以下几方面的风险:
-
-1. 买入时间设置不当,可能错过较好的买入时机或者买入不理想的市场。
-
-2. ATR参数设置不当,止损点过大过小都会影响策略效果。
-
-3. 无法有效跟踪长线趋势,更适合短线操作。
-
-4. 没有考虑基本面分析因素。
-
-### 优化方向  
-
-本策略可以从以下几个方面进一步优化:
-
-1. 结合多因子模型确定更科学的买入时间。
-
-2. 结合波动率模型优化ATR参数设置。
-
-3. 增加趋势跟踪机制,能够适应更长的持仓期。  
-
-4. 融入基本面分析,判断买入时机的合理性。
-
-### 总结
-
-本策略整体来说是一个较为简单直观的高频intraday交易策略。核心思路是利用时间和ATR指标的双重确认来锁定买入时机和止损点。优点是风险可控,相对容易实现。但也存在买入时机选择和参数优化不足等问题。未来可从引入更多因子、动态参数优化、趋势跟踪等方面进行进一步优化。
-
-||
 
 ### Overview  
 
@@ -118,7 +63,6 @@ This strategy can be further optimized in the following aspects:
 
 Overall, this is a relatively simple and intuitive high frequency intraday trading strategy. The core idea is to use the double confirmation of time and ATR indicators to determine the buy-in timing and stop loss points. The advantages are controllable risks and relatively easy to implement. But there are also problems like insufficient selection of buy-in timing and inadequate parameter optimization. Future optimizations can be made from introducing more factors, dynamic parameter optimization, trend tracking etc.
 
-[/trans]
 
 > Strategy Arguments
 

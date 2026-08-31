@@ -9,16 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-HMA和CCI组合趋势追踪策略
-
-该策略通过组合使用HMA和CCI指标,实现趋势判断和跟踪交易。具体来说,当HMA向上突破且CCI指标上穿低位时做多;当HMA向下突破且CCI指标下穿高位时做空。平仓条件为HMA再次向相反方向突破或CCI重新进入阈值区。
-
-这种策略的优势是利用HMA判断价格趋势方向,使用CCI确认趋势启动的时机,可以有效减少跳空和回调导致的错误交易。但是HMA和CCI指标都存在滞后性,可能错过最佳入场点位。同时,CCI指标对复杂行情的判断能力较弱。
-
-总的来说,HMA和CCI组合趋势追踪策略可以在趋势明显的阶段获得不错效果。但实盘过程中仍需要关注止损设置,及时止损以避免LIBR产生的亏损。只有参数优化到位,才能长期应用该策略。
-
-||
 
 This strategy combines HMA and CCI to identify and trade trends. Specifically, it goes long when HMA breaks upwards and CCI crosses above lower band, and goes short when HMA breaks downwards and CCI crosses below upper band. Exits occur when HMA breaks back in opposite direction, or CCI re-enters threshold range.
 
@@ -26,7 +16,6 @@ The advantage of this strategy is using HMA to determine trend direction, and CC
 
 In summary, the HMA and CCI combo trend following strategy can produce decent results during strong trending phases. But in live trading, attention is still needed on stop loss to cut losses from LIQR events. Only with proper parameter optimization can this strategy be applied successfully in the long run.
 
-[/trans]
 
 > Strategy Arguments
 

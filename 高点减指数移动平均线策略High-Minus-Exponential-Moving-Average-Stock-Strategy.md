@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/100ccdcc486c163310c.png)
-[trans]
-
-## 概述
-
-高点减指数移动平均线策略(High Minus Exponential Moving Average Stock Strategy)是一种根据的高点和指数移动平均线进行交易决策的量化投资策略。该策略通过计算前一期价格的高点减去前一期收盘价的13期指数移动平均线,如果差值大于0则做多,如果差值小于0则做空,属于趋势跟踪型策略。
-
-## 策略原理  
-
-该策略的核心指标是高点减指数移动平均线(High Minus Exponential Moving Average,HMEMA)。具体来说,是取前一期的最高价,减去前一期收盘价的13期指数移动平均线。当该差值大于0时,说明最近一期的价格创出新的高点,进入多头趋势,这时做多;当差值小于0时,说明价格低于近期的平均水平,进入空头趋势,这时做空。
-
-该策略认为,当价格创出新高时,是多头趋势的开始,所以那时做多;当价格跌破最近期平均价时,是空头趋势的开始,那时做空。通过这个方法,策略可以抓住价格的主要趋势转换点,实现趋势跟踪。  
-
-## 策略优势
-
-1. 该策略能够抓住主要的价格趋势转折点。当价格创出新高或跌破均线时下单,减少交易次数但捕捉到关键点位。
-
-2. 使用指数移动平均线作为参考,可以更加平滑地反映价格走势,过滤掉短期市场噪音。
-
-3. 策略逻辑简单清晰,容易理解和修改,适合初学者学习。
-
-4. 该策略可适用于不同时间周期下的、外汇、加密货币等市场,灵活性强。
-
-## 风险分析
-
-1. 该策略无法确定具体的入市出场点位,存在一定的随波逐流风险。
-
-2. 当价格处于震荡区间时,该策略会产生虚假信号,存在过度交易风险。可以适当调整参数或增加过滤条件以减少。
-
-3. 策略并没有考虑股价的实际波动幅度,存在亏损过大的风险。可以设置止损来控制风险。
-
-4. 策略没有结合市场总体状态、个股基本面等来确定多空方向,存在信号效果差的风险。
-
-## 优化方向  
-
-1. 可以考虑结合的波动幅度,仅在波动加大时才发出交易信号,以减少误导型交易。  
-
-2. 可以结合股价的简单移动平均线,同时高点超过快线和慢线时做多,跌破快线和慢线时做空,设置过滤条件。
-
-3. 可以对参数如均线周期、比较系列等进行优化,找到最佳参数组合。
-
-4. 可以考虑根据市场状态(多头、空头、震荡)切换策略参数或使用不同均线指标,提高策略的状况适应性。
-
-## 总结  
-
-高点减指数移动平均线策略通过比较价格的高点和指数移动平均线,设计了一个简单有效的趋势跟踪策略。该策略抓住价格在创出新高或穿越均线时的趋势转折点,可以减少交易次数但捕捉关键点位。同时,使用指数移动平均线过滤了市场噪音。该策略适用于追踪、外汇或加密货币等金融产品的中长线趋势。通过进一步优化,可望获得更好的策略表现。
-
-||
 
 
 ## Overview
@@ -103,7 +56,6 @@ The logic behind this is when stock price reaches a new high, it signals the sta
 
 The High Minus Exponential Moving Average Stock Strategy designs a simple but effective way of tracking stock trends by comparing high prices with exponential moving averages. It captures major turning points when prices break to new highs or moving average levels, thus catching key spots with fewer trades. Exponential moving averages also filter out market noises. This strategy suits medium- to long-term trend-following trading of stocks, forex, crypto currencies and more. Further optimizations may lead to improved strategy performance.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,73 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12600be96c200b69afe.png)
 
-[trans]
-
-## 概述
-
-本策略基于双EMA指标和AC加速振荡指标设计。其中,双EMA指标用于判断价格趋势方向,而AC指标则用于确认趋势信号,实现过滤效果。该策略结合了趋势跟踪和信号过滤两大功能,旨在提高信号质量,在趋势中获利。
-
-## 策略原理  
-
-该策略由两大模块组成:
-
-1. 双EMA模块   
-   
-    - 使用2日EMA和20日EMA构建双EMA指标。当价格上穿2日EMA时视为买入信号;当价格下破20日EMA时视为卖出信号。  
-    
-    - 该模块判断价格的短期和中期趋势方向,实现基本的趋势跟踪。  
-
-2. AC模块
-
-    - 使用AC加速振荡指标的正负值来确认趋势信号。只有当双EMA和AC指标同方向时,才产生交易信号。
-
-    - 该模块通过过滤假信号,提高了信号的可靠性。
-
-综上,该策略整合双EMA判断大趋势,以及AC指标过滤假突破,形成系统性的趋势跟踪体系。
-
-## 策略优势分析
-
-本策略具有如下优势:
-
-1. 双EMA跟踪中长线趋势,AC滤除短期噪音,组合效果好。
-
-2. 信号过滤效果佳,可避免多头获利后盲目做空,或空头获利后盲目做多的情况。
-
-3. 调参数灵活,可配合不同品种和市场环境调整参数,适用面广。
-
-4. 策略思路清晰,容易理解,便于量化交易者优化和改进。
-
-5. 可在趋势型品种中获得不错的跟踪获利。
-
-## 策略风险分析
-
-本策略也存在一些风险:  
-
-1. 双EMA参数设置不当可能错过较短的趋势或者产生多余交易。
-
-2. AC参数设置不当可能过滤掉较弱的有效信号或者无法过滤足够的噪音。 
-
-3. 无法应对急速变化的市场,如快速断崖式下跌。
-
-4. 无法在震荡市中获得足够盈利,应作为趋势跟踪策略使用。
-
-## 策略优化方向  
-
-本策略可从以下维度进行优化:
-
-1. 测试更多参数组合,寻找更匹配不同品种特点的最优参数。
-
-2. 增加止损模块,在亏损过大时止损退出。
-
-3. 结合更多指标进行信号过滤优化。
-
-4. 开发长短线组合策略,在趋势中跟踪中长线,利用短线针对性交易为长线减仓加仓。
-
-## 总结
-
-本策略结合双EMA判趋势和AC滤噪的思路值得学习借鉴。该策略优势在于信号质量好,可靠性高,适合跟踪趋势型品种。如果参数调整合适,在趋势行情中可获得丰厚收益。
-
-||
 
 ## Overview  
 
@@ -143,7 +76,6 @@ The strategy can be optimized in the following aspects:
 
 The idea of combining dual EMA for trend and AC for noise filtering is worth learning. This strategy has quality signals and reliability, suitable for tracking trending products. With proper parameter tuning, great profits can be achieved by riding trends using this strategy.
 
-[/trans]
 
 > Strategy Arguments
 

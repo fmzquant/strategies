@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10cdef9fdb8f35e2e06.png)
-[trans]
-### 概述
-
-该策略基于超级趋势通道指标开发。它结合价格行情以及超级趋势通道的方向,判断行情趋势,并在通道方向转折时发出交易信号。 
-
-当价格突破超级趋势通道时,买入做多;当价格跌破超级趋势下通道时,卖出做空。同时,它具有趋势跟踪止损机制。
-
-### 策略原理
-
-超级趋势通道由一上轨、一下轨组成。通道内部为盘整区域,通道外部为趋势区域。它利用平均真实波动范围乘以一个倍数,来确定通道的宽度。
-
-当价格从下方突破上轨时,为买入信号。这意味着新的上涨趋势启动。当价格从上方跌破下轨时,为卖出信号。这意味着新的下跌趋势开始。
-
-该策略运用超级趋势通道指标判断主要趋势的方向。当通道方向发生转折时,即价格突破通道轨时,发出交易信号;然后利用趋势跟踪止损方式,锁定盈利。
-
-### 优势分析
-
-这是一个较为简单直观的突破策略。它具有以下优势:
-
-1. 利用超级趋势通道判断主要趋势方向,避免被噪音iB赚钱。
-
-2. 顺势而为,根据价格与通道的关系判断做多做空时机。
-
-3. 具有清晰的止损机制,可以有效控制风险。
-
-4. 止损方式为趋势跟踪止损,可最大程度锁定盈利。
-
-### 风险与改进
-
-该策略也存在一些风险,主要包括:
-
-1. 超级趋势通道参数设置不当,可能导致虚假信号。
-
-2. 突破信号可能是短期的反转信号,从而产生亏损。
-
-3. 止损方式仅为趋势跟踪止损,可能会过早止损。
-
-对应改进措施包括:
-
-1. 测试不同市场的数据,优化参数。
-
-2. 结合其他指标过滤信号。
-
-3. 结合价格 Structure,判断突破信号的可靠性。
-
-4. 增加后台止损,进一步控制风险。
-
-### 总结
-
-该策略整体而言是一个较为简单直观的趋势跟踪策略。它利用超级趋势通道清晰判断趋势方向,在通道发生转折时产生信号;然后利用趋势跟踪止损方式锁定盈利。
-
-相比其他指标,超级趋势通道对价格波动的包容性较好。但该策略也存在一定盈利空间,可以从信号过滤及止损方式等方面进行优化,以进一步提高稳定性。
-
-||
 
 ### Overview  
 
@@ -118,7 +64,6 @@ In general, this strategy is a relatively simple and intuitive trend following s
 
 Compared with other indicators, the Supertrend channel has better tolerance for price fluctuations. But there is still room for profit for this strategy. It can be optimized in terms of signal filtering and stop loss methods to further improve stability.
 
-[/trans]
 
 > Strategy Arguments
 

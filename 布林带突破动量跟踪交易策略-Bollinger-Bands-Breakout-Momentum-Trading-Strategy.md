@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1bf9bcd9f4035e42efc.png)
 
-[trans]
-#### 概述
-该策略是一个基于布林带指标的动量跟踪交易系统。它通过监测价格与布林带上轨的关系来识别潜在的突破机会,并在价格跌破布林带下轨时平仓。布林带由三条线组成:中轨(移动平均线)、上轨和下轨(标准差计算得出)。策略支持多种移动平均线类型,并可根据交易者偏好调整参数。
-
-#### 策略原理
-策略的核心逻辑基于以下几点:
-1. 入场信号:当收盘价突破布林带上轨时,表明市场可能出现强势上涨趋势,此时开立多头仓位。
-2. 出场信号:当收盘价跌破布林带下轨时,表明上涨动能可能耗尽,此时平仓获利。 
-3. 布林带计算:中轨采用可选的移动平均线类型(SMA、EMA、SMMA、WMA、VWMA),上下轨道通过标准差倍数来确定带宽。
-4. 交易管理:策略在指定的时间窗口内执行交易,每次交易使用100%资金,并考虑了手续费和滑点因素。
-
-#### 策略优势
-1. 适应性强:支持多种移动平均线类型和参数调整,可以适应不同市场环境。
-2. 风险管理完善:通过布林带下轨作为止损点,有效控制风险。
-3. 突破确认:使用布林带上轨作为入场点,可以过滤掉假突破。
-4. 资金管理合理:采用固定比例资金管理,避免过度杠杆。
-5. 交易成本考虑:将手续费和滑点纳入计算,更符合实际交易环境。
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡市场容易产生虚假信号。
-2. 滞后性风险:移动平均线具有滞后性,可能错过最佳入场时机。
-3. 参数敏感性:不同参数组合可能导致策略表现差异较大。
-4. 资金使用风险:100%资金配置可能带来较大回撤。
-
-#### 策略优化方向
-1. 增加趋势确认指标:可以添加ADX等趋势指标,提高入场准确性。
-2. 优化资金管理:引入动态仓位管理,根据市场波动调整持仓量。
-3. 完善止盈机制:可以设置动态止盈点,在强势行情中获取更多收益。
-4. 增加市场环境过滤:添加波动率指标,在不适合的市场环境避免交易。
-
-#### 总结
-这是一个基于布林带的趋势跟踪策略,通过观察价格与布林带的关系来捕捉市场趋势。策略设计合理,具有良好的可调整性和风险管理机制。通过建议的优化方向,可以进一步提升策略的稳定性和盈利能力。策略特别适合波动较大的市场,但需要交易者根据实际情况调整参数和风险控制措施。
-
-|| 
 
 #### Overview
 This strategy is a momentum tracking trading system based on Bollinger Bands indicator. It identifies potential breakout opportunities by monitoring the relationship between price and the upper Bollinger Band, and closes positions when price breaks below the lower band. Bollinger Bands consist of three lines: the middle band (moving average), upper and lower bands (calculated using standard deviation). The strategy supports multiple types of moving averages and allows parameter adjustment based on trader preferences.
@@ -77,7 +43,6 @@ The core logic of the strategy is based on the following points:
 
 #### Summary
 This is a trend-following strategy based on Bollinger Bands, capturing market trends by observing the relationship between price and the bands. The strategy is well-designed with good adaptability and risk management mechanisms. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced. It is particularly suitable for volatile markets, but traders need to adjust parameters and risk control measures according to actual conditions.
-[/trans]
 
 
 

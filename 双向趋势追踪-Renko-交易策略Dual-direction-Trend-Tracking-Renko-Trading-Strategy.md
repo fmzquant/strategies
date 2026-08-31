@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/df8206f4ab9bb5de35.png)
 
-[trans]
-### 概述
-
-本策略为一个基于改进版 Supertrend 指标的双向追踪 Renko 交易策略。该策略主要追踪价格趋势,在趋势转折点生成交易信号,采取趋势追踪的交易方式。
-
-### 策略原理  
-
-本策略的核心指标为改进版 Supertrend。Supertrend 是一个跟踪价格趋势的技术指标。本策略对其进行了修改,主要有两个方面:
-
-1. 增加了 Factor 参数,可以调整 Supertrend 的敏感度,以控制交易频率。
-2. 增加了 Trend 变量,当价格上穿上轨或下穿下轨时,改变 Trend 的值,生成交易信号。
-
-当 Trend 为 1 时,表示目前处于上升趋势;当 Trend 为 -1 时,表示目前处于下降趋势。本策略在 Trend 值发生变化时,即趋势转折点,生成长仓和短仓的入场信号。
-
-此外,本策略还设置了 pyramiding 参数,允许加仓交易。在趋势延续的时候,可以加大仓位,追踪趋势。
-
-### 优势分析
-
-本策略主要有以下几个优势:
-
-1. 使用改进版 Supertrend,可以更好地捕捉价格趋势的转折。
-2. 采用趋势追踪的交易方式,容易抓住价格趋势上的大行情。 
-3. 允许加仓交易,可以进一步放大获利。
-4. Renko 车型与趋势指标的结合,可以有效过滤假突破。
-
-### 风险分析
-
-本策略也存在一些风险:  
-
-1. 当趋势走弱时,可能产生多次反向信号,造成过度交易。
-2. 加仓次数过多,会 amplify 损失。
-3. 无法确定回撤范围,存在一定程度的资金风险。
-
-对策:
-
-1. 优化 Factor 参数,确保只在转折点产生信号。  
-2. 限制加仓次数,控制风险。
-3. 采用资金管理,限制单笔损失比例。
-
-### 优化方向  
-
-本策略还可以从以下几个方面进行优化:
-
-1. 测试不同市场的最佳 Factor 参数。
-2. 尝试其他类型的趋势指标,如 DMI、MACD 等。  
-3. 增加止损策略,以锁定利润,限制损失。
-4. 结合其他指标过滤入场时机。
-
-### 总结
-
-本策略整体来说是一个较好的趋势追踪策略。相比传统趋势追踪策略,本策略通过改进版 Supertrend 获取更精确的趋势转折点,从而产生更优质的交易信号。实盘验证表明,通过参数优化后,该策略可以产生较好的交易效果。但交易者还需要注意风险控制,避免亏损过大。
-
-||
 
 ### Overview  
 
@@ -117,7 +64,6 @@ This strategy can also be optimized in several ways:
 
 Overall, this is a good trend tracking strategy. Compared with traditional trend tracking strategies, this strategy obtains more accurate trend reversals through the improved Supertrend, thereby producing higher quality trading signals. Live verification shows that after parameter optimization, this strategy can produce good trading results. However, traders still need to pay attention to risk control to avoid excessive losses.
 
-[/trans]
 
 > Strategy Arguments
 

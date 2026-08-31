@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16468e1775ca361bdd4.png)
-[trans]
-## 概述
-
-本策略基于EMA均线的交叉原理,设计了一个短线交易策略,可以在股价出现一定程度回调时,进行适当的短线交易,以期获得较好的收益。
-
-## 策略原理
-
-该策略使用5种不同参数的EMA均线,具体为10日线、20日线、50日线、75日线和200日线。其交易信号的生成逻辑是:
-
-1. 当价格上穿75日线,且下穿50日线时,视为股价出现一定幅度的短线回调信号,可以考虑做空;
-
-2. 在做空后,如果10日线下穿20日线,则继续持有空单;当10日线重新上穿20日线时,则平仓买入,结束该轮的短线交易。
-
-通过这样的交易逻辑设计,可以抓住股价短期内的较大波动,在回调阶段赚取证券差价。
-
-## 策略优势
-
-该策略最大的优势在于交易信号生成简单清晰,容易实施。仅仅依靠几条移动平均线的交叉情况,就可以完成交易决策。无需复杂的模型和大量历史数据,降低了实施难度。
-
-另外,策略采用多组EMA均线进行组合,可以有效过滤市场噪音,识别出中短期趋势反转的时点,从而精确做出交易决策。
-
-## 策略风险
-
-该策略主要风险在于股价短期内的剧烈波动。若股价出现失控的快速上涨或下跌,将导致止损或止盈线被突破,造成较大的亏损。此外,若选取的参数不当,则交易信号可能过于频繁,也会影响策略收益。
-
-为控制风险,应适当调整均线参数,使交易频率维持在适度水平;同时设置合理的止损止盈幅度,避免单笔亏损过大。当面对特殊的市场情况时,也需要人工干预,暂停策略交易。
-
-## 策略优化
-
-该策略主要优化空间在参数调整上。可以测试更多组合的参数,寻找最优的参数组合。例如可以引入更多平均线,如60日线、120日线等,组成更丰富的交易信号源。
-
-另外也可以在止损、止盈等维度进行优化。适当放宽止损幅度,可能可以减少错止损的概率;收紧止盈幅度,可能可以提高盈利能力。这些参数的调整都需要根据回测结果,选择最优参数。
-
-## 总结
-
-本策略整体而言较为简单,以EMA均线交叉为基础,设计了一个简单可行的短线交易策略。该策略信号清晰,易于实施,能够有效抓取中短期趋势反转带来的交易机会。通过参数调整与止损、止盈设置的优化,可以使该策略获得更好的效果。
-
-||
 
 ## Overview
 
@@ -85,7 +47,6 @@ Optimization can also be done around aspects like stop loss and take profit. Pro
 
 To conclude, this strategy is fairly simple overall. Designed with basic EMA crossover signals, it shapes into a feasible short-term trading tactic. Its advantage lies in clear signals that are easy to carry out, which can effectively seize trading opportunities from mid-to-short term trend reversals. Further improvements can be achieved through parameter tuning and optimizing stop loss, take profit settings.
 
-[/trans]
 
 
 

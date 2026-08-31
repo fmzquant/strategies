@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a0903b561f9bdaf0e8.png)
 
-[trans]
-
-## 概述
-
-狮子裂缝均衡策略是一个基于均线交叉的简单短线交易策略。该策略主要运用两个移动平均线,当快速移动平均线从下方穿过慢速移动平均线的时候,做多;当快速移动平均线从上方穿过慢速移动平均线的时候,平仓。策略名称取自交易界流行的“狮子裂缝”术语,寓意捕捉短线价格的微小动作,在狭小的均线裂缝中获利。
-
-## 策略原理  
-
-该策略使用两个移动平均线:快速移动平均线小MAPeriod和慢速移动平均线bigMAPeriod。两条移动平均线构成价格通道,通道下沿为快速移动平均线,通道上沿为慢速移动平均线。当价格从下向上突破通道下沿快速移动平均线时,做多;当价格从上向下跌破通道上沿慢速移动平均线时,平仓。
-
-具体来说,策略首先计算快速移动平均线smallMA和慢速移动平均线bigMA。然后计算通道下沿买入线buyMA,它是慢速移动平均线的(100 - percentBelowToBuy)%。当快速移动平均线smallMA从下方向上穿过买入线buyMA时,做多;当盈利达到1%或者未盈利但持仓7根K线后,平仓。
-
-综上,该策略捕捉均线的“狮子裂缝”,也就是突破通道下沿的机会,以期实现短线获利。它同时设置了止盈和止损条件,控制单笔交易的风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 概念简单,容易理解和实现。使用双均线交叉是最基础的技术指标策略。
-
-2. 回测容易。该策略直接使用TradingView自带的回测功能,无需额外实现。
-
-3. 可视化强大。使用TradingView可直接在图表上展示交易信号点和回测统计数据。
-
-4. 风险可控。策略设置了止盈和止损条件,可以有效控制单笔交易的损失。
-
-5. 灵活调整。用户可以根据自己的需要调整均线参数和 andere 技术指标,使策略更契合不同品种和交易风格。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 可能产生过多信号。双均线策略容易在盘整时产生多次错乱信号。
-
-2. 单一指标依赖。仅使用均线交叉作决策,忽视了其他因素,信号质量可能较差。
-
-3. 参数优化难度大。优化均线周期参数组合需要大量计算,不易找到最佳参数。
-
-4. 回测偏差。简单的双均线策略回测效果往往优于实盘。
-
-5. 止损困难。设置固定止损点位难以适应行情的变化。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 结合其他指标过滤信号,如交易量、波动率等,避免在盘整中产生无效信号。
-
-2. 增加基于趋势的判断,避免逆势交易。可以加入 longer 周期均线判断趋势方向。
-
-3. 使用机器学习寻找最优参数。使用序贯参数优化或遗传算法自动寻找较优参数组合。
-
-4. 增加止损策略,如追踪止损、移动止损等,使止损更具弹性。
-
-5. 优化入场时机。可以使用其他指标识别更有效的入场时点。
-
-6. 结合量化研究对参数组合进行回测优化,提高稳定性。
-
-7. 开发自动交易系统,利用程序化交易进行参数组合优化与策略评估。
-
-## 总结
-
-狮子裂缝均衡策略是一个非常适合新手学习的入门策略。它运用简单的双均线交叉原理,设置止盈止损规则,可以捕捉短线价格波动。该策略易于理解实现,具有良好的回测效果。但其优化难度较大,实盘效果存疑。我们可以通过引入其他技术指标、优化参数以及开发自动交易系统等方式对该策略进行改进。总体而言,狮子裂缝均衡策略为量化交易初学者提供了一个非常好的学习平台。
-
-||
 
 
 ## Overview
@@ -140,7 +75,6 @@ The strategy can be improved from the following aspects:
 
 The Lion Fissure Balance strategy is an excellent starter strategy for beginners to learn. It applies the simple dual MA crossover logic and sets profit taking and stop loss rules to capture short-term price swings. The strategy is easy to understand and implement, and shows good backtest results. However, it suffers from optimization difficulty and questionable live performance. We can improve the strategy by incorporating other indicators, optimizing parameters, and developing automated trading systems. Overall, the Lion Fissure Balance strategy provides a great learning platform for quantitative trading beginners.
 
-[/trans]
 
 > Strategy Arguments
 

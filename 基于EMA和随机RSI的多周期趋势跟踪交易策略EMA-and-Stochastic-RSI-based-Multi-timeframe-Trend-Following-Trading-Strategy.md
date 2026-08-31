@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f7048b188b5cdc20cb.png)
-[trans]
-
-## 策略概述
-
-该策略名为"基于EMA和随机RSI的多周期趋势跟踪交易策略",利用两条不同周期的指数移动平均线(EMA)及随机RSI指标来捕捉市场的中长期趋势。策略的核心思想是通过EMA的交叉来判断趋势方向,同时结合随机RSI作为趋势确认和反转预警信号,以在趋势形成初期建仓,趋势末期平仓。
-
-## 策略原理
-
-1. 计算快速EMA和慢速EMA。快速EMA默认参数为12,慢速EMA默认参数为25,实际应用中可以根据市场特性和交易频率进行调整。  
-
-2. 判断多空趋势:
-- 当快速EMA上穿慢速EMA时,产生看多信号
-- 当快速EMA下穿慢速EMA时,产生看空信号
-
-3. 趋势确认:看多/看空信号出现后,需连续出现2根看多/看空K线才确认趋势形成。这有助于过滤掉假信号。
-
-4. 使用随机RSI作为辅助判断:
-- 当随机RSI %K值上穿%D值,且%K值在20以下时,产生超卖信号,提示可能的上涨反转
-- 当随机RSI %K值下穿%D值,且%K值在80以上时,产生超买信号,提示可能的下跌反转
-
-5. 交易策略:
-- 当EMA产生看多信号,且随机RSI不处于超买区时,开多仓
-- 当EMA产生看空信号,且随机RSI不处于超卖区时,开空仓
-
-## 策略优势
-
-1. 同时使用两个不同周期的EMA,可以更好地平衡趋势捕捉的灵敏度和可靠性。分析表明12/25周期的EMA组合对中长期趋势把握较好。
-
-2. 趋势确认机制可以有效过滤掉大部分假信号,提高策略的胜率。
-
-3. 随机RSI作为辅助判断,在趋势初期帮助判断趋势强度,在趋势后期提前预警可能的趋势反转。
-
-4. 策略逻辑简单,参数较少,容易理解和实施,且适用于多种市场和品种。
-
-## 风险分析
-
-1. EMA为滞后指标,在趋势反转初期可能出现较大滑点。
-
-2. 趋势型策略在震荡市中表现一般。此策略缺乏对震荡市的专门判断。
-
-3. 随机RSI在市场剧烈波动时可能失真,影响判断质量。
-
-4. 固定参数可能无法适应所有市场状况,需要根据市场特点动态调整。
-
-## 优化方向
-
-1. 引入ATR等波动率指标,根据波动率动态调整EMA参数,以适应不同的市场节奏。
-
-2. 增加对震荡市的判断,比如结合布林带开口方向等,避免在震荡市频繁交易。
-
-3. 在随机RSI基础上融入更多辅助判据,如成交量变化等,提高信号可靠度。
-
-4. 考虑市场关联性,引入多品种联动信号,增强系统抗风险能力。
-
-## 总结
-
-该策略充分利用了EMA和随机RSI的优势,形成了一套基于趋势跟踪和动量反转的中长期交易策略。通过均线交叉捕捉趋势,随机RSI确认趋势强度和预警反转,趋势确认机制提高信号质量,三者有机结合,形成了一个简单有效的量化交易策略框架。主要优势在于逻辑简洁,参数较少,实现难度低,适用范围广。同时策略也存在滑点较大,无法适应震荡市等固有局限性。未来可从动态参数优化,引入更多辅助判据,构建品种联动机制等方面深化和完善。总的来说,这是一个具有广阔优化空间和应用前景的量化交易策略。
-
-|| 
 
 ## Strategy Overview
 
@@ -126,7 +67,6 @@ The strategy, named "EMA and Stochastic RSI based Multi-timeframe Trend Followin
 
 This strategy effectively leverages the strengths of EMAs and Stochastic RSI to form a medium to long-term trading approach based on trend following and momentum reversal. It captures trends through EMA crossovers, confirms trend strength and warns of reversals with Stochastic RSI, and improves signal quality with trend confirmation mechanisms. The three components organically combine to create a simple and effective quantitative trading strategy framework. Its main advantages lie in its concise logic, few parameters, low implementation difficulty, and wide applicability. However, the strategy also has inherent limitations such as large slippage and inability to adapt to choppy markets. Future enhancements can focus on dynamic parameter optimization, introducing more auxiliary criteria, and constructing inter-market linkage mechanisms. Overall, this is a quantitative trading strategy with ample room for optimization and promising application prospects.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,58 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13dd13793ed241e7544.png)
 
-[trans]
-## 一、策略名称:均衡尺云图趋势跟踪策略
-
-### 二、策略概述
-
-本策略运用均衡尺云图指标提供的多种信号,设计了一个纯趋势跟踪策略,旨在捕捉中长期趋势,过滤震荡盘整,追踪强劲趋势的方向。
-
-### 三、策略原理
-
-该策略使用均衡尺云图指标中的转换线、基准线以及延迟线等为主要信号。在长期趋势判断方面,重点关注前置云和后置云的上下变化关系来判断趋势;在具体入场和出场时机选择上,转换线和基准线的交叉以及价格与云图关系的变化是主要依据。
-
-整体来说,该策略的核心逻辑是:确认中长期趋势方向->等待强势趋势重新启动的机会->入场追踪趋势->跟踪止损退出。
-
-具体来说,判断中长期趋势时,通过前置云和后置云的变化关系来确定(若前置云在上且为绿色,代表上升趋势,反之代表下降趋势)。当确认中长期趋势后,通过转换线和基准线的交叉以及价格突破云图的信号判断趋势重新启动,发出入场信号;入场后用基准线作为止损线来跟踪止损退出。
-
-这样,既过滤了中短期的震荡,又可以抓住强势趋势的机会,在证券市场中获得长期稳定的超额收益。
-
-### 四、策略优势
-
-(一)利用均衡尺云图判断中长期趋势方向,有利于定位主要方向
-
-(二)转换线和基准线交叉以及价格与云图关系变化判断入场时机,可以有效过滤震荡,捕捉强劲趋势
-
-(三)跟踪止损退出机制,既可以获得大趋势获利,也可以有效控制个别损失
-
-(四)综合多种均衡尺云图信号,形成系统性的趋势跟踪策略,稳定表现良好
-
-### 五、策略风险
-
-(一)中长期判断错误的系统性风险。若中长期趋势判断错误,则后续操作都将面临错误方向的风险。
-
-(二)入场时机选择不当带来的风险。若入场时机选择不当,容易被套。
-
-(三)跟踪止损过于接近带来的风险。若止损距离过于接近,极端行情可能被突破止损,造成损失。
-
-(四)交易频率过高带来的交易费用负担。若因参数设置不当使交易频率过高,交易费用也会增大。
-
-### 六、策略优化
-
-(一)测试不同均衡尺周期参数的组合,找到最优参数
-
-(二)优化入场条件,设计更严格的滤波器,确保有效入场
-
-(三)调整止损距离,在风险与收益之间找到最优平衡
-
-(四)添加盈利价格目标,结合价格与关键均衡尺指标距离,形成动态获利机制
-
-### 七、总结
-
-本均衡尺云图趋势跟踪策略,综合均衡尺云图多个信号判断趋势方向、入场时机、止损退出。实践表明,该策略可以有效抓住中长期趋势,过滤震荡,稳定获得超额收益。未来通过持续优化测试,有望进一步改进策略表现,获得更好回报。
-
-||
 
 ## I. Strategy Name: Ichimoku Cloud Trend Following Strategy  
 
@@ -114,7 +62,6 @@ This filters out short-to-mid term consolidations and allows capturing strong tr
 
 This Ichimoku Cloud trend following strategy synthesizes multiple Ichimoku signals to diagnose trend, time entries, and trail stops. Practice shows it can effectively capture mid-long term trends, filter out consolidations and achieve consistent outperformance. Future optimization and testing could further improve performance for superior returns.
 
-[/trans]
 
 > Strategy Arguments
 

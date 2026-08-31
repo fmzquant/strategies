@@ -9,53 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于价格的突破来进行交易操作。它计算一定周期内的最高价和最低价,当价格突破这些极值时产生交易信号。
-
-## 策略原理
-
-1. 计算最近N周期内的最高价upex和最低价dnex。
-
-2. 当价格超过upex时,做多。
-
-3. 当价格低于dnex时,做空。
-
-4. 可配置只做多、只做空或双向交易。
-
-5. 可配置资金利用率。
-
-6. 可配置交易时间范围。
-
-## 策略优势
-
-- 捕捉突破信号,适合趋势交易
-- 规则简单直观,易于实现
-- 可配置做多做空方向,适应不同市场
-- 可限定交易时间范围
-- 可控资金利用率
-
-## 策略风险
-
-- 无法有效过滤假突破造成的损失
-- 双向交易增加手续费和滑点成本
-- 大资金利用率增加风险
-
-## 优化方向
-
-- 增加突破有效性验证,避免假突破
-- 优化参数N值大小
-- 结合其他指标过滤信号
-- 测试不同的资金利用率
-- 限制每日交易次数
-
-## 总结
-
-该策略通过捕捉价格突破信号实现趋势following。优化突破验证机制和参数设定可以提高效果。但需注意防范假突破和风险控制。整体来说,该策略提供了一种简单有效的趋势交易解决方案。
-
-||
 
 ## Overview
 
@@ -101,7 +54,6 @@ This strategy trades based on price breakouts beyond recent extremes. It calcula
 
 The strategy follows trends using price breakout signals. Enhancing breakout validity and tuning parameters can improve performance. But false breakouts and risk controls need to be addressed. Overall a simple and effective trend trading solution.
 
-[/trans]
 
 > Strategy Arguments
 

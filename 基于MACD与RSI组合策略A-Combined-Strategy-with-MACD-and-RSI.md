@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1718e71156b17e000bb.png)
-[trans]
-## 策略概述
-
-该策略通过组合MACD和RSI两个指标来识别趋势反转点,实现低买高卖。当MACD指标出现金叉时并且RSI指标处于超卖状态,进行买入操作。当MACD指标出现死叉时并且RSI指标达到超买状态,进行卖出操作,完成一次交易循环。
-
-## 策略原理
-
-### MACD指标
-MACD指标由快线,慢线和柱状线组成。快线是短期平均线,慢线是长期平均线。当快线从下向上突破慢线时产生买入信号,这表示市场进入多头趋势;当快线从上向下跌破慢线时产生卖出信号,这表示市场进入空头趋势。
-
-### RSI指标
-RSI指标反映市场的超买超卖情况。RSI高于70时表示市场超买,RSI低于30时表示市场超卖。
-
-### 策略规则
-买入条件:MACD快线上穿慢线(金叉)并且RSI低于40(超卖)时,进行买入操作。
-
-卖出条件:MACD快线下穿慢线(死叉)并且RSI高于60(超买)时,进行卖出操作。
-
-该策略通过MACD指标判断市场趋势方向,同时利用RSI指标识别超买超卖区域,从而捕捉市场反转买卖点。
-
-## 策略优势
-
-- 结合多个指标,提高策略的稳定性和胜率。MACD指标判断趋势方向,RSI指标识别反转时间点,二者相互验证提高信号的可靠性。
-
-- 有效识别低吸引地和高离地,通过RSI指标的超买超卖水平配合MACD指标的金叉死叉信号,能够准确抓住市场的关键反转点。
-
-- 简单明了的交易信号和规则。策略信号来自两个经典且广为人知的指标,明确判定的交易规则有利于实盘的执行。
-
-- 灵活度高,易于优化。可以通过调整指标参数以及组合其他技术指标来丰富策略规则,优化策略以适应不同品种和交易风格。
-
-## 策略风险分析
-
-- 可能产生多次亏损交易的风险。当行情出现假突破时,会产生不必要的交易亏损。
-
-- 无法建立止损机制的风险。策略本身没有设置止损点,长期亏损可能扩大。
-
-- MACD和RSI失效的风险。如果行情进入震荡期或特殊行情,MACD和RSI指标将会产生大量无效信号。
-
-- 盲目优化的风险。如果没有对市场和品种特性有足够了解,盲目调整参数和优化策略可能导致超优化。
-
-可以通过设定止损点、评估市场态势、谨慎优化参数、组合其他指标等方法来降低上述风险,提高策略的稳定性。
-
-## 策略优化思路
-
-- 设置止损机制。添加移动止损或者百分比止损来控制单笔亏损。
-
-- 评估多重时间周期。评估不同时间周期下MACD和RSI指标的效果,选择最优时间周期。
-
-- 结合其他指标过滤。可考虑加入如MA,KDJ等其它指标来验证信号,过滤假信号。 
-
-- 参数优化测试。通过多次回测和参数优化来选择指标参数的最优组合,提高策略效果。
-
-- 适当调整仓位管理。根据品种特性和交易风格适当调整每次交易的头寸数量。
-
-## 总结
-
-该策略整合MACD和RSI两个广泛使用的指标,通过二者的优势互补获得反转交易信号。策略优点是简单实用、容易理解,可根据市场和交易风格进行灵活调整。下一步可通过止损、参数优化、指标过滤等方式进一步增强策略的稳定性和盈利能力。
-
-||
 
 ## Strategy Summary
 
@@ -126,7 +67,6 @@ Risks can be reduced by implementing stop loss, assessing market conditions, cau
 ## Summary
 This strategy combines two widely used indicators MACD and RSI for complementarity in signal generations. The advantages lie in its simplicity and flexibility for customizations. Further improvements can be made by adding stop loss, optimizing parameters, and filtering signals to enhance strategy stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

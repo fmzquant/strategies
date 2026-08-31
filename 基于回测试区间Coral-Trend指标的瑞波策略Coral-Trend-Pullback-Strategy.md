@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/dd2ae6f8ab60ac238b.png)
-[trans]
-
-## 概述
-
-本策略运用LazyBear的Coral Trend指标判断价格趋势方向,通过识别Coral Trend指标方向的反转来判断潜在的入场点。为过滤假突破,本策略采用ADX指标或Absolute Strength Histogram和HawkEye Volume指标的组合作为确认指标,实现更可靠的入场。 
-
- Exit机制采用最近N根K线的最高价/最低价乘以可配置风险回报比例来设置止损位和止盈位。
-
-## 策略原理
-
-基于Coral Trend指标判断大趋势方向后,当指标颜色保持不变的同时,价格出现一个向相反方向的小回调(pullback)。这时如果回调结束,价格重新回到Coral Trend指示的主趋势方向上去,那么就可以认为这是一个比较好的入场时机。
-
-入场条件包括:
-
-1. Coral Trend指标方向与交易方向一致(多头=绿色,空头=红色)
-
-2. 自上一个价格完全突破Coral Trend指标以来(最后一个bar的高点都超过Coral Trend线),至少已有1根K线的低点全部在Coral Trend指标之上(多头)或高点全部在Coral Trend指标之下(空头)  
-
-3. 发生向相反方向的小回调(拉回),这个小回调过程中关闭价一直保持在Coral Trend的反向一边 
-
-4. 小回调结束后,收盘价重新回到Coral Trend指示的主趋势方向
-
-以上为主条件。同时,策略采用ADX指标或Absolute Strength Histogram和HawkEye Volume指标作为入场的确认条件。
-
-ADX指标要求其值 > 20并且最近1根K线上升。以及DI的绿线和红线的顺序与交易方向一致。
-
-Absolute Strength Histogram要求其颜色与交易方向一致(多头=蓝色,空头=红色)。HawkEye Volume要求其颜色与交易方向一致(多头=绿色,空头=红色)。
-
-Exit机制则是采用最近N根K线的最高价或最低价乘以风险回报比例来设置止损位和止盈位。N值和风险回报比例均是可以通过参数配置的。
-
-## 优势分析 
-
-本策略最大的优势在于利用Coral Trend指标判断主趋势方向后,通过识别其反转来发现入场机会,避免在非趋势市场中随波逐流。同时,采用Confirm指标可过滤许多假突破,从而提高入场的成功率。
-
-另外,本策略提供了完整的风控机制,包括止损幅度设置和风险敞口百分比控制,使得即便个别交易亏损也不会对总体资金造成较大的冲击。
-
-## 风险分析
-
-本策略最大的风险在于采用指标进行入场判断,容易产生错觉,认为完全依赖参数配置就可以自动获利。事实上,参数优化和规则配置都需要结合底层价格变化的规律,直观判断指标与价格联动的效果,才能设定出更加适合自己的交易风格和品种的配置。
-
-另外,止损位和止盈位的设置也要适当,过大的止盈倍数可能导致无法止盈离场,而过小的止损位则风险过大。这需要根据不同品种的波动程度和个人风险承受能力来设置。
-
-## 优化方向
-
-本策略可优化的方向包括:
-
-1. 调整Coral Trend指标的参数,使其对不同品种价格变化的反应更加灵敏
-
-2. 尝试不同的Confirm指标或指标组合,如KDJ, MACD等,使入场信号更加准确
-
-3. 根据不同品种的波动程度,调整止损位和止盈位的计算方式,实现更好的风险控制
-
-4. 增加资金管理模块,可根据仓位数量调整单笔委托量,有效控制总体亏损
-
-5. 增加交易时间控制模块,使策略只在特定时段运行,避免剧烈波动期的亏损
-
-## 总结
-
-本策略首先利用Coral Trend判断价格中长线趋势,然后通过判断其反转,配合Confirm信号过滤假突破,构建了一个较为可靠的趋势追踪策略。同时,完善的风控设置也使得本策略可以长期运行而资金稳定。通过进一步的参数和模块优化,有望使本策略适应更多品种,具有更好的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -131,7 +70,6 @@ The optimizable directions of this strategy include:
 
 This strategy first uses Coral Trend to determine the medium and long term trend of prices, then by judging its reversal, combined with Confirm signals to filter out false breakouts, it builds a relatively reliable trend following strategy. At the same time, the improved risk control settings also enable this strategy to run for a long time with stable capital. With further optimization of parameters and modules, this strategy is expected to adapt to more products and have better stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

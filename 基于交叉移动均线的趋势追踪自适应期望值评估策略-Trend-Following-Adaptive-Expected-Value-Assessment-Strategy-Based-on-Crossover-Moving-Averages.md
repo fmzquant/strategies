@@ -11,52 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12c105a3ea8feb747f4.png)
 
-[trans]
-#### 概述
-该策略使用两条不同周期的简单移动平均线的交叉来判断趋势方向,在趋势出现时进行交易。同时,该策略还引入了一个期望值面板,用于计算和展示该策略在不同时间尺度下的期望收益,以便用户更好地评估策略性能。该期望值面板考虑了策略在历史时期内的胜率、平均盈利和平均亏损等关键指标,能够以直观的方式呈现策略在不同市场环境下的表现。
-
-#### 策略原理
-该策略的核心是利用两条不同周期的简单移动平均线(本例中为14日和28日)的交叉来判断市场趋势。当短期均线从下向上穿过长期均线时,认为市场进入上升趋势,策略开仓做多;反之,当短期均线从上向下穿过长期均线时,认为市场进入下降趋势,策略开仓做空。通过这种方式,策略能够适应不同的市场趋势,在趋势出现时及时建仓,以获取趋势带来的收益。
-
-除了基本的趋势判断和交易逻辑外,该策略还引入了一个期望值面板,用于计算和展示该策略在不同时间尺度(月度和年度)下的期望收益。期望值的计算基于策略在历史时期内的关键统计指标,包括:
-1. 胜率:策略在该时间周期内的盈利次数占总交易次数的比例
-2. 平均盈利:策略在该时间周期内所有盈利交易的平均盈利金额 
-3. 平均亏损:策略在该时间周期内所有亏损交易的平均亏损金额
-
-利用这些指标,可以计算出策略在该时间周期下的期望值:
-期望值 = 胜率 × 平均盈利 - (1 - 胜率)× 平均亏损
-
-通过在图表上以热图的形式展示不同时间周期的期望值,用户可以一目了然地看出该策略在不同市场环境下的预期表现,从而更好地把握策略的适用性和风险。
-
-#### 优势分析
-1. 趋势适应性强:通过利用移动均线交叉来判断趋势,该策略能够在不同的市场趋势下及时调整仓位,以适应市场变化。这使得该策略在趋势性市场中能够取得较好的收益。
-
-2. 直观的性能评估:内置的期望值面板以热图的形式展示了该策略在不同时间周期下的期望收益,使用户能够一目了然地评估策略在不同市场环境下的表现。这种可视化的性能呈现方式为用户提供了更多的决策参考。
-
-3. 考虑了关键统计指标:期望值的计算不仅考虑了策略的胜率,还综合了平均盈利和平均亏损的影响。这种计算方式能够更全面、更准确地反映策略的实际表现,为用户提供更可靠的参考。
-
-4. 灵活的参数设置:用户可以根据需要灵活设置期望值面板的显示与否,以及面板的透明度。这使得用户能够根据自己的偏好来调整图表的显示效果,提高使用体验。
-
-#### 风险分析
-1. 震荡市中表现欠佳:由于该策略主要依赖趋势来获取收益,因此在震荡市或者趋势不明朗的市场环境下,频繁的交易可能会导致较大的滑点和交易成本,从而影响策略的整体表现。
-
-2. 期望值计算的局限性:尽管期望值面板提供了一种直观的策略性能评估方式,但它仍然基于历史数据进行计算。在市场发生重大变化或者出现极端行情时,历史数据可能无法很好地反映策略的实际表现,期望值的参考意义可能会有所降低。
-
-3. 参数的选择影响大:该策略的表现很大程度上取决于移动平均线的周期选择。不同的周期组合可能会带来完全不同的交易结果。如果选择的参数不能很好地适应市场特点,策略的实际表现可能会与期望值出现较大偏离。
-
-#### 优化方向
-1. 引入更多技术指标:在现有的移动平均线基础上,可以考虑引入其他技术指标如MACD、RSI等,以更好地判断趋势的强度和可持续性,从而提高策略的入场和出场时机。
-
-2. 优化仓位管理:目前策略在出现交易信号时采取了固定仓位的做法。可以考虑根据市场波动性、趋势强度等因素来动态调整仓位,以更好地控制风险和提高收益。
-
-3. 加入止盈止损机制:在策略中加入合理的止盈止损机制,可以帮助策略及时锁定已有收益,同时限制可能的亏损。这有助于提高策略的风险收益比,使其在各种市场环境下都能保持相对稳健的表现。
-
-4. 优化期望值的计算:可以进一步优化期望值的计算方法,例如考虑交易成本、引入移动窗口等,以提高期望值指标的有效性和实用性。此外,还可以探索其他的策略性能评估指标,为用户提供更全面的参考。
-
-#### 总结
-该策略通过利用移动平均线交叉来判断市场趋势,并在趋势出现时及时建仓,以获取趋势带来的收益。同时,策略还引入了一个直观的期望值面板,用于展示策略在不同时间尺度下的期望收益,为用户提供更多的决策参考。尽管该策略在震荡市中表现可能欠佳,且期望值计算存在一定局限性,但通过引入更多技术指标、优化仓位管理和加入止盈止损等措施,可以进一步提升策略的风险收益比,使其能够更好地适应多变的市场环境。
-
-||
 
 #### Overview
 This strategy uses the crossover of two simple moving averages with different periods to determine the trend direction and enters trades when a trend appears. At the same time, the strategy also introduces an expected value panel to calculate and display the expected returns of the strategy at different time scales, allowing users to better assess the strategy's performance. The expected value panel takes into account key indicators such as the strategy's win rate, average profit, and average loss during historical periods, and presents the strategy's performance under different market conditions in an intuitive manner.
@@ -101,7 +55,6 @@ By displaying the expected values of different time periods in the form of a hea
 
 #### Summary
 This strategy determines market trends by using moving average crossovers and establishes positions in a timely manner when trends appear to capture the profits brought by the trends. At the same time, the strategy also introduces an intuitive expected value panel to display the expected returns of the strategy at different time scales, providing users with more decision-making references. Although the strategy may perform poorly in range-bound markets and the calculation of expected value has certain limitations, by introducing more technical indicators, optimizing position management, adding stop-profit and stop-loss mechanisms, and other measures, the risk-reward ratio of the strategy can be further improved, enabling it to better adapt to changing market environments.
-[/trans]
 
 
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/902023217e48944548.png)
-[trans]
-
-## 概述
-
-量化追踪牛市策略是一个基于EMA均线和ATR止损的趋势追踪策略。它使用EMA均线判断大趋势方向,利用ATR动态跟踪止损来锁定趋势获利,实现盈利的最大化。
-
-## 策略原理
-
-该策略主要由以下几部分组成:
-
-1. EMA均线判断主趋势
-
-   使用13日线、50日线和100日线构成多空观点,判断主要趋势方向。
-
-2. ATR动态止损
-
-   利用ATR指标计算本周期内价格变动范围,来设定止损位,实现止盈止损。
-
-3. 信号平滑
-
-   对K线收盘价进行一定周期的SMA平滑,避免错信号。
-
-4. 多空信号
-
-   当价格上穿EMA均线时做多,下穿EMA均线时做空。并设置ATR动态跟踪止损。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 回撤控制优异,最大回撤可控制在160%以内。
-2. 跟踪止损比固定止损更智能,可锁定更多趋势获利。
-3. 利用EMA判断主要趋势方向,避免反转操作。
-4. 平滑K线,可过滤假信号,提高胜率。
-
-## 风险分析 
-
-该策略也存在一定风险:
-
-1. 固定参数设置可能不适合不同品种,需要优化。
-2. 震荡行情中可能出现止损跳空。
-3. 需服务器稳定性支持,避免错过信号。
-
-可以通过参数优化,适应性测试等手段来降低上述风险。
-
-## 优化方向
-
-该策略可从以下几个方向进行优化:
-
-1. 利用机器学习算法自动优化参数。
-2. 增加自适应止损机制,根据市场情况调整。
-3. 增加复合筛选条件,提高策略的稳定性。
-4. 考虑跨品种测试,提高策略的适应性。
-
-## 总结
-
-该策略总体来说是一个基于趋势追踪思路设计的量化策略。它利用EMA判断趋势方向,同时使用ATR进行智能止损。可有效控制回撤的同时获取趋势利润。通过持续优化迭代,可望获取较好的策略效果。
-
-||
 
 ## Overview
 
@@ -126,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a quant strategy designed based on trend following concept. It determines trend direction with EMA and uses dynamic ATR stop loss. It can effectively control drawdown while capturing trend profits. Continued optimization and iteration can generate improved results.
 
-[/trans]
 
 > Strategy Arguments
 

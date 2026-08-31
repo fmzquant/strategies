@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e8c49a698355cb5ffc.png)
-[trans]
-
-## 概述
-
-该策略融合了双顺势指标和移动均线指标,运用双顺势指标来判断市场趋势方向,以及利用移动均线进行趋势确认,属于趋势跟踪策略。结合止损来控制风险,属于较为稳定的策略。
-
-## 策略原理
-
-1. 计算昨日收盘价与指定周期内最高价的SMA均值构成的上轨,以及昨日收盘价与指定周期内最低价的SMA均值构成的下轨。
-
-2. 比较当前收盘价与上轨、下轨的关系,判断目前趋势方向。收盘价高于上轨,判断为多头;收盘价低于下轨,判断为空头。
-
-3. 计算200周期的收盘价SMA均线,作为中长线趋势的判断标准。
-
-4. 当判断为多头时,如果收盘价由下方向上突破SMA均线,产生买入信号;当判断为空头时,如果收盘价由上方向下突破SMA均线,产生卖出信号。
-
-5. 进入多头仓位后,若收盘价下破上轨,作为平仓信号;进入空头仓位后,若收盘价上破下轨,作为平仓信号。
-
-6. 设置固定比例的止损点,如收盘价下破止损点,则激活止损单。
-
-## 策略优势
-
-1. 使用双顺势指标判断趋势方向,可有效识别趋势,增强进入正确方向的概率。
-
-2. 均线的加入,可过滤掉部分噪音信号,避免在震荡行情中错交易。
-
-3. 采用止损来控制单笔损失风险,可以有效避免亏损过大。
-
-4. 策略操作相对简单,容易理解实现,适合初学者练手。
-
-## 策略风险
-
-1. 双顺势指标对参数设置较为敏感,不同周期参数组合,会导致结果差异较大,需谨慎测试参数的优化。
-
-2. 均线设置过长,会过滤掉较多交易机会;均线过短,则对去噪效果不佳。需权衡均线周期参数的设置。
-
-3. 止损点设置过宽,无法起到很好的风险控制;过窄则容易被价格常规波动触发退出。需谨慎设定止损范围。
-
-4. 策略较依赖参数优化,如果参数设置不当,则可能无法正确识别趋势方向,导致交易决策失误。
-
-## 策略优化方向
-
-1. 可以测试不同周期参数的组合,寻找使双顺势指标对趋势判断更准确的参数。
-
-2. 可以测试不同周期的均线指标,找到平衡去噪效果和保留信号的最佳均线参数。
-
-3. 可以尝试根据市场波动程度,设计自适应调整的止损机制,使止损更贴近市场情况。
-
-4. 还可以尝试加入其他指标进行辅助,如量价确认、多时间框架畅通等,来提升策略的稳定性。
-
-5. 优化后的策略,可以使用walk forward分析进行验证,以确保参数仍具有稳健性。
-
-## 总结
-
-该策略整合双顺势指标和移动均线的优势,属于参数优化余地较大的趋势跟踪策略。通过合理的参数设定及优化,可以获得较好的策略表现。但需注意控制参数过度优化的风险,保证参数稳健性。整体来说,该策略适合用作策略探索和学习的案例。
-
-||
 
 
 ## Overview
@@ -123,7 +66,6 @@ This strategy integrates the Dual SSL indicator and moving average indicator, us
 
 This strategy combines the strengths of the Dual SSL indicator and moving averages. With significant potential for parameter optimization, it is a trend following strategy. With reasonable parameter tuning and optimization, good results can be achieved. However, the risk of overfitting should be controlled to ensure robustness. Overall, this strategy serves as a good example for exploration and learning.
 
-[/trans]
 
 > Strategy Arguments
 

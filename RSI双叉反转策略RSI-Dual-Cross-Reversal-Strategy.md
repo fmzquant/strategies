@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10b768e77f595f1576d.png)
 
-[trans]
-
-### 概述
-
-该策略是基于RSI指标的双叉反转原理制定的趋势追踪策略。它使用不同周期的RSI线交叉作为买入和卖出信号,同时结合RSI指标判断目前是否处于超买或超卖状态,进一步确认交易信号的有效性。
-
-### 策略原理  
-
-该策略主要基于5日和11日两条RSI指标线。当 faster RSI(5日线)从下向上突破slower RSI(11日线)而且同时6日RSI低于30时,产生买入信号;当faster RSI 从上向下跌破slower RSI 而且同时6日RSI高于70时,产生卖出信号。
-
-该策略同时绘制出30和70水平线。30代表超卖区域,70代表超买区域。RSI指标的基本思想就是当处于超买超卖区域时,代表资产被高估,应当考虑获利了结或等待回调机会;当RSI处于超卖区域时,代表资产被低估,应当考虑买入建立多头头寸。所以该策略加入6日RSI判断是否处于超买超卖区域,可过滤掉一些假信号,提高信号的可靠性。  
-
-在产生买入和卖出信号时,该策略会分别下单做多和做空。所以它是一个双向交易策略,既可跟踪上涨趋势,也可跟踪下跌趋势。
-
-### 策略优势
-
-1. 使用双叉原理,可靠性较高  
-2. 结合不同周期RSI判断,避免假信号  
-3. 可双向交易,适合跟踪市场趋势  
-4. RSI指标性能稳定,参数优化空间大
-
-### 风险及解决方案
-
-1. 双叉信号滞后,可能错过部分涨跌  
-解决方法:适当缩短faster RSI的周期参数,使信号更加灵敏
-
-2. 趋势市场中可能出现较多假信号  
-解决方法:调整超买超卖判断区域的参数,避免趋势市场的假信号
-
-3. RSI指标发散或失效的概率  
-解决方法:与其他指标组合使用,避免RSI单一失效的概率
-
-### 优化方向  
-
-1. 周期参数优化:调整更快速和更慢速RSI的周期参数,寻找最佳参数组合
-
-2. 超买超卖参数优化:调整超买超卖判断区域的参数,提高信号准确率
-
-3. 与其他指标组合:组合移动平均线或波动率指标等,形成综合交易系统
-
-### 总结  
-
-本策略基于RSI双叉反转思路,是一种较为可靠的趋势跟踪策略。它使用多周期RSI判断,可避免一定的假信号,从而具有较高的实战效果。通过参数优化和指标组合,该策略可望获得更出色的表现。总体来说,该策略思路清晰,实用性强,值得重点关注和后续优化。
-
-||
 
 
 ### Overview  
@@ -100,7 +55,6 @@ Solution: Combine with other indicators to avoid sole failure probability
 
 This strategy is a reliable trend following strategy based on the RSI dual cross reversal logic. Its multi-period RSI design can avoid certain false signals and thus has good practical results. Through parameter optimization and indicator combinations, the strategy has potential for even better performance. In summary, the strategy has clear logic and strong practicality, and is worth key attention and further optimization.  
 
-[/trans]
 
 > Strategy Arguments
 

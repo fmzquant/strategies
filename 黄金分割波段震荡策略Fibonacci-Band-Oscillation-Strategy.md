@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/124d977df6ea87db323.png)
 
-[trans]
-
-## 概述
-
-黄金分割波段震荡策略是一种基于黄金分割理论设计的量化策略。该策略主要利用黄金分割法则计算出多个价格带,形成上下波段。当价格突破波段时产生交易信号,通过捕捉价格在波段之间震荡的特征实现盈利。
-
-## 策略原理  
-
-代码的核心逻辑在于计算价格的黄金分割波段作为关键点。主要步骤是:
-
-1. 计算14周期的EMA均线作为中间轴线
-2. 根据ATR和黄金分割比例计算上下4条波段线
-3. 当价格向上突破下降波段或向下突破上升波段时,产生交易信号
-4. 设置止损止盈,跟踪价格震荡获利
-
-通过这种基于关键点突破的方法,可以有效捕捉市场的短期震荡,在波段之间来回交易获利。   
-
-## 策略优势
-
-该策略最大的优势在于利用了黄金分割这一重要的理论指标来定位关键价格点,从而提高获利概率。具体优势主要体现在:  
-
-1. 黄金分割波段清晰,容易判断突破口  
-2. 波段范围合适,不会过于细碎也不会过于宽松  
-3. 多条波段可以选择,既可攻击性交易也可保守交易  
-4. 波段震荡特征明显,短线操盘策略效果好
-
-## 策略风险 
-
-由于该策略追求短周期利润,所以也存在一些风险需要注意:
-
-1. 大周期趋势下无法获利  
-2. 价格剧烈波动时止损风险较大
-3. 突破信号较多,需要谨慎选择
-4. 波段震荡特征消失时无效
-
-可以通过适当调整参数,选取合适波段和资金管理方式来控制这些风险。
-
-## 策略优化
-
-该策略还有进一步优化的空间:  
-
-1. 结合趋势指标过滤一定趋势方向才产生信号  
-2. 在特定时间段或重要事件点前后关闭策略  
-3. 动态调整止损幅度以适应市场波动频率  
-4. 优化参数选择不同周期EMA作为基准中线
-
-## 总结  
-
-黄金分割波段震荡策略整体来说是一个非常实用的短线策略。它利用黄金分割理论设定价格关键点,当价格在这些点附近震荡时可以获得丰厚的利润。这种基于范围突破的方法适合于具有一定波动度和特征的市场,可以单独使用也可以和其他策略组合。通过参数调优和适当的资金管理,该策略可以长期稳定运作。
-
-||
 
 
 ## Overview  
@@ -112,7 +61,6 @@ There is still room for further optimization of the strategy:
 
 In general, the Fibonacci Band Oscillation Strategy is a very practical short-term strategy. It uses the Fibonacci theory to set price key points. When the price oscillates around these points, generous profits can be obtained. This breakout-based method is suitable for markets with a certain degree of volatility and characteristics. It can be used alone or combined with other strategies. With parameter tuning and proper capital management, the strategy can operate stably in the long run.
 
-[/trans]
 
 
 > Strategy Arguments

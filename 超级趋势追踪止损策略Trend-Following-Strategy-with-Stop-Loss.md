@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14c9ca940d556058988.png)
-[trans]
-
-### 概述
-
-本策略通过计算超级趋势指标判断价格趋势,并在趋势变化时建立做多或做空头寸。同时设置止损位和止盈位来控制风险。
-
-### 策略原理
-
-本策略使用ta.supertrend()函数计算超级趋势指标。超级趋势指标结合平均真实波幅和平均价格,可以判断价格是否处于上升趋势或下降趋势。当价格从下降趋势转为上升趋势时,通过ta.change()判断方向变化,建立做多头寸。当价格从上升趋势转为下降趋势时,建立做空头寸。
-
-设置止损位stop_loss和止盈位profit,在建仓后设置止损单和止盈单,控制风险。
-
-具体来说,策略通过以下步骤实现:
-
-1. 计算超级趋势指标方向 
-2. 判断价格是否从下降趋势转为上升趋势,如果是,建立做多单
-3. 判断价格是否从上升趋势转为下降趋势,如果是,建立做空单  
-4. 建仓后,为做多单设置止损价格和止盈价格
-5. 建仓后,为做空单设置止损价格和止盈价格
-
-以上步骤可以有效捕捉价格趋势的变化,在合适时机建立仓位,并设置止损止盈来控制风险,是一种较为稳定的趋势跟踪策略。
-
-### 策略优势分析
-
-本策略最大的优势在于可以自动跟踪价格趋势的变化,无需人工判断。超级趋势指标对价格波动具有一定的滤波效果,可以有效识别价格趋势,避免在震荡行情中频繁开仓。
-
-同时,策略设置了止损位和止盈位,可以自动止损止盈,有效控制单笔损失,锁定盈利。这对于量化交易而言非常重要。
-
-相比于简单的移动平均线策略,本策略判断价格趋势的效果更佳,也更适合跟踪趋势性行情。
-
-### 风险分析
-
-本策略最大的风险在于超级趋势指标的参数设置。如果参数设置不当,则会导致策略运算效果不佳,识别趋势变化的效果差。如果ATR周期参数设置过大或因子参数设置过小,都会导致超级趋势指标对价格波动响应迟钝,错过最佳开仓时机。
-
-此外,止盈位和止损位的设置也会对策略收益产生很大影响。如果止损距离过小,容易被突破;如果止盈距离过大,可能错过理想退出点。这些参数的最优设置需要根据不同市场行情和交易品种进行优化。
-
-最后,与所有趋势跟踪策略一样,当价格突然反转或进入震荡区间时,也会给本策略带来损失。这需要通过严格的资金管理来控制。
-
-### 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化超级趋势指标的参数,包括ATR周期和因子参数。可以通过遍历回测获得最优参数组合。
-
-2. 增加仓位管理机制。可以根据收益率、回撤指标动态调整仓位。
-
-3. 增加机器学习模型判断趋势。可以训练模型辅助判断价格趋势,提高开仓准确性。
-
-4. 结合其他指标过滤交易信号。比如结合均线、波动率指标等避免错误开仓。
-
-5. 动态优化止盈止损距离。可以根据市场波动程度、仓位大小等调整止盈止损参数。
-
-以上几个方向都可以进一步提高策略收益率和稳定性。
-
-### 总结
-
-本策略总体来说是一个非常实用的趋势跟踪策略。它可以自动跟踪价格趋势变化,合理设置止损止盈来控制风险。与简单的移动平均线策略相比,判断价格趋势的效果更佳,更适合趋势性行情。通过一定程度的参数优化与机器学习模型辅助,本策略可以进一步增强稳定性与收益表现。值得进一步研究与应用。
-
-||
 
 ### Overview
 
@@ -126,7 +67,6 @@ The above enhancements can improve profitability, stability and risk management 
 
 Overall, this is a very practical trend following strategy. It automatically tracks trend changes and uses stop loss and take profit to control risks. Compared to simple moving average strategies, it has superior trend identification capability and is more suitable for trending markets. With some parameter optimization and machine learning augmentation, this strategy can achieve even better stability and profits. It deserves further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

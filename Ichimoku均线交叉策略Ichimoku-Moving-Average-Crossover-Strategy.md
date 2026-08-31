@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11cb244a6da64ae9842.png)
-[trans]
-
-## 概述
-
-Ichimoku均线交叉策略通过计算一系列均线,识别股价交叉信号,进行长短做多做空操作。该策略结合多种技术指标,扎实可靠,适用于中长线操作。
-
-## 策略原理  
-
-Ichimoku均线交叉策略使用一份由5条均线组成的专门指标体系。具体来说,包含换手线、基准线、先行1、先行2和延迟线5条均线。其中,换手线是近期价格动量的均线,基准线反映中长期价格趋势,先行线组合换手线和基准线,反映未来走势,延迟线显示过去价格的参考。当价格突破基准线时产生交易信号。该策略同时结合实体线滤波器和K线色彩判断,避免假突破。
-
-## 策略优势
-
-Ichimoku均线交叉策略集多种技术指标优点于一体。它融合了移动平均线、价格通道、量价确认等多个策略思想,形成系统性的方法论体系。这保证了交易信号的 accurateness和方向性。与单一指标策略相比,该策略可以大大降低假信号的概率,提高盈利因子。
-
-## 策略风险 
-
-Ichimoku均线交叉策略作为趋势跟随策略,其交易Interval较长。这意味着策略无法捕捉短期价格震荡。此外,股价剧烈波动时,均线指标会失效。这些情况下,会产生错误信号和亏损交易。建议采用止损来控制风险。
-
-## 优化方向
-
-Ichimoku均线交叉策略可以从以下方向进行优化:1)调整均线参数,适应不同周期和品种;2)结合量能指标,确认价格和交易量关系;3)引入机器学习模型,改进信号判断;4)加入更多条件和过滤器,降低错误交易发生概率。
-
-## 总结
-
-Ichimoku均线交叉策略稳定可靠,适合作为核心策略,与其他算法组合使用。它提供清晰的趋势交易方向,而参数调整和多指标优化又使策略更加智能和灵活。该策略值得量化交易者重点研究和长期应用。
-
-||
 
 ## Overview  
 
@@ -62,7 +35,6 @@ The Ichimoku strategy can be improved in areas like: 1) Adjusting average parame
 
 The stable and reliable Ichimoku moving average crossover strategy is suitable as a core strategy combined with other algorithms. Its clear trend guidance and flexibility owing to parameter tuning and multi-indicator optimization make it worthwhile for in-depth research and long-term application by quant traders.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略专注于开盘盘前时段,结合均线和动量指标判断短期趋势,在高动量阶段进行突破交易。属于典型的短线套利策略。
-
-策略原理:
-
-1. 设置盘前交易时段为开盘前1小时内。
-
-2. 计算50周期EMA判断大盘合理价格区间。
-
-3. SMI指标在区域低点出现向上交叉视为买入信号。
-
-4. 突破EMA均线的收盘价视为止损信号。 
-
-5. 设定固定止盈点,目标短线套现。
-
-该策略的优势:
-
-1. 突破短期EMA,可判断当日趋势方向。
-
-2. SMI指标可确认超卖区域出现反转机会。
-
-3. 回测参数有限,实盘易操作。
-
-该策略的风险:
-
-1. 突破容易形成盘前套牢,须警惕反转。
-
-2. 单日时间段操作,难以应对跳空。
-
-3. 停损幅度偏小,调整不当易止损。
-
-总之,该策略为典型盘前短线策略,通过EMA和SMI指标追捧高动量突破。但盘前套牢风险高,需控制仓位并做好止损。
-
-||
 
 This strategy trades breakouts during the pre-market hour, using moving average and momentum indicators to determine short-term trends to trade at peak volatility. It is a typical short scalping strategy.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this is a typical pre-market short scalping strategy using EMA/SMI to ride high volatility breakouts. But the risk of pre-market traps is high, requiring small position sizing and disciplined stop loss.
 
-[/trans]
 
 > Strategy Arguments
 

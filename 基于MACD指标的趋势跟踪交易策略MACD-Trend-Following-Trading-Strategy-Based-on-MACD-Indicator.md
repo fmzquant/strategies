@@ -9,81 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于MACD指标判断趋势方向,并结合Stoch指标进行具体的买入卖出操作。策略采用较长周期的MACD判断大趋势,较短周期的Stoch进行入市出场。
-
-## 策略原理
-
-1. 使用MACD指标判断大趋势方向
-
-    - 计算长周期EMA快线、慢线和MACD柱状线
-    
-    - 比较不同周期MACD的变化情况,判断趋势方向
-    
-2. 使用Stoch指标确定具体买卖点
-
-    - 计算%K线和%D线
-    
-    - Stoch在超买超卖区附近出现背离,并回抬,作为买入卖出信号
-
-3. 结合趋势方向和Stoch信号,进行买入卖出操作
-
-    - 大周期MACD上涨时,Stoch买入信号出现,做多
-    
-    - 大周期MACD下跌时,Stoch卖出信号出现,做空
-    
-4. 设置止损止盈,优化资金管理
-
-## 优势分析
-
-- 该策略结合趋势跟踪和超买超卖指标,能够有效抓住中长线趋势
-
-- MACD判断大方向,Stoch进行交易细节,可有效控制风险
-
-- 充分利用指标之间的组合,形成指标策略
-
-- 设置止损止盈机制,对交易风险进行管理
-
-- 策略参数可进行优化,适用于不同市场环境
-
-## 风险分析
-
-- 中长线趋势判断可能存在错误,导致逆势交易亏损
-
-- Stoch指标产生假信号,使盈利不足或出现亏损
-
-- 趋势变化时,止损点可能被突破,扩大亏损
-
-- 盈利目标过大过小都会影响策略效果
-
-- 参数不当及不适应市场环境变化,会导致策略失效
-
-- 可通过优化趋势判断方法,验证Stoch信号,调整止损止盈位置等方式降低风险
-
-## 优化方向
-
-- 优化MACD参数组合,提高对趋势的判断精确度
-
-- 考虑多时间周期的Stoch指标,避免假信号
-
-- 动态调整止损止盈比例,适应市场波动
-
-- 结合其他指标信号进行 verifies,提高信号有效性
-
-- 根据不同品种特点和交易时段,参数进行优化
-
-- 增加机器学习算法,辅助判断趋势方向
-
-- 结合量能指标,避免不充分或过度追涨跌
-
-## 总结
-
-该策略整合MACD和Stoch两个指标优势,在控制风险的前提下,抓取中长线趋势进行交易。通过参数优化、止损止盈设定、信号验证等方式强化策略效果,可适应多种市场环境,具有实际交易价值。优化空间还存在,可继续优化参数设定,提高信号准确度,并辅以机器学习等手段,使策略更全面、智能。
-
-||
 
 ## Overview
 
@@ -157,7 +82,6 @@ This strategy identifies trend direction based on MACD indicator and makes speci
 
 This strategy integrates the strengths of MACD and Stoch indicators to capture mid-to-long term trends while controlling risks. It can be effective in various market conditions by optimizing parameters, setting stop loss and take profit, verifying signals, etc. There is still room for improvement by further parameter tuning, improving signal accuracy, and incorporating machine learning. The strategy can be more comprehensive and intelligent.
 
-[/trans]
 
 > Strategy Arguments
 

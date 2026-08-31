@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/794ee0cf685be3d403.png)
-[trans]
-## 概述
-
-本策略名称为“基于峰峰形态的交易策略”,主要利用K线的峰峰形态来确定买入和卖出时机。该策略属于技术分析类策略。
-
-## 策略原理
-
-该策略通过定义上升峰值(upFractal)和下降峰值(downFractal)来判断K线图形的峰峰形态。
-
-具体来说,上升峰值的判断逻辑是:当前K线的高点是最近n根K线的最高点,并且后续的K线高点都不超过当前K线的高点。
-
-下降峰值的判断逻辑是:当前K线的低点是最近n根K线的最低点,并且后续的K线低点都不低于当前K线的低点。
-
-这里通过布尔变量及循环来判断前n根和后n根K线与当前K线的高低点关系,最终确定上升峰值和下降峰值。
-
-因此,该策略的核心逻辑就是:
-
-1. 判断上升峰值和下降峰值
-2. 上升峰值时做多,下降峰值时做空
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 峰峰形态容易识别,操作简单
-2. 利用技术形态,不受基本面影响  
-3. 回撤可能比较小
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 峰峰形态判断不准确,可能错过最佳入场时机
-2. 行情剧烈变动时,止损可能较难确定
-3. 只依靠形态,忽略了其他因素
-
-对策:
-
-1. 调整峰峰形态的参数,优化判断逻辑
-2. 结合其他指标确定止损位置
-3. 与基本面分析或其他策略组合使用
-
-## 优化方向  
-
-该策略还可以从以下几个方向进行优化:
-
-1. 增加参数调整空间,优化峰峰形态判断
-2. 加入止损逻辑
-3. 考虑交易量或波动率等其他指标
-4. 结合不同时间周期分析
-
-## 总结
-
-本策略基于峰峰形态原理简单易操作,回撤可能较小。但也存在一定风险,需要与其他分析方法组合使用才能发挥最大效果。下一步将从判断准确性、止损、指标优化等方面进行改进。
-
-||
 
 ## Overview
 
@@ -121,7 +65,6 @@ Some directions to optimize the strategy:
 
 This strategy is simple to operate with possibly smaller drawdowns based on the peak-to-peak pattern principle. But still has some risks and needs to be combined with other analysis methods to maximize its performance. Next step is to improve on accuracy of pattern judgment, stop loss, indicator optimizations etc.
 
-[/trans]
 
 > Strategy Arguments
 

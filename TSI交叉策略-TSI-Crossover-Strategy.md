@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d64a04ced1a053de64.png)
 
-[trans]
-#### 概述
-该策略使用TSI指标作为主要的交易信号。当TSI指标与其信号线发生交叉,且TSI指标低于下限或高于上限时,策略就会产生开仓信号。同时该策略还使用了EMA和ATR等指标来优化策略表现。策略只在特定的交易时段内运行,并设置了最小交易频率来控制过度交易。
-
-#### 策略原理
-1. 计算TSI指标值和信号线值。
-2. 判断当前是否在允许交易的时间范围内,并且当前bar距离上次交易至少间隔了指定的最小bar数。  
-3. 如果TSI指标从下向上穿过信号线,且此时信号线低于指定的下限,则产生做多信号。
-4. 如果TSI指标从上向下穿过信号线,且此时信号线高于指定的上限,则产生做空信号。
-5. 如果当前持有多头仓位,一旦TSI指标从上向下穿过信号线,则平掉所有多头仓位。
-6. 如果当前持有空头仓位,一旦TSI指标从下向上穿过信号线,则平掉所有空头仓位。
-
-#### 优势分析
-1. 策略逻辑清晰,使用TSI指标的交叉作为唯一的开平仓条件,简单易懂。
-2. 通过限制交易时段和交易频率,有效控制了过度交易的风险。
-3. 及时止损止盈,一旦出现相反信号就果断平仓,控制了单笔交易的风险敞口。
-4. 使用了多个指标来辅助判断,如EMA, ATR等,增强了策略的稳健性。
-
-#### 风险分析  
-1. 策略对TSI指标参数的选择比较敏感,不同参数会带来很大的性能差异,需要谨慎选择。
-2. 开仓和平仓条件都比较简单,缺乏趋势判断和波动率约束,在震荡行情中可能出现亏损。
-3. 缺乏仓位管理和资金管理,难以控制回撤,一旦连续亏损就会导致大幅回撤。
-4. 只做多空反转,而不做趋势跟踪,会错失很多趋势行情的机会。
-
-#### 优化方向
-1. 对TSI指标的参数进行优化,找到更稳健的参数组合。可以使用遗传算法等方法自动寻优。
-2. 加入趋势判断指标,如MA或MACD,在开仓时选择顺势方向,提高成功率。
-3. 加入波动率指标,如ATR,在高波动率市场环境中减少交易次数。
-4. 引入仓位管理模型,根据近期市场表现和账户净值等动态调整每笔交易的仓位大小。
-5. 可以增加趋势追踪的逻辑,在趋势行情中继续持仓,提高策略捕捉大行情的能力。
-
-#### 总结
-该策略以TSI指标为核心,通过TSI与信号线的交叉来产生交易信号。同时限定了交易时间和交易频率来控制风险。策略优点是逻辑简单清晰,及时止损止盈。但是缺点是缺乏趋势判断和仓位管理,对TSI参数敏感,只能捕捉反转行情而错失趋势行情。未来可以从趋势和波动率判断、仓位管理、参数优化等方面对策略进行完善。
-
-|| 
 
 #### Overview
 This strategy uses the TSI indicator as the main trading signal. When the TSI indicator crosses its signal line, and the TSI indicator is below the lower limit or above the upper limit, the strategy will generate an open position signal. At the same time, the strategy also uses indicators such as EMA and ATR to optimize strategy performance. The strategy only runs within specific trading sessions and sets a minimum trading frequency to control overtrading.
@@ -79,7 +44,6 @@ This strategy uses the TSI indicator as the main trading signal. When the TSI in
 
 #### Summary
 This strategy is based on the TSI indicator and generates trading signals through the cross of TSI and its signal line. At the same time, it limits the trading time and frequency to control risks. The advantage of the strategy is that the logic is simple and clear, and it stops loss and profit in a timely manner. However, the disadvantage is the lack of trend judgment and position management, sensitivity to TSI parameters, and can only capture reversal market while missing trend market. In the future, the strategy can be improved from aspects such as trend and volatility judgment, position management, and parameter optimization.
-[/trans]
 
 
 

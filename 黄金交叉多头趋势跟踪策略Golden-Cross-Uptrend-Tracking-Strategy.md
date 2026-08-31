@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1426bf81a8423a2acaf.png)
-[trans]
-
-## 概述
-
-该策略基于移动平均线的黄金交叉原理设计。具体来说,它使用两个不同周期的简单移动平均线,即50周期线和200周期线。当50周期线从下方突破200周期线时,产生买入信号;当50周期线从上方跌破200周期线时,产生卖出信号。
-
-## 策略原理
-
-该策略使用 Pine Script 语言编写,主要逻辑如下:
-
-1. 计算两个SMA:50周期SMA和200周期SMA
-2. 判断黄金交叉:当50周期SMA上穿200周期SMA时,做多
-3. 判断死亡交叉:当50周期SMA下穿200周期SMA时,平仓
-
-这里使用SMA指标的重要性在于,它能有效滤除行情数据的噪音, Capture长期趋势。快速 SMA 线上穿慢速 SMA 线,表示短期上涨势头打败了长期的下跌趋势,买入信号产生。
-
-## 策略优势
-
-该策略具有以下几个优势:
-
-1. 原理简单易懂,容易实现。
-2. PARAMETERS设置合理,可自定义两个SMA周期,适应不同市场。
-3. 采用stable版本Pine语言编写,运行高效。
-4. 可视化设置信息丰富,易于使用。
-
-## 风险及解决
-
-该策略也存在一些风险:
-
-1. 可能出现假突破,使策略产生错误信号。可适当调整两个SMA参数,降低假突破概率。
-
-2. 无法响应短期市场,只适合长线投资者。可适当缩短快速SMA的周期。
-
-3. 回撤可能较大。可设置止损点,或适当调整仓位管理。
-
-## 优化思路
-
-该策略可从以下几个维度继续优化:
-
-1. 增加其他指标过滤,组合多个买入/卖出条件,降低假信号概率。
-
-2. 增加止损机制。当价格跌破某一水平时,强制止损。
-
-3. 优化仓位管理。例如随着趋势加仓,跟踪止损等。控制回撤并追求更高收益。
-
-4. 进行参数优化。评估不同参数对收益风险比的影响。
-
-## 总结
-
-该策略总的来说是一个典型的趋势跟踪策略。它利用 SMA 的优势,简单高效地 Capture长线趋势。可根据自己的风格和参数调整空间进行定制。同时也需要注意一些已有的不足,进行进一步的优化与改进。
-
-||
 
 ## Overview
 
@@ -112,7 +60,6 @@ The strategy can be further optimized in following aspects:
 
 In general, this is a typical trend tracking strategy. It utilizes the advantage of SMA to simply and efficiently capture long-term trends. Can customize based on one's style and tuning space. Also need to notice existing deficiencies for further optimization and improvement.
 
-[/trans]
 
 > Strategy Arguments
 

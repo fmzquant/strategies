@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18888140f2939f6e2d8.png)
 
-[trans]
-# 谱龄策略
-
-## 概述
-
-谱龄策略是一种基于价格通道的趋势跟踪策略。它使用快速和慢速的唐奇安通道来识别趋势方向,并在回调时进行逢低买入和逢高卖出。该策略优点是可以自动跟踪趋势,在趋势变化时及时止损和反向开仓。但也存在回撤和止损点过于接近的风险。
-
-## 策略原理
-
-该策略首先定义快速通道周期为20根K线,慢速通道周期为50根K线。快速通道用于设置止损价格,慢速通道用于判断趋势方向和入场时机。
-
-策略首先计算快速通道的最高价和最低价,并取中线作为止损线。同时计算慢速通道的最高价和最低价,通道上沿和下沿作为入场线。
-
-当价格突破慢速通道上沿时,做多;当价格突破慢速通道下沿时,做空。入场后,止损点设在快速通道中线。
-
-这样,慢速通道判断大趋势方向,快速通道跟踪小范围内突破判断止损点。当大趋势反转时,价格会首先突破快速通道止损线,实现止损。
-
-## 策略优势
-
-- 自动跟踪趋势,及时止损。使用双通道结构,可以自动跟踪趋势,在趋势反转时快速止损。
-
-- 回调开仓,具有一定的趋势过滤效果。只在价格突破通道边界时开仓,可以滤除部分非趋势性假突破。 
-
-- 风险可控。止损距离较近,可以控制单笔损失。
-
-## 策略风险
-
-- 回撤较大。趋势跟踪策略回撤可以较大,需要有心理准备。
-
-- 止损点过于接近。快速通道周期较短,止损距离较近,容易被套。可以适当放宽快速通道周期。
-
-- 容易产生过多交易。双通道结构导致买卖点较多,需要合理控制仓位。
-
-## 优化方向
-
-- 增加开仓过滤条件。可以在开仓条件中加入volatility等指标,过滤趋势性不强的突破。
-
-- 优化通道周期参数。可以通过更系统的方法寻找最优通道参数组合。
-
-- 结合多个时间周期决策。可以在更高时间周期确定大趋势,在较低周期进行具体交易。
-
-- 动态调整止损距离。可以根据市场波动程度动态调整止损距离。
-
-## 总结
-
-谱龄策略整体是一个较为标准的趋势跟踪策略。它利用价格通道判断趋势方向,并设定止损来控制风险。该策略具有一定的优势,但也存在回撤和止损点过近的问题。通过优化通道参数、增加过滤条件等方法,可以获得更好的策略效果。但需要注意的是,趋势跟踪策略对交易者的心态要求较高,需要做好回撤的心理准备。
-
-||
 
 ## Overview
 
@@ -104,7 +56,6 @@ So the slow channel determines the major trend direction, while the fast channel
 
 The Puling strategy is a standard trend following strategy overall. It uses price channels to determine trend direction and sets stop loss to control risks. The strategy has some advantages but also the problems of drawdown and stop loss being too close. We can optimize it through adjusting channel parameters, adding filters etc. But we should note trend following strategies require strong psychology to endure drawdowns.
 
-[/trans]
 
 > Strategy Arguments
 

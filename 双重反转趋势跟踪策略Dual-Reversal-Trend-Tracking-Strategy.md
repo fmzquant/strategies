@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f0a1922718badc9227.png)
-[trans]
-## 概述
-这是一个结合双重反转信号的趋势跟踪策略。它整合了123反转策略和性能指数策略,追踪价格反转点,实现更可靠的趋势判断。
-
-## 策略原理
-该策略由两个子策略组成:
-
-1. 123反转策略
-
-    使用14日K线判断反转信号。具体规则是:
-    
-    - 多头信号:前两日收盘价下跌,当前K线收盘价高于前一日收盘价,9日Stochastic Slow低于50
-    - 空头信号:前两日收盘价上涨,当前K线收盘价低于前一日收盘价,9日Stochastic Fast高于50
-    
-2. 性能指数策略
-
-    计算过去14日的涨跌幅作为指标。规则如下:
-    
-    - 性能指数>(0),产生多头信号
-    - 性能指数<(0),产生空头信号
-    
-最终信号是两种信号的综合。即需要同向的多空信号才会产生实际的买卖操作。
-
-这样可以过滤掉部分噪音,使得信号更加可靠。
-
-## 策略优势
-
-这种双重反转系统有以下优势:
-
-1. 结合双重因素判断,信号更加可靠
-2. 能够有效过滤市场噪音,避免假信号
-3. 123形态经典且实用,容易判断和复现
-4. 性能指数能够判断未来趋势走向
-5. 参数组合灵活,可进一步优化
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 可能错过突发性反转,无法全面捕捉趋势
-2. 双重条件组合导致信号变少,可能影响盈利能力  
-3. 需要同向判断,容易受到个股特殊波动的影响
-4. 参数设置问题可能导致信号偏差
-
-可以考虑以下几个方面的优化:
-
-1. 调整参数,如K线长度、Stochastic周期等
-2. 优化双重信号的判断逻辑
-3. 结合更多因子,如成交量等
-4. 增加止损机制
-
-## 总结
-
-该策略整合双重反转判断,能有效发现价格转折点。虽然信号发生概率降低,但可靠性较高,适合捕捉中长线趋势。可以通过参数调整和多因子优化进一步增强策略效果。
-
-||
 
 ## Overview  
 This is a trend tracking strategy that combines dual reversal signals. It integrates the 123 reversal strategy and performance index strategy to track price reversal points for more reliable trend judgment.  
@@ -119,7 +63,6 @@ Following aspects can be considered for optimization:
 
 ## Summary
 The strategy integrates dual reversal judgments to effectively discover price inflection points. Although the probability of signal occurrence decreases, the reliability is higher, suitable for capturing medium and long term trends. The strategy effect can be further enhanced through parameter adjustment and multi-factor optimization.
-[/trans]
 
 > Strategy Arguments
 

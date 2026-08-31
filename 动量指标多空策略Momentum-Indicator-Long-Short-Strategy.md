@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11c7095f3715da8ad84.png)
 
-[trans]
-
-## 概述
-
-该策略运用平均向导(ADX)、顺势指标(DMI)以及商品路径指数(CCI)等动量指标,判断趋势方向,进行趋势追踪。当ADX和趋向指标确认趋势形成时,在CCI过冲的时候建立头寸。
-
-## 策略原理
-
-1. 计算ADX,DMI和CCI指标。
-
-    - ADX用于判断趋势力度,当ADX高于设定阈值时,认为趋势足够强劲。
-    - DMI包括DI+和DI-,分别表示上升趋势和下降趋势的力度。当DI+高于DI-,认为处于上升趋势,反之则为下降趋势。
-    - CCI用于判断超买超卖情况。当CCI低于-100时为超卖,高于100时为超买。
-
-2. 判断趋势方向。
-
-    - 当DI+上穿DI-,判定为上升趋势。
-    - 当DI-下穿DI+,判定为下降趋势。
-
-3. 进入场内。
-
-    - 当上升趋势形成,ADX高于阈值,且CCI低于-100时,做多入场。
-    - 当下降趋势形成,ADX高于阈值,且CCI高于100时,做空入场。
-
-4. 出场止损。
-
-    - 做多时,当DI-下穿DI+时清仓。
-    - 做空时,当DI+上穿DI-时清仓。
-
-## 策略优势分析
-
-1. 使用ADX判断趋势强弱,避免在无明显趋势时无谓交易。
-
-2. 使用DMI确定趋势方向,减少错误判断的概率。 
-
-3. 在CCI过冲时入场,可以及时捕捉趋势转折点,降低入场风险。
-
-4. 动量指标组合使用,可以提高判断准确率。
-
-5. 有止损机制,可以限制每单损失。
-
-## 风险与对冲
-
-1. ADX回落时,会有多次焦虑交易导致亏损。可以适当调高ADX入场阈值,确保趋势足够明显。
-
-2. DMI指标存在滞后,可能错过趋势早期机会。可以配合其他指标或图形技术分析确定入场时机。
-
-3. CCI容易产生频繁交易。可以适当放宽CCI阈值幅度,过滤掉部分噪音。
-
-4. 做多做空同时持有头寸时,可考虑采用股票市场中性策略,制定套期保值规则,降低整体仓位风险。
-
-## 策略优化方向
-
-1. 优化ADX参数,找到最佳平衡点 between filtering noise and catching trend in time.
-
-2. 优化DMI参数,平衡滞后性和灵敏度。
-
-3. 优化CCI参数,平衡交易频率和捕捉反转的能力。
-
-4. 测试增加或修改其他指标,寻找更好的组合效果。例如MACD,KDJ等。
-
-5. 对交易品种进行测试,找到最佳适配的品种。
-
-6. 优化仓位管理策略,在保持跟踪趋势能力的前提下,控制风险。
-
-## 总结
-
-该策略利用ADX判断趋势,DMI确定方向,CCI定位反转点的思路进行趋势跟踪交易,具有较强的逻辑性。但仍需针对参数进行优化,并配合仓位管理来控制风险。如果各参数调整到恰当水平,在趋势明显的品种上应用,该策略有望获取稳定收益。但交易者需要密切关注市场环境变化,动态调整参数。
-
-||
 
 
 ## Overview
@@ -150,7 +80,6 @@ This strategy utilizes momentum indicators including Average Directional Index (
 
 The strategy logically uses ADX for trend, DMI for direction and CCI for reversals. But parameters need optimization and position sizing for risk control. Properly tuned and applied to trending products, it can deliver steady returns. Traders should dynamically adjust for changing markets.
 
-[/trans]
 
 > Strategy Arguments
 

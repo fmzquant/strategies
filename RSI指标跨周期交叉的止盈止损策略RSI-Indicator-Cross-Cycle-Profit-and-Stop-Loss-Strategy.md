@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1684ed6cea6bb3d35f2.png)
-[trans]
-
-## 概述
-
-该策略运用RSI指标实现跨周期交叉判断买入时机,并采用ATR止盈止损机制,属于趋势跟踪策略的一种。通过不同周期RSI指标交叉确定市场趋势转折点,结合收盘价判断过滤做多做空时机。止盈止损机制有效控制风险,锁定盈利。
-
-## 策略原理  
-
-该策略首先运用SMA平滑技术计算26周期的指数移动平均线,作为多头市场判断的基准线。然后计算RSI指标的4周期值,当其向下穿过30这个超卖区,认为行情可能反转上涨。此时再判断shortdays参数的新高能否突破longdays参数的最近一段新高,表示短期趋势走强。如果上述条件同时满足,即发出做多信号。  
-
-入场后,以ATR指标的倍数作为止盈幅度,以收盘价高点的一定比例止损。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 使用RSI指标判断反转点,具有较好的时机抓取能力。
-
-2. 应用新高新低机制,避免错误信号。  
-
-3. 利用ATR止盈止损,自动追踪最优退出点。
-
-4. 参数设置灵活,可调整至最优水平。
-
-5. 策略思路清晰易懂,具有较强的稳定性。
-
-## 策略风险
-
-该策略也存在以下风险:  
-
-1. RSI指标可能发出错误信号,导致入场时机不当。可以适当调整RSI参数,或增加其他指标过滤。
-
-2. ATR止盈幅度可能设置过大或过小,无法锁定最大利润。可以测试更优参数组合。  
-
-3. 止损点过于接近,可能被突破止损。可以适当放宽止损距离。
-
-4. 回测数据不足,可能高估了策略收益率。应增加回测周期和市场环境测试。
-
-## 策略优化
-
-该策略可以从以下方面进行优化:
-
-1. 测试优化RSI参数和止盈止损倍数,找到最佳参数组合。
-
-2. 增加其他指标判断,提高策略准确率。如MACD,KD等。
-
-3. 优化止损机制,根据ATR波动范围进行动态调整。
-
-4. 测试在不同交易品种的表现效果。选择流动性好、波动率高的品种。
-
-5. 比较不同止损类型的绩效。如比例止损、移动止损等。
-
-## 总结  
-
-本策略整体运作清晰流畅,指标选择和参数设置合理,具有较强的实用性。通过参数优化和机制改进仍有进一步提升空间。总体来说,该策略具有较高的稳定盈利能力。值得实盘调试和投入使用。
-
-||
 
 ## Overview
 
@@ -122,7 +65,6 @@ The strategy can be optimized in the following aspects:
 
 The overall operation of this strategy is clear and smooth, the indicator selection and parameter settings are reasonable, and it has strong practicality. There is still room for further improvement through parameter optimization and mechanism improvement. Overall, the strategy has a relatively high ability to earn stable profits. It is worth debugging in real transactions and putting into use.  
 
-[/trans]
 
 > Strategy Arguments
 

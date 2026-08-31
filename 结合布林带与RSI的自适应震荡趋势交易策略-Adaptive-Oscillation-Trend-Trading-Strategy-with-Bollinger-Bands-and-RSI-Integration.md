@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b7457118d9a987db4a.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多重技术指标的趋势跟踪系统，通过布林带、RSI和MACD三个经典指标的协同配合，在市场震荡和趋势转换阶段捕捉交易机会。策略采用金字塔式加仓方式，通过严格的交易间隔控制来管理风险。
-
-#### 策略原理
-策略核心逻辑建立在三重信号确认基础上：
-1. 使用RSI指标识别超买超卖区域，RSI<45视为超卖，RSI>55视为超买
-2. 通过布林带通道判断价格位置，当价格接近或突破布林带上下轨时产生信号
-3. 利用MACD金叉死叉作为趋势确认，与RSI和布林带信号共振后开仓
-策略还设置了最小交易间隔(15个周期)，避免过度交易，同时采用金字塔式持仓管理。
-
-#### 策略优势
-1. 多重技术指标交叉验证，大幅减少虚假信号
-2. 金字塔式加仓机制提高了资金利用效率
-3. 设置最小交易间隔，有效控制交易频率
-4. 指标参数可调整，具有较强的适应性
-5. 具备自动平仓机制，控制风险敞口
-
-#### 策略风险
-1. 多重指标可能导致信号滞后
-2. 震荡市场中可能产生频繁交易
-3. 金字塔式加仓在趋势反转时可能带来较大损失
-4. 固定的RSI阈值可能不适合所有市场环境
-
-#### 策略优化方向
-1. 引入自适应的RSI阈值，根据市场波动度动态调整
-2. 增加成交量指标作为辅助确认
-3. 优化金字塔加仓的仓位管理算法
-4. 加入更灵活的止损机制
-5. 考虑市场周期特征，动态调整交易间隔
-
-#### 总结
-该策略通过多重技术指标的协同配合，在控制风险的同时追求稳定收益。虽然存在一定的滞后性，但通过合理的参数优化和风险管理机制，策略展现出较好的适应性和稳定性。未来可以通过引入自适应机制和更完善的仓位管理来进一步提升策略表现。
-
-|| 
 
 #### Overview
 This strategy is a trend-following system that combines multiple technical indicators, utilizing Bollinger Bands, RSI, and MACD to capture trading opportunities during market oscillations and trend transitions. The strategy employs a pyramiding position sizing approach with strict trade interval controls for risk management.
@@ -79,7 +44,6 @@ The strategy implements a minimum trade interval (15 periods) to prevent overtra
 
 #### Summary
 The strategy achieves stable returns while controlling risk through the coordination of multiple technical indicators. Despite some inherent lag, the strategy demonstrates good adaptability and stability through proper parameter optimization and risk management mechanisms. Future improvements can focus on introducing adaptive mechanisms and enhanced position management to further improve strategy performance.
-[/trans]
 
 
 

@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/113a4d661730a09c947.png)
 
-[trans]
-
-
-## 概述
-
-本策略利用均线交叉来判断价格动量方向,辅以金叉死叉判断整体趋势,实现趋势跟踪。
-
-## 策略原理
-
-该策略使用EMA和SMA两个均线的交叉来判断价格动量方向,EMA反应更快,SMA反应更稳定。当EMA上穿SMA时判断为价格上涨势头强劲,做多;当EMA下穿SMA时判断为价格下跌势头强劲,做空。
-
-另外,该策略还使用快速周期SMA和慢速周期SMA的交叉来判断整体趋势方向。当快速SMA上穿慢速SMA时为金叉,判断为行情处于长期上涨趋势;当快速SMA下穿慢速SMA时为死叉,判断为行情处于长期下跌趋势。
-
-策略在EMA上穿SMA时判断为做多机会。如果此时是金叉,说明做多不仅有短期动量支持,也与长期趋势一致,这是较佳的做多时机;如果此时是死叉,说明做多仅有短期动量支持,与长期趋势不一致,这是较为冒险的做多时机。
-
-## 优势分析
-
-- 利用均线交叉判断价格动量和方向
-- 同时考虑短期动量和长期趋势
-- 结合双重指标确认信号,可靠性较高
-- 通过调整均线参数,可适应不同周期
-- 可配置是否显示具体交易信号,界面可自定义
-
-## 风险分析
-
-- 均线交叉存在滞后,可能出现错过最佳买卖点的情况
-- 固定周期的SMA无法实时反映价格变化
-- 长短周期均线可能产生错误交叉信号
-- 长期持有可能增加资金风险
-
-可通过结合其他指标确认信号,优化均线周期参数,或设置止损来降低风险。
-
-## 优化方向 
-
-- 增加其他指标过滤,如交易量,布林带等
-- 增加止损策略
-- 优化均线周期参数
-- 优化资金管理
-- 考虑实时调整持仓比例
-
-## 总结
-
-本策略总体来说是一个较为稳定可靠的趋势跟踪策略。它同时考虑了短期价格动量和长期趋势方向,通过均线交叉形成交易信号。相比单一均线策略,它结合双重指标确认,可靠性较高。但作为趋势跟踪策略,它的Parameter优化和风险控制非常重要,需要反复测试调整,才能真正发挥策略效果。通过不断优化和改进,本策略可以成为一个值得长期持有的量化投资组合中的组成部分。
-
-||
 
 
 ## Overview
@@ -99,7 +54,6 @@ Risks can be reduced by combining other indicators for signal confirmation, opti
 
 Overall, this is a relatively stable and reliable trend following strategy. It considers both short-term price momentum and long-term trend direction, generating trading signals through MA crossovers. Compared to single MA strategies, it has higher reliability by combining dual indicators for confirmation. But as a trend following strategy, its parameter optimization and risk control are very important. It needs repeated testing and tuning to truly realize its potential. With continuous optimizations and improvements, this strategy can become a valuable component of a long-term quantitative investment portfolio.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c21d7a4492972c1c7d.png)
-[trans]
-## 概述
-
-该策略通过结合123反转策略和CMO均线策略,形成买卖信号的组合。123反转策略通过股票连续两天收盘价形成新的高点或低点,结合随机指标判断市场买卖力度,产生交易信号。CMO均线策略则利用CMO指标判断价格动量,产生交易信号。两种策略信号结合,可形成更可靠的组合信号。
-
-## 策略原理
-
-123反转策略运用以下原理产生交易信号:
-
-1. 当收盘价连续两天上涨,且9日随机指标低于50时,做多
-2. 当收盘价连续两天下跌,且9日随机指标高于50时,做空
-
-该策略通过判断价格在短期内是否形成新的高点或低点,结合随机指标的多空指标,产生交易信号。
-
-CMO均线策略运用以下原理产生交易信号:
-
-1. 计算5日、10日和20日的CMO值
-2. 求出其平均值 
-3. 当平均CMO高于70时,做多
-4. 当平均CMO低于-70时,做空
-
-该策略通过对不同周期CMO值的集合运算,判断价格动量指标的多空,产生交易信号。
-
-组合策略对两个策略的信号进行AND运算,即两个策略的信号同时做多或同时做空时,该组合策略才产生实际的交易信号。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 组合信号更加可靠,可减少虚假信号
-2. 123反转策略适合捕捉短期调整后的趋势
-3. CMO均线策略判断大级别价格动量
-4. 可适应不同市场环境
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 123反转策略对价格的形态依赖较高,可能出现失效
-2. CMO指标对市场震荡敏感,可能产生错误信号
-3. 组合策略的信号可能过于保守,漏失交易机会
-4. 需要适当调整参数,使之适应不同周期和市场环境
-
-对策有:
-
-1. 优化反转策略的形态判断规则
-2. 在CMO均线策略中加入其他辅助指标
-3. 评估最近一段时间的策略效果,动态调整参数
-
-## 优化方向 
-
-该策略可从以下方面进行优化:
-
-1. 使用机器学习算法自动优化组合权重
-2. 增加自适应调参模块,使策略参数动态优化
-3. 增加止损模块,有效控制风险
-4. 评估策略健壮性,改进形态识别算法
-5. 结合行业选择、基本面等因素
-
-## 总结
-
-该策略通过123反转和CMO均线两种互补性强的策略,形成有效的组合交易策略。在控制风险的前提下,可产生稳定的超额收益。随着算法和模型的不断优化,期待该策略的收益率和稳定性获得进一步提高。
-
-||
 
 ## Overview
 
@@ -154,7 +90,6 @@ This strategy can be improved from the following aspects:
 
 This strategy forms an effective combo trading system from two highly complementary strategies - the 123 Reversal and the CMO moving average. With proper risk control, it can generate stable alpha returns. As the algorithms and models continue to be upgraded, the profitability and stability of this strategy is expected to be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

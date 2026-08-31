@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11d1f2a8ffa1a519ad6.png)
-[trans]
-## 概述
-三高K线反转策略是一种基于K线形态的短线交易策略。它利用三根连续阳线的特征,在盘中获得较高成功率的短线交易机会。
-
-该策略主要用于短线交易。它的优势是rules简单清晰,容易操作。同时,它结合了止损和止盈机制来控制风险。但是该策略也存在一定的风险,如趋势市场中连续多头市场会产生背离。
-
-## 策略原理
-该策略判断最近的三根K线是否都是阳线,并且每日收盘价高于开盘价。如果满足条件,那么可以做多,目标获利为开盘价与收盘价之间的50%。  
-
-具体来说,策略通过判断最近3根K线,也就是第1根、第2根和第3根K线,它们的开盘价是否都低于收盘价。如果满足该条件,说明可能出现机会。   
-
-此外,策略还计算出当前价格与最近三日内最低开盘价与最高收盘价之间的差价百分比。如果该百分比高于20%但低于50%,证明目前反转空间不大,属于适合介入的时机。
-
-当上述条件都满足时,就可以介入做多。此时的止损价位为进入价附近,止盈目标为进入价的1.5倍。
-
-## 优势分析
-该策略具有以下优势:
-
-1. Rules简单清晰,容易理解和操作
-2. 利用了K线形态提供的交易信号
-3. 同时结合了止损和止盈机制,可以有效控制风险
-4. 具有一定的胜率和盈利水平
-
-## 风险分析
-该策略也存在以下风险:  
-
-1. 趋势市场中,K线容易出现三阳上涨的特征,这时根据策略做多就是与趋势背离,风险较大
-2. 反转失败是最大的风险,会面临较大的止损
-3. 参数设置不当也会影响策略表现
-
-对应风险,可以通过以下方式优化:
-
-1. 结合趋势指标,避免与趋势背离
-2. 优化止损机制,降低单笔损失
-3. 测试并优化关键参数,如盈利目标、止损幅度等
-
-## 优化方向 
-该策略可以从以下几个方向进行优化:
-
-1. 优化开仓条件,避免错误信号,提高胜率
-2. 结合趋势指标,避免逆势开仓
-3. 优化止损机制,最大限度控制单笔亏损
-4. 优化止盈机制,在保证胜率基础上追求更大盈利
-5. 参数优化,寻找最优参数组合
-6. 结合其他因子,如成交量变化等提高系统效果
-
-## 总结
-三高K线反转策略整体来说是一种简单实用的短线交易策略。它具有规则清晰、易于操作、利用K线形态等优势,也存在与趋势背离、止损被触发等风险。我们可以通过多种方式对该策略进行优化,使其系统效果更好,适合短线交易使用。
-
-||
 
 ## Overview
 The Three High Candle Reversal strategy is a short-term trading strategy based on candlestick patterns. It utilizes the features of three consecutive yang lines to obtain relatively high-success-rate short-term trading opportunities during the session.
@@ -109,7 +59,6 @@ The strategy can be optimized in the following directions:
 ## Summary  
 In summary, the Three High Candle Reversal Strategy is a simple and practical short-term trading strategy. It has the advantages of clear rules, easy operation, use of candlestick patterns, as well as risks such as reversal against trends and stop loss trigger. We can optimize this strategy in many ways to make it perform better for short-term trading use.
 
-[/trans]
 
 
 

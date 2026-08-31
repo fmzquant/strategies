@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/120bfc6da0109ab1c39.png)
-[trans]
-## 概述
-
-本策略融合了TSI和改良CCI指标的双边交易信号,采用套利方式频繁开平仓位,目的是追求更稳定的持续盈利。关键逻辑是TSI指标的快慢均线金叉和死叉,结合HMACCI指标的多空信号线判断市场买卖方向。通过限制开仓条件来控制风险,同时设置止损和止盈逻辑。
-
-## 策略原理  
-
-该策略主要基于TSI和HMACCI两个指标的结合。
-
-TSI指标包含一个快速均线和一个慢速均线,用于判断买卖信号。当快线从下向上突破慢线时为买入信号,反之为卖出信号。这样可以较敏感地捕捉市场变化趋势。  
-
-HMACCI指标是在传统CCI指标基础上使用Hull移动平均代替价格本身,能滤波掉部分噪音,判断超买超卖区间。超买超卖区间可以再次确认TSI指标的信号方向。  
-
-策略的关键逻辑是结合这两个指标的判断结果,并设置一定的附加条件来过滤误信号,比如考察前一根K线的收盘价和多个周期前的最高价最低价,控制反转信号质量。
-
-在开仓方面,若条件满足,每次K线收盘时就市价开仓,同时做多做空。这样可以获得更稳定的收益,但需要承担套利的风险。
-
-在止盈止损方面,设置了浮动止损和盈利全部平仓。这可以很好地控制单边交易的风险。
-
-## 策略优势
-
-这是一个比较稳定可靠的高频套利策略。主要优势有:
-
-1. 双重指标组合,可以有效避免误信号
-2. 每K线开仓,频繁套利操作,盈亏波动更平稳 
-3. 严格的开仓逻辑和止损条件,可以控制风险
-4. 结合趋势和反转判断,容错率较高  
-5. 无方向偏好,适用于各类市场行情
-6. 参数可调整空间大,可以针对不同品种进行优化
-
-## 风险分析  
-
-需要注意的主要风险有:  
-
-1. 高频交易导致的更多手续费损耗  
-2. 无法完美避免套利中被套的可能性
-3. 参数设置不当可能导致过于激进入场
-4. 短期内难以承受单边巨亏的可能性 
-
-可以通过以下方式降低风险:
-
-1. 适当调整开仓频率,降低手续费影响  
-2. 优化指标参数,确保信号质量
-3. 调高止损幅度,但会承受更多套利损失
-4. 测试不同品种参数设置
-
-## 优化方向  
-
-该策略仍有很大优化余地,主要方向是:  
-
-1. 对参数如周期、长度等进行优化和测试
-2. 尝试不同的指标组合,如MACD、BOLL等
-3. 修改开仓逻辑,设置更严格的过滤条件 
-4. 优化止盈止损策略,实现动态和突破性止损
-5. 尝试机器学习方法寻找更稳定的参数范围
-6. 对交易品种和时间段进行测试
-7. 结合趋势判断指标,避免震荡行情过于激进出入场
-
-## 总结  
-
-该策略总体来说是一个稳定、可靠、容错率较高的双边套利策略。它融合了趋势判断和反转指标,通过频繁双边开仓获得稳定收益。同时,策略本身具有较强的可优化空间和潜力,是一种值得深入研究的高频交易思路。
-
-||
 
 ## Overview  
 
@@ -135,7 +72,6 @@ There is still large room for optimizing this strategy, mainly:
 
 Overall this strategy is a stable, reliable hedging strategy with high fault tolerance. It combines trend and reversal indicators, obtaining steady returns through frequent dual-directional trading. Also, the strategy itself has strong potential for optimization, and represents a worthwhile high frequency trading idea to research further.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,60 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略基于均线转换-发散指标(CMO)进行交易判断。CMO绝对值代表价格发散程度,策略以CMO三个周期绝对值的平均值判定超买超卖,属于典型的震荡指标交易策略。
-
-## 策略原理
-
-该策略主要运用以下逻辑:
-
-1. 计算CMO指数的三个不同周期绝对值
-2. 对三周期CMO指数绝对值取平均
-3. 当平均值高于上限阈值时,看空做空
-4. 当平均值低于下限阈值时,看多做多
-5. CMO指数恢复到正常水平时,平仓
-
-CMO指数反映价格变化的动量。其绝对值大小代表价格发散程度,超过一定幅度则进入超买超卖区域。该策略利用CMO的这一特性,采取多周期均值以平滑曲线,判断超买超卖状况,属于典型的震荡交易策略。
-
-## 策略优势
-
-- 利用CMO指数判定超买超卖区域
-- 三周期均值制造平滑曲线,可避免错误信号
-- 根据CMO理论,判断超买超卖的依据较强
-- 可自定义参数阈值,适应市场变化
-- 易于实施的反转策略
-
-## 策略风险及应对
-
-- CMO指标可能发出错误信号
-- 参数阈值需要不断测试和优化
-- 趋势行情下持续超买超卖可能造成损失
-
-应对方法:
-
-1. 配合趋势指标,避免逆趋势交易
-2. 优化参数,提高指标的灵敏度
-3. 采用移动止损,控制单笔损失
-
-## 策略优化方向
-
-该策略可从以下几个维度进行扩展:
-
-1. 增加交易量指标的确认,避免趋势反转中的假突破
-2. 整合移动止损策略,优化风险管理
-3. 采用机器学习等方法自动优化参数
-4. 结合波动率指标调整仓位规模
-5. 组合其他策略,分散风险,提高整体收益率
-
-## 总结
-
-该策略利用CMO判定超买超卖进行反转交易,由于采用多周期均值,可以有效平滑曲线,避免错误信号。CMO指数本身理论基础稳固,可靠判定价格发散状况。通过参数优化、止损策略等扩展,可以将其优化成一个较为稳定的震荡指标交易策略。
-
-|| 
 
 ## Overview 
 
@@ -114,7 +60,6 @@ The strategy can be enhanced through:
 
 This strategy uses CMO to identify overbought/oversold for mean reversion trading. Multi-period averaging helps avoid false signals. CMO itself has sound theoretical basis for gauging divergence. Enhancements through better parameters, stops, and filters can make it a stable oscillator trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

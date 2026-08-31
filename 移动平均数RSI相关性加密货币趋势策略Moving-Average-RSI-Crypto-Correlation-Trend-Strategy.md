@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10424cfe19daf190eb8.png)
-[trans]
-
-## 概述
-
-该策略是一种长期持有的加密货币趋势跟踪策略,它结合了移动平均线、相对强弱指标(RSI)和市场相关性概念,目标是识别中长线的价格趋势,在趋势开始建立头寸,随着趋势的发展逐步加仓,直至发现趋势反转信号而止盈。
-
-## 策略原理
-
-该策略主要基于三个指标进行判断:
-
-1. 相对强弱指标(RSI):用于识别超买超卖现象,RSI高于51时为超买信号,低于49时为超卖信号。
-
-2. 移动平均线(SMA):计算close价格的9日简单移动平均线,作为判断趋势方向的指标。
-
-3. 市场相关性:选取加密货币总市值作为基准行情,计算与交易品种的相关性,用相关性行情替代交易品种本身的K线行情,以提高交易信号的效果。
-
-具体交易规则是:
-
-多头入场:RSI上穿51且close价格高于9日SMA时做多;  
-
-空头入场:RSI下穿49且close价格低于9日SMA时做空;
-
-止盈止损原则:多头止盈设置为1%,止损设置为0.1%;空头止盈设置为0.05%,止损设置为0.03%。
-
-该策略同时设定了时间条件,只在指定的日期范围内交易。
-
-## 优势分析
-
-1. 结合了趋势和超买超卖指标,能够有效跟踪中长线趋势;
-
-2. 利用市场相关性提高信号质量,避免被单一品种的假趋势误导;
-
-3. 自动止盈止损设置合理,避免亏损扩大;
-
-4. 可自定义时间范围,适应不同阶段的市场行情。
-
-## 风险分析
-
-1. 中长线趋势策略,无法应对短线大幅震荡市场;
-
-2. 相关性市场作为基准行情,当基准市场发生转折时,交易品种可能滞后,无法及时止损;
-
-3. 只做多或只做空时,容易错过反向行情机会。
-
-对策:
-
-1. 可结合其他短期指标,如KC、BOLL等判定市场阶段,加强止损;  
-
-2. 增加对基准行情的分析,发现基准转折时及时平仓;
-
-3. 交易双向品种,充分捕捉多空机会。
-
-## 优化方向  
-
-1. 参数优化:优化RSI参数、移动平均线参数、止盈止损幅度,使策略更匹配市场统计特性。
-
-2. 交易品种优化:评估更多可能的基准行情和交易品种,选择相关性更高、流动性更好的组合。
-
-3. 策略组合:与其他策略组合使用,在大周期判断市场趋势方向的同时,利用本策略进行中长线持仓。
-
-## 总结
-
-该策略总体上是一个优化空间大、适用面广的中长线加密货币趋势跟踪策略。它有效地结合趋势、超买超卖和相关性判断来提高交易决策的质量,通过参数调整和组合使用可以大幅增强策略的稳定性和收益率。中长期持有的交易方式也非常符合加密货币这个波动较大、短线难以捕捉精确趋势的品种。
-
-||
 
 
 ## Overview
@@ -139,7 +74,6 @@ Solutions:
 
 This is an optimized and widely-adaptable mid-to-long term cryptocurrency trend following strategy. It effectively combines trend, momentum and correlation analysis to improve trade decisions. Proper parameter tuning and composite usage can greatly enhance its stability and profitability. The long holding periods also suit the high-volatile and hard-to-precisely-capture nature of crypto markets.
 
-[/trans]
 
 > Strategy Arguments
 

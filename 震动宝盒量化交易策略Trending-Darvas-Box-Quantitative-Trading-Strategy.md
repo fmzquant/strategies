@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c06fcffe0c80f7e629.png)
-[trans]
-
-## 概述
-震动宝盒量化交易策略是一个利用 Darvas 箱体通道来捕捉市场趋势的短线交易策略。该策略主要依赖震动宝盒指标来判断市场走势和寻找交易机会。当价格突破宝盒上沿时,做多;当价格跌破宝盒下沿时,做空。同时,该策略还利用多种辅助指标来提高策略的稳定性。
-
-## 策略原理  
-- 利用 length 参数设置震动宝盒的长度。该策略中默认长度为 5 根K线。  
-- 根据高点突破和低点跌破来判断趋势,并相应做多做空。  
-- 当价格突破宝盒上沿时会在图表上画出绿色的 TopBox 线。这是做多的信号。  
-- 当价格跌破宝盒下沿时会在图表上画出红色的 BottomBox 线。这是做空的信号。
-- 利用多均线系统作为辅助判断指标。当价格高于均线多头,低于均线空头。  
-- 利用 RVI 指标判断超买超卖区域。RVI 高于 Signal 线时为超买信号。RVI 低于 Signal 线时为空头信号。  
-
-以上多个指标综合判断之后进行入场。止损价格为宝盒的对边。止盈 EXIT 则利用 RVI 的方向性来关闭订单。
-
-## 优势分析
-- 利用宝盒通道判断市场趋势方向,避免被错漏大趋势的机会。  
-- 宝盒通道容易形成,获取信号的频率高。  
-- 宝盒止损位设置合理,能很好控制单笔止损。  
-- 多均线和 RVI 辅助判断,可以提高决策的准确性。
-
-## 风险分析
-- 震动宝盒止损位置比较宽,单笔亏损风险较大。  
-- 多头持仓时,短期调整可能被止损。  
-- 宝盒通道形成的方向性并不总是正确的,存在错误信号。
-- 需要适当调整参数来使辅助指标配合宝盒使用。  
-
-可以通过适当收紧止损位来降低风险。另外,辅助指标的参数也需要测试调整,使其起到最好的筛选作用。
-
-## 优化方向  
-- 测试不同长度的宝盒参数,找到最佳长度。  
-- 优化辅助指标的参数,使其与宝盒配合最佳。  
-- 尝试其他辅助指标来进一步验证信号。例如 KDJ,MACD 等。  
-- 对止损位和止盈条件进行测试,使策略更稳定。
-
-## 总结
-震动宝盒量化交易策略总体来说是一种较为活跃的短线交易策略。它能及时捕捉市场的趋势变化,利用宝盒通道开仓;而辅助指标的配合则能提高决策的准确性。该策略风险收益特征积极,值得采用并不断优化。
-
-|| 
 
 ## Overview  
 The Trending Darvas Box strategy is a short-term trading strategy that uses Darvas box channel to capture market trends. The core mechanism relies on the Darvas Box indicator to determine market momentum and locate trading opportunities. It goes long when price breaks above box top, and goes short when price breaks below box bottom. In addition, this strategy also utilizes other auxiliary indicators to enhance stability.  
@@ -86,7 +47,6 @@ Can tighten stop loss to reduce risk. Auxiliary parameters also need optimizatio
 ## Conclusion  
 In summary, the Trending Darvas Box strategy is an aggressively trading strategy targeting short-term trends. It captures trend changes swiftly with the Darvas box channel, while auxiliary indicators helps improving accuracy. The risk/reward profile is positive for this strategy, worth adopting and continuous optimizations.
 
-[/trans]
 
 > Strategy Arguments
 

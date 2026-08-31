@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1318c1c3a4cd8093d7d.png)
-[trans]
-
-## 概述
-
-震荡指数变换策略(Oscillator Index Transformation Strategy)利用布雷瑟特(Bressert)的3-10振荡指数与其16日简单移动平均之间的交叉来产生交易信号。该策略适用于日内和隔夜交易。
-
-## 策略原理  
-
-该策略基于布雷瑟特的3-10振荡指数,该指数是3日指数移动平均线和10日指数移动平均线的差值。当快线(3-10 振荡指数)上穿慢线(16日简单移动平均线)时做多,当快线下穿慢线时做空。
-
-具体来说,策略首先计算3日EMA、10日EMA和它们的差值作为振荡指数。然后计算16日振荡指数的简单移动平均作为信号线。当振荡指数上穿信号线时做多,下穿时做空。允许反转做法。
-
-## 优势分析
-
-1. 使用经典的布雷瑟特振荡指数,具有一定的效果  
-2. 结合快慢线交叉形成交易信号,容易判断 entry 和 exit  
-3. 允许反转做法,可以适应不同市场环境  
-4. 可在日内和隔夜交易中使用  
-
-## 风险分析  
-
-1. 布雷瑟特振荡指数效果并不稳定,存在一定盈亏波动  
-2. 快线和慢线交叉信号可能出现假信号  
-3. 反转做法风险较大,需要谨慎运用  
-4. 日内交易需考虑止损策略,隔夜交易需考虑资金管理 
-
-## 优化方向  
-
-1. 优化参数,调整移动平均线周期,找到最佳参数组合
-2. 增加过滤条件,结合其他指标或价格形态判断信号质量  
-3. 增加止损策略,设置合理的止损点,控制单笔损失  
-4. 优化资金管理,调整仓位大小,降低单笔损失对总资金的影响  
-
-## 总结  
-
-震荡指数变换策略属于短线交易策略,通过布雷瑟特的3-10振荡指数和其信号线的交叉来产生交易信号,简单实用。该策略可适用于日内和隔夜交易,但存在一定盈亏波动和假信号风险,需增加过滤条件优化止损来改进。如果参数优化和资金管理得当,该策略可获得一定的超额收益。
-
-||
 
 ## Overview  
 
@@ -84,7 +46,6 @@ Specifically, the strategy first calculates the 3-day EMA, 10-day EMA and their 
 
 The Oscillator Index Transformation strategy is a short-term trading strategy generating signals from 3-10 oscillator and signal line crossovers. It is simple and practical for both intraday and overnight usage, but has inherent PnL fluctuations and false signals risks. Additional filters, stop loss and position sizing are required to refine the strategy. With proper optimization it can achieve consistent alpha.
 
-[/trans]
 
 > Strategy Arguments
 

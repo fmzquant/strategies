@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略基于三条移动平均线的金叉死叉形态进行交易。当快速移动平均线上穿中速线并中速线上穿慢速线时做多;当快速移动平均线下穿中速线并中速线下穿慢速线时做空。
-
-### 策略原理
-
-1. 设置三条不同周期的移动平均线:快速线、中速线、慢速线
-2. 当快速线上穿中速线且中速线上穿慢速线时,做多
-3. 当快速线下穿中速线且中速线下穿慢速线时,做空  
-4. 可设置入场延迟,过滤假突破
-5. 当反向信号触发时平仓
-
-具体来说,该策略利用三条不同周期移动平均线间的交叉进行交易。快速线代表当前短期趋势,中速线代表中期趋势,慢速线代表长期趋势。当短中长三条均线顺序发生向上交叉时,说明趋势启动,做多;当发生向下交叉时,说明趋势反转,做空。还可设置入场延迟来过滤短期假突破。
-
-### 优势分析
-
-1. 使用三条均线判断趋势方向变化,提高准确性
-2. 延迟入场可过滤假突破,避免被套
-3. 交易逻辑简单直观,容易理解实现
-4. 可灵活调整均线参数,适用于不同周期
-5. 顺势交易,避免逆势交易风险
-
-### 风险分析
-
-1. 大周期下需要较长持仓时间,存在亏损扩大风险
-2. 三线交叉存在一定滞后,可能错过最佳入场点
-3. 需要优化均线参数,否则信号可能不精确
-4. 长期持仓需要考虑隔夜风险
-
-可以通过调整持仓时间,优化均线参数,引入止损策略等方式来管理风险。
-
-### 优化方向
-
-1. 测试不同均线周期参数找出最优参数
-2. 评估不同入场延迟的优劣以筛选信号
-3. 引入止损策略,根据实际行情调整止损位置
-4. 研究不同品种的参数偏好,建立参数优化体系
-5. 测试增加再入场和加仓规则以优化持仓
-
-### 总结
-
-本策略基于三均线交叉判断趋势方向进行持仓。优点是交易信号简单明确,可配置性强;缺点是容易滞后且需要参数优化。可通过参数调优、止损策略等提高效果,并控制回撤风险。该策略帮助交易者掌握移动平均线的应用及多均线交叉的交易思路。
-
-|| 
 
 ### Overview
 
@@ -99,7 +53,6 @@ Risks can be managed through position sizing, SMA optimization, stop loss strate
 
 This strategy holds positions based on 3 SMA crossovers to determine trend direction. Pros are simple clear signals and configurability; Cons are lagging signals and parameter dependency. Performance can be improved and risks controlled through parameter optimization, stop loss etc. It helps traders master using SMA and crossover strategies.
 
-[/trans]
 
 > Strategy Arguments
 

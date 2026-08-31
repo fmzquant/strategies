@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/117e0fad60aeaca620f.png)
 
-[trans]
-#### 概述
-该策略是一种基于成交量增量(Delta Volume)和斐波那契回调(Fibonacci Retracement)的交易策略。它通过比较一段时间内买方和卖方的成交量来判断市场趋势,同时利用斐波那契回调线来确定进出场点。当买方成交量超过卖方成交量,且价格突破61.8%的斐波那契回调线时进场做多;当卖方成交量超过买方成交量,且价格跌破38.2%的斐波那契回调线时平仓。
-
-#### 策略原理
-1. 计算指定周期内的买方成交量和卖方成交量,并存储在数组中。
-2. 计算成交量增量(Delta Volume),即买方成交量减去卖方成交量。
-3. 计算指定周期内的最高价和最低价,并根据它们计算38.2%和61.8%的斐波那契回调线。
-4. 当成交量增量大于0(买方成交量大于卖方成交量),且收盘价高于61.8%的斐波那契回调线时,开仓做多。
-5. 当成交量增量小于0(卖方成交量大于买方成交量),且收盘价低于38.2%的斐波那契回调线时,平仓。
-
-#### 策略优势
-1. 结合成交量和价格两个维度,可以更全面地判断市场趋势。
-2. 利用斐波那契回调线作为进出场点,有明确的技术支撑。
-3. 成交量增量指标可以反映市场供需关系,是一个领先指标。
-4. 参数可调,适用于不同的市场和交易品种。
-
-#### 策略风险
-1. 在震荡市中,频繁的进出场可能导致较高的交易成本。
-2. 如果市场出现剧烈波动,价格可能会快速突破斐波那契回调线,导致错过最佳进出场点。
-3. 该策略依赖于历史数据进行计算,对于新上市的交易品种或数据缺失的情况,可能会影响策略的有效性。
-
-#### 策略优化方向
-1. 可以考虑引入其他技术指标,如移动平均线、RSI等,以确认趋势和进出场点。
-2. 对于不同的市场和交易品种,可以优化成交量增量和斐波那契回调的计算周期和参数。
-3. 在进场后,可以设置移动止损或止盈,以控制风险和锁定利润。
-4. 可以结合市场情绪指标,如Fear & Greed Index,对策略进行动态调整。
-
-#### 总结
-该策略通过结合成交量增量和斐波那契回调线,在趋势形成初期进场,在趋势可能反转时出场,以捕捉市场的主要趋势。但在震荡市中可能会面临频繁交易的风险,因此需要结合其他指标和风控手段进行优化。总体而言,该策略思路清晰,逻辑严谨,可以作为一个基础策略进行进一步的开发和应用。
-
-|| 
 
 #### Overview
 This strategy is a trading strategy based on Delta Volume and Fibonacci Retracement. It determines the market trend by comparing the volume of buyers and sellers over a period of time, while using Fibonacci retracement lines to determine entry and exit points. When the buyer's volume exceeds the seller's volume and the price breaks through the 61.8% Fibonacci retracement line, it enters a long position; when the seller's volume exceeds the buyer's volume and the price falls below the 38.2% Fibonacci retracement line, it closes the position.
@@ -73,7 +41,6 @@ This strategy is a trading strategy based on Delta Volume and Fibonacci Retracem
 
 #### Summary
 By combining Delta Volume and Fibonacci Retracement lines, this strategy enters when a trend is forming and exits when the trend may reverse, in order to capture the main trend of the market. However, it may face the risk of frequent trading in the oscillating market, so it needs to be optimized with other indicators and risk control measures. Overall, the strategy is clear in thought, logically rigorous, and can be used as a basic strategy for further development and application.
-[/trans]
 
 
 

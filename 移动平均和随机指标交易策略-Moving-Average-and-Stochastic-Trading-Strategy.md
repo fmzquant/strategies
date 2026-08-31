@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/196d693048614e57198.png)
-[trans]
-
-### 概述
-
-本策略结合移动平均线和随机指标,实现了一套自动化的股票交易系统。它使用两个不同长度的移动平均线以及随机指标来捕捉趋势和超买超卖的信号,根据趋势方向和超买超卖区域的指标信号来进行买卖操作。
-
-### 策略原理
-
-#### 1. 移动平均线
-
-使用快线(5日线)和慢线(20日线)两个移动平均线。当快线上穿慢线时为买入信号,下穿为卖出信号。移动平均线的作用是判断价格趋势和方向。
-
-#### 2. 随机指标
-
-随机指标的参数设置为:K线周期14,K线平滑周期3,D线平滑周期3。K线在20以下为超卖区域,80以上为超买区域。随机指标的作用是判断是否处于超买超卖区域。
-
-#### 3. 买卖规则
-
-买入条件:快线上穿慢线 and K线<20(超卖区域)
-卖出条件:快线下穿慢线 and K线>80(超买区域)
-
-当满足买入条件时买入做多;满足卖出条件时卖出做空。
-
-#### 4. 止损设置
-
-买入后设置1%的止盈;卖出后设置1%的止损。
-
-### 优势分析
-
-这套策略结合趋势和指标,能够有效捕捉价格的中长线趋势,同时使用随机指标来控制买卖的时机,避免在没有明确方向性时随意的买卖操作。策略参数可调节空间大,可以针对不同市场环境进行调优。整体来说,这套策略对大中盘整体上涨的股票适用效果很好。
-
-### 风险及解决方法
-
-- 如果遇到特大消息面导致的剧烈行情,将可能带来较大亏损。可设置止损线来控制风险。
-
-- 如果遇到持续横盘整理的市场,将可能带来连续小亏损。可适当调整移动平均线周期参数来减少损失。
-
-- 需要注意避开股市关键时段,因为价格容易出现反转造成错误交易。
-
-### 优化方向  
-
-- 可以测试不同参数组合,寻找最佳参数组合。如测试不同长度的移动平均线组合效果。  
-
-- 可以结合其他分析工具,如成交量,波动率等来设定过滤条件,提高策略盈利率。
-
-- 可以研究股票选择机制,选择绩优股或加权指数等,降低个股风险。
-
-### 总结
-
-本策略整体运作顺畅,在设定了止损止盈条件后,整体盈亏结果良好。通过参数调节和股票池筛选的优化,效果可以进一步提升。总体来说,这是一套运作稳定、易于实施的量化交易策略。
-
-||
 
 ## Overview
 
@@ -112,7 +60,6 @@ This strategy combines trend and indicators to effectively capture medium-to-lon
 
 The overall strategy operates smoothly. With stop losses and profit targets, the overall profit/loss profile is solid. Further improvements can be expected from parameter tuning and stock pool filtering. In general this is an easy-to-implement and robust quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

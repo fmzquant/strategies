@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10083a8ec23e2fd4c55.png)
-[trans]
-
-## 概述
-
-本策略基于Ichimoku技术指标设计,采用趋势追踪和均衡突破的交易方式,旨在抓取中长线价格趋势,实现稳定盈利。
-
-## 策略原理
-
-策略使用一目均衡表的五条线 - 转向线、基准线、前沿线、先导线以及延迟线,判断价格趋势和支持阻力。具体判断规则如下:
-
-1. 当收盘价上穿基准线且基准线走势不平时,产生买入信号。
-2. 当收盘价下穿基准线且基准线走势不平时,产生卖出信号。
-3. 收盘价高于云峦时,流动性较好,允许建仓。
-4. 收盘价低于云峦时,流动性较差,禁止建仓。
-5. 延迟线上穿收盘价产生买入信号。
-6. 延迟线下穿收盘价产生卖出信号。
-
-上述交易信号综合判断后决定最终的入场时机。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用一目均衡表判断趋势,可过滤市场噪音,锁定中长线趋势。
-2. 结合云峦判断流动性状况,可避免建仓风险。
-3. 延迟线作为确认信号,避免假突破。
-4. 规则简单清晰,容易实施。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 参数设置不当可能导致错失交易机会。
-2. 趋势mutate时判断滞后,无法及时止损。
-3. 多头持仓亏损风险较大。
-
-针对上述风险,可通过优化参数设置、结合其他指标判断趋势变化、严格止损来解决。
-
-## 优化方向
-
-策略还可从以下方面进行优化:
-
-1. 优化一目均衡表的参数,寻找最佳组合。
-2. 增加量价指标过滤,避免趋势错位。
-3. 结合波动率指标判断反转点。
-4. 加入机器学习模型判断趋势状态。
-
-## 总结
-
-本策略利用一目均衡表判断价格趋势和流动性状况,采用趋势追踪模式,可有效过滤噪音抓取中长线趋势,回撤风险较小,适合中长线持仓。通过进一步优化参数设置、增加辅助过滤指标、挖掘趋势转折信号,可以提高策略Profit Factor。
-
-|| 
 
 ## Overview
 
@@ -112,7 +60,6 @@ The strategy can be further optimized from the following aspects:
 
 This strategy leverages Ichimoku to determine price trend and liquidity conditions for trend following, which can effectively filter out noise and capture medium-to-long term trends with smaller drawdowns. Further optimizations on parameter tuning, adding auxiliary filters, and identifying trend reversal signals can improve the strategy's Profit Factor.
 
-[/trans]
 
 > Strategy Arguments
 

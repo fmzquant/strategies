@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1839d72551270e8a2be.png)
-[trans]
-
-## 概述
-
-该策略是一个利用ATR指标构建多时间框架动态趋势通道,实现趋势追踪的策略。策略会在价格突破通道时产生信号,通过不断调整通道捕捉更大的趋势。
-
-## 策略原理
-
-策略使用ATR指标构建上涨趋势通道和下跌趋势通道。具体来说,上涨通道线为收盘价减去ATR指标的N倍;下跌通道线为收盘价加上ATR指标的N倍。N的值可以通过参数进行调整。
-
-当价格突破上涨通道时,产生买入信号;当价格突破下跌通道时,产生卖出信号。通道会根据最新价格动态调整,从而实现趋势追踪。
-
-另外,策略还定义了一个trend变量判断当前处于上涨趋势还是下跌趋势。trend变量与通道线搭配使用,避免产生错误信号。
-
-## 策略优势  
-
-- 利用动态通道实现趋势追踪,顺势而为
-- 避免追高杀跌,减少行情反转的风险
-- 通道参数可调,适应性强
-- 多时间框架设置更灵活
-
-## 策略风险
-
-- 追踪过于激进,可能增加亏损风险  
-- 通道参数设置不当,信号较少或错误信号较多
-- 需要较强的编程能力去调整参数
-
-优化方法:
-
-- 适当缩小ATR倍数,降低追踪幅度
-- 优化参数,找到最佳参数组合
-- 增加止损策略,降低单笔亏损
-
-## 策略优化方向  
-
-- 增加其他指标过滤,确保信号更可靠
-- 增加止损策略,降低风险
-- 进行参数优化,找到最佳参数
-- 优化进入和退出的时间,提高盈利率  
-
-## 总结
-
-该策略整体来说是一个较好的趋势追踪策略。它能够动态调整,顺势而为,避免追高杀跌。通过参数优化和适当改进,可以进一步增强策略优势,减少风险,从而获得更好的效果。
-
-||
 
 ## Overview  
 
@@ -98,7 +53,6 @@ Improvement:
 
 Overall this is a decent trend tracking strategy. It dynamically adjusts to trade along with trends and avoids chasing highs and selling lows. With parameter optimization and proper improvements, the strategy advantages can be further enhanced and risks reduced to achieve better results.
 
-[/trans]
 
 > Strategy Arguments
 

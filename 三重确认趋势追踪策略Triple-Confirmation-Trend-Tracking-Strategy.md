@@ -10,76 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1245c7f5cb6521774a0.png)
-[trans]
-## 概述
-
-三重确认趋势追踪策略通过组合使用均线、意忆线和超级趋势等三大指标的信号,实现对趋势的高概率捕捉。当三大指标同时发出买入或卖出信号时,策略会及时入场,追踪趋势;当趋势反转时,策略会快速止损、反手做空。
-
-## 策略原理
-
-### 均线判断主趋势
-
-策略使用长度为52周期的均线判断主趋势方向。当价格上穿均线时,判断为上升趋势;当价格下穿均线时,判断为下降趋势。
-
-### 意忆线识别次级反转
-
-策略同时使用意忘线来识别短期的次级反转。意忘线的计算方式与均线类似,但CLOSE价用开盘价替代,能更快速地反映价格反转信息。当价格上穿下跌的意忘线时,预示着Prices短线企稳反弹的信号;当价格下穿上升的意忘线时,预示着价格短线回落的信号。
-
-### 超级趋势判断反转点
-
-策略还同时结合超级趋势指标判断关键的反转点。超级趋势指标结合ATR指标的窗口期和价格 datos,动态调整通道上下轨,从而判断反转的时机。
-
-### 三重确认信号过滤
-
-当均线、意忘线、超级趋势三个指标同时发出买入信号时,策略才会做多;当三个指标同时发出卖出信号时,策略才会做空。通过三重指标确认,可有效过滤假信号,提高入场的概率。
-
-## 优势分析
-
-### 多维度判断,高概率
-
-策略通过组合均线、意忘线、超级趋势三个指标,从不同维度判断趋势和关键点,确保高概率入场。
-
-### 快速反应,实时跟踪
-
-意忘线的引入,保证了策略可以快速反应价格的短线反转;ATR自适应通道的超级趋势指标,也可实时跟踪价格变化。
-
-### 自动止盈止损,有效控制风险
-
-策略内置自动止盈止损逻辑,可根据ATR动态调整止盈止损点,有效控制单笔亏损。
-
-## 风险及解决方法
-
-### 交易频率过高风险
-
-由于策略交易信号频繁,容易造成过度交易。可适当调大均线周期参数,减少交易频率。
-
-### 反转不确定性风险 
-
-意忘线和超级趋势指标判断反转点的效果并不确定,可能出现误判风险。可增加指标参数的过滤条件,确保更高概率的反转信号。
-
-### 震荡行情亏损风险
-
-震荡行情中,由于反复交叉,策略会频繁开仓又止损,造成亏损风险。可识别震荡行情,在此阶段暂停策略交易。
-
-## 优化方向
-
-### 结合波动率指标
-
-可考虑结合波动率类指标,比如布林带。当价格接近布林带上下轨时,避免新开仓,可有效规避震荡市的风险。
-
-### 增加入场过滤条件 
-
-可尝试增加其他辅助判断指标,如KDJ、MACD等,当它们也同时发出信号时,才入场。这可进一步过滤假信号,减少不必要的交易。
-
-### 优化止盈止损策略
-
-可优化止盈止损策略,比如移动止盈、指数移动止盈、半仓间隔止盈等方式,使盈利更多更稳定。
-
-## 总结
-
-三重确认趋势追踪策略充分利用均线、意忘线、超级趋势三大指标的优势,实现对趋势的高概率判断和捕捉。同时设置自动止盈止损机制有效控制单笔亏损。值得进一步优化的是,可结合其他辅助指标过滤入场,以及改进止盈止损策略,使策略更实用。
-
-||
 
 ## Overview 
 
@@ -149,7 +79,6 @@ The profit-taking mechanism can be upgraded in various ways, like trail stop, ex
 
 The Triple Confirmation Trend Tracking Strategy fully leverages the strengths of Moving Average, Heiken Ashi and Supertrend to determine trend signals with high accuracy. The embedded automated profit-taking and stop-loss mechanism also effectively limits per trade loss. Potential areas for further enhancements include incorporating other filters before entry, as well as innovating the profit-taking techniques, in order to make the strategy more practical.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,82 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9140736ef2115de529.png)
-[trans]
-
-## 概述
-
-本策略展示了如果盲目跟随超趋势指标会发生什么情况。我们知道,超趋势指标不是立即出现的,我们需要等待下一根K线才能决定是否进入仓位。所以,你可以看到,如果在超趋势指标最终形成后才入场,会发生什么。如果没有其他工具的辅助,这个指标非常危险,可能会带来非常大的回撤。请注意资金管理。
-
-## 策略原理
-
-本策略使用超趋势指标判断价格趋势。超趋势指标基于平均真实波幅和高低价中点构建。
-
-当收盘价高于上轨时,代表持续看涨;当收盘价低于下轨时,代表持续看跌。
-
-本策略设置了Factor和Pd两个参数。Factor控制超趋势通道的宽度,Pd控制计算ATR的周期长度。根据这两个参数可以构建上轨和下轨。
-
-上轨公式:hl2 - (Factor * ATR(Pd))
-下轨公式:hl2 + (Factor * ATR(Pd)) 
-
-其中hl2代表高低价中点。
-
-然后比较当前收盘价与上下轨,判断持续看涨还是看跌,输出布尔型的Trend变量。
-
-根据Trend来绘制超趋势的上下轨。并在Trend状态发生变化时,放置入场和出场信号。
-
-根据信号设置策略的开仓逻辑。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 使用了超趋势指标,可以清晰判断价格趋势和枢轴点。
-
-2. 设置了明确的入场和出场逻辑。
-
-3. 可视化通过箭头标注入场时机。
-
-4. 策略逻辑简单易懂。
-
-## 风险分析
-
-本策略存在以下风险:
-
-1. 盲目跟随超趋势指标,没有其它辅助指标和效果管理,可能带来巨大回撤。
-
-2. 没有设置止损,无法控制单笔损失。
-
-3. 信号可能出现滞后,无法在转折点附近及时入场。
-
-4. 参数设定不当可能导致超趋势通道过于宽泛或过于狭窄。
-
-风险管理措施:
-
-1. 结合其他指标如MACD、KDJ等进行效果验证,避免盲目跟随。
-
-2. 设置合理的止损位,最大限度控制单笔损失。
-
-3. 调整参数,使超趋势通道合理,防止过于宽泛或狭窄。 
-
-## 优化方向  
-
-本策略可以从以下方面进行优化:
-
-1. 增加辅助指标进行效果验证,防止失效。例如可以考虑加入MACD指标。
-
-2. 设置合理的止损逻辑。可以基于ATR来设置百分比止损。
-
-3. 对超参数Factor和Pd进行优化,找到最佳参数组合。例如可以采用遍历的方法寻找最优参数。
-
-4. 对入场时机进行优化,避免信号滞后。例如可以引入动量指标判断强弱格局调整入场时机。
-
-5. 增加仓位管理策略。例如可以采用固定份额进行仓位管理。
-
-## 总结
-
-本策略采用超趋势指标判断价格趋势和找出转折点。由于缺乏辅助指标和止损手段,盲目跟随超趋势指标带来巨大风险。我们提出了在风险管理、止损策略、参数优化、入场时机等多个方面进行改进,可以显著增强策略的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -160,7 +84,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy uses Supertrend indicator to determine price trend and find turning points. Blindly following Supertrend without auxiliary indicators and stop loss means brings huge risks. We proposed improvements in aspects like risk management, stop loss strategies, parameter optimization, entry timing, etc, which can significantly enhance the stability and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

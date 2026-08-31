@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15fae6a517db6c54589.png)
-[trans]
-#### 概述
-该策略使用两条指数移动平均线(EMA)的交叉作为买卖信号。当较短周期EMA从下向上穿过较长周期EMA时,产生买入信号;反之,当较短周期EMA从上向下穿过较长周期EMA时,产生卖出信号。同时,该策略还会判断交叉点是否是最近10个交易周期内的最高价或最低价,以此来确认趋势的强度。如果交叉点是最高价,则会在背景上显示绿色;如果是最低价,则会显示红色。此外,该策略还会在图表上显示交叉点的价格。
-
-#### 策略原理
-1. 计算两条不同周期的EMA,默认周期分别为5和10。
-2. 判断两条EMA是否发生交叉,如果短期EMA从下向上穿过长期EMA,则产生买入信号;如果短期EMA从上向下穿过长期EMA,则产生卖出信号。
-3. 在产生交叉信号时,判断当前交叉点是否是最近10个交易周期内的最高价或最低价。如果是最高价,则认为上升趋势较强;如果是最低价,则认为下降趋势较强。
-4. 如果产生买入信号且当前无持仓,则开多单;如果产生卖出信号且当前无持仓,则开空单。
-5. 如果已有多单持仓且短期EMA从上向下穿过长期EMA,则平多单;如果已有空单持仓且短期EMA从下向上穿过长期EMA,则平空单。
-
-#### 策略优势
-1. 指数移动平均线相比简单移动平均线能够更快地对价格变化作出反应,从而能够产生更及时的交易信号。
-2. 通过判断交叉点是否是近期最高价或最低价,可以筛选出趋势强度更大的交易机会,提高策略收益。
-3. 在图表上标注交叉点价格,为交易者提供更直观的交易参考。
-4. 代码逻辑清晰,易于理解和实现。
-
-#### 策略风险
-1. EMA交叉产生的信号可能存在延迟,导致错过最佳交易时机。
-2. 在震荡市场中,EMA交叉可能频繁发生,导致交易次数过多,增加交易成本。
-3. 策略缺乏止损措施,如果判断失误,可能面临较大回撤风险。
-
-#### 策略优化方向
-1. 引入更多技术指标,如RSI、MACD等,以辅助判断趋势强度和方向,提高信号准确性。
-2. 设置合理的止损和止盈点位,控制单次交易风险。
-3. 对交易参数进行优化,如EMA周期、交叉确认时间窗口等,以提高策略适应性。
-4. 结合市场情绪指标,如VIX等,对交易信号进行过滤,减少错误信号。
-5. 考虑加入仓位管理和资金管理模块,动态调整每次交易的资金量,提高资金利用效率。
-
-#### 总结
-该策略以指数移动平均线交叉作为核心逻辑,同时结合交叉点价格在近期的相对位置,以判断趋势强度。整体而言,策略逻辑清晰,优势明显,但也存在一定局限性和风险。通过引入更多辅助判断指标,设置合理的风控措施,优化关键参数,可以进一步提升该策略的稳定性和盈利能力。
-|| 
 #### Overview
 This strategy uses the crossover of two exponential moving averages (EMAs) as buy and sell signals. When the shorter-period EMA crosses above the longer-period EMA from below, it generates a buy signal; conversely, when the shorter-period EMA crosses below the longer-period EMA from above, it generates a sell signal. Additionally, the strategy determines whether the crossover point is the highest or lowest price within the last 10 trading periods to confirm the strength of the trend. If the crossover point is the highest price, the background will be colored green; if it is the lowest price, it will be colored red. Furthermore, the strategy displays the price of the crossover point on the chart.
 
@@ -72,7 +40,6 @@ This strategy uses the crossover of two exponential moving averages (EMAs) as bu
 
 #### Summary
 This strategy uses exponential moving average crossovers as its core logic, while also considering the relative position of the crossover point price in the recent period to determine trend strength. Overall, the strategy logic is clear, and the advantages are obvious, but it also has certain limitations and risks. By introducing more auxiliary judgment indicators, setting reasonable risk control measures, and optimizing key parameters, the stability and profitability of this strategy can be further improved.
-[/trans]
 
 > Strategy Arguments
 

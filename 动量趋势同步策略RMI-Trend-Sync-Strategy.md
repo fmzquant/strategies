@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/147d03e3135524eb14f.png)
 
-[trans]
-
-## 概述
-动量趋势同步策略通过整合相对动量指数(RMI)和超级趋势指标的优势,实现了动量分析和趋势判断的有效结合。该策略同时关注价格变化趋势和市场动量水平,从更全面的角度判断市场走向。
-
-## 策略原理  
-### 相对动量指数(RMI)  
-RMI是相对强度指数(RSI)的改进版本。它融合了价格变化的方向性、幅度等更多特征,能更准确判断市场动量。  
-
-### RMI计算方法
-RMI的计算方式是:先计算一定周期内的平均涨幅和平均跌幅。与RSI不同的是,RMI使用当日收盘价相对前一日收盘价的变化值,而不是简单的正增长和负增长。然后将平均涨幅除以平均跌幅,再进行归一化处理,使值落在0-100区间。
-
-### 动量判断  
-本策略使用RMI与MFI的均值,与预设的正动量阈值和负动量阈值进行比较,判断当前市场动量水平,以此来决定建仓与平仓。
-
-### 超级趋势指标  
-超级趋势指标基于更高时间周期计算,能提供对大趋势的判断。它会根据真实波幅ATR动态调整参数,从而有效识别趋势转折点。  
-本策略还加入了交易量加权均线VWMA,进一步增强了识别重要趋势转变的能力。
-
-### 交易方向选择 
-本策略可以选择做多、做空或双向交易。这使得交易者可以根据自己的市场观点和风险偏好进行灵活调整。
-
-## 策略优势分析
-### 结合动量与趋势判断 
-相比单一使用动量指标或趋势指标的策略,本策略通过整合RMI和超级趋势指标的优势,实现了更准确的市场走势判断。
-
-### 多时间周期分析
-应用不同周期的RMI和超级趋势指标,使得对短期和长期趋势的把握更加到位。
-
-### 实时止损策略 
-基于超级趋势的实时止损机制,可以有效控制单笔亏损。
-
-### 交易方向灵活可调
-做多、做空或双向交易的选择,使该策略可以适应不同的市场环境。
-
-## 风险分析
-### 参数优化难度大
-RMI和超级趋势等参数的优化复杂,不当設定可能影响策略效果。
-
-### 止损过于拉近可能导致过多止损 
-对小周期的市场波动过于敏感,会造成止损过于频繁的问题。 
-
-解决方法:适当放宽止损范围,或采用其他震荡型止损方式。
-
-## 策略优化方向  
-### 多品种适应性优化
-扩大适用的品种范围,识别不同品种的参数优化方向。使策略能够在更多市场中进行复制。
-
-### 动态止损优化 
-加入动态止损方式,使止损线能更好跟踪当前波段,减少小震荡造成的过度止损。
-
-### 增加过滤条件 
-结合更多指标判断作为过滤条件,避免在无明确信号的情况下建仓。
-
-## 总结
-该策略通过RMI和超级趋势指标的巧妙结合,实现了准确的市场状态判断。在控制风险方面也较为出色。通过深入优化,相信其在多品种和多周期上的表现会越来越出色。
-||
 
 ## Overview
 The RMI Trend Sync strategy effectively combines the strengths of the Relative Momentum Index (RMI) and the Super Trend indicator to realize the integration of momentum analysis and trend judgment. By concurrently monitoring price change trends and market momentum levels, the strategy determines market trends from a more comprehensive perspective.  
@@ -124,7 +67,6 @@ Add judgments from more indicators as filter conditions to avoid entering positi
 ## Conclusion  
 Through the ingenious combination of RMI and Super Trend, this strategy realizes accurate market condition judgments. It also excels in risk control. With in-depth optimization, it is believed that its performance across more assets and timeframes will become increasingly remarkable.  
 
-[/trans]
 
 > Strategy Arguments
 

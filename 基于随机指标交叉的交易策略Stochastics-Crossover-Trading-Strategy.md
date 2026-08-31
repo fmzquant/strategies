@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用随机指标的K线和D线交叉产生交易信号,属于典型的随机指标交易策略。
-
-## 策略原理
-
-1. 计算一定周期内的随机指标K线和D线。
-
-2. 当K线从下方向上突破D线时,产生买入信号。
-
-3. 当K线从上方向下突破D线时,产生卖出信号。 
-
-4. 可以设置回测的时间范围来测试策略效果。
-
-5. 使用随机指标交叉进行交易,策略规则简单清晰。
-
-## 优势分析
-
-1. 随机指标对超买超卖情况较为敏感。
-
-2. K线和D线易于形成交易信号。
-
-3. 可通过回测验证策略效果。
-
-4. 随机指标易于计算实现。
-
-5. 代码简洁,易于二次开发。
-
-## 风险分析
-
-1. 随机指标交叉可能出现假信号。
-
-2. 没有设置止损止盈。
-
-3. 无法区分趋势和盘整行情。
-
-4. 回测存在数据拟合偏差。
-
-5. 实盘实施效果可能存在差异。
-
-## 优化方向
-
-1. 测试不同参数寻找最优参数。
-
-2. 增加趋势判断指标进行过滤。
-
-3. 建立止损止盈机制。
-
-4. 引入其他因子进行信号验证。
-
-5. 对回测数据进行处理以消除偏差。
-
-6. 模拟实盘来优化参数配置。
-
-## 总结
-
-该策略采用简单的随机指标交叉进行交易,易于实现,但需要进一步优化来提高稳定性。通过参数调整、风险控制等方式增强,可以将其打造成为可靠的量化交易策略。
-
-||
 
 ## Overview 
 
@@ -129,7 +68,6 @@ This strategy uses stochastics crossover between K and D lines to generate tradi
 
 This strategy trades simple stochastics crossovers, easy to implement but requires refinements for stability. Enhancing it via parameter tuning, risk controls etc can transform it into a robust quant trading system.
 
-[/trans]
 
 > Strategy Arguments
 

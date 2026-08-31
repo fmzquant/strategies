@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ed411263242bbf3084.png)
-[trans]
-
-### 概述
-
-这是一个利用双重移动平均线交叉作为买入和卖出信号的简单量化策略。它使用两个不同周期的MA线,当短周期MA线从下方上穿长周期MA线时生成买入信号;当短周期MA从上方下穿长周期MA时生成卖出信号。
-
-### 策略原理
-
-该策略通过计算close价格的8周期EMA和72周期EMA,并绘制在图表上。当8EMA上穿72EMA时,产生买入信号;当8EMA下穿72EMA时,产生卖出信号。
-
-策略的基本假设是:短周期MA线代表近期价格趋势和动量,长周期MA线代表长期趋势。当短MA上穿长MA时,表示短期趋势正在变强,带动价格突破长期均线,因此可以买入。当短MA下穿长MA时,表示短期涨势已经结束,长期支撑位被突破,应当考虑卖出。
-
-该策略还利用William %R指标判断超买超卖区域,MACD指标判断价格动量方向,为交易决策提供参考。 此外,策略中还设置了一些辅助指标如Dema, Pivots等为分析走势提供帮助。
-
-### 优势分析
-
-双MA交叉策略最大的优势在于简单易理解,容易实施。仅仅依靠两个MA的交叉就可以按照规则产生交易信号,不需要复杂的模型和参数优化。
-
-另一个优势是,MA交叉策略在趋势型市场中表现较好。当股价出现明显的上涨或下跌趋势时,MA交叉策略可以抓住大趋势产生较好收益。
-
-### 风险分析
-
-双MA交叉策略也存在一些风险需要注意。首先,在盘整震荡的市场中,MA线交叉频繁,容易产生错误信号和链式亏损。其次,MA交叉信号常常滞后,无法及时反映突发事件的影响。最后,参数设置如MA周期长度等需要经验进行调整判断。
-
-可以通过结合其他指标来确认信号,优化MA参数,或在趋势明显的市场操作来减少风险。此外设置止损止盈、进行仓位管理等也非常重要。
-
-### 优化方向 
-
-这种简单的双MA策略可以在以下几个方面进行优化:
-
-1. 测试不同MA周期参数的组合,寻找最佳参数;
-
-2.加入其他指标进行信号过滤,例如MACD、KDJ等,使策略更加稳定;
-
-3. 建立动态退出机制,跟踪最佳止损止盈位,而不是简单地使用固定值;
-
-4. 根据市场状态采用自适应 MA 周期,优化参数;
-
-5. 结合高级机器学习和深度学习模型进行预测,提高信号准确率。
-
-### 总结
-
-本策略作为一个简单的双MA交叉策略,虽然有一定的滞后性和假信号问题,但易于理解和实现。通过一定优化修改,仍可以成为基础且实用的量化交易策略。
-
-||
 
 ### Overview
 
@@ -100,7 +55,6 @@ This simple dual MA strategy can be optimized in the following aspects:
 
 As a simple dual MA crossover strategy, although it has some lagging and false signal issues, it is easy to understand and implement. With some optimization and modifications, it can still be a basic and practical quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

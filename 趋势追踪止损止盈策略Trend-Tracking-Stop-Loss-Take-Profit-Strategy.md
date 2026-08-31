@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f100eb93e65401e1c9.png)
 
-[trans]
-### 概述
-
-这是一个基于布林带指标判断趋势,并利用ATR指标设定止损止盈的趋势追踪策略。该策略首先判断市场趋势,在IRONMENT线,并在平仓时设定止损止盈点。
-
-### 策略原理
-
-1. 计算布林带的上轨、下轨。
-2. 判断收盘价是否高于上轨或低于下轨,如果是则判断为趋势市场,分别为多头和空头市场。
-3. 如果是趋势市场,则计算环境线。环境线基于最低价减去ATR的值(多头市场)或最高价加上ATR的值(空头市场)。
-4. 如果不是趋势市场,则环境线保持与前一根K线的环境线值相同。
-5. 比较ENVIRONMENT线,判断趋势方向。如果上升为多头,下跌为空头。
-6. 在ENVIRONMENT线方向转变时,产生买入/卖出信号。
-7. 设置止损止盈:固定止损距离为入场价的100倍;浮动止盈距离为入场价的1.1倍(多头)或0.9倍(空头)。
-
-### 优势分析
-
-1. 能够判断市场趋势,减少假突破操作。
-2. 设定ENVIRONMENT线,避免被套。
-3. 止损止盈设置合理,能够在保证盈利的同时控制风险。
-
-### 风险分析
-
-1. 参数设置不当可能导致错失交易机会。
-2. 布林带指标在震荡行情中判断错误概率较大。
-3. 止损点过于接近可能被秒出场。
-
-### 优化方向
-
-1. 优化布林带的参数,使之更适合不同品种。
-2. 优化ENVIRONMENT线的计算方式,如引入其他指标等。
-3. 测试并优化止损止盈的参数设置。
-
-### 总结
-
-这是一个以布林带判断趋势,利用ENVIRONMENT线设置止损止盈的策略。核心优势是趋势判断清晰、止损止盈设置合理,能有效控制风险。主要风险在于布林带趋势判断错误和止损点过近。未来优化方向包括参数优化、ENVIRONMENT线计算方式优化和止损止盈优化等。
-
-|| 
 
 ### Overview
 
@@ -86,7 +48,6 @@ This is a trend tracking strategy that uses Bollinger Bands to determine trend a
 
 This is a strategy that uses Bollinger Bands to determine trend and sets stop loss and take profit based on trend line. The core advantages are clear trend judgment, reasonable stop loss and take profit settings to effectively control risks. The main risks come from Bollinger Bands’ wrong trend judgment and stop loss being too close. Future optimization directions include parameter optimization, trend line calculation optimization and stop loss take profit optimization.
 
-[/trans]
 
 > Strategy Arguments
 

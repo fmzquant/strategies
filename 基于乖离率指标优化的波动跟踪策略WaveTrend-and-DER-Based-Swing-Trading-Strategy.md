@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b5bc332944b9c240d1.png)
-[trans]
-
-## 概述
-
-本策略通过结合Relative Strength Index (RSI)、Directional Movement System和定向能量比率(DER)等多个技术指标,实现对市场波动的精确跟踪,以 captures市场中短线趋势上的机会。
-
-## 策略原理  
-
-代码的核心逻辑是通过WaveTrend指标判断价格波动方向,结合RSI指标判断超买超卖情况,以及自定义的Directional Energy Ratio指标判断价格走势力度,来决定做多做空方向。
-
-具体来说,当WaveTrend指标第二条平均线wt2上穿第一条平均线wt1时为做多信号,此时如果DER>0表示目前为上涨趋势,那么会进入做多;当WaveTrend第二条平均线wt2下穿第一条平均线wt1时为做空信号,此时如果DER<0表示目前为下跌趋势,那么会进入做空。
-
-此外,还会结合RSI指标来判断极端超买超卖情况。如果RSI指标显示超买(RSI大于70),那么会考虑退出做多仓位;如果RSI指标显示超卖(RSI小于30),那么会考虑退出做空仓位。
-
-## 策略优势
-
-1. 通过WaveTrend指标判断价格波动和方向的转换,比单一的移动平均线等指标判断更为准确。
-
-2. 结合DER自定义指标判断价格波动的力度和方向,避免在震荡行情中被套。
-
-3. RSI指标判断超买超卖情况,有助于及时止损。  
-
-4. 整体来说,该策略响应速度快,对短线行情操纵能力强。
-
-## 风险分析
-
-1. 策略中使用了多个参数,需要对参数进行优化,如果参数设置不当,会影响策略收益。
-
-2. 策略主要针对短线波动,在长期持续趋势行情中表现可能不佳。
-
-3. 策略对交易手续费比较敏感,需要选择手续费较低的交易所。
-
-4. 策略对市场的新闻事件没有考虑,从而容易被重大突发事件冲击。
-
-## 优化方向
-
-1. 可以考虑引入机器学习算法来自动优化指标参数。
-
-2. 可以结合更多交易规模和仓位管理技术。
-
-3. 可以结合长线趋势判断指标,如移动平均线等,在更大级别上确定总体enter和exit。
-
-4. 可以考虑结合重大新闻事件风险识别能力。
-
-## 总结
-
-本策略综合运用多种技术指标判断短期波动走势,实现低风险的市场跟踪和操纵,对抓取中短线机会比较适用。通过进一步优化参数设置、仓位管理、结合更多指标等方式,可以获得更好的回撤控制和整体效果。
-
-||
 
 ## Overview
 
@@ -107,7 +58,6 @@ In addition, RSI indicator is used to detect extreme overbought/oversold status.
 
 This strategy leverages multiple technical indicators to track short-term oscillations and achieve low-risk market manipulation, fitting for capturing medium and short-term opportunities. Further improvements on parameter tuning, position sizing, integrating more factors can lead to better drawdown controls and overall performance.
 
-[/trans]
 
 > Strategy Arguments
 

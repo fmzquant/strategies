@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e20a71f1a3e9eea3b0.png)
-[trans]
-### 概述
-
-本策略以香港恒生指数ETF(00631L)为投资标的,通过动态调整现金仓位和仓位占比,实时平衡投资组合的收益和风险。策略简单易行,无须判断市场趋势,适合无法频繁查看市场的投资者。
-
-### 策略原理  
-
-1. 初始化投入50%的总资金购买00631L;
-
-2. 监控未实现收益和剩余现金的比例; 
-   
-   当未实现收益超过剩余现金10%时,平掉5%头寸;
-
-   当剩余现金超过未实现收益10%时,增买额外5%头寸;
-
-3. 动态调整仓位和现金比例,控制投资组合收益和风险。
-
-### 优势分析
-
-1. 简单容易操作,无须判断市场;
-
-2. 动态调整仓位,有效控制投资风险;
-
-3. 双向跟踪,及时止损止盈;
-
-4. 适合无法频繁check市场的投资者。
-
-
-### 风险及对策
-
-1. 槓杆ETF波动较大;
-
-   采用渐进建仓,分批间隔投入。
-
-2. 无法及时止损; 
-
-   设置止损线,控制最大损失。
-
-3. 交易成本较高;
-
-   适当放宽平衡幅度,减少调仓。
-
-### 优化思路
-
-1. 优化仓位和现金比例;
-
-2. 测试不同ETF品种的收益效果;
-
-3. 加入趋势判断指标,提高资金利用效率。
-
-### 总结
-
-本策略通过构建动态平衡的投资组合,控制投资风险,无须判断市场趋势,操作简单,适合无法频繁check市场的投资者,是一个非常实用的量化投资策略。
-
-||
 
 ### Overview
 
@@ -119,7 +64,6 @@ This strategy takes Hong Kong Hang Seng Index ETF (00631L) as the investment tar
 
 By constructing a dynamic balancing portfolio, this strategy controls investment risks without the need to judge market trends. Simple to operate, it is a highly practical quantitative investment strategy suitable for investors who cannot frequently check the market.
 
-[/trans]
 
 
 

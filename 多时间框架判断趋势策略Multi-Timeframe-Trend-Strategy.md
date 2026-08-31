@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b612ad4eb875f7be7c.png)
-[trans]
-
-## 概述
-
-本策略运用4个不同的时间框架来判断趋势方向,以发现长线趋势的同时利用短线作为入场时机。当4个时间框架(日线、周线、15日线、月线)的开盘价全部低于收盘价时则判断为长期看涨趋势;当4个时间框架的开盘价全部高于收盘价时则判断为长期看跌趋势。策略会在确定长期趋势后利用短线产生讯号来进行开仓。
-
-## 策略原理
-
-本策略使用4个时间框架:日线、周线、15日线与月线。根据这4个时间框架的开盘价与收盘价的大小关系来判断长期趋势方向。
-
-当日线、周线、15日线与月线的开盘价全部低于收盘价时,表示在这4个时间框架上,价格都呈现上涨的趋势,此时判断为多头行情,长期看涨。
-
-反之,当这4个时间框架的开盘价全部高于收盘价时,表示在这4个时间框架上,价格都呈现下跌的趋势,此时判断为空头行情,长期看跌。
-
-在判断出长期趋势方向后,策略会在短线产生买入/卖出讯号时进行开仓。也就是说,本策略使用长线判断大趋势,使用短线确定具体的入场时机。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 多时间框架判断,提高判断准确性
-
-   利用4个不同级别的时间框架来综合判断长期趋势,可以提高判断的准确性,避免被短期市场噪音所迷惑。
-
-2. 长短线结合,策略灵活
-
-   使用长线框架判断大方向,同时利用短线产生操作讯号,策略灵活,可以捕捉短线机会的同时又不会偏离主要趋势。
-
-3. 参数简单,容易实施
-
-   本策略主要判断指标只有4个时间框架的开盘价与收盘价,参数设置简单,容易实施。
-
-## 风险分析
-
-本策略也存在一些风险,主要有:
-
-1. 长期趋势发生转折
-
-   如果长期看涨的趋势发生转折,变为长期看跌,本策略无法及时判断,可能带来较大亏损。此时需要人工干预或设置止损。
-
-2. 短期运行效果不佳
-
-   本策略主要依靠短线产生讯号来决定具体的入场时机。如果短期运行效果不佳,无法在合适时间开仓,会影响整体策略的效果。此时可以调整短线参数或优化短线策略。
-
-## 优化方向 
-
-本策略还有进一步优化的空间:
-
-1. 增加止损策略
-
-   可以设置移动止损或挂单止损来控制最大亏损。
-
-2. 优化短线策略
-
-   可以测试不同的短线指标来寻找更合适的短线策略,提高入场效果。
-
-3. 动态调整仓位
-
-   可以根据市场波动程度来动态调整仓位,在趋势更明确时加大仓位。
-
-4. 结合机器学习
-
-   可以收集大量数据并运用机器学习的方法来动态优化参数和规则。
-
-## 总结
-
-本策略通过跨多个时间框架判断趋势方向,使用长短线结合的思路,既保证了对大趋势的判断,又利用短线机会入场,整体运行逻辑清晰合理,实施简单,是一种有效的趋势跟踪策略。随着止损、动态仓位管理等技术的引入,本策略还具有很大的改进空间,值得实践与优化。
-
-||
 
 ## Overview  
 
@@ -146,7 +77,6 @@ There are further optimization spaces for this strategy:
 
 This strategy determines the trend direction across multiple timeframes, adopts the idea of combining long-term and short-term, which ensures the judgment of major trends and utilizes short-term opportunities. The overall logic is clear and reasonable, simple to implement, and it is an effective trend following strategy. With the introduction of techniques like stop loss and dynamic position management, this strategy has great room for improvement and is worth practicing and optimizing.
 
-[/trans]
 
 > Strategy Arguments
 

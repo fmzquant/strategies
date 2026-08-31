@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-### 策略概述
-
-克特纳通道止盈止损策略是在克特纳通道分析方法的基础上,加入止盈止损规则来优化交易决策的量化策略。该策略监控价格与通道上下轨的关系,在突破发生时进入做多做空方向,并根据最优止盈止损点位实现风险和收益的平衡。
-
-### 策略原理
-
-1. 计算克特纳通道的中轨、上轨和下轨。
-
-2. 价格触碰上轨时考虑做多机会;触碰下轨时考虑做空机会。
-
-3. 价格突破上轨时入场做多;突破下轨时入场做空。
-
-4. 设置止盈点为入场价上涨一定比例,止损点为入场价下跌一定比例。
-
-该策略的优点是引入止盈止损规则,在顺势运行亏损过大时及时止损;在浪潮结束前及时止盈。同时也提供再次进入信号,可持续参与趋势交易。
-
-参数可针对不同品种进行优化,以达到最佳风险收益平衡。
-
-### 策略优势
-
-- 克特纳通道判断趋势方向
-
-- 止盈止损点位优化收益
-
-- 可平滑出入场,避免假突破
-
-- 策略灵活,参数可调整
-
-- 可与其他指标组合使用
-
-### 风险警示
-
-- 需要适当提高止盈止损比率
-
-- 仍有一定的止损风险
-
-- 通道可能被突破形成亏损
-
-- 停止损失过小可能造成频繁停损
-
-### 总结
-
-克特纳通道止盈止损策略对传统通道交易进行了优化,在追踪趋势的同时控制交易风险。通过反复回测和参数调整,可以获得良好的策略效果。该策略值得进行深入研究和实盘验证,可逐步提高策略的稳定性。
-
-
-||
 
 This is an SEO optimized article about the Keltner Channel Stop Loss Take Profit Strategy:
 
@@ -105,7 +57,6 @@ Parameters can be optimized for different assets to achieve best risk-reward bal
 
 The Keltner Channel Stop Loss Take Profit Strategy optimizes traditional channel trading by controlling risks while trend following. Excellent strategy results can be achieved through extensive backtesting and parameter tuning. The strategy is worth in-depth research and live testing for gradually improving stability.
 
-[/trans]
 
 > Strategy Arguments
 

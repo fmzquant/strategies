@@ -9,89 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于ema移动平均线交叉原理构建交易系统,以实现 capturing 市场趋势带的自动交易。主要通过快速ema线和慢速ema线交叉来判断买入卖出信号。
-
-## 策略原理
-
-该策略主要基于两个移动平均线ema的交叉原理构建。一个是20周期的ema慢速线,一个是9周期的ema快速线。 当快速线ema9上穿慢速线ema20时生成买入信号,当快速线ema9下穿慢速线ema20时生成卖出信号。
-
-具体来说,策略通过计算两个ema线的值,并比较大小关系来判断线间交叉。当ema9大于ema20时表示golden cross出现,设置布尔变量bullish为true,表明产生买入信号;当ema9小于ema20时表示dead cross出现,设置布尔变量bearish为true,表明产生卖出信号。
-
-同时,策略还使用cross函数检测ema9和ema20的交叉。当发生向上交叉时,即ema9上穿ema20,也会设置bullish为true;当发生向下交叉时,即ema9下穿ema20,也会设置bearish为true。
-
-这样通过双重判断可以避免漏报信号的发生。最后根据bullish和bearish的值,进入做多或做空的逻辑,完成自动交易系统。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA交叉原理,可以有效判断市场趋势转折点,捕捉趋势
-
-2. 快慢EMA线组合,可以发挥平滑趋势和捕捉转折的作用
-
-3. 采用金叉买入死叉卖出的经典策略,简单易懂
-
-4. 增加了交叉检测逻辑,可以避免漏单问题
-
-5. 自动交易系统,无需人工干预,回测效果较好
-
-6. 可自定义EMA周期参数,优化策略
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. EMA交叉对趋势判断有时效性,可能出现错过反转点的情况
-
-2. 存在whipsaw效应,短期调整可能触发错误信号
-
-3. 固定的EMA周期无法适应市场的变化
-
-4. 无法判断趋势的力度,可能在震荡行情中被套住
-
-5. 没有止损措施,亏损可能扩大
-
-6. 自动交易系统存在回测过拟合问题,实盘效果存疑
-
-对应风险,可以从以下方面进行优化:
-
-1. 结合其他指标判断趋势确认,避免whipsaw
-
-2. 加入止损机制规避巨额亏损
-
-3. 增加参数优化,使EMA周期动态调整
-
-4. 加入趋势力度判别,避免震荡行情交易
-
-5. 进行复式化组合,提高稳定性
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. **动态EMA周期**:现在使用固定的20周期和9周期,可以引入自适应机制,让EMA周期动态变化,更好跟踪市场趋势变化。
-
-2. **多时间框架验证**:现在只在一个时间框架观察EMA交叉,可以引入多个不同周期组合进行验证,避免错报。
-
-3. **结合其他指标**:可以引入如MACD,KD等其他指标,对EMA交叉信号进行过滤,提高准确性。
-
-4. **止损策略**:现在没有止损措施,可以设置移动止损或固定止损点,控制单笔亏损。
-
-5. **参数优化**:可以对EMA周期参数进行优化,找到最佳参数组合。也可以做步进优化,让参数动态调整。
-
-6. **复式组合**:利用多个子策略组合,不同的参数设置,形成复式策略,可以提高稳定性。
-
-7. **机器学习**:使用神经网络等机器学习技术,对交叉信号进行训练和识别,实现智能EMA交叉策略。
-
-## 总结
-
-该策略基于经典的EMA交叉原理构建自动交易系统。整体思路简单清晰,易于实现。但也存在使用效果的不稳定性。通过引入动态调整参数、多指标组合、止损方式、复式组合等方式进行优化,可以大幅提高策略的稳定性和实盘表现。EMA交叉策略值得进一步研究与应用。
-
-|| 
 
 ## Overview
 
@@ -173,7 +90,6 @@ This strategy can be optimized in several aspects:
 
 This strategy builds an automated system based on the classical EMA crossover principle. The overall logic is simple and clear. But stability issues exist. By introducing dynamic parameters, multi-indicator combos, stop losses, ensemble models etc., significant improvements can be made in live performance and robustness. EMA crossover strategies warrant further research and application.
 
-[/trans]
 
 
 

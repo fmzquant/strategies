@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1325cdb1618c44908ae.png)
-[trans]
-
-## 概述
-
-均线交叉策略是一种使用不同周期的指数移动平均线(EMA)进行交易信号生成的量化交易策略。该策略运用 5 周期、9 周期和 21 周期三条 EMA 的交叉情况来判断市场趋势和产生买入和卖出信号。同时,该策略还结合较长周期的 100 周期和 200 周期 EMA 来判断大趋势。
-
-## 策略原理
-
-该策略的核心指标是 5 周期、9 周期和 21 周期三条 EMA。其交易逻辑基于以下几点:
-
-1. 5 周期 EMA 突破向上跨越 9 周期 EMA 时产生买入信号;5 周期 EMA 突破向下跨越 9 周期 EMA 时产生卖出信号。
-
-2. 21 周期 EMA 可用来验证交易信号。即 5 周期 EMA 和 9 周期 EMA 均高于 21 周期 EMA 时,买入信号更有效;两者均低于 21 周期 EMA 时,卖出信号更有效。
-
-3. 100 周期和 200 周期 EMA 用于判断市场中长期趋势。它们可为短期交易信号提供大趋势上的验证或警示。
-
-## 优势分析
-
-该策略具有以下几点优势:
-
-1. 操作简单,易于实施。EMA 的计算及交叉情况的判断非常简单。
-
-2. 对市场反应灵敏。5 周期和 9 周期 EMA 对价格变化十分敏感,能快速捕捉短期趋势。
-
-3. 容易设置止损止盈。EMA 本身可作为移动止损线。
-
-4. 可扩展性好。可轻松引入其他周期 EMA 或技术指标来丰富系统。
-
-## 风险分析
-
-该策略也存在以下主要风险:
-
-1. 虚假信号风险。EMA 交叉并非百分之百可靠,可能出现假突破。应结合其他因素仔细判断。 
-
-2. 趋势反转风险。快速 EMA 交叉可能仅反映短期调整,忽略大趋势反转。应参考中长期 EMA。
-
-3.  Parameter Tuning 风险。不同品种和市场条件下参数设置会有很大差异,需要充分优化和测试。
-
-## 优化方向
-
-该策略可从以下几个角度进行优化:
-
-1. 引入其它指标过滤信号,如KD,MACD等,降低虚假信号概率。
-
-2. 加大止损幅度,降低单笔损失。或trailing stop随动止损锁定利润。
-
-3. 对参数进行优化,找到最优周期参数组合。还可使用机器学习方法动态优化。
-
-4. 结合量化框架,自动化整个交易流程。
-
-## 总结
-
-该均线交叉策略整体思路清晰,易操作性强,能有效捕捉短期趋势。但仅仅依赖EMA交叉作决策仍然存在一定盲区,需辅助其他因素来决策,降低风险。该策略优化空间较大,有望通过引入更多指标或技术手段来丰富策略内容,提高稳定盈利能力。
-
-|| 
 
 ## Overview  
 
@@ -118,7 +63,6 @@ This strategy can be optimized in the following aspects:
 
 The crossing moving average strategy has a clear logic and is easy to operate, capturing short-term trends effectively. But sole reliance on EMA crosses for decision making still has blind spots. Additional factors are required to reduce risks. This strategy has good potential for enhancements by introducing more technical indicators or techniques to improve its profitability and stability.
 
-[/trans]
 
 
 

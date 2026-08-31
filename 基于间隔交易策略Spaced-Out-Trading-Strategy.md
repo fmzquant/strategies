@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1065ab4dce3b5191184.png)
-[trans]
-## 概述
-
-间隔交易策略是一种基于移动平均线的趋势跟踪策略。该策略利用30天的指数移动平均线来识别价格趋势,在价格突破平均线时进入场内,当价格回落到平均线以下时平仓离场。这种策略适用于30分钟到日线时间框架下的交易。
-
-## 策略原理
-
-该策略主要基于价格与30日指数移动平均线的关系来判断入场和离场信号。具体来说:
-
-1. 计算30日EMA指数移动平均线,作为判断趋势的标准。
-2. 当价格上涨突破EMA时,发出做多信号,进入场内。
-3. 当价格下跌突破EMA时,发出平仓信号,离场。
-
-这样,通过CAPTURE价格趋势上的突破,来锁定趋势交易机会。
-
-## 优势分析
-
-这种策略具有以下几个优势:
-
-1. 策略逻辑简单清晰,容易理解实现,运行成本低。
-2. 利用EMA滤除价格noise,锁定主要趋势。
-3. 选取30日EMA,时间框架适中,既可以识别中长线趋势,也可跟踪短线机会。
-4. 可自定义参数,适应不同品种和市场环境。
-
-## 风险及解决方案分析
-
-该策略也存在一些风险:
-
-1.  whipsaw风险:价格震荡突破EMA后又快速回撤,造成损失。可适当延长EMA周期。
-2. 趋势反转风险:中长线趋势发生反转时,可能积累较大亏损。可设置止损策略减少损失。
-3. 参数选择风险:EMA周期设置不当,无法有效跟踪趋势。可使用自适应EMA或多EMA组合方式。
-
-## 策略优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 增加自适应EMA:根据市场波动性和品种特征自动调整EMA参数,提高稳健性。
-2. 增加多EMA系统:组合使用短期和长期EMA,同时跟踪长短线趋势。
-3. 增加止损机制:设立移动止损或盘整止损,降低单笔损失。
-4. 结合其他指标:整合动量指标、波动率指标等Filter信号,提高策略效率。
-5. 参数优化:采用机器学习等方法寻找最优参数组合。
-
-## 总结
-
-间隔交易策略通过捕捉价格突破EMA的方式来进行趋势跟踪,是一种简单实用的量化策略。该策略可W灵活定制和优化,适合中长线持仓,也可进行短线交易。总体来说,该策略风险可控,如果参数设定得当,能够获取稳定收益。
-
-||
 
 ## Overview
 
@@ -103,7 +56,6 @@ Some ways the strategy can be upgraded:
 
 The Spaced Out Trading Strategy aims to capture trends by trading price breakouts of EMA levels. It is a simple and practical quantitative strategy. With customizable loss limits and judicious optimizations, it can be a stable strategy providing sustainable returns across medium to long-term holding periods.
 
-[/trans]
 
 > Strategy Arguments
 

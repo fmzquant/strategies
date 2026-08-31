@@ -9,89 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略基于前一交易日的最高价进行操作,属于趋势跟踪类型策略。它会在突破前一交易日的最高价时开多仓,即使当天有多次突破也会重复开仓。
-
-### 策略原理
-
-1. 使用LucF函数避免回测时偷看最新K线。
-
-2. 判断是否是新交易日开盘。记录当天最高价max_today和最低价min_today。
-
-3. 比较当前最高价high和max_today,更新max_today。
-
-4. 比较当前最低价low和min_today,更新min_today。
-
-5. 画出前一交易日的最高价和最低价。
-
-6. 设置突破前一交易日最高价时的开仓点,可以在最高价上添加一定幅度的GAP以延迟或提前入场。
-
-7. 设置止损比例sl和止盈比例tp。
-
-8. 当价格突破前一交易日最高价时开多仓。
-
-9. 设置止损点和止盈点。
-
-10. 可以选择是否开启追踪止损,设置启动追踪止损的最低要求、追踪止损的距离。
-
-11. 可以选择关闭时是否判断EMA状态。
-
-### 优势分析
-
-这是一个相对简单的趋势跟踪策略,具有如下优势:
-
-1. 策略信号简单明确,易于实现。
-
-2. 利用前一交易日最高价的突破形成的趋势确认信号,可以有效过滤震荡市场的噪音。
-
-3. 可以通过GAP参数调节进场的灵敏度。
-
-4. 整体风险可控,止损清晰。
-
-5. 可以选择是否使用追踪止损来锁定更多利润。
-
-6. 可以结合EMA判断来避免死叉时被套。
-
-### 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 突破失败可能造成损失,需要合理设置止损价位。
-
-2. 突破有效性依赖于市场处于趋势状态,震荡市场中容易被套。
-
-3. 追踪止损如果设置不当可能过于灵敏,被价格小幅调整止损。
-
-4. EMA判断如果参数选择不当也可能过于灵敏或迟钝。
-
-5. 需要关注和优化的变量较多,如GAP、止损幅度、追踪止损设置等。
-
-### 优化方向
-
-可以从以下几个方面继续优化该策略:
-
-1. 将止损从固定值调整为ATR或趋势的动态止损。
-
-2. 增加通过标准差过滤来判断突破有效性。
-
-3. 增加基于波动率的条件来避免震荡行情的无效突破。
-
-4. 优化EMA参数,使得判断更稳定和准确。
-
-5. 优化追踪止损的参数,使其更符合市场波动的幅度。
-
-6. 测试不同品种的参数健壮性。
-
-7. 增加动态调整仓位大小的机制。
-
-### 总结
-
-该策略整体较为简单实用,属于典型的趋势跟踪策略,以前一交易日最高价的突破作为信号来追踪趋势,风险控制主要依靠止损来实现。通过合理的参数优化,可以使策略在趋势行情中获得较好的效果。但需要注意控制止损策略和过滤条件,避免在震荡行情中被套。该策略可以作为趋势跟踪策略的基础框架进行拓展优化。
-
-|| 
 
 ## Overview
 
@@ -173,7 +90,6 @@ Some ways to further optimize the strategy:
 
 The strategy is simple and practical as a typical trend following system based on previous day's high breakout. Risk management depends on stop loss primarily. With proper parameter tuning, it can perform well in trending conditions. But proper stop loss and filters are needed to avoid whipsaws. The framework can be enhanced further as a basis for trend following strategies.
 
-[/trans]
 
 > Strategy Arguments
 

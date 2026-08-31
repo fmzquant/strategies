@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ef9a37c540d7e1b22d.png)
-[trans]
-
-## 概述
-
-该策略基于趋势反转指标,结合趋势跟踪止损机制,实现了在趋势市场追踪趋势,在盘整市场减少亏损的效果。
-
-## 策略原理
-
-该策略使用Hull移动平均线作为主要的趋势判断指标。当价格上穿Hull平均线时,做多;当价格下穿Hull平均线时,做空。同时,结合McGinley平均线来确认趋势。 
-
-在开仓后,如果价格反转,即验证Hull平均线发生叉头时,会执行趋势变更逻辑,关闭当前头寸。
-
-该策略还引入了趋势跟踪止损机制。在开仓后,会根据ATR计算动态止损价位。随着价格走势,止损线也会动态调整,实现盈利的跟踪止损。
-
-## 策略优势
-
-- 使用 Hull 平均线判断趋势反转点, Hull 平均线对突破信号的敏感度高
-- 结合 McGinley 平均线进行趋势确认,可过滤掉部分假突破
-- 采用动态跟踪止损机制,可根据市场波动性调整止损幅度,有效控制亏损
-- 验证 Hull 平均线时及时响应趋势反转,避免亏损进一步扩大
-- 可方便切换不同参数组合进行测试,寻找最优参数
-
-## 风险及解决方案
-
-- 在震荡行情中可能出现止损被触发的情况
-
-  - 可以适当扩大止损幅度,增加止损缓冲区
-
-- 在剧烈行情中,跟踪止损可能追不上价格变动
-
-  - 可以缩短平滑周期,使止损更快跟进价格
-
-- 假突破可能导致不必要的亏损
-
-  - 增加其他指标进行确认,避免假突破
-
-- 参数不当可能导致策略表现不佳
-
-  - 可以通过不同市场周期进行回测,找出最优参数
-
-## 优化思路
-
-- 增加其他指标结合确认,如K线形态、布林带、RSI等,提高信号质量
-
-- 根据不同品种、周期参数进行优化,找到最佳参数组合
-
-- 可以尝试机器学习等方法进行参数自适应优化
-
-- 优化止损算法,在保证止损的前提下,尽量减少不必要的止损
-
-- 结合资金管理优化仓位管理策略
-
-- 考虑加入自动止盈机制
-
-## 总结
-
-该策略整体来说是一个较为稳健的趋势跟踪策略。相比固定止损,该策略运用动态止损机制,可以根据市场波动性调整止损幅度,有效减少止损被套的概率。同时,Hull平均线和趋势变更逻辑的引入,可对趋势反转做出较快的响应。但该策略也存在一定的风险,如震荡行情下的止损风险、假突破风险等。通过进一步优化指标参数、止损算法、仓位管理等,可以使策略在不同市场中获得更稳定的表现。
-
-|| 
 
 
 ## Overview
@@ -122,7 +63,6 @@ The strategy also utilizes a tracking stop loss mechanism based on ATR calculati
 
 Overall this is a robust trend following strategy. Compared to fixed stop loss, the dynamic stop loss mechanism adjusts stop level based on market volatility, reducing the probability of being stopped out. The introduction of Hull MA and trend change logic also allows faster response to trend reversals. There are still risks like whipsaw and false breakout. Further optimizations on parameters, stop loss algorithms, position sizing etc. can improve strategy stability across different markets.
 
-[/trans]
 
 > Strategy Arguments
 

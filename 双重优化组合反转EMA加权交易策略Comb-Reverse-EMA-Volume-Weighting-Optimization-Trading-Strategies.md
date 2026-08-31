@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1516c76b6303e5370bd.png)
 
-[trans]
-
-### 概述
-
-该策略是一种双重优化的组合反转EMA加权交易策略。它结合了反转策略和EMA加权策略这两种不同类型的策略,通过判断两种策略的信号是否一致,来产生更可靠的交易信号。
-
-### 策略原理
-
-反转部分采用123反转策略。该策略判断前两天的收盘价关系,与随机指标的组合来产生信号。具体规则是:
-
-- 当今天的收盘价高于昨天,且昨天的收盘价低于前天;同时9日随机慢线低于50时,做多;
-- 当今天的收盘价低于昨天,且昨天的收盘价高于前天;同时9日随机快线高于50时,做空。
-
-EMA加权部分采用指数移动平均和成交量的加权计算。计算公式如下:
-
-```
-xMAVolPrice = ema(volume * close, Length)
-xMAVol = ema(volume, Length)  
-nRes = xMAVolPrice / xMAVol
-```
-
-具体交易规则是:当nRes指标低于/高于昨日收盘价时,做多/做空。
-
-最后,该策略判断两个部分的信号是否一致,一致才产生实际的交易信号。
-
-### 优势分析
-
-该策略结合两种不同类型的策略,可以互相验证,提高信号的可靠性,降低假信号。同时,反转部分可以捕捉转折点,EMA加权部分可以跟踪趋势,两者可以达到优势互补。
-
-### 风险分析 
-
-该策略有一定的时间滞后,容易错过短线的交易机会。且EMA加权对价格震荡的市场效果不佳。此外,反转信号的可靠性也需要检验。
-
-可以适当缩短参数,加快反应速度。加入止损来控制风险。引入更多因素验证反转信号。
-
-### 优化方向
-
-1. 测试更多的反转因素组合,找到最佳的参数。
-2. 尝试不同类型的EMA加权方式。 
-3. 加入止损、追踪止损。
-4. 优化参数,使反应更快。
-
-### 总结
-
-该策略整合两种不同类型策略的优点,可以提高信号质量,在一定程度上克服单一策略的缺点。但也存在一定的滞后性,需要进一步优化。总体而言,该策略为量化交易提供了新的思路,值得进一步研究优化,抓住市场机会。
-
-|| 
 
 ### Overview
 
@@ -104,7 +57,6 @@ Shorten the parameters appropriately to speed up reaction. Add stop loss to cont
 
 The strategy integrates the advantages of two different types of strategies, which can improve signal quality and overcome the disadvantages of a single strategy to some extent. But there is also a certain lag that needs further optimization. Overall, this strategy provides new ideas for quantitative trading and is worth further research and optimization to seize market opportunities.
 
-[/trans]
 
 > Strategy Arguments
 

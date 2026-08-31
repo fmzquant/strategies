@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10c72e6112de0438872.png)
-[trans]
-
-## 概述
-
-超越移动止损盈利策略是一个基于超越指标的量化交易策略。该策略通过构建长仓和短仓的进入和退出条件,实现止损和移动止赚。策略优势是可以在持续趋势中获得较高的盈利,同时通过移动止赚可以锁定大部分利润。但是该策略对突破failure也较为敏感。
-
-## 策略原理  
-
-该策略是基于超越指标的趋势跟踪型策略。超越指标可以判断价格趋势方向。当超越指标方向变化时产生买入和卖出信号。具体来说,如果超越指标上穿0轴线则产生买入信号;如果超越指标下穿0轴线则产生卖出信号。收盘价与前一天收盘价的比例判断移动止赚点。ATR确定止损点。这样就构建了基于超越指标判断趋势方向的移动止赚止损策略。
-
-## 优势分析
-
-该策略最大的优势是结合了趋势判断和移动止赚。超越指标通过0轴上下突破来判断趋势方向,可以较准确地捕捉趋势。移动止赚可以在趋势进行时锁定大部分利润。止损设置也有利于控制风险。所以,在趋势明显的市场中,该策略可以获得较高的盈利。此外,策略逻辑简单清晰,容易理解和实现,这也是策略的一个优势。
-
-## 风险分析  
-
-该策略最大的风险在于对突破失败很敏感。在盘整区域中,超越指标可能产生假突破从而错误建立仓位。这时就很容易被套。此外,移动止赚机制也可能过早止盈,错过后续行情。最后,止损设置不当也可能过于宽松或过于激进,增加风险。所以这些都是该策略需要防范的风险点。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:1)合理确定超越指标参数,避免产生假信号;2)增加机制来判断突破的可靠性,如增加成交量信号;3)优化移动止赚的参数,在保证收益的同时尽可能减少套利可能;4)运用基于波动率的动态止损来代替静态止损;5)增加其他指标进行组合,提高策略稳定性。
-
-## 总结  
-
-超越移动止损盈利策略整体来说是一个较好的趋势跟踪策略。它可以合理判断趋势方向,并具有移动止盈机制。但该策略对突破失效也较为敏感,存在一定的风险。通过进一步优化参数设定、判断规则、止损机制等,可以有效改善该策略,使其成为一个稳定高效的量化交易策略。
-
-||
 
 ## Overview
 The Supertrend Moving Stop Loss Take Profit strategy is a quantitative trading strategy based on the Supertrend indicator. The strategy constructs long and short entry and exit conditions to implement stop loss and moving take profit. The advantage of the strategy is that it can achieve higher profits in sustained trends, while locking in most of the profits through moving take profit. However, the strategy is also sensitive to breakout failures.
@@ -56,7 +29,6 @@ The strategy can be optimized from the following aspects: 1) Reasonably determin
 ## Conclusion
 Overall, the Supertrend Moving Stop Loss Take Profit strategy is a decent trend following strategy. It can reasonably determine trend direction and has a moving take profit mechanism. But it is also sensitive to invalid breakouts and has some risks. Further optimizing parameters, judgement rules, stop mechanisms etc. can improve the strategy and make it a stable and efficient trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

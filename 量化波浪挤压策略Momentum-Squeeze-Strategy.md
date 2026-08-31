@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/192b965cdfafba4a4b1.png)
-[trans]
-
-
-## 概述
-
-该策略的主要思想是结合Lazy Bear的动量指标和Crypto Face的MFI指标,在趋势向上时买入,在趋势向下时卖出,实现追踪市场趋势的量化交易策略。
-
-## 策略原理
-
-1. 使用Lazy Bear的动量指标BlueWave,其通过计算close价与20日高点、低点和close均价的线性回归,来判断趋势方向。当BlueWave上穿0时,表示趋势向上;当BlueWave下穿0时,表示趋势向下。
-
-2. 使用Crypto Face改进的MFI指标,其通过计算近58日涨跌额和成交量,来判断资金流向。MFI大于0表示资金流入,MFI小于0表示资金流出。 
-
-3. 当BlueWave上穿0且MFI大于0时,发出买入信号,开仓做多;当BlueWave下穿0且MFI小于0时,发出卖出信号,开仓做空。
-
-4. 设置止损止盈条件,追踪市场趋势实现盈利,同时控制风险。
-
-## 策略优势
-
-1. 组合使用两个指标,可以更准确判断市场趋势方向。
-
-2. BlueWave指标平滑曲线,避免被异常数据带偏,判断市场趋势更可靠。
-
-3. MFI指标可以判断资金流向,避免假突破带来亏损。
-
-4. 策略参数较少,容易实现和操作。
-
-5. 可灵活设置止损止盈条件,控制交易风险。
-
-6. 可设置买入卖出时间段,避开市场特定时间的异常波动。
-
-## 策略风险
-
-1. 大盘持续下跌时,该策略可能继续追低做空而发生亏损。
-
-2. 指标产生假信号时,可能入场后被套。
-
-3. 止损点设置过大,亏损扩大的风险。
-
-4. 波动过大市场,止损点被突破的概率较大。
-
-5. 参数优化不当,可能导致策略效果欠佳。
-
-6. 策略产生过于频繁交易信号,增加交易费用和滑点成本。
-
-## 优化方向
-
-1. 优化BlueWave和MFI的参数,使指标更稳定可靠。
-
-2. 结合趋势指标,避免持续做空亏损。
-
-3. 动态调整止损止盈比例,降低被套概率。
-
-4. 优化开仓条件,减少假信号。
-
-5. 考虑加入仓位控制,避免追涨杀跌。 
-
-6. 结合机器学习算法,使买卖点更精确。
-
-## 总结
-
-该策略通过组合使用BlueWave和MFI两个指标判断趋势方向,在趋势向上时做多,向下时做空,能够有效跟踪市场趋势获利。但也存在一些参数设置、止损止盈、持续下跌等方面的风险,需要进一步优化参数设置、止损机制、过滤条件等,以提高策略效果和稳定性。总体来说,该策略较为简单直观,在长线追踪趋势方面效果较好,但需要警惕被困于震荡行情中造成亏损。
-
-||
 
 ## Overview
 
@@ -135,7 +71,6 @@ The main idea of this strategy is to combine Lazy Bear's momentum indicator and 
 
 This strategy combines BlueWave and MFI indicators to determine trend direction, going long on uptrends and short on downtrends, effectively following market trends for profits. However, risks exist in parameter settings, stop loss/take profit, sustained downtrends etc, requiring further optimization on parameter tuning, stop loss mechanisms, filter conditions etc to improve strategy performance and robustness. Overall, the strategy is intuitive and works well for long-term trend following, but losses may be incurred when trapped in ranging markets.
 
-[/trans]
 
 > Strategy Arguments
 

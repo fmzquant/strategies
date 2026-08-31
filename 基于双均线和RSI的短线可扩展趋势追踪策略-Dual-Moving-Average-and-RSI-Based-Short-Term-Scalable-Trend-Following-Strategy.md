@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18fb6475229dbc77bb1.png)
 
-[trans]
-#### 概述
-该策略使用两条移动平均线(快速移动平均线和慢速移动平均线)以及相对强弱指数(RSI)来识别市场的短期趋势和超买超卖状态。当快速移动平均线从下向上穿过慢速移动平均线,且RSI低于超卖水平时,策略开多头仓位;当快速移动平均线从上向下穿过慢速移动平均线,且RSI高于超买水平时,策略开空头仓位。策略通过移动平均线的交叉和RSI水平来确定进场和出场点,以捕捉短期价格趋势。
-
-#### 策略原理
-1. 计算快速移动平均线(默认周期为5)和慢速移动平均线(默认周期为10)。
-2. 计算相对强弱指数RSI(默认周期为7),并设定超买和超卖水平(默认分别为80和20)。
-3. 当快速移动平均线从下向上穿过慢速移动平均线,且RSI低于超卖水平时,开多头仓位。
-4. 当快速移动平均线从上向下穿过慢速移动平均线,且RSI高于超买水平时,开空头仓位。
-5. 当快速移动平均线与慢速移动平均线再次交叉,或RSI超过相反的超买/超卖水平时,平仓。
-
-#### 策略优势
-1. 结合移动平均线和RSI两个指标,提高信号的可靠性和准确性。
-2. 通过捕捉短期趋势,适合在波动市场中进行短线交易。
-3. 参数可调,灵活性高,易于适应不同的市场环境和交易风格。
-4. 逻辑清晰,易于理解和实现。
-
-#### 策略风险
-1. 在震荡市场中,频繁的交叉信号可能导致过多的交易次数和手续费损失。
-2. 短期趋势的持续时间可能较短,盈利空间有限。
-3. 对于长期趋势的把握能力较弱,可能错过大趋势带来的利润。
-4. 参数设置不当可能导致信号失效或虚假信号增多。
-
-#### 策略优化方向
-1. 引入其他技术指标或价格行为模式,如MACD、布林带等,以提高信号的可靠性和过滤效果。
-2. 优化参数选择,如根据不同市场特点和交易品种,调整移动平均线的周期和RSI的超买超卖水平。
-3. 加入止损和止盈机制,控制单笔交易的风险敞口和收益预期。
-4. 结合多时间框架分析,如在日线级别确定大趋势,在小时或分钟级别进行实际交易,提高趋势把握的准确性。
-5. 考虑加入仓位管理和资金管理策略,如根据市场波动性和个人风险偏好,动态调整每笔交易的仓位大小。
-
-#### 总结
-该策略通过结合双移动平均线和RSI指标,在短期内捕捉价格趋势,适合在波动市场中进行短线交易。策略逻辑清晰,参数灵活,易于实现和优化。但在震荡市场中可能产生过多的交易信号,且对长期趋势的把握能力较弱。因此,在实际应用中,可以考虑引入其他指标、优化参数选择、加入风险管理措施等方式,以提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy uses two moving averages (a fast moving average and a slow moving average) and the Relative Strength Index (RSI) to identify short-term market trends and overbought/oversold conditions. When the fast moving average crosses above the slow moving average and the RSI is below the oversold level, the strategy enters a long position. When the fast moving average crosses below the slow moving average and the RSI is above the overbought level, the strategy enters a short position. The strategy determines entry and exit points based on the crossover of the moving averages and RSI levels to capture short-term price trends.
@@ -78,7 +44,6 @@ This strategy uses two moving averages (a fast moving average and a slow moving 
 #### Summary
 This strategy combines dual moving averages and the RSI indicator to capture short-term price trends, making it suitable for short-term trading in volatile markets. The strategy logic is clear, parameters are flexible, and it is easy to implement and optimize. However, it may generate excessive trading signals in choppy markets and has a weak ability to capture long-term trends. Therefore, in practical applications, consider introducing additional indicators, optimizing parameter selection, implementing risk management measures, and other approaches to improve the strategy's robustness and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

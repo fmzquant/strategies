@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13410efb5aff82132fc.png)
-[trans]
-
-## 概述
-
-该策略的主要思想是结合零滞后叠加移动平均线(ZLSMA)指标判断趋势方向,以及悬臂线出口(CE)指标来寻找更精确的入场和出场时机。ZLSMA是一种趋势指标,可较早判断趋势的变化。CE通过计算ATR来动态调整出场点位,可有效控制止损。该策略主要适合中短线操作。  
-
-## 策略原理  
-
-1. ZLSMA部分:  
-    - 使用线性回归方法分别计算长度为130周期的LMA线。  
-    - 然后将两条LMA线叠加,得出赋值给eq的差值。  
-    - 最后,通过原先的LMA线加上eq差值,构成零滞后叠加移动平均线ZLSMA。
-
-2. CE部分:  
-    - 计算ATR指标,并乘以系数(默认2)来确定离最近高点或低点的动态距离。
-    - 当收盘价超过最近的多头止损线或空头止损线时,相应调整该止损线。
-    - 根据收盘价相对于止损线的位置变化判断做多做空方向。  
-
-3. 入场时机:  
-    - ZLSMA判断趋势方向,CE发出信号时入场。    
-
-4. 出场止损: 
-    - 长线设有固定止损和止盈。
-    - 短线以CE的动态出口替代固定止损。  
-
-## 优势分析
-
-1. ZLSMA可较早判断趋势,避免假突破。  
-2. CE可根据市场波动程度灵活调整出口点位。
-3. 策略风险收益比可自定义。 
-4. 长短线运用止损止盈方法不同,可同时控制风险。
-
-## 风险分析  
-
-1. 参数设置不当可能增加输率或扩大止损范围。
-2. 若行情反转迅速,仍有止损被突破的风险。  
-
-## 优化方向
-
-1. 可以测试不同市场及时间周期的参数优化。
-2. 可考虑根据波动率或特定周期调整止盈止损参数。
-3. 可尝试与其它指标或模型组合,提高获利率。
-
-## 总结
-
-该策略主要运用零滞后叠加移动平均线判断趋势方向,结合悬臂线出口指标寻找更精确的入场出场时机。策略优势在于可自定义止损止盈比例,以及悬臂线出口的动态调整可根据市场情况控制风险。下一步可尝试参数优化及策略组合,以进一步提高稳定性和获利率。
-
-||
 
 
 ## Overview  
@@ -105,7 +57,6 @@ The main idea of this strategy is to combine the Zero Lag Overlapping Moving Ave
 
 The strategy mainly uses Zero Lag Overlapping Moving Average to determine the trend direction, combined with Chandelier Exit indicator to find more precise entry and exit points. The advantages lie in the customizable stop/profit ratio and the dynamic adjustment of Chandelier Exit can control risks according to market conditions. Next steps could be parameter optimization and strategy combination to further improve stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

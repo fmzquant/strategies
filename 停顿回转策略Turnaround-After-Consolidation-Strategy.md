@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bb10819e9afe328d83.png)
-[trans]
-
-
-## 概述
-
-该策略的主要思想是在股票价格出现明显的短期停顿之后,再根据“停顿”阶段形成的盘整态势判断价格可能的下一步走向,从而采取相应的做多做空操作。
-
-## 策略原理
-
-1. 策略使用Stochastic oscillator指标判断股价是否进入了盘整,Stochastic oscillator在超买或超卖区域震荡时,表示股价进入盘整。 
-
-2. 在Stochastic oscillator指标震荡时,根据K线实体方向来判断趋势转折点。当K线从阴转阳时判断为盘整结束,做多;当K线从阳转阴时判断为盘整结束,做空。
-
-3. 做多做空后的止盈止损根据入场点来设置,采用移动止盈止损。
-
-4. 该策略同时支持全仓操作和分仓操作。全仓时设置固定止盈止损点;分仓时设置移动止盈止损点。
-
-5. 该策略还设置了每天交易时间,只在设置的时间段内交易。
-
-## 优势分析
-
-1. 利用Stochastic oscillator指标判断股价震荡状态,可准确判断出股价的短期盘整。
-
-2. 在震荡后的K线转折点进行操作,可提高操作准确性。
-
-3. 采用移动止盈止损,可根据股价行情进行止损点 trailing,可锁定更多获利。
-
-4. 支持全仓和分仓操作,可根据自己的风险偏好选择合适的操作方式。
-
-5. 设置了交易时间,可避免在股价异常波动时段进行错误操作。
-
-## 风险分析
-
-1. Stochastic oscillator指标发出假信号的概率较大,可能错过买点卖点或者乱入。
-
-2. K线转折点判断不准确,可能在非转折点进行操作。
-
-3. 移动止损点随股价波动,可能被突破止损。
-
-4. 分仓操作风险较大,股价反转可能造成Loss扩大。
-
-5. 需要调整止损点和移动幅度,以适应不同股票的特点。
-
-6. 需要规避重大事件带来的股价异常波动对策略的影响。
-
-## 优化方向
-
-1. 优化Stochastic oscillator的参数,使其更准确地识别出盘整区间。
-
-2. 结合其他指标确认K线转折信号,提高操作准确性。
-
-3. 优化移动止损算法,使止损点能更好跟踪股价。 
-
-4. 添加仓位控制,避免单只股票输得太多。
-
-5. 结合重大事件发布时间,避开股价异常波动时段。
-
-6. 优化分仓模式,追踪更大的行情趋势。
-
-## 总结
-
-停顿回转策略利用Stochastic oscillator指标识别短线盘整,在震荡后的价格转折点进行操作。该策略具有较高的胜率,可锁定趋势中的获利。但Stochastic oscillator存在发出假信号的可能,操作准确性有待进一步提高。通过优化指标参数,添加过滤条件等方式可降低错误信号率。此外,优化止损算法和仓位控制,并规避重大事件影响,也是该策略需要重点优化的方向。总体来说,停顿回转策略具有一定的参考价值,但实盘中需要根据自己的交易方式进行适当调整和优化,以控制风险。
-
-||
 
 
 ## Overview
@@ -136,7 +72,6 @@ The main idea of this strategy is to detect obvious short-term consolidation in 
 
 The turnaround after consolidation strategy identifies short-term consolidation using Stochastic oscillator and trades at trend reversal points after the consolidation phase. It has a decent winning rate and allows locking in segment profits in trends. However, Stochastic is prone to false signals. Accuracy can be improved by optimizing parameters, adding filters etc. In addition, optimizing the trailing stops, controlling position sizing, and avoiding event risks are areas that require focus. Overall, this strategy provides a reference model but needs tuning and risk control for live trading based on individual trading style.
 
-[/trans]
 
 > Strategy Arguments
 

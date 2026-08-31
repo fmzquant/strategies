@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1180037f73023dc26f0.png)
 
-[trans]
-
-## 概述
-
-该策略是一个基于双速率变化量动量指标的交易策略。策略通过计算多个不同周期的变化量,构建一个综合的动量指标,并以其波动判断市场趋势,产生交易信号。
-
-## 策略原理
-
-该策略的核心指标是双速率变化量动量指标(Dual Rate of Change Momentum Indicator),简称DRCMI。它由多个不同周期的变化量的加权平均构成。具体来说,包括6周期、10周期、15周期和20周期的变化量。其中,6周期和10周期变化量的权重为1;15周期变化量权重为2;20周期变化量权重为3。这样,更长周期的变化量具有更大的权重。
-
-综合多个周期的变化量,可以同时反映市场的短期和较长期的动量。当DRCMI为正时,表示短期和长期趋势均为上升;当为负时,表示短期和长期均为下降。DRCMI的波动幅度也反映了市场动量的力度。
-
-根据DRCMI的多空周期性特点,策略判断行情趋势,产生交易信号。当DRCMI上穿0轴时,做多;当DRCMI下穿0轴时,做空。
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 整合多周期动量,判断市场趋势更加准确。
-2. 比单一变化量指标更能捕捉周期性特征。
-3. 权重设计合理,注重较长周期,可过滤噪声。
-4. 实施简单,仅一个指标即可判断行情。
-5. 可自定义周期参数,适应不同品种。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 多周期综合指标,参数设置敏感,不当设置可能失败。
-2. 仅关注动量指标,可能忽略其他因素。
-3. 存在一定的滞后,应适当优化入市出场。
-4. 行情剧烈波动时,止损保护仍然必要。
-
-为控制风险,建议设置止损,优化指标参数,并辅助其他技术指标。
-
-## 优化方向 
-
-该策略可从以下几个方面进行优化:
-
-1. 优化DRCMI的参数,调整周期和权重的设置。
-2. 结合趋势指标,确定市场阶段,动态调整参数。
-3. 设置动态止损,保护利润。
-4. 结合相关性指标,评估品种间关系,设定品种组合。
-
-## 总结
-
-该策略通过构建DRCMI指标,整合多周期动量特征,判断行情趋势,以获利。策略简单实用,效果明显。但PARAMETER设置和止损保护仍需优化,与其他技术指标配合使用效果更佳。
-
-||
 
 ## Overview
 
@@ -107,7 +58,6 @@ Some ways to improve the strategy:
 
 This strategy generates trading signals by condensing momentum from multiple timeframes into the DRCMI indicator. It is simple yet effective in profiting from momentum swings. However, parameter tuning and stop loss implementation requires further optimization, and combining DRCMI with additional technical indicators can improve performance.
 
-[/trans]
 
 > Strategy Arguments
 

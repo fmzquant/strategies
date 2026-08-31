@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7d375b3b01892cbe1e.png)
-[trans]
-
-
-## 概述
-
-双移动均线交叉策略通过计算不同周期的移动均线,判断价格趋势方向,实现趋势跟踪。当短周期均线上穿长周期均线时做多,当短周期均线下穿长周期均线时做空,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-该策略基于9周期、21周期和50周期的指数移动均线(EMA)。其中,9周期EMA代表短期趋势,21周期EMA代表中期趋势,50周期EMA代表长期趋势。
-
-当9周期EMA上穿21周期EMA时,表示短期趋势转为上升,做多;当9周期EMA下穿21周期EMA时,表示短期趋势转为下降,做空。这里using了交叉函数crossover()来判断均线的交叉情况。
-
-代码中设置了长仓和空仓的开仓、止盈、止损逻辑。开仓条件为均线上穿或下穿。多头止盈为进入价×(1+ 输入的止盈比例),空头止盈为进入价×(1- 输入的止盈比例)。多头止损为进入价×(1- 输入的止损比例),空头止损为进入价×(1+ 输入的止损比例)。
-
-此外,代码还加入了一些过滤条件,如趋势性过滤,要求均线上下穿之前的K线不能震荡,以及资金利用率过滤,要求策略权益不能低于N天均线,避免亏损过多时仍然交易。这些过滤条件可以一定程度上避免虚假信号。
-
-总的来说,该策略使用双EMA交叉来判断价格趋势方向,以及合理的止盈止损逻辑,可以捕捉中长线趋势。但作为单因素策略,其信号可能不够稳定,可进一步优化。
-
-## 优势分析
-
-- 使用双移动均线交叉判断趋势方向,原理简单,容易理解实现。
-- 采用不同周期EMA,可以对长短期趋势进行判断。
-- 设置止盈止损逻辑,可以锁定盈利,控制风险。
-- 加入过滤条件,可以一定程度上过滤假信号。
-- 可以自由设置参数,优化周期组合,适应不同市场环境。
-
-## 风险分析
-
-- 作为单因素策略,交易信号可能不够稳定。价格震荡时,可能出现多次无谓交易。
-- EMA交叉时,价格可能已运行一段距离,存在追高杀跌风险。
-- 未考虑交易成本,实盘时收益可能减少。
-- 未设立止损,无法控制极端行情下的亏损。
-
-应对方法:
-1. 优化MA周期参数,使信号更稳定。
-2. 结合其他指标过滤信号。
-3. 加大交易数量,降低成本影响。 
-4. 设置止损点,限制最大损失。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化移动均线的周期参数,找到最佳周期组合。可以引入自适应优化技术,动态优选周期。
-
-2. 增加其他技术指标过滤信号,如MACD,KD等,提高信号质量。或引入机器学习对信号进行评分,自动过滤虚假信号。
-
-3. 结合交易量分析。如突破均线但交易量不足时,不采信信号。
-
-4. 在突破发生时,考察前期的波动情况,如在震荡区间突破,可能是假突破。
-
-5. 建立动态止损机制,如跟踪型止损、Chandelier Exit等,减小止损距离,但确保止损有效。
-
-6. 优化仓位管理,如固定仓位、动态仓位、杠杆仓位等,让盈亏比例更合理。
-
-7. 全面考虑交易成本,滑点影响。优化止盈止损比例,确保策略在实盘中依然盈利。
-
-## 总结
-
-本策略整体结构合理,原理简单,通过双EMA交叉判断趋势方向,并设置了止盈止损逻辑,可以捕捉趋势。但作为单因素策略,可进一步优化参数设定、信号过滤等,使策略更稳健。加入止损和仓位管理等机制后,可以进一步降低风险。整体来说,该策略提供了一个可靠的趋势跟踪策略框架,在优化调整后可以获得稳定的投资回报。
-
-||
 
 
 ## Overview
@@ -145,7 +82,6 @@ The strategy can be optimized in the following aspects:
 
 The overall structure of this strategy is sound, with simple logic of dual EMA crossover to determine trend direction, coupled with take profit and stop loss logic to capture trends. As a single factor strategy, it can be further optimized on parameters, signal filters etc to make it more robust. With proper stop loss and position sizing, risks can be further reduced. Overall, it provides a solid trend following strategy framework, which can achieve consistent profits after optimizations and adjustments.
 
-[/trans]
 
 > Strategy Arguments
 

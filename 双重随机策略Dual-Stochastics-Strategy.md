@@ -10,92 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7733e6e1c3ece98c1c.png)
-[trans]
-
-
-## 概述
-
-双重随机策略通过计算当前K线及多倍时间周期K线的随机指数,判断多空区域,实现低买高卖的目的。该策略同时计算当前周期及3倍周期的随机指标,利用不同周期随机指标的金叉死叉信号,实现趋势跟踪。
-
-## 策略原理
-
-该策略同时计算两组随机指标,第一组为当前K线周期的随机指标,即K值和D值,第二组为3倍当前周期的随机指标,即MTFK和MTFD。
-
-当MTFK上穿50线且当前K值大于D值时产生买入信号,表示进入多头区域,做多;当MTFD下穿50线且当前K值小于D值时产生卖出信号,表示进入空头区域,做空。
-
-因此,该策略利用双重随机指标判断多空区域,实现价格的趋势跟踪。进入多头区域做多,进入空头区域做空,达到低买高卖的效果。
-
-具体来说,该策略的买入信号logical为:
-
-```
-longCondition = crossover(mtfK, 50) and k>50 and k>d and mtfK>mtfD
-```
-
-卖出信号logical为:
-
-```
-shortCondition = crossunder(mtfD, 50) and k<50 and k<d and mtfK<mtfD
-```
-
-其中,mtfK为3倍周期的K值,mtfD为3倍周期的D值。当mtfK上穿50线且k>d时产生买入信号;当mtfD下穿50线且k<d时产生卖出信号。
-
-此外,策略还设置了止损逻辑。当多头仓位时,如果mtfD下穿上轨,产生平仓信号;当空头仓位时,如果mtfK上穿下轨,产生平仓信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用双重随机指标,判断多空区域更准确。当前周期指标判断短期趋势,大周期指标判断长期趋势,结合双重指标可以更好地把握趋势。
-
-2. 采用不同周期指标的金叉死叉交易策略,可以有效跟踪价格趋势,实现低买高卖。
-
-3. 设置止损逻辑,可以一定程度上控制风险,防止亏损扩大。
-
-4. 策略逻辑简单清晰,容易理解实现,适合用于实盘。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 双重随机指标可能产生错误信号,导致不必要的交易。例如突发事件导致短期与长期趋势背离。
-
-2. 止损逻辑设置不恰当可能导致亏损扩大。应合理设置止损距离,防止被套。
-
-3. 交易费用频繁买卖会影响策略收益。应适当调整参数,减少不必要交易。
-
-4. 策略仅基于技术指标,没有结合基本面因素。应该适当关注重大 fundamentals 因素。
-
-对应解决方法:
-
-1. 适当调整双随机指标参数,降低错误信号率。
-
-2. 优化止损逻辑,并设置合理的止损距离。
-
-3. 调整参数,降低交易频率。可以适当放宽金叉死叉判定标准。
-
-4. 关注重大基本面消息,避免主观交易。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化双随机指标参数,降低错误信号率。可以测试不同的K值、D值参数对效果的影响。
-
-2. 结合其他指标过滤信号。例如MACD、移动平均线等指标的辅助判断,避免错误信号。
-
-3. 优化止损策略,设置止损距离和比例。测试不同的止损点是否能够有效控制风险。
-
-4. 结合交易量指标。例如放量突破等策略,避免在价格震荡期无效交易。
-
-5. 测试不同持仓时间。持仓时间过短,交易费用影响收益;持仓时间过长,无法及时止损。
-
-6. 结合基本面因素,在重要事件前后关闭策略,避免被事件冲击。
-
-## 总结
-
-双重随机策略通过当前周期和多倍周期随机指标判断多空区域,实现低买高卖。该策略具有趋势跟踪能力较强、逻辑简单、易于实盘等优势。但也存在一定风险,需要对参数及止损策略进行优化,并辅以其他技术指标或基本面判断来改进。如果经过全面优化和严格的回测验证,该策略可以成为一个非常实用的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -180,7 +94,6 @@ The strategy can be optimized in the following aspects:
 
 The Dual Stochastics strategy judges bullish and bearish zones by current period and multiple period stochastic indicators, achieving the goal of buying low and selling high. It has advantages like strong trend tracking capability, simple logic, and easy live trading. But risks exist, requiring parameter tuning, stop loss optimization, and incorporation of other technicals or fundamentals to improve. If comprehensively optimized and strictly backtested, this strategy can become a very practical trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

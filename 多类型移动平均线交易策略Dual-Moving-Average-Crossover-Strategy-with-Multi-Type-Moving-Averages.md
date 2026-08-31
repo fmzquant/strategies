@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算多种类型的移动平均线,实现双均线的交叉做多和交叉做空,属于趋势跟踪策略。同时,策略还引入第三条移动平均线作为趋势判断,以控制风险。
-
-## 策略原理
-
-1. 计算两条均线:MA1和MA2,分别可以选择SMA、EMA、VWMA等多种类型,长度也可以自定义。
-
-2. 判断MA1和MA2的交叉:当MA1上穿MA2时,做多;当MA1下穿MA2时,平仓。
-
-3. (可选)计算第三条均线MA3,长度一般取较长周期,如50。MA3之上为多头,之下为空头。只有当价格突破MA3才开仓。
-
-4. 以上规则结合回测时间段,完成策略交易信号的产生。
-
-5. 对交叉做多做空区域填色,形成视觉辅助。
-
-该策略融合了移动平均线的趋势跟踪和交叉做多做空的思想,同时引入第三条均线进行风险控制,通过参数调整可以灵活适应不同市场周期。
-
-## 优势分析
-
-1. 使用双均线交叉判断趋势方向,可以有效跟踪趋势。
-
-2. 支持多种类型均线的组合,可以对不同周期的市场优化。
-
-3. 引入第三条均线进行风险控制,可以减少不必要的损失。
-
-4. 可视化的交叉填色提高看图交易的体验。
-
-5. 参数可调整,可以针对不同周期进行优化。
-
-6. 规则简单清晰,容易理解执行。
-
-## 风险分析
-
-1. 双均线策略对震荡行情和趋势反转场景容易产生losses。可以通过参数优化降低风险。
-
-2. 双均线有时会产生错误信号或超前反应。可以适当加长均线周期或优化参数。 
-
-3. 第三条均线可能会错过较强势头的机会。可以测试适当缩短第三条均线来减少遗漏盈利机会。
-
-4. 不能保证每次交易都获利,需要做好止损管理。
-
-## 优化方向
-
-1. 测试不同类型均线和不同周期参数的组合,寻找最佳参数对。
-
-2. 优化第三条均线的周期参数,平衡风险控制和盈利捕捉。
-
-3. 加入止损策略,以控制单笔损失。
-
-4. 可以考虑加入机器学习算法,利用大数据训练寻找最优参数。
-
-5. 结合其他指标如KD、MACD等进行信号过滤和验证。
-
-## 总结
-
-该双均线多类型移动平均线交叉策略,集成了趋势跟踪、风险控制、参数优化、视觉辅助等多项功能,是一个非常经典且实用的趋势策略。通过不断测试和优化参数,适当引入其他指标或机器学习等手段进行配合,可以使该策略对市场的适应性不断提高,具有很强的实战价值。总体来说,该策略简单、实用、易于优化,是量化交易的一个很好的起点。
-
-|| 
 
 ## Overview
 
@@ -129,7 +68,6 @@ The strategy combines the trend following of MAs and crossover long/short, with 
 
 This dual moving average crossover strategy with multi-type MAs incorporates trend following, risk control, parameter optimization, visual aid and more. With continuous testing and optimization, introducing other indicators or machine learning etc, it can adapt better to the market and has great practical value. In summary, this is a simple, practical and easily optimizable strategy, making it a great starting point for algorithmic trading.
 
-[/trans]
 
 > Strategy Arguments
 

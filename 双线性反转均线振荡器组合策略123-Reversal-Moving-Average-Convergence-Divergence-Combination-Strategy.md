@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1cdb9644720db0541ec.png)
 
-[trans]
-
-## 概述
-本策略是将乌尔夫·詹森在他的著作中提出的123形态反转交易策略与马丁·普林克提出的加权移动平均线振荡器(KST)进行组合,构建一个综合利用反转形态和趋势震荡指标产生交易信号的量化策略。
-
-## 策略原理
-### 123反转形成机理
-该部分策略的核心逻辑是监测股票的收盘价在最近2天内是否出现转折,具体来说就是:
-
-如果最近2天的收盘价处于下跌趋势,即前一天的收盘价高于前2天;而今天的收盘价较前一天反转上涨,即高于前一天的收盘价,那么可以判断底部反转,产生买入信号。
-
-相反,如果最近2天收盘价处于上涨趋势,即前一天收盘价低于前2天;而今天收盘价较前一天反转下跌,即低于前一天的收盘价,那么可以判断顶部反转,产生卖出信号。 
-
-该部分策略还同时结合Stochastic指标判断是否超买超卖,过滤掉非反转时间点的交易信号。
-
-### KST指标机理 
-KST指标中的ROC代表价格的变化速率,分别计算6天、10天、15天和20天的ROC,并进行不同参数的移动平均线平滑之后,进行加权求和,构成KST指标。
-
-当快线上穿慢线时判断为看涨,当快线下穿慢线时判断为看跌。 herein,快线就是原始的KST值,慢线是KST的移动平均。
-
-本策略采用KST>0判断为看涨,KST<0判断为看跌。
-
-### 信号合并
-将123形态反转策略和KST指标的 Judgment 信号进行合并:
-- 若两者信号一致,产生该方向的交易信号
-- 若两者信号不一致,不交易
-
-可见,该策略综合运用了反转形态和指标判断两种不同类型的技术指标,结合其信号强度,设计出一个较为先进的量化交易策略。
-
-## 策略优势
-- 反转形态部分可有效识别转折点,指标部分可跟踪趋势,两者互补
-- 结合双重指标过滤,可提高信号质量,减少假信号
-- KST参数调节灵活,可对不同周期的股票进行优化
-- 可适应高波动的股票,也可用于相对稳定的股票
-
-## 策略风险
-- 反转失败风险,反转信号也可能是假突破
-- 信号合并后可错过部分机会
-- KST参数不当可能对结果产生较大干扰
-- 股价波动剧烈时KST产生迟滞,可能出现信号不一致
-
-可通过调整参数,优化反转判定逻辑,引入止损机制等方法来控制风险。
-
-## 策略优化方向 
-- 优化Stochastic指标参数
-- 优化KST线的长度参数
-- 增加交易量或波动力指标过滤
-- 增加趋势判断,避免逆势交易
-- 引入止损机制
-
-## 总结
-该策略整合运用多种不同类型的技术指标,通过双重确认和组合优化, scientifically designed出一个较强的量化交易策略,可谓策略组合的典范。实盘表现还有待进一步验证,但从理论构思上看,它综合考虑了多种 scenarios,解决了单一指标的局限性,值得进一步研究与应用。
-
-||
 
 
 ## Overview
@@ -118,7 +64,6 @@ Methods like parameter adjustment, optimization of reversal logic, introduction 
 ## Conclusion 
 This strategy integrates multiple different types of technical indicators. Through dual confirmation and combination optimization, it scientifically designs a relatively strong quantitative trading strategy, and it is a model of strategy combination. Its performance in live trading is yet to be further verified, but from the theoretical conceptualization perspective, it comprehensively considers multiple scenarios, solves the limitations of single indicators, and is worth further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

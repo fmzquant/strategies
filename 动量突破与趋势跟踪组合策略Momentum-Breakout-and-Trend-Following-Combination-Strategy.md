@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1ba999b62ba76dac6f9.png)
 
-[trans]
-
-## 概述
-
-该策略是一个组合策略,结合了动量指标、趋势跟踪指标以及均线指标,实现了趋势跟踪与突破买入/卖出。主要通过 Stochastic 指标与 Supertrend 指标的组合判断买入/卖出时机,辅以 EMA 均线判断市场主要趋势。
-
-## 策略原理
-
-该策略主要由以下几部分指标组成:
-
-1. EMA 均线:使用 EMA 25、50、100 和 200 四条均线判断主要趋势。EMA25 上穿 EMA50 且 EMA100 上穿 EMA200 时为上升趋势,否则为下降趋势。
-
-2. Supertrend 趋势跟踪指标:参数为 Factor 3和 ATR 10,判断当前价格是否处于上升或下降趋势中。当 Supertrend 为绿色时为上升趋势,红色为下降趋势。
-
-3. Stochastic 动量指标:%K 8 和 %D 3,判断Stochastic 是否产生金叉或死叉现象。当 %K 线从下方上穿 %D 线时为金叉信号,反之死叉信号。
-
-买入策略为:EMA 显示上升趋势 + Supertrend 显示上升趋势 + Stochastic 金叉时机。
-卖出策略为:EMA 显示下降趋势 + Supertrend 显示下降趋势 + Stochastic 死叉时机。
-
-该策略综合了趋势、动量和突破三个指标,能比较可靠地判断市场走势与买卖点。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 结合多种指标,判断力较强,可以有效过滤假突破。
-
-2. 动量指标的加入可以提早判断转折点。
-
-3. 可自定义参数,适用于不同市场环境。
-
-4. 实现了相对高效的止损与止盈设置。
-
-5. 可以在高周期如日线进行回测,效果较好。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 参数设置不当可能导致交易频繁或信号不稳定。需要对参数调优。
-
-2. 在择时上仍有可能出现误判的情况。可以考虑加入更多滤波指标。
-
-3. 止损点设置为 Stochastic 指标的极值点,可能会过于靠近,可以考虑适当放宽。
-
-4. 回测数据不足,可能对参数拟合产生影响,应扩大回测周期。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1.测试更多参数组合,找到最优参数。如调整 Supertrend 的 Factor 参数等。
-
-2.加入更多滤波指标,如能量指标、波动率指标等,减少误判概率。 
-
-3.可以测试不同的止损方式,如在极值点一定百分比设置止损线等。
-
-4.优化止盈方式,如考虑动态止盈,以锁定更多利润。
-
-5.扩大策略适用范围,如尝试适配更多交易品种,或尝试在更高周期使用。
-
-## 总结
-
-该策略整体思路清晰,指标选择合理,实现了趋势跟踪与突破交易,回测效果较好。但仍有优化空间存在,通过参数调整、加入更多滤波指标、改进止损止盈方式等进行多方位优化,可以使策略更加稳定可靠。
-
-||
 
 ## Overview  
 
@@ -141,7 +75,6 @@ The strategy can be optimized in the following ways:
 
 The strategy's logic is clear and indicator selection reasonable. It realizes trend following and momentum breakout trading with good backtest results. But there is still room for optimization, e.g. parameter tuning, adding filters, improving stops and profit taking. Multi-dimensional optimization can make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

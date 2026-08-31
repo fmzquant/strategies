@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/115acb884d36056be41.png)
-[trans]
-## 
-
-### 概述
-
-该策略运用动量指标追踪短期价格变动,判断市场趋势方向,进行买入和卖出操作。策略名称为“Price Volume Trend Strategy”,反映了策略运用价格变动和成交量变动判断趋势的思路。
-
-### 策略原理
-
-该策略首先计算价格的动量。通过计算当前周期价格较上一周期价格的差值,可以反映最新一个周期内价格的绝对变动。正值表示价格上涨,负值表示价格下跌。然后计算这个差值的移动平均值,滤波处理,得到平均动量指标。 
-
-当最新价格大于平均动量时,表示价格在上涨;当最新价格小于平均动量时,表示价格在下跌。根据这个指标判断价格趋势方向。结合成交量放大过滤,实际交易中只选择成交量较大的信号。
-
-根据判断出的价格上涨和下跌趋势,进行相应的买入和卖出操作。
-
-### 优势分析
-
-- 策略判断趋势迅速,能快速捕捉短期价格变动,适合短线操作
-- 通过成交量过滤,避免被虚假突破误导
-- 实现了追涨杀跌的操作逻辑
-- 交易频率高,适合积极的投资者
-
-### 风险分析
-
-- 容易受到市场异常波动的影响,存在一定的假信号风险
-- 交易频繁带来的滑点风险
-- 可能错过中长线趋势,长期盈利能力有待验证
-
-### 优化方向
-
-- 调整动量指标参数,优化判断效果
-- 优化成交量过滤参数,提高信号质量
-- 增加止损机制,控制单笔损失
-- 结合更多因子判断,确保多因子驱动
-
-### 总结 
-
-该策略overall通过动量指标追踪价格短期变动趋势,快速判断买入和卖出时机。优点是操作迅速,追涨杀跌;缺点是信号质量和长期盈利能力有待考量。通过参数调整、风控机制增强,该策略可以成为高频策略的重要组成部分,与其他低频策略组合使用。
-
-||
 
 ### Overview
 
@@ -87,7 +47,6 @@ According to the identified upward and downward price trends, corresponding buy 
 
 The strategy overall tracks short-term price change trends through momentum indicators, and quickly determines entry and exit timing. The advantages are fast operation, chasing rises and killing falls. The disadvantages are signal quality and long-term profitability need to be examined. Through parameter adjustments and enhanced risk control mechanisms, the strategy can become an important component of high-frequency strategies, combined with other low-frequency strategies.
 
-[/trans]
 
 > Strategy Arguments
 

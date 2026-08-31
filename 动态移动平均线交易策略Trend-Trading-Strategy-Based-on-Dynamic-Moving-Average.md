@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/211fe82e7435facdceb.png)
-[trans]
-
-## 概述
-
-该策略通过计算动态移动平均线,并以其作为交易信号,在股价上升时开仓做多,在股价下跌时平仓。该策略结合了动量指标和移动平均线的优点,旨在追踪股价中期趋势,实现稳定收益。
-
-## 原理
-
-该策略主要基于三种变体的Hull移动平均线,包括普通Hull移动平均线(HMA)、加权Hull移动平均线(WHMA)和指数Hull移动平均线(EHMA)。根据代码,策略允许用户在这三种 Hull MA 之间切换。
-
-HMA的计算公式为:
-
-HMA = WMA(2*WMA(close,n/2)-WMA(close,n),sqrt(n))
-
-其中,WMA代表加权移动平均线,n代表周期参数。HMA与SMA(简单移动平均线)相比,能更快地响应价格变动。
-
-WHMA和EHMA的计算公式与HMA类似。策略以HMA为默认选项。
-
-在计算出HMA后,该策略以HMA的中线值作为交易信号。当价格上穿HMA中线时,做多入场;当价格下穿HMA中线时,平仓出场。这样,它利用HMA中线来跟踪价格中期趋势,实现盈利。
-
-## 优势
-
-相比传统移动平均线策略,该策略具有以下优势:
-
-1. 响应速度更快,跟踪趋势能力更强,实现及时入场和止损
-2. 减少无谓交易频率,避免追涨杀跌
-3. 灵活配置 Hull MA 参数,能适应更广泛市场环境
-4. 可在 HMA、WHMA 和 EHMA 间切换,拓宽适用范围
-
-## 风险
-
-该策略也存在一些风险:  
-
-1. 在盘整行情中容易产生多次无效信号,从而增加交易频率和滑点成本
-2. Hull MA 参数设置不当可能错过趋势反转点,增加亏损风险
-3. 选股不当,选取流动性差的股票,可能面临巨额滑点
-
-对策:
-
-1. 优化 Hull MA 参数,找到最佳值
-2. 结合其他指标判断趋势反转点
-3. 选取流动性好、日均成交量大的股票
-
-## 优化方向  
-
-该策略还可以从以下方面进行优化:
-
-1. 增加成交量或其他指标过滤,确保交易信号的可靠性
-2. 结合 MACD、KDJ 等其他指标判定入场时机,提高胜率 
-3. 根据实盘回测数据调整 Hull MA 周期参数
-4. 切换至 WHMA 或 EHMA,测试在特定股票上表现最好的 Hull 变体
-5. 增加止损策略控制单笔亏损
-
-## 总结
-
-该动态移动平均线交易策略整合了 Hull MA 的快速响应优势,可以有效跟踪股价中期趋势,在合适时机开仓做多和止损出场,历史回测表现良好。通过进一步优化参数设置、选股范围,该策略可以获得更加稳定的超额收益。它是一种易于实施且风险可控的量化策略。
-
-||
 
 ## Overview  
 
@@ -124,7 +66,6 @@ The strategy can also be enhanced from the following aspects:
 
 The dynamic MA trading strategy integrates the fast response of HMA to effectively track medium-term price trends. By opening long positions at appropriate timing and closing stops, it has demonstrated good backtest results. Further improvements in parameter tuning and stock filtering would lead to more steady excess returns. It is an easy-to-implement, risk-controllable quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

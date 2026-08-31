@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1eee16fe385df3387e5.png)
-[trans]
-
-## 概述
-
-该策略结合了MACD指标和多个EMA线,从周线和分钟线两个时间尺度来捕捉市场的强势趋势。在周线上使用MACD指标来判断大趋势方向,在分钟线上使用5日、15日、30日三条EMA线来确认趋势,并在突破点进行交易。该策略主要思想是跟随强势趋势,骑在大浪之上,短期EMA线突破长期EMA线时进场交易,EMA线回撤或止损条件触发时离场。
-
-## 策略原理
-
-1. 周线MACD判断大趋势:计算周线MACD指标,对比本周和上周的MACD柱状图差值,差值大于0表明趋势向上,小于0表明趋势向下。每周一开盘时更新趋势方向。
-
-2. 多EMA线确认趋势:在分钟线图上绘制5日、15日、30日三条EMA线。当短期EMA在长期EMA之上且向上运行时,趋势向上;反之趋势向下。
-
-3. EMA线交叉点交易:
-   - 做多:当周线MACD趋势向上,且分钟线收盘价上穿15日EMA时做多。止损位设在持仓均价下固定点数,或当5日EMA下穿15日EMA时平仓。
-   - 做空:当周线MACD趋势向下,且5日EMA下穿30日EMA时做空。止损位设在持仓均价上固定点数,或当5日EMA上穿15日EMA时平仓。
-
-4. 加仓:暂不设置加仓条件。
-
-## 优势分析
-
-1. 双时间尺度结合,趋势判断更加可靠。周线MACD判断大趋势,避免在震荡市做多被套;分钟线EMA交叉确认趋势,抓住趋势中的每一波行情。
-
-2. 分钟线EMA参数选择5、15、30日,三线组合能够很好地过滤掉噪音,捕捉到明确的趋势。
-
-3. 止损位设置合理,控制单次交易风险。固定点数止损和EMA止损相结合,既能控制损失,又能跟随趋势。
-
-4. 代码模块化设计,主要模块如MACD计算、EMA计算等,具有很强的复用性和可扩展性。
-
-## 风险分析
-
-1. MACD柱状图差值阈值选择不当,可能导致趋势判断标准过于宽松或严格,使判断失准。可以通过回测和参数优化来选择最佳阈值。
-
-2. 分钟线EMA参数选择不当,周期过短会导致频繁交易,过长会错失良机。可以通过回测和参数优化来选择最佳参数组合。
-
-3. 固定点数止损位置选择不当,设置过小会导致频繁止损,设置过大会导致单次亏损过多。可以根据品种波动特性来设置个性化止损。
-
-4. 趋势转折点EMA线会有所滞后,可能错过最佳买卖点。但从长期来看,能够有效控制风险,策略整体表现依然不错。
-
-## 优化方向
-
-1. 可以考虑在MACD判断趋势的基础上,再叠加RSI等指标来确认趋势强度,提高趋势判断的准确性。
-
-2. 可以在EMA线交叉的基础上,增加CCI等指标作为交易信号的过滤条件,降低交易频率和риск。
-
-3. 可以根据个股的历史波动特性,设置个性化的止损点数,使策略更加贴合品种特点。
-
-4. 可以考虑增加加仓和减仓的策略,在趋势较强时逐步加仓,在趋势减弱时逐步减仓,提高资金利用效率。
-
-## 总结
-
-MACD+EMA多时间尺度突破策略是一个趋势跟踪型策略,在判断趋势和确认趋势上都有比较科学的依据,能够有效把握住市场的主要趋势,获得稳定的收益。同时,该策略在风险控制方面也比较完善,通过合理的止损设置和平仓条件,有效地控制了策略回撤。但策略也存在一些不足,如趋势判断滞后、缺乏加减仓等,可以在此基础上进一步优化和完善。总的来说,该策略是一个非常值得学习和使用的量化交易策略。
-
-|| 
 
 ## Overview
 
@@ -113,7 +60,6 @@ This strategy combines the MACD indicator and multiple EMA lines to capture stro
 ## Summary
 
 The MACD+EMA Multi-Timeframe Breakout Strategy is a trend-following strategy with a scientific basis for both trend determination and confirmation. It can effectively capture the main market trends and generate stable returns. Meanwhile, the strategy is quite complete in risk control, effectively limiting drawdowns through reasonable stop-loss and exit rules. However, there are also some shortcomings, such as lagging trend signals and lack of scaling rules, which can be further optimized and improved upon. Overall, this is a very worthwhile quantitative trading strategy to learn and utilize.
-[/trans]
 
 > Strategy Arguments
 

@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/115cdc44448a6f74520.png)
-[trans]
-
-## 概述
-
-本策略基于Donchian价格通道指标开发。该指标通过计算一定周期内的最高价和最低价,形成价格通道。策略利用价格通道实现双向交易,并设定止损和止盈价格。止损价格固定为价格通道中线,止盈价格设定为价格通道上下限之外的一定百分比。策略还实现了止盈和止损的追踪。
-
-## 策略原理
-
-首先,策略根据参数pclen计算价格通道的上限h和下限l。中线center为价格通道上下限的平均值。然后根据长仓和空仓的止盈参数tp,计算出止盈价格tpl和tps。止损价格固定为价格通道中线center。当价格突破价格通道时,根据风险大小risklong和riskshort计算出不同方向的交易仓位。策略会在价格重新进入通道时平仓。此外,还设置了时间过滤,只在指定的日期区间内交易。
-
-具体交易逻辑为:
-
-多仓开仓信号:价格大于通道上限h且回落到通道内时开多仓
-多仓平仓信号:价格低于通道中线center(止损)或高于止盈价格tpl(止盈)时平多仓
-
-空仓开仓信号:价格小于通道下限l且回落到通道内时开空仓
-空仓平仓信号:价格高于通道中线center(止损)或低于止盈价格tps(止盈)时平空仓
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 双向交易,可以捕捉价格趋势的反转
-2. 利用价格通道判断趋势方向,避免假突破
-3. 设定止盈止损,控制风险
-4. 计算仓位规模关联风险大小,实现风险可控
-5. 实现止盈和止损的追踪,可以锁定更多利润
-
-## 风险分析
-
-本策略也存在一定的风险:
-
-1. 价格通道参数设置不当可能导致交易频率过高或错过交易机会
-2. 止损价格过宽容可能增加风险敞口
-3. 追踪止盈在高波动时期可能提前触发
-
-可以通过调整参数以及人工监控的方式降低和控制这些风险。
-
-## 优化方向  
-
-本策略还可以从以下几个方面进行优化:
-
-1. 增加更多指标判断过滤,避免在震荡行情中频繁开平仓
-2. 可以测试不同的止盈止损算法,如ATR止损等
-3. 扩展为跨时间周期交易系统,利用更高级时间周期确定趋势方向
-4. 增加仓位管理模块,根据资金使用比例调整仓位
-5. 结合机器学习模型判断价格突破的成功率,避免假突破
-
-## 总结
-
-本策略总体来说是一个利用价格通道指标实现双向交易的有效方法。设置了止盈止损和仓位控制模块,可以很好地控制风险。通过一定的优化和调整,可以成为一个强大的量化交易策略。
-
-||
 
 ## Overview
 
@@ -116,7 +63,6 @@ This strategy can also be optimized in the following aspects:
 
 In conclusion, this is an effective strategy to implement two-way trading using price channel indicators. With proper stop loss, take profit, and position sizing control modules, risks can be well controlled. With some optimizations and adjustments, it can become a powerful quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -14,45 +14,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-
-OneTrend Lite EMA策略是一种创新的趋势跟踪交易方法，通过结合指数移动平均线(EMA)、平均趋向指数(ADX)和平均真实波动范围(ATR)来识别和捕捉市场趋势。该策略旨在提供清晰、规则化的交易信号，同时动态调整对市场波动性的敏感度。
-
-#### 策略原理
-
-策略核心围绕三个关键技术指标展开：
-1. 快速和慢速EMA：通过计算不同周期长度的指数移动平均线，捕捉价格变化趋势
-2. 自定义ADX计算：评估趋势强度和市场动量
-3. 动态ATR阈值：根据ADX值自适应调整趋势判断的敏感度
-
-策略使用30周期快速EMA和60周期慢速EMA，通过它们的差值结合自适应ATR乘数来生成交易信号。当快速EMA超过动态阈值时进入蓝色趋势区域(看涨)，当跌破阈值时进入粉色区域(看跌)。
-
-#### 策略优势
-
-1. 自适应性强：通过动态ADX阈值，策略可以根据不同市场条件调整敏感度
-2. 多维度指标组合：融合EMA、ADX和ATR，提高信号准确性
-3. 清晰的视觉化交易区间：蓝色和粉色区域直观展示趋势变化
-4. 风险管理灵活：可调整EMA周期、ATR乘数和ADX阈值
-
-#### 策略风险
-
-1. 滞后性：EMA本质上存在一定的滞后特征，可能在快速变化的市场中延迟响应
-2. 震荡市场表现：在缺乏明确趋势的市场中，可能产生频繁且无效的交易信号
-3. 参数敏感性：策略性能高度依赖于选择的参数，需要不断回测和优化
-
-#### 策略优化方向
-
-1. 引入机器学习算法：使用AI技术动态优化参数选择
-2. 多时间框架验证：在不同时间尺度验证策略稳定性
-3. 组合其他指标：结合动量指标如RSI、MACD提高信号准确性
-4. 自适应止损机制：根据ATR动态调整止损策略
-
-#### 总结
-
-OneTrend Lite EMA策略通过创新的指标组合和自适应阈值，为交易者提供了一种灵活且直观的趋势跟踪方法。尽管存在一些固有风险，但其多维度分析和动态调整能力使其成为一个值得深入研究的量化交易策略。
-
-|| 
 
 #### Overview
 
@@ -90,7 +51,6 @@ The strategy uses a 30-period fast EMA and a 60-period slow EMA, generating trad
 #### Summary
 
 The OneTrend Lite EMA strategy provides traders with a flexible and intuitive trend-tracking method through innovative indicator combinations and adaptive thresholds. Despite inherent risks, its multi-dimensional analysis and dynamic adjustment capabilities make it a strategy worthy of in-depth research.
-[/trans]
 
 
 

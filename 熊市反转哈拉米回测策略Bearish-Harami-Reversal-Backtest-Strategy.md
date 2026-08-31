@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d775b673e8f1ff2d3a.png)
 
-[trans]
-
-## 概述
-熊市反转哈拉米回测策略通过识别蜡烛图中的熊市反转哈拉米形态,实现自动交易。当识别到熊市反转哈拉米形态时,该策略会进入做空头寸;当止损或止盈后,平仓头寸。
-
-## 策略原理
-该策略的核心识别指标是:前一根K线为长阳线,第二根K线收盘价包含在前一根K线实体内,并且为阴线,则可能形成熊市反转哈拉米形态。符合该形态时,策略会进入做空头寸。
-
-具体判断逻辑是:
-1. 计算前一根K线体大小ABS(Close1 - Open1)是否大于设置的最小实体大小
-2. 判断前一根K线是否为阳线 Close1 > Open1
-3. 判断当前K线是否为阴线 Open > Close
-4. 判断当前K线开盘价是否小于等于前一根K线收盘价 Open <= Close1
-5. 判断前一根K线开盘价是否小于等于当前K线收盘价 Open1 <= Close
-6. 判断当前K线实体是否小于前一根K线 Open - Close < Close1 - Open1
-7. 满足以上条件则形成熊市反转哈拉米,进入做空头寸
-
-## 优势分析
-该策略具有以下优势:
-
-1. 利用熊市反转哈拉米强势反转信号,增大获利概率
-2. 回测数据充足,模拟交易结果优良
-3. 策略逻辑简单清晰,容易理解与优化
-4. 可自定义止盈止损点,控制风险
-
-## 风险分析
-该策略也存在一些风险:
-
-1. 市场可能出现假突破,造成头寸被套。可适当放宽止损点,或增加过滤条件。
-2. 标的证券价格波动可能过大,无法止损。应选择波动率较低的交易品种。 
-3. 回测数据不足,可能无法反映真实市场情况。应增加回测数据量,并做实盘验证。
-
-## 优化方向
-该策略还可从以下方面进行优化:
-
-1. 增加Volume,MACD等指标过滤,提高信号质量
-2. 优化止盈止损策略,动态调整点位
-3. 提高持仓效率,结合趋势等因素,减少无效交易
-4. 尝试不同交易品种,选择波动率更合适的品种
-
-## 总结
-熊市反转哈拉米回测策略整体逻辑清晰,易于理解和优化,回测结果较好。风险可控,具有实盘调整空间。整体而言,该策略形成的交易信号较为可靠,值得进一步实盘验证与优化。
-
-||
 
 ## Overview
 The Bearish Harami Reversal Backtest Strategy identifies bearish Harami reversal patterns in candlestick charts and automatically trades them. It goes short when detecting a bearish Harami pattern and closes the position when the stop loss or take profit is triggered.
@@ -98,7 +54,6 @@ The strategy can be further optimized in the following areas:
 ## Conclusion
 The Bearish Harami Reversal Backtest Strategy has clear, easy to understand logic, good backtest results and controllable risks. It has room for live trading adjustments and optimizations. Overall the trading signals are reliable and worth further optimizations and verification in live trading.  
 
-[/trans]
 
 > Strategy Arguments
 

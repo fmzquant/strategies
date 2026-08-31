@@ -9,83 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用布林带确定价格通道,并结合斐波那契回撤比判断支持阻力位,实现自动化交易。策略识别布林带突破并追踪回撤点,在高概率回调区域进行买入或卖出操纵。
-
-## 策略原理
-
-1. 计算布林带中的中轨、上轨和下轨
-
-    - 利用SMA和ATR计算中轨线、上轨线和下轨线
-    
-    - 布林带通道随市场波动而扩展和收缩
-    
-2. 计算斐波那契回撤比对应的价格位
-
-    - 取ATR与斐波那契数列比例的乘积作为回撤比例
-    
-    - 根据中轨计算出多个斐波那契回撤位
-    
-3. 监控价格突破布林带上下轨
-
-    - 价格突破上轨时考虑做多
-    
-    - 价格突破下轨时考虑做空
-    
-4. 在斐波那契回撤位附近设置入场和止损止盈
-
-    - 价格回调至斐波那契回撤区时入场
-    
-    - 在回撤区另一边设定止损止盈
-    
-## 优势分析
-
-- 布林带能清晰识别市场波动范围和趋势
-
-- 斐波那契回撤比掌握关键支持阻力区域
-
-- 结合指标信号可实现自动交易
-
-- 回调入场增加成功率,避免追高杀跌
-
-- 可通过调整参数适应不同周期及品种
-
-## 风险分析
-
-- 布林带突破可能是假突破,产生错误信号
-
-- 无法准确预测价格何时会回调至斐波那契位
-
-- 停损点选取不当可能扩大亏损
-
-- 回调幅度过大过小都会影响策略效果
-
-- 参数不合理或市场持续方向性时策略失败
-
-- 优化布林带判定逻辑,更多考虑量能指标,动态调整回撤区等
-
-## 优化方向 
-
-- 优化布林带参数以提高对趋势和支撑阻力的判断
-
-- 增加量能指标判断突破信号有效性 
-
-- 利用机器学习辅助判断回调概率
-
-- 结合更多技术指标验证交易信号
-
-- 根据品种特点和交易时段选定合理参数
-
-- 及时调整回撤区强度适应变化的波动性
-
-## 总结
-
-该策略整合布林带和斐波那契回撤比指标的优势,识别趋势方向并在高概率回调点入场。通过参数优化、增加验证指标、动态调整回撤区等方式可降低风险提升效果。策略空间仍可扩展,如加入量能指标、机器学习等提高效果,在持续优化中趋于成熟。
-
-||
 
 
 ## Overview
@@ -162,7 +85,6 @@ This strategy identifies price channels using Bollinger Bands and determines sup
 
 This strategy combines the strengths of Bollinger Bands and Fibonacci retracements to identify trends and enter at high-probability pullback levels. Risks can be reduced and results improved by parameter optimization, additional signal validation, dynamic zone adjustment, etc. There is room for expansion by incorporating volume, machine learning models, etc. The strategy can be further refined through continuous optimization.
 
-[/trans]
 
 > Strategy Arguments
 

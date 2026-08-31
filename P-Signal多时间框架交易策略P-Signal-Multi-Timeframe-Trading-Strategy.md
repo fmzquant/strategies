@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/cf9103c882f7c40216.png)
 
-[trans]
-
-### 概述
-
-P-Signal多时间框架交易策略是一种基于统计原理,结合多时间框架分析的数字货币算法交易策略。该策略运用高斯误差函数以及P-Signal指标对比特币的日线、周线和月线进行模型fit,根据指标金叉做多和死叉做空,实现波动率交易。
-
-### 策略原理
-
-P-Signal策略的核心指标是P-Signal,它结合了统计标准差和简单移动平均,通过高斯误差函数映射到-1到1区间,用来检测市场是否符合正态分布。具体计算公式如下:
-
-```
-fErf(x) = 1.0 - 1.0/(1.0 + 0.5*abs(x)) * exp(-x*x - 1.26551223 + ...)  # 高斯误差函数
-
-fPSignal(ser, n) = fErf((stdev(ser, n) > 0 ? sma(ser, n)/stdev(ser, n)/sqrt(2) : 1)) # P-Signal指标
-```
-
-该策略在日线、周线和月线时间框架分别计算P-Signal指标,当指标上穿0轴时做多,下穿0轴时平仓。同时设置指标值阀门控制重复开仓。
-
-### 优势分析
-
-P-Signal策略最大的优势是利用多时间框架提高策略稳定性。日线捕捉市场短期波动,周月线过滤假突破。同时,P-Signal指标本身也具有一定的预测能力,可以放大趋势性行情的波动。
-
-相比单一时间框架,多时间框架可以在回撤时利用日线止损,而在震荡行情中利用高级时间框架减少交易频率。整体来说,这种组合可以在保证盈利的同时最大限度降低绝对和相对回撤。
-
-### 风险分析
-
-P-Signal策略最大的风险在于指标本身对量化交易员来说是一个黑箱。我们很难确定该指标对特定市场的适配度,也无法确定其参数的最优化范围。这可能导致在实盘中策略表现不佳。
-
-此外,策略本身也存在一定的局限性。例如无法处理剧烈行情,指标差值作为交易信号可能滞后等。这些问题都可能成为实盘时的隐患。
-
-要解决这些问题,我们可以调整指标参数,优化止损方式,引入更多辅助指标等。但前提是要在足够大的回测区间验证策略稳定性。
-
-### 优化方向 
-
-P-Signal策略有几个可以优化的方向:
-
-1. 更换P-Signal指标的参数:nIntr_D、nIntr_W和nIntr_M,找到最优参数组合
-
-2. 增加止损方式:跟踪止损、时间止损、ATR止损等,找到最优止损方式
-
-3. 引入辅助指标:增强策略对特定行情的判断能力,例如引入MACD判断趋势
-
-4. 优化仓位管理:设置动态仓位,优化资金使用效率
-
-5. 机器学习优化参数:使用神经网络、遗传算法等寻找参数全局最优
-
-### 总结
-
-P-Signal多时间框架交易策略整体来说是一个非常有潜力的策略思路。它结合统计原理与技术指标,利用多时间框架分析提高稳定性。如果我们能够通过大量回测和优化解决部分局限性,完全有可能将其转化为真实可用的数字货币算法交易策略。
-||
 
 ### Overview
 
@@ -113,7 +63,6 @@ There are several directions to optimize the P-Signal strategy:
 
 The P-Signal multi timeframe trading strategy is overall a very promising strategy idea. It combines statistical principles and technical indicators, and uses multi timeframe analysis to improve stability. If we can solve some limitations through extensive backtesting and optimization, it is entirely possible to transform it into a real, usable cryptocurrency algorithmic trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

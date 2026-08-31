@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过结合平均真实波动指标(ATR)和商品通道指标(CCI)来识别价格趋势,并以超买超卖区域作为 entry 和 exit 信号。ATR用于计算通道上下轨,而CCI用于判断趋势方向。当CCI从超买区下破时做空,从超卖区上破时做多,实现趋势跟踪。
-
-## 策略原理
-
-1. 计算ATR,这里选择了2周期的ATR
-2. 计算CCI值,这里选择了10周期
-3. 根据当前K线的CCI值判断趋势方向
-    - CCI >= 0, Defines as Uptrend 
-    - CCI < 0, Defines as Downtrend
-4. 计算上轨和下轨
-    - 上轨 = 最高价 + ATR * Multiplier
-    - 下轨 = 最低价 - ATR * Multiplier
-5. 在不同的趋势方向上,保存并更新上轨和下轨
-    - 当CCI >= 0时,如果上轨 < 前一根K线的上轨,则重新赋值;如果CCI < 0时,如果下轨 > 前一根K线的下轨,则重新赋值
-    - 这样可以避免channel随着价格反向移动
-6. 根据CCI值进入上轨或下轨作为entry signal
-7. 根据CCI值穿越0轴作为exit signal
-8. 设置止盈止损Exit
-
-## 策略优势
-
-该策略结合了趋势判断和通道突破,可以有效跟踪趋势。
-
-1. 使用CCI判断价格趋势方向,可以快速判断多空趋势
-2. ATR通道设置止损止盈,可以控制风险
-3. 当价格反转时,上下轨能够快速调整方向,避免被困在原趋势的通道中
-4. 通过CCI的0轴交叉作为退出信号,可以跟随趋势且避免反转坑害
-
-## 策略风险及优化
-
-1. CCI和ATR参数设置需要优化,不同周期及参数下,效果可能会有较大差异
-2. 虽然可以通过通道调整避免局促,但如果出现剧烈反转,仍然可能获利不足或亏损
-3. 停损点设置需要优化,适当放宽止损范围,避免过于频繁停损
-4. 可以结合其他指标过滤entry signal,优化entry机会
-5. 可以通过与更高周期趋势指标结合,避免反向交易
-
-## 总结
-
-该策略整体来说是一个简单实用的趋势跟踪策略。优点是思路清晰,易于实现,可以快速抓住趋势机会。但其中的参数设置、止损范围等都需要根据市场情况进行优化调整。与其他指标组合使用可以进一步增强策略效果。总体来说,该策略作为趋势跟踪入门策略还是不错的,值得学习借鉴。
-
-||
 
 
 ## Overview
@@ -98,7 +53,6 @@ This strategy combines trend identification and channel breakout, which effectiv
 
 Overall this is a simple and practical trend following strategy. Its advantage is clear logic and ease of implementation for quickly capitalizing on trends. But parameters like stop loss range require optimization based on market conditions. Combining with other indicators can further enhance the strategy. As a beginner trend following strategy, it is worth learning and referencing.
 
-[/trans]
 
 > Strategy Arguments
 

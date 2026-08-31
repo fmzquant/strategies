@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b986db224a47a7740b.png)
-[trans]
-## 概述
-
-本策略基于30日、60日和200日简单移动平均线的金叉和死叉形成交易信号。当短期移动平均线上穿长期移动平均线时,形成买入信号;当短期移动平均线下穿长期移动平均线时,形成卖出信号。该策略结合了趋势跟踪和均线交叉的优点,既可以抓住长期趋势,也可以在趋势转折点形成交易信号。
-
-## 策略原理
-
-本策略使用3条不同周期的简单移动平均线:30日线、60日线和200日线。其中,30日线代表短期趋势,200日线代表长期趋势,60日线作为中间参考。当短期趋势线上穿长期趋势线时,表示行情由盘整转为上涨,产生买入信号;当短期趋势下穿长期趋势线时,表示行情趋势由上涨转为盘整,产生卖出信号。
-
-该策略同时结合了止损和止盈点来控制风险。在买入后设置了40点的止损空间,以控制亏损;同时设置了40点的止盈空间以锁定 profit。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 结合趋势跟踪和瞬时信号的优点,既考虑了长期趋势判断,又SETS短期买卖点。
-
-2. 均线交叉 timesteps 明确,不易产生多次重复信号。
-
-3. 止损止盈设置合理,可以有效控制单笔亏损。
-
-4. 策略逻辑简单清晰,容易理解和实现。
-
-5. 移动平均线技术成熟稳定,应用广泛。
-
-## 风险分析
-
-本策略也存在一些风险:
-
-1. 短期止损可能被击穿,无法完全避免亏损。
-
-2. 金叉死叉信号可能出现假突破。
-
-3. 大盘震荡时,止损止盈难以设置合理。
-
-4. 参数設置如周期选择存在主观性,可能影响策略表现。
-
-## 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 创新止损机制,采用像跟踪止损、指数移动止损等动态止损方式,降低亏损风险。
-
-2. 优化参数选择,如测试更多周期参数的优劣,寻找最优参数组合。
-
-3. 增加仓位管理机制,通过资金管理优化整体 profit。
-
-4. 结合 momentum 指标等过滤假突破。
-
-5. 增加机器学习算法,利用大データ训练出更优规则。
-
-## 总结
-
-本文详细介绍了基于均线金叉死叉的交易策略。该策略以 30、60、200 日移动平均线交叉作为交易信号,兼顾趋势跟踪和瞬时点选时定位。止损止盈设置合理,可以有效控制单笔亏损。但也存在被套、假突破等风险。我们可以从改进止损方式、参数优化、资金管理等多方面进行策略增强和优化,使得策略更加稳定profit。
-
-||
 
 ## Overview 
 
@@ -121,7 +65,6 @@ The strategy can be enhanced and optimized from the following aspects:
 
 In summary, this article introduces a trading strategy based on moving average golden crosses and death crosses. It takes the crossovers of 30-day, 60-day and 200-day moving averages as trading signals, combines trend following and timing selection. Reasonable stop-loss and take-profit setups effectively control per trade loss. But risks like whipsaws and false breakouts remain. We can enhance the strategy from multiple aspects like improving stop-loss methods, parameter optimization, capital management to make it more stable and profitable.
 
-[/trans]
 
 
 

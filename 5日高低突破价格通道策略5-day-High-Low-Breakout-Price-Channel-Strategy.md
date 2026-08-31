@@ -11,27 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“5日高低突破价格通道策略”。该策略通过统计最近5个交易日的最高价和最低价构建价格通道,在价格突破通道时进行趋势交易。
-
-具体步骤如下:
-
-1. 计算最近5个交易日的最高价和最低价。
-
-2. 取最高的2个最高价构建上轨,取最低的2个最低价构建下轨。
-
-3. 当价格上涨超过上轨一定比例时(如0.3%),产生买入信号。
-
-4. 当价格下跌超过下轨一定比例时,产生卖出信号。 
-
-5. 入场后以第二高低位作为止损位,或追踪一定比例止盈(如0.5%)后平仓。
-
-该策略的优势是通过突破关键的最高/低价格来判断趋势转折点。突破通道代表价量集中推动价格。但需要防止在盘整中产生过多无效信号。
-
-总体来说,关注关键价格区域的突破是较为经典的趋势跟踪策略。但交易者仍需要辅助其他指标确认,并优化参数,以发挥该策略最大效用。
-
-
-||
 
 This strategy is named "5-day High-Low Breakout Price Channel Strategy". It constructs a price channel using the highest high and lowest low prices over the past 5 trading days, and trades breakouts of the channel.
 
@@ -51,7 +30,6 @@ The advantage is using key high/low price breakouts to determine trend reversal 
 
 In summary, watching key price area breakouts is a classical trend following approach. But traders still need confirmation with other indicators and parameter optimization to maximize the strategy's utility.
 
-[/trans]
 
 > Strategy Arguments
 

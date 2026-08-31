@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ba247f4af7cc0f6d6e.png)
-[trans]
-
-
-### 概述
-
-本策略基于K线的盖尔特通道指标设计,通过判断价格突破通道上下轨,实现趋势追踪交易。该策略适合中短线持仓,可以有效跟踪趋势,获利潜力较大。
-
-### 策略原理
-
-该策略主要通过建立盖尔特通道判断价格趋势和潜在支撑阻力。具体来说,策略首先计算K线的EMA均线,然后在其上下各添加keltnerDeviation倍的ATR波幅作为上下轨构建盖尔特通道。当价格上穿下轨时做多入场,下穿上轨时做空入场,实现趋势追踪。此外,策略还提供了一个closeOnEMATouch参数,用于控制是否在价格触及EMA均线时主动止损退出。
-
-该策略的核心逻辑主要集中在三部分:
-
-1. 构建盖尔特通道指标,包括计算EMA均线、ATR波幅、上下轨;
-
-2. 判断突破入场信号,包括价格上穿下轨做多和下穿上轨做空;
-
-3. 提供closeOnEMATouch参数控制是否在价格触及EMA时止损。
-
-通过这三部分的组合,实现了基于通道指标的趋势追踪交易策略。
-
-### 优势分析 
-
-与传统的移动止损策略相比,该策略具有如下几点主要优势:
-
-1. 能够有效跟踪市场趋势和大方向;
-
-2. 中短线持仓时间较长,避免过于频繁交易;
-
-3. 由于考量波动率因素,对异常行情有一定的过滤效果;
-
-4. 提供止损机制控制风险。
-
-所以,该策略非常适合对市场大趋势判断准确,追求较大资金利用率的量化交易者。
-
-### 风险分析
-
-尽管该策略具有一定的优势,但在实际交易中也存在以下主要风险:
-
-1. 行情突然剧烈反转是最大的风险,会导致止损点被抛破产生较大亏损;
-
-2. 价格在通道内部震荡时,容易出现止损后再反转的情况;
-
-3. 交易频率可能过高,导致交易成本和滑点损耗严重影响盈利。
-
-为控制这些风险,我们可以适当调整参数,使通道范围更合理,或者选择价格波动较小的交易品种,亦可适当拉大止损距离。当然最关键的还是要对市场判断保持足够审慎。
-
-### 策略优化方向
-
-考虑到该策略可能存在的风险,我们可以从以下几个方面进一步优化:
-
-1. 增加止损方式的多样性。目前仅提供了closeOnEMATouch一种止损方式,可以增加其它辅助止损指标,实现更全面和立体化的风险控制。
-
-2. 优化参数设置。可以引入更多自动化方法来优化参数,使盖尔特通道的参数设置更加智能和适应性强。
-
-3. 增加仓位控制。如引入资金管理模块,可以根据回撤情况或市场波动率动态调整仓位。
-
-4. 增加过滤条件。在入场和止损方面都可以设置更多辅助过滤条件,避免因错误信号造成不必要的损失。
-
-
-### 总结
-
-本策略总体来说是一个较为典型的基于指标通道的中短线趋势追踪策略。相比简单的移动止损策略,其通过波动率因素提供了一定的风险调整功能,可以有效跟踪趋势获利。不过在实盘中仍需要注意反转和震荡的风险,通过参数优化、止损方式扩展以及增加过滤条件等手段进一步完善。
-
-|| 
 
 ### Overview
 
@@ -136,7 +71,6 @@ Considering the potential risks, we can further optimize the strategy in the fol
 
 In summary, this is a typical medium-term trend following strategy based on channel indicators. Compared to simple moving stop loss strategies, it provides a certain risk adjustment function through volatility factors and can effectively follow trends to make profits. However, risks of reversal and oscillation still need to be watched out for in live trading. Parameter optimization, expanding stop loss methods and adding filtering conditions can help further improve the strategy.  
 
-[/trans]
 
 > Strategy Arguments
 

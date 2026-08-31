@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/131f7c44e78fcdf3912.png)
 
-[trans]
-#### 概述
-该策略是一个基于柱形态识别的趋势跟踪系统,主要通过识别市场中的"大象柱"(即显著大于平均大小的价格柱)来捕捉潜在的趋势起点。策略的核心特点是采用动态调整的止损方案,根据价格运动的进展情况自适应地调整止损位置,既保护既得利润又给予价格足够的波动空间。
-
-#### 策略原理
-策略的运作基于以下几个关键步骤:
-1. 计算过去特定周期内柱体的平均大小作为基准值
-2. 识别当前柱体是否符合"大象柱"特征:
-   - 柱体大小显著超过平均值(可配置倍数)
-   - 收盘价位于高低点的特定百分比范围内
-   - 或符合锤子/倒锤子形态特征
-3. 根据大象柱的方向确定交易方向
-4. 设置初始止损和获利目标
-5. 随着价格向有利方向发展,动态调整止损位置:
-   - 达到60%目标时将止损移至成本线以上
-   - 达到80%目标时进一步收紧止损
-   - 达到90%目标时大幅收紧止损并调整获利目标
-
-#### 策略优势
-1. 动态风险管理:通过动态调整止损位置,策略能够在保护利润的同时给予趋势充分发展的空间
-2. 形态识别的灵活性:除了传统的大象柱,还包含对锤子线等特殊形态的识别
-3. 参数可调性强:关键参数如柱体大小倍数、目标百分比等均可根据市场特点灵活调整
-4. 风险收益比合理:初始止损相对保守,但随着趋势发展动态调整以获取更大收益
-
-#### 策略风险
-1. 假突破风险:大象柱形态可能出现假突破,需要合理设置过滤条件
-2. 震荡市场风险:在横盘震荡市场中可能频繁触发止损
-3. 止损调整风险:过于激进的止损调整可能导致提前出场
-4. 参数敏感性:策略效果对参数设置较为敏感,需要充分测试
-
-#### 策略优化方向
-1. 增加市场环境过滤:
-   - 添加趋势指标以识别当前市场环境
-   - 在不同市场环境下采用不同的参数设置
-2. 完善止损机制:
-   - 引入跟踪止损
-   - 基于波动率动态调整止损距离
-3. 优化入场时机:
-   - 结合成交量指标
-   - 添加反转确认信号
-4. 改进获利方式:
-   - 实现部分获利退出
-   - 基于市场结构动态调整获利目标
-
-#### 总结
-该策略通过识别市场中的关键价格形态并采用动态风险管理方法,实现了对趋势的有效跟踪。策略的核心优势在于其自适应的止损管理机制,能够在保护利润的同时充分把握趋势机会。通过进一步优化市场环境识别和风险管理机制,策略有望在不同市场环境下都能取得稳定表现。
-
-|| 
 
 #### Overview
 This strategy is a trend following system based on bar pattern recognition, primarily identifying "elephant bars" (price bars significantly larger than average) to capture potential trend initiation points. The strategy's key feature is its dynamic stop-loss adjustment scheme, which adaptively modifies stop-loss positions based on price movement progress, both protecting profits and allowing sufficient price flexibility.
@@ -105,7 +57,6 @@ The strategy operates based on the following key steps:
 
 #### Summary
 The strategy effectively tracks trends through key price pattern identification and dynamic risk management. Its core advantage lies in the adaptive stop-loss management mechanism, which protects profits while maximizing trend opportunities. Further optimization of market environment recognition and risk management mechanisms shows promise for consistent performance across different market conditions.
-[/trans]
 
 
 

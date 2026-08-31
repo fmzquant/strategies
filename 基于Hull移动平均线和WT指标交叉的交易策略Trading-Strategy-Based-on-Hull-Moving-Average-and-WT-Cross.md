@@ -9,95 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略主要融合了Hull移动平均线和WT指标的交叉信号,以发挥各自指标的优势,在趋势判断和入场时机选择上实现更准确的决策。
-
-## 策略原理
-
-该策略主要由Hull移动平均线和WT指标交叉信号组成。
-
-Hull移动平均线部分,通过计算短期和长期Hull MA,并填充颜色来判断趋势方向。计算公式为:
-
-短期Hull MA = WMA(2*WMA(n/2) - WMA(n), sqrt(n)) 
-
-长期Hull MA = WMA(WMA(n/3)*3 - WMA(n/2), n/2)
-
-其中WMA为加权移动平均线。当短期线上穿长期线时为看涨信号,否则为看跌信号。
-
-WT指标部分,通过计算WT指标的多空均线,并观察均线的交叉情况来判断入场。计算公式为:
-
-TCI = (Close - EMA(Close,n1)) / (k * STD(Close - EMA(Close,n1),n1)) 
-
-WT1 = EMA(TCI,n2)
-
-WT2 = SMA(WT1,m)
-
-其中TCI为Trend Composite Index,反映价格与通道中线EMA的偏离程度;WT1为TCI的EMA平滑值,WT2为WT1的SMA值,m一般取4。当WT1上穿WT2时为多头信号,WT1下穿WT2时为空头信号。
-
-综合Hull MA的趋势判断和WT指标的交叉信号,可以在趋势方向正确的前提下进入场内。
-
-## 优势分析
-
-该策略综合运用Hull MA和WT指标的优势,具有以下几点优势:
-
-1. Hull MA通过修改移动平均线的计算方式,能更快捕捉价格变化趋势,并有效滤除市场噪音,判断趋势准确可靠。
-
-2. WT指标利用通道内价格波动特性,能快速捕捉转折点,发出较准确的交易信号。
-
-3. 两者结合使用,既考虑了趋势判断,也关注交叉信号,可在趋势面发力的同时控制风险。
-
-4. Hull MA平滑参数和WT指标参数都可自定义设置,可以根据不同品种特性和交易偏好进行调整优化。
-
-5. 可单独使用Hull MA或WT指标的交叉信号进行交易,也可以结合使用,兼顾趋势跟踪和交叉验证。
-
-6. 可设置止损止盈策略,有效控制单笔交易风险。
-
-## 风险分析
-
-该策略主要存在以下几点风险:
-
-1. Hull MA和WT指标都对价格进行了一定程度的模糊化处理,可能会稍有滞后,导致入场时机不够精确。
-
-2. WT指标容易产生多头背驰和空头背驰的假信号,如果不结合趋势判断,会增加交易风险。
-
-3. 参数设置不当也会对交易结果产生影响,需要根据品种特点不断测试优化。
-
-4. 在趋势震荡的时候,止损可能被频繁触发,给交易带来一定损失。
-
-对应风险,可以通过以下方法加以优化和改进:
-
-1. 调整Hull MA和WT参数,找到最佳平衡点。也可以测试其它指标与Hull MA组合使用。
-
-2. 增加趋势判断机制,避免WT指标在无明确趋势时的错误信号。
-
-3. 利用回测和模拟交易找出最佳参数,并设置合理的止损幅度。
-
-4. 在趋势不明朗时,降低仓位规模,或暂时不交易。
-
-## 优化方向 
-
-该策略可以从以下几个方向进行进一步优化:
-
-1. 测试不同的移动平均线与WT指标组合,寻找更好的平衡点。如KAMA,TEMA等。
-
-2. 增加其它指标判断,如震荡指标,Bollinger Bands等,提高决策准确性。
-
-3.优化参数设置,通过回测和模拟寻找最佳参数组合。可建立参数优化程序,快速寻找最优参数。
-
-4. 优化止损策略,如运用移动止损、振荡止损、由近及远止损等,降低止损被触发的概率。
-
-5. 优化仓位管理策略,在趋势不明确时主动降低交易频率和仓位规模,减少风险。
-
-6. 增加机器学习等高级技术,实现更智能的交易决策和参数自适应。
-
-## 总结
-
-该策略综合Hull MA平滑移动平均线和WT指标交叉特性,兼具趋势判断和交叉验证优势。在确保正确方向的前提下进行交易,可以有效控制风险。 通过优化参数设置、止损策略、仓位管理等方式,可以进一步提升策略的稳定性和交易效果。舍入其它指标判断和智能交易技术也是未来的优化方向。总体来说,该策略具有简单可靠、易优化等特点,是一种实用的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -186,7 +97,6 @@ The strategy can be further optimized from the following aspects:
 
 This strategy combines the Hull MA smoothing and WT crossing strengths for both trend judgment and validation. Trading with confirmed direction helps control risks. Further improvements can be made on parameter optimization, stop loss strategies, position sizing etc. Integrating other indicators and intelligent techniques are also future optimization directions. Overall, this is a practical trend following strategy with simplicity, reliability and ease of optimization.
 
-[/trans]
 
 > Strategy Arguments
 

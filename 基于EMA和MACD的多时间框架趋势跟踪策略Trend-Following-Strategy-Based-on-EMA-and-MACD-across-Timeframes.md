@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1beb144b9d6cea676e5.png)
-[trans]
-
-## 概述
-
-该策略综合利用EMA均线和MACD指标在多时间框架下识别趋势信号,以捕捉中长线趋势。当短期趋势与中长期趋势方向一致时,采取趋势跟踪操作。同时,策略利用ATR指标设定止损止盈,对波动进行风险控制。
-
-## 策略原理
-
-策略以50日EMA线和100日EMA线判断中长期趋势方向。当短期趋势由MACD指标识别时,判断短期趋势方向与中长期趋势方向是否一致。如果一致,采取趋势跟踪操作。
-
-具体来说,当MACD快线上穿慢线,并且 closes > 50日EMA 且 closes > 100日EMA时,做多;当MACD快线下穿慢线,并且 closes < 50日EMA 且 closes < 100日EMA时,做空。
-
-此外,策略利用ATR指标计算波动范围,设定止损止盈价格。以close价格的一定倍数的ATR作为止损位,以close价格的一定倍数的ATR作为止盈位。
-
-## 优势分析
-
-1. 结合EMA均线和MACD指标,可以在多时间框架下识别趋势信号,防止错失中长线趋势
-2. 利用ATR指标根据市场波动设定止损止盈位,可以有效控制风险
-3. 避免交易市场中性区域,减少不必要损失
-
-## 风险分析
-
-1. EMA均线存在滞后性,可能错过转折点
-2. MACD指标存在多个时间周期,参数设置会影响结果  
-3. ATR波动范围无法完全代表未来价格波动,无法完全规避风险
-
-**对策:**
-
-1. 结合其他指标确认信号,规避EMA滞后问题  
-2. 调整MACD参数,优化结果  
-3. 合理设定ATR倍数,控制最大损失
-
-## 优化方向  
-
-1. 测试不同的EMA均线周期组合
-2. 优化MACD参数设置
-3. 利用机器学习方法自动寻找最优ATR止损止盈倍数
-
-## 总结
-
-该策略综合利用EMA、MACD和ATR等指标,实现多时间框架下的趋势跟踪操作。通过参数优化,有望获取较好的策略收益率。同时也需要防范指标滞后、参数调整及波动控制不当等风险,需要继续优化与提升。
-
-|| 
 
 ## Overview  
 
@@ -102,7 +59,6 @@ Also, the strategy uses ATR indicator to calculate range of fluctuations and set
 
 The strategy combines EMA, MACD and ATR indicators to implement trend following operations across timeframes. Through parameter optimization, it has the potential to achieve good strategy return rates. Also need to prevent risks including indicator lagging, improper parameter adjustment and fluctuation control, and continue to optimize and enhance.
 
-[/trans]
 
 > Strategy Arguments
 

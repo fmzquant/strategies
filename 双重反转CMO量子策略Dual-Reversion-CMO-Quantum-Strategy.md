@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1cfc6dee3502b9d9ae1.png)
-[trans]
-
-## 概述
-
-该策略是一种双重反转策略,结合了123反转指标和CMOWMA量子指标,实现价格反转信号的双重确认,具有红绿染色K线视觉效果。
-
-## 策略原理
-
-策略由两部分组成:
-
-1. 123反转指标
-
-    - 使用收盘价与昨日收盘价的大小关系判断价格上涨或下跌
-    - 利用Stochastic指标的快线和慢线交叉来确认反转信号
-    - 当符合条件时产生做多或做空信号
-
-2. CMOWMA量子指标
-
-    - 使用CMO指标测量价格动量
-    - 对CMO指标进行WMA加权移动平均
-    - CMO指标高于(低于)其WMA时看多(空)
-
-两部分信号同向时进入仓位。
-
-## 策略优势
-
-1. 双重确认机制,可过滤假断和减少无谓头寸
-2. 红绿K线染色,形成视觉效果,容易判断市场状况
-3. 利用反转和动量指标的组合,整体稳定性良好
-4. 简单参数设置,适合多种品种,容易实施
-
-## 策略风险
-
-1. 反转后可能再反转,存在尾盘风险
-2. 仓位频繁切换,产生过多交易费用
-3. 参数设置不当可能造成信号过多或过少
-4. CMO参数需要根据品种特点调整
-
-可以通过适当放宽反转条件、增加持仓时间、优化参数组合等方法降低风险。
-
-## 策略优化
-
-1. 可以测试不同Stochastic参数对效果的影响
-2. 可以结合其他指标如MACD、KDJ等替代或添加确认
-3. 可以测试不同CMO和WMA长度参数的优化
-4. 可以尝试在特定级别添加止损止盈
-5. 可以设置过滤条件,控制开仓频率
-
-## 总结
-
-该策略整体稳健,参数简单,容易实施,同时结合价格反转和动量指标,形成有效的双重信号过滤机制,可以过滤假信号,且K线染色效果直观。通过参数优化和风险控制,可以进一步提升策略表现。
-
-||
 
 ## Overview
 
@@ -114,7 +61,6 @@ Risks can be reduced by relaxing reversal conditions, increasing holding period,
 
 The strategy is robust overall with simple parameters, easy to implement, combining price reversal and momentum indicators to form an effective dual-signal filtering mechanism to eliminate false signals. K-line coloring provides intuitive visuals. Further performance improvements can come from parameter optimization and risk control.
 
-[/trans]
 
 > Strategy Arguments
 

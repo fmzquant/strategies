@@ -11,89 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d761aeb2d9d27ca74e.png)
 
-[trans]
-
-## 概述
-
-本策略利用移动平均线作为交易信号,结合用户自定义的止损止盈比例,实现了一个完整的指标驱动型的止损止盈策略。该策略可以自动进行入场、止损、止盈,无需人工干预,适合自动交易。
-
-## 策略原理  
-
-本策略的核心逻辑是:
-
-1. 使用3周期的SMA作为交易信号,当SMA上穿0时做多,SMA下穿0时做空;
-
-2. 入场后,用户可以自定义止损比例和止盈比例;
-
-3. 根据入场价格和用户设置的止损比例,自动设置止损线;
-
-4. 根据入场价格和用户设置的止盈比例,自动设置止盈线;
-
-5. 当价格触碰止损线时,自动止损;当价格触碰止盈线时,自动止盈;
-
-6. 平仓后,自动撤销止损止盈订单。
-
-具体来说,策略通过sma函数计算3周期的移动平均线,并将其值赋给ma变量。
-
-接着计算多头入场线long,其值为ma加上ma的百分之lo。lo是用户可调参数,代表做多时的入场线偏移量。
-
-当ma上穿0时,表示开始做多,通过strategy.entry函数入场做多,入场价格为long。 
-
-同时,设定止损和止盈价格。止损价格为入场价格减去入场价格的sl%。sl是用户可调参数,代表止损比例。止盈价格为入场价格加上入场价格的tp%。tp是用户可调参数,代表止盈比例。
-
-通过strategy.entry函数分别设置止损单和止盈单。当价格触碰止损线时,会自动止损;当价格触碰止盈线时,会自动止盈。
-
-平仓后,通过strategy.cancel函数自动撤销止损止盈订单。
-
-## 策略优势
-
-本策略具有以下优势:
-
-1. 自动化程度高,无需人工干预,适合自动交易;
-
-2. 可自定义止损止盈比例,控制风险;
-
-3. 交易信号来自指标,避免假突破;
-
-4. 可视化止盈止损,直观明了;
-
-5. 策略逻辑清晰简单,容易理解实现。
-
-## 风险及解决方法
-
-本策略也存在一些风险:
-
-1. 指标产生假信号的风险。解决方法是优化参数,确保指标稳定可靠。
-
-2. 止损止盈比例设定不合理,可能过于宽松或过于激进。解决方法是针对不同市场调整止损止盈参数。
-
-3. 突破入场容易被套。解决方法是结合趋势、量价指标等过滤入场信号。
-
-4. 回撤可能较大。解决方法是降低仓位标准,或追踪止损。
-
-## 策略优化方向 
-
-本策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线的参数,使其更加可靠;
-
-2. 优化入场条件,避免假突破,可加入量价确认; 
-
-3. 优化止损止盈策略,可以使用动态止损、跟踪止损等;
-
-4. 优化资金管理,调整仓位标准,降低单笔风险;
-
-5. 优化过滤入场时机,结合趋势、支撑阻力位等指标。
-
-6. 加入 Pyramiding 进行加仓策略,以提高盈利能力。
-
-7. 针对特定品种进行参数优化。
-
-## 总结
-
-本策略作为一个指标驱动型的止损止盈策略,具有交易自动化、风险控制的优势,适合定量交易。但也存在一些需要优化的方向,如优化指标参数、入场过滤、止损止盈策略、资金管理等。总体来说,本策略提供了一个简单可靠的交易技术框架,在此基础上可以进行扩展和优化,使其成为一个更强大的策略。
-
-|| 
 
 ## Overview
 
@@ -175,7 +92,6 @@ Some directions to optimize the strategy:
 
 This strategy provides a simple and reliable technical framework for indicator-driven stop loss and take profit with advantages like automation and risk control. It is suitable for algorithmic trading. There are also many aspects that can be improved and optimized, such as indicator parameters, entry filters, stop loss/take profit strategies, risk management etc. With further extensions and optimizations, it can become an even more powerful trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

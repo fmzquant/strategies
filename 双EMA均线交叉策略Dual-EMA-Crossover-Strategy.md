@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/193764478ebe6c4e4f5.png)
-[trans]
-
-## 概述
-
-双EMA均线交叉策略是一种常用的趋势跟踪策略。该策略使用两个不同周期的EMA均线,当短周期EMA上穿长周期EMA时生成买入信号,当短周期EMA下穿长周期EMA时生成卖出信号,以捕捉价格趋势的变化。
-
-## 策略原理  
-
-该策略的核心逻辑基于EMA均线的“金叉死叉”原理。EMA均线能够有效平滑价格数据,提示趋势方向。短周期EMA线能较快地响应价格变动,而长周期EMA线对噪声相对不敏感,能反映长期趋势。当短周期EMA上穿长周期EMA时,被视为价格上涨势头增强的信号;当短周期EMA下穿长周期EMA时,被视为价格下跌势头加剧的信号。策略根据这一原理发出买入和卖出信号。
-
-具体来说,该策略使用 length1 和 length2 参数设置两个EMA均线的长度。demaVal1 是长度为 length1 的 EMA 均线,demaVal2 是长度为 length2 的 EMA 均线。二者计算方法为:
-
-    demaVal1 = EMA(close, length1)  
-    demaVal2 = EMA(close, length2)
-
-其中 EMA() 是计算EMA均线的函数。当 demaVal1 上穿 demaVal2 时生成买入信号 demaCrossover,下穿时生成卖出信号 demaCrossunder。策略根据这两个信号发出交易指令。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 策略逻辑简单易懂,容易实现。
-2. 均线交叉理论成熟,应用广泛。
-3. 可配置参数长度灵活,适用于不同市场环境。
-4. 可通过优化参数提高策略效果。
-
-## 风险及优化  
-
-该策略也存在一些风险:
-
-1. 当市场不趋势时,EMA交叉信号可能出现频繁的虚假信号。
-2. 默认参数可能不适用于所有品种,需要根据历史数据针对性优化。 
-
-根据以上风险,可从以下几个方面进行优化:
-
-1. 调整 EMA 周期参数,适配不同周期行情。
-2. 增加过滤条件,避免虚假信号。例如拟合优度指标、交易量指标等。
-3. 结合趋势、支持阻力位等技术指标,提高策略效果。
-
-## 总结
-
-双EMA均线交叉策略整体来说是一种简单实用的趋势跟踪策略。它承袭了均线交叉分析的成熟理论,在参数调整和过滤条件优化的前提下,可以适用于不同品种的趋势交易,具有良好的应用前景。
-
-||
 
 ## Overview  
 
@@ -96,7 +52,6 @@ Based on the above risks, the following aspects could be optimized:
 
 In conclusion, the Dual EMA Crossover Strategy is a simple yet practical trend following system. By inheriting the mature theories of EMA analysis and with proper parameter tuning and filter condition enhancements, it can be applied to trend trading across different instruments with sound application prospects.
 
-[/trans]
 
 > Strategy Arguments
 

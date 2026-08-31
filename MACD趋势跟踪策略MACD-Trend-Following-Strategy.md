@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/830b1dca0535cb6a50.png)
-[trans]
-
-## 概述
-
-MACD趋势跟踪策略是一种基于MACD指标的量化交易策略。该策略通过识别MACD指标金叉和死叉信号,来判断市场趋势,实现追踪股价趋势。
-
-## 策略原理
-
-MACD趋势跟踪策略的核心逻辑是:
-
-1. 计算MACD线和信号线。
-2. 当MACD线从下向上突破0时,记录此时的最高点,等待死叉信号。
-3. 当MACD线从上向下跌破0时,记录此时的最低点,等待金叉信号。
-4. 当发生金叉时,记录当前收盘价作为做多入场点,设置止损点,开仓做多。
-5. 当发生死叉时,记录当前收盘价作为做空入场点,设置止损点,开仓做空。
-6. 持有做多头寸时,如果收益率达到预设目标或回撤达到止损点,平仓获利了结。
-7. 持有做空头寸时,如果收益率达到预设目标或回撤达到止损点,平仓获利了结。
-
-通过这种趋势跟踪机制,该策略能及时捕捉市场趋势转折,实现盈利。
-
-## 优势分析
-
-MACD趋势跟踪策略具有以下优势:
-
-1. 策略信号来源唯一清晰,由MACD指标直接产生,避免信号干扰。
-2. 利用MACD指标的快慢线金叉死叉特征判断市场趋势方向,判断准确。 
-3. 及时追踪趋势转折,跟踪盈利能力强。
-4. 风险控制到位,有止损机制。
-
-## 风险分析
-
-MACD趋势跟踪策略也存在以下风险:
-
-1. MACD指标容易产生虚假信号,可能导致超短线操作亏损。
-2. 止损点设置不当,可能扩大单笔亏损。
-3. 追踪盈利比例和止损点难以平衡,存在过度追踪导致亏损的风险。
-
-针对上述风险,可以采取以下优化措施:
-
-1. 结合其他指标过滤虚假信号。
-2. 动态调整止损点。
-3. 优化追踪盈利比例和止损点的参数。
-
-## 优化方向 
-
-MACD趋势跟踪策略可以从以下方面进行优化:
-
-1. 优化MACD指标参数,降低虚假信号率。可以测试不同周期参数的MACD。
-
-2. 增加成交量等其他指标过滤信号。可以设置最小成交量条件。
-
-3. 设置动态追踪止损机制。可以根据波动率实时调整止损点。
-
-4. 优化打开头寸的信号判定逻辑。可以设置更严格的信号触发条件。
-
-5. 结合机器学习模型过滤信号。可以训练模型判断信号的可靠性。
-
-## 总结
-
-MACD趋势跟踪策略整体而言是一种较为成熟的量化策略。该策略利用MACD指标判断市场趋势方向,配合止损机制控制风险,能够有效跟踪股价趋势。但MACD指标本身也存在一定缺陷,容易产生虚假信号。因此该策略还有进一步优化的空间,主要集中在指标参数、止损机制、信号过滤等方面。
-
-||
 
 
 ## Overview
@@ -133,7 +71,6 @@ The MACD Trend Following Strategy can be optimized in the following aspects:
 
 In general, the MACD Trend Following Strategy is a relatively mature quantitative strategy. It utilizes the MACD indicator to determine market trend directions, and controls risks with stop loss mechanism, which can effectively track price trends. But the MACD indicator itself also has some flaws, easy to generate false signals. So there are rooms for further optimization of this strategy, mainly on aspects like indicator parameters, stop loss mechanism, signal filtering etc.
 
-[/trans]
 
 
 

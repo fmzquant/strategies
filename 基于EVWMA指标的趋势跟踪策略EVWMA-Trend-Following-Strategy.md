@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bca646f3b9703973ee.png)
-[trans]
-
-## 概述
-
-本策略基于EVWMA指标设计了一个简单的趋势跟踪策略。该策略使用快速线和慢速线构建EVWMA指标,在快线上穿慢线时做多,在快线下穿慢线时做空,实现趋势跟踪。
-
-## 策略原理
-
-该策略的核心指标是EVWMA,即弹性量加权移动平均线。它通过自身计算周期长度的方式,结合价格和交易量的信息,动态地反映市场趋势。
-
-具体来说,快速线的计算周期长度为最近10根K线的成交量之和,慢速线计算周期长度为最近20根K线成交量之和。每根K线的EVWMA按照“(前一日EVWMA × (周期长度-当前K线volume) + 当前K线收盘价 × 当前K线volume) / 周期长度”的公式计算。这样就同时结合了价格和交易量信息。
-
-当快速线上穿慢速线时,表示买入力量增强,做多;当快速线下穿慢速线时,表示卖出力量增强,做空。通过这样的快慢线组合,可以动态地捕捉市场趋势,实现趋势跟踪策略。
-
-## 优势分析
-
-本策略最大的优势在于利用EVWMA指标的动态周期设计,可以更快地响应价格和交易量的变化,实时捕捉市场趋势,这对于趋势跟踪策略非常适合。此外,相比传统移动平均线等指标,它结合了价格和交易量信息,可以过滤假突破。
-
-## 风险及解决方法
-
-该策略的主要风险在于EVWMA指标参数设置的问题。如果快线和慢线周期设定不当,可能导致产生大量假信号。此外,趋势跟踪策略本身 justes trendyțile consecințe în cazul inversării bruște a tendinței pieței.
-
-为了解决这些问题,可以通过优化参数,调整快线和慢线的计算周期,找到最佳参数组合。同时,可以设置止损来控制亏损风险。在市场可能发生重大转折的时间点,例如重要数据发布,可以考虑暂停策略,避开这个时间段。
-
-## 优化方向
-
-该策略还具有进一步优化的空间。例如,可以考虑加入其他指标,如交易量的突破、布林带等来确认信号,从而提高策略的稳定性。此外,不同品种和不同时间段参数组合的最优值可能会有所不同,可以建立参数自适应优化机制,根据实时数据调整参数。
-
-从交易面来看,还可以设计动态止损、跟踪止损等方法来控制风险。此外,不同品种和不同时间段参数组合的最优值可能会有所不同,可以建立参数自适应优化机制,根据实时数据调整参数。
-
-## 总结
-
-本策略利用EVWMA指标的动态周期设计和对交易量信息的考量,构建了一个简单有效的趋势跟踪策略。它可以快速响应价格变化,捕捉市场趋势。通过参数优化、风险控制等手段,可以进一步提升策略稳定性。该策略思路新颖,值得进一步探索与应用。
-
-||
 
 
 ## Overview  
@@ -79,7 +44,6 @@ On the trading aspects, dynamic stop loss, trailing stop loss and other means ca
 
 This strategy leverages the dynamic period design of the EVWMA indicator and incorporates volume information to construct an effective trend following strategy. It can respond quickly to price changes and capture market trends. With parameter optimization, risk control measures etc., the stability of the strategy can be further improved. The logic behind this strategy is innovative and worth further exploration and application.
 
-[/trans]
 
 > Strategy Arguments
 

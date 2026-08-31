@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12db182fed613036254.png)
-[trans]
-
-## 概述
-
-本策略的核心在于利用 T3 指标平滑移动平均线和 ATR 指标动态止损来识别趋势方向并跟踪趋势。该策略结合趋势跟踪和趋势反转机会,旨在在趋势行情中获得更大利润。
-
-## 策略原理
-
-该策略使用 T3 指标计算价格的平滑移动平均线,并使用 ATR 指标计算本周期的平均真实波动范围。当价格突破 ATR 动态止损时产生交易信号。具体来说,当价格上穿 ATR 止损线时产生买入信号,价格下穿 ATR 止损线时产生卖出信号。
-
-为了过滤假信号,该策略额外要求价格也必须突破 T3 移动平均线才能确认信号。此外,策略通过 ATR 值来计算止损位和止盈位,实现风险管理。
-
-## 优势分析
-
-相比传统移动平均线,T3 指标具有更高的灵敏性和更小的滞后性,可以更快速地捕捉价格趋势的变化。另外 T3 具有数学计算上的优点,可以提供更为准确平滑的移动平均线。
-
-ATR 值反映了当前市场波动程度和风险水平。ATR动态跟踪止损和止盈可以动态调整仓位规模,在趋势行情中获得更大利润,并在震荡行情中降低损失。
-
-## 风险分析
-
-该策略依赖指标计算,存在被套利的风险。此外,T3 平滑移动平均线和 ATR 动态止损都存在滞后的问题,可能错过价格快速反转的机会。可以适当调整参数或结合其它指标进行优化。
-
-在趋势震荡反转时,止损可能被突破导致亏损加大。可以适当放宽止损范围或使用别的参数例如 Handle 数值作为止损依据。
-
-
-## 优化方向
-
-- 可以调整 T3 指标参数,优化其灵敏度。
-
-- 可以测试不同的 ATR 周期参数,寻找最佳数值。
-
-- 可以尝试不同的风险回报系数,确定最优参数。
-
-- 可以加入其它指标过滤信号,例如 Money Flow Index。
-
-- 可以用机器学习方法自动优化参数组合。
-
-## 总结
-
-该策略整合了 T3 平滑移动平均线的趋势跟踪能力和 ATR 的动态止损调整能力。在参数优化和风险控制到位的情况下,有望获得良好的回报率。该策略既考虑了趋势跟踪又考虑了反转机会,是一种通用型的量化交易策略。
-
-||
 
 ## Overview  
 
@@ -92,7 +50,6 @@ When trend fluctuates and reverses, stop losses may be broken leading to greater
 
 This strategy integrates the trend tracking capability of the T3 smoothed moving average and the ATR's dynamic stop-loss adjustment capability. With proper parameter optimization and risk control, it promises good returns. The strategy considers both trend tracking and reversal opportunities, making it a versatile quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

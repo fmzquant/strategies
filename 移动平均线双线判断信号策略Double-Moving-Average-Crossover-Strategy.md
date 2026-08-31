@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19fd05c7f21cbbfb5a7.png)
-[trans]
-
-
-## 概述
-
-该策略采用了布林带指标和移动平均线进行判断信号,由Arnoud Legoux指标计算均线,结合Parabolic SAR进行入市信号判断。策略名称为“移动平均线双线策略”,既包含了移动平均线指标又包含了双线条件判断的特点。
-
-## 原理
-
-该策略主要判断布林带与移动平均线指标的关系,通过布林带指标中一定宽度的均线管带,与移动平均线的交叉做多空信号判断。
-
-具体来说,策略中采用了Arnoud Legoux移动平均线指标与Parabolic SAR指标的组合。
-
-Arnoud Legoux移动平均线指标是一种对传统移动平均线进行改进的指标。它与普通移动平均线相比,通过引入Offset偏移量,可以更加灵活地调整移动平均线的角度;同时通过Sigma值调整移动平均线的平滑度。
-
-Parabolic SAR指标则是一个非常常见的止损系统指标。它可以非常清晰地给出价格反转的信号,以追踪价格的变化趋势。当Parabolic SAR指标在价格下方时,代表目前处于看涨状态;反之,在价格上方时则代表看跌状态。
-
-该策略判断指标关系的逻辑如下:
-
-1. 判断日内是否收阳(收盘价高于开盘价)
-2. 判断Parabolic SAR是否低于最低价:是看涨信号
-3. 判断收盘价是否上穿Arnoud Legoux均线:代表价格突破该均线,也是看涨信号
-4. 同时满足以上3个条件时,产生看涨信号,做多
-
-判断看跌信号的逻辑相反,具体如下:
-
-1. 判断日内是否收阴(收盘价低于开盘价)  
-2. 判断Parabolic SAR是否高于最高价:是看跌信号
-3. 判断收盘价是否下穿Arnoud Legoux均线:代表价格跌破该均线,也是看跌信号  
-4. 同时满足以上3个条件时,产生看跌信号,做空
-
-## 优势
-
-该策略结合运用了布林带指标与移动平均线指标,兼顾了趋势判断和突破交易。具体优势如下:
-
-1. 移动平均线指标可以有效判断价格趋势方向
-2. Parabolic SAR指标可以准确判断价格反转点
-3. Arnoud Legoux移动平均线灵活性高,可以通过参数调整形状
-4. 结合双重指标判断,避免了单一指标误判的概率
-5. 通过日内阴阳判断,可进一步避免不必要的交易
-
-## 风险
-
-该策略也存在一些风险,主要如下:
-
-1. 参数设置不当可能导致交易频率过高或过低
-2. 双重指标组合判断时,参数匹配不当也会影响策略表现 
-3. 移动平均线类策略对震荡行情的适应性较差
-4. 策略未考虑资金管理因素,可能面临超额持仓风险
-
-对应解决方法如下:
-
-1. 参数优化,使指标匹配度更高
-2. 优化资金管理策略,控制单笔仓位
-3. 结合更多指标过滤器,降低误交易概率
-
-## 优化方向  
-
-该策略可优化的方向还有很多,主要如下:
-
-1. 在开发过程中引入机器学习模型,实现参数的自动优化
-2. 运用高级资金管理策略,如固定率下单,资金回撤控制等
-3. 引入更多辅助指标,构建复合交易系统,提高系统稳定性
-4. 优化回撤控制策略,引入止损方式避免亏损扩大
-5. 构建algo交易系统,连接更快速度的市场数据和下单渠道
-
-## 总结
-
-该策略整体运用了布林带与移动平均线双重指标判断,在参数优化和策略组合方面都有很大的优化空间。通过引入更多量化方法,该策略可以进一步优化成为一个稳定收益的算法交易策略。
-
-||
 
 
 ## Overview
@@ -150,7 +79,6 @@ There are many directions for optimizing this strategy:
 
 This strategy uses the double judgment of Bollinger Bands and moving average indicators. There is a large space for optimization in terms of parameter tuning and strategy combination. By introducing more quantitative methods, the strategy can be further optimized into a stable profit-generating algorithmic trading strategy.  
 
-[/trans]
 
 > Strategy Arguments
 

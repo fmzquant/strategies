@@ -9,49 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略利用9日EMA作为判断指标,根据价格对EMA的突破情况判断行情方向,属于典型的趋势跟踪策略。当价格突破EMA时入场做多/空,等待价格回调后止盈。
-
-### 策略原理
-
-计算9日EMA均线,以其作为多空分界线。当K线开盘价在EMA线下方而收盘价上方时,认为发生向上突破,此时做多入场;当开盘价在EMA线上方而收盘价下方时,认为发生向下突破,此时做空入场。 
-
-入场后设置止盈单,止盈价设置在该K线的最高价或最低价附近,即上涨突破止盈价为前一K线高点,下跌突破止盈价为前一K线低点。等待价格达到止盈点后结束交易。
-
-### 优势分析
-
-该策略利用EMA均线判断趋势方向,并在价格突破EMA时入场,可以有效跟踪趋势。止盈点靠近入场点位,适合捕捉短线回调。策略操作简单直接,容易实现自动化。
-
-EMA周期可自定义,适应性较强。止盈策略直接高效,避免久持亏损单。回测数据显示,在趋势明显的阶段,策略表现良好。
-
-### 风险分析
-
-该策略仅使用单一EMA指标,在震荡行情中难以识别趋势方向,存在产生过多误信号的可能。止盈点靠近入场点位,仓位时间过短也无法充分捕捉趋势行情。
-
-可以适当调整EMA周期参数,也可以加入其他技术指标进行辅助判断。优化止盈策略,如移动止盈、动态止盈等也可提高策略稳定性。资金管理方面控制单笔仓位规模也可降低风险。
-
-### 优化方向
-
-1. 测试优化EMA参数,找到更适合的周期参数。
-
-2. 增加量能指标、波动率指标等判断规则。
-
-3. 优化止盈策略,如引入移动止盈、动态止盈等。
-
-4. 结合更多技术指标,形成策略组合。
-
-5. 应用机器学习等方法判断行情趋势方向。 
-
-6. 进行严格的资金管理,控制单笔仓位规模。
-
-### 总结
-
-该策略为简单的EMA突破回调交易策略,优点是思路清晰、易于实现,但仅依靠单一EMA指标效果有限。通过引入多种技术指标优化可以提高稳定性。总体来说,其为量化交易提供了一个基础的策略思路。
-
-||
 
 
 ### Overview
@@ -94,7 +51,6 @@ Tuning the EMA period, or incorporating additional technical indicators could he
 
 The strategy is a simple EMA breakout pullback system, which is clear and easy to implement, but limited relying on single EMA. Incorporating more technical indicators could improve robustness. Overall it provides a basic quant trading strategy idea.
 
-[/trans]
 
 
 

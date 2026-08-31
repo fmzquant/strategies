@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/139ec6da5e272c29125.png)
-[trans]
-
-## 概述
-
-本策略名称为**多指标组合趋势追踪策略**(Multi-Indicator Trend Tracking Strategy),其利用Fisher变换指标、加权移动平均线(WMA)、相对强弱指标(RSI)以及均量线(OBV)等多个指标,判断市场趋势方向,实现趋势跟踪交易。
-
-## 策略原理  
-
-1. Fisher变换指标判断价格变化趋势和力度。当4个Fisher线同时变色时发出交易信号。  
-2. WMA判断大趋势方向。RSI过滤假信号。    
-3. OBV指标用于确认趋势。
-
-具体来说,Fisher变换指标包含1倍、2倍、4倍和8倍4条线。当4条线同时向上翻绿时产生做多信号,4条线同时向下翻红时产生做空信号。WMA判断大趋势方向,如果指标向上则判断为看涨,向下则判断为看跌。OBV用于确认趋势方向。相对强弱指标RSI过滤假信号。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. Fisher变换指标判断力度强劲,当4个Fisher线同时变色时,确保趋势发生反转的可能性很大。  
-2. WMA判断主要大趋势方向,避免逆势交易。    
-3. OBV指标确认趋势,避免trendless市场的假突破。  
-4. RSI指标过滤假信号,确保信号的可靠性。
-
-通过多个指标的组合应用,既确保了交易信号的准确性和可靠性,又具有趋势跟踪的能力,可以获得较好的策略效果。
-
-## 风险分析  
-
-本策略也存在一定的风险:  
-
-1. 如果行情出现盘整,Fisher线容易产生假信号。这时需依赖RSI过滤。  
-2. WMA参数设置不当也会影响判断 accurancy。    
-3. Fisher变换指标对超短线行情判断较差。  
-4. 若遇瀑布线,策略会产生巨额亏损。
-
-为降低风险,可适当调整RSI参数,优化WMA周期参数。同时可设置止损点,避免出现超大亏损。
-
-## 优化方向
-
-本策略还可从以下方面进一步优化:
-
-1. 可测试不同周期参数下策略效果,找到最佳参数组合。  
-2. 添加止损机制。当亏损达到一定比例时止损。
-3. 根据回测结果进一步调整Fisher变换指标的参数,找到指标判断最准确的参数组合。  
-4. 尝试添加其他指标过滤,如强弱指标、Bias等。
-5. 测试不同的开仓仓位大小设置。
-
-## 总结  
-
-本策略综合运用Fisher变换指标、WMA指标、OBV指标和RSI指标,判断市场的趋势方向。其判断信号精准,确认能力强,能够有效锁定趋势获利。通过参数优化,可进一步提高策略profit factor。总体来说,该策略通过指标组合判断,实现了高效的趋势跟踪交易,效果良好。
-
-|| 
 
 ## Overview  
 
@@ -110,7 +59,6 @@ This strategy can be further optimized from the following aspects:
 
 This strategy integrates Fisher Transform, WMA, OBV and RSI to determine the trend direction. It generates precise trading signals with strong confirmation capability, allowing to effectively lock in profits along the trend. With further parameter optimization, profit factor can be improved. In conclusion, through the combination of multiple indicators, this strategy effectively tracks the trend with good performance.
 
-[/trans]
 
 > Strategy Arguments
 

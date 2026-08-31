@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/155d164b06a893f145c.png)
-[trans]
-## 概述
-
-本策略综合运用一云延伸,移动平均聚散指标(MACD)和趋向指标(DMI)在多个时间框架上的信号,识别潜在的买入和卖出机会。它旨在为那些希望从短期和中期两个维度来审视市场的交易者提供参考。
-
-## 策略原理
-
-该策略基于15分钟(M15)和1小时(H1)图表上的一致信号来执行买入和卖出条件,同时参考4小时(H4)时间框架作为额外的确认。
-
-### 买入条件
-
-- M15、H1和H4时间框架上的价格高于一云延伸
-- H1图表上MACD线高于信号线,且两条线都高于0
-- H1图表上DI+线高于DI-线,ADX至少为25
-- M15图表上的MACD线高于0,DI+线高于DI-线,ADX也至少为25
-
-### 卖出条件
-
-- M15、H1和H4时间框架上的价格低于一云延伸  
-- H1图表上MACD线低于信号线,且两条线都低0
-- H1图表上DI-线高于DI+线,ADX至少为25
-- M15图表上的MACD线低于0,DI-线高于DI+线,ADX也至少为25
-
-### 入场和退出
-
-- 当所有买入条件满足时,建立多头仓位,表明出现跨时间框架的上涨势头
-- 当所有卖出条件满足时,建立空头仓位,表明出现跨时间框架的下跌势头
-- 当相反条件满足时平仓,表明潜在反转或势头丧失
-
-## 策略优势
-
-- 考虑多时间框架,提高决策的准确性
-- 一云延伸判断趋势方向和力度 
-- MACD判断短期和中期动量
-- DMI判断买卖力道及趋势活跃度
-- 组合多个指标,综合判断市场走向
-- 可调整参数自定义买卖条件
-- 可广泛应用于具明确趋势的市场
-
-## 策略风险
-
-- 多时间框架判断可能出现分歧,导致错误信号
-- 一云延伸若使用不当可能产生误导 
-- MACD和DMI均有滞后性,可能错过转折点
-- 需要同时监控多个时间框架指标
-- 需谨慎处理突发事件带来的巨大价格变动
-
-## 策略优化方向
-
-- 优化一云延伸、MACD和DMI的参数组合
-- 测试更多时间框架的结合,如日线等
-- 增加其他指标的确认,如波动率、移动平均线等
-- 参考更多历史数据优化买卖条件
-- 结合机器学习等方法动态优化参数
-
-## 总结
-
-本策略充分利用多时间框架分析和多个指标的优势,可有效识别趋势的方向和力度。通过参数调整可适用于不同品种,也可针对特定行情进行优化。但交易者仍须谨记指标本身的局限并采取适当的风险控制措施,整体而言该策略为判断市场提供了一个相对全面的框架。
-
-||
 
 ## Overview  
 
@@ -129,7 +69,6 @@ The strategy executes buy and sell conditions based on consistent signals from 1
 
 The strategy fully utilizes the advantage of multi-timeframe analysis and multiple indicators to effectively identify trend direction and strength. It can be adapted to different products through parameter tuning and optimized for specific market conditions. But traders should still be mindful of indicators' limitations and take appropriate risk control measures. Overall the strategy provides a relatively comprehensive framework to gauge the market.
 
-[/trans]
 
 > Strategy Arguments
 

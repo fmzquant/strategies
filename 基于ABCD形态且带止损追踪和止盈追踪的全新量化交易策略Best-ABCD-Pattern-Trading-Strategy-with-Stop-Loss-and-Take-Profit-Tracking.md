@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a75f9643f0b0d15320.png)
-[trans]
-### 一、策略概述
-
-该策略名称为“最佳ABCD形态交易策略(带止损追踪和止盈追踪)”。它是一个基于明确的ABCD价格形态模型进行交易操作的量化策略。主要思想是识别出完整的ABCD形态模型后,根据形态的方向做多做空,并设置止损和止盈追踪来管理头寸。
-
-### 二、策略原理  
-
-1. 使用布林辅助判断法识别价格的顶底分型点,得到价格的ZigZag曲线。
-
-2. 在ZigZag曲线上识别完整的ABCD形态模型,A、B、C、D四点需满足一定的比例关系。识别到符合条件的ABCD形态后,做多或做空。
-
-3. 做多做空后设置止损追踪来控制风险。止损开始时使用固定止损,当盈利达到一定比例后转为移动止损以锁定部分利润。
-
-4. 同样,对止盈线也进行追踪设置,以在获得足够利润后及时止盈,避免利润回吐。止盈追踪也分两阶段,先使用固定止盈获取部分利润,之后转为移动止盈继续追踪价格。
-
-5. 当价格触发移动止损或止盈时,平掉头寸,完成一次交易循环。
-
-### 三、策略优势分析  
-
-1. 使用布林辅助判断法识别ZigZag曲线,避免了传统ZigZag曲线的回溯问题,使交易信号更可靠。
-
-2. ABCD形态交易模型成熟稳定,交易机会比较充裕。并且ABCD形态方向明确,容易判断入市方向。
-
-3. 设置两阶段的止损止盈追踪,可以更好的控制风险和获得利润。移动止损止盈让策略适应更加灵活。
-
-4. 策略参数设计合理,止损止盈百分比、移动启动百分比都可以自定义,使用起来很灵活。
-
-5. 该策略可用于任何品种,包括外汇、加密货币和股票指数等。
-
-### 四、策略风险分析  
-
-1. ABCD形态虽然较为明确,但交易机会相对有限,不能保证足够的交易频率。
-
-2. 在震荡行情中,可能出现止损止盈频繁被触发的情况。这时需要适当调整参数,扩大止损止盈范围。
-
-3. 需要关注交易品种本身的流动性。流动性较差的标的,止损止盈难以准确执行。
-
-4. 策略对交易成本比较敏感,需要选择手续费低廉的券商和账户。
-
-5. 部分参数可以继续优化,比如移动止损和止盈的启动条件可以测试更多取值,找到最佳点位。
-
-### 五、策略优化方向  
-
-1. 可以结合其他指标,设置更多过滤条件,避免部分HW形态。这可以减少无效交易的出现。
-
-2. 增加对市场三段式结构的判断,只在第三段行情中寻找交易机会。这可以提高策略胜率。  
-
-3. 测试优化起始资金规模,找到最佳的起始资金水平。Too big too small都不利于获得最优回报率。
-
-4. 可以测试样本外数据,验证参数健壮性。这对掌握策略中长期稳定性非常必要。
-
-5. 继续优化移动止损/盈启动条件和滑点大小,提高策略执行效率。SETTINGS优化永无止境。
-
-### 六、策略总结  
-
-该策略主要依赖于ABCD价格形态进行判断和入市。设置两阶段式的止损止盈追踪来管理风险和收益。策略较为成熟稳定,但交易频率可能偏低。我们可以通过增加过滤条件来获得更高效的交易机会。此外,继续对参数和资金规模进行优化,也能进一步提升策略的稳定盈利能力。总体而言,该策略思路清晰,易于理解实现,是一款值得深入研究和应用的量化交易策略。
-
-||
 
 I. Strategy Overview  
 
@@ -126,7 +68,6 @@ VI. Strategy Summary
 
 The strategy mainly relies on ABCD pattern for market timing and entries. Two-stage trailing stop loss and take profit settings are used to manage risks and profits. The strategy is relatively mature and stable but trading frequency may be low. We can obtain more efficient trading opportunities by adding filters and conditions. Also further parameter tuning and capital sizing can improve its profit stability. Overall speaking, this is a strategy with clear logic and easy to understand, worth in-depth research and application in actual quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

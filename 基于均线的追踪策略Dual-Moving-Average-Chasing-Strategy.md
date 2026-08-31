@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/170652bf9606d7e20e3.png)
-[trans]
-## 概述
-
-该策略是一个基于均线的追踪策略。它利用均线的方向和candle的影线来判断价格趋势和力度,以决定entries和exits。核心逻辑是当第二条均线颜色改变时做多/空,然后利用第三条均线的强势信号来加仓,最多加5单。
-
-## 策略原理
-
-策略使用Heikin Ashi均线来判断趋势。具体来说,策略定义了3条均线:
-
-1. 第二条均线,用于判定趋势转折,当其颜色变化时进入场内
-2. 第三条均线,用于识别强势突破信号,以决定加仓
-
-AddEntry逻辑:
-
-1. 当第二均线颜色从红变绿时,做多
-2. 此时若第三均线是一个强势上涨信号(无下影线的绿色candle),则加仓
-3. 最多允许加5单
-
-Exit逻辑:
-
-1. 当任一均线颜色变化时,平仓
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用Heikin Ashi降噪,能减少假信号
-2. 双均线组合,判断入场时机更准确 
-3. 加仓机制追踪趋势,获利更高
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 双均线交叉容易造成剧烈止损
-2. 加仓过度可能增加亏损
-3. 需调整参数以适应不同品种和周期
-
-可通过止损,调整加仓次数,参数优化来控制风险。
-
-## 优化方向 
-
-该策略可从以下方面进行优化:
-
-1. 测试不同均线指标的参数设置
-2. 优化止损策略,如移动止损
-3. 根据不同品种分别测试参数
-4. 增加过滤条件,避免加仓过快
-5. 结合其他指标判断入场时机
-
-## 总结
-
-该策略整体来说是一个基于双均线方向性的追踪策略。它融合了趋势判断和突破判断的优点,通过加仓扩大获利。但也需要注意控制风险,适当调整参数。未来可从优化止损,参数调整等方面进行改进。
-
-||
 
 ## Overview
 
@@ -119,7 +64,6 @@ The strategy can be improved in the following aspects:
 
 In summary, this is a trend chasing strategy based on dual moving average directionality. It combines the advantage of trend and momentum analysis for expanded profits from adding positions. But risks need to be managed via stop loss and parameter tuning. Further improvements can be made in optimizing stops, tuning parameters etc.
 
-[/trans]
 
 
 

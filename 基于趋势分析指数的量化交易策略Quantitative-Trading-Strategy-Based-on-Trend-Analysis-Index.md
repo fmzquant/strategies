@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fe39b0418efb31439d.png)
-[trans]
-
-## 概述
-
-该策略的核心思想是利用移动平均线的斜率判断市场趋势,构建趋势分析指数(Trend Analysis Index,TAI)作为交易信号。当价格在趋势中运行时,移动平均线斜率增大;当价格在无明确趋势的区间内震荡时,移动平均线斜率减小。趋势分析指数增大表明进入趋势,减小表示趋势结束。
-
-## 策略原理
-
-该策略首先计算价格的简单移动平均线(X日移动平均线)。然后计算该移动平均线过去Y日的最高值和最低值,通过这两个extrema值计算移动平均线在过去Y日的波动范围。最后,通过将该Y日波动范围与价格比较,转换为0-1之间的标准化指标,即构建趋势分析指数。当指数高于某阈值时做多,低于某阈值时做空。
-
-## 优势分析
-
-该策略具有如下优势:
-
-1. 通过移动平均线斜率判断趋势运行情况,可有效捕捉中长线趋势
-2. 结合波动范围标准化,构建指数化指标,使交易信号更清晰
-3. 可自定义移动平均线参数及趋势判断的参数,适应不同市场环境
-4. 可选择反向交易,可用于跟踪或对冲其他策略
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 在震荡盘整中,容易产生错误信号
-2. 移动平均线参数设置不当可能错过趋势转换点
-3. 标准化参数设置不当可能错过较弱的趋势
-4. 反向交易时,亏损可能加大
-
-对应解决方法:
-
-1. 结合其他指标过滤信号
-2. 优化参数,找到最佳参数组合
-3. 调整标准化参数的上下阈值
-4. 谨慎使用反向交易功能
-
-## 优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 结合其他指标判断趋势,如BOLL通道等,使交易信号更可靠
-2. 添加止损策略,以控制单笔亏损
-3. 优化移动平均线的日数参数,使其更符合不同周期下的市场特征
-4. 训练最优的标准化参数,找到最佳的参数阈值
-5. 添加机器学习模型预测趋势概率,辅助交易
-
-## 总结
-
-该策略整体来说是通过移动平均线斜率判断趋势的中长线策略,可有效捕捉趋势,但也存在一定的假信号风险。通过与其他指标组合使用、加入止损、参数优化等手段可以使策略更加稳健可靠,本质上仍是一个比较简单的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -108,7 +58,6 @@ The strategy can be optimized in following aspects:
 
 In summary, this is a mid- to long-term trend following strategy based on the slope of moving average. It can effectively capture trends but also has some false signal risks. By combining with other indicators, adding stop loss, parameter optimization etc, the strategy can be more robust. Essentially it is still a simple trend tracking strategy.
 
-[/trans]
 
 > Strategy Arguments
 

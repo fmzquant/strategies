@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/129f7c4ac41a67f4e0a.png)
-[trans]
-
-## 概述
-这是一个基于移动平均线的指数ETF动量型趋势跟随策略。它利用快速移动平均线和慢速移动平均线的方向和斜率交叉来判断趋势方向,实现低风险指数ETF资产的动量型趋势跟随。
-
-## 策略原理
-该策略使用50周期和150周期的移动平均线。当快速移动平均线上穿慢速移动平均线,并且快速移动平均线的斜率大于阈值时,认为趋势转向,做多;当快速移动平均线下穿慢速移动平均线,或者快速移动平均线斜率小于阈值时,认为趋势反转,平仓。
-
-该策略简单直接地利用移动平均线的方向和斜率判断市场趋势,避免曲线拟合,有效控制风险。同时,移动平均线天然具有去噪特性,可以有效过滤市场噪音。
-
-## 优势分析
-这是一个低风险的指数ETF动量型趋势跟随策略,具有如下优势:
-
-1. 风险控制能力强。通过移动平均线过滤市场噪音,有效控制风险。
-2. 实现成本低。仅使用简单的移动平均线,实现成本低,易于实施。  
-3. 收益稳定。指数ETF本身波动小,配合趋势跟随,可以获得稳定的超额收益。
-4. 适应性强。可调整的参数较多,可以针对不同指数ETF进行优化。
-
-## 风险分析
-该策略也存在一些风险:
-
-1. 可能错过快速反转。使用移动平均线判断趋势,可能错过快速反转。
-2. 参数敏感。参数设置不当可能导致交易次数过多或错过机会。
-3. 效果随市场环境变化。在震荡行情中可能表现不佳。
-
-对应解决方法:
-1. 结合其他指标判断快速反转。 
-2. 对参数进行测试优化。
-3. 根据市场环境动态调整参数。
-
-## 优化方向
-该策略还可以从以下几个方面进行优化:
-
-1. 利用MACD、KD等其他指标辅助判断,提高策略效果。
-2. 增加止损逻辑,进一步控制风险。
-3. 优化移动平均线周期参数,适应更多指数ETF。
-4. 动态调整参数,适应市场环境变化。
-
-## 总结
-本策略是一个低风险、简单易实施的指数ETF动量型趋势跟随策略。它利用移动平均线的交叉判定趋势方向,具有风险控制能力强、实现成本低、收益稳定等优势。该策略也存在一定的缺陷,但可以通过多种方式进一步优化,使其成为指数ETF资产配置的有效工具。
-||
 
 ## Overview
 This is a momentum index ETF trend following strategy based on moving averages. It uses the crossover and slope of fast and slow moving averages to determine the trend direction for low-risk momentum trend following of index ETF assets.  
@@ -91,7 +50,6 @@ There are a few areas this strategy can be further optimized:
 ## Conclusion
 In conclusion, this is a low-risk, easy-to-implement momentum index ETF trend following strategy. It determines trend directions using moving average crossovers and has advantages like strong risk control, low implementation cost and stable profits. Although some flaws exist, the strategy can be further improved in many aspects to become an effective tool for index ETF asset allocation.
 
-[/trans]
 
 > Strategy Arguments
 

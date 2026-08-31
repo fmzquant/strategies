@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15bf83f26850e30293b.png)
 
-[trans]
-
-## 概述
-
-多空力量策略是由Alexander Elder博士开发的,它通过Elder-ray指标来衡量市场的买入和卖出压力。Elder-ray指标通常与三屏交易系统一起使用,但也可以单独使用。
-
-Alexander Elder博士使用13日指数移动平均线(EMA)来表示市场价值的共识。多头力量反映买方将价格推高于价值共识的能力。空头力量反映卖方将价格压低于平均价值共识的能力。  
-
-多头力量通过高点减去13日EMA计算。空头力量通过低点减去13日EMA计算。
-
-## 策略原理
-
-该策略通过计算多空力量指标来判断市场的多空态势。
-
-1. 计算13日EMA作为市场价值共识
-2. 计算多头力量:当日最高价减去13日EMA
-3. 计算空头力量:当日最低价减去13日EMA  
-4. 比较多头力量和空头力量与阈值的关系,判断做多做空信号
-5. 可以选择反向交易
-
-当多头力量大于阈值时为做多信号,当空头力量大于阈值时为做空信号。且可以选择反向交易。
-
-## 优势分析
-
-1. 使用多空力量指标判断市场多空态势,简单易懂
-2. 可配置参数灵活,阈值和周期可调
-3. 可选择反向交易,适应不同市场环境
-4. 采用指数移动平均线,对突发事件敏感度较低
-
-## 风险分析
-
-1. 多空力量指标容易产生错误信号,需结合趋势和其他指标过滤
-2. 固定周期无法适应市场变化,可采用自适应周期优化
-3. 不存在止损,容易追随市场产生过大亏损
-4. 仅判断多空,缺乏入市时机选择
-
-可设置止损,优化移动平均线周期,结合趋势指标等进行优化。
-
-## 优化方向  
-
-1. 优化移动平均线周期参数,使用自适应周期EMA
-2. 加入趋势指标过滤,避免逆势交易
-3. 增加止损策略,控制单笔亏损
-4. 结合其他指标选择更佳入市时机
-5. 运用机器学习技术优化参数设置
-
-## 总结
-
-多空力量策略通过Elder-ray指标判断市场多空态势,简单直观,参数可配置。但容易产生错误信号,需进一步优化加入趋势判断和止损。该策略思路值得学习借鉴,但直接应用需谨慎。
-
-||
 
 ## Overview
 
@@ -111,7 +60,6 @@ Can add stop loss, optimize moving average period, combine with trend filter etc
 
 The Bull and Bear Power strategy judges market sentiment simply and intuitively with configurable parameters. But it's prone to false signals and needs further optimization with trend and stop loss. The logic is worth learning but direct application needs caution.
 
-[/trans]
 
 > Strategy Arguments
 

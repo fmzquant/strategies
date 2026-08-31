@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17a74271fdb903a47de.png)
-[trans]
-### 概述
-该策略基于布林带指标设计,当价格突破布林带上轨时做多,当价格突破布林带下轨时做空,属于趋势跟踪策略。
-
-### 策略原理
-1. 计算布林带的中轨、上轨和下轨
-2. 当收盘价突破上轨时,做多入场
-3. 当收盘价突破下轨时,做空入场
-4. 平仓条件:突破中轨时平掉多单,突破中轨时平掉空单
-
-该策略通过布林带判断市场的波动区间和趋势方向,当价格突破布林带上下轨时,认为是一个趋势反转的信号,根据这个信号入场做多做空。中轨附近作为止损位置,突破中轨时退出仓位。
-
-### 优势分析
-1. 使用布林带指标判断市场趋势和支持阻力位
-2. 突破布林带上下轨时机会较高
-3. 有清晰的入场和出场规则
-
-### 风险分析
-1. 布林带突破假信号的风险,可能是短期的价格震荡
-2. 大幅度行情时,止损可能较大
-
-风险解决方法:
-1. 结合其他指标判断趋势
-2. 调整参数,扩大布林带范围
-
-### 优化方向
-1. 结合趋势指标,避免不必要的反转操作
-2. 动态调整布林带参数,优化参数大小
-
-### 总结
-该策略通过布林带指标判断价格趋势和支撑阻力位,在布林带上下轨突破点入场,止损点为布林带中轨。策略逻辑简单清晰,容易实现。可以通过调整参数或与其他指标组合来优化,在趋势行情中效果较好。
-
-||
 
 ### Overview
 This strategy is designed based on the Bollinger Bands indicator. It goes long when the price breaks through the upper band and goes short when the price breaks through the lower band. It belongs to the trend following strategy.  
@@ -75,7 +42,6 @@ Solutions:
 ### Summary
 This strategy uses the Bollinger Bands indicator to determine price trend and support/resistance levels. It enters at Bollinger Bands breakout points and sets stop loss at the middle band. The strategy logic is simple and clear, easy to implement. It can be optimized by adjusting parameters or combining with other indicators, works well in trending markets.
 
-[/trans]
 
 > Strategy Arguments
 

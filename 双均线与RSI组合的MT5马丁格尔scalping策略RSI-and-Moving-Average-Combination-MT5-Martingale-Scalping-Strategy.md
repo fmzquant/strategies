@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/124dcb173c5800e5920.png)
-[trans]
-
-## 概述
-
-该策略综合运用双均线指标和相对强弱指数(RSI)指标的组合,实现高频scalping交易,同时结合马丁格尔加仓原则,以控制策略的整体风险水平。
-
-## 策略原理  
-
-1. 该策略首先运用stoch指标绘制一个自定义震荡器,参数oscillatorPeriod设置为5,并设置上下阈值k1和k2,构建买卖盘整理区域。当随机指标值进入买卖盘整理区域时,表明可能存在反转机会。
-
-2. 其次,结合RSI指标判断超买超卖现象。RSI指标可以有效识别市场突破上下限的时机。本策略设置RSI的超买线为70,超卖线为30。
-
-3. 再者,本策略还引入trendActivity因子作为主要趋势过滤器。当随机指标和RSI同时符合反转条件时,还会校验主要趋势是否仍足够活跃,以避免因震荡市场的假突破而损失。
-
-4. 最后,本策略运用经典的马丁格尔加仓原则以控制整体风险。通过动态调整交易手数,在首次开仓亏损的情况下进行加仓,以达到盈亏平衡从而控制最大回撤。
-
-## 策略优势分析
-
-1. RSI指标的引入可有效识别超买超卖现象,辅助判断反转时机。
-
-2. 设定震荡器判断买卖盘整理区域,可过滤部分假突破信号。
-
-3. 主要趋势过滤器的设置避免震荡行情下的损失。
-
-4. 马丁格尔加仓有效控制策略最大回撤,是策略可持续盈利的关键。
- 
-## 风险分析 
-
-1. 在异常行情下,RSI指标可能失效,导致超买超卖判断失误,应特别注意这一风险。
-
-2. 震荡器参数设置不当也可能导致过度过滤信号或者识别假突破。这需要根据历史行情数据进行参数优化。
-
-3. 马丁格尔加仓会在特定环境下级联亏损。如果加仓步数过大,会导致账户衰竭的重大风险。
-
-4. 该策略仅在15分钟周期GBPUSD货币对数据进行过验证。其他市场和其他周期可能存在数据拟合风险。
-
-
-## 优化方向
-
-1. 对RSI参数进行优化,寻找更适合当前市场环境的参数。
-
-2. 测试并优化震荡器的参数,使得能更准确判断买卖盘整理区域。
- 
-3. 添加止损逻辑。可以在亏损达到一定幅度后主动止损,有效控制单笔亏损。
-
-4. 对主要趋势过滤器的设定规则进行优化,防止错过反转机会。
- 
-5. 测试不同的加仓幅度设定。要保证加仓幅度不会过大导致快速亏损。
-
-## 总结
-
-本策略综合运用双均线指标、RSI指标以及自定义震荡器,对短期内突破上下限现象进行判断,并辅以主要趋势过滤器避免假突破,从而进行高效的scalping交易。同时引入经典马丁格尔加仓原则来控制整体风险水平。该策略经过参数优化和严格的风险管理后,有望获取稳定收益。
-
-
-|| 
 
 ## Overview  
 
@@ -116,7 +61,6 @@ The strategy is named "RSI and Moving Average Combination MT5 Martingale Scalpin
 
 This strategy combines the double moving average indicator, RSI indicator and custom oscillator to judge the upper and lower limit breakthrough phenomena in the short term, and uses the main trend filter to avoid false breakouts for efficient scalping trading. At the same time, the classic Martingale position averaging principle is introduced to control the overall risk level. The strategy has the potential to generate stable returns after parameter optimization and rigorous risk management.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a23bc1ac0163a4493f.png)
-[trans]
-
-## 概述
-
-该策略结合了布林带(BB)和典型价格量值均线(VWAP)两个指标来制定买入和卖出决策。它可以发现短期价格异常然后进行交易,适合短线交易。
-
-## 策略原理
-
-该策略主要根据以下几条规则进行买入和卖出:
-
-1. 快速EMA线高于慢速EMA线作为判断趋势的先决条件 
-2. 当收盘价高于VWAP时判断为价格上涨并买入 
-3. 如果之前10根K线有一根收盘价低于布林下轨则判断为价格异常买入
-
-1. 当收盘价高于布林上轨时判断价格已经反转并卖出
-
-具体来说,策略先判断50日EMA高于200日EMA,使用快慢EMA判断大趋势。然后再结合VWAP判断价格在短期内是否处于上涨趋势。最后利用布林带判断价格是否出现了短期的异常下跌作为entry机会。
-
- exit规则比较简单,就是当价格高于布林带上轨的时候判断价格已经产生反转并退出。
-
-## 优势分析
-
-该策略结合了多种指标判断价格的异常,可以增加entry信号的效力。使用EMA判断大趋势可以避免逆势操作。结合VWAP可以捕捉短期价格上涨机会。利用布林带判断价格异常可以精准找到短线交易时机。
-
-## 风险分析
-
-1. EMA判断大趋势判断不准导致逆势操作大盘
-2. VWAP指标应用于小时级或者日内数据效果最好,如果用于日线数据效果会打折扣
-3. 布林带参数设置不当,上下轨限制过宽或者过窄都会导致信号错失
-
-针对这些风险,可以适当调整EMA周期参数或者尝试其他大趋势判断指标。VWAP参数应用于日内数据或者调整为其他短线指标。调整布林带参数寻找最佳幅度。
-
-## 优化方向 
-
-1. 尝试其他指标判断大趋势,比如MACD
-2. 优化EMA和布林带参数找到最佳配置
-3. 增加止损机制
-4. 结合其他指标过滤假 Signals
-5. 测试不同的品种和周期数据
-
-## 总结
-
-该策略结合布林带和VWAP两个指标,判断短期价格异常作为 entry 时机。使用 EMA 判断大趋势避免逆势操作。可以快速发现短线价格趋势机会。适用于日内和短线交易。通过参数优化和更新更多判断指标可以进一步增强策略稳定性和盈利能力。
-
-||
 
 ## Overview  
 
@@ -97,7 +52,6 @@ To mitigate the risks, parameters of EMA and BB can be adjusted. Test different 
 ## Conclusion  
 
 The strategy combines BB and VWAP to detect short-term price anomalies as entry timing. Using EMAs to determine overall trend avoids trading against trend. It can quickly discover short-term momentum. Suitable for intraday and short-term trading. Further enhance stability and profitability by optimizing parameters and incorporating more logic.
-[/trans]
 
 > Strategy Arguments
 

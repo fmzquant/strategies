@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/7a46356330ebf9d20c.png)
 
-[trans]
-
-#### 概述
-MACD趋势跟踪策略是一个基于MACD指标的量化交易策略。该策略的主要思路是利用MACD指标的金叉和死叉信号来判断趋势的方向,并在合适的时机建立多头或空头仓位。当MACD线上穿信号线并且上穿0轴时,开多头仓位;当MACD线下穿信号线并且下穿0轴时,开空头仓位。该策略使用最近的低点作为多头止损位,最近的高点作为空头止损位。平仓条件是MACD线反向穿越信号线。
-
-#### 策略原理
-MACD趋势跟踪策略的核心原理是使用MACD指标来捕捉趋势的形成和反转。MACD指标由两条均线(快速均线和慢速均线)的差值构成,并配合信号线来生成交易信号。当MACD线上穿信号线并且上穿0轴时,表明上涨趋势形成,此时开多头仓位。当MACD线下穿信号线并且下穿0轴时,表明下跌趋势形成,此时开空头仓位。策略使用最近的显著低点作为多头止损位,最近的显著高点作为空头止损位,以控制风险。当MACD线反向穿越信号线时,平掉当前仓位。
-
-#### 策略优势
-1. MACD趋势跟踪策略能够有效捕捉趋势性机会,在趋势形成初期就建仓,充分利用了趋势的动能。
-
-2. 该策略同时使用MACD金叉死叉和0轴作为过滤条件,能够较好地过滤掉震荡市中的虚假信号。
-
-3. 策略采用最近显著高低点作为止损位,能够控制单笔交易的风险敞口。
-
-4. 策略逻辑清晰,容易理解和实现,适合初学者学习。
-
-#### 策略风险
-1. MACD指标本质上是一个滞后指标,在趋势反转初期可能会出现较大的回撤。
-
-2. 策略在震荡市中可能会出现频繁交易,导致较高的交易成本。
-
-3. 止损位的设置依赖于最近的显著高低点,在某些情况下可能出现止损过早或过晚的情况。
-
-4. 该策略没有考虑仓位管理和资金管理,实际应用中需要结合具体情况进行优化。
-
-#### 策略优化方向
-1. 可以考虑引入其他技术指标或价格行为模式作为过滤条件,以提高信号的可靠性和准确性。
-
-2. 优化止损位的设置方法,例如使用ATR或百分比止损等方式,以更好地控制风险。
-
-3. 引入仓位管理和资金管理机制,根据市场波动性和账户equity等来动态调整仓位大小。
-
-4. 针对不同的市场和交易标的,对参数进行优化和调整,找到最适合的参数组合。
-
-#### 总结
-MACD趋势跟踪策略是一个简单而有效的量化交易策略,通过利用MACD指标的特性来捕捉趋势性机会。该策略逻辑清晰,易于理解和实现,适合初学者学习。但在实际应用中,需要注意控制风险,并结合其他方法进行优化和改进,以获得更稳健的交易表现。
-
-||
 
 #### Overview
 The MACD Trend Following Strategy is a quantitative trading strategy based on the MACD indicator. The main idea of this strategy is to use the golden cross and death cross signals of the MACD indicator to determine the direction of the trend and establish long or short positions at appropriate times. When the MACD line crosses above the signal line and above the zero axis, a long position is opened; when the MACD line crosses below the signal line and below the zero axis, a short position is opened. The strategy uses the most recent low point as the stop loss for long positions and the most recent high point as the stop loss for short positions. The closing condition is when the MACD line crosses the signal line in the opposite direction.
@@ -87,7 +48,6 @@ The core principle of the MACD Trend Following Strategy is to use the MACD indic
 #### Summary
 The MACD Trend Following Strategy is a simple and effective quantitative trading strategy that captures trending opportunities by leveraging the characteristics of the MACD indicator. The strategy has a clear logic, is easy to understand and implement, making it suitable for beginners to learn. However, in practical applications, attention needs to be paid to risk control, and it should be combined with other methods for optimization and improvement to achieve more robust trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

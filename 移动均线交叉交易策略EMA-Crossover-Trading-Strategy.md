@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b49cf84fd4505078f0.png)
-[trans]
-
-## 概述
-
-移动均线交叉交易策略是一种简单有效的量化交易策略。该策略运用指数移动均线(EMA)以及均线交叉信号来识别价格走势,确定买入和卖出的时机。相比其他更为复杂的策略,它更加简单易用,容易理解和实施。
-
-## 策略原理  
-
-该策略的关键在于使用两条不同参数的EMA。EMA1设置为25天,EMA2设置为100天。当短期EMA从下方上穿较长期EMA时,是买入信号;当短期EMA从上方下穿较长期EMA时,是卖出信号。这样,短期EMA反映了价格的短期趋势和动量,较长期EMA反映了价格的长期趋势。两条EMA形成“黄金交叉”和“死亡交叉”就是买卖信号。
-
-为过滤误差信号,策略还设置了一些附加条件。如要求柱体阳线为阴,要求交叉发生在RSI大于50时等。这可以避免因短期噪音造成错误交易。  
-
-## 优势分析
-
-该策略最大的优点是简单明了,容易理解和使用。相比许多参数繁多、逻辑复杂的策略,它对交易者更为友好。
-
-其次,该策略捕捉了价格在短期和长期上的趋势变化,利用均线的“金叉”和“死叉”这一经典技术指标识别价格反转,从而判断买入卖出的时机。这种方法行之有效,可以顺势而为,避免在没有明确信号的时候盲目交易。 
-
-最后,该策略还设置了适当的过滤条件。这可以减少误交易的概率,避免被市场噪音欺骗。这使得策略可以在复杂多变的市场中实现稳定的表现。
-
-## 风险分析 
-
-该策略最大的风险在于,短期与长期趋势之间可能存在背离。价格短期内出现剧烈波动,触发了均线交叉信号,但长期趋势并未反转。这会导致错误交易亏损。此外,在长期横盘行情中,容易产生频繁的错误信号。  
-
-EMA参数设置也会影响策略表现。如果EMA周期设置不当,短期与长期EMA将失去代表性,无法有效识别趋势和趋势反转。这同样会增加错误信号和交易风险。
-
-最后,附加过滤条件可能过于严格,错过了有效的交易机会。这会导致策略盈利能力下降。
-
-## 优化建议
-
-该策略可以考虑结合其他指标进行优化,如KDJ、MACD等,利用更多因素判断买卖时机,以减少错误信号。
-
-此外,可以测试不同的参数,寻找最佳的EMA周期组合。也可以调整过滤条件参数,以兼顾交易频率和稳定性。
-
-动态调整仓位也是一个改进策略的重要方向。例如,当两条EMA距离越远时,增加头寸;当两条EMA距离越近时,减少头寸。这样可以根据市场态势灵活调整风险。
-
-## 总结
-
-移动均线交叉策略是一个简单实用的量化交易策略。它利用EMA交叉买卖信号,顺应价格短期与长期趋势变化,以判断交易时机。该策略容易理解和实施,最大限度降低了复杂度,是初学者入门量化交易的好选择。但我们也不能忽视它可能存在的风险,需要对参数和过滤条件进行优化,使其可以适应更加复杂的市场环境。
-
-|| 
 
 ## Overview  
 
@@ -90,7 +49,6 @@ Dynamic position sizing is also important. For example, larger position when the
 
 The EMA crossover strategy is a simple yet practical quantitative trading strategy. It capitalizes on EMA crossover signals to trade along with short-term and long-term trends. Easy to understand and implement, it minimizes complexity and suits novice traders. However, its risks should not be neglected. Further optimization on parameters and filters can make the strategy more robust across varying markets.
 
-[/trans]
 
 > Strategy Arguments
 

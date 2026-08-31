@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种利用动态支撑阻力进行趋势交易的量化策略。该策略运用多重指标设定动态的支撑阻力,以捕捉价格趋势。
-
-一、策略原理
-
-该策略的主要组成部分有:
-
-1. 计算一定周期内的最高价和最低价,设定动态的多空通道;
-
-2. 计算ATR指标,并设定上下轨道作为动态止损位;
-
-3. 当价格突破通道时,以一定斜率绘制动态支撑阻力;
-
-4. 价格突破动态支撑阻力时,形成交易信号。
-
-综合多重指标设定动态的支撑阻力带,只有在突破带时才进行交易,以滤除不必要的噪音信号。同时,止损位也会动态调整,以应对市场变化。
-
-二、策略优势
-
-该策略最大的优势在于多重动态指标设定支撑阻力,这可以灵活有效地识别价格趋势的变化。
-
-另一优势是带状止损区,这可以减少止损被突破的概率。
-
-最后,斜率支撑阻力的绘制方式简单直接,易于实现。
-
-三、潜在风险
-
-但我们也应考虑以下潜在风险:
-
-首先,动态支撑阻力可能滞后价格变化而失效。
-
-其次,止损区过于宽泛可能带来较大亏损。
-
-最后,参数设置不当也可能导致策略效果不佳。
-
-四、内容总结
-
-本文详细介绍了一种利用动态多重指标识别支撑阻力的趋势追踪策略。它可以有效过滤噪音,识别趋势。但我们也要防范指标滞后和止损过宽等风险。总体而言,该策略提供了一种合理利用动态支撑阻力的思路。
-
-||
 
 This article explains in detail a trend trading strategy that utilizes dynamic support and resistance levels. It sets flexible support and resistance zones using multiple indicators to capture price trends.
 
@@ -90,7 +49,6 @@ IV. Summary
 
 In summary, this article has explained a trend following strategy using multiple dynamic indicators to identify support and resistance zones. It can effectively filter out noise and detect trends. But risks like indicator lagging and overwide stops should be prevented. Overall, it provides a reasonable approach to utilize dynamic support and resistance.
 
-[/trans]
 
 > Strategy Arguments
 

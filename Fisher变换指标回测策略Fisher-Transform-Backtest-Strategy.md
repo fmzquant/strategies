@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c4cdd0aa8c4bf7accf.png)
-[trans]
-
-
-### 概述
-
-Fisher变换指标回测策略通过计算价格的Fisher变换, indentify价格反转点,并据此产生交易信号。该策略采用Fisher变换公式处理价格,去除价格的非高斯分布特征,从而产生近似高斯分布的标准化指标。策略根据Fisher变换曲线的转折点判断价格反转,产生买入和卖出信号。
-
-### 策略原理  
-
-该策略的核心是运用Fisher变换公式处理价格,去除价格自然分布的非高斯特征。Fisher变换公式如下:
-
-y = 0.5 * ln((1+x)/(1-x))
-
-这里的x是经过处理的价格,先通过highest和lowest函数找到最近Length周期内的最高价和最低价,然后进行标准化,公式如下:  
-
-x = (price - 最小价)/(最大价 - 最小价) - 0.5
-
-这样处理后的价格近似符合高斯分布。然后将其代入Fisher变换公式,得到Fisher变换曲线。Fisher变换曲线的转折点就是价格反转的信号。
-
-当Fisher变换曲线从正转为负时,产生卖出信号;当从负转为正时,产生买入信号。
-
-### 优势分析
-
-1. Fisher变换指标去除价格的非高斯分布特征,使得价格更加规范,减少假信号
-
-2. 捕捉价格反转点,避免追高杀跌
-
-3. 参数调整灵活,可调整反转灵敏度
-
-4. 可自定义方向,适应多种市场环境
-
-5. 策略逻辑简单易懂,容易理解实现
-
-### 风险分析  
-
-1. 参数设置不当可能错过价格反转点或产生假信号
-
-2. 实盘容易受滑点影响,可能无法完美执行信号  
-
-3. 价格剧烈波动时,Fisher曲线难于判断反转点 
-
-4. 需确认反转后再入场,实盘操作难度大
-
-解决方法:
-
-1. 调整Length参数的大小,优化参数
-
-2. 适当放宽入场条件,确保可以执行信号
-
-3. 结合其他指标过滤假信号
-
-4. 严格遵守策略规则,做好风险控制
-
-### 优化方向  
-
-1. 优化Length参数大小,找到最佳参数组合
-
-2. 增加过滤条件,避免假信号,如结合均线、波动率指标等
-
-3. 增加止损机制,控制单笔损失
-
-4. 加入重新入场机制,追踪持续趋势
-
-### 总结  
-
-Fisher变换指标回测策略通过去除价格的非高斯特征,找出价格反转点,是一个易于实现的价值策略。该策略优势在于参数调整灵活,容易捕捉反转;劣势在于实盘操作难度大,需严格遵循入场规则。未来可通过多种手段优化该策略,使之更适合实盘应用。
-
-||
 
 ### Overview
 
@@ -143,7 +75,6 @@ Solutions:
 
 The Fisher Transform backtest strategy identifies price reversal points by removing non-Gaussian price features. It is an easily implemented mean reversion strategy. Its advantages lie in flexible parameters for catching turns while its main weakness is the difficulty of live implementation with the need for strict entry rules. Various methods can be used to optimize this strategy for practical applicability.
 
-[/trans]
 
 > Strategy Arguments
 

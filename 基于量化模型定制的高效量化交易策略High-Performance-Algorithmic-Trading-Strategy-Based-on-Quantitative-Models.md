@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16bd58e86f48674316e.png)
-[trans]
-
-## 概述
-
-该策略是一个基于量化模型定制的高效量化交易策略。策略使用了Modelius Volume模型作为基础模型,并在此基础上进行了扩展和优化。该策略可以捕捉市场中的量化交易机会,实现稳定的盈利。
-
-## 策略原理  
-
-该策略的核心是Modelius Volume模型。该模型利用价格、交易量的变化来识别市场中的量化交易机会。具体来说,策略结合使用了close价格、open价格、最高价、最低价,根据一定的规则计算出当前K线的方向。当K线方向发生变化时,根据交易量的大小来判断量化交易机会的质量。此外,策略还结合了SAR指标和均线指标来辅助判断入场和出场时机。
-
-基本交易逻辑是,当指标从负值向正值突破时,做多;当指标从正值向负值突破时,做空。此外,策略还设置了止损、止盈、跟踪止损来控制风险。
-
-## 优势分析
-
-该策略最大的优势在于利用Modelius Volume模型能够有效识别量化交易机会。与传统技术指标相比,该模型更加关注交易量的变化,这在目前的高频量化交易中非常实用。此外,策略的入场规则比较严格,可以有效避免错过量化交易机会的同时也能尽量减少乱序的概率。
-
-## 风险分析
-
-该策略主要的风险在于Modelius Volume模型本身并不能完全避免噪音。当市场出现异常波动时,会导致交易信号产生错误。此外,策略中的参数设置也会对最终结果产生影响。
-
-为了控制风险,可适当调整参数,并结合其他指标进行辅助判断。此外也需要合理设置止损、止盈位置。
-
-## 优化方向  
-
-该策略还有一定的优化空间。例如可以考虑结合机器学习算法来动态优化参数设置。或者结合情绪分析等指标来提高决策的准确性。此外也可以研究不同品种之间的相关性,建立多品种套利模型。
-
-## 总结
-
-总的来说,该策略利用Modelius Volume量化模型的优势,设计了一套可操作性较强的量化交易策略。可通过参数调整、模型扩展、机器学习等方式进行优化提升,在实际交易中获得较好的稳定收益。
-
-||
 
 ## Overview
 
@@ -70,7 +39,6 @@ There is still room for optimizing this strategy. For example, machine learning 
 
 In summary, this strategy utilizes the advantages of the Modelius Volume quantitative model and designs a set of algorithmic trading strategies with high operability. It can be further optimized and enhanced through parameter tuning, model expansion, machine learning, etc. to obtain relatively good and steady returns in actual trading.
 
-[/trans]
 
 > Strategy Arguments
 

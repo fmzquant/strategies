@@ -9,117 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略通过结合123逆转策略和线性回归截距策略,实现多因子驱动的组合交易策略。123逆转策略判断最近两个交易日的价格关系,结合Stoch指标判断逆转信号。线性回归截距策略则利用线性回归分析判断价格与趋势线的关系,产生交易信号。两种策略相互验证,可有效过滤假信号。
-
-## 策略原理
-
-### 123逆转策略
-
-该策略基于以下原理:
-
-1. 如果最近两个交易日的收盘价关系为今日收盘价高于昨日,且Stoch快线低于慢线,认为存在看涨反转信号
-
-2. 如果最近两个交易日的收盘价关系为今日收盘价低于昨日,且Stoch快线高于慢线,认为存在看跌反转信号
-
-判断规则如下:
-
-- 如果今日收盘价>昨日收盘价 且 Stoch快线<Stoch慢线 且 Stoch快线>设置参数,生成买入信号
-
-- 如果今日收盘价<昨日收盘价 且 Stoch快线>Stoch慢线 且 Stoch快线<设置参数,生成卖出信号
-
-该策略需要设置Stoch指标参数,包括:计算Stoch的K线周期Length、Stoch快线平滑周期KSmoothing、Stoch慢线平滑周期DLength、Stoch快线判断阈值Level。
-
-### 线性回归截距策略
-
-该策略基于线性回归分析,判断价格与线性回归趋势线的关系,其判断规则如下:
-
-- 如果收盘价大于线性回归截距,产生买入信号
-
-- 如果收盘价小于线性回归截距,产生卖出信号
-
-该策略需要设置线性回归周期LengthLRI,以及线性回归输入数据源xSeria。
-
-### 组合策略
-
-该组合策略需要同时满足123逆转策略和线性回归截距策略的买入/卖出信号,才会生成实际的交易指令,从而有效滤除假信号,提高交易效果。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多因子驱动,有效滤除假信号,提高信号质量
-
-结合两种不同类型的策略,必须两种策略同时产生信号,才会实际下单。这种多因子验证机制,可以过滤掉某一策略偶尔产生的错误信号,减少不必要的交易,有效提升信号质量。
-
-2. 实时监测价格与趋势的关系,避免被套牢
-
-线性回归截距能够实时反映价格与趋势线的关系,如果价格已经严重偏离趋势,及时提示策略调整仓位方向。这样可以及时止损、避免被套牢在历史趋势中。
-
-3. 兼顾趋势和反转交易机会
-
-线性回归策略更擅长趋势买卖点识别。而123逆转策略则专注反转点识别。两种策略可以很好结合趋势交易和反转交易的优势。
-
-4. 策略参数可自定义优化组合
-
-两种策略都提供一定参数进行自定义,可以针对不同品种、不同趋势进行参数优化,优化组合策略的效果。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 多因子驱动可能错过部分机会
-
-必须满足两种策略的交易信号,会错过仅依靠单一策略就可以获利的部分机会。如果某一策略效果弱化,会拖累整体交易效果。
-
-2. 线性回归有滞后性
-
-线性回归需要一定历史数据进行计算,不能对突发事件做出实时反应,存在一定滞后性。如果价格发生大幅跳空,线性回归趋势线需要一定时间调整,这段时间可能会产生错误信号。
-
-3. 需要合理参数优化
-
-两种策略都需要选择合适的参数,对某些品种可能需要独立调整参数。如果参数选择不当,会大打折扣对策略效果。
-
-对应风险可以通过以下方法降低:
-
-1. 适当放宽组合信号触发条件,防止错失过多机会
-
-2. 结合趋势指标等替代线性回归,获取更实时的趋势判断
-
-3. 借助机器学习等方法辅助参数优化,提升参数选择效果
-
-## 优化方向 
-
-该策略可以从以下方面进一步优化:
-
-1. 利用机器学习方法进行参数优化
-
-可以收集历史数据,设计参数优化目标,使用机器学习算法比如遗传算法、贝叶斯优化等搜索最佳参数组合。
-
-2. 增加止损机制
-
-可以结合ATR、趋势指标等设定止损规则,以控制单笔交易最大损失。
-
-3. 优化入市出市逻辑
-
-可以在交易信号基础上加入例如均线过滤、布林带判断等入市出市的辅助条件,降低调整仓位的频率,避免被套。
-
-4. 结合 sentiments analysis
-
-利用自然语言处理技术判断市场参与者情绪,辅助交易决策。
-
-5. 添加机器学习预测模块
-
-使用LSTM、GRU等深度学习模型对价格进行预测,作为策略决策的重要参考依据。
-
-## 总结
-
-本策略通过组合123逆转策略和线性回归截距策略,实现多因子驱动的量化交易,验证机制可以有效过滤假信号,兼顾捕捉反转和趋势交易机会。但策略也存在一定滞后性风险,需要关注参数优化并进行风控机制扩展,进一步提升策略稳定性。结合机器学习等技术进行参数优化和特征扩展,是该策略值得探索的进一步优化方向。
-
-||
 
 ## Overview
 
@@ -229,7 +118,6 @@ Use deep learning models like LSTM and GRU to predict prices as an important ref
 
 This strategy combines the 123 reversal strategy and linear regression intercept strategy to implement multi-factor driven quantitative trading. The verification mechanism can effectively filter out false signals and capture reversal and trend trading opportunities. But there are also certain lag risks in the strategy that require attention to parameter optimization and expansion of risk control mechanisms to further improve strategy stability. Combining machine learning and other technologies for parameter optimization and feature expansion is a worthwhile further optimization direction for the strategy to explore.
 
-[/trans]
 
 > Strategy Arguments
 

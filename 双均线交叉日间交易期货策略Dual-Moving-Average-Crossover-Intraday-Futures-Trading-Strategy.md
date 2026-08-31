@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11c185631535c2f1ddc.png)
-[trans]
-
-## 概述
-
-该策略运用双均线交叉的原理,结合ATR指标设定止损止盈,辅以交易时间控制,设计出一套适合日间交易期货合约的策略。策略简单明了,容易掌握,适合初学者使用。
-
-## 策略原理
-
-该策略使用5周期和20周期的WMA均线交叉做为入场信号。当5周期线从下方向上突破20周期线时,做多;当5周期线从上方向下跌破20周期线时,做空。同时,策略还使用50周期WMA均线判断趋势方向。只有当价格突破均线方向与大趋势方向一致时,才产生交易信号。
-
-此外,策略还运用ATR指标来设定止损止盈位置。ATR指标能动态反映市场波动幅度。策略以ATR指标的数值乘以一个倍数(如3倍)来确定止损止盈位置,从而控制单笔损失。
-
-最后,策略限定只在美国交易时段(9:00-14:30 CST)触发交易信号。这避免在开市和收市时段交易,因为这两个时段波动较大,容易形成虚假信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用双均线交叉,可以有效捕捉趋势转折点,及时入场。
-
-2. 借助大趋势判断过滤掉部分噪音交易信号,避免逆势操作。
-
-3. 应用ATR指标动态调整止损止盈位置,有效控制单笔损失。
-
-4. 限定交易时段,避开市场开盘和收盘时的剧烈波动。
-
-5. 策略规则简单清晰,容易理解和实现,适合初学者掌握。
-
-6. 可自定义参数,如均线周期、ATR倍数、交易时段等,优化策略。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 震荡行情中,可能出现较多止损。
-
-2. 双均线交叉会有一定滞后,可能错过短线突破。
-
-3. ATR参数设定不当可能导致止损过大或过小。
-
-4. 仅依靠技术指标,忽略基本面信息。
-
-5. 交易品种和周期不合适都会影响策略效果。
-
-6. 机械交易系统存在被套利的风险。
-
-7. 不同交易时段的参数需要调整。
-
-这需要通过参数优化、指标组合、适当人工干预等方法来改进。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 尝试不同的均线系统,如EMA、DMA等。
-
-2. 增加其他技术指标过滤,如MACD、RSI等。
-
-3. 优化ATR参数,使止损止盈更合理。
-
-4. 结合交易量指标寻找高效入场点。
-
-5. 根据不同品种特点调整参数。
-
-6. 结合基本面因素,避免逆市场操作。 
-
-7. 增加机器学习成分,利用神经网络对数据进行建模。
-
-8. 尝试多周期结合,发掘更多交易机会。
-
-9. 构建策略组合,提高稳定性。
-
-## 总结
-
-本策略整体较为简单通俗,适合初学者实盘练习。同时也留有很大的优化空间,可以引入更多技术指标或机器学习方法来完善。此外,根据不同交易品种特性和市场环境调整参数也很关键。总之,本策略为量化交易初学者提供了一个参考框架,但还需要根据实际情况不断测试与优化,方能获得稳定收益。
-
-||
 
 
 ## Overview
@@ -163,7 +86,6 @@ The strategy can be enhanced in the following aspects:
 
 In summary, this is a simple and intuitive strategy suitable for beginners to practice live trading. At the same time, huge room remains for optimization via more technical indicators or machine learning. Parameter tuning based on symbol and market dynamics is also key. The strategy provides a reference framework for quant trading beginners, but requires relentless testing and enhancement for stable profits.
 
-[/trans]
 
 > Strategy Arguments
 

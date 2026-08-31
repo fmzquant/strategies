@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13a561d3edc5c4ee6bc.png)
 
-[trans]
-
-## 概述
-
-该策略是一种多级分批止盈的BTC机器人交易策略。它通过寻找最低点进行买入entry,然后设置多级止盈点进行分批止盈出场exit。同时设置止损点进行风险控制。该策略适合看涨BTC的情形。
-
-## 策略原理
-
-1. 寻找入场时机:当CC指标下穿0轴时产生买入signal,在该点买入多单。
-
-2. 设置止损点:通过input设置止损百分比,转换成价位进行止损。
-
-3.  设置多级止盈点:分为4个出场点,通过input设置各个出场点的止盈百分比,转换成价位进行分批止盈。
-
-4. 风险控制:设置最大持仓量,通过input设置每个出场点的出场量百分比,进行风险分散。
-
-## 优势分析
-
-这种策略具有以下优势:
-
-1. 入场信号比较可靠,寻找最低点买入,避免在高点买入。
-
-2. 多级止盈可以锁定部分利润,同时保留一部分利润继续运行。
-
-3. 设置止损点进行风险控制,可以把亏损控制在一定范围内。
-
-4. 分批出场可以进行风险分散,避免一次全部亏损。
-
-5. 回撤可以得到一定程度的控制。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. CC指标无法百分百确定最低点,可能会漏买入机会。
-
-2. 止损点设置不当可能造成不必要的止损。
-
-3. 分批出场设置不当也可能造成利润的损失。
-
-4. 震荡行情中止盈会比较困难。
-
-5. 行情剧烈反转时,可能难以止损。
-
-## 优化方向
-
-可以从以下几个方面进行优化:
-
-1. 优化入场信号,加入更多指标或者机器学习判断来确定买入时机。
-
-2. 优化止损策略,使其更具有弹性,能更好地应对行情。
-
-3. 优化出场策略,使其能更好适应震荡和趋势行情。
-
-4. 加入trailing stop等策略,使止盈更具弹性。
-
-5. 测试不同品种参数设置,寻找最佳参数组合。
-
-## 总结
-
-本策略总体来说是一个基于寻找最低点买入信号,并设置多级止盈和止损的BTC交易策略。它具有一定的优势,同时也存在可以优化的方向。通过进一步优化,可以使策略在回撤控制和止盈方面做的更好。但总的来说,该策略为BTC的机器人交易提供了一个可行的思路。
-
-||
 
 ## Overview
 
@@ -135,7 +72,6 @@ Potential optimizations:
 
 In summary, this is a BTC trading strategy based on buying at lowest points with multi-level take profits and stop loss. It has certain advantages and also areas that can be improved. Further optimizations on drawdown control and take profit could make the strategy perform better. Overall it provides a viable approach for BTC algorithmic trading.
 
-[/trans]
 
 > Strategy Arguments
 

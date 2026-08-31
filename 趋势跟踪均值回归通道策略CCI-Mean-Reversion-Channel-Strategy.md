@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17b782ec1a317b16fdb.png)
 
-[trans]
-
-### 概述
-
-本策略基于CCI指标设计了一个灵活的跟踪趋势的自动交易系统。它可以根据CCI指标的0轴上穿或下穿发出交易信号,也可以通过自定义上下通道带及通道带交叉发出信号。策略可以设置固定止损、止盈比例,同时拥有时间段交易和每日固定时间段交易等多种功能。
-
-### 策略原理
-
-1. 利用CCI指标的0轴交叉来判断市场趋势,CCI上穿0轴为看涨信号,CCI下穿0轴为看跌信号。
-
-2. 通过自定义CCI上下通道带,当CCI上穿上通道带为看涨信号,CCI下穿下通道带为看跌信号。通道带交叉为止损信号。
-
-3. 可设置只在特定时间段交易,未交易时段平仓。可设置每日固定时间段交易。
-
-4. 可设置固定止损、止盈比例。
-
-5. 可自定义交易开平仓的Alert消息。
-
-6. 策略完全自定义灵活,可调整CCI参数、通道带参数、止损止盈参数等优化策略。
-
-### 优势分析
-
-1. 使用CCI指标判断市场趋势,CCI对价格变化敏感,能快速捕捉市场转折点。
-
-2. 自定义通道带可根据不同市场调整参数,通道带交叉止损可有效控制风险。 
-
-3. 支持多种交易时间设置,可根据不同时间段调整策略参数,利用不同时间段的特征获得超额收益。
-
-4. 支持固定止损止盈设置,可以预设盈亏比,有效控制个别交易的风险。
-
-5. 完全可自定义参数,可以针对不同品种、市场行情进行策略优化,获得更好的效果。
-
-### 风险分析
-
-1. CCI指标对价格变化敏感,可能产生部分假信号,应结合较长周期指标进行验证。
-
-2. 固定止损止盈比例无法根据市场变化进行调整,应适当保守设置比例。
-
-3. 固定交易时间可能错过市场短线调整的机会,应适当选择有交易价值的时间段。
-
-4. 需要频繁优化参数,如果优化不当可能导致过度交易或漏掉交易机会。
-
-5. 需要与行业情况、宏观环境等多方面因素结合,单纯依靠参数优化无法完全规避风险。
-
-### 优化方向
-
-1. 结合长短周期指标进行验证,避免CCI产生假信号。
-
-2. 利用ATR等指标设定动态止损止盈。
-
-3. 测试不同时间段参数效果,选择交易高效时段。
-
-4. 优化CCI参数、通道带参数,适应市场变化。
-
-5. 考虑结合趋势、波动性、成交量等多因素进行综合判断。
-
-6. 根据交易品种特点选择合适交易时间段。
-
-7. 考虑加入机器学习算法,实现策略的自动优化。
-
-### 总结
-
-本策略整体来说是一个非常灵活和可定制的趋势跟踪交易系统。策略具有利用CCI判断趋势、自定义通道带控制风险、设置固定止盈止损、选择交易时间段等多项优势。同时也需要注意CCI易产生假信号、固定止盈止损比例无法动态调整等问题。未来可从优化参数、筛选交易信号、选择高效时间段等方面进行策略改进,并增加机器学习等算法引入智能化管理,使策略能够自动适应市场变化,从而获得更稳定的超额收益。
-
-||
 
 
 ### Overview
@@ -140,7 +75,6 @@ This strategy is designed as a flexible trend following trading system based on 
 
 Overall this is a very flexible and customizable trend following system. Key advantages are using CCI for trends, custom bands to limit risk, fixed stops/takes, and time frame selection. Need to watch for false CCI signals and inflexible stops. Future improvements could come from optimizing parameters, filtering signals, selecting efficient time frames, and incorporating machine learning for automatic adaptations to market changes, in order to achieve more consistent excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

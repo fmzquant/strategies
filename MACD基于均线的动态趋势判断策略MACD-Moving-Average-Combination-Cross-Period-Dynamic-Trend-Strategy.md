@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1aedddeb93e1e078ca9.png)
-[trans] 
-## 概述
-
-该策略基于MACD指标的均线组合,实现跨时间周期的动态趋势判断,属于较为经典的趋势跟踪策略。主要通过快慢均线的差值MACD和其信号线的关系,判断目前趋势方向和力度。同时引入跨周期判断来提高准确性,动态调整仓位。
-
-## 策略原理  
-
-1. 基于MACD指标快慢均线差值及其信号线关系判断目前趋势方向  
-2. MACD差值上穿信号线为做多信号,下穿为做空信号  
-3. 引入MACD差值和MACD柱状线同向为策略信号增强  
-4. 增加跨周期判断模块,取较高时间周期MACD指标作为信号滤波和仓位调节依据  
-5. 仓位动态调整,跨周期信号较弱时减少仓位规模,信号增强时增加仓位  
-
-## 优势分析  
-
-1. MACD指标本身判断趋势方向的有效性较高  
-2. 组合MACD差值和柱状线双重验证,可以提高信号准确率  
-3. 跨周期判断提高策略的稳定性,避免被高频信号误导  
-4. 动态仓位调整使得策略更好的把握机会,提高超额收益  
-
-## 风险分析及解决方法  
-
-1. MACD信号产生滞后,可能导致信号效果略差  
-- 解决方法:增加快速均线和慢速均线差值判断以提前捕捉到信号  
-2. 跨周期信号不一定准确,可能误导策略  
-- 解决方法:引入仓位动态调整机制,让主周期策略占主导地位  
-3. 多因子组合策略整体稳定性可能不足   
-- 解决方法:仔细调整各项策略参数比重占比,确保整体稳健性  
-
-## 优化方向  
-
-1. 测试不同的周期参数组合效果
-2. 测试不同跨周期组合对策略效果的影响  
-3. 调整MACD指标参数,如快慢均线周期,信号线周期等
-4. 测试不同仓位调节因子的效果
-5. 测试在其他品种上的回测效果
-
-## 总结  
-
-该MACD均线组合跨周期动态趋势策略,整合了经典指标判断和多时间框架参考的优势。通过参数优化和组合测试,可以构建一个较为稳定、收益良好的趋势跟踪策略。值得实盘测试和投入应用。 
-
-||
 
 ## Overview  
 
@@ -93,7 +51,6 @@ This strategy is based on the combination of moving averages of the MACD indicat
 
 This MACD moving average combination cross-period dynamic trend strategy integrates the advantages of classic indicators and multi-time frame references. Through parameter optimization and combination testing, a relatively stable and profitable trend tracking strategy can be constructed. It is worth real-money testing and application.
 
-[/trans]
 
 > Strategy Arguments
 

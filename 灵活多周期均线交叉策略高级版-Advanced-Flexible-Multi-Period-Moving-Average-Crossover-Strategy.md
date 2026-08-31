@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b5461658cf259b0247.png)
 
-[trans]
-#### 概述
-本策略是一个基于多种均线和多个时间周期的高级量化交易系统。它允许交易者灵活选择不同类型的移动平均线(包括SMA、EMA、WMA、HMA和SMMA)，并可以根据市场情况自由切换日线、周线或月线等多个时间周期进行交易。策略的核心逻辑是通过对比收盘价与所选均线的位置关系来确定买卖信号，同时结合不同的时间周期复核来提高交易的准确性。
-
-#### 策略原理
-策略采用模块化设计，主要包含四个核心组件：均线类型选择模块、时间周期选择模块、信号生成模块和仓位管理模块。当收盘价上穿选定的均线时，系统会在下一个交易周期开始时发出做多信号；当收盘价下穿均线时，系统会在下一个交易周期开始时发出平仓信号。策略通过request.security函数实现了跨周期数据的计算，确保了在不同时间框架下的信号准确性。同时，策略还实现了在回测结束时自动平仓的功能，以确保资金安全。
-
-#### 策略优势
-1. 高度灵活性：支持多种均线类型和时间周期的组合，适应不同的市场环境
-2. 风险控制完善：通过周期末自动检查机制，避免了踏空和错失机会
-3. 资金管理合理：采用仓位百分比管理方式，有效控制风险
-4. 信号稳定性强：通过多重确认机制，降低了虚假信号的影响
-5. 适应性广：可应用于各种交易品种和市场环境
-
-#### 策略风险
-1. 滞后性风险：均线指标本身具有一定的滞后性，可能导致入场和出场时机的延误
-2. 震荡市风险：在横盘震荡市场中可能产生频繁的假突破信号
-3. 跨周期风险：不同时间周期的信号可能相互矛盾，需要建立有效的信号优先级
-4. 资金管理风险：固定百分比仓位可能在某些市场条件下过于激进
-
-#### 策略优化方向
-1. 引入波动率指标：建议增加ATR或Bollinger Bands等波动率指标，用于动态调整仓位大小
-2. 增加趋势过滤器：可以添加长周期趋势判断机制，只在主趋势方向开仓
-3. 优化信号确认机制：考虑引入成交量等辅助指标，提高信号可靠性
-4. 完善止损机制：建议增加追踪止损功能，更好地保护利润
-5. 增加市场情绪指标：建议引入RSI或MACD等指标来判断市场超买超卖状态
-
-#### 总结
-该策略是一个设计完善、逻辑清晰的交易系统，通过灵活的参数设置和多重确认机制，为交易者提供了一个可靠的交易工具。策略的模块化设计使其具有较强的可扩展性，通过持续优化可以进一步提升其性能。建议交易者在实盘使用时，先在回测环境中充分测试各种参数组合，找到最适合自己的交易策略配置。 
-
-|| 
 
 #### Overview
 This strategy is an advanced quantitative trading system based on multiple moving averages and time periods. It allows traders to flexibly choose different types of moving averages (including SMA, EMA, WMA, HMA, and SMMA) and switch between multiple time periods such as daily, weekly, or monthly timeframes according to market conditions. The core logic determines buy and sell signals by comparing the closing price with the selected moving average position, while combining different time period reviews to improve trading accuracy.
@@ -71,7 +40,6 @@ The strategy employs a modular design with four core components: moving average 
 
 #### Summary
 This strategy is a well-designed trading system with clear logic, providing traders with a reliable trading tool through flexible parameter settings and multiple confirmation mechanisms. The strategy's modular design gives it strong scalability, and its performance can be further enhanced through continuous optimization. It is recommended that traders fully test various parameter combinations in a backtesting environment before live trading to find the most suitable strategy configuration for their needs.
-[/trans]
 
 
 

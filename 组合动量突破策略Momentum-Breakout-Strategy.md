@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/106404832ce3f716d9e.png)
-[trans]
-
-## 概述
-
-本策略通过组合使用移动平均线、Laguerre RSI 指标和 ADX 指标来实现突破交易。当快速移动平均线上穿慢速移动平均线,Laguerre RSI 大于 80,ADX 大于 20 时做多;当快速移动平均线下穿慢速移动平均线,Laguerre RSI 小于 20,ADX 大于 20 时做空。该策略捕捉市场的动量特征,在趋势开始发展阶段进入市场。
-
-## 原理
-
-该策略主要通过以下指标判断趋势和入市时机:
-
-1. 移动平均线组合:16 日 EMA,48 日 EMA,200 日 SMA。当短期平均线上穿长期平均线时判断为多头市场,下穿时判断为空头市场。
-
-2. Laguerre RSI 指标判断超买超卖区域。RSI 大于 80 为多头信号,小于 20 为空头信号。
-
-3. ADX 指标判断趋势状态。ADX 大于 20 表示趋势状态,适合突破交易。
-
-入场信号是移动平均线组合判断趋势方向,Laguerre RSI 判断入场时机,ADX 过滤非趋势市场。出场信号是移动平均线发生回转。整个策略判断框架比较合理,各个指标互相配合判断多空和入退场。
-
-## 优势
-
-本策略具有以下优势:
-
-1. 捕捉趋势动量:该策略只在趋势开始发展的时候入场,可以捕捉到后市的指数级利润。
-
-2. 损失有限:止损位设置得当,可以将单笔损失控制在一定范围。即使遇到套牢也有盈利机会。
-
-3. 指标组合判断准确:移动平均线、Laguerre RSI 和 ADX 指标能够相对准确判断市场多空和入场时机。
-
-4. 实现简单:该策略只用到了3个指标,实现起来简单,容易掌握。
-
-## 风险
-
-本策略也存在一定的风险:
-
-1. 趋势反转风险:策略属于趋势跟踪策略,如果没有及时判断到趋势反转就会产生较大亏损。
-
-2. 回撤风险:在震荡行情中,止损可能被突破,给账户带来回撤。
-
-3. 参数优化风险:指标参数需要根据不同市场调整,否则会出现失效。
-
-对策:
-
-1. 严格止损,控制单笔亏损。
-
-2. 优化指标参数,调整突破口数。
-
-3. 采用期货套期保值等方法管理回撤。
-
-## 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 最佳参数优化:对移动平均线周期、Laguerre RSI 参数、ADX 参数进行测试,寻找最优参数组合。
-
-2. 突破口优化:测试不同的移动平均线突破口,找到交易次数和获利率之间的平衡。
-
-3. 入场条件优化:测试其他指标与Laguerre  RSI 指标结合,寻找更准确判断入场时机的条件。
-
-4. 出场条件优化:研究其他指标结合移动平均线作为更精确的出场信号判断。
-
-5. 盈利目标和止损优化:测试不同的止盈止损策略,优化账户收益。
-
-## 总结
-
-本策略通过运用移动平均线、Laguerre RSI 和 ADX 三种指标判断,实现了对趋势行情的有效捕捉。在趋势开始发展的时候及时入场,紧跟趋势运行捕捉指数级利润。同时设置止损策略来控制单笔亏损。本策略适合对行情有判断的积极投资者,也适合参数优化后通过程序化交易自动执行。总体来说,本策略具有较强的实用性。
-
-||
 
 ## Overview
 
@@ -142,7 +75,6 @@ Some ways to optimize the strategy include:
 
 In summary, this strategy effectively captures trending moves by using the combination of moving averages, Laguerre RSI and ADX to determine entries and exits. By entering early in trend developments and closely following the trend runs, exponential profits can be made, while stop losses help limit losses. The strategy suits investors comfortable making market judgments, as well as those doing automated trading after parameter optimization. Overall the strategy has strong practical utility.
 
-[/trans]
 
 > Strategy Arguments
 

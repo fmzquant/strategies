@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/181606f2fbac08b1af9.png)
-[trans]
-
-
-## 概述
-
-该策略通过计算当前K线收盘价相对于N根K线前的收盘价的变化百分比,并显示不同颜色的柱状图来实现对趋势的判断。策略结合趋势线来实现对买入卖出的判断。
-
-## 策略原理
-
-1. 通过input设置策略参数,包括柱状图宽度、显示价格变化还是百分比变化、回看根数、买入卖出阈值等。
-
-2. 计算当前K线收盘价与N根前K线收闭价的差价或差价百分比。
-
-3. 设置买入卖出阈值曲线。
-
-4. 根据差价百分比显示不同颜色的柱状图。
-
-5. 当差价百分比大于买入阈值时设置为多单,当小于卖出阈值时设置为空单。
-
-6. 根据持仓方向设置柱状图颜色。
-
-7. 根据持仓方向实现入场和出场。
-
-## 策略优势
-
-1. 直观显示价格变化趋势,利于形成交易判断。
-
-2. 结合趋势判断指标,可以比较清晰地判断入场和出场点位。
-
-3. 可以通过调整参数进行对不同品种和时间周期的优化。
-
-4. 操作逻辑简单清晰,容易理解和修改。
-
-5. 可视化效果好,可以快速判断趋势方向。
-
-## 策略风险
-
-1. 容易产生错误信号,入场点选择不当可能造成损失。
-
-2. 针对高波动品种需要调整参数,否则会增加亏损概率。
-
-3. 未考虑突发事件的影响,如重大利空消息。
-
-4. 回测周期短,可能无法确定参数健壮性。
-
-5. 未考虑截止时间,可能错过反转机会。
-
-可以通过优化参数、结合其他指标过滤信号、设置止损、扩大回测周期等方法来控制风险。
-
-## 策略优化方向 
-
-1. 可以考虑结合其他指标来确认交易信号,例如趋势指标、波动率指标等。
-
-2. 可以引入机器学习算法来优化参数设置。
-
-3. 可以设置动态止损来控制单笔损失。
-
-4. 可以结合情绪指标、消息面等来避免被突发事件冲击。
-
-5. 可以加入交易时间或特定时段的过滤规则。
-
-6. 可以优化回测周期,选取更长的时间段进行验证。
-
-## 总结
-
-本策略通过计算价格变化百分比并用柱状图实时显示,辅以趋势线进行判断,形成较为清晰的交易信号。策略思路简单,容易操作。但也存在一定的风险,需要通过参数优化、指标过滤、止损等手段进行控制。若能持续优化,会成为一个易于掌握且实用的趋势跟踪策略。
-
-||
 
 
 ## Overview 
@@ -144,7 +76,6 @@ Risks can be controlled via parameter optimization, signal filtering with other 
 
 This strategy displays price change percentage in real-time with histogram bars and uses trendlines for decision making, forming clear trading signals. The logic is simple for easy operation. But risks exist and need to be controlled via optimization, filtering, stop loss etc. With continuous optimizations, it can become an easy to grasp and practical trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

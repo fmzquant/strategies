@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11a6b61ce709a0c3e87.png)
-[trans]
-## 概述
-
-本策略的核心思想是结合123反转策略和彩虹振荡器指标,实现双重趋势追踪,以提高策略的胜率。该策略通过追踪短期和中期的价格趋势,动态调整仓位,实现超越大盘的超额收益。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123反转策略:如果前两天收盘价下跌而今天收盘价上涨,且9日Slow K线低于50,则做多;如果前两天收盘价上涨而今天收盘价下跌,且9日Fast K线高于50,则做空。
-
-2. 彩虹振荡器指标:该指标反映价格相对于移动平均线的偏离程度,当指标高于80时,表明市场趋于不稳定;当指标低于20时,表明市场趋于反转。
-
-本策略将两者结合,同时做多做空信号出现时开仓,否则平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 双重过滤,提高信号质量,降低误判率。
-2. 动态调整仓位,降低单向行情的损失。
-3. 整合短期和中期指标,提高策略稳定性。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 参数优化不当可能导致过拟合。
-2. 双重开仓会增加交易成本。
-3. 标的价格剧烈波动时,止损点容易被击穿。
-
-可以通过调整参数、优化仓位管理、合理设置止损来减轻这些风险。
-
-## 优化方向 
-
-该策略可以从以下方面进行优化:
-
-1. 对参数进行优化,找到最佳参数组合。
-2. 增加仓位管理模块,根据波动率和回撤动态调整仓位。
-3. 增加止损模块,合理设置移动止损。
-4. 增加机器学习算法,辅助判断趋势转折点。
-
-## 总结
-
-本策略整合123反转策略和彩虹振荡器指标,实现双重趋势追踪,在保持较高稳定性的同时,具有一定的超额收益空间。通过持续优化,有望进一步提升策略收益率。
-
-||
 
 ## Overview
 
@@ -103,7 +56,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy integrates the 123 reversal strategy and the rainbow oscillator indicator to achieve double trend tracking. While maintaining high stability, it has potential for excess returns. Further optimization can be done to improve the profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1084b606fda3922a695.png)
-[trans]
-## 概述
-
-自适应零滞后指数移动平均线量化交易策略(Adaptive Zero Lag Exponential Moving Average Quantitative Trading Strategy)是一个基于Ehlers的零滞后指数移动平均线(Zero Lag Exponential Moving Average)思想开发的量化交易策略。该策略使用了指数移动平均线作为基线指标,并加入了即时频率测量(Instantaneous Frequency Measurement)的自适应方法来动态优化指数移动平均线的周期参数。
-
-## 策略原理
-
-该策略的核心思想来源于John Ehlers的零滞后滤波器理论。指数移动平均线虽然是一个广为人知的技术指标,但其天生就有滞后性的问题。Ehlers通过在指数移动平均线的计算公式中加入一个误差校正因子,可以有效消除滞后现象,使得零滞后指数移动平均线能够更加灵敏地跟踪价格变动。
-
-在自适应零滞后EMA策略中,我们利用即时频率测量的方法自适应优化零滞后指数移动平均线的周期参数。即时频率测量分为余弦法和正交法两种,可以测量出价格序列变化的主导周期。我们实时跟踪这两个测量方法计算出的最佳周期,动态设定零滞后指数移动平均线的周期参数,使其更加符合当前市场环境。
-
-当快线(零滞后指数移动平均线)上穿慢线(普通指数移动平均线)时做多,下穿时做空,这样形成一个类似于移动平均线交叉的交易策略信号。
-
-## 策略优势
-
-自适应零滞后EMA策略结合了零滞后滤波器和自适应周期优化的方法,具有如下优势:
-
-1. 消除滞后,使信号更加灵敏可靠
-2. 自适应周期参数,适应更广的市场环境
-3. 策略参数较少,容易测试和优化
-4. 可配置固定止损止盈点,风险容易控制
-
-## 策略风险
-
-自适应零滞后EMA策略也存在一定的风险,主要体现在:  
-
-1. 在特定市场环境下,自适应优化的周期参数可能失效
-2. 固定的止损止盈点设置不当可能导致过度亏损或失利
-3. 参数优化测试不足可能导致实盘效果不佳
-
-为控制这些风险,我们需要充分测试不同市场环境下的参数设置,适当调整止损止盈点,并在回测中尽量模拟实盘环境进行充分验证。
-
-## 策略优化方向 
-
-自适应零滞后EMA策略还有广阔的优化空间,主要方向包括:
-
-1. 尝试不同的自适应周期测量方法,如波动率自适应MA等
-2. 加入附加过滤条件,如交易量,移动平均线配对等
-3. 优化止损止盈策略,如 trailing stop, Chandelier Exit 等
-4. 动态调整仓位规模,配合风险管理
-5. 多个时间周期确认,提高信号质量
-
-通过这些优化手段,有望进一步提升策略的胜率、盈利率、风险调整指标等。
-
-## 总结
-
-自适应零滞后EMA策略成功结合零滞后滤波器和动态周期优化的思想,是一种参数较少、易于操作和优化的量化交易策略。它具有响应灵敏、自适应性强的特点,在趋势型市场中表现较好。配合适当的止损和仓位管理手段,其稳定性和盈利能力都可获得提升。该策略仍有较大的优化空间,值得进一步研究。
-
-||
 
 ## Overview
 
@@ -107,7 +58,6 @@ Through these optimization means, there is potential to further improve the win 
 
 The Adaptive Zero Lag EMA strategy successfully combines the zero lag filter and dynamic period optimization. With fewer parameters and easy to operate, it is especially suitable for trending markets. Together with proper stop loss, position sizing and other risk management techniques, its stability and profitability can be further enhanced. There remains ample potential to optimize this strategy for even better performance.
 
-[/trans]
 
 > Strategy Arguments
 

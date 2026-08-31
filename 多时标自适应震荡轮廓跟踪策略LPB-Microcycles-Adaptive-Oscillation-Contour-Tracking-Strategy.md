@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11ce54a45f39d806f0f.png)
-[trans]
-## 概述
-
-该策略采用霍德里克-普雷斯科特(Hodrick-Prescott,HP)滤波器平滑价格,提取价格趋势线。然后基于用户定义的时间范围计算自定义加权平均价格(VWAP)。当价格高于趋势线时做多,低于时做空。同时结合ATR止损确保交易风险可控。
-
-## 策略原理  
-
-1. 使用HP滤波器提取价格趋势线。HP滤波器通过优化方法提取价格的长期趋势成分,滤除短期波动干扰。
-
-2. 基于用户自定义的时间范围计算VWAP。VWAP能更准确反映不同周期下的平均价格。
-
-3. 当价格高于HP趋势线时满足做多条件;当价格低于HP趋势线时满足做空条件。这样能捕捉价格自下而上的突破或自上而下的突破。
-
-4. ATR止损结合承担合理风险,避免亏损过大。
-
-## 优势分析
-
-1. 采用HP滤波器提取价格趋势,相比MA等指标更为平滑,避免被短期价格波动误导。
-
-2. 自定义VWAP周期,更灵活适应市场周期变化。
-
-3. 根据趋势方向交易,符合趋势交易理念,胜率较高。  
-
-4. ATR止损控制单笔亏损,避免亏损过大。
-
-5. 多种参数可调整空间大,可针对不同市场进行优化。
-
-## 风险与对策  
-
-1. 在震荡盘整理中可能出现止损频繁被击中。可适当放宽止损范围。
-
-2. 趋势末期 ClientRawResponse常出现回调试探性突破使策略被套。应结合其他指标判断趋势末期,及时平仓。  
-
-3. VWAP周期设置不当可能错过更有效的交易机会。应配合趋势指标动态调整VWAP周期。
-
-## 优化方向
-
-1.HP滤波器参数λ可调整平滑强度。λ值大时趋势线更平滑,更有利于捕捉长线趋势;λ值小时响应价格变化更敏感,更适合捕捉中短线机会。
-
-2. ATR倍数可调整止损范围。可配合λ参数优化,λ值大时适当扩大止损范围;λ值小可缩小止损范围锁定更多利润。
-
-3. 风险回报比例(R:R)直接影响盈亏比。可测试不同倍数情况下回撤控制和盈利能力。
-
-## 总结
-
-该策略整体采用趋势跟踪思路设计。通过多种参数设置可以针对长中短不同时间周期进行优化,胜率和盈利能力都较强。风险控制方面也做了一定考虑,能有效保证单笔亏损不会过大。总体而言,该策略利用较科学的方法提取价格趋势特征,再结合参数优化空间较大的特点,应用前景较好。
-
-||
 
 ## Overview  
 
@@ -105,7 +57,6 @@ The strategy uses the Hodrick-Prescott (HP) filter to smooth the price and extra
 
 The strategy overall adopts a trend following approach. Extensive parameter tuning targets optimization across long, medium and short timeframes, with strong win rates and profit potential. Reasonable risk control prevents oversized losses per trade. In summary, by extracting price trends scientifically and highly adjustable parameters, the strategy has good application prospects.
 
-[/trans]
 
 > Strategy Arguments
 

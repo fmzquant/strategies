@@ -9,83 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-移动均线交叉策略是一个基于移动均线交叉作为交易信号的趋势跟踪策略。该策略以价格与移动均线交叉以及两条移动均线交叉为买入和卖出信号,追求获利。
-
-## 策略原理
-
-该策略的主要原理如下:
-
-1. 计算两条移动均线,一快一慢,可选择SMA或EMA。
-
-2. 当快线上穿慢线时,做多;当快线下穿慢线时,平仓。
-
-3. 可选择价格突破均线或均线间交叉作为交易信号。
-
-4. 可设定策略运行的时间段。
-
-5. 可针对多头市场仅做多,空头市仅做空。
-
-6. 通过移动均线参数优化,适应不同周期。
-
-该策略利用了移动均线的趋势跟踪功能,当短期均线上穿长期均线时,表示目前处于上升趋势,应该做多;反之,短期均线下穿长期均线时,表示目前处于下降趋势,应该减少头寸。
-
-## 优势分析
-
-该策略主要优势包括:
-
-1. 原理简单,易于实现,交易信号明确。
-
-2. 可以有效跟踪趋势,及时捕捉买卖机会。
-
-3. 可结合不同均线参数,适用于多种市场环境。
-
-4. 可选择仅做多或仅做空,规避不确定的反向操作。
-
-5. 可设定策略运行时间,避开特定时间段。
-
-6. 通过参数优化,可不断改进策略表现。
-
-## 风险分析
-
-该策略的主要风险有:
-
-1. 容易产生假信号,应避免过于频繁交易。
-
-2. 表现依赖均线参数选择,不当选择可能导致亏损。
-
-3. 有一定的滞后,应防止过早进入和过晚退出。 
-
-4. 不适用于震荡盘整理的市场环境。
-
-5. 均线交叉具有一定随机性,无法完全避免亏损。
-
-可通过交易量确认,优化参数或与其他指标组合使用来减少风险。
-
-## 优化方向 
-
-该策略可从以下几个方面进行优化:
-
-1. 加入/%(Line - ShortMa)/ShortMa)/(Line - LongMa)/LongMa)/作为均线斜率过滤条件。
-
-2. 优化移动均线周期参数,测试不同组合。
-
-3. 加入MACD或RSI等指标进行多重确认。 
-
-4. 设定止损条件,限制单笔亏损。
-
-5. 区分趋势市和盘整市,进行条件运用。
-
-6. 测试不同持仓时间久短,寻找最优方案。
-
-## 总结
-
-移动均线交叉策略是一个简单实用的趋势跟踪策略。优点是易于实现,可以有效跟踪趋势;缺点是具有滞后性,可能产生较多假信号。通过参数优化、指标筛选等方式可以改进该策略,使其在趋势明显的市场中获得较好的表现。
-
-||
 
 ## Overview
 
@@ -161,7 +84,6 @@ This strategy can be optimized in the following aspects:
 
 The moving average crossover strategy is a simple and practical trend following strategy. The advantages are easy implementation and effective trend tracking. The disadvantages are lagging and prone to false signals. The strategy can be improved through parameter optimization and indicator filtering to achieve better performance in strong trending markets.
 
-[/trans]
 
 > Strategy Arguments
 

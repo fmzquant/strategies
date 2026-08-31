@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1106796096d688de581.png)
-[trans]
-
-### 概述
-
-该策略采用Stoch指标进行入场信号判断,在进场后会实时追踪价格新高或者新低,从而动态调整止损位。同时,策略还会通过alert功能,将止损修改的信息发送到MT4/MT5,以实时调整真实交易中的头寸。
-
-### 策略原理
-
-1. 该策略基于Stoch指标产生买入和卖出信号,当Stoch的K线从下方向上突破D线时产生买入信号;当Stoch的K线从上方向下突破D线时产生卖出信号。
-
-2. 在进场后,策略会实时追踪最低价的最新低点和最高价的最新高点,作为动态的止损位。具体来说,对于做多单,会追踪最低价的最近低点作为止损位;对于做空单,会追踪最高价的最近高点作为止损位。
-
-3. 当检测到止损位发生变化时,策略会通过alert功能生成修改止损指令,发送到MT4/MT5以实时调整真实交易中的止损位。同时绘制图形标注以直观显示止损变化。
-
-4. 该策略支持手动控制是否启用动态止损机制。启用后,可以根据市场波动实时调整止损追踪价格。
-
-### 优势分析
-
-1. 采用动态追踪止损机制,可以根据市场波动灵活调整止损位,实现止损追踪,有效控制风险。
-
-2. 利用alert功能可将止损调整信息实时发送到MT4/MT5,实现自动化管理,无需人工干预。
-
-3. 直观地在图形上标注止损调整信息,便于查看和验证止损追踪效果。
-
-4. 支持手动控制是否启用止损追踪机制,灵活适应不同市场条件。
-
-5. 结合Stoch指标判断时机,可以有效过滤假突破,提高策略稳定性。
-
-### 风险分析
-
-1. Stoch指标可能出现频繁交叉信号,带来更多无效操作的风险。可以适当调整参数以过滤信号。
-
-2. 在极端行情中,止损可能被突破,无法完全规避巨额亏损的风险。应适时监控头寸风险。
-
-3. alert连接可能出现中断、延迟等问题,无法实时反馈调整结果,需要做好容错处理。
-
-4. 动态追踪止损需要相对密集的调整,可能带来更多交易成本。应平衡调整幅度与成本。
-
-### 优化方向
-
-1. 可以测试不同参数组合优化Stoch指标,获得更好的信号质量和策略效果。
-
-2. 可以结合其他指标过滤信号或确定调整幅度,优化止损机制改善策略稳定性。
-
-3. 可以研究不同的追踪算法,在降低调整频率的同时保证止损效果。
-
-4. 可以优化与MT4/MT5的连接方式,确保alert及时高效,减少延迟问题。
-
-5. 可以引入自动止损模式和手动模式切换,不同市场条件使用不同止损机制。
-
-
-### 总结
-
-本策略首先基于Stoch指标判断买卖时机,然后在持仓期间实时追踪价格波动调整止损位,通过alert指令自动化下发调整信息。这种动态止损机制可以根据市场变化主动管理头寸风险,并减少人工干预提高效率。同时直观的止损调整标记也便于监控。该策略可以进一步优化信号过滤和止损算法提高盈利空间。总体而言,动态止损追踪策略适合用于跟踪多变的市场,自动化调整头寸风险。
-
-||
 
 ### Overview
 
@@ -120,7 +64,6 @@ This strategy uses the Stoch indicator to generate entry signals. After entering
 
 This strategy first determines trading opportunities based on the Stoch indicator, then tracks price fluctuations during positions to dynamically adjust stop losses and automatically issues adjustment information via alert orders. Such a dynamic mechanism enables active position risk management according to market changes with less manual intervention. Meanwhile, the intuitive stop loss annotations also facilitate monitoring. Further optimizations on signal filtering and trailing algorithms can improve profitability. Overall, the dynamic trailing stop loss strategy is suitable for tracking volatile markets and automated position risk management.
 
-[/trans]
 
 > Strategy Arguments
 

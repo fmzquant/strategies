@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10b6780cb1b83528b7c.png)
-[trans]
-## 概述
-
-破底回补策略是一种典型的低买高卖策略。它利用RSI指标识别超卖点,在价格下跌到一定程度后发出买入信号,以较低的价格 Accumulate 代币;当价格重新上涨时,通过设定 RSI 退出阈值来实现盈利了结。该策略适用于中长线持有,可以有效过滤震荡行情中的假突破,实现持币成本的优化。
-
-## 策略原理  
-
-该策略主要基于 RSI 指标来识别超卖点。RSI 指标的正常范围在 0 到 100 之间。当 RSI 指标下跌到设定的入场阈值 35 以下时,发出买入信号;当 RSI 指标重新上涨到设定的退出阈值 65 以上时,发出卖出信号。这样可以在价格趋势反转的时候及时入场和退出, implementing 实现低买高卖。
-
-另外,策略中还引入了 100 周期的简单移动平均线,与 RSI 指标形成组合条件,只有当价格下跌到移动平均线以下,同时 RSI 进入超卖区域,才会触发买入信号。这可以有效过滤部分假突破情况,减少不必要的交易。
-
-## 策略优势
-
-- 利用 RSI 有效识别超卖超买点,在反转点入场,可获得较优买入成本
-- 结合移动平均线过滤误信号,避免追高
-- 适合中长线持有,可挖掘潜在上涨趋势  
-
-## 策略风险及解决方案
-
-- 存在一定的延迟,可能错过快速反转的机会
-    - 适当缩短 RSI 计算周期,加快指标反应
-- 震荡行情中可能出现较多平仓亏损
-    - 调整移动平均线周期,或取消移动平均线
-    - 适当放宽 RSI 入场退出参数
-
-## 策略优化方向  
-
-- 测试不同币种和时间周期参数优化
-- 尝试结合其他指标判断,如 MACD、布林带等
-- 动态调整 RSI 参数或移动平均线参数
-- 优化仓位管理策略
-
-## 总结
-
-破底回补策略整体来说是一个稳健实用的低买高卖策略。通过 RSI 和移动平均线的双重过滤,可以有效抑制误信号,在优化后的参数下,可以获得较低的持币成本。与此同时,适当优化指标参数,调整仓位策略,有望获得更高的资金使用效率。
-
-||
 
 ## Overview
 
@@ -89,7 +52,6 @@ In addition, a 100-period simple moving average is also introduced in the strate
 
 The bottom fishing strategy is an overall robust and practical low buying and high selling strategy. By double filtering with RSI and moving average, it can effectively curb false signals and obtain lower cost basis with optimized parameters. At the same time, appropriately optimizing indicator parameters and adjusting position strategies may lead to higher capital usage efficiency.
 
-[/trans]
 
 > Strategy Arguments
 

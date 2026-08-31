@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/200f319f243687d07e5.png)
-[trans]
-## 概述
-
-该策略集成了布林带指标、相对强弱指标(RSI)和移动平均线(MA),目的是识别市场的潜在入场和出场点。它可以生成买入和卖出的信号 alerts,这些 alerts 可以通过手动交易或者自动交易系统来执行。
-
-## 策略原理
-
-该策略使用两个参数不同的布林带来生成价格通道。布林带的默认参数是长度为20周期,标准差为2。布林带的上轨和下轨分别作为动态的阻力和支撑位。 
-
-RSI 指标用于判断价格动量强弱。读取 RSI 的数值来判断是否超买或超卖。
-
-策略中还集成了50周期的移动平均线,用来判断总体趋势方向。当价格高于移动平均线时,表示正在上涨趋势;当价格低于移动平均线时,表示正在下跌趋势。
-
-买入信号的条件:RSI高于超买线且布林带没有收缩。 
-
-卖出信号的条件:RSI低于超卖线且布林带没有收缩。
-
-平仓信号的条件:长仓则价格收盘低于移动平均线。短仓则价格收盘高于移动平均线。
-
-## 策略优势
-
-1. 结合布林带、RSI 和移动平均线三个指标,综合判断趋势方向,避免产生假信号。
-
-2. 布林带判断局部高低点并确认突破,RSI过滤假突破,移动平均线判断总体走势。三者相互验证,精确找出趋势转换点。
-
-3. 策略参数经过优化,布林带使用两个标准差参数,更准确描绘价格通道。
-
-## 策略风险
-
-1. 布林带收缩时,容易产生错误信号。此时RSI也接近中性区,应避免交易。 
-
-2. 震荡趋势中,RSI和移动平均线可能产生错误信号。应预先识别是否处于震荡市场。
-
-3. 无法有效处理价格跳空缺口的情况。应结合其他指标判断真实突破。
-
-## 策略优化方向 
-
-1. 优化布林带和RSI的参数,使其更符合不同品种和时间周期的特点。
-
-2. 增加附加止损位设置。当价格突破止损线时自动止损。
-
-3. 增加趋势过滤器,如ADX,用来判断是否进入趋势行情。减少震荡市无效交易。  
-
-4. 结合自动交易系统,利用生成的交易信号自动执行交易,无需人工干预。
-
-## 总结
-
-该策略整合布林带、RSI和移动平均线三个指标的优势,通过参数优化提高了信号的准确性。可自动生成交易 Alerts 执行策略交易。风险主要在于震荡行情中的错误信号产生。通过趋势判断指标进行过滤可以减少无效交易。整体来说,该策略利用参数优化和多指标集成提高了交易信号质量,值得实盘验证和投入使用。
-
-||
 
 ## Overview  
 
@@ -107,7 +57,6 @@ Exit conditions for long trades are when RSI drops below overbought level or whe
 
 This strategy combines the strengths of Bollinger Bands, RSI and MA with optimized parameters to improve signal accuracy. It can automatically generate trade alerts for execution. Main risks come from false signals during ranging markets. Adding a trend filter can reduce inefficient trades. Overall, by using parameter optimization and integrating multiple indicators, this strategy improves signal quality and is worth validating in live markets for usage.
 
-[/trans]
 
 > Strategy Arguments
 

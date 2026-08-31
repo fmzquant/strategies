@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ad55f971e73fad8e30.png)
 
-[trans]
-#### 概述
-这是一个基于平均趋向指标(ADX)和价格突破的量化交易策略。该策略主要通过监控ADX指标数值来判断市场趋势强度,并结合价格突破信号来捕捉市场动量。策略设定在特定交易时段内运行,并通过止损和每日交易次数限制来实现风险管理。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素:
-1. ADX指标监控:使用ADX指标来评估市场趋势强度,当ADX值低于17.5时表明市场可能即将形成新趋势。
-2. 价格突破判断:策略会跟踪过去34个周期的最高收盘价,当当前价格突破该阻力位时触发交易信号。
-3. 交易时段管理:策略仅在指定的交易时段(0730-1430)内运行,以避免低流动性时段的风险。
-4. 风险控制机制:
-   - 设置固定美元止损来限制单笔交易损失
-   - 限制每个交易时段最多3笔交易
-   - 交易时段结束时自动平仓所有持仓
-
-#### 策略优势
-1. 趋势捕捉能力:通过ADX指标和价格突破相结合,能够有效识别市场趋势初期阶段。
-2. 风险管理完善:包含多层次风险控制措施,如固定止损、交易次数限制和自动收盘机制。
-3. 自动化程度高:策略逻辑清晰,完全实现自动化交易,无需人工干预。
-4. 适应性强:可根据不同市场情况调整参数,如止损金额、回溯周期等。
-
-#### 策略风险
-1. 假突破风险:在震荡市场中可能出现false breakout导致连续止损。
-2. 参数依赖性:策略效果严重依赖于ADX阈值和回溯周期的设置。
-3. 时段限制:仅在特定时段交易可能错过其他时段的机会。
-4. 止损设置:固定美元止损可能在不同波动率环境下不够灵活。
-
-#### 策略优化方向
-1. 动态止损:建议将固定美元止损改为基于ATR的动态止损,以适应不同的市场波动环境。
-2. 市场环境过滤:增加波动率过滤器,在高波动率环境下调整或暂停交易。
-3. 入场优化:可以考虑增加成交量确认,提高突破信号的可靠性。
-4. 动态参数调整:实现ADX阈值和回溯周期的自适应调整机制。
-
-#### 总结
-这是一个结构完整、逻辑清晰的趋势跟踪策略。通过将ADX指标与价格突破相结合,在有效的风险管理框架下捕捉市场趋势机会。虽然存在一些优化空间,但策略的基础框架稳健,适合作为量化交易系统的基础组件。建议交易者在实盘之前进行充分的回测和参数优化,并结合市场具体情况进行针对性改进。
-
-|| 
 
 #### Overview
 This is a quantitative trading strategy based on the Average Directional Index (ADX) and price breakouts. The strategy primarily monitors ADX indicator values to assess market trend strength and combines price breakout signals to capture market momentum. The strategy operates within specific trading sessions and implements risk management through stop-loss and daily trade limits.
@@ -81,7 +45,6 @@ The core logic includes the following key elements:
 
 #### Summary
 This is a well-structured trend-following strategy with clear logic. It captures market trends by combining ADX indicators with price breakouts under an effective risk management framework. While there is room for optimization, the strategy's foundation is robust and suitable as a basic component of a quantitative trading system. Traders are advised to conduct thorough backtesting and parameter optimization before live trading, and make specific improvements based on market conditions.
-[/trans]
 
 
 

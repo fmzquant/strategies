@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a374cd354cbddf7607.png)
-[trans]
-## 概述
-
-该策略基于移动均线和动态包络线,实现了多空双向交易。它会跟踪价格突破上下包络线来建立头寸,当价格重新跌破基准均线时平仓。该策略适用于趋势较明显的股票和数字货币。
-
-## 策略原理
-
-首先,该策略基于用户选择的均线类型和长度计算出基准均线。常见的均线包括SMA、EMA等。 
-
-然后,根据用户设定的百分比参数,计算出上下包络线。例如5%代表价格波动ALLOWED_BRACKET105%时触发建立头寸。包络线数量可以自定义。
-
-在入市规则上,如果突破下包络线,做多;如果突破上包络线,做空。规则非常简单清晰。
-
-最后,当价格重新跌破基准均线时,平掉所有头寸。这是跟踪趋势的一个退出点。
-
-需要注意的是,该策略实现了分仓建仓。如果有多个包络线,那么会按比例分配资金。这避免单边博弈的风险。
-
-## 优势分析
-
-该策略最大的优势有以下几点:
-
-1. 实现了自动跟踪趋势的功能。使用均线判断趋势方向非常常见,所以这是一个行之有效的方法。
-
-2. 利用包络线过滤掉部分噪音,这避免了过于敏感而引发无谓交易的问题。合理的参数设置可以大幅优化策略盈利能力。
-
-3. 分仓建仓增加了策略韧性。即使单边突破失败,其他方向可能继续运行良好。这优化了整体风险收益比。
-
-4. 允许自定义均线和包络线数量。这增加了策略灵活性,用户可以针对不同品种进行参数调优。
-
-## 风险分析
-
-该策略的主要风险在于:
-
-1. 均线系统对黄金交叉类信号不敏感。如果没有明确趋势,该策略可能错过部分机会。
-
-2. 包络线设置得过宽可能增大了交易次数和滑点风险。 Line设计得过窄又可能错过较大行情。找到平衡点需要充分测试。 
-
-3. 在震荡行情中,该策略可能出现较多被套的概率。所以品种的选择以趋势明显的品种为佳。
-
-4. 分仓建仓会使每单盈利受限。如果只想博取单边风险,还需要额外优化。
-
-## 优化方向  
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 更换其他指标来决定建仓和平仓。例如KDJ指标等。或者结合多个指标设置过滤条件。
-
-2. 增加止盈止损逻辑。这可以锁定部分利润,并主动规避部分风险。
-
-3. 优化参数寻找最佳均线和包络线组合。这需要充分回测和优化查找最佳参数对。
-
-4. 结合深度学习等技术实现智能参数优化。随着时间不断学习和更新参数设置。
-
-5. 考虑品种和市场差异性,设定多组参数适应不同交易环境。这将大幅提高策略稳定性。
-
-## 总结
-
-该动态包络均线策略总体来说非常适合趋势交易。它简单高效,易于理解和优化。作为一个基础策略,它的可塑性和扩展性都非常强。通过和其他更复杂的系统融合,可以进一步优化整体收益和风险调整指标。所以可以作为量化交易的一个非常好的基石。
-
-||
 
 ## Overview
 
@@ -129,7 +69,6 @@ The main directions to optimize this strategy:
 
 In conclusion, this dynamic envelope moving average strategy works very well for trend trading. It is simple, efficient, easy to understand and optimize. As a basic strategy, it has great plasticity and extensibility. When combined with more complex systems, it can be further enhanced for higher returns and better risk-adjusted metrics. So it serves as an excellent foundation for quantitative trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

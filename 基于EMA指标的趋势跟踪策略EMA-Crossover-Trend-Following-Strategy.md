@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/461bd0ac2fdde8fe03.png)
-[trans]
-
-## 概述
-
-该策略采用EMA快慢线交叉的方式,实现对价格趋势的跟踪。当快线从下方上穿慢线时,做多;当快线从上方下穿慢线时,平仓。该策略主要适用于趋势较明显的品种,能够有效跟踪趋势,获得超额收益。
-
-## 策略原理  
-
-该策略的核心指标为EMA均线。EMA均线的计算公式为:
-
-EMA(t)=C(t)×2/(n+1)+EMA(t-1)×(n-1)/(n+1)
-
-其中,t为当前时刻,C(t)为当前行情收盘价,n为参数N的值。 such that EMA是一种带有加权因子的移动平均线技术指标。EMA赋予了最新价格更高的权重,这样可以更快速地反应最新价格变动。
-
-该策略构建快速EMA均线和慢速EMA均线,以快速线上穿慢速线为买入信号,快速线下穿慢速线为卖出信号。当快速线上穿时,表示价格开始新一轮的上涨;当快速线下穿时,表示价格上涨趋势结束,开始回调下跌。
-
-## 优势分析
-
-该策略具有如下优势:
-
-1. 策略思路清晰,容易理解和实现;
-2. 利用EMA这个简单实用的技术指标,对价格趋势进行判断,避免错过主要趋势机会;  
-3. 策略参数较少,主要依赖快慢EMA均线,方便调整优化;
-4. 买入后能够跟踪上涨趋势,及时获利;
-5. 卖出后能够避开价格回调,减少风险;
-6. 回测数据充足,可靠性较高。
-
-## 风险分析
-
-该策略的主要风险有:  
-
-1. EMA均线发出假信号的概率较大,可能导致亏损;
-2. 行情震荡时,EMA均线容易互相穿越,产生频繁交易信号; 
-3. 突发事件导致快速断头方向改变,无法及时止损;
-4. PARAMETERS优化空间有限,实际表现可能弱于回测结果。
-
-为降低上述风险,可采取如下优化措施:
-
-1. 结合其他指标进行filtered,避免假信号;
-2. 调整参数,减少信号频繁;
-3. 增加止损策略,控制单笔损失;
-4. 测试不同时间周期参数,寻找最优参数。
-
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:  
-
-1. 多时间周期合成指标。例如配合周线或月线判断大趋势方向;
-2. 增加filter条件避免假突破。例如成交量,布林带等;  
-3. 动态调整参数。使参数可根据行情实时变化;
-4. 结合其他指标构建模型。例如网格、回归等算法模型。
-
-## 总结  
-
-该策略总体来说是一种较为简单实用的趋势跟踪策略。它利用EMA均线判断价格趋势,操作逻辑清晰,易于实现。优点是参数调整简单,能够有效跟踪趋势;缺点是容易发出假信号,实际表现可能弱于回测。下一步可从引入filter条件、动态调参、模型构建等方面进行优化,使策略更加稳定可靠。
-
-||
 
 ## Overview  
 
@@ -123,7 +65,6 @@ The strategy can be optimized from the following aspects:
 
 In summary, this is a simple and practical trend following strategy utilizing EMA to judge price trends. The logic is clear and easy to implement. The advantages lie in the simplicity to adjust parameters and effectively follow trends. The disadvantages are prone to false signals and actual performance may underperform backtests. Next steps of optimization can focus on adding filters, dynamic parameters, model building to make the strategy more robust.  
 
-[/trans]
 
 > Strategy Arguments
 

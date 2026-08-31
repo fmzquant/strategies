@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f5d2f67707c53e07fb.png)
-[trans]
-## 概述
-
-空间导向价格反转策略通过计算价格通道中心线,判断价格波动的趋势方向。当价格接近通道中心线时,发出做多或做空信号。该策略结合多个过滤条件,寻找高概率交易机会。
-
-## 策略原理  
-
-该策略的核心指标是价格通道中心线。计算方式是取最近30根K线的最高价和最低价的平均值。当低点高于中心线时认为是上涨趋势,当高点低于中心线时认为是下跌趋势。
-
-策略只在趋势背景发生转变时发出交易信号。即在上涨背景下,只在K线变红时做空;在下跌背景下,只在K线变绿时做多。
-
-此外,策略还设置双重过滤条件:蜡烛实体过滤和价格通道bars过滤。只有当蜡烛实体体积大于平均值的20%时才会触发信号;过滤周期内必须有连续的趋势信号才会开仓。
-
-## 优势分析
-
-该策略结合趋势、价值区域和K线形态,是一种高效的反转交易策略。主要优势有:
-
-1. 使用价格通道判断主要趋势,避免被震荡市场误导。
-2. 点位选择价格通道中心线附近,是经典的低买高卖区域。 
-3. K线实体和通道bars过滤增加信号质量,降低了错误信号率。
-4. 只在明确的反转点开仓,避免追高杀跌。
-
-## 风险及解决方法  
-
-该策略主要风险来自错过价格反转点而无谓等待信号。可通过以下方法优化:
-
-1. 调整过滤条件严格程度,降低过滤标准可减少漏单率。
-2. 可在反转趋势初期加大仓位,追踪趋势利润。
-3. 结合其他指标判断反转信号强度,主观干预过滤条件。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 优化参数,如调整价格通道周期,通道bars数等参数。
-2. 增加止损策略,在亏损达到一定比例时止损。 
-3. 结合交易量,量能干预过滤条件强度。如量能放大时放宽过滤。
-4. 增加机器学习模型判断趋势转折概率,取代简单过滤。
-
-## 总结  
-
-空间导向价格反转策略通过价格通道判断反转时点,设置双重过滤条件生成高质量信号。在参数调优和风控的基础上,是一种可靠的量化策略。
-
-||
 
 
 ## Overview
@@ -98,7 +54,6 @@ This strategy can be optimized in the following aspects:
 ## Conclusion   
 
 The price reversal strategy guided by the price channel determines reversal points through price channels, and sets double filter conditions to generate high quality signals. On the basis of parameter tuning and risk control, it is a reliable quantitative strategy.    
-[/trans]
 
 > Strategy Arguments
 

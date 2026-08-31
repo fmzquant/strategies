@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1eee68568c649a8ace0.png)
-[trans]
-
-## 概述
-
-该策略通过判断指数移动均线的方向,确定多空方向。当出现阳线大体吞噬阴线的形态且交易量放大时,进行做多操作。当指数移动均线方向发生转折或出现阴线大体吞噬阳线的形态时,进行平仓操作。
-
-## 策略原理
-
-1. 使用两条不同参数的指数移动均线,判断市场趋势方向。短期EMA线在长期EMA线之上视为多头市场,反之为空头市场。
-
-2. 当市场处于多头状态时,若出现阳线大体吞噬前一根K线的形态,且交易量要大于前一根K线1.2倍,则产生做多信号。此形态显示多头力量强劲,可以追入做多。
-
-3. 当市场趋势发生转折,即短期EMA下穿长期EMA时,显示多头力量减弱,应平仓。或者当出现阴线大体吞噬阳线的形态时,显示空头力量放量进场,也应主动止损平仓。
-
-## 优势分析
-
-1. 使用双EMA判断市场结构,能较准确判断多空市场状态。
-
-2. 吞噬形态显示单边力量突然放量进场,可以捕捉较大行情。结合交易量放大 filter,避免被假突破耽误。
-
-3. 有止损机制。由于不设置止损位,使用市场结构转折来止损,可以减少无谓止损带来的滑点损失。
-
-## 风险分析
-
-1. 双EMA判断市场结构也可能判断错误,从而错过行情或乱入做多。可以适当调整EMA周期参数。
-
-2. 吞噬形态容易被震荡行情误导。可以添加更多filter条件避免误交易。
-
-3. 没有止损位设置可能带来更大亏损。可以试试break even 止损等方法。
-
-## 优化方向  
-
-1. 可以结合更多指标判断多空,例如MACD,能量潮等。
-
-2. 可以酌情添加一定幅度的止损位。
-
-3. 可以根据交易品种特点优化EMA 周期参数。
-
-## 总结
-
-该策略整体思路清晰易懂,使用指数移动均线判断结构,吞噬形态捕捉突破。优点是判断逻辑简单,交易信号明确。但也存在被套牢的风险。通过进一步优化,可望获得较好回报。
-
-||
 
 ## Overview
 
@@ -94,7 +51,6 @@ This strategy determines long/short direction by judging the direction of expone
 
 The strategy's logic is clear and easy to understand, using EMAs to determine structure and engulfing patterns to capture breakout. Its advantages are simple judgment logic and clear trading signals. But risks of being trapped exist. Further optimization can gain better return.
 
-[/trans]
 
 > Strategy Arguments
 

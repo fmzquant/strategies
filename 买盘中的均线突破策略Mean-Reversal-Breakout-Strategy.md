@@ -9,53 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略的核心思想是在盘中出现短期均线向上突破时买入,以捕捉短期趋势反转机会。
-
-### 策略原理
-
-1. 定义买盘条件:当低点价格突破向下的短期SMA均线时
-2. 买入信号:当买盘条件成立时,做多入场
-3. 止损 EXIT:默认20根K线之后平仓
-
-具体来说,该策略通过计算低价与长度为smoothness的SMA均线的交叉作为买入信号。当低价从上方向下跌破SMA均线时,产生买入信号。之后在20根K线之后无条件平仓止损。
-
-该策略试图捕捉短期反转机会。当价格跌至一定程度后,短期SMA提供支撑,多头力量可能重新主导,价格可能反弹回升。这时买入可以获得反弹利润。
-
-### 优势分析
-
-1. 策略思路简单直观,容易理解实现,适合初学者
-2. 利用了短期均线的支撑作用,有一定的概率捕捉到反转机会
-3. 无需选择具体品种,可广泛适用于不同市场
-4. 可灵活调整均线参数,适应不同周期
-5. 止损清晰,可控制单笔损失
-
-### 风险分析
-
-1. 反转失败风险。价格突破均线后可能继续下跌而不是反弹
-2. 频繁止损风险。反转次数多导致频繁止损
-3. 参数优化风险。不同品种和周期需要调整参数,否则效果可能不佳
-4. 交易成本风险。频繁交易会增加交易成本
-
-可通过优化止损策略,引入趋势过滤,适当宽松持仓等方式降低上述风险。
-
-### 优化方向 
-
-1. 优化止损方法,以追踪价格实时变化,避免预设固定止损被套
-2. 增加趋势判断,只在趋势转向时买入,避免反趋势交易
-3. 考虑增加再入场机会,在反弹过程中多次加仓
-4. 测试不同均线参数对效果的影响,寻找最佳参数组合
-5. 评估不同品种参数效果,建立参数优化系统
-6. 比较止损bars数量的影响,优化止损策略
-
-### 总结
-
-本策略为简单的短期反转策略,采用均线突破形态作为买入时机。优点是简单易操作,可广泛适用;缺点是容易止损,存在反转失败风险。可通过严格的止损控制单笔损失,然后优化策略规则,在趋势判断和再入场等方面进行改进,降低风险并提高效果。该策略适合熟悉基本交易策略思路的初学者进行学习和优化改进。
-
-|| 
 
 ### Overview
 
@@ -101,7 +54,6 @@ Risks can be reduced by optimizing stop loss strategy, adding trend filter, allo
 
 This is a simple short-term mean reversal strategy, using MA breakout as entry timing. The advantages are being simple and widely applicable; the disadvantages are vulnerablility to stop loss and failed reversal risks. Risks can be managed through strict stop loss control, and the strategy can be improved by optimizing rules around trend filters, re-entry etc. It is suitable for beginners to learn and optimize such basic strategy ideas.
 
-[/trans]
 
 > Strategy Arguments
 

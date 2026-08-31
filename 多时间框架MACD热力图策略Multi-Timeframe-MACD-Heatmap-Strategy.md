@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13a8985360e58803289.png)
 
-[trans]
-
-## 概述
-
-这个策略的核心思想是利用多个不同时间周期的MACD指标的组合信号,来判断行情趋势变化的时机,实现低风险的趋势跟踪交易。
-
-## 策略原理
-
-1. 策略使用5个不同时间周期的MACD指标,包括60分钟、120分钟、240分钟、480分钟和日线,形成一个MACD指标的多时间框架组合。
-
-2. 当5个时间周期的MACD指标都为正(或负),并且上一根K线还不是全部MACD正(或负)时,判断为多头(或空头)信号,做多(或做空)。
-
-3. 止损方式为固定点数止损。
-
-4. 止盈方式为两个级别的移动止盈,分别关闭一部分和全部头寸。
-
-5. 当MACD指标出现一个多一个空的情况时,判断为信号反转,平掉当前头寸。
-
-6. 还使用TsL进行追踪止损。
-
-7. 使用止损移动到breakeven功能,当达到特定盈利后,将止损移动到开仓价附近,锁定盈利。
-
-8. 使用了Pineconector的语法,动态生成交易信号弹窗。
-
-## 策略优势
-
-1. 多时间框架MACD组合,可以提高信号准确性, capture大趋势,过滤掉部分噪音。
-
-2. 两个级别的移动止盈设定,可以在大趋势中多次获得部分利润。
-
-3. 固定止损点数设定,可以控制单笔损失。
-
-4. 当MACD指标不一致时平仓,可以及时止损,避免打破止损。 
-
-5. TsL跟踪止损功能,让止损实时跟踪价格变化。
-
-6. 止损移动到BE功能,可以在亏损变盈利后锁定部分利润。
-
-7. 动态交易信号,可以连接到MT4/5实现自动交易。
-
-## 风险及解决
-
-1. MACD信号可能出现假突破,造成不必要的亏损。可以适当调整MACD参数,过滤掉过多假信号。
-
-2. 固定止损点数可能过大过小。可以测试不同止损点数大小,找到最佳参数。
-
-3. 两个止盈点过近或过远,无法实现最佳回撤和利润率。可以测试不同止盈点,找到最佳参数。 
-
-4. BE功能可能过早或过晚触发。可以测试不同的BE触发点,找到最佳参数。
-
-5. 追踪止损距离可能过大过小。可以测试不同追踪止损距离,找到最佳参数。
-
-## 策略优化
-
-1. 可以测试更多种时间框架的MACD组合,找到captured市场趋势的最佳组合。
-
-2. 可以引入更多指标判断行情背景,避免不适合的行情打开仓位。
-
-3. 可以研究不同品种参数设置差异,设计自适应止损止盈系统。
-
-4. 可以结合机器学习技术,实现止损止盈参数的动态优化。
-
-5. 可以引入资金管理模块,使仓位大小动态调整,控制风险。
-
-## 总结
-
-整体来说,这个策略利用多时间框架MACD指标判断趋势,设置双止盈、追踪止损、BE功能来锁定利润,固定止损控制风险,是一个相对稳定的趋势跟踪策略。通过参数优化和功能扩展,可以进一步增强策略的稳定性和收益率。关键是找到参数的最佳组合,实现风险和收益的最优平衡。
-
-||
 
 ## Overview
 
@@ -147,7 +78,6 @@ The core idea of this strategy is to use the combination signals of MACD indicat
 
 In summary, this strategy uses multi-timeframe MACD to determine trends, with dual trailing take profit, trailing stop loss and BE features to lock in profits, fixed stop loss to control risk. It is a relatively stable trend following strategy. Further enhancements in stability and profitability can be achieved through parameter optimization and functionality expansion. The key is finding the optimal parameter combination to achieve the best risk-reward balance.
 
-[/trans]
 
 > Strategy Arguments
 

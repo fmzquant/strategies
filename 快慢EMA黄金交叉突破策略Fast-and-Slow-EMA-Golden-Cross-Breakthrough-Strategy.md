@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/af8137f749853e4006.png)
 
-[trans] 
-
-## 概述
-
-快慢EMA黄金交叉突破策略是一种追踪市场趋势的简单有效策略。它利用不同周期的EMA均线进行交叉突破,产生买入和卖出信号。基本思路是:当短周期EMA上穿较长周期的EMA时,产生买入信号;当短周期EMA下穿较长周期EMA时,产生卖出信号。
-
-## 策略原理  
-
-该策略主要依靠5周期、8周期和13周期的EMA均线比较,产生交易信号。包括:
-
-1. 计算5周期EMA、8周期EMA和13周期EMA。
-2. 当5周期EMA上穿8周期和13周期EMA时,产生买入信号。
-3. 当5周期EMA下穿8周期和13周期EMA时,产生卖出信号。
-4. 同时结合ADX指标判断趋势强度,只有在趋势足够强劲时才产生信号。
-
-这样,就实现了追踪中长线趋势的效果。当短周期均线上穿长周期均线时,表示短期趋势转为多头,可以买入;当短周期均线下穿长周期均线时,表示短期趋势转为空头,应该卖出。
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 操作简单,易于实现。
-2. 充分利用EMA均线的平滑作用,有效跟踪趋势。  
-3. 多组EMA组合实施交叉,避免假信号。
-4. 结合ADX指标,使信号更加可靠。
-5. 回撤和最大跌幅都不高。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 趋势剧烈反转时,止损可能较大。可以适当放宽止损范围。
-2. 交易频率较高,容易增加交易费用。可以适当调整EMA参数,降低交易频率。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化EMA参数,找到最佳参数组合。
-2. 加入其他指标过滤,如KDJ、BOLL等,提高信号质量。 
-3. 调整仓位管理,优化风险控制。
-4. 利用机器学习方法寻找更好的入场和出场规则。
-
-## 总结
-
-综上所述,快慢EMA黄金交叉突破策略整体运作顺畅,信号比较可靠,回撤不高,适合追踪中长线趋势。通过参数优化和规则完善,可以获得更好的策略效果。
-
-||
 
 
 ## Overview
@@ -106,7 +58,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, the operation of the fast and slow EMA golden cross breakthrough strategy is smooth, the signals are more reliable, the drawdown is not high, and it is suitable for tracking medium and long term trends. Better strategy results can be obtained through parameter optimization and improved rules.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a36f3eeee3a666280c.png)
-[trans]
-
-## 概述
-
-这个策略的主要思想是根据价格的动量指标来决定何时买入和卖出加密货币。它试图在价格趋势反转时捕捉趋势,并利用价格运动的动量来获利。
-
-## 策略原理
-
-该策略使用两个指标来决定入场和退出信号。第一个是价格本身--它检查过去10根K线的最高价和最低价。第二个是基于价格的动量指标,即%K值。
-
-具体来说,当价格低于过去10根K线最高价的98%时(买入阈值),策略会发出买入信号。这意味着价格出现了向下突破。同理,当价格高于过去10根K线最低价的102%时(卖出阈值),策略会发出卖出信号,价格出现了向上突破。
-
-这样,策略就可以在价格运动形成新的趋势时抓住反转点。通过调整买入卖出阈值,可以控制策略对突破信号的敏感度。
-
-## 优势分析
-
-这个策略最大的优势在于它同时考虑了价格水平和动量因素。依靠动量指标可以更可靠地捕捉真正的趋势反转,而不是被假突破误导。具体优势如下:
-
-1. 利用动量指标过滤噪音,识别真实信号
-2. 回测表现出色,最大回撤较小
-3. 可通过调整参数控制策略的频繁程度
-4. 结合止损可以有效控制风险
-
-## 风险分析
-
-该策略也存在一些风险需要注意。主要风险有:
-
-1. 市场突然崩盘导致暴跌,无法止损
-2. 交易费用和滑点的影响
-3. 参数设置不当,过于频繁交易或漏失机会
-
-对策:
-
-1. 采用多因子模型,防止单一指标出错
-2. 加入止损,限制最大损失
-3. 优化参数,使策略更稳定
-
-## 优化方向
-
-该策略还可以在以下方面进行优化:
-
-1. 增加更多过滤指标,如成交量,布林带等
-2. 基于机器学习方法动态调整参数
-3. 结合基本面分析,在重要事件前后调整策略
-4. 优化资金利用率,通过杠杆放大策略收益
-
-## 总结
-
-该动量突破策略整体而言非常适合捕捉加密货币的短线交易机会。它有效地利用价格反转时的动量特征来获利,同时控制风险。通过不断优化参数和模型,可以使策略更稳健,获得更高的稳定收益。
-
-||
 
 ## Overview
 
@@ -110,7 +59,6 @@ Further optimizations for the strategy:
 
 Overall this momentum breakout strategy is well suited for capturing short term trading opportunities in cryptocurrencies. It effectively capitalizes on momentum characteristics of price reversals for profit while controlling risk. Continued refinements to parameters and model can make the strategy more robust for consistent returns.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,26 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14eb3efb32b80d3f373.png)
-[trans]
-### 概述
-本文介绍了一种基于三个不同周期的指数移动平均线（EMA）交叉点的量化交易策略。该策略旨在利用EMA交叉点来识别股票市场的长期和短期趋势，实现有效的交易决策。
-
-### 策略原理
-策略使用三个不同周期的EMA：10天、100天和200天。当短周期EMA（10天）穿越长周期EMA（100天或200天）时，根据穿越方向生成买入或卖出信号。策略还结合了一个时间过滤器，确保只在特定时间段内进行交易。这种组合增加了策略的灵活性和适应性。
-
-### 优势分析
-这种策略的优势在于其简单性和高适应性。多周期EMA提供了对市场趋势的多角度观察，增加了交易决策的准确性。同时，时间过滤器避免了市场特定时期的不稳定性，降低了潜在的风险。
-
-### 风险分析
-尽管这种策略有效，但存在一定风险。主要风险是市场突发事件可能导致策略失败。此外，EMA指标可能存在滞后性，延迟反映市场变化。解决这些风险的方法包括实时市场监控和结合其他技术指标来提高决策的准确性。
-
-### 优化方向
-策略的优化方向包括综合使用多种技术指标，如相对强弱指数（RSI）和布林带，以增强市场分析的深度和广度。此外，可以通过调整EMA周期来更好地适应不同市场条件。
-
-### 总结
-总体而言，这种多周期EMA交叉量化交易策略是一种高效的工具，可以帮助交易者在多变的市场中做出更好的决策。通过不断优化和适应市场变化，这种策略有潜力在未来的交易中实现更高的收益。
-
-||
 
 ### Overview
 This article introduces a quantitative trading strategy based on the crossover points of Exponential Moving Averages (EMA) over three different periods. The strategy aims to utilize EMA crossovers to identify long-term and short-term trends in the stock market for effective trading decisions.
@@ -51,7 +31,6 @@ Overall, this
 
  multi-period EMA crossover quantitative trading strategy is an effective tool that can help traders make better decisions in a volatile market. With continuous optimization and adaptation to market changes, this strategy has the potential to achieve higher returns in future trading endeavors.
 
-[/trans]
 
 
 > Strategy Arguments

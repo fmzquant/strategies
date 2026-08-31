@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/163ce4ff31fe3cedf6d.png)
 
-[trans]
-#### 概述
-该策略结合了RSI指标与移动平均线(MA)来生成交易信号。RSI用于判断市场是否超买或超卖,MA用于判断价格趋势。当RSI超买且价格高于MA时产生买入信号;当RSI超卖或MA产生死叉时产生卖出信号。此外,策略还引入了随机RSI指标(StochRSI)作为辅助判断,在StochRSI产生信号时会在图表上标记提示。
-
-#### 策略原理
-1. 计算RSI指标值,判断市场是否超买(>70)或超卖(<30)。
-2. 计算自定义周期的MA,包括EMA、SMA、HMA和WMA四种类型,并根据参数设置决定是否在图表上显示。
-3. 当RSI超买且收盘价高于MA时,产生买入信号;当RSI超卖或MA产生死叉时,产生卖出信号。
-4. 引入StochRSI指标作为辅助判断,StochRSI超买(>70)或超卖(<30)时会在图表上标记提示,但不产生实际交易信号。
-
-#### 策略优势
-1. 将RSI和MA两个经典指标有机结合,能够较好地捕捉趋势行情和超买超卖时机。
-2. MA类型和参数可自由设置,灵活性较高,可以根据不同市场特征进行调整。
-3. 引入StochRSI指标作为辅助判断,为交易决策提供更多参考。
-4. 代码逻辑清晰,可读性强,便于理解和二次开发。
-
-#### 策略风险
-1. RSI和MA都是滞后指标,在趋势反转初期可能会产生较多误导信号。
-2. 参数设置不当可能导致信号过早或过晚,影响整体收益。
-3. 缺乏止损和仓位管理,在行情剧烈波动时可能承担较大风险。
-
-#### 策略优化方向
-1. 引入更多先行指标如波动率,以提前判断趋势转变。
-2. 对买卖信号进行过滤,如要求RSI和MA同时满足一定条件才产生信号,以提高信号准确性。
-3. 在策略中加入止损和仓位管理模块,控制单笔交易风险和总体风险。
-4. 对策略进行参数优化,寻找最佳参数组合。
-5. 考虑加入不同周期或多个品种,充分利用各品种或周期之间的联动关系。
-
-#### 总结
-该策略通过结合RSI和MA两个经典指标,能够捕捉到趋势行情和超买超卖时机,同时引入StochRSI指标作为辅助判断,整体思路简单清晰。但策略也存在一些不足,如缺乏风险控制措施,信号准确性有待提高等。未来可从引入更多指标、优化信号规则、加入风控模块等方面对策略进行完善,以期获得更加稳健的收益。
-
-||
 
 #### Overview
 This strategy combines the RSI indicator with moving averages (MA) to generate trading signals. RSI is used to determine whether the market is overbought or oversold, while MA is used to determine price trends. A buy signal is generated when RSI is overbought and the price is above the MA; a sell signal is generated when RSI is oversold or when the MA produces a death cross. In addition, the strategy introduces the Stochastic RSI indicator (StochRSI) as an auxiliary judgment, and a prompt will be marked on the chart when StochRSI generates a signal.
@@ -73,7 +41,6 @@ This strategy combines the RSI indicator with moving averages (MA) to generate t
 
 #### Summary
 By combining the two classic indicators of RSI and MA, this strategy can capture trend movements and overbought/oversold opportunities. At the same time, it introduces the StochRSI indicator as an auxiliary judgment, and the overall idea is simple and clear. However, the strategy also has some shortcomings, such as the lack of risk control measures and the need to improve signal accuracy. In the future, the strategy can be improved by introducing more indicators, optimizing signal rules, adding risk control modules, etc., in order to obtain more robust returns.
-[/trans]
 
 
 

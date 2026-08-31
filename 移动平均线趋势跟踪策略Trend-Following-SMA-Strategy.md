@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/167d1201c180c7ca06e.png)
-[trans]
-
-## 概述
-
-移动平均线趋势跟踪策略利用简单移动平均线和快速移动平均线的组合来判断市场趋势方向,进而产生交易信号。当价格上穿简单移动平均线和快速移动平均线时做多,当价格下穿简单移动平均线和快速移动平均线时做空。该策略 dynamically无回溯优化和实时交易信号,可以捕捉趋势的变化。
-
-## 策略原理
-
-该策略使用sma函数计算长度为50周期的简单移动平均线sma,以及计算快速移动平均线fsma。fsma的计算是在sma的基础上加上price的n周期标准差的6倍。 
-
-策略使用两个boolean变量long和short来记录做多和做空状态。当价格上穿sma和fsma时,long置为1,做多;当价格下穿时,long置为-1,平仓。short变量也使用类似逻辑处理做空状态。
-
-策略使用trend变量来记录趋势判断。当价格高于fsma和sma时,trend为1,表示上涨趋势;当价格低于fsma和sma时,trend为-1,表示下跌趋势。
-
-根据trend的实时判断,产生long和short的交易信号。当trend从下降转为上涨时,如果价格高于fsma,则做多;当trend从上涨转为下降时,如果价格低于sma,则做空。
-
-该策略综合考虑了趋势判断和突破交易的方法,可以有效捕捉趋势转变带来的交易机会。
-
-## 策略优势
-
-1. 使用double confirmation模型,同时检测两个移动平均线,可以有效过滤假突破。
-
-2. 结合趋势判断和突破交易,可以在趋势转变点捕捉机会。
-
-3. 无回溯测试和优化,所有交易信号实时产生,无曲线拟合。
-
-4. 策略逻辑简单清晰,容易理解和修改。
-
-5. 可视化配置参数,长度周期、倍数等都可以根据市场调整。
-
-
-## 策略风险
-
-1. 双均线策略容易产生频繁交易和反转损失。
-
-2. 移动平均线本身滞后性affect可能错过趋势转变。
-
-3. 缺乏止损机制,无法控制单笔损失。
-
-4. 参数不恰当可能导致过于频繁或过于滞后的交易。
-
-5. 针对风险1和2,可以适当延长均线周期,并添加回撤止损。
-
-6. 针对风险3,可以设置百分比止损或挂单止损。
-
-7. 针对风险4,应该针对不同市场调整参数,避免单一固定参数。
-
-
-## 策略优化方向 
-
-1. 增加趋势过滤条件,采用MACD,DMI等指标确认趋势。
-
-2. 利用KD,RSI等指标结合超买超卖情况进行入场。
-
-3. 增加整体止损机制,如跟踪止损,百分比止损等。
-
-4. 增加立场管理模块,如动态调整仓位大小。
-
-5. 优化参数设置,使其更有效适应不同行情周期。
-
-6. 增加机器学习模块,利用AI技术自动优化参数。
-
-7. 构建复合策略,利用其他指标进行防假突破。
-
-8. 利用深度学习技术识别更复杂的趋势模式。
-
-## 总结
-
-移动平均线趋势跟踪策略整体来说是一个较为简单的趋势跟踪策略。它利用快慢均线的组合辅助判断趋势方向,在趋势转变点进行趋势换手,可以有效捕捉价格趋势的转换。但该策略也存在一些问题,如频繁交易,滞后等风险。未来的优化方向包括增加趋势过滤,止损模块,动态调整参数等。整体来说,该策略作为趋势跟踪入门策略还是较为适用的,但真实应用中需要对其进行针对应用市场的优化调整,才能真正发挥效果。
-
-||
 
 
 ## Overview
@@ -149,7 +78,6 @@ The strategy combines both trend following and breakout methods to capture oppor
 
 The SMA trend following strategy is a simple trend trading system. It uses fast and slow MAs to assist trend direction and capture trend reversal. However, risks like whipsaw and lag exist. Future enhancements include adding filters, stops, dynamic parameters etc. Overall it serves as a good starter trend following strategy, but optimizations are needed for real-world applications to maximize its performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14f7293dd41ded232b5.png)
 
-[trans]
-
-## 概述
-双均线交叉点位策略是一种基于移动平均线的量化交易策略。它通过计算快线和慢线的交叉来判断价格趋势,并在交叉点发出买入和卖出信号。本策略采用Hull均线作为快线,而Super Smoother滤波器作为慢线。这种组合结合了均线的平滑性以及趋势判断能力,可以有效识别价格走势,产生较为可靠的交易信号。
-
-## 策略原理  
-双均线交叉点位策略的计算公式如下:
-快线(Hull均线):WMA(2 * WMA(价值,n/2)-WMA(价值,n),SQRT(n))  
-慢线(Super Smoother):价值三次滤波器  
-
-其中,WMA表示加权移动平均线,SQRT表示开平方根,滤波器包含一个一阶滞后项和两个二阶滞后项。
-
-策略通过计算快线和慢线值,判断两线之间的交叉关系,其中:  
-快线上穿慢线为买入信号
-快线下穿慢线为卖出信号
-
-## 优势分析
-双均线交叉点位策略结合双均线判断和点位交易的优点,可以准确抓住趋势转折点,进出场及时。相比单一均线策略,具有以下优势:
-1. 双均线组合消除假信号。快线判定趋势方向和强弱,慢线过滤震荡,使信号更加可靠。  
-2. Super Smoother滤波器强大的数据 fittings 能力,能有效提取价格趋势。  
-3. Hull均线对价格变化敏感度高,可以及时捕捉转折。  
-
-## 风险分析
-双均线交叉点位策略也存在一定风险:
-1. 在震荡行情中,可能出现较多 whipsaw 信号。可适当加宽均线间距减少假信号。
-2. 双均线间距过宽会错过部分机会。需权衡捕捉信号数量与质量。   
-3. 本策略更适合趋势 clearer 的品种,不宜运用在高波动产品。
-
-## 优化方向  
-双均线交叉点位策略可从以下维度进行优化:  
-1. 调整均线参数,适配不同周期及波动幅度的品种。    
-2. 加入附加指标或过滤器判断趋势质量,以减少 whipsaw。     
-3. 结合趋势指标优化建仓比例。
-
-## 总结
-双均线交叉点位策略承袭均线策略的优点之余,拓展运用双均线判断和点位交易方式,形成一个较为先进可靠的量化交易方案。它在择时交易方面具有独特优势,值得实盘验证与应用探索。本文深入解析了该策略的原理、长处与不足,并给出了优化设想,可供参考借鉴。相信随着模型和参数的不断完善,该策略必将成为一个强大的择时工具。
-
-||
 
 
 ## Overview  
@@ -89,7 +51,6 @@ The open close cross point strategy can be optimized in the following dimensions
 ## Conclusion  
 The open close cross point strategy inherits the advantages of moving average strategies while expanding the use of dual moving average judgments and point trading models to form a more advanced and reliable quantitative trading scheme. It has unique advantages in timing trading which deserve live testing and application exploration. This article thoroughly parses the principles, strengths and weaknesses of this strategy, and provides optimization ideas for reference. It is believed that with continuous improvements on the model and parameters, this strategy will become a formidable market timing tool.  
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/158791d2c381c2f1ab7.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的趋势跟踪交易系统,主要结合了MACD指标、RSI指标和移动平均线(MA)进行交易信号的确认。策略采用保守的资金管理方法,通过设定止损和多重获利目标来控制风险。该策略专注于捕捉市场的上涨趋势,仅执行多头交易。
-
-#### 策略原理
-策略的核心逻辑基于三重技术指标的协同确认:
-1. 使用MACD指标识别动量 - 当MACD线上穿信号线时产生初步买入信号
-2. 使用RSI指标确认强度 - 要求RSI值大于设定阈值(默认50)以确认上涨动能
-3. 使用均线系统确认趋势 - MA50位于MA200之上时确认整体向上趋势
-同时,策略实现了完善的资金管理机制:
-- 基于账户总资金设定风险敞口
-- 设置固定百分比止损以控制单笔交易风险
-- 采用双重获利目标(TP1和TP2)以优化收益
-
-#### 策略优势
-1. 多重技术指标交叉验证,提高交易信号的可靠性
-2. 完善的资金管理体系,有效控制风险
-3. 策略参数可调,适应性强
-4. 采用双重获利目标,在保护利润的同时不错过大行情
-5. 代码结构清晰,易于维护和优化
-
-#### 策略风险
-1. 可能在震荡市场产生过多假信号
-2. 多重指标确认可能导致入场时机略有滞后
-3. 仅支持做多,在下跌市场中缺乏对冲机制
-4. 参数优化过度可能导致过拟合
-
-#### 策略优化方向
-1. 引入成交量指标作为辅助确认
-2. 增加市场波动率过滤机制
-3. 优化出场机制,可考虑加入移动止损
-4. 引入自适应参数机制,根据市场状态动态调整
-5. 增加回撤控制机制
-
-#### 总结
-该策略通过多重技术指标的协同配合,构建了一个稳健的趋势跟踪系统。完善的资金管理机制和可调参数设计,使其具有良好的实用性和适应性。后续可通过增加市场状态识别、优化出场机制等方式进一步提升策略的稳定性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy is a trend-following trading system based on multiple technical indicators, combining MACD, RSI, and Moving Averages (MA) for trade signal confirmation. It employs a conservative money management approach with stop-loss and multiple profit targets for risk control. The strategy focuses on capturing upward market trends through long-only positions.
@@ -86,7 +48,6 @@ Additionally, the strategy implements comprehensive money management:
 #### Summary
 This strategy builds a robust trend-following system through the synergy of multiple technical indicators. Its comprehensive money management mechanism and adjustable parameter design provide good practicality and adaptability. Future improvements can focus on market state identification and exit mechanism optimization to further enhance strategy stability and profitability.
 
-[/trans]
 
 
 

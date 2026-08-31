@@ -10,32 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8b2f49adf533f4fa34.png)
-[trans]
-## 概述
-
-双管齐下量化反转追踪策略通过组合使用简单移动平均线指标和随机指标,实现了一个既可以抓住市场快速反转的同时又可以减少因错过信号带来的机会成本的高效稳定的短线交易策略。
-
-## 策略原理
-
-该策略由两部分组成:123形态反转部分和自适应移动平均线部分。123形态反转部分通过计算前两个交易日的收盘价关系来判断是否出现反转机会。如果前一日收盘价低于前二日而当前交易日收盘价高于前一日,且随机慢线低于50,则产生买入信号。如果前一日收盘价高于前二日而当前交易日收盘价低于前一日,且随机快线高于50,则产生卖出信号。这可以抓住快速的短线反转机会。另一部分是自适应移动平均线,它在市场不活跃时响应缓慢,活跃时响应迅速,可以有效过滤噪音躲避震荡,判断主要趋势方向。两者信号同向时产生入场信号,同向平仓。
-
-## 策略优势
-
-双管齐下量化反转追踪策略最大的优势是组合使用反转形态和趋势过滤,使得它既可以捕捉快速反转又可以避免在震荡市中被套牢。收益来源主要有两个:第一,123形态的识别可以及时追踪价格快速调头的机会,这是许多稳重策略所无法做到的。第二,自适应移动平均线的应用确保了交易方向和主趋势一致,有效过滤了噪音,减少了不必要的损失。
-
-## 策略风险
-
-该策略的主要风险在于参数设置的不当可能导致交易频率过高或信号识别能力不足。如果123形态的参数设置过于灵敏,可能导致在震荡行情中交易频繁,产生较多平仓亏损。如果自适应移动平均线参数设置过于缓慢,则可能错过反转机会。此外,趋势行情中追高杀跌也会带来更大的资金波动。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:第一,调整123形态的参数,使其既能识别明确反转,又不至于过于灵敏产生错误信号。第二,优化自适应移动平均线的参数,在平稳和敏感间找到最佳平衡。第三,可以引入止损策略,以控制单笔亏损。第四,可以结合市场情绪指标增强决策质量。
-
-## 总结
-
-双管齐下量化反转追踪策略成功地集成了反转交易和趋势过滤两个缺一不可的部分,组合优势显著。通过不断优化参数设定,持续完善止损和风控机制,该策略有望成为一个易于实现收益,可控风险的高效量化交易策略。
-
-||
 
 ## Overview
 
@@ -61,7 +35,6 @@ The strategy can be optimized in several ways: First, adjust the parameters of t
 
 The dual-driver quantized reversal tracking strategy successfully integrates the two indispensable parts of reversal trading and trend filtering, and the combined advantages are significant. By continuously optimizing parameter settings and improving stop loss and risk control mechanisms, this strategy has the potential to become an efficient quantitative trading strategy that is easy to profit from and has controllable risks.
 
-[/trans]
 
 > Strategy Arguments
 

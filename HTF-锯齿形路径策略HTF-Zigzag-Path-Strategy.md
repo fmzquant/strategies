@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f0b3e7613c5aa8f515.png)
-[trans]
-#### 概述
-
-该策略使用高级时间框架(HTF)的ZigZag指标,在较低的时间框架(LTF)上绘制ZigZag路径,并根据HTF蜡烛线的开盘价和收盘价产生交易信号。策略的主要思路是利用HTF的趋势方向来指导LTF的交易决策,同时使用ZigZag指标来确定关键的支撑和阻力位置。
-
-#### 策略原理
-
-1. 获取用户指定的HTF时间框架(默认为15分钟)的数据,包括开盘价、最高价、最低价、收盘价、开盘时间和收盘时间。
-2. 在LTF图表上绘制HTF蜡烛线的方框,以显示HTF的价格走势。
-3. 使用ZigZag指标连接HTF的高点和低点,形成ZigZag路径。
-4. 根据HTF蜡烛线的开盘价和收盘价产生交易信号:
-   - 如果HTF蜡烛线的收盘价低于开盘价,则产生做多信号。
-   - 如果HTF蜡烛线的收盘价高于开盘价,则产生做空信号。
-5. 根据交易信号执行相应的买入或卖出操作。
-
-#### 策略优势
-
-1. 利用HTF的趋势方向来指导LTF的交易决策,可以帮助交易者把握大趋势,提高交易成功率。
-2. 使用ZigZag指标连接HTF的高点和低点,可以清晰地显示价格的关键支撑和阻力位置,为交易决策提供参考。
-3. 策略逻辑简单明了,易于理解和实现。
-4. 通过在LTF图表上绘制HTF蜡烛线的方框,可以直观地观察HTF价格走势与LTF价格走势的关系,有助于交易者做出更加informed的决策。
-
-#### 策略风险
-
-1. 策略仅根据HTF蜡烛线的开盘价和收盘价产生交易信号,可能会错过一些重要的价格变动信息,导致交易机会的丢失。
-2. ZigZag指标可能会产生一些错误的信号,尤其是在市场波动较大或趋势不明确的情况下,需要谨慎对待。
-3. 策略没有考虑风险管理和仓位控制,在实际应用中可能会面临较大的风险敞口。
-4. 策略缺乏对市场情绪和基本面因素的考虑,可能会受到意外事件的影响而产生错误信号。
-
-#### 策略优化方向
-
-1. 引入更多的技术指标或市场情绪指标,如相对强弱指数(RSI)、移动平均线(MA)等,以提高交易信号的可靠性。
-2. 优化ZigZag指标的参数设置,如调整最小价格变动百分比或最小波动点数,以适应不同的市场环境和交易品种。
-3. 加入风险管理和仓位控制模块,如设置止损止盈、动态调整仓位大小等,以减少策略的风险敞口。
-4. 考虑引入基本面分析或市场情绪分析,如经济数据发布、重大事件等,以提高策略的适应性和稳健性。
-
-#### 总结
-
-HTF Zigzag Path策略利用高级时间框架的ZigZag指标在较低时间框架上绘制ZigZag路径,并根据HTF蜡烛线的开盘价和收盘价产生交易信号。该策略的优势在于利用HTF的趋势方向来指导LTF的交易决策,同时使用ZigZag指标来确定关键的支撑和阻力位置。然而,策略也存在一些风险,如可能错过重要的价格变动信息、ZigZag指标可能产生错误信号等。为了优化策略,可以考虑引入更多的技术指标、优化ZigZag指标参数、加入风险管理和仓位控制模块,以及考虑基本面和市场情绪分析等方面。
-|| 
 #### Overview
 
 The strategy utilizes the ZigZag indicator on a higher time frame (HTF) to plot the ZigZag path on a lower time frame (LTF) chart and generates trading signals based on the opening and closing prices of the HTF candles. The main idea behind the strategy is to use the trend direction of the HTF to guide trading decisions on the LTF while using the ZigZag indicator to identify key support and resistance levels.
@@ -88,7 +48,6 @@ The strategy utilizes the ZigZag indicator on a higher time frame (HTF) to plot 
 #### Summary
 
 The HTF Zigzag Path strategy utilizes the ZigZag indicator on a higher time frame to plot the ZigZag path on a lower time frame chart and generates trading signals based on the opening and closing prices of the HTF candles. The strategy's strength lies in using the trend direction of the HTF to guide trading decisions on the LTF while leveraging the ZigZag indicator to identify key support and resistance levels. However, the strategy also has some risks, such as potentially missing important price movement information and the possibility of false signals from the ZigZag indicator. To optimize the strategy, considerations can be given to incorporating additional technical indicators, optimizing ZigZag indicator parameters, implementing risk management and position sizing modules, and incorporating fundamental and market sentiment analysis.
-[/trans]
 
 > Strategy Arguments
 

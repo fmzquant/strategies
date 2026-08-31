@@ -11,25 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于支撑阻力突破的趋势追踪策略”。该策略通过识别关键的支撑位和阻力位,在价格突破这些位时进行趋势交易。
-
-具体逻辑如下:
-
-1. 计算一定周期内的最高点和最低点,作为关键的支撑阻力位。
-
-2. 当价格上涨突破上一日的最高支撑时,产生买入信号。
-
-3. 当价格下跌突破上一日的最低支撑时,产生卖出信号。
-
-4. 在突破发生后快速追踪趋势运行。如果再次跌破支撑位,则止损退出。
-
-该策略的优势是把握突破关键支撑阻力位的时机进行趋势交易。但需要关注指标形态,避免在震荡行情中产生过多不确定信号。
-
-总体来说,关注关键支撑阻力位的突破是较简单直观的跟踪策略。但交易者仍需辅助其他技术指标进行确认,并适当调整参数,使策略 Both盈利进入趋势又能及时止损。
-
-
-||
 
 
 
@@ -49,7 +30,6 @@ The advantage is capitalizing on pivot breakout timing for trend trading. But in
 
 In summary, watching pivotal support/resistance level breakouts is a relatively simple and intuitive tracking approach. But traders still need confirmation from additional technical indicators, and parameter tuning, for the strategy to Both profit from trend entries and timely stop losses.
 
-[/trans]
 
 
 > Strategy Arguments

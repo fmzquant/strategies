@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10332781146a8dbeaa9.png)
-[trans]
-
-### 概述
-
-双线性回归趋势跟踪策略利用快速线性回归和慢速线性回归的差值来判断价格趋势,并以此作为入场信号。当快速线性回归上穿门限时做多,下穿门限时平仓。同时,该策略还利用EMA作为过滤条件,只有当价格高于EMA时才会入场。
-
-### 策略原理
-
-该策略首先计算两条不同周期的线性回归曲线,一条为快速线性回归,周期较短,另一条为慢速线性回归,周期较长。然后计算两条线性回归的差值,当快速线性回归高于慢速线性回归时,差值大于0,表示价格处于上升趋势;当快速线性回归低于慢速线性回归时,差值小于0,表示价格处于下降趋势。
-
-策略以差值线穿过门限值作为买入信号,以差值线跌破门限值为平仓信号。同时,要求价格高于200周期的EMA,这是为了过滤掉非趋势行情。
-
-### 优势分析
-
-1. 利用双线性回归捕捉价格趋势,回测效果较好。
-
-2. 增加EMA过滤,可以过滤掉部分非趋势行情,避免错信号。
-
-3. 策略逻辑简单清晰,容易理解和实现。
-
-### 风险分析
-
-1. 线性回归周期设置不当,可能导致产生大量噪音信号。
-
-2. 强势趋势行情中,EMA过滤可能错过部分机会。
-
-3. 震荡行情中容易产生频繁交易和亏损。
-
-解决方法:
-
-1. 优化线性回归周期参数,降低噪音。
-
-2. 可根据市场情况动态调整EMA周期。
-
-3. 增加止损来控制亏损。
-
-### 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化快速线性回归和慢速线性回归的周期参数,找到最佳参数组合。
-
-2. 尝试其他过滤指标代替EMA,如布林带、KDJ等,看是否可以提高策略效果。 
-
-3. 增加动态止损来控制风险,防止亏损扩大。
-
-4. 结合股票选择机制,选择趋势性较强的个股进行交易。
-
-5. 开发参数自适应功能,根据市场状态自动调整参数。
-
-### 总结
-
-双线性回归趋势跟踪策略整体来说较为简单直接,利用双线性回归差值判断价格趋势,并以EMA作为过滤指标,可以有效跟踪趋势行情。但该策略也存在一定风险,需要关注参数优化、止损控制等方面,才能发挥策略最大效果。
-
-|| 
 
 ### Overview
 
@@ -118,7 +63,6 @@ The strategy can be optimized in the following aspects:
 
 The Bilinear Regression strategy is simple and direct in capturing trends with dual linear regression and EMA filter. But it also has risks that need to be addressed through parameter optimization, stop loss, etc. When properly tuned, it can effectively trade trending markets.
 
-[/trans]
 
 > Strategy Arguments
 

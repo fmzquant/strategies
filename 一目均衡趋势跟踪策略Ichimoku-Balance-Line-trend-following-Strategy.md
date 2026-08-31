@@ -11,74 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12061c1835c13a6fb97.png)
 
-[trans]
-
-
-### 概述
-
-一目均衡策略是一种趋势跟踪策略,它结合了Ichimoku云图指标的 Conversion线和Base线,以及移动平均线EMA来判断趋势方向,根据价格突破的信号入场。当Conversion线上穿Base线且价格高于200日EMA时做多;当Conversion线下穿Base线时平仓。该策略融合多个指标判断趋势方向,可以有效跟踪趋势,获得超额收益。
-
-### 策略原理
-
-该策略主要使用以下指标:
-
-1. Conversion线:Donchian通道的中间值,代表价格的最短期趋势,相当于9日移动平均线。
-
-2. Base线:Donchian通道的中间值,代表价格的中期趋势,相当于26日移动平均线。 
-
-3. Lagging Span:关闭价格的移位平均线,移位周期为120日,用来判断支撑阻力。
-
-4. Lead 1:Conversion线和Base线的平均值,代表价格的长期趋势。
-
-5. Lead 2:120日Donchian通道的中间值,代表价格的最长期趋势。
-
-6. EMA200: 200日的指数移动平均线,判断大趋势方向。
-
-当Conversion线上穿Base线时,表示短期均线上穿长期均线,属于金叉信号,说明价格趋势开始变强,可以做多。此时如果价格还高于200日EMA,则说明处于长线多头行情,做多信号更加可靠。
-
-当Conversion线下穿Base线时,属于死叉信号,说明价格趋势开始转弱,应平仓止损。
-
-综合多个均线的交叉信号,可以有效判断价格趋势转折点,实现趋势跟踪。同时结合长线均线过滤,可以避免因短期市场震荡而出现的错误信号。
-
-### 优势分析
-
-1. 使用多重均线判定趋势方向,提高判断准确性。Conversion线和Base线的交叉为核心交易信号,Lead 1和Lead 2的多空排列用来验证信号的可靠性。
-
-2. Lagging Span可用于确认支撑阻力位,进一步提升入场的时机。
-
-3. 运用EMA200判断大趋势方向,避免因短期调整而错误交易。只有大趋势向上时,才考虑做多信号。
-
-4. 通过参数优化,转换线和基准线的周期组合可以把握不同周期的趋势转换点。
-
-5. 策略思路清晰易于理解,容易实盘复现。
-
-### 风险分析
-
-1. Conversion线和Base线交叉时,要关注Lead 1和Lead 2的排列以确认信号。如果排列顺序异常,可能是假突破,此时应避免交易。
-
-2. 必须结合更长周期指标如EMA200来判断大趋势,如果大趋势向下,即使出现做多信号也要规避。
-
-3. 该策略更依赖趋势,在震荡行情中容易产生错误信号导致止损。应结合波动率等指标来控制风险。
-
-4. 参数设置需要测试优化,如果参数设定不当,转换线和基准线会过于灵敏或迟钝,导致漏单或错单。
-
-### 优化方向 
-
-1. 可以测试添加其他均线指标,如EMA 50、EMA 100等来辅助判断趋势。
-
-2. 可以结合交易量指标来确认趋势转折点,避免无效突破。例如突破时要求交易量放大。
-
-3. 可以结合波动率指标如ATR来动态调整止损位和盈利目标。在波动率扩大时,适当放宽止损;波动率缩小时,可以收紧止损以锁定利润。
-
-4. 可以基于历史数据回测优化转换线和基准线的参数组合,以获得更稳定的交易信号。
-
-5. 可以建立仓位管理策略,在大趋势向上时加大做多仓位,在震荡行情中减小仓位。
-
-### 总结
-
-一目均衡策略通过多重均线指标判断趋势方向,在趋势转换点入场,然后顺势而为,有效把握中长线趋势。相比单一指标,该策略可以过滤伪信号,提高入场的准确性。但仍需要优化参数,并辅以其他指标来确保信号的可靠性,控制风险。如果参数设置合理,交易频次不会过高,可以长时间持有趋势波段,实现超额收益。
-
-||
 
 
 ### Overview
@@ -147,7 +79,6 @@ By combining crossover signals of multiple moving averages, the strategy can eff
 
 The Ichimoku Balance Line strategy captures mid- to long-term trends by entering on trend reversal signals from multiple moving average crossovers. Compared to single indicator strategies, it can filter out false signals and improve entry accuracy. But parameters need to be optimized, and additional indicators incorporated to ensure reliable signals and manage risk. With well-tuned settings, trade frequency should not be too high, allowing riding long swings for excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

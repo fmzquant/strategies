@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16bbc91e08e677f6b87.png)
-[trans]
-
-## 概述
-
-该策略利用了移动平均线EMA、相对强弱指标RSI、商品信道指标CCI三大主流指标结合,通过EMA均线是否回转识别价格趋势,然后使用过买过卖的RSI和CCI指标进行辅助判断,形成交易信号。属于中间期交易策略。
-
-## 策略原理
-
-1. 用4周期和8周期的EMA均线交叉来判断价格趋势,4周期快速判断,8周期慢速确定;
-
-2. EMA均线向上回转时,即4周期线上穿8周期线,再辅助判断RSI指标高于65(相对超买区)和CCI指标高于0(代表没有超买超卖),满足则产生做多信号;
-
-3. EMA均线向下回转时,即4周期线下穿8周期线,再辅助判断RSI指标低于35(相对超卖区)和CCI指标低于0(代表没有超买超卖),满足则产生做空信号;
-
-4. 形成信号后,根据输入的止损距离和止盈距离来设置止损和止盈价格。
-
-总体来说,该策略综合考量了中短期价格趋势和短期指标超买超卖区间避让,比较稳定,同时止损止盈设置也会有效控制单次交易的最大损失。
-
-## 优势分析
-
-1. 多指标综合判断,避免误判概率较大的单一指标交易策略;
-
-2. EMA均线判断主趋势,避免被短期波动误导判断;RSI和CCI指标避让超买超卖区,增加胜率;
-
-3. 自动设置止损和止盈控制单笔交易风险,有效防止极端行情导致亏损扩大;
-
-4. 该策略属于技术面交易策略,不受基本面影响,市场任何단位周期都可以使用,易于实盘。
-
-## 风险分析
-
-1. 突发重大利空/利好消息面前技术指标容易失效;
-
-2. 股价剧烈波动时,止损可能被突破,应适当放宽止损幅度;
-
-3. 该策略属于短线频繁交易策略,交易成本会对盈利造成一定影响,适合具有成本优势的高频策略。
-
-## 优化方向
-
-1. 增加机器学习算法,结合股票基本面情况自动调整参数;
-
-2. 增加自适应止损机制,而不是固定的止损距离。
-
-## 总结
-
-该交易策略综合多个指标判断,在合理参数设置下,可以获得比较稳定的中短期交易盈利,属于易于实盘的技术面策略。但同时也应注意防范突发重大基本消息,适当放宽止损距离等风险防范措施,这也是未来可以进一步优化的方向。
-||
 
 
 ## Overview
@@ -102,7 +56,6 @@ In summary, this strategy considers medium-term trend and short-term overbought/
 
 This multifaceted strategy can deliver consistent medium-term profits under optimized parameters, making it an accessible technical system. Still, allowance needs to be given to black swan events via expanded stops etc, presenting areas for ongoing refinements.
 
-[/trans]
 
 > Strategy Arguments
 

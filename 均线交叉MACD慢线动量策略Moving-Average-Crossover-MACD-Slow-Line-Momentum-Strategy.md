@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/142c344c1944b0db157.png)
 
-[trans]
-#### 概述
-该策略采用了均线交叉和MACD指标作为主要的交易信号。策略以快速均线与多条慢速均线的交叉作为开仓信号,同时结合MACD慢线柱状图的正负作为趋势判断依据。策略在开仓同时设置了多级止盈和止损,并随着持仓时间的增加不断修改止损位置以锁定利润。
-
-#### 策略原理
-1. 快速均线与慢速均线1交叉向上,同时收盘价在慢速均线2之上,MACD柱状图大于0,做多;
-2. 快速均线与慢速均线1交叉向下,同时收盘价在慢速均线2之下,MACD柱状图小于0,做空;
-3. 开仓同时设置多级止盈和止损,止盈位根据风险偏好设置,止损位则随着持仓时间不断调整,逐步锁定利润;
-4. 均线周期、MACD参数、止盈止损位等均可灵活调整,以适应不同市场环境。
-
-该策略利用均线交叉捕捉趋势,同时用MACD指标进行方向确认,增强趋势判断的可靠性。多级止盈止损的设置能够更好地控制风险和利润。
-
-#### 策略优势
-1. 均线交叉是经典的趋势跟踪方法,能够及时捕捉趋势的形成;
-2. 多级均线的使用能够更全面地判断趋势强度和持续性;
-3. MACD指标可以有效识别趋势和判断动量,作为均线交叉的有力补充;
-4. 多级止盈和动态止损的设置既能控制风险,又能让利润奔跑,增强系统的稳健性;
-5. 参数可调,适应性强,可以根据不同品种和周期灵活设置。
-
-#### 策略风险
-1. 均线交叉存在信号滞后风险,可能错过早期趋势或追高;
-2. 参数设置不当可能导致过度交易或持仓时间过长,增加成本和风险;
-3. 止损位设置过于激进可能导致过早止损,止盈位设置过于保守可能影响收益; 
-4. 趋势突变或市场异动可能导致策略失效。
-
-这些风险可以通过优化参数、调整仓位、设置额外条件等方式来控制。但任何策略都无法完全规避风险,需要投资者审慎对待。
-
-#### 策略优化方向
-1. 可以考虑引入更多指标,如RSI、布林带等,进一步确认趋势和信号;
-2. 可以对止盈止损位的设置进行更精细的优化,如考虑ATR或百分比止盈止损;
-3. 可以根据市场波动率动态调整参数,提高适应性;
-4. 可以引入仓位管理模块,根据风险状况调整仓位大小;
-5. 可以对策略进行集合化,建立策略组合来分散风险。
-
-通过不断的优化和改进,可以使策略更加稳健和可靠,更好地适应多变的市场环境。但优化需谨慎,避免过度拟合。
-
-#### 总结
-该策略通过均线交叉和MACD指标相结合,构建了一个相对完整的交易系统。多级均线和多头操作的设计增强了系统的趋势捕捉能力和风险控制能力。策略逻辑清晰,便于理解和实现,适合进一步优化和改进。但在实际应用中仍需谨慎,注意控制风险。通过合理的优化和配置,该策略有望成为稳健有效的交易工具。
-
-|| 
 
 #### Overview
 This strategy combines moving average crossover and MACD indicator as the main trading signals. It uses the crossover of a fast moving average with multiple slow moving averages as the entry signal, and the positive/negative value of the MACD slow line histogram as the trend confirmation. The strategy sets multiple take-profit and stop-loss levels upon entry, and continuously adjusts the stop-loss level as the holding time increases to lock in profits.
@@ -89,7 +49,6 @@ Through continuous optimization and improvement, the strategy can become more ro
 
 #### Summary
 This strategy combines MA crossover and MACD indicators to construct a relatively complete trading system. The design of multiple MAs and multiple operations enhances the system's trend-capturing and risk-control capabilities. The strategy logic is clear and easy to understand and implement, suitable for further optimization and improvement. However, it still needs to be applied with caution in practice, paying attention to risk control. With reasonable optimization and configuration, this strategy has the potential to become a robust and effective trading tool.
-[/trans]
 
 > Strategy Arguments
 

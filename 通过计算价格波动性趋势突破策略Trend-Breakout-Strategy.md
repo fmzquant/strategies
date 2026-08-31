@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d465fd9a583b461247.png)
-[trans]
-
-### 概述
-
-趋势突破策略是一种通过计算价格波动性来判断市场趋势并进行交易的量化策略。该策略运用(最高价-最低价)/收盘价的公式计算K线的价格波动性,再通过均线进行平滑处理,判断是否出现趋势反转。当波动性高于最近一定周期的平均水平时,说明可能出现新的趋势,这时策略会发出交易信号。
-
-### 策略原理
-
-该策略的核心指标是(最高价-最低价)/收盘价,它反映了K线的波动幅度。策略首先计算这一指标,然后取其绝对值并计算简单移动平均线。如果当前K线的波动幅度指标绝对值高于过去一定周期移动平均值,则说明可能正在形成新的趋势。
-
-具体来说,策略包含以下步骤:
-
-1. 计算(最高价-最低价)/收盘价作为波动性指标
-2. 对波动性指标取绝对值并计算简单移动平均线
-3. 比较当前K线波动性与过去一定周期(用户输入)移动平均线的大小关系
-4. 如果当前波动性大于移动平均线,形成多头信号;如果当前波动性小于移动平均线,形成空头信号
-5. 根据信号方向进行做多或做空
-
-该策略还包含指标绘制、K线颜色改变等可视化操作,方便直观判断市场趋势。总的来说,策略运用价格波动性判断潜在趋势变化的思路简单直接有效。
-
-### 策略优势
-
-该策略具有以下主要优势:
-
-1. 原理简单直接,容易理解实现
-2. 采用价格波动性判断市场趋势变化,没有固定指标框架
-3. 可自定义参数调整判断灵敏度
-4. 结合指标绘制和K线颜色改变,直观判断效果好
-5. 可平滑去噪声,有利于抓住中长线趋势
-
-总的来说,该策略突破了传统指标判断的思维定式,只关注价格本身的波动性,灵活捕捉潜在趋势变化。参数可调性强,使用简便,是一种值得推荐的趋势策略。
-
-### 策略风险
-
-该策略也存在以下主要风险:
-
-1. 对市场波动性过于敏感,可能产生多次无效信号
-2. 只考虑价格波动性,忽视了其他影响因素
-3. 参数设置不当可能错过趋势或错误判断
-4. 无法区分中长线趋势和短线调整
-
-这些风险主要与该策略过于依赖价格波动性判断市场趋势有关。为降低风险,可以考虑结合其他判断指标,判断趋势信号的有效性;也可以适当调整参数,平滑波动性指标,过滤掉短线噪声。
-
-### 优化方向 
-
-该策略主要可从以下方向进行优化:
-
-1. 结合交易量等指标判断趋势有效性
-2. 增加机器学习模型判断信号质量
-3. 优化参数设置,使平滑效果更好
-4. 区分中长线趋势和短线调整
-5. 结合止损策略控制单笔损失
-
-这些优化措施可以降低错交易概率,提高策略获利率。特别是增加判断信号有效性的指标和模型可以大幅减少无效信号。此外,止损策略也很必要,可以控制单笔损失,保证总体收益。
-
-### 总结
-
-该趋势突破策略通过计算价格波动性判断市场趋势变化,原理简单直接,使用灵活,可自定义参数调整判断敏感度。策略具有抓住趋势变化的优势,但也存在一定风险。我们可以从优化判断指标、建立过滤模型、调整参数设置等方面进行改进,使策略更稳定可靠。总的来说,该策略为判断市场趋势变化提供了新的思路,值得进一步研究优化。
-
-||
 ## 
 
 ### Overview
@@ -129,7 +69,6 @@ These optimization measures can reduce the probability of wrong trades and impro
 
 This trend breakout strategy judges market trend changes by calculating price volatility. The principle is simple and direct, and the usage is flexible with customizable parameters for sensitivity adjustment. The strategy has the advantage of capturing trend changes, but also has some risks. We can improve it by optimizing judgment indicators, establishing filtering models, adjusting parameter settings and so on, to make the strategy more stable and reliable. In general, this strategy provides a new idea for determining market trend changes and is worth further research and optimization.  
 
-[/trans]
 
 > Strategy Arguments
 

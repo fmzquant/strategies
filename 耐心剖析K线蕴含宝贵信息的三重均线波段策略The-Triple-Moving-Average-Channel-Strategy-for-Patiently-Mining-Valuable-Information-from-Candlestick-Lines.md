@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e8abb49d6b4714aa15.png)
-[trans]
-
-## 概述
-三重均线波段策略运用多条移动平均线指标,通过对K线进行深入分析挖掘隐藏在价格波动之中的规律,实现低风险套利交易。
-
-## 策略原理
-该策略在布林线基础上叠加多组EMA指标,构建价格通道,发现价格波动规律。具体来说:
-
-1. 使用BodyResistanceChannel指标绘制K线实体阻力位。
-2. 使用Support/Resistance指标绘制多日支撑和阻力位。
-3. 使用双EMA系统判断价格趋势方向。
-4. 使用Hull均线指标平滑价格曲线。  
-
-在此基础上结合形态识别,判断反转机会,制定套利交易策略。
-
-## 优势分析  
-该策略具有以下优势:  
-
-1. 使用多组EMA构建价格通道,可明确判断价格波动走向。  
-2. 应用Hull均线指标可有效平滑价格突破判断。  
-3. 结合反转形态和通道指标,实现高概率低风险交易。  
-4. 构建多层指标体系,交易信号稳定可靠。
-
-## 风险分析
-该策略也存在以下风险:  
-
-1. 价格通道破裂引发巨额亏损的风险。针对性解决方案是采用移动止损,降低单笔损失。
-2. 反转形态判断错误引发错误信号的风险。针对性解决方案是优化参数,提高形态判断准确率。  
-3. 指标参数不匹配导致交易信号质量下降的风险。针对性解决方案是多组合参数优化测试。
-
-## 优化方向  
-该策略主要可优化的方向有:  
-
-1. 优化EMA周期参数组合,使指标更加匹配市场特征。  
-2. 调整止损位置,在保证盈利的前提下最大限度降低单笔亏损风险。
-3. 增加基于波动率的动态仓位调整模块,有效控制风险。
-4. 利用深度学习技术挖掘更多价格规律,提高信号质量。
-
-## 总结
-三重均线波段策略深入挖掘价格波动规律,稳定高效,值得长期应用与持续优化。投资需要理性和耐心,渐进做单才是致胜之道。
-
-||
 
 ## Overview  
 The triple moving average channel strategy utilizes multiple moving average indicators to deeply analyze candlestick chart and unearth hidden rules behind price fluctuations, thus achieving low-risk arbitrage trading.  
@@ -92,7 +50,6 @@ The main optimization directions include:
 ## Conclusion  
 The triple moving average channel strategy deeply mines price movement regularity with stability and efficiency, worthy of long-term application and continuous optimization. Investing requires rationality and patience, progressive position scaling is the key to success.
 
-[/trans]
 
 > Strategy Arguments
 

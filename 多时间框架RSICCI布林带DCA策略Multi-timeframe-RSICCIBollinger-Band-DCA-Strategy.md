@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ffa69d53046c1b0431.png)
-[trans]
-
-## 概述
-
-该策略是一种趋势跟踪策略,它通过RSI、CCI和布林带等多个指标在不同的时间框架上判断趋势方向,实现DCA分次入场,以追捕趋势获利。
-
-## 策略原理
-
-1. 在5分钟、15分钟和30分钟时间框架上分别计算RSI和CCI指标。
-2. 当较短周期的RSI低于某值,较长周期的RSI也低于某值时判断为超买,当较短周期的RSI高于某值,较长周期的RSI也高于某值时判断为超卖。CCI指标判断逻辑与RSI类似。
-3. 布林带判断价格是否距离中轨太远,作为辅助判断指标。
-4. 在超买时逐步做多入场,在超卖时逐步做空入场,实现DCA效应。
-
-## 优势分析
-
-1. 多时间框架指标组合判断,提高判断准确率
-2. DCA策略,降低买点成本
-3. 可自定义每单占总资金的比例,控制风险
-
-## 风险分析 
-
-1. 错过最佳入场点风险  
-2. 趋势反转风险
-3. 参数不当导致过度交易风险
-
-解决方法:
-
-1. 优化参数,确保指标参数匹配
-2. 结合更多指标判断趋势
-3. 调整每单数量占比 
-
-## 优化方向
-
-1. 测试更多指标的组合,寻找最佳组合
-2. 对每单数量占比进行优化
-3. 增加止损策略
-
-## 总结
-
-本策略通过多时间框架RSI和CCI判断趋势方向,在超买超卖时分批做单DCA入场,在行情出现较大方向性时,其追踪趋势获利的效果很好。但参数设置不当也容易造成过度交易。总体来说,该策略对参数和止损优化空间较大,经过优化后可以获得较好的效果。
-
-||
 
 ## Overview
 
@@ -92,7 +50,6 @@ Solutions:
 
 This strategy determines trend direction through multi-timeframe RSI and CCI, gets in the market via staged orders on overbought/oversold. It works very well when strong trend emerges. But inappropriate parameters can also lead to overtrading. Generally speaking, this strategy has large room for parameter tuning and stop loss optimization and can produce good results after optimization.
 
-[/trans]
 
 > Strategy Arguments
 

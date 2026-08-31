@@ -10,20 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-多指标黄金摆动交易策略
-
-该交易策略综合运用RSI、Stochastic、布林带和SuperTrend等多种指标,形成交易信号。
-
-具体来说,它同时考虑RSI高于50表示多头市场和Stochastic中的K值高于D值为多头信号。价格低于SuperTrend代表处于上升趋势,并且SuperTrend位于布林带中轨之下才产生做多信号。
-
-反之,RSI低于50和Stochastic中的K值低于D值为空头信号,价格高于SuperTrend代表下降趋势,并且SuperTrend高于布林带中轨才形成做空信号。
-
-这样多指标组合可以形成有效的过滤机制,提高交易信号的可靠性。此外,Strategy还设置了止损和止盈条件来控制风险。
-
-但是,多指标组合也存在指标滞后的问题,可能错过最佳入场点位。实盘中仍需优化参数,并关注整体经济环境对交易的影响。只有做到全面风险管理,才能长期获得稳定收益。
-
-||
 
 This trading strategy combines multiple indicators including RSI, Stochastic, Bollinger Bands and SuperTrend to generate trading signals.
 
@@ -35,7 +21,6 @@ The multi-indicator combo serves as an effective filter to improve signal reliab
 
 However, combining indicators also introduces lag, potentially missing optimal entries. Live tuning of parameters is still required, along with monitoring overall economic impacts. Comprehensive risk management is crucial for long-term steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略结合了指数移动平均线(EMA)和移动平均收敛离差(MACD)两个指标来产生交易信号,并采用跟踪止损来控制风险。策略适用于趋势性行情,旨在追踪中期趋势进行长线持仓。
-
-### 策略原理
-
-当快速EMA线上穿慢速EMA线且MACDhistogram柱变空头时,策略做多;当做多头仓位存在时,设置一个向下的跟踪止损线,如果价格下跌超过止损线一定比例就止损退出做多头仓位。
-
-具体来说,策略使用7日EMA和14日EMA构建快慢EMA;使用12日EMA减26日EMA得到MACD值,再用9日EMA得到Signal线。当7日EMA上穿14日EMA且MACD值上穿Signal时,做多开仓;之后设置一个向下的跟踪止损线,如果价格较高点下跌超过某比例就止损退出做多单。
-
-### 优势分析
-
-该策略结合EMA和MACD两个指标,能够有效过滤假突破。EMA判断趋势方向,MACD判断买卖点位,两者结合可以减少交易频率的同时提高信号质量。跟踪止损可以最大限度保护已实现利润,在发生重大不利行情时及时止损。
-
-回测显示该策略在熊市中也能获得较好收益,表明策略具有一定的鲁棒性。策略交易频率不高,适合中长期持仓。可适当调整EMA周期参数来调整策略的趋势性。
-
-### 风险分析 
-
-该策略主要 based on 指标,存在被套利的风险。当市场处于震荡调整阶段时,EMA 和 MACD 可能产生大量假信号,导致过度交易和亏损。跟踪止损仅对突破下方有效,无法应对突破上方后的大幅回落。
-
-可以通过适当扩大 EMA 周期参数来减少误信号。也可以结合其他指标过滤信号,例如量能指标、波动率指标等。此外,可根据市场情况调整止损比例,以平衡止损与套利风险。
-
-### 优化方向
-
-1. 可以测试不同的EMA周期组合,找到更适合策略的周期参数。
-
-2. 可以加入其他指标进行信号过滤,例如RSI、KD等,提高信号质量。 
-
-3. 可以根据不同品种调整止损比例,设置动态跟踪止损来优化止损策略。
-
-4. 可以结合突破、形态等技术指标,设定更多开仓和平仓条件,使策略更具定制性。
-
-5. 可以引入机器学习预测周期趋势方向,辅助EMA判定整体趋势。
-
-### 总结
-
-该策略整体来说较为稳健,在熊市中也能获得不错收益。但存在一定的被套利风险,需要对参数和过滤条件进行优化。若能够进一步结合其他技术指标和机器学习等手段进行优化提升,该策略的效果会更好。总的来说,该策略为量化交易提供了一个可靠的模板。
-
-||
 
 ### Overview
 
@@ -89,7 +48,6 @@ Expanding the EMA periods appropriately could reduce false signals. Other indica
 
 Overall the strategy is quite robust, generating decent returns even in bear markets. But certain whipsaw risks exist, requiring parameter tuning and signal filtering. Further optimizations with other technical indicators and machine learning could significantly improve it. In summary, the strategy provides a reliable template for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

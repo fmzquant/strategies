@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15eecf21760efa7b84a.png)
-[trans]
-
-## 概述
-
-该策略结合了价格通道指标和MACD指标,实现在多时间框架下进行趋势跟踪和超买超卖的判断,从而制定买卖决策。策略同时结合止损止盈来管理风险。
-
-## 策略原理
-
-价格通道指标基于最高价和最低价的EMA均线构建价格通道,通过价格突破通道判断趋势;MACD指标判断多空气势,在零轴以上为多头市场,以下为空头市场。
-
-该策略的交易信号来源于以下几个方面:
-
-1. MACD histogram翻红Enter多头,翻绿Enter空头
-
-2. 价格接近通道底部且MACD在零轴下方时Enter空头
-
-3. 价格接近通道顶部且MACD在零轴上方时Enter多头
-
-4. MACD上穿零轴时Enter多头,下穿零轴时Enter空头
-
-Exit信号来源于止损止盈设置。
-
-## 策略优势
-
-1. 多指标组合验证,避免假突破
-
-2. 不同时间框架指标组合,判断趋势方向更可靠 
-
-3. 引入止损止盈机制,有效控制单笔损失
-
-## 策略风险
-
-1. 参数优化空间有限,容易过优化
-
-2. 价格通道参数设置过低,将错失较大行情
-
-3. 停损点设置过小,将承受较大亏损
-
-解决方法:
-
-1. 采用walk forward方法,避免过优化参数
-
-2. 设置价格通道参数为自适应参数
-
-3. 引入波动率止损来动态调整止损距离
-
-## 策略优化方向 
-
-1. 优化MACD参数组合
-
-2. 优化价格通道参数自适应计算
-
-3. 加入更多过滤条件,避免假突破使效率更高
-
-## 总结
-
-该策略整合价格通道指标和MACD指标的优势,合理的参数设置和优化空间大,在趋势判断和超买超卖判断方面效果较好,止损止盈机制控制了单次亏损风险,是一种较为稳定的交易策略。后续可从参数优化、过滤条件添加、止损机制优化等方面进行改进。
-
-||
 
 
 ## Overview 
@@ -127,7 +68,6 @@ Solutions:
 
 This strategy combines the strengths of price channel and MACD by reasonable parameter setups and large optimization space. It performs well in trend detection and overbought/oversold identification. The stop loss/take profit mechanism controls per trade loss. Going forwards, improvements can be made by parameters optimization, adding filters and optimizing the stop loss mechanism.
 
-[/trans]
 
 > Strategy Arguments
 

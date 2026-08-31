@@ -9,92 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个基于动量指标和关键支撑阻力位进行突破操作的日内交易策略。它结合了Choppiness指标来识别趋势,仅在趋势明显时进行交易,以控制风险。
-
-## 策略原理  
-
-该策略使用Choppiness指标来识别趋势,Choppiness值低表示趋势明显,Choppiness值高表示盘整。 策略仅在Choppiness值低于44时进行操作。
-
-对于进入信号,它计算出关键的日内支撑阻力位,包括H4, H5等。当收盘价突破H4时,做多;当收盘价跌破L4时,做空。
-
-具体来说,它计算出以下日内支撑阻力位:
-
-- Pivot = (最高值 + 最低值 + 收盘价)/3
-- Range = 最高值 - 最低值  
-- H1-H6 = Pivot + Range * 比例
-- L1-L6 = Pivot - Range * 比例
-
-在计算出这些支撑阻力位后,它将H4和L4作为关键的突破口位。
-
-当价格突破H4时,表示多头动能增强,它会进行做多操作。当价格跌破L4时,表示空头动能增强,它会进行做空操作。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 利用Choppiness指标识别明显趋势,可避免盘整市场的whipsaw。
-
-2. 计算关键支撑阻力位,这些位通常具有较强的意义。依靠它们进行突破交易,可以获得较高的获利概率。
-
-3. 突破日内关键位H4和L4进行操作,这些位靠近收盘价,是当日重要的多空分界口。
-
-4. 突破信号具有非常高的胜率。当价格真正突破H4和L4时,后续行情通常会继续延伸趋势。
-
-5. 策略运行逻辑非常简单清晰,容易理解和实现,适合新手学习。
-
-## 策略风险分析
-
-该策略也存在以下风险:
-
-1. 依赖Choppiness指标识别趋势,该指标本身也可能失效,导致误判市场趋势。
-
-2. 计算的支撑阻力位并非百分百可靠,价格可能直接突破这些位,导致止损。
-
-3. 突破信号可能出现假突破,实际价格很快回调,让策略产生损失。
-
-4. 策略没有考虑大趋势方向,在市场长期方向不明时,该策略可能会反复亏损。
-
-5. 策略缺乏止损机制,在极端行情中,单笔损失可能非常巨大。
-
-对策:
-
-1. 可以引入其它指标进行综合判断,提高对趋势的判断准确性。
-
-2. 增加移动止损,以控制单笔损失。
-
-3. 结合长期趋势指标,避免逆势交易。
-
-4. 增加重新进入信号,避免追踪假突破。
-
-## 策略优化方向
-
-该策略可以从以下方面进行进一步优化:
-
-1. 对Choppiness指标参数进行优化,找到更合适的数值提高准确率。
-
-2. 测试不同的突破位,比如H3和L3,寻找更有效的突破口。
-
-3. 增加移动止损策略,以锁定利润和控制风险。
-
-4. 增加重新进入信号,避免在假突破后继续亏损。
-
-5. 结合长线指标判断大趋势,避免逆势操作。
-
-6. 对交易时间进行优化,比如只在美国或欧洲交易时段操作。
-
-7. 添加仓位管理策略,比如固定数量或固定资金的进场。
-
-8. 分析回测数据,对参数进行进一步测试和优化。
-
-## 总结
-
-整体来说,该策略核心思想是识别趋势后,在突破关键支撑阻力位时进行操作。它有着简单的逻辑结构和较高的获利概率。但是也存在一定的风险,需要继续优化来控制风险并提高获利率。通过参数调整、止损策略、趋势判断等优化,可以将其打造成一个非常实用的日内突破系统。它为我们提供了一个基于动量指标进行突破操作的思路,是一种有效的日内交易策略。
-
-|| 
 
 ## Overview
 
@@ -179,7 +93,6 @@ This strategy can be further optimized by:
 
 In summary, the core idea is to trade breakouts after identifying the trend. It has simple logic and decent winning odds. But risks exist and further refinements are needed to control risks and improve profitability. With parameter tuning, stop loss, trend filter etc it can become a very practical intraday breakout system. It provides a momentum breakout framework that is an effective intraday trading strategy.
 
-[/trans]
 
 
 

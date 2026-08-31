@@ -12,61 +12,6 @@ ChaoZhang
 ![IMG](https://www.fmz.com/upload/asset/1705b2c15e0d05537ed.png)
 这里是使用双移动均线的趋势跟随策略的详细分析文章:
 
-[trans]
-
-### 概述
-
-双移动均线突破策略是最受欢迎的交易策略之一。该策略利用快速移动均线和慢速移动均线的交叉作为买入和卖出的信号。当快速移动均线从下方上穿慢速移动均线时,为买入信号;当快速移动均线从上方下穿慢速移动均线时,为卖出信号。该策略属于传统的追踪趋势策略。
-
-### 策略原理
-
-该策略使用长度为10和13的简单移动均线。当10日简单移动均线从下方上穿13日简单移动均线时,产生买入信号;当10日简单移动均线从上方下穿13日简单移动均线时,产生卖出信号。
-
-如果满足买入条件,同时当前持有空头头寸,会先平掉空头头寸,然后开仓做多;如果满足卖出条件,同时当前持有多头头寸,会先平掉多头头寸,然后开仓做空。
-
-此外,该策略还设置了止损逻辑。做多时,会根据输入的止损百分比设置止损价格;做空时也是一样,根据输入的百分比设置止损价格。当价格触碰到止损价格时,会退出当前头寸。
-
-### 优势分析
-
-- 该策略 captures1. 该策略能够捕捉趋势,跟踪中长线趋势走势。
-
-- 采用双均线设计,可以有效过滤假突破。
-
-- 设置止损可以控制个别单笔损失。
-
-- 策略逻辑简单清晰,容易理解实现。
-
-- 可根据市场调整均线参数,优化策略表现。
-
-### 风险分析
-
-- 作为趋势跟踪策略,在趋势末段容易被套。
-
-- 均线系统容易产生滞后,可能错过转折点。
-
-- 止损设置不合理可能造成不必要的损失。
-
-- 双均线交叉并不能完全过滤假突破。
-
-- 策略仅基于技术指标,忽略了基本面因素。
-
-### 优化方向 
-
-- 可以考虑将均线长度参数优化,选择更合适的均线周期。
-
-- 可以采用三均线设计,增加判断信号准确性。
-
-- 动态优化止损点,让止损更贴近价格。
-
-- 结合其他指标过滤假突破信号。
-
-- 优化资金管理,严格控制个别损失大小。
-
-### 总结
-
-双移动均线突破策略是一个简单实用的趋势跟踪策略。它能够有效捕捉中长线趋势,返回稳定的超额收益。但作为趋势跟踪策略,它可能在趋势末期被套利。我们可以通过参数优化、增加信号过滤和优化资金管理来改进该策略,使其更适应市场环境。总体来说,双均线策略是一个非常适合新手交易者实施的入门策略。
-
-||
 
 
 ### Overview
@@ -121,7 +66,6 @@ In addition, this strategy incorporates stop loss logic. For long trades, the st
 
 The dual moving average crossover is a simple and practical trend following strategy. It can effectively capture medium to long term trends and generate steady excess returns. But it runs the risk of being whipsawed at trend reversals. The strategy can be improved via parameter optimization, better signal filtering and enhanced risk management. Overall, it is an ideal starter strategy for novice traders.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1575297822ec1edccdd.png)
-[trans]
-## 概述
-
-趋势追踪移动平均策略是一个基于长期移动平均线识别趋势方向,并结合平均真实波动范围过滤错乱行情的趋势跟随策略。该策略采用指数移动平均线来判断趋势方向,再利用平均真实波动范围识别是否为假突破。这可以有效过滤震荡行情,降低策略的整体回撤。
-
-## 策略原理  
-
-该策略基于以下原理设计:
-
-1. 使用指数移动平均线判断整体趋势方向。周期长度默认为200根K线。
-2. 计算最近10根K线的平均真实波动范围。
-3. 当收盘价高于“移动平均线 + 平均真实波动范围”时,判断为上涨趋势。
-4. 当收盘价低于“移动平均线 - 平均真实波动范围”时,判断为下跌趋势。  
-5. 在上涨趋势中,做多;在下跌趋势中,做空。
-6. 默认策略以移动平均线为止损线。也可选择以“移动平均线反向±平均真实波动范围”为止损线。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用移动平均线判断大趋势,可以有效过滤短期市场噪音。
-2. 增加平均真实波动范围作为过滤条件,可避免在震荡行情中产生交易信号,从而减少不必要的损失。
-3. 止损线接近移动平均线或者其反向范围,可以快速止损,降低最大回撤。
-4. 简单的参数设定,容易理解和调优。
-
-## 风险分析  
-
-该策略也存在一些潜在风险:  
-
-1. 在均线系统中,当趋势反转时往往会产生一定程度上的回撤。
-2. 移动平均线和平均真实波动范围的参数设置会对策略表现产生很大影响。如果不当设定参数,会错过交易机会或者增加不必要的损失。
-3. 策略本身并没有考虑股价和交易量之间的关系。可能会产生一些假信号。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 测试不同类型的移动平均线,寻找对特定股票或者品种最适合的移动平均线参数。  
-2. 优化移动平均线周期参数,使其更加符合被交易股票或者品种的特点。
-3. 优化平均真实波动范围的参数,寻找最佳的参数组合以过滤震荡而不漏失趋势。
-4. 增加成交量的判断规则,避免出现无效突破。
-5. 测试并比较不同的止损方式,确定最优方案。
-
-## 总结
-
-趋势追踪移动平均策略整体而言是一个非常简单实用的趋势策略。它同时具有较好的风险控制效果。虽然该策略没有考虑太多因素,仍需对参数和止损方式进行细致测试和优化,但总的来说是一种易于掌握和调整的有效策略。其简单的交易逻辑和参数设置使其可广泛应用于不同品种,尤其适合比特币等数字货币交易。
-
-||
 
 ## Overview  
 
@@ -106,7 +58,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, the Swing Trend Moving Average Strategy is a very simple and practical trend following strategy. It also has good risk control. Although the strategy does not take many factors into consideration, detailed testing and optimization of parameters and stop loss methods are still required. However, its simple trading logic and parameter settings make it widely applicable to different products, especially suitable for trading cryptocurrencies like Bitcoin.
 
-[/trans]
 
 > Strategy Arguments
 

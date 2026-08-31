@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/118f0ac2a1729385a00.png)
 
-[trans]
-#### 概述
-本策略名为"OBVious MA Strategy 基于OBV与MA交叉信号的趋势跟踪策略",核心是使用OBV(On Balance Volume)指标与移动平均线的交叉来产生交易信号。OBV可以提供领先的趋势信号,本策略利用OBV突破移动平均线作为进场和出场条件,以捕捉趋势。同时使用独立的进场MA和出场MA,可以更灵活地控制持仓时间。该策略虽然是一个简单的演示,但展现了如何有效利用OBV进行量价分析。
-
-#### 策略原理
-1. 计算OBV指标值:若当前收盘价高于前一根K线,则OBV加上当前成交量,否则减去成交量。
-2. 计算OBV的四条移动平均线:长周期做多进场MA、长周期做多出场MA、短周期做空进场MA和短周期做空出场MA。
-3. 产生交易信号:
-   - 当OBV上穿长周期做多进场MA且方向过滤器不为做空时,开多仓
-   - 当OBV下穿长周期做多出场MA时,平多仓
-   - 当OBV下穿短周期做空进场MA且方向过滤器不为做多时,开空仓 
-   - 当OBV上穿短周期做空出场MA时,平空仓
-4. 交易管理:若有反向信号产生,会先平掉原有仓位再开新仓位。
-
-#### 策略优势
-1. 充分利用OBV领先的趋势信号,在趋势初期就能及时建仓。
-2. 将进场和出场MA分离,可以独立优化进出场时机。
-3. 代码逻辑简单清晰,易于理解和改进。
-4. 引入方向过滤,可避免频繁交易,降低成本。
-
-#### 策略风险
-1. 缺乏其他确认指标,可能产生假信号。建议结合其他指标使用。
-2. 缺乏止损和仓位管理,面临单笔亏损放大的风险。可以加入合理的止损和资金管理措施。 
-3. 参数选择不当会影响策略表现。需要根据不同市场特点和周期进行参数优化。
-
-#### 策略优化方向  
-1. 可以尝试引入趋势过滤,如MA方向、ATR等,以改善信号质量。
-2. 可以在OBV上使用不同类型的MA,如EMA、WMA等,捕捉不同速度的趋势。
-3. 可以优化仓位管理,如采用加减仓策略,在趋势强度提升时加仓,降低时减仓。
-4. 可以结合其他量价指标,如MVA、PVT等,构建联合信号来提高胜率。
-
-#### 总结
-本策略展示了一种基于OBV与MA交叉的简单趋势跟踪方法。优点是逻辑清晰,能够及时捕捉趋势,通过分离进出场MA可以灵活控制持仓。但缺点是缺乏风险控制措施以及信号确认手段。后续可以从趋势过滤、参数优化、仓位管理、联合信号等方面进行改进,以期获得更稳健的策略表现。本策略更适合作为一个向导信号,配合其他策略来使用。
-
-|| 
 
 #### Overview
 This strategy, named "OBVious MA Strategy: Trend Following Strategy Based on OBV and MA Crossover Signals", utilizes the crossover between the On Balance Volume (OBV) indicator and moving averages to generate trading signals. OBV can provide leading trend signals, and this strategy uses OBV breakouts above or below moving averages as entry and exit conditions to capture trends. By using separate entry and exit MAs, it allows for more flexible control over holding periods. Although this strategy is a simple demonstration, it showcases how to effectively use OBV for volume analysis.
@@ -79,7 +44,6 @@ This strategy, named "OBVious MA Strategy: Trend Following Strategy Based on OBV
 
 #### Summary
 This strategy demonstrates a simple trend-following method based on OBV and MA crossovers. Its advantages are clear logic, timely trend capture, and flexible holding control through separate entry and exit MAs. However, its disadvantages include a lack of risk control measures and signal confirmation methods. Improvements can be made in areas such as trend filtering, parameter optimization, position management, and joint signals to obtain more robust strategy performance. This strategy is more suitable as a guiding signal to be used in conjunction with other strategies.
-[/trans]
 
 > Strategy Arguments
 

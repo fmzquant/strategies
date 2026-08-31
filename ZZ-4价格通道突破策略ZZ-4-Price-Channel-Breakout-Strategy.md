@@ -9,54 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-本策略基于ZZ指标的价格通道进行交易,利用价格向上突破通道上限或向下跌破通道下限的信号来建立多头或空头仓位。该策略试图捕捉价格通道范围外的趋势爆发。
-
-### 策略原理
-
-1. 计算价格通道的上下限
-2. 当价格上涨突破上限时做多
-3. 当价格下跌突破下限时做空  
-4. 设置起止交易时间 
-5. 每日收市前清仓
-
-具体来说,该策略通过ZZ指标计算出价格通道的上下限。当价格从下方突破上限时,做多入场;从上方突破下限时,做空入场。做多做空后均采用止损单,以价格通道上下限作为止损位。同时设置日期时间范围,在该范围内交易,每日收市前清仓以避免隔夜风险。
-
-### 优势分析
-
-1. 利用价格通道判断潜在趋势突破点,具有一定的趋势识别能力
-2. 交易信号简单直观容易判断
-3. 可自定义通道周期参数,适应不同品种和周期
-4. 设置日期范围和每日清仓有助于风险控制
-5. 采用止损单,可限制单笔亏损
-
-### 风险分析
-
-1. 价格通道范围内波动可能导致多次止损
-2. 需适时调整参数,否则通道范围可能不准确
-3. 突破有可能是假突破,存在被套风险
-4. 潜在盈利受限制于价格通道范围
-5. 未充分利用趋势行情的利润空间
-
-可通过放宽通道区间、优化止损策略、判断趋势实力等方式来降低上述风险。
-
-### 优化方向
-
-1. 测试不同参数找出最佳组合
-2. 放宽价格通道范围以捕捉更大行情
-3. 引入趋势判断指标避免假突破
-4. 优化止损策略,防止被套
-5. 加大持仓比例以最大化突破获利
-6. 评估不同日期范围的收益率
-
-### 总结
-
-本策略基于价格通道判断趋势爆发点进行交易。优点是交易信号简单,止损清晰,易于操作;缺点是存在频繁跳空和未充分利用趋势两方面。通过参数优化、策略组合等方式可以在保持优势的同时克服上述缺点。该策略可助力交易者掌握价格通道的应用技巧。
-
-|| 
 
 ### Overview
 
@@ -103,7 +55,6 @@ Risks can be reduced by widening channel range, optimizing stop loss, gauging tr
 
 This strategy trades price channel breakouts to identify trend outbreaks. Pros are simple clear signals and easy operation; Cons are whipsaws and failure to ride trends. Parameter optimization and strategy combination can overcome the cons while retaining pros. It helps traders master applying price channel techniques.
 
-[/trans]
 
 > Strategy Arguments
 

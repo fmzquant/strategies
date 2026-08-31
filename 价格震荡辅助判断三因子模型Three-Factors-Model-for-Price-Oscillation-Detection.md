@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ddd62a7c2c6d4bacdf.png)
-[trans]
-## 概述
-
-价格震荡辅助判断三因子模型是一个融合多因子判断的短线交易策略。该策略综合考虑成交量比、RSI指标、MACD指标、信号线指标的多因子判断,对价格震荡行为进行判断,以发现短线交易机会。
-
-## 策略原理
-
-该策略的核心逻辑是:
-
-1. 计算快速移动平均线、慢速移动平均线、MACD曲线、信号线等技术指标;
-
-2. 判断成交量买卖比例、RSI指标、MACD指标、信号线指标的多因子条件;
-
-3. 综合多因子判断,确认当前为价格震荡阶段,出现买卖机会;
-
-4. 进入LONG或SHORT头寸,设置止盈止损;
-
-5. 当价格达到止盈或止损条件时,平仓头寸。
-
-该策略灵活运用成交量比、RSI指标、MACD指标、信号线指标等多因子判断,对价格震荡行为进行判断,以捕捉短线交易机会。多因子组合判断可避免单一因子造成的错误信号,提高信号准确性。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多因子判断,提高信号准确性,避免错误信号;
-2. 利用价格震荡特性,捕捉短线交易机会,获利空间大;
-3. 自动设置止盈止损,控制风险;
-4. 简单明了的交易逻辑,容易实施。
-
-## 风险分析 
-
-该策略也存在以下风险:  
-
-1. 算法过于依赖历史数据,对市场变化敏感;
-2. 多因子组合方式可能还需进一步优化,存在误判的可能;
-3. 止损点设定合理与否直接影响策略稳定性。
-
-针对以上风险,可从以下方面进行优化:
-
-1. 加大数据采样周期,降低市场数据变化的影响;
-2. 调整多因子权重,实现自适应优化;
-3. 测试不同的止损点,找到最佳止损位置。
-
-## 优化方向  
-
-该策略主要可从以下几个方面进行优化:  
-
-1. 优化多因子权重,实现动态调整。可以根据不同行情对多因子判断进行权重调整,提高适应性;
-
-2. 结合机器学习算法,实现多因子的自适应优化。运用神经网络、遗传算法等算法训练多因子模型,实现参数自主优化;  
-
-3. 优化止损策略。可以测试不同的跟踪止损、移动止损组合,找到最佳止损方案;
-
-4. 结合高级技术指标。可测试像波动率摆动、动量震荡等更多指标,丰富多因子组合。
-
-## 总结
-
-《价格震荡辅助判断三因子模型》策略充分利用价格震荡区间的多因子特征,实现高效的短线交易策略。该策略运用成交量、RSI、MACD、信号线等多因子判断,确定最佳的买卖时机。多因子判断增强信号准确率,有利于获取稳定收益。后续可通过机器学习算法实现多因子自适应优化,从而获得更加卓越的策略表现。
-
-||
 
 ## Overview
 
@@ -130,7 +69,6 @@ The main optimization directions:
 ## Conclusion
 
 The Three Factors Model for Price Oscillation Detection fully utilizes the characteristics of price oscillations to implement an efficient short-term trading strategy. It judges the best entry and exit points based on multiple factors like volume, RSI, MACD and signal line. The multiple factors enhance accuracy and lead to steady returns. Further optimizations can be done through machine learning for adaptive optimization, resulting in even better strategy performance.
-[/trans]
 
 > Strategy Arguments
 

@@ -11,83 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/4017f1ac80709b8101.png)
 
-[trans]
-
-
-## 概述
-
-该策略结合了移动平均线和相对强弱指标RSI,通过均线的方向和RSI的高低位置形成交易信号,属于典型的趋势跟踪策略。它旨在通过RSI指标识别价值低估和价值高估的时机,与均线方向结合,在趋势开始阶段构建头寸。
-
-## 策略原理
-
-该策略主要基于两个指标:
-
-1. 简单移动平均线SMA:计算一定周期内的收盘价平均值,判断价格趋势方向。
-
-2. 相对强弱指数RSI:通过比较一段时间内的平均收盘涨幅和平均收盘跌幅,来判断目前股价是否被高估或低估。RSI高于70为超买区,低于30为超卖区。
-
-策略逻辑:
-
-1. 当收盘价低于SMA均线,并且RSI指标从超卖区域下破时,产生买入信号。
-
-2. 当收盘价高于SMA均线,并且RSI指标从超卖区域上破时,产生卖出信号。
-
-该策略结合均线判断大趋势方向,与RSI判断超买超卖区域,在趋势开始阶段构建头寸。RSI高低位置可有效识别短期内的价值高低,与均线方向组合使用,可产生较低风险的交易信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 结合趋势和价值判断,降低错误交易概率,信号较为可靠。
-
-2. RSI指标参数优化后,可有效识别超买超卖范围。
-
-3. SMA参数优化后,可准确判断大趋势方向。
-
-4. 交易策略规则简单清晰,容易理解实现,适合新手学习。
-
-5. 可在不同品种和周期上应用,适用面广。
-
-6. 可通过调整SMA和RSI参数,优化策略表现。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. SMA均线生成滞后,可能错过趋势开始的最佳机会。可以适当缩短均线周期或使用EMA。
-
-2. RSI超买超卖区域可能设置不当,导致信号不准。可以测试优化RSI参数。 
-
-3. 背离信号可能预示趋势反转,需要警惕。
-
-4. 震荡行情中会产生错误信号和止损,可考虑降低仓位。
-
-5. 仅基于SMA和RSI,其他因素未考虑,可引入更多指标优化。
-
-## 优化方向 
-
-该策略可从以下几个方面进行优化:
-
-1. 测试不同SMA周期参数,选择产生更准确信号的周期。
-
-2. 测试RSI超买超卖区域参数设置,确定最佳参数。
-
-3. 增加其他指标判断,如MACD、布林带等,提高信号准确率。 
-
-4. 增加止损策略,控制单笔损失。
-
-5. 评估增加仓位管理策略,如固定份额等,控制整体风险。
-
-6. 评估在不同品种和周期的效果,寻找最佳适用场景。
-
-7. 增加对背离信号的判断逻辑,以识别趋势反转。
-
-## 总结
-
-该策略整体来说是一个典型的趋势跟踪策略,结合趋势判断和超买超卖判定,可以获取较低风险的交易信号。通过参数优化和规则完善,可以进一步增强策略稳定性和可靠性。但是任何策略都无法完美,需要投资者结合自己的风险偏好和资金实力进行评估。总的来说,该策略适合有一定交易经验的投资者作为趋势交易的辅助工具。
-
-
-||
 
 ## Overview
 
@@ -161,7 +84,6 @@ The strategy can be optimized in the following aspects:
 
 Overall this is a typical trend following strategy. Combining trend and overbought/oversold analysis provides relatively low risk trading signals. Further improvements through parameter optimization and rule refinement can enhance stability and reliability. However no strategy is perfect and needs evaluation based on risk preference and capital. Generally this strategy suits experienced investors as an auxiliary tool for trend trading.
 
-[/trans]
 
 
 

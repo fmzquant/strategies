@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用心理线指标判断市场买卖力道比,以捕捉市场趋势变化。当买盘力道强于卖盘时做多,当卖盘力道强于买盘时做空。心理线简单易用,可作为趋势识别的辅助工具。
-
-## 策略原理
-
-1. 心理线指标计算一定周期内收盘价上涨的比例。
-
-2. 当比例超过50%时,认为买盘力道大于卖盘力道,给出做多信号。
-
-3. 当比例低于50%时,认为卖盘力道大于买盘力道,给出做空信号。
-
-4. 当比例在50%附近震荡,认为买卖平衡,市场无明确方向。 
-
-5. 可灵活调整参数,对短期或长期趋势进行判断。
-
-## 优势分析
-
-1. 计算方法简单,易于实盘操作。
-
-2. 直观显示买卖力道强弱,辅助判断资金流向。
-
-3. 可 discover 部分反转信号。
-
-4. 可搭配其他指标一起使用,提高策略效果。
-
-## 风险分析
-
-1. 无法判断趋势的持续时间和力度。
-
-2. 参数设置不当可能产生大量错误信号。
-
-3. 单独使用容易被套,应该与其他指标组合。 
-
-4. 需要优化参数以适应不同品种和周期。
-
-## 优化方向
-
-1. 测试不同参数在各品种的效果,找到最佳周期。
-
-2. 组合更多指标判断趋势持续性。
-
-3. 优化资金管理策略,设置止损和止盈。
-
-4. 评估趋势强弱,避免反向开仓过早。
-
-5. 在特定时间段关闭策略,规避容易产生错误的时间段。
-
-## 总结
-
-心理线指标本身较为简单,但搭配使用效果不错。可作为发现趋势变化的辅助工具之一,但不宜单独使用。通过参数优化及整合其他指标,可将心理线策略提升到一个新的水平,值得进一步研究。
-
-|| 
 
 ## Overview
 
@@ -117,7 +62,6 @@ This strategy uses the Psychological Line indicator to gauge the buying/selling 
 
 The Psychological Line indicator itself is quite simple, but works well when combined with other tools. It can serve as an auxiliary tool for discovering trend changes, but should not be used alone. By optimizing parameters and integrating with other indicators, the Psychological Line strategy can be enhanced to a new level and is worth further research.
 
-[/trans]
 
 > Strategy Arguments
 

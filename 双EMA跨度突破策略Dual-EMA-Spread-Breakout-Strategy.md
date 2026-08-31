@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/164b8393a78e3fd1f84.png)
 
-[trans]
-
-## 概述
-
-双EMA跨度突破策略是一种趋势跟踪策略。它使用不同周期的两个EMA均线,并在两条EMA线间形成足够大的跨度时进行交易,以捕捉趋势的方向。这种策略适用于趋势性比较强的市场。
-
-## 策略原理
-
-该策略使用快速EMA线(小周期EMA线)和慢速EMA线(大周期EMA线)进行交易信号判断。具体逻辑是:
-
-1. 计算快速EMA和慢速EMA。
-
-2. 当快速EMA上穿慢速EMA,并且两条EMA线之间的跨度超过设置阈值时,做多。
-
-3. 当快速EMA下穿慢速EMA,并且两条EMA线之间的跨度超过设置阈值时,做空。 
-
-4. 当价格重新跌破快速EMA时,平仓做多头部位。
-
-5. 当价格重新涨破快速EMA时,平仓做空头部位。
-
-这样,它利用EMA的平滑性来识别趋势方向,再结合EMA间距离的突破来确定具体的入场时机。离得越远说明趋势越强,做单的机会越大。
-
-## 策略优势分析
-
-- 利用EMA的趋势跟踪性进行操作,可以有效跟踪趋势
-- EMA间距离的突破来判断入场时机,可以有效过滤震荡情况下的虚假信号
-- 采用不同周期EMA组合,可以在一定程度上减少趋势交易中的掉头
-- 条件设置合理时,可以在趋势行情中获得较好的回报
-
-## 策略风险分析
-
-- EMA本身对价格变化响应滞后,可能错过转折点
-- 趋势性不强的行情中效果不佳
-- 震荡行情中容易止损
-- EMA参数设置不当可能带来过多的虚假信号
-
-可以通过调整EMA参数组合、调整跨度阈值以及止损位置来减少风险。
-
-## 策略优化方向 
-
-- 优化快慢EMA的周期参数组合
-- 测试不同的EMA间距阈值
-- 优化止损策略
-- 增加其他过滤信号
-- 进行参数调优,找到最佳参数组合
-
-## 总结
-
-双EMA跨度突破策略整体来说是一个较为简单实用的趋势跟踪策略。它能够有效地在趋势行情中获利,但需要合理的参数设定。通过参数优化和风险管理,可以充分发挥该策略的优势。这是一个值得深入研究和应用的趋势策略。
-
-||
 
 
 ## Overview
@@ -112,7 +61,6 @@ Risks can be reduced via EMA tuning, spread threshold, and stop loss placement.
 
 The Dual EMA Spread Breakout strategy is an effective yet simple trend following strategy. It can profit nicely in trending markets but needs proper parameters. With optimization and risk management, it can fully leverage its strengths. A worthwhile trend strategy to research and apply.
 
-[/trans]
 
 > Strategy Arguments
 

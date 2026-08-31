@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c375755cd676da0b26.png)
-[trans]
-
-
-### 概述
-
-该策略通过同时观察三个不同周期的RSI指标,来判断市场是否达到了超买超卖的极值区域,从而发出买入和卖出信号。主要判断市场趋势通过观察不同周期指标的组合来实现。
-
-### 策略原理
-
-该策略同时利用2周期、7周期和14周期的RSI指标。当三个RSI指标同时显示超买或超卖信号时,即发出交易信号。 
-
-具体来说,当2周期RSI小于10,7周期RSI小于20,14周期RSI小于30时,认为市场处于超卖状态,发出买入信号。当2周期RSI大于90,7周期RSI大于80,14周期RSI大于70时,认为市场处于超买状态,发出卖出信号。
-
-代码中通过accuracy参数来微调RSI的超买超卖判断阈值,默认为3,数值越小,超买超卖判断越严格。strategy.long和strategy.short用于控制是否进行相应方向交易。
-
-当发出买入或卖出信号后,如果价格反向突破当日开盘价,则平掉当前头寸,实施趋势跟踪止损。
-
-### 优势分析
-
-- 通过组合多周期RSI指标,可以更准确判断市场的超买超卖状况,过滤假信号。
-
-- 采用不同参数微调超买超卖判定条件,可以根据市场调整策略灵敏度。
-
-- 实施开盘价追踪止损,可以及时止损,锁定盈利。
-
-### 风险分析
-
-- RSI指标容易产生背离,判断市场趋势转折的效果不佳。
-
-- 针对高波动行情,RSI指标的设置需要调整,否则会频繁止损。
-
-- 三重RSI同时触发的情况较少,可能错过较好的交易机会。
-
-- 应适当调整超买超卖判断的参数,建议测试不同市场的数据效果。
-
-### 优化方向
-
-- 可以考虑加入别的指标进行确认,如布林线,KDJ等,避免RSI背离。 
-
-- 可以根据不同行情类型,自动优化RSI的参数。
-
-- 可以测试其他止损exit条件,如ATR止损等。
-
-- 可以添加筛选交易时段的条件,避免不适宜的时间段。
-
-### 总结
-
-该策略通过组合多周期RSI指标判断超买超卖区域,实施趋势跟踪止损。优点是可以提高判断准确性,及时止损;缺点是容易漏单,RSI指标易错判。建议进行参数优化测试,并加入其他指标进行确认,可获得更好的效果。
-||
 
 
 ### Overview
@@ -107,7 +58,6 @@ When a buy or sell signal is generated, if the price reverses and breaks through
 
 This strategy identifies overbought/oversold zones using a combination of multi-period RSI indicators, and implements trend tracking stops. Advantages include improving accuracy, timely stopping out; Disadvantages include missing trades, RSI misjudgements. Parameter optimization testing is recommended, along with adding confirming indicators, to achieve better performance.
 
-[/trans]
 
 > Strategy Arguments
 

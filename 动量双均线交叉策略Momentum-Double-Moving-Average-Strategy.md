@@ -10,102 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c6522bbb85a800484c.png)
-[trans]
-
-
-## 概述
-
-本策略采用动量双均线交叉的方法,实现low risk交易。它使用两个不同周期的均线,快线和慢线,根据它们的交叉去判断买入卖出时机。该策略旨在捕捉趋势的变化,在大趋势中获取长线收益。
-
-## 策略原理   
-
-该策略使用WMA快线和WMA慢线的交叉判断买卖信号。快线周期是慢线周期的一半。当快线从下方上穿慢线时产生买入信号;当快线从上方下穿慢线时产生卖出信号。为过滤假信号,它还引入了一个移动平均线的动量差值指标。只有当快慢线交叉的同时,该指标也符合形态要求时,才会产生交易信号。   
-
-具体来说,策略中的关键逻辑有:   
-
-1. 定义价格及参数:提取OHLC价格数据;定义参数HullMA周期z、价格数据p。
-
-2. 计算双均线:计算2周期均线n2ma、z周期均线nma。 
-
-3. 计算均线差值:计算两均线差值diff。
-
-4. 计算动量指标:计算均线差值的sqn周期移动平均n1、n2、n3。
-
-5. 判断交叉:当n1上穿n2时标记为绿色,否则标记为红色。
-
-6. 绘制形态:绘制n1、n2的图形。
-
-7. 判断信号:三个动量均线n1、n2、n3同向交叉时产生信号。
-
-8. 入场出场:快线上穿慢线且动量指标符合要求时做多;快线下穿慢线且动量指标符合要求时做空。
-
-## 策略优势
-
-该策略结合双均线交叉和动量指标,可以有效过滤假信号,只在趋势变化开始时产生交易信号,从而获得较好的策略效果。
-
-1. 快线慢线交叉可以判断趋势变化的时机,利用趋势获得收益。
-
-2. 加入动量指标可以过滤假信号,避免被市场的短期涨跌误导。
-
-3. 只在大趋势发生变化时进行交易,可以减少不必要的交易频率。 
-
-4. 采用参数优化后的均线周期,可以使指标更符合不同品种的特性。
-
-5. 允许一定程度的 pyreming 可以拉伸盈利周期。
-
-## 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. 双均线交叉对趋势变化判断有滞后,可能错过价格变化的最佳时机。
-
-2. 动量指标参数设置不当可能对交易产生误导。
-
-3. 存在一定的多空仓持仓时间不均衡问题。
-
-4. 策略对市场的震荡行情没有很好的处理机制。
-
-5. 存在一定的过优化风险,需对参数进行步进优化。
-
-对应风险的解决方法有:
-
-1. 可以考虑加入其他先导指标判断价格变化,提前做准备。 
-
-2. 应对动量指标参数进行适当优化,找到最佳参数组合。
-
-3. 可以考虑加入波动率指标帮助控制仓位时间。
-
-4. 可适当限制仓位量,降低单笔亏损。
-
-5. 应进行参数稳健性检验,避免过优化问题。
-
-## 策略优化方向 
-
-该策略还可以从以下几个方面进行优化:
-
-1. 尝试不同类型的均线指标,找到对品种最优的参数。
-
-2. 测试加入其他辅助指标,如MACD、布林带等判别趋势变化。 
-
-3. 优化入场时机,准确判断价格反转的起点。
-
-4. 优化出场时机,使用追踪止损等方式锁定利润。
-
-5. 根据不同品种的特性进行参数优化。
-
-6. 利用机器学习方法找到最优参数组合。
-
-7. 构建动态仓位管理机制,控制风险。
-
-8. 添加量化的策略评估指标,如夏普比率、盈亏比等。
-
-9. 利用回测引擎评估策略在历史数据上的表现。
-
-## 总结
-
-综上所述,该动量双均线策略采用了均线交叉和动量指标判断大趋势的转折点,可以有效过滤噪音实现低风险交易。它具有获利稳定、实现简单等优点,也存在一些参数优化和风险控制方面的问题。我们可以从优化入场出场时机、动态仓位管理等方面进行改进,使策略更适应市场的特性。充分验证和严格评估是保证策略效果的关键。总之,该策略为量化交易提供了一个简单有效的思路,但还需要持续优化和验证,才能产生稳定的投资回报。
-
-||
 
 ## Overview
 
@@ -199,7 +103,6 @@ The strategy can be improved in the following aspects:
 
 In summary, this momentum double MA strategy identifies major trend reversal points using MA crossover and momentum, enabling low-risk trading. It has advantages like stable profits and simple implementation, but also issues to improve like parameter optimization and risk control. We can refine areas like entry/exit timing, dynamic position sizing to better adapt to market conditions. Extensive validation and evaluation are critical for ensuring robust strategy performance. Overall, this strategy provides a simple yet effective approach to quantitative trading, but requires continuous optimizations and validations to generate consistent investment returns.
 
-[/trans]
 
 > Strategy Arguments
 

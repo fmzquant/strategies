@@ -11,48 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/128e14cad9943be2c1f.png)
 
-[trans]
-
-#### 概述
-
-该策略利用20日和55日两条指数移动平均线(EMA)的交叉来判断交易信号。当短期EMA上穿长期EMA时发出买入信号,反之则发出卖出信号。策略还引入了杠杆交易,通过杠杆放大收益,同时也放大了风险。此外,策略还增加了条件限制,只有在两条均线交叉后,当价格触及短期均线时才会开仓,以降低假信号风险。最后,用户还可以选择使用简单移动平均线(MA)代替EMA。
-
-#### 策略原理
-
-1. 计算20日和55日EMA(或MA)。
-2. 判断短期EMA是否上穿长期EMA,如果是,则将readyToEnter变量设为true,表示可以准备进场。
-3. 如果readyToEnter为true,并且价格触及短期EMA,则执行买入,同时将readyToEnter重置为false。
-4. 如果短期EMA下穿长期EMA,则平仓。
-5. 根据杠杆参数设置仓位大小。
-6. 只在用户设定的回测区间内执行策略。
-
-#### 策略优势
-
-1. 均线交叉是一种简单易用的趋势判断方法,适合大多数市场。
-2. 引入杠杆交易,可以放大收益。
-3. 增加条件限制,降低假信号风险。
-4. 提供EMA和MA两种均线选择,适应不同用户偏好。
-5. 代码结构清晰,易于理解和修改。
-
-#### 策略风险
-
-1. 杠杆交易会放大风险,如果判断失误,可能导致大额损失。
-2. 均线交叉存在滞后性,可能错过最佳入场时机。
-3. 只适用于趋势明显的市场,如果市场震荡,可能会频繁交易,导致高额手续费。
-
-#### 策略优化方向
-
-1. 可以尝试优化均线周期,找到最适合当前市场的参数。
-2. 可以引入其他指标,如RSI、MACD等,综合判断趋势,提高胜率。
-3. 可以设置止损和止盈,控制单笔交易风险。
-4. 可以根据市场波动率动态调整杠杆大小,在波动小时加大杠杆,波动大时减小杠杆。
-5. 可以引入机器学习算法,自适应优化参数。
-
-#### 总结
-
-该策略通过均线交叉和杠杆交易的结合,在把握市场趋势的同时放大收益。但杠杆也带来了高风险,需要谨慎使用。此外,该策略还有优化空间,可以通过引入更多指标、动态调整参数等方式提升策略表现。总的来说,该策略适合追求高收益,同时能够承担高风险的交易者。
-
-||
 
 #### Overview
 
@@ -93,7 +51,6 @@ This strategy uses the crossover of the 20-day and 55-day exponential moving ave
 
 This strategy combines moving average crossovers and leverage trading to capture market trends while amplifying returns. However, leverage also brings high risks and needs to be used with caution. In addition, there is room for optimization in this strategy, which can be achieved by introducing more indicators, dynamically adjusting parameters, etc. Overall, this strategy is suitable for traders who pursue high returns and can bear high risks.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1609e3215807bea0a9a.png)
 
-[trans]
-#### 概述
-该策略是一个结合了动量指标RSI和趋势指标EMA的复合型交易系统。它在1分钟和5分钟两个时间周期上运行,通过RSI的超买超卖信号以及三重EMA的趋势判断来进行交易决策。策略既包含趋势跟踪又包含均值回归的特点,能够在不同市场环境下捕捉交易机会。
-
-#### 策略原理
-策略采用21/50/200日三重EMA作为趋势判断基准,同时结合改良版的RSI指标(采用Chebyshev方法计算)来识别市场超买超卖状态。在1分钟周期上,当RSI突破94时开启做空,跌破4时平仓,并在RSI回归50时设置保本止损。在5分钟周期上,当价格跌破200日EMA并反弹时开启做多,在RSI超买或跌破中值时平仓。策略通过仓位管理变量inPositionLong和inPositionShort来避免重复入场。
-
-#### 策略优势
-1. 多重时间周期分析提升信号可靠性
-2. 结合趋势和动量指标,互补优势
-3. 设有保本止损机制,控制风险
-4. 采用改良版RSI计算方法,信号更准确
-5. 通过仓位管理避免重复交易
-6. 可以适应不同市场环境
-
-#### 策略风险
-1. 频繁交易可能带来较高手续费
-2. 在剧烈波动市场中可能频繁触发止损
-3. RSI指标在某些市场条件下可能产生虚假信号
-4. 多周期策略可能在信号确认上存在滞后
-5. EMA交叉信号在震荡市场可能产生误导
-
-#### 策略优化方向
-1. 引入波动率过滤器,在高波动期间调整参数
-2. 增加交易量确认机制
-3. 优化RSI阈值,可考虑动态调整
-4. 加入更多技术指标进行交叉验证
-5. 引入自适应参数机制
-6. 开发更精细的止损机制
-
-#### 总结
-该策略通过结合多个技术指标和多重时间周期分析来提高交易的稳定性和可靠性。虽然存在一定的风险,但通过合理的仓位管理和止损机制可以实现风险的有效控制。策略的优化空间较大,通过引入更多的技术指标和优化参数可以进一步提升策略的表现。
-
-||
 
 #### Overview
 This strategy is a composite trading system that combines the momentum indicator RSI with the trend indicator EMA. Operating on both 1-minute and 5-minute timeframes, it makes trading decisions based on RSI overbought/oversold signals and triple EMA trend determination. The strategy incorporates both trend following and mean reversion characteristics, enabling it to capture trading opportunities in different market environments.
@@ -77,7 +43,6 @@ The strategy uses 21/50/200-day triple EMA as trend judgment benchmark, combined
 
 #### Summary
 The strategy enhances trading stability and reliability through the combination of multiple technical indicators and multi-timeframe analysis. While certain risks exist, they can be effectively controlled through proper position management and stop-loss mechanisms. The strategy has significant optimization potential, and its performance can be further improved by introducing additional technical indicators and optimizing parameters.
-[/trans]
 
 
 

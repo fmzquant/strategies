@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1afe95bfefdeda3639e.png)
-[trans]
-### 概述
-
-本策略的核心思想是在高交易量的情况下追踪突破,通过设置风险预算百分比和250倍的模拟杠杆来实现复利仓位。它旨在抓住高卖压后的潜在反转机会。
-
-### 策略原理
-
-当满足以下条件时,做多入场:
-
-1. 交易量超过用户定义的阈值(volThreshold)
-2. 当前K线的最低价低于上一根K线的最低价(lowLowerThanPrevBar)  
-3. 当前K线收盘价为负,且高于上一根K线的收盘价(negativeCloseWithHighVolume)
-4. 不存在未平仓多头仓位(strategy.position_size == 0)
-
-仓位大小的计算方法是:
-
-1. 根据账户权益(equity)的风险百分比(riskPercentage)计算风险金额
-2. 将风险金额乘以模拟杠杆倍数(leverage,默认为250倍)得到合约数量
-
-退出原则:
-
-多头仓位盈亏百分比 posProfitPct 触碰止损线(-0.14%)或止盈线(4.55%)时平仓。
-
-### 优势分析
-
-这种策略的优势在于:
-
-1. 捕捉高交易量带来的趋势反转机会
-2. 采用复利仓位管理,利润增长快
-3. 止损止盈设置合理,有利于风险控制
-
-### 风险分析
-
-该策略也存在一些风险:
-
-1. 250倍的杠杆会放大损失
-2. 没有考虑滑点、手续费和保证金等实际交易因素
-3. 需要反复回测优化参数,实盘校验
-
-可通过以下方法降低风险:
-
-1. 适当降低杠杆倍数
-2. 增加止损幅度
-3. 考虑实际交易成本
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 动态调整杠杆大小
-2. 优化止损止盈条件
-3. 添加趋势过滤器
-4. 结合股票具体特点调参
-
-### 总结
-
-本策略总体来说较为简单直接,通过捕捉反转机会获取超额收益。但也存在一定风险,需要谨慎实盘验证。通过参数和策略结构优化,可以使其更稳定、实战性更强。
-
-||
 
 ### Overview
 
@@ -127,7 +68,6 @@ Areas for improvement:
 
 In summary, this is a fairly simple and straightforward strategy for capturing reversals and outsized gains. But risks exist and prudent real-world testing is essential. With optimization, it can be made more robust and practical.
 
-[/trans]
 
 > Strategy Arguments
 

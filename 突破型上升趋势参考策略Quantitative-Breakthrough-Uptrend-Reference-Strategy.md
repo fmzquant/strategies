@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a2061f7f669a925274.png)
-[trans]
-### 概述
-
-该策略是一个基于简单移动平均线确定趋势方向,配合阻力支撑线形成突破信号的长线持仓策略。通过计算价格Pivot高点和Pivot低点,绘制阻力线和支撑线,当价格突破阻力线时做多,突破支撑线时平仓。该策略适合趋势明显的股票,可以获得较好的风险回报比。
-
-### 策略原理
-
-1. 计算20日简单移动平均线作为判断趋势的基准线 
-2. 根据用户输入参数计算Pivot高点和Pivot低点
-3. 根据Pivot高点和Pivot低点绘制阻力线和支撑线
-4. 当收盘价高于阻力线时,做多入场
-5. 当支撑线下穿阻力线时,平仓
-
-该策略使用简单移动平均线判断总体趋势方向,再利用关键点突破形成交易信号,属于典型的突破型策略。通过关键点和趋势判断,可以有效过滤假突破。
-
-### 优势分析
-
-1. 策略机会充足,适合高波动的股票,容易捕捉趋势
-2. 风险控制 to 做,风险收益比高
-3. 利用突破信号,避免假突破风险
-4. 可自定义参数,适应性强
-
-### 风险分析 
-
-1. 依赖参数优化,参数不当会增加假突破概率
-2. 突破信号延迟,可能错过部分机会
-3. 震荡行情中容易止损
-4. 支持线调整不及时可能带来亏损
-
-可以通过实盘优化参数,结合止损止盈策略来降低风险。
-
-### 优化方向
-
-1. 优化移动平均线周期参数
-2. 优化支撑阻力线参数
-3. 增加止损止盈策略
-4. 增加突破确认机制
-5. 结合交易量等指标过滤信号
-
-### 总结
-
-该策略整体是一个典型的突破型策略,依赖参数优化和流动性,适合追踪趋势的交易者。作为一个参考框架,可根据实际需要进行模块扩展,通过止损止盈、信号过滤等机制来降低风险,提高稳定性。
-
-||
 
 ### Overview  
 
@@ -97,7 +53,6 @@ Risks can be reduced by optimizing parameters through live trading, and incorpor
 
 Overall, this strategy is a typical breakout strategy that relies on parameter optimization and liquidity, suitable for trend traders. As a reference framework, it can be extended according to actual needs by adding mechanisms like stop loss/take profit, signal filtering to reduce risk and improve stability.
 
-[/trans]
 
 > Strategy Arguments
 

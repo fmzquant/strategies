@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10fc62a9cc7c990d021.png)
-[trans]
-
-## 概述
-
-本策略运用多种移动平均线指标,结合交易时间选择进入和退出的时机,实现量化交易。
-
-## 策略原理
-
-该策略使用了9种移动平均线包括SMA、EMA、WMA等。根据用户选择,进入多仓时,收盘价上穿选定的移动平均线且前一根K线收盘价在移动平均线以下;做空时,收盘价下穿选定的移动平均线且前一根K线收盘价在移动平均线以上。所有交易只在周一开盘时发出。平仓条件为固定止盈止损或周日收盘前平仓。
-
-## 优势分析
-
-本策略集多种移动平均线精华于一身,用户可以选择不同参数来适应不同市场环境。只有确定趋势出现才入场,避免了 \'%失效交易\' 的出现。同时,本策略只在周一开仓,周日前止盈止损或平仓,限制了单周最大开仓次数,有效控制了交易风险。
-
-## 风险分析
-
-该策略主要依赖均线指标判断趋势,当趋势发生转折时,存在部分交易被套住的风险。此外,限定只有周一能够开仓,如果在周一之后出现较好的交易机会也无法入场,可能错过部分利润。
-
-为控制这些风险,建议采用动态移动平均线参数,当市场进入震荡时,适当缩短参数;同时,也可以增加开仓时间,在周三或周四仍允许开新仓。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止盈止损Algerism算法,动态调整止盈止损点;
-
-2. 增加机器学习模型判断趋势年,避免在震荡市场入场;
-
-3. 优化开仓和平仓逻辑,允许更多的开仓机会出现。
-
-## 总结
-
-本策略集成多种移动平均线指标判断趋势方向,以周一开仓周日平仓的方式有效控制了单周最大交易次数。同时,严格的止盈止损规则也限制了单笔交易的最大亏损。综合来看,本策略从趋势判断和风险控制两个维度进行优化设计,是一种较为稳健的量化交易策略。
-
-||
 
 ## Overview
 
@@ -77,7 +42,6 @@ The strategy can be improved in the following ways:
 ## Summary  
 
 This strategy combines multiple moving average indicators to determine trend direction and caps maximum weekly trades with Monday entry and Sunday exit rules. Strict stop loss/take profit further limits maximum loss per trade. In summary, it provides robust enhancements in both trend determination and risk control dimensions for quantitative trading.
-[/trans]
 
 > Strategy Arguments
 

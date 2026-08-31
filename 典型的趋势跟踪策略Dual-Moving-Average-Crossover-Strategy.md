@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1148a4aa63b71da3062.png)
 
-[trans]
-
-## 概述
-
-双均线交叉策略是一种典型的趋势跟踪策略。它利用两条不同周期的EMA均线,当短周期均线上穿长周期均线时做多,当短周期均线下穿长周期均线时做空,以捕捉价格趋势的转折点。
-
-## 策略原理  
-
-该策略的核心指标是两条EMA均线,分别为30周期和60周期。代码中通过自定义函数计算两条EMA均线:
-
-```
-emaLen1 = emaFuncOne(close, lenMA1)  
-emaLen2 = emaFuncTwo(close, lenMA2)
-```
-
-策略的交易信号来自两条EMA均线的交叉:
-
-```
-currentState = if emaLen2 > emaLen1  
-    0
-else
-    1
-
-previousState = if emaLastLen2 > emaLastLen1
-    0  
-else
-    1
-
-convergence = if currentState != previousState
-    1
-else 
-    0
-```
-
-当短期EMA上穿长期EMA时,currentState与previousState不相等,出现交叉信号。这时做多。
-当短期EMA下穿长期EMA时,currentState与previousState不相等,出现交叉信号。这时做空。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略思路简单直观,容易理解和实现
-2. 利用EMA均线的平滑特性,有效过滤市场噪音
-3. 自动跟踪趋势,不容易漏买漏卖
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 双均线交叉信号可能滞后,无法及时捕捉转折
-2. 震荡行情中可能出现多次错误信号
-3. 参数设置不当可能导致过于敏感或过于滞后
-
-可以通过调整EMA周期,或者增加过滤条件来优化。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同长度的EMA周期组合
-2. 增加成交量或波动率条件过滤假信号 
-3. 结合其他指标确认趋势,例如MACD
-4. 优化资金管理,设置止损止盈
-
-## 总结  
-
-双均线交叉策略整体来说是一种简单实用的趋势跟踪策略。它 straight-forward,易于实现,可以自动跟踪趋势。但也存在一些滞后,假信号的风险。通过参数优化和增加过滤条件,可以进一步完善,使其成为量化交易的基础策略之一。
-
-||
 
 ## Overview   
 
@@ -147,7 +78,6 @@ This strategy can be optimized from the following aspects:
 
 The Dual Moving Average Crossover strategy is a simple and practical trend following system overall. It is straight-forward, easy to implement and can automatically track trends. But some risks like lagging and false signals exist. With parameter tuning and adding filters, it can be further improved to become one of the fundamental algorithmic trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

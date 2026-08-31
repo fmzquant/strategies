@@ -9,25 +9,6 @@
 
 > Strategy Description
 
-[trans]
-- 策略名称：基于价格相对强的弱策略
-- 数据周期：1H
-- 支持：商品期货、数字货币、数字货币期货
-- 官方网站：www.quantinfo.com
-
-
-  ![IMG](https://www.fmz.com/upload/asset/2e346e6e3b2edda65576ffe7d35e104b.png) 
-
-
-
-- 主图：
-  均线，公式： MAN^^MA(C,N);
-
-
-- 副图：
-  无
-
-||
 
 - Strategy Name: Relative Strength Strategy Based on Price
 - Data cycle: 1H
@@ -41,7 +22,6 @@
 - Secondary chart:
   none
 
-[/trans]
 
 > Strategy Arguments
 

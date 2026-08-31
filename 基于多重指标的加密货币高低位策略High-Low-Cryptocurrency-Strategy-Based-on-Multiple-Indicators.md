@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c4fec07cef3c2a069e.png)
-[trans]
-
-## 概述
-
-本策略是一个适用于加密货币市场的高低位策略。它综合运用了MACD、PSAR、ATR、 Elliott波等多个指标,在1小时、4小时或1天等较高时间周期进行交易。策略的优势在于风险回报率高,平均盈利因子可达1.5-2.5。
-
-## 策略原理
-
-该策略的交易信号来自价格的高低位点和多个指标的综合判断。具体逻辑是:
-
-1. 判断K线是否出现价格高低位区间,即高点连续创新高、低点连续创新低。
-
-2. 检查MACD的直方图水平。
-
-3. 检查PSAR指标判断趋势方向。 
-
-4. 检查ATR和MA制成的趋势指标判断趋势方向。
-
-5. 检查Elliott波指标确认趋势方向。
-
-如果上述5个条件都指向同一方向,产生做多或做空信号。
-
-## 策略优势  
-
-1. 风险回报率高,可达1:30。
-
-2. 平均盈利因子高,一般在1.5-2.5之间。
-
-3. 多重指标组合,可以有效过滤假突破。 
-
-## 策略风险
-
-1. 获胜率较低,只有10%-20%。
-
-2. 存在一定的回撤和拉锯盘的风险。
-
-3. 指标效果会受市场环境影响。
-
-4. 需要较强的心理承受能力。
-
-对应措施:
-
-1. 加大交易资金规模以平衡获胜率。 
-
-2. 严格控制单笔止损。
-
-3. 根据不同市场调整指标参数。 
-
-4. 做好心理建设,控制好位置规模。
-
-## 优化方向
-
-1. 根据不同加密货币和市场环境测试指标参数。
-
-2. 增加止损、止盈策略优化资金管理。
-
-3. 结合机器学习方法提高获胜率。
-
-4. 增加社交情绪指标过滤交易信号。
-
-5. 考虑多时间周期指标确认。
-
-## 总结
-
-本策略整体来说是一个适合加密货币的高风险高收益交易策略。它的优势在于风险回报率高,可以获得较高的平均盈利因子。风险主要在于获胜率较低,需要有较强的心理承受能力。下一步的优化方向可以从调整参数、优化资金管理、提高获胜率等多个维度进行。总体而言,本策略对于寻求高收益的加密货币交易者具有一定的实用价值。
-
-|| 
 
 ## Overview  
 
@@ -142,7 +75,6 @@ Corresponding Measures:
 
 In conclusion, this is an aggressive high risk high return cryptocurrency trading strategy. Its advantage lies in the high risk reward ratio and profit factor. The main risks come from the relatively low win rate which requires strong psychology. The future optimization directions could be parameter tuning, money management, increasing win rate and so on. Overall this strategy has practical value for cryptocurrency traders seeking high profits.
 
-[/trans]
 
 > Strategy Arguments
 

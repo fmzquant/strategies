@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b579bb6cced4a76514.png)
-[trans]
-
-## 概述
-
-该策略结合了随机转向因子和关键反转信号这两种反转策略,以获取综合交易信号。首先使用随机转向因子判断价格是否出现反转迹象。然后结合关键反转信号过滤假反转,确保捕捉到真实的反转机会,降低交易风险。
-
-## 策略原理
-
-### 随机转向因子
-该部分来源于Ulf Jensen的《我如何在期货市场上将资金翻三番》一书中介绍的反转策略。它结合了收盘价和随机指标的反转形态来判断价格走势是否出现转折。
-
-当收盘价连续两日高于前一日的收盘价,且9日随机指标的慢线低于50时,做多。这表示价格在短期内持续上涨,但随机指标显示股票正在过度买入,预示着可能出现反转下跌的机会。
-
-当收盘价连续两日低于前一日的收盘价,且9日随机指标的快线高于50时,做空。这表示价格在短期内持续下跌,但随机指标显示股票正在过度卖出,预示着可能出现反转上涨的机会。
-
-### 关键反转信号
-关键反转信号指一天内价格出现新的高点或低点后发生明显反转的K线形态。它常常预示着行情趋势的转变。
-
-在牛市中,价格创新高后收盘价接近昨日的最低价位构成关键反转做多信号。
-在熊市中,价格创新低后收盘价接近昨日的最高价构成关键反转做空信号。
-
-## 策略优势
-
-1. 结合多种指标和K线形态,提高了交易信号的准确率。
-
-2. 基于反转理论构建,可捕捉潜在的反转机会。
-
-3. 同时判断趋势和随机指标,可有效过滤错误信号。
-
-4. 关键反转信号可避免假反转,降低交易风险。
-
-## 策略风险及优化
-
-1. 反转形态出现时,行情可能并未真正反转,存在回调风险。可以设置止损来控制风险。
-
-2. 随机指标和价格可能发生背离,导致信号错误。可以优化随机指标的参数,或组合其他指标进行确认。
-
-3. 该策略主要基于日内和短期K线交易,无法应对较长线的趋势行情。可以结合趋势和意识形态等方法进一步完善。
-
-
-## 总结
-
-该策略结合价格行情、随机指标和关键反转信号,以捕捉潜在的反转机会。相比单一的反转交易方法,它可以更准确地判断反转时机,过滤虚假信号。但仍需注意反转后可能出现的回调风险,以及随机指标与价格之间的背离现象。通过参数优化、止损设置及进一步与其他策略的整合,可以获得更可靠的交易策略。
-
-||
 
 ## Overview
 
@@ -96,7 +51,6 @@ In a bear market, after the price hits a new low, if the closing price is near t
 ## Conclusion  
 
 This strategy combines price action, stochastic indicator and key reversal signals to capture potential reversal opportunities. Compared to standalone reversal trading methods, it can more accurately determine the timing of reversals and filter out false signals. However, attention should still be paid to pullback risks after reversal and the divergence between stochastic and prices. More reliable trading strategies can be obtained through parameter optimization, stop loss setting and further integration with other strategies.  
-[/trans]
 
 > Strategy Arguments
 

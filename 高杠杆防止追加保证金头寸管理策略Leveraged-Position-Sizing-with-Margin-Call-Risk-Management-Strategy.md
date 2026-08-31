@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fd9ab34dd220f96d3b.png)
-[trans]
-
-## 概述
-
-该策略通过设置高杠杆和追加保证金条件,在市场大幅波动时及时平仓,实现防止追加保证金的风险管理。
-
-## 策略原理
-
-1. 设置高杠杆操作,如杠杆比例为4倍
-2. 设置追加保证金线,如$25,000
-3. 当权益低于追加保证金线时,策略停止开仓
-4. 当权益继续下跌触发追加保证金信号时,策略平仓所有头寸
-
-通过上述设置,可在市场大幅波动导致权益快速下跌时,及时止损,防止追加保证金的风险。
-
-## 优势分析
-
-1. 可根据个人承受能力灵活设置杠杆比例,控制单笔损失风险
-2. 追加保证金机制可以防止账户爆仓
-3. 在高杠杆操作下,及时止损,最大程度规避风险
-
-## 风险分析 
-
-1. 高杠杆放大了收益同时也放大了风险
-2. 需要合理设置追加保证金线,与止损线匹配
-3. 止损容易被套,需要优化止损策略
-
-可通过适当调整杠杆比例,设置追加保证金线与止损线匹配,优化止损策略等方法降低风险。
-
-## 优化方向
-
-1. 结合趋势指标,避免逆势建仓
-2. 优化止损方式,避免止损被套
-3. 设置无交易区间,避免特定时间段建仓
-4. 结合机器学习算法,动态调整参数
-
-## 总结
-
-该策略通过高杠杆和追加保证金设置实现风险管理,可以防止账号爆仓。但高杠杆也放大了风险,需要进一步通过趋势判断、止损优化、交易时间控制等方法降低风险。同时可以运用机器学习等更复杂技术对参数进行动态优化,在收益与风险之间寻找最佳平衡。
-
-|| 
 
 ## Overview
 
@@ -90,7 +49,6 @@ Risks can be reduced by adjusting leverage, aligning margin call and stop loss, 
 
 The strategy manages risk with leverage and margin call settings to prevent account blowups. However, high leverage also increases risks. Additional efforts like trend validation, stop loss optimization and trading hour control can help further reduce risks. Complex techniques like machine learning can also be leveraged to dynamically optimize parameters and strike a balance between profitability and risk management.
 
-[/trans]
 
 > Strategy Arguments
 

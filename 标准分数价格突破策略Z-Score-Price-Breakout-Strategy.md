@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15970d08b6f112292c1.png)
 
-[trans]
-
-### 概述
-
-标准分数价格突破策略(Z-Score Price Breakout Strategy)利用价格的标准分数指标判断当前价格是否处于异常状态,从而产生交易信号。当价格的标准分数高于或低于某一阈值时,表明价格已经进入异常状态,这时可以进行做多或做空操作。
-
-### 策略原理
-
-该策略的核心指标是价格的标准分数(Z-Score),计算公式如下:
-
-```
-Z_score = (C - SMA(n)) / StdDev(C,n)
-```
-
-其中C为收盘价,SMA(n)为n周期的简单移动均线,StdDev(C,n)为n周期收盘价的标准差。
-
-标准分数反映了当前价格与平均价格的偏离程度。当价格标准分数大于某一正阈值(如+2)时,表示当前价格已经高于平均价2个标准差,属于比较高的水平;当小于某一负阈值(如-2)时,表示当前价格已经低于平均价2个标准差,属于比较低的水平。
-
-该策略首先计算价格的标准分数,然后设定一个正负阈值(如0和0),当标准分数高于正阈值时产生买入信号,低于负阈值时产生卖出信号。
-
-### 优势分析
-
-- 利用价格标准分数判断价格异常,是一种常见而有效的量化方法
-- 可以轻松实现做多和做空双向交易
-- 参数设置灵活,可调整周期、阈值等
-- 可与其他指标组合,形成交易系统
-
-### 风险分析
-
-- 标准分数策略较为粗放,容易产生假信号
-- 需要设定合适的参数,如周期和阈值
-- 需考虑止损策略控制风险
-
-### 优化方向  
-
-- 优化周期参数,寻找最佳周期
-- 优化正负阈值,降低假信号
-- 增加过滤条件,与其他指标组合
-- 增加止损策略
-
-### 总结  
-
-标准分数价格突破策略判断当前价格是否处于异常状态,根据价格标准分数的正负进行交易。该策略简单易行,可双向交易,但也存在一定风险。通过参数优化和止损等手段,可以强化该策略,与其他指标组合形成完整的量化交易体系。
-
-||
 
 
 ### Overview  
@@ -100,7 +55,6 @@ This strategy first calculates the z-score of price, then sets a positive and ne
 
 The z-score price breakout strategy judges whether the current price is in an abnormal state, and trades according to the positive and negative of the price z-score. This strategy is simple and easy to implement, allows two-way trading, but also has some risks. By optimizing parameters, adding stop loss and combining with other indicators, this strategy can be enhanced to form a complete quantitative trading system.
 
-[/trans]
 
 > Strategy Arguments
 

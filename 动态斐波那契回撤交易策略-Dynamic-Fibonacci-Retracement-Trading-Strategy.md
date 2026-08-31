@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f2aa9fb9b7066d5920.png)
-[trans]
-#### 概述
-该策略基于斐波那契回撤和移动平均线,旨在捕捉市场趋势中的回撤机会。它通过计算不同周期的最高价和最低价来确定斐波那契回撤水平,并使用移动平均线来确认趋势方向。该策略仅在价格高于长期和中期移动平均线时考虑进入多头仓位,并在价格回撤到关键斐波那契水平时进行交易。
-
-#### 策略原理
-该策略的核心原理是利用斐波那契回撤水平和移动平均线来识别潜在的进场点。首先,计算长期(200周期)和中期(50周期)简单移动平均线(SMA),以确定总体趋势方向。接下来,计算21周期、50周期和9周期的最高价和最低价,并根据这些价格计算相应的斐波那契回撤水平。50%的回撤水平是通过计算这三个周期的回撤中点的平均值来确定的。78.6%的回撤水平是根据这些周期的平均最高价和平均最低价之间的差值计算得出的。
-
-该策略仅在以下条件都满足时进入多头仓位:价格高于200周期和50周期移动平均线,并且价格小于等于50%的回撤水平。一旦进场,止盈位置被定义为平均开仓价格加上平均开仓价格与78.6%回撤水平之差乘以风险回报比。止损位置被定义为78.6%的回撤水平。当价格达到止盈或止损水平时,该策略退出多头仓位。
-
-#### 策略优势
-1. 趋势确认:该策略使用长期和中期移动平均线来确认总体趋势方向,有助于避免在逆势市场中交易。
-
-2. 动态回撤水平:通过计算不同周期(21周期、50周期和9周期)的最高价和最低价,该策略能够动态调整关键的斐波那契回撤水平,以适应不同的市场条件。
-
-3. 风险管理:该策略采用预定义的风险回报比来确定止盈和止损水平,有助于管理交易风险并优化潜在回报。
-
-4. 视觉辅助:该策略在图表上绘制移动平均线和关键的斐波那契回撤水平,为交易者提供清晰的视觉参考,有助于做出明智的交易决策。
-
-#### 策略风险
-1. 延迟入场:在快速变动的市场条件下,等待价格回撤到关键斐波那契水平可能导致错失最佳入场机会。
-
-2. 虚假信号:在某些情况下,价格可能会短暂地突破关键的斐波那契水平,但很快恢复,导致虚假的交易信号。
-
-3. 趋势逆转:该策略在趋势市场中表现最佳。如果趋势发生逆转,该策略可能会遭受损失。
-
-4. 参数敏感性:该策略的性能在很大程度上取决于所选参数,如移动平均线的长度和斐波那契回撤周期。不恰当的参数选择可能导致次优结果。
-
-#### 策略优化方向
-1. 动态参数优化:实施自适应机制来动态调整策略参数,如移动平均线的长度和斐波那契回撤周期,以适应不断变化的市场条件。
-
-2. 多时间框架分析:结合多个时间框架的分析,以获得更全面的市场观点并确认交易信号。
-
-3. 风险管理增强:引入更高级的风险管理技术,如基于波动性的仓位调整或追踪止损,以更好地保护资本并管理交易风险。
-
-4. 指标组合:将其他技术指标(如相对强弱指数或随机振荡器)与现有的移动平均线和斐波那契回撤水平相结合,以提高交易信号的准确性和可靠性。
-
-#### 总结
-"动态斐波那契回撤交易策略"是一种基于技术分析的交易方法,旨在利用斐波那契回撤水平和移动平均线来识别趋势市场中的潜在进场机会。该策略通过动态计算关键的回撤水平并确认趋势方向,为交易者提供了一个结构化的方法来管理风险并优化回报。虽然该策略有其优势,但也存在一些风险和局限性。通过优化策略参数、增强风险管理和结合其他技术指标,可以进一步提高该策略的性能和稳健性。总的来说,"动态斐波那契回撤交易策略"为希望利用技术分析工具进行交易的交易者提供了一个有前景的框架。
-
-|| 
 
 #### Overview
 The strategy, based on Fibonacci retracements and moving averages, aims to capture retracement opportunities within market trends. It determines Fibonacci retracement levels by calculating the highest highs and lowest lows over different periods and uses moving averages to confirm the trend direction. The strategy only considers entering long positions when the price is above the long-term and medium-term moving averages and trades when the price retraces to key Fibonacci levels.
@@ -88,7 +48,6 @@ The strategy only enters a long position when all of the following conditions ar
 
 #### Summary
 The "Dynamic Fibonacci Retracement Trading Strategy" is a technical analysis-based approach that aims to leverage Fibonacci retracement levels and moving averages to identify potential entry opportunities within trending markets. By dynamically calculating key retracement levels and confirming the trend direction, the strategy provides traders with a structured method to manage risk and optimize returns. While the strategy has its advantages, it also comes with certain risks and limitations. By optimizing strategy parameters, enhancing risk management, and incorporating additional technical indicators, the performance and robustness of the strategy can be further improved. Overall, the "Dynamic Fibonacci Retracement Trading Strategy" offers a promising framework for traders seeking to utilize technical analysis tools in their trading endeavors.
-[/trans]
 
 
 

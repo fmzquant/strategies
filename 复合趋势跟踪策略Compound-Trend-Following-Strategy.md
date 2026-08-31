@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本文将介绍一种综合多种指标判断趋势的量化交易策略。该策略融合均线方向、新高新低、年线条件等多种技术指标,追踪股价中长线趋势。
-
-## 策略原理
-
-该策略基于以下几点理念:
-
-1. 使用均线方向、新高新低指数等判断价格趋势方向。
-
-2. 结合年线判断长线趋势,避免被短期震荡误导。
-
-3. 当多种指标 Bundle 合成信号时才入场,可有效过滤假信号。 
-
-4. 采用超级趋势止损随行,可锁定趋势利润。
-
-5. 当价格突破均线时适当止损。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多种指标综合判断,可提高决策准确性。
-
-2. 只在趋势明确时入场,可避免不必要交易。
-
-3. 超级趋势止损可有效锁定利润,降低回撤。
-
-4. 根据价格突破适时止损,可提高胜率。
-
-5. 策略逻辑清晰易理解,便于优化。
-
-## 风险分析 
-
-该策略也存在以下风险:
-
-1. 多种指标同时判断可能错过交易机会。
-
-2. 超级趋势止损过于机械,可能使利润遭受限制。
-
-3. 均线突破判断如果不当可能造成不必要止损。
-
-4. 交易者需谨慎评估参数设定对策略的影响。
-
-## 总结
-
-该策略综合运用多种技术指标判断趋势。在参数优化合理的前提下,可望获得较好收益。但交易者仍需关注趋势判断准确性,适时调整参数。
-
-||
 
 ## Overview
 
@@ -110,7 +58,6 @@ Potential risks include:
 
 This strategy combines multiple technical indicators to determine trend. With proper optimization, it can achieve good returns. But traders should watch trend accuracy and adjust parameters accordingly.
 
-[/trans]
 
 > Strategy Arguments
 

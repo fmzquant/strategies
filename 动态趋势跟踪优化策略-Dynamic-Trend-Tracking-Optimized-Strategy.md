@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/160aa5299dcb9739e8e.png)
-[trans]
-
-### 概述
-
-该策略通过计算CMO指标和变化率,动态绘制支持线。当价格突破支持线时产生交易信号。同时,策略还通过优化支持线附近的止损范围来锁定更多利润。
-
-### 策略原理
-
-1. 计算CMO指标,用于判断价格趋势
-2. 计算变化率Var,反映价格变化趋势
-3. 根据变化率绘制支持线 
-4. 计算优化后的止损线longStop和shortStop
-5. 当价格突破支持线时产生交易信号
-
-### 优势分析
-
-1. 利用CMO指标判断价格趋势,避免假突破
-2. 支持线能清晰判断趋势方向
-3. 优化后的止损线能锁定更多利润
-4. 交易信号简单清晰,容易跟单
-
-### 风险分析
-
-1. CMO指标存在滞后,可能错过价格转折点
-2. 支持线被突破可能形成假信号
-3. 止损范围优化不当可能带来更大亏损
-
-风险解决方法:
-1. 适当调整CMO参数,降低滞后
-2. 结合其他指标过滤假信号
-3. 测试确定适合的止损优化比例
-
-### 优化方向
-
-1. 更多指标结合,过滤假信号
-2. AI自动优化止损范围
-3. 自动调整交易量
-
-### 总结
-
-该策略整体来说效果不错,利用支持线清晰判断趋势方向。同时结合CMO指标和优化止损能获得不错效果。但是存在一定假信号风险,可以通过多指标组合来优化。
-
-||
 
 ### Overview
 
@@ -94,7 +51,6 @@ Risk Solutions:
 
 Overall this strategy works well, using support line to clearly determine trend direction. Combined with CMO indicator and optimized stop loss it achieves good results. But there are some risks of false signals, which can be improved by combining more indicators.
 
-[/trans]
 
 > Strategy Arguments
 

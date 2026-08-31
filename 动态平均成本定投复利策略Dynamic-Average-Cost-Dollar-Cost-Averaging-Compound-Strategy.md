@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/198c51b795f2997eeab.png)
-[trans]
-
-#### 概述
-
-动态平均成本定投复利策略通过动态调整每次开仓的数量,在趋势开始阶段先少量开仓建仓,随着盘整深度的增加逐步加大仓位。策略采用指数函数计算每层止损价位,并在触发重新分批开新仓,从而能使持仓成本线保持以指数级下行。随着深度的增加,仓位成本可以逐步向下压缩,待价格反转之后分批止盈出场,获取更大收益。
-
-#### 策略原理
-
-该策略由简易的RSI超卖点位信号组合均线选时方式选择开仓时机。当RSI低于超卖线并且收盘价格小于均线时产生首单开仓信号。 首单开仓后,根据指数函数计算价格跌破幅度的下限,产生DCA信号。每次DCA后,调整持仓量使得每手头寸相等。由于持仓量和持仓成本的动态变化,这就起到了类似于杠杆放大效应。
-随着DCA次数增加,持仓成本不断下滑,每次止盈只需很小幅度的反弹就能实现盈利。
-在连续多单开出以后,会在均价上方绘制止损线。一旦价格重新突破向上,超过持仓均价以及止损线,则止损出场。
-
-策略最大优势在于,随着持仓成本的不断下行,即使是盘整市,也可以累计逐步减少成本。当趋势反转后,由于持仓成本已经大大低于市价,因此能够实现更大幅度的盈利。
-
-#### 风险与缺陷
-
-该策略最大的风险在于初期仓位有限。如在持续下跌的趋势中,会有止损风险。因此需要设置自己可以承受的止损幅度。
-
-另外,止损幅度的设定同样也存在两个极端。设置过大停止单位吃不到足够深度的反弹。而设置过小的止损幅度在中期调整中遭遇价格重新涨停反转的概率会比较大。所以根据不同的市场和自己的风险偏好,选择合适的止损幅度非常关键。
-
-在DCA周期较长,形成较多层级后,如果价格大幅上涨,会面临仓位成本过高,无法止损的风险。这也需要根据自己的仓位总量和可承受的最高仓位成本来合理设置DCA层级。
-
-#### 优化建议
-
-1.  优化选时信号。可以测试不同的参数以及不同的指标组合,以期望选出更高胜率的信号。
-
-2.  优化止损机制。可以测试使用 Λ 型止损或者 圆弧型止损 替代简单的移动止损, 可能获得更好的止损效果。也可以加入仓位分时的策略调整止损幅度。
-
-3.  优化止盈方式。可以测试不同类型的移动止盈,寻找更优的止盈出场机会,从而提高总体收益率。
-
-4.  加入防反弹机制。在止损后,可能会出现再次触发DCA信号从而重新开仓的情况。这时候可以考虑加入一定幅度的防反弹范围,避免止损后立即重新激进建仓。
-
-#### 总结
-
-本策略运用RSI指标判定买入时机,以及根据指数函数计算的动态止损DCA策略,实现动态调整持仓数量和持仓成本,从而在波段市场中获得价格优势。优化方案主要集中在进出场信号、止损和止盈方式等方面。总体来说,该策略运用了指数DCA的核心理念,使得持仓成本不断下移,可以在盘整期间获得更多的运作空间,在趋势行情中获得更高的收益回报。不过仍然需要根据自己的资金管理计划选择合适的参数以控制总体的仓位风险。
-
-||
 
 #### Overview
 
@@ -81,7 +44,6 @@ If there are too many DCA levels, when price rises substantially, extremely high
 #### Conclusion  
 This strategy utilizes RSI to determine entries, exponential dynamic stop loss DCA mechanism to adjust position sizing and average costs dynamically, in order to gain price advantage during consolidations. The main optimization areas are focused on entry/exit signals, stop loss and take profit. The core concept of exponential DCA is implemented to shift holding cost lower continually, thus providing more room during consolidations, and achieving multiplied returns when trend emerges. But parameters still need be set carefully based on capital allocation plans to control overall position risks.
 
-[/trans]
 
 > Strategy Arguments
 

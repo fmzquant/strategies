@@ -14,48 +14,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-
-这是一种创新的交易策略，结合了流动性区域分析和内部市场结构动态，旨在识别高概率入场点。该策略通过追踪价格与关键市场水平的互动，并利用内部市场转换触发交易，为交易者提供了一种灵活且精准的市场进入方法。
-
-#### 策略原理
-
-策略的核心逻辑基于两个关键组件：流动性区域识别和内部市场转换。流动性区域通过分析局部高点和低点来动态确定，而内部市场转换则基于价格突破先前的bullish或bearish水平来判断市场方向变化。
-
-策略具有以下核心特征：
-1. 内部市场转换逻辑：不依赖传统蜡烛图形态，而是基于价格突破关键水平
-2. 流动性区域追踪：动态识别关键流动性区域，防止在弱市条件下交易
-3. 模式灵活性：提供"Both"、"Bullish Only"和"Bearish Only"三种交易模式
-4. 风险管理：可自定义止损和止盈水平
-5. 时间范围控制：可精确控制交易时间段
-
-#### 策略优势
-
-1. 动态适应性：策略能够快速响应市场结构变化
-2. 精确入场：通过结合流动性区域和内部市场转换，提高入场精确度
-3. 风险可控：内置止损和止盈机制
-4. 灵活性强：可根据不同市场条件选择交易模式
-5. 多维度分析：同时考虑价格行为、流动性和市场结构
-
-#### 策略风险
-
-1. 市场剧烈波动可能导致止损被触发
-2. 在震荡市场中，频繁的信号可能增加交易成本
-3. 参数设置不当可能影响策略表现
-4. 回测结果可能与实盘存在差异
-
-#### 策略优化方向
-
-1. 引入机器学习算法进行参数自适应优化
-2. 增加更多过滤条件，如交易量、波动率指标
-3. 开发多时间框架验证机制
-4. 优化止损和止盈算法，考虑市场波动率动态调整
-
-#### 总结
-
-这是一种融合流动性分析和市场结构动态的创新交易策略。通过灵活的内部市场转换逻辑和精确的流动性区域追踪，为交易者提供了一个强大的交易工具。策略的关键在于其适应性和多维度分析能力，能够在不同市场条件下保持较高的执行效率。
-||
 #### Overview
 
 This is an innovative trading strategy that combines liquidity zone analysis with dynamic internal market structure, aiming to identify high-probability entry points. By tracking price interactions with key market levels and utilizing internal market shifts to trigger trades, the strategy provides traders with a flexible and precise market entry approach.
@@ -96,7 +54,6 @@ The strategy features the following core characteristics:
 #### Summary
 
 This is an innovative trading strategy that integrates liquidity analysis and market structure dynamics. By providing flexible internal market shift logic and precise liquidity zone tracking, it offers traders a powerful trading tool. The strategy's key strength lies in its adaptability and multi-dimensional analysis capabilities, maintaining high execution efficiency across different market conditions.
-[/trans]
 
 
 

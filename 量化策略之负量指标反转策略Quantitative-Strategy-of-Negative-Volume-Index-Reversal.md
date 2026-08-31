@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/712b0685281490c31e.png)
-[trans]
-
-## 概述
-
-本策略名称为负量指标反转策略(Negative Volume Index Reversal Strategy)。该策略利用负量指标(NVI)和其移动平均线构建长短信号,在满足条件时进行反转交易,属于反转类策略。
-
-## 策略原理  
-
-负量指标反转策略的核心指标是负量指标(NVI)。NVI的计算公式是:
-
-当天成交量 < 前一天成交行量时:NVI = 前一天NVI + 当天价格变化率  
-
-当天成交量 >= 前一天成交行量时:NVI = 前一天NVI
-
-也就是说,NVI只在成交量缩量的日子进行更新,通过价格变化率的加减来反映价格走势。과NVI构建长短信号的逻辑是:
-
-- 当NVI高于其N日移动平均线时,做多
-- 当NVI低于其N日移动平均线时,做空
-
-这样,就在量缩的时候进行反转交易。
-
-## 策略优势
-
-负量指标反转策略的主要优势有:
-
-1. 利用成交量信号,可以找到反转点,具有一定的时点优势。
-
-2. 策略逻辑简单,容易理解和实现。
-
-3. 可通过调整参数进行优化,适应不同市场环境。
-
-## 策略风险 
-
-负量指标反转策略也存在一些风险:  
-
-1. 成交量信号精确度无法保证,存在一定的错误交易概率。
-
-2. 参数设置不当可能导致过于频繁交易或信号不明显。
-
-3. 需确保数据源可靠,避免成交量数据错误带来风险。  
-
-可以通过参数优化,结合止损策略等方式降低这些风险。
-
-## 优化方向
-
-负量指标反转策略可以从以下几个方面进行优化:  
-
-1. 优化移动平均线参数,找到更好描述市场特征的参数。
-
-2. 加入其他指标过滤,避免不必要的错误交易。比如加大级别趋势判断。
-
-3. 结合强力的止损方式,限制单笔损失。
-
-4. 测试不同品种参数设置差异,设定自适应参数。
-
-## 总结  
-
-负量指标反转策略通过在成交量缩量的时候进行反转操作,目标是抓取潜在趋势反转点。该策略有简单、易理解的优点,同时也存在一定错误交易风险。可以通过参数优化、加入辅助指标等方式提升策略稳定性与盈利能力。总体而言,负量指标反转策略具有较好的发展与应用前景。
-
-||
 
 ## Overview
 
@@ -129,7 +69,6 @@ The Negative Volume Index reversal strategy can be optimized in the following as
 
 The Negative Volume Index reversal strategy makes reversal operations when the trading volume shrinks, aiming to capture potential trend reversal points. This strategy has the advantages of simplicity and easy understanding, and also has certain risks of erroneous trades. The stability and profitability of the strategy can be improved through parameter optimization, adding auxiliary indicators, etc. In general, the Negative Volume Index reversal strategy has good prospects for development and application.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1135cf284cbff8d898f.png)
-[trans]
-## 概述
-
-反转极端设置策略是一种利用极端K线反转的策略。它会根据最新K线的实体大小和平均值进行判断,在实体大小大于平均值且出现反转时,产生交易信号。
-
-## 策略原理
-
-该策略主要判断当前K线的实体大小以及整体K线大小。
-
-它会记录下最新一根K线的实体大小(开盘价与收盘价的差值)和整体K线大小(最高价与最低价的差值)。
-
-然后利用平均真实范围平均法(RMA)计算最近20根K线的平均实体大小和K线大小。
-
-当最新K线上涨且实体大小大于平均实体大小,而整体K线大小也大于平均K线大小的2倍时,产生做多信号。
-
-相反,当最新K线下跌且实体大小也满足上述条件时,产生做空信号。
-
-也就是在极端K线反转时,利用平均值判断,产生交易信号。
-
-## 优势分析
-
-该策略的主要优势有:
-
-1. 利用极端K线特征,容易形成反转
-2. 比较实体大小和整体K线大小的极值情况,寻找异常点
-3. 使用RMA计算动态平均值,适应市场变化
-4. 结合反转形态,信号较为可靠
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 极端K线不一定会反转,可能继续运行
-2. 参数设置不当可能导致过于灵敏或迟钝
-3. 需要足够的行情波动作为支撑,不适合盘整市
-4. 可能会产生频繁的交易信号,增加交易成本和滑点风险
-
-为了降低风险,可以适当调整参数,或者加入止损以控制亏损。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加成交量的过滤,避免假突破
-2. 利用波动率指标优化参数的动态设置
-3. 结合趋势指标,避免反向做多做空
-4. 增加机器学习模型判断K线反转概率
-5. 加入止损机制
-
-## 总结
-
-反转极端设置策略通过判断最新K线的极端情况,在出现反转时产生交易信号。它有利用异常极端K线特征的优势,但也存在一定的风险。通过参数优化和风控手段,可以获得更好的策略表现。
-
-||
 
 ## Overview
 
@@ -117,7 +63,6 @@ This strategy can be optimized in the following aspects:
 
 The extreme reversal setup strategy generates trading signals when reversals occur by judging extreme situations of the latest K-line. It has the advantage of using exceptional extreme K-line features, but also has some risks. Better strategy performance can be obtained through parameter optimization and risk control measures.
 
-[/trans]
 
 > Strategy Arguments
 

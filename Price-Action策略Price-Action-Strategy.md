@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-这是一个基于价位行情的交易策略,结合均线指标识别趋势,利用价格形态进行入场。
-
-## 策略原理
-
-该策略主要基于以下几个方面:
-
-1. 使用EMA均线判断趋势。当89周期EMA和Hull MA均为红色时,判断为 Bear 趋势,只做空;当两条均线均为绿色时,判断为Bull趋势,只做多;当一条为绿一条为红时,判断为震荡,可做多可做空。
-
-2. 使用价格形态识别信号。策略识别多种阳线阴线组合,如单实体线、假突破形态、母子线等,以识别潜在的入场时点。
-
-3. 结合关键支撑阻力位入场。策略同时结合关键的支撑阻力位,进一步验证价格形态信号,避免假突破。
-
-4. MACD辅助判断。结合MACD指标的柱状线颜色,验证价格形态信号,提高成功率。
-
-5. 采用趋势追踪机制。策略加入趋势追踪模块,能更准确判断趋势转折点,避免追顶和追底。
-
-6. 设定止损止盈点。策略加入了基于ATR的值进行的止损和止盈模块,有助于把握盈亏比。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 基于价格行情,不受指标影响。纯粹基于价位判断,不受复杂指标误导,更接近市场本源。
-
-2. 结合趋势理念,避免追顶追底。加入EMA和Hull MA识别趋势方向,只在趋势方向操作,避免逆势入场。
-
-3. 形态结合指标,提高成功率。价格形态与MACD指标互相验证,可过滤假信号,提高获利概率。
-
-4. 追踪机制可抓大趋势。趋势追踪模块可抓取较大时间周期的趋势,获利空间更大。
-
-5. 有止损止盈机制,可控风险。设定了固定的止损止盈比例,有助于把握盈亏比,控制风险。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 大周期趋势反转风险。策略只适合在中短线较为明确的趋势内操作,若遇到大周期趋势反转,将Stopped out。可通过放大周期分析大趋势来规避。
-
-2. 价格形态失效风险。价格形态在不同市场环境下的效果差异很大,在某些市场形态无法按预期发挥效用,导致系统停损。可通过对不同市场形态效力的回测来优选适用的形态。 
-
-3. 参数优化困难。策略包含多种参数,不同参数组合对结果影响很大,需要大量回测来找到最佳参数,而参数静态设置又面临市场变化的风险。可建立动态参数优化机制来应对。
-
-4. 无法有效控制单笔风险。固定的止损止盈点设置难以把握每笔交易的波动,无法针对性控制单笔盈亏比例。可以引入动态止损算法或风控模块。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 引入机器学习识别更复杂价格形态。使用深度学习等技术自动识别更多有效形态。
-
-2. 增加自适应性。建立动态参数优化机制,使策略参数可根据实时市场调整,而不是静态设置。
-
-3. 结合更多因子验证信号。加入更多价格行情因子,如成交量、overnight gaps等进行验证,降低被套风险。
-
-4. 引入风控和仓位管理模块。根据阈值自动调整仓位规模,有效控制单笔止损,优化盈亏比。
-
-5. 优化入场机制。可细化趋势判断模块,识别更清晰的趋势震荡节奏,以提高入场成功率。
-
-## 总结
-
-整体来说,该策略核心优势在于基于价格行情判断,避免依赖指标,最大程度反映市场本质。结合趋势与指标可提高获利概率,加入止盈止损控制风险。但需防大周期趋势反转、价格形态失效等风险。未来可通过机器学习、动态参数优化、风控模块等进行深化,使策略更稳定可靠。
-
-|| 
 
 ## Overview
 
@@ -141,7 +74,6 @@ The strategy can be improved in the following aspects:
 
 Overall, the core strength of this strategy lies in price action-based judgments, avoiding dependence on indicators and maximally reflecting market nature. Combining trends and indicators improves profitability while stop loss/take profit controls risk. But risks like larger time frame trend reversals, price pattern failures need to be addressed. Future improvements can come from machine learning, dynamic parameter optimization, risk management modules etc. to make the strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

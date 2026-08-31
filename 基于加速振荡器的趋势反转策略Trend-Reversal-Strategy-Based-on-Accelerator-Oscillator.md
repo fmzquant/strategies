@@ -10,80 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12a33381ec61543c2cf.png)
-[trans]
-
-## 概述
-
-本策略基于Bill Williams开发的加速振荡器(Accelerator Oscillator,AC)指标来识别趋势的转折点,以获取交易机会。该指标代表着异同移动平均线(Awesome Oscillator,AO)与其5周期简单移动平均之间的差值,反映出AO的变化速度。当AO向上穿越其移动平均线时,代表着多头力量的加速,这是建立多头仓位的信号。相反,当AO向下穿越其移动平均线时,代表着空头力量的加速,这是建立空头仓位的信号。
-
-## 策略原理
-
-该策略通过计算AO与其5周期移动平均之间的差值,得到加速振荡器(AC)。当AC为正时,代表AO上升加速,显示多头力量增强;当AC为负时,代表AO下降加速,显示空头力量增强。
-
-策略以AC的正负来判断建立多空仓位。当AC上穿0时,认为多头力量加速,因此建立多头仓位;当AC下穿0时,认为空头力量加速,因此建立空头仓位。
-
-具体来说,策略计算异同移动平均线(AO)的快线与慢线:
-
-AO快线 = SMA(HL2, LengthFast)
-AO慢线 = SMA(HL2, LengthSlow)  
-
-然后计算AO:
-
-AO = AO快线 - AO慢线
-
-接着计算AO的5周期移动平均线:
-
-AO移动平均线 = SMA(AO, LengthFast)
-
-最后得到加速振荡器:  
-
-AC = AO - AO移动平均线
-
-当AC上穿0时,建立多头仓位;当AC下穿0时,建立空头仓位。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 使用加速振荡器指标,可以更早发现趋势反转,与简单移动平均线等其他指标相比更有利。
-
-2. 利用AO与其移动平均线的交叉作为交易信号,可以有效滤除市场噪音,识别趋势反转。
-
-3. 策略实现简单,容易理解和修改,适合用作策略开发的基础框架。
-
-4. 可自定义AO快线和慢线的周期参数,优化策略效果。
-
-## 策略风险
-
-该策略也存在以下风险:
-
-1. AC指标容易产生假信号,可能导致超短线操作频繁,增加交易成本和风险。
-
-2. 未考虑止损机制,可能造成亏损扩大。
-
-3. 回测数据可能存在过拟合风险,实盘效果存疑。
-
-4. 未考虑大盘走势和背景市场信息,盲目跟随AC指标信号可能导致交易失败。
-
-## 策略优化
-
-该策略可以从以下方面进行优化:
-
-1. 结合其他指标过滤信号,例如MACD、KDJ等,避免假突破。
-
-2. 加入移动止损机制,控制单笔亏损。
-
-3. 评估 Parameter Optimization 功能,寻找最优参数组合。 
-
-4. 根据不同品种和时间周期设置不同的参数,优化策略鲁棒性。
-
-5. 增加对大盘走势和高级别趋势的判断逻辑。
-
-## 总结
-
-本策略基于加速振荡器指标设计简单的趋势反转交易策略,通过计算AO和其移动平均之间的差值来判断买卖时机,虽然容易产生假信号,但可作为策略研发的基础框架,通过引入其他因素进行优化筛选,能够有效改进策略效果,值得进一步研究。
-
-||
 
 ## Overview
 
@@ -156,7 +82,6 @@ The strategy can be improved from the following aspects:
 
 This simple trend reversal trading strategy based on the Accelerator Oscillator is designed by calculating the difference between AO and its moving average to determine trading signals. Although it tends to generate false signals, it can serve as a basic framework for strategy development. By incorporating other factors for filtration and optimization, the strategy performance can be effectively improved and is worth further research.
 
-[/trans]
 
 > Strategy Arguments
 

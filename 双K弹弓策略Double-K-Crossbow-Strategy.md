@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/144fa1e1f200cad1f22.png)
 
-[trans]
-
-
-概述:双K弹弓策略是一个融合123反转策略和Martin Pring特K策略优势的组合策略。该策略旨在利用反转策略和循环指标策略的优势,实现更准确的买入卖出信号。
-
-策略原理:
-
-双K弹弓策略由两部分组成:
-
-1. 123反转策略:该策略基于股票连续2天收盘价反转的特征,结合随机指标判断买入卖出时机。当收盘价比前一日高且随机指标低于50时,认为处于盘整阶段,产生买入信号;当收盘价比前一日低且随机指标高于50时,认为处于分配阶段,产生卖出信号。
-
-2. Martin Pring特K策略:该策略利用不同周期量价曲线的叠加,形成一个综合循环指标。当该指标上穿其移动平均线时,产生买入信号;当下穿其移动平均线时,产生卖出信号。
-
-双K弹弓策略对两个策略信号进行合并处理,即要两个策略同时发出买入/卖出信号,才会实际交易。这样可以发挥两个策略各自判断时点的优势,避免单一策略产生错误信号。
-
-优势分析:
-
-- 融合两种策略判断,使买卖信号更可靠,避免错误交易。
-
-- 123反转策略可以抓住短期反转机会,Martin Pring特K策略可以判断长期趋势,二者结合既考虑短期又兼顾长期。
-
-- 运用多周期量价曲线,对大周期市场节奏有敏锐判断。
-
-- 随机指标参数可优化,可以自适应不同行情的股票特征。
-
-风险分析:
-
-- 合并信号时可能错过部分买卖点,无法完全紧贴短期行情。
-
-- 样本外情况下,两个策略信号可能不一致,需要准确认定优选方向。
-
-- 需要同时监控和优化两个策略的参数,优化难度较大。
-
-- 长短周期指标参数优化不当可能错过周期转换点位。
-
-优化方向:
-
-- 测试不同参数对策略效果影响,找到最优参数组合。
-
-- 增加止损模块,避免亏损扩大。
-
-- 增加开仓量优化模块,根据市场情况调整仓位。
-
-- 结合机器学习方法,训练出更鲁棒的买卖信号模型。
-
-- 增加自适应参数优化模块,让策略参数动态跟踪市场节奏。
-
-
-总结:
-
-双K弹弓策略成功结合反转策略和循环指标策略的优点,在保证信号质量的同时,兼顾短期和长期利润機会。该策略思路新颖,值得进一步测试和优化,具有成为稳定策略的潜力。但仍需注意风险控制和参数优化,才能在复杂多变的市场中稳定获利。
-
-||
 
 
 Overview: The Double K Crossbow strategy combines the 123 Reversal strategy and Martin Pring's Special K strategy to take advantage of reversal signals and cyclical indicators. It aims to generate more accurate buy and sell signals by leveraging the strengths of both strategies.
@@ -114,7 +61,6 @@ Conclusion:
 
 The Double K Crossbow successfully combines the strengths of reversal and cyclical strategies for quality signals and multi-timeframe profit opportunities. The novel approach is worth further testing and optimization as a stable strategy. But risk management and parameter tuning remain essential for consistent gains in ever-changing markets.
 
-[/trans]
 
 
 > Strategy Arguments

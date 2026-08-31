@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1129a28cb6e7ab90f50.png)
-[trans]
-## 概述
-
-这个策略的主要功能是实时跟踪和展示每月的收益表现。它会在一个表格里面实时更新每月的具体盈亏情况。
-
-## 原理
-
-该策略通过以下几个步骤实现月度收益表现跟踪:
-
-1. 定义变量记录本月是否有交易平仓的情况。
-2. 定义变量记录每月的具体盈亏数值。
-3. 定义变量记录时间对应的月份。
-4. 当本月有平仓时,记录本月盈亏和月份到对应的数组里。
-5. 在表格指定位置显示月份标题。
-6. 遍历月份盈亏数组,在表格对应的月份列显示盈亏值。
-7. 同时显示对应的年份信息。
-8. 对每年的盈亏进行汇总。
-9. 使用颜色区分盈亏的正负。
-
-以上就是该策略的基本步骤和工作原理。
-
-## 优势分析
-
-这种月度盈亏表现跟踪策略具有以下几个优势:
-
-1. 实时更新,可以随时查看最新的月度盈亏情况。
-2. 一目了然,使用表格直观展示每月具体盈亏。
-3. 细粒度,可以清晰看到每个月份的详情。
-4. 直观比较,使用颜色可以更直观地对比每个月的盈亏。
-5. 汇总统计,同时给出每年的盈亏汇总情况。
-6. 可定制展示,可以调整表格位置、大小等展示方式。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 计算逻辑较复杂,容易出错导致数据不准确。
-2. 表格展示过于频繁刷新,可能影响性能。
-3. 数组数据存储效率较低。
-4. 时间和月份的转换计算可能出错。
-
-可以通过以下方法降低风险:
-
-1. 严格代码审查,确保计算逻辑正确。
-2. 优化表格刷新频率,防止过度刷新。
-3. 改用更高效的数据结构存储数据。
-4. 添加时间和月份转换的异常处理。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 使用更高效的数据结构,如字典存储每月数据。
-2. 增加年化收益率的计算。
-3. 增加涨跌幅和其他衡量指标。  
-4. 可视化地显示收益曲线走势。
-5. 支持自定义开始结束统计时间段。
-6. 支持导出数据到CSV文件。
-
-这些优化可以让策略的功能更加完善和强大,使用体验也会更好。
-
-## 总结
-
-该策略利用数组和表格的方式,实现了实时跟踪和展示每个月收益情况的核心功能。简单高效,使用也很方便。同时也具有一定的优势,但也存在一些风险需要防范。通过一些计算逻辑和性能的优化,可以使该策略变得更加完美和强大。总的来说,这是一个非常实用的月度收益表现跟踪策略。
-
-||
 
 ## Overview
 
@@ -141,7 +75,6 @@ These can improve the strategy's functionality and user experience.
 
 This strategy achieves the core function of real-time tracking and displaying monthly returns using arrays and tables. It is simple, efficient and easy to use. It also has some advantages but there are still some risks to prevent. With optimizations in logic and performance, it can become more perfect and powerful. Overall a very practical monthly performance tracking strategy.  
 
-[/trans]
 
 > Strategy Arguments
 

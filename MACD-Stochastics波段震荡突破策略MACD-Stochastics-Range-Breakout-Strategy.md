@@ -10,93 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14382de37dfd747d099.png)
-[trans]
-
-## 概述
-
-MACD Stochastics波段震荡突破策略(MACD Stochastics Oscillation Breakout Strategy)是一个结合MACD指标和Stochastics指标的量化交易策略。该策略试图识别股票价格的趋势方向,并在价格从震荡区间突破时进入仓位。 
-
-在进入仓位时,该策略同时考虑MACD和Stochastics两个指标的信号,以提高 Entries的质量。另外,该策略预设了止损点和止盈点,可以有效控制风险。
-
-## 策略原理  
-
-MACD Stochastics波段震荡突破策略主要基于以下原理:
-
-1. MACD指标可以有效识别股票价格趋势的方向和力度
-2. Stochastics指标可以识别股票是否处于超买或超卖状态
-3. 当股票价格长时间震荡时,很可能会突破之前的价格区间,产生较大方向性行情
-4. 结合MACD和Stochastics指标的信号,可以在股票突破波段震荡区间时及时入场,提高 Entries质量
-
-具体来说,该策略以MACD指标的DIFF线和DEA线交叉作为判断价格趋势方向的信号。当DIFF向上突破DEA时生成多头信号,反之生成空头信号。
-
-同时,Stochastics的K线在超买超卖区域(默认30和70)附近与D线发生向上或向下交叉也会产生交易信号。
-
-当MACD指标和Stochastics指标同时给出同向信号时,该策略会选择入场。此时股票价格很可能会产生较大的突破。 
-
-入场后,策略会设置理性的止损点和止盈点。合理止损可以有效控制单笔损失,止盈可以锁定盈利。
-
-
-## 优势分析
-
-MACD Stochastics波段震荡突破策略具有以下优势:
-
-1. 多指标组合,提高信号质量
-
-   该策略同时利用MACD和Stochastics两个指标,可以过滤掉一些假信号,提高Entries质量。
-
-2. 抓住突破行情,顺势而为
-
-   策略专门设计来抓住股价长时间震荡后的突破行情。这类行情幅度通常较大。
-
-3. 优化止损止盈机制,有效控制风险
-
-   策略内置了止损止盈设定,可以合理控制单笔损失,并及时锁定盈利。
-
-## 风险分析
-
-尽管 MACD Stochastics波段震荡突破策略进行了慎重设计,仍然存在一定的风险:
-
-1. 错失入场时机
-
-   股票价格突破前可能出现一定假突破情况。如果入场时机选择不当可能会使这次进入变成错过最佳入场点。
-
-2. 突破失败
-
-   尽管突破前做了充分准备,但仍然存在突破失败的可能性。这种情况下会产生损失。
-
-3. 参数优化不当
-
-   策略的参数设置会对结果产生很大影响。如果参数设置不当,会大打折扣。
-
-针对以上风险,可以通过以下方式进行优化:
-
-1. 组合其他指标过滤信号
-
-2. 人工干预确保突破立场
-
-3. 多组参数优化测试
-
-## 优化方向  
-
-MACD Stochastics波段震荡突破策略仍有进一步优化的空间:
-
-1. 优化 MACD 参数,找到最佳参数组合
-
-2. 优化 Stochastics 参数,找到最佳参数组合
-
-3. 增加其他指标组合,例如 KDJ、BOLL 等,进一步提升 Entries 质量
-
-4. 测试不同持仓时间,优化止盈止损策略 
-
-5. 测试不同交易标的参数差异性
-
-6. 增加机器学习算法,自动优化参数
-
-## 总结
-
-MACD Stochastics波段震荡突破策略综合运用 MACD 和 Stochastics 两个指标,在波段震荡突破时高质量入场,顺势而为。同时辅以止损止盈策略有效控制风险。该策略抓住股票价格的短期趋势行情,具有一定的交易优势。但也还有参数优化和技术指标组合方面的探索空间,有待于进一步优化。
-
-||
 
 
 ## Overview
@@ -187,7 +100,6 @@ There remains room for further optimization of the MACD Stochastics Range Breako
 
 The MACD Stochastics Range Breakout Strategy capitalizes on range breakouts by entering based on aligned signals from both MACD and Stochastics. The stop loss/take profit mechanism further controls risks. It aims to capture short-term trends but still leaves room for parameter tuning and more indicator combinations for better performance.
 
-[/trans]
 
 > Strategy Arguments
 

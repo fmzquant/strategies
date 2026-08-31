@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-该策略通过结合123反转形态与资金流动量指标,实现趋势追踪与反转交易。
-
-### 策略原理 
-
-首先,通过123反转形态判断价格反转点。具体来说,如果前两天收盘价下跌,第三天收盘价上涨,且随机指标低于阈值,产生买入信号;如果前两天收盘价上涨,第三天收盘价下跌,且随机指标高于阈值,产生卖出信号。
-
-其次,计算快线和慢线的资金流动量指标。快线由近期资金流动量的指数移动平均线组成,慢线为较长周期的指数移动平均线。如果快线高于慢线,判断为资金流入,产生买入信号;反之则产生卖出信号。
-
-最后,结合123反转形态与资金流动量指标的信号,如果两者信号一致,则产生交易信号。
-
-### 优势分析
-
-- 组合多个信号,可以提高信号的可靠性。
-- 123反转形态可以捕捉反转点,资金流动量指标判断资金流向。
-- 可通过调整参数来优化不同品种和周期的表现。
-- 可单独使用其中一个信号进行交易。
-
-### 风险分析
-
-- 123反转形态可能产生假信号。
-- 资金流动量存在滞后性,无法及时捕捉转折点。
-- 多重信号组合,策略逻辑相对复杂。
-- 需要优化参数以避免过度交易。
-
-可通过提高反转形态的可靠性,设置资金流动量指标的灵敏度,以及加入止损逻辑来控制风险。
-
-### 优化方向
-
-- 测试不同参数组合,找到最佳的参数。
-- 调整买入和卖出阈值,降低错误交易概率。
-- 添加其他技术指标,提高信号质量。
-- 加入止损机制,控制单笔损失。
-- 优化资金管理策略,控制整体风险敞口。
-
-### 总结
-
-该策略整合反转交易与趋势追踪的优点,可以有效识别市场转折点。但需要注意参数调优以及风险控制,在跟踪趋势的同时防止产生过多错误信号。如果用好,可以成为高效的交易策略之一。
-
-||
 
 This strategy combines 123 reversal patterns and money flow indicator to identify trend reversals. 
 
@@ -89,7 +48,6 @@ Risks can be managed by improving reversal reliability, tuning money flow sensit
 
 The strategy integrates the advantages of reversal trading and trend following. It can effectively identify market turning points. However, parameter tuning and risk control are necessary to avoid excessive false signals when tracking trends. If used properly, it can become an efficient trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

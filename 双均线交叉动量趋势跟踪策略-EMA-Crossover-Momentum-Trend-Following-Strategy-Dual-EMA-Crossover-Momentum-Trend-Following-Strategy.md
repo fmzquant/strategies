@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12bff90dceed8e22404.png)
 
-[trans]
-#### 概述
-本策略是一个基于9日和20日指数移动平均线(EMA)交叉信号的趋势跟踪交易系统。通过监测快速EMA(9日)与慢速EMA(20日)之间的交叉关系,捕捉市场趋势转换时机。该策略采用程序化交易方式,实现全自动化运作,可以有效避免人为情绪干扰。
-
-#### 策略原理
-策略核心是利用两条不同周期的指数移动平均线来识别趋势方向和转折点。当9日EMA向上穿越20日EMA时,系统发出做多信号;当9日EMA向下穿越20日EMA时,系统发出做空信号。指数移动平均线对最新价格赋予较大权重,能够较快反应价格变化,有利于及时把握趋势转折时机。
-
-#### 策略优势
-1. 操作规则明确,完全程序化执行,避免人为情绪干扰
-2. 采用指数移动平均计算方式,对市场变化反应灵敏
-3. 设置了交易提醒功能,可及时通知交易者
-4. 代码结构清晰,易于维护和优化
-5. 可以适用于不同市场和时间周期
-6. 具有较强的趋势跟踪能力
-
-#### 策略风险
-1. 在震荡市中可能产生频繁假信号
-2. 入场时机可能略有滞后
-3. 没有设置止损和止盈机制
-4. 未考虑交易成本
-5. 可能在剧烈波动市场中表现不佳
-6. 需要注意资金管理
-
-#### 策略优化方向
-1. 添加止损止盈机制,控制风险
-2. 引入成交量指标,提高信号可靠性
-3. 增加趋势过滤器,减少震荡市假信号
-4. 优化EMA参数,提高策略适应性
-5. 加入波动率指标,优化交易时机
-6. 设计仓位管理模块,提升收益风险比
-
-#### 总结
-该策略是一个经典的趋势跟踪系统,通过EMA交叉捕捉趋势转换机会。策略逻辑简单清晰,易于理解和实施。但在实盘交易中,建议结合其他技术指标和资金管理方法,进一步完善交易系统。同时,根据不同市场特点,对参数进行优化,可以提高策略的实用性。
-
-|| 
 
 #### Overview
 This strategy is a trend following trading system based on the crossover signals of 9-day and 20-day Exponential Moving Averages (EMA). It captures market trend reversals by monitoring the crossover relationship between the fast EMA (9-day) and slow EMA (20-day). The strategy employs programmatic trading to achieve fully automated operation, effectively avoiding human emotional interference.
@@ -79,7 +44,6 @@ The core of the strategy uses two EMAs with different periods to identify trend 
 
 #### Summary
 This strategy is a classical trend following system that captures trend reversal opportunities through EMA crossovers. The strategy logic is simple and clear, making it easy to understand and implement. However, for live trading, it is recommended to combine it with other technical indicators and money management methods to further improve the trading system. Additionally, optimizing parameters according to different market characteristics can enhance the strategy's practicality.
-[/trans]
 
 
 

@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9a2f80880af9c66343.png)
-[trans]
-## 概述
-
-该策略结合了双移动均线、相对强弱指标(RSI)和布林带等多个技术指标,根据它们构建买入和卖出信号,目的是识别潜在的趋势反转点和超买超卖情况,追踪股价趋势进行交易。
-
-## 策略原理
-
-该策略的主要买入信号来自RSI和布林带。当RSI低于超卖线30时视为超卖,这时如果价格接近或触及布林带下轨,就产生买入信号。这表示股价可能反转上涨。
-
-该策略的主要卖出信号也来自RSI和布林带。当RSI超过超买线70时视为超买,这时如果价格接近或超过布林带上轨,就产生卖出信号。这表示股价可能反转下跌。 
-
-此外,策略中还计算了20日和50日的简单移动平均线。它们可用来判断趋势方向。快速移动平均线位于慢速移动平均之上时,表示处于上升趋势;反之,则表示下降趋势。
-
-## 优势分析
-
-该策略结合多种指标识别买卖点,可以有效捕捉价格趋势反转,追踪价格变化。其主要优势有:
-
-1. 使用布林带识别超买超卖区域。布林带通过标准差定义价格波动范围,能很好地识别价格异常情况。 
-
-2. RSI指标可有效识别超买超卖状态。RSI高于70视为超买区,低于30视为超卖区,可在价格反转前给出信号。
-
-3. 双移动均线判断整体趋势方向,避免在没有趋势的市场中交易。 
-
-4. 通过组合多种指标,可以过滤假信号,识别高概率的买卖点。
-
-## 风险分析  
-
-该策略主要风险在于:
-
-1. 布林带参数设置不当,上下轨无法有效界定价格波动范围。这可能导致产生大量假信号。
-
-2. RSI参数不同,其超买超卖判断标准会改变,信号产生的效果也会变化。 
-
-3. 双移动均线参数不同,其判断的整体趋势也会有偏差。
-
-4. 策略信号可能滞后,无法在价格反转的最初给出指示。这可能导致一定的滑点损失。
-
-5. 行情剧烈波动时,多种指标可能出现失效情况,无法有效识别买卖点。
-
-针对以上风险,可以通过调整参数、组合更多指标等方法进行优化,使策略更加稳健。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 使用自适应布林带,根据市场波动程度动态调整参数,使上下轨更准确。
-
-2. 增加VOLUME等指标过滤,只在成交量放大的情况下产生信号,可避免虚假突破。 
-
-3. 设置价格止损线,当价格向不利方向运行时及时止损。
-
-4. 对交易品种、交易时段等进行测试优化,使策略参数针对不同情况有所调整。 
-
-5. 增加机器学习算法,利用历史数据训练,自动优化参数设置。
-
-## 总结
-
-该策略整合布林带、RSI、双移动均线等多个指标,建立完整的买卖规则,能有效识别价格趋势、判断超买超卖区域,在股价反转前给出交易信号。通过参数优化、增加过滤条件、设置止损等手段,可以进一步提高策略的稳定性。总体来说,该策略结合趋势和超买超卖指标,能捕捉反转机会,值得进一步优化实盘验证。
-
-||
 
 ## Overview
 
@@ -129,7 +69,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy integrates Bollinger bands, RSI, dual moving averages and other indicators to establish complete buy and sell rules, which can effectively identify price trends, judge overbought/oversold zones, and give trading signals ahead of price reversal. Through means like parameter optimization, adding filtering conditions, setting stop loss etc, the strategy's stability can be further improved. In general, by combining trend and overbought/oversold indicators, this strategy can capture reversal opportunities and is worth further optimizations and verifications in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

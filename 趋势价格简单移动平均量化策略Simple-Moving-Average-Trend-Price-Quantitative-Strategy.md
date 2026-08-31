@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15f5f3593366117aed8.png)
-[trans]
-## 概述
-该策略综合利用了价格的趋势、交易量的动量和价格波动的波幅这三个指标来产生买入和卖出信号。主要的思想是在价格上升趋势和价格波动放大的市场环境下买入,在价格下跌趋势和价格波动收缩的市场环境下卖出,通过捕捉价格趋势和利用价格波动来获利。
-
-## 策略原理
-该策略使用以下三个关键指标:
-
-1. **趋势指标:**简单移动平均线(SMA)。该指标基于用户定义的“趋势周期”参数在该周期内计算价格的平均值,作为评估价格趋势的依据。
-
-2. **动量指标:**成交量加权移动平均线(VWMA)。该指标基于用户定义的“动量周期”参数,考虑了成交量的影响,计算价格的加权移动平均来显示价格动量。 
-
-3. **波幅指标:**布林带。该指标包含上带、中带和下带三条线。带宽度由用户定义的“布林带周期”和“布林带偏差”参数决定。
-
-买入信号的产生依据是当价格上穿趋势指标即SMA时产生,且价格高于布林带上带时产生。卖出信号的产生依据是当价格下穿趋势指标即SMA时产生,且价格低于布林带下带时产生。
-
-## 优势分析
-该策略综合考虑了多种市场指标,可以有效判断市场的走势。利用趋势指标判断价格走势方向,利用动量指标判断力度与速度,利用波幅指标判断机会。相比单一指标,该组合指标可以更全面地把握市场,回避错误信号,从而提高决策的准确性。
-
-## 风险分析
-该策略最大的风险在于指标设置不当。如果趋势周期参数设置过短,则容易产生错误信号;如果布林带参数设置过宽或者过窄,也会影响判断。此外,突发事件也可能影响价格大幅波动而产生意外损失。所以需要充分测试参数的稳定性,同时控制好仓位规模和止损点。
-
-## 优化方向 
-该策略可以从以下几个方向进行优化:
-
-1. 优化指标参数,寻找最优参数组合。可以通过历史回测和参数扫描来确定参数。
-
-2. 增加止损机制。当价格突破止损线时强制CLOSE订单,可以有效控制单笔损失。
-
-3. 结合其他指标,如能量潮指标、相对强弱指标等,提高决策的准确性。
-
-4. 开发动态仓位管理机制。当市场不确定性较大时,适当减小仓位;当信号更明确时,适当加大仓位。
-
-## 总结
-该策略整合多种指标判断走势,在理论上可以提高决策准确率。但关键在于指标参数的选择与调整,需要充分测试找到最优参数。同时也需要注意控制风险,防范突发事件的影响。如果不断优化和完善,该策略可以成为稳定可靠的量化交易策略。
-
-||
 
 ## Overview
 This strategy combines the trend of prices, the momentum of trading volume and the volatility of price fluctuations to generate buy and sell signals. The main idea is to buy in an upwards price trend and amplified price volatility market environment and sell in a downwards price trend and contracted price volatility market environment, in order to profit by capturing price trends and utilizing price fluctuations.
@@ -81,7 +45,6 @@ The strategy can be optimized in the following directions:
 ## Summary 
 The strategy integrates multiple indicators to judge the trend, which can improve the accuracy of decisions in theory. But the key lies in the selection and adjustment of indicator parameters, which requires sufficient testing to find the optimal parameters. At the same time, attention should be paid to risk control and prevention of the impact of emergencies. If continuously optimized and improved, the strategy can become a stable and reliable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

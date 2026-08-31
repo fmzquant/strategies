@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19ea0f0fa3a05c70bd6.png)
-[trans]
-
-## 概述
-
-本策略首先计算13周期和26周期的简单移动平均线,然后计算FRAMA指标。当快线从下向上突破慢线时做多,当快线从上向下突破慢线时或者FRAMA指标从上向下突破收盘价时平仓。
-
-## 策略原理
-
-该策略主要利用双均线交叉形成交易信号。当短期平均线从下向上突破长期平均线时,表示行情由跌转涨,做多;当短期平均从上向下突破长期平均线时,表示行情即将反转,平仓。
-
-同时,该策略引入FRAMA指标作为辅助判断。FRAMA指标基于分形市场假说改进的自适应移动平均线。它通过计算不同周期内价格波动幅度的对数变化率,实时估计市场的分形维数,从而动态调整平均线的平滑性。当FRAMA指标下穿收盘价时,表明趋势反转信号,配合均线交叉信号,增加判断准确性。
-
-## 策略优势分析  
-
-该策略结合双均线交叉和FRAMA指标,可以有效过滤假突破信号,提高交易信号质量。双均线交叉判断主要交易方向,FRAMA辅助判断可以避免在震荡行情中错失反转时点。  
-
-相比单一指标和模型,该策略可明显改善信号质量,降低误判概率。同时,结合快慢均线,可以顺势而为,避免被套。
-
-## 风险分析
-
-该策略主要风险在于双均线可能产生较多假突破信号,FRAMA指标的参数设置也会影响判断效果。此外,在特定行情下,快线和慢线、FRAMA和收盘价之间可能长时间互不交叉,导致无交易机会。
-
-为控制上述风险,可以适当调整均线周期参数,或结合其他指标进行过滤。此外,FRAMA指标的长度、分形因子等参数也需要针对不同市场合理设置,避免过度平滑或过敏。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 测试更多的均线组合和周期参数,寻找最佳参数对。
-
-2. 增加停损策略,控制单笔损失。
-
-3. 结合交易量指标,避免低量假突破。  
-
-4. 增加机器学习模型,实时评估市场状态,动态调整参数。
-
-5. 结合情绪指标、消息面等多因子判断市场情绪,提高决策质量。
-
-## 总结  
-
-本策略初步实践双均线交叉策略与FRAMA指标的组合运用。在保持简单直观的基础上,有效提升了信号质量,值得进一步测试优化。随着参数调整、新指标引入等优化,本策略可望成为稳定可靠的量化交易策略。
-
-||
 
 
 ## Overview
@@ -95,7 +52,6 @@ The strategy can be optimized in the following aspects:
 
 This preliminary strategy combines the application of dual moving average crossover and FRAMA indicator. On the basis of keeping simplicity and intuition, it has effectively improved the signal quality and is worth further testing and optimization. With optimizations like parameter tuning, new indicator introduction, this strategy can be expected to become a stable and reliable trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

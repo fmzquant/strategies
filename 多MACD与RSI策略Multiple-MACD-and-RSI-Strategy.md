@@ -9,54 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-多MACD与RSI策略综合利用MACD指标和RSI指标的信号,在缓慢线与快速线均正叉且RSI未进入超买区时做多,在缓慢线与快速线均死叉且RSI进入超卖区时做空,以捕捉价格的中长线趋势。
-
-## 原理
-
-该策略利用两个MACD指标提供信号,一个MACD指标的参数为快速线长度10,慢速线长度22,MACD线长度9;另一个MACD指标的参数为快速线长度21,慢速线长度45,MACD线长度20。当两个MACD的快速线都上穿慢速线时产生买入信号,当两个MACD的快速线都下穿慢速线时产生卖出信号。
-
-同时结合RSI指标判断是否进入超买超卖区域,RSI参数设置为14,超买线设置为70,超卖区域设置为20。当RSI低于超买线时可以买入,当RSI高于超卖区域时可以卖出。
-
-只有当两个MACD指标同时产生买入信号且RSI未超买时,才发出买入;只有当两个MACD指标同时产生卖出信号且RSI进入超卖区时,才发出卖出。
-
-## 优势
-
-多MACD与RSI策略最大的优势是能够利用双重MACD指标过滤掉部分假信号,在两个MACD指标都发出信号时才入场,可以减少不必要的交易,降低交易频率,提高盈利概率。
-
-另外,结合RSI指标判断超买超卖情况,可以避免在价格已经走势过于强势时仍然做多做空,减小亏损风险。
-
-综合双重MACD滤波与RSI判断,使策略只在趋势行情中交易,可以获得较好的中间趋势获利。
-
-## 风险
-
-多MACD与RSI策略也存在一定风险。双重MACD滤波可能会错过价格开始反转的时机,导致亏损扩大。当两条MACD都正叉且RSI尚未超买时做多,很可能已经错过价格底部而导致亏损。
-
-另外,MACD指标本身对交易市场的特点非常敏感。在不同交易周期及市场环境下,需要调整MACD的参数才能发挥其效用。如果参数设置不当,容易产生错误信号而造成损失。
-
-此外,RSI指标可能产生多次超买超卖信号,在等待RSI完全反转前过早入场也会增加损失。
-
-## 优化
-
-该策略可以考虑优化以下几点:
-
-1. 优化MACD参数,改变快速线与慢速线的参数,找到不同交易品种及周期下MACD最佳参数组合,提高信号有效性。
-
-2. 调整RSI参数,适当缩短或放宽RSI超买超卖区间,优化入场时机。
-
-3. 增加止损策略,在亏损达到一定比例时止损退出,避免博弈亏损进一步扩大。
-
-4. 考虑加入突破点位等辅助判断,进一步确认趋势确立后再入场。
-
-
-## 总结
-
-多MACD与RSI策略综合运用双重MACD指标和RSI指标,提高信号的有效性,在中长线趋势行情中可以获得较好的收益。但该策略也存在一定风险,需要进一步测试优化MACD参数与RSI参数,并增加辅助策略控制风险,才能将策略运用到实际交易当中。
-
-|| 
 
 ## Overview
 
@@ -102,7 +54,6 @@ Some aspects can be considered to optimize this strategy:
 
 The Multiple MACD and RSI strategy combines dual MACD indicators and RSI indicator to improve signal validity, and can gain decent profits from mid-long term trending moves. But it also bears some risks. MACD and RSI parameters need further testing and optimizing, and risk control mechanisms need to be added, before the strategy can be applied to actual trading.
 
-[/trans]
 
 > Strategy Arguments
 

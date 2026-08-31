@@ -9,48 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-该策略通过计算两个不同周期的移动平均线,并根据它们的金叉死叉形成买入和卖出信号。
-
-### 策略原理
-
-该策略首先允许用户选择移动平均线的类型和长度。类型包括SMA、EMA、VWMA等,长度则决定了均线的周期。
-
-然后根据用户选择计算出两条移动平均线。如果快线从下方上穿慢线,形成金叉,则产生买入信号。如果快线从上方下穿慢线,形成死叉,则产生卖出信号。
-
-这样,当短期平均价格高于长期平均价格时,被视为市场处于上涨趋势,应该买入。当短期价格低于长期价格时,被视为市场处于下跌趋势,应该卖出。
-
-### 优势分析
-
-- 策略逻辑简单清晰,易于理解实现。
-- 移动平均线能有效过滤市场噪音,识别趋势。
-- 可灵活选择移动平均线类型和参数,适应不同品种和周期。
-- 容易通过多种指标组合进行优化。
-
-### 风险分析
-
-- 当市场处于震荡时,可能产生多次错误信号。
-- 参数选择不当可能导致策略表现不佳。
-- 信号产生滞后,无法及时捕捉转折点。
-- 面临突发事件的行情冲击风险。
-
-可通过适当优化参数,组合其他指标生成信号,设置止损止盈等方式来控制风险。
-
-### 优化方向
-
-- 测试不同类型和长度的参数,寻找最优参数组合。
-- 增加其他指标过滤,如量价指标、波动率指标等。 
-- 增加止损止盈逻辑,降低回撤。
-- 结合趋势判断指标,避免不适宜的交易环境。
-- 优化资金管理策略,如仓位管理、风险预算等。
-
-### 总结
-
-该策略整体思路简单清晰,通过计算双均线形成交易信号,可根据市场环境灵活调整参数,和其他策略组合优化,但需要注意防范震荡市场的风险,合理进行资金管理。整体来说是一个值得考虑的选择。
-
-|| 
 
 This strategy generates trading signals based on the crossover of two moving averages with different periods.
 
@@ -90,7 +48,6 @@ Risks can be managed by optimizing parameters, combining other indicators for si
 
 The strategy has a simple and clear logic of generating signals with dual MAs crossover. It allows flexible parameter tuning and combinations with other strategies for optimization, but risks of ranging markets should be monitored and money management is crucial. Overall it is a strategy worth considering.
 
-[/trans]
 
 > Strategy Arguments
 

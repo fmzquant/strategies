@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/186775666f0a31b67e7.png)
-[trans]
-
-## 概述
-
-本策略主要利用5日RSI指标与200日移动平均线的结合,形成交易决策信号,属于技术指标组合策略。其主要交易原理是:当价格运行到超买超卖区域时,信号卖出;当价格跌至超卖区域时,信号买入。该策略最大优势是策略信号比较明确,回撤风险较小。但也存在只利用单一技术指标组合形成交易决策的局限性,可通过多因子模型与机器学习算法等进行优化。
-
-## 策略原理  
-
-本策略主要利用5日RSI指标与200日移动平均线的结合,判断价格运行的超买超卖区域,形成交易决策:
-
-1. 5日RSI指标判断价格运行的超买超卖区域。设置超买线为72,超卖区域为30。当RSI指标由下向上突破30时产生买入信号;当RSI指标由上向下跌破72时,产生卖出信号。 
-
-2. 200日移动平均线判断价格中长线趋势方向。当价格低于200日均线时,为价格下行阶段;当价格高于200日均线时,为价格上行阶段。
-
-3. 结合1、2判断,本策略iault时5日RSI指标超买并下破72时卖出,5日RSI下破30时并且价格低于200日均线时买入。
-
-## 策略优势
-
-1. 策略信号比较明确,利用RSI指标 Judgment区域判定超买超卖信号。
-
-2. 200日均线判断大趋势方向,避免逆势操作。
-
-3. 可设置最大持仓数,有利于控制风险。
-
-4. 策略参数优化空间大,可调整RSI参数与均线参数。
-
-5. 回撤风险较小,可效控制策略最大回撤。
-
-## 策略风险 
-
-1. 仅利用RSI指标与均线指标,策略信号可能不稳定,存在多头空头震荡市买卖亏损风险。
-
-2. 需优化和测试RSI参数与均线参数,以取得更好策略效果。
-
-3. 可引入别的指标或模型判断,优化策略信号。如引入波动率指标、机器学习判断等。
-
-## 策略优化方向  
-
-1. 利用更多指标组合判断。如MACD,KD,波动率指标等。
-
-2. 增加机器学习模型判断。如LSTM判断交易信号稳定性。
-
-3. 增加量化因子。如交易量变化、资金流向等判断资金面因子。
-
-4. 优化策略参数。如RSI参数、均线参数等。
-
-5. 优化止损机制。如移动止损、时间止损等。
-
-
-## 总结
-
-本策略主要运用5日RSI指标与200日均线指标组合判断价格超买超卖区域,形成交易信号,属于技术指标组合策略。策略信号比较明确,最大回撤风险较小。但可通过多指标组合与机器学习判断等进一步优化,以提高策略效果。
-
-||
 
 ## Overview
 
@@ -116,7 +62,6 @@ This strategy mainly combines the 5-day RSI indicator and the 200-day moving ave
 
 This strategy mainly uses the combination of the 5-day RSI indicator and the 200-day moving average indicator to judge the overbought/oversold area of prices and form trading signals. It belongs to the technical indicator combination strategy. The strategy signal is relatively clear and the maximum retracement risk is relatively small. But it can be further optimized through multi-indicator combinations and machine learning judgments to improve strategy results.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f8c7c077048c6b0d09.png)
-[trans]
-
-## 概要
-
-该策略充分利用了多时框架指数移动平均线(MTF EMA)判断趋势方向和MACD指标产生买卖信号的功能,同时结合ATR指标设定止损止盈价格。策略适用于有强势趋势的数字货币和法定货币交易对,在趋势较强的市场中表现较佳。
-
-## 策略原理
-
-### 1. MTF EMA判断趋势
-
-多时框架指数移动平均线(MTF EMA)可以在同一个图表上显示多个时间周期的移动平均线,从而判断资产的总体多空状态。策略这里采用1小时周期和15分钟周期的MTF EMA。
-
-当价格高于1小时MTF EMA且1小时MTF EMA低于15分钟MTF EMA时,定义为上升趋势;当价格低于1小时MTF EMA且1小时MTF EMA高于15分钟MTF EMA时,定义为下跌趋势。
-
-### 2. MACD产生买卖信号 
-
-当MACD线从下方向上突破Signal线时,产生买入信号;当从上方向下跌破时,产生卖出信号。同时设定MACD线和Signal线的交叉限制值,避免虚假信号。
-
-### 3. ATR设置止损止盈
-
-采用ATR指标设置止损止盈价格。ATR能够根据市场波动程度动态设定合理的止损止盈距离。同时根据高低点回测设置止损止盈的倍数,使止损止盈更为灵活。
-
-## 交易策略
-
-### 开仓信号 
-
-多头信号:上升趋势且MACD上穿Signal线且交叉值小于限制值
-空头信号:下跌趋势且MACD下穿Signal线且交叉值大于限制值
-
-### 平仓信号
-
-多头止盈:价格突破ATR止盈价 
-多头止损:价格突破ATR止损价
-空头止盈:价格突破ATR止盈价
-空头止损:价格突破ATR止损价
-
-## 优势分析
-
-该策略最大的优势在于充分利用了MTF EMA判断趋势和MACD产生买卖信号的优势。MTF EMA能清晰判断总体趋势方向,避免在震荡行情频繁交易。MACD指标能较好地捕捉短期价格态势的变化,产生买卖信号。两者配合使用,能在保证捕捉趋势的同时获得较多买卖机会。此外,运用ATR指标动态跟踪止损止盈,能有效控制单笔交易的风险。
-
-## 风险及解决方法
-
-该策略主要存在两方面风险:第一是在无明显趋势时,MTF EMA可能会产生错误信号, 导致亏损;第二是MACD指标常在价格变化较大时产生误导信号,可能造成过度交易。针对第一种风险,可以适当调整MTF EMA参数,使其更能匹配价格趋势变化;第二种风险可以通过设定MACD指标的交叉限制来减轻。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整MTF EMA的周期参数,使其更能匹配不同交易品种的价格特征
-
-2. 优化MACD指标的快慢均线和Signal均线参数,以获得更好信号
-
-3. 测试不同的ATR周期参数和止盈止损倍数,获得最佳回报
-
-4. 添加其他辅助指标过滤信号
-
-## 总结
-
-该长空开仓策略综合运用MTF EMA判断趋势、MACD产生交易信号以及ATR动态止损止盈的方法,在有明显趋势的市场中能获得较好收益。该策略优化空间较大,通过参数调整和优化可以获得更好的表现。但需注意控制风险,避免在震荡行情中盲目交易。
-
-|| 
 
 ## Overview
 
@@ -130,7 +69,6 @@ The following aspects of the strategy could be optimized:
 
 This long and short opening strategy combines the methods of MTF EMA for trend judgment, MACD for trading signal generation, and ATR for dynamic stop loss and take profit. It can achieve good returns in markets with obvious trends. There is plenty of room for optimizing this strategy's parameters and optimization to achieve better performance. However, it is necessary to control risks and avoid blind trading in choppy markets.
 
-[/trans]
 
 > Strategy Arguments
 

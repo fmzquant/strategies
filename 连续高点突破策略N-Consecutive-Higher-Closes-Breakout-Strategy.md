@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1588c4e5d3b5775d3a4.png)
 
-[trans]
-
-## 概述
-
-本策略的核心逻辑是检测连续N根K线收盘价是否连续上涨,如果是,则进行做多;如果不满足,则平仓。这样可以捕捉到股价上涨的趋势,实现盈利。
-
-## 策略原理
-
-该策略的核心指标是nCounter,它通过比较当前K线的收盘价和开盘价来判断价格是否上涨。
-
-具体来说,如果close[1]>=open[1],则nCounter加1,表示上涨;如果close[1]<open[1],则nCounter重置为0。这样就可以统计出连续上涨的K线个数。
-
-然后将nCounter与参数nLength进行比较,当nCounter>=nLength时,输出信号C1=1;否则C1=0。这里的nLength就是我们定义的需要多少根连续上涨K线才产生信号。
-
-收到C1=1的信号后,如果当前没有持仓,则执行做多;如果已有多头持仓,则继续持有。
-
-此外,该策略还设置了止损和止盈条件。如果价格低于入场价一定比例,则止损平仓;如果高于入场价一定比例,则止盈。
-
-## 优势分析
-
-这是一个比较典型的趋势跟踪策略,它具有以下几点优势:
-
-1. 可以抓住股价上涨趋势的机会,适合作为多头策略运用
-2. N根连续上涨作为入场信号,可以有效过滤假突破,减少不必要的交易
-3. 设定了止损和止盈条件,可以限制下跌风险,并锁定盈利
-4. 策略逻辑简单清晰,容易理解和修改
-5. 可通过调整参数nLength来控制交易频率
-
-## 风险分析
-
-该策略也存在一些风险,主要集中在以下几个方面:
-
-1. 如果上涨趋势反转,无法及时止损,可能带来较大的亏损
-2. nLength参数设置过大,可能错过较好的入场机会
-3. 没有考虑大盘环境,在大盘下跌时持有多头仓位易受损
-4. 没有根据不同股票的特征调整参数,使用统一参数对部分股票可能不适用
-
-为降低这些风险,我们可以设置更严格的止损条件,优化nLength参数,加入大盘判断规则,或针对不同股票分别测试参数。当然,任何策略都难以完全避免损失,需要与交易者的风险偏好相匹配。
-
-## 优化方向 
-
-考虑到上述风险,我们可以从以下几个方面继续优化该策略:
-
-1. 加入移动止损或跟踪止损功能。这可以根据价格变化及时调整止损位置,降低亏损风险
-2. 优化nLength参数。可以对不同类型的股票分别测试,找出对各类股票更合适的参数值
-3. 增加大盘环境判断。如在大盘下跌时暂停交易,避免逆市操作带来的额外损失
-4. 增加成交量等其他因素作为辅助条件。如要求上涨过程中成交量放大,从而确保突破的有效性
-5. 设置回撤控制。如最大允许亏损比例、最大连续亏损次数等,可以自动止损控制总体损失
-
-## 总结
-
-本策略通过检测N根连续上涨K线实现对上涨趋势的捕捉,可以有效进行趋势跟踪。优点是逻辑简单,参数调整灵活,可以filtering假突破。但也存在一定的风险,需要加入止损、参数优化、环境判断等模块进行改进,使策略更全面和稳定。总的来说,本策略为量化交易提供了一个有价值的基础模型,通过不断完善可以成为一个强大的交易工具。
-
-||
 
 
 ## Overview
@@ -117,7 +63,6 @@ Considering above risks, we can optimize the strategy from below aspects:
 ## Conclusion  
 
 This strategy captures uptrend by detecting N consecutive rising candles. It can effectively conduct trend following. The advantages are simple logic, flexible parameter tuning, filtering false breakout. But there are also some risks. It needs to add modules like stop loss, parameter optimization, environment judgement to improve. Overall speaking, this strategy provides a valuable basic model for quantitative trading. It can become a powerful trading tool after continuous improvement.
-[/trans]
 
 > Strategy Arguments
 

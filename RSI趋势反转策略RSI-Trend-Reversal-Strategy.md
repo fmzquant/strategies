@@ -11,76 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/df5400cfcddadb5d63.png)
 
-[trans]
-
-
-## 概述
-
-RSI趋势反转策略利用RSI指标反转信号,判断潜在趋势反转点,进场做多做空。该策略结合价格反转以及RSI反转,可以有效过滤假反转信号。
-
-## 策略原理
-
-该策略基于RSI指标的反转信号以及价格的反转信号进行组合判断,主要分为四种情况:
-
-1. 常规多头反转:当RSI形成较高低点(意味着RSI趋势反转由上向下),而价格形成较低低点时(意味着价格趋势反转由下向上),产生常规多头反转信号。
-
-2. 隐藏多头反转:当RSI形成较低低点(意味着RSI趋势继续由上向下),但价格形成较高低点时(意味着价格趋势反转由下向上),产生隐藏多头反转信号。
-
-3. 常规空头反转:当RSI形成较低高点(意味着RSI趋势反转由下向上),而价格形成较高高点时(意味着价格趋势反转由上向下),产生常规空头反转信号。
-
-4. 隐藏空头反转:当RSI形成较高高点(意味着RSI趋势继续由下向上),但价格形成较低高点时(意味着价格趋势反转由上向下),产生隐藏空头反转信号。
-
-这样能够同时结合RSI指标反转和价格反转来发出交易信号,可以有效避免仅凭RSI指标或者仅凭价格反转造成的假信号,增强策略的稳定性。
-
-## 优势分析
-
-RSI趋势反转策略具有以下优势:
-
-1. 结合RSI指标和价格反转信号,可以有效过滤假反转信号,提高信号质量。RSI指标仅凭自己并不能完全可靠判断反转点,需要和价格行情反转共同验证。
-
-2. 识别隐藏多头和隐藏空头形态,这些隐藏形态往往预示着即将出现更加强劲的价格趋势,能够提前捕捉趋势机会。
-
-3. RSI参数和回看周期可自定义,可以针对不同市场调整,灵活实用。
-
-4. 可视化绘制指标形态和信号,直观判断市场状态。
-
-5. 策略逻辑简洁清晰,容易理解实现,适合용作量化交易策略。
-
-## 风险分析
-
-RSI趋势反转策略也存在以下风险:
-
-1. RSI反转结合价格反转,能够过滤许多假信号,但不排除仍会有误判的可能。指标毕竟是对价格的统计测度,不可完全依赖。
-
-2. 隐藏多头和隐藏空头形态不容易识别,可能会漏掉这些机会,需要一定的经验判断。
-
-3. 回看周期参数设置不当可能导致错过反转时点或判断滞后。不同市场需要调整周期参数。
-
-4. 需要确保止损策略配合使用,避免空头反转后继续下跌造成亏损扩大。
-
-可以通过优化参数,严格止损,适当把握隐藏反转等方法来控制风险。
-
-## 优化方向
-
-RSI趋势反转策略可以从以下方面进行优化:
-
-1. 调整RSI参数,测试不同市场对RSI周期parameter的敏感性,找到最佳参数。
-
-2. 优化回看周期参数,平衡捕捉反转时点和防止假信号的需求。
-
-3. 增加成交量的统计分析,例如大量减仓导致价格反转的成交量背离识别。
-
-4. 结合其他指标信号进行组合,例如MACD、布林带等,提高判断准确性。 
-
-5. 增加止损策略,避免亏损扩大。可以设定价格突破新高/新低之后止损。
-
-6. 根据回测结果修正策略逻辑,提高盈利因子。例如调整开仓条件逻辑关系(与、或、非),寻找最佳交易策略。
-
-## 总结
-
-RSI趋势反转策略通过组合RSI指标反转和价格反转来识别潜在的趋势转折点。它有效利用了RSI的趋势判断能力,同时结合价格行情过滤假信号。该策略逻辑简单清晰,容易实现。可以通过参数优化、止损策略优化来控制风险,并进一步提升策略表现。总体来说,RSI趋势反转策略是一种可靠、实用的短线交易策略。
-
-||
 
 
 ## Overview
@@ -149,7 +79,6 @@ The RSI Trend Reversal strategy can be optimized in the following aspects:
 
 The RSI Trend Reversal strategy identifies potential trend turning points by combining RSI reversals and price reversals. It makes good use of RSI's trend judging capability while filtering false signals with price information. The strategy has simple and clear logic that is easy to implement. Parameters and stop loss can be optimized to manage risks and further improve performance. Overall, the RSI Trend Reversal strategy is a reliable and practical short-term trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

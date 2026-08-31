@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15347b63324a45afae4.png)
-[trans]
-
-## 概述
-
-该策略的主要思想是实现一个尽可能精确的趋势跟踪策略。它通过计算过去一定数量收盘价的“置信度”来判断当前线性趋势的持续可能性。该策略假设,一旦置信度超过一定水平,正在发生的线性趋势更有可能持续下去。
-
-## 策略原理
-
-该策略通过普通线性回归方法计算过去N个收盘价的线性拟合,获得线性拟合的斜率k和与收盘价的偏差标准差σ。然后定义趋势置信度为k/σ。
-
-当趋势置信度超过“做多入场”阈值时,做多;当下跌到“做多平仓”阈值时,平仓。同理,当趋势置信度低于“做空入场”阈值时,做空;当超过“做空平仓”阈值时,平仓。
-
-这样,它可以过滤掉野性的、不遵循明确线性趋势的价格变动带来的信号。
-
-## 优势分析
-
-该策略结合了趋势跟踪和统计学中的线性回归方法,でき避免追随短期价格震荡,只跟随长期趋势,从而获得较低的交易频率和较高的胜率。
-
-该策略参数调优空间大,可以通过调整参数适用于不同品种和时间周期,实现良好的泛化性。
-
-## 风险分析 
-
-该策略存在被套利的风险。当价格出现明显趋势反转时,策略会产生较大亏损。此外,参数设置不当也会导致过度交易或错失良好交易机会。
-
-可以设置止损来控制亏损风险。同时,必须慎重评估参数的选择,避免过度优化。
-
-## 优化方向
-
-该策略可以在以下方面进行进一步优化:
-
-1. 增加止损、止盈逻辑,以锁定利润、控制风险
-
-2. 增加参数自适应优化模块,使参数可以动态调整
-
-3. 增加机器学习模型判断趋势反转点,进一步提高策略胜率
-
-4. 尝试不同品种、时间周期的适配性,提高泛化能力
-
-## 总结
-
-该策略总体上是一个立足长期趋势、控制风险的量化策略。它融合了趋势跟踪和线性回归方法,可以过滤噪音交易信号。通过参数调优,它可以很好地适配不同品种和周期,是一种值得重点研究和改进的有效策略。
-
-||
 
 
 ## Overview
@@ -95,7 +52,6 @@ The strategy can be further optimized in the following aspects:
 
 In general, this is a long-term trend following strategy with risk control. It combines trend following and linear regression methods to filter out noise trading signals. Through parameter tuning, it can adapt well to different products and timeframes, and is an effective strategy worth in-depth research and improvement.
 
-[/trans]
 
 > Strategy Arguments
 

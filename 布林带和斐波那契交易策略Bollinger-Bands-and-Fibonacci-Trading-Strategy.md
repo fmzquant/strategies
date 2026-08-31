@@ -9,85 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略融合布林带指标和斐波那契回撤指标,实现多指标组合交易。属于典型的组合指标策略类型。策略通过布林带判断趋势方向,斐波那契回撤确定关键支持阻力位,从而产生交易信号。
-
-## 策略原理
-
-该策略主要基于以下两个指标进行判断:
-
-1. 布林带
-
-   计算布林带中的上轨、中轨和下轨。价格突破下轨时为做多信号,突破上轨时为做空信号。
-
-2. 斐波那契回撤
-
-   根据历史高点和低点计算出0%和100%两重要斐波那契回撤位。这两点可作为关键的支持和阻力位。
-
-具体交易逻辑为:
-
-做多信号:价格上穿布林带上轨,且处于0%斐波那契支持上方
-
-做空信号:价格下穿布林带下轨,且处于100%斐波那契阻力下方
-
-平仓以中轨为参考,中轨附近止盈或止损。
-
-## 策略优势
-
-- 组合布林带和斐波那契两个指标
-- 布林带判断趋势方向,斐波那契确定关键点位
-- 两者组合过滤误信号概率较小
-- 中轨附近止盈止损,回撤控制到位  
-- 入场退出规则清晰,易于操作
-
-## 策略风险
-
-- 均线指标容易滞后,可能错过最佳点位
-- 仅基于指标,对重大突发事件反应不够敏捷
-- 双重过滤条件限制交易频次过少
-- 参数设置不当会影响布林带和回撤效果
-- 不同品种需要分别测试优化参数
-
-可以通过以下措施来降低风险:
-
-- 优化参数,找出最佳参数组合
-- 适当放宽入场条件,例如加入K线形态
-- 优化止盈止损机制,例如追踪止损
-- 分别测试不同品种的最佳参数
-- 适当调整仓位管理系统
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化布林带参数
-
-   寻找计算上下轨最佳的参数比例
-   
-2. 优化斐波那契回撤周期
-
-   测试计算回撤的不同周期参数
-   
-3. 放宽入场条件 
-
-   例如布林带突破时观察K线形态
-
-4. 优化止盈止损机制 
-
-   考虑带有追踪功能的止损方式
-   
-5. 根据不同品种分别测试
-
-   不同品种参数不一定相同,需要调整
-
-## 总结
-
-本策略通过组合布林带和斐波那契回撤指标,发挥各自的技术优势,提高了交易信号的质量。但也存在参数优化难度大,入场条件太严格等问题。我们可以通过优化参数设定、适当放宽入场条件、改进止损机制等方法来完善策略系统,在保留其技术优势的同时,争取更多的交易机会。同时,持续根据回测结果进行调整也是使策略更加稳健的关键。
-
-|| 
 
 ## Overview
 
@@ -165,7 +86,6 @@ The strategy can be improved by:
 
 This strategy combines the strengths of Bollinger Bands and Fibonacci Retracements for higher quality signals. But challenges like difficult parameter optimization exist. Improvements can be made through parameter tuning, relaxing entry criteria, enhancing exits etc. to refine the strategy while retaining its edge. Continual adjustments based on backtest results are also key for robustness.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1468954639487047195.png)
-[trans]
-### 概述
-
-AlphaTrend双向跟踪策略是根据AlphaTrend指标的买入和卖出信号来进行交易的策略。该策略可以在AlphaTrend指标产生买入和卖出信号的区域打开多头和空头仓位。
-
-### 策略原理
-
-AlphaTrend双向跟踪策略的核心是AlphaTrend指标。AlphaTrend指标基于自适应平均真实波幅(ATR)和价格(收盘价或成交量加权平均价)的组合来计算上轨和下轨。具体计算方法是:
-
-上轨 = 最低价 - ATR * 系数
-下轨 = 最高价 + ATR * 系数
-
-其中ATR是过去一定周期的平均真实波幅,系数是可调参数。当价格高于上轨时,指标线接近上轨;当价格低于下轨时,指标线接近下轨。这样AlphaTrend指标就形成了一个自适应的通道。
-
-AlphaTrend双向跟踪策略则是基于AlphaTrend指标的信号来建立多头和空头仓位。具体逻辑是:
-
-- 当价格上穿AlphaTrend指标时,做多;
-- 当价格下穿AlphaTrend指标时,做空。
-
-这样就完成了基于AlphaTrend指标动态通道的双向跟踪交易。
-
-### 优势分析
-
-AlphaTrend双向跟踪策略最大的优势在于能够跟踪市场趋势的变化。自适应ATR能够根据市场波动率的变化调整通道范围,避免了传统布林带等指标容易因波动率扩大而失效的问题。
-
-另外,AlphaTrend指标同时结合价格和成交量(或势能),能够过滤掉一些假突破。这也提高了策略信号的质量。
-
-### 风险分析
-
-AlphaTrend双向跟踪策略的主要风险来自于巨大行情震荡对指标通道的冲击。当市场出现异常波动时,停损点有可能被突破,导致较大亏损。这需要通过适当调整ATR参数和停损点来控制风险。
-
-此外,ALPHA指标本身会有一定滞后。所以在行情转折点附近也会产生错误信号。这需要辅助其他指标来确认。
-
-### 优化方向
-
-AlphaTrend双向跟踪策略可以从以下几个方面进行优化:
-
-1. 结合趋势指标判断市场主要趋势,避免逆势交易;
-2. 增加成交量限制,避免低量的假突破带来损失;  
-3. 优化指标参数,使通道范围更加符合不同品种的特点;
-4. 增加机器学习算法,使通道更加智能化。
-
-通过以上几点优化,可以进一步提高AlphaTrend策略的稳定性和盈利能力。
-
-### 总结
-
-AlphaTrend双向跟踪策略整体来说是一种跟踪市场变化的有效策略。它解决了传统技术指标容易失效的问题,也结合了成交量来过滤信号。通过适当优化,该策略可以成为量化交易体系中的有力工具。
-
-||
 
 ### Overview
 
@@ -107,7 +58,6 @@ Through the above optimizations, the stability and profitability of the AlphaTre
 
 In summary, the AlphaTrend dual tracking strategy is an effective way to track market changes. It solves the problem of traditional technical indicators losing effectiveness and also incorporates volume information to filter signals. With proper optimizations, this strategy can become a powerful tool in quantitative trading systems.
 
-[/trans]
 
 > Strategy Arguments
 

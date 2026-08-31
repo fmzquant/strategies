@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16cd6e895ad50f0be6e.png)
-[trans]
-## 概述
-
-双均线智能追踪交易策略是一种基于均线和特定指标的趋势跟踪策略。该策略运用两条不同参数设置的均线构建通道,并结合OTT指标设定通道上下限,实现对价格趋势的智能跟踪。当价格突破通道时,进行买入或卖出操作。
-
-## 策略原理  
-
-该策略主要运用两条移动平均线及OTT指标构建自适应通道,具体原理如下:
-
-1. 计算快线MAvg,以CLOSE收盘价和自定义均线为输入,长度为5;
-
-2. 根据MAvg和设置百分比,计算通道上下限长线位置长Stop和短线位置短Stop; 
-
-3. 计算OTT指标中的通道移动止损MT,根据多空状态计算通道价格OTT;
-
-4. 当价格突破OTT时,产生交易信号。
-
-以上构建自适应通道的过程,使得策略可以实时跟踪价格变化趋势,进而产生交易信号。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 双均线通道结构,可以有效捕捉价格趋势;
-2. OTT指标设置通道移动止损,控制风险;  
-3. 自适应通道结构,可以快速响应价格变化;
-4. 策略参数设置灵活,可针对不同品种及周期优化。
-
-## 策略风险
-
-该策略也存在一些风险:  
-
-1. 双均线容易形成背离,可能产生误信号;
-2. OTT参数设置不当可能过于激进或保守,影响策略表现;
-3. 策略仅基于技术指标,没有结合基本面因素。
-
-针对上述风险,可以通过参数优化,结合其他指标或基本面过滤信号等方式进行改进和优化。
-
-## 策略优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化均线参数,选择合适品种及周期的参数组合;
-2. 优化通道带宽参数,平衡跟踪灵敏度和稳定性;
-3. 结合交易量进行信号过滤;
-4. 结合基本面情况设定交易方向过滤。
-
-## 总结
-
-本策略总体来说是一个基于双均线通道和OTT指标进行趋势跟踪的策略,核心思路是构建自适应通道,并以突破产生交易信号。该策略具有一定的优势,但也存在可能的改进空间。通过参数及规则优化,该策略可以成为一个值得实盘验证的高效量化交易策略。
-
-||
 
 ## Overview  
 
@@ -113,7 +61,6 @@ The strategy can be optimized in several aspects:
 
 In summary, this is a trend following strategy based on a dual moving average channel and OTT indicator. The core idea is constructing an adaptive channel and generating signals when prices breakout. The strategy has merits but also room for improvements. With parameter tuning and logic optimization, it has the potential to become an efficient quant trading strategy worth deploying.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,52 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-
-## 策略原理
-
-该策略基于增强型MACD指标进行趋势追踪。它同时计算快速移动平均线、慢速移动平均线以及二者的差值,并再对差值进行移动平均来产生交易信号。
-
-具体逻辑是:
-
-1. 计算快速EMA周期,如12日
-
-2. 计算慢速EMA周期,如26日
-
-3. 计算快慢EMA的差值为MACD
-
-4. 对MACD进行信号线EMA,如9日EMA
-
-5. 再对MACD与信号线的差值进行EMA生成增强信号线
-
-6. 当增强信号线上穿零轴时做多
-
-7. 当增强信号线下穿零轴时平多仓
-
-该策略充分发掘MACD指标的趋势跟踪特性,并进行二次优化滤波从而提高信号质量,追捧中长线趋势。
-
-## 策略优势
-
-- 增强MACD降噪提高信号准确度
-
-- 快慢EMA配合判断方向和力度 
-
-- 较慢参数侧重中长线趋势
-
-## 策略风险
-
-- 需谨慎选择EMA周期参数
-
-- 仅做多无法利用空头机会
-
-- 信号出现频率偏少
-
-## 总结
-
-该策略通过增强MACD的趋势跟踪能力来识别中长线机会。但参数优化和风险控制尤为重要。适当组合其他因素能提高效果。
-
-
-||
 
 ## Strategy Logic
 
@@ -100,7 +54,6 @@ The strategy taps into MACD's trend following ability, and optimizes it further 
 
 This strategy leverages enhanced MACD for improved mid- to long-term trend identification. But optimization and risk controls are key. Combining with other factors can improve performance.
 
-[/trans]
 
 > Strategy Arguments
 

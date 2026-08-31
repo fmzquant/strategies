@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11d21f6898996ad95d4.png)
-[trans]
-### 概述
-
-该策略融合了超趋动指标和艾略特波浪理论,构建了一个稳健的技术交易工具。它采用多层次的趋势分析来提供更全面的市场视角,可以 Early Capture 市场的潜在趋势反转和重要的价格变动。
-
-### 策略原理  
-
-核心思想在于其多层次的方法:
-
-1. 采用 4 个超趋动指标,每个指标使用不同的 ATR 长度和乘数,从短期到长期对趋势进行判断
-2. 通过指标的融合,可以找出稳健的做多做空信号
-3. 参考艾略特波浪的模式识别方法,识别类似的市场行为模式,确认交易信号
-
-这样,既利用了多个指标,又增加了模式识别,使策略更稳健。
-
-### 优势分析
-
-1. 多指标设计,提供全方位判断 
-2. 波浪理论启发,模式识别增加稳定性
-3. 实时调整方向,适应市场变化
-4. 参数可配置,适用于不同品种和时间周期
-
-### 风险分析  
-
-1. 参数设置依赖经验,需要调整确定最佳参数组合
-2. 多指标设计较复杂,增加计算负载  
-3. 无法完全回避错误信号的产生
-
-可以通过参数优化,逐步确定最优参数;采用云计算提高计算性能;设置止损以控制风险。
-
-### 优化方向
-
-可以从以下几个方面进行优化:
-
-1. 增加自适应参数调整模块,根据市场情况动态调整参数
-2. 增加机器学习模型,辅助判断交易信号可靠性 
-3. 结合情绪指标、新闻事件等外部因素判断市场模式
-4. 支持多品种参数模板,减少测试工作量
-
-这将使策略参数更加智能化,判断更加准确,实际应用更加方便。
-
-### 总结  
-
-该策略综合考虑了趋势、模式两个维度,既保证判断的稳健性,又增加策略的灵活性。多指标和参数设置保证了全市场适用性。如果进一步引入智能化、自动化的方法,将大大增强策略的实战水平。它为技术交易的发展提供了有益的启发和借鉴。
-
-||
 
 ### Overview  
 
@@ -101,7 +55,6 @@ This will make strategy parameters more intelligent, judgments more accurate, an
 
 The strategy comprehensively considers both trend and pattern dimensions, ensuring judgment robustness while increasing flexibility. Multi-indicators and parameter settings ensure full market applicability. With further incorporation of intelligent and automated methods, strategy practicality can be greatly enhanced. It provides valuable inspiration and reference for the advancement of technical trading.  
 
-[/trans]
 
 > Strategy Arguments
 

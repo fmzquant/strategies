@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8d20fef38647fd3545.png)
 
-[trans]
-
-### 概述
-
-该策略运用CK通道判定价格趋势,并设定动态止损线,在发生价格反转时进行反向操作,属于短线交易策略。
-
-### 策略原理   
-
-策略运用CK通道判断价格趋势和支撑阻力。计算上通道线和下通道线,当价格突破通道线时产生交易信号。此外,策略还会跟踪通道线的移动情况,在通道线反转时采取反向头寸,属于反转交易策略。     
-
-具体来说,策略基于最高价、最低价计算出上下通道线。如果上通道线开始下降,下通道线开始上升,则判定为价格反转,做空头寸。反之,如果下通道线开始下降,上通道线开始上升,则判定为价格反转,做多头寸。
-
-### 策略优势  
-
-1. 运用双通道判断价格反转点,精准做反向操作
-2. 采用动态止损方式来控制风险,可以及时止损
-3. 策略逻辑简单清晰,容易理解实现
-
-### 策略风险  
-
-1. 市场价格剧烈波动时,止损线可能被突破,导致亏损加大
-2. 交易次数可能较多,交易成本增加  
-3. 需要选择合适的参数来控制止损线,避免过于宽松或过于紧绷
-
-### 策略优化  
-
-1. 优化止损线参数,使其更加合理且有效
-2. 结合趋势指标判断反转信号的可靠性,避免在趋势中反向操作
-3. 增加自动交易和自动止损模块,降低交易成本
-
-### 总结  
-
-该策略整体思路清晰易懂,运用双通道判断价格反转,采取反向操作;并设定动态止损来控制风险,属于典型的短线交易策略。策略效果还可进一步优化,主要是调整止损参数,并辅助其他技术指标判断操作时机。
-
-||
 
 ### Overview  
 
@@ -79,7 +44,6 @@ Specifically, the strategy calculates the upper and lower channel lines based on
 
 The overall idea of ​​the strategy is clear and easy to understand. It uses double channels to determine price reversals and take reverse operations. And it sets dynamic stop loss to control risks. It belongs to typical short-term trading strategies. The strategy effect can be further optimized, mainly by adjusting the stop loss parameters and assisting other technical indicators to determine entry and exit timing.
 
-[/trans]
 
 > Strategy Arguments
 

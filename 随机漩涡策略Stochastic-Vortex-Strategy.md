@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15680915275b9e6a1ae.png)
-[trans]
-
-## 概述
-
-随机漩涡策略是一种当随机指数的K线跨过D线且正漩涡指数高于负漩涡指数时,产生买入信号的策略。该策略结合了随机指数指标和漩涡指数指标的优势,旨在在股价反转时抓住机会进入市场。
-
-## 策略原理
-
-该策略主要基于两个指标:
-
-1. 随机指数(Stochastic Oscillator):该指标将当天的收盘价与一定周期内的最高价和最低价进行比较,反映市场是过卖还是过买。当随机指数的快线K上穿慢线D时,视为买入信号。
-
-2. 漩涡指数(Vortex Indicator):该指标通过比较一定周期内波动的最大和最小值,反映市场的漩涡式上升或下跌运动。当正漩涡指数高于负漩涡指数时,意味着股价上涨势头强于下跌势头,可以买入。
-
-本策略的买入信号来自随机指数的快线K上穿慢线D,说明股价从过卖区域反转上涨;而正漩涡指数高于负漩涡指数意味着股价上涨势头强劲,因此结合这两个信号产生最终的买入判断。
-
-## 优势分析
-
-该策略结合随机指数和漩涡指数两个指标的优势,主要有以下特点:
-
-1. 能及时抓住股价反转上涨的机会,随机指数K线上穿D线反映股价反转;
-
-2. 漩涡指数判断了上涨势头,避免假突破;
-
-3. Parameters可以调整指标参数,优化策略;
-
-4. 可视化的买入信号提示直观判断;
-
-5. 随机指数和漩涡指数内置机制,不需要大量历史数据支持,适合实盘。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 买入信号可能出现误报,无法完全避免亏损;
-
-2. 指标参数设置不当可能影响策略效果;
-
-3. 股价出现剧烈波动时,指标失效的概率较大;
-
-4. 无法判断市场趋势,在熊市中也会产生买入信号。
-
-这些风险可以通过调整指标参数、设置止损、考虑大市趋势等方法尽量规避。但任何量化策略都无法完全避免亏损,需要承担一定程度的风险。
-
-## 优化方向  
-
-该策略还可以从以下几个方向进行优化:
-
-1. 结合其他技术指标判断大致趋势,避免高位开仓;
-
-2. 增加止损机制来控制单次最大损失;
-
-3. 测试不同的指标参数组合,寻找最优参数;  
-
-4. 增加开仓条件以减少误报概率;
-
-5. 考虑交易成本,设置最小利润目标。
-
-这些优化可以提高策略的稳定性,降低损失,并最大限度挖掘策略的价值。
-
-## 总结
-
-随机漩涡策略综合考虑了股价反转信号和上涨势头信号,是一种典型的反转策略。它及时抓住股价从过卖区反转上涨的机会,同时利用漩涡指数判断上涨动量,避免假突破。该策略运用灵活,易于实盘,风险可控,是一种可供选择的量化策略。但任何策略都无法完全规避市场风险,需谨慎对待,同时也要关注可能的优化空间,以发掘策略的更大价值。
-
-||
 
 ## Overview
 The Stochastic Vortex strategy is a strategy that generates buy signals when the K line of the Stochastic Oscillator crosses above the D line and the positive VI is higher than the negative VI. This strategy combines the advantages of the Stochastic Oscillator indicator and the Vortex Indicator to catch opportunities when stock prices reverse.
@@ -133,7 +68,6 @@ These optimizations can improve the stability of strategies, reduce losses, and 
 ## Summary
 The Stochastic Vortex Strategy takes into account the price reversal signals and upward momentum signals. It is a typical reversal strategy. It seizes opportunities when stock prices rebound from oversold areas and uses the Vortex Index to determine upward momentum to avoid false breakouts. This flexible, easy-to-implement strategy has controllable risks and is a good quantitative strategy. But no strategy can completely avoid market risk. We should treat it cautiously and pay attention to possible optimization spaces to discover greater value of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

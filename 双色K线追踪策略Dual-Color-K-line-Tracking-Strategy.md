@@ -9,65 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概要
-
-本策略通过观察K线的颜色变化,判断行情趋势,并据此建立做多做空仓位。策略原理简单直接,旨在捕捉短线趋势。
-
-## 原理
-
-该策略根据K线的收盘价与开盘价的关系判断K线颜色,收盘价大于开盘价为红色K线,收盘价小于开盘价为绿色K线。
-
-当出现指定数量(可设置)的连续同色K线时,做相应操作:
-
-- 如果是红色,则做多;
-
-- 如果是绿色,则做空。
-
-当K线颜色发生变化时,平仓离场。
-
-## 优势
-
-- 原理清晰简单,容易理解实现。
-
-- 可追踪较短的趋势,实现频繁交易。
-
-- 可自定义K线数量,调整策略灵敏度。
-
-- 可仅做多或仅做空,降低交易频率。 
-
-- 可设定交易时间段,避开需要规避的时间段。
-
-## 风险
-
-- 无法判断趋势方向,存在被套利的风险。
-
-- 无法确定入场时机优劣,存在过早入场或失去机会的风险。
-
-- 存在反转风险,K线颜色改变不一定代表实质趋势改变。
-
-- 追随短线容易过度交易,存在交易费率压力。
-
-- 参数设置不当可能导致策略效果不佳。
-
-## 优化方向
-
-- 可考虑加入趋势判断指标,避免反向入场。如MACD,KD等。
-
-- 可设置追踪止损,降低亏损风险。
-
-- 可适当放宽出场条件,避免过频繁离场。
-
-- 可结合其他因素优化入场时机。如交易量放大,突破前期高点等。
-
-- 可设置订单类型为市价单,减少滑点影响。
-
-## 总结
-
-本策略源于最简单的K线技术分析,通过判断K线颜色实现最基本的趋势追踪。优点是简单易懂,交易频繁,可灵活调整参数。但也存在一定的盲目性,无法判断趋势优劣。可通过加入趋势判断指标等方式进行优化,在保持简单前提下提高策略效果。
-
-|| 
 
 ## Summary 
 
@@ -125,7 +66,6 @@ When the K-line color changes, close all positions.
 
 This strategy originates from the simplest K-line technical analysis, achieving basic trend tracking by judging K-line colors. The advantages are simplicity, high trading frequency, and flexible parameter adjustment. But it also has some blindness, unable to determine the quality of the trend. It can be improved by adding trend judgment indicators while keeping it simple, thereby enhancing strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

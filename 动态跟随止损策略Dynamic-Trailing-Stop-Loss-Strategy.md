@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17968bcf45bf19febe9.png)
-[trans]
-
-## 概述
-
-本策略基于日线确定趋势方向,再利用15分钟K线形成的新的高点或低点作为止损位或追踪止损位,实现动态调整止损来锁定更多利润的策略。
-
-## 策略原理
-
-1. 利用日K线收盘价和前一日的最高价最低价比较,判断趋势方向。如果收盘价高于前一日的最高价,定义为上涨趋势;如果收盘价低于前一日的最低价,定义为下跌趋势。
-
-2. 在上涨趋势中,当15分钟K线收盘价高于前一个15分钟K线的最高价时,做多;在下跌趋势中,当15分钟K线收盘价低于前一个15分钟K线的最低价时,做空。
-
-3. 做多后,以前一个15分钟K线的最低价作为止损位。做空后,以前一个15分钟K线的最高价作为止损位。
-
-4. 当15分钟K线再次创出新的高点或低点时,调整止损位。做多时调整为新的低点,做空时调整为新的高点,实现动态追踪止损。
-
-## 优势分析
-
-本策略最大的优势在于可以动态调整止损位,在保证了风险控制的同时,最大程度地锁定利润,降低止损被冲击的概率。
-
-具体优势如下:
-
-1. 基于趋势运算,能够及时判断市场走势并选择正确的交易方向。
-
-2. 15分钟级别的交易,可以频繁进出场,捕捉较多机会。
-
-3. 动态调整止损策略,可以根据新高或新低来降低止损被冲击的风险。
-
-4. 止损位置设置合理,最大程度避免无谓损失。
-
-## 风险分析
-
-本策略的主要风险来自于趋势判断上的错误。具体风险点如下:
-
-1. 日线趋势判断发生错误,可能导致交易方向错误。
-
-2. 行情短期内发生剧烈波动,15分钟止损位被突破的概率较大。
-
-3. 趋势转折点识别不当,可能导致亏损。
-
-对应解决方法如下:
-
-1. 增加其他时间周期指标进行综合判断,避免仅凭单一周期产生错误。
-
-2. 评估市场波动性,在波动较大时适当放宽止损范围。
-
-3. 增加趋势转折点判断机制,在转折前及时平仓。
-
-## 优化方向 
-
-本策略仍有进一步优化的空间:
-
-1. 增加其他周期指标判断,优化趋势掌握。
-
-2. 测试不同止损比例设置,选取最优参数。  
-
-3. 增加量能指标,避免量能背离产生错误交易。
-
-4. 增设趋势转折机制,优化 Exit 点。
-
-5. 评估增加 Trailing Stop 区间值,进一步减少止损被冲击概率。
-
-## 总结
-
-本策略总体运行效果良好,思路清晰易于理解,具有止损动态调整、频繁交易、顺势而为等优点,能够有效控制风险并锁定利润,值得进一步测试与优化应用。但也存在一定改进空间,建议从多角度综合判断、优化参数设置、增加趋势转折判别等方面入手,以进一步增强策略的稳定性与收益率。
-
-||
 
 ## Overview  
 
@@ -144,7 +77,6 @@ There is still room for further optimization:
 
 The overall performance of this strategy is good. The logic is clear and easy to understand. It has advantages like dynamic stop loss adjustment, frequent trading, and trading along trends. It can effectively control risks and lock in profits, and is worth further testing and optimization. But there is still room for improvement. It is recommended to improve from aspects like comprehensive judgment from multiple angles, parameter optimization, adding trend reversal identification mechanisms, etc, to further strengthen the stability and profitability of the strategy.
 
-[/trans]
 
 
 

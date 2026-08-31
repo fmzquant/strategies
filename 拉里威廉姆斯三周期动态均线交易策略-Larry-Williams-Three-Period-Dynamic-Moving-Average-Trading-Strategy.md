@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/116475a349ea13a1aa7.png)
 
-[trans]
-#### 概述
-本文介绍了一种基于拉里·威廉姆斯三周期动态均线的交易策略。该策略利用两条指数移动平均线(EMA)来捕捉价格趋势,当连续三根K线收盘价突破EMA时产生交易信号。策略参数可调,适用于不同市场和周期。
-
-#### 策略原理
-1. 计算两条EMA:收盘价的高价EMA和低价EMA,周期可调。
-2. 判断当前时间是否在设定的交易区间内。  
-3. 判断最近三根K线是否连续收在EMA上方(看涨)或下方(看跌)。
-4. 若3成立且仓位为0,则开多仓;若3的相反情况成立且持有多仓,则平仓。
-5. 每日收盘时若持仓则平仓。
-
-#### 策略优势
-1. 参数灵活:EMA周期、交易时间区间等参数可调,适应不同市场。
-2. 趋势跟踪:利用EMA和连续K线的方向判断趋势,有利于捕捉趋势行情。
-3. 及时止损:逆势突破EMA时即时平仓,控制回撤。
-4. 日内平仓:收盘时平仓,避免隔夜风险。
-
-#### 策略风险
-1. 震荡市风险:趋势不明朗时,频繁交易可能导致亏损。
-2. 参数风险:不同参数在不同市场表现差异大,需要针对性优化。
-3. 跳空缺口风险:开盘跳空可能导致策略开仓价差,风险加大。
-
-#### 策略优化方向 
-1. 趋势过滤:加入ATR、RSI等指标辅助判断趋势强度,避开震荡市。
-2. 动态参数优化:根据近期市场特征动态调整参数,提高适应性。
-3. 仓位管理:根据趋势强弱和资金情况调整仓位,控制风险。
-4. 加入止损止盈:设置合理止损位和止盈目标,降低单次交易风险。
-
-#### 总结
-拉里·威廉姆斯三周期动态均线交易策略是一个基于双EMA和连续K线方向的趋势跟踪策略,通过参数优化可以适应不同市场。但策略本身相对简单,在震荡市表现不佳,并且缺乏风控措施,还需要进一步优化和改进。综合考虑策略的优缺点,该策略更适合在趋势明朗的市场中使用,并配合仓位管理和风险控制措施,提高整体表现和稳定性。
-
-|| 
 
 #### Overview
 This article introduces a trading strategy based on Larry Williams' three-period dynamic moving average. The strategy utilizes two exponential moving averages (EMAs) to capture price trends and generates trading signals when the closing price of three consecutive candles breaks through the EMAs. The strategy parameters are adjustable and suitable for different markets and timeframes.
@@ -73,7 +41,6 @@ This article introduces a trading strategy based on Larry Williams' three-period
 
 #### Summary
 Larry Williams' three-period dynamic moving average trading strategy is a trend-following strategy based on dual EMAs and the direction of consecutive candles. With parameter optimization, it can adapt to different markets. However, the strategy itself is relatively simple, performs poorly in choppy markets, and lacks risk control measures, requiring further optimization and improvement. Considering the strategy's pros and cons, it is more suitable for use in markets with clear trends and should be combined with position management and risk control measures to improve overall performance and stability.
-[/trans]
 
 
 

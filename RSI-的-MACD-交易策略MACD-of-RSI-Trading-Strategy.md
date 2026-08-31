@@ -9,77 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略使用MACD指标来判断RSI指标的趋势,从而产生交易信号。属于利用指标组合进行滤波的策略类型。
-
-## 策略原理
-
-该策略主要基于两部分指标进行判断:
-
-1. RSI指标
-计算常规的14周期RSI值。
-
-2. RSI的MACD
-对RSI指标计算MACD值,默认快线12周期,慢线26周期,信号线9周期。
-
-当RSI的MACD柱体由负转正,即MACD快慢线金叉时判断为多头趋势,进行买入。
-
-当RSI的MACD由正转负,即MACD快慢线死叉时判断为空头趋势,进行卖出。 
-
-这里使用MACD指数平滑移动平均线来判断RSI本身的长期趋势方向,从而产生更准确的交易信号。
-
-## 策略优势
-
-- 利用MACD判断RSI趋势方向,提高信号准确性
-- RSI作为主指标,MACD作为辅助判断指标
-- MACD指数平滑移动平均线,判断稳定
-- 组合指标互相验证,可避免冲高回落
-- 结合参数优化,可以灵活适应市场变化
-
-## 策略风险
-
-- RSI和MACD都可能出现滞后,信号不准确
-- MACD参数不当时会出现更多错信号
-- 仅基于指标组合,对突发事件敏感
-- 止损方法可以进一步完善改进
-- 需针对不同品种分别测试参数优化
-
-可以通过以下措施降低风险:
-
-- 优化RSI和MACD的参数组合
-- 加入其它指标或交易规则进行确认 
-- 适当放宽止盈止损标准,减少过早出场
-- 考虑加入重新入场机制
-- 调整仓位管理,防止单笔损失过大
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试RSI和MACD的参数组合
-
-2. 在MACD信号发出时,添加第二确认条件
-
-   例如考虑K线形态、交易量或布林带位置等
-
-3. 优化止盈止损策略,改为追踪止损
-
-4. 加入重新入场机制
-
-   在止损退出后,如果趋势继续,可以重新建立仓位
-
-5. 根据市场波动率调整仓位
-
-   在高波动时减小仓位,低波动时增加仓位
-
-## 总结
-
-本策略通过组合RSI和MACD两个指标,互相验证判断趋势方向,可以有效提高信号的准确性和稳定性。但仍需优化参数,并辅以其他技术指标或交易规则进一步确认,减少被突发事件影响的可能。同时要注重止损策略的优化改进,以及动态调整仓位的资金管理。只有不断学习和优化,才能适应市场的变化,获取持续稳定的收益。
-
-|| 
 
 ## Overview
 
@@ -149,7 +78,6 @@ The strategy can be improved from:
 
 This strategy combines RSI and MACD indicators to verify each other for more accurate and stable trend detection. But parameters need optimization, and additional technical filters or trading rules are required for confirmation, avoiding sudden events. Also stop loss mechanisms and dynamic position sizing are important. Continued learning and optimizing is crucial for adapting to changing market conditions for steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1298bb658366cb7db76.png)
-[trans]
-
-
-## 概述
-
-本策略是基于麦金非动态均线指标的交易策略。麦金非动态均线指标是一种改进版的移动平均线指标,可以更好地捕捉市场趋势的变化。该策略利用麦金非动态均线指标的信号,结合价格突破均线的信号,制定买入和卖出规则,以达到获利的目的。
-
-## 策略原理
-
-该策略主要使用两个均线,分别是21日指数移动均线和42日指数移动均线。当短期均线上穿长期均线时,视为买入信号;当短期均线下穿长期均线时,视为卖出信号。
-
-此外,该策略还同时需要满足价格高于麦金非动态均线、价格突破短期均线的条件,才会产生买入信号。对于卖出信号也同样需要满足价格低于麦金非均线、价格跌破短期均线的条件。
-
-具体来说,买入信号的触发条件是:短均线上穿长均线、收盘价高于麦金非均线、收盘价突破向下短均线。卖出信号的触发条件是:短均线下穿长均线、收盘价低于麦金非均线、收盘价突破向上短均线。
-
-麦金非动态均线的计算公式为:MDIt = MDIt-1 + (Close - MDIt-1) / Max(k * Period * (Close / MDIt-1)^4, 1)。其中,MDIt表示当前值,MDIt-1表示前一日的值,Close表示当日收盘价,k表示平滑常数,Period表示计算周期。该公式使得均线能够实时跟踪价格变化。
-
-## 策略优势
-
-1. 麦金非均线指标改进了传统均线的滞后性,可以更快捕捉价格趋势的变化。
-
-2. 结合双均线形成交易信号,可以有效过滤假突破。
-
-3. 添加价格高于/低于麦金非均线的条件,避免在震荡区间频繁交易。
-
-4. 采用指数移动均线,使得均线对最近价格变化更敏感。
-
-## 策略风险
-
-1. 在横盘震荡市场中,可能产生虚假信号,从而亏损。可以适当调整参数,过滤信号。
-
-2. 大幅度跳空的突破可能导致无法及时建仓,应适当放宽入场条件。
-
-3. 参数设置不当也会影响策略效果,应对参数进行优化测试。
-
-4. 长期持有带来的系统性风险需要注意,可以设置止损点。
-
-## 策略优化
-
-1. 可以测试不同长度的均线参数,找到更合适的组合。
-
-2. 可以添加其他技术指标,如KD,MACD等,优化买卖点选择。 
-
-3. 可以根据不同品种、市场调整参数k的数值,优化麦金非均线的计算。
-
-4. 可以结合波动率指标实现 dynamical position sizing,控制单笔风险。
-
-5. 可以设置止损点以控制亏损风险,也可以试验移动止损来锁定利润。
-
-## 总结
-
-本策略利用麦金非均线指标的快速跟踪能力,配合价格突破均线形成的交易信号,可以有效跟踪趋势,在趋势发生转折时及时切换仓位。相比传统双均线策略,本策略可以更快速地捕捉价格趋势变化。但该策略也存在一定的风险,需要进行优化测试以determinate合适的参数组合,控制风险。
-
-||
 
 
 ## Overview
@@ -116,7 +62,6 @@ The McGinley MA is calculated as: MDIt = MDIt-1 + (Close - MDIt-1) / Max(k * Per
 
 This strategy utilizes the fast-tracking ability of McGinley MA combined with price breakout signals to effectively follow trends and switch positions when trend reverses. Compared to traditional dual MA strategies, it can capture trend changes faster. However, risks exist that require optimization and tuning of parameters to control risks.
 
-[/trans]
 
 > Strategy Arguments
 

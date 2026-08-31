@@ -11,58 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c34b2567b90dd65450.png)
 
-[trans]
-#### 概述
-该策略是一个结合了布林带(Bollinger Bands)、相对强弱指标(RSI)和动态成本平均(DCA)的量化交易系统。策略通过设定资金管理规则,在市场波动中自动执行分批建仓操作,同时结合技术指标进行买卖信号判断,实现风险可控的交易执行。系统还包含了止盈逻辑和累计利润跟踪功能,可以有效监控和管理交易表现。
-
-#### 策略原理
-策略主要基于以下几个核心组件运作:
-1. 布林带指标用于判断价格波动区间,当价格触及下轨时考虑买入,触及上轨时考虑卖出
-2. RSI指标用于确认市场超买超卖状态,RSI低于25时确认超卖,高于75时确认超卖
-3. DCA模块根据账户权益动态计算每次建仓金额,实现资金的自适应管理
-4. 止盈模块设置5%的获利目标,达到目标自动平仓保护利润
-5. 市场状态监控模块计算90天市场变化幅度,帮助判断整体趋势
-6. 累计利润跟踪模块记录每笔交易的盈亏状况,方便评估策略绩效
-
-#### 策略优势
-1. 结合多重技术指标交叉验证,提高信号可靠性
-2. 采用动态仓位管理,避免固定仓位带来的风险
-3. 设置合理止盈条件,及时锁定利润
-4. 具备市场趋势监控功能,便于把握大局
-5. 完善的利润跟踪系统,便于分析策略表现
-6. 警报功能配置完善,可实时提醒交易机会
-
-#### 策略风险
-1. 震荡市场可能频繁触发信号导致交易成本增加
-2. RSI指标在趋势市场可能产生滞后
-3. 固定百分比止盈可能在强趋势市场过早退出
-4. DCA策略在单边下跌市场可能造成较大回撤
-建议采取以下措施管理风险:
-- 设置最大持仓限制
-- 根据市场波动度动态调整参数
-- 增加趋势过滤器
-- 实施分级止盈策略
-
-#### 策略优化方向
-1. 参数动态优化:
-- 布林带参数可根据波动率自适应调整
-- RSI阈值可随市场周期变化
-- DCA资金比例可跟随账户规模调整
-
-2. 信号系统增强:
-- 增加成交量确认
-- 添加趋势线分析
-- 结合更多技术指标交叉验证
-
-3. 风险控制完善:
-- 实现动态止损
-- 添加最大回撤控制
-- 设置每日亏损限制
-
-#### 总结
-该策略通过综合运用技术分析和资金管理方法,构建了一个较为完整的交易系统。策略的优势在于多重信号确认和完善的风险管理,但仍需要在实盘中进行充分测试和优化。通过持续改进参数设置和增加辅助指标,该策略有望在实际交易中取得稳定表现。
-
-|| 
 
 #### Overview
 This strategy is a quantitative trading system that combines Bollinger Bands, Relative Strength Index (RSI), and Dynamic Cost Averaging (DCA). The strategy implements automatic position building through established money management rules during market fluctuations, while integrating technical indicators for buy/sell signal determination to achieve controlled risk execution. The system also includes take-profit logic and cumulative profit tracking functionality for effective monitoring and management of trading performance.
@@ -113,7 +61,6 @@ Risk management recommendations:
 
 #### Summary
 The strategy builds a comprehensive trading system through combined technical analysis and money management methods. Its strengths lie in multiple signal confirmation and thorough risk management, though it still requires extensive testing and optimization in live trading. Through continuous improvement in parameter settings and additional auxiliary indicators, the strategy shows promise for stable performance in actual trading.
-[/trans]
 
 
 

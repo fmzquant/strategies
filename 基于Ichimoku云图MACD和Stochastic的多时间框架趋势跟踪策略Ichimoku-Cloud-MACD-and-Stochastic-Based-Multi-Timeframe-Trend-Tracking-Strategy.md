@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/dd67da7f10df99834e.png)
-[trans]
-## 概述
-
-本策略融合了Ichimoku云图、移动平均线、MACD、Stochastic和ATR等多个指标,实现多时间框架下的趋势识别和跟踪。在获得较高概率的趋势信号后,采用ATR周期止损止盈方式进行风险控制。
-
-## 策略原理
-
-1. Ichimoku云图判断中长线趋势方向。CLOSE价格上穿云图的转折线和基准线为多头信号,下穿为空头信号。
-
-2. MACD判断短线趋势和超买超卖情况。MACD柱线上穿信号线为多头信号,下穿为空头信号。
-
-3. Stochastic KD判断超买超卖区。K线上穿20为多头信号,下穿80为空头信号。 
-
-4. 移动平均线判断中期趋势。收盘价上穿移动平均线为多头信号,下穿为空头信号。
-
-5. 综合以上多个指标信号,过滤掉部分假信号,形成高概率的持续性趋势信号。
-
-6. 基于ATR计算止损止盈价格。以一定的ATR倍数作为止损位和止盈位,实现风险控制。
-
-## 策略优势
-
-1. 多时间框架识别趋势,提高信号准确率。
-
-2. 广泛运用指标组合过滤技术,有效过滤假信号。
-
-3. ATR周期性止损止盈,最大程度控制单笔损失。
-
-4. 可自定义入场条件严格程度,满足不同风险偏好。
-
-## 策略风险
-
-1. 以趋势跟踪为主,无法识别突发事件带来的逆转。
-
-2. ATR周期性止损可能过于理想化,实盘中难以完全复制。
-
-3. 参数设置不当可能导致交易频率过高或信号识别准确率不足。
-
-4. 需要调整参数找到平衡,适应不同品种和市场环境。
-
-## 策略优化方向 
-
-1. 增加机器学习算法,辅助判断趋势转折点。
-
-2. 优化ATR倍数参数,不同品种可以设置不同倍数。
-
-3. 结合交易量变化等其他因素,提高突破信号的准确率。
-
-4. 根据回测结果不断优化参数,找到最佳参数组合。
-
-
-## 总结
-
-本策略综合运用Ichimoku云图、MACD、Stochastic等多个指标进行多时间框架的趋势识别,在抓住趋势的同时尽量避免被突发事件套牢。ATR周期性止损止盈方式有效控制单笔亏损,是一种值得推荐的趋势跟踪策略。通过引入更多辅助判断指标和机器学习方法,本策略还有进一步优化的空间。
-
-||
 
 ## Overview
 
@@ -118,7 +63,6 @@ This strategy integrates Ichimoku Cloud, moving average, MACD, Stochastic and AT
 
 This strategy leverages Ichimoku Cloud, MACD, Stochastic and more for multi-timeframe trend identification, capturing trends while avoiding being trapped by black swan events. The ATR-based stop loss & take profit effectively limits per trade loss. With more auxiliary judgments and machine learning methods introduced, this strategy has further optimization potential.
 
-[/trans]
 
 > Strategy Arguments
 

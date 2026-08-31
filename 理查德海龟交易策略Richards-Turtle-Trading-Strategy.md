@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1358a4e796b841cd183.png)
-[trans]
-## 概述
-
-理查德海龟交易策略(Richard's Turtle Trading Strategy)是一个基于理查德·丹尼斯(Richard Dennis)海龟交易技术的买卖策略。该策略利用价格突破实现趋势追踪交易。当价格突破20日新高时做多,当价格突破20日新低时做空。
-
-## 策略原理  
-
-理查德海龟交易策略的核心逻辑是基于价格突破实现趋势追踪。具体来说,策略同时持续监控价格在20日内的最高值(_20_day_highest)和最低值(_20_day_lowest)。当当前收盘价超过20日最高值时,表明价格出现向上突破,此时发出做多信号。当当前收盘价低于20日最低值时,表明价格出现向下突破,此时发出做空信号。
-
-进入仓位后,策略会利用平均真实波幅(ATR)来计算止损位。同时,也会跟踪10日最高价和最低价,进行滑点止损。当做多止损或滑点止损触发时平多仓;当做空止损或滑点止损触发时平空仓。
-
-## 策略优势
-
-理查德海龟交易策略具有以下优势:
-
-1. 利用价格突破实现了趋势的自动跟踪。能够自动识别趋势转折,及时调整仓位。
-2. ATR止损机制,可以有效控制单笔止损。
-3. 滑点止损机制,可以锁定部分利润,降低回撤。
-4. 策略逻辑简单清晰,容易理解和实现,适合初学者学习。
-5. 无需预测市场走势和COMPLEX计算,简单规则式交易。
-
-## 策略风险
-
-理查德海龟交易策略也存在一些风险:  
-
-1. 突破交易容易被套,有时会产生过多交易频率。
-2. ATR和滑点止损过于严格,可能会过早止损。
-3. 仅利用价格信息,没有结合其他因素预测趋势持续性。
-4. 回测数据拟合风险,实盘效果可能不佳。
-
-为了降低这些风险,可以考虑优化入场条件,利用更多指标预测趋势;调整止损算法,降低止损频率。
-
-## 策略优化方向  
-
-理查德海龟交易策略可以从以下几个方向进行优化:
-
-1. 优化参数,寻找最优参数组合。可以调整计算周期,或者测试不同的ATR倍数。
-2. 利用更多指标或机器学习算法判断趋势。可以结合均线、能量类指标等判断趋势持续性。
-3. 优化止损方式。可以测试灵活滑点止损、跟踪止损等方式。
-4. 结合情绪指标、消息面等更多信息预测市场走势。这可以过滤掉一些假突破。
-
-## 总结  
-
-理查德海龟交易策略是一个非常典型的突破追踪策略。它简单易行,适合初学者学习,也是量化交易的一个典范。该策略可以通过多方面优化,降低交易风险,提高盈利空间。总的来说,理查德海龟策略具有很强的启发意义。
-
-||
 
 ## Overview
 
@@ -101,7 +55,6 @@ Richard's turtle trading strategy can be optimized in the following aspects:
 
 Richard's turtle trading strategy is a very typical breakout trend following strategy. It is simple and practical, good for beginners to learn, and a quant trading paradigm. The strategy can be optimized in many ways to reduce risks and increase profitability. Overall, Richard's turtle strategy is very enlightening.
 
-[/trans]
 
 > Strategy Arguments
 

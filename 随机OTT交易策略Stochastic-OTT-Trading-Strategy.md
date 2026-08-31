@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17ceb09463a27cc0669.png)
 
-[trans]
-
-
-### 概述
-该策略结合了随机指标和OTT指标来产生交易信号。当快速OTT线和慢速OTT线交叉时,会触发交易入场。为了过滤假信号,策略增加了随机指标的验证机制。
-
-### 策略原理
-1. 计算快速OTT线和慢速OTT线。分别基于快速平均线和慢速平均线,结合一定百分比止损计算。
-2. 计算随机指标。基于K线的最高价、最低价和收盘价计算。
-3. 当快速OTT线和慢速OTT线交叉时,判断长短方向。同时检查随机指标是否验证信号。
-4. 根据交叉情况和方向判断入场。
-
-### 优势分析
-1. OTT指标本身反转效果好,捕捉转折点能力强。
-2. 随机指标过滤假信号,避免在震荡中被套。
-3. 可自定义OTT线计算平均线类型,灵活应对市场。
-4. 可设置止盈止损点,风险可控。
-
-### 风险分析
-1. 参数设置不当可能导致交易频率过高或信号偏差。
-2. 趋势市场中,OTT指标可能产生错误信号。
-3. 需要综合考虑大周期趋势。
-
-### 优化方向 
-1.优化参数组合,寻找最佳参数对。
-2. 结合趋势指标判断策略有效周期。
-3. 增加资金管理模块。
-
-### 总结
-该策略集成OTT指标判断短期反转和随机指标过滤信号的优点,可有效控制风险,适用于反转或震荡型市场。但需要注意误入趋势市或选择周期。可从参数优化和资金管理等方面进行进一步提高。
-
-||
 
 ### Overview
 This strategy combines stochastic oscillator and OTT indicators to generate trading signals. It will trigger orders when fast and slow OTT lines cross. To filter fake signals, stochastic oscillator is used for validation.
@@ -72,7 +40,6 @@ This strategy combines stochastic oscillator and OTT indicators to generate trad
 ### Summary  
 This strategy integrates OTT’s reversal and stochastic’s filtering ability to control risk effectively. It works well for reversal or ranging markets. But market cycle and tunings require attention. Further improvements can be made in parameter optimization and money management.
 
-[/trans]
 
 > Strategy Arguments
 

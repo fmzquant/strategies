@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/127746d729b4d14af8b.png)
 
-[trans]
-#### 概述
-"短中长期三重移动平均线趋势跟踪策略"是一种利用不同周期移动平均线组合来捕捉市场趋势并进行交易的量化投资策略。该策略以3日最低价短期移动平均线、3日最高价短期移动平均线和30日收盘价中期移动平均线为基础,通过比较收盘价与这三条均线的相对位置来判断趋势方向并发出交易信号。当收盘价跌破3日最低价均线且高于30日收盘价均线时做多,而当收盘价突破3日最高价均线时平仓。
-
-#### 策略原理
-该策略的核心原理是利用移动平均线的趋势特性和不同周期均线的交叉关系来捕捉市场趋势。短期的3日最低价和最高价移动平均线能够快速反应价格的短期波动,而中期的30日收盘价移动平均线则能体现更大级别的趋势方向。
-
-当收盘价跌破3日最低价均线且高于30日收盘价均线时,说明短期出现回撤但中期趋势依然看涨,此时入场做多。而当收盘价突破3日最高价均线时,短期上涨动能衰竭,此时平仓了结。通过短中期均线的配合使用,策略可以在趋势产生初期介入,并在趋势结束前及时退出。
-
-#### 策略优势
-1. 趋势捕捉能力强。策略利用短中期不同周期均线的配合,能较好地捕捉市场中长期趋势,顺势而为。
-2. 及时止盈。通过30日中期均线判断趋势方向,并利用3日短期均线及时兑现利润,避免过度持仓。 
-3. 参数简单,易于理解和优化。策略仅使用了三条均线,逻辑清晰,参数也容易进行优化测试。
-4. 适应性强。短中期均线组合能适应不同波动周期的市场,对趋势和震荡行情都有一定适应性。
-
-#### 策略风险
-1. 频繁交易。策略在震荡行情中可能出现频繁交易信号,增加了交易成本。
-2. 突发事件风险。市场若出现剧烈异常波动,均线系统可能失效,造成较大回撤。
-3. 参数失效风险。市场趋势节奏若发生变化,原有参数可能失去效力,需要重新优化。
-4. 仓位管理欠缺。策略未设置仓位管理和资金管理规则,风险控制能力有限。
-
-#### 策略优化方向  
-1. 增加仓位管理。可以根据趋势强度、波动率等指标动态调节仓位,提高收益风险比。
-2. 结合其他趋势指标。可以引入MACD、DMI等其他趋势类指标作为辅助,提高趋势判断准确度。
-3. 优化参数。针对不同标的和周期,对均线参数进行优化,找出最佳参数组合。
-4. 加入止损。设置合理止损位,控制单次交易最大亏损,提高策略稳健性。
-5. 适当过滤。减少在震荡行情下的交易频率,可以考虑加入ATR等波动率过滤机制。
-
-#### 总结
-"短中长期三重移动平均线趋势跟踪策略"是一个利用不同周期均线捕捉趋势的量化交易策略。它通过比较价格与3日最低价均线、3日最高价均线和30日均线的位置关系,在趋势产生初期介入并在结束前退出。策略逻辑简单易懂,适应性较强,但也存在频繁交易、仓位管理欠缺等风险。未来可从仓位管理、止损止盈、参数优化等方面对策略进行完善,以期获得更稳健的收益。
-
-|| 
 
 #### Overview
 The "Short-Medium-Long Term Triple Moving Average Trend Following Strategy" is a quantitative investment strategy that utilizes a combination of moving averages with different periods to capture market trends and generate trading signals. The strategy is based on a 3-day low price short-term moving average, a 3-day high price short-term moving average, and a 30-day closing price medium-term moving average. By comparing the closing price's relative position to these three moving averages, the strategy determines the trend direction and issues trading signals. When the closing price falls below the 3-day low price moving average and is above the 30-day closing price moving average, a long position is entered. When the closing price breaks above the 3-day high price moving average, the position is closed.
@@ -73,7 +41,6 @@ When the closing price falls below the 3-day low price moving average and is abo
 
 #### Summary
 The "Short-Medium-Long Term Triple Moving Average Trend Following Strategy" is a quantitative trading strategy that captures trends using moving averages with different periods. It enters at the early stage of a trend and exits before its end by comparing the price's position relative to the 3-day low price moving average, 3-day high price moving average, and 30-day moving average. The strategy's logic is simple and easy to understand, with strong adaptability. However, it also has risks such as frequent trading and lack of position management. Future improvements can be made in areas such as position management, stop-loss and profit-taking, and parameter optimization to obtain more robust returns.
-[/trans]
 
 
 

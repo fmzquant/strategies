@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17ed95c86e7f1ccd97d.png)
 
-[trans]
-#### 概述
-该策略是一种基于交易量和价格突破的动态DCA策略。它通过识别最近的价格低点,并在价格突破该低点且交易量增加时开始建仓。在价格继续下跌的过程中,策略会根据浮动亏损的大小,动态调整每次建仓的数量,直到达到设定的总建仓次数。同时,该策略还会根据价格下跌幅度的中位数来设置止盈价格。
-
-#### 策略原理
-1. 通过ta.pivotlow()函数识别最近的价格低点,并将其作为支撑位。
-2. 计算历史价格突破支撑位后的下跌幅度,取其中位数作为安全距离和止盈幅度的参考。
-3. 当价格突破支撑位且相对交易量大于设定的倍数时,触发建仓信号。
-4. 根据设定的总建仓次数,将总资金分为等比例的多个部分,每次建仓时,根据当前建仓次数动态调整建仓数量,实现仓位的指数增长。
-5. 在建仓过程中,如果浮动亏损达到设定的阈值,则继续加仓,直到达到总建仓次数。
-6. 当价格上涨到止盈价格时,平掉所有仓位。
-
-#### 策略优势
-1. 动态调整建仓数量:根据价格下跌过程中的浮动亏损,动态调整每次建仓的数量,控制风险的同时,也能够在价格反弹时获得更多的利润。
-2. 参考历史数据设置参数:通过计算历史价格突破支撑位后的下跌幅度,取其中位数作为安全距离和止盈幅度的参考,使策略参数更加贴近市场实际情况。
-3. 限制总建仓次数:通过设置总建仓次数,控制策略的总风险敞口,避免过度加仓导致的损失。
-
-#### 策略风险
-1. 支撑位失效风险:如果市场出现极端行情,价格突破支撑位后持续大幅下跌,策略的加仓机制可能会带来较大的损失。
-2. 参数设置风险:策略的表现很大程度上取决于参数的设置,如果参数设置不当,可能会导致策略表现不佳。
-3. 止盈价格设置风险:如果止盈价格设置过高,可能会错失部分利润;如果设置过低,可能会过早平仓,无法充分利用价格反弹的机会。
-
-#### 策略优化方向
-1. 引入更多指标:在建仓信号的判断中,可以引入更多的技术指标,如RSI、MACD等,以提高信号的准确性。
-2. 优化资金管理:可以根据市场波动性、账户风险承受能力等因素,动态调整每次建仓的资金比例,以更好地控制风险。
-3. 自适应止盈止损:根据市场波动性的变化,动态调整止盈止损的幅度,以更好地适应市场的变化。
-
-#### 总结
-该策略通过动态调整建仓数量和参考历史数据设置参数的方式,在控制风险的同时,力求在价格反弹时获得更多的利润。但是,策略的表现很大程度上取决于参数的设置和市场情况,仍然存在一定的风险。通过引入更多指标、优化资金管理和自适应止盈止损等方式,可以进一步提高策略的表现。
-
-|| 
 
 #### Overview
 This strategy is a volume-based dynamic DCA strategy that uses price breakouts. It identifies the most recent price low and starts building positions when the price breaks below that low and the trading volume increases. As the price continues to fall, the strategy dynamically adjusts the quantity of each position based on the size of the floating loss until it reaches the set total number of positions. At the same time, the strategy sets the take-profit price based on the median of the historical price drop percentages.
@@ -71,7 +40,6 @@ This strategy is a volume-based dynamic DCA strategy that uses price breakouts. 
 
 #### Summary
 By dynamically adjusting position sizes and setting parameters based on historical data, this strategy aims to control risk while seeking greater profits during price rebounds. However, the strategy's performance largely depends on parameter settings and market conditions, and risks still exist. By introducing more indicators, optimizing money management, and using adaptive take-profit and stop-loss, the strategy's performance can be further improved.
-[/trans]
 
 > Strategy Arguments
 

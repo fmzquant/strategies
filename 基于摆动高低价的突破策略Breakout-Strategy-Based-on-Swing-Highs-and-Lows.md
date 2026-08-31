@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种基于价格摆动高低点进行突破交易的量化策略。该策略通过判断关键价格区域的突破形成交易信号。
-
-一、策略原理
-
-该策略主要遵循以下交易逻辑:
-
-1.计算近3根K线的最高价和最低价,代表当前短期摆动;
-
-2.计算近50根K线的最高价和最低价,代表近期震荡范围;
-
-3.当价格突破短期低点同时超过近期低点时,形成买入信号;
-
-4.当价格突破短期高点同时低于近期高点时,形成卖出信号。
-
-5.设置止损止盈点以控制风险。
-
-通过判断关键价格区域的突破来发现交易机会,可以有效识别开始启动的新一波趋势。
-
-二、策略优势
-
-该策略最大的优势在于突破判断规则简单清晰,易于实现。
-
-另一优势是止损止盈设置直接,可以控制每次交易的风险。
-
-最后,还可以设置回测时间范围,方便针对不同市场阶段进行测试。
-
-三、潜在风险
-
-但该策略也存在一些潜在问题:
-
-首先,仅凭突破无法准确判断趋势,可能出现假信号。
-
-其次,没有进行参数优化,策略稳定性有限。
-
-最后,止盈止损设置需要优化,以兼顾盈亏比。
-
-四、内容总结
-
-本文详细介绍了一种基于价格摆动高低突破的量化交易策略。它通过判断关键价格区域的突破来发现交易机会。该策略概念清晰简单,但也需要改进参数设置等问题。总体来说,它提供了一种独特的突破思路。
-
-||
 
 This article explains in detail a quantitative breakout trading strategy based on price swing highs and lows. It generates trading signals by identifying breaks of key price levels.
 
@@ -96,7 +53,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative breakout trading strategy based on price swing highs and lows. It aims to discover opportunities through key level breaks. While the concept is simple and clear, improvements in parameter tuning are required. Overall it provides a unique breakout approach.
 
-[/trans]
 
 > Strategy Arguments
 

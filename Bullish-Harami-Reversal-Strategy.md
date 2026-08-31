@@ -10,28 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-多头包围K线反转策略
-
-该策略通过识别“多头包围”K线形态来进行多头反转交易。具体来说,满足以下条件时产生买入信号:
-
-1. 当前K线实体小,完全包围在前一根大阴线内部
-2. 当前K线实体颜色与前一根K线相反
-3. 当前K线开盘价高于前一根K线收盘价
-4. 当前K线实体大小比前一根K线实体小
-
-当满足这些条件时,说明市场出现多头力量反转的迹象,这时做多入场。入场后设置止损和止盈平仓。
-
-这种策略的优点是利用典型的K线形态来识别反转点位,比较直观。但是也存在一定的缺陷:
-
-1. 多头包围形态不一定持续,存在被反转的风险
-2. K线形态识别难度较大,需要参数优化
-3. 滞后信号,入场时机不佳
-4. 回测曲线拟合风险较大
-
-总体来说,多头包围反转策略可以作为趋势判断的参考,但实盘中仍需审慎。应该适当 loosen 参数,并配合其他指标来验证形态。此外,严格的资金管理也是成功运用该策略的关键。
-
-||
 
 This strategy identifies "bullish harami" candlestick patterns for bullish reversal trades. Specifically, long signals are generated when:
 
@@ -51,7 +29,6 @@ The advantage of this strategy is it uses classical candlestick patterns to iden
 
 Overall, the bullish harami reversal strategy can serve as a reference for trend analysis, but should be applied cautiously in live trading. Parameters should be loosened and combined with other indicators for pattern verification. Also, strict risk management is key to successfully implementing this strategy.
 
-[/trans]
 
 > Strategy Arguments
 

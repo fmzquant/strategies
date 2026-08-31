@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/102019f2e63270600d9.png)
 
-[trans]
-#### 概述
-这个策略使用了Elliott波浪理论,随机指标和指数移动平均线的组合。Elliott波浪理论用于识别市场趋势和买卖条件,随机指标用于衡量当前趋势的强弱,指数移动平均线用于可视化整体市场趋势以及支撑位和阻力位。这三种技术的结合可以帮助交易者识别交易机会,做出明智的市场决策。
-
-#### 策略原理
-该策略首先使用Elliott波浪理论来识别市场趋势。当收盘价突破5日指数移动平均线时,产生买入信号;当收盘价跌破5日指数移动平均线时,产生卖出信号。这有助于捕捉趋势的开始和结束。
-
-接下来,策略使用随机指标来衡量当前趋势的强度。随机指标由两条线组成:K线和D线。K线衡量收盘价相对于最近一段时间的高低点,D线是K线的移动平均线。当K线在D线上方时,表明上涨趋势较强;当K线在D线下方时,表明下跌趋势较强。
-
-最后,该策略使用5个不同周期(5、10、20、50和200)的指数移动平均线来可视化整体市场趋势。较短周期的移动平均线反应短期趋势,较长周期的移动平均线反应长期趋势。当较短周期的移动平均线在较长周期之上时,表明上涨趋势;反之则表明下跌趋势。
-
-#### 策略优势
-1. 通过结合三种不同的技术指标,该策略提供了一个全面而准确的交易系统。
-2. Elliott波浪理论和随机指标可以帮助识别趋势和买卖条件,而指数移动平均线可以可视化整体市场趋势。
-3. 使用多个不同周期的移动平均线,可以更好地理解市场的短期和长期趋势。
-4. 该策略使用简单而有效的规则来产生买卖信号,易于实施和自动化。
-
-#### 策略风险
-1. 像所有的技术指标一样,该策略在波动或横盘的市场中效果可能不佳。
-2. 该策略依赖于历史数据,可能无法很好地适应不断变化的市场条件。
-3. 该策略没有考虑基本面因素,如经济数据或地缘政治事件,这可能导致错误的交易信号。
-4. 过度拟合是一个潜在的风险,因为该策略使用了多个参数和指标。
-
-#### 策略优化方向 
-1. 考虑结合其他技术指标,如相对强弱指数(RSI)或平均真实波幅(ATR),以改进趋势识别和风险管理。
-2. 尝试不同的参数设置,如移动平均线的周期或随机指标的敏感度,以优化策略性能。
-3. 引入基本面数据,如经济日历事件或情绪指标,以过滤掉可能错误的技术信号。
-4. 实施更复杂的资金管理规则,如基于波动性调整仓位大小或使用追踪止损,以减少风险敞口。
-
-#### 总结
-Elliott Wave Stochastic EMA策略通过结合Elliott波浪理论、随机指标和指数移动平均线,提供了一个全面的交易系统。它利用这些指标来识别趋势、衡量趋势强度以及可视化整体市场趋势。虽然该策略有几个优点,如易于实施和趋势识别能力,但它也存在一些风险,如对波动性的敏感性和过度拟合的可能性。通过纳入其他指标、优化参数设置和改进资金管理,可以进一步增强该策略的性能。总的来说,Elliott Wave Stochastic EMA策略为技术分析提供了一个有前景的起点,但在实际应用中需要谨慎和进一步的回测。
-
-|| 
 
 #### Overview
 This strategy uses a combination of Elliott Wave theory, the Stochastic indicator, and Exponential Moving Averages (EMAs). Elliott Wave theory is used to identify market trends and buy/sell conditions, the Stochastic indicator is used to measure the strength of the current trend, and EMAs are used to visualize the overall market trend as well as support and resistance levels. The combination of these three techniques can help traders identify trading opportunities and make informed decisions about the market.
@@ -75,7 +42,6 @@ Finally, the strategy uses five EMAs of different periods (5, 10, 20, 50, and 20
 
 #### Summary
 The Elliott Wave Stochastic EMA strategy provides a comprehensive trading system by combining Elliott Wave theory, the Stochastic indicator, and Exponential Moving Averages. It leverages these indicators to identify trends, measure trend strength, and visualize the overall market trend. While the strategy has several strengths, such as ease of implementation and trend identification capabilities, it also carries some risks, such as sensitivity to volatility and the potential for overfitting. The strategy's performance could be further enhanced by incorporating additional indicators, optimizing parameter settings, and improving money management. Overall, the Elliott Wave Stochastic EMA strategy offers a promising starting point for technical analysis, but requires caution and further backtesting in practical application.
-[/trans]
 
 
 

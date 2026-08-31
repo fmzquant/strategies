@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9555b98989b968a618.png)
-[trans]
-### 概述
-EMA黄金交叉交易策略通过计算不同周期的EMA均线,判断它们的交叉情况,以发出买入和卖出信号。当短周期EMA上穿长周期EMA时,产生买入信号;当短周期EMA下穿长周期EMA时,产生卖出信号。
-
-### 策略原理
-该策略的核心是计算两条不同周期的EMA均线,包括一条较短周期的EMA均线,默认周期为9;以及一条较长周期的EMA均线,默认周期为20。代码通过调用pine脚本中的ema内置函数分别计算出这两条线。然后通过判断两条EMA线是否发生交叉,来产生交易信号。具体来说,如果快线从下方上穿慢线,就产生买入信号;如果快线从上方下穿慢线,就产生卖出信号。
-
-交叉信号的判断是通过pine脚本中的crossover和crossunder两个内置函数实现的。crossover函数判断快线是否从下方上穿慢线,返回布尔值;crossunder函数判断快线是否从上方下穿慢线,返回布尔值。根据这两个函数的返回值,代码提交对应的买入或者卖出指令。
-
-除此之外,代码还提供了一些辅助条件,比如设置开始和结束日期,限制只做多或只做空等,这有助于进行更精细的回测或优化。
-
-### 优势分析
-该策略最大的优势就是非常简单直接,容易理解和实现,适合初学者学习。另外,移动平均线本身作为一种趋势跟踪指标,可以有效跟踪市场趋势,利用趋势产生额外收益。最后,该策略参数较少,容易调整,这也是其优势之一。
-
-### 风险分析
-该策略主要面临噪音交易和趋势反转的风险。EMA线容易受到短期市场波动的影响,可能会产生错误信号,从而导致不必要的交易,这会增加交易频率和成本。另一方面,交叉信号发出时,趋势可能已经接近反转点,这时进行交易的风险较大。此外,参数设置不当也会影响策略表现。
-
-可以通过调整EMA周期,或增加其他过滤条件等方法来减少噪音交易。同时设置止损来控制单笔损失。优化参数可以使策略更稳定。当然,任何交易策略都无法完全避免亏损,需要承担一定风险。
-
-### 优化方向 
-该策略可以从以下几个方向进行优化:
-1. 优化EMA周期参数,寻找最佳参数组合
-2. 增加其他指标过滤,如MACD、RSI等,减少假信号
-3. 增加趋势判断指标,避免趋势反转
-4. 结合股票基本面选择标的
-5. 调整持仓管理,如根据ATR设置止损位
-
-### 总结
-EMA黄金交叉是一种简单有效的趋势跟踪策略。它利用EMA交叉产生交易信号,可以自动捕捉价格趋势, profit from trends in price. 该策略容易理解和调整,非常适合初学者学习,也可作为模块集成到更复杂的策略中。但是,任何策略都存在风险,需要妥善管理。通过不断优化和丰富,可以使该策略更稳定可靠。
-
-||
 
 ### Overview
 
@@ -77,7 +46,6 @@ This strategy can be improved in the following aspects:
 ### Conclusion  
 
 The EMA crossover is a simple yet effective trend following strategy. It uses EMA crosses to generate trading signals, automatically capturing price trends. This easy to understand and adjustable strategy is perfect for beginners to learn. It can also be integrated into more complex strategies. However, all strategies bear risks and need prudent management. Continued enhancements in terms of optimization and enriching market conditions can make this strategy more robust.
-[/trans]
 
 > Strategy Arguments
 

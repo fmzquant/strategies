@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b31ba52820b24fb570.png)
-[trans]
-
-## 概述
-
-该策略结合了价格变化率和均线的技术指标,实现买入点和卖出点的精确定位。当价格出现明显下跌时建立买入阈值,并在进一步下跌时打开多头仓位;当价格上涨时建立卖出阈值,在继续上涨时平仓。同时,策略还采用加仓方式,分多次买入,降低成本。
-
-## 策略原理
-
-### 买入逻辑
-
-1. 计算价格变化率ROC,并设定买入阈值线。
-2. 当价格跌破买入阈值线时,记录该点并启动买入限定线。 
-3. 买入限定线根据输入参数设定持续时间,过期后关闭。
-4. 当价格继续下跌并跌破买入限定线时,打开首个多头仓位。
-
-### 卖出逻辑
-
-1. 计算价格变化率ROC,并设定卖出阈值线。  
-2. 当价格涨破卖出阈值线时,记录该点并启动卖出限定线。
-3. 卖出限定线根据输入参数设定持续时间,过期后关闭。
-4. 当价格继续上涨并涨破卖出限定线时,平掉全部多头仓位。
-
-### 风险控制
-
-策略内置止损和止盈功能,可自定义参数,实时控制存在仓位的风险。
-
-### 加仓方式
-
-每开启一个交易仓位,根据输入参数以一定比例设定后续的买入价格,实现分批买入加仓的效果。
-
-## 优势分析
-
-1. 运用价格变化率指标ROC寻找买卖点位, ROC对价格变化非常敏感,买卖点定位准确。
-2. 采用限定线方式进一步确认买卖时机,避免假突破。 
-3. 加仓方式可在保证风险可控的基础上追踪市场价值。
-4. 内置止损止盈功能严格控制单笔仓位风险。
-
-## 风险及解决方案
-
-1. 市场出现剧烈波动时,策略可能打开过多仓位。解决方法是合理设定加仓的参数,控制仓位总数。
-2. 价格震荡趋势不明时,止损或止盈价格可能被频繁触发。可适当放宽止盈止损幅度,或关停该功能。
-
-## 优化建议
-
-1. 结合其他指标过滤入场时机。例如配合均线,只在价格跌破均线时采信ROC指标。
-2. 优化加仓逻辑,在满足一定条件下才启动加仓。例如只在价格再度下跌超过一定幅度时继续加仓。  
-3. 不同品种的参数设置会有较大差异,需要充分的回测和模拟实盘以取得最佳参数组合。
-4. 可设置自适应止盈止损,根据市场波动程度设定不同的止损幅度。
-
-## 总结
-
-该策略综合运用了ROC指标精确定位买卖点,限定线方式过滤信号,内置止盈止损防范风险,并通过加仓扩大获利。在参数设置合理的前提下,可在保证风险在可控范围的同时获取超额收益。未来可进一步优化信号过滤与风控机制,使策略适应更多市场环境。
-
-||
 
 
 ## Overview  
@@ -117,7 +63,6 @@ When opening each new trade position, the system calculates the subsequent long 
 
 The strategy effectively combines accurate entry signals with limit line filters, built-in risk management functions, and pyramiding for position sizing. With reasonable parameter tuning, it can acquire excess returns while keeping risks in check. Future improvements may focus more on signal filtering methods and risk control for broader market adaptability.
 
-[/trans]
 
 > Strategy Arguments
 

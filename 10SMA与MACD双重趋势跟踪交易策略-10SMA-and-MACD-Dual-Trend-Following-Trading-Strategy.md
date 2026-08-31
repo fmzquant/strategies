@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/157d56d28188a46a65a.png)
-[trans]
-#### 概述
-该策略利用10日简单移动平均线(10SMA)和移动平均线收敛散度指标(MACD)两个技术指标,通过它们的交叉信号来判断价格的趋势方向,从而进行交易决策。当价格上穿10SMA且MACD快线上穿慢线时,产生做多信号;当价格下穿10SMA且MACD快线下穿慢线时,平仓多单。该策略试图捕捉市场的趋势性机会,同时通过两个指标的共同确认来提高信号的可靠性。
-
-#### 策略原理
-1. 计算10日简单移动平均线(10SMA),作为判断价格趋势的参考。当价格在10SMA上方运行时,意味着多头趋势占优;反之则意味着空头趋势占优。
-2. 计算MACD指标,包括MACD快线、慢线和柱状图。MACD指标通过对短期和长期移动平均线的差值进行double smoothing来反映价格的趋势强度和方向。
-3. 产生交易信号:
-   - 做多信号:当前收盘价上穿10SMA,且MACD快线上穿MACD慢线
-   - 平多信号:当前收盘价下穿10SMA,且MACD快线下穿MACD慢线
-4. 根据交易信号执行交易:
-   - 做多信号出现时,开多仓
-   - 平多信号出现时,平掉所有多仓
-   
-该策略的核心是利用价格与10SMA的位置关系以及MACD快慢线的交叉来判断趋势,两个指标的共同确认可以一定程度上提高信号的有效性和可靠性。
-
-#### 优势分析
-1. 简单易用:该策略只使用了两个常见技术指标,原理简单,计算和应用都比较容易。
-2. 趋势跟踪:通过10SMA和MACD的结合使用,该策略能够较好地捕捉和跟踪市场的中长期趋势。
-3. 过滤噪音:相比单独使用价格或者某一指标产生信号,两个指标的共同确认可以在一定程度上过滤掉市场噪音和虚假信号。
-4. 适应性强:该策略对参数的选择不是非常敏感,适应性较强,可以应用于不同的市场和品种。
-
-#### 风险分析
-1. 滞后风险:移动平均线和MACD都是滞后指标,交易信号相对于市场走势可能存在一定的滞后,导致错失最佳入场时机或者盈利空间的减少。
-2. 振荡市风险:在振荡市场中,价格和指标可能出现频繁的交叉,产生交易信号,导致过度交易和手续费的增加。
-3. 突发事件风险:该策略主要基于技术指标产生交易信号,并没有考虑基本面因素和突发事件的影响,面对黑天鹅事件可能会出现较大回撤。
-4. 参数优化风险:该策略的表现会受到参数选择的影响,不同参数可能产生不同结果,存在参数优化的风险。
-
-#### 优化方向
-1. 加入其他过滤条件:可以考虑加入其他技术指标或者条件,如交易量、波动率等,以进一步提高信号的可靠性和有效性。
-2. 优化止盈止损:可以根据市场特点和个人风险偏好,设置适当的止盈止损条件,以控制单次交易的风险敞口和盈亏比。
-3. 动态参数优化:可以通过参数优化的方法,根据不同市场状态和品种特点,动态调整指标参数,以适应市场的变化。
-4. 结合基本面分析:将技术分析与基本面分析相结合,考虑重要的经济数据、政策事件等因素对市场的影响,以提高策略的全面性和有效性。
-   
-#### 总结
-10SMA与MACD双重趋势跟踪交易策略通过两个常用技术指标的结合使用,以简单易用的方式来捕捉市场的中长期趋势性机会。相比单独使用某一指标,两个指标的共同确认可以一定程度上提高信号的可靠性和有效性,同时也具有一定的适应性。但是,该策略也存在滞后、振荡市和突发事件等风险,实际应用中需要根据市场特点和个人偏好进行适当的优化和改进,如加入其他过滤条件、优化止盈止损、动态参数优化和结合基本面分析等,以进一步提升策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy utilizes two technical indicators, the 10-day Simple Moving Average (10SMA) and the Moving Average Convergence Divergence (MACD), to determine the trend direction of the price and make trading decisions based on their crossover signals. When the price crosses above the 10SMA and the MACD fast line crosses above the slow line, a long signal is generated; when the price crosses below the 10SMA and the MACD fast line crosses below the slow line, the long position is closed. The strategy aims to capture trending opportunities in the market while improving the reliability of signals through the confirmation of two indicators.
@@ -85,7 +47,6 @@ The core of this strategy is to determine the trend using the relationship betwe
 #### Summary
 The 10SMA and MACD Dual Trend Following Trading Strategy combines two commonly used technical indicators to capture medium to long-term trending opportunities in the market in a simple and easy-to-use manner. Compared to using a single indicator, the confirmation from two indicators can improve the reliability and effectiveness of signals to a certain extent while also having a certain level of adaptability. However, the strategy also faces risks such as lag, choppy markets, and unexpected events. In practical application, appropriate optimization and improvements need to be made based on market characteristics and personal preferences, such as adding other filtering conditions, optimizing take profit and stop loss, dynamic parameter optimization, and combining with fundamental analysis to further enhance the robustness and profitability of the strategy.
 
-[/trans]
 
 
 

@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/116653219aad2cc5489.png)
 
-[trans]
-## 概述
-
-本策略是基于移动均线交叉系统的交易策略。通过计算不同周期的移动均线,并设定均线间的交叉作为买入卖出信号。同时结合RSI指标对交易信号进行过滤,降低交易频率的同时提高盈利率。
-
-## 策略原理
-
-1. 计算快速均线,中速均线,慢速均线。快速均线和中速均线之间构成交易通道。
-
-2. 当价格上穿快速均线时,做多;当价格下穿快速均线时,做空。
-
-3. 交易通道方向判断:快速均线 > 中速均线 多头;快速均线 < 中速均线 空头。只在通道方向一致时交易。
-
-4. 慢速均线作为趋势过滤:只有当价格位于慢速均线之上才做多,反之则做空。
-
-5. RSI指标判断:RSI高于设定买入线时做多,RSI低于设定卖出线时做空。
-
-6. 止盈止损设置:采用ATR止损,ATR止盈。
-
-## 优势分析
-
-1. 多种均线组合,灵活适应市场变化。
-
-2. RSI指标避免假突破,提高信号质量。 
-
-3. ATR动态止损止盈,降低爆仓风险。
-
-4. 慢速均线+RSI双重过滤,避免不必要交易。
-
-## 风险分析
-
-1. 均线交叉信号可能存在滞后。
-
-2. 双重过滤可能错过部分交易机会。
-
-3. ATR止损可能导致超出正常止损范围。
-
-4. 参数设置不当可能导致过于频繁或过于稀疏的交易。
-
-对应风险管理措施:
-
-1. 适当缩短均线周期,降低滞后概率。
-
-2. 适当调整过滤参数,保持适度交易频率。
-
-3. 调整ATR倍数,确保止损在可承受范围。
-
-4. 优化参数设置,找到最佳参数组合。
-
-## 优化方向
-
-1. 测试不同类型均线的组合效果。
-
-2. 测试不同均线周期参数的优化。
-
-3. 测试RSI参数优化。
-
-4. ATR止损止盈系数优化。
-
-5. 优化过滤参数,寻找最佳过滤强度。
-
-## 总结
-
-本策略综合运用均线、RSI和ATR三个指标,通过参数优化,可以配置出适合不同市场的交易系统。相比单一技术指标,可以有效减少虚假信号,提高获利概率。但任何技术指标策略都无法完全规避市场风险,需要建立严格的风险管理体系作为保障。
-||
 
 ## Overview
 
@@ -141,7 +76,6 @@ Corresponding risk management measures:
 
 This strategy combines MA, RSI and ATR, which through parameter optimization, can generate trading systems adaptable to different markets. Compared to single indicator strategies, it effectively reduces false signals and improves profitability. But no technical strategies can completely avoid market risks. Strict risk management practices are required as safeguards.
 
-[/trans]
 
 > Strategy Arguments
 

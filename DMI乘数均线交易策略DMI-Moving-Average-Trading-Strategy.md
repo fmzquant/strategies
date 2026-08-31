@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-一种新的量化交易策略,该策略主要基于DMI指标来识别行情的底部和顶部。本文将详细介绍该交易策略的原理、优势以及可能存在的风险。
-
-## 策略原理
-
-DMI指标全称为平均趋向指标(Average Directional Movement Index),它由 Welles Wilder 在20世纪70年代提出,用于判断市场的趋势和力度。DMI指标由三条线组成:
-
-- +DI:代表上升趋势的力度
-- -DI:代表下降趋势的力度  
-- ADX:代表趋势的平均力度
-
-当+DI上穿-DI时,代表涨势加强,可以考虑做多;当-DI上穿+DI时,代表跌势加强,可以考虑做空。
-
-本策略的核心逻辑是:
-
-1. 当+DI线下穿10,并且-DI线上穿40时,做多
-2. 当-DI线下穿10,并且+DI线上穿40时,做空
-
-也就是说,当反向DI线显著强于正向DI线时,可以判断目前的趋势即将反转,这时就可以适当介入进行反向操作。
-
-为了过滤错乱情况,本策略采用DI的均线,具体参数设置为:
-
-- +DI和-DI的周期长度均为11
-- ADX的平滑周期为11
-
-通过调整均线参数来控制交易信号的频繁程度。
-
-本策略主要应用于NIFTY50指数期权交易,也可用于其他品种。具体交易时,选择平值期权,止损设置为20%,若亏损超过10%则加仓,但若亏损扩大至超过最初投入资金的20%则止损出局。
-
-## 策略优势
-
-相比简单的DI交叉策略,本策略采用DI指标的均线过滤,可以有效减少whipsaw,并且减少交易次数,从而降低交易成本和滑点损失。
-
-相比单纯的趋势跟踪策略,本策略在判断趋势反转点时比较精确,可以及时捕捉转折点附近的交易机会。
-
-本策略参数优化比较简单,容易实现效果优化。
-
-## 风险提示
-
-本策略仅给出交易信号的方向,具体的止损止盈要求需要按照个人风险偏好来设置。
-
-DMI指标在盘整区域时可能产生大量假信号,应该避免在非趋势性市场中使用本策略。
-
-DI交叉并不能百分之百预测趋势转折点,存在一定的时序错误。应适当结合其他指标来验证交易信号。
-
-## 总结
-
-本策略通过DI均线的筛选,可以有效识别趋势反转机会。相比其他趋势跟踪策略,具有反转识别能力更强的优点。总体来说,本策略参数优化灵活,适合作为量化交易体系的一个模块来使用。使用时需要注意防范误信号,并适当评估市场趋势态势。
-
-||
 
 Recently I have developed a new quantitative trading strategy mainly based on the DMI indicator to identify bottoms and tops in the market. This article will explain in detail the rationale, advantages and potential risks of this trading strategy.
 
@@ -110,7 +59,6 @@ DI crossovers cannot fully predict trend reversals. There could be some timing e
 
 By screening with DI moving averages, this strategy can effectively identify trend reversal opportunities. Compared to other trend following strategies, it has the advantage of stronger reversal recognition abilities. Overall, this strategy has flexible parameter tuning and can be used as a module in quantitative trading systems. Pay attention to false signals and properly assess the market regime when using it.
 
-[/trans]
 
 > Strategy Arguments
 

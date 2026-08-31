@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bf57dac26ee6be0d40.png)
 
-[trans]
-
-
-## 概述
-
-本策略的核心思想是利用移动止损追踪价值最大化,并辅以过滤器和止盈方法优化入场。策略名中的Y字形代表策略信号线一买一卖的交叉形态。
-
-## 策略原理
-
-本策略主要基于KivancOzbilgic的PMax探索器策略,并做了一些修改。
-
-1. 基于ATR和移动均线计算PMax。当价格上穿PMax时Generate Buy信号。
-
-2. 加入T3指标和价格作为过滤器,确保在趋势向上时入场。
-
-3. 设置止盈方法:先设置双BAND策略判断第一次止盈;然后通过骰子策略判断后续的止盈和止损点。
-
-4. MOST指标辅助判断趋势,以减少不必要的反向操作。
-
-## 优势分析  
-
-1. PMax策略本身具有避免追高止损的优势,移动止损机制更有利于减少DD。
-
-2. 双重过滤器确保只在上升趋势中入场,避免假突破。
-
-3. 多个止盈点设置让盈利更加灵活。
-
-4. MOST指标确保只做多头操作,避免反向交易。
-
-## 风险分析
-
-1. PMax本身就具有一定的滞后性,容易错过首次突破。
-
-2. 过滤器设置过多也可能错过黄金入场点。
-
-3. 止盈设置过于乐观会让订单无法完全成交。
-
-4. 独做多头交易在具有高波动率的品种中难以获利。
-
-## 优化方向  
-
-1. 可以测试加入类MACD指标判断短期背离,以确定入场时机。 
-
-2. 可以测试简化过滤器,只保留一个过滤器指标。
-
-3. 可以加入自动调整止盈机制,根据波动率和收益率动态调整后续止盈点。
-
-4. 可以测试允许做空,根据过滤器调整仓位比例。
-
-## 总结
-
-本策略整体以PMax为核心进行入场判断,并设计了多层过滤器和止盈方法进行优化,在趋势品种中可以获得较好收益。后期通过简化过滤器,优化止盈设置,适当调整仓位管理,可以使策略 Parameter 优化成熟,适应更多品种,在实盘中可以获得更出色的表现。
-
-|| 
 
 ## Overview  
 
@@ -116,7 +62,6 @@ This strategy is mainly based on KivancOzbilgic's PMax Explorer strategy with so
 
 The overall strategy is centered around using PMax for entry judgement, and designed multiple filters and take profit methods for optimization, which can yield good returns in trending products. Afterwards, by simplifying filters, optimizing take profit settings, appropriately adjusting position management, the strategy can be optimized to suit more products, achieving even better performance in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

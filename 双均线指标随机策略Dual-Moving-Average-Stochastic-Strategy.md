@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18bac4237d233e53ab7.png)
-[trans]
-### 概述
-
-双均线指标随机策略是一种试图利用均线指标与随机指标的组合来寻找交易机会的策略。它会在快速EMA上穿越慢速SMA时产生交易信号,同时利用随机指标K值判定是否超买超卖来滤除部分信号。
-
-### 策略原理
-
-该策略主要基于两个技术指标:
-
-1. 均线:计算快速EMA、慢速SMA、慢速VWMA三条不同参数的均线,当快速EMA上穿或下穿慢速SMA时产生交易信号。
-
-2. 随机指标:计算%K值,当其超过设定的超买区或超卖区阈值时,认为行情可能反转,可以滤除部分均线交易信号。
-
-具体来说,策略信号发出的逻辑是:
-
-1. 当快速EMA上穿慢速SMA,且%K值低于超卖区阈值时,做多;当快速EMA下穿慢速SMA,且%K值高于超买区阈值时,做空。
-
-2. 对于打开的多头头寸,如果%K值重新进入超卖区域,或者价格跌破止损线,则平仓。对于打开的空头头寸,如果%K值重新进入超买区域,或者价格涨破止损线,则平仓。
-
-通过组合均线指标和随机指标,该策略试图在高概率的均线信号点发出入场信号,同时利用随机指标过滤部分误入的机会。
-
-### 优势分析
-
-该策略有以下主要优势:
-
-1. 结合多种技术指标,综合判断行情,较单一指标更全面。
-2. 利用随机指标过滤信号,可在一定程度上避免误入。
-3. 采用多组混合参数的均线,判断更为全面准确。
-4. 内置止损机制来控制单笔损失。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 均线指标容易产生较多不确定信号,误入概率较大,止损能力有限。
-2. 随机指标本身也可能产生错误信号。
-3. 参数设置(如超买超卖区域大小、均线周期等)可能需要优化,不当设置会影响策略表现。  
-4. 纯技术面的策略,对基本面因素关注不足。
-
-对应方法:
-1. 优化参数,寻找最佳指标参数组合。  
-2. 适当缩小头寸规模,分批建仓。
-3. 结合基本面分析,避开重大事件。
-
-### 优化方向  
-
-该策略主要可从以下几个方面进行优化:
-
-1. 对均线参数进行测试优化,找到最优参数组合。
-2. 对随机指标的参数如超买超卖区域大小进行测试,找到最优参数。
-3. 尝试加入其它指标,如VOLUME增强判断或波动率指标衡量风险,丰富Entry logic。  
-4. 增加止损方式,如追踪止损等以控制风险。
-5. 优化资金管理方式,如根据ATR动态调整头寸。
-6. 结合VIX等恐慌指标避开重大risk-off事件。
-
-### 总结
-
-双均线指标随机策略通过快慢均线指标与随机指标的组合,设计出较为稳健的趋势跟踪策略。但也存在一些可优化空间,如参数选择、止损方式等。若进一步引入更多指标判断和优化,该策略可望获取较稳定的超额收益。
-
-||
 
 ### Overview
 
@@ -129,7 +69,6 @@ The main optimization opportunities are:
 
 The Dual Moving Average Stochastic Strategy utilizes a blend of moving averages and the stochastic oscillator to design a robust trend following system, but has some enhancement opportunities around parameters, stops etc. Further refinements like additional indicators and optimizations can potentially deliver more consistent alpha.
 
-[/trans]
 
 > Strategy Arguments
 

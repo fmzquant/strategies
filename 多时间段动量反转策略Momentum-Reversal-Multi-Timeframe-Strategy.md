@@ -11,90 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10b7e73f92cf98a2e65.png)
 
-[trans]
-
-
-## 概述
-
-本策略结合不同时间段的动量指标,实现在多个时间尺度判断市场趋势反转的能力。策略利用Stochastic oscillator判断短期趋势反转点,并结合较长周期的(最高价-最低价)/收盘价指标判断中长期趋势,实现在多个时间维度判断趋势反转的能力。
-
-## 策略原理
-
-策略由两部分组成:
-
-1. 123反转策略
-
-该部分通过Stochastic oscillator的快线和慢线交叉来判断短期趋势反转。具体来说,如果收盘价较前一日收高,且Stochastic的快线低于慢线且快线低于50,则做多;如果收盘价较前一日收低,且Stochastic的快线高于慢线且快线高于50,则做空。该策略利用Stochastic判断短期超买超卖状态,实现短线反转交易。
-
-2. (最高价-最低价)/收盘价指标
-
-该指标反映当前K线的波动性。指标值较大时表示当前波动加大,可能反转;指标值较小时表示当前波动减弱,趋势可能持续。策略利用该指标的SMA值判断中长线趋势反转。
-
-综合两个指标,可以在短期和中长期同时判断趋势反转,实现多时间尺度的交易策略。
-
-## 策略优势
-
-- 组合多个时间段指标,提高准确率
-
-  策略同时利用短期和中长期指标,可以确保反转信号的可靠性,避免单一指标造成的假信号。
-
-- 灵活的指标参数设定
-
-  Stochastic oscillator和(最高价-最低价)/收盘价指标的参数都可以根据市场调整,使策略更具灵活性。
-
-- 简单明了的策略结构
-
-  策略以Stochastic为核心,辅以中长期趋势判断,结构简单清晰,易于理解和修改。
-
-- 可扩展性强
-
-  策略框架简单通用,可方便地引入更多指标,构建多因子模型。
-
-## 风险分析
-
-- 趋势市场表现可能不佳
-
-  策略以反转为主,在持续趋势市场中表现可能不佳。应适当调整参数以适应趋势市场。
-
-- 需关注指标发出假信号的风险
-
-  在异常市场情况下,Stochastic 和 (最高价-最低价)/收盘价指标可能发出错误信号,需要防范假信号风险。
-
-- 指标参数设置需要经验
-
-  Stochastic 和 (最高价-最低价)/收盘价指标的参数需要根据市场情况优化,否则可能影响策略表现。
-
-- 须适当控制仓位规模
-
-  策略为反转策略,盈亏波动可能较大,需要控制好仓位和风险。
-
-## 策略优化方向
-
-- 引入更多指标构建多因子模型
-
-  可在现有框架下引入更多因子,如成交量、其它反转指标等,构建多因子模型。
-
-- 增加止损机制
-
-  可设定移动止损或时间止损,有效控制单笔交易的损失。
-
-- 参数优化
-
-  可以通过更系统的方法如遗传算法等手段对参数进行优化。
-
-- 增加机器学习
-
-  应用机器学习算法训练判断趋势反转的模型可能进一步提高准确率。
-
-- 结合情感分析
-
-  引入社交数据等非结构化数据的情感分析,辅助预测反转点。
-
-## 总结
-
-本策略整合短期和中期两个时间维度的指标来实现多时间段判断趋势反转,是一个非常好的反转策略框架。具有指标参数灵活、结构简单、扩展性强等优点。下一步可以从引入更多因子、参数优化、止损以及机器学习等方面进行改进,使策略的盈利能力和风险控制能力进一步提升。总体来说,该策略思路新颖,值得深入研究与应用。
-
-||
  
 
 ## Overview
@@ -177,7 +93,6 @@ Combined together, the two components enable the strategy to detect reversals ac
 
 This strategy combines short and medium-term indicators to identify reversals across timeframes. It has advantages like flexible parameters, simple structure, extensibility. Next steps could include more factors, stop loss, parameter optimization, machine learning to further improve profitability and risk management. Overall, this is an innovative strategy worth researching and applying.
 
-[/trans]
 
 > Strategy Arguments
 

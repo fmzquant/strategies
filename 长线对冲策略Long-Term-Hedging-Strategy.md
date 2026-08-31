@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略根据长期趋势判断来进行资产配置和对冲操作。
-
-主要逻辑是:
-
-1. 选择一项基础资产和均线周期及分辨率
-
-2. 计算该资产的简单移动平均线
-
-3. 当价格上穿均线时,表明长期看涨,做多该资产
-
-4. 当价格下穿均线时,表明长期看跌,做空该资产
-
-5. 也可仅做多,或仅做空
-
-6. 通过资产和其移动平均线的关系来判断长期趋势
-
-7. 建立与长期判断相反的头寸进行对冲
-
-该策略对冲了短期波动中的风险,关注资产的长期趋势态势,可获得稳定收益。
-
-## 策略优势
-
-- 简单的均线系统判断长期趋势
-
-- 长短线配置配对,有效对冲系统性风险
-
-- 清晰的做多做空信号
-
-## 策略风险
-
-- 均线系统滞后于价格
-
-- 长期持有带来的资金成本
-
-- 需要关注多个头寸的风险控制
-
-## 总结
-
-该策略通过资产的长短线组合进行对冲操作,强调风险管理。但其均线判定和持仓成本仍需关注。
-
-
-||
 
 ## Strategy Logic
 
@@ -99,7 +53,6 @@ The strategy hedges near-term risks and focuses on the asset's secular trend, al
 
 This strategy hedges using long-term and short-term asset combinations, emphasizing risk management. But MA lag and holding costs require consideration.
 
-[/trans]
 
 > Strategy Arguments
 

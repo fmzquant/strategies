@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15fb6e38fec57213081.png)
 
-[trans]
-
-## 概述
-
-动态止盈追趋策略通过检测长期趋势和短期回调,实现低买高卖,追捧上涨趋势的目的。该策略同时使用波动单位来检测盈亏大小,使其适用于所有币种而无需担心百分比变化。
-
-## 策略原理
-
-该策略 buying的逻辑是:当出现长期上涨趋势(200日EMA上涨,200日RSI大于51)和短期下跌回调(最后2根K线收盘价下跌)时,进行买入开仓。
-
-selling的逻辑是:当价格上涨超过1个波动单位时止盈;当价格下跌超过2个波动单位时止损。
-
-波动单位的计算是:以50日内收盘价标准差的2倍作为基础波动单位。这样可以检测出不同币种自己的波动情况,无需人为设置百分比。
-
-## 优势分析
-
-该策略最大的优势是可以动态检测不同币种的波动大小,根据币种本身的波动设置止盈止损单位。这避免了百分比止盈固定设置的问题,可以自动适应更多币种。
-
-另一个优势是结合长短期判断,可以有效过滤假突破。利用长期趋势判断未来可能上涨的币,再结合短期回调信号,可以有效避免布林带squeeze等假信号。
-
-## 风险分析
-
-该策略最大的风险在于止盈止损单位的设定。如果波动过大,止盈距离可能过近,无法持续追涨;如果波动过小,则可能止损过快。这需要通过更长周期EMA作为辅助,来避免波动单位判断失误。
-
-另一个风险是策略对短期趋势判断的依赖。如果出现长期上涨但短期不回调的情况,会错过入场时机。这可能需要加入其他辅助判断指标。
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加更长周期EMA判断,避免波动单位失误
-
-2. 增加交易量等指标来判断趋势,减少对短期k线的依赖
-
-3. 优化开仓和平仓条件,设置更严格的入场规则
-
-4. 结合机器学习算法判断趋势方向,实现更高胜率
-
-## 总结
-
-动态止盈追趋策略整体思路清晰,核心在于动态波动单位的设定。该策略可以自动适应不同币种设置盈亏单位,无需人工设置百分比。同时结合长短期双重判断,可以有效滤除假信号。通过进一步优化,该策略可以成为高效率的趋势追踪策略。
-
-||
 
 ## Overview
 
@@ -95,7 +52,6 @@ The strategy can be optimized in the following directions:
 
 The Dynamic Take Profit Following Trend Strategy has clear logic at its core—dynamically setting stop loss/take profit units. This strategy can automatically adapt settings across coins without needing manual percentage inputs. Meanwhile, combining double confirmation of long-term and short-term trends can effectively filter out false signals. With further optimizations, this strategy can become a highly efficient trend chasing strategy.
 
-[/trans]
 
 
 

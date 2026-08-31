@@ -11,99 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/de605b9043c989a656.png)
 
-[trans]
-
-### 概述
-
-这个策略基于商品通道指数(CCI)指标,旨在在超卖情况下做多,在超买情况下做空。它还可选地使用指数移动平均线(EMA) filter,以控制只在趋势方向交易。该策略还提供基于固定百分比或平均真实范围(ATR)的止损止盈方式。
-
-### 策略原理
-
-1. 使用CCI指标判断市场趋势
-
-    - CCI通过比较当前价格与一定周期内的平均价格来度量动量
-    
-    - CCI above 150为超买,below -100为超卖
-    
-2. 可选使用EMA filter
-
-    - 仅在价格高于EMA时做多,价格低于EMA时做空
-    
-    - 使用EMA判断趋势方向,避免反趋势交易
-
-3. 提供两种止损止盈方式
-
-    - 基于固定百分比的止损止盈:使用入场价的固定百分比来设置止损止盈
-    
-    - 基于ATR的止损止盈: 使用ATR的倍数来设置止损,再根据风险回报比率计算止盈
-    
-4. 入场条件
-
-    - CCI上穿-100线时做多
-    
-    - CCI下穿150线时做空
-    
-    - 如果启用EMA,仅在价格高于EMA时做多,价格低于EMA时做空
-    
-5. 出场条件
-
-    - 价格触及止损止盈平仓
-    
-    - CCI重新进入超买超卖区域时平仓
-    
-6. 绘图
-
-    - 绘图CCI指标,区域着色
-    
-### 优势分析
-
-1. 使用CCI判断超买超卖情况,这是CCI指标的经典用法
-
-2. 可选EMA可确保只在趋势方向交易,避免反转
-
-3. 提供两种止损止盈方式,可以根据市场调整止损止盈的参数
-
-4. 根据CCI指标再次进入超买超卖区域来平仓,可锁定趋势反转利润
-
-5. 绘图突出CCI信号,易于判读
-
-6. 策略逻辑清晰简单,容易理解和优化
-
-### 风险分析
-
-1. CCI指标存在滞后,可能出现错过反转或产生假信号
-
-2. EMA参数设置不当可能错过趋势或使策略无效
-
-3. 百分比止损止盈难以适应市场变化,应设较宽参数
-
-4. ATR止损止盈对间隔周期敏感,应调整至最佳参数
-
-5. 回撤风险较大,应适当调整仓位管理
-
-6. 效果随市场环境变化,应适时评估指标参数
-
-### 优化方向
-
-1. 评估不同周期的CCI参数,找到最佳参数组合
-
-2. 测试不同EMA周期,确定最合适的趋势判断周期
-
-3. 调整止损止盈参数,取得最佳风险收益比
-
-4. 增加其他filter条件,如交易量,进一步过滤假信号
-
-5. 结合趋势线或图形进行形态判断,提高效果 
-
-6. 增加仓位管理策略,如固定仓位,来控制回撤风险
-
-7. 全面回测不同市场环境数据,动态调整参数
-
-### 总结
-
-该策略运用CCI指标的经典超买超卖原理进行入场。加入EMA filter可控制趋势方向。提供两种止损止盈方式便于调整。绘图突出信号易判读。策略逻辑简单清晰,易于理解和优化。通过参数调整、增加filter条件、风险控制等方面可进一步提高效果。
-
-||
 
 
 ## Overview
@@ -196,7 +103,6 @@ This strategy is based on the Commodity Channel Index (CCI) indicator, aiming to
 
 The strategy utilizes the classic CCI overbought/oversold principles for entry. The EMA filter controls trend trading. Two types of stop loss/take profit provided for flexibility. Plotting highlights signals clearly. Simple and clear logic, easy to understand and optimize. Further improvements can be made via parameter tuning, adding filters, risk control etc.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/137b5bd808d8f0bfe5a.png)
-[trans]
-## 概述
-
-该策略结合了简单移动平均线(SMA)和滚动线性回归趋势线,设定买入条件是收盘价高于SMA和趋势线时做多, Exit条件是收盘价低于SMA和趋势线时平仓。该策略主要利用了SMA的均线交易信号以及滚动趋势线的支持,在突破上行通道时入场,突破下行通道时出场。
-
-## 策略原理
-
-该策略主要基于以下几个组件:
-
-1. SMA: 简单移动平均线,以一定周期(smaPeriod)计算收盘价的平均值作为信号线。
-
-2. 滚动趋势线: 基于线性回归计算一定周期内(window)的最佳拟合直线作为趋势信号。计算方法是最小二乘法。
-
-3. 入场条件: 当收盘价高于SMA均线和滚动趋势线时,做多入场。
-
-4. 出场条件: 当收盘价低于SMA均线和滚动趋势线时,平仓出场。
-
-这样,该策略主要依赖均线交易信号突破入场,以及通道突破出场。利用了移动平均线的均值回归特性以及线性回归通道的均值支持,实现了趋势跟踪突破操作。
-
-## 策略优势分析
-
-该策略集成了均线和趋势线双重过滤,可以有效减少假突破操作。同时,滚动趋势线提供了更准确的通道支撑,使交易决策更加可靠。主要优势如下:
-
-1. 双重过滤机制,避免假突破,提高决策准确性。
-2. 滚动趋势线提供动态通道,支持更精确的通道交易。
-3. 简单直观的交易逻辑,容易理解和实现。
-4. 可自定义参数,适应不同市场环境。
-
-## 风险分析
-
-该策略也存在一些风险,主要集中在以下几点:  
-
-1. SMA和趋势线参数设置不当,可能导致错失交易机会或假突破过多。
-2. 大幅震荡市场中,SMA和趋势线QIAN提供的通道支持会减弱。
-3. 突破失败可能造成亏损,需要严格止损。
-
-针对这些风险,可以从以下几点着手优化:
-
-1. 优化参数,不同品种可以设置不同参数组合。
-2. 加大止损幅度,降低单笔损失。
-3. 在震荡行情中暂停交易,避免被套。
-
-## 策略优化方向  
-
-该策略可以从以下几个维度进行优化:
-
-1. 增加动态调整SMA周期和滑点参数的功能。在不同市场环境中自动优化参数。
-
-2. 增加弹性止损机制。当价格突破趋势线一定比例时止损。
-
-3. 结合其它指标过滤信号。例如量能指标,强弱指标等。提高决策准确性。  
-
-4. 开发反转版本。在价格接近底部,并突破下行通道时做多。
-
-## 总结
-
-该策略整合了移动平均线交易信号和滚动趋势线通道支持,实现了趋势跟踪操作。双重过滤机制降低了假突破概率,提高了决策质量。简单参数设定,逻辑清晰,易于实施和优化调整。整体而言,该策略形成了一套可靠、简单、直观的趋势突破交易体系。
-
-||
 
 ## Overview  
 
@@ -127,7 +68,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy integrates the trading signals from moving average and channel support from rolling trendline to implement trend following operations. The dual filter reduces false breakout probability and improves decision quality. It has simple parameters settings and clear logics, which is easy to implement and optimize. In summary, this strategy forms a reliable, simple and intuitive trend breakout trading system.
 
-[/trans]
 
 > Strategy Arguments
 

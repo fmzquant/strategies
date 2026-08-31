@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15392571a72e5535399.png)
 
-[trans]
-
-## 概述
-
-渔夫转身EMA多重止损多重止盈策略结合了指标EMA和自定义的渔夫转身信号,实现了趋势跟踪交易。当短周期EMA上穿长周期EMA并且渔夫转身信号大于0时产生买入信号。该策略设置了两个止盈点和一个动态止损点来锁定利润和控制风险。第一个止盈点为2倍ATR,第二个止盈点为3倍ATR,止损点为1倍ATR。当第一个止盈点被触发后,止损点会移动到入场价格。该策略适用于寻找潜在趋势交易机会的GDAX交易所。
-
-## 策略原理  
-
-该策略主要基于两个技术指标:
-1. EMA:指数移动平均线。策略中使用12周期和26周期的EMA。
-2. 自定义的渔夫转身信号。该信号基于一定周期内价格的最高点和最低点的差值计算。
-
-当短周期EMA上穿长周期EMA时产生买入信号。此外,渔夫转身信号线也必须大于0,表示当前处于上涨趋势。
-
-止盈和止损规则如下:
-1. 第一个止盈点为2倍ATR 
-2. 第二个止盈点为3倍ATR
-3. 止损点为1倍ATR
-4. 当第一个止盈点被触发后,止损点会移动到入场价格
-
-该策略可以通过调整EMA周期、渔夫转身信号周期和ATR周期等参数进行优化。
-
-## 策略优势  
-
-该策略结合趋势跟踪指标和风险管理指标,具有以下优势:  
-
-1. 使用EMA捕捉趋势方向  
-2. 自定义渔夫转身信号过滤假突破  
-3. 多个止盈点锁定利润  
-4. 动态止损控制风险  
-5. 可调参数适应不同市场环境  
-
-## 策略风险  
-
-该策略也存在一些风险:  
-
-1. 趋势反转造成止损被触发  
-2. 参数设置不当导致过于激进入场或前期退出  
-3. 自定义渔夫转身信号可能存在效果不佳的市场环境  
-
-可以通过优化参数、组合其他指标和人工干预等方式减少这些风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:  
-
-1. 优化EMA周期参数,适应更多市场环境  
-2. 组合其他趋势指标验证买入信号  
-3. 添加整体市场过滤,避免不确定环境的误入场  
-4. 优化渔夫转身信号参数或尝试其他自定义指标  
-5. 增加止盈档位数量,锁定更多利润  
-6. 整合自动止盈移位功能  
-
-通过测试不同参数设置和指标组合,可以持续提升策略表现。
-
-## 总结  
-
-渔夫转身EMA多重止损多重止盈策略,整合了趋势跟踪和风险管理的优势,是一个值得长期验证优化的有潜力的策略。参数调整和指标组合还有很大的优化空间,希望您在实盘验证中能取得稳定的超额收益!
-
-|| 
 
 ## Overview  
 
@@ -134,7 +74,6 @@ By testing different parameter settings and indicator combinations, the strategy
 
 The Fisher Turnaround EMA Multi-Take Profit and Multi-Stop Strategy integrates the strengths of trend tracking and risk management. With great potential for long-term verification and optimization, it is a promising strategy. There is still ample room for optimizing parameters and combining indicators to achieve steady outperformance in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

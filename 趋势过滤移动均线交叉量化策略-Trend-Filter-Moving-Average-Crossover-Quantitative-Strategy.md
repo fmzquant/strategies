@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15ba88039850db5e08b.png)
-[trans]
-
-## 概述
-
-趋势过滤移动均线交叉量化策略是一种中长线量化交易策略。该策略通过快速移动均线和慢速移动均线的交叉来判断市场的趋势方向,在判断有效趋势的前提下进行入场。同时,该策略还设置了一个更长周期的移动均线作为趋势过滤器,只有当价格突破该移动均线时才可能形成有效的交易信号。
-
-## 策略原理
-
-该策略主要基于移动均线的交叉原理。具体来说,分别计算出两条不同周期的移动均线,典型设置为20日线和50日线。当20日线从下向上突破50日线时产生买入信号;当20日线从上向下突破50日线时产生卖出信号。这些简单的交叉信号被认为可以捕捉中长线上的突破。
-
-此外,该策略还设置了一个200日移动均线作为整体趋势的判断指标。只有当价格突破200日线时,上述简单交叉信号才被视为有效。这就构成了一个趋势过滤机制,可以避免在盘整市场中产生大量无效信号。
-
-## 策略优势分析
-
-1. 中长线操盘,避免过于频繁交易,降低交易成本和滑点风险。
-
-2. 移动均线交叉判断明确,容易理解实现。
-
-3. 趋势过滤机制可以过滤掉大部分无效信号,提高胜率。
-
-4. 可灵活调整移动均线参数,适用于不同品种和时间周期。
-
-5. 可设置止损止盈来控制单笔损益。
-
-## 策略风险分析
-
-1. 当价格在均线附近震荡时,可能产生多次无效信号导致过度交易。 
-
-2. 长周期均线可能滞后市场,错过趋势转折点。
-
-3. 需要较长的历史数据建立移动均线指标,新品种或短周期无法应用。
-
-4. 策略参数需要反复测试优化,不当设置可能导致策略失效。
-
-对应风险的解决方法:
-
-1. 采用更长周期均线,或增加趋势过滤条件。 
-
-2. 结合其他指标判断大趋势,如能量指标、波动率指标等。
-
-3. 提高移动均线周期参数的自适应性。
-
-4. 增加参数优化和反馈机制,动态调整策略参数。
-
-
-## 策略优化方向
-
-1. 尝试不同类型的移动均线,如线性权重移动均线。
-
-2. 增加自适应移动均线周期功能。
-
-3. 结合波动率类指标判断趋势分段,提高移动均线交叉的有效性。  
-
-4. 增加机器学习算法,实现策略参数的自动优化。
-
-5. 探索多品种组合策略,利用品种间相关性获利。
-
-## 总结
-
-趋势过滤移动均线交叉策略整体来说是一种简单实用的中长线量化策略。它通过均线交叉判断中长线趋势,然后配合趋势过滤来减少无效信号。该策略容易理解和实现,适合量化交易的初学者。其可能的改进空间在于移动均线的优化,以及与其他指标和机器学习算法的整合。作为基础策略,它可以为更高级的量化交易套利算法提供交易信号。
-
-||
 
 ## Overview
 
@@ -131,7 +69,6 @@ Risk Mitigations:
 
 The Trend Filter Moving Average Crossover Strategy is overall a simple and practical medium-to-long term quantitative strategy. It determines the medium-to-long term trend through moving average crossover, and then uses trend filtering to reduce invalid signals. This strategy has the advantage of being easy to understand and implement, suitable for beginners of quantitative trading. Potential areas of improvement lie in optimization of the moving averages, as well as integration with other indicators and machine learning algorithms. As a basic strategy, it can provide trading signals for more advanced quantitative arbitrage algorithms.
 
-[/trans]
 
 > Strategy Arguments
 

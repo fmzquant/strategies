@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fd83e948949e4afe52.png)
-[trans]
-## 概述
-
-本策略是一个基于量化交易平台的自适应网格交易策略。该策略通过设置自动或手动的网格交易范围,在范围内以等间距放置买卖单,实现网格交易。当价格突破网格上下限时,策略会自动调整网格的范围。
-
-## 策略原理
-
-1. 设置网格的上下限价格。可以自动计算历史价格最高点和最低点在一定区间内的价格作为上下限,也可以手动设置固定的上下限价格。
-
-2. 根据上下限价格和网格数量,计算出每个网格的价格间距。
-
-3. 在上下限价格之间,以等间距排列多个买卖点作为网格。
-
-4. 当市场价格突破网格下限时,在最新一个未平仓订单所在网格的下一个网格放置买单;当市场价格突破网格上限时,在最新一个未平仓订单所在网格的上一个网格放置卖单。
-
-5. 这样,在网格上下限之间不断进行买卖操作。当价格趋势反转时,之前的订单逐步止盈或止损。
-
-## 策略优势
-
-1. 网格交易可以在横盘和震荡行情中获利。
-
-2. 自适应调整网格范围,可以根据市场波动自动调整,无需人工干预。
-
-3. 可以预设投入资金量,按比例分配在各个网格上,控制每单风险。
-
-4. 简单的逻辑,容易理解,参数调整灵活。
-
-## 风险及对策
-
-1. 突破上下限造成损失
-
-   - 解决:合理设置止损位置。
-
-2. 趋势行情产生重复亏损
-
-   - 解决:识别趋势,及时暂停交易。
-
-3. 参数设置不当
-
-   - 解决:调整网格数量,价格间距参数。
-
-## 优化方向
-
-1. 利用机器学习预测价格波动范围和趋势,动态调整网格参数。
-
-2. 在趋势行情中,改为趋势交易,避免网格交易亏损。
-
-3. 结合资金使用率、收益率等指标进行风险控制。
-
-4. 多品种蔓延,扩大资金运用面。
-
-## 总结
-
-本策略是一个可以自动调整的参数自适应网格策略,适用于震荡横盘的股票、数字货币和外汇品种,在Parameter参数的调整下,可以适应市场的不同行情,具有一定的实战价值。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ This strategy is an adaptive grid trading strategy based on quantitative trading
 ## Conclusion  
 
 This strategy is an adaptive grid strategy with automatically adjustable parameters, suitable for stocks, cryptocurrencies and foreign exchange products with fluctuating and range-bound movements. With adjusted Parameters, it can adapt to different market conditions and has practical value.  
-[/trans]
 
 > Strategy Arguments
 

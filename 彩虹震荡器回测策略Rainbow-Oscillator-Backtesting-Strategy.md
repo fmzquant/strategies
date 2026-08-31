@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d3287d3e1e8e957783.png)
-[trans]
-
-## 概述
-
-彩虹震荡器回测策略是一种基于彩虹震荡器指标的量化交易策略。该策略通过计算股价与均线之间的偏离程度,来判断市场的趋势方向和力度,以此来进行长短仓方向的判断。
-
-## 策略原理
-
-该策略的核心指标是彩虹震荡器(Rainbow Oscillator,RO),其计算公式如下:
-
-```
-RO = 100 * ((收盘价 - 10日移动平均线) / (最高价的最高值 - 最低价的最低值))
-```
-
-其中10日移动平均线是10个周期收盘价的简单移动平均。该指标反映了价格相对于自身均线的偏离情况。当RO > 0时,代表价格在均线之上,为看涨信号;当RO < 0时,代表价格在均线之下,为看跌信号。
-
-该策略还计算了一个辅助指标——带宽(Bandwidth,RB),其计算公式如下:
-
-```
-RB = 100 * ((均线的最高值 - 均线的最低值) / (最高价的最高值 - 最低价的最低值)) 
-```
-
-RB反映了均线之间的宽度。RB越大,说明价格波动越大,反之则价格稳定。RB指标可用于判断市场的稳定程度。
-
-根据RO和RB指标的值,该策略判断价格偏离程度和市场稳定性,以此产生长仓和短仓的交易信号。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 基于双指标判断,避免了单一指标判断的局限性。
-2. 可同时判断价格走势和市场稳定性。
-3. 计算简单,容易理解和实现。
-4. 可视化指标,形成“彩虹”效果,直观易读。
-
-## 策略风险
-
-该策略也存在一些风险:  
-
-1. RO和RB指标参数设置不当可能导致交易信号错误。
-2. 双均线策略容易产生错误信号和频繁交易。
-3. 回测周期和品种选择不当会影响策略效果。
-4. 没有考虑交易成本,实盘效果可能不佳。
-
-对策:
-
-1. 优化RO和RB指标的参数。 
-2. 增加过滤条件,避免频繁交易。
-3. 选择合适的回测周期和品种。
-4. 计算并考虑交易成本。
-
-## 策略优化
-
-该策略还可以从以下几个方面进行优化:
-
-1. 对RO指标加入Smooth功能,避免指标剧烈波动。
-2. 加入止损策略,控制单笔损失。
-3. 结合其他指标进行组合交易,提高获利概率。
-4. 增加机器学习模型进行预测,判断指标效果。
-5. 针对不同品种参数进行优化,提高适应性。
-
-## 总结
-
-彩虹震荡器回测策略通过计算价格与均线之间的偏离关系,判断市场趋势和稳定性,以此进行长短仓交易。该策略直观易读,实现简单,具有一定的实用价值。但也存在一些风险,需要针对参数和交易规则进行优化,降低风险,提高实盘效果。
-
-||
 
 ## Overview
 
@@ -141,7 +75,6 @@ The strategy can also be optimized in the following ways:
 
 The Rainbow Oscillator backtesting strategy judges market trends and stability by calculating the deviation between prices and moving averages, and uses this information to make long/short trading decisions. This strategy is intuitive, easy to implement, and has some practical value. But there are also some risks that need to be mitigated by optimizing parameters and trading rules to reduce risk and improve real trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

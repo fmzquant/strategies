@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1452ef713a1e54fb6ef.png)
-[trans]
-
-## 概述
-
-本策略名为“动态移动均线策略”,主要思想是利用移动均线的方向和价格的关系来判断趋势,在趋势方向进入场内,在无趋势时平仓。
-
-## 策略原理  
-
-该策略使用 length 个周期的源价格来计算出移动均线,源价格可以选择 OHLC4,HLC3,收盘价等。计算出的移动均线被定义为 sma。然后根据移动均线值的比例绘制出长线和短线,通过长线和短线的位置关系来判断目前处于上涨趋势还是下跌趋势。
-
-具体来说,短线的计算公式是:shortline = sma * ((100 + shortlevel) / 100),其中 shortlevel 是可以由使用者设定的一个正数,代表短线距离移动均线的比例。长线类似,计算公式是:longline = sma * ((100 + longlevel) / 100),longlevel 是可以由使用者设定的一个负数,代表长线距离移动均线的比例。 
-
-这样,短线值永远大于移动均线,而长线值永远小于移动均线。当价格上穿短线时,代表进入上涨趋势,这个时候若 needlong 允许做多,则会在长线价格水平下单做多;当价格下穿长线时,代表进入下跌趋势,这个时候若 needshort 允许做空,则会在短线价格水平下单做空。
-
-无论做多或做空,当价格重新回到移动均线时,代表趋势结束,这个时候会平掉之前的所有仓位。
-
-这样通过长短线与移动均线的动态关系来判断趋势方向并据此入场和出场。
-
-## 策略优势
-
-这种策略最大的优势在于通过长短线动态设定买卖点,能比较灵活地把握主要的趋势方向。相比简单地在固定水平触发买卖点的策略,这种策略更为高级和智能。
-
-其次,移动均线自身也有一定滤波作用,一定程度避免被高频震荡套住。同时依据移动均线水平来判断趋势是否结束时及时出场,这也非常关键。
-
-## 策略风险
-
-该策略最大的风险在于移动均线在不同时期的表现力度不同。正常情况下移动均线足以代表趋势方向,但是在某些极端行情中短期内移动均线可能被打穿,造成错误的入场,或者顶背离这样的情况。这时需要使用更长周期的移动均线来确保趋势判断的准确性。
-
-风险的另一方面在于移动均线本身缓慢性较强。对于一些短小剧烈的价格波动,移动均线难以及时作出跟踪,这时可能错过入场点或出场点。需要降低周期来加快移动均线的反应速度。
-
-## 策略优化
-
-该策略可以在以下几个方面继续优化:
-1. 增加止损逻辑。移动均线判断趋势时有滞后性,无法完全避免被套,因此适当加上移动止损可以进一步降低风险。
-2. 优化长短均线的参数。目前长短均线距离移动均线的比例是固定值,可以测试不同数据集,找出最优参数。
-3. 增加趋势强度判断。除了长短均线位置,也可以通过一定算法判断趋势的强度,避免弱趋势下的错误信号。
-4. 可以尝试将移动均线应用于其他交易品种,进行跨品种验证。
-
-## 总结  
-
-本策略通过动态设定买卖点的方式进行趋势判断和对应的多空交易。这种基于移动均线动态设定交易信号的方法,相比静态触发点能更加灵活和智能地捕捉价格趋势。同时也解决了移动均线本身缺乏及时性的问题。通过系统的回测和参数优化,相信该策略可以获得良好收益。
-
-||
 
 ## Overview  
 
@@ -98,7 +55,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy determines trend and places corresponding long/short trades by dynamically setting entry and exit points based on moving averages. This method of dynamically generating trading signals based on moving averages is more flexible and intelligent in capturing price trends compared to static trigger levels. It also solves the problem of lack of timeliness of moving averages themselves. With systematic backtesting and parameter optimization, this strategy can yield good profits.
 
-[/trans]
 
 > Strategy Arguments
 

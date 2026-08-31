@@ -10,85 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10759dfc4412691ca86.png)
-[trans]
-
-## 概述
-
-这个策略名为“BollingerBands趋势跟踪策略”,它使用BollingerBands指标判断价格趋势,并在价格突破BollingerBands通道时入场做多做空。它结合均线过滤器,在突破发生时判断趋势方向,从而决定做多做空。
-
-## 策略原理
-
-该策略主要依赖BollingerBands指标判断价格趋势和定位入场点。BollingerBands包含三条线:
-
-1. 中间线:n天的移动平均线
-2. 上线:往上移动n天标准差的距离
-3. 下线:往下移动n天标准差的距离  
-
-当价格从下线突破上线时,认为正在形成看涨趋势;当价格从上线突破下线时,认为正在形成看跌趋势。策略在这两种突破发生时入场做多做空。
-
-具体来说,策略逻辑是:
-
-1. 当收盘价从Bands下线突破上线时,做多入场
-2. 当收盘价从Bands上线突破下线时,做空入场
-
-为了过滤假突破,策略加入均线判断。只有当收盘价突破Bands的同时,也突破均线时,才会触发入场。
-
-这里使用Exponential Moving Average作为均线指标。
-
-总之,该策略判断趋势突破的方式是:
-
-1. 做多信号:收盘价突破Bands上线 && 收盘价突破均线
-2. 做空信号:收盘价突破Bands下线 && 收盘价突破均线
-
-入场后,止损方式为追踪中线。当价格重新触及中线时,退出止损。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 能捕捉中间线突破形成的新趋势。Bands通道具有容纳价格波动的空间,突破通道代表价格开始形成新的方向。
-2. 结合均线过滤,避免了假突破的问题,确保真正出现趋势转折时才入场。
-3. 具有内在的止损机制,当价格重新回到Bands中线时主动止损,有效控制了风险。
-4. 策略逻辑简单清晰,容易理解和实现,适合量化交易的算法策略。
-5. 利用Bands通道和均线指标,无需预测价格,根据事后证据判断趋势,回测效果较好。
-
-## 风险分析
-
-尽管该策略有一定优势,但也存在以下风险:
-
-1. Bands参数设置不当可能导致增大交易频率和交易风险。如果参数过于敏感,会产生大量假突破造成系统频繁开仓。
-2. 均线参数选择不当也可能导致错过真正趋势或者产生假信号。参数设置需要反复测试和优化。  
-3. 止损依赖中线,可能会过早离场或者给予价格过多回调空间。这可能会导致错过大部分利润或者增加亏损风险。
-
-为控制上述风险,可以从以下方面进行优化:
-
-1. 适当调整Bands参数,增加通道宽度,减少假突破概率
-2. 测试不同类型和长度的均线,找出最佳组合
-3. 尝试其他止损方式,例如趋势跟踪止损或逐步移动止损
-
-## 优化方向  
-
-根据上面的风险分析,该策略可以从以下方面进行进一步优化:
-
-1. **参数优化**:通过更系统的方法,如遗传算法等,寻找Bands和均线参数的最佳组合,使策略更稳定和profitable。
-
-2. **止损优化**:测试不同的止损方式,如ATR止损,跟踪止损等,确定最佳止损机制。
-
-3. **过滤器优化**:尝试加入其他指标,如RSI,KD等作为额外过滤条件,降低假信号概率,提高盈利率。
-
-4. **入场条件优化**:加入例如趋势判断、异动VOLUME等其他考量因素,严格筛选入场时机,减少不必要开仓。
-
-5. **机器学习**:收集更多历史数据,使用LSTM, RNN等深度学习模型进行建模,利用AI判断最佳入场出场点。
-
-6. **风险与获利动态管理**:加入固定比例止盈止损、盈利目标后加大止盈幅度等方式,动态管理风险与收益。
-
-通过上述几个方面的优化,可以使该策略的稳定性、收益率、风险调节能力等指标得到全面提高,成为可供实盘交易的算法策略。
-
-## 总结
-
-总体来说,该“BollingerBands趋势跟踪策略”利用Bands指标和均线判断价格趋势,在关键点位突破时入场,属于趋势跟踪类型策略。它具有判断明确,逻辑简洁,容易实现等优势,也存在一些参数优化、止损方式等可优化空间。通过进一步调整参数设置、优化止损机制、加入机器学习模型等,可以将其打造成稳定可靠的量化策略。
-
-||
 
 ## Overview
 
@@ -167,7 +88,6 @@ Through optimizations in above areas, key metrics like stability, profitability,
 
 In conclusion, the “Bollinger Bands Trend Following Strategy” identifies price trends using Bands indicator and moving averages, entering at key breakout points. It has the pros of clear logic, simplicity, ease of implementation while also has areas for improvements like parameter tuning, stop loss mechanisms. Further refinements like parameter optimization, stop loss enhancements, machine learning integrations can turn it into a robust and stable algo trading system.
 
-[/trans]
 
 > Strategy Arguments
 

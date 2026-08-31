@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fa6cf7e0ea178b1b66.png)
-[trans]
-
-### 概述
-
-本策略运用Williams新高新低指标识别多空反转信号,配合多重均线进行裂缝交易,再辅以RSI指标过滤假信号,实现高效的双向交易。
-
-### 策略原理
-
-1. Williams新高新低指标利用一定周期内最高价和最低价判断出现拐点,发出买入和卖出信号。
-
-2. 20日、50日和100日均线组成多重均线,当价格突破其中两条均线时,发出交易信号。
-
-3. RSI指标判断超买超卖区域,用于过滤不确定信号。 
-
-4. 策略通过判断价格突破哪两条均线,结合Williams指标信号和RSI过滤,产生稳定的买入卖出信号。
-
-5. 入场判断:当短周期均线由下向上突破中长周期均线,并且Williams新低和RSI低位信号同时出现时,做多;当短周期均线由上向下突破中长周期均线,并且Williams新高和RSI高位信号同时出现时,做空。
-
-6. 止损止盈:设定固定比例止损止盈。
-
-### 策略优势
-
-1. Williams指标能准确判断关键支撑阻力,识别反转信号。
-
-2. 多重均线突破判断,避免因单一均线震荡造成错误信号。 
-
-3. RSI指标辅助过滤假信号,让入场时机更加精准可靠。
-
-4. 固定止损止盈系统控制风险,让盈亏更加明确。
-
-5. 结合反转指标和趋势指标双重确认,使交易信号更加准确可靠。
-
-### 策略风险
-
-1. 交易品种选择不当,不同品种参数需要调整。
-
-2. 周期选择不合理,需要针对不同周期调整参数。
-
-3. 固定止损止盈无法根据市场变化调整,可能过早止损或止盈不够充分。 
-
-4. 均线震荡时容易产生错误信号。
-
-5. 指标发散时信号产生滞后。
-
-### 策略优化方向
-
-1. 根据不同交易品种动态优化参数。
-
-2. 加入自动调整止损止盈系统,使盈亏更加合理。
-
-3. 增加更多指标过滤,如MACD、Stochastic等,减少错误信号。
-
-4. 增加机器学习算法,自动识别最佳交易时机。
-
-5. 结合更多趋势判断指标,识别趋势行情。
-
-
-### 总结
-
-本策略综合运用Williams指标、均线指标和RSI指标等多种技术分析工具,通过双重确认减少错误信号,能够有效捕捉反转机会,并配合固定止损止盈控制风险,整体来看是一个可靠实用的双向交易策略。下一步通过参数优化、止盈止损优化和模型集成等方法进一步增强策略效果。
-
-
-
-||
 
 ### Overview
 
@@ -133,7 +69,6 @@ This strategy uses the Williams new highs and lows indicator to identify reversa
 
 This strategy combines Williams, moving averages, RSI and other technical analysis tools, using dual confirmation to reduce false signals and effectively capture reversals, with fixed stop loss/take profit to control risk. Overall a reliable and practical dual direction trading system. Next steps are further performance improvement through parameter optimization, stop loss/take profit enhancements and ensemble modeling.
 
-[/trans]
 
 > Strategy Arguments
 

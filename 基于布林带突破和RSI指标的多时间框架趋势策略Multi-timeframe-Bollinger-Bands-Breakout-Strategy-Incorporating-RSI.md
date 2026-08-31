@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d4b78b077fd7c798f5.png)
-[trans]
-## 概述
-
-本策略融合了布林带指标、RSI指标以及多时间框架分析,旨在捕捉中长线趋势的方向。通过布林带上轨和下轨突破结合RSI过买过卖信号判断趋势反转点,实现低风险进场。同时应用更高时间框架过滤震荡行情,避免被套。
-
-## 策略原理  
-
-1. 应用布林带指标判断价格突破。布林带中轨为N日收盘价的移动平均线,上轨和下轨分别是中轨上下各自一个标准差。当收盘价突破上轨时为强势信号,突破下轨时为弱势信号。
-
-2. 结合RSI指标判断超买超卖现象。RSI大于70为超买区,小于30为超卖区。当RSI从下向上突破70时,认为处于超买状态,布林带上轨突破作为趋势反转的确认。 当RSI从上向下突破30时,认为处于超卖状态,布林带下轨突破作为趋势反转的确认。
-
-3. 应用更高时间框架过滤假突破。当日线出现突破信号时,需要4小时或更高时间框架作为确认,避免被套。
-
-## 策略优势
-
-1. 多指标融合,提高策略的稳定性和盈利率。
-
-2. RSI指标判断反转点,可以减少假突破带来的损失。
-
-3. 多时间框架分析,有效过滤震荡走势,避免被套。
-
-4. 突破信号判断优化(3根K线都要突破布林带上下轨),确保趋势发展成熟后再入场。
-
-5. Vortex指标判断趋势方向,能够捕捉开始形成的新趋势。
-
-## 策略风险
-
-1. 布林带参数设置不当可能导致超买超卖信号错误。
-
-2. RSI参数设置需要根据不同品种确定合理数值。 
-
-3. 突破信号可能出现假突破,应适当放大止损点差。
-
-4. 保证充足的止损幅度,如ATR指标的3倍。
-
-## 策略优化方向  
-
-1. 应用机器学习算法实时优化布林带和RSI的参数。
-
-2. 利用波动率指标优化止损点差。
-
-3. 增加交易量控制模块,根据市场变化调整仓位。 
-
-4. 结合资金管理原则,限制单笔交易亏损比例。
-
-5. 评估不同交易时段突破信号的稳定性。
-
-## 总结
-
-本策略综合考虑了趋势判断、超买超卖现象、多时间框架分析等多种技术指标,在控制风险的前提下,选择合适的进场时机,捕捉中长线质量趋势,能够获得较好的盈亏比。同时也有进一步优化的空间,通过参数调优、止损机制完善等手段,可望获得更出色的投资业绩。
-
-||
 
 ## Overview
 
@@ -113,7 +61,6 @@ This strategy incorporates Bollinger Bands, RSI indicator and multi-timeframe an
 
 This strategy comprehensively examines trend determination, overbought/oversold conditions and multiple timeframes to control risks while seeking optimal entry timing to capture high-quality mid-to-long term trends for attractive risk-reward profiles. Further enhancements may be explored through parameter optimization, stop loss mechanisms etc. to achieve even better investment performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13d4d01e3cde11525c8.png)
-[trans]
-
-## 概述
-
-该策略通过跟踪ADX指标的动态变化,捕捉市场趋势的初期变化,实现趋势的及时跟踪。当ADX从低位快速上升时,说明趋势在形成,这是入场的大好时机。结合移动平均线的辅助,可以有效过滤错诊。
-
-## 策略原理
-
-该策略主要基于ADX指标的动态变化来判断趋势的发展。ADX指标在低位时,代表趋势变化不大;当ADX从低位快速上升时,说明趋势正在形成。策略通过监测ADX的快速上升,来捕捉趋势的发展。 
-
-具体来说,策略的入场判断包括以下几个条件:
-1. ADX上穿设定的阈值(如10)
-2. ADX向上快速上升
-3. 价格上穿简单移动平均线或指数移动平均线
-
-当上述条件同时满足时,代表趋势正在形成,做多;当下穿移动平均线时,平仓。使用两个移动平均线,可以更准确判断趋势的发展。
-
-停损条件也类似,当ADX向下快速下降时,做空;价格下穿移动平均线时,平仓。
-
-## 优势分析
-
-该策略最大的优势在于及时捕捉趋势的发展。传统仅看ADX数值的方法,往往要等ADX上升到20或25才能确认趋势,这已经错过了最佳的入场时机。该策略通过跟踪ADX的快速上升段,能极大地把握趋势的发展。
-
-另外,策略还引入移动平均线进行辅助,可以有效过滤部分错诊情况,提高策略的稳定性。
-
-## 风险及优化分析
-
-该策略最大的风险在于ADX指标本身的滞后性。尽管通过跟踪快速上升段可以缩短滞后,但仍然存在一定滞后。这会导致部分快速反转的市场无法捕捉。 
-
-此外,ADX指标对趋势判断也并非百分之百准确,难免也会出现一定的错诊。引入移动平均线虽可过滤部分噪声,但仍需进一步优化。
-
-该策略的优化空间还很大,关键在于进一步提升ADX指标的捕捉精准度。可以考虑引入机器学习等方法,训练模型判断ADX变化后的概率分布。另外也可以尝试不同参数组合、其他辅助指标等方法进行测试优化。
-
-## 总结
-
-该动态上升ADX趋势跟踪策略,通过捕捉ADX快速上升的市场变化点,实现对趋势的及时跟踪。最大优势是时间上极其敏捷,可有效把握趋势早期。同时也存在一定概率的误判风险,后续仍需持续优化测试。
-
-|| 
 
 ## Overview  
 
@@ -87,7 +49,6 @@ There is still large room for optimizing this strategy, mainly enhancing ADX's a
 
 This dynamic rising ADX trend following strategy captures trend shifts swiftly by identifying sharp ADX rises, thus following trends in a timely manner. The biggest advantage is its agility in time, effectively seizing early trend developments. Meanwhile, certain risks of misjudgment remain that call for continuous optimization and testing.
 
-[/trans]
 
 > Strategy Arguments
 

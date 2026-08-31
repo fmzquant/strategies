@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10d1b3cbff17bd4e2ca.png)
-[trans]
-本策略通过模拟砖的形成判断市场动量的变化,根据砖的方向做多做空。
-
-### 策略原理  
-该策略的核心原理是通过计算ATR和收盘价的关系来模拟砖的形成。具体来说,定义两个变量Brick1和Brick2。
-
-Brick1的计算方法是:如果收盘价超过Brick1昨日值+ATR的值,则Brick1为Brick1昨日值+ATR;如果收盘价低于Brick1昨日值-ATR的值,则Brick1为Brick1昨日值-ATR;否则Brick1就继承Brick1昨日值。
-
-Brick2的计算方法是:如果Brick1值与Brick1昨日值不等,则Brick2为Brick1昨日值;否则继承Brick2昨日值。  
-
-这样就模拟了砖的形成。当Brick1上涨超过一个ATR时,形成一个向上砖;当Brick1下跌超过一个ATR时,形成一个向下砖。Brick2就是记录上一个砖的位置。
-
-当Brick1和Brick2发生向上交叉时,表示砖向上扩展,判断为多头;当Brick1和Brick2发生向下交叉时,表示砖向下收缩,判断为空头。
-
-### 策略优势  
-1. 利用ATR来判断砖的形成,避免使用固定大小的砖,能动态适应市场波动  
-2. 通过砖的交叉来判断多空方向,识别动量变化  
-3. 可以通过不同的ATR周期来调整对市场动量判断的敏感度  
-4. 可视化的砖形成和交叉情况,直观判断市场走势  
-
-### 策略风险  
-1. ATR大小的选择会影响到策略收益率。如果ATR太小,则形成的砖太多,产生更多无效信号;如果ATR太大,则砖太少,容易错过机会。  
-2. 实际走势可能并不遵循砖的形态,砖的交叉信号可能会被市场反转否决。  
-3. 需要对交易成本非常敏感,否则砖交叉频繁交易会大幅降低净收益。
-
-可以通过参数优化找到最佳的ATR周期;调整止盈止损策略来减少无效信号产生的损失;适当放大交易品种来降低成本对收益的影响。
-
-### 策略优化  
-1. 可以结合其他指标进行信号过滤,例如量能指标、震荡指标等,避免无效信号  
-2. 增加趋势过滤,只在趋势方向发出信号,避免被反转损失  
-3. 采用测试期内全样本参数优化方法来自动寻找最优参数  
-
-## 总结  
-本策略通过动态模拟砖的交叉来判断市场中短期趋势和动量,可视化形态直观。策略优化空间较大,参数优化和信号过滤可以进一步提高稳定性。
-
-||
 
 The strategy judges the market momentum change based on the formation of simulated bricks and long or short on the brick direction.  
 
@@ -85,7 +49,6 @@ Solutions include parameter optimization to find optimal ATR cycle, adjust stop 
 ## Summary
 The strategy judges short-term trends and momentum in the markets through dynamically simulating brick crossover, with intuitive visualization. There is much room for optimization through parameter tuning and signal filtering to further enhance stability.
 
-[/trans]
 
 > Strategy Arguments
 

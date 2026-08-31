@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/5f12ece77c6bf08525.png)
 
-[trans]
-### 概述
-该策略是一个简单的SMA均线交叉策略。它使用两条不同周期的简单移动平均线(SMA),当快线从下向上穿过慢线时开仓做多,当快线从上向下穿过慢线时平仓。该策略可以自定义两条均线的长度,以及回测的起始和结束日期。
-
-该策略的主要思路是利用均线的趋势特性和均线交叉的信号特性来进行交易。当快线在慢线之上时,说明当前处于上升趋势,应该持有多头头寸;当快线在慢线之下时,说明当前处于下降趋势,应该空仓观望。
-
-### 策略原理
-1. 计算两条不同周期的SMA,周期长度可以自定义。
-2. 判断当前是否在回测时间窗口内,如果不在则不进行任何操作。
-3. 如果快线从下向上穿过慢线,则开仓做多。
-4. 如果快线从上向下穿过慢线,则平掉所有多头头寸。
-5. 其余情况下空仓观望,不进行任何操作。
-
-### 优势分析
-1. 简单易懂,逻辑清晰,适合初学者学习和使用。
-2. 均线是一个被广泛使用的技术指标,其趋势特性比较明显,能够较好地反映当前的市场趋势。
-3. 均线交叉是一个经典的趋势追踪信号,可以快速地捕捉到趋势的变化。
-4. 可以自定义均线周期和回测时间窗口,灵活性较强。
-5. 适用于趋势性较强的品种和时间周期。
-
-### 风险分析
-1. 均线具有一定的滞后性,在市场波动较大、趋势反复时,可能会出现频繁的交叉信号,导致交易次数过多,手续费成本增加。
-2. 该策略只能捕捉到单边上涨行情,对于震荡行情和单边下跌行情无能为力。
-3. 均线参数的选择需要根据不同品种和时间周期进行优化,不同参数可能表现差异较大。
-4. 该策略没有任何止损措施,在行情剧烈波动时可能面临较大回撤风险。
-
-### 优化方向
-1. 可以考虑加入适当的止损措施,比如基于ATR的移动止损,以控制单笔交易的最大亏损。
-2. 可以考虑加入一些过滤条件,比如交易量、波动率等,以过滤掉一些假信号。
-3. 可以考虑对参数进行优化,比如使用遗传算法等智能算法寻找最优参数组合。
-4. 可以考虑将其他技术指标或交易信号与均线交叉相结合,比如MACD、RSI等,以提高策略的可靠性和有效性。
-
-### 总结
-SMA均线交叉策略是一个简单易懂、经典实用的趋势追踪策略,适合初学者学习和使用。它利用了均线的趋势特性和均线交叉的信号特性,可以快速捕捉到市场趋势的变化。但是该策略也存在一些局限性和风险,如滞后性、频繁交易、缺乏止损等。因此在实际应用中,需要根据具体情况进行适当的优化和改进,以提高策略的稳定性和盈利能力。
-
-|| 
 
 ### Overview
 This strategy is a simple SMA moving average crossover strategy. It uses two Simple Moving Averages (SMAs) with different lengths. When the fast MA crosses above the slow MA, it enters a long position. When the fast MA crosses below the slow MA, it closes the long position. The lengths of the two MAs can be customized, as well as the start and end dates for backtesting.
@@ -81,7 +45,6 @@ The main idea of this strategy is to utilize the trend characteristics of moving
 
 ### Conclusion
 The SMA moving average crossover strategy is a simple, easy-to-understand, classic and practical trend-following strategy that is suitable for beginners to learn and use. It utilizes the trend characteristics of moving averages and the signal characteristics of MA crossovers to quickly capture changes in market trends. However, this strategy also has some limitations and risks, such as lag, frequent trading, and lack of stop-loss. Therefore, in practical applications, it needs to be appropriately optimized and improved according to specific conditions to enhance the stability and profitability of the strategy.
-[/trans]
 
 > Strategy Arguments
 

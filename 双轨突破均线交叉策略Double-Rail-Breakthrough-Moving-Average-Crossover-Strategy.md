@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/dd3ac170fdb48f3f7b.png)
-[trans]
-
-## 概述
-
-双轨突破均线交叉策略是一种趋势跟踪型的量化交易策略。该策略运用双轨道机制判断市场趋势方向,配合均线交叉信号进行进场。具体来说,策略使用不同周期的平均线构建双轨道,通过价格突破上轨或下轨来判断趋势;然后结合快慢均线交叉信号过滤入场时机。
-
-## 策略原理
-
-双轨突破均线交叉策略主要由以下几部分组成:
-
-1. **趋势判断模块**:使用不同周期均线构建双轨,价格突破上轨判断为上涨趋势,突破下轨判断为下跌趋势。
-
-2. **入场模块**:快速均线上穿中长线均线时做多,下穿时做空。同时需要判断趋势方向。
-
-3. **出场模块**:快速均线下穿中长线均线时平仓。
-
-策略首先利用 Trend Required 参数设定需要判断的趋势强度。当价格突破上轨或下轨时,判断为趋势形成。此后,当快速均线上穿中长线均线时,做多入场;当快速均线下穿中长线均线时,做空入场。入场后,以快速均线下穿中长线均线作为离场信号。
-
-此外,策略还设有止损、止盈模块。具体参数可以进行调整优化,以控制风险和获利。
-
-## 优势分析  
-
-相比单轨或单均线策略,双轨突破均线交叉策略综合了趋势判断和入场时机选择,可以更好地把握市场节奏。具体优势有:
-
-1. 双轨设定可以更准确判断趋势,避免错过机会。
-
-2. 均线交叉过滤可以减少假突破做反方向操作的概率。
-
-3. 可以通过参数调整,实现风险和收益的优化。
-
-4. 策略逻辑简单清晰,容易理解,便于跟踪。
-
-## 风险分析
-
-双轨突破均线交叉策略也存在一定的风险,主要表现在:  
-
-1. 双轨道设定并不能完全避免趋势判断错误的概率。
-
-2. 均线参数设置不当可能导致交易频率过高或反向操作。
-
-3. 止损点设置过于宽松,无法有效控制单次损失。
-
-对应解决方法如下:
-
-1. 调整双轨参数,适当放宽突破判断范围。
-
-2. 优化均线周期组合,确保交易频率合理。
-
-3. 测试不同止损点水平,找到最优参数。
-
-## 优化方向
-
-双轨突破均线交叉策略还有以下几个可优化的方向:
-
-1. 测试不同均线周期参数,找到最优组合。
-
-2. 尝试加入更多均线,构建多均线过滤系统。
-
-3. 测试不同的止损算法,如追踪止损、震荡止损等。
-
-4. 加入复利机制,优化资金利用效率。
-
-5. 结合其他指标进行过滤,如布林带、KDJ等。
-
-## 总结
-
-双轨突破均线交叉策略综合考虑了趋势判断和入场时机选择,可以有效把握市场节奏。相比单一指标,该策略具有判断更准、过滤更优的特点。通过参数优化和模块升级,有望进一步提高策略的稳定性和收益率。
-
-|| 
 
 ## Overview  
 
@@ -146,7 +77,6 @@ The double rail breakthrough moving average crossover strategy also has the foll
 
 The double rail breakthrough moving average crossover strategy comprehensively considers trend judgment and entry timing selection, which can effectively grasp the market rhythm. Compared with single indicators, this strategy has the advantages of more accurate judgment and better filtering. By optimizing parameters and upgrading modules, it is expected to further improve the stability and profitability of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

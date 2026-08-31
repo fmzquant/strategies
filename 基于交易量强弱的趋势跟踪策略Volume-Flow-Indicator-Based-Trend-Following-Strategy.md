@@ -11,59 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/1a4b5c11b4eb09180c7.png)
-[trans]
-
-## 概述
-
-本策略通过计算交易量变化情况,判断市场趋势方向,采用趋势跟踪方式,在趋势开始阶段建立仓位,在趋势结束时平仓止损。
-
-## 策略原理
-
-1. 计算典型价格typical,对数收益率inter,收益率方差vinter
-2. 计算交易量平均值vave,最大交易量阈值vmax
-3. 计算价格变化量mf,与方差阈值cutoff比较,计算出价格驱动量vcp
-4. 汇总vcp得到量价指标vfi,分别计算vfi和其均线vfima
-5. 比较vfi和vfima大小,得到量价指标差值dVFI,以判定趋势方向
-6. 当dVFI上穿0时为看涨信号,下穿0时为看跌信号
-7. 根据dVFI形态,建立做多做空策略
-
-## 策略优势分析
-
-1. 该策略充分考虑了交易量变化对趋势判断的影响,通过动量指标衡量趋势强弱,可以更准确地捕捉趋势转折点。
-2. 策略加入交易量阈值计算,可以过滤正常波动,只捕捉大资金的集体行为,避免被市场噪音误导。
-3. 量价联动判断,综合考量价格与成交量,可以有效避免假突破。 
-4. 采用均线过滤和逻辑判断,可以过滤掉大部分假信号。
-5. 跟踪趋势而非预测反转,非常适合中长线趋势交易,有利于把握市场主要方向。
-
-## 策略风险分析
-
-1. 该策略主要依赖交易量变化来判断趋势,在交易量不活跃的品种中效果会打折扣。
-2. 交易量数据容易被操纵,可能产生误导性信号,需要防范量价背离的情况。
-3. 量价关系经常有滞后,可能错过趋势开始的最佳入场时机。
-4. 粗放的止损方式可能会过早止损,无法持续捕捉趋势。
-5. 无法有效响应短期调整,对突发事件也可能反应不敏感。
-
-可以考虑加入均线系统、波动率指标等来优化入场和止损;结合更多数据源分析量价关系,防范误导信号;加入适当技术指标提升对短期调整的响应。
-
-## 策略优化方向 
-
-1. 优化入场条件,可以考虑加入均线、자세오극점等判断,在趋势开始后确定入场。
-
-2. 优化止损方式,可以设定移动止损、级别止损等,让止损更贴近价格,跟踪趋势停止。
-
-3. 加入趋势判断环节,如ADX,可以避免横盘和震荡市场的错误交易。
-
-4. 优化参数设置,可以通过更长的数据回测寻找最优参数组合。
-
-5. 将策略扩展到更多品种,寻找质量更好、交易量更活跃的品种。
-
-6. 考虑加入机器学习模型,利用更多数据进行量价关系判断,提升信号质量。
-
-## 总结
-
-本策略整体思路清晰,核心指标直观易懂,可靠地识别趋势方向。策略优势在于强调交易量变化,适合追踪中长线趋势,但需防范误导信号。通过参数优化、止损方式改进、指标优化组合等方面进行改进,可以进一步增强策略的实盘表现。
-
-||
 
 ## Overview
 
@@ -123,7 +70,6 @@ Consider incorporating moving averages, volatility indicators to optimize entrie
 
 The overall strategy logic is clear, with intuitive core indicators reliably identifying trend direction. The advantage lies in emphasizing trading volume changes, suitable for tracking medium-to-long term trends, but misleading signals need to be watched out for. Further improvements in parameters, stop losses, indicator combinations can enhance live performance.
 
-[/trans]
 
 
 

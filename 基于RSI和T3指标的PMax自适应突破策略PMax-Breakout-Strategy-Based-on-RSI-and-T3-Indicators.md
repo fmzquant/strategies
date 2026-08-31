@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11b396ce92be5945fba.png)
 
-[trans]
-
-## 概述
-
-该策略是一个利用RSI和T3指标判断趋势,结合ATR指标设定止损线,实现PMax自适应突破的量化交易策略。其主要思想是在趋势判断和止损设置上进行优化,以控制风险的同时提高盈利能力。
-
-## 策略原理
-
-1. 计算RSI和T3指标确定趋势
-
-    - 利用RSI指标判断股票是否超买超卖
-    - 基于RSI指标计算出T3指标进行趋势判断
-
-2. 根据ATR指标设置PMax自适应止损线
-
-    - 计算ATR指标作为波动度的代表
-    - 在T3指标上下方设定止损线,线宽为ATR指标的一定倍数
-    - 实现止损线的自适应调整
-
-3. 突破买入和止损退出
-
-    - 当价格上穿T3指标时视为买入信号
-    - 当价格下穿止损线时退出当前头寸
-
-## 策略优势
-
-该策略主要具有以下优势:
-
-1. RSI和T3指标组合判断趋势,准确性较高
-2. PMax自适应止损机制控制风险
-3. ATR指标作为波动度代表设定止损线宽度,避免过于激进
-4. 回撤和盈利能力兼顾
-
-## 策略风险
-
-该策略主要存在以下风险:  
-
-1. 反转风险
-
-    当短期内发生价格反转时,可能导致止损被触发产生损失。可以适当放宽止损线来减少反转的影响。
-
-2. 趋势判断失败风险
-
-    RSI和T3指标判断趋势的效果并非100%可靠,当判断错误时也会导致损失。可以适当调整参数或加入其他指标进行优化。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 加入移动平均线等其他指标辅助判断趋势
-2. 优化RSI和T3指标的长度参数
-3. 测试不同的ATR倍数作为止损线宽度
-4. 根据不同市场调整止损线的放宽幅度
-
-## 总结  
-
-本策略整合运用RSI、T3和ATR三个指标的优势,实现了趋势判断与风险控制的有机结合。相比单一指标,该组合具有判断准确度高、回撤控制好的特点,是一种可靠的趋势跟踪策略。在参数和风险控制方面还有优化空间,总体来说是一种值得推荐的量化交易策略。
-
-||
 
 
 ## Overview  
@@ -127,7 +68,6 @@ Some directions for further optimization:
 ## Conclusion   
 
 This strategy integrates the strengths of RSI, T3 and ATR indicators, achieving a combination of trend determination and risk control. Compared to single indicators, it has higher accuracy and drawdown control, making it a reliable trend tracking strategy. Still room for optimizing parameters and risk control. Overall a recommended quantitative trading strategy worth promoting.  
-[/trans]
 
 > Strategy Arguments
 

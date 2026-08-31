@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10f6c228565f48c047b.png)
-[trans]
-### 概述
-
-该策略利用相对强弱指数(RSI)指标来判断市场超卖情况,当RSI小于30时开仓做多,同时设置止损价格为开仓价格的98.5%。该策略的主要思路是在市场出现超卖信号时入场,同时严格控制风险,一旦价格跌破止损价格立即平仓止损。
-
-### 策略原理
-
-1. 计算RSI指标,使用14根K线的收盘价。
-2. 当RSI小于30时,发出超卖信号,此时开仓做多。
-3. 开仓的同时,记录开仓价格,并根据开仓价格和止损比例(1.5%)计算出止损价格。
-4. 当价格跌破止损价格时,立即平仓止损。
-5. 平仓后,重置开仓价格和止损价格,等待下一次开仓机会。
-
-### 策略优势
-
-1. 简单易懂,逻辑清晰,适合新手学习和使用。
-2. 严格控制风险,设置止损价格,一旦触及止损价格立即平仓,最大程度上避免了损失扩大。
-3. 利用RSI指标判断超卖情况,能够在市场短期超跌后及时入场,把握反弹机会。
-4. 代码简洁高效,执行速度快,不会错过交易信号。
-
-### 策略风险
-
-1. RSI指标属于滞后指标,有可能出现指标已经超卖,但价格仍在继续下跌的情况,此时入场可能会面临进一步的损失风险。
-2. 固定止损比例可能无法动态应对市场波动,在市场剧烈波动时,固定止损可能会导致频繁止损,错失后续反弹机会。
-3. 策略缺乏盈利目标,完全依靠止损来控制风险,可能导致总体盈利水平不高。
-
-### 策略优化方向
-
-1. 在RSI指标之外,引入其他技术指标辅助判断,提高信号准确性,比如MACD、KDJ等。
-2. 对止损比例进行优化,可以根据历史数据测试不同的止损比例,找到最佳的止损设置。
-3. 在止损的基础上,增加移动止损或追踪止损等动态止损机制,使得止损更加灵活有效。
-4. 设置盈利目标,在达到一定盈利水平后主动平仓,而不是完全依靠止损出场。
-
-### 总结
-
-RSI止损追踪交易策略通过RSI指标判断超卖情况,同时设置固定止损比例严格控制风险,整体思路简单易懂,适合新手学习使用。但是该策略也存在滞后性、止损机制简单、盈利水平不高等问题,需要在实际应用中不断优化改进,提高策略的稳定性和盈利性。
-
-||
 
 ### Overview
 
@@ -84,7 +46,6 @@ This strategy utilizes the Relative Strength Index (RSI) indicator to determine 
 ### Summary
 
 The RSI Stop Loss Tracking Trading Strategy uses the RSI indicator to determine oversold conditions while setting a fixed stop loss percentage to strictly control risk. The overall idea is simple and easy to understand, suitable for beginners to learn and use. However, this strategy also has problems such as lagging, simple stop loss mechanism, and low profitability. It needs to be continuously optimized and improved in actual application to enhance the stability and profitability of the strategy.
-[/trans]
 
 
 

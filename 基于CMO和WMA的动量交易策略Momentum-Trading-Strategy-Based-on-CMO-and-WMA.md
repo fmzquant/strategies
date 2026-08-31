@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e3fed8ade8249390bd.png)
-[trans]
-
-
-## 概述
-
-该策略名称为“基于CMO和WMA的动量交易策略”。该策略利用Chande Momentum Oscillator(CMO)和其加权移动平均线(WMA)构建交易信号。核心思想是当CMO上穿其WMA时做多,下穿其WMA时做空。同时考虑反向交易的选项。
-
-## 策略原理
-
-该策略的核心指标是CMO。CMO与RSI等其他动量指标关系密切,但也有独特之处。CMO直接测量价格变化momentum。其计算基于原始未经平滑的数据,所以能反映短期极端价格变动。CMO数值范围固定在+100至-100之间,所以方便比较不同股的绝对momentum大小。 
-
-该策略首先计算 close 价格的单日变化abs(close - close[1])作为原始momentum xMom。然后计算xMom的Length天SMA,记为xSMA_mom。然后计算Length天价格变化xMomLength,即close - close[Length]。最后CMO值为xMomLength除以xSMA_mom再乘100。该CMO通过WMA(参数LengthWMA)得到平滑后CMO xWMACMO。策略信号为:当CMO上穿(下穿)其WMA时做多(空)。
-
-## 策略优势
-
-该策略最大优势是捕捉价格趋势中的动量特征。CMO的有界设计使其更直接反映动量变化。相比SMA,WMA更能平滑掉短期噪声。所以该策略能有效识别中长线趋势中的入场点。另外相比单一指标,组合使用CMO和WMA更能提高稳定性。
-
-## 策略风险 
-
-该策略最大风险在于频繁交易带来的滑点成本。CMO和WMA都是短期参数,可能过于灵敏而产生多次无谓反转。这在品种波动较大时尤为严重。此外,固定参数无法适应市场环境的变化。
-
-可以考虑引入自适应参数优化CMO和WMA的参数,使其能动态调整;或者增加过滤条件减少无谓交易。当然降低品种波动性通过组合也是一个选择。
-
-## 策略优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加自适应CMO参数机制。不同波动环境下找到最优参数;
-
-2. 增加自适应WMA参数机制。平滑效果随波动性变化;   
-
-3. 增加过滤条件,如引入Volatility Index等,控制无谓反转;
-
-4. 考虑与其它 indictor 的组合,提高稳定性;
-
-5.优化止损机制。设定动态止损线,主动控制单轮损失。
-
-## 总结
-
-该策略基于CMO和WMA实现简单有效的趋势追踪。策略优势是清晰抓取价格动量特征。但也存在一定盈利后持仓能力差的缺点。通过参数优化和组合都能很好提高稳定性。总体而言,该策略具有很大改进空间和价值。
-
-||
 
 
 ## Overview
@@ -92,7 +50,6 @@ The strategy can be enhanced from the following aspects:
 
 The strategy realizes simple and effective trend following based on CMO and WMA. Its advantage lies in clearly capturing price momentum characteristics. But it also has some weakness in profit retention capability after opening positions. Both parameter tuning and combo can greatly improve stability. Overall, this strategy has lots of room and value for improvement.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15aa3e95821cd2cbf8f.png)
-[trans]
-
-## 概述
-
-本策略是一种综合性的交易策略,其目的是在中短期内获利。它整合了123反转策略和神奇振荡器策略,以发挥两者的优势,获取更可靠的交易信号。
-
-## 策略原理
-
-该策略由两部分组成:
-
-**123反转策略**
-
-这部分策略基于书籍“我如何在期货市场上使资金增长三倍”第183页所述的反转策略改编。它在以下情况下做多:如果收盘价连续2天高于前一日收盘价,且9日随机慢线低于50时;它在以下情况下做空:如果收盘价连续2天低于前一日收盘价,且9日随机快线高于50时。
-
-**神奇振荡器策略**
-
-该部分策略使用神奇振荡器指标,它将AO当前值与上一期的值进行对比。如果当前AO值高于上一期,则视为适合做多,柱形显示为蓝色;如果当前AO值不高于上一期,则视为适合做空,柱形显示为红色。
-
-综合信号生成规则是:如果123反转策略和神奇振荡器策略同时发出买入信号,则采取做多策略;如果两者同时发出卖出信号,则采取做空策略。
-
-## 优势分析
-
-该综合策略最大的优势在于整合了两种不同类型策略的优点,可以提高信号的可靠性和稳定性。
-
-具体来说,123反转策略在中短期内较为适用,可以捕捉反转机会。而神奇振荡器策略则更注重短期趋势,灵敏度较高。两者互为补充,可以过滤掉一些假信号,同时也可以在不同阶段捕捉较优的入场时机。
-
-另外,该策略综合利用K线信息和振荡器指标,兼顾了价格行情本身的信息和量价关系,比较全面和立体。
-
-## 风险分析
-
-该策略最大的风险在于,综合多个策略也意味着综合了各自的风险。
-
-123反转策略本身并不能完全避免被困于震荡市场的风险。神奇振荡器策略对短期市场波动也较为敏感。如果两者发出错误信号,则会乘二为害。
-
-此外,参数设置也会影响策略效果。需要反复测试和优化,找到最佳参数组合。
-
-要规避风险,可以适当调整策略持仓规模,降低单笔交易的风险敞口。另外,可设置止损线,避免损失进一步扩大。
-
-## 优化方向
-
-可以从以下几个方面进一步优化该策略:
-
-1. 测试并优化参数,找到最优参数组合
-
-2. 增加其他指标或过滤条件,进一步提高信号质量
-
-3. 结合不同时间周期进行多时间框架优化
-
-4. 增加动态止损策略,更好控制风险
-
-5. 考虑实际交易成本,设定进入和退出的条件
-
-6. 考虑大级别趋势方向,避免逆势操作
-
-## 总结
-
-本策略综合运用123反转和神奇振荡器两大策略的优点,在提高信号可靠性的同时,保留了一定的灵活性和对市场变化的敏感度。但仍需进一步优化参数,严格控制风险,方能在实盘中稳定获利。整体来说,该策略具有很好的中短期交易潜力,值得进一步研究与应用。
-
-||
 
 
 ## Overview
@@ -127,7 +68,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy combines the strengths of the 123 Reversal and Awesome Oscillator strategies, enhancing signal reliability while retaining flexibility and sensitivity to market changes. Further parameter optimization and strict risk control are needed for stable profits in live trading. Overall, this strategy has good potential for medium to short-term trading and is worth researching and applying.
 
-[/trans]
 
 > Strategy Arguments
 

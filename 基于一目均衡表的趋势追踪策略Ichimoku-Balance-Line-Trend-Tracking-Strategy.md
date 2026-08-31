@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略采用Ichimoku Kinko Hyo指标中的Conversion Line,Base Line以及线云的前沿和后沿线,识别价格的趋势方向,实现趋势追踪交易。当价格突破云顶时做多,突破云底时做空,达到预设盈利比例止盈,达到预设亏损比例止损。
-
-## 策略原理
-
-该策略主要使用以下Ichimoku指标线:
-
-- Conversion Line (Tenkan-sen): 转换线,代表短期趋势,为9周期最高价和最低价的平均线 
-- Base Line (Kijun-sen): 基准线,代表中期趋势,为26周期最高价和最低价的平均线
-- Leading Span A (Senkou Span A): 前沿线A,为转换线和基准线的平均线
-- Leading Span B (Senkou Span B): 前沿线B,为52周期最高价和最低价的平均线 
-
-当价格上穿前沿线云时,做多;当价格下穿前沿线云时,做空。ConfigEntry和ExitReason分别在突破云顶和云底时开仓,达到盈亏比例时平仓。
-
-## 优势分析
-
-- 使用Ichimoku指标识别趋势方向,避免被市场震荡误导
-- 采用突破云顶/云底的方式识别趋势转折点,提高交易效率
-- 设置止盈止损点,有助于把握盈利机会并控制风险
-
-## 风险分析 
-
-- Ichimoku指标存在滞后,可能错过趋势转折的最佳点位
-- 需要合理设置参数周期,如转换线、基准线等周期设置不当可能导致虚假信号
-- 止损点设置过小,可能过早止损;设置过大,亏损扩大的风险
-
-## 优化方向
-
-- 考虑结合其他指标识别趋势,提高准确率
-- 动态优化参数周期,适应不同周期和市场环境
-- 设置追踪止损,让止损点根据价格波动进行调整,避免过早止损
-- 考虑开发自动止盈止损策略,根据市场波动性智能调整止盈止损点
-
-## 总结
-
-该策略利用Ichimoku云识别趋势方向,简单有效地进行趋势追踪交易。虽存在一定滞后和假信号风险,但可通过参数优化、止损技术改进、结合其他指标等方式获得改进。该策略易于理解和实现,适合初学者学习,也可作为其他策略参考。通过不断测试和优化,可使策略参数和规则更完善,在实盘中获得更好的绩效。
-
-||
 
 
 ## Overview
@@ -90,7 +49,6 @@ It goes long when price breaks above the cloud and goes short when price breaks 
 
 This strategy uses Ichimoku cloud to identify trends and implement simple trend tracking. Despite some lag and false signals, optimizations in parameters, stops, and using other indicators can improve it. Easy to understand and implement, it's good for beginners to learn from and reference when developing other strategies. Continuous testing and optimizations will improve parameters and rules for better live performance.
 
-[/trans]
 
 > Strategy Arguments
 

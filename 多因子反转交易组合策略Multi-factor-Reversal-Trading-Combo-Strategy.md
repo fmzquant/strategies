@@ -9,65 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述 
-
-该策略通过组合使用多种反转指标,在价格出现反转信号时采取反向头寸,属于反转类算法交易策略。
-
-## 策略原理
-
-1. 首先使用123反转系统判断价格反转信号。该系统结合了价格连续两个Bar的关系和Stochastic指标判断反转。
-
-2. 其次使用快慢峰度指标FSK判断市场情绪反转。该指标通过动量的加速度判断市场买卖气势的变化。
-
-3. 将123反转系统和FSK反转指标进行组合,当两者同时发出反转信号时,采取反向头寸。
-
-4. 可选择反向交易,当原信号为多头时采取空头,当原信号为空头时采取多头。
-
-## 优势分析
-
-1. 组合多个因子可以提高信号的准确率,避免单一指标的假信号。
-
-2. 123反转系统和FSK指标具有互补性,可以捕捉不同时间维度的反转机会。
-
-3. 反向交易可以在剧烈行情反转中获利。
-
-4. 采用多种反转因子,可以增强策略的稳健性。
-
-5. 容易理解和实现,适合量化交易初学者。
-
-## 风险分析
-
-1. 反转信号可能出现误判,导致亏损。
-
-2. 反转时间定位不准可能导致追顶追底。
-
-3. 反向交易在趋势持续时会亏损。
-
-4. 参数优化不当可能导致过拟合。
-
-5. 交易频率过高可能承担更多交易成本。
-
-## 优化方向
-
-1. 测试添加其他反转因子,如RSI,KD等,丰富组合。
-
-2. 优化参数,提高指标灵敏度。
-
-3. 添加趋势过滤,避免逆势交易。
-
-4. 使用动态仓位管理策略,优化资金利用效率。 
-
-5. 优化止损策略,降低单笔亏损。
-
-6. 评估交易成本影响,降低过高频交易。
-
-## 总结
-
-该策略通过组合123反转系统和FSK指标,在价格反转时采取反向交易。可以过滤假信号,提高准确率。但反转策略面临着反转不确定性的风险。需要持续优化参数,并适当控制仓位规模和交易频率,降低风险,提高稳定性。
-
-||
 
 
 ## Overview
@@ -126,7 +67,6 @@ This strategy combines multiple reversal indicators to take counter directional 
 
 This strategy combines the 123 reversal system and FSK indicator to trade price reversals in counter direction. It can filter out false signals and improve accuracy. But reversal strategies face the risk of uncertain reversals. Continual parameter tuning, position sizing and trade frequency controls are needed to reduce risks and enhance robustness.
 
-[/trans]
 
 > Strategy Arguments
 

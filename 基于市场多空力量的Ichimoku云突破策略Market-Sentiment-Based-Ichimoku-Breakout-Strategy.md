@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11a0bb50187e9a54be7.png)
-[trans]
-## 概述
-
-该策略是一种趋势跟踪策略,同时结合了Ichimoku云指标的配置来判断市场的多空力量,以发现潜在的突破机会。关键部件包括基于Ichimoku云的判断框架、ATR止损、百分比止损以及可选的止盈机制。
-
-## 策略原理
-
-策略的核心判断包括两部分,一个是基于Ichimoku云指标判断市场多空力量的趋势信号,一个是基于潜在突破的强势信号。
-
-对于趋势判断,要同时满足Conversion Line上穿Base Line表明多头趋势建立、Lagging Span高于K线实体表示目前多头力量强劲、价格高于云中最高价显示突破上轨等条件。
-
-对于强势信号,要同时满足价格高于云中最低最高价显示超强势力、Conversion Line和Base Line同为多头表示势能充沛等条件。
-
-当两类条件任意一组触发时,就以市价单开仓做多;之后会基于ATR、百分比或Ichimoku云指标的规则来设置止损追踪,进一步锁定利润。
-
-## 优势分析
-
-该策略最大的优势在于同时利用了Ichimoku云的趋势判断和多空力量评估功能。相比单一的移动平均线等指标,Ichimoku云更能反映当前行情的势力对比,从而提高信号的准确性。
-
-另外,结合ATR和百分比止损来管理风险,可以很好控制单笔损失。此外,可选的止盈机制也使得策略收益更为稳定。
-
-## 风险分析 
-
-策略的主要风险在于Ichimoku云本身就有一定的滞后性。此外,强势信号作为追涨的特性,也可能增加策略被套的概率。
-
-为降低滞后问题导致的风险,可以适当缩短Ichimoku云的参数周期;对强势信号引发的风险,则需要加强止损追踪的设置来应对。
-
-## 优化方向
-
-可以从以下几个方向来进一步优化该策略:
-
-1. 测试不同市场的数据,判断策略健壮性和适应性
-
-2. 优化Ichimoku云的参数,使之更契合特定市场行情
-
-3. 尝试LSTM等深度学习算法,辅助判断突破信号强度
-
-4. 加入量能指标,避免追涨杀跌的概率
-
-## 总结
-
-该策略整合利用Ichimoku云的配置判断市场多空力量,在捕捉潜在趋势的同时,也充分考虑风险管理。有效地平衡了策略收益和可控性。虽然仍有一定的优化空间,但整体而言是一种非常实用的趋势跟踪策略。
-
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ Possible improvements include:
 
 This Ichimoku system effectively gauges market sentiment for trend trading. The balanced focus on catching momentum and managing risk also makes it practical. There is room for improvement but overall a solid trend following framework.
 
-[/trans]
 
 > Strategy Arguments
 

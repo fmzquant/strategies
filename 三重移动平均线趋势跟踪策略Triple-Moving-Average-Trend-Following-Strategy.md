@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d1a724e56314e21002.png)
-[trans]
-### 概述
-
-本策略结合了乌龟交易法的概念与Niko Bakkers的相位分析,使用三条不同周期的移动平均线来判断趋势方向,实现追踪趋势获利。当快速移动平均线上穿中速移动平均线并且三条移动平均线都处于同一上升或下降趋势时做多;当快速移动平均线下穿中速移动平均线并且三条移动平均线都处于同一上升或下降趋势时做空。
-
-### 策略原理
-
-1. 计算三条不同周期的移动平均线:快速移动平均线周期为8天,中速移动平均线周期为21天,慢速移动平均线周期为55天。
-
-2. 判断入场条件:当快速移动平均线上穿中速移动平均线,并且三条移动平均线都处于上升趋势时,做多;当快速移动平均线下穿中速移动平均线,并且三条移动平均线都处于下降趋势时,做空。
-
-3. 判断出场条件:快速移动平均线反向穿越中速移动平均线时平仓。
-
-4. 仓位控制:采用固定仓位,每次开仓1手。也可选择根据ATR动态调整仓位。
-
-### 策略优势
-
-1. 使用三条移动平均线有助于判断趋势方向,避免假突破。
-
-2. 追踪趋势运行,利润潜力大。
-
-3. 采用移动平均线则获利稳定,回撤相对较小。
-
-4. 可控的止损策略,降低大幅亏损的概率。
-
-### 风险分析
-
-1. 容易产生多次小额亏损,降低盈利效率。
-
-2. 移动平均线滞后,可能错过趋势反转点。
-
-3. 固定仓位无法有效控制风险,大幅行情震荡时可能爆仓。
-
-4. 参数优化不当则会过于频繁开仓平仓,增加交易费用和滑点损失。
-
-### 优化方向
-
-1. 优化移动平均线的周期参数,使其更符合交易品种的特点。
-
-2. 应用波动率指标ATR动态调整仓位。
-
-3. 加入止损策略。
-
-4. 结合交易量指标判断趋势可靠性。
-
-### 总结
-
-本策略整合了传统技术分析指标与乌龟交易法的理念,使用三条移动平均线追踪趋势,在参数优化得当的情况下,可以获得较好的盈利效果。但本策略也存在一定的风险,需要加入止损和仓位管理等举措来控制风险,从而获得长期稳定盈利的量化交易策略。
-
-||
 
 ### Overview  
 
@@ -109,7 +59,6 @@ This strategy combines the concept of turtle trading with Niko Bakkers' phase an
 
 This strategy integrates traditional technical indicators and the philosophy of turtle trading, using three moving averages to track trends. With proper parameter optimization, it can achieve good profitability. But it also has some risks. Stop loss, position sizing and other measures need to be utilized to control risks and obtain long-term steady profits from this quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

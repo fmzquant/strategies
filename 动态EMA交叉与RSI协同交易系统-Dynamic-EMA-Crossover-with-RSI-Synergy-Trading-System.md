@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/15ffac9141bd4e43f3d.png)
 
-[trans]
-#### 概述
-该策略是一个结合了指数移动平均线(EMA)交叉和相对强弱指标(RSI)的自动化交易系统。它通过EMA快线和慢线的交叉来识别趋势方向,同时利用RSI作为趋势确认指标,还包含了完整的资金管理和风险控制机制。系统采用固定风险和盈利目标的方式来管理每笔交易,通过动态计算持仓规模来确保风险的一致性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用9周期和21周期的EMA来识别趋势转折点,快线上穿慢线代表上涨趋势开始,下穿代表下跌趋势开始
-2. RSI指标作为趋势确认工具,在买入信号出现时要求RSI>50,卖出信号时要求RSI<50
-3. 风险管理系统设定每笔交易的最大亏损额度为1000,目标盈利为5000,通过调整持仓规模来实现固定的风险收益比
-4. 系统采用固定点数(25点)的止损设置,并根据风险金额动态计算开仓数量
-5. 交易失败检测机制可以及时发现止损出场的交易,并在图表上标记失败点位
-
-#### 策略优势
-1. 结合趋势跟踪和动量确认的双重验证机制,提高了交易信号的可靠性
-2. 完善的资金管理系统,每笔交易的风险固定,避免了过度损失
-3. 清晰的风险收益比设置(1:5),有利于长期盈利
-4. 系统具备自动化的交易执行能力,减少了人为情绪干扰
-5. 失败交易的可视化标记有助于策略优化和回测分析
-
-#### 策略风险
-1. EMA交叉策略在震荡市场可能产生频繁的假信号
-2. 固定点数止损可能不够灵活,在波动性变化时难以适应
-3. 较大的风险收益比(1:5)可能导致胜率降低
-4. RSI指标在极端市场条件下可能失效
-5. 固定的交易手数可能不适合所有市场条件
-
-#### 策略优化方向
-1. 引入自适应的止损机制,如基于ATR的动态止损
-2. 增加市场波动性过滤器,在高波动期间调整策略参数
-3. 考虑添加成交量指标作为辅助确认工具
-4. 开发动态的手数调整机制,根据市场情况自适应
-5. 引入更多的趋势确认工具,如MACD或布林带
-
-#### 总结
-该策略通过结合EMA交叉和RSI指标构建了一个完整的交易系统,包含信号生成、风险管理和交易执行等关键环节。虽然存在一些需要优化的地方,但整体框架设计合理,特别是在资金管理方面的考虑较为周全。通过进一步优化和完善,该策略有望在实际交易中取得更好的表现。
-
-|| 
 
 #### Overview
 This strategy is an automated trading system that combines Exponential Moving Average (EMA) crossovers with the Relative Strength Index (RSI). It identifies trend directions through EMA crossovers while using RSI as a trend confirmation indicator, incorporating comprehensive money management and risk control mechanisms. The system manages each trade with fixed risk and profit targets, ensuring risk consistency through dynamic position sizing.
@@ -83,7 +46,6 @@ The core logic is based on several key elements:
 
 #### Summary
 This strategy builds a complete trading system by combining EMA crossovers and RSI indicators, encompassing signal generation, risk management, and trade execution. While there are areas for optimization, the overall framework is well-designed, particularly in terms of money management considerations. Through further optimization and refinement, this strategy shows promise for improved performance in actual trading.
-[/trans]
 
 
 

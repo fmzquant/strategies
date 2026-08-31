@@ -9,81 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略通过合理运用移动平均线、相对强弱指数(RSI)、均线方向等多种技术指标,实现对趋势的精准判断。在双移动平均多空判断的基础上,增加了RSI指标的多空过滤,避免假突破。同时,通过不同周期均线的联合观察,可有效识别趋势方向。策略优化空间大,可适用于不同品种和周期。
-
-## 策略原理
-
-本策略主要基于以下技术指标运作:
-
-1. 双移动平均线:快速移动均线和慢速移动均线的金叉看涨,死叉看跌。本策略中采用EMA指标计算移动平均线。
-
-2. RSI指标:RSI高位回落看跌机会,低位回升看涨机会。本策略中采用RSI指标的多空逻辑进行趋势过滤。
-
-3. 均线方向:长线与短线的方向对比,可以判断趋势。本策略中采用200周期EMA判断长线方向。
-
-交易逻辑如下:
-
-1. 快速EMA上穿慢速EMA,做多;快速EMA下穿慢速EMA,做空。
-
-2. RSI指标高位回落 Adds做空机会,低位回升Adds做多机会。
-
-3. 仅在长线(200日EMA)方向一致时入场,如长线上涨只做多,长线下跌只做空。
-
-4. 采用止盈止损Exit策略。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 多种技术指标联合使用,可有效确认趋势方向,减少假突破operationopportunities。
-
-2. 增加RSI指标的多空过滤,可避免趋势反转的whipsaw。
-
-3. 采用短中长线趋势判断,可提高entry的时间性和方向性。 
-
-4. Stop loss设定了风险控制措施,可控制单笔损失。
-
-5. 可调整参数实现多周期适应性,适合不同交易品种。
-
-## 风险分析
-
-本策略也存在一定的风险:
-
-1. 大趋势市场中,短期调整可能触发止损。可适当放宽止损范围,或采用移动止损追踪止损。
-
-2. 震荡趋势中,假突破可能导致亏损。可适当加大RSI参数的过滤区间,或采用Donchian通道等指标进行辅助。
-
-3. 参数优化不当可能导致过于频繁交易,需要针对不同品种谨慎测试优化参数。
-
-4. 本策略仅基于技术指标交易,需结合基本面分析确定大趋势方向。
-
-## 优化方向
-
-本策略可从以下几个方面进行优化:
-
-1. 调整移动平均线周期,适应不同周期行情。
-
-2. 优化RSI的参数,改进多空选择的准确性。
-
-3. 测试添加Bollinger Bands, Keltner Channels等指标,提高突破的成功率。
-
-4. 尝试将止损改为移动止损或атель止损,以更好跟踪趋势。
-
-5. 研究在趋势较弱时采用范围突破操作,降低误交易概率。
-
-6. 根据不同品种特点,设定合理的止盈止损数值,控制风险。
-
-7. 添加交易量控制,避免单笔投入过大。
-
-## 总结
-
-本策略总体思路清晰、易于实施,在参数优化后可适用于多种品种和周期,具有较强的跟踪趋势能力。但需要注意控制风险,防止在震荡行情中被套。可根据行情特点和个人偏好,对策略进行定制化优化。
-
-||
 
 
 ## Overview
@@ -158,7 +83,6 @@ This strategy can be optimized in the following aspects:
 
 The strategy has clear logic and is easy to implement. With proper parameter tuning, it can be applied to various products and cycles with strong trend following capacity. Risk control is important to avoid being trapped in range-bound markets. Customized optimizations can be done based on market conditions and personal preferences.
 
-[/trans]
 
 > Strategy Arguments
 

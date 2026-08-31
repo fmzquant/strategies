@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b8e91ebc3345f23ea7.png)
-[trans]
-## 概述
-
-该策略通过计算三组不同参数设置的 RSI 指数和对应的六条移动平均线,形成三条移动平均带,据此判断市场趋势方向,进行长线操作。
-
-## 策略原理
-
-1. 计算三组 RSI 指数:RSI 快线 Period=50,RSI 中线 Period=75,RSI 慢线 Period=100。
-2. 对每组 RSI 指数分别计算 5、30、50、70、90、100 周期的简单移动平均线或指数移动平均线,形成移动平均带。
-3. 当快线 RSI 对应移动平均线全线上涨时判断为多头信号;当快线 RSI 对应移动平均线全线下跌时判断为空头信号。
-4. 中线 RSI 和慢线 RSI 对应移动平均带给出的交易信号亦然。
-5. 在给定的交易时间段内,当出现买入信号时按 100% 仓位多头开仓;当出现卖出信号时平掉之前的多头仓位。
-
-## 优势分析
-
-该策略结合 RSI 指标和移动平均线的优势,利用三组参数设置不同的 RSI 以捕捉不同级别周期的趋势变化,同时运用六条移动平均线过滤掉部分噪声,从而提高信号的可靠性。
-
-相比单一 RSI 和移动平均线,该组合利用系统性方法形成判断依据,不依赖参数优化,运用科学严谨,实施简便,容易掌握。
-
-## 风险分析
-
-RSI 组合移动平均线策略依赖参数设置,如果参数设置不当,将可能产生错位信号。此外,快速行情的波动也可能触发错误信号。
-
-为减少错误信号风险,应适当调整 RSI 周期参数,或调整移动平均线的周期数目,找到最佳参数组合。
-
-## 优化方向
-
-该策略可从以下几个方面进一步优化:
-
-1. 添加止损逻辑。现有策略没有设置止损,容易受行情剧烈波动的影响。
-2. 优化参数设置。可以测试更多组合来寻找最佳参数。
-3. 增加其他指标过滤。可以引入 MACD、布林带等其他指标来确认信号。
-4. 加入时间和交易量过滤。避免异常时间段和量能的假信号。
-
-## 总结
-
-该三重 RSI 移动平均带策略整合多个指标的优势,通过严密的逻辑判断形成交易信号,对长线趋势进行判断。策略简单实用,容易掌握,适合移动平均带交易策略的学习和实践。随着参数和组合的不断优化,策略效果有望进一步改善。
-
-||
 
 ## Overview
 
@@ -96,7 +57,6 @@ The strategy can be further optimized in the following aspects:
 
 The three RSI moving average bands strategy integrates the advantages of multiple indicators and forms trading signals through rigorous logical judgments to determine long-term trends. The strategy features simplicity, ease of grasp and is suitable for learning and practicing moving average bands trading strategies. With continuous optimization of parameters and combinations, the strategy effect is expected to further improve.
 
-[/trans]
 
 > Strategy Arguments
 

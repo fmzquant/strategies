@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13b1d64d0343d4efbf6.png)
 
-[trans]
-
-### 概述
-
-双EMA黄金交叉震荡追踪策略是一个利用EMA指标识别趋势,并在震荡行情中进行追踪的策略。该策略综合了趋势跟踪和震荡捕捉的思路,在强势行情中进行长线追踪,在震荡行情中进行短线交易,以期获得较好的收益。
-
-### 策略原理
-
-该策略使用20周期的EMA作为判断趋势的指标。当价格上穿EMA时,认为行情开始上涨;当价格下穿EMA时,认为行情开始下跌。
-
-在价位上穿EMA时,以20周期highest的最高价作为止盈位,以自价格上穿EMA后low的最低价作为止损位,做多进入;在价位下穿EMA时,以20周期lowest的最低价作为止盈位,以自价格下穿EMA后high的最高价作为止损位,做空进入。
-
-同时,策略还会判断ADX是否大于30。只有在趋势足够明确时,即ADX高于30时,才会进行交易。这可以避免在震荡行情中出现止损。
-
-在持仓过程中, trail stop会根据市场实时情况来调整,以锁定更多利润。
-
-### 优势分析
-
-该策略结合了趋势跟踪和震荡交易的优点,既可以在趋势行情中获得较大利润,也可以在震荡行情中获得较稳定收益,具有较强的适应性。
-
-EMA的应用也使得策略的参数较少,降低了过度优化的风险,从而保证了策略的稳定性。
-
-### 风险分析
-
-该策略主要的风险在于震荡加剧时可能出现较多的止损。这时ADX的作用就凸显出来了。当ADX值较低时,会关闭交易,避免在无明确趋势时的损失。
-
-此外,合理设置止损点也是关键。止损点设置过大,可能增加单笔损失;止损点设置过小,则可能过于灵敏,增加止损概率。这里需要在盈利目标和止损风险之间找到平衡。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. EMA周期的选择。可以测试更多的EMA周期参数,找到最佳参数组合。
-
-2. ADX的参数可进行优化。ADX周期和ADX的阈值都可以尝试不同设置。
-
-3. 止盈止损算法可以改进,如引入动态止盈止损。
-
-4. 可以考虑加入其他指标进行组合,如KDJ、MACD等,形成多指标验证策略。
-
-### 总结
-
-双EMA黄金交叉震荡追踪策略总的来说是一个非常实用的策略。它融合了趋势策略和震荡策略的特点,既可以用于长线追踪,也可以用于短线交易。通过参数优化和组合指标验证,该策略的效果还可进一步提升。它适用于对市场有一定研判能力的投资者。
-
-||
 
 ### Overview
 
@@ -99,7 +54,6 @@ Possible optimizations for this strategy include:
 
 In summary, the Dual EMA Crossover Oscillation Tracking strategy is a highly practical strategy. It combines the strengths of both trend trading strategies and oscillation strategies. It can be used for both long-term tracking and short-term trading. Further improvements in performance can be achieved through parameter optimization and adding confirming indicators. It suits investors with some degree of analytical capabilities regarding market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

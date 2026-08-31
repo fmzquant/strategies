@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12b8075cd07a74b1683.png)
-[trans]
-### 概述
-
-双重动量指数与反转复合策略是一个结合反转策略与动量策略的复合策略。它综合运用了123反转策略与商品选择指数(CSI)两个子策略,根据双重信号判断入场时机。该策略旨在提高交易信号的准确性。
-
-### 策略原理
-
-该策略由两个子策略组成:
-
-1. 123反转策略。它在连续两天收盘价上涨且stoch指标低于50时做多;连续两天收盘价下跌且stoch指标高于50时做空。属于反转型策略。
-
-2. 商品选择指数(CSI)策略。它结合平均真实价格范围指标(ATR)与平均方向运动指标(ADX)。ATR反映市场波动性,ADX反映趋势强度。CSI值越高,表示市场趋势性与波动性越强。属于动量追踪型策略。
-
-整个策略以123反转策略为主体,CSI策略为辅助confirmation。只有当两者信号一致时才发出交易信号。做多时,连续两天收盘价上涨且stoch低于50,同时CSI上穿其移动平均线;做空时,连续两天收盘价下跌且stoch高于50,同时CSI下穿其移动平均线。
-
-这样既保证了交易信号的反转属性,同时加入CSI指标过滤可以减少假信号。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 结合反转与动量,提高信号准确性。123反转策略作为主信号,可捕捉到突发的剧烈行情反转。CSI指标作为副确认,可过滤掉部分噪音。
-
-2. 采用复合过滤,可大幅降低净持仓。即使子策略本身存在一定假信号比例,但最终信号必须双重一致,则可过滤掉大部分假信号,从而最大限度减少不必要的反复开平仓。
-
-3. 子策略参数可单独优化。123反转策略和CSI策略各自的参数可分别测试和优化,而不会互相干扰。这为寻找最佳参数组合提供了便利。
-
-4. 可单独启用子策略。该策略支持只使用123反转策略或CSI策略单独交易。这提供了策略的灵活性。
-
-### 风险分析
-
-尽管该策略通过复合过滤大幅降低了假信号,但仍存在以下主要风险:
-
-1. 策略信号产生频率相对较低。采用双重确认方式,必然会过滤掉一定比例的交易机会。这是实现高胜率的必然付出。
-
-2. 若两个子策略参数不当,可能造成信号稀少甚至没有信号。需要对参数进行严格的测试与优化,找到最佳参数组合。
-
-3. 123反转属于逆市操作。若行情出现连续和剧烈的单边价格突破,则该策略将面临较大的风险。可考虑加入止损来控制风险。
-
-### 优化方向
-
-该策略的主要优化空间在以下几个方面:
-
-1. 优化每个子策略内在的参数,找到最佳参数组合。包括stoch指标参数、CSI指标参数等。
-
-2. 测试加入不同市场状态过滤器。如只在趋势盛行时使用CSI策略,只在震荡市场使用123反转策略等。这可在一定程度上克服子策略的劣势。
-
-3. 开发参数自适应和动态优化模块。允许策略根据实时市场状态和统计数据自动调整参数,实时追踪最优参数组合。
-
-4. 测试不同的止损机制。适当的止损既可有效控制风险,也可减少不必要的反复开平仓。
-
-### 总结
-
-双重动量指数与反转复合策略运用多信号确认和组合思路,有效利用了反转策略和动量策略各自的优势,同时通过互相过滤缓解了双方的劣势,实现高效率和高稳定性。它是一个可供选用的典型量化策略之一。
-
-||
 
 ### Overview
 
@@ -121,7 +65,6 @@ The main optimization possibilities of this strategy are in the following areas:
 
 The Double Momentum Index and Reversal Hybrid Strategy utilizes the ideas of multi-signal confirmation and combination, making good use of the respective strengths of reversal and momentum strategies, while overcoming their shortcomings by mutual filtering, to achieve high efficiency and stability. It serves as a typical quantitative strategy to be considered for adoption.  
 
-[/trans]
 
 > Strategy Arguments
 

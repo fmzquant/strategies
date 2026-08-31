@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bc1f543202b5d04775.png)
 
-[trans]
-#### 概述
-该策略基于布林带(Bollinger Bands)指标,通过价格突破布林带上下轨的方式产生交易信号。当价格突破上轨时做多,突破下轨时做空。同时,当持有多单时,如果价格跌破下轨则平多;持有空单时,如果价格突破上轨则平空。该策略旨在捕捉市场的波动性,在价格波动加剧时及时入场交易,并在价格反转时及时止损。
-
-#### 策略原理
-1. 计算指定周期的移动平均线作为布林带的中轨,可选择SMA、EMA、SMMA、WMA和VWMA等不同类型的移动平均线。
-2. 计算中轨加减一定倍数的标准差作为布林带的上下轨。
-3. 当价格突破上轨时产生做多信号,突破下轨时产生做空信号。
-4. 如果持有多单,当价格跌破下轨时平仓;如果持有空单,当价格突破上轨时平仓。
-
-#### 优势分析
-1. 布林带能够很好地量化市场的波动性,在价格波动加剧时提供明确的交易信号。
-2. 策略同时设置了止损条件,能够有效控制风险。
-3. 策略参数可调,可以根据不同品种和周期进行优化,具有一定的适应性和灵活性。
-
-#### 风险分析
-1. 在震荡市中,价格频繁突破布林带上下轨可能导致交易信号过于频繁,从而增加交易成本。
-2. 布林带具有一定的滞后性,在市场快速变化时,交易信号可能出现延迟。
-3. 布林带参数选择不当可能导致策略表现不佳,需要根据不同品种和周期进行优化。
-
-#### 优化方向
-1. 可以考虑引入趋势指标或者价格行为模式识别等方法,对交易信号进行二次确认,以减少假突破导致的亏损交易。
-2. 可以优化止损条件,例如根据ATR等指标设置动态止损,或者引入追踪止损等方法,以进一步控制风险。
-3. 可以通过遗传算法、网格搜索等方法对策略参数进行优化,寻找最优参数组合。
-
-#### 总结
-BB均线突破策略是一个基于布林带指标的交易策略,通过捕捉价格突破布林带上下轨的机会进行交易。该策略优点是信号明确,易于实现,同时具有一定的风险控制措施。但是该策略也存在一些局限性,如交易频率可能过高,信号滞后等问题。因此在实际应用中,可以考虑从信号确认、止损优化、参数优化等方面对策略进行改进,以提高策略的稳定性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy is based on the Bollinger Bands indicator and generates trading signals when the price breaks through the upper or lower bands. It goes long when the price breaks above the upper band and goes short when the price breaks below the lower band. Additionally, if holding a long position, it closes the position when the price falls below the lower band; if holding a short position, it closes the position when the price breaks above the upper band. The strategy aims to capture market volatility, entering trades when price fluctuations intensify and exiting in a timely manner when prices reverse.
@@ -67,7 +38,6 @@ This strategy is based on the Bollinger Bands indicator and generates trading si
 
 #### Summary
 The BB Breakout Strategy is a trading strategy based on the Bollinger Bands indicator, seeking trading opportunities when prices break through the upper or lower bands. The strategy's advantages are clear signals and easy implementation, with certain risk control measures in place. However, the strategy also has some limitations, such as potentially high trading frequency and signal lag. Therefore, in practical applications, improvements can be considered in areas such as signal confirmation, stop-loss optimization, and parameter optimization to enhance the strategy's stability and profitability.
-[/trans]
 
 
 

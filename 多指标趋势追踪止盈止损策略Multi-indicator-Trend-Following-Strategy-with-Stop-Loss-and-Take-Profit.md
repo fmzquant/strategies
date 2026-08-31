@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans] 
-
-### 策略概述
-
-多指标趋势追踪止盈止损策略通过整合EMA、MACD、OBV和PSAR等多个指标,判断当前的趋势方向,并在入市之后设置止盈止损来控制风险。该策略综合多种因子来确认交易信号,在追踪趋势的同时严格管控每个交易的收益和风险。
-
-### 策略原理
-
-1. 判断趋势方向:当EMA、MACD、OBV和PSAR等指标都发出同步的多头或空头信号时确定趋势。
-
-2. 入场规则:多头信号成立时做多,空头信号成立时做空。
-
-3. 止盈止损:入场后根据PSAR指标的点位距离设置本笔交易的止盈止损位。
-
-4. 出场规则:止盈或止损触发后平仓。
-
-该策略的优势在于采用多指标判断以发出高概率的交易信号,同时止盈止损策略可在保证盈利的前提下主动控制风险。指标组合和参数设置可根据市场情况进行优化。
-
-### 策略优势 
-
-- 多指标组合发出高概率信号
-
-- 止盈止损策略主动控制风险
-
-- 参考PSAR点位设定止盈止损
-
-- 指标和参数优化灵活
-
-- 可在趋势中持续获利
-
-### 风险警示
-
-- 多指标组合判断较为复杂
-
-- 存在一定的信号滞后风险
-
-- 需要警惕反转和震荡市场
-
-- 参数设置需要不断测试和优化
-
-### 总结
-
-多指标趋势追踪止盈止损策略对趋势交易进行了全面的改进,不仅可以提高决策的准确性,也可以主动控制风险。通过反复测试不同市场和参数,可以将该策略优化为一个稳定可靠的量化系统。
-
-
-||
 
 ### Strategy Overview
 
@@ -99,7 +53,6 @@ The advantage of this strategy is using multiple indicators for high-probability
 
 The multi-indicator trend following strategy with stop loss and take profit comprehensively improves trend trading by enhancing accuracy and actively managing risks. Through repetitive testing on different markets and parameters, it can be optimized into a robust and reliable quantitative system.
 
-[/trans]
 
 > Strategy Arguments
 

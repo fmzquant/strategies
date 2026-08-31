@@ -11,69 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/14b89bfb92bf5915c9a.png)
-[trans]
-
-## 概述
-
-该策略是一个基于4个不同周期的SMMA(平滑移动平均线)以及1个EMA指标的移动平均系统。它结合了多个证券技术分析工具,通过趋势判断形成交易策略。该策略主要适用于高杠杆账户的EURUSD 15分钟债券进行日内交易。
-
-## 策略原理
-
-该策略使用4个不同参数的SMMA(3,6,9,50)以及1个EMA(200)构建多层次的移动平均系统。SMMA指标可以有效过滤市场噪音,判断趋势方向。EMA指标检测长期趋势。具体交易逻辑是:
-
-当短周期移动平均线(例如3周期SMMA)上穿较长周期移动平均线(例如200周期EMA)时产生买入信号。当短周期移动平均线下穿较长周期移动平均线时产生卖出信号。这样通过判断多个移动平均线的排列关系确定趋势方向。
-
-此外,策略还设定了止盈止损点以控制风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多层次移动平均线结构可以有效判断趋势方向,减少假信号。
-
-2. SMMA指标有效过滤了市场噪音,EMA指标检测长线趋势。
-
-3. 适合高杠杆账户,可以放大交易盈利。
-
-4. 设定了止盈止损点,可以有效控制风险。
-
-5. 优化了交易品种(EURUSD)和周期(15分钟),使其更具优势。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 大量使用移动平均线,可能错过短期反转机会。
-
-2. 高杠杆放大损失的同时也放大了盈利。
-
-3. 移动平均线产生信号时,短期行情可能已经发生反转。
-
-4. EURUSD汇率可能产生剧烈波动,带来更大风险。
-
-针对这些风险,可以适当调整杠杆倍数,优化移动平均线的参数,引入其他指标判断行情反转等进行优化。
-
-## 优化方向 
-
-该策略的主要优化方向有:
-
-1. 评估不同品种和周期的表现,选择最优参数。
-
-2. 测试不同的参数组合和数量的移动平均线。 
-
-3. 增加成交量或波动率指标判断短期反转点。
-
-4. 增加止盈止损幅度的动态调整。
-
-5. 加入ENU指标判断反转点。
-
-通过多方面测试和优化,可以大幅提高策略的稳定性和盈利能力。
-
-## 总结
-
-该移动平均线策略整合了均线指标的优势,形成稳健的趋势判断系统。它优化了交易品种和周期,非常适合高杠杆日内交易。通过参数调整和优化测试,该策略可以成为高效可靠的算法交易策略。
-
-||
 
 
 ## Overview
@@ -136,7 +73,6 @@ Through multi-faceted testing and optimization, the stability and profitability 
 
 This moving average strategy integrates the advantages of moving average indicators to form a robust trend judgment system. It optimizes trading varieties and cycles and is very suitable for high leverage intraday trading. Through parameter adjustment and optimization testing, this strategy can become an efficient and reliable algorithm trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

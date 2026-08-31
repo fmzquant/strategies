@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/153b14ed8bc9c5ea17a.png)
-[trans]
-## 概述
-
-本策略基于Ichimoku云图指标,结合Tenkan线、Kijun线、先行线和云图,识别多空信号,实现自动化交易。该策略同时结合了标准Ichimoku模型和TradingView策略测试器的自定义功能,适用于新手和有经验的交易者。
-
-## 策略原理
-
-该策略使用标准的Ichimoku模型,包括Tenkan线、Kijun线、先行线、云图A线和云图B线。策略通过比较这些线的交叉来判断多空信号。
-
-具体来说,当Tenkan线上穿Kijun线时产生多头信号;当Tenkan线下穿Kijun线时产生空头信号。此外,还会判断交叉时Tenkan线与云图的相对位置,分为强势信号、中性信号和弱势信号三种类型。例如Tenkan线交叉时高于云图两条线,就是强势多头信号。
-
-该策略提供丰富的自定义参数,用户可以自由选择入场和出场信号组合,实现自己的交易策略。
-
-## 策略优势
-
-1. 结合了Ichimoku模型的先进技术分析功能和TradingView策略测试器的自定义能力
-2. 提供多种参数设置选择,适合不同风格的交易者
-3. 实时更新和可视化的云图,清晰判断趋势方向
-4. 可通过回测数据优化参数,测试策略效果
-
-## 策略风险
-
-1. Ichimoku模型容易产生假信号,需要结合价格实体判断
-2.  Parameters选项太多,新手容易把自己绕进去
-3.  云图有滞后性,不适合追涨杀跌
-4.  回测数据不等于实盘表现,实盘时保持谨慎
-
-## 策略优化方向  
-
-1. 优化参数,找到最佳参数组合
-2. 结合其他指标过滤假信号
-3. 增加止损止盈逻辑,控制单笔交易风险
-4. 考虑交易品种、周期等条件的影响
-5. 实盘验证,根据实盘调整参数
-
-## 总结
-
-Ichimoku云图模型作为新一代技术分析工具,结合TradingView平台的可视化和策略开发功能,为量化交易者提供了强有力的技术支持。本策略充分利用两者优势,建立自动化交易体系。虽然仍需优化空间,但已显示出巨大应用潜力。随着参数调整和功能扩展的不断完善,本策略有望成为主流量化交易策略之一。
-
-||
 
 ## Overview
 
@@ -89,7 +49,6 @@ The strategy provides extensive customization parameters for users to freely com
 
 As a new generation of technical analysis tools, Ichimoku combined with TradingView's visualization and strategy development capabilities provides powerful support for quant trading. This strategy fully utilizes both to build an automated trading system. Despite needing further enhancements, it has already demonstrated great application potential. With continuous improvements in parameter tuning and functionality expansion, it is likely to become one of the mainstream quant strategies.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16880deee5b6151bec0.png)
 
-[trans]
-
-## 概述
-
-逆向费希尔RSI平均真实范围多时间框架策略是一种试图通过计算逆向调整后的RSI指标在较高时间框架上的移动平均,来发现市场可能的反转点的量化交易策略。
-
-## 策略原理
-
-该策略首先计算一般的RSI指标,指标参数为RSI\_pm代表计算RSI的周期长度。然后通过一个数学函数IF对原始RSI进行逆向调整,计算公式为IF(input)=>(exp(2\*input)-1)/(exp(2\*input)+1)。调整后的RSI指标传递给变量IF\_RSI。
-
-为了过滤掉过多的噪音,策略在IF\_RSI的基础上再计算其在RSI\_ps周期上的移动平均,得到最终的用来判断买卖点的指标wma\_RSI。该指标再映射到0-100的区间。
-
-最后,策略在一个更高的时间框架上画出该指标,并设置阈值线0.8和-0.8。当指标线从下向上突破0.8水平时产生买入信号;当指标线从上向下跌破-0.8水平时产生卖出信号。
-
-## 策略优势
-
-该策略通过双重平滑的方式处理RSI走势,能有效过滤掉过多噪音,锁定比较清晰的反转信号。双平滑分别应用在原始RSI指标和绝对值调整后的RSI指标。这种方法可以增强指标的平均回归特性,产生比较可靠的交易信号。
-
-另外,该策略采用多时间框架分析方法,在一个更高级别的时间框架上识别指标的突破,能锁定长线上的反转机会,避免被过多的短期市场噪音干扰。
-
-## 策略风险
-
-该策略依赖均线指标判断买卖点,存在一定的滞后。长期牛市中,指标调整后上行空间可能会受到限制,无法充分捕捉趋势机会。
-
-另一方面,指标的调整也可能错过短线调整后的反弹机会。如果不能适当优化指标参数,就可能面临一定的策略风险。
-
-## 策略优化
-
-可以尝试适当调整指标参数,使其更好地适应市场环境。例如可以测试不同的RSI计算周期,平滑周期参数,寻找最佳参数组合。
-
-也可以考虑结合其他辅助指标来验证信号,提高策略稳定性。例如可以加入成交量指标、布林线等判断趋势信号强弱。
-
-## 总结
-
-该逆向费希尔RSI平均真实范围多时间框架策略,整体思路较为稳健,但仍需优化以适应更广泛的市场情况。值得进一步测试和改进,使其成为一个可靠的量化交易策略。
-
-||
 
 ## Overview
 
@@ -83,7 +46,6 @@ It is also worth considering combining other auxiliary indicators to verify sign
 
 The Inverse Fisher RSI Moving Average Multi Timeframe Strategy has an overall robust logic, but still needs optimization to adapt to wider market situations. It is worth further testing and improving to make it a reliable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

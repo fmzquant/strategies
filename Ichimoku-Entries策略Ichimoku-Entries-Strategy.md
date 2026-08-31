@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ca547c55c87963664e.png)
-[trans]
-### 概述
-
-Ichimoku Entries是一个利用Ichimoku云图指标识别趋势方向,并结合布林带、RSI指标发出交易信号的量化策略。该策略主要根据十转线和基线的金叉死叉,判断目前处于多头市场还是空头市场,从而产生长仓和短仓的入场信号。
-
-### 策略原理  
-
-该策略主要利用Ichimoku云图的两个重要线——十转线和基线。十转线是最近9天的最高价和最低价的平均值,代表短期趋势。基线是最近26天的最高价和最低价的平均值,代表中长期趋势。当短期线十转线上穿中长期线基线时,代表入场做多;当十转线下穿基线时,代表入场做空。这样就判断了目前的趋势方向。
-
-除了Ichimoku云图以外,策略还检测布林带和RSI指标来发出交易信号。只有当收盘价突破布林带上轨或下轨,即表明价格出现异常;同时结合RSI指标判断是否处于超买超卖区域,过滤掉部分假突破情况,从而产生入场信号。
-
-在退出逻辑上,策略判断布林带突破是否成功,以及交易氛围指标TPO是否发生零轴穿越,来确定盈利或止损退出。
-
-### 优势分析
-
-该策略最大的优势在于同时利用趋势判断和异常波动来确定交易方向。Ichimoku云图可清晰判断趋势,布林带则可捕捉异常波动。RSI指标可有效过滤假突破。多种指标配合使用,可确保交易信号更加可靠。此外,策略加入止损和止盈逻辑,可锁定盈利,避免巨额损失。
-
-### 风险分析  
-
-尽管具备识别趋势和异常波动的优势,该策略仍存在一定的风险。由于是追踪趋势进行交易,因此在震荡行情中容易出现较多的虚假信号。此外,参数设置不当也会影响策略表现。建议采用步进优化方法来测试不同参数组合,确定最佳参数。
-
-### 优化方向  
-
-该策略可从以下几个方面进行优化:
-1. 测试不同的参数组合,如布林带天数、RSI天数等; 
-2. 增加机器学习算法,根据历史数据训练模型,动态输出参数;
-3. 结合信息流判断市场情绪,避免在关键时刻作出错误决策;
-4. 增加止损方式,如随价格移动止损,保持盈利
-
-### 总结  
-
-Ichimoku Entries策略是一个多指标融合的趋势追踪策略。它同时判断趋势方向和价格异常,比较可靠地把握市场节奏。虽然仍有改进空间,但整体来说是一种表现稳定、风险可控的量化交易策略。参数优化和机器学习引入可使该策略的效果更加出色。
-
-||
 
 ### Overview  
 
@@ -78,7 +44,6 @@ The strategy can be upgraded in the following aspects:
 ### Conclusion   
 
 The Ichimoku Entries Strategy is a multi-indicator integrated trend trading strategy. By judging both trend direction and price abnormalities, it captures market rhythm fairly reliably. Although there is room for improvement, overall speaking this is a strategy with consistent performance and controllable risks. Parameter tuning and introduction of machine learning could make this strategy even more outstanding.  
-[/trans]
 
 > Strategy Arguments
 

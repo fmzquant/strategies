@@ -9,53 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略综合利用了均线交叉和平均真实波幅两种技术指标,识别趋势中的均线交叉信号,以获取更高的胜率。
-
-## 原理
-
-- 利用ATR指标判断大周期价格波动性,确认处于上升趋势
-- 在小周期内,计算快速均线和慢速均线,当快线上穿慢线时做多,快线下穿慢线时做空
-- ATR指标计算大周期的平均真实波幅,判定总体趋势;均线交叉判定小周期内的具体入市点位
-- ATR指标由RMA平滑移动平均计算,长度和平滑度可调
-- 均线交叉由两条SMA均线计算构成,长度可调
-
-## 优势
-
-- ATR指标可有效过滤震荡趋势,避免无谓交易
-- 均线交叉可精确判断小周期趋势 Conversion Points
-- RMA计算ATR可减少曲折,更稳定判断大周期走势
-- 两者结合,既可躲避震荡,也可抓住具体机会
-- 参数可调,可针对不同品种和时间周期优化
-- 整体来看,策略胜率较高,有望获取稳定收益
-
-## 风险
-
-- ATR指标判断主趋势存在滞后,可能错过趋势开始
-- 均线交叉存在多次调整的概率,Sell信号较多
--  Parameter Tuning 非常关键,不当设置可能导致过于频繁或保守交易
-- 需针对具体品种分析历史数据,寻找最佳参数组合
-- 建议采用渐进开仓方式,确保资金充足,控制单笔损失
-
-## 优化方向
-
-- 尝试其他指标补充或替代ATR,如布林带判断趋势强度
-- 均线交叉类型可扩展为其他组合,如EMA,动量指标等
-- 可加入突破确认机制,避免假突破
-- 优化参数设置顺序:ATR长度和平滑度 > 均线长度 > 止损止盈设定
-- 考虑结合资金管理策略,如固定份额、动态仓位等
-- 实盘长时间回测,评估策略稳定性和最大回撤
-
-## 总结
-
-本策略充分利用ATR和均线交叉各自的优点,共同判断趋势方向和具体入场时点。通过参数调优,可适应不同市场环境。实盘验证表明,该策略可以获得较高的胜率和稳定收益。但需注意风险控制,谨慎操作。如果后续数据继续验证策略效果,值得进一步扩展和改进,将其打造成稳定可靠的量化交易系统。
-
-
-||
 
 
 
@@ -101,7 +54,6 @@ This strategy combines the Average True Range (ATR) indicator and Moving Average
 
 This strategy fully utilizes the strengths of ATR and MA crossover in identifying trend direction and entry points. Through parameter tuning, it can adapt to varying market environments. Live testing proves consistent profitability and high winning rate. However, risk control is vital for prudent operations. Further data validation would warrant expanding and refining it into a robust quant system.
 
-[/trans]
 
 > Strategy Arguments
 

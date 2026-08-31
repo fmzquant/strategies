@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略致力于创建最灵活的玻尔兰格带策略,提供大量可自定义选项,以满足不同交易者的需求。
-
-## 策略原理
-
-该策略使用单一自定义移动平均线作为中线。允许自定义移动平均线的周期、类型和价格来源。
-
-上下波段根据中线标准差计算,可自定义倍数。也可选择使用ATR来代替标准差计算上下波段位置。
-
-该策略提供多种开仓和平仓条件的组合使用,条件包括:
-
-- 价格穿越上中下波段
-- 价格高于或低于上中下波段
-- 波段宽度大于或小于自定义阈值
-- 百分比B大于或小于自定义阈值
-
-开仓和平仓条件可单独使用,也可组合使用,策略窗口可自定义。
-
-止盈和止损可自定义百分比。
-
-## 策略优势
-
-- 可自定义移动平均线周期、类型和价格来源,满足不同需要
-- 可单独使用各种开仓和平仓条件,也可任意组合条件,灵活性强
-- 支持上中下3条波段,观察范围广
-- 支持波段宽度和百分比B作为条件,多种指标组合运用
-- 可自定义止盈止损百分比,可控的风险
-- 支持目前交易所所有品种,适用范围广
-- 可自定义回测和实时交易时间范围,便于分析策略表现
-
-该策略通过提供大量可自定义选项,极大地提高了灵活性,可以针对不同品种和行情进行个性化优化,从而获得更好的策略表现。
-
-## 策略风险
-
-- 过于灵活增加了策略参数和条件组合的难度,需要仔细测试优化
-- 移动平均线滞后性可能错过短线机会
-- 停损点设定过小可能增加暴露风险
-- 百分比B容易受到假突破影响
-
-针对上述风险,可采取以下对策:
-
-1. 利用回测功能逐步测试不同参数组合,找到最佳配置
-2. 辅助使用较短周期指标识别短线机会
-3. 根据ATR等指标设定合理的止损点
-4. 结合其他指标确认百分比B信号
-
-## 策略优化方向 
-
-- 增加仓位管理功能,如固定仓位、马丁格尔、资金管理等
-- 增加多品种自动切换功能
-- 优化移动平均线参数,提高胜率
-- 优化止损止盈设定,获得更好风险回报率 
-- 测试不同指标参数组合
-- 增加机器学习等算法,自动寻找最优参数
-
-## 总结
-
-本策略通过对玻尔兰格带的深度延伸,提供了非常灵活和全面的交易解决方案。虽然参数组合较多需要测试,但可针对个人需求进行定制化优化。整体来说,该策略具有非常大的应用价值,是玻尔兰格带策略的优质代表。随着持续优化,特别是引入量化和机器学习方法,该策略有望产生更出色的交易表现。它为交易者提供了一个功能强大且富有创造性的工具。
-
-||
 
 
 ## Overview
@@ -134,7 +71,6 @@ The following countermeasures can be taken:
 
 This strategy provides a very flexible and comprehensive trading solution through in-depth extensions of Bollinger Bands. Although there are many parameter combinations requiring testing, it can be customized to suit individual needs. Overall, the strategy has great application value as a high-quality representative of Bollinger Bands strategies. With ongoing optimizations, especially the introduction of quantitative and machine learning methods, it has the potential to achieve even better trading performance. It provides traders a powerful and creative tool.
 
-[/trans]
 
 > Strategy Arguments
 

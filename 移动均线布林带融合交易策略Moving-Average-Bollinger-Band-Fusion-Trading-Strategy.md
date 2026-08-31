@@ -9,44 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过移动平均线和布林带的组合利用双重指标验证信号,进行趋势判断和交易。策略利用快速和慢速移动平均线的金叉做多,死叉做空;同时结合布林带上下轨的突破作为辅助验证信号,提高策略的稳定性。
-
-## 策略原理
-
-计算快速和慢速移动平均线,当快线上穿慢线时产生做多信号,下穿时做空信号。同时计算布林带的上轨和下轨。只有当价格同时突破布林带上轨或下轨时,才确认移动平均线的交易信号。这样可以避免被假突破所套。
-
-## 优势分析
-
-- 双重指标验证,避免假信号
-- 移动平均线判断主趋势方向
-- 布林带辅助确认突破质量
-- 可同时做多做空,灵活应对多种行情
-
-## 风险分析
-
-- 移动平均线和布林带均存在滞后性
-- 双重条件限制了交易频次,不适合高频交易
-- 无法准确判断趋势反转点
-- 参数设置不当可能错过交易机会
-
-可适当缩短平均线和布林带周期,或优化参数组合来控制风险。
-
-## 优化方向
-
-- 测试快慢均线和布林带不同参数组合
-- 考虑止损策略控制亏损
-- 优化双重验证的逻辑规则
-- 在不同品种中测试参数健壮性
-
-## 总结
-
-该策略融合双重指标验证信号,可减少假信号,适合中长线持仓。通过参数优化等进一步完善策略,可获得更好效果。
-
-||
 
 ## Overview
 
@@ -83,7 +45,6 @@ Risks can be managed by shortening moving average and Bollinger periods or optim
 
 This strategy validates signals with dual indicators to reduce false signals, suitable for medium/long-term holding. Further refinements like parameter optimization can improve performance.
 
-[/trans]
 
 > Strategy Arguments
 

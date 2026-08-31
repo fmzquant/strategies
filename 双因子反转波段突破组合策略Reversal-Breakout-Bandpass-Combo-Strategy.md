@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19b8428fdd56e737bef.png)
-[trans]
-## 概述
-本策略是一种双因子组合策略,由反转型因子和波段通道因子共同驱动,实现了多因子叠加,可以在不同市场环境中发挥策略优势。
-
-## 策略原理
-该策略由两个子策略组成:
-
-1. 123反转策略:当收盘价连续两日下跌后,如果今日收盘价突破此前连续两日的最低价,同时9日随机指标的快线上穿慢线时,做多;当收盘价连续两日上涨后,如果今日收盘价跌破此前连续两日的最高价,同时9日随机指标的快线下穿慢线时,做空。
-
-2. 波段过滤器:计算一定周期内价格的波段指标,当波段指标大于某一阈值时做多,当波段指标小于某一阈值时做空。
-
-组合信号为:如果123反转策略和波段过滤器策略同为做多信号,则采取做多持仓;如果两者同为做空信号,则采取做空持仓;否则清仓。
-
-## 策略优势
-- 双因子驱动,市场适应性强,可在多种行情中获利
-- 123反转策略可在震荡盘整形态中捕捉反转机会
-- 波段过滤器可在趋势明确的行情中跟踪趋势
-- 组合信号进行验证,可减少失误交易概率
-
-## 风险分析
-- 参数设置不当可能导致过于频繁交易
-- 震荡行情中可能出现多次亏损
-- 需要关注交易手续费的影响 
-
-## 优化方向
-- 调整波段过滤器的参数,优化波段指标的计算
-- 调整123反转策略的参数,优化做多做空的反转判定
-- 加入止损机制,控制单笔亏损
-
-## 总结
-本策略综合运用反转因子和趋势因子,实现了多因子驱动的量化交易。通过双因子的验证可减少误交易的概率,使策略在多种市场中表现优异。后续可通过参数调整和止损设置进一步优化,使策略的稳定性和盈利能力得到提升。
-
-||
 
 ## Overview
 This is a combo strategy driven by two factors - reversal and bandpass, which achieves multi-factor overlay and adapts to different market conditions.  
@@ -75,7 +42,6 @@ The combined signal is: take long position if both strategies give long signals,
 ## Summary
 This strategy integrates reversal and trend factors to achieve multi-factor driven quantitative trading. The dual-factor verification reduces the probability of erroneous trades, making the strategy perform well across various markets. Further improvements on parameter tuning and stop loss will enhance the strategy's stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

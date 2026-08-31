@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算分形混沌震荡器(Fractal Chaos Oscillator, FCO)指标来判断市场趋势方向,实现趋势跟踪。FCO通过比较局部极大值和极小值的变化判断价格走势,数值范围在-1到1之间,数值越高表示趋势越明显。当FCO达到较高值时做多,达到较低值时做空。
-
-## 策略原理 
-
-通过寻找特定K线形态判断局部极大值和极小值。比较相邻两组极值的变化,计算出FCO指标。例如,当最新一组极大极小值与前一组不相同时,FCO为1,表示价格上涨趋势变强。根据FCO值判断趋势方向,数值越高时做多,数值越低时做空。
-
-## 优势分析
-
-- FCO指标判断趋势方向简单有效
-- 无需复杂参数设置,使用方便
-- 可在短线实现盈利,适合日内交易
-- 可根据需要选择做多或做空
-
-## 风险分析
-
-- 分型识别不完全准确,可能错过转折点
-- 无法准确判断趋势反转点,存在亏损风险
-- 日内交易频繁,手续费负担较重
-
-可适当优化参数,或结合其他指标来判断趋势反转。
-
-## 优化方向
-
-- 测试不同的分型周期参数
-- 优化FCO的做多做空阈值
-- 结合移动均线等指标判定趋势反转
-- 在不同品种中测试参数健壮性
-
-## 总结 
-
-FCO策略通过简单的指标判断趋势方向,适合短线交易。可通过参数优化等方法提升效果。是一种易于实现的趋势跟踪策略思路。
-
-||
 
 ## Overview
 
@@ -81,7 +44,6 @@ Risks can be reduced via parameter optimization and adding reversal indicators.
 
 FCO strategy simplifies trend direction judgment for short-term trading. Performance can be improved via parameter tuning. An easily implemented trend following concept.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11bdcbcb67f43715117.png)
-[trans]
-
-## 概述
-
-该策略基于RSI指标的MACD进行交易信号生成。它结合了RSI指标判断市场超买超卖的特性,以及MACD判断市场趋势和动量变化的优势,设计出一个综合利用多种指标提供交易信号的策略。
-
-## 策略原理  
-
-该策略首先计算RSI指标,然后基于RSI指标计算MACD指标。RSI指标能判断市场的超买超卖情况,MACD指标能捕捉市场趋势和动量的变化。
-
-具体来说,策略首先计算14周期的RSI指标。然后基于RSI指标计算MACD指标,包括12周期和26周期的EMA均线,以及9周期的信号线。计算出MACD柱状图。
-
-当MACD柱状图上穿0轴时产生买入信号;当MACD柱状图下穿0轴时产生卖出信号。这样就利用RSI判断市场超买超卖的同时,利用MACD判断市场趋势和动量的变化,进行交易信号的生成。
-
-## 策略优势
-
-这种策略结合了RSI和MACD两个指标的优势,可以更全面地判断市场的状态,信号也更加可靠。
-
-1. 利用RSI判断超买超卖状态,有助于股票选择和防止假突破。
-
-2. MACD指标判断趋势和动量变化,交易信号更加明确。
-
-3. RSI结合MACD,综合多种因素判断,可以过滤假信号。
-
-## 策略风险
-
-1. RSI和MACD的参数设置会影响策略表现,需要调整优化。
-
-2. 多指标组合增加了策略复杂度,也增加了出错概率。
-
-3. MACD交易信号可能滞后,需要结合其他指标辅助判断。
-
-## 策略优化
-
-1. 优化RSI和MACD的参数,找到最佳参数组合。
-
-2. 增加其他指标判断,如KDJ、布林带等,形成指标集群,提高信号准确性。  
-
-3. 加入止损策略,以控制单笔损失。
-
-4. 优化开仓和平仓逻辑,防止冲突信号。
-
-## 总结
-
-该策略综合运用RSI和MACD两个指标的优势,形成交易信号。它判断超买超卖的同时考量趋势和动量因素,可以有效过滤假信号,信号质量较高。下一步通过参数优化、止损策略、以及加入其他指标等手段进一步完善该策略,使其信号更加准确可靠。
-
-||
 
 
 ## Overview  
@@ -103,7 +56,6 @@ This strategy combines the strengths of both RSI and MACD indicators, allowing f
 
 This strategy utilizes the combined strengths of RSI and MACD indicators to form trade signals, judging overbought/oversold levels while also considering trend and momentum factors, effectively filtering out false signals and providing quality signals. Next steps involve further enhancements like parameter optimization, stop loss, adding more indicators etc. to improve signal accuracy and reliability.
 
-[/trans]
 
 > Strategy Arguments
 

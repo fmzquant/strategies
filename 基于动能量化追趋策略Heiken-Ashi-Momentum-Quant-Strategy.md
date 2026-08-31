@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1414bd2e5a37b7540ce.png)
-[trans]
-
-### 概述
-
-该策略基于日线级别的海龚阿希K线,结合不同周期层面的动能分析,动态确定当前股价背后的支撑力量,从而判断建仓和平仓的时机。
-
-### 策略原理  
-
-1. 计算不同周期层面海龚阿希K线的收盘价。这是后续动能计算的基础。
-
-2. 分别计算月线和日线的开盘价与不同历史周期收盘价的涨跌幅。这反映了当前股价相对历史价格的动能强度。   
-
-3. 对月线和日线的动能涨跌幅分别取平均,过滤掉部分噪音,得到稳定的月线、日线动能指标。
-
-4. 根据平均动能涨跌幅,可以计算得出当前股价能反映的市场支撑力量,即去除市场波动影响的价格。该价格可以看作当前真实股价的动能门槛。
-
-5. 当收盘价高于动能门槛时,进行逐月做多建仓。当收盘价低于动能门槛时,平仓止损。
-
-### 优势分析
-
-该策略最大的优势在于,它没有简单追随股价,而是基于股价背后的动能计算真实支撑力量,从而进行建仓和止损。这可以有效过滤震荡行情的噪音,锁定稳定上涨的机会。
-
-另外,策略所基于的数据全部来自海龚阿希K线。这种特殊K线本身就可以减少过度依赖联结周期的问题。所以策略的稳定性会比其他K线策略更好。
-
-### 风险分析  
-
-该策略最大的风险在于,动能计算都是基于历史价格。如果公司基本面和行情发生重大变化,历史价格的代表性就会下降,从而导致建仓和止损判断出现偏差。  
-
-此外,策略使用的是月度和日度周期。这意味着策略的实时性不高,无法对行情的急剧变化做出快速反应。这在行情突变时会带来止损风险。
-
-为降低这些风险,可以考虑引入更高频的数据,以及公司基本面的实时反馈。或者结合其他更为主观的交易信号进行验收和优化。
-
-### 优化方向  
-
-可以从以下几个方面继续优化该策略:
-
-1. 海龚阿希K线本身也可以进一步优化,如调整权重配置等。
-
-2. 增加更多不同周期的数据,构建出指数平均的动能评分机制,提高稳定性。  
-
-3. 引入更高频如日内分钟线数据,以提高策略的实时性。
-
-4. 结合业绩预告、重组传闻等信息,对动能计算加入公司基本面的反馈。
-
-5. 可以考虑在月度建仓的基础上,增加日度或周度的止盈和加仓机制。
-
-### 总结  
-
-该策略整体来说非常稳定,通过动能追踪的方式有效控制了风险。它最大的优势在于利用股价背后的动能力量判定真实行情,而不是单纯追随股价本身。下一步通过引入更多频率更高、信息更丰富的数据,有望进一步优化该策略,使其能更好地把握市场机会。
-
-
-||
 
 ### Overview
 
@@ -111,7 +59,6 @@ There are a few ways in which the strategy can be further improved:
 
 In summary, the strategy is very stable over-all, with momentum tracking effectively controlling risks. The biggest advantage is using the underlying force behind prices rather than prices themselves to determine true market conditions for entries and exits. Next step is to further improve by incorporating higher frequency and more informative data to better capitalize on market opportunities.
 
-[/trans]
 
 
 

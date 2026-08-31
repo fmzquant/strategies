@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18e88a6e7a7c99b19de.png)
-[trans]
-
-## 概述
-
-EPTS策略是一种基于抛物线指标(Parabolic SAR)和两条不同周期移动平均线(EMA)的趋势跟踪策略。该策略利用抛物线指标判断当前市场的趋势方向,同时结合快慢两条移动平均线的相对位置关系,产生开仓信号。策略的主要思想是"趋势跟随",即在上升趋势中做多,在下降趋势中做空,以期获得稳定的收益。
-
-## 策略原理
-
-1. 抛物线指标(Parabolic SAR)用于判断当前市场趋势的方向。当抛物线在K线上方时,市场处于下降趋势;当抛物线在K线下方时,市场处于上升趋势。
-
-2. 两条不同周期的指数移动平均线(EMA)用于确认趋势和产生开仓信号。本策略使用5日EMA和20日EMA。当5日EMA在20日EMA上方时,认为市场处于上升趋势;反之,则认为市场处于下降趋势。
-
-3. 开仓条件:当抛物线和EMA均显示上升趋势时,产生做多信号;当抛物线和EMA均显示下降趋势时,产生做空信号。
-
-4. 平仓条件:当抛物线突破K线时,平掉当前持仓,等待下一个开仓信号。
-
-5. 止损:开仓时,将止损价格设置为当前抛物线的位置。随着抛物线的移动,动态调整止损位置,实现移动止损。
-
-通过抛物线指标和EMA的结合使用,EPTS策略能够较好地捕捉市场趋势,并在趋势反转时及时平仓,控制风险。同时,动态止损的设置进一步降低了策略的回撤风险。
-
-## 优势分析
-
-1. 趋势跟踪:EPTS策略基于趋势跟随的思想,能够有效捕捉市场的主要趋势,获取稳定收益。
-
-2. 动态止损:策略采用抛物线作为动态止损位,随着趋势的发展不断调整止损位置,有效控制了风险。
-
-3. 双重确认:通过抛物线和EMA的双重确认,提高了开仓信号的可靠性,减少了假信号。
-
-4. 简单易用:策略逻辑清晰,参数设置简单,易于理解和实施。
-
-## 风险分析
-
-1. 震荡市:在震荡市场中,趋势不明显,可能会产生较多的假信号,导致频繁交易和较大回撤。
-
-2. 趋势反转:当市场趋势突然反转时,策略可能会延迟平仓,承受一定的损失。
-
-3. 参数设置:策略的表现受到参数设置的影响,不同的参数可能会导致不同的结果。
-
-## 优化方向
-
-1. 引入更多指标:在现有的抛物线和EMA基础上,引入其他趋势类指标,如MACD、ADX等,提高趋势判断的准确性。
-
-2. 优化入场条件:对开仓条件进行优化,如考虑价格与EMA的距离、交易量等因素,提高开仓信号的质量。
-
-3. 动态参数优化:根据市场状况的变化,动态调整策略参数,如抛物线的步长、EMA的周期等,以适应不同的市场环境。
-
-4. 加入仓位管理:根据市场趋势的强度和账户风险,动态调整仓位大小,在控制风险的同时提高收益。
-
-## 总结
-
-EPTS策略是一个基于抛物线指标和移动平均线的趋势跟踪策略,通过捕捉市场主要趋势,并及时平仓以控制风险,从而获取稳定收益。该策略逻辑清晰,易于实施,适合趋势明显的市场环境。但在震荡市中,策略可能面临较大回撤风险,需要结合其他指标和优化方法来提高策略的适应性和稳健性。此外,合理的参数设置和仓位管理也是策略成功运行的关键。总的来说,EPTS策略为趋势跟踪提供了一个简单有效的思路,但仍需根据实际市场状况进行优化和改进,以期获得更好的策略表现。
-
-|| 
 
 ## Overview
 
@@ -113,7 +60,6 @@ By combining the Parabolic SAR indicator and EMAs, the EPTS strategy can effecti
 ## Summary
 
 The EPTS strategy is a trend-following strategy based on the Parabolic SAR indicator and moving averages. By capturing the main market trends and closing positions in a timely manner to control risk, it aims to achieve stable returns. The strategy logic is clear and easy to implement, suitable for market environments with clear trends. However, in choppy markets, the strategy may face significant drawdown risks and needs to be combined with other indicators and optimization methods to improve its adaptability and robustness. In addition, reasonable parameter settings and position sizing are also key to the successful operation of the strategy. Overall, the EPTS strategy provides a simple and effective approach to trend following, but still requires optimization and improvement based on actual market conditions to achieve better strategy performance.
-[/trans]
 
 > Strategy Arguments
 

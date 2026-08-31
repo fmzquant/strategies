@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1beec3643d33c7a92aa.png)
-[trans]
-本文将介绍一种基于5EMA指标的短线突破反转交易策略。该策略主要利用5EMA指标判断价格趋势,在价格突破EMA时进行反转交易。
-
-#### 策略概述
-
-该策略是一个短线量化策略,主要用于高频交易。策略会同时判断多头和空头信号,可以进行双向交易。当价格突破5EMA指标时产生交易信号,根据突破的方向进入做多或做空头寸。
-
-策略优势在于捕捉短线价格反转机会,快速进入场内。风险主要来自于假突破造成的损失。可通过优化参数降低损失风险。
-
-#### 策略原理
-
- 1. 使用5周期EMA指标判断价格短期趋势
-
- 2. 判断价格是否突破EMA指标
-
- 3. 价格从上向下突破EMA时,产生卖出信号
-
- 4. 价格从下向上突破EMA时,产生买入信号
-
- 5. 设置止损和止盈点,限制单笔损失
-
-由于EMA指标能够有效判断短期趋势,当价格出现明显反转时能快速捕捉交易机会。5EMA的参数较为灵活,对市场反应迅速,适合高频交易。
-
-#### 策略优势
-
-- 反应迅速,适合高频捕捉短线交易机会
-- 双向交易,可以同时做多做空
-- 止损止盈设置合理,单笔损失有限制
-- 简单的参数设置,容易实现策略优化
-
-#### 策略风险与解决方案
-
-- 假突破风险造成不必要损失
-  - 优化EMA周期参数,确保指标稳定
-- 交易频率过高容易追高杀跌
-  - 限制每天最大交易次数
-
-#### 策略优化方向
-
-- 优化EMA指标参数,寻找最佳周期组合
-- 增加 filter 减少假突破概率
-- 限制每天最大交易次数
-- 结合其他指标判断趋势方向
-
-#### 总结
-
-本策略总体来说是一个非常实用的短线突破策略。利用EMA指标判断价格反转非常简单有效,是量化交易的一个重要工具。通过参数优化和风控设置,可以大幅提高策略胜率,值得推荐。
-
-||
 
 This article will introduce a short-term reversal trading strategy based on the 5EMA indicator. The strategy mainly uses the 5EMA indicator to judge the price trend and reverse trades when the price breaks through the EMA.
 
@@ -107,7 +58,6 @@ Since the EMA indicator can effectively determine short-term trends, it can quic
 
 In general, this is a very practical short-term breakout strategy. Using EMA indicators to determine price reversals is very simple and effective, and an important tool for quantitative trading. Through parameter optimization and risk control settings, the win rate of strategies can be greatly improved, which is highly recommended.
 
-[/trans]
 
 > Strategy Arguments
 

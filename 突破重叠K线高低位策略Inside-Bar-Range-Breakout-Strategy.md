@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8b06d23033c421585d.png)
 
-[trans]
-
-## 概述
-
-突破重叠K线高低位策略是根据重叠K线形态进行交易决策的价格行动策略。该策略发生在当前K线的价差范围小于前一根K线的情况下,表明市场正在蓄势整理或犹豫不决。当价格突破向上或向下突破前一根K线的最高价或最低价时,这就提供了可能的入场信号。  
-
-## 策略原理
-
-该策略使用以下指标和变量:
-
-- 平均真实波幅(ATR):使用ATR函数计算的过去N根K线的平均真实波幅。
-- 价差Range:当前K线的最高价与最低价之差。  
-- insideBar:布尔变量,如果当前K线的价差Range小于前一根K线,则为真,表示发生了重叠K线。
-- 向上突破:布尔变量,如果收盘价高于前一根K线的最高价,则为真,表示发生了向上突破。
-- 向下突破:布尔变量,如果收盘价低于前一根K线的最低价,则为真,表示发生了向下突破。  
-- 向上流动性:过去N根K线中的最高价,代表 möglich的电阻位置。 
-- 向下流动性:过去N根K线中的最低价,代表可能的支撑位置。
-
-入场决策基于价差Range和前一根K线最高最低价的突破。具体来说,发生向上突破并且当前K线最低价高于向下流动性时,产生多头入场信号;发生向下突破并且当前K线最高价低于向上流动性时,产生空头入场信号。
-
-止损使用ATR的倍数乘以当前价差停损。止盈使用ATR倍数乘以当前价差止盈。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用重叠K线整理行情,蓄势向一方突破的交易机会。
-2. 结合突破方向和流动性位,避免被套。 
-3. mStop损和止盈清晰,容易实现。
-4. 方向性强,突破后的蓄势继续行情中实现盈利目标的概率大。
-
-## 风险分析
-
-该策略也存在以下风险:  
-
-1. 突破失败,被套。采用合理的止损水平,避免承受大额损失。
-2. 行情剧烈波动,止损被击穿。调整ATR周期,确保止损距离合理。 
-3. 流动性位判断失误,选错方向入场。优化流动性位参数,细化入场条件。
-4. 反转失败,无法实现盈利目标。适当缩小止盈倍数,保证止盈水平合理。
-
-## 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 最优化ATR参数,寻找最合适的ATR周期参数。
-2. 测试不同的止损倍数,确定合理的止损距离。
-3. 测试不同的止盈倍数,平衡获利大小和成交概率。
-4. 优化流动性位参数,提高入场的准确率。
-5. 增加其他过滤条件,如交易量,优化入场时机。
-6. 结合趋势指标,采用趋势跟踪方法。
-
-## 总结  
-
-突破重叠K线高低位策略,利用行情蓄势准备和突破原理,在价格突破前一根K线价差范围时入场。结合流动性位避免被套风险。止损止盈设置合理,突破后可顺势运行达到盈利目标。该策略有望在中间周期获得较好的交易表现。通过参数优化和过滤条件优化,可以进一步扩大策略优势,提高系统稳定性。
-
-||
 
 ## Overview  
 
@@ -121,7 +65,6 @@ Areas of optimization:
 
 The inside bar range breakout strategy capitalizes on range expansion from consolidation by entering when price breaks out of previous bar's range. Liquidity levels avoid getting trapped. Reasonable stop loss and take profit settings allow riding the momentum after breakout to reach profit target. The strategy can yield good results on intermediate time frames. Further enhancing advantages and system robustness can be achieved through parameter optimization and improving entry filters.
 
-[/trans]
 
 > Strategy Arguments
 

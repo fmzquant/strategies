@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/170fbb39520f0ae4c4d.png)
-[trans]
-
-## 概述
-
-本策略通过比较价格变动和交易量,揭示市场参与者的情绪,以MACD的形式呈现并发出交易信号。
-
-## 策略原理
-
-该策略主要通过以下几种计算方法揭示市场情绪:
-
-1. 每根K线的价格变动除以交易量。这可以直接看出买卖力量的强弱。
-
-2. 对价格变动和交易量分别应用指数平滑移动平均线,再将价格变动的EMA除以交易量的EMA。这样可以过滤掉部分噪音,得到较为平滑的“市场情绪”曲线。 
-
-3. 在“市场情绪”上再计算快慢EMA,得到类似MACD的曲线。其中MACD线显示动量方向和强度,信号线是其移动平均,柱状图显示两条曲线的差值,代表动量变化。
-
-当柱状图上穿0时为多头市场情绪增强的信号,下穿0时为空头市场情绪增强的信号。也可以观察柱状图的背离现象。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 利用成交量信息判断市场参与者情绪,更有说服力。
-
-2. MACD形式直观,使用简便。
-
-3. 参数可调,适用于不同品种和周期。
-
-4. 可检测柱状图背离,发现潜在趋势转折点。
-
-5. 代码结构清晰,容易理解和优化。
-
-## 风险分析
-
-本策略也存在以下风险:
-
-1. 成交量能反映市场情绪,但不能保证交易信号正确。需结合价格行情判断。
-
-2. MACD参数设置不当可能导致错失信号或产生假信号。需针对品种和周期优化参数。
-
-3. 背离信号可能是假信号,无法确定趋势转折,需谨慎看待。
-
-4. 存在晚期入场被套的风险。可适当等待追踪止损,或与趋势和相关品种合理验证。
-
-## 优化方向
-
-本策略可从以下方面进行优化:
-
-1. testing不同品种和周期的参数组合,寻找最优参数。
-
-2. 加入止损策略,降低亏损风险。
-
-3. 与相关品种价格趋势进行组合,验证交易信号。
-
-4. 利用机器学习方法动态优化参数。
-
-5. 增加过滤条件,减少假信号。例如大级别趋势、波动率等。
-
-## 总结
-
-本策略利用价格变动与交易量比值判断市场情绪,以MACD形式产生交易信号。相比仅看价格信息,考量交易量能更准确判断多空力量对比和市场热度。可根据不同品种和周期优化参数,且有进一步优化空间。总体来说,本策略思路新颖,使用简便,有效把握市场热点,值得进一步开发。
-
-||
 
 
 ## Overview
@@ -135,7 +72,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy judges market sentiment by comparing price change and volume, and generates signals in a MACD format. Considering volume in addition to just price can more accurately determine the strength of buyers and sellers. The parameters can be optimized for different products and timeframes, with further optimization potential. Overall, the strategy has a novel idea, easy to use, effectively captures market momentum, and is worth further development.
 
-[/trans]
 
 > Strategy Arguments
 

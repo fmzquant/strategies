@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cf8c714df9fc2acb1b.png)
-[trans]
-
-## 概述
-
-该策略使用Stochastic RSI和价格变动率指标,识别趋势方向进入多空单,并使用坐标滑动止损方法进行风险管理。
-
-## 策略原理
-
-首先,策略使用长度为5的RSI指标和长度为7的Stochastic指标计算Stochastic RSI。当Stochastic RSI的K值高于D值时为看涨信号,K值低于D值时为看跌信号。
-
-其次,策略计算价格的变动率指标EMA ROC。当EMA ROC高于阈值的一半或低于阈值的负一半时,认为价格在活跃变动。
-
-然后,结合Stochastic RSI的多空信号和价格变动率指标,可以识别趋势方向。当Stochastic RSI看涨且价格活跃变动时,做多;当Stochastic RSI看跌且价格活跃变动时,做空。
-
-最后,该策略使用坐标滑动止损方式管理风险。在开仓后,继续刷新最高价或最低价,并以一定比例距离最高价或最低价作为止损位。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用Stochastic RSI指标可以有效识别趋势和超买超卖情况。
-
-2. 价格变动率指标可以过滤掉震荡盘整的市场,避免假信号。
-
-3. 坐标滑动止损方式可以最大程度锁定盈利,同时也能控制风险。
-
-4. 策略参数优化空间大,可以针对不同品种进行调整。
-
-5. 策略思路简单清晰,容易理解实现。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. Stochastic RSI可能产生假信号,需要结合其他因素确认。
-
-2. 坐标滑动止损可能过于激进,被隔夜gaps击出。
-
-3. 短期内反转可能导致止损被触发。
-
-4. 策略参数需要针对不同品种进行优化,否则效果可能不佳。
-
-5. 交易成本会影响策略盈利能力,需要考虑合理的交易频率。
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 优化Stochastic RSI参数,降低假信号率。可以测试不同的K值和D值参数。
-
-2. 优化价格变动率指标参数,提高过滤效果。可以测试不同的窗口期和变动率阈值。
-
-3. 结合趋势判断指标,避免被反转止损。例如添加移动平均线等指标。
-
-4. 优化止损比例,降低被套风险。可以测试不同的止损幅度。
-
-5. 添加仓位数管理,控制单笔风险。例如固定止损金额,或根据账户余额动态调整仓位。
-
-6. 测试不同品种参数,提高适应性。优选在多市场多时间周期验证。
-
-## 总结
-
-该策略整体思路清晰简单,使用Stochastic RSI识别趋势方向,并配合价格变动率指标过滤信号,可以有效捕捉中长线趋势机会。坐标滑动止损方式可以锁定盈利同时控制风险。通过进一步优化,该策略可以成为一个非常实用的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -139,7 +74,6 @@ The strategy can be further optimized in the following aspects:
 
 In summary, this strategy has clear and simple logic, identifies trend direction with Stochastic RSI and filters signals with price rate of change, which can effectively capture mid-long term trends. Coordinate sliding stop loss locks in profits and controls risk. With further optimization, this strategy can become a very practical trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

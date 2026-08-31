@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/132fa73026eaf0fa110.png)
-[trans]
-## 概述
-
-该策略通过组合使用SMA、EMA、KAMA等多种移动平均线,识别价格趋势方向,以及基于价格突破设置止损线,设计一个跟踪趋势运行的策略。当价格上涨时, trails the upper band作为止损;当价格下跌时,trails the 下限作为止损。策略优点是多种移动平均线组合,可以平滑价格数据,识别趋势;动态止损设计避免止损过于敏感。策略风险在于止损线Setting可能过于宽松,无法及时止损。
-
-## 策略原理
-
-该策略使用KAMA作为判断趋势方向的基础指标,因为KAMA响应价格变化更加敏感,可以提早识别转折。同时,策略中包含了SMA、EMA等其他多种移动平均线的组合,可以对价格进行滤波,识别主要趋势方向。 
-
-策略的止损线设置基于价格本身以及移动平均线。具体来说,向上追踪的止损线为移动平均线再叠加一个比例作为缓冲;向下追踪的止损线为移动平均线减去一个比例作为缓冲。这样可以实现当价格出现反转时,立即止损。
-
-进入条件为,当价格由下向上突破上行止损线时做多;当价格由上向下突破下行止损线时做空。
-
-## 优势分析
-
-该策略最大的优势在于,通过多种移动平均线的组合,可以提高对趋势判断的准确性,减少假信号。同时,策略的止损线是基于移动平均线动态变化的,能够根据实时价格调整,实现对突发事件的响应。
-
-此外,相比于单一指标策略,该策略融合了趋势跟踪和突破策略的优点。在趋势行情中,可以最大程度获利;而在震荡行情中,通过止损设定可以减少损失。
-
-## 风险分析
-
-该策略的主要风险在于,止损线设置可能过于宽松,无法及时止损。这是因为止损线的回撤比例是固定设置的,如果行情出现剧烈变化,无法及时更新止损线,可能带来较大亏损。
-
-此外,Moving Average本身滞后性很强,无法对价格变化做出即时反应。这也可能导致在行情快速反转时,无法及时止损。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同参数设置下的止损线比例,找到更优参数组合;
-
-2. 尝试将止损线设置为动态变化,根据市场波动程度做出调整;
-
-3. 增加其他指标判断,在止损 Basis 上引入更多变量,提高策略的适应性;
-
-4.优化移动平均线的周期参数,找到最佳平滑价格的周期设置。
-
-## 总结
-
-本策略整体来说较为稳健,通过多种移动平均线组合判断趋势方向,并设计动态追踪止损机制,旨在跟踪趋势运行。优点是可以减少假信号,通过止损控制风险;劣势是止损线可能设置过宽,无法迅速止损。下一步优化策略应在止损线设计上下功夫,使之能够根据市场变化进行动态调整。
-
-||
 
 This strategy combines multiple moving averages such as SMA and EMA to identify price trend direction, and sets stop loss lines based on price breakthrough to design a trend following strategy. When prices rise, it trails the upper band as a stop loss; when prices fall, it trails the lower limit as a stop loss. The advantage of the strategy is that the combination of multiple moving averages can smooth price data and identify trends; The dynamic stop loss design avoids overly sensitive stops. The risk of the strategy is that the Setting of the stop loss line may be too loose to stop loss in time.
 
@@ -93,7 +51,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, this strategy is quite robust, combining multiple moving averages to determine trend direction, and designing a dynamic trailing stop loss mechanism aiming to follow trends. The advantages are that it can reduce false signals, control risks through stop loss; The disadvantage is that the stop loss line may be set too wide to stop loss quickly. The next step to optimize the strategy should focus on the design of the stop loss line to make it adjustable dynamically according to market changes.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,34 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略名为STEM和MATCS组合动量交易策略。该策略将Supertrend指标与MACD指标组合使用,形成交易信号。
-
-策略运作原理:
-1. 计算Supertrend指标,当价格转折时产生买入和卖出信号。
-2. 计算MACD指标的快线、中线和慢线。当快线上穿中线时产生买入信号,当快线下穿中线时产生卖出信号。
-3. 结合Supertrend和MACD指标,只有两者同时发出信号时才入场。
-4. 使用ATR指标计算动态止损位。
-
-具体交易规则:
-1. 当Supertrend转折由跌转涨,且MACD快线上穿中线时,做多入场。
-2. 当Supertrend转折由涨转跌,且MACD快线下穿中线时,做空入场。 
-3. 平仓条件:止损或止盈(可选)。
-
-该策略的优势:
-1. 组合多个指标,提高信号准确率。
-2. 动态止损,可以限制个别巨亏。
-3. 兼具趋势跟踪和反转交易能力。
-
-该策略的风险:
-1. Supertrend和MACD指标参数设置不当,可能产生错误信号。
-2. 止损点过于接近,可能会被频繁止损。
-3. 交易费用和滑点影响盈利。
-
-总之,STEM和MATCS组合动量策略通过指标集成提升效果,适合于短线和中线交易。止损策略的应用对控制风险非常关键。交易者需要通过参数优化和严格的资金管理来降低实盘交易中的风险。
-
-|| 
 
 This strategy is called the STEM and MATCS Combined Momentum Trading Strategy. It combines the Supertrend indicator with the MACD indicator to generate trading signals.
 
@@ -63,7 +35,6 @@ Risks of this strategy:
 
 In summary, the STEM and MATCS Combined Momentum Trading Strategy enhances effects through indicator integration, suitable for short-term and medium-term trading. Stop loss application is critical for risk control. Traders need to reduce risks in live trading through parameter optimization and strict money management.
 
-[/trans]
 
 > Strategy Arguments
 

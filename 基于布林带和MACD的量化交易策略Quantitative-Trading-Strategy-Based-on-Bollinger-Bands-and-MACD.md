@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a93af5a801808bb447.png)
-[trans]
-## 概述
-
-该策略是一种基于布林带和MACD指标的量化交易策略。它融合了布林带的突破交易和MACD的趋势跟踪,旨在提高交易信号的质量。
-
-## 策略原理
-
-该策略主要基于布林带指标和MACD指标进行交易信号的判断。
-
-布林带指标由中轨、上轨和下轨组成。当价格突破下轨时生成买入信号;当价格突破上轨时生成卖出信号。该策略使用布林带的突破原理来确定较强的突破信号。
-
-MACD指标反映了短期和长期移动平均线之间的关系,通过差值线和信号线的金叉、死叉来判断买入和卖出时机。该策略融合使用MACD指标来过滤布林带交易信号,在差值线向上突破信号线时产生更有效的买入信号。
-
-整体而言,该策略结合布林带的趋势跟踪和MACD的移动平均线优势,旨在在强势趋势中捕捉更大的行情波动。
-
-## 策略优势
-
-1. 结合布林带和MACD指标,交易信号更加可靠。
-
-2. 在趋势行情中,布林带趋势跟踪和MACD移动平均线交叉可产生较强的入场信号。
-
-3. 通过双重指标判断,可有效过滤假信号,降低交易风险。
-
-4. 策略参数优化空间大,可根据不同品种和周期进行调整。
-
-## 策略风险
-
-1. 在震荡行情中,布林带和MACD产生的交易信号可能频繁,带来套利风险。
-
-2. MACD指标在低位区域出现三次金叉买入信号,可能面临反转下跌风险。
-
-3. 策略使用了较多指标,参数优化和策略测试难度较大。
-
-针对上述风险,可通过适当调整持仓时间、设置止损线、优化参数等方法来控制。
-
-## 策略优化方向  
-
-1. 测试更长周期布林带参数,降低交易频率。
-
-2. 优化MACD快慢均线参数,提高指标敏感度。  
-
-3. 增加其他指标过滤,如KDJ、RSI等,提升信号质量。
-
-4. 设置动态止损,自动止损退出,控制单笔交易风险。
-
-## 总结
-
-该策略整合布林带突破交易和MACD指标过滤,在理论上可产生高质量的交易信号。通过参数优化和风险控制手段,可望获得较好的回测结果。但任何策略都无法完全避免亏损,需谨慎评估实际交易效果。
-
-||
 
 ## Overview
 
@@ -109,7 +59,6 @@ To address these risks, methods like adjusting holding periods, setting stop los
 
 In theory, by integrating Bollinger Bands breakout trading and MACD indicator filtering, this strategy can produce high quality trading signals. Through parameter optimization and risk control measures, good backtest results may be achieved. However, no strategy can completely avoid losses. The actual trading performance needs prudent assessment.
 
-[/trans]
 
 > Strategy Arguments
 

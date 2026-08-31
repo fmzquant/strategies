@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1afc532d51fa268bbc2.png)
-[trans]
-## 概述
-
-本策略旨在利用位姆斯特拉平台的追踪止损功能,动态调整止损价格,实现更准确和柔性的止损。策略不用于入场和出场,而是给出不同市场条件下合理的止损范围。建议您通过回测优化不同的参数。本策略也可以集成到现有入场出场策略中,作为止损。
-
-## 策略原理
-
-本策略主要运用3个指标:最高价、最低价和收盘价。策略首先定义长仓和短仓的止损范围,即多头追踪止损距离`longoffset`和空头追踪止损距离`shortoffset`。其中长仓距离默认为228.5点,短仓距离默认为243.5点。
-
-然后策略运用以下逻辑调整追踪止损价格`trailstop`:
-
-- 最近一根K线的最低价低于上一根K线的追踪止损价,并且上上根K线的最低价高于上两根K线的追踪止损价,则当前K线的追踪止损价=收盘价+空头追踪止损距离
-- 最近一根K线的最高价高于上一根K线的追踪止损价,并且上上根K线的最高价低于上两根K线的追踪止损价,则当前K线的追踪止损价=收盘价-多头追踪止损距离
-- 最近一根K线的最高价高于上一根K线的追踪止损价,则当前K线的追踪止损价=最大值(上一根K线的追踪止损价,最近一根K线的最高价-长仓追踪止损距离)
-- 最近一根K线的最低价低于上一根K线的追踪止损价,则当前K线的追踪止损价=最小值(上一根K线的追踪止损价,最近一根K线的最低价+短仓追踪止损距离)
-- 否则当前K线的追踪止损价=收盘价
-
-这样可以根据市场最高价和最低价的变化,实时调整追踪止损价,实现动态止损。
-
-## 优势分析
-
-本策略最大的优势在于实现了真正动态和柔性的追踪止损。相比固定的止损价,动态追踪可以根据市场波动情况调整止损范围,避免止损距离过大带来不必要的损失,也避免止损距离过小被价格普通波动击出。这既减少了不必要的亏损,也降低了过早止损的概率。
-
-另一个优势是止损距离是可以自定义和优化的。用户可以根据不同品种的特点和交易风格,选择适合自己的止损范围。这使得策略可以应用于更广泛的场景。
-
-最后,本策略止损逻辑简单清晰,容易理解,也便于二次开发和集成到其他策略中,这也是其优势之一。
-
-## 风险分析
-
-本策略的主要风险有以下几点:
-
-1. 动态止损只能减少正常行情下的亏损,无法抵御大的突发事件或者极端行情造成的亏损。这是动态止损本身的局限性。
-
-2. 如果追踪止损距离设置过大,则可能导致亏损扩大。如果距离过小,则可能过早止损。距离的设定需要根据品种特性谨慎测试和优化。
-
-3. 在刚开仓后的几根K线,由于追踪止损机制的原因,止损距离可能会过大,这段时间存在一定的额外风险。
-
-## 优化方向  
-
-本策略可以从以下几个方向进行优化:
-
-1. 不同品种参数优化:根据不同品种的波动程度、日内波动范围等指标,选择合理的多头和空头追踪止损距离。这是最关键的优化方向。
-
-2. 减少开仓后几根K线的额外风险:可以在开仓后的若干根K线上限制追踪止损距离的调整幅度,避免止损距离过大。
-
-3. 结合交易量指标:比如在交易量放大的阶段降低止损距离,避免被套利的止损。
-
-4. 和其他入场出场策略结合:本策略的主要作用是追踪止损,可以集成到其他策略中,与入场和出场规则配合使用。
-
-## 总结
-
-本策略实现了根据行情最高价和最低价变化的动态追踪止损功能。这可以有效减少正常行情下不必要的亏损,也较好地解决了固定止损距离过大过小的问题。关键优化方向是测试不同品种合适的参数,以及在开仓后几根K线的风险控制。本策略止损逻辑简单清晰,容易理解和二次开发,可以集成到其他策略中或作为止损工具单独使用。
-
-||
 
 ## Overview
 
@@ -121,7 +67,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy implements dynamic trailing stop loss based on changes in highest and lowest market prices. It can effectively reduce unnecessary losses under normal market conditions, and solves the problem of fixed distances being too large or small. The key optimization directions are testing suitable parameters across different products, and controlling risks in the early candles after opening positions. The stop loss logic is simple and clear, easy to understand and integrate into other strategies or use standalone as a stop loss tool.
 
-[/trans]
 
 > Strategy Arguments
 

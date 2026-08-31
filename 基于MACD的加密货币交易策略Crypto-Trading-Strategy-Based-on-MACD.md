@@ -9,70 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略是基于移动平均线聚合差价指标(MACD)和相对强度指数(RSI)来判断加密货币买卖点的交易策略。它通过计算短期和长期移动平均线的差值,结合RSI来判断市场趋势和超买超卖情况,为交易决策提供信号。
-
-## 策略原理
-
-1. 计算12日EMA和26日EMA,分别作为短期和长期移动平均线
-
-2. 计算短期和长期EMA的差值,作为MACD柱状图
-
-3. 计算MACD的9日EMA作为信号线
-
-4. 计算14日RSI,判断超买超卖情况
-
-5. 当MACD上穿信号线,且RSI大于81时,显示买入信号
-
-6. 当MACD下穿信号线,且RSI小于27时,显示卖出信号
-
-7. 使用内置策略模块入场和出场
-
-## 优势分析
-
-1. MACD指标可以识别趋势和趋势变化,RSI指标可以显示超买超卖现象,两者结合可以提高交易信号的准确度
-
-2. MACD零轴上下方变化代表短期和长期趋势的变化方向和力度,为判断市场方向提供依据
-
-3. RSI高位区域代表过热和超买的可能,RSI低位代表超卖的可能,为买卖点寻找提供依据
-
-4. 交易信号简单明确,容易按照规则来执行交易
-
-5. 可配置参数进行优化,适应不同市场环境
-
-## 风险分析
-
-1. MACD和RSI所依据的数据易受假突破和异常数据影响,可能发出错误信号
-
-2. 固定的参数设置可能无法适应市场变化,需要优化
-
-3. 买卖信号可能滞后,无法在转折点买卖
-
-4. 仓位只有多空二选一,无法利用震荡行情获利
-
-## 优化方向
-
-1. 测试不同的参数组合,找到最优参数
-
-2. 增加额外过滤条件,避免假突破
-
-3. 增加止损策略,减少单边行情的亏损
-
-4. 增加仓位管理,在趋势中做加仓,在震荡中做减仓
-
-5. 结合其它指标,寻找更准确的买卖点
-
-6. 测试在不同品种和时间周期的效果
-
-## 总结
-
-该策略利用MACD和RSI两个指标的互补优势来识别趋势方向和买卖点。通过优化参数和增加过滤条件可以改进策略的稳定性和profit因子。适当调整止损和仓位管理也有助于提高盈利水平和降低风险。MACD和RSI的优势和不足决定了该策略更适合识别中长线趋势而非短线交易。总体来说,该策略简单实用,值得进一步测试和优化,以取得更好的回测和实盘结果。
-
-|| 
 
 ## Overview
 
@@ -134,7 +70,6 @@ This strategy uses the Moving Average Convergence Divergence (MACD) and Relative
 
 This strategy utilizes the complementary strengths of MACD and RSI to identify trends and trading signals. Fine tuning parameters and adding filters can improve robustness and profitability. Adjusting stops and position sizing also helps maximize profits and minimize risk. The pros and cons of MACD and RSI make this strategy more suitable for catching mid-to-long term trends rather than short-term trades. Overall, it is a simple and practical strategy worth further testing and optimization to achieve improved backtest and live results.
 
-[/trans]
 
 > Strategy Arguments
 

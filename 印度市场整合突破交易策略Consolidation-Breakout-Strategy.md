@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b476eae1c651ae4e16.png)
-[trans]
-
-## 概述
-
-该策略是一个适用于印度股市的日内交易(Intraday)整合突破指示策略。它结合了时间条件、委托手续费以及止损追踪。本策略的优点是逻辑清晰,参数调节灵活,可以适应市场的变化。但是也存在一定的风险,需要进一步优化。
-
-
-## 策略原理
-
-该策略的核心逻辑基于布林带指标。它使用长度为LENGTH的简单移动平均线作为中轴,上轨和下轨分别以MULT倍的标准差计算。当收盘价从下穿上轨时生成买入信号,当收盘价从上穿下轨时生成卖出信号,形成Range Breakout交易策略。
-
-为控制风险,它结合ATR指标计算止损线。同时考虑了印度股市的交易时间,在14:57分钟全平所有仓位。
-
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 逻辑清晰,参数易调整,可以灵活适应市场情况
-2. 整合了止损和时间控制逻辑,可以有效控制风险
-3. 兼容考虑了印度股市的特殊交易机制,适应本地环境
-4. 交易频率适中,避免过度交易
-5. 可扩展性好,可在其基础上进行算法优化
-
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 布林带的参数设置依赖经验,不适宜全部环境
-2. 单一指标容易产生虚假信号
-3. ATR止损只能有效控制部分风险
-4. 未考虑重大黑天鹅事件的影响
-
-可以通过以下方式降低风险:
-
-1. 结合多个指标过滤信号
-2. 优化参数设置规则
-3. 结合跳空缺口判断
-4. 增加止损算法的鲁棒性
-5. 结合市场情绪指标
-
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化参数设置规则,使之更具有适应性
-2. 增加多个指标判断,避免虚假信号
-3. 优化和增强止损算法的鲁棒性
-4. 结合更多分析方法判断趋势方向
-5. 考虑自动调整仓位大小
-
-通过算法和模型优化,可以使该策略 Parameter Tuning 和 Signal Filtering 能力得到提升,从而适应更广泛的市场环境,并可以承受更大的风险。
-
-## 总结
-
-该策略总体来说是一个清晰易懂的日内突破交易策略。它考虑了印度市场的特点,控制了交易风险。本策略具有一定的优势,也存在可以优化的空间。通过Parameter Tuning和Signal Filtering等方法的改进,可以使该策略达到商业营运的要求。
-
-||
 
 ## Overview
 
@@ -125,7 +65,6 @@ With model and algorithm optimization, the Parameter Tuning and Signal Filtering
 
 In summary, this is a straightforward intraday breakout strategy. It addresses the Indian market specifics and controls trading risks. With further improvements on Parameter Tuning and Signal Filtering, this strategy can meet the requirement for commercialization.
 
-[/trans]
 
 > Strategy Arguments
 

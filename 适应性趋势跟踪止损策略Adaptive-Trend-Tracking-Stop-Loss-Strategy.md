@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/195b3e58c7a1830d2ba.png)
 
-[trans]
-
-### 概述
-
-该策略运用Wilder volatility trailing stop方法,结合ATR指标和不同类型移动均线,实现一个适应性很强的趋势跟踪型止损策略。
-
-### 策略原理
-
-该策略的核心是Wilder volatility trailing stop算法。它首先计算ATR指标,按照输入的参数计算ATR指标的长度和乘数,得到动态的止损线。然后结合收盘价、最高价、最低价中的某一选项,不断更新止损线的高点和低点。当价格突破此止损线时,进行买入和卖出操作。 
-
-代码中,首先通过f_ma函数实现RMA、EMA、SMA、Hull MA等多种移动均线。然后计算ATR指标,乘以用户设定的乘数,得到基于波动率的止损线。通过highest和lowest函数追踪止损线的最高和最低点,当价格突破止损线时,进行交易。
-
-该策略灵活运用ATR指标、不同类型均线和参数设置,实现一个适应性非常强的趋势跟踪止损策略。它能够有效跟踪趋势,在市场出现较大回撤时止损离场。
-
-### 优势分析
-
-- 该策略首先运用Wilder Volatility Trailing Stop算法,这是一种成熟可靠的趋势跟踪止损方法。
-
-- 策略运用ATR指标动态计算止损线,可以避免止损点过于死板。ATR指标能够有效反映市场的波动率和风险水平。
-
-- 代码实现了RMA、EMA、SMA、Hull MA等多种均线的选择,增强了策略的适应性。
-
-- 通过调整ATR长度、乘数参数,可以针对不同市场找到较优参数,优化策略效果。
-
-- 策略使用最高价、最低价、收盘价等不同价格选择计算止损线,可针对不同品种进行优化。
-
-- 整体来说,该策略是一种可靠、适应性强、容易优化的趋势跟踪止损策略。
-
-### 风险分析
-
-- 该策略主要依赖参数优化,不同市场和品种需要测试找到适合的ATR和乘数参数组合,否则止损效果可能不佳。
-
-- 在震荡行情中,ATR止损线可能出现频繁触发止损的情况。需要结合趋势判断指标进行优化,避免错过震荡趋势。
-
-- 止损线过于宽松会错过回撤机会止损;过于紧密会增加交易频率和滑点成本。需要仔细测试找到平衡点。
-
-- 多种均线选择可能导致策略效果出现偏差。应该针对具体品种选择一个主要均线,其他均线只做辅助参考。
-
-- 该策略侧重趋势跟踪,无法直接获利。需要考虑与其它入市退出策略或止盈策略组合使用。
-
-- 在参数不当时,策略可能出现过于频繁交易或持仓时间过长的问题。这需要通过优化解决。
-
-### 优化方向 
-
-- 可以考虑加入趋势指标,判断趋势存在与否,避免在震荡行情中被套。
-
-- 可以测试加入反转指标元素,在空头趋势和多头趋势交替时,更快止损转仓换向。
-
-- 可以尝试将ATR长度参数与交易品种的特点相关联,不同品种采用不同的ATR长度设置。
-
-- 可以尝试加入交易量指标,在交易量明显缩小时,提高止损线的收紧速度。
-
-- 可以考虑加大回撤比例止损,但不要过于紧密,防止正常回调就止损。
-
-- 可以结合其它指标判断力度并进行参数优化,在力度不足时适当放宽止损范围。
-
-### 总结
-
-该策略基于Wilder Volatility Trailing Stop思想,运用ATR指标设计了一个适应性非常强的趋势跟踪型止损策略。它可以通过参数优化很好适应不同交易品种,是一种可靠、实用的止损策略。但我们也要注意风险,通过加入趋势判断和交易量元素等进行进一步优化,使其更稳健可靠。并且注意与其它策略组合使用,发挥止损策略的最大效用。
-
-|| 
 
 ### Overview
 
@@ -131,7 +70,6 @@ By flexibly utilizing the ATR indicator, different moving averages and adjustabl
 
 Based on the Wilder Volatility Trailing Stop concept, this strategy utilizes the ATR indicator to design a highly adaptive trend tracking stop loss system. Through parameter optimization it can be fitted to different trading products, and is a reliable and practical stop loss approach. But risks need to be managed by further enhancements like trend filters and volume elements to make it more robust. It also needs to be combined with other strategies to maximize the utility of stop loss techniques.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/b77ce564cde981bd13.png)
 
-[trans]
-
-## 概述
-
-本策略结合了移动平均线指标、布林带指标和成交量加权平均价指标,在金叉形成、短均线上穿长均线的条件下判断进入。策略还利用布林带通道,仅在价格触及布林带下轨时才考虑入场,从而避免在行情震荡中频繁进出。
-
-## 策略原理
-
-该策略主要通过均线指标判断趋势方向,利用布林带来定位波动区间选择买点。具体来说,策略包含以下几个关键规则:
-
-1. 使用50日EMA和200日EMA构建金叉判断系统,当快速移动平均线上穿慢速移动平均线时认为处于多头上升趋势;
-
-2. 价格大于VWAP时,认为处于价格上升阶段,有利于建仓做多;
-
-3. 价格刚刚触及或突破布林带下轨时,表明股价可能处于反弹点附近,机会较好;
-
-4. 进入多头持仓后,价格超过布林带上轨时及时止盈退出。
-
-通过这几个规则的组合,使得本策略在牛市行情中,能够选择合适的买点买入,并设置止损止盈确保收益。
-
-## 策略优势
-
-- 利用金叉判断系统确定大趋势方向,避免在震荡行情中小胜小负;
-
-- VWAP指标可判断价格波动方向,使买点选择更精准;
-
-- 布林带指标判断买点使策略更有韧性,同时设置止损止盈以锁定收益;  
-
-- 多种指标相互验证,使策略判断更加准确可靠。
-
-## 策略风险及解决方法
-
-- 金叉判断系统可能发出假信号,应适当缩短均线周期长度,并配合其他指标验证;
-
-- 布林带参数设置不当也会使策略失去效用,应调节布林带周期及标准差参数;  
-
-- 停损点设置过于宽松,无法有效控制亏损。应适当收紧止损范围,确保风险可控。
-
-## 策略优化方向 
-
-- 优化金叉均线组合,测试不同均线参数,找到最佳参数;
-
-- 测试不同周期布林带参数,找到幅度及离散性最好的参数组合;
-
-- 测试并优化止损范围,使之既能有效控制风险,又不至于过于容易被触发。
-
-## 总结
-
-本策略综合运用均线系统、布林带以及VWAP指标判断入场时机,在兼顾发现机会与控制风险上做出了平衡。通过后续参数优化及规则修正,有望锁定行业及市场中的持续良机。
-
-||
 
 ## Overview
 
@@ -111,7 +60,6 @@ By combining these rules, the strategy is able to locate appropriate long entrie
 
 This strategy strikes a balance between discovering opportunities and controlling risks by integrating MA, Bollinger and VWAP analysis for entries. Continuous fine tuning and optimization will allow it to capitalize on sector and market trends over time.
 
-[/trans]
 
 > Strategy Arguments
 

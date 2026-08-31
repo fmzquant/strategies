@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/149a51493fb00aceb7c.png)
 
-[trans]
-#### 概述
-本策略是一个结合了技术分析指标和人工智能模拟的量化交易系统。策略集成了均线(EMA)、相对波动指数(RVI)等传统技术指标,并引入了模拟AI信号进行交易决策。同时,策略还包含了完整的资金管理和风险控制体系,通过设定止损和止盈来保护资金安全。
-
-#### 策略原理
-策略主要基于以下几个核心组件构建:
-1. 使用20日和200日指数移动平均线(EMA)判断市场趋势
-2. 通过相对波动指数(RVI)评估市场波动状态
-3. 引入模拟AI信号作为辅助决策依据
-4. 采用固定资金分配方案,每次交易使用200单位资金
-5. 设置2%止损和4%止盈以控制风险
-
-当EMA20上穿EMA200且RVI为正值时,系统产生买入信号；当EMA20下穿EMA200且RVI为负值时,系统产生卖出信号。
-
-#### 策略优势
-1. 多维度信号确认,提高交易准确性
-2. 完善的风险控制体系,有效控制回撤
-3. 固定资金分配方案,便于资金管理
-4. 结合AI模拟信号,增强策略适应性
-5. 参数可调整,具有良好的灵活性
-
-#### 策略风险
-1. EMA指标可能在震荡市场产生虚假信号
-2. 固定止损比例可能不适合所有市场环境
-3. 模拟AI信号的随机性可能影响策略稳定性
-4. 资金分配固定,可能错过大行情机会
-
-#### 优化方向
-1. 引入更多技术指标进行信号过滤
-2. 开发自适应止损止盈机制
-3. 优化资金管理系统,采用动态持仓量
-4. 改进AI模拟算法,提高信号质量
-5. 增加市场环境识别机制
-
-#### 总结
-该策略通过结合传统技术分析和现代量化方法,构建了一个相对完整的交易系统。虽然存在一定风险,但通过持续优化和改进,策略有望实现更好的交易效果。建议在实盘交易前进行充分的回测验证。
-
-||
 
 #### Overview
 This strategy is a quantitative trading system that combines technical analysis indicators with simulated artificial intelligence. It integrates traditional technical indicators such as EMA and RVI, while incorporating simulated AI signals for trading decisions. The strategy also includes a comprehensive money management and risk control system, protecting capital through stop-loss and take-profit mechanisms.
@@ -85,7 +47,6 @@ Buy signals are generated when EMA20 crosses above EMA200 with positive RVI; sel
 
 #### Summary
 The strategy constructs a relatively complete trading system by combining traditional technical analysis with modern quantitative methods. While certain risks exist, continuous optimization and improvement should lead to better trading results. Thorough backtesting is recommended before live trading.
-[/trans]
 
 
 

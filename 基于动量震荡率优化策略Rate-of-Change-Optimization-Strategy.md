@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f7d6a54c8ac148b4f9.png)
-[trans]
-### 概述
-
-该策略是基于动量指标——变动速率(ROC)进行优化改进的策略。相比原始ROC策略,该策略进行了以下优化:
-
-1. 引入最大历史ROC值,当前ROC动态比较最大历史ROC,得到动量相对值。
-2. 对动量相对值进行平滑处理,生成信号。
-3. 加入买卖信号阈值。
-
-通过这些优化手段,可以过滤掉许多无效信号,使策略更稳定可靠。
-
-### 策略原理
-
-该策略的核心指标是变动速率(ROC)。ROC衡量股票价格在一定周期内的变化速率。该策略首先计算长度为9周期的ROC值。然后它会记录这个ROC指标在过去200周期内的最大值,并计算当前ROC占最大历史ROC的百分比,得到动量的相对强度。例如,如果过去200天里,ROC最高达到过100,那么当天的ROC为80时,相对强度就是80%。
-
-该相对强度通过长度10的SMA进行平滑处理,过滤掉短期波动,得到平滑曲线。当平滑曲线连续3天上涨,并且值低于-80%时,认为股价跌幅开始放缓,产生底部迹象,因此做多;当平滑曲线连续3天下跌,并且值高于80%时,认为股价涨幅开始放缓,产生顶部迹象,因此平仓。
-
-### 优势分析
-
-该策略相比原始ROC策略,主要有以下优势:
-
-1. 引入历史ROC最大值比较,可以很好地衡量动量指标的相对高度,过滤掉绝对值并不高的无效信号。
-2. 平滑处理过滤噪音,使信号更稳定可靠。
-3. 设定买卖阈值,减少无效交易。
-
-总的来说,该策略对ROC指标进行了有效的二次加工,使其更适合实盘交易。
-
-### 风险分析
-
-该策略主要存在以下风险:
-
-1. ROC指标无法确定市场趋势,存在一定的误导。如果遇到牛熊转换时期,该策略可能失败。
-2. 买卖阈值并非完美,阈值设置得过高或过低都会影响策略表现。
-3. SMA参数设置不当也会影响策略效果。
-
-为降低上述风险,可以考虑结合趋势指标,判断大趋势;调整阈值参数,测试最优参数;优化SMA周期参数。
-
-### 优化方向  
-
-该策略可以从以下方向进行优化:
-
-1. 结合趋势指标,判断市场总体走势,避免在牛熊转换时失效。
-2. 测试不同的ROC长度参数和买卖阈值参数,寻找最优参数组合。
-3. 对SMA平滑参数进行优化,找到最佳参数。
-4. 增加止损机制。
-
-### 总结
-
-该策略是在ROC指标基础上进行 secondary development 的优化策略。它引入历史最大值比较、SMA 平滑和买卖阈值等手段,可以过滤无效信号,使策略更稳定。主要优点是信号质量高,适合实盘。后续可从结合趋势、参数优化等方面进行改进,从而进一步提高策略表现。
-
-||
 
 ### Overview
 
@@ -110,7 +59,6 @@ The strategy can be optimized in the following ways:
 ### Summary  
 
 This is an optimization strategy based on secondary development of the ROC indicator. It introduces means such as historical maximum value comparison, SMA smoothing, and buy and sell thresholds to filter out invalid signals and make the strategy more stable. The main advantage is the high signal quality which is suitable for live trading. Follow-up improvements can be made from combining trends, parameter optimization and so on to further improve strategy performance.  
-[/trans]
 
 > Strategy Arguments
 

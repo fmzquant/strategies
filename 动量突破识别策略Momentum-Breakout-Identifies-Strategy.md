@@ -10,77 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/165c87312bbfd12f475.png)
-[trans]
-
-## 概述
-
-本策略通过识别快速上涨的股票,并在突破新高的时候建仓做多,采取固定百分比止盈的方式来获利。该策略属于趋势跟踪策略。
-
-## 原理
-
-该策略主要基于两个指标:
-
-1. 快速RSI:通过计算最近3根K线的涨跌变化,来判断价格动量。当快速RSI低于10时,视为股票处于超跌状态。
-
-2. 主体过滤:计算最近20根K线的实体平均大小,当价格实体大于平均实体的2.5倍时,视为有效突破。
-
-当快速RSI低于10,且实体过滤有效时,进行做多开仓。之后设置20%的固定止盈点位,当价格超过开仓价*(1+止盈比例)时,平仓止盈。
-
-该策略的优点是能捕捉趋势开始阶段的突破机会,通过快速RSI判断底部区域,实体过滤来避免假突破。采取固定止盈方式来锁定每单盈利,可以持续把握行情趋势。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用快速RSI判断底部超跌区域,可以提高入场准确率。
-
-2. 主体过滤机制可以避免因震荡造成的假突破。
-
-3. 采取固定百分比止盈方式,可以持续获利,把握行情趋势。
-
-4. 策略逻辑简单清晰,容易理解实现。
-
-5. 代码结构优雅,可扩展性强,便于进行策略优化。
-
-6. 回测期内,策略获得稳定正收益,胜率较高。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 策略没有止损机制,存在单笔损失扩大的风险。
-
-2. 固定止盈点位设置不当可能导致过早止盈或止盈点过深。
-
-3. 行情震荡时,容易产生连续小亏损的情况。
-
-4. 未考虑融资融券成本,实盘时收益会有所减少。
-
-5. 策略参数优化不足,不同品种需要调整参数。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 增加止损机制,可以控制单笔损失。
-
-2. 优化止盈点位,使其能动态跟踪趋势。
-
-3. 优化突破的判断指标,提高入场的准确性。
-
-4. 增加仓位管理模块,优化仓位占用。
-
-5. 增加品种参数优化模块,自动优化不同品种的参数。
-
-6. 增加过滤条件,避免行情过于震荡时的亏损。
-
-7. 考虑加入仓位平均成本管理模块。
-
-## 总结
-
-本策略总体来说是一个非常简洁优雅的趋势跟踪策略。它利用快速RSI判断超跌,实体过滤确定有效突破,采取固定止盈点位获取稳定收益。虽然存在一些可优化的空间,但该策略响应敏捷,适合捕捉行情快速变化的场景,是一个非常实用的交易策略。通过不断优化,相信可以成为一个强大可靠的长线持仓策略。
-
-||
 
 ## Overview
 
@@ -150,7 +79,6 @@ Some aspects can be optimized:
 
 In summary, this is an elegant and simple trend following strategy. It uses fast RSI to identify oversold levels, body filter to confirm valid breakout, and fixed percentage take profit to generate steady returns. Although there are rooms for optimization, the strategy is responsive and suitable for fast changing markets, making it a very practical trading strategy. With continuous optimizations, it can become a robust long term strategy.
 
-[/trans]
 
 > Strategy Arguments
 

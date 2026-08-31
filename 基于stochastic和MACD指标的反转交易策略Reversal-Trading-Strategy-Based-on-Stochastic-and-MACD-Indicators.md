@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略融合stochastic指标判断超买超卖反转点和MACD指标识别趋势反转,实现低买高卖的反转交易策略。同时设置追踪止损来锁定利润,可有效控制风险。
-
-## 策略原理
-
-1. 使用stochastic指标判断超买超卖状况。9日线低于20时为超卖区域,高于80时为超买区域,形成反转信号。 
-
-2. MACD指标金叉做多,死叉做空。MACD线突破信号线预示均线反转,提示趋势反转。
-
-3. stochastic反转信号和MACD反转信号同时出现时,做多做空。
-
-4. 设置追踪止损。进入趋势后,当价格达到一定比例盈利时,追踪止损启动;随后止损线跟踪价格上涨通道。
-
-5. 反转信号出现时,关闭原有头寸,同时止损线重置。
-
-## 策略优势
-
-- 融合多个指标判断,可提高信号准确性
-
-- stochastic指标可有效识别超买超卖区域
-
-- MACD可提前捕捉均线反转,把握趋势反转
-
-- 设置追踪止损,可很好的保护利润
-
-- 回测数据充足,策略信号生成明确
-
-- 各参数可优化,易实现参数调整
-
-## 策略风险
-
-- 多指标组合优化难度较大
-
-- 反转信号可能出现误判,需要诸指标验证
-
-- 追踪止损需要更多数据进行测试优化
-
-- stochastic和MACD指标均存在滞后问题
-
-- 频繁交易可能导致较高交易成本
-
-## 策略优化方向
-
-- 尝试加入更多指标,形成更稳健的交易系统
-
-- 测试不同周期参数,寻找最佳参数组合
-
-- 开发自适应参数设置,实时更新最优参数
-
-- 设置回撤止损以控制最大回撤
-
-- 加入交易量指标,避免量价背离导致的失误
-
-- 考虑交易成本的影响,设置最小止盈幅度
-
-## 总结
-
-本策略综合stochastic指标和MACD指标优势,对反转交易时点选择具有很强的识别能力。追踪止损机制也可有效锁定利润。但反转交易本身依然存在一定风险,需要利用更多指标进行验证,并继续对参数进行测试优化。如果能获得稳定的参数组合,以及控制好资金管理,该策略可成为高效的短线交易策略。
-
-|| 
 
 
 ## Overview
@@ -134,7 +71,6 @@ This strategy combines the stochastic indicator to determine overbought and over
 
 This strategy combines the strengths of stochastic and MACD in identifying favorable reversal trading points. The trailing stop mechanism also effectively locks in profits. But reversal trading still carries inherent risks that need validation from more indicators and further parameter optimization. With stable parameters and proper capital management, this strategy can become a highly efficient short-term trading system.
 
-[/trans]
 
 > Strategy Arguments
 

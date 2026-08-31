@@ -9,62 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-双OTT趋势跟踪策略是一种改进版的OTT策略,它结合了双OTT线和系数来更好地应对盘整市的时候的假信号。该策略由土耳其交易员Anıl Özekşi开发,他在自己的视频教程中详细解释了这一策略的设计思路。
-
-## 原理
-
-双OTT策略的核心是利用两条优化趋势跟踪线OTT来判断趋势方向。它首先计算出移动平均线MAvg,然后根据MAvg值的百分比来得到长止损线longStop和短止损线shortStop。当价格上穿长止损线时为看涨信号,下穿短止损线时为看跌信号。
-
-为了处理盘整市的假信号,该策略改进了以下两点:
-
-1. 增加了两个垂直位移的OTT线,分别是OTTup和OTTdn,它们是OTT的略微上移和下移。只有当价格突破这两个位移线时,才产生真正的交易信号。
-
-2. 引入了一个小 coef 系数,用于微调两个位移OTT线,使其更精确地适应市场。
-
-通过这种双OTT设计,可以过滤掉大部分盘整市的噪音,避免产生错误信号。从而可以更好地捕捉趋势转折点,及时切换仓位。这是双OTT策略的最大优势。
-
-## 优势
-
-- 利用双OTT线设计可以有效过滤假信号,增强策略稳定性
-- 增加的微调系数coef使OTT线更贴近市场反应
-- 作者Anıl Özekşi在视频中详细讲解策略思路,容易理解掌握
-- 综合EMA,止损线等多种技术指标判断市场走势
-- 作者Anıl Özekşi是知名的土耳其交易员,具有一定的专业知名度
-
-## 风险
-
-- OTT指标本身容易产生拉回测试的风险,双OTT设计可减轻这一问题
-- 大幅震荡行情下,止损线可能被频繁触发,存在过度交易的风险
-- coef系数需要仔细测试取得最优值,否则效果会打折扣
-- 作者视频是土耳其语教程,语言障碍问题可能影响算法的正确理解
-- 回测数据不足,需在更长周期和更多市场验证策略有效性
-
-对策:
-- 增加止损线和双OTT之间的缓冲带,避免过于灵敏
-- 优化系数coef的设置,使之更符合回测结果
-- 翻译作者教程,确保对算法逻辑理解正确
-- 在更多历史行情下进行回测,验证策略参数可靠性
-
-## 优化方向
-
-- 可以考虑将参数如周期length等设置为可调节的输入值
-- 尝试其他类型的移动平均线,寻找更符合ottp原理的平均线算法
-- 根据不同交易品种分别优化coef系数的大小
-- 增加过滤机制,避免非主要交易时间段的错误信号
-- 将止损线改为动态追踪,根据波动率实时调整
-- 增加机器学习算法,利用AI自动优化参数设置
-
-总之,双OTT策略充分利用了Anıl Özekşi的ottp经验,并做出创新。它有望成为一个可靠、可定制的趋势跟踪策略框架。但仍需持续优化测试以适应市场的变化。
-
-## 总结
-
-双OTT策略通过双优化趋势跟踪线以及微调系数,有效应对了盘整市的假信号问题。它合理运用移动平均线思想,辅以止损线来动态跟踪趋势。该策略简洁实用,来自知名交易员的亲身经验,值得深入研究运用。但我们也要清醒认识到其局限性,做到戒骄戒躁,谨慎验证。只有不断优化测试,才能使其成为可靠的趋势跟踪策略。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ In summary, the Twin OTT strategy fully utilizes Anıl Özekşi's OTT experience
 
 The Twin OTT strategy effectively handles false signals during sideways markets using dual optimized trend tracking lines and a fine tuning coefficient. It makes sensible use of moving average concepts and dynamic stop loss lines to track trends. This concise and practical strategy stems from a renowned trader's first-hand experience, making it worth in-depth research and application. But we should also be aware of its limitations and avoid complacency. Only through continuous optimizations and rigorous testing can it become a robust trend tracking strategy.
 
-[/trans]
 
 > Strategy Arguments
 

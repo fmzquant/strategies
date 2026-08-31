@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1988ca72bf8817f05e4.png)
-[trans]
-#### 概述
-该策略使用了三条不同周期的指数移动平均线(EMA)来判断市场趋势和买卖信号。快速EMA、慢速EMA和趋势过滤EMA的交叉情况,以及价格相对于趋势过滤EMA的位置,共同构成了该策略的核心逻辑。同时,该策略还引入了Fukuiz趋势指标作为辅助判断,在某些情况下会触发平仓操作。
-
-#### 策略原理
-1. 计算三条不同周期的EMA:快速EMA(默认9周期)、慢速EMA(默认21周期)和趋势过滤EMA(默认200周期)。
-2. 计算20周期的价格标准差,用于衡量市场波动率。
-3. 引入Fukuiz趋势指标(默认14周期EMA),并根据其与前一周期的大小关系确定颜色(上升为绿色,下降为红色)。
-4. 当快速EMA上穿慢速EMA,并且快速EMA高于慢速EMA,同时价格高于趋势过滤EMA时,产生买入信号。
-5. 当快速EMA下穿慢速EMA,并且快速EMA低于慢速EMA,同时价格低于趋势过滤EMA时,产生卖出信号。
-6. 当持有多头仓位时,如果Fukuiz趋势指标变为红色,平掉多头仓位。
-7. 当持有空头仓位时,如果Fukuiz趋势指标变为绿色,平掉空头仓位。
-
-#### 优势分析
-1. 通过多个周期的EMA组合,可以较好地捕捉市场趋势。
-2. Fukuiz趋势指标的引入,提供了额外的趋势判断依据,并在某些情况下起到止损的作用。
-3. 参数可调,适应性强,可以根据不同市场和周期进行优化。
-
-#### 风险分析
-1. EMA本质上是滞后指标,在市场快速转折时,可能出现信号延迟。
-2. 趋势过滤EMA周期较长,可能导致策略错过一些短期趋势。
-3. Fukuiz趋势指标的平仓逻辑可能导致策略过早止损,从而错失后续趋势。
-
-#### 优化方向
-1. 对各个EMA的周期参数进行优化,找到最适合当前市场的参数组合。
-2. 引入其他辅助指标,如RSI、MACD等,提供更多的入场和出场依据。
-3. 对Fukuiz趋势指标的止损逻辑进行优化,如加入一定的缓冲区,避免过早止损。
-4. 考虑加入仓位管理和风险控制模块,提高策略的稳定性和抗风险能力。
-
-#### 总结
-该策略通过多个周期EMA的组合,以及Fukuiz趋势指标的辅助,构建了一个相对完整的趋势判断和交易框架。策略逻辑清晰,参数可调,适应性强。但同时也存在一些潜在风险,如信号滞后、趋势判断偏差等。未来可以从参数优化、指标组合、风险管理等方面对策略进行进一步完善。
-
-||
 
 #### Overview
 This strategy uses three exponential moving averages (EMAs) with different periods to determine market trends and generate buy/sell signals. The crossovers between the fast EMA, slow EMA, and trend filter EMA, along with the price position relative to the trend filter EMA, form the core logic of this strategy. Additionally, the Fukuiz trend indicator is introduced as an auxiliary judgment, which triggers position closing under certain conditions.
@@ -74,7 +41,6 @@ This strategy uses three exponential moving averages (EMAs) with different perio
 
 #### Summary
 This strategy constructs a relatively complete trend judgment and trading framework by combining multiple-period EMAs and the Fukuiz trend indicator. The strategy logic is clear, the parameters are adjustable, and the adaptability is strong. However, it also has some potential risks, such as signal lag and trend judgment deviation. In the future, the strategy can be further refined in terms of parameter optimization, indicator combination, and risk management.
-[/trans]
 
 
 

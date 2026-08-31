@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1abadaedd287e365fd6.png)
-[trans]
-## 概述
-
-本策略通过结合移动平均线指标、相对强弱指标(RSI)和吞噬形态,在黄金交易中进行长短双向操作。其中使用21日线、50日线和200日线的交叉作为主要的交易信号,RSI指标和吞噬形态辅助过滤信号,进一步优化入市点位。
-
-## 策略原理
-
-该策略主要通过以下几个方面进行交易决策:
-
-1. 移动平均线交叉
-
-   使用21日线和200日线的金叉/死叉作为判断趋势转折的主要指标。当21日线上穿200日线时为看涨信号,当21日线下穿200日线时为看跌信号。此外结合50日线过滤跳空信号。
-
-2. RSI指标辅助
-
-   设置RSI指标的超买线和超卖线,当RSI高于70为超买,当RSI低于30为超卖。在看涨信号时RSI需处于非超买区域,在看跌信号时RSI需处于非超卖区域,避免买入高点卖出低点。
-
-3. 吞噬形态确认
-
-   看涨信号发出时需出现看涨吞噬形态candle,看跌信号发出时需出现看跌吞噬形态candle,以确认趋势转折。
-
-当以上三个条件同时满足时产生交易信号并下单,于是形成了一套比较严格的 Filters。
-
-## 策略优势
-
-该策略最大的优势在于利用了多种参数和指标进行综合判断,较好地过滤了错误信号,可以减少不必要的止损。具体优势体现在以下几个方面:
-
-1. 移动平均线策略本身具有一定的稳定性。
-
-2. RSI指标的设置避免了买入高点和卖出低点。
-
-3. 吞噬形态的加入,可以进一步确认趋势反转的可靠性。
-
-4. 止损幅度较小,可以有效控制风险。
-
-## 策略风险
-
-虽然该策略在信号过滤和风险控制方面做的不错,但任何策略都会存在一定的弱点和风险。
-
-1. 参数设置较为复杂,可能需要大量测试找到最佳参数组合。
-
-2. 入场信号较为严格,可能会错过部分好的机会。
-
-3. 在剧烈行情中,会出现一定程度的滞后。
-
-4. 长期运行是否稳定还有待验证。
-
-针对以上风险,我们可以通过调整参数、优化代码逻辑、结合其他指标等方式进行改进和优化。
-
-## 优化方向  
-
-该策略在多种指标的综合判断上做的不错,但仍有优化的空间。主要的优化方向包括:
-
-1. 调整参数寻找最佳组合。可以通过更多历史数据的回测,对比不同参数对结果的影响,找到一组更优的参数设定。
-
-2. 结合其他指标进行辅助。例如MACD,KD等指标也可以辅助判断趋势转折的时机。适当引入其他指标可以形成更强大的指标体系。  
-
-3. 优化和完善止损机制。现有的止损幅度较小,可以进一步测试不同幅度的止损是否可以减少不必要的头寸切换。
-
-4. 测试更长时间段的数据,验证策略的长期有效性。通过更多年限和市场行情的回测,检验策略的稳定性。
-
-## 总结
-
-本策略综合运用了移动平均线、RSI指标和吞噬形态等多种技术分析工具,在黄金交易中进行长短双向操作。通过参数设定和信号过滤形成了一套较为严格的策略体系,在一定程度上控制了风险。但任何策略都不可能百分之百完美,本策略也仍有许多优化的空间和方向。总的来说,该策略为量化交易提供了一定参考,但仍需谨慎对待,根据实际情况进行调整。
-
-||
 
 ## Overview
 
@@ -140,7 +74,6 @@ Despite doing well in combining multiple indicators, this strategy still has spa
 ## Conclusion
 In conclusion, this strategy leverages a toolkit of technical analysis instruments like moving averages, RSI and engulfing patterns to conduct long short gold trades. Through parameter configuration and signal filtering, it establishes a relatively strict system to control risks to some extent. However, no strategy can be absolutely perfect. This strategy still has much room for optimization and directional improvement. In general it provides meaningful references for quantified trading, but should still be used discreetly with pragmatic adjustments when applied in practice.
 
-[/trans]
 
 > Strategy Arguments
 

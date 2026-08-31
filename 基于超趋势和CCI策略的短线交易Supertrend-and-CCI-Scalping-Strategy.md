@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d5bb5ddb552f6f96f2.png)
-[trans]
-## 概述
-
-该策略基于两个不同参数设置的超趋势指标和CCI指标,目标是捕捉短线价格波动,实现高频交易。超趋势指标通过动态计算ATR,判断价格的趋势方向;而CCI指标则用于判断市场是否超买超卖。策略结合两者形成交易信号。
-
-## 策略原理
-
-- 使用14周期的ATR计算快速超趋势,设置因子为3;使用14周期的ATR计算慢速超趋势,设置因子为6。快速超趋势更敏感,可以捕捉短期变动;慢速超趋势判断主要趋势方向。
-
-- 当快速超趋势下穿价格,且慢速超趋势还在价格之上时,判断为可能的反转信号,做多;当快速超趋势上穿价格,且慢速超趋势还在价格之下时,判断为可能的反转信号,做空。
-
-- 同时,利用CCI判断市场超买超卖状况。CCI高于100时市场为超买,低于-100时市场为超卖。结合CCI信号过滤假突破。
-
-- 在超买超卖情况下,超趋势指标发出反转信号的可能性更大,这是策略的核心逻辑。
-
-## 优势分析
-
-- 结合超趋势判断趋势反转点和CCI判断超买超卖状况,可以有效过滤假突破,提高信号质量。
-
-- 快慢超趋势交叉形成交易信号,实现高频出入场。
-
-- CCI参数和超趋势的参数可以灵活调整,适应不同市场状况。
-
-- 策略思路清晰易理解,参数调整也较为简单。
-
-## 风险及解决方法
-
-- 超趋势本身存在时滞,可能错过首次反转机会。可以试验缩短ATR周期。
-
-- CCI存在回调风险,波动过大也可能造成重复交易。可以试验增大CCI的参数或调整边界。
-
-- 高频交易容易增加交易频次和手续费负担。建议调整持仓时间,降低开平仓频率。
-
-## 优化思路
-
-- 可以基于最大回撤或盈亏比等指标对参数组合进行遍历优化,寻找最优参数。
-
-- 可以结合机器学习方法如随机森林针对参数进行特征选择,实现参数的自动优化。
-
-- 可以探索在特定周期内限制最多开仓次数,来控制风险。
-
-## 总结
-
-该策略充分利用超趋势指标判断短期趋势反转点,辅以CCI指标过滤信号。参数设置合理时,可以实现高效率的短线交易。但也需要警惕过于频繁交易带来的各类风险,通过参数调整及算法优化不断改进,能够获得更好的策略表现。
-
-||
 
 ## Overview
 
@@ -101,7 +55,6 @@ This strategy is based on two Super Trend indicators with different parameter se
 
 The strategy makes full use of the Super Trend indicator to determine short-term trend reversal points, supplemented by the CCI indicator to filter out signals. When parameter settings are reasonable, it can achieve efficient short-term trading. But also need to be wary of risks arising from excessive trading, and continuously improve the strategy performance through parameter tuning and algorithm optimization.
 
-[/trans]
 
 > Strategy Arguments
 

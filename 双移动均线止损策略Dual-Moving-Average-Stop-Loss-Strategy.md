@@ -11,68 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/df890d70efbf0b2e2e.png)
 
-[trans]
-
-## 概述
-
-该策略是一个基于双移动均线的止损策略。它使用两个移动均线,一个为主均线,一个为止损线。当价格高于主均线时做多,当价格低于止损线时平多仓;当价格低于主均线时做空,当价格高于止损线时平空仓。通过动态调整做多做空的价格,实现止损止盈。
-
-## 策略原理
-
-该策略使用sma函数计算长度为len的简单移动平均线作为主均线ma。然后根据用户输入的多头止损百分比elpercent和空头止损百分比espercent,计算出多头止损线el和空头止损线es。具体计算公式为:
-
-el = ma + (ma * elpercent / 100)
-es = ma + (ma * espercent / 100) 
-
-其中elpercent和espercent分别代表主均线上下偏移的百分比。
-
-这样就得到了三条线:主均线ma、多头止损线el、空头止损线es。
-
-策略的交易逻辑为:
-
-如果收盘价格高于多头止损线el,则开多仓;如果收盘价格低于空头止损线es,则平多仓。
-
-如果收盘价格低于空头止损线es,则开空仓;如果收盘价格高于多头止损线el,则平空仓。
-
-## 策略优势
-
-1. 使用双移动均线设定止损止盈点,可以有效控制风险。
-
-2. 主均线长度len和偏移百分比elpercent、espercent都可以自定义,可以针对不同市场调整参数,适应性强。
-
-3. 采用止损机制,可以及时止损,避免亏损进一步扩大。
-
-4. 策略思路简单清晰,容易理解实现,适合新手学习。
-
-5. 可同时做多做空,充分利用双向行情。
-
-## 风险及解决
-
-1. 回测数据拟合风险。移动均线策略对历史数据拟合性较强,实盘效果可能会有差异。解决方法是在复杂多变的市场中实盘验证,根据实盘情况调整参数。
-
-2. 止损点过于接近带来的风险。如果止损点设定过于接近主均线,可能会被短期价格波动触发止损。可以适当拉大止损距离来避免。
-
-3. 双边交易带来的资金压力。做多做空同时进行,需要准备足够资金作为保证金。可以适当降低仓位来控制资金压力。
-
-4. 参数优化风险。不同市场情况下参数设置会有较大差异,需要花时间对参数进行优化。可以采用机器学习等技术辅助参数优化。
-
-## 优化方向 
-
-1. 可以考虑加入更多指标判断市场趋势,提高决策效果。例如加入量价指标、波动指标等。
-
-2. 可以研究自动优化移动均线长度len和止损参数,使之能根据市场变化调整。
-
-3. 可以加入对交易品种的过滤,只在趋势明显的品种下交易。
-
-4. 可以考虑把止损方式改为追踪止损,根据价格实时调整止损点。
-
-5. 可以建立参数优化的评估体系,利用回测结果自动寻找最优参数组合。
-
-## 总结
-
-该策略整体思路清晰易懂,使用双移动均线进行止损,可以有效控制风险。策略具有参数可调、适应性强等优点,但也存在回测数据拟合、止损距离设置等问题需要注意。通过进一步优化,该策略可以成为一个易于实盘的有效止损策略。它适合作为新手学习算法交易的起点,在实践中不断完善,逐步形成独特的交易系统。
-
-||
 
 
 ## Overview
@@ -134,7 +72,6 @@ If the closing price is below the short stop loss line es, open a short position
 
 The overall logic of this strategy is clear and easy to understand. It uses dual moving averages for stop loss and can effectively control risks. The strategy has advantages like customizable parameters and adaptability but also has risks like backtest overfit and stop loss distance setting that need attention. With further optimization, this strategy can become an effective stop loss strategy viable for live trading. It is suitable as a starting point for algorithmic trading beginners, and can be continually improved upon through practice to eventually form a unique trading system.
 
-[/trans]
 
 > Strategy Arguments
 

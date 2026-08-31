@@ -9,90 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一种基于多条均线设置限价单进行交易的策略。它会根据价格突破不同的均线位设置不同数量的做多或做空限价单,形成金字塔式的多单持仓。当价格重新突破均线时,则进行反向限价开仓。有持仓时,价格突破中轴均线则进行反向市价平仓。
-
-## 策略原理 
-
-该策略使用均线指标判断趋势方向。具体来说,根据价格是否突破上行3条均线,来判断设置做多限价单的数量;根据价格是否突破下行3条均线,来判断设置做空限价单的数量。
-
-这样,价格趋势越强,会设置更多同向的限价单;当价格出现反转信号时,则进行反向开仓。中轴均线用于判断持仓的突破,发出平仓信号。
-
-整个策略形成金字塔式的开仓与突破式的平仓相结合的交易方式。旨在多单均价开仓,降低成本;中轴均线止损,控制风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用均线判断趋势,操作简单直观。
-
-2. 金字塔式开仓,可在趋势初期获得较好成本。
-
-3. 中轴均线止损,可以及时止损,控制风险。
-
-4. 限价开仓避免滑点。
-
-5. 可自定义参数,适应不同品种。
-
-6. 结构清晰,易于理解和扩展。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 均线指标存在滞后,可能导致误判。
-
-2. 限价单失败可能导致错过入场时机。
-
-3. 中轴均线止损可能过于粗放,无法对突破进
-行判断。
-
-4. 参数设置不当可能导致金字塔仓位过大。
-
-5. 回测时间范围不充分可能导致曲线过拟合。
-
-6. 没有考虑手续费因素。
-
-对应风险的解决方法如下:
-
-1. 结合其他指标进行确认,优化参数。
-
-2. 设置有效期限,调整限价单价格。
-
-3. 中轴均线处设置止盈,或增加突破判断逻辑。
-
-4. 优化参数,评估盈亏比。
-
-5. 扩大回测时间范围,多市场回测。 
-
-6. 加入手续费和滑点逻辑。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 优化参数,适配更多品种。可以使用机器学习方法。
-
-2. 增加其他指标过滤确认。例如MACD、KDJ等。
-
-3. 在中轴均线增加止盈逻辑。
-
-4. 动态调整开仓比例和止损位置。
-
-5. 优化限价单设置,改进成本。例如根据波动范围设置价格。
-
-6. 增加对成本的管理,防止过度追涨。
-
-7. 测试不同品种参数效果,构建参数池。
-
-## 总结
-
-该策略通过均线设置限价单形成金字塔开仓,以获得较优成本。使用中轴均线止损来控制风险。策略结构简单清晰,易于理解和扩展。但可通过引入其他指标、优化参数、改进限价单逻辑等进行改进,使策略更具鲁棒性。总体来说,该策略提供了一种简单实用的限价交易思路,有一定的参考借鉴价值。
-
-||
 
 
 ## Overview
@@ -175,7 +91,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy opens pyramid-shaped positions with limit orders to achieve better average costs. It uses the middle MA for stop loss to control risks. The strategy structure is simple and clear, easy to understand and extend. But it can be improved by introducing other indicators, optimizing parameters, improving limit order logic etc to make it more robust. Overall, this strategy provides a simple and practical idea of limit order trading that holds some reference value.
 
-[/trans]
 
 > Strategy Arguments
 

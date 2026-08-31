@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17ad863810e29fd427a.png)
-[trans]
-## 概述
-
-该策略将指数移动平均线(EMA)与随机指标(Stochastic Oscillator)相结合,采用趋势追随与延续方式,同时还具有一些很酷的功能。我专门为交易替代币设计了这个策略,但它同样适用于比特币本身和一些外汇交易对。
-
-## 策略原理
-
-该策略有4个开启交易信号的必要条件。以下是开启做多交易的条件(平仓信号刚好相反):
-
-- 快速EMA高于慢速EMA 
-- 随机K线处于超买区域  
-- 随机K线向上穿过随机D线
-- 价格收盘于慢速EMA和快速EMA之间
-
-一旦所有条件为真,下一根K线开盘时就会开仓。
-
-## 优势分析
-
-该策略结合EMA和随机指标的优势,能够有效地捕捉趋势的开始和延续,适合中长线操作。同时策略提供多种可自定义的参数,用户可以根据自己的交易风格和市场特征进行调整。
-
-具体来说,策略的优势有:
-
-1. EMA交叉判断趋势方向,增强信号的稳定性和可靠性 
-2. 随机指标判断是否超买超卖,寻找反转机会
-3. 结合两种指标,既有趋势跟随,又有逆势交易 
-4. ATR自动计算止损距离,止损随市场波动性调整
-5. 可自定义风险回报比,满足不同用户需求
-6. 提供多种参数自定义,用户可根据市场调整 
-
-## 风险分析
-
-该策略主要的风险来源于:
-
-1. EMA交叉形成的信号可能出现假突破,从而产生错误信号
-2. 随机指标本身有滞后性,可能错过价格反转的最佳时机点
-3. 单一策略无法完全适应市场多变的环境 
-
-为降低上述风险,可采取以下措施:
-
-1. 适当调整EMA周期参数,避免产生过多假信号
-2. 结合更多指标判断趋势和支撑位,确保交易信号可靠性
-3. 制定清晰的资金管理策略,控制每次交易的风险敞口 
-4. 采用复合策略,不同策略可以互相验证信号,提高稳定性
-
-## 优化方向
-
-该策略可以从以下几个方面进一步优化:
-
-1. 增加基于波动率的持仓调整模块。当市场波动加剧时,适当减小头寸;当波动减弱,可放大头寸。
-2. 增加对大级别趋势的判断,避免逆势操作。例如结合每日或每周K线判断趋势方向。
-3. 增加机器学习模型判断买卖信号。可以针对历史数据训练分类模型,辅助产生交易信号。
-4. 优化资金管理策略模块,使止损和 Position Size 更加智能。
-
-## 总结
-
-该策略整合了趋势跟随和反转交易的优点,既考虑大级别的市场环境,又关注当下价格行为,是一款值得长期跟踪实盘的有效策略。通过持续优化参数设置、增加趋势判断模块等手段,策略的表现还具有很大提升空间,值得投入更多研发精力。
-
-||
 
 ## Overview
 
@@ -123,7 +65,6 @@ The strategy can be further optimized in following aspects:
 
 This strategy integrates the pros of both trend following and mean reversion, considering both higher timeframe market environments and current price behaviors. It is an effective strategy worth real time tracking and testing. Through continuous optimization on parameters, adding trend judgement modules etc, there is still large room for performance improvement, worth pouring in more research efforts.
 
-[/trans]
 
 > Strategy Arguments
 

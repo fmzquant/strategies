@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bc19854ff339c2547b.png)
 
-[trans]
-
-### 概述
-
-时间区间威力买卖策略是一个利用股票在一天中不同时间区间价格走势的策略。它会在一天中的48个半小时时间区间内判断最佳的做多做空时机。
-
-### 策略原理
-
-该策略的核心逻辑是,股票在一天中不同的时间区间,其价格走势往往有规律可循。策略通过设置48个半小时的时间区间,并在每个时间区间判断做多、做空或者无操作三种选择。当时间进入某个区间时,如果设置做多,则会开仓做多;如果设置做空,则会开仓做空。在区间结束时,会考察下一个时间区间的操作类型,如果与当前区间相同,则继续持有仓位;如果不同,则会在区间结束前平仓。
-
-举例来说,如果6点30分到7点之间设置为做多,那么策略会在6点30分开仓做多;如果7点到7点30分之间设置为做空,那么在7点前,策略会平掉之前的多单,然后在7点开仓做空。
-
-该策略的优势在于可以捕捉股票在一天中价格变化规律。风险在于,价格变化规律可能随时间改变,从而导致策略失效。
-
-### 优势分析
-
-该策略最大的优势在于利用了股票Prices is Right 的特性,也就是价格在不同时间区间有不同的均值和方差。这使得策略可以在波动较大的时段采用范围交易策略,在波动较小的时段采用趋势策略,灵活应对市场变化。
-
-另一个优势是参数设置灵活。可以根据不同股票的特点,选择最佳的参数组合,对冲部分不确定性风险。
-
-### 风险分析
-
-主要风险来自假设的不稳定性。如果股票价格在一天内的变化规律发生改变,那么策略的盈利预期就会受到影响。这种改变可能源自股票基本面,也可能源自大环境的黑天鹅事件。
-
-此外,过于频繁的交易也会带来交易费用方面的风险。如果没有足够的交易量支撑,交易费用的堆积也会影响最终收益。
-
-### 优化方向 
-
-可以考虑引入机器学习模型,实现参数的动态调节。例如,训练LSTM模型,预测下一个时间区间的股票价格,据此调整做多做空的参数。
-
-或者,可以尝试结合股票的基本面指标,判断价格变化规律是否发生改变的可能性,从而确定策略的启动时机。
-
-### 总结
-
-时间区间威力买卖策略通过分析股票一天内价格变化的规律,在不同时间区间采取最优操作,以获取Alpha。这是一种参数调节灵活、风险可控的高效算法交易策略。未来的优化方向,可以考虑引入机器学习模型,或者结合基本面判断,使策略的盈利空间更大,抗风险能力更强。
-
-||
 
 ### Overview
 
@@ -118,7 +81,6 @@ Alternatively, combine stock fundamentals to gauge likelihood of pattern shift, 
 ### Conclusion  
 
 The Timeframe Power Trading Strategy generates alpha by identifying optimal intraday operations during different periods when analyzing recurring price patterns. With flexible parameter adjustment and risk controls, it is an efficient algo trading strategy. Future optimization paths involve ML adoption or fundmental combos to expand profitability and enhance robustness against uncertainties.
-[/trans]
 
 
 > Strategy Arguments

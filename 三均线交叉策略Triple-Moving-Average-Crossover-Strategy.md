@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b1ae79ba4e7a089fdb.png)
-[trans]
-
-### 概述
-
-三均线交叉策略利用不同时间周期的移动平均线的交叉作为买入和卖出信号,属于趋势跟踪策略。该策略使用三条移动平均线,包括短期移动平均线、中期移动平均线和长期移动平均线,根据它们的交叉形成交易信号。
-
-### 策略原理  
-
-该策略首先计算短期移动平均线(默认7日)、中期移动平均线(默认25日)和长期移动平均线(默认99日),然后根据以下规则产生交易信号:
-
-1. 当短期移动平均线上穿中期移动平均线时,产生买入信号。
-
-2. 当短期移动平均线下穿中期移动平均线时,产生卖出信号。 
-
-3. 当短期移动平均线上穿长期移动平均线时,产生快速买入信号。
-
-4. 当短期移动平均线下穿长期移动平均线时,产生快速卖出信号。
-
-该策略认为,短期移动平均线上穿中期移动平均线表示市场趋势转为上涨,因此产生买入信号;而短期移动平均线下穿中期移动平均线则表示市场趋势转为下跌,因此产生卖出信号。同理,短期移动平均线与长期移动平均线的交叉也会产生快速的交易信号,以捕捉较长线的趋势变化。
-
-### 优势分析
-
-- 策略逻辑简单清晰,容易理解和实现。
-- 利用多时间周期分析,可以有效捕捉市场趋势的变化。  
-- 可以通过调整移动平均线的周期,优化策略的参数。
-- 可视化的交叉信号,直观地反映趋势的变化。
-
-### 风险分析
-
-- 移动平均线存在滞后性,可能错过趋势的反转点。
-- 多头市场中,短线上穿长线的假信号可能过多。
-- 空头市场中,短线下穿长线的假信号可能过多。  
-- 快速买入和卖出信号可能过于灵敏,增加交易次数和手续费。
-
-可通过适当调整移动平均线周期,或增加过滤条件来优化,减少假信号。也可以适当缩短快速交易周期,降低交易频率。
-
-### 优化方向
-
-- 增加过滤条件,例如大于某个交易量或者价格变化百分比时才产生信号。
-- 结合其他指标过滤,例如MACD,KDJ等,避免在无明确趋势时出错交易。
-- 优化移动平均线周期的组合,降低假信号。
-- 区分多头和空头市场,优化买入和卖出的参数。
-- 考虑交易成本,调整快速交易的参数,控制交易频率。
-
-### 总结
-
-三均线交叉策略整体比较简单直接,通过不同时间周期均线的交叉判定趋势方向,以产生交易信号。该策略易于实现,参数调整灵活,可以捕捉趋势的变化。但也存在移动平均线滞后的问题,以及假信号过多的风险。可以通过添加过滤条件,优化参数组合等方法来改进策略的效果。该策略适合对趋势交叉感兴趣的交易者进行优化应用。
-
-||
 
 ### Overview
 
@@ -116,7 +67,6 @@ Proper adjustments of MA periods or adding filter conditions can help optimize a
 
 The triple MA crossover strategy is relatively simple, judging the trend direction through crossover of different timeframe MAs to generate trading signals. It is easy to implement with flexible parameter adjustments to capture trend changes. But it also has the issues of MA lagging and excessive false signals. Methods like adding filters and optimizing parameter combinations can improve the strategy. It suits traders interested in trend crossovers for optimization and application.
 
-[/trans]
 
 > Strategy Arguments
 

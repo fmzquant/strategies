@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c088cafeb6927cc610.png)
-[trans]
-
-### 概述
-
-黄金抛物线突破策略是一种技术分析策略,它结合了黄金抛物线形态判断和均线突破 Exit 信号,目标是在黄金抛物线形成时进入场内,并在突破 Exit 信号时退出,实现交易盈利。
-
-### 策略原理
-
-该策略主要基于以下几点判断规则:
-
-1. 使用 5 根 K 线的最高价和最低价的简单移动平均线绘制黄金抛物线通道。
-
-2. 当收盘价从下向上突破通道时,形成黄金抛物线形态,作为买入信号进入场内。此时说明价格正在突破通道上沿,可能进入行情。 
-
-3. 买入后,Trail 追踪止损在入场价附近,防止止损。同时设置移动止盈线以锁定利润。
-
-4. 当价格突破通道下沿时产生 Exit 信号,关闭买入订单,退出场内。此时说明价格可能重新进入震荡或下行通道。
-
-该策略主要判断标准包括黄金抛物线形态判断和均线突破 Exit 信号判断,使其在趋势突破时进入,并可通过移动止盈止损来控制风险。
-
-### 策略优势
-
-该策略具有以下几点优势:
-
-1. 结合了形态分析和技术指标判断,提高了交易信号的可靠性。
-
-2. 通过移动止损来控制单笔损失风险,避免亏损过大。
-
-3. 利用移动止盈来锁定利润,防止利润回吐。
-
-4. 具有较高的盈亏比,适合追求稳定收益的投资者。
-
-5.  easytrade 策略语法简单,易于编写和优化。
-
-### 策略风险
-
-该策略也存在以下风险:  
-
-1. 价格可能不会有效突破通道,导致形成假突破。这会造成不必要的亏损。可以通过优化参数降低假突破概率。
-
-2. 移动止损可能被突破,从而扩大亏损。这需要合理设置止损距离。
-
-3. 移动止盈可能过早退出,失去更大利润机会。这需要根据市场调整止盈位置。
-
-4. 需适时调整通道参数,以适应不同周期的行情调整。
-
-### 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化通道参数,找到更加合适的参数组合,提高信号质量。
-
-2. 增加其他过滤条件,如交易量突增等,提高信号的准确率。  
-
-3. 尝试其他 Exit 信号,如布林线 Exit 或 SAR Stop 等,寻找更佳的 Exit点。
-
-4. 测试不同的止损、止盈算法,优化资金管理。
-
-5. 增加适应性模块,使策略参数能根据实时行情进行自动优化。
-
-### 总结
-
-黄金抛物线突破策略结合形态分析和技术指标判断,具有交易信号质量较高、止损止盈控制风险的优点。该策略可以通过多种方式进行优化提高盈利能力,是一种易于掌握且收益稳定的量化交易策略。它适合有一定基础但希望获得稳定收益的投资者。
-
-||
 
 ### Overview  
 
@@ -138,7 +73,6 @@ The strategy can be optimized in the following aspects:
 
 The golden parabola breakout strategy combines pattern analysis and technical indicators for relatively high quality trading signals and uses stops and take profits to control risks. This strategy can improve profitability through various optimization methods and is an easy to master quantitative trading strategy with stable returns. It is suitable for investors with some foundation who want stable returns.  
 
-[/trans]
 
 > Strategy Arguments
 

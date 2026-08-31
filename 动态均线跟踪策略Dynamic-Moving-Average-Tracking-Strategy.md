@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11a508140adc9d60fa2.png)
-[trans]
-
-### 概述
-
-本策略采用拉里·威廉姆斯在他的书《长期秘密短期交易》中解释的策略,该策略使用两个3期移动平均线,一个代表高点,另一个代表低点。当价格低于3期低点移动平均线时,我们有一个长仓信号。该交易在价格收盘高于3期高点移动平均线时平仓。
-
-### 策略原理
-
-该策略的核心逻辑是计算高低点的3期移动平均线。具体来说,它使用ta.ema函数计算最近3个bar的高点和低点的指数移动平均线,以产生动态的支持和阻力位。当价格跌破低点均线时,表明目前处于跌势,这样我们就可以做多;当价格重新回升到高点均线以上时,说明上涨趋势结束,我们就要平仓了。通过这种方式,策略可以动态跟踪价格变化,实现低买高卖。
-
-### 优势分析
-
-该策略最大的优势在于其简单和动态性。相比传统的取一定周期的高低点均线,该策略采用的是连续计算的短期移动平均,能更敏感和及时地捕捉到价格变化。这使得它可以快速地识别出买卖点,从而进入和退出市场。此外,计算量小是它的另一个优势,有利于降低交易延迟。
-
-### 风险及解决
-
-该策略主要的风险在于它对突发事件如重大新闻事件反应较慢。由于其移动平均线周期很短,当出现价格剧烈波动时,它需要一定时间来调整均线的位置。这可能导致亏损或错过机会。此外,过于灵敏也可能造成错误交易。为降低这些风险,我们可以适当延长移动平均线的周期数,或者增加过滤条件来避免错误信号。
-
-### 优化方向
-
-该策略还有很大的优化空间。首先,我们可以结合其他指标如震荡指标进行过滤,使信号更可靠。其次,也可以增加止损逻辑以控制风险。再者,我们也可以根据市场状态动态调整移动平均线参数,在趋势市场中延长周期,在震荡市场中缩短周期。此外,多时间框架分析和机器学习识别模式等方式都可以用来提高策略表现。
-
-### 总结
-
-本策略整体来说非常简单实用,通过高低点的短期均线实现对趋势的判断。它的优点是动态性强,计算量小,实时性高,适合频繁交易。但也存在对突发事件反应不灵敏和信号错误率较高的问题。这些问题都有改进和优化的方向,通过参数调整、过滤条件以及模式识别等手段,该策略的效果还可以得到进一步提升。
-
-||
 
 ### Overview
 
@@ -62,7 +35,6 @@ There is still large room for optimizing this strategy. Firstly, oscillators can
 
 In summary, this is a very simple and practical strategy, identifying trends using short-term high/low moving averages. Its advantages are strong dynamism, low computation, and high responsiveness, suitable for active trading. But it also has deficiencies in responding to extreme events and higher false signals risk. There are directions to address these issues through parameter tuning, adding filters, and pattern recognition techniques to further lift the strategy efficacy.
 
-[/trans]
 
 > Strategy Arguments
 

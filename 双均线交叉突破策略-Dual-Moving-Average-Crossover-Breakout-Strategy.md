@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/350c34c3e3e6336c01.png)
 
-[trans]
-
-### 概述
-
-该策略通过计算股票的快速30日简单移动平均线和慢速33日简单移动平均线,在它们发生金叉或死叉时进行 LONG 或 SHORT 入场。在相反信号出现时立即止损。这可以有效捕捉趋势的变化。
-
-### 策略原理
-
-该策略的核心在于计算快速30日均线和慢速33日均线。快速线能更快响应价格变化而慢速线则有更好的滤波效果。当快速线从下方突破慢速线而上时产生买入信号。这表示价格开始上涨而快速线已响应但慢速线仍落后。当快速线从上方跌破慢速线而下时产生卖出信号。这表示价格开始下跌而快速线已响应但慢速线仍落后。
-
-通过这样的快慢均线交叉设计,可以在趋势开始的时候产生交易信号,在相反信号出现时止损,有效捕捉了中长线的价格趋势。同时也避免被过多的市场波动所迷惑。
-
-### 优势分析  
-
-该策略具有以下几点优势:
-
-1. 使用简单移动平均线,易于理解和实现  
-2. 快速线和慢速线结合,既能快速响应价格变化,也具有滤波效果  
-3. 金叉和死叉信号简单明确,容易操作  
-4. 可以有效捕捉中长线趋势  
-5. 在反向信号出现时快速止损,可控制风险  
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 当价格处于震荡状态时,可能出现多次虚假信号导致过频交易  
-2. 无法很好地应对突发事件造成的剧烈价格变动  
-3. 选取的参数例如均线周期等可能需要优化,不当设置会影响策略表现  
-4. 交易费用会对盈利造成一定影响  
-
-可以通过参数优化、止损点设置、仅在趋势明确时交易等方法来控制和减少这些风险。
-
-### 优化方向  
-
-该策略可从以下几个方面进行优化:  
-
-1. 对均线周期和交叉类型进行优化,找到最优参数组合  
-2. 增加其他技术指标过滤,例如trading volume, MACD等,减少虚假信号  
-3. 添加adaptive 止损机制,而不是简单的反向信号止损  
-4. 针对不同商品设计参数组合和止损规则  
-5. 结合机器学习等方法动态调整参数  
-
-通过测试和优化,可以持续改进策略规则,在不同市场环境下获得更可靠的交易信号。
-
-### 总结  
-
-该双均线交叉突破策略整体来说较为简单实用,通过快速均线和慢速均线的结合,可以有效识别中长线趋势的开始,生成较为可靠的交易信号。同时其止损规则也易于实现。通过进一步优化,该策略可以成为一个值得长期持有的量化系统。
-
-||
 
 
 ### Overview  
@@ -110,7 +60,6 @@ Through testing and optimization, the strategy rules can be continuously improve
 
 In summary, this dual MA crossover breakout strategy is quite simple and practical. By combining fast MA and slow MA, it can effectively identify the beginning of mid-to-long term trends and generate relatively reliable trading signals. Also, its stop loss rule is easy to implement. With further optimization, this strategy can become a worthwhile long-term quantitative system.
 
-[/trans]
 
 
 

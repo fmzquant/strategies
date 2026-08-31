@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19cfa6268c9df13b37a.png)
-[trans]
-## 概述
-
-该策略结合了欧玛指标和阿波罗指标两个主流技术指标,实现了多空双轨交易。其基本思路是在中长线趋势判断为多头时,寻找短线价格回调入场机会建立多头;在中长线趋势判断为空头时,寻找短线价格反弹入场机会建立空头。
-
-## 策略原理
-
-该策略使用50日、200日两条移动平均线来判断中长线趋势,50日线在200日线之上表明处于多头趋势,反之,为空头趋势。
-
-接着,该策略使用欧玛指标来定位短线价格反转机会。欧玛指标包括%K线和%D线,分别是经过简单移动平均线平滑处理的RSI指标的结果。当%K线从超卖区(高于80)下行突破%D线时,表明价格从超买状态转为反弹下跌,是一个空头选择时机;当%K从超卖区(低于20)上行突破%D线时,表明价格从超卖区反弹上扬,是一个多头选择时机。
-
-此外,为了进一步过滤误报机会,该策略还引入了阿波罗指标。阿波罗指标展现了K线%D值的极值点信息。当%K线形成新的低点时,意味着反弹力度较弱;当形成新的高点时,意味着反弹力度较强。结合欧玛指标的讯号,这可以进一步提升入场的准确性。
-
-具体来说,在多头趋势中,该策略会在欧玛指标显示超卖区下穿形成多头机会时,同时检查新的高点信息,以确认反弹的力度;在空头趋势中,该策略会在欧玛指标显示超买区上穿形成空头机会时,同时检查新的低点信息,以确认反弹力度的弱化。
-
-通过上述流程,该策略充分利用了中长线趋势判断和短线反转指标的优势,构建了一个稳定的多空双轨交易体系。
-
-## 策略优势
-
-1. 该策略结合趋势判断和反转指标,兼顾趋势交易和逆势交易的优点,形成稳定的混合交易框架。
-
-2. 通过双重指标过滤,可以减少误报比例,提高信号的可靠性。
-
-3. 策略参数较为简单,容易理解和优化,适合用于量化交易。
-
-4. 策略运行效果稳健,具有较好的胜率和盈亏比特征。
-
-5. 采用多空双轨方式,可以持续获得交易机会,不会局限在单一方向。
-
-## 策略风险
-
-1. 作为反转性质的策略,当趋势发生变化时,可能会产生一系列的连续亏损。
-
-2. 该策略对交易者情绪控制要求较高,需要承受一定回撤比例。
-
-3. 部分参数如移动平均线周期等存在一定主观性,需要通过回测优化确定合适参数。
-
-4. 欧玛指标和阿波罗指标均对异常波动具有一定敏感性,极端行情下可能出现失效。
-
-5. 该策略更适合动荡盘整的市场环境,在趋势明显的行情中效果可能会打折扣。
-
-可以通过适当调整移动平均线周期引入趋势过滤,以及加入止损止盈策略来规避风险。当市场进入明显趋势时,可以考虑暂停策略,避开该环境交易。
-
-## 策略优化方向
-
-1. 测试不同的参数组合,以得到更佳的参数设置。例如可以尝试采用EWMA平滑移动平均等指标。
-
-2. 增加Volume或BV等指标来判断背离,可以进一步验证信号可靠性。
-
-3. 加入VIX等恐慌指数作为监控指标,在市场恐慌时降低仓位。
-
-4. 优化止损止盈策略,例如可采用ATR止损等动态止损方式。 
-
-5. 引入机器学习算法来动态优化参数设置。
-
-6. 加入多因子模型来提升信号质量。
-
-## 总结
-
-该策略总体来说是一个稳定高效的量化交易策略。它结合趋势判断和反转指标,采用欧玛指标和阿波罗指标的双重验证方式,能够有效发掘短线价格反转机会。相比单一使用趋势系统或反转系统,该策略形式更为稳健,回撤控制也更优异,是一个值得推荐的量化交易策略。当然,用户也需要注意防范其中存在的风险点,通过参数优化、止损止盈、环境识别等方式来控制风险,使策略达到最佳效果。
-
-|| 
 
 ## Overview
 
@@ -133,7 +71,6 @@ Risks can be mitigated by appropriately adjusting the moving average period to i
 
 Overall, this is a stable and efficient quantitative trading strategy. It combines trend judgment and reversal indicators, and adopts dual verification using the Oma and Apollo indicators, which can effectively uncover short-term price reversal opportunities. Compared to using purely trend or reversal systems, this strategy form is more robust with superior drawdown control, and is a recommended quantitative trading strategy. Of course, users also need to be aware of the risks involved, and use parameter optimization, stop loss/take profit, market regime identification etc. to control risks and achieve the best performance.
 
-[/trans]
 
 > Strategy Arguments
 

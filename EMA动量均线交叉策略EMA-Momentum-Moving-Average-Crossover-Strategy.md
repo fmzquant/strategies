@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/166d45c816112a0f46a.png)
 
-[trans]
-
-## 概述
-
-动量均线交叉策略通过计算快速Exponential Moving Average(EMA)和慢速EMA,并观察它们的交叉来产生交易信号。当快速EMA从下方上穿越慢速EMA时,会生成买入信号;当快速EMA从上方下穿慢速EMA时,会生成卖出信号。
-
-## 策略原理
-
-该策略使用两个EMA作为主要分析工具——一个快速EMA周期为7,一个慢速EMA周期为21。EMA是一种趋势跟踪指标,能够平滑价格 datos,滤除市场噪音。快速EMA比慢速EMA更灵敏,能更快捕捉价格趋势的变化。
-
-当快速EMA上穿慢速EMA时,表示短期趋势开始主导长期趋势,即价格开始上涨。这时策略会产生买入信号,打开长仓。相反,当快速EMA下穿慢速EMA时,表示短期趋势开始向下,价格开始下跌。这时策略会产生卖出信号,打开短仓。
-
-利用EMA交叉形成动量交易信号,是一种广泛使用的量化交易策略。该策略自动跟踪价格趋势,无需人工判断,可以高效自动化交易。
-
-## 优势分析
-
-- 使用广泛的指标:EMA是一种简单但非常常用的技术指标,该策略基于EMA这一成熟有效的分析工具,可靠性较高。
-
-- 自动跟踪趋势:该策略能够自动发现价格趋势的变化,并及时做出交易决策,无需人工判断,避免漏单。
-
-- 简单清晰的逻辑:交叉原理简单易懂,容易判断产生的信号,降低风险。
-
-- 可自定义参数:用户可以根据自己的偏好,调整EMA周期参数,使策略更符合个人风格。
-
-
-## 风险分析
-
-- 可能产生错误信号:在价格震荡时,EMA可能产生多次交叉造成错误信号。可以通过调整参数优化,或增加过滤条件来减少错误信号。
-
-- 单一指标依赖:该策略完全依赖EMA这一指标。当EMA失效或产生滞后时,会影响策略表现。可以引入其他指标进行组合验证。
-
-- 缺乏止损机制:目前策略没有设置止损,无法主动控制风险。应设置合理的点位或百分比止损。
-
-- 参数不当可能失效:如果设置的参数不当,EMA交叉就失去实际意义。应谨慎评估参数的合理性。
-
-## 优化方向  
-
-- 增加趋势过滤:可以在EMA交叉时检查价格整体趋势,避免在盘整中产生错误信号。
-
-- 多指标验证:引入其他指标,如MACD、BOLL等与EMA组合使用,验证交易信号。
-
-- 增加止损策略:根据历史回撤情况,设置合理的移动止损或百分比止损,主动控制风险。
-
-- 参数优化:可以通过回测找出最佳的参数组合,也可以设定动态周期来优化参数。
-
-## 总结
-
-动量均线交叉策略整体思路清晰易懂,通过快慢EMA交叉形成交易信号,可自动跟踪趋势,降低人工工作量。但该策略也存在一定盈利风险,需要优化参数设置、增加信号过滤及止损机制来减少风险,提高策略稳定性。总体而言,该策略与理念简单,适合作为量化交易的入门策略之一。
-
-|| 
 
 ## Overview  
 
@@ -108,7 +58,6 @@ Using EMA crossover to form momentum trading signals is a widely used quantitati
 
 The Momentum Moving Average Crossover Strategy has a clear logic of forming trading signals through fast and slow EMA crossover, which can automatically track trends and reduce manual workload. But it also has certain profit risks. Adding signal filtering, stop loss mechanisms and optimizing parameter settings can reduce risks and improve strategy stability. Overall, it is a simple strategy suitable as a quantitative trading starter strategy.
 
-[/trans]
 
 > Strategy Arguments
 

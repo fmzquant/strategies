@@ -11,70 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1abfb8a720274c82388.png)
 
-[trans]
-
-## 概述
-
-本策略运用RSI指标的超买超卖原理,结合多周期RSI进行判断,实现跨周期操作。策略根据RSI的周期设置判断超买超卖信号,并利用RSI的移动平均线进行滤波,避免错误信号。当RSI上穿其移动平均线时产生买入信号,下穿时产生卖出信号,形成典型的均线交叉操作方式。
-
-## 策略原理
-
-该策略主要通过RSI指标的超买超卖判断产生交易信号。RSI指标代表相对强弱指数,它的计算公式是:RSI = 100 - (100 / (1 + RS)),其中RS等于一段时期内平均收盘涨数与平均收盘跌数的比值。RSI指数范围在0至100之间,一般认为低于30为超卖,高于70为超买。
-
-本策略设置了一个高参数sobrecompra和一个低参数sobreventa,当RSI高于sobrecompra时判定为超买,当RSI低于sobreventa时判定为超卖。策略中sobrecompra默认值为70,sobreventa默认值为30。
-
-为了产生买入和卖出信号,策略利用RSI指标的移动平均线进行过滤。当RSI指标上穿其移动平均线时产生买入信号Es_compra,下穿其移动平均线时产生卖出信号Es_venta。移动平均线参数periodos_media默认为14周期。
-
-在产生买入和卖出信号后,策略开仓进行多头或空头交易。此外,策略还设置了止损和止盈,"%",以防止亏损扩大和锁定利润。
-
-## 策略优势
-
-1. 使用RSI指标判断超买超卖状况,避免追高杀跌。
-
-2. 应用RSI指标的移动平均线进行滤波,避免假信号。
-
-3. 结合RSI指标的多周期设置,实现更稳定的交易信号。
-
-4. 设置止损止盈机制,有效控制风险。
-
-5. 策略逻辑简单清晰,容易理解和修改。
-
-6. 可自定义参数,适用于不同品种和周期。
-
-## 策略风险
-
-1. RSI指标存在滞后性,可能错过价格反转的最佳时机。
-
-2. 移动平均线造成交易信号滞后,无法及时捕捉趋势反转。
-
-3. 固定的超买超卖参数设置不够灵活,不同周期和品种需要调整。
-
-4. 止损止盈设定不当可能带来亏损或漏掉利润。
-
-5. 多头空头仓位只有1手,无法充分利用资金进行差价交易。
-
-## 策略优化
-
-1. 结合其他指标如MACD、KD等判断交易信号。
-
-2. 应用自适应移动平均线追踪趋势。
-
-3. 设置动态超买超卖参数,根据市场波动程度调整。 
-
-4. 优化止损止盈算法,如跟踪止损等。
-
-5. 增加仓位管理机制,根据资金规模动态调整仓位。
-
-6. 添加趋势过滤,避免震荡市场的频繁交易。
-
-7. 进行回测优化参数,选择最优参数组合。
-
-## 总结
-
-本策略以RSI指标的超买超卖为基础,运用移动平均线进行滤波产生交易信号,实现典型的跨周期交易方式。策略具有清晰的逻辑结构和参数设置,可以通过调整参数适用于不同品种和周期,是一种可靠、有效的跨周期交易策略。但RSI指标和移动平均线等工具也存在一定局限性,需要进一步优化,使策略参数更具自适应性,过滤效果更好,最大程度减少风险和提高收益。
-
-
-||
 
 
 ## Overview
@@ -137,7 +73,6 @@ After generating buy and sell signals, the strategy opens positions for long or 
 
 This strategy is based on the overbought and oversold principles of RSI indicator, uses moving average for filtering to generate trading signals, realizing typical cross-cycle trading. The strategy has clear logical structure and parameter settings, adaptable to different products and cycles through parameter tuning, making it a reliable and effective cross-cycle trading strategy. But limitations also exist in tools like RSI and moving average, requiring further optimizations to make strategy parameters more adaptive, filtering effects better, and risk lowered and profit increased to the maximum extent.
 
-[/trans]
 
 > Strategy Arguments
 

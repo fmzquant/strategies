@@ -11,87 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/112b8eaa08fc6d58e32.png)
 
-[trans]
-
-## 概述
-
-本策略综合运用sar指标、rsi指标、vol指标和ma均线四个元素识别趋势,采用稳健的风险管理措施跟踪趋势获利。策略以sar指标为主线,辅以rsi超买超卖分界识别反转信号,vol指标判定成交量特征,ma均线判断主次趋势方向。通过多种指标组合判断能过滤假信号,识别真正的趋势方向。风险管理设置止损和止盈,有效控制单笔亏损和累积盈利。该策略适合中长线持币者,能顺应主流趋势获得稳定收益。 
-
-## 策略原理
-
-本策略使用到4个主要技术指标:
-
-1. Parabolic SAR:该指标利用点与趋势之间的关系判断趋势方向和反转点。点在价格上方时为看涨,点在价格下方时为看跌。当点穿过价格时代表趋势反转。策略采用sar作为主指标判断趋势方向。
-
-2. RSI:相对强弱指标。该指标以0-100间震荡判断市场超买超卖情况。RSI高于70为超买区,低于30为超卖区,回归50附近为中线区域。策略以RSI判断超买超卖反转信号。 
-
-3. VOL:成交量指标。策略利用VOL判定成交量放大特征来确认趋势和判断反转信号质量。
-
-4. MA:移动平均线。策略采用长短均线判断主次趋势方向。短均线上穿长均线为看多信号,短均线下穿长均线为看空信号。
-
-交易信号生成规则:
-
-多头条件:SAR点转至K线下方且RSI由下向上回升进入中线区域,VOL放大特征明显,短均线由下向上穿过长均线。
-
-空头条件:SAR点转至K线上方且RSI由上向下跌入中线区域,VOL放大特征明显,短均线自上向下穿过长均线。
-
-该策略还设置止盈止损风险管理规则。止盈目标为进入价格的2倍,止损价格为进入价格的0.8倍,有效锁定利润和控制风险。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 多指标组合设计避免假信号,真正捕捉趋势转折。
-
-2. 风险管理设置止损止盈,有效控制风险。
-
-3. 仓位管理分批进场分批止盈,让利润最大化。
-
-4. 参数经过反复优化测试,保证了参数稳健性。
-
-5. 回测数据充足,模拟真实交易环境。
-
-6. 操作逻辑清晰简单,容易理解实现。
-
-## 风险分析
-
-本策略也存在以下风险:
-
-1. 市场异常波动导致止损被突破。建议适当放宽止损距离。
-
-2. 交易品种流动性不足导致无法止损。应选择流动性好的交易品种。
-
-3. 系统性风险导致异常跳空。应减少杠杆并持有价值基础良好的资产。 
-
-4. 参数过度优化导致曲线过于优美。应适当弱化参数以提高稳健性。
-
-5. 交易频率过高带来的滑点成本。可适当放宽交易信号生成间隔。
-
-6. 信号效果变弱需要及时更新。应定期回测并优化参数设置。
-
-## 优化方向
-
-本策略可从以下方面进行进一步优化:
-
-1. 测试更多指标组合,如MACD,KD等寻找更佳匹配。
-
-2. 优化MA周期参数设置识别更清晰的主次趋势。
-
-3. 优化止盈止损系数以获取最佳风险收益比。 
-
-4. 测试不同品种参数健壮性并寻找最佳参数组合。
-
-5. 增加机器学习模型辅助判断交易信号。
-
-6. 增加自适应止损算法,让止损更贴近真实波动。
-
-7. 测试更长周期参数设定,扩大止盈范围。
-
-## 总结
-
-本策略综合运用多种指标过滤假信号确定趋势方向,设置止损止盈措施控制风险,通过参数优化和组合调整不断提升策略效果。虽然任何策略都无法完美预测未来,但系统的交易计划配合良好的风险管理将大幅提高盈利概率。该策略提供了一个相对稳健的趋势跟踪方案,适合理性追求长期稳定收益的投资者。
-
-|| 
 
 ## Overview
 
@@ -171,7 +90,6 @@ This strategy can be further enhanced in the following aspects:
 
 This strategy combines multiple indicators to filter out false signals and determine trend direction, sets stop loss and take profit to control risks, and optimizes parameters and combinations to continuously improve strategy performance. Although no strategy can perfectly predict the future, systematic trading plans coupled with proper risk management will substantially increase profitability. This strategy provides a relatively robust trend tracking framework suitable for investors seeking long term steady gains in a rational manner.
 
-[/trans]
 
 > Strategy Arguments
 

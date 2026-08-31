@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略运用一目均衡表(Ichimoku Kinko Hyo)进行做多交易。它综合考虑均衡表的多个因素,在符合条件时做多。
-
-具体交易逻辑是:
-
-1. 计算转化线、基准线、先导线1、先导线2
-
-2. 当收盘价高于云层,且云层向上,转化线高于基准线时,考虑做多
-
-3. 此外,延迟线要高于云层和价格,以确保趋势向上
-
-4. 当上述条件均满足时,做多入场
-
-5. 如果延迟线回落到价格以下或云层以下,平仓
-
-该策略充分利用一目均衡表的多种指标来确认趋势,并以云层作为动态止损位,可有效控制风险。
-
-## 策略优势
-
-- 一目均衡表综合多种因素判断趋势
-
-- 动态止损,最大程度锁定利润
-
-- 规则简单清晰,容易实施
-
-## 策略风险
-
-- 一目均衡表较慢,可能错过机会
-
-- 需要谨慎设定参数周期
-
-- 仅做多,可能错过好的空头机会
-
-## 总结
-
-该策略利用一目均衡表的多指标特性确定趋势方向。在优化参数的基础上,它提供了一套简单的做多规则。但其滞后性以及仅做多的局限仍需注意。
-
-
-||
 
 ## Strategy Logic
 
@@ -91,7 +49,6 @@ The strategy utilizes Ichimoku's indicators to confirm trend, with the cloud as 
 
 This strategy leverages Ichimoku's synthesis of indicators to define trend direction. With optimized parameters, it provides a simple long-only system. But limitations in lag and being LONG-only require caution.
 
-[/trans]
 
 > Strategy Arguments
 

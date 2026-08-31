@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f1b4501cbaf15b3e15.png)
 
-[trans]
-
-### 概述
-
-该策略是基于双均线构建价格通道,使用通道范围来判断价格趋势方向,并设定止损追踪来锁定利润的趋势追踪策略。
-
-### 策略原理
-
-双均线价格通道策略使用快速EMA和慢速EMA构建价格通道。快速EMA参数为89周期,慢速EMA参数为200周期。同时使用基于高价、低价、收盘价的三条均线构建价格通道范围。通道上轨线和下轨线分别为34周期的高价EMA和低价EMA。
-
-当快速EMA在慢速EMA之上且价格低于下轨时,判断为上涨趋势;当快速EMA在慢速EMA之下且价格高于上轨时,判断为下跌趋势。
-
-在上涨趋势时,策略会在确定趋势反转的时候做空;在下跌趋势时,策略会在确定趋势反转的时候做多。
-
-此外,策略带有止损追踪功能。持仓后会实时更新追踪止损价格,实现利润的锁定。
-
-### 优势分析
-
-该策略最大的优势在于利用双均线构建价格通道判断价格趋势,再结合反转做单,避免追高杀跌。同时带有移动止损追踪功能,可以锁定利润,降低亏损风险。
-
-其他优势还有:参数优化空间大,可以针对不同品种和周期进行调整parameter;实时更新止损价格,操作风险低。
-
-### 风险分析
-
-该策略主要的风险在于反转信号判定的效果不好,可能出现误判。这时就要优化参数,确保确定趋势反转的效果。
-
-此外,止损点设置也很关键。止损点过大可能出现不够果断止损的情况;止损点过小可能出现过度止损的情况。这需要根据具体品种来调整。 
-
-最后,数据问题也可能导致策略失效。要确保使用的是可信、连续、充分的历史数据来回测和实盘验证策略。
-
-### 优化方向  
-
-该策略的优化主要集中在以下几个方面:
-
-1. 快速EMA和慢速EMA的周期可以进行优化,设置不同的参数组合来判断效果
-
-2. 价格通道的上下轨参数也可以调整,寻找更合适的周期参数
-
-3. 止损点的设置很关键,可以测试不同参数来优化止损策略
-
-4. 可以测试是否引入其他指标来确定趋势反转,提高做单效果
-
-### 总结
-
-本策略整体运作流程合理顺畅,利用双均线通道判断趋势方向做单,并带有移动止损来锁定利润,是一款较为稳定的趋势追踪策略。通过参数优化和风控设置的优化,该策略可以成为高效的量化交易策略之一。
-
-||
 
 ### Overview
 
@@ -103,7 +56,6 @@ The main areas for optimizing this strategy include:
 
 The overall operation process of this strategy is reasonable and smooth. It uses the double moving average channel to determine the trend direction for trading, and has a trailing stop loss to lock in profits. Through parameter optimization and risk management optimization, this strategy can become an efficient quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

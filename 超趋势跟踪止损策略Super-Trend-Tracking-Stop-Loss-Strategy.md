@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a0c16400193af9fbb7.png)
 
-[trans]
-
-### 概述
-
-该策略基于超趋势指标和跟踪止损来开仓和平仓。它使用4个报警来打开和平仓,并且采用超趋势策略。该策略专门针对机器人设计,具有跟踪止损功能。
-
-### 策略原理
-
-该策略使用ATR指标计算上轨和下轨。当收盘价突破上轨时产生买入信号,突破下轨时产生卖出信号。策略还采用超趋势线来判断趋势方向。当超趋势线上穿时,表示牛市开始;当超趋势线下穿时,表示熊市开始。策略在产生信号时开仓,同时设置初始止损价格。之后会根据价格变动来跟踪调整止损价格,从而锁定盈利,实现跟踪止损的效果。
-
-### 优势分析
-
-该策略结合了超趋势指标判断趋势方向和ATR指标设定止损的优点,可以有效过滤假突破。跟踪止损可以很好地锁定盈利,降低回撤。另外,策略专门针对机器人设计,可以自动化交易。
-
-### 风险分析
-
-超趋势指标容易产生较多误信号。止损价格调整幅度较大时,会提高止损被击穿的概率。此外,机器人交易也面临服务器宕机、网络中断等技术风险。
-
-为降低误信号概率,可以适当调整ATR参数或添加其他指标进行过滤。调整止损跟踪幅度时需要平衡盈利和风险。同时准备好备用服务器和网络来防范技术故障风险。
-
-### 优化方向
-
-该策略可以在以下几个方面进行优化:
-
-1. 增加指标或条件来过滤入场信号,避免误信号。例如可 추加MACD指标。
-
-2. 可以测试不同的ATR参数组合,找到最佳参数。
-
-3. 可以优化止损跟踪幅度,找到最佳平衡点。
-
-4. 可以添加更多止损价格,实现分批止损。
-
-5. 可以建立主备双服务器架构,在主服务器故障时快速切换。
-
-### 总结
-
-本策略整合超趋势指标和跟踪止损的优势,可以自动化开仓和止损。实盘中结合优化方向的改进措施,可以成为一款非常实用的量化交易策略。
-
-||
 
 ### Overview
 
@@ -87,7 +48,6 @@ The following are some directions in which this strategy can be optimized:
 ### Conclusion
 This strategy integrates the advantages of the Super Trend indicator and trailing stop loss for automated opening and stopping of losses. Combined with the improvement measures in the optimization directions during live trading, it can become a very practical quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,78 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/804f8b462097af4509.png)
 
-[trans]
-
-
-### 概述
-
-该策略结合了突破策略和趋势跟踪止损策略的优点,旨在捕捉长线图形中的支撑阻力突破信号,同时利用移动平均线进行止损追踪,实现在长线趋势的方向进行盈利,同时控制风险。
-
-### 策略原理
-
-1. 策略首先计算多组不同参数的移动平均线,分别作为趋势判断、支撑阻力、止损追踪使用。
-
-2. 然后找出指定周期内的最高点和最低点作为进场的支撑阻力区域。当价格突破这些支撑阻力时产生信号。
-
-3. 策略以突破最高点为做多信号进行买入,以突破最低点为做空信号进行卖出。 
-
-4. 进场后,会以突破最低点的低点作为止损位持有头寸。
-
-5. 当头寸进入赢利状态后,止损位会转为追踪移动平均线。当价格跌破移动平均线时,将止损点设定为该根K线的最低点。
-
-6. 如此可以锁定盈利,同时让头寸有足够的空间跟踪趋势运行。
-
-7. 策略同时加入平均真实波动来确保只在合适的区间突破买入,避免过度扩张的突破。
-
-### 策略优势分析
-
-1. 结合突破策略和趋势跟踪止损策略双重优势。
-
-2. 能根据长线趋势买入突破,增加获利概率。 
-
-3. 止损策略既保护了头寸,也给予头寸足够空间运行。
-
-4. 加入波动率过滤,避免过度拉升的不利突破。
-
-5. 自动化交易,适合部分时间跟单。
-
-6. 可自定义不同周期均线进行操作。
-
-7. 可灵活调整止损追踪方式。
-
-### 策略风险分析
-
-1. 突破策略容易出现假突破的风险。可适当放宽突破确认。
-
-2. 需要足够的波动才能产生突破信号,在颠簸行情中容易无效。
-
-3. 部分突破可能过于短暂无法捕捉。可以降低时间轴寻找更多契机。
-
-4. 追踪止损在震荡行情中可能过于频繁停损。可以适当放宽止损距离。
-
-5. 波动率过滤可能错过部分机会。可以降低过滤参数。
-
-### 策略优化方向 
-
-1. 测试不同均线参数组合,找到最佳参数。
-
-2. 测试不同的突破确认机制,如通道、K线形态等。 
-
-3. 尝试不同的止损追踪方式,寻找最佳止损。
-
-4. 优化资金管理策略,如positon score等。
-
-5. 加入统计技术指标过滤,提升过滤准确率。
-
-6. 测试不同品种该策略效果。
-
-7. 加入机器学习算法提升策略效果。
-
-### 总结
-
-该策略整合突破思想和趋势跟踪止损思想,在长线判断正确的前提下,能够优化获利空间。关键是找到最佳参数组合,并配合良好的资金管理策略,以抓住长线机会的同时实现风险可控。该策略有望通过进一步优化成为较为可靠的长线趋势策略。
-
-||
 
 ## Overview
 
@@ -152,7 +80,6 @@ This strategy combines the advantages of breakout and trend-following trailing s
 
 This strategy combines the philosophies of breakout and trend-following trailing stop strategies. With proper trend determination, it optimizes profit potential while maintaining controlled risk. The keys are finding the optimal parameter sets and incorporating prudent money management. Further enhancements may turn this into a robust trend following methodology.
 
-[/trans]
 
 > Strategy Arguments
 

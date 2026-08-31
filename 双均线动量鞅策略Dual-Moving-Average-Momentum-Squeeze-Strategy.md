@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/101984d35d284faf341.png)
-[trans]
-
-## 概述
-
-该策略结合了三个不同的技术指标,采用双均线系统生成交易信号,并使用K线的颜色和实体作为额外的过滤条件,从而构建一个比较稳定和有效的短线交易策略。
-
-## 策略原理
-
-整个策略使用布林带和KC通道的组合来识别市场的压缩和扩张阶段。具体来说,当布林带在KC通道内时认为是压缩,布林带突破KC通道时认为是扩张。压缩代表着波动加剧和趋势反转的可能,这时利用线性回归作为主要的交易信号指标。
-
-如果线性回归histogram为正(代表着上涨趋势),并且该bar为红色K线(代表着该bar收阴),同时K线实体大于过去30根K线的平均实体的1/3,这样的组合信号则做多;反之若线性回归histogram为负,该bar为绿色K线,实体也较大,则做空。
-
-该策略同时提供了可视化的压缩和扩张的背景,辅助判断市场阶段。
-
-## 策略优势分析
-
-- 利用多个指标进行组合,可以有效过滤假信号
-- 压缩代表着可能的反转点,增加策略效果
-- 实体过滤可以避免被小波段的假突破误导 
-- 容易通过参数优化获得更好结果
-
-## 策略风险分析
-
-- 线性回归容易发出错误信号,可能导致亏损
-- 布林带和KC通道判断压缩的效果并不理想
-- 过滤条件过于苛刻,可能错过较好的入场点
-- 回撤可能较大,需要忍受一定程度的承受能力
-
-可以通过调整指标参数、优化过滤条件等方法来降低风险。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 尝试不同的参数组合和长度,寻找最佳参数
-2. 增加或减少过滤条件,找出最佳过滤水平
-3. 利用机器学习方法自动寻找最优参数
-4. 在具体品种中测试效果,根据不同品种调整参数
-5. 增加止损策略,以控制单笔亏损
-
-## 总结
-
-本策略综合多个指标,在识别压缩机会的同时增加滤波条件,形成一个较为稳健的高效短线策略。通过参数和过滤条件的优化,可以获得更好的效果。而且该策略框架灵活,易于在不同品种中调整使用,值得进一步测试和优化。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy combines multiple indicators, while identifying compression opportunities, it increases filtering conditions to form a relatively robust efficient short-term strategy. Through parameter and filtering condition optimization, better results can be obtained. In addition, the strategy framework is flexible and easy to adjust for use in different varieties, worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

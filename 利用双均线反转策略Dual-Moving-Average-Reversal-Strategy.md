@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/156d6cb538d36d08558.png)
 
-[trans]
-
-### 概述
-
-本策略是一个利用双均线判断市场反转的短线交易策略。它通过判断前三根K线的收盘关系来判断目前处于上涨趋势还是下跌趋势,当检测到趋势发生转折时,采取适当的做多做空操作。同时,策略还利用简单移动平均线来过滤做空信号,降低交易风险。
-
-### 策略原理
-
-本策略主要判断指标为前三根K线的收盘价格关系。如果前三根K线都是阴线,则判断目前处于下跌趋势;如果前三根K线都是阳线,则判断目前处于上涨趋势。当下跌趋势后出现大阳线时,做多;当上涨趋势后出现大阴线时,做空。
-
-做多的具体判断逻辑是:如果前三根K线都是阴线,且最后一根K线为大阴线,则做多。平仓判断逻辑为当价格涨破前一根K线的最高点时平仓。
-
-做空的具体判断逻辑是:如果前三根K线都是阳线,且最后一根K线为大阳线,同时价格低于简单移动平均线时做空。平仓判断逻辑为当价格跌破前一根K线的最低点时平仓。
-
-移动平均线长度和判断大阳大阴线的幅度大小由用户设置输入。
-
-### 策略优势
-
-1. 利用K线形态判断市场反转点,避免在趋势中互相追击,减少亏损。
-
-2. 结合移动平均线过滤信号,避免在目标上行中过早做空。
-
-3. 策略逻辑简单清晰,容易理解和修改。
-
-4. 可自定义参数,适应不同品种和时间周期。
-
-5. 在一定条件下,有利于及时捕捉短期调整机会。
-
-### 策略风险
-
-1. 市场可能出现连续三根大阴线或者大阳线的假反转,此时入场会被套牢。可设置更严格的反转条件以降低此风险。
-
-2. 反转失败后容易被追涨杀跌。可设置止损点以控制风险。
-
-3. 参数设置不当可能导致过于频繁出入场或者错过良机。需反复测试优化参数。 
-
-4. 大盘震荡时,容易被套。可加大阳线阴线判定标准避免误判。
-
-### 策略优化
-
-1. 利用更复杂指标结合K线形态判断反转,例如BOLL,MACD等,可提高判断准确率。
-
-2. 增加交易量或者波动度等指标与K线形态组合,避免Volume空头。
-
-3. 增加止损逻辑。设置固定点数止损或跟踪止损。
-
-4. 对参数进行优化,找到最佳参数组合。
-
-5. 测试更多品种和周期的数据,寻找最佳适用环境。
-
-### 总结
-
-本策略总体来说是一个利用简单指标捕捉市场短期反转的较为通用的短线策略。它的优点是容易理解,逻辑清晰,通过一定优化可以取得不错效果。但也存在一些典型的反转策略风险,需要通过设置止损,严格反转条件判断等手段来控制风险。该策略可作为量化交易的入门策略来学习和实践。
-
-|| 
 
 ### Overview  
 
@@ -119,7 +64,6 @@ The length of the moving average and the magnitude to judge large white and blac
 
 In general, this strategy is a relatively universal short-term strategy that captures short-term market reversals using simple indicators. Its advantages are easy to understand, clear logic, and good results through some optimization. But there are also some typical reversal strategy risks that need means like stop loss, strict reverse criteria, etc. to control. It can serve as a introductory strategy for quantitative trading to learn and practice.
 
-[/trans]
 
 > Strategy Arguments
 

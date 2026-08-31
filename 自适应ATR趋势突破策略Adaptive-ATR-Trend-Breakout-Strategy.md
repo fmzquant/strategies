@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16bbc07bdeb375ea887.png)
 
-[trans]
-
-## 概述
-
-该策略是一个基于ATR指标的趋势突破策略。它的主要思想是当价格超过一定倍数的ATR时,进行趋势突破操作。策略同时包含趋势的确认以及利用日期范围进行限制交易的功能。
-
-## 原理
-
-策略使用ATR指标判断价格波动幅度。ATR表示平均真实波幅,它测量某一时间周期内的平均价格波动幅度。策略中设置length参数计算ATR周期,numATRs参数表示突破的ATR倍数。
-
-当价格上涨突破上方numATRs倍ATR时,进行做多操作;当价格下跌突破下方numATRs倍ATR时,进行做空操作。
-
-此外,策略加入需要长仓(needlong)和需要做空(needshort)的BOOL变量,可以控制只做多或只做空。策略还设置了日期范围,只在指定日期之间进行交易,从而实现时间范围限制。
-
-策略使用size变量判断仓位,根据仓位情况计算下单手数。手数按照账户权益的百分比计算。
-
-## 优势
-
-- 使用ATR指标自动适应市场波动率,无须人工设置止损止盈距离
-- 可灵活选择做多做空或只做多/空
-- 可设定日期范围进行交易,避开重要时间点
-- 手数设置灵活,可按账户权益百分比下单
-
-## 风险及解决
-
-- ATR指标仅考虑价格波动,如果行情出现剧烈变化,止损距离可能太小,需要组合其他指标优化
-- 日期范围限制交易时,如果重要时间段前后没有合适机会,可能导致错失交易机会,可以适当扩大日期范围
-- 使用账户权益比例下单时,需要合理设置比例,避免单笔损失过大
-
-## 优化思路
-
-- 可以考虑加入移动平均线等趋势指标,以过滤掉非趋势突破带来的噪声交易
-- 可以测试不同的ATR周期参数,选取最佳参数组合
-- 可以考虑与其他策略组合使用,发挥各自优势,改善策略稳定性
-
-## 总结
-
-本策略整体思路清晰易懂,使用ATR指标自动适应市场波动性,是一种通用的趋势跟踪策略。通过参数优化以及组合其他策略,可以进一步改善策略表现和稳定性。但需要注意防止单笔损失过大,并留意行情剧烈变化时的止损不足问题。
-
-||
 
 
 ## Overview
@@ -97,7 +57,6 @@ The strategy uses a size variable to determine position size and calculates orde
 
 This is an understandable trend following strategy using ATR to adapt to volatility. Parameter optimization and combining with other strategies can further improve performance and stability. But large single-trade losses should be avoided and insufficient stops during huge swings must be noted.
 
-[/trans]
 
 > Strategy Arguments
 

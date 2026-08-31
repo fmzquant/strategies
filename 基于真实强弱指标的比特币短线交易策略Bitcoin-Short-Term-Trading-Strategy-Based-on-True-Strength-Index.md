@@ -9,65 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算比特币的真实强弱指标(True Strength Index,TSI)以识别市场趋势,并结合RSI指标过滤做多做空时机,实现对比特币的短线交易。该策略适合对比特币市场逐笔行情进行程序化交易的投资者。
-
-## 策略原理
-
-该策略主要基于真实强弱指标(TSI)。TSI指标通过双平滑价格变化率,来衡量价格变动的绝对值大小和方向,从而识别出价格上涨和下跌的绝对力度。具体计算方法如下:
-
-1. 计算价格的变化率Pc
-2. 对Pc进行双平滑,分别使用长期EMA和短期EMA,生成double_smoothed_pc
-3. 对绝对值Pc进行双平滑,生成double_smoothed_abs_pc
-4. TSI值为double_smoothed_pc除以double_smoothed_abs_pc乘以100
-
-当TSI指标上穿其信号线tsi2时产生做多信号,下穿其信号线tsi2时产生做空信号。此外,策略还结合RSI指标过滤TSI交易信号,只有当RSI值大于50时才产生做多信号,RSI值小于50时才产生做空信号,从而过滤掉部分假信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. TSI指标能够识别价格变动的绝对力度和方向,对于捕捉趋势较为敏感。
-2. 双EMA平滑价格变化率,可以有效滤除价格变动的噪音,对突发事件不敏感。  
-3. 结合RSI指标过滤,可以进一步避免因噪音导致的错误交易。
-4. 采用短线交易方式,能够捕捉市场中的短期机会。
-5. 策略参数优化空间大,可以通过调整EMA周期等参数进行优化。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 作为趋势跟踪指标,TSI存在滞后问题,可能错过价格反转点。
-2. RSI过滤条件过于严格,可能错过部分交易机会。
-3. 双EMA滤波也可能过滤掉部分有效交易信号。
-4. 短线交易具有较高的交易频率,需要承担更高的交易成本和滑点风险。
-
-可以通过适当放宽RSI过滤条件,缩短EMA周期等方式来降低滤波效应和滞后问题。同时优化止损策略,严格控制单笔交易风险。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化TSI和RSI的参数,找到最佳参数组合。可以调整长短EMA周期、RSI参数等。
-
-2. 增加其他指标结合,形成多因子模型。例如可以加入MA,KD等指标,充分发挥各指标优势。
-
-3. 优化入场条件,避免多头市撞空头,空头市撞多头。可以根据大周期趋势判断方向。
-
-4. 优化止损策略,例如移动止损、时间止损、突破止损等方式。
-
-5. 优化离场条件,防止止损过早或过晚离场。可以结合波动率指标判断何时离场。
-
-6. 对交易品种、交易时段进行优化,concentration在最有效的品种和交易时段。
-
-## 总结
-
-本策略通过真实强弱指标识别比特币短期趋势,并辅以RSI指标过滤信号,可以有效进行比特币的短线程序化交易。该策略具有敏感识别趋势、滤除噪音的优势,但也存在一定的滞后问题和交易风险。通过多方面优化,可以进一步提升策略表现,开发出可靠的比特币交易专家顾问。
-
-||
 
 
 ## Overview
@@ -126,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy identifies bitcoin short-term trends with True Strength Index and filters signals with RSI for algorithmic bitcoin trading. It has the advantage of sensitively capturing trends and filtering noise, but also has some lagging issues and trading risks. Multi-faceted optimizations can further improve strategy performance to develop a reliable bitcoin trading expert advisor.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e475cd1061caeb3247.png)
-[trans]
-## 概述
-该策略基于价格的动量通过计算K线实体和影线比例,结合RSI指标判断市场超买超卖状态,寻找反转机会进行交易。主要用于短线交易,追踪中短线的价格势能反转点,以获得较高胜率。
-
-## 策略原理
-该策略的核心逻辑基于以下几点:
-
-1. 计算K线的实体比例和影线比例:通过计算每根K线的open,close,high,low价格,得出实体和影线所占的百分比。当影线比例小于20%时,认为是强势的K线。
-
-2. 计算K线强度变化比例:计算每根K线内部价格变动幅度,判断K线的强弱。当变化幅度比较大时,表明动能较强,判断为强势K线。
-
-3. 结合RSI指标判断超买超卖:设置RSI的超买线和超卖线,RSI高于超买线时为超买,RSI低于超卖线时为超卖。超买超卖状态下的强势K线有较高概率发生反转。
-
-4. 判断反转信号:当影线比例小于20%且K线强度大于平均值的2倍时,且上一根K线的收盘价高于当前K线,表明满足反转的条件,做空;相反当收盘价低于当前K线则做多。
-
-5. 设置止损止盈:针对做多做空信号分别设置固定比例的止损位和止盈位。
-
-## 优势分析
-该策略具有以下优势:
-
-1. 利用K线实体和影线的比例判断趋势和反转的能力较强。能有效判断价格的势能和反转点。
-
-2. 结合K线强度变化和RSI指标,判断反转信号的准确率较高。RSI的参数可调节,优化空间大。
-
-3. 止损止盈设置合理,有利于把握短线机会,降低单次交易的风险。
-
-4. 策略参数调整灵活,可针对不同品种、周期进行优化,实用性强。
-
-## 风险分析
-该策略可能存在以下风险:
-
-1. 强势突破时,可能产生假信号,导致交易失败。可通过优化K线比较周期和RSI参数来减少。
-
-2. 反转失败的概率也存在,跟多在下跌行情和跟空在上涨行情都会被套。应适当调整止损位,减少损失。
-
-3. 效果与交易品种和时间周期相关。对于波动性不稳定的品种应谨慎使用该策略。
-
-## 优化方向
-该策略可从以下几个方面进行优化:
-
-1. 优化K线比较的根数,寻找最佳判断超买超卖的周期参数组合。
-
-2. 优化RSI的超买超卖线,针对不同品种确定较好的参数。
-
-3. 测试不同的止损止盈比例设置,确定最佳止损止盈策略。
-
-4. 对交易品种按波动率分组优化,使策略参数针对性更强。
-
-5. 增加其他指标判断和过滤条件,提高策略稳定性。
-
-## 总结
-本策略总体来说非常实用,通过对K线信息的应用判断价格势能反转点,是一种典型的短线交易策略。优化空间较大,可针对不同品种和交易环境进行调整,在跟踪中短线价格趋势方面效果较好。但需要注意防范止损和风险控制。
-
-||
 
 ## Overview
 This strategy identifies trading opportunities by calculating candlestick body/wick ratios and combining RSI indicators to detect overbought/oversold market conditions. It aims to capture potential reversals in the price momentum over short-to-medium term timeframes.  
@@ -116,7 +62,6 @@ The strategy can be optimized in the following ways:
 
 ## Conclusion
 The strategy is highly practical overall for detecting reversals by understanding candlestick information. As a typical short-term trading system, it has sizable optimization capability across products and environments for tracking medium-term trends. However adequate risk control through stop losses is imperative.  
-[/trans]
 
 > Strategy Arguments
 

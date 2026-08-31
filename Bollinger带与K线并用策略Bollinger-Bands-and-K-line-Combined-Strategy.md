@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18063296362fc57d3f5.png)
 
-[trans]
-
-### 概述
-
-这是一个同时使用Bollinger带和K线形态作为Entry信号的趋势跟踪策略。它旨在在较长的时间周期内捕捉趋势,适用于外汇交易。
-
-### 策略原理
-
-策略通过计算价格的标准差范围来建立Bollinger带,带宽度代表市场波动性。当价格接近上轨或下轨时看作超买超卖信号。结合特定K线形态judge进场。
-
-具体来说,做多信号为:低点向上突破下轨,且出现多头吞噬或长下影K线。做空信号为:高点向下突破上轨,且出现空头吞噬或长上影K线。
-
-止损方式为预先设置好的止损价。止盈方式为价格穿过布林中线时部分止盈。
-
-### 优势分析
-
-这种策略结合了趋势和重入机会。Bollinger带能识别趋势和超买超卖机会。K线则判断重入时机,避免假突破。
-
-止盈止损设置明确,风险可控。适合长线操作,减少交易频率。
-
-### 风险分析
-
-该策略最大的风险在于抓不到趋势或者出现剧烈震荡。这时止损会被连续触发。
-
-另外,止盈离场依赖中线,可能出现止盈过早或者过晚的情况。
-
-可以通过调整参数组合优化,识别更可靠的K线形态,或根据波动率修改止盈标准来改善。
-
-### 优化方向
-
-可以结合其他指标判断大周期趋势,避免逆势操作。或者增加机器学习算法判断最佳参数组合。
-
-止盈方式也可以改为移动止盈或考虑波动率止盈等,使盈利最大化。
-
-### 总结
-
-这是一个基于Bollinger带和K线技术指标的较长周期趋势策略。它适合作为基本策略使用,具有一定的可靠性和盈利空间,但依然需要不断测试和优化以提高稳定性。
-
-||
 
 ### Overview
 
@@ -89,7 +50,6 @@ Profit taking could adapt to trailing stops or volatility based exits to maximiz
 
 This is a longer time frame trend following strategy based on Bollinger Bands and candlestick techniques. It works decently as a fundamental strategy with reliability and profitability but needs continual testing and tuning to improve robustness.
 
-[/trans]
 
 > Strategy Arguments
 

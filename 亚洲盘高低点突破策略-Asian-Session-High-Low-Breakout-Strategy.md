@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f4e31354879f1107e9.png)
-[trans]
-
-#### 概述
-该策略的主要思路是利用亚洲盘的高低点作为突破点,在欧美盘开盘后的几个小时内,如果价格突破亚洲盘高点则做多,突破亚洲盘低点则做空。同时设置止损和止盈,控制风险。该策略每天只开一个交易,最大同时开仓数量为100000。
-
-#### 策略原理
-1. 确定亚洲盘的交易时间,用户可以自定义起始时间和结束时间。
-2. 在亚洲盘期间,记录当天的最高价和最低价。
-3. 在欧美盘开盘后的某个时间(用户自定义的偏移小时数),如果价格突破亚洲盘高点则做多,突破亚洲盘低点则做空。
-4. 设置止损和止盈,止损和止盈的点数可以自定义。
-5. 每天只开一个新的交易,同时最大同时开仓数量为100000。
-6. 如果当天已经开过仓,则不再开新的交易。
-
-#### 优势分析
-1. 利用亚洲盘相对平静的特点,以当天亚洲盘的高低点作为突破点,可以较好地捕捉欧美盘的趋势机会。
-2. 设置了止损和止盈,可以有效控制风险,让盈利单够跑,亏损单快止损。
-3. 限制了每天只开一单以及最大同时开仓数量,可以避免过度交易和资金的过度使用。
-4. 用户可以根据自己的需求,灵活设置亚洲盘时间和偏移小时数等参数。
-
-#### 风险分析
-1. 亚洲盘高低点不一定是当天真正的高低点,有可能欧美盘突破后又快速回撤,造成亏损。
-2. 固定点数的止损和止盈可能无法应对行情的大幅波动,有时可能止损过早,有时可能止盈过早。
-3. 在趋势不明显或者市场波动较大的情况下,该策略可能会出现频繁开仓止损的情况。
-
-#### 优化方向
-1. 可以考虑根据ATR等波动率指标来动态调整止损和止盈的点数,以适应不同的行情。
-2. 可以加入一些趋势判断的指标,如MA,只有在大趋势向上时做多,向下时做空,以提高成功率。
-3. 可以考虑分时段设置不同的参数,如在欧美盘开盘初期使用较小的止损止盈,而在趋势明显时则加大止损止盈。
-
-#### 总结
-该策略利用亚洲盘的高低点作为突破点来进行交易,适合在欧美盘趋势较为明显的品种上使用。但是固定点数止损止盈以及标准的突破入场方式也存在一些局限性。通过引入一些动态化和趋势性的指标,可以对该策略进行优化,以期获得更好的效果。
-
-|| 
 
 #### Overview
 The main idea of this strategy is to use the high and low points of the Asian session as breakout points. Within a few hours after the European and American markets open, if the price breaks above the Asian session high, it goes long; if it breaks below the Asian session low, it goes short. Stop loss and take profit are set to control risk. The strategy only opens one trade per day, with a maximum of 100,000 simultaneous positions.
@@ -74,7 +41,6 @@ The main idea of this strategy is to use the high and low points of the Asian se
 #### Summary
 This strategy uses the high and low points of the Asian session as breakout points for trading and is suitable for use on varieties with obvious trends in the European and American markets. However, fixed-point stop loss and take profit and standard breakout entry methods also have some limitations. By introducing some dynamic and trend-based indicators, the strategy can be optimized to obtain better results.
 
-[/trans]
 
 > Strategy Arguments
 

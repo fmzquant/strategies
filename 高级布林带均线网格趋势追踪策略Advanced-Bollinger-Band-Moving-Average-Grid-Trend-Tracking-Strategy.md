@@ -10,97 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14a590824a8071e89c9.png)
-[trans]
-
-## 概述
-
-该策略名称为“高级布林带均线网格趋势追踪策略”。它是一个利用布林带、均线进行趋势判断,在趋势方向建立网格持仓追踪的策略。
-
-## 策略原理
-
-该策略的主要思路是:
-
-1. 利用布林带判断目前市场波动范围。布林带中轨为n日简单移动平均线,带宽为n日ATR均幅。
-
-2. 布林带外侧的四条均为异数平均真实波动幅度线。策略在突破不同级别线时建立持仓。
-
-3. EMA快慢均线判断大周期趋势方向。在大周期多头时只做多头,空头反之。
-
-4. 在趋势方向追踪建仓,出现针形K线时平仓止盈。
-
-具体来说,该策略主要分为以下几个部分:
-
-1. 确定布林带参数,布林中轨为n日SMA均线,布林带宽度为n日ATR。策略中布林长度n为20。
-
-2. 设置四条布林外扩线,线上下离中轨距离分别为1.236倍、2.382倍、3.618倍和4.236倍平均真实波动幅度。
-
-3. 设置快慢EMA均线判断大周期趋势,快线长度为25日,慢线长度为200日。
-
-4. 在大周期多头时,价格突破下方四条均线时逐步建立多头持仓。空头同理。
-
-5. 当出现针形K线或价格重新跨越大周期均线时,视为针形结束信号,平仓止盈。
-
-
-以上是该策略的主要技术原理。通过布林带判断目前波动范围,在大周期趋势下追踪建仓,最终达到高概率持仓的效果。
-
-## 策略优势分析
-
-该策略主要有以下几个优势:
-
-1. 充分利用趋势特征,大周期判断趋势方向,在趋势方向建仓,可以减少不必要的反向操作。
-
-2. 采用多级布林线,可以更加清晰的判断目前波动区域,有利于把握大部分行情。
-
-3. 网格持仓方式可以使每一个单位资金均匀分配风险,从而得到稳定收益。
-
-4. 利用针形K线这一高效信号平仓,可以快速止盈。
-
-5. 策略整体实现了趋势判断、网格持仓、特定信号平仓三位一体,是一种相对成熟完整的量化策略。
-
-
-## 策略风险分析
-
-该策略也存在以下一些风险:
-
-1. 大周期趋势判断错误的概率。快慢均线存在一定误差概率,可能导致不必要的反向操作。
-
-2. 布林线突破失败概率。布林线并不能百分百预判价格路径。
-
-3. 针形K线信号发出较晚,无法及时止盈。
-
-4. 大周期震荡调整中容易形成过多重叠持仓。
-
-
-对应解决方法如下:
-
-1. 调整快慢均线参数,降低误差概率。
-
-2. 调整布林线参数,使布林线尽量贴近大部分波动。
-
-3. 测试更加灵敏的特定形态止盈信号。
-
-4. 加大间距距离,控制持仓规模。
-
-## 策略优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 测试不同均线参数优化大周期趋势判断。例如测试EMA、RSI等其他指标。
-
-2. 测试不同倍数ATR参数优化布林通道宽度设置。使布林带更贴近真实波动。 
-
-3. 测试其他高效止盈信号。例如 SAR、卡尔曼均线等。
-
-4. 优化网格间距。使得波动区间更加均匀切分,减少重复建仓。
-
-5. 增加止损机制。避免极端行情下的大亏损。
-
-## 总结  
-
-该策略综合运用布林带通道、均线指标、特定K线形态等技术手段。在判断大周期趋势的前提下,构建了一个趋势跟踪型的均线布林网格策略。相比传统布林带突破,该策略加入了趋势特征判断,可以减少不必要的反向建仓,同时网格持仓方式使每一个单位资金风险分散,从而获得了稳定收益。该策略可以从趋势判断、布林宽度、止盈信号、止损方式等多个角度进行优化调整,以获得更加稳定的策略效果。
-
-
-|| 
 
 ## Overview  
 
@@ -190,7 +99,6 @@ The strategy can be optimized in the following directions:
 
 The strategy integrates the use of Bollinger channel, moving average indicators, specific K-line patterns and other technical means. Under the premise of determining the big cycle trend, it constructs a trend tracking grid strategy based on moving averages and Bollinger Bands. Compared with traditional Bollinger band breakouts, this strategy adds trend characteristic judgment, which can reduce unnecessary reverse positions. At the same time, the grid position method diversifies risks for each unit of funds to obtain stable returns. The strategy can be optimized from multiple angles such as trend determination, Bollinger width, profit taking signals, stop loss methods, etc. to obtain more stable strategy effects.
 
-[/trans]
 
 > Strategy Arguments
 

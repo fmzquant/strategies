@@ -11,84 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1aea91f8b9066f454dd.png)
 
-[trans]
-
-## 概述
-
-该策略主要基于卡马利拉通道和移动均线来判断市场的突破点,进而实现趋势跟踪。策略相对简单,但具有较强的实用性。
-
-## 策略原理
-
-1. 计算卡马利拉通道的支撑和阻力线。包括H4,L4等线。
-
-2. 判断价格是否突破该通道线。例如收盘价上穿H4线且开盘价低于H4线,认为有突破信号。
-
-3. 加入移动均线判断,进一步确认突破信号。例如EMA低于收盘价则为多头突破。
-
-4. 进入做多头仓位,设置止损和止盈条件,如设置固定止损点数,以及追踪止损方式。
-
-5. 针对空头也是同样判断逻辑。 
-
-以上是策略的主要判断逻辑,相对简单直观,容易理解和实现。通过动态追踪止损,可以持续获利直至趋势反转。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 基于卡马利拉通道,可以准确定位潜在的支撑和阻力。
-
-2. 结合均线过滤,可以有效区分突破信号的真假。
-
-3. 采用追踪止损方式,可以持续获利,避免反转止损。
-
-4. 策略信号简单明确,容易判断操作。
-
-5. 无需频繁调整参数,适合参数固定的自动交易。
-
-
-## 风险及解决方案
-
-该策略也存在以下风险:
-
-1. 卡马利拉通道无法有效判断趋势反转点,可能导致亏损扩大。
-
-   - 解决方法:结合其他指标如震荡指标判断趋势反转
-
-2. 追踪止损点数设置不合理可能导致过早止损或亏损扩大。
-
-   - 解决方法:优化和测试不同的止损点数设置
-
-3. 突破信号可能存在假突破情况。
-
-   - 解决方法:加入更多滤波指标进行确认,或适当放宽突破判定标准。
-
-4. 大幅震荡市场中存在多次假突破。
-
-   - 解决方法:在震荡期避免交易,或适当放宽突破标准。
-
-## 优化建议
-
-该策略还可以从以下方面进行优化:
-
-1. 增加复合过滤指标,提高突破准确率。可以考虑KDJ,MACD等。
-
-2. 优化止损止盈策略,如引入动态止损,结合ATR指标等。
-
-3. 对不同品种参数进行优化,提高稳定性。
-
-4. 增加对大周期趋势的判断,避免逆势交易。
-
-5. 结合当日量能分析,聚焦高量能突破。
-
-6. 开发自动参数优化程序,实时优化参数。
-
-7. 扩展成多品种套利策略,利用价差。
-
-## 总结
-
-本策略整体思路清晰简单,实用性强,是典型的突破跟踪策略。通过卡马利拉通道判断潜在支撑阻力,再结合均线过滤确定突破方向。止损方式也较为合理。但该策略可扩展性也很强,可以引入更多指标进行优化,使策略更稳健可靠。也可以扩展为多品种策略。总体来说,本策略具有很好的改进潜力。
-
-|| 
 
 
 ## Overview
@@ -165,7 +87,6 @@ The strategy can be further improved from the following aspects:
 
 The strategy has a clear and simple logic with strong practicality. It identifies potential supports and resistances using Camarilla and confirms breakout direction with moving averages. The exit method is also reasonable. There is also huge potential for enhancement, such as adding more indicators, multi-product expansion etc. Overall this is a promising strategy with good potential.
 
-[/trans]
 
 
 

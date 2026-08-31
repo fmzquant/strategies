@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7742500c1f2fb5b80d.png)
-[trans]
-## 概述
-
-这是一个利用多个指标进行组合,识别价格趋势反转点的策略。基本思路是,单一指标很难完美识别趋势的转折点,因此选取多个具有类似功能的指标进行组合,当多个指标发出同向信号时,我们就可以相对确定趋势发生反转的高概率情况,从而进行交易操作。
-
-## 策略原理  
-
-该策略选择了5个不同的指标进行组合使用,这5个指标都具有判断价格趋势的功能。这5个指标分别是:
-
-1. Coral Trend Indicator:利用三重或更高阶的指数平滑移动平均线组合判断价格趋势  
-2. SSL Channel:结合移动平均线判断价格通道及趋势
-3. Heikin Ashi RSI:利用换手率指标与日内均线组合判断趋势  
-4. MACD DEMA:双指数移动平均线与MACD组合判断趋势
-5. WaveTrend Oscillator:根据价格通道判断趋势  
-
-strategy的交易逻辑是,上述5个指标中,可以任意选择1个或多个指标进行组合。当选择的多个指标同时发出买入/卖出信号时,我们就在相应的bar开仓做多/做空。
-
-举例来说,如果我们选择了2个指标:Coral Trend和SSL Channel。那么只有当它们两个同时发出买入信号时,我们才做多;只有当它们两个同时发出卖出信号时,我们才做空。
-
-这样通过多个指标的组合验证,可以大大提高交易信号的可靠性,避免单一指标的误导。
-
-## 策略优势  
-
-1. 使用多个指标组合,可以识别趋势反转高概率情况,提高交易胜率
-2. 各指标使用不同的计算方式,使信号更加全面准确 
-3. 可任意选择1到5个指标进行组合,组合灵活
-4. 提供各指标的详细参数设置,可以针对不同市场进行优化
-5. 提供回看窗口参数,可以调整识别买卖点的灵敏度
-
-## 策略风险及解决方案
-
-1. 单一指标存在误导风险  
-
-   - 解决方法:使用多个指标的组合验证
-
-2. 参数设置不当可能导致过于灵敏或过于迟钝
-
-   - 解决方法:根据不同周期及品种反复测试优化参数
-
-3. 指标之间存在一定滞后
-
-   - 解决方法:设置适当的回看时间窗口
-
-## 策略优化方向  
-
-1. 测试更多类型的趋势判断指标,扩大指标池,丰富组合
-2. 增加机器学习算法,自动识别最佳指标组合
-3. 增加参数自适应优化模块,使参数可以动态调整
-4. 结合情绪指标、基本面指标等识别趋势反转
-5. 开发量化风险管理模型,控制交易风险
-
-## 总结  
-
-该策略整体实现了较为可靠的趋势反转交易策略。其利用多指标组合验证的思路,具有较强的普适性,可扩展性非常好。如果进一步优化,配合机器学习及参数动态优化等技术,效果可以进一步提升,值得深入研究与应用。
-
-||
 
 ## Overview  
 
@@ -121,7 +65,6 @@ Through such multi-indicator verification, the reliability of trading signals ca
 
 The strategy has overall achieved a relatively reliable trend reversal trading strategy. Its idea of using multi-indicator verification has great versatility and excellent extensibility. With further optimizations using technologies like machine learning and dynamic parameter optimization, its performance can be further improved and is worth in-depth research and application.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,82 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10019300e5af2ad23bf.png)
 
-[trans]
-
-
-## 概述
-
-该策略利用两条不同长度的指数移动平均线(EMA)的斜率交叉来生成趋势跟踪信号。默认使用长度为130和400的EMA,这两个参数的组合效果很好。
-
-当快线EMA斜率上穿慢线EMA斜率且价格高于200周期的EMA时做多;当快线EMA斜率下穿慢线EMA斜率且价格低于200周期的EMA时做空。
-
-斜率方向相反交叉时平仓。
-
-该策略在比特币和流动性强、市值大的Altcoin上表现最佳,但在波动性较大的资产上也运作良好,尤其是这些资产经常出现趋势行情时。
-
-最适合4小时时间框架。
-
-还配套了一个可选的波动率过滤器,仅当两条斜率之间的差值大于特定阈值时才开仓,目的是避免价格横盘震荡时噪音远大于信号时打开仓位。
-
-效果惊人,请享用!
-
-## 策略原理
-
-该策略的核心是比较两条不同长度EMA指数移动平均线的斜率。
-
-首先计算长度为130和400的EMA,然后计算各自的斜率,再对各自的斜率计算长度为3的EMA得到平滑后的斜率曲线。
-
-当快线EMA斜率上穿慢线EMA斜率时产生买入信号;当快线EMA斜率下穿慢线EMA斜率时产生卖出信号。
-
-为过滤震荡,可以选配200周期的EMA作为趋势过滤器,仅在价格高于该EMA时考虑做多信号,低于时考虑做空信号。
-
-此外,还可以选配一个波动率过滤器,仅当两条斜率之间的差值大于预设阈值时才产生信号,从而过滤掉斜率交叉但波动率不足的情况。
-
-当快慢斜率反向交叉时,平掉仓位停止盈亏。
-
-## 优势分析
-
-1. 使用斜率交叉产生信号,可以有效跟踪趋势
-
-2. 调整EMA周期参数组合,可以适应不同的市场环境
-
-3. 趋势过滤器能避免被震荡行情误导
-
-4. 波动率过滤器可过滤假信号
-
-5. 规则简单清晰,容易理解实现
-
-6. 可在多个时间框架上使用
-
-## 风险分析
-
-1. 大幅震荡行情中可能出现频繁 Open 和 Close
-
-2. EMA周期参数不当可能错过趋势转折点
-
-3. 须适当调整参数组合以适应市场环境变化
-
-4. 与 MA 系统类似,大趋势末尾可能反转损失
-
-## 优化方向
-
-1. 尝试不同的 EMA 周期组合参数,寻找最佳参数
-
-2. 根据不同币种特性和市场环境选择参数
-
-3. 可以考虑加入止损策略控制风险
-
-4. 可以考虑动态调整 EMA 周期参数
-
-5. 尝试不同的波动率阈值参数
-
-6. 测试在不同时间框架上的效果
-
-## 总结
-
-该策略整体思路清晰易懂,利用 EMA 斜率交叉产生信号,可有效跟踪趋势;配套趋势过滤器和波动率过滤器可减少噪音交易。通过调整 EMA 周期参数组合可适应不同市场环境。总体来说是一种简单实用的趋势跟踪策略,值得在实盘中测试优化。
-
-||
 
 ## Overview
 
@@ -161,7 +85,6 @@ When the fast and slow slopes cross inversely, positions are closed to stop prof
 
 The strategy has clear, easy to understand logic, using EMA slope crosses to generate signals and effectively track trends. The trend and volatility filters reduce noisy trades. Tuning EMA period combinations adapts it to varying market conditions. Overall a simple and practical trend following strategy that is worth testing and optimizing in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

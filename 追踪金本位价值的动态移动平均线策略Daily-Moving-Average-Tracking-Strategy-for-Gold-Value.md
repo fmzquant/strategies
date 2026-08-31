@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/570070179794b9742f.png)
-[trans]
-
-## 概述
-
-这个策略利用前一日的开盘价和收盘价,以及快线EMA和慢线EMA的组合,在用户定义的交易时间段内,判断市场的价值方向,并做出相应的买入或卖出操作。同时,策略使用追踪止损来锁定利润或限制损失。
-
-## 策略原理
-
-该策略判断金本位的价值方向主要基于两点:
-
-1. 前一日的收盘价相对于开盘价的涨跌。如果收盘价高于开盘价,表示当日的价值整体上升;如果收盘价低于开盘价,表示当日的价值整体下跌。
-
-2. 50周期的快线EMA与200周期的慢线EMA的位置关系。如果快线在慢线之上,表示短期的价值上升速度大于长期趋势;如果快线在慢线之下,表示短期的价值上升速度小于长期趋势。
-
-在符合做多条件时,如果前一日收盘价高于开盘价,当前价高于前一日开盘价,且快线EMA高于慢线EMA,并且在用户定义的交易时间内,则策略做多金本位。
-
-在符合做空条件时,如果前一日收盘价低于开盘价,当前价低于前一日开盘价,且快线EMA低于慢线EMA,并且在用户定义的交易时间内,则策略做空金本位。
-
-此外,策略使用追踪止损来锁定利润或限制损失。追踪止损距离根据用户设定的初始距离和移动步进来调整。
-
-## 优势分析
-
-该策略有以下优势:
-
-1. 利用多种指标判断金本位的价值方向,降低了错误交易的概率。
-
-2. 追踪止损可以有效锁定利润,在行情反转时及时止损,降低风险。
-
-3. 用户可以根据自己的交易时间选择合适的交易区间,避免在机构性操作时段被套牢。
-
-4. EMA的周期值可以根据市场变化进行调整优化,使策略更具弹性。
-
-## 风险分析
-
-该策略也存在一定风险:
-
-1. 在突发事件发生时,策略可能会产生较大亏损。这需要人工干预或设置更为宽松的止损距离。
-
-2. EMA并不能完全过滤市场噪音。当EMA产生错误信号时,会引发不必要的交易。可以适当优化EMA参数或增加其他过滤指标。 
-
-3. 追踪止损距离设置不当也会增加风险。距离过近很容易被止损出局;距离过远则不能有效控制损失。需要测试确定最佳参数。
-
-## 优化方向 
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加其他技术指标过滤信号,如MACD、Bollinger Bands等,降低EMA错误信号的概率。
-
-2. 将追踪止损改为自适应止损,根据市场波动程度智能调整止损距离。
-
-3. 增加仓位管理模块,Allow分仓进行风险控制,降低单笔损失的影响。
-
-4. 增加机器学习模型判断趋势方向,利用更多历史数据提高判断准确性。
-
-5. 优化交易时间段的选择,结合常态分布选择策略参与度更高的交易区间。
-
-## 总结
-
-该策略整体来说是一种典型的趋势跟随策略。它结合多种指标判断价值上升下降的趋势方向,属于较为稳健的策略类型。追踪止损的应用也使其可以有效控制损失。通过对指标和止损规则的不断优化,可以使策略在回报和风险控制之间达到更好的平衡。它适用于有一定量化投资基础而想参与数字货币交易的投资者。
-
-|| 
 
 ## Overview
 
@@ -130,7 +69,6 @@ The strategy can also be optimized in the following aspects:
 
 In summary, this is a typical trend following strategy. It combines multiple indicators to determine upward or downward value trends and is considered robust. The trailing stop application also allows effective loss control. Further optimizations to the indicators and stop loss rules can achieve an improved balance between returns and risk management. It suits investors with some quant investing knowledge who wish to participate in cryptocurrency trading.
 
-[/trans]
 
 > Strategy Arguments
 

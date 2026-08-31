@@ -9,68 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略针对于牛市行情,当股票价格突破历史n日高点时买入,使用EMA均线止损。属于趋势跟踪类策略。
-
-## 策略原理
-
-1. 计算过去n日的最高价格,作为历史高点价格。
-
-2. 当当前收盘价超过历史高点价格时,进行买入。
-
-3. 使用x日EMA均线进行止损。当价格低于EMA均线时止损退出。
-
-4. n值和x值通过参数调整,默认为200日最高价和90日EMA。
-
-5. 策略逻辑简单清晰,易于实现。
-
-## 优势分析
-
-1. 可以自动跟踪新高突破形成的趋势。
-
-2. 使用EMA均线追踪止损,可以锁定大部分利润。
-
-3. 无需预测股价,只需跟进买入信号。
-
-4. 默认参数针对牛市行情效果较好。
-
-5. 代码简洁易于理解和修改。
-
-## 风险分析
-
-1. 牛市结束时可能出现大量亏损。
-
-2. 停损设置不当,可能出现止损过密或过松。
-
-3. 无法预测新高突破形成的力度和回调程度。
-
-4. 针对性强,不适用于其他市场情况。
-
-5. 参数优化时可能过拟合到历史行情。
-
-## 优化方向
-
-1. 测试不同参数组合寻找最优参数。
-
-2. 评估其他止损方式如固定比例止损。
-
-3. 优化止损参数平衡止损频率和风险控制。
-
-4. 添加其他过滤条件,防止因噪音信号买入。 
-
-5. 研究如何判断买入时机的效力。
-
-6. 可以设置止盈策略加入利润锁定机制。
-
-## 总结
-
-该策略通过追踪新高突破实现自动趋势跟踪,使用EMA均线止损。虽有一定效果但较为单一,需要进一步扩展优化成全市场适用的系统。
-
-||
 
 
 ## Overview
@@ -131,7 +69,6 @@ This strategy buys when the price breaks out above the historical n-day high in 
 
 This strategy automates trend following on new highs with EMA trailing stops. Though effective in some cases, it needs expansion and optimization to become robust across all markets.
 
-[/trans]
 
 > Strategy Arguments
 

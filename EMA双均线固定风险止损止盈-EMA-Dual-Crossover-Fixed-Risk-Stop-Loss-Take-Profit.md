@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1aae70800c516f5a39b.png)
 
-[trans]
-#### 概述
-该策略采用双EMA均线交叉作为交易信号,快线周期为65,慢线周期为240。同时使用成交量作为过滤条件,只有在当前成交量大于指定阈值时才会进行交易。策略对每笔交易设置固定风险金额($10),并根据风险金额动态计算仓位大小。当快线上穿慢线且成交量满足条件时做多,快线下穿慢线且成交量满足条件时做空。止损位和止盈位根据固定价格距离设置,做多时止损位在开仓价下方$100,止盈位在开仓价上方$1500;做空时止损位在开仓价上方$100,止盈位在开仓价下方$1500。
-
-#### 策略原理
-1. 计算两条EMA均线,快线(ema_fast)周期为65,慢线(ema_slow)周期为240。
-2. 判断是否发生多头交叉(bullish_crossover)或空头交叉(bearish_crossover)。
-3. 设置成交量阈值(volume_threshold),只有当前成交量大于该阈值时才进行交易。
-4. 设置每笔交易的固定风险金额(risk_per_trade)为$10。
-5. 根据风险金额和止损距离(stop_loss_distance)计算仓位大小(position_size)。
-6. 当多头交叉发生且成交量满足条件时,开多仓,止损位设置在开仓价下方$100,止盈位设置在开仓价上方$1500。
-7. 当空头交叉发生且成交量满足条件时,开空仓,止损位设置在开仓价上方$100,止盈位设置在开仓价下方$1500。
-
-#### 策略优势
-1. 双均线交叉能够较好地捕捉到市场趋势,65/240周期组合可以过滤掉大部分噪音,只关注主要趋势。
-2. 引入成交量过滤条件,可以避免在成交量较低时交易,降低市场波动风险。
-3. 固定风险金额的仓位管理方式,能够有效控制每笔交易的风险敞口,避免单笔交易损失过大。
-4. 基于价格距离的动态止损和止盈设置,可以让盈利空间大于亏损空间,从而提高策略长期表现。
-5. 适用于BTC/USD等高波动品种,能够充分捕捉其波动带来的投资机会。
-
-#### 策略风险
-1. EMA作为趋势跟踪指标,存在趋势反转时滞后的问题,可能导致延迟入场或延迟出场。
-2. 固定风险金额可能无法动态适应市场波动情况,在极端行情下(如暴涨暴跌)表现欠佳。
-3. 成交量阈值的设置具有一定主观性,阈值设置不当可能影响策略效果。
-4. 止损位和止盈位的固定设置可能与市场实际波动幅度不匹配,导致频繁止损或止盈离场。
-5. 策略在震荡行情中表现可能欠佳,频繁交叉可能导致连续亏损交易。
-
-#### 策略优化方向 
-1. 考虑引入更多均线组合作为过滤条件,如加入中期均线,构建多均线系统来提高信号可靠性。
-2. 优化仓位管理方式,如采用百分比风险法或凯利公式等动态调整仓位,以适应不同市场状态。
-3. 对成交量阈值进行参数优化,找到最佳阈值设置以提高策略稳定性。
-4. 优化止损止盈位置设置,根据最新市场波动情况实时调整,增加与市场相适应的灵活性。
-5. 在趋势型方法中加入一定的对冲成分,如PSAR等反趋势指标辅助判断,增强震荡市应对能力。
-
-#### 总结
-该策略采用65/240双均线交叉作为趋势判断依据,同时结合成交量过滤条件来改进信号可靠性。固定风险仓位管理和固定价格止损止盈设置,可以一定程度上控制风险并让盈亏比倾向于有利方向。但策略也存在趋势把握相对滞后、仓位管理灵活性不足、止损止盈缺乏动态调整等问题。未来可以从构建多均线系统、优化仓位管理、动态止损止盈、引入对冲指标等角度对策略进行优化和改进,以期获得更加稳定和可靠的交易表现。
-
-|| 
 
 #### Overview
 This strategy employs a dual EMA crossover approach as trading signals, with the fast EMA having a period of 65 and the slow EMA having a period of 240. It also uses volume as a filter condition, only executing trades when the current volume exceeds a specified threshold. The strategy sets a fixed risk amount ($10) for each trade and dynamically calculates position sizes based on the risk amount. When the fast EMA crosses above the slow EMA and the volume condition is met, it enters a long position. Conversely, when the fast EMA crosses below the slow EMA and the volume condition is satisfied, it enters a short position. Stop loss and take profit levels are set based on fixed price distances, with the stop loss placed $100 below the entry price and the take profit placed $1500 above the entry price for long positions, and vice versa for short positions.
@@ -85,7 +47,6 @@ This strategy employs a dual EMA crossover approach as trading signals, with the
 
 #### Summary
 This strategy employs a 65/240 dual EMA crossover as the basis for trend determination, combined with a volume filter condition to improve signal reliability. The fixed risk position sizing and fixed price stop loss/take profit settings can control risks to a certain extent and tilt the risk-reward ratio in a favorable direction. However, the strategy also faces issues such as relatively lagging trend detection, insufficient flexibility in position sizing, and lack of dynamic adjustments for stop loss and take profit levels. Future optimizations and improvements can focus on constructing a multi-EMA system, optimizing position sizing, implementing dynamic stop loss and take profit mechanisms, and incorporating hedging indicators to achieve more stable and reliable trading performance.
-[/trans]
 
 
 

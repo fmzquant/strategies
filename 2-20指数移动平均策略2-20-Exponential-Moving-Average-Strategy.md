@@ -9,58 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于2/20指数移动平均线,当价格突破平均线时进行买入或卖出操作。它结合了移动平均线的趋势跟随功能和突破交易的趋势反转功能,旨在捕捉短期和中期趋势。
-
-## 策略原理  
-
-该策略使用长度为20的指数移动平均线作为基准线。当最新K线的最高价高于基准线或最低价低于基准线时,表明价格可能发生反转,此时若上一根K线的反转点低于当前收盘价,则做多;若上一根K线的反转点高于当前收盘价,则做空。
-
-具体来说,策略通过计算当前K线的最高价、最低价,与上一K线收盘价比较判断反转信号,并画出反转点。当反转点高于上一收盘价时做多,反之做空。如此形成的多空信号所以20日EMA作为参考基准,发挥其标识趋势方向的优势,同时利用反转点与收盘价比较判断反转时机。
-
-## 优势分析
-
-- 结合趋势跟随和趋势反转,既可以跟随中长线趋势,也可以捕捉短线机会
-- 使用指数移动平均线作为过滤,可避免被短期市场噪音干扰
-- 反转点与收盘价比较生成信号,可以较准确地判断反转
-- 可适用于不同品种和周期,灵活性较强
-
-## 风险分析
-
-- 股指期货具有极高的杠杆性,交易风险非常大,此策略更适合股票和外汇
-- 在震荡行情中,可能出现较多虚假突破,导致亏损
-- 参数可调整空间有限,优化空间较小
-- 需要辅助其他指标筛选品种和确定仓位管理
-
-对策:
-
-- 可适当调整移动平均线周期,IDENTIFYpotter优化参数
-- 可配合其他指标如VOL确认突破有效性
-- 建议只在趋势行情中使用该策略,震荡市避免交易
-- 制定严格的资金管理策略,控制单笔亏损
-
-## 优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 优化移动平均线参数,调整周期或使用双移动平均线
-2. 加入成交量等指标过滤突破信号
-3. 结合止损策略,以控制风险
-4. 增加machine learning模型判断趋势和突破概率
-5. 考虑adaptive 动态调整参数
-6. 结合情感分析等指标寻找交易时机
-7. 优化仓位管理策略,如固定比例、martingale等
-
-通过参数优化、指标组合、风险控制等方法,可以提高策略稳定性和可靠性,降低交易风险。
-
-## 总结
-
-该策略总体来说较简单直接,由于只使用单个指标,对参数和市场行情敏感度较高,优化空间有限,建议作为辅助策略使用。但其捕捉反转的思路值得学习,可用于开发更复杂的突破系统。通过结合多种技术指标进行过滤,严格遵循资金管理原则,该策略可以成为木桶效应的一部分,并为组合增强稳定性。
-
-|| 
 
 ## Overview
 
@@ -111,7 +59,6 @@ Through parameter optimization, indicator combos, risk management etc, the strat
 
 In summary, this simple strategy relies on a single indicator, making it sensitive to parameters and market conditions, with limited optimization space. It is best used to complement other strategies. However, the concept of capturing reversals is instructive and can be incorporated into more sophisticated breakout systems. With proper filters, risk management and robustness enhancement, this strategy can serve as a component in an overall strategy portfolio to improve stability.
 
-[/trans]
 
 > Strategy Arguments
 

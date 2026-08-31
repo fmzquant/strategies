@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/feaa74427f004d072c.png)
 
-[trans]
-
-## 概述
-
-该策略是一个联合策略,结合了趋势反转策略和统计波动率策略,以获取更强的交易信号。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 趋势反转策略
-
-    - 使用123形态判断趋势反转点。具体来说,如果收盘价连续2日上涨,且9日Stochastic慢线低于50,则看涨;如果收盘价连续2日下跌,且9日Stochastic快线高于50,则看跌。
-
-2. 统计波动率策略
-
-    - 使用极值法计算近30日的统计波动率。如果波动率高于0.5%则看涨,如果低于0.16%则看跌。
-
-最后,如果两种策略信号一致,即都是看涨或看跌,则产生交易信号;如果不一致,则不进行交易。
-
-## 策略优势分析
-
-该策略联合应用了两种不同类型的策略,可以提高信号的可靠性。
-
-1. 123形态判断能准确抓取趋势反转点,避免被突发性价格变动误导。
-
-2. 统计波动率反映了最近一个月的市场波动情况,可以过滤出波动率较高、交易机会较多的时段。
-
-两种策略互为验证,结合使用更能抓住市场关键的转折点,从而获得更准确可靠的交易信号。
-
-## 风险分析
-
-1. 123形态无法完全避免假突破带来的风险。如果出现异常震荡,可能会误判信号。
-
-2. 统计波动率仅考虑历史数据,无法预测未来波动趋势。如果市场波动突然放大或收缩,也容易产生错误信号。
-
-3. 两种策略都依赖参数优化。如果参数设置不当,信号质量将大打折扣。
-
-4. 联合策略虽提高了可靠性,但也可能错过某些较强的单一信号。
-
-## 优化方向
-
-1. 结合更多指标,如布林带、KDJ等,形成投票机制。
-
-2. 增加机器学习算法,利用更多历史数据判断趋势反转概率。
-
-3. 设置阈值筛选信号强弱,避免噪音干扰。
-
-4. 优化参数设置,针对不同品种、周期进行参数调整。
-
-5. 增加止损机制来控制联合策略的风险。
-
-## 总结
-
-该策略通过联合应用趋势反转策略和统计波动率策略,提高了信号质量,能在市场关键转折点给出比较准确的交易指令。但也需要注意误判风险和参数优化问题。结合更多指标和机器学习等手段进一步优化,可以获得更稳定可靠的交易信号。
-
-||
 
 ## Overview
 
@@ -123,7 +66,6 @@ By verifying each other, the two strategies combined catch key market turning po
 
 The strategy improves signal quality by combining trend reversal and statistical volatility strategies, providing more accurate trade signals around market turning points. But misinterpretation risks and parameter optimization issues remain. Further enhancements like more indicators and machine learning can lead to even more robust and reliable trading signals.
 
-[/trans]
 
 > Strategy Arguments
 

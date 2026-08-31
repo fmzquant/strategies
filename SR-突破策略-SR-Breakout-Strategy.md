@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11747ab4f0b0f935ba8.png)
 
-[trans]
-#### 概述
-SR Breakout Strategy是一个基于LonesomeTheBlue的breakout finder指标开发的支撑阻力突破策略。该策略的主要思路是通过判断收盘价是否突破支撑位或阻力位来产生做多或做空信号。默认设置基于8小时K线,但在4小时K线上有更优的参数设置。该策略使用了pivothigh和pivotlow函数来确定支撑位和阻力位,并使用最高价和最低价来判断突破。同时,该策略还设置了止损和止盈。
-
-#### 策略原理
-1. 使用pivothigh和pivotlow函数分别计算过去一定周期内的高点和低点,并存储到数组中。
-2. 判断当前收盘价是否高于阻力位,如果是,则判断为看涨突破,产生做多信号。
-3. 判断当前收盘价是否低于支撑位,如果是,则判断为看跌突破,产生做空信号。
-4. 在产生交易信号后,根据设置的止损止盈比例计算止损价和止盈价,并设置相应的止损单和止盈单。
-5. 根据突破方向绘制相应的突破区间。
-
-#### 策略优势
-1. 支撑阻力突破是一个经典的交易策略,有一定的实战基础。
-2. 通过使用pivothigh和pivotlow函数计算支撑位和阻力位,可以比较准确地捕捉到突破行情。
-3. 该策略代码结构清晰,通过存储高点和低点到数组中,可以方便地进行回测和优化。
-4. 设置了止损和止盈,可以比较好地控制风险。
-
-#### 策略风险
-1. 支撑阻力突破策略在震荡行情中表现不佳,容易出现频繁的false breakout。
-2. 固定的止损止盈比例可能无法适应不同的行情,导致风险收益失衡。
-3. 该策略只考虑了价格因素,而没有考虑成交量等其他重要指标,可能会错过一些重要的信号。
-
-#### 策略优化方向
-1. 可以考虑引入更多的技术指标,如成交量、MACD等,以提高信号的准确性和可靠性。
-2. 对于止损和止盈,可以考虑使用移动止损或者动态止损止盈比例,以更好地适应不同的行情。
-3. 可以考虑引入过滤条件,如趋势过滤、波动率过滤等,以减少在震荡行情中的false breakout。
-4. 可以考虑对支撑位和阻力位进行优化,如使用自适应周期、引入斐波那契等级等。
-
-#### 总结
-SR Breakout Strategy是一个基于经典支撑阻力突破思路的交易策略,通过使用pivothigh和pivotlow函数计算支撑位和阻力位,并通过判断收盘价是否突破这些位置来产生交易信号。该策略的优势在于思路清晰,易于实现和优化;同时也存在一些风险,如在震荡行情中表现不佳,以及固定的止损止盈比例可能带来的风险。未来可以考虑从技术指标、止损止盈、过滤条件、支撑阻力优化等方面对该策略进行优化和改进,以提高其稳定性和盈利能力。
-
-|| 
 
 #### Overview
 The SR Breakout Strategy is a support and resistance breakout strategy developed based on LonesomeTheBlue's breakout finder indicator. The main idea of this strategy is to generate long or short signals by judging whether the closing price breaks through the support or resistance level. The default settings are based on the 8-hour candlestick chart, but there are more optimal parameter settings on the 4-hour candlestick chart. This strategy uses the pivothigh and pivotlow functions to determine support and resistance levels, and uses the highest and lowest prices to determine breakouts. At the same time, this strategy also sets stop loss and take profit.
@@ -73,7 +41,6 @@ The SR Breakout Strategy is a support and resistance breakout strategy developed
 
 #### Summary
 The SR Breakout Strategy is a trading strategy based on the classic idea of support and resistance breakout. By using the pivothigh and pivotlow functions to calculate support and resistance levels, and by judging whether the closing price breaks through these levels to generate trading signals. The advantage of this strategy is that the idea is clear and easy to implement and optimize; at the same time, there are also some risks, such as poor performance in choppy markets, and the risks that may be brought about by fixed stop loss and take profit ratios. In the future, we can consider optimizing and improving this strategy from aspects such as technical indicators, stop loss and take profit, filtering conditions, support and resistance optimization, etc., to improve its stability and profitability.
-[/trans]
 
 
 

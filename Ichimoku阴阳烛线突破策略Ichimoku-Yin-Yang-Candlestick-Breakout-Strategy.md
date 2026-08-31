@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14a50cb05bfd885f7d2.png)
-[trans]
-
-### 概述
-
-该策略基于市场技术分析中非常有名的一种指标——Ichimoku Kinko Hyo指标,利用其中的云图形态以及价格与云的关系来判断趋势方向,以发现交易机会。当价格突破云层时产生交易信号。该策略适用于中长线位置式交易。
-
-### 策略原理
-
-该策略使用Ichimoku Kinko Hyo指标的几个组成部分,包括转换线(Tenkan-Sen)、基准线(Kijun-Sen)、前沿线(Senkou Span A)、先导线(Senkou Span B)以及滞后线(Chikou Span)。这几条线汇聚形成所谓的Ichimoku云。当价格突破云层时,产生买入和卖出信号。
-
-具体来说,策略判断价格是否突破云层主要依据Senkou Span A 和Senkou Span B两条线。这两条线之间的区域构成云层。当价格收盘突破云层上沿时产生买入信号;当价格收盘突破云层下沿时产生卖出信号。
-
-此外,策略还设定了止损和止盈价格。利用syminfo.pointvalue和策略头寸信息计算盈亏点数,再转换为具体价格。
-
-### 优势分析
-
-该策略具有以下几个优势:
-
-1. 使用Ichimoku指标判断趋势方向,可以有效过滤市场噪音,识别中长线趋势
-2. 突破云层形成信号,可以避免假突破带来的损失
-3. 结合止损和止盈设置,可以限制单笔损失,锁定盈利
-4. 参数可调整,可以测试不同参数对策略表现的影响
-5. 可视化的云层和其他Ichimoku组成部分,形成直观的图形交易信号
-
-### 风险分析
-
-该策略也存在一定的风险:
-
-1. 中长线持仓,可能出现较大的浮亏
-2. 突破信号可能滞后,错过最佳入场点位
-3. 假突破可能造成错误信号和损失
-4. 持仓时间过长,衍生费用较高
-5. 设定的止损和止盈价格可能会被突破
-
-对策:
-
-1. 适当缩短持仓周期,降低单笔浮亏风险
-2. 结合其他指标判断突破信号效力
-3. 提高止损止盈的有效性,避免被套
-4. 优化持仓期限,降低费用
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的参数组合,寻找最优参数
-2. 结合其他指标进行信号过滤,避免假突破
-3. 动态调整止损止盈水平, trails stop loss
-4. 自定义退出条件:突破云层反向信号、价格回撤幅度触发
-5. 添加仓位管理机制
-
-### 总结
-
-该Ichimoku阴阳烛线突破策略整体来说是一种典型的使用Ichimoku Kinko Hyo指标判断中长线趋势方向的突破策略。它具有参数可调、直观形态、可视化信号等优点,也存在一定的假突破风险、持仓风险等问题。通过参数优化、信号过滤、止损止盈设定等手段可以降低风险提高策略稳定性。该策略适用于中长期位置式交易,特别是突破云层形成信号时高效率进入趋势方向。总体来说,这是一个具有实战价值的量化策略。
-
-||
 
 ### Overview
 
@@ -120,7 +64,6 @@ The strategy can be optimized in the following aspects:
 
 In general, the Ichimoku Yin Yang Candlestick Breakout Strategy is a typical strategy that uses the Ichimoku Kinko Hyo indicator to determine the medium-long term trend direction for breakouts. It has advantages like adjustable parameters, intuitive shapes, and visualizable signals. It also has some risks such as false breakouts and holding risks. By parameter optimization, signal filtering, stop loss/take profit setting, etc., risks can be reduced and strategy stability improved. The strategy is suitable for medium-long term positional trading, especially efficiently entering the trend direction when signals are formed by breaking cloud layers. Overall, this is a quant strategy with practical value.
 
-[/trans]
 
 > Strategy Arguments
 

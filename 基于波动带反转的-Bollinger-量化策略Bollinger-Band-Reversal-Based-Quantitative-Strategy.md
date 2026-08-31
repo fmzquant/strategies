@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11e3f849e2a685688b7.png)
-[trans]
-
-## 概述
-
-本策略名称为“基于波动带反转的 Bollinger 量化策略”。该策略利用 Bollinger 带的上下轨进行买卖判断。当股价处于波动带下轨附近,并且有向下突破的迹象时,表明股价可能处于反转的时机,这时进行买入;当股价上涨到波动带上轨附近时,表明股价可能反转下跌,这时进行卖出。
-
-## 策略原理  
-
-该策略使用 RSI 指标判断买入时机。具体来说,它会判断最近一个 bar 的收盘价是否低于前 6 个 bar 的最低价, meantime 布林带宽度(BBW)大于设置阈值,并且布林带比率(BBR)位于设置的区间。如果满足这些条件,则表明股价可能处于反转的时机,这时进行买入开仓。
-
- Exit 则比较简单,当 RSI 大于 70 时,表明股价过热,这时进行卖出平仓。
-
-## 优势分析
-
-该策略最大的优势在于,利用 Bollinger 带的上下轨进行判断,布林带反转时,进行买入和卖出,可以抓住短期的反转机会。与简单的 RSI 策略相比,本策略在判断买入时机更加严谨,可以避免错误交易的概率。
-
-另外,该策略对参数较为敏感,可以通过调整 BBW、BBR 的参数,针对不同的品种进行优化,从而获得更好的效果。
-
-## 风险分析 
-
-该策略的主要风险在于,布林带并不能百分之百预测价格反转,如果判断时机不当,则很容易形成错过最佳买入时机或者虚拟损失的情况。
-
-此外,股价的短期波动可能会导致策略频繁开仓和平仓,增加交易成本和滑点成本。如果反转的力度不够,则会面临亏损平仓的风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化参数。可以用更精细的方法对 BBW、BBR 等参数进行测试和优化,针对不同的交易品种选择最优参数。
-
-2. 增加止损机制。可以设置移动止损或者时间止损,以控制最大亏损。
-
-3. 结合其他指标。可以和 KDJ、MACD 等其他指标结合,使买入信号更加准确可靠。
-
-4. 优化退出机制。目前的退出机制较简单,可以优化,例如设定适当的移动止盈,或者结合波动情况进行退出。
-
-## 总结
-
-本策略利用 Bollinger 带的特性,判断价格可能反转的时机,进行买入和卖出。相比单一的 RSI 等指标,本策略判断时机更加准确。通过参数优化和止损、止盈的设置,可以使策略更加可靠。但布林带预测并不完美,因此策略实现的效果还有一定的随机性。
-
-||
 
 ## Overview
 
@@ -90,7 +49,6 @@ The strategy can be improved in the following aspects:
 
 This strategy utilizes the characteristics of Bollinger Bands to determine potential reversal points for entries and exits. Compared to single indicators like RSI, it has more accurate timing. With parameter tuning, stop losses and take profits, it can be more reliable. But BB's prediction is not perfect, so there are still some randomness in performance.
 
-[/trans]
 
 > Strategy Arguments
 

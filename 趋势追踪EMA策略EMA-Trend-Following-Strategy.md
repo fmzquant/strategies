@@ -11,48 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/126810cc40177ab0a7d.png)
 
-[trans]
-
-## 概述
-
-趋势追踪EMA策略是一种基于EMA指标的趋势跟踪策略。该策略通过计算指定周期的EMA线,判断价格趋势方向,实现趋势追踪。当价格上穿EMA线时做空,当价格下穿EMA线时做多,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-该策略主要基于EMA指标来判断价格趋势。EMA指标是一种对价格的指数平滑移动平均,它对最近的价格赋予更高的权重,能更快地响应价格变化。策略通过计算EMA周期内的平均价格, Produce 平滑的曲线。当价格从下方上穿EMA线时,表示价格开始上涨,属于看涨信号;当价格从上方下穿EMA线时,表示价格开始下跌,属于看跌信号。 
-
-根据这个原理,该策略在价格上穿EMA时做空,下穿EMA时做多,通过追踪EMA线来跟踪价格趋势的变化。具体来说,它在代码中计算了一个8周期的EMA线,在关闭价上穿EMA线时开仓做空,下穿EMA线时开仓做多。并且设置了止损点来控制风险。
-
-## 策略优势
-
-- 趋势跟踪性强。EMA线能平滑价格波动,过滤市场噪音,跟踪中长线趋势。
-- 操作频率适中。相比短周期指标,EMA线调整频率适中,避免过于频繁交易。
-- 实现简单。该策略仅基于一个EMA指标就能实现趋势跟踪,非常简单直接。
-- 可扩展性强。可通过优化EMA参数或加入其他指标来丰富策略。
-
-## 风险及解决方案
-
-- 可能发生错过Tuning point的风险。当价格快速反转时,EMA线需要一定时间来做调整,可能错过最佳入场时机。解决方法是结合其他指标判断Tuning point。
-
-- 存在增大亏损的风险。EMA线起到的是趋势跟踪作用,不能准确判断Tuning point。如果价格反转,可能造成较大亏损。解决方法是设置合理的止损位。
-
-- 交易频率可能过高或过低。EMA周期不同,producage 策略的交易频率也不同。周期过短可能导致过度交易,周期过长可能错过机会。解决方法是测试不同EMA参数,找到最佳周期。
-
-## 优化建议
-
-- 优化EMA参数,找到最佳平衡点。可以通过步进优化来确定最佳的EMA周期数值。
-
-- 加入其他指标判断Tuning point。例如结合RSI等超买超卖指标,可以更好地判断价格拐点。
-
-- 优化止损策略,找到最佳止损点。通过回测可以测试不同的止损点,找到最大限度锁住利润的止损位置。
-
-- 优化品种选择。根据不同品种的特点,调整EMA周期参数,产生最佳效果。
-
-## 总结
-
-趋势跟踪EMA策略是一个非常典型的基于指标的趋势跟踪策略。它简单直接,容易实现,适合初学者学习。同时也具有可扩展性,可通过加入其他指标或优化参数来进一步提升策略效果。通过不断优化与改进,该策略可以成为一个非常实用的趋势跟踪工具。
-
-||
 
 
 ## Overview
@@ -97,7 +55,6 @@ Based on this logic, the strategy shorts when price breaks out above the EMA and
 
 The EMA trend following strategy is a very typical trend tracking strategy based on an indicator. It is simple and easy to implement, suitable for beginners to learn. Meanwhile, it has extendibility to further improve the strategy by adding indicators or optimizing parameters. With continuous improvements, it can become a very practical trend following tool.
 
-[/trans]
 
 > Strategy Arguments
 

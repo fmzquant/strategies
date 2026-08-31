@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于移动平均线判断趋势方向,以一定比例的ATR止盈,并结合ATR动态调整仓位。目标是跟踪趋势获利,同时控制风险。
-
-## 原理
-
-策略使用长度为N的简单移动平均线判断趋势方向。当短期SMA上穿长期SMA时,做多;短期SMA下穿长期SMA时,做空。
-
-入场后,策略以ATR的一定倍数作为止盈位,如长仓则止盈位为Entry Price + ATR * Factor。当价格超过止盈位时止盈出场。
-
-此外,策略以ATR的大小调整仓位。ATR大小代表市场波动率,仓位大小与ATR呈反比。ATR越大,仓位越小。
-
-## 优势
-
-1. 使用移动平均判断趋势方向,对趋势有一定跟踪能力。
-
-2. ATR止盈方式可盈利同时避免反转。
-
-3. 动态仓位调整,可根据市场波动程度控制风险。
-
-4. 止盈因子和仓位参数可自定义。
-
-5. 结合止损可进一步限制风险。
-
-## 风险及解决方案
-
-1. 移动平均线存在滞后,可能导致入场迟缓。可以测试更敏感的参数。
-
-2. ATR大小变化可能导致止盈过小或过大。可以加入ATR均线提取其趋势。 
-
-3. 波动过大时,仓位可能过小影响盈利。可以设置仓位下限。
-
-4. 未设定止损导致亏损扩大的风险。可以加入移动止损策略。
-
-5. 标的选择不当,如低波动率资产,该策略效果可能不佳。应选择波动较大的标的。
-
-## 优化思路
-
-1. 测试不同参数组合,寻找最优参数。
-
-2. 优化开仓逻辑,如加入其他指标过滤。
-
-3. 研究动态止盈和止损策略,让止盈止损更灵活。
-
-4. 结合波动率指标进行仓位管理。
-
-5. 加入再入场机制,延长持仓时间。
-
-## 总结
-
-该策略使用移动平均判断趋势,以ATR比例止盈,并动态调整仓位。优点是有一定的趋势跟踪能力,可通过参数调整控制风险。但存在参数选择困难、止盈过度等问题。可通过指标优化、止损策略等进一步完善,使策略更稳健。
-
-|| 
 
 ## Overview
 
@@ -117,7 +62,6 @@ Strategy also sizes positions inversely to ATR, which represents market volatili
 
 The strategy identifies trend with moving averages, takes profit at ATR multiples and sizes position by ATR. It has some trend following capacity and risk can be adjusted through parameters. But parameter selection and profit target problems exist. Further improvements can be made via optimization, stop loss to make strategy more robust.
 
-[/trans]
 
 > Strategy Arguments
 

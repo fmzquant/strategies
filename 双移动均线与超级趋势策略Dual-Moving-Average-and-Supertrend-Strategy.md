@@ -9,64 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略是基于21日和55日移动均线的交叉来产生买入和卖出信号,同时结合超级趋势指标来过滤假信号的趋势跟踪策略。
-
-## 策略原理
-
-代码首先定义了21日线(EMA1)和55日线(EMA2)的移动均线。当EMA1上穿EMA2时产生买入信号;当EMA1下穿EMA2时产生卖出信号。 
-
-为了过滤假信号,代码加入了超级趋势指标。超级趋势指标基于平均真实波幅ATR,结合价格的最近高点和低点来判断趋势方向。代码中设定当价格在上轨之上为上升趋势,在下轨之下为下降趋势。
-
-这样,只有在趋势为上升时EMA1上穿EMA2才产生买入信号;只有在趋势为下降时EMA1下穿EMA2才产生卖出信号。通过超级趋势指标过滤,可以避免趋势转换时产生的假信号。
-
-此外,代码中还添加了200日线和233日线来判断长期趋势,只有在长期趋势方向一致时才产生交易信号。
-
-## 策略优势
-
-1. 双移动均线结合超级趋势指标,可以有效识别趋势方向,过滤假信号。
-
-2. 通过调整移动均线参数,可以调整策略的敏感性,适应不同市场环境。
-
-3. 添加长期均线判断,可以避免长短趋势不一致带来的风险。
-
-4. 规则清晰易懂,参数调整容易,适合量化交易。
-
-5. 可视化的买卖信号,操作清晰。
-
-## 策略风险
-
-1. 双移动均线策略容易在趋势转折点产生错误信号。需要注意识别潜在转折。
-
-2. 移动均线参数设置不当可能错过趋势或者产生过多错误信号。需要针对不同市场调整参数。
-
-3. 交易频率可能较高,需要关注交易成本控制。
-
-4. 超级趋势指标参数需要优化,否则可能过滤掉正确信号或者留存错误信号。
-
-5. 长期均线判断可能滞后产生信号,需要合理把握趋势转换的时机。
-
-## 策略优化
-
-1. 测试不同移动均线组合,寻找最佳参数。
-
-2. 优化超级趋势指标的参数,平衡过滤效果和延迟。
-
-3. 添加其他辅助指标,例如成交量指标,进一步验证信号。 
-
-4. 结合情绪指标、消息面等更多因素判断潜在转折点。
-
-5. 采用machine learning方法动态优化参数。
-
-## 总结
-
-该策略整合双移动均线和超级趋势指标的优点,既可以发掘趋势,又可以过滤错误信号。通过参数调优和辅助指标验证,可以持续改进策略效果。虽存在一定风险,但可通过风险管理手段控制。该策略适合用量化方式进行程序化交易。
-
-||
 
 
 ## Overview
@@ -123,7 +65,6 @@ In addition, the 200-day and 233-day moving averages are added to determine the 
 
 This strategy combines the strengths of dual moving averages and supertrend in identifying trends and filtering false signals. It can be continuously improved through parameter optimization and additional validation. Despite certain risks, they can be managed through risk control techniques. The strategy is suitable for algorithmic trading.
 
-[/trans]
 
 > Strategy Arguments
 

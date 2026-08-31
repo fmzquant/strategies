@@ -10,88 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/101c6caca810f8fbe13.png)
-[trans]
-
-
-## 概述
-
-该策略基于多条不同时间周期的简单移动平均线(SMA)的金叉死叉来判断行情趋势和发出买卖信号。策略采用20日线、50日线、100日线和200日线四条SMA。当短期SMA上穿长期SMA时为金叉信号,做多;当短期SMA下穿长期SMA时为死叉信号,做空。
-
-## 策略原理 
-
-该策略的核心逻辑基于以下几点:
-
-1. 计算多条不同时间周期的SMA,包括20日线、50日线、100日线和200日线。
-
-2. 判断短期SMA(20日线)与长期SMA(50日线、100日线、200日线)的交叉情况。
-
-3. 当20日线上穿50日线时判断为金叉信号,做多;当20日线下穿50日线时判断为死叉信号,做空。
-
-4. 与此同时,50日线、100日线和200日线要满足大趋势判断逻辑,即较长周期的SMA要位于较短周期的SMA之上。
-
-5. 入场信号优先级:20日线与50日线>20日线与100日线>20日线与200日线。
-
-6. 出场信号为20日线重新跨过50日线。
-
-该策略主要依靠SMA线的交叉来判断趋势方向。在牛市中,短期SMA上穿长期SMA为金叉信号,表示行情可能进入趋势;在熊市中,短期SMA下穿长期SMA为死叉信号,表示行情可能进入调整。另外,较长周期SMA要高于较短SMA也是确认大趋势的判断依据。
-
-## 策略优势
-
-该策略具有以下几点优势:
-
-1. 策略思路简单清晰,易于理解和实现。
-
-2. 使用SMA指数移动平均线,相比EMA更能有效过滤市场噪音,识别趋势。 
-
-3. 多组时间周期SMA结合使用,可以提高信号的可靠性。
-
-4. 入场信号优先级设定合理,避免过早入场。
-
-5. 可自定义SMA周期和颜色,优化策略。
-
-6. 可在多种时间周期使用,适合不同交易风格。
-
-7. SMA交叉系统对大盘趋势的判断非常准确有效。
-
-## 策略风险
-
-该策略也存在以下风险:
-
-1. 在震荡行情中,SMA交叉信号频繁,可能产生大量错误信号。
-
-2. 固定的SMA周期无法适应市场的变化,应该结合趋势和波动率优化SMA参数。
-
-3. 仅凭SMA交叉无法确定入场时机,应该结合其他指标如MACD辅助判断。 
-
-4. SMA本质具有滞后性,应提前优化入场时机或使用限价单。
-
-5. 该策略对交易资金管理要求高,必须严格遵守止损逻辑。
-
-6. 应充分考虑交易成本对策略盈利能力的影响。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化SMA周期参数,不同周期参数适用于不同市况,可以结合ATR动态优化。
-
-2. 增加其他指标结合,如MACD、RSI等来辅助过滤入场时机。
-
-3. 增加趋势判断逻辑,如ADX,避免震荡市错交易。
-
-4. 优化止损方式,可按ATR止损或跟踪止损。
-
-5. 优化仓位管理,根据资金规模动态调整每单仓位。
-
-6. 测试不同品种参数效果,根据特性调整SMA周期。
-
-7. 多时间框架结合,确保大周期趋势一致。
-
-## 总结
-
-整体来说,该SMA金叉死叉策略通过简单的移动平均线交叉系统判断趋势方向,可靠性较高,适合大多数交易者。但其本身存在一些滞后性和错误信号问题。我们应该从优化入场时机、止损方式、仓位管理等方面继续完善该策略,使其在不同市场环境中都能具备稳定的盈利能力。多种技术指标和趋势判断的综合运用,才能使趋势跟踪策略真正做到稳健、高效、可靠。
-
-||
 
 
 ## Overview
@@ -172,7 +90,6 @@ Some ways to optimize this strategy:
 
 In summary, this simple SMA crossover system is reliable in determining trend direction and suitable for most traders. However, it has some lagging issues and can generate false signals. We should look to enhance entry timing, stop loss, position sizing etc. to make it robust across changing market environments. The combination of multiple technical indicators and trend evaluation is key to building a solid trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

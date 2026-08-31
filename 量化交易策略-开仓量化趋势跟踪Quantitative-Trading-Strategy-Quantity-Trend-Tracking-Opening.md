@@ -11,33 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e59caf2947ce810521.png)
 
-[trans]
-
-### 概述
-
-该策略通过追踪价格变动趋势并结合交易量变化情况,实现发现量化趋势的自动开仓操作。策略运用均线系统判断价格变化趋势,再结合交易量的同向变化作为开仓确认信号。
-
-### 策略原理  
-
-量化交易策略-开仓量化趋势跟踪的核心逻辑基于跟踪价格变动趋势和交易量变化的匹配关系。具体来说,策略使用收盘价减去开盘价的差价作为价格变化量,再乘以当日交易量得到价格与量的联合曲线。该联合曲线能同时反映价格变化趋势和交易量 accompanies 关系。然后计算该联合曲线的均线,作为量化趋势基准线。当联合曲线上穿其均线时产生买入信号,下穿其均线时产生卖出信号,从而实现量化追踪价格趋势变化的开仓操作。
-
-### 优势分析
-
-该策略结合价格变动趋势和交易量变化情况,能够有效过滤掉一些量价不匹配的假趋势,减少开仓风险,提高开仓精确度。与纯价格技术指标相比,量化追踪效果更佳。该策略还使用均线系统设定动态基准线,能够自动适应市场环境的变化,灵活度较高。
-
-### 风险分析 
-
-该策略主要依赖价格与量关系判定量化趋势的合理性,如果价格和量之间变得不匹配,会导致误判风险的提高。此外,均线参数设置不当也会影响策略效果。需要针对不同品种和市场环境进行优化测试。
-
-### 优化方向
-
-可以考虑加入更多过滤器优化策略,例如波动率指标判定趋势质量,引入情绪指标判断市场心理面情况等。此外也可以测试不同均线体系下策略效果的变化,寻找最佳参数组合。加入机器学习模型训练判断规则也是后续的优化方向。
-
-### 总结  
-
-该量化交易策略基于价格与交易量关系的跟踪判断自动开仓,通过量化匹配价格趋势与交易热度,可以有效过滤无效信号,提高开仓成功率。策略优化空间还很大,值得继续研究改进。
-
-||
 
 ### Overview
 
@@ -63,7 +36,6 @@ Consider joining more filters to optimize strategies, such as using volatility i
 
 This quantitative trading strategy realizes automatic opening based on tracking and judging the price trend and trading volume relationship, by quantifying matching price trends with trading enthusiasm, it can effectively filter out invalid signals and improve the success rate of opening. There is still a lot of room for optimization of strategies, which is worth continuing research and improvement.
 
-[/trans]
 
 > Strategy Arguments
 

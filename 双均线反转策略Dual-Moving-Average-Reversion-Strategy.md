@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/4e17f85adcfca6570f.png)
-[trans]
-
-## 概述
-
-双均线反转策略(Dual Moving Average Reversion Strategy)是一种典型的短期反转交易策略。该策略运用两个不同参数设置的均线进行交易信号发出,在趋势出现反转的时候获取利润。
-
-## 策略原理
-
-该策略使用两个均线进行交易信号的生成。第一个均线maopening用于判断趋势方向,第二个均线maclosing用于发出交易信号。
-
-当maopening上涨时,表示目前处于趋势上升阶段;当maopening下跌时,表示目前处于趋势下降阶段。maclosing乘以一个大于1的系数,使其更加灵敏,可以提前发出反转信号。
-
-具体来说,当maopening上涨且maclosing下穿maopening时,表示趋势反转,这时策略会开仓做空;当maopening下跌且maclosing上穿maopening时,表示趋势反转,这时策略会开仓做多。
-
-该策略的参数包括均线类型、长度、数据源等,可以通过调整这些参数来获得更好的交易效果。另外,策略还内置了一些可选项,如开仓方式、止损方式等,可以根据需要进行设置。
-
-## 优势分析
-
-双均线反转策略的优势主要包括:
-
-1. 回撤小,适合短线交易。使用两个快速均线,可以快速捕捉短期趋势的反转,回撤较小。
-
-2. 实现简单,容易掌握。双均线形成交叉就是交易信号,非常简单明了。
-
-3. 可调参数多,可以优化。包含2个均线的参数及系数,可以通过优化找到最佳参数组合。
-
-4. 可スケジュール化,适合自动化交易。策略逻辑简单清晰,执行频率高,非常适合编程实现自动交易。
-
-5. 可控风险,具有止损机制。可设置移动止损或数值止损,可以控制单笔损失。
-
-## 风险分析
-
-双均线反转策略也存在一些风险:
-
-1. 双均线交叉存在滞后。均线本身滞后于价格,交叉发生时趋势可能已经反转了一段时间。
-
-2. 容易被套。趋势反转不一定能持续,可能很快再次反转回来,造成套牢。
-
-3. 回撤依然存在。及时止损可以降低单笔损失,但连续止损也会造成较大回撤。
-
-4. 数据优化风险。过度优化参数,在历史数据表现好但实盘效果不佳。
-
-对应风险的解决方法包括:
-
-1. 优化参数,找到快速响应的均线设置。
-
-2. 结合其他指标避免套牢,如量价指标、波动率指标等。 
-
-3. 调整止损位置,降低连续止损概率。
-
-4. 多组参数优化测试,评估参数健壮性。
-
-## 优化方向
-
-双均线反转策略可以从以下几个方面进行优化:
-
-1. 测试不同类型的均线,寻找反应更灵敏的均线。如Kama、ZLEMA等。
-
-2. 优化均线参数,找到最佳长度组合。通常较短周期的均线效果更好。
-
-3. 测试不同的数据源,如收盘价、均价、典型价等。
-
-4. 增加趋势过滤,避免不合适的反转信号。可用Donchian通道等。
-
-5. 结合其他指标进行确认,如量价指标MACD、OBV等。
-
-6. 增加风险管理机制,如移动止损、账户最大损失等。
-
-7. 进行组合优化,寻找最佳资产配置比例。
-
-8. 增加参数健壮性测试,评估参数过优化风险。
-
-## 总结
-
-双均线反转策略是一个简单实用的短线策略,适合用于捕捉市场的短期反转。该策略回撤小、容易实现,非常适合定量交易。但也存在一些问题,如滞后、套牢等风险。可以通过优化参数、增加指标过滤、改进风险控制等方法来改进策略效果,开发出一个稳定、具有实盘效果的高效策略。
-
-||
 
 ## Overview
 
@@ -162,7 +85,6 @@ The strategy can be further optimized in the following aspects:
 
 The Dual MA Reversion is a simple and practical short-term trading strategy. It is suitable for capturing short-term reversals with quantitative trading. However, risks like lagging and whipsaw trades exist. The strategy can be improved by optimizing parameters, adding filters, enhancing risk control etc. to develop a stable and efficient strategy with good real trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

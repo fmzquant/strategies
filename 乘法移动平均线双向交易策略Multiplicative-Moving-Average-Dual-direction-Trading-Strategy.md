@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/cc57e1aaaee0950d4d.png)
 
-[trans]
-
-## 概述
-
-该策略通过计算乘法移动平均线,结合价格和PMax指标的交叉来判断趋势方向,采用长空双向交易方式,在趋势向上时做多,趋势向下时做空,实时评估持仓风险,以获利退出。
-
-## 策略原理
-
-该策略的核心指标是乘法移动平均线。指标参数包括:ATR周期长度、ATR倍数、移动平均线类型和长度。ATR值代表期间波动幅度。乘法移动平均线等于期间价格平均值加/减ATR倍数与ATR的乘积。当价格高于乘法移动平均线时为看涨信号;当价格低于乘法移动平均线时为看跌信号。
-
-PMax指标代表止损或止盈价格。指标结合ATR值和趋势方向计算得到。在看涨市场中,PMax等于乘法移动平均线减去ATR值与倍数的乘积,作为止损线。在看跌市场中,PMax等于乘法移动平均线加上ATR值与倍数的乘积,作为止盈线。
-
-当价格与PMax指标发生向上交叉时为做多信号;当价格与PMax指标发生向下交叉时为做空信号。策略以此进出场,在趋势向上做多,在趋势向下做空,动态跟踪止损止盈。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 采用长空双向交易方式,能够全市场交易,包容性强。
-
-2. 应用乘法移动平均线指标,交易信号稳定可靠。
-
-3. 结合PMax指标进行止盈止损,有效控制风险。
-
-4. 计算周期和倍数参数可调,适应性广。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 参数设置不当可能导致 whipsaw 交易亏损。
-
-2. 空头交易需要注意杠杆限制的风险。
-
-3. 突发事件造成市场剧烈波动的风险难以规避。
-
-对应解决方法:
-1. 优化参数,降低 whipsaw 出现概率。
-
-2. 适当控制杠杆限额,分散头寸风险。 
-
-3. 增大ATR倍数,扩大止损范围。
-
-## 优化方向  
-
-该策略可从以下方面进行优化:
-
-1. 测试不同市场及周期参数的稳定性。
-
-2. 应用机器学习算法自动优化参数。
-
-3. 结合深度学习等技术判断市场结构。
-
-4. 整合更多数据源提高决策效果。
-
-## 总结
-
-本策略整体运行稳健,具有较强的包容性。采用长空双向交易和动态止损止盈方式,能够有效控制风险。通过参数优化和模型迭代,可望获得更好的拟合性和交易效果。总体来说,该策略值得长期关注与应用。
-
-||
 
 ## Overview
 
@@ -130,7 +70,6 @@ The strategy can be upgraded in ways like:
 
 The overall performance of this strategy is stable with strong inclusiveness. By adopting dual-direction trade and dynamic stop loss/take profit, it effectively controls risks. Through parameter tuning and model iteration, strategy fitness and efficacy can be further improved. In general this is a strategy worth long-term attention and application.
 
-[/trans]
 
 > Strategy Arguments
 

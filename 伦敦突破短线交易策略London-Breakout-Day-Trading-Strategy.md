@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-### 策略概述
-
-伦敦突破短线交易策略是一种针对外汇市场设计的日内交易策略,它专门利用伦敦交易时段的价格行情,通过简单的突破判断产生交易信号。该策略结合具体的交易时间和价格行为特征,追求短线获利。
-
-### 策略原理
-
-1. 只在工作日的伦敦时段交易,例如 GMT 0400-0500。
-
-2. 判断价格短期趋势:三根K线连续上涨做多,三根K线连续下跌做空。
-
-3. 做多信号:当出现三根上涨K线时就入场做多。
-
-4. 做空信号:当出现三根下跌K线时就入场做空。 
-
-5. 止盈止损:设定入场价的一定百分比作为止盈止损位。
-
-6. 出场规则:止盈或止损触发后离场;或伦敦时段结束后离场。
-
-该策略只利用简单的突破信号Capture短线趋势,再配合严格的资金管理,以控制每个交易的风险和收益比。
-
-### 策略优势
-
-- 只交易伦敦高活跃时段
-
-- 简单的价格突破判断信号
-
-- 严格的止盈止损控制风险
-
-- 规避夜盘及假日无流动性阶段 
-
-- 明确的入场和出场规则
-
-### 风险警示
-
-- 可能出现进入过早或过晚的问题
-
-- 存在被套利的风险
-
-- 夜盘或假日也可能出现交易机会
-
-- 需要关注关键支持阻力位
-
-### 总结
-
-伦敦突破短线交易策略非常适合日内短线操作,可以避开市场的混沌时段,在高流动阶段获利离场。通过参数调整可适应更多品种,是一种有效的短线交易策略思路。
-
-
-||
 
 ### Strategy Overview
 
@@ -107,7 +57,6 @@ The strategy purely uses simple breakout signals to capture short-term trends, w
 
 The London breakout day trading strategy suits short-term intraday trading very well, evading chaotic periods and exiting with profits during high liquidity. With parameter tuning it can adapt to more assets for effective short-term trading.
 
-[/trans]
 
 > Strategy Arguments
 

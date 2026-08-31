@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17c7f2d18f71efeddd5.png)
-[trans]
-
-## 概述
-
-突破高低策略是一种跟踪价格突破前一根K线的高点或低点的趋势追踪策略。它结合移动平均线来判断趋势方向,在突破点入场,然后设置止损或追踪止损来锁定利润。
-
-## 策略原理
-
-该策略主要判断以下几个条件来决定开仓和平仓:
-
-1. 判断K线为红色或绿色,以确定是上涨K线还是下跌K线
-2. 判断当前K线是否突破前一根K线的高点或低点
-3. 使用快速移动平均线和慢速移动平均线来判断趋势方向
-4. 当上涨K线突破前一根下跌K线的高点时,做多;当下跌K线突破前一根上涨K线的低点时,做空
-5. 平仓条件为止损或追踪止损触发;也可以设置反向K线出现则立即止损
-
-该策略同时结合第二根反转K线判断来过滤假突破,确保突破信号的可靠性。
-
-## 优势分析
-
-- 策略定位清晰,突破操作容易掌握
-- 结合双移动平均确保大趋势判断正确
-- 追踪止损机制帮助锁定更多利润
-- 反向K线机制有助于避免追高杀跌
-
-## 风险分析
-
-- 突破失败可能造成超短线操作亏损
-- 震荡行情中假突破风险较大
-- 双移动平均可能滞后,导致判断失误
-
-风险控制措施:
-
-1. 选择指数或主力大盘标的,避免个股的高风险
-2. 优化移动平均参数,提高判断准确率
-3. 适当放大止损幅度,确保单笔亏损控制
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的移动平均参数组合
-2. 测试加入其他指标进行组合判断
-3. 优化开仓和止损点位的参数
-4. 增加量化筛选规则,选取优质标的
-5. 结合机器学习算法进行参数自适应优化
-
-## 总结
-
-突破高低策略整体来说是一个较为成熟的趋势追踪策略,在移动平均辅助判断下,可以捕捉一定程度的趋势,止损和追踪止损机制也帮助锁定利润。通过不断测试和优化,可以使该策略的参数设置和效果更加出色。
-
-||
 
 ## Overview
 
@@ -112,7 +60,6 @@ This strategy can be optimized in the following aspects:
 
 The Broken High/Low strategy is overall a mature trend-following strategy. With the help of moving averages for auxiliary judgment, it can capture certain degree of trends. The stop loss and trailing stop mechanisms also help lock in profits. Through continuous testing and optimization, the parameters and performance of this strategy can become more outstanding.  
 
-[/trans]
 
 > Strategy Arguments
 

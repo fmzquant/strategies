@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13ddc56bc1ed43c3339.png)
 
-[trans]
-
-## 概述
-该策略使用双移动平均线在日线和小时线上进行配置,在日线判断大趋势方向,在小时线进行具体的入市出场。当日线表示上升趋势而小时线发生金叉时做多;当日线表示上升趋势而小时线发生死叉时平仓。这种配置使得我们在大趋势中捕捉中短线机会的同时规避了短期市场波动的影响。
-
-## 策略原理  
-1. 在日线图上计算快速EMA线和慢速EMA线
-2. 当快速EMA线上穿慢速EMA线时判断为上升趋势
-3. 在小时线图上也分别计算快慢EMA线  
-4. 当小时线的快速EMA线上穿慢速EMA线时做多
-5. 当小时线的快速EMA线下穿慢速EMA线时平仓
-
-## 优势分析
-这种双时间框架配置的主要优势有:  
-1. 能在大趋势中捕捉短期交易机会,增强盈利概率  
-2. 使用双EMA过滤配置,避免被套利  
-3. 只在趋势背景良好时开仓,有效控制风险  
-4. 结合多时间轴判断,提高决策的准确性  
-
-## 风险分析
-该策略主要的风险有:  
-1. 大趋势判断出现错误时,止损风险较大
-2. 小时线出现剧烈波动时,会产生虚假信号
-3. 参数设置不当时,容易过度交易而招致套利
-
-可以通过适当放宽止损幅度,优化参数组合,或增加过滤条件等方法来规避和减少这些风险。
-
-## 优化方向  
-该策略还可以进一步优化:  
-1. 在日线或小时线上增加量能指标等过滤,提高决策准确性  
-2. 添加自适应止损机制,主动规避风险  
-3. 优化移动平均线参数的组合,寻找最佳配置 
-4. 在更高时间框架判断趋势,实现多时间轴嵌套
-
-## 总结
-本策略使用双时间框架分析,在大趋势判断的基础上,捕捉中短线机会。配置双EMA以滤除噪音。这种配置既保证了盈利的概率,也有效控制了风险。通过进一步优化,可以使策略更加稳健高效,值得recommendation。
-
-||
 
 
 ## Overview
@@ -86,7 +48,6 @@ This strategy can be further optimized by:
 ## Conclusion
 This strategy leverages a dual timeframe analysis to capture short-to-medium-term opportunities within major trends. The double EMA configuration filters out noise. This provides solid profitability while effectively managing risk. Further optimizations can make the strategy more robust and efficient for wider application.
 
-[/trans]
 
 > Strategy Arguments
 

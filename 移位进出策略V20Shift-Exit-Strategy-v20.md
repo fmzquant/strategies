@@ -9,46 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算移动后的进场和出场价格,在趋势行情中进行长仓交易。
-
-## 策略原理
-
-1. 计算上一根K线的收盘价的百分比移位价。
-
-2. 向下移位的价位作为买入线,向上移位的价位作为卖出线。
-
-3. 当价格触及买入线时开多仓。
-
-4. 当价格触及卖出线时平仓。
-
-## 策略优势
-
-- 移动止盈止损,无需人工操作
-- 可自定义移位比例,优化参数
-- 仅做多,降低交易频率
-- 可限定交易时间范围
-
-## 策略风险
-
-- 无法有效判断趋势终结点
-- 存在时间滞后,可能错过快速反转
-
-## 优化方向
-
-- 测试不同的移位比例参数
-- 优化参数的增量设定
-- 结合趋势判断指标设置动态移位
-- 考虑突破新高新增仓位
-
-## 总结
-
-该策略通过移动进出场价格设定,实现了自动跟踪止盈。参数优化和判断逻辑优化可进一步提高策略效果。但被套风险需要防范。总体而言,该策略提供了一种简单实用的趋势跟踪交易思路。
-
-|| 
 
 ## Overview
 
@@ -87,7 +47,6 @@ This strategy enters and exits trades at shifted prices to follow trends.
 
 The strategy achieves auto trailing profit takes via shifted entry/exit levels. Further improvements through parameter optimization and logic enhancements can improve performance. But whipsaw risks need to be managed. Overall a simple and practical approach for trend following trading.
 
-[/trans]
 
 > Strategy Arguments
 

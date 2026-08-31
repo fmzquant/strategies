@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/741133b4cff465473b.png)
-[trans]
-
-### 概述
-
-量能驱动策略通过分析交易量的变化,判断市场参与者情绪的多空变化。它将交易量划分为多头交易量和空头交易量,计算它们的加权移动平均值,当多头交易量占优时产生多头信号,空头交易量占优时产生空头信号。
-
-### 策略原理
-
-该策略首先根据收盘价和开盘价的关系,将每根K线的交易量划分为多头交易量和空头交易量。如果收盘价大于开盘价,那么整根K线的交易量就是多头交易量;如果收盘价小于开盘价,那么按照(最高价-开盘价)/(最高价-最低价)的比例计算该根K线的多头交易量,剩余的就是空头交易量。
-
-然后分别计算最后n根K线的多头交易量和空头交易量的加权移动平均线。如果多头交易量的移动平均线大于空头交易量的移动平均线,并且两者之差占多头交易量的比例大于预设门槛,那么产生多头信号。空头信号的产生规则类似。
-
-还设置了交易量平均值,用来识别盘整区域。如果多空交易量没有明显差异,会提示目前处于盘整状态。
-
-### 优势分析
-
-- 使用交易量信息判断市场参与者情绪,信号产生有理论依据
-- 自动识别盘整区域,可以避免错过重要信号
-- 可自定义参数,适应不同交易品种和时间周期
-- 可单独判断多头和空头信号,也可以只跟随单边信号
-
-### 风险分析
-
-- 交易量数据存在被操纵的可能
-- 默认参数可能不适合所有品种,需要优化
-- 盘整识别参数设置不当可能错过信号
-- 短周期内可能产生错误信号
-
-可以通过参数优化、组合其他指标等方法来减少风险。
-
-### 优化方向
-
-- 测试不同的计算交易量的方法
-- 尝试不同的移动平均类型,如EMA、SMMA等
-- 优化计算平均量的周期参数
-- 优化识别盘整的交易量差异参数
-- 结合其他技术指标过滤信号
-
-### 总结
-
-量能驱动策略通过智能判断交易量的多空分布情况,自动判断市场情绪和趋势变化,可单独使用,也可与其他策略组合。参数优化和指标组合可以进一步提高策略的稳定性和盈利能力。
-
-||
 
 ### Overview  
 
@@ -94,7 +51,6 @@ Methods like parameter optimization and combining with other indicators can help
 
 The volume energy driven strategy intelligently judges the distribution of bullish and bearish trading volume to determine market sentiment and trend changes. It can be used alone or combined with other strategies. Further improvements on stability and profitability can be achieved through parameter optimization and indicator combination.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,74 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/8a3f4a492201792623.png)
 
-[trans]
-
-
-## 概述
-
-该策略基于开价和高价的交叉进行交易信号判断。当开价上穿高价时做多,当开价下穿高价时做空。使用移动平均线可平滑价格数据,降低噪音交易。可配置移动平均线类型和参数。还可配置是否启用追踪止损来锁定利润。
-
-## 策略原理
-
-1. 根据输入参数决定是否使用替代周期解析度(useRes)。如果使用,则根据stratRes设定周期。
-
-2. 根据输入参数决定是否使用移动平均线(useMA)。如果使用,则根据basisType选择移动平均线类型,basisLen设定周期长度。
-
-3. 获取开价(open)和收盘价(close)的系列数据。如果使用移动平均线,则应用选择的移动平均线类型和参数平滑处理。
-
-4. 比较当前开价x与开价系列openSeries。如果x大于openSeries则趋势状态trendState为多头,否则为空头。
-
-5. 当开价上穿开价移动平均线时产生做多信号longCond,当开价下穿开价移动平均线时产生做空信号shortCond。
-
-6. 根据做多做空信号进入多头或空头仓位。如果启用追踪止损,设置止损点位和偏移距离。
-
-## 策略优势
-
-1. 使用开价和高价两个不同系列进行交易信号判断,避免单一数据系列的局限性。
-
-2. 应用移动平均线技术可过滤掉短期市场噪音,锁定主要趋势。
-
-3. 可灵活配置移动平均线类型,调整参数达到最佳效果。
-
-4. 可选择是否使用追踪止损来控制风险,锁定利润。
-
-5. 策略优化空间大,可针对不同品种和市场环境进行参数调整。
-
-## 策略风险
-
-1. 单一交易信号来源,信号稀少,容易漏单。
-
-2. 移动平均线存在滞后问题,可能错过短期机会。
-
-3. 追踪止损设置不当可能过早止损或止损幅度太大。
-
-4. 参数设置不当可能导致虚拟交易过于频繁而影响实盘效果。
-
-5. 不同品种和市场环境需要调整参数,优化难度较大。
-
-6. 可通过增加其他指标判断或引入机器学习模型来丰富信号来源。调整移动平均线类型和参数达到最佳平滑效果。谨慎设置止损点位,适当放宽以获取更多利润。进行充分回测优化确保参数可靠。
-
-## 策略优化方向
-
-1. 增加其它技术指标判断,如布林带、KD等,丰富交易信号。
-
-2. 应用机器学习模型处理信号判断。
-
-3. 优化移动平均线参数,找到最佳参数组合。
-
-4. 优化追踪止损参数,平衡止损幅度和利润获取。 
-
-5. 添加参数优化功能,自动寻找最优参数。
-
-6. 为不同品种开发专属参数模板。
-
-7. 开发量化回测框架,快速迭代策略。
-
-## 总结
-
-该策略基于开价和高价的交叉进行交易信号判断,运用移动平均线技术过滤噪音。可灵活配置参数,实现多种效果。具有一定的优势,但也存在一些问题,如少量信号、滞后等。通过引入更多指标组合判断、机器学习等方式进行优化,可形成较强大的交易策略。需要针对不同品种和市场环境进行参数调整优化,来达到最佳效果。
-
-||
 
 
 ## Overview
@@ -145,7 +77,6 @@ This strategy generates trading signals based on the crossover between open and 
 
 This strategy generates signals based on open-high crossovers and uses MAs to filter noise. It offers flexibility through configurable parameters. The strategy has advantages but also some problems like sparse signals and lag. Further improvements can be made through more indicators, machine learning models etc. Extensive parameter tuning and optimization is needed for the best performance across different products and market environments.
 
-[/trans]
 
 > Strategy Arguments
 

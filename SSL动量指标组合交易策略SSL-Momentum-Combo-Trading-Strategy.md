@@ -9,95 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略融合SSL通道指标与QQE动量指标,形成较为全面的趋势判断体系。当价格突破SSL通道时,结合QQE指标的多空信号进行进场。同时设置止损止盈 Exit,实现风险管理。
-
-### 策略原理
-
-该策略主要由以下部分组成:
-
-1. SSL通道:判断价格趋势方向。
-
-2. QQE指标:辅助判断趋势动能。
-
-3. 突破Entry:价格突破SSL上下轨时结合QQE信号判断入场。
-
-4. 止损止盈:设置ATR倍数 Exit,控制单笔损益。
-
-5. 分批建仓:分多次逐步建立头寸,获利后移仓。
-
-该策略充分融合了趋势和动量判断,形成既具有趋势跟踪能力又可控制风险的策略系统。
-
-### 优势分析 
-
-相比单一指标策略,该策略有以下优势:
-
-1. SSL通道判断趋势,QQE识别反转时点,指标配合紧密。
-
-2. 突破入场,可避免追high买入。
-
-3. 止损止盈设定合理,可控制单笔损益。
-
-4. 分批建仓降低风险,获利后移仓固定利润。
-
-5. 参数优化空间大,可调整至最优Solution。
-
-6. 可灵活应用在多品种多周期。
-
-7. 可引入机器学习进行智能优化。
-
-8. 整体稳定性和收益风险比优于单一指标策略。
-
-### 风险分析
-
-但该策略也存在以下主要风险:
-
-1. 多参数优化难度较大,存在Overfitting风险。
-
-2. SSL通道及QQE均存在一定滞后性。 
-
-3. 多指标组合提高了策略复杂度。
-
-4. 分批建仓会增大滑点成本。
-
-5. 需关注收益最大回撤比指标。
-
-6. 效果随市场环境变化而波动较大。
-
-7. 需验证参数在不同周期及品种中的稳健性。
-
-8. 交易频率较高,影响交易成本。
-
-### 优化方向
-
-基于以上分析,该策略可考虑以下几点优化:
-
-1. 评估不同品种及周期参数健壮性。
-
-2. 设置动态止损止盈比例。
-
-3. 优化资金管理策略。
-
-4. 构建动态仓位管理模型。
-
-5. 引入机器学习生成更优入场时机。
-
-6. 回测窗口滚动,检验参数稳定性。 
-
-7. 评估交易成本影响,调整频率。
-
-8. 优化分批建仓规模比例。
-
-9. 持续优化,使策略与市场保持同步。
-
-### 总结
-
-本策略在SSL和QQE指标紧密配合下,形成稳定的趋势策略体系。但任何策略都需要不断优化与迭代,保持对市场的敏感度。只有通过持续学习与验证,量化策略才能长期稳定盈利。
-
-||
 
 ### Overview 
 
@@ -185,7 +96,6 @@ Based on the analysis, enhancements may involve:
 
 In summary, the tight integration of SSL and QQE forms a stable trend following system. But continual optimizations and iterations are crucial for any strategy to stay adaptive. Only through persistent learning and validation can quant strategies achieve sustainable success.
 
-[/trans]
 
 > Strategy Arguments
 

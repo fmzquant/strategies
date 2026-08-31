@@ -10,34 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cf4d0769b98659985a.png)
-[trans]
-#### 概述
-该策略基于布林线指标,通过在价格触及布林线上轨时做空,触及下轨时做多的方式来捕捉市场趋势。同时,该策略还引入了金字塔加仓的概念,在持仓数量未达到设定的最大值时,会继续按原有方向加仓。
-
-#### 策略原理
-布林线由三条线组成,中轨是收盘价的简单移动平均线,上轨和下轨分别在中轨的基础上加减一定的标准差。由于价格总是在均值附近波动,因此布林线的上下轨可以看作是价格的压力区间。当价格突破上轨,意味着强势上涨趋势,可以做多;突破下轨则意味着强势下跌趋势,可以做空。同时,当持仓数量小于设定的最大值时,策略会在原有仓位的基础上继续加仓,放大趋势捕捉的力度。
-
-#### 策略优势
-1. 布林线是一个被广泛使用和验证的技术指标,具有较强的趋势捕捉能力。
-2. 通过在上下轨突破时入场,可以有效降低假突破带来的风险。
-3. 金字塔加仓的方式可以放大趋势捕捉的力度,提高盈利空间。
-4. 代码逻辑清晰简洁,容易理解和实现。
-
-#### 策略风险
-1. 布林线属于滞后指标,在市场快速变动时,可能会出现信号滞后的情况。
-2. 金字塔加仓如果处理不当,在震荡行情中可能会导致大量的小亏损累积。
-3. 参数设置不合理会影响策略表现,需要根据不同市场特点进行优化。
-
-#### 策略优化方向 
-1. 可以考虑引入多个布林线组合使用,比如不同周期、不同参数的布林线,提高信号的可靠性。
-2. 在趋势信号出现后,可以通过ATR等波动率指标来动态调整加仓的数量和频率,降低震荡行情的影响。
-3. 可以在布林线基础上,结合其他指标如MACD、RSI等,构建多因子入场条件,提高入场信号的精确性。
-4. 进一步优化出场条件,比如设置移动止损、获利回吐等,以降低单笔交易的风险敞口。
-
-#### 总结
-该策略利用布林线的趋势特性,通过在价格触及上下轨时入场,同时以金字塔加仓的方式放大趋势捕捉力度,整体思路简洁有效。但是其也存在一定的滞后性和参数敏感性,在实际应用中需要注意优化参数和仓位管理,同时可以考虑与其他信号指标相结合,以期获得更稳健的策略表现。
-
-|| 
 
 #### Overview
 The strategy is based on the Bollinger Bands indicator. It captures market trends by going short when the price touches the upper band and going long when it touches the lower band. Additionally, the strategy introduces the concept of pyramiding, where it will continue to add positions in the original direction if the number of positions has not reached the set maximum.
@@ -64,7 +36,6 @@ Bollinger Bands consists of three lines. The middle band is the simple moving av
 
 #### Summary
 The strategy utilizes the trend characteristics of Bollinger Bands. By entering positions when the price touches the upper and lower bands, and amplifying the intensity of trend capture through pyramiding, the overall idea is simple and effective. However, it also has certain lag and parameter sensitivity. In practical applications, attention needs to be paid to optimizing parameters and position management. Consideration can also be given to combining it with other signal indicators in order to obtain more robust strategy performance.
-[/trans]
 
 > Strategy Arguments
 

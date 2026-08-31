@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ca1b9d22840d2f3887.png)
 
-[trans]
-
-概述:该策略基于三条不同周期的移动平均线实现金叉死叉交易。当短周期均线上穿长周期均线时做多,当短周期均线下穿长周期均线时做空。同时结合长期趋势均线判断趋势方向。
-
-策略原理:
-
-1. 定义三条移动平均线,分别是短期均线、长期均线和趋势均线。短期均线周期为20,长期均线周期为200,趋势均线周期为50。
-
-2. 当短期均线上穿长期均线时产生买入信号做多,当短期均线下穿长期均线时产生卖出信号做空。
-
-3. 同时检查短期均线和长期均线是否都在趋势均线之上,如果不满足则过滤该信号。这可以避免逆势操作。 
-
-4. 止损和止盈设置为入场价的一定比例,可以根据实际情况优化参数。
-
-5. 画出均线的交叉点来辅助观察入场时机。
-
-优势分析:
-
-1. 策略思路简单直观,容易理解和实现。
-
-2. 能够有效捕捉中短期趋势,顺势而为。
-
-3. 结合趋势均线可以进一步过滤信号,避免逆势操作。
-
-4. 通过调整三条均线的参数可以适应不同市场的特点。
-
-5. 可自定义止损止盈参数来控制风险。
-
-风险分析:
-
-1. 若市场出现急剧震荡,可能导致止损被套。
-
-2. 趋势发生转变时,可能出现较大亏损。
-
-3. 参数设置不当可能导致交易频繁或者错过机会。
-
-4. 需要关注交易成本的影响。
-
-优化方向:
-
-1. 可以结合波动率指标来进一步过滤信号,例如ATR。
-
-2. 可以引入机器学习算法来动态优化参数。
-
-3. 可以结合更多指标判断趋势,如MACD。 
-
-4. 可以设置移动止损来锁定利润。
-
-5. 可以通过回测优化止损止盈的参数。
-
-总结:
-
-该策略整体思路清晰易执行,通过金叉死叉系统性捕捉趋势。配合趋势均线和止损止盈来控制风险。参数设置需要根据具体市场行情优化。可以进一步结合更多指标来提高效果。该策略适合中短期趋势交易,在回测和Demo交易中表现较好。但实盘中需要注意防止被套和趋势转变带来的风险。总体来说,该策略具有一定的实用价值。
-
-||
 
 ## 
 
@@ -121,7 +66,6 @@ Conclusion:
 
 The strategy captures trends effectively with clear logic and easy execution. Controlling risks with trend filter, stop loss and take profit. Parameter tuning requires optimization for market conditions. More indicators can improve performance. Suitable for mid-term trend trading. Performed well in backtest and demo trading. In live trading, beware of whipsaws and trend reversal risks. Has practical value overall.
 
-[/trans]
 
 > Strategy Arguments
 

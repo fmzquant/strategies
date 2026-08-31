@@ -11,70 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/157eafa900f2fc0da45.png)
 
-[trans]
-
-
-## 概述
-
-本策略基于Hull移动平均指标构建趋势跟踪交易系统,根据Hull曲线的方向决定做多做空,属于典型的趋势追踪策略。
-
-## 策略原理
-
-本策略使用Hull移动平均线作为主要技术指标。Hull移动平均线由美国交易员Alan Hull于2005年提出,是在移动平均线基础上进行改进,使用平方根函数减少了移动平均线的滞后性。
-
-具体来说,Hull移动平均线包含两个平均线,一个是期间n的移动平均线MA(n),另一个是期间n/2的移动平均线MA(n/2)。两条平均线之差构成Hull差值曲线,再对Hull差值曲线计算其自身的移动平均线,即得出Hull曲线。
-
-当Hull曲线上涨时,代表短期移动平均线上穿长期移动平均线,为触发做多信号;当Hull曲线下穿时,代表短期移动平均线下穿长期移动平均线,为触发做空信号。
-
-本策略设置Hull期间n为16,分别计算n/2=8期移动平均线、n=16期移动平均线,并计算两者之差的Hull曲线,再对Hull曲线计算自身的n=4期移动平均(取平方根n=4)。当Hull曲线上穿时做多,下穿时做空。
-
-## 策略优势分析
-
-相比普通移动平均线,Hull移动平均线具有以下优势:
-
-1. 减少滞后。运用平方根函数,Hull曲线更贴近价格,能够更快捕捉价格转折。
-
-2. 减少假突破。传统移动平均线tend to generate more false crosses,而Hull曲线可以过滤掉一些噪音,避免不必要的交易。
-
-3.  parameter少。Hull曲线只需要一个n参数,方便优化,而双均线系统需要优化两个参数。
-
-4. 可自定义。Hull曲线的n值可以根据市场调整,可自定义周期,适应不同品种。
-
-5. 系统性强。Hull曲线系统性强,规避人工选择,遵循机械交易系统的一致性。
-
-## 风险分析
-
-尽管相比移动平均线系统,Hull系统具有诸多优点,但仍存在以下风险:
-
-1. 趋势跟踪策略本身的局限。Hull系统作为趋势跟随策略,在趋势剧烈变化时容易止损。
-
-2. 容易产生频繁交易。Hull曲线的快速响应特征会增加交易频率,容易过度交易。
-
-3. parameters易过优化。只有一个参数n易导致过度优化,curve fitting的风险。
-
-4. 效果因品种不同而异。Hull系统对一些具有高波动率的品种效果不佳,需要针对品种调整参数。
-
-## 策略优化方向 
-
-基于上述Hull移动平均策略的局限性,可以从以下方面进行优化:
-
-1. 结合附加指标过滤交易信号,避免假突破。可加入MACD,KD等指标判断趋势。
-
-2. 增加止损策略,控制单笔损失。如设置移动止损或挂单止损。
-
-3. 优化参数n的选择,避免过优化。可以采用walk forward analysis方法进行滚动优化。
-
-4. 结合机器学习技术动态优化参数。使用RNN等模型预测参数n的最优值。
-
-5. 分品种参数优化。使用机器学习对不同品种参数进行优化拟合。
-
-6. 优化仓位管理,降低交易频率。可采用固定份额法则等方法。
-
-## 总结
-
-Hull移动平均策略是一个典型的趋势跟踪策略。相比移动平均线具有优势,但也存在过优化,频繁交易等问题。我们可以通过参数优化,止损策略,仓位管理等方法来改进该策略。Hull系统简单实用,值得进一步研究与优化,可结合更多指标和技术来制定一个稳定的交易系统。
-
-||
 
 ## Overview
 
@@ -136,7 +72,6 @@ Based on the limitations above, the Hull moving average strategy can be improved
 
 The Hull Moving Average strategy is a typical trend following strategy. Despite its advantages over MAs, it still faces issues like overoptimization and overtrading. We can improve the strategy through parameter optimization, stop losses, position sizing etc. The Hull system is simple and practical. It deserves further research and enhancement by incorporating more indicators and techniques to build a robust trading system.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11f6b1b3aa5c47bfb8c.png)
 
-[trans]
-
-## 概述
-
-该策略综合运用三个开源公共指标——趋势魔术指标、压缩动量指标和累积增量成交量指标,以发掘市场中的剧烈变动。这三个指标相互验证,可以有效识别市场反转点。本策略试图在这三个指标同时发出买入/卖出信号时开仓,实现低风险的动量反转交易。
-
-## 策略原理
-
-本策略使用1分钟或3分钟K线,设置止损为收盘价的1.5倍ATR。 
-
-首先,趋势魔术指标结合ATR指标判断市场趋势和波动性。CCI指标大于0表示正在发生波动,此时若ATR指标的位置高于价格表示向上趋势,反之则表示向下趋势。
-
-其次,压缩动量指标判断波动加剧和缩减的时机。当布林带收缩在基尔特通道内时表示市场波动度降低,这种压缩状态持续一段时间后,布林带必然会突破基尔特通道,引发价格的剧烈涨跌。
-
-最后,累积增量成交量指标通过计算买卖双方成交量差异推断市场力量。成交量以买方为多方时,表示多头力量增强。
-
-当三个指标同时发出信号时,证实市场正处于反转点附近,这时开仓做反向操作。
-
-## 优势分析
-
-- 利用多个指标确认,可以有效避免假突破
-- 突破布林带和基尔特通道具有较高胜率
-- 成交量反转预示着力量的转移,支持反转信号
-- 反转交易风险较低,适合短线操作
-
-## 风险分析
-
-- 单一时间周期操作风险较大,容易被套
-- 反转不一定出现在首次突破点,存在错过最佳点位的风险
-- 需要同时监控更长时间周期,避免逆势操作
-- 可根据大周期趋势方向,选择只做长单或短单
-- 可设置ADX条件,在趋向不明确时回避操作
-
-## 优化方向
-
-- 增加跨时间周期验证,利用更长周期判断趋势
-- 增加产品筛选,选择波动较大的交易品种
-- 调整指标参数,优化指标效果
-- 增加机器学习模型辅助判断,提升胜率 
-- 结合情绪指标,在极端市场情绪出现时反其道而行之
-
-## 总结
-
-该策略综合运用多个指标判断市场走势,在多个指标发出一致信号时开仓交易。相较单一指标,能够过滤掉更多假信号。但由于仅在一个时间周期操作,在趋势行情中仍易被套牢。下一步可通过引入机器学习等更高级技术提升效果,或结合更长时间周期指标避免逆势操作,使策略在更多市场中适用。
-
-
-||
 
 ## Overview
 
@@ -102,7 +55,6 @@ When all three indicators give signals at the same time, it confirms that the ma
 
 This strategy uses multiple indicators to determine market trends, and opens positions when multiple indicators give consistent signals. Compared to single indicators, it can filter out more false signals. But since it only operates on a single timeframe, it is still prone to being trapped in trending markets. Next steps could be to incorporate more advanced techniques like machine learning to improve performance, or combine longer timeframe indicators to avoid trading against the trend, making the strategy viable in more market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

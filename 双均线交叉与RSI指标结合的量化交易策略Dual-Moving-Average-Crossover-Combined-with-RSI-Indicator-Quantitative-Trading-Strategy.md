@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/150b97cd28da910a46f.png)
-[trans]
-
-# 
-
-## 概述
-
-本策略通过结合双均线交叉和RSI指标来识别趋势方向和超买超卖情况,在符合买入条件时做多,在符合卖出条件时平仓。该策略旨在利用均线交叉来确定趋势方向,同时利用RSI指标来避免在市场顶部做多和市场底部做空,从而获得更好的收益。
-
-## 策略原理
-
-当快速9周期均线上穿慢速50周期均线时,表示短期趋势上升叠加长期趋势上升,属于典型的多头信号。同时,如果RSI指标大于上一周期5个点且小于70时,则表明处于超买前的区域,这时做多则是比较合适的时机。
-
-当快速9周期均线下穿慢速50周期均线时,表示处于空头市场,需要平仓。
-
-## 优势分析
-
-- 利用双均线交叉判断大趋势,避免被假突破误导
-- RSI指标避免市场转折点做出错误决策
-- 可以灵活调整均线周期,适应不同品种和时间维度
-- 可控的止损策略
-
-## 风险分析
-
-- 均线交叉做出决策有时效性不高,可能出现亏损
-- RSI参数设置不当可能导致错过最佳入场时机
-- 需要关注交易量能否支撑价格行情
-- 突发事件带来的非理性行情需要手工干预
-
-## 优化方向
-
-- 优化RSI的参数以取得最佳结果
-- 结合交易量指标避免虚假信号
-- 根据不同品种和时间维度测试最佳均线参数
-- 适当放宽止损幅度,避免被套
-
-## 总结
-
-本策略通过双均线交叉判断方向和RSI避免追高追低,能够有效利用中长线趋势获得稳定收益。但也需要警惕均线交叉信号的滞后性和RSI参数的调整,同时关注价格与成交量的关系。通过持续测试和优化,本策略有望取得更好的效果。
-
-||
 
 ## Overview
 
@@ -86,7 +46,6 @@ When the fast 9-period moving average crosses below the slow 50-period moving av
 
 This strategy utilizes dual moving average crossover to determine direction and RSI to avoid chasing tops and bottoms. It can effectively ride medium- to long-term trends for steady profits. But the lagging nature of crossover signals and tuning of RSI parameters should be watched out for. Also need to correlate price with volume. With continuous testing and optimization, this strategy shows promise for even better results.
 
-[/trans]
 
 > Strategy Arguments
 

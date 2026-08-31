@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种应用布林带指标进行中长期量化交易的策略。该策略通过布林带判断价格突破形成交易信号。
-
-一、策略原理
-
-该策略主要应用以下布林带指标:
-
-1. 计算一定周期的价格中位数作为基准线;
-
-2. 计算价格标准差,并乘以倍数作为范围; 
-
-3. 中位数±范围构成布林带上下轨;
-
-4. 价格突破布林带上下轨时,形成交易信号。
-
-具体交易逻辑如下:
-
-当价格突破布林带下轨时,形成买入信号做多仓位;
-
-当价格突破布林带上轨时,形成卖出信号做空仓位。
-
-并且设置一定百分比的止盈止损点,以锁定盈亏。
-
-总体而言,该策略通过判断价格突破布林带上下轨,顺势捕捉中长线趋势。
-
-二、策略优势
-
-该策略的主要优势如下:
-
-首先,布林带可以判断价格突破和反转信号,捕捉中长期趋势;
-
-其次,止盈止损设置直接且可控,有助积极资金管理;
-
-最后,策略规则简单清晰,容易实施与优化。
-
-三、潜在风险
-
-但我们也应注意以下风险:
-
-首先,布林带区间需要精确优化,以产生稳定信号;
-
-其次,止损过小可能让获利不足;止损过大则承担过大风险;
-
-最后,需防止出现过多频繁交易。
-
-四、内容总结
-
-本文详细介绍了一种应用布林带指标进行趋势跟踪的中长期量化交易策略。该策略可以顺势捕捉价格中长期趋势,但需要优化参数间距及止损水平。总体而言,它是一个较为简单直观的趋势跟踪策略思路。
-
-||
 
 This article explains in detail a medium-long term quantitative trading strategy using Bollinger Bands. It generates trading signals by identifying price breakouts through the Bollinger Bands.
 
@@ -110,7 +59,6 @@ IV. Summary
 
 In summary, this article has explained a medium-long term quantitative trading strategy using Bollinger Bands for trend following. It can track price trends over the medium to long term, but requires fine tuning of the band intervals and stop loss levels. Overall it provides a relatively simple and intuitive trend following approach.
 
-[/trans]
 
 > Strategy Arguments
 

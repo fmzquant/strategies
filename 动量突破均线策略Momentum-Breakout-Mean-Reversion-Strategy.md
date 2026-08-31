@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1153b51a962179da6b2.png)
-[trans]
-
-
-## 概述
-
-该策略是一个基于动量突破和均线的短线交易策略。它结合了移动平均线、K线形态、交易量和波动性等多个指标,识别具有突破动能的方向性机会,以捕捉较短线的趋势行情。
-
-## 策略原理
-
-1. 使用3日EMA作为参考均线,当收盘价跌破该均线时,视为市场处于下跌趋势(Cond01)。
-
-2. 开盘价高于前一日的OHLC价格(开盘价、最高价、最低价、收盘价的平均价),表示有买盘成交推高开盘价,是上涨信号(Cond02)。 
-
-3. volume小于前一日volume,表示动量不足,利于方向性突破(Cond03)。
-
-4. 收盘价突破前一日的价格区间,表明有突破(Cond04)。
-
-5. 当上述4个条件同时满足时,做多开仓(Entries)。
-
-6. 止损条件:开仓超过10根K线或已获利平仓达到5次时,平仓(Exits)。
-
-该策略综合多个指标判断市场突破方向,在短期内捕捉价格趋势,具有较强的方向性。但每个条件仅考虑1到3根K线的信息,对于长期趋势判断能力较弱。
-
-## 优势分析
-
-1. 使用多个指标综合判断,可以过滤假突破,识别有效突破。
-
-2. 动量不足利于价格产生方向性突破和趋势爆发,可以捕捉比较明确的方向性机会。
-
-3. 交易次数较多,适合短线操作,可以快速锁定每次小 profits。
-
-4. 止损和止盈设置合理,可以有效控制单笔损失和风险。
-
-## 风险分析
-
-1. 多条持仓同时打开,存在加仓风险。
-
-2. 单一指标参数设置可能过于死板,可引入自适应参数。
-
-3. 突破失败概率存在,可能形成破净。
-
-4. 仅关注短期信息,对大趋势把握不足。
-
-5. 停损点过近,可放宽至20至30根K线。
-
-## 优化方向
-
-1. 加入趋势判断,避免逆势开仓。可以考虑加入长期均线判定,只在大趋势方向打开仓位。
-
-2. 优化参数设置。可以对EMA周期、突破参数进行测试和优化,使之更符合不同市场状态。也可以设置自适应参数,让指标自动调整周期等。
-
-3. 条件优化。可以考虑添加其他辅助指标,如能量潮、布林带宽度、RSI等,来验证突破的有效性,减少假突破。
-
-4. 充分测试,检查极端行情下收益曲线。可以对过去行情进行回测,检验策略在特大涨跌、震荡等极端行情中的表现。
-
-5. 优化止损机制。可以考虑追踪止损、百分比止损、自适应止损等方式,让止损更具弹性。
-
-## 总结
-
-该策略整合EMA、交易量、波动性等多个指标,识别短期内具有突破动能的机会,属于典型的短线突破策略。它回报频繁、运作敏捷,能快速锁定短线利润。但仅关注近期信息,对大行情把握不足。我们可以从加入趋势因素、优化参数设置、提高突破有效性、检验极端行情等方面进行优化,使策略更稳健、适应性更强。
-
-||
 ## Overview
 
 This is a short-term trading strategy based on momentum breakout and mean reversion. It incorporates multiple indicators including moving average, candlestick patterns, volume and volatility to identify directional opportunities with breakout momentum for catching shorter-term trends.
@@ -130,7 +68,6 @@ This strategy combines multiple indicators to determine market breakout directio
 
 This strategy integrates EMA, volume, volatility and other indicators to identify short-term opportunities with momentum. It is a typical short-term breakout strategy with frequent returns and agile operations for locking quick profits. But it focuses too much on recent information without comprehensive understanding of major trends. We can optimize it by incorporating trend factors, optimizing parameters, improving breakout validity, testing extreme conditions to make the strategy more robust and adaptive.
 
-[/trans]
 
 > Strategy Arguments
 

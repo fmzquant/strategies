@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/156de6437089d72c150.png)
-[trans]
-
-## 概述
-
-本策略基于动态阻力支撑带和MA均线的交叉作为入场信号,采用趋势追踪止损方式,实现长线追踪获利。
-
-## 策略原理
-
-1. 利用百分位统计方法计算动态阻力位和支持位,构建可能的反转区域。
-
-2. 当价格进入反转区域时,判断MA快线上穿或下穿MA慢线,产生交易信号。
-
-3. 入场后启动止损追踪机制,采用动态止损方式锁定利润,并跟踪趋势获利。
-
-4. 当价格触发止损位或止盈位时,平仓离场。
-
-## 优势分析
-
-1. 动态阻力支撑带可识别可能的反转区域,提高入场准确率。
-
-2. MA均线交叉结合百分位通道,避免了虚假信号。
-
-3. 止损追踪方式可有效锁定利润,防止回撤扩大。
-
-4. 可配置多种参数,适应不同市场环境。
-
-## 风险分析
-
-1. 非趋势性行情下,存在产生虚假信号的风险。
-
-2. 参数设置不当可能导致过于激进入场,应适当宽松。
-
-3. 回测数据应覆盖充分行情周期,避免局限性。
-
-4. 实盘过程中,应适当增加止损幅度,防止跳空。
-
-
-## 优化方向
-
-1. 测试不同MA周期参数的组合效果。
-
-2. 调整动态阻力支撑参数,优化反转识别效果。 
-
-3. 评估不同止损追踪参数对策略收益曲线的影响。
-
-4. 尝试結合其他指标过滤信号,提高稳定性。
-
-
-## 总结
-
-本策略总体思路清晰,利用动态阻力支撑带识别可能反转区域作为信号过滤器,并采用MA均线判断趋势方向产生交易信号,止损追踪方式有效控制风险,可通过参数优化不断提升策略效果,值得进一步研究与优化。
-
-|| 
 
 
 ## Overview
@@ -113,7 +60,6 @@ This strategy uses the crossover of dynamic resistance/support bands and MA line
 
 The overall logic of this strategy is clear. It uses dynamic bands to filter signals, judges trend direction by MA crossover, and effectively controls risk with trailing stop mechanism. Further optimization through parameter tuning can continuously improve strategy performance for production.
 
-[/trans]
 
 > Strategy Arguments
 

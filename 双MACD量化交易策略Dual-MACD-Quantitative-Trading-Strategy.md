@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/190e723b3621a040e81.png)
 
-[trans]
-
-## 概述
-
-该策略运用双EMA均线系统与RSI指标的组合,在判断市场趋势的同时辅助发出交易信号,属于趋势跟踪策略。该策略简单易用,适用于多种大盘指数和数字货币,在2013年至今的回测中取得了500%以上的累计收益。
-
-## 策略原理
-
-该策略使用两个不同参数设置的MACD作为主要交易指标。第一个MACD采用10周期短均线和22周期长均线,辅助线为9周期均线。第二个MACD采用21周期短均线和45周期长均线,辅助线为20周期均线。
-
-当第一个MACD的DIFF线上穿零轴时产生买入信号,下穿零轴时产生卖出信号。第二个MACD的DIFF线发出的信号作用于确认第一个MACD信号。
-
-同时,该策略还采用了计算价格动量的公式,以最新K线的收盘价+最高价除以前一根K线的收盘价+最高价,结果大于1表示当前处于上升趋势,产生买入信号,反之则产生卖出信号。
-
-最后,Stoch RSI的K线大于20也会确认卖出信号。
-
-## 优势分析
-
-该策略采用双EMA组合判断趋势,可以有效过滤假突破。辅助的动量公式也可避免因震荡产生错误信号。Stoch RSI指标的运用,可在超买超卖区发出卖出信号,避免追顶。
-
-该策略仅仅使用了几个常见指标的简单组合,没有过于复杂的逻辑关系,非常易于理解与修改。参数设置也非常通用,无需针对不同品种做优化,适应性强。
-
-根据回测结果,该策略在多种品种如股票指数、数字货币等上都取得了不错的累计收益,最大回撤控制也较为理想。可以作为一个非常通用的趋势跟踪策略来使用。
-
-## 风险分析
-
-该策略主要风险在于使用均线进行判定,当价格出现大幅震荡时容易出现 whipsaw,从而亏损。此外,也没有设置止损来控制单笔损失。
-
-Stoch RSI指标对超买超卖判定的效果并不是非常理想,容易发生错过反转信号的情况。
-
-如果遇到价格剧烈下跌但MACD指标尚未形成死叉时,该策略也会持有仓位继续损失。
-
-## 优化方向
-
-可以考虑设置止损来控制单笔损失。例如设置ATR止损或按收盘价较低的均线进行止损。
-
-可以增加其他指标进行辅助,例如将KD指标或布林带指标与Stoch RSI组合,来更可靠的判断超买超卖。
-
-可以增加成交量的分析,例如大量减仓时调高止损,或量能不足时避免建仓。
-
-可以测试不同的参数组合,优化MACD的周期参数。也可以测试添加不同周期的MACD,组成多重确认。
-
-## 总结
-
-该双MACD量化交易策略整体思路简单清晰,采用双EMA组合判断趋势,辅以动量指标避免错误信号,可以筛选出较好的交易时机。该策略参数设置通用,实际表现稳定,可以作为基础策略来进行优化调整。下一步可以通过修正止损方式、增加成交量分析、组合其他指标等手段来进一步增强策略的稳定性和收益率。
-
-||
 
 ## Overview
 
@@ -103,7 +56,6 @@ Test different parameter combinations and optimize MACD periods. Also test addin
 
 The dual MACD quantitative trading strategy has simple and clear logic, using dual EMA crossovers to determine trends, supplemented by momentum indicators to avoid wrong signals. It can filter out high-probability trading opportunities. The universal parameter settings and solid performance make it a good foundation strategy to build upon. The next steps are to further enhance its stability and profitability by improving stop loss mechanisms, adding volume analysis, combining other indicators, etc.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d14b0a0c9737d4ca5e.png)
-[trans]
-#### 概述
-TEMA双均线交叉策略是一种基于两条不同周期的三重指数移动平均线(TEMA)交叉信号产生交易的量化交易策略。该策略通过比较两条TEMA线的相对位置,当短期TEMA线上穿长期TEMA线时开仓做多,当短期TEMA线下穿长期TEMA线时开仓做空,当出现相反的交叉信号时平仓。该策略适用于在震荡市场中捕捉短期趋势。
-
-#### 策略原理
-TEMA双均线交叉策略的核心是构建两条不同周期的TEMA线。TEMA是对EMA(指数移动平均线)的一种改进,通过对EMA的EMA再做一次EMA来计算,相比EMA和SMA(简单移动平均线)具有更少的滞后性,更加贴近价格走势,对短期趋势更加敏感。
-
-策略通过比较短期TEMA线和长期TEMA线的位置关系来产生交易信号:
-1. 当短期TEMA线上穿长期TEMA线,且短期TEMA线位于长期TEMA线上方时,开仓做多。
-2. 当短期TEMA线下穿长期TEMA线,且短期TEMA线位于长期TEMA线下方时,开仓做空。
-3. 当持有多单时,如果短期TEMA线下穿长期TEMA线则平多单;当持有空单时,如果短期TEMA线上穿长期TEMA线则平空单。
-
-通过两条不同周期的TEMA线的交叉信号来开仓和平仓,可以在震荡市场中捕捉短期价格趋势。
-
-#### 策略优势
-1. TEMA指标相比EMA和SMA具有更少的滞后性,信号更加灵敏,更能贴合价格的走势。
-2. 通过两条不同周期的TEMA线交叉来产生开平仓信号,信号明确,能有效把握短期趋势行情。
-3. 策略逻辑和代码实现简单清晰,容易理解和优化。
-4. 适合在震荡市场中使用,可以获得较为稳定的收益。
-
-#### 策略风险
-1. 在单边趋势行情下,该策略可能会出现频繁交易,导致交易成本增加,影响收益。
-2. TEMA指标相比EMA和SMA对价格更加敏感,在市场波动剧烈时可能会出现频繁的虚假信号。
-3. 策略在参数选择上比较依赖历史数据,如果未来市场特征发生变化,可能影响策略表现。
-4. 策略没有设置止损,在极端行情下可能承担较大风险。
-
-#### 策略优化方向
-1. 可以通过优化TEMA指标的参数来提高策略表现,例如使用参数优化方法找到最佳的两条TEMA线周期参数。
-2. 在产生交易信号时,可以结合其他技术指标或市场情绪指标作为过滤条件,以提高信号的可靠性,减少虚假信号。
-3. 可以根据市场波动特征,设置动态止损和移动止损来控制风险。
-4. 可以考虑分析持仓周期和交易频率,根据市场特征和交易成本来优化开平仓时机和交易频率。
-5. 可以将该策略和其他类型策略进行组合,发挥不同策略的优势,提高策略稳健性。
-
-#### 总结
-TEMA双均线交叉策略是一个简单易用的量化交易策略,通过两条不同周期的TEMA指标交叉信号来捕捉短期价格趋势。该策略逻辑清晰,适合在震荡市场中使用。但是该策略也存在一些风险,如频繁交易、虚假信号和极端行情风险等。可以通过优化参数、增加过滤条件、设置止损和组合不同策略等方法来改进策略表现,提高策略的稳健性和实用性。
-
-|| 
 
 #### Overview
 The TEMA Dual Moving Average Crossover Strategy is a quantitative trading strategy that generates trading signals based on the crossover of two Triple Exponential Moving Averages (TEMA) with different periods. The strategy compares the relative positions of the two TEMA lines. It opens a long position when the short-term TEMA line crosses above the long-term TEMA line and opens a short position when the short-term TEMA line crosses below the long-term TEMA line. The positions are closed when the opposite crossover signals occur. This strategy is suitable for capturing short-term trends in a ranging market.
@@ -82,7 +45,6 @@ By using the crossover signals of two TEMA lines with different periods, it can 
 
 #### Summary
 The TEMA Dual Moving Average Crossover Strategy is a simple and easy-to-use quantitative trading strategy that captures short-term price trends using crossover signals of two TEMA indicators with different periods. The strategy has a clear logic and is suitable for use in ranging markets. However, the strategy also has some risks, such as frequent trading, false signals, and extreme market risks. The strategy performance can be improved by optimizing parameters, adding filter conditions, setting stop-losses, and combining with other strategies to enhance its robustness and practicality.
-[/trans]
 
 
 

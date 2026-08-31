@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/190d14b1ac506100b97.png)
-[trans]
-### 概述
-
-该策略综合运用RSI、MACD、OBV、CCI、CMF、MFI和VWMACD等多个技术指标,检测价格与成交量之间的背离,以识别潜在的入场机会。策略同时结合user dip检测指标,在满足高波动率和深度或VFI条件时发出交易信号。策略仅做多,利用追踪止损逐步加仓建立仓位。
-
-### 策略原理  
-
-1. 计算RSI、MACD、OBV、CCI、CMF、MFI和VWMACD等指标,并通过自适应线性回归方法检测各指标与历史价格之间的背离。当指标创新低而价格没有跟随创新低时,发出买入信号。
-
-2. 基于用户输入的波动率阈值和深度百分比阈值,结合VFI指标过滤,在符合高波动和深度测试的K线上发出信号。
-
-3. 初始做多后,如果价格跌破最后一个做多价格的一定比例(可配置),则再次加仓做多。
-
-4. 使用追踪止损,达到配置的止盈比例时平仓。
-
-### 优势分析
-
-1. 多因子组合,综合运用价格与成交量指标,提高信号的可靠性。
-
-2. 自适应线性回归方法检测背离,避免人为判断的主观性。
-
-3. 结合波动率与深度/VFI检测指标,有助于发现反转机会。 
-
-4. 多次加仓建仓可充分利用价格回调,且追踪止盈有利锁定利润。
-
-### 风险分析  
-
-1. 多因子组合判断较为复杂,参数优化和背离识别效果可能会影响实际表现。
-
-2. 单边持仓风险高,若判断错误可能造成较大损失。
-
-3. 反复加仓模式下,亏损也会放大,需要谨慎控制仓位。
-
-4. 需关注交易手续费对实际盈利的影响。
-
-### 优化方向
-
-1. 测试不同参数组合和指标的效果,优选配置。
-
-2. 添加止损策略,控制单笔和最大亏损。
-
-3. 考虑双向交易机会,以分散风险。
-
-4. 结合机器学习方法自动优化参数。
-
-### 总结
-
-该策略综合多种技术指标识别入场时点,同时利用用户定义条件和VFI指标过滤false signal。策略利用价格回调不断加仓追涨,有利于抓取趋势中的机会。但也面临判断错误和单边持仓的风险,需要适当优化指标参数、止损策略等来降低风险,提高盈利空间。
-
-||
 
 ### Overview  
 
@@ -109,7 +59,6 @@ This strategy combines multiple technical indicators such as RSI, MACD, OBV, CCI
 
 This strategy identifies entry timing through a combination of technical indicators, and uses user defined conditions and VFI filtering to eliminate false signals. It takes advantage of pullbacks to accumulate positions chasing the trend, which helps capture opportunities in trends. But it also faces risks of wrong judgment and unidirectional holding. Appropriate optimization on indicator parameters, stop loss strategies etc. is needed to reduce risks and expand profit space.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1278473b1648010867b.png)
-[trans]
-## 概述
-
-该策略是一个基于动量指标的突破交易策略。它使用均线、ATR、RSI等多个指标判断市场趋势和波动率,结合严格的止盈止损设置来进行交易。策略主要判断价格是否突破上升或下穿均线加上ATR范围来产生交易信号。
-
-## 策略原理
-
-该策略主要基于以下几个要点:
-
-1. 使用EMA均线判断价格趋势方向。价格上穿均线为看涨信号,下穿为看跌信号。
-
-2. ATR指标判断市场波动率。ATR乘以一个系数作为止损范围。这可以有效控制单笔损失。
-
-3. RSI指标判断超买超卖。ATR止损价格以及均线判断的突破交易必须在RSI不超买不超卖的情况下触发。这可避免假突破。
-
-4. 采用前期高点或低点作为止盈出场依据。跟踪止盈价格可锁定更多利润。
-
-5. 严格的止盈止损规则。结合波动率指标的ATR止损可控制风险,止盈设置则可锁定盈利。
-
-进入信号是价格突破均线加ATR止损范围。如果是看涨信号,那么价格需要上穿该高点;如果是看跌信号,那么价格需要下破该低点。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多指标判断可避免假突破,提高信号准确率
-
-2. ATR止损范围设置让损失控制在一个合理水平
-
-3. 动态跟踪止盈可最大化获取利润
-
-4. 严格的止盈止损规则有助于风险控制
-
-5. 指标和参数优化空间大,可根据不同市场调整
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 获利能力与市场波动率相关。市场趋势不明或周期较长时,获利空间受限。
-
-2. 可能出现止损价格震荡后再次突破的情况。这时会造成无法及时建仓追踪趋势。可以适当宽松止损价格。
-
-3.  chasing。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 根据不同品种和周期调整均线参数、ATR参数等。
-
-2. 可以引入更多指标判断,如MACD、KDJ等判断超买超卖。
-
-3. 可以根据ATR数值实时调整止损系数。使止损更适应市场波动。
-
-4. 建立多个时间周期的组合。不同周期指标结合可以提升信号质量。
-
-5. 利用机器学习技术对指标和参数进行测试和优化,使策略参数达到最优。
-
-
-## 总结
-
-该策略整体是一个利用指标进行判断,严格止损止盈的突破交易策略。它有效利用了均线、ATR和RSI等指标的优势,能够有效判断市场趋势方向。结合严格的止损止盈设置,能够把握趋势获利的同时控制风险。通过参数和规则优化,该策略可以成为一个值得长期使用的量化交易策略。
-
-||
 
 ## Overview
 
@@ -138,7 +73,6 @@ Optimization ideas:
 
 This strategy utilizes indicators for judgment and strict stop loss/take profit. It takes advantage of moving averages, ATR and RSI to determine market trends. With strict risk control, it can ride trends while managing risks. Further parameter and rules optimization can make it a long-term profitable trading system.
 
-[/trans]
 
 > Strategy Arguments
 

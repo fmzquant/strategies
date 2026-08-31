@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/104d580b14467d9ab07.png)
-[trans]
-
-## 概述
-
-诺罗波动通道scalping策略(Noro's Price Channel Scalping Strategy)是一个基于价格通道和价格波动带的scalping交易策略。该策略利用价格通道和价格波动带来识别市场趋势,并在趋势方向发生转折时进行入场。
-
-## 策略原理
-
-该策略首先计算价格的最高价通道(lasthigh)和最低价通道(lastlow),然后计算出价格通道中线(center)。接着计算价格与中线的距离(dist)以及距离的简单移动平均(distsma)。 据此可以计算出距离中线1倍(hd和ld)和2倍(hd2和ld2)的价格波动带。
-
-当价格上穿距离中线1倍的波动带时判断为看涨,当价格下穿距离中线1倍的波动带时判断为看跌。策略在衰竭的迹象出现时进行反向开仓。例如在看涨的趋势下,如果出现两根阳线,则在第二根阳线收盘时做空;在看跌的趋势下,如果出现两根阴线,则在第二根阴线收盘时做多。
-
-## 策略优势
-
-1. 利用价格通道判断市场趋势方向,避免错误交易
-2. 基于价格波动带来判断趋势是否衰竭,精确捕捉转折点
-3. 采用scalping交易方式,获利快速
-
-## 策略风险
-
-1. 价格震荡大时,价格通道和波动带可能失效
-2. scalping交易需要较高的交易频率,容易增加交易成本和滑点风险
-3. 需要充分考虑止损策略,以控制亏损风险
-
-## 策略优化
-
-1. 优化价格通道和波动带的参数,适应更多市场情况
-2. 结合其他指标判断趋势和转折点
-3. 增加止损策略
-4. 考虑交易成本和滑点的影响
-
-## 总结
-
-诺罗波动通道scalping策略整体来说是一个非常适合scalping交易的策略。它利用价格通道和波动带判断市场走势,并在见顶或见底迹象出现时反向开仓。该策略交易频率高、获利快速,但也面临一定的风险。通过进一步优化,可以使该策略在更多不同市场中应用。
-
-|| 
 
 ## Overview  
 
@@ -79,7 +43,6 @@ When the price breaks through the volatility band of 1 time the distance from th
 
 In general, Noro's Price Channels Scalping Strategy is a strategy very suitable for scalping trading. It uses price channels and volatility bands to determine market trends, and opens reverse positions when topping or bottoming signs appear. The strategy has high trading frequency, fast profit-making, but also faces certain risks. Further optimization can enable the strategy to be applied in more different markets.
 
-[/trans]
 
 > Strategy Arguments
 

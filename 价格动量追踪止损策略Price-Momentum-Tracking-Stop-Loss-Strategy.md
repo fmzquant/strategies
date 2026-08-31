@@ -11,61 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a947a3ff8db99e1b3a.png)
 
-[trans]
-
-### 概述
-
-本策略通过计算价格的动量指标,设定长短双向追踪止损来锁定利润,从而实现趋势跟踪止损。策略同时结合激活水平,在达到指定盈利后才开始追踪止损,可有效防止过早止损。
-
-### 策略原理
-
-计算价格的12周期动量,再计算动量的1周期动量。当快速动量(价格动量的1周期动量)大于0时做多,小于0时做空。这样可以判断价格动量变化的方向,掌握价格趋势。
-
-设置追踪止损距离和追踪止损激活水平。追踪止损距离是指当价格运行到新的高点或低点时,调整止损到指定的距离。追踪止损激活是指必须达到一定盈利比例后才开始追踪止损。
-
-策略通过追踪最高价或最低价来锁定利润,当价格回落超过设置的止损距离时,发出平仓信号。
-
-### 策略优势分析
-
-1. 利用双重动量判断,可准确判断价格趋势方向,减少交易次数,避免被套。
-
-2. 可灵活设置追踪止损距离,降低风险,锁定利润。
-
-3. 可设置追踪止损激活水平,只有达到一定盈利后才启动止损机制,避免过早止损。
-
-4. 可同时设置多头和空头的止损水平,全面控制风险。
-
-5. 计算过程简单高效,容易理解和实现。
-
-### 策略风险分析 
-
-1. 双重动量判断可能出现反向信号,需要结合趋势过滤。
-
-2. 止损距离设置过大 may cause significant losses。
-
-3. 激活水平设置过高可能错过止损机会。
-
-4. 需要更多参数测试和优化,以找到最佳止损点。
-
-可通过趋势判断和参数优化来减少误信号。测试不同品种合约和参数设置,寻找最佳配置。
-
-### 策略优化方向
-
-1. 结合市场结构识别指标,确定多空趋势,避免反向交易。
-
-2. 加入更多择时条件,如交易量变化,缩量突破等,提高信号准确率。 
-
-3. 进行参数优化,测试不同止损距离和激活水平的表现。
-
-4. 考虑动态追踪止损距离,根据市场波动度自动调整。
-
-5. 可设置部分止损或移动止损,进一步控制风险。
-
-### 总结
-
-本策略整体结构清晰,通过双重动量指标判断价格趋势,设定灵活的追踪止损来锁定利润,可有效控制交易风险。策略易于理解和实现,同时存在可优化空间,加入更多技术指标和参数测试可进一步提升策略表现。本策略可为实现止损管理提供思路和参考。
-
-||
 
 ### Overview
 
@@ -118,7 +63,6 @@ Can reduce false signals via trend judgment and parameter optimization. Test on 
 ### Conclusion
 
 The strategy has clear structure, judging trend with dual momentum and locking profits with flexible trailing stops, effectively controlling trading risks. It is easy to understand and implement, with optimizable space. Adding more technical indicators and parameter testing can further improve strategy performance. The strategy provides ideas and references for realizing stop loss management.
-[/trans]
 
 > Strategy Arguments
 

@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11449f84ea1a7a35ca3.png)
 
-[trans]
-
-## 概述
-
-本文主要阐述了一个基于Stochastic RSI指标的动量震荡交易策略。该策略采用了较短周期(如30分钟)的技术指标,根据Stochastic RSI是否进入超买超卖区域来进行交易决策。相比其他动量策略,该策略同时结合了RSI和Stochastic两个指标的优点,可以更加准确地捕捉市场的短期震荡。
-
-## 策略原理  
-
-该策略的核心指标是Stochastic RSI。Stochastic RSI指标的计算公式是:  
-
-Stochastic RSI = (RSI - 低点RSI) / (高点RSI - 低点RSI) * 100
-
-其中RSI采用 lengthRSI参数(默认12)计算,Stochastic RSI采用 lengthStoch参数(默认12)计算。
-
-当Stochastic RSI高于紫色填充区域时为超买区,这时做空;当Stochastic RSI低于紫色填充区域时为超卖区域,这时做多。
-
-此外,策略还设置了均线过滤条件。只有当快速EMA高于慢速EMA时,才能开仓做多;只有当快速EMA低于慢速EMA时,才能开仓做空。这样可以避免逆势交易。  
-
-## 策略优势
-
-相比单一的RSI策略,该策略结合了Stochastic指标,可以更加清晰地识别超买超卖区域,从而提高信号的可靠性。
-
-相比单一的Stochastic策略,该策略采用了RSI作为Stochastic的输入数据源,可以过滤掉部分噪音,使得信号更加可靠。
-
-设置了均线过滤条件,可以有效避免逆势建仓,从而减少不必要的损失。
-
-设置了持仓时间延迟,可以避免被假突破停止出。
-
-## 策略风险
-
-该策略主要采用了短周期指标,所以只适合短线操作,长线效果可能不佳。
-
-Stochastic RSI指标本身会产生一定的延迟,可能会错过短期价格剧烈变动后的信号。 
-
-在震荡行情中,Stochastic RSI指标会产生多次超买超卖区域穿越,可能会过度交易从而增加交易成本。
-
-## 策略优化方向
-
-1. 可以测试不同参数组合,进一步优化Stochastic RSI的长度、K值和D值。
-
-2. 可以测试不同的RSI长度参数,寻找更合适的RSI周期长度。
-
-3. 可以尝试结合其他指标进行组合,进一步提高信号的准确性。比如MACD, Bollinger Bands等。
-
-4. 可以测试不同的持仓时间延迟参数,找到更合适的出场时间。
-
-## 总结
-
-本文详细介绍了基于Stochastic RSI指标的动量策略的构建原理、优势、风险和优化思路。相比单一指标策略,该策略同时利用了RSI和Stochastic的优势,可以更加清晰和可靠地识别市场的短期超买超卖现象,从而进行反转交易。通过参数优化和指标组合,有望进一步提升策略效果。
-
-||
 
 ## Overview
 
@@ -111,7 +60,6 @@ In oscillating markets, Stochastic RSI may produce multiple penetrations of over
 
 This article details the construction principles, advantages, risks and optimization ideas of a momentum strategy based on the Stochastic RSI indicator. Compared with single indicator strategies, this strategy utilizes the strengths of both RSI and Stochastic to more clearly and reliably identify short-term overbought/oversold phenomena in the market for reversal trading. Further performance improvements can be expected through parameter optimization and indicator combinations.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,48 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f66b403c5a04f5bb63.png)
 
-[trans]
-# 
-## 概述
-双海龟突破策略融合了海龟交易法的突破策略和琳达·拉施克的移动止损原理,具有优异的突破性能和严格的风险控制。该策略同时监控价格的上下突破,在突破发生时建立做多或做空头寸,并利用移动止损和移动止盈管理头寸。
-
-## 策略原理
-核心逻辑是在大周期高点上突破小周期高点时做空,在大周期低点下突破小周期低点时做多。建仓后设置移动止损和移动止盈,首先止损确认风险。在持仓数量累积到设置的止盈数量时,在下一个周期取消止损单,然后出半仓并设置移动止损和移动止盈锁定利润并追踪价差。
-
-具体操作步骤是:
-1. 计算大周期(20周期)高点prevHigh和小周期(4周期)高点smallPeriodHigh。
-2. 当最新K线的high大于prevHigh,并且prevHigh大于smallPeriodHigh时,表明大周期高点突破小周期高点,此时若没有仓位则做空。
-3. 建仓后设置移动止损,待仓位反转后取消止损单,防止被止损。
-4. 当持仓数量达到设置的移动止盈周期数(当前为0周期)时,在下一个周期出一半仓位,并设置移动止损与移动止盈,追踪价差并锁定利润。
-5. 对于低点的突破类似,基于大周期低点和小周期低点的突破关系建立做多头寸。
-
-## 优势分析
-这是一个综合性较强的突破策略,同时具有以下优势:
-1. 结合双周期海龟交易法,能够有效识别突破信号。
-2. 采用移动止损与移动止盈技术严格控制风险,避免巨亏。
-3. 分两次出场,一次止盈出半仓,再通过移动止盈出全仓,锁定利润。
-4. 兼顾做多和做空双向操作,符合多空互换的市场特点。
-5. 回测效果优异,具有很强的实盘表现能力。
-
-## 风险分析
-主要的风险和应对措施如下:
-1. 假突破风险。应适当调整周期参数,确保突破的有效性。
-2. 追涨杀跌风险。应结合趋势和形态进行过滤,避免在趋势末期建仓。
-3. 止损被冲风险。可适当放宽止损幅度,确保有足够的空间。
-4. 移动止损过于灵敏风险。应调整止损后滑点设置,避免无谓止损。
-
-## 优化方向  
-该策略还可从以下几个方面进行优化:
-1. 增加成交量的突破过滤,确保突破的真实性。
-2. 加入趋势判断指标,避免在趋势末期建仓。
-3. 结合更多时间周期判断突破时机。
-4. 增加机器学习算法,动态优化参数。
-5. 组合其他策略,实施统计套利。
-
-## 总结
-双海龟突破策略综合运用双周期技术、突破理论和严格的风险管理手段,在保持高胜率的同时也确保收益的稳定性。该策略模型简单清晰,易于理解与应用,是一款非常出色的量化策略。本策略还具有很大的优化空间,投资者可以在此基础上进行创新,打造更加出色的交易系统。
-
-||
 
 ## Overview
 The Double Turtle Breakthrough Strategy integrates the turtle trading breakthrough strategy and Linda Raschke's moving stop loss principle, with excellent breakthrough performance and strict risk control. The strategy simultaneously monitors the price breakout up and down, establishes long or short positions when a breakthrough occurs, and uses moving stop loss and moving take profit to manage positions.
@@ -117,7 +75,6 @@ The strategy can also be optimized in the following aspects:
 ## Summary 
 The Double Turtle Breakthrough Strategy comprehensively uses double cycle techniques, breakthrough theories and strict risk management methods to ensure high win rates while ensuring stable returns. This strategy model is simple and clear, easy to understand and apply, and it is an excellent quantitative strategy. This strategy still has great potential for optimization. Investors can innovate on this basis to create even better trading systems.
 
-[/trans]
 
 > Strategy Arguments
 

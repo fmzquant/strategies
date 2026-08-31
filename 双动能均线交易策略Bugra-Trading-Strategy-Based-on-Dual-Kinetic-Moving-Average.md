@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bdba9db7874729a2db.png)
-[trans]
-## 概述
-
-双动能均线交易策略是一种联合使用OTT指标和Wavetrend振荡器指标的策略。它结合使用Anıl Özekşi老师开发的OTT指标和lonestar108的Wavetrend振荡器指标,形成一个成功的交易指标。该策略可以在双向市场中进行做多做空操盘。
-
-## 策略原理
-
-双动能均线交易策略首先计算布林带中轨,也就是移动平均线MAvg。然后根据用户设定的百分比范围和周期,计算出长停损位longStop和短停损位shortStop。当价格突破上轨时做多,突破下轨时做空。关闭信号是价格重新回到均线附近。
-
-具体来说,该策略的核心指标是OTT指标。OTT指标由均线和边界线组成,是根据一定算法根据市场波动程度调整边界线的位置。当价格跌破下边界线OTT时,做空;当价格涨破上边界线OTT时,做多。
-
-该策略同时使用Wavetrend指标判断价格趋势方向,如果判断为向下的趋势,则只做空不做多;如果判断为向上的趋势,则只做多不做空。
-
-## 优势分析
-
-双动能均线交易策略结合了移动平均线、布林带和OTT指标的优点,可以自动调整止损位置,降低了止损被激活的概率。同时结合趋势判断指标,避免在震荡趋势中被套。
-
-具体来说,该策略的主要优势有:
-
-1. 可以自动调整止损位,有效控制风险
-2. OTT指标可以比较准确地判断反转点位
-3. 结合趋势判断指标,避免震荡市场的套牢
-4. 规则相对简单清晰,容易理解运用
-
-## 风险分析
-
-双动能均线交易策略也存在一定的风险,主要集中在以下几个方面:  
-
-1. 在剧烈行情中,止损线可能被突破,造成较大的亏损
-2. OTT指标判断的反转信号不一定准确,可能发生故障信号
-3. 趋势判断也可能发生错误,在震荡向下中做多亏损
-4. 参数设置不当也会影响策略效果
-
-对策方式主要是:
-
-1. 适当放宽止损幅度,确保止损线不会轻易被激活
-2. 结合其他指标判断OTT信号的可靠性,避免假信号
-3. 适当调整参数,使趋势判断更加可靠
-4. 优化参数,找到最佳参数组合
-
-## 优化方向  
-
-双动能均线交易策略仍有进一步优化的空间:
-
-1. 可以考虑与其他指标结合,提高信号判断的准确性
-2. 可以研究自适应止损算法,使止损线可以根据市场波动程度进行调整
-3. 可以加入交易量指标,避免低量的假突破
-4. 可以测试不同的移动平均线种类,找到最匹配的均线
-5. 可以尝试机器学习等方法自动优化参数
-
-## 总结
-
-双动能均线交易策略整合了多种指标的优点,可以自动调整止损位,判断反转信号,识别趋势方向。它具有风险控制能力强,容易理解使用等优势。但也存在被套、信号不准等风险。该策略可以进一步优化,与其他指标组合使用,研究自适应算法等。总体来说,双动能均线交易策略是一种实用的突破类交易策略。
-
-||
 
 ## Overview
 
@@ -120,7 +65,6 @@ There is still room for further optimization of the dual kinetic moving average 
 
 The dual kinetic moving average trading strategy integrates the advantages of multiple indicators. It can automatically adjust stop loss positions, judge reversal signals, and identify trend directions. It has advantages such as strong risk control capabilities and easy to understand and use. But it also has risks like being trapped and inaccurate signals. This strategy can be further optimized by combining with other indicators, studying adaptive algorithms, etc. In general, the dual kinetic moving average trading strategy is a practical breakout trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

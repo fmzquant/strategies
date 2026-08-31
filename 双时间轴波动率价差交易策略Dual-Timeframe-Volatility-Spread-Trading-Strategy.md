@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14596ddc1192b4d3687.png)
-[trans]
-## 概述
-
-双时间轴波动率价差交易策略通过计算两个不同时间周期的RSI指标之间的价差,来判断市场的超买超卖状态,实现low risk的趋势交易。
-
-## 策略原理
-
-该策略的核心指标是shortTermXtrender和longTermXtrender。shortTermXtrender计算短期时间轴上的RSI价差,longTermXtrender计算长期时间轴上的RSI价差。
-
-短期时间轴采用7日EMA与4日LMA的价差计算RSI,再与50进行价差,构成shortTermXtrender。长期时间轴采用4日EMA的RSI与50进行价差,构成longTermXtrender。
-
-当shortTermXtrender上穿0时,做多;当longTermXtrender上穿0时,也做多。做多后的止损原则是当shortTermXtrender下穿0时止损;当longTermXtrender下穿0时,也止损。
-
-这样,通过双时间轴判断,可以过滤掉更多的假突破。
-
-## 优势分析
-
-该策略最大的优势在于趋势判断准确。双时间轴结合使用,可以有效过滤噪音,锁定目标趋势方向。这为低风险的趋势跟踪交易提供了保证。
-
-另外,策略提供了参数优化的空间。用户可以根据不同品种和时间周期,调整SMA周期、RSI参数等,优化策略效果。
-
-## 风险分析
-
-该策略的主要风险在于多空判断错误。在震荡行情中,容易产生错误信号。这时如果仍然打开仓位,则会面临亏损的风险。
-
-此外,参数设置不当也会导致效果欠佳。如果时间周期参数设置得过短,则会增大误判概率;如果时间周期参数设置得过长,则会错过趋势机会。这需要用户针对不同市场进行参数测试和优化。
-
-## 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 增加止盈机制。目前策略没有设置止盈,可以根据达到目标利润后及时止盈。
-
-2. 增加仓位管理。可以根据资金规模、波动率等指标动态调整仓位。
-
-3. 测试不同品种参数设置。用户可以通过回测从日线、60分钟等不同时间周期入手,测试最优参数组合。
-
-4. 增加机器学习辅助判断。可以训练模型判断行情类型,从而动态调整策略参数,提高胜率。
-
-## 总结  
-
-双时间轴波动率价差交易策略通过构建双时间轴指标,实现高效的趋势捕捉。策略优化空间较大,用户可以通过参数调整、止盈管理、仓位管理等方式进行优化,从而获得更好的策略效果。该策略适合有一定交易经验的用户使用。
-
-||
 
 ## Overview
 
@@ -97,7 +53,6 @@ The strategy can be optimized in the following aspects:
 
 The dual timeframe volatility spread trading strategy achieves efficient trend capturing by constructing dual timeframe indicators. The strategy has large optimization space. Users can optimize through parameter adjustment, profit taking management, position management, etc. to obtain better strategy results. This strategy is suitable for users with some trading experience.
 
-[/trans]
 
 > Strategy Arguments
 

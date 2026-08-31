@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11fc2e6fa4ac9623b35.png)
-[trans]
-
-## 概述
-
-该策略运用7个不同周期的RSI指标来判断市场趋势,在RSI指标震荡的情况下建立网格仓位,实现高效率的网格交易。策略名称取为“Multi-Period RSI Grid Trading Strategy”,简称“MPRSI 网格策略”。
-
-## 策略原理  
-
-1. 策略使用7个不同周期(1分钟、5分钟、15分钟、30分钟、1小时、2小时和1日)的RSI指标。当全部7个RSI指标同时低于超买线时,产生买入信号;当全部7个RSI指标同时高于超卖线时,产生卖出信号。  
-
-2. 根据买入和卖出信号,在当前价格附近建立固定百分比价格间距的20个定单。比如建仓价格100美元,订单间距2%,则订单价格为98美元、96美元......一直到60美元。  
-
-3. 当价格触及某一个订单价格时,就会成交建立仓位。当有利润时,会以设置的止盈百分比止盈。
-
-## 策略优势  
-
-1. 多指标组合判断市场趋势,避免曲解。7个周期覆盖短期和中长期趋势变化,判断精确。  
-
-2. RSI指标具有可靠的超买超卖判断能力,避免建仓追高杀低。 
-
-3. 网格定单高效建仓,避免追涨杀跌。盘整行情中,分批建仓成本优化。
-
-4. 设置止盈止损,有利于资金管理,降低极端行情的亏损风险。
-
-## 策略风险与解决  
-
-1. 价格剧烈波动可能穿透网格。解决方法是合理设置网格间距,并追加流动资金。  
-
-2. 停损点过于靠近可能增加了不必要的滑点。解决方法是根据市场波动率设置合理的止损点。
-
-3. 部分RSI指标可能产生错误讯号。 解决方法是过滤掉某些特定周期的RSI指标。
-
-## 策略优化方向  
-
-1. 可以测试不同的参数组合和其他指标判断逻辑,优化建仓和止盈止损策略。  
-
-2. 可以结合波动率指标自动调整网格间距。高波动时扩大间距,低波动时缩小间距。
-
-3. 可以添加资金管理模块,根据账户资金动态调整最大持仓量、网格间距等参数。
-
-## 总结  
-
-该策略整合多时间周期RSI指标判断市场趋势,在行情震荡时高效建立网格仓位。策略具有成本优化、止盈止损、风险控制等多重优势,适合那些想要利用行情震荡套利,且具有一定风险承受能力的投资者。该策略还有进一步改进和优化的空间,投资者可以根据自己的风险偏好进行调整。
-
-||
 
 
 ## Overview  
@@ -99,7 +54,6 @@ This strategy uses 7 RSI indicators with different timeframes to determine marke
 
 This strategy combines multi-timeframe RSI indicators to determine market trends, efficiently establishing grid positions during ranging markets. The advantages of cost optimization, taking profits, cutting losses and risk controls make it suitable for traders seeking to capitalize on ranging markets while tolerating defined risks. Further refinements and optimizations are possible to suit specific risk appetites.
 
-[/trans]
 
 > Strategy Arguments
 

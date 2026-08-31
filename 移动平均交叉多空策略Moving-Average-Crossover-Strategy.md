@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略是一个基于移动平均线交叉的多空决策系统。策略允许选择不同类型的移动平均线,并可配置长短期移动平均线参数,从而产生买入和卖出信号。另外,策略还提供了趋势过滤选项,可要求交易信号与趋势方向一致。
-
-## 策略原理
-
-该策略的核心逻辑基于两条移动平均线的交叉产生交易信号。具体来说:
-
-- 当短期移动平均线上穿长期移动平均线时,产生买入信号
-- 当短期移动平均线下穿长期移动平均线时,产生卖出信号
-
-此外,策略提供了四种移动平均线类型的选择,包括简单移动平均线(SMA)、指数移动平均线(EMA)、加权移动平均线(WMA)和量化移动平均线(VWMA)。用户可以自由组合配置短期和长期均线的类型。
-
-另外,策略还提供了三种操作模式:仅做多、仅做空和全做多空。这使得用户可以根据市场环境选择不同的交易方向。
-
-最后,策略加入了趋势过滤功能。该功能要求交易信号必须与趋势方向一致,否则忽略该信号。具体来说,当选项设置为“Above”时,只有在价格高于趋势均线时才产生多头信号;当选项设置为“Below”时,只有在价格低于趋势均线时才产生空头信号。
-
-## 策略优势
-
-本策略最大的优势在于 parametric 和 flexible。移动平均线作为最基本的技术指标,被廣泛使用在量化交易中。该策略提供了高度可配置的移动平均交叉系统,使得用户可以灵活调整参数,适用于不同市场环境。
-
-具体来说,策略的优势包括:
-
-- 提供多种移动平均线类型的选择,可以通过调整移动平均线参数来优化系统
-- 可配置长短期均线参数,适应市场的不同周期特征
-- 可选择多空交易方向,可避免不利的单边市场
-- 可选择是否添加趋势过滤,减少不利于趋势的交易
-- 策略逻辑简单清晰,容易理解和优化
-
-总体来说,该策略是一个非常灵活和可定制的移动平均交叉系统,用户可以根据自己对市场的判断进行调整,而不必局限于任何固定的模式。
-
-## 策略风险
-
-本策略的主要风险来源于:
-
-1. 移动平均线作为延迟指标,可能产生错过价格变化的风险
-2. 配置不当的参数组合可能导致过多交易而降低盈利
-3. 固定使用某一行情模式,可能面临行情转变的风险
-
-针对以上风险,本策略提供了以下解决方法:
-
-1. 结合其他先导指标来发现价格变化,如量能指标、波动率指标等
-2. 优化参数组合,使获利大于损失,控制交易频率
-3. 动态调整策略参数,及时适应市场从趋势到盘整的变化
-
-## 策略优化方向 
-
-本策略主要可从以下几个维度进行优化:
-
-1. 增加其他技术指标来提高系统的效率,如量能指标、布林带等
-2. 添加止损策略来控制单笔损失
-3. 可以基于机器学习算法动态优化参数组合
-4. 增加基于市场结构的方式来判断趋势,而非简单的移动平均线
-5. 结合波动率指标来动态调整仓位管理
-
-通过以上几点优化,可以使系统拥有更好的风险管理机制、更高的稳定性,以及更强的适应市场变化的能力。
-
-## 总结
-
-本移动平均交叉策略是一个非常典型的趋势跟随策略。它简单、灵活、容易理解,提供了高度可配置的交易系统。用户可以根据对市场行情的判断,选择合适的移动平均线组合、调整参数、配置多空交易方向等等。当然,用户也可以在保持其趋势跟随优势的同时,通过添加其他技术指标来丰富该系统,使其成为一个更加全面和可靠的量化交易策略。
-
-||
 
 ## Overview
 
@@ -149,7 +84,6 @@ With these optimizations, the system can have better risk management, robustness
 
 In conclusion, this moving average crossover strategy is a very typical trend following system. It is simple, flexible, easy to understand, and provides a highly configurable framework. Users can tailor it to their views on market conditions by selecting appropriate moving averages, adjusting parameters, and configuring long/short trading. Of course, they can also enrich the system by incorporating other technical indicators while keeping its core trend following merits. With proper enhancements, it can become a more comprehensive and reliable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,109 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1ad9b19c0be6d1cb2ea.png)
 
-[trans]
-
-### 概述
-
-威廉姆斯VIX修正策略通过计算CBOE波动率指数VIX的修正值,结合布林轨道、百分位区间、价格动量特征等多种技术指标,实现对VIX反转进行判断和交易信号产生。该策略旨在捕捉VIX指数过度反转现象,在超买超卖情况下进行逆市操作。
-
-### 策略原理
-
-该策略的核心逻辑基于以下几点:
-
-1. 计算威廉姆斯VIX修正值(wvf),通过公式捕捉VIX的波动情况。
-
-2. 设置布林带的计算参数,获得VIX指数的中轨、上轨、下轨。
-
-3. 设置百分位区间参数,获得VIX指数的历史百分位区间。
-
-4. 利用 repaired 变量判断VIX是否处于反转点。当 repair 为真时,表明VIX前期处于超买或超卖状态,当前处于反转点。
-
-5. 进一步结合价格的突破性质(upRange,upRange_Aggr)判断趋势特征。
-
-6. 最后综合布林带、百分位区间、价格特征等多重条件,判断产生交易信号。
-
-该策略充分利用VIX的均值回归特性,通过多种参数设定捕捉其反转机会。策略逻辑清晰可靠,可有效识别超买超卖机会。
-
-### 策略优势分析
-
-该策略具有以下几个优势:
-
-1. 利用VIX的反转特性,在市场不确定性极大时能盈利。
-
-2. 结合多种技术指标进行滤波,能有效识别反转机会。
-
-3. 策略参数可调节,可以针对不同市场环境进行优化。
-
-4. 实现简单,容易理解和修改,适合用于实盘。
-
-5. 充分利用开源代码思想,易于和其他策略组合使用。
-
-6. 策略表现出较低的市场相关性,可以用来做组合中的对冲部分。
-
-7. 最大限度减少无效交易,过滤掉非反转机会。
-
-8. 交易频率适中,不会过于频繁出入场。
-
-### 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. VIX指数本身存在数据问题,可能影响策略表现。
-
-2. 反转交易存在亏损风险,如果反转不到位会加剧损失。
-
-3. 多种参数设定使得参数优化比较复杂。
-
-4. 反转时间捕捉不准会导致交易失败。
-
-5. 降低交易频率也可能错失部分机会。
-
-6. 布林带和百分位区间都存在误报问题。
-
-7. 价格突破判断不准会使策略失效。
-
-主要的风险可以通过以下方式降低:
-
-1. 优化参数,使反转识别更准确。
-
-2. 适当扩大持仓时间,确保反转成立。
-
-3. 结合更多指标进行验证,避免误报。 
-
-4. 调整开仓条件,降低无效交易。
-
-5. 增加止损以控制亏损。
-
-### 策略优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化布林带和百分位区间的参数,提高反转识别准确率。
-
-2. 增加更多价格动量判断指标,避免趋势识别错误。
-
-3. 调整开仓条件,确保更高的交易效率。
-
-4. 设置不同的止损方式,控制风险。
-
-5. 结合VIX期货主连续合约进行套期保值。
-
-6. 根据不同市场环境调整参数,使策略更具适应性。
-
-7. 增加机器学习模型判断反转时机。
-
-8. 组合其他Alpha,以提高整体收益率。
-
-9. 结合量化方法自动优化参数。
-
-10. 设置范围止损和跟踪止损。
-
-### 总结
-
-威廉姆斯VIX修正策略通过捕捉VIX指数的反转特征,在市场恐慌时进行逆向操作,是一种典型的对冲策略。该策略集各种指标优点于一身,通过参数设定可控制风险。如果参数优化得当,可以获得较好的风险调整回报。但交易频率不宜过高,务必控制风险。总体来说,该策略逻辑清晰,使用开源代码策略的思想,是可以实盘使用的VIX交易策略。
-
-||
 
 ### Overview
 
@@ -215,7 +112,6 @@ The strategy can be optimized in the following aspects:
 
 The Williams VIX Fix strategy captures the reversal characteristics of the VIX index and takes counter-trend trades during market panic. It is a typical hedging strategy. The strategy combines the advantages of various indicators, and parameters can control risks. With proper parameter optimization, it can achieve good risk-adjusted returns. However, trading frequency should not be too high, and risks must be controlled. Overall, the strategy logic is clear, uses open-source code strategy ideas, and is a VIX trading strategy that can be used in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

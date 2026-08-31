@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16f577e5c0abb9671f0.png)
-[trans]
-#### 概述
-该策略利用两条不同周期的指数移动平均线(EMA)的交叉信号来捕捉市场的短期动量,当快线从下向上穿越慢线时开多头仓位,当快线从上向下穿越慢线时开空头仓位。同时设置了止损和止盈来控制风险和锁定利润。这是一个简单而经典的基于动量效应的短线交易策略。
-
-#### 策略原理
-1. 计算两条不同周期的EMA,默认参数为9周期和21周期,这两个参数可以根据市场特点和个人偏好进行调整。
-2. 当快线EMA从下向上穿越慢线EMA时,产生做多信号,开多头仓位。
-3. 当快线EMA从上向下穿越慢线EMA时,产生做空信号,开空头仓位。
-4. 在开仓的同时,根据当前仓位的开仓价和风险偏好设置对应的止损价和止盈价。
-5. 当价格触及止盈价或止损价时,平掉当前仓位,等待下一个交易信号的出现。
-
-#### 策略优势
-1. 简单易用:该策略逻辑清晰,只需要两条不同周期的EMA线就可以实现,非常简单易懂,适合新手快速上手。
-2. 适合短线交易:EMA对价格的变化较为敏感,能够快速反应市场的短期趋势,非常适合短线交易者捕捉市场的短期波动机会。
-3. 趋势跟踪:EMA是一个滞后性指标,但也是一个非常好的趋势跟踪指标,EMA交叉策略能帮助交易者顺应趋势方向交易。
-4. 风险可控:策略中设置了百分比止损和止盈,虽然盈亏比不算太高,但在市场趋势不明朗或波动较大时也能起到一定的保护作用,降低账户爆仓风险。
-
-#### 策略风险
-1. 频繁交易:该策略相对于长线策略交易频率会较高,在市场震荡期间可能会出现频繁开平仓的情况,手续费会明显增加,对账户资金产生一定的拖累。
-2. 参数优化:EMA的参数选择对策略表现有很大影响,最优参数可能会因市场状态变化而失效,需要定期检查和调整参数。
-3. 盈亏比风险:目前示例代码的止损和止盈设置均为固定百分比,实际上盈亏比并不太理想,在一些市场状态下,策略连续亏损的次数可能会较多。
-4. 趋势洗牌:在市场从震荡转为趋势初期,该策略可能会出现方向感识别滞后而导致的连续亏损。
-
-#### 策略优化方向 
-1. 优化止损止盈:根据市场波动特性,选择更合适的止损止盈设置方式,比如使用ATR、百分比追踪止损等,提高策略的盈亏比和风险回报。
-2. 过滤震荡行情:搭配其他技术指标或量价指标对EMA交叉信号进行二次确认,比如判断ADX是否向上突破某一阈值再开仓,降低频繁交易风险。
-3. 优化仓位管理:可以考虑逐步建仓,在趋势明朗时加大仓位,震荡时减小仓位,降低资金波动。
-4. 组合不同周期:用多个不同参数的EMA组合来产生开平仓信号,比如中短期EMA交叉作为入场信号,长期EMA作为趋势过滤,提高趋势识别的准确性。
-5. 结合宏观分析:将策略与宏观经济分析相结合,在宏观形势明朗时再使用该策略,提高策略在中长期内的表现。
-
-#### 总结
-EMA交叉动量短线交易策略是一个简单易用的短线交易策略,适合初学者快速实践和熟悉量化交易的流程。该策略可以捕捉短期的动量效应,顺应市场趋势方向,同时设置了固定百分比止损止盈来控制风险。但是该策略也存在频繁交易、盈亏比不高、趋势识别滞后等风险。可以从优化止损止盈方式、过滤震荡行情、动态调整仓位、组合不同周期、结合宏观分析等方面对策略进行优化和改进,以期提高策略的风险回报和稳定性。
-
-|| 
 
 #### Overview
 This strategy uses the crossover signals of two exponential moving averages (EMAs) with different periods to capture the short-term momentum of the market. It opens a long position when the fast EMA crosses above the slow EMA from below, and opens a short position when the fast EMA crosses below the slow EMA from above. Stop-loss and take-profit levels are set to control risk and lock in profits. This is a simple and classic short-term trading strategy based on the momentum effect.
@@ -76,7 +42,6 @@ This strategy uses the crossover signals of two exponential moving averages (EMA
 
 #### Summary
 The EMA crossover momentum scalping strategy is a simple and easy-to-use short-term trading strategy that is suitable for beginners to quickly practice and become familiar with the quantitative trading process. The strategy can capture short-term momentum effects and follow market trend directions, while setting fixed percentage stop-losses and take-profits to control risk. However, the strategy also has risks such as frequent trading, low risk-reward ratio, and lagging trend recognition. The strategy can be optimized and improved in terms of optimizing stop-loss and take-profit methods, filtering out volatile market conditions, dynamically adjusting positions, combining different periods, and integrating macroeconomic analysis, in order to improve the strategy's risk-return and stability.
-[/trans]
 
 
 

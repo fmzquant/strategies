@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/165a2c604b97a24919b.png)
-[trans]
-## 概述
-
-本策略是一个利用均线和EMA实现跨时间框架趋势交易的策略。策略通过结合不同周期的SMA、EMA以及K线实体判断趋势方向,实现低风险的趋势追踪。
-
-## 策略原理  
-
-该策略主要基于三个周期不同的SMA均线比较,判断价格走势。另外辅助使用EMA判断实体方向。
-
-具体来说,策略使用了3个周期的SMA均线,分别是3周期、8周期和10周期的SMA。价格在三条均线之下时视为处于跌势,当价格重新回升到均线上时,发出买入信号。
-
-此外,策略还使用5周期的EMA辅助判断K线实体方向,确保买入时实体向上。
-
-在持仓管理上,策略设定盈利次数或最大持仓周期作为止损方式。
-
-## 优势分析
-
-该策略结合不同时间周期的均线实现对趋势的判断,能够有效过滤市场噪音,追踪中长线趋势。策略参数经过优化,在历史回测中表现不俗。
-
-另外,策略加入EMA判断,能够避免买入K线实体向下的情况,从而减少不必要的滑点损失。
-
-总的来说,该策略稳定、可靠,适合中长线追踪使用。
-
-## 风险及对策  
-
-- 该策略对参数比较敏感,3个SMA周期或EMA周期设置不当会导致交易信号质量下降。需要针对不同品种进行参数优化。
-
-- 策略没有考虑大幅度跳空或缺口的情况。如果遇到重大消息导致价格大幅跳空,则可能造成一定损失。可以设置价格止损来规避此风险。
-
-## 优化方向  
-
-- 可以考虑加入更多周期参数,形成多时间框架的EMA或SMA比较,使策略对趋势的判断更加准确。
-
-- 可以测试一定幅度的价格止损设置,在保证盈利的前提下,降低极端行情的损失。
-
-- 可以尝试引入机器学习对参数进行动态优化,使策略参数能根据实时市场情况进行调整。
-
-## 总结  
-
-该策略整体来说稳健可靠,利用均线比较判断趋势方向,再辅以EMA过滤信号。通过参数优化和风控设置,可以进一步提高策略胜率和盈利率。值得进一步研究和应用。
-
-||
 
 ## Overview
 
@@ -93,7 +51,6 @@ Overall this is a stable and reliable system suitable for trend following over w
 
 The strategy is robust and reliable overall, using MA crossovers to determine trend supplemented by EMA filter. Further parameter optimization and prudent risk controls can enhance win rate and profitability. Worthy of further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

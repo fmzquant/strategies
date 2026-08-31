@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1656a3a9b0db00011d3.png)
-[trans]
-
-## 概述
-
-投机鸿沟策略是一个追踪趋势的量化交易策略,它使用 SAR 平滑曲线作为主要的交易信号,辅以 EMA、挤压动量和波动性震荡器等多种过滤器,通过配置 SAR 参数来识别趋势反转点,实现低风险趋势跟踪。这是一个非常适合中长线投资的策略。
-
-## 策略原理
-
-该策略使用抛物线 SAR 作为主要的交易信号指标。SAR 能够有效判断价格趋势的反转点,当 SAR 符号发生改变时,意味着趋势发生转折。此策略一般在 SAR 翻转时发出买入或卖出信号。
-
-另外,策略还提供了 SAR 突破选项。也就是在 SAR 尚未完全翻转之前,价格已经突破最后一个 SAR 值的情况下产生信号。这可以进一步追求策略的灵敏度。 
-
-为了过滤假信号,该策略还引入了 EMA、挤压动量和波动性震荡器三个辅助过滤器,可单独使用也可组合使用,用以确认价格趋势和交易信号的可靠性。
-
-最后,策略提供了固定止损、固定止盈和风险回报比例止损等三种止损止盈方式。这使得策略可以灵活适应不同类型交易品种的特点。
-
-## 优势分析
-
-1. SAR 能够准确判断价格趋势反转,并能及时捕捉新的价格趋势,适合中长线趋势追踪。
-
-2. 多重过滤器设置降低了假突破的概率,提高信号可靠性。
-
-3. 配置简单灵活,可自定义参数以适应不同交易品种。
-
-4. 提供多种止盈止损方式,可以追求风险回报的平衡。
-
-5. 可直接连接交易机器人,实现自动化交易。
-
-## 风险分析
-
-1. 在非趋势性市场下,可能出现增多的假信号和无效交易。
-
-2. SAR 参数设置不当也会影响信号判断的准确性。
-
-3. 作为趋势跟踪策略,大幅震荡市场中容易达到止损线。
-
-针对以上风险,可适当调整 SAR 参数或过滤器参数,降低无效交易的概率。也可以适当放宽止损限制,以承受更大的行情波动。
-
-## 优化方向  
-
-1. SAR 参数优化。可以通过历史回测数据优化 SAR 的步长和增量参数,获得更稳定和高效的交易策略。
-
-2. 引入趋势判断指标。为策略添加 MACD、DMI 等辅助判断指标,提高对趋势的判断能力。
-
-3. 优化风险回报比。调整固定止盈止损百分比和风险回报比率参数,适当承担更高风险以获取更高收益。
-
-4. 添加外汇品种。目前策略只支持数字货币交易,可以扩展支持外汇、商品和证券市场品种。
-
-## 总结  
-
-投机鸿沟是一个非常实用的追踪趋势型量化策略。它响应灵敏,信号判断可靠,通过止损止盈管理可以获取长期稳定收益。适当的参数和规则优化可以进一步提高策略的效率。这是一个值得长期使用的高效量化策略。
-
-|| 
 
 ## Overview  
 
@@ -114,7 +61,6 @@ To address the above risks, appropriately adjust the SAR parameters or filter pa
 
 The Speculation Gulf strategy is a very practical trend following quantitative strategy. It has responsive signals, reliable judgments and can achieve long-term steady returns through stop loss management. With appropriate parameter and rules optimization, the efficiency of the strategy can be further improved. This is an efficient quantitative strategy worth using long term.
 
-[/trans]
 
 > Strategy Arguments
 

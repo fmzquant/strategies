@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/df20367480981f1e97.png)
-[trans]
-## 概述
-
-本策略综合运用双均线和SuperTrend两个指标构建交易信号,同时结合不同周期判断趋势方向,实现高效盈利。
-
-## 策略原理
-
-本策略使用MACD和SuperTrend两个指标判断入市时机。其中,MACD双均线判断短期趋势方向,Supertrend判断中长期趋势方向。
-
-当快线从下向上突破慢线时为买入信号,此时如果中长期Supertrend同为上升趋势,则产生最终买入信号,做多;反之,当快线从上向下突破慢线时为卖出信号,此时如果中长期Supertrend同为下跌趋势,则产生最终卖出信号,做空。
-
-止损和止盈设置为固定值。
-
-## 优势分析
-
-本策略最大优势在于同时运用双均线和SuperTrend判断市场走向,中短期和中长期结合,大幅提高决策效率,避免出现假突破。此外,Supertrend可根据市场波动性调节参数,适应更广泛的市场环境。
-
-## 风险分析 
-
-本策略主要风险在于固定止损止盈设置可能错失更大盈利空间。此外,如果中短期和中长期判断出现分歧,则策略无法正常工作。我们可以通过止损止盈浮动设置来减少此风险。
-
-## 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 增加止损止盈动态调整机制,根据市场波动性和趋势设置止损止盈。
-
-2. 优化MACD参数,找到更适合目标品种的均线参数。
-
-3. 优化Supertrend参数,调整其对市场的敏感度。
-
-4. 增加其它指标判断,提供更多维度的信号,提高策略效果。
-
-## 总结
-
-本策略成功结合了双均线和SuperTrend两个指标的优势,通过不同周期的组合判断,过滤掉错误信号,从而在趋势市中获得较好收益。我们可以通过参数优化和机制调整进一步增强该策略的稳定性和盈利能力。
-
-||
 
 ## Overview
 
@@ -85,7 +47,6 @@ This strategy can be optimized in the following aspects:
 
 This strategy successfully combines the advantages of dual moving averages and Supertrend indicators. By combining different cycle judgments, it filters out wrong signals and obtains better returns in trending markets. We can further enhance the stability and profitability of this strategy through parameter optimization and mechanism adjustments.
 
-[/trans]
 
 > Strategy Arguments
 

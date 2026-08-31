@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15995053761dbeb149c.png)
-[trans]
-### 概述
-
-金森一分钟震荡策略(Gem Forest One Minute Scalping Strategy)是一个短线量化交易策略。该策略综合运用多个指标,识别市场在1分钟时间框架下的震荡特征,据此进行长短仓位切换,实现超短线套利。
-
-### 策略原理  
-
-1. ATR指标构建上下轨,判断价格震荡范围
-2. 快慢EMA指标构建金叉死叉交易信号
-3. 双RSI指标确认金叉死叉信号
-4. 结合指标信号和价格位置,确定具体的入场点和出场点
-
-当价格低于下轨时,快慢EMA形成金叉,快线RSI上穿慢线RSI,产生买入信号;当价格高于上轨时,快慢EMA形成死叉,快线RSI下穿慢线RSI,产生卖出信号。入场后设置止损和止盈退出。
-
-### 优势分析
-
-1. 多指标组合,综合判断,可靠性较高
-2. 策略操作频率高,具有较强的盈利空间
-3. 策略回撤 pequeño 稳定性好
-4. 可在1分钟或更短周期内进行超短线套利
-
-### 风险分析  
-
-1. 超短线操作,对网络和硬件要求较高  
-2. 超短线容易造成过度交易和资金分散  
-3. 指标设置不当可能造成虚假信号
-4. 依赖特定市场环境,行情剧烈波动时容易止损
-
-针对这些风险,可以优化指标参数,调整止损止盈方式,适当限制单日最大交易次数,选择流动性好、波动率适中的交易品种等。
-
-### 策略优化方向  
-
-1. 测试不同ATR周期参数对结果的影响  
-2. 尝试不同类型的EMA,或将其中一个EMA改为其他指标  
-3. 调整RSI周期参数,或尝试其他震荡指标如KDJ、Stochastics等  
-4. 优化入场点选择方法,如结合更多因素判定趋势性等  
-5. 调整止损止盈点以优化收益风险比  
-
-### 总结  
-
-金森一分钟震荡策略充分考量了超短线量化交易的特点,指标参数设置合理,采用多指标确认和组合使用,可靠性较高,在严格控制风险的前提下,具有较强的盈利潜力,非常适合有足够运算能力和心理素质的投资者实盘验证。
-
-||
 
 ### Overview  
 
@@ -95,7 +52,6 @@ These risks can be managed by optimizing parameters, adjusting stops, limiting m
 
 This strategy fully considers the characteristics of ultra-short quantitative trading. Reasonable indicator settings, multiple confirmations and combinations ensure high reliability. With strict risk control, it has considerable profit potential and suits investors with sufficient computing power and psychological quality.
 
-[/trans]
 
 > Strategy Arguments
 

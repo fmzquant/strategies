@@ -9,71 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过快速EMA买入均线和慢速SMA卖出均线的交叉来产生买入信号,并利用ATR动态跟踪止损来实现风险控制,旨在通过少量交易超越买入持有策略。
-
-## 策略原理
-
-1. 计算快速EMA买入均线和慢速SMA买入均线,当快线上穿慢线并达到一定买入强度时产生买入信号。
-
-2. 计算快速EMA卖出均线和慢速SMA卖出均线,当快线下穿慢线时产生卖出信号。
-
-3. 使用ATR指标的N日均值乘以倍数作为动态跟踪止损位,实现风险控制。
-
-4. 在回测期间启动策略,进行买入和卖出执行。
-
-5. 每只股票优化不同的参数组合,寻找最佳参数。
-
-该策略融合了移动平均线指标判断趋势及交叉信号和ATR动态跟踪止损的优点,通过参数优化适应每个品种的特点,目标是通过少量精准交易获得超越买入持有的超额收益。
-
-## 优势分析
-
-1. 快速EMA和慢速SMA交叉产生交易信号,可以识别趋势。
-
-2. ATR止损根据市场波动调整止损位置,有效控制风险。
-
-3. 对每个股票进行参数优化,可以提高获利率。
-
-4. 简单的交易逻辑和规则,易于实施和验证。
-
-5. 回测功能完整,可以验证策略效果。
-
-6. 追求稳定超越买入持有的超额收益。
-
-## 风险分析
-
-1. 优化的参数不一定适用于未来,可能需要定期重新优化。
-
-2. EMA和SMA交叉可能产生错误信号或信号滞后。
-
-3. ATR止损可能过于激进,可以适当放宽止损范围。
-
-4. 交易频次过低,可能错过较好的交易机会。
-
-5. 需要考虑交易成本的影响。
-
-## 优化方向
-
-1. 继续测试不同的参数组合,寻找最优参数。
-
-2. 尝试引入其他指标进行信号过滤。
-
-3. 优化ATR的周期参数,平衡止损位的灵敏度。
-
-4. 评估适当放宽止损范围的效果。 
-
-5. 考虑结合机器学习等方法自动寻优参数。
-
-6. 研究增加开仓频率的效果。
-
-## 总结
-
-该移动平均跟踪止损策略,融合了均线交叉产生信号和ATR止损控制风险的优势,通过参数优化适应每个股票的特征,是一个简单实用的超买持策略思路。虽然优化的参数不保证未来效果,但该策略整体交易逻辑清晰,可实际操作性强,值得进一步改进和验证,具有很好的启发意义。
-
-|| 
 
 ## Overview 
 
@@ -136,7 +71,6 @@ The strategy combines the advantages of MA crossing for signals and ATR trailing
 ## Summary
 This moving average trailing stop strategy combines the strengths of MA crossovers for signals and ATR stops for risk control. Parameter optimization adapts it to each stock's characteristics. Although optimized parameters have no guarantee, the overall logic is simple and practical for outperforming buy and hold. Further improvements and verification are worthwhile, as the strategy has good inspirational value.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12418511300f749b8e4.png)
-[trans]
-## 概述
-
-牛市追踪系统是一个基于趋势跟踪的机械交易系统。它利用4小时图形的趋势指标来过滤交易信号,而入场则根据15分钟图形的指标来判断。主要的指标包括RSI、随机指标和MACD。该系统的优点是多时间框架的组合可以有效过滤假信号,同时利用更低时间框架的指标来获取较精确的入场时机。但该系统也存在一些风险,比如容易产生过度交易和假突破的问题。
-
-## 原理
-
-该系统的核心逻辑是结合不同时间框架的指标来识别趋势方向和入场时机。具体来说,4小时图形的RSI、随机指标和EMA均要符合条件,来判断总体趋势方向。这可以有效过滤掉多数的噪音。同时15分钟图形的RSI、随机指标、MACD和EMA也要同向看涨或看跌,来确定具体的入场时机。这样可以找到较好的买入卖出点位。当4小时和15分钟的判断都符合时,该系统才会发出交易信号。
-
-## 优势
-
-1. 多时间框架组合,可以有效过滤假信号,识别主要趋势
-2. 15分钟细节指标,可以获取比较精确的入场时机  
-3. 指标组合使用RSI、随机指标、MACD等主流技术指标,容易理解,also易于优化
-4. 采用mStop盈、止损、追踪止损等严格的风险管理手段,可以有效控制单笔交易的风险
-
-## 风险
-
-1. 过度交易风险。该系统对短期时间框架比较敏感,可能会产生大量的交易信号,导致过度交易
-2. 假突破风险。短期指标判断可能会发生误判,产生假突破信号
-3. 指标失效风险。技术指标本身存在一定的局限性,在极端行情中可能会失效
-
-对应地,可以从以下几个方面来优化该系统:
-
-1. 调整指标参数,使之更适合不同市场环境
-2. 增加过滤条件,以减少交易频率,防止过度交易
-3. 优化止盈止损策略,使之更符合市场波动范围
-4. 测试不同的指标组合方案,寻找最优解
-
-## 总结
-
-牛市追踪系统整体来说是一个非常实用的趋势跟踪机械交易系统。它利用多时间框架的组合指标来识别行情趋势和关键入场时机。通过合理的参数设置和持续的优化测试,该系统可以适应大部分行情环境,达到稳定盈利的效果。但我们也要意识到其中的一些潜在风险,采取积极的措施来防范和化解这些风险。
-
-||
 
 ## Overview
 
@@ -77,7 +43,6 @@ Accordingly, the system can be optimized from the following aspects:
 
 Overall, the Bull Market Tracking System is a very practical trend following mechanical trading system. It uses a combination of multi-timeframe indicators to identify market trends and key entry timing. With reasonable parameter settings and continuous optimization testing, the system can adapt to most market environments and achieve steady profits. However, we also need to be aware of some of the potential risks, and take proactive measures to prevent and mitigate these risks.
 
-[/trans]
 
 > Strategy Arguments
 

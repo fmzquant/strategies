@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8d62e983ebbddf0003.png)
-[trans]
-
-### 概述
-
-本策略基于MACD指标以及长线和平仓线,实现了货币对的长线交易。当MACD指标线穿过长线时进行开仓,当MACD指标线穿过平仓线时进行平仓。同时设置了止损策略。
-
-### 策略原理
-
-该策略使用MACD指标的快线和慢线。快线参数为12日EMA,慢线参数为26日EMA。两条均线之间差值为MACD柱状图。另外计算9日EMA作为讯号线。当MACD柱状图上穿0.04时做多,下穿0.015时平多单。同时设置了5%的止损。
-
-具体来说,策略首先计算MACD指标的快线、慢线和信号线。然后设置长线为-0.04,平仓线为0.015。如果当前MACD柱状图大于长线,进行做多;如果当前MACD柱状图小于平仓线,进行平多仓。此外,设置止损线为开仓价格的95%。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 使用MACD指标判断行情趋势,准确率较高
-2. 同时使用长线和平仓线双重过滤,避免错误信号
-3. 设置止损策略,有效控制风险
-4. 简单明了,逻辑清晰,易于理解与实施
-5. 仅需和MACD指标,资源占用低
-
-### 风险分析
-
-该策略也存在一定风险:
-
-1. MACD指标具有一定滞后性,可能错过短线机会
-2. 止损设置可能过于保守,无法持续跟踪长线趋势
-3. 参数设置需要反复测试优化,否则可能过拟合
-4. 仅适用于,其他货币对效果存疑
-
-可以通过适当调整参数、组合其他指标等方法来优化和改进。
-
-### 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的MACD参数组合,寻找更优参数
-
-   可以尝试不同长度的快线、慢线、信号线,找到更合适的组合
-
-2. 更换其他指标试探
-
-   例如RSI,KD等指标可能带来截然不同的效果
-
-3. 优化长线和平仓线参数
-
-   可以通过反复回测数据,寻找更合适的长平仓参数
-
-4. 调整止损策略
-
-   可以考虑trailing stop等方法,让止损更加动态跟踪
-
-5. 测试多种货币对
-
-   将策略运用到其他货币对,考察效果
-
-### 总结
-
-本策略overall是一个非常简单直观的长线交易策略。利用MACD指标判断行情,并设置双重过滤条件减少误交易。同时配置了止损来控制风险。该策略逻辑清晰,资源占用低,易于理解和实施,值得推荐。当然,通过参数优化、指标调整等手段,该策略还有很大的改进空间,可以使效果更加出色。
-
-||
 
 ### Overview
 
@@ -132,7 +70,6 @@ The strategy can be optimized in the following aspects:
 
 In conclusion, this is an overall very simple and intuitive  long term trading strategy. It judges market conditions using MACD indicator and sets double filter criteria to reduce false trading. Risk control is also configured through stop loss. The logic is clear and resource occupation is low. It is easy to understand and implement, worth recommending. Of course, there is still much room for improvement through parameter tuning, indicator change and other means, to make the strategy even more outstanding.
 
-[/trans]
 
 > Strategy Arguments
 

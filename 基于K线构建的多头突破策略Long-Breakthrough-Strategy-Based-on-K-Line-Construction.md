@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/984b88da5da1da1a25.png)
-[trans]
-
-## 概述
-
-本策略通过设定简单的K线形态判断规则,实现对特斯拉4小时线的长仓突破交易。策略具有实现简单、逻辑清晰、容易理解等优点。
-
-## 策略原理  
-
-策略的核心判断逻辑基于如下4条K线形态规则:
-
-1. 当前K线最低价低于开盘价 
-2. 当前K线最低价低于上一根K线的最低价
-3. 当前K线收盘价高于开盘价
-4. 当前K线收盘价高于上一根K线的开盘价和收盘价
-
-当同时满足以上4条规则时,进行做多方向的开仓操作。
-
-此外,策略还设定了止损位和止盈位,当价格触发止盈或止损条件时,进行平仓操作。
-
-## 优势分析
-
-该策略具有以下一些优势:
-
-1. 使用的K线判断规则非常简单和直接,容易理解,也容易实践。
-2. 完全基于价格实体判断,没有使用过于复杂的技术指标,回测效果直接。
-3. 实现代码量很小,运行效率高,容易进行优化和改进。
-4. 可通过参数调整,自由设置止损止盈条件,控制风险。
-
-## 风险分析  
-
-需要注意的风险主要有:  
-
-1. 使用固定数量开仓,没有考虑仓位管理,可能存在超量交易的风险。
-2. 没有设置过滤器,在震荡行情中可能会产生过多无效交易。 
-3. 回测数据不足,可能对策略效果判断产生偏差。
-
-可通过如下方法减轻风险:
-
-1. 加入仓位管理模块,根据资金规模动态调整交易数量。
-2. 增加交易过滤条件,避免在震荡盘中无序开仓。
-3. 收集更多历史数据,扩大回测时间长度,提高结果可靠性。
-
-## 优化方向  
-
-该策略可优化的方向包括:
-
-1. 增加仓位管理模块,根据资金使用比例确定交易规模。
-2. 设计止损止盈追踪机制,实现弹性出场。
-3. 增加交易过滤模块,避免无效交易。
-4. 利用机器学习方法自动优化参数。
-5. 支持多品种套利交易。
-
-## 总结
-
-本策略通过简单的K线形态判断规则实现做多突破交易,虽然存在一定改进空间,但从简单性和直接性考量,该策略是一个非常适合初学者理解和使用的长仓策略。通过不断优化,可以使策略效果更加出色。
-
-|| 
 
 ## Overview  
 
@@ -122,7 +65,6 @@ Potential optimization directions for the strategy include:
 
 This strategy realizes long breakthrough trading using simple K-line pattern rules. Although there is some room left for improvement, from the perspective of simplicity and directness, it is a very suitable long position strategy for beginners to understand and use. With continuous optimizations, the strategy performance can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

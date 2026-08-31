@@ -9,49 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略结合EMA和累积成交量指标,根据两者的交叉情况判断行情趋势,产生买入和卖出信号。属于典型的跟踪趋势策略,追踪较长线级别的市场方向。
-
-### 策略原理
-
-计算50日EMA均线,以及100日累积成交量指标。当EMA从下向上突破累积成交量时,产生买入信号做多;当EMA从上向下跌破累积成交量时,产生卖出信号做空。
-
-在持仓过程中,设置固定止损和止盈 exiting 策略。止损设定为入场价格的 8% 下方;止盈设定为入场价格的8%上方,并在价格触及止盈点时平仓一部分仓位。
-
-### 优势分析
-
-该策略结合趋势指标EMA和资金流指标累积成交量,充分利用价格和成交量信息,可以有效识别中长线趋势。固定止盈止损策略直接高效,有利锁定部分利润并控制风险。
-
-可自由调整EMA周期参数,适应不同品种。可做多做空,实现线性交易。回测数据显示,在趋势行情中,策略表现良好。
-
-### 风险分析
-
-该策略过于依赖均线指标,在区间震荡行情中容易产生误信号被套牢。固定止盈止损也可能造成过早离场或止损过大。仅考虑价格和成交量信息,而未考虑其他因素。
-
-可以适当扩大均线参数,减少误信号。也可以引入波动率、RSI等指标辅助判断。优化止盈止损机制,例如引入追踪止损、动态止盈等方式。
-
-### 优化方向
-
-1. 测试优化EMA参数组合,寻找最优参数。
-
-2. 引入其他技术指标,形成指标组合策略。
-
-3. 应用机器学习预测价格趋势,提高EMA效果。
-
-4. 优化止盈止损策略,结合追踪止损、动态止盈等机制。
-
-5. 引入资金管理模块,动态调整仓位。
-
-6. 针对品种特性调整参数,形成策略组合。
-
-### 总结
-
-该策略整合EMA和成交量指标,判断中长线趋势的思路清晰。但过度依赖均线和固定止盈止损也存在问题。加入更多指标判断并优化止盈止损策略,可以提高策略稳定性和盈利空间。总体来说,其提供了利用价格和成交量信息进行趋势跟踪的思路。
-
-||
 
 ### Overview
 
@@ -93,7 +50,6 @@ Expanding the moving average periods could reduce false signals. Additional indi
 
 The strategy's idea of combining EMA and volume for trend identification is clear. But overreliance on moving averages and fixed exits has flaws. Adding more judgement indicators and optimizing exits can improve robustness. Overall it provides an idea of using price and volume data for trend tracking.
 
-[/trans]
 
 > Strategy Arguments
 

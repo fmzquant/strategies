@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/aa006380fc13f74d82.png)
-[trans]
-
-## 概述
-
-这是一个利用支点作为入场信号的量化交易策略。它会计算出上升支点和下降支点,一旦价格突破这些支点,就会启动长仓或短仓。
-
-## 策略原理
-
-该策略主要基于支点反转理论。它会首先计算出左侧N根K线和右侧M根K线的支点。然后实时监控价格是否突破这些支点。
-
-当价格突破上升支点时,说明ranchang力量已经不足以继续推高价格,这时做空可以获得较好收益。当价格突破下降支点时,说明空头力量已耗尽,此时做多可以获得较好收益。
-
-具体来说,该策略通过ta.pivothigh和ta.pivotlow函数计算出上升支点和下降支点。然后比较当前最高价是否突破上升支点,最低价是否突破下降支点。如果突破,则启动相应的做多做空策略。
-
-此外,该策略还使用止损来控制风险。具体做法是,当价格突破支点后,立即下单,同时设置止损位于支点另一侧,这样可以最大程度避免失败的single导致亏损扩大。
-
-## 优势分析
-
-这种基于支点反转的策略具有以下几个优势:
-
-1. 支点反转信号较为可靠,胜率较高
-2. 风险控制到位,止损设置合理
-3. 易于实现,代码简洁
-4. 适用于不同品种,灵活性较好
-
-## 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 支点可能发生失效,导致错误信号
-2. 突破支点后可能出现回调,造成止损被触发
-3. 交易频率可能较高,交易费用是一种隐性成本
-4. 效果与品种、参数设置有关,需要调优
-
-为了降低风险,可以考虑以下几点:
-
-1. 优化左右侧K线数量,确保支点计算更加可靠
-2. 适当放宽止损范围,避免止损过密
-3. 设置最小盈利目标,减少频繁反复交易
-4. 测试不同品种和参数,找到最佳配置
-
-## 优化方向
-
-该策略还有进一步优化的空间:
-
-1. 结合其他指标判断支点突破的可靠性
-2. 增加机器学习模型判断价格趋势
-3. 利用高频数据提升交易信号灵敏度 
-4. 增加仓位管理模块,根据条件动态调整仓位
-5. 接入详细账户模块,计算真实交易费用
-
-这些优化可以提高策略的胜率、盈利水平、稳定性。
-
-## 总结
-
-综上所述,这是一个基于支点反转理论的量化交易策略。它利用价格突破支点作为交易信号,同时使用止损机制控制风险。该策略易于实现,适用面广,是一种实用的量化交易策略。但也存在一定的风险,需要进一步测试和优化,在实际使用中找到最佳配置。
-
-|| 
 
 ## Overview  
 
@@ -124,7 +66,6 @@ These optimizations could improve the win rate, profitability, and stability of 
 
 In summary, this is a quantitative trading strategy based on the pivot reversal theory. It uses price breakthrough pivot points as trading signals while adopting stop loss to control risks. This strategy is easy to implement and widely applicable, making it a practical quantitative trading strategy. But it also bears some risks and needs further testing and optimization to find the optimal configuration in real trading.
 
-[/trans]
 
 > Strategy Arguments
 

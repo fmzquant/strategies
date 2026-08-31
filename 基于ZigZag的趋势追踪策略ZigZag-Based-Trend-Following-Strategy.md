@@ -11,66 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/195b667574c43be95b7.png)
 
-[trans]
-
-
-## 概述
-
-该策略利用ZigZag指标判断趋势方向,在趋势确认后进行趋势追踪,属于趋势跟踪策略。
-
-## 策略原理
-
-该策略主要通过ZigZag指标判断价格的趋势方向。ZigZag指标能够过滤市场噪音,判断出主要的价格波动方向。当价格创出新高或新低时,ZigZag就会发出交易信号。 
-
-具体来说,策略首先计算ZigZag值,当价格创出更高的高点时,ZigZag为该高点价格;当价格创出更低的低点时,ZigZag为该低点价格。这样,ZigZag就能清晰地反映价格的主要波动方向。 
-
-策略根据ZigZag值判断趋势方向。当ZigZag上涨时,表明处于上涨趋势;当ZigZag下跌时,表明处于下跌趋势。策略在ZigZag发生转折时开仓,以跟踪趋势方向。
-
-具体来说,策略在ZigZag转折形成新高时开多单,在ZigZag转折形成新低时开空单。平仓条件为ZigZag再次转折反转。这样就实现了基于ZigZag判断趋势的自动交易策略。
-
-## 策略优势分析
-
-- 利用ZigZag指标判断趋势,能有效过滤市场噪音,准确判断主要趋势方向。
-- ZigZag转折时机点精确,容易形成较优的入场时机。
-- 实现了完全的趋势追踪策略,不需要其它复杂指标或模型支持。
-- 策略逻辑简单清晰,容易理解和修改。
-- 可通过参数调整自由控制策略的交易频率。
-
-## 风险分析
-
-- ZigZag对中短线牛熊转换不敏感,可能错过较快的反转。
-- 追踪趋势策略,无法应对趋势反转带来的亏损。
-- 无法限制单笔损失大小,存在较大的单笔损失风险。
-- 策略仅基于一个指标,可能存在过拟合风险。
-
-可通过以下方法降低风险:
-
-- 组合其他指标判断趋势反转风险。
-- 适当缩短持仓时间,及时止损。
-- 增加资金管理模块,限制单笔损失大小。
-- 增加机器学习模型,提高策略鲁棒性。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损策略,以控制单笔亏损风险。可以设置移动止损或挂单止损。
-
-2. 增加趋势反转判断机制。可以加入MACD、移动平均线等指标,在判断到趋势反转时关闭仓位。
-
-3. 加入重入模块。在趋势延续时,可以适当加仓,以便获利更多。
-
-4. 增加机器学习模型。可以训练LSTM等深度学习模型,辅助ZigZag判断趋势方向。
-
-5. 优化资金管理机制。可以根据回撤或相关性理论优化仓位大小。
-
-6. 全面优化参数设定。可以通过历史回测和参考专业书籍优化参数,如ZigZag的周期长度等。
-
-## 总结
-
-该策略利用ZigZag指标判断趋势方向,实现了基于趋势的交易策略。策略逻辑简单清晰,容易实现。但也存在单指标依赖、趋势反转风险等问题。我们可以从止损、辅助指标、重入模块、机器学习等方面进行多维度优化,使策略更稳健、合理。在参数优化和风险控制到位后,该策略可以成为中长线跟踪趋势的有效工具。
-
-||
 
 
 ## Overview
@@ -129,7 +69,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy identifies trend direction by ZigZag and trades the trend. The logic is simple and easy to implement. But risks like single indicator reliance and trend reversal exist. We can optimize via stop loss, auxiliary indicators, re-entry, machine learning models etc. to make it more robust and rational. With proper parameters and risk controls, it can effectively track medium-long term trends.
 
-[/trans]
 
 > Strategy Arguments
 

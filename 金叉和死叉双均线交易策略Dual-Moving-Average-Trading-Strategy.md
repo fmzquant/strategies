@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13a7f8609e313a6c793.png)
 
-[trans]
-
-### 概述
-
-双均线交易策略通过计算不同周期的指数移动平均线,形成快线和慢线,并观察它们的金叉和死叉形态来产生交易信号。当快线从下方上穿慢线时,做多;当快线从上方下穿慢线时,做空。该策略捕捉了均线的趋势反转点,是一种较为常见的趋势跟踪策略。
-
-### 策略原理
-
-双均线交易策略的核心指标是计算快线和慢线。快线指短周期的指数移动平均线,默认参数为12日线;慢线指长周期的指数移动平均线,默认参数为26日线。指数移动平均线的计算公式为:
-
-EMA(t) = (C(t) - EMA(t-1)) * SF + EMA(t-1)
-
-其中,C(t)为当日收盘价,SF为smoothing factor 平滑因子。指数移动平均线与普通算术移动平均线的区别在于,指数移动平均线赋予了最近数据更大的权重,可以更快速地响应价格变化。
-
-双均线策略的交易规则为:
-
--  当快线从下方上穿慢线时,即golden cross金叉形成,做多入场;
-- 当快线从上方下穿慢线时,即dead cross死叉形成,做空入场;
-- 快线和慢线发生背离时,平仓离场。
-
-通过capture监控均线的交叉形态,及时反应市场供需关系和趋势的变化,实现盈利。
-
-### 优势分析
-
-双均线交易策略作为一种较为成熟的技术指标策略,具有以下优势:
-
-1. 思路清晰,易于理解和实现;
-2. 对市场供需关系的判断准确,胜率较高;
-3. 有效过滤市场噪音,捕捉主要趋势;
-4. 可在不同市场和时间框架下应用;
-5. 可与其他技术指标组合,丰富策略;
-6. 资金利用率高,符合大资金需求。
-
-### 风险分析
-
-双均线交易策略也存在一定的缺陷和风险:
-
-1. 无法应对剧烈行情,如快速熊市;
-2. 容易产生假信号和频繁小幅震荡带来密集交易;
-3. 需优化参数以适应不同品种和时间周期;
-4. 无法判断趋势反转的合理位置。
-
-针对以上风险,可通过调整均线周期参数、引入附加过滤器等方法进行优化,确保策略更稳健。
-
-### 优化方向 
-
-双均线交易策略可从以下几个方面进行优化:
-
-1. 引入MACD指标判断强弱趋势,避免弱势震荡行情的错误交易;
-2. 增加交易 volumes 作为确认指标,避免趋势反转的假突破;
-3. 结合其它如布林线、K线等技术指标,设定更精确的入场退场条件;
-4. 利用机器学习方法如LSTM自动优化均线参数,实现更好的市场适应性。
-
-### 总结
-
-双均线交易策略通过捕捉均线的金叉与死叉交易机会,判断价格趋势反转点,实现稳定盈利。该策略优势在于简洁清晰、资金效率高,是量化入门的首选策略。但也存在一定缺陷如产生假信号等,须引入更多指标进行优化,使其能更好地适应特定品种和交易环境。整体而言,双均线交易策略是一个非常实用的技术指标策略。
-
-||
 
 ### Overview
 
@@ -138,7 +80,6 @@ The dual moving average strategy can be improved from the following aspects:
 
 The dual moving average trading strategy captures trading opportunities from EMA golden crosses and death crosses to determine trend reversal points for steady profits. With the advantages of simplicity, capital efficiency and ease of implementation, it is a preferred choice for algorithmic trading beginners. But it also has certain flaws like generating false signals. More indicators should be introduced to optimize it for specific markets and environments. Overall speaking, it is a very practical and useful technical indicator strategy.
 
-[/trans]
 
 > Strategy Arguments
 

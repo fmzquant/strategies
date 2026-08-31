@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12a66b2a151b370f89c.png)
-[trans]
-该策略是一个手动买卖警报工具,可以设置买入价格、卖出价格等参数,当价格触发条件时,会发出买入或卖出的警报提醒。
-
-### 策略概述
-
-本策略是一个非自动化的手动买卖工具。它可以生成“警报”,以便用户在预先设置的价格点买入和卖出。用户可以设置以下内容:
-
-1. 时间周期
-2. 入场价格和入场类型(止损或限价)  
-3. 目标价格  
-4. 止损价格
-
-通过改变周期值和设置值,可以轻松测试该策略。
-
-### 策略原理
-
-1. 用户首先设置时间周期,在该时间周期内策略生效。  
-2. 然后设置买入类型是止损或限价,以及具体的买入价格。
-3. 再设置目标价格和止损价格。  
-4. 当价格触发买入条件时,会发出买入警报。比如选择止损,当价格低于设置的买入价时,会发出买入警报。
-5. 在持仓期间,如果触发目标价格,会发出卖出警报。如果触发止损价,也会发出卖出警报。
-
-通过这种方式,用户可以手动根据警报信息来决定交易时机,无需自动下单,更加灵活。
-
-### 策略优势分析
-
-1. 该策略最大的优势在于操作灵活,用户可以根据自己的判断来决定是否买入或卖出,而不是自动交易,控制力更强。
-2. 设置止损和目标价位后,可以有效控制风险,防止大幅亏损。
-3. 可以通过调整买入条件和参数测试不同的交易策略,对策略进行优化。
-4. 作为一个工具来辅助手动交易,可以发挥很好的作用,提高交易效率。
-
-### 策略风险分析
-
-1. 该策略依赖于用户的操作判断,如果判断失误,仍然可能造成损失。
-2. 在快速变动的市场中,警报消息可能会落后,导致交易决策失误。
-3. 如果没有及时关注和操作,可能错过最佳的交易时机。
-4. 参数设置不当也会影响策略效果,需要反复测试优化。
-
-为降低风险,建议采用止损来限制亏损; 在关键时刻要密切关注市场,及时操作;进取多轮测试,优化参数。
-
-### 策略优化方向  
-
-1. 可以设置更复杂的止损机制,如移动止损、振荡止损等方式。
-2. 可以加入更多类型的交易条件,如突破买入等。
-3. 可以增加仓位管理机制,如加仓或减仓。  
-4. 可以加入更多过滤条件,避免错交易。
-5. 可以连接telegram或微信,使用消息推送的方式发出警报。
-6. 可以保存参数设置成模板,快速调整测试。
-
-通过这些优化,可以使该工具对用户更加友好和智能,提高手动交易的效率。
-
-### 总结
-
-本策略作为一个辅助手动交易的工具,最大优势在于操作灵活,可以完全根据用户判断确定交易时机。相比自动交易策略,具有更大的控制力。同时,也提供了参数设置功能,可以方便用户测试不同的交易策略,对交易理念进行验证,可谓一箭多雕。当然,作为一个工具,也需要用户不断优化与改进,使其可以适应更复杂的交易需要,发挥更大的作用。
-
-
-||
 
 This strategy is a manual buy and sell alert tool that can set buy price, sell price and other parameters. When the price triggers the conditions, it will issue a buy or sell alert.
 
@@ -122,7 +65,6 @@ With these optimizations, the tool can be more user-friendly and intelligent to 
 
 As a tool to assist manual trading, the biggest advantage of this strategy is flexible operation, which allows users to fully determine trading opportunities based on their own judgment, compared to automated trading strategies. At the same time, it also provides parameter setting functions for users to easily test different trading strategies, verify trading ideas, and serve multiple purposes. Of course, as a tool, it also requires users to continuously optimize and improve it so that it can adapt to more complex trading needs and play a greater role.
 
-[/trans]
 
 > Strategy Arguments
 

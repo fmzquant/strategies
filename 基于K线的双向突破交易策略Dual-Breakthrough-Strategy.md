@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/133e58ba984f14c0c26.png)
-[trans]
-
-## 概述
-这是一个基于K线的双向突破交易策略。它会在当前K线收盘价相对前两根K线的最高价和最低价都有突破时,产生交易信号。
-
-## 策略原理
-该策略的基本逻辑是:
-
-1. 定义公牛信号:`bull = close > open and close > math.max(close[2], open[2]) and low[1] < low[2] and high[1] < high[2]`。也就是说,当前K线的收盘价大于开盘价,并且大于前两K线的最高价,而当前K线的最低价又低于前一根K线的最低价。
-
-2. 定义熊信号:`bear = close < open and close < math.min(close[2], open[2]) and low[1] > low[2] and high[1] > high[2]`。也就是说,当前K线的收盘价小于开盘价,并且小于前两K线的最低价,而当前K线的最高价又高于前一根K线的最高价。
-
-3. 当触发公牛信号时,做多;当触发熊信号时,做空。
-
-4. 可设置止损位和止盈位。
-
-该策略利用了双向突破的特征,通过突破关键价格区间来判断趋势的变化,从而产生交易信号。
-
-## 优势分析
-这是一个相对简单直观的突破策略,具有如下优势:
-
-1. 逻辑清晰,易于理解实现,门槛不高。
-
-2. 突破是常见的交易信号,容易形成趋势。
-
-3. 同时做多做空,可以双向交易,增加获利机会。
-
-4. 可灵活设置止损止盈,控制风险。
-
-## 风险分析
-该策略也存在一些风险:
-
-1. 双向交易风险较大,需要密切监控。
-
-2. 突破容易被套,可能形成虚假信号。
-
-3. 参数设置不当可能导致过度交易。
-
-4. 止损止盈设置不当也会影响盈利空间。
-
-可以优化参数,适当筛选品种来降低风险。
-
-## 优化方向
-该策略可以从以下几个方面进行优化:
-
-1. 优化参数,如突破周期参数、止损止盈幅度等。
-
-2. 增加过滤条件,避免套利、震荡等行情的错误信号。
-
-3. 结合趋势指标,避开盘整范围。
-
-4. 优化资金管理,改进仓位算法。
-
-5. 不同品种参数不一样,可以分别测试优化。
-
-## 总结
-这是一个基于双向突破思想的简单策略。具有逻辑清晰、易于实现的优点,也存在一定的监控风险。通过参数和条件优化,可望获得较好的策略效果。
-
-||
 
 ## Overview
 This is a dual breakthrough trading strategy based on K-line. It will generate trading signals when the closing price of the current K-line has a breakthrough relative to the highest and lowest prices of the previous two K-lines.  
@@ -125,7 +66,6 @@ The strategy can be optimized in the following aspects:
 
 ## Summary  
 This is a simple strategy based on the dual breakout concept. It has the advantage of clear logic and easy implementation, but also carries certain monitoring risks. Better strategy results can be expected through parameter and condition optimization.
-[/trans]
 
 > Strategy Arguments
 

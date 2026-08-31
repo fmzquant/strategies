@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12b73ac72bb20c02590.png)
 
-[trans]
-
-## 概述
-
-该策略旨在实现多时间框架下的止盈管理。策略同时采用百分比止盈和主时间框架以上的关键价格区域止盈,实现更精准、更有效的止盈管理。
-
-## 策略原理
-
-该策略首先引入波浪趋势指标,根据指标金叉做多信号入场。
-
-在止盈管理方面,策略采用两种止盈方式:
-
-1. 百分比止盈:根据入场价格的一定百分比设置多个止盈价格。
-
-2. 多时间框架止盈:在日线和4小时线图上绘制均线,取这些均线的价格作为止盈价格。
-
-对于百分比止盈,策略设置了4个不同百分比的止盈价格。当价格触及每个止盈价格时,会按设置的百分比部分平仓。
-
-对于多时间框架止盈,策略在日线和4小时线上分别绘制100日均线、200日均线。取这些均线的价格作为止盈价格,当价格触及时平仓。
-
-此外,策略还设置了止损价格。当价格低于止损价格时,全部平仓。
-
-整个策略通过组合使用百分比止盈和多时间框架止盈,实现了更全面和精细的止盈管理。
-
-## 策略优势
-
-- 采用百分比止盈,根据固定比例止盈,避免过早止盈或止盈不足。
-
-- 借助多时间框架分析,设置更精确的止盈价格,止盈点选取更优。
-
-- 多层次止盈,可以分批止盈,降低风险。
-
-- 设置止损价格,有效控制下行风险。
-
-- 组合使用百分比止盈和多时间框架止盈,止盈更全面和精细化。
-
-## 风险分析
-
-- 百分比止盈依赖参数设置,如果参数设置不当,会导致止盈过早或过晚。
-
-- 多时间框架分析依赖均线指标,均线具有一定滞后性,可能出现背离。
-
-- 止损位置设置不当可能造成不必要的止损。
-
-- 需要适当优化参数,使百分比止盈和多时间框架止盈达到最佳匹配。
-
-## 优化方向 
-
-- 可以测试更多的均线指标,选择更优的均线作为关键止盈价格。
-
-- 可以尝试模型预测的方法,预测价格关键区域作为止盈价格。
-
-- 可以引入更多止盈规则,如期望止盈比例、移动止盈等,使止盈更全面。 
-
-- 可以测试不同持仓时间下的最优百分比止盈参数。
-
-- 可以通过回测优化止盈参数,使得总体风险收益比更优。
-
-## 总结
-
-本策略通过组合百分比止盈和多时间框架止盈实现了灵活和精确的止盈管理。策略具有止盈点选择更优、止盈更全面等优势。同时也存在参数设置、止损位置等问题。后续可从优化止盈参数、增加更多止盈规则等方面进行改进,使策略的止盈系统更加完善。
-
-||
 
 
 ## Overview
@@ -136,7 +73,6 @@ The whole strategy combines percentage take profit and multi timeframe take prof
 
 This strategy realizes flexible and precise take profit management by combining percentage take profit and multi timeframe take profit. The strategy has advantages like better take profit price selection and more comprehensive take profit. It also has problems like parameter setting and stop loss placement. Follow-up improvements can be made by optimizing take profit parameters, adding more take profit rules etc., to make the take profit system more robust.
 
-[/trans]
 
 
 > Strategy Arguments

@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/3802daea1d1af88c0e.png)
-[trans]
-### 概述
-
-双均线金叉死叉止盈止损策略是一种趋势跟踪策略。它利用 Stochastic 指标的两个移动平均线 K 和 D 的金叉和死叉来判断买入和卖出时机。同时,它使用止盈止损来控制风险。
-
-### 策略原理  
-
-该策略的核心指标是 Stochastic 的快线 K 和慢线 D。快线 K 是 Stochastic 的原始值的 3 日简单移动平均线。慢线 D 是快线 K 的 3 日简单移动平均线。当快线上穿慢线时,产生金叉信号,表示多头趋势来临,可以买入。当快线下穿慢线时,产生死叉信号,表示空头趋势来临,可以卖出。
-
-此外,该策略还设置了一个条件,就是只有当 Stochastic 的值在过冷区(低于 20)或过热区(高于 80)时,才产生交易信号。这可以过滤掉一些假信号。 
-
-在入市后,该策略使用止盈止损来控制风险。止盈距离 entry price 为 120 个 tick,止损距离 entry price 为 60 个 tick。当价格触及止盈或止损水平时,会退出当前头寸。
-
-### 策略优势  
-
-- 利用 Stochastic 指标判断趋势方向,准确率较高
-- 设置过冷区和过热区条件,可以过滤假信号
-- 使用止盈止损,可以限制单笔损失,控制整体风险
-
-### 策略风险  
-
-- Stochastic 在横盘整理的市场中容易产生假信号
-- 止盈止损距离固定,无法动态跟踪市场变化
-- 无法限制最大回撤
-
-风险解决方法:
-
-- 增加其他指标进行组合,确定趋势
-- 设置动态止盈止损
-- 增加最大回撤退出机制
-
-### 策略优化方向
-
-- 利用 MACD、KDJ等其他指标和 Stochastic 组合,提高信号准确率
-- 根据ATR设置动态止盈止损距离
-- 增加最大回撤退出条件
-- 优化止盈止损系数,寻找最佳参数
-
-### 总结  
-
-双均线金叉死叉止盈止损策略,是一种简单实用的趋势跟踪策略。它利用 Stochastic 的双均线系统判断入市时机,并使用止盈止损控制风险。该策略效果显著,容易实现,适合量化交易。通过进一步优化,可以成为稳定盈利的算法交易策略。
-
-||
 
 ### Overview
 
@@ -95,7 +52,6 @@ Risk Solutions:
 
 The Dual Moving Average Crossover Strategy with Stop Loss and Take Profit is a simple and practical trend following strategy. It uses Stochastic's dual moving average system for entry timing and stop loss/take profit for risk control. This effective and easy-to-implement strategy is suitable for algorithmic trading. Further optimizations can turn it into a stable profitable trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

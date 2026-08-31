@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1456c09e111d8b01eb1.png)
 
-[trans]
-
-### 策略名称
-RSI Bullish/Bearish Divergence Trading Strategy
-
-### 概述
-该策略利用 RSI 指标识别常规和隐藏的多头和空头背离信号,根据异常背离信号决定做多做空。
-
-### 策略原理
-当价格创新高价时,RSI 并未创新高点构成多头异常背离,视为卖出信号。当价格创新低点时,RSI 并未创新低点构成空头异常背离,视为买入信号。常规背离是价格与 RSI指标之间的明显的背离。隐藏背离是价格与 RSI 指标之间的较隐蔽的背离。根据常规和隐藏的多头空头背离信号决定做多或者做空。
-
-### 优势分析
-1. 异常背离信号具有较高的可靠性,胜率较高。
-2. 同时识别常规和隐藏的多空头背离,覆盖面广。
-3. RSI 指标参数可调整,适用于不同市场环境。
-
-### 风险分析 
-1. 隐藏背离信号可能误判的概率较大。 
-2. 需要人工review过滤误判信号。
-3. 效果与RSI参数设定有关。
-
-### 优化方向
-1. 优化 RSI 参数,寻找最佳参数组合。
-2. 增加机器学习算法,自动识别真实信号。  
-3. 结合更多指标验证信号可靠性。
-
-### 总结
-该策略识别 RSI 异常背离交易信号,根据常规和隐藏的多空头背离决定做多做空,具有较高的胜率。通过优化 RSI 参数,增加其他验证指标,可进一步提高策略效果。
-
-||
 
 ### Strategy Name  
 RSI Bullish/Bearish Divergence Trading Strategy
@@ -69,7 +39,6 @@ When price makes a new high and RSI fails to make a new high, it forms bullish d
 ### Summary  
 This strategy identifies RSI divergence trading signals based on regular and hidden bullish/bearish divergence to determine long or short positions, which provides relatively higher winning rate. Further improvements on strategy effectiveness could be achieved by optimizing RSI parameters, adding other validating indicators.
 
-[/trans]
 
 > Strategy Arguments
 

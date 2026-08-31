@@ -11,69 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11b1c922d9d4407e7d7.png)
 
-[trans]
-
-## 概述
-
-该策略通过采用多种不同类型的移动平均线,对价格走势进行多角度分析判断,形成综合评级信号,以决定开仓方向。策略具有getParameter优势:1)多种移动平均线形成评级体系,提高判断准确性;2)可以灵活调整评级体系的参数,适应不同品种;3)可配置入场评级条件,控制风险。
-
-## 策略原理  
-
-1. 该策略总共采用了17种不同类型的移动平均线,包括SMA、EMA、ALMA、SMMA、LSMA、VWMA、DEMA、HMA、KAMA、TEMA、ZLEMA、TRIMA、T3等。
-
-2. 对每种移动平均线,判断其与收盘价的关系,如果移动平均线低于收盘价,给予1分评级,如果高于收盘价,给予-1分评级。如果无法判断,则不给分。
-
-3. 将所有移动平均线的评级结果进行求和,再除以可以评级的移动平均线数量,得到综合评级。
-
-4. 比较综合评级与入场评级阈值,决定开仓方向。如果综合评级达到做多阈值,做多;如果达到做空阈值,做空。
-
-5. 采用不同周期的移动平均线,可以判断短期和长期趋势;采用不同类型的移动平均线,可以提供更丰富的技术指标参考,实现多角度判断。
-
-## 策略优势
-
-1. 多种移动平均线评级,提高准确性
-
-   相比单一或几种移动平均线,该策略采用17种不同的移动平均线进行评级,可以从更多角度判断市场趋势方向,减少某一种指标的偏差带来的不准确判断。多种指标参与评级,可以提高最终结果的可靠性。
-
-2. 评级体系的参数可配置,适应不同品种
-
-   评级体系中的移动平均线周期数、评级阈值都可以通过参数进行设置,使策略可以灵活适应不同交易品种的特点,有利于优化。
-
-3. 可配置入场评级条件,控制风险
-
-   策略允许配置做多做空的入场评级阈值。当综合评级达到阈值时才发出信号,可以避免在市场不明朗时的错误开仓。合理的入场阈值设置有助于减少不必要的交易次数,控制风险。
-
-## 风险及解决方法
-
-1. 单一品种效果可能不佳
-
-   该策略的参数设置针对总体市场设计,对某一特定品种可能不太适用。解决方法是针对不同品种单独优化参数。
-
-2. 多空混乱市场下出错率较高
-
-   当市场处于多空混乱状态时,该策略容易产生错误信号。解决方法是在这种市场状况下,提高入场评级阈值,减少交易次数。
-
-3. 长期运行可能需要定期优化参数
-
-   市场环境持续变化,固定的参数设置会导致策略效果变差。建议每隔一段时间重新测试优化下参数,保证策略效果。
-
-## 优化方向
-
-1. 增加其他指标参与评级,如波动率指标、成交量指标等,提供更多维度的判断依据。
-
-2. 对不同品种分别测试参数优化,提高策略适应力。
-
-3. 设置回测周期较长,如半年、一年,观察参数效果维持时间。
-
-4. 研究不同移动平均线在不同周期下的实际效果,选择组合更优。
-
-5. 尝试机器学习方法以自动优化参数。
-
-## 总结
-
-该策略通过建立多种移动平均线的评级体系,实现了多角度判断市场趋势的效果。策略具有可配置参数的优势,可以灵活适应不同品种,也可以通过参数调整来控制策略的风险态度。此外,评级体系可以不断优化和完善,继续提高策略表现。总体来说,该策略利用了多种技术指标的效果,形成较强的趋势跟踪能力。
-
-|| 
 
 ## Overview
 
@@ -134,7 +71,6 @@ This strategy analyzes price trends from multiple angles by adopting various typ
 ## Conclusion
 
 The strategy establishes a rating system of multiple moving averages to achieve multi-angle judgment of market trends. It has the advantage of configurable parameters to adapt flexibly to different varieties, and to control strategy risks through parameter tuning. In addition, the rating system can be continuously optimized and improved to further enhance strategy performance. In general, the strategy utilizes the effects of multiple technical indicators to form strong trend tracking capability.  
-[/trans]
 
 > Strategy Arguments
 

@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c0780eb24242549a20.png)
-[trans]
-
-## 概述
-
-此策略结合使用玻尔带指标和平均真实波幅(ATR)指标,形成具有尾随止损功能的突破交易策略。当价格穿过指定标准差的玻尔带上轨或下轨时,发出交易信号。同时,使用ATR指标计算止损位和止盈位,实现盈亏比例控制。此外,策略还具有时间过滤和参数优化等功能。
-
-## 策略原理
-
-第一步,计算中轨线、上轨线和下轨线。中轨线为价格的简单移动平均线SMA,上下轨线为价格标准差的整数倍。当价格从下轨线向上突破时,做多;从上轨线向下突破时,做空。
-
-第二步,计算ATR指标。ATR指标反映价格的平均波动幅度。根据ATR数值设定长仓止损位和短仓止损位。同时,根据ATR数值设定止盈位置,实现盈亏比例控制。
-
-第三步,使用时间过滤器,只在指定的时间段交易,避免重大新闻事件的剧烈波动。
-
-第四步, trailing stop机制。根据最新ATR位置,实时调整止损位,锁定更多利润。
-
-## 优势分析
-
-1. 玻尔带指标本身反映价格中枢,比单一移动平均线更有效;
-
-2. ATR止损使每单盈亏比例可控,有效控制风险;
-
-3. trailing stop可根据市场波动自动调整,锁定更多利润;  
-
-4. 策略参数丰富,可自定义个性化组合。
-
-## 风险分析
-
-1. 大盘震荡调整时,容易出现多次小额亏损;
-
-2. 玻尔带突破做反转,可能失败;
-
-3. 夜间和重大新闻时段交易风险大,须注意避开。
-
-对策:
-1. 严格遵守风险管理原则,控制单笔亏损;
-2. 优化参数,提高胜率;
-3. 使用时间过滤器规避高风险时段。
-
-## 优化方向  
-
-1. 测试不同参数组合优化配置
-2. 增加热度指标如OBV选时
-3. 增加机器学习模块优化
-
-## 总结
-
-本策略综合运用玻尔带指标判断趋势中枢和突破方向,ATR指标计算止盈止损保证盈亏比,以及尾随止损锁定利润。策略优势在于高度可定制,风险可控,适合短线 Intraday Trading。参数优化和机器学习可进一步提升策略胜率和盈利能力。
-
-||
 
 ## Overview  
 
@@ -110,7 +60,6 @@ Counter measures:
 
 This strategy combines Bollinger bands to determine trend equilibrium and breakout directions, ATR to calculate stop loss and take profit to control risk/reward ratio, and trailing stop to lock in profits. Its advantages lie in high customizability, controllable risks, and suitability for short-term intraday trading. Further improvements on win rate and profitability can be achieved through parameter optimization and machine learning.
 
-[/trans]
 
 > Strategy Arguments
 

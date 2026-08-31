@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/853da84e606c7b0e20.png)
 
-[trans]
-#### 概述
-该策略结合了相对强弱指数(RSI)和移动平均线聚散指标(MACD)两个技术指标,利用RSI判断超买超卖情况,MACD判断趋势方向,形成一套完整的多空策略。当RSI超买时发出卖出信号,MACD快慢线交叉向上时平仓;当RSI超卖时发出买入信号,MACD快慢线交叉向下时平仓。止损点的设置通过计算该品种平均涨跌幅的一半来确定。
-
-#### 策略原理
-1. 计算RSI指标,判断超买超卖:
-   - 当RSI大于70,且由上向下穿越70线时,发出卖出信号
-   - 当RSI小于30,且由下向上穿越30线时,发出买入信号
-2. 计算MACD指标,判断趋势方向:
-   - 当MACD快线由下向上穿越慢线时,发出平仓卖出仓位的信号
-   - 当MACD快线由上向下穿越慢线时,发出平仓买入仓位的信号
-3. 止损点的设置:
-   - 计算该品种平均涨跌幅,取其一半作为止损点
-
-通过RSI判断超买超卖情况,在行情反转初期介入;利用MACD判断趋势方向,在趋势初期平仓,能够较好地把握趋势。两个指标互为补充,形成完整的交易系统。
-
-#### 策略优势
-1. 结合了超买超卖和趋势跟踪两种策略,能够在行情反转初期介入,趋势形成后及时平仓,有效避免行情反复震荡导致的亏损。
-2. 止损点的设置基于品种的波动特性,能够控制回撤,提高资金利用效率。
-3. 代码逻辑清晰,使用了函数化编程方式,易于理解和优化。
-
-#### 策略风险
-1. RSI和MACD参数的选择对策略性能影响较大,不同品种和周期可能需要进行参数优化。
-2. 在市场发生极端行情时,如突发事件导致的快速变盘,该策略可能遭受较大回撤。
-3. 策略在震荡市中表现可能不佳,会出现频繁交易,导致较高的交易成本。
-
-#### 策略优化方向
-1. 对RSI和MACD的参数进行优化,找到最适合当前品种和周期的参数组合,提高策略的稳定性和盈利能力。
-2. 加入更多过滤条件,如交易量、波动率等指标,减少频繁交易,提高信号质量。
-3. 引入仓位管理模块,根据市场趋势和自身绩效动态调整仓位,控制回撤。
-4. 结合其他策略,如趋势跟踪、均值回复等,形成多策略组合,提高策略适应性。
-
-#### 总结
-该策略通过RSI判断超买超卖情况,MACD判断趋势方向,形成了一套完整的多空交易系统。策略逻辑清晰,优势明显,同时也存在一定的风险。通过参数优化、加入过滤条件、仓位管理以及与其他策略结合等方式,可以进一步提高该策略的性能,使其成为一个稳健的交易策略。
-
-|| 
 
 #### Overview
 This strategy combines two technical indicators: Relative Strength Index (RSI) and Moving Average Convergence Divergence (MACD). It uses RSI to determine overbought and oversold conditions, and MACD to identify trend direction, forming a complete long-short strategy. When RSI is overbought, a sell signal is generated, and the position is closed when MACD fast line crosses above the slow line. When RSI is oversold, a buy signal is generated, and the position is closed when MACD fast line crosses below the slow line. The stop-loss point is set by calculating half of the average price change of the asset.
@@ -81,7 +45,6 @@ By using RSI to determine overbought and oversold conditions, the strategy enter
 
 #### Summary
 This strategy uses RSI to determine overbought and oversold conditions and MACD to identify trend direction, forming a complete long-short trading system. The strategy logic is clear, and the advantages are obvious, while there are also certain risks. Through parameter optimization, adding filtering conditions, position management, and combining with other strategies, the performance of this strategy can be further improved, making it a robust trading strategy.
-[/trans]
 
 
 

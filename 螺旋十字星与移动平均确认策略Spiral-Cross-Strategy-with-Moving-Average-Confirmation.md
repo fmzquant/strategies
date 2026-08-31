@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7930d0ac79ef6b2a21.png)
-[trans]
-
-### 概述
-
-该策略结合了螺旋指标和移动平均线来识别价格趋势的方向和强度,以生成潜在的做多和做空信号。当螺旋正指标线突破螺旋负指标线时,会在图表上标记该交叉点,如果收盘价高于移动平均线则产生做多信号;而当螺旋负指标线突破螺旋正指标线时,如果收盘价低于移动平均线则产生做空信号。
-
-### 策略原理
-
-1. 螺旋指标:包括螺旋正指标线(VI+)和螺旋负指标线(VI-)。它用于识别价格趋势的方向和强度。
-
-2. 移动平均线:使用选择的移动平均方法(SMA、EMA、SMMA、WMA或VWMA)来平滑价格数据,得到的平滑线称为“平滑线”。
-
-3. 确定做多和做空信号:当VI+线穿过VI-线时,标记该交叉点,如果收盘价高于平滑线则产生做多信号;当VI-线穿过VI+线时,如果收盘价低于平滑线则产生做空信号。
-
-### 策略优势
-
-1. 结合了趋势识别和平滑过滤的优点,可以在趋势市场中捕捉趋势,避免在震荡市场中产生错误信号。
-
-2. 螺旋指标可以有效识别趋势的方向和强度。移动平均线可以过滤掉部分噪音。
-
-3. 策略逻辑简单清晰,容易理解和实现。
-
-4. 可自定义参数,适应不同市场环境。
-
-
-### 策略风险
-
-1. 在盘整和无明确趋势的市场中,可能会产生错误信号和SERIAL停损。
-
-2. 参数设置不当也会影响策略表现。例如移动平均线长度设置过短则过滤效果差,过长则识别趋势变化滞后。
-
-3. 无法在突发事件下起到防范作用,例如重大财经事件发生后的剧烈行情变动。
-
-
-### 策略优化
-
-1. 可以引入其它指标结合使用,例如成交量指标来确定趋势可靠程度。
-
-2. 优化参数设定,平衡移动平均线的趋势跟踪性和噪音过滤性。
-
-3. 增加止损策略来控制损失。
-
-4. 利用机器学习等方法自动优化参数。
-
-5. 结合风险管理模块调整仓位。
-
-
-### 总结
-
-本策略通过简单有效地结合螺旋指标和移动平均线,实现了优秀的趋势捕捉效果。识别趋势方向的同时具有一定的噪音过滤能力,可以减少错误信号。总体来说策略逻辑简洁,使用灵活,在趋势市场中表现较好。通过引入更多过滤手段,适当优化参数设置,风险可控性能够得到进一步提高。
-
-||
 
 ### Overview
 
@@ -109,7 +57,6 @@ This strategy combines the Vortex Indicator and Moving Average lines to identify
 ### Conclusion
 This strategy effectively combines the Vortex Indicator and Moving Averages to capture trends. It identifies trend direction while having some noise filtering capability to reduce false signals. The logic is simple and flexible to use, performing well in trending markets. Further improvements in risk control can be achieved by incorporating more filters, optimizing parameters, and adding stop losses.
 
-[/trans]
 
 > Strategy Arguments
 

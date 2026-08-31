@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/572b028e132971cf04.png)
-[trans]
-
-
-## 概述
-
-多重趋势跟踪策略综合利用MACD、RSI、ATR和DEMA四个指标,识别股票的长短期趋势,进行趋势跟踪交易。该策略同时结合突破交易和趋势跟踪交易的优点,既可以捕捉较长线的趋势,又可以在短线上寻找较好的入场时机。
-
-## 策略原理
-
-### MACD交易策略
-
-MACD即移动平均聚散指标,是一种趋势跟踪型指标。MACD由快速移动平均线和慢速移动平均线组成,常用参数为快线12日EMA,慢线26日EMA,signal线为MACD的9日EMA。当MACD上穿signal时为买入信号,下穿为卖出信号。该策略采用MACD的金叉死叉来判断趋势方向。
-
-### RSI超买超卖策略
-
-RSI即相对强弱指数,反映股票的超买超卖情况。RSI通过比较一段时间内的平均收盘涨幅和平均收盘跌幅来决定 IndexError: list index out of range
-
-## 优势分析
-
-该策略综合运用MACD、RSI、ATR和DEMA四个指标,兼顾了趋势跟踪和突破交易,可以在趋势中寻找较好的入场时机,具有以下优势:
-
-1. MACD可以有效识别股价中长期趋势的方向和转折。
-
-2. RSI可以判断短期内股票是否处于超买或超卖状态,避免在趋势反转点追高杀跌。
-
-3. ATR动态调整止损线位置,可以有效控制单笔损失。
-
-4. DEMA作为辅助判断指标,可以过滤掉部分噪音。 
-
-5. 多重指标组合,可以提高交易信号的可靠性。
-
-## 风险分析
-
-该策略也存在一定的风险:
-
-1. 多重指标组合可能出现分歧,引发交易信号错误。
-
-2. ATR作为动态止损指标,在大幅波动中易被突破导致亏损。
-
-3. DEMA作为趋势滤波指标,可能过滤掉较强的短期交易机会。
-
-4. 策略参数不当可能导致交易频繁,增加交易成本和滑点损失。
-
-为控制风险,可以适当调整指标参数,同时加入其他辅助判断指标进行确认,developing quantitative trading strategies requires meticulous analysis of historical data, robust backtesting, and prudent risk management. I cannot recommend specific actions, but can suggest focusing on sound strategy development principles.
-
-## 优化方向
-
-该策略还可从以下方面进行优化:
-
-1. 测试不同参数组合,寻找最优参数。
-
-2. 增加止损策略,如移动止损、平均止损等,进一步控制风险。
-
-3. 加入更多辅助判断指标,如KDJ、布林带等,提高信号准确率。 
-
-4. 优化入场时机选择,如结合突破等策略,寻找更佳买点。
-
-5. 区分多头和空头市场,采用不同的参数。
-
-6. 按照股票特性分类建模,使策略更具适应性。
-
-## 总结
-
-多重趋势跟踪策略综合运用MACD、RSI、ATR和DEMA四个指标,实现了趋势跟踪和趋势突破的有机结合。相比单一指标策略,该策略可以提供更可靠的交易信号,回避一定的假信号。通过参数优化、止损策略、辅助判断等方式,可以进一步提升策略效果。该策略适用于对趋势轮动能力要求较高的量化交易,是一种值得长期跟踪和优化的策略思路。
-
-|| 
 
 ## Overview
 
@@ -139,7 +73,6 @@ The strategy can also be optimized in the following aspects:
 
 The multiple trend tracking strategy integrates MACD, RSI, ATR and DEMA four indicators, achieving organic combination of trend tracking and trend breakout. Compared with single indicator strategies, this strategy can provide more reliable trading signals and avoid certain false signals. Through parameter optimization, stop loss strategies, auxiliary judgements etc., the strategy performance can be further improved. This strategy is suitable for quantitative trading requiring higher trend switching capabilities and is a promising strategy idea worth long-term tracking and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

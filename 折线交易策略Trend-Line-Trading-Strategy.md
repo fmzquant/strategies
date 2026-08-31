@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ecf36d4089ec2d0dd1.png)
-[trans]
-
-
-## 概述
-
-该策略基于突破关键支撑和阻力的思想,通过识别价格图表中的关键上升趋势线和下降趋势线,在价格突破趋势线时进行交易。策略简单可靠,适用于趋势明确的市场环境。
-
-## 策略原理
-
-该策略通过计算左侧和右侧柱形线的高点和低点,识别价格上升和下降的关键点,从而得到支撑线和压力线。 Specifically:
-
-1. 使用`pivothigh()`和`pivotlow()`函数检测关键高点和低点。
-
-2. 根据高低点绘制支撑线和压力线的方程。
-
-3. 当价格突破压力线时,做多;当价格突破支撑线时,做空。
-
-4. 根据趋势方向选择做多或做空。
-
-5. 可选择是否在突破时直接平仓换向。
-
-6. 可选择使用止损、止盈、尾随止损。
-
-7. 可选择Swing点止损、ATR止损、固定止损。
-
-该策略通过简单的趋势线据突破交易,兼顾趋势跟踪和趋势反转,简单实用。
-
-## 优势分析
-
-- 策略较为简单,容易理解和实现。
-- 利用突破 Theory,有一定的概率优势。
-- 可设定止损止盈,控制风险。
-- 可实现趋势跟踪或趋势反转。
-- 可优化参数,适用于不同市场环境。
-
-## 风险分析
-
-- 突破信号可能存在误报。
-- 止损点设置不当可能增加亏损。
-- 反转操作存在被套的风险。
--  parameter tuning需要经验,不当设置可能失效。
-- 纯趋势突破,对震荡行情不适用。
-
-可以通过优化止损策略、评估突破信号质量、评估反转时机等方法降低风险。
-
-## 优化方向
-
-- 评估突破信号的可靠性,提高准确率。
-- 结合volume,加强突破信号。
-- 优化止损策略,适应市场波动。
-- 评估最佳反转时机。
-- parameter tuning。
-- 评估多因子模型。
-- 评估与其他indicator的结合使用。
-
-## 总结
-
-该策略整体简单实用,通过简单的趋势突破来捕捉价格趋势,可控的风险。策略可以通过多方面优化,适用于更多市场情况,整体是一个非常实用的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -143,7 +83,6 @@ Risks can be reduced via optimizing stop loss strategy, evaluating signal qualit
 
 The strategy is simple and practical overall, capturing price trends through simple trend breakouts and manageable risks. It can be optimized across multiple dimensions to suit more market conditions, an very practical trend following strategy overall.
 
-[/trans]
 
 > Strategy Arguments
 

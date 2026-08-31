@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/133e922f3a57fcaaf22.png)
-[trans]
-### 概述
-
-这是一个利用 Bollinger Bands 和相对强弱指数 (RSI) 进行组合交易的策略。它的核心思想是在 RSI 达到超买或超卖区域时,结合 Bollinger Bands 的上下轨,产生买入和卖出信号。
-
-### 策略名称
-
-BB-RSI 组合交易策略
-
-### 策略原理
-
-该策略首先计算常规的 Bollinger Bands,包含中轨、上轨和下轨。中轨是一定周期内的收盘价简单移动平均线,上下轨分别是中轨以上下一个标准差。
-
-同时,该策略计算 RSI 指标。RSI 通过比较一段时间内的平均收盘涨幅和平均收盘跌幅,来判断当前市场是否处于超买或超卖状态。
-
-当 RSI 小于低点(默认30),意味着市场处于超卖状态;当 RSI 大于高点(默认70),意味着市场处于超买状态。
-
-该策略所做的是,在 RSI 达到超卖区时,如果收盘价低于 Bollinger Bands 下轨,产生买入信号;在 RSI 达到超买区时,如果收盘价高于 Bollinger Bands 上轨,产生卖出信号。
-
-### 优势分析
-
-这种组合策略最大的优势在于能够发现市场的转折点。当股价处于 Bollinger Bands 广度较大的区域,说明市场波动较大,这时通过 RSI 判断市场是否超买超卖,可以定位到反转的时机。
-
-另一个优势是参数设置灵活。Bollinger Bands 和 RSI 指标都有可调整的参数,交易者可以根据自己的需求进行优化。
-
-### 风险分析
-
-该策略最大的风险在于产生的信号较少。尤其是在市场长期单边行情的时候,容易出现过拟合的情况。此时 RSI 很难达到超买超卖的状态,无法产生交易信号。
-
-另一个风险是参数设置的困难。 Bollinger Bands 和 RSI 都需要设置周期等参数,选择不当可能导致策略效果不佳。这需要交易者对市场有充分的理解,否则应该谨慎使用该策略。
-
-### 优化方向 
-
-为了获得更多交易机会,可以适当调整 RSI 的超买超卖线。例如可以把超卖线提高至40,超买线下调至60,这样就容易形成信号。
-
-另一个方向是引入趋势判断机制,避免在市场单边行情中盲目反转。例如可以计算长周期均线的方向,作为过滤条件,只在均线方向符合的情况下产生信号。
-
-### 总结
-
-BB-RSI 组合策略利用 Bollinger Bands 判定支撑阻力,RSI 判断超买超卖,在反转点产生信号。它可以有效定位市场的转折点,是一种典型的反转交易策略。通过参数优化和规则完善,该策略可以成为量化交易的有力工具。
-
-||
 
 ### Overview
 
@@ -93,7 +51,6 @@ Another direction is to introduce a trend judgment mechanism to avoid blind reve
 
 The BB-RSI combination strategy uses Bollinger Bands to determine support and resistance, and RSI to determine overbought and oversold status, generating signals at reversal points. It can effectively identify turning points in the market and is a typical reversal trading strategy. Through parameter optimization and rule refinement, this strategy can become a powerful tool for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,79 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/106a0a3b55b4b738b3e.png)
 
-[trans]
-
-## 概述
-
-月度趋势突破策略是一个基于pine脚本的TradingView指标。该策略利用自适应移动平均线、趋势线突破以及RSI指标的组合,确定每月仅一次的多头入场时机。当RSI指标显示超买时,平仓退出。
-
-## 策略原理
-
-1. 定义变量lastEntryMonth记录上一个入场月份。currentMonth获得当前月份。
-
-2. 设置TRAMA自适应移动平均线参数length=99,来平滑价格并判断趋势方向。
-
-3. 设置参数length_trend=14,绘制高点的趋势线upper。当价格上穿趋势线时,判断为突破。 
-
-4. 计算RSI指标参数rsiLength=14,判断超买超卖。
-
-5. 入场逻辑:当收盘价高于TRAMA,并且收盘价突破上轨时,若上月未入场,则做多入场。
-
-6. 出场逻辑:当RSI大于70时,平仓。
-
-7. 绘制TRAMA曲线、RSI的超买线,完成策略。
-
-该策略综合了三大主流技术指标,判断趋势、momentum和超买超卖情况,寻找每月仅一次的较低风险做多机会。同时,限制只有价格突破上升趋势才入场,避免在盘整区间无效操作。
-
-## 优势分析
-
-1. 多种指标组合,综合判断市场状态,提高决策的准确性。
-
-2. 只在月度时间框架突破时入场,避免频繁交易。
-
-3. 利用自适应移动平均线判断趋势方向,能快速捕捉转折。
-
-4. 结合超买指标避开市场高位,有效控制风险。
-
-5. 简单直观的入场出场条件,容易掌握。
-
-6. 可根据自身需要调整参数,获得更好的策略优化。
-
-## 风险分析
-
-1. 突破失败带来的whipsaw风险。入场后价格再次跌破上轨,可能造成损失。
-
-2. 趋势突破时点选择不佳,对应会选择到顶部附近高位入场。
-
-3. 指标参数设置不当,导致指标产生误导信号。
-
-4. 突破仅 Reflect recent market volatility. Consider adaptive stops/position sizing.
-
-5. Monitor risk/reward. Consider only trading pullbacks or adding other confirmation filters.
-
-6. Validate indicators on multiple timeframes. Use higher timeframes to identify trend and lower for entry.
-
-7. Backtest over different market conditions. Optimize parameters to match strategy to market type.
-
-## 优化方向
-
-1. 添加Volume,MA成交量指标的确认,避免低量的假突破。
-
-2. 在RSI超买平仓时,考虑部分利润止损,留余下持仓。
-
-3. 优化移动平均线参数,自适应变化,更好跟踪趋势转换。
-
-4. 在突破点前后设立区间,避免直接在转折点高位入场。
-
-5. 增加更多过滤条件,如通道指标、波动率指标等,提高决策准确性。
-
-6. 分级入场,价格继续突破新增阻力线时,可加仓。
-
-## 总结
-
-月度趋势突破策略综合考虑了趋势、能量和极限状况等多种因素。它在月线时间框架判断趋势方向,并结合更低时间框架的突破执行入场。同时,运用RSI指标有效控制交易风险。该策略以简单的逻辑寻找每月一次较优做多机会。它既考虑趋势跟踪,也重视风险管理。通过参数优化,可针对不同市场环境进行调整。总体来说,月度趋势突破策略是一个既简单实用,又注重风险控制的交易策略。
-
-|| 
 
 ## Overview
 
@@ -155,7 +82,6 @@ The strategy combines 3 major technical indicators to find low risk long entries
 
 The Monthly Trend Breakout Strategy analyzes trend, momentum and extremes. It determines trend on monthly timeframe but enters on shorter timeframe breakouts. RSI oversees risk management. Simple logic identifies optimized monthly long entries. It balances trend following and risk controls. Parameter optimization adapts it to different market conditions. Overall, this is a simple yet robust strategy combining usability and effective risk management.
 
-[/trans]
 
 > Strategy Arguments
 

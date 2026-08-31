@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c470ca20be4d22242c.png)
-[trans]
-
-### 概述
-
-该策略是基于有限交易量(FVE)指标的改进。FVE是一个纯交易量指标,不考虑价格变化,只关注资金流入和流出。该策略在FVE的基础上,根据波动率对交易量进行分色,从而判断市场情绪和资金流向。
-
-### 策略原理  
-
-该策略通过计算日内波动率`Intra`和日间波动率`Inter`,结合对应的标准差`Vintra`和`Vinter`,得到波动率阈值`CutOff`。然后计算价格中值、前一中值和交易量的差额`MF`,判断资金流入(正值)或流出(负值)。如果`MF`超过`CutOff`则表示交易量和波动率同向,市场存在明显热情,颜色设为绿色;如果`MF`低于负的`CutOff`则表示交易量和波动率同向,市场存在明显悲观,颜色设为红色;否则颜色为蓝色。最后判断颜色设置多空方向。
-
-### 优势分析
-
-该策略结合了交易量和波动率两个指标,可以更准确判断市场情绪。相比单一指标,具有判断的稳定性和可靠性优势。另外,该策略判断标准专门针对波动率设计,能很好适应不同行情的变化。
-
-### 风险分析  
-
-该策略依赖交易量和波动率指标,当两者出现分歧时会影响判断。此外,参数设定对结果影响较大,不同品种和参数组合效果差异大,需要针对性优化。
-
-### 优化方向
-
-可以考虑结合其他指标辅助判断,例如MACD、 OBV等,避免交易量和波动率带来的噪点。此外,可以设计自适应参数机制,根据不同行情动态调整参数,提高稳定性。或者可以针对具体品种进行回测优化,找到最佳参数组合。
-
-### 总结  
-
-该策略整合交易量和波动率指标的优势,判断市场热情高低。相比单一指标,具有更高的判断准确性和稳定性。但参数设定和品种差异对结果影响显著,仍需进一步优化调整,才能适应多种交易环境。总体来说,该策略理论基础合理,具有很大的改进潜力。
-
-|| 
 
 ### Overview
 
@@ -62,7 +35,6 @@ Consider combining other indicators to assist in judgment, such as MACD, OBV, et
 
 The strategy integrates the advantages of trading volume and volatility indicators to judge the level of market enthusiasm. Compared with single indicators, it has higher judgment accuracy and stability. However, parameter settings and variety differences have significant effects on the results, and further optimization and adjustment are still needed to adapt to various trading environments. Overall, the strategy has a reasonable theoretical basis and great potential for improvement.
 
-[/trans]
 
 > Strategy Arguments
 

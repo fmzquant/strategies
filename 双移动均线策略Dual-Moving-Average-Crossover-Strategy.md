@@ -9,46 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-这是一个基于双移动均线的交易策略。它会根据快速移动均线和慢速移动均线的交叉关系来判断行情趋势和产生交易信号。当快速均线上穿慢速均线时,产生买入信号;当快速均线下穿慢速均线时,产生卖出信号。
-
-## 原理
-
-该策略主要利用了移动均线的趋势跟踪功能。移动均线是根据一定周期内的历史收盘价计算出的平均价,它能滤波日内小幅波动,反映较大时间周期内的价格趋势。快速均线使用较短周期,能更快速地响应价格变动;慢速均线使用较长周期,代表长期趋势。快速均线上穿慢速均线表示短期行情向上突破长期趋势,说明价格在启动上涨趋势;相反,快速均线下穿慢速均线则说明长期趋势受到冲击,价格可能下跌。
-
-该策略通过设置不同周期长度的移动均线,利用均线间的交叉形成交易信号。当短周期均线上穿长周期均线时,说明短期行情向好,产生买入信号;当短周期均线下穿长周期均线时,说明短期行情转弱,产生卖出信号。策略代码通过 plot 函数绘制均线,trend变量判断均线的交叉关系,并在交叉发生时输出买入和卖出信号。
-
-## 优势
-
-- 使用双均线交叉判断行情趋势变化,是一种简单有效的技术指标
-- 均线能有效过滤市场噪音,避免被套
-- 调整快慢均线周期参数可以适应不同行情
-- 可视化地表示趋势信号和变化点
-- 容易理解,参数调整灵活
-
-## 风险
-
-- 双均线交叉策略存在时滞,可能错过价格转折点
-- 不适用于震荡行情,会产生更多错误信号
-- 均线周期参数不当可能导致过于灵敏或迟钝
-- 需要配合其他指标来确定背景趋势和操作时机
-
-## 优化方向
-
-- 评估不同均线周期参数的收益效果,选择最优参数
-- 增加其他指标过滤信号,如通道指标、K线形态等
-- 结合波动率指标优化止损止盈策略
-- 基于机器学习算法自动优化参数和交易规则
-- 增加算法交易模块,实现自动下单
-
-## 总结
-
-双均线交叉策略利用了移动均线的趋势跟踪功能,通过快慢均线的交叉来判断行情方向和产生交易信号。该策略简单易行之余,也存在一些问题。通过调整参数、配合其他指标以及算法优化等方式可以弥补不足之处,使其成为一个稳定可靠的交易系统。总体来说,双均线策略是一个非常经典的也易于操作的趋势跟踪策略。
-
-|| 
 
 
 ## Overview
@@ -88,7 +48,6 @@ This strategy generates trading signals by setting moving averages of different 
 
 The dual MA crossover strategy utilizes the trend tracking ability of moving averages and generates signals based on their crosses. While being simple and intuitive, it also has some flaws. These can be overcome by parameter tuning, adding confirmations, algorithm optimization etc. to turn it into a robust system. Overall, the dual MA strategy is a very classic and easy-to-use trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18fe6a324151e70da81.png)
 
-[trans]
-
-#### 概述
-本策略运用MACD指标构建长线交易信号,在MACD指标低于特定水平时做多,利用反转交易机会获利。
-
-#### 策略原理
-当MACD指标线低于 SIGNAL信号线且MACD绝对值低于-0.00025时产生做多信号。做多后,如果MACD线重新上穿SIGNAL线则平仓。
-
-本策略利用MACD指标检测超卖区间,根据均线理论,股价短期内存在反转概率,根据这个概率建立做多信号。
-
-#### 策略优势
-1. 利用MACD指标判断超卖区间,具有一定的可靠性。
-2. 简单的交易信号和规则,容易实施。
-3. 长线持仓,不频繁交易,降低交易成本和滑点损失。
-
-#### 策略风险
-1. 反转失败风险。如果没有反转就会亏损。
-2. 参数不当导致失效。MACD参数设置不当会导致产生错误信号。
-
-可以通过优化参数减小此风险。
-
-#### 策略优化
-1. 优化MACD参数,找到最佳参数组合。
-2. 测试不同持仓时间,找到最佳持仓周期。
-3. 增加止损机制。
-
-#### 总结
-本策略利用MACD指标判断超卖区间形成的反转概率建立做多信号,通过长线持仓方式获利。MACD参数优化和止损机制增加可靠性。总体来说,利用较为简单的指标和规则构建了一个易于理解和实施的量化策略。
-
-||
 
 #### Overview
 This strategy uses the MACD indicator to build long position trading signals when the MACD is below a certain level to take advantage of mean reversion opportunities.  
@@ -69,7 +39,6 @@ This risk can be reduced through parameter optimization.
 #### Summary
 This strategy utilizes the probability of mean reversions from oversold levels identified by the MACD indicator to generate long signals, and profits through long holding periods. Optimizing MACD parameters and adding stop losses improves reliability. In summary, it uses relatively simple indicators and rules to construct an easy to understand and implement quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

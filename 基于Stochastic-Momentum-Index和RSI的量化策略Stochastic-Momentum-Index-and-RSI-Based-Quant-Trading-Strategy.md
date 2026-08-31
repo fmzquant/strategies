@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7c36ba23ce5ae9051e.png)
-[trans]
-
-## 概述
-
-本策略主要基于Stochastic Momentum Index(SMI)和相对强弱指数(RSI)这两大指标。此外还加入了颜色过滤器和K线实体过滤器作为辅助判断条件。依据SMI和RSI指标的多空信号,结合过滤条件发出交易信号。该策略可以有效发现市场中的短线交易机会。
-
-## 策略原理
-
-本策略核心依赖 SMI 和 RSI 两个指标进行判断。其中 SMI 主要判断股票是否超买超卖,RSI 则判断股票的相对强弱。当两者同时给出买入信号时,进行买入操作。具体逻辑如下:
-
-1. SMI 超卖(低于下限),视为买入信号
-2. RSI 低于阈值,视为买入信号  
-3. 当 SMI 超卖和 RSI 同时低于对应的阈值时,发出买入信号
-4. 空头信号判断逻辑类似
-
-此外,本策略还设置了双signals模式。该模式要求SMI和RSI必须同时发出信号才进行交易。这可以有效减少假信号。
-
-另外,本策略还加入颜色过滤器和K线实体过滤器。这两个过滤器要求K线实体较大,并且最后一个K线的收盘价高于开盘价。这可以进一步避免交易假突破。
-
-## 策略优势
-
-1. 利用SMI判断是否超买超卖,RSI判断相对强弱,双重确认可以减少假信号
-2. 设置双信号模式,可以大幅减少无效交易
-3. 颜色过滤器和K线实体过滤器可有效过滤假突破
-4. 策略运行逻辑清晰简单
-5. 大部分参数都可自定义设置
-
-## 策略风险及优化
-
-1. SMI和RSI作为单独指标使用时,可能会产生较多假信号,需谨慎看待
-2. 双信号模式下,如果参数设定不当,可能错过较好的交易机会
-3. 可测试不同周期参数下策略收益情况,寻找最佳参数组合
-4. 可通过模拟或回测评估具体阈值参数的设定
-5. 可考虑结合更多过滤器优化策略
-
-## 总结
-
-本策略整合了SMI和RSI两个指标的信号,通过双重确认发出交易指令。同时设置颜色过滤器和K线实体过滤器可过滤假突破。该策略运行逻辑简单清晰,大部分参数可自定义设置。通过参数调整可获得更好的策略收益表现。
-
-||
 
 ## Overview
 
@@ -89,7 +49,6 @@ Moreover, color filter and candle body filter are incorporated. These filters re
 This strategy integrates the signals from both SMI and RSI indicators and generates trading orders through dual confirmation. Color filter and candle body filter are also implemented to filter out false breakouts. The strategy has simple and clean logic flow, and most parameters are customizable. Better return can be achieved by tuning the parameters accordingly.  
 
 
-[/trans]
 
 > Strategy Arguments
 

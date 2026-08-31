@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12c44941732c6348bc0.png)
-[trans]
-
-## 概述
-
-该策略的目的是追踪趋势性股票(或其他趋势性市场)的低风险策略, 旨在实现最小回撤率(例如,在撰写本文时,AAPL仅有约1.36%的回撤率,FB约有1.93%的回撤率,而SPY为0.80%的回撤率,所有这些都保持有利可图)。
-
-## 策略原理  
-
-该策略利用200日移动均线,自定义布林带,52周期加权移动平均TSI和ADX强度。 
-
-买入信号是:收盘价高于200日移动平均线 + 5根K线收盘价高于上部自定义布林带 + TSI为正 + ADX高于20。
-
-由于回测证明,该策略仅适用于趋势性股票,已删除一些卖出/做空条件,仅采用做多订单。  
-
-
-## 优势分析  
-
-该策略的优势在于回撤率低,风险最小,适用于大部分趋势性股票的低风险操作,根据测试数据显示收益高且回测期间仅AAPL有1.36%的最大回撤,FB有1.93%最大回撤。
-
-通过组合使用布林带,MA均线,TSI指标等多种技术指标,并设置ADX判断趋势强弱,在判断趋势向上时买入,企图抓住趋势股票的中长线上涨机会。相比单一指标判断,该策略综合运用多种技术指标,判断更加准确可靠,风险更低。
-
-该策略还包含止损策略,TSI指标方向转变时及时止损,最大程度锁定收益,有效控制风险。
-
-## 风险分析  
-
-该策略主要面临的风险有两个:
-
-1. 突发事件风险。某些黑天鹅事件可能导致股票大幅震荡下跌,无法止损。
-
-2. 趋势结束风险。股票从趋势进入盘整时,可能产生较大回撤。
-
-针对风险一可以设置更严格的止损机制,或人工干预止损。针对风险二可以结合更多判断因素检测趋势结束,例如增加成交量指标等。
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:  
-
-1. 增加止损策略,设置更精确的止损点,更好控制风险。
-
-2. 优化均线参数,测试不同参数组合的稳定性。
-
-3. 增加量能指标等判断系统,更准确判断趋势的开始和结束。
-
-4. 测试更长的时间周期参数,适应更长线的操作。
-
-## 总结  
-
-该策略通过ADX判断趋势强度,TSI指标判断趋势方向,布林带判断突破,移动平均线判断长期趋势,多种指标相互验证,判断买入时机。止损策略可以有效控制风险。该策略适合长线追踪趋势股,回撤率低,收益较高,具有一定优势。但仍需针对风险进行优化,使策略更为稳健。
-||
 ## Overview  
 
 The idea of this strategy is to be a low risk strategy on trending stocks (or any other trending market), aiming to achieve minimal drawdown (e.g. at time of writing AAPL only had ~1.36% draw down, FB ~1.93% draw down and the SPY was 0.80% draw down and all remained profitable).  
@@ -102,7 +53,6 @@ The strategy can also be optimized in the following aspects:
 ## Conclusion  
 
 This strategy determines buying opportunities by using ADX to determine trend strength, TSI indicators to determine trend direction, Bollinger Bands to determine breakouts, and moving averages to determine long-term trends. The verification of multiple indicators can effectively control risks. This strategy is suitable for long-term tracking of trending stocks with low drawdowns and high returns. But it still needs to be optimized for risks to make the strategy more robust.  
-[/trans]
 
 > Strategy Arguments
 

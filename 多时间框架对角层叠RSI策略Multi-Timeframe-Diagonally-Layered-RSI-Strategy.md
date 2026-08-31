@@ -9,46 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略是一个多时间框架非重绘RSI策略,仅在两个更高时间框架超卖时做多。我在BTC/USD的1分钟线上编写,但逻辑可应用于其他资产。旨在资产处于下跌趋势时盈利。
-
-## 原理
-
-对角层叠指入场和退出条件分布在不同时间框架上。通常,指标可能变得无利可图,因为在下跌趋势中,当前时间框架的超买区未被触及,而是先触及更高时间框架的超买区,然后发生回调。对角层叠策略通过对角方式减轻这一问题,即当更快时间框架超买时卖出,当更慢时间框架超卖时买入。
-
-因此,本策略是对角层叠的。我可能会创建一个单独的脚本,根据总体趋势在对角向上和对角向下之间切换,因为在延长的上涨趋势期间,该指标可能不会频繁闪烁。这在时间序列与时间框架图表上可以视为“X”形。这是值得考虑的......
-
-## 优势
-
-- 利用多个时间框架RSI指标,提高了交易信号的可靠性
-- 对角层叠入场,可在下跌趋势中获得更多机会
-- 非重绘指标,信号可靠
-- 可配置RSI参数和超买超卖界限,适应不同市场
-- 考虑交易成本,追求稳定利润而非高频交易
-
-## 风险及解决方法
-
-- RSI容易产生假信号,可适当调整参数或添加过滤条件
-- 对角层叠增加了入场难度,可降低层叠时间框架数量
-- 仅做多,需承担方向性风险,可考虑均衡做多做空
-- 利用固定止损来控制单笔损失
-
-## 优化方向
-
-- 增加趋势判断,在趋势下跌时使用对角层叠,趋势上涨时使用对角向上
-- 优化RSI参数,寻找最佳参数组合
-- 增加Volume,MA等指标过滤,提高信号质量 
-- 增加做空策略,使策略能在所有市场中获利
-- 优化止损策略,降低回撤
-
-## 总结
-
-本策略overall是一个非常有效的下跌趋势交易策略。利用多时间框架RSI指标和对角层叠入场方式,能在下跌阶段捕捉反弹机会。同时非重绘特性也提高了信号的可靠性。通过优化参数,添加过滤器和做空策略,可以将其打造成一个适应任何市场的强大策略。
-
-||
 
 ## Overview
 
@@ -87,7 +47,6 @@ Thus this strategy is diagonally layered. I may create a separate script that to
 
 Overall this is a very effective downtrend trading strategy. Using multi-timeframe RSIs and diagonal layering provides opportunities to catch bounces in downtrends. Non-repainting also improves signal reliability. With parameter optimization, adding filters and a short strategy, it can be made into a robust strategy for any market.
 
-[/trans]
 
 > Strategy Arguments
 

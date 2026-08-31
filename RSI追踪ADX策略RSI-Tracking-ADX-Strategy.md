@@ -9,104 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-RSI追踪ADX策略是一个融合RSI指标和ADX指标的长线趋势跟踪策略。该策略通过RSI指标判断行情超买超卖与否,结合ADX指标判断当前趋势强弱,实现在趋势向上且不超买的情况下进行长仓入场,在趋势转弱或超买时进行平仓退出的长线持仓策略。
-
-## 策略原理
-
-该策略主要使用RSI指标和ADX指标的组合来判断入场和退出时机。
-
-入场条件:
-1. 20日SMA上涨;
-2. ADX比前一天上涨超过0.2,表示趋势增强;
-3. RSI小于85,避免超买;
-
-或者:
-
-1. 20日SMA上涨;  
-2. ADX上涨但幅度小于0.2,表示趋势温和;
-3. RSI小于50,有反弹空间。
-
-退出条件:
-1. RSI大于75,表示超买;
-2. ADX小幅上涨,趋势温和; 
-
-或者:
-
-1. RSI大于75,表示超买;
-2. ADX大幅上涨,趋势强劲;
-
-或者:
-
-20日SMA转为下跌。
-
-该策略通过RSI判断超买超卖,结合ADX判断趋势,实现在趋势向上不超买情况下买入,在超买或趋势转弱时退出,整体实现追踪中长线向上趋势的效果。
-
-## 策略优势
-
-该策略主要有以下优势:
-
-1. 结合RSI和ADX两个指标,可以更准确判断趋势和超买超卖情况,入场出场更为精确。
-
-2. 通过ADX判断趋势强弱,可以减少因震荡市弱势出场。
-
-3. RSI设置较宽松的参数,追踪中长线趋势,减少频繁交易。
-
-4. 策略操作简单,容易实施,适合长线持仓。
-
-5. 可配置参数灵活,可调整的空间大。
-
-## 策略风险
-
-该策略也存在一定风险:
-
-1. ADX指标存在滞后,可能错过趋势转换点导致损失扩大。
-
-2. 股价出现断崖式下跌时,止损可能较迟触发,扩大损失。
-
-3. 入场时RSI参数设置过宽松,可能导致超买持仓时间过长。 
-
-4. ADX参数设置过敏感,可能造成趋势较弱时错误出场。
-
-5. 大盘异常时,个股也可能出现反向运作。
-
-对应风险管理:
-
-1. 适当缩短ADX参数,使其更灵敏。
-
-2. 设置更严格的止损线,避免扩大损失。
-
-3. 适当收紧RSI参数,防止超买持仓时间过长。
-
-4. ADX参数不要设置过敏感,防止错误出场。
-
-5. 在大盘发生转折时,适当暂停策略,手动干预。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化RSI参数设置,测试不同周期参数对策略效果的影响。
-
-2. 优化ADX参数组合,测试DI和ADX周期参数对策略捕捉趋势能力的影响。
-
-3. 测试加入MACD等其他指标作为辅助判断。
-
-4. 测试不同均线组合优化入场时机。
-
-5. 测试加入止盈止损策略,提高策略收益风险比。
-
-6. 对大盘指数状态进行判断,在大盘转折时手动暂停策略。
-
-## 总结
-
-RSI追踪ADX策略整体是一个较为简单实用的长线趋势跟踪策略。它同时结合RSI和ADX两个指标的优势,在趋势判断和超买超卖判断上较为准确。策略操作简单,容易实施,也具有一定的参数优化空间。但也需要注意ADX滞后问题和止损设置问题。总体来说,该策略非常适合追踪中长线趋势,可以为投资者带来稳定收益。
-
-|| 
 
 
 ## Summary 
@@ -211,7 +113,6 @@ The strategy can be optimized by:
 
 The RSI Tracking ADX strategy is an effective yet simple trend following strategy. It synergizes the strengths of RSI and ADX for accurate trend and overbought/oversold analysis. The logic is straightforward and easy to implement with optimization flexibility. Caution is needed against ADX lag and stop loss setting. Overall it is suitable for medium to long term trend tracking and can provide steady profits.
 
-[/trans]
 
 > Strategy Arguments
 

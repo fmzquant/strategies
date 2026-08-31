@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f941649f4554309390.png)
-[trans]
-
-## 概述
-
-该策略综合利用双移动均线、布林带和MACD指标,设定买入和卖出条件,对银行Nifty指数进行5分钟周期的交易。当MACD金叉且收盘价突破布林带上轨时买入;当MACD死叉且收盘价跌破布林带下轨时卖出。该策略结合多种指标优势,既能发现趋势也能定位极值点,实现高效率交易。
-
-## 策略原理  
-
-1. 设置MACD参数:快线长度12,慢线长度26,信号线长度9
-2. 计算MACD值:快线-慢线
-3. 设置布林带参数:中轨周期20,标准差倍数2  
-4. 计算布林带上下轨:中轨±标准差*倍数
-5. 买入条件:MACD金叉(上穿信号线)且收盘价大于布林带上轨
-6. 卖出条件:MACD死叉(下穿信号线)且收盘价小于布林带下轨
-7. 设置止盈止损位
-8. 进入多单:买入条件成立时做多
-9. 平多单:止盈或止损
-10. 进入空单:卖出条件成立时做空  
-11. 平空单:止盈或止损
-
-以上便是该策略的整体交易逻辑。
-
-## 优势分析
-
-这是一个非常实用的趋势策略,具有如下优势:
-
-1. MACD指标能识别趋势方向和力度  
-2. 布林带能判定超买超卖区域,与MACD指标形成互补  
-3. 双均线过滤增加判断准确性  
-4. 结合多种指标,可靠性更高  
-5. 实现止盈止损,风险可控  
-6.  Parameter可调整,适应市场变化
-
-综上,该策略充分利用各种指标的优势,判断准确,操作规范,是一种可靠、可控的趋势策略。
-
-## 风险分析
-
-尽管该策略优势明显,但仍存在一定的风险需要注意:  
-
-1. 市场出现剧烈波动时,止损可能被突破  
-2. 多种参数组合判断,存在误判风险  
-3. 短线操作频繁,交易成本较高  
-4.  Parameter设置不当,可能错过最佳操作点
-
-对策与解决方法如下:
-
-1. 严格止损,控制单笔损失  
-2. 优化Parameter,提高判断准确率  
-3. 适当调整操作周期,降低交易频次  
-4. 测试不同Parameter,找到最优参数组合
-
-## 优化方向  
-
-该策略仍有优化空间:  
-
-1. 利用机器学习技术训练最优参数  
-2. 增加自适应交易技术,优化Parameter  
-3. 结合更多指标判断,如能量指标、波动率指标等  
-4. 增加仓位管理模块,根据资金、风险等调整仓位大小  
-5. 结合公式指标或自定义指标,创新信号判断方法
-
-总体来说,该策略具有非常好的框架,通过 Parameter优化、指标创新、自适应方式等进一步完善,可成为更加强大、稳定的交易策略。
-
-## 总结
-
-该双均线布林带MACD策略充分利用各种指标判断买入卖出时机。它结合趋势识别与极值判断,操作规范,风险可控,是一种高效稳定的交易策略。通过持续优化和创新,该策略具有很大的应用前景。它为投资者在交易市场中实现稳定、可控的盈利提供了重要的技术工具。
-
-||
 
 ## Overview
 
@@ -144,7 +76,6 @@ Overall, this strategy has a robust framework. Further refinements via parameter
 
 This dual moving average Bollinger MACD strategy effectively identifies entry and exit points by combining trend identification and extremum detection. With disciplined execution, configurable risk controls and optimization potential, this is an efficient and consistent trading approach. As continued innovations enhance its capabilities, this strategy provides investors a valuable tool for achieving steady and manageable profits in financial markets.  
 
-[/trans]
 
 > Strategy Arguments
 

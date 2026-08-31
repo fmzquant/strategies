@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/33058496ab104e2706.png)
-[trans]
-
-
-## 概述
-
-该策略通过计算MACD指标的双均线交叉来判断买入和卖出时机。它会在图表上绘制箭头形状来提示交易信号。
-
-## 原理
-
-该策略首先计算快线(EMA 12期)、慢线(EMA 26期)和MACD差值。然后根据快线和慢线的金叉死叉以及MACD差值的正负来判断买入和卖出时机:
-
-1. 当快线上穿慢线(金叉)且MACD差值上穿0时为买入信号 
-2. 当快线下穿慢线(死叉)且MACD差值下穿0时为卖出信号
-
-为了过滤假信号,代码中还判断了前一个K线的信号情况。只有当前一个K线是反向信号时(买入转为卖出或卖出转为买入),当前信号才会被触发。
-
-此外,代码中还绘制了箭头图形在K线上提示买入和卖出时机。
-
-## 优势
-
-该策略具有以下优势:
-
-1. 使用双均线交叉判断,可以有效过滤市场噪音,识别趋势
-2. 结合MACD差值判断,可以避免漏单和误判
-3. 使用箭头提示买卖时机,操作更明确
-4. 规则简单清晰,容易理解与复制
-
-## 风险与解决方案
-
-该策略也存在一些风险:
-
-1. 双均线交叉容易产生假信号,可能导致过度交易。可以适当调整均线参数或增加其他过滤条件来减少假信号
-2. 无法判断趋势中的震荡,可能出现亏损。可以结合趋势指标如ADX来避免这种情况
-3. 固定的买卖条件使策略 mechanize,无法适应市场变化。可以尝试机器学习等自适应方式来优化
-
-## 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 测试不同的参数组合,找到最佳的快线、慢线和MACD参数
-2. 增加入场条件,如交易量突破来过滤信号
-3. 增加止损机制来控制单笔亏损
-4. 结合VIX等波动率指标来判断风险偏好
-5. 尝试机器学习模型来代替固定规则,实现策略的自适应优化
-
-## 总结
-
-该双均线交叉箭头策略整体来说较为简单实用,通过双均线交叉判断和MACD差值过滤,可以识别中长线趋势中的买入卖出点,避免错过价格转折。箭头提示也使操作更清晰明确。后期通过参数优化、增加过滤条件等方式还可以进一步增强策略稳定性和收益率。
-
-|| 
 
 
 ## Overview  
@@ -108,7 +58,6 @@ Some ways to improve the strategy:
 
 The dual moving average crossover arrow strategy is fairly simple and practical. By using crossover of two moving averages and MACD difference filtering, it identifies entries and exits during intermediate and long term trends, avoiding missing price reversals. The arrow signals also provide clear operation guidance. Further improvements in stability and profitability can be achieved through parameter tuning, extra filters and adaptive optimization.
 
-[/trans]
 
 
 

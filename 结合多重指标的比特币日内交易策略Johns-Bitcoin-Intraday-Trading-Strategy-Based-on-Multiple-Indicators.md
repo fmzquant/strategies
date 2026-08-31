@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a9dd1fcf8d905b8da4.png)
-[trans]
-
-## 概述
-
-本策略结合RSI、MFI、Stoch RSI和MACD四个指标,实现比特币的日内交易。当多个指标同时发出买入或卖出信号时,策略才会下单,以控制风险。
-
-## 策略原理
-
-1. RSI指标用于判断市场是否超买超卖。RSI低于40时产生买入信号,高于70时产生卖出信号。
-
-2. MFI指标判断市场的资金流动。MFI低于23时产生买入信号,高于80时产生卖出信号。
-
-3. Stoch RSI指标判断市场是否超买超卖。K线低于34时产生买入信号,高于80时产生卖出信号。
-
-4. MACD指标判断市场趋势和动量。快线低于慢线且柱子为负时产生买入信号,相反则产生卖出信号。
-
-## 优势分析
-
-1. 结合四大指标,提高信号准确性,避免因单一指标失效造成损失。
-
-2. 只有当多个指标同时发出信号才会下单,可大幅降低假信号的概率。
-
-3. 采用日内交易策略,避免隔夜风险,降低资金成本。
-
-## 风险及解决方法
-
-1. 策略交易频率可能较低,存在一定的时间风险。可适当放宽指标参数,增加交易次数。
-
-2. 指标发出错误信号的概率仍然存在。可引入机器学习算法,辅助判断指标信号的可靠性。
-
-3. 存在一定的超买超卖风险。可适当调整指标参数或增加其他指标判断逻辑。
-
-## 优化方向  
-
-1. 增加自适应指标参数功能。根据市场波动度和变化速度实时微调指标参数。
-
-2. 添加止损逻辑。如亏损超过一定比例则止损退出,有效控制单笔损失。
-
-3. 结合情绪指标。增加市场热度、市场恐慌度等多维度判断,提升策略盈利空间。
-
-## 总结
-
-本策略通过四大指标互相验证的方式发出信号,可有效降低假信号率,是一种相对稳定的高频盈利策略。随着参数和模型的不断优化,策略的胜率和盈利能力还可望进一步提升。
-
-|| 
 
 ## Overview
 
@@ -98,7 +53,6 @@ This strategy combines RSI, MFI, Stoch RSI and MACD four indicators to implement
 
 By verifying signals through four major indicators, this strategy can effectively reduce the false signal rate and is a relatively stable high-frequency profit strategy. With continuous optimization of parameters and models, the strategy's win rate and profitability can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

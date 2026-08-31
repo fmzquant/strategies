@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a2e17479bee128bc99.png)
 
-[trans]
-#### 概述
-该策略基于QQE指标和RSI指标,通过计算RSI指标的平滑移动平均值和动态震荡幅度,构建多空信号区间。当RSI指标突破上轨时产生做多信号,突破下轨时产生做空信号。策略的主要思路是利用RSI指标的趋势特性和QQE指标的波动特性,捕捉市场的趋势变化和波动机会。
-
-#### 策略原理
-1. 计算RSI指标的平滑移动平均值RsiMa,作为判断趋势的基础。
-2. 计算RSI指标的绝对偏离值AtrRsi,并计算其平滑移动平均值MaAtrRsi,作为判断波动的基础。
-3. 根据QQE因子计算动态震荡幅度dar,并与RsiMa结合,构建多空信号区间longband和shortband。
-4. 判断RSI指标与多空信号区间的关系,当RSI指标上穿longband时产生做多信号,下穿shortband时产生做空信号。
-5. 根据多空信号进行交易,做多信号触发时开仓买入,做空信号触发时平仓。
-
-#### 策略优势
-1. 结合了RSI指标和QQE指标的特点,能够较好地捕捉市场趋势和波动机会。
-2. 采用动态的震荡幅度来构建信号区间,能够自适应市场波动率的变化。
-3. 平滑处理RSI指标和波动幅度,有效减少了噪音干扰和频繁交易。
-4. 逻辑清晰,参数较少,适合进行进一步的优化和改进。
-
-#### 策略风险
-1. 对于震荡市场和波动率较小的市场,该策略的表现可能不够理想。
-2. 缺乏明确的止损机制,在市场突然反转时可能面临较大回撤风险。
-3. 参数设置对策略性能影响较大,需要根据不同市场和品种进行调优。
-
-#### 策略优化方向
-1. 引入明确的止损机制,如固定百分比止损、ATR止损等,以控制回撤风险。
-2. 优化参数设置,可以通过遗传算法、网格搜索等方法寻找最优参数组合。
-3. 考虑引入交易量、持仓量等其他指标,丰富交易信号,提高策略稳定性。
-4. 对于震荡市场,可以考虑引入范围交易或者波段操作的逻辑,增强策略适应性。
-
-#### 总结
-该策略基于RSI指标和QQE指标构建多空信号,具有趋势捕捉和波动把握的特点。策略逻辑清晰,参数较少,适合进行进一步的优化和改进。但是策略也存在一定的风险,如回撤控制、参数设置等方面需要进一步完善。未来可以从止损机制、参数优化、信号丰富、不同市场适应性等方面对策略进行优化,以提高策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy is based on the QQE indicator and the RSI indicator. It calculates the smoothed moving average and dynamic oscillation range of the RSI indicator to construct long-short signal intervals. When the RSI indicator breaks through the upper rail, it generates a long signal, and when it breaks through the lower rail, it generates a short signal. The main idea of the strategy is to use the trend characteristics of the RSI indicator and the volatility characteristics of the QQE indicator to capture changes in market trends and volatility opportunities.
@@ -73,7 +41,6 @@ This strategy is based on the QQE indicator and the RSI indicator. It calculates
 
 #### Summary
 This strategy constructs long-short signals based on the RSI indicator and the QQE indicator, and has the characteristics of trend capture and volatility grasp. The strategy logic is clear, with fewer parameters, and is suitable for further optimization and improvement. However, the strategy also has certain risks, such as drawdown control and parameter setting, which need to be further improved. In the future, the strategy can be optimized from aspects such as stop-loss mechanism, parameter optimization, signal enrichment, and adaptability to different markets, so as to improve the robustness and profitability of the strategy.
-[/trans]
 
 
 

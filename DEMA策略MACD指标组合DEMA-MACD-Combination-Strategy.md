@@ -10,81 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12cf57a3564f8eca10f.png)
-[trans]
-
-## 概述
-
-本策略名称为DEMA MACD组合策略。它结合了DEMA均线指标和MACD指标,利用双指标确认进行买卖信号发出。其主要思想是同时利用趋势指标DEMA和动量指标MACD进行多重确认,通过提高信号准确度来获得更好的策略表现。
-
-## 策略原理
-
-该策略主要基于DEMA均线指标和MACD指标的组合使用。具体原理如下:
-
-1. 计算21日DEMA均线,当收盘价上穿DEMA均线时视为买入信号,下穿DEMA均线时视为卖出信号。
-
-2. 计算MACD指标的差值,并添加可选参数,用于控制是否需要MACD差值大于0作为买入信号的额外确认。
-
-3. 在DEMA均线买入信号出现时,如果开启MACD差值大于0的额外确认,则需要等待MACD差值转为正值后才会触发真正的买入信号。
-
-4. 在DEMA均线卖出信号出现时,直接发出卖出信号,无需MACD额外确认。
-
-通过该双指标组合,可以利用DEMA均线判断趋势方向,同时用MACD差值判断当前是否处于趋势开始阶段,避免假断和增大获利空间。MACD差值大于0确认买入使策略只在指数增长期买入,DECL均线快速确认卖出使策略能够及时止损。
-
-## 优势分析
-
-该策略结合DEMA均线和MACD指标的优势主要体现在以下几个方面:
-
-1. DEMA反应更灵敏,可以及时捕捉趋势变化,避免掉入震荡陷阱。
-
-2. MACD差值大于0确认可以过滤掉假信号,只在趋势开始阶段买入,扩大获利空间。
-
-3. 不需MACD确认直接DECL卖出可以快速止损,最大限度保存已有利润。
-
-4. 双指标互相验证提高信号准确率,降低错误交易概率。
-
-5. 参数优化空间大,可以通过调整参数适应不同市场环境。
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. DEMA反应灵敏也更容易产生错误信号,需要MACD指标进行验证。
-
-2. MACD指标有滞后性,可能错过最佳买入时机。建议组合使用其他先行指标。
-
-3. 依赖参数优化,不同参数对不同市场的适应性各异。需持续进行回测找到最优参数。 
-
-4. 系列化相关性风险。DEMA和MACD都依赖EMA计算,相关性较高,信号准确性存疑。
-
-对应解决方法如下:
-
-1. 增加其他指标验证,构建多指标组合降低错误概率。
-
-2. 尝试替换MACD为BB,KD等先行指标,提前捕捉买点。
-
-3. 建立参数优化和更新机制,实时评估参数健康性。
-
-4. 尝试引入无关指标,例如震荡指标减少相关性风险。
-
-## 优化方向  
-
-该策略主要可以从以下几个方向进行优化:
-
-1. 尝试修改DEMA参数,寻找最佳参数组合。DEMA参数直接影响策略的灵敏度。
-
-2. 增加止损机制。目前策略只依赖DECL卖出信号止损,可以设置移动止损或百分比止损。
-
-3. 增加其他先行指标取代MACD,寻找更early signal。例如布林线,KDJ等。
-
-4. 引入无关指标增加策略稳健性,例如加入成交量,震荡指标等。
-
-5. 构建参数优化与更新机制,实时评估参数健康性,自动调整参数。
-
-## 总结
-
-本策略通过组合使用DEMA均线和MACD指标,充分利用两者优势进行买卖信号确认和发出。相比单一指标,具有更高的灵敏度和信号准确率。同时也存在一定改进空间,后续可以从优化参数、增加止损、引入先行指标等方向进行优化,使策略更稳健和智能化。
-
-||
 
 ## Overview
 
@@ -158,7 +83,6 @@ Main optimization directions for this strategy include:
 
 This strategy combines the DEMA moving average and the MACD indicator to take advantage of both for signal confirmation and issuance. Compared to single indicator strategies, it has higher sensitivity and signal accuracy. There is also room for improvement by optimizing parameters, adding stops, introducing leading indicators etc to make the strategy more robust and intelligent.
 
-[/trans]
 
 > Strategy Arguments
 

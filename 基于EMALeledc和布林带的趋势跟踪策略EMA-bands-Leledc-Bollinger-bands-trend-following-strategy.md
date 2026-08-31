@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/953f5b38aeb2c11b2e.png)
-[trans]
-
-## 概述
-
-该策略是一个位置型的趋势跟踪策略,它利用EMA波段、Leledc枯竭线和布林带的组合来识别趋势,并在趋势出现信号时建立多头或空头头寸。
-
-## 策略原理
-
-### 开仓条件
-
-- 当价格突破中线EMA波段时(即高点EMA和低点EMA的中间价位),做多;当价格突破中线EMA波段下方时,做空。
-
-- 可以选择启用慢EMA滤波器,只有在关闭价突破中线EMA波段,并且慢EMA同向时才开仓。
-
-- 可以选择在中线EMA击穿后启用再突破信号,只有价格再次触碰中线EMA波段才开仓。
-
-### 平仓条件
-
-- 选择最近波段止损,价格触碰相反方向的中线EMA波段时止损。
-
-- 选择相反波段止损,价格突破相反方向中线EMA波段时止损。
-
-- 可选定延迟止损,如果价格在中线EMA波段内徘徊一定周期后止损。
-
-- 选择在Leledc枯竭线时止损。当连续若干根K线同向收盘,并且创近期最高或最低价时,判断趋势结束,止损。
-
-- 选择在布林带回归线时止损。当价格在超买超卖区域回归布林带中轨时,判断趋势结束,止损。
-
-- 可选定在离破购买区或卖出区时止损。当价格突破内部或外部的购买区或卖出区后,判断趋势结束,止损。
-
-### 逆向开仓条件
-
-- 在Leledc枯竭线或布林带回归线出现时,并且极值点突破购买区或卖出区的一定范围,可选择逆向开仓。
-
-- 逆向头寸有独立的止损条件可选择。
-
-## 策略优势
-
-- 利用EMA波段判断趋势方向,避免被震荡行情误导。
-
-- Leledc枯竭线可有效判断趋势结束,布林带回归线确认多空头寸过度扩张的时机,二者配合可确保趋势跟踪效果。
-
-- 启用逆向开仓后,可在震荡行情中进行范围交易,在趋势行情中追踪更多行情。
-
-- 中线EMA波段、购买区与卖出区的画图可直观判断当前趋势方向和力度。
-
-## 策略风险
-
-- EMA指标对参数设置比较敏感,EMA长度设置不当可能导致乱仓。
-
-- Leledc枯竭线和布林带回归线作为判断趋势终结的技术指标也可能失效,从而错过止损点产生较大亏损。
-
-- 逆向开仓增加了策略风险,必须设置止损来控制风险。
-
-## 策略优化
-
-- 可以测试不同的EMA长度参数,找到更适合品种和周期的参数组合。
-
-- Leledc枯竭线和布林带回归线可调整参数,寻找更准确判断趋势终结的指标参数。
-
-- 逆向开仓的止损点可进一步优化,使逆向交易风险收益匹配更优。
-
-- 中线EMA波段可考虑用简单移动平均线或其他指标替代,寻找更稳定判断趋势中线的技术指标。
-
-## 总结
-
-该策略整合了趋势判断、枯竭点确认和逆向交易入场等多种技术指标与技术方法,可谓功能齐全。在参数调整和风险控制到位的前提下,可以获得优异的稳定收益,值得进一步研究与优化。
-
-|| 
 
 ## Overview
 
@@ -146,7 +77,6 @@ This is a positional trend following strategy that utilizes a combination of EMA
 
 This strategy consolidates various techniques of trend identification, exhaustion confirmation and counter trend scalping, offering rich functionality. With prudent parameter tuning and risk control, it can achieve solid risk adjusted returns and is worthy of further research and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

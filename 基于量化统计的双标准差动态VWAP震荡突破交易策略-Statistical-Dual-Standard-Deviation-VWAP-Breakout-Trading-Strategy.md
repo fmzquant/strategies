@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1468f1eabae818b298f.png)
 
-[trans]
-#### 概述
-该策略是一个基于VWAP(成交量加权平均价格)和标准差通道的趋势突破策略。它通过计算VWAP和上下标准差通道,构建了一个动态的价格波动区间,用于捕捉价格向上突破的交易机会。策略主要依靠标准差带的突破信号进行交易,并设置了利润目标和订单间隔来控制风险。
-
-#### 策略原理
-1. 核心指标计算:
-- 使用日内HL2价格和成交量计算VWAP
-- 基于价格波动计算标准差
-- 设置1.28倍标准差上下通道
-
-2. 交易逻辑:
-- 入场条件:价格下穿下轨后回升至上方
-- 出场条件:达到预设利润目标
-- 设置最小下单间隔以避免频繁交易
-
-#### 策略优势
-1. 统计学基础
-- 基于VWAP的价格中枢参考
-- 利用标准差衡量波动性
-- 动态调整交易区间
-
-2. 风险控制
-- 设定固定利润目标
-- 控制交易频率
-- 仅做多策略降低风险
-
-#### 策略风险
-1. 市场风险
-- 剧烈波动可能导致假突破
-- 趋势转折点难以准确把握
-- 单边下跌行情损失加大
-
-2. 参数风险
-- 标准差倍数设置敏感
-- 利润目标设置需要优化
-- 交易间隔影响收益表现
-
-#### 优化方向
-1. 信号优化
-- 增加趋势判断过滤器
-- 结合成交量变化确认
-- 添加其他技术指标验证
-
-2. 风险管理优化
-- 动态设置止损位置
-- 根据波动率调整仓位
-- 完善订单管理机制
-
-#### 总结
-这是一个结合了统计学原理和技术分析的量化交易策略。通过VWAP和标准差带的配合,构建了相对可靠的交易系统。策略的核心优势在于其科学的统计学基础和完善的风险控制机制,但仍需要在实际应用中不断优化参数和交易逻辑。
-||
 #### Overview
 This strategy is a trend breakout system based on VWAP (Volume Weighted Average Price) and standard deviation channels. It constructs a dynamic price range by calculating VWAP and standard deviation bands to capture upward breakout opportunities. The strategy mainly relies on standard deviation band breakthrough signals for trading, with profit targets and order intervals to control risk.
 
@@ -111,7 +60,6 @@ This strategy is a trend breakout system based on VWAP (Volume Weighted Average 
 
 #### Summary
 This is a quantitative trading strategy combining statistical principles and technical analysis. Through the combination of VWAP and standard deviation bands, it builds a relatively reliable trading system. The core advantages lie in its scientific statistical foundation and comprehensive risk control mechanisms, but continuous optimization of parameters and trading logic is still needed in practical applications.
-[/trans]
 
 
 

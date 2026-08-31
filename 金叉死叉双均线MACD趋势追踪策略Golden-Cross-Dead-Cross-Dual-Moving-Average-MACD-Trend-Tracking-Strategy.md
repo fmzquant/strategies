@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e5a063bb429afb6d1d.png)
-[trans]
-
-## 概述
-
-该策略通过计算快速移动平均线、慢速移动平均线、MACD指标,实现对价格趋势的判断,构建金叉死叉交易信号,并结合止盈止损追踪止损来锁定利润,实现对趋势的持续追踪。
-
-## 策略原理
-
-该策略主要基于三个指标进行构建。
-
-首先,计算快速移动平均线和两个慢速移动平均线。当快速移动平均线上穿两个慢速移动平均线时生成买入信号;当快速移动平均线下穿两个慢速移动平均线时生成卖出信号。这样可以判断价格的短期趋势和长期趋势的关系,实现金叉死叉交易。
-
-其次,计算MACD指标,包括MACD线、信号线和直方图。当MACD直方图>0时为多头指标;当MACD直方图<0时为空头指标。这样辅助判断金叉死叉信号的可靠性。
-
-最后,结合止盈止损追踪止损机制。采用止盈点和止损点来锁定利润和控制风险;采用追踪止损来跟踪利润。
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 金叉死叉结合MACD指标,可靠判断价格趋势;
-2. 停损点设置防止亏损扩大;
-3. 追踪止损自动移动,持续锁定利润,最大限度获取趋势收益;
-4. 参数设置灵活,可自定义移动平均线周期等。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 价格震荡时,可能出现止损被触发的风险;
-2. 长期运行追踪止损需要持续监控,及时调整;
-3. 参数设置不当可能导致交易频繁或漏单。
-
-对应风险的解决方法:
-
-1. 合理设定止损点,防止不必要的止损;
-2. 定期检查和优化参数设置;
-3. 人工干预和状态监控。
-
-## 策略优化方向 
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加更多指标判断,如RSI等,使信号更加可靠;
-2. 优化移动平均线参数,使其更符合不同品种的特点;
-3. 增加止盈止损动态追踪算法,让止盈止损可以根据市场变化;
-4. 增加开仓次数、仓位控制等资金管理模块。
-
-## 总结
-
-该策略整体来说是一个利用金叉死叉与MACD指标判断趋势,实现追踪止损的简单有效策略。优点是实现了趋势跟踪和利润锁定,可自定义性较强,适用于多种品种,是一种通用型的参数优化型策略。存在一定的风险和可优化空间,但总体而言是一种可靠实用的交易策略。
-
-||
 
 ## Overview
 
@@ -114,7 +61,6 @@ The strategy can also be optimized from the following aspects:
 
 In summary, this is a simple yet effective strategy that uses golden cross, dead cross and MACD to judge trend and realize trailing stop loss. The advantages are trend tracking and profit locking with high customizability. It is a universal parameter optimization strategy suitable for different trading instruments. There are still some risks and optimization space, but overall it is a reliable and practical trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

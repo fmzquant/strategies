@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略基于K线出现同级高低点的形态进行交易。当出现一周K线的双底或双顶形态时,作为交易信号的触发条件。
-
-具体交易逻辑是:
-
-1. 判断当前K线或前一K线的最高价等于最高价的前两K线
-
-2. 判断当前K线或前一K线的最低价等于最低价的前两K线
-
-3. 双底形态出现时,当价格低点突破则做多
-
-4. 双顶形态出现时,当价格高点突破则做空
-
-5. 止损点设置为突破点附近,止盈点为ATR指标值乘以系数
-
-该策略试图抓取突破同级高低点后价格的趋势运行机会。通过止损止盈策略控制风险。
-
-## 策略优势
-
-- 同级高低易识别,突破信号明确
-
-- ATR止盈方式可动态跟踪趋势
-
-- 规则简单清晰,可控的风险
-
-## 策略风险
-
-- 同级高低形成较为少见
-
-- 止损点过于接近,存在被止损风险
-
-- 需要关注ATR参数的设定
-
-## 总结
-
-该策略通过捕捉同级高低突破机会进行趋势交易。但需关注止损止盈策略的设定,以及交易频率问题。
-
-
-||
 
 ## Strategy Logic
 
@@ -89,7 +47,6 @@ It aims to capitalize on trend resumption after breaking same high/low levels. S
 
 This strategy catches trend trades from same high/low breakouts. But stop/profit tuning and lower frequency requires consideration.
 
-[/trans]
 
 > Strategy Arguments
 

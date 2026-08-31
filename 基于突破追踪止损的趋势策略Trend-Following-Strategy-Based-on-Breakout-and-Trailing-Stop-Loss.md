@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-本文将详细介绍一种基于价格突破入场以及追踪止损退出的趋势交易策略。该策略通过突破最高点构建多头仓位,并利用波动低点进行追踪止损。
-
-一、策略原理
-
-该策略的主要交易逻辑如下:
-
-1. 使用振幅指标计算最高价和最低价的摆动点;
-
-2. 当价格突破最高点时,进行多头入场;
-
-3. 最近一波动低点作为激进止损点;
-
-4. 当出现更高的波动低点时,将止损位置上移,实现追踪止损。
-
-这样,它可以在价格突破上行阻力后,捕捉强势的趋势行情。并且止损点的持续上移,让利润能够得到锁定。
-
-二、策略优势
-
-该策略的主要优势有:
-
-1. 突破入场可以比较准确地把握趋势的启动点位;
-
-2. 动态追踪止损,可以最大限度锁定利润,降低回吐;
-
-3. 止损位置有一定缓冲区间,可以避免止损被击穿。
-
-4. 还可以添加均线过滤,避免逆势操作。
-
-三、潜在风险
-
-但该策略也存在一些潜在风险:
-
-1. 突破信号可能存在滞后,容易漏掉趋势初期机会;
-
-2. 止损过于激进可能造成不必要的停损出场;
-
-3. 需要承受一定的回撤压力。
-
-四、内容总结
-
-本文主要介绍了一种基于价格突破和追踪止损的趋势策略。它可以有效跟踪趋势使利润最大化,但也需要防范止损被突破等风险。综合来说,该策略提供了一种简单直观的趋势追踪方法。
-
-||
 
 This article explains in detail a trend trading strategy based on breakout entry and trailing stop loss exit. It builds long positions on upside breakouts and utilizes swing lows for stop loss trailing. 
 
@@ -98,7 +53,6 @@ IV. Summary
 
 In summary, this article has explained a trend following strategy based on price breakouts and trailing stop loss. It effectively maximizes profits by trailing trends but needs to manage risks like stop loss invalidation. Overall it provides a simple and intuitive trend tracking methodology.
 
-[/trans]
 
 > Strategy Arguments
 

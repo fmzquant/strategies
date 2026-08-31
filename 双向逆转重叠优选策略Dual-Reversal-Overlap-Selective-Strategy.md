@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fb1c725ca92b7921b7.png)
 
-[trans]
-
-## 概述
-
-双向逆转重叠优选策略(Dual Reversal Overlap Selective Strategy)通过结合反转交易策略和超买超卖筛选来实现资产配置和择时交易。该策略旨在在趋势反转点进行买入和卖出操作,同时利用超买超卖指标避免非理性扩张区域的不必要交易。
-
-## 策略原理
-
-该策略由两个子策略叠加组成:
-
-1. 123反转策略
-
-该策略基于连续两天收盘价格反转的交易信号。具体来说,如果最近两天收盘价格出现上涨,且9天慢速K线stoch值低于50,则做多;如果最近两天收盘价格出现下跌,且9天快速K线stoch值高于50,则做空。该策略属于反转策略,旨在捕捉短期趋势反转。
-
-2. 布列萨特双平滑震荡指标策略 (DSS)
-
-该策略利用布列萨特双平滑震荡指标实现超买超卖的判断。具体来说,如果5日均线低于10日均线且低于20的超卖区,则做多;如果5日均线高于10日均线且高于80的超卖区,则做空。该策略属于超买超卖策略,旨在避免非理性区域的不必要交易。
-
-最终信号由两者综合产生,只有当两者给出一致信号时才会触发交易。这样可以提高获利概率,利用两种不同类型策略的优势进行组合。
-
-## 策略优势分析
-
-1. 结合反转策略和超买超卖策略的优点,既可以捕捉短期趋势反转,又可以避免非理性区域交易。
-
-2. 123反转策略参数较少,逻辑简单,容易实施。DSS策略利用双指数平滑实现超买超卖判断,可以有效滤除多头市场中的空头信号,空头市场中的多头信号。
-
-3. 两种不同类型策略组合,可以提高信号的可靠性,减少原策略的假信号。
-
-4. 灵活的策略参数设定,可以根据不同市场调整参数,适应性强。
-
-## 策略风险分析
-
-1. 反转策略本身存在“捡钱币”风险,容易在震荡市场中被套牢。
-
-2. DSS策略存在参数优化难度较大的问题,不同参数对结果影响较大。
-
-3. 两种策略信号不一致时,存在错失交易机会的风险。
-
-4. 策略仅基于简单的价格指标,缺乏综合判断,存在一定的盈利限制。
-
-对应解决方法:
-
-1. 适当缩短持仓周期,降低套牢风险。
-
-2. 借鉴成功案例精心测试参数组合,针对特定市场优化参数。 
-
-3. 考虑加入其他辅助判断指标,提升策略效果。
-
-4. 优化入场timing,或者调整持仓比例。
-
-## 策略优化方向 
-
-1. 测试并加入其他反转指标或形态判断,提升反转信号的准确性。
-
-2. 尝试其他超买超卖指标替代DSS,如能量潮、RSI等。
-
-3. 加入止损策略,以锁定利润和减少亏损。
-
-4. 优化参数设置,测试不同市场下的最佳参数组合。
-
-5. 探索动态调整参数以适应市场变化的可能性。
-
-6. 构建机器学习模型辅助生成交易信号。
-
-## 总结
-
-双向逆转重叠优选策略通过反转策略和超买超卖策略的组合,实现了资产配置和择时交易双重功能。策略具有参数灵活、逻辑简单、容易实施等优势,可以有效滤除非理性区域的噪音交易。但也存在一定的反转风险和参数优化难点。未来可通过加入止损、优化参数设置、引入机器学习等方法进行策略增强。总体来说,该策略为量化交易提供了一个灵活可靠的技术分析方案。
-
-||
 
 
 ## Overview
@@ -148,7 +79,6 @@ Solutions:
 
 The Dual Reversal Overlap Selective Strategy provides both asset allocation and timing trading functionality through combining reversal and overbought-oversold strategies. It has advantages like flexible parameters, simple logic, and easy implementation, effectively filtering out noise trades in irrational zones. But limitations exist like reversal risks and parameter optimization difficulties. Future enhancements can come from adding stop loss, parameter optimization, machine learning incorporation etc. Overall, it provides a robust quantitative trading solution.
 
-[/trans]
 
 > Strategy Arguments
 

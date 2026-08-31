@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ca8d8b451fe8060715.png)
-[trans]
-
-## 概述
-
-这是一个基于多种技术指标的反转交易策略。它结合CCI、动量指标、RSI等指标识别潜在的多头和空头交易机会。当指标显示超买超卖信号且价格出现回调时,该策略会发出交易信号。
-
-## 策略原理
-
-该策略的交易信号来源于一个自定义的指标“Edri极点买卖点”,它综合考虑CCI、动量指标和RSI的交叉情况。具体逻辑是:
-
-多头信号条件:
-1. “Edri极点买卖点”指标发出买入信号,即CCI上穿0轴线或动量指标上穿0轴线,且RSI低于超卖线。
-2. 价格拉回或低于100周期EMA。
-
-空头信号条件:
-1. “Edri极点买卖点”指标发出卖出信号,即CCI下穿0轴线或动量指标下穿0轴线,且RSI高于超买线。 
-2. 价格拉回或高于100周期EMA。
-
-该策略还可选择配置寻找常规背离的条件,即RSI与价格出现明显的背离才产生交易信号。
-
-当满足交易信号时,策略的止损位点为入场价±2ATR,止盈位点为入场价±4ATR。这可以根据市场波动程度设定合理的止损止盈范围。
-
-## 优势分析
-
-1. 综合多个指标判断,有助于避免单一指标的假信号。
-2. 反转交易方式,有利于在震荡行情中捕捉中短线交易机会。
-3. ATR止损止盈方式,可以根据市场波动性智能调整仓位。
-4. 可寻找背离条件,避免在非极端超买超卖情况下打开仓位。
-
-## 风险分析
-
-1. 指标参数设置不当可能导致错失交易机会或产生过多错误信号。
-2. 反转交易模式可能在趋势行情中连续止损。
-3. ATR有滞后性,在快速变动行情中无法及时更新止损止盈点位。
-
-解决方法:
-1. 对指标参数进行多次回测和优化,找出最佳参数组合。 
-2. 可考虑在趋势较强时暂停使用该策略。
-3. 结合其他止损方式,如移动止损或违背止损。
-
-## 优化方向 
-
-1. 测试不同的参数组合,如CCI和动量指标周期、RSI参数、ATR倍数等。
-2. 增加其他辅助过滤条件,如价格模式、成交量变化等。 
-3. 调整仓位管理方式,如根据ATR值设置仓位比例等。
-4. 设置不同品种、周期的参数模板。
-5. 考虑结合趋势跟踪机制,在趋势行情中暂停反转交易。
-
-## 总结
-
-该策略主要应用于震荡行情,通过捕捉中短线反转获得较稳定收益。它有助于识别价格短期拉伸现象,并基于多个指标判断产生交易信号。通过合理的参数优化和风险管理,可以有效利用该策略的优势。但仍需要注意反转交易固有的不足,在强趋势下持续亏损的可能性。总体上,该策略适用于有一定量化和风险管理经验的投资者。
-
-|| 
 
 ## Overview
 
@@ -113,7 +60,6 @@ Solutions:
 ## Summary
 
 The strategy mainly works for range-bound markets, capturing mid-term reversals for relatively steady gains. It helps identify short-term price stretches and generates trading signals based on multiple indicators. With proper optimization and risk management, its advantages can be effectively utilized. Still be aware the intrinsic weaknesses of reversal trading, the possibility of continuous losses in strong trends. Overall the strategy suits investors with some quant and risk management experience.  
-[/trans]
 
 > Strategy Arguments
 

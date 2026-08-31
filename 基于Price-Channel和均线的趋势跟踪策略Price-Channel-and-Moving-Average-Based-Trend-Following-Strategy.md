@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10baa58e8ca203f6839.png)
-[trans]
-## 概述
-
-该策略通过构建Price Channel,计算价格偏离中心线的距离,再结合均线过滤信号,实现对趋势的识别和跟踪。当价格突破Channel时产生交易信号。该策略同时具有趋势跟踪和突破两个特点。
-
-## 策略原理
-
-1. 构建Price Channel
- 
- - 计算最近len周期内的最高价和最低价
- - 中心线为最高价和最低价的平均值
- - 距离为价格与中心线的绝对偏差
- - 平滑距离求得上轨和下轨
-
-2. 判断趋势方向
-
- - 当价格低于下轨,定义为跌趋势
- - 当价格高于上轨,定义为涨趋势
-
-3. 产生交易信号
-
- - 涨趋势下,价格低于开盘价或下破上轨时做多
- - 跌趋势下,价格高于开盘价或上破下轨时做空
-
-## 优势分析
-
-1. 能捕捉中长线趋势
-2. 结合突破信号,避免在震荡区间无效交易
-3. 可定制参数,适应不同品种
-
-## 风险分析
-
-1. 震荡趋势下,可能出现较多小亏损
-2. 参数设置不当可能错过趋势反转
-3. 需关注交易频率,防止过度交易
-
-## 优化方向
-
-1. 结合其他指标过滤信号
-2. 动态调整Price Channel参数
-3. 加入止损机制,优化资金管理
-
-## 总结
-
-该策略整体较为稳健,能有效跟踪中长线趋势,同时结合趋势突破产生交易信号。通过参数优化和信号过滤可进一步改进策略,使之能适应更多品种和市场环境。
-
-||
 
 ## Overview
 
@@ -103,7 +56,6 @@ This strategy identifies and follows trends by constructing a Price Channel to c
 
 The strategy is overall quite robust in tracking mid- to long-term trends effectively while generating trading signals through trend breakouts. Further improvements can be made through parameter optimization and signal filtering to adapt the strategy to more products and market environments.
 
-[/trans]
 
 > Strategy Arguments
 

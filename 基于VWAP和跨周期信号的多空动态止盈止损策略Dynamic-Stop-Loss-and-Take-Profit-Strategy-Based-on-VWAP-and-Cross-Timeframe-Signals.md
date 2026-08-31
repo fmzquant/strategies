@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fe74f9988e6c2d6162.png)
-[trans]
-## 概述
-
-该策略使用日线的VWAP(成交量加权平均价)作为进场和出场的信号。当收盘价上穿VWAP时触发做多,止损设置在VWAP下方的前一根K线低点,目标价设置在开仓价上方3个点;当收盘价下穿VWAP时触发做空,止损设置在VWAP上方的前一根K线高点,目标价设置在开仓价下方3个点。该策略没有包含出场条件,交易会一直持有直到反向信号出现。
-
-## 策略原理
-
-1. 获取日线的VWAP数据,作为趋势判断和交易信号的依据。
-2. 判断当前收盘价是否上穿/下穿VWAP,分别作为做多和做空的触发条件。
-3. 做多时,如果前一根K线低点在VWAP之下,则将其作为止损位,否则直接使用VWAP作为止损;做空则相反。
-4. 开仓后,分别设置固定3个点的止盈位。
-5. 策略持续运行,直到触发反向信号平仓并开立新的仓位。
-
-通过跨周期的VWAP数据判断趋势,同时利用动态止损和固定点数止盈,可以有效把握趋势行情,控制回撤风险,并及时锁定利润。
-
-## 优势分析
-
-1. 简单有效:策略逻辑清晰,仅使用VWAP一个指标,就可以实现趋势判断和信号触发,简单易于实现和优化。
-2. 动态止损:根据前一根K线的高低点设置止损,可以更好地适应市场波动,降低风险。
-3. 固定点数止盈:以固定点数设置目标价,有助于及时锁定利润,避免利润回吐。
-4. 及时止损止盈:策略在触发反向信号时会立即平仓,不会对已有利润造成额外损失,同时会开立新的仓位,捕捉新的趋势行情。
-
-## 风险分析
-
-1. 参数优化:策略使用了固定的3个点作为止盈,实际交易中可能需要根据不同标的和市场特点进行优化,选择最佳参数。
-2. 震荡行情:在震荡行情下,频繁的进场和出场可能导致较高的交易成本,影响收益。
-3. 趋势持续性:策略依赖于趋势行情,如果市场处于区间震荡,或趋势持续性较差,可能会出现较多的交易信号,带来更多的风险。
-
-## 优化方向
-
-1. 趋势过滤:加入其他趋势指标如移动平均线、MACD等,对趋势进行二次确认,提高信号可靠性。
-2. 动态止盈:根据市场波动性、ATR等指标,动态调整止盈点数,以更好地适应市场。
-3. 仓位管理:根据账户资金、风险偏好等因素,对每次交易的仓位大小进行动态调整。
-4. 交易时段选择:根据标的特性和交易活跃程度,选择最佳的交易时段,提高策略效率。
-
-## 总结
-
-该策略利用跨周期VWAP数据进行趋势判断和信号触发,同时采用动态止损和固定点数止盈的方式控制风险和锁定利润,是一个简单有效的量化交易策略。通过趋势过滤、动态止盈、仓位管理和交易时段选择等方面的优化,可以进一步提高策略的稳健性和收益潜力。但在实际应用中,仍需注意市场特点、交易成本和参数优化等因素,以期获得更好的策略表现。
-
-|| 
 
 ## Overview
 
@@ -89,7 +49,6 @@ By using cross-timeframe VWAP data to determine trends and leveraging dynamic st
 
 This strategy utilizes cross-timeframe VWAP data for trend determination and signal triggering while employing dynamic stop losses and fixed-point take profits to control risks and lock in profits. It is a simple and effective quantitative trading strategy. Through optimizations in trend filtering, dynamic take profit, position sizing, and trading session selection, the strategy's robustness and profit potential can be further enhanced. However, when applying the strategy in practice, attention should be paid to market characteristics, trading costs, and parameter optimization to achieve better strategy performance.
 
-[/trans]
 
 
 

@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13379417cb32fc47592.png)
-[trans]
-
-## 概述
-
-本策略采用多重时间轴的均线系统,结合RSI指标等多种技术指标,实现多空自动切换。策略名称为“Multi-Timeframe Moving Average System Trading Strategy”,主要思想是通过比较不同时间段内价格的趋势判断,实现更加可靠的交易信号产生。
-
-## 策略原理  
-
-该策略的核心指标为均线系统。策略使用 JMA、TEMA、DEMA 等多种均线指标在 15分钟、30分钟、60分钟等不同周期内计算价格趋势。例如 15周期内使用 JMA 计算出来的均线走势作为该周期内的价格趋势判断。然后策略将不同周期内的价格走势进行比较,判断长线与短线之间是否存在背离。如果存在显著的背离信号,则产生交易信号。此外,策略还结合 RSI、波浪指标等辅助判断,确保交易信号的可靠性。
-
-具体来说,策略中的 trend、trend2 和 trend3 变量分别代表 15分钟、30分钟和 60 分钟的价格趋势。如果 15分钟价格反转,而 30分钟和 60 分钟还没有反转,那么就判断为短线和长线之间存在背离,则产生交易信号。如果所有周期趋势一致,则不产生交易信号。
-
-这样通过比较多个周期之间的关系,过滤掉一些假信号,产生更加可靠的交易信号,这是该策略的核心思路。
-
-## 优势分析
-
-该策略主要具有以下优势:
-
-1. 使用多时间轴分析,提高信号的可靠性,过滤假信号;
-2. 结合多种指标进行综合判断,避免单一指标带来的问题; 
-3. 自动实现多空头切换,无需人工干预,降低操作难度。
-
-## 风险分析 
-
-该策略也存在一些风险:  
-
-1. 多时间轴分析,将增加交易时点的不确定性,可能错过最佳进场时机;
-2. 同时结合多种指标,指标参数设置不当可能会产生交易信号质量下降的问题;
-3. 自动切换多空头存在过优化风险,实盘效果可能弱于回测。
-
-针对上述风险,我们可以采取以下措施加以缓解:
-
-1. 调整时间轴参数,确保及时获知短线信号以 vez 进场; 
-2. 通过大量数据回测,不断优化指标参数;
-3. 在实盘中适当干预,避免自动系统盲目交易。
-
-## 优化方向  
-
-该策略还存在进一步优化的空间:  
-
-1. 可以引入机器学习算法,通过模型训练自动优化多指标参数;  
-2. 可以增加自适应滑点设置,根据市场波动程度调整滑点大小,提高实盘效果;
-3. 可以引入量价确认机制,避免趋势快速反转带来的损失。
-
-## 总结  
-
-本策略通过比较多时间轴价格走势判断长短线关系,结合多种指标综合分析产生交易信号,实现自动多空头切换,回测效果较好。我们也发现该策略存在一定改进空间,未来通过引入机器学习、自适应滑点、量价确认等方法进行优化,可望进一步提高策略的实盘效果。
-
-|| 
 
 ## Overview
 
@@ -106,7 +57,6 @@ There is room for further optimization of this strategy:
 
 This strategy compares multi-timeframe price trends to identify longer versus shorter term relationships, and generates trading signals through analyzing multiple indicators – achieving automatic switching between longs and shorts with good backtest results. We also identified some areas of improvement via methods like machine learning, adaptive slippage and volume confirmation to further enhance real-trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

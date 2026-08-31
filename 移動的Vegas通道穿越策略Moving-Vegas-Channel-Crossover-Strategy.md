@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1659e14abd448394d9f.png)
-[trans]
-
-该策略的核心思想是根据EMA 36,143,169等不同周期的均线来判断股票的短中长期趋势方向,结合MACD指标来发出买卖信号。具体来说,短期以5、10日EMA判断,中期以20、60日EMA判断,长期以120、250日EMA判断,当短期EMA上穿中期EMA时看多,下穿看空;结合MACD的多空指标判断买卖时机。
-
-Vegas隧道策略的具体原理:
-1. 使用EMA36和EMA43构成短期趋势判断,它们组成红色通道;
-2. 使用EMA144和EMA169构成中期趋势判断,它们组成绿色通道;
-3. 使用EMA576和EMA676构成长期趋势判断,它们组成灰色通道;
-4. 当价格站上各条EMA均线时就可以做多,再结合MACD指标向上突破0轴发出买入信号;
-5. 当价格跌破各条EMA均线时就可以做空,再结合MACD指标向下突破0轴发出卖出信号。
-6. 根据穿越的EMA均线周期分为短中长三个交易策略,分别对应不同的持仓周期。
-
-该策略的优势主要体现在:
-1. 同时结合短、中、长三条通道判断趋势方向,比较稳定。
-2. Vegas隧道清晰直观,容易判断趋势。 
-3. 结合MACD指标能够把握较好的买卖时机。
-4. 分短中长三个策略,可以更加灵活的进行操作。
-
-该策略的主要风险:
-1. 股价剧烈波动时,EMA均线生成滞后,判断错误的可能性大。
-2. 三条通道判断不一致时,存在错误操作的风险。
-3. 分时图操作需要较强的心理承受能力。
-
-应对方法:
-1. 可适当调整EMA均线周期,使其更加匹配目前市场特征。  
-2. 交易前调整持仓比例,控制单笔损失。
-
-该策略的优化空间: 
-1. Vegas隧道区分趋势判断不够,可引入布林通道辅助判断。 
-2. MACD指标对于区间震荡行情效果不佳,可改用KD、RSI等指标。
-3. 增加止损策略,如收盘价跌破关键EMA时主动止损。
-4. A股涨跌停影响大,可考虑对冲做空ETF。
-
-||
 
 The core idea of this strategy is to determine the short, mid and long term trend direction of stocks based on EMAs with different cycles such as 36, 143, 169, combined with MACD indicator to issue buying and selling signals. Specifically, in short term, 5 and 10 day EMAs are used to judge, in mid term, 20 and 60 day EMAs are used to judge, in long term, 120 and 250 day EMAs are used to judge, when short term EMA crosses middle term EMA upwards, it’s bullish, otherwise it’s bearish; MACD indicator of bullish and bearish signals is used to determine buying and selling time.  
 
@@ -76,7 +42,6 @@ Optimization space:
 3. Add stop loss policies, like stop loss when closing price breaks key EMA lines;
 4. Short ETF to hedge given A share limit-ups and downs having greater impacts.  
 
-[/trans]
 
 > Strategy Arguments
 

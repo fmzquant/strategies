@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fc8e64b0defbd8b346.png)
 
-[trans]
-
-#### 概述
-
-本策略是一个结合了简单移动平均线(SMA)交叉和公平价值缺口(FVG)回调的综合交易系统。它利用8周期和20周期SMA的交叉来识别潜在的趋势变化,同时利用FVG来确定更精确的入场点。这种方法旨在捕捉市场趋势的变化,同时通过等待价格回调到关键支撑/阻力区域来优化入场时机。
-
-#### 策略原理
-
-1. SMA交叉:使用8周期和20周期的简单移动平均线。当短期SMA上穿长期SMA时,视为看涨信号;当短期SMA下穿长期SMA时,视为看跌信号。
-
-2. 公平价值缺口(FVG):FVG是指当前蜡烛的高点高于前一根蜡烛的高点,且当前蜡烛的低点低于前一根蜡烛的低点时形成的价格区间。这个区间被认为是市场在寻找"公平价值"。
-
-3. 入场条件:
-   - 多头:当出现看涨SMA交叉,并且价格回调至FVG的低点时入场。
-   - 空头:当出现看跌SMA交叉,并且价格反弹至FVG的高点时入场。
-
-4. 出场条件:当出现相反方向的SMA交叉时平仓。
-
-#### 策略优势
-
-1. 趋势跟随与回调结合:通过结合SMA交叉和FVG回调,策略既能捕捉大趋势,又能在更有利的价格水平入场。
-
-2. 减少虚假信号:等待价格回调到FVG可以过滤掉一些可能的虚假交叉信号,提高交易的准确性。
-
-3. 风险管理:使用FVG作为入场点可以自然地提供更紧的止损位置,有助于控制风险。
-
-4. 适应性强:通过调整SMA周期和FVG参数,策略可以适应不同的市场环境和交易品种。
-
-5. 客观性:基于明确的技术指标和价格行为,减少了主观判断的影响。
-
-#### 策略风险
-
-1. 震荡市场风险:在横盘或震荡市场中,频繁的SMA交叉可能导致过多交易和亏损。
-
-2. 滞后性:SMA作为滞后指标,可能在趋势初期错过一些机会。
-
-3. 假突破风险:价格可能短暂突破FVG后又回落,导致虚假信号。
-
-4. 市场缺口风险:在剧烈波动的市场中,价格可能跳过FVG区域,导致错过交易机会。
-
-5. 参数敏感性:策略表现可能对SMA周期和FVG定义参数敏感,需要仔细优化。
-
-#### 策略优化方向
-
-1. 动态SMA周期:可以考虑根据市场波动性动态调整SMA周期,以适应不同市场状况。
-
-2. 增加过滤条件:引入额外的技术指标(如RSI或MACD)来确认趋势,减少虚假信号。
-
-3. 改进FVG定义:可以尝试使用多根K线来定义FVG,或者考虑成交量来验证FVG的有效性。
-
-4. 优化出场策略:可以引入跟踪止损或基于波动率的动态止损,以更好地保护利润。
-
-5. 加入时间过滤:考虑FVG的形成时间,可能需要设置一个时间窗口来保证FVG的有效性。
-
-6. 风险管理优化:根据市场波动性动态调整仓位大小,实现更精细的风险控制。
-
-#### 总结
-
-"SMA交叉策略与公平价值缺口回调结合的综合交易系统"是一个融合了趋势跟随和价格回调的智能交易策略。通过结合SMA交叉信号和FVG回调,该策略旨在在趋势初期以更优的价格水平进行交易。虽然策略具有捕捉趋势和优化入场点的潜力,但仍面临震荡市场和参数优化等挑战。通过进一步优化和改进,如动态调整参数、增加过滤条件和改进风险管理,该策略有望在各种市场环境中取得更稳健的表现。交易者在使用此策略时,应当充分理解其原理,并根据具体交易品种和市场状况进行适当的调整和测试。
-
-||
 
 #### Overview
 
@@ -131,7 +70,6 @@ This strategy is a comprehensive trading system that combines Simple Moving Aver
 
 The "Comprehensive Trading System Combining SMA Crossover Strategy with Fair Value Gap Pullback" is an intelligent trading strategy that fuses trend following with price pullbacks. By combining SMA crossover signals and FVG pullbacks, the strategy aims to trade at more optimal price levels in the early stages of trends. While the strategy has the potential to capture trends and optimize entry points, it still faces challenges such as choppy markets and parameter optimization. Through further optimization and improvements, such as dynamic parameter adjustments, additional filtering conditions, and enhanced risk management, this strategy has the potential to achieve more robust performance across various market environments. Traders using this strategy should fully understand its principles and make appropriate adjustments and tests based on specific trading instruments and market conditions.
 
-[/trans]
 
 
 

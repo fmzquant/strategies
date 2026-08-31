@@ -10,78 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ba794f72ecc2a8cb19.png)
-[trans]
-
-### 概述
-
-该策略通过计算MACD指标及其MACD柱状线,检测MACD柱状线与价格走势之间的背离信号,进而产生交易信号。当检测到价格新高但MACD柱状线没有创出新高时,产生看跌背离信号;当检测到价格新低但MACD柱状线没有创出新低时,产生看涨背离信号。结合ATR指标,设置止损位和止盈位,进行趋势跟踪交易。
-
-### 策略原理  
-
-该策略的核心原理是利用MACD指标及其MACD柱状线反映价格趋势变化的特性,检测MACD柱状线与价格之间的背离信号,作为交易信号的触发条件。
-
-具体来说,策略首先计算MACD线、Signal线和MACD柱状线。然后通过定义 fractal 函数,检测 MACD柱状线 的 peak 和 valley,提取局部极大值和极小值点。再结合价格的最高价和最低价,判断 MACD柱状线 与价格之间是否存在背离。
-
-当价格创出新高,但 MACD柱状线没有创出新高时,产生 regulark_bearish_div 看跌背离信号;当价格创出新低,但 MACD柱状线没有创出新低时,产生 regulark_bullish_div 看涨背离信号。
-
-最后,策略在看跌背离和看涨背离信号产生时,分别发出做空和做多指令,并以 ATR 止损、止盈退出仓位。
-
-### 优势分析
-
-该策略具有以下几个优势:
-
-1. 利用 MACD柱状线与价格之间的背离特征,可提前捕捉到价格趋势的转变。
-
-2. ATR止损止盈设置合理,可有效控制单笔交易的最大亏损。
-
-3. 采用趋势跟踪方法,可最大限度锁住利润。
-
-4. 参数设置合理,可过滤掉部分噪音交易信号。
-
-5. 策略逻辑清晰易懂,容易实盘验证。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. MACD背离不一定会带来价格的反转,存在一定的假信号风险。
-
-2. 止损止盈设置不合理可能导致亏损过大或利润太小。
-
-3. 背离信号周期偏短,可能是噪音造成,应适当过滤。
-
-4. 交易品种和参数设置不匹配,也会影响策略效果。
-
-对应解决方法:
-
-1. 适当增大背离长度和背离幅度要求,过滤假信号。 
-
-2. 用 ATR 作为止损止盈指标,并调整ATR 倍数,控制单笔交易风险。
-
-3. 针对不同交易品种选取不同参数。进行参数优化,找到最佳参数组合。
-
-
-### 优化方向  
-
-该策略还可从以下几个方向进行优化:
-
-1. 更复杂的背离确认,如 Volume 背离确认。
-
-2. 优化 MACD 参数,寻找最佳参数组合。
-
-3. 优化 ATR 止损止盈的倍数。
-
-4. 增加机器学习算法,辅助判断背离信号的可靠性。
-
-5. 增加模型预测,判断价格反转概率。
-
-6. 根据市场环境变化,动态调整策略参数。
-
-### 总结  
-
-总的来说,该毕达哥蜡烛图MACD指标背离趋势跟踪策略,利用 MACD柱状线与价格之间的背离特征,实现趋势的捕捉。ATR 止损止盈设置合理,可控制单笔交易风险。该策略逻辑清晰易懂,值得实盘检验。后续可从多方面进行策略优化,以获得更好的效果。
-
-||
 
 ### Overview  
 
@@ -151,7 +79,6 @@ This strategy can also be optimized in the following directions:
 
 In summary, this Demigod Candlestick MACD Divergence Trend Following Strategy utilizes the divergence between MACD histogram and price to capture trends. The reasonable ATR stop loss and take profit settings can control risks per trade. The strategy logic is clear and easy to understand, worth validating in live trading. Follow up optimizations can be made in many aspects to obtain better results.
 
-[/trans]
 
 > Strategy Arguments
 

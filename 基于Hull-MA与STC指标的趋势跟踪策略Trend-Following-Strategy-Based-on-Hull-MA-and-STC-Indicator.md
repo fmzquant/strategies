@@ -9,75 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合了Hull MA平滑移动平均线与STC指标,实现了对趋势的精确跟踪。当Hull MA线颜色转绿,并且STC指标由红转绿且低于25时,实现做多开仓;当Hull MA线颜色转红,且STC指标由绿转红且高于75时,实现做空开仓。同时,策略还集成了UT Bot指标,进一步确认趋势信号。
-
-## 策略原理
-
-策略使用Hull MA平滑移动平均线判断价格趋势方向。Hull MA线颜色可根据价格转绿或转红来实现对趋势转向的判断。 
-
-STC指标类似于MACD指标,其指标线可判断多空转折。当指标线由下向上突破25时,为买入信号;从上向下跌破75时,为卖出信号。
-
-结合Hull MA指标与STC指标,当两者指标同步发出买入/卖出信号时,即可判断趋势转折,进行交易操作。
-
-此外,策略还引入了UT Bot指标,该指标基于价格与ATR动态止损线的关系,输出多空姿态信号,可用来进一步确认趋势信号。
-
-具体来说,策略逻辑为:
-
-1. Hull MA线颜色转绿且STC指标线由红转绿,低于25时,为做多信号
-
-2. Hull MA线颜色转红且STC指标线由绿转红,高于75时,为做空信号
-
-3. 在满足上述条件时,需要同时判断UT Bot指标为多头状态,才可开多单
-
-4. 在满足上述条件时,需要UT Bot指标为空头状态,才可开空单
-
-## 优势分析
-
-该策略综合运用了3个指标判断趋势,可提高信号的可靠性。
-
-Hull MA平滑曲线可准确判断趋势方向,避免whipsaw。 而STC指标可捕捉趋势转折点,增强策略的实时性。UT Bot可进一步过滤假信号。
-
-三种指标的组合,可实现对趋势的精确跟踪,同时提高稳定性。这是该策略的最大优势。
-
-## 风险分析
-
-策略主要风险有:
-
-1. STC指标容易产生假信号,导致不必要的开仓
-
-2. Hull MA指标参数设置不当也会误判趋势
-
-3. 三个指标组合使用不当,会相互干扰
-
-可以通过优化Hull MA参数,调整STC参数组合,测试UT Bot参数,来减小误判风险。
-
-此外,可设置止损来控制单笔损失。也可以引入更多指标组合进行验证,降低假信号率。
-
-## 优化方向
-
-该策略可从以下方面进行优化:
-
-1. 优化Hull MA参数,寻找最佳长度,使平滑曲线更符合趋势
-
-2. 调整STC参数组合,找到更准确判断转折的参数组合
-
-3. 优化UT Bot参数,提高对趋势的判断准确性
-
-4. 测试引入其他指标进行组合,进一步验证信号可靠性
-
-5. 优化止损策略,在保证盈利的前提下,将单笔损失控制在可承受范围
-
-6. 优化仓位管理策略,让盈亏比更高
-
-## 总结
-
-该策略通过Hull MA,STC和UT Bot三个指标的配合使用,实现了对趋势准确跟踪的效果。策略具有指标组合多样性的优势,可减少误判风险,提高稳定性。通过持续优化指标参数、考察其他指标引入、完善止损策略等方式可进一步增强策略效果。
-
-|| 
 
 ## Overview
 
@@ -145,7 +76,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy precisely tracks the trend by combining Hull MA, STC and UT Bot indicators. It has the advantage of indicator diversity, which reduces misjudgment risks and enhances stability. The strategy can be further improved by continuously optimizing parameters, introducing other indicators, perfecting stop loss strategies etc.
 
-[/trans]
 
 > Strategy Arguments
 

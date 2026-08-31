@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10dc5501cd9c6021920.png)
-[trans]
-
-## 概述
-
-本策略是一个基于EMA指标的跨周期交易策略。它使用两个不同周期的EMA作为买卖信号,在短周期EMA上穿长周期EMA时做多,在短周期EMA下穿长周期EMA时做空,属于趋势跟踪策略。该策略同时设定了止损位和止盈位来控制风险。
-
-## 策略原理
-
-该策略使用EMA指标的金叉死叉作为交易信号。具体来说,分别计算短期EMA和长期EMA,当短期EMA上穿长期EMA时生成买入信号做多;当短期EMA下穿长期EMA时生成卖出信号做空。这样通过EMA的移动趋势决定买卖方向。
-
-进入仓位后,策略同时设置了止损位和止盈位。止损位是入场价格的一定百分比作为止损线,如果价格触碰止损线则平仓止损;止盈位是入场价格的一定百分比作为止盈线,如果价格触碰止盈线则平仓止盈。
-
-该策略还允许选择只做多或只做空,以及选择日内交易还是持仓交易。对于日内交易,在美股收盘前会强制平仓。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA指标过滤曲线,避免被高频波动误导,能顺势而为地捕捉中长线趋势。
-
-2. 采用短周期EMA和长周期EMA的交叉作为交易信号,避免频繁交易。
-
-3. 设置止损止盈来控制每个订单的风险收益比,有利于资金管理。  
-
-4. 可以选择只做多或只做空,以及日内交易或持仓交易,适应不同类型交易者。
-
-5. 兼容多种交易品种,包括股票、外汇、数字货币等。
-
-## 风险分析
-
-该策略也存在一些潜在风险:
-
-1. EMA指标有滞后性,可能错过短期趋势转折点。
-
-2. 长短周期EMA选择不当可能导致交易信号错乱。
-
-3. 持仓时间过长可能承受更大的行情震荡。
-
-4. 机械地止损止盈可能过早离场或减少盈利。
-
-对应风险管理措施有:
-
-1. 优化EMA参数,找到最佳周期组合。  
-
-2. 加入其他指标作为辅助判断。
-
-3. 动态调整止损止盈位。
-
-4. 人工干预异常行情。
-
-## 优化方向 
-
-该策略可从以下几个方向进行优化:
-
-1. 最佳化EMA参数,找到不同品种合适的长短周期组合。
-
-2. 增加其他指标判断,如MACD、KD等,实现多指标共振。  
-
-3. 增加机器学习模型训练,产生动态止损止盈。
-
-4. 接入更先进的RISK指标进行特征工程。
-
-5. 增加自适应交易元件,实现参数自优化。
-
-## 总结
-
-本策略整体是一个优秀的趋势跟踪策略模板,核心优势在于使用EMA指标过滤噪声实现稳定盈利,同时具备完善的风险收益管理。通过不断优化,该策略可以成为跨市场通用的量化策略,值得交易者学习和实践。
-
-||
 
 ## Overview  
 
@@ -146,7 +77,6 @@ This strategy can be optimized in the following aspects:
 
 In summary, this is an excellent trend following strategy template. Its core strength lies in using EMA indicator to filter noises and achieve steady profits, while possessing comprehensive risk-reward management. Through continuous optimization, this strategy can become a universal quantitative strategy across markets and is worthwhile for traders to learn and practice.
 
-[/trans]
 
 > Strategy Arguments
 

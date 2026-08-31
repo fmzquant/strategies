@@ -9,45 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过TSI指标、CCI指标以及霍尔移动均线的组合进行趋势判断和交易。TSI指标与CCI指标用于识别价格潮趋势,霍尔均线辅助确认趋势方向。做多做空信号出现时设置止盈点,实现盈利退出。
-
-## 策略原理
-
-计算TSI指标的曲线和信号线,当指标线上穿信号线时产生做多信号,下穿时做空信号。同时计算CCI指标,判断超买超卖区域。价格上穿霍尔均线提示多头市场,下穿为空头市场。满足TSI、CCI指标条件以及霍尔均线的突破时,采取对应做多或做空操作。设置止盈价格,到达止盈价后退出仓位。
-
-## 优势分析
-
-- TSI指标判断趋势方向的能力较强    
-- CCI指标可有效识别超买超卖现象
-- 霍尔均线过滤假突破,提高信号质量
-- 设定止盈价格,可在利润最大化时退出
-- 综合多种指标,提升策略稳定性
-
-## 风险分析
-
-- TSI、CCI等指标存在滞后性
-- 霍尔均线无法完美判断转折点
-- 无法准确判断价格反转时机
-- 止盈设置不当可能缩减利润空间 
-
-可通过调整指标参数,优化止盈算法等方式降低风险。
-
-## 优化方向
-
-- 测试TSI、CCI参数组合,提高策略灵敏度
-- 考虑动态止盈、移动止盈等止盈优化
-- 结合其他指标判断趋势反转点
-- 在不同品种中测试,提高健壮性
-
-## 总结
-
-该策略综合多种指标进行趋势判断,设置止盈策略锁定利润,回测表现较好。通过参数调优等进一步完善,可成为稳定的量化交易系统。
-
-||
 
 ## Overview
 
@@ -85,7 +46,6 @@ Risks can be reduced by tuning indicators, optimizing profit algorithms etc.
 
 This multiple indicator strategy with profit targeting shows good backtest results. Further refinements like parameter optimization can make it a stable quant trading system.
 
-[/trans]
 
 > Strategy Arguments
 

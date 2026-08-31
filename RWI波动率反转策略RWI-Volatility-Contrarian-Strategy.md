@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/172c13c696da25da589.png)
-[trans]
-### 概述
-
-RWI波动率反转策略通过计算一定周期内的RWI高点和RWI低点,判断市场是否处于反转状态,以发现反转机会,采用反转策略,在高位开空头,低位开多头,以期获利。
-
-### 策略原理  
-
-该策略首先计算一定长度周期(如14根K线)内的RWI高点和RWI低点。RWI高低点的计算公式如下:
-
-RWI高点=(高点-N周期前的最低点)/(N周期的ATR* sqrt(N))
-
-RWI低点=(N周期前的最高点-最低点)/(N周期的ATR* sqrt(N))
-
-然后计算RWI高低点与阈值的差值,判断是否小于阈值(如1)。如果 RWI高低点都小于阈值,则判断市场处于震荡状态,这时不做任何操作。
-
-如果RWI高点大于RWI低点超过阈值,则判断行情即将反转,此时可以考虑做空;如果RWI低点大于RWI高点超过阈值,则判断行情即将反转,此时可以考虑做多。这样,就构成了一个基于RWI指标判断市场反转状态的反转交易策略。
-
-### 优势分析
-
-RWI波动率反转策略具有以下优势:
-
-1. 使用RWI指标判断反转点精确,胜率较高
-2. 采用反转策略,适合市场震荡行情
-3. 策略思路清晰易懂,参数调整灵活
-4. 可配置长短两个周期判断,提高信号质量
-
-### 风险分析 
-
-RWI波动率反转策略也存在以下风险:  
-
-1. 反转信号可能出现假突破,从而产生损失
-2. 行情持续趋势时,反转信号更多,会招致损失
-3. RWI参数设置不当可能导致信号质量下降
-4. 波动率扩大时,RWI指标失效
-
-为控制风险,可以适当调整RWI参数,配置过滤条件,限定反转范围等。
-
-### 优化方向  
-
-RWI波动率反转策略还可以从以下几个方面进行优化:
-
-1. 增加双时间轴判断,配置长短周期RWI指标,提高信号质量
-2. 结合其他指标如KD、MACD等判断反转,避免假突破
-3. 配置止损策略,严格控制单笔损失
-4. 动态优化RWI参数,适应市场变化
-5. 优化仓位管理,根据市场状况加减仓
-
-### 总结  
-
-RWI波动率反转策略整体思路清晰,使用RWI指标判断反转时机,策略交易逻辑较好,在震荡盘整市场中效果较佳。通过参数优化、风险控制等手段,可以将该策略运用得更加稳定高效。
-
-||
 
 ### Overview  
 
@@ -113,7 +61,6 @@ The strategy can be further optimized in the following ways:
 
 The RWI volatility contrarian strategy has clear logic using RWI to determine reversals. The trading logic is solid and works well in ranging markets. By optimizing parameters, controlling risks etc, the strategy can be applied more steadily and efficiently.
 
-[/trans]
 
 > Strategy Arguments
 

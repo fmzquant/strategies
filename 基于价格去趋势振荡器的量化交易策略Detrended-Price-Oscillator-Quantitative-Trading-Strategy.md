@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略概述
-
-本策略名称为“基于价格去趋势振荡器的量化交易策略”(Detrended Price Oscillator Quantitative Trading Strategy)。该策略通过构建价格去趋势振荡器指标,并以其为基础发出交易信号,属于典型的技术指标策略。
-
-## 策略原理
-
-该策略的核心是价格去趋势振荡器(DPO)指标。DPO指标类似于移动平均线,可以滤除价格中较长周期的趋势,使得价格中的周期性波动更加明显。具体来说,DPO指标是将价格与其N日简单移动平均线进行对比,当价格高于移动平均线时,DPO为正;当价格低于移动平均线时,DPO为负。这样就得到了一个振荡在0轴左右的指标。我们可以以DPO指标的正负来判断价格相对于趋势的涨跌。
-
-本策略设置参数N为14,构建14日DPO指标。当DPO指标为正,则发出做多信号;当DPO指标为负,则发出做空信号。
-
-## 策略优势
-
-- DPO指标本质上是一种滤波指标,可以有效识别价格中的中短线周期。这对发现比较隐蔽的交易机会很有帮助。
-- DPO指标构建简单,容易理解,参数选择也比较灵活。
-- 相对价格本身,DPO指标的形态比较标准,容易判断,适合制定规则。
-
-## 策略风险
-
-- 如大多数技术指标策略一样,DPO策略容易产生多次无谓的交易信号。这可能带来不必要的滑点和交易成本。
-- DPO指标对参数N很敏感,不同的参数选择会导致策略效果差异很大。必须经过大量测试找到最佳参数。
-- 在趋势行情中,DPO策略的持仓时间可能会过长,无法及时止损,存在一定的失血风险。
-
-为降低风险,可以考虑以下几个方面进行优化:
-1. 加入止损机制,控制单笔损失。
-2. 调整参数N的值,寻找最优参数。
-3. 结合趋势指标,避免在明确趋势下仍按原策略交易。
-
-## 总结
-
-本策略基于价格去趋势振荡器指标发出交易信号。该指标通过与移动平均线比较,滤除价格中的长周期趋势,使得价格周期性特征更加明显。这有助于发现一些不易察觉的交易机会。同时也存在参数选择敏感、止损及过滤等问题。通过不断优化,该策略的效果还有很大提升空间。
-
-||
 
 ## Strategy Overview
 
@@ -79,7 +45,6 @@ To mitigate risks, optimization can be considered in the following aspects:
 
 This strategy generates trading signals based on the Detrended Price Oscillator indicator. By comparing with moving averages, this indicator filters out long-term trends in prices to make price cyclic characteristics more pronounced. This helps to discover some concealed trading opportunities. At the same time, it also faces problems like parameter sensitivity, filtering, etc. There is still large room for efficacy improvement through continuous optimization.
 
-[/trans]
 
 > Strategy Arguments
 

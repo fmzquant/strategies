@@ -11,47 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/dc004000dc448841b4.png)
 
-[trans]
-## 概述
-
-该策略主要利用价格在连续8天高于或低于5日简单移动平均线后发生反转的特点,来捕捉中短线上的动量效应。当价格连续8天低于5日线后第一天收盘价再次上穿5日线时,做多;当价格连续8天高于5日线后第一天收盘价再次下穿5日线时,做空。
-
-## 策略原理
-
-1. 计算5日简单移动平均线SMA。
-2. 定义多头趋势TrendUp为收盘价大于或等于SMA,空头趋势TrendDown为收盘价小于或等于SMA。
-3. 确认趋势反转的条件:连续8日收盘价低于SMA后,下一日收盘价转为多头(上穿SMA)时触发买入信号;连续8日收盘价高于SMA后,下一日收盘价转为空头(下穿SMA)时触发卖出信号。
-4. 入场:买入条件Buy为上一日触发买入信号TriggerBuy且当前为空头趋势时做多;卖出条件Sell为上一日触发卖出信号TriggerSell且当前为多头趋势时做空。
-5. 出场:多头止损为收盘价下穿SMA时平仓;空头止损为收盘价上穿SMA时平仓。
-
-## 优势分析
-
-1. 利用价格反转的特点,适合捕捉中短线动量。
-2. 连续8日突破SMA形成趋势运行的情况较多,增加交易机会。
-3. 5日线参数较优,避免被过多假突破愚弄。
-4. 风险可控,有明确的止损点。
-
-## 风险分析
-
-1. 行情震荡时止损点可能会被频繁触发。
-2. 突破运行的天数如果设定过长,可能错过最佳入场时机。
-3. 如果行情出现长期单边运行,该策略难以获利。
-
-可以适当调整SMA的参数;优化入场条件,防止假突破;结合趋势判断指标强化效果。
-
-## 优化方向  
-
-1. 参数优化:可以测试不同周期的SMA参数,寻找更优参数。
-2. 进场优化:加入成交量指标,避免假突破;或增加阳线阴线判断,规避震荡。 
-3. 出场优化:可测试收盘价回落一定幅度后止损,增加止损BUFFER。
-4. 风控优化:可设置每日止损次数,避免亏损过多。
-5. 结合其他指标:可加入RSI,MACD等判断趋势指标,识别趋势态势。
-
-## 总结
-
-该策略通过判断价格运动状态,捕捉中短线价格from突破到反转的过程,实现规避震荡、顺势而为的交易策略。关键是参数设定和进场的判断要严谨,防止被噪音误导;同时出场止损要合理,防止亏损过大。如果再辅以趋势判断指标,可以获得更出色的效果。该策略逻辑清晰易懂,代码简洁,值得深入研究优化。
-
-||
 
 ## Overview
 
@@ -92,7 +51,6 @@ Can optimize SMA parameters, improve entry criteria to prevent false breakout, c
 
 The strategy captures the price movement from breakout to pullback by judging the momentum, implements the trading logic of avoiding whipsaws and trend following. The keys are strict parameter settings and robust entry criteria to prevent noise; reasonable stop loss to limit losses. Combining with trend indicators can achieve better results. The strategy logic is simple and clean. It is worthwhile to explore further optimization.
 
-[/trans]
 
 
 

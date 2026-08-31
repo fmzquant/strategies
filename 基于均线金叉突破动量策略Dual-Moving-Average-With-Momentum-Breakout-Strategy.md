@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11b07431125922ce1ec.png)
-[trans]
-## 概述
-
-本策略基于12日指数移动平均线(EMA)和26日EMA的金叉作为入场信号。为了过滤假突破,策略还引入MACD指标判断市场趋势以及RSI指标判断是否处于超买超卖区域。同时,策略还会判断价格是否突破阻力位来确认趋势。
-
-在止损方面,策略提供三种可选方案:跟踪止损、均线止损和均线叉死。在止盈方面,策略提供两个顺序止盈目标。
-
-## 策略原理
-
-1. 入场信号
-    - 12日EMA上穿26日EMA构成金叉
-    - MACD指标为正,且MACD线高于Signal线
-    - RSI指标值介于设定的区间内
-    - 收盘价高于21日EMA和7日SMA
-
-2. 入场确认
-    - 可选判断:价格突破动态阻力位
-
-3. 止损方式
-    - 跟踪止损:根据入场价格和设定的跟踪止损百分比跟踪设置止损位
-    - 均线止损:收盘价跌破7日SMA止损
-    - 均线叉死:12日EMA下穿26日EMA止损
-
-4. 止盈方式
-    - 设定两个顺序止盈目标,当第一个止盈位触发后卖出部分数量,当第二个止盈位触发后卖出全部数量
-
-## 策略优势
-
-1. 使用均线系统过滤误导信号,提高入场准确率
-2. 多种可选的止损方式适应不同类型交易者
-3. 动态跟踪止损实现风险控制
-4. 止盈目标分批出场,锁定部分利润
-
-## 策略风险 
-
-1. 市场震荡时,EMA指标产生较多假信号
-2. 跟踪止损在突破上行后可能被突破
-3. 均线叉死止损在趋势反转时无法及时止损
-
-**对应措施:**
-
-1. 结合MACD指标判断市场实际走势
-2. 调整跟踪止损的幅度
-3. 选用其他止损方式或结合止损
-
-## 策略优化方向
-
-1. 对EMA参数进行优化,确定最佳参数组合
-2. 测试不同的止损方式及参数,找到最佳止损方案
-3. 测试不同的止盈参数,优化止盈效果
-4. 结合其他指标判断入场时机
-5. 根据不同品种、周期参数进行调整
-
-## 总结
-
-本策略以均线系统为主要交易信号,辅助以MACD、RSI等指标进行入场过滤。止损方式和止盈目标都进行了优化设定,可以通过参数调整匹配不同类型投资者。策略优化空间还很大,可以从入场信号、止损方式、止盈目标等多个维度进行测试和改进,使策略效果更好。
-
-||
 
 ## Overview
 
@@ -121,7 +63,6 @@ The strategy provides three optional stop loss methods: trailing stop loss, movi
 
 The strategy uses MA system for entry signal, with additional filters by MACD, RSI etc. Both stops and profit targets are optimized for matching different trader style. There is still large room for optimization on entry timing, stop method, take profit level etc. to further improve performance.
 
-[/trans]
 
 > Strategy Arguments
 

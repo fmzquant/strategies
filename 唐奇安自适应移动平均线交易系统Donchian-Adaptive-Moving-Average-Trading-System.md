@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10352684c9b53ab9689.png)
-[trans]
-## 概述
-
-唐奇安自适应移动平均线交易系统是一种追踪价格趋势的量化交易策略。该策略利用唐奇安通道指标,结合长线和短线移动平均线,对价格趋势进行判断与跟踪,以捕捉中长线价格趋势,进行趋势性交易。
-
-## 策略原理  
-
-该策略首先计算真实波幅。真实波幅是指从前一根K线的收盘价到当前K线的最高价与最低价之间的价格变动范围。然后计算真实波幅的长线简单移动平均值,作为唐奇安通道的带宽。再结合长短两个时间周期的移动平均线,判断价格趋势。具体判断规则如下:
-
-当价格上穿长线移动平均线加上带宽以及短线移动平均线加上带宽时,做多;当价格下穿长线移动平均线减去带宽以及短线移动平均线减去带宽时,做空。平仓条件为prices下穿带宽增加的长短线移动平均线时平多仓;prices上穿带宽增加的长短线移动平均线时平空仓。
-
-这样,策略通过真实波幅动态调整唐奇安通道的带宽,并结合双重移动平均线过滤,可以有效跟踪中长线价格趋势,减少假信号,从而获得稳定的长线交易机会。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 利用真实波幅计算动态调整通道带宽,避免死参数,能更好适应市场变化。
-
-2. 双重移动平均线结合判断,可以有效过滤噪音,减少假信号。  
-
-3. 追踪中长线趋势,可以减少反复交易,降低交易频率,获得长周期持续盈利机会。
-
-4. 策略逻辑简单清晰易于实现,容错率高,适合自动量化交易。
-
-## 风险及优化
-
-该策略也存在一定的风险:
-
-1. 长线交易难以把握短线调整的入场时点。可以适当结合波动指标等判断短线情况,优化入场。  
-
-2. 行业、个股不同,参数需要优化。可以考虑动态优选参数组合。
-
-3. 突发事件造成重大趋势变化时,止损点需要适当放宽。
-
-## 总结
-
-总的来说,唐奇安自适应移动平均线交易系统整体是一个稳定、简单、易于实施的量化策略。该策略利用动态通道和双均线过滤,可以有效跟踪市场中长线趋势,降低交易频率,获得长周期持续收益。同时也需要注意优化参数设置,防范风险,做好止损以适应突发事件。总体而言该策略表现优秀,适合中长线量化追踪使用。
-
-||
 
 ## Overview  
 
@@ -89,7 +49,6 @@ The strategy also has some risks:
 
 In summary, the Donchian adaptive moving average trading system is an overall stable, simple and easy-to-implement quantitative strategy. By utilizing dynamic channels and dual moving average filtering, it can effectively track medium-to-long term market trends, reduce trading frequency, and obtain long-term sustained profits. Meanwhile, optimizing parameter settings, preventing risks, and proper stop loss should also be noted to adapt to emergencies. Overall speaking this strategy has outstanding performance and is suitable for medium-to-long term algorithmic trend tracking.
 
-[/trans]
 
 > Strategy Arguments
 

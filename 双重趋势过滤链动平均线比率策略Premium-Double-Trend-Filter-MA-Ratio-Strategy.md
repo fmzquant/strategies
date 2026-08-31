@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9b374a1fdab8bcc33c.png)
-[trans]
-
-## 概述
-本策略是基于双重移动平均线比率指标,结合布林带过滤器和双重趋势过滤指标,采用链式退出机制的趋势跟随策略。该策略旨在利用移动平均线比率指标识别中长线趋势方向,在趋势方向明确时选择较好的入场点入场,并设置止盈、止损退出机制锁定利润,降低损失。
-
-## 策略原理
-1. 计算快速移动平均线(10日线)和慢速移动平均线(50日线),并计算它们的比率,称为价格移动平均线比率。该比率可以有效识别价格中长线趋势的变化。
-2. 将价格移动平均线比率转换为百分位数,即当前比率在过去一段时间内的相对强弱。该百分位数被定义为振荡器。
-3. 当振荡器上穿设定的买入阈值(10)时产生买入信号,下破卖出阈值(90)时产生卖出信号,进行趋势跟随。
-4. 结合布林带宽度指标对交易信号进行过滤,布林带收窄时进行操作。
-5. 采用双重趋势过滤指标,只有当价格处于上升趋势通道时才产生买入信号,只有当价格处于下降通道时才产生卖出信号,从而避免逆势操作。
-6. 设置链式退出机制,包括止盈、止损和组合退出,可预设多个退出条件,优先退出获利最大的条件。
-
-## 策略优势
-1. 双重趋势过滤机制,可靠判断主趋势方向,避免逆势操作。
-2. 移动平均线比率指标比单一移动平均线更有效判断趋势变化。
-3. 布林带宽度指标可有效定位市场的低波动期,这时交易信号更加可靠。
-4. 链式退出机制使盈利更稳定,将全部利润最大化。
-
-## 风险及解决方法
-1. 在震荡行情中无明显趋势时,会出现较多的错误信号和反转。解决方法是结合布林带宽度过滤,收窄时进行操作。
-2. 当出现明显趋势反转时,移动平均线会产生滞后性,并不能第一时间判断出反转信号。解决方法是适当缩短移动平均线周期参数。
-3. 在行情出现跳空缺口时,止损点可能会被瞬间击中,造成较大损失。解决方法是适当放宽止损点的参数。
-
-## 策略优化方向
-1. 参数优化。可对移动平均线周期、振荡器买卖点、布林带参数、趋势过滤参数进行穷举测试,寻找最佳参数组合。
-2. 融入其他指标。可考虑加入其它判断趋势反转的指标,如KD指标、MACD指标等,提高策略的准确性。  
-3. 机器学习。可以收集历史数据,利用机器学习算法训练模型,动态优化各项参数,实现参数的自适应调整。
-
-## 总结
-本策略综合运用双重移动平均线比率指标和布林带指标判断中长线趋势方向,在确认趋势后寻找最佳入场点入场,并设置链式退出机制锁定利润,可靠度较高,效果明显。该策略可通过参数优化、增加其他辅助判断指标以及机器学习进一步改进和提高获利率。
-
-|| 
 
 ## Overview  
 This strategy is based on double moving average ratio indicator combined with Bollinger Bands filter and double trend filter indicator. It adopts chained exit mechanisms for trend following. This strategy aims to identify mid-to-long term trend direction through moving average ratio indicator. It enters the market at better entry points when trend direction is clear. It also sets take profit, stop loss exit mechanisms to lock in profits and reduce losses.  
@@ -73,7 +40,6 @@ This strategy is based on double moving average ratio indicator combined with Bo
 
 ## Summary
 This strategy integrates double MA ratio indicator and BB to determine mid-to-long term trend. It enters Market at best point after trend confirmation with chained profit-taking mechanisms. It is highly reliable and efficient. Further improvements can be achieved through parameter optimization, adding trend reversal indicators and machine learning.
-[/trans]
 
 > Strategy Arguments
 

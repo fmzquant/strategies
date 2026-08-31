@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/126c12472170eec7e3d.png)
 
-[trans]
-
-
-本策略通过追踪均线的突破,在震荡市实现持续盈利。
-
-## 策略原理
-
-该策略主要基于均线的突破原理进行建仓,使用 MA 聚合多重均线,形成主均线。当价格突破主均线时产生交易信号。
-
-具体来说,策略采用 60 周期的 WMA 双滑动平均线作为主均线。同时,计算价格的真实波动范围,并绘制上下通道。价格突破上轨时看涨,突破下轨时看跌。 
-
-在突破基础上,策略还引入 RSI 指标和 EMA 指标进行辅助判断,要求 RSI>50 且价格高于 EMA 时做多,RSI<50 且价格低于 EMA 时做空,从而避免假突破。
-
-此外,策略利用三重均线的强弱态势判断结束仓位。当三重均线formations为弱势时(-1),选择退出点为反向突破通道。
-
-## 策略优势
-
-- 使用 MA 多重均线,能够有效平滑价格变动,识别趋势方向
-- 基于通道突破交易,可在震荡行情中获取较大利润
-- 结合 RSI 和 EMA 进行辅助判断,可过滤假突破信号
-- 利用三重均线状态判断适当退出点位,可避免衰竭行情
-
-## 策略风险
-
-- 大幅震荡行情中,MA 主均线可能产生较多假突破
-- 三重均线判断的退出时机可能不精确
-- RSI 参数设置不当可能导致交易频率过高
-
-可通过优化 MA 周期参数,调整三重均线设置,谨慎使用 RSI 参数等方法降低风险。
-
-## 策略优化方向 
-
-- 优化 MA 周期参数,寻找更合适的主均线周期
-- 尝试不同的辅助指标替换 RSI,如 KDJ、MACD 等
-- 调整三重均线参数,寻找更准确的反转时机
-- 添加止损策略,控制单笔交易风险
-
-## 总结
-
-本策略整体来说是一个非常适合震荡行情的突破策略。核心思路是基于 MA 突破建仓,辅以趋势指标过滤,在震荡行情中持续盈利。同时结合三重均线判断反转时机提前退出。该策略优化空间较大,可从调整参数、改进入场退出等方面进行优化,在震荡行情中可能获得较好的效果。
-
-
-||
 
 
 This strategy realizes continuous profitability in volatile markets by tracking moving average line breakthroughs.
@@ -94,7 +51,6 @@ These risks can be reduced by optimizing MA periods, tuning triple MA settings, 
 
 In summary, this is an excellent breakout strategy for range-bound markets. The core idea is to open positions based on MA breakouts, filtered by trend indicators, and realize steady profits in non-trending markets. Exits are determined earlier using triple MA formations. There is ample room for optimizing parameters, improving entry/exit logic etc. to maximize performance in ranging markets.
 
-[/trans]
 
 > Strategy Arguments
 

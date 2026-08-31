@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ee12a441ceee6caeb4.png)
 
-[trans]
-#### 概述
-本策略是一个结合了肯特纳通道(Keltner Channel)和相对强弱指标(RSI)的量化交易系统。该策略通过动态价格通道和动量指标的配合，在市场波动中捕捉交易机会。策略采用指数移动平均线(EMA)和平均真实波幅(ATR)计算价格通道，并结合RSI指标进行交易信号的确认，实现了趋势跟踪和超买超卖的双重过滤。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键组件：
-1. 肯特纳通道的构建：使用20周期的EMA作为中轨，10周期的ATR乘以1.5倍数确定上下轨，形成动态的价格波动区间。
-2. RSI指标的应用：采用14周期的RSI计算，设定70和30作为超买超卖的临界值。
-3. 交易信号的生成：
-   - 做多条件：价格突破通道下轨且RSI低于30
-   - 做空条件：价格突破通道上轨且RSI高于70
-4. 平仓逻辑：
-   - 多头平仓：价格跌破EMA或RSI上升超过50
-   - 空头平仓：价格突破EMA或RSI下降低于50
-
-#### 策略优势
-1. 多维度确认：通过价格突破和动量指标的配合，提高了交易信号的可靠性。
-2. 动态适应：肯特纳通道能够根据市场波动性自动调整区间宽度，适应不同市场环境。
-3. 风险控制：使用EMA和RSI的中性水平作为平仓条件，有助于及时止盈止损。
-4. 可视化支持：策略提供了清晰的图形界面，包括通道、RSI水平和交易信号标记。
-
-#### 策略风险
-1. 假突破风险：在震荡市场中可能出现频繁的假突破信号。
-2. 滞后性问题：EMA和RSI都具有一定的滞后性，可能导致入场或出场时机的延迟。
-3. 参数敏感性：策略效果对参数设置较为敏感，不同市场环境可能需要调整参数。
-4. 趋势依赖：在无明显趋势的市场中，策略表现可能不佳。
-
-#### 策略优化方向
-1. 参数自适应：可以引入自适应机制，根据市场波动性动态调整通道参数和RSI阈值。
-2. 信号过滤：增加成交量、波动率等辅助指标，提高信号质量。
-3. 仓位管理：引入动态仓位管理机制，根据信号强度和市场风险调整持仓量。
-4. 市场环境识别：添加市场环境判断模块，在不同市场状态下使用不同的参数组合。
-
-#### 总结
-该策略通过结合价格通道和动量指标，构建了一个较为完整的交易系统。策略的优势在于信号的多维确认和动态适应能力，但也需要注意假突破和参数敏感性等风险。通过进一步优化参数自适应性和信号过滤机制，策略的稳定性和可靠性有望得到提升。该策略适合在趋势明显的市场中应用，对于期望通过技术指标捕捉市场动量的交易者来说是一个较好的选择。
-
-|| 
 
 #### Overview
 This strategy is a quantitative trading system that combines the Keltner Channel and Relative Strength Index (RSI). It captures trading opportunities in market volatility through the combination of dynamic price channels and momentum indicators. The strategy uses Exponential Moving Average (EMA) and Average True Range (ATR) to calculate price channels, coupled with RSI for trade signal confirmation, achieving dual filtration of trend following and overbought/oversold conditions.
@@ -83,7 +46,6 @@ The core logic of the strategy is based on the following key components:
 
 #### Summary
 This strategy builds a relatively complete trading system by combining price channels and momentum indicators. Its strengths lie in multi-dimensional signal confirmation and dynamic adaptation capability, but attention must be paid to risks such as false breakouts and parameter sensitivity. Through further optimization of parameter adaptability and signal filtering mechanisms, the strategy's stability and reliability can be improved. The strategy is suitable for application in markets with clear trends and is a good choice for traders looking to capture market momentum through technical indicators.
-[/trans]
 
 
 

@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b672b9715a0ab0a91c.png)
-[trans]
-
-### 概述
-
-这个策略利用月线收盘价与移动均线的交叉来产生交易信号。当月线收盘价上穿移动均线时,做多;当月线收盘价下穿移动均线时,平仓。
-
-### 策略原理
-
-该策略的核心逻辑是:
-
-1. 输入移动均线的周期参数,可以选择SMA或EMA
-2. 可以选择显示移动均线
-3. 可以选择另一个股票的收盘价作为信号
-4. 根据月线收盘价和移动均线的关系判断交易信号
-   - 收盘价上穿移动均线,做多
-   - 收盘价下穿移动均线,平仓
-
-该策略利用移动均线的平滑特性,过滤掉价格的部分噪音,捕捉股价中期趋势的转折。当股价上穿均线时,说明股价正在形成牛市趋势;当股价下穿均线时,说明股价趋势正在转为熊市。
-
-### 策略优势
-
-该策略有以下主要优势:
-
-1. 运用月线数据,能够有效过滤隔夜噪音,捕捉股价中长期趋势
-2. 可自定义移动均线周期,优化参数以适应不同股票
-3. 可选择另一个股票作为信号源,有利于提高稳定性
-4. 采用advanced anti-repainting技术,有效防止回溯
-5. 可输入任意回测时间周期,方便测试优化
-
-总体来说,该策略框架简单实用,通过参数优化可以适用于大多数股票,特别适合中长线投资者。
-
-### 策略风险
-
-该策略也存在一些风险,主要集中在以下几个方面:
-
-1. 月线数据更新较慢,无法实时反映价格变化
-2. 存在一定的滞后,可能错过短线交易机会
-3. 移动均线具有滞后性,产生信号的时间点不可控
-4. 参数选择不当可能导致过于保守或错失机会
-
-为了降低风险,可以从以下几个方面进行优化:
-
-1. 结合更低时间框架的技术指标进行辅助判断
-2. 调整移动均线周期,找到最佳参数组合
-3. 利用更稳定的标的作为信号源
-4. 适当调整仓位规模,控制单笔损失
-
-### 策略优化方向  
-
-该策略还具有很大的优化空间,主要可以从以下几个方面进行优化:
-
-1. 增加止损策略,以锁定利润、控制风险
-2. 结合其他指标,如KD、MACD等,提高交易信号准确性 
-3. 利用机器学习技术动态优化移动均线参数
-4. 增加仓位管理模块,让仓位随趋势allocatorsize变化
-5. 增设多空转换功能,可根据市场情况灵活调整
-6. joining与更低时间框架的K线,实现更灵敏的交易
-
-### 总结
-
-月线收盘价与移动均线交叉策略整体思路清晰、易于实现,通过参数调整可以适用于不同股票,特别适合中长线投资者。随着止损、优化参数等模块的不断加强,该策略可望产生更出色的表现。
-
-||
 
 ### Overview  
 
@@ -134,7 +71,6 @@ This strategy has great potential for enhancement:
 
 The monthly close and MA crossover strategy has simple, straightforward logic and can be adapted to various tickers through parameter tuning. It is especially suitable for mid-long term investors. With the continuing enhancement of stop loss, parameter optimization and other modules, this strategy shows great promise.
 
-[/trans]
 
 > Strategy Arguments
 

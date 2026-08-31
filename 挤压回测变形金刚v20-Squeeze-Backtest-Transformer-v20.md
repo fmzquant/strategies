@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a4ad57451c36889bcf.png)
 
-[trans]
-#### 概述
-挤压回测变形金刚v2.0是一个基于挤压型策略的量化交易系统。它通过设置进场、止损和止盈百分比,以及最大持仓时间等参数,在特定时间范围内对策略进行回测。该策略支持多方向交易,可以灵活设置交易方向为做多或做空。同时,该策略还提供了丰富的回测期设置选项,可以方便地选择固定时间范围或者最大回测时间。
-
-#### 策略原理
-1. 首先根据用户设置的回测期参数,确定回测的起始时间和结束时间。
-2. 在回测期内,如果当前没有持仓且价格触及进场价格(根据开仓百分比计算),则开仓并同时设置止损和止盈价格(根据止损和止盈百分比计算)。
-3. 如果已经持仓,则取消之前的止盈止损单,重新设置新的止盈止损价格(根据当前持仓均价计算)。
-4. 如果设置了最大持仓时间,当持仓时间达到最大值时,强制平仓。
-5. 策略支持做多和做空两个方向的交易。
-
-#### 策略优势
-1. 参数设置灵活,可以根据不同的市场情况和交易需求进行调整。
-2. 支持多方向交易,可以在不同的市场行情下获取收益。
-3. 提供了丰富的回测期设置选项,可以方便地进行历史数据回测和分析。
-4. 止损和止盈设置可以有效控制风险,提高资金利用效率。
-5. 最大持仓时间设置可以避免持仓过久而面临市场风险。
-
-#### 策略风险
-1. 进场价格、止损价格和止盈价格的设置对策略收益有很大影响,不当的参数设置可能导致亏损。
-2. 市场波动剧烈时,可能出现开仓后立即触发止损的情况,从而导致损失。
-3. 如果持仓时触发最大持仓时间平仓,有可能错失后续的获利机会。
-4. 策略在某些特殊行情下(如震荡市)表现可能不佳。
-
-#### 策略优化方向
-1. 可以考虑引入更多的技术指标或者市场情绪指标,对进场、止损和止盈条件进行优化,提高策略的稳定性和盈利能力。
-2. 对于最大持仓时间的设置,可以根据市场波动性和持仓盈亏情况动态调整,避免固定时间平仓可能带来的机会成本。
-3. 针对震荡市的特点,可以加入震荡区间突破或者趋势转折确认等逻辑,降低频繁交易带来的成本。
-4. 考虑加入仓位管理和资金管理策略,控制单次交易风险敞口,提高资金利用效率和稳定性。
-
-#### 总结
-挤压回测变形金刚v2.0是一个基于挤压型策略的量化交易系统,通过灵活的参数设置和多方向交易支持,可以在不同市场环境下进行交易。同时,丰富的回测期设置选项和止盈止损设置可以帮助用户进行历史数据分析和风险控制。但是,策略的表现受参数设置影响较大,需要根据市场特点和交易需求进行优化和改进,以提高策略的稳健性和盈利能力。未来可以考虑引入更多技术指标、动态调整最大持仓时间、优化震荡市策略以及加强仓位和资金管理等方面进行优化。
-
-|| 
 
 #### Overview
 Squeeze Backtest Transformer v2.0 is a quantitative trading system based on a squeeze strategy. By setting parameters such as entry, stop loss, take profit percentages, and maximum holding time, it backtests the strategy within a specific time range. The strategy supports multi-directional trading and can flexibly set the trading direction to long or short. At the same time, the strategy also provides rich options for setting the backtest period, which can easily select a fixed time range or the maximum backtest time.
@@ -77,7 +43,6 @@ Squeeze Backtest Transformer v2.0 is a quantitative trading system based on a sq
 
 #### Summary
 Squeeze Backtest Transformer v2.0 is a quantitative trading system based on a squeeze strategy that can trade in different market environments through flexible parameter settings and multi-directional trading support. At the same time, rich backtest period setting options and take profit and stop loss settings can help users conduct historical data analysis and risk control. However, the performance of the strategy is greatly affected by parameter settings and needs to be optimized and improved based on market characteristics and trading needs to improve the stability and profitability of the strategy. In the future, we can consider introducing more technical indicators, dynamically adjusting the maximum holding time, optimizing sideways market strategies, and strengthening position and capital management to optimize.
-[/trans]
 
 > Strategy Arguments
 

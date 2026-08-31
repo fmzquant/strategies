@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b589721f196ad7ad04.png)
-[trans]
-### 概述
-
-本文将要介绍的是一种结合形态分析与蜡烛线形态的量化交易策略。该策略通过检测价格图形中的重要拐点和代表强势反转的蜡烛形态,实现低风险高效益的自动化交易。
-
-### 策略原理
-
-该策略基于对价格走势的详细分析,结合形态分析和蜡烛线分析,设定了清晰的进场逻辑和止损逻辑,能够实现能够实现对趋势的有效跟踪。
-
-具体来说,其进场条件是:价格上穿前两个K线的最高价并且出现突破前期高点形态或多头吞没形态或锤头形态之一。这个组合条件能够有效确认看涨机会。同时其止损条件是:价格下穿前两个K线的最低价。这样的止损逻辑保证了止损及时高效。
-
-在判断形态方面,该策略结合使用了识别重要拐点的分型线,以及判断趋势反转的三种典型蜡烛形态。其中重要拐点分型的判断使用比较广泛的分型理论,判断多头、空头吞没和锤子等形态则使用了比较成熟的算法。
-
-在具体实现上,该策略使用pine脚本编写。其检测分型的实现逻辑是当当前K线的最高价等于之前3根K线的最高价时,即为顶分型。底分型的判断原理类似。检测吞没类形态则基于开盘价、收盘价大小关系的严格判断。
-
-### 策略优势
-
-该策略的主要优势有:
-1. 结合分型与蜡烛形态,判断准确可靠;
-2. 进场、止损逻辑清晰简单,易于实施;  
-3. 使用成熟理论与指标,可避免过拟合问题;
-4. Pine脚本编写,适用于TradingView等主流平台。
-
-### 策略风险
-
-该策略仍存在一定的风险需要注意:  
-1. 分型与形态判断仍存在一定主观性;
-2. 短期内可能产生连续的错误信号;
-3. 高频交易时止损幅度需要调整。  
-
-针对上述风险,可通过优化止损策略,引入趋势过滤,使用量化工具验证策略参数等方法加以控制。
-
-### 策略优化
-
-该策略可进一步优化的方向包括:
-1. 调整蜡烛形态的参数,确保判断的准确性;  
-2. 增加对趋势的判断,避免因短期震荡产生错误信号;
-3. 引入机器学习等方法,实现参数的自动优化。
-
-通过上述优化,可以进一步增强策略的稳定性与盈利能力。
-
-### 总结
-
-本文详细介绍了一种基于分型线和蜡烛形态的量化交易策略。该策略判断准确、易于实施,能够有效捕捉价格趋势并实现自动化交易。经过持续优化与验证,其表现将进一步提升,值得投资者或交易员深入研究与应用。
-
-||
 
 ### Overview  
 
@@ -104,7 +58,6 @@ These improvements will further strengthen the strategy’s stability and profit
 
 This article thoroughly covers a price action trading strategy combining fractals and candlestick patterns. With accurate signaling, easy implementation and effective trend following, this strategy can greatly benefit systematic traders and discretionary traders alike. Continual improvements and verification will further elevate its performance for practical trading.
 
-[/trans]
 
 
 

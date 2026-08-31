@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个基于快速移动平均线和慢速移动平均线交叉的简单交易策略。它利用移动平均线的金叉死叉来发出买入和卖出信号。当快速移动平均线上穿慢速移动平均线时,做多;当快速移动平均线下穿慢速移动平均线时,做空。该策略旨在利用不同周期移动平均线之间的交叉来捕捉价格趋势的转折点,实现股票交易。
-
-## 策略原理
-
-该策略主要基于快速Exponential Moving Average(EMA)和慢速Simple Moving Average(SMA)的交叉作为交易信号。首先计算快速EMA和慢速SMA,快速EMA周期设定为13,慢速SMA周期设定为30。然后,当快速EMA上穿慢速SMA时,发出做多信号;当快速EMA下穿慢速SMA时,发出做空信号。
-
-具体来说,策略通过maFast和maSlow变量计算快速EMA和慢速SMA。接着,它定义了enterLong和exitLong变量来判定买入和卖出时机。当maFast>maSlow时,即快速EMA上穿慢速SMA,设置enterLong=true,发出做多信号;当maSlow>maFast时,即快速EMA下穿慢速SMA,设置exitLong=true,发出平仓信号。最后,策略通过strategy.entry函数在满足条件时下单。
-
-这样,当短期价格上涨趋势强于长期趋势时,快速EMA会上穿慢速SMA,产生买入信号;当短期下跌趋势强于长期趋势时,快速EMA会下穿慢速SMA,产生卖出信号。通过捕捉不同周期价格趋势的转折,可以在相对低点买入,在相对高点卖出。
-
-## 优势分析
-
-该移动平均线交叉策略具有以下优势:
-
-1. 简单易行,容易理解和实现。移动平均线是一种常用且有效的技术指标,其交叉原理简单直观。这使得该策略容易被交易者理解和应用。
-
-2. 灵活度高,可自定义参数。策略允许自定义快速EMA和慢速SMA的周期数,可以根据不同市场调整参数,提高策略的适应性。
-
-3. 可靠的交易信号。移动平均线能有效地过滤市场噪音,其交叉可产生比较可靠的交易信号。快慢均线交叉可捕捉大趋势的转折。
-
-4. 适用于不同市场环境。该策略可用于趋势市和盘整市,通过参数调整,可以适应不同行情。
-
-5. 容易与其他指标组合使用。移动平均线交叉策略可以灵活地和其它技术指标如RSI等组合,形成更强大的策略。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 产生较多零星信号。当市场趋势不明朗时,移动平均线可能出现多次交叉,造成频繁的买卖信号,增加交易成本和滑点损失。
-
-2. 容易在震荡市中被套牢。当市场处于盘整震荡状态时,移动平均线可能出现较多不确定性交叉信号,容易造成虚假交易信号。
-
-3. 参数选择困难。移动平均线周期参数的选择对策略效果有很大影响,如何选择最佳参数需要进行大量反复测试。
-
-4. 信号产生滞后。由于移动平均线本身具有滞后性,其交叉信号往往会较late,可能错过最佳入场时机。
-
-5. 止损策略不完善。该策略缺乏止损逻辑,可能产生较大亏损的单子。
-
-## 优化方向
-
-该移动平均线交叉策略还可以从以下几个方面进行优化:
-
-1. 加入其它技术指标过滤信号,如RSI,可以减少虚假信号。当RSI高位时不做多,RSI低位时不做空等。
-
-2. 增加复合移动平均线,可以使用三条或以上不同周期的移动平均线确认信号。例如加入50日线,多头市场时短期上穿中期,中期上穿长期。
-
-3. 加入止损策略,如抛物线 SAR等,可以及时止损,控制风险。也可以根据市场波动率设定自适应的移动止损。
-
-4. 优化参数,使用walk forward analysis和machine learning等方法来优化参数,使之更适合不同市场环境。
-
-5. 分时图操作,加入K线实体方向等形态判断,可以提高信号质量,减少不必要的反向开仓。
-
-6. 结合量能指标,如交易量,可以避免虚假突破。量能的确认可以使信号更可靠。
-
-## 总结
-
-移动平均线交叉策略是一个既简单又实用的量化交易策略。它使用快速EMA和慢速SMA的交叉来产生交易信号。该策略容易实现,也容易与其他技术指标组合使用。但是,它也存在一些缺点,如频繁交易,容易在震荡市被套等。通过一些参数和规则优化,可以增强该策略的实用性和盈利能力。总的来说,移动平均线交叉策略值得量化交易者学习和应用。
-
-||
 
 
 ## Overview
@@ -134,7 +71,6 @@ Some ways to optimize the moving average crossover strategy:
 
 The moving average crossover strategy is a simple yet practical quantitative trading strategy. It uses fast EMA and slow SMA crosses to generate trading signals. The strategy is easy to implement and combine with other indicators, but also has drawbacks like excessive trading and whipsaws. With proper enhancements in parameters and risk management, the strategy can become more robust and profitable. Overall, the moving average crossover approach is worth learning and applying for quantitative traders.
 
-[/trans]
 
 > Strategy Arguments
 

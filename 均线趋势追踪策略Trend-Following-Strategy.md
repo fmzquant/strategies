@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c824c0d077d8c43c7c.png)
-[trans]
-
-
-## 概述
-
-趋势追踪策略是一种基于移动平均线的趋势跟踪交易策略。该策略使用指数移动平均线(EMA)和震荡移动平均线(HMA)的交叉来判断市场趋势方向,并相应生成买入和卖出信号。策略适用于中短线趋势交易,旨在跟踪较长时间周期内的价格趋势,而非短期震荡。
-
-## 策略原理  
-
-该策略使用两个不同参数的移动平均线:一个较短周期的EMA和一个较长周期的HMA。EMA能较快响应价格变动,用来判断短期趋势;HMA对价格变动响应较慢,用来判断长期趋势方向。
-
-当短期EMA上穿长期HMA时,被视为价格进入上升趋势,该策略将在下一根K线开盘时市价买入;当短期EMA下穿长期HMA时,被视为价格进入下降趋势,该策略将在下一根K线开盘时以市价卖出。 
-
-为了优化入市时机,策略添加了基于Heikin-Ashi的选项。开启此选项后,策略的买卖交易信号将基于Heikin-Ashi线,而非原始K线。由于Heikin-Ashi线可过滤 oscillator的原始K线,有助于减少假信号。
-
-该策略还加入了止损设置。当持仓亏损达到预设的止损幅度时,策略将以市价止损。此举可限制单笔交易的最大损失。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用EMA和HMA的交叉判断趋势方向,可利用不同周期平均线的优势,提高判断准确性。
-
-2. 基于趋势交易,不随小幅震荡反转仓位,可减少不必要的交易次数。
-
-3. Heikin-Ashi选项可过滤假信号,优化入市时机。
-
-4. 采用移动止损策略,可有效控制单笔交易最大损失。
-
-5. 策略参数可自定义,用户可根据不同品种和周期进行调整,提高适应性。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 作为趋势跟踪策略,在盘整市场表现较差。
-
-2. 在趋势反转来临时,可能带来较大亏损。
-
-3. 止损设定不当可能造成不必要的止损,也可能导致亏损扩大。
-
-4. 参数设置不当也会导致交易频繁或者完全不动。
-
-5. EMA和HMA周期设置需要针对不同品种和周期进行优化。
-
-6. Heikin-Ashi无法完全过滤假突破的风险。
-
-## 优化方向
-
-该策略可从以下方面进行优化:
-
-1. 利用更多指标组合判断趋势,如MACD,KDJ等,提高判断准确性。
-
-2. 加入更多过滤条件,如成交量,ATR等指标,降低假突破概率。
-
-3. 优化移动平均线的参数,使其更符合不同品种和交易周期。
-
-4. 优化止损幅度的设置,使止损更合理,避免过于宽松或过于僵硬。
-
-5. 考虑加入利润保护功能,如移动止盈、部分止盈等,锁定利润。
-
-6. 测试不同的替代持仓成本计算方式,优化持仓成本的计算。
-
-## 总结
-
-趋势跟踪策略基于移动平均线交叉判断趋势方向,采用Heikin-Ashi和移动止损来优化策略表现。该策略适合跟踪中长线趋势,可通过参数优化和功能扩展进一步改进策略效果。但用户需要意识到反转和止损风险的存在,需要针对品种和周期进行参数测试。总体来说,该策略为利用趋势交易提供了一个普适、可定制的框架。
-
-|| 
 
 ## Overview
 
@@ -143,7 +75,6 @@ The strategy can be improved from the following aspects:
 
 The trend following strategy identifies trends using moving average crossovers, and optimizes performance via Heikin-Ashi and moving stop loss. It is suitable for medium-to-long term trend trading, and can be further enhanced through parameter tuning and feature expansion. But users should be aware of the risks of reversals and improper stop loss. Overall it provides a universal and customizable framework for trend trading that works across different products and timeframes. Proper parameter testing is needed when applying it.
 
-[/trans]
 
 > Strategy Arguments
 

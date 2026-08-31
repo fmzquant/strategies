@@ -10,41 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9a32e8c2437858c540.png)
-[trans]
-
-## 概述
-本策略目的是研究购买低波动率和高波动率期间的资产之间的差异。它允许用户通过改变mode输入变量在低波动率和高波动率期间选择买入。
-
-## 策略原理
-本策略通过计算ATR和它的SMA来确定波动率。具体来说,它计算ATR的SMA,然后计算ATR与其SMA的比率。如果此比率高于用户定义的阈值volatilityTargetRatio,则认为波动率高;如果低于该阈值,则认为波动率低。
-
-根据用户选择的mode,策略在波动率高或波动率低时产生买入信号。一旦买入,策略会持有一定的bars数目(由sellAfterNBarsLength定义),然后平仓。
-
-## 优势分析
-该策略的主要优势如下:
-1. 可以直观地比较低波动率和高波动率期间的买入策略表现。
-2. 使用SMA平滑ATR,可以过滤假突破。
-3. 可以通过调整参数测试不同的波动率水平。
-
-## 风险分析
-该策略的主要风险如下:
-1. 如果只买入低波动率,可能会错过价格上涨机会。
-2. 如果只买入高波动率,可能增加系统风险。
-3. 参数设置不当可能导致错过买入时机或平仓过早。
-
-以上风险可以通过调整参数、组合不同波动率水平的买入来缓解。
-
-## 优化方向
-该策略可以进一步优化:
-1. 测试不同的ATR长度参数。
-2. 增加止损策略。
-3. 结合其他指标过滤假突破。
-4. 优化买入和平仓条件。
-
-## 总结
-本策略可以有效地比较低波动率和高波动率买入策略的表现。它使用SMA平滑ATR,根据波动率水平产生交易信号。该策略可以通过调整参数和优化条件得到改进。总的来说,本策略为研究波动率策略提供了有效工具。
-
-||
 
 ## Overview
 This strategy aims to study the difference between buying assets when volatility is low and when it is high. It allows the user to choose whether to buy during low or high volatility periods by changing the mode input variable.  
@@ -78,7 +43,6 @@ This strategy can be further optimized by:
 ## Conclusion
 This strategy can effectively compare the performance of low volatility buy and high volatility buy strategies. It uses SMA to smooth ATR and generates trading signals based on volatility levels. The strategy can be improved through parameter tuning and optimizing conditions. Overall, this strategy provides an effective tool for researching volatility-based strategies.
 
-[/trans]
 
 > Strategy Arguments
 

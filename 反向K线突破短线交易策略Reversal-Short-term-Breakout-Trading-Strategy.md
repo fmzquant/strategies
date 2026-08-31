@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/911daa9e5a8dcfab4c.png)
-[trans]
-
-## 概述
-该策略用于捕捉短线反转交易机会。它会在连续N根K线都是上涨后开仓做空,在连续M根K线都是下跌后平仓。同时,该策略加入了时间段限制和止损止盈功能。
-
-## 原理
-1. 输入参数:连续上涨K线数N,连续下跌K线数M
-2. 定义逻辑:
-    - ups统计上涨K线数,price>price[1]则+1,否则reset为0
-    - dns统计下跌K线数,price<price[1]则+1,否则reset为0
-3. 入场:当ups≥N时,做空;当dns≥M时,平仓
-4. 出场:固定止损止盈或时间段结束
-
-## 优势
-1. 捕捉反转交易机会,适合短线操作
-2. 可灵活设置交易时间段,适应不同交易计划
-3. 内置止损止盈功能,有助于风险控制
-
-## 风险
-1. 短线反转不一定成功,可能再次反转导致损失
-2. 需要合理设置参数N、M,过大或过小都不利
-3. 停止时刻设置不当可能无法及时止损
-
-## 优化方向  
-1. 结合趋势指标避免逆势操作
-2. 动态调整参数N、M
-3. 优化止损机制
-
-## 总结  
-该策略通过统计K线形态来捕捉短线交易机会。设置合理的参数以及风控措施对于获得稳定收益至关重要。通过进一步结合趋势判断及动态调整参数,可望获得更好的效果。
-
-|| 
 
 ## Overview  
 This strategy aims to capture short-term reversal trading opportunities. It will open short position after N consecutive up-bars and close position after M consecutive down-bars. It also incorporates time frame filter and stop loss/take profit features.  
@@ -72,7 +40,6 @@ This strategy aims to capture short-term reversal trading opportunities. It will
 ## Conclusion
 The strategy captures short-term trading opportunities through statistical K-line patterns. Reasonable parameter tuning and risk control measures are crucial for steady profits. Further improvements on combining trend analysis and dynamic parameter adjustment may lead to even better performance.
 
-[/trans]
 
 > Strategy Arguments
 

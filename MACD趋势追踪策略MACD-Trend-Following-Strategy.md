@@ -10,36 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10f4a7de16353ec4c9d.png)
-[trans]
-### 概述
-
-MACD趋势追踪策略通过计算MACD指标及其信号线的金叉死叉来判断趋势,实现追踪趋势获利。
-
-### 策略原理
-
-该策略基于MACD指标判断趋势方向。MACD指标是一种趋势跟踪指数平滑异同移动平均线,由快线(MACD)、慢线(Signal)和histogram组成。快线和慢线的金叉表明行情可能启动牛市,而死叉表明行情可能启动熊市。Histogram代表快线和慢线的差值,通过颜色变化判断两个平均线的远近及变化速度。
-
-当Histogram从负数升至正数时产生金叉信号,表示行情可能才刚开始,可以建立多头仓位;当Histogram从正数转为负数时产生死叉信号,表示行情可能见顶,可以平掉多头仓位或建立空头仓位。
-
-### 优势分析
-
-- 利用双 smoothing平均线金、死叉形态判断趋势,胜率较高
-- Histogram可清晰判断MACD指标的走势和速度  
-- 参数优化空间大,可调整至最佳状态
-- 可配合其他指标过滤假信号
-
-### 风险及优化
-
-- 存在一定程度的滞后性
-- 可能发出假信号
-- 可尝试MA、KD等指标确认趋势
-- 可调整参数寻找最佳配置
-
-### 总结
-
-MACD趋势追踪策略整体来说是一种较为可靠的趋势判断方法。通过优化参数,配合其它指标确认,可以大幅度降低假信号率,从而获取更高的策略收益。该策略思路简单易懂,是自动化量化交易入门的首选。
-
-||
 
 
 ### Overview
@@ -70,7 +40,6 @@ When the Histogram rises from negative to positive, a golden cross signal is gen
 
 The MACD trend following strategy overall is a relatively reliable way to determine trends. By optimizing parameters and confirming with other indicators, the fake signal rate can be largely reduced, resulting in higher strategy profit. The strategy logic is simple and easy to understand, making it the first choice for algorithmic trading starters.
 
-[/trans]
 
 > Strategy Arguments
 

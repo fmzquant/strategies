@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1213ad75ab8adb96cbf.png)
 
-[trans]
-
-## 概述
-
-移动平均回拉交易策略(Moving Average Pullback Trading Strategy)是一种朝着趋势方向进行交易的策略。它利用长期和短期移动平均线的关系来判断整体趋势方向,并在短期回撤时进行逢低买入,平仓目标为止损和止盈。
-
-## 策略原理
-
-该策略主要判断规则有:
-
-1. 当收盘价处于长期移动平均线之上时,确认目前处于多头行情,满足开仓条件 
-2. 当收盘价从短期移动平均线之上拖曳至短期移动平均线之下时,出现短期回撤行情
-3. 此时若RSI指标小于30,则认为处于超卖状态,形成买入信号
-4. 建立多头头寸,止损设定为入场价的5%以下,止盈设定为入场价的10%以上
-
-通过这样的结合判断,我们可以在趋势方向符合预期的前提下,利用短期调整的机会建立仓位。
-
-## 策略优势
-
-这种策略最大的优势在于,它只在大趋势向上的预期下进行多头交易,可以有效避免震荡市场的风险。同时,它利用短期平均线回调的时机追买,这可以以比较好的价位进入市场。
-
-另外,该策略设置了止损和止盈机制。这使得即便判断错误,形成反向行情,也可以通过止损来控制损失;而在盈利后,通过止盈来锁定部分利润。
-
-## 策略风险
-
-尽管该策略考虑到了大趋势判断和止损止盈设置,但仍存在一定的风险:
-
-1. 长期趋势判断错误风险。当判断进入多头行情后开仓做多,但实际上市场已经从多头转为震荡或者为空头,这样就会造成较大损失。
-
-2. 止损被追穿的风险。特别是在重大负面事件出现时,市场可能出现跳空下跌,超过事先设置的止损线,造成无法控制损失的情况。
-
-对应地,我们可以考虑这样几个方法来降低风险:
-
-1. 做好大市分析,避免在震荡区间错误判断趋势。或者设置更长周期的移动平均线来确认大趋势。
-
-2. 采用条件单,当市场跳空下跌时触发平仓,而不是简单的止损单,这样可以一定程度上防止止损单被追穿的情况。
-
-## 策略优化
-
-考虑到该策略的特点是长线判断与短线入场,我们可以从以下几个方面进一步优化:
-
-1. 优化移动平均线的周期参数,寻找最佳的参数组合
-
-2. 增加其他指标判断。比如加入成交量的分析,或者在RSI指标的基础上结合其他超买超卖指标
-
-3. 实时调整止损止盈的幅度。我们可以根据市场波动程度做自适应调整,在大幅波动时适当放宽止损幅度
-
-4. 测试不同的标的品种适应性。这类策略可能更适合指数类产品,如果用于个股需要加入其他筛选规则
-
-## 总结
-
-移动平均回拉交易策略整体来说是一个较为成熟稳定的策略思路。它主要考量大趋势和短期回调机会,在不追高的前提下获得较好的入场时机。同时,通过止损止盈设置来锁定利润和控制风险。这种策略特别适用于具有较强综合分析能力和丰富交易经验的投资者。
-
-||
 
 
 ## Overview
@@ -118,7 +64,6 @@ Considering the characteristics of this strategy with long-term judgment and sho
 
 In general, the moving average pullback trading strategy is a relatively mature and steady strategy idea. It mainly considers the major trend and chances for short-term pullbacks, obtaining good entry opportunities without chasing new highs. At the same time, it locks in profits and controls risks through stop loss and take profit settings. This strategy is especially suitable for investors with strong comprehensive analytical capabilities and rich trading experience.
 
-[/trans]
 
 > Strategy Arguments
 

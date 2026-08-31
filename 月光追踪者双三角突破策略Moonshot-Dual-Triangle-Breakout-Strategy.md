@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f55ecdd9955ebf4b6f.png)
-[trans] 
-
-
-## 概述
-
-本策略通过构建双三角通道,结合超级趋势指标判断价格突破的方向,实现高胜率的追踪突破操作。该策略同时结合EMA判断市场总体趋势,避免在震荡行情中无效交易。
-
-## 策略原理
-
-1. 构建三个不同参数的超级趋势指标,判断价格的短期、中期和长期趋势方向。
-
-2. 通过双三角通道判断价格是否突破上行或下行通道,作为ListEntry和Exit信号。
-
-3. 结合233周期的EMA判断总体趋势方向,价格需要在EMA多头市场突破上行通道才可做多,空头市场突破下行通道才可做空。
-
-4. 通过三个超级趋势指标结合判断止盈和止损信号。当两个以上指标变色时平仓止盈或止损。
-
-## 策略优势
-
-1. 双三角通道结合多时间周期判断,可准确捕捉趋势性突破。
-
-2. 多级筛选条件可避免无效交易,提高胜率。
-
-3. 动态跟踪止盈止损,降低回撤风险。
-
-4. 简单参数设置,容易掌握使用。
-
-## 策略风险及优化
-
-1. 大周期震荡市场中可能出现频繁打开头寸然后被止损的情况。可适当调整ATR周期参数降低开仓频率。
-
-2. EMA周期过短无法判断总体趋势,过长则跟踪不灵敏。建议测试确定最优EMA参数。
-
-3. 止盈止损水平无法动态跟踪市场波动幅度变化,需要人工干预调整。后期可考虑结合ATR动态调整止盈止损距离。
-
-## 总结
-
-月光追踪者双三角突破策略通过超级趋势指标与双三角通道的结合,实现了对强势突破的精确捕捉。同时多级筛选机制可过滤无效信号,具有较高的胜率。简单的参数设置也使其易于掌握使用。通过优化助推器参数与止盈止损设计可进一步增强策略的跟踪效果与风险控制能力。
-
-||
 
 ## Overview
 
@@ -87,7 +47,6 @@ This strategy constructs dual triangle channels combined with Super Trend indica
 
 The Moonshot Dual Triangle Breakout Strategy precisely captures strong breakouts through the combination of Super Trend and dual triangle channel. Multi-layer filters avoid bad signals and achieve high win rate. Simple parameter setup makes it easy to use. Further enhancements on ATR periods and stop loss design can improve its chasing and risk control capabilities.
 
-[/trans]
 
 > Strategy Arguments
 

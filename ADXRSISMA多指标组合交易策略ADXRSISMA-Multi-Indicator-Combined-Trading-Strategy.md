@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-该策略综合运用多种技术指标来识别趋势方向和超买超卖区域,以产生交易信号。
-
-主要指标包括:
-
-1. 平均方向指数(ADX):判断趋势力度
-
-2. 相对强弱指标(RSI):判断超买超卖
-
-3. 松密平均线(SMA):判断短期趋势
-
-4. 极速SAR指标:判断长短期趋势
-
-5. 通道突破:趋势突破入场
-
-具体交易逻辑:
-
-1. ADX判断趋势存在且足够强势
-
-2. SAR判断长短期趋势一致方向
-
-3. RSI识别超买超卖区间
-
-4. 价格突破SMA均线时入场
-
-5. 价格突破通道时入场
-
-多种指标相互验证提高判断准确率,不同策略组合形成系统交易体系。
-
-## 策略优势 
-
-- 多指标组合,提高信号质量
-
-- 不同策略组合,系统性入场
-
-- ADX识别趋势,RSI判断超买超卖
-
-- SAR抓取趋势,SMA和通道突破入场
-
-## 策略风险
-
-- 多参数设定,需要反复测试优化
-
-- 组合条件出现的频率较低
-
-- 指标产生冲突信号时难以处理
-
-## 总结
-
-该策略充分利用各类指标的优势,构建稳健的交易体系。但需优化参数设定,确保交易频率合理。整体而言,策略集强势趋势识别与高效入场为一体。
-
-
-||
 
 
 ## Strategy Logic
@@ -120,7 +64,6 @@ The multi-indicator combo improves signal accuracy. Different strategies combine
 
 This strategy fully utilizes the strengths of various indicators to build a robust system. But parameter optimization is key for ideal trade frequency. Overall it combines strong trend identification with efficient entries.
 
-[/trans]
 
 > Strategy Arguments
 

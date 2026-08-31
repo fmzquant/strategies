@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18faa73293da2f128bd.png)
-[trans] 
-
-## 概述
-
-该策略是一个利用比特币在周末进行短线交易的策略,使用10倍杠杆进行交易。策略的主要思路是在周五收盘时记录价格,然后在周六和周日比较当日收盘价和周五收盘价的涨跌幅,如果超过阈值则做多或做空,周一平仓。
-
-## 策略原理  
-
-该策略首先记录下周五的收盘价,然后计算当前日期距离周五的天数。在周六和周日时,如果当日收盘价较周五收盘价上涨超过4.5%,则做空;如果当日收盘价较周五收盘价下跌超过4.5%,则做多。每次交易使用10倍杠杆,如果盈利达到初始资金的10%则平仓所有头寸。在周一时无论是否有头寸,全部平仓。
-
-具体来说,策略通过获取周五的收盘价,然后在周六日比较当前收盘价与周五收盘价的涨跌幅。如果当前收盘价较周五收盘价上涨超过4.5%,则通过`strategy.short`做空;如果当前收盘价较周五收盘价下跌超过4.5%,则通过`strategy.long`做多。通过`leverage`参数设置杠杆为10倍。如果利润达到初始资金的10%,则通过`strategy.close_all()`平仓所有头寸。在周一时,通过`strategy.close_all()`平掉所有头寸。
-
-## 优势分析
-
-- 利用比特币周末交易量增大的特点,在周末进行短线交易,可以捕捉周末的短期趋势
-- 使用10倍杠杆进行交易,可以放大收益
-- 设置止盈条件,有利于及时止盈,避免亏损扩大
-- 周一平仓,避免周一开盘的大幅波动带来的风险
-
-## 风险分析
-
-- 比特币周末价格波动大,存在亏损风险
-- 10倍杠杆会放大亏损
-- 停止止损设置不当可能造成较大亏损
-- 周一开盘价格剧烈波动,可能无法全部止盈
-
-针对风险,可以考虑以下优化措施:
-
-1. 设置止损点,控制单笔损失。
-2. 调整杠杆倍数,降低风险。
-3. 优化止盈点设置,在盈利达到一定比例时分批止盈。
-4. 在周一开盘前设置成交量或时间止盈,避免周一开盘的剧烈波动。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加其他指标判断,优化入场点选取。可以结合移动均线,RSI等指标过滤入场时机,提高入场准确率。
-
-2. 优化止损止盈策略,通过移动止损、分批止盈等方式锁定利润,控制风险。
-
-3. 调整杠杆大小,降低风险。可以设置动态调整杠杆比例,在回撤时降低杠杆。
-
-4. 增加多品种交易。可以增加其他常见加密货币,利用它们周末交易特点,进行多品种套利交易。
-
-5. 使用机器学习算法优化参数。可以收集大量历史数据,使用机器学习算法自动优化参数,实现参数的动态调整。
-
-## 总结
-
-该策略是一个典型的利用比特币周末交易量放大的短线交易策略。策略利用比特币周末交易量放大的特点,在周六日进行趋势判断,做多或做空。策略具有收益放大,风险控制等优势,但也存在一定的风险。下一步可以从入场、止损止盈、杠杆管理、品种扩展等方面进行优化,使策略更稳健、智能。
-
-||
 ## Overview
 
 This is a short-term trading strategy that utilizes Bitcoin's increased weekend trading volume using 10x leverage. The main idea is to record the Friday closing price, compare the daily closing prices on Saturday and Sunday with the Friday closing price, and go long or short if the threshold is exceeded. Positions will be closed on Monday.  
@@ -111,7 +59,6 @@ The strategy can be improved in the following aspects:
 
 This is a typical short-term trading strategy utilizing Bitcoin's increased weekend volume. It capitalizes on weekend volume by judging trends on Saturday and Sunday, going long or short. The strategy has advantages like profit amplification and risk control, but also has some risks. Next steps are to optimize areas like entry, stop loss, leverage management, asset expansion etc to make the strategy more robust and intelligent.
 
-[/trans]
 
 > Strategy Arguments
 

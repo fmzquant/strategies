@@ -11,71 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/12a2094b9f28b5cd3e2.png)
-[trans]
-### 概述
-
-双重转折追踪策略通过追踪价格的双重转折点来实现交易信号的产生。当价格形成新的高点时,该策略会进入空仓;当价格形成新的低点时,该策略会进入多仓。这种对价格转折点的实时追踪可以及时捕捉市场 momentum 的反转。
-
-### 策略原理  
-
-双重转折追踪策略运用两种形态判断来产生交易信号,包括高买转折形态(HHS)和低卖转折形态(LLB)。其判断公式如下:  
-
-1. HHS形态:close[0] \< close[1] 且 high[0] \> high[1]
-2. LLB形态:close[0] \> close[1] 且 low[0] \< low[1]
-
-满足上述条件就会分别制定 HHS 和 LLB 的 bar 索引和价格。之后,该策略会实时监控价格是否突破记录的转折价格。当价格突破 HHS 转折高点时,表明价格模式已经反转为下跌趋势,该策略会开启空仓;反之,当价格突破 LLB 转折低点时,表明价格模式已经反转为上涨趋势,该策略会开启多仓。通过这种方式,双重转折追踪策略能够动态捕捉价格反转机会。  
-
-该策略运行时,还会通过画出标记和底色来直观显示HHS、LLB形态和价格突破情况。这对于直观判断市场格局和验证策略运作非常有帮助。总的来说,双重转折追踪策略通过动态追踪价格转折点来实现交易,能够有效捕捉价格反转机会。
-
-### 优势分析
-
-双重转折追踪策略具有以下优势:
-
-1. 实时追踪价格转折,可以快速捕捉市场反转机会。相比其他追踪移动平均线等指标的策略,该策略的反应更为敏捷。
-
-2. 运用价格本身的转折特征产生交易信号,没有过多参数需要优化调整,实施简单直接。
-
-3. 画出形态标记和突破标记,使策略运作过程直观可视化,验证策略效果很容易。
-
-4. 策略实现代码量不大,容易理解和二次开发。可以作为量化交易的入门策略来学习。
-
-总的来说,双重转折追踪策略相对简单,但可以有效捕捉价格反转,值得作为快速追踪类策略来使用。
-
-### 风险分析  
-
-双重转折追踪策略也存在一定的风险,主要体现在:  
-
-1. 价格反转判断依赖单点信息,可能出现误判的概率较大。可以设置价格突破后有效跟踪阈值来减少误判概率。
-
-2. 未考虑大级别价格趋势,在主升浪中仍然可能产生错误的空仓信号。可以加入趋势过滤来避免这样的风险。  
-
-3. 没有止损机制来控制单笔损失。实盘中需要设定合理的止损策略,控制单笔亏损在可承受范围内。
-
-4. 回测数据存在优化偏差,实盘表现可能弱于回测结果。实盘验证至关重要。
-
-总体来说,该策略作为快速追踪反转类策略,实现简单,但也存在一定概率的误判风险。通过加入趋势过滤、止损策略等模块可以有效降低风险,使其成为稳定可靠的实盘策略。
-
-### 优化方向  
-
-为降低误判概率,提高稳定性,该策略可以从以下方面进行优化:
-
-1. 加入价格有效突破判定,如要求价格跌破转折高点一定比例后才开仓。
-
-2. 加入大级别趋势判断模块,避免在主升浪中错误做空。可以使用指数移动平均线等指标判断趋势。
-
-3. 增加止损策略,如跟踪止损、区间止损等方式,控制单笔亏损在一定限度内。
-
-4. 优化仓位算法,可以根据市场波动率调整仓位大小,在高波动时减少单笔仓位。
-
-5. 测试更长时间周期的实盘数据,评估参数稳定性,并进行多次迭代优化。
-
-通过上述几个方向的优化调整,可以显著提高该策略的实盘表现和稳定性。
-
-### 总结 
-
-双重转折追踪策略通过实时监控价格的转折点来捕捉反转机会。它判断简单,实施直接,可以快速打开反转趋势的仓位。但该策略也存在一定概率的误判风险。 通过加入趋势判断、止损策略等模块,并优化参数,可以有效降低误判概率,使其成为稳定高效的实盘交易策略。该策略非常适合作为快速追踪反转类策略来使用。
-
-||
 
 
 ### Overview  
@@ -140,7 +75,6 @@ With adjustments through the above aspects, significant improvements can be achi
 ### Conclusion  
 
 The Double Reversal Tracking strategy captures reversal opportunities by real-time monitoring of price reversal points. It has simple logic, straightforward execution, and can quickly open positions along reversal trends. But it also has some probability of misjudgments. By introducing trend filtering, stop loss strategies and parameter optimization, the misjudgment risk can be effectively reduced to make it a stable and efficient strategy for live trading. It is especially suitable as a fast-tracking reversal strategy.  
-[/trans]
 
 
 

@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/3a0238bbd49c3c1110.png)
-[trans]
-## 概述
-
-该策略是一种趋势跟踪型算法交易策略,它通过计算两条不同参数的EMA均线,并在均线发生Golden Cross(金叉)和Death Cross(死叉)时发出交易信号。该策略同时结合了多个EMA均线进行盈利退出,并设置了止损点以控制风险。
-
-## 策略原理
-
-该策略使用4条EMA均线,包括一组快速EMA均线和慢速EMA均线,它们的交叉用于产生买入和卖出信号。此外,该策略还使用了两条介于快慢EMA之间的参数的EMA均线,用于提前部分或全部退出持仓,锁定利润。
-
-具体来说,当快速EMA上穿慢速EMA时,产生买入信号;当快速EMA下穿慢速EMA时,产生卖出信号。这是典型的双EMA移动平均线交叉策略。为了更好地跟踪趋势和提高盈利率,该策略在进入持仓后,会在快速EMA上穿第二条EMA均线或快速EMA下穿第三条EMA均线时,选择性退出部分或全部头寸。
-
-此外,该策略还设置了长线和短线两个止损点,防止亏损扩大。具体来说,多单止损幅度设置为入场价的6%,空单止损幅度设置为入场价的3%。
-
-## 优势分析
-
-相比典型的双EMA移动平均线交叉策略,该策略的主要优势有:
-
-1. 设置多个EMA均线进行盈利退出,可以更好地锁定利润,防止利润在后续回调中缩水。
-
-2. 空头头寸具有较小的止损幅度,可以承受更大的正常行情震荡,防止频繁止损。
-
-3. 设置不同的参数EMA均线进行盈利退出,可以根据市场情况,选择最优的退出点。
-
-4. 整体策略具有较好的趋势跟踪能力,可以捕捉中长线趋势带来的较大利润。
-
-## 风险分析
-
-该策略主要的风险点包括:
-
-1. 在震荡行情中,EMA均线生成的交易信号频繁,容易产生过度交易。
-
-2. 短线止损点只能防止极端行情,无法防止策略账户大幅回撤。
-
-3. 该策略回撤风险仍然存在,当遇到长期调整行情时,收益可能会大幅缩水。
-
-4. 该策略对参数调整比较敏感,不当配置可能导致策略失效。
-
-## 优化方向
-
-考虑到上述风险,该策略可以从以下几个方面进行优化:
-
-1. 增加机器学习算法,辅助判断趋势,降低误交易概率。
-
-2. 增加自适应止损机制,可以根据市场波动程度,动态调整止损幅度。
-
-3. 设置资金利用率,避免策略账户占用过多资金,增加仓位管理机制。
-
-4. 对交易品种进行筛选,选择趋势明显、波动较大的标的进行交易。
-
-5. 增加参数优化模块,实现参数的自动优化和更新。
-
-## 总结
-
-该双EMA移动平均线交叉策略整体上是一个性价比较高的趋势跟踪策略。它具有设置多个EMA均线进行盈利退出、空头小止损、趋势跟踪能力较强等优点。但该策略也存在一定的风险,需要对参数调整进行优化,并辅助以机器学习等算法进一步提高策略稳定性。总体上,该策略适合有一定交易经验的投资者进行算法交易。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ In view of the above risks, the strategy can be optimized in the following aspec
 ## Conclusion  
 
 Overall, the dual-EMA crossover strategy is a cost-effective trend-following strategy. It has advantages like multiple EMA lines for profit taking, small short stops, and good trend-following capability. However, there are still some risks with this strategy. It needs further parameter tuning optimization and incorporation of machine learning algorithms to improve stability. In general, this strategy is suitable for investors with some trading experience to carry out algorithm trading.  
-[/trans]
 
 > Strategy Arguments
 

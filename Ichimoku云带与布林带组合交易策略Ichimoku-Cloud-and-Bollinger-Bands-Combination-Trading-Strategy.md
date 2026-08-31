@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b3e57b5959751749a6.png)
-[trans]
-
-#### 概述
-
-本策略将一种日本指标一云图与布林带指标组合,形成交易信号,进行多空判断。策略可以有效判断市场趋势,并在布林带指标发出多空信号时进行判断,避免错误交易。
-
-#### 策略原理  
-
-1. 一云图由转换线、基准线、延迟线、先行线组成。转换线为9日均线,基准线为26日均线。当转换线在基准线之上时为多头信号,反之为空头信号。  
-
-2. 延迟线即价格的延迟移动。当延迟线在上方时表示多头趋势,下方为空头。  
-
-3. 云带由两条先行线组成,分别为52日均线和26日均线的均值。价格在云带之上视为多头,下方为空头。  
-
-4. 布林带由n日均线及标准差构成,为股价波动带。当价格突破上带时看多,下破下带时看空。  
-
-5. 本策略在一云图发出多空信号时,同时判断布林带的突破,形成交易规则。如转换线向上突破基准线,延迟线在上方,价格突破云带,并突破布林带上带时,为做多信号。
-
-#### 策略优势  
-
-1. 一云图判断趋势清晰,转换线和延迟线可判断短期趋势,云带判断中长期趋势方向。  
-
-2. 布林带判断价格是否过冲,可有效过滤掉部分不必要交易。  
-
-3. 组合指标,使交易信号更加清晰可靠,避免交易风险。
-
-#### 风险及优化  
-
-1. 布林带参数设置不当可能导致交易信号不准确。应根据不同标的谨慎设置参数。
-
-2. 应适当调整持仓比例以控制风险。持仓过大可能导致亏损扩大。
-
-3. 可以考虑加入止损策略,在价格向不利方向运行超过一定幅度时止损。
-
-4. 可以测试更多指标与一云图进行组合,形成更可靠的交易策略。
-
-#### 总结  
-
-本策略有效利用一云图判断趋势方向和布林带指标过滤信号。策略信号较为清晰可靠,通过参数调整和止损优化,可以降低交易风险,获得较好收益。
-
-||
 
 #### Overview  
 
@@ -90,7 +49,6 @@ This strategy combines the Japanese Ichimoku Cloud indicator with the Bollinger 
 
 This strategy effectively takes advantage of the Ichimoku Cloud to determine trend direction and the Bollinger Bands indicator to filter signals. The strategy signals are relatively clear and reliable. Through parameter adjustment and optimization of stop loss, trading risks can be reduced and good returns can be obtained.
 
-[/trans]
 
 > Strategy Arguments
 

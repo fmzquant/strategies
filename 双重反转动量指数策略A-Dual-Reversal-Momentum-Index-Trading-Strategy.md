@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/910b5e83cf4672585e.png)
-[trans]
-## 概述
-
-双重反转动量指数策略是一种结合了123反转策略和相对动量指数(RMI)策略的组合策略。它旨在通过利用双重信号提高交易决策的准确性。
-
-## 策略原理
-
-该策略由两部分组成:
-
-1. 123反转策略
-
-    - 当昨日收盘价低于前日,今日收盘价高于前日,且9日Slow K线低于50时,做多
-    - 当昨日收盘价高于前日,今日收盘价低于前日,且9日Fast K线高于50时,做空
-
-2. 相对动量指数(RMI)策略
-
-    - RMI是在RSI的基础上加入了动量因素的变种。它计算公式为:RMI = (上行动量SMA)/(下行动量SMA) * 100
-    - 当RMI低于超买线时,做多;当RMI高于超卖线时,做空
-
-该组合策略只有当123反转和RMI双重信号同向发出时,才会产生交易信号。这可以有效减少错误交易的机会。
-
-## 策略优势分析
-
-该策略具有以下优势:
-
-1. 结合双重指标,提高信号准确性
-2. 利用反转策略,适合震荡行情
-3. RMI指标灵敏,可以识别强势趋势的转折点
-
-## 策略风险分析
-
-该策略也存在一些风险:
-
-1. 双重过滤会错过部分交易机会
-2. 反转信号可能出现误判
-3. RMI参数设置不当会影响效果
-
-可以通过调整参数组合、优化指标计算方式来降低这些风险。
-
-## 策略优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 测试不同的参数组合,找到最佳参数
-2. 尝试不同的反转指标组合,如KDJ、MACD等
-3. 对RMI公式进行调整,使其更灵敏
-4. 添加止损机制,控制单笔损失
-5. 结合交易量,避免虚假信号
-
-## 总结
-
-双重反转动量指数策略通过双重信号过滤和参数优化,能够有效地提高交易决策的准确性,降低错误信号的概率。它适用于震荡行情,能挖掘反转机会。该策略可以通过调整参数和优化指标计算方式来进一步增强效果和 laps 风险。
-
-||
 
 ## Overview
 
@@ -117,7 +63,6 @@ The strategy can be further optimized through:
 
 The Dual Reversal Momentum Index strategy can effectively improve the accuracy of trading decisions and reduce the chance of erroneous signals through dual signal filtering and parameter optimization. It is suitable for range-bound markets to uncover reversal opportunities. The strategy can be further enhanced by adjusting parameters and optimizing indicator calculations to lower risks.
 
-[/trans]
 
 > Strategy Arguments
 

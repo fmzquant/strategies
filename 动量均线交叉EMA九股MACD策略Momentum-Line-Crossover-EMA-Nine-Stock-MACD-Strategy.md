@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a230d4f9bf256e4b4a.png)
-[trans]
-
-## 概述
-
-该策略综合运用EMA均线指标,Bollinger带指标和MACD指标,在实现EMA九均线和三十均线的金叉死叉的基础上,结合价格分布范围和动量指标判断买入卖出时机。
-
-## 策略原理
-
-1. 计算3日EMA、9日EMA和30日EMA。
-
-2. 计算20日内价格的标准差,并绘制1倍和2倍标准差范围的Bollinger带。
-
-3. 计算12日、26日MACD和9日信号线。
-
-4. 当9日EMA上穿30日EMA,并且价格超出1倍标准差Bollinger带上限时,发出买入信号。
-
-5. 当30日EMA下穿9日EMA,并且价格低于1倍标准差Bollinger带下限时,发出卖出信号。
-
-## 优势分析
-
-该策略结合均线指标和动量指标,能较好地把握市场趋势和时机,具有以下优势:
-
-1. EMA指标能快速响应价格变化,判断市场趋势;MACD指标判断力度,防止假突破。
-
-2. Bollinger带标准差指标结合EMA,可以更精确判断买入卖出时机。
-
-3. 多种指标组合,可以互补。在一次突破中,不同指标可以验证判断。
-
-## 风险及优化分析
-
-该策略也存在一些风险,需要注意以下几点进行优化:
-
-1. EMA均线组合可以调整和优化,不同周期可以更好捕捉趋势。
-
-2. Bollinger带参数可以优化,变化倍数标准差以过滤假信号。
-
-3. MACD指标参数可以优化和组合,判断力度效果可以提高。
-
-## 总结
-
-该策略整合EMA均线指标判断大趋势,辅以Bollinger带指标可以准确在力度较大时把握买卖点;MACD指标补充趋势确认,可以有效过滤假信号。通过参数优化,该策略可以进一步提高效果。
-
-|| 
 
 ## Overview
 
@@ -97,7 +54,6 @@ This strategy also has some risks. Pay attention to the following points for opt
 
 This strategy integrates the EMA indicator to determine the major trend, supplemented by the Bollinger Bands indicator which can accurately seize buy and sell points when momentum is relatively large; the MACD indicator supplements trend confirmation and can effectively filter out false signals. Through parameter optimization, the effect of this strategy can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

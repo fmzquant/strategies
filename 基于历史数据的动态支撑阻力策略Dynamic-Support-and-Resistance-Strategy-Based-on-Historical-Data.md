@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/151872fa3ea613256a2.png)
-[trans]
-
-## 概述
-
-本策略基于历史高点、低点和收盘价的动态计算,得到支撑阻力位,并以此进行交易信号生成。该策略适用于中长线持仓,可以有效利用市场中的支撑阻力进行获利。
-
-## 策略原理
-
-1. 计算上一周期的最高价、最低价和收盘价的平均值,得到基准点PP。
-
-2. 计算3条支撑线:S1 = 2*PP - 最高价;S2 = PP - (R1-S1); S3 = 最低价 - 2*(最高价-PP)。
-
-3. 计算3条阻力线:R1 = 2*PP - 最低价;R2 = PP + (R1-S1); R3 = 最高价 + 2*(PP-最低价)。
-  
-4. 当价格上穿阻力线时,做多;当价格下穿支撑线时,做空。
-
-## 优势分析
-
-1. 基于历史数据计算的支撑阻力位变化动态,能够实时捕捉市场结构。
-
-2. 多层级的支撑阻力设定,可以进行风险管理优化。
-
-3. 简单直观的交易信号和止损方式。
-
-## 风险分析 
-
-1. 在高波动行情中,历史数据提供的参考价位可能会失效。
-
-2. 多空仓位之间的切换需要考虑交易成本。
-
-3. 需要确保数据质量,避免计算错误。
-
-## 优化方向
-
-1. 可以考虑引入更多历史数据的参考,如百日线等。
-
-2. 优化仓位管理,如基于波动率调整仓位比例。
-
-3. 增加止损策略,如跟踪止损或资金管理止损。
-
-## 总结
-
-本策略基于历史支撑阻力概念,提供多层级的参考价位。策略简单直接,适合中长线持仓获利。同时也需要注意高波动市场的风险,以及交易成本的控制。通过进一步优化,可以使策略在复杂环境中依然稳定运行。
-
-||
 
 
 ## Overview
@@ -99,7 +54,6 @@ This strategy dynamically calculates support and resistance levels based on hist
 
 This strategy provides multi-layer support and resistance reference price levels based on history. It has simple and straightforward logic suitable for medium-to-long-term positions. Meanwhile, risks under high volatility market and trading costs should be monitored. Further optimizations can make the strategy robust under complex environments.
 
-[/trans]
 
 > Strategy Arguments
 

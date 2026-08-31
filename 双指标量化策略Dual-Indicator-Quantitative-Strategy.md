@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ceac3266c2820a44fa.png)
-[trans] 
-
-## 概述
-
-该策略通过结合123反转指标和RAVI指标来产生交易信号。其中,123反转属于反转型策略,利用股票价格连续两天走势判断未来价格走势。RAVI指标则判断价格是否进入超买超卖区间。策略通过两者信号的综合判断来决定做多做空。
-
-## 策略原理
-
-### 123反转
-
-该指标基于随机指标K值。具体来说,当前日收盘价低于前两日,且9日随机慢线低于50时做多。当前日收盘价高于前两日,且9日随机快线高于50时做空。这样通过反转点确认进场。
-
-### RAVI指标 
-
-该指标通过快线和慢线的离差来判断买卖。具体为,7日均线和65日均线离差,当大于某一参数时做多,小于某一参数时做空。通过快慢线金叉死叉来判断超买超卖区间。
-
-### 策略信号
-
-当123反转和RAVI同向做多做空时产生信号。做多信号为两指标同为1,做空信号为两指标同为-1。这样通过双重指标确认,避免单一指标的错误信号。
-
-## 优势分析
-
-- 利用两种指标进行组合,可以提高信号准确性,避免错误信号
-- 123反转采用K线信息,RAVI采用均线信息,多角度判断市场
-- RAVI参数可调,可以针对不同品种和市场环境优化
-- 反转加趋势,既可以捕捉反转也可以跟随趋势
-
-## 风险及优化
-
-- 双重指标组合,容易产生信号不一致。可以考虑价差参数,当两指标价差在某参数内也可出信号
-- 123反转属于高频策略,需要 Combine 与其他低频策略,降低交易频率
-- RAVI擅长捕捉中长线趋势, Combine 短线指标可提高策略抗风险能力
-
-## 总结
-
-该策略综合考虑反转因素和趋势因素,通过双指标确认减少错误信号发出概率。下一步,可以引入机器学习算法,实现自适应参数优化。或考虑策略组合,与其他策略类型形成组合,在保持收益的同时降低最大回撤。
-
-||
 
 ## Overview  
 
@@ -84,7 +46,6 @@ A signal is generated when 123 Reversal and RAVI agree on the direction. The lon
 
 The strategy considers both reversal and trend factors. Dual confirmation helps avoid false signals. Next steps could be introducing machine learning algorithms for adaptive parameter optimization. Or combining this strategy with other strategy types to achieve portfolio diversification while maintaining profits and reducing maximum drawdowns.  
 
-[/trans]
 
 > Strategy Arguments
 

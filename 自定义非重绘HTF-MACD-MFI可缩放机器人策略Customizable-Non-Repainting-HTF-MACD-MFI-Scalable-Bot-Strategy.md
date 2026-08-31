@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1efde492e2934cff8e9.png)
-[trans]
-
-## 概述
-
-该策略是一个高度可自定义的非重绘MACD和MFI指标的组合策略,适用于算法交易机器人。它结合了趋势指标和动量指标,通过多种过滤器来产生交易信号。
-
-## 策略原理
-
-该策略使用了MACD指标判断市场趋势方向。MACD是一种趋势跟踪型动量指标,由快速移动均线减去慢速移动均线得到MACD柱状图,再用MACD的指数移动平均线得到信号线。当快线上穿慢线时为买入信号,下穿为卖出信号。
-
-另外,该策略还使用了MFI指标判断市场的超买超卖状态。MFI指标结合了价格和成交量信息,值在0至100之间波动。MFI低于20时是超卖区域,高于80时是超买区域。
-
-为过滤虚假信号,该策略还加入了趋势过滤器和RSI过滤器。当价格在上升趋势下,并且RSI小于设定阈值时产生买入信号。
-
-## 策略优势
-
-- 组合多个指标,综合判断市场状态,提高胜率
-- 加入过滤器机制,避免虚假信号,减少不必要交易
-- 各类参数及过滤器可自定义配置,适应不同品种及交易偏好
-- 可用于手动交易,也可连接算法机器人进行程序化交易
-
-## 策略风险及解决方法
-
-- 指标参数设置不当容易产生虚假信号
-- 可测试不同参数,选取最优参数组合
-- 多品种参数不通用,需要分别测试优化
-
-- 交易频率可能过高,增加交易成本和滑点风险
-- 可调整过滤器,降低交易频率
-- 实盘交易时注意成本控制
-
-## 策略优化方向
-
-- 测试更长的数据周期,评估参数稳定性
-- 尝试不同的指标参数组合
-- 优化指标权重,提高策略稳定性
-- 加入更多过滤器,降低不必要交易
-
-## 总结
-
-该策略是一个可高度定制的趋势跟踪型策略,同时结合趋势和动量指标判断市场状态,并有效利用过滤器机制控制风险。它可用于手动交易,也可连接算法机器人实现自动化程度很高的程序化交易,是一套值得长期跟踪优化的策略体系。
-
-|| 
 
 ## Overview
 
@@ -94,7 +51,6 @@ To filter out false signals, the strategy also implements a trend filter and RSI
 
 This is a highly customizable trend-following strategy combining both trend and momentum indicators to gauge market state, and effectively uses filtering mechanisms to control risks. It can be used for manual trading or connected to algorithmic bots for a high degree of automation, and is a strategy worth tracking and optimizing over the long run.
 
-[/trans]
 
 > Strategy Arguments
 

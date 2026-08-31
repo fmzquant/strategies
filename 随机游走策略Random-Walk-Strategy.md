@@ -9,75 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-随机游走策略是一种基于随机数生成的自动交易策略。该策略使用线性同余生成器根据设置的种子随机生成数字,数字大于阈值时做多,小于阈值时做空,实现随机进入做多做空仓位。
-
-## 策略原理
-
-该策略主要通过以下几个部分实现随机交易:
-
-1. 设置随机数生成的参数a、c和模数m,以及初始种子seed。
-
-2. 定义随机数生成函数GetRandom,采用线性同余算法生成0-m之间的随机数。
-
-3. 在每根K线时,如果当前无仓位,则比较生成的随机数大小,大于m/2时做多,否则做空。
-
-4. 设置止损止盈条件,以百分比形式设置止损和止盈幅度。
-
-5. 通过时间段设置回测周期。
-
-通过上述步骤,该策略实现了完全随机的做多做空操作。当随机数大于m/2时开多单,否则开空单,然后设置止损止盈退出仓位。回测周期可自定义设置。
-
-## 优势分析
-
-- 策略逻辑简单清晰,容易理解实现。
-
-- 随机交易可有效避免人为情绪影响,减少主观误操作。
-
-- 可自定义随机数生成算法参数,调整随机性。
-
-- 可灵活设置止损止盈条件,控制单笔损益。
-
-- 支持回测参数优化,方便测试不同参数对总体收益的影响。
-
-## 风险分析
-
-- 随机交易可能长期无明确走势,收益存在不确定性。
-
-- 无法据市场状况调整仓位,可能错过趋势机会。
-
-- 单笔收益有限,回撤风险较大。
-
-- 需要合理设置止损止盈比例,避免过大损失。
-
-- 随机性可能导致频繁开平仓,增加交易费用。
-
-- 需要充分回测验证参数设置合理性,不能盲目使用。
-
-可通过加入趋势判断等功能,减少随机开仓次数,优化止损机制,严格控制单笔损益来降低风险。
-
-## 优化方向
-
-- 增加趋势判断,避免逆势开仓。
-
-- 加入仓位管理,根据资金变化调整仓位大小。
-
-- 优化随机数生成算法,提高随机性。
-
-- 动态调整止损止盈幅度。
-
-- 加入开仓频率限制。
-
-- 多参数组合回测寻找最优参数。
-
-## 总结
-
-随机游走策略通过随机数控制做多做空实现机械交易。该策略随机性强,不受个人情绪影响,回避主观误操作的风险。但随机开仓也可能错过趋势机会,单笔收益有限,需优化风险控制机制。整体来说,该策略适合用来验证交易理念,了解参数设置对收益的影响,但实际应用需谨慎评估。
-
-||
 
 
 ## Overview
@@ -146,7 +77,6 @@ Risks could be reduced by adding trend judgment, optimizing stop loss mechanism,
 
 The random walk strategy realizes mechanical trading through random number controlled long/short. It has strong randomness and avoids emotional impacts and subjective misoperations. But random entries may also miss trend opportunities, limited single profit, needs optimized risk control mechanisms. Overall the strategy is suitable for verifying trading ideas, evaluating parameter impacts, but careful evaluation is needed for practical use.
 
-[/trans]
 
 > Strategy Arguments
 

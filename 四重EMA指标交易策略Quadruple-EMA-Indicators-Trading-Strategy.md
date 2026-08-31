@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans] 
-
-本策略通过运用四条不同参数的EMA均线,形成较为清晰易读的趋势判断系统,进行 mechanical trading。该策略属于双均线交叉类策略,旨在追踪中长线趋势。
-
-策略原理:
-
-1. 计算两组快慢EMA,典型参数组合为快线EMA 72期和慢线EMA 44期。
-
-2. 当快线从下向上突破慢线时,进行买入操作。
-
-3. 当快线从上向下跌破慢线时,进行卖出操作。 
-
-4. 使用颜色标记买入和卖出信号。
-
-5. 设置回测周期,实时执行交易信号。
-
-该策略的优势包括:
-
-1. 四条EMA曲线,形成清晰的多空姿态。
-
-2. 快慢EMA组合,可有效跟踪中长线趋势。
-
-3. 突破交叉法则简单易行,避免频繁交易。
-
-该策略的风险包括:
-
-1. EMA均线滞后问题,可能错过趋势转折点。
-
-2. 无止损设置,无法限制单笔损失大小。
-
-3. 参数设置不当可能导致交易频繁或信号不一致。
-
-总之,四重EMA交叉策略通过快慢均线配对,采用突破系统进行mechanical trading。该策略图形界面直观,适合视觉型选手。但鉴于EMA滞后及无止损问题,投资者仍需审慎运用资金管理和风险控制手段,方能获得长期稳定收益。
-
-||
 
 This strategy uses four EMA lines with different parameters to form a clear trend-following system for mechanical trading. It aims to track medium-long term trends using a dual EMA crossover method.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, the quadruple EMA crossover strategy uses fast/slow EMA pairs for mechanical trend trading. The visual interface is intuitive for visual traders. But the lag and lack of stops means prudent risk management is still required for long-term steady gains.
 
-[/trans]
 
 > Strategy Arguments
 

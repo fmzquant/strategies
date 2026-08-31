@@ -11,50 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-
-## 策略原理
-
-该策略运用动态止盈止损点来进行交易。止盈止损点根据当前价位和波动率进行实时调整。
-
-具体交易逻辑:
-
-1. 计算一定周期(如20天)的平均真实波动幅度ATR
-
-2. 当处于看涨状态时,止盈止损点为最高价减去ATR乘数
-
-3. 当处于看跌状态时,止盈止损点为最低价加上ATR乘数 
-
-4. 价格超过止盈止损点时进行反向交易
-
-5. 当价格突破止盈止损点时改变趋势状态
-
-6. 根据新状态调整止盈止损位
-
-该策略充分利用ATR来自动设置止损止盈位,实现动态跟踪。能够及时锁定利润,避免损失扩大。
-
-## 策略优势
-
-- ATR自动计算止盈止损位
-
-- 动态调整,实时跟踪价格
-
-- 及时止损止盈,控制风险
-
-## 策略风险
-
-- ATR参数需要反复测试优化
-
-- 止损过于接近,容易被止损
-
-- 需关注ATR值的实时变化
-
-## 总结
-
-该策略使用ATR动态设置止盈止损位,实现自动跟踪。优化ATR参数可以获得更好止损效果。但过于接近的止损需谨慎采用。
-
-
-||
 
 ## Strategy Logic
 
@@ -96,7 +52,6 @@ The strategy leverages ATR to automatically set dynamic trailing profit targets 
 
 This strategy uses ATR to dynamically set profit/stop levels for automatic trailing. ATR tuning can improve stop performance. But over-tight stops require caution.
 
-[/trans]
 
 > Strategy Arguments
 

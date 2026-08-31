@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10c7865264ec638616c.png)
-[trans]
-### 概述
-
-该策略利用移动平均线作为主要技术指标,结合RSI指标作为过滤条件,实现了一个较为简单的趋势跟踪策略。当价格跌破或突破指定周期的移动平均线时产生交易信号。同时,RSI指标可用来判断过度买入或卖出的情况从而避免错误交易。整体来说,该策略适用于追踪中长线趋势,在强势趋势中可以获得较好收益。
-
-### 策略原理  
-
-本策略主要基于移动平均线和RSI指标。移动平均线被广泛使用来判断价格趋势方向和强度。当价格高于移动平均线时,表示当前处于上升趋势;当价格低于移动平均线时,表示当前处于下降趋势。因此,价格突破移动平均线可以作为产生交易信号的依据。另一方面,RSI指标则可用于判断市场是否处于超买或超卖状态。RSI高于70表示可能超买,低于30表示可能超卖。所以,本策略采用RSI指标对移动平均线产生的交易信号进行过滤,只有在RSI指标显示没有超买超卖的情况下,才会产生真正的交易指令。  
-
-具体来说,当价格低于移动平均线且RSI低于30时产生买入信号;当价格高于移动平均线且RSI高于70时产生卖出信号。根据这些交易信号来建立多头或空头仓位。
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 操作简单,容易实现。主要依赖移动平均线指标,对交易者技术要求不高。
-
-2. 能够有效跟踪价格趋势,特别适合中长线操作。
-
-3. RSI指标的应用可以避免不必要的错误交易,过滤假信号。
-
-4. 无需频繁调整参数,降低了过度优化的风险。
-
-5. 可扩展性高,可引入更多指标或优化规则来完善。
-
-### 风险分析 
-
-该策略也存在以下风险:  
-
-1. 在价格震荡区间内,会产生较多错误信号导致亏损。
-
-2. 无法很好判断趋势反转点,可能在市场转势点前后建立错误仓位导致损失。  
-
-3. 参数设置(如移动平均线周期长度)不当可能影响策略表现。
-
-4. 无法适应突发事件造成的剧烈行情。
-
-5. 回测数据拟合风险,实盘表现可能与回测结果有差异。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损机制。可以设置移动止损或厚度止损来控制单笔亏损风险。
-
-2. 增加趋势判断指标。例如MACD,KD等可以帮助判断趋势方向,避免产生错误信号。
-
-3. 优化移动平均线参数。可以测试不同周期参数对策略稳定性和收益率的影响。
-
-4. 增加交易频率控制。例如只在特定时段或只有较大价格变动时进行交易。
-
-5. 引入机器学习技术进行策略优化和训练。
-
-### 总结
-
-本策略整体而言是一个较为简单实用的趋势跟踪策略。它利用移动平均线判断价格趋势和方向,同时用RSI指标来过滤掉错误信号。策略优点主要有操作简单,容易实现,适合中长线交易等。缺点在于无法很好处理价格震荡和趋势反转。未来优化空间在于增加止损机制,引入更多辅助指标判断趋势,以及参数优化等。
-
-||
 
 ### Overview
 
@@ -125,7 +67,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a relatively simple and practical trend following strategy. It uses moving average to determine price trend and direction, while using RSI indicator to filter out wrong signals. The main advantages of the strategy are easy operation, easy implementation, suitable for medium and long term trading, etc. The disadvantages lie in the inability to properly handle price fluctuations and trend reversals. Future optimization space includes adding stop loss mechanisms, introducing more auxiliary indicators to judge trends, parameter optimization and so on.
 
-[/trans]
 
 > Strategy Arguments
 

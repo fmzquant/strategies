@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/eb94868f5596d2b52f.png)
-[trans]
-
-### 概述
-
-该策略是一种趋势跟踪策略,它利用低频傅立叶变换提取价格序列中的低频趋势成分,结合快中慢三条移动平均线实现趋势识别和交易信号生成。当快速MA上穿中速MA且价格高于慢速MA时做多,当快速MA下穿中速MA且价格低于慢速MA时做空。该策略适合追踪中长线趋势。
-
-### 策略原理
-
-1. 使用低频傅里叶变换提取价格序列的低频趋势成分。低频傅里叶变换可以有效过滤高频噪音,使得提取到的趋势信号更加平稳。
-
-2. 快中慢三条移动平均线进行趋势判断。其中慢速MA为200周期,中速MA为20周期,快速MA为5周期。慢速MA过滤噪声,中速MA捕捉趋势转折,快速MA发出交易信号。
-
-3. 当快速MA上穿中速MA且价格高于慢速MA时,判断行情进入上升趋势,做多;当快速MA下穿中速MA且价格低于慢速MA时,判断行情进入下降趋势,做空。
-
-4. 该策略是一个趋势跟踪策略,当判断进入趋势后,会尽可能长时间持有头寸,争取在趋势中获利。
-
-### 优势分析
-
-1. 使用低频傅里叶变换有效过滤了高频噪声,使得识别的趋势信号更加可靠平稳。
-
-2. 采用快中慢MA有效判断了市场趋势的转折,避免了虚假信号。慢MA参数设置较大,有效过滤了噪声。
-
-3. 该策略追踪中长线趋势有明显优势。当判断行情进入趋势后,会持续加仓跟踪趋势,从而获得超额收益。
-
-4. 该策略参数优化空间大,用户可以根据不同品种和周期进行参数调整,适应性强。
-
-### 风险分析
-
-1. 作为趋势跟踪策略,该策略无法有效判断和反应突发事件引发的趋势反转,可能导致亏损加剧。
-
-2. 在震荡行情中,该策略会产生较多获利交易和损失交易。但最终仍有可能盈利,需要有一定的心理承受能力。
-
-3. 传统趋势跟踪策略容易形成“钝化”,从趋势中提前离场是该策略需要解决的问题。
-
-4. 可以设置止损来控制单笔损失。也可以在回测中加入突发事件的测试,评估策略的抗风险能力。
-
-### 优化方向 
-
-1. 尝试不同的移动平均线算法,适应更多品种和周期。
-
-2. 增加止损、连续亏损退出等止损策略,控制风险。
-
-3. 增加趋势强度指标,避免在震荡和弱趋势中出现过多交易。
-
-4. 增加机器学习模型判断趋势转折,使策略对突发事件有一定的适应能力。
-
-### 总结
-
-该低频傅里叶变换趋势跟踪移动平均线策略,具有过滤噪声、识别趋势、追踪趋势的优势,适合中长线持有。作为趋势跟踪策略,它主要面临着趋势反转和持续震荡的风险。这些风险都有一定的应对策略。总的来说,该策略参数空间大,优化潜力高,适合有一定策略开发和风险控制能力的投资人实盘验证。
-
-||
 
 
 ### Overview
@@ -111,7 +60,6 @@ This strategy is a trend following strategy that uses low frequency Fourier tran
 
 This low frequency Fourier transform trend following moving average strategy has the advantages of filtering noise, identifying trends, and tracking trends. It is suitable for medium- and long-term holding. As a trend following strategy, it mainly faces the risks of trend reversal and sustained oscillation. There are coping strategies for these risks. In general, this strategy has large parameter space and high optimization potential. It is suitable for investors with certain strategy development and risk control capabilities to verify in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

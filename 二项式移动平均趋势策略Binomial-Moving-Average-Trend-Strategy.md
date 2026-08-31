@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/187be3b285275656da1.png)
-[trans]
-
-## 概述
-
-二项式移动平均(Binomial Moving Average,简称BMA)是一种全新型的移动平均线指标。它利用二项式系数的一半来计算平均价,具有计算方式独特、平滑性好、实用性强的优点。
-
-本策略将快速BMA和慢速BMA进行组合,形成类似于MACD的交易信号,属于趋势跟踪策略。它可用于多个周期,适合中长线操作。
-
-## 策略详情
-
-### 策略名称
-
-二项式移动平均趋势策略(Binomial Moving Average Trend Strategy)
-
-### 策略原理
-
-1. 计算二项式移动平均线(BMA)。它根据用户设置的周期长度,计算出二项式系数,然后取其一半值作为权重平均价格。例如周期长度为5,则计算9次二项式系数,取其一半进行加权平均。这使得最近几根K线的权重更大,平滑性更好。
-
-2. 设置快速BMA周期和慢速BMA周期。快速BMA对价格变化更敏感,慢速BMA更稳定。它们的交叉产生交易信号。
-
-3. 当快速BMA上穿慢速BMA时,做多;当快速BMA下穿慢速BMA时,做空。进入场内后,一直持有仓位直至反向信号出现。
-
-### 优势分析
-
-这套策略最大的优势在于BMA指标的计算方式新颖,它增强了移动平均线的优点,提高了平滑性和实用性。相比EMA和SMA,BMA对最近几根K线的权重更大,同时也保留了更多历史信息。这使它能更好地捕捉趋势,产生更少假信号。
-
-此外,快慢BMA的组合充分发挥了移动平均线的优势,它过滤了大量噪音,只在趋势转折点产生交易信号。策略本身逻辑简单,容易理解和实施,适合中长线操作。
-
-### 风险分析
-
-该策略主要风险在于:
-
-1. 所有跟踪趋势策略一样,当趋势反转时容易产生亏损。解决方法是设置止损,或优化参数使BMA更灵敏。
-
-2. BMA参数设置不当也会影响策略效果。如果快速BMA过于灵敏,会增加假信号;如果慢速BMA过于滞后,则可能错过趋势机会。需多组合测试找到最佳参数。 
-
-3. 本策略默认全仓交易,可根据风险偏好设置仓位管理,降低单笔损失。
-
-### 优化方向  
-
-该策略的主要优化方向是BMA自身以及组合参数的测试。
-
-1. 周期设置:测试不同的快速BMA周期和慢速BMA周期,找到最优参数组合。一般快速周期在10-30之间,慢速周期在20-60之间。
-
-2. BMA权重:可以测试不同的权重分配方式,是全部分配二项式系数的一半,还是更偏重最近几根K线。这可能进一步提高BMA的平滑性。
-
-3. 过滤条件:可设置价格突破、交易量增加等过滤条件,避免不合理的信号。
-
-4. 止损机制、仓位管理也可以测试加入,控制风险。
-
-## 总结
-
-本策略首次提出二项式移动平均这一独特指标,它增强了移动平均线的计算方式,使得策略整体实用性和稳定性都得到提升。快速BMA和慢速BMA的交叉产生简单有效的交易信号。该策略平滑参数和风险控制都有进一步优化的空间,是一套非常有前途的趋势跟踪策略。
-
-||
 
 
 ## Overview
@@ -119,7 +64,6 @@ The main optimization directions are testing of BMA itself and the parameter com
 
 This strategy firstly proposes the unique Binomial Moving Average indicator. It enhances moving average calculation and improves the overall usefulness and stability of the strategy. Crossovers between fast and slow BMA generate simple yet effective trading signals. There remains room for further optimization on parameter smoothness and risk control. It's a very promising trend-following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f38fdf21a90bb8e63c.png)
-[trans]
-#### 概述
-该策略通过使用平滑移动平均线(SMA)、相对强弱指数(RSI)、真实范围(TR)和成交量移动平均线(Volume MA)等指标,结合趋势过滤、交易量和波动率条件,在满足特定条件时进行交易。该策略的主要思路是在价格低于SMA200且处于下跌趋势、低交易量和低波动率的情况下进行买入,并设置止损和止盈位。同时,该策略还具有异常退出机制,即当RSI超过70或达到预设的止损止盈位时退出交易。
-
-#### 策略原理
-1. 计算SMA、RSI、交易量MA和TR MA等指标
-2. 判断当前是否处于上升或下降趋势
-3. 判断当前交易量和波动率是否处于低位
-4. 当价格低于SMA200且满足低交易量和低波动率条件时,进行买入
-5. 设置止损位为买入价的95%,止盈位为买入价的150%
-6. 当RSI超过70或达到预设的止损止盈位时,退出交易
-7. 当趋势发生变化且价格突破SMA时,强制平仓
-
-#### 优势分析
-1. 该策略结合了多个技术指标,可以更全面地分析市场状况
-2. 通过趋势过滤和交易量、波动率条件,可以避免在不利的市场环境下进行交易
-3. 设置明确的止损止盈位,可以有效控制风险
-4. 异常退出机制可以在特定情况下及时平仓,防止进一步损失
-
-#### 风险分析
-1. 该策略依赖于多个参数的设置,参数的选择可能会影响策略表现
-2. 在某些情况下,价格可能会在触发买入条件后快速反转,导致损失
-3. 该策略没有考虑基本面因素,可能会受到重大事件的影响
-
-#### 优化方向
-1. 可以考虑引入更多的技术指标,如MACD、布林带等,以提高入场和出场的精确度
-2. 可以优化止损止盈位的设置,如使用移动止损或动态止盈
-3. 可以根据不同的市场状况,动态调整策略参数
-4. 可以加入风险管理模块,如仓位管理、资金管理等
-
-#### 总结
-该策略通过综合使用多个技术指标,结合趋势过滤和交易量、波动率条件,在特定情况下进行交易。同时,设置明确的止损止盈位和异常退出机制,可以有效控制风险。但该策略也存在一定的局限性,如参数选择、市场异常等因素可能会影响策略表现。未来可以通过引入更多指标、优化参数设置、加入风险管理等方式来进一步改进该策略。
-
-|| 
 
 #### Overview
 This strategy utilizes indicators such as the Smooth Moving Average (SMA), Relative Strength Index (RSI), True Range (TR), and Volume Moving Average (Volume MA) in combination with trend filters, volume, and volatility conditions to execute trades when specific criteria are met. The main idea behind this strategy is to enter a long position when the price is below the SMA200, the trend is downward, and both volume and volatility are low. Stop loss and take profit levels are set upon entry. Additionally, the strategy incorporates an exception exit mechanism, closing the position when the RSI exceeds 70 or when the preset stop loss or take profit levels are reached.
@@ -76,7 +42,6 @@ This strategy utilizes indicators such as the Smooth Moving Average (SMA), Relat
 
 #### Summary
 This strategy combines multiple technical indicators with trend filters, volume, and volatility conditions to execute trades in specific situations. By setting clear stop loss and take profit levels and implementing an exception exit mechanism, the strategy effectively manages risk. However, the strategy has certain limitations, as factors such as parameter selection and market anomalies may impact its performance. Future improvements can be made by incorporating more indicators, optimizing parameter settings, and adding risk management components.
-[/trans]
 
 
 

@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/185e1ee0fa1c043947c.png)
 
-[trans]
-#### 概述
-Alligator 长期趋势跟踪交易策略是一种基于 Williams Alligator 指标的量化交易策略。该策略利用不同周期的移动平均线组合来捕捉市场的主要趋势,适用于中长期的趋势跟踪交易。策略的主要思路是通过 Alligator 指标的开口方向和价格与 Alligator 指标的相对位置来判断趋势的方向和强度,从而做出交易决策。
-
-#### 策略原理
-Alligator 长期趋势跟踪交易策略使用了三条不同周期的移动平均线来构建 Alligator 指标,分别是:
-
-1. Jaw 线:13 周期 SMMA,向未来平移 8 根 K 线
-2. Teeth 线:8 周期 SMMA,向未来平移 5 根 K 线
-3. Lips 线:5 周期 SMMA,向未来平移 3 根 K 线
-
-当 Alligator 指标的开口方向向上,即 Jaw 线在最下方,Teeth 线在中间,Lips 线在最上方,同时价格在 Alligator 指标上方时,策略会开仓做多。这种情况表明一个向上的趋势浪已经确认,我们希望持有该仓位直到趋势结束。
-
-当价格跌破 Jaw 线时,策略会平掉多单。这可以保证我们不会在熊市中继续持有头寸。
-
-#### 策略优势
-1. 适用于中长期交易:该策略基于 Alligator 指标,可以有效捕捉市场的主要趋势,非常适合中长期的趋势跟踪交易。
-2. 交易频率低:策略只在确认趋势形成时开仓,趋势结束时平仓,交易频率相对较低,可以有效降低交易成本。
-3. 适用范围广:该策略可以应用于各种金融市场,如外汇、加密货币等,具有很强的适应性和灵活性。
-4. 无需优化参数:策略完全跟随市场趋势,无需对参数进行优化,简单易用。
-
-#### 策略风险
-1. 潜在的滑点风险:在市场剧烈波动或流动性不足的情况下,交易订单可能无法以预期价格成交,导致滑点风险。
-2. 缺乏固定的风险管理:该策略没有固定的风险管理设置,需要根据自身的风险偏好来调整每笔交易的仓位大小。
-3. 可能错过短期机会:由于策略专注于捕捉中长期趋势,可能会错过一些短期的交易机会。
-
-#### 策略优化方向
-1. 加入风险管理模块:可以考虑加入一些风险管理措施,如止损、动态仓位调整等,以更好地控制风险。
-2. 结合其他技术指标:可以尝试将 Alligator 指标与其他技术指标相结合,如 RSI、MACD 等,以提高策略的准确性和可靠性。
-3. 优化参数设置:虽然该策略无需优化参数,但可以尝试对不同的时间周期和交易标的进行回测,以找到最佳的参数组合。
-
-#### 总结
-Alligator 长期趋势跟踪交易策略是一种简单易用、适用范围广的量化交易策略。通过利用 Alligator 指标捕捉市场主要趋势,该策略可以在中长期内获得稳定的收益。虽然策略存在一些潜在的风险,但通过加入风险管理模块、结合其他技术指标以及优化参数设置等方法,可以进一步提高策略的性能和稳定性。对于偏好中长期趋势跟踪交易的投资者来说,Alligator 长期趋势跟踪交易策略是一个值得考虑的选择。
-
-|| 
 
 #### Overview
 The Alligator Long-Term Trend Following Trading Strategy is a quantitative trading strategy based on the Williams Alligator indicator. The strategy utilizes a combination of moving averages with different periods to capture the main trends in the market, suitable for medium to long-term trend following trades. The main idea of the strategy is to determine the direction and strength of the trend by the opening direction of the Alligator indicator and the relative position of the price to the Alligator indicator, and make trading decisions accordingly.
@@ -79,7 +44,6 @@ When the price breaks below the Jaw line, the strategy will close the long posit
 
 #### Summary
 The Alligator Long-Term Trend Following Trading Strategy is a simple, easy-to-use, and widely applicable quantitative trading strategy. By utilizing the Alligator indicator to capture the main trends in the market, the strategy can achieve stable returns over the medium to long term. Although the strategy has some potential risks, by adding risk management modules, combining with other technical indicators, and optimizing parameter settings, the strategy's performance and stability can be further improved. For investors who prefer medium to long-term trend following trades, the Alligator Long-Term Trend Following Trading Strategy is a choice worth considering.
-[/trans]
 
 
 

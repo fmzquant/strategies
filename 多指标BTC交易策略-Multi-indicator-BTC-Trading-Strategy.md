@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17dbf11853456901396.png)
-[trans]
-#### 概述
-
-该策略结合了多个技术指标,包括相对强弱指数(RSI)、移动平均线收敛发散指标(MACD)和几个不同周期的简单移动平均线(SMA),旨在为比特币(BTC)交易提供全面的分析工具。该策略的主要思路是通过综合考虑不同指标的信号,在RSI处于特定区间、MACD出现金叉、价格低于多个SMA时进行做多,同时设置止损和止盈,并在RSI达到50时更新止损位置。
-
-#### 策略原理
-
-1. 计算RSI、MACD和不同周期的SMA指标。
-2. 判断前一个RSI值是否低于下限或高于上限,当前RSI值是否在下限和上限之间,MACD是否出现金叉,以及收盘价是否低于所有SMA。
-3. 如果满足上述条件且当前无持仓,则开仓做多。
-4. 根据风险百分比设置止损和止盈价格。
-5. 如果持有多头仓位且RSI达到50,则将止损位置更新为最高价。
-6. 如果MACD出现死叉,则平仓。
-
-#### 策略优势
-
-1. 综合考虑多个技术指标,提高信号的可靠性。
-2. 在RSI处于特定区间时开仓,避免在极端情况下入场。
-3. 设置止损和止盈,控制风险。
-4. 动态调整止损位置,锁定部分利润。
-5. 根据MACD死叉信号及时平仓,减少潜在损失。
-
-#### 策略风险
-
-1. 在震荡市场中,频繁的交易信号可能导致过多的交易和手续费损失。
-2. 固定的风险百分比止损和止盈可能无法适应不同的市场环境。
-3. 仅依赖技术指标而忽略基本面因素可能导致错误的交易决策。
-
-#### 策略优化方向
-
-1. 引入更多的技术指标或市场情绪指标,以提高信号的准确性。
-2. 根据市场波动性动态调整止损和止盈水平,以适应不同的市场环境。
-3. 结合基本面分析,如重大新闻事件或监管政策变化,以辅助交易决策。
-4. 考虑不同时间周期的指标,捕捉多个时间尺度上的交易机会。
-
-#### 总结
-
-该策略通过综合运用RSI、MACD和SMA等技术指标,为比特币交易提供了一个全面的分析框架。它利用多个指标的共同确认来生成交易信号,并设置了风险控制措施。然而,策略仍有优化空间,如引入更多指标、动态调整参数以及结合基本面分析等。在实际应用中,交易者应根据自己的风险偏好和市场环境对策略进行适当调整。
-
-|| 
 
 #### Overview
 
@@ -88,7 +48,6 @@ This strategy combines multiple technical indicators, including the Relative Str
 #### Summary
 
 This strategy provides a comprehensive analysis framework for Bitcoin trading by integrating RSI, MACD, and SMA technical indicators. It generates trading signals using the confirmation of multiple indicators and incorporates risk control measures. However, there is still room for optimization, such as introducing more indicators, dynamically adjusting parameters, and incorporating fundamental analysis. In practical applications, traders should adapt the strategy according to their risk preferences and market conditions.
-[/trans]
 
 > Strategy Arguments
 

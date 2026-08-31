@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13bdb483ee189daaa38.png)
 
-[trans]
-
-## 概述
-本策略综合运用反转策略与布林带强势策略,形成组合交易信号,实现趋势跟踪与反转捕捉的双重功能。
-
-## 策略原理
-### 反转部分
-根据丘晨的《我如何在期货市场上盈利三倍》一书中第183页的反转策略逻辑:当收盘价连续2天高于前一天的收盘价,而9日随机指标的慢速线低于50时,做多;当收盘价连续2天低于前一天的收盘价,而9日随机指标的快速线高于50时,做空。
-
-### 强势部分  
-根据亚历山大·艾尔德博士的布林带强势指标:使用13日指数移动平均线表示市场价值共识,多头强势指标反映买方驱动价格高于价值共识的能力,空头强势指标反映卖方驱动价格低于价值共识的能力。多头强势指标计算为当日最高价减去13日指数移动平均线,空头强势指标为当日最低价减去13日指数移动平均线。
-
-本策略将强势指标的阈值设定为0,即只要强势指标>0就产生交易信号。
-
-### 综合信号
-当反转策略和强势策略的交易信号一致时,产生最终的交易信号。做多信号为反转信号看多与强势信号看多的综合;做空信号为反转信号看空与强势信号看空的综合。
-
-## 优势分析
-这是一个综合型策略,通过同时使用反转策略和趋势跟踪策略形成交易信号,兼具抓反弹和跟踪趋势的优势。
-
-反转部分可以锁定跳空缺口后的反转机会。强势部分则可确保仅在趋势存在时打开头寸。两者结合,可有效过滤假突破,避免被套。
-
-参数优化弹性较大,可针对不同品种和周期进行调整寻找最佳参数组合。
-
-## 风险分析
-反转策略与强势策略同时看多或看空的概率较低,信号产生频率可能不高,存在一定程度的信号稀疏风险。
-
-反转部分可能误判盘中震荡调整为反转机会,从而过早建仓。强势部分则可能错失部分反转机会。两者结合使用可以在一定程度上缓解这些风险。后期可考虑引入��세判断模块,进一步优化。
-
-## 优化方向  
-1. 尝试更多参数组合,寻找最佳参数;
-2. 增加趋势判断模块,避免在无明确趋势时反复建立仓位; 
-3. 考虑加入止损策略,控制单笔损失。
-
-## 总结
-本策略既含有趋势追踪,也兼具反转交易的特性,可谓是综合型策略中的佼佼者。通过参数优化,可期望获得良好的稳定收益。同时也需要注意防范信号稀疏和误判的风险,后期可从引入趋势判断和止损模块等方面进行优化,使策略的实战性能更加出色。
-
-
-||
 
 ## Overview
 This strategy combines the 123 reversal strategy and Elder Ray bull power strategy to generate combined trading signals, achieving both trend following and reversal capturing capabilities.  
@@ -86,7 +47,6 @@ The reversal part may mistakenly identify sideways range-bound price action as r
 ## Summary  
 This strategy possesses both trend following and reversal trading capabilities, making it a combo strategy par excellence. With parameter optimization, stable profits can be expected. Meanwhile, risks like sparse signals and misjudgments need attention. Going forwards, trend filters, stop loss and other modules can be introduced to further enhance practical performance.
 
-[/trans]
 
 > Strategy Arguments
 

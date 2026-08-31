@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12dae229e36addb8257.png)
-[trans]
-## 概述
-
-该策略通过计算快速RSI指标和K线实体过滤,判断市场是否处于超卖状态,从而实现低吸操作。当快速RSI低于10并且K线实体放大,认为行情反转的信号出现,这样可以实现对市场底部的判断。
-
-## 策略原理
-
-该策略主要基于两部分指标进行判断:
-
-1. 快速RSI指标。通过计算最近2天的涨跌幅,来快速判断市场的超买超卖。当快速RSI低于10时,表示市场处于超卖状态。
-
-2. K线实体过滤。通过计算K线实体体积与均线的比值,当实体体积大于1.5倍均线体积时,认为是底部信号出现。
-
-首先,快速RSI低于10表示市场超卖;然后,K线实体放大,满足实体体积大于1.5倍均线体积。当两者条件同时满足时,发出做多信号,认为市场处于反转底部,这样可以过滤掉许多假信号。
-
-## 策略优势
-
-该策略有以下几个优势:
-
-1. 快速RSI指标灵敏,可以快速判断超买超卖。
-2. K线实体过滤增加确定性,避免假突破。  
-3. 结合快速指标和K线形态,可以有效判断市场反转点。
-4. 实现低吸操作,可以在相对低点进入市场。
-5. 策略思路简单清晰,容易理解实现。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 市场可能存在拉胯期,即使超卖也可能持续下跌。
-2. 快速RSI可能产生假信号,実体过滤也可能被突破。
-3. 量化策略回测存在过拟合风险,实盘可能效果差异。
-
-针对风险,可以通过以下方式优化:
-
-1. 结合趋势指标,避免메场持续下跌。
-2. 增加其他过滤条件,确保底部确认态势。  
-3. 对参数进行多组合优化,提高稳定性。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:  
-
-1. 增加止损策略,控制亏损风险。
-2. 结合波动率指标,避免市场异常波动带来的风险。
-3. 增加多因子模型,确保交易信号效果。
-4. 利用机器学习算法进行参数优化。
-5. 在大时间周期判断趋势,避免逆势交易。
-
-## 总结
-
-本策略通过快速RSI指标判断超卖加上K线实体过滤,实现了对市场底部的有效判断。策略思路简单,易于实现,可以获取反转机会。但也存在一定的风险,需要进一步优化以提高稳定性和实盘表现。总体来说,基于该思路设计的底部反转交易策略值得进一步研究。
-
-||
 
 ## Overview
 
@@ -117,7 +63,6 @@ Some directions for enhancing the strategy:
 
 This strategy effectively identifies market bottom by fast RSI for oversold and K-line entity filter. The logic is simple for easy implementing and good for catching reversal chance. But certain risks exist and further optimization is needed to improve stability and live performance. Overall speaking, bottom reversal trading strategies designed based on this logic deserve further research.
 
-[/trans]
 
 
 

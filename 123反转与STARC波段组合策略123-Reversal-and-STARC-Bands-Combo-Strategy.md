@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b0f209daa7e4876f96.png)
-[trans]
-
-### 概述
-
-本策略通过组合123反转策略和STARC波段策略,实现更准确的交易信号产生。123反转策略通过K线反转形态判断底部反弹机会。STARC波段策略则利用价格突破波段上下轨来判断趋势方向。组合使用两种策略可以使交易信号更加可靠,同时也可以利用两种策略的优势。
-
-### 策略原理
-
-#### 123反转策略
-
-该策略来源于Ulf Jensen的《我如何在期货市场上获得三倍收益》一书中第183页的内容。其交易思想是当价格出现向下反转时,视为底部反弹机会进场做多;当价格出现向上反转时,视为趋势反转机会进场做空。具体规则是:
-
-多头信号:当收盘价连续两日高于前一日的收盘价,且9日移动平均慢速K线低于50时,做多。
-空头信号:当收盘价连续两日低于前一日的收盘价,且9日移动平均快速K线高于50时,做空。
-
-#### STARC波段策略 
-
-该策略通过绘制价格短期简单移动平均线的上下波段来判断趋势方向。上轨通过在移动平均线上加上平均真实波动范围(ATR)构建。下轨通过从移动平均线上减去ATR构建。当价格突破上轨时看多,突破下轨时看空。
-
-STARC代表“斯托勒平均范围通道”。该指标由其发明者Manning Stoller命名。
-
-### 优势分析
-
-组合使用123反转策略和STARC波段策略,可以提高交易信号的准确性。123反转策略可以捕捉反转机会。STARC波段策略可以判断价格趋势方向。两者互为补充,可以减少假信号,提高胜率。
-
-此外,123反转策略可以使策略在市场突破新高或新低后避免追高杀跌。STARC波段策略可以利用ATR自适应波段范围来应对市场的变化。
-
-### 风险分析
-
-本策略最大的风险在于无法完全避免亏损单和连续亏损的出现。尽管通过组合两种策略可以减少假信号,但不排除在特定市况下策略会产生错误判断。此时需要及时止损来控制亏损。
-
-另一个风险在于参数设置不当可能导致策略效果不佳。需要根据不同品种和周期进行参数测试和优化,使参数切合该品种的特点。
-
-### 优化方向
-
-本策略还有进一步优化的空间:
-
-1. 增加止损策略,可以设置价格止损或指标止损来避免大单亏损;
-
-2. 增加开仓条件,如增加量价确认,避免不利价格开仓;
-
-3. 进行参数优化,寻找最适合该品种和周期的参数组合;
-
-4. 增加动态出场思路,根据市场变化调整持仓。
-
-### 总结
-
-本策略通过组合运用123反转策略和STARC波段策略,综合了两种策略判断趋势反转和方向的优势。可以有效减少假信号,提高交易效率。同时也优化了单一使用任何一种策略存在的问题。通过持续优化,本策略可以成为一个稳定可靠的量化交易策略。
-||
 
 
 ### Overview  
@@ -109,7 +60,6 @@ There is room for further optimization of this strategy:
 
 This strategy combines the 123 Reversal and STARC Bands strategies, utilizing both strategies’ advantages in judging trend reversals and direction. It can effectively reduce false signals and improve trading efficiency. It also optimizes problems existing in using either strategy alone. Through continuous optimization, this strategy can become a stable and reliable quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

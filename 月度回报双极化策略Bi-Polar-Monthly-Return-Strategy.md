@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/90587a0e59226e1e10.png)
 
-[trans]
-
-##概述
-该策略利用K线的枢轴点来判断趋势反转,并以此为信号进行多空头交易。在盈利时,策略会锁定当月已实现收益,防止给回撤期带来较大亏损。
-
-##策略原理
-- 利用`pivothigh()`和`pivotlow()`函数计算K线的枢轴点。枢轴点可以判断趋势反转。
-- 当价格超过上枢轴点时,做多头仓位。当价格跌破下枢轴点时,做空头仓位。
-- 每月初,计算上月收益率,保存到数组。
-- 每年初,计算上年收益率,保存到数组。
-- 绘制收益率表格,可以直观看到每个月和年的收益情况。
-
-##优势分析
-- 利用枢轴点判断趋势反转,可以过滤掉部分噪音交易信号。
-- 每月锁定收益,可以减少亏损月的影响,双极化收益。
-- 收益表格直观展示每个月收益情况,可以清晰看到策略好坏时期。
-
-##风险分析
-- 枢轴点发生变化时,可能会造成错误反向开仓。可以适当优化参数或增加过滤条件。
-- 月初强制平仓会错过余下月份的盈利机会。可以考虑只锁定部分头寸。
-- 表格无法展示最大回撤等风险指标。可以考虑增加其他衡量策略风险的指标。
-
-##优化方向
-- 可以在枢轴点附近增加过滤条件,避免频繁无效反转交易。
-- 可以只锁定部分头寸,而不是全部平仓,减少遗漏机会的可能。
-- 可以增加最大回撤、夏普比率等量化风险指标在表格中的展示。
-
-##总结
-该策略利用枢轴点判断趋势反转进行交易,并在月末锁定收益,可以有效控制回撤风险。但部分参数和策略逻辑仍可进一步优化,使交易信号更准确、风险控制更稳健。表格形式的直观展示每月收益情况,也有利于策略分析。总体来说,该策略具有一定参考价值,但实盘时还需谨慎评估。
-
-|| 
 
 
 ##Overview
@@ -71,7 +40,6 @@ This strategy uses pivot points to identify trend reversals and take long/short 
 
 ##Summary
 This strategy trades reversals at pivot points and locks monthly profits to control drawdowns. But some parameters and logic can be improved for more accurate signals and robust risk management. The intuitive return table aids analysis. Overall, this strategy has merit but requires prudent evaluation for live trading.
-[/trans]
 
 > Strategy Arguments
 

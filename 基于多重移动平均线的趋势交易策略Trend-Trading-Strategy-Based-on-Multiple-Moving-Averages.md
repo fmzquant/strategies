@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12f22b560707cc1cfe5.png)
-[trans]
-
-## 概述
-
-本策略通过计算多个不同周期的移动平均线,结合黄金交叉形态来判断趋势方向,实现趋势跟踪交易。主要功能是发现价格趋势转折点,发出买入和卖出信号。
-
-## 策略原理  
-
-该策略基于35周期的EMA作为主要判断买入卖出的指标。当价格上穿35EMA时,产生买入信号;当价格下破35EMA时,产生卖出信号。此外,该策略同时绘制了8条不同周期的EMA组成的EMA带,辅助判断趋势方向。越低周期的EMA离价格越近,能更快捕捉价格变化;越高周期的EMA跟随价格变化越缓慢,能过滤掉部分噪音。EMA带能清楚描绘出价格的主要趋势方向。  
-
-该策略主要依赖35EMA判断价格主要趋势。当价格上穿或下穴35EMA时就产生交易信号。EMA带则主要起到辅助判断和优化入场timing的作用。  
-
-## 优势分析  
-
-该策略结合趋势判断和频繁交易之间的平衡。35EMA既能基本判断主要趋势方向变换,也不会太滞后,基本能在价格转折点附近产生交易信号。而EMA带形成的趋势通道,能辅助判断买入卖出的机会,优化入场的时机。  
-
-相比单一EMA指标判断,该策略能提供更全面和清晰的趋势判断。不同周期EMA的组合既保证了对大周期趋势方向的判断,又通过高低频EMA结合平滑了部分短周期市场噪音的影响。  
-
-用户可以自行调整参数,改变主要交易指标35EMA的周期,或EMA带中的EMA周期,优化自身的交易风格。整体来说,该策略提供了相对精准和全面的趋势交易方案。
-
-## 风险分析  
-
-该策略主要风险在于用户的参数选择。如果选择的EMA周期太短,则会增加交易频率和交易风险。如果EMA周期太长,则会错过价格转折点,不能及时入场。  
-
-另一个主要风险是在盘整行情中,EMA指标会产生多次错误信号。这时用户需要辅助判断趋势方向,避免盲目入场。  
-
-最后一个风险点是在剧烈行情中,指标会发生滞后,不能及时发出买入卖出信号。这时用户需要提前判断,不能完全依赖指标信号。
-
-## 优化方向
-
-该策略主要优化方向是调整EMA参数,适配不同市场和交易者风格。具体来说,可以从以下几个方面入手:
-
-1. 调整主要交易指标35EMA的周期参数,优化获取交易信号的时机
-2. 调整EMA带中的各EMA周期参数,优化对趋势的判断
-3. 添加其他辅助指标结合判断,如BOLL通道、KDJ指标等
-4. 结合交易量指标,避免在价格剧烈波动但交易量不增长的情况下入场
-
-通过参数调整和多个指标结合,可以进一步提高策略的稳定性和获取信号的准确性。从而降低交易风险,获得更好的回报。
-
-## 总结  
-
-该策略通过计算多条不同周期的EMA并辅以EMA带判断,实现了相对准确和全面的趋势跟踪交易方案。它既考虑了捕捉价格转折的及时性,也综合判断了不同级别的趋势走向,在追求交易频率与系统稳定性之间取得了平衡。通过参数调整与优化,该策略可以适应不同市场环境、资产类型以及交易者风格。它为用户量化交易提供了一个相对成熟和强大的基础解决方案。
-
-||
 
 ## Overview  
 
@@ -96,7 +52,6 @@ Through parameter tuning and combining signals from multiple indicators, further
 
 This strategy provides a relatively accurate and versatile trend following solution through calculating multiple EMAs and using the EMA ribbon. It balances capturing turning points promptly and judging multi-timeframe trends holistically for a good mix of trade frequency and system stability. Through optimization it adapts across market environments, asset types and trading styles. It offers users a sophisticated and robust foundation for quantitative trading.  
 
-[/trans]
 
 > Strategy Arguments
 

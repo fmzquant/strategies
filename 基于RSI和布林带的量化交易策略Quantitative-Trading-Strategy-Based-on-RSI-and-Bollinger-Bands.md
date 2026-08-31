@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e4fc43aab3e37e99c0.png)
-[trans]
-
-#### 概述
-
-本文将深入分析一种基于RSI和布林带这两个技术指标的量化交易策略。该策略充分利用RSI识别超买超卖现象和布林带判断价格离散程度的优势,实现更准确判断市场走势的转折点。
-
-#### 策略原理
-
-1) RSI原理
-
-   RSI即相对强弱指数,是通过计算一段时间内股票价格变动的幅度大小,来计量这段时间内股票强弱程度的技术指标。它的取值范围在0-100之间,当RSI大于70时为超买区,小于30时为超卖区。出现超买超卖现象往往意味着价格可能反转。
-
-2) 布林带原理
-
-   布林带由中轨、上轨和下轨组成。中轨是n天的移动平均线,上轨是中轨+k倍的n天标准差,下轨是中轨-k倍的n天标准差。当价位接近上轨或下轨时,是中轴附近区域波动加大的信号,预示着可能的回转。
-
-3) 策略构建
-
-   该策略结合RSI指标判断超买超卖的时机以及布林带判断价格波动的时机,在RSI指标进入超买区或超卖区的同时,价格接触布林带上轨或下轨产生交易信号,以捕捉价格趋势的转折点。从而实 现低买高卖的效果。
-
-#### 优势分析
-
-1) 充分利用RSI指标判断超买超卖的优势,设置合理的超买超卖阈值,避免虚假信号。
-
-2) 借助布林带判断价格波动和离散情况,结合RSI形成交易决策依据,提高决策的准确性。
-
-3) RSI和布林带互相验证判断,双重指标过滤减少错误交易的可能性。
-
-4) 能够有效识别价格上涨和下跌的转折点,捕捉价格反转机会。
-
-#### 风险分析
-
-1) 无法完全避免技术指标产生错误信号的可能。
-
-2) RSI参数和布林带参数设置不当,可能错失交易机会或增加不必要交易。
-
-3) 行情剧烈波动时,仍有可能出现止损的风险。
-
-4) 需要适当调整参数以适应不同品种和市场环境。
-
-#### 优化方向
-
-1) 对RSI指标和布林带参数进行测试和优化,找到最优参数。
-
-2) 增加止损策略,严格控制单笔损失。
-
-3) 结合其他指标进行验证,如KDJ、MACD等以提高稳健性。 
-
-4) 增加自动参数调整模块,使策略参数动态适应当前市场环境。
-
-#### 总结
-
-基于RSI和布林带的量化交易策略,通过双重技术指标验证和组合,能有效判断价格趋势转折点。策略简单实用易于实现,具有准确性高、频繁交易、容易优化等优点。但仍需要注意风险控制,并进行参数测试、止损策略和指标优化等工作,以提高策略稳定性和盈利能力。
-
-||
 
 #### Overview
 
@@ -117,7 +62,6 @@ This article analyzes in depth a quantitative trading strategy based on the RSI 
 #### Conclusion
 
 The quantitative trading strategy based on RSI and Bollinger Bands, through double indicator verification and combination, can effectively determine price trend inflection points. This strategy is simple, practical, and easy to implement, with the advantages of high accuracy, frequent trading, and easy optimization. However risk control remains vital alongside parameter testing, stop loss tactics, and indicator optimization to improve strategy stability and profitability.
-[/trans]
 
 > Strategy Arguments
 

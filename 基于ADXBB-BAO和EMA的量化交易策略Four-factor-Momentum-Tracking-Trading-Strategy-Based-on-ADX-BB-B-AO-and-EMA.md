@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1547fb6b226affdf6ad.png)
-[trans]
-
-## 概述
-
-本策略名称为“四因子动量追踪策略”。该策略综合运用平均方向运动指标(ADX)判断趋势方向、布林带百分比B波段(BB %B)判断股票相对强弱、神奇均线(AO)判断动量以及不同周期的指数移动平均线(EMA)判断多空,实现对股票价格的动态跟踪,追捧强势股、回避弱势股的效果。
-
-## 策略原理
-
-该策略运用四个不同的技术指标判断买入和卖出时机。具体判断逻辑如下:
-
-多头进入条件:5日EMA上穿21日EMA,50日EMA上穿200日EMA,BB %B大于设定的过买线,AO大于设定的正值,ADX大于设定值。
-
-空头进入条件:5日EMA下穿21日EMA,50日EMA下穿200日EMA,BB %B小于设定的过卖线,AO小于设定的负值,ADX大于设定值。
-
-策略优势分析
-
-该策略综合多个指标判断趋势方向和 stocks的相对强弱,可以有效过滤假突破。具体优势如下:
-
-1. ADX指标可以有效判断趋势的存在以及趋势的力度,避免在震荡市中频繁开仓;
-
-2. BB %B指标判断个股是否处于“高位”或“低位”,可以有效避免追高杀跌;
-
-3. AO指标判断买入时是否存在较强的动量支撑,保证突破的有效性;
-
-4. EMA指标的金叉/死叉结合判断市场主流方向,避免逆势开仓。
-
-综上,该策略可以有效控制交易风险,追踪市场中的强势个股。
-
-## 风险分析
-
-尽管该策略综合运用多种指标控制风险,但仍存在一定的风险:
-
-1. 多个指数型指标组合使用,对参数调整敏感,不恰当的参数组合可能无法发挥应有效果。
-
-2. 过于追求动量可能错过市场真正的反转点位。应适当控制持仓周期,及时止盈止损。
-
-3. EMA等指标具有滞后性,可能无法及时反映突发事件的影响。应适当配合其他指标或适当缩短MA周期。
-
-4. 突发重大事件可能导致指标发散,应结合基本面分析,必要时可以暂时关闭策略。
-
-## 优化方向
-
-该策略还可从以下几个方面进行优化:
-
-1. 运用机器学习等方法寻找最佳参数组合。
-
-2. 加入其他判断趋势指标,如CCI,MACD等,形成“指标组合”,提高判断准确性。 
-
-3. 加入止盈止损策略,控制单笔损失。
-
-4. 设定持仓时间,避免过度贪婪。
-
-## 总结
-
-本策略名称为“四因子动量追踪策略”,运用ADX、BB %B、AO和EMA四个指标判断买卖时机,实现对强势个股的动态跟踪。该策略能有效判断趋势方向和股票的相对强弱,控制交易风险。下一步可通过参数优化、加入其他指标以及设置持仓时间等方式进一步完善该策略。
-
-||
 
 
 ##Overview
@@ -117,7 +60,6 @@ The strategy can also be optimized in several aspects:
 ##Summary 
 This strategy is named "Four-factor Momentum Tracking Strategy". It uses ADX, BB %B, AO and EMA four indicators to determine entry and exit points to dynamically track strong stocks. The strategy can effectively determine the trend direction and relative strength of stocks to control trading risks. Next, parameters optimization, adding other indicators, setting holding time and other methods can be used to further improve the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

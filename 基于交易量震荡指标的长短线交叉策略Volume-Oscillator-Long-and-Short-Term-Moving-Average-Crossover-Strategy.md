@@ -11,75 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/981931699924960757.png)
 
-[trans]
-
-### 概述
-
-该策略是基于交易量的长短期移动平均线交叉实现的。它使用不同周期的EMA来计算交易量的长短期趋势,并通过其差值构建一个震荡指标。当该震荡指标上穿零轴时做多,下穿零轴时做空。此外,它还会结合前一高点和低点来判断具体的操作方向。
-
-### 策略原理
-
-该策略的核心指标是交易量震荡指标(Volume Oscillator)。它通过长短期交易量指数移动平均线的差值来体现交易量变化趋势。具体计算公式如下:
-
-Volume Oscillator = (ShortEMA - LongEMA) / LongEMA * 100
-
-其中,ShortEMA和LongEMA分别代表短期和长期的指数移动平均线。当ShortEMA上穿LongEMA时,该指标为正,意味着交易量正在扩大;当ShortEMA下穿LongEMA时,该指标为负,意味着交易量正在萎缩。
-
-在计算出该震荡指标后,本策略利用其与零轴的交叉来产生交易信号。当指标由负转正,即上穿零轴时,做多;当指标由正转负,即下穿零轴时,做空。这体现了交易量的势能转换。
-
-此外,策略还会结合前一高低点来判断具体的操作方向。即当指标上穿零轴时,如果前一高点大于前一低点的绝对值,则看多;反之看空。利用此特性可以对交易量扩张的力度做出判断。
-
-### 策略优势
-
-该策略具有以下几点优势:
-
-1. 使用交易量作为基础指标,可以有效判定市场参与者的意愿,具有很强的实用性。
-
-2. 结合长短期EMA,可以同时捕捉到中长期趋势和短期动能。
-
-3. 指标与零轴交叉形成的交易信号简单明确,容易判断。
-
-4. 加入前一高低点来确定具体操作方向,可以有效利用交易量的势能大小。
-
-5. 策略思路清晰,参数调整灵活,适应性较强。
-
-### 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. 交易量指标容易受到市场假突破的影响,可能产生错误信号。可以设置止损来控制风险。
-
-2. 在震荡行情中,交易量交叉可能频繁,需要合理确认指标转折。
-
-3. 前一高低点仅反映最近一次扩张,无法确定其力度的持续性。
-
-4. 不同品种和时间段参数需要单独优化,不够通用。
-
-5. 交易量指标对高频程序化交易反应迟缓,可能错过最佳入场时机。
-
-### 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加过滤条件,避免虚假信号,例如加入价格指标的确认。
-
-2. 优化长短期EMA的周期参数,使其更符合不同品种的特点。
-
-3. 对前一高低点设置周期参数,使用一段时间的最高价和最低价。
-
-4. 将指标转折区域设定为区间,避免频繁交易。
-
-5. 增加止损策略,控制单笔损失。
-
-6. 结合VRP量价指标等其他量价技术指标。
-
-7. 利用机器学习方法自动优化参数。
-
-### 总结
-
-总的来说,基于交易量震荡指标的长短线交叉策略充分利用了交易量转折的特征,判断力较强,在趋势发展初期具有不错的探测性。同时结合前一高低点来确定具体方向,使交易决策更为准确。但也需要注意风险控制,防止虚假信号带来损失。该策略有很大的优化空间,在参数调整和组合指标方面都可以进行扩展,使其trading delay更短,对市场变化反应更快。
-
-||
 
 ### Overview
 
@@ -147,7 +78,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, the volume oscillator long short term moving average crossover strategy makes good use of volume reversal features and has strong judging power in the initial stage of trends. Adding previous highs and lows to determine directions makes trading decisions more accurate. Risk control is also important to prevent losses from false signals. This strategy has large room for optimization, in aspects like parameter tuning and combining indicators, to shorten its trading delay and reaction time to market changes.
 
-[/trans]
 
 > Strategy Arguments
 

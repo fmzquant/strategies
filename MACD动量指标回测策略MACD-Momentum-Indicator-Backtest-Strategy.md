@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合MACD动量指标和RSI超买超卖指标,在MACD发生金叉/死叉时验证RSI是否也完成了对应的触底/触顶回转,从而产生更可靠的交易信号。属于典型的短期反转策略思路。
-
-## 策略原理
-
-1. 计算MACD指标的DIFF、DEA和MACD柱。当DIFF上穿DEA时产生金叉信号,下穿时死叉信号。
-
-2. 计算RSI指标,判断是否触底反弹或触顶回落。并设置回看窗口判断最近阶段是否出现过触底或触顶。
-
-3. 当MACD金叉时,如果RSI在回看窗口内完成了触底反弹,则产生看多信号。当MACD死叉时,如果RSI完成了触顶回落,则看空信号。
-
-4. 入场后设置止损点以控制风险。
-
-## 策略优势
-
-1. MACD判断趋势转折时机灵敏。RSI判断超买超卖状况有效。
-
-2. 同时验证MACD和RSI令牌,可过滤假信号。
-
-3. 回看窗口判断增加信号的可靠性。
-
-4. 设置止损有助于风险管理。
-
-## 策略风险
-
-1. MACD和RSI均存在一定滞后,可能错过最优入场点。
-
-2. 同时等待两指标信号出现的概率较小,信号较少。
-
-3. 没有考虑大级别趋势方向,容易被套。
-
-4. 止损设置不当可能过于宽松或严格。
-
-对应解决方法:
-
-1. 调整MACD和RSI参数,降低滞后概率。
-
-2. 适当扩大指标的有效区间,提供更多信号。
-
-3. 增加趋势过滤,避免逆势入场。
-
-4. 测试不同的止损参数设置,找到最优点。
-
-## 策略优化方向
-
-1. 测试SMA等其他均线的效果。
-
-2. 增加移动止损,让止损更灵活。
-
-3. 添加趋势力指标,判断入场的优劣。
-
-4. 引入机器学习预测指标走势。
-
-5. 结合更多因子优化入场时机选择。
-
-## 总结
-
-该策略利用MACD和RSI两个指标的配合,在筛选出可靠的反转信号后入场。策略思路清晰、参数调整灵活,可从指标选择、趋势判断、止损方式等方面进行扩展,在保持稳定的基础上获取更多交易机会。但需要注意防止由于过度优化而丧失稳健性。
-
-|| 
 
 ## Overview 
 
@@ -133,7 +70,6 @@ Possible Solutions:
 
 This strategy filters for reliable reversal signals using coordinated MACD and RSI. The logic is clear and parameters flexible for enhancements like indicator selection, trend filters, stop loss techniques etc to acquire more trades while maintaining stability, but over-optimization risks need to be avoided.
 
-[/trans]
 
 > Strategy Arguments
 

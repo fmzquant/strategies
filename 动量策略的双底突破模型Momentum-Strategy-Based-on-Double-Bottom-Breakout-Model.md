@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1192524cef2a05efdcc.png)
-[trans]
-
-## 概述
-
-该策略是基于技术指标的双底模型,当市场处于超卖状态时寻找底部区域形成的双底形态突破信号进行买入操作。策略同时结合多种指标判断市场的超卖与超买状态,在双底形成时发出买入信号。该策略主要适用于中短线交易。
-
-## 策略原理  
-
-该策略主要判断价格是否在关键支撑位附近形成双底,以及市场是否处于超卖状态。具体来说,策略采用以下指标进行判断:
-
-1. RSI指标:当RSI指标显示市场处于超卖状态时,视为买入信号。
-
-2. RVI指标:当RVI指标显示市场处于超卖状态时,视为买入信号。  
-
-3. MFI指标:当MFI指标显示市场处于超卖状态时,视为买入信号。
-
-4. SAR指标:当价格上扬突破SAR指标时,视为买入信号。
-
-5. SMA500指标:当价格上扬突破SMA500指标时,视为买入信号。
-
-该策略综合考虑上述多个指标的判断结果,在关键支撑位附近形成双底形态时发出买入信号。
-
-## 策略优势  
-
-该策略具有以下优势:
-
-1. 结合多种指标判断市场状态,信号更加可靠。
-
-2. 在双底形成时发出买入信号,具有较高的获利概率。
-
-3. 采用指标组合判断超卖超买状态,避免错失买入时机。
-
-4. 融合双底突破模型与指标策略,兼具趋势跟踪与反转交易的优点。
-
-5. 策略参数优化空间大,可根据不同市场调整参数。
-
-
-## 策略风险  
-
-该策略也存在以下风险:  
-
-1. 指标发出假信号的概率,导致买入亏损的风险。可以通过参数优化减少假信号。
-
-2. 双底没有成功突破的风险。可以设置止损点,降低单笔亏损。
-
-3. 高维度参数优化难度大,需要大量历史数据支持。可以采用步进算法逐步优化。
-
-4. 依赖历史数据测试效果,实盘效果会有差异。需要在不同市场验证。
-
-
-## 优化方向  
-
-该策略的主要优化方向包括:
-
-1. 对买入指标的权重进行优化,确定最优权重组合。
-
-2. 优化指标参数,确定最佳参数组合。
-
-3. 添加止损策略,降低单笔亏损。
-
-4. 增加仓位管理模块,让盈利更加平稳。
-
-5. 结合机器学习算法,建立自适应参数优化机制。
-
-## 总结  
-
-该策略整合双底突破模型与超卖指标判断,在关键支撑位附近形成双底时发出买入信号。优化空间较大,可调整权重、参数、止损、仓位等使策略更加稳定可靠。具备较高的实战价值。
-
-||
 
 
 ## Overview  
@@ -147,7 +78,6 @@ The main optimization directions for this strategy include:
 
 This strategy integrates the double bottom breakout model and oversold indicator judgments, generating buy signals when double bottoms form around key support levels. It has large optimization space to adjust weights, parameters, stop losses, positions etc. for more stable and reliable strategies. It has high practical value.
 
-[/trans]
 
 > Strategy Arguments
 

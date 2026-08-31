@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略采用动量轮动的方式,根据Stoch RSI指标判断市场趋势,实现股票轮动交易。当指标显示超买时做空,显示超卖时做多。同时采用锥形加仓的方式,在趋势方向加大仓位。
-
-## 策略原理
-
-1. 计算RSI指标的值,长度为14周期
-2. 根据RSI计算Stoch RSI指标,Stochastic Length为14,Smooth K为3,Smooth D为1
-3. 当Stoch RSI从超卖区上扬进入超买区时,做多入场
-4. 当Stoch RSI从超买区下落进入超卖区时,做空入场
-5. 采用锥形加仓的方式,最多加仓5次
-6. 每次加仓后设定止损位和追踪止损位
-7. 当止损被触发后减仓
-8. 按照止损点和追踪止损点来管理仓位
-
-## 优势分析
-
-这种策略具有以下优势:
-
-1. 基于动量指标操作,能捕捉市场趋势的转折点,及时调整仓位方向。
-2. 采用锥形加仓,能在趋势初期占据头寸,并在趋势确认后加大仓位,充分捕捉趋势利润。
-3. 设定止损点来控制风险,Initial Stop Loss设在理性范围内,追踪止损让利润运行。
-4. RSI参数优化 space较广,可针对不同市场调整参数,寻找最佳组合。
-5. 可灵活的调整加仓次数,深度,止损点等参数,对市场有较强的适应性。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. Stoch RSI作为唯一指标,对突发事件易造成错误信号。可辅以其他指标确认。
-2. 仅针对趋势性较强的品种适用,不适合横盘震荡市。
-3. 加仓次数过多可能导致亏损扩大。需控制加仓深度。
-4. 止损点设置不合理可能导致过度止损。需根据市场调整止损参数。
-5. 需关注交易成本控制。过于频繁交易会产生大量手续费。
-
-## 优化方向
-
-该策略还可以从以下几个方向进行优化:
-
-1. 优化RSI参数,寻找最佳Length。
-2. 优化Stoch参数,寻找最佳K,D周期组合。
-3. 增加其他指标过滤信号,避免误交易。
-4. 动态调整加仓次数,根据市场调整加仓深度。
-5. 优化止损点设置逻辑,降低止损率。
-6. 增加仓位管理模块,根据资金管理原则控制仓位。
-7. 加入手续费控制模块,控制过高交易频率。
-
-## 总结
-
-本策略整体采用较为成熟的动量轮动思路,以Stoch RSI为核心交易指标,辅以锥形加仓和止损管理进行风险控制,是一种可靠的趋势跟踪策略。通过参数优化和模块扩展,可以进一步增强策略的稳定性和适应性。但整体而言,本策略已经具备较强的实盘运用能力。
-
-|| 
 
 ## Overview
 
@@ -116,7 +61,6 @@ Some ways to optimize the strategy:
 
 The strategy adopts a mature momentum rotation concept, with Stoch RSI as core trading indicator, complemented by pyramid trading and stop management for risk control. It is a reliable trend following strategy. Further optimizations on parameters and modules can enhance its stability and adaptability. But overall, it already has strong real-trading capabilities.
 
-[/trans]
 
 > Strategy Arguments
 

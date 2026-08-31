@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/160816c5f1eed3941b7.png)
 
-[trans]
-#### 概述
-该策略是一个基于指数移动平均线(EMA)的交易系统,主要利用EMA20和EMA50的交叉来识别市场趋势的变化。策略设计了动态的多层次获利点,并结合了止损机制来控制风险。系统通过背景颜色的变化直观地展示了市场趋势的方向,帮助交易者更好地把握市场走势。
-
-#### 策略原理
-策略的核心逻辑基于以下几个方面:
-1. 使用EMA20和EMA50的交叉来确定趋势方向:当EMA20上穿EMA50时产生买入信号,下穿时产生卖出信号
-2. 基于前一根K线的波动范围动态设置四个获利目标:
-   - TP1设置为0.5倍波动范围
-   - TP2设置为1.0倍波动范围
-   - TP3设置为1.5倍波动范围
-   - TP4设置为2.0倍波动范围
-3. 设置3%的止损点来控制风险
-4. 通过K线背景颜色的变化来展示趋势方向:上升趋势显示绿色,下降趋势显示红色
-
-#### 策略优势
-1. 动态获利点设置:根据市场实时波动度自动调整获利目标,适应性强
-2. 多层次获利机制:通过设置多个获利点,既保证了收益的锁定,又给予趋势充分发展的空间
-3. 可视化效果突出:趋势方向通过背景颜色直观显示,便于快速判断市场状态
-4. 风险控制完善:设置了固定止损点,有效控制每次交易的最大损失
-5. 参数灵活可调:交易者可根据不同市场条件调整获利点乘数和止损百分比
-
-#### 策略风险
-1. 均线滞后性:EMA本身具有滞后性,可能导致信号产生时机偏后
-2. 震荡市场风险:在横盘震荡市场中可能产生频繁的假信号
-3. 止损设置固定:固定百分比的止损可能不适合所有市场环境
-4. 获利点间隔:在剧烈波动的市场中,获利点的间距可能过大或过小
-
-#### 策略优化方向
-1. 引入辅助指标:可以添加RSI或MACD等指标作为交叉信号的确认
-2. 优化止损机制:可以考虑使用ATR来动态设置止损距离
-3. 增加时间过滤:添加交易时间窗口,避开波动剧烈的时段
-4. 完善仓位管理:根据市场波动度动态调整持仓规模
-5. 优化信号确认:可以增加成交量等指标作为辅助确认条件
-
-#### 总结
-这是一个结构完整、逻辑清晰的趋势跟踪策略。通过均线交叉捕捉趋势,利用动态获利点管理收益,配合止损控制风险。策略的可视化设计直观有效,参数设置灵活可调。虽然存在均线固有的滞后性问题,但通过优化和完善可以进一步提升策略的稳定性和盈利能力。
-
-||
 
 #### Overview
 This strategy is a trading system based on Exponential Moving Averages (EMA), primarily utilizing the crossover of EMA20 and EMA50 to identify market trend changes. The strategy features dynamic multi-level take-profit points combined with a stop-loss mechanism for risk control. The system visually displays market trend direction through background color changes, helping traders better grasp market movements.
@@ -87,7 +48,6 @@ The core logic of the strategy is based on the following aspects:
 
 #### Summary
 This is a well-structured trend-following strategy with clear logic. It captures trends through EMA crossovers, manages profits with dynamic take-profit points, and controls risk with stop-losses. The strategy's visualization design is intuitive and effective, with flexible parameter settings. While it has inherent EMA lag issues, optimization and refinement can further enhance the strategy's stability and profitability.
-[/trans]
 
 
 

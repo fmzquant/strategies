@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fb4b3b16dd02f3b088.png)
 
-[trans]
-
-## 概述
-
-该策略运用双指数移动平均线(EMA)和移动平均线叉点(MACD)的组合指标,发掘短期价值高估股票并进行短线做空,以在股价下跌过程中获利。策略充分利用EMA快速反应价格变化的特点,结合MACD监控动量风向的优势,在牛熊转换点捕捉短期获利机会。
-
-## 策略原理
-
-1. 计算8日EMA和26日EMA,当8日EMA上穿26日EMA时,视为买入信号。
-
-2. 计算12日EMA、26日EMA和差值DEA的9日EMA构成MACD,当MACD上穿DEA时,视为买入信号。 
-
-3. 买入条件:8日EMA>26日EMA 且 MACD上穿DEA,满足时做多。
-
-4. 出场条件:设定浮盈止损为入场价的3%,追踪止损为入场价的1%,满足任一条件时平仓。
-
-该策略同时利用EMA快速响应价格和MACD判断动量方向的特点,在牛转熊的关键点判断操作方向。快速EMA反映较慢EMA对短期内在价值的修正,MACD反映交易力度变化对均线方向的预判,双重指标提高确定交易时点的准确性。
-
-## 优势分析
-
-1. EMA和MACD组合提高买卖点确定准确率。EMA捕捉价格变动趋势,MACD判断动量变化方向,两者结合识别短期 extremum,避免假突破带来亏损。
-
-2. 追踪止损控制风险,及时止损出场。入场后设置1%的追踪止损,避免亏损扩大。
-
-3. 回测数据充分。策略在2022年整个熊市中回测,模拟了实际交易环境。
-
-4. 灵活参数调整。止损比例、仓位比例都可自定义,可匹配个人风险偏好。
-
-## 风险分析
-
-1. 交易频繁,需密切跟踪。使用5分钟周期,出入场频繁,需要足够时间跟进交易。
-
-2. 追踪止损可能过于密集出场。追踪止损幅度设置过小,可能过早止损出场。
-
-3. 市场处于震荡趋势时效果不佳。EMA和MACD更适合用于较明显的趋势市场。
-
-4. 需考虑交易成本。每次交易对应手续费,频繁交易会导致成本增大。
-
-## 优化方向
-
-1. 调整EMA周期参数,优化买卖时机。可测试缩短快EMA周期,扩大EMA间差异,找出最佳参数组合。
-
-2. 优化止损比例,降低止损过早风险。适当放宽追踪止损幅度,避免追踪止损过于激进。
-
-3. 测试不同持仓时间,选取最优持仓周期。评估不同持仓时间下策略收益,找出最佳持仓周期。
-
-4. 评估增加其他技术指标过滤信号。可测试加入波动率指标等,提高交易决策效果。
-
-## 总结
-
-该双EMA均线和MACD指标交易策略,旨在捕捉股价短期回落机会进行短线做空获利。它充分利用EMA快速响应和MACD判断力度变化的优势,在双重验证下提高交易时点准确性。策略优化空间在于调整参数、滑点控制、持仓时间等方面,谨慎参数优化后可获得较好收益。
-
-||
 
 ## Overview
 
@@ -115,7 +62,6 @@ The strategy utilizes both the fast reaction of EMA to price and MACD's judgment
 
 This dual EMA and MACD trading strategy aims to capture short-term pullback opportunities for shorting and profiting. It fully utilizes the fast reaction of EMA and momentum change judgment strength of MACD to improve accuracy in trade timing with dual confirmation. Optimization spaces lie in parameter tuning, slippage control, holding period etc. Careful parameter optimization can lead to good returns.
 
-[/trans]
 
 > Strategy Arguments
 

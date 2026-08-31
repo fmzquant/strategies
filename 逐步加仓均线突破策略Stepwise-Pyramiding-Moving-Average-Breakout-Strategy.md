@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13a4855ee824fbc5bca.png)
-[trans]
-### 概述
-
-该策略采用逐步加仓的方式,根据收盘价与前一日收盘价的比较来判断行情方向。当判断为看涨机会时,会分多次逐步加仓做多;当判断为看跌机会时,会分多次逐步加仓做空。加仓次数可以通过参数进行设置。同时,策略加入了时间段过滤,只有在设置的时间段内才会发出交易信号。
-
-### 策略原理   
-
-1. 比较当前K线收盘价close与前一K线收盘价close[1],如果close > close[1],则判断为看涨机会,设置longCondition=1;如果close < close[1],则判断为看跌机会,设置shortCondition=1。
-
-2. 在允许交易的时间段内,如果longCondition=1,则逐步加仓做多;如果shortCondition=1,则逐步加仓做空。
-
-3. 加仓次数由参数pyramiding设置,可选择1到5次加仓,默认为4次。
-
-4. 每次加仓后,会同时设置对冲条件,如果行情转向,会立即止损。
-
-5. 可选择把交易信号输出到不同的交易接口,如toast、telegram等。
-
-该策略主要考虑突破型策略与均线型策略的优点,在看涨或看跌时,采取逐步加仓的方法,既能充分跟踪趋势,又能控制风险。同时结合时间过滤,避免在非主交易时间GENERATED信号。
-
-### 优势分析
-
-1. 逐步加仓方式能更好跟踪趋势
-
-2. 加仓次数可调,更灵活
-
-3. 可选择不同的交易接口,拓宽数量型
-
-4. 有止损机制,可控风险
-
-5. 时间过滤功能,避免错误信号
-
-### 风险分析  
-
-1. 参数设置不当可能导致亏损加大
-
-2. 网络问题可能导致无法及时止损
-
-3. 需适当调整参数以适应不同品种
-
-4. 需适时止损以锁定利润
-
-解决方法:
-
-1. 调整加仓次数,默认4次为宜
-
-2. 检查网络连接
-
-3. 根据品种特点调整参数
-
-4. 设置止损位
-
-### 优化方向  
-
-1. 可以考虑加入更多指标判断信号强弱  
-
-2. 可以测试不同品种参数优化效果
-
-3. 可以加入机器学习算法优化参数
-
-4. 可以优化风险管理机制
-
-### 总结
-
-该逐步加仓均线突破策略整合了趋势跟踪与风险控制的优点,在判断到有效信号时,采取逐步加仓的方式跟踪趋势,通过加仓次数的调整来控制风险敞口。同时结合了时间段过滤等功能来控制误信号。该策略可通过多种方式进行优化,具有很大的拓展性。总的来说,该策略对于跟踪趋势型品种具有非常好的效果,是一种值得推荐的策略。
-
-||
 
 ### Overview  
 
@@ -140,7 +74,6 @@ Solutions:
 ### Summary
 This stepwise pyramiding moving average breakout strategy integrates the advantages of trend following and risk control. When effective signals are identified, it uses stepwise pyramiding to follow the trend while controlling risk exposure through configurable number of entries. It also incorporates functionalities like time frame filter to avoid false signals. The strategy can be further optimized in many aspects and has great extensibility. In general, it is very effective for trending products and is strongly recommended.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12468a2db0101907594.png)
-[trans]
-## 概述
-RSI指标吸盘交易策略是一种集成了RSI和CCI技术指标的固定格子交易方法。该策略根据RSI和CCI指标的值来判断入场时机,采用固定盈利比例和固定格子数量来设置止盈单和加仓单。同时,策略还集成了对突破性价格变动的对冲机制。
-
-## 策略原理
-### 入场条件
-当5分钟和30分钟RSI指标都低于设定阈值,而1小时CCI指标也低于设定值时,产生做多信号。此时记录当前close价格作为入场价格,并根据账户权益和格子数量计算出首单仓位。
-
-### 停利条件
-以入场价格为基准,按照设定的目标盈利比例计算出盈利价格,在该价格水平设置止盈单。
-
-### 加仓条件 
-除首单外,其余的固定仓位加仓单会在入场信号后逐一放出,直到达到设定的格子数量。
-
-### 对冲机制
-如果价格较入场价格上涨超过设定的对冲阈值百分比,则对全部持仓进行对冲平仓。
-
-### 反转机制
-如果价格较入场价格下跌超过设定的反转阈值百分比,则取消所有未成交订单,等待新的入场机会。
-
-## 优势分析
-- 结合RSI和CCI两种指标提高获利概率
-- 采用固定格子设定目标盈利,增加获利确定性
-- 集成对冲机制,有效防范价格剧烈波动的风险
-- 加入反转机制,可以减轻亏损
-
-## 风险分析
-- 指标产生错误信号的概率
-- 价格剧烈波动突破对冲阈值
-- 反转后再次调头无法重新入场
-
-可以通过调整指标参数、扩大对冲幅度和减小反转幅度来降低这些风险。
-
-## 优化方向
-- 可以测试更多种类的指标组合
-- 可以研究自适应止盈机制
-- 可以优化加仓逻辑
-
-## 总结
-RSI指标吸盘交易策略通过指标判断入场时机,采用固定格子止盈和加仓来锁定稳定利润。同时,策略具备对冲大幅波动和反转后的重新入场机制。这种集成了多个机制的策略可以用于降低交易风险,提高获利率。通过进一步优化指标和参数设定,可以获得更好的实盘效果。
-
-||
 
 ## Overview
 The RSI Indicator Grid Trading Strategy integrates the RSI and CCI technical indicators with a fixed grid trading approach. It uses the values of RSI and CCI indicators to determine entry signals, and sets take profit orders and additional grid orders based on a fixed profit ratio and number of grids. The strategy also incorporates a hedging mechanism against volatile price movements.
@@ -93,7 +51,6 @@ These can be mitigated by adjusting indicator parameters, expanding hedging rang
 ## Conclusion
 The RSI Grid Strategy determines entries with indicators, and locks in stable profits using fixed grid take profits and entries. It also incorporates volatility hedging and re-entry after reversals. The integration of multiple mechanisms helps reduce trading risks and increase profitability rates. Further optimizations of indicators and settings can improve live performance.
 
-[/trans]
 
 
 

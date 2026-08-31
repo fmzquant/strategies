@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f0140b1aacffa692b4.png)
 
-[trans]
-#### 概述
-该策略使用了多种移动平均线指标,包括SMMA、SMA、ZLEMA和EMA,并基于它们构建了一个改进的MACD指标(Impulse MACD),通过Impulse MACD与其信号线的交叉来产生交易信号。策略的主要思路是利用不同时间尺度的移动平均线来捕捉市场趋势,同时使用Impulse MACD来确认趋势的强度和方向。
-
-#### 策略原理
-1. 计算长度为34的高价、低价、收盘价的SMMA,ZLEMA,得到Impulse MACD(MD)。
-2. 计算Impulse MACD的9周期SMA作为信号线(SB)。
-3. 计算Impulse MACD与信号线的差值(SH),反映趋势强度。
-4. 当Impulse MACD上穿信号线时产生买入信号,下穿时平仓。
-5. 根据价格与Impulse MACD、高低价SMMA的关系,用不同颜色绘制Impulse MACD柱状图,直观反映趋势强弱。
-
-#### 策略优势
-1. 使用了多种类型的移动平均线,能够更全面地反映市场趋势。
-2. 改进的MACD指标(Impulse MACD)考虑了价格与移动平均线的相对位置,能够更好地反映趋势强度。
-3. 信号线的引入有助于过滤掉一些假信号,提高信号质量。
-4. 根据趋势强度用不同颜色绘制Impulse MACD,便于直观判断行情走势。
-
-#### 策略风险
-1. 参数选择不当可能导致信号频繁或滞后,需要根据不同市场和周期进行优化。
-2. 对于震荡行情,该策略可能产生较多虚假信号而导致亏损。
-3. 策略缺乏止损机制,遇到剧烈行情可能面临较大回撤。
-
-#### 策略优化方向
-1. 引入趋势判断指标,如ADX等,在趋势明确时才进行交易,减少震荡行情中的亏损。
-2. 对于产生的交易信号,可以结合其他指标如RSI、ATR等进行二次确认,提高信号质量。
-3. 设置合理的止损和止盈位,控制单次交易风险。
-4. 对参数进行优化,如使用遗传算法等方法寻找最优参数组合。
-
-#### 总结
-该策略基于多种类型移动平均线构建了改进的MACD指标,并用其与信号线的交叉产生交易信号,同时直观地展示趋势强度,整体思路清晰,优势明显。但是该策略也存在一定局限性,如对震荡行情适应性不足,缺乏风控措施等。可以考虑从趋势判断、信号确认、风险控制、参数优化等方面对策略进行进一步改进,以提升策略的稳健性和盈利能力。
-
-|| 
 
 #### Overview
 This strategy utilizes various moving average indicators, including SMMA, SMA, ZLEMA, and EMA, and constructs an improved MACD indicator (Impulse MACD) based on them. It generates trading signals through the crossover of the Impulse MACD and its signal line. The main idea of the strategy is to capture market trends using moving averages of different time frames while confirming the strength and direction of the trend with the Impulse MACD.
@@ -74,7 +42,6 @@ This strategy utilizes various moving average indicators, including SMMA, SMA, Z
 #### Summary
 This strategy constructs an improved MACD indicator based on various types of moving averages and generates trading signals through its crossover with the signal line while intuitively displaying trend strength. The overall idea is clear, and the advantages are obvious. However, the strategy also has certain limitations, such as poor adaptability to choppy markets and a lack of risk control measures. Further improvements can be considered from aspects such as trend identification, signal confirmation, risk control, and parameter optimization to enhance the robustness and profitability of the strategy.
 
-[/trans]
 
 
 

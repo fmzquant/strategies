@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/196b309b321e0f256bb.png)
-[trans]
-### 概述
-
-该策略首先根据前一交易日的最高价、最低价以及收盘价计算出卡马奇拉枢轴点。然后结合布林带指标对价格进行过滤,在价格突破枢轴点时产生交易信号。
-
-### 策略原理
-
-1. 计算前一交易日的最高价、最低价、收盘价
-2. 根据公式计算出卡马奇拉枢轴线,包含上轨H4、H3、H2、H1和下轨L1、L2、L3、L4
-3. 计算20日布林带上轨和下轨
-4. 当价格上穿下轨时做多,下穿上轨时做空
-5. 止损点设在布林带上轨或下轨附近
-
-### 优势分析  
-
-1. 卡马奇拉枢轴线包含多个关键支撑阻力位,增强交易信号的可靠性
-2. 与布林带指标结合,可有效过滤假突破
-3. 多组参数组合,交易灵活
-
-### 风险分析
-
-1. 布林带指标参数设置不当可能导致交易信号错误
-2. 卡马奇拉枢轴线关键位计算依赖前一交易日价格,可能受隔夜跳空影响
-3. 多头空头操作都有亏损风险
-
-### 优化方向
-
-1. 优化布林带参数,寻找最佳参数组合
-2. 结合其它指标过滤假突破信号
-3. 增加止损策略,降低单笔亏损
-
-### 总结
-
-该策略综合运用卡马奇拉枢轴线和布林带指标,在价格突破关键支撑阻力位时产生交易信号。可通过参数优化和信号过滤来提高策略收益率和稳定性。总体来说,该策略交易思路清晰,可操作性强,值得实盘验证。
-
-||
 
 ### Overview
 
@@ -81,7 +45,6 @@ This strategy first calculates the Camarilla pivot points based on the previous 
 
 This strategy combines Camarilla pivot lines and Bollinger Bands, generating trading signals when price breaks key support and resistance levels. Strategy profitability and stability can be improved through parameter optimization and signal filtering. Overall, this strategy has clear trading logic and high operability, worth live trading verification.
 
-[/trans]
 
 > Strategy Arguments
 

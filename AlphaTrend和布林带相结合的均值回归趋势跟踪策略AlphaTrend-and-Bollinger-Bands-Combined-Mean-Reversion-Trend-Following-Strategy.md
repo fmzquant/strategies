@@ -10,73 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1099ab2847b82ef7447.png)
-[trans]
-## 概述
-
-该策略结合了AlphaTrend指标和布林带策略的特点。AlphaTrend指标用于捕捉市场趋势,布林带策略用于捕捉市场的均值回归特性。策略的主要思想是:当价格突破布林带上轨且AlphaTrend指标向上时做多;当价格突破布林带下轨且AlphaTrend指标向下时做空。策略的出场条件是:当价格跌破AlphaTrend指标时平仓。
-
-## 策略原理
-
-1. AlphaTrend指标的计算:
-   - 根据novolumedata参数决定使用RSI还是MFI
-   - 计算ATR作为波动参考
-   - 计算upT和downT作为趋势判断的上下阈值
-   - 根据价格与upT和downT的关系更新AlphaTrend指标
-2. 布林带的计算:
-   - 计算BBPeriod期间收盘价的简单移动平均值(SMA)作为中轨
-   - 计算收盘价的标准差(SD) 
-   - 上轨=SMA+BBMultiplier*SD
-   - 下轨=SMA-BBMultiplier*SD  
-3. 策略进场条件:
-   - 做多条件:收盘价突破布林带上轨且AlphaTrend指标向上
-   - 做空条件:收盘价突破布林带下轨且AlphaTrend指标向下
-4. 策略出场条件:
-   - 根据AlphaTrend指标:价格跌破AlphaTrend指标时平仓
-
-策略通过结合趋势跟踪和均值回归的特点,在趋势明显时紧跟趋势,在震荡市中博取超额收益。AlphaTrend指标能够根据价格走势灵活调整,对趋势有较好的适应性。同时布林带能够客观刻画价格的相对高低,两者结合可形成有效的进场信号。
-
-## 优势分析
-
-1. 趋势跟踪与均值回归结合,能够在各种市场状态下把握机会
-2. AlphaTrend指标能够灵活适应价格走势,权衡了趋势和波动
-3. AlphaTrend指标同时考虑了价格和成交量信息,信号可靠性高
-4. 布林带概念简单,能够客观刻画价格的相对高低,与AlphaTrend指标结合,形成了有效的过滤机制
-5. 参数可调,策略灵活性高,可以根据市场特点进行优化
-
-## 风险分析
-
-1. AlphaTrend指标对参数相对敏感,参数设置不当可能导致信号失效
-2. 当市场处于震荡期时,布林带和AlphaTrend结合可能产生频繁的信号
-3. 策略在突发行情时可能失效
-4. 固定点位止损可能承担较大风险
-5. 策略缺乏仓位管理和资金管理
-
-针对以上风险,可以采取以下应对措施:
-
-1. 对不同市场和品种分别进行参数优化和回测
-2. 进一步过滤信号,减少频繁交易带来的成本
-3. 设置合理的止损点位,严格执行止损
-4. 引入更加健壮的趋势判断指标,提高趋势把握的准确性
-5. 在实盘中,严格遵循资金管理原则,降低单笔交易的风险敞口
-
-## 优化方向
-
-1. 指标参数的优化:对不同品种和周期分别进行参数寻优,提高信号的有效性
-2. 信号过滤:引入更多过滤条件,如价格突破布林带后必须收盘在布林带外,减少噪音信号
-3. 止损优化:采用更加灵活的止损策略,如ATR止损或百分比止损
-4. 仓位管理:根据风险程度动态调整仓位,高风险时降低仓位,低风险时加大仓位
-5. 结合其他指标:引入更多有效指标,如趋势类指标ADX、动量指标RSI等,进一步提高信号的可靠性
-6. 资金管理:严格执行资金管理原则,单笔交易风险敞口不超过账户的2%,总风险敞口不超过账户的10%
-
-策略还有很多可以优化的空间。参数优化和信号过滤可以直观地提高策略表现。引入仓位管理可以平滑收益曲线。更加灵活的止损方式可以降低单次交易的风险。通过这些手段的组合优化,可以进一步提高该策略的性能,使其在实盘交易中稳定获利。
-
-## 总结
-
-该策略巧妙地将趋势跟踪和均值回归这两种常见的量化策略思想结合起来,同时采用了AlphaTrend指标和经典的布林带指标。AlphaTrend指标充分利用价格和成交量信息,在把握趋势的同时很好地适应了市场节奏。而布林带指标客观刻画了价格的相对高低,能够有效捕捉超买超卖的机会。两个指标的结合形成了趋势与价格的共振,能够在趋势行情和震荡行情中灵活把握机会。
-
-策略整体逻辑清晰,参数设置灵活,便于针对不同品种和周期进行优化。同时策略的风险点也比较明显,仓位管理和止损方面还需进一步优化。此外,为了进一步提高信号的可靠性,还可以考虑引入趋势类指标如ADX,动量指标如RSI等。总的来说,该策略是趋势投资和均值回归思想的经典结合,很好地利用了AlphaTrend指标的优点,值得进一步优化和跟踪研究。相信经过进一步的打磨,该策略能够成为实盘交易中的利器。
-
-|| 
 
 ## Overview
 
@@ -142,7 +75,6 @@ The strategy still has a lot of room for optimization. Parameter optimization an
 This strategy ingeniously combines two common quantitative strategy ideas: trend following and mean reversion, while employing the AlphaTrend indicator and the classic Bollinger Bands indicator. The AlphaTrend indicator makes full use of price and volume information, adapting well to market rhythms while grasping trends. The Bollinger Bands indicator objectively depicts the relative highs and lows of prices and can effectively capture overbought and oversold opportunities. The combination of the two indicators forms a resonance of trend and price, enabling flexible capture of opportunities in both trending and range-bound markets.
 
 The overall logic of the strategy is clear, and the parameter settings are flexible, making it convenient to optimize for different varieties and periods. At the same time, the risk points of the strategy are also relatively obvious, and position management and stop-loss need further optimization. In addition, to further improve the reliability of signals, it is worth considering introducing trend indicators such as ADX and momentum indicators such as RSI. Overall, this strategy is a classic combination of trend investing and mean reversion ideas, making good use of the advantages of the AlphaTrend indicator and deserving further optimization and follow-up research. It is believed that after further refinement, this strategy can become a powerful tool in actual trading.
-[/trans]
 
 > Strategy Arguments
 

@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fa420c05cd3c3f8390.png)
 
-[trans]
-
-
-## 概述
-
-RSI双轨震荡线长短双向交易策略是一个利用RSI指标进行双向交易的策略。该策略通过RSI指标的超买超卖原理,结合双轨道设定和均线交易信号,实现高效的双向开仓与平仓。
-
-## 策略原理
-
-该策略主要基于RSI指标的超买超卖原理进行交易决策。策略首先计算RSI指标的值vrsi,以及双轨道的上轨sn和下轨ln。当RSI值下穿下轨ln时产生做多信号,当RSI值上穿上轨sn时产生做空信号。
-
-策略还检测K线的涨跌变化,进一步产生做多做空信号。具体来说,当K线从下往上突破时产生做多信号longLocic,当K线从上往下突破时产生做空信号shortLogic。此外,策略提供参数开关,可以只做多、只做空,或翻转信号。
-
-在产生做多做空信号后,策略会统计信号次数,控制开仓次数。通过参数可以设置不同的加仓规则。平仓条件包括止盈、止损、移动止损等方式,可设置不同的止盈止损百分比。
-
-总之,该策略综合运用RSI指标、均线交叉、统计加仓、止盈止损等多种技术手段,实现自动的长短双向交易。
-
-## 策略优势
-
-- 利用RSI指标的超买超卖原理,在合理位置建立做多做空仓位。
-- 双轨道设定避免错误信号。上轨阻止多头仓位过早平仓,下轨阻止空头仓位过早平仓。  
-- 均线交易信号过滤假突破。股价突破均线才产生信号,避免虚假信号。
-- 统计信号次数和加仓次数,控制风险。
-- 可自定义止盈止损百分比,收益风险可控。
-- 移动止损跟踪止损,进一步锁定盈利。
-- 可仅做多、仅做空或翻转信号,适应不同市场环境。
-- 自动化交易系统,降低人工操作成本。
-
-## 策略风险
-
-- RSI指标存在反转失败风险。RSI进入超买超卖区域不一定反转。
-- 固定止盈止损点存在被套风险。止盈止损设置不当可能造成过早止损或止盈。  
-- 依赖技术指标,存在参数优化风险。指标参数设置不当,会影响策略效果。
-- 多种条件同时触发,存在漏单风险。
-- 自动交易系统存在异常错误风险。
-
-针对以上风险,可以优化参数设置,调整止盈止损策略,增加流动性筛选,优化信号生成逻辑,增加异常错误监控等进行改进。
-
-## 策略优化方向 
-
-- 测试不同周期参数优化RSI指标参数。
-- 测试不同的止盈止损百分比设置。
-- 增加交易量或收益率筛选,避免流动性不足。
-- 优化信号生成逻辑,改进均线交叉方式。
-- 增加多时间段回测,验证稳定性。
-- 考虑加入其他指标,优化信号效果。
-- 加入仓位管理策略。
-- 增加异常错误监控。
-- 优化自动止损跟踪算法。
-- 考虑加入机器学习提升策略。
-
-## 总结
-
-RSI双轨震荡线长短双向交易策略通过综合运用RSI指标、统计开仓与止损原理等多种技术手段,实现了自动化的双向交易。该策略有较强的可定制性,用户可以根据需求调整参数,适应不同市场环境。同时,策略也存在一定改进空间,可从优化参数设置、风控策略、信号生成逻辑等方面进行优化,使策略更稳定可靠。总体来说,该策略为用户提供了一种相对高效的量化交易方案。
-
-||
 
 ## Overview
 
@@ -120,7 +64,6 @@ To address the above risks, parameters can be optimized, stop profit and loss st
 
 The RSI Dual-rail Oscillation Line Long and Short Bi-directional Trading Strategy integrates RSI indicators, statistical opening and stop loss principles and other technical tools to achieve automated bi-directional trading. The strategy is highly customizable for users to adapt parameters to different market environments. There is also room for improvement via optimizing parameters, risk management, signal logic etc. Overall, it provides an efficient quantitative trading solution.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,101 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17d91c1e648ae4b3dc4.png)
-[trans]
-
-
-## 概述
-
-本策略综合运用了EMA均线、VWAP、MACD、Bollinger Bands和Schaff Trend Cycle五大指标,识别价格在某一范围内的反转点,发出买入和卖出信号。策略优点是可根据不同市场调整指标使用组合,降低假信号概率,提高获利概率。但也存在指标滞后识别变化以及参数设置不当的风险。总体来说,策略思路清晰,有较强的实用价值。
-
-
-## 策略原理
-
-1. EMA均线判断大趋势方向,只在趋势方向买入
-
-2. VWAP判断机构资金流向,只在机构买入方向买入
-
-3. MACD判断短线趋势和动量变化,MACD线突破信号线视为买入/卖出信号
-
-4. Bollinger Bands判断是否过量或过卖,价格穿越上下轨视为买入/卖出信号  
-
-5. Schaff Trend Cycle判断短期缠绕盘整结构,超过高低阈值视为买入/卖出信号
-
-6. 五大指标发出一致信号时,发出买入/卖出指令
-
-7. 设置止损点和止盈点,优化资金管理
-
-
-## 策略优势
-
-1. 多指标组合降低假信号概率
-
-使用EMA、VWAP、MACD、BB和STC等多种指标的组合,可以相互验证,减少某一单一指标产生的假信号,从而提高信号的可靠性。
-
-2. 指标可定制 
-
-允许选择是否使用某一指标,可根据不同品种和市场环境进行指标的组合,使策略更具针对性和适应性。
-
-3. 资金管理优化 
-
-设置止损点和止盈点,可以限制单笔损失,并锁定部分利润,对资金进行更好的管理。
-
-4. 策略思路清晰
-
-使用简单直观的指标,并配有详细的代码注释,整个策略思路一目了然,易于理解和修改。
-
-5. 实用性强
-
-多种指标广泛使用,参数设置合理,可直接用于实盘交易,无需大量优化即可达到不错的效果。
-
-
-## 策略风险 
-
-1. 指标滞后识别变化的风险
-
-EMA、MACD等指标对价格变化的识别存在一定滞后,可能错过最佳买入时点。
-
-2. 参数设置不当的风险
-
-如果指标参数设置不当,将产生大量假信号,无法正常运行策略。
-
-3. 胜率无法保证的风险 
-
-多指标组合可以提高胜率,但无法确保每笔交易都获利。市场环境变化可能导致胜率下降。
-
-4. 止损点设定过小的风险
-
-如果止损点设置过小,在价格正常波动时就可能被止损出场,增加不必要损失。
-
-
-## 策略优化方向
-
-1. 增加机器学习模型判断信号可靠性
-
-可以训练模型判断多指标信号的可靠程度,对信号进行评分,减少假信号。
-
-2. 增加量化指标进行蓄势识别
-
-增加一些量化指标比如OBV等,识别价格的蓄势迹象,提高买点的确定性。
-
-3. 优化止损止盈策略
-
-可以研究更适合本策略的移动止损或锁利策略,优化资金管理。
-
-4. 参数优化
-
-通过更系统的回测来优化每个指标的参数,提高策略整体稳健性。
-
-5. 增加机器人交易
-
-连接交易API,实现自动下单,使策略可以真正无人值守运行。
-
-
-## 总结
-
-本策略整合多种技术指标优势,思路清晰,实用性强,可作为 discretionary trading 的决策参考,也可直接用于 algorithmic trading。但仍需针对具体品种和市场环境进行优化调整,降低风险提高稳定性,最后才能在实盘中持续稳定盈利。
-
-||
 
 
 ## Overview
@@ -198,7 +103,6 @@ Connect to trading API to allow auto order execution, enabling fully automated h
 
 This strategy combines strengths of multiple technical indicators with a clear logic flow and strong practical value. It can serve as discretionary trading decision support or direct algorithmic trading. But optimization and tuning based on specific product and market environment is needed to reduce risk and improve stability before consistent profitable live trading.
 
-[/trans]
 
 > Strategy Arguments
 

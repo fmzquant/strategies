@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c7b50a4b4fc28793ea.png)
-[trans]
-
-#### 概述
-
-该策略主要思想是同时利用Parabolic SAR和EMA两个指标来识别趋势方向和入市时机。其中,Parabolic SAR用于判断当前趋势方向,EMA用于辅助确定具体的入市时机。当SAR在价格上方时为熊市,当SAR在价格下方时为牛市。入市时则要求价格突破EMA才认为趋势开始形成,此时跟随趋势方向入市。
-
-#### 策略原理  
-
-该策略的核心指标是Parabolic SAR,它是一个能够跟踪价格并判断趋势反转的技术分析工具。其计算公式较为复杂,但原理较为简单直观。SAR指标通过不断调整自己的位置,始终保持在价格的背后,当价格反转时,它会立即调整位置到价格的另一侧。因此,只需要观察SAR指标相对价格的位置,就可以判断目前的趋势方向。  
-
-辅助该策略的另一个指标是EMA。与SAR不同,EMA更适合判断趋势的持续性。通过要求价格需突破EMA之后才入场,可以有效过滤掉部分噪声。且EMA还可用于确认反转信号。例如当价格跌破上升趋势的EMA时,很可能是趋势反转的信号。
-
-综上,该策略的具体交易规则如下:
-
-1. 使用SAR判断趋势方向,SAR在价格上方为熊市,在价格下方为牛市
-2. 在牛市中,当价格大于EMA时做多;在熊市中,当价格小于EMA时做空
-3. 止损点设置为SAR的值,以控制风险
-
-通过Parabolic SAR判断大趋势,再利用EMA过滤误导信号,既可以锁定趋势又可控制风险,实现了对趋势的有效跟踪。
-
-#### 优势分析
-
-该策略具有以下几点主要优势:
-
-1. 跟踪趋势能力强。SAR对于趋势反转的判断非常灵敏,可有效锁定趋势方向。
-2. 准确率较高。EMA可过滤噪声,避免被套。
-3. 风险控制到位。通过SAR设置止损点,可控制单笔损失。
-4. 实施难度不高。策略规则简单明确,容易理解和实施。
-
-总的来说,该策略集成了多个指标的优点,在抓住趋势的同时也做到了有效的风险控制,是一种表现稳定、易于掌握的趋势跟踪策略。
-
-#### 风险分析
-
-尽管该策略有诸多优势,但在实际运行中也还是存在一定的风险需要防范,主要风险有:  
-
-1. 趋势反转风险。当趋势发生反转时,该策略无法及时止损,可能造成较大损失。
-2. 震荡行情风险。在震荡行情中,策略会产生多次小额损失。
-3. 参数优化风险。SAR和EMA的参数设置会影响策略表现,需要反复测试找到最优参数。  
-
-为降低上述风险,可以从以下几个方面进行优化:
-
-1. 结合其他指标判断趋势反转时机,设置更加灵敏的止损点。
-2. 增加过滤器,避免震荡行情的频繁开仓。
-3. 利用遗传算法等手段对参数组合进行优化,找到最优参数。
-
-#### 优化方向  
-
-进一步优化该策略,可以考虑从以下几个方面入手:  
-
-1. 优化参数设置。可以通过更系统的方法如遗传算法对EMA和SAR的参数进行测试和优化,找到最优参数组合。
-
-2. 增加趋势判断工具。可以加入MACD、布林带等其他指标来确认趋势,提高准确性。  
-
-3. 设置动态止损。可以根据ATR等指标设置动态的止损点,让止损更加灵活。
-
-4. 考虑交易成本。引入滑点和手续费参数,优化净利润而非绝对收益。
-
-5. 分层入场出场。可以设置更复杂的多级入场出场机制,在趋势不同阶段进行分批建仓或止损。
-
-通过上述几点优化后,策略在跟踪趋势的同时,可望获得更高稳定性、更精准判断和更强风险控制能力,从而获得 mejor 绩效。
-
-#### 总结  
-
-基于Parabolic SAR和EMA的趋势跟踪策略,集成了多个指标判断趋势方向和入场时机的优势,通过设置SAR作为止损点,风险控制到位,是一种表现相对稳定的量化策略。该策略具有判断准确率高、易于掌握等优点,值得投资者参考学习。但也存在一定的风险,需要对参数和止损方式进行进一步优化,才能获得更佳的绩效。
-
-||
 
 #### Overview
 
@@ -140,7 +74,6 @@ With the above optimizations, while tracking the trend, the strategy can be expe
 
 The Parabolic SAR and EMA trend tracking strategy integrates the advantages of multiple indicators to judge trend direction and timing of entry. With SAR set as stop loss point, risk is under control. It is a relatively stable quantitative strategy. This strategy has advantages such as high judgment accuracy and easy mastery. But there are also certain risks. Further optimization of parameters and stop loss methods is needed to achieve melhor performance. It is worth investors' reference and learning.  
 
-[/trans]
 
 > Strategy Arguments
 

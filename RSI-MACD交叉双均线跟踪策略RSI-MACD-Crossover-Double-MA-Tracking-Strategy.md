@@ -11,87 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/db2e387bf1c19ccd85.png)
 
-[trans]
-
-## 概述
-
-本策略综合运用RSI指标、MACD指标以及双均线,实现趋势跟踪和定位标准差行情的效果。策略通过RSI指标判断超买超卖现象,MACD实现快慢均线交叉判断买入卖出时机,双均线过滤掉部分噪音交易机会,在趋势中获利。
-
-## 策略原理
-
-1. 计算RSI指标判断超买超卖
-
-  - 计算一定周期内的涨跌变化
-
-  - 根据涨跌变化计算RSI
-
-  - 给出超买超卖判断
-
-2. 计算MACD指标判断交叉
-
-  - 计算快线、慢线、信号线
-
-  - 实现快慢线交叉买入和卖出
-
-  - 显示交叉情况
-
-3. 实现双均线过滤
-
-  - 计算快线、慢线
-
-  - 只在快线上穿慢线时考虑交易
-
-  - 实现趋势跟踪过滤噪音
-
-4. 组合多个指标判断入场
-
-  - 综合RSI、MACD、双均线多重条件过滤
-
-  - 提高策略的稳定性
-
-## 优势分析
-
-- 多指标组合,提高策略准确性 
-
-- 趋势跟踪,过滤噪音,提高稳定性
-
-- RSI指标判断超买超卖,助于抓住转折点
-
-- MACD交叉判断,简单有效地判断买入卖出
-
-- 双均线过滤,去除大部分非主流方向交易机会
-
-- 容易理解参数少,适合新手改进学习
-
-## 风险分析
-
-- 多重指标组合,容易产生策略过度优化
-
-- 双均线过于牺牲灵活性,错过部分机会
-
-- 需要谨慎选择RSI和MACD的参数
-
-- 需关注交易品种的止损点,控制风险
-
-- 长期使用需要反复调整参数适应市场
-
-## 优化方向
-
-- 调整RSI参数,适应不同品种特性
-
-- 调整双均线周期,优化趋势跟踪效果
-
-- 加入止损策略,控制单笔损失
-
-- 结合更多指标,丰富条件组合
-
-- 开发参数自适应模式,自动调整参数
-
-## 总结
-
-本策略综合运用RSI、MACD和双均线等多个指标,实现了对趋势的判断和跟踪,对机会进行多层过滤,是一个非常适合新手学习和改进的多指标策略。该策略优势在于简单高效,容易理解适应,通过调整参数可以获得不错的稳定收益。下一步可通过加入更多指标,开发自适应参数模式等进一步优化策略,使其能够自动调整适应更多不同市场环境。
-
-|| 
 
 ## Overview
 
@@ -171,7 +90,6 @@ This strategy combines RSI indicator, MACD indicator and double moving averages 
 
 This strategy combines RSI, MACD and double MA to identify and track trends, and filters signals through multiple layers. It is very suitable for beginners to learn and improve. The advantage lies in its simplicity and adaptiveness. Fine tuning of parameters can generate decent steady returns. Next steps may include adding more indicators, developing adaptive parameter model to auto optimize for different market environments.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d78b6bd70bac097024.png)
-[trans]
-
-## 概述
-
-该策略通过计算 zwei 个不同周期的指数移动平均线EMA,并比较它们的大小关系来判断行情趋势,实现趋势跟随。当短周期EMA上穿长周期EMA时,判断为 行情进入上升趋势,策略做多;当短周期EMA下穿长周期EMA时,判断为行情进入下跌趋势,策略做空。
-
-## 策略原理
-
-该策略的核心指标是指数移动平均线(Exponential Moving Average, EMA)。EMA指标能够过滤掉行情的随机性,反应真正的趋势变化。本策略采用了两个不同参数的EMA,一个短周期的34日EMA,一个长周期的89日EMA。 
-
-当短周期EMA从下方上穿长周期EMA时,表示短期趋势开始主导长期趋势,价格进入上升通道,这是策略的做多信号。当短周期EMA从上方下穿长周期EMA时,表示短期趋势开始反转长期趋势,价格进入下跌通道,这是策略的做空信号。这样,策略充分利用两个 EMA 的交叉来捕捉价格变化的趋势信号。
-
-做多做空后,策略会一直持有头寸直到出现相反信号。例如,做多后遇到短周期EMA下穿长周期EMA的做空信号时,就会平掉做多头寸,同时开立做空头寸。这样可以顺势退出正利空头,又可以适时反向做空,最大程度锁定趋势获利。
-
-## 优势分析
-
-该策略最大的优势在于全面利用 EMA 交叉形态来判断行情趋势的变化,精准做多做空,从而可以较好的跟踪趋势。具体来说,优势主要体现在以下几个方面:
-
-1. 利用 EMA 工具判断主流价格趋势变化,ma 在趋势和附加的平滑处理上优于 基本均线工具。
-
-2. 采用双 EMA 结构,过滤掉部分噪音,使信号更加稳定可靠。
-
-3. EMA 周期参数可调,可以灵活适应行情特征,获得更精确的交易信号。
-
-4. 顺势持仓,避免逆势交易,可以减少交易风险。
-
-5. 充分利用趋势获利,一旦获利后及时止盈,避免反转亏损。
-
-## 风险分析
-
-该策略主要面临以下几个方面的风险:
-
-1. 虽然 EMA 可以有效过滤噪音,判断趋势方向,但如果遭遇震荡行情,会出现多次losing信号交织,导致过分频繁交易,增加交易成本和风险。
-
-2. EMA 的周期参数选择不当,会使得信号产生滞后,错过最佳入场时点。
-
-3. 无法判断趋势的转折点和反转时间,可能在转折来临前被套牢。
-
-针对上述风险,可采取以下应对措施:
-
-1. 在震荡行情中,适当放宽止损线,减少losing,或者直接跳过交易等待明确趋势。 
-
-2. 优化 EMA 周期参数的选择,找到最优参数组合。引入自适应 EMA 来动态调整周期。
-
-3. 增加附加指标判断趋势末、结构转折点,避免套牢。典型的组合可以考虑引入 MACD、KDJ、MA 等。
-
-## 优化方向 
-
-该策略还具有进一步优化的空间,主要可以从以下几个方面入手:
-
-1. 进一步优化 EMA 周期的选择,找到最优参数组合。可以考虑动态周期、自适应 EMA 等。
-
-2. 增加止损策略,如移动止损、时间止损、波动止损等,控制单笔交易风险。
-
-3. 增加附加指标判断行情结构,避免套牢风险。典型的如引入 MACD、KDJ、MA 等。
-
-4. 根据大周期级别的结构震荡特点,调整策略的参数。具体来说, trending 市做多参数组合,range 市做空参数组合。
-
-5. 结合仓位管理,根据资金利用率、收益率等指标动态调整仓位大小。
-
-## 总结
-
-该策略核心思路简单清晰,通过 EMA 指标交叉判断行情趋势变化,实现做多做空。策略具有利用 EMA 工具判断趋势、顺势持仓、利用趋势获利等优势。但也存在选择周期、捕捉转折点等问题。这些问题都为策略进一步优化提供了方向。通过引入多种技术指标,丰富本策略的判断依据,可以使策略更稳定、更高效。
-
-||
 
 ## Overview
 
@@ -138,7 +73,6 @@ There is room for further optimization of this strategy, which can be done mainl
 
 The core idea of this strategy is simple and clear, using EMA indicator crosses to determine market trend changes for going long and short. The strategy has advantages in using EMA tools to determine trends, holding positions along the trend, and taking advantage of trends. But there are also problems such as cycle selection and capturing inflection points. These issues all provide direction for further optimization of the strategy. By introducing a variety of technical indicators to enrich the basis for the strategy's judgments, the strategy can be made more stable and efficient.
 
-[/trans]
 
 > Strategy Arguments
 

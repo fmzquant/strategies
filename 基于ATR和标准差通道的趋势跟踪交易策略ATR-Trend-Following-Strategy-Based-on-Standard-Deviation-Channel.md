@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bc29b732310b72c36b.png)
-[trans]
-
-### 概述
-
-本策略named“ATR趋势跟踪策略”,是一种基于平均真实波动幅度(ATR)设置止损,并利用标准差通道判断入市时机的趋势跟踪交易策略。该策略适用于股指、外汇、商品等具有明显趋势的金融产品。
-
-### 策略原理  
-
-该策略使用ATR指标来设置止损价格。ATR指标反映市场波动程度,可以动态设置止损距离。策略通过输入ATR周期和倍数,来计算ATR值,然后乘以倍数作为止损距离。具体来说,ATR止损线的计算公式为:
-
-```
-ATR线 = 前一日ATR线 ± nLoss(nLoss = nATRMultip * ATR值)
-
-若收盘价 > ATR线,ATR线上调至收盘价 - nLoss 
-若收盘价 < ATR线,ATR线下调至收盘价 + nLoss
-```
-
-这样ATR线就可以根据价格波动来动态调整,从而实现趋势跟踪止损。
-
-除了ATR止损以外,策略还使用标准差通道判断入市时机。标准差通道的计算公式为:
-
-```
-中线 = ATR止损线
-上轨 = 中线 + n倍标准差
-下轨 = 中线 - n倍标准差  
-```
-
-当价格由下向上突破中线时,做多;当价格由上向下突破中线时,做空。
-
-### 策略优势
-
-该策略最大的优势在于,利用ATR指标作为止损工具,可以根据市场波动程度来动态调整止损距离,实现趋势跟踪止损,有效控制风险。
-
-另外,结合标准差通道判断入市时机,可以避免因价格小幅震荡而频繁开仓。
-
-### 风险及解决方案
-
-该策略主要风险在于,止损距离过大时无法有效控制风险;止损距离过小时则容易被市场噪音止损。针对此风险,可以调整ATR周期及ATR倍数,寻找最佳参数组合。
-
-另一个风险在于,标准差通道参数设置不当,会导致开仓频率过高或过低。可以通过参数优化找到最优参数。
-
-### 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. ATR周期和倍数优化。调整这两个参数可以获得更好的止损效果。
-
-2. 标准差通道参数优化。优化通道参数,获得更好的入市效果。 
-
-3. 增加其他指标过滤。可以增加移动平均线、K线形态等指标,辅助判断趋势方向,提高获利率。
-
-4. 优化开仓和平仓逻辑。可以设定价格触及标准差通道时,再次确认K线形态后才开仓。
-
-### 总结  
-
-本策略基于ATR指标实现趋势跟踪止损,并用标准差通道辅助判断入市时机。策略优势在于止损风险控制效果好,适合趋势交易。风险和优化方向也得到明确分析。该策略值得进一步测试优化,具有实盘交易价值。
-
-||
 
 ### Overview
 
@@ -126,7 +68,6 @@ The strategy can be enhanced from the following aspects:
 
 The strategy achieves trend following stop loss based on ATR indicator and uses standard deviation channel for entry signals. Its advantages lie in good risk control capability for trend trading. Risks and enhancements are also clearly analyzed. The strategy is worth further testing and optimization and has practical trading value.
 
-[/trans]
 
 > Strategy Arguments
 

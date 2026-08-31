@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b488db58e83fef8104.png)
-[trans]
-
-### 一、策略概述
-
-本策略名称为“DEMA与EMA短期交叉结合ATR波动率策略”。该策略通过计算DEMA与EMA的交叉信号,结合ATR波动率指标,实现高效的短线交易策略。当DEMA下穿EMA,并且ATR波动率上升时,做空;当DEMA重新上穿EMA时,平仓。
-
-### 二、策略原理  
-
-1. 计算DEMA指标。DEMA为双EMA移动平均线,通过计算一定周期内的双EMA,可以有效过滤短期市场噪音,提高信号准确率。
-
-2. 计算EMA指标。EMA为指数移动平均线,可以更快地反应价格变化。  
-
-3. 计算ATR波动率。ATR为真实波动幅度指标,可以反映市场波动性和风险水平。当ATR上升时,代表市场波动加大,容易形成短线调整。
-
-4. 当DEMA下穿EMA,并且ATR波动率大于设置的参数时,表明股价开始下跌,市场 risk off,此时做空。  
-
-5. 当DEMA重新上穿EMA时,表明价格形成支撑,开始反弹上涨,此时平仓。
-
-### 三、策略优势  
-
-1. 双EMA结合EMA,可以有效提高信号的准确性。
-
-2. ATR波动率指标可以排除低风险的whipsaw信号。
-
-3. 短期操作,适合短线追踪,可以避免长时间对冲。  
-
-4. 交易逻辑简单清晰,容易理解和实现。
-
-### 四、策略风险
-
-1. ATR参数设置不当可能错过交易机会。
-
-2. 需同时关注多空两侧信号,操作难度较大。  
-
-3. ffected by short-term market volatility.
-
-解决方法:参数优化测试,调整参数;简化交易逻辑,只关注单边信号;适当放宽止损范围。
-
-### 五、策略优化方向  
-
-1. 优化DEMA和EMA的参数,寻找最佳参数组合。
-
-2. 优化ATR的周期参数,确定最佳市场波动性衡量指标。
-
-3. 添加其他辅助指标,如BOLL通道,提高信号准确率。
-
-4. 增加止损和止盈规则,锁定更稳定的收益。
-
-### 六、总结
-
-本策略通过DEMA、EMA交叉和ATR波动率指标,构建了一个简单高效的短期交易策略。策略交易逻辑清晰,容易操作,可适应高频短线交易。下一步通过参数优化和规则优化,可望获得更稳定的超额收益。
-
-||
 
 ## I. Strategy Overview  
 
@@ -114,7 +61,6 @@ Solutions: Parameter optimization through backtesting. Simplify logic to focus o
 
 This strategy constructs a simple yet effective short-term trading system using DEMA, EMA crossovers and the ATR volatility index. The clean logic and ease of operation make it suitable for high-frequency momentum trading. Further parameter and logic optimization can potentially yield more steady outperformance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/175f9462d6d49224754.png)
 
-[trans]
-
-## 概述
-该策略基于移动平均线,在趋势向上的过程中,在短期回调之后开仓做多,属于趋势跟踪类型策略。
-
-## 策略原理
-该策略使用3条不同周期的EMA线,EMA1线用于判断短期趋势,它要比其他两条EMA线周期短;EMA2线和EMA3线用于判断中长期趋势,其中EMA3线周期最长。当短期EMA1线上涨时说明处于短期上涨趋势中,EMA2线在EMA3线之上则说明中长期也处于上涨趋势中,所以这时是一个较好的做多时机点。具体来说,该策略的交易信号生成逻辑是:价格上穿EMA1线时则产生做多信号。为了进一步验证趋势稳定性,要求在产生信号的栏中,EMA2和EMA3都向上,并且最后一个bar也是上涨的,这样可以过滤掉短期调整带来的错误信号。
-
-设置止损平仓线和止盈平仓线,可以锁定盈亏。具体来说,止损线按照ATR的值移动,止盈线也是按照ATR的值移动设置的。
-
-## 优势分析
-该策略最大优势就是能够有效捕捉中长线上涨趋势,同时也考虑了短期调整,这使得它的持仓时间和盈利空间都很可观。
-
-另外设置了止损和止盈机制也使其风险可控。
-
-## 风险分析
-该策略最大风险在于无法判断趋势反转点,如果中长线趋势反转而短期还在上涨,这时就会产生错误的做多信号而入场,从而可能造成较大损失。
-
-此外在盘整行情中也可能产生不必要的交易损失。
-
-## 优化方向 
-可以考虑根据具体交易品种特点,调整EMA的周期参数,使之更加匹配该品种的中长线周期。
-
-可以结合其他指标判断短期调整的结束,避免错误入场。
-
-可以考虑根据ATR数值的大小来调整止损系数,在ATR较大时适当放宽止损距离。
-
-## 总结
-该策略总体来说是一种表现良好的中长线趋势跟踪策略。通过移动平均线判断趋势方向、回调信号判定入场时机、止盈止损设置来锁定盈亏。但也存在一定盲目跟踪的风险,需结合交易者自身对行情的判断来决定是否入场。
-
-||
 
 ## Overview
 This strategy is based on moving averages. It goes long after a short-term correction in an upward trend. It belongs to the trend following strategy.
@@ -71,7 +40,6 @@ Consider adjusting the stop loss coefficient based on the ATR value, appropriate
 
 ## Conclusion  
 In general, this strategy is a mid-long term trend following strategy that performs well. It determines the trend direction through moving averages, entry timing through pullback signals, and locks in profits and losses through stop loss and take profit settings. But there is also a certain risk of blind trend following. Traders need to make their own judgment on the market to decide whether to enter.
-[/trans]
 
 > Strategy Arguments
 

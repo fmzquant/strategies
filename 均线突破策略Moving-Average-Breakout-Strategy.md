@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-均线突破策略是一种利用移动平均线进行判断的短线交易策略。该策略通过设置均线长度,并在均线突破时进行买卖操作。其特点是操作简单,容易掌握。
-
-## 策略原理
-
-该策略主要通过设置两个移动平均线,快线和慢线,来判断价格走势。快线周期短,反应敏感;慢线周期长,反应平稳。
-
-代码中通过设置input参数定义了快线周期shortPeriod和慢线周期longPeriod。然后计算两个均线的值shortSMA和longSMA。
-
-当短周期均线由下向上突破长周期均线时,表明价格走势由跌转涨,做多;当短周期均线由上向下跌破长周期均线时,表明价格走势由涨转跌,做空。
-
-进入做多仓位条件:
-
-```
-快线由下向上突破慢线
-快线>慢线
-```
-
-进入做空仓位条件:
-
-```
-快线由上向下跌破慢线  
-快线<慢线
-```
-
-此外,策略还设置了止损、止盈、金额等参数来控制风险。
-
-## 策略优势
-
-- 操作简单,容易掌握,适合新手
-- 均线具有一定的趋势过滤能力,可过滤掉部分噪音
-- 可灵活调整均线周期,适应不同周期操作
-- 可预先设置止损止盈点,控制风险
-
-## 策略风险
-
-- 容易出现虚假突破,从而产生错误信号
-- 不适合大幅震荡市场,应选择趋势明显时使用
-- 均线系统滞后,入场时机不准
-- 无法有效过滤强势趋势的反转
-
-风险防范:
-
-- 组合其他指标进行过滤,避免虚假信号
-- 选择趋势明显时使用,不要在震荡市场使用
-- 适当调整均线参数,优化入场时机
-- 适当放宽止损范围,避免被套
-
-## 策略优化方向 
-
-- 优化均线系统参数,找到最佳周期组合
-- 增加其他指标判断,如BOLL通道,KD等
-- 优化仓位管理策略,让盈利最大化
-- 测试不同品种合约的参数健壮性
-- 增加机器学习算法,利用大数据优化
-
-## 总结
-
-均线突破策略概念简单,通过快慢均线判断做多做空时机,操作容易上手。但也存在一些问题,如虚假突破、滞后等。通过参数优化、组合其他指标等方法可以改进。总体来说,该策略适合作为新手入门的第一阶段策略,在掌握了基本原理后,可以进一步优化,提高盈利能力。
-
-||
 
 ## Overview
 
@@ -134,7 +71,6 @@ Risk Management:
 
 The moving average breakout strategy is easy to understand, generating signals with fast and slow MAs. But it also has some flaws like false breaks and lagging issues. With parameter tuning, additional filters and other enhancements, the strategy can be improved. Overall it serves as a beginner-friendly first step into algorithmic trading, and paves the way for more advanced strategies after grasping the core concepts.
 
-[/trans]
 
 > Strategy Arguments
 

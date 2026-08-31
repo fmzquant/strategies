@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f8b1eb494fd58b991f.png)
-[trans]
-#### 概述
-
-关键反转信号回测策略通过识别股票价格的关键反转信号,判断当前趋势是否反转,以捕捉趋势反转后的价格运行方向。该策略基于“关键反转日”的理论,在发现关键反转信号时做多做空,通过配置止盈止损来锁定利润。
-
-#### 策略原理
-
-关键反转信号回测策略的核心逻辑是识别关键反转日。根据股票的价格走势,我们可以判断目前的趋势方向。当出现关键反转信号时,说明趋势可能发生反转。
-
-具体来说,对于股票上涨趋势,如果当天的最低价创新低,但收盘价接近前一日的最低价,那么这一天就是关键反转日。这意味着多头力量正在减弱,承压能力下降,说明上涨趋势可能反转为下跌。策略会在关键反转日开仓做空。
-
-相反,对于股票下跌趋势,如果当天创新低,但收盘价接近前一日的最高价。那么这也是一个关键反转日,说明空头力量减弱,下跌趋势可能反转为上涨。策略会在关键反转日开仓做多。
-
-通过判断关键反转日并追踪后续行情,策略能捕捉到价格反转后的运行。
-
-#### 优势分析
-
-关键反转信号回测策略的主要优势有:
-
-1. 捕捉趋势反转,盈利空间大。关键反转信号往往预示着趋势变化方向,通过判断反转信号并跟踪后续运行,能够获得比较大的盈利空间。
-
-2. 规则清晰,容易回测验证。关键反转日的判断规则非常清晰,价格创新高或新低的同时,与前一日收盘价构成反转形态。这使得策略容易回测,也能减少误判。
-
-3. 灵活调整,易于优化。止盈止损点位的设置非常灵活,可以按照市场情况和个人风险偏好进行调整,对策略进行优化,降低亏损风险。
-
-#### 风险分析
-
-关键反转信号回测策略也存在一些风险:
-
-1. 反转信号误判风险。股票价格常有短期调整,并不是所有的关键反转信号都预示着趋势反转,可能带来误判。通过优化参数,调整止盈止损条件可以降低误判概率。
-
-2. 反转不成或反转后继续反转的风险。即使判断准确,价格反转后也可能再次调头反转或者原趋势继续运行。这时就面临亏损风险。通过及时止损来控制亏损。
-
-3. 回测偏差。任何规则和信号在实盘中表现都可能与回测结果存在偏差,无法完全重现回测获利情况。
-
-#### 优化方向
-
-关键反转信号回测策略主要可优化的方向:
-
-1. 优化止盈止损的设置。可以基于更多的历史数据来计算合适的止盈止损点位。
-
-2. 增加过滤条件,结合其他技术指标过滤误判。例如可以结合成交量来确认反转信号,避免被套利操作误导。
-
-3. 优化反转后的跟踪策略。反转后价格运行也有一定规律可循,设定后续跟踪策略,进一步扩大收益。
-
-4. 结合机器学习模型判断信号质量。训练模型评估每一个关键反转信号的可靠性,避免追踪质量较差的信号。
-
-#### 总结
-
-关键反转信号策略通过判断关键反转日,捕捉价格趋势反转机会。策略规则简单清晰,容易实现。反转后趋势持续运行空间大,但是也存在一定的误判风险。通过不断优化参数和过滤条件,降低误判概率,能够获得较为可靠的效果。
-
-||
 
 #### Overview
 The key reversal backtest strategy identifies key reversal signals in stock prices to determine if the current trend is reversing, in order to capture the price movement direction after the trend reversal. The strategy is based on the theory of "key reversal day". It goes long or short when detecting key reversal signals, and locks in profits by configuring take profit and stop loss.
@@ -107,7 +55,6 @@ The main optimization directions for the key reversal backtest strategy:
 #### Summary
 The key reversal signal strategy captures price trend reversal opportunities by identifying key reversal days. The strategy rules are simple and clear, and easy to implement. The trend after reversal has large space to run, but there are also certain risks of misjudgment. By continuously optimizing parameters and filter criteria to reduce misjudgment, relatively reliable results can be obtained.
 
-[/trans]
 
 > Strategy Arguments
 

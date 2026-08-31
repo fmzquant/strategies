@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f88f6f74915632da41.png)
-[trans]
-## 概述
-
-本策略基于移动平均线的金叉死叉原理设计。通过计算快线(短期移动平均线)和慢线(长期移动平均线)的交叉情况,判断市场趋势,实现趋势追踪。当快线从下向上突破慢线时,产生买入信号;当快线从上向下跌破慢线时,产生卖出信号。
-
-## 策略原理
-
-该策略主要依赖均线交叉原理。快线参数设置为50天,慢线参数设置为200天。计算最近50天和200天的收盘价平均值,分别作为快线和慢线。当快线从下方向上突破慢线时,判断为股票价格进入上升趋势,产生买入信号;当快线从上方向下跌破慢线时,判断为股票价格进入下跌趋势,产生卖出信号。
-
-通过设置不同参数的快慢线组合,可以调整策略的敏感度。快线参数越小,确定趋势的速度更快,但是可能产生更多假信号。慢线参数越大,判断趋势的效果更好,但是确定趋势速度较慢。本策略使用50和200天移动平均线,综合考虑了策略的灵敏度和稳定性。
-
-## 优势分析
-
-- 使用移动平均线交叉原理,可以有效判断市场走势和趋势转折点,自动追踪趋势运行 
-- 快慢线参数设置合理,既足够敏感,也能过滤噪音,判断市场趋势效果较好
-- 策略理解简单,逻辑清晰,参数设置灵活,容易实现和优化
-- 可严格控制止损点,有利于风险控制
-
-## 风险分析
-
-- 移动平均线策略可能产生较多反转信号或假信号,需要辅助其他指标过滤
-- 行情震荡时,可能产生错误交易信号,需要评估特定股票的波动频率
-- 停损点设定需要考量个股特性,过于严格可能增加成本,过于宽松可能加大损失
-
-## 优化方向
-
-- 结合其他技术指标,如MACD、KD等,过滤假信号
-- 根据个股特性和波动频率设置移动平均线参数
-- 针对高波动股调整止损距离
-- 测试不同参数组合优化策略
-- 增加开仓和加仓规则
-
-## 总结
-
-本策略利用均线交叉原理自动判断市场趋势方向并追踪运行,可有效把握主要趋势。通过快慢均线的参数设置控制策略的灵敏度,并辅助其他指标过滤信号可实现策略稳定性和效果的平衡。该策略适合中长线操作,可根据股票和行情特征进行参数调整,扩展入场和止损规则进行优化,从而获得更好的交易效果。
-
-||
 
 ## Overview  
 
@@ -83,7 +46,6 @@ By setting fast and slow line combinations with different parameters, the sensit
 
 This strategy utilizes the principle of moving average crossover to automatically determine the trend direction of the market and track the trend, which can effectively capture the main trend. By setting parameters of fast and slow moving averages to control the sensitivity of the strategy and filtering signals with other auxiliary indicators, the stability and effectiveness of the strategy can be balanced. This strategy is suitable for medium and long term operations. Parameters can be adjusted according to the characteristics of stocks and markets. Expanding entry and stop loss rules can further optimize it to obtain better trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

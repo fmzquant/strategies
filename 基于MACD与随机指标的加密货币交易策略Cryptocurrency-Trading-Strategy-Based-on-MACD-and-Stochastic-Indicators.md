@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6d32d2638892606913.png)
-[trans]
-## 概述
-
-本策略是一种基于MACD指标与随机指标组合的加密货币交易策略。它通过计算比特币价格的MACD指标并对其施加随机指标,产生交易信号,以捕捉加密货币市场的趋势变化。
-
-## 策略原理
-
-该策略首先计算MACD指标。MACD代表移动平均收敛离差,是一种趋势跟踪指标。它由快线和慢线组成,快线是较短期的指数移动平均线,慢线是较长期的指数移动平均线。当快线上穿慢线时为金叉信号,表示市场转为看涨;当快线下穿慢线时为死叉信号,表示市场转为看跌。
-
-在计算出MACD指标后,该策略对MACD指标本身再施加随机指标%K。随机指标%K的计算公式为:
-
-%K = (当前收盘价 - N日内最小价) / (N日内最大价 - N日内最小价) * 100
-
-随机指标反映股价脱离最近范围的变化情况。%K值在20-80之间的波动代表股价走势处于盘整范围。当%K从下向上穿过20线时,为买入讯号。当%K从上向下穿过80线时,为卖出讯号。
-
-本策略结合MACD指标和随机指标%K的交易信号,在加密货币市场中进行交易。当随机指标%K向上穿过20时产生买入讯号;当随机指标%K向下穿过80时产生卖出讯号。
-
-## 策略优势
-
-这种策略结合了趋势分析和超买超卖指标,能有效识别市场重要的转折点。相比单一使用MACD或随机指标,%K和MACD的组合使用,可以增加信号的可靠性,减少假信号。
-
-另外,本策略应用股票市场中常用的技术指标于加密货币交易,这是一种跨市场的化用。这种指标在数字货币市场同样适用,甚至会由于数字货币的高波动性而获得更好的效果。
-
-## 风险及解决方法
-
-该策略最大的风险在于加密货币市场高度波动,容易产生虚假信号导致交易亏损。此外,技术指标发出信号时,价格可能已经产生一定幅度的变动,存在无法充分捕捉趋势初期的风险。
-
-为控制这些风险,建议采用移动止损来锁定利润,避免亏损进一步扩大。同时,也可以适当调整参数,使用不同周期长度来发掘更多潜在机会。
-
-## 策略优化方向 
-
-第一,该策略可以尝试将移动平均线与波动率指标结合使用,例如布林带,设置波动率参数来识别突破的有效性,避免虚假信号。
-
-第二,可以引入机器学习模型对历史数据进行训练,建立随机森林或者LSTM神经网络模型,辅助判断指标信号的有效性。
-
-第三,增加止损机制。当价格向不利方向移动超过一定幅度时,自动执行止损以控制风险。
-
-## 总结
-
-本策略结合MACD指标和随机指标%K,利用两种指标互相验证信号的方法,制定加密货币的交易策略。这种组合指标策略,可以在一定程度上提高信号的准确性。但我们也需要警惕指标组合过于复杂可能带来的noise和lagging效应。参数设置和风险控制同样重要,需要根据不同市场环境进行调整优化,才能获得较好的策略表现。
-
-||
 
 ## Overview
 
@@ -94,7 +52,6 @@ Thirdly, add a stop loss mechanism. When prices move more than a certain range i
 
 This strategy combines the MACD indicator and the stochastic indicator %K, using the method of mutually verifying signals from two indicators to formulate a cryptocurrency trading strategy. This combination indicator strategy can improve the accuracy of signals to some extent. But we also need to be aware of the risk of over-complication of indicators, which may introduce noise and lagging effects. Proper parameter tuning and risk control according to different market environments are equally important for obtaining better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,50 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fcd3bd7b75cf2f4501.png)
 
-[trans]
-## 概述
-
-本策略通过计算快线EMA和慢线EMA的交叉情况,实现黄金交叉和死亡交叉交易信号的生成。当快线EMA上穿慢线EMA时,产生买入信号;当快线EMA下穿慢线EMA时,产生卖出信号。该策略充分利用了移动平均线的优势,能够有效跟踪市场趋势,在趋势启动阶段产生交易信号。
-
-## 策略原理
-
-本策略的核心指标是快速EMA线和慢速EMA线。策略通过设置两个不同参数的EMA线,快线EMA参数设置为10,慢线EMA参数设置为20。其中,10日EMA线能更快速地响应价格变动,而20日线响应速度较慢。当短期EMA线上穿长期EMA线时,代表短期平均线开始引领长期平均线向上,说明行情可能进入看涨状态,此时产生买入信号;相反,当短期平均线下穿长期平均线时,代表短期均线开始失去对长期均线的领先优势,说明行情可能进入看跌状态,此时产生卖出信号。
-
-通过快慢EMA线的交叉原理,本策略充分捕捉到市场趋势的转换时机,能够及时产生交易信号。同时,EMA指标本身具有滤波假信号的能力,避免在市场震荡时频繁开仓。这使得该策略能够在减少错误交易的同时,捕捉市场转折点,具有较高的盈利能力。
-
-## 优势分析
-
-- 利用EMA交叉原理,捕捉市场转折点,盈利能力较强
-- 快速EMA线和慢速EMA线配合使用,发挥各自优势
-- EMA本身具有滤波作用,可以减少错误交易
-- 实现简单,容易理解和优化
-- 可扩展性强,可引入其他辅助指标进一步优化
-
-## 风险分析
-
-- 双EMA交叉在震荡市中可能产生频繁错误信号
-- EMA参数设置不当可能错过市场转折点
-- 存在一定的滞后,可能错过短线操作机会
-- 无法应对剧烈行情的突变
-
-针对上述风险,可以通过引入附加指标进行优化,例如增大交易过滤条件,结合MACD指标避免错误信号,使用自适应EMA加速指标响应速度等。此外,合理止损和积极止盈也是必要的。
-
-## 优化方向 
-
-本策略可进一步优化的方向包括:
-
-- 增加开仓过滤:比如结合交易量指标,避免低量假突破
-- 结合MACD等辅助指标,进一步避免错误信号
-- 引入自适应EMA,根据市场情况动态调整EMA参数
-- 多时间框架联合操作,发挥不同周期EMA的优势 
-- 优化止损策略,通过移动止损、比率止损等方式锁定利润
-- 结合深度学习等技术实现参数自动优化
-
-## 总结
-
-本策略通过双EMA快慢线交叉原理,捕捉市场关键转折点,具有较强的实盘效果。配合辅助指标和优化止损,可以进一步增强策略稳定性。该策略思路简单清晰,值得量化交易者学习和运用,也有很大的拓展空间和优化潜力。
-
-||
 
 ## Overview
 
@@ -98,7 +54,6 @@ The potential directions for further optimization include:
 
 This strategy captures critical market turning points through the crossover logic of dual EMA lines, making it effective for live trading. With additional filters, assisting indicators and stop loss optimizations, the stability of the strategy can be further enhanced. The strategy logic is straight-forward and worth learning for quant traders, with abundant potential for extensions and improvements.
 
-[/trans]
 
 > Strategy Arguments
 

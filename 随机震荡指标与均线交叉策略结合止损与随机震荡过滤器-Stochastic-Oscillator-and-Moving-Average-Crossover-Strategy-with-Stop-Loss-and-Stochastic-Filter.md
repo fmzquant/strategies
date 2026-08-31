@@ -11,64 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/be1910e5150144a87d.png)
 
-[trans]
-#### 概述
-
-该策略结合了随机震荡指标(Stochastic Oscillator)与移动平均线(Moving Average),通过观察随机指标的超买超卖情况以及移动平均线的趋势来产生交易信号。当随机指标在超买区且移动平均线向下时产生做空信号,在超卖区且移动平均线向上时产生做多信号。同时,该策略还引入了随机指标过滤器,当随机指标K线在50以下维持一定数量K线后,与D线交叉也可以产生相应的交易信号。该策略还设置了止损(Stop Loss)来控制风险。
-
-#### 策略原理
-
-1. 计算随机震荡指标,得到K线和D线。参数可调,包括随机指标周期、K值平滑、D值平滑、超买区和超卖区。  
-
-2. 计算移动平均线,默认使用收盘价,周期可调。
-
-3. 计算随机指标过滤器。当K线在50以下维持一定K线后,产生过滤信号。周期可调。
-
-4. 产生多头信号的条件:随机指标在超卖区交叉向上 或 随机指标过滤器信号 且 移动平均线向上。
-
-5. 产生空头信号的条件:随机指标在超买区交叉向下 或 随机指标过滤器信号 且 移动平均线向下。
-
-6. 多头平仓条件:随机K线上穿移动平均线 且 均线转向下行。  
-
-7. 空头平仓条件:随机K线下穿移动平均线 且 均线转向上行。
-
-8. 仓位管理使用固定资金比例,默认10%。同时设置止损,默认为2%。
-
-#### 优势分析
-
-1. 结合超买超卖和趋势特征,可以在趋势中追涨杀跌。
-
-2. 随机指标过滤器避免在震荡行情频繁交易。
-
-3. 止损设置有助于控制回撤。
-
-4. 代码结构清晰,参数可调,适合进一步优化。
-
-#### 风险分析
-
-1. 随机指标具有一定滞后性,可能错过最佳买卖点。
-
-2. 在趋势转折点抓单准确性欠佳,止损频率可能较高。
-
-3. 固定比例资金管理在连续亏损的情况下回撤较大。
-
-#### 优化方向
-
-1. 引入更多过滤条件,如价格行为、其他辅助指标等,提高信号准确度。
-
-2. 对信号进行强弱划分,在强势信号出现时加大仓位。
-
-3. 对趋势转折点的判断进行优化,以期抓住更多行情。
-
-4. 对仓位管理进行优化,可以考虑浮动盈亏比仓位调整等。
-
-5. 尝试不同参数组合,寻找最优参数。
-
-#### 总结
-
-该策略在随机震荡指标的基础上,结合移动平均线对趋势进行判断,同时运用随机指标本身的过滤功能,产生相对可靠的交易信号。策略整体思路清晰,适合在趋势行情中运用。但是由于随机指标滞后性的存在,在行情转折点的表现可能欠佳,整体适应性和鲁棒性有待进一步考察。后续可以从过滤条件、仓位管理、参数优化等方面对策略进行完善。
-
-|| 
 #### Overview
 This strategy combines the Stochastic Oscillator with a Moving Average, generating trading signals by observing the overbought and oversold conditions of the stochastic indicator and the trend of the moving average. It produces a short signal when the stochastic indicator is in the overbought zone and the moving average is downward, and a long signal when in the oversold zone and the moving average is upward. Additionally, the strategy introduces a stochastic indicator filter, which can also generate corresponding trading signals when the stochastic K line crosses the D line after staying below 50 for a certain number of K lines. The strategy also sets a Stop Loss to control risk.
 
@@ -118,7 +60,6 @@ This strategy combines the Stochastic Oscillator with a Moving Average, generati
 
 #### Summary
 Based on the Stochastic Oscillator, this strategy combines Moving Averages to judge trends, while also utilizing the filtering function of the Stochastic Indicator itself, generating relatively reliable trading signals. The overall idea of the strategy is clear and suitable for use in trending markets. However, due to the lag of the Stochastic Oscillator, its performance at market turning points may be poor, and its overall adaptability and robustness need further examination. In the future, the strategy can be improved from aspects such as filtering conditions, position management, and parameter optimization.
-[/trans]
 
 > Strategy Arguments
 

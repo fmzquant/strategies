@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f6b8c4d85b70f1b616.png)
-[trans]
-#### 概述
-
-本策略运用技术指标评级法,通过与移动平均线比较,动态选择买入和卖出的时机。策略包含长仓和空仓两个方向,可自定义开启或关闭。策略对低风险的长期持仓交易比较友好。
-
-#### 策略原理
-
-本策略结合多种技术指标评级法实时评估市场时机。主要包括以下几个步骤:
-
-1. 计算多种移动平均线,包括SMA、EMA、Hull MA和加权移动平均线VWMA等。通过与当前价格比较,评定多空级别。
-2. 计算一系列震荡指标,包括RSI、CCI、MACD、威廉指标%R、随机指标等。判断震荡指标多空态势差异,评定多空级别。
-3. 技术指标评级法综合上述两个方面指标评分结果,得出最终操作信号。信号绝对值超过0.5为强信号,0.1-0.5为弱信号。
-4. 根据最终操作信号,策略可以做多或做空。同时设定止损和止盈退出逻辑。
-
-策略优势在于指标评级法可以比较全面地判断市场时机,相比单一指标有更强的可靠性。另外,通过自定义参数可以自由选择评级指标种类,实现对策略的定制化。
-
-#### 优势分析
-
-1. 结合众多技术指标,指标评分法判断市场时机更加全面和可靠
-2. 采用动态止损和止盈设定,有助于抑制亏损风险
-3. 可自定义指标评级成分,实现对策略的定制化操作
-4. 支持做多和做空两个方向,适应更多市场环境
-5. 可选择是否开启某个交易方向,降低不必要的交易次数
-
-#### 风险分析
-
-1. 指标评分法作为决策依据,本身也存在一定主观性
-2. 部分震荡指标对于创新高和低位判断不准确
-3. 需要详细评估技术指标权重配置以优化评分法
-4. 大量指标计算增加策略运算量,可能影响运行效率
-5. 须关注长时间运行内的总体盈亏情况,防止过度交易
-
-针对上述风险,主要的解决措施是优化评分指标权重配置,根据历史数据反复测试,选择较优参数;另外适当减少评分指标数量也可以提高运行效率。
-
-
-#### 优化方向
-
-本策略可以从以下几个方面进行优化:
-
-1. 评估每种技术指标的有效性,优化评分法中的指标选择
-2. 调整各技术指标的评分权重和信号强弱阈值
-3. 优化移动止损止盈的参数,进一步控制交易风险
-4. 根据不同品种特点,设定最佳的指标参数取值
-5. 增加机器学习等手段辅助判决指标评分信号
-
-通过参数优化,策略可以针对性地适应更多市场品种,从而获得更好的收益回报率。
-
-#### 总结
-
-本策略综合运用技术指标评级法判断市场时机做多做空。策略具有指标选择定制化,动态止损止盈,可选择开启交易方向等优点。风险方面主要集中在评分法本身的主观性,以及部分指标的失效。未来优化空间在于参数选择及效率提升。总体而言,该策略适合对市场时机判断要求较高的投资者。
-
-||
 
 #### Overview  
 
@@ -112,7 +60,6 @@ Through parameter optimization, the strategy can better adapt to more products w
 
 The strategy combines technical indicator rating methods to determine market timing for long/short. Advantages include customizability, dynamic SL/TP, position direction enable/disable. Risks mainly come from rating subjectivity and invalid indicators. Future optimization space lies in parameter selection and efficiency improvement. Overall the strategy fits investors with high requiremens on market timing judgement.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ba2f8475191296a61.png)
-[trans]
-
-### 概述
-
-本策略是一个基于突破理论的短期交易策略。它结合使用均线指标和最高价/最低价指标来识别突破信号,以捕捉短期趋势上的利润。  
-
-### 策略原理
-
-该策略使用 20 日最高价来识别上升趋势,当收盘价突破 20 日最高价时,做多;使用 10 日最低价来识别下降趋势,当收盘价跌破 10 日最低价时,做空。同时,它还使用了一个更短期的 10 日最高价作为做空的止损退出信号。
-
-具体来说,该策略包括以下规则:
-
-1. 当收盘价大于 20 日最高价时,做多入场;
-2. 当收盘价低于 10 日最低价时,做空入场;  
-3. 当收盘价大于 10 日最高价时,平空头仓位;
-4. 当收盘价低于 10 日最低价时,平多头仓位。
-
-通过比较收盘价与不同周期最高价和最低价的关系,该策略捕捉较短线周期内的趋势性突破,实现短线操作。
-
-### 优势分析
-
-该策略具有以下几个优势:
-
-1. 策略逻辑简单清晰,容易理解和实现;
-2. 利用突破理论,可以及时捕捉短期趋势;  
-3. 同时判断多头和空头机会,可以实现双向交易;
-4. 设置不同的参数区间,可以灵活调整持仓时间。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. 突破交易容易被套,需要设定止损来控制风险;
-2. 多头空头切换频繁,增加交易成本和滑点损失;
-3. 参数设置不当可能导致过于频繁或滞后交易。
-
-为控制风险,可以设置止损位来限制单笔损失,也可以适当调整参数区间来控制交易频率。
-
-### 优化方向  
-
-该策略还可从以下几个方面进行优化:
-
-1.加入其他指标过滤,避免错误突破;  
-
-2.设置动态退出机制,利用盈利来跟踪止损;
-
-3.加入趋势判断规则,避免逆势交易;  
-
-4.优化参数区间,适应不同周期和市场环境。
-
-### 总结
-
-本策略整体来说是一个简单实用的短期突破策略。它有利于捕捉较短周期内的趋势性机会。但也存在被套和高交易频率的风险。通过加入 Filters、Stop Loss、参数优化等手段,可以控制风险的同时提高策略效率。该策略适用于关注短线机会,追求高周转率的交易者。
-
-||
 
 ### Overview
 
@@ -115,7 +60,6 @@ The strategy can be optimized from the following aspects:
 
 In conclusion, this is a simple and practical short-term breakout strategy. It helps to capture short-cycle trend opportunities. But there are risks of being trapped and high trading frequency. By adding filters, stop loss, parameter optimization, we can control risks and improve efficiency. The strategy suits traders focusing on short-term chances and pursuing high turnover rate.
 
-[/trans]
 
 > Strategy Arguments
 

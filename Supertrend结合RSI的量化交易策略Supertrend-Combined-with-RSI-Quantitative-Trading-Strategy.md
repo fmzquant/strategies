@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/823226b94aea93a628.png)
-[trans]
-### 概述
-
-本策略名称为“双轮驱动策略”。该策略的主要思想是将Supertrend和RSI这两个强大的技术指标结合在一起,发挥各自的优势,实现更优秀的量化交易。
-
-### 策略原理  
-
-该策略的核心部分在于使用Change函数来判断Supertrend指标的方向变化,从而产生交易信号。当Supertrend指标方向从上向下变化时,产生买入信号;当Supertrend指标从下向上变化时,产生卖出信号。 
-
-同时,策略还引入了RSI指标来辅助判断何时应该平仓。当RSI上穿设置的超买线时,做多单会被平掉;当RSI下穿设置的超卖线时,做空单会被平掉。这样,RSI指标帮助判断合理的止损点,从而锁定利润。
-
-### 优势分析
-
-这种结合了Supertrend和RSI指标的策略,最大的优势在于:
-
-1. Supertrend擅长判断市场趋势变化,实现买入卖出的精确定位。
-
-2. RSI擅长判断过冲回调的高低点,辅助确定合理止盈止损位置。
-
-3. 两者优势互补,更容易抓住市场机会,获得更稳定的盈利。
-
-4. 策略思路清晰简洁,容易理解和跟踪,适合不同水平的投资者。
-
-5. 实现鲁棒性较强,回撤风险可控,容易获得稳定收益。
-
-### 风险分析
-
-尽管双轮驱动策略有许多优势,但仍有一定风险需要注意:
-
-1. Supertrend和RSI都可能会产生错误信号,导致不必要的亏损。可适当调整参数或引入其他指标进行验证。
-
-2. 多空双向交易风险更大,需要更严格的资金管理和风险控制。
-
-3. 当市场出现异常波动时,止损可能会被突破,应备用其他手段控制风险。
-
-4. Supertrend指标对参数敏感度较高,不同市场需要调节ATR周期和因子大小。
-
-### 优化方向  
-
-考虑到上述风险,该策略主要可从以下几个方面进行优化:
-
-1. 增加Volume和MACD等指标过滤假信号,使入场更加准确。  
-
-2. 设置动态止损,跟踪突破来应对异常行情的风险。
-
-3. 对Supertrend参数和RSI参数进行优化,使其更适合不同市场的特点。
-
-4. 增加机器学习算法,辅助判断指标效果和参数选择。
-
-5. 采用期货、期权等衍生品进行套期保值,降低止损风险。
-
-6. 设定不同的仓位管理策略,控制单笔亏损和最大回撤。
-
-### 总结  
-
-“双轮驱动策略”整合了Supertrend和RSI两个指标的优势,实现高效的趋势捕捉和止盈止损。相比单一指标,该策略信号更可靠,回撤更可控,是一种易于实施且收益稳定的算法交易策略。通过继续优化参数设置、增加信号过滤和风险管理模块,该策略有望获得更出色的表现。
-
-||
 
 ### Overview   
 
@@ -125,7 +67,6 @@ Considering the risks, optimizations can be made in below aspects:
 
 The Dual-drive Strategy effectively combines Supertrend and RSI for efficient trend capturing and profit taking. Compared to single indicator strategies, it provides more reliable signals, smaller drawdowns, and stable algorithm trading performance. Further optimizations on parameter tuning, signal filtering and risk management will lead to even better results.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17df18e531d65a4fe64.png)
-[trans]
-
-## 概述
-
-该策略通过计算两个不同周期的EMA均线的交叉来判断市场趋势,并据此产生交易信号。当短周期EMA上穿长周期EMA时,认为市场进入上升趋势,该策略将开仓做多;当短周期EMA下穿长周期EMA时,认为市场进入下降趋势,该策略将平仓退出。
-
-## 策略原理
-
-该策略主要应用双EMA均线的金叉死叉理论。双EMA均线分为长线EMA和短线EMA。短线EMA参数设置为10天,长线EMA参数设置为21天。
-
-当短线EMA上穿长线EMA时,产生买入信号;当短线EMA下穿长线EMA时,产生卖出信号。该策略同时设置了增长率阈值,只有增长率超过阈值时才会开仓做多,跌幅超过阈值时才会平仓。
-
-具体来说,买入条件为短线EMA高于长线EMA,且股价增长率超过设定的正阈值;平仓条件为短线EMA低于长线EMA,且股价增长率低于设定的负阈值。
-
-## 策略优势
-
-- 利用双EMA均线的金叉死叉理论,相对简单可靠
-- 增加增长率阈值设定,避免增长乏力时错误交易
-- 可严格控制最大损失比例
-- 可灵活调整EMA均线参数,适用于不同周期
-
-## 风险分析
-
-- EMA均线具有滞后性,可能错过价格反转点
-- 均线交叉具有一定迟滞性,可能导致失去最佳开仓时机
-- 需依赖参数优化,参数设定不当可能导致交易频繁或信号不足
-
-## 优化方向
-
-- 结合其他指标进行优化,如MACD,KD等,提高信号准确率
-- 增加止损策略,如跟踪止损,确保利润最大化
-- 优化EMA周期参数,针对不同品种设定最佳参数
-- 结合实时数据与机器学习方法进行动态参数调整优化
-
-## 总结
-
-本策略整体较为简单可靠,通过双EMA交叉判断价格趋势,并设定增长率阈值发出交易信号。相比单一均线交叉,可过滤部分假信号。但EMA均线本身存在滞后性问题,结合其他指标或动态调参可进一步提升策略效果。
-
-|| 
 
 
 ## Overview
@@ -88,7 +49,6 @@ Specifically, the buy condition is when the short EMA is higher than the long EM
 
 The overall strategy is relatively simple and reliable, using double EMA crossovers to determine price trends and setting growth rate thresholds to generate trading signals. Compared to single line crossovers, it can filter out some false signals. But EMA lines themselves have lagging issues. Combining other indicators or dynamic parameter adjustment can further improve strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

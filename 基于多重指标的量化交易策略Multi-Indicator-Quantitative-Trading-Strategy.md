@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10cdf4494377cce4e05.png)
-[trans]
-
-## 概述
-
-该策略通过集成移动平均线、相对强弱指标(RSI)和移动平均聚散指标(MACD)三种主要技术指标,实现多空仓位的自动开平。策略名称中含有“多重指标”,主要是为了突出该策略所采用的多种指标。
-
-## 策略原理
-
-该策略主要通过比较两条移动平均线的大小关系来判断趋势方向,并结合RSI指标避免错过反转机会。具体来说,策略使用EMA或SMA计算快线和慢线,快线上穿慢线为买入信号,快线下穿慢线为卖出信号。为过滤假突破,策略还设置RSI指标的多空逻辑,只有当RSI指标也满足条件时,才会发出交易信号。
-
-除此之外,策略还集成了MACD指标来进行交易决策。当MACD指标的差离值上穿0轴时为买入信号,差离值下穿0轴时为卖出信号。这样可以利用MACD指标判断趋势是否发生转折,避免在趋势转折点产生错误的信号。
-
-## 优势分析
-
-该策略最大的优势在于集成多种指标过滤信号,可以有效降低假信号的产生,提高信号质量。具体来说,优势有以下几点:
-
-1. 快慢线结合RSI指标,可以避免单一使用移动平均线产生的假突破。
-
-2. MACD指标的集成,可以提早判断趋势是否反转,避免在转折点产生错误信号。
-
-3. 允许选择EMA或SMA指标,可以根据不同市场特点选择更合适的指标参数。
-
-4. 允许选择资金管理方案,可以控制单笔订单规模,有效控制风险。
-
-5. 支持止损止盈,可以锁定盈利,避免亏损扩大。
-
-## 风险分析
-
-该策略主要面临以下风险:
-
-1. 参数优化不当可能导致策略效果不佳。需要花时间测试不同的参数组合。
-
-2. 指标发出错误信号的概率仍然存在。当三种指标同时发出错误信号时,将导致较大亏损。
-
-3. 单一品种效果并不稳定,需要扩展到其他品种。
-
-4.  Datenicht zureichen, Strategie effekt wird in der Zukunft abnehmen。
-
-## 优化方向
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 测试不同的指标参数组合,寻找最优参数。
-
-2. 增加止损机制中的移动止损。当价格运行一定距离后,可以 trail stop 来锁定利润。
-
-3. 增加对大级别趋势的判断指标,避免逆势交易。例如集成 ADX 指标。
-
-4. Fügen Sie Moneymanagement Module hinzu für besseres Risikomanagement.  
-
-5. Fügen Sie Filter für fundamentale Faktoren wie Nachrichten hinzu.
-
-## 总结
-
-该策略通过集成多种技术指标如移动平均线、RSI 和 MACD,实现多空头寻找和过滤。其优势在于可以有效过滤假信号,提高信号质量。主要缺陷是参数选择和指标发出错误信号的概率仍然存在。未来的优化方向包括参数优化、止损优化、趋势过滤等。总体来说,该策略作为多重指标策略框架是行之有效的,后续需要继续优化和验证。
-
-|| 
 
 ## Overview 
 
@@ -126,7 +69,6 @@ The main aspects for optimizing this strategy include:
 
 This strategy realizes finding and filtering long and short positions by integrating multiple technical indicators such as moving averages, RSI and MACD. Its advantage is that it can effectively filter out false signals and improve signal quality. The main drawbacks are the parameter selection and the probability of indicators issuing wrong signals still exist. Future optimization directions include parameter optimization, stop loss optimization, trend filtering, etc. Overall, this strategy is effective as a multi-indicator strategy framework, and needs further optimization and verification going forward.
 
-[/trans]
 
 > Strategy Arguments
 

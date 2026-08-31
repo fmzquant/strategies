@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17d6a302e77e69cd7eb.png)
-[trans]
-
-## 概述
-
-本策略是我之前发布的简单跟踪止损策略的多时间框架版本。之前的策略只使用基本的跟踪止损来进入仓位。它效果很好,所以我尝试对它进行了一些改进。我想如果在不同的时间框架上使用相同的ATR跟踪止损,并将它们合并成一个信号,会发生什么。
-
-在该策略中,您可以仅使用ATR止损,并选择另外3个更高时间框架,以及当前时间框架。这些时间框架上的跟踪止损将在图表上绘制。如果所有4个时间框架都发出多头信号,则入场做多。当至少有2个时间框架不同意多头信号时,平掉多头仓位。对于做空也是相同的逻辑。
-
-## 策略原理
-
-该策略的核心在于跟踪止损和趋势跟随。跟踪止损用于设置止损位,根据ATR值计算,可以有效避免止损被突破。趋势跟随则通过观察不同时间框架上的趋势方向来决定入场。
-
-具体来说,策略首先在不同时间框架上计算ATR值,并设置止损距离。然后判断价格突破止损位时发出做多或做空信号。如果多个时间框架上的信号一致,那么就入场。此后继续跟踪该方向的止损位。如果一定比例的时间框架信号发生反转,则平仓。
-
-通过结合不同周期的趋势判断,可以有效过滤假突破。同时跟踪止损可以锁定利润,有效控制风险。
-
-## 策略优势
-
-1. 使用多时间框架判断,可有效过滤噪音,识别趋势方向
-2. ATR跟踪止损方式可以动态调整止损距离,降低被套利概率
-3. 结合趋势跟随和止损管理,既可以Following Trend又可以及时止损
-4. 参数较少,容易理解和调优
-
-## 风险分析
-
-1. ATR止损如果参数设置不当,可能过于靠近或远离价格,容易被突破或止损距离过大
-2. 多时间框架组合如果参数设置不当,可能无法有效发挥作用或者判断错误
-3. 需要同时配置好止损参数和时间框架参数,否则可能无法达到最佳效果
-
-解决方法:
-
-1. 反复测试不同的参数组合和品种,找到最佳参数
-2. 优化时间框架的比例和数量,确保可以提供可靠的趋势判断
-3. 调整ATR止损的倍数,在止损不被突破和距离不太大之间找到平衡
-
-## 优化方向
-
-策略可以从以下方面进行优化:
-
-1. 增加或减少时间框架的数量,找到判断最佳趋势的框架组合
-2. 测试不同的ATR倍数,确定最佳的止损距离
-3. 添加再入场机制,在趋势持续时建立更多头寸
-4. 结合其他指标过滤入场时机,例如量价指标等
-5. 针对不同品种参数进行优化
-
-## 总结
-
-本策略通过多时间框架ATR跟踪止损的方式,实现了趋势跟随和风险控制的有机结合。相比单一止损,它可以更加清晰地判断趋势方向;相比单时间框架,它过滤了很多噪音。止损参数和时间框架的合理配置是实现最佳效果的关键。该策略适用于能容忍一定回撤的投资者,可以获得较稳定的投资回报。它还有进一步的优化空间和拓展性,是非常有前途的一个策略思路。
-
-||
 
 ## Overview
 
@@ -108,7 +58,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy combines trend following and risk control via multi-timeframe ATR trailing stops. Compared to single stop, it identifies trend direction more clearly; compared to single timeframe, it filters out lots of noise. Proper configuration on stop parameters and timeframes is key to achieve best results. It suits investors who can tolerate certain drawdowns and provides steady returns. There is also further room of enhancement and expansibility. It's a very promising strategy idea.
 
-[/trans]
 
 > Strategy Arguments
 

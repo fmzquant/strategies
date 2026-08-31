@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f612903c646a621ebc.png)
-[trans]
-
-## 概述
-
-本策略是一个结合三重超趋势指标、Ichimoku云指标、平均真实波幅(ATR)指标、指数移动平均线(EMA)的量化交易策略。该策略通过三重超趋势判断市场趋势方向,Ichimoku云判断支撑压力,ATR指标设置止损,EMA指标进行趋势确认,组成一个较为完整的交易系统。
-
-## 策略原理
-
-本策略的核心逻辑基于三重超趋势指标的判断。超趋势指标通过比较价格与特定周期内的平均真实波幅的大小关系来判断趋势的方向。当价格高于上轨时为看涨信号,当价格低于下轨时为看跌信号。本策略采用三组不同参数的超趋势指标,当三组超趋势指标同时给出看涨或看跌信号时,发出交易信号。
-
-另外,Ichimoku云指标给出的云厚度判断当前趋势的强弱,从而滤除一些假信号。ATR指标用于设置止损点。EMA指标用于确认中长线趋势。 
-
-具体来说,当价格高于三组超趋势指标的上轨时,做多;当价格低于三组超趋势指标的下轨时,做空。同时要求价格高于或低于Ichimoku云,过滤掉不确定的信号。止损点设置为开仓价格减去ATR指标的值,实现动态跟踪。
-
-## 策略优势
-
-1. 三重超趋势指标参数设置不同,能够有效过滤市场上的噪音,判断趋势方向的准确性较高。
-
-2. Ichimoku云指标判断趋势强弱,避免假突破。ATR止损设置合理,最大程度避免巨额亏损。
-
-3. EMA指标辅助判断中长线趋势方向,与超趋势判断互相验证,进一步提高信号的可靠性。
-
-4. 结合多种指标,不同指标之间可以互相验证,综合判断市场趋势,信号较为可靠。
-
-## 策略风险
-
-1. 虽然加入Ichimoku云指标判断,也会存在突破云厚度进入无效区域的风险。这时ATR指标会将部分亏损控制在一定范围。
-
-2. 当行情剧烈波动时,ATR指标设置的止损点可能会被直接触发,从而增加策略的亏损率。这时可以适当调整ATR参数或增加止损范围。
-
-3. 如果三重超趋势指标参数设置不当,可能会产生许多无效信号。这需要通过大量回测寻找最佳组合参数。
-
-## 策略优化方向  
-
-1. 可以进一步加入其他指标判断,例如波动率指标、布林带指标等,辅助过滤信号,提高可靠性。
-
-2. 可以通过改进ATR指标的计算方式,在大幅波动中动态调整止损范围,降低亏损率。
-
-3. 可以加入机器学习模型,通过对历史数据训练判断买卖信号,降低人工参数设置的影响,提高信号准确率。
-
-## 总结
-
-本策略综合运用三重超趋势、Ichimoku云、ATR指标、EMA指标四个部分。通过不同指标互相验证信号,判断市场趋势方向。Ichimoku云和ATR止损控制风险,EMA辅助确认中长线趋势。该策略信号较为可靠,适合中长线持有。可进一步优化止损机制,并增加其他辅助指标判断,从而获得更好的策略效果。
-
-||
 
 
 ## Summary  
@@ -100,7 +55,6 @@ Specifically, go long when the price is above the upper band of all three supert
 
 This strategy combines four parts including triple supertrend, Ichimoku cloud, ATR and EMA. Signals are verified across indicators when determining market trend. Ichimoku cloud and ATR stop loss control risk. EMA confirms intermediate and long term trend. Signals from this strategy is relatively reliable for intermediate to long term holding. Stop loss can be further optimized and more assisting indicators can be added to obtain better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

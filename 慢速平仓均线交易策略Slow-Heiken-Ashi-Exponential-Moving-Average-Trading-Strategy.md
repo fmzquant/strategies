@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12fdeafd528384dc929.png)
 
-[trans]
-
-## 概述
-
-本策略结合使用慢速Heiken Ashi和指数移动平均线来识别趋势,在趋势行情中进行长短双向交易。当价格超过100日EMA时做多,低于100日EMA时做空,并在特定条件下平仓。
-
-## 策略原理
-
-该策略使用以下指标组合:
-
-1. 慢速Heiken Ashi:一种特殊类型的K线图,使用前一根K线的均价来绘制,可以过滤市场噪音,识别趋势。这里通过自适应Kama滤波器实现。
-
-2. 指数移动平均线:对价格进行指数平滑后的均线,这里包含5日到100日多个周期的EMA。
-
-具体交易逻辑是:
-
-1. 当价格上穿100日EMA时,做多;当价格下穿100日EMA时,做空。
-
-2. 平仓条件:当Heiken Ashi的开盘价交叉其收盘价时(潜在反转信号),对应的多头仓位通过反向交叉时平掉,空头仓位同理。
-
-## 优势分析
-
-该策略结合趋势判断和反转信号,可以在趋势行情中捕捉较大幅度的价格波动,同时通过反转信号来避免亏损扩大。
-
-1. 使用EMA判断全局趋势方向,避免被局部震荡误导。
-
-2. Heiken Ashi的交叉信号可以提早检测到反转机会。
-
-3. 自适应Kama滤波器降低假信号概率。
-
-## 风险分析
-
-1. 大幅度突破EMA可能造成损失扩大。可适当缩短持仓周期或者设定止损。
-
-2. 反转信号可能滞后,可考虑降低仓位规模以控制风险。
-
-3. EMA参数设置不当也会影响策略表现,应根据不同品种和市场环境调整。
-
-## 优化方向  
-
-1. 可结合多种指标判断,避免EMA和Heiken Ashi都发出错误信号的概率。比如加上MACD、布林带等。
-
-2. 可以根据市场波动率实时优化EMA参数,在高波动时收紧止损,低波动时放宽滑点。
-
-3. 基于机器学习算法自动优化各参数设置和过滤规则,使策略更稳健。
-
-## 总结
-
-该策略整体来说较为简单实用,同时结合趋势和反转,在参数优化和风险控制到位的情况下,仍有不错的盈利空间。后续可从优化方向入手使策略更适应市场环境的变化。
-
-||
 
 ## Overview 
 
@@ -111,7 +60,6 @@ The strategy combines trend-following and reversal signals, capturing large pric
 
 The strategy is relatively simple and practical overall, combining both trend and reversal elements. With well-tuned parameters and risk controls, it retains decent profit potential. Further improvements can build on the optimization directions to make the strategy more adaptive.
 
-[/trans]
 
 > Strategy Arguments
 

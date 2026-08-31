@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/189934e408c0a6c25ce.png)
-[trans]
-## 概述
-
-趋势预测双均线策略是一种试图在价格趋势反转之前预测趋势变化的策略。它基于LazyBear的WaveTrend指标进行扩展。该策略能够识别价格趋势,并通过曲线填充的视觉效果显示买入和卖出信号。
-
-## 策略原理
-
-该策略使用 LazyBear 的 WaveTrend 指标作为基础。WaveTrend 本身就是一个非常优秀的趋势跟踪指标。该策略在此基础上进行了扩展优化。主要步骤如下:
-
-1. 计算平均HLC价
-2. 计算EMA平均价格
-3. 计算价格绝对偏差的EMA
-4. 计算零界调整指标
-5. 计算趋势的EMA
-6. 计算快慢均线
-
-通过这样的处理,可以滤波掉价格的随机波动,识别出较为清晰的趋势。快慢均线的交叉则可用于发出买入和卖出信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 能够有效识别价格趋势
-2. 信号生成及时,可以提前预测趋势反转
-3. 通过曲线填充清晰可视化趋势
-4. 参数优化空间大,可以根据不同品种和周期进行调整
-
-## 风险分析 
-
-该策略也存在一些风险:
-
-1. 像所有技术指标策略一样,在价格剧烈波动时,存在失败的风险
-2. 参数设置不当可能导致虚假信号
-3. 信号发生滞后,可能出现亏损
-
-可以通过调整参数、结合其他指标等方法来缓解这些风险。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整参数,适应更多品种和周期
-2. 增加止损策略,控制亏损风险
-3. 结合其他指标进行组合,提高信号准确率
-4. 增加机器学习模型,辅助判断趋势及发出信号
-
-## 总结
-
-总的来说,趋势预测双均线策略是一个非常有前景的策略。它能够有效识别价格趋势,并尝试提前预测趋势的变化。通过一定的优化和改进,该策略可以成为一个强大的量化交易系统。它简单明了的交易逻辑和清晰的视觉效果,也让它成为一个值得学习和研究的策略。
-
-||
 
 ## Overview
 
@@ -111,7 +60,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, the Trend Prediction Dual Moving Average Strategy is a very promising strategy. It can effectively identify price trends and try to predict trend changes in advance. With some optimization and improvement, the strategy can become a powerful quantitative trading system. Its simple and straightforward trading logic and clear visual effects also make it a strategy worth learning and researching.
 
-[/trans]
 
 > Strategy Arguments
 

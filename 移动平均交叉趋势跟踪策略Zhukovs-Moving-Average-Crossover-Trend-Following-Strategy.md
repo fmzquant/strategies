@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/112a4e88f1637b3fd46.png)
-[trans]
-
-### 概述
-
-该策略基于移动平均线交叉和ATR指标来实现自动化的趋势跟踪交易。当快速EMA线上穿慢速EMA线时,采取做多头仓位;当快速EMA线下穿慢速EMA线时,采取做空头仓位。同时,结合ATR指标来判断趋势方向,只有在ATR判断为趋势方向时才发出交易信号。
-
-### 策略原理
-
-该策略主要基于两个技术指标:
-
-1. EMA均线:采用快慢两个不同参数的EMA均线,当快线上穿慢线时视为多头信号,下穿时视为空头信号。
-
-2. ATR指标:ATR指标能够判断价格波动的幅度和力度, 从而判断当前走势的趋势性。当ATR数值较小时表示目前处于盘整,此时不宜建仓;当ATR数值较大且方向向上时,表示目前处于趋势市,此时等待EMA金叉做多;当ATR数值较大且方向向下时,表示目前处于趋势市,此时等待EMA死叉做空。
-
-通过EMA均线的交叉来寻找买卖点机会,同时结合ATR指标来过滤掉趋势性不强的交易信号,避免在市场震荡盘整中被套牢。 
-
-### 优势分析
-
-该策略具有以下优势:
-
-1. 只在ATR指标判断为趋势行情时才交易,有助于避免震荡不明时被套牢。
-
-2. 运用快慢均线的交叉原理寻找买卖点,简单有效。
-
-3. 通过参数调节,EMA均线的敏感度和平滑性可以根据个人喜好进行调整。
-
-4. 只需要利用两个简单指标即可实现的完整的自动交易系统,可以轻松地通过Pine编辑器进行策略开发与优化。
-
-5. 无需频繁调整的参数,实现简单的ParameterSet和Forget策略。
-
-### 风险分析
-
-该策略也存在一些风险需要关注:
-
-1. EMA交叉容易产生假信号,可能引发不必要的亏损。可以通过调整EMA参数平滑一些指标。
-
-2. ATR指标有时对盘整和趋势的判断也可能有失误,从而导致错过交易机会。可适当宽松ATR的数值门槛。
-
-3. 策略本身没有考虑大级别因素分析,如果遇到重大消息面市场出现反转,则很难通过快速均线交叉判断,这时需要人工干预装逃顶底。
-
-可以通过一定的优化来降低这些风险的影响。
-
-### 优化方向  
-
-该策略还有以下几个主要的优化方向:
-
-1. 可以考虑加入其它指标判断,形成指标组合系统,提高信号的准确性。例如结合RSI指标避免超买超卖的风险。
-
-2. 可以根据不同交易品种、不同交易区间来选择更合适的参数,使EMA和ATR的参数更符合当下市场特点。
-
-3. 可以通过机器学习等方法实现动态参数优化。让指标参数可以根据实时市场情况进行调整,而不是使用固定静态的数值。
-
-### 总结
-
-本策略整体是一个非常实用的趋势跟踪策略。只需要两种简单指标的组合就可以实现较为完整的交易系统。通过参数调节可以适应不同偏好的交易者。同时也具有进一步扩展优化的空间,使策略表现更加出色。简单高效的交易思路与良好的优化潜力,使其成为值得长期研究与应用的量化策略之一。
-
-|| 
 
 ### Overview  
 
@@ -123,7 +66,6 @@ Main optimization directions include:
 
 Overall this is a very practical trend following strategy. With just a simple combination of two indicators, it builds a relatively complete trading system. Through parameter adjustments it can be adapted to traders with different preferences and styles. At the same time, further expansion and optimizations can make strategy performance even better. The simple yet effective trading logic coupled with strong optimization potential makes this a worthwhile quantitative strategy to research and apply over the long run.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,91 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9b3bd4f9283f969138.png)
 
-[trans]
-
-## 概述
-
-该策略的主要思想是利用高级别均线的突破来实现趋势交易。在高级别时间范围内,当价格突破上升或下破均线时,可以判断出趋势的开始,这时可以选择适当的方向进行跟踪。
-
-## 策略原理
-
-该策略通过Pine Script语言开发,主要分为以下几个部分:
-
-1. 输入参数
-
-    定义了均线周期参数period,默认值为200;定义了K线时间周期参数timeframe,默认值为日线"D"。
-
-2. 均线计算
-
-    使用ta.ema函数计算Exponential Moving Average均线。
-
-3. 突破判断
-
-    使用ta.crossover和ta.crossunder函数来判断价格是否突破或下破均线。
-
-4. 信号绘制
-
-    当发生突破时,在K线上绘制向上或向下的箭头。
-
-5. 交易开平仓
-
-    发生突破时选择方向开仓,双倍止损距离达到之后平仓。
-
-该策略主要依靠高级别均线的趋势判断能力,通过简单的突破操作来实现趋势跟踪,属于较为传统的突破策略。
-
-## 优势分析
-
-该策略具有以下几点优势:
-
-1. 概念简单,容易理解和掌握。
-
-2. 仅依靠一个均线指标,参数调节简单。
-
-3. 突破操作容易形成趋势,不会频繁交易。
-
-4. 高级别周期清晰显示大趋势,不容易被短期波动影响。
-
-5. 可配置不同的时间周期组合,适应不同品种。
-
-6. 可轻松实现多品种跟踪,难以同时被套牢。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 突破信号可能发生假突破,无法有效过滤市场震荡。
-
-2. 无法有效利用短线机会获利。
-
-3. 大方向判断错误时,亏损可能比较严重。
-
-4. 均线周期和交易周期不匹配时,会出现过度交易或漏损情况。
-
-5. 无法实时止损,亏损扩大的可能性较大。
-
-对应风险的解决方案包括:结合趋势指标、增加过滤条件、适当缩短持仓周期、动态调整止损位置等。
-
-## 优化方向 
-
-该策略可以考虑从以下几个方面进行优化:
-
-1. 增加趋势指标的组合,如MACD、KD等,提高突破的可靠性。
-
-2. 增加交易量或布林线通道等过滤条件,避免假突破。
-
-3. 优化参数周期的匹配,使得持仓周期与趋势周期更加匹配。
-
-4. 增加实时止损策略,通过跟踪止损来控制单笔亏损。
-
-5. 考虑结合机器学习技术,实现参数的动态优化。
-
-6. 尝试多种资产配置组合,提高整体的稳定性。
-
-## 总结
-
-该策略总体来说较为简单实用,通过简单的均线突破来实现趋势跟踪,易于掌握,可以作为量化交易的入门策略之一。但也存在一些问题,需要通过组合指标、优化参数、动态止损等方式进行改进,使得策略更稳定高效。具有很大的优化空间和扩展性。
-
-||
 
 ## Overview
 
@@ -179,7 +94,6 @@ The strategy can be improved in the following aspects:
 
 In summary, this is a simple and practical strategy for trend-following via moving average breakouts. It is easy to understand and implement, serving as a good introductory strategy for algo trading. But it also has some flaws that need to be addressed through combinations of indicators, parameter tuning, dynamic stop loss etc. Much room remains for enhancements and extensions.
 
-[/trans]
 
 > Strategy Arguments
 

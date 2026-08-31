@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/151a908ab9dc1a6a980.png)
 
-[trans]
-
-
-## 概述
-
-这个策略基于双均线的移动平均线差值来产生交易信号。它计算快速周期和慢速周期两条均线,当快线从下方向上突破慢线时,产生买入信号;当快线从上方向下跌破慢线时,产生卖出信号。
-
-## 原理解析
-
-该策略的核心逻辑是计算两条移动平均线SMA(len1)和SMA(len2),以及它们的差值dif。其中len1代表短期均线周期,len2代表长期均线周期。短期均线能更快地响应价格变化,长期均线更能反映长期趋势。
-
-当短期均线从下方上穿长期均线时,表示短期价格开始上涨超过长期趋势,可以买入;当从上方下穿长期均线时,表示短期价格开始下跌低于长期趋势,可以卖出。
-
-为了过滤误操作,策略还引入out3作为交易信号线。out3是短期均线与价格中值的差值sma平滑处理后的结果。仅仅当out3穿越dif时才产生交易信号。
-
-具体来说,long变量在out3向上穿越dif时为正值,作为买入信号;short变量在out3向下穿越dif时为负值,作为卖出信号。strategy.entry根据long信号产生买入订单,strategy.close根据short信号产生卖出平仓订单。
-
-## 优势分析
-
-这是一个非常简单直观的跟踪趋势的策略。它采用双均线周期不同造成均线交叉的方式来捕捉趋势转换点,可以比单均线系统更可靠。并且引入交易信号线的过滤可以一定程度上避免震荡市场中产生的假信号。
-
-相比于移动止损等方式,它采用趋势跟踪理念,可以最大程度获利,在趋势longer的时候不会被止损出场。同时它也会控制亏损,在趋势反转的时候及时平仓。
-
-该策略参数较少,容易掌握和调整,适合作为初学者学习算法交易的入门策略。
-
-## 风险及改进
-
-该策略最大的风险在于双均线的周期参数不当而造成交易信号错误。如果短期均线周期len1过长,将错过趋势开始阶段的机会;如果过短则会增加假信号的概率。长期均线len2如果过长,将延迟做出仓位调整;如果过短则容易被市场震荡干扰。
-
-可以通过调整len1和len2的参数来获得最佳组合,也可以尝试引入自适应均线来动态调整周期。此外也可以通过优化过滤器参数来减少假信号。
-
-趋势跟踪策略还需要注意控制单笔亏损大小,可以设置止损点或引入仓位管理来优化。
-
-## 总结
-
-双均线差值策略是一个非常典型的趋势跟踪策略代表。它简单的双均线交叉系统带来稳定的信号源,配合过滤器可以有效避免被市场震荡干扰。通过优化均线周期参数可以获得较好的策略表现。这个策略非常适合作为算法交易的入门策略来学习。
-
-||
 
 
 ## Overview
@@ -85,7 +47,6 @@ Trend following strategies should also control loss on single trades, through st
 
 The dual MA crossover strategy is a quintessential trend following representative. Its simple dual MA crossover system provides steady signals, while the filter helps avoid noise. With optimized MA periods, it can achieve good performance. The strategy serves well as a beginner's algo trading strategy to learn.
 
-[/trans]
 
 > Strategy Arguments
 

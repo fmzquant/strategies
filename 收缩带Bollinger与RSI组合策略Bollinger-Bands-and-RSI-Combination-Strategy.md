@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9f07abf29990502b70.png)
-[trans]
-
-## 概述
-
-该策略将布林带和相对强弱指标(RSI)组合使用,识别出布林带收缩期配合RSI上升的机会,采取趋势跟踪止损以控制风险。
-
-## 策略原理
-
-本策略的交易逻辑核心在于识别布林带的收缩,并在RSI呈上升态势时判断趋势处于上涨初期。具体来说,当20日布林带中轨上的标准差小于ATR*2时,我们判定布林带发生收缩;同时,若10日和14日的RSI都呈上升趋势,那么我们预测价格即将突破布林带上轨,采取做多策略。  
-
-进入场内后,我们采用ATR安全距离+随价格上涨的止损方式来锁定利润并控制风险。当价格超过止损线或RSI过热(14日RSI超过70,10日RSI超过14日RSI)时平仓。
-
-## 优势分析
-
-本策略最大优势在于利用布林带收缩来判断行情整理期,结合RSI指标预测价格的突破方向。此外,采用适应性止损而不是固定止损,可以根据市场波动程度来灵活调整,从而在保证风险可控的前提下获得更大收益。
-
-## 风险分析
-
-本策略的主要风险在于识别布林带收缩和RSI上升时,行情可能是假突破。此外,在止损方面,波动过大时适应性止损可能无法及时止损。可以通过改进止损方式(例如曲线止损)来降低此风险。
-
-## 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 改进布林带参数设置,优化判断收缩效果
-
-2. 尝试不同的RSI周期参数
-
-3. 测试其他止损方式(曲线止损、回看止损等)的效果
-
-4. 根据不同品种特性调整参数
-
-## 总结
-
-本策略综合利用布林带和RSI的互补性,在控制风险的前提下获得较好回撤收益比。后续可从止损方式、参数选择等方面进行优化,使策略更适用于不同交易品种。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ This strategy can be further optimized in the following aspects:
 
 This strategy leverages the complementarity of BB and RSI to achieve good risk-adjusted returns. Further optimizations on aspects like stop loss and parameter tuning can make it fit better for different trading instruments.
 
-[/trans]
 
 > Strategy Arguments
 

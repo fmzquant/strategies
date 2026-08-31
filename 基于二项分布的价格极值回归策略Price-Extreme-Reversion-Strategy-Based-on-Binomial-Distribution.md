@@ -11,26 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“基于二项分布的价格极值回归策略”。该策略利用二项分布函数判断价格出现反转的概率,并设定双EMA均线策略产生交易信号。
-
-策略的计算逻辑如下:
-
-1. 计算最近20根K线中收盘价上涨的数量,并统计过去100根K线中上涨周期所占比例p。
-
-2. 将上涨周期数量和概率p带入二项分布函数,计算出cumulative distribution function(CDF)。
-
-3. 对CDF分别计算10日和20日的EMA均线。当快线上穿慢线时,认为价格极值回归的概率较大,产生买入信号。
-
-4. 当快线下穿慢线时,价格可能处于短期高点,此时产生卖出信号。
-
-该策略的优点是通过概率方法判断价格的极值回归时机。但参数需要根据市场调整,避免产生过多假信号。
-
-总体来说,统计方法有助于客观发现价格行为规律。但最终仍需要交易者对市场保持敏锐判断力,妥善使用技术指标作为辅助工具。
-
-
-
-||
 
 
 
@@ -50,7 +30,6 @@ The advantage of this strategy is estimating price extreme reversion timing thro
 
 In conclusion, statistical techniques help uncover price behavior patterns objectively. But ultimately, traders still need keen market judgment to use technical indicators as supplementary tools.
 
-[/trans]
 
 
 

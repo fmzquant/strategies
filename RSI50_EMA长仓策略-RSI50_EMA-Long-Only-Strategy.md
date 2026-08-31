@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f8b046a78409c41320.png)
 
-[trans]
-#### 概述
-该策略名为"RSI50_EMA长仓策略",主要思路是利用相对强弱指数(RSI)和指数移动平均线(EMA)两个技术指标的交叉信号来进行交易决策。当价格从下向上突破EMA上轨且RSI大于50时开仓做多,当价格从上向下突破EMA下轨或RSI跌破50时平仓。该策略只做多、不做空,是一个追涨策略。
-
-#### 策略原理
-1. 计算EMA和ATR,得到EMA上下轨。
-2. 计算RSI。
-3. 当收盘价上穿EMA上轨且RSI大于50时,开仓做多。
-4. 当收盘价下穿EMA下轨或RSI跌破50时,平掉所有多单。
-5. 只做多,不做空。
-
-#### 策略优势
-1. 适合在强势市场中使用,能有效捕捉强势股票的上涨行情。  
-2. 同时使用EMA和RSI两个指标,能够更好地确认趋势信号,提高信号可靠性。
-3. 仓位管理采用百分比止损,风险可控。
-4. 代码逻辑清晰简单,容易理解和实现。
-
-#### 策略风险
-1. 在震荡市容易出现频繁交易和较大回撤。
-2. 参数选择不当会导致信号失效。如EMA长度选择不当,会导致趋势判断滞后;RSI上下限选择不当,会导致开平仓点不理想。
-3. 策略只能捕捉单边上涨行情,对下跌和震荡行情无法把握,容易踏空。
-
-#### 策略优化方向 
-1. 引入趋势确认指标,如MACD等,提高趋势判断准确性。
-2. 对RSI进行参数优化,或引入RSI背离等改进信号。
-3. 考虑加入移动止损或波动率止损,改进风控。
-4. 可以考虑加入震荡市和下跌趋势中的反转开仓逻辑。
-
-#### 总结
-RSI50_EMA长仓策略是一个基于RSI和EMA的简单易用的趋势追踪策略,适合在单边上涨行情中使用。该策略逻辑清晰,优势明显,但是也存在一些不足和风险。通过引入更多辅助指标、优化参数、改进风控等措施,可以进一步提升该策略的稳定性和收益性。但是在实际应用中,还需要根据市场特点、个人风险偏好等因素,灵活调整和改进。
-
-|| 
 
 #### Overview
 The strategy named "RSI50_EMA Long Only Strategy" mainly uses the crossover signals of two technical indicators, Relative Strength Index (RSI) and Exponential Moving Average (EMA), to make trading decisions. It opens a long position when the price breaks above the upper band of EMA from below and RSI is above 50, and closes all long positions when the price breaks below the lower band of EMA from above or RSI falls below 50. This strategy only takes long positions and does not short, it is a trend-following strategy.
@@ -73,7 +41,6 @@ The strategy named "RSI50_EMA Long Only Strategy" mainly uses the crossover sign
 
 #### Summary
 The RSI50_EMA Long Only Strategy is a simple and easy-to-use trend-following strategy based on RSI and EMA, suitable for use in unilateral upward trends. The strategy has clear logic and obvious advantages, but also has some shortcomings and risks. By introducing more auxiliary indicators, optimizing parameters, improving risk control and other measures, the stability and profitability of the strategy can be further improved. However, in actual application, it is necessary to flexibly adjust and improve according to market characteristics, personal risk preferences and other factors.
-[/trans]
 
 
 

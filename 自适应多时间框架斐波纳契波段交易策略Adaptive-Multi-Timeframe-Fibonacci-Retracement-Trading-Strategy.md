@@ -11,74 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e78282171f5ffdfb3d.png)
 
-[trans]
-
-### 概述
-
-自适应多时间框架斐波纳契波段交易策略是一种融合自适应均线、Stochastic RSI 指标以及斐波纳契回撤区域的趋势跟踪策略。该策略运用多种指标分析不同级别行情走势,动态调整仓位。在趋势形成时,策略可精确定位潜在回调区域进行位置建立。策略同时设置止损以控制风险。
-
-### 策略原理
-
-自适应多时间框架斐波纳契波段交易策略融合使用以下几种技术指标与机制:
-
-1. 自适应均线(SMA和WMA):计算不同周期(分钟、小时、日线等)价格的自适应移动平均线。根据均线多空状态判断趋势方向。
-
-2. Stochastic RSI:计算RSI指标的Stochastic值来判断RSI是否超买超卖。结合RSI曲线形态分析力度与趋势。 
-
-3. 斐波纳契回撤区域:根据最近Swing High和Swing Low绘制斐波纳契回撤区域,并设置备选买卖点。这些区域具有潜在趋势反转与回调的特征。
-
-4. 仓位管理:根据Stoch RSI和自适应均线的强弱信号,动态调整仓位。
-
-策略首先判断趋势方向,在股票价格进入斐波纳契回撤区域时设立备选买卖点。当自适应均线和Stoch RSI发出进场信号时,在备选买卖点附近执行定单。止损设置为回撤区域之外,以控制风险。
-
-### 优势分析
-
-自适应多时间框架斐波纳契波段交易策略具有以下优势:
-
-1. 多时间框架分析:同时评估多种周期级别(分钟、小时、日线),更全面判断趋势。
-
-2. 动态仓位管理:根据情况调整仓位,控制风险。
-
-3. 精准定位回调区域:斐波纳契区域可用于捕捉趋势中的短期反转。
-
-4. 严格止损:根据回撤区域设置止损,有效避免巨额亏损。
-
-5. 信号过滤:仅在备选买卖点附近执行交易,避免假突破。
-
-6. 参数优化空间大:多种输入参数可根据市场调整,优化策略表现。
-
-
-### 风险分析
-
-该策略主要存在以下风险:
-
-1. 回撤区域失效风险:价格未能触及斐波纳契区域或区域失效,无法建仓。可通过扩大区域范围、增加区域数量来缓解。
-
-2. 停损追踪风险:止损静态设置,可能预先被击出。可通过机动止损、备用止损区等手段进行优化。 
-
-3. 信号假突破风险:自适应均线、Stoch RSI 偶发假信号,造成不必要交易。可适当过滤信号来减少假突破概率。
-
-4. 过于复杂风险:多种参数和技术指标组合使用,会增加策略复杂度。优化和测试难度较大。
-
-### 优化方向
-
-自适应多时间框架斐波纳契波段交易策略还可从以下维度进行进一步优化:
-
-1. 测试更多股票和外汇品种,评估策略稳健性。根据不同市场调整参数。
-
-2. 增加信号过滤机制,降低假信号概率,提高信噪比。
-
-3. 测试并比对不同类型移动均线的参数效果。
-
-4. 尝试将固定止损改为追踪止损或备用止损区,见证策略效果提升。 
-
-5. 尝试 breakout 信号或趋势跟踪机制,设计长线获利方式。
-
-### 总结
-
-自适应多时间框架斐波纳契波段交易策略综合运用多种分析工具识别趋势情况,并在回调期 précises 部署仓位。严格的止损与风险控制机制有助于在大趋势中进行利润优化。该策略拥有较多的可调整空间与优化方向,经过适当调试与更新后,将成为稳定可靠的量化交易策略。
-
-|| 
 
 ### Overview
 
@@ -145,7 +77,6 @@ This strategy can be further optimized in the following ways:
 
 The Adaptive Multi Timeframe Fibonacci Retracement Trading Strategy utilizes various analytical tools to identify trend conditions and deploys positions during retracements. Strict risk control mechanisms and stop loss helps optimize profits within major trends. With ample tunable parameters and optimization opportunities, further refinements to this strategy will shape it into a stable and reliable trading system.
 
-[/trans]
 
 > Strategy Arguments
 

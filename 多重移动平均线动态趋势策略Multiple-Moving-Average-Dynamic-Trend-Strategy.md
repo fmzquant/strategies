@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c0824fa4402d65f316.png)
-[trans]
-
-
-## 概述
-
-多重移动平均线动态趋势策略(Multiple Moving Average Dynamic Trend Strategy)是一个利用多种移动平均线指标判断趋势方向,并动态调整止损线位置的量化交易策略。该策略通过结合不同类型的移动平均线,可以更全面和准确地判断市场趋势,实现高胜率交易。
-
-## 策略原理  
-
-该策略主要通过自定义函数实现8种不同类型的移动平均线,包括简单移动平均线(SMA)、指数移动平均线(EMA)、加权移动平均线(WMA)、三角移动平均线(TMA)、可变指数移动平均线(VIDYA)、威尔德移动平均线(WWMA)、零滞后指数移动平均线(ZLEMA)和真实强度指标(TSF)。策略允许用户在这8种移动平均线中选择一种作为主要判断指标。 
-
-策略首先计算选定类型的移动平均线,然后根据设定的百分比参数动态计算上轨和下轨的位置。当价格突破上轨时为买入信号,突破下轨时为卖出信号。此外,策略还会跟踪移动平均线和价格的交叉作为辅助判断信号。
-
-在计算过程中,策略同时判断市场趋势方向,从而动态调整上下轨的位置。具体来说,当判断为上升趋势时,下轨线会随着价格上涨而上调,使得止损线能够最优地跟踪价格上涨;当判断为下降趋势时,上轨线会随着价格下跌而下调,降低止损点以减少损失。
-
-## 策略优势
-
-- 利用8种移动平均线指标相结合,判断市场趋势更为准确;
-- 动态调整止损线位置,最大程度锁定盈利,避免反转止损;  
-- 通过移动平均线和价格的交叉作为辅助信号,可以过滤假突破带来的错误交易;
-- 策略参数可以自定义优化,适用于不同市场环境。
-
-## 风险及解决方法
-
-- 多重指标结合使用,增加了策略复杂度,代码调试难度较大; 
-- 部分类型的移动平均线指标在特定市场环境下效果不佳;
-- 假突破带来的错误交易风险仍然存在。
-
-对应解决方法:
-- 增加代码注释,提高代码可读性,方便检查和调试;
-- 针对市场情况选择移动平均线类型,也可以加入自动优选模块;
-- 优化参数设置,结合更多辅助指标过滤信号。
-
-## 策略优化方向  
-
-该策略还具有很大的优化空间:
-
-- 可以加入自动参数优化模块,根据不同市场环境自动调整参数;
-- 可以加入机器学习模型,辅助判断趋势方向;  
-- 可以加入情绪指标等更多辅助判断指标,提高策略稳定性;
-- 可以优化止损机制,实现更动态更精确的止损;
-- 可以扩展至多品种套利策略,利用品种间价格差异获得套利机会。
-
-## 总结  
-
-多重移动平均线动态趋势策略通过结合多种移动平均线指标判断市场趋势,并辅以价格突破信号发出交易指令,同时动态调整止损线位置,实现高效盈利。该策略成功融合了趋势跟随、突破交易和动态止损三大主流量化策略思路,稳定性和盈利能力较强。随着参数优化、模式识别等技术的引入,策略效果还具有进一步提升的空间,是一种值得重点研究和应用的高级量化策略。
-
-||
 
 
 ## Overview
@@ -103,7 +55,6 @@ There is still much room to optimize this strategy:
 ## Conclusion  
 
 The multiple moving average dynamic trend strategy determines market trends by combining multiple moving average indicators, and initiates trades based on price breakout signals while dynamically adjusting stop loss line positions for efficient profitability. This strategy successfully integrates the three major quantitative strategy concepts of trend following, price breakout trading, and dynamic stops, exhibiting strong stability and profitability. With further improvements in parameters optimization and pattern recognition, this strategy shows great potential for continued performance enhancement, making it a highly valuable advanced quantitative strategy worthy of focused research and application.  
-[/trans]
 
 > Strategy Arguments
 

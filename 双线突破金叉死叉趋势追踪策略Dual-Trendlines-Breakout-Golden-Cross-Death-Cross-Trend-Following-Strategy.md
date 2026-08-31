@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9732487f0fe49cc33d.png)
-[trans]
-## 概述
-
-双线突破金叉死叉趋势追踪策略是一种同时利用支持阻力线和移动平均线作为备选信号的趋势追踪型量化交易策略。该策略综合考虑价格在不同时间段内的支持阻力位和移动平均线的金叉死叉信号,在捕捉到价格突破重要的支撑和阻力位时,结合趋势指标过滤做多做空机会,实现在趋势变化早期开仓,追踪中长线趋势的盈利目标。
-
-## 策略原理  
-
-该策略主要由四个部分组成:
-
-1. 30日内最低点划定的支撑线 
-2. 30周内最高点划定的阻力线
-3. 10日简单移动均线,用于确认趋势过滤交易信号
-4. 突破Identification模块,识别价格突破重要支撑阻力位的交易机会
-
-具体来说,策略首先利用请求Security函数获取30日和30周内的最高价和最低价,分别划定动态的支撑线和阻力线。然后结合10日移动平均线的金叉和死叉信号来过滤突破交易机会。当价格高于30日内支撑位且高于10日均线时产生做多信号;当价格低于30周内阻力位且低于10日均线时产生做空信号。
-
-该策略同时考虑中短线和长线的支撑阻力,能捕捉较大的趋势机会。同时结合移动平均线可有效过滤震荡趋势中的错误信号。
-
-## 优势分析
-
-该策略具有以下几点优势:
-
-1. 同时利用中短线和长线的支撑阻力位,能捕捉较大幅度的突破。
-2. 增加移动均线的过滤有效控制损失,避免在震荡中产生错误信号。 
-3. 动态更新支撑阻力位,能及时捕捉新的趋势方向。
-4. 实现风险管理的止损止盈机制有助于保证盈利。
-
-## 风险分析  
-
-该策略也存在一些风险需要注意:  
-
-1. 突破型策略对交易时间的把握要求较高,容易出现超前或滞后问题。
-2. 支持阻力位失效时可能产生错误信号和巨大损失。
-3. 移动平均线本身滞后于价格,可能错过趋势转换点。  
-4. 回撤风险较大,不适合资金规模较小的投资者。
-
-对应解决方法:
-
-1. 适当调整突破识别逻辑,引入更多过滤条件。  
-2. 加大移动平均线周期参数,确保只在趋势稳定后才产生信号。
-3. 合理设置止损点,控制单笔损失。
-
-## 优化方向  
-
-该策略还有进一步优化的空间:  
-
-1. 尝试结合波动率指标如ATR确定更合理的止损止盈幅度。
-2. 增加机器学习模型判断关键支撑阻力位的失效。
-3. 利用自适应移动平均线更及时地捕捉趋势反转。  
-4. 针对不同品种参数进行调整优化。
-
-## 总结  
-
-双线突破金叉死叉趋势追踪策略综合考虑中长线的支持阻力位和移动平均线指标作为交易信号,在大趋势背景下能够有效过滤噪声实现盈利,是一种较为成熟的量化交易策略。该策略优化空间还很大,可从止损机制、参数自适应等方面进行改进,也可尝试引入机器学习等新方法提高策略的稳健性。
-
-||
 
 ## Overview  
 
@@ -120,7 +64,6 @@ There is room for further improvements:
 ## Conclusion  
 
 The Dual Trendlines Breakout Golden Cross Death Cross Trend Following Strategy effectively combines medium-to-long term support/resistance and moving average indicators for filtering profitable signals during major trends, making it a relatively mature quantitative trading strategy. There is still large room for optimization via stop loss mechanisms, adaptive parameters etc. Incorporating machine learning can also enhance its robustness.
-[/trans]
 
 
 

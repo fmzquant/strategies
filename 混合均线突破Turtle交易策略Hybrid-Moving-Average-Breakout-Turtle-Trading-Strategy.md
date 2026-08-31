@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7b19154046f673a63a.png)
-[trans]
-
-## 概述
-
-本策略综合运用了移动平均线、波动率指标、成交量加权平均价格(VWAP)以及抛物线止损指标等多种技术分析工具,实现了一个具有较强突破识别能力和止损保护功能的混合Turtle交易策略。
-
-## 策略原理
-
-1. 使用不同周期的SMA均线组合判断趋势方向和可能的突破点
-2. 应用波动率指标布林带判断短期的超买超卖情况
-3. 利用VWAP指标确定中长线的均衡价格区域
-4. 抛物线SAR作为止损指标,降低损失
-5. Turtle交易法则生成买卖信号
-
-## 优势分析
-
-1. 多种指标融合,判断更全面、信号更准确
-2. VWAP指标辅助判断合理价格区间,避免盲目追高
-3. SAR止损指标有效控制每个头寸的损失
-4. Turtle交易法则确保进入位置的时机恰当
-
-## 风险分析 
-
-1. 参数设置不当可能导致交易频率过高或信号误判
-2. 单一止损方式会限制获利空间 
-3. 需适当过滤Turtle信号,避免冲突
-
-## 优化方向
-
-1. 调整SMA均线周期参数,优化突破识别
-2. 调整波动率参数,使布林带更贴近价格
-3. 优化抛物线参数,止损更精确 
-4. 结合其他指标过滤Turtle信号
-
-## 总结
-
-本策略通过多种指标的有机结合,形成了一个交易信号较为准确、止损能力较强、参数调优空间大的混合突破类Turtle策略。适当调整参数后,其突破识别和止损保护的能力都将得到提升,是一个值得推荐的量化交易策略。
-
-||
 
 
 ## Overview
@@ -87,7 +48,6 @@ This strategy combines various technical analysis tools such as moving averages,
 
 This strategy forms a relatively accurate signaling, strong stop loss capability, and highly optimizable breakout style Turtle strategy through seamless integration of multiple indicators. With proper parameter tuning, its breakout identification and stop loss protection abilities can be further enhanced, making it a recommended quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

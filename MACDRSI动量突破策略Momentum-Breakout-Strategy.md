@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/164af44da89c7fc888d.png)
-[trans]
-
-
-## 概述
-
-这是一个利用MACD、RSI和随机指标判断股价动量方向,在动量突破点进行买入做多或卖出做空的策略。该策略通过组合使用多个指标判断趋势,降低了单一指标造成的错误信号率,可以有效捕捉股价中的中短线趋势。
-
-## 原理
-
-该策略使用MACD、RSI和随机指标判断股价的趋势方向。当MACD的DIFF线上穿DEAL线,RSI大于50,STOCH的快线也大于50时,判断为多头趋势形成,则在次日开盘时以全部资金按当日最高价买入做多;反之,当MACD的DIFF线下穿DEAL线,RSI小于50,STOCH的快线也小于50时,判断为空头趋势形成,则在次日开盘时以全部资金按当日最低价卖出做空。交易的止盈止损根据过去7天的波动范围计算,盈亏比例可自定义设置。
-
-进入仓位后,如果三个指标中的任意一个发生反向信号,则说明趋势发生转变,应退出当前仓位。同时,还设置了特殊的时间条件过滤,在2020年3月全面跳过,避免受到极端市场的影响。
-
-## 优势
-
-- 组合多个指标判断趋势,可以有效过滤假信号
-- 利用突破入场,可以抓住趋势的初期阶段
-- 采用动态止盈止损,可以锁定合理利润
-- 设置跳过期间,可以防止极端行情的干扰
-- 结合趋势和反转机制,可以减少不必要的交易次数
-
-## 风险
-
-- 多指标组合可能产生滞后,错过最佳入场时机
-- 突破信号容易被套牢
-- 动态止损可能过于激进,被 Preis止损
-- 跳过的特殊期间设置不合理,也可能错过机会
-- 反转信号可能过于敏感,导致过频交易
-
-优化方法:
-
-- 调整指标参数,缩短滞后
-- 加入filte和volume等条件,避免套牢
-- 采用tracker止损,防止被preis
-- 优化和测试跳过的日期范围
-- 调整反转信号的参数,降低频率
-
-## 总结
-
-该策略整体来说是一个典型的趋势跟踪策略。它同时利用多种指标判断趋势来入场,又利用反转信号来判断趋势结束而退出,实现了趋势跟踪与反转切换的结合。但策略本身也存在一些参数设置不合理和滞后的问题,这需要通过大量回测来优化和改进,才能使策略参数都调整到最佳状态。
-
-总的来说,该策略思路清晰,使用的指标和方法也较为典型。在一些细节优化和风险控制方面做得好,可以成为一个可实际应用的量化策略。但离完美还有一定差距,仍需要进一步测试和优化,才能使策略的收益回撤比达到专业水平。如果能持续优化和更新,该策略可以成为一个值得长期跟踪的策略品种。
-
-||
 
 # 
 
@@ -97,7 +53,6 @@ Overall this is a typical trend following strategy. It uses multiple indicators 
 
 In summary, the logic of this strategy is clear, and the indicators used are also typical. It does well in some details of optimization and risk control, and can be a real-world applicable quant strategy. But there are still some gaps from perfection, requiring further testing and optimization, to get the return/drawdown ratio of the strategy up to a professional level. With continuous optimization and updates, this strategy can become one worth tracking long term.
 
-[/trans]
 
 > Strategy Arguments
 

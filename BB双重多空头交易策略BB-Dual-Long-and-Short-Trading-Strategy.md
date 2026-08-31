@@ -10,84 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/196bee854f7add8d8b0.png)
-[trans]
-
-
-## 概述
-
-BB双重多空头交易策略是一个利用布林带进行双向交易的策略。它结合布林中轨、上轨和下轨,实现多空头双向开仓和平仓。当价格触碰上轨时开空头仓位,触碰下轨时开多头仓位,并设置止损和止盈价格。策略简单易操作,能够抓住市场的主要趋势。
-
-## 原理分析
-
-该策略主要基于布林带的原理。布林带由中轨、上轨和下轨组成,代表价格的移动趋势。中轨是n日移动平均线,上轨是中轨+k倍标准差,下轨是中轨-k倍标准差。当价格突破上轨时,表示市场处于超买状态,应该考虑开空头仓位;当价格跌破下轨时,表示市场处于超卖状态,应该考虑开多头仓位。
-
-具体来看,该策略首先计算布林中轨、上轨和下轨。然后判断价格是否触碰上轨,如果触碰,则开空头仓位;判断价格是否触碰下轨,如果触碰,则开多头仓位。开仓后还设置了止损和止盈价格。例如开多仓位后,止损价格为开仓价格减去一定比例,止盈价格为开仓价格加上一定比例。最后,策略还定义了平仓条件,包括止损、止盈跳动和布林带重新进入区间等条件。
-
-整个策略充分利用了布林带反映市场超买超卖的特点,实现了较为精确的多空头交易。当市场处于不同阶段时,也可以通过布林带指标判断目前的行情走势,从而采取相应的交易策略。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 捕捉趋势,布林带能识别主要趋势方向,及时开仓捕捉趋势。
-
-2. 双向交易,可以同时进行多头和空头交易,不受限于单边方向。
-
-3. 风险控制,设置止损和止盈确保每个交易都有挡损措施。
-
-4. 简单明了,基于布林带指标,策略规则直接易于理解。
-
-5. 容易优化,通过调整参数如周期长度、标准差倍数等可以优化策略。
-
-6. 适用于不同市场,可适用于股票、外汇、加密货币等市场。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 布林带失效风险,行情剧烈波动时布林带可能失效。
-
-2. 止损被突破风险,行情趋势变化剧烈时止损可能被突破。
-
-3. 策略过优化风险,过度优化策略可能导致过拟合。
-
-4. 交易频率过高风险,布林带波动频繁时将过于频繁交易。
-
-5. 分位离场风险,仅依靠布林带分位可能导致过早离场。
-
-对应的解决方法:
-
-1. 结合趋势指标,判断布林带失效后及时关闭策略。
-
-2. 采用移动止损,让止损跟踪价格。
-
-3. 多市场多时间框架回测,防止过优化。 
-
-4. 适当放宽布林带波动范围,减少交易频率。
-
-5. 新增离场指标,如MACD等确认布林带信号。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整布林带参数,如调整周期参数以匹配不同周期行情,调整标准差倍数以适应市场波动率。
-
-2. 增加趋势过滤,结合移动平均线等指标判断趋势,避免布林带在无明确趋势时的错误信号。
-
-3. 优化止损策略,如移动止损让止损更紧跟价格,或根据ATR设置止损幅度。
-
-4. 增加入场过滤,如收盘价突破布林带等,避免布林带指标的中间假突破。 
-
-5. 利用机器学习技术自动优化参数,实现参数智能调整。
-
-6. 增加离场指标,如MACD等指标的背离作为辅助布林带信号的离场指标。
-
-## 总结
-
-BB双重多空头交易策略整体来说是一个非常典型且实用的布林带策略。它利用布林带指标判断超买超卖来捕捉市场趋势,并进行双向交易,同时设置止盈止损来控制风险。该策略具有捕捉趋势、双向交易、风险控制的优势,也存在布林带失效等问题。我们可以通过调整布林带参数、增加趋势过滤、优化止损策略等方法来提高策略的效果。该策略有很强的实用性和发展潜力,是一种值得推荐的简单实用的交易策略。
-
-||
 
 ## Overview
 
@@ -163,7 +85,6 @@ The strategy can be optimized in the following aspects:
 
 Overall, the BB dual long and short trading strategy is a very typical and practical Bollinger Bands strategy. It uses the Bollinger Bands to judge overbought and oversold conditions to capture trends, implements two-way trading, and sets stop loss and take profit for risk control. The strategy has the advantages of catching trends, two-way trading, and risk control, and also has problems like Bollinger Bands failure. We can improve the strategy by adjusting Bollinger parameters, adding trend filters, optimizing stop loss etc. The strategy has great practicality and potential, and is a simple useful trading strategy worth recommending.
 
-[/trans]
 
 > Strategy Arguments
 

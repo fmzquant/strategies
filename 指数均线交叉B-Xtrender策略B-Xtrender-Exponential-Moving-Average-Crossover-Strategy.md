@@ -10,34 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/86062198e3522c2858.png)
-[trans]
-## 概述
-该策略是一个基于指数均线交叉原理的交易策略。它同时结合了RSI指标和均线过滤器,形成了一套较为完整的趋势跟踪和反转交易体系。
-
-## 策略原理
-1. 利用指数移动平均线的快慢交叉形成交易信号。快线参数为5和20日线的EMA交叉,慢线参数为20和15日线的EMA交叉。
-2. 快线上穿慢线时做多,快线下穿慢线时做空。采用RSI指标进行二次验证,只有当RSI也同向交叉时才证实交易信号的有效性。
-3. 加入200日移动平均线作为过滤器,只有价格突破该均线时才会发出交易信号,从而避免了震荡行情下的多次虚假交叉。
-
-## 策略优势
-1. 双EMA交叉结合RSI指标,大幅提高信号的可靠性,降低了虚假信号率。
-2. 通过快慢EMA参数的搭配,既考虑了交易信号的灵敏度,也确保了信号的稳定性。
-3. 均线过滤器的加入,可有效过滤震荡行情下的噪音,避免不必要的交易。
-
-## 策略风险
-1. EMA是一种滞后指标,在价格剧烈变动时会有明显的滞后。这会导致亏损加大或信号被漏掉的风险。
-2. RSI参数设置不当也会导致信号产生滞后。
-3. 均线过滤虽然可避免震荡市,但在趋势开始阶段也可能会过滤掉早期entry机会。
-
-## 策略优化方向
-1. 动态调整EMA参数,在不同周期选择最优参数组合。
-2. 尝试其他指标如MACD等与RSI进行组合。
-3. 优化均线过滤器参数,在去噪与获取机会之间找到平衡。
-
-## 总结
-该策略总体来说是一个打造较为完备的指数移动平均线交易体系。它在获取交易信号的基础上,额外引入RSI指标进行多层验证。这无疑可大幅提高信号质量,是一个值得学习与优化的策略。当然由于本身指标滞后的特点,也应注意防范止损不及时等风险。
-
-||
 
 ## Overview
 This is a trading strategy based on the exponential moving average (EMA) crossover principle. It also incorporates the RSI indicator and moving average filters to form a relatively complete trend following and reversal trading system.
@@ -66,7 +38,6 @@ This is a trading strategy based on the exponential moving average (EMA) crossov
 ## Conclusion 
 This is an overall solid strategy in building a complete EMA trading system, with additional RSI confirmation to boost signal quality. It's worth studying and optimizing. However, inherent indicator lag risks should also be managed through proper stop loss.
 
-[/trans]
 
 > Strategy Arguments
 

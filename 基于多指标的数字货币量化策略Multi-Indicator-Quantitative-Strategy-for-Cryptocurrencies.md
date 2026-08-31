@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种针对数字货币设计的多指标量化交易策略。该策略综合使用均线、振荡器、通道等指标进行入场判断和风险控制。
-
-一、策略原理
-
-该策略主要应用以下几类指标:
-
-1. ROC振荡器判断价格的超买超卖区间;
-
-2. 唐奇安通道构建动态的支撑和阻力;
-
-3. 熊力指标判断底部特征;
-
-4. 平衡能量指标判断多空趋势; 
-
-5. 移动平均线进行趋势过滤。
-
-只有当多个指标信号达成一致时,才会形成最终的入场判断。同时设置止盈止损点来控制单笔交易的风险。
-
-二、策略优势
-
-该策略最大的优势在于指标互补,从多个维度判断趋势和关键点位。
-
-另一个优势是止盈止损设置直接合理,有助于积极的资金管理。
-
-最后,参数空间广泛,可针对数字货币进行细致优化。
-
-三、潜在风险
-
-但该策略也存在以下问题:
-
-首先,多指标组合增加了参数优化的难度。
-
-其次,指标之间可能出现分歧,需要设定清晰的判断规则。
-
-最后,需要针对特定品种进行参数优化。
-
-四、内容总结
-
-本文详细介绍了一种专门针对数字货币设计的多指标量化策略。它合理运用多种指标进行风险控制和获利管理。该策略可以通过参数优化获得稳定收益,但也需要注意防控优化难度及指标使用问题。
-
-||
 
 This article explains in detail a multi-indicator quantitative trading strategy designed for cryptocurrencies. It utilizes moving averages, oscillators, channels etc. for entry signals and risk control.
 
@@ -94,7 +51,6 @@ IV. Summary
 
 In summary, this article has explained a multi-indicator quantitative strategy tailored for cryptocurrencies. It intelligently combines indicators for risk and money management. Through parameter optimization it can achieve steady profits but needs to manage optimization difficulty and indicator usage.
 
-[/trans]
 
 > Strategy Arguments
 

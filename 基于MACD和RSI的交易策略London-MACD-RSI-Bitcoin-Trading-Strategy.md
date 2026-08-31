@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/32045c9aceedc48d06.png)
-[trans]
-
-## 概述
-
-本策略是一个基于技术指标MACD和RSI的伦敦交易时段比特币交易策略。它只在伦敦交易时段开仓,使用MACD判断趋势方向进入场内,使用RSI判断超买超卖离场。该策略适合中短线交易比特币。
-
-## 策略原理
-
-### 伦敦交易时段
-
-伦敦交易时段在外汇市场非常活跃,大部分机构都会参与其中。本策略设置伦敦时段为早上7点到下午4点之间,只有在这个时段才会开仓。
-
-### MACD判断趋势
-
-MACD一般可以判断趋势方向。当快线上穿慢线时为金叉,表示涨势来临,做多;当快线下穿慢线时为死叉,表示跌势来临,做空。本策略就是利用这个原理判断趋势方向。
-
-### RSI判断超买超卖
-
-RSI可以判断市场是否超买或者超卖。当RSI大于70时表示超买,当RSI小于30时表示超卖。本策略就是利用这个原理来设置止损退出点。
-
-## 优势分析
-
-本策略最大的优势在于结合了趋势交易和超买超卖的节奏交易。在趋势不明显的情况下,它可以利用MACD判断 possívelwk的趋势;而利用RSI来控制风险,从而避免在没有明确趋势的情况下盲目追涨杀跌。此外,本策略只在机构主导的伦敦交易时段开仓,可以减少非理性的价格波动对策略的影响。
-
-## 风险分析
-
-本策略的主要风险在于MACD作为盘整市的技术指标,在明确的趋势下效果并不是很好。如果遇到长期单边行情,MACD的金叉死叉信号可能会频繁失效。此外,RSI在高位徘徊或低位徘徊的情况下也可能失效。为了降低这些风险,我们可以适当调整参数,或增加其他滤波条件来确保只在高概率的信号下开仓。
-
-## 优化方向  
-
-本策略可以从以下几个方面进行优化:
-
-1. 增加其他技术指标过滤,例如布林线、KDJ等,避免假突破。
-
-2. 增加止盈策略,例如移动止损或价格跳空止盈,以锁定更多利润。
-
-3. 优化参数,调整MACD和RSI的参数,适应不同行情类型。
-
-4. 增加机器学习元素,使用lstm等深度学习模型判断趋势策略。
-
-## 总结
-
-本策略总体来说是一个可靠的伦敦交易时段比特币交易策略。它结合趋势与节奏,在有效过滤无效信号的同时确保了较高的盈利概率。通过持续优化参数与增加其他技术指标判断,本策略可以进一步增强稳定性与收益性。它适合对伦敦时段及MACD和RSI等技术指标有一定了解的投资者使用。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ This strategy can be optimized in several aspects:
 
 Overall this is a reliable London session bitcoin trading strategy. It combines trend and rhythm, filtering out invalid signals while ensuring relatively high profitability. Through continuous optimization of parameters and integrating more technical indicators, this strategy can further enhance stability and profitability. It suits investors with some knowledge of the London session, MACD and RSI technical indicators.
 
-[/trans]
 
 > Strategy Arguments
 

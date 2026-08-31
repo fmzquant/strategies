@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略使用卡尔曼滤波器跟踪价格,并使用止损线动态调整止损点,实现滑动止损。
-
-## 原理
-
-该策略使用卡尔曼滤波器实时跟踪价格。卡尔曼滤波器包含两个方程:
-
-预测方程:
-
-smooth = kf[1] + dk * sqrt(gain / 10000 * 2)
-
-更新方程: 
-
-kf = smooth + velo
-
-其中,dk是预测误差,gain是卡尔曼增益,决定跟踪灵敏度。
-
-此外,策略使用滑动止损线来锁定利润。初始止损距离为止损百分比设定值,如2%。
-
-在做多时,如果价格上涨,止损线也上移逐步逼近卡尔曼线,步长为downStep,如0.5%。如果价格下跌止损,则重新开仓,设置初始止损距离。
-
-做空同理。
-
-这样,策略可以根据趋势逐步锁定利润,具有较好的风险管理。
-
-## 优势
-
-1. 使用卡尔曼滤波器实时跟踪价格,响应迅速。
-
-2. 利用滑动止损线锁定利润,风险管理效果好。止损距离可自定义。
-
-3. 可灵活选择做多做空或只做多/做空。
-
-4. 可根据趋势积极止损或保守止损。
-
-5. 可根据需要灵活设置止盈止损。
-
-## 风险
-
-1. 卡尔曼滤波器参数设置不当可能导致跟踪不稳定。
-
-2. 滑点可能导致止损点被先触发。可以适当宽松止损距离。
-
-3. 强势趋势市场不宜采用滑动止损策略,应追踪趋势。
-
-4. 震荡市场止损点可能频繁触发。可以适当宽松止损距离,或不使用滑动止损。
-
-## 优化
-
-1. 可以引入更多指标判断趋势方向,优化开仓时机。
-
-2. 可以根据市场波动率调整止损线移动步长。
-
-3. 可以结合机器学习技术训练最优止损参数。
-
-4. 可以结合更多风险指标,动态调整仓位管理。
-
-
-## 总结
-
-滑行止损策略使用卡尔曼滤波器跟踪价格变化,并利用滑动止损线锁定利润,在保证盈利的同时控制风险,是一个可靠且易于优化的策略。将其与趋势判断及动态仓位管理技术相结合,可以获得更优秀的策略效果。
-
-|| 
 
 ## Overview
 
@@ -139,7 +72,6 @@ Thus, the strategy can gradually lock in profits according to the trend, with go
 
 The loft stop strategy uses a Kalman filter to track price changes and lock in profits with a sliding stop loss line, ensuring profitability while controlling risks. It is a reliable and easily optimized strategy. Combining it with trend judgment and dynamic position sizing can achieve even better strategy performance.
 
-[/trans]
 
 > Strategy Arguments
 

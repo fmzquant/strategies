@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1768cebdd183dccd1c2.png)
-[trans]
-### 概述
-
-本策略通过计算XAUUSD(黄金)的30日简单移动平均线(MA30)和200日简单移动平均线(MA200)的交叉情况,实现金叉买入和死叉卖出的量化交易。该策略同时设置了止损和止盈价格,可以自动平仓。
-
-### 策略原理 
-
-该策略的核心指标是MA30和MA200。当MA30上穿MA200时,产生买入信号;当MA30下穿MA200时,产生卖出信号。这种交叉被称为“金叉”和“死叉”。
-
-具体来说,该策略使用ta库计算MA30和MA200。然后通过ta.crossover和ta.crossunder函数判断它们的交叉情况。当发生向上交叉(金叉)时,设置longCondition值为true,进行买入操作;当发生向下交叉(死叉)时,设置shortCondition值为true,进行卖出操作。
-
-在交易执行方面,买入和卖出订单分别设置了4万点的止损和止盈价格。这相当于XAUUSD中4000点的价格变动。当价格触发止损或止盈时,orders会自动平仓。
-
-此外,策略还设置了对冲机制。如果当前持有多头仓位,后续出现死叉信号,会直接平仓换向;如果当前持有空头仓位,后续出现金叉信号,也会直接平仓换向。这可以避免在趋势反转时承受大幅亏损。
-
-### 策略优势
-
-这是一个非常简单直观的趋势跟踪策略。它具有如下优点:
-
-1. 规则清晰,易于实现。
-2. 可用于多个时间周期,适合日内和长线操作。
-3. 顺应市场周期性,可捕捉趋势反转。
-4. 设置止损止盈自动出场机制,可控制单笔损失。
-5. 建立对冲机制,避免趋势反转带来的亏损。
-
-### 风险分析
-
-该策略也存在一些风险:
-
-1. MA指标存在滞后,可能错过短期趋势反转的最佳入场时机。
-2. 止损价格设置得不合理,可能过早被止损出场。
-3. 反转信号干扰过多,增加无谓交易的次数。
-4. 该策略对交易资金规模也有一定要求,需要承受一定回撤。
-
-为控制这些风险,可以对参数进行优化,调整止损幅度,过滤反转信号等。
-
-### 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化MA参数,改用EMA或加权移动平均线。
-2. 增加其他指标过滤,如交易量,震动指标等。 
-3. 对冲机制可以仅在显著信号时启用。
-4. 可以设置仓位大小管理,优化资金利用效率。
-5. 可以结合机器学习算法动态优化止损止盈设定。
-
-通过参数调整、增加过滤器、仓位管理等手段,可以进一步提高策略稳定性。
-
-### 总结
-
-本策略是一个简单实用的移动平均交叉策略。它顺应市场周期运行,通过设置自动止损止盈平仓和对冲机制来控制风险。该策略易于理解和实现,可适用于多种交易品种和时间周期。通过进一步优化,可以获得更好的风险收益比,是一种值得推荐的量化交易策略。
-
-||
 
 ### Overview
 
@@ -115,7 +62,6 @@ Parameter tuning, adding filters, position sizing etc. can further improve strat
 
 This is a simple and practical moving average crossover strategy. It aligns with market cycles, controls risk through automated stop loss/profit exits and hedging mechanisms. Easy to understand and implement, it is applicable for multiple products and time frames. Further optimizations can improve risk/reward profile. Overall an advisable quantitative trading strategy.
 
-[/trans]
 
 
 

@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b88656dee5c507840a.png)
-[trans]
-
-### 概述
-
-该策略通过使用模运算和指数移动平均线的组合,实现了一个随机性强的趋势过滤器,用于判断持仓方向。策略首先计算价格除以一个设定数字的余数是否为0,如果为0则有交易信号出现。此信号若在指数移动平均线之下,做空;若在指数移动平均线之上,做多。该策略综合了数学运算的随机性与技术指标的趋势判断,利用不同周期指标之间的交叉验证,有效过滤掉部分冲击价格的随机性行情。
-
-### 策略原理
-
-1. 设置价格输入值a为收盘价close,可以修改;设置除数b值为4,可以修改。
-2. 计算a除以b的余数modulo,判断余数是否为0。
-3. 设置指数移动平均线长度MALen,默认为70周期,作为价格中长期趋势的判断指标。
-4. 当余数modulo为0时产生交易信号evennumber,与EMA关系决定方向。当价格上穿EMA线时,产生买入信号BUY;当价格下穿EMA线时,产生卖出信号SELL。
-5. 交易entries按照信号方向进入做多或做空仓位。策略可以限制反向开仓以控制交易次数。
-6. 止损条件根据三种止损方式设置:固定止损、ATR止损、价格波动范围止损。止盈条件为止损的反向。 
-7. 可选择是否使用移动止损以锁定更多利润,默认不使用。
-
-### 优势分析
-
-1. 模运算的随机性避免受价格震荡的影响,与移动平均线的趋势判断组合,可以有效过滤掉部分无效信号。
-2. 指数移动平均线作为中长期趋势判断指标,与模运算的短期信号组合使用,实现多层验证,避免虚假信号。  
-3. 可自定义的参数设置非常灵活,可以根据不同市场调整参数,寻找最佳参数组合。
-4. 集成了多种止损方式,可以控制风险。同时设置了止盈条件来锁定利润。
-5. 支持直接反向开仓,可以无缝切换仓位方向。也可以关闭此功能以减少交易次数。
-
-### 风险分析
-
-1. 参数设置不当可能导致产生过多交易信号,增加交易频率和滑点成本。
-2. 指数移动平均线作为唯一的趋势判断指标,可能产生滞后,错过价格反转时机。 
-3. 固定止损方式可能过于机械,无法对市场波动进行调整。
-4. 直接反向开仓会增加仓位调整的频率,增加交易成本和风险。
-
-### 优化方向
-
-1. 可以测试不同均线指标代替EMA,或组合使用EMA和其他均线,看是否可以提高获利率。
-2. 可以尝试将模运算过滤与其他策略结合,如布林带、K线形态等,形成更稳定的过滤器。
-3. 可以研究自适应止损方式,根据市场波动程度来调整止损距离。
-4. 可以设置交易次数或损益阈值来限制直接反向开仓的次数。
-
-### 总结
-
-该策略通过模运算实现随机过滤与移动平均线趋势判断的有效结合,参数设置灵活,可以根据不同市场环境进行调整优化,从而获得更可靠的交易信号。同时集成了多种止损机制控制风险,以及止盈和移动止损来锁定利润。该策略整体思路清晰,易于理解与修改,值得进一步测试与优化,具有很大的实盘应用潜力。
-
-||
 
 ### Overview
 
@@ -94,7 +51,6 @@ This strategy combines modulo arithmetic operations and exponential moving avera
 
 This strategy effectively combines the randomness of modulo operations and trend judgment of moving averages through flexible parameter adjustments catered for different market environments, resulting in reliable trading signals. It also integrates various stop mechanisms to control risks as well as take profit and trailing stops to lock in profits. The overall logic is clear and easy to understand and modify. It has immense practical potential worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

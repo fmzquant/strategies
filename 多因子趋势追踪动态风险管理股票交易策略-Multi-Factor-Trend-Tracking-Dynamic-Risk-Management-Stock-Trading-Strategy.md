@@ -15,49 +15,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-
-本策略是一种多因子趋势追踪动态风险管理股票交易策略，通过综合运用多个技术指标，旨在提高交易信号的准确性和策略的整体表现。策略核心围绕趋势判断、动量确认、波动率过滤和风险控制展开，为投资者提供一个系统化的交易方法。
-
-#### 策略原理
-
-策略原理基于六个关键指标的综合分析：
-
-1. G-Channel指标：使用20日和50日指数移动平均线（EMA）判断市场趋势方向。
-2. Fantel可变移动平均线（VMA）确认：比较14日和28日简单移动平均线（SMA）来验证趋势动量。
-3. Coral趋势确认：通过10日和20日SMA判断短期趋势方向。
-4. ADX波动率确认：评估市场趋势强度和波动性。
-5. 成交量确认：检查成交量是否显著高于20日平均成交量。
-6. 价格相对50日SMA：判断价格在长期趋势中的位置。
-
-#### 策略优势
-
-1. 多因子验证：通过六个不同维度的指标交叉验证，显著降低假信号概率。
-2. 动态风险管理：使用ATR（平均真实波动范围）动态调整止损和止盈。
-3. 灵活的入场和出场机制：结合趋势、动量、波动率和成交量多重条件。
-4. 风险收益比优化：采用2:1的风险收益比设计。
-5. 低频交易：减少交易次数，降低交易成本。
-
-#### 策略风险
-
-1. 多空判断复杂：多因子验证可能导致信号产生滞后。
-2. 参数敏感性：不同市场环境下，固定参数可能表现不佳。
-3. 成交量限制：低成交量可能增加交易误判风险。
-4. RSI极值限制：可能错过部分交易机会。
-
-#### 策略优化方向
-
-1. 参数自适应：开发动态参数调整机制。
-2. 机器学习优化：引入机器学习算法优化入场和出场时机。
-3. 多市场适应性：针对不同品种和市场环境定制参数。
-4. 结合情绪指标：引入市场情绪指标提高策略稳定性。
-
-#### 总结
-
-本策略通过多因子、多维度的交易信号验证，构建了一个相对稳健的股票交易系统。其核心优势在于降低交易风险，但仍需持续优化和适应市场变化。
-
-|| 
 
 #### Overview
 
@@ -99,7 +56,6 @@ The strategy principle is based on comprehensive analysis of six key indicators:
 #### Summary
 
 This strategy constructs a relatively robust stock trading system through multi-factor and multi-dimensional trading signal verification. Its core advantage lies in reducing trading risks, but continuous optimization and adaptation to market changes are still necessary.
-[/trans]
 
 
 

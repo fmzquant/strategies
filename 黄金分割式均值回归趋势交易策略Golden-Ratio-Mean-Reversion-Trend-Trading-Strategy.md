@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1498dc7ed0566b21594.png)
-[trans]
-
-## 概述
-
-黄金分割式均值回归趋势交易策略通过利用通道指标和移动平均线来识别较强的趋势方向,在价格出现一定比例的回调之后,可在趋势方向上打开仓位。该策略适合于具有较强趋势特征的市场,可在趋势行情中获得较好的表现。
-
-## 策略原理
-
-该策略的核心指标包括通道指标、移动平均线和回调触发线。具体来说:
-
-1. 通道指标由最高价和最低价计算而成,用于识别价格通道;
-2. 移动平均线用于判断价格的整体趋势方向;
-3. 回调触发线则用于在价格从通道边界反弹一定比例后打开仓位。
-
-当价格触碰通道底部时,策略会将最低点记录为参考点,并设置允许做空标志。当价格上涨时,一旦上涨幅度达到回调比例后,将会在反弹点附近打开空仓。
-
-相反,当价格触及通道顶部时,策略会记录最高点为参考点,并设置允许做多标志。当价格下跌时,如果下跌幅度达到回调比例要求,则在该点附近打开多仓。
-
-因此,该策略的交易逻辑是追踪价格通道,并在出现反转信号时选择合适的点位介入现有趋势。这属于趋势回调类交易策略的常见套路。
-
-## 优势分析
-
-该策略主要具有以下几个优势:
-
-1. 可在较强的趋势行情中获得较好表现;
-2. 通过回调比例参数可调整策略的进场严格程度;
-3. 合理回撤控制,可限制单笔损失。
-
-具体来说,因为策略主要在趋势反转点打开仓位,所以在价格波动较大、趋势明显的市场中效果较好。此外,调整回调比例参数可控制策略追踪趋势的激进程度。最后,通过止损方式可很好控制单笔损失。
-
-## 风险分析
-
-该策略也存在以下主要风险:
-
-1. 策略对交易品种的趋势特征较为敏感;
-2. 回调比例设置不当可能导致过于激进或保守;
-3. 持仓时间可能过长,需要注意隔夜风险。
-
-具体来说,如果策略运用的交易品种趋势性较弱、波动较小,则效果可能会打折扣。此外,回调比例设置过大或过小,都会影响策略表现。最后,因为策略的持仓时间跨度可能较长,也需要注意隔夜风险的控制。
-
-为了规避上述风险,可考虑优化以下几个方面:
-
-1. 选择趋势特征更明显的交易品种;
-2. 调整回调比例 Parameter 寻找最佳参数组合;  
-3. 设置止盈 Exit 以合理控制持仓时间。
-
-## 总结
-
-黄金分割式均值回归趋势交易策略通过简单的指标判断价格趋势和回调信号,在强势行情中打开仓位追踪趋势,属于较为典型的趋势系统。该策略参数调优空间较大,可通过优化适应更多市场环境,而风险控制也较为合理。因此,它是一个值得实战验证和改进优化的策略思路。
-
-||
 
 ## Overview
 
@@ -110,7 +59,6 @@ To avoid the above risks, consider optimizing the following aspects:
 
 The golden ratio mean reversion trend trading strategy judges price trends and pullback signals through simple indicators, opens positions to track trends in strong markets, and belongs to a typical trend system. This strategy has large parameter tuning space, can adapt to more market environments through optimization, and the risk control is also reasonable. Therefore, it is a strategy idea worth verifying and improving in live trading.
 
-[/trans]
 
 > Strategy Arguments
 

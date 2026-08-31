@@ -10,37 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f308115b184cce4fc3.png)
-[trans]
-## 概述
-动能突破策略是一种追踪市场动能的趋势策略。它结合多种指标判断市场目前是否处于上升或下降趋势中,并在突破关键阻力位时建仓做多,在突破关键支撑位时建仓做空。
-
-## 策略原理
-该策略主要通过计算多种长度期的Donchian通道来判断市场趋势和关键价格位。具体来说,它在价格突破较长周期如40日的Donchian通道上轨时判断为上涨趋势,并在此基础上结合年内新高、移动平均线方向性排列等过滤条件发出做多信号;而在价格跌破较长周期Donchian的下轨时,判断为下跌趋势,结合年内新低等过滤条件发出做空信号。 
-
-在退出仓位方面,该策略提供了两个选择:固定取消线和跟踪止损。固定取消线是根据更短周期如20日Donchian通道设定止损位;跟踪止损每日根据ATR值计算浮动止损线。这两种止损方式都能很好控制风险。
-
-## 优势分析
-这种策略结合趋势判断和突破操作,能够有效捕捉市场中短线的方向性机会。相比单一指标,它综合运用多种过滤条件,可以过滤掉部分假突破从而提高进入信号的质量。此外,止损策略的应用也使其承受能力较强,即使行情短期回调也能有效控制损失。
-
-## 风险分析
-该策略的主要风险在于行情可能出现剧烈波动,导致止损被触发退出仓位。这时如果行情迅速反转,则可能错过机会。另外,多种过滤条件的运用也会过滤掉部分机会,降低策略的持仓频次。
-
-为降低风险,可以适当调整ATR数值或扩大Donchian轨间距,这可以减少止损被击穿的可能。也可以降低或取消部分过滤条件,提高进入频次,但风险也会增加。
-
-## 优化方向 
-该策略可以从以下几个方面进行优化:
-1. 优化Donchian通道的长度,寻找最佳参数组合
-2. 尝试不同类型的移动平均线作为滤波指标
-3. 调整ATR乘数或改为固定点数止损
-4. 加入更多趋势判断指标,如MACD等
-5. 优化年内新高新低的判断窗口期等
-
-通过测试不同参数,可以找到最佳的参数组合,在风险和收益之间取得平衡。
-
-## 总结
-本策略综合运用多种指标判断趋势方向,在关键点位突破时发出交易信号。其止损机制也使得该策略有较强的风险控制能力。通过优化参数设置,该策略可以实现稳定的超额收益。它适用于对市场没有清晰判断但希望跟踪趋势的投资者。
-
-||
 
 ## Overview 
 The momentum breakout strategy is a trend-following strategy that tracks the momentum of the market. It combines multiple indicators to judge whether the market is currently in an upward or downward trend, and opens long positions when breaking through key resistance levels and opens short positions when breaking through key support levels.
@@ -72,7 +41,6 @@ By testing different parameters, the optimum combination balancing risks and ret
 ## Conclusion
 This strategy combines multiple indicators to determine trend direction and triggers trades at key breakout levels. Its stop loss mechanism also makes it resilient to risks. By optimizing parameters, stable excess returns can be achieved. It suits investors who have no clear view on the market but wish to follow trends.
 
-[/trans]
 
 > Strategy Arguments
 

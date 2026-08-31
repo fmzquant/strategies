@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/13e227bc08fa27271f4.png)
 
-[trans]
-
-### 概述
-
-突破交易策略旨在捕捉由市场波动性增加引起的突破价格。该策略利用平均真实波动范围(ATR)指标来测量资产在特定周期内的波动性。当价格突破上下两条由ATR决定的突破线时,产生做多和做空信号。 
-
-### 策略原理
-
-该策略首先计算指定周期内的ATR。然后根据ATR计算上轨和下轨。当收盘价突破上轨时,产生做多信号;当收盘价跌破下轨时,产生做空信号。为了进一步确认信号,需要当前K线形态实体部分关闭。 
-
-收盘价突破上轨和下轨时,在突破方向填充突破间隙颜色。该特征有助于快速识别当前趋势方向。
-
-当做多信号产生且当前无持仓时,策略开仓做多。当做空信号产生且当前无持仓时,策略开仓做空。
-
-Length参数决定测量波动性的周期长度。更高的Length值意味着关注更长的价格波动。例如,Length为20时,每次交易跨越大约100根K线,包含多个波动。
-
-减小Length值可以关注更短期的价格波动,增大交易频率。Length值与平均交易长度之间没有严格对应关系,需要通过试错来找到最佳Length值。
-
-### 优势分析
-
-该策略利用突破原理,能抓住市场波动带来的较大行情。ATR指标动态计算突破位,避免使用固定参数。
-
-使用实体K线确认信号,可过滤假突破。填充突破间隙颜色直观显示趋势方向。
-
-Length参数提供调整策略的灵活性,可根据具体市场调整来优化参数。
-
-### 风险分析
-
-突破交易存在被套利的风险。可以设置止损来控制单笔损失。
-
-突破信号可能出现误报导致超短线交易。可以适当调整Length参数来滤除误报。
-
-参数优化需要积累足够的交易数据支持。初期参数选择可能不当导致交易表现不佳。
-
-### 优化方向
-
-可以在ATR周期内引入布林带,作为新的突破位计算方式。布林带突破可减少误报率。
-
-可以在突破后继续追踪趋势,而不立即止损。例如加入趋势随行止损。
-
-可以考虑在震荡市场使用不同的参数或完全不交易,避免被套。
-
-### 总结
-
-突破交易策略利用市场波动性,在价格产生较大突破时进入趋势。ATR指标动态确定突破位,实体K线过滤假突破。Length参数提供调整策略周期的灵活性。该策略适合追踪中长线趋势,但需要注意突破交易的风险,并进行参数优化。
-
-
-||
 
 
 ### Overview
@@ -105,7 +57,6 @@ Different parameters or avoiding trades altogether can be considered in range-bo
 
 The Volatility Breakout Trading Strategy capitalizes on increased market volatility to enter trending moves when prices break out significantly. The ATR indicator dynamically sets breakout levels and solid bars filter false breakouts. The Length input provides flexibility to adjust the strategy's period. The strategy is suitable for medium to long-term trend following, but breakout risks must be managed through parameter optimization.
 
-[/trans]
 
 > Strategy Arguments
 

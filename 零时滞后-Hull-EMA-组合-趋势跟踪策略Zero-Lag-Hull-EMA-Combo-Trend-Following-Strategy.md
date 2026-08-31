@@ -9,72 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略运用零时滞后 EMA 和 Hull EMA 的组合来实现趋势跟踪。零时滞后 EMA 可消除普通 EMA 的滞后,Hull EMA 则可平滑价格曲线。两者的组合可以更准确地捕捉趋势走势,实现低风险的趋势跟踪交易。
-
-### 策略原理   
-
-首先计算出零时滞后 EMA:
-    ```
-    EMA1 = ema(close, Period)
-    EMA2 = ema(EMA1, Period) 
-    Difference = EMA1 - EMA2
-    ZeroLagEMA = EMA1 + Difference
-    ```
-
-其中,ZeroLagEMA 是零时滞后 EMA。它消除了普通 EMA 的滞后问题。
-
-然后计算出 Hull EMA 平滑后的曲线:
-    ```
-    n2ma = 2*wma(ZeroLagEMA, round(S_period/2)) 
-    nma = wma(ZeroLagEMA, S_period)
-    n1 = wma(n2ma - nma, sqn)
-    ```
-
-最后计算当前 Hull EMA(n1)与上一周期 Hull EMA(n2)的大小关系,判断趋势方向,制定交易策略。
-
-### 优势分析
-
-该策略最大的优势在于能够准确捕捉趋势方向。原因有二:
-
-1. 零时滞后 EMA 消除了普通 EMA 的滞后问题,能够更快速地捕捉价格变化。
-
-2. Hull EMA 对价格进行了双平滑,可过滤掉部分噪音,Capture趋势更加清晰。
-
-相比单独使用 EMA 或 Hull EMA,两者的组合能够发挥各自的优势,使策略更准确、更可靠。
-
-### 风险分析
-
-该策略主要存在以下风险:
-
-1. Period 和 S_period 参数设置不当,可能导致策略对市场反应不敏感,错过交易时机。
-
-2. 震荡行情中,EMA 和 Hull EMA 可能产生较多交叉信号,需要警惕假突破。
-
-3. 无法有效处理价格隔夜大幅跳空的情况。
-
-因此,需要仔细测试参数设置,谨慎看待指标信号,防范价格跳空的风险。
-
-### 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 测试不同市场不同周期下的参数优化组合,使策略对各种行情都有较好的适应性。
-
-2. 结合其他指标过滤假突破信号,例如KDJ,MACD等,提高策略的稳定性。 
-
-3. 增加止损策略,以控制单笔损失。
-
-4. 优化入场 timing,进一步提升策略的胜率。例如结合趋势方向,避免逆势开仓。
-
-### 总结
-
-该策略运用零时滞后 Hull EMA 的组合,可准确、灵敏地捕捉市场趋势,以低风险的方式进行趋势跟踪交易。通过参数优化、指标过滤、止损等手段可进一步提高策略稳定性。总体来说,该策略简单实用,适合趋势货币对及股指的交易。
-
-||
 
 ### Overview
 
@@ -140,7 +74,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy uses the Zero Lag Hull EMA combo to accurately and sensitively capture market trends for low-risk trend following trading. Further improvements in stability can be achieved through parameter optimization, signal filtering, stop loss etc. Overall, the strategy is simple, practical and suitable for trending currency pairs and indices.
 
-[/trans]
 
 > Strategy Arguments
 

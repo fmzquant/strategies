@@ -9,75 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一个基于技术指标的简单自动多头趋势策略,适用于比特币和以太坊等加密货币,旨在捕捉主要上涨趋势,降低频繁交易导致的手续费损失。
-
-## 策略原理
-
-1. 使用MACD判断趋势方向,MACD向上交叉时看多;
-
-2. 计算20周期EMA,100周期SMA和200周期SMA,EMA和SMA同向上提时看多;
-
-3. EMA高于SMA时买入做多,SMA高于SMA慢线时买入做多;
-
-4. 设定止损线,价格跌破止损线时止损退出。
-
-5. 当价格下跌时EMA下穿SMA时平仓退出。
-
-该策略综合多个指标判断趋势及入场时机,通过追踪主要上涨趋势获得利润。
-
-## 策略优势 
-
-1. 多指标组合判断,可以有效过滤假突破等错误信号;
-
-2. 只在趋势明确时入场,可以减少不必要交易,降低交易频率;
-
-3. 止损策略可以有效控制单笔交易的最大亏损;
-
-4. 回测数据显示在比特币和以太坊中可以获得较好收益;
-
-5. 策略逻辑简单清晰,容易理解实现,适合初学者学习。
-
-6. 可扩展性强,可以引入更多指标进行优化。
-
-## 策略风险
-
-1. 市场走势随机性大,判断失误风险;
-
-2. 单一持仓方式无法规避系统性风险; 
-
-3. 止损点设置不当可能导致过度止损;
-
-4. 回测数据不代表实盘表现,实盘效果待验证;
-
-5. 没有考虑交易费用的影响,实盘效果可能有所差异。
-
-6. 没有考虑不同品种特点,需要调整优化。
-
-## 策略优化方向
-
-1. 测试不同参数组合,优化指标参数;
-
-2. 增加类似KDJ等指标过滤入场信号; 
-
-3. 优化止损策略,引入动态止损;
-
-4. 考虑账户资金管理,调整仓位大小;
-
-5. 区分品种特点,调整参数;
-
-6. 结合更多时间周期指标判断;
-
-7. 测试不同品种效果,找出最佳品种。
-
-## 总结
-
-该策略整体思路清晰易懂,使用多指标判断可以有效过滤错误信号。但仍需进一步优化参数、风险控制等,再结合实盘验证,方可实际应用。如果进一步扩展优化,可以成为一个非常实用的加密货币趋势跟踪策略。
-
-||
 
 
 ## Overview 
@@ -146,7 +77,6 @@ This strategy combines multiple indicators to determine trend and entry timing t
 
 The strategy logic is simple and clear. Using multiple indicators can help filter out wrong signals effectively. But further optimization on parameters, risk control etc. is needed, combined with live trading verification, before actual application. With proper extensions, it can become a very practical crypto trend following strategy.
 
-[/trans]
 
 > Strategy Arguments
 

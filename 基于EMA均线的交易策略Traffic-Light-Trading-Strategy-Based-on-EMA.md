@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/159417a56d76df0b6f0.png)
-[trans]
-
-## 概述
-
-该策略运用4条不同周期的EMA均线,根据其排列顺序形成交易信号,类似交通灯的红黄绿三色指示灯,因此命名为“交通灯交易策略”。它从趋势和反转两个角度综合判断市场,旨在提高交易决策的准确性。
-
-## 策略原理  
-
-1. 设置快线(8周期)、中线(14周期)、慢线(16周期)3条EMA均线,再加入1条长周期(100周期)EMA均线作为过滤器。
-
-2. 判断快中慢3均线的排列顺序和与过滤器的交叉情况,确定做多和做空的时机:
-
-  - 快线上穿中线或中线上穿慢线时,判断为做多信号
-  - 中线下穿快线时,判断为平多信号
-
-  - 快线下穿中线或中线下穿慢线时,判断为做空信号
-  - 中线上穿快线时,判断为平空信号
-
-3. 通过快中慢3均线的顺序判断趋势方向和力度,结合均线与过滤器的交叉判断反转点,实现趋势跟踪和反转捕捉的有机结合。
-
-## 优势分析
-
-该策略整合了趋势跟踪和反转交易的优点,能较好地把握市场机会。主要优势有:
-
-1. 使用多组EMA均线,判断力更强,降低了假信号
-2. 灵活设置做多做空条件,避免错过交易机会
-3. 立体使用长短周期均线,判断力全面
-4. 可自定义止盈止损条件,风险控制到位
-
-通过参数优化,该策略可以适应更多品种,在回测中展现出较强的盈利能力和稳定性。
-
-## 风险分析  
-
-该策略的主要风险在于:
-
-1. 多组EMA均线排列顺序出现混乱时,会增加判断难度,产生交易迟疑
-2. 无法有效过滤市场异常波动的假信号,如需大幅震荡中造成亏损
-3. 参数设置不当时,止盈止损条件可能过于宽松或严格,导致错失利润或过度亏损
-
-建议通过对参数优化,设定止损水平,谨慎操作等方式进一步提高策略稳定性,控制风险。
-
-## 优化方向
-
-该策略的主要优化方向:  
-
-1. 调整EMA均线的周期参数,适配更多品种
-2. 增加其他指标过滤,如MACD、布林带等,提高判断准确性 
-3. 优化止盈止损比例,在风险与收益间取得最佳平衡
-4. 添加自适应止损机制,如ATR止损,进一步控制下行风险
-
-通过多方位的参数调整和风险控制手段的引入,可以持续提升策略的稳定性和盈利能力。
-
-## 总结  
-
-该交通灯交易策略整合趋势跟踪和反转判断,运用4组EMA均线形成交易信号,通过参数优化适配更多品种,在回测中展现出较强盈利能力。后续通过进一步风险控制和多元化指标引入,有望成为稳定高效的量化交易策略。
-
-||
 
 
 ## Overview
@@ -123,7 +66,6 @@ Continuous enhancement in stability and profitability of the strategy can be ach
 
 This Traffic Light Trading Strategy incorporates trend following and reversal trading by using 4 sets of EMA lines to form trading signals. It has demonstrated strong profitability through parameter optimization to adapt to more products. Going forward, by further strengthening risk control and introducing diversified indicators, it has the potential to become a stable and efficient quantitative trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

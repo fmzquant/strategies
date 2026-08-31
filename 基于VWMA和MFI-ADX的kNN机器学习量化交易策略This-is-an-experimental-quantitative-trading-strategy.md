@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/762c27c901eec54e22.png)
-[trans]
-
-## 概述
-
-该策略是一个实验性的量化交易策略,它结合了移动平均线指标和机器学习的kNN算法来产生交易信号。该策略使用两条不同周期的VWMA均线的交叉来判断趋势方向,并结合MFI和ADX两个指标通过kNN算法对信号进行过滤,以提高信号的可靠性。
-
-## 策略原理
-
-该策略的核心指标是两条不同参数的VWMA均线,分别是快线和慢线。当快线上穿慢线时产生买入信号,快线下穿慢线时产生卖出信号。此外,该策略引入了MFI和ADX两个辅助指标,通过kNN分类算法判断当前市场情况下该信号的可靠性。
-
-kNN算法的思想是将新数据与历史数据进行比较,判断最相近的k个历史数据所对应的结果,根据这k个历史结果按多数表决的方式进行分类。本策略将MFI和ADX作为kNN算法的两个输入参数,判断这两个指标组合时的历史价格走势(上涨或下跌),从而对当前信号进行过滤,提高信号质量。
-
-## 策略优势
-
-- 利用VWMA的趋势跟随能力,配合均线交叉产生买卖点
-- 应用MFI和ADX指标进行多维特征提取,辅助判断趋势方向
-- 借助kNN机器学习算法对交易信号进行动态优化和过滤
-- 实验性策略,开发空间大,有待通过更多数据进行验证和优化
-
-## 风险与对策
-
-- VWMA均线容易产生滞后的问题
-- MFI和ADX具有一定的滞后性,可能误判市场状况
-- kNN算法参数设置(如k值选择)会对结果产生很大影响
-- 实验性质策略,在实盘中可能表现不佳
-
-对应对策:
-
-- 调整均线参数,降低滞后程度
-- 改进指标算法,提高对趋势的判断准确率 
-- 优化kNN算法的参数,提高拟合效果
-- 利用回测和模拟实盘对策略进行验证
-
-## 优化方向  
-
-该策略还有很大的优化空间:
-
-- 增加更多均线指标,构建均线组合
-- 尝试不同的辅助指标,如MACD、KDJ等
-- 改进kNN算法,如使用不同距离度量方法
-- 尝试其他机器学习算法,如SVM、随机森林等
-- 进行参数优化,寻找最佳参数组合
-
-通过引入更多指标和机器学习算法,有望进一步提高策略的稳定性和收益率。
-
-## 总结
-
-该策略是一个基于VWMA均线指标和kNN机器学习算法的实验性量化交易策略。它具有趋势跟随能力较强,同时通过机器学习进行信号过滤的特点。该策略空间广阔,通过引入更多特征和优化算法,有望产生更好的效果。但作为新型策略也存在一定的风险,有待进一步验证和改进。总的来说,该策略具有很大的创新潜力。
-
-||
 
 ## Overview
 
@@ -108,7 +58,6 @@ Introducing more indicators and machine learning algorithms may further improve 
 
 This is an experimental quantitative trading strategy based on VWMA indicators and kNN machine learning algorithms. It has the advantage of strong trend following capability while filtering signals via machine learning. The strategy has large room for expansion by introducing more features and optimization algorithms for better results. But as a novel strategy there are also risks that require further verification and improvement. Overall this strategy has great innovation potential.
 
-[/trans]
 
 > Strategy Arguments
 

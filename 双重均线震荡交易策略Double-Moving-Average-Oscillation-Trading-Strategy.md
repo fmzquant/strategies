@@ -11,62 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1725a1fbec3a573bbf0.png)
 
-[trans]
-
-## 概述
-
-双重均线震荡交易策略通过组合使用2/20指数移动平均线和自适应价格带震荡指标,形成交易信号,实现在震荡行情中获利。该策略主要适用于股指、外汇、商品和数字货币等具有明显震荡特性的市场。
-
-## 策略原理
-
-双重均线震荡交易策略由两部分组成:
-
-1. 2/20指数移动平均线。该指标在价格上涨突破20日线且下跌未跌破2日线时产生买入信号;价格下跌突破2日线且上涨未超过20日线时产生卖出信号。
-
-2. 自适应价格带震荡指标。该指标基于价格的波动范围构建价格带,通过价格突破上下价格带判断市场转折点,产生买入和卖出信号。 
-
-双重均线震荡交易策略是在2/20指数移动平均线和自适应价格带震荡指标同时发出信号时,才产生实际的交易信号,实现策略交易。这可以有效过滤掉部分无效信号,提高信号的质量。
-
-## 优势分析
-
-双重均线震荡交易策略结合利用均线指标和波动性指标的优势,具有以下特点:
-
-1. 可靠的交易信号。双重指标验证提高信号质量,有效过滤无效信号。
-
-2. 适应震荡行情。组合使用均线和价格带指标,可准确判定震荡行情中的转折点。 
-
-3. 操作频率适中。较双指数移动平均线策略,可以减少无效交易的发生。
-
-4. 容易实施自动交易。信号规则清晰,参数设定简单,易于编程实现自动交易。
-
-## 风险分析
-
-双重均线震荡交易策略也存在以下风险:
-
-1. 信号延迟可能较大。双重指标组合过滤信号,可能错过价格快速反转的机会。
-
-2. 震荡行情减弱时效果变差。策略主要依赖震荡行情,震荡性减弱时,交易信号和获利空间会随之减少。
-
-3. 参数优化影响显著。指标参数设置会对交易结果产生较大影响,需要进行系统优化确定最优参数。
-
-针对以上风险,可以采用动态调整参数的方法应对市场环境变化,同时设置止损策略控制亏损风险。
-
-## 优化方向  
-
-双重均线震荡交易策略可以从以下几个方面进行优化:
-
-1. 测试更多均线和价格带参数组合。系统地测试不同长度的均线和价格带参数,寻找最优参数组合。
-
-2.加入成交量指标过滤信号。结合交易量异常信号过滤均线价格信号,可进一步提高信号质量。  
-
-3. 设置动态止损机制。当市场震荡性减弱时,适当收紧止损点,减小单笔亏损。
-
-4. 结合深度学习模型。使用LSTM等深度学习模型对交易信号进行验证,使策略更加智能化。
-
-## 总结
-
-双重均线震荡交易策略通过组合2/20指数移动平均线和自适应价格带震荡指标,产生高质量的震荡交易信号,能够适应股指、外汇、大宗商品等波动性较大的市场,在震荡区间内进行频繁交易套利。该策略具有信号质量高、容易自动化实现等优势。同时也需要注意控制延迟识别转折点和动态调整参数的风险,在此基础上仍有很大的优化空间。
-||
 ## Overview
 
 The Double Moving Average Oscillation Trading Strategy generates trading signals by combining the 2/20 exponential moving average and the Adaptive Price Zone oscillation indicator to profit in oscillating markets. This strategy is mainly suitable for markets with obvious oscillation characteristics, such as stock index, forex, commodity and digital currency.  
@@ -121,7 +65,6 @@ The Double Moving Average Oscillation Trading Strategy can be optimized in the f
 
 The Double Moving Average Oscillation Trading Strategy generates high-quality oscillation trading signals by combining the 2/20 exponential moving average and the Adaptive Price Zone oscillation indicator, which can adapt to volatile markets such as stock index, forex, commodity with large fluctuations and conduct frequent trading arbitrage within the oscillation range. The strategy has advantages such as high signal quality and easy automation. At the same time, risks such as delayed identification of turning points and dynamic adjustment of parameters also need to be controlled, and there is still great room for optimization on this basis.
 
-[/trans]
 
 > Strategy Arguments
 

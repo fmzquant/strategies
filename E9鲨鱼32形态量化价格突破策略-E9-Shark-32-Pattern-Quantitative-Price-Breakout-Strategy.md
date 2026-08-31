@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/157f21fc7b785ed813d.png)
 
-[trans]
-#### 概述
-该策略是一个基于价格形态识别的量化交易系统,核心是识别并利用"鲨鱼32"这种特殊的K线形态进行交易。策略通过对高点和低点的连续性变化进行分析,在形态确认后设定关键价格水平,并在突破这些水平时进行交易。该策略结合了形态识别、趋势跟踪和价格突破等多个技术分析要素,建立了一个完整的交易系统。
-
-#### 策略原理
-策略的核心在于识别"鲨鱼32"形态,这种形态需要满足以下条件:前两根K线的低点连续走低,同时高点连续走高。当形态确认后,策略会锁定形态起始K线的高点和低点作为关键价格水平。系统在价格突破这些关键水平时开仓:当收盘价突破锁定的高点时做多,突破锁定的低点时做空。策略采用了投影目标线作为获利目标,止损位置则通过百分比参数来灵活设定。
-
-#### 策略优势
-1. 形态识别准确:通过严格的数学定义来识别形态,避免了主观判断
-2. 风险管理完善:包含了清晰的止损和获利目标设置
-3. 视觉反馈清晰:使用不同颜色的线条和背景来标示形态和交易信号
-4. 过滤重复信号:每个形态只允许执行一次交易,避免过度交易
-5. 目标设置合理:基于形态波动幅度来设定获利目标,具有良好的风险收益比
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡市场可能产生频繁的假突破信号
-2. 滑点风险:在快速行情中可能面临较大的滑点
-3. 单一形态依赖:过度依赖单一形态可能错过其他交易机会
-4. 参数敏感性:止损和获利目标的参数设置对策略表现影响较大
-
-#### 策略优化方向
-1. 加入成交量确认:可以结合成交量变化来确认突破的有效性
-2. 引入市场环境过滤:增加趋势强度指标来过滤不利的市场环境
-3. 优化止损方式:可以考虑使用动态止损来提高策略的适应性
-4. 增加时间过滤:加入交易时间段过滤来避免特定时段的波动
-5. 完善资金管理:增加仓位管理模块来优化资金利用效率
-
-#### 总结
-E9鲨鱼32形态量化价格突破策略是一个结构完整、逻辑清晰的交易系统。它通过严格的形态定义和清晰的交易规则,构建了一个可量化执行的交易策略。策略的风险管理体系完善,视觉反馈清晰,便于交易者理解和执行。通过建议的优化方向,策略还有进一步提升的空间。该策略适合追求系统化交易的投资者,但使用时需要注意市场环境的适应性和参数的优化。
-
-||
 
 #### Overview
 This strategy is a quantitative trading system based on pattern recognition, focusing on identifying and trading the "Shark-32" candlestick pattern. The strategy analyzes continuous changes in highs and lows, sets key price levels after pattern confirmation, and executes trades on breakouts of these levels. It combines pattern recognition, trend following, and price breakout elements to create a complete trading system.
@@ -71,7 +40,6 @@ The core principle lies in identifying the "Shark-32" pattern, which requires co
 
 #### Summary
 The E9 Shark-32 Pattern Quantitative Price Breakout Strategy is a well-structured trading system with clear logic. It builds a quantifiable trading strategy through strict pattern definitions and clear trading rules. The strategy features a comprehensive risk management system and clear visual feedback, making it easy for traders to understand and execute. Through the suggested optimization directions, there's room for further improvement. This strategy is suitable for investors seeking systematic trading approaches, but attention must be paid to market environment adaptability and parameter optimization.
-[/trans]
 
 
 

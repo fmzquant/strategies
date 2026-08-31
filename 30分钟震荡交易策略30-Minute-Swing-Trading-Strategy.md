@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略旨在使用30分钟时间框架识别中短线的震荡机会。它综合运用移动平均线、RSI指标等来判断行情方向和入场时机。
-
-主要交易逻辑:
-
-1. 计算两条加权移动平均线周期不同的均线,比较二者方向
-
-2. 计算RSI指标判断超买超卖现象
-
-3. 当RSI指标出现超卖区域时,考虑该点位的震荡交易机会
-
-4. 结合均线方向来确认具体的做多做空方向
-
-5. 入场后设定合理止损来控制风险
-
-该策略试图抓取中短线价格的反转机会,在严格的资金管理下,通过频繁交易实现资金的增长。
-
-## 策略优势
-
-- 30分钟能识别较短周期的震荡
-
-- RSI判断超买超卖许多反转机会
-
-- 加权移动平均线平滑价格
-
-## 策略风险
-
-- 需要频繁监控市场变化
-
-- 反转不存在确定性,可能出现亏损
-
-- 高频交易将增加交易成本
-
-## 总结
-
-该策略试图通过30分钟周期挖掘中短线震荡机会。但交易频率较高,需关注成本控制,并优化策略参数来实现持续盈利。
-
-
-||
 
 
 ## Strategy Logic
@@ -92,7 +50,6 @@ The strategy seeks to capture reversal opportunities in the medium-term, growing
 
 This strategy aims to uncover medium-term swing trades using 30-minute patterns. But higher trade frequency necessitates cost controls and parameter optimization for sustained profitability.
 
-[/trans]
 
 > Strategy Arguments
 

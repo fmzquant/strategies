@@ -9,66 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-该策略结合了动量指标随机指标K值以及波动率指标ATR,根据ATR的值来动态调整K值的止损线和入场线,实现了根据市场波动率自动调整止损线和入场线的思想。
-
-## 策略原理
-
-1. 计算长度为len的K值sma(stoch(close, high, low, len), smoothK),代表随机指标K值。
-
-2. 计算长度为len的ATR值atr(len)。 
-
-3. 根据ATR值绘制止损线plot(rsi(atr, len)+lowLine, ..., title = "low line")和入场线plot(rsi(atr, len)*-1+100-lowLine, ..., title = "up line")。
-
-4. 判断K值何时突破入场线crossover(k,up line)和止损线crossunder(k,low line),产生买入和卖出信号。
-
-5. 绘制买入卖出的背景颜色。
-
-6. 以上信号满足时进行买入卖出操作并设置止损。
-
-## 策略优势分析
-
-1. 该策略根据市场的波动率ATR来动态调整止损线和入场线,可以根据市场波动率自动适应调整止损风险。
-
-2. 当市场波动较大时,止损线和入场线间距拉大,可以避免止损被震出。
-
-3. 当市场波动平静时,止损线和入场线间距收窄,可以及时止损。
-
-4. 利用动量指标K值判定入场和出场。K值能反应价格变化速度,能捕捉转折点。 
-
-5. 结合动量指标和波动率指标,既可以捕捉趋势,又可以根据波动自动调整风险。
-
-## 策略风险分析
-
-1. K值容易产生虚假突破,可能引发不必要的交易信号。可以适当调整K值参数smoothK来平滑K线。
-
-2. ATR参数len设置过大,止损线和入场线间距过大,风险可能过高。可以测试不同len参数的稳定性。
-
-3. 纯跟踪止损无法确定止损位置是否合理,无法控制单次止损风险。可以考虑结合期望止损算法,控制单次止损风险。
-
-4. 策略信号频繁,交易费用较高。可以适当调整入场线参数lowLine,控制交易频率。
-
-## 策略优化方向  
-
-1. 测试调整K值参数smoothK,找到平滑K值的最优参数组合。
-
-2. 测试ATR参数len的不同取值,确定合适的ATR参数。
-
-3. 优化入场线参数lowLine,找到最优参数以控制交易频率。
-
-4. 考虑结合其它指标过滤入场信号,避免虚假突破。如结合交易量指标,KDJ指标等。
-
-5. 考虑优化止损方式,改进为期望止损,能主动控制止损风险。
-
-## 总结
-
-该策略基于动量指标K值和波动率指标ATR实现了动态调整止损线和入场线的思路,既可以捕捉趋势又可以根据波动自动调整风险,是一种非常创新和实用的策略思路。通过参数优化,改进止损方式等进一步优化,可以使策略更稳定可靠,具有非常好的发展前景。
-
-||
 
 
 ## Overview
@@ -127,7 +67,6 @@ This strategy combines the momentum indicator Stochastic K value and the volatil
 
 The strategy realizes the idea of dynamically adjusting stop loss and entry lines based on momentum indicator K values and volatility indicator ATR. It can capture trends and automatically adjust risks based on fluctuations, which is very innovative and practical. Further optimizations like parameter tuning, improving stop loss methods can make the strategy more stable and reliable, with great development prospects.
 
-[/trans]
 
 > Strategy Arguments
 

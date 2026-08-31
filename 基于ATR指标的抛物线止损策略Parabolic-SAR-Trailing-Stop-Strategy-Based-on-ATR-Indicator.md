@@ -11,19 +11,6 @@ ChaoZhang
 
 
 
-[trans] 
-本策略名称为“基于ATR指标的抛物线止损策略”。该策略利用ATR指标调整抛物线止损曲线的收缩速度,使其能够自适应市场波动率的变化。
-
-传统抛物线止损的加速因子固定不变,无法应对波动率的增大。本策略使抛物线的收缩速度随ATR值放大而加快,这样在波动加大时,止损曲线可以更快逼近价格,有效控制风险。
-
-具体来说,策略判断价格趋势方向后,根据ATR值计算出一个自适应加速因子,并据此绘制抛物线止损曲线。当价格突破止损线时,执行止损平仓。
-
-该策略的优点是使传统抛物线止损能够基于市场波动率进行动态调整。但ATR参数需要优化,且止损线容易过于敏感而被突破。
-
-总体而言,自适应止损对保护盈利和控制风险很重要。交易者应根据市场条件选择合适的止损指标,并进行参数测试与优化,才能发挥止损策略的最大效用。
-
-
-||
 
 
 This strategy is named "Parabolic SAR Trailing Stop Strategy Based on ATR Indicator". It uses the ATR indicator to adjust the acceleration factor of Parabolic SAR for adapting to changing market volatility.
@@ -36,7 +23,6 @@ The advantage of this strategy is making traditional Parabolic SAR stops dynamic
 
 In general, adaptive stops are important for protecting profits and limiting risks. Traders should choose suitable stop indicators based on market conditions, and test and optimize parameters, in order to maximize the utility of stop loss strategies.
 
-[/trans]
 
 > Strategy Arguments
 

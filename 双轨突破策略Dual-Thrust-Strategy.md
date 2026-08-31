@@ -9,84 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-双轨突破策略基于开盘价及前一天波动幅度设置上下轨,以突破上轨做多和突破下轨做空。该策略捕捉突破形成的趋势交易机会。
-
-## 策略原理
-
-1. 计算最近N根K线的最高价HH和最低价LL。
-
-2. 计算前一天的最高收盘价HC和最低收闭价LC。 
-
-3. 前一天波动幅度Range为HH-LC和HC-LL中的较大值。
-
-4. 上轨BuyLine为开盘价加上k1*Range。
-
-5. 下轨SellLine为开盘价减去k2*Range。
-
-6. 当收盘价上穿上轨时做多。当收盘价下穿下轨时做空。
-
-## 优势分析
-
-该策略主要优点:
-
-1. 抓住开盘价附近的突破形成的趋势交易机会。
-
-2. 上下轨基于历史波动自动设置,避免主观。
-
-3. k值可自定义,适应涨跌幅不同的品种。
-
-4. 突破形态清晰,信号质量较高。
-
-5. 可灵活设置持仓周期,捕捉不同级别趋势。
-
-## 风险分析
-
-该策略主要风险:
-
-1. 无法确定上下轨合理范围,存在过优化风险。
-
-2. 突破可能为假突破,须设置止损。
-
-3. 固定持仓时间无法动态响应行情。
-
-4. 回测周期较短,可能存在曲拟合。
-
-5. 多空双边交易,实现难度较大。
-
-对应解决方法:
-
-1. 优化k值参数,扩大数据回测范围。
-
-2. 设置合理止损位置,控制单笔损失。
-
-3. 增加趋势判断,避免逆势交易。 
-
-4. 考虑缩短持仓周期至当日。
-
-5. 实盘验证,分阶段逐步扩大仓位。
-
-## 优化方向
-
-该策略可考虑以下几点优化:
-
-1. 动态调整上下轨参数k值。
-
-2. 结合交易量等指标确认突破信号。
-
-3. 增加移动止损保护利润。
-
-4. 评估突破强弱,调整开仓手数。
-
-5. 区分趋势和区间,进行策略分解。
-
-## 总结
-
-双轨突破策略可以捕捉开盘价附近的趋势交易机会。但其参数设定和持仓时间优化空间较大,需要充分考虑风险控制。实盘时建议从保守参数开始,分批逐步扩大仓位。
-
-||
 ## Overview
 
 The dual thrust strategy sets upper and lower bands based on the opening price and previous day's range, going long on upside breakouts and short on downside breakouts. It aims to capture trend trading opportunities formed by the breakouts.
@@ -163,7 +85,6 @@ Some ways to improve the strategy:
 
 The dual thrust strategy can capture trend trading opportunities around the opening price. But parameter settings and holding period optimizations have large room for improvements considering risk control. For live trading, start with conservative parameters and size up positions gradually.
 
-[/trans]
 
 > Strategy Arguments
 

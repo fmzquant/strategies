@@ -9,79 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-BB%B策略是一个利用布林带指标的百分比B值来进行投资决策的量化交易策略。它可以在价格接近布林带上轨或下轨时,发出买入或卖出信号,属于趋势跟踪型策略。
-
-## 策略原理
-
-该策略首先计算 specifiedPeriod 天的收盘价的均线,以及标准差,然后得到布林带的上轨和下轨。BB%B指标是以当前价格减去下轨价,再除以上轨价减下轨价,表示当前价格在布林带内的位置。当BB%B低于oversold阈值时产生买入信号,高于overbought阈值时产生卖出信号。交易信号发出后,如果BB%B回落至相反阈值附近则平仓。
-
-具体来说,策略首先计算21天收盘价的SMA均线,以及2倍标准差得到布林带上下轨。然后计算当前收盘价的BB%B值。如果BB%B值低于-0.2(可配置)而当前无持仓,则做多;如果BB%B值高于1.2(可配置)而当前无持仓,则做空。平仓信号是当持多仓时BB%B值上穿1.0(可配置);持空仓时BB%B值下穿0.2(可配置)。
-
-该策略依赖BB%B指标判断目前价格是否过高或过低,以及依靠均线判断目前趋势方向,当价格超出布林带上下轨时产生交易信号。通过配置不同参数可以调整策略的频繁程度。
-
-## 优势分析
-
-- 利用布林带指标判断超买超卖
-
-布林带上轨和下轨分别代表了当前价格的一定标准差范围。当价格接近或触及上轨时代表着超买,接近或触及下轨时代表着超卖。BB%B策略充分利用了这一特性来判断合适的买入和卖出时机。
-
-- 配置灵活,可调整策略频繁程度
-
-策略中的BB%B阈值、均线参数、回落阈值都可以自由配置,这为调整策略的频繁程度提供了便利。使用更长均线和更大回落阈值可以减少交易频率。
-
-- 结合趋势判断
-
-除了布林带判断超买超卖外,还同时结合均线判断大趋势,避免逆势交易。
-
-- 回落机制可减少虚假信号
-
-当价格初次触碰布林带上轨或下轨时,标记为超买超卖的可能性大,但也可能是短期的虚假突破。此策略加入回落阈值,只有在BB%B明确回落至相反方向才会平仓,可过滤虚假信号。
-
-## 风险分析
-
-- 无法判断价格趋势
-
-该策略仅看布林带指标来判断价格可能反转,而忽略大趋势判断,可能导致逆势交易而亏损。
-
-- 回落阈值设置不当易错过机会
-
-回落阈值设置过大,可能导致趋势反转后无法及时切换持仓方向,错过机会。
-
-- 布林带扩张时买卖点价格差异变大
-
-当市场波动加大时,布林带上下轨间距离扩大,买卖点的价格差异变大,单笔亏损风险增大。
-
-- 交易频率较高
-
-相比长线策略,本策略交易频率较高,会产生更多的交易成本和滑点损失。
-
-## 优化方向
-
-- 结合趋势指标过滤信号
-
-可加入MACD,KDJ等趋势判断指标,只在趋势方向吻合时才发出交易信号,避免逆势交易。
-
-- 加入止损机制
-
-设定固定数值或百分比的止损,以控制单笔损失风险,防止亏损扩大。
-
-- 优化参数组合
-
-调整均线长度、BB%B阈值、回落阈值等参数,找到最优参数组合,以滤除更多噪音,提高策略稳定性。
-
-- 考虑交易成本因素
-
-根据不同品种的交易成本情况,调整策略的参数,降低交易频率,减少交易成本的影响。
-
-## 总结
-
-BB%B策略是一种简单实用的量化交易策略。它利用布林带判断价格可能反转的时机,配合均线判断大趋势,在超买超卖点附近进行交易。该策略配置灵活,可调整策略频繁程度。但也存在一定的风险,需要进一步优化,并考虑大趋势、止损、交易成本等因素,以提高策略稳定性和实际盈利能力。如果使用得当,BB%B策略可以成为量化交易体系中的一个有效组成部分。
-
-|| 
 
 
 ## Overview
@@ -154,7 +81,6 @@ For different products, adjust parameters to lower trading frequency based on th
 
 The BB%B strategy is a simple and practical quantitative trading strategy. It uses Bollinger Bands to identify potential reversal price points, combines with SMA for trend direction, and trades around overbought/oversold levels. The strategy is flexible to adjust frequency. But it also has risks that need further improvements, considering factors like overall trend, stop loss, trading costs, to enhance stability and profitability. When used properly, BB%B strategy can become an effective component in quantitative trading systems.
 
-[/trans]
 
 > Strategy Arguments
 

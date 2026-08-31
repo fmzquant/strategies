@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于单一指标——平滑海坚线,实现简单的趋势跟踪买卖操作。策略利用平滑海坚线指标识别趋势方向,结合历史K线形态判断入场时机,以获利退出。
-
-## 策略原理
-
-该策略通过计算移动平均线,构建平滑海坚线。具体来说,是计算开盘价、最高价、最低价、收盘价的移动平均线,然后计算平滑海坚线的开盘价、最高价、最低价、收盘价。
-
-判断买入条件:当前K线收盘价大于前一K线收盘价,前一K线收盘价大于前两K线收盘价,近三K线都是阳线。
-
-判断卖出条件:当前K线收盘价小于前一K线收盘价,前一K线收盘价小于前两K线收盘价,近三K线都是阴线。
-
-买入和卖出条件都要满足最近一次信号为0或相反信号,避免连续重复交易。
-
-## 优势分析
-
-- 使用单一指标,策略逻辑简单清晰
-- 利用海坚线指标的趋势跟踪能力
-- 结合K线形态,可避免错失趋势或反向操作
-- 通过过滤重复信号,可减少不必要交易
-
-## 风险分析
-
-- 海坚线具有滞后性,可能错过趋势转折点
-- 仅考虑近三K线形态,缺乏长期趋势判断
-- 未设置止损,可能导致亏损扩大
-- 未考虑大盘环境,容易受到系统性风险影响
-
-可通过结合其它指标判断长期趋势,优化止损策略,注意大盘环境等进行改进。
-
-## 优化方向  
-
-- 增加其它指标判断,确定长期趋势方向
-- 优化止损策略,设定移动止损或百分比止损
-- 考虑大盘指数,避免在震荡市中交易
-- 优化参数设定,调整移动平均线周期等参数
-- 增加量能指标,确保有成交量支持
-
-## 总结
-
-本策略利用海坚线指标的趋势跟踪功能,配合K线形态判断入场时机,通过过滤重复信号控制交易频率。策略逻辑简单清晰,容易实现。但可通过多指标组合、优化止损、关注大盘等进行改进,使策略更稳健可靠。
-
-||
 
 
 ## Overview
@@ -98,7 +53,6 @@ Improvements can be made by combining other indicators for long term trend, opti
 
 This strategy utilizes Heikin-Ashi's trend following ability and combines candlestick patterns to determine entry timing, while controlling trade frequency via filtering duplicate signals. The logic is simple and easy to implement. But it can be enhanced to be more robust by using multiple indicators combo, optimizing stop loss, considering overall market conditions etc.
 
-[/trans]
 
 > Strategy Arguments
 

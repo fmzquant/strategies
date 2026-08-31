@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fe0eb407587a51dbc8.png)
-[trans]
-
-## 概述
-
-Bullish Engulfing买卖策略是一种基于K线形态的量化交易策略。该策略通过识别“Bullish Engulfing”大阳吞噬K线形态来捕捉股票价格的反转机会,实现盈利。
-
-该策略的主要优势有:
-
-1. 基于成熟的技术分析理论,识别高概率的价格反转机会
-2. 简单直观的交易信号
-3. 风险可控
-
-### 策略原理
-
-该策略基于“Bullish Engulfing”大阳吞噬K线形态来判断价格反转。
-
-当股票处于下跌趋势时,如果出现一根实体较小的阴线K线,紧随其后的一根K线的实体完全吞没前一根K线的实体,并且收盘价高于前一根K线的最高价,即形成Bullish Engulfing大阳吞噬,预示着价格即将产生反转,股票价格将上涨。
-
-该策略会在识别到Bullish Engulfing形态时开仓做多,并设置止盈止损Exit,目标获利1%,止损1%,锁定盈利。
-
-### 策略优势分析
-
-该策略具有以下优势:
-
-1. 基于成熟的技术分析理论,Bullish Engulfing大阳吞噬是高概率的价格反转信号,可以有效捕捉价格反转机会。
-2. 交易信号简单直观,容易理解实现,适合量化交易。
-3. 采用股指期货等高流动性品种,可以实现高效率的进出场。
-4. 设置止盈止损Exit,可以很好控制单笔交易的损益比,保证盈亏结果,避免巨大亏损。
-5. 策略参数可以灵活调整,适应不同品种和市场环境。
-
-### 策略风险分析
-
-该策略也存在一些风险:
-
-1. 基于技术分析理论,存在一定的错误信号风险。
-2. 市场条件变化可能导致参数失效,需要调整。
-3. 止损设置过小可能导致小止损,设置过大可能增加亏损。
-
-针对上述风险,我们可以采取以下措施:
-
-1. 优化参数,验证不同市场下的有效性。
-2. 加大止损幅度,确保单笔止损控制在一个可承受范围。
-3. 采用指数或股指期货等流动性好、波动率适中的交易品种。
-
-### 策略优化方向
-
-该策略还可以从以下方面进行优化:
-
-1. 结合趋势指标过滤,例如加入均线判断,避免逆势交易。
-2. 增加止盈幅度,扩大盈利空间。
-3. 优化止损机制,例如随着价格运行逐步抬高止损,减少止损概率。
-4. 采用类似“Bullish Engulfing”的其他K线形态组合,形成交易组合。
-
-## 总结
-
-Bullish Engulfing买卖策略作为一种成熟的基于技术分析的量化交易策略,具有交易信号简洁明确、容易实现等优点。在参数优化、风险控制措施到位的情况下,可以实现稳定的盈利,值得推荐。
-
-||
 
 ## Overview
 
@@ -123,7 +65,6 @@ This strategy can also be enhanced by:
 
 The Bullish Engulfing buy and sell strategy is a mature quantitative trading strategy based on technical analysis, with the advantages of simple and clear trading signals that are easy to implement. With optimized parameters and good risk control measures, it can produce steady profits and is highly recommendable.
 
-[/trans]
 
 > Strategy Arguments
 

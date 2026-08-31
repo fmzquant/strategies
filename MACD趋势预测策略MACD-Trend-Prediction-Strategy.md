@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10073ca1f3c24d29565.png)
-[trans]
-
-
-## 概述
-
-MACD趋势预测策略是一种基于MACD指标和EMA指标的趋势跟随策略。该策略不像传统的MACD策略那样通过信号线的交叉生成交易信号,而是通过MACD指标线和信号线之间距离的变化来产生交易信号,以捕捉趋势的变化。
-
-## 策略原理
-
-1. 计算快线DEMAfast: 通过EMA方法计算快线的两次EMA均值MMEfast,然后根据公式DEMAfast=((2 * MMEfast) - MMEfastb)计算快线DEMAfast。
-
-2. 计算慢线DEMAslow: 通过EMA方法计算慢线的两次EMA均值MMEslow,然后根据公式DEMAslow=((2 * MMEslow) - MMEslowb)计算慢线DEMAslow。
-
-3. 计算MACD线: MACD线是快线DEMAfast减去慢线DEMAslow的差值LigneMACDZeroLag。
-
-4. 计算信号线: 通过EMA方法计算MACD线的两次EMA均值MMEsignal,然后根据公式信号线Lignesignal=((2 * MMEsignal) - MMEsignalb)。 
-
-5. 比较MACD线和信号线: 当MACD线大于信号线时产生买入信号;当MACD线小于信号线时产生卖出信号。
-
-6. 以上计算使用的是DEMA算法,可以有效减少MACD指标的滞后。
-
-## 策略优势
-
-1. 使用DEMA算法,可以减少MACD指标的滞后,使得交易信号更加灵敏。
-
-2. 不依赖MACD指标的交叉信号,而是通过MACD和信号线距离变化来捕捉趋势变化,可以更早进入趋势。
-
-3. 该策略对趋势的判断准确,profit factor可以达到1.6-3.5,收益表现较好。
-
-4. 策略逻辑简单清晰,容易理解实现,适合用于量化交易。
-
-## 策略风险
-
-1. MACD作为滞后指标,在盘整行情中可能产生大量无效交易信号。
-
-2. DEMA算法虽可减少滞后但无法完全消除,仍存在一定滞后。
-
-3. 作为趋势跟随策略,在震荡行情下收益可能不佳。
-
-4. 需要优化参数sma,lma,tsp等值,以适应不同周期和品种。
-
-5. 可能需要添加止损策略控制亏损。
-
-## 策略优化方向 
-
-1. 优化sma,lma,tsp参数以适应不同周期和交易品种。
-
-2. 添加类似ATR的动态止损策略,以控制每单亏损。
-
-3. 结合趋势判断指标,避免在震荡行情中交易。
-
-4. 添加交易量控制,根据市场波动程度调整仓位。
-
-5. 优化入场和出场逻辑,细化交易信号规则。
-
-## 总结
-
-MACD趋势预测策略通过改进MACD指标的计算方法,使用DEMA算法来减少滞后,并采用MACD和信号线距离变化判断趋势,作为趋势跟随策略,可以有效捕捉趋势变化, profit factor可达1.6-3.5,具有一定的优势。但仍需要进一步优化参数设置、止损策略、过滤震荡行情等,以适应更多市场环境,将是该策略的发展方向。
-
-||
 
 ## Overview
 
@@ -127,7 +67,6 @@ The MACD Trend Prediction Strategy is a trend following strategy based on the MA
 
 The MACD Trend Prediction Strategy improves the calculation of MACD by using the DEMA algorithm to reduce lag, and judges the trend through distance changes between MACD and signal lines. As a trend following strategy, it can effectively capture trend changes. The profit factor can reach 1.6-3.5, with certain advantages. But it still needs further optimization of parameters, stop loss strategies, filtering ranging markets, etc. to adapt to more market environments. This will be the development direction of this strategy.
 
-[/trans]
 
 > Strategy Arguments
 

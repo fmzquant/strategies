@@ -10,87 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1699377c94ac268c2ae.png)
-[trans]
-### 概述
-
-该策略的主要思想是在较大时间框架上识别趋势方向,并在较小时间框架上找突破点进场,止损exit则追踪较大时间框架上的移动平均线。
-
-### 策略原理
-
-该策略主要基于三个指标进行判断。
-
-第一,计算一个较长周期(如日线)的X日简单移动平均线,在价格站上该移动平均线时才允许买入。这可以用来判断总体趋势方向,避免交易震荡期。
-
-第二,计算一个较短周期(如5日)内的最高价Swing High,当价格突破该最高价时则触发买入信号。此处结合一个回看周期参数lb来寻找合适的突破点。
-
-第三,建立止损线。进入仓位后,止损线锁定在距离最近低点一定周期lbStop的最低价。同时设定一个移动平均线(如日线10日EMA)作为exit机制,当价格低于该移动平均线时退出仓位。
-
-该策略同时设定了ATR值来避免买入过扩的点位。此外还有回测时间范围等其他辅助条件。
-
-以上三个指标的交互判断,形成该策略的核心逻辑。
-
-### 策略优势分析
-
-这是一个突破追踪类策略,具有以下几点优势:
-
-1. 使用两个时间框架,避免被困于震荡市场的假突破。较长时间框架判断总体趋势,较短时间框架寻找具体入场点。
-
-2. 利用swing high形成的突破点,这类突破具有一定的惯性且容易形成追踪。同时回看周期lb参数可调整来寻找真正有效的突破。
-
-3. 止损方式比较严谨,追踪最近低点并留出一定缓冲距离,避免被刮盘。
-
-4. 使用移动平均线作为exit机制,可根据行情灵活止盈。
-
-5. ATR指标避免过度放量带来的风险。
-
-6. 可设置不同的参数组合来测试效果,优化空间较大。
-
-
-### 风险分析
-
-该策略也存在一定的风险:  
-
-1. 当价格在移动平均线附近上下震荡时,容易被反复切换进出仓位。这时会面临较高的手续费风险。
-
-2. 突破买入点靠近移动平均线时,会有比较大的回撤风险。这属于策略本身特点。
-
-3. 当行情不具有明显趋势时,持仓时间可能过长,面临时间风险。
-
-4. 需要合理设定ATR参数。ATR过小则过滤效果弱,过大则入场机会减少。
-
-5. 需要测试不同lb参数对结果的影响。过大parameters会错过部分机会,过小parameters可能识别假突破。
-
-
-风险解决方法:
-1. 适当调整移动平均线参数,增加过滤作用。
-2. 优化ATR参数,并辅以目测判断。
-3. 调整回看周期lb,寻找最佳参数。
-4. 在震荡行情中暂停交易。
-
-### 策略优化方向  
-
-该策略还可从以下维度进行优化:
-
-1. 测试不同的移动平均线参数组合,寻找最优参数。
-
-2. 尝试不同的ATR参数设置,平衡入场机会和风险控制。
-
-3. 优化回看周期lb参数,识别更有效率的突破。  
-
-4. 尝试建立动态止损,根据波动率和回撤控制风险。
-
-5. 结合交易量指标等其它因素判断突破的有效性。
-
-6. 开发>/',</,><等寻找极值点作为参考的方法。
-
-7. 尝试 Machine Learning 对参数进行训练得到最优参数
-
-
-### 总结  
-
-该策略整体是一个典型的突破追踪策略。双时间框架判断,Swing High识别入场时机,止损线和移动平均线双保险退出机制,形成了完整的逻辑体系。该策略风险和收益特征较为明确,适合中长线追踪类型的投资者。虽然存在一定的风险,但可通过参数优化和规则优化来降低风险水平。该策略有很大的改进空间,若结合更多指标判断可能进一步增强策略效果。
-
-|| 
 
 ### Overview
 
@@ -169,7 +88,6 @@ The strategy can also be optimized in the following dimensions:
 
 Overall, this is a typical breakout tracking strategy. Judging by dual timeframes, using Swing High to identify entry timing, and using stop loss line and moving average double insurance exit mechanisms form a complete logical system. The risk and return characteristics of this strategy are clear, suitable for medium and long term tracking investors. Although there are certain risks, they can be reduced by optimizing parameters and rules. The strategy has great room for improvement. Incorporating more indicators may further enhance the strategy effect.
 
-[/trans]
 
 > Strategy Arguments
 

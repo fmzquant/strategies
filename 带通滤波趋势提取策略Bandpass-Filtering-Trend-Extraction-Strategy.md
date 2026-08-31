@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1657295340f3d80b6cb.png)
-[trans]
-
-## 概述
-
-带通滤波趋势提取策略是一种基于带通滤波器的股票趋势跟踪策略。该策略使用指数加权移动平均线和带通滤波进行价格序列处理,提取出价格中的趋势成分,并以一定的参数作为建仓和平仓的信号。
-
-## 策略原理
-
-该策略首先构建一个双次指数加权移动平均线,通过调节参数Length和Delta控制移动平均线的时间长度和平滑度。然后使用一组数学变换,提取价格序列中的趋势成分,存储在xBandpassFilter变量中。最后计算xBandpassFilter的简单移动平均xMean作为建仓和平仓的指标。
-
-当xMean上穿参数Trigger设定的水平时做多头,当下穿时做空头。可以通过调节Trigger水平控制建仓和平仓的灵敏度。
-
-## 优势分析
-
-1. 使用双次指数加权移动平均线能有效滤除价格序列中的部分噪声,使得策略更稳定。
-2. 带通滤波器只提取价格序列中的趋势成分,避免被震荡行情误导,使策略更加稳定可靠。
-3. 策略参数较少,容易调优和控制风险。
-
-## 风险分析
-
-1. 策略存在时间滞后,可能错过价格快速反转的机会。 
-2. 双次指数加权移动平均线和带通滤波器都有低通滤波的效果,会过滤掉高频信号,降低策略的灵敏度。
-3. 如果参数设定不当,过滤效果过强,可能错过较强的趋势机会。
-
-可以通过适当缩短Length参数改善滞后问题,调节Trigger水平控制策略的灵敏度。
-
-## 优化方向
-
-1. 可以考虑加入止损策略控制单笔损失。
-2. 可以通过短期和长期双均线系统改善策略的稳定性。
-3. 可以结合市场交易量等其他指标判断反转信号,避免在震荡行情中被套牢。
-4. 可以使用机器学习或遗传算法优化参数,使策略更加稳定可靠。
-
-## 总结  
-
-该策略整体较为稳定,在强势趋势市场中表现较好。可以通过多种方式进一步优化,使其在更多市场环境下保持稳定盈利。该策略值得进一步研究和应用。
-
-||
 
 
 ## Overview
@@ -85,7 +47,6 @@ Shortening Length can improve lag issues. Tuning Trigger controls sensitivity.
 
 The strategy is relatively stable with good performance in strong trending markets. Further optimizations in multiple market environments can make it more reliably profitable. It warrants further research and application.
 
-[/trans]
 
 > Strategy Arguments
 

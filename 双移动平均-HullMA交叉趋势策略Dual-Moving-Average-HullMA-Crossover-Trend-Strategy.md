@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11db85fc63a5ef3853d.png)
-[trans]
-## 概述
-
-双移动平均 HullMA交叉趋势策略是一种基于双移动平均线交叉的趋势跟踪策略。它使用加权移动平均线WMA构建双移动平均系统,并在它们交叉时生成交易信号。该策略同时结合价格突破判断,进一步过滤信号。
-
-## 策略原理  
-
-双移动平均 HullMA交叉趋势策略使用三条不同周期的WMA线,包括wma1、wma2和wma3。wma2和wma3构建双移动平均系统,当wma2上穿wma3时为看涨信号,而wma2下穿wma3时为看跌信号。wma1是辅助判断线。 
-
-该策略额外使用Hull移动平均加强信号判断。具体来说,它计算2日加权移动平均线的两倍n2ma和n日加权移动平均线nma的差值,并测度差值数值的变化。只有当差值上升时才会确认看涨信号有效,差值下降时才会确认看跌信号有效。
-
-该策略同时结合价格判定。只有在价格比前一日价格高时,才会确认看涨信号有效生成做多单。只有价格比前一日价格低时,才会确认看跌信号有效生成做空单。
-
-## 优势分析
-
-双移动平均HullMA交叉趋势策略结合双移动平均交叉和价格判定,可以有效滤除假信号,这是它的最大优势。此外,该策略运用三条不同周期的移动平均线捕捉不同级别的趋势,可以在趋势初期就进入市场。它的止损清算方式也比较稳定可靠。
-
-## 风险分析  
-
-双移动平均HullMA交叉趋势策略作为一种趋势跟踪策略,在盘整行情中容易产生较多交易次数和滑点损失。此外,双移动平均线交叉系统过于敏感,可能在 sideways发出错误信号。建议适当调整移动平均线参数,或增加附加过滤条件。
-
-## 优化方向  
-
-双移动平均HullMA交叉趋势策略可以从以下几个方面进行优化:
-
-1. 优化移动平均线参数,找到最优参数组合
-
-2. 增加成交量或者波动率等过滤器,排除假突破
-
-3. 结合其它指标作为辅助判断,提高信号质量 
-
-4. 动态优化移动平均周期参数
-
-## 总结
-
-双移动平均HullMA交叉趋势策略整体来说是一个稳定可靠的趋势跟踪策略。它结合双移动平均交叉和价格判定产生高质量信号。通过参数优化和添加过滤器,可以进一步减少错误信号,从而获得更好的策略表现。该策略适用于捕捉中长线趋势,是量化交易的一个不错选择。
-
-||
 
 ## Overview
 
@@ -85,7 +47,6 @@ The Dual Moving Average HullMA Crossover Trend strategy can be improved in the f
 
 In summary, the Dual Moving Average HullMA Crossover Trend strategy is a stable and reliable trend-following strategy. It produces high-quality signals by combining dual moving average crossover and price validation. Through parameter tuning and adding filters, it can further reduce incorrect signals and achieve better performance. It is suitable for catching medium- to long-term trends and a solid choice for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

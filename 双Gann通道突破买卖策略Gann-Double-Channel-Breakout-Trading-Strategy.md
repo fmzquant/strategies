@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-双Gann通道突破买卖策略
-
-本策略基于Gann的双通道理论设计。Gann认为,股价在一个通道内波动,用均线加减波动带构建上下通道。当股价突破通道时,代表趋势发生转折。本策略运用这个理论,构建双通道系统,发现趋势,进行买卖操作。
-
-策略原理
-
-1. 构建内外两条Gann通道。内通道参数为均线81日,带宽为标准差1倍。外通道参数为均线81日,带宽为标准差2倍。
-
-2. 当收盘价从下向上突破内通道时,进行买入操作。这表示股价可能进入新的上涨趋势。 
-
-3. 当收盘价从上向下突破内通道时,进行卖出操作。这表示股价可能进入新的下跌趋势。
-
-4. 外通道作为止损线。如果突破内通道买入后,股价重新跌破外通道下限,则止损离场。如果突破内通道卖出后,股价重新涨破外通道上限,则止盈离场。
-
-该策略的优势在于:
-
-1. 使用双通道系统,可以更准确判断趋势转折点。内外通道发散,有效避免了假突破。 
-
-2. 采用突破方式建仓,可以跟踪趋势。
-
-3. 双通道止损止盈,可以有效控制风险。
-
-该策略的风险在于:
-
-1. 市场震荡时,通道可能被多次突破,产生错误信号。应适当调整参数,确保通道稳定。
-
-2. 突破通道时,容易近高买入近低卖出。应注意点位选择。
-
-3. 止损止盈点过于接近,可能会被短期调整触发。应适当放宽止损范围。
-
-总之,本策略运用双Gann通道判断趋势转折点,采取突破操作方式,在盈利和风险控制之间取得平衡。通過优化参数,严格控制风险,该策略可以获得较好的效果。但任何技术策略都可能出现失效的市场情况,投资者仍需谨慎对待,与自身风险偏好相匹配使用。
-
-||
 
 
 
@@ -77,7 +42,6 @@ Risks of this strategy:
 
 In conclusion, this strategy identifies trend reversals using double Gann channels, adopts a breakout trading approach, and balances profit-taking with risk control. With optimized parameters and strict risk management, it can achieve good results. But no technical strategy works in all market conditions. Investors should apply it with caution and align it with their own risk tolerance.
 
-[/trans]
 
 > Strategy Arguments
 

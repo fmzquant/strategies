@@ -9,73 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略基于对数移动平均聚合散波指标(Logarithmic MACD)生成交易信号。它通过计算快速和慢速对数移动平均线的差值,判断市场趋势和机会。
-
-## 策略原理
-
-该策略的主要逻辑是:
-
-- 计算快速对数移动平均线(默认12日)和慢速对数移动平均线(默认26日)
-
-- 对数MACD 是二者的差值,表达市场动量
-
-- 信号线是MACD的平滑移动平均(默认9日)
-
-- 当MACD线从下方突破信号线时做多
-
-- 当MACD线从上方跌破信号线时做空
-
-- 采用柱状图形式表达MACD和信号线差值
-
-相比简单移动平均MACD,对数MACD可突出显示指数级增长市场的变化趋势。对数转换后,波动较大的数值在图表上可以保持相对可比性。
-
-## 策略优势 
-
-- 利用对数转换,可检测指数级别的价格变动
-
-- 对数MACD突显价格波动信息
-
-- 信号线平滑MACD,形成交易信号
-
-- 柱状MACD直观表达趋势方向
-
-## 策略风险
-
-- 对数转换可能放大价格震荡
-
-- 信号频繁,容易过度交易
-
-- 未考虑止损管理,风险控制不完备
-
-对应措施:
-
-- 调整参数,降低信号频率
-
-- 增加过滤条件,避免在震荡中产生信号
-
-- 设定止损策略,控制单笔损失
-
-## 策略优化方向
-
-- 优化参数,提高稳定性
-
-- 尝试其他指数转换方式,如指数移动平均线
-
-- 结合趋势指标过滤信号
-
-- 增加止损策略
-
-- 利用机器学习判断信号可靠性
-
-## 总结
-
-该策略运用对数转换提升了MACD指标的敏感性,能更早发现趋势变化。但需注意控制交易频率。通过参数优化、风控等提升,该策略可成为一个稳定且富有个性的量化交易系统。
-
-|| 
 
 ## Overview 
 
@@ -141,7 +74,6 @@ Mitigations:
 
 The logarithmic transform enhances MACD's sensitivity for early trend detection. But trade frequency should be controlled. With optimizations in parameters, risk management etc., this strategy can become a stable and unique quantitative system.
 
-[/trans]
 
 > Strategy Arguments
 

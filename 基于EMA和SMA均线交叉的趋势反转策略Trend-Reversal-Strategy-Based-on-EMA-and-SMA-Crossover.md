@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/140aee86bb0a4105b6a.png)
-[trans]
-
-## 概述
-
-该策略目的是通过20周期的指数移动平均线(EMA)和20周期的简单移动平均线(SMA)的交叉来识别潜在的趋势反转点。根据交叉的方向来决定做多或者做空的机会。
-
-## 策略原理  
-
-1. 当20周期EMA从下方上穿20周期SMA且收盘价高于20周期EMA时,做多。
-2. 当20周期EMA从上方下穿20周期SMA且收盘价低于20周期EMA时,做空。
-3. 对于做多单,当20周期EMA下穿20周期SMA时平仓。  
-4. 对于做空单,当20周期EMA上穿20周期SMA时平仓。
-
-该策略使用ta库的crossover和crossunder函数来检测均线的交叉。
-
-## 优势分析
-
-该策略结合了移动平均线的趋势跟踪功能和均线交叉的信号产生,具有以下优势:  
-
-1. 移动平均线能有效过滤掉部分市场噪音,识别出中长期趋势。
-2. 均线交叉容易操作,可以清晰地判断市场走势转折点。  
-3. 20周期的参数设置对大部分股票和时间周期有效,无需频繁调整。
-4. 利用收盘价与EMA的关系避免了部分假信号。
-5. 规则清晰简单,容易理解和实现,适合程度较低的投资者。
-
-## 风险分析  
-
-该策略也存在以下风险:  
-
-1. 移动平均线存在滞后性,可能错过短期和剧烈的趋势反转。
-2. 均线交叉容易产生噪音信号,影响策略稳定性。
-3. 固定20周期的参数设置可能对部分股票不太适用,需要调整。  
-4. 没有停损机制,可能带来较大的单笔损失。
-
-对策:
-
-1. 适当缩短均线周期,加快反应速度。
-2. 增加其他过滤条件,避免假信号。 
-3. 对参数和股票类别进行测试和优化。
-4. 加入止损方式,控制风险。
-
-## 优化方向  
-
-该策略还可以从以下方面进行优化:  
-
-1. 增加其他指标判断,构建复合策略,如加入成交量,RSI等指标。
-2. 对均线周期和交易品种进行测试优化,设定自适应参数。
-3. 构建动态退出机制,如趋势跟踪止损、时间止损等。
-4. 加入算法交易功能,实现自动交易。
-5. 增加机器学习算法,实现策略的自适应和优化。
-
-## 总结
-
-该策略整体来说较为简单和实用,通过运用均线交叉理论识别潜在的趋势反转点,是一种常见而有效的策略思路。但也存在一定的改进空间,通过添加其他技术指标、动态参数设定、止损方式以及算法交易等方式可以使策略 becomes unmonitorable准确可靠并且自动化。总的来说,该策略为量化交易入门提供了一个很好的思路和模板。
-
-||
 
 ## Overview  
 
@@ -120,7 +64,6 @@ The strategy can also be improved in the following aspects:
 
 The strategy is relatively simple and practical overall, identifying potential trend reversal points through moving average crossover theory. But there is also room for improvement via additional indicators, dynamic parameters, stop losses, algorithmic trading etc. to make the strategy more robust, reliable and automated. In summary, it provides a good template for getting started with quantitative trading.  
 
-[/trans]
 
 
 

@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c356819981dccd7d45.png)
-[trans]
-
-## 概述
-本策略名称为“基于趋势追踪的动量突破策略”。该策略利用超级趋势指标判断当前趋势方向,并结合K线实体的方向进行趋势追踪,实现动量突破交易。
-
-## 策略原理
-该策略主要依靠超级趋势指标(SuperTrend)判断目前的趋势方向。超级趋势指标结合平均真实波幅(ATR)计算上轨和下轨,价格突破上轨时为看涨信号,价格跌破下轨时为看跌信号。
-
-当超级趋势指标判断为上升趋势时,如果这根K线为红实体(收盘价低于开盘价),则做多;当超级趋势指标判断为下降趋势时,如果这根K线为绿实体(收盘价高于开盘价),则做空。这样就实现了趋势追踪下的动量突破交易。
-
-## 优势分析
-这种策略结合趋势判断和动量特征,能够有效过滤假突破,增强交易信号的有效性。此外,追踪趋势进行交易,避免了逆势操作,大大提高盈利概率。
-
-优势总结如下:
-1. 结合趋势判断和动量特征,过滤假突破
-2. 追踪趋势实体方向,避免逆势交易
-3. 盈利概率较高
-
-## 风险分析
-该策略主要存在以下几方面的风险:
-
-1. 超级趋势指标如何设定参数的问题。参数设置不当,可能导致指标判断失误,产生错误信号。
-2. 仅跟踪实体方向,无法判断实体强弱,可能存在亏损风险。
-3. 固定盈亏比无法动态调整,无法控制单笔亏损。
-
-对策如下:
-1. 对超级趋势指标参数进行优化,使指标判断更准确。 
-2. 结合交易量,资金流等指标判断实体的强弱。
-3. 增加动态止损来控制单笔亏损。
-
-## 优化方向  
-这种策略可以从以下几个方向进行优化:
-
-1. 结合更多技术指标进行信号过滤,如布林线,KDJ等,增强策略效果。
-2. 增加机器学习算法,实现参数的动态优化,使超级趋势指标更稳定。
-3. 加入止损机制,能够在亏损扩大前止损出场。
-4. 采用期货等具有双向交易特点的品种,充分利用看涨看跌双向操作机会。
-
-## 总结
-本策略总体来说非常适合中短期持仓。结合趋势判断和突破动量特征,能有效过滤噪声,提高交易胜率。同时该策略也存在一定的参数优化空间,通过进一步优化可以获得更好的策略效果。
-
-||
 
 ## Overview
 The strategy is named "Trend Following Momentum Breakout Strategy". It uses the Super Trend indicator to determine the current trend direction and combines it with the direction of candlestick bodies for trend following trading to achieve momentum breakouts.
@@ -91,7 +49,6 @@ This strategy can be optimized in the following aspects:
 
 ## Summary 
 In general, this strategy is very suitable for medium and short term positions. By combining trend judgment and breakout momentum, it can effectively filter out noise and improve win rate. At the same time, there is still room for parameter optimization to obtain better strategy performance.
-[/trans]
 
 > Strategy Arguments
 

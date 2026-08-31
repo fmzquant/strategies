@@ -10,68 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/691c599e08238f0325.png)
-[trans]
-## 概述
-
-这个策略运用布林带指标,分析不同时间帧(1分钟、3分钟、5分钟和15分钟)的加密货币价格变动,寻找买入和卖出的机会。它作为加密货币市场情绪的基准,主要关注比特币的5分钟价格。当比特币价格突破布林带上轨时,认为情绪处于“看涨”状态;反之,当比特币价格跌破布林带下轨时,认为情绪转为“看跌”。策略会在不同币种的不同时间帧上观察布林带的上轨破裂或下轨突破的形态,这些形态通常表明市场情绪和趋势发生转变,因此是进行买入卖出操作的信号。
-
-## 策略原理
-
-该策略同时在1分钟、3分钟、5分钟和15分钟的时间帧上计算布林带。布林带由n天(默认20天)的移动平均线及其标准差的若干倍(默认1.5倍)组成。移动平均线表示该币种在一定时间内的平均价格,标准差则反映价格波动的幅度。当价格接近或突破布林带上轨时,表示市场处于高位且波动加大,价格可能反转下跌;当价格接近或跌破布林带下轨时,表示市场处于低位且波动加大,价格可能反转上涨。
-
-该策略运用布林带指标的这一特性,在不同时间帧(1分钟、3分钟、5分钟和15分钟)判断市场的最新进展。当3分钟或5分钟时间帧上的价格突破布林带上轨或下轨时,且1分钟和15分钟时间帧上也出现相关迹象时,该策略判断市场发出了最新买入卖出信号。此外,策略还会参考比特币的5分钟时间帧,判断整个加密货币市场的总体走势和市场情绪(多空氛围),作为参考信号。综合这些因素,策略决定是买入还是卖出。
-
-在开仓后,策略还会设置止损止盈条件。如果持仓价格上涨或下跌了25%,则设置为止盈;如果价格相反方向上涨或下跌超过25%,则设置为止损。
-
-## 策略优势
-
-1. 该策略综合判断市场的短期和中期走势。1分钟和5分钟时间帧判断市场最新进展,15分钟时间帧判断中期趋势,能够有效避免被市场短期波动误导。
-
-2. 该策略同时关注布林带中轨、上轨和下轨的突破,避免错过买入卖出机会。
-
-3. 比特币作为市场基准和市场情绪晴雨表,能够提高决策的准确性。
-
-4. 设置了止盈止损条件,可以有效控制风险。
-
-## 策略风险
-
-1. 布林带突破形态具有一定的滞后性,可能错过最佳入场时机。
-
-2. 如果加密货币市场整体发生系统性风险像passwords等黑天鹅事件,该策略难以有效应对。
-
-3. 虽然设置了止盈止损,但突发事件导致超过止损幅度也会造成较大损失。
-
-4. 策略参数如时间长度、标准差倍数等设置不当,会导致交易信号质量下降。
-
-对应的解决方法:
-
-1. 结合更多指标判断,确定最佳入场时机。
-
-2. 增加对市场系统性风险的评估。
-
-3. 适当缩小每次交易的仓位规模和止损幅度。 
-
-4. 优化参数设定,进行回测验证。
-
-## 策略优化
-
-1. 增加更多时间帧判断,如30分钟或60分钟布林带指标。
-
-2. 根据不同币种的特点,选择更合适的布林带参数,提高指标效果。
-
-3. 增加交易量等指标判断。因为成交量能验证价格变动的可靠性。
-
-4. 结合Stoch RSI、MACD等其他指标,提高决策准确性。这些指标能够显著提高对市场实际走势的判断。
-
-5. 对比不同币种间的价格走势和相关性,选择最有操作空间的交易对象。
-
-6. 优化止盈止损策略,通过事后统计分析确定最优参数。
-
-## 总结
-
-本策略是一种多时间帧布林带加密货币交易策略。它关注市场中短期和中期时间尺度上的价格变动,运用布林带指标判断市场的MULIT多空状态。同时它以比特币价格作为市场基准和参考信号,辅助判断整个加密货币市场的总体走势。该策略具有参考时间帧多样、止盈止损完善等优点,能够有效把握市场机会的同时控制风险,值得推荐。未来可通过进一步优化如新增指标组合、参数调整等手段,进一步提升策略收益率。
-
-||
 
 ## Overview
 
@@ -133,7 +71,6 @@ Corresponding solutions:
 
 This is a multi-timeframe Bollinger Bands cryptocurrency trading strategy. It focuses on price developments across short-term and mid-term time horizons, leveraging Bollinger Bands to gauge the MULTI bullish/bearish status of the market. Meanwhile, it uses Bitcoin's price levels as benchmarks and references to help determine the overall trend in the broader cryptocurrency market. With its versatility in incorporating multiple timeframes, plus robust profit taking and stop loss mechanisms, this strategy can effectively capitalize opportunities and control risks. Going forward, its performance can be further enhanced by optimizations like integrating more indicators and fine-tuning parameters via backtesting.
 
-[/trans]
 
 > Strategy Arguments
 

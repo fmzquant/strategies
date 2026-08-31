@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18ef70b95608e5f3d6f.png)
-[trans]
-
-## 概述
-
-MACD配信交叉策略通过计算快速移动平均线和慢速移动平均线的差值形成MACD,再计算MACD的移动平均线形成配信线,当MACD上穿或下穿配信线时产生交易信号。该策略结合双均线思想,捕捉股价中期趋势的转折点,属于典型的跟踪止损策略。
-
-## 策略原理
-
-该策略首先计算快速移动平均线fastMA和慢速移动平均线slowMA。快速移动平均线参数为12日,慢速移动平均线参数为26日。然后计算两条移动平均线的差值,形成MACD。再以9日参数计算MACD的移动平均线,得到配信线signal。当MACD上穿或下穿配信线时,发出交易信号。
-
-策略优势在于捕捉股价中期趋势的转折点。快慢均线组合过滤掉短期价格波动的噪音,能抓住中期价格趋势。MACD在股价发生中期转折时会突破配信线,产生比较明确的交易信号。
-
-## 优势分析
-
-MACD配信交叉策略结合双均线思想,利用快速移动平均线和慢速移动平均线组合过滤短期噪音,只捕捉股价中长期趋势转折点。相比单一价格指标,能产生更少假信号。
-
-MACD本身较敏感,能灵敏反映价格变化趋势。配信线的加入能过滤掉更多短期假信号。只有中期趋势明确改变,MACD上下突破配信线,才会产生信号。
-
-在可持续上升行情,MACD多数时间维持高于配信线,能顺势捕捉多头机会。同理,在持续下跌行情,MACD也能维持多空格局,及时给与空头信号。
-
-## 风险分析
-
-由于策略买卖点信号完全依赖移动平均线的交叉,如果行情震荡较大,会产生较多假信号,导致频繁止损。策略实际盈亏并不理想。
-
-股价突破配信线并不能完全确保中期趋势就此改变。仅凭单一技术指标作为买点信号具有一定盲目性,时间点选择可能欠准确。
-
-在瞬息万变的市场中,仅凭双均线指标的交叉作为定阈值,可能会错过更多交易机会。更复杂强势行情中,该策略也会产生明显滞后。
-
-## 优化方向  
-
-1. 增加流动性和波动性过滤指标,降低开仓频率,避免无效交易。如增加成交量,动态调整移动平均线参数等。
-
-2. 结合其它多个技术指标,形成指标组合,提高信号质量。短期指标与中长期指标相结合,能更全面判断市场结构。 
-
-3. 增加机器学习算法,训练出更符合当前市场环境的参数和注意阈值,减少人工干预。
-
-4. 结合VIX等恐慌指数预测前期市场走势和波动性,动态调整参数,更好利用MACD机会。
-
-## 总结  
-
-MACD配信交叉策略利用双均线交叉原理产生交易信号。通过快慢均线的差值画图,股票中期价格趋势变化会有明显特征。配信线的加入也有效过滤了部分噪音讯号。该策略在捕捉较为明确的中期趋势转折时,具有一定优势。但MACD和配信线的交叉无法完全确定市场结构发生根本改变,需谨慎对待交易信号。建议与其它多种技术指标组合使用,也可考虑增加机器学习优化。
-
-||
 
 ## Overview  
 
@@ -94,7 +51,6 @@ In the ever-changing market, using the crossover of double moving averages alone
 
 The MACD Crossover with Signal strategy uses the principle of double moving average crossover to generate trading signals. Drawing the price graph by the difference between fast and slow moving averages, medium-term price trend changes will have obvious characteristics. The addition of the signal line also effectively filters out some noisy signals. The strategy has some advantages in capturing relatively clear medium-term trend reversals. However, the crossover of MACD and signal line cannot fully determine the fundamental change in market structure, and trading signals need to be treated with caution. It is recommended to use in combination with other technical indicators, and machine learning optimization can also be considered.
 
-[/trans]
 
 > Strategy Arguments
 

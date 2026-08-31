@@ -10,24 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略名称为“基于多指标集成的趋势追踪策略”。该策略整合运用RSI、ADX和MACD三个指标,在确认上涨趋势后进行做多,在确认下跌趋势后进行平仓。
-
-RSI指标判断超买超卖状态。RSI上穿30代表超卖结束,考虑做多;RSI下穿70代表超买结束,考虑平仓。
-
-ADX指标判断趋势力度。ADX值上穿25意味着进入趋势状态,下穿25代表趋势结束。
-
-MACD指标判定短期趋势。DIFF上穿DEA代表短线上涨,考虑做多。DIFF下穿DEA代表短线下跌,考虑平仓。
-
-当RSI、ADX和MACD三指标同时显示多头信号时,进行做多。当三指标显示多头趋势结束时,进行平仓。
-
-该策略的优势在于多指标确认,可以有效防止出现假信号。但指标参数需要单独优化,且止损策略不可或缺。
-
-总体来说,指标集成应用提高了判断效果,但交易者仍需保持辨别力,根据实际情况调整并验证策略参数。
-
-
-
-||
 
 
 
@@ -45,7 +27,6 @@ The advantage is using multiple indicators for confirmation can effectively prev
 
 In summary, indicator integration improves judgment effectiveness, but traders still need discretion to adjust and validate strategy parameters based on actual conditions.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ce35655f0109f09471.png)
 
-[trans]
-
-
-## 概述
-
-该策略融合了三个不同维度的技术指标,即支撑阻力位、均线系统和超买超卖指标,根据它们的综合信号判断短期趋势方向,以获取较高的胜率。
-
-## 策略原理
-
-代码中首先计算出价格的支撑阻力位,包括标准振荡轴和费波纳奇支撑阻力位,并绘制在图表上。当价格突破这些关键位时,视为重要的趋势信号。 
-
-然后是计算加权移动平均线VWAP和均价,判断它们的黄金交叉和死叉信号。这属于中长期趋势判断。
-
-最后是计算Stochastic RSI指标,判断它的黄金交叉和死叉信号,属于超买超卖指标。
-
-综合这三个维度的指标,如果支撑阻力位、VWAP均线、Stochastic RSI同时发出买入信号,就开多单;如果三者同时发出卖出信号,就开空单。
-
-## 优势分析
-
-该策略最大的优势在于结合了三个不同维度的指标,使判断更全面准确,胜率较高。首先支撑阻力位判断大趋势;其次VWAP判断中长线趋势;最后Stochastic RSI判断超买超卖情况。三维指标同时发出信号,可以大大过滤假信号,提高入场的成功率。
-
-另外,策略加入了止盈功能,可以锁定一定比例收益,有利于资金管理。
-
-## 风险分析
-
-该策略主要风险在于多空决策依赖指标同步发出信号,如果部分指标发出错误信号,则可能导致决策错误。例如Stochastic RSI发出超买信号,但VWAP和支撑阻力判断仍为看涨,此时就可能错过买点而不入场。 
-
-另外,指标参数设置不当也会导致信号判断错误,需要通过反复回测找出最优参数。
-
-此外,股市短期内常有黑天鹅事件出现,导致指标失效。要防范这种风险,可以加入止损策略,避免单笔损失过大。
-
-## 优化方向
-
-该策略可以从以下几个方面继续优化:
-
-1. 加入更多指标信号,如成交量指标,判断趋势强弱,提高决策准确率。
-
-2. 增加机器学习模型,对多维指标进行训练,自动寻找最优交易策略。
-
-3. 根据不同品种参数进行优化,设置自适应参数。
-
-4. 增加止损策略,以及根据回撤控制仓位大小,更好控制风险。
-
-5. 进行组合优化,找到相关性低的品种进行组合,降低组合回撤。
-
-## 总结
-
-该策略整体来说非常适合短期趋势交易。它利用多维指标进行决策,可以过滤掉大量噪音,胜率较高。但仍需注意指标发出错误信号的风险,通过继续优化,该策略有望成为高效稳定的短线策略。
-
-||
 
 ## Overview
 
@@ -108,7 +58,6 @@ The strategy can be further improved in the following aspects:
 
 Overall this strategy is well suited for short-term trend trading. By combining signals across dimensions, it can filter out significant noise for higher win rate. But risks of erroneous signals remain that can be improved on through further enhancements. With continued optimization, this strategy has the potential to become an efficient and robust short-term system.
 
-[/trans]
 
 > Strategy Arguments
 

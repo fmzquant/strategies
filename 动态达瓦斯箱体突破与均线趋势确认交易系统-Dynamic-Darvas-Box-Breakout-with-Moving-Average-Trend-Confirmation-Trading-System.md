@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1191b5ea6ced73fead6.png)
 
-[trans]
-#### 概述
-本文介绍的是一个结合达瓦斯箱体(Darvas Box)和25周期移动平均线(MA25)的趋势跟踪交易系统。该策略通过识别价格盘整区间形成的箱体,并结合均线趋势确认,在突破时捕捉强势行情。系统设计充分考虑了趋势延续性和假突破过滤,为交易者提供了一个完整的市场进出场框架。
-
-#### 策略原理
-策略主要包含三个核心组成部分:
-1. 达瓦斯箱体的构建:系统通过计算过去5个周期的最高价和最低价来确定箱体边界。箱体顶部由新高点确定,底部由相应区间内的最低点确定。
-2. 均线趋势确认:引入25周期简单移动平均线作为趋势过滤器,只有当价格位于MA25之上时才考虑开仓。
-3. 交易信号生成:
-   - 买入信号:价格突破箱体顶部且位于MA25之上
-   - 卖出信号:价格跌破箱体底部
-
-#### 策略优势
-1. 趋势跟踪能力强:
-   - 通过箱体突破捕捉趋势起始
-   - 结合MA25过滤,确保在主趋势方向交易
-2. 信号质量优化:
-   - 双重确认机制降低假突破风险
-   - 明确的进出场条件,避免主观判断
-3. 风险控制完善:
-   - 箱体底部自然形成止损位
-   - MA25提供额外的趋势保护
-
-#### 策略风险
-1. 震荡市场风险:
-   - 频繁突破可能导致连续止损
-   - 建议在强趋势市场使用
-2. 滞后性风险:
-   - 箱体形成需要时间,可能错过部分行情
-   - MA25作为中期均线存在一定滞后
-3. 资金管理风险:
-   - 需要合理设置每次交易的资金比例
-   - 建议结合波动率动态调整仓位
-
-#### 策略优化方向
-1. 参数优化:
-   - 可根据不同市场特征调整箱体周期
-   - MA周期可以根据市场周期特征调整
-2. 信号增强:
-   - 可添加成交量确认机制
-   - 考虑引入动态止损机制
-3. 风险控制增强:
-   - 添加波动率过滤器
-   - 实现动态仓位管理
-
-#### 总结
-该策略通过结合经典的达瓦斯箱体理论和移动平均线趋势跟踪,构建了一个稳健的交易系统。系统的主要优势在于能够有效捕捉趋势性行情,同时通过多重过滤机制控制风险。虽然存在一定的滞后性,但通过合理的参数优化和风险管理,该策略能够在趋势市场中获得稳定表现。建议交易者在实盘使用时,重点关注市场环境的选择,并根据实际情况动态调整参数设置。
-
-|| 
 
 #### Overview
 This article introduces a trend following trading system that combines Darvas Box and 25-period Moving Average (MA25). The strategy identifies price consolidation zones through box formation and confirms trends with moving averages to capture strong market movements during breakouts. The system design thoroughly considers trend continuation and false breakout filtering, providing traders with a complete framework for market entry and exit.
@@ -107,7 +58,6 @@ The strategy consists of three core components:
 
 #### Summary
 The strategy builds a robust trading system by combining classic Darvas Box theory with moving average trend following. Its main advantage lies in effectively capturing trending markets while controlling risk through multiple filtering mechanisms. Although there is some inherent lag, the strategy can achieve stable performance in trending markets through proper parameter optimization and risk management. Traders are advised to focus on market environment selection and dynamically adjust parameters based on actual conditions when implementing the strategy.
-[/trans]
 
 
 

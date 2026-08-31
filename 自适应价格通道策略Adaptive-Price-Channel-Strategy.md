@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/147dfee40cdf202a140.png)
-[trans]
-
-### 概述
-
-该策略是一种基于平均真实范围(ATR)指标和平均方向指数(ADX)的自适应价格通道策略。它旨在识别价格运动中的盘整市场和趋势,并相应进行交易。
-
-### 策略原理
-
-1. 计算最近length根K线的最高价(HH)和最低价(LL)。同时计算length根K线上的ATR。
-
-2. 根据价格的上涨和下跌计算+DI和-DI,再计算ADX。
-
-3. 如果ADX<25,则判断为盘整市场。此时如果收盘价高于价格通道上限(HH - ATR乘数*ATR),做多;如果收盘价低于价格通道下限(LL + ATR乘数*ATR),做空。
-
-4. 如果ADX>=25且+DI>-DI,则判断为牛市。此时如果收盘价高于价格通道上限,做多。
-
-5. 如果ADX>=25且+DI<-DI,则判断为空头市场。此时如果收盘价低于价格通道下限,做空。
-
-6. 进入仓位后,若超过exit_length根K线未止损,则强制止损平仓。
-
-### 优势分析
-
-1. 该策略可自动适应市场环境。在盘整市场采用价格通道策略,在趋势市场跟随趋势方向交易。
-
-2. ATR和ADX指标的运用确保了策略的自适应性。ATR用于调整价格通道的宽度,ADX用于判断市场趋势。
-
-3. 强制止损机制有助于策略的稳定性。
-
-### 风险分析
-
-1. ADX判断产生错误信号的概率较大。
-
-2. ATR和ADX指标设置不当可能导致策略效果差。
-
-3. 无法有效规避行情突变的风险。
-
-### 优化方向  
-
-1. 优化ATR和ADX指标的参数,使自适应效果更好。
-
-2. 增加止损线以降低亏损风险。
-
-3. 增加 filter条件过滤错误信号。
-
-### 总结
-
-自适应价格通道策略综合运用多种指标和机制,在不同行情环境下采取不同策略,具有一定的自适应性和稳定性。但由于指标设置和参数选择的局限性,该策略也面临一定的误判风险。未来的优化方向在于参数优化、风险控制等方面。
-
-|| 
 
 ### Overview  
 
@@ -105,7 +56,6 @@ This strategy is an adaptive price channel strategy based on the Average True Ra
 ### Conclusion
 The strategy combines indicators and mechanisms to adapt across market conditions. But misjudgements can happen due to indicator limitations. Future optimizations on parameters and risk control.
 
-[/trans]
 
 > Strategy Arguments
 

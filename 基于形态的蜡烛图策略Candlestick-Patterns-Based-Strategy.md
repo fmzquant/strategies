@@ -9,76 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略基于蜡烛图形态,识别不同的蜡烛线形态信号,进行趋势跟踪交易。结合止损、止盈、移动止损等风险管理手段,旨在降低市场波动对策略的影响。
-
-## 策略原理
-
-该策略主要基于以下蜡烛形态进行信号判断:
-
-- 吞没形态:识别多头吞没和空头吞没形态
-- 引力线/乌云盖顶:识别多头引力线和空头乌云盖顶形态 
-- 十字星:识别多头十字星和空头十字星形态
-- 早晨之星/黄昏之星:识别多头早晨之星和空头黄昏之星形态
-- 捉腰带线:识别多头和空头捉腰带线形态
-- 三只乌鸦/三只白兵:识别三只乌鸦和三只白兵形态
-- 南方三星:识别南方三星形态
-- 吐司线:识别吐司线形态
-- 会议线:识别多头和空头会议线形态
-- 脚踢线:识别多头和空头脚踢线形态
-- 梯底:识别梯底形态
-
-当识别到上述蜡烛信号时,在次柱开盘价附近按固定止损止盈下单,进行趋势跟踪交易。同时结合移动止损、移动止盈进行风险管理。
-
-此外,策略还加入均线过滤器,只有在价格突破均线时才考虑信号。
-
-## 策略优势
-
-1. 基于经典蜡烛形态,具有一定的 Universal 属性。
-
-2. 严格遵循形态规则进行机械交易,不受主观影响。
-
-3. 止损止盈设置合理,最大程度控制单笔交易风险。
-
-4. 加入移动止损止盈机制,能够随市场调整止损线。
-
-5. 均线过滤增加判断依据,避免被套。
-
-
-## 风险及对策
-
-1. 蜡烛形态存在一定识别错误率,可能出现假信号。可以适当调整形态参数,过滤无效形态。
-
-2. 静态止损无法完全规避市场突发事件的风险。可以设置较宽止损,或采用移动止损。
-
-3. 该策略对交易时段较敏感,无法 24 小时运行。可以调整交易时间,或加入集合竞价过滤。
-
-4. 均线过滤可能错过部分机会。可以降低均线周期,或取消均线过滤。
-
-5. 多头信号与空头信号无法同时把握,存在难以同时获利的局限。可以分别针对多头和空头制定策略,分时运行。
-
-## 优化方向
-
-1. 优化蜡烛形态的参数,提高识别效果。
-
-2. 测试不同的移动止损方式,寻找最优方案。
-
-3. 尝试更先进的风险管理手段,如资金管理、波动率止损等。 
-
-4. 加入更多滤波指标,提高过滤效果。
-
-5. 尝试机器学习等方法,建立蜡烛形态的判断模型。
-
-6. 开发能同时兼顾多头和空头信号的策略逻辑。
-
-## 总结
-
-本策略运用经典蜡烛形态进行趋势判断,以机械化的方式进行交易。通过严格的止损和移动止损管理风险,以及均线过滤提高判断效果。该策略具有易于理解、容易实现的优点,但也存在一定的识别错误和获取定制化参数的难题。未来可通过引入更多技术指标和机器学习等方式进行优化,以获得更好的策略效果。
-
-||
 
 ## Overview
 
@@ -154,7 +84,6 @@ It also adds a moving average filter to avoid taking signals when price is on th
 
 This strategy uses classical candlestick patterns for trend detection and trades mechanically based on the signals. It manages risks by strict stop loss and trailing stop, and improves logic by adding MA filter. The strategy is easy to understand and implement, but also has some issues like misidentification and difficulties in parameter tuning. Future optimizations can be done by introducing more technical indicators and machine learning models to achieve better performance.
 
-[/trans]
 
 > Strategy Arguments
 

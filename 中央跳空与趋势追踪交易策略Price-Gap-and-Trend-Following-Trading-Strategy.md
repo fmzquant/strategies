@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/7c129eec8be5b76642.png)
 
-[trans]
-
-## 概述
-
-该策略利用CCI指标和动量指标结合RSI指标来识别市场趋势,在超买超卖区发现跳空现象时进场,同时利用布林带来识别趋势和回归中枢。策略可以有效识别突破与回调,在趋势开始阶段就进场,并且可以通过参数调整自由适应不同品种的交易。
-
-## 策略原理
-
-首先,策略通过CCI指标或者动量指标的零轴上穿和零轴下穿来判断买入和卖出信号。同时,要求RSI指标处于超买超卖区,即RSI高于65时为超买区,低于35时为超卖区。这样可以避免在非超买超卖区发出错误信号。 
-
-另外,策略可以选择是否判断RSI的bullish divergence(略微上升)和bearish divergence(略微下降),以确保买卖信号更可靠。
-
-当符合CCI或动量的买入信号,并且RSI处于超卖区时,策略会判断前一高点和低点是否都在布林带中枢上方,如果是,则产生买入信号。反之,当符合卖出信号,并且前一高低点都在布林带中枢下方时,产生卖出信号。
-
-这样,策略同时利用趋势指数和震荡指数,能在趋势开始时及时捕捉,并利用中枢判断避免假突破。当价格脱离布林带上下轨时,策略会全平以锁定利润并防止回撤扩大。
-
-## 优势分析
-
-1. 结合趋势指数和震荡指数,能够在趋势开始时就进入,同时避免在震荡市场无谓开仓
-
-2. 利用布林带中的枢结合跳空为入场信号,可以有效过滤假突破
-
-3. 回看RSI指标的历史走势,进一步防止产生错误交易信号
-
-4. 全自动交易,不需要人工干预,适合算法交易
-
-5. 策略参数可以自由调整,适应不同交易品种
-
-6. 能够设定止损止盈,有效控制风险
-
-## 风险分析
-
-1. 布林带参数设置不当可能导致中枢判断失效
-
-2. 指标参数设置不当,可能导致产生过多错误信号
-
-3. 突破失败,价格再次回调到布林带中枢时需要及时止损
-
-4. 交易品种流动性不足时,突破效果可能不佳
-
-5. 交易前需校验历史数据是否充足,避免曲线拟合不佳
-
-6. 需要关注交易时段,避免假突破
-
-## 优化方向
-
-1. 优化布林带参数,使中枢更稳定
-
-2. 测试不同指标参数对不同品种的效果
-
-3. 增加交易量控制,避免单笔仓位过大
-
-4. 增加对时段的判断,在主要交易时间操作
-
-5. 增加机器学习算法,使信号产生更智能
-
-6. 接入更多数据源,判断市场总体走势
-
-7. 增加对更多指标的集成,形成指标组合
-
-## 总结
-
-本策略整合趋势指数和震荡指数,在趋势开始时就可以进入市场。同时利用布林带中的枢结合跳空为入场信号,可以有效避免假突破。策略参数可以灵活调整,适应不同品种,回测效果优异。下一步将通过优化参数设置和模型融合使策略更稳健可靠,从而获得长期稳定的超额收益。
-
-||
 
 
 ## Overview
@@ -140,7 +75,6 @@ Thus the strategy utilizes both trend and oscillation indicators, to get in a tr
 
 This strategy integrates trend and oscillation indicators to capture trends early. With Bollinger Band mean and price gaps it avoids false breakouts effectively. Flexible parameters adapt to different products with great backtest results. Next steps are to optimize parameters and model ensemble for more robustness, and achieve consistent excess returns in the long run.
 
-[/trans]
 
 > Strategy Arguments
 

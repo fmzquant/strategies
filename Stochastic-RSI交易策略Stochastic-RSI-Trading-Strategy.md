@@ -9,78 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是基于Stochastic RSI指标的交易策略。Stochastic RSI指标是结合随机指标Stochastic和相对强弱指数RSI而产生的一个 oscilllator 指标。该策略通过 Stochastic RSI的多空线穿越进行判断,产生交易信号。
-
-## 策略原理
-
-1. 计算close的14周期RSI,即rsi1。
-
-2. 基于rsi1计算Stochastic K和D值。
-
-3. K值大于80时做多,小于20时做空。
-
-4. K线和80、20水平线交叉时平仓。 
-
-5. 可选择正向交易或者反向交易。
-
-6. 设置交易品种和周期后,回测查看策略效果。
-
-## 优势分析
-
-该策略主要优势:
-
-1. Stochastic RSI综合了RSI和Stochastic的优点,是一种很好的震荡指标。
-
-2. 结合超买超卖区域判断,可以过滤假突破。
-
-3. 可配置反向交易,适用于看跌机会。
-
-4. 规则简单直观,容易理解实现。
-
-5. 可视化的指标和交易信号,操作容易。
-
-
-## 风险分析
-
-该策略主要风险:
-
-1. 未考虑止损设置,存在大额损失风险。
-
-2. 随机指标容易产生假信号,需要结合趋势过滤。
-
-3. 未控制仓位数量,存在超仓风险。
-
-4. 未设置参数优化方法,参数容易过拟合。
-
-5. 没有考虑交易成本的影响。
-
-6. 回测数据不充分可能导致曲拟合。
-
-## 优化方向  
-
-该策略可以从以下几点进行优化:
-
-1. 设置止损机制,优化止损点位。
-
-2. 优化参数组合,降低假信号。
-
-3. 增加仓位数量和杠杆控制。
-
-4. 加入趋势判断指标,避免逆势交易。
-
-5. 考虑交易成本的影响。
-
-6. 使用更长的时间周期和不同品种进行回测验证。
-
-## 总结
-
-Stochastic RSI策略结合了RSI和Stochastic指标的优势,使用多空线穿越产生交易信号。该策略简单易操作,但存在一定的假信号风险。通过优化止损策略、参数选择、趋势判断等手段,可以继续改进该策略,使之成为一个较为可靠的短线交易策略。
-
-||
 
 ## Overview
 
@@ -150,7 +78,6 @@ The strategy can be improved by:
 
 The Stochastic RSI strategy combines the strengths of RSI and Stochastic oscillators, generating signals when the lines cross key levels. Despite being simple to use, the strategy risks false signals. Further enhancements around stops, parameters, trend filters can help create a more robust short-term trading system.
 
-[/trans]
 
 > Strategy Arguments
 

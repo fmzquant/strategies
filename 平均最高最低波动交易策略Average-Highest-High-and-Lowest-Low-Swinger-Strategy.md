@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10d948d2cf189afcf51.png)
-[trans]
-
-## 概述
-
-这个策略是针对如加密货币和股票等具有趋势性特征的市场而专门设计的完整价格行情策略。它纯粹依据两种不同长度周期的最高价和最低价的计算而制定。通过计算这些最高最低价的多个平均值作为入场和出场的信号。
-
-## 策略原理
-
-该策略使用两个不同长度周期的最低价和最高价及其平均值来判断入场和出场。具体来说,它分别计算9周期和26周期的最低价平均值、最高价平均值,以及这两个平均值的平均值。当收盘价同时高于两个不同周期平均价时做多,当收盘价同时低于两个不同周期平均价时做空。
-
-做多的具体逻辑是:收盘价高于9周期最高最低价平均值、高于26周期最高最低价平均值、高于两个平均值的平均值,满足这三个条件时做多。
-
-做空的具体逻辑是:收盘价低于9周期最高最低价平均值、低于26周期最高最低价平均值、低于两个平均值的平均值,满足这三个条件时做空。
-
-无论做多做空,当有反向信号出现时选择止损离场。
-
-## 优势分析
-
-这个策略有以下几个主要优势:
-
-1. 使用双时间框架分析,可以更清楚判断趋势,增加精确度。
-
-2. 建立在最高价和最低价上的计算,可以有效抓住突破。
-
-3. 使用多个平均值过滤增加信号的可靠性,避免被 noise 干扰。
-
-4. 纯粹的价格行情策略,适用于大多数有趋势特征的市场。
-
-5. 完全自动化交易,无需人工干预,降低人为错误概率。
-
-## 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 没有集成止损模块,存在亏损扩大的风险。可以加入移动止损或百分比止损来控制单笔损失。
-
-2. 在震荡行情中容易产生错误信号和过度交易。可以适当调整周期参数或加入过滤条件。 
-
-3. 没有考虑到个股和市场之间关系的影响,仍存在系统性风险。可以考虑多因子模型来控制这类风险。
-
-4. 回测数据不足可能导致过拟合。应在更长时间尺度和更多市场中进行稳健性检验。
-
-## 优化方向  
-
-该策略还存在一定优化空间:
-
-1. 周期参数可以继续测试优化,找到最佳参数组合。
-
-2. 可以考虑加入移动止损、跟踪止损来控制单笔损失。
-
-3. 可以测试不同市场甚至不同品种,探索适用性。
-
-4. 可以加入一定的算法交易模块,如机器学习等来辅助决策。
-
-5. 可以考虑多因子模型,加入更多变量判断,提高稳健性。
-
-## 总结
-
-总的来说,这个双时间框架最高最低价平均值策略,具有较强的趋势跟踪能力,适合于加密货币等高波动市场。它有效利用突破判断入场时机,同时使用多层过滤提高信号质量。可通过参数优化、止损模块增加、辅助算法等手段进一步增强该策略,使其成为一个值得长期持有使用的高效稳定策略。
-
-||
 
 
 ## Overview
@@ -131,7 +70,6 @@ There is still some room for optimization in this strategy:
 
 In summary, this dual time frame highest high and lowest low average strategy has strong trend tracking capabilities and is suitable for high volatility markets like cryptocurrencies. It effectively uses breakout judgments for entry timing, while using multiple layers of filtering to improve signal quality. Parameters optimization, addition of stop loss module, auxiliary algorithms and other means can be used to further enhance the strategy, making it an efficient and stable strategy worth holding for the long term.
 
-[/trans]
 
 > Strategy Arguments
 

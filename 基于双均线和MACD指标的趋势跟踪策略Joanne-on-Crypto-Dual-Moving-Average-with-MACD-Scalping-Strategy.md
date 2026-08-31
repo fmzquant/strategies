@@ -10,74 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b82e03f96ff5eb4862.png)
-[trans]
-
-
-## 概述
-
-本策略的核心思想是结合双均线和MACD指标来判断趋势方向,实现趋势跟踪交易。当短期均线上穿长期均线时,判断为看涨机会;当短期均线下穿长期均线时,判断为看跌机会。MACD指标用来判断买卖点,当MACD柱上穿0轴时看涨,下穿时看跌。
-
-## 策略原理
-
-1. 计算快线EMA(12日线)、慢线EMA(26日线)和信号线EMA(9日线)。
-
-2. 计算MACD柱线(快线-慢线)和MACD信号线(MACD的9日线)。
-
-3. 计算50日线和200日线作为判断大趋势的均线。
-
-4. MACD柱线上穿0轴作为看涨信号,下穿0轴作为看跌信号。
-
-5. 快线上穿慢线并且短期均线上穿长期均线作为看涨信号。
-
-6. 快线下穿慢线并且短期均线下穿长期均线作为看跌信号。 
-
-7. 每次均线方向改变后,允许进场几次交易,通过Max trades after EMA cross参数控制。
-
-8. 进场后通过止损止盈平仓。
-
-## 策略优势
-
-1. 双均线判断大趋势,避免逆势交易。
-
-2. MACD判断买卖点,能及时捕捉趋势转换。
-
-3. 结合双均线和MACD指标,能在趋势中捕捉较好的入场时机。
-
-4. 设置最大交易次数,避免追涨杀跌。
-
-5. 止损止盈机制控制风险。
-
-6. 可通过参数优化获得更好的Parameter Combination。
-
-## 策略风险
-
-1. 大趋势判断错误,导致逆势交易亏损。可适当放宽均线差距要求,确保捕捉到大趋势。
-
-2. MACD买卖信号存在滞后,可能导致入场过早或过晚。可调整MACD参数,也可以结合其他指标过滤信号。 
-
-3. 止损止盈设置不当,可能过于宽松或过于收紧,导致止损过多或止盈不足。需针对不同品种进行参数优化测试。
-
-4. 参数优化困难,不同品种和时间周期需要不同参数组合,需大量前置测试工作。
-
-## 策略优化方向 
-
-1. 尝试其它均线指标判断大趋势,如KD指标。
-
-2. 尝试结合其它指标辅助MACD过滤信号,如布林带、ATR止损。
-
-3. 优化止损止盈参数,针对不同品种分别测试找到最佳参数组合。 
-
-4. 利用步进优化和随机优化方法寻找更优参数组合。
-
-5. 增加降低交易频次的机制,如MACD零轴附近设置成交禁区。
-
-6. 针对多品种自动进行参数优化和组合优化。
-
-## 总结
-
-本策略综合运用双均线判断大趋势和MACD判断买卖点的优点,形成一个较强的趋势跟踪策略。通过参数优化和指标组合还可进一步提升策略表现。总体来说,该策略具有较强的抗风险能力和盈利空间,值得考量在实盘中应用。但仍需针对不同品种分别进行参数优化测试,以确保策略稳定性。
-
-|| 
 
 ## Overview
 
@@ -143,7 +75,6 @@ The core idea of this strategy is to combine dual moving averages and MACD indic
 
 This strategy combines the strengths of dual MAs for trend direction and MACD for entry timing to create a robust trend following system. Additional performance gains are possible through parameter optimization and combining indicators. Overall, it has strong risk management and profit potential to be considered for live trading. But parameter testing is still required for each product to ensure robustness.
 
-[/trans]
 
 > Strategy Arguments
 

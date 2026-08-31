@@ -9,85 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略结合MACD和DEMA双轨指标,通过多空线金叉死叉形成交易信号。策略捕捉MACD指标转折时机,利用DEMA滤波去噪实现较优入场。
-
-## 策略原理
-
-1. 计算快线DEMAfast,取价格的DEMA值,周期length为fastmacd。
-
-2. 计算慢线DEMAslow,取prices的DEMA值,周期length为slowmacd。
-
-3. MACD线为快慢线差值:DEMAfast - DEMAslow。
-
-4. Signal线为MACD线的DEMA值,周期length为signalmacd。
-
-5. 多空线交叉作为交易信号:金叉做多,死叉做空。
-
-6. 添加年月日过滤,只在指定日期范围发出信号。
-
-## 优势分析 
-
-该策略主要有以下优点:
-
-1. 结合MACD和DEMA,指标互补。MACD捕捉转折,DEMA滤波提高信号质量。
-
-2. DEMA双轨设计可减少MACD指标的滞后性和噪声。
-
-3. 多空线交叉易于判断,信号生成简单清晰。
-
-4. 可灵活设置交易日期范围,适应不同策略需求。 
-
-5. MACD参数可优化组合,灵活应对多种行情。
-
-## 风险分析
-
-该策略主要风险如下:
-
-1. MACD作为趋势跟踪指标,不适合震荡横盘市。
-
-2. 多空交叉可能产生假信号,须有效过滤。
-
-3. 止损策略不完善,容易止损过大。 
-
-4. 参数优化不全面,不同品种效果差异大。
-
-5. 交易日期过滤过于死板,须动态调整。
-
-对应解决方法:
-
-1. 结合动量指标,避免横盘。
-
-2. 增加价格条件,过滤假交叉信号。
-
-3. 设定合理初始止损与追踪止损。
-
-4. 测试多品种参数效果,动态优化。
-
-5. 根据实时行情调整过滤日期。
-
-## 优化方向
-
-该策略可考虑以下几点优化:
-
-1. 增加成交量指标进行信号过滤。
-
-2. 优化MACD参数组合,测试不同品种数据。
-
-3. 设置止损策略,如固定止损、追踪止损等。
-
-4. 根据市场波动程度动态调整止损位置。
-
-5. 跟踪趋势强弱,调整仓位大小。
-
-## 总结
-
-MACD DEMA策略结合双指标优势,利用交叉信号捕捉趋势。但MACD本质具有滞后性,需注意过滤假信号。此外,止损策略需优化减少非理性止损。实盘时,建议基于参数优化结果谨慎入场,持续优化。
-
-|| 
 
 ## Overview 
 
@@ -165,7 +86,6 @@ Some potential improvements for the strategy:
 
 The MACD DEMA strategy combines the strengths of both indicators, using crossovers to capture trends. But MACD is inherently lagging, beware of false signals. Also optimize stops to avoid unreasonable liquidation. For live trading, cautious entry based on optimized parameters and continuous improvements are recommended.
 
-[/trans]
 
 > Strategy Arguments
 

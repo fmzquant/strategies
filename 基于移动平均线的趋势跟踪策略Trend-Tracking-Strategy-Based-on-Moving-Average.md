@@ -9,60 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-本策略通过计算不同周期的移动平均线,识别目前的趋势方向,并结合RSI指标发出买卖信号。当短期移动平均线上穿长期移动平均线时认为趋势向上,进行买入操作。当短期移动平均线下穿长期移动平均线时认为趋势反转,进行卖出操作。同时结合RSI指标来避免因少量价格波动造成的假信号。
-
-## 策略原理
-
-1. 计算10日、20日、50日、100日和200日的简单移动平均线。
-
-2. 计算14日RSI值。
-
-3. 当10日SMA上穿50日SMA,且RSI大于30,且20日SMA高于或等于100日SMA 或 50日SMA高于或等于100日SMA时,进行买入。
-
-4. 设置止损价格为买入点乘以1减去止损百分比。
-
-5. 当发生以下情况时,进行卖出:
-    - 10日SMA下穿50日SMA,且收盘价低于20日SMA:趋势反转卖出
-    - 收盘价低于买入价的95%:止损卖出 
-    - 收盘价低于止损价格:趋势跟踪止损卖出
-
-该策略通过移动平均线判断市场趋势方向,并设定止损来控制风险。RSI指标用于过滤假突破。当短期SMA上穿长期SMA时买入,表明趋势向上,持股时设置止损线进行风险控制。当发生趋势反转信号或止损价格被触发时卖出股票。
-
-## 优势分析
-
-- 使用移动平均线判断趋势方向,买入趋势向上阶段,可以避免交易盘整震荡市
-- 采用多周期移动平均线,避免被短期价格波动误导
-- 结合RSI指标来过滤假信号
-- 设置止损线来控制单笔损失风险
-- 采用趋势跟踪止损来锁定利润
-
-## 风险分析
-
-- 移动平均线存在滞后,可能错过价格反转的最佳时机
-- 止损设置过于宽松可能带来较大的单笔损失
-- 止损设置过于紧密可能造成止损过于频繁
-- 趋势跟踪止损可能过早离场错失更大利润
-
-可以通过调整移动平均线周期、调整止损点位等方法进行优化。也可以考虑结合其他指标来提高决策的准确性。
-
-## 优化方向
-
-- 调整移动平均线周期,使其更符合不同市场环境
-- 优化RSI参数,提高对超买超卖的判断准确性
-- 根据不同品种特点,设置合理的 static 止损位和 trail stop 幅度
-- 增加其他指标判断,避免出现假信号
-- 可根据波动率等指标动态调整止损点位
-- 可通过机器学习方法自动优化参数
-
-## 总结
-
-本策略整体思路清晰,使用移动平均线判断趋势,并设定止损来控制风险,是一种较为典型的趋势跟踪策略。通过参数调优和加入其他判断指标,可以进一步提高策略回测和实盘表现。但任何策略都无法完美,需要根据市场环境进行不断调整与优化,配合风险管理来应对市场的不确定性。
-
-||
 
 
 ## Overview
@@ -116,7 +62,6 @@ Optimization can be done via adjusting moving average periods, stop loss levels 
 
 The strategy has clear logic overall, using moving averages for trend determination and setting stop loss to control risks. It is a typical trend tracking strategy. Further improvements can be achieved via parameter tuning and adding other indicators. But no strategy is perfect, continuous adjustments and optimizations are needed to cope with market uncertainties, together with proper risk management.
 
-[/trans]
 
 > Strategy Arguments
 

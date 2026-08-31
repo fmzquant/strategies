@@ -11,39 +11,6 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/c45b109a257f178e41.png)
-[trans]
-
-## 概述
-
-该策略是一个基于简单移动平均线(SMA)、指数移动平均线(EMA)、Keltner通道、MACD指标、随机指标(Stochastic)的短线量化交易策略。它根据价格是否突破SMA和EMA的方式,结合Keltner通道、MACD指标、Stochastic指标的多空信号,实现自动化的交易入场和出场。
-
-## 策略原理
-
-该策略使用25周期的SMA、200周期的EMA构建双移动平均线指标。当价格从下向上突破双移动平均线时产生买入信号;当价格从上向下突破双移动平均线时,产生卖出信号。
-
-同时,该策略使用10周期构建Keltner通道,价格突破通道上轨和下轨也会作为辅助信号。MACD指标通过快线、慢线和MACD柱形图产生买卖信号。Stochastic指标通过%K线和%D线的金叉死叉也组成多空信号。
-
-具体来说,当收盘价高于SMA和EMA,且处于Keltner通道内部,MACD柱形图为负值,Stochastic%K值低于50时,产生买入信号,做多;当收盘价低于SMA和EMA,且处于Keltner通道内部,MACD柱形图为正值,Stochastic%K值高于50时,产生卖出信号,做空。
-
-## 策略优势
-
-1. 使用双移动平均线结合通道指标,能有效过滤市场假突破。
-2. 综合多种技术指标信号,能够提高信号的可靠性。 
-3. 多空信号规则清晰,程序化执行效率高。
-4. 适用于短线频繁交易的量化策略。
-
-## 策略风险及优化
-
-1. 作为短线交易策略,存在一定的交易频率过高风险。
-2. 没有止损机制,存在较大亏损风险。
-3. 可考虑加入波动率指标,优化开仓及止损条件。
-4. 可测试不同周期参数的优劣,寻找最佳参数组合。
-
-## 总结
-
-该策略整合了移动平均线、通道指标、MACD指标和Stochastic指标四种常用技术指标。通过价格的突破与不突破来判断多空,属于典型的短线量化交易策略。相比单一指标,它综合运用多指标判断能提高信号准确性,值得进一步测试优化。
-
-||
 
 ## Overview
 
@@ -75,7 +42,6 @@ Specifically, when close price is above both SMA and EMA, and within the Keltner
 
 This strategy integrates four commonly used technical indicators - moving averages, channel, MACD and Stochastic. It determines long/short based on price breakthrough, a typical short-term quantitative trading strategy. Compared to single indicator strategies, its multiple indicator combination improves signal accuracy and is worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

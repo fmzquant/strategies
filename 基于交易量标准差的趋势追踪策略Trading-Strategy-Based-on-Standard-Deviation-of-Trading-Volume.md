@@ -11,60 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b5c6a6aef4d8336bc7.png)
 
-[trans]
-
-## 概述
-
-该策略利用交易量的移动平均线和标准差构建交易量模型,结合价格的移动平均线判断趋势方向,在交易量正常的情况下发出交易信号。策略还设置了交易量高低限,可以避免在交易量异常的情况下发出错误信号。
-
-## 策略原理  
-
-核心逻辑是构建交易量模型和价格趋势判断。
-
-1. 构建交易量模型
-   - 计算交易量的长度为40周期的移动平均线vavg作为交易量基准
-   - 计算交易量的长度为40周期的标准差vsd作为交易量正常波动范围
-   - 计算交易量的长度为5周期的移动平均线vavgn作为最新交易量水平
-   - 设置交易量低限lowlimit为vavg减去1倍vsd
-   - 设置交易量高限uplimit为vavg加上2倍vsd
-2. 判断价格趋势   
-   - 计算价格的长度为20周期的移动平均线mavg作为价格趋势指标
-3. 发出交易信号
-   - 当mavg上穿其前一日时,在vavgn高于lowlimit的情况下做多
-   - 当mavg下穿其前一日时,在vavgn高于lowlimit的情况下做空
-   - mavg趋势一旦反转则平仓
-
-该策略结合交易量模型和价格趋势,避免在交易量不正常的情况下追踪价格趋势,可以过滤掉一些假信号。
-
-## 策略优势分析
-
-1. 结合交易量变化判断价格趋势,可以过滤掉一些假信号,使信号更加可靠
-2. 利用交易量标准差构建交易量模型,避免交易量极端变化的影响
-3. 移动平均线参数可调整,可以适应不同周期的价格变化
-
-## 策略风险分析  
-
-1. 短期内交易量和价格可能出现背离,导致错过价格趋势
-2. 交易量参数设置不当可能导致模型失效
-3. 策略本身没有止损设置,可能带来较大亏损
-
-风险解决方法:
-1. 适当调整移动平均线参数,优化模型
-2. 加入止损逻辑,控制单笔亏损
-
-## 策略优化方向  
-
-1. 加入更多指标判断价格趋势,使信号更加准确可靠
-2. 增加机器学习模块,根据数据训练交易量和价格模型的参数
-3. 增加止损逻辑,防止单笔亏损过大
-4. 优化入场逻辑,确保更高概率捕捉趋势
-5. 结合类似ATR指标自动调整止损距离
-
-## 总结  
-
-该策略整体思路清晰,利用交易量避免追踪假趋势,入场信号比较可靠。但策略本身较简单,可扩展空间很大,通过加入更多指标、机器学习、止损等模块进行优化,可以进一步提高稳定性和捕捉趋势的能力。该策略为一种典型的趋势追踪策略,优化后可以成为一个非常实用的量化策略。
-
-|| 
 
 ## Overview
 
@@ -117,7 +63,6 @@ Solutions:
 
 The overall logic of this strategy is clear, using volume to avoid chasing false trends and the entry signals are relatively reliable. But the strategy itself is simple with large room for expansion. By adding more indicators, machine learning, stop loss and other modules, it can further improve the stability and ability to catch trends. This is a typical trend chasing strategy. After optimization, it can become a very practical quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,28 +11,6 @@ ChaoZhang
 
 
 
-[trans]
-本策略名称为“高点低点突破趋势追踪策略”。该策略通过识别价格创出新的高点和低点,判断趋势方向,并在突破最新高点或低点时进行趋势追踪。
-
-具体交易逻辑如下:
-
-1. 计算一定周期(例如22天)内的最高价和最低价。
-
-2. 当价格突破最近一日的最高价时,产生买入信号,表明上涨趋势形成。
-
-3. 当价格跌破最近一日的最低价时,产生卖出信号,表明下跌趋势形成。
-
-4. 为过滤假信号,还需校验趋势方向。例如价格创新高但指标出现背离则不考虑买入。
-
-5. 只有当指标与价格趋势一致时,才在突破最新高点/低点时进行追踪。
-
-该策略的优点是捕捉价格突破关键点位的时机,这常常伴随趋势的启动或加速。但需要防止在震荡盘整中产生过多无效信号。
-
-总体而言,关注关键价格区域的突破是基本的趋势跟踪方法。但交易者还需要借助其他指标进行确认,根据实际情况调整参数,以发挥该策略最大效用。
-
-
-
-||
 
 
 
@@ -54,7 +32,6 @@ The advantage is capturing pivotal breakout timing, which often accompanies tren
 
 In summary, watching key price area breakouts is essential in trend following. But confirmation with other indicators and parameter tuning based on actual conditions are needed to maximize the strategy’s utility.
 
-[/trans]
 
 > Strategy Arguments
 

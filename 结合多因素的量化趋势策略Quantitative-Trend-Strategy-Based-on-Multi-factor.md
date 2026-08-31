@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bb20fc9398e1e42373.png)
-[trans]
-
-## 概述
-
-这个策略综合考虑了成交量,波动幅度,收盘位置,趋势等多种因素,对交易机会进行识别,属于典型的多因子量化策略。
-
-## 策略原理
-
-这个策略的核心思路是结合成交量异常突破、收盘位置、波动幅度等多种因素来识别买卖点。
-
-具体来说,策略会计算过去一段时间内的平均成交量,当当前周期的成交量出现明显异常突破就可能预示着趋势的转变。此外,如果收盘价格接近波动幅度的上沿或下沿,也意味着目前的趋势可能逆转。结合成交量和收盘位置这两个因素,可以初步判断买卖点。
-
-为了验证买卖点,该策略还会结合波动幅度指标来判断。如果波动突破过去一段时间的平均值,就会形成买卖信号的第一条件。然后,如果上涨周期的收盘价格在波动幅度的下半段,且成交量增大,则产生卖出信号。相反,如果下跌周期的收盘价格在波动幅度的上半段,且成交量减小,则产生买入信号。
-
-此外,该策略还会结合均线指标判断整体趋势,如果出现了中长线上的趋势改变,也会作为产生买卖信号的条件。
-
-通过上述多种指标的结合,这个策略能够全面判断市场的买卖时机。
-
-## 策略优势
-
-该策略最主要的优势在于综合考虑多种因素来决策,使结果更加可靠。具体来说,主要有以下几个方面的优势:
-
-1. 考虑成交量异常突破,可以提前检测到趋势转变的迹象。
-2. 通过波动幅度和收盘位置判断真实趋势,避免被短期市场噪音误导。
-3. 结合中长期均线判断整体趋势方向,确保策略符合大市趋势运行。
-4. 多因子综合判断使策略更加稳定和可靠,避免出现大额亏损。
-
-## 策略风险
-
-该策略也存在一些风险需要注意:
-
-1. 多因子结合判断较为复杂, parameter tuning较难。
-2. 不能完全避免被假突破误导产生不必要的交易。
-3. 如果判断主趋势错误,整体运行效果会打折扣。
-4. 波动率参数设置需要根据不同市场环境调整。
-
-## 优化方向
-
-该策略还有以下几个主要的优化方向:
-
-1. 使用机器学习等方法自动优化 parameter。
-2. 加入止损策略管理风险。
-3. 结合更多因子如资金流向等判断主趋势。 
-4. 设计自适应波动率参数。
-
-## 总结
-
-该策略综合考虑多种因素识别交易机会。策略优势在于判断全面,稳定可靠;主要风险在参数确定和主趋势判断错误;未来可通过机器学习等方式进行参数优化。总体而言,该策略思路合理,实盘效果值得期待。
-
-||
 
 ## Overview 
 
@@ -108,7 +58,6 @@ Major aspects that this strategy can be optimized:
 
 This strategy identifies trading chances by taking various factors into account. The advantages lie in comprehensive signaling mechanisms and steady performance, while main risks come from parameter tuning and inaccurate major trend prediction. Some techniques like machine learning can be applied for further optimization in the future. Overall speaking, this is a strategy with sound rationale and promising practical performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a7e279720cb884069d.png)
-[trans]
-## 概述
-
-趋势追踪反转策略是一种基于15分钟NQ期货的短期趋势交易策略。它通过趋势滤波和反转形态识别来寻找交易机会。该策略简单而有效,适合短线活跃型交易者。
-
-## 策略原理
-
-该策略主要基于以下几点原理运作:
-
-1. 使用8周期的EMA作为主要的趋势过滤指标,EMA上方看多,EMA下方看空。
-
-2. 识别特定的K线反转形态作为入场信号,包括长阳线后短阴线看多信号和长阴线后短阳线看空信号,这些形态提示趋势可能开始反转。 
-
-3. 入场点设置为反转K线的高点或低点附近,止损点设置为反转K线本身的高低点,实现高效的风险回报比。
-
-4. 利用K线实体关系判断反转信号的有效性,如阴线开盘价高于上一根K线实体,实体完全包含等规则来过滤噪音。
-
-5. 只在特定的交易时段运作策略,避开市场主要合约换月等特殊时间段,防止异常行情导致不必要的损失。
-
-## 优势分析  
-
-该策略具有以下几点主要优势:
-
-1. 策略信号简单有效,容易掌握实施。
-
-2. 基于趋势和反转判断,避免被黄牛市场和熊市场双重杀伤。
-
-3. 风险控制到位,止损设置合理,有利于资金管理。  
-
-4. 数据需求量小,适合各类软件和平台使用。
-
-5. 交易频率较高,适合热衷短线活跃型交易的投资者。
-
-## 风险及对策  
-
-该策略也存在一些风险,主要问题在于:  
-
-1. 反转形态机会不足,信号较少。可以适当放宽反转判断规则。
-
-2. 假突破问题时有发生。可以加入更多过滤指标进行联合判断。  
-
-3. 夜盘和非主流时间存在不稳定性。可以设置只在美国交易时段运作。
-
-4. 参数优化空间有限。可以尝试机器学习等技术寻找更优参数。
-
-## 优化方向  
-
-该策略还有一定的优化空间,主要方向包括:
-
-1. 测试更长周期的EMA参数,改进趋势判断。
-
-2. 增加股票大盘指数作为额外的趋势过滤指标。 
-
-3. 利用机器学习等技术自动优化入场和止损点位。
-
-4. 增加基于波动率的仓位和止损动态调整机制。
-
-5. 尝试多品种套利,进一步分散单一品种的系统性风险。
-
-## 总结  
-
-趋势追踪反转策略整体而言是一个非常实用的短线策略思路,简单参数少,实操容易上手,0014能很好控制个人风险,适合炒股论坛的活跃型短线交易者。该策略有一定的优化空间,投入一定研发精力可以使其甚至适合中长线资金进行程序化运作,具有很好的发展潜力。
-
-||
 
 ## Overview  
 
@@ -137,7 +73,6 @@ There is room for optimization:
 
 The Trend Tracking Reversal Strategy offers a very practical short-term strategy framework that is simple to implement with limited parameters and good personal risk control. It suits active short-term traders on day trading forums. With further R&D, it can potentially be applicable for medium-long term algorithmic trading, demonstrating strong versatility and development potential.
 
-[/trans]
 
 > Strategy Arguments
 

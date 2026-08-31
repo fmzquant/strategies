@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/10ddc0b2ce088f5b009.png)
-[trans]
-
-## 概述
-该策略运用ATR通道和破口理论,在突破通道时踏入趋势,属于趋势跟踪策略。策略简单易懂,运用均线通道和ATR指标判断趋势方向,在关键点位发出交易信号。
-
-## 策略原理
-该策略使用高、低、收盘价和ATR指标构建上下轨,形成ATR通道。通道宽度决定于ATR参数的大小。当价格突破通道时,判断为趋势开始,此时进入做多或做空方向。策略分为两档交易信号,价格突破一个ATR宽度视为趋势初现,此时第一档买卖点被触发;价格突破两个ATR宽度则视为趋势加速,第二档买卖点被触发。
-
-## 优势分析
-该策略主要优势如下:
-1. 采用ATR指标构建通道,考虑市场波动率,优于简单均线。
-2. 两档买卖点设定,分批进入,风险可控。
-3. 突破理论判断趋势,精准定位关键点位。
-4. 代码精简,容易理解实施。
-
-## 风险分析
-该策略主要风险如下:
-1. 单一指标判断,当ATR失效时,策略失效概率大。
-2. 未设立止损限制和头寸管理,风险控制不足。
-3. 效用待验证,实盘条件下可能效果欠佳。
-4. 参数不合适可能导致穿越或过度交易。
-
-## 优化方向
-该策略可以优化的方向如下:
-1. 增加多种指标过滤和确认,防止误判。
-2. 增加止损模块,加强风险控制。
-3. 增加仓位控制和头寸管理。
-4. 增加参数优化,针对不同品种参数调整。
-5. 减少交易频率和仓位规模,考虑实盘条件。
-
-## 总结
-该策略整体框架清晰,作为概念验证策略可以理解使用。但距离实盘还存在一定差距,有较大优化空间。如果能进一步完善风控和交易频率控制,则该策略应用前景较好。
-
-||
 
 ## Overview
 This strategy utilizes the ATR channel and breakout theory to follow trends by entering when the channel is broken. It belongs to trend-following strategies. The strategy is simple and easy to understand, using moving average channels and ATR indicators to determine trend direction and issuing trading signals at key points.  
@@ -76,7 +42,6 @@ The optimization directions for this strategy include:
 ## Summary
 The overall framework of this strategy is clear and usable as a proof of concept. But there are gaps from live trading that allow substantial optimizations. If risk controls and trading frequencies can be further improved, the application prospects would be good.
 
-[/trans]
 
 > Strategy Arguments
 

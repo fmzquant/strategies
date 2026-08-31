@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15961e9eefd6dacced0.png)
-[trans]
-### 概述
-本策略通过计算快速移动平均线和慢速移动平均线,并结合抛物线指标进行买卖判断,属于趋势跟踪类型策略。当快速移动平均线上穿慢速移动平均线时做多;当快速移动平均线下穿慢速移动平均线时做空。同时结合抛物线指标过滤假突破。
-
-### 策略原理
-1. 计算快速移动平均线和慢速移动平均线。移动平均线参数可以自定义。
-2. 比较两条移动平均线,判断市场趋势方向。当快速移动平均线上穿越慢速移动平均线时,判断为多头市场;当快速移动平均线下穿越慢速移动平均线时,判断为空头市场。
-3. 结合收盘价与移动平均线关系作为进一步确认。只有当快速线上穿慢速线,且收盘价高于快速线时,才产生买入信号;只有当快速线下穿慢速线,且收盘价低于快速线时,才产生卖出信号。
-4. 使用抛物线指标过滤假突破。只有快速线上穿慢速线,且收盘价高于快速线,且股价高于抛物线时,才最终产生买入信号;反之亦然。
-5. 根据最大承受损失设定止损线。结合ATR指标计算具体的止损价
-
-### 策略优势
-1. 利用移动平均线判断市场趋势方向,避免在无明确方向的盘整市场频繁交易
-2. 双重过滤条件可有效避免常见的假突破问题
-3. 结合止损策略有效控制单笔亏损
-
-### 策略风险
-1. 指标策略容易产生虚假信号
-2. 未考虑货币风险
-3. 可能错过初期不同方向的行情
-
-针对以上问题,可以从以下几个方面进行优化
-1. 优化移动平均线参数,使其更贴合具体品种
-2. 可以结合其他指标或模型进行信号过滤
-3. 考虑实时对冲或自动转换券商账户的货币风险
-
-### 优化方向
-1. 优化移动平均线参数,更好捕捉趋势
-2. 增加模型组合,提高信号准确性
-3. 多时间周期验证,避免被套
-4. 优化止损策略,提高策略稳定性
-
-### 总结
-本策略属于典型的双移动平均线以及指标组合趋势跟踪策略。通过比较快慢两条移动平均线方向,判断市场趋势;并结合多种过滤指标避免假信号,从而产生交易信号。同时,策略具备止损功能以控制单笔亏损。优点是策略逻辑简单清晰,容易理解实现,可根据需要灵活优化。缺点是作为粗略趋势判断工具,信号准确性有待提高,可通过引入机器学习等高级模型进行优化。
-
-||
 
 ### Overview
 This strategy generates trading signals by calculating fast and slow moving average lines and combining Parabolic SAR indicator. It belongs to the trend following strategy. When the fast MA crosses over the slow MA, long position will be opened. When the fast MA crosses below the slow MA, short position will be opened. Parabolic SAR is used to filter fake breakouts.  
@@ -81,7 +45,6 @@ The strategy can be optimized in below aspects:
 ### Conclusion
 This is a typical dual moving average cross and indicators combination trend following strategy. By comparing fast and slow MA directions, market trend is determined. Various filter indicators are used avoid false signals. At the same time, stop loss function is implemented to control per trade loss. The advantage is that the strategy logic is simple and easy to understand and optimize. The disadvantage is that as a coarse trend tool, there is still room to improve signal accuracy, by introducing machine learning models for example.
 
-[/trans]
 
 > Strategy Arguments
 

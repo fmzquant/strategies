@@ -11,79 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/4a0bd57abc88959d17.png)
 
-[trans]
-
-## 概述
-
-双向突破反转策略是一种基于价格 pivot 点的反转交易策略。它通过检测价格在一定数量的 bar 内的极值点,来判断价格可能反转的时机。当价格突破极值点时,进行反向入场。该策略适用于高波动性市场,能够抓住价格短期内的反转机会。
-
-## 策略原理
-
-双向突破反转策略的核心逻辑是:
-
-1. 使用 `pivothigh()` 和 `pivotlow()` 函数计算最近 n 个 bar 内的最高价和最低价作为极值点。这里 n 设置为 4。
-
-2. 当最新 bar 的高点超过极大值点时,策略认为价格可能反转,做空入场。 stop loss 放在极大值点上方。
-
-3. 当最新 bar 的低点低于极小值点时,策略认为价格可能反转,做多入场。stop loss 放在极小值点下方。 
-
-4. 一旦价格反转超过极值点,前一个信号无效,等待下一个交易机会。
-
-通过这个方法,策略在突破极值点时抓住价格短期反转的机会。同时设置好 stop loss,可以控制风险。
-
-## 优势分析
-
-双向突破反转策略具有以下优势:
-
-1. sellable/round 的思路,利用极值点判断反转点位。
-
-2. 适用于高波动的加密货币等市场,能够抓住短线反转机会。
-
-3. 规则相对简单,容易理解掌握。
-
-4. 回撤只有 10%,风险可控。
-
-5. 收益高达 350%, Sharp 比率在 1 以上。
-
-## 风险分析
-
-双向突破反转策略也存在以下风险:
-
-1. 市场持续趋势时,会产生多次小额止损。
-
-2. 极值点并不一定是反转点,存在错失反转或反转不足的风险。
-
-3. 突破极值点后,不能保证立即反转,存在追击亏损的风险。
-
-4. 只要求最近 4 个 bar 的极值,样本区间可能过小。
-
-5. 没有考虑市场流动性,大笔入场可能对价格造成冲击。
-
-6. 回测时间区间较短,长期效果存疑。
-
-## 优化方向
-
-双向突破反转策略可以从以下方面进行优化:
-
-1. 增加极值点时间区间,避免样本过小。可以设定动态区间。
-
-2. 在突破极值点后,等待额外确认信号,避免假突破。例如加大量,MACD 背离等。
-
-3. 根据市场流动性情况,动态调整入场仓位。
-
-4. 结合趋势指标,避免在趋势中频繁反转止损。
-
-5. 增加止损线移动策略,让止损追踪利润。
-
-6. 对不同品种分别测试参数,设定最优参数。
-
-7. 增加更长的回测时间和期货数据,验证策略的稳定性。
-
-## 总结
-
-双向突破反转策略利用价格极值点判断反转时机,在高波动市场中可以捕捉短线机会。优点是规则简单,回撤低,收益率高。但也存在错失反转和追击亏损的风险。我们可以通过扩大样本区间、增加反转确认和动态止损来优化,使策略更稳健可靠。在更长的时间和更多市场中验证,以确保其长期有效性。总体来说,双向突破反转策略适合掌握短线交易技巧的量化交易者。
-
-|| 
 
 ## Overview
 
@@ -155,7 +82,6 @@ The Bidirectional Breakout Reversal Strategy can be optimized in the following a
 
 The Bidirectional Breakout Reversal Strategy catches short-term opportunities by identifying reversal points with price pivots. The advantage is simple rules, low drawdown and high returns. But risks like missing reversals and chasing losses exist. We can optimize it by expanding sample periods, adding reversal confirmation, dynamic stops etc. More extensive verification is needed to ensure long-term efficacy. Overall it suits quantitative traders skilled in short-term trading.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-ARGO波段突破策略是一个基于通道突破的4小时波段交易策略。该策略结合布林通道和突破原理,在4小时时间范围内形成交易信号,以捕捉较大的价格波动。
-
-## 策略原理
-
-该策略首先计算一定周期内的最高价和最低价形成通道范围。然后计算通道中线和通道上下轨的布林线。在通道方向发生转换时,形成买入和卖出信号。
-
-具体来说,策略首先计算N周期(默认47周期)内的最高价upBound和最低价downBound,形成通道的上下边界。然后设置一个偏移率point(默认为1)和容差tol(默认1000),计算通道上轨limitBoundUp和下轨limitBoundDown。当价格上穿下轨时产生买入信号;当价格下穿上轨时产生卖出信号。
-
-此外,该策略还设置了止损止盈条件。买入止损为下轨附近,卖出止损为上轨附近。止盈设置为输入的目标盈亏比例。
-
-## 优势分析
-
-- 利用布林通道原理,可根据市场波动率来调整通道范围,避免被噪声交易影响
-- 4小时周期操作,可以捕捉较大的价格波动,获利空间大
-- 结合突破策略,可以在趋势转折点形成交易信号,及时捕捉价格跳空
-- 设置止损止盈,可以控制每单交易的风险收益比
-
-## 风险及解决
-
-- 布林通道交易容易形成虚假突破,被套牢的风险
-- 大周期操作,容易出现亏损扩大的风险
-- 停止追踪设置不合理,可能出现超出承受能力的大亏损
-- 解决方法:
-  - 合理设置通道参数,避免虚假突破
-  - 谨慎确定仓位和止损点
-  - 优化止盈止损策略,严格控制单笔交易风险
-
-## 优化方向
-
-- 优化布林通道参数,使通道更贴近市场波动状况
-- 优化止损止盈策略,实现风险收益比的动态调整
-- 增加交易过滤条件,避免被套及追击高点
-- 增加多因子判断,避免虚假突破产生错误信号
-- 结合趋势及波动率指标,提高决策的准确性
-- 优化资金管理策略,根据不同市场情况调整仓位
-
-## 总结
-
-ARGO波段突破策略是一个利用布林通道和突破原理的4小时中长线交易策略。相比短线交易,该策略更看重捕捉价格中长线趋势的转折点。通过参数优化,可适应不同市场环境,在控制风险的前提下获取较大的交易收益。该策略既考虑了趋势性,也关注风险控制,是一种值得推荐的中长线突破交易策略。
-
-
-||
 
 ## Overview
 
@@ -98,7 +52,6 @@ In addition, stop loss and take profit conditions are configured. The stop loss 
 
 The ARGO Range Breakout Strategy is a 4-hour medium-term trading system based on Bollinger Channel and breakout principles. Compared to short-term trading, it focuses more on catching trend reversals on medium-term timeframes. With proper optimization, it can adapt to different market environments and achieve significant profits while controlling risk. The strategy balances trend following and risk management. It is a recommended medium-term breakout trading system.
 
-[/trans]
 
 > Strategy Arguments
 

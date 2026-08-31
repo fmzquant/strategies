@@ -9,69 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用WaveTrend指标判断价格趋势方向,在趋势转向点产生交易信号,属于趋势追踪类策略。
-
-## 策略原理
-
-1. 计算WaveTrend振荡器,当其为正值时判断为多头市场,为负值时判断为空头市场。
-
-2. WaveTrend指标转向时产生买入和卖出信号。
-
-3. 可选择只进行多头交易。
-
-4. 可启用箭头标记 WaveTrend转向点。
-
-5. 设置背景色可直观判断趋势方向。
-
-6. 策略规则简单清晰,易于实现。
-
-## 优势分析
-
-1. WaveTrend指标对趋势转向敏感,可以提早捕捉到机会。
-
-2. 可视化的背景色和箭头标记,形成直观的信号。
-
-3. 默认参数简单实用。
-
-4. 代码简洁易于理解和修改。
-
-5. 可根据需要选择只做多或空。
-
-## 风险分析
-
-1. WaveTrend指标可能出现假信号导致不必要的亏损。
-
-2. 无法判断趋势的力度,存在追顶追底的风险。 
-
-3. 作为趋势追踪策略,WaveTrend指标容易在震荡市场中被套利。
-
-4. 参数设置不当也会影响策略效果。
-
-5. 没有设置止损,可能造成大额亏损。
-
-## 优化方向
-
-1. 测试 WaveTrend 参数的不同组合,寻找最优参数。
-
-2. 增加其他指标进行信号过滤,避免假信号。
-
-3. 添加止损策略来控制风险。
-
-4. 评估仅做多或空的必要性。
-
-5. 可以根据市场情况选择是否使用箭头标记。
-
-6. 优化资金管理策略,提高收益稳定性。
-
-## 总结
-
-该策略使用 WaveTrend 指标判断趋势转向进行交易,具有简单易用的优点,但也存在一定的风险。通过参数优化、止损策略、信号过滤等改进,可以将其打造成一个稳定高效的趋势追踪策略。
-
-||
 
 
 ## Overview 
@@ -134,7 +71,6 @@ This strategy uses the WaveTrend indicator to determine trend direction and gene
 
 This strategy trades WaveTrend direction changes simply and viably, but has some risks. Improvements like parameter optimization, stops, filters can make it a stable and efficient trend following system.
 
-[/trans]
 
 > Strategy Arguments
 

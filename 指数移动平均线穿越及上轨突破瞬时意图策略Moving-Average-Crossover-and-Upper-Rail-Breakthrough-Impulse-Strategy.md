@@ -11,67 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d37fd1a4c59fc8062c.png)
 
-[trans]
-
-## 概述
-
-该策略利用指标MACD的快线和慢线的交叉信号,结合其他多个指标进行综合判断,在瞬时时机捕捉到指数移动平均线的突破信号,做出买入或卖出决策,属于短线交易策略。
-
-## 策略原理
-
-1. 使用MACD的快线和慢线交叉作为主要交易信号。当快线上穿慢线时看涨入场,当快线下穿慢线时看跌入场。
-
-2. 结合RSI指标判断是否过买过卖。RSI低于中线时看涨,RSI高于中线时看跌。
-
-3. 计算当前收盘价与一定周期内的SMA均线作比较,收盘价低于SMA时看涨,收盘价高于SMA时看跌。
-
-4. 计算一定周期内的Highest值的0.5 Fibonacci位,作为看涨的阻力位。计算一定周期内的Lowest值的0.5 Fibonacci位,作为看跌的支撑位。
-
-5. 当满足快线上穿和价格低于支撑位时看涨入场,当满足快线下穿和价格高于阻力位时看跌入场。
-
-6. 采用逐步移动止损方式。入场后开始时止损位固定为开仓价格的一定百分比,当亏损达到一定比例后改为小幅逐步追踪止损。
-
-## 策略优势
-
-1. 策略充分利用MACD的交叉信号,这是一种经典且有效的技术指标交易信号。
-
-2. 结合RSI、SMA等多个指标进行确认,可以过滤假信号,提高信号的可靠性。
-
-3. 计算动态支持阻力位,进行突破交易,可以捕捉较大行情。
-
-4. 采用逐步移动止损方式,既可锁住大部分利润,也可控制风险。
-
-5. 策略交易逻辑清晰简单,容易理解掌握,适合新手学习。
-
-## 策略风险
-
-1. MACD指标存在滞后问题,可能会错过行情最佳买点卖点。
-
-2. 多指标组合判断增加了策略复杂度,容易出现指标冲突的情况。
-
-3. 动态计算支持阻力位存在错误突破的风险。
-
-4. 移动止损在大行情中可能过早止损,无法持续获利。
-
-5. 策略参数需要反复测试优化,不合适的参数会影响策略效果。
-
-## 策略优化方向 
-
-1. 可以测试不同参数组合,优化MACD周期参数。
-
-2. 可以引入更多指标,如布林线、KDJ等进行多维度分析。
-
-3. 可以结合更多因素判断支持阻力位的合理性。
-
-4. 可以研究更先进的移动止损机制,如时间止损、振荡止损等。
-
-5. 可以加入自动参数优化模块,实现参数的自动寻优。
-
-## 总结
-
-该策略综合运用MACD、RSI、SMA等多个指标,在瞬时时机捕捉到指数移动平均线的突破信号,属于典型的短线突破交易策略。策略信号生成有一定的滞后性,但可以通过参数优化提高准确率。总体来说,该策略交易逻辑简单清晰,容易掌握,表现稳健,适合大多数人学习使用,值得进一步的测试和优化。
-
-||
 
 
 ## Overview
@@ -132,7 +71,6 @@ This strategy utilizes the crossover signals of the MACD fast line and slow line
 
 This strategy combines MACD, RSI, SMA and other indicators to capture moving average breakthrough signals opportunistically. It belongs to typical short-term breakout trading strategies. There is some lag in its signal generation, but accuracy can be improved through parameter optimization. Overall, this is a strategy with simple and clear logic, easy to grasp for most, and worth further testing and optimization.
 
-[/trans]
 
 > Strategy Arguments
 

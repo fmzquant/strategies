@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/140c32cb6d65849ab55.png)
-[trans]
-
-## 概述
-
-本策略融合了移动平均线、相对强度指数和商品频道指数三个指标,形成一个较为完整的趋势跟踪和指标组合策略。其基本思路是在趋势指标确认趋势形成后,利用反转信号指标实现更准确的入场。
-
-## 策略原理  
-
-1. 使用hl2计算中价。
-
-2. 计算14周期的CCI指标,判断大级别趋势。当CCI大于0时为趋势向上,小于0时为趋势向下。
-
-3. 计算14周期RSI指标的快线和50周期RSI指标的慢线。当快线上穿慢线时产生买入信号,快线下穿慢线时产生卖出信号。
-
-4. 只有CCI指标同时符合RSI指标的信号方向时,才产生实际的交易信号。即只在CCI大于0和RSI快线上穿慢线时买入,只在CCI小于0和RSI快线下穿慢线时卖出。
-
-5. 通过计算价格是否高于或低于14周期hl2的移动平均来辅助判断细节走势,从而避免假突破。只有价格高于hl2的14周期均线和RSI指标上穿时才产生买入信号,只有价格低于hl2的14周期均线和RSI指标下穿时才产生卖出信号。
-
-## 优势分析
-
-1. 该策略融合了趋势判断和反转信号,能够在趋势开始后及时入场,并通过反转信号指标判断退出点,从而获得较好的绩效。
-
-2. 商品频道指数对大级别趋势判断准确,避免了错误的交易方向选择。
-
-3. 相对强度指数的快慢线交叉作为启示信号较为稳定可靠,避免了移动平均线的滞后问题,可以及时捕捉到价格的回转。 
-
-4. 比较价格和中值线的大小,可以进一步过滤假突破导致的错误信号。
-
-5. 整体来说,该策略稳定性较好,在强势趋势中表现突出。
-
-## 风险分析
-
-1. 该策略对交易品种比较敏感,需要针对特定品种优化参数。如果盲目应用于所有品种,可能导致不稳定的表现。
-
-2. 策略参数设置如14周期均线和50周期均线等,需要根据不同市场调整。如果参数设定不当也会导致表现不佳。
-
-3. 单纯依赖CCI判断大级别趋势方向还不够完善,会存在一定的滞后。这点仍需进一步优化。
-
-4. 反转信号指标组合较多,可能存在一定程度的过度优化。这点也需要通过严格的回测检验。
-
-## 优化方向
-
-1. 可以考虑加入更多判断大级别趋势的指标,如DMI、ADX等,使趋势判断更加精确。 
-
-2. 增加止损逻辑。如在反转信号出现后,如果价格再次回调一定幅度,可以考虑止损退出,降低损失。
-
-3. 优化参数,使其更适应特定交易品种。如增大慢线周期参数,或调整中价计算方式等。
-
-4. 构建参数优化组合,针对不同品种选择最优参数,这样可以大幅提高策略适用性。
-
-5. 加入量能指标,避免在量能不足时产生误导信号。
-
-## 总结
-
-该策略整体框架完整,融合趋势判断和反转指标,在理论上可以获得较优秀的绩效。但实际应用中仍需要针对交易品种进行参数和模型优化,降低过拟合风险。如果经过严格的统计检验,有望成为一款值得推荐的稳定策略。
-
-||
 
 
 ## Overview
@@ -123,7 +66,6 @@ This strategy integrates moving average, relative strength index and commodity c
 
 The overall framework of this strategy is complete, integrating trend judgment and reversal indicators, which can theoretically obtain excellent performance. But in actual application, it still needs parameter and model optimization for trading varieties to reduce the risk of overfitting. If it passes strict statistical testing, it has the potential to become a stable strategy worth recommending.
 
-[/trans]
 
 
 

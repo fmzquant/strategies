@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过观察价格对三重EMA的回调表现,判断趋势走势,在回调结束时进行突破交易。该策略属于趋势跟踪类策略,旨在捕捉中长线趋势的回调机会。
-
-策略原理:
-
-1. 设置快、中、慢三条EMA,典型参数为25、100、200周期。
-
-2. 当价格上方回调触达最快EMA时判断为中长线多头行情,下方回调触达最快EMA时判断为空头行情。
-
-3. 在上方回调结束开始反弹时,在突破最快EMA时做多;在下方回调结束开始反弹时,在跌破最快EMA时做空。
-
-4. 通过颜色标记买卖区间,使视觉直观。
-
-5. 设置固定止损、风险回报比,进行风险管理。
-
-该策略优势:
-
-1. 回调交易具有较高的成功率。
-
-2. 三EMA判断趋势,避免被套。
-
-3. 风险回报比控制增强绩效可持续性。
-
-该策略风险:
-
-1. 回调时间过长可能错过最佳入场点位。
-
-2. 需要优化EMA参数以匹配不同周期。
-
-3. 固定止损可能过于mechanic,需要合理设置。
-
-总之,该策略通过三重EMA回调突破,实现对中长线趋势的跟踪。风险控制机制有助于获得长期稳定收益,但投资者仍需关注参数优化与回调判断。
-
-||
 
 This strategy observes price action around triple EMAs to determine trends and trades breakouts after pullbacks. It aims to capture pullback opportunities within broader uptrends and downtrends.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, this strategy trades pullback breakouts using triple EMAs to track broader trends. The risk controls help generate steady long-term gains but parameter optimization and pullback judgement remain essential.
 
-[/trans]
 
 > Strategy Arguments
 

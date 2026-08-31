@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f112340bc8074b61b7.png)
-[trans]
-## 概述
-
-本策略名为“短期RSI和SMA百分比变化”。它利用了RSI和移动平均这样的常用技术指标来决定交易的入场和退出。RSI是一个0到100范围内的动量指标,它可以显示市场的超买超卖现象。SMA是一种简单的移动平均线,它可以反应价格的短期和长期趋势。本策略基于这两个指标构建进入和退出信号,回测显示可以获得较好的效果。
-
-## 策略原理
-
-当RSI大于50时视为多头信号。这表示市场处于均衡到多头的区域。当9日SMA高于100日SMA时,表示短期趋势好于长期趋势,可以入场做多。此外,如果短期的9日SMA相对价格的变化超过6%,则表示短期趋势加速,也是入场信号。
-
-如果已经持仓做多,本策略会利用抛物线止损来锁定利润。它会根据设置的百分比尾随止损,当价格出现回撤时会退出仓位。
-
-## 优势分析
-
-本策略结合了趋势指标和超买超卖指标,可以在比较明确的趋势出现时入场,同时也避开市场正在反转的时期,大大降低了交易的风险。止损策略也可以锁定利润,防止利润在趋势反转时全部蒸发。
-
-回测结果显示,本策略可以在比较明确的短期趋势中获利,效果较好。它适合那些追求高频交易的投资者。
-
-## 风险分析
-
-本策略依赖于RSI和SMA等指标,这些指标都有一定的滞后性。当突发事件导致市场快速反转时,本策略可能无法及时退出,导致较大的亏损。
-
-此外,高频交易需要承担更高的交易费用。如果交易频次过高,累积的交易费用也会对利润造成影响。
-
-## 优化方向
-
-本策略可以考虑结合更多指标来决定入场和出场信号,例如加入交易量指标避免虚假突破。止损策略也可以调整为更加灵活的方式,考虑市场波动的因素。
-
-此外,可以对交易品种、周期参数进行优化,寻找最佳的参数组合。也可以考虑跨周期交易,利用更高周期确定趋势方向,更低周期决定入场。
-
-## 总结
-
-本策略“短期RSI和SMA百分比变化”综合运用了RSI和SMA等常用技术指标,构建短期交易策略。它可以抓住比较明确的短期趋势获利,同时也具有止损来锁定利润。该策略适合喜欢高频交易的投资者,但也需要警惕市场快速反转的风险。通过进一步优化,本策略可以获得更好的效果。
-
-||
 
 ## Overview
 
@@ -77,7 +43,6 @@ In addition, optimization can be done on trading products, cycle parameters to f
 
 This strategy "Short-term RSI and SMA Percentage Change" comprehensively employs common technical indicators like RSI and SMA to construct short-term trading strategy. It can seize fairly obvious short-term trends to profit, while also having stops to lock in profits. This strategy suits investors who like high frequency trading, but the risk of rapid market reversal also needs attention. With further optimization, this strategy can achieve better results.
 
-[/trans]
 
 > Strategy Arguments
 

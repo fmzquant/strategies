@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1888912c0961cc174d7.png)
-[trans]
-
-
-## 概述
-
-动态价格摆荡器(Dynamic Price Swing)是一个用于识别价格趋势的策略。它结合了移动平均线、价格通道和费波那契回撤来实现动态的入场和出场。该策略的优点在于能够识别价格趋势的变化,实现灵活的操作。
-
-## 策略原理  
-
-该策略主要基于以下几点原理构建:
-
-1. 使用快速EMA和慢速EMA来判断价格趋势方向,以防止逆势交易
-
-2. 使用价格上下限通道来判断突破信号,当价格突破上限通道时做空,突破下限通道时做多
-
-3. 使用移动平均线交叉做判断信号,金叉做多,死叉做空
-
-4. 使用费波那契回撤线做判断信号,价格突破费波那契上限线时做空,突破费波那契下限线时做多
-
-根据这些指标判断后进入场内,并设置止损、止盈退出机制。
-
-## 优势分析
-
-该策略结合了多种指标判断,能够识别价格趋势的变化,这是它的最大优势。主要优势如下:
-
-1. 使用快慢EMA判断大趋势,防止逆势交易,可以减少损失
-2. 价格通道判断可以获取价格突破的机会,获利潜力较大  
-3. 移动平均线交叉判断简单实用,容易实现
-4. 费波那契回撤又增加了一种判断方式,使策略更加立体化
-
-## 风险分析  
-
-该策略也存在一些风险需要注意:  
-
-1. 快速EMA和慢速EMA参数设置不当可能导致判断错误  
-2. 突破价格上下限通道的时间点选择不当可能引发亏损单
-3. 移动平均线交叉的选择也需要谨慎  
-4. 费波那契回撤带宽度设置不当也会影响判断效果
-
-这些风险都可以通过参数优化来降低。
-
-## 优化方向  
-
-该策略还有一些可以优化的方向:
-
-1. 对EMA周期、通道宽度、移动平均线周期等参数进行测试和优化
-2. 增加其他技术指标判断,如RSI、布林带等判断规则
-3. 结合交易量能量指标如OBV来判断突破的可靠性  
-4. 利用机器学习等技术自动寻找最优参数  
-
-## 总结  
-
-动态价格摆荡器是一个非常灵活多变的策略。它能够动态适应价格变化,通过多种指标判断突破并交易。虽然也存在一些风险,但可以通过不断优化来降低风险,提高策略的稳定性和盈利能力。该策略值得深入研究。
-
-||
 
 ## Overview  
 
@@ -126,7 +71,6 @@ There are some directions that can be optimized for this strategy:
 
 The Dynamic Price Swing Oscillator is a highly flexible and adaptable strategy. It can dynamically adapt to price changes and trade after determining breakouts through multiple indicator judgments. Although there are some risks, they can be reduced by continuous optimization to improve the stability and profitability of the strategy. The strategy is worth in-depth research.
 
-[/trans]
 
 > Strategy Arguments
 

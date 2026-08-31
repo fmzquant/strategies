@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b8483df4023645aa48.png)
-[trans]
-## 概述
-
-大趋势指标多头策略(Major Trend Indicator Long,简称MTIL)是一种用于各类金融工具(包括加密货币比特币、以太坊和传统股票如苹果公司)的交易策略。它设计用于识别潜在的多头趋势,以便进行长线建仓。
-
-## 策略原理
-
-MTIL策略使用优化的参数,在特定的回看周期内计算最高价和最低价。然后应用线性回归方法对价格数据进行平滑处理,识别出潜在的牛市趋势,发出做多信号。
-
-具体来说,该策略首先计算特定周期内的最高价和最低价。然后使用不同参数的线性回归对最高价和最低价进行平滑。这将产生上轨和下轨。当平滑后的最高价线突破上轨,而最低价线也突破下轨时,且收盘价的短期线性回归高于长期线性回归,则产生多头信号。
-
-## 优势分析
-
-MTIL策略具有以下优势:
-
-1. 使用双重平滑技术识别趋势,准确率较高
-2. 回测起始时间可调,方便测试策略的历史表现
-3. 可自定义参数,调整至自己的交易偏好
-4. 可与空头策略组合,实现多时间轴分析
-
-## 风险分析  
-
-MTIL策略也存在以下风险:  
-
-1. 趋势交易风险大,存在亏损放大的可能
-2. 参数设置不当可能导致错失机会或错误信号
-3. 需适当考量交易成本,避免过于频繁交易
-
-可通过调整参数、设置止损、交易成本控制等方法规避部分风险。
-
-## 优化方向
-
-MTIL策略可从以下几个方面进行优化:
-
-1. 测试不同周期参数的组合,寻找最优参数
-2. 增加量价确认机制,避免错误信号
-3. 结合其他指标判断力度和分时走势,进一步确认信号
-4. 设立止损和止盈策略,控制单次亏损和全局利润
-
-## 总结
-
-MTIL是一个利用线性回归技术识别大趋势的多头策略。它可以通过参数调整适用于不同市场环境。与空头策略组合使用时,能够提供更全面的分析。经过优化调整后,其准确率和盈利能力都可得到提高。
-
-||
 
 ## Overview 
 
@@ -97,7 +53,6 @@ The MTIL strategy can be optimized across the following dimensions:
 
 The MTIL is a long side strategy harnessing linear regression techniques to spot major trends. Through parameter tuning it can be adapted across various market environments. When combined with a short side strategy it offers more comprehensive analysis. Further optimizations can enhance its accuracy and profitability.
 
-[/trans]
 
 
 

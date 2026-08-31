@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14d7c8f90c6c89979a9.png)
-[trans]
-
-## 概述
-
-本策略利用k近邻(kNN)机器学习算法预测市场趋势,并根据预测结果产生长仓和空仓信号。该策略综合考虑历史数据、技术指标等多因素,通过训练kNN模型动态获取市场特征,实现自动化的趋势跟踪交易。
-
-## 策略原理
-
-1. 收集训练数据:收集历史收盘价、交易量等时间序列,以及RSI、CCI等技术指标。
-
-2. 数据预处理:将指标值归一化到0-100区间。
-
-3. 训练kNN模型:输入当前kNN模型中的两个特征,计算这些特征向量与历史特征向量之间的欧式距离,选择距离最近的k个历史样本,统计这k个样本的标签(多头or空头)分布情况。
-
-4. 获得预测:根据k个最近邻样本的标签预测当前市场走势。如果预测为多头,产生长仓信号;如果预测为空头,产生空仓信号。
-
-5. 结合止损、仓位控制、移动平均等过滤器进行交易。
-
-## 策略优势
-
-1. 利用机器学习算法自动识别技术形态,无需人工干预。
-
-2. 可以灵活选择不同的技术指标作为模型特征,实时优化策略。
-
-3. 整合止损、仓位管理等严格的风险控制机制。
-
-4. 可视化呈现止损线,清晰直观。
-
-## 风险及解决方法
-
-1. 机器学习预测可能出现误报。可选择适当的k值、特征向量、样本时间范围等优化模型。
-
-2. 单边交易存在潜在风险。可在代码中添加双边交易许可以消除bug。
-
-3. 参数设置不当可能导致过度交易。应适当调整仓位大小、交易频率等参数。
-
-## 优化方向
-
-1. 测试不同类型的技术指标作为kNN输入特征。
-
-2. 尝试其他距离度量方法,如曼哈顿距离。 
-
-3. 使用样本距离或分类质量调整仓位大小。
-
-4. 添加模型训练集、测试集划分,实现滚动优化。
-
-## 总结
-
-本策略使用经典的kNN算法实现对市场趋势的预测,并根据预测信号开展趋势跟随交易。该策略具有参数可调、风险可控的特点,可为用户提供有效的自动化交易方案。用户可以通过调整技术指标组合、优化模型超参数等方式不断提升策略表现。
-
-|| 
 
 
 ## Overview
@@ -111,7 +60,6 @@ This strategy utilizes the kNN (k Nearest Neighbors) machine learning algorithm 
 
 This strategy realizes market trend prediction using classical kNN algorithm and executes trend following trading based on prediction signals. It features adjustable parameters and controllable risks, providing effective automated trading solutions for users. Users can continuously improve strategy performance by optimizing technical indicator combinations, model hyperparameters and more.
 
-[/trans]
 
 > Strategy Arguments
 

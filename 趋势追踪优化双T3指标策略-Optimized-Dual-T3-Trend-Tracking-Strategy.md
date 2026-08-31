@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9e1ee76da1af0d6258.png)
 
-[trans]
-#### 概述
-该策略是一个基于Tillson T3指标和双优化趋势追踪器(TOTT)的趋势跟踪系统。它通过结合动量振荡器Williams %R来优化交易信号的生成。该策略采用分离的买入和卖出参数设置,能够根据不同市场条件灵活调整敏感度,提高策略的适应性。
-
-#### 策略原理
-策略主要由三个核心组件构成:
-1. Tillson T3指标 - 这是一个经过优化的指数移动平均线(EMA)变体,通过多重EMA加权计算产生更平滑的趋势线。
-2. 双优化趋势追踪器(TOTT) - 基于价格行为和波动系数自适应调整的趋势跟踪工具,分别计算买入和卖出条件下的上下轨。
-3. Williams %R指标 - 用于识别超买超卖状态的动量振荡器。
-
-交易信号生成逻辑:
-- 买入条件:当T3线突破TOTT上轨且Williams %R大于-20(超卖)时
-- 卖出条件:当T3线跌破TOTT下轨且Williams %R大于-70时
-
-#### 策略优势
-1. 信号稳定性强 - 通过T3指标的多重平滑处理,有效降低假突破风险
-2. 适应性好 - 买卖参数分离设计允许针对不同市场条件独立优化
-3. 风险控制完善 - 集成Williams %R作为二次确认,提高交易可靠性
-4. 可视化清晰 - 策略提供全面的图表可视化支持,便于分析判断
-
-#### 策略风险
-1. 趋势反转滞后 - T3指标的多重平滑可能导致信号延迟
-2. 震荡市不适用 - 在横盘整理阶段可能产生过多交易信号
-3. 参数敏感度高 - 需要针对不同市场环境频繁调整参数
-
-风险控制建议:
-- 引入止损机制
-- 设置交易量限制
-- 增加趋势确认过滤器
-
-#### 策略优化方向
-1. 动态参数优化 - 开发自适应参数调整机制
-2. 增加市场环境识别 - 引入趋势强度指标
-3. 完善风险管理 - 添加动态止损止盈
-4. 增强信号过滤 - 整合更多技术指标确认
-
-#### 总结
-这是一个结构完整、逻辑清晰的趋势跟踪策略。通过T3指标和TOTT的结合,配合Williams %R的过滤,在趋势市场中表现出色。虽然存在一定的滞后性,但通过参数优化和风险管理的改进,该策略具有良好的实用价值和扩展空间。
-
-|| 
 
 #### Overview
 This strategy is a trend following system based on the Tillson T3 indicator and Twin Optimized Trend Tracker (TOTT). It optimizes trade signal generation by incorporating the Williams %R momentum oscillator. The strategy employs separate buy and sell parameter settings, enabling flexible sensitivity adjustment for different market conditions.
@@ -90,7 +50,6 @@ Risk control suggestions:
 #### Summary
 This is a well-structured trend following strategy with clear logic. Through the combination of T3 indicator and TOTT, coupled with Williams %R filtering, it performs excellently in trending markets. While there is some inherent lag, the strategy shows good practical value and room for expansion through parameter optimization and risk management improvements.
 
-[/trans]
 
 
 

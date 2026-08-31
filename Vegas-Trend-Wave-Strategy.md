@@ -10,20 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-弗尔干趋势波浪策略
-
-该策略通过计算多组EMA均线的价格差异百分比,判断价格趋势方向,并以弗尔干趋势波浪进行交易。
-
-具体来说,它分别计算144周期、169周期和233周期EMA与价格本身的价格差异百分比。当三者都满足预设的正差异时,产生做多信号。当价格低于三条EMA且144周期EMA已下穿233周期EMA时,产生做空信号。
-
-这种基于EMA均线组合的方法,可以比单一均线过滤更多假突破。同时,弗尔干波浪本身包含多组EMA,可以有效判断趋势方向。
-
-但是,EMA均线本身存在滞后性,无法把握最佳入场时点。而波浪理论也存在一定程度的主观性,实盘效果与参数优化相关度较大。需要谨慎评估该策略的实盘效果。
-
-总体来说,弗尔干趋势波浪策略结合均线分析和波浪理论,可在趋势行情中获得较好效果。但仍需关注风险管理,才能长期运用。
-
-||
 
 This strategy calculates percentage price difference between multiple EMA pairs to determine trend direction, and trades based on the Vegas wave.
 
@@ -35,7 +21,6 @@ However, EMAs have inherent lag and cannot identify optimal entries. And there i
 
 Overall, the Vegas trend wave strategy synergizes EMA analysis and wave theory for good results in trending markets. But risk management remains crucial for long-term application.
 
-[/trans]
 
 > Strategy Arguments
 

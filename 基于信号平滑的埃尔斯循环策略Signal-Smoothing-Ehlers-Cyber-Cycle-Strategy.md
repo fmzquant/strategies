@@ -10,60 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1dde5a01f9678b104d0.png)
-[trans]
-## 概述
-
-本策略通过计算经过平滑处理的价格信号,结合埃尔斯(Ehlers)提出的循环指标理论,设计出一个交易信号平滑的埃尔斯循环交易策略。该策略可以有效过滤市场噪音,产生更可靠的交易信号。
-
-## 策略原理
-
-1. 对原始价格信号src进行二阶平滑处理,得到平滑信号smooth。
-
-2. 根据平滑信号计算出循环指标cycle。计算方法为:
-   cycle := (1 - .5 _alpha)_ (1 - .5 _alpha)_ (smooth - 2 _smooth\[1\] + smooth\[2\]) + 2_ (1 - alpha) _cycle\[1\] - (1 - alpha)_ (1 - alpha) \* cycle\[2\]
-
-   其中α为平滑参数。
-
-3. 对循环指标进行一阶指数平滑,得到最终交易信号signal。计算方法为:
-   signal := alpha2 _cycle + (1 - alpha2)_ nz(signal\[1\])
-
-   其中α2为一阶平滑参数。
-
-4. 当signal上穿signal[1]时做多;当signal下穿signal[1]时做空。
-
-## 策略优势分析
-
-1. 通过价格信号的二阶平滑,可以有效过滤掉高频噪音,使得交易信号更加可靠。
-
-2. 应用埃尔斯循环指标理论,可以更准确判断市场趋势的转换点。
-
-3. 一阶指数平滑过滤掉循环指标中的部分噪音,产生更可靠的交易信号。
-
-4. 整个策略流程合理、科学,参数优化空间大,实盘表现优异。
-
-## 风险分析
-
-1. 如其他技术指标策略一样,本策略对市场的系统性风险也较为敏感。遇到重大黑天鹅事件,可能会产生较大亏损。
-
-2. 由于计算过程较为复杂,参数设置不当可能导致计算延迟,从而影响实盘效果。需要仔细测试确保参数设置科学合理。
-
-3. 平滑处理也会带来交易信号滞后,可能无法及时捕捉市场转折点,从而错失机会。需要权衡平滑参数的设置。
-
-## 策略优化方向
-
-1. 可以测试不同类型的平滑算法,如一阶指数平滑、均线平滑等,找到最优平滑方案。
-
-2. 可以引入自适应参数调节机制,根据市场情况动态调整参数,提高策略鲁棒性。
-
-3. 可以设计止损和止盈策略,降低单笔亏损风险,同时锁定盈利。
-
-4. 可以结合 autres 的机器学习模型,实现模型组合,利用其他模型过滤交易信号。
-
-## 总结
-
-本策略通过价格信号平滑和埃尔斯循环指标计算,设计了一个交易信号平滑的埃尔斯循环交易策略。该策略可以有效过滤噪音,产生更可靠的交易信号。同时参数空间较大,实盘效果良好。通过引入自适应机制、止损策略等优化,可以进一步增强策略稳定性和效果。
-
-||
 
 ## Overview
 
@@ -117,7 +63,6 @@ This strategy calculates the smoothed price signal based on the cyber cycle theo
 ## Summary
 This strategy designs a trading signal smoothing Ehlers cyber cycle trading strategy through price signal smoothing and Ehlers cyber cycle indicator calculation. It can effectively filter noise and generate more reliable trading signals. At the same time, the parameter space is large and actual performance is good. By introducing adaptive mechanisms, stop loss strategies and otras optimization, the stability and effectiveness of the strategy can be further enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

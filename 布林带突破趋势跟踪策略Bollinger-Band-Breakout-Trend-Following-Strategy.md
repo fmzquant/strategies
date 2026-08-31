@@ -9,93 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是一种基于布林带指标的趋势跟踪策略。它使用布林带上下轨的突破来判断趋势方向,并打开对应方向的持仓。当价格开始回落时,则使用带动态间距的跟踪止损来退出持仓,实现盈利。
-
-## 策略原理
-
-该策略使用布林带指标判断趋势方向。布林带通过计算价格的标准差构建出上下轨。当价格突破上轨时,认为趋势开始向上;当价格突破下轨时,认为趋势开始向下。
-
-具体交易逻辑是:
-
-1. 计算布林带的中轨、上轨和下轨。
-
-2. 当价格突破上轨时,开多单;当价格突破下轨时,开空单。
-
-3. 使用跟踪止损来控制风险,当价格开始回落时止损出场。
-
-4. 重新突破布林带轨道时,再次进入趋势。
-
-使用布林带判断趋势方向,并配合动态跟踪止损,可以有效控制风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 使用布林带指标判断趋势,简单有效。
-
-2. 突破 entry 和动态 trailing stop loss 组合,兼顾趋势捕捉和风险控制。
-
-3. 代码结构清晰简洁,易于理解和修改。
-
-4. 参数较少,便于优化。
-
-5. 适用于不同品种,灵活性强。
-
-6. 回测效果良好,可盈利空间大。
-
-## 风险分析
-
-该策略的主要风险有:
-
-1. 布林带仅基于统计特性,对曲线拟合有风险。
-
-2. 无法区分范围扩张与真趋势,可能误判。
-
-3. 止损点过密,可能被价格常态震荡止损。
-
-4. 未考虑交易成本的影响。 
-
-5. 回测时间范围有限,可能过拟合。
-
-对应解决方案:
-
-1. 优化参数或引入其他指标验证信号。
-
-2. 增加对震荡和通道的识别。
-
-3. 根据ATR等指标动态调整止损点。
-
-4. 加入手续费、滑点的计算。
-
-5. 增加回测时间范围,多市场验证。
-
-## 优化方向
-
-该策略可以从以下方面优化:
-
-1. 测试不同指标的组合效果。
-
-2. 增加对趋势震荡的识别。
-
-3. 引入机器学习方法动态优化参数。
-
-4. 根据回测优化止损策略。
-
-5. 评估并加入交易成本的影响。
-
-6. 进行参数空间优化,寻找最优参数 Settings。
-
-7. 增加money management,以控制仓位风险。
-
-## 总结
-
-该策略通过布林带指标判断趋势方向,并配以跟踪止损来控制风险,整体交易逻辑简单清晰。策略具有较好的趋势捕捉效果,但可通过引入更多技术指标、优化参数以及加入成本计算等进行改进,使策略更稳健可靠。总体来说,该策略提供了一种基于布林带的简单实用的趋势跟踪交易思路。
-
-||
 
 ## Overview 
 
@@ -181,7 +94,6 @@ The strategy can be optimized by:
 
 This strategy determines trend direction with Bollinger Bands and controls risk with trailing stop loss. The overall logic is simple and clear. It has good trend catching capability, but can be improved by introducing more technical indicators, optimizing parameters, adding costs etc to make it more robust. Overall, this strategy provides a simple and practical Bollinger Bands based trend following approach.
 
-[/trans]
 
 > Strategy Arguments
 

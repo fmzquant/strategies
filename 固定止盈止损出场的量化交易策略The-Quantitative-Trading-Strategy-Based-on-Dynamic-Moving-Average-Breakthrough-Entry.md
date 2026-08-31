@@ -10,87 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1817bd16391af9a4dde.png)
-[trans]
-## 概述
-
-本策略名称为“动态移动平均线突破入场、固定止盈止损出场的量化交易策略”。该策略的主要思想是在每周一当日的交易时段,如果收盘价低于115周期的 Hull 动态移动平均线,那么进行长仓入场操作;在其后的每周三当日的交易时段,无条件进行平仓出场操作,同时设置固定的止盈止损点。
-
-## 策略原理
-
-该策略主要基于Hull移动平均线的指标信号和周期性的交易规则进行设计。
-
-首先,在每周一的交易时段,判断收盘价是否低于115周期的Hull移动平均线,如果满足条件,进行长仓入场操作。Hull移动平均线相比普通移动平均线,能更快地响应价格变化,对趋势的识别更加敏感,因此该指标信号可以提高入场时机的准确性。
-
-其次,无条件地在每周三的交易时段进行平仓出场。通过这种周期性的操作方式,可以避免被突发事件影响,降低回撤的概率。同时设置了固定比例的止盈止损点,以控制每次交易的风险和收益。
-
-最后,由于每次交易持仓的时间跨度较短,交易频次较高,这可以在一定程度上调整仓位,降低单笔交易的风险。
-
-## 优势分析
-
-本策略具有以下几个优势:
-
-1. 使用Hull移动平均线作为入场信号指标,可以提高入场时机选择的准确性,捕捉趋势机会。
-
-2. 采用周期性的出场方式,可以规避非理性行为带来的风险,降低回撤概率。
-
-3. 设置固定的止盈止损点,可以很好控制单笔交易的风险收益比。
-
-4. 交易频次较高,有利于调整仓位,降低单笔交易的风险。
-
-5. 策略规则简单清晰,容易理解与实现,适合量化交易的算法化。
-
-
-## 风险分析
-
-本策略也存在一些风险,主要包括:
-
-1. 市场可能出现长时间盘整,导致入场后被套牢的概率较大。
-
-2. 固定的止盈止损点设置不够灵活,可能出现止损过早或止盈过晚的情况。
-
-3. 若出现重大且突发的行情事件,周期性的出场方式可能带来较大的亏损。
-
-4. 频繁交易会增加交易成本和滑点的影响。
-
-5. 参数设置(如计算周期长度等)不当可能影响策略表现。
-
-
-为了降低上述风险,可以考虑以下几点优化措施:
-
-1. 在入场前判断市场格局,避免在盘整时入场。 
-
-2. 设置动态滑动止盈止损或考虑事先设定多个固定止盈止损点。
-
-3. 在重大事件前后暂停交易,避开行情剧烈波动的时段。
-
-4. 适当减少交易频次,降低交易成本和滑点的影响。
-
-5. 优化参数设置,进行稳健性检验,使策略更加稳定。
-
-## 优化方向  
-
-本策略还有进一步优化的空间,主要包括以下几个方面:
-
-1. 使用机器学习等方法动态优化移动平均线的参数,使指标信号更加准确。
-
-2. 尝试结合多个指标进行组合,设计更加复杂的入场和出场规则。 
-
-3. 根据不同时间段和市场环境设计自适应的止盈止损机制。
-
-4. 融入风险管理模型,实现更好的资金管理。
-
-5. 设计断点复权模块,使策略能顺利完成股票拆股等重要事件。
-
-6. 添加实盘验证模块,检验策略在实盘中的表现。
-
-
-通过机器学习、指标组合、自适应止盈止损、风险管理等方式的融合与优化,本策略可以获得更强的稳定性与收益性。同时加入实盘验证机制是进一步完善策略的重要手段。这些都是本策略未来可以优化的主要方向。
-
-## 总结
-
-本策略基于 Hull 动态移动平均线指标信号入场以及固定周期出场的思路进行设计,具有指标信号准确、回撤概率低等优势,同时控制了单笔交易的止盈止损。但本策略也存在被套、止盈止损设置不合理等问题。未来的优化方向包括引入机器学习和更复杂的多指标组合入场,设计自适应的止盈止损机制,加入断点复权和实盘验证模块等。通过这些措施的综合运用,本策略的稳定性和盈利能力都将得到提升。
-
-||
 
 ## Overview
 
@@ -169,7 +88,6 @@ By organically combining machine learning, indicator portfolio, adaptive profit-
 
 This strategy is designed based on the ideas of Hull Dynamic Moving Average indicator signal entry and fixed cycle exit. It has advantages like accurate signals and low drawdown probability, while controlling single trade's profit-taking and stop-loss. But problems like being trapped and improper profit-taking/stop-loss settings also exist. Future optimization directions include introducing machine learning and more complex multi-indicator combinations for entry, designing adaptive profit-taking/stop-loss mechanisms, adding rights adjustment and real trading verification modules, etc. By comprehensively adopting these measures, the stability and profitability of this strategy will be enhanced.
 
-[/trans]
 
 > Strategy Arguments
 

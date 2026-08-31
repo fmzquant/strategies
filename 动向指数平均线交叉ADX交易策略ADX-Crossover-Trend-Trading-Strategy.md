@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d2b7a22a471f668af3.png)
-[trans]
-
-## 概述
-
-该策略结合使用动向指数平均线(ADX)指标和向上指向运动指数(DI+)为判断市场方向和趋势提供依据,同时运用快速和慢速移动平均线来确定交易方向和持有时间,属于趋势跟踪型交易策略。该策略可以有效捕捉中短线的反转点,在低波动率和趋势明显的市场中表现较佳。
-
-## 原理
-
-该策略核心逻辑为,当+DI线从下方向上突破ADX时产生买入信号,而当+DI线从上方向下跌破ADX时产生卖出信号。因此,该策略依赖于DI和ADX指标之间的交叉来判断市场趋势和反转点。同时,快慢均线的关系被用来判断整体市场趋势,只有当快速EMA高于慢速EMA时才会考虑产生交易信号。 
-
-具体来说,当满足以下条件时,会发出买入信号:
-1、快速EMA高于慢速EMA
-2、+DI线从下方向上突破ADX线
-3、ADX值低于30的阈值水平
-
-当满足以下条件时,会发出卖出信号:
-1、ADX值高于30的阈值水平
-2、+DI线从上方向下跌破ADX线
-
-该策略还加入了止损逻辑,当价格低于止损价位时会退出所有头寸。
-
-## 优势
-
-该策略结合DI、ADX和均线指标,可有效判断市场趋势转折点。具有以下优势:
-
-1. 利用DI和ADX指标判断趋势反转信号,精准定位入场和出场点位
-2. 快慢EMA过滤系统提供大趋势判断,避免错误交易
-3. 采用ADX值判断趋势强弱,只在趋势较弱时交易,规避假突破风险 
-4. 加入止损机制控制下行风险
-5. 入场条件严格,避免追高买入和agiri卖出的风险
-6. 出场条件清晰,及时止损和止盈
-
-## 风险
-
-该策略也存在一些风险需要注意:
-
-1. ADX指标存在滞后性,可能错过价格反转的最佳时点
-2. 当市场震荡较大时,ADX和DI指标会产生更多错误信号
-3. 快慢均线设置不当可能导致错失交易机会或错误过滤信号
-4. 止损价位设定过于宽松,无法有效控制风险
-
-针对这些风险,可以通过优化ADX和均线参数,调整止损水平,结合其他指标确认信号等方法进行改进。
-
-## 优化方向  
-
-该策略还有进一步优化的空间:
-
-1. 可以测试不同长度周期的ADX,寻找最佳参数组合
-2. 可以添加其他指标,如RSI、布林带等来确认交易信号
-3. 可以基于机器学习算法自动寻优参数组合和交易规则  
-4. 可以通过动态调整止损水平来对冲尾盘风险
-5. 可以建立多因子评分模型,使入场和出场规则更加稳健 
-
-## 总结
-
-该ADX交叉趋势策略整体来说较为稳定,在波动前期能够有效捕捉反转空间,但需要注意控制风险。通过进一步优化参数设定、严格入场与止损规则等方式,可以获得较好的风险调整后收益。该策略适用于长线持有中短线交易账户。
-
-|| 
 
 ## Overview  
 
@@ -124,7 +66,6 @@ There is room for further enhancements:
 
 In general this ADX crossover trend strategy is quite stable, able to effectively capture reversals early on, but risk control is critical. Further optimizing parameters, strictly following entry rules and stop loss can lead to good risk-adjusted returns. The strategy suits long-term accounts holding medium to short term positions.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -9,44 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用超级趋势指标判断价格趋势,并配以止损机制进行趋势追踪交易。它结合两个移动平均的差值构建超级趋势指标,指标上穿做多,下穿做空。同时设置止损线,避免亏损过大。
-
-## 策略原理
-
-计算快线和慢线的DEMA,根据两线差值确定超级趋势方向。在上升趋势中,快线上穿慢线做多;下降趋势中,快线下穿慢线做空。入场后,设置止损线,一旦亏损达到止损幅度则止损出场。
-
-## 优势分析
-
-- 超级趋势判断价格趋势简单有效
-- 止损机制有效控制单笔交易风险
-- 可根据不同阶段使用不同参数组合
-- 回撤控制能力较强
-
-## 风险分析
-
-- 移动平均判断趋势存在滞后
-- 止损点设置过于宽松可能扩大损失
-- 交易频次较高,手续费负担重
-- 无法准确判断趋势反转点
-
-可适当缩短平均线周期,优化止损幅度,减少交易次数等来控制风险。
-
-## 优化方向
-
-- 测试不同快慢线参数组合
-- 优化止损幅度参数
-- 考虑结合其他指标判断趋势反转
-- 在不同品种中测试参数健壮性
-
-## 总结
-
-该策略使用简单指标判断趋势方向,止损控制风险,适合日内交易。可通过参数调优等进一步提高效果。
-
-||
 
 ## Overview 
 
@@ -83,7 +45,6 @@ Risks can be mitigated by shortening moving average periods, optimizing stop los
 
 This simple strategy uses indicators for trend direction and stop loss for risk control, suitable for intraday trading. Performance can be further improved through parameter tuning.
 
-[/trans]
 
 > Strategy Arguments
 

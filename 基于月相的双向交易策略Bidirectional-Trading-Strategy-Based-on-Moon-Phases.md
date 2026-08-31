@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/18ebe38474d7bac60a8.png)
-[trans]
-### 概述
-
-本策略基于月相的变化,在新月时做多,满月时做空,实现双向交易。
-
-### 策略原理
-
-该策略使用自定义函数计算月相,根据日期可以准确计算出月相的年龄。年龄小于15时为新月,年龄大于15且小于30时为满月。策略根据月相判断做多做空信号,在新月时开仓做多,满月时开仓做空,平仓时则相反,满月平多仓,新月平空仓。
-
-用户可以选择“新月做多,满月做空”或者“新月做空,满月做多”两种策略。策略使用布尔变量跟踪当前是否持有仓位。在信号出现而之前无仓位时开新仓,信号反转时平掉当前仓位。策略可视化显示买入卖出标记。
-
-### 优势分析
-
-1. 利用月相周期性,捕捉长线趋势
-2. 可自定义颜色、填充等策略显示
-3. 可选择双向交易策略
-4. 显示开平仓标记,操作清晰
-5. 可定制回测起始时间,优化策略
-
-### 风险分析
-
-1. 月相周期长,无法捕捉短线趋势
-2. 无法限制亏损,可能造成大额损失
-3. 固定周期,容易形成模式
-
-风险解决方法:
-
-1. 结合其他指标,实现多级别交易
-2. 增加止损机制
-3. 优化仓位管理,降低单笔损失影响
-
-### 优化方向
-
-本策略可以从以下方面进行优化:
-
-1. 结合更多周期指标,形成交易信号过滤器,提高策略稳定性
-2. 增加仓位管理模块,优化仓位大小,降低单笔亏损的影响
-3. 增加止损模块,避免亏损扩大
-4. 优化开仓和平仓条件,减少掉期,提高获胜率
-
-### 总结
-
-本策略利用月相的周期性规律,实现了基于新月和满月的双向交易策略。策略显示清晰,可定制性强,适合捕捉长线趋势。但因无法限损,风险较大,建议结合其他短周期指标使用,并增加仓位和止损管理模块,以进一步优化。
-
-||
 
 ### Overview
 
@@ -99,7 +54,6 @@ The strategy can be improved by:
 
 The strategy exploits the periodicity of moon cycles to implement a bidirectional trading strategy based on new and full moons. It has clear signals, high customizability, and catches long-term trends well. But the inability to limit losses poses significant risks. It is recommended to combine short-cycle indicators and add position sizing and stop losses to further optimize the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

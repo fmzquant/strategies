@@ -10,88 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/166e96896b91985be55.png)
-[trans]
-
-
-### 概述
-
-一目均衡异同交叉交易策略通过计算一目均衡的天坛线和基准线的交叉情况,结合价格与云盘的关系,形成交易信号,实现获利。该策略融合了趋势交易和反转交易的优点,既可以跟随趋势运行,也可以捕捉反转机会,是一种非常通用且实用的交易策略。
-
-### 策略原理   
-
-1. 计算一目均衡的组成要素:
-
-    - 天坛线(Tenkan-Sen):最近9根K线的中点
-
-    - 基准线(Kijun-Sen):最近26根K线的中点 
-
-    - 先行线(Senkou Span A):天坛线和基准线的平均值
-
-    - 迟行线(Senkou Span B):最近52根K线的中点
-
-2. 观察以下交易信号的组合:
-
-    - 天坛线和基准线的交叉(黄金交叉和死亡交叉)
-
-    - 云盘(由先行线和迟行线组成)之上的收盘价或之下的收盘价
-
-    - 延迟26周期的K线(Chikou Span)对比当期K线的方向
-
-3. 当观察到以下交易信号时,可以进行开仓操作:
-
-    - 多头信号:天坛线上穿基准线(黄金交叉)且收盘价高于云盘 且 Chikou Span 高于延迟26周期的收盘价
-
-    - 空头信号:天坛线下穿基准线(死亡交叉)且收盘价低于云盘 且 Chikou Span 低于延迟26周期的收盘价  
-
-4. 当观察到相反方向的交易信号时,可以进行平仓操作。
-
-### 策略优势
-
-1. 结合趋势交易和反转交易的优点,既可以跟随趋势,也可以捕捉反转。
-
-2. 使用均线的交叉形成交易信号,可以增强信号的可靠性,避免假突破。
-
-3. 综合多个交易信号,可以有效过滤市场噪音,锁定高概率机会。
-
-4. 延迟线Chikou Span可以避免陷入剧烈震荡市的回调。
-
-5. 云盘区域提供支撑和阻力,可以更精确确定入场和止盈位置。
-
-### 策略风险
-
-1. 参数设置不当可能导致交易频率过高或信号不明显。
-
-2. 趋势突变时,可能产生较大亏损。
-
-3. 震荡盘整困难期,交易信号明显减少,实现盈利难度较大。
-
-4. 云盘区域过于宽阔时,入场信号可能出现滞后。
-
-5. 多因子综合判断,提高了判定难度,实盘操作难度较大。
-
-可以通过优化参数,合理控制仓位规模,设置止损位置,选择流动性好的交易品种等方法来控制风险。
-
-### 策略优化方向
-
-1. 优化均线参数,使交易频率和获利率达到最佳状态。
-
-2. 增加趋势判断指标,避免趋势突变带来的亏损。
-
-3. 增加波动率指标,控制交易风险。
-
-4. 优化开仓仓位规模和止损位置。
-
-5. 添加交易量能量指标,确保充足流动性。
-
-6. 测试不同品种的参数设置。
-
-7. 增加机器学习算法,根据回测数据自动优化参数。
-
-### 总结
-
-一目均衡异同交叉策略综合运用均线交叉、延迟线和云盘区域等多种技术指标形成交易信号,可以有效识别趋势方向,在重要支撑阻力区域开仓,是一种较为稳健可靠的交易策略。通过参数优化和严格的资金管理,可以进一步提高策略的稳定性和收益性。该策略易于理解和实现,值得实盘验证与应用。
-
-||
 
 
 ### Overview
@@ -172,7 +90,6 @@ Risks can be mitigated through parameter optimization, position sizing, stop los
 
 The Ichimoku Kinko Hyo Cross strategy combines various technical analysis tools like moving average crossovers, delayed lines, and Cloud bands to identify high-probability entries in trending or reversal scenarios. Proper optimization and risk management can further improve its stability and profitability. The strategy is easy to understand and implement, making it worth live testing and application.
 
-[/trans]
 
 > Strategy Arguments
 

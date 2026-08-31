@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-本文将详细介绍一种根据K线方向进行简单量化交易的策略。该策略直接根据价格的收盘关系产生多空信号。
-
-一、策略原理
-
-该策略仅根据K线的收盘价格关系判断方向,具体交易逻辑为:
-
-1. 当收盘价大于开盘价时,做多;
-
-2. 当收盘价小于开盘价时,做空; 
-
-3. 可以设置仓位大小;
-
-4. 可设置回测时间范围。
-
-通过直接判断K线的收阴或收阳,形成最简单的追踪信号。虽然非常原始,但也形成了一套完整的交易系统。
-
-二、策略优势
-
-该策略最大的优势在于非常简单和直观,仅利用K线方向判断,无需计算指标。
-
-另一优势是可以通过调整仓位大小控制风险。
-
-最后,可以设置回测时间范围,针对不同时期进行测试。
-
-三、潜在风险
-
-但该策略也存在以下问题:
-
-首先,仅凭K线方向无法对市场做出准确判断,信号质量较差。
-
-其次,没有设置止损止盈条件,无法控制交易风险。
-
-最后,没有进行参数优化,不够稳定。
-
-四、内容总结
-
-本文详细介绍了一种仅根据K线方向进行简易量化交易的策略。它通过最基本的价格关系判断,形成完整的交易系统。但也存在一些问题有待改进,如优化参数、增加止损止盈等。总体来说,它提供了一种非常简单原始的策略思路。
-
-||
 
 This article explains in detail a simple quantitative trading strategy based solely on candle direction. It generates long/short signals directly according to the closing price relationship.
 
@@ -90,7 +49,6 @@ IV. Summary
 
 In summary, this article has explained a simple quantitative trading strategy based purely on candle direction. It forms a complete system through the most basic price relationship analysis. But improvements are needed such as parameter optimization and adding stops. Overall it provides a very simple and primitive strategy concept.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bd6acdeb8fbfc5362b.png)
-[trans]
-
-## 概述
-
-该策略是一个基于均线的趋势跟踪策略。它使用两个不同周期的EMA均线,即21周期和55周期的EMA均线。当短期EMA线上穿长期EMA线时产生买入信号;当短期EMA线下穿长期EMA线时产生卖出信号。
-
-除此之外,策略还结合了反向买卖、ATR止损和反转止盈来提高策略的稳定性和盈利能力。
-
-## 策略原理  
-
-1. 使用21周期和55周期两条EMA均线。 21EMA代表短期趋势,55EMA代表长期趋势。  
-
-2. 当短期EMA线上穿长期EMA线时,表示短期趋势转换为上升趋势,产生买入信号。  
-
-3. 当短期EMA下穿长期EMA时,表示短期趋势转换为下降趋势,产生卖出信号。  
-
-4. 反向买卖:只在价格小于开盘价时产生买入信号,只在价格大于开盘价时产生卖出信号。这是为了在短期回调时买入,在短期反弹时卖出,从而获利。  
-
-5. ATR止损:使用ATR指标的N倍来设置止损位。这可以根据市场波动度来动态调整止损。 
-
-6. 反转止盈:使用买入价减去ATR的N倍作为止盈位。这是利用价位重新测试前支持转抵抗的特征来止盈。
-
-## 策略优势
-
-1. 使用双EMA判断主要趋势方向,能捕捉中长线趋势。
-
-2. 反向交易,适合趋势回调短线操作。
-
-3. ATR止损,可以根据市场波动性设置止损。
-
-4. 反转止盈,设置在重要技术位附近,增加止盈概率。
-
-5. 策略逻辑简单清晰,容易理解和修改。
-
-6. 可供数字货币等具有高波动性市场使用。
-
-## 风险及解决方案
-
-1. 双EMA均线产生错误信号的概率大,可适当延长均线周期。
-
-2. 反向交易容易止损,可调整止损比较宽松。  
-
-3. 市场常有假突破,可加入其他指标过滤信号。 
-
-4. 止盈风险大,可人工及时移除止盈单。
-
-## 策略优化建议  
-
-1. 加入MACD,KD等指标判断超买超卖区域,过滤入场时机。  
-
-2. 添加更多均线,例如120周期EMA,综合判断趋势。
-
-3. 对买入和卖出分别设置滑点,优化入场价位。  
-
-4. 针对数字货币的高波动特点,可适当放宽ATR的止损幅度。
-
-5. 优化ATR倍数和移动止损方案,以求取最大盈利和最小回撤。
-
-
-## 总结
-
-该策略整体来说是一个较为简单的双EMA均线策略,核心思路是利用EMA判断趋势方向。策略的优点是逻辑简洁,参数调整灵活,可适用于中长线趋势和短线反转。我们也分析了该策略可能存在的风险和应对方法,以及未来的几点优化建议。总体而言,该策略有一定的实用性和拓展空间,但需要根据不同市场调整参数使用。
-||
 
 ## Overview  
 
@@ -133,7 +70,6 @@ In addition, the strategy incorporates reverse trading, ATR stop loss, and rever
 ## Conclusion  
 
 In conclusion, this is a relatively simple dual EMA trend following strategy. Its strength lies in clean logic, flexible parameters, applicability in mid- to long-term trends and short-term reversals. We also analyzed its potential weaknesses and solutions, along with several recommendations for future improvements. Overall speaking, this strategy is practical to some extent and has room to evolve, but its parameters need adjustments for different markets.  
-[/trans]
 
 > Strategy Arguments
 

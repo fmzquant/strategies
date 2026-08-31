@@ -10,43 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/123adb04751c056ea4e.png)
-[trans]
-
-## 概述
-
-该策略结合了移动平均线判断趋势方向和K线形态判断反转点的方法,实现了趋势追踪交易。策略首先使用移动平均线判断整体趋势方向,然后在趋势方向上寻找潜在的反转K线形态作为入场信号,从而追踪趋势运行。
-
-## 策略原理
-
-策略使用长度为10天的简单移动平均线判断价格趋势方向。当价格高于移动平均线时,认为处于上升趋势;当价格低于移动平均线时,认为处于下降趋势。 
-
-在判断到趋势方向后,策略会根据一系列阳线K线形态和阴线K线形态来判断潜在的趋势反转点。常见的阳线形态包括启明星、早晨之星、三只白兵等;常见的阴线形态包括黄昏之星、三只乌鸦等。当在上升趋势中识别到阳线信号时,策略会进行买入操作;当在下降趋势中识别到阴线信号时,策略会进行卖出操作。
-
-此外,策略还会结合主要的支撑阻力位来确定入场的具体价格。如在上升趋势下买入时,会在突破第一支撑位时进行买入。
-
-## 策略优势
-
-该策略最大的优势是同时结合趋势判断和反转信号,使得它可以及时捕捉趋势转折点,实现趋势跟踪运行。相比简单的移动平均线策略,该策略可以大大提高获利概率。
-
-另外,策略加入K线形态判断也增强了其对突发事件的处理能力。在市场出现低概率事件导致假突破时,K线形态可以发挥过滤作用,避免错误交易。
-
-## 策略风险
-
-该策略主要的风险在于移动平均线参数设置和K线形态判断的准确性。如果移动平均线周期设置得不当,会导致趋势判断错误;如果对K线形态判断出现失误,也会导致交易决策失误。
-
-此外,反转K线形态并不能百分百确保趋势反转,所以策略也存在一定的风险。当市场出现更大范围的反转时,可能会给策略带来较大亏损。
-
-## 优化方向
-
-该策略的优化空间还是比较大的。例如可以考虑动态调整移动平均线的参数,在不同市场阶段采用不同的移动平均线周期。还可以加入机器学习的方法,利用历史数据训练K线形态判断模型,提高判断准确性。
-
-另外,也可以考虑加入更多因子判断趋势和热点区域,如交易量变化、波动率指标等,使策略更加全面和稳健。
-
-## 总结
-
-该策略整体来说非常适合跟踪股市中期趋势,可以获得较高的稳定收益。如果进一步优化,有望成为一个运作良好的量化策略。投资者如果掌握该策略的运用,也可以用其构建长期持有的组合,以控制个股风险的同时获得较好的超额收益。
-
-||
 
 ## Overview
 
@@ -82,7 +45,6 @@ In addition, we can also consider incorporating more factors to judge trends and
 
 In general, this strategy is very suitable for tracking mid-term trends in the stock market and can obtain relatively high and stable returns. If further optimized, it has the potential to become a well-functioning quantitative strategy. If investors grasp the use of this strategy, they can also use it to build long-term holdings to control individual stock risks while obtaining better excess returns.
 
-[/trans]
 
 > Strategy Arguments
 

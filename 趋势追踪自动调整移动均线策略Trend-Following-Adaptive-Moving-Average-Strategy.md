@@ -9,63 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略基于快速移动均线和慢速移动均线的交叉作为买入和卖出信号,属于趋势跟踪类策略。通过自动调整移动均线参数,动态适应市场趋势来达到收益最大化。
-
-### 策略原理
-
-1. 计算快速移动均线和慢速移动均线。快速移动均线参数默认为21,慢速移动均线参数默认为34。
-
-2. 当快速移动均线上穿慢速移动均线时,表示行情向上,发出买入信号。
-
-3. 当快速移动均线下穿慢速移动均线时,表示行情向下,发出卖出信号。 
-
-4. 通过自动调整移动均线的长度参数,使其动态适应市场趋势,追踪趋势获利。
-
-### 优势分析
-
-1. 策略简单清晰,容易理解实现。
-
-2. 能够有效跟踪市场趋势,获利潜力大。
-
-3. 通过动态调整参数,可以适应行情的变化。
-
-4. 可配置移动均线算法,增加策略灵活性。
-
-5. 可自由配置买入卖出逻辑,灵活应用。
-
-### 风险分析
-
-1. 移动均线策略容易产生频繁交易,交易成本较高。
-
-2. 行情剧烈波动时,移动均线产生滞后,可能错过最佳买入卖出时机。
-
-3. 需要优化移动均线参数与调整频率,不当配置会造成策略失效。
-
-4. 需要严格控制止损,防止亏损扩大。
-
-5. 趋势反转时容易形成巨额浮亏。
-
-### 优化方向
-
-1. 优化移动均线参数,使其更加灵敏,及时捕捉趋势变化。
-
-2. 增加止损逻辑,严格控制单笔亏损。
-
-3. 增加趋势判断指标,避免趋势反转造成损失。 
-
-4. 优化移动均线调整策略,使其更加智能和自动化。
-
-5. 增加参数优化模块,使用机器学习方法自动优化。
-
-### 总结
-
-本策略整体思路清晰易懂,通过配置不同长度的快慢移动均线完成买入卖出,属于典型的趋势跟踪策略。策略优势是交易规则简单,容易实现,能够有效捕捉趋势。但也存在一定风险,需要不断优化参数配置、止损逻辑,使策略更稳定可靠。总体来说,该策略拥有较大的改进潜力,值得深入研究与应用。
-
-||
 
 ### Overview
 
@@ -121,7 +64,6 @@ This strategy generates trading signals based on the crossover between fast and 
 
 The strategy logic is simple and clear, generating trades based on fast and slow MAs crossover. It effectively captures trends but has risks. Continuous optimization on parameters, stop loss logic is required to make the strategy more robust. Overall the strategy has great potential for improvements and is worth researching and applying.
 
-[/trans]
 
 > Strategy Arguments
 

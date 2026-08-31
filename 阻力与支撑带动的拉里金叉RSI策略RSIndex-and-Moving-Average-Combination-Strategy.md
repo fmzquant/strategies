@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8c2d35a68da1b78837.png)
-[trans]
-
-### 概述
-
-该策略通过计算价格的移动平均线以及相对强弱指标RSI来寻找买卖点,在RSI指标处于超买超卖状态时,发出买入和卖出信号,同时使用 Bollinger Bands 来确定价格的支撑和阻力区域,从而过滤掉一些噪音交易信号。
-
-### 策略原理
-
-该策略主要基于 RSI 指标和多条不同周期的移动平均线的组合使用。具体来说,它计算了1日线到200日线等多条MA,以及 RSI 指标。当价格上穿 200日移動平均线,并且 RSI 指标小于 10 时产生买入信号。当价格下破 5 日移动平均线,并且 1 日线下穿 3 日线时产生卖出信号。
-
-该策略同时使用 Bollinger Bands 来确定价格的支撑和阻力区域。 Bollinger Bands 由中轨、上轨和下轨组成。当价格接近上轨时被视为股票高估区域,当价格接近下轨时被视为股票低估区域。所以 Bollinger Bands 能很好地判断目前股票的相对价值。
-
-### 优势分析
-
-1. 使用 RSI 指标判断超买超卖区域,这是个经典的计量经济学策略,可以捕捉价格反转机会。
-
-2. 结合多条 MA 平均线,能增强FILTER FILTERING功能,避免被套。
-
-3. 增加 Bollinger Bands 来确定支撑和阻力区域,这能进一步避免在高位追高和在低位追低,过滤噪音交易信号。
-
-### 风险分析
-
-1. RSI 指标容易产生误差信号,需要结合价格实体行情判断。
-
-2. MA 移动平均线常被用来判定趋势,但是价格与 MA 发散时会错误判断趋势转折点。
-
-3. Bollinger Bands 上下轨支撑阻力确定具有滞后性,不能准确判定 extrema 临时高点和低点。
-
-4. 本策略采取较短持仓时间,可能容易受到短期市场噪音的干扰。
-
-### 优化方向
-
-1. 可以测试适当延长持仓周期,如将平仓线改为 10 日线或 20 日线。
-
-2. 可以测试调整 RSI 参数,如改为 (3,5) 参数或 (2,8) 参数。
-
-3. 可以尝试增大 Bollinger Bands 参数来获得更加明显的支撑和阻力区间。
-
-4. 可以测试其他指标与 RSI 指标的组合,如 KDJ 指标、MACD 指标等。
-
-5. 可以测试 RSI 与量能指标 OBV 的组合。
-
-### 总结
-
-该策略整体来说较为经典和稳健,运用了多种不同指标的优势,使买卖信号更加准确可靠,同时也存在一些需要优化的方向。关键是要把握住 RSI 指标的趋势判断功能,以及 Bollinger Bands 对支撑和阻力区域的判断。通过适当参数调整和指标组合优化,该策略可以获得更好的效果。
-
-||
 
 ## Overview  
 
@@ -102,7 +55,6 @@ This strategy also uses Bollinger Bands to determine the support and resistance 
 
 The strategy is relatively classic and robust as a whole, taking advantage of different indicators to make trading signals more accurate and reliable. There are also some directions that need optimization. The key is to grasp the trend judgment function of the RSI indicator and Bollinger Bands' judgement on support and resistance levels. Through appropriate parameter adjustment and indicator combination optimization, this strategy can achieve better results.
 
-[/trans]
 
 
 

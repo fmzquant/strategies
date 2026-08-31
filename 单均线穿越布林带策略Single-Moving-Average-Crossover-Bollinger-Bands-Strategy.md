@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16653c7254aecf065eb.png)
-[trans]
-
-## 概述
-
-该策略基于单均线和布林带指标,当价格突破布林带上轨或下轨时,进行买入或卖出操作。同时结合均线的方向判断趋势,只有在均线上升时才进行买入,在均线下降时才进行卖出。
-
-## 策略原理
-
-该策略主要根据以下几个指标进行判断:
-
-1. 均线(SMA):计算CLOSE收盘价的简单移动平均线,代表价格趋势。
-2. 布林带上轨:代表仰角阻力线,突破该线表示强势突破。
-3. 布林带下轨:代表支撑线,跌破该线表示趋势反转的可能。
-
-具体交易信号如下:
-
-1. 买入信号:当收盘价突破布林带上轨,且均线处于上升状态,进行买入。
-2. 卖出信号:当收盘价跌破布林带下轨,且均线处于下降状态,进行卖出。
-
-这样,结合趋势和突破,使交易信号更加可靠,避免假突破。
-
-## 策略优势
-
-1. 规则简单清晰,容易理解执行。
-2. 利用均线判断大趋势方向,避免做空牛市,做多熊市。
-3. 布林带上下轨判断局部突破点位,精确捕获突破信号。
-4. 回撤相对较小,符合多数人的风险偏好。
-
-## 策略风险
-
-1. 单一指标容易发出错误信号,可通过优化参数降低错误率。
-2. 无法应对大的行情震荡,可适当调整止损点位。 
-3. 无法在趋势巨大的情况下获利更多,可考虑加大仓位。
-
-## 策略优化
-
-1. 优化均线周期参数,适应更多品种。
-2. 增加其它指标过滤,如MACD等,减少错误信号。 
-3. 动态调整止损点位,限制最大回撤。
-4. 结合资金管理思想,使盈亏更加平稳。
-
-## 总结
-
-该策略整体来说较为简单实用,适合多数人. 通过一些优化调整,可以使策略更加鲁棒,适应更多市场情况,是一个值得推荐的策略。
-
-||
 
 ## Overview
 
@@ -100,7 +54,6 @@ By combining the trend and breakout, the trading signal becomes more reliable an
 
 In general this is a simple but practical strategy suitable for most people. With some tuning and optimizations it can be more robust and adaptive to more market situations. It is a strategy worth recommending.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,72 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fac5e1d65278af540d.png)
 
-[trans]
-
-## 概述
-
-该策略的核心思想是利用移动平均线和追踪止损机制设计出一个可以在趋势行情中获利,同时可以控制回撤的自动交易系统。
-
-## 策略原理
-
-1. 该策略允许用户选择多种不同类型的移动平均线,包括简单移动平均线、指数移动平均线、成本移动平均线等。用户可以根据自己的偏好选择移动平均线的类型。
-
-2. 用户需要设置移动平均线的周期长度。一般在中短线交易中,移动平均线的周期在20-60之间。
-
-3. 选定移动平均线之后,策略会实时计算该移动平均线。当价格上涨突破移动平均线时,做多;当价格下跌突破移动平均线时,做空。
-
-4. 策略采用追踪止损机制。当开仓之后,策略会持续监测移动平均线与价格的关系,动态调整止损线的位置。具体来说,止损线的位置等于移动平均线加/减去用户设置的止损百分比。
-
-5. 用户可以设置止损百分比。数值越大,止损范围越宽,避免止损过于灵敏;数值越小,止损更加严格,降低风险。止损百分比一般设置在2%-5%之间。
-
-6. 在开仓之后,如果价格重新回破移动平均线,则平仓止损。
-
-## 策略优势
-
-- 可以在趋势行情中顺势打开仓位,获得较大利润
-- 采用追踪止损机制,可以根据行情调整止损位置,防止止损过小而被套牢
-- 可以根据自己的风险偏好选择不同的移动平均线和止损百分比
-- 支持多种移动平均线类型,可以通过测试找到最佳参数
-- 策略逻辑简单清晰,容易理解和修改
-
-## 风险分析
-
-- 在盘整行情中,价格可能在移动平均线附近反复,导致频繁开平仓
-- 如果止损幅度设置过大,可能导致亏损扩大
-- 不同品种和不同时间周期下,移动平均线和止损百分比的最佳参数可能不同
-- 应避免在重要新闻事件前使用该策略
-
-可以通过如下方法优化和控制风险:
-
-- 在趋势明显的品种和时间周期下使用该策略 
-- 调整移动平均线周期,使用中长线周期移动平均
-- 适当调小止损百分比,严格控制风险
-- 对不同品种分别测试,寻找最佳参数
-- 在重大新闻前停止交易
-
-## 优化方向 
-
-该策略可以从以下几个方面进一步优化:
-
-1. 增加其他指标的确认,避免在盘整时频繁交易。可以加入MACD,KD等指标,只有在它们同时发出信号时才开仓。
-
-2. 采用多种移动平均线进行组合。例如同时使用5日线和20日线,只有两条移动平均线同向发出信号时才开仓。
-
-3. 对不同品种分别测试参数,设置最优参数。每种品种和周期的参数不一样,需要单独测试。
-
-4. 增加仓位数管理策略。例如设置固定数量开仓,然后加仓与止损挂钩。
-
-5. 设置一天最多开仓次数或设置开仓间隔时间。限制过于频繁交易。
-
-6. 增加机器学习算法,根据历史数据动态优化参数。避免参数静态设置。
-
-7. 利用深度学习模型预测价格趋势。可以辅助判断行情趋势的方向。
-
-## 总结
-
-该策略整体来说是一个非常实用的趋势跟踪策略。它采用移动平均线判断趋势方向,以及追踪止损来控制风险,可以在趋势行情中获得较好收益。通过参数优化以及与其他指标或模型的组合,可以进一步 enhancement 该策略的稳定性和收益率。但用户需要注意不同品种和周期下参数设置的区别,以及重大事件的影响。总体来说,该策略适合有一定基础的私募基金以及个人投资者使用。
-
-||
 
 ## Overview
 
@@ -141,7 +75,6 @@ The strategy can be further optimized in the following aspects:
 
 Overall this is a very practical trend following strategy. It uses moving averages to determine trend direction and trailing stops to control risk. It can produce good returns in trending markets. Combining parameter optimization and integration with other indicators or models can further enhance the stability and profitability. Users need to note differences in parameter settings across products and timeframes, as well as the impact of major events. Overall this strategy suits mid-level hedge funds and retail investors with some experience.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,27 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-本策略名称为“可配置化双向超趋策略”。该策略利用超趋止损方式识别价格趋势,并可以分别配置做多做空的参数,实现精确的趋势追踪交易。
-
-超趋止损的计算方式是:以ATR值乘以一个coefficients构建价格通道,通道上沿为做多止损线,通道下沿为做空止损线。价格突破通道时产生交易信号。
-
-该策略的创新之处在于,做多和做空的参数可以独立配置:
-
-1. ATR周期、ATR coefficients等超趋参数可分别设定;
-
-2. 最大持仓周期也可分别配置,从而调整盈利目标;
-
-3. 止损方式(固定百分比止损或ATR跟踪止损)也可不同设置。
-
-这使策略可以仅做多、仅做空或双向交易,更贴合特定市场行情的需要。
-
-该策略优势是超趋止损判断简单直观,可配置参数组合丰富。但超趋本身容易被突破,需要辅助判断。参数优化也很关键。
-
-总之,可配置双向超趋策略提高了趋势交易的精确度,但核心思想仍是简单的参数组合,易于实盘应用。
-
-
-||
 
 
 
@@ -52,7 +31,6 @@ The advantages are the intuitive Supertrend mechanism and abundant configurable 
 
 In summary, the configurable dual Supertrend strategy improves trend trading precision, while keeping the core idea simple for practical application.
 
-[/trans]
 
 
 > Strategy Arguments

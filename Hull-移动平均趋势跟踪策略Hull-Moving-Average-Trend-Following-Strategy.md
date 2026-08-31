@@ -9,55 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-Hull移动平均趋势跟踪策略是一种利用Hull移动平均线判断市场趋势方向,并发出买入和卖出信号的量化交易策略。该策略能够捕捉中长线趋势,在趋势开始阶段建立仓位,在趋势反转前平仓止盈。
-
-## 原理
-
-该策略同时使用Hull移动平均线和普通移动平均线判断趋势方向。当短周期Hull MA上穿长周期Hull MA时为买入信号。当短周期Hull MA下穿长周期Hull MA时为卖出信号。
-
-普通移动平均线用来判断即时趋势方向。当短周期EMA上穿长周期EMA时为看涨,当短周期EMA下穿长周期EMA时为看跌。只有Hull MA信号和EMA同向看涨或看跌时,才会发出交易信号。
-
-此外,该策略还利用K线实体通道判断市场波动幅度,避免在震荡市中错交易。只有价格突破通道才考虑建仓。
-
-## 优势
-
-- Hull移动平均线对价格变动更敏感,可以提早捕捉趋势转折。
-
-- 组合使用Hull MA和EMA,可以过滤假信号。
-
-- 利用K线通道判断震荡,避免在盘整中频繁交易。
-
-- 采用趋势跟踪方式,能够持续捕捉中长线趋势的利润。
-
-## 风险
-
-- 移动平均线存在滞后性,可能错过趋势反转的最佳入场点位。
-
-- 震荡势头的判断不准确,可能在盘整中错交易。
-
-- 交易次数较少,容易受单笔损失的影响。
-
-- 无法有效利用短线震荡获利。
-
-## 应对方法
-
-- 优化移动平均线的周期参数,追求及时反应趋势。
-
-- 辅助采用其他指标判断震荡,如RSI、BBANDS等。 
-
-- 采用积极的资金管理,控制单笔损失比例。
-
-- 可辅助采用其他策略来捕捉短线利润。
-
-## 总结
-
-Hull移动平均趋势跟踪策略通过Hull MA和EMA的组合运用,能够有效跟踪中长线趋势。在获利趋势中持续累积利润,并尽早在趋势反转前止盈。这是一个简单实用的量化交易策略,值得推荐。
-
-||
 
 ## Overview
 
@@ -105,7 +56,6 @@ In addition, the strategy utilizes K-line body channels to gauge market fluctuat
 
 The Hull moving average trend following strategy effectively tracks mid-to-long term trends through the combined use of Hull MA and EMA. It accumulates profits throughout profit trends and exits early before reversals. This is a simple and practical quant trading strategy worth recommending.
 
-[/trans]
 
 > Strategy Arguments
 

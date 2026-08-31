@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16fa6f3711ab74299a1.png)
 
-[trans]
-#### 概述
-该策略是一个基于历史新高突破和月线均线过滤的趋势跟踪策略。它通过监控价格是否突破之前的历史最高点来寻找买入信号，同时利用月线8周期简单移动平均线(8 SMA)作为卖出过滤条件，以此降低假突破带来的风险。这种策略设计理念符合"趋势延续性"这一市场特征，特别适合在强势上涨趋势中捕捉大级别行情。
-
-#### 策略原理
-策略的核心逻辑包含两个关键部分:
-1. 买入信号：当最新收盘价突破前期历史最高点(不包含当前K线的最高价)时，系统产生买入信号。这个条件确保只在明确的上升趋势中入场。
-2. 卖出信号：当月线收盘价跌破8周期简单移动平均线时，系统触发卖出信号。这个条件帮助及时止损，防止趋势反转造成更大损失。
-策略还设计了信号状态跟踪机制，避免在同一状态下重复产生信号，提高了策略的稳定性。
-
-#### 策略优势
-1. 趋势把握能力强：通过历史新高突破判断，能够有效捕捉强势上涨趋势。
-2. 风险控制完善：结合月线均线作为过滤条件，可以有效过滤虚假突破。
-3. 信号稳定性高：通过lastSignal变量追踪信号状态，避免重复信号产生。
-4. 可视化效果好：策略提供了清晰的图形界面，包括历史高点线、均线以及买卖信号标记。
-5. 适应性强：策略可以应用于不同的时间周期和品种。
-
-#### 策略风险
-1. 滞后性风险：历史新高突破信号本质上具有一定滞后性，可能错过最佳入场时机。
-2. 假突破风险：虽然有月线均线过滤，但在震荡市场中仍可能遭遇假突破。
-3. 回撤风险：在趋势转折点，策略可能承受较大回撤。
-4. 资金管理风险：策略未包含仓位管理机制，需要额外的资金管理规则。
-
-#### 策略优化方向
-1. 引入量能确认：可以添加成交量指标作为突破确认条件，提高信号可靠性。
-2. 完善止损机制：可以设计更灵活的止损规则，如跟踪止损或波动率止损。
-3. 添加仓位管理：根据市场波动率和趋势强度动态调整仓位大小。
-4. 优化信号过滤：可以添加趋势强度指标，如ADX，进一步过滤弱势信号。
-5. 增加时间过滤：可以添加时间周期过滤，避免在不适合的时间段交易。
-
-#### 总结
-这是一个设计合理、逻辑清晰的趋势跟踪策略。通过历史新高突破和月线均线的配合使用，既保证了对趋势的有效把握，又实现了风险的合理控制。虽然存在一定的滞后性和假突破风险，但通过建议的优化方向，策略的整体表现有望得到进一步提升。该策略特别适合在明确趋势的市场环境中应用，可以作为中长期投资的重要参考工具。
-
-||
 
 #### Overview
 This strategy is a trend following system based on historical high breakthrough and monthly moving average filter. It generates buy signals by monitoring price breakouts above previous historical highs, while using the 8-period Simple Moving Average (8 SMA) on monthly timeframe as a sell filter to reduce false breakout risks. The strategy design aligns with the market characteristic of "trend continuation" and is particularly suitable for capturing major trends in strong upward markets.
@@ -77,7 +43,6 @@ The strategy also includes a signal state tracking mechanism to avoid repeated s
 
 #### Summary
 This is a well-designed trend following strategy with clear logic. Through the combination of historical high breakouts and monthly moving averages, it achieves both effective trend capture and reasonable risk control. While there are inherent risks of lag and false breakouts, the suggested optimization directions offer potential for further performance improvement. The strategy is particularly suitable for markets with clear trends and can serve as an important reference tool for medium to long-term investment.
-[/trans]
 
 
 

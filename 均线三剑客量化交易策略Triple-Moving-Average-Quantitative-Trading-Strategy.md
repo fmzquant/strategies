@@ -10,39 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/823831b8ea37647c22.png)
-[trans]
-
-概述:该策略是一种典型的技术分析策略,运用常用的几条均线指标EMA以及RSI、MACD、PSR等辅助指标,通过不同周期均线配置和指标信号的组合,形成进场和止损规则,寻找低买高卖的机会。
-
-策略原理:该策略的核心是5、9、21日均线。当短周期均线上穿长周期均线时看多,而短周期均线下穿长周期均线时看空。此外,结合RSI指标判断超买超卖、MACD指标判定趋势、PSR指标识别支撑阻力进行组合交易。背景色设定显示市场情绪,辅助判断趋势方向。设置参数可自行组合和配置进场规则。
-
-策略优势分析:
-1. 均线指标清晰直观,容易判断趋势方向。
-2. RSI可有效识别超买超卖现象,MACD判断长短趋势,PSR找关键价位,指标组合互补。  
-3. 多种进场规则和参数设置灵活性强。
-4. 可优化的指标和参数组合较多,可随市场不断调整和优化。
-
-风险分析:
-1. 短周期操作难以把握大趋势,存在错过反转的风险。  
-2. 参数设置不当可能导致太多假信号或漏掉信号。
-3. 纯技术面指标容易被套利机构利用导致亏损。
-4. 大幅震荡行情中容易止损。
-
-应对方法:
-1. 适当把握中长线趋势,防止逆势短线操作。
-2. 优化参数组合,设置止损,控制风险。
-3. 注意高位回档和低位反弹的可能性。
-
-优化方向:
-1. 调整均线参数,测试最佳组合。
-2. 增加其他辅助指标过滤信号。  
-3. 增加机器学习指标判断概率。
-4. 结合交易量变化提高信号准确率。
-5. 增加止损策略,防止损失扩大。
-
-总结:该策略综合多种辅助指标信号,利用均线指标的优势,挖掘短线低买高卖的机会。通过参数优化和指标组合可以不断提升策略效果,但需要适度控制操作频率和风险,防止单次亏损过大影响总体盈利。[/trans]
-
-|| 
 
 Overview: This strategy is a typical technical analysis strategy that utilizes several common moving average indicators like EMA and auxiliary indicators like RSI, MACD, PSR to form entry and stop loss rules for finding low buy high sell opportunities.  
 
@@ -74,7 +41,6 @@ Optimization:
 
 Summary: This strategy integrates multiple auxiliary signals, leverages the strength of MA indicators to identify short-term low buy high sell chances. Parameters and indicators combinations may be optimized continuously to improve strategy efficacy, but operation frequency and risks should be moderated to prevent oversized single trade loss from eroding overall profitability.
 
-[/trans]
 
 > Strategy Arguments
 

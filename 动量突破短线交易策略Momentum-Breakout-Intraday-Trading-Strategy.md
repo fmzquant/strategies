@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fba296ac068d4a9731.png)
-[trans]
-## 概述
-
-该策略通过跟踪SPY交易数据,结合移动平均线、MACD、RSI等多种技术指标信号,精准判断短期走势并做出买入卖出决策,以实现短线交易盈利。
-
-## 策略原理   
-
-该策略的核心逻辑基于以下技术指标判断短期趋势和入场时机:   
-
-1. 5日和13日指数移动平均线(EMA)的金叉和死叉用于判断多空趋势的转折。   
-2. MACD指标判断是否存在向上的动量。   
-3. ADX指标判断是否存在趋势。   
-4. RSI指标判断趋势的力度。   
-
-通过优化以上指标参数,判断关键的多空转折点。满足5/6个条件时展示白色信号提示L或S,当完整满足六个条件时,在该蜡烛图收盘时展示金色△形状信号。  
-
-形成买入信号的条件:   
-5日EMA多于13日EMA 且 MACD线低于0.5 且 ADX高于20 且 MACD斜率大于0 且 信号线高于-0.1 且 RSI高于40  
-
-形成卖出信号条件:  
-5日EMA少于13日EMA 且 MACD线高于-0.5 且 ADX高于20 且 信号线低于0 且 MACD斜率小于0 且 RSI低于60  
-
-## 优势分析  
-
-该策略具有以下优势:  
-
-1. 结合多种指标信号,判断准确性较高。  
-2. 通过参数优化,判断的敏感度和准确性达到平衡。  
-3. 信号判断简洁清晰,操作门槛低。  
-4. 适用于短线交易,符合大部分投资者的风险偏好。  
-5. 考虑实盘操作需求,避开尾盘时间的高波动。
-
-## 风险分析  
-
-该策略也存在以下风险:  
-
-1. 参数设置不当可能导致误判风险。需持续测试与优化。  
-2. 单一品种,无法分散行业和资产配置风险。  
-3. 频繁交易带来的交易费用和滑点风险。  
-4. 尾盘时间无法建仓可能错过部分机会。
-
-## 优化方向  
-
-可从以下维度继续优化该策略:  
-
-1. 测试修改参数设置,提高判断准确率。  
-2. 增加止损指标以控制单笔损失。 
-3. 优化开仓时间,过滤尾盘高波动时段。  
-4. 增加其他品种作为策略对象。
-5. 结合机器学习算法提高参数自适应能力。
-
-## 总结  
-
-本策略通过跟踪SPY数据,结合移动平均线、MACD、RSI等多种技术指标判断短期趋势,操作频率高、回撤低,非常适合短线交易。可从多个维度继续优化,具有较大的改进空间。
-
-|| 
 
 ## Overview  
 
@@ -121,7 +65,6 @@ The strategy can be further optimized in the following aspects:
 
 This strategy determines short-term trends by tracking SPY data and combining multiple technical indicators such as moving averages, MACD and RSI. With high operation frequency, low drawdowns, it is very suitable for intraday trading. There is still large room for improvement through optimizations from multiple dimensions.
 
-[/trans]
 
 > Strategy Arguments
 

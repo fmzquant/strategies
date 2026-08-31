@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1504f82bc5194f4a0d9.png)
 
-[trans]
-
-## 概述
-
-本策略通过计算自定义净量指标,实现量化黄金交叉买入和死叉卖出的交易策略。该策略属于趋势跟随型策略。
-
-## 策略原理
-
-策略的核心逻辑是计算自定义的净量(NV)指标。NV指标通过判断价格的变化方向,如果为正则取当日成交量,如果为负则取当日成交量的负值,如果无变化则取0。这样可以更清晰地反映价格变化和成交量的关系。
-
-之后,策略计算NV指标的3日简单移动平均线,分别作为黄金交叉线和死叉线。当NV指标从下向上突破黄金交叉线时,做多;当NV从上向下突破死叉线时,做空。
-
-此外,策略还设置了参数化的起止时间,对交易时间进行控制。
-
-## 策略优势
-
-该策略最大的优势是策略简单清晰,容易理解,参数设置灵活,可自定义交易品种、交易时段等。此外,该策略属于趋势跟随型策略,能够有效捕捉价格趋势,降低交易频率,获得较高的盈利率。
-
-## 策略风险
-
-该策略主要存在以下风险:
-
-1. 日跟随策略,不能及时反应价格变化趋势。可能错过部分交易机会或者无法及时止损。
-
-2. 量化黄金交叉本身具有一定的滞后性,可能导致入场偏晚,扩大亏损。
-
-3. 无法有效过滤市场噪音,容易被套。
-
-可采用动态移动平均,结合其他指标过滤降低风险。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损策略,利用移动止损、隔夜止损等方式控制单笔损失。
-
-2. 增加过滤指标,利用MACD、KDJ等其他指标过滤误报信号,提高策略稳定性。 
-
-3. 参数优化,通过遗传算法、马尔可夫链等方法迭代寻找最优参数组合。
-
-4. 策略组合,与其他非相关策略进行组合,可以进一步分散风险,提高整体收益率。
-
-## 总结
-
-本策略通过量化黄金交叉实现了简单有效的趋势跟随,虽然存在一定程度的滞后性,但参数设置灵活,容易理解,是一种适合初学者实践的策略。通过持续优化,可以逐步提升策略效果,降低风险。
-
-||
 
 ## Overview  
 
@@ -103,7 +56,6 @@ The strategy can be optimized in the following aspects:
 
 This strategy implements simple and effective trend following through quantitative golden crosses. Although there is a certain degree of hysteresis, the parameter settings are flexible and easy to understand. It is a strategy suitable for beginners to practice. Through continuous optimization, the strategy effect can be gradually improved and risks reduced.
 
-[/trans]
 
 > Strategy Arguments
 

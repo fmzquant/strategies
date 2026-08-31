@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e8b1d084702b9fa50f.png)
 
-[trans]
-
-## 概述
-
-这个策略使用VIDYA(变量指数移动平均线)指标来识别加密货币市场的趋势方向,并以趋势为基础进行交易。它是一个量化的技术交易策略。
-
-## 策略原理
-
-该策略首先计算VIDYA指标。VIDYA指标基于价格变化的动量,可以更快速地响应趋势变化。具体来说,它结合了Chande Momentum Oscillator(CMO)和简单移动平均线(SMA)。CMO衡量价格上涨动量和下跌动量之差,来判断趋势力度。SMA对价格进行平滑化处理。VIDYA根据CMO的值,动态调整SMA的权重,在趋势变化早期给予CMO更大权重,在趋势形成后给予SMA更大权重。这样,VIDYA可以快速响应趋势变化,同时也保持对趋势的平滑跟踪。
-
-在计算出VIDYA后,策略以其曲线的方向判断趋势方向。当VIDYA上涨时,做多;当VIDYA下跌时,平仓。
-
-## 优势分析
-
-- VIDYA指标响应迅速,可以提早捕捉到趋势的转变,相比SMA等传统指标更有优势。
-
-- 结合了趋势力度和趋势方向判断,可以有效区分强弱趋势,避免被震荡市场的假趋势误导。
-
-- 只根据单一VIDYA指标判断,实现了策略的简单性。不会产生指标的冲突和误导。
-
-- 采用长期VIDYA设置可以跟踪长期趋势,有利于把握主要趋势方向。
-
-- 策略回测表现良好,具有正的期望收益。
-
-## 风险分析
-
-- VIDYA对市场突发事件反应可能滞后,无法立刻抓住短期交易机会。
-
-- 长期VIDYA设置对短期趋势变化不敏感,可能中间出现较大的回撤。
-
-- 纯粹的趋势跟踪策略,在震荡行情下表现不佳。可结合附加过滤条件提高表现。
-
-- 回测数据不足,无法完全验证策略稳健性。实际交易中,参数需要反复优化测试。
-
-- 加密货币市场波动大,须谨慎控制仓位规模和止损条件,严格风险管理。
-
-## 优化方向
-
-- 测试添加量价指标或波动率指标,提高对趋势变化的识别灵敏度。
-
-- 测试VIDYA与其他趋势指标的组合,形成指标集聚效应。
-
-- 优化止损策略,在趋势反转时尽早止损。
-
-- 优化仓位管理策略,根据市场情况动态调整仓位。
-
-- 测试在不同的加密货币品种和周期参数下的稳健性。
-
-## 总结
-
-该策略整体是一个量化的趋势跟踪策略。它使用VIDYA指标判断趋势方向,简单有效地把握了加密货币的长期趋势行情。但也存在一些局限性,需要对止损、仓位管理等方面进行进一步优化,才能使策略更稳健和实盘可行。总体来说,它为搭建加密货币趋势策略提供了一个基础框架和思路,但实际应用中还需谨慎评估。
-
-||
 
 
 ## Overview
@@ -116,7 +63,6 @@ After calculating VIDYA, the strategy judges the trend direction based on the cu
 
 Overall this is a quantitative trend following strategy. It uses the VIDYA indicator to determine trend direction, capturing crypto trends simply and effectively. But it also has some limitations that require further optimizations in stop loss, position sizing etc. to make the strategy more robust and practically viable. In general, it provides a basic framework and approach for building crypto trend strategies, but prudent assessments are still needed for real-world applications.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,18 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-超长周期RSI反转策略
-
-该策略通过计算超长周期RSI指标,并根据其与阈值的交叉情况形成交易信号。
-
-具体来说,它采用了一个非常长周期的RSI参数,典型设置为50-100周期。当RSI指标上穿超卖区时,产生买入信号;当RSI指标下穿超买区时,产生卖出信号。
-
-这种策略的优势在于超长周期RSI可以更准确地判断行情趋势,过滤掉短期市场噪音,避免被套。但是RSI指标本身存在滞后性,无法及时发现趋势反转。另外,参数设置需要针对不同品种进行优化。
-
-总的来说,超长周期RSI反转策略适合中长线持仓。它虽然表现不错,但交易者仍需关注趋势转换风险,适时止损保障资金。只有做到全面风险管理,才能长期获得稳定收益。
-
-||
 
 This strategy uses an ultra long period RSI indicator to generate trading signals based on RSI crossover with thresholds. 
 
@@ -31,7 +19,6 @@ The advantage of this strategy is the ultra long RSI can more precisely determin
 
 In summary, the ultra long RSI reversal strategy suits medium-long term holding. Despite decent performance, attention is still required on trend change risks and timely stop loss to protect capital. Only with comprehensive risk management can steady profits be achieved in the long run.
 
-[/trans]
 
 > Strategy Arguments
 

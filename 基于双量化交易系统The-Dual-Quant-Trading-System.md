@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f530326709a9a1a89d.png)
-[trans]
-
-本策略是一个结合CCI指标、RSI指标、两条移动平均线的复合交易系统。该系统可以捕捉常规趋势,同时利用RSI指标的交叉为入场时机增加确认,以过滤掉一些噪音。
-
-### 策略原理
-
-该策略主要基于CCI指标判断趋势方向。CCI指标值高于100时为多头市场,低于-100时为空头市场。系统利用两条移动平均线交叉来辅助判断趋势方向。当快速移动平均线上穿慢速移动平均线时为买入信号,反之则为卖出信号。
-
-在确定多空趋势后,系统再利用两个参数长度不同的RSI指标的交叉作为入场验证。例如在多头市场中,如果短周期RSI指标上穿长周期RSI指标时,为最终买入信号。这个设计主要是为了过滤噪音,避免在趋势中出现的短期调整引发错误交易。 
-
-该策略只在指定的交易时段开仓,收盘前15分钟主动全部平仓,避免隔夜风险。开仓后会利用移动止损来锁定利润。
-
-### 优势分析
-
-- 结合趋势判断和指标交叉,可以有效识别趋势且过滤噪音,入场精确
-- 利用移动止损来主动控制风险,规避止损被追击的情况
-- 只在指定交易时段开仓,避免隔夜跳空风险
-- RSI指标参数可调整,可以灵活适应不同市场环境
-
-### 风险分析
-
-- CCI指标对异常波动性市场判断效果差
-- 双RSI交叉条件限制较多,可能错过部分机会
-- 移动止损可能过于主观,需要优化参数
-- 指定交易时段可能会错过重大夜间消息造成的跳空
-
-### 优化建议
-
-- 可以测试不同参数的CCI指标,找到最佳参数组合
-- 测试是否可以取消RSI交叉限制条件,直接以CCI判断入场
-- 对移动止损法参数进行回测优化,找到最佳参数
-- 测试取消强制平仓逻辑,改为持仓期内移动止损跟踪,以获利最大化
-
-### 总结
-
-本策略综合考虑了趋势判断和指标交叉验证,在控制风险的同时也确保了交易信号的有效性。通过参数优化和逻辑调整,该策略可以进一步增强获利空间并减少遗漏机会。这是一个非常有潜力的交易思路。
-
-||
 
 This strategy combines the CCI indicator, RSI indicator and two moving averages into a compound trading system. It can capture conventional trends while using RSI crossovers to add confirmation for entries to filter out some noise.
 
@@ -88,7 +50,6 @@ The strategy only opens positions during the specified trading session, actively
 
 This strategy comprehensively considers trend determination and indicator crossover validation to ensure signal validity while controlling risk. Through parameter optimization and logic adjustments, the strategy has further potential to expand profit opportunities and reduce missed chances. This is a very promising trading concept.  
 
-[/trans]
 
 > Strategy Arguments
 

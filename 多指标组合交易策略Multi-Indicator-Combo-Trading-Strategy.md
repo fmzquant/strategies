@@ -9,41 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-本策略通过组合运用均线系统、RSI指标和Stoch指标等多种技术指标,对价格趋势和超买超卖状态进行判断,形成交易信号。该策略汇集多个指标的优势,追求更稳定和可靠的交易决策。
-
-策略原理:
-
-1. 计算多组EMA均线,判断价格中长线趋势走向。
-
-2. 计算RSI和Stoch指标,判断是否处于超买或超卖状态。
-
-3. 当均线系统发出做多信号、RSI未超买、Stoch未超买时,进行做多操作。
-
-4. 当均线系统发出做空信号、RSI未超卖、Stoch未超卖时,进行做空操作。 
-
-5. 当任一指标发出反向信号时,进行平仓操作。
-
-该策略的优势:
-
-1. 多指标组合验证,可减少错误交易概率。
-
-2. 指标可互相补充,提高对市场的判断力。
-
-3. 清晰的交易规则,便于回测和实盘。
-
-该策略的风险:
-
-1. 需谨慎评估指标的重复性,避免过度冗余。
-
-2. 多指标组合优化参数较为复杂。
-
-3. 增加指标并不一定能提高策略效果。
-
-总之,该多指标组合策略能在一定程度上提高决策效果,但需注意优化难度及指标重复性问题,保持策略简单可靠。
-
-||
 
 This strategy combines multiple technical indicators like moving averages, RSI and Stochastics to assess price trend and overbought/oversold levels for trade signals. It harnesses the strengths of multiple indicators for more reliable decisions.
 
@@ -77,7 +42,6 @@ Risks:
 
 In summary, the multi-indicator approach can improve decisions to some extent but requires balancing optimization difficulty and redundancy for simple, reliable strategies.
 
-[/trans]
 
 
 

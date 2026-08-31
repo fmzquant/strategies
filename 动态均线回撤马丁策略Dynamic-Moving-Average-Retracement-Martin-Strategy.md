@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f353fcad2ccf4c6578.png)
-[trans]
-
-### 概述
-
-动态均线回撤马丁策略是一种频繁交易的策略,它结合了移动平均线交叉和底背离信号来产生入场和出场信号。该策略利用3日和8日简单移动平均线的交叉和背离来捕捉短期趋势,并采用止损和止盈来控制风险。此策略允许根据不同的市场条件选择交易方向。
-
-### 策略原理
-
-该策略使用3日和8日简单移动平均线及其交叉信号。当3日均线上穿8日均线时产生多头信号;当3日均线下穿8日均线时产生空头信号。多头信号会触发做多入场,空头信号会触发做空入场。 
-
-如果没有持仓,策略会根据交叉信号判断入场。入场后会根据最新收盘价、止损幅度和止盈幅度计算出止损价位和止盈价位。例如持多单时,止损价为最新收盘价减去止损幅度与8日均线乘积;止盈价为最新收盘价加上止盈幅度与8日均线乘积。
-
-如果已有多头持仓,当价格触发止盈或止损后,如果出现8日均线的底背离信号,则会平仓。此时止损价位和止盈价位会被重置为0。空头持仓的处理逻辑类似。
-
-该策略还在图表上绘制了入场点和出场点的形状。例如多头入场为向上三角,多头出场为向下三角。这有助于直观地判断入场与出场。
-
-### 优势分析
-
-该策略的优势有:
-
-1. 利用移动平均线交叉信号捕捉短期趋势,可以频繁交易。
-2. 停损机制可以控制单笔损失。
-3. 止盈设定可以锁定部分利润。 
-4. 可选择只做多、只做空或双向交易,适应不同阶段。
-5. 在图表上可视化入场与出场点,操作清晰。
-
-### 风险分析
-
-该策略的主要风险有:
-
-1. 短期均线策略容易被套牢。
-2. 移动平均线生成延迟信号的可能性。
-3. 连续亏损可能导致损失加剧。
-4. 错误的止损幅度设置可能过于宽松或过于紧缩。
-
-可以通过适当放宽止损幅度、优化移动平均线参数、引入附加过滤条件等方式来降低风险。此外,正确评估个人承受能力并规避过度交易也很重要。
-
-### 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试更多均线组合,寻找最佳参数。
-2. 增加其他指标过滤信号,如RSI,KD等,提高信号质量。 
-3. 根据不同品种、周期调整止损幅度。
-4. 增加仓位控制,如固定数量或固定资金。
-5. 增加开仓顺序规则。
-6. 优化和评估止损或止盈水平。
-
-### 总结
-
-动态均线回撤马丁策略是一种短期交易策略。它通过捕捉移动平均线交叉形成的短期趋势,并采用适当的止损和止盈来管理风险。该策略频繁交易的特性使其既有盈利机会也存在Oneof therisks. 通过参数调优、信号过滤及风险控制等方式,可以进一步完善该策略,使其更稳定可靠。
-
-||
 
 ### Overview  
 
@@ -114,7 +61,6 @@ This strategy can be optimized from the following aspects:
 
 The Dynamic Moving Average Retracement Martin strategy is a short-term trading strategy. It captures short-term trends formed by moving average crossovers, and manages risks with proper stops and take profits. The frequent trading nature gives it profit opportunities as well as risks. By optimizing parameters, filtering signals and controlling risks, this strategy can be further improved for more reliability.
 
-[/trans]
 
 > Strategy Arguments
 

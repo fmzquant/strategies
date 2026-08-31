@@ -10,35 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17e7d77ffaa91c220d9.png)
-[trans]
-
-## 概述
-该策略是基于著名指标CM_Ultimate_MA_MTF改写而成的,可以在多个时间尺度上绘制移动平均线,实现不同时间周期MA的交叉操作。策略同时具有追踪止损功能。
-
-## 策略原理
-1. 根据用户选择,通过不同类型的MA指标在主图周期及更高周期上分别绘制MA线。
-2. 当快周期的MA线上穿慢周期MA线时,做多;当快周期MA线下穿慢周期MA线时,做空。
-3. 添加追踪止损机制,进一步控制风险。
-
-## 优势分析
-1. 多时间尺度MA交叉,可以提高信号质量,减少假信号。
-2. 不同类型MA的组合,可以发挥各自指标的优势,提高稳定性。
-3. 追踪止损有助于及时止损,降低大幅亏损的概率。
-
-## 风险分析
-1. MA指标滞后,可能错过短线操作机会。 
-2. 需要适当优化MA周期参数,否则可能产生过多假信号。
-3. 止损点设置不合理可能造成不必要止损。
-
-## 优化方向
-1. 可以测试不同参数的MA组合,寻找最佳参数。  
-2. 可以加入其他指标过滤,提高信号质量。
-3. 可以优化止损策略,使之更符合市场特点。
-
-## 总结
-该策略整合了移动平均线的多时间框架分析和追踪止损方法,旨在提高信号质量和控制风险水平。通过参数优化和加入其他指标,可以进一步增强策略效果。
-
-||
 
 ## Overview  
 This strategy is based on the famous CM_Ultimate_MA_MTF indicator and rewritten into a trading strategy. It can plot moving averages across multiple timeframes and generate crossover signals between MAs of different periods. The strategy also incorporates a trailing stop loss mechanism.   
@@ -65,7 +36,6 @@ This strategy is based on the famous CM_Ultimate_MA_MTF indicator and rewritten 
 
 ## Conclusion
 The strategy integrates multi-timeframe analysis and trailing stop approaches of moving averages to improve signal quality and risk control. Further enhancement can be achieved through parameter tuning and adding complementary indicators.  
-[/trans]
 
 > Strategy Arguments
 

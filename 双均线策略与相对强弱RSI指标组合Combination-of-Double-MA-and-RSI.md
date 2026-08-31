@@ -9,23 +9,6 @@
 
 > Strategy Description
 
-[trans]
-
-- 策略名称：双均线策略与相对强弱RSI指标组合
-- 数据周期：15M，30M等
-- 支持：商品期货、数字货币
-- 官方网站：www.quantinfo.com
-
-![IMG](https://www.fmz.com/upload/asset/9955a36cca1be0e9d73f99fa8bdb4ac8.png) 
-
-- 主图：
-  均线1，公式：MA1^^EMA(C,N1);
-  均线2，公式：MA2^^EMA(C,N2);
-
-- 副图：
-  RSI，公式：RSIVALUE:SMA(MAX(CLOSE-REF(CLOSE,1),0),LENGTH,1)/SMA(ABS(CLOSE-REF(CLOSE,1)),LENGTH,1)*100;
-
-||
 
 - Strategy Name: Combination of Double MA and RSI
 - Data Cycle: 15M, 30M, etc.
@@ -43,7 +26,6 @@
   RSIVALUE:SMA(MAX(CLOSE-REF(CLOSE,1),0),LENGTH,1)/SMA(ABS(CLOSE-REF(CLOSE,1)),LENGTH,1)*100;
 
 
-[/trans]
 
 > Strategy Arguments
 

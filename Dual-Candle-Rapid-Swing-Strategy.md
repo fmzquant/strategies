@@ -10,18 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-双K线极速波段策略
-
-该策略通过计算每日成交量变化和NVI指标的组合,判断极短线内的市场波段进行交易。
-
-具体来说,它计算每日成交量较前一日减少的天数,通过NVI值的变化构成一个振荡指标。当该指标从负转正,并第2根K线仍然正值时做多;当该指标从正转负,并第2根K线仍然负值时做空。
-
-这种策略的优点是捕捉极短线的落差,只需要2根K线即可形成交易信号,实现盈利。但是这种高频交易方式存在过优化风险,在不同市场时间段效果可能差异很大。
-
-此外,如此短线交易对交易费用也有一定依赖,需要针对具体品种调整参数。同时,极小时间段交易决策的误差也可能造成亏损。只有严格控制了单笔交易资金规模,才能长期应用这种双K线策略。
-
-||
 
 This strategy combines calculations of daily volume change and the NVI indicator to trade short-term market swings.
 
@@ -31,7 +19,6 @@ The advantage of this strategy is capitalizing on short-term gaps within just 2 
 
 Also, trading fees can be a concern for such short-term trades, requiring parameter tuning per instrument. And slight errors in decisions within small timeframes could lead to losses. Only by strictly controlling per trade position sizes can this dual candle strategy be applied successfully over the long run.
 
-[/trans]
 
 > Strategy Arguments
 

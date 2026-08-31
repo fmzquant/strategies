@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ba7d54fd9144e07915.png)
 
-[trans]
-
-
-## 概述
-
-DEMA趋势追踪策略基于DEMA指标设计,当价格突破DEMA指标下轨时产生买入信号,当价格跌破DEMA指标上轨时产生卖出信号,属于趋势跟踪策略。
-
-## 策略原理
-
-该策略使用DEMA指标判断价格趋势。DEMA指标是双指数移动平均线,它使用两个EMA线计算得到,可以更快捕捉价格变化。策略通过计算价格与DEMA的差值百分比,然后给出买入和卖出信号。
-
-当差值百分比上穿设定的参数buyper时,产生买入信号。当差值百分比下穿设定的参数sellper时,产生卖出信号。buyper和sellper参数代表产生信号的strength,可以根据市场调整。
-
-此外,策略还设置了年月日范围作为过滤条件,只有在指定的日期内才会产生交易信号。
-
-## 策略优势分析
-
-- 使用DEMA指标可以更敏感地捕捉价格变化,及时捕捉趋势反转。
-- 相比SMA指标,DEMA指标有更低的滞后性。
-- 设置买卖strength参数,可以控制交易频率。
-- 添加日期过滤条件,可以针对季节性行情进行优化。
-- 整体来说,该策略parametrs设置合理,可以进行参数优化,从而适应不同市场环境。
-
-## 策略风险分析
-
-- DEMA指标本身存在滞后性,可能错过短期趋势反转。
-- 信号产生有一定滞后,入场时点不精确。
-- 策略仅基于DEMA指标,没有辅助指标验证信号可靠性。
-- 没有设置止损,可能给账户带来较大亏损。
-
-可以通过结合其他指标验证信号,优化参数设置,添加止损来控制风险。
-
-## 策略优化方向  
-
-- 可以考虑加入MA指标进行信号过滤,利用MA的顺势性特点验证趋势。
-- 可以测试不同参数对策略收益率的影响,找到最优参数组合。
-- 可以添加止损策略,设置合理的止损幅度,控制单笔亏损。
-- 可以测试不同股票对策略效果的影响,优化股票池。
-- 可以尝试多种exit策略,如趋势反转,突破等退出机制。
-
-## 总结
-
-DEMA趋势追踪策略整体设计合理,具有一定的稳定盈利能力。该策略成功运用DEMA指标判断趋势方向,可以对多种股票和大中长线周期有效。通过参数优化、辅助指标验证、止损策略等手段可以进一步提高策略收益率并控制风险。该策略有一定的实盘运用价值,但需要根据不同市场环境不断测试和优化,才能获得长期稳定收益。
-
-||
 
 ## Overview
 
@@ -98,7 +53,6 @@ Risks can be mitigated by combining other indicators for signal verification, op
 
 The DEMA trend following strategy is reasonably designed with stable profitability. It successfully uses the DEMA indicator to determine trend direction and works well on various stocks and medium-to-long-term timeframes. Further improvements on parameters, additional indicators, stop loss can enhance return and risk control. This strategy has practical value for live trading but needs continuous testing and optimization for long-term stability.
 
-[/trans]
 
 > Strategy Arguments
 

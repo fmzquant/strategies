@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7a2bed4a0c5b029027.png)
-[trans]
-### 概述
-
-移动平均线双轨道交易策略是一种追踪双移动平均线交叉信号的趋势交易策略。该策略同时使用指数移动平均线(EMA)和加权移动平均线(WMA)作为交易信号指标。当短期EMA上穿长期WMA时,策略做多;当短期EMA下穿长期WMA时,策略做空。
-
-### 策略原理
-
-该策略的交易信号来源是EMA周期为10的短期EMA和WMA周期为20的长期WMA的金叉死叉。当短期EMA上穿长期WMA时,表示行情由下向上反转,做多;当短期EMA下穿长期WMA时,表示行情由上向下反转,做空。
-
-策略首先判断交易方向后,设置止损位于入场价下方或上方1个ATR周期的距离,同时设置两个止盈位,第一个止盈位于入场价上方或下方1个ATR的距离,第二个止盈位于入场价上方或下方2个ATR的距离。当第一止盈触发后平仓50%,余下头寸以第二止盈和移动止损方式平仓。
-
-移动止损逻辑是,只要最高价或最低价触及第一个止盈位后开始启用,根据K线实时刷新,将止损移动到盈利最大值和入场价之间作为防止止损,锁定利润。
-
-### 优势
-
-该策略利用了移动平均线的双重平滑去噪功能,可以有效滤除行情中的随机波动,识别到中长线的趋势信号,避免被套。同时设置两个分批止盈增加了策略盈利区间,让利润最大化。移动止损机制也使得策略可以锁定利润减少亏损。
-
-### 风险
-
-移动平均线本身滞后性较强,可能产生错过信号的风险;双移动平均线交叉在某些市场中可能产生大量假信号,带来亏损。 止损设置是策略中的重要组成部分,如果止损过小容易被突破造成损失,如果止损过大可能无法有效控制风险。
-
-此外,在行情剧烈波动时,移动止损可能无法起到很好的保护作用。
-
-### 优化方向 
-
-1. 可以测试不同参数的EMA和WMA,找到最佳参数组合。短线EMA过短或长线WMA过长都可能影响策略表现。
-
-2. 可以根据不同品种特点和交易风格选择ATR倍数或固定点数止损。
-
-3. 可以测试部分仓位移动止损和全仓移动止损的效果。
-
-4. 可以通过引入其它指标判断过滤信号,辅助EMA和WMA,提高信号质量。
-
-### 总结
-
-移动平均线双轨道交易策略整体来说较为稳健,在趋势行情中表现较好。通过参数优化、止损优化以及信号质量提升,可以进一步增强策略的实盘表现。这是一个值得深入研究和投入实盘的有潜力的策略思路。
-
-||
 
 ### Overview
 
@@ -87,7 +49,6 @@ In addition, when the market fluctuates violently, the trailing stop may not wor
 
 In general, the dual moving average channel trading strategy is relatively robust and performs well in trending markets. By optimizing parameters, stop loss mechanisms, and improving signal quality, the real trading performance of this strategy can be further enhanced. This is a promising strategy idea that is worth in-depth research and application in actual trading.
 
-[/trans]
 
 > Strategy Arguments
 

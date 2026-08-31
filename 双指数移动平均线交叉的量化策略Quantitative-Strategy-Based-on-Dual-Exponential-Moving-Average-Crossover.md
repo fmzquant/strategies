@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种双指数移动平均线交叉的量化策略。该策略通过设置快慢两条EMA,根据其交叉形成交易信号。
-
-一、策略原理  
-
-该策略的核心是设置两条不同参数的EMA,一快一慢,根据其交叉关系产生买入和卖出信号。其具体逻辑是:
-
-1. 设置一条小周期EMA(如29周期),代表短期趋势;
-
-2. 设置一条大周期EMA(如86周期),代表长期趋势;
-
-3. 当短期EMA上穿长期EMA时,做多;当短期EMA下穿长期EMA时,做空;
-
-4. 目前策略只设置开仓逻辑,未设置止损止盈逻辑;
-
-5. 以固定份额进行开仓。
-
-通过快速EMA反应短期变动,慢速EMA跟踪长期趋势,两者交叉形成交易信号,可以顺势捕捉价格变化的核心方向。
-
-二、策略优势
-
-该策略最大的优势在于操作简单,容易实施。EMA指标易于计算,交叉信号直接可视。
-
-其次,快慢EMA配合可以同时跟踪短长周期趋势。快EMA跟随变化敏捷,慢EMA过滤噪声。
-
-最后,固定仓位管理也减少了策略的参数优化难度。
-
-三、潜在风险
-
-尽管该策略易于实施,但实盘中也应注意以下风险:
-
-首先,EMA交叉存在一定滞后,可能错过最优入场点位。
-
-其次,没有止损设置使每单亏损无法控制。
-
-最后,没有止盈点设置也使盈利空间难以把控。
-
-这需要进一步补充exit 逻辑,设定止损止盈条件。
-
-四、内容总结  
-
-本文详细介绍了一种双EMA交叉的量化交易策略。它使用快速EMA和慢速EMA组合判断趋势方向,形成交易信号。策略易于实施,但也存在参数优化难度不高的问题。总体而言,该策略可作为smoothing trend trading策略选型,但需要适当优化以控制风险。
-
-||
 
 This article explains in detail a quantitative trading strategy based on dual EMA crossover. It sets up fast and slow EMAs and generates signals when they cross over.
 
@@ -98,7 +53,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative trading strategy based on dual EMA crossovers. It uses fast and slow EMA combinations to determine trend direction for trade signals. While easy to implement, the strategy also lacks sophistication in optimization. Overall, it can serve as a smoothing trend trading framework but requires proper enhancements to manage risks.
 
-[/trans]
 
 > Strategy Arguments
 

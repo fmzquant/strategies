@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/11c06044bcd0635e8ee.png)
-[trans]
-### 概述
-
-该策略主要思路是利用两条不同周期的移动平均线来捕捉市场回调后的反弹机会。当价格在长期均线之上且出现向短期均线回调时,策略开仓做多,并在价格重新站上短期均线或触及止损价位时平仓。该策略通过在趋势中寻找回调买入机会,力求在趋势行情中获取利润。
-
-### 策略原理
-
-1. 计算两条不同周期的移动平均线(MA1和MA2),其中MA1为长期均线,MA2为短期均线。
-2. 当收盘价在MA1之上且低于MA2时,同时当前无持仓,且当前时间在设定的交易时间范围内,策略开仓做多。
-3. 记录开仓价格buyPrice,并计算止损价stopPrice(即开仓价下跌i_stopPercent百分比)。
-4. 当收盘价重新站上MA2并且i_lowerClose为false,或者收盘价跌破止损价stopPrice时,策略平仓。
-5. 若i_lowerClose为true,则在收盘价高于MA2且前一根K线收盘价低于MA2时平仓。
-
-### 策略优势
-
-1. 趋势跟踪:通过判断价格与长期均线的位置关系,确定当前的总体趋势,在趋势中寻找入场机会。
-2. 回调买入:在上升趋势中寻找价格回调至短期均线的买入机会,提高了买入点位的性价比。
-3. 止损保护:设置止损价位,当价格逆向波动达到一定幅度时自动平仓,有效控制下行风险。
-4. 灵活参数:用户可以根据自己的偏好,灵活设置均线周期、止损百分比、是否在前一根K线收盘价低于短期均线时平仓等参数。
-
-### 策略风险
-
-1. 参数优化:不同的参数设置对策略表现有很大影响,需要在不同市场环境下进行参数优化和回测,以寻找最佳参数组合。
-2. 震荡市:在震荡市场中,价格在长短期均线间频繁波动,可能导致策略频繁开平仓,损耗较多交易成本。
-3. 趋势转折:当市场趋势发生转折时,策略可能出现连续亏损的情况。此时需要结合其他指标或者信号对趋势转折进行判断,及时调整策略。
-4. 黑天鹅事件:市场出现重大的、无法预测的突发事件时,可能导致价格剧烈波动,触发止损后策略面临较大亏损。
-
-### 策略优化方向
-
-1. 趋势判断:在开仓前引入更多的趋势判断指标,如ADX等,以确认当前趋势的强度和方向,提高开仓信号的准确性。
-2. 动态止损:根据价格波动率、ATR等指标动态调整止损位,在价格波动较大时适当放宽止损,而在价格波动较小时收紧止损。
-3. 仓位管理:根据市场趋势强度、价格波动率等因素,动态调整每次开仓的仓位大小,在趋势强且波动率适中时加大仓位,在趋势弱或波动率过高时减小仓位。
-4. 多空对冲:考虑同时监测多空双方的信号,在不同市场或周期中对冲开仓,以降低策略的整体风险。
-
-### 总结
-
-移动平均回调追踪策略通过两条不同周期均线的相对位置关系,捕捉价格在上升趋势中的回调做多机会。该策略适用于趋势型市场,通过设置适当的参数和止损,可以在趋势行情中获取稳定收益。但在震荡市和趋势转折时,该策略面临一定风险。通过引入更多指标、优化仓位管理和动态止损等方法,可以进一步提升该策略的表现和稳定性。
-
-|| 
 
 ### Overview
 
@@ -86,7 +47,6 @@ The main idea of this strategy is to use two moving averages with different peri
 ### Summary
 
 The Moving Average Pullback Tracking Strategy captures long trading opportunities during price pullbacks in an uptrend by using the relative position of two moving averages with different periods. This strategy is suitable for trending markets, and with appropriate parameter settings and stop-losses, it can generate stable returns in trending conditions. However, the strategy faces certain risks in choppy markets and during trend reversals. By introducing more indicators, optimizing position sizing, implementing dynamic stop-losses, and other methods, the performance and stability of this strategy can be further improved.
-[/trans]
 
 > Strategy Arguments
 

@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/862f019cbeee62282f.png)
-[trans]
-
-## 概述
-
-本策略基于移动平均线交叉原理,当短期均线从下方上穿长期均线时做多,当短期均线从上方向下穿长期均线时做空,属于典型的趋势跟踪策略。
-
-## 策略原理
-
-该策略主要通过计算短期与长期两条简单移动平均线,并根据它们的交叉情况判断趋势方向。
-
-具体来说,策略首先计算短期均线xMA和长期均线,短期均线长度为Len,长期均线长度为2*Len。
-
-然后策略判断短期均线是否上穿长期均线,如果发生上穿则产生做多信号;判断短期均线是否下穿长期均线,如果发生下穿则产生做空信号。
-
-收到做多信号后,若当前没有持仓,则按市价开仓做多;收到做空信号后,若当前没有持仓,则按市价开仓做空。
-
-此外,策略还设置了止损止盈点。做多后设置止损价为入场价-止损百分比*入场价,止盈价为入场价+止盈百分比*入场价;做空后设置止损价为入场价+止损百分比*入场价,止盈价为入场价-止盈百分比*入场价。
-
-最后,策略还输出均线的可视化曲线,以辅助判断趋势。
-
-## 策略优势
-
-- 思路简单清晰,容易理解实现,适合新手学习;
-
-- 基于移动平均线判断趋势方向,可以有效跟踪市场趋势;
-
-- 设置止损止盈点,可以控制风险;
-
-- 可视化展示均线曲线,直观反映趋势变化。
-
-## 策略风险
-
-- 均线具有滞后性,可能引发错过最佳入场时点的风险;
-
-- 止损点设置不合理可能导致止损过于宽松或过于严格;
-
-- 股价剧烈波动时,均线产生假信号的可能;
-
-- 仅基于均线周期参数进行参数优化,可能导致过拟合。
-
-可以通过适当宽松止损,优化均线周期参数组合,增加其他指标过滤来减少这些风险。
-
-## 策略优化方向 
-
-- 增加其他指标进行过滤,例如MACD,KDJ等,避免均线错位产生错误信号;
-
-- 对短期均线和长期均线长度进行多组合优化,找到最佳参数组合;
-
-- 测试不同的止损止盈策略,如之字止损,移动止损等方式;
-
-- 添加仓位管理模块,优化资金利用效率。
-
-## 总结
-
-本策略整体思路清晰简洁,基于均线交叉判断趋势方向,可有效跟踪趋势,且风险可控,适合新手学习参考。但仅依赖均线可能出现错误信号,优化空间还很大,可以从多方面进行优化改进,使策略更稳健可靠。
-
-||
 
 
 ## Overview
@@ -123,7 +66,6 @@ These risks can be reduced by using looser stops, optimizing moving average peri
 
 The strategy has a clear and simple logic, can track trends effectively based on moving average crossovers, and has controllable risks. It is suitable for beginners to learn from. But relying solely on moving averages may generate false signals. There is still much room for optimizating it in various aspects to make it more robust.
 
-[/trans]
 
 > Strategy Arguments
 

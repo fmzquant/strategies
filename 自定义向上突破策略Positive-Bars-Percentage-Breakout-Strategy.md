@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/127d7202a6b82baba28.png)
-[trans]
-## 概述
-
-自定义向上突破策略是一种基于价格行情判断的量化交易策略。该策略通过计算指定周期内的正向K线占比,来判断市场目前是否处于持续上涨的状态。当正向K线占比高于用户设定的上限时,策略判断目前处于上涨行情,此时做多;当正向K线占比低于用户设定的下限时,策略判断目前处于下跌行情,此时做空。
-
-## 策略原理
-
-该策略的核心指标是正向K线占比。正向K线指从低点开盘,收盘价高于开盘价的K线,表示该周期内价格上涨。策略通过统计用户指定的往期周期内,正向K线数量占所有K线的比例,当比例大于上限时判断目前处于持续上涨行情,此时做多;当比例小于下限时判断目前处于持续下跌行情,此时做空。做多做空的止损、止盈根据用户设定的止损方式来设置。
-
-举例:用户设置周期数为20,上限为70,下限为30。策略回溯最近20根K线,如果其中有16根为正向K线,占比为16/20=80%。此时高于用户设置的上限70,执行做多操作。如果最近20根K线中,只有5根为正向K线,占比为5/20=25%。低于用户设置的下限30,执行做空操作。
-
-## 优势分析
-
-该策略具有如下优势:
-
-1. 策略思路简单直观,容易理解;
-2. 仅需要一个指标,降低了过优化的风险; 
-3. 用户可以自定义参数,适应不同品种;
-4. 内置止损止盈功能,可以预防超大亏损;
-5. 可直接反向做单,无需等待平仓再开仓,追踪行情更快。
-
-## 风险分析
-
-该策略也存在一些风险:  
-
-1. 只利用一个指标容易产生错误信号;
-2. 指标参数容易过优化,实盘效果可能差异大;
-3. 行情剧烈波动时,止损可能被突破导致亏损;
-4. 反向开仓功能可能加大亏损;
-5. 效果与品种相关性大,需要分别测试。
-
-为了降低风险,可以从以下几个方面进行优化:
-
-1. 增加过滤条件,避免错误信号;
-2. 优化止损策略,缩小单笔亏损;
-3. 评估和控制单笔损失额度; 
-4. 分别在不同品种测试效果。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加量价合理性等辅助判断指标,避免错误信号
-2. 优化止损方式,可以考虑移动止损、振荡止损等
-3. 增加开仓过滤条件,例如突破布林线再入场
-4. 测试不同的正向K线参数对不同品种的适应性
-5. 评估最大回撤,控制单笔亏损规模
-
-## 总结  
-
-自定义向上突破策略整体思路清晰简单,通过统计正向K线占比判断持续上涨或下跌状态,利用简单指标捕捉趋势。该策略容易理解,用户友好,适合量化交易的初学者实践。但仅依赖单一指标和参数设置存在一定盈利波动性,需要针对策略的风险继续优化,使其能够在更多市场中稳定获利。
-
-|| 
 
 ## Overview
 
@@ -115,7 +62,6 @@ The main directions to optimize this strategy include:
 
 The Positive Bars Percentage Breakout Strategy has a simple and straightforward logic to capture trends by statistically judging persistence of uptrends/downtrends. It is easy to understand and user-friendly, suitable for beginner quants. But its reliance on a single indicator and parameter optimization requires further improvements on risk control for stable profitability across different markets.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f16e56291360ffee5b.png)
-[trans]
-
-## 概述
-
-本策略名称为“基于RSI指标的双轨突破策略”。该策略利用RSI指标的双轨配合进行判断,实现低买高卖的目的。当RSI指标低于设置的低轨(默认40)时视为买入信号,此时若RSI10小于RSI14则进一步确认买入;当RSI指标高于设置的高轨(默认70)时视为卖出信号,此时若RSI10高于RSI14则进一步确认卖出。该策略同时设置了移动止损和止盈退出机制。
-
-## 策略原理  
-
-本策略的核心逻辑是利用RSI指标的双轨进行判断。RSI指标一般设置为14周期,代表了近14天的股票强弱情况。本策略则添加了RSI10作为辅助判断指标。  
-
-当RSI14下破40轨时,认为股价跌破弱势面,有可能形成支撑反弹的机会。此时若RSI10小于RSI14,说明短期趋势依然向下,可以进一步确认看跌信号。所以满足“RSI14 <= 40且RSI10 < RSI14”时则产生买入信号。  
-
-当RSI14上破70轨时,认为股价进入短期的强势区域,有可能出现回落调整的机会。此时若RSI10大于RSI14,说明短期趋势继续向上,可以进一步确认看涨信号。所以满足“RSI14 >= 70且RSI10 > RSI14”时则产生卖出信号。
-
-这样,RSI14和RSI10的配合判断,构成了双轨策略的核心逻辑。
-
-## 策略优势
-
-1. 使用双RSI指标组合判断,可以更准确捕捉买卖点位
-2. 采用移动止损机制,可以及时止损,控制最大亏损
-3. 设置止盈退出机制,可以在达到目标利润后退出,避免盈利回吐
-
-## 策略风险 
-
-1. RSI指标容易产生虚假信号,无法完全避免亏损的发生
-2. 止损点设置过于接近可能会被秒出,设置过大又难以控制风险
-3. 如果行情异常,如快速跳空,也会招致相应损失
-
-要充分利用该策略,可以适当调整RSI参数,严格控制止损位置,避免操作过于密集,追求稳定持久的盈利能力。
-
-## 策略优化方向
-
-1. 可以考虑结合其他指标进行组合,如KDJ、MACD等,实现多指标验证
-2. 可以针对不同品种分别设置RSI参数,使参数更贴近该品种特点
-3. 可以设置动态止损,根据ATR等指标实时调整止损位
-4. 可以通过机器学习技术自动优化RSI参数
-
-## 总结
-
-本策略基于RSI的双轨思路进行判断,在一定程度上过滤了部分噪音信号。但任何单一指标策略都无法完美,RSI指标容易产生误导,应谨慎看待。本策略中加入了移动止损和止盈机制来控制风险,这是非常必要的。未来可继续优化,使策略参数和止损方式更加智能化、动态化。
-
-||
 
 
 ## Overview
@@ -93,7 +51,6 @@ To fully utilize this strategy, RSI parameters can be adjusted properly, stop lo
 
 This strategy makes judgment based on the dual-track idea of RSI and filters out some noisy signals to some extent. But no single indicator strategies can be perfect, RSI indicator is prone to mislead and should be viewed cautiously. This strategy incorporates moving stop loss and take profit mechanisms to control risks, which is essential. Future optimizations could be continued to make strategy parameters and stop loss methods more intelligent and dynamic.
 
-[/trans]
 
 > Strategy Arguments
 

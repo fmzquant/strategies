@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ccff99525065a65da5.png)
-[trans]
-
-## 概述
-
-该策略是一个基于日本蜡烛技术分析的快速跳空策略,同时结合均线指标和支撑阻力指标来判断趋势和位置。其主要思想是在均线和趋势指标确认之后,等待价格快速跳空并迅速止盈。
-
-## 策略原理  
-
-该策略使用长度为20的简单移动平均线SMA和长度为200的指数移动平均线EMA来判断趋势方向。当价格在上升趋势时(SMA在EMA之上),并且当前日本蜡烛实体收盘价高于开盘价(白色实体),表明多头力量增强;当价格在下降趋势时(SMA在EMA之下),并且当前日本蜡烛实体收盘价低于开盘价(黑色实体),表明空头力量增强。  
-
-在趋势和力量得到确认的情况下,该策略等待价格快速跳空,进入场内。所谓“跳空”就是价格“跨过”预设的三条ATR通道(以200日ATR和系数为基准计算出来的通道)中的第一条通道线,进入第二条通道线以内。这是一个高概率的突破信号。  
-
-进场后,止盈或止损规则非常简单。只要价格触及通道的外沿(如上涨止盈线或下跌止损线),就会立即止盈或止损。这保证了策略的快速获利。
-
-## 策略优势
-
-该策略最大的优势在于获利快而保守。使用快速跳空的方式进入场内,避免多次调整仓位。而通道突破带来的趋势加速效应,则可在短时间内获得较大利润。  
-
-相比于长线持有,如此高效的开平仓手法可显著降低策略的空仓率,进一步提升资金使用效率。同时,快速止盈止损机制也可有效控制单笔亏损。
-
-## 策略风险
-
-该策略主要依赖均线指标判断趋势方向,存在回调和震荡的风险。当价格在通道内部震荡时,则可能导致超短线反向开仓和亏损。  
-
-此外,该策略过于依赖技术指标,没有结合基本面和重大事件分析。一旦发生黑天鹅事件,则技术指标QIAN失效,策略可能遭遇较大亏损。
-
-为控制风险,可适当放宽通道范围,降低开仓频率。或者增加仓位管理模块,根据资金规模动态调整单笔仓位。
-
-## 策略优化  
-
-该策略可从以下几个方面进行优化:
-
-1. 增加仓位管理模块。根据账户资金规模,动态调整每单开仓数量,控制单笔亏损占比。
-
-2. 增加基本面过滤。在技术指标触发开仓条件时,判断公司基本面和重大事件,避免异动。  
-
-3. 结合股票池管理。设定股票筛选规则,动态调整股票池。不同阶段选择最优股票池,提高稳定性。
-
-4. 结合机器学习模型。通过AI预测趋势和关键价格点,辅助确定通道范围和开仓时机。
-
-## 总结
-
-该策略以简洁高效见长。使用均线判断大趋势,日本蜡烛判断力量方向,快速跳空入场,迅速止盈止损。可在短期内获利,适合高频交易。但也存在回撤和不确定性风险。通过持续优化,可使策略在不同市场环境下稳定运行。
-
-||
 
 
 ## Overview
@@ -99,7 +54,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy features simplicity and efficiency. It determines major trend with moving averages, momentum direction with Japanese candles, enters with fast breakout, and exits with quick profit taking and stop loss. It allows short-term gains suitable for high frequency trading. But it also has the risk of drawdown and uncertainty. Continuous optimization can make the strategy stable under different market environments.
 
-[/trans]
 
 > Strategy Arguments
 

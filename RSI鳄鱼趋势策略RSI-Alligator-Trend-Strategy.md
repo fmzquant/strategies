@@ -10,71 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b879246e0062392917.png)
-[trans]
-## 概述
-
-RSI鳄鱼趋势策略是基于RSI指标的鳄鱼指标组合,用于判断趋势的进入和退出。它使用三条平均线 - 鳄鱼的上颚线、牙齿线和唇线,采用不同周期的RSI构建。当牙齿线上穿唇线且RSI上颚线高于牙齿线时做多;当牙齿线下穿唇线且RSI上颚线低于牙齿线时做空。该策略同时设定了止损和止盈条件。
-
-## 策略原理
-
-RSI鳄鱼趋势策略使用RSI指标构建鳄鱼指标的三条移动平均线。具体设置如下:
-
-- 上颚线:5周期的RSI线
-- 牙齿线:13周期的RSI线  
-- 唇线:34周期的RSI线
-
-进入信号的判断逻辑是:
-
-多头信号:当牙齿线上穿唇线,同时上颚线高于牙齿线时,做多。
-
-空头信号:当牙齿线下穿唇线,同时上颚线低于牙齿线时,做空。
-
-该策略同时设定了止损和止盈条件:
-
-- 止损设置为进入价格的10% 
-- 止盈设置为进入价格的90%
-
-## 优势分析
-
-RSI鳄鱼趋势策略具有以下优势:
-
-1. 使用鳄鱼线指标判断趋势,能够有效滤除市场噪音,锁定主要趋势
-2. 结合多周期RSI,避免假突破,提高信号的可靠性
-3. 设定合理的止损止盈条件,有助于策略的稳定运行
-4. 策略思路清晰易懂,参数设置简单,容易实盘操作
-5. 可同时做多做空,兼顾趋势的两个方向,灵活性强
-
-## 风险分析
-
-RSI鳄鱼趋势策略也存在以下风险:  
-
-1. 牙齿线与唇线的交叉可能出现假突破,导致不必要的亏损。可以适当调整周期参数降低假突破概率。
-
-2. 止损设置可能过于激进,无谓止损的概率较大。可以适当放宽止损范围,或添加其他条件作为止损激活的前提条件。  
-
-3. 若行情剧烈,止损或无法起到应有的保证金效果。这时则需要人工干预,及时止损。
-
-4. 多空切换频繁时,交易费用压力较大。可以适当放宽进入条件,减少不必要的反复。
-
-## 优化方向  
-
-RSI鳄鱼趋势策略可以从以下几个方面进行优化:
-
-1. 优化鳄鱼线的参数设置,调整周期参数,找到最佳参数组合
-
-2. 优化进入的条件逻辑,比如新增交易量指标等过滤信号
-
-3. 优化止盈止损策略,使其更加顺应行情与保证金水平
-
-4. 增加对突发事件的处理机制,避免异常行情的暴露
-
-5. 增加开仓算法,控制单笔投入资金占比,规避风险
-
-## 总结
-
-RSI鳄鱼趋势策略整体来说是一种可靠、易操作的趋势跟踪策略。它使用鳄鱼指标判断趋势方向,配合RSI指标设定参考阈值,能有效锁定趋势并设定合理的出场点。同时,策略本身也具备较强的灵活性与扩展性,值得实盘应用与后续优化。
-
-||
 
 ## Overview  
 
@@ -139,7 +74,6 @@ The RSI Alligator Trend strategy can be optimized in the following aspects:
 
 In general, the RSI Alligator Trend strategy is a reliable and easy-to-use trend following strategy. It uses the Alligator indicator to determine the trend direction, combined with the RSI indicator to set reference thresholds, which can effectively lock in the trend and set reasonable exit points. At the same time, the strategy itself also has strong flexibility and extensibility, making it worthwhile for live trading and further optimization.
 
-[/trans]
 
 > Strategy Arguments
 

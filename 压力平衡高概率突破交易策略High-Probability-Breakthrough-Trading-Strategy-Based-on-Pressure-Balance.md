@@ -10,75 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d5712c5dcca8cfbd3c.png)
-[trans]
-
-#### 概述
-
-这个策略利用多种指标组合判断趋势方向和交易时机,采用压力平衡的方法提高交易胜率。主要使用MACD,PSAR和EMA三个指标进行判断,结合止损止盈实现高效盈利。
-
-#### 策略原理
-
-1. 使用EMA计算均线,判断整体趋势方向。EMA值较大代表目前处于上升趋势,EMA值较小代表目前处于下降趋势。
-
-2. 使用MACD计算快线和慢线的差值,当差值大于0代表目前处于上升趋势,当差值小于0代表目前处于下降趋势。
-
-3. 使用PSAR计算连续变动点,当PSAR值较大代表目前处于下降趋势,当PSAR值较小代表目前处于上升趋势。
-
-4. 结合上述三个指标,判断趋势一致性。当三个指标判断结果一致时,代表趋势较为明确,可以进行买入或卖出操作。
-
-5. 根据买入和卖出条件开仓,并设置止损止盈点,在达到止损或止盈条件时平仓,实现盈利。
-
-6. 具体操作规则如下:
-   - 买入条件:非上升趋势,MACD差值小于0,收盘价高于EMA均线
-   - 卖出条件:上升趋势,MACD差值大于0,收盘价低于EMA均线
-   - 止损条件:价格触及下一个PSAR值
-   - 止盈条件:达到设定的止盈比例
-
-#### 策略优势
-
-1. 使用多种指标判断趋势,提高判断准确性。
-
-2. 采用压力平衡方式,在趋势明确时开仓,增加获利概率。
-
-3. 设定止损止盈点,可以限制亏损,锁定盈利。
-
-4. 交易规则清晰系统,适合程序化交易。
-
-5. 可以通过参数优化,调整适应不同品种和交易周期。
-
-#### 策略风险
-
-1. 趋势判断存在错误的可能,导致开仓方向错误。
-
-2. 市场出现剧烈变动,指标发出虚假信号的可能。
-
-3. 止损点设置过大,无法及时止损。
-
-4. 参数设置不当,导致过于频繁交易或无法及时开仓。
-
-5. 交易品种流动性不足,无法按计划止损止盈。
-
-6. 可以通过优化参数,调整止损止盈点,选择流动性好的交易品种来降低风险。
-
-#### 策略优化方向
-
-1. 调整EMA周期参数,优化判断趋势的准确性。
-
-2. 调整MACD快线慢线周期参数,优化MACD指标的敏感性。
-
-3. 调整止损止盈比例参数,取得止损止盈的最佳平衡。 
-
-4. 添加其他辅助指标,提高开仓时机选择的准确性。
-
-5. 优化交易品种选择,选择流动性好、波动较大的品种。
-
-6. 调整交易时间周期,适应不同品种的行情特点。
-
-#### 总结
-
-这个策略综合运用多种指标判断趋势,在趋势明确时开仓,并设置止损止盈,可以有效把握市场走势,在保证一定盈利的前提下获取比较理想的回报。通过参数优化和加入其他辅助指标,可以进一步提高策略的稳定性和盈利水平。该策略交易规则清晰易懂,非常适合程序化交易。
-
-||
 
  
 #### Overview
@@ -147,7 +78,6 @@ This strategy uses a combination of multiple indicators to determine the trend d
 
 This strategy integrates multiple indicators for trend analysis and enters trades based on definite trends, with preset stop loss and take profit, which can effectively capture market moves and achieve good returns while ensuring certain profitability. Further improvements on stability and profitability can be achieved through parameter tuning and additional indicators. The clear trading rules make this strategy very suitable for algorithmic trading.
 
-[/trans]
 
 > Strategy Arguments
 

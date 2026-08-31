@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b2426d6835d2b25348.png)
-[trans]
-
-## 策略概述
-
-该策略基于赫尔移动平均线(Hull Moving Average, HMA)的交叉信号进行交易。赫尔移动平均线是一种旨在减少移动平均线滞后的技术指标,由Alan Hull开发。该策略使用两条不同周期的HMA线,当较短周期的HMA从下向上穿过较长周期的HMA时产生买入信号,反之则产生卖出信号。
-
-## 策略原理
-
-1. 计算赫尔移动平均线(HMA)
-
-HMA的计算过程如下:
-- 先计算价格的加权移动平均线(WMA),周期为输入参数length的一半
-- 再计算该WMA的WMA,周期为length
-- 使用公式: HMA = 2 * WMA(length/2) - WMA(length)
-- 对上述结果再次计算WMA,周期为length的平方根,得到最终的HMA
-
-2. 产生交易信号
-
-- 当收盘价上穿HMA时,产生买入信号
-- 当收盘价下穿HMA时,产生卖出信号
-
-3. 根据交易信号执行交易
-
-- 买入信号: 开多头仓位
-- 卖出信号: 开空头仓位
-
-## 策略优势
-
-1. 赫尔移动平均线相比简单移动平均线和加权移动平均线有更小的滞后性,因此能更快地对价格变化做出反应,提高了策略的灵敏度。
-
-2. 通过两条不同周期的HMA线交叉来产生信号,能有效过滤掉一些噪音和虚假信号,提高信号的可靠性。
-
-3. 参数可调,通过调整HMA的周期参数,可以适应不同的市场和交易品种。
-
-## 策略风险
-
-1. 赫尔移动平均线是一个滞后指标,在趋势反转的早期阶段可能会发出错误信号。
-
-2. 参数选择不当可能导致策略表现不佳。周期选得过长会使策略反应迟钝,周期选得过短则可能导致过多的虚假信号。
-
-3. 像所有基于单一指标的策略一样,该策略在震荡市可能表现不佳,产生较多的虚假信号和亏损交易。
-
-## 优化方向
-
-1. 可以考虑引入其他技术指标或基本面因素作为过滤条件,例如交易量、趋势指标等,以进一步确认HMA交叉信号的有效性。
-
-2. 对于参数优化,可以使用遗传算法、网格搜索等方法在历史数据上进行参数寻优,找到最适合当前市场的参数组合。
-
-3. 在策略中加入止损和止盈机制,控制单次交易的风险和收益。
-
-4. 考虑市场的趋势性,可以通过引入市场趋势判断指标,在趋势型市场中交易,回避震荡市。
-
-## 总结
-
-赫尔移动平均交叉策略是一个简单易用的交易策略,通过HMA的快速响应特性,可以比较及时地捕捉到价格的变化。但像所有策略一样,它也有其局限性,表现会受到市场类型、参数选择的影响。在实际应用中,可以将其与其他分析方法相结合,对信号进行进一步确认。同时,合理的风控措施,如止损止盈、仓位管理等,也是策略稳健运行不可或缺的部分。
-
-|| 
 
 ## Overview
 
@@ -122,7 +65,6 @@ The HMA is calculated as follows:
 
 The Hull Moving Average Crossover strategy is a simple and easy-to-use trading strategy. With the fast-response characteristic of HMA, it can capture price changes in a timely manner. However, like all strategies, it also has its limitations and its performance will be affected by market types and parameter selection. In practical application, it can be combined with other analysis methods to further confirm the signals. At the same time, reasonable risk control measures, such as stop-loss and take-profit, position management, etc., are also indispensable parts for the stable operation of the strategy.
 
-[/trans]
 
 > Strategy Arguments
 

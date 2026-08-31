@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/d6932847b587a2c11b.png)
-[trans]
-
-## 概述
-
-MACD均线牛熊转换策略通过计算MACD指标的DIFF和DEA均线,判断市场趋势是否发生转折,进而产生交易信号。当DIFF上穿DEA时,做多;当DIFF下穿DEA时,做空。该策略同时结合价格EMA均线过滤,避免出现假突破。
-
-## 策略原理  
-
-该策略主要基于MACD指标的DIFF和DEA均线。MACD代表指数移动平均线差值,由DIFF、DEA和MACD线组成。其中,DIFF线代表短期EMA均线和长期EMA均线的差值,DEA线是DIFF的EMA均线,用来验证DIFF线信号,MACD线是DIFF减DEA的差值,代表背离。  
-
-当DIFF向上突破DEA时,代表短期均线开始走强,市场步入多头,当DIFF向下跌破DEA时,代表短期均线开始走弱,市场步入空头。因此,该策略在DIFF上穿DEA时做多,下穿时做空。  
-
-同时,策略还结合价格的EMA均线来过滤假突破。只有当DIFF向上突破DEA,且价格低于上一次做多价格时才做多;只有当DIFF向下突破DEA,且价格高于上一次做空价格时才做空。
-
-## 优势分析
-
-MACD均线牛熊转换策略结合MACD指标和价格EMA均线,避免了仅通过MACD指标产生的假信号,提高了交易效果。该策略判断市场趋势转换迅速,适合短线操作。
-
-优势主要体现在:
-
-1. 使用MACD指标判断趋势转换点,捕捉市场转折时机
-2. 结合价格EMA均线进行过滤,减少假突破机会
-3. 交易信号产生快速,适合短线操作
-4. 实现了趋势跟踪,可以获取趋势中期收益
-5. 采用趋势转换操作思路,符合大部分交易者的思维模式
-
-## 风险分析
-
-MACD均线牛熊转换策略也存在一些风险,主要体现在:  
-
-1. MACD指标容易产生误信号,需要价格EMA滤波器进行验证,但也会错过一部分移动
-2. 需密切关注DIFF和DEA均线,如果调整参数不当也会增大误信号
-3. 突破信号仅判断1根K线,可能出现被套现象
-4. 策略以DIFF和DEA交叉为主要交易信号,如果行情不明朗,交叉信号产生频繁,会增加交易频率
-
-这些风险主要可以从以下几个方面进行优化:
-
-1. 调整MACD参数,减少误信号
-2. 增加过滤器强度,降低被套概率  
-3. 增加持仓过滤,限制交易频率
-
-## 优化方向  
-
-MACD均线牛熊转换策略还具有优化空间,可以从以下几个维度进行优化:  
-
-1. 优化MACD参数,DIFF、DEA周期可调;
-2. 增加持仓时间过滤,降低交易频率; 
-3. 增加止损止盈策略,控制单笔损益;
-4. 结合其他指标过滤,如BOLL上下轨、KD等;
-5. 增加趋势判断,避免逆势交易;
-6. 可基于该策略框架开发离场策略或止盈策略模板。
-
-## 总结  
-
-MACD均线牛熊转换策略通过DIFF、DEA交叉判断市场步入多头和空头的时机,并配合价格EMA均线过滤假信号,实现了快速判断市场趋势转换的效果。该策略以简单清晰的交易逻辑,判断转换点迅速,适合短线与中线操作。下一步可从调整参数、增强过滤器、控制交易频率等方面进行优化,使策略更加稳定。
-
-||
 
 
 ## Overview  
@@ -123,7 +66,6 @@ The MACD Moving Average Bull Bear Conversion Strategy can be further optimized i
 
 The MACD Moving Average Bull Bear Conversion Strategy identifies bullish/bearish market entry by DIFF and DEA crossover signals, and uses price EMA filters to remove false signals, effectively determining market trend reversal points. With simple and clear logic, it quickly identifies conversion points suitable for short-term and mid-term trading. Next steps to optimize include adjusting parameters, enhancing filters, and controlling trade frequency to make the strategy more robust.  
 
-[/trans]
 
 
 

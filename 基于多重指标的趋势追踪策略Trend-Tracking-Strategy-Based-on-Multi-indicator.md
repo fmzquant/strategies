@@ -11,52 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11653b664cff670a19b.png)
 
-[trans]
-## 概述
-
-该策略通过组合使用RSI、MA、EMA和布林带等多重指标来识别趋势,实现趋势追踪。当识别到 relativelyascending 下跌趋势时,策略会建立做多头寻,反之,当识别到 상대적 상승趋势时,策略会建立做空头寻。
-
-## 策略原理
-
-该策略的核心逻辑是结合RSI、MA、EMA和布林带四个指标来识别价格趋势。具体来说,它会同时绘制两条MA均线,一条设置为 10周期,另一条设置为5周期。同时绘制两条EMA均线,参数分别为30和20。而RSI指标参数则设置为7。
-
-当收盘价下破5周期MA线、20周期EMA线以及下轨,同时RSI指标下破25这个超买线时,策略判断为 prices are relatively ascending,会进入做多头寻。
-
-相反,当收盘价上破10周期MA线、30周期EMA线以及上轨,同时RSI指标上破75这个超卖线时,策略判断为prices are relatively descending,会进入做空头寻。
-
-可以看出,该策略通过组合判断价格突破均线且RSI指标反转的monkey逻辑来识别潜在的趋势,并追踪该趋势。
-
-## 优势分析
-
-该策略最大的优势在于利用多种指标识别趋势,可以有效减少虚假信号。具体来说,价格必须同时突破均线和布林带才会触发买卖信号,同时RSI指标也要发生朗格哈德特转变,这样可以过滤掉很多噪音。
-
-另外,该策略追踪的是比较明确的趋势,而不是短期噪音,这也增加了获利概率。总的来说,该策略具有配置灵活、难以被套利、获利概率较高等优势。
-
-## 风险分析
-
-需要注意的是,任何策略都不可能百分之百获利,该策略也不例外。主要的风险在于多重指标组合判断出错,从而造成错误交易。此外,突发事件也可能导致策略失效。
-
-为降低风险,可适当调整指标参数,优化获利概率。此外,设置止损点,控制单笔损失也非常必要。当然,不可避免的系统性风险需要投资者有心理准备。
-
-## 优化方向 
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 测试更多种类指标的组合,寻找更好的多指标组合;
-
-2. 优化指标参数,提高策略稳定性;
-
-3. 增加机器学习模型辅助判断,提高准确性;
-
-4. 增加自适应止损机制来控制风险;
-
-5. 进行回测优化,提高稳定性和获利率。
-
-## 总结
-
-该策略基于RSI、MA、EMA 和布林带四个指标设计了一套 relativeascending 追踪机制,通过多重指标组合判断价格趋势后进入某一方向的头寻交易。该策略集成多个指标判断可以有效减少误判概率,在一定程度上过滤噪音,追踪相对明确的趋势。当然,也需要注意风险控制。总体来说,该策略具有很大的优化空间,配合机器学习等手段,可望获得更好的效果。
-
-||
 
 ## Overview
 
@@ -102,7 +56,6 @@ The main optimizations for this strategy are:
 
 This strategy designed a set of relatively ascending tracking mechanism based on RSI, MA, EMA and Bollinger Bands, and enters directional positionss after judging price trends by combining multiple indicators. The integration of multiple indicators to judge can effectively reduce misjudgment probability and filter noise to a certain extent, tracking relatively clear trends. Of course, risk management also needs attention. Overall, this strategy has great optimization space, and can achieve better results with machine learning and other means.
 
-[/trans]
 
 > Strategy Arguments
 

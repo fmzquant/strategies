@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1bc9d6f5d10e53b7ff7.png)
-[trans]
-#### 概述
-该策略是一个基于布林带和随机振荡器的交易策略。它利用布林带来确定市场的波动范围,并使用随机振荡器来判断市场的超买和超卖状态。当价格突破布林带上轨时,策略进行做多;当价格跌破布林带下轨时,策略进行做空。同时,该策略还使用了随机振荡器来过滤交易信号,以提高策略的准确性和可靠性。
-
-#### 策略原理
-该策略的核心是布林带和随机振荡器两个技术指标。布林带由三条线组成:中轨、上轨和下轨。中轨是价格的简单移动平均线,上轨和下轨分别是中轨加上和减去价格标准差的某个倍数。当价格突破上轨时,表明市场可能处于超买状态;当价格跌破下轨时,表明市场可能处于超卖状态。
-
-随机振荡器由两条线组成:%K线和%D线。%K线衡量了收盘价在最近一段时间内的最高价和最低价之间的位置,%D线是%K线的移动平均线。当%K线上穿%D线时,表明市场可能处于超买状态;当%K线下穿%D线时,表明市场可能处于超卖状态。
-
-该策略结合了这两个指标,当价格突破布林带上轨且随机振荡器%K线上穿%D线时,策略进行做多;当价格跌破布林带下轨且随机振荡器%K线下穿%D线时,策略进行做空。这种组合可以有效地捕捉市场的趋势,同时也能够避免在波动市场中频繁交易。
-
-#### 策略优势
-1. 结合了趋势和震荡两种市场状态的指标,能够在不同的市场环境中获得稳定的收益。
-2. 布林带能够动态地调整,适应市场波动率的变化,提高了策略的适应性。
-3. 随机振荡器能够有效地过滤掉一些虚假的突破信号,提高了策略的准确性。
-4. 策略逻辑清晰,易于理解和实现,适合不同水平的交易者使用。
-
-#### 策略风险
-1. 在市场趋势不明确或者波动率很大的情况下,该策略可能会出现较多的虚假信号,导致频繁交易和损失。
-2. 该策略依赖于历史数据,对于一些突发事件或者市场异常情况,可能会出现较大的回撤。
-3. 策略参数的选择对策略性能有很大影响,不同的参数可能会导致完全不同的结果。
-
-#### 策略优化方向
-1. 可以考虑加入更多的过滤条件,如交易量、其他技术指标等,以进一步提高信号的可靠性。
-2. 可以对布林带和随机振荡器的参数进行优化,找到最适合当前市场的参数组合。
-3. 可以引入风险管理机制,如止损和移动止损,以控制单次交易的风险。
-4. 可以考虑将该策略与其他策略进行组合,形成一个更加稳健的策略组合。
-
-#### 总结
-该策略是一个简单而有效的交易策略,通过结合布林带和随机振荡器两个经典的技术指标,能够在趋势和震荡两种市场状态下获得稳定的收益。尽管该策略也存在一些风险和局限性,但通过适当的优化和改进,可以进一步提高策略的性能和适应性,成为一个值得参考和学习的交易策略。
-
-|| 
 
 #### Overview
 This strategy is a trading strategy based on Bollinger Bands and the Stochastic Oscillator. It utilizes Bollinger Bands to determine the market's volatility range and uses the Stochastic Oscillator to judge the overbought and oversold states of the market. When the price breaks above the upper Bollinger Band, the strategy goes long; when the price falls below the lower Bollinger Band, the strategy goes short. At the same time, the strategy also uses the Stochastic Oscillator to filter trading signals to improve the accuracy and reliability of the strategy.
@@ -72,7 +40,6 @@ This strategy combines these two indicators. When the price breaks above the upp
 
 #### Summary
 This strategy is a simple yet effective trading strategy that combines two classic technical indicators, Bollinger Bands and the Stochastic Oscillator, to achieve stable returns in both trending and oscillating market states. Although the strategy also has some risks and limitations, through proper optimization and improvement, it can further enhance the strategy's performance and adaptability, becoming a trading strategy worth referencing and learning from.
-[/trans]
 
 > Strategy Arguments
 

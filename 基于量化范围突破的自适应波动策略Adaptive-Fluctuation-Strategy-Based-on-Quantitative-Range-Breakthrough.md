@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/be8b09ea92ad0a690b.png)
-[trans]
-## 概述
-
-该策略通过计算最近一定周期内的成交量的最高值和最低值,形成一个自适应的波动范围,当当前周期的成交量突破この范围时产生交易信号。信号方向根据阴阳烛判断,属于简单有效的追踪市场突发性大单的策略。
-
-## 策略原理  
-
-核心逻辑是计算最近N周期内的正负成交量的最高最低值,形成一个自适应波动范围。基于这个范围判断当期是否出现突破。同时综合阴阳线信号,完成判断。
-
-具体计算流程是:
-
-1. 计算最近N周期的最高成交量Highest和最低成交量Lowest
-2. 判断当前周期的成交量Volume是否高于Highest
-3. 结合当前是阴线还是阳线,完成突破信号判断
-4. 产生做多做空信号
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 自适应范围设定,对市场变化敏感
-2. 捕捉高波动突发行情,降低漏单率  
-3. 结合烛形判断,避免假突破
-4. 实现简单,容易理解和修改
-5. 可灵活调整参数,适应不同品种  
-
-## 风险分析 
-
-该策略也存在一些风险:  
-
-1. 容易追高杀跌,需要调整参数控制
-2. 大周期震荡市场中可能出现频繁错误信号
-3. 无法区分正常和异常突破,需要結合其他指标或模式判断
-4. 每次突破只有一次入场机会,不能追踪趋势
-
-可以通过调整参数周期,结合其他指标过滤来优化。
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 增加参数调整区间长度,适应不同市场周期
-2. 添加均线、布林带等指标,过滤信号
-3. 优化结合K线形态,避免假突破误入
-4. 增加再入场和止损模块,使策略可以追踪趋势
-
-## 总结  
-
-该策略整体简单实用,通过自适应范围和量价合并判断,可有效捕捉突发性单边行情。但也存在一定的误报风险,需要适当调整参数并配合其他工具使用,方能发挥最大效果。
-
-||
 
 ## Overview  
 
@@ -111,7 +60,6 @@ The strategy can be optimized in several ways:
 
 The strategy is overall simple and practical. By combining adaptive range and volume price analysis it can effectively capture one-sided explosive markets. However there are also certain risk of false signals, requiring appropriate parameter tweak and complementary tools before it can achieve maximum impact.
 
-[/trans]
 
 > Strategy Arguments
 

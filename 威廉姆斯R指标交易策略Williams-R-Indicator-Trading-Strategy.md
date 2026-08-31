@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-## 策略原理
-
-威廉姆斯%R指标交易策略基于威廉姆斯%R指标来产生交易信号。该指标通过比较当前收盘价与一定周期内的最高价和最低价的幅度来衡量市场动量。
-
-当威廉姆斯%R指标线突破超买线时,产生卖出信号;当指标线突破超卖区域时,产生买入信号。策略的具体交易逻辑是:
-
-1. 计算一定周期(如14日)的威廉姆斯%R值
-
-2. 设置超买线(如-20)和超卖区域(如-80)
-
-3. 当指标线由下向上突破超卖区域时,做多
-
-4. 当指标线由上向下突破超买线时,平仓
-
-这样,策略可以在价格可能反转的点位开仓做多做空,捕捉短线机会。
-
-## 策略优势
-
-- 参数设置简单,规则清晰
-
-- 能较早判断超买超卖现象
-
-- 突破交易系统化,不受个人情绪影响
-
-## 策略风险
-
-- 威廉姆斯%R滞后,可能漏失机会
-
-- 需要反复测试优化参数
-
-- 超买超卖仅具有一定参考价值
-
-## 总结
-
-威廉姆斯%R指标策略通过判断超买超卖区域来捕捉反转机会。配置合理的仓位管理和止损策略,可以控制风险。但交易者需注意指标滞后问题,需辅助其他技术工具来进行验证,谨慎运用该策略。
-
-
-||
 
 ## Strategy Logic
 
@@ -87,7 +47,6 @@ This allows entries around potential reversal points to capitalize on short-term
 
 The Williams %R strategy aims to capture reversals by trading overbought/oversold regions. With proper position sizing and stops, risk can be controlled. But lag is a key limitation requiring additional tools for validation and caution in use.
 
-[/trans]
 
 > Strategy Arguments
 

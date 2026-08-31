@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/189f4e84ffd7b6aaa6d.png)
-[trans]
-
-## 概述
-
-该策略基于相对强弱指数(RSI)指标设计,针对RSI低点买入,高点止损止盈的多头趋势追踪交易策略。当RSI指标低于超买线时生成买入信号,当RSI指标高于超卖线时生成卖出信号。策略优化追踪趋势的表现,能够有效控制交易风险。
-
-## 策略原理
-
-该策略使用RSI指标判断股票价格是否被高估或低估。RSI指标结合超买超卖线,形成买入和卖出信号。具体来说,如果RSI指标上穿20的超卖线,产生买入信号;如果RSI指标下穿80的超买线,产生卖出信号。 
-
-进入多头仓位后,策略设置一个初始止损线,以控制下行风险。同时设置两个不同比例的止盈线,分批止盈以锁定利润。具体来说,最先止盈50%的头寸,止盈价为买入价格的3%;然后止盈剩余50%的头寸, 止盈价为买入价格的5%。
-
-该策略简洁有效地利用RSI指标判断入市时机。止盈止损设置合理,可以有效控制风险。
-
-## 策略优势
-
-- 利用RSI指标判断多空,避免盲目做多
-- RSI指标参数经过优化,指标效果更佳 
-- 双止盈设计合理,可以实现分批止盈,锁定更多利润
-- 初止损和连续止损防止巨额亏损
-
-## 风险分析
-
-- 多头策略,无法持续盈利的牛市中效果欠佳
-- RSI指标发出错误信号的概率存在,信号判断不当可能增加损失
-- 止损点过深造成无法止损的风险
-- 缺乏对加仓次数和比例的限制,可能造成亏损放大
-
-## 优化方向
-
-- 结合其他指标过滤RSI信号,提高信号准确率
-- 加入对加仓次数和比例的限制
-- 测试不同RSI参数的效果
-- 优化止损止盈点,降低风险
-
-## 总结
-
-该策略运用RSI指标判断行情,止盈止损设置合理。可有效判断行情趋势,控制交易风险,适合作为多头追踪策略使用。通过信号过滤、参数测试、止损优化等方式可进一步提升策略的稳定性。
-
-||
 
 
 ## Overview
@@ -90,7 +50,6 @@ The strategy effectively utilizes the RSI indicator to determine entry timing. T
 The strategy utilizes RSI to judge market condition and has reasonable stop loss and take profit configuration. It can effectively determine market trend and control trading risks, suitable as a bullish trend following strategy. Signal filtering, parameter testing, stop loss optimization etc. can further improve the stability of the strategy.
 
 
-[/trans]
 
 > Strategy Arguments
 

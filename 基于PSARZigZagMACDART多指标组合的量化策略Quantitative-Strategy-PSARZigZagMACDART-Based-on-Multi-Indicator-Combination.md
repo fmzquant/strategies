@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种基于多种技术指标组合进行量化交易的策略。该策略综合运用多种指标形成交易信号,实现有效的风险控制。
-
-一、策略原理
-
-该策略主要包含以下几个部分:
-
-(1) PSAR指标判断趋势方向,产生买入卖出基本信号;
-
-(2) ZigZag线形态判断趋势,确认信号方向; 
-
-(3) 布林线指标判断突破,辅助验证信号;
-
-(4) MACD指标再次验证信号,提高准确性;
-
-(5) ATR指标计算动态止损位,控制单笔风险;
-
-(6) 综合以上信号和条件进行入场。
-
-当所有指标信号一致时,才会形成最终的交易指令,这可以有效过滤假信号,提高准确性。ATR计算的止损位也使每次交易具备风险控制。
-
-二、策略优势
-
-该策略最大的优势在于多指标组合验证信号。这避免了单一指标的局限性,提高了信号的可靠性。
-
-此外,动态止损方式也是一大优势。它根据市场波动程度来设定合理的止损位,有助于主动控制风险。
-
-最后,多指标组合也提供了丰富的参数空间进行优化,以提升策略效率。
-
-三、潜在风险
-
-但我们也应注意以下风险:
-
-首先,多指标组合增加了参数优化难度,不合理设定可致使过优化。
-
-其次,止损过于接近有被突破的风险,造成亏损放大。
-
-最后,指标信号之间可能出现分歧,需要设定清晰的优先规则。
-
-四、内容总结
-
-本文详细介绍了一种基于多指标验证的量化交易策略。它合理运用多种指标进行信号验证和风险控制。但需要充分认识参数优化难度,并预防止损过于接近的风险。总体而言,该策略提供了一种相对稳健的量化交易方法。
-
-||
 
 This article explains in detail a quantitative trading strategy that combines multiple technical indicators. By synthesizing signals from various indicators, it achieves effective risk control. 
 
@@ -98,7 +53,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative trading strategy utilizing multi-indicator confirmation and risk control. It intelligently combines indicators for verification and risk management. But the difficulty of parameter optimization should be fully acknowledged, and the risk of stops being too tight prevented. Overall, it provides a relatively robust quantitative trading methodology.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,70 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1cec5e2109c362931e1.png)
 
-[trans]
-
-## 概述
-
-该策略主要基于布林带指标和RSI指标组合进行交易信号判断,属于典型的缝合策略。它综合利用不同指标的优势,通过布林带判定趋势方向,RSI检测超买超卖情况,从而进行入场和止损退出。
-
-## 策略原理
-
-1. 使用布林带的中轨、上轨、下轨判断目前股价走势。当价格突破上轨时认为进入看涨行情,突破下轨时认为进入看跌行情。 
-
-2. 布林带宽度(上轨与下轨差值)能反映目前市场波动率。当布林带宽度增大时,说明波动加剧,此时RSI能更好地检测超买超卖情况。
-
-3. RSI指标判断超买超卖情况。RSI高于70时为超买区,低于30时为超卖区。入场时避开超买超卖区,以获得更好的风险回报比。
-
-4. 具体交易信号:
-   (1) 看涨信号:价格上穿上轨,且RSI未超买(RSI小于70)
-   (2) 看跌信号:价格下穿下轨,且RSI未超卖(RSI大于30)
-   
-5. 止损退出:看涨交易若RSI下破70则止损;看跌交易若RSI上破30则止损。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 综合多个指标的优点,信息更全面,信号更可靠。
-
-2. 利用布林带判断总体走势方向,扶持大盘,把握趋势。
-
-3. RSI指标判断局部超买超卖,进一步避免不必要的风险。
-
-4. 止损机制比较严谨,有助于减少损失。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 布林带与RSI指标都可能出现失效的情况,从而导致交易信号错误。
-
-2. 虽有止损措施,但止损点设置不当仍可能造成较大亏损。
-
-3. 过于频繁交易会增加交易费率和滑点成本。
-
-4. PARAMETERS优化不当可能导致过拟合。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 测试不同的指标参数组合,找到最优参数。
-
-2. 增加止损方式的灵活性,如ADDR/ATR 止损、移动止损等。
-
-3. 增加仓位管理策略,如固定仓位、马丁格尔等。
-
-4. 结合更多指标过滤信号,如交易量能量等。
-
-5. 采用机器学习进行参数自适应优化。
-
-6. 优化入场时机,在趋势出现确认信号后再入场。
-
-## 总结
-
-该策略整体来说是一个典型的多指标缝合策略。它整合布林带和RSI各自的优势,在捕捉趋势的同时避免局部超买超卖的风险。通过合理参数优化和止损管理,可以获得较好的效果。但它也存在一定的风险,需要进一步优化以提高稳定性。整体来说,该策略思路合理,具有很大的改进空间。
-||
 
 ## Overview
 
@@ -138,7 +74,6 @@ This strategy can be optimized in the following aspects:
 
 In summary, this is a typical frankenstein strategy combining multiple indicators. It integrates the advantages of Bollinger Bands and RSI to catch trends while avoiding overbought and oversold risks. With proper parameter optimization and stop loss management, good results can be achieved. But it also has some risks and needs further optimization to improve stability. Overall, the strategy idea is reasonable and has great room for improvement.
 
-[/trans]
 
 > Strategy Arguments
 

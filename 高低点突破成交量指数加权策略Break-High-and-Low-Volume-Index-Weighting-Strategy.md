@@ -9,22 +9,6 @@
 
 > Strategy Description
 
-[trans]
-- 策略名称：高低点突破成交量指数加权策略
-- 数据周期：多周期
-- 回测可以选择 OKEX期货
-- 合约：this_week 当周合约
-- 官方网站：www.quantinfo.com
-
-![IMG](https://www.fmz.com/upload/asset/efa8dad9db6b13862283a69ee8255934.png)
-
-- 主图：
-  无
-
-- 副图
-  VJQ， 计算公式： VJQ:EMA(V*(C-REF(C,NC)),N);//定义成交量加权指数为VJQ
-
-|| 
 
 - Data cycle: multiple cycles
 - Backtest can choose OKEX futures
@@ -39,7 +23,6 @@
 - Secondary chart:
   VJQ, calculation formula: VJQ: EMA (V* (C-REF (C, NC)), N)
 
-[/trans]
 
 > Strategy Arguments
 

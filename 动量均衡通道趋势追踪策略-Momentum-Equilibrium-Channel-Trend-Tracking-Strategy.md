@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/20ef9710809b63f4fed.png)
-[trans]
-
-### 概述
-
-该策略通过计算通道和动量指标,识别趋势形态,实现趋势追踪交易。具体来说,它结合了动量指标和均衡通道指标,利用两者配合使用,在介入 long 期趋势的同时,利用均衡通道来锁定多头获利区域。
-
-### 策略原理
-
-该策略主要使用以下两个指标进行判断:
-
-1. 动量指标(DMI):判断市场多空趋势,指标大于设置阈值时产生交易信号。
-
-2. 均衡通道(Keltner Channel):判断趋势区域,价格突破上轨时为买入时机,价格跌破中轨时为平仓信号。
-
-具体交易逻辑为:当+DI动量指标大于设置阈值(默认32)时,判断为多头趋势形成,此时如价格突破均衡通道上轨,产生买入信号;之后利用均衡通道中轨作为止损线,跟踪止损,实现获利保护。
-
-该策略综合运用两个指标的优势,利用动量指标判断趋势方向,利用均衡通道判断入场时机和止损区域。双重指标组合,使策略能够在发现趋势早期高效入场,同时利用通道指标锁定盈利和止损。
-
-### 优势分析
-
-1. 策略利用动量指标判断市场趋势的早期,比简单移动平均线等滞后指标更加高效。
-
-2. 运用均衡通道判断具体交易区间,能够有效锁定获利区域。
-
-3. 指标参数和交易规则严谨合理,回测数据表现良好,实盘验证效果。
-
-4. 策略较为简单清晰,容易理解实现,适合量化交易初学者学习。
-
-5. 策略风险可控,采用中轨均线动态止损,有效控制单笔损失。
-
-
-### 风险分析
-
-1. 策略仅适用于趋势行情,不适用于盘整波动市场,如遇QtCore通道增大,中轨止损过于宽松,无法控制损失。
-
-2. DMI指标存在一定滞后,无法确定趋势确认,可能较早介入趋势带来损失。
-
-3. 固定百分比止损方式存在风险,大幅震荡后无法重新介入趋势,错过后续行情。
-
-4. 回测数据充足,但实盘仍需长时间运行验证参数稳定性。
-
-
-### 优化方向 
-
-1. 可以测试不同止损方式,如ATR止损、移动止损等方式替换固定百分比止损。
-
-2. 可以加入次级确认指标,如成交量放大,确保趋势确认后入场。
-
-3. 可以测试不同参数组合优化,寻找最佳参数组合。
-
-4. 可以通过步进优化和游动回测验证参数稳健性。
-
-
-### 总结
-
-本策略运用双重指标判断,实现了对趋势行情的高效捕捉。策略较为简单直观,逻辑清晰,回测表现较好,可作为量化交易的入门策略之一。但仍需充分验证实盘数据和优化参数,降低实盘跑输风险,将是未来的重点工作。
-
-||
 
 ### Overview
 
@@ -124,7 +66,6 @@ This strategy combines the advantages of two indicators, uses momentum indicator
 
 This strategy achieves efficient capturing of trending markets by using double indicator judgments. The strategy is relatively simple and intuitive with clear logic and good backtest performance. It can serve as one of the entry strategies for quantitative trading. But sufficient verification of real trading data and parameter optimization is still required to reduce real trading losses. This will be the focus of future work.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/bc85af93f4b46d790f.png)
-[trans]
-
-## 概述
-
-本策略通过计算两组不同参数的简单移动平均线,并以其作为建仓与平仓的信号,实现获利。该策略首先由美国交易员Richard Dennis于1983年提出,依靠简单的规则实现稳定盈利,后被Curtis Faith进一步推广,广为人知。
-
-## 策略原理
-
-该策略同时计算两组快线和慢线。快线参数设置为建仓周期20天,平仓周期10天;慢线参数为建仓周期55天,平仓周期20天。当价格上穿快线建仓周期的最高值时触发建多单信号;当价格下破建仓周期的最低值时触发建空单信号。同理,当价格下穿平仓周期的最低值时平多单;当价格上破平仓周期的最高值时平空单。慢线的建仓和平仓逻辑同快线。
-
-该策略依靠移动平均线的均线理论实现获利。即当短期平均线上穿长期平均线时,被视为价格上涨信号;下穿时则为价格下跌信号。本策略中的快线和慢线发挥着类似的作用。
-
-## 策略优势
-
-1. 规则简单清晰,容易理解和实现,适合初学者学习;
-2. 建仓和平仓标准明确,避免频繁交易;
-3. 结合快线和慢线双重移动平均线,可以平滑价格变动带来的噪音,产生较为清晰的交易信号;
-4. 利用多组参数进行组合,可以控制风险,防止失误交易;
-5. 长期稳定盈利,已在实盘中验证。
-
-## 风险及解决方法
-
-1. 策略本身较为机械化,无法对特殊行情作出判断,存在一定盈利上限;
-   - 可尝试引入更多指标或基于机器学习的模型辅助决策
-2. 移动平均线作为标志指标,存在一定滞后性;
-   - 可适当缩短建仓和平仓周期
-3. 无法限制最大回撤。
-   - 可设置止损点
-
-## 优化方向
-
-1. 增加止损模块,控制最大回撤
-2. 结合其他指标过滤信号
-3. 动态调整移动平均线参数
-4. 增加数据处理模块,剔除异常数据的影响
-5. 结合机器学习模型判定趋势
-
-## 总结
-
-本策略属于典型的趋势跟随策略。依靠简单的双重移动平均线建立交易规则,通过追踪市场趋势获得稳定收益。该策略易于理解实现,建仓信号清晰,长期实盘验证收益,非常适合初学者学习研究。同时也为更复杂的量化交易奠定基础。通过不断优化,可望获得更佳的绩效。
-
-||
 
 
 ## Overview
@@ -93,7 +51,6 @@ The strategy relies on the moving average theory to make profits. That is, when 
 
 This is a typical trend-following strategy. By establishing trading rules based on simple dual moving averages and tracking market trends, it achieves steady profits. The strategy is easy to understand and implement with clear opening signals and long-term verified profits from live trading, making it very suitable for beginners to learn and research. It also lays the foundation for more complex quantitative trading. Further optimizations can lead to even better performance.
 
-[/trans]
 
 > Strategy Arguments
 

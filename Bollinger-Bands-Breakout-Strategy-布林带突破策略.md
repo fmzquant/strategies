@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/162bcc5acf5a329737e.png)
 
-[trans]
-#### 概述
-该策略使用布林带作为主要指标,当收盘价突破上轨时开多仓,突破下轨时开空仓。布林带由中轨(移动平均线)、上轨(中轨+标准差)和下轨(中轨-标准差)组成。该策略试图捕捉市场趋势,在价格突破布林带上轨时买入,突破下轨时卖出,同时使用中轨作为平仓条件。
-
-#### 策略原理
-1. 计算布林带的中轨、上轨和下轨。中轨为收盘价的简单移动平均线,上轨和下轨由中轨加减一定倍数的标准差得到。
-2. 当收盘价突破上轨时,开多仓;当收盘价突破下轨时,开空仓。
-3. 平仓条件:多头仓位在收盘价跌破中轨时平仓;空头仓位在收盘价突破中轨时平仓。
-
-#### 策略优势
-1. 该策略基于布林带指标,能够有效捕捉市场趋势,在趋势形成初期就开仓,有利于获取更多利润。
-2. 使用中轨作为平仓条件,可以避免在趋势反转时继续持仓,从而降低风险。
-3. 策略逻辑清晰,易于理解和实现。
-
-#### 策略风险
-1. 布林带参数(如长度和倍数)的选择会影响策略表现,不同参数可能导致不同结果。
-2. 在震荡市场中,该策略可能会频繁开平仓,导致高昂的交易成本。
-3. 该策略没有考虑市场的基本面因素,完全依赖技术指标,在某些情况下可能会出现错误信号。
-
-#### 策略优化方向 
-1. 引入其他技术指标或市场情绪指标,以确认布林带突破信号的有效性,提高策略准确性。
-2. 优化布林带参数,如根据不同市场状况动态调整布林带的长度和倍数,以适应市场变化。
-3. 加入风险管理措施,如设置止损和止盈,控制单笔交易风险。
-4. 考虑市场的趋势强度,在趋势较强时持仓,在趋势较弱或震荡市场中避免交易,以提高策略收益并降低频繁交易的成本。
-
-#### 总结
-布林带突破策略通过布林带上下轨的突破来捕捉市场趋势,中轨作为平仓条件。该策略逻辑清晰,易于实现,能够有效捕捉趋势,但在参数选择和震荡市场中存在一定风险。未来可以通过引入其他指标、优化参数、加入风险管理等方式来提升策略表现。
-
-|| 
 
 #### Overview
 This strategy uses Bollinger Bands as the main indicator, entering a long position when the closing price breaks above the upper band and a short position when it breaks below the lower band. Bollinger Bands consist of a middle band (moving average), an upper band (middle band + standard deviation), and a lower band (middle band - standard deviation). The strategy aims to capture market trends by buying when the price breaks above the upper band and selling when it breaks below the lower band, while using the middle band as the exit condition.
@@ -68,7 +39,6 @@ This strategy uses Bollinger Bands as the main indicator, entering a long positi
 #### Summary
 The Bollinger Bands Breakout Strategy captures market trends through breakouts of the upper and lower bands of the Bollinger Bands, with the middle band serving as the exit condition. The strategy logic is clear and easy to implement, and it can effectively capture trends. However, there are certain risks in parameter selection and volatile markets. In the future, the strategy's performance can be improved by introducing other indicators, optimizing parameters, adding risk management, and other methods.
 
-[/trans]
 
 > Strategy Arguments
 

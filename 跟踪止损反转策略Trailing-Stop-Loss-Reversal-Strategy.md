@@ -10,44 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a7b9b419e2f196a1c6.png)
-[trans]
-
-### 概述
-
-这是一个非常简单的策略。它只由一个跟踪止损组成。当止损被触发时,仓位被反转,并对新的仓位设置一个跟踪止损。
-
-### 策略原理
-
-该策略基于三种止损类型之一构建:百分比止损、ATR止损、绝对止损。当止损被触发时,仓位被反转,并对新的仓位设置一个跟踪止损。
-
-具体来说,策略首先根据选择的止损类型计算出止损值。然后它会判断是否有建仓信号,即高点大于之前的止损价时做多,低点小于之前的止损价时做空。进场后,它会实时更新止损价,使其跟踪价格变化。多头止损价为低点减去止损值,空头止损价为高点加上止损值。
-
-### 优势分析
-
-该策略最大的优势在于非常简单,只需要跟踪一个止损,不需要考虑入场点选和出场点选。止损值的灵活设置也使其适用范围更广。
-
-相比固定止损,它采用的跟踪止损可以锁定更大的获利,同时也降低了止损被冲击的概率。每次止损触发后反转仓位,可以捕捉价格反转机会。
-
-### 风险分析
-
-该策略可能存在的主要风险是止损价设置不当导致的风险。止损值设置过大,可能导致亏损扩大;止损值设置过小,可能导致止损频繁被触发。这需要根据市场情况针对性优化。
-
-另一个风险是止损触发后反转仓位的方向判断不准确,从而错过价格反转机会或增加亏损。这需要结合趋势和支撑阻力判断确定最佳反转时机。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加对趋势的判断,避免逆势建仓
-2. 优化止损值的计算方式,使其更加动态地跟踪市场
-3. 增加对突破的判断,确保更高概率的反转信号
-4. 结合波动率等指标确定最佳的反转时机
-
-### 总结
-
-该策略通过简单的跟踪止损机制实现盈利,是一种适合初学者掌握的量化策略。与传统止损策略相比,它增加了止损触发后反转建仓的机制,从而获取额外收益。通过不断测试和优化,该策略可以成为一个非常实用的量化程序。
-
-||
 
 
 ### Overview
@@ -85,7 +47,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy realizes profits through a simple trailing stop loss mechanism and is easy for beginners to grasp. Compared to traditional stop loss strategies, it adds post stop loss trigger reversal positions to acquire additional gains. With continuous testing and optimization, it can become a very practical quantitative program.
 
-[/trans]
 
 > Strategy Arguments
 

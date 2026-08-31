@@ -11,77 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/135c02e99fd30d3e94d.png)
 
-[trans]
-
-## 概述
-
-双向霍尔移动平均线交易策略是一种利用双向霍尔移动平均线作为交易信号的量化交易策略。该策略借鉴了传统技术分析中使用单一移动平均线的方法,改用双向霍尔移动平均线,在突破点进行买入和卖出。
-
-## 策略原理
-
-双向霍尔移动平均线交易策略的核心是双向霍尔移动平均线(Dual Hull Moving Average)。双向霍尔移动平均线由中轨、上轨和下轨三条线组成,代表不同的价格平均值。其计算公式为:
-
-中轨:Mode(modeSwitch, src, len)
-上轨:HULL[0] 
-下轨:HULL[2]
-
-这里的Mode函数可以选择Hull移动平均线的不同变种,包括HMA、EHMA和THMA。src代表价格源,len代表周期长度。
-
-该策略以双向霍尔移动平均线的中轨为基准,判断价格与中轨的关系,制定交易信号:
-
-- 当价格上穿中轨时,做多
-- 当价格下穿中轨时,平仓
-
-也就是说,如果当前K线的收盘价大于中轨的值,则在下一根K线开盘时做多;如果当前K线的收盘价小于中轨的值,则在下一根K线开盘时平仓。
-
-## 优势分析
-
-双向霍尔移动平均线交易策略具有以下优势:
-
-1. 使用双向带状区域而不是单一均线,有更好的支持和阻力效应,也更有利于跟踪趋势。
-
-2. 相比一般移动平均线,Hull移动平均线有更低的滞后性,可以更快速地响应价格变动。
-
-3. 借鉴传统技术分析方法,容易理解,适合用于自动化交易。
-
-4. 策略逻辑简单清晰,容易实现,适合高频算法交易。
-
-5. 可自定义Hull移动平均类型和参数,可以针对不同品种和交易时间框架进行优化。
-
-## 风险分析
-
-尽管双向霍尔移动平均线交易策略有许多优势,但也存在一些风险需要注意:
-
-1. 当价格震荡时,可能出现较多止损。可以适当调整参数,过滤部分噪声交易。
-
-2. 该策略主要基于趋势跟随,在价格横盘时效果不佳。可以加入其他指标或机制来判断趋势。 
-
-3. Hull移动平均线本身也存在滞后性,特别是在短期内。 Parameter优化和组合指标可以部分解决。
-
-4. 交易信号频繁,容易过度交易。适当控制仓位管理和交易频率。
-
-## 优化方向  
-
-双向霍尔移动平均线交易策略还有以下几个主要的优化方向:
-
-1. 优化Hull移动平均线的类型和参数,调整中轨的灵敏度,适应不同交易品种。
-
-2. 加入止损机制。trailing stop或增量止损,有效控制单笔损失。
-
-3. 结合其他指标,判断趋势方向和力度,避免被套。例如MACD,KD等。
-
-4. 加入基于交易次数或收益率的策略激活条件。控制闭合循环次数,减少平仓。
-
-5. 多时间框架结合。利用更高时间框架确定趋势方向,避免被噪声误导。
-
-6. 优化出入场逻辑。可基于candle形态,增加入场确定性。
-
-## 总结
-
-双向霍尔移动平均线交易策略整体来说是一种利用趋势指数型移动平均线构建交易信号的量化策略。相比传统移动平均线,其响应更迅速,跟踪效果更好。该策略逻辑简单清晰,容易实现,适合自动化交易。当然也存在一些噪声风险和趋势跟随缺陷。通过参数优化,止损机制,以及组合其他指标等手段,可以强化该策略在实盘中的表现。
-
-
-||
 
 
 ## Overview
@@ -151,7 +80,6 @@ Here are some major aspects to optimize for the strategy:
 
 In summary, the Dual Hull Moving Average Trading Strategy is a quantitative approach utilizing the fast responding, trend following Hull Moving Averages to construct trading signals. Compared to traditional MAs, it has quicker response and better tracking abilities. The strategy logic is simple and clear, easy to automate for algorithm trading. There are still risks of noises and trend following limitations. Techniques like parameter tuning, stop loss, and combining other indicators can enhance its practical performance.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -11,82 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12313093dbe5b78c0e8.png)
 
-[trans]
-
-
-## 概述
-
-双EMA黄绿交易系统是一种基于双指数移动平均线的趋势跟踪交易系统。该系统使用两条不同周期的EMA均线,根据价格与EMA均线的关系来判断目前的趋势方向并作出交易决策。该系统逻辑简单,容易操作,能很好地捕捉市场趋势,适合中长线投资者使用。
-
-## 策略原理  
-
-该策略主要依赖两条EMA均线,分别是一条较快周期的EMA均线和一条较慢周期的EMA均线。当快EMA在慢EMA之上时,视为bullish;当快EMA在慢EMA之下时,视为bearish。
-
-根据价格与两条EMA均线的关系,可以将K线分为不同的交易区域:
-
-- 当快EMA在慢EMA上方,而价格在快EMA之上时(G1),为强势买入区域,此时可以买入。
-
-- 当快EMA在慢EMA下方,而价格在快EMA之下时(R1),为强势卖出区域,此时可以卖出。
-
-- 当快慢EMA交叉时,根据价格与两EMA的关系,可划分黄色(预警)和橙色(观望)区域。这两个区域代表趋势转折的可能,需要结合其他区域和其他指标来决定交易。
-
-根据价格在不同交易区域的变化,该策略会发出买入和卖出信号。在强势区域G1和R1,策略会直接产生信号;在预警和观望区域,则需要其他指标确认。
-
-此外,该策略还引入了StochRSI来辅助判断买卖时机。StochRSI的超买超卖情况可作为额外的买入卖出信号。
-
-## 策略优势
-
-- 策略逻辑简单清晰,容易理解和实现;
-
-- 基于趋势运行,能够有效捕捉中长线趋势;  
-
-- 区分强势区域和违背趋势的预警/观望区域,交易信号比较可靠;
-
-- 结合StochRSI,可以更准确判定买卖时机。
-
-## 策略风险
-
-- 纯趋势系统,在没有明确趋势的市场中交易效果可能不佳;
-
-- EMA周期设置不当可能导致虚假信号;
-
-- 预警和观望区域交易风险较大,需要审慎对待;  
-
-- 未考虑止损导致亏损扩大的风险。
-
-可以采用以下方法来降低风险:
-
-1. 选择有明显趋势的品种,在趋势较弱时暂停交易;
-
-2. 优化EMA周期参数,降低虚假信号概率; 
-
-3. 在预警和观望区域引入其他指标进行确认,减少交易风险;
-
-4. 设置止损点,以控制单笔亏损。
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. 引入更多指标进行确认,如MACD、KDJ等,提高信号质量;
-
-2. 在交易区域引入过滤条件,如交易量放大,提高trades的成功率;
-
-3. 根据市场情况动态调整EMA参数,优化参数设定;
-
-4. 增加止损策略,在亏损达到一定比例时止损;
-
-5. 优化资金管理,设定合理的仓位管理;
-
-6. 在不同的品种上测试优化,寻找最佳参数组合。
-
-通过引入更多辅助判断指标、动态参数优化、止损策略等提高系统稳定性,从资金管理等角度降低风险,该策略可以得到更好的交易效果。
-
-## 总结
-
-双EMA黄绿交易系统是一个基于双EMA均线比较的趋势跟踪交易系统。它区分不同的交易区域,根据价格与EMA均线关系判断趋势方向并产生交易信号,是一个逻辑清晰、易于实现的趋势跟踪系统。该策略有效捕捉趋势、交易规则简单直观等优点,但也存在一定风险。通过引入辅助指标、動态优化参数、设置止损以及优化资金管理等方式,可以降低风险并进一步提高系统的稳定性和盈利能力。总体来说,双EMA黄绿交易系统是一个非常适合中长线投资者使用的趋势跟踪系统。
-
-|| 
 
 ## Overview
 
@@ -160,7 +84,6 @@ By introducing more signal confirmation, dynamic parameter optimization, stop lo
 
 The Double EMA Crossover system is a trend following system based on comparing two EMAs. It identifies different trading zones based on price's relationship with the EMAs to determine trend direction and generate trading signals. As a system with clear logic and easy implementation, it can effectively capture trends. While risks exist, they can be reduced through auxiliary indicators, dynamic optimization, stop loss, and money management. Overall, the Double EMA Crossover system is a solid trend following system suitable for medium to long term traders.
 
-[/trans]
 
 > Strategy Arguments
 

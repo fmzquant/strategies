@@ -11,63 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1fff5d4f0e261af2ee2.png)
 
-[trans]
-
-## 概述
-
-四均线趋势快速跳空策略(Quad MA Trend Scalper)是一个利用4条不同周期的移动平均线产生买入和卖出信号的趋势跟踪策略。它适用于更小的时间框架如10分钟到30分钟进行击败市场的操作。
-
-## 策略原理
-
-该策略同时使用两组移动平均线。第一组是快速移动平均线,包括length1周期的MA1和length2周期的MA2,它们的交叉产生买入和卖出信号。第二组是长线移动平均线,包括longlength1周期的MA3和longlength2周期的MA4,它们用于判断长线趋势方向。
-
-只有当快速移动平均线MA1和MA2发生黄金交叉时,才会开仓做多。此时还需要判断长线移动平均线MA3是否在MA4之上,如果是,则说明目前处于长线上涨趋势中,这时做多信号才是有效的。
-
-做多头寻机后,当快速移动平均线MA1下穿MA3时,表示短线趋势反转,此时平仓止损。
-
-做空信号生成逻辑与做多信号symmetric相反,这里不再赘述。
-
-通过这样的设计,策略能够有效跟踪趋势方向,避免在震荡行情中被套住。同时利用长短线配合,能够在高概率盈利的机会开仓,并设置止损以控制风险。
-
-## 优势分析
-
-该策略主要有以下优势:
-
-1. 利用多组移动平均线进行判断,使交易信号更加可靠。避免在震荡行情中被套住。
-
-2. 采用长线判断大趋势,短线进行入场的思路,可以有效跟踪趋势方向。
-
-3. 设置短线止损平仓点,可以快速止损,控制单笔损失。
-
-4. 适合高杠杆交易,收益率较高。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 长短线发生背离时可能造成错误交易。这时需要提前识别信号,及时止损。
-
-2. 移动平均线策略对参数调优敏感,如果参数选择不当,可能导致交易频率过高或信号迟滞。需要多次测试找到最佳参数组合。 
-
-3. 利用高杠杆进行交易要控制好资金使用率,避免爆仓风险。
-
-## 优化方向  
-
-该策略还可以从以下几个方面进行优化:
-
-1. 增加波动率指标,评估市场波动率大小,在低波动时段开仓,避开高波动的瞬时点。
-
-2. 增加成交量指标,在高成交量突破点开仓。避开成交量收缩的假突破。
-
-3. 优化移动平均线参数,找到最佳参数组合。配合步进优化寻找全局最优参数。
-
-4. 在多时间框架上观测信号特征,设计多时间框架交易规则,利用更大时间框架确认信号。
-
-## 总结
-
-四均线趋势快速跳空策略,是一种典型的跟踪趋势策略。它利用两组不同周期均线进行判断,在大趋势方向打开仓位,而后利用短均线快速止盈止损。策略思路清晰, EASY控制风险,适合高频交易。存在一定概率上的错误信号风险,需要通过参数优化和规则优化进行改进,使盈利机会最大化。
-
-||
 
 ## Overview  
 
@@ -123,7 +66,6 @@ Some ways to optimize the strategy:
 
 The Quad MA Trend Scalper is a typical trend following strategy. It uses two groups of MAs to determine trend direction and enter positions along the major trend. Profits are captured quickly using the fast MAs. The logic is simple and risk is easy to control, making it suitable for high frequency trading. There can be some false signals which need to be improved through parameter and logic optimization to maximize profitability.
 
-[/trans]
 
 > Strategy Arguments
 

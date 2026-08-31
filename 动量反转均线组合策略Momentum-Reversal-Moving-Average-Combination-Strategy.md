@@ -10,46 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/145e902ff92c994dc34.png)
-[trans]
-
-## 概述
-本策略通过组合使用多种均线指标,实现对趋势的识别。具体来说,本策略同时使用快速均线组和慢速均线组,快速均线组由5日EMA和25日WMA构成,慢速均线组由28日EMA和72日WMA构成。当快速均线上穿慢速均线时产生买入信号,当快速均线下穿慢速均线时产生卖出信号。此外,本策略还会结合RSI指标辅助判断。
-
-## 策略原理
-1. 使用双均线判断趋势方向
-    - 快速均线组合:5日EMA、25日WMA
-    - 慢速均线组合:28日EMA、72日WMA
-    - 当快速均线上穿慢速均线,产生买入信号
-    - 当快速均线下穿慢速均线,产生卖出信号
-2. 使用RSI指标辅助判断买卖时机
-    - RSI低位买入:RSI<35时产生买入信号
-    - RSI高位卖出:RSI>65时产生卖出信号
-3. 采用趋势追踪机制,包括移动止损、移动止盈
-    - 移动止损:追踪最高价/最低价,防止亏损扩大
-    - 移动止盈:追踪最高价/最低价,及时止盈
-
-## 优势分析
-1. 使用双均线判断趋势,快慢均线的配合可以有效识别趋势转折点
-2. RSI指标的辅助判断可以避免均线产生错误信号
-3. 移动止损机制可以有效控制个别亏损交易的损失
-4. 移动止盈机制可以锁定盈利,避免盈利回吐
-
-## 风险分析
-1. 双均线判断失败的概率较大,可能出现虚假信号
-2. RSI参数设置不当可能错过交易机会
-3. 止损幅度设置过大,可能造成不必要的亏损
-4. 止盈幅度设置过小,可能造成利润缩水
-
-## 优化方向
-1. 快速均线和慢速均线的参数可以进行优化,找到最佳参数组合
-2. RSI的参数也可以进行优化,找到更好的超买超卖线
-3. 试验不同的止损幅度,找到最大限度减少亏损和避免虚拟信号之间的平衡点
-4. 尝试自适应止盈策略,让止盈幅度能够根据市场波动自行调整
-
-## 总结
-本策略通过双均线判断趋势方向,RSI指标辅助判断时机,以及移动止盈止损的方法,实现了对趋势的捕捉与跟踪。通过优化均线和RSI的参数以及止盈止损设定,可以获得更好的效果。该策略整体思路清晰,易于理解与优化,是一种实用性较强的趋势跟踪策略。
-
-||
 
 ## Overview 
 This strategy identifies trends by combining multiple moving average indicators. Specifically, this strategy uses a fast moving average ribbon and a slow moving average ribbon at the same time. The fast moving average ribbon consists of a 5-day EMA and a 25-day WMA, while the slow moving average ribbon consists of a 28-day EMA and a 72-day WMA. It generates a buy signal when the fast MA crosses above the slow MA, and a sell signal when the fast MA crosses below the slow MA. In addition, this strategy also uses the RSI indicator to assist in judging the timing.
@@ -87,7 +47,6 @@ This strategy identifies trends by combining multiple moving average indicators.
 
 ## Conclusion
 This strategy captures and tracks trends by determining trend direction with double MAs, judging timing assisted by RSI, and methods like moving take profit and stop loss. Further improvements can be achieved by optimizing parameters of MAs, RSI and profit/loss limits. The overall logic is clear and easy to understand and optimize. It is a practical and effective trend tracking strategy.
-[/trans]
 
 > Strategy Arguments
 

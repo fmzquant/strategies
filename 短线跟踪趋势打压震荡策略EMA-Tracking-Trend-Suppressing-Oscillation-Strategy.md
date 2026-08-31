@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ce258fdd16c6a1c581.png)
-[trans]
-
-## 概述
-
-该策略综合利用了指标EMA、趋势跟踪策略TTS和舒弗特趋势周期STC三者指标的优势,形成了一个较强的短线跟踪趋势的策略。具体来说,策略会同时判断三个指标的多空信号是否一致,如果一致就产生交易信号;如果不一致,则不进行买卖。这样可以过滤掉一些假信号,使得策略更加可靠。
-
-## 策略原理
-
-该策略主要由三部分组成:EMA平滑指标、TTS趋势跟踪策略和STC舒弗特趋势周期指标。
-
-首先,计算200周期的EMA指数移动平均线,判断价格是否低于或高于该EMA线,如果价格低于该线,则EMA指标给出空头信号;-1;如果价格高于该线,EMA指标给出多头信号:1。
-
-其次,计算TTS趋势跟踪策略的相关参数,根据价格突破上下轨,判断行情趋势方向。如果价格突破上轨,产生多头信号1;如果价格突破下轨,产生空头信号-1。
-
-最后,计算舒弗特趋势周期STC指标,该指标反映了价格中枢的变化趋势。如果STC指标上涨,产生多头信号1;如果STC指标下跌,产生空头信号-1。
-
-在得到三个指标的judgment信号后,策略会判断它们是否一致。只有当三个指标judgment信号全部一致时,才会产生实际的交易信号。这可以有效过滤掉一些假信号,使策略更可靠。
-
-如果确定产生交易信号后,就进行做多或做空的委托,并设置止盈止损点。
-
-## 策略优势
-
-1. 该策略综合运用了三种不同类型的指标,可以有效判断市场趋势方向。
-
-2. 利用三种指标judgment信号的一致性判断来过滤假信号,可以减少不必要的交易,使策略更可靠。
-
-3. 设置合理的止盈止损点,可以锁定盈利,避免亏损扩大。
-
-4. 选取的参数均经过优化,可以适应大部分股票及外汇品种。
-
-5. 交易逻辑清晰简洁,易于理解与修改。
-
-## 策略风险
-
-1. 三种指标judgment之间不一致时,会出现 dimers,容易错过交易机会。可以考虑优化judgment规则。
-
-2. STC指标对参数敏感度较高,不同的品种需要调整参数。
-
-3. 衰退行情中,止损可能被突破,造成较大亏损。可以考虑实时优化止损点。
-
-4. 无法有效判断横盘整理的行情,整理区间入场可能造成套牢。
-
-## 策略优化
-
-1. 可以测试更多指标的组合,寻找更强的judgment规则。例如加入RSI指标等。
-
-2. 优化STC指标的指标参数,使其更适合不同品种。加入自适应参数优化模块。
-
-3. 增加自适应止损模块,可以根据行情实时优化设置止损点。
-
-4. 增强平仓模块,判断是否进入横盘整理,避免套牢。
-
-5. 针对高频交易进行算法优化,降低系统延迟,提升委托成功率。
-
-## 总结
-
-该策略综合运用EMA、TTS和STC三个指标判断行情趋势方向, judgment规则设置为三者一致时产生交易信号,这样可以有效过滤假信号。策略优化空间还很大,通过测试更多指标组合、加入自适应算法、优化高频交易模块等手段,进一步强化该策略在跟踪趋势过程中的表现。相比于简单追随均线等传统策略,该策略可以更加智能地判断市场,在抓住趋势的同时尽量避免被套。
-
-||
 
 ## Overview
 
@@ -125,7 +66,6 @@ Once determining to generate trading signals, long or short positions will be op
 ## Conclusion
 
 The strategy combines EMA, TTS and STC indicators to determine market direction, with consistent judgments from all three triggering trades, effectively filtering out false signals. There is still large room for optimizations, e.g. testing more indicator combinations, adding adaptive algorithms, optimizing high frequency trading modules, etc, to further strengthen trend tracking capability. Compared to traditional strategies simply following moving averages, this strategy can judge markets more intelligently, capture trends while avoiding traps.  
-[/trans]
 
 > Strategy Arguments
 

@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/171d9a75bd29844cb70.png)
 
-[trans]
-
-## 概述
-该策略采用级别突破的方式,在一定突破条件下做多做空,并具有自动回测功能来找到最佳参数组合。
-
-## 原理
-1. 输入参数包括回看天数、止盈百分比、止损百分比,以及自动回测参数如回看天数、止盈止损范围等。
-
-2. 回测时遍历回看天数、止盈百分比、止损百分比的各种组合,记录每种组合下的盈亏情况。
-
-3. 突破信号判断:收盘价上穿upper band且不是入市时柱,做多;收盘价下穿lower band且不是入市时柱,做空。
-
-4. 止损条件判断:若未止盈且触发止损线,则止损出场。
-
-5. 止盈条件判断:若未止损且触发止盈线,则止盈出场。 
-
-6. 显示回测结果明细表格,可根据用户设置按获利率或净利润或交易次数排序。
-
-## 优势
-1. 自动回测功能可以快速找到最佳参数组合,无需手工测试。
-
-2. 可根据盈利率、净利润、交易次数等排序回测结果,灵活选择符合自己需要的最优参数。
-
-3. 可视化显示每笔交易的盈亏情况。
-
-4. 回测参数可自定义,可以测试更广的参数空间,找到全局最优。
-
-5. 策略交易规则简单清晰,容易理解实现。
-
-## 风险及解决
-1. 回测周期短可能导致结果不稳定。解决方法:设置更长的回测周期。
-
-2. 交易频繁容易造成滑点影响盈利。解决方法:适当放宽止盈止损幅度。
-
-3. 单一商品回测结果可能不具代表性。解决方法:回测不同品种,找到稳定的参数组合。
-
-4. 参数过优化可能导致过拟合。解决方法:验证参数在不同品种和时间周期的稳定性。
-
-5. 忽略交易成本可能导致回测结果偏差。解决方法:设置合理的手续费参数。
-
-## 优化方向
-1. 增加参数优化维度,如加入移动止损或交易次数限制等。
-
-2. 优化入市条件,结合趋势指标过滤。
-
-3. 优化止盈止损策略,如动态止盈或追踪止损等。
-
-4. 增加机器学习等算法辅助参数优化。
-
-5. 优化代码结构,提高回测速度。
-
-6. 在多品种多周期验证参数稳定性。
-
-7. 考虑整合自动交易功能。
-
-## 总结
-该策略总体思路清晰易懂,自动回测功能可以快速优化参数,显示盈亏情况有利于策略改进。存在一定风险需要注意,但可通过多方面优化不断改进,具有很强的实用价值。整体来说,该策略利用简单突破思路,配备自动回测工具,可以辅助交易者快速建立稳定的交易系统。
-
-||
 
 ## Overview
 This strategy adopts a level breakthrough approach to go long or short under certain breakthrough conditions, and has auto-backtesting capabilities to find the optimal parameter combination.
@@ -127,7 +68,6 @@ This strategy adopts a level breakthrough approach to go long or short under cer
 ## Conclusion
 The strategy has clear and simple logic, auto backtesting enables quick parameter tuning, PnL display facilitates further improvements. Risks exist but can be reduced through multi-dimensional optimizations, with strong practical value. In summary, this strategy equipped with auto backtesting tools can help traders quickly develop stable trading systems based on simple breakout concepts.
 
-[/trans]
 
 > Strategy Arguments
 

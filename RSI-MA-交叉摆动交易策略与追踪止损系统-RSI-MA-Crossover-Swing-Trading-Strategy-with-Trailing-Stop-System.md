@@ -14,51 +14,6 @@ ianzeng123
 
 
 
-[trans]  
-#### 概述  
-该策略是一种基于RSI（相对强弱指数）与其移动平均线（MA）交叉的摆动交易策略，专为4小时图表设计。策略通过RSI与MA的金叉和死叉生成交易信号，并结合多种风险管理工具，包括固定止损/止盈、追踪止损和反转退出机制。策略还设置了连续亏损限制，当连续亏损超过两次时暂停交易，直到次日重置。  
-
-#### 策略原理  
-1. **时间框架限制**：策略仅在4小时图表上运行，确保交易信号与设计的时间周期一致。  
-2. **指标计算**：使用RSI（默认长度14）和其移动平均线（SMA或EMA，默认长度14）生成信号。  
-   - 金叉（RSI上穿MA）触发买入信号（做多）。  
-   - 死叉（RSI下穿MA）触发卖出信号（做空）。  
-3. **仓位管理**：根据每笔交易的资本分配和当前价格计算仓位大小。  
-4. **退出机制**：  
-   - **固定止损/止盈**：基于百分比设置止损（默认1.5%）和止盈（默认2.5%）。  
-   - **追踪止损**：当价格从最高点回撤指定点数（默认10点）时触发退出。  
-   - **反转退出**：当反向信号出现时平仓。  
-5. **风险控制**：  
-   - 连续亏损两次后暂停交易，每日9:15重置亏损计数。  
-
-#### 优势分析  
-1. **多维度信号验证**：结合RSI和MA的双重过滤，减少假信号。  
-2. **动态风险管理**：追踪止损锁定利润，固定止损限制亏损。  
-3. **严格的资金管理**：基于资本分配仓位，避免过度杠杆。  
-4. **纪律性控制**：连续亏损暂停机制防止情绪化交易。  
-5. **可视化标记**：清晰的图表标记帮助快速识别信号和退出点。  
-
-#### 风险分析  
-1. **参数敏感性**：RSI和MA长度对信号质量影响较大，需优化适配市场波动。  
-2. **趋势市场表现**：在强趋势中，RSI可能长期超买/超卖，导致信号滞后。  
-3. **时间框架限制**：仅适用于4小时图表，其他周期需重新验证。  
-4. **连续亏损风险**：亏损计数重置前可能错过潜在盈利机会。  
-**解决方案**：  
-- 通过历史回测优化参数。  
-- 结合趋势指标（如ADX）过滤信号。  
-- 设置动态亏损计数阈值。  
-
-#### 优化方向  
-1. **多指标融合**：引入MACD或布林带增强信号确认。  
-2. **动态参数调整**：根据市场波动率自适应调整RSI长度和止损比例。  
-3. **时间框架扩展**：测试策略在更高或更低周期（如日线/1小时）的表现。  
-4. **机器学习优化**：使用历史数据训练模型优化入场和退出条件。  
-5. **资金管理升级**：根据账户净值动态调整每笔交易资本比例。  
-
-#### 总结  
-该策略通过RSI与MA的交叉信号实现摆动交易，结合多层次风险管理工具，平衡了盈利潜力和风险控制。其优势在于清晰的逻辑和严格的纪律性，但需进一步优化以适应不同市场环境。未来可通过多指标融合和动态参数提升稳健性。  
-
-||  
 
 #### Overview  
 This strategy is a swing trading approach based on the crossover between RSI (Relative Strength Index) and its moving average (MA), designed for 4-hour charts. It generates trading signals through RSI-MA crossovers and incorporates multiple risk management tools, including fixed stop-loss/take-profit, trailing stop-loss, and reversal exit mechanisms. The strategy also imposes a consecutive loss limit, pausing trading after two consecutive losses until a daily reset.  
@@ -102,7 +57,6 @@ This strategy is a swing trading approach based on the crossover between RSI (Re
 
 #### Conclusion  
 The strategy leverages RSI-MA crossovers for swing trading, balancing profitability and risk through multi-tiered management tools. Its strengths lie in clear logic and discipline, though further optimizations (e.g., multi-indicator integration) could enhance adaptability. Future improvements should focus on dynamic adjustments and broader market validation.  
-[/trans]
 
 
 

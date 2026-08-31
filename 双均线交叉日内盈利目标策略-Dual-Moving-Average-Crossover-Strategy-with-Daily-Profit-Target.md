@@ -11,74 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14a779c67a82bc660ab.png)
 
-[trans]
-#### 概述
-
-该策略是一个基于双均线交叉的日内交易系统,结合了固定止损和追踪止损,并设置了每日盈利目标。策略主要利用快速移动平均线和慢速移动平均线的交叉来产生买入和卖出信号,同时通过止损和盈利目标来控制风险和锁定利润。
-
-#### 策略原理
-
-1. 移动平均线计算:策略使用两条简单移动平均线(SMA),分别是基于用户定义周期的快速和慢速SMA。
-
-2. 交易信号生成:
-   - 买入信号:当快速SMA从下方穿越慢速SMA时触发。
-   - 卖出信号:当快速SMA从上方穿越慢速SMA时触发。
-
-3. 风险管理:
-   - 固定止损:每笔交易设置固定金额的止损。
-   - 追踪止损:使用可调整的追踪止损来保护盈利。
-
-4. 每日盈利目标:
-   - 设置每日盈利目标,达到后自动平仓并停止交易。
-   - 可通过将目标设为0来禁用此功能。
-
-5. 可视化:
-   - 在图表上绘制快速和慢速移动平均线。
-   - 使用标记显示买入和卖出信号。
-
-#### 策略优势
-
-1. 趋势跟踪:利用均线交叉捕捉市场趋势,有助于在趋势初期进场。
-
-2. 风险控制:通过固定止损和追踪止损,有效控制每笔交易和总体风险。
-
-3. 利润管理:每日盈利目标有助于控制风险暴露并保护已实现的利润。
-
-4. 灵活性:允许用户调整关键参数,如均线周期、止损金额和盈利目标,以适应不同市场条件。
-
-5. 可视化辅助:在图表上直观显示均线和交易信号,便于分析和回测。
-
-#### 策略风险
-
-1. 频繁交易:在震荡市场中,可能产生过多的假信号,导致频繁交易和手续费增加。
-
-2. 滞后性:移动平均线本质上是滞后指标,可能在剧烈波动的市场中反应不够迅速。
-
-3. 固定止损风险:在波动性较大的市场中,固定金额止损可能不够灵活。
-
-4. 每日目标限制:强制性的每日目标可能导致错过重大市场机会。
-
-5. 参数敏感性:策略性能可能对参数设置非常敏感,需要频繁优化。
-
-#### 优化方向
-
-1. 动态参数调整:考虑根据市场波动性自动调整移动平均线周期和止损幅度。
-
-2. 增加过滤器:引入额外的技术指标或市场情绪指标,以减少假信号。
-
-3. 时间过滤:加入时间过滤功能,避开市场开盘和收盘等波动较大的时段。
-
-4. 仓位管理:实现动态仓位管理,根据市场状况和账户表现调整交易规模。
-
-5. 多时间框架分析:结合更长期的趋势分析,提高入场时机的准确性。
-
-6. 机器学习优化:使用机器学习算法优化参数选择和信号生成过程。
-
-#### 总结
-
-双均线交叉日内盈利目标策略是一个结合了经典技术分析和现代风险管理的交易系统。它通过简单而有效的均线交叉来捕捉市场趋势,并辅以止损和盈利目标来管理风险。该策略的优势在于其简洁性和灵活性,但也面临着均线系统固有的滞后性和参数敏感性等挑战。通过持续优化和引入更多高级功能,如动态参数调整和多因子分析,该策略有潜力在各种市场环境中保持稳定性能。对于寻求系统化交易方法的投资者来说,这是一个值得考虑的基础策略框架。
-
-|| 
 
 #### Overview
 
@@ -146,7 +78,6 @@ This strategy is an intraday trading system based on dual moving average crossov
 
 The Dual Moving Average Crossover Strategy with Daily Profit Target is a trading system that combines classical technical analysis with modern risk management techniques. It captures market trends through simple yet effective moving average crossovers, complemented by stop-losses and profit targets for risk management. The strategy's strengths lie in its simplicity and flexibility, but it also faces challenges inherent to moving average systems, such as lagging nature and parameter sensitivity. Through continuous optimization and the introduction of more advanced features like dynamic parameter adjustment and multi-factor analysis, this strategy has the potential to maintain stable performance across various market environments. For investors seeking a systematic trading approach, this serves as a valuable foundational strategy framework to consider.
 
-[/trans]
 
 
 

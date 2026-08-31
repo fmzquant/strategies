@@ -11,71 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/da367d272e7d1fd27c.png)
 
-[trans]
-
-## 一、策略概述
-
-本策略名称为**自适应价格区域反转交易策略**。该策略运用自适应价格区域(Adaptive Price Zone,APZ)指标识别价格区域,在突破该区域时产生交易信号。APZ指标基于双指数移动平均线和波动率计算上、下价格区域边界。当价格突破区域边界时,表明价位可能反转,从而产生交易机会。
-
-本策略主要适用于震荡行情,特别是盘整行情。它可用于日内短线交易或自动交易系统的一部分,适用于所有可交易资产。总体而言,该策略利用APZ指标提供的辅助判断,在价格区域边界附近进行反转交易。
-
-## 二、策略原理  
-
-本策略使用APZ指标判断价格区域,具体计算方法如下:
-
-1. 计算最近n周期(默认20周期)的最高价与最低价之差xHL
-2. 使用双指数移动平均线计算平滑后的收盘价xVal1和xHL的平滑值xVal2,计算周期取平方根后的整数(默认为20的平方根取整=4)
-3. 计算上轨= xVal1 + nBandPct * xVal2
-4. 计算下轨= xVal1 - nBandPct * xVal2
-
-这样得到的上下轨构成自适应价格区域。当价格突破该区域时,产生交易信号。突破信号判断规则如下:  
-
-1. 当价格低于下轨时,做多信号
-2. 当价格高于上轨时,做空信号
-
-此外,本策略还提供反向交易开关参数reverse。打开反向交易后,做多做空信号与上述规则相反。
-
-综上,本策略使用APZ指标判断自适应价格区域,在价格突破区域边界时产生反转交易信号,属于典型的趋势反转跟踪策略。
-
-## 三、策略优势分析
-
-本策略主要有以下几个优势:
-
-1. 利用APZ指标可自适应确定价格区域,避免人为设定支持阻力位
-2. 可突破价格区域边界进行反转交易,捕捉短期价格调整机会  
-3. 可通过反向交易参数进行看跌交易
-4. 交易频率较高,可捕捉更多短线机会
-5. 可灵活配合止损策略控制风险
-
-## 四、策略风险分析  
-
-本策略也存在一些风险,主要集中在以下几个方面:  
-
-1. APZ参数设置不当可能错过价格反转机会
-2. 震荡行情中存在多次假突破的可能性  
-3. 缺乏止损策略可能造成大额亏损
-
-对策建议如下:
-
-1. 调整APZ参数,找到合适平滑周期
-2. 结合其他指标过滤假突破  
-3. 增加移动止损以控制单笔亏损
-
-## 五、策略优化方向  
-
-本策略可从以下几个方面进行优化:
-
-1. 结合波动率指标判断底部买入,顶部卖出
-2. 增加区间突破强度条件,如大量放量
-3. 仅在特定时间段交易,如美国盘中
-4. 结合均线系统确定大市趋势方向
-5. 设置价格进场区,避免无谓买卖
-
-## 六、总结  
-
-本策略总体来说属于短线反转策略,通过APZ指标捕捉价格区域,在区间边界附近进行反转交易。策略优点是交易频率高,可捕捉较多短线机会,并可自适应调整价格区域。但也存在一定假突破风险,需运用其他工具配合进行优化控制。
-
-||
 
 ## 1. Strategy Overview  
 
@@ -139,7 +74,6 @@ The strategy can be optimized in the following aspects:
 
 In summary, this is a short-term reversal strategy which captures price zones using the APZ indicator and makes reversal trades around zone boundaries. The advantages are high trading frequency and ability to adaptively adjust price zones. But there are also risks of false breakouts that need to be addressed through optimizations and additional tools.
 
-[/trans]
 
 > Strategy Arguments
 

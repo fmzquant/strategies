@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13af1f2dd62367fca21.png)
-[trans]
-## 概述
-
-本策略综合运用超趋势支撑阻力线和ADX指标来实现高频交易。超趋势支撑阻力线通过动态计算最新支撑阻力点,来判断价格趋势和发出交易信号。ADX指标用于判断趋势力度,设置ADX值为过滤条件,只在趋势足够强劲时发出交易信号。
-
-## 策略原理
-
-1. 计算支撑阻力线。以收盘价为基准,上下各添加一个ATR幅度。当价格突破这些线时,判断为趋势反转。
-
-2. ADX指标判断趋势力度。当ADX高于设置值时,认为趋势足够强劲。
-
-3. 结合两者发出交易信号。只在突破支撑阻力线且ADX足够大时,做多做空。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 超趋势线动态计算支撑阻力,能快速判断突破。
-
-2. ADX指标有效过滤非趋势场景,减少无效交易。 
-
-3. 回撤和盈亏比良好。
-
-## 风险分析 
-
-该策略也存在以下风险:
-
-1. 大幅跳空可能致使超趋势线失效。
-
-2. ADX值设定不当也会影响策略表现。
-
-3. 高频交易交易费用较高。
-
-对应解决方法:
-
-1. 优化超参数,适当放宽突破幅度。
-
-2. 测试更优ADX参数。
-
-3. 适当降低交易频率。
-
-## 优化方向
-
-该策略可从以下方面进行优化:
-
-1. 优化ATR倍数参数,使支撑阻力线更稳健。
-
-2. 测试不同ADX参数,找到最优值。
-
-3. 加入止损机制以控制单次损失。
-
-## 总结
-
-本策略整合超趋势线和ADX指标的优点,通过动态计算支撑阻力判断趋势反转时机,配合ADX指标过滤低质量信号。经过参数优化和机制调整后,可以成为一个稳定盈利的高频策略。
-
-||
 
 ## Overview
 
@@ -121,7 +65,6 @@ Areas for improvement:
 
 This strategy combines the strengths of SuperTrend and ADX to identify high-probability trend reversal points, filtered by ADX for quality. With parameter tuning and mechanisms adjustments, it can become a steady profit-generating high-frequency strategy.
 
-[/trans]
 
 > Strategy Arguments
 

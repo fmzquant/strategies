@@ -10,66 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b7c97deebe8a9a5ac6.png)
-[trans]
-## 概述
-
-该策略运用双RSI指标进行长短双向交易,同时结合均线系统判断趋势方向,属于双RSI量化策略。策略首先利用RSI指标判断多空信号,再结合均线判断趋势方向决定做多做空,属于典型的趋势跟踪策略。
-
-## 原理分析  
-
-双RSI量化策略主要运用双时间周期RSI指标进行交易信号判断。策略首先设置两个RSI参数,一个较长周期作为主交易判断,一个较短周期作为辅助过滤。当较长周期RSI线下破过卖线时产生做多信号,当短周期RSI线上破过买线时产生做空信号,形成双RSI指标的长短交叉交易机会。
-
-为过滤假信号,策略还引入SMA和EMA平均线进行趋势判断。只有当短期SMA线上穿长期EMA线时才考虑RSI做多信号,只有短期SMA线下穿长期EMA线时才考虑RSI做空信号,确保双RSI信号与趋势方向一致,避免做反趋势交易。
-
-此外,策略还设置止损止盈逻辑。开仓后会同时下两个不同数量的止盈单,并设定止损位。
-
-## 优势分析
-
-双RSI量化策略具有以下优势:
-
-1. 双时间周期RSI指标能更准确判断多空信号。长短周期RSI交叉组合,可以过滤掉部分假信号,提高信号质量。
-
-2. 均线系统辅助判断大趋势方向,避免做反趋势交易,可以过滤大部分噪音交易,提高胜率。
-
-3. 灵活的止盈止损机制,可以通过不同的止盈设置获得更高收益,也可以止损来控制风险。
-
-4. 策略交易逻辑简单清晰,容易理解和优化,适合量化交易者学习。
-
-## 风险分析
-
-尽管双RSI量化策略有一定优势,但也存在以下风险:
-
-1. RSI指标本身对震荡行情和趋势反转的判断没有效果,策略在这些市场中的交易效果可能不佳。
-
-2. 均线系统虽可过滤小范围噪音,但对中间周期趋势变化的判断效果不佳,可能错过趋势转折点。 
-
-3. 止盈止损设置不当可能导致止损过宽或止盈过小,降低策略效果。
-
-4. 大规模做空做多可能导致亏损扩大,需要控制仓位规模。
-
-针对以上风险,可以通过调整RSI参数,引入更先进的趋势和反转指标,优化止盈止损逻辑,以及控制仓位来降低风险。
-
-## 优化方向 
-
-双RSI量化策略可以从以下几个方向进行进一步优化:
-
-1. 尝试不同的参数组合,优化RSI周期参数,找到最佳长短周期RSI指标组合。
-
-2. 测试不同的均线指标,引入MACD等指标判断趋势和反转机会。
-
-3. 优化止盈止损策略,设置追踪止损或移动止盈,让止盈止损更灵活。
-
-4. 增加仓位控制模块,在大周期趋势不同阶段控制做多做空仓位。
-
-5. 增加机器学习模型提升 entries 和 exits 的准确性。
-
-6. 进行回测优化,找到最佳交易品种和时间周期。
-
-## 总结
-
-双RSI量化策略整体来说是一个典型的趋势跟踪策略。它融合双RSI指标判断交易信号和均线系统过滤噪音的策略思路非常经典和实用。虽然策略也存在一定改进空间,但整体运行逻辑清晰,容易理解和优化。这是一个非常适合量化交易初学者学习和实践的策略。通过 Practice makes perfect 原则,不断对该策略进行优化和迭代,可以获得稳定的交易结果。
-
-|| 
 
 ## Overview
 
@@ -129,7 +69,6 @@ The dual RSI strategy can be further optimized in the following aspects:
 
 In summary, the dual RSI strategy is a typical trend following strategy. Its idea of combining dual RSI signals and moving average noise filtering is very classical and practical. Although there are areas for improvement, the overall logic is clear and easy to understand and optimize. This is a great strategy for algorithmic trading beginners to learn and practice. Through continuous optimization and iterations based on the "practice makes perfect" principle, stable trading results can be achieved.
 
-[/trans]
 
 > Strategy Arguments
 

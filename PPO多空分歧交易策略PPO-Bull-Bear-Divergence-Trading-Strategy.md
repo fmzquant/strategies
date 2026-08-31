@@ -9,51 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略利用PPO指标的多空分歧形态进行趋势交易,并以价格最高点和最低点进行止损出场。
-
-## 策略原理
-
-1. 计算PPO指标。
-
-2. 识别PPO的多空分歧形态。
-
-3. 价格与PPO indicator形成分歧时,做多做空。
-
-4. 最近价格最高点时止损做多。
-
-5. 最近价格最低点时止损做空。
-
-## 策略优势
-
-- 利用PPO指标的趋势性
-- 多空分歧信号较强
-- 止损点直观清晰
-- 可识别中长线趋势
-
-## 策略风险
-
-- 分歧形态识别准确率一般
-- 无法有效控制单笔损失大小
-- 存在一定滞后,可能误判趋势
-- 手续费和滑点成本较高 
-
-## 优化方向
-
-- 优化PPO参数,提高指标的灵敏度
-- 添加其他指标过滤信号
-- 增加移动止损以控制单笔损失
-- 考虑附加止盈策略
-- 优化分歧形态的识别逻辑
-
-## 总结
-
-该策略利用PPO指标的趋势特征,发挥其获利潜力。通过优化参数和交易逻辑,可进一步提升策略表现。但需注意风险控制。总体而言,其以PPO分歧为基础的交易思路具有实用价值。
-
-|| 
 
 ## Overview 
 
@@ -95,7 +50,6 @@ This strategy uses PPO divergence patterns for trend trading, and price high/low
 
 The strategy capitalizes on PPO's trending characteristics. Further improving parameters, logic and risk controls can enhance performance. But inherent risks need addressing. Overall a practical trend trading approach based on PPO divergences.
 
-[/trans]
 
 > Strategy Arguments
 

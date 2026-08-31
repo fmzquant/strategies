@@ -10,72 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16bc8720e7184c40b7b.png)
-[trans]
-
-
-## 概述
-
-双均线交易策略通过计算快速移动平均线和慢速移动平均线,并根据两条移动平均线的交叉情况来产生交易信号。当快速移动平均线上穿慢速移动平均线时,采取多头策略;当快速移动平均线下穿慢速移动平均线时,采取空头策略。该策略既可以用于趋势交易,也可以用于逆势交易。
-
-## 策略原理
-
-该策略首先设置快速移动平均线的长度maFastLength和慢速移动平均线的长度maSlowLength。然后计算快速移动平均线fastMA和慢速移动平均线slowMA。快速移动平均线反应价格变化更加敏感,可以用来判断当前趋势;慢速移动平均线对价格变化反应更慢,可以用来判断趋势方向。 
-
-当快速移动平均线上穿慢速移动平均线时,采取做多策略,产生goLong()信号。当快速移动平均线下穿慢速移动平均线时,平仓做多头,产生killLong()信号。
-
-可以选择仅做多策略longonly,仅做空策略shorting,或双向交易swapping。
-
-做多策略时,在goLong()信号发出时开仓做多;在killLong()信号发出时平仓。
-
-做空策略时,在killLong()信号发出时开仓做空;在goLong()信号发出时平仓。 
-
-双向交易时,在goLong()信号发出时开多仓;在killLong()信号发出时平多仓并开空仓。
-
-此外,策略还设置了止损、追踪止损、交易消息提示等功能,可以灵活选择是否使用。
-
-## 策略优势
-
-1. 策略简单易懂,容易实施。
-
-2. 可以自由选择做多、做空或双向交易。
-
-3. 可以灵活选择是否使用止损、追踪止损等风险管理功能。
-
-4. 可以自定义交易消息,实时提示交易行为。
-
-5. 快慢均线策略对市场趋势变化敏感,可以抓住较强的趋势。
-
-6. 策略参数可调整,可以针对不同市场调整参数,适应性强。
-
-## 策略风险
-
-1. 当市场不具有明显趋势时,可能出现较多虚假信号,引发过度交易。
-
-2. 均线系统对突发事件反应不敏感,可能错过突发性机会。
-
-3. 需要合理选择均线参数,参数选择不当可能影响策略效果。
-
-4. 需要严格遵守策略信号,避免出现随意裁量交易。
-
-5. 需要关注交易成本对策略盈利能力的影响。
-
-## 策略优化方向 
-
-1. 可以引入其他指标如RSI等来验证交易信号,避免发出错误信号。
-
-2. 可以设置参数优化功能,自动寻找最优参数组合。
-
-3. 可以设置动态止损来锁定盈利,并适时调整止损点。
-
-4. 可以加入机器学习模型来辅助判断趋势方向。
-
-5. 可以优化消息提示功能,使其更符合自身交易习惯。
-
-## 总结
-
-双均线交易策略整体来说较为简单实用,对市场趋势变化较为敏感,可以捕捉较强趋势带来的交易机会。但也需要注意防范无趋势市场的误交易,并适当调整参数来适应不同市场环境。此外,适当加入辅助技术指标及优化功能可以进一步增强策略的稳定性和适应性。
-
-||
 
 
 ## Overview
@@ -140,7 +74,6 @@ The strategy also includes stop loss, trailing stop, messaging and other optiona
 
 The dual moving average strategy is relatively simple and useful for catching strong trends. However, care should be taken to avoid whipsaws in low trend environments. Fine tuning parameters and adding auxiliary indicators or enhancements can further improve robustness and adaptability.
 
-[/trans]
 
 > Strategy Arguments
 

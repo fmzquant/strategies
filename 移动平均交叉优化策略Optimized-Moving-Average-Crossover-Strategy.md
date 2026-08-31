@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5a2fb23485f666db03.png)
-[trans]
-## 概述
-
-该策略是基于常规移动平均线交叉制定买卖信号的,但做出了一些修改来产生更准确的交易信号。该策略结合快速移动平均线和慢速移动平均线的交叉来判断趋势,属于趋势跟踪策略。
-
-## 策略原理
-
-当快速移动平均线从下方向上突破慢速移动平均线时,视为买入信号;当快速移动平均线从上方向下跌破慢速移动平均线时,视为卖出信号。即金叉做多,死叉做空。一旦做多/做空后,会设置止损位来避免过大损失。
-
-该策略的关键在于快慢均线的选择。本策略采用长度分别为50和100的指数移动平均线作为快线和慢线。通过调整均线参数可以优化策略效果。
-
-## 优势分析
-
-该策略结合双均线判断趋势方向,可以有效过滤市场噪音,识别趋势。相比单一均线策略,该策略可以提高获利概率。此外,设置止损位也可以限制个别交易的损失。
-
-该策略运用了交叉原理判断趋势转折点,可以及时捕捉趋势机会。与包含复杂条件逻辑的策略相比,该策略容易理解,容易实施。
-
-## 风险分析  
-
-该策略可能存在三大风险:均线参数不当风险、持仓时间不当风险、止损位置不当风险。
-
-- 均线参数选取不当,将导致产生虚假信号。如果均线长度过短或过长都会误判市场,应适当调整以匹配具体品种特性。
-
-- 持仓时间过长或过短,无法最大限度获利或控制风险。需测试不同出场方式,确定最佳持仓周期。
-
-- 止损位置设置不当,将导致止损过于宽松或过于紧张,应根据品种波动率确定合适止损位。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-- 测试更多均线参数组合,寻找最佳参数
-
-- 基于最近N天价格波动或ATR确定动态止损位置
-
-- 结合更多指标判断入场时机,如MACD、KD等
-
-- 加入趋势过滤规则,避免交易盘整市
-
-- 可以考虑将策略应用于更多品种,或改进为跨品种策略
-
-## 总结  
-
-该移动平均交叉优化策略整合快慢均线判断趋势方向的优点,设置止损来控制风险,属于易于实施的趋势跟踪策略。该策略可以通过参数优化、止损优化、信号过滤等手段进一步提升稳定性和效率。与包含复杂逻辑的策略相比,该策略更易理解,实施门槛更低,非常适合量化交易的入门策略。
-
-||
 
 ## Overview
 
@@ -101,7 +55,6 @@ This strategy can be optimized from the following aspects:
 
 This optimized moving average crossover strategy integrates the advantage of dual MA in judging trend directions and sets stop loss to control risks. It belongs to easy-to-implement trend following strategies. This strategy can be further enhanced in stability and efficiency through parameter optimization, stop loss optimization, signal filtering etc. Compared with complex strategies, it is easier to understand and implement, and hence very suitable to be the first quant trading strategy for beginners.  
 
-[/trans]
 
 > Strategy Arguments
 

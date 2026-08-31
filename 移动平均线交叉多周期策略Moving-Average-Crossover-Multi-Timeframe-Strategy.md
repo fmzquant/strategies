@@ -9,85 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略是基于移动平均线的交叉系统,通过不同周期的移动平均线 golden交叉 和 death交叉来判断买入和卖出时机。策略同时结合趋势跟踪止损、止盈、止损等功能来锁定盈利和规避风险。
-
-## 策略原理
-
-该策略使用两组移动平均线,分别是快线和慢线。快线周期较短,代表短期趋势;慢线周期较长,代表长期趋势。当快线从下方向上突破慢线时,产生golden交叉,表示行情由熊转牛,做多;当快线从上方向下跌破慢线时,形成death交叉,表示行情由牛转熊,做空。
-
-代码中,快线指标为ma1,慢线为ma2。ma1和ma2均可选择不同类型的移动平均线,如SMA、EMA等,并可设定不同的周期参数。ma1代表短期趋势,周期较短;ma2代表长期趋势,周期较长。
-
-当ma1金叉ma2时,产生long信号,做多;当ma1死叉ma2时,产生short信号,做空。实际交易时,可结合趋势跟踪止损、止盈、止损等功能,来锁定盈利和规避风险。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 策略思路简单清晰,容易理解和实现。
-
-2. 可灵活选择不同类型和参数的移动平均线,适用于不同市场环境。
-
-3. 多周期设计,同时捕捉短期和长期趋势,避免被错杀。
-
-4. 可自定义开仓条件,严格控制交易频率。
-
-5. 可设置止损、止盈条件,有效控制风险。
-
-6. 可添加趋势跟踪止损,实现盈利跟踪。
-
-7. 可优化参数,使策略更稳定可靠。
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 双移动平均线交叉本身滞后,可能错过价格反转的最佳时机。
-
-2. 移动平均线周期设置不当,可能产生更多假信号。
-
-3. 突发事件造成快速反转,止损被击穿的风险。
-
-4. 趋势行情中,价格长期滞留在均线一侧的概率较大。
-
-5. 参数优化不当,可能过度优化到特定时间段。
-
-对应风险管理措施:
-
-1. 结合其他指标过滤信号,规避假突破。
-
-2. 周期设置要遵循趋势交易原则,测试优化参数。 
-
-3. 风险控制要审慎,止损位置设置合理。
-
-4. 需承担一定的耐心等待成本。
-
-5. 多种市场环境中测试参数健壮性。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 测试更多类型的移动平均线,如加权移动平均线等。
-
-2. 增加基于波动率的动态周期,根据市场变化调整均线参数。
-
-3. 策略入场条件可加选时间或基本面过滤,降低错误交易率。
-
-4. 出场条件可设定动态止盈止损,根据市场波动程度调整止损幅度。
-
-5. 可建立参数优化系统,实现策略的历史回测与参数调优。
-
-6. 增加机器学习算法,利用AI来优化参数和过滤信号。
-
-## 总结
-
-该移动平均线交叉多周期策略整体思路清晰易懂,通过快慢均线交叉来捕捉趋势,是一种较为经典的趋势跟踪策略。策略可以通过选取合适的参数、优化入场出场逻辑、严格风险控制来实现稳定的盈利。但用户需要承担一定的滞后 recognizes风险和等待时间成本。总体来说,该策略简单实用,值得进行参数优化和风险控制,以适应更多市场环境。
-
-||
 
 
 ## Overview
@@ -166,7 +87,6 @@ The strategy can be improved from the following aspects:
 
 In conclusion, this moving average crossover multi timeframe strategy has simple and clear logic to follow trends using fast and slow MA crossovers. With proper parameter selection, optimized entry/exit rules and risk control, it can achieve steady profits. However, users need to tolerate lagging risks and waiting time costs. Overall it is a simple, practical strategy worth optimizing and risk control for adapting to more market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

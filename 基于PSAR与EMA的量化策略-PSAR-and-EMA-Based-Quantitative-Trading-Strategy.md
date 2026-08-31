@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/af36c777cac4d4a651.png)
-[trans]
-#### 概述
-该量化策略主要利用抛物线SAR指标(PSAR)和指数移动平均线(EMA)的交叉信号,结合多个自定义条件,产生买入和卖出信号。策略的主要思路是:当PSAR从下方突破EMA,且满足一定条件时产生买入信号;当PSAR从上方跌破EMA,且满足一定条件时产生卖出信号。同时,该策略还设置了止盈和止损位,以控制风险。
-
-#### 策略原理
-1. 计算PSAR和30周期EMA指标
-2. 判断PSAR与EMA的交叉关系,并设置对应的标志位
-3. 结合PSAR与EMA的位置关系、K线的颜色等条件,定义IGC(Ideal Green Candle)和IRC(Ideal Red Candle)
-4. 通过IGC和IRC的出现,判断买入和卖出信号
-5. 设置止盈和止损位,止盈位分别为买入价格的8%、16%和32%,止损位为买入价格的16%;卖出价格的8%、16%和32%,止损位为卖出价格的16%
-6. 根据交易时段和持仓状态,执行买入、卖出或平仓操作
-
-#### 策略优势
-1. 结合多个指标和条件,提高了信号的可靠性
-2. 设置了多个止盈位和止损位,可以灵活控制风险和收益
-3. 针对不同的市场状况,设置了买入和卖出的过滤条件,提高了策略的适应性
-4. 代码模块化程度高,易于理解和修改
-
-#### 策略风险
-1. 策略的参数设置可能不适合所有市场环境,需要根据实际情况进行调整
-2. 在震荡市场中,该策略可能会出现频繁的交易信号,导致交易成本增加
-3. 该策略缺乏对市场趋势的判断,在强趋势市场中可能错失机会
-4. 止损位的设置可能无法完全避免极端行情带来的风险
-
-#### 策略优化方向
-1. 引入更多的技术指标或市场情绪指标,提高信号的准确性和可靠性
-2. 优化止盈和止损位的设置,可以考虑引入动态止盈止损或基于波动率的止盈止损
-3. 针对不同的市场状态,设置不同的交易参数和规则,提高策略的适应性
-4. 加入资金管理模块,根据账户equity ratio balance等因素,动态调整仓位和风险exposure
-
-#### 总结
-该量化策略基于PSAR和EMA指标,通过多个自定义条件和规则,产生买入和卖出信号。策略具有一定的适应性和灵活性,同时也设置了止盈止损位来控制风险。但是,策略的参数设置和风险控制方面还有优化的空间。总的来说,该策略可以作为一个基础模板,通过进一步的优化和改进,有望成为一个稳健的交易策略。
-
-|| 
 
 #### Overview
 This quantitative trading strategy primarily utilizes the crossover signals of the Parabolic SAR (PSAR) and Exponential Moving Average (EMA) indicators, combined with multiple custom conditions to generate buy and sell signals. The main idea behind the strategy is: when the PSAR breaks above the EMA from below and satisfies certain conditions, a buy signal is generated; when the PSAR falls below the EMA from above and meets certain conditions, a sell signal is generated. Additionally, the strategy sets take-profit and stop-loss levels to manage risk.
@@ -76,7 +42,6 @@ This quantitative trading strategy primarily utilizes the crossover signals of t
 
 #### Summary
 This quantitative trading strategy is based on the PSAR and EMA indicators, generating buy and sell signals through multiple custom conditions and rules. The strategy has a certain level of adaptability and flexibility while also setting take-profit and stop-loss levels to manage risk. However, there is still room for optimization in terms of parameter settings and risk control. Overall, this strategy can serve as a basic template, and with further optimization and improvements, it has the potential to become a robust trading strategy.
-[/trans]
 
 
 

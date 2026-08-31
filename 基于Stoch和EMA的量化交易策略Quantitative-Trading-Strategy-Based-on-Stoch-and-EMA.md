@@ -10,49 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]
-
-本文将详细介绍一种结合Stoch指标和EMA均线进行量化交易的策略。该策略根据Stoch指标的值生成交易信号,并利用EMA滤除非主流方向的信号。
-
-一、策略原理
-
-该策略主要通过以下工具和逻辑进行交易:
-
-1. 计算K值、D值组成的Stoch指标,K值反映快速价格变动,D值进行平滑处理;
-
-2. 设置Stoch指标的超买超卖区域,根据K、D值相对大小产生交易信号;
-
-3. 计算一定周期的EMA均线,判断价格主流方向; 
-
-4. 只有当Stoch指标信号与EMA均线方向一致时,才进行交易;
-
-5. 根据信号建立多头或空头头寸,并设置止盈止损点。
-
-这样,Stoch指标捕捉超买超卖区机会,EMA滤除不合理信号,两者结合形成稳定策略。
-
-二、策略优势
-
-该策略最大优势是指标互补,Stoch判断超买超卖,EMA判断主流方向,结合减少错误交易。
-
-其次,K、D值可调,能适应不同品种参数优化。
-
-最后,止盈止损设置也使每笔交易收益风险明确,有助于资金管理。
-
-三、潜在风险
-
-但该策略也存在以下潜在问题:
-
-首先,Stoch和EMA指标都可能出现滞后,导致失去最佳交易时机。
-
-其次,止损过小可能产生过多无效止损。
-
-最后,多参数优化需要大量工作以避免过拟合。
-
-四、内容总结
-
-本文详细介绍了一种结合Stoch和EMA的量化交易策略。它可以识别超买超卖区反转机会,并通过EMA过滤无效信号。该策略可以通过参数优化获得稳定收益,但也要注意防控上述问题的出现。
-
-||
 
 
 This article explains in detail a quantitative trading strategy combining the Stoch indicator and EMA moving average. It generates trading signals based on Stoch values and uses EMA to filter out non-mainstream signals.
@@ -95,7 +52,6 @@ IV. Summary
 
 In summary, this article has explained a quantitative strategy combining Stoch and EMA. It identifies overbought/oversold reversal chances, with EMA filtering out invalid signals. With proper tuning, this strategy can achieve steady profits but needs to manage the mentioned risks.
 
-[/trans]
 
 > Strategy Arguments
 

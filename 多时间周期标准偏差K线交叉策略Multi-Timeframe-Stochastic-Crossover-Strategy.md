@@ -11,116 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c78a7efdb6101a0a15.png)
 
-[trans]
-
-
-## 概述
-
-多时间周期标准偏差K线交叉策略是一种典型的趋势跟踪策略。该策略通过计算不同时间周期(如日线、周线、月线等)的标准偏差值,构建多组K线和D线,然后取这些线的平均值构建均线,当快线上穿慢线的时候做多,下穿的时候做空。该策略充分利用了不同周期标准偏差的预测能力,通过组合多个周期的标准偏差均线,可以有效filtrate市场 noise,锁定市场主要趋势。
-
-## 策略原理  
-
-该策略的核心逻辑是计算多时间周期的标准偏差,然后取平均构建交易信号。
-
-首先,策略通过`stoch()`函数计算不同参数下的标准偏差K值,这里一共计算了5组K值,对应时间周期是日线、周线、月线级别。
-
-```pine
-smoothK = input(55)  
-SMAsmoothK = input(13)
-k = sma(stoch(price, high, low, smoothK), SMAsmoothK) 
-
-smoothK1 = input(89)
-SMAsmoothK1 = input(8)  
-k1 = sma(stoch(price, high, low, smoothK1), SMAsmoothK1)
-
-...
-
-smoothK4 = input(377) 
-SMAsmoothK4 = input(2)
-k4 = sma(stoch(price, high, low, smoothK4), SMAsmoothK4)
-```
-
-然后分别用不同的参数计算D线:
-
-```pine 
-smoothD = input(34)
-d = sma(k, smoothD)
-
-...
-
-smoothD4 = input(233)  
-d4 = sma(k4, smoothD4)
-```
-
-随后,计算各组K线和D线的平均值,构建快线Kavg和慢线Davg:
-
-```pine
-Kavg = avg(k,k1,k2,k3,k4)
-Davg = avg(d,d1,d2,d3,d4) 
-```
-
-最后,当快线上穿慢线时做多,下穿时做空:
-
-```pine
-long = crossover(Kavg, Davg)
-short = crossunder(Kavg, Davg)
-```
-
-通过组合多个时间周期的标准偏差均线,可以滤去较大时间周期下的市场noise,锁定主要趋势方向。
-
-## 策略优势
-
-- 利用多时间周期标准偏差的预测能力,可以有效过滤噪声,锁定趋势
-- 通过调整周期参数,可以自由调整策略的持仓时间
-- 标准偏差本身具有较强的趋势跟踪能力
-- 采用均线交叉形式,可以避免被单一fake breakout误导
-- 可方便优化快线慢线的均线周期,提高稳定性
-
-## 策略风险及解决方案
-
-- 多时间周期均线交叉容易产生较多假信号,可适当调整均线周期进行优化
-- 标准偏差容易被剧烈行情影响,产生错误信号,可考虑添加过滤条件
-- 固定周期参数无法适应市场变化,可采用自适应周期设置
-- 长期持仓容易追高杀低,可设置移动止损来锁定利润
-- 仅考虑KDJ指标容易受限,可引入其它指标进行组合优化 
-
-解决方案:
-
-1. 增加过滤条件,避免被短期假突破误导
-
-2. 使用自适应周期设置,根据市场波动程度调整周期参数
-
-3. 设置移动止损来及时止损,避免追高杀低
-
-4. 优化均线周期参数,找到最佳平衡点
-
-5. 组合更多指标信号,提高策略稳定性
-
-## 策略优化方向 
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 引入其它指标信号进行组合,如引入MACD、Bollinger Bands等,可以提高信号质量
-
-2. 添加趋势过滤,如引入SMA均线方向、ADX等指标判断趋势,避免逆势交易
-
-3. 使用自适应周期设置,根据市场波动程度动态调整周期参数
-
-4. 增加移动止损策略,根据策略参数设置止损点,及时止损
-
-5. 优化快线和慢线的均线周期参数,找到最佳参数组合
-
-6. 添加开仓过滤条件,避免被短期噪声误导信号
-
-7. 尝试Breakout入场策略,在突破均线后开仓
-
-8. 测试不同的退出策略,如Chandelier Exit,优化止盈止损
-
-## 总结
-
-多时间周期标准偏差K线交叉策略整合了标准偏差指标的趋势跟踪能力和均线策略的稳定性。通过计算多周期标准偏差的K线和D线均值,构建交易信号,可以有效利用不同时间尺度下标准偏差指标的预测力,过滤市场噪音,捕捉主要趋势方向。该策略具有 parameter tuning 的空间,可以通过调整周期参数以及进一步引入过滤条件、止损策略等进行优化,以获得更好的策略效果。总体来说,该策略融合了多种技术分析工具的优势,是一个值得探索和优化的高效趋势跟踪策略。
-
-|| 
 
 ## Overview
 
@@ -228,7 +118,6 @@ This strategy can be further improved in the following areas:
 
 The Multi Timeframe Stochastic Crossover Strategy combines the trend following capability of stochastic indicator and stability of moving average strategies. By taking average of multi-period standard deviation K and D lines to generate signals, it effectively utilizes predictive power of standard deviation across different timeframes, filters out market noise, and captures the predominant trend. This strategy has room for parameter tuning and further enhancements like filters, stops, etc. Overall, it integrates the strengths of multiple technical analysis tools and is an efficient trend following strategy worth exploring and optimizing.
 
-[/trans]
 
 > Strategy Arguments
 

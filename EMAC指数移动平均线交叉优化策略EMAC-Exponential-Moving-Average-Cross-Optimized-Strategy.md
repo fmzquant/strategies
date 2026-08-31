@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/186996b0c8ff3d15ac5.png)
-[trans]
-
-## 概述
-
-EMAC指数移动平均线交叉优化策略是在基础的EMAC策略上进行参数优化后的版本。该策略融合了趋势判断、多重均线过滤和止损止盈 Exit,旨在抓住中长线趋势进行趋势跟随。
-
-## 策略原理
-
-1. 判断最近趋势方向:计算过去26周期的收盘价涨跌幅,判断为上升、下降、震荡。
-
-2. 多重均线过滤:计算10周期、20周期、34周期的EMA,待它们上穿50周期SMA时产生买入信号。
-
-3. ATR止损:Entry信号出现时,止损位设为 Entry柱低点或高点减去2.5ATR。
-
-4. 移动止损:随价格上涨逐步向上移动止损线。
-
-5. 目标止盈:Entry信号出现时,设置目标位为当时收盘价加上3ATR。
-
-6. MA均线回调止损Exit:当价格回破10日EMA时主动止损退出。
-
-## 策略优势
-
-1. 多重均线过滤增加了信号的可靠性,避免被虚假突破误导。
-
-2. 采用ATR止损,可以根据市场波动性设置合理的止损距离。
-
-3. 移动止损使止损线逐步向上移动,保护了部分利润。
-
-4. 目标止盈设定合理的盈利目标,不贪心,避免把利润吐出。
-
-5. MA回调Exit使得在趋势反转时能够及时止损退出。
-
-## 策略风险及解决方法
-
-1. 在震荡行情中,EMA均线容易形成多次交叉对穿,可能会产生连续亏损的风险。可以适当调大EMA参数,或增加MA金叉过滤条件来降低这种概率。
-
-2. ATR数值较大时,止损距离过大,亏损风险增加。可以考虑采用ATR的移动平均值或在ATR上乘以一个缩减比例系数来优化。 
-
-3. 未考虑夜间隔空风险。可以加入夜间停牌时间段的判断逻辑,避免信号在不能交易的时间出现。
-
-4. 没有考虑大盘状态的影响。可以加入对大盘趋势的判断作为策略的开关条件之一,降低在大盘不利情况下的损失。
-
-## 策略优化方向
-
-1. 可以测试不同长度的EMA参数组合,找到对不同品种更适合的均线长度。
-
-2. 可以测试ATR的移动平均值或系数缩减的方法来优化止损距离。
-
-3. 可以加入夜间停牌时间段判断逻辑,以规避隔夜风险。 
-
-4. 可以加入对大盘态势的判断,设置对大盘趋势不利时的开关条件。
-
-5. 可以通过反向测试多年历史数据来选择参数组合,使策略在回测中具有最佳稳定性。
-
-## 总结
-
-EMAC指数移动平均线交叉优化策略结合趋势判断、多重均线过滤和动态止损止盈,旨在跟踪中长线趋势进行长线持有。相较于原始版本进行了参数优化,可望获得更好的实盘表现。但该策略仍需进一步优化与完善,加入更多逻辑判断以应对多种市场情况,降低实盘交易中的风险,提高策略的稳定性和盈利能力。
-
-||
 
 
 ## Overview
@@ -127,7 +68,6 @@ The EMAC Exponential Moving Average Cross Optimized Strategy is an optimized ver
 
 The EMAC Exponential Moving Average Cross Optimized Strategy combines trend judgment, multiple MA filtering and dynamic stops to follow mid-to-long term trends. Compared to the original version it has undergone parameter optimization to improve real-trading performance. But further optimizations and enhancements are needed by adding more logic to handle different market situations, reducing risks and improving stability and profitability.
 
-[/trans]
 
 > Strategy Arguments
 

@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1a8fa1de7ba0df2b286.png)
-[trans]
-
-### 概述
-
-本策略结合了双指数移动平均线和阿尔玛指标来实现趋势跟踪和入场。其中,阿尔玛线作为主要的趋势过滤器,当价格在阿尔玛线之上做多,当价格在阿尔玛线之下做空。双指数移动平均线用于给出提前的趋势信号以便及早入场。
-
-### 策略原理
-
-1. 计算快线EMA1和慢线EMA2的双指数移动平均。
-2. 计算阿尔玛线。
-3. 当快线EMA1和慢线EMA2形成金叉时,如果价格高于阿尔玛线,做多;当EMA1和EMA2形成死叉时,如果价格低于阿尔玛线,做空。
-4. 这样,阿尔玛线作为主要的趋势过滤器,避免在震荡市场中被套。而双指数移动平均线用于给出提前的趋势信号以便及早入场。
-
-### 优势分析
-
-1. 双指数移动平均线能提前反映价格趋势,避免进入震荡区间。
-2. 阿尔玛线通过自适应平滑参数,能动态捕捉趋势,是一个很好的趋势过滤指标。
-3. 两者结合,既考虑了趋势的及时性,也确保了入场的可靠性。
-
-### 风险分析
-
-1. 在价格剧烈波动的场合,双指数移动平均线可能发出错误信号。
-2. 阿尔玛线存在滞后于价格的现象,可能导致部分走势被过滤掉。
-3. 参数设置不当也会导致策略效果不佳。
-
-解决方法:
-1. 适当调整双指数移动平均线的周期,降低误信号率。
-2. 调整阿尔玛线的参数,降低滞后性。
-3. 做好参数优化,找到最佳参数组合。
-
-### 优化方向 
-
-1. 测试不同周期的双指数移动平均组合,找到最佳参数。
-2. 测试阿尔玛线不同的窗口期、偏移量、sigma值,优化参数。
-3. 结合其他指标,如波动率指标,进一步过滤信号。
-4. 优化止损策略,控制单笔损失。
-
-### 总结
-
-本策略结合双指数移动平均线和阿尔玛指标,实现了趋势的及时跟踪和可靠的入场过滤。通过参数优化和止损策略的改进,可以进一步减少误信号,控制风险,提高策略效果。该策略适用于趋势性行情,特别是中长线交易。
-
-||
 
 
 ### Overview
@@ -92,7 +50,6 @@ Solutions:
 ### Conclusion
 This strategy combines double EMA and ALMA indicator to achieve timely trend following and reliable entry filtering. By improving parameter optimization and stop loss strategy, it can further reduce false signals, control risks and improve strategy performance. It is suitable for trending markets and medium-long term trading especially.
 
-[/trans]
 
 > Strategy Arguments
 

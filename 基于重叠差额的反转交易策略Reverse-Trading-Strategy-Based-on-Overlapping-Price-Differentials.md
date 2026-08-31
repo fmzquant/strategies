@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1d6be9527270f6e75f0.png)
-[trans]
-
-## 概述
-
-本策略主要思想是利用价格的重叠差额来判断市场趋势,当差额从负数反转到正数时做多,从正数反转到负数时做空,属于反转交易策略。
-
-## 原理
-
-该策略首先计算价格的重叠差额(Close-Close[1]),即今天的收盘价减去昨天的收盘价,然后计算最近30天内差额的总和。当总和从负数反转到正数时产生做多信号,当总和从正数反转到负数时产生做空信号,属于典型的反转交易策略。
-
-具体来说,策略维护三个指标:
-
-1. ff:最近30天内差额的总和
-2. dd1: ff的15日加权移动平均线 
-3. dd2: ff的30日加权移动平均线
-
-当ff从负数反转到正数,即小于0变大于0,并且dd1也从负数反转到正数时,产生做多信号。
-
-当ff从正数反转到负数,即大于0变小于0,并且dd1也从正数反转到负数时,产生做空信号。
-
-做多做空后会设置止盈止损线。
-
-## 优势
-
-该策略具有以下优势:
-
-1. 思路清晰,容易理解和实现。
-2. 利用价格反转特征,在市场转折点能够获得较好入场时机。
-3. 结合双重确认机制,可以过滤假突破。
-4. 可自定义参数,适应不同市场环境。
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 反转失败的概率较大,区间震荡市场中容易止损。
-2. 参数设置不当可能导致交易频繁,增大交易成本。
-3. 需要联合其他指标过滤性入场,避免追顶和接底。
-
-对应解决方法如下:
-
-1. 合理设置止损比例,控制单笔损失。
-2. 优化参数,找到最佳参数组合。
-3. 增加过滤条件,避免不必要入场。
-
-## 优化方向
-
-该策略可以从以下方面进行优化:
-
-1. 增加成交量的过滤,例如突破时需成交量放大。
-2. 结合趋势指标过滤,避免逆势操作。
-3. 动态调整参数,让参数能根据市场状态变化。
-4. 优化止损机制,例如随价格移动止损。
-
-## 总结
-
-本策略通过计算价格差额的反转来判断市场转折点,是一种典型的反转交易策略。策略思路清晰,易于实现,有一定的实用价值。但也存在一些风险,需要进一步优化以适应市场的变化。总的来说,本策略为量化交易提供了一个基础框架,可在此基础上进行扩展。
-
-||
 
 ## Overview
 
@@ -127,7 +68,6 @@ The strategy can be optimized in the following aspects:
 
 The strategy judges market turning points by calculating price differential reversals. It is a typical reverse trading strategy. The logic is clear and easy to implement with some practical value. But there are also risks that need to be further optimized to adapt to market changes. Overall, the strategy provides a basic framework for quantitative trading, which can be built upon and extended.
 
-[/trans]
 
 > Strategy Arguments
 

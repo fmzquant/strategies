@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12886e688e2451c3d7a.png)
-[trans]
-
-### 概述
-
-本策略利用移动平均线(MA)的斜率和动量指标的斜率进行交易决策。它会比较 MA 斜率和动量斜率与设定的阈值,当两条斜率都超过阈值时产生交易信号。该策略还包含低波动过滤器,在市场波动性低时使用不同的 MA 生成信号。
-
-### 策略原理
-
-本策略的核心在于比较两条斜率曲线。首先,它会计算 MA 和动量指标的斜率。斜率反映曲线的变化速度和方向。然后使用两个阈值,当两条斜率曲线都超过相应的阈值时产生交易信号。
-
-例如,当 MA 斜率和动量斜率都超过上轨时,产生买入信号;当两条曲线都跌破下轨时,产生卖出信号。这样可以过滤掉部分假信号。
-
-低波动过滤器使用一个长期 MA 判断市场波动性。当波动性低时,使用不同参数的 MA 生成交易信号,从而适应不同市场状态。
-
-### 优势分析
-
-本策略具有以下几个优势:
-
-1. 使用双重过滤器设定交易信号,可以过滤掉部分噪音,提高信号质量。
-
-2. 低波动过滤器使得策略可以适应不同的市场状态,具有弹性。
-
-3. 允许高度自定义不同参数,可以针对不同品种进行优化。
-
-4. 含有无复漆功能,可以减少曲线拟合对结果的影响。
-
-### 风险分析
-
-本策略也存在一些风险:
-
-1. 双重过滤可能过滤掉部分真实信号,导致错过机会。可以通过调整参数优化。
-
-2. 低波动过滤器判定阈值需要仔细测试确定。如果参数不当可能出现信号偏差。
-
-3. MA 和动量指标参数设置需要针对具体品种优化,全市场通用参数难以确定。
-
-4. 无复漆功能无法完全规避回测曲线拟合问题,实盘效果仍需验证。
-
-5. 高度自定义参数会使参数空间复杂化,优化难度增加。
-
-### 优化方向 
-
-本策略可以从以下几个方向进行优化:
-
-1. 测试更多种类的 MA 和动量指标的组合,找到最匹配的指标。
-
-2. 优化 MA 和动量指标的长度参数,平衡延迟和噪音。
-
-3. 优化斜率计算的参数,找到更稳定指标的组合。 
-
-4. 测试不同的低波动性指标和参数,提高弹性。
-
-5. 在不同品种和周期上测试,寻找最佳适用范围。
-
-6. 构建参数自适应机制,减少手动优化工作量。
-
-### 总结
-
-本策略整体是一个非常灵活和可自定义的双 MA 策略。它同时参考价格和动量信息进行决策,可以有效过滤假信号。低波动过滤器也使得策略更具弹性,能够适应市场的变化。
-
-通过参数优化和指标选择的改进,本策略可以成为一个值得考虑在实盘中应用的选择。它为利用 MA 和动量指标进行交易决策提供了一个参考模板。
-
-||
 
 
 ### Overview
@@ -134,7 +71,6 @@ The strategy can be optimized in the following directions:
 This is a very flexible and customizable dual MA strategy. It references both price and momentum information for decision making, which can effectively filter out false signals. The low volatility filter also makes the strategy more elastic to adapt to market changes.
 
 With improvements in parameter optimization and indicator selection, this strategy can become a viable choice for real life trading. It provides a reference template for trading decisions using MA and momentum indicators.
-[/trans] 
 
 > Strategy Arguments
 

@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fe1808c4cdb0896dbe.png)
 
-[trans]
-#### 概述
-
-该交易策略基于连续三根阴线的形态和均线系统来判断交易信号。当价格在200日均线上方,并且出现连续三根阴线的形态时,开仓做多。策略通过动态止盈和止损的方式来管理交易风险,止盈和止损点位根据短期均线的位置和价格变化百分比来确定。策略只在指定的时间范围内进行交易。
-
-#### 策略原理
-
-1. 计算连续阴线的数量,当出现指定数量(默认为3)的连续阴线时,认为形成做多信号。
-2. 使用两条均线来辅助判断趋势和交易时机,默认使用10日均线和200日均线。只有当价格在200日均线上方时,才考虑做多。
-3. 设置动态止盈和止损点位。止盈点为开仓价格上方一定百分比(默认为1.5%),止损点为开仓价格下方一定百分比(默认为1%)。
-4. 另一个平仓条件是价格相对10日均线的位置发生变化。如果多头持仓时,价格从均线上方回落到下方,则平仓。
-5. 策略只在指定的时间范围内运行,根据开始日期和结束日期来确定。
-
-#### 策略优势
-
-1. 结合价格形态和均线系统,可以较好地捕捉趋势性机会。
-2. 通过动态止盈和止损,可以灵活控制风险和收益。止盈点随着价格上涨而不断抬高,让利润奔跑;止损点限制了最大损失。
-3. 利用短期均线的位置变化作为平仓信号,可以快速应对价格的突然反转。
-4. 指定交易时间范围,可以避免在市场关闭或节假日等特殊时期交易,降低风险。
-
-#### 策略风险
-
-1. 连续阴线形态并不能完全确定趋势反转,可能出现连续阴线后价格继续上涨的情况,导致策略失效。
-2. 固定百分比的止盈止损点位,可能无法应对市场的剧烈波动。在趋势很强时,止盈点位可能设置过低,导致提前离场;在波动加剧时,止损点位可能过于靠近,导致频繁止损。
-3. 短期均线位置的判断可能出现滞后,特别是在价格快速变化时,可能已经错过最佳平仓时机。
-4. 策略缺乏仓位管理和风险控制的措施,入场点位和头寸规模都是固定的,可能导致单次交易风险过大。
-
-#### 策略优化方向
-
-1. 可以引入更多的技术指标来辅助判断,如MACD、RSI等,提高信号的可靠性。
-2. 优化止盈和止损点位的计算方式,如使用ATR或波动率来动态调整,或者结合支撑阻力位来设置。
-3. 对于平仓信号,可以考虑使用更多的确认条件,如成交量变化、多空头持仓比例等,避免出现错误信号。
-4. 引入仓位管理和风险控制措施,如根据账户余额和风险水平来调整每次交易的头寸大小,设置总体风险限额等。
-5. 对于参数设置,如连续阴线的数量、均线周期等,可以进行优化测试,寻找最佳的参数组合。
-
-#### 总结
-
-该交易策略通过连续阴线形态和均线系统来判断趋势性交易机会,同时利用动态止盈止损和短期均线位置变化来控制风险。策略思路清晰,适合把握中长期趋势的交易者。但是策略也存在一些局限性,如信号可靠性、止盈止损点位设置、仓位管理等方面还有优化的空间。在实际应用中,需要根据市场特点和个人风险偏好,对策略进行适当的调整和改进,并严格控制风险。
-
-|| 
 
 #### Overview
 
@@ -89,7 +49,6 @@ This trading strategy is based on the pattern of three consecutive bearish candl
 #### Summary
 
 This trading strategy determines trending trading opportunities through the pattern of consecutive bearish candles and a moving average system, while controlling risk through dynamic take profit and stop loss levels and changes in the position of the short-term moving average. The strategy has a clear logic and is suitable for traders who aim to capture medium to long-term trends. However, the strategy also has some limitations, such as the reliability of signals, the setting of take profit and stop loss levels, and position management, which still have room for optimization. In practical application, it is necessary to make appropriate adjustments and improvements to the strategy according to market characteristics and personal risk preferences, and strictly control risks.
-[/trans]
 
 > Strategy Arguments
 

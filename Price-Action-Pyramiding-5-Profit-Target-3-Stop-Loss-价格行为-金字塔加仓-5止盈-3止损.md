@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bd597cacbaa34e943c.png)
 
-[trans]
-#### 概述
-该策略使用价格行为和金字塔加仓的方法,在价格下跌5%时开仓,然后通过金字塔加仓的方式继续开仓,直到价格回升5%时平仓。该策略的主要优势是在趋势形成的早期介入,并通过金字塔加仓的方式增加盈利机会。同时,该策略也设置了3%的止损位,以控制风险。
-
-#### 策略原理
-1. 当价格下跌5%时,开仓做多。
-2. 在接下来的5根K线内,如果价格继续下跌,则继续加仓,最多加仓4次。
-3. 当价格回升5%时,平掉所有仓位,实现盈利。
-4. 如果价格在加仓过程中触及3%的止损位,则平掉所有仓位,止损退出。
-
-#### 策略优势
-1. 在趋势形成的早期介入,抓住了价格反转的机会。
-2. 通过金字塔加仓的方式,增加了盈利机会。
-3. 设置了止损位,控制了风险。
-4. 24小时运行,不需要人工干预。
-
-#### 策略风险
-1. 如果价格在加仓过程中出现快速下跌,可能会触发止损,导致损失。
-2. 如果价格在触及止盈位之前出现大幅波动,可能会导致利润减少。
-3. 如果市场出现剧烈波动或黑天鹅事件,该策略可能会产生较大损失。
-
-#### 策略优化方向
-1. 优化加仓和平仓的比例,如可以考虑在价格下跌3%时加仓,在价格上涨7%时平仓。这样可以增加盈利机会,同时控制风险。
-2. 引入更多的技术指标,如RSI、MACD等,以辅助判断趋势和开平仓时机。
-3. 对不同的市场环境和品种,设置不同的参数,以适应不同的市场特点。
-
-#### 总结
-该策略利用价格行为和金字塔加仓的方法,在趋势形成的早期介入,并通过多次加仓的方式增加盈利机会。同时,该策略也设置了止损位,以控制风险。虽然该策略可能面临一些风险,但通过进一步优化,如调整加仓和平仓比例,引入更多技术指标等,可以提高策略的稳定性和盈利能力。
-
-||
 
 #### Overview
 This strategy uses price action and pyramiding methods to open a position when the price drops by 5%, and then continues to add positions through pyramiding until the price rises by 5% to close the position. The main advantage of this strategy is that it enters the market early in the trend formation and increases profit opportunities through pyramiding. At the same time, the strategy also sets a 3% stop loss to control risk.
@@ -69,7 +39,6 @@ This strategy uses price action and pyramiding methods to open a position when t
 
 #### Summary
 This strategy uses price action and pyramiding methods to enter the market early in the trend formation and increases profit opportunities through multiple position adding. At the same time, the strategy also sets a stop loss to control risk. Although the strategy may face some risks, through further optimization, such as adjusting the proportion of position adding and closing, introducing more technical indicators, etc., the stability and profitability of the strategy can be improved.
-[/trans]
 
 > Strategy Arguments
 

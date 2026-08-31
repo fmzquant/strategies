@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 
-[trans]  
-
-## 策略原理
-
-该策略融合动量指标和均线的BREAKOUT思路,在动量指标发生连续方向变化且价格突破均线时进行交易。
-
-具体交易逻辑:
-
-1. 计算短周期动量,如5日动量
-
-2. 当当前动量及之前两根动量柱均大于50时,做多信号成立
-
-3. 当价格上穿5日均线时,执行做多
-
-4. 当当前动量及之前两根动量柱均小于50时,做空信号成立 
-
-5. 当价格下穿5日均线时,执行做空
-
-6. 设置固定点数止盈和跟踪止损策略
-
-该策略充分发挥动量指标的趋势判断能力,再与均线突破进行组合,形成高概率的交易信号,追捕短线价格涨跌。
-
-## 策略优势
-
-- 动量连续方向有力判断趋势
-
-- 与均线突破组合,提高信号质量
-
-- 止盈止损策略结合,回撤控制到位
-
-## 策略风险
-
-- 动量连续信号可能滞后
-
-- 需要反复测试参数优化
-
-- 止盈止损设定需要审慎
-
-## 总结
-
-该策略将动量指标和均线BREAK系统有机结合,在保证信号质量的前提下设定合理止盈止损,能有效捕捉短线趋势机会。但参数设置和止损策略优化至关重要。
-
-
-||
 
 ## Strategy Logic
 
@@ -95,7 +51,6 @@ The strategy capitalizes on momentum strength for trend identification, combinin
 
 This strategy synergizes momentum and MA breakout systems with prudent profit taking and risk controls. But parameter tuning and stop loss optimization are crucial for real-world effectiveness.
 
-[/trans]
 
 
 

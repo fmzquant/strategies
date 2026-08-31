@@ -10,45 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/19afe350b49acf49574.png)
-[trans]
-
-### 概述
-
-本策略基于RSI指标设计了一个多空自动交易系统。该系统可以在RSI超买超卖时自动入场做多做空,并在特定条件触发时主动止损离场。
-
-### 策略原理
-
-本策略使用RSI指标判断市场的超买超卖现象。具体来说,当RSI指标低于设定的超卖线时,做多入场;当RSI指标高于设定的超买线时,做空入场。
-
-此外,本策略还设定了离场条件。当做多之后,如果RSI指标再次上穿超买线,会触发多单的止损离场;同样,当做空之后,如果RSI指标再次下穿超卖线,也会触发空单的止损离场。
-
-### 优势分析
-
-本策略最大的优势在于利用RSI指标判断市场的超买超卖现象,这是量化交易中一种较为成熟可靠的技术分析方法。与简单的移动平均线策略相比,本策略可以更准确地捕捉市场的转折点,从而提高交易系统的盈利空间。
-
-另外,本策略设定了离场条件,可以有效控制单向大行情中带来的亏损风险。这与传统的趋势跟随策略形成了鲜明对比,可以避免持仓被套的情况发生。
-
-### 风险分析
-
-本策略最大的风险在于RSI指标发出的交易信号可能出现误判的情况。任何技术指标都无法百分之百准确地判断市场走势,RSI指标也不例外。当RSI误判超买超卖信号时,该策略就会产生错误的入场。
-
-为降低这种风险,本策略设置了止损线。但在单边行情中,止损线被触发的概率也会较大。此时就需要人工干预,手动关闭错误的头寸。总的来说,本策略作为一个自动交易系统,还需要人工监控与调整才能发挥最大效果。
-
-### 优化方向  
-
-本策略还有进一步优化的空间:
-
-1. 结合多个指标确认入场信号,避免RSI指标单独判断造成的误入场。例如,可以加入移动平均线指标等。
-
-2. 优化RSI参数,寻找更加合适的RSI长度参数,使超买超卖判断更加准确。
-
-3. 优化止损线设置,在最大程度避免亏损的同时,也要确保止损线不会过于灵敏。
-
-### 总结  
-
-总的来说，这种基于RSI的自动交易策略具有有效识别超买和超卖市场状况的优势。通过在RSI极端水平期间进入多头和空头位置，它旨在从市场反转中获利。止损机制也有助于在强大的单向趋势中限制损失。然而，误判RSI信号的风险仍然存在。对确认指标、RSI参数以及止损点位进行进一步优化可能会提高策略的盈利能力和风际控制能力。就像所有自动系统一样，在特殊市场情况下仍需要人工监督进行干预。
-
-||
 
 ### Overview
 
@@ -84,7 +45,6 @@ There remains room for further optimizations:
 
 ### Conclusion
 Overall, this RSI-based automated trading strategy has the advantage of effectively identifying overbought and oversold market conditions. By entering long and short positions during extreme RSI levels, it aims to profit from market reversals. The stop loss mechanism also helps to limit losses during strong one-directional trends. However, the risk of misjudged RSI signals remains. Further optimizations on confirming indicators, RSI parameters and stop loss placement could enhance the strategy’s profitability and risk control. As with all automated systems, human supervision is still required for interventions in special market situations.
-[/trans]
 
 > Strategy Arguments
 

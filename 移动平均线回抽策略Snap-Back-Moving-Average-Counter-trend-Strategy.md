@@ -11,65 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11ecbdbe1c6fcbcdb2b.png)
 
-[trans]
-
-## 概述
-
-该策略主要运用移动平均线的规律,寻找股票短期超跌后的反弹机会。当快速移动平均线处于慢速移动平均线之下时,说明股票处于下跌趋势。当价格跌破快速移动平均线一定幅度后,再跌的空间有限,这时如果价格能重新回升突破快速移动平均线,说明股票下跌趋势结束,将出现反弹。该策略就是利用这一规律,寻找这种超跌反弹的机会进场做多。
-
-## 策略原理
-
-1. 设置快速移动平均线EMA(如8日线)和慢速移动平均线SMA(如20日线)。
-
-2. 当SMA在EMA之上时,说明处于上升趋势;当SMA在EMA之下时,说明处于下跌趋势。
-
-3. 当价格下破EMA一定幅度(如2-10%)后,股票进入超跌区域,这时反弹的概率较大。 
-
-4. 当价格重新突破向上跨过EMA时,就是买入信号。
-
-5. 止损线设在EMA附近,止盈线设在中间慢速移动平均线SMA(如50日线)附近,或以一定比例止盈。
-
-6. 当价格重新跌破EMA时,清仓止损。
-
-## 策略优势
-
-- 利用移动平均线的规律,相对可靠。
-
-- 采用快速移动平均线以及超跌幅度条件,可以提高确定超跌反弹的概率。
-
-- 可配置止损和止盈条件,控制风险。
-
-- 可灵活配置持仓比例,适合不同风险偏好。
-
-## 策略风险
-
-- 虽然加入了超跌幅度条件,但反弹失败的概率还是存在。
-
-- 移动平均线本身滞后性较强,容易漏入局部反弹。
-
-- 停损点靠近快速移动平均线,波动大时容易被击出。
-
-- 部分参数需要人工配置,不同参数对结果影响较大。
-
-- 效果与选股相关性较大。
-
-## 策略优化方向
-
-- 增加趋势判断指标,避免逆势操作。
-
-- 加入成交量等指标过滤,提高成功概率。 
-
-- 停损点可以考虑动态追踪,减少止损被击出概率。
-
-- 可以研究最佳参数组合,降低参数依赖性。
-
-- 可以结合选股条件,提高选股效果。
-
-## 总结
-
-该策略整体思路清晰、易于理解,属于移动平均反转交易策略的典型代表。优点是相对稳定,可以控制风险,适合新手掌握。但也存在一定概率上无法正确判断反转点的问题。可以通过结合其他指标、动态止损、参数优化等手段进行改进,提高策略稳定性。整体来说是一种可靠的短线反转策略思路,值得学习借鉴。
-
-||
 
 
 ## Overview
@@ -128,7 +69,6 @@ This strategy mainly utilizes the principles of moving averages to find countert
 
 The strategy has a clear logic and is easy to understand as a typical moving average mean reversion system. The advantages are stability and risk control, making it suitable for beginners. But it still carries the risk of misjudging reversal points. Enhancements through additional filters, dynamic stops, parameter optimization etc. can improve robustness. Overall it exemplifies a sound short-term mean reversion framework worth learning from.
 
-[/trans]
 
 > Strategy Arguments
 

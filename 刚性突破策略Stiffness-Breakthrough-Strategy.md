@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/54129b05847a67ca1a.png)
-[trans]
-
-### 概述
-
-刚性突破策略是一种基于价格刚性指标的突破策略。它通过计算一定周期内收盘价突破上轨的次数,来判断价格的刚性。当刚性指标超过设定阈值时,判断行情即将突破,进行买入操作;当刚性指标低于阈值时,判断行情即将回落,进行卖出操作。
-
-### 策略原理
-
-1. 计算均线和标准差:首先计算n周期的简单移动平均线作为基准上轨,然后计算价格标准差的0.2倍作为下轨的缓冲。
-
-2. 计算刚性指标:统计m周期内收盘价高于上轨的天数,除以m得到0-100的值,再用n周期EMA平滑,得到最终的刚性值,表示价格突破上轨的概率。 
-
-3. 比较刚性与阈值:当刚性指标上穿设定阈值时,表明突破概率增加,产生买入信号;当刚性指标下穿阈值时,表明突破概率下降,产生卖出信号。
-
-4. 进场和出场:收盘价突破上轨时买入,突破失败开始下跌时卖出。做多突破的同时,也可做空回调。
-
-### 优势分析
-
-1. 捕捉突破的时机: relativel比较可靠地判断趋势是否即将出现突破或回调的时机,从而提前进入场内。
-
-2. 兼顾突破与回调: 该策略同时利用刚性指标的突破与回落,实现做多和做空机会的捕捉。
-
-3. 参数灵活: 用户可以根据市场调整均线长度、刚性周期、阈值等参数,适应不同周期和市场的特征。
-
-4. 实现简单: 仅利用刚性指标和阈值比较,没有复杂逻辑,代码实现较为简洁。
-
-### 风险分析
-
-1. 突破失败风险: 刚性超过阈值时,并不能完全保证价格会突破上轨,存在一定的假突破风险。
-
-2. 回调范围风险: 做空时无法预测具体的回调范围和位置,存在亏损过多的风险。
-
-3. 参数优化风险: 参考参数无法完全适应市场的变化,需要根据实际情况不断测试和优化。
-
-4. 频繁交易风险: 该策略交易频率较高,会增加交易成本和滑点的损耗。
-
-### 优化方向 
-
-1. 优化参数: 可以测试不同市场下的参数设置,寻找最佳参数组合。比如增加均线长度来降低交易频率等。
-
-2. 加入止损: 设置合理的止损逻辑,来控制单笔亏损。可以根据atr 来设置止损位。
-
-3. 结合其他指标: 可以加入类似MACD,KD等指标来决定具体的入场点位,减少假突破的概率。
-
-4. 优化出场条件: 可以基于趋势指标等确定趋势反转的特征,设置更加准确的出场条件。
-
-### 总结
-
-刚性突破策略整体来说较为简单实用。它可以提前判断价格可能的突破和回落时机,具有一定的实用价值。但我们也需要注意假突破和回调范围的问题,通过参数优化和加入其他technical指标来锁定更精准的交易机会。
-
-||
 
 ### Overview
 
@@ -113,7 +62,6 @@ Stiffness Breakthrough Strategy is a breakout strategy based on the price stiffn
 
 Overall, the Stiffness Breakthrough Strategy is quite simple and practical. It can predict possible price breakouts and pullbacks in advance, with some practical value. But we also need to pay attention to the issues of false breakouts and pullback range, and capture more accurate trading opportunities through parameter optimization and the addition of other technical indicators.
 
-[/trans]
 
 > Strategy Arguments
 

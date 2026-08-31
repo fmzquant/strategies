@@ -11,59 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11ca7e5f690e711664d.png)
 
-[trans]
-
-### 概述
-
-该策略是一个简单的突破策略,它使用两个不同的零时滞后EMA的差值来跟踪标的物的上涨或下跌势头。当差值超过一定倍数的布林带时,根据基础EMA的方向生成做多或做空信号。
-
-### 策略原理
-
-该策略使用两个特殊类型的EMA指标来计算波动率差值。这两个EMA指标的计算公式为:
-
-```
-hJumper = math.max(src,ta.ema(src,lx)) 
-
-lJumper = math.min(src,ta.ema(src,lx))
-
-dif = (hJumper / lJumper) - 1
-```
-
-该指标立即响应价格的大幅波动,没有滞后。
-
-当dif超过布林带上轨时,产生入场信号;当dif低于布林带中轨时,产生出场信号。基础EMA方向决定做多或做空方向。
-
-### 优势分析
-
-该策略最大的优势是捕捉突破信号的速度快,没有滞后。这是通过计算两个特殊的零时滞后EMA实现的。这使得策略可以即时响应价格突破事件,从而在趋势形成初期捕捉更高的效率。
-
-另一个优势是该策略仅仅使用一个参数lx。参数少使得策略容易调优,也减少了过度优化的风险。
-
-### 风险分析
-
-该策略的主要风险在于突破信号可能出现假突破。当价格出现震荡时,可能会连续产生假突破。为了减少这样的风险,可以适当调大布林带倍数,使信号更加稳定。
-
-另一个风险是在震荡行情中会出现频繁的小损益。这可以通过调整出场机制来缓解。比如设定止损或止盈价格。
-
-### 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 结合其他指标过滤入场信号,减少假突破的概率
-
-2. 增加止损止盈机制,管理持仓风险
-
-3. 引入交易量的确认,避免出现无量突破的假信号
-
-4. 使用自适应布林带参数,根据市场波动率调整参数
-
-5. 基于机器学习方法动态优化策略参数
-
-### 总结
-
-该即时突破波动率EMA策略通过计算零时滞后的EMA捕捉价格趋势的势头,具有响应迅速、参数简单等优点。下一步可以从过滤信号、止损止盈、交易量确认等方面进行优化,使策略在不同市场环境中都能稳定运行。
-
-||
 
 ### Overview
 
@@ -114,7 +61,6 @@ Below are some directions this strategy can be optimized:
 
 In summary, this zero lag volatility breakout EMA strategy captures price momentum rapidly by using specially calculated EMAs without lag. Next step optimizations may include adding filters, stop loss/profit, volume confirmation etc. to make the strategy robust across different market environments.
 
-[/trans]
 
 > Strategy Arguments
 

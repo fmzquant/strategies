@@ -10,57 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14e488eaf152980d1de.png)
-[trans]
-
-## 概述
-
-这个策略的核心思想是基于多个指数移动平均线(EMA)的交叉来产生交易信号。当短期EMA上穿较长期的EMA时,做多;当短期EMA下穿较长期的EMA时,平仓。这个策略允许配置多个EMA周期,每个EMA都可以独立启用,策略会在所有启用的EMA上进行交叉交易。
-
-## 策略原理
-
-该策略设置了8个EMA周期,分别是8日线、13日线、21日线、34日线、55日线、89日线、144日线和233日线。这些EMA被配置为可以独立启用或禁用。
-
-当较短期的EMA从下方上穿较长期的EMA时,产生买入信号;当较短期的EMA从上方下穿较长期的EMA时,产生卖出信号。如果两个EMA都被启用, shorterEMA > longerEMA 为做多信号,shorterEMA < longerEMA 为平仓信号。
-
-举例来说,如果启用55日EMA和89日EMA,当55日EMA上穿89日EMA时,做多;当55日EMA下穿89日EMA时,平仓。这允许这个策略动态调整使用的EMA组合,从更长的周期转换到更短的周期,或者反过来。
-
-持仓数量设置为账户权益除以close再除以启用的EMA组数。这确保了每个EMA上的头寸大小是相同的。
-
-## 优势分析
-
-- 可以通过配置不同的EMA来调整策略的周期灵活度
-- 每个EMA可以独立配置,允许高度自定义
-- 持仓按比例分配在每个EMA上,有利于风险管理
-- 使用了多个EMA,可以在不同市场阶段切换更适合的EMA
-- 策略简单清晰,容易理解和调试
-
-## 风险分析
-
-- EMA作为单一指标无法确定市场结构,可能发出错误信号
-- 大幅震荡市场中EMA容易互相交叉,增加交易频率和滑点成本
-- 需要优化EMA参数以适应不同市场
-- 可能需要结合其他指标来确认交易信号
-
-可以考虑与其他指标组合使用EMA,例如通道指标或震荡指标来过滤信号,或结合趋势和反转指标。 此外,优化EMA参数非常重要,需要针对不同市场调整。
-
-## 优化方向 
-
-该策略可以从以下几个方面进行优化:
-
-1. EMA参数优化。可以通过参数扫描和Walk Forward Analysis方法找到最佳EMA参数组合。
-
-2. 增加过滤条件。可以在EMA交叉时增加额外过滤条件来避免错误信号,例如交易量过滤,波动率过滤等。
-
-3. 结合其他指标。可以将EMA与MACD,KDJ,布林带等其他指标组合,利用它们的互补性获利。
-
-4. 动态调整仓位。可以根据市场波动率或趋势力度动态调整每个EMA上的仓位。
-
-5. 损益比优化。优化止损止盈水平,找到最佳风险回报比。
-
-## 总结
-该策略整体来说非常简单直接,通过EMA交叉来捕捉短期和中长期趋势。它的优势在于高度可配置性和灵活性,允许交易者选择最适合自己的EMA组合。但是作为单一指标的EMA容易产生错误信号,这是该策略最大的风险。通过与其他指标组合以及参数优化,可以获得更好的交易表现。
-
-||
 
 ## Overview
 
@@ -115,7 +64,6 @@ The strategy can be optimized in several aspects:
 
 Overall this is a very simple and straightforward strategy generating signals from EMA crossovers to catch short term and medium term trends. Its main advantage lies in the high configurability and flexibility to allow traders to select the EMAs suitable for them. However EMA alone can give false signals easily which is the biggest risk. Combining with other indicators and parameter optimization can lead to better trading performance.
 
-[/trans]
 
 > Strategy Arguments
 

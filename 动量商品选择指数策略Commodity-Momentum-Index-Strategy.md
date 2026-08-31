@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1405f2260d16af433b9.png)
-[trans]
-
-## 概述
-
-动量商品选择指数(Commodity Selection Index,CSI)策略是一种追踪市场动量的短线交易策略。它通过计算商品的趋势性和波动性,来识别出具有强劲动量的商品进行交易。该策略由威尔斯·怀尔德(Welles Wilder)在他的书《新技术分析交易系统概念》中提出。
-
-## 策略原理
-
-该策略的核心指标是CSI指数,它综合考虑了商品的趋势性和波动性。具体计算方法是:
-
-CSI = K × ATR × ((ADX + ADX的n日均线)/2)
-
-其中,K是缩放系数,ATR代表平均真实波动幅度,它衡量市场的波动性。ADX代表平均方向指数,它反映市场的趋势性。
-
-通过计算每个商品的CSI指数值,并与其n日简单移动均线进行比较,当CSI高于其移动均线时产生买入信号,当CSI低于其移动均线时产生卖出信号。
-
-该策略选择CSI指数较高的商品进行交易。因为这些商品有很强的趋势性和波动性,能在短期内获得更大的盈利潜力。
-
-## 优势分析
-
-该策略具有以下几个优势:
-
-1. 捕捉市场动量,能充分利用商品的趋势性和波动性特征。
-2. 采用双重指标,使交易信号更加可靠。
-3. 简单清晰的交易规则,适合自动化交易。
-4. 专门设计用于短线交易,能快速把握短期机会。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 过于依赖技术指标,可能出现错误信号。
-2. 追踪动量的特性使其仅适合短线操作。
-3. 波动过大可能触发止损,给交易带来损失。
-4. 需要承受一定的杠杆水平,从而面临更大的资金风险。
-
-为控制风险,应合理设定止损位置,控制单笔仓位规模,并适当调整参数以符合不同市场环境。
-
-## 优化方向
-
-该策略可从以下几个方面进行优化:
-
-1. 测试更多参数组合,寻找最佳参数。
-2. 加入其它辅助指标进行信号过滤。
-3. 结合波动率反转等其他策略形成组合。
-4. 利用机器学习训练模型产生更可靠的交易信号。
-
-## 总结
-
-动量商品选择指数策略通过捕捉市场中的趋势性强和波动性大的商品,实现了简单快速的短线交易。这种专门追踪动量的方法使其信号清晰,易于实施自动化。当然也需要注意控制风险,并持续改进升级以适应市场环境的变化。
-
-|| 
 
 ## Overview  
 
@@ -114,7 +62,6 @@ The strategy can be optimized in the following aspects:
 
 The commodity momentum index strategy realizes simple and fast short-term trading by capturing commodities with strong trends and high volatility in the market. This specialized approach of tracking momentum makes its signals clear and easy to implement algorithmically. Of course, it is also necessary to pay attention to risk control and continue to improve and upgrade to adapt to changes in market conditions.
 
-[/trans]
 
 > Strategy Arguments
 

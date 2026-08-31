@@ -10,64 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f23c8344ea6d11808e.png)
-[trans]
-## 概述
-
-本策略是一个只做多头的Ichimoku云交易策略。它在转换线上穿基准线时开仓做多,在基准线下穿转换线时平仓。此外,在开仓和平仓时还会检测滞后Span,如果滞后Span高于云层就开仓,低于云层就平仓。
-
-## 策略原理
-
-该策略使用Ichimoku技术指标中的几条线。具体来说:
-
-1. 转换线:最近9天的最高价和最低价的平均值,代表一定期间的趋势转换。
-
-2. 基准线:最近26天的最高价和最低价的平均值,代表一定期间内的平均价格变动。 
-
-3. 前沿线A:转换线和基准线的平均值。
-
-4. 前沿线B:最近52天的最高价和最低价的平均值,代表中长期趋势的先导指标。
-
-5. 滞后Span:当前收盘价,滞后推移26天。代表趋势的力量。
-
-在开仓时,要同时满足转换线上穿基准线和滞后Span高于云层的条件。这表示短期和中长期趋势都是向上的信号。
-
-平仓时,要同时满足基准线下穿转换线和滞后Span低于云层的条件。这表示趋势发生逆转,应该退出头寸。
- 
-## 策略优势
-
-1. 使用Ichimoku云指标判断趋势,准确性较高。
-
-2. 同时结合多条线判断,避免produce假信号。 
-
-3. 只做多头,符合大部分数字货币的长线上涨趋势。
-
-4. 条件过滤相对严格,实现质量较高的信号。
-
-## 策略风险
-
-1. 仓位只有全仓或空仓,无法调整仓位规模。 
-
-2. 在牛市中表现出色,但在熊市中亏损风险大。
-
-3. 参数默认设置针对加密货币,需要调整以适应其他品种。
-
-4. 交易信号较少,容易错过部分机会。
-
-## 策略优化
-
-1. 增加仓位调整功能,在亏损达到一定比例时关闭部分仓位。
-
-2. 添加卖出信号,在关键支持下方平仓,减少亏损。
-
-3. 优化参数设置,使其能够适应更多品种,提高稳定性。
-
-4. 增加止损功能,在亏损达到阈值时止损。
-
-## 总结
-
-本策略作为一个只做多头的Ichimoku云交易策略,在判断趋势中具有较高的准确性。它同时结合了多条Ichimoku线作为过滤条件,可以较为可靠地判断趋势转折点。该策略特别适合那些长线上涨的品种,比如加密货币。通过进一步完善止损、调仓等功能,可以使该策略的风险控制能力得到提升,适应更多品种和更广泛的市场环境。
-
-||
 
 ## Overview
 
@@ -125,7 +67,6 @@ To close a position, the base line needs to cross below the conversion line AND 
 
 As a long-only Ichimoku strategy, this approach reliably determines trend reversals by combining multiple Ichimoku lines. It works especially well for assets with persistent upside trends like cryptocurrencies. Further enhancements to risk management like stop losses and position sizing can make this strategy more robust across different market environments and asset types.
 
-[/trans]
 
 > Strategy Arguments
 

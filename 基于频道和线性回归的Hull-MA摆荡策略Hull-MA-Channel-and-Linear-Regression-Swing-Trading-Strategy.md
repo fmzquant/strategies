@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/20df324d5a4a600f6f2.png)
-[trans]
-
-## 概述
-
-本策略是一个结合Hull MA、价格频道、EMA信号和线性回归的摆荡交易策略。该策略利用Hull MA判断市场趋势方向,价格频道和线性回归判断底部区域,EMA信号判断入市时机,以捕捉中短线趋势。
-
-## 策略原理
-
-该策略主要由以下几部分指标组成:
-
-1. Hull MA
-   - Hull MA一般参数期间为337,代表中长线趋势方向
-   - 当2倍18周期WMA高于337周期WMA时为多头市场,反之为空头市场
-2. 价格频道
-   - 价格频道由高低价EMA组成,代表容易形成支撑和阻力的区域
-3. EMA信号
-   - EMA信号期间一般为89周期,代表短线趋势和入市信号
-4. 线性回归
-   - 快线6周期,判断底部和突破
-   - 慢线89周期,判断中长线趋势方向
-
-入场逻辑:
-
-多头入场:Hull MA向上且价格高于上轨,线性回归向上穿越短期EMA
-空头入场:Hull MA向下且价格低于下轨,线性回归向下穿越短期EMA
-
-出场逻辑:
-
-多头出场:价格低于下轨且穿越线性回归向下
-空头出场:价格高于上轨且穿越线性回归向上
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 多指标组合,判断更准确
-   - Hull MA判断主趋势,频道判断支撑压力,EMA判断入场时机
-2. 摆荡交易,捕捉中短线趋势
-   - 策略为反转为主的摆荡交易策略,能捕捉每个中短线周期的趋势
-3. 风险可控,回撤较小
-   - 策略只在高概率区域发出信号,避免追高杀跌
-
-## 风险分析
-
-该策略也存在一定的风险:  
-
-1. 参数优化空间有限
-   - 主要参数如EMA周期较为固定,优化空间小
-2. 震荡行情中可能亏损
-   - 价格横盘震荡时,止损可能被触发
-3. 需要一定的技术分析基础
-   - 策略思路需要一定的价格行为和指标知识,不适合所有人
-
-可以从以下几点进行优化:
-
-1. 调整止损策略,例如余震止损
-2. 优化进场离场逻辑
-3. 增加其他指标过滤,例如MACD
-
-## 总结
-
-本策略综合运用Hull MA、价格频道、EMA和线性回归等多个指标,形成一个较为完整的中短线摆荡交易策略。相比单一指标,该策略可以大大提高判断准确性,在趋势和反转中捕捉利润。但也存在一定风险,需要技术分析基础。通过参数调整和进场离场逻辑优化,可以进一步提高策略稳定性。
-
-||
 
 
 ## Overview
@@ -139,7 +75,6 @@ Improvements:
 The strategy combines Hull MA, price channel, EMA and linear regression for a complete medium-term swing trading strategy. Compared to single indicator strategies, it improves accuracy significantly in catching trends and reversals. But there are still risks, requiring technical analysis knowledge. Further improvements on parameters and logic can enhance stability.  
 
 
-[/trans]
 
 > Strategy Arguments
 

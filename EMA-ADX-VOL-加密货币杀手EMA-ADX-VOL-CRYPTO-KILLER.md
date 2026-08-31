@@ -10,54 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c9e738520dfa402fba.png)
-[trans]
-利用EMA均线系统判断趋势方向,ADX指标判断趋势强弱,并结合交易量过滤进行入场的量化交易策略
-
-## 原理
-
-该策略首先利用5条不同周期的EMA均线判断价格趋势方向,当5条EMA均线全部上涨时判断为多头趋势形成,当5条EMA均线全部下跌时判断为空头趋势形成。
-
-然后利用ADX指标判断趋势的强弱,当DI+线高于DI-线且ADX值超过设定阈值时判断为强势多头行情,当DI-线高于DI+线且ADX值超过设定阈值时判断为空头行情。
-
-同时,利用交易量的突破进行额外确认,要求当前K线交易量要大于一定周期均量的倍数,从而避免在低量位置错误入场。
-
-结合趋势方向、趋势强度和交易量的综合判断,形成该策略的多头和空头开仓逻辑。
-
-## 优势
-
-1. 使用EMA均线系统判断趋势方向,比单一EMA均线判断更加可靠。
-
-2. 借助ADX指标判断趋势强弱,避免在无明确趋势时错误入场。
-
-3. 交易量过滤机制,确保有充足的交易量支持,增强策略可靠性。
-
-4. 多重条件综合判断,开仓信号更加精确可靠。
-
-5. 策略参数较多,可以通过参数优化不断提升策略效果。
-
-## 风险及解决
-
-1. 在震荡行情中,EMA均线、ADX等判断可能发出错误信号,从而产生不必要的亏损,可以适当调整参数,或增加其他指标进行辅助判断。 
-
-2. 交易量过滤条件过于严格,可能错过行情机会,可以适当降低交易量过滤的参数。
-
-3. 策略产生的交易频率可能较高,需要注意资金管理,适当控制单笔仓位规模。
-
-## 优化方向
-
-1. 测试不同参数组合,寻找最佳参数,提升策略效果。
-
-2. 增加其他指标,如MACD、KDJ等与EMA和ADX进行组合,形成更强大的综合开仓判断。 
-
-3. 添加止损策略,进一步控制风险。
-
-4. 优化仓位管理策略,实现更科学的资金管理。
-
-## 总结
-
-该策略综合考虑价格趋势方向、趋势强度和交易量信息,形成开仓规则,在一定程度上避免了误入常见陷阱,具有较强的可靠性。但仍需要进一步通过参数优化、指标优选以及风险控制来完善策略系统,将效果进一步提升。总的来说,该策略框架具有很大的拓展潜力和优化空间。
-
-||
 
 A quantitative trading strategy that uses an EMA system to determine trend direction, ADX indicator to determine trend strength, and incorporates trading volume filtering for entry
 
@@ -105,7 +57,6 @@ Combined with the comprehensive judgment of trend direction, trend strength and 
 
 By comprehensively considering price trend direction, trend strength and trading volume information, this strategy forms opening rules to avoid some common traps to some extent and has relatively strong reliability. But it still needs further improvement of the strategy system through parameter optimization, indicator selection and risk control to further improve performance. In general, this strategy framework has great potential for expansion and optimization space.
 
-[/trans]
 
 > Strategy Arguments
 

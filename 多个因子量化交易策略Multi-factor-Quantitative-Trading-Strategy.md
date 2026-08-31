@@ -10,83 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/102d5b4b9a64f8f3b05.png)
-[trans]
-
-这是一个结合多种技术指标做多空判断的量化交易策略。该策略综合考虑动量指标、趋势指标、Ichimoku云图等多个因子,形成最终的买卖判断。该策略具有较强的稳定性和抗风险能力。
-
-## 原理分析
-
-该策略主要由以下几个部分组成:
-
-1. 动量指标:Parabolic SAR, Leledc力度指标, Kaufman自适应移动平均线等
-
-2. 趋势指标:RahulMohindar震荡器, Trend Magic等 
-
-3. Ichimoku云图:包括Tenkan线,Kijun线等
-
-4. 量价指标:Volume Flow Indicator
-
-5. 波动指标:Wave Trend Oscillator
-
-6. TD序列
-
-这些指标分别从不同角度判断当前市场趋势和力度。Parabolic SAR判断趋势反转点,Leledc力度指标判断momentum, Ichimoku云图判定支撑压力。当大多数指标给出同向信号时,形成最终买入或卖出判断。
-
-该策略同时设置了过滤条件,只在每月、每天的指定日期范围内进行交易,从而减少无效交易的次数。
-
-## 优势分析
-
-- 多因子综合判断,提高准确率,具有较强的抗风险能力
-
-- 利用不同类型指标进行交叉验证,避免单一指标失效的风险
-
-- 设置过滤条件,避免在不适宜的时间段进行无效交易
-
-- 采用 Pine Script 编写,可直接在 TradingView 平台使用,方便快捷
-
-- 指标参数可调整,可以针对不同市场进行优化
-
-- 可视化显示指标信号,直观判断市场结构
-
-## 风险分析
-
-- 多因子组合需要调整权重和参数,存在一定优化难度
-
-- 单一指标在某些市场情况下可能失效
-
-- 过滤条件设置不当可能错过机会
-
-- 需要注意避免过度优化
-
-- 交易者需要关注指标失效的风险,及时调整策略
-
-对策:
-
-- 优化调整指标参数,使其针对当前市场更有效
-
-- 调整权重,增大有效指标作用,降低无效指标作用  
-
-- 适时调整过滤条件,兼顾抓机会和规避风险
-
-## 优化思路
-
-- 增加机器学习算法,自动调整指标权重
-
-- 增加情绪指标、资金流指标等更多因子
-
-- 对交易品种、时间段进行测试,设定最优参数
-
-- 测试不同持仓时间的效果
-
-- 结合更多过滤条件,如季节性、经济数据等
-
-- 添加止损策略
-
-## 总结
-
-本策略综合多个指标形成最终判断,具有抗风险能力强的优势。同时也需要关注单一指标失效的风险,持续优化和调整参数。未来可进一步优化指标权重设定、增加更多因子、测试最优持仓周期等。
-
-||
 
 
 
@@ -164,7 +87,6 @@ Countermeasures:
 
 The strategy combines multiple indicators for stronger risk resistance. But indicator failure risks need to be monitored, parameters continuously optimized. Future enhancements may include optimizing indicator weights, adding more factors, testing optimal holding periods etc.
 
-[/trans]
 
 > Strategy Arguments
 

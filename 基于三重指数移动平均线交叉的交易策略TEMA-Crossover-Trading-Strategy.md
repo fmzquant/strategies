@@ -9,67 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-## 概述
-
-该策略通过计算两组不同参数的三重指数移动平均线(TEMA)的交叉来判断买入和卖出信号。当快线TEMA上穿慢线TEMA时生成买入信号,下穿时生成卖出信号。该策略结合了TEMA平滑曲线的优点,旨在发现潜在的趋势变化点。
-
-## 策略原理
-
-1. 计算一组时间长度为34的三重EMA作为快线TEMA。
-
-2. 计算一组时间长度为13的三重EMA作为慢线TEMA。
-
-3. 当快线TEMA上穿慢线TEMA时,产生买入信号。
-
-4. 当快线TEMA下穿慢线TEMA时,产生卖出信号。
-
-5. 使用strategy模块进行自动的订单管理。
-
-## 优势分析
-
-1. TEMA曲线更加平滑,可以减少假信号。
-
-2. 不同曲线交叉可抓住短期和长期趋势的变化。
-
-3. 策略信号简单清晰,容易执行。
-
-4. 可自由调整参数,适应不同周期。
-
-5. 可 preset 停损和止盈位置,控制风险。
-
-## 风险分析
-
-1. 参数设置不当可能产生过多错误信号。
-
-2. TEMA存在一定滞后,可能错过突发事件。
-
-3. 部分重大突破无法提前预警。
-
-4. 需要结合趋势和支持阻力判断。
-
-5. 存在一定程度的回调风险。
-
-## 优化方向
-
-1. 测试优化参数,找到最佳组合。
-
-2. 增加过滤条件,确保质量信号。
-
-3. 结合其他指标判断大趋势。 
-
-4. 开发退出机制,防止超时持有。
-
-5. 调整固定止损止盈为动态止损。
-
-6. 测试不同品种和周期的实盘效果。
-
-## 总结
-
-该策略利用TEMA指标的平滑优势和交叉判定产生简单的交易信号。通过参数优化、严格过滤和风险控制,可成为稳定的趋势跟踪策略。总体来说,该策略实用性强,值得深入优化测试,以取得更好的回报。
-
-|| 
 
 ## Overview
 
@@ -129,7 +68,6 @@ This strategy uses the crossover of two triple exponential moving averages (TEMA
 
 This strategy utilizes the smoothness of TEMA and crossover logic to generate simple trading signals. With parameter optimization, strict filtering, and risk control, it can become a steady trend following strategy. Overall a practical strategy worth in-depth optimization and testing for improved returns.
 
-[/trans]
 
 > Strategy Arguments
 

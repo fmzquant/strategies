@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/14ce55c31de68afbd3f.png)
-[trans]
-
-### 概述
-
-该策略是一个追踪型的超级趋势策略,主要思想是结合不同参数设置的超级趋势指标来实现追踪效果,并利用过滤器指标进行风险控制。策略核心思想简单实用,容易理解,适合初学者学习。
-
-### 策略原理  
-
-本策略主要由三组不同参数设置的超级趋势指标组成。第一组主超级趋势指标采用默认参数,用于基本判断行情趋势方向;第二组副超级趋势指标通过降低ATR周期和增大ATR倍数,实现更敏感地追踪价格变化;第三组过滤器超级趋势指标则适当增大ATR周期和ATR倍数,用来过滤假突破。  
-
-当主超级趋势发出买入信号时,如果副超级趋势也同步发出信号,并且过滤器超级趋势方向为上涨,则策略采取追踪买入;当主超级趋势发出卖出信号时,如果副超级趋势也同步发出信号,并且过滤器超级趋势方向为下跌,则策略采取追踪卖出。这样可以在保证捕捉主要趋势的同时,利用副超级趋势指标灵敏地追踪细微调整,从而进行及时入场和止损。
-
-### 策略优势  
-
-1. 策略思路简单清晰,容易理解,适合初学者学习  
-2. 策略参数设置合理,可以有效追踪行情和控制风险
-3. 策略信号较为精准可靠,胜率较高  
-4. 结合不同的参数组合,实现追踪效果  
-5. 添加过滤器机制,可以有效过滤误报信号,控制风险  
-
-### 策略风险  
-
-1. 股票本身的系统性风险  
-2. 超级趋势指标在某些市场中可能会产生滞后  
-3. ATR指标所用参数设置不当可能导致策略信号出现偏差  
-4. 策略交易量不足可能导致难以全部平仓止损
-
-**主要风险防范措施:**  
-
-1. 选择流动性好、波动较大的股票  
-2. 适当优化参数,降低滞后的可能  
-3. 参数测试优化,提高信号准确率  
-4. 适当加大交易量,确保止损空间
-
-### 策略优化方向  
-
-1. 测试不同的ATR周期参数组合,优化追踪效果  
-2. 尝试其他 volatility 指标替代 ATR  
-3. 增加或减少超级趋势组合数量,测试效果  
-4. 尝试结合其他指标进行信号过滤优化  
-5. 测试不同止损方式,寻找最优方案  
-
-### 总结  
-
-本策略总体思路清晰简单,通过不同参数设置的多组超级趋势指标相互配合,实现追踪入场和风险控制。策略信号较为精准,实盘表现较好,适合初学者学习,也可作为模板进行各种指标和参数的测试优化,是一款值得推荐的超级趋势策略。
-
-||
 
 ### Overview  
 
@@ -104,7 +57,6 @@ When the main supertrend issues a buy signal, if the deputy supertrend also issu
 
 The overall idea of this strategy is clear and simple. By coordinating multiple groups of supertrend indicators with different parameter settings, it realizes tracking entry and risk control. The strategy signal is more accurate with good live performance. It is suitable for beginners to learn, and can also be used as a template for testing and optimizing various indicators and parameters. This is a supertrend strategy worth recommending.  
 
-[/trans]
 
 > Strategy Arguments
 

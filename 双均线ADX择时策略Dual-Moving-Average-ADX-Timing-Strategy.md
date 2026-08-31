@@ -10,80 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1503796d6be75fc15f1.png)
-[trans]
-
-
-## 概述
-
-双均线ADX择时策略通过结合使用2/20均线和ADXR指标来识别趋势,在趋势开始阶段产生交易信号。该策略首先使用2/20指数移动平均线判断价格趋势方向,然后结合ADXR指标进一步确认趋势信号,从而产生更可靠的交易信号。
-
-## 策略原理
-
-双均线ADX择时策略的核心逻辑基于以下几个部分:
-
-1. 2/20指数移动平均线(EMA)
-   - 使用2日和20日两条不同参数的EMA。
-   - 当价格上穿2日EMA时视为看涨信号。
-   - 当价格下穿20日EMA时视为看跌信号。
-
-2. ADXR指标
-   - ADXR指标是ADX指标的变种。
-   - 通过计算ADX的简单平均值来减少ADX指标的波动。
-   - ADXR低于某一阈值时说明趋势较弱。
-   - ADXR高于某一阈值时说明趋势较强。
-
-3. 交易信号
-   - 当2日EMA Golden Cross AND ADXR高于阈值时产生看涨信号。
-   - 当20日EMA Dead Cross AND ADXR低于阈值时产生看跌信号。
-   - 通过与ADXR指标的组合,可以过滤掉部分假断和加强真实趋势信号。
-
-该策略的主要创新点在于运用ADXR指标识别初始阶段的趋势,并与传统均线策略的信号进行组合,从而提高信号质量,增强策略的稳定性。
-
-## 策略优势
-
-双均线ADX择时策略具有以下主要优势:
-
-1. 结合双均线和ADXR指标,信号更加准确可靠,可过滤假信号。
-2. 利用ADXR指标识别趋势的初始阶段,能够更早进入确定趋势。
-3. ADXR参数设置灵活,可根据市场调整,适应行情的变化。 
-4. 策略逻辑简单清晰,容易理解,参数调整方便。
-5. 可在多种市场环境中运用,历史测试表现较好。
-
-## 策略风险
-
-双均线ADX择时策略也存在以下主要风险:
-
-1. ADXR参数设置不当可能导致错失交易机会。
-   - 可适当扩大ADXR的参数范围,或根据不同品种调整参数。
-
-2. 特殊行情下可能出现较多假信号。
-   - 可考虑与其他指标组合使用,进一步过滤信号。
-
-3. EMA参数固定,无法适应市场变化。
-   - 可尝试运用自适应EMA参数的优化版本。
-
-4. 无法识别价格震荡区间,可能产生过多无效交易。
-   - 可加入附加逻辑判断或指标识别震荡行情。
-
-## 策略优化方向  
-
-双均线ADX择时策略可从以下几个方面进行进一步优化:
-
-1. EMA参数优化,使其能根据行情自动变化。
-
-2. ADXR参数范围优化,使其能包含更多有效交易信号。
-
-3. 加入附加趋势判断指标,组合生成信号,提升质量。 
-
-4. 增加止损策略,设置止盈标准,控制单笔交易风险。
-
-5. 优化资金管理策略,使其能根据account状态自动调整仓位。
-
-## 总结
-
-双均线ADX择时策略通过传统双均线策略与ADXR指标的创新组合,提高了信号质量,增强了策略稳定性,能够有效识别趋势的开始阶段,历史回测表现较好。该策略优化空间较大,可从多方面进行改进,使其在更复杂的市场中表现出强大的适应能力和获利空间。
-
-||
 
 ## Overview
 
@@ -155,7 +81,6 @@ The strategy can be further optimized and enhanced from the following aspects:
 
 The Dual Moving Average ADX Timing strategy innovatively combines traditional dual moving averages and the ADXR indicator to improve signal quality and enhance stability. It can effectively identify the initial stage of trends with decent historical performance. The strategy has ample room for optimization to make it robust and profitable across more complex markets.
 
-[/trans]
 
 > Strategy Arguments
 

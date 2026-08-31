@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16f62ae6ede288ef8e5.png)
-[trans]
-
-## 概述
-
-本策略结合了相对强弱指标(TRSI)和超级趋势指标(SUPER Trend),形成一套较为完整的量化交易策略。策略主要用于捕捉中长线趋势,同时利用短期指标过滤噪音交易信号。
-
-## 策略原理  
-
-1. 计算TRSI指标判断市场是否处于超买超卖状态,发出买入卖出信号
-2. 使用SUPER Trend指标过滤噪音信号,确认基本面趋势
-3. 在获利盘中的不同阶段设置止损止盈点
-
-具体来说,策略首先计算TRSI指标,判断市场是否出现超卖区域,然后计算SUPER Trend指标判断大趋势方向。结合二者发出交易信号。之后设置止损止盈点,在不同阶段盈利回撤不同比例资金。
-
-
-## 优势分析
-
-本策略有以下几个优势:
-
-1. 多指标组合,提高信号准确率。TRSI判断时点,SUPER Trend过滤方向。
-2. 适用于中长线趋势交易。超买超卖信号容易形成趋势反转。  
-3. 止损止盈设置合理,不同阶段盈利回撤不同比例资金,有效控制风险。
-
-## 风险分析 
-
-本策略也存在一些风险:  
-
-1. 中长线交易,无法捕捉短线交易机会。
-2. TRSI参数设置不当,可能错过超买超卖区间。  
-3. SUPER Trend参数设置不当,可能发出错误信号。
-4. 止损空间过大,无法有效控制风险。
-
-针对这些风险,我们可以从以下几个方面进行优化:
-
-## 优化方向  
-
-1. 结合更多短线指标,识别更多交易机会。 
-2. 调整TRSI参数,缩小误差区间。
-3. 测试并优化SUPER Trend参数。  
-4. 设定浮动止损,实时跟踪止损线。
-
-## 总结  
-
-本策略综合运用TRSI和SUPER Trend等多个指标,形成较为完整的量化交易策略。可有效识别中长线趋势,同时设置止损止盈控制风险。策略优化空间还很大,后续可从提高信号准确率、识别更多交易机会等方面进行改进。总体来说,这是一个较好的量化策略起点。
-
-||
 
 
 ## Overview  
@@ -100,7 +54,6 @@ To address these risks, we can optimize from the following aspects:
 
 This strategy integrates multiple indicators such as TRSI and Super Trend to form a relatively complete quantitative trading strategy. It can effectively identify medium-to-long-term trends while setting stop loss and take profit to control risks. There is still much room for optimization, with subsequent improvements possible in areas like improving signal accuracy and identifying more trading opportunities. Overall, this is a good starting point for a quantitative strategy.
 
-[/trans]
 
 > Strategy Arguments
 

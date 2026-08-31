@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/91010e376227ee5268.png)
-[trans]
-## 概述
-
-这是一个利用多时间尺度的唐奇通道来判断入场和出场点的交易策略。策略的主要思想是:在较长时间尺度上判断趋势方向,找到入场时机;在较短时间尺度上判断趋势反转,找到出场时机。
-
-## 策略原理
-
-该策略主要利用唐奇通道的概念。唐奇通道由通道上沿、下沿和中线组成。通道宽度随时间尺度而变化。我们在这里采用不同的时间尺度构建唐奇通道,具体来说:
-
-1. 使用52周期构建较长时间尺度的唐奇通道,得到通道上沿、下沿和中线
-2. 使用12周期构建较短时间尺度的唐奇通道,得到通道上沿、下沿和中线
-
-入场逻辑:当价格突破较长时间尺度通道的上沿时,判断为多头入场时机。为了避免假突破,我们要求最近3根K线中至少有1根K线收盘价高于该K线的通道上沿,这样可以避免短期过度扩展造成的假突破。
-
-出场逻辑:当价格跌破较短时间尺度通道的下沿时,判断为平仓出场时机。我们同样要求最近3根K线中至少有1根K线收盘价低于该K线的通道下沿,这样可以确认突破的有效性,避免被套。
-
-## 策略优势
-
-1. 该策略融合了趋势跟踪和反转交易的优点。较长时间尺度判断趋势方向,较短时间尺度判断局部反转,两者结合可以在趋势中捕捉局部波动。
-
-2. 运用多时间尺度分析,可以比较好地处理假突破的问题,使得入场和出场更加明确有效。
-
-3. 通过参数优化,可以适应不同品种和市场环境。
-
-## 风险及解决
-
-1. 该策略对参数较为敏感,不同参数可能会得到完全不同的结果。需要充分测试优化以找到最佳参数组合。 
-
-2. 在震荡行情中,策略可能会产生大量的交易信号,导致过度交易。可以通过配置止损来控制单笔损失。
-
-3. 策略没有考虑大级别的趋势判断逻辑,在牛熊转换点可能失败。可以结合其他指标判断大级别走势。
-
-## 优化方向
-
-1. 进行参数优化,找到最佳参数组合。优化周期长度、通道类型等参数。
-
-2. 增加止损逻辑。配置合理的移动止损,控制单笔损失。
-
-3. 结合其它指标判断大级别趋势。例如EMA,K线通道,麦克指标等。避免在关键转折点失败。
-
-## 总结
-
-该策略总体来说是一种典型的多时间尺度通道突破策略。它很好地融合了趋势跟踪和反转交易的优点,通过不同时间尺度的通道判断来实现在趋势中捕捉局部波动的效果。如果参数优化到位,在趋势明显的市场中效果优异。但策略本身比较脆弱,对参数和把握整体走势的判断都很敏感。建议与其他大级别交易策略或指标组合使用,以取得更好的效果。
-
-||
 
 ## Overview
 
@@ -101,7 +56,6 @@ Exit logic: When price breaks below the shorter-term channel bottom, we determin
 
 In summary, this is a typical multi-timeframe Donchain channel breakout strategy. It integrates both trend following and mean reversion nicely to capture local reversals within trends. With optimized parameters, it can perform very well in trending markets. However, the strategy itself is fragile, sensitive to parameters and overall market regime. It is recommended to combine with other strategies or indicators to achieve more robust results.
 
-[/trans]
 
 > Strategy Arguments
 
