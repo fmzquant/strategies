@@ -9,21 +9,20 @@ tfboys
 
 > Strategy Description
 
-RSI简单买卖测试, 默认 70-100卖出,0-30买入
-
+A simple RSI buy/sell test. By default, it sells when RSI is between 70 and 100 and buys when RSI is between 0 and 30.
 > Strategy Arguments
 
 
 
 |Argument|Default|Description|
 |----|----|----|
-|RSIPeriod|14|RSI周期|
-|SlidePrice|0.3|下单滑动值|
-|RSIBuyL|50|RSI买入点(低)|
-|RSIBuyH|50|RSI买入点(高)|
-|RSISellL|50|RSI卖出点(低)|
-|RSISellH|50|RSI卖出点(高)|
-|Interval|1000|出错重试(毫秒)|
+|RSIPeriod|14|RSI period|
+|SlidePrice|0.3|Order slippage value|
+|RSIBuyL|50|RSI buy threshold (low)|
+|RSIBuyH|50|RSI buy threshold (high)|
+|RSISellL|50|RSI sell threshold (low)|
+|RSISellH|50|RSI sell threshold (high)|
+|Interval|1000|Retry interval on error (ms)|
 
 
 > Source (javascript)

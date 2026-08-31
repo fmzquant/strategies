@@ -45,16 +45,16 @@ This strategy trades based on consecutive MACD golden cross and death cross sign
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_int_1|12|快速EMA周期|
-|v_input_int_2|26|慢速EMA周期|
-|v_input_int_3|9|信号线平滑周期|
-|v_input_float_1|0.01|多单止盈设置|
-|v_input_float_2|0.01|多单止损设置|
-|v_input_float_3|0.01|空单止盈设置|
-|v_input_float_4|0.01|空单止损设置|
-|v_input_bool_1|true|(?回测范围)启用时间回测范围|
-|v_input_1|timestamp(1 Jan 2023)|开始时间|
-|v_input_2|timestamp(1 Jan 2024)|结束时间|
+|v_input_int_1|12|Fast EMA Period|
+|v_input_int_2|26|Slow EMA Period|
+|v_input_int_3|9|Signal Line Smoothing Period|
+|v_input_float_1|0.01|Long Take-Profit Setting|
+|v_input_float_2|0.01|Long Stop-Loss Setting|
+|v_input_float_3|0.01|Short Take-Profit Setting|
+|v_input_float_4|0.01|Short Stop-Loss Setting|
+|v_input_bool_1|true|(?Backtest Range)Enable Time-Based Backtest Range|
+|v_input_1|timestamp(1 Jan 2023)|Start Time|
+|v_input_2|timestamp(1 Jan 2024)|End Time|
 
 
 > Source (PineScript)

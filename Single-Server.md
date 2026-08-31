@@ -9,7 +9,7 @@ Single-Server
 
 > Strategy Description
 
-相关文章：
+Related articles:
 https://www.fmz.com/digest-topic/8932
 https://www.fmz.com/digest-topic/8946
 
@@ -19,12 +19,12 @@ https://www.fmz.com/digest-topic/8946
 
 |Argument|Default|Description|
 |----|----|----|
-|config1||跟单配置1|
-|config2||跟单配置2|
-|config3||跟单配置3|
-|config4||跟单配置4|
-|config5||跟单配置5|
-|amountPrecision|3|跟单量精度|
+|config1||Copy-trading config 1|
+|config2||Copy-trading config 2|
+|config3||Copy-trading config 3|
+|config4||Copy-trading config 4|
+|config5||Copy-trading config 5|
+|amountPrecision|3|Copy-trading quantity precision|
 
 
 > Source (javascript)

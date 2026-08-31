@@ -70,19 +70,19 @@ The Turtle Trading Decision System judges the potential trend direction by compa
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_1|timestamp(2013-01-01T00:00:00+08:00)|From Date/开始日期|
-|v_input_2|timestamp(2024-08-01T00:00:00+08:00)|To Date/结束日期|
-|v_input_string_1|Mode 1|Enter Mode/进场系统|
-|v_input_int_1|20|Entry Length/系统1进场长度|
-|v_input_int_2|10|Exit Length/系统2出场长度|
-|v_input_int_3|55|Mode2 Entry Length/系统2进场长度|
-|v_input_int_4|20|Mode2 Exit Length/系统2出场长度|
-|v_input_int_5|14|ATR Period/计算ATR的周期|
-|v_input_float_1|0.02|Risk Per Trade/每笔交易的风险，0.02就是2%|
-|v_input_float_2|2|Initial Stop ATR Multiple/止损使用的ATR倍数|
-|v_input_float_3|0.5|Pyramid ATR Multiple/加仓使用的ATR倍数|
-|v_input_int_6|4|Max Units/最大头寸单位数|
-|v_input_3|true|Highlighter On/Off ?/是否高亮显示|
+|v_input_1|timestamp(2013-01-01T00:00:00+08:00)|From Date|
+|v_input_2|timestamp(2024-08-01T00:00:00+08:00)|To Date|
+|v_input_string_1|Mode 1|Entry Mode|
+|v_input_int_1|20|System 1 Entry Length|
+|v_input_int_2|10|Exit Length|
+|v_input_int_3|55|Mode 2 Entry Length|
+|v_input_int_4|20|Mode 2 Exit Length|
+|v_input_int_5|14|ATR Period|
+|v_input_float_1|0.02|Risk Per Trade (0.02 = 2%)|
+|v_input_float_2|2|Initial Stop ATR Multiple|
+|v_input_float_3|0.5|Pyramid ATR Multiple|
+|v_input_int_6|4|Max Units|
+|v_input_3|true|Highlighter On/Off?|
 
 
 > Source (PineScript)

@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/182f89c39c2ae2b1562.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多重技术指标的趋势跟踪交易系统,通过MACD、RSI、RVI、EMA等指标的交叉信号以及成交量确认来识别市场趋势,并使用追踪止损来管理风险。策略在特定的价格区间内运行,通过多重信号的综合判断来提高交易的准确性和可靠性。
-
-#### 策略原理
-策略采用多层次的信号验证机制,主要包含以下几个关键组成部分：首先,使用20周期和200周期的指数移动平均线(EMA)来确定整体市场趋势；其次,利用MACD指标(12,26,9)的交叉来捕捉趋势的转折点；第三,使用相对强弱指标(RSI)和相对波动指标(RVI)来确认市场的超买超卖状态；最后,通过成交量指标进行交易确认。买入条件需要同时满足：MACD金叉、RSI低于70、RVI大于0、价格高于双均线且成交量达到最小要求。卖出条件则相反。策略还引入了追踪止损机制,通过动态调整止损位置来保护盈利。
-
-#### 策略优势
-1. 多重信号验证机制大大降低了假突破的风险
-2. 结合了趋势跟踪和震荡指标,能够在不同市场环境下保持稳定性
-3. 通过成交量确认来提高交易信号的可靠性
-4. 追踪止损机制能够有效地保护已获得的利润
-5. 价格区间限制能够避免在极端行情下的过度交易
-6. 指标参数可以根据市场情况灵活调整
-7. 系统具有良好的可扩展性和适应性
-
-#### 策略风险
-1. 多重条件可能导致错过一些重要的交易机会
-2. 在横盘震荡市场中可能产生频繁的假信号
-3. 固定的价格区间限制可能使策略错过重要的突破机会
-4. 过度依赖技术指标可能忽视基本面因素的影响
-5. 追踪止损可能在剧烈波动时被过早触发
-
-#### 策略优化方向
-1. 引入自适应参数机制,根据市场波动率动态调整各指标参数
-2. 加入市场情绪指标,提高对市场转折点的预判能力
-3. 开发动态的价格区间判断机制,使策略更具灵活性
-4. 增加时间周期过滤,避免在不利时段进行交易
-5. 优化止损机制,考虑引入基于波动率的动态止损
-6. 加入风险管理模块,实现更完善的仓位管理
-
-#### 总结
-该策略通过多重技术指标的组合使用,构建了一个相对完整的交易系统。虽然存在一定的局限性,但通过合理的参数优化和风险管理,策略具有良好的实用价值。未来可以通过引入更多的自适应机制和风险控制手段来提升策略的稳定性和盈利能力。 || 
-
 #### Overview
 This strategy is a trend-following trading system that combines multiple technical indicators, using cross signals from MACD, RSI, RVI, EMA, and volume confirmation to identify market trends, with trailing stops for risk management. The strategy operates within specific price ranges and uses multiple signal combinations to improve trading accuracy and reliability.
 
@@ -77,7 +43,6 @@ The strategy employs a multi-layered signal verification mechanism with several 
 
 #### Summary
 This strategy constructs a relatively complete trading system through the combination of multiple technical indicators. While it has certain limitations, the strategy has good practical value through reasonable parameter optimization and risk management. Future improvements can be made by introducing more adaptive mechanisms and risk control measures to enhance stability and profitability.
-[/trans]
 
 
 

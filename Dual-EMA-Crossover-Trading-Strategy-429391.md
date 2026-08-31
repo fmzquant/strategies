@@ -11,49 +11,9 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1889edd98f9a1e91cc2.png)
 
-[trans]
-
-
-## 概述
-
-双EMA突破交易策略是一种利用两条不同周期的EMA均线进行买卖信号判断的趋势跟踪策略。该策略同时结合了额外的EMA指标进行交易信号过滤,可在趋势行情中获取较好的入场时机。
-
-## 原理
-
-该策略使用快线EMA(9周期)和慢线EMA(21周期)的金叉死叉来判断买入和卖出时机。当快线上穿慢线时产生买入信号,当快线下穿慢线时产生卖出信号。为了过滤假信号,策略还引入了辅助EMA(5周期)和另外两条EMA(1周期、4周期)。只有在快慢线发生金叉死叉的同时,辅助EMA处于快慢线之间,而且1周期EMA高于4周期EMA时,才会触发真正的交易信号。 
-
-当交易信号触发后,策略会根据ATR值来设置止损位和止盈位。TP1为ATR的6倍,用于获取较快速度的部分利润。若价格未触发TP1,当快线EMA重新跨过辅助EMA时,会直接将仓位平掉,实现TP2止盈。
-
-## 优势
-
-- 使用双EMA组合过滤假信号,可提高交易信号质量
-- 辅助EMA指标可进一步验证趋势方向,减少反向操作风险
-- 双止盈设计,既可快速获利,也可持续跟踪趋势获利
-- ATR动态止损止盈可根据市场波动性进行调整,降低风险
-
-## 风险及优化
-
-- EMA指标容易造成曲线拟合,交易信号可能滞后
-- 短周期EMA组合可能产生更多噪音交易信号
-- 短线操作易受突发事件影响,止损风险较大
-
-优化方向:
-
-- 测试多组EMA参数组合,寻找更优参数
-- 增加其他指标验证,如交易量、波动率等
-- 适当放宽止损范围,降低止损被触发概率
-- 优化双止盈设置比例,平衡获利速度和资金利用效率
-
-## 总结
-
-双EMA突破交易策略利用两条EMA的交叉进行趋势判断,辅以多重EMA过滤及ATR动态止盈止损,可有效跟踪趋势获利。但EMA曲线拟合、止损风险等问题需要注意。通过参数优化、风险管理等措施,可以获得更稳定的交易表现。该策略适合有一定基础的交易者在趋势行情中使用,以获取较高的资金利用效率。
-
-[/trans]
-
-
 ## Overview
 
-The dual EMA crossover trading strategy utilizes two EMA lines of different periods to generate buy and sell signals by identifying trend direction. It also incorporates additional EMA indicators for signal filtering, allowing better entry timing in trending markets. 
+The dual EMA crossover trading strategy utilizes two EMA lines of different periods to generate buy and sell signals by identifying trend direction. It also incorporates additional EMA indicators for signal filtering, allowing better entry timing in trending markets.
 
 ## Principles
 
@@ -63,30 +23,27 @@ Once a trading signal is triggered, the strategy utilizes ATR values to set stop
 
 ## Advantages
 
-- Dual EMA design filters false signals and improves signal quality 
+- Dual EMA design filters false signals and improves signal quality
 - Auxiliary EMA adds trend direction verification, reducing reverse trade risks
-- Dual take profit allows fast profit and sustained trend following  
+- Dual take profit allows fast profit and sustained trend following
 - Dynamic ATR stop loss/take profit adjusts to market volatility
 
-## Risks and Improvements 
+## Risks and Improvements
 
-- EMAs can lag prices and generate late signals 
+- EMAs can lag prices and generate late signals
 - Shorter EMA combos may produce more noise
 - Tighter stops face larger sudden event risks
 
 Improvement directions:
 
 - Test multiple EMA combos for better parameters
-- Add other confirmation indicators like volume, volatility etc.  
+- Add other confirmation indicators like volume, volatility etc.
 - Widen stop loss to lower stop out odds
 - Optimize take profit ratios for profit vs capital efficiency
 
 ## Conclusion
 
 The dual EMA crossover strategy leverages EMA crosses for trend direction, along with multiple EMA filtering and dynamic ATR stop loss/profit taking. This allows effective trend following and profit harvesting. However, EMA fitting limitations and stop loss risks require caution. Proper optimization, risk management etc. can lead to more robust performance. The strategy suits experienced traders to achieve high capital efficiency in trending markets.
-
-[/trans]
-
 > Strategy Arguments
 
 

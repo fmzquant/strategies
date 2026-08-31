@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19dc3a47447f8b92eb2.png)
 
-[trans]
-#### 概述
-该策略是一个基于短周期指数移动平均线(EMA)交叉信号的高频交易系统。它结合了自适应的波动率跟踪机制,通过动态仓位管理和严格的风险控制,实现对短期市场波动的快速捕捉。策略在1分钟或5分钟等较短时间周期上运行,适合追求频繁交易机会的活跃交易者。
-
-#### 策略原理
-策略的核心逻辑基于快速EMA(3周期)和慢速EMA(8周期)的交叉信号。当快线上穿慢线时产生做多信号,当快线下穿慢线时产生做空信号。策略使用ATR指标来度量市场波动率,并据此动态设置止损和获利目标。系统支持固定合约数量交易和基于账户权益的动态仓位管理两种模式。在动态仓位模式下,每笔交易风险控制在账户权益的0.5%以内。策略采用1.2倍的风险收益比,并结合ATR的1.5倍作为移动止损的跟踪距离。
-
-#### 策略优势
-1. 响应速度快:使用较短周期的EMA能够快速捕捉价格趋势的变化,提高交易及时性
-2. 风险管理完善:通过ATR动态调整止损位置,既保护利润又给予价格足够的波动空间
-3. 仓位管理灵活:支持固定合约和动态仓位两种模式,适应不同的交易偏好
-4. 移动止损优化:采用跟踪止损机制,在保护既有利润的同时争取更大收益
-5. 适应性强:策略参数可根据不同市场条件进行优化调整
-
-#### 策略风险
-1. 假突破风险:短周期EMA容易产生虚假交叉信号,导致频繁交易
-2. 滑点影响:高频交易在执行时可能面临较大滑点,影响实际收益
-3. 波动率突变:市场波动率剧烈变化时,基于ATR的止损设置可能不够及时
-4. 交易成本:频繁交易将产生较高的手续费支出
-应对措施包括:增加信号过滤器、优化ATR参数、调整风险收益比、设置每日最大交易次数等。
-
-#### 策略优化方向
-1. 信号优化:引入成交量、波动率等辅助指标,提高信号可靠性
-2. 时间过滤:增加交易时间窗口设置,避开低流动性时段
-3. 动态参数:根据市场状态动态调整EMA周期和风险收益比
-4. 回撤控制:增加动态回撤限制,设置每日止损线
-5. 成本优化:优化开平仓规则,减少不必要的交易次数
-
-#### 总结
-该策略通过结合短周期EMA交叉信号和动态风险管理,构建了一个完整的高频交易系统。策略的优势在于快速响应和严格的风险控制,但也需要注意假信号和交易成本等问题。通过持续优化和参数调整,策略可以更好地适应不同市场环境,提高交易效率和稳定性。 || 
-
 #### Overview
 This strategy is a high-frequency trading system based on short-period Exponential Moving Average (EMA) crossover signals. It combines adaptive volatility tracking mechanisms with dynamic position management and strict risk control to quickly capture short-term market fluctuations. The strategy operates on short timeframes such as 1-minute or 5-minute charts, suitable for active traders seeking frequent trading opportunities.
 
@@ -70,9 +39,7 @@ Mitigation measures include: adding signal filters, optimizing ATR parameters, a
 5. Cost Optimization: Optimize entry/exit rules to reduce unnecessary trades
 
 #### Summary
-The strategy builds a complete high-frequency trading system by combining short-period EMA crossover signals with dynamic risk management. Its strengths lie in quick response and strict risk control, but attention must be paid to false signals and trading costs. Through continuous optimization and parameter adjustment, the strategy can better adapt to different market environments, improving trading efficiency and stability.[/trans]
-
-
+The strategy builds a complete high-frequency trading system by combining short-period EMA crossover signals with dynamic risk management. Its strengths lie in quick response and strict risk control, but attention must be paid to false signals and trading costs. Through continuous optimization and parameter adjustment, the strategy can better adapt to different market environments, improving trading efficiency and stability.
 
 > Source (PineScript)
 

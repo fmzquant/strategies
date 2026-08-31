@@ -9,9 +9,7 @@ multiple-timeframe-trading
 
 > Strategy Description
 
-[trans]演示Pine语言如何跨周期调用||Demonstrates how the pine language use multiple timeframe[/trans]
-
-
+Demonstrates how Pine Script can call data across multiple timeframes.
 
 > Source (PineScript)
 

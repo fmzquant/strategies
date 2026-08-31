@@ -10,70 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1005f23b21aba2dde79.png)
- [trans]
-## 概述
-
-该策略是一个利用多种技术指标进行量化交易的策略。主要使用了EMA均线交叉、SuperTrend指标、RSI指标、MACD指标等多种指标进行配合,形成交易信号。
-
-## 策略原理
-
-该策略的核心交易逻辑基于以下几个方面:
-
-1. EMA均线交叉:计算快线EMA1和慢线EMA2,当快线上穿慢线时生成买入信号,快线下穿慢线时生成卖出信号。
-
-2. VWMA均线:计算VWMA均线,当收盘价上穿该均线时视为买入信号,下穿该均线时视为卖出信号。
-
-3. SuperTrend指标:根据ATR和multiplier参数计算SuperTrend的上下轨,并确定趋势方向。在上升趋势中产生买入信号,在下降趋势中产生卖出信号。
-
-4. RSI指标:计算RSI指标,RSI高于超买线时视为卖出信号,RSI低于超卖区时视为买入信号。  
-
-5. MACD指标:计算MACD的快线、慢线和信号线,快线上穿信号线时产生买入信号,快线下穿信号线时产生卖出信号。
-
-在获得上述多个指标的交易信号后,策略采用“AND”逻辑进行判断,即多个指标同时 emit 信号时才生成最终的买入和卖出信号。
-
-## 策略优势
-
-该策略综合多种指标判断市场,可以有效减少假信号。主要优势包括:
-
-1. 利用多种指标进行复合过滤,可以减少单一指标造成的错误信号。
-
-2. 结合趋势指标和震荡指标,可以在趋势行情中获得额外利润。
-
-3. 采用完善的止损逻辑,可以有效控制单笔交易的最大亏损。
-
-4. 倍投逻辑使得亏损后可以通过加仓获得回本机会。
-
-## 策略风险
-
-该策略主要存在以下风险:  
-
-1. 多重指标组合可能过于保守,错过部分交易机会。可以适当简化指标组合。
-
-2. 倍投加仓逻辑可能导致亏损扩大。应该合理设置加仓次数限制。  
-
-3. 止损位置设定不当可能导致不必要的止损。应定制自适应式止损位置。
-
-4. 指标参数设置不当可能导致产生过多错误信号。应该优化参数以得到最佳参数组合。
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行进一步优化:
-
-1. 评估不同参数组合指标的效果,选取指标权重。
-
-2. 测试不同的指标参数设置。
-
-3. 添加自适应止损逻辑。
-
-4. 加入动态仓位管理机制。
-
-5. 利用机器学习方法对参数和模型进行优化。
-
-## 总结
-
-该策略overall是一个非常实用的量化交易策略。它融合了多种经典技术指标的优势,可以有效进行市场判断。通过参数优化和模型迭代,该策略可以获得更好的交易效果。
-
-||
 
 ## Overview 
 
@@ -136,8 +72,6 @@ The strategy can be further optimized in the following aspects:
 ## Summary  
 
 In summary, this is a very practical quantitative trading strategy. It combines the strength of multiple classical technical indicators for market analysis. Further parameter tuning and model optimization can lead to better results.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -55,9 +55,9 @@ This strategy cleverly combines two classic technical indicators: Bollinger Band
 |Argument|Default|Description|
 |----|----|----|
 |v_input_1|true|GoTradePlz|
-|v_input_2|30|RSI 下限水平|
-|v_input_3|70|RSI 上限水平|
-|v_input_4|5|购买间隔（K线数量）|
+|v_input_2|30|RSI lower level|
+|v_input_3|70|RSI upper level|
+|v_input_4|5|Buy interval (number of bars)|
 
 
 > Source (PineScript)

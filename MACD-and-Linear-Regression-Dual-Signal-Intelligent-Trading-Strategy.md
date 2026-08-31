@@ -9,38 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/130b578667438827053.png)
-
-[trans]
-#### 概述
-本策略是一个结合了MACD(移动平均线收敛发散指标)和线性回归斜率(LRS)的智能交易系统。策略通过多种移动平均方法的组合优化了MACD指标的计算,并引入线性回归分析来增强交易信号的可靠性。该策略允许交易者灵活选择使用单一指标或双指标组合来生成交易信号,并配备了止盈止损机制以控制风险。
-
-#### 策略原理
-策略的核心是通过优化后的MACD和线性回归指标来捕捉市场趋势。MACD部分采用了SMA、EMA、WMA和TEMA四种移动平均方法的组合计算,增强了对价格趋势的敏感度。线性回归部分通过计算回归线的斜率和位置来判断趋势方向和强度。买入信号可以基于MACD的金叉、线性回归的上升趋势或两者的组合确认。同样,卖出信号也可以灵活配置。策略还包含了基于百分比的止盈止损设置,有效管理每笔交易的风险收益比。
-
-#### 策略优势
-1. 指标组合的灵活性：可以根据市场状况选择使用单一指标或双指标组合
-2. 改进的MACD计算：通过多种移动平均方法提高了趋势识别的准确性
-3. 客观的趋势确认：使用线性回归提供了数学统计支持的趋势判断
-4. 风险管理完善：集成了止盈止损机制
-5. 参数可调性强：关键参数都可以根据不同市场特征进行优化
-
-#### 策略风险
-1. 参数敏感性：不同市场环境可能需要频繁调整参数
-2. 信号延迟：移动平均类指标存在一定滞后性
-3. 震荡市不适用：在横盘震荡市场可能产生虚假信号
-4. 双重确认带来的机会成本：严格的双指标确认可能错过一些好的交易机会
-
-#### 策略优化方向
-1. 增加市场环境识别：引入波动率指标来区分趋势和震荡市场
-2. 动态参数调整：根据市场状态自动调整MACD和线性回归的参数
-3. 优化止盈止损：引入动态止盈止损,根据市场波动度自动调整
-4. 增加交易量分析：结合成交量指标来提高信号可信度
-5. 引入时间周期分析：考虑多时间周期确认来提高交易准确性
-
-#### 总结
-该策略通过结合经典指标的改进版本和统计学方法,创建了一个兼具灵活性和可靠性的交易系统。其模块化设计允许交易者根据不同市场环境灵活调整策略参数和信号确认机制。通过持续优化和改进,该策略有望在各种市场环境下保持稳定的表现。 || 
-
 #### Overview
 This strategy is an intelligent trading system that combines MACD (Moving Average Convergence Divergence) and Linear Regression Slope (LRS). It optimizes MACD calculation through multiple moving average methods and incorporates linear regression analysis to enhance signal reliability. The strategy allows traders to flexibly choose between single or dual indicator combinations for generating trading signals and includes stop-loss and take-profit mechanisms for risk control.
 
@@ -68,9 +36,7 @@ The strategy's core lies in capturing market trends through optimized MACD and l
 5. Include timeframe analysis: Consider multiple timeframe confirmation to enhance trading accuracy
 
 #### Summary
-This strategy creates a flexible and reliable trading system by combining improved versions of classic indicators with statistical methods. Its modular design allows traders to adjust strategy parameters and signal confirmation mechanisms according to different market environments. Through continuous optimization and improvement, the strategy shows promise for maintaining stable performance across various market conditions.[/trans]
-
-
+This strategy creates a flexible and reliable trading system by combining improved versions of classic indicators with statistical methods. Its modular design allows traders to adjust strategy parameters and signal confirmation mechanisms according to different market environments. Through continuous optimization and improvement, the strategy shows promise for maintaining stable performance across various market conditions.
 
 > Source (PineScript)
 

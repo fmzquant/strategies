@@ -8,85 +8,8 @@ Scalping-Strategy-Based-on-Market-Liquidity-and-Trend
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/1c3a9e1d77657d124f2.png)
- [trans]
-### 概述
-
-本策略综合考虑市场流通性、趋势和技术指标等多个维度,实现短线策略交易。该策略可以跟随趋势,利用市场流动性较好的时候进行开仓操作,从而获得短线利润。
-
-### 策略原理
-
-1. 基本原理:本策略主要考虑市场流动性和趋势两个维度。在市场流动性较好,且出现趋势的时候进行短线操作。
-
-2. 市场流动性指标:本策略主要使用MFI和交易量变化作为市场流动性指标。当MFI上涨且交易量上涨时,我们认为市场流动性较好,适合开仓。
-
-3. 趋势判断:本策略结合ADX,EMA等多个指标判断趋势。当ADX高于30和其EMA时表示趋势较强。同时,如果快慢EMA发生黄金交叉等情况,也可以验证趋势。
-
-4. 开仓条件:市场流动性较好,且同时出现趋势的时候,如果其他辅助条件(如SAR位置判断等)也符合,则产生开仓信号。
-
-5. 止盈止损设置:本策略针对每个交易设置了固定止盈(10个点)和止损(7.5个点)。
-
-### 优势分析
-
-本策略具有以下优势:
-
-1. 利用市场流动性判断时机:基于MFI和交易量判断市场流动性,避免在市场流动性差的时候开仓。
-
-2. 跟踪趋势获得利润:结合EMA等指标判断趋势方向,助力获得趋势利润。
-
-3. 风险控制到位:设置了固定止盈止损,有效控制单次交易最大损失。
-
-4. 交易频率较高:作为一个短线策略,交易频率会比较高,适合逐步积累利润。
-
-5. 参数优化空间较大:例如MA参数、止损止盈设置等都可以进行优化,提高策略效果。
-
-
-### 风险分析
-
-本策略也存在一些风险:
-
-1. 实盘滑点控制风险:理论止损止盈并不能完全反映实盘情况,实盘中滑点可能比较大。
-
-2. 趋势判断失败风险:本策略对趋势判断依赖较多指标,但仍然存在失败的可能性。
-
-3. 过度交易风险:作为一个短线策略,如果参数设置不当可能导致过度交易。
-
-4. 市场异常情况风险:在市场流动性极差或者政策变化等极端情况下,本策略可能无法正常工作。
-
-对应地,我们可以从以下几个方面来降低风险:
-
-1. 适当放宽止损范围,考虑实盘滑点因素。
-
-2. 优化趋势判断逻辑,引入更多指标,降低失败概率。 
-
-3. 添加开仓频率限制,避免过度交易。
-
-4. 根据市场情况灵活调整参数,应对异常情况。
-
-### 优化方向
-
-本策略的优化方向包括:
-
-1. 引入更多指标优化趋势判断,使得判断更准确。例如引入MACD指标等。
-
-2. 优化MA的周期参数,寻找最佳参数组合。
-
-3. 改进止损止盈策略,例如采用移动止损、区间止损等方式。
-
-4. 对交易次数加入限制,避免过高频率交易。例如每天最多开仓3次。
-
-5. 寻找更好的市场流动性指标,进一步判断开仓时机。例如引入净流入量等指标。
-
-6. 添加参数优化功能,实现参数自动优化寻找最优参数组合。
-
-### 总结
-
-本策略综合考虑市场流动性和趋势等多个维度,在短线内捕捉利润。与传统趋势策略相比,本策略最大的创新在于引入市场流动性指标,避免在市场流动性差时断对开仓。对应地,本策略也存在一定实盘控制风险和趋势判断失败风险。我们可以通过引入更多指标、优化参数以及风险管理的方式不断完善本策略。
-
-||
-
-### Overview  
+ ### Overview  
 
 This strategy comprehensively considers market liquidity, trend and technical indicators to implement short-term trading strategies. The strategy can follow the trend and open positions when market liquidity is relatively good, thereby obtaining short-term profits.
 
@@ -157,11 +80,6 @@ The optimization directions of this strategy include:
 ### Summary  
 
 This strategy comprehensively considers factors such as market liquidity and trend. It captures profits in the short term. Compared with traditional trend strategies, the biggest innovation of this strategy is the introduction of market liquidity indicators to avoid opening positions when market liquidity is poor. Correspondingly, this strategy also has certain real-world control risks and trend misjudgment risks. We can continuously improve this strategy through introducing more indicators, optimizing parameters, and risk management.
-
-[/trans]
-
-
-
 > Source (PineScript)
 
 ``` pinescript

@@ -8,45 +8,8 @@ Triple-Bollinger-Band-Standard-Deviation-Trend-Following-Strategy
 ianzeng123
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/2d8d5b9821f00f02b8d66.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8718abd8ace9b720631.png)
-
-
-
-
-[trans]
-#### 概述
-该策略是一个基于布林带标准差的趋势跟踪交易系统。策略通过观察连续三根蜡烛线相对于布林带上下轨的位置关系来判断趋势的强度,并在趋势确立时进行交易。系统采用了固定风险收益比的方式来管理每笔交易的风险。
-
-#### 策略原理
-策略的核心逻辑基于以下几点:
-1. 使用20周期移动平均线作为布林带的中轨,并使用2倍标准差计算上下轨。
-2. 当连续三根蜡烛线的收盘价都位于上轨之上时,系统认为上升趋势已经确立,在第三根蜡烛线收盘时入场做多。
-3. 当连续三根蜡烛线的收盘价都位于下轨之下时,系统认为下降趋势已经确立,在第三根蜡烛线收盘时入场做空。
-4. 止损设置在入场信号最早的那根蜡烛线的极值处。
-5. 目标价位的设置采用1:1的风险收益比,即盈利目标距离等于止损距离。
-
-#### 策略优势
-1. 信号确认机制稳健 - 要求连续三根蜡烛线突破布林带,有效降低了假突破的风险。
-2. 风险管理合理 - 使用固定的风险收益比进行交易管理,避免了单笔交易的过度损失。
-3. 趋势跟踪效果显著 - 布林带的标准差特性使策略能够适应市场波动率的变化。
-4. 执行规则明确 - 入场、止损和获利目标的设置都有明确的量化标准,不需要主观判断。
-
-#### 策略风险
-1. 横盘市场表现欠佳 - 在无明显趋势的市场中可能产生频繁的假信号。
-2. 入场时机略滞后 - 需要等待三根蜡烛线确认才能入场,可能错过一些行情的早期阶段。
-3. 固定风险收益比的限制 - 1:1的风险收益比可能在强趋势中过早了结获利部位。
-4. 缺乏趋势强度过滤 - 仅依靠价格与布林带的关系判断,未考虑其他趋势确认指标。
-
-#### 策略优化方向
-1. 增加趋势强度过滤器 - 可以引入ADX或者MACD等趋势指标,提高信号质量。
-2. 优化风险收益比设置 - 可以根据市场波动率动态调整风险收益比。
-3. 完善止盈机制 - 考虑增加移动止损或者分批获利的机制,更好地把握大趋势。
-4. 加入成交量确认 - 在信号生成时增加成交量突破确认,提高信号可靠性。
-
-#### 总结
-这是一个设计合理的趋势跟踪策略,通过布林带和多重确认机制来捕捉市场趋势。策略的风险管理框架完善,执行标准明确。虽然存在一定的滞后性,但通过建议的优化方向可以进一步提升策略的稳定性和盈利能力。对于偏好趋势跟踪、注重风险控制的交易者来说,这是一个值得参考的策略框架。 || 
 
 #### Overview
 This strategy is a trend following trading system based on Bollinger Band standard deviation. It determines trend strength by observing the relationship between three consecutive candles and the Bollinger Bands, executing trades when trends are confirmed. The system employs a fixed risk-reward ratio for managing trade risk.
@@ -78,10 +41,7 @@ The core logic is based on the following points:
 4. Include Volume Confirmation - Add volume breakout confirmation when generating signals to improve reliability.
 
 #### Summary
-This is a well-designed trend following strategy that captures market trends through Bollinger Bands and multiple confirmation mechanisms. The strategy features a comprehensive risk management framework with clear execution standards. While there is some inherent lag, the suggested optimization directions can further enhance strategy stability and profitability. For traders who prefer trend following and emphasize risk control, this provides a valuable strategic framework.[/trans]
-
-
-
+This is a well-designed trend following strategy that captures market trends through Bollinger Bands and multiple confirmation mechanisms. The strategy features a comprehensive risk management framework with clear execution standards. While there is some inherent lag, the suggested optimization directions can further enhance strategy stability and profitability. For traders who prefer trend following and emphasize risk control, this provides a valuable strategic framework.
 > Source (PineScript)
 
 ``` pinescript

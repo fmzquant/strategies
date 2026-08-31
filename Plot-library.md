@@ -9,13 +9,12 @@ Zero
 
 > Strategy Description
 
-简化了策略图表画线的逻辑, 可以直接调用封装好的函数
+Simplifies strategy chart plotting logic so you can call pre-packaged helper functions directly.
 
-* 支持画多条线
-* 支持K线图
-* 支持flag小图标
-* 你也可以添加更多图形的支持
-
+* Supports plotting multiple lines
+* Supports candlestick charts
+* Supports small flag icons
+* You can also extend it to support more graphics
 ```
 function main() {
     var isFirst = true

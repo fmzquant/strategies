@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14bd894de203c39644b.png)
 
-[trans]
-#### 概述
-本策略是一个基于斐波那契回撤水平的趋势跟踪策略。策略主要利用前一交易日的最高价和最低价计算关键的斐波那契回撤水平,结合开盘价位置和时间窗口设置多个进场条件,并针对不同条件设置相应的止损位置,从而实现对趋势的把握和风险的控制。
-
-#### 策略原理
-策略首先计算六个关键的斐波那契回撤水平(0、23.6%、38.2%、50%、61.8%和100%)。根据开盘价格相对这些水平的位置,将进场条件分为三种情况:1)开盘价在23.6%-50%之间;2)开盘价在61.8%且在指定时间窗口(9:15-9:30);3)开盘价低于23.6%且低于前日低点。针对这三种情况分别设置不同的止损位置:61.8%回撤位、61.8%-100%回撤中点、38.2%回撤位,形成了一个完整的交易系统。
-
-#### 策略优势
-1. 利用斐波那契回撤水平作为关键支撑阻力位,这些水平在市场中具有较强的指导意义。
-2. 结合时间窗口和价格位置的多重条件判断,提高了策略的准确性。
-3. 针对不同情况设置相应的止损位置,体现了风险管理的灵活性。
-4. 策略逻辑清晰,参数可调整性强,便于根据不同市场情况进行优化。
-
-#### 策略风险
-1. 斐波那契回撤水平的有效性可能受市场环境影响而降低。
-2. 固定时间窗口的设置可能错过其他时间段的良好机会。
-3. 止损位置的设置可能在剧烈波动时被轻易触及。
-4. 策略未考虑市场整体趋势,可能在横盘或震荡市场中频繁交易。
-
-#### 策略优化方向
-1. 引入趋势判断指标(如均线系统),在趋势明确时才执行交易。
-2. 增加波动率指标(如ATR),动态调整止损位置。
-3. 加入交易量分析,提高价格突破的可信度。
-4. 优化时间窗口的设置,可考虑根据历史数据分析最佳交易时间段。
-5. 增加利润目标,实现更完善的获利了结机制。
-
-#### 总结
-该策略通过结合斐波那契回撤水平、时间窗口和多重条件判断,构建了一个较为完整的交易系统。策略的优势在于逻辑清晰、风险可控,但仍需要根据市场情况进行优化和改进。通过增加趋势判断、动态止损和交易量分析等方面的优化,可以进一步提高策略的稳定性和盈利能力。 || 
-
 #### Overview
 This strategy is a trend following system based on Fibonacci retracement levels. It calculates key Fibonacci retracement levels using the previous day's high and low prices, combines multiple entry conditions based on opening price position and time windows, and sets corresponding stop-loss levels for different conditions to capture trends and control risks.
 
@@ -66,10 +37,7 @@ The strategy first calculates six key Fibonacci retracement levels (0, 23.6%, 38
 5. Add profit targets to implement a more complete profit-taking mechanism.
 
 #### Summary
-The strategy builds a relatively complete trading system by combining Fibonacci retracement levels, time windows, and multiple condition judgments. Its advantages lie in clear logic and controllable risks, but it still needs optimization and improvement based on market conditions. Strategy stability and profitability can be further enhanced through optimizations in trend judgment, dynamic stop-loss, and volume analysis.[/trans]
-
-
-
+The strategy builds a relatively complete trading system by combining Fibonacci retracement levels, time windows, and multiple condition judgments. Its advantages lie in clear logic and controllable risks, but it still needs optimization and improvement based on market conditions. Strategy stability and profitability can be further enhanced through optimizations in trend judgment, dynamic stop-loss, and volume analysis.
 > Source (PineScript)
 
 ``` pinescript

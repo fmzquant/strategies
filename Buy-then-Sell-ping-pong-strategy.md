@@ -8,10 +8,8 @@ Buy-then-Sell-ping-pong-strategy
 小草
 
 > Strategy Description
-
-如题，可设定买入价格，买入成功后自动挂卖出价格卖出，
-插件可以在交易终端一键启动，不收取费用，方便手动交易。详细介绍：https://www.fmz.com/digest-topic/5051
-
+As the title suggests, you can set a buy price, and after the buy order is filled the strategy will automatically place a sell order at the specified sell price.
+The plugin can be launched with one click from the trading terminal at no cost, making manual trading more convenient. Detailed introduction: https://www.fmz.com/digest-topic/5051
 > Strategy Arguments
 
 

@@ -9,72 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/6337d527f4e9429104.png)
- [trans]
-## 概述
-
-该策略通过计算不同周期的EMA均线,判断目前行情处于哪个周期阶段,再结合ATR进行突破判断,实现高概率的趋势追踪交易。
-
-## 策略原理
-
-1. 计算5日线、20日线、40日线3条EMA均线
-2. 通过比较3条均线的大小关系,判断目前行情处于6种不同的周期阶段之一
-   - 5日线>20日线>40日线 为第1周期
-   - 20日线>5日线>40日线 为第2周期
-   ......
-3. 在确定周期后,再计算ATR指标,并设定ATR倍数作为突破标准
-4. 当价格超过上一个BAR的ATR trailing stop时产生买入信号
-5. 当价格跌破上一个BAR的ATR trailing stop时产生卖出信号
-6. 通过这样的组合判断,实现高概率的趋势追踪交易
-
-## 策略优势
-
-1. 周期判断增加了信号的可靠性
-   
-   通过判断不同EMA均线的大小关系,可以有效判断市场目前所处的周期阶段,避免在不适宜的周期产生错误信号。
-
-2. ATR突破判断过滤假信号
-
-   ATR指标能够有效表达市场的波动性,设定一定倍数的ATR作为突破标准,可以过滤掉很多假突破信号。
-
-3. 组合判断形成高概率交易机会
-
-   周期判断和ATR突破判断的有机结合,使得产生信号的概率大大提高,从而也提高了交易的盈利概率。
-
-## 策略风险
-
-1. 参数优化难度较大
-
-   由于策略包含多个参数,优化难度较大,不当的参数设置可能影响策略表现。
-
-2. 存在一定的滞后
-
-   在行情快速变化时,EMA均线和ATR指标都存在一定滞后,可能产生错误信号或错过机会。
-
-3. 需要严格的止损
-
-   任何技术指标都难以完全避免错误信号的产生,需要设定严格的止损来控制风险。
-
-## 策略优化方向
-
-1. 进一步优化参数
-
-   通过更丰富的历史数据进行参数优化,找到最佳参数组合。
-
-2. 增加自适应能力
-   
-   可以考虑根据市场波动性自动调整ATR参数,提高策略的自适应能力。
-
-3. 结合其它指标
-
-   可尝试结合波动率、成交量等其它指标来辅助判断,提高信号质量。
-
-## 总结
-
-该策略通过EMA均线判断周期和ATR指标设定动量突破标准,实现高概率的趋势追踪交易。具有判断周期、过滤假信号、提高信号质量等优势。但也存在参数优化难度大、存在滞后等风险,需要进一步优化参数、增加自适应能力等来改进策略。
-
-||
-
 ## Overview
 
 This strategy calculates EMA lines of different periods to determine the current cycle stage of the market, and uses ATR to generate momentum breakout signals for high-probability trend-following trades.
@@ -136,8 +70,6 @@ This strategy calculates EMA lines of different periods to determine the current
 ## Conclusion
 
 This strategy determines cycles with EMA and sets momentum breakout criteria with ATR to achieve high-probability trend-following trades. It has advantages like cycle judgment, false signal filtering and signal quality improvement. But risks like difficult parameter optimization and lagging exist. Further optimization on parameters, adaptivity etc. can improve the strategy.
-
-[/trans]
 
 > Strategy Arguments
 

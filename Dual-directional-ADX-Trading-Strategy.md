@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/ad58a4a820714a412d.png)
- [trans]
-### 概述
-
-双向ADX交易策略是一种利用平均方向指数(ADX)指标实现双向交易的量化策略。该策略通过计算ADX指标与DIPlus和DIMinus指标差值,设定门限判断是否产生交易信号,进行多空头交易,实现盈利。
-
-### 策略原理
-
-1. 计算真实波动范围(True Range)
-2. 计算多头方向运动(Directional Movement Plus)和空头方向运动(Directional Movement Minus)
-3. 计算平滑真实波动范围(Smoothed True Range)
-4. 计算平滑多头运动(Smoothed Directional Movement Plus)和平滑空头运动(Smoothed Directional Movement Minus)
-5. 计算DIPlus、DIMinus和ADX指标
-6. 计算DIPlus与ADX、DIMinus与ADX之间差值
-7. 设定多头和空头交易差值阈值
-8. 当差值大于阈值时判断产生交易信号
-9. 产生买入和卖出委托
-
-该策略核心在于利用ADX等动向指数指标判断趋势方向和强度,结合差值判定法则设定阈值,进行自动交易。
-
-### 优势分析
-
-1. 利用ADX判断趋势方向,可以准确捕捉市场趋势
-2. 应用差值判定法则,可以有效过滤假信号
-3. 双向交易,可以充分捕捉多头和空头机会
-4. 全自动交易,无需人工干预
-5. 策略逻辑清晰,易于理解和修改
-
-### 风险分析
-
-1. ADX指标存在滞后,可能错过趋势转折点
-2. 双向交易风险加大,亏损可能扩大
-3. 设定参数不当可能导致过度交易
-4. 回测数据无法代表真实市场,实盘风险仍存在
-
-解决方法:
-
-1. 结合其他指标确认交易信号
-2. 优化参数,控制交易频率
-3. 严格 Position Sizing管理交易仓位 
-
-### 优化方向
-
-1. 优化ADX参数,改善其灵敏度
-2. 增加其他指标过滤信号
-3. 应用机器学习算法优化参数
-4. 利用高级止损策略控制亏损风险
-5. 结合模型预测得到更准确交易信号
-
-### 总结
-
-双向ADX交易策略overall是一个非常实用的量化策略。它利用ADX指标判断趋势,双向捕捉交易机会。同时应用差值判定确保信号有效性。该策略逻辑清晰简单,易于修改优化,是一种双向趋势跟踪交易策略。通过合理的参数优化、止损策略的应用以及信号过滤,可以进一步增强策略的稳定性和盈利能力。
-
-||
-
 ### Overview  
 
 The dual-directional ADX trading strategy is a quantitative strategy that implements dual-directional trading using the Average Directional Index (ADX) indicator. The strategy generates trading signals by calculating the difference between the ADX indicator and the DIPlus and DIMinus indicators and setting thresholds to determine long and short entries for profit.
@@ -114,8 +59,6 @@ Solutions:
 ### Conclusion  
 
 The dual-direction ADX trading strategy overall is a very practical quantitative strategy. It identifies trends using the ADX indicator and captures trading opportunities in both directions. Meanwhile, it uses difference thresholds to validate signal effectiveness. The strategy has clear and simple logic that is easy to modify and optimize. It is a dual-directional trend following system. Further improvements in stability and profitability can be achieved through parameter optimization, stop loss strategies, and signal filtration.
-
-[/trans]
 
 > Strategy Arguments
 

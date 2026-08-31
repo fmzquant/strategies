@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17a976a8997f5e784bb.png)
 
-[trans]
-#### 概述
-本策略是一个基于多因子回归与动态价格带的量化交易系统。核心逻辑是通过多因子回归模型预测价格走势,结合BTC主导地位、交易量、滞后价格等多个市场因子,构建上下价格带用于信号生成。策略集成了异常值过滤、动态仓位管理、移动止损等多个风险管理模块,是一个全面且稳健的交易系统。
-
-#### 策略原理
-策略主要包含以下核心组件:
-1. 回归预测模块:使用多因子线性回归模型预测价格。因子包括BTC主导地位、交易量、价格滞后项、交互项等。通过计算各因子的beta系数来衡量其对价格的影响程度。
-2. 动态价格带:基于预测价格和残差标准差构建上下价格带,用于识别超买超卖。
-3. 信号生成:当价格突破下轨且RSI超卖时产生做多信号;突破上轨且RSI超买时产生做空信号。
-4. 风险管理:包含异常值过滤(Z分数法)、止损止盈、ATR移动止损等多重保护机制。
-5. 动态仓位:基于ATR和预设风险比例动态调整开仓规模。
-
-#### 策略优势
-1. 多因子整合:综合考虑多个市场因子,提供全面的市场视角。
-2. 自适应性强:价格带会根据市场波动动态调整,适应不同市场环境。
-3. 完善的风险控制:多层次的风险管理确保资金安全。
-4. 灵活可配置:大量参数可调,易于根据不同市场特点优化。
-5. 信号可靠性高:多重过滤机制提高信号质量。
-
-#### 策略风险
-1. 模型风险:回归模型依赖历史数据,在市场剧烈变化时可能失效。
-2. 参数敏感性:众多参数需要精心调优,参数设置不当会影响策略表现。
-3. 计算复杂度:多因子计算较为复杂,可能影响实时性能。
-4. 市场环境依赖:在震荡市场中表现可能优于趋势市场。
-
-#### 策略优化方向
-1. 因子选择优化:可以引入更多市场因子,如市场情绪指标、链上数据等。
-2. 动态参数调整:开发自适应参数调整机制,提高策略适应性。
-3. 机器学习增强:引入机器学习方法优化预测模型。
-4. 信号过滤增强:开发更多信号过滤条件提高准确率。
-5. 组合策略整合:与其他策略组合使用提高稳定性。
-
-#### 总结
-该策略是一个理论扎实、设计完善的量化交易系统。通过多因子回归模型预测价格,结合动态价格带生成交易信号,配备全面的风险管理机制。策略具有较强的适应性和可配置性,适合各种市场环境。通过持续优化和改进,该策略有望在实盘交易中取得稳定收益。 || 
-
 #### Overview
 This strategy is a quantitative trading system based on multi-factor regression and dynamic price bands. The core logic is to predict price movements through a multi-factor regression model, combining multiple market factors such as BTC dominance, trading volume, and lagged prices to construct price bands for signal generation. The strategy integrates multiple risk management modules including outlier filtering, dynamic position management, and trailing stops, making it a comprehensive and robust trading system.
 
@@ -78,7 +43,7 @@ The strategy includes the following core components:
 5. Strategy Integration: Combine with other strategies to improve stability.
 
 #### Summary
-This strategy is a theoretically sound and well-designed quantitative trading system. It predicts prices through a multi-factor regression model, generates trading signals using dynamic price bands, and features comprehensive risk management mechanisms. The strategy demonstrates strong adaptability and configurability, suitable for various market environments. Through continuous optimization and improvement, this strategy shows promise for achieving stable returns in live trading.[/trans]
+This strategy is a theoretically sound and well-designed quantitative trading system. It predicts prices through a multi-factor regression model, generates trading signals using dynamic price bands, and features comprehensive risk management mechanisms. The strategy demonstrates strong adaptability and configurability, suitable for various market environments. Through continuous optimization and improvement, this strategy shows promise for achieving stable returns in live trading.
 
 
 

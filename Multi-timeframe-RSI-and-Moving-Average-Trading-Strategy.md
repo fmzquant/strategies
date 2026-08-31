@@ -10,38 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b536e8585044bea157.png)
- [trans]
-
-## 概述
-
-这个策略结合了随机指标RSI、移动平均线SMA和加权移动平均线WMA来寻找买入卖出信号。它同时在5分钟和1小时时间框架判断趋势方向。在企稳的趋势中,当快线RSI上穿或下穿慢线时产生交易信号。
-
-## 策略原理
-
-该策略首先在1小时和5分钟两个时间框架分别计算144周期加权移动平均线WMA和5周期简单移动平均线SMA。只有当5分钟SMA在WMA之上时,才认为是多头市场。然后策略计算RSI的多空指标,以及对应的K线和D线。当K线从超买区域下穿D线时,产生卖出信号;当K线从超卖区域上穿D线时,产生买入信号。
-
-## 优势分析
-
-这是一个非常有效的趋势跟踪策略。它同时结合了两个时间框架判断趋势,非常有效地减少了错误信号。另外,它结合多种指标进行过滤,包括RSI、SMA和WMA,使信号更加可靠。通过让RSI驱动KDJ,它也修改了普通KDJ策略中容易产生的假信号问题。此外,该策略还有止损和止盈设置来锁定利润,可以有效控制风险。
-
-## 风险分析
-
-该策略最大的风险在于趋势判断错误。在行情转折点时,短期和长期平均线可能同时上翻或下翻,从而产生错误信号。此外,在震荡行情时,RSI也可能产生较多纠缠不清的交易信号。不过这些风险可以通过适当调整SMA和WMA周期以及RSI参数来减轻。
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-1)测试不同长度的SMA、WMA和RSI,找到最佳参数组合
-2)增加其他指标判断,如MACD、布林线等来验证信号可靠性 
-3)优化止损止盈策略,测试固定比例止损、余额滑点止损、跟踪止损等方法
-4)加入资金管理模块,控制单笔投资规模和整体风险敞口 
-5)增加机器学习算法,通过大量回测找到有最好绩效的参数
-
-## 总结
-
-该策略充分利用了移动平均线和随机指标的优势,建立了一个较为可靠的趋势跟踪体系。通过多个时间框架和指标的验证,它能顺利捕捉中长线趋势的方向。同时止损止盈设置也让其承受了一定程度的市场震荡。不过仍有一定改进空间,如测试更多指标结合使用,引入机器学习方法寻找最优参数等。总的来说这是一个非常有前景的交易策略。
-
-||
 
 ## Overview
 
@@ -71,9 +39,8 @@ The strategy can be improved from the following aspects:
 
 ## Summary  
 
-The strategy fully utilizes the strengths of moving averages and oscillators to establish a relatively solid trend following system. By confirming signals across multiple timeframes and indicators, it can smoothly capture mid to long term trends. The stop loss and take profit settings also make it withstand normal market fluctuations to a certain degree. However, there are still rooms of improvement, such as testing more indicator combinations, leveraging machine learning for parameter optimization. Overall speaking, this is a very promising trading strategy.  
+The strategy fully utilizes the strengths of moving averages and oscillators to establish a relatively solid trend following system. By confirming signals across multiple timeframes and indicators, it can smoothly capture mid to long term trends. The stop loss and take profit settings also make it withstand normal market fluctuations to a certain degree. However, there are still rooms of improvement, such as testing more indicator combinations, leveraging machine learning for parameter optimization. Overall speaking, this is a very promising trading strategy.
 
-[/trans]
 
 > Strategy Arguments
 

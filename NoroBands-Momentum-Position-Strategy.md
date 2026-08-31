@@ -10,40 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e5eb3420db5c28efd2.png)
- [trans]
-
-## 概述
-该策略是一个基于Noro的波段理论与量化技术相结合的动量突破策略。它通过计算均线、RSI、波段以及牛熊色彩等多种指标,形成买卖信号并实现波段突破交易。
-
-## 策略原理
-1. 通过平均真实波幅计算出波段的上下轨。价格突破上轨为看涨信号,突破下轨为看跌信号。
-2. 通过RSI指标判断超买超卖区域,RSI低于30看涨,高于70看跌。
-3. 通过最高价与最低价的突破来判断价格的动量方向。
-4. 通过牛熊色彩来判断多头与空头市场。绿色为多头市场,看涨;红色为空头市场,看跌。
-5. 结合均线判断背离来发出交易信号。
-
-## 优势分析
-1. 多种指标组合,提高精确度。
-2. 波段理论与量化技术的结合,使策略更有效。
-3. 动量突破与反转交易结合,增强盈利空间。
-4. 可扩展性强,可根据市场调整参数。
-
-## 风险分析
-1. 参数设置需要不断优化和测试。
-2. 多空切换时无法及时反应,可能出现亏损。
-3. 交易次数较多,易受交易费用和滑点的影响。
-4. 需适时调整波段参数以符合不同周期。
-
-## 优化方向 
-1. 多时间周期验证,寻找最佳参数组合。
-2. 增加止损策略,降低单笔亏损。
-3. 加大仓位管理,提高盈利效率。
-4. 结合深度学习进行参数自动优化。
-
-## 总结
-本策略综合运用多种典型的量化技术指标,通过动量指标与反转指标的结合实现高效盈利。同时运用平均真实波幅理论寻找合理的入场点位。可谓技术指标与理论结合的典范。通过参数优化和风险控制的不断完善,必将成为高效稳定的量化策略。
-
-||
 
 ## Overview
 This strategy combines Noro's bands theory with quantitative techniques to form a momentum breakout strategy. It generates trading signals by calculating moving averages, RSI, bands, color bars and other indicators to implement band breakout trading.
@@ -75,9 +41,6 @@ This strategy combines Noro's bands theory with quantitative techniques to form 
 
 ## Summary 
 This strategy combines typical quantitative indicators to achieve effective profit through momentum and mean reversion indicators. It also uses average true range theory to locate reasonable entry points. A good example of combining theory and techniques. With parameters optimization and risk control improvement, it will become a efficient and stable quantitative strategy.
-
-[/trans]
-
 > Strategy Arguments
 
 

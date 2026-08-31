@@ -10,39 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/deb2c8f31adb212a04.png)
- [trans]
-## 概述
-
-这是一个利用RSI指标判断趋势并设置止损止盈的量化交易策略。该策略结合 RSI 指标判断市场趋势方向,以及设置动态止损止盈来锁定利润,最大程度减少风险。
-
-## 策略原理  
-
-该策略主要通过 RSI 指标判断市场趋势方向来决定做多做空。当 RSI 指标上穿低位线时判断为市场处于上升趋势,做多;当 RSI 指标下穿高位线时判断为市场处于下降趋势,做空。
-
-同时,策略通过追踪每单的开仓价格,设定浮动止损止盈。对做多单设定开仓价格的一定比例作为止损线,做空单则设定开仓价格的一定比例作为止盈线。当价格触碰止损止盈线时,策略会自动平仓止损或止盈。
-
-## 策略优势
-
-- 利用 RSI 指标判断市场趋势方向,避免交易盘整区间;
-- 设定浮动止损止盈,能够灵活锁定利润,有效控制风险;  
-- RSI 参数和止损止盈比例都可以通过外部输入进行调整优化。
-
-## 策略风险  
-
-- RSI 指标存在一定滞后,可能错过短期趋势转换点;  
-- 止损止盈线过于靠近可能被突破清仓。
-
-## 优化方向
-
-- 可以测试不同周期的 RSI 指标判断效果;
-- 可以测试不同的参数组合寻找最佳止损止盈比例;
-- 可以加入附加指标判断过滤信号。
-
-## 总结  
-
-该策略整体来说是一个利用 RSI 指标追踪趋势,并配套浮动止损止盈的量化交易策略。相比单一指标交易策略,该策略在控制风险方面做得较好,可以有效锁定利润。通过参数优化和加入辅助指标判断可以进一步提高策略表现。
-
-||
+ 
 
 ## Overview
 
@@ -74,8 +42,6 @@ At the same time, the strategy tracks the entry price of each order and sets a f
 ## Conclusion
 
 In summary, this is a quantitative trading strategy that uses RSI indicator to track trends and incorporate floating stop loss and take profit. Compared to single indicator strategies, this strategy manages risks quite well by locking in profits flexibly. Further improvements can be made through parameters optimization and adding auxiliary indicators.
-
-[/trans]
 
 > Strategy Arguments
 

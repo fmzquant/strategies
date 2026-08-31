@@ -11,7 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11492f97ea9d229bb5a.png)
 
-这里是一篇关于EMA和Heikin Ashi交易策略的文章:
+Here is an article about the EMA and Heikin Ashi trading strategy:
 
 
 ## Overview

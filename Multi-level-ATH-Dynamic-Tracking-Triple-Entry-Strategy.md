@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/9e4720e6542e0c722f.png)
 
-[trans]
-#### 概述
-这是一个基于历史最高价(ATH)动态跟踪的多层级买入策略。策略通过监控价格从ATH的回撤幅度,在不同跌幅水平实施分批买入操作,并在价格接近ATH时全部卖出获利。该策略充分利用了市场的波动性,通过系统化的分批建仓方式来降低整体持仓成本。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素:
-1. 动态ATH追踪:持续更新历史最高价,并在突破新高时重置买入标记
-2. 三级跌幅触发:分别在10%、15%和20%的回撤位设置买入点
-3. 固定资金管理:每次买入使用相同的资金量($1000)
-4. 回撤平仓机制:当价格恢复到距离ATH 5%范围内时,平掉所有持仓
-策略通过这种递进式的建仓方式,在下跌过程中逐步降低平均持仓成本,并在市场反弹时通过统一平仓来锁定收益。
-
-#### 策略优势
-1. 风险分散:通过分批建仓降低了时间点选择的风险
-2. 成本优化:利用更大幅度的回调来降低平均持仓成本
-3. 趋势跟踪:动态更新ATH确保在上升趋势中持续运作
-4. 资金效率:固定资金分配保证了资金使用的可控性
-5. 自动化执行:明确的进出场条件便于系统化操作
-
-#### 策略风险
-1. 趋势反转风险:在长期下跌趋势中可能会产生连续套牢
-2. 资金耗尽风险:在剧烈波动市场中可能迅速消耗可用资金
-3. 错失机会风险:严格的买入条件可能导致错过一些良好机会
-4. 平仓时机风险:统一的平仓条件可能无法适应所有市场环境
-建议通过设置最大回撤限制和总体仓位控制来管理这些风险。
-
-#### 策略优化方向
-1. 引入趋势过滤器:增加均线或动量指标来确认整体趋势
-2. 优化资金管理:根据波动率动态调整每次买入的资金量
-3. 改进平仓机制:增加分批平仓选项,避免单一价格平仓的风险
-4. 加入止损机制:设置绝对止损位来控制最大风险
-5. 动态参数优化:根据不同市场周期自动调整买入档位
-
-#### 总结
-该策略通过系统化的分批建仓和统一平仓机制,很好地利用了市场的波动性。策略的成功运行依赖于市场具有足够的波动性和最终的上涨趋势。通过合理的风险控制和参数优化,策略可以在不同市场环境下保持稳定的表现。 
-
-|| 
-
 #### Overview
 This is a multi-level entry strategy based on dynamic All-Time High (ATH) tracking. The strategy monitors price retracements from ATH, implements batch purchases at different decline levels, and sells all positions when the price approaches ATH. It effectively utilizes market volatility through systematic position building to reduce overall holding costs.
 
@@ -82,8 +44,7 @@ Recommend managing these risks through maximum drawdown limits and overall posit
 5. Dynamic Parameter Optimization: Automatically adjust entry levels based on different market cycles
 
 #### Summary
-This strategy effectively utilizes market volatility through systematic batch position building and unified exit mechanisms. Successful strategy operation depends on sufficient market volatility and ultimate upward trends. Through proper risk control and parameter optimization, the strategy can maintain stable performance across different market environments.[/trans]
-
+This strategy effectively utilizes market volatility through systematic batch position building and unified exit mechanisms. Successful strategy operation depends on sufficient market volatility and ultimate upward trends. Through proper risk control and parameter optimization, the strategy can maintain stable performance across different market environments.
 
 
 > Source (PineScript)

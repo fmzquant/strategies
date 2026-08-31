@@ -12,40 +12,7 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d945a9d076cc685fbde6.png)
 ![IMG](https://www.fmz.com/upload/asset/2d81317bef9f20bab3946.png)
 
-
-
-
-
-[trans]
-#### 概述
-这是一个结合了布林带(Bollinger Bands)、移动平均线离散度(MACD)和成交量分析的高频交易策略系统。该策略通过识别价格在布林带上下轨的突破和回归，结合MACD动量指标和成交量确认，来捕捉市场的反转机会。系统设置了每日最大交易次数限制，并配备了完善的风险管理机制。
-
-#### 策略原理
-策略主要基于以下三个核心指标组合：
-1. 布林带指标：使用20周期的简单移动平均线(SMA)作为中轨，标准差乘数为2.0计算上下轨。当价格突破布林带后回归时，系统会发出潜在的交易信号。
-2. MACD指标：采用标准参数设置(12,26,9)，用于确认价格趋势动量。当MACD线位于信号线上方时确认做多信号，位于信号线下方时确认做空信号。
-3. 成交量分析：使用20周期移动平均确认成交量，要求信号出现时的成交量至少达到平均水平，以确保市场参与度。
-
-#### 策略优势
-1. 多重信号确认：通过布林带、MACD和成交量三重验证，显著提高了交易信号的可靠性。
-2. 可视化设计：系统提供丰富的图表指示，包括布林带填充、信号标记和背景颜色变化，便于交易者快速识别交易机会。
-3. 风险控制完善：实施了固定止损和获利目标，并限制每日最大交易次数，有效控制风险敞口。
-4. 系统化操作：策略提供了清晰的入场和出场条件，减少了主观判断带来的不确定性。
-
-#### 策略风险
-1. 市场波动风险：在高波动市场中，可能出现虚假突破信号，导致交易损失。
-2. 滑点风险：高频交易环境下，可能面临较大的滑点成本，影响实际收益。
-3. 流动性风险：成交量条件可能在市场流动性不足时限制交易机会。
-4. 系统性风险：固定的参数设置可能无法适应市场条件的剧烈变化。
-
-#### 策略优化方向
-1. 参数动态优化：可引入自适应参数调整机制，使布林带和MACD参数能够根据市场条件自动调整。
-2. 市场周期识别：增加市场周期判断模块，在不同市场周期下采用不同的交易策略。
-3. 风险管理优化：可考虑引入动态止损机制，根据市场波动性调整止损位置。
-4. 信号过滤增强：增加趋势强度过滤器，避免在横盘市场产生过多交易信号。
-
-#### 总结
-该策略通过布林带反转信号、MACD趋势确认和成交量验证的组合，构建了一个完整的交易系统。系统的可视化设计和严格的风险控制使其特别适合日内交易。虽然存在一定的市场风险，但通过持续优化和参数调整，策略有望在不同市场环境下保持稳定表现。 || 
+ 
 
 #### Overview
 This is a high-frequency trading strategy system that combines Bollinger Bands, Moving Average Convergence Divergence (MACD), and volume analysis. The strategy captures market reversal opportunities by identifying price breakouts and reversals at Bollinger Bands, confirmed by MACD momentum indicators and volume analysis. The system implements a daily trade limit and comprehensive risk management mechanisms.
@@ -75,9 +42,7 @@ The strategy is based on three core indicator combinations:
 4. Signal Filter Enhancement: Add trend strength filters to avoid excessive trading signals in ranging markets.
 
 #### Summary
-The strategy constructs a complete trading system through the combination of Bollinger Band reversal signals, MACD trend confirmation, and volume verification. The system's visual design and strict risk control make it particularly suitable for intraday trading. While certain market risks exist, continuous optimization and parameter adjustment enable the strategy to maintain stable performance across different market environments.[/trans]
-
-
+The strategy constructs a complete trading system through the combination of Bollinger Band reversal signals, MACD trend confirmation, and volume verification. The system's visual design and strict risk control make it particularly suitable for intraday trading. While certain market risks exist, continuous optimization and parameter adjustment enable the strategy to maintain stable performance across different market environments.
 
 > Source (PineScript)
 

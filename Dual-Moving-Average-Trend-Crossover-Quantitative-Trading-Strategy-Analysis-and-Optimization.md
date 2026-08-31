@@ -15,37 +15,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-本策略是一个基于双均线交叉的趋势跟踪交易系统。通过对比短期和长期移动平均线(分别为9日和21日)的相对位置关系,捕捉市场趋势的转换时机。策略采用经典的技术分析理论,结合现代量化交易方法,实现了全自动化的交易决策过程。
-
-#### 策略原理
-策略核心逻辑基于两条不同周期移动平均线的交叉信号。当短期均线(9日)向上穿越长期均线(21日)时,系统认为市场动能转为向上,触发做多信号;当短期均线向下穿越长期均线时,系统认为市场动能转为向下,平仓结束交易。同时,策略还包含了交易统计功能,可以实时追踪总交易次数、盈利次数和亏损次数,帮助交易者评估策略表现。
-
-#### 策略优势
-1. 逻辑简单清晰,易于理解和维护
-2. 完全基于价格数据,不需要其他复杂指标
-3. 自带趋势跟踪功能,能有效捕捉中长期行情
-4. 具备完整的交易统计系统,便于策略评估
-5. 全自动化运作,减少人为干预带来的情绪影响
-
-#### 策略风险
-1. 震荡市场下可能产生频繁假信号
-2. 入场和出场时机略有滞后性
-3. 未设置止损机制,在剧烈波动时可能承受较大损失
-4. 仅依赖均线指标,缺乏多维度市场分析
-5. 参数固定,难以适应不同市场环境
-
-#### 策略优化方向
-1. 引入自适应均线周期,提高策略对市场环境的适应性
-2. 增加波动率过滤器,减少震荡市场下的假信号
-3. 设计动态止损机制,控制下行风险
-4. 结合其他技术指标,如RSI或MACD,提高信号可靠性
-5. 开发市场环境识别模块,实现智能化参数调整
-
-#### 总结
-这是一个经典而实用的趋势跟踪策略,通过双均线交叉捕捉市场动能变化。虽然存在一定的滞后性和假信号风险,但其简单稳健的特点使其成为量化交易领域的重要工具。通过提议的优化方向,策略的稳定性和盈利能力有望得到进一步提升。 || 
-
 #### Overview
 This strategy is a trend-following trading system based on dual moving average crossovers. By comparing the relative positions of short-term and long-term moving averages (9-day and 21-day respectively), it captures market trend reversal opportunities. The strategy combines classical technical analysis theory with modern quantitative trading methods to achieve fully automated trading decisions.
 
@@ -74,7 +43,7 @@ The core logic relies on crossover signals between two moving averages of differ
 5. Develop market environment recognition modules for intelligent parameter adjustment
 
 #### Summary
-This is a classic and practical trend-following strategy that captures market momentum changes through dual moving average crossovers. While it has certain limitations in terms of lag and false signals, its simplicity and robustness make it an important tool in quantitative trading. Through the proposed optimization directions, the strategy's stability and profitability can be further enhanced.[/trans]
+This is a classic and practical trend-following strategy that captures market momentum changes through dual moving average crossovers. While it has certain limitations in terms of lag and false signals, its simplicity and robustness make it an important tool in quantitative trading. Through the proposed optimization directions, the strategy's stability and profitability can be further enhanced.
 
 
 

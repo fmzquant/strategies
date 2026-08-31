@@ -9,60 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/7040c44efa6a1e6008.png)
- [trans]
-
-## 概述
-
-本策略基于相对强弱指数(RSI)指标,设计了一个用于Nifty指数交易的量化投资策略。该策略利用RSI指标识别超买超卖机会,实现低买高卖,追求超额收益。
-
-## 策略原理
-
-该策略设置2期RSI作为交易信号。当RSI上穿20时,做多;当RSI下穿70时,平仓。这样可以捕捉指数的短期调整机会。
-
-具体原理是:当RSI低于20时,属于超卖状态,表示资产被低估,预示着即将反弹;当RSI上穿20时,做多;当RSI高于70时,属于超买状态,表示资产被高估,预示着即将回调;当RSI下穿70时,平仓。
-
-## 优势分析
-
-这是一个利用指标识别短期超买超卖机会的量化策略。相比复杂的机器学习和统计套利策略,该策略优势主要体现在:
-
-1. 原理简单清晰,容易理解和验证
-2. 指标参数少,容易优化和调整
-3. 追求短期超额收益,符合穿越交易理念
-4. 可自定义交易时间段,适应不同期望
-
-## 风险分析
-
-该策略主要存在以下风险:
-
-1. 无法应对长期趋势,容易错失大行情
-2. 过于依赖参数优化,可能存在过拟合风险
-3. 无止损机制,无法有效控制亏损
-4. 交易频繁,影响持仓时间,产生更多交易费用
-
-为控制上述风险,可以从以下几个方面进行优化:
-
-1. 结合趋势等指标,识别长期行情
-2. 采用Walk Forward Analysis方法防止过拟合
-3. 设置止损点,及时止损
-4. 适当调整交易参数,控制交易频率
-
-## 优化方向  
-
-该策略主要可从以下几个方面进行优化:
-
-1. 优化RSI参数,寻找最优参数组合
-2. 增加止损机制,控制最大回撤
-3. 结合移动均线等指标,判断长期趋势
-4. 增加仓位管理模块,优化仓位分配
-5. 增加量化copyright功能,自动调整参数
-
-## 总结
-
-本策略基于RSI指标设计了一个短期交易策略,利用RSI指标的超买超卖信号实现低买高卖,追求超额收益。该策略原理简单,易于实现,但存在一定程度交易频繁,无法识别长期趋势等问题。未来可从优化RSI参数、增加止损机制、结合趋势判断等方面进行改进,使策略更稳定可靠。
-
-||
-
 ## Overview
 
 This strategy designs a quantitative investment strategy for trading Nifty index based on the Relative Strength Index (RSI) indicator. It identifies overbought and oversold opportunities using RSI to implement low buying and high selling for excess returns.
@@ -111,8 +57,6 @@ Main aspects for optimizing the strategy:
 ## Conclusion  
 
 This strategy designs a short-term trading strategy based on RSI indicator, capturing overbought/oversold signals for low buying and high selling. The strategy has simple principle and is easy to implement, but has certain degree of frequent trading, inability to identify long-term trends etc. Future improvements can be made on optimizing RSI parameters, adding stop loss, combining trend judgment etc., to make the strategy more stable and reliable.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -9,10 +9,8 @@ Multiple-charts-example
 
 > Strategy Description
 
-一个展示多个图表的例子，多个图可共用一行，可以设置图表展示的宽度。
-支持HighCharts和HighStocks的基本图表，如折线图、直方图、柱状图、饼图、K线图等等，具体查询highchart官网，仿照本例子稍微更改就可使用。
-
-
+An example showing multiple charts. Multiple charts can share the same row, and you can configure the display width of each chart.
+It supports the basic chart types available in HighCharts and HighStocks, such as line charts, histograms, bar charts, pie charts, candlestick charts, and more. Refer to the Highcharts official website for details; you can adapt this example with minor changes.
 
 > Source (javascript)
 

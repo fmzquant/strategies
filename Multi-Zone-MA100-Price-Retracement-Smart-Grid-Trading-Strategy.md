@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1126f10e61998dee37b.png)
 
-[trans]
-#### 概述
-该策略是一个基于MA100移动平均线的多区间网格交易系统。它通过设定不同的价格回撤区间(-8%、-15%、-20%)来实现分批建仓,在市场出现较大跌幅时逐步买入,并在价格反弹3%时获利了结。策略采用智能网格的思路,通过限制每个区间的最大持仓数量和交易间隔来控制风险。
-
-#### 策略原理
-策略的核心逻辑包含以下几个方面:
-1. 使用100周期简单移动平均线(SMA)作为策略的基准价格
-2. 设定三个买入区间:
-   - 区间2: 价格回撤8%,最大允许2笔交易
-   - 区间3: 价格回撤15%,最大允许3笔交易
-   - 区间4: 价格回撤20%,最大允许4笔交易
-3. 统一的平仓条件:当价格反弹超过MA100的3%时
-4. 每个区间都设置了50个K线周期的最小交易间隔,避免过于频繁交易
-
-#### 策略优势
-1. 多区间分层建仓降低了建仓成本
-2. 采用网格交易思想,能够在剧烈波动中捕捉机会
-3. 设置了最大持仓限制和交易间隔,有效控制风险
-4. 策略逻辑简单,容易理解和维护
-5. 适用于高波动率的市场环境
-6. 可以自动化执行,无需人工干预
-
-#### 策略风险
-1. 在持续下跌趋势中可能产生较大回撤
-2. 需要较大的资金规模来支持多区间建仓
-3. 平仓条件相对简单,可能错过更大的上涨空间
-4. 没有考虑市场整体趋势,可能在趋势性行情中表现欠佳
-5. 固定的百分比参数可能不适合所有市场环境
-
-#### 策略优化方向
-1. 引入趋势判断指标,在强趋势中调整策略参数
-2. 优化平仓机制,可以根据市场波动情况动态调整获利目标
-3. 增加风险控制模块,设置总体仓位限制和止损条件
-4. 引入波动率指标(如ATR),动态调整建仓区间
-5. 优化交易间隔机制,可以根据市场情况动态调整
-
-#### 总结
-该策略通过多区间网格交易的方式,在市场大幅回调时分批建仓,具有较好的抗风险能力。虽然存在一些潜在风险,但通过合理的参数设置和风险控制措施,可以实现稳定的交易效果。进一步优化空间主要在于加入更多的市场适应性指标和完善风险控制机制。 || 
-
 #### Overview
 This strategy is a multi-zone grid trading system based on the MA100 moving average. It implements batch position building through different price retracement zones (-8%, -15%, -20%), buying gradually during significant market drops and taking profits when prices bounce back by 3%. The strategy adopts a smart grid approach, controlling risk by limiting the maximum number of positions and trading intervals in each zone.
 
@@ -86,9 +47,7 @@ The core logic includes the following aspects:
 5. Optimize trading interval mechanism to adjust dynamically based on market conditions
 
 #### Summary
-This strategy achieves batch position building during significant market corrections through multi-zone grid trading, demonstrating good risk resistance. While there are potential risks, stable trading results can be achieved through appropriate parameter settings and risk control measures. Further optimization opportunities mainly lie in incorporating more market-adaptive indicators and improving risk control mechanisms.[/trans]
-
-
+This strategy achieves batch position building during significant market corrections through multi-zone grid trading, demonstrating good risk resistance. While there are potential risks, stable trading results can be achieved through appropriate parameter settings and risk control measures. Further optimization opportunities mainly lie in incorporating more market-adaptive indicators and improving risk control mechanisms.
 
 > Source (PineScript)
 

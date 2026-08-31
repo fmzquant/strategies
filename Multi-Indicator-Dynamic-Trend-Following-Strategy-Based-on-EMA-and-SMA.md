@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/3a07ed47a0da95ac0b.png)
 
-[trans]
-#### 策略概述
-该策略是一个结合了多重技术指标的动态趋势跟踪系统。它通过整合支点位(Pivot Points)、SuperTrend指标以及移动平均线的交叉信号来识别市场趋势和交易机会。策略的核心特点是采用固定时间周期的分析方法,确保信号的一致性,同时通过支点位的验证来提高交易信号的可靠性。
-
-#### 策略原理
-策略运作基于以下核心机制:
-1. 使用固定时间周期的价格数据进行分析,避免不同时间周期带来的干扰
-2. 通过8周期和21周期的EMA计算SMA,形成趋势跟踪基础
-3. 结合ATR和支点位计算SuperTrend指标,用于确认趋势方向
-4. 在支点位3个周期内出现的SMA交叉信号才被视为有效信号
-5. 动态计算并跟踪支撑/阻力位,为交易决策提供参考
-
-#### 策略优势
-1. 多重指标交叉验证,提高信号可靠性
-2. 固定时间周期分析,降低假信号干扰
-3. 支点位验证机制,确保交易发生在关键价格水平
-4. 动态跟踪支撑阻力位,帮助确定止损止盈位置
-5. SuperTrend指标的使用提供了趋势方向的额外确认
-6. 灵活的参数设置,可根据不同市场情况进行调整
-
-#### 策略风险
-1. 多重指标可能导致信号滞后
-2. 在横盘市场中可能产生过多假信号
-3. 固定时间周期分析可能错过其他周期的重要信号
-4. 支点位验证机制可能导致错过一些重要的交易机会
-5. 参数优化过度可能导致过度拟合
-
-#### 策略优化方向
-1. 引入波动率过滤机制,在低波动率期间减少交易频率
-2. 增加趋势强度确认指标,如ADX或MACD
-3. 开发自适应参数体系,根据市场状态动态调整参数
-4. 增加交易量分析,提高信号可靠性
-5. 实现动态止损机制,根据市场波动调整止损位置
-
-#### 总结
-该策略通过多重技术指标的结合,建立了一个相对完整的趋势跟踪交易系统。其核心优势在于通过固定时间周期分析和支点位验证来提高信号可靠性。虽然存在一定的滞后性风险,但通过参数优化和风险管理措施可以有效控制。建议交易者在实盘使用前进行充分的回测,并根据具体市场特点调整参数。 || 
-
 #### Strategy Overview
 This strategy is a dynamic trend following system that combines multiple technical indicators. It integrates Pivot Points, SuperTrend indicator, and moving average crossover signals to identify market trends and trading opportunities. The strategy's key feature is its fixed timeframe analysis approach, ensuring signal consistency while validating signals through pivot points.
 
@@ -82,9 +45,7 @@ The strategy operates based on the following core mechanisms:
 5. Implement dynamic stop-loss mechanism that adjusts based on market volatility
 
 #### Summary
-This strategy establishes a relatively complete trend following trading system through the combination of multiple technical indicators. Its core advantage lies in improving signal reliability through fixed timeframe analysis and pivot point validation. While there are certain lag risks, these can be effectively controlled through parameter optimization and risk management measures. Traders are advised to conduct thorough backtesting before live implementation and adjust parameters according to specific market characteristics.[/trans]
-
-
+This strategy establishes a relatively complete trend following trading system through the combination of multiple technical indicators. Its core advantage lies in improving signal reliability through fixed timeframe analysis and pivot point validation. While there are certain lag risks, these can be effectively controlled through parameter optimization and risk management measures. Traders are advised to conduct thorough backtesting before live implementation and adjust parameters according to specific market characteristics.
 
 > Source (PineScript)
 

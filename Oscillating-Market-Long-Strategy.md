@@ -9,80 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-### 概述
-
-该策略利用多个技术指标识别市场中的震荡行情,并在震荡低点进行逢低吸纳,目标捕捉震荡行情中的短线机会。
-
-### 策略原理
-
-该策略融合多种技术指标识别震荡低点机会。首先,利用变化率 ROC 判断市场处于震荡阶段,然后 RSI,StochRSI,MACD 等指标确认震荡低点,最后结合布林带,振荡指标等筛选信号。 
-
-策略的入场时机有以下几种情况:
-
-1. ROC下降,RSI低位,StochRSI过售,MACD底背离,振荡指标VIX下降。这表明市场处于下行震荡,多头介入的时机。
-
-2. ROC下降,RSI更低位,StochRSI极度过售,MACD继续底背离,布林带扩大,TEMA缩小。这进一步确认上述下行震荡信号。
-
-3. Chaikin震荡指标转正,TRIX支撑转正。两者结合确认短线止跌反弹机会。
-
-4. MACD形成金叉,ROC和CMO支撑转正。多种指标共振表明短线趋势反转机会。
-
-此外,策略还设定止损为布林带下沿,可有效控制风险。
-
-### 优势分析
-
-该策略最大的优势在于利用多种指标确认,可有效识别震荡市场中的反转机会,增强信号的可靠性。具体优势包括:
-
-1. 多指标共振,重复确认,可避免假信号。
-
-2. 入场时机精准,可在震荡低点买入,风险可控。
-
-3. 利用布林带止损,有效控制下滑风险。
-
-4. 短线操作,可快速捕捉震荡波段机会。
-
-5. 指标参数经过优化,可匹配市场各种环境的震荡。
-
-6. 程序化执行,回测验证,不受情绪影响。
-
-### 风险分析
-
-该策略也存在一些风险需要注意:
-
-1. 市场出现长期方向性趋势时,震荡策略将面临被套利出场的风险。可通过长线技术指标确认趋势判断。
-
-2. 突发事件导致市场出现急速单边行情时,止损可能直接被跌破,造成较大损失。应适当放宽止损参数。
-
-3. 回测时段不充分,可能导致过拟合。应扩大回测时间周期,也做实盘验证。
-
-4. 多指标组合使用不当,可能出现互相牵制,错过信号的情况。应测试各指标效果。
-
-5. 市场结构变化可能导致原有参数不再适用,需要持续优化。
-
-### 优化方向
-
-该策略可以从以下几个方向进行优化:
-
-1. 测试更多的技术指标,找到最佳指标组合。可以考虑KD,OBV等其它指标。
-
-2. 优化指标的参数,使其更符合不同市场环境。可用遗传算法进行多维参数优化。
-
-3. 根据回测结果,调整入场条件逻辑,减少假信号。可采用机器学习方法。
-
-4. 优化止损策略,在保证风险控制的同时,尽量减少无效止损被刷出的情况。
-
-5. 优化仓位管理,通过动态调整仓位,提高策略收益率。
-
-6. 进行充分的回测验证和实盘验证,检查策略的稳健性。
-
-7. 采用程序化方法进行定期检查和优化,使策略保持最优。
-
-### 总结
-
-该震荡市场多头策略,利用多种技术指标确认的方式识别震荡低点机会,可以有效获取震荡行情中的短线交易机会。通过参数优化、止损优化、仓位管理等方法,可以不断提升策略的稳定性和收益率。同时需要防范多头趋势下的风险,采取盈利保护措施。综合来说,该策略具有较强的实用性。
-
 ### Overview  
 
 This strategy uses multiple technical indicators to identify oscillating markets and long at oscillation lows, aiming to capture short-term opportunities in oscillating markets.
@@ -154,8 +80,6 @@ Some ways to optimize the strategy:
 ### Conclusion
 
 This oscillating market long strategy effectively identifies oscillation lows using technical indicator confluence. Returns can be improved via parameter optimization, stop optimization, position sizing etc, while managing risks in trending markets. Overall it has strong practical application potential.
-
-[/trans]
 
 > Strategy Arguments
 

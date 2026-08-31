@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e74dc486766597bc72.png)
 
-[trans]
-#### 概述
-该策略是一个结合了人工智能技术的高级趋势跟踪交易系统,主要整合了VPS(波动价格系统)背离指标和WOW趋势方法。它利用VPS来识别市场波动性和趋势强度,同时结合RSI背离来检测潜在的价格反转点。该策略能够为多空双向交易提供精确的入场信号,通过同时利用趋势动量和背离分析来增强市场预测的准确性。
-
-#### 策略原理
-策略运作基于三个核心组件:
-1. WOW趋势指标用于确认趋势变化(从多头转空头或反之)
-2. VPS条件用于验证波动性和趋势强度
-3. RSI背离分析用于识别潜在反转点
-
-系统首先计算基于ATR的动态支撑阻力通道,结合VPS长度参数(默认11)来评估市场状态。当价格突破超买水平(78)或超卖水平(27)时,系统会触发交易信号。同时,策略还会监测价格与VPS指标之间的背离情况,用于进一步确认交易方向。
-
-#### 策略优势
-1. 多维度分析: 通过结合趋势跟踪、波动率和背离分析,提供更全面的市场视角
-2. 自适应性强: 使用动态的ATR通道,能够根据市场波动性自动调整
-3. 风险管理完善: 内置了止盈止损机制,可以根据预设的利润目标自动平仓
-4. 信号确认机制: 需要多个条件同时满足才会触发交易,降低虚假信号的可能性
-5. 双向交易能力: 可以捕捉多空双向的交易机会,充分利用市场波动
-
-#### 策略风险
-1. 市场噪音: 在横盘或低波动率环境下可能产生虚假信号
-2. 参数敏感性: 指标参数的设置(如VPS长度、超买超卖水平)对策略表现影响较大
-3. 滑点风险: 在短周期(如5分钟)交易中,可能面临较大的滑点影响
-4. 信号延迟: 多重确认机制可能导致入场时机相对滞后
-5. 资金管理: 固定资金分配方式可能在不同市场条件下表现不一
-
-#### 策略优化方向
-1. 动态参数调整: 可以引入自适应参数机制,根据市场状态动态调整VPS长度和超买超卖阈值
-2. 市场环境过滤: 添加市场环境识别模块,在不适合的市场条件下暂停交易
-3. 止损优化: 可以基于ATR设计更灵活的止损机制,提高风险控制的精确性
-4. 分时段优化: 针对不同交易时段的特点,调整策略参数和交易规则
-5. 资金管理优化: 引入动态仓位管理,根据市场波动性和盈亏状况调整交易规模
-
-#### 总结
-这是一个融合了多种技术指标和分析方法的综合性交易策略。通过将人工智能技术与传统技术分析相结合,策略能够在保持稳健性的同时提供较高的交易准确率。策略的核心优势在于其多层面的信号确认机制和完善的风险管理体系,而主要的优化空间在于参数的动态调整和市场环境的识别。通过持续优化和改进,该策略有望在不同市场环境下都能保持稳定的表现。 || 
-
 #### Overview
 This strategy is an advanced trend-following trading system incorporating artificial intelligence technology, primarily integrating VPS (Volatility Price System) divergence indicators and WOW trend methodology. It utilizes VPS to identify market volatility and trend strength while combining RSI divergence to detect potential price reversal points. The strategy can provide precise entry signals for both long and short trades, enhancing market prediction accuracy by leveraging both trend momentum and divergence analysis.
 
@@ -80,9 +44,7 @@ The system first calculates dynamic support and resistance channels based on ATR
 5. Capital Management Optimization: Introduce dynamic position management to adjust trading size based on market volatility and profit/loss status
 
 #### Summary
-This is a comprehensive trading strategy that integrates multiple technical indicators and analytical methods. By combining artificial intelligence technology with traditional technical analysis, the strategy can provide high trading accuracy while maintaining robustness. The core advantages lie in its multi-layered signal confirmation mechanism and comprehensive risk management system, while the main areas for optimization are in dynamic parameter adjustment and market environment recognition. Through continuous optimization and improvement, this strategy has the potential to maintain stable performance across different market conditions.[/trans]
-
-
+This is a comprehensive trading strategy that integrates multiple technical indicators and analytical methods. By combining artificial intelligence technology with traditional technical analysis, the strategy can provide high trading accuracy while maintaining robustness. The core advantages lie in its multi-layered signal confirmation mechanism and comprehensive risk management system, while the main areas for optimization are in dynamic parameter adjustment and market environment recognition. Through continuous optimization and improvement, this strategy has the potential to maintain stable performance across different market conditions.
 
 > Source (PineScript)
 

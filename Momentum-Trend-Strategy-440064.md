@@ -10,57 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/133197733f0fc1530f2.png)
- [trans]
-
-#### 概述
-
-该策略综合运用移动平均线、相对强弱指标(RSI)、量变动指标(VFI)以及真实强度指数(TSI)等多种技术指标,判断市场的总体动量和趋向,以捕捉中长线的价格走势。
-
-#### 策略原理
-
-1. 计算快速线RSI(7日)、正常线RSI(14日)、慢速线RSI(50日)的移动平均线,判断RSI的多空趋势和动量。
-
-2. 计算VFI和VFI的移动平均线EMA(25日)、SMA(25日),判断市场的资金流入流出情况。
-
-3. 计算TSI的长期均线和短期均线的比值,判断市场的趋势强度。 
-
-4. 将RSI、VFI和TSI的结果进行整合,得出市场的总体动量方向。
-
-5. 当判断到市场存在向下的动量时,做空;当判断到市场动量反转时,将空单平仓。
-
-#### 优势分析
-
-1. 多种指标结合,判断市场总体动量和趋势更为全面和准确。
-
-2. VFI反映市场资金流入流出情况,避免交易反向。
-
-3. TSI过滤震荡市,使得信号更可靠。
-
-4. 整体来看,该策略可靠性较高,胜率较好。
-
-#### 风险分析
-
-1. 多指标结合,参数设置复杂,需要反复测试取得最优参数。
-
-2.  Entry和Exit策略简单,无法充分利用指标提供的信息,可能出现超短线反转亏损。
-
-3.  盘整震荡市中,容易产生错误信号和反向小亏损。
-
-#### 优化方向 
-
-1. 优化指标参数组合,找到最佳参数。
-
-2. 增加Exit规则,利用指标情况判断反转退出。
-
-3. 增加盈利保护机制,减少盘整小亏损。
-
-#### 总结
-
-本策略综合运用多种指标判断市场总体动量,在判断到市场存在向下动量时做空获利。该策略可靠性较高,但Entry和Exit机制较简单,指标信息没有得到充分利用。通过不断优化参数和增强Exit规则,可进一步提高策略稳定性和盈利能力。
-
-||
-
-#### Overview
+ #### Overview
 
 This strategy combines various technical indicators such as moving average, relative strength index (RSI), volume fluctuation indicator (VFI), and true strength index (TSI) to determine the overall momentum and trend of the market and capture mid-to-long term price movements.
 
@@ -108,9 +58,7 @@ This strategy combines various technical indicators such as moving average, rela
 
 #### Summary
 
-This strategy combines multiple indicators to gauge overall market momentum and takes short positions when downward momentum identified. It has relatively high reliability but simple entry/exit rules unable to fully utilize indicator information. Further enhancements to parameters and exit logic can improve stability and profitability.
-
-[/trans]]
+This strategy combines multiple indicators to gauge overall market momentum and takes short positions when downward momentum identified. It has relatively high reliability but simple entry/exit rules unable to fully utilize indicator information. Further enhancements to parameters and exit logic can improve stability and profitability.]
 
 > Strategy Arguments
 

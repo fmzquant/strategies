@@ -12,45 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8f65610cf386290b8ea.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8130ad74644d7c3d453.png)
 
-
-
-[trans]
-#### 概述
-这是一个基于内部强度指标(Internal Bar Strength, IBS)的做空策略,主要通过监测收盘价在日内价格区间中的位置来识别交易机会。当IBS指标显示超买状态时,策略会在满足特定条件下开启做空仓位,并在IBS达到超卖水平时平仓出场。该策略专门设计用于股票和ETF市场的日线级别交易。
-
-#### 策略原理
-策略的核心是通过IBS指标来衡量收盘价在当天高低点范围内的位置。IBS的计算公式为:(收盘价-最低价)/(最高价-最低价)。当IBS值大于等于0.9时,表明收盘价接近当天最高点,被认为是超买状态;当IBS值小于等于0.3时,表明收盘价接近当天最低点,被认为是超卖状态。策略在以下条件全部满足时进场做空:
-1. IBS值达到或超过上限阈值(默认0.9)
-2. 收盘价高于前一根K线的最高价
-3. 当前时间在设定的交易时间窗口内
-当IBS值降至下限阈值(默认0.3)以下时,策略会平掉所有仓位。
-
-#### 策略优势
-1. 策略逻辑清晰简单,参数较少,易于理解和实施
-2. 通过IBS指标可以有效捕捉价格超涨后的回落机会
-3. 设置了时间窗口限制,可以避免在不适合的时间段交易
-4. 入场条件结合了前一日高点的突破确认,提高了信号的可靠性
-5. 基于百分比的仓位管理,风险控制更加灵活
-
-#### 策略风险
-1. 在强势趋势市场中,均值回归策略可能面临持续亏损
-2. 单一使用IBS指标可能导致假信号
-3. 没有设置止损机制,在极端行情下可能造成较大损失
-4. 策略依赖于日内价格波动范围的稳定性
-5. 交易频率可能较高,导致较大的交易成本
-
-#### 策略优化方向
-1. 引入趋势过滤器,在强趋势环境下避免逆势交易
-2. 增加成交量或波动率等辅助指标,提高信号质量
-3. 设计动态的IBS阈值,适应不同市场环境
-4. 加入止损机制,控制单次交易风险
-5. 优化仓位管理系统,根据市场波动调整持仓量
-6. 考虑加入多周期分析,提高信号的可靠性
-
-#### 总结
-这是一个基于均值回归思想的做空策略,通过IBS指标捕捉价格超买后的回落机会。策略设计简洁,操作明确,但仍需要根据具体交易品种和市场环境进行优化。建议在实盘交易前,充分测试不同参数组合,并结合其他技术指标来提高策略的稳定性。同时,必须注意风险控制,特别是在强势市场中的应用。 ||
-
-
 #### Overview
 This is a short-only mean reversion strategy based on the Internal Bar Strength (IBS) indicator, which identifies trading opportunities by monitoring the closing price's position within the daily price range. The strategy initiates short positions when the IBS indicates overbought conditions and exits when IBS reaches oversold levels. It is specifically designed for daily timeframe trading in stocks and ETF markets.
 
@@ -84,10 +45,7 @@ The strategy closes all positions when the IBS value drops below the lower thres
 6. Consider multi-timeframe analysis to enhance signal reliability
 
 #### Summary
-This is a short-only mean reversion strategy that uses the IBS indicator to capture price pullback opportunities after overbought conditions. While the strategy design is concise and operations are clear, it requires optimization based on specific trading instruments and market conditions. It is recommended to thoroughly test different parameter combinations and incorporate other technical indicators to improve strategy stability before live trading. Additionally, risk control must be emphasized, especially when applying the strategy in strong trending markets.[/trans]
-
-
-
+This is a short-only mean reversion strategy that uses the IBS indicator to capture price pullback opportunities after overbought conditions. While the strategy design is concise and operations are clear, it requires optimization based on specific trading instruments and market conditions. It is recommended to thoroughly test different parameter combinations and incorporate other technical indicators to improve strategy stability before live trading. Additionally, risk control must be emphasized, especially when applying the strategy in strong trending markets.
 > Source (PineScript)
 
 ``` pinescript

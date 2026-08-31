@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14ea71904e10ec65d7f.png)
 
-[trans]
-#### 概述
-该策略是一个基于多时间框架分析的交易系统,结合了Bollinger带、Hull移动平均线和加权移动平均线进行交易信号的生成。策略主要在1小时时间框架上运行,同时整合了5分钟、1小时和3小时三个时间周期的市场数据,通过多重技术指标的配合来确认交易机会。策略采用动态的止盈止损机制,并根据账户权益自动调整仓位大小,实现风险的有效控制。
-
-#### 策略原理
-策略的核心逻辑基于多重技术指标的交叉确认。在多个时间周期上同时监控价格与各类均线的关系,包括5分钟周期的加权移动平均线(VWMA)、1小时周期的加权移动平均线和3小时周期的Hull移动平均线(HMA)。当价格在所有时间周期的指标之上时,系统会在价格突破上轨时产生做多信号;相反,当价格位于所有指标之下时,系统会在价格突破下轨时产生做空信号。策略还引入了偏差值计算(deviation),用于设定动态的入场和出场阈值,提高交易的灵活性。
-
-#### 策略优势
-1. 多重时间周期分析降低了假突破的风险,提高了交易信号的可靠性
-2. 动态的止盈止损设置能够适应不同市场环境
-3. 基于账户权益的仓位管理确保了资金使用的合理性
-4. 多种出场机制的选择增加了策略的适应性
-5. 图形化界面提供清晰的交易信号展示,便于分析和判断
-6. 整合了多个成熟的技术指标,提高了交易决策的准确性
-
-#### 策略风险
-1. 多重指标的使用可能导致交易信号滞后
-2. 在震荡市场中可能产生频繁的假突破信号
-3. 固定的止盈止损比例可能不适合所有市场环境
-4. 多时间周期的数据处理可能增加策略运行的复杂度
-5. 在高波动性市场中可能面临较大的滑点风险
-
-#### 策略优化方向
-1. 引入波动率指标来动态调整止盈止损水平
-2. 增加市场环境识别功能,在不同市场状态下使用不同的参数设置
-3. 优化信号过滤机制,减少假突破带来的损失
-4. 加入交易量分析,提高突破信号的可靠性
-5. 开发自适应的参数优化机制,提高策略的稳定性
-
-#### 总结
-该策略通过多时间周期分析和多重技术指标的结合,构建了一个相对完整的交易系统。策略的优势在于信号的可靠性和风险管理的有效性,但同时也存在信号滞后和参数优化等问题。通过持续的优化和改进,策略有望在不同市场环境下保持稳定的表现。 || 
-
 #### Overview
 This strategy is a trading system based on multi-timeframe analysis, combining Bollinger Bands, Hull Moving Average, and Weighted Moving Average for generating trading signals. The strategy operates primarily on the 1-hour timeframe while integrating market data from 5-minute, 1-hour, and 3-hour periods. It uses multiple technical indicators to confirm trading opportunities and implements dynamic stop-loss and take-profit mechanisms, automatically adjusting position sizes based on account equity for effective risk control.
 
@@ -72,10 +40,7 @@ The core logic is based on cross-confirmation of multiple technical indicators. 
 5. Develop adaptive parameter optimization mechanisms for enhanced stability
 
 #### Summary
-The strategy constructs a relatively complete trading system through multi-timeframe analysis and multiple technical indicators. Its strengths lie in signal reliability and effective risk management, though it faces challenges with signal lag and parameter optimization. Through continuous improvement and optimization, the strategy shows potential for maintaining stable performance across various market conditions.[/trans]
-
-
-
+The strategy constructs a relatively complete trading system through multi-timeframe analysis and multiple technical indicators. Its strengths lie in signal reliability and effective risk management, though it faces challenges with signal lag and parameter optimization. Through continuous improvement and optimization, the strategy shows potential for maintaining stable performance across various market conditions.
 > Source (PineScript)
 
 ``` pinescript

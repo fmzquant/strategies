@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/d727085206ec4fcf88.png)
 
-[trans]
-#### 概述
-本策略是一个结合趋势跟踪和震荡交易的混合策略系统,通过多重技术指标筛选和严格的资金管理来实现稳健的交易。策略采用分步止盈方式锁定利润,同时设置了最大回撤控制,在保证收益的同时也控制风险。系统使用RSI动量指标和ADX趋势强度指标作为主要的交易信号触发条件,并结合交易量、ATR和EMA等多重过滤器来确保交易的有效性。
-
-#### 策略原理
-策略的核心逻辑包括以下几个关键要素:
-1. 入场条件要求同时满足:交易量大于100万、ADX大于25表明趋势明显、RSI大于60显示强势动量、ATR大于2确保足够的波动空间、价格在200日均线上方保持上升趋势。
-2. 分步止盈设计:首次止盈位于15%,平仓50%仓位;第二次止盈位于30%,平掉剩余仓位。这种设计既能及早锁定部分利润,又不会错过大趋势。
-3. 止损控制:设置15%的止损位保护资金,同时当RSI低于50或价格跌破200均线时平仓出场。
-4. 回撤管理:实时跟踪策略净值,当回撤超过30%时触发系统性风控,清空所有持仓。
-
-#### 策略优势
-1. 多重技术指标交叉验证,提高交易信号的可靠性
-2. 分步止盈设计兼顾了短期获利和把握大趋势的需求
-3. 完善的风险控制体系,包括个股止损和系统性风控
-4. 交易条件严格,能有效过滤虚假信号
-5. 策略逻辑清晰,便于根据市场情况调整参数
-
-#### 策略风险
-1. 多重指标过滤可能导致错过部分交易机会
-2. 在震荡市场中可能频繁触发止损
-3. 固定百分比的止损和止盈设置可能不适合所有市场环境
-4. 策略依赖技术指标,在基本面突发事件时可能反应不足
-5. 需要较大的资金规模来满足交易量要求
-
-#### 策略优化方向
-1. 引入自适应的止损止盈机制,根据市场波动度动态调整
-2. 增加市场环境判断模块,在不同市场条件下使用不同的参数设置
-3. 优化ADX计算方法,考虑使用自适应周期
-4. 加入交易成本考虑,优化仓位管理系统
-5. 开发基于机器学习的信号过滤机制
-
-#### 总结
-该策略是一个全面的交易系统,通过多重技术指标和严格的资金管理来实现稳健的交易。策略的核心优势在于其完善的风险控制体系和分步止盈机制,但同时也需要注意在实际应用中根据市场情况适时调整参数设置。策略的进一步优化空间主要在于参数的动态自适应和信号筛选机制的改进。 || 
-
 #### Overview
 This strategy is a hybrid system combining trend following and swing trading, achieving stable trading through multiple technical indicator screening and strict capital management. The strategy adopts a stepped take-profit approach to lock in profits while setting maximum drawdown control to manage risk while ensuring returns. The system uses RSI momentum indicator and ADX trend strength indicator as the main trading signal triggers, combined with volume, ATR, and EMA multiple filters to ensure trading effectiveness.
 
@@ -78,7 +43,7 @@ The core logic of the strategy includes the following key elements:
 5. Develop machine learning-based signal filtering mechanism
 
 #### Summary
-This strategy is a comprehensive trading system achieving stable trading through multiple technical indicators and strict capital management. The core advantages of the strategy lie in its complete risk control system and stepped take-profit mechanism, but attention needs to be paid to timely parameter adjustments based on market conditions in practical application. The strategy's further optimization space mainly lies in parameter dynamic adaptation and signal filtering mechanism improvement.[/trans]
+This strategy is a comprehensive trading system achieving stable trading through multiple technical indicators and strict capital management. The core advantages of the strategy lie in its complete risk control system and stepped take-profit mechanism, but attention needs to be paid to timely parameter adjustments based on market conditions in practical application. The strategy's further optimization space mainly lies in parameter dynamic adaptation and signal filtering mechanism improvement.
 
 
 

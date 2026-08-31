@@ -10,55 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ba73628b099c6f75c.png)
- [trans]
-
-## 概述
-
-本策略通过组合使用双指数移动平均线(Dual Exponential Moving Average,DEMA)和带通滤波器(Bandpass Filter,BPF)两个指标,实现突破买入和超买超卖的双重过滤,形成稳定的交易信号,追求获利最大化。
-
-## 策略原理
-
-该策略由两个子策略组成:
-
-1. DEMA策略
-
-   使用2日和20日的双指数移动平均线形成金叉买入和死叉卖出信号。该指标过滤了价格的部分噪音,有利于发现趋势。
-
-2. BPF策略
-
-   BPF指标结合数学变换,检测出价格中循环往复的组分,形成某一周期内的超买超卖区域,发出交易信号。本策略设置为20天周期,0.5的正则化参数。
-
-两者结合使用,同向做多做空信号出现时,说明趋势和周期因素都得到验证,因此可信度更高,从而产生更稳定的入场和退出点。
-
-## 优势分析
-
-该策略最大的优势在于双重指标过滤,使信号更加稳定可靠。DEMA平滑价格,识别趋势方向;BPF识别循环特征,确定超买超卖区域。两者交叉验证,可大幅降低因价格噪音和周期调整产生的虚假信号的概率。
-
-另外,策略本身交易频次不高,避免过度交易的资金和手续费损耗。持仓时间以中长线为主,有利于避开随机波动的影响。
-
-## 风险分析
-
-该策略最大的风险在于误判市场状态。在震荡行情中,容易产生错误信号;在趋势反转时,止损可能较大。此外,参数设置问题也会对策略表现产生较大影响。
-
-针对这些风险,可以通过优化指标参数、设置止损止盈、结合其他指标等方式进行控制和改进。当判断市场进入震荡和换手阶段时,可以考虑暂停策略,避开不利行情的干扰。
-
-## 优化方向  
-
-该策略可从以下几个方面进行优化:
-
-1. 时间周期优化。测试不同的DEMA和BPF参数设置,确定最佳周期组合。
-
-2. 增加止损止盈设置。合理设置止损幅度,避免亏损扩大;适当止盈,锁定部分利润。
-
-3. 增加其他指标过滤。例如Volume,MACD等,避免信号被大量减仓博弈所误导。
-
-4. 参数自适应优化。使DEMA和BPF的参数能根据最新市场状态进行动态调整,保证指标的实时性。
-
-## 总结
-
-该策略整合双EMA和BPF两个指标的优势,双重过滤提高信号质量,追求稳定的中长线获利。风险主要来自市场状态判断误差和参数设置不当。通过多指标验证、动态优化参数等方式,可以使策略更具弹性和适应性,性价比更高。
-
-||
 
 ## Overview
 
@@ -105,9 +56,6 @@ The strategy can be optimized in the following aspects:
 ## Conclusion
 
 The strategy integrates the strengths of dual EMA and BPF indicators with dual filtering to improve signal quality and pursue steady mid-to-long term profits. Risks mainly come from market condition misjudgements and inadequate parameter tuning. Methods like multi-indicator validation and dynamic parameter optimization can make the strategy more elastic and adaptive for higher cost-effectiveness.
-
-[/trans]
-
 > Strategy Arguments
 
 

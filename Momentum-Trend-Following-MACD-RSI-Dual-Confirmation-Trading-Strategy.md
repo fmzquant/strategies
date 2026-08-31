@@ -8,43 +8,7 @@ Momentum-Trend-Following-MACD-RSI-Dual-Confirmation-Trading-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/1b29cb323f9699b1bee.png)
-
-[trans]
-#### 概述
-该策略是一个结合MACD和RSI两个技术指标的趋势跟踪型交易系统。它通过MACD指标捕捉价格趋势的变化,同时利用RSI指标进行超买超卖确认,实现双重信号验证。策略采用固定资金管理方式进行仓位控制,并配备移动止损机制来保护盈利。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. MACD信号系统采用了较短周期(6,13,5)设置,提高了对市场反应的敏感度。当MACD线上穿信号线时,表明可能出现上涨趋势。
-2. RSI指标作为辅助确认工具,设定30为超卖阈值。只有当RSI值大于或等于30时,才会触发买入信号,避免在超卖区域频繁交易。
-3. 资金管理采用固定金额策略,每次交易投入110个计价货币,根据当前价格动态计算持仓数量。
-4. 移动止损机制设置为2%的跟踪距离,可以有效锁定收益并控制回撤风险。
-
-#### 策略优势
-1. 双重技术指标确认机制提高了交易信号的可靠性,减少了虚假信号的干扰。
-2. 采用较短周期的MACD设置,提高了策略对市场变化的敏感度和反应速度。
-3. 固定金额交易方式简化了资金管理,便于风险控制和收益统计。
-4. 移动止损机制能够自动调整止损位置,在保护盈利的同时给予价格足够的波动空间。
-5. 策略逻辑清晰简单,便于理解和维护,同时具有良好的可扩展性。
-
-#### 策略风险
-1. MACD短周期设置可能导致在震荡市场中产生过多交易信号,增加交易成本。
-2. RSI超卖阈值设置在30可能错过一些重要的趋势启动机会。
-3. 固定金额交易方式可能无法充分利用账户资金,影响整体收益率。
-4. 2%的移动止损距离在高波动市场中可能过于接近,容易被震出局。
-5. 策略仅支持做多交易,在下跌趋势中无法获利。
-
-#### 策略优化方向
-1. 建议根据不同市场周期动态调整MACD参数,提高策略适应性。
-2. 可以引入波动率指标(如ATR)来动态调整移动止损距离,提高止损的有效性。
-3. 考虑添加做空机制,使策略能够在双向行情中获利。
-4. 可以结合市场成交量指标,提高信号确认的可靠性。
-5. 建议增加动态仓位管理机制,根据账户净值和市场风险度自动调整交易规模。
-
-#### 总结
-这是一个基于经典技术指标的趋势跟踪策略,通过MACD和RSI的配合使用,实现了较为可靠的交易信号生成机制。策略整体设计简洁实用,具有较好的实战价值。通过合理的参数优化和功能扩展,该策略有望在不同市场环境下都能获得稳定的交易表现。 ||
 
 #### Overview
 This strategy is a trend-following trading system that combines MACD and RSI technical indicators. It captures price trend changes using MACD while utilizing RSI for overbought/oversold confirmation, implementing a dual-signal validation approach. The strategy employs fixed money management for position control and includes a trailing stop mechanism to protect profits.
@@ -78,10 +42,7 @@ The core logic of the strategy is based on several key elements:
 5. Suggest implementing dynamic position management to automatically adjust trading size based on account equity and market risk levels.
 
 #### Summary
-This is a trend-following strategy based on classic technical indicators, achieving reliable trading signal generation through the combined use of MACD and RSI. The strategy's overall design is concise and practical, with good real-world application value. Through reasonable parameter optimization and functional expansion, this strategy has the potential to achieve stable trading performance across different market environments.[/trans]
-
-
-
+This is a trend-following strategy based on classic technical indicators, achieving reliable trading signal generation through the combined use of MACD and RSI. The strategy's overall design is concise and practical, with good real-world application value. Through reasonable parameter optimization and functional expansion, this strategy has the potential to achieve stable trading performance across different market environments.
 > Source (PineScript)
 
 ``` pinescript

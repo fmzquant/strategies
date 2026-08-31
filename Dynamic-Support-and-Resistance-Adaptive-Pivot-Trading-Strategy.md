@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/75219dacf044c42c2c.png)
 
-[trans]
-#### 概述
-本策略是一个基于价格枢轴点动态识别支撑和阻力位的自适应交易系统。它通过实时计算局部高点和低点来确定关键价格水平,并在此基础上执行交易。该策略的核心在于其动态性,能够根据市场条件的变化及时调整交易参数,适用于趋势和震荡市场。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 动态枢轴点计算:使用可调节的枢轴长度参数(默认值为2)来识别局部高低点
-2. 支撑阻力区间:在枢轴点基础上设定百分比范围(默认0.4%)来界定有效交易区域
-3. 交易信号生成:当价格从下方突破支撑位形成做多信号,从上方跌破阻力位形成做空信号
-4. 风险控制:采用动态止损(10%)和获利(27%)设置,并根据账户权益自动调整持仓规模
-
-#### 策略优势
-1. 自适应性强:策略能够根据市场状态动态调整支撑阻力位置,避免静态级别带来的滞后性
-2. 风险可控:通过严格的百分比止损和动态仓位管理,将每笔交易的风险控制在合理范围内
-3. 可扩展性:支持多个时间周期和参数组合,便于根据不同市场环境进行优化
-4. 透明度高:交易逻辑清晰,所有信号和价格水平都可在图表上直观显示
-
-#### 策略风险
-1. 假突破风险:在震荡市场中可能出现频繁的假突破信号,需要通过调整支撑阻力区间参数来降低
-2. 滑点影响:在流动性较差的市场环境下,实际成交价格可能与信号价格存在较大偏差
-3. 趋势依赖:策略在强趋势市场表现较好,但在横盘整理阶段可能产生过多交易信号
-4. 参数敏感:策略表现对参数设置较为敏感,需要通过回测来确定最优参数组合
-
-#### 策略优化方向
-1. 增加市场环境识别模块,根据波动率自动调整参数
-2. 引入成交量和其他技术指标作为辅助确认信号
-3. 优化仓位管理算法,考虑市场波动性进行动态调整
-4. 添加时间过滤器,避免在不利时段产生交易信号
-5. 开发自适应止损算法,根据市场波动性动态调整止损位置
-
-#### 总结
-该策略通过动态识别关键价格水平并结合严格的风险控制,为趋势跟踪和反转交易提供了一个可靠的框架。虽然存在一定的参数敏感性和市场环境依赖性,但通过持续优化和完善,能够在不同市场环境下保持稳定的表现。策略的成功运行需要交易者深入理解其原理,并根据具体市场情况进行适当的参数调整。 || 
-
 #### Overview
 This strategy is an adaptive trading system based on dynamic identification of support and resistance levels using price pivot points. It determines key price levels by calculating local highs and lows in real-time and executes trades accordingly. The core strength lies in its dynamic nature, allowing it to adjust trading parameters based on changing market conditions, making it suitable for both trending and ranging markets.
 
@@ -74,7 +41,7 @@ The core logic is based on several key elements:
 5. Develop adaptive stop-loss algorithm with dynamic adjustment based on market volatility
 
 #### Summary
-The strategy provides a reliable framework for trend-following and reversal trading through dynamic identification of key price levels combined with strict risk control. While it exhibits some parameter sensitivity and market environment dependency, continuous optimization and refinement enable consistent performance across different market conditions. Successful implementation requires traders to deeply understand its principles and adjust parameters according to specific market situations.[/trans]
+The strategy provides a reliable framework for trend-following and reversal trading through dynamic identification of key price levels combined with strict risk control. While it exhibits some parameter sensitivity and market environment dependency, continuous optimization and refinement enable consistent performance across different market conditions. Successful implementation requires traders to deeply understand its principles and adjust parameters according to specific market situations.
 
 
 

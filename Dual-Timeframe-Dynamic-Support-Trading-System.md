@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fed6dbf68c21720800.png)
 
-[trans]
-#### 概述
-该策略是一个基于双重时间框架的动态支撑位交易系统,通过在周线和日线时间框架上结合SMA和EMA均线的交叉信号来进行交易。系统利用了均线之间形成的支撑带来识别市场趋势和交易机会,通过两个不同时间周期的信号确认来提高交易的准确性。策略采用了百分比仓位管理方式,并考虑了交易成本和滑点因素。
-
-#### 策略原理
-策略的核心原理是通过监测两个时间周期内均线的交叉和位置关系来确定交易信号:
-1. 长周期(周线)使用20周SMA和21周EMA,短周期(日线)使用50日SMA和51日EMA
-2. 在长周期中,当EMA向上穿越SMA时产生做多信号,向下穿越时产生平仓信号
-3. 在短周期中,当EMA向上穿越SMA且短周期EMA位于长周期EMA之上时产生做多信号
-4. 当短周期出现做空信号或长周期均线交叉向下时,系统会平掉所有多单
-5. 策略在指定的时间范围内运行,超出范围自动平仓
-
-#### 策略优势
-1. 多重确认机制:通过两个时间周期的信号确认,降低虚假信号的影响
-2. 动态支撑带:均线之间形成的支撑带能够动态适应市场变化
-3. 风险管理完善:包含了交易成本和滑点的考虑,使用百分比仓位管理
-4. 自适应性强:支撑带会随市场波动自动调整位置
-5. 操作规则明确:入场和出场条件清晰,易于执行和回测
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡市场中可能产生频繁的虚假信号
-2. 滞后性风险:均线指标本身具有一定滞后性,可能错过最佳入场点
-3. 参数敏感性:均线周期的选择对策略表现影响较大
-4. 市场环境依赖:策略在趋势市场表现较好,但在剧烈波动市场中可能表现欠佳
-5. 资金管理风险:固定百分比仓位可能在某些市况下风险过大
-
-#### 策略优化方向
-1. 引入波动率指标:考虑添加ATR等波动率指标来动态调整仓位大小
-2. 优化参数选择:可以通过回测不同时间周期的均线参数来优化系统表现
-3. 增加市场环境过滤:添加趋势强度指标来过滤不适合的市场环境
-4. 完善止损机制:考虑添加移动止损或固定止损来进一步控制风险
-5. 优化仓位管理:可以根据信号强度和市场波动来动态调整仓位大小
-
-#### 总结
-该策略通过结合不同时间周期的均线交叉信号来构建一个相对稳健的交易系统。通过支撑带的概念来识别市场趋势,利用多重确认机制来提高交易的准确性。策略的设计考虑了实际交易中的各种因素,包括交易成本、滑点和时间管理等。虽然存在一些固有的风险,但通过提供的优化方向可以进一步提升策略的稳定性和盈利能力。 || 
-
 #### Overview
 This strategy is a dual timeframe dynamic support trading system that combines SMA and EMA crossover signals on weekly and daily timeframes. The system utilizes support bands formed between moving averages to identify market trends and trading opportunities, enhancing trading accuracy through signal confirmation from two different time periods. The strategy employs percentage-based position management and accounts for trading costs and slippage.
 
@@ -80,9 +44,7 @@ The core principle revolves around monitoring moving average crossovers and rela
 5. Improve position management: Dynamically adjust position sizes based on signal strength and market volatility
 
 #### Conclusion
-This strategy builds a relatively robust trading system by combining moving average crossover signals from different timeframes. It identifies market trends through the support band concept and uses multiple confirmation mechanisms to improve trading accuracy. The strategy design considers various practical trading factors, including trading costs, slippage, and time management. While inherent risks exist, the suggested optimization directions can further enhance the strategy's stability and profitability.[/trans]
-
-
+This strategy builds a relatively robust trading system by combining moving average crossover signals from different timeframes. It identifies market trends through the support band concept and uses multiple confirmation mechanisms to improve trading accuracy. The strategy design considers various practical trading factors, including trading costs, slippage, and time management. While inherent risks exist, the suggested optimization directions can further enhance the strategy's stability and profitability.
 
 > Source (PineScript)
 

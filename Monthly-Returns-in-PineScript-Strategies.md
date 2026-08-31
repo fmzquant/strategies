@@ -20,7 +20,7 @@ Please remember that past performance may not be indicative of future results.
 Due to various factors, including changing market conditions, the strategy may no longer perform as well as in historical backtesting.
 This post and the script don’t provide any financial advice.
 
-**回测**
+**Backtest**
  ![IMG](https://www.fmz.com/upload/asset/9905438f5790a4926c.png) 
 
 > Strategy Arguments

@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/147991c0ecb222c5c86.png)
 
-[trans]
-#### 概述
-本策略是一个结合了多重指数移动平均线(EMA)交叉、真实波动幅度(ATR)和枢轴点支撑阻力(Pivot Points)的综合交易系统。策略通过短期EMA对中长期EMA的交叉信号,结合ATR波动区间和关键价格水平来捕捉市场趋势转折点,实现精准的交易时机把握。
-
-#### 策略原理
-策略主要基于三个维度的技术分析:
-1. 趋势识别:使用4期、9期和18期三重EMA,通过短期EMA(4期)对中期EMA(9期)和长期EMA(18期)的同向交叉来确认趋势方向。
-2. 波动范围:引入14期ATR指标,用于量化市场波动性并设定动态的交易阈值。
-3. 价格支撑阻力:通过每日枢轴点计算系统(PPSignal),建立7个关键价格水平(PP、R1-R3、S1-S3),为交易提供参考。
-
-交易规则明确:
-- 做多条件:EMA4向上穿越EMA9和EMA18,且收盘价突破EMA9上方ATR距离
-- 做空条件:EMA4向下穿越EMA9和EMA18,且收盘价突破EMA9下方ATR距离
-- 止损设置:动态跟踪EMA4水平
-
-#### 策略优势
-1. 多维度分析:结合趋势、波动和价格结构三个维度,提高信号可靠性
-2. 动态适应:通过ATR和动态支撑阻力位,策略能够适应不同市场环境
-3. 风险控制完善:采用动态止损机制,能够及时锁定利润并控制风险
-4. 信号确认充分:要求多重技术指标共振才触发交易,降低假突破风险
-
-#### 策略风险
-1. 震荡市场风险:在横盘整理阶段可能产生频繁交叉假信号
-2. 滞后性风险:移动平均线本身具有滞后性,可能错过最佳入场时机
-3. Gap风险:日间跳空可能导致止损点失效
-4. 参数敏感性:不同周期参数组合可能产生显著不同的效果
-
-#### 策略优化方向
-1. 引入成交量指标:在交叉信号确认时加入成交量验证
-2. 动态参数优化:根据市场波动率自适应调整EMA周期参数
-3. 完善止损机制:可考虑结合ATR设置浮动止损
-4. 市场环境过滤:添加趋势强度指标,在强趋势期间才开启交易
-5. 时间过滤:针对不同时间周期的特征,设置最优交易时段
-
-#### 总结
-该策略通过多重技术指标的协同配合,构建了一个较为完整的交易系统。策略的核心优势在于多维度信号确认机制和完善的风险控制体系,但仍需要交易者根据具体市场环境进行参数优化和系统改进。通过建议的优化方向,策略的稳定性和可靠性有望得到进一步提升。 || 
-
 #### Overview
 This strategy is a comprehensive trading system that combines multiple Exponential Moving Averages (EMA) crossovers, Average True Range (ATR), and Pivot Points support/resistance levels. It captures market trend reversals by analyzing short-term EMA crosses against medium and long-term EMAs, combined with ATR volatility ranges and key price levels.
 
@@ -82,9 +45,7 @@ Trading rules are clearly defined:
 5. Time Filter: Establish optimal trading sessions based on different timeframe characteristics
 
 #### Summary
-This strategy constructs a comprehensive trading system through the synergy of multiple technical indicators. Its core strengths lie in its multi-dimensional signal confirmation mechanism and robust risk control framework, though traders need to optimize parameters and improve the system based on specific market conditions. Through the suggested optimization directions, the strategy's stability and reliability can be further enhanced.[/trans]
-
-
+This strategy constructs a comprehensive trading system through the synergy of multiple technical indicators. Its core strengths lie in its multi-dimensional signal confirmation mechanism and robust risk control framework, though traders need to optimize parameters and improve the system based on specific market conditions. Through the suggested optimization directions, the strategy's stability and reliability can be further enhanced.
 
 > Source (PineScript)
 

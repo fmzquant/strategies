@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/17559e7a6d74b5eaef4.png)
 
-[trans]
-#### 概述
-该策略是一个基于布林通道的自适应交易系统,通过动态监控价格与布林带的关系来进行仓位管理。策略采用20日均线作为中轨,2倍标准差作为通道宽度,结合突破确认和时间周期判断来触发交易信号,实现资金的优化配置。
-
-#### 策略原理
-策略运用布林通道的统计学原理,将价格波动控制在正态分布区间内。具体包括:
-1. 使用20日简单移动平均线(SMA)构建布林带中轨
-2. 通过2倍标准差设置上下轨,形成价格波动区间
-3. 当价格突破上轨5%或在上轨上方停留1小时时,买入50%仓位
-4. 首次回归中轨时减仓10%,跌破下轨5%时减仓50%
-5. 通过分批建仓和减仓来控制风险,优化收益
-
-#### 策略优势
-1. 结合趋势跟踪和均值回归,能够在不同市场环境下保持稳定性
-2. 采用动态仓位管理,避免过度持仓带来的风险
-3. 通过时间确认来过滤虚假突破信号,提高交易的可靠性
-4. 分批减仓策略可以锁定部分收益,同时保留上涨空间
-5. 策略逻辑简单清晰,易于理解和执行
-
-#### 策略风险
-1. 在剧烈波动市场中可能触发频繁交易,增加交易成本
-2. 固定的布林带参数可能不适应所有市场环境
-3. 突破确认的时间周期设置可能错过重要的交易机会
-4. 分批减仓可能在强势行情中过早退出部分仓位
-5. 资金管理较为激进,需要充足的资金储备
-
-#### 策略优化方向
-1. 引入自适应的布林带参数,根据市场波动度动态调整
-2. 增加成交量指标作为交易信号的辅助确认
-3. 优化仓位管理系统,根据市场趋势强度调整建仓比例
-4. 加入止损机制,有效控制下行风险
-5. 考虑结合其他技术指标,提高信号的准确性
-
-#### 总结
-该策略通过布林通道和时间周期分析建立了一个完整的交易系统,在趋势跟踪和风险控制之间取得平衡。虽然存在一定的优化空间,但整体设计理念符合量化交易的核心原则,具有实际应用价值。建议投资者在实盘中根据自身风险承受能力和资金规模进行适当调整。 || 
-
 #### Overview
 This strategy is an adaptive trading system based on Bollinger Bands, managing positions by dynamically monitoring the relationship between price and the bands. It uses a 20-day moving average as the middle band, 2 standard deviations for channel width, and combines breakout confirmation with time period analysis to trigger trading signals for optimized capital allocation.
 
@@ -80,7 +44,7 @@ The strategy applies the statistical principles of Bollinger Bands, controlling 
 5. Consider combining with other technical indicators to improve signal accuracy
 
 #### Summary
-The strategy establishes a complete trading system through Bollinger Bands and time period analysis, striking a balance between trend following and risk control. While there is room for optimization, the overall design philosophy aligns with core quantitative trading principles and has practical application value. Investors are advised to make appropriate adjustments based on their risk tolerance and capital size in live trading.[/trans]
+The strategy establishes a complete trading system through Bollinger Bands and time period analysis, striking a balance between trend following and risk control. While there is room for optimization, the overall design philosophy aligns with core quantitative trading principles and has practical application value. Investors are advised to make appropriate adjustments based on their risk tolerance and capital size in live trading.
 
 
 

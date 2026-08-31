@@ -10,123 +10,62 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/13cf8cb43a9c9231a1c.png)
-[trans]
 
 ## Overview
 
-This is a trend-following strategy that combines 3 Exponential Moving Averages (EMAs) with the Directional Movement Index (DMI) and the Moving Average Convergence Divergence (MACD) indicator to determine the trend direction and generate buy/sell signals. The key components include EMA crossover signals, DMI for trend strength, and MACD for momentum confirmation.
+This is a trend-following strategy that combines three exponential moving averages (EMAs), the Directional Movement Index (DMI), and the Moving Average Convergence Divergence (MACD) indicator to determine trend direction and generate buy and sell signals. The key components are EMA crossover signals, DMI-based trend-strength confirmation, and MACD-based momentum confirmation.
 
 ## Strategy Logic
 
-The core logic relies on 3 EMAs - 34, 89, and 200 - calculated on the M5 timeframe to identify the overall trend. The 34-period EMA gives near-term direction, while the 89 and 200 EMAs define the medium and long-term trends respectively. 
+The core logic relies on three EMAs calculated on the M5 timeframe — 34, 89, and 200 — to identify the overall trend. The 34-period EMA provides near-term direction, while the 89-period and 200-period EMAs define the medium- and long-term trend.
 
-Buy signals are triggered when:
-- Close price crosses above 34 EMA 
-- +DI (bullish directional movement) > 17
-- ADX (trend strength) > -DI 
+A buy signal is triggered when:
+- The closing price crosses above the 34 EMA
+- +DI (bullish directional movement) is greater than 17
+- ADX (trend strength) is greater than -DI
 
-Sell signals are generated when:
-- Close price crosses below 34 EMA
-- -DI (bearish directional movement) > 17 
-- ADX > +DI
+A sell signal is triggered when:
+- The closing price crosses below the 34 EMA
+- -DI (bearish directional movement) is greater than 17
+- ADX is greater than +DI
 
-Additional confirmation comes from the MACD indicator before entries.
+The MACD indicator provides additional confirmation before entry.
 
 ## Advantages
 
 This strategy has several key advantages:
 
-1. Captures trend direction early using short-term EMA crossover
-2. Uses multiple EMAs to gauge trend strength on different timeframes
-3. DMI filters help avoid false signals by checking for strong directional movement 
-4. MACD provides momentum confirmation for higher probability setups
-5. Combination of indicators improves accuracy and timing of entries
+1. It can capture trend shifts early through short-term EMA crossovers.
+2. Multiple EMAs help judge trend strength across different time horizons.
+3. The DMI filter helps avoid false signals by requiring strong directional movement.
+4. MACD adds momentum confirmation and improves the quality and probability of trade opportunities.
+5. Combining these indicators improves entry accuracy and timing.
 
-## Risks 
+## Risks
 
-The main risks to consider:
+Main risks to consider:
 
-1. Whipsaws and false signals if using only EMA crossover
-2. Potential lag in signal generation from multiple confirmations
-3. Vulnerable to sudden trend reversals 
+1. Relying on EMA crossovers alone can still produce misleading or mistimed signals.
+2. Multiple confirmations can delay signal generation.
+3. Sudden trend reversals can still hurt performance.
 
-Mitigation methods:
-- Use appropriate stop-loss, position sizing 
-- Optimize EMA lengths for current market conditions
-- Watch price action for visual confirmation 
+Possible mitigations:
+- Use appropriate stop-loss and position-management rules
+- Optimize EMA parameters for current market conditions
+- Observe raw price action for visual confirmation
 
-## Enhancement Opportunities
+## Optimization Directions
 
-Further improvements for the strategy:
+Possible areas for improvement:
 
-1. Add additional filters like RSI for overbought/oversold levels
-2. Incorporate volume analysis for stronger signals
-3. Test and optimize indicators and settings based on asset and timeframe
-4. Employ machine learning to continually learn from new market data 
+1. Add indicators such as RSI to judge overbought and oversold conditions.
+2. Combine volume analysis to produce stronger signals.
+3. Optimize indicators and parameters for different assets and timeframes.
+4. Apply machine-learning methods to adapt continuously to new market data.
 
-## Conclusion
+## Summary
 
-In summary, this is a robust trend-following system combining simple yet powerful indicators to trade in the direction of the prevailing trend. The triple EMA configuration gauges multi-timeframe trends while DMI and MACD checks enhance timing and probability of profitable entries. With proper optimization and risk management, it can be an effective addition for trend traders.
-
-|| 
-
-## 概述 
-
-这是一个结合使用3条指数移动平均线(EMA)、趋向指标(DMI)和移动平均聚散指标(MACD)来确定趋势方向和生成买卖信号的趋势跟踪策略。关键组成部分包括EMA黄金交叉信号、DMI判断趋势力度和MACD进行动量确认。
-
-## 策略逻辑
-
-核心逻辑依赖于在M5周期上计算的3条EMA - 34、89和200 - 来识别总体趋势。34周期EMA提供近期方向,而89和200 EMA则定义中长期趋势。
-
-买入信号触发时:
-- 收盘价上穿34 EMA
-- +DI(看涨趋向运动)> 17
-- ADX(趋势力度)> -DI
-
-卖出信号生成时:  
-- 收盘价下穿34 EMA
-- -DI(看跌趋向运动)> 17
-- ADX > +DI
-
-入场前还有MACD指标提供额外确认。
-
-## 优势
-
-该策略具有几个关键优势:
-
-1. 通过短期EMA黄金交叉及早捕捉趋势转向
-2. 使用多条EMA判断不同时间框架下的趋势力度
-3. DMI过滤器有助于避免错误信号,通过检查强劲的趋向运动
-4. MACD提供动量确认,提高交易机会的质量与概率
-5. 指标的组合提高了入场信号的准确性和时机
-
-## 风险
-
-主要考量的风险:
-
-1. 仅依赖EMA黄金交叉易受到误导和错位的影响
-2. 多重确认可能造成信号生成时点上的滞后
-3. 容易受突发性趋势反转的影响
-
-缓解方法:
-- 采用适当的止损和仓位管理
-- 根据当前市场条件优化EMA参数
-- 观察价格实体动作进行视觉确认
-
-## 优化方向
-
-策略的进一步改进:
-
-1. 增加如RSI等指标,判断超买超卖区域
-2. 结合成交量分析生成更强信号 
-3. 根据不同资产和时间框架进行指标和参数优化
-4. 运用机器学习技术持续从新市场数据中学习
-
-## 总结  
-
-总的来说,这是一个强大的趋势跟踪体系,组合使用简单但实用的几种指标顺势而为。三EMA配置判断多时间框架下的趋势,DMI和MACD检查提升入场时机和获利概率。配合适当的优化和风险管理,它可以成为趋势交易者有效的利器。
-
-[/trans]
+Overall, this is a strong trend-following framework that combines several simple but practical indicators to trade with the prevailing trend. The three-EMA structure identifies multi-timeframe trend conditions, while DMI and MACD improve entry timing and profit probability. With proper optimization and risk management, it can become an effective tool for trend traders.
 
 > Strategy Arguments
 

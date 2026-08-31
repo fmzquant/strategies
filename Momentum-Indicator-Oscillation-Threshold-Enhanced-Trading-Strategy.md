@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14c532e3f05d13b43d1.png)
 
-[trans]
-#### 概述
-本策略是一个基于商品通道指标(CCI)的动量交易系统,通过监测价格偏离均值的程度来捕捉市场超卖区域的交易机会。策略采用12个周期作为回溯期,在CCI指标跌破-90阈值时进场做多,当收盘价突破前期高点时平仓出场,并配备了可选的止损和获利了结机制。
-
-#### 策略原理
-策略核心是利用CCI指标来衡量价格与其均值之间的偏离程度。CCI的计算过程包括:首先计算典型价格(最高价、最低价和收盘价的算术平均值),然后计算典型价格的简单移动平均线(SMA),最后通过típical price减去SMA并除以平均偏差再乘以0.015得到最终的CCI值。当CCI值低于-90时,表明市场可能处于超卖状态,此时入场做多;当价格突破前期高点时,表明上涨趋势确立,此时平仓获利。策略还提供了止损和获利了结的参数设置选项,可根据交易者的风险偏好进行灵活调整。
-
-#### 策略优势
-1. 信号明确:使用固定的CCI阈值作为入场信号,避免主观判断带来的犹豫不决
-2. 风险可控:通过可选的止损和获利了结机制,实现了对风险的精确控制
-3. 参数灵活:交易者可以根据不同市场环境调整CCI的回溯期和入场阈值
-4. 执行简单:策略逻辑清晰,容易理解和执行,适合各类交易者使用
-5. 成本效率:采用事件驱动型交易,降低了过度交易带来的成本损失
-
-#### 策略风险
-1. 假突破风险:CCI跌破阈值后可能出现假突破,导致不必要的交易
-2. 滑点影响:在市场波动较大时,可能面临较大的滑点损失
-3. 趋势依赖:策略在横盘市场中可能产生频繁的假信号
-4. 参数敏感:CCI周期和阈值的选择对策略表现有较大影响
-5. 延迟风险:作为滞后指标,CCI可能错过最佳入场时机
-
-#### 策略优化方向
-1. 信号过滤:可以引入额外的技术指标如RSI或MACD来过滤假信号
-2. 动态阈值:将固定的CCI阈值改为基于波动率的动态阈值
-3. 分时优化:根据不同时间段的市场特征调整策略参数
-4. 资金管理:增加动态的仓位管理机制,提高资金使用效率
-5. 多周期分析:结合更长周期的趋势判断来优化入场时机
-
-#### 总结
-该策略通过CCI指标捕捉市场超卖机会,配合止损和获利了结机制,实现了一个完整的交易系统。策略逻辑清晰,易于执行,具有良好的风险控制能力。通过引入信号过滤、动态阈值等优化手段,策略的稳定性和盈利能力还有提升空间。建议交易者在实盘使用前进行充分的回测,并根据具体市场特征调整参数设置。 || 
-
 #### Overview
 This strategy is a momentum trading system based on the Commodity Channel Index (CCI), designed to capture trading opportunities in oversold areas by monitoring price deviations from the mean. The strategy uses a 12-period lookback, enters long positions when CCI drops below -90 threshold, exits when closing price breaks above previous highs, and includes optional stop-loss and take-profit mechanisms.
 
@@ -71,8 +40,6 @@ The core principle utilizes CCI to measure price deviation from its mean. CCI ca
 
 #### Conclusion
 This strategy captures market oversold opportunities through CCI indicator, combined with stop-loss and take-profit mechanisms to create a complete trading system. The strategy features clear logic, easy execution, and good risk control capabilities. Through optimization measures like signal filtering and dynamic thresholds, the strategy's stability and profitability can be further improved. Traders are advised to conduct thorough backtesting and adjust parameters according to specific market characteristics before live implementation.
-[/trans]
-
 
 
 > Source (PineScript)

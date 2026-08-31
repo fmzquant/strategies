@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18da9379c1c17f9cdbc.png)
 
-[trans]
-#### 策略概述
-该策略是一个基于价格均衡点的趋势跟踪和反转交易系统。它通过计算过去X根K线的最高点和最低点的中间值来确定均衡价格,并根据收盘价相对于均衡价格的位置来判断趋势方向。当价格连续保持在均衡价格的一侧达到设定的K线数量时,系统会认定趋势成立。在第一次回调时(价格突破均衡价格)系统会寻求入场机会。该策略可以根据设置选择趋势跟踪或反转交易模式。
-
-#### 策略原理 
-1. 均衡价格计算:使用过去X根K线的最高价和最低价的中点作为均衡价格,这与一目均衡图的基准线计算方法相同。
-2. 趋势判断:当价格在均衡价格的同一侧连续保持X根K线(默认7根)时,判定为趋势成立。
-3. 入场信号:在趋势确立后的第一次回调(价格突破均衡价格)时触发入场信号。
-4. 止损止盈:使用ATR的60%分位数来动态调整止损止盈距离,提供了风险控制的灵活性。
-5. 大幅波动保护:当价格偏离均衡点超过设定的ATR倍数时,系统会自动平仓以防止大幅回撤。
-
-#### 策略优势
-1. 适应性强:可以根据市场特性灵活切换趋势跟踪和反转交易模式。
-2. 风险控制完善:采用动态ATR止损,并设有大幅波动保护机制。
-3. 操作明确:交易信号清晰,不依赖复杂的技术指标组合。
-4. 可视化效果好:使用彩色K线和背景提供直观的市场状态展示。
-5. 自动化友好:可以方便地对接MT5等交易平台实现自动化交易。
-
-#### 策略风险
-1. 震荡市风险:在横盘震荡市场可能产生频繁的假信号。
-2. 滑点影响:在剧烈波动时可能面临较大滑点。
-3. 参数敏感性:核心参数如均衡期间、趋势判断周期等需要针对不同市场仔细优化。
-4. 市场切换风险:市场从趋势到震荡的转换期可能造成较大回撤。
-
-#### 策略优化方向
-1. 市场环境识别:增加市场环境判断模块,在不同市场条件下动态调整策略参数。
-2. 信号过滤:考虑加入成交量、波动率等辅助指标来过滤假信号。
-3. 仓位管理:引入更复杂的仓位管理机制,如基于波动率的动态调整。
-4. 多时间周期:整合多个时间周期的信号来提高交易的准确性。
-5. 交易成本优化:针对不同交易品种的成本特点优化进出场时机。
-
-#### 总结
-这是一个设计合理的趋势交易系统,通过均衡价格这一核心概念提供了清晰的交易逻辑。该策略最大的特点是灵活性强,既可以用于趋势跟踪也可以用于反转交易,同时具备完善的风险控制机制。虽然在某些市场条件下可能面临挑战,但通过持续优化和灵活调整,该策略有望在各种市场环境下保持稳定的表现。 || 
-
 #### Strategy Overview
 This strategy is a trend following and reversal trading system based on price equilibrium points. It determines the equilibrium price by calculating the midpoint between the highest and lowest points over X bars, and judges trend direction based on the closing price's position relative to the equilibrium price. When price maintains on one side of the equilibrium for a set number of bars, the system confirms a trend. It seeks entry opportunities on the first pullback (price crossing equilibrium). The strategy can be configured for either trend following or reversal trading modes.
 
@@ -76,7 +42,7 @@ This strategy is a trend following and reversal trading system based on price eq
 5. Trading Cost Optimization: Optimize entry and exit timing based on cost characteristics of different trading instruments.
 
 #### Summary
-This is a well-designed trend trading system that provides clear trading logic through the core concept of equilibrium price. The strategy's greatest strength is its flexibility, being suitable for both trend following and reversal trading while maintaining comprehensive risk control mechanisms. Although it may face challenges under certain market conditions, through continuous optimization and flexible adjustment, the strategy has the potential to maintain stable performance across various market environments.[/trans]
+This is a well-designed trend trading system that provides clear trading logic through the core concept of equilibrium price. The strategy's greatest strength is its flexibility, being suitable for both trend following and reversal trading while maintaining comprehensive risk control mechanisms. Although it may face challenges under certain market conditions, through continuous optimization and flexible adjustment, the strategy has the potential to maintain stable performance across various market environments.
 
 
 

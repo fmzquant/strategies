@@ -10,50 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/96480b71e8a3cb4e26.png)
- [trans]
-## 概述
-
-这个策略是基于移动平均线的简单策略,它可以在不同的币对上取得不错的效果。它绘制开盘平均线和收盘平均线,当两条线交叉时决定建立或者退出多头头寸。其原理是当平均收盘价上升时建立头寸,这可能预示着未来价格会上涨。当平均收盘价下降时平掉头寸,这可能预示着未来价格会下跌。这只是一种猜测,但有时它可以非常准确的预测未来价格。
-
-## 策略原理
-
-这个策略首先根据设置选择移动平均线的类型,包括EMA、SMA、RMA、WMA和VWMA。然后设置移动平均线计算的周期,一般是10到250根K线。根据不同的币对,选择不同的移动平均线类型和周期数可以获得完全不同的效果。 
-
-该策略的具体交易逻辑是:
-1. 计算开盘价和收盘价的移动平均线;
-2. 比较收盘价平均线和开盘价平均线的数值;
-3. 如果收盘价平均线上穿开盘价平均线,则建立多头头寸;
-4. 如果收盘价平均线下穿开盘价平均线,则平掉多头头寸。
-
-建立头寸时认为是价格上涨的预兆,平仓时认为是价格下跌的预兆。
-
-## 策略优势分析
-
-该策略主要有以下几个优势:
-
-1. 参数设置灵活,可以根据不同币对选择最优参数,从而针对性很强;
-2. 逻辑简单,容易理解和实现;
-3. 在部分币对可以获得非常高的收益率,总体来说稳定性较好;
-4. 可以根据需求选择显示不同指标,自定义程度高。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 在部分币对和参数下,收益率和稳定性都不高;
-2. 无法有效响应短期价格变动,对高波动币对效果不佳;
-3. 选取移动平均线周期的依据不够科学合理,有一定的主观性。
-
-对策和优化方向:
-1. 尽量选择长周期,如12小时、1天等时间周期,可以减少不必要的交易,提高稳定性;
-2. 增加参数优化功能,自动测试不同参数组合,找出最优参数;
-3. 增加自适应选取移动平均线周期的功能,让系统自动决定最佳周期。
-
-## 总结
-
-本策略总体来说逻辑简单,使用移动平均线指标判断价格趋势和转折点。它可以通过调整参数取得非常好的效果,是一种有效的趋势跟踪策略,值得进一步完善和应用。但也应注意控制风险,选择合适的币对和参数,使其发挥最大效用。
-
-||
+ 
 
 ## Overview
 
@@ -96,8 +53,6 @@ Solutions and optimization:
 ## Conclusion
 
 In summary, this is a simple strategy using moving average indicators to determine price trend and inflection points. It can achieve very good results by adjusting parameters, and is an effective trend tracking strategy worth further improvement and application. But risk management should be noted, choose suitable coin pairs and parameters to maximize its usefulness.
-
-[/trans]
 
 > Strategy Arguments
 

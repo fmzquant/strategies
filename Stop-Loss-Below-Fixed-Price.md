@@ -9,9 +9,9 @@ Stop-Loss-Below-Fixed-Price
 
 > Strategy Description
 
-一个简单的固定价格止损机器人，可以帮助你止损。也是个很好的入门数字货币量化交易的策略。
+A simple fixed-price stop-loss bot that can help you stop losses. It is also a good introductory strategy for quantitative cryptocurrency trading.
 
-###　参数：
+### Parameters:
 
 StopPrice：Fixed price to stop loss	
  

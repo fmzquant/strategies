@@ -8,66 +8,8 @@ SMA-RSI-Sudden-Buy-Sell-Strategy
 ChaoZhang
 
 > Strategy Description
-
-
 ![IMG](https://www.fmz.com/upload/asset/950d769e62fbc99660.png)
- [trans]
-
-## 概述
-
-本策略主要利用 RSI 的平均值以及价格的突发性变动来识别市场的趋势和反转点。核心思路是在 RSI 超买超卖的情况下考虑建仓,并在出现突发性价格变动时寻找反转机会。同时,辅助使用 EMA 进行过滤信号。
-
-## 策略原理
-
-1. 计算 RSI 的平均值 SMA。当 RSI 的 SMA 线上穿60 或下穿 40 时,视为超买超卖现象,考虑反向开仓。
-
-2. 当 RSI 的变动超过某一数值时,认为出现突发性变动。结合实际收盘价验证后,作为建立反向头寸的信号。
-
-3. 使用 EMA 多档过滤,只有当价格上穿较短周期的 EMA 时,才会考虑建立多头;只有当价格下穿较短周期的 EMA 时,才会考虑建立空头。
-
-4. 通过组合使用 RSI 的平均值、突发性变动以及 EMA 的过滤,寻找较优的建仓点位。
-
-## 优势分析
-
-1. 使用 RSI 的平均值能较为准确地判断超买超卖现象,有利于抓住反转机会。
-
-2. 突发性变动往往预示着价格趋势和方向的改变,使用这一信号可以提高入场的时间liness。
-
-3. EMA 的多档过滤可以进一步避免错误信号,从而减少不必要的损失。
-
-4. 综合多种参数作为判决标准,可以提高策略稳定性和可靠性。
-
-## 风险及对策
-
-1. RSI 表现不稳定,SMA 值命中率不高。可以适当优化 RSI 的参数或使用其他指标替换。 
-
-2. 突发性变动可能是短期震荡,并非真实反转。可以增大感应周期长度提高判断准确性。
-
-3. EMA 方向过滤存在滞后性。可以测试更短周期的 EMA 提高灵敏度。
-
-4. 整体而言,本策略对参数调整比较敏感,需要仔细测试寻找最优参数组合。同时配合止损来控制风险。
-
-## 优化建议
-
-1. 测试 ADX, MACD 等其他指标与 RSI 结合使用,寻找更优入场点位。
-
-2. 增加机器学习算法,通过模型训练判断突发性买卖信号的真实性和稳定性。
-
-3. 进一步增强 EMA 方向过滤的效果,如改进为不同周期 EMA 的综合判断。
-
-4. 添加自适应止损策略,可以根据市场波动程度来动态调整止损幅度。
-
-5. 继续优化参数,寻找最佳的参数组合。优化评价标准可以考虑夏普比率等。
-
-
-## 总结
-
-本策略首先利用 RSI 的平均值判断超买超卖情况。然后在突发性变动时建立反向头寸。同时使用 EMA 进行辅助过滤。通过合理的参数设定,可以有效判断市场的趋势转折点。总体而言,本策略稳定性较好,具有一定的实战价值。后续仍有进一步提升空间,需要持续测试和优化。
-
-||
-
-
-## Overview
+ ## Overview
 
 This strategy mainly uses the average value of RSI and sudden price changes to identify market trend and reversal points. The core idea is to consider establishing positions when RSI is overbought or oversold, and look for reversal opportunities when sudden price changes occur. EMA is also used as a filter.
 
@@ -113,13 +55,9 @@ This strategy mainly uses the average value of RSI and sudden price changes to i
 
 5. Continue parameter optimization to find optimum parameter combinations. Evaluation criteria could be Sharpe Ratio etc.
 
-
 ## Conclusion  
 
 This strategy firstly uses RSI average to determine overbought/oversold conditions. Reverse positions are then established when sudden changes occur. EMA is also used as an auxiliary filter. With proper parameter settings, this strategy can effectively determine market trend shifts. Overall speaking, it has good stability and practical value. There is still room for further improvement, requiring persistent testing and optimization.
-
-[/trans]
-
 > Strategy Arguments
 
 

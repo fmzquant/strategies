@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/e1b96c6bd2ecf70e00.png)
-
-[trans]
-#### 概述
-该策略是一个基于多周期简单移动平均线(SMA)交叉信号的量化交易系统。它主要通过识别长期上涨趋势中的短期回调机会进行交易。策略使用5日、10日、20日、60日和120日五个周期的SMA指标,通过均线的位置关系和交叉信号来判断市场趋势和交易时机。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键部分:
-1. 通过SMA20和SMA60的相对位置关系判断长期趋势,当SMA20位于SMA60之上时,确认市场处于上涨趋势。
-2. 在确认长期上涨趋势的前提下,当短期SMA5从SMA20下方回升至上方时,触发买入信号。这表明市场在上涨趋势中出现短期回调后开始反弹。
-3. 当SMA20上穿SMA5时,触发平仓信号。这表明短期上涨动能减弱,可能进入调整期。
-4. 策略还包含了时间过滤器功能,可以限定回测的时间范围,提高策略的灵活性。
-
-#### 策略优势
-1. 策略逻辑清晰简单,易于理解和实现,不涉及复杂的计算过程。
-2. 通过多周期均线的配合使用,能够有效过滤市场噪音,提高交易信号的可靠性。
-3. 策略聚焦于趋势市场中的回调机会,符合"趋势交易"的核心理念。
-4. 采用SMA替代EMA,降低了对价格变化的敏感度,减少虚假信号。
-5. 入场和出场逻辑明确,便于执行和风险控制。
-
-#### 策略风险
-1. 均线系统存在滞后性,可能导致入场和出场时机不够理想。
-2. 在震荡市场中,频繁的均线交叉可能产生过多虚假信号。
-3. 策略缺乏波动率过滤机制,在高波动期可能面临较大回撤风险。
-4. 没有考虑成交量等其他技术指标的配合,信号的可靠性有待提高。
-5. 固定的均线参数可能不适合所有市场环境。
-
-#### 策略优化方向
-1. 引入ATR指标进行波动率过滤,在波动率过高时避免交易。
-2. 加入成交量确认机制,提高交易信号的可靠性。
-3. 开发自适应均线周期机制,使策略更好地适应不同市场环境。
-4. 增加趋势强度过滤器,如ADX指标,以确保在强趋势中交易。
-5. 完善止损机制,如加入跟踪止损,更好地控制风险。
-
-#### 总结
-该策略通过多周期SMA均线的配合使用,构建了一个专注于捕捉长期上涨趋势中回调机会的交易系统。策略设计简洁实用,具有良好的可理解性和可执行性。通过引入波动率过滤、成交量确认等优化措施,策略的稳健性和可靠性有望进一步提升。 ||
-
 #### Overview
 This strategy is a quantitative trading system based on multi-period Simple Moving Average (SMA) crossover signals. It primarily identifies pullback opportunities within long-term uptrends. The strategy utilizes SMAs of five different periods (5, 10, 20, 60, and 120 days) to determine market trends and trading opportunities through their relative positions and crossover signals.
 
@@ -78,9 +41,7 @@ The core logic includes several key components:
 5. Enhance stop-loss mechanisms, including trailing stops, for better risk control.
 
 #### Summary
-The strategy builds a trading system focused on capturing pullback opportunities within long-term uptrends through the coordinated use of multiple-period SMAs. Its design is practical and straightforward, offering good comprehensibility and executability. The strategy's robustness and reliability can be further enhanced through the introduction of volatility filtering, volume confirmation, and other optimization measures.[/trans]
-
-
+The strategy builds a trading system focused on capturing pullback opportunities within long-term uptrends through the coordinated use of multiple-period SMAs. Its design is practical and straightforward, offering good comprehensibility and executability. The strategy's robustness and reliability can be further enhanced through the introduction of volatility filtering, volume confirmation, and other optimization measures.
 
 > Source (PineScript)
 

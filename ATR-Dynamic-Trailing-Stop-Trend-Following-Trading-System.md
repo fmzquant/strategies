@@ -12,52 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8777b94db5631ca2646.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8aecd0ae154c5f0252b.png)
 
-
-
-
-[trans]
-#### 概述
-该策略是一个基于ATR(平均真实波幅)动态追踪止损的趋势跟踪系统。它结合了EMA均线作为趋势过滤器,并通过调整灵敏度参数和ATR周期来控制信号的生成。系统不仅支持做多,还支持做空交易,并具有完善的获利管理机制。
-
-#### 策略原理
-1. 使用ATR指标计算价格波动幅度,并根据设定的灵敏度系数(Key Value)确定追踪止损距离
-2. 通过EMA均线判断市场趋势方向,只在价格位于均线之上开多单,位于均线之下开空单
-3. 当价格突破追踪止损线且符合趋势方向时,触发交易信号
-4. 系统采用分段获利方式管理持仓:
-   - 获利20%-50%时,将止损提升至成本价保本
-   - 获利50%-80%时,部分获利了结并收紧止损位
-   - 获利80%-100%时,进一步收紧止损位保护利润
-   - 获利超过100%时,全部平仓获利
-
-#### 策略优势
-1. 动态追踪止损可以有效跟踪趋势,在保护利润的同时不会过早离场
-2. EMA趋势过滤有效降低了假突破带来的风险
-3. 分段获利机制既保证了收益兑现,又给予趋势充分发展空间
-4. 支持做多做空双向交易,可以充分把握市场机会
-5. 参数可调节性强,适应不同市场环境
-
-#### 策略风险
-1. 在震荡市场中可能频繁交易导致损失
-2. 趋势反转初期可能产生较大回撤
-3. 参数设置不当可能影响策略表现
-风险控制建议:
-- 建议在明显趋势市场使用
-- 谨慎选择参数,可通过回测优化
-- 设置最大回撤限制
-- 考虑增加市场环境过滤条件
-
-#### 策略优化方向
-1. 增加市场环境识别机制,在不同市场条件下使用不同参数
-2. 引入成交量等辅助指标增强信号可靠性
-3. 优化获利管理机制,根据波动率动态调整获利目标
-4. 增加时间过滤,避免在不利时段交易
-5. 考虑加入波动率过滤,在过度波动时降低交易频率
-
-#### 总结
-这是一个结构完整、逻辑清晰的趋势跟踪系统。通过ATR动态跟踪和EMA趋势过滤的结合,在把握趋势的同时较好地控制了风险。分段获利机制的设计也体现了成熟的交易思维。策略具有较强的实用性和可扩展性,通过持续优化和完善,有望获得更好的交易效果。 ||
-
-
-
 #### Overview
 This strategy is a trend following system based on ATR (Average True Range) dynamic trailing stop. It combines EMA as trend filter and controls signal generation through adjustable sensitivity parameters and ATR period. The system supports both long and short trades with comprehensive profit management mechanism.
 
@@ -96,8 +50,7 @@ Risk control suggestions:
 5. Consider adding volatility filters to reduce trading frequency during excessive volatility
 
 #### Summary
-This is a well-structured trend following system with clear logic. Through the combination of ATR dynamic tracking and EMA trend filtering, it captures trends while maintaining good risk control. The staged profit mechanism design reflects mature trading thinking. The strategy has strong practicality and extensibility, with potential for better trading results through continuous optimization and improvement.[/trans]
-
+This is a well-structured trend following system with clear logic. Through the combination of ATR dynamic tracking and EMA trend filtering, it captures trends while maintaining good risk control. The staged profit mechanism design reflects mature trading thinking. The strategy has strong practicality and extensibility, with potential for better trading results through continuous optimization and improvement.
 
 
 > Source (PineScript)

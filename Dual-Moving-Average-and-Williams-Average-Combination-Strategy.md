@@ -9,54 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/118aa1ac0b1387b9c46.png)
- [trans]
-#### 概述
-
-本策略通过组合双指数移动平均线和三条Williams平均线,形成一个综合的趋势跟踪和趋势反转信号产生系统。它具有优异的持仓效率,可以有效过滤假信号。
-
-#### 策略原理
-
-本策略主要由两个子策略组成:
-
-1. 双指数移动平均线(Double Exponential Moving Average,DEMA)。该指标结合了单指数移动平均线的趋势跟踪性能,以及双指数移动平均线的滞后性。当价格上涨时,它可以更快地做多;当价格下跌时,它也可以更快地平仓。
-
-2. Williams三条平均线。该指标由长线、中线和短线组成。它利用不同周期平均线的交叉来判断趋势的变化,以产生交易信号。当短线上穿中线和中线上穿长线时为做多信号。当短线下穿中线和中线下穿长线时为做空信号。
-
-本策略的交易信号是将上述两个子策略的结果进行“与”运算。也就是说,只有当两个子策略同时发出信号时,本策略才会出发订单。这可以有效地减少假信号,提高持仓的稳定性。
-
-#### 优势分析
-
-本策略最大的优势在于可以有效地过滤假信号,这是由其策略结构所决定的。虽然双移动平均线和Williams平均线各有其缺点,但把两者组合在一起,就可以发挥各自的优势,互相补偿。这使得本策略可以在趋势行情中实现高效的持仓,而在盘整行情中可以及时止损。
-
-此外,本策略参数优化空间大,可以通过调整双移动平均线的参数和Williams三条平均线的参数,来适应不同品种和周期的行情特点,具有较强的适应性。
-
-#### 风险分析
-
-本策略的主要风险在于当行情陷入剧烈波动时,止损点可能会被突破,造成较大的亏损。这是移动平均线策略普遍存在的问题。此外,在震荡行情中,本策略可能会频繁开仓平仓,增加交易费用的损耗。
-
-为了控制这些风险,建议优化参数时采用Walk Forward Analysis方法,并设置合理的止损点。同时,也可以引入附加指标判断行情状态,在震荡行情中暂停交易。
-
-#### 优化方向
-
-本策略有以下几个优化方向:
-
-1. 调整双移动平均线的参数,适应不同品种和周期。
-
-2. 调整Williams平均线的三条线周期,适应市场波动频率。
-
-3. 增加开仓条件,在特定行情阶段过滤交易信号。例如在剧烈波动中不交易。
-
-4. 增加止损指标以控制亏损。可以试验追踪止损、平均止损等方法。
-
-5. 引入机器学习算法自动优化参数。
-
-#### 总结
-
-本策略通过组合双移动平均线和Williams平均线的优势,实现了交易信号的有效过滤,可以减少假信号,提高持仓效率。它可根据市场行情通过参数优化获得更好的绩效,具有很大的应用潜力。同时也需要注意风险管理,控制行情剧烈波动带来的亏损。
-
-||
-
 #### Overview
 
 This strategy combines dual exponential moving averages and three Williams moving averages to form a comprehensive trend tracking and trend reversal signal generation system. It has excellent holding efficiency and can effectively filter out false signals.
@@ -100,8 +52,6 @@ This strategy has the following optimization directions:
 #### Conclusion
 
 This strategy realizes effective filtering of trading signals by combining the advantages of dual moving averages and Williams moving averages, which can reduce false signals and improve holding efficiency. It can obtain better performance through parameter optimization according to market conditions, and has great application potential. At the same time, risk management is also required to control losses caused by drastic market fluctuations.
-
-[/trans]
 
 > Strategy Arguments
 

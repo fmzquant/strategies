@@ -9,13 +9,10 @@ crawl-Binance-announcements-and-sell-Delist-coin
 
 > Strategy Description
 
-爬取币安公告页面，观察近两次的下架信息，具体格式为“Binance将下架CLOAK、MOD、SALT、SUB、WINGS”、“Binance将下架BCN，CHAT，ICN，TRIG”。
+Crawl the Binance announcement page and monitor the two most recent delisting notices. Typical announcement formats include “Binance Will Delist CLOAK, MOD, SALT, SUB and WINGS” and “Binance Will Delist BCN, CHAT, ICN and TRIG”.
 
-爬虫将以“将下架”为关键词爬取新的下架公告，当然不排除币安更改公告格式，可参考此策略加以完善。由于爬虫任务过于简单，将用简单的JavaScript编写。爬取到下架币后，将检查账户信息，如果存在下架币，以较低的价格全部卖出，如果存在未完成订单，先撤销。直到将所持有的下架币完全卖出。
-具体分析，参考帖子：https://zhuanlan.zhihu.com/p/57012933
-
-
-
+The crawler watches for new delisting announcements using the keyword “Will Delist”. Binance may change its announcement format in the future, so this strategy can be extended accordingly. Because the crawling task itself is simple, it is implemented in plain JavaScript. After a delisted coin is detected, the strategy checks the account. If any delisted coin is still held, it first cancels unfinished orders and then sells the remaining balance at a relatively low price until the position is fully liquidated.
+Detailed analysis: https://zhuanlan.zhihu.com/p/57012933
 > Source (javascript)
 
 ``` javascript

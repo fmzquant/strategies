@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/168d749741a06fc9d69.png)
 
-[trans]
-#### 概述
-这是一个结合了多重技术分析形态识别和支撑阻力水平的策略系统。该策略主要通过识别双底形态(亚当与夏娃底部形态)、结合斐波那契回调水平以及支撑阻力线来进行交易决策。策略的核心在于通过多维度的技术指标验证,提高交易信号的可靠性,同时利用支撑阻力水平作为风险控制的重要参考。
-
-#### 策略原理
-策略采用三重验证机制进行交易决策:首先通过特定的算法识别双底形态,包括较为尖锐的"亚当底"和较为圆润的"夏娃底";其次,利用斐波那契回调水平(0.618和1.618)来确定目标区域;最后,通过支撑阻力水平的验证来确认交易信号。交易信号的生成需要同时满足形态识别、斐波那契水平和支撑阻力水平的条件。具体而言,当支撑阻力水平高于1.618斐波那契延伸位时触发做多信号,当支撑阻力水平低于0.618斐波那契回调位时触发做空信号。
-
-#### 策略优势
-1. 多重验证机制大大提高了交易信号的可靠性
-2. 通过形态识别算法准确捕捉市场转折点
-3. 结合斐波那契水平提供了精确的目标区域
-4. 支撑阻力水平的验证增加了交易的安全性
-5. 策略参数可调节性强,适应不同市场环境
-6. 自动化程度高,减少主观判断带来的偏差
-
-#### 策略风险
-1. 形态识别可能存在滞后性,影响入场时机
-2. 在高波动市场中可能产生假信号
-3. 支撑阻力水平的有效性受市场环境影响
-4. 参数设置不当可能导致过度交易
-5. 需要较大的观察周期,可能错过一些快速机会
-
-#### 策略优化方向
-1. 引入波动率指标来过滤市场环境
-2. 增加趋势过滤器以提高形态识别的准确性
-3. 优化支撑阻力水平的计算方法
-4. 加入成交量指标作为辅助确认
-5. 开发更灵活的止损止盈机制
-6. 引入机器学习算法提高形态识别的准确率
-
-#### 总结
-该策略通过综合运用形态识别、斐波那契水平和支撑阻力线等多重技术分析方法,构建了一个相对完善的交易系统。策略的优势在于其多重验证机制提供了较高的可靠性,而其可调节性也使其能够适应不同的市场环境。虽然存在一些固有风险,但通过持续优化和完善,该策略有望在实际交易中取得稳定的表现。通过加入更多的技术指标和优化算法,策略的性能还有很大的提升空间。 || 
-
 #### Overview
 This is a comprehensive trading strategy system that combines multiple technical analysis pattern recognition with support and resistance levels. The strategy primarily works by identifying double bottom patterns (Adam and Eve bottoms), integrating Fibonacci retracement levels, and utilizing support and resistance lines for trading decisions. The core strength lies in its multi-dimensional technical indicator verification, which enhances the reliability of trading signals while using support and resistance levels as crucial references for risk control.
 
@@ -74,7 +41,7 @@ The strategy employs a triple verification mechanism for trading decisions: Firs
 6. Implement machine learning algorithms to enhance pattern recognition accuracy
 
 #### Summary
-This strategy constructs a relatively complete trading system by comprehensively utilizing multiple technical analysis methods including pattern recognition, Fibonacci levels, and support/resistance lines. Its strength lies in the high reliability provided by multiple verification mechanisms, while its adjustability allows adaptation to different market conditions. Although some inherent risks exist, through continuous optimization and improvement, the strategy shows promise for stable performance in actual trading. By incorporating additional technical indicators and optimization algorithms, there is significant room for performance enhancement.[/trans]
+This strategy constructs a relatively complete trading system by comprehensively utilizing multiple technical analysis methods including pattern recognition, Fibonacci levels, and support/resistance lines. Its strength lies in the high reliability provided by multiple verification mechanisms, while its adjustability allows adaptation to different market conditions. Although some inherent risks exist, through continuous optimization and improvement, the strategy shows promise for stable performance in actual trading. By incorporating additional technical indicators and optimization algorithms, there is significant room for performance enhancement.
 
 
 

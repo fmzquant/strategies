@@ -11,54 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1aa84010a36b301b8fe.png)
 
-[trans]
-#### 概述
-该策略是一个基于RSI超卖信号和动态ATR止损的量化交易系统。策略使用日线级别数据,结合RSI指标的超卖信号和200日均线的趋势过滤,在市场超卖时捕捉反弹机会。该策略采用动态ATR止损和静态百分比止损双重保护机制,并设置了三重获利目标,通过分段减仓来实现收益最大化。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素:
-1. 入场信号:当RSI(5)低于30的超卖水平,且价格位于200日均线之上时,系统发出做多信号。
-2. 止损机制:采用1.5倍ATR(20)的动态止损和25%的固定止损相结合的双重机制。
-3. 获利目标:设置了5%、10%和15%三个目标位,分别在达到目标时减仓33%、66%和100%。
-4. 仓位管理:建议使用Kelly准则计算得出的59.13%仓位,或保守使用75%仓位进行交易。
-
-#### 策略优势
-1. 双重趋势确认:通过RSI超卖和均线趋势双重验证,提高交易胜率。
-2. 灵活的风险控制:动态ATR止损能够根据市场波动自适应调整,固定止损提供最后防线。
-3. 智能获利管理:三重目标位配合分段减仓,既能锁定部分利润又不会错过大行情。
-4. 资金管理科学:采用Kelly准则优化仓位,在风险和收益之间取得平衡。
-
-#### 策略风险
-1. 趋势依赖性:策略在震荡市场可能频繁触发止损。
-建议:可以增加震荡指标过滤假信号。
-
-2. 止损幅度较大:25%的固定止损可能导致单次损失过大。
-建议:根据个人风险承受能力调整止损比例。
-
-3. 回撤风险:分段获利可能在强势行情中过早减仓。
-建议:可以动态调整获利目标,或保留部分仓位追踪趋势。
-
-#### 策略优化方向
-1. 信号优化:
-- 加入成交量确认
-- 结合趋势指标如MACD
-- 引入波动率过滤器
-
-2. 止损优化:
-- 实现动态止损比例
-- 增加时间止损
-- 加入盈亏比过滤
-
-3. 获利优化:
-- 基于ATR动态设置目标位
-- 实现跟踪止盈
-- 优化减仓比例
-
-#### 总结
-该策略通过结合RSI超卖信号和均线趋势过滤,配合动态ATR止损和三重获利目标,构建了一个完整的交易系统。策略的优势在于风险控制灵活,获利管理合理,但仍需要根据实际市场情况和个人风险偏好进行优化调整。通过持续改进信号系统、止损机制和获利策略,该系统有望在实盘交易中取得更好的表现。 
-
-|| 
-
 #### Overview
 This strategy is a quantitative trading system based on RSI oversold signals and dynamic ATR stop-loss. Using daily timeframe data, it combines RSI oversold signals with a 200-day moving average trend filter to capture rebound opportunities in oversold market conditions. The strategy employs both dynamic ATR stop-loss and static percentage stop-loss mechanisms, along with triple profit targets implemented through staged position reduction.
 
@@ -102,8 +54,7 @@ Suggestion: Consider dynamic profit targets or retain portion for trend followin
 - Optimize position reduction ratios
 
 #### Summary
-This strategy constructs a complete trading system by combining RSI oversold signals with moving average trend filtering, complemented by dynamic ATR stop-loss and triple profit targets. Its strengths lie in flexible risk control and rational profit management, though optimization based on market conditions and personal risk preference is necessary. Through continuous improvement of the signal system, stop-loss mechanism, and profit-taking strategy, the system shows potential for better performance in live trading.[/trans]
-
+This strategy constructs a complete trading system by combining RSI oversold signals with moving average trend filtering, complemented by dynamic ATR stop-loss and triple profit targets. Its strengths lie in flexible risk control and rational profit management, though optimization based on market conditions and personal risk preference is necessary. Through continuous improvement of the signal system, stop-loss mechanism, and profit-taking strategy, the system shows potential for better performance in live trading.
 
 
 > Source (PineScript)

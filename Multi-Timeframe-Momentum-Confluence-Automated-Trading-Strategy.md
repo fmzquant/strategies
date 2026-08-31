@@ -12,71 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8df5f9f453f773570ca.png)
 ![IMG](https://www.fmz.com/upload/asset/2d921e217ec50b3625389.png)
 
-
-
-[trans]
-
-#### 概述
-该策略是一个综合性的交易系统，利用多时间框架分析、技术指标融合和形态识别来寻找高概率交易机会。其核心理念是通过分析五个不同时间框架（1分钟、5分钟、15分钟、1小时和4小时）的趋势一致性，结合成交量突破、吞没形态和动量指标，以精确捕捉市场动向。该策略同时内置自动止盈止损机制，根据市场波动性动态调整风险管理参数。
-
-#### 策略原理
-策略核心基于以下几个关键组件：
-
-1. **多时间框架趋势分析**：策略首先通过自定义函数`getTrend()`分析5个不同时间框架的趋势。在每个时间框架上，系统检查快速EMA是否高于慢速EMA、RSI值是否超过50以及价格是否高于快速EMA来确定做多信号；相反条件则确定做空信号。
-
-2. **趋势共识确认**：只有当所有五个时间框架显示相同方向的趋势信号时，系统才会考虑入场。这种严格的趋势共识机制大大提高了信号的可靠性。
-
-3. **入场条件优化**：除了趋势共识外，入场还需满足以下条件：
-   - 吞没形态（看涨或看跌）确认
-   - 成交量突破（高于20周期平均成交量的2倍）
-   - RSI确认（做多时>55，做空时<45）
-   - 狭义市场指数CMI>30（确保足够的市场动量）
-   - 价格相对于成交量加权移动平均线（VWMA）的位置确认
-
-4. **风险管理系统**：策略采用动态止盈止损计算方法，基于最近价格波动（高低价差）设置止损水平，并使用倍数参数（默认为2.0）设置止盈目标。
-
-5. **支撑/阻力可视化**：系统自动识别并显示重要的支撑和阻力位，通过视觉辅助帮助交易者理解当前市场结构。
-
-#### 策略优势
-1. **多维信号过滤**：通过要求多个技术指标和时间框架的一致性，显著降低了虚假信号的可能性。这种多重确认机制使策略只在高概率设置下触发交易信号。
-
-2. **自适应风险管理**：止损和止盈水平不是固定的，而是基于当前市场波动性动态计算的，这使策略能够在不同波动条件下保持适当的风险回报比。
-
-3. **完整的可视化系统**：策略包含全面的视觉辅助工具，包括趋势仪表板、支撑/阻力框、交易信号标记和预测的止盈/止损线，为交易者提供直观的市场分析。
-
-4. **成交量确认**：通过要求交易信号伴随显著的成交量增加，策略能够识别具有实际动力的市场移动，而不仅仅是价格的随机波动。
-
-5. **形态识别整合**：吞没形态作为入场条件的一部分，增加了策略的准确性，因为这些蜡烛图形态通常代表市场情绪的显著转变。
-
-#### 策略风险
-1. **频繁再平衡需求**：由于策略依赖于多个时间框架的一致性，交易信号可能相对罕见。在长时间没有交易机会的情况下，交易者可能被诱导降低标准，导致执行不理想的交易。
-
-2. **信号依赖性**：策略严重依赖于技术指标和形态，在某些市场条件下，如突发新闻事件或极端波动期间，这些信号可能失效或提供误导性指示。
-
-3. **过度优化风险**：策略使用多个参数和条件，这可能导致历史数据过度优化，而在真实市场条件下表现不佳。需要在足够长的时间框架和不同市场条件下进行彻底的回测。
-
-4. **计算复杂性**：多时间框架分析和多重指标计算需要大量计算资源，这可能导致某些交易平台上的性能问题或延迟。
-
-5. **趋势转变检测延迟**：由于策略需要多个时间框架的一致性，它可能在趋势转变的早期阶段错过机会，直到新趋势在所有时间框架上都已确立。
-
-#### 优化方向
-1. **自适应参数调整**：引入机制使EMA长度、RSI阈值和CMI要求根据当前市场波动性或交易时段自动调整，以适应不同的市场状态。
-
-2. **时间框架权重系统**：不是简单地要求所有时间框架一致，可以实施加权系统，其中较高时间框架的信号具有更大影响，这可能产生更及时的信号，同时保持高质量标准。
-
-3. **市场状态分类**：添加算法来检测当前市场是处于趋势状态还是区间状态，并相应地调整策略参数。例如，在区间市场中可能需要更高的CMI阈值。
-
-4. **机器学习整合**：使用机器学习算法优化入场和出场规则，基于历史数据识别最有效的信号组合，并随着新数据的积累不断改进。
-
-5. **增强多样化**：添加其他无相关性的技术指标，如斐波纳契回撤水平、关键价格水平或市场情绪指标，以提供额外的确认维度。
-
-#### 总结
-多时间框架融合型动量捕捉自动交易策略是一个全面的交易系统，通过严格的多重确认机制来识别高概率交易机会。通过结合趋势分析、成交量确认、形态识别和动态风险管理，该策略旨在提供高质量的交易信号，同时管理每笔交易的风险。
-
-虽然该策略的严格条件可能导致交易信号相对较少，但这实际上是其主要优势之一，因为它优先考虑信号质量而非数量。通过建议的优化措施，特别是自适应参数和市场状态分类，策略可以进一步提高其性能和适应性。
-
-对于追求系统化、纪律化交易方法的交易者，这种多层面分析和严格确认的方法提供了一个强大的框架，能够在不同市场环境中保持一致性，同时通过自动化规则减少情绪偏见的影响。 || 
-
 #### Overview
 This strategy is a comprehensive trading system that utilizes multi-timeframe analysis, technical indicator confluence, and pattern recognition to identify high-probability trading opportunities. Its core philosophy is to analyze trend alignment across five different timeframes (1-minute, 5-minute, 15-minute, 1-hour, and 4-hour), combined with volume breakouts, engulfing patterns, and momentum indicators to precisely capture market movements. The strategy also incorporates automatic take-profit and stop-loss mechanisms that dynamically adjust risk management parameters based on market volatility.
 
@@ -136,10 +71,7 @@ The Multi-Timeframe Momentum Confluence Automated Trading Strategy is a comprehe
 
 While the strategy's strict conditions may result in relatively few trading signals, this is actually one of its main strengths as it prioritizes signal quality over quantity. With the suggested optimization measures, particularly adaptive parameters and market state classification, the strategy can further enhance its performance and adaptability.
 
-For traders seeking a systematic, disciplined approach to trading, this multi-faceted analysis and strict confirmation methodology provides a robust framework that can maintain consistency across different market environments while reducing the impact of emotional bias through automated rules.[/trans]
-
-
-
+For traders seeking a systematic, disciplined approach to trading, this multi-faceted analysis and strict confirmation methodology provides a robust framework that can maintain consistency across different market environments while reducing the impact of emotional bias through automated rules.
 > Source (PineScript)
 
 ``` pinescript

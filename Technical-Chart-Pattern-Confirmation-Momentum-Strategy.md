@@ -12,103 +12,7 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d9a3f6909001b784f2f7.png)
 ![IMG](https://www.fmz.com/upload/asset/2d88711850974c5e0c7c0.png)
 
-
-
-[trans]
-
-#### 概述
-技术图形确认型多周期动量策略是一种基于多种经典图表形态识别并结合动量确认的交易系统。该策略主要通过识别市场中常见的技术形态，如头肩顶、头肩底、双顶、双底、三角形（对称、上升、下降）、旗形、楔形等，并在形态突破时确认入场信号。策略巧妙地结合了ATR指标来设置动态止损和止盈水平，有效控制风险并锁定利润。该策略不仅能够捕捉市场中各种转折点，还通过形态突破的确认机制提高了交易信号的可靠性，减少了假突破带来的风险。
-
-#### 策略原理
-策略的核心原理是通过一系列条件函数识别不同的图表形态，并在价格突破关键水平时确认交易信号：
-
-1. **头肩顶/头肩底识别**：通过比较连续高点/低点的相对位置关系，识别头肩形态的特征结构。当高点1大于高点0、2、3、4，且高点0小于高点2和3时，形成头肩形态。
-
-2. **双顶/双底识别**：通过分析高点/低点序列来识别双顶和双底形态。双顶形态中，高点1需大于周围高点；双底形态中，低点1需小于周围低点。
-
-3. **三角形形态识别**：
-   - 对称三角形：高点下降而低点上升，形成收敛形态
-   - 上升三角形：高点保持相对稳定而低点上升，形成看涨形态
-   - 下降三角形：高点下降而低点保持相对稳定，形成看跌形态
-
-4. **旗形/三角旗识别**：通过分析高点和低点的连续变化模式来识别。
-
-5. **交易信号确认**：
-   - 多头信号：当识别到头肩底、双底或上升三角形，且收盘价突破前一根K线高点时触发
-   - 空头信号：当识别到双顶、下降三角形或旗形形态，且收盘价跌破前一根K线低点时触发
-
-6. **风险管理**：
-   - 使用14周期ATR计算动态止损和止盈水平
-   - 止损设置为1.5倍ATR
-   - 止盈设置为3倍ATR，风险回报比为1:2
-
-#### 策略优势
-1. **系统化的形态识别**：策略通过定义明确的条件函数，实现了对多种经典图表形态的自动识别，降低了主观判断带来的偏差。
-
-2. **信号确认机制**：策略不仅识别图表形态，还需要价格突破关键水平作为确认，减少了假突破带来的风险。
-
-3. **动态风险管理**：使用ATR指标设置动态止损和止盈水平，使风险控制更适应市场波动性的变化。
-
-4. **多形态覆盖**：策略包含了多种经典图表形态，增加了交易机会，适应不同市场环境。
-
-5. **可视化展示**：策略通过plotshape函数在图表上直观显示识别到的各种形态，有助于交易者理解和验证策略逻辑。
-
-6. **风险回报比合理**：策略设置3倍ATR作为止盈，1.5倍ATR作为止损，风险回报比为1:2，符合有效风险管理原则。
-
-#### 策略风险
-1. **形态识别精度有限**：当前的形态识别算法相对简化，可能会产生误判或漏判，尤其是在市场噪音较大的情况下。
-
-2. **参数敏感性**：ATR周期设置以及止损、止盈的倍数设置对策略表现有显著影响，需要根据不同市场和时间框架进行优化。
-
-3. **假突破风险**：尽管有确认机制，但市场中仍然存在假突破现象，可能导致不必要的交易损失。
-
-4. **形态重复识别**：当前代码中的某些形态识别函数逻辑相似（如头肩顶和双顶），可能导致同一市场情况下触发多个信号，增加交易频率和成本。
-
-5. **缺乏趋势过滤**：策略没有考虑整体市场趋势方向，可能在强趋势中产生反向信号，导致逆势交易。
-
-风险规避方法：
-- 增加额外的过滤条件，如成交量确认、趋势指标过滤
-- 优化形态识别算法，增加更多条件验证
-- 实施更保守的仓位管理
-- 考虑增加时间过滤，避免在重要新闻或事件前后交易
-- 进行更广泛的回测，找到最优参数组合
-
-#### 策略优化方向
-1. **改进形态识别算法**：
-   - 增加更多验证条件，如形态的大小、形成时间、价格变化幅度等
-   - 区分头肩顶和双顶等相似形态的识别标准
-   - 增加更复杂的形态，如杯柄形态、上升/下降楔形等
-
-2. **加入成交量确认**：
-   - 在形态突破时，增加成交量放大的确认条件
-   - 分析形态形成过程中的成交量变化模式
-
-3. **趋势过滤**：
-   - 加入趋势指标(如移动平均线、ADX等)，只在趋势方向与形态信号一致时交易
-   - 考虑更长时间周期的市场结构
-
-4. **优化风险管理**：
-   - 测试不同的ATR倍数设置
-   - 实现基于波动率的动态仓位管理
-   - 考虑分批止盈策略，锁定部分利润
-
-5. **增加时间过滤**：
-   - 避免在低波动时段或重要新闻发布前后交易
-   - 考虑市场季节性因素
-
-6. **多时间框架分析**：
-   - 在更高时间框架上确认趋势方向
-   - 在更低时间框架上优化入场点
-
-这些优化方向会显著提高策略的稳健性和效率，原因是：
-- 更精确的形态识别减少错误信号
-- 成交量确认增加信号可靠性
-- 趋势过滤避免逆势交易
-- 优化风险管理提高资金效率和保护
-- 多时间框架分析提供更全面的市场视角
-
-#### 总结
-技术图形确认型多周期动量策略是一种系统化、规则明确的交易系统，通过识别多种经典图表形态并结合突破确认来生成交易信号。策略采用ATR指标进行动态风险管理，设定了合理的风险回报比。虽然当前版本的形态识别算法相对简化，但为进一步优化提供了良好基础。通过加入成交量确认、趋势过滤、优化风险管理和多时间框架分析等改进，该策略有潜力成为一个强大而稳健的交易系统。这种基于技术形态的策略特别适合波动性市场和价格行为明显的品种，可以帮助交易者系统地捕捉市场转折点和突破机会。 || 
+ 
 
 #### Overview
 The Technical Chart Pattern Confirmation Momentum Strategy is a trading system based on the recognition of multiple classic chart patterns combined with momentum confirmation. This strategy primarily identifies common market technical formations such as Head and Shoulders, Inverse Head and Shoulders, Double Tops, Double Bottoms, Triangles (Symmetrical, Ascending, Descending), Flags, Wedges, and others, generating signals when breakouts from these patterns occur. The strategy cleverly incorporates the ATR indicator to set dynamic stop-loss and take-profit levels, effectively controlling risk and securing profits. This approach not only captures various market turning points but also enhances signal reliability through pattern breakout confirmation mechanisms, reducing risks associated with false breakouts.
@@ -202,9 +106,7 @@ These optimization directions would significantly improve the strategy's robustn
 - Multi-timeframe analysis provides a more comprehensive market perspective
 
 #### Summary
-The Technical Chart Pattern Confirmation Momentum Strategy is a systematic trading system with clear rules, generating trading signals by identifying multiple classic chart patterns combined with breakout confirmation. The strategy employs the ATR indicator for dynamic risk management with a reasonable risk-reward ratio. While the current version's pattern recognition algorithms are relatively simplified, they provide a good foundation for further optimization. By adding volume confirmation, trend filtering, risk management optimization, and multi-timeframe analysis, this strategy has the potential to become a powerful and robust trading system. This chart pattern-based approach is particularly suitable for volatile markets and instruments with distinctive price action, helping traders systematically capture market turning points and breakout opportunities.[/trans]
-
-
+The Technical Chart Pattern Confirmation Momentum Strategy is a systematic trading system with clear rules, generating trading signals by identifying multiple classic chart patterns combined with breakout confirmation. The strategy employs the ATR indicator for dynamic risk management with a reasonable risk-reward ratio. While the current version's pattern recognition algorithms are relatively simplified, they provide a good foundation for further optimization. By adding volume confirmation, trend filtering, risk management optimization, and multi-timeframe analysis, this strategy has the potential to become a powerful and robust trading system. This chart pattern-based approach is particularly suitable for volatile markets and instruments with distinctive price action, helping traders systematically capture market turning points and breakout opportunities.
 
 > Source (PineScript)
 

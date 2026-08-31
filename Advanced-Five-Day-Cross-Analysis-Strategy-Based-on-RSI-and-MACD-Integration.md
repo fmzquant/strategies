@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/135c9bc354f2ad30544.png)
 
-[trans]
-#### 概述
-本策略是一个结合了相对强弱指数(RSI)和移动平均线趋同/发散指标(MACD)的量化交易策略。策略的核心在于通过观察RSI超买超卖区域,结合MACD指标在近5个交易周期内的交叉信号来确定市场趋势方向,并设置了止盈止损来控制风险。这种方法不仅能够提供更准确的交易信号,还能有效降低虚假信号带来的风险。
-
-#### 策略原理
-策略主要基于以下几个核心组件:
-1. RSI指标使用14周期作为参数设置,通过判断资产是否处于超买(>70)或超卖(<30)状态来识别潜在的反转机会。
-2. MACD指标采用经典的12-26-9参数组合,通过在5个交易周期内寻找MACD线与信号线的交叉来确认趋势变化。
-3. 入场逻辑包括两个条件:
-   - 做多条件:RSI在5个周期内的最低值低于30,同时MACD线在近5个周期内出现与信号线的向上交叉。
-   - 做空条件:RSI在5个周期内的最高值高于70,同时MACD线在近5个周期内出现与信号线的向下交叉。
-4. 风险控制采用对称的2%止损和2%止盈设置。
-
-#### 策略优势
-1. 多指标交叉验证提高了信号可靠性,通过RSI和MACD的配合使用,能够有效过滤单一指标可能产生的虚假信号。
-2. 灵活的5日周期观察窗口可以捕捉更多交易机会,同时避免错过重要的市场转折点。
-3. 对称的止盈止损设置有利于资金管理,可以有效控制单笔交易的风险。
-4. 策略逻辑简单明确,易于理解和执行,适合作为基础策略进行进一步优化。
-
-#### 策略风险
-1. RSI和MACD都属于滞后指标,在剧烈波动的市场中可能会产生延迟。
-2. 固定的止盈止损比例可能不适合所有市场环境,在波动率变化时需要及时调整。
-3. 5日观察周期可能在某些市场条件下过短,导致过度交易。
-4. 没有考虑成交量因素,可能在低流动性环境下产生不准确的信号。
-
-#### 策略优化方向
-1. 引入波动率自适应机制,根据市场波动情况动态调整止盈止损比例。
-2. 增加成交量指标作为辅助确认,提高信号的可靠性。
-3. 开发动态周期选择机制,根据市场状态自动调整观察窗口大小。
-4. 添加趋势过滤器,在强趋势市场中避免逆势交易。
-5. 考虑引入时间过滤器,避免在市场开盘和收盘等波动较大的时段交易。
-
-#### 总结
-该策略通过结合RSI和MACD指标,配合灵活的入场条件和风险控制机制,构建了一个相对完整的交易系统。虽然存在一些需要优化的地方,但基本框架具有良好的可扩展性,通过进一步的优化和完善,有望发展成为一个更加稳健的交易策略。 || 
-
 #### Overview
 This strategy is a quantitative trading approach that combines the Relative Strength Index (RSI) and Moving Average Convergence Divergence (MACD) indicators. The core concept involves monitoring RSI overbought/oversold zones while confirming trends through MACD crossovers within a 5-period window. This methodology provides more accurate trading signals while effectively reducing risks from false signals.
 
@@ -78,9 +43,7 @@ The strategy is built on several key components:
 5. Consider implementing time filters to avoid trading during highly volatile market opening and closing periods.
 
 #### Summary
-The strategy creates a relatively complete trading system by combining RSI and MACD indicators with flexible entry conditions and risk control mechanisms. While there are areas for optimization, the basic framework offers good scalability and, through further refinement and improvement, has the potential to evolve into a more robust trading strategy.[/trans]
-
-
+The strategy creates a relatively complete trading system by combining RSI and MACD indicators with flexible entry conditions and risk control mechanisms. While there are areas for optimization, the basic framework offers good scalability and, through further refinement and improvement, has the potential to evolve into a more robust trading strategy.
 
 > Source (PineScript)
 

@@ -10,52 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a818fb74de2803e068.png)
- [trans]
-### 概述
-
-本策略运用Kaufman自适应移动平均线(KAMA)指标设计了一个趋势跟踪交易系统。该系统可以在趋势形成时快速跟踪趋势,在震荡行情中过滤噪音。同时,系统还集成了抛物线转向系统(PSAR)和平均真实波动率追踪止损(ATR Trailing Stop)作为止损机制,具有较强的风险控制能力。
-
-### 策略原理
-
-- KAMA指标的长度是根据最近一段时间的市场波动率动态调整的。当价格变化大于最近噪音时,EMA窗口变短;当价格变化小于最近噪音时,EMA窗口变长。这使得KAMA可以快速跟踪趋势,而在震荡行情中过滤噪音。
-
-- 系统主要根据最快的KAMA(KAMA 1)判断趋势方向。KAMA 1向上时做多,向下时做空。为过滤假突破,设定了KAMA过滤器。只有当KAMA 1的变化超过近期波动一个标准差时,才产生交易信号。
-
-- 止损方面,系统提供三种可选的止损方式:基于KAMA反转、PSAR反转、ATR移动止损。投资者可以个性化选择一种或多种组合使用。
-
-### 优势分析
-
-- KAMA指标的独特设计使得系统可以快速捕捉新生趋势,在震荡行情中停止交易,有效控制交易频率,减少不必要的滑点和手续费损耗。
-
-- 系统内置多种止损机制。投资者可以根据个人风险偏好,选择恰当的止损方案,有力控制单笔损失。
-
-- 系统完全基于指标和止损线,避免常见的移位交易误入场问题。
-
-- 多参数设定和条件组合为系统定制化提供了极大空间。用户可以因地制宜,针对不同品种和周期进行优化。
-
-### 风险分析
-
-- 系统没有考虑系统性风险,在极端行情中无法有效控制损失。
-
-- 系统PARAMETERS可能需要根据不同品种不同周期进行调整,否则会产生过于激进或过于保守的结果。
-
-- 如果仅依赖KAMA指标作为止损,在震荡行情中容易被套牢。这需要与PSAR或ATR移动止损进行组合使用才能解决。
-
-### 优化方向
-
-- 添加趋势过滤指标,如ADX或隐波动率指标,避免在震荡和趋势转换阶段产生错误信号。
-
-- 针对单个品种和固定周期进行PARAMETERS优化和回测,提高稳定性。优化维度包括KAMA参数组合、止损参数等。
-
-- 尝试MACHINE LEARNING模型代替参数优化。利用大量历史数据训练判断买卖时机和止损的神经网络或决策树模型。
-
-- 尝试将策略移植到其它品种,如数字货币。这可能需要调整PARAMETERS或加入其他辅助指标。
-
-### 总结
-
-本策略集成了KAMA趋势判断和多种止损手段,能够有效跟踪趋势方向,并控制风险。KAMA指标的独特性使策略可以快速判断新生趋势方向,避免假突破问题。可定制和可优化的PARAMETERS为用户提供了极大空间进行个性化调整。如果针对单一品种单一周期进行PARAMETERS优化和MACHINE LEARNING模型集成,有望进一步提高策略表现。
-
-||
 
 ### Overview  
 
@@ -101,7 +55,6 @@ This strategy employs the Kaufman Adaptive Moving Average (KAMA) indicator to de
 
 This strategy integrates KAMA for trend judgment and multiple stop loss methods to effectively track trend directions and control risks. The uniqueness of the KAMA indicator allows the strategy to quickly determine the direction of emerging trends and avoid false breakout problems. Customizable and optimizable PARAMETERS provide users with great space for personalized adjustment. By optimizing PARAMETERS and integrating MACHINE LEARNING models for individual products and frequencies, the performance of the strategy can be further improved.
 
-[/trans]
 
 > Strategy Arguments
 

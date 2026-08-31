@@ -9,9 +9,8 @@ luqi0212
 
 > Strategy Description
 
-默认开仓数量 20 个币
-止盈止损10000%，即不设止盈止损
-
+The default opening position size is 20 units.
+Take-profit and stop-loss are both set to 10,000%, which effectively means no take-profit or stop-loss is used.
 
 > Strategy Arguments
 
@@ -26,9 +25,9 @@ luqi0212
 |v_input_int_7|14|RSI Length|
 |v_input_int_8|14|Stochastic Length|
 |v_input_17_close|0|RSI Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
-|v_input_18|20|开仓数量|
-|v_input_19|10000|止盈|
-|v_input_20|10000|止损|
+|v_input_18|20|Opening Position Size|
+|v_input_19|10000|Take Profit|
+|v_input_20|10000|Stop Loss|
 |v_input_3|true|(?Channel №1)MA High|
 |v_input_string_1|0|ma1_type: SMA|EMA|SMMA (RMA)|WMA|VWMA|
 |v_input_4_high|0|ma1_source: high|close|low|open|hl2|hlc3|hlcc4|ohlc4|

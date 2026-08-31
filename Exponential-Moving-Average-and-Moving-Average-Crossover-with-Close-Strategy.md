@@ -9,76 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/f25abf80efbe906870.png)
- [trans]
-## 概述
-
-移动平均线交叉与平仓交易策略是一种基于9日指数移动平均线(EMA)和20日简单移动平均线(MA)的价格运动来进行交易操作的策略。该策略利用EMA和MA的交叉信号来判断趋势方向,以发出买入和卖出信号。一旦价格重新跨过移动平均线,该策略会平仓现有头寸。
-
-## 策略原理  
-
-### EMA和MA的计算
-
-- EMA9 计算9日的指数移动平均线。EMA赋予最近期价格更大权重,使其更灵敏地响应新的信息。
-- MA20 计算20日的简单移动平均线。MA是过去20日收盘价的平均值。
-
-### 买入和卖出条件  
-
-- 买入条件:当收盘价高于9日EMA和20日MA时成立。该信号被视为多头信号。  
-- 卖出条件:当收盘价低于9日EMA和20日MA时成立。该信号被视为空头信号。
-
-### 开仓和平仓
-
-- 当买入条件成立时,执行买入开仓操作。  
-- 当卖出条件成立时,执行卖出开仓操作。 
-- 当价格重新跨过9日EMA或20日MA时,不论当前持仓方向,执行平仓操作。
-
-### K线配色  
-
-- 买入K线标为绿色
-- 卖出K线标为红色  
-- 其他K线默认白色
-
-### EMA和MA画图  
-
-在图表上绘制9日EMA和20日MA曲线,以便观察价格与移动平均线的相对位置。
-
-## 策略优势分析
-
-该策略融合了EMA和MA两个广泛使用的技术指标,充分利用了它们平滑价格、判断趋势方向的优点。相比单一使用EMA或MA,该组合能提供更可靠的交易信号。
-
-EMA和MA线的交叉信号简单明了,可以清楚判断市场 Bachelder 的变化,避免错误交易。
-
-策略直接在K线上进行视觉化配色,无需复杂计算即可直观判断当前趋势和信号。
-
-自动执行开仓和平仓操作,严格遵循事先制定的交易规则,有助于风险控制。
-
-## 风险分析
-
-移动平均线属于趋势跟随指标,在盘整时期会产生大量虚假信号。应避免在震荡趋势中使用该策略。
-
-在价格剧烈波动时,移动平均线可能产生滞后,导致错过最佳入场或出场时机。
-
-EMA和MA的参数设置会对交易结果产生很大影响。应调整参数以适应不同品种和交易周期。
-
-自动交易策略无法像人工交易员般应对各种复杂情况,难以在危急时刻关闭误导头寸。应预先设置止损和止盈。
-
-## 优化方向  
-
-可测试不同长度的EMA和MA参数组合,选择产生信号最优且最大限度减少虚假信号的参数。
-
-可结合波动率指标如ATR来过滤部分高风险信号,以控制潜在亏损。 
-
-将策略与其他指标或信号结合使用,如量价指标、布林带,来验证信号的可靠性。
-
-添加止损和止盈逻辑以主动控制头寸风险。止损可基于ATR倍数或价格级别来设定。
-
-## 总结  
-
-移动平均线交叉与平仓交易策略通过EMA和MA的交叉为基础判断市场趋势方向,以发出交易信号。该策略简单实用,容易实现自动化交易。但如其他技术指标策略一样,其 parameter 设置和市场情况对结果影响很大,在实战中需要不断调整优化以适应市场变化。
-
-||
-
 ## Overview
 
 The Exponential Moving Average (EMA) and Moving Average (MA) Crossover with Close Strategy generates trading signals based on the price movement of an asset relative to its 9-period EMA and 20-period MA. It uses EMA and MA crossover signals to determine trend direction for entries and closes positions when the price recrosses the moving averages.
@@ -144,10 +74,6 @@ Add stop loss and take profit logic to actively manage trade risk. Stops can be 
 ## Summary
 
 The EMA and MA Crossover with Close Strategy uses EMA and MA crossovers to determine trends and signal entries. While simple and automatable, performance is heavily dependent on parameter tuning and market conditions. Regular optimization is needed to adapt to evolving markets.
-
-[/trans]
-
-
 
 > Source (PineScript)
 

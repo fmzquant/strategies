@@ -10,65 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/4e0e0b3d75f5c1c218.png)
- [trans]
-
-## 概述
-
-该策略是基于布林带的突破策略。当价格突破布林带下轨时,做多;当价格突破布林带上轨时,做空。该策略利用了布林带能清晰描述价格波动范围的特点,通过捕捉价格突破来产生交易信号。
-
-## 策略原理
-
-该策略首先计算出20日的简单移动平均线作为中间基准线,然后计算出距离基准线上下两个标准差的距离作为布林带的上下轨。当收盘价格低于下轨时,认为行情超卖,产生买入信号;当收盘价格高于上轨时,认为行情超买,产生卖出信号。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 利用布林带描述价格波动范围的特性,sellable波动的时候容易产生交易信号。
-
-2. 通过下轨突破做多,可以及时捕捉反弹机会。
-
-3. 通过上轨突破做空,可以及时捕捉下跌机会。
-
-4. 策略思路简单清晰,容易理解与实现。
-
-5. 可在多种市场中应用。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 当行情平静时,容易产生错误信号。
-
-2. 无法确定突破后的 Price 行情会继续向哪个方向发展。
-
-3. 无法确定突破信号带来的反转力度。
-
-4. 布林带参数设置不当也会对策略的效果产生影响。
-
-5. 需适当控制仓位规模。
-
-可以通过优化参数,严格控制仓位,设置止损来控制这些风险。
-
-## 优化策略
-
-该策略还可以从以下几个方面进行优化:
-
-1. 优化布林带的参数,寻找最优的参数组合。
-
-2. 利用其他指标进行过滤,避免错误信号。例如量能指标,移动平均线等。
-
-3. 设置动态止损或移动止损。
-
-4. 根据市场情况,适当调整做多做空的条件。
-
-5. 进行回测与模拟交易,评估策略的效果。
-
-## 总结
-
-该策略整体来说是一种较为经典和常用的突破策略。它利用布林带指标对价格波动范围进行描述,通过捕捉其突破信号来寻找交易机会。该策略思路简单,易于实现,在实际中应用广泛。通过不断测试与优化,可以使其效果更好,风险更小。所以,该策略值得深入研究与应用。
-
-||
 
 ## Overview
 
@@ -125,8 +66,6 @@ The strategy can also be optimized in the following aspects:
 ## Conclusion  
 
 Overall, this is a relatively classic and commonly used breakout strategy. It uses the Bollinger Bands indicator to describe price fluctuation ranges and captures its breakout signals to find trading opportunities. The strategy idea is simple and easy to implement, widely used in practice. Through continuous testing and optimization, its effectiveness can be improved and risks reduced. Therefore, the strategy is worth in-depth research and application.
-
-[/trans]
 
 > Strategy Arguments
 

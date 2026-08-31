@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1a6f575ea248afd4c89.png)
 
-[trans]
-#### 概述
-该策略是一个基于均线(EMA)交叉信号的趋势跟踪系统。它采用34周期EMA作为主要趋势指标,结合分批获利和风险控制机制,实现全自动化交易。策略的核心是通过价格与EMA的交叉来捕捉趋势启动点,并通过设置多重获利目标来最大化盈利机会。
-
-#### 策略原理
-策略主要基于以下核心原理运作:
-1. 使用34周期EMA作为趋势判断指标
-2. 当价格向上穿越EMA时,在EMA价格位置开仓做多
-3. 采用三重获利目标(5%, 10%, 15%)实现分批止盈
-4. 设置7%止损以控制风险
-5. 保留10%仓位作为长期持仓以把握大趋势
-6. 通过8小时最小交易间隔来避免过度交易
-7. 支持固定交易量和动态仓位规模两种方式
-
-#### 策略优势
-1. 多重获利目标设计,能在不同市场环境下都有不错表现
-2. 通过保留部分仓位作为长期持仓,可以享受大趋势带来的收益
-3. 支持杠杆交易,可以根据风险偏好调整
-4. 具有防止过度交易的机制
-5. 仓位管理灵活,可以选择固定或动态仓位
-6. 完全自动化,无需人工干预
-7. 参数可调整性强,适应不同交易风格
-
-#### 策略风险
-1. EMA作为滞后指标可能导致入场时机延迟
-2. 在震荡市场中可能产生多次止损
-3. 使用杠杆可能放大损失
-4. 固定百分比的止损可能在高波动市场中不够灵活
-5. 多重获利目标可能导致过早退出强势趋势
-应对措施:
-- 建议在趋势明确的市场中使用
-- 根据市场波动调整止损比例
-- 谨慎使用杠杆
-- 定期回测优化参数
-
-#### 策略优化方向
-1. 增加趋势强度过滤器,提高入场质量
-2. 引入动态止损机制,如ATR止损
-3. 加入成交量确认指标
-4. 开发自适应的获利目标机制
-5. 增加市场环境判断模块
-6. 优化交易间隔的动态调整机制
-这些优化可以提高策略的稳定性和盈利能力,减少假信号的影响。
-
-#### 总结
-这是一个设计合理、逻辑清晰的趋势跟踪策略。通过均线交叉捕捉趋势,使用多重获利目标管理风险,并保留部分仓位把握大趋势。策略的可调整性强,适合不同风险偏好的交易者使用。虽然存在一些固有的风险,但通过合理的参数设置和风险管理可以实现稳定的收益。 ||
-
 #### Overview
 This strategy is a trend following system based on EMA crossover signals. It uses a 34-period EMA as the main trend indicator, combined with multiple take-profit levels and risk management mechanisms for fully automated trading. The core concept is to capture trend initiation points through price-EMA crossovers and maximize profit opportunities through multiple profit targets.
 
@@ -102,8 +55,7 @@ Mitigation measures:
 These optimizations can enhance strategy stability and profitability while reducing false signals.
 
 #### Summary
-This is a well-designed trend following strategy with clear logic. It captures trends through EMA crossovers, manages risk with multiple profit targets, and retains partial positions for extended trends. The strategy's high adaptability suits traders with different risk preferences. While inherent risks exist, proper parameter settings and risk management can achieve stable returns.[/trans]
-
+This is a well-designed trend following strategy with clear logic. It captures trends through EMA crossovers, manages risk with multiple profit targets, and retains partial positions for extended trends. The strategy's high adaptability suits traders with different risk preferences. While inherent risks exist, proper parameter settings and risk management can achieve stable returns.
 
 
 > Source (PineScript)

@@ -12,37 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8c494a5f52fe5b9c57a.png)
 ![IMG](https://www.fmz.com/upload/asset/2d82b4832cec020f4e22d.png)
 
-
-
-[trans]
-#### 概述
-这是一个基于三重打击形态(Three Line Strike)和吞没形态(Engulfing Pattern)的量化交易策略。该策略通过识别连续三根K线形态后的突破性反转K线来捕捉市场趋势转折点,结合多重技术指标进行交易决策。策略设计了完整的信号识别系统和风险控制机制,并提供了高度可定制的参数设置。
-
-#### 策略原理
-策略的核心逻辑基于两个主要的K线形态:
-1. 三重打击形态:通过识别连续三根同向K线后的反转K线来判断趋势反转。看涨形态由三根连续下跌的红K线后接一根较大的绿色吞没K线构成;看跌形态由三根连续上涨的绿K线后接一根较大的红色吞没K线构成。
-2. 吞没形态:单独的大型吞没K线也作为辅助信号。策略通过计算当前K线与前一根K线的实体大小比较来识别吞没形态。
-
-#### 策略优势
-1. 信号识别精确:策略采用严格的数学计算方法判断K线形态,通过多重条件过滤来保证信号质量。
-2. 风险控制完善:设置了初始资金、持仓比例等风险参数,并禁止重复入场。
-3. 高度可定制:提供丰富的参数设置,可根据不同市场特点和交易需求进行优化。
-4. 可视化支持:提供清晰的图形标记和提示信息,便于分析和监控。
-
-#### 策略风险
-1. 市场环境依赖:在震荡市场中可能产生过多假信号。
-2. 滑点影响:大型吞没K线的入场点可能受到较大滑点影响。
-3. 延迟风险:形态识别需要多根K线完成,可能错过最佳入场时机。
-
-#### 策略优化方向
-1. 引入成交量指标:结合成交量变化来过滤信号质量。
-2. 优化止损设置:基于ATR或波动率动态调整止损位置。
-3. 增加趋势过滤:添加均线系统判断整体趋势。
-4. 完善退出机制:设计更灵活的获利了结条件。
-
-#### 总结
-该策略通过系统化的技术分析方法捕捉市场重要转折点,具有较强的理论基础和实战价值。通过参数优化和风险控制的完善,可以作为一个稳健的交易系统的重要组成部分。策略的模块化设计也为进一步优化提供了良好基础。
-
 #### Overview
 This is a quantitative trading strategy based on Three Line Strike and Engulfing patterns. The strategy captures market turning points by identifying breakthrough reversal candlesticks following three consecutive candles, combining multiple technical indicators for trading decisions. It features a complete signal detection system and risk control mechanism, with highly customizable parameter settings.
 
@@ -69,10 +38,7 @@ The core logic is based on two main candlestick patterns:
 4. Improve Exit Mechanism: Design more flexible profit-taking conditions.
 
 #### Summary
-The strategy captures important market turning points through systematic technical analysis, with strong theoretical foundation and practical value. Through parameter optimization and risk control refinement, it can serve as an important component of a robust trading system. The modular design also provides a good foundation for further optimization.[/trans]
-
-
-
+The strategy captures important market turning points through systematic technical analysis, with strong theoretical foundation and practical value. Through parameter optimization and risk control refinement, it can serve as an important component of a robust trading system. The modular design also provides a good foundation for further optimization.
 > Source (PineScript)
 
 ``` pinescript

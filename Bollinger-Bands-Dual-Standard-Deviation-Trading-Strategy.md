@@ -10,51 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/129c302fdd0715cc33e.png)
- [trans]
-
-## 概述
-
-该策略是基于布林带的双标准差模型设计的交易策略。它使用布林带的上下轨及一个和两个标准差作为交易信号。当价格突破布林带上轨时做多,当价格突破布林带下轨时做空。该策略同时使用一个和两个标准差作为止损位。
-
-## 策略原理  
-
-该策略首先计算布林带的中轨、上轨和下轨。中轨是CLOSE的SMA,上轨是中轨+2*标准差,下轨是中轨-2*标准差。当价格突破上轨时产生买入信号做多,当价格突破下轨时产生卖出信号做空。此外,策略还绘制了中轨+1个标准差和中轨-1个标准差的线。它们作为止损位使用。具体逻辑是:
-
-1. 计算CLOSE的SMA作为布林带中轨
-2. 计算CLOSE的标准差STD,并计算2*STD
-3. 中轨+2*STD为布林带上轨,中轨-2*STD为布林带下轨 
-4. 当价格突破上轨时做多
-5. 当价格突破下轨时做空
-6. 中轨+1*STD作为止损线,如果止损线被突破则平仓
-
-## 策略优势  
-
-1. 使用双标准差设计,对突破判断更加严格,避免错误信号
-2. 采用双止损线设计,最大程度控制风险
-3. 参数优化空间大,中轨周期、标准差倍数都可调整
-4. 回撤可以通过调整止损位来控制
-
-## 策略风险  
-
-1. 布林带策略容易产生假突破,引发交易信号不准确
-2. 双标准差和双止损线设定可能过于严格,导致信号少剔除机会
-3. 参数设置不当可能增大策略风险
-4. 回撤控制并不完善,无法有效控制极端行情下的亏损
-
-## 策略优化方向
-
-1. 可以考虑结合其他指标过滤布林带交易信号,避免假突破
-2. 可以测试不同参数设置,优化参数以获得更好收益回撤比 
-3. 可以设计动态止损机制,比如跟踪型止损或余额比例止损
-4. 可以结合机器学习算法自动优化参数
-
-## 总结
-
-该策略整体来说是一种典型的布林带突破策略。它使用双标准差提高信号判断严格程度,并采用双止损线主动控制风险。该策略有一定的参数优化空间,通过调节中轨周期、标准差倍数等参数可以获得更好的策略表现。同时,该策略也存在布林带策略普遍面临的假突破问题。此外,止损机制也有待进一步改进和优化。
-
-|| 
-
-## Overview
+ ## Overview
 
 This strategy is a trading strategy designed based on the Bollinger Bands dual standard deviation model. It uses the upper and lower rails of Bollinger Bands and one and two standard deviations as trading signals. It goes long when the price breaks through the upper rail and goes short when the price breaks through the lower rail. The strategy also uses one and two standard deviations as stop loss lines.
 
@@ -93,8 +49,6 @@ The strategy first calculates the middle rail, upper rail and lower rail of the 
 ## Conclusion
 
 In general, this strategy is a typical Bollinger Bands breakout strategy. It uses dual standard deviations to increase the strictness of signal judgment and adopts dual stop loss lines to actively control risks. The strategy has some parameter optimization space. By adjusting parameters like middle rail period and standard deviation multiplier, better strategy performance can be obtained. At the same time, the strategy also faces the common problem of false breakouts in Bollinger Bands strategies. In addition, there is room for further improvement and optimization in the stop loss mechanism.
-
-[/trans]
 
 > Strategy Arguments
 

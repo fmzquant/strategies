@@ -9,66 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/a134d9bf30a3844d45.png)
- [trans]
-
-## 概述
-
-本策略采用多种技术指标相结合的方式,实现了一个全能的短线交易策略。该策略同时具有趋势跟踪、突破交易、反转交易等多种交易方式,可以适应大多数市场环境,属于一个非常通用和实用的短线策略。
-
-## 策略原理
-
-1. 该策略首先采用candle body channel指标,结合最高价和最低价通道判断当前趋势方向和强弱。
-2. 其次,采用常用的EMA均线指标判断中长线趋势方向。采用双EMA指标组合过滤假信号。
-3. 然后,该策略采用Hull MA指标判断当前价格是否超买超卖。 Hull MA指标具有更准确判断转折点的能力。
-4. 最后,该策略采用security函数打开更高周期判断大周期趋势方向,产生交易信号。
-
-以上多个子策略相结合,使得该策略既能捕捉中间周期的趋势,也能根据长周期判断整体走势方向,从而实现全能型的通用交易策略。
-
-## 优势分析
-
-该策略最大的优势在于综合运用多种技术指标进行组合交易,可以同时实现趋势跟踪、反转交易、突破交易等多种交易方式,非常通用,适应大多数市场环境。
-
-具体来说,该策略的主要优势有:
-
-1. 采用candle body channel指标判断实体突破,可以有效识别突破信号。
-2. 运用双EMA组合过滤假信号,提高信号准确率。 
-3. 利用Hull MA指标判断超买超卖区域,具有更准确判断转折点的能力。
-4. 采用更高周期K线的开收价交叉产生信号,可以避免被噪音误导。
-5. 多种交易方式的组合,使得策略更加全能和通用。
-
-## 风险分析
-
-尽管该策略结合多种指标,实现了通用型的交易策略。但交易任然存在一定的风险,主要风险点如下:
-
-1. 突破交易容易被假突破误导产生错误信号。 
-2. 反转交易在震荡行情中容易造成亏损。
-3. 双EMA组合滤波能力仍然有限,可能滤除正常信号。
-4.Hull MA指标对曲线拟合的精确性仍有不足。
-
-针对以上风险,我们可以从以下几个方面进行优化:
-
-1. 采用更稳定指标辅助判断,避免假突破。
-2. 增加止损策略,控制单笔亏损。
-3. 调整双EMA参数,寻找最佳组合。
-4. 尝试集成更多指标判断超买超卖。
-
-## 优化方向  
-
-根据上述分析,该策略主要可以从以下几个方向进行优化:
-
-1. 采用更加主流和稳定的指标组合辅助判断,例如卡尔曼均线,布林带等。
-2. 增加止损策略,严格控制单笔亏损。
-3. 参数优化,找到最佳的参数组合。 
-4. 增加机器学习模型判断,利用AI判断超买超卖区域。
-5. 增加自适应判断逻辑,根据不同市场环境动态调整策略方式。
-
-## 总结
-
-该策略综合运用多种指标进行组合交易,实现了趋势跟踪、突破交易、反转交易多种交易方式的有机结合,是一个非常全能和通用的短线交易策略。该策略最大的优势就是适应面广,可以用于大多数市场环境,属于一种比较通用的策略思路。当然,交易任然存在一定的风险,我们可以从引入更稳定指标、增加止损、参数优化、应用机器学习等多方面进行策略优化,使得该策略的效果能够得到进一步的提升。总的来说,这是一个非常值得参考和学习的通用短线交易策略。
-
-||
-
 ## Overview
 
 This strategy adopts a combination of multiple technical indicators to implement a versatile short-term trading strategy. It has trend tracking, breakout trading, mean reversion trading and other trading methods, which can adapt to most market environments. It belongs to a very universal and practical short-term strategy.
@@ -142,8 +82,6 @@ According to the above analysis, the strategy can be mainly optimized in the fol
 ## Summary  
 
 The strategy combines multiple indicators for portfolio trading, achieving organic integration of multiple trading methods such as trend tracking, breakout trading, and mean reversion trading. It is a very versatile and universal short-term trading strategy. The biggest advantage of this strategy is its wide applicability to most market environments. It belongs to a more universal strategy idea. Of course, there are still certain risks in trading. We can optimize the strategy from introducing more stable indicators, increasing stop loss, parameter optimization, applying machine learning and many other aspects to further improve the performance of the strategy. In general, this is a very worthwhile universal short-term trading strategy to reference and learn from.
-
-[/trans]
 
 > Strategy Arguments
 

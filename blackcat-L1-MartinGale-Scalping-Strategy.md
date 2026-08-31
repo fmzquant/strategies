@@ -9,33 +9,35 @@ Zer3192
 
 > Strategy Description
 
-MartinGale（马丁格尔）策略是一种在交易中常用的流行的资金管理策略。它通常用于在交易者通过在每次亏损后增加头寸规模来寻求恢复。所以，MartinGale不是指具体一个策略，而是一类补仓，加仓的策略的统称。
+The Martingale strategy is a popular capital management approach commonly used in trading. It is typically applied by increasing position size after each loss in an attempt to recover drawdowns. In that sense, Martingale does not refer to one specific strategy, but rather to a broad family of averaging-in and position-adding methods.
 
-在MartinGale策略中，交易者在每次亏损交易之后会将头寸规模加倍。这样做的目的是希望最终会出现一次盈利交易，以恢复之前的亏损并产生利润。
+In a Martingale framework, traders double their position after each losing trade. The goal is for a subsequent winning trade to recover prior losses and still generate a profit.
 
-MartinGale策略背后的理念是利用平均法则。通过在每次亏损后增加头寸规模，该策略假设最终会出现一次盈利交易，这不仅会弥补之前的亏损，还会产生利润。对于寻求快速从亏损中恢复的交易者来说，这可能特别吸引人。
+The idea behind Martingale relies on a law-of-averages mindset. By increasing size after losses, the method assumes that a profitable trade will eventually appear and more than offset the previous losses. This can sound appealing to traders who want to recover quickly from drawdowns.
 
-然而，需要注意的是，MartinGale策略存在着重大风险。如果交易者经历了持续的亏损阶段或缺乏足够的资金，该策略可能导致巨额亏损。该策略依赖于盈利交易会在一定时间内发生的假设，这是危险的，因为无法保证在特定时间范围内会出现盈利交易。
-考虑实施MartinGale策略的交易者应仔细评估自己的风险承受能力，并充分了解潜在的缺点。建立一个可靠的风险管理计划以减轻潜在的损失非常重要。此外，交易者应意识到该策略可能并不适用于所有市场情况，并且可能需要根据市场波动进行调整。
+However, Martingale also carries significant risk. If the trader encounters a prolonged losing streak or lacks sufficient capital, the strategy can produce very large losses. It depends on the assumption that a winning trade will occur within a manageable time window, which is never guaranteed.
 
-总而言之，MartinGale策略是一种资金管理策略，它涉及在每次亏损后增加头寸规模，以试图从亏损阶段中恢复。虽然它可以提供快速恢复的潜力，但也存在着交易者在实施这种交易方法之前应仔细考虑的重大风险。
+Traders considering a Martingale approach should carefully evaluate their risk tolerance and fully understand the potential drawbacks. A robust risk management plan is essential to limit possible damage. They should also recognize that this style may not suit every market environment and may require adjustment as volatility changes.
 
-虽然并不是很认同这种交易观点，但是有人私信说也聊聊这个话题，就写了个简单的38线框架，做短线的MartinGale。
+In short, Martingale is a position-sizing method that increases exposure after losses in an attempt to recover from a losing streak. While it offers the possibility of rapid recovery, it also introduces substantial risk that must be considered before using this approach.
 
-MartinGale抢帽子策略是一种通过频繁交易来产生利润的交易策略。它利用移动平均线的交叉来生成入场和出场信号。该策略使用TradingView的Pine脚本语言实现。
+Although I do not fully agree with this trading philosophy, someone messaged me and asked for a discussion of the idea, so I wrote a simple 38-line framework for a short-term Martingale strategy.
 
-该策略首先定义了输入变量，如止盈和止损水平，以及交易模式（多头、空头或双向）。然后，它设置了一个规则，只有在交易模式设置为“多头”时才允许进场。
+This Martingale scalping strategy aims to profit from frequent trades. It uses moving-average crossovers to generate entry and exit signals and is implemented in TradingView Pine Script.
 
-策略逻辑使用简单移动平均线（SMA）的交叉信号和交叉信号定义。它计算了短期SMA（SMA3）和长期SMA（SMA8），并在图表上绘制它们。crossoverSignal和crossunderSignal变量用于跟踪交叉和交叉事件的发生，而crossoverState和crossunderState变量确定交叉和交叉条件的状态。
+The strategy first defines input variables such as take-profit and stop-loss levels, along with the trading mode (long, short, or bidirectional). It then applies a rule that only allows entries in the direction permitted by the selected trading mode.
 
-策略执行基于当前持仓大小。如果持仓大小为零（没有持仓），策略会检查交叉和交叉事件。如果发生交叉事件并且交易模式允许多头进场，则会进入多头持仓。入场价格、止损价格、止盈价格和止损价格是基于当前收盘价格和SMA8值计算的。类似地，如果发生交叉事件并且交易模式允许空头进场，则会进入空头持仓，并进行相应的价格计算。
-如果存在多头持仓并且当前收盘价格达到止盈价格或止损价格，并且发生交叉事件，则会平仓多头持仓。入场价格、止损价格、止盈价格和止损价格将被重置为零。
+The core logic uses simple moving average crossover signals. It calculates a short-term SMA (SMA3) and a long-term SMA (SMA8), then plots both on the chart. The crossoverSignal and crossunderSignal variables track bullish and bearish crossover events, while crossoverState and crossunderState define the current state of those conditions.
 
-同样，如果存在空头持仓并且当前收盘价格达到止盈价格或止损价格，并且发生交叉事件，则会平仓空头持仓，并重置价格变量。
+Execution depends on current position size. If there is no open position, the strategy checks the crossover conditions. When a bullish crossover state appears and the trading mode allows long entries, it opens a long position. The entry price, stop price, take-profit price, and stop-loss price are calculated from the current close and the SMA8 value. Likewise, when a bearish crossover state appears and short entries are allowed, it opens a short position and calculates the corresponding price levels.
 
-该策略还使用plotshape函数在图表上绘制入场和出场点。它显示一个指向上的三角形表示买入入场，一个指向下的三角形表示买入出场，一个指向下的三角形表示卖出入场，一个指向上的三角形表示卖出出场。
+If a long position exists and the current close reaches either the take-profit or stop-loss level while a bearish crossover state appears, the strategy closes the long and resets the price variables to zero.
 
-总体而言，MartinGale剃头策略旨在通过利用短期移动平均线的交叉来捕捉小幅利润。它通过止盈和止损水平实现风险管理，并允许不同的交易模式以适应不同的市场条件。
+Similarly, if a short position exists and the current close reaches either the take-profit or stop-loss level while a bullish crossover state appears, the strategy closes the short and resets the price variables.
+
+The strategy also uses plotshape to mark entries and exits on the chart. An upward triangle marks a buy entry, a downward triangle marks a buy exit, a downward triangle marks a sell entry, and an upward triangle marks a sell exit.
+
+Overall, this Martingale scalp strategy is designed to capture small profits from short-term moving-average crossovers. It uses take-profit and stop-loss levels for risk control and supports multiple trading modes to adapt to different market conditions.
 
 > Strategy Arguments
 

@@ -8,9 +8,7 @@ Golden-Ratio-Moving-Average-Trading-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/a7009aaa619d14da7f.png)
-
 
 ## Overview
 
@@ -66,22 +64,15 @@ There is room for further optimization of the strategy:
 ## Conclusion  
 
 In summary, the golden ratio moving average trading strategy is a simple and effective trend following strategy. It generates trading opportunities using classic MA crossover signals and has stops to control risks. The strategy can be further improved through multi-indicator combinations, parameter optimization, machine learning, etc. to obtain better strategy performance.
-
-
 > Strategy Arguments
-
-
-
 |Argument|Default|Description|
 |----|----|----|
-|v_input_int_1|200|(?パラメータ)長期移動平均BASE200|
-|v_input_int_2|10|長期移動平均BASE10|
-|v_input_int_3|20|損切の割合％|
-|v_input_int_4|5|利食いの割合％|
-|v_input_1|timestamp(01 Jan 2018 13:30 +0000)|(?期間)バックテストを始める日|
-|v_input_2|timestamp(1 Jan 2099 19:30 +0000)|バックテスを終わる日|
-
-
+|v_input_int_1|200|(?Parameter) Long-term moving average BASE 200|
+|v_input_int_2|10|(?Parameter) Short-term moving average BASE 10|
+|v_input_int_3|20|Stop-loss percentage %|
+|v_input_int_4|5|Take-profit percentage %|
+|v_input_1|timestamp(01 Jan 2018 13:30 +0000)|(?Period) Backtest start date|
+|v_input_2|timestamp(1 Jan 2099 19:30 +0000)|Backtest end date|
 > Source (PineScript)
 
 ``` pinescript

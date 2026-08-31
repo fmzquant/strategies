@@ -10,33 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1f5e09bc6821d7f07ed.png)
- [trans]
-
-## 概述
-
-该策略通过优化常规的移动平均线交叉策略,设定三条不同周期的移动平均线,采用9周期、50周期和100周期的移动平均线构建金叉形态,在中长线均线处于上升趋势的条件下,短期均线上穿中线均线形成金叉买入信号。策略名称为“移动平均线交叉金叉优化交易策略”。
-
-## 策略原理
-
-该策略使用9周期、50周期和100周期三条移动平均线。其中,9周期移动平均线为短期均线,50周期移动平均线为中线均线,100周期移动平均线为长期均线。策略的交易信号来自短期均线与中线均线的交叉。具体逻辑是,在长期均线处于上升趋势(长期均线价高于中线均线)的条件下,短期均线上穿中线均线时产生买入信号;短期均线下穿中线均线时产生卖出信号,实现交易。
-
-## 优势分析
-
-相比常规的双移动平均线交叉策略,该策略在产生交易信号前增加了中长期趋势判断的条件,可以有效过滤掉部分无效信号。在长期趋势不明朗的情况下,策略将不会产生信号,可以避免被套。同时,该策略适合在短中期内捕捉趋势性行情,降低了激进入场的可能性。
-
-## 风险分析 
-
-该策略在设定参数时需要调整均线的周期组合,不同的周期组合对策略的效果会产生影响。如果周期参数设置不当,将面临产生过多虚假信号的风险。此外,交易者需要警惕潜在的系统性风险,及时止损来规避风险。
-
-## 优化方向
-
-可以考虑结合其他指标来辅助判断市场趋势,如MACD、BOLL等,设置更加严格的入场条件,或者结合波动率指标构建自适应移动平均线,使得参数可以根据市场环境自动调整,进一步优化策略。
-
-## 总结
-
-该策略在常规双移动平均线交叉的基础上,添加长期均线判断和 filter 条件,可有效过滤虚假信号,适合捕捉短中期趋势行情,是一种简单实用的趋势跟踪策略。但交易者仍需关注参数优化和系统性风险,制定 scient 的资金管理策略。
-
-|| 
+ 
 
 ## Overview
 
@@ -62,8 +36,6 @@ Consider incorporating other indicators to aid in judging market trends, such as
 ## Conclusion
 
 Based on the conventional dual moving average crossover, this strategy adds long-term MA judgment and filter conditions, which can effectively filter out false signals and is suitable for capturing short to medium-term trending moves. It is a simple and practical trend-following strategy. However, traders still need to pay attention to parameter optimization and systemic risks, and formulate scientific risk management strategies.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1756531ab4fb69dbde8.png)
 
-[trans]
-#### 概述
-本策略是一个基于随机震荡指标(Stochastic Oscillator)的智能交易系统。它结合了动态趋势识别、多重信号确认和智能风险管理功能,能够自动识别市场超买超卖状态并进行交易。该策略通过颜色编码系统直观显示市场状态,同时整合了多周期均线(EMA)进行趋势确认,并提供灵活的止损止盈设置。
-
-#### 策略原理
-策略核心基于随机震荡指标与多重均线系统的配合。当K值突破预设的超买超卖水平(93/15)或中间水平(40)时产生交易信号。系统通过颜色变化(红色表示可能下跌、绿色表示可能上涨、蓝色表示中性)直观显示市场状态。同时结合20、50、100和200周期指数移动平均线(EMA)进行趋势确认。策略还包含智能风险管理系统,支持1:1、1:4、1:8等不同风险收益比设置。
-
-#### 策略优势
-1. 信号系统清晰直观,通过颜色编码快速识别市场状态
-2. 多重信号确认机制,降低虚假信号风险
-3. 灵活的风险管理系统,支持自定义风险收益比
-4. 结合多周期均线提供趋势确认
-5. 自动化的止损止盈设置,降低人为操作风险
-6. 代码结构清晰,易于维护和优化
-
-#### 策略风险
-1. 在震荡市场可能产生频繁交易信号
-2. 固定的超买超卖阈值可能不适用于所有市场环境
-3. 均线系统在剧烈波动市场可能滞后
-4. 需要合理设置止损以控制风险
-解决方案包括:增加信号过滤机制、动态调整阈值、优化均线参数、严格执行止损策略
-
-#### 策略优化方向
-1. 引入自适应阈值系统,根据市场波动动态调整超买超卖水平
-2. 增加成交量指标确认信号
-3. 开发智能信号过滤机制,减少虚假信号
-4. 优化均线参数,提高趋势判断准确性
-5. 引入机器学习算法优化参数选择
-6. 增加回撤控制机制
-
-#### 总结
-该策略通过结合随机震荡指标、均线系统和智能风险管理,构建了一个全面的交易系统。策略设计注重实用性和可操作性,适合不同风险偏好的交易者使用。通过持续优化和改进,该策略有望在不同市场环境下保持稳定表现。 || 
-
 #### Overview
 This strategy is an intelligent trading system based on the Stochastic Oscillator. It combines dynamic trend identification, multiple signal confirmation, and intelligent risk management capabilities to automatically identify market overbought/oversold conditions and execute trades. The strategy uses a color-coding system to visually display market conditions, integrates multiple period moving averages (EMA) for trend confirmation, and provides flexible stop-loss and take-profit settings.
 
@@ -74,7 +41,7 @@ Solutions include: adding signal filtering mechanisms, dynamic threshold adjustm
 6. Add drawdown control mechanism
 
 #### Summary
-The strategy builds a comprehensive trading system by combining the Stochastic Oscillator, moving average system, and intelligent risk management. The strategy design emphasizes practicality and operability, suitable for traders with different risk preferences. Through continuous optimization and improvement, the strategy has the potential to maintain stable performance across different market conditions.[/trans]
+The strategy builds a comprehensive trading system by combining the Stochastic Oscillator, moving average system, and intelligent risk management. The strategy design emphasizes practicality and operability, suitable for traders with different risk preferences. Through continuous optimization and improvement, the strategy has the potential to maintain stable performance across different market conditions.
 
 
 

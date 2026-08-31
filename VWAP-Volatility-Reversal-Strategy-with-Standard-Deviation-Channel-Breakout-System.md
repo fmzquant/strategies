@@ -9,46 +9,6 @@ ianzeng123
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/2d8dbf26798b1eddbca33.png)
-![IMG](https://www.fmz.com/upload/asset/2d8c7b12bd9e92d632d60.png)
-
-
-[trans]
-#### 概述
-该策略是一个基于VWAP(成交量加权平均价)和标准差通道的交易系统,通过识别价格在通道边界的反转形态来进行交易。策略结合了动量和均值回归的交易理念,在价格突破关键技术位时捕捉交易机会。
-
-#### 策略原理
-策略的核心是通过VWAP作为价格的中枢,利用20周期的标准差构建上下通道。在下轨附近寻找做多机会,上轨附近寻找做空机会。具体来说:
-- 做多条件:价格在下轨形成看涨反转形态,随后突破前一根阳线高点
-- 做空条件:价格在上轨形成看跌形态,随后突破前一根阴线低点
-- 止盈设置:做多以VWAP和上轨为目标,做空以下轨为目标
-- 止损设置:做多以反转阳线低点为止损,做空以反转阴线高点为止损
-
-#### 策略优势
-1. 结合了趋势跟踪和反转交易的优点,既可以捕捉趋势延续,又能抓住反转机会
-2. 使用VWAP作为核心指标,能更好地反映市场真实供需
-3. 采用分批止盈方式,可以在不同价位实现利润
-4. 止损设置合理,能够有效控制风险
-5. 策略逻辑清晰,参数设置简单,易于理解和执行
-
-#### 策略风险
-1. 在剧烈波动市场中可能频繁触发止损
-2. 横盘整理阶段可能产生过多假信号
-3. 对VWAP计算的时间周期较敏感
-4. 标准差通道宽度可能不适合所有市场环境
-5. 可能错过某些重要的趋势性机会
-
-#### 策略优化方向
-1. 引入成交量过滤器,提高信号质量
-2. 增加趋势确认指标,如移动平均线系统
-3. 动态调整标准差周期,适应不同市场环境
-4. 优化分批止盈比例,提高整体收益
-5. 加入时间过滤,避免在不利时段交易
-6. 考虑增加波动率指标,优化仓位管理
-
-#### 总结
-这是一个结合了VWAP、标准差通道和价格形态的完整交易系统。策略通过在关键价位寻找反转信号来进行交易,并采用分批止盈和合理止损来管理风险。虽然存在一定的局限性,但通过建议的优化方向可以进一步提升策略的稳定性和盈利能力。策略适合在波动性较大的市场中应用,对于中长期交易者来说是一个值得考虑的交易系统。 || 
-
 #### Overview
 This strategy is a trading system based on VWAP (Volume-Weighted Average Price) and standard deviation channels, which identifies reversal patterns at channel boundaries for trade execution. The strategy combines momentum and mean reversion trading concepts, capturing opportunities when prices break through key technical levels.
 
@@ -82,9 +42,7 @@ The core of the strategy uses VWAP as a price pivot, constructing upper and lowe
 6. Consider adding volatility indicators to optimize position management
 
 #### Summary
-This is a complete trading system combining VWAP, standard deviation channels, and price patterns. The strategy trades by seeking reversal signals at key price levels, managing risk through staged profit-taking and reasonable stop losses. While it has certain limitations, the suggested optimization directions can further enhance the strategy's stability and profitability. The strategy is suitable for markets with higher volatility and represents a worthy trading system for medium to long-term traders.[/trans]
-
-
+This is a complete trading system combining VWAP, standard deviation channels, and price patterns. The strategy trades by seeking reversal signals at key price levels, managing risk through staged profit-taking and reasonable stop losses. While it has certain limitations, the suggested optimization directions can further enhance the strategy's stability and profitability. The strategy is suitable for markets with higher volatility and represents a worthy trading system for medium to long-term traders.
 
 > Source (PineScript)
 

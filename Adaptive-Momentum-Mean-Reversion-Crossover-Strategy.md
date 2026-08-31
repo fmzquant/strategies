@@ -11,34 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11e90d1a2f18aa07266.png)
 
-[trans]
-#### 概述
-该策略是一个结合动量和均值回归理论的混合交易系统。它通过价格变化率(ROC)指标和布林带(Bollinger Bands)来识别市场的超买和超卖状态,在特定阈值交叉时触发交易信号。策略的核心是通过检测动量转换点并利用价格向均值回归的特性来获取收益。
-
-#### 策略原理
-策略采用2周期ROC指标计算短期价格变化,同时使用两组不同参数的布林带:短期布林带(18周期,1.7标准差)用于判断超卖条件和入场信号,长期布林带(21周期,2.1标准差)用于判断超买条件和出场信号。当ROC向上穿越下布林带时,表明价格动量由弱转强,系统开仓做多;当ROC向下穿越上布林带时,表明动量减弱,系统平仓出场。策略还通过背景颜色标注超买超卖区域,绿色表示超卖(可能上涨),红色表示超买(可能下跌)。
-
-#### 策略优势
-1. 自适应性强:布林带会根据市场波动率自动调整带宽,在不同市场环境下都能保持有效性
-2. 风险控制完善:禁用金字塔加仓(pyramiding=0),确保每次只持有一个位置
-3. 信号可靠性高:结合动量和均值回归两种策略,能更好地把握市场转折点
-4. 实用性强:考虑了交易成本和滑点,更符合实际交易环境
-
-#### 策略风险
-1. 震荡市场风险:在区间震荡行情中可能产生频繁交易导致损失
-2. 假突破风险:ROC指标可能产生虚假突破信号
-3. 参数敏感性:布林带和ROC的参数设置对策略表现影响较大
-4. 市场环境依赖:策略在趋势明显的市场中表现更好,而在剧烈波动时可能失效
-
-#### 策略优化方向
-1. 引入趋势过滤器:可添加长期移动平均线来过滤市场主趋势,提高交易方向的准确性
-2. 优化参数设置:可通过历史数据回测,寻找最优的ROC周期和布林带参数组合
-3. 增加止损机制:设置固定止损或跟踪止损来控制风险
-4. 增加成交量确认:结合成交量指标来验证价格突破的有效性
-
-#### 总结
-自适应动量均值回归交叉策略通过结合ROC指标和双重布林带,构建了一个能够适应不同市场环境的交易系统。策略在保持灵活性的同时也注重风险控制,具有较好的实用价值。通过持续优化和改进,该策略有望在实际交易中取得更好的表现。 || 
-
 #### Overview
 This strategy is a hybrid trading system that combines momentum and mean reversion theories. It identifies market overbought and oversold conditions using the Rate of Change (ROC) indicator and Bollinger Bands, triggering trades when specific thresholds are crossed. The core concept is to detect momentum shifts and capitalize on price reversions to their mean.
 
@@ -64,7 +36,7 @@ The strategy employs a 2-period ROC indicator to calculate short-term price chan
 4. Include Volume Confirmation: Incorporate volume indicators to validate price breakouts
 
 #### Summary
-The Adaptive Momentum Mean-Reversion Crossover Strategy builds a trading system capable of adapting to different market environments by combining ROC indicators and dual Bollinger Bands. While maintaining flexibility, the strategy emphasizes risk control and demonstrates practical value. Through continuous optimization and improvement, this strategy shows promise for better performance in actual trading.[/trans]
+The Adaptive Momentum Mean-Reversion Crossover Strategy builds a trading system capable of adapting to different market environments by combining ROC indicators and dual Bollinger Bands. While maintaining flexibility, the strategy emphasizes risk control and demonstrates practical value. Through continuous optimization and improvement, this strategy shows promise for better performance in actual trading.
 
 
 

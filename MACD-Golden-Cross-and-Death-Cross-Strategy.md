@@ -50,14 +50,14 @@ The MACD golden cross and death cross strategy is a simple and easy-to-understan
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_1|12|快线长度|
-|v_input_2|26|慢线长度|
-|v_input_3|9|MACD 均线长度|
-|v_input_4|green|MACD 柱在 0 线以上增长|
-|v_input_5|#99e69c|MACD 柱在 0 线以下增长|
-|v_input_6|orange|MACD 柱在 0 线以上下跌|
-|v_input_7|red|MACD 柱在 0 线以下下跌|
-|v_input_8|true|是否显示入场与出场信号|
+|v_input_1|12|Fast line length|
+|v_input_2|26|Slow line length|
+|v_input_3|9|MACD signal length|
+|v_input_4|green|MACD histogram rising above zero line|
+|v_input_5|#99e69c|MACD histogram rising below zero line|
+|v_input_6|orange|MACD histogram falling above zero line|
+|v_input_7|red|MACD histogram falling below zero line|
+|v_input_8|true|Show entry and exit signals|
 
 
 > Source (PineScript)

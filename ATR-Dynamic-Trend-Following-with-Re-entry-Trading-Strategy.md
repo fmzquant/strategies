@@ -9,45 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/1130fe9232956b0e1dc.png)
-
-[trans]
-#### 概述
-这是一个基于ATR动态调整的趋势跟踪策略,结合了移动平均线和ATR指标来确定入场和出场点。该策略的核心特点是通过ATR动态调整移动平均线的上下轨道,在价格突破上轨时入场做多,并设置基于ATR倍数的止损和止盈点。同时,策略还包含了创新的重入场机制,当价格回调至入场点时允许重新建仓。
-
-#### 策略原理
-策略运作基于以下几个关键要素：
-1. 使用ATR调整后的移动平均线作为趋势判断依据,形成动态的上下轨道
-2. 当价格突破上轨时产生做多信号,入场价格为当前收盘价
-3. 止损位设置为入场价下方2倍ATR距离
-4. 止盈位设置为入场价上方(5+自定义倍数)×ATR距离
-5. 在止损或止盈触发后,如果价格回调至原入场价位,策略将自动重新入场
-6. 使用最大30根K线的显示限制来优化图表展示
-
-#### 策略优势
-1. 动态适应性强：通过ATR调整的移动平均线能够自适应市场波动率变化
-2. 风险管理科学：止损和止盈点基于ATR动态设置,符合市场波动特征
-3. 重入场机制创新：允许在价格回调至有利位置时重新入场,提高盈利机会
-4. 可视化效果优秀：策略提供清晰的入场、止损、止盈线条显示,便于交易监控
-5. 参数灵活可调：通过输入参数可以调整趋势判断周期和止盈倍数
-
-#### 策略风险
-1. 趋势反转风险：在震荡市场中可能频繁触发止损
-2. 重入场风险：价格回调至入场点重新建仓可能面临连续止损
-3. 滑点风险：在波动剧烈时期,实际成交价格可能与信号价格存在偏差
-4. 参数敏感性：不同市场条件下最优参数可能变化较大
-5. 计算负载：需要实时计算多个技术指标,可能增加系统负载
-
-#### 策略优化方向
-1. 引入市场环境过滤：可添加波动率过滤器,在高波动期间调整策略参数或暂停交易
-2. 优化重入场逻辑：可考虑在重入场时采用更严格的条件限制,如趋势确认指标
-3. 完善止盈机制：可实现移动止损功能,在趋势延续时保护更多利润
-4. 增加时间过滤：可添加交易时间段限制,避开低流动性期间
-5. 优化计算效率：可通过减少不必要的计算和绘图来提升策略运行效率
-
-#### 总结
-这是一个设计合理、逻辑清晰的趋势跟踪策略,通过ATR动态调整提供了良好的市场适应性。策略的重入场机制是一个创新点,能够在良好的市场条件下提供额外的盈利机会。虽然存在一些需要注意的风险点,但通过建议的优化方向可以进一步提升策略的稳定性和盈利能力。对于寻求系统化交易方法的投资者来说,这是一个值得考虑的基础策略框架。 || 
-
 #### Overview
 This is a trend-following strategy that dynamically adjusts using ATR, combining moving averages and ATR indicators to determine entry and exit points. The strategy's core feature is using ATR to dynamically adjust moving average bands, entering long positions when price breaks above the upper band, and setting stop-loss and take-profit levels based on ATR multiples. Additionally, the strategy includes an innovative re-entry mechanism allowing new positions when price retraces to the entry point.
 
@@ -82,9 +43,7 @@ The strategy operates based on the following key elements:
 5. Improve Calculation Efficiency: Reduce unnecessary calculations and plotting to enhance strategy performance
 
 #### Summary
-This is a well-designed, logically clear trend-following strategy with good market adaptability through ATR dynamic adjustment. The re-entry mechanism is an innovative feature that can provide additional profit opportunities under favorable market conditions. While there are some risk factors to consider, the suggested optimization directions can further enhance the strategy's stability and profitability. For investors seeking systematic trading methods, this represents a worthwhile basic strategy framework.[/trans]
-
-
+This is a well-designed, logically clear trend-following strategy with good market adaptability through ATR dynamic adjustment. The re-entry mechanism is an innovative feature that can provide additional profit opportunities under favorable market conditions. While there are some risk factors to consider, the suggested optimization directions can further enhance the strategy's stability and profitability. For investors seeking systematic trading methods, this represents a worthwhile basic strategy framework.
 
 > Source (PineScript)
 

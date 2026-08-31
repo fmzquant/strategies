@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/127bd5afed6ba204042.png)
 
-[trans]
-#### 概述
-该策略是一个基于布林带指标的四小时级别量化交易系统,结合了趋势突破和均值回归的交易理念。策略通过布林带上下轨的突破来捕捉市场动量,同时利用价格回归均值的特性来进行获利了结,并通过止损控制风险。策略采用3倍杠杆,在保证收益的同时也充分考虑了风险控制。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用20周期的移动平均线作为布林带的中轨,并以2倍标准差作为波动区间
-2. 开仓信号:当K线实体(开盘价和收盘价的均值)突破上轨时开多,突破下轨时开空
-3. 平仓信号:多头持仓时,如果连续两根K线收盘价和开盘价都低于上轨且收盘价低于开盘价时平仓;空头持仓采用相反逻辑
-4. 风险控制:建仓时以当前K线最高/最低点设置止损,确保单笔损失可控
-
-#### 策略优势
-1. 交易逻辑清晰:结合趋势和回归两种交易思路,能够在不同市场环境下都有良好表现
-2. 风险控制完善:设置了基于K线波动的动态止损,可以有效控制回撤
-3. 过滤伪信号:通过判断K线实体的位置而非仅靠收盘价来确认突破,减少假突破带来的损失
-4. 资金管理合理:基于账户权益动态调整持仓规模,既保证了收益又控制了风险
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡行情下可能频繁触发假突破信号,导致连续止损
-2. 杠杆风险:使用3倍杠杆在剧烈波动时可能带来较大损失
-3. 止损设置风险:以K线最高/最低点设置止损可能过于宽松,增加单笔损失
-4. 时间周期依赖:四小时级别在某些市场环境下可能反应过慢,错过行情
-
-#### 策略优化方向
-1. 引入趋势过滤器:可以添加更长周期的趋势判断指标,在主趋势方向上进行交易
-2. 优化止损方案:考虑使用ATR或布林带宽度来动态调整止损距离
-3. 增加仓位管理:根据波动率或趋势强度动态调整杠杆倍数
-4. 添加市场环境判断:引入成交量或波动率指标来识别当前市场状态,选择性开仓
-
-#### 总结
-这是一个将布林带指标的趋势跟随和均值回归特性相结合的策略,通过严格的开平仓条件和风险控制措施,实现了在趋势和震荡市场中都能获得稳定收益的目标。策略的核心优势在于其清晰的交易逻辑和完善的风险控制体系,但仍需要注意杠杆使用和市场环境判断等方面的优化,以进一步提高策略的稳定性和收益能力。 ||
-
 #### Overview
 This strategy is a 4-hour timeframe quantitative trading system based on Bollinger Bands, combining trend breakout and mean reversion trading concepts. The strategy captures market momentum through Bollinger Bands breakouts while using price mean reversion for profit-taking and implementing stop-loss for risk control. It employs 3x leverage, ensuring returns while thoroughly considering risk management.
 
@@ -72,8 +40,7 @@ The core logic is based on the following key elements:
 4. Add market condition analysis: Incorporate volume or volatility indicators to identify market states for selective entry
 
 #### Summary
-This strategy combines Bollinger Bands' trend-following and mean-reversion characteristics, achieving stable returns in both trending and ranging markets through strict entry/exit conditions and risk control measures. Its core strengths lie in clear trading logic and comprehensive risk management system, but attention must be paid to leverage usage and market condition judgment optimization to further improve strategy stability and profitability. 
-[/trans]
+This strategy combines Bollinger Bands' trend-following and mean-reversion characteristics, achieving stable returns in both trending and ranging markets through strict entry/exit conditions and risk control measures. Its core strengths lie in clear trading logic and comprehensive risk management system, but attention must be paid to leverage usage and market condition judgment optimization to further improve strategy stability and profitability.
 
 
 

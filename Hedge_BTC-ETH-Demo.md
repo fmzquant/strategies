@@ -9,19 +9,20 @@ Hedge_BTC-ETH-Demo
 
 > Strategy Description
 
-BTC 和 ETH 的 跨品种对冲 思路测试 DEMO 
-根据价格比  画出 图表，分析 价格比 变化，寻找套利空间。
-策略可行性 未知， 有兴趣的 同学可以研究一下~
+A cross-asset hedging concept demo for BTC and ETH.
 
-by  littleDream
+It plots the price ratio to analyze how the ratio changes and to look for potential arbitrage opportunities.
 
+The feasibility of the strategy is still unknown, but anyone interested is welcome to study it further.
+
+by littleDream
 > Strategy Arguments
 
 
 
 |Argument|Default|Description|
 |----|----|----|
-|Mode|0|模式: BOLL|SMA|
+|Mode|0|Mode: BOLL|SMA|
 
 
 > Source (javascript)

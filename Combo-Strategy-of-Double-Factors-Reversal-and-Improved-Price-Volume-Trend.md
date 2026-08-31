@@ -8,42 +8,8 @@ Combo-Strategy-of-Double-Factors-Reversal-and-Improved-Price-Volume-Trend
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/19193c9237130c25ad6.png)
- [trans]
-## 概述
-
-本策略结合双因子反转与改良价格量趋势两个子策略,以获取综合交易信号。其中双因子反转策略基于Ulf Jensen的书中P183的思路,在股票两日内收盘价反转且随机指标条件成立时产生信号。改良价格量趋势策略基于价格与成交量的联合研判,判断市场的盘整与蓄势的时机。两种策略可以互相验证,组合使用可以提高稳定性。
-
-## 策略原理
-
-双因子反转子策略运用两日收盘价反转原理与随机指标的多空判断。如果前一日收盘价较高而今日收盘价反转下跌,且快速随机指标低于慢速随机指标而快速随机指标高于50,则产生空头信号。如果前一日收盘较低而今日收盘反转上涨,且快速随机指标高于慢速随机指标而快速随机低于50,则产生多头信号。
-
-改良价格量趋势策略基于价格与成交量的联合研判。计算公式为:PxVFactor = PriceFactor + Scale * CumPVT, 其中PriceFactor为价格因子,CumPVT为累积能量指标。然后计算PxVFactor的Length天简单移动平均,与当前PxVFactor值比较,判断市场趋势与力度。
-
-组合策略综合考虑两个子策略的信号,双因子反转与改良价格量趋势同向看多或看空时,则产生相应的多空信号。
-
-## 优势分析
-
-- 双因子反转策略结合了价格反转与随机指标判断,可以有效识别短期 extremums,捕捉反转机会。
-- 改良价格量趋势策略加入成交量因子,可以判断市场蓄势盘整的时机。
-- 两种策略互相验证,可以提高稳定性,避免错误信号。
-- 使用9天或14天等中短期参数,适合日内和短线操作。
-
-## 风险及优化
-
-- 反转策略存在被套住的风险,需要设置止损来控制风险。
-- 量价策略存在增大回撤的可能,如果判断市场方向错误,则亏损扩大。
-- 可以测试是否 PriceFactor 和 CumPVT 两个因子的权重是否最优,是可以做进一步优化。
-- 可以测试不同天数参数下的收益回撤比,选择最优参数。
-
-## 总结
-
-综上所述,双因子反转与改良价格量趋势组合策略,结合了反转和趋势两个维度的研判,两者可以互相验证信号,提高稳定性。在容易被套的反转策略中增加趋势指标作为辅助判断是必要的。而加入成交量因子也很重要,可以判断市场反转与蓄势的时机。本策略使用中短期参数,适合日内与短线操作,具有一定的实盘价值。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy combines double factors reversal and improved price volume trend sub-strategies to generate cumulative trading signals. The double factors reversal strategy is based on Ulf Jensen's idea on Page 183 of his book, generating signals when stock prices reverse over two days and the stochastic indicator conditions are met. The improved price volume trend strategy follows the joint research of price and trading volume to judge the direction and momentum of the market. The two strategies can validate each other, and combined use can improve stability.
 
@@ -72,9 +38,6 @@ The combo strategy comprehensively considers the signals of the two sub-strategi
 ## Conclusion
 
 In conclusion, the combo strategy of double factors reversal and improved price volume trend combines the judgments of reversal and trend in two dimensions. The two can verify signals from each other to improve stability. Adding a trend indicator as an auxiliary judgment is necessary in reversal strategies where it’s easy to be trapped. And incorporating trading volume factors is also essential to determine market reversals and momentum. This strategy uses medium-term parameters suitable for intraday and short-term operations, with certain practical value.
-
-[/trans]
-
 > Strategy Arguments
 
 

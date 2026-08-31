@@ -10,54 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e107064a94dc2d0cb2.png)
- [trans]
-
-## 概述
-
-本策略通过计算不同类型的均线(简单移动平均线SMA、指数移动平均线EMA、Hull移动平均线HMA和量加权移动平均线VWMA)并寻找其交叉点,来判断行情趋势并进行趋势跟随。当较短期均线从下方上穿较长期均线时生成买入信号;当较短期均线从上方下穿较长期均线时生成卖出信号。
-
-## 策略原理
-
-本策略主要通过比较两条不同均线之间的关系来判断行情走势。具体来说,通过输入参数设置两条均线的类型和长度。其中第一条均线长度较长,代表了长期趋势;第二条均线长度较短,代表了当前短期趋势。
-
-当短期均线从下方穿过长期均线时,代表短期趋势变强,行情进入上涨趋势,因此在这个交叉点发出买入信号。反之,当短期均线从上方穿过长期均线时,代表短期趋势变弱,行情进入下跌趋势,因此在这个交叉点发出卖出信号。
-
-通过这样的均线交叉判断来跟随市场趋势进行交易。
-
-## 策略优势
-
-- 利用均线交叉判断主要趋势,是一种经典且实用的技术指标
-- 支持多种不同类型的均线组合,灵活性高
-- 策略逻辑简单清晰,容易理解实现,适合量化交易的自动化
-- 可配置参数灵活,适用于不同市场环境
-
-## 风险分析
-
-- 均线具有滞后性,交叉信号发出时,价格运动可能已经发生或者接近反转点,存在一定的滞后误报风险
-- 趋势判断可能发生误判,从而导致不必要的亏损
-- 需要合理配置均线参数,不同的参数可能导致结果差异很大
-
-**风险解决方法:**
-
-- 适当缩短均线周期,提升对市场变化的敏感性
-- 结合其他指标进行验证,避免误判
-- 参数优化方法:遍历、机器学习、遗传算法等
-- 适当控制仓位规模和止损点
-
-## 策略优化方向 
-
-- 增加其他指标过滤器,结合多个指标判断,提高决策准确性
-- 根据市场环境自动调整均线参数
-- 结合机器学习算法自动寻优参数
-- 优化止损策略
-
-## 总结
-
-本策略基于均线交叉判断主要趋势的经典思路,通过不同均线的组合灵活应用。策略逻辑简单,容易实现,适合自动化交易。总体来说,本策略具有一定的实用性,但也存在一些改进优化的空间。通过参数优化、增加其他过滤器判断等方法,可以不断提升策略表现。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy generates trading signals by calculating different types of moving averages (Simple Moving Average SMA, Exponential Moving Average EMA, Hull Moving Average HMA and Weighted Moving Average VWMA) and detecting crossover points between them, to determine the market trend and follow it. It generates buy signals when the shorter-term MA crosses above the longer-term MA from below, and sell signals when the opposite crossing happens.  
 
@@ -99,8 +52,6 @@ By detecting such MA crossovers, this strategy follows the market trend to trade
 ## Conclusion
 
 This strategy builds on the classic idea of using MA crossovers for major trend detection. With flexible MA combinations, it is simple to implement and suitable for algorithmic trading automation. Overall it is reasonably practical but leaves room for enhancements like parameter tuning, additional filters etc. to further improve performance.
-
-[/trans]
 
 > Strategy Arguments
 

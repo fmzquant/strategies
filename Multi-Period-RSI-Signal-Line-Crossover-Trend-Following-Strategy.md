@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c11e3f5a39f3bc2a7b.png)
 
-[trans]
-#### 概述
-该策略是一个基于增强型相对强弱指标(RSI)的趋势跟踪交易系统。它通过计算RSI的改良版本并结合其信号线,在不同市场周期捕捉趋势反转机会。该策略不仅计算指标值,还通过视觉上的超买超卖区域展示,帮助交易者更直观地判断市场状态。
-
-#### 策略原理
-策略的核心原理是通过增强型RSI(ARSI)的计算来识别市场趋势。具体包括:
-1. 计算指定周期内的最高价和最低价,得到价格区间
-2. 基于价格变化计算差值
-3. 使用可选的移动平均方法(EMA、SMA、RMA、TMA)对差值进行平滑处理
-4. 将结果标准化到0-100范围内
-5. 当ARSI在50以下穿越信号线时产生做多信号
-6. 当ARSI在50以上跌破信号线时产生做空信号
-
-#### 策略优势
-1. 信号确认机制完善 - 通过ARSI与信号线的交叉以及中轴线过滤,确保信号的可靠性
-2. 适应性强 - 支持多种移动平均方法,可根据不同市场特征进行调整
-3. 风险控制合理 - 采用仓位百分比管理方法,有效控制每笔交易的风险
-4. 可视化效果突出 - 通过颜色填充清晰展示超买超卖区域,便于快速判断
-5. 反向持仓管理 - 在出现反向信号时会自动平仓现有仓位,避免双向持仓风险
-
-#### 策略风险
-1. 震荡市场风险 - 在横盘震荡行情中可能产生频繁的假信号
-2. 滞后性风险 - 由于使用移动平均计算,信号会有一定滞后性
-3. 参数敏感性 - 不同的参数设置可能导致策略表现差异较大
-4. 市场适应性风险 - 策略在不同市场环境下的表现可能存在显著差异
-5. 资金管理风险 - 固定百分比仓位管理在剧烈波动时可能带来较大风险
-
-#### 策略优化方向
-1. 引入波动率过滤 - 可添加ATR指标来过滤低波动率环境下的交易信号
-2. 增加趋势确认指标 - 结合更长周期的趋势指标来提高信号可靠性
-3. 优化仓位管理 - 根据市场波动性动态调整持仓比例
-4. 加入止损机制 - 设置基于ATR的动态止损以更好地控制风险
-5. 开发自适应参数 - 研究参数的动态优化方法,提高策略适应性
-
-#### 总结
-这是一个结构完整、逻辑清晰的趋势跟踪策略。通过增强型RSI的创新计算方法,结合多种技术指标的优势,形成了一个可靠的交易系统。虽然存在一些固有风险,但通过合理的优化和风险管理措施,该策略具有良好的实战应用前景。建议交易者在实盘使用时,需要充分测试参数设置,并结合市场环境适时调整策略配置。
-
-|| 
-
 #### Overview
 This strategy is a trend-following trading system based on an enhanced Relative Strength Index (RSI). It captures trend reversal opportunities across different market cycles by calculating an improved version of RSI and combining it with its signal line. The strategy not only computes indicator values but also provides visual representation of overbought and oversold areas to help traders make more intuitive market judgments.
 
@@ -84,7 +45,7 @@ The core principle revolves around identifying market trends through an Augmente
 5. Adaptive Parameters - Research dynamic parameter optimization methods to improve adaptability
 
 #### Summary
-This is a well-structured trend-following strategy with clear logic. Through innovative ARSI calculation methods and the combination of various technical indicators' advantages, it forms a reliable trading system. While inherent risks exist, the strategy shows good practical application potential through reasonable optimization and risk management measures. Traders are advised to thoroughly test parameter settings and adjust strategy configuration according to market conditions when implementing in live trading.[/trans]
+This is a well-structured trend-following strategy with clear logic. Through innovative ARSI calculation methods and the combination of various technical indicators' advantages, it forms a reliable trading system. While inherent risks exist, the strategy shows good practical application potential through reasonable optimization and risk management measures. Traders are advised to thoroughly test parameter settings and adjust strategy configuration according to market conditions when implementing in live trading.
 
 
 

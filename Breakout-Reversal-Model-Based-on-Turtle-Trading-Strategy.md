@@ -10,69 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/731a9bb78d8cbc4e31.png)
- [trans]
-## 概述
-
-该策略基于著名的“海龟交易员策略”,该策略已经经过多年验证。它发送长仓和空仓信号,最多可进行5次金字塔订单,这意味着该策略可以在同一方向触发多达5个订单。具有良好的风险和资金管理。
-
-需要注意的是,该策略结合了两个一起工作的系统(S1和S2)。
-
-## 策略原理
-
-仓位大小对于海龟交易员来说非常重要,以便妥善管理风险。该仓位调整策略适应市场波动性和账户(收益和损失)。它基于ATR(平均真实范围),也可以称为“N”。其长度默认为20。
-
-买入的单位数为:
-
-```
-unit = (percentage_to_risk/100)*account/atr*syminfo.pointvalue
-```
-
-根据您的风险偏好,您可以增加账户的百分比,但是海龟交易员默认为1%。 如果您交易合约,则单位必须默认向下取整。
-
-还有一个附加规则,用于在账户值低于初始资本时减少风险:在这种情况下,在单位公式中必须用下式替换:
-
-``` 
-account := (strategy.equity-strategy.openprofit)*(strategy.equity-strategy.openprofit)/strategy.initial_capital
-```
-
-有两个系统一起工作:
-突破是一个新的高点或新低点。 如果这是一个新的高点,我们打开多头头寸,反之,如果这是一个新的低点,我们进入空头头寸。
-
-我们添加一个额外的规则:
-该额外规则允许交易员参与主要趋势,如果跳过了系统1信号。 如果跳过了系统1的信号,而下一根K线也是一个新的20日突破,则S1不会发出信号。 我们必须等待S2信号或等待不产生新的突破的K线来重新激活S1。
-
-## 优势分析
-
-海龟策略允许我们在价格走势对我们有利时向头寸添加额外的单位。 我将策略配置为允许在同一方向添加多达5个订单。 因此,如果价格从买入变化,我们会添加单位。 
-
-我们将首订单(多头或空头)设置为最大订单。 后续的金字塔订单将比首个订单的单位数更少。 
-
-我们为首个订单设置了10%的最大止损,这意味着您不会损失超过首个订单价值的10%。 然而,由于止损会增加/减少0.5 \* ATR(20),您的金字塔订单可能会损失更多,此时不会保证损失不超过10%。 风险仍然得到很好的管理,因为这些订单的价值低于首个订单的价值。 
-
-## 风险分析
-
-该策略最大的风险在于持仓过大。由于委托下单采用市价单,如果同时下达多笔巨额市价单,会对报价有很大的冲击,造成大额的滑点。这会造成极大的资金损失。
-
-另一个风险就是不适当的资金管理配置。如止损配置错误或者比例过大,都会导致巨额亏损。这需要根据自己的风险偏好谨慎配置。
-
-## 优化方向
-
-该策略可以在以下几个方面进行优化:
-
-1. 可以测试不同参数对收益率和夏普比率的影响,如ATR周期,止损的ATR倍数等。找到最优参数组合。
-
-2. 可以测试不同的进场和出场规则。如用K线形态作为额外的过滤条件。
-
-3. 可以尝试其他类型的止损方式,如移动止损,动态止损。这可能可以减少止损被击穿的概率。
-
-4. 可以测试不同数量的金字塔订单。订单越多,杠杆和风险越大。找到最佳平衡点。
-
-5. 可以尝试在特定的时间段内(如美国非农就业数据发布前)停止交易,以规避重大事件的冲击。
-
-## 总结
-该策略整体来说,风险收益平衡良好,适合中长线趋势交易。它具有交易系统化,风险可控等优势。通过优化,可以进一步提高策略的稳定性和收益率。
-
-||
 
 ## Overview
 
@@ -132,9 +69,7 @@ The strategy can be optimized in the following aspects:
 
 ## Summary  
 
-Overall, this strategy strikes a good balance between risk and reward, suitable for medium and long term trend trading. It has the advantages of trading systematization, controllable risks. The strategy can be further improved by optimization to increase stability and return.  
-
-[/trans]
+Overall, this strategy strikes a good balance between risk and reward, suitable for medium and long term trend trading. It has the advantages of trading systematization, controllable risks. The strategy can be further improved by optimization to increase stability and return.
 
 > Strategy Arguments
 

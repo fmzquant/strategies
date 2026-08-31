@@ -72,7 +72,7 @@ This strategy combines trend trading and grid trading organically. It uses EMA t
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_float_1|true|网格大小是多少倍ATR？|
+|v_input_float_1|true|Grid size as a multiple of ATR?|
 
 
 > Source (PineScript)

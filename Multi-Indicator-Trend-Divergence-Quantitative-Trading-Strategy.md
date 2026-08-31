@@ -11,53 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/193cca500543a65249f.png)
 
-[trans]
-#### 概述
-这是一个基于多重技术指标的趋势跟踪和背离交易策略。该策略综合运用布林带(Bollinger Bands)、相对强弱指标(RSI)、随机指标(Stochastic)和资金流量指标(MFI)来捕捉市场的超买超卖机会,通过多指标交叉确认来增强交易信号的可靠性。
-
-#### 策略原理
-策略采用了多层过滤机制来确认交易信号:
-1. 使用布林带(20,2)作为价格波动区间的参考,当价格突破布林带下轨时触发买入信号预选。
-2. RSI(3)设置为超买超卖区间(85,15),当RSI向上突破15时确认超卖。
-3. 随机指标(10,3)的设置为(85,15),当K线向上突破15时进一步确认超卖。
-4. MFI的10周期EMA走势用于确认资金流向,上升趋势支持买入。
-买入条件需要同时满足:价格突破布林带下轨、RSI突破超卖、随机指标突破超卖以及MFI趋势向上。
-卖出条件则相反:价格突破布林带上轨、RSI突破超买、随机指标突破超买。
-
-#### 策略优势
-1. 多重技术指标交叉验证,显著降低假信号。
-2. 结合趋势和动量指标,既能捕捉趋势又能预警反转。
-3. 采用快速RSI(3周期)提高入场时效性。
-4. 通过MFI确认资金流向,增加交易可靠性。
-5. 使用布林带作为波动参考,适应不同市场环境。
-
-#### 策略风险
-1. 多重指标可能导致信号滞后,错过最佳入场时机。
-2. 在横盘震荡市场中可能产生频繁交易。
-3. 快速RSI可能对噪音较为敏感。
-4. 需要较大样本量来验证策略的稳定性。
-建议采取以下风险控制措施:
-- 设置止损止盈
-- 控制单次交易规模
-- 在不同市场环境下调整参数
-- 结合更多市场特征进行交易过滤
-
-#### 策略优化方向
-1. 动态调整指标参数:
-- 根据市场波动率自适应调整布林带参数
-- 基于市场周期调整RSI和随机指标的周期设置
-2. 增加市场环境过滤:
-- 添加趋势强度指标
-- 考虑成交量变化
-3. 完善风险管理:
-- 实现动态止损
-- 增加持仓时间限制
-4. 信号优化:
-- 添加趋势确认条件
-- 优化指标权重
-
-#### 总结
-该策略通过多指标协同配合,构建了一个相对完整的交易系统。策略的核心优势在于通过不同类型指标的交叉验证来提高信号可靠性,同时考虑了趋势、动量和资金流向等多个市场特征。虽然存在一定的滞后性风险,但通过合理的参数优化和风险管理措施,策略具有良好的应用潜力。未来可以通过动态参数调整和市场环境过滤来进一步提升策略的稳定性和盈利能力。 || 
+ 
 
 #### Overview
 This is a trend following and divergence trading strategy based on multiple technical indicators. The strategy combines Bollinger Bands, Relative Strength Index (RSI), Stochastic Oscillator, and Money Flow Index (MFI) to capture market overbought and oversold opportunities, enhancing signal reliability through multi-indicator cross-confirmation.
@@ -104,9 +58,7 @@ Recommended risk control measures:
 - Optimize indicator weights
 
 #### Summary
-The strategy constructs a relatively complete trading system through multi-indicator collaboration. Its core advantage lies in improving signal reliability through cross-validation of different types of indicators, while considering multiple market characteristics including trend, momentum, and capital flow. Although there are some lag risks, the strategy shows good application potential through reasonable parameter optimization and risk management measures. Future improvements can focus on dynamic parameter adjustment and market environment filtering to further enhance strategy stability and profitability.[/trans]
-
-
+The strategy constructs a relatively complete trading system through multi-indicator collaboration. Its core advantage lies in improving signal reliability through cross-validation of different types of indicators, while considering multiple market characteristics including trend, momentum, and capital flow. Although there are some lag risks, the strategy shows good application potential through reasonable parameter optimization and risk management measures. Future improvements can focus on dynamic parameter adjustment and market environment filtering to further enhance strategy stability and profitability.
 
 > Source (PineScript)
 

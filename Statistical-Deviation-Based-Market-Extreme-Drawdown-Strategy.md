@@ -8,39 +8,7 @@ Statistical-Deviation-Based-Market-Extreme-Drawdown-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/f50978dde91006e9c4.png)
-
-[trans]
-#### 概述
-该策略基于市场极端下跌时的统计特性进行交易。通过对回撤的统计分析,利用标准差衡量市场波动的极端程度,在市场出现超出正常范围的下跌时进行买入。策略的核心思想是捕捉市场恐慌情绪导致的超跌机会,通过数学统计方法识别市场非理性行为带来的投资机会。
-
-#### 策略原理
-策略采用滚动时间窗口计算价格的最大回撤和回撤的统计特征。首先计算过去50个周期内的最高价,然后计算当前收盘价相对最高价的回撤百分比。接着计算回撤的均值和标准差,设置-1倍标准差作为触发阈值。当市场回撤超过均值减去设定倍数的标准差时,表明市场可能出现超跌,此时进入多头头寸。持仓35个周期后自动平仓。策略还绘制了回撤曲线以及一倍、两倍和三倍标准差水平线,用于直观判断市场的超跌程度。
-
-#### 策略优势
-1. 策略基于统计学原理,具有扎实的理论基础。通过标准差衡量市场波动的极端程度,方法客观科学。
-2. 策略能够有效捕捉市场恐慌时期的投资机会。在市场出现非理性下跌时入场,符合价值投资的理念。
-3. 采用固定周期平仓的方式,避免了追踪止损可能错过反弹的问题。
-4. 策略参数可调整性强,可以根据不同市场环境和交易品种特点灵活设置。
-5. 回撤和标准差指标计算简单,策略逻辑清晰,易于理解和执行。
-
-#### 策略风险
-1. 市场可能出现持续下跌,导致策略频繁入场但均亏损。建议设置最大持仓数量限制。
-2. 固定周期平仓可能错过更大的上涨空间。可以考虑增加趋势跟踪的平仓方式。
-3. 回撤统计特征可能随市场环境变化而改变。建议定期更新参数设置。
-4. 策略未考虑成交量等其他市场信息。建议结合多个指标进行交叉验证。
-5. 在剧烈波动的市场环境下,标准差可能失真。建议设置风险控制措施。
-
-#### 策略优化方向
-1. 引入成交量指标,确认市场恐慌程度。
-2. 增加趋势指标,避免在下跌趋势中频繁入场。
-3. 优化平仓机制,根据市场表现动态调整持仓时间。
-4. 增加止损设置,控制单次交易风险。
-5. 考虑使用自适应参数,提高策略对市场变化的适应性。
-
-#### 总结
-该策略通过统计学方法捕捉市场超跌机会,具有良好的理论基础和实用价值。策略逻辑简单清晰,参数可调整性强,适合作为基础策略进行扩展和优化。通过增加其他技术指标和风险控制措施,可以进一步提升策略的稳定性和盈利能力。在实盘交易中,建议结合市场环境和交易品种特点,谨慎设置参数,做好风险控制。 || 
 
 #### Overview
 This strategy is based on the statistical characteristics of extreme market downturns. By analyzing drawdowns statistically and using standard deviations to measure market volatility extremes, it initiates buying positions when market declines exceed normal ranges. The core idea is to capture oversold opportunities caused by market panic, identifying investment opportunities through mathematical statistical methods that arise from market irrationality.
@@ -70,10 +38,7 @@ The strategy employs a rolling time window to calculate price maximum drawdowns 
 5. Consider using adaptive parameters to improve strategy adaptation to market changes.
 
 #### Summary
-This strategy captures market oversold opportunities through statistical methods, with strong theoretical foundation and practical value. The strategy logic is simple and clear with adjustable parameters, suitable as a base strategy for expansion and optimization. Strategy stability and profitability can be further enhanced by adding technical indicators and risk control measures. In live trading, carefully set parameters considering market conditions and trading instrument characteristics, while maintaining proper risk control.[/trans]
-
-
-
+This strategy captures market oversold opportunities through statistical methods, with strong theoretical foundation and practical value. The strategy logic is simple and clear with adjustable parameters, suitable as a base strategy for expansion and optimization. Strategy stability and profitability can be further enhanced by adding technical indicators and risk control measures. In live trading, carefully set parameters considering market conditions and trading instrument characteristics, while maintaining proper risk control.
 > Source (PineScript)
 
 ``` pinescript

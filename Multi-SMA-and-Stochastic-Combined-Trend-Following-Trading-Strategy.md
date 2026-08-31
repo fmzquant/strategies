@@ -11,42 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12dd422cc31b61a4431.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多重移动平均线(SMA)和随机指标(KDJ)的趋势跟踪交易系统。通过设定价格区间和趋势判断条件,在市场趋势明确时进行交易。策略采用了动态止损机制,根据市场走势调整持仓管理,既保护既有利润又不会过早离场。
-
-#### 策略原理
-策略主要基于以下几个核心组件:
-1. 双均线系统:使用19周期和74周期SMA作为趋势判断工具
-2. 价格区间:将价格区间分为5个等级,用于判断市场强弱
-3. 随机指标:使用60周期的随机指标进行超买超卖判断
-4. 趋势确认:通过连续3根K线的走势判断趋势的持续性
-5. 入场条件:价格突破74周期SMA且位于相应价格区间时入场
-6. 止损机制:采用跟踪止损,在趋势改变时及时离场
-
-#### 策略优势
-1. 系统完整性:结合了趋势跟踪和动量指标,提供了全面的市场分析
-2. 风险管理:采用多重止损机制,包括硬性止损和跟踪止损
-3. 适应性强:通过参数调整可以适应不同市场环境
-4. 趋势把握:能够有效捕捉中长期趋势,避免虚假信号
-5. 持仓管理:根据市场状态动态调整持仓,提高资金使用效率
-
-#### 策略风险
-1. 震荡市场风险:在横盘市场可能产生频繁交易
-2. 滑点风险:在快速行情中可能面临较大滑点
-3. 参数敏感性:不同参数组合可能导致策略表现差异较大
-4. 市场环境依赖:策略在趋势明显的市场中表现更好
-5. 资金管理风险:全仓操作可能带来较大回撤风险
-
-#### 策略优化方向
-1. 引入波动率指标:考虑添加ATR指标来动态调整止损位置
-2. 优化入场时机:可以增加成交量确认来提高入场准确性
-3. 完善资金管理:建议添加仓位管理模块,根据风险动态调整仓位
-4. 增加市场环境判断:可以添加趋势强度指标来过滤交易信号
-5. 改进止损机制:可以考虑使用百分比跟踪止损来提高灵活性
-
-#### 总结
-该策略通过结合多重技术指标构建了一个完整的交易系统,具有良好的趋势跟踪能力和风险管理机制。虽然在某些市场环境下可能面临挑战,但通过持续优化和完善,策略有望在不同市场环境下都能保持稳定表现。建议交易者在实盘使用时注意控制仓位,合理设置止损,并根据市场情况适时调整参数。 || 
+ 
 
 #### Overview
 This strategy is a trend following trading system that combines multiple Simple Moving Averages (SMA) with the Stochastic oscillator. It executes trades when market trends are clearly defined by establishing price zones and trend identification conditions. The strategy employs a dynamic stop-loss mechanism that adjusts position management based on market movements, both protecting profits and avoiding premature exits.
@@ -82,9 +47,7 @@ The strategy is built on several core components:
 5. Improve Stop-Loss Mechanism: Consider percentage-based trailing stops for better flexibility
 
 #### Summary
-This strategy builds a comprehensive trading system by combining multiple technical indicators, featuring strong trend-following capabilities and risk management mechanisms. While it may face challenges in certain market conditions, continuous optimization and refinement can help maintain stable performance across different market environments. Traders are advised to control position sizes, set appropriate stop-losses, and adjust parameters according to market conditions when implementing the strategy in live trading.[/trans]
-
-
+This strategy builds a comprehensive trading system by combining multiple technical indicators, featuring strong trend-following capabilities and risk management mechanisms. While it may face challenges in certain market conditions, continuous optimization and refinement can help maintain stable performance across different market environments. Traders are advised to control position sizes, set appropriate stop-losses, and adjust parameters according to market conditions when implementing the strategy in live trading.
 
 > Source (PineScript)
 

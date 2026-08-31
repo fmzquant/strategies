@@ -9,10 +9,8 @@ yzl_126@126.com
 
 > Strategy Description
 
-统计各个平台间的最大差价; 
-如果要打印当时各交易所的市场行情，可以把 //printCurPrice();   前面的注释//去掉；
-
-
+Calculates the maximum spread across different platforms.
+If you want to print the market quotes from each exchange at that moment, remove the leading comment marks before `//printCurPrice();`.
 
 > Source (javascript)
 

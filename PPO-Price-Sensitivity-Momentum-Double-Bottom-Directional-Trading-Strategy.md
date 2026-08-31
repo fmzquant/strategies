@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1554ffdb55cfa9075de.png)
- [trans]
-### 概述
-
-PPO价格敏感性动量双底定向交易策略是一种利用价格敏感性动量指标识别价格双底形成的趋势追踪交易策略。它结合了PPO指标的双底形成判断和价格动量特征判断,实现了对价格双底反转点的精确定位,从而产生交易信号。
-
-### 策略原理
-
-该策略运用PPO指标判断价格双底特征,同时结合价格的最低点判定,实时监测PPO指标是否出现底部特征。当PPO指标出现由下向上反转的双底形态,表明当前处于买入机会点。
-
-另一方面,该策略配合价格最小值判定,判断价格是否处于较低水平。当价格处于低位时,若PPO指标出现底部特征,则产生买入信号。
-
-通过PPO指标反转特征判断和价格位置确认的双重判定,可有效识别价格反转机会,过滤掉一些假信号,提高信号的质量。
-
-### 优势分析
-
-1. 利用PPO指标的双底形态,可准确定位买入时机点。
-
-2. 结合价格位置判定,可过滤掉较高点产生的假信号,提高信号质量。
-
-3. PPO指标敏感,可快速捕捉价格变化趋势,适合趋势追踪。
-
-4. 采用双重确认机制,可有效减少交易风险。
-
-### 风险及解决
-
-1. PPO指标容易产生假信号,需辅以其他指标进行确认。可加入均线指标或波动指标进行辅助。
-
-2. 双底反转不一定持续,存在再次下跌风险。可设置止损点,优化仓位管理。
-
-3. 参数设置不当可能导致漏损或错买风险。需对参数组合进行反复测试优化。
-
-4. 代码量较大,可继续模块化,减少重复代码。
-
-### 优化方向
-
-1. 增加止损模块,优化仓位管理策略。
-
-2. 加入均线指标或波动指标辅助确认。
-
-3. 模块化代码,减少重复判断逻辑。
-
-4. 继续优化参数,提高稳定性。
-
-5. 测试更多品种套利应用。
-
-### 总结
-
-PPO价格敏感性动量双底定向交易策略通过捕捉PPO指标双底特征,结合价格位置判定的双重确认,实现了对价格反转点的有效定位。相比单一指标判断,具有判断更准确、过滤噪声更出色的优势。但该策略也存在一定的假信号风险,需要继续优化指标组合,并辅以严格的仓位管理策略,方可在实盘中稳定获利。
-
-||
 
 ### Overview  
 
@@ -108,10 +58,7 @@ Through PPO reversal characteristic validation and price level confirmation dual
 
 ### Conclusion  
 
-The PPO Price Sensitivity Momentum Double Bottom Directional Trading Strategy captures PPO indicator's double bottom features coupled with dual confirmation of price level positioning to effectively spot price reversal points. Compared to single indicator judgement, it possesses advantages of improved accuracy and capability to filter out noises. Nonetheless, certain risks of false signals remain, requiring further optimization on indicator combinations and strict position sizing tactics before stable profitability can be achieved in live trading.    
-
-[/trans]
-
+The PPO Price Sensitivity Momentum Double Bottom Directional Trading Strategy captures PPO indicator's double bottom features coupled with dual confirmation of price level positioning to effectively spot price reversal points. Compared to single indicator judgement, it possesses advantages of improved accuracy and capability to filter out noises. Nonetheless, certain risks of false signals remain, requiring further optimization on indicator combinations and strict position sizing tactics before stable profitability can be achieved in live trading.
 > Strategy Arguments
 
 

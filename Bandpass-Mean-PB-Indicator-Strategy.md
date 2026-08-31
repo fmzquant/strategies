@@ -10,54 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/cc91a9073aebcc6d13.png)
- [trans]
-## 概述
-
-该策略通过计算均值PB指标和布林带上下轨,判断PB指标与布林带上下轨之间的金叉死叉关系,产生买入和卖出信号。当PB指标向上突破布林带中轨或下轨时,产生买入信号;当PB指标向下跌破布林带中轨或上轨时,产生卖出信号。
-
-## 策略原理
-
-策略的核心指标是均值PB指标。均值PB指标结合了均线系统的稳定性和PB指标的灵敏度,它使用一快一慢两个不同周期均线的差值来表达价格变化趋势,从而判断查看多空态势。 
-
-该策略还同时使用了布林带指标判断股价的超买超卖情况。布林带指标由中轨、上轨和下轨三条曲线组成。中轨线就是n天的移动平均线;上下轨则通过中轨及历史波动率计算得出。当股价接近上轨时为超买区,接近下轨时超卖区,而中轨附近为股票合理价格区间。
-
-综上,该策略巧妙利用均值PB指标判定股价涨跌趋势,并辅以布林带指标判断超买超卖情况,在两者结合的指标关系中寻找买卖点,属于典型的数值指标交易策略。
-
-## 优势分析
-
-该策略主要优势有:
-
-1. 利用均值PB指标判断股价趋势变化,灵敏度高
-2. 辅以布林带指标识别超买超卖区位,提高确定买卖点的准确性  
-3. 策略操作简单,容易实施
-4. 回测数据表明,策略收益较为可观
-
-## 风险分析
-
-该策略主要风险有:  
-
-1. 均值PB指标和布林带指标都依赖历史数据计算,当股价出现大幅波动时,容易产生错误信号
-2. PB指标和布林带都对参数设置较为敏感,不当设置可能导致过多错误交易
-3. 策略实施期内,宏观环境变化可能对股价产生较大影响,如经济危机、政策变化等,可能导致策略失效
-
-针对上述风险,可通过优化参数设置、严格止损、考量大环境因素、人工监控等方式进行风险规避。
-
-## 优化方向 
-
-该策略可优化的方向包括:
-
-1. 优化均值PB指标和布林带的参数,找到最佳参数组合
-2. 增加其他指标过滤,如MACD、KDJ等,提高策略效果 
-3. 增加止损机制,有效控制单笔损失  
-4. 结合更大时间周期指标,判断大方向,避免逆势交易
-
-## 总结
-
-该策略整体运行效果较好,以均值PB指标为核心,辅以布林带判定买卖点,操作简单,灵敏度高,回测表现不俗。通过持续优化参数设置、增加其他指标辅助、严格止损等措施,能够进一步提高策略收益率和稳定性,值得实盘验证与应用。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy calculates the mean PB indicator and Bollinger bands to determine the golden cross and dead cross relationship between the PB indicator and the upper and lower rails of the Bollinger bands. It generates buy signals when the PB indicator breaks above the middle rail or lower rail of the Bollinger bands, and generates sell signals when the PB indicator breaks below the middle rail or upper rail of the Bollinger bands.
 
@@ -100,8 +53,6 @@ The optimization directions for this strategy include:
 ## Conclusion
 
 The overall performance of this strategy is quite satisfactory. With the mean PB indicator as its core and Bollinger Bands to assist determining trading signals, it has simple logic, high sensitivity, and decent backtest results. By continuing to optimize parameter settings, adding other assisting indicators, implementing strict stop loss etc., the profitability and stability of the strategy can be further improved. It is worth verifying in live trading and application.
-
-[/trans]
 
 > Strategy Arguments
 

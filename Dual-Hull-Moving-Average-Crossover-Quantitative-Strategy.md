@@ -11,34 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1d5dd2fa8b7a2e5f4d0.png)
 
-[trans]
-#### 概述
-本策略基于赫尔移动平均线(Hull Moving Average, HMA)的交叉信号进行交易。通过计算快速和慢速两条HMA线,在它们发生交叉时产生交易信号。HMA是一种先进的移动平均线指标,它通过加权移动平均(WMA)的特殊组合来减少滞后性,提供更快速和平滑的市场趋势信号。
-
-#### 策略原理
-策略的核心是利用不同周期的HMA交叉来捕捉市场趋势的转换点。HMA的计算过程包括三个步骤:首先计算半周期的WMA,然后计算完整周期的WMA,最后通过这两个WMA的特殊组合再次计算一个周期为原周期平方根的WMA。当快速HMA(默认9周期)向上穿越慢速HMA(默认16周期)时,产生做多信号;当快速HMA向下穿越慢速HMA时,产生做空信号。
-
-#### 策略优势
-1. 信号反应迅速:HMA通过特殊的计算方法显著减少了传统移动平均线的滞后性,能更快捕捉到市场趋势的转变。
-2. 噪音过滤:通过两条均线的交叉确认,可以有效过滤掉市场噪音,降低虚假信号。
-3. 参数灵活:策略允许调整快慢线的周期参数,适应不同市场环境。
-4. 可视化清晰:策略在图表上清晰展示两条均线和交易信号,便于分析和优化。
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡行情下,频繁的交叉可能导致过度交易和连续止损。
-2. 滞后风险:尽管HMA相对传统均线滞后性更小,但仍存在一定的滞后性,可能错过最佳入场点。
-3. 参数敏感性:不同的参数组合可能导致截然不同的交易结果,需要careful的参数优化。
-4. 假突破风险:市场可能出现假突破,导致错误的交易信号。
-
-#### 策略优化方向
-1. 引入趋势过滤器:可以添加ADX或趋势强度指标,仅在明确趋势时进行交易。
-2. 优化止损机制:设计动态止损,如基于ATR或波动率的止损策略。
-3. 增加交易确认条件:结合成交量、动量指标等作为辅助确认信号。
-4. 参数自适应:开发基于市场波动性的动态参数调整机制。
-5. 风险管理优化:添加仓位管理和资金管理模块。
-
-#### 总结
-这是一个基于HMA交叉的量化交易策略,通过减少传统移动平均线的滞后性来提供更及时的交易信号。策略设计简洁,易于理解和实现,但在实际应用中需要注意市场环境的适配性和风险管理。通过持续优化和完善,该策略有潜力成为一个稳健的交易系统。 || 
+ 
 
 #### Overview
 This strategy is based on the crossover signals of Hull Moving Average (HMA). It generates trading signals when two HMA lines with different periods cross each other. HMA is an advanced moving average indicator that reduces lag through a special combination of Weighted Moving Averages (WMA), providing faster and smoother market trend signals.
@@ -66,9 +39,7 @@ The core of the strategy lies in capturing market trend reversal points using HM
 5. Risk Management Optimization: Add position sizing and money management modules.
 
 #### Summary
-This is a quantitative trading strategy based on HMA crossovers, providing more timely trading signals by reducing the lag of traditional moving averages. The strategy design is concise, easy to understand and implement, but requires attention to market environment adaptability and risk management in practical applications. Through continuous optimization and improvement, this strategy has the potential to become a robust trading system.[/trans]
-
-
+This is a quantitative trading strategy based on HMA crossovers, providing more timely trading signals by reducing the lag of traditional moving averages. The strategy design is concise, easy to understand and implement, but requires attention to market environment adaptability and risk management in practical applications. Through continuous optimization and improvement, this strategy has the potential to become a robust trading system.
 
 > Source (PineScript)
 

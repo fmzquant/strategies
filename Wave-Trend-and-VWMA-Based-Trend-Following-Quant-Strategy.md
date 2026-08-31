@@ -10,48 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/145765ee7e18aaff4a7.png)
- [trans]
-## 概述
-
-本策略结合了Wave Trend振荡器和VWMA指标,实现了一个趋势跟踪的量化交易策略。该策略可以识别市场趋势,并基于Wave Trend振荡器的信号进行买入或卖出。另外,交易大小根据VWMA指标的信号来确定。
-
-## 策略原理
-
-该策略主要基于以下两个指标:
-
-1. Wave Trend振荡器:这是一个由LazyBear移植到TradingView的指标,可以识别价格波动的“波浪”,并产生买入/卖出信号。具体计算方法是:先计算价格的平均值ap,然后计算ap的EMA(称为esa),再计算ap与esa的差值的绝对值的EMA(称为d),最后计算一致性指数ci=(ap-esa)/(0.015*d), ci的EMA即为Wave Trend(wt1), wt1的4周期SMA即为wt2。当wt1上穿wt2时为买入信号,下穿为卖出信号。
-
-2. VWMA指标:这是一个考虑成交量的加权移动平均线。根据价格在VWMABands(VWMA的上下轨)之内或之外,产生+1(多头)、0(中性)或-1(空头)的信号。
-
-根据Wave Trend的信号确定买入和卖出的时机。而根据VWMA指标的多空信号,确定每次交易的具体数量。
-
-## 策略优势
-
-- 结合两种指标的信号,可以提高决策的准确性
-- 基于成交量的VWMA指标,可以判断市场的力量对比
-- 可自定义交易时间段,避免重要新闻事件的剧烈波动
-- 交易数量根据VWMA的信号进行调整,可以减少交易风险
-
-## 策略风险
-
-- Wave Trend指标可能产生假信号
-- 成交量数据不精确可能影响VWMA指标
-- 需要较长的历史数据进行指标计算
-- 未考虑止损策略
-
-## 优化方向
-
-- 测试不同参数组合,找到最佳参数
-- 增加止损策略
-- 考虑结合其他指标进行信号过滤
-- 测试不同的交易时间段设置
-- 动态调整交易数量的计算方式
-
-## 总结
-
-本策略整合了趋势判断和量能指标,实现了一个较为先进的趋势跟踪策略。该策略具有一定的优势,但也存在一些风险需要注意。通过参数和规则的优化,有望进一步提高策略的稳定性和收益率。
-
-||
 
 ## Overview
 
@@ -92,9 +50,6 @@ The Wave Trend signals determine when to buy and sell. While the bullish/bearish
 ## Conclusion  
 
 This strategy integrates trend judgment and volume capabilities for an advanced trend following approach. It has some edges but also risks to note. Further improvements in parameters and rules may enhance its stability and profitability.
-
-[/trans]
-
 > Strategy Arguments
 
 

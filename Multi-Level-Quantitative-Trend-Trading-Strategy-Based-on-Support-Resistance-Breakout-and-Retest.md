@@ -12,49 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d886439c2ab33d317c8d.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8dbab0fb019186c877a.png)
 
-
-
-
-[trans]
-#### 概述
-这是一个基于支撑阻力位突破和回测的量化交易策略。策略通过识别关键价格支撑位和阻力位,在价格突破后的回测确认点进行交易。该策略采用左右看回bar数动态定位关键点位,并结合回测容差来过滤假突破,从而提高交易的准确性和稳定性。
-
-#### 策略原理  
-策略主要包含以下核心逻辑:
-1. 通过左右看回指定数量的K线来识别关键支撑和阻力pivot点位
-2. 设置状态变量追踪候选支撑阻力位的突破和回测情况
-3. 在出现新的pivot点时更新候选支撑阻力位
-4. 当价格突破候选支撑阻力位且回测时进行交易:
-   - 价格跌破支撑后回升至支撑位附近时做多
-   - 价格突破阻力后回落至阻力位附近时做空
-5. 使用容差参数来过滤回测时的价格波动,提高信号质量
-
-#### 策略优势
-1. 采用经典的技术分析理论,逻辑清晰易懂
-2. 通过动态识别关键点位,适应性强
-3. 结合突破和回测双重确认,降低假信号
-4. 使用容差参数过滤噪音,提高准确率
-5. 代码结构清晰,易于维护和扩展
-6. 适用于多个时间周期和品种
-
-#### 策略风险
-1. 在震荡市场可能频繁交易导致亏损
-2. 突破假信号仍然存在
-3. 参数优化可能存在过拟合风险
-4. 市场波动过大时止损可能较大
-5. 需要考虑交易成本的影响
-
-#### 策略优化方向
-1. 增加趋势过滤器,只在主趋势方向交易
-2. 加入成交量确认机制
-3. 优化入场时机,可考虑增加技术指标确认
-4. 完善止损止盈机制
-5. 增加仓位管理逻辑
-6. 考虑加入多时间周期分析
-
-#### 总结
-该策略通过经典的支撑阻力理论和突破回测逻辑构建,具有较好的理论基础。通过参数优化和风险控制可以获得稳定的交易效果。策略代码结构清晰,易于理解和扩展,具有较强的实用价值。建议在实盘交易中结合市场情况和个人风险偏好进行适当的参数调整。 || 
-
 #### Overview
 This is a quantitative trading strategy based on support-resistance breakout and retest. The strategy identifies key price support and resistance levels, executing trades at retest confirmation points after breakouts. It uses dynamic left and right bar lookback to locate key levels and incorporates retest tolerance to filter false breakouts, thereby improving trading accuracy and stability.
 
@@ -92,10 +49,7 @@ The strategy includes the following core logic:
 6. Consider multi-timeframe analysis
 
 #### Summary
-The strategy is built on classic support-resistance theory and breakout-retest logic with a solid theoretical foundation. Stable trading results can be achieved through parameter optimization and risk control. The strategy code structure is clear, easy to understand and extend, with strong practical value. It is recommended to adjust parameters appropriately in live trading based on market conditions and personal risk preference.[/trans]
-
-
-
+The strategy is built on classic support-resistance theory and breakout-retest logic with a solid theoretical foundation. Stable trading results can be achieved through parameter optimization and risk control. The strategy code structure is clear, easy to understand and extend, with strong practical value. It is recommended to adjust parameters appropriately in live trading based on market conditions and personal risk preference.
 > Source (PineScript)
 
 ``` pinescript

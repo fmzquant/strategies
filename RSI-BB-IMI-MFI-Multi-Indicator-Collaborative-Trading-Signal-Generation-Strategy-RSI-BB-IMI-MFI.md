@@ -12,54 +12,7 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d89875572d3d5fb43a6d.png)
 ![IMG](https://www.fmz.com/upload/asset/2d93ea0b985b7f19a26e8.png)
 
-
-
-
-[trans]
-#### 概述
-本策略是一个基于多重技术指标协同分析的交易信号生成系统。策略整合了相对强弱指数(RSI)、布林带(BB)、日内动量指数(IMI)和资金流量指数(MFI)四个经典技术指标,通过指标间的交叉验证来产生更可靠的交易信号。策略设计上特别适配4小时时间周期,并根据信号强度划分为常规信号和强信号两个等级。
-
-#### 策略原理 
-策略的核心逻辑是通过多指标的协同配合来确认交易信号。具体来说:
-1. 买入信号触发条件:
-   - RSI低于30,表明市场超卖
-   - 价格低于布林带下轨,显示价格偏离度较大
-   - IMI低于30,表明日内下跌动能减弱
-   - MFI低于20,表明资金流出压力减轻
-2. 卖出信号触发条件:
-   - RSI高于70,表明市场超买
-   - 价格高于布林带上轨,显示价格偏离度较大
-   - IMI高于70,表明日内上涨动能减弱
-   - MFI高于80,表明资金流入压力减轻
-3. 强信号条件在常规信号的基础上进一步收紧阈值要求
-
-#### 策略优势
-1. 多重技术指标交叉验证,显著提高信号可靠性
-2. 区分常规信号和强信号,便于灵活调整仓位
-3. 策略逻辑清晰简单,便于理解和维护
-4. 指标参数可调,适应性强
-5. 集成回测功能,便于策略优化
-
-#### 策略风险
-1. 多指标协同可能导致信号滞后
-   解决方案:适当放宽触发条件,或引入趋势预判指标
-2. 固定阈值在不同市场环境下可能不适用
-   解决方案:引入自适应阈值机制
-3. 4小时周期可能错过短期机会
-   解决方案:增加多时间周期分析
-
-#### 策略优化方向
-1. 引入自适应阈值机制
-   通过计算指标的历史分位数来动态调整信号阈值,提高策略适应性
-2. 增加趋势强度过滤
-   引入ADX等趋势强度指标,过滤震荡市场中的虚假信号
-3. 优化仓位管理
-   根据信号强度和市场波动率动态调整持仓比例
-4. 加入止损止盈机制
-   设置基于ATR的动态止损止盈位
-
-#### 总结
-该策略通过多个经典技术指标的协同分析,构建了一个相对可靠的交易信号生成系统。策略设计注重实用性和可维护性,同时预留了充分的优化空间。通过合理的参数调整和优化方向的实施,策略有望在实际交易中取得稳定表现。 || 
+ 
 
 #### Overview
 This strategy is a trading signal generation system based on multiple technical indicator collaborative analysis. The strategy integrates four classic technical indicators: Relative Strength Index (RSI), Bollinger Bands (BB), Intraday Momentum Index (IMI), and Money Flow Index (MFI), utilizing cross-validation between indicators to generate more reliable trading signals. The strategy is specifically designed for 4-hour timeframes and classifies signals into regular and strong levels based on signal strength.
@@ -104,9 +57,7 @@ The core logic of the strategy is to confirm trading signals through the collabo
    Set dynamic stop-loss and take-profit levels based on ATR
 
 #### Summary
-This strategy constructs a relatively reliable trading signal generation system through the collaborative analysis of multiple classic technical indicators. The strategy design emphasizes practicality and maintainability while leaving ample room for optimization. Through reasonable parameter adjustment and implementation of optimization directions, the strategy shows promise for stable performance in actual trading.[/trans]
-
-
+This strategy constructs a relatively reliable trading signal generation system through the collaborative analysis of multiple classic technical indicators. The strategy design emphasizes practicality and maintainability while leaving ample room for optimization. Through reasonable parameter adjustment and implementation of optimization directions, the strategy shows promise for stable performance in actual trading.
 
 > Source (PineScript)
 

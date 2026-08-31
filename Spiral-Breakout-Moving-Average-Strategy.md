@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e517f5c73b76218da6.png)
- [trans]
-
-## 概述
-
-该策略综合应用了螺旋通道指标和差速率指标,当价格突破上轨线和均线时产生买入信号。同理,当价格突破下轨线和均线时,产生卖出信号。该策略通过螺旋通道来判断价格的趋势方向,并利用差速率指标来检测价格动能,在两个指标同时确认的基础上产生交易信号,从而取得较好的胜率。
-
-## 策略原理
-
-该策略主要基于两个指标:
-
-1. 螺旋通道(Spiral Channels):计算上下轨线,用来判断价格的趋势方向。当价格突破上轨时看涨,突破下轨时看跌。
-
-2. 差速率指标(ROC):检测价格是否在加速,用来判断价格动能。 ROC大于某个正值时表示价格在上涨加速,小于某个负值时表示价格在下跌加速。
-
-在螺旋通道和差速率指标同时发出多头信号时产生买入信号。也就是价格要同时突破上轨和显示出上涨加速的迹象。产生卖出信号的逻辑也是类似的。
-
-这样的组合可以提高信号的可靠性,避免在没有明确趋势的情况下盲目交易。
-
-## 策略优势
-
-1. 综合判断价格趋势和动能,信号较为可靠,胜率较高。
-
-2. 通过参数优化,可以调整策略的交易频率。如调整差速率指标的参数,从而控制开仓的敏感度。
-
-3. 采用停损来控制单笔亏损。参数可自定义设置。
-
-4. 重新入场机制可以追踪趋势,进一步提升盈利能力。
-
-## 策略风险
-
-1. 会漏掉部分交易机会,盈利能力受到一定限制。
-
-2. 突破型策略容易被套牢。当价格反转时,可能带来较大的亏损。
-
-3. 参数设置不当可能导致交易信号过于频繁或稀疏。
-
-4. 固定百分比的止损无法完全避免较大的单笔亏损的发生。
-
-## 策略优化方向
-
-1. 对差速率指标的参数进行测试,找到最佳参数组合。
-
-2. 测试不同的止损水平,平衡盈亏比和胜率。
-
-3. 添加其他指标过滤,如量能指标、震荡指标等,提高信号质量。 
-
-4. 测试不同的市场,寻找最匹配该策略的品种。
-
-5. 优化策略的仓位管理,不同市况下采用不同的仓位。
-
-## 总结
-
-该策略综合运用螺旋通道和差速率指标判断价格的趋势和动能,在确保交易信号质量的同时,通过重新入场以及参数优化来维持盈利的能力。风险控制以固定百分比的止损为主,可以做进一步优化。总的来说,该策略较完整,适合作为量化交易的基础框架。
-
-||
 
 ## Overview  
 
@@ -117,8 +62,6 @@ The combined signals help avoid trading against the trend and improve reliabilit
 ## Conclusion  
 
 The strategy combines Spiral Channel and ROC to assess trend direction and momentum. It aims at signal reliability while maintaining profitability through re-entry and parameter tuning. Risk is mainly controlled by fixed percentage stop loss. Overall it is a relatively complete framework worthy as a baseline quantitative trading strategy.
-
-[/trans]
 
 > Strategy Arguments
 

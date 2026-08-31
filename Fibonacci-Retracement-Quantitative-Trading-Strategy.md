@@ -56,10 +56,10 @@ This strategy identifies price reversal points based on Fibonacci theory, belong
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_1|50|斐波那契周期长度|
-|v_input_2|0.236|斐波那契水平1|
-|v_input_3|0.382|斐波那契水平2|
-|v_input_4|0.618|斐波那契水平3|
+|v_input_1|50|Fibonacci lookback length|
+|v_input_2|0.236|Fibonacci level 1|
+|v_input_3|0.382|Fibonacci level 2|
+|v_input_4|0.618|Fibonacci level 3|
 
 
 > Source (PineScript)

@@ -10,65 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e5eb78c0ae5f304dd2.png)
- [trans]
-
-## 概述
-
-本策略采用布林带指标判断价格趋势方向,结合快慢移动平均线进行入场。当价格突破布林带中轨时且快速移动平均线上穿慢速移动平均线为做多信号。当价格跌破布林带中轨且快速移动平均线下穿慢速移动平均线为做空信号。止损方式为ATR止损。
-
-## 策略原理
-
-该策略主要由布林带指标和移动平均线指标组成。
-
-**布林带指标**由中轨、上轨和下轨组成。中轨为n日简单移动平均线。上轨和下轨分别为中轨上下k倍标准差。当价格接近上轨时代表着超买,当价格接近下轨时代表着超卖。中轨代表价格趋势方向。
-
-**移动平均线指标**采用快速移动平均线和慢速移动平均线。快速移动平均线参数为40,慢速移动平均线参数为120。当快速移动平均线上穿慢速移动平均线为金叉做多信号。当快速移动平均下穿慢速移动平均线为死叉做空信号。
-
-根据以上指标规则,本策略的具体交易信号如下:
-
-**做多信号**:收盘价突破布林带中轨且快速移动平均线上穿慢速移动平均线
-
-**做空信号**:收盘价跌破布林带中轨且快速移动平均线下穿慢速移动平均线  
-
-**止损方式**:ATR止损,止损点为当前价格减去4倍ATR值
-
-## 优势分析
-
-该策略结合布林带指标和移动平均线指标,能够有效判断价格趋势方向,避免因震荡行情而频繁开仓。
-
-布林带中轨能清晰地反映价格趋势,价格突破中轨时形成强烈的趋势信号。上下轨可有效地判断超买超卖情况,避免在震荡行情追高杀低。
-
-快慢移动平均线的金叉死叉也是常用的判断趋势的方式。结合布林带指标,能更准确判断入场时机。
-
-ATR止损方式使止损点随市场波动自适应调整,有效控制单笔损失。
-
-## 风险分析
-
-该策略最大的风险在于价格突破中轨后很快就会回撤,无法有效获利。这时就会造成亏损。解决方法是适当调整移动平均线参数,使指标参数更加匹配市场特征。
-
-另一个风险是在震荡行情中,布林带指标和移动平均线指标会发出错误信号。这时就要考虑跳过交易信号,等待更明确的趋势行情。或者适当缩小仓位规模。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 调整布林带指标参数,适应不同周期的市场特征
-
-2. 调整快慢移动平均线参数,使指标更加匹配具体交易品种 
-
-3. 增加其他辅助指标进行组合,提高策略的稳定性
-
-4. 优化仓位管理方式,在趋势行情中加大仓位,在震荡行情中缩小仓位
-
-5. 测试不同的止损方式,寻找更优解 
-
-## 总结
-
-本策略整体而言是一种较为典型的趋势跟踪策略。它结合布林带指标和移动平均线指标判断价格趋势和交易机会。策略信号生成较为明确,适合自动量化交易。但也存在一定风险,需要进行参数和规则优化以适应更广泛的市场环境。总的来说,该策略框架是可行的,有很大的改进空间。
-
-||
-
-## Overview  
+ ## Overview  
 
 This strategy uses Bollinger Bands to determine the price trend direction combined with fast and slow moving averages to enter positions. The buy signal is triggered when the price breaks through the Bollinger middle band and the fast moving average crosses over the slow moving average. The sell signal is triggered when the price breaks below the Bollinger middle band and the fast moving average crosses below the slow moving average. The stop loss method is ATR trailing stop loss.
 
@@ -121,8 +63,6 @@ The strategy can be optimized in the following aspects:
 ## Conclusion
 
 In general, this is a typical trend following strategy. It combines Bollinger Bands and Moving Averages to determine price trends and trading opportunities. The strategy signal is relatively clear, suitable for automated trading. But it also has some risks, parameters and rules need to be optimized to adapt to more extensive market environments. Overall, the strategy framework is feasible and has large room for improvement.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -8,41 +8,7 @@ Dynamic-RSI-Price-Divergence-Detection-and-Adaptive-Trading-Strategy-System
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/972eddb5a5337bb541.png)
-
-[trans]
-#### 概述
-本策略是一个基于RSI和价格背离的智能交易系统，通过动态监测RSI指标与价格走势之间的背离关系来捕捉市场反转信号。策略整合了分形理论(Fractals)作为辅助确认，并配备了自适应的止盈止损机制，实现了全自动化的交易执行。系统支持多品种、多周期应用，具有较强的灵活性和实用性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. RSI背离识别: 通过对比RSI指标和价格走势的高低点,识别潜在的背离形态。当价格创新高而RSI未创新高时形成顶背离卖出信号;当价格创新低而RSI未创新低时形成底背离买入信号。
-2. 分形确认: 使用分形理论(Fractals)对价格结构进行分析,通过检测局部高低点来确认背离的有效性,提高信号的可靠性。
-3. 参数自适应: 系统引入了灵敏度(Sensitivity)参数来动态调整分形判断区间,实现对不同市场环境的自适应。
-4. 风险控制: 集成了基于百分比的止损(Stop Loss)和止盈(Take Profit)机制,确保每笔交易的风险可控。
-
-#### 策略优势
-1. 信号可靠性高：通过RSI背离与分形理论的双重确认机制,大大提高了交易信号的准确性。
-2. 适应性强：策略可根据不同市场条件灵活调整参数,具有良好的环境适应能力。
-3. 风险管理完善：集成了动态止盈止损机制,能够有效控制每笔交易的风险敞口。
-4. 自动化程度高：从信号识别到交易执行全程自动化,减少了人为干预带来的情绪影响。
-5. 可扩展性好：策略框架支持多品种、多周期应用,便于进行组合投资。
-
-#### 策略风险
-1. 市场环境依赖：在趋势明显的市场中,背离信号的可靠性可能降低,需要增加趋势过滤机制。
-2. 参数敏感性：策略的关键参数如RSI阈值、分形判断区间等需要精心调试,参数设置不当可能影响策略表现。
-3. 信号滞后性：由于需要等待背离形态完全形成才能确认信号,可能存在一定的入场时机滞后。
-4. 市场噪音干扰：在波动剧烈的市场中,可能产生虚假的背离信号,需要增加过滤条件。
-
-#### 策略优化方向
-1. 增加趋势过滤：引入趋势判断指标,在强趋势市场中过滤反向信号,提高策略在不同市场环境下的适应性。
-2. 优化参数自适应：开发基于市场波动率的动态参数调整机制,提升策略对市场变化的响应能力。
-3. 完善风险控制：引入动态止损机制,根据市场波动情况自动调整止损位置,优化资金管理效果。
-4. 增强信号确认：结合成交量、波动率等市场微观结构指标,建立更完善的信号确认体系。
-
-#### 总结
-该策略通过RSI背离与分形理论的创新结合,构建了一个稳健的交易系统。策略的优势在于信号可靠性高、适应性强,同时具备完善的风险控制机制。通过持续优化和改进,策略有望在不同市场环境下都能保持稳定的表现。建议在实盘应用时,结合市场特点对参数进行充分测试和优化,并严格执行风险控制措施。 ||
 
 #### Overview
 This strategy is an intelligent trading system based on RSI and price divergence, which captures market reversal signals by dynamically monitoring the divergence relationship between RSI indicators and price trends. The strategy integrates Fractals theory as auxiliary confirmation and is equipped with an adaptive stop-loss and take-profit mechanism, achieving fully automated trading execution. The system supports multi-instrument, multi-timeframe applications with strong flexibility and practicality.
@@ -74,10 +40,7 @@ The core logic of the strategy is based on the following key elements:
 4. Enhance Signal Confirmation: Build a more comprehensive signal confirmation system by combining volume, volatility, and other market microstructure indicators.
 
 #### Summary
-The strategy constructs a robust trading system through innovative combination of RSI divergence and Fractals theory. Its advantages lie in high signal reliability, strong adaptability, and comprehensive risk control mechanisms. Through continuous optimization and improvement, the strategy is expected to maintain stable performance across different market environments. When applying to live trading, it is recommended to thoroughly test and optimize parameters according to market characteristics and strictly implement risk control measures.[/trans]
-
-
-
+The strategy constructs a robust trading system through innovative combination of RSI divergence and Fractals theory. Its advantages lie in high signal reliability, strong adaptability, and comprehensive risk control mechanisms. Through continuous optimization and improvement, the strategy is expected to maintain stable performance across different market environments. When applying to live trading, it is recommended to thoroughly test and optimize parameters according to market characteristics and strictly implement risk control measures.
 > Source (PineScript)
 
 ``` pinescript

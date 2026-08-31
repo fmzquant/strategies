@@ -9,9 +9,7 @@ zero
 
 > Strategy Description
 
-收益可以和策略放在一起，但还是独立出来更好。原因：1、交易策略更改中断时，收益不会被重置。2、收益计算本身会调用API函数，经常造成策略API网络错误，影响交易运行，独立出来减少这种可能性。3、可以自定义循环间隔。
-
-
+Profit tracking can be kept together with a strategy, but it is still better to separate it. Reasons: 1. When a trading strategy is interrupted or modified, the profit record will not be reset. 2. Profit calculation itself calls API functions, which often causes strategy API network errors and affects trading; separating it reduces this possibility. 3. The loop interval can be customized.
 
 > Source (javascript)
 

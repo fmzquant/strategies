@@ -10,56 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/874d90cb2e7e47c812.png)
- [trans]
-## 概述
-
-本策略结合了相对强弱指数(RSI)和布林带两个指标,实现了一个双重确认的开仓和平仓逻辑。当RSI和布林带同时显示超买或超卖信号时,该策略才会发出交易信号。这可以有效减少假信号,提高策略稳定性。
-
-## 策略原理
-
-1. RSI指标判断逻辑
-   - RSI上穿45时,视为超卖信号
-   - RSI下穿55时,视为超买信号
-2. 布林带判断逻辑  
-   - 价格上穿布林带下轨时,视为超卖
-   - 价格下穿布林带上轨时,视为超买
-3. 双重确认逻辑
-   - 只有当RSI和布林带同时显示超卖信号时,才会开多仓
-   - 只有当RSI和布林带同时显示超买信号时,才会开空仓
-
-以上逻辑实现了一个稳定的双重确认的开平仓策略。
-
-## 优势分析
-
-1. 双重确认机制,可以过滤掉大量噪音交易,避免不必要的交易次数,从而降低交易成本,提高盈利率。
-
-2. RSI指标可以有效识别趋势和反转,布林带指标可以有效判断支持阻力。两者结合,形成完美的配合。
-
-3. 参数设置灵活,可以根据不同品种和交易偏好进行调整,适应性强。
-
-## 风险分析
-
-1. 在震荡行情中,RSI和布林带指标可能同时发出错误信号,导致不必要的亏损。可以通过优化参数来降低误判概率。
-
-2. 双重确认机制会略微提高入场延迟,可能会错过极短线的交易机会。不适合对延迟非常敏感的策略。
-
-3. 该策略对参数非常敏感,不适当的参数设置可能大幅降低收益率。需要充分的回测和复盘,找到最佳参数组合。
-
-## 优化方向
-
-1. 可以测试不同周期的RSI指标,找到最匹配的周期参数,提高指标效果。
-
-2. 可以加入止损逻辑,设置合理的移动止损或者固定止损,控制单笔亏损风险。
-
-3. 可以测试布林带通道宽度参数,优化通道范围,提高布林带的识别效果。
-
-4. 可以测试不同的价格输入,例如收盘价,最高价,最低价等,寻找最佳的价格输入来提升策略稳定性。
-
-## 总结
-
-本策略成功结合RSI指标和布林带指标,实现双重确认逻辑,既保证了足够的交易机会,又能有效降低噪音交易。通过合理的参数优化和风险控制,该策略可以成为一个非常稳定可靠的趋势追踪和交易策略。
-
-||
 
 ## Overview
 
@@ -108,7 +58,6 @@ The above logic implements a stable dual confirmation strategy for entries and e
 ## Summary
 
 The strategy successfully combines the RSI and Bollinger Bands indicators to implement a dual confirmation logic, ensuring sufficient trading opportunities while effectively reducing noise trades. With proper parameter optimization and risk control, it can become a very stable and reliable trend tracking and trading strategy.
-[/trans]
 
 > Strategy Arguments
 

@@ -8,41 +8,7 @@ Dual-Exponential-Smoothing-Trend-Following-Trading-System
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/f9af59acffda983922.png)
-
-[trans]
-#### 概述
-本策略是一个创新的趋势跟踪交易系统，采用了双层指数平滑技术来识别市场趋势。该系统通过对价格数据进行特殊的指数平滑处理，生成两条趋势线，用于捕捉市场的短期和长期走势。系统集成了完整的风险管理模块，包括止盈止损设置，以及灵活的仓位管理功能。
-
-#### 策略原理
-策略的核心是其独特的双层指数平滑算法。首先，系统对收盘价进行加权处理，计算方法为(最高价+最低价+2*收盘价)/4，这样可以减少市场噪音的影响。然后通过自定义的指数平滑函数，分别计算9周期和30周期的平滑曲线。当短期曲线穿越长期曲线时，系统会产生交易信号。上穿生成做多信号，下穿生成做空信号。系统还包含了基于百分比的仓位管理系统，默认使用账户100%的资金进行交易。
-
-#### 策略优势
-1. 信号生成机制清晰，采用经典的趋势跟踪理念，易于理解和执行。
-2. 双层指数平滑技术能有效过滤市场噪音，提高信号质量。
-3. 集成了完整的风险管理体系，包括止盈止损和仓位管理。
-4. 系统可以自适应不同的市场环境，适用于多种交易品种。
-5. 提供了清晰的视觉指示器，方便交易者快速判断市场方向。
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假信号，导致连续止损。
-2. 默认使用100%资金进行交易，杠杆率过高可能带来较大风险。
-3. 固定点数的止盈止损设置可能不适合所有市场环境。
-4. 系统可能在剧烈波动的市场中出现滑点，影响执行效果。
-5. 历史回测结果不能保证未来表现。
-
-#### 策略优化方向
-1. 引入波动率指标(如ATR)来动态调整止盈止损点位。
-2. 增加趋势强度过滤器，在弱趋势环境下降低交易频率。
-3. 加入市场环境识别模块，在震荡市场中自动调整策略参数。
-4. 开发动态仓位管理系统，根据市场情况自动调整交易规模。
-5. 集成基本面分析模块，提高交易决策的准确性。
-
-#### 总结
-这是一个设计合理、逻辑清晰的趋势跟踪系统。通过双层指数平滑技术和完整的风险管理体系，该策略能够在趋势市场中取得良好表现。但是，使用者需要根据自己的风险承受能力调整仓位大小，并且建议在实盘交易前进行充分的回测验证。通过建议的优化方向，该策略还有进一步提升的空间。
-
-|| 
 
 #### Overview
 This strategy is an innovative trend following trading system that employs dual-layer exponential smoothing technology to identify market trends. The system processes price data through a special exponential smoothing technique to generate two trend lines for capturing short-term and long-term market movements. It integrates a complete risk management module, including profit-taking and stop-loss settings, along with flexible position management capabilities.
@@ -72,10 +38,7 @@ The core of the strategy lies in its unique dual-layer exponential smoothing alg
 5. Integrate fundamental analysis module to improve trading decision accuracy.
 
 #### Summary
-This is a well-designed trend following system with clear logic. Through dual-layer exponential smoothing technology and a complete risk management system, the strategy can perform well in trending markets. However, users need to adjust position sizes according to their risk tolerance and are advised to conduct thorough backtesting before live trading. Through the suggested optimization directions, this strategy has room for further improvement.[/trans]
-
-
-
+This is a well-designed trend following system with clear logic. Through dual-layer exponential smoothing technology and a complete risk management system, the strategy can perform well in trending markets. However, users need to adjust position sizes according to their risk tolerance and are advised to conduct thorough backtesting before live trading. Through the suggested optimization directions, this strategy has room for further improvement.
 > Source (PineScript)
 
 ``` pinescript

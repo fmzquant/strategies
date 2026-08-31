@@ -9,9 +9,9 @@ Hedge-on-two-contracts
 
 > Strategy Description
 
-可自动立即对冲两个合约，注意加适当的滑价，可能会不成交。仓位较多可分多次点击.
+Can automatically hedge two contracts immediately. Be sure to add an appropriate slippage value, otherwise the orders may not fill. If the position size is large, you can click multiple times.
 
-插件可以在交易终端一键启动，不收取费用，方便手动交易。详细介绍：https://www.fmz.com/digest-topic/5051
+This plugin can be launched with one click from the trading terminal at no charge, making manual trading more convenient. Detailed introduction: https://www.fmz.com/digest-topic/5051
 
 > Strategy Arguments
 
@@ -19,11 +19,11 @@ Hedge-on-two-contracts
 
 |Argument|Default|Description|
 |----|----|----|
-|Contract_A|this_week|交易合约A|Contract A|
-|Contract_B|quarter|交易合约B|Contract B|
-|Amount|10|开仓数量|Open Amount|
-|Slip|2|滑价|Slip Price|
-|Reverse|false|反向交易|Reverse Direction|
+|Contract_A|this_week|Contract A|
+|Contract_B|quarter|Contract B|
+|Amount|10|Open amount|
+|Slip|2|Slippage|
+|Reverse|false|Reverse direction|
 
 
 > Source (javascript)

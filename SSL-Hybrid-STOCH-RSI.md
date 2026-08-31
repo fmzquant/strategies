@@ -9,9 +9,9 @@ luqi0212
 
 > Strategy Description
 
-回测一年，K线周期15分钟
-5万u，开单50个以太，止盈止损10000%（即不设止盈止损）
-开单数量、止盈止损参数以及其他参数自己调整
+Backtested over one year on the 15-minute timeframe.
+Starting capital: 50,000 USDT, with 50 ETH per entry. Take-profit and stop-loss are both set to 10000% (effectively disabled).
+Adjust the order size, take-profit and stop-loss settings, and other parameters as needed.
 
 > Strategy Arguments
 
@@ -50,10 +50,9 @@ luqi0212
 |v_input_int_3|14|RSI Length|
 |v_input_int_4|14|Stochastic Length|
 |v_input_27_close|0|RSI Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
-|v_input_28|50|开仓数量|
-|v_input_29|10000|止盈|
-|v_input_30|10000|止损|
-
+|v_input_28|50|Order size|
+|v_input_29|10000|Take profit|
+|v_input_30|10000|Stop loss|
 
 > Source (PineScript)
 

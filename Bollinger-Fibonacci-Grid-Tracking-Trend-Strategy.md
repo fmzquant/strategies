@@ -69,12 +69,12 @@ The overall idea of this strategy is clear, combining Bollinger ATR channel and 
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_7|25|快线长度(fastlength)|
-|v_input_8|200|慢线长度(slowlength)|
-|v_input_bool_1|true|(?回测范围backtest)启用回测时间范围限定(backtest)|
-|v_input_1|timestamp(1 Jan 2015)|开始时间(Start)|
-|v_input_2|timestamp(1 Jan 2040)|结束时间(finish)|
-|v_input_int_1|20|(?入场位entry)布林长度,(boll length)|
+|v_input_7|25|Fast Length (fastlength)|
+|v_input_8|200|Slow Length (slowlength)|
+|v_input_bool_1|true|(?Backtest Range)Enable Backtest Time Range Filter|
+|v_input_1|timestamp(1 Jan 2015)|Start Time|
+|v_input_2|timestamp(1 Jan 2040)|End Time|
+|v_input_int_1|20|(?Entry)Bollinger Length (boll length)|
 |v_input_3|1.236|Fib 1|
 |v_input_4|2.382|Fib 2|
 |v_input_5|3.618|fib 3|

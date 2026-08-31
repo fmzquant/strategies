@@ -9,40 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/128712573105877918f.png)
-
-[trans]
-#### 概述
-该策略是一个基于技术分析的趋势跟踪系统,结合了均线系统、RSI动量指标和ATR波动率指标,通过多重信号验证来确认交易机会。策略使用多周期均线交叉判断市场趋势,同时结合RSI动量确认价格强度,最后利用ATR动态设置止损和获利点位,形成了一个完整的交易系统。
-
-#### 策略原理
-策略的核心逻辑包含三个关键部分:
-1. 趋势判断:使用100周期与200周期的指数移动平均线(EMA)交叉来确认市场趋势方向。当短期EMA位于长期EMA之上时,表明市场处于上升趋势。
-2. 入场信号:在趋势确认的基础上,策略寻找看涨吞没形态作为具体入场点,并使用RSI指标进行信号过滤。当RSI数值大于50时,表明市场具有足够的上升动能。
-3. 仓位管理:使用14周期ATR来度量市场波动性,并据此动态设置止损和获利水平。止损设置为1.1倍ATR,获利目标为2.0倍ATR,这种设置保证了盈亏比大于1。
-
-#### 策略优势
-1. 多重信号验证:通过结合趋势、价格形态和动量指标,大大降低了虚假信号的影响。
-2. 动态风险管理:基于ATR的止损和获利设置,能够根据市场波动性自适应调整,避免了固定点位带来的局限性。
-3. 趋势跟踪特性:通过均线系统判断趋势,有效避免了在横盘或下跌市场中的不必要交易。
-4. 完整的交易框架:包含了入场、出场和仓位管理的完整策略体系。
-
-#### 策略风险
-1. 趋势延迟:EMA作为滞后指标可能导致入场时机偏晚,在快速波动市场中可能错过最佳入场点。
-2. 盘整市场风险:在横盘市场中,频繁的均线交叉可能导致过度交易。
-3. 假突破风险:看涨吞没形态可能出现假突破,需要通过严格的风险控制来管理。
-4. 止损设置风险:过小的ATR乘数可能导致过于频繁的止损,而过大的乘数则可能承受过大的风险。
-
-#### 策略优化方向
-1. 引入成交量指标:可以通过添加成交量确认来提高信号的可靠性。
-2. 优化均线周期:可以根据不同市场特征调整均线周期,使其更好地适应市场节奏。
-3. 完善止损机制:可以考虑添加移动止损,在趋势延续时保护已有利润。
-4. 增加市场环境过滤:引入波动率范围判断,在过度波动的市场环境中降低交易频率。
-5. 优化RSI参数:可以根据历史数据回测,寻找最优的RSI阈值和计算周期。
-
-#### 总结
-该策略通过整合多个技术指标,构建了一个逻辑完整的趋势跟踪系统。策略的优势在于多重信号验证和动态风险管理,但同时也需要注意处理趋势延迟和假突破等风险。通过添加成交量确认、优化参数设置等方式,策略仍有较大的改进空间。整体而言,该策略适合在明显趋势市场中运行,对于追踪中长期趋势具有良好的应用价值。 || 
-
 #### Overview
 This strategy is a trend-following system based on technical analysis, combining moving averages, RSI momentum indicator, and ATR volatility indicator to validate trading opportunities through multiple signal confirmations. The strategy uses multi-period moving average crossovers to determine market trends, combines RSI momentum to confirm price strength, and finally uses ATR to dynamically set stop-loss and take-profit levels, forming a complete trading system.
 
@@ -72,9 +38,7 @@ The core logic of the strategy includes three key components:
 5. Optimize RSI Parameters: Can seek optimal RSI thresholds and calculation periods through historical data backtesting.
 
 #### Summary
-This strategy constructs a logically complete trend-following system by integrating multiple technical indicators. The strategy's advantages lie in multiple signal validation and dynamic risk management, but attention must also be paid to handling trend delays and false breakouts. Through adding volume confirmation and optimizing parameter settings, the strategy still has significant room for improvement. Overall, this strategy is suitable for operating in clearly trending markets and has good application value for tracking medium to long-term trends.[/trans]
-
-
+This strategy constructs a logically complete trend-following system by integrating multiple technical indicators. The strategy's advantages lie in multiple signal validation and dynamic risk management, but attention must also be paid to handling trend delays and false breakouts. Through adding volume confirmation and optimizing parameter settings, the strategy still has significant room for improvement. Overall, this strategy is suitable for operating in clearly trending markets and has good application value for tracking medium to long-term trends.
 
 > Source (PineScript)
 

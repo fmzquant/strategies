@@ -8,55 +8,8 @@ Trend-Following-Strategy-Based-on-Moving-Average-439648
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/1e4e353f0649aafd4d9.png)
- [trans]
-## 概述
-
-本策略运用快速移动平均线和慢速移动平均线构建交易信号,实现对趋势的识别和跟踪。当快速线上穿慢速线时产生买入信号;当快速线下穿慢速线时产生卖出信号。该策略适合追踪中长线趋势,可以有效过滤市场噪音。
-
-## 策略原理  
-
-本策略使用两条不同周期的Exponential Moving Average(指数移动平均线)作为交易决策的基础。快速移动平均线参数设置为30日,用来捕捉较短期的价格变动;慢速移动平均线参数设置为100日,用来判断价格中长线趋势的方向。
-
-当快速线从下方上穿慢速线时,表示市场步入上升趋势,产生买入信号;当快速线从上方下穿慢速线时,表示市场步入下跌趋势,产生卖出信号。   
-
-## 策略优势
-
-该策略具有以下优势:
-
-1. 基于均线构建,可以有效滤除短期市场噪音,顺势而为。
-2. 采用双均线策略,可以明确判断趋势方向。
-3. 实现参数优化,快慢均线周期可以自定义。
-4. 兼具追踪中长线趋势和短期调整的功能。
-5. 规则简单清晰,容易理解实现,适合初学者学习。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 当价格出现横盘整理时,容易产生错触发交易信号。可以通过优化均线参数来降低风险。
-2. 无法有效判断和处理价格剧烈波动的异常情况。可以设置止损来控制风险。 
-3. 均线系统本身具有滞后性,可能错过价格转折点。可以结合其他指标进行优化。
-
-## 优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化均线的周期参数,提高盈利效果。
-2. 增加其他条件判断指标,如交易量指标等,避免假突破。 
-3. 增加止损策略,控制单笔损失。
-4. 结合趋势指标,判断趋势强度,避免趋势反转。
-5. 增加参数优化功能,使策略更具通用性。
-
-
-## 总结  
-
-本策略基于双均线构建交易决策系统,通过快速均线和慢速均线的价格关系来判断市场趋势,信号生成简单清晰。该策略过滤了部分噪音,能够顺势而为,适合中长线趋势交易。但也存在一些缺陷,通过进行多指标优化和风险控制,可以将该策略优化得更加通用和高效。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy uses fast and slow moving averages to identify and follow trends. It generates buy signals when the fast line crosses over the slow line and sell signals when the fast line crosses below the slow line. This strategy is suitable for tracking medium- and long-term trends and filtering out market noise effectively.
 
@@ -94,13 +47,9 @@ Some optimization directions:
 4. Incorporate trend strength indicators to avoid trend reversal whipsaws.
 5. Introduce parameter optimization for wider adaptability.
 
-
 ## Conclusion  
 
 This strategy builds a trading system based on double EMA crossovers, using fast and slow EMA relationships to determine market trend. Signal generation is simple and clear. It filters some noise and goes along with trends, suitable for medium- to long-term trend trading. There is room for improving universality and efficiency via multi-indicator optimization and risk control.
-
-[/trans]
-
 > Strategy Arguments
 
 

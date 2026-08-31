@@ -11,81 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1ade8f3cd8d84daa39d.png)
 
-[trans]
-#### 概述
-该策略是一个基于双均线和随机指标(Stochastic)的趋势跟踪交易系统。它结合了均线系统判断市场趋势,同时使用随机指标捕捉超买超卖区域的交叉信号,并设定了动态的止损止盈水平来控制风险。这种方法既保证了交易信号的可靠性,又能有效管理每笔交易的风险收益比。
-
-#### 策略原理
-策略主要依靠以下几个核心要素进行交易:
-1. 使用50期和150期指数移动平均线(EMA)判断市场趋势方向
-2. 运用随机指标(14,3,3)识别超买超卖区域
-3. 在趋势方向上寻找随机指标的交叉信号
-4. 基于近期价格波动设置动态止损位
-5. 采用1:2的风险收益比设置止盈位
-
-买入条件需同时满足:
-- 收盘价高于50日均线和150日均线
-- 50日均线位于150日均线之上
-- 随机指标K值低于30且K线向上穿越D线
-
-卖出条件相反:
-- 收盘价低于50日均线和150日均线
-- 50日均线位于150日均线之下
-- 随机指标K值高于70且K线向下穿越D线
-
-#### 策略优势
-1. 多重确认机制提高可靠性
-- 通过均线系统确认大趋势
-- 使用随机指标过滤假信号
-- 信号需满足多个条件才会触发
-
-2. 完善的风险管理体系
-- 动态止损基于近期支撑阻力
-- 固定风险收益比优化期望收益
-- 趋势确认降低假突破风险
-
-3. 适应性强
-- 可应用于多个时间周期
-- 参数可根据市场特征调整
-- 适合波动性较大的市场
-
-#### 策略风险
-1. 震荡市场表现欠佳
-- 频繁突破均线导致假信号
-- 建议在明确趋势时使用
-- 可增加趋势过滤器改善
-
-2. 止损位设置风险
-- 过紧可能导致频繁止损
-- 过松可能承受较大亏损
-- 需要根据市场波动调整
-
-3. 滞后性风险
-- 均线系统具有滞后性
-- 可能错过趋势起始点
-- 入场时机选择需谨慎
-
-#### 策略优化方向
-1. 增加趋势强度过滤
-- 添加ADX指标衡量趋势强度
-- 设置最小趋势强度阈值
-- 避免在弱趋势中交易
-
-2. 优化随机指标参数
-- 根据市场特征调整参数
-- 考虑使用自适应参数
-- 增加其他技术指标确认
-
-3. 改进止损止盈机制
-- 考虑使用跟踪止损
-- 根据波动率动态调整
-- 优化风险收益比设置
-
-#### 总结
-这是一个结合了趋势跟踪和动量交易的完整策略系统。通过均线系统和随机指标的配合使用,既能确保交易方向符合主趋势,又能在合适的价格区域进行交易。同时,策略还包含了完善的风险管理机制,使用动态止损和固定风险收益比来控制风险。虽然存在一些固有的局限性,但通过建议的优化方向,策略的整体表现还可以进一步提升。在实际应用中,建议交易者根据具体市场特征和自身风险偏好对参数进行适当调整。
-
-|| 
-
 #### Overview
 This strategy is a trend-following trading system based on dual EMAs and the Stochastic indicator. It combines moving averages to determine market trends while using the Stochastic indicator to capture crossover signals in overbought/oversold areas, with dynamic stop-loss and take-profit levels for risk management. This approach ensures both signal reliability and effective risk-reward management for each trade.
 
@@ -156,9 +81,7 @@ Sell conditions are opposite:
 - Optimize risk-reward ratio settings
 
 #### Summary
-This is a complete strategy system combining trend following and momentum trading. Through the combination of EMA system and Stochastic indicator, it ensures trades align with the main trend while entering at appropriate price levels. Additionally, the strategy includes comprehensive risk management mechanisms, using dynamic stop-losses and fixed risk-reward ratios to control risk. While there are some inherent limitations, the strategy's overall performance can be further improved through the suggested optimizations. In practical application, traders are advised to adjust parameters according to specific market characteristics and their own risk preferences.[/trans]
-
-
+This is a complete strategy system combining trend following and momentum trading. Through the combination of EMA system and Stochastic indicator, it ensures trades align with the main trend while entering at appropriate price levels. Additionally, the strategy includes comprehensive risk management mechanisms, using dynamic stop-losses and fixed risk-reward ratios to control risk. While there are some inherent limitations, the strategy's overall performance can be further improved through the suggested optimizations. In practical application, traders are advised to adjust parameters according to specific market characteristics and their own risk preferences.
 
 > Source (PineScript)
 

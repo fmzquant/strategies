@@ -33,9 +33,9 @@ Combination-of-Double-MA-and-RSI
 
 |Argument|Default|Description|
 |----|----|----|
-|SLOSS|true|止损百分比|Stop Loss Percentage|
-|N1|50|均线1参数|MA1 parameter|
-|N2|300|均线2参数|MA2 parameter|
+|SLOSS|true|Stop Loss Percentage|
+|N1|50|MA1 parameter|
+|N2|300|MA2 parameter|
 
 
 > Source (MyLanguage)

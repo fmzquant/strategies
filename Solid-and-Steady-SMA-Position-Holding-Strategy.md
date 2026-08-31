@@ -8,54 +8,8 @@ Solid-and-Steady-SMA-Position-Holding-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/11576d054afd0402f77.png)
- [trans]
-
-## 概述
-
-该策略是一个基于SMA均线的简单持仓策略。当短期SMA线上穿长期SMA线的时候,做多开仓;当短期SMA线下穿长期SMA线的时候,平仓。
-
-## 策略原理
-
-该策略使用两个SMA均线,一个短期的20日线,一个长期的50日线。短期线能更快捕捉价格变化趋势,长期线过滤掉短期噪音。当短期快速上行超过长期均线的时候,说明行情可能开始长期上涨,这时做多开仓。当短期下跌到长期均线下方,说明上涨趋势可能结束,这时平仓。
-
-总的来说,该策略利用了SMA均线的曲线特征,在两个时间维度上判断价格运动趋势,采用较为稳定的持仓方式获利。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 操作简单,容易理解,门槛低
-2. 利用SMA均线的优势,相对稳定
-3. 持仓时间长,不容易受到短期市场噪音的影响
-4. 可配置的参数较少,容易优化找到最佳参数组合
-
-## 风险分析
-
-该策略也存在以下风险:
-
-1. 当行情长期震荡时,止损可能较多
-2. SMA均线具有滞后性,不能及时捕捉价格变化
-3. 无法有效利用短期冲高回落行情获利
-4. 无法控制单笔亏损大小
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 加入MACD指标判断底部反弹的时机,以求在震荡行情中减少亏损
-2. 测试不同参数的SMA均线组合,寻找最优参数
-3. 加入境内指标判断趋势背离,提高开仓准确性
-4. 增加止盈止损策略,控制单笔盈亏
-
-## 总结
-
-总的来说,该SMA均线持仓策略稳定、简单,容易操作,适合初学者实盘。随着量化交易的不断发展,该策略可以引入更多指标和技术手段进行优化,从而获得更好的效果。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy is a simple position holding strategy based on SMA lines. It goes long when the short term SMA line crosses over the long term SMA line, and closes position when the short term SMA line crosses below the long term SMA line.
 
@@ -94,10 +48,7 @@ This strategy can be further optimized in the following aspects:
 
 ## Summary   
 
-In summary, this SMA position holding strategy is stable, simple and easy to operate, suitable for beginner live trading. As algo trading keeps evolving, this strategy can incorporate more indicators and techniques for better performance.  
-
-[/trans]
-
+In summary, this SMA position holding strategy is stable, simple and easy to operate, suitable for beginner live trading. As algo trading keeps evolving, this strategy can incorporate more indicators and techniques for better performance.
 > Strategy Arguments
 
 

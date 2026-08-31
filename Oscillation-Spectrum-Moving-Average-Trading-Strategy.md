@@ -10,50 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/114501057fe941e769c.png)
- [trans]
-### 概述
-
-该策略基于广谱移动平均线,通过快慢移动平均线的金叉死叉形成交易信号。广谱移动平均线覆盖从简单移动平均线到震荡移动平均线等多种类型,可以通过参数调整自由组合,具有较强的适应性。
-
-### 策略原理
-
-该策略使用变体移动平均线函数,可以生成12种不同类型的移动平均线。基本原理是计算快线(Close MA)和慢线(Open MA)两条移动平均线,当快线上穿慢线时生成买入信号,快线下穿慢线时生成卖出信号。同时设置止损止盈参数,可以实现自动止损止盈。
-
-关键逻辑是通过variant函数生成两条移动平均线:**```closeSeries = variant(basisType, close, basisLen, offsetSigma, offsetALMA)```**和**```openSeries = variant(basisType, open, basisLen, offsetSigma, offsetALMA)```**。variant函数封装了12种不同类型的平均线计算方法,通过basisType参数可以自由选择。这样就实现了广谱移动平均线的组合。
-
-基本交易信号生成逻辑是:**```longCond = xlong```** 和 **```shortCond = xshort```**,也就是快线上穿慢线就做多,快线下穿慢线就做空。
-
-策略入场规则是当longCond或shortCond条件满足时分别做多做空。止损止盈规则是当价格移动达到预设的止损止盈点数时止损或止盈。
-
-### 优势分析
-
-该策略最大的优势在于可以自由组合多种不同类型的移动平均线。不同市场不同周期,哪种移动平均线最适合是不定的,该策略提供了强大的自定义能力。用户可以通过反复测试确定最佳参数组合,从而针对特定市场制定最优方案。
-
-另一个优势是策略逻辑简单清晰,但是却提供了强大的功能。用户很容易理解和使用该策略。同时,丰富的输入参数也为高级用户提供了充分的优化空间。
-
-### 风险分析
-
-该策略最大的风险在于广谱移动平均线本身就存在一定程度的滞后。当出现异常价格突破时,可能造成较大的亏损。此外,如果参数选择不当,也可能导致交易频率过高或产生多余信号。
-
-为降低风险,建议结合其他指标判断信号的有效性,避免出现假突破。此外,参数优化和回测也十分必要,需要反复测试找到最佳参数组合。在实盘中应适当缩减仓位规模,控制单笔亏损。
-
-### 优化方向
-
-该策略有以下几个主要的优化方向:
-
-1. 测试更多类型的移动平均线组合,寻找最佳组合
-2. 增加过滤器,避免假信号,例如结合交易量指标等
-3. 优化移动平均线的长度参数,寻找最佳参数
-4. 优化仓位规模和止损止盈参数
-5. 尝试不同的品种和周期
-
-通过上述几个方向的优化,可以持续提升策略的实盘表现。
-
-### 总结
-
-该交易策略基于广谱移动平均线实现了高度灵活性。它提供了强大的自定义功能,用户可以自由选择和组合不同类型的平均线。策略逻辑简单清晰,使用方便,同时也提供了丰富的优化空间。通过参数优化和风险控制,该策略可以适应不同市场环境,并获得稳定收益。它是一种高效灵活的趋势跟踪策略。
-
-||
+ 
 
 ### Overview
 
@@ -97,9 +54,6 @@ By optimizing in these directions above, the live trading performance of the str
 ### Summary  
 
 This trading strategy implements high flexibility based on the spectrum moving average. It provides powerful customizability for users to freely choose and combine different types of moving averages. The strategy logic is simple and clear, easy to use, and also offers abundant optimization space. Through parameter optimization and risk control, this strategy can adapt to different market environments and obtain steady returns. It is an efficient and flexible trend tracking strategy.
-
-[/trans]
-
 
 > Strategy Arguments
 

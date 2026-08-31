@@ -8,84 +8,6 @@ PB-SAR-Backtest-Strategy-with-Elastic-Stop-Loss
 ChaoZhang
 
 > Strategy Description
-
-[trans]
-
-
-## 概述
-
-该策略基于弹性停损指标,设定买入和卖出信号,进行长仓和短仓操作。当指标出现买入信号时,做多;当出现卖出信号时,做空。策略还结合了追踪止损机制,可有效控制风险。
-
-## 原理
-
-该策略主要利用弹性停损指标识别趋势的转折点,做反转操作。指标内部运用真实范围指标来识别极值价格,当价格超过极值时视为异常突破,判断趋势反转的可能。具体来说,指标内部维护两个变量:极值价格(EP)和触发价格(TP)。EP代表当前趋势下的最高价或最低价。TP则由EP计算得出。
-
-在上涨趋势中,当价格高于EP时,判定为异常突破,此时EP更新为最高价,TP为最低价。当价格低于TP时,判定趋势反转,产生卖出信号。在下跌趋势中,原理相似。
-
-该策略结合追踪止损机制,当打开仓位后,会实时追踪最佳止损价格,在保证盈利的同时控制风险。具体来说,在做多后,止损线会跟踪收盘低点;做空后,止损线跟踪收盘高点。
-
-## 优势
-
-该策略具有以下优势:
-
-1. 利用指标识别趋势反转点,不易被套牢。
-
-2. 追踪止损机制,可以锁定盈利,避免亏损扩大。
-
-3. 指标参数简单,容易实现。
-
-4. 可配置买卖信号提示,操作方便。
-
-5. 可灵活配置回测周期,全面评估策略效果。
-
-## 风险
-
-该策略也存在一些风险:
-
-1. 指标存在滞后,可能漏掉趋势反转的最佳点位。
-
-2. 止损过于激进,可能被价格短期震荡止损。
-
-3. 回测周期选择不当,无法全面评估策略效果。
-
-4. 需关注交易成本对盈利的影响。
-
-对应风险,可以从以下方面进行优化:
-
-1. 调整指标参数,缩小滞后。
-
-2. 优化止损算法,避免被套。
-
-3. 选择合适的回测周期,确保可靠性。 
-
-4. 优化仓位管理,降低交易成本。
-
-## 优化方向
-
-该策略可以从以下方面进行进一步优化:
-
-1. 结合趋势指标,避免反转交易被套。可以加入MA等指标判断大趋势。
-
-2. 优化仓位管理算法,例如固定比例仓位、动态仓位等。
-
-3. 加入交易量过滤,避免缺口造成的误交易。
-
-4. 进行参数优化,找到最佳参数组合。
-
-5. 加入止盈策略,在趋势运行中及时止盈。
-
-6. 优化止损策略,使止损更加平滑。可以试验 Chandelier Exit 等止损算法。
-
-7. 对交易品种、时间段等进行优化,提高策略适应性。
-
-8. 加入机器学习算法,使策略更具自适应性。
-
-## 总结
-
-该策略整体来说较为简单可靠,利用弹性停损指标识别反转点位,并配以追踪止损机制控制风险,可作为短线反转策略使用。但仍需注意指标滞后、止损过于激进等问题。通过进一步优化,可望获得更佳的策略效果。
-
-[/trans]
-
 ## Overview
 
 This strategy is based on the Parabolic SAR indicator to generate buy and sell signals for long and short positions. It also incorporates a trailing stop loss mechanism to effectively control risks.
@@ -157,7 +79,6 @@ Some ways to further optimize the strategy:
 ## Summary
 
 In summary, this is a simple and robust strategy using the Parabolic SAR to identify reversals and trailing stop loss to control risk. It can work as a short-term mean-reversion strategy. But indicator lag and oversensitive stops need to be addressed. Further optimizations can lead to improved performance.
-
 > Strategy Arguments
 
 

@@ -10,55 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12950a4fa4ae78fffb1.png)
- [trans]
-## 概述
-
-该策略是基于平滑移动平均线与Stochastic指标的组合,目标是在趋势中捕获更多机会。它主要使用两条不同周期的指数移动平均线形成策略信号,结合Stochastic指标中的K线与D线的交叉作为入场时机选择,以期望在趋势中获得更高的盈利率。
-
-## 策略原理  
-
-该策略使用12周期与26周期两条平滑移动平均线。当快线从下方上穿慢线时,做多;当快线从上方下穿慢线时,做空。为过滤假信号,它要求快线与慢线同向,快线在慢线之上才可做多,快线在慢线之下才可做空。
-
-Stochastic指标中的K线与D线交叉作为入场时机选择。K线从超买线下方向上交叉D线时,做多;K线从超卖区下方向下交叉D线时,做空。
-
-平滑移动平均线确定趋势方向,Stochastic指标过滤 Noise 并选择入场时机。它们的结合可以在趋势中获得更多获利机会。
-
-## 策略优势
-
-- 平滑移动平均策略本身就具有顺势而为特点,容易跟踪趋势
-- 利用Stochastic指标过滤 Noise ,提高获利概率  
-- 快慢均线组合,当快线回调至慢线附近再入场,可获得更优博弈机会  
-- Stochastic指标中的K线与D线交叉组合使用,可进一步选择更佳入场点位
-
-因此,该策略可顺势而为,有选择性地把握机会,从而获得更高的获利率。
-
-## 风险分析  
-
-- 短期内离场风险较大。当快线回调至慢线时,可能会被否定信号或被套住
-- 因其顺势而为的特性,行情剧烈反转时,无法快速适应,可能导致较大亏损
-
-为降低这些风险,我们可以设置止损,或采用更宽松的移动平均线参数组合。
-
-## 优化方向  
-
-该策略可从以下几个方面进行进一步优化:
-
-1. 测试不同移动平均线参数的组合,找到更佳的参数  
-2. 测试不同Stochastic参数的组合  
-3. 增加止损策略 
-4. 增加基于波动率的动态止损
-5. 测试不同品种不同周期参数的组合优化
-6. 测试机器学习算法优化参数  
-
-通过测试不同的参数组合,可找到更强的参数;同时设立止损策略可有效降低风险,提高策略稳定性。
-
-## 总结  
-
-该策略整合了平滑移动平均与Stochastic指标的优势,可顺势跟踪趋势,并选择更佳时机入场。它容易操作,风险可控,具有很大的实用价值。通过持续的测试与优化,其表现可得到进一步提升。它可为量化交易者提供一个高效稳定的趋势跟踪策略模型。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy combines Smooth Moving Average with the Stochastic indicator to capture more opportunities in trends. It mainly uses two exponential moving averages with different periods to generate trading signals, together with the crossover of K line and D line in Stochastic indicator for entry timing selection, in order to obtain higher profitability in trends.   
 
@@ -102,8 +54,6 @@ By testing different parameter combinations, better parameters could be found. A
 ## Conclusion   
 
 The strategy integrates the strengths of Smooth Moving Average and Stochastic for trend-following, while selecting better entry timing. It is easy to operate, with controllable risk and great practical value. Its performance could be further improved through continuous testing and optimization. It provides quant traders an efficient and stable trend tracking model.
-
-[/trans]
 
 > Strategy Arguments
 

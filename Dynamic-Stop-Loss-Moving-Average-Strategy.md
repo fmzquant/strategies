@@ -9,113 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/159861111a958a14eab.png)
- [trans]
-## 概述
-
-该策略采用动态 trailing stop 的思路,根据ATR和价格极值来计算长短仓止损线。结合Chandelier Exit的思想,根据止损线朝向判断长短仓方向。当止损线向上突破时判断为看涨,做多;当止损线向下突破时判断为看跌,做空。
-
-该策略同时具有止损和入场信号判断的双重功能。
-
-## 策略原理  
-
-该策略主要由以下几部分组成:
-
-1. 基于ATR计算长短仓止损线
-
-    基于用户设定的ATR周期length和倍数mult,实时计算ATR。然后根据ATR与价格极值计算长短仓止损线:
-        
-        longStop = 最高价 - ATR
-        shortStop = 最低价 + ATR
-
-2. 利用突破判断交易方向
-
-    比较前一根K线的止损线和当前K线的止损线。如果当前K线的止损线发生突破,则发出交易信号:
-
-        长仓止损线上方突破,做多
-        短仓止损线下方突破,做空
-
-3. 根据风险回报比设置止损和止盈
-
-    根据用户设定的风险回报比riskRewardRatio,从ATR计算出止损距离和止盈距离。
-    并在开仓时设置止损单和止盈单。
-
-## 优势分析
-
-该策略具有以下优势:  
-
-1. 动态追踪止损,及时止损
-
-    该策略采用动态追踪止损线,能够及时止损和控制下跌风险。
-
-2. 同时具备止损和入场判断功能
-
-    该策略止损线同时作为入场判断条件,简化了策略逻辑。
-
-3. 可设定风险回报比
-
-    根据设定的风险回报比,适当追求更大利润。
-
-4. 容易理解、扩展
-
-    该策略结构简单,容易理解和优化扩展。
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 双边风险
-
-    该策略是双边交易策略,同时承担做多和做空的风险。
-
-2. ATR参数依赖
-
-    ATR参数设置会直接影响止损线和交易频率,设置不当可能导致止损过于宽松或交易频率过高。
-
-3. 趋势市场适应性
-
-    该策略更适合盘整均线后突破的情况,不适合趋势性太强的场景。
-
-针对以上风险,可以从以下方面进行优化:
-
-1. 结合趋势指标
-
-    结合MA等趋势指标,判断市场趋势,避免逆势交易。
-
-2. 优化参数组合
-
-    优化ATR参数以及风险回报比参数,使止损和止盈更合理。
-
-3. 增加过滤条件 
-
-    增加交易量或波动性指标的过滤条件,确保交易质量。
-
-## 优化方向  
-
-该策略还有进一步优化的空间:
-
-1. 结合机器学习 
-
-    利用机器学习模型预测价格趋势判断,提高入场准确性。
-
-2. 利用 Options构建无风险组合
-
-    利用期权对冲品种的价格波动率,构建无风险套利组合。
-
-3. 多品种跨市场套利
-
-    在不同市场、不同品种之间进行统计套利,获得稳定的Alpha。
-
-4. 算法交易
-
-    通过算法交易引擎进行高效的策略回测和实盘交易。
-
-## 总结
-
-本文深入分析了一种基于动态追踪止损的量化交易策略。该策略同时具有止损管理和交易信号判断功能,能够有效控制风险。我们还分析了策略的优势、可能存在的风险以及后续的优化思路。该策略是一个非常实用的交易策略,值得进一步研究与应用。
-
-||
-
 ## Overview  
 
 This strategy adopts the idea of dynamic trailing stop based on ATR and price extremes to calculate long and short stop-loss lines. Combined with the Chandelier Exit idea, it judges the long/short direction based on the stop-loss line breakout. When the stop-loss line breaks out upwards, it is judged as bullish and long entry. When the stop-loss line breaks out downwards, it is judged as bearish and short entry.  
@@ -217,9 +110,7 @@ There are still rooms to optimize the strategy further:
 
 ## Conclusion  
 
-This article thoroughly analyzes a quantitative trading strategy based on dynamic trailing stop loss. The strategy simultaneously has stop loss management functionality and trading signal determination, which effectively controls risks. We also discussed the advantages, potential risks and future optimizations of the strategy. It is a very practical trading strategy worth further research and application.  
-
-[/trans]
+This article thoroughly analyzes a quantitative trading strategy based on dynamic trailing stop loss. The strategy simultaneously has stop loss management functionality and trading signal determination, which effectively controls risks. We also discussed the advantages, potential risks and future optimizations of the strategy. It is a very practical trading strategy worth further research and application.
 
 > Strategy Arguments
 

@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e095cae0702db02423.png)
 
-[trans]
-#### 概述
-该策略是一个结合了移动平均线和Outside Bar形态的趋势跟踪系统。它使用了5周期和9周期的指数移动平均线(EMA)作为主要趋势指标,同时结合Outside Bar形态作为信号确认。策略还包含了基于Outside Bar高度的动态止损止盈设置,以及在止损触发后的仓位反转机制。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用5周期和9周期EMA的交叉来确定基本趋势方向
-2. 通过Outside Bar形态(当前K线的最高价高于前一根K线的最高价,最低价低于前一根K线的最低价)来确认市场波动性
-3. 在EMA交叉信号和Outside Bar形态同时出现时进场交易
-4. 使用Outside Bar的高度来动态设置止损和止盈水平,止盈设为Outside Bar高度的50%,止损设为100%
-5. 当止损被触发时,自动执行反向仓位建立,以捕捉可能的趋势反转
-
-#### 策略优势
-1. 双重确认机制提高了交易的准确性,避免了单一指标可能带来的虚假信号
-2. 动态的止损止盈设置更好地适应市场波动性,在不同市场环境下都能保持合理的风险管理
-3. 仓位反转机制能够快速适应市场趋势的变化,提高资金利用效率
-4. 策略具有清晰的进出场规则,易于执行和回测
-
-#### 策略风险
-1. Outside Bar形态可能在波动较小的市场中较少出现,影响交易频率
-2. 在快速波动的市场中,止损位置可能过宽,增加单次交易的风险
-3. 仓位反转机制在震荡市场中可能导致连续止损
-4. EMA参数固定可能在不同市场环境下表现不一致
-
-#### 策略优化方向
-1. 可以引入波动率指标来动态调整止损止盈比例,使风险管理更加灵活
-2. 考虑添加趋势强度过滤器,在弱趋势环境下避免交易
-3. 优化仓位反转的触发条件,可以结合市场波动性指标来决定是否执行反转
-4. 研究不同时间周期的EMA参数优化方案,提高系统适应性
-
-#### 总结
-这是一个结合了技术分析经典理论和现代量化交易理念的策略系统。通过移动平均线和Outside Bar的配合使用,既保证了趋势跟踪的及时性,又提高了信号的可靠性。动态止损止盈和仓位反转机制的设计体现了对风险管理的重视,使策略具有良好的实用性。虽然仍有优化空间,但整体框架已经具备了实盘操作的基本条件。 || 
-
 #### Overview
 This strategy is a trend following system that combines moving averages with Outside Bar pattern recognition. It utilizes 5-period and 9-period Exponential Moving Averages (EMA) as primary trend indicators, along with Outside Bar pattern for signal confirmation. The strategy includes dynamic stop-loss and take-profit settings based on Outside Bar height, as well as a position reversal mechanism triggered by stop-loss hits.
 
@@ -74,7 +41,7 @@ The core logic is based on the following key elements:
 4. Research EMA parameter optimization across different timeframes to improve system adaptability
 
 #### Summary
-This is a strategy system that combines classical technical analysis with modern quantitative trading concepts. The combination of moving averages and Outside Bar patterns ensures both timely trend following and reliable signal generation. The design of dynamic stop-loss/take-profit and position reversal mechanisms demonstrates a strong focus on risk management, making the strategy practically viable. While there is room for optimization, the overall framework already meets basic conditions for live trading.[/trans]
+This is a strategy system that combines classical technical analysis with modern quantitative trading concepts. The combination of moving averages and Outside Bar patterns ensures both timely trend following and reliable signal generation. The design of dynamic stop-loss/take-profit and position reversal mechanisms demonstrates a strong focus on risk management, making the strategy practically viable. While there is room for optimization, the overall framework already meets basic conditions for live trading.
 
 
 

@@ -11,49 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1688c01678eecb87eb4.png)
 
-[trans]
-#### 概述
-该策略是一个结合了K近邻(KNN)机器学习算法、烛台形态识别和成交量分析的综合交易系统。策略通过多维度分析方法,包括移动平均通道、成交量阈值验证和概率统计,对市场形成立体化分析框架,从而捕捉潜在的交易机会。
-
-#### 策略原理
-策略的核心逻辑建立在以下几个关键要素之上:
-1. 使用移动平均(SMA)和标准差构建价格通道,用于识别超买超卖区域
-2. 通过程序化定义的条件识别九种经典烛台形态,包括锤子线、流星线、吞没形态等
-3. 引入KNN算法对历史价格走势进行学习,预测未来可能的价格走向
-4. 使用成交量作为信号确认指标,要求信号触发时成交量必须高于设定阈值
-5. 计算上涨和下跌的概率分布,将其作为信号过滤条件之一
-
-#### 策略优势
-1. 多层次的信号确认机制显著提高了交易的可靠性
-2. KNN算法的引入为传统技术分析提供了机器学习的视角
-3. 成交量验证机制有效避免了虚假突破
-4. 支持和阻力线的动态绘制有助于把握重要价位
-5. 完善的警报系统确保不会错过重要交易机会
-6. 策略参数可调节性强,适应不同市场环境
-
-#### 策略风险
-1. KNN算法在剧烈波动市场中可能产生滞后
-2. 过多的信号过滤条件可能导致错过部分交易机会
-3. 固定的成交量阈值在不同时期可能需要动态调整
-4. 在横盘整理阶段可能产生过多虚假信号
-建议采用:
-- 动态调整算法参数
-- 引入市场环境识别机制
-- 设置最大亏损限制
-- 建立仓位管理系统
-
-#### 策略优化方向
-1. 引入自适应参数调节机制,使策略能够根据市场状态自动调整参数
-2. 整合深度学习算法,提升预测准确率
-3. 加入更多的市场微观结构指标
-4. 优化成交量阈值的动态计算方法
-5. 建立更完善的风险控制体系
-
-#### 总结
-该策略通过将传统技术分析与现代机器学习方法相结合,构建了一个稳健的交易系统。策略的多维度分析框架和严格的信号确认机制,为交易决策提供了可靠的依据。通过持续优化和风险控制,该策略有望在各种市场环境下保持稳定的表现。
-
-|| 
-
 #### Overview
 This strategy is a comprehensive trading system that combines K-Nearest Neighbors (KNN) machine learning algorithm, candlestick pattern recognition, and volume analysis. Through multi-dimensional analysis methods including moving average channels, volume threshold validation, and probability statistics, the strategy forms a three-dimensional analysis framework to capture potential trading opportunities.
 
@@ -92,9 +49,7 @@ Recommended solutions:
 5. Establish a more comprehensive risk control system
 
 #### Summary
-This strategy constructs a robust trading system by combining traditional technical analysis with modern machine learning methods. The strategy's multi-dimensional analysis framework and strict signal confirmation mechanism provide reliable basis for trading decisions. Through continuous optimization and risk control, the strategy is expected to maintain stable performance under various market conditions.[/trans]
-
-
+This strategy constructs a robust trading system by combining traditional technical analysis with modern machine learning methods. The strategy's multi-dimensional analysis framework and strict signal confirmation mechanism provide reliable basis for trading decisions. Through continuous optimization and risk control, the strategy is expected to maintain stable performance under various market conditions.
 
 > Source (PineScript)
 

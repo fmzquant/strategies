@@ -10,78 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1e6c5a091157ea6bff9.png)
- [trans]
-## 概述
-
-双MACD量化交易策略是一种利用双时间框架MACD指标实现的量化交易策略。该策略在周线MACD指标形成金叉时开仓做多,在日线MACD指标形成死叉时平仓。当仓位为空时,若日线MACD指标再次形成金叉,则可以重新开仓做多。
-
-## 策略原理
-
-双MACD量化交易策略利用周MACD指标和日MACD指标的组合来判断入场和出场信号。
-
-首先,当周MACD指标的MACD线上穿信号线时产生买入信号,此时开仓做多;然后当日MACD指标的MACD线下穿信号线时产生卖出信号,此时平仓。
-
-当仓位为空时,若日MACD指标的MACD线再次上穿信号线,则重新开仓做多。也就是说,日MACD指标的金叉成为再次开仓的条件。
-
-需要注意的是,日MACD指标的死叉才会平仓,但必须在周MACD指标MACD线高于信号线的“交易窗口”内才允许再次开仓。
-
-## 策略优势
-
-双MACD量化交易策略结合了双时间框架分析,可以有效过滤假信号,提高信号的质量。具体来说,主要有以下几个优势:
-
-1. 周时间框架判断主要趋势方向,有助于避免逆势交易。
-
-2. 日时间框架判断入场和出场时机,可以及时捕捉短期交易机会。
-
-3. “交易窗口”机制可以避免因短期调整而过于频繁开仓平仓。
-
-4. MACD指标参数可调,可以根据不同品种和市场环境进行优化。
-
-5. 整合止盈、止损、移动止损功能,可以有效控制风险。
-
-## 策略风险
-
-双MACD量化交易策略也存在一定的风险,主要包括:
-
-1. MACD指标容易产生假信号和频繁交叉,需要组合其他指标进行确认。
-
-2. 周月时间框架判断的主要趋势可能发生转折,需要及时止损。 
-
-3.  Parameters需要根据不同品种和行情环境不断优化和调整。
-
-4.  不能过度依赖回测结果,实盘可能与回测有差异。
-
-对应解决方法:
-
-1. 与其他指标组合使用,构建逻辑优化的策略体系。
-
-2. 设置合理的止损幅度,避免超过可承受的最大损失。
-
-3. 不断优化参数,寻找最佳参数组合。
-
-4. 从最小资金开始实盘,验证策略稳定性。
-
-## 优化方向
-
-双MACD量化交易策略还有进一步优化的空间:
-
-1. 可以引入布林线、KDJ等其他指标,构建多指标组合策略,提高信号质量。
-
-2. 可以结合交易量指标,避免价格上涨但成交量不足的假突破。  
-
-3. 可以利用机器学习方法自动优化参数,实现参数的动态调整。
-
-4. 可以针对策略作进一步风险调整,如加入盈亏比等高级止损方法。
-
-5. 策略拟合性检验与优化调整,避免过拟合问题。
-
-## 总结
-
-双MACD量化交易策略整合双时间框架分析判断主副趋势,以发挥各自指标优势。策略优化空间还很大,有望通过引入其他指标、利用机器学习进行参数优化等方法进一步提升策略效果。实盘验证是必不可少的一步,也是进一步完善策略的重要依据。
-
-||
-
-## Overview
+ ## Overview
 
 The Dual MACD quantitative trading strategy is a quantitative trading strategy implemented using dual timeframe MACD indicators. It goes long when the weekly MACD indicator forms a golden cross and closes the position when the daily MACD indicator forms a death cross. When the position is empty, if the daily MACD indicator forms another golden cross, a new long position can be opened.
 
@@ -148,8 +77,6 @@ The Dual MACD quantitative trading strategy has room for further optimization:
 ## Conclusion  
 
 The Dual MACD quantitative trading strategy integrates dual timeframe analysis to determine main and subordinate trends and gives full play to the advantages of each indicator. There is still great potential for strategy optimization, and it is expected to further improve strategy performance by introducing other indicators, automatic parameter optimization through machine learning, etc. Live trading verification is an indispensable step and important basis for further perfecting the strategy.
-
-[/trans]
 
 > Strategy Arguments
 

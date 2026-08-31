@@ -8,38 +8,7 @@ Dynamic-Dual-SMA-Trend-Following-Strategy-with-Smart-Risk-Management
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/d28e2b1511d18c4b1c.png)
-
-[trans]
-#### 概述
-本策略是一个基于双均线的智能趋势跟踪系统,通过计算高点和低点的移动平均线以及斜率指标来识别市场趋势,并结合动态止盈止损机制进行风险管理。策略的核心在于通过斜率阈值过滤伪信号,同时采用trailing stop动态跟踪方式锁定利润,实现了趋势跟踪与风险控制的有机结合。
-
-#### 策略原理
-策略采用双均线系统作为核心交易逻辑,分别在最高价和最低价序列上计算移动平均线。当价格突破上方均线且均线斜率显著向上时,系统产生做多信号;当价格跌破下方均线且均线斜率显著向下时,系统产生做空信号。为了避免震荡市中的频繁交易,策略引入斜率阈值机制,只有当均线斜率变化超过设定阈值时才确认趋势的有效性。在风险管理方面,策略设计了动态止盈止损机制,初始设定相对激进的止盈目标,同时使用跟踪止损保护已获得的利润。
-
-#### 策略优势
-1. 趋势识别准确性高:通过双均线和斜率阈值的组合,能够有效过滤掉横盘震荡中的虚假信号
-2. 风险控制完善:动态止损机制可以随着价格变动自动调整,既保护利润又给趋势足够发展空间
-3. 参数灵活可调:策略的关键参数如均线周期、止盈止损比例、斜率阈值等都可根据不同市场特征灵活调整
-4. 逻辑清晰简单:策略逻辑直观易懂,便于维护和优化
-5. 适应性强:可应用于不同的时间周期和交易品种
-
-#### 策略风险
-1. 趋势反转风险:在趋势突然反转时,trailing stop可能无法及时锁定全部利润
-2. 参数敏感性:策略表现对参数设置较为敏感,不同市场环境可能需要不同的参数组合
-3. 震荡市表现:虽然有斜率过滤,但在剧烈震荡市场中仍可能产生虚假信号
-4. 滑点影响:在波动剧烈时期,实际成交价格可能与信号价格存在较大偏差
-
-#### 策略优化方向
-1. 引入波动率自适应机制:可考虑根据ATR动态调整斜率阈值和止损距离
-2. 增加市场环境过滤:添加趋势强度指标,在不同市场环境下采用不同的参数组合
-3. 优化止盈止损机制:可以设计多层次的止盈目标,逐步锁定部分利润
-4. 添加交易量分析:结合成交量数据验证趋势的有效性
-5. 引入时间过滤:避免在市场波动性较大的时间段进行交易
-
-#### 总结
-这是一个将趋势跟踪和风险管理有机结合的量化交易策略。通过双均线系统和斜率阈值的配合,策略能够较为准确地捕捉市场趋势,而动态的止盈止损机制则提供了完善的风险控制。虽然策略在参数选择和市场适应性方面还有改进空间,但其清晰的逻辑框架和灵活的参数体系为后续优化提供了良好基础。建议交易者在实盘应用时,需要根据具体的市场特征和自身风险偏好,对各项参数进行充分的回测和优化。 || 
 
 #### Overview
 This strategy is an intelligent trend-following system based on dual moving averages, which identifies market trends by calculating moving averages of highs and lows along with slope indicators, combined with dynamic profit-taking and stop-loss mechanisms for risk management. The strategy's core lies in filtering false signals through slope thresholds while using trailing stops to lock in profits, achieving an organic combination of trend following and risk control.
@@ -68,10 +37,7 @@ The strategy employs a dual moving average system as its core trading logic, cal
 5. Introduce time filtering: Avoid trading during highly volatile market periods
 
 #### Summary
-This is a quantitative trading strategy that organically combines trend following with risk management. Through the cooperation of a dual moving average system and slope thresholds, the strategy can accurately capture market trends, while dynamic profit-taking and stop-loss mechanisms provide comprehensive risk control. Although there is room for improvement in parameter selection and market adaptability, its clear logical framework and flexible parameter system provide a good foundation for subsequent optimization. It is recommended that traders thoroughly backtest and optimize various parameters according to specific market characteristics and their own risk preferences when applying the strategy in live trading.[/trans]
-
-
-
+This is a quantitative trading strategy that organically combines trend following with risk management. Through the cooperation of a dual moving average system and slope thresholds, the strategy can accurately capture market trends, while dynamic profit-taking and stop-loss mechanisms provide comprehensive risk control. Although there is room for improvement in parameter selection and market adaptability, its clear logical framework and flexible parameter system provide a good foundation for subsequent optimization. It is recommended that traders thoroughly backtest and optimize various parameters according to specific market characteristics and their own risk preferences when applying the strategy in live trading.
 > Source (PineScript)
 
 ``` pinescript

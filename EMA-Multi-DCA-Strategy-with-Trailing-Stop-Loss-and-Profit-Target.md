@@ -8,54 +8,8 @@ EMA-Multi-DCA-Strategy-with-Trailing-Stop-Loss-and-Profit-Target
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/a40a12f417cf42c672.png)
- [trans]
-
-## 概述
-本策略采用动态的多重指数移动平均线作为入市信号,结合追踪止损和目标获利机制来管理风险和获利。该策略充分利用了EMA的平滑性质来识别趋势,通过多次DCA投入控制成本。此外,整合了动态止损和目标获利设定让整个策略更为智能化和自动化。
-
-## 策略原理
-### 指标计算
-- EMA5、EMA10、EMA20、EMA50、EMA100、EMA200指数移动平均线
-- ATR平均真实波动幅度
-
-### 入市信号 
-当价格接近或穿过设定的EMA周期时产生入市信号,EMA周期可自定义,典型选用5、10、20、50、100、200周期。本策略采用价格在EMA上下1%范围内作为入市条件。
-
-### 风险管理
-整合多项风险管理机制:
-1. ATR止损:当ATR超过设定阈值时清仓止损
-2. 最大入市次数控制:避免过度投入
-3. 动态追踪止损:根据价格实时波动 trailing stop
-
-### 获利机制
-设定目标获利水平,当价格超过目标价时退出
-
-## 策略优势分析
-1. 利用EMA识别趋势,对短期波动过滤作用好
-2. DCA成本分散,避免高买低卖
-3. 多重EMA组合,提高入市成功率  
-4. 动态止损REAL-TIME控制亏损 
-5. 目标获利清晰,不浪费太多盈利
-
-## 风险及改进
-1. EMA因子选择需要优化,不同市场不同周期组合效果差异大
-2. DCA次数可能过多造成资金过度占用
-3. 停损幅度设定需要回测优化
-
-## 策略优化思路 
-1. 利用高级EMA系统识别趋势
-2. 多变量优化最佳DCA次数和止损幅度
-3. 加入机器学习模型预测价格变化
-4. 整合资金管理模块控制总体投入
-
-## 总结
-本策略整合了EMA识别趋势、DCA成本控制、动态追踪止损、目标获利退出等多项机制。在参数调整和风险控制方面还有很多优化空间。整体而言,该策略具有很强的适应性和扩展性,能够为投资者带来稳定的超额收益。
-
-||
-
-## Overview 
+ ## Overview 
 This strategy utilizes dynamic multiple EMAs as entry signals combined with trailing stop loss and profit target mechanisms for risk management. It takes advantage of the smoothing nature of EMAs to identify trends and control cost via multi-DCA entries. In addition, the integration of adaptive stop loss and profit taking features enhances the automation process.  
 
 ## Strategy Logic
@@ -95,9 +49,6 @@ Set profit target price levels for exits
 
 ## Conclusion
 The strategy encompasses EMA trend detection, multi-DCA cost averaging, trailing stop loss, target profit taking and more. There remains ample potential in tuning parameters and enhancing risk controls. Overall, this highly adaptive and versatile strategy offers investors stable alpha generation capabilities.
-
-[/trans]
-
 > Strategy Arguments
 
 

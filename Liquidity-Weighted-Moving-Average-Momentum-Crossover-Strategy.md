@@ -11,51 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/c93d927fa51a492764.png)
 
-[trans]
-#### 概述
-该策略是一个基于流动性加权移动平均线的交易系统,通过监测价格波动与交易量的关系来衡量市场流动性,并在此基础上构建快速和慢速移动平均线。当快线上穿慢线时产生买入信号,下穿时产生卖出信号。策略特别关注异常流动性事件,通过数组记录关键价格点位,从而提供更精确的交易时机。
-
-#### 策略原理
-策略的核心在于通过成交量与价格变动的比值来度量市场流动性。具体实现步骤如下:
-1. 计算流动性指标:使用成交量除以收盘价与开盘价差的绝对值
-2. 设定流动性边界:通过EMA和标准差识别异常流动性
-3. 维护价格数组:记录突破流动性边界时的价格
-4. 构建移动平均线:基于流动性事件计算快速和慢速EMA
-5. 生成交易信号:通过均线交叉确定买卖点
-
-#### 策略优势
-1. 流动性感知:通过将成交量与价格变动相结合,能更准确地捕捉市场活跃度
-2. 异常事件跟踪:通过数组记录关键价格点位,避免错过重要市场机会
-3. 动态适应:EMA的权重递减特性使策略能更好地适应市场变化
-4. 风险控制:通过均线交叉提供明确的进出场信号
-5. 可定制性:多个参数可调整,适应不同市场环境
-
-#### 策略风险
-1. 参数敏感:策略效果强烈依赖于参数设置,需要持续优化
-2. 滞后性:基于移动平均线的系统具有固有的滞后性
-3. 市场依赖:在某些时间周期和市场中表现不稳定
-4. 假突破:可能在高波动时期产生错误信号
-5. 交易成本:频繁交易可能带来较高成本
-
-#### 策略优化方向
-1. 引入过滤器:
-- 添加趋势确认指标如ADX
-- 使用波动率指标过滤假信号
-2. 改进进场时机:
-- 结合支撑阻力位
-- 考虑成交量突破确认
-3. 优化参数选择:
-- 实现自适应参数
-- 根据市场状态动态调整
-4. 增强风险管理:
-- 添加止损止盈机制
-- 实现仓位管理系统
-
-#### 总结
-这是一个融合流动性分析与技术指标的创新策略,通过监测市场流动性异常来优化传统的均线交叉系统。虽然在特定市场环境下表现出色,但仍需要进一步优化以提高稳定性和适用性。建议交易者在实盘使用前进行充分测试,并结合其他指标构建更完善的交易系统。
-
-||
-
 #### Overview
 This strategy is a trading system based on liquidity-weighted moving averages, measuring market liquidity through the relationship between price movement and trading volume. It constructs fast and slow moving averages to generate buy signals when the fast line crosses above the slow line and sell signals when it crosses below. The strategy particularly focuses on abnormal liquidity events, recording key price levels in an array for more precise trading opportunities.
 
@@ -96,9 +51,7 @@ The core mechanism relies on measuring market liquidity through the ratio of vol
 - Implement position sizing system
 
 #### Summary
-This innovative strategy combines liquidity analysis with technical indicators, optimizing traditional moving average crossover systems by monitoring market liquidity anomalies. While it shows promising results in specific market conditions, further optimization is needed to improve stability and applicability. Traders should thoroughly test before live implementation and consider combining with other indicators for a more robust trading system.[/trans]
-
-
+This innovative strategy combines liquidity analysis with technical indicators, optimizing traditional moving average crossover systems by monitoring market liquidity anomalies. While it shows promising results in specific market conditions, further optimization is needed to improve stability and applicability. Traders should thoroughly test before live implementation and consider combining with other indicators for a more robust trading system.
 
 > Source (PineScript)
 

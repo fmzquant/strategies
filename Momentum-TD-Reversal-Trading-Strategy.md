@@ -10,40 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1ac8b7c5b13657f2bf9.png)
- [trans]
-
-## 概述
-
-动量TD反转交易策略是一个利用TD Sequential指标识别价格反转信号的量化交易策略。该策略基于价格动量分析,在确认到价格反转信号后建立做多或做空仓位。
-
-## 策略原理
-
-该策略使用TD Sequential指标分析价格波动并识别连续9根K线的价格反转形态。具体来说,当识别到连续9根K线价格上涨后出现下跌K线时,策略判断为做空机会;反之,当识别到连续9根K线价格下跌后出现上涨K线时,策略判断为做多机会。
-
-利用TD Sequential指标的优势,可以提前捕捉到价格反转信号。结合该策略中的一定数量的追涨杀跌机制,可以在反转信号确认后,及时建立做多或做空仓位,从而在价格反转开始阶段获得较好的入场机会。
-
-## 优势分析
-
-- 利用TD Sequential指标可以提前判断价格反转机会
-- 建立追涨杀跌机制,可以更及时判定价格反转确认
-- 通过反转形成阶段建仓,获得较优入场点位
-
-## 风险分析
-
-- TD Sequential指标可能出现假突破,需要结合其他因素确认
-- 需要适当控制仓位规模和仓位时间,降低风险
-
-## 优化方向
-
-- 结合其他指标确定反转信号,避免假突破风险
-- 建立止损机制控制单笔损失
-- 优化仓位规模和持仓时间,平衡盈利规模和风险控制
-
-## 总结
-
-动量TD反转交易策略通过TD Sequential指标提前判断价格反转,并在反转确认后快速建立仓位,是一个非常适合动量交易者使用的策略。该策略具有识别反转机会的优势,但需要注意控制风险,避免因假突破造成较大损失。通过进一步优化,这是一个风险收益比较均衡的交易策略。
-
-||
+ 
 
 ## Overview
 
@@ -75,8 +42,6 @@ By leveraging the advantage of the TD Sequential indicator, the strategy can cap
 ## Conclusion  
 
 The Momentum TD Reversal Trading Strategy utilizes the TD Sequential indicator to judge price reversals beforehand and establishes positions swiftly after confirmations, making it very suitable for momentum traders. This strategy has the advantage of identifying reversal opportunities, but still calls for proper risk control to avoid huge losses caused by false breakouts. With further optimizations, it can become a balanced strategy regarding risk-reward ratio.
-
-[/trans]
 
 > Strategy Arguments
 

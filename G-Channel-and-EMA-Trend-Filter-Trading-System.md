@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/bf382530069a27155f.png)
 
-[trans]
-#### 概述
-本策略是一个基于自定义G通道和指数移动平均线(EMA)的趋势跟踪交易系统。G通道由上轨(a)、下轨(b)和中轨(avg)构成,通过动态计算当前和历史价格来确定通道边界。该策略结合EMA作为趋势过滤器,通过价格与通道线的交叉以及与EMA的位置关系来产生交易信号,有效地捕捉市场趋势转折点。
-
-#### 策略原理
-策略的核心逻辑包含两个主要组件:G通道和EMA过滤器。G通道的计算基于当前价格和历史数据,通过自适应算法动态调整通道宽度。上轨线(a)取当前价格与前期上轨的较大值,并根据通道宽度和长度参数进行动态调整;下轨线(b)采用类似方法计算最小值;中轨则为上下轨的算术平均值。交易信号的触发条件结合了价格与通道线的交叉以及与EMA的相对位置:当价格突破下轨且位于EMA下方时产生买入信号;当价格跌破上轨且位于EMA上方时产生卖出信号。
-
-#### 策略优势
-1. 自适应性强:G通道能够根据市场波动自动调整通道宽度,适应不同市场环境。
-2. 趋势确认:通过EMA作为过滤器,提高了交易信号的可靠性。
-3. 风险控制:通过通道突破和趋势确认的双重验证机制,降低了虚假信号的风险。
-4. 信号明确:交易条件清晰,便于程序化实现和回测验证。
-5. 可视化支持:策略提供了完整的图形化展示,便于分析和判断。
-
-#### 策略风险
-1. 趋势延迟:EMA作为滞后指标可能导致入场时机延迟。
-2. 震荡市场风险:在横盘震荡市场中可能产生频繁的假突破信号。
-3. 参数敏感性:通道长度和EMA周期的选择对策略表现影响较大。
-4. 市场环境依赖:策略在趋势明显的市场中表现较好,但在震荡市场中可能表现欠佳。
-
-#### 策略优化方向
-1. 引入波动率指标:可以根据市场波动率动态调整通道参数,提高策略适应性。
-2. 增加市场环境过滤:添加市场环境判断机制,在不同市场状态下采用不同的参数设置。
-3. 优化止损机制:设计基于通道宽度的动态止损方案,提高风险控制能力。
-4. 完善信号过滤:增加成交量、波动率等辅助指标,提高信号质量。
-5. 参数优化:通过回测优化不同市场环境下的最优参数组合。
-
-#### 总结
-G通道与EMA趋势过滤交易系统是一个结合了通道突破和趋势跟踪的完整交易策略。通过G通道的动态特性和EMA的趋势确认功能,该策略能够有效捕捉市场转折点并控制交易风险。虽然存在一定的局限性,但通过提出的优化方向,策略的整体性能有望得到进一步提升。该策略适合在趋势明显的市场中使用,并可以作为构建更复杂交易系统的基础框架。 || 
-
 #### Overview
 This strategy is a trend-following trading system based on the custom G-Channel and Exponential Moving Average (EMA). The G-Channel consists of upper (a), lower (b), and middle (avg) lines, determining channel boundaries through dynamic calculation of current and historical prices. The strategy combines EMA as a trend filter, generating trading signals through price crossovers with channel lines and relative position to EMA, effectively capturing market trend reversal points.
 
@@ -68,9 +38,7 @@ The core logic comprises two main components: G-Channel and EMA filter. The G-Ch
 5. Parameter optimization: Optimize parameter combinations for different market environments through backtesting.
 
 #### Summary
-The G-Channel and EMA Trend Filter Trading System is a complete trading strategy combining channel breakouts and trend following. Through G-Channel's dynamic characteristics and EMA's trend confirmation function, the strategy effectively captures market turning points while controlling trading risks. Though certain limitations exist, the strategy's overall performance can be further improved through the proposed optimization directions. This strategy is suitable for trending markets and can serve as a foundation framework for building more complex trading systems.[/trans]
-
-
+The G-Channel and EMA Trend Filter Trading System is a complete trading strategy combining channel breakouts and trend following. Through G-Channel's dynamic characteristics and EMA's trend confirmation function, the strategy effectively captures market turning points while controlling trading risks. Though certain limitations exist, the strategy's overall performance can be further improved through the proposed optimization directions. This strategy is suitable for trending markets and can serve as a foundation framework for building more complex trading systems.
 
 > Source (PineScript)
 

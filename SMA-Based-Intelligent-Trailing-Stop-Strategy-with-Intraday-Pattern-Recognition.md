@@ -8,48 +8,7 @@ SMA-Based-Intelligent-Trailing-Stop-Strategy-with-Intraday-Pattern-Recognition
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/6701dfa5622f7c083e.png)
-
-[trans]
-#### 概述
-这是一个基于18日移动平均线(SMA18)的策略,结合了日内交易模式识别和智能追踪止损机制。该策略主要通过观察价格与SMA18的关系,结合日内高低点位置,在合适的时机进行多头入场。策略采用灵活的止损方案,既可以使用固定止损点,也可以使用两日最低点作为追踪止损基准。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素:
-1. 入场条件基于价格与18日均线的相对位置,可以选择在突破均线时入场或在均线之上入场
-2. 通过分析日内K线形态,特别关注内部K线(Inside Bar)模式,提高入场的准确性
-3. 根据每周不同交易日的表现特征,可以选择性地在特定日期进行交易
-4. 入场价格设置采用限价单方式,在低点之上小幅溢价以提高成交概率
-5. 止损机制支持两种模式:一种是基于入场价的固定止损,另一种是基于前两个交易日最低点的追踪止损
-
-#### 策略优势
-1. 结合技术指标和价格形态,入场信号更加可靠
-2. 灵活的交易时间选择机制,可以针对不同市场特征进行优化
-3. 智能的止损方案,既保护利润又给予价格足够的波动空间
-4. 策略参数可调节性强,适应不同市场环境
-5. 通过内部K线模式的筛选,有效降低虚假信号
-
-#### 策略风险
-1. 在剧烈波动市场中,固定止损可能导致过早出场
-2. 对于快速反转的行情,追踪止损可能锁定较少利润
-3. 在横盘整理阶段,频繁的内部K线可能导致过多交易
-应对措施:
-- 根据市场波动率动态调整止损距离
-- 增加趋势确认指标
-- 设置最小盈利目标来过滤低质量交易
-
-#### 策略优化方向
-1. 引入波动率指标(如ATR)来动态调整止损距离
-2. 增加成交量分析维度,提高信号可靠性
-3. 开发更智能的日期选择算法,根据历史表现自动优化交易时间
-4. 增加趋势强度过滤器,避免在弱趋势中交易
-5. 优化内部K线的识别算法,提高形态识别的准确性
-
-#### 总结
-该策略通过结合多个维度的分析方法,构建了一个相对完整的交易系统。策略的核心优势在于其灵活的参数设置和智能的止损机制,使其能够适应不同的市场环境。通过持续优化和改进,该策略有望在各种市场条件下都能保持稳定的表现。
-
-|| 
 
 #### Overview
 This is a strategy based on the 18-day Simple Moving Average (SMA18), combining intraday pattern recognition and intelligent trailing stop mechanisms. The strategy primarily observes the price relationship with SMA18, along with intraday high and low positions, to execute long entries at optimal times. It employs a flexible stop-loss approach, offering both fixed stop-loss points and a two-day low trailing stop option.
@@ -86,10 +45,7 @@ Mitigation measures:
 5. Enhance Inside Bar recognition algorithms for improved pattern identification
 
 #### Summary
-This strategy constructs a comprehensive trading system by combining multiple analytical dimensions. Its core strengths lie in flexible parameter settings and intelligent stop-loss mechanisms, enabling adaptation to various market environments. Through continuous optimization and improvement, the strategy shows promise for maintaining stable performance across different market conditions.[/trans]
-
-
-
+This strategy constructs a comprehensive trading system by combining multiple analytical dimensions. Its core strengths lie in flexible parameter settings and intelligent stop-loss mechanisms, enabling adaptation to various market environments. Through continuous optimization and improvement, the strategy shows promise for maintaining stable performance across different market conditions.
 > Source (PineScript)
 
 ``` pinescript

@@ -10,56 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/17b5ef4a8007d5c51f5.png)
- [trans]
-## 概述
-
-本策略结合相对强弱指数(RSI)和移动平均聚散指标(MACD)来识别BTC的交易机会。当RSI低于30时和MACD线低于信号线且MACD Histogram小于-100时做多;当RSI高于80并且MACD线高于信号线且MACD Histogram大于250时做空。该策略还使用了追踪止损来锁定利润。
-
-## 策略原理
-
-1. 使用RSI指标来判断市场是否超卖或超买。RSI低于30视为超卖信号,高于80视为超买信号。
-
-2. 使用MACD指标的MACD线和信号线的金叉死叉来判断买卖时机。当MACD线上穿信号线时为买入信号;当MACD线下穿信号线时为卖出信号。
-
-3. 结合RSI指标和MACD指标的信号,形成该策略的入场条件。
-
-4. 使用追踪止损来锁定利润,追踪止损根据持仓盈亏来实时更新,可以有效控制风险。
-
-## 优势分析
-
-1. 该策略结合RSI和MACD两个指标,可以有效过滤假信号。
-
-2. RSI指标可以有效判断市场超买超卖现象。MACD指标可以抓住趋势的变化。两者结合使用效果好。
-
-3. 使用追踪止损可以根据市场实时行情来止损,最大程度锁定利润,控制风险。
-
-4. 策略参数较少,易于实现。
-
-## 风险分析
-
-1. 单一品种策略,品种本身存在的系统性风险。
-
-2. RSI指标在区间市和底部反弹时可能产生虚假信号。MACD指标在震荡行情中也可能产生错误信号。
-
-3. 追踪止损在大幅行情中可能被突破,无法控制风险。
-
-4. 参数设置不当可能导致交易频繁或漏单。
-
-## 优化方向
-
-1. 可以考虑结合其他指标如布林线、KD等来发出交易信号。
-
-2. 可以研究不同品种之间的相关性,建立多品种套利策略。
-
-3. 可以优化止损策略,如及时止损、平均止损等方式。
-
-4. 可以结合机器学习等方式来智能优化参数。
-
-## 总结
-
-本策略是一套基于RSI和MACD指标判断超买超卖的趋势跟踪策略。它有效结合了技术指标的优势,可以抓住市场的趋势变化。同时,策略简单直接,易于实施。通过优化可以进一步扩展该策略的应用。
-
-||
+ 
 
 ## Overview
 
@@ -108,8 +59,6 @@ This strategy combines the Relative Strength Index (RSI) and Moving Average Conv
 ## Summary
 
 This is a trend-following strategy based on RSI and MACD indicators to determine overbought/oversold scenarios. It combines the strengths of technical indicators well to capture trend changes in the market. Meanwhile, the strategy logic is simple and easy to implement. Further optimizations can expand its applications.
-
-[/trans]
 
 > Strategy Arguments
 

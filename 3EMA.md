@@ -15,15 +15,11 @@ ChaoZhang
 
 > Strategy Arguments
 
-
-
 |Argument|Default|Description|
 |----|----|----|
-|v_input_int_1|20|短期均线|
-|v_input_int_2|50|中期均线|
-|v_input_int_3|100|长期均线|
-
-
+|v_input_int_1|20|Short-term moving average|
+|v_input_int_2|50|Medium-term moving average|
+|v_input_int_3|100|Long-term moving average|
 > Source (PineScript)
 
 ``` pinescript

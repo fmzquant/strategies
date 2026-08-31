@@ -8,75 +8,8 @@ Moving-Average-and-Stochastic-RSI-Combination-Trading-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/ddb32651ac4bbdcf02.png)
- [trans]
-
-## 概述
-
-该策略通过组合使用移动平均线和随机相对强弱指数(Stochastic RSI)来寻找交易机会。具体来说,它会同时看涨趋势的中短期移动平均线,和超买超卖的随机RSI指标,在二者发出买入和卖出信号时进行操作。这种组合使用可以过滤掉一些假信号,提高策略的稳定性。
-
-## 策略原理
-
-该策略主要由以下几部分组成:
-
-1. 计算两条不同周期的移动平均线MA1和MA2。
-
-2. 计算随机相对强弱指数Stochastic RSI。该指标结合RSI和随机指标的原理,可以显示RSI指标是否处于超买或超卖状态。
-
-3. 在随机RSI指标从超卖区上穿定阈值时产生买入信号;而从超买区下穿时产生卖出信号。
-
-4. 当随机RSI指标发出信号,并且短周期移动平均线处于长周期移动平均之上时,进行买入。这可以过滤掉大部分假信号。
-
-5. 计算风险金额和仓位。固定的风险金额可以有效控制单笔损失。
-
-6. 设置止损和止盈价格。跟踪止盈,让利润最大化。
-
-## 优势分析
-
-这种组合使用移动平均线和随机RSI指标的策略,有以下几个优势:
-
-1. 可以在趋势行情中获得较好回报。中长线均线组合可以判断主要趋势方向。
-
-2. 随机RSI指标可以有效判断超买超卖现象,这对于捕捉反转机会很有用。
-
-3. 组合使用过滤虚假信号的可能性,可以提高稳定性。
-
-4. 采用风险金额法进行资金管理,可以限制单笔亏损,避免超出可承受范围。
-
-5. 设置止损止盈以锁定利润,避免风险。
-
-## 风险分析
-
-该策略也存在一些风险,主要集中在以下几个方面:
-
-1. 在震荡趋势中,中长线均线可能发出错误信号。需要设置止损来控制风险。
-
-2. 随机RSI指标容易受剧烈价格变动影响,可能也会发出错误信号。与均线组合使用可以缓解。
-
-3. 风险金额法无法完全规避大额亏损的可能。需要合理设置仓位。
-
-4. 在行情剧烈变动时,无法获取合理价格设置止盈止损。这时要及时人工干预。
-
-## 优化方向
-
-该策略可以从以下几个方向进行进一步优化:
-
-1. 测试更多参数组合,寻找最佳的参数周期。现在使用的周期并不一定是最优。
-
-2. 尝试其他指标与移动平均线进行组合。例如KDJ,MACD等。选取最匹配的指标。 
-
-3. 对交易品种进行测试优化。现在是针对外汇进行测试,可以尝试在其他市场应用。
-
-4. 采用机器学习等方法动态优化参数。现在参数是静态设置的,这可能无法适应市场变化。
-
-## 总结
-
-移动平均线与随机RSI组合策略,通过均线判断大趋势,随机RSI判断反转点,二者结合形成交易信号,并设置止盈止损与风险控制,从而获得了稳定的策略逻辑。这种组合策略结构简单实用,值得进一步测试和优化,可以延展至更多品种和参数设置上。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy combines the use of moving averages and Stochastic Relative Strength Index (Stochastic RSI) to find trading opportunities. Specifically, it looks at the medium-term moving average in an upward trend and the overbought/oversold Stochastic RSI indicator to make trading decisions when both signals emerge. This combined use can filter out some false signals and improve the stability of the strategy.
 
@@ -137,9 +70,6 @@ The strategy can be further optimized in the following aspects:
 ## Conclusion
 
 The moving average and stochastic RSI combination strategy identifies trend with moving averages and reversal levels with stochastic RSI to form trade signals, along with stop loss/profit and risk control to form a robust strategy logic. This simple and practical combination framework can be further tested and optimized across more instruments and parameter sets.
-
-[/trans]
-
 > Strategy Arguments
 
 

@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1060860bba4668984d6.png)
 
-[trans]
-#### 概述
-本策略是一个结合了技术分析中枢轴点理论和移动平均线交叉信号的量化交易系统。该策略通过识别市场的关键支撑位和阻力位,结合短期和长期移动平均线的交叉信号,在市场趋势变化时捕捉交易机会。系统采用50日和200日移动平均线作为主要指标,通过动态跟踪枢轴点位来优化入场和出场时机。
-
-#### 策略原理
-策略的核心逻辑基于两个主要组成部分:枢轴点分析和均线交叉信号。系统使用5周期作为枢轴点计算周期,通过ta.pivothigh和ta.pivotlow函数动态识别市场的高点和低点。同时,利用50日和200日简单移动平均线的交叉形成黄金交叉和死亡交叉信号。当短期均线上穿长期均线且价格突破近期枢轴高点时,系统产生做多信号;当短期均线下穿长期均线且价格跌破近期枢轴低点时,系统产生做空信号。
-
-#### 策略优势
-1. 信号可靠性高:通过结合枢轴点和均线交叉双重确认,大幅提高了交易信号的可靠性。
-2. 动态适应性强:枢轴点的动态计算使策略能够自适应不同的市场环境。
-3. 风险控制完善:使用长期移动平均线作为趋势过滤器,有效降低假突破风险。
-4. 执行逻辑清晰:入场和出场条件明确,便于实盘操作和回测验证。
-5. 参数优化空间大:关键参数可根据不同市场特征进行优化调整。
-
-#### 策略风险
-1. 震荡市场风险:在横盘整理阶段可能产生频繁的假突破信号。
-2. 滞后性风险:移动平均线具有一定滞后性,可能导致入场和出场时机延迟。
-3. 参数敏感性:枢轴点周期和均线周期的选择对策略表现影响较大。
-4. 市场环境依赖:策略在强趋势市场表现较好,但在震荡市场效果可能不佳。
-5. 回撤控制风险:需要额外的止损机制来控制最大回撤。
-
-#### 策略优化方向
-1. 引入波动率过滤:建议增加ATR指标来动态调整仓位大小和止损位置。
-2. 优化枢轴点计算:可考虑使用自适应周期来计算枢轴点,提高准确性。
-3. 增加趋势强度确认:建议添加ADX等趋势强度指标来过滤弱势市场信号。
-4. 完善资金管理:建议根据市场波动性动态调整持仓规模。
-5. 优化出场机制:可以增加追踪止损来保护盈利。
-
-#### 总结
-该策略通过结合经典的技术分析方法,构建了一个逻辑严谨、风险可控的量化交易系统。策略的核心优势在于通过多重信号确认来提高交易的可靠性,但同时也需要注意在不同市场环境下的适应性问题。通过建议的优化方向,策略的稳定性和收益性有望得到进一步提升。策略适合在趋势明显的市场中应用,投资者在使用时需要根据具体市场特征进行参数优化。 || 
-
 #### Overview
 This strategy is a quantitative trading system that combines pivot point theory and moving average crossover signals in technical analysis. The strategy identifies key support and resistance levels in the market, combined with crossover signals from short-term and long-term moving averages to capture trading opportunities during market trend changes. The system uses 50-day and 200-day moving averages as primary indicators, optimizing entry and exit timing through dynamic pivot point tracking.
 
@@ -70,9 +39,7 @@ The core logic of the strategy is based on two main components: pivot point anal
 5. Enhance exit mechanism: Can add trailing stops to protect profits.
 
 #### Summary
-The strategy builds a logically rigorous and risk-controlled quantitative trading system by combining classical technical analysis methods. Its core advantage lies in improving trading reliability through multiple signal confirmations, while attention must be paid to adaptability in different market environments. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced. The strategy is suitable for markets with clear trends, and investors need to optimize parameters according to specific market characteristics when implementing.[/trans]
-
-
+The strategy builds a logically rigorous and risk-controlled quantitative trading system by combining classical technical analysis methods. Its core advantage lies in improving trading reliability through multiple signal confirmations, while attention must be paid to adaptability in different market environments. Through the suggested optimization directions, the strategy's stability and profitability can be further enhanced. The strategy is suitable for markets with clear trends, and investors need to optimize parameters according to specific market characteristics when implementing.
 
 > Source (PineScript)
 

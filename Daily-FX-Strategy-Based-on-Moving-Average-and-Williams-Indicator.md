@@ -10,41 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a72434a65ae0f75d5b.png)
- [trans]
-## 概述
-
-本策略结合使用均线、ATR指标和威廉指标,针对GBP/JPY这个外汇品种进行日线级别的交易。策略先通过均线判断价格趋势和可能的反转点,然后利用威廉指标进一步确认交易信号,同时用ATR指标计算止损位和交易量。
-
-## 策略原理
-
-1. 使用20日线的均线(基线)判断价格整体趋势,价格从均线下方上扫为买入信号,从均线上方下破为卖出信号
-2. 威廉指标用来确认价格反转。指标上穿-35时为买入确认,下穿-70时为卖出确认
-3. ATR指标计算过去2天的平均波动范围。该数值乘以系数后设定为止损距离
-4. 按照账户权益的50%进行风险控制。交易量按照止损距离和风险比例计算
-5. 进入长仓后,止损点为价格低点减去止损距离。止盈点为入场点加100点。Exiting logic用于进一步确认退出信号
-6. 进入短仓后,止损和止盈同上。Exiting logic用于进一步确认退出信号
-
-## 优势分析
-
-1. 综合使用均线判断趋势和指标确认进场,可以有效过滤假突破带来的损失
-2. ATR动态止损可以据市场波动幅度设定合理的止损距离
-3. 风险控制和动态交易量计算可以最大限度控制单笔损失
-4. Exiting logic结合均线判断能进一步确认退出时机,避免过早停利
-
-## 风险分析
-
-1. 均线判断产生错误信号的概率较大,需要指标进一步确认
-2. 指标本身也会产生错误信号,无法完全避免亏损的发生
-3. 该策略更适合趋势品种,对于范围波动品种效果可能较差
-4. 风险控制的比例设置不当也可能影响策略收益
-
-可以通过调整均线周期,组合更多指标,或人工干预交易等方法进一步优化和改进。
-
-## 总结
-
-该策略结合趋势判断和指标过滤,针对GBP/JPY日线级别交易进行方法设计。同时运用动态止损、风险控制等手段控制交易风险。优化空间还很大,通过参数调整和方法组合可以进一步改进策略效果。
-
-||
+ 
 
 # Overview
 
@@ -78,8 +44,6 @@ Methods like adjusting moving average period, combining more indicators, manual 
 ## Conclusion
 
 This strategy combines trend judgment and indicator filter for  daily trading. It also leverages dynamic stop loss, risk control and other means to control trading risk. Much room for optimization exists by parameter tuning and method combination to further improve strategy performance.
-
-[/trans]
 
 > Strategy Arguments
 

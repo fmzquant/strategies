@@ -10,60 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c52fdaee272021af6e.png)
- [trans]
-
-## SMA波动偏移交易策略
-
-### 策略概述
-
-该策略利用简单移动平均线和一些数学计算来确定买入/卖出点。我们使用100天SMA作为基准线。如果收盘价低于该线,我们根据低于该线的程度选择开仓点,这个值(低偏移量)是一个可配置的百分比。对于平仓,如果收盘价高于我们的100天SMA,我们确定在何时卖出之前的偏移量。如果我们试图太早卖出(价格仍在上涨),追踪止损会启动。
-
-### 策略原理
-
-该策略使用三条SMA线:快线(默认14天)、慢线(默认100天)和参考线(默认30天)。
-
-当收盘价低于参考线,并且相对于慢线的低偏移量大于配置的低偏移量时,且快线上涨而慢线下跌,进入多头。当满足这些条件时,快线和慢线极有可能交叉,因此是一个较好的入场点。
-
-当收盘价高于参考线,并且相对于慢线的高偏移量大于配置的高偏移量时,且收盘价已连续3根K线上涨,已实现盈利,且快线高于慢线时,平仓多单。如果价格继续大涨,追踪止损会启动。
-
-每次交易的头寸根据权益的一定比例进入,通过这种方式控制仓位。
-
-### 策略优势分析
-
-1. 利用SMA的优势,即平滑价格曲线,过滤市场噪音。
-2. SMA交叉具有一定的预测趋势能力。
-3. 相对于SMA线设置偏移量,避免假突破。
-4. 结合趋势和交叉指标,提高决策的准确性。
-5. 利用追踪止损锁定盈利,避免回撤。
-
-### 策略风险分析 
-
-1. SMA本身滞后性较强,可能错过价格转折点。
-2. 偏移量设置不当可能导致过于激进或者过于谨慎。
-3. 追踪止损参数设置不当可能过早止损或者止损幅度过大。
-4. 无法应对价格剧烈波动的市场。
-
-对应优化措施:
-1. 结合其他先行指标过滤入场。  
-2. 对偏移量进行反复测试优化。
-3. 对止损参数进行反复回测找到最优参数。
-4. 在高波动阶段降低仓位。
-
-### 策略优化方向
-
-1. 测试不同周期的SMA寻找最优参数
-2. 加入其他指标判断市场结构和趋势
-3. 优化追踪止损参数以锁定更多盈利
-4. 根据市场波动程度调整仓位
-5. 同时应用于多种品种并进行组合
-
-### 总结
-
-SMA波动偏移交易策略通过设定偏移量参考不同的SMA均线,寻找最佳入场时机。同时,退出机制设定了追踪止损来锁定收益。该策略简单易懂,容易实施。通过优化SMA参数、偏移量设置、止损水平等,可以获得更好的效果。该策略适用于中长线周期,追求稳定盈利的投资者。
-
-||
-
-### Strategy Overview  
+ ### Strategy Overview  
 
 This strategy uses simple moving averages (SMA) and some math calculations to determine buy/sell points. We keep a 100-day SMA line as our basis. If the closing price is below this line, we determine the opening position based on the percentage the price is below the line (low offset), which is configurable. Similarly, we set a high offset percentage above the 100-day SMA before closing long positions. If we try to close too early while price is still rising, the trailing stop loss will be triggered.  
 
@@ -109,7 +56,6 @@ Corresponding improvements:
 ### Conclusion  
 
 The SMA Offset Fluctuation Trading Strategy identifies optimal entry points by setting offsets based on different SMA lines. The exit mechanism sets a trailing stop loss to lock in gains. This strategy is simple to understand and implement. By optimizing parameters like SMA periods, offsets, stop loss levels, better results can be achieved. It suits medium-long term investors seeking steady profits.
-[/trans]
 
 > Strategy Arguments
 

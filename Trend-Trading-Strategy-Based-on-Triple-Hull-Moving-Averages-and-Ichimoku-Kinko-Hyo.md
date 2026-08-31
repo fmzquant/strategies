@@ -10,61 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/137e15f95009f0b312e.png)
-[trans]
-
-## 概述
-
-本策略结合了Hull移动平均线和一目均衡表两个指标,实现了一个趋势跟踪交易系统。该系统可以捕捉中短线趋势,进行趋势交易。
-
-## 策略原理
-
-本策略使用Hull移动平均线来判断价格趋势方向。Hull移动平均线是一种对移动平均线进行优化的指标,可以更快速地响应价格变化。策略这里使用了一个三重Hull移动平均系统,包含6期、3期和1.5期的Hull MA。
-
-另外,策略还结合了一目均衡表的转换线和延迟线。这两个指标反映了价格的中长线趋势。策略将三重Hull MA与一目均衡表指标进行组合,形成交易信号。
-
-具体来说,策略计算出三重Hull MA:n1、n2、n2ma。以及一目均衡表的两个指标:leadLine1和leadLine2。然后计算出post1和post2作为最终的交易指标。
-
-当post1上穿post2时,做多;当post1下穿post2时,做空。这样可以跟踪捕捉价格中短线趋势,进行趋势交易。
-
-## 优势分析
-
-本策略具有以下优势:
-
-1. 结合双重指标,提高系统稳定性。
-2. 使用Hull MA响应速度快,可以捕捉趋势变化。
-3. 一目均衡表指标可以过滤假突破。
-4. 采用多重Hull MA,可以有效跟踪价格中短线趋势。
-5. 策略逻辑简单清晰,容易理解和优化。
-
-## 风险分析
-
-本策略也存在一些风险:
-
-1. 在震荡行情中,可能出现多次错误信号。
-2. 参数设置不当可能导致策略表现不佳。
-3. 需避免在重大消息发布时使用本策略。
-
-对策:
-
-1. 可适当调整参数,过滤掉一些噪音。
-2. 建议优化参数,寻找最佳参数组合。
-3. 在重大消息发布前后避免交易。
-
-## 优化方向
-
-本策略还可从以下方面进行优化:
-
-1. 尝试不同长度期的Hull MA组合。
-2. 测试增加或减少一目均衡表的指标。
-3. 对交易指标post1和post2进行平滑优化。
-4. 添加止损逻辑,控制单笔损失。
-
-## 总结
-
-本策略综合运用Hull MA和一目均衡表指标,构建了一个简单实用的趋势跟踪交易系统。策略响应速度快,可以有效捕捉价格中短线趋势。该系统值得进一步测试和优化,通过参数调整和添加其他过滤指标,可以获得更好的交易表现。
-
-||
-
 ## Overview
 
 This strategy combines the Hull Moving Average and Ichimoku Kinko Hyo indicators to implement a trend-following trading system. The system can capture medium-term trends for trend trading.  
@@ -114,8 +59,7 @@ This strategy can also be improved in the following aspects:
 
 ## Conclusion
 
-This strategy combines the Hull MA and Ichimoku Kinko Hyo indicators to build a simple and practical trend following system. With fast responses, it can effectively capture medium-term price trends. Further testing and optimization, through parameter tuning and adding filters, can lead to better trading performance.
-[/trans]]
+This strategy combines the Hull MA and Ichimoku Kinko Hyo indicators to build a simple and practical trend following system. With fast responses, it can effectively capture medium-term price trends. Further testing and optimization, through parameter tuning and adding filters, can lead to better trading performance.]
 
 > Strategy Arguments
 

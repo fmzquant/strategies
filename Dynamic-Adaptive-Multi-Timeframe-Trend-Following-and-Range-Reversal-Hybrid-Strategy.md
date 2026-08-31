@@ -9,45 +9,6 @@ ianzeng123
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/2d93ff42090835bfab795.png)
-![IMG](https://www.fmz.com/upload/asset/2d84688b04277729f3308.png)
-
-
-
-[trans]
-#### 概述
-本策略是一个结合了趋势跟踪和区间交易的复合型交易系统，通过ichimoku云图进行市场状态识别，结合MACD动量确认和RSI超买超卖指标，同时运用ATR进行动态止损管理。该策略能够在趋势市场中捕捉趋势性机会，在震荡市场中寻找反转机会，具有较强的适应性和灵活性。
-
-#### 策略原理
-策略采用多层次信号确认机制：
-1. 使用ichimoku云图作为市场状态的主要判断依据，通过价格与云层的位置关系判断市场是处于趋势还是震荡状态
-2. 在趋势市场中，当价格位于云层之上且RSI>55、MACD柱状图为正时，进场做多；当价格位于云层之下且RSI<45、MACD柱状图为负时，进场做空
-3. 在震荡市场中，当RSI<30且随机RSI<20时，寻找做多机会；当RSI>70且随机RSI>80时，寻找做空机会
-4. 使用基于ATR的动态止损来管理风险，止损距离为ATR值的2倍
-
-#### 策略优势
-1. 市场适应性强：能够根据不同市场状态自动调整交易策略，提高策略的稳定性
-2. 信号可靠性高：采用多重指标验证机制，降低虚假信号的影响
-3. 风险控制完善：通过ATR动态止损，既能让盈利充分发展，又能有效控制风险
-4. 可视化效果好：通过背景颜色标注市场状态，便于交易者直观理解市场环境
-5. 高时间周期表现优异：在日线周期上具有2.159的利润因子，净利润达到10.71%
-
-#### 策略风险
-1. 胜率偏低：各个时间周期的胜率都低于40%，需要较强的心理承受能力
-2. 低时间周期过度交易：在4小时周期内执行了430笔交易，效率较低
-3. 信号滞后性：由于使用多重指标验证，可能错过一些市场机会
-4. 参数优化难度大：多个指标的组合增加了策略优化的复杂度
-
-#### 策略优化方向
-1. 信号筛选优化：可以通过调整各指标的阈值来提高胜率
-2. 时间周期适配：建议主要在日线及以上周期使用，可以根据不同市场特点调整参数
-3. 止损优化：可以考虑根据不同市场状态动态调整ATR倍数
-4. 入场时机优化：可以增加成交量确认或价格形态确认来提高入场准确性
-5. 仓位管理优化：可以根据信号强度设计动态仓位管理系统
-
-#### 总结
-该策略是一个设计合理、逻辑清晰的综合交易系统，通过多重指标的配合使用，实现了市场状态的智能识别和交易机会的精准捕捉。虽然在低时间周期上存在一些问题，但在日线等较高时间周期上表现优异。建议交易者在实盘使用时，着重关注日线级别的信号，并根据自身风险承受能力合理调整参数。通过不断优化和调整，该策略有望为交易者提供稳定的盈利机会。 ||
-
 #### Overview
 This strategy is a hybrid trading system that combines trend following and range trading, using the Ichimoku Cloud for market state identification, MACD for momentum confirmation, RSI for overbought/oversold conditions, and ATR for dynamic stop-loss management. The strategy can capture trending opportunities in trending markets and find reversal opportunities in ranging markets, showing strong adaptability and flexibility.
 
@@ -79,9 +40,7 @@ The strategy employs a multi-level signal confirmation mechanism:
 5. Position management optimization: Design dynamic position management system based on signal strength
 
 #### Summary
-This strategy is a well-designed, logically clear comprehensive trading system that achieves intelligent market state identification and precise capture of trading opportunities through multiple indicator coordination. While there are some issues on lower timeframes, it performs excellently on higher timeframes like daily. Traders are recommended to focus on daily timeframe signals when using it in live trading and adjust parameters according to their risk tolerance. Through continuous optimization and adjustment, this strategy has the potential to provide stable profit opportunities for traders.[/trans]
-
-
+This strategy is a well-designed, logically clear comprehensive trading system that achieves intelligent market state identification and precise capture of trading opportunities through multiple indicator coordination. While there are some issues on lower timeframes, it performs excellently on higher timeframes like daily. Traders are recommended to focus on daily timeframe signals when using it in live trading and adjust parameters according to their risk tolerance. Through continuous optimization and adjustment, this strategy has the potential to provide stable profit opportunities for traders.
 
 > Source (PineScript)
 

@@ -9,50 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-## 概述
-
-朗格安德逆转策略利用朗格安德指标识别价格潜在的转折点,结合收盘价判断趋势反转,以在趋势反转点进行买入和卖出操作。
-
-## 原理
-
-该策略使用朗格安德指标中的两个函数pivothigh和pivotlow来识别高点和低点。
-
-pivothigh函数用于找出过去n根K线的最高价的最大值,即潜在的阻力;pivotlow函数用于找出过去n根K线的最低价的最小值,即潜在的支撑。
-
-之后,通过高点和低点的条件判断,识别出价格创出新高或新低的K线,表示潜在的趋势反转点。在新高点时进行买入操作,在新低点时进行卖出操作。
-
-## 优势
-
-- 利用朗格安德指标识别关键点位,可以提高交易信号的可靠性。
-
-- 结合实际收盘价进行判断,避免被中间的假突破误导。
-
-- 策略逻辑清晰易懂,容易实施。
-
-## 风险
-
-- 如果参数设置不当,可能导致交易频繁,增加交易成本和滑点 loss。
-
-- 短期内可能出现多次虚假突破,造成不必要的交易亏损。
-
-- 长期趋势中可能出现较深的回调,使策略产生错误信号。
-
-## 优化方向
-
-- 可以考虑添加其他指标过滤,例如移动平均线,提高信号的准确性。
-
-- 可以优化参数n的值,以平衡交易频率和信号质量。
-
-- 可以添加止损逻辑,控制单笔交易的最大损失。
-
-## 总结
-
-朗格安德逆转策略整体来说较简单直接,由于仅利用朗格安德指标,可能会出现一定的假信号。可以通过添加辅助指标、优化参数以及设置止损来减少风险和提高策略稳定性。该策略适用于逆势交易,以及趋势较为明确的市场环境。
-
- ||
-
-
 ## Overview
 
 The Langande reversal strategy uses the Langande indicator to identify potential turning points in price and combines it with closing price to determine trend reversal, in order to buy and sell at trend reversal points.
@@ -92,9 +48,6 @@ Then, through the condition judgement of high and low points, it identifies the 
 ## Summary
 
 The Langande reversal strategy is relatively simple and direct. Due to its sole reliance on the Langande indicator, some false signals may occur. Risks can be reduced and stability improved by adding auxiliary indicators, optimizing parameters, and setting stops. The strategy is suitable for counter-trend trading and markets where the trend is relatively clear.
-
-[/trans]
-
 > Strategy Arguments
 
 

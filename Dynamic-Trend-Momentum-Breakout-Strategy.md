@@ -15,40 +15,6 @@ ianzeng123
 
 
 
-[trans]
-
-#### 概述
-动态趋势动量突破策略是一种专业的量化交易方法，专门针对高动量股票设计。该策略通过结合指数移动平均线(EMA)、相对强弱指数(RSI)过滤、成交量确认和平均真实波动范围(ATR)为基础的追踪止损，旨在捕捉强劲的市场突破，同时避免虚假信号。
-
-#### 策略原理
-该策略的核心原理基于多维度市场信号验证：
-1. 使用快速和慢速EMA判断整体趋势方向
-2. 利用RSI评估动量和避免负面背离
-3. 通过成交量突破确认交易信号
-4. 应用ATR动态管理止损和追踪止盈
-
-#### 策略优势
-1. 高精确度信号过滤：多重条件验证降低错误信号概率
-2. 动态风险管理：基于ATR的止损机制保护资金
-3. 趋势跟随：EMA组合确保仅在强势趋势中入场
-4. 动量捕捉：成交量和RSI过滤确保交易质量
-
-#### 策略风险
-1. 市场剧烈波动可能导致止损被触发
-2. 在震荡市场中可能产生更多无效信号
-3. 过度依赖技术指标可能错过重要基本面信息
-
-#### 策略优化方向
-1. 引入机器学习算法优化参数选择
-2. 增加跨时间框架验证机制
-3. 开发更复杂的多因子过滤算法
-4. 结合情绪指标和基本面数据
-
-#### 总结
-动态趋势动量突破策略通过综合多种技术分析工具，构建了一个相对稳健的量化交易方法。其核心在于平衡信号捕捉能力和风险控制，为交易者提供了一个系统化的交易决策框架。
-
-|| 
-
 #### Overview
 The Dynamic Trend Momentum Breakout Strategy is a professional quantitative trading method specifically designed for high-momentum stocks. By combining Exponential Moving Averages (EMA), Relative Strength Index (RSI) filtering, volume confirmation, and Average True Range (ATR)-based trailing stop-loss, the strategy aims to capture strong market breakouts while avoiding false signals.
 
@@ -77,7 +43,7 @@ The core principle of the strategy is based on multi-dimensional market signal v
 4. Incorporate sentiment indicators and fundamental data
 
 #### Summary
-The Dynamic Trend Momentum Breakout Strategy builds a relatively robust quantitative trading method by integrating multiple technical analysis tools. Its core lies in balancing signal capture capability and risk control, providing traders with a systematic trading decision framework.[/trans]
+The Dynamic Trend Momentum Breakout Strategy builds a relatively robust quantitative trading method by integrating multiple technical analysis tools. Its core lies in balancing signal capture capability and risk control, providing traders with a systematic trading decision framework.
 
 
 

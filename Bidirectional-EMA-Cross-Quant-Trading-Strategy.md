@@ -10,68 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/7a465d2a4d7810e10c.png)
- [trans]
-
-### 概述
-
-本策略运用双向EMA指标判断市场主要趋势方向,并结合RSI指标作为入场时机选择,属于趋势跟随类型算法交易策略。
-
-### 策略原理
-
-1. 计算多组不同周期的EMA均线,识别短期、中期和长期三个维度的市场主要趋势方向
-2. 当短期EMA上穿中长期EMA时,判定为看涨趋势形成
-3. 当短期EMA下穿中长期EMA时,判定为看跌趋势形成
-4. 结合RSI指标寻找合适的入场时机,RSI指标可用来判断超买超卖区域
-5. 在看涨趋势下,RSI指标低位时长仓做多;在看跌趋势下,RSI指标高位时介入做空
-
-以上策略主要应用双EMA指标判断主趋势方向,并用RSI指标作为入场信号的选择,属典型的趋势跟随型算法交易策略。
-
-### 策略优势分析
-
-本策略最大的优势在于可清晰判断市场主要趋势方向,并可根据RSI指标选择较好的入场时机。具体优势如下:
-
-1. 使用多组EMA均线套,识别多时间维度下的市场主要趋势方向
-2. EMA指标计算简单,则噪音较小,判断市场主要趋势准确可靠  
-3. RSI指标可有效确定入场和止损点,可大幅优化策略收益回撤比
-4. 算法结构清晰,容易理解修改,属于典型的趋势跟随策略
-5. 可灵活组合其他技术指标,进一步提高策略效果
-
-### 策略风险分析
-
-本策略也存在一定的风险,主要体现在以下几个方面:  
-
-1. 趋势反转时,止损点可能过于理想化从而增加亏损
-2. 无法有效判断趋势反转点,可能错过及时止损退出机会  
-3. EMA参数和RSI参数需要反复测试优化,否则可能导致不稳定
-4. 不能保证每次入场都是完美时机,可能出现不必要的多次反复操作
-5. 突发事件影响下的大幅跳空难以有效回避  
-
-针对上述风险,可从以下几个角度进行优化:
-1. 合理设置止损点,防止单次亏损过大
-2. 增加其他指标判断趋势反转,确保及时止损
-3. 优化参数组合,使之适合更广泛市场情况  
-4. 修改入场和止损逻辑,减少反复操作次数 
-5. 增加异常情况判断,回避市场跳空的不利影响
-
-### 策略优化方向  
-
-从本策略的优势和风险 out,我们可以得到以下几个可优化的方向:
-
-1. 在现有双EMA框架上,引入MACD、BOLL等其他指标,可用于判断趋势反转点,从而优化止盈止损策略
-2. 引入机器学习模型预测趋势反转概率,进一步提升策略效果 
-3. 应用高级过滤器,自动识别异常行情情况,可有效防范损失
-4. 利用遗传算法、深度强化学习等方法自动优化参数,使策略适应更多市场类型
-5. 增加自动止损模块,可根据实际情况动态调整止损点
-
-通过引入更多指标、预测模型、参数优化、风险控制模块等手段,本策略可以得到进一步提升,使得可适应更加复杂多变的市场情况。
-
-### 总结  
-
-本文详细介绍了双向EMA交叉量化交易策略的主要内容。首先,概述了策略的主要思路和运作原理。然后,对策略的优势进行了全面剖析。同时,也分析了策略中可能存在的主要风险点。在此基础上,给出了几个关键的可优化方向。总的来说,本策略具有判断市场主要趋势的优势,也存在一定的可以优化的空间,属于一种典型的量化交易策略。通过不断完善和优化,本策略可以成为投资者算法交易的重要选择之一。
-
-||
-
-### Overview
+ ### Overview
 
 This strategy uses bidirectional EMA indicators to determine the main trend direction of the market, and combines the RSI indicator as the timing of entry selection, which belongs to the trend following algorithm trading strategy.
 
@@ -128,29 +67,27 @@ Through introducing more indicators, prediction models, parameter optimization, 
 
 This article detailed introduced the main content of the bidirectional EMA cross quantitative trading strategy. First, it outlined the main ideas and operating principles of the strategy. Then the advantages of the strategy were fully analyzed. At the same time, it also analyzed the main potential risks in the strategy. On this basis, several key optimizable directions were proposed. In summary, this strategy has the advantage of determining the main trend of the market, and also has some room for optimization, which is a typical quantitative trading strategy. Through continuous improvement and optimization, this strategy can become an important choice for investors' algorithmic trading.
 
-[/trans]
-
 > Strategy Arguments
 
 
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_1|21|Lila linje|
-|v_input_2|true|Visa lila linje|
-|v_input_3|34|Blå linje|
-|v_input_4|true|Visa blå linje|
-|v_input_5|55|Grön linje|
-|v_input_6|true|Visa grön linje|
-|v_input_7|89|Gul linje|
-|v_input_8|true|Visa gul linje|
-|v_input_9|141|Orange linje|
-|v_input_10|true|Visa orange linje|
-|v_input_11|230|Röd linje|
-|v_input_12|true|Visa röd linje|
-|v_input_13|371|Röd linje|
-|v_input_14|true|Visa röd linje|
-|v_input_15|true|Första stapeln|
+|v_input_1|21|Purple line|
+|v_input_2|true|Show purple line|
+|v_input_3|34|Blue line|
+|v_input_4|true|Show blue line|
+|v_input_5|55|Green line|
+|v_input_6|true|Show green line|
+|v_input_7|89|Yellow line|
+|v_input_8|true|Show yellow line|
+|v_input_9|141|Orange line|
+|v_input_10|true|Show orange line|
+|v_input_11|230|Red line|
+|v_input_12|true|Show red line|
+|v_input_13|371|Red line|
+|v_input_14|true|Show red line|
+|v_input_15|true|First bar|
 |v_input_16_close|0|Source: close|high|low|open|hl2|hlc3|hlcc4|ohlc4|
 
 
@@ -178,22 +115,22 @@ exchanges: [{"eid":"Futures_Binance","currency":"BTC_USDT"}]
 //till ett annat värde av % på eget kapital.
 strategy("© Investoz trendvarningar", overlay=true, default_qty_type=strategy.percent_of_equity, default_qty_value=5)
 //Lägger till inmatningar till skriptindikatorn. Användaren kan se och redigera inmatningar i objektdialogen efter eget val.
-ema1 = input(21, minval=1, maxval=500, title="Lila linje")
-valema1=input(true, title="Visa lila linje")
-ema2 = input(34, minval=1, maxval=500, title="Blå linje")
-valema2=input(true, title="Visa blå linje")
-ema3 = input(55, minval=1, maxval=500, title="Grön linje")
-valema3=input(true, title="Visa grön linje")
-ema4 = input(89, minval=1, maxval=500, title="Gul linje")
-valema4=input(true, title="Visa gul linje")
-ema5 = input(141, minval=1, maxval=500, title="Orange linje")
-valema5=input(true, title="Visa orange linje")
-ema6 = input(230, minval=1, maxval=500, title="Röd linje")
-valema6=input(true, title="Visa röd linje")
-ema7 = input(371, minval=1, maxval=500, title="Röd linje")
-valema7=input(true, title="Visa röd linje")
+ema1 = input(21, minval=1, maxval=500, title="Purple line")
+valema1=input(true, title="Show purple line")
+ema2 = input(34, minval=1, maxval=500, title="Blue line")
+valema2=input(true, title="Show blue line")
+ema3 = input(55, minval=1, maxval=500, title="Green line")
+valema3=input(true, title="Show green line")
+ema4 = input(89, minval=1, maxval=500, title="Yellow line")
+valema4=input(true, title="Show yellow line")
+ema5 = input(141, minval=1, maxval=500, title="Orange line")
+valema5=input(true, title="Show orange line")
+ema6 = input(230, minval=1, maxval=500, title="Red line")
+valema6=input(true, title="Show red line")
+ema7 = input(371, minval=1, maxval=500, title="Red line")
+valema7=input(true, title="Show red line")
 //Inmatningar för antal staplar
-startbar = input(1, minval=1, maxval=1, title="Första stapeln")
+startbar = input(1, minval=1, maxval=1, title="First bar")
 Endbar = bar_index
 //Källa input, stängning. Användaren kan själv byta till vilken källa som önskas.
 src = input(close, title="Source")
@@ -208,12 +145,12 @@ eema5 = ema(src, ema5)
 fema6 = ema(src, ema6)
 gema7 = ema(src, ema7)
 //Skriver ut linjer i diagrammet om förhållandet är sant, annars falskt.
-h=plot(valema1 ? aema1 : na, title="Lila linje", style=plot.style_line, linewidth=1, color=color.purple)
-i=plot(valema2 ? bema2 : na, title="Blå linje", style=plot.style_line, linewidth=1, color=color.blue)
-j=plot(valema3 ? cema3 : na, title="Grön linje", style=plot.style_line, linewidth=1, color=color.green)
-k=plot(valema4 ? dema4 : na, title="Gul linje", style=plot.style_line, linewidth=1, color=color.yellow)
-l=plot(valema5 ? eema5 : na, title="Orange linje", style=plot.style_line, linewidth=1, color=color.orange)
-m=plot(valema6 ? fema6 : na, title="Röd linje", style=plot.style_line, linewidth=1, color=color.red)
+h=plot(valema1 ? aema1 : na, title="Purple line", style=plot.style_line, linewidth=1, color=color.purple)
+i=plot(valema2 ? bema2 : na, title="Blue line", style=plot.style_line, linewidth=1, color=color.blue)
+j=plot(valema3 ? cema3 : na, title="Green line", style=plot.style_line, linewidth=1, color=color.green)
+k=plot(valema4 ? dema4 : na, title="Yellow line", style=plot.style_line, linewidth=1, color=color.yellow)
+l=plot(valema5 ? eema5 : na, title="Orange line", style=plot.style_line, linewidth=1, color=color.orange)
+m=plot(valema6 ? fema6 : na, title="Red line", style=plot.style_line, linewidth=1, color=color.red)
 n=plot(valema7 ? gema7 : na, title="Brun linje", style=plot.style_line, linewidth=1, color=color.maroon)
 //Fyller bakgrunden mellan två linjer med en viss färg.
 fill(h, i, color = color.purple,transp=34)

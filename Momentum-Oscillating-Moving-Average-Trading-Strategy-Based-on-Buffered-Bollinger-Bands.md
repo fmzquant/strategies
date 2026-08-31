@@ -10,72 +10,8 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12e916ed27e8c18f675.png)
-[trans]
 
-### 概述
-
-本策略基于布林带指标和震荡移动平均线指标,构建了一个价格通道,通过通道上下边界的突破来发出交易信号。它融合了布林带的自适应性和震荡指标的灵活性,能够及时捕捉市场趋势的改变。
-
-### 策略原理  
-
-本策略使用布林带中轨和震荡移动平均线构建价格通道。中轨采用21周期的布林中轨,上轨和下轨分别向上和向下延伸一个百分比区间。震荡移动平均线以中轨为基础,在超买超卖区域时进行拉伸或收缩。当价格突破上轨时,做多;当价格突破下轨时,做空。
-
-具体来说,布林中轨计算公式为:
-
-    中轨 = N日收盘价的移动平均线 
-
-上轨、下轨计算公式为:
-
-    上轨 = 中轨 + WidthDev * 布林带N日标准差  
-    下轨 = 中轨 - WidthDev * 布林带N日标准差  
-
-其中WidthDev代表向上和向下延伸的百分比区间。 
-
-震荡移动平均线以中轨为基础,根据一定规则进行拉伸或收缩。当市场进入超买或超卖状态时,它会延伸离中轨更远,从而扩大做多做空的机会;当市场趋于平静时,它会向中轨收缩。
-
-综上,本策略通过布林带描绘价格通道,再利用震荡移动平均线指标判断入场时机,实现了突破交易。当价格从下向上突破布林上轨时做多;当价格从上向下突破布林下轨时做空。
-
-### 优势分析
-
-1. 反映市场波动性 
-   布林带能够实时反映市场的波动性和变化趋势,上下轨会根据波动率的变化进行自适应调整。
-
-2. 减少虚假信号
-   震荡移动平均线指标通过“拉伸效应”,可以有效减少布林带产生的虚假信号。它增大布林带通道宽度,延长持仓时间,从而获取更大利润。  
-
-3. 及时捕捉趋势反转
-   布林带上下轨和震荡移动平均线的交叉为发出交易信号提供了时间和价格优势,这可以有效地捕捉关键的多头和空头调整,及时把握市场趋势反转。
-
-### 风险分析
-
-1. 布林带参数设置 
-   布林带的参数如计算周期和标准差倍数等设置不当,会导致上下轨间距过大或过小,产生大量虚假信号,影响策略的稳定性。
-
-2. 震荡幅度过大
-   震荡移动平均线的震荡幅度设置过大时,容易导致止损点过远,增加亏损风险。
-
-3. 反转不及时
-   当市场处于震荡或者无明确趋势时,布林带和震荡移动平均线指标发出的交易信号可能滞后,无法及时反映价格变化,导致反转不及时的风险。  
-
-### 优化方向
-
-1. 优化布林带参数  
-   可以测试不同的周期参数、标准差倍数,选择产生信号次数最佳且虚假信号更少的参数组合。
-
-2. 优化震荡移动平均线参数
-   可以测试不同的震荡幅度和震荡周期,选择能捕捉趋势、减少信号滞后的参�数。 
-
-3. 增加过滤条件
-   可在布林带和震荡移动平均线的交叉信号基础上,加入成交量等辅助指标的过滤,排除一些低效的交易信号。
-
-4. 策略组合
-   该策略可与其它跟踪止损策略或机器学习策略组合使用,进一步控制风险,提高稳定性。
-
-### 总结  
-
-本策略基于布林带自适应通道和震荡移动平均线指标,实现了趋势跟踪和趋势反转捕捉的有机结合。它融合了两种指标的优势,既考虑了市场波动率,也兼顾交易信号的灵活性,从而实现稳定而高效的突破交易。当然,参数优化和风险控制也尤为关键,需要根据不同市场环境不断测试和调整。
-
-|| 
+ 
 
 ### Overview  
 
@@ -138,7 +74,7 @@ In summary, this strategy depicts a price channel using Bollinger Bands and dete
 
 ### Summary
 
-This strategy combines the strengths of adaptive Bollinger Bands and Momentum Oscillating Moving Average, achieving an integration of trend following and catching trend reversals. By balancing market volatility and trading signal flexibility, it realizes stable and effective breakout trading. Parameter optimization and risk control are also critical to test and tune according to varying market environments.[/trans]
+This strategy combines the strengths of adaptive Bollinger Bands and Momentum Oscillating Moving Average, achieving an integration of trend following and catching trend reversals. By balancing market volatility and trading signal flexibility, it realizes stable and effective breakout trading. Parameter optimization and risk control are also critical to test and tune according to varying market environments.
 
 > Strategy Arguments
 

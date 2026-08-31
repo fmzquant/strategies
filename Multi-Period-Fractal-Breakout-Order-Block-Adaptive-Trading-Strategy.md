@@ -11,36 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/168ad16785f251a7b93.png)
 
-[trans]
-#### 概述
-该策略是一个基于分形理论和订单块分析的自适应交易系统。它通过识别市场结构中的关键支撑阻力位,结合分形突破信号和订单块确认来捕捉高概率交易机会。策略集成了多重技术指标,包括分形指标、动态订单块和价格突破确认系统,实现了对市场转折点的精确定位和交易时机的准确把握。
-
-#### 策略原理
-策略的核心逻辑建立在三个主要支柱之上:首先是通过分形计算模块持续监测市场高低点,识别潜在的趋势转折区域;其次是通过订单块分析,在关键价格水平建立供需区域;最后是通过突破确认系统,验证价格突破的有效性。当价格突破上方分形且确认有效时,系统会在最近的红色蜡烛区域创建需求区订单块并开立多单;当价格突破下方分形且确认有效时,系统会在最近的绿色蜡烛区域创建供应区订单块并开立空单。策略还包含了订单块颜色动态更新功能,用于直观显示价格与订单块的相对位置关系。
-
-#### 策略优势
-1. 自适应性强:策略能够根据市场条件动态调整订单块位置和大小,适应不同市场环境。
-2. 多重确认机制:结合分形突破、订单块确认和价格行为分析,降低虚假信号风险。
-3. 风险管理完善:通过清晰的视觉反馈和状态检查表,帮助交易者实时监控策略运行状态。
-4. 可视化效果出色:提供直观的图形界面,包括分形标记、订单块显示和状态检查表。
-5. 参数灵活可调:允许用户根据个人交易风格调整分形周期、突破类型等关键参数。
-
-#### 策略风险
-1. 市场波动风险:在高波动市场中可能产生虚假突破信号,需要额外的过滤机制。
-2. 滑点风险:在流动性不足的市场环境下,订单执行价格可能与理想入场点存在偏差。
-3. 趋势依赖性:策略在横盘市场的表现可能不如趋势市场理想。
-4. 参数敏感性:不同的分形周期设置可能导致显著不同的交易结果。
-5. 计算资源消耗:复杂的可视化功能和实时计算可能增加系统负载。
-
-#### 优化方向
-1. 引入波动率过滤器:通过ATR或其他波动率指标优化交易信号。
-2. 增加趋势确认机制:结合移动平均线或其他趋势指标提高信号可靠性。
-3. 完善止损机制:基于订单块结构设计动态止损策略。
-4. 优化订单块尺寸:根据市场波动性动态调整订单块大小。
-5. 加入成交量分析:结合成交量数据验证突破有效性。
-
-#### 总结
-这是一个融合了技术分析多个维度的复合型交易策略,通过分形理论和订单块分析为核心,构建了一个完整的交易系统。策略的优势在于其自适应性和多重确认机制,但同时也需要注意市场环境对策略表现的影响。通过建议的优化方向,策略的可靠性和稳定性有望得到进一步提升。 || 
+ 
 
 #### Overview
 This strategy is an adaptive trading system based on fractal theory and order block analysis. It captures high-probability trading opportunities by identifying key support and resistance levels in market structure, combining fractal breakout signals with order block confirmation. The strategy integrates multiple technical indicators, including fractal indicators, dynamic order blocks, and price breakout confirmation systems, achieving precise positioning of market turning points and accurate timing of trades.
@@ -70,9 +41,7 @@ The core logic of the strategy is built on three main pillars: first, continuous
 5. Add volume analysis: Verify breakout validity by incorporating volume data.
 
 #### Summary
-This is a composite trading strategy that integrates multiple dimensions of technical analysis, building a complete trading system with fractal theory and order block analysis at its core. The strategy's strengths lie in its adaptability and multiple confirmation mechanisms, but attention must also be paid to the impact of market environment on strategy performance. Through the suggested optimization directions, the reliability and stability of the strategy can be further improved.[/trans]
-
-
+This is a composite trading strategy that integrates multiple dimensions of technical analysis, building a complete trading system with fractal theory and order block analysis at its core. The strategy's strengths lie in its adaptability and multiple confirmation mechanisms, but attention must also be paid to the impact of market environment on strategy performance. Through the suggested optimization directions, the reliability and stability of the strategy can be further improved.
 
 > Source (PineScript)
 

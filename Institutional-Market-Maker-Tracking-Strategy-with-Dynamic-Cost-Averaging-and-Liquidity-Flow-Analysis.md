@@ -12,46 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d86d684d82bb3294d54f.png)
 ![IMG](https://www.fmz.com/upload/asset/2d98ef7903c678e0187e1.png)
 
-
-
-[trans]
-#### 概述
-该策略是一个基于做市商行为和机构级流动性分析的交易系统。它通过追踪市场流动性指标、订单簿失衡和做市商足迹来识别高概率交易机会。策略融合了动态成本平均(DCAA)方法与对冲流动性系统,以实现风险最小化和收益最大化。该系统完全摒弃了传统技术指标,转而依赖于机构级别的市场微观结构分析。
-
-#### 策略原理
-策略的核心是通过多维度数据来追踪做市商行为:
-1. 使用VWAP(成交量加权平均价格)来确认机构吸筹/出货位置
-2. 通过CVD(累计成交量差)来检测多空双方的实际力量对比
-3. 结合订单簿数据来识别流动性陷阱和止损猎杀区域
-4. 通过动态成本平均方法在关键支撑位建立分批建仓系统
-5. 配合对冲系统在市场剧烈波动时进行风险管理
-
-#### 策略优势
-1. 完全基于市场微观结构,避免了技术指标滞后的问题
-2. 通过对做市商行为的分析,能够提前预测大规模价格波动
-3. 动态成本平均系统能够在下跌中逐步建仓,降低整体持仓成本
-4. 对冲系统提供了额外的风险保护层,特别是在市场剧烈波动时期
-5. 策略可以实时适应市场条件,不依赖于静态支撑阻力位
-
-#### 策略风险
-1. 需要实时高质量的市场数据,对数据延迟较为敏感
-2. 在市场流动性极度缺乏时可能难以准确判断做市商意图
-3. 过度依赖做市商行为分析可能在某些市场条件下产生误判
-4. 动态成本平均系统在持续下跌市场中可能积累较大亏损
-5. 对冲策略的成本可能在横盘市场中侵蚀盈利
-
-#### 策略优化方向
-1. 引入机器学习算法来提高做市商行为识别的准确性
-2. 优化动态成本平均系统的资金分配比例
-3. 增加更多的市场微观结构指标来提高信号可靠性
-4. 开发自适应的对冲比例调整机制
-5. 建立更完善的风险控制系统,特别是在极端市场条件下
-
-#### 总结
-这是一个建立在市场微观结构基础上的机构级交易策略。通过对做市商行为的深入分析,结合动态成本平均和对冲系统,策略能够在不同市场环境下保持稳定性。虽然策略实施需要克服一些技术和操作上的挑战,但其核心理念和方法论具有扎实的市场微观结构基础,具备长期稳定盈利的潜力。 
-
-|| 
-
 #### Overview
 This strategy is a trading system based on market maker behavior and institutional-level liquidity analysis. It identifies high-probability trading opportunities by tracking market liquidity indicators, order book imbalances, and market maker footprints. The strategy combines Dynamic Cost Averaging (DCAA) with a hedge flow system to minimize risks and maximize returns. The system completely abandons traditional technical indicators in favor of institutional-level market microstructure analysis.
 
@@ -85,9 +45,7 @@ The core of the strategy is tracking market maker behavior through multi-dimensi
 5. Establish more comprehensive risk control systems, especially under extreme market conditions
 
 #### Summary
-This is an institutional-grade trading strategy built on market microstructure foundations. Through deep analysis of market maker behavior, combined with dynamic cost averaging and hedging systems, the strategy maintains stability across different market environments. While implementation faces some technical and operational challenges, its core concepts and methodology have solid market microstructure foundations, showing potential for long-term stable profitability.[/trans]
-
-
+This is an institutional-grade trading strategy built on market microstructure foundations. Through deep analysis of market maker behavior, combined with dynamic cost averaging and hedging systems, the strategy maintains stability across different market environments. While implementation faces some technical and operational challenges, its core concepts and methodology have solid market microstructure foundations, showing potential for long-term stable profitability.
 
 > Source (PineScript)
 

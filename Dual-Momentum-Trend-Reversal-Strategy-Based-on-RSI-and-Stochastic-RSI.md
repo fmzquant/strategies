@@ -12,45 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8e83690632a641ddffc.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8d5931f4f703200ab8c.png)
 
-
-
-
-[trans]
-#### 概述
-这是一个结合相对强弱指标(RSI)和随机相对强弱指标(Stochastic RSI)的趋势反转交易策略。该策略通过识别市场的超买超卖状态以及动量变化来捕捉潜在的反转点,从而进行交易。策略的核心是将RSI指标作为基础动量指标,再在此基础上计算Stochastic RSI来进一步确认价格动量的变化方向。
-
-#### 策略原理 
-策略的主要逻辑包含以下几个关键步骤:
-1. 首先计算收盘价的RSI值,用于判断整体的超买超卖状态
-2. 以RSI值为基础计算Stochastic RSI的%K线和%D线
-3. 在RSI处于超卖区域(默认低于30)且Stochastic RSI的%K线自下而上穿越%D线时,触发做多信号
-4. 在RSI处于超买区域(默认高于70)且Stochastic RSI的%K线自上而下穿越%D线时,触发做空信号
-5. 当出现相反的RSI条件或Stochastic RSI发生反向交叉时,平仓退出
-
-#### 策略优势
-1. 双重确认机制 - 通过RSI和Stochastic RSI的配合使用,可以有效降低假突破带来的风险
-2. 可自定义参数 - 策略的关键参数如RSI周期、超买超卖阈值等都可以根据不同市场情况进行调整
-3. 动态可视化 - 策略提供了RSI和Stochastic RSI的实时图表展示,便于交易者进行监控
-4. 风险管理集成 - 包含了完整的止损和获利了结机制
-5. 适应性强 - 可以应用于不同的时间周期和市场环境
-
-#### 策略风险
-1. 震荡市场风险 - 在横盘震荡市场中可能产生频繁的假信号
-2. 滞后性风险 - 由于使用了多重均线平滑,信号可能出现一定程度的滞后
-3. 参数敏感性 - 不同的参数设置可能导致显著不同的交易结果
-4. 市场环境依赖 - 在强趋势市场中可能会错过部分行情
-5. 资金管理风险 - 需要合理设置持仓比例以控制风险
-
-#### 策略优化方向
-1. 增加趋势过滤器 - 可以添加长期移动平均线作为趋势过滤器,只在趋势方向上开仓
-2. 优化止损机制 - 可以引入动态止损,如跟踪止损或ATR止损
-3. 引入成交量指标 - 结合成交量分析可以提高信号的可靠性
-4. 添加时间过滤 - 可以避开重要新闻发布时间或者低流动性时段
-5. 开发自适应参数 - 根据市场波动率自动调整策略参数
-
-#### 总结
-这是一个结合了动量和趋势反转的综合策略,通过RSI和Stochastic RSI的协同作用来识别潜在的交易机会。策略设计合理,具有较好的可调整性和适应性。但在实际应用中需要注意市场环境的选择和风险控制,建议在实盘交易前进行充分的回测和参数优化。 || 
-
 #### Overview
 This is a trend reversal trading strategy that combines the Relative Strength Index (RSI) and Stochastic RSI indicators. The strategy aims to capture potential reversal points by identifying overbought and oversold conditions along with momentum shifts in the market. The core concept involves using RSI as the base momentum indicator and calculating Stochastic RSI to further confirm momentum direction changes.
 
@@ -84,8 +45,7 @@ The main logic includes the following key steps:
 5. Develop Adaptive Parameters - Automatically adjust strategy parameters based on market volatility
 
 #### Summary
-This is a comprehensive strategy combining momentum and trend reversal concepts, using the synergy between RSI and Stochastic RSI to identify potential trading opportunities. The strategy is well-designed with good adjustability and adaptability. However, careful attention must be paid to market environment selection and risk control in practical applications, and thorough backtesting and parameter optimization are recommended before live trading.[/trans]
-
+This is a comprehensive strategy combining momentum and trend reversal concepts, using the synergy between RSI and Stochastic RSI to identify potential trading opportunities. The strategy is well-designed with good adjustability and adaptability. However, careful attention must be paid to market environment selection and risk control in practical applications, and thorough backtesting and parameter optimization are recommended before live trading.
 
 
 > Source (PineScript)

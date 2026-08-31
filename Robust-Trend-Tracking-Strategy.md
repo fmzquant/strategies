@@ -11,53 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/105241a33cc3b4f4db9.png)
 
-[trans]
-
-## 概述
-此策略的主要思想是结合123反转形态和智能资金流量指数(SMI)指标,实现稳定的趋势追踪交易。当两个信号同时发出买入或者卖出信号时,该策略才会建立对应的多头或者空头仓位。
-
-## 策略原理
-该策略由两部分组成:
-
-1. 123反转策略:该策略基于股票的收盘价和9日Stoch指标实现反转交易。具体来说,当连续两天的收盘价关系发生反转(即前一天的收盘价高于前两天,后一天的收盘价低于前一天),并且Stoch的快线高于慢线时,做空;当连续两天的收盘价关系发生反转(即前一天收盘价低于前两天,后一天收盘价高于前一天),并且Stoch的快线低于慢线时,做多。
-
-2. SMI策略:该策略基于智能资金流量指数实现趋势追踪。SMI指标可以反映机构资金和散户资金的博弈,SMI上升预示着机构资金正在吸纳,反之则预示机构资金正在抛售。当SMI指标上升时做多,下降时做空。
-
-当123反转形态和SMI指数同时发出买入信号时,该策略才会采取多头仓位;当两者同时发出卖出信号时,该策略才会采取空头仓位。
-
-## 策略优势
-该策略结合反转形态和趋势追踪指标,可以有效识别市场反转点并跟踪趋势,实现稳定的盈利。具体优势如下:
-
-1. 123反转形态具有较高的胜率和盈利率,可以有效识别短期反转机会。
-
-2. SMI指标可以反映机构资金流向,跟踪机构资金可以获得较稳定的盈利。
-
-3. 结合使用反转形态和趋势追踪指标,可以提高信号的质量,减少不必要的交易,有效控制风险。
-
-## 策略风险
-该策略也存在一定的风险,主要集中在以下几个方面:
-
-1. 123反转形态存在一定的假信号风险,不能完全避免亏损的交易。可以适当优化参数,提高信号质量。
-
-2. SMI指标存在一定的滞后,不能完全实时反映资金流向。可以结合其他指标进行验证,提高准确性。 
-
-3. 双重信号带来过于保守的问题,可能错过较强势的单边趋势行情。可以适当放宽信号条件,降低过滤标准。
-
-## 优化方向 
-该策略还可以从以下几个方面进行进一步优化:
-
-1. 优化参数,寻找最优参数组合,提高策略盈利能力。
-
-2. 增加止损机制,可以有效控制单笔损失。
-
-3. 结合其他指标或形态,进一步验证信号质量,提高信号准确率。
-
-4. 针对不同品种分别优化参数,提高策略适应性。
-
-## 总结
-该策略整体思路清晰,有效结合反转形态和趋势跟踪指标,可以稳定识别短期反转机会并跟踪中长期趋势。通过参数优化和机制设计的改进,可以进一步增强策略的盈利能力和风险控制能力。
-
-
 ## Overview
 The main idea of this strategy is to combine the 123 reversal pattern and the Smart Money Index (SMI) indicator to achieve stable trend tracking trading. The strategy will only establish corresponding long or short positions when both signals issue buy or sell signals at the same time.
 
@@ -103,8 +56,6 @@ The strategy can also be further optimized in the following aspects:
 
 ## Summary 
 The overall idea of the strategy is clear, effectively combining reversal patterns and trend tracking indicators to steadily identify short-term reversal opportunities and track medium-to-long term trends. By improving parameters optimization and mechanism design, the profitability and risk control capabilities of the strategy can be further enhanced.
-
-[/trans]
 
 > Strategy Arguments
 

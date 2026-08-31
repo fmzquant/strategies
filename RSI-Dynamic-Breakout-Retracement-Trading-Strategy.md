@@ -11,44 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a52333dbe7e714b65a.png)
 
-[trans]
-#### 概述
-该策略是一个基于相对强弱指数(RSI)的动态交易系统,通过识别超买超卖区域进行交易。策略在特定时间窗口内运行,结合了部分获利和动态止损的风险管理机制。系统通过监控RSI指标在70和30水平的突破来确定交易信号,并使用灵活的仓位管理方法来优化交易结果。
-
-#### 策略原理
-策略的核心逻辑建立在RSI指标的基础上,主要包含以下关键要素:
-1. 使用14周期的RSI指标计算市场动量
-2. 在RSI突破70时产生做空信号,突破30时产生做多信号
-3. 在GMT+2时区的8:00至11:00之间执行交易
-4. 采用50%部分获利和完全获利的双层止盈机制
-5. 在达到部分获利目标后,将止损点调整至保本位置
-6. 使用固定点数(PIPS)来设置止损和获利目标
-
-#### 策略优势
-1. 交易时间窗口限制减少了虚假信号,提高了交易质量
-2. 双层止盈机制既保证了快速获利,又不会错过大行情
-3. 动态止损保护既得利润,降低回撤风险
-4. RSI指标的使用帮助识别市场超买超卖状态
-5. 策略参数可根据不同市场条件灵活调整
-
-#### 策略风险
-1. RSI指标在横盘市场可能产生虚假信号
-2. 固定时间窗口可能错过其他时段的良好机会
-3. 固定点数的止损可能不适应所有市场环境
-4. 在剧烈波动市场中可能面临滑点风险
-5. 部分获利机制可能过早退出强势行情
-
-#### 策略优化方向
-1. 引入自适应的RSI周期,使指标更好地适应市场状态
-2. 根据波动率动态调整止损和获利水平
-3. 增加趋势过滤器,减少横盘市场的虚假信号
-4. 优化交易时间窗口,根据市场特征自动调整
-5. 加入成交量确认机制,提高信号可靠性
-
-#### 总结
-该策略通过RSI指标捕捉市场超买超卖机会,结合严格的风险管理和时间过滤,形成了一个完整的交易系统。虽然存在一些局限性,但通过建议的优化方向可以进一步提升策略的稳定性和盈利能力。策略的模块化设计使其易于调整和优化,适合作为基础策略进行个性化改进。
-
-|| 
+ 
 
 #### Overview
 This strategy is a dynamic trading system based on the Relative Strength Index (RSI), identifying trades through overbought and oversold zones. Operating within specific time windows, it incorporates partial profit-taking and dynamic stop-loss mechanisms. The system monitors RSI breakthroughs at levels 70 and 30 to determine trading signals, utilizing flexible position management methods to optimize trading outcomes.
@@ -84,9 +47,7 @@ The core logic is built on the RSI indicator, encompassing these key elements:
 5. Incorporate volume confirmation to improve signal reliability
 
 #### Summary
-The strategy captures market overbought and oversold opportunities through RSI indicator, combining strict risk management and time filtering to form a complete trading system. While it has some limitations, the suggested optimization directions can further enhance strategy stability and profitability. The modular design makes it easy to adjust and optimize, suitable as a base strategy for personalized improvements.[/trans]
-
-
+The strategy captures market overbought and oversold opportunities through RSI indicator, combining strict risk management and time filtering to form a complete trading system. While it has some limitations, the suggested optimization directions can further enhance strategy stability and profitability. The modular design makes it easy to adjust and optimize, suitable as a base strategy for personalized improvements.
 
 > Source (PineScript)
 

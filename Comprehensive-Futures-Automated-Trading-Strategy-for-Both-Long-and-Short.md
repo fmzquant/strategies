@@ -64,7 +64,7 @@ The strategy combines indicators to assess market structure and achieves steady 
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_1|true|單邊|
+|v_input_1|true|Long-only mode|
 |v_input_2|9|ST ATR Period|
 |v_input_3|3.9|ST ATR Multiplier|
 |v_input_4_hl2|0|ST Source: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|

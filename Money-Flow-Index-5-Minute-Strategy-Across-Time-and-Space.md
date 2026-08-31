@@ -10,54 +10,9 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/133f3f4ab85a747d318.png)
- [trans]
-### 概述
+ 
 
-这是一个利用莫非指标识别市场中的“大鲨鱼”的简单量化策略。它适用于5分钟时间框架,主要用于加密货币交易。
-
-### 策略原理  
-
-该策略使用长度为3的莫非指标,将超买线设定为100,超卖线设定为0。策略等待莫非指标达到超买水平,表明市场中有“大鲨鱼”的存在。如果当天前两个莫非指标超买点,价格仍能保持涨势,那么这是一个多头入场信号。  
-
-当莫非指标=100并且下根K线为大阳线时,做多入场。止损线设定为该交易日的最低点,止盈在入场后60分钟内。
-
-对于做空方面,可以使用镜像逻辑。即莫非指标达到超卖时,下根K线为大阴线时,做空入场。
-
-### 策略优势
-
-1. 使用莫非指标可以有效识别市场中“大鲨鱼”积累潜力股的行为,这类股票有继续上涨的可能。
-
-2. 利用K线实体识别力度较强的突破点,可以过滤许多假突破。 
-
-3. 结合SMA滤波器,避免买入趋势下跌的股票,可有效减少交易风险。
-
-4. 使用日内超短线操作方法,60分钟止盈可以迅速锁定利润,降低回撤概率。
-
-### 策略风险 
-
-1. 莫非指标可能会生成假信号,导致不必要的亏损。可以适当调整参数或添加其他指标进行过滤。
-
-2. 60分钟超短线操作 METHOD 可能过于激进,不适合波动率较高的股票。可以适当调整止盈时间或者使用移动止损来优化。
-
-3. 没有考虑到重大的宏观经济事件发生时带来的市场冲击风险。这时应暂停策略,待市场恢复稳定后继续交易。
-
-### 策略优化方向
-
-1. 可以测试不同参数组合,如调整莫非指标长度,优化SMA周期参数等。
-
-2. 尝试添加其他指标进行组合,如BOLL通道、KD指标等,看是否可以提高信号的准确性。
-
-3. 测试适当放宽止损幅度,是否可以获得更大的单笔利润。
-
-4. 尝试基于该策略框架开发适用于其他周期的版本,如15分钟或30分钟版本。
-
-### 总结
-
-该策略整体来说非常简洁且容易理解,基本思路与经典的跟踪“大鲨鱼”思路一致。通过识别莫非指标超买超卖的关键点,配合K线实体筛选,可以过滤许多噪声。SMA滤波器的添加也进一步提高了策略的稳定性。  
-
-60分钟超短线操作方式可以快速获利,但也带来了较高的操作风险。整体而言,这是一个非常有实战价值的量化策略模板,值得深入研究与优化,也为我们提供了宝贵的策略开发思路。
-
-|| 
+ 
 
 ### Overview
 
@@ -104,8 +59,6 @@ The logic above can be used in a mirrored fashion to take short entries as well.
 The strategy is simple and easy to understand, aligning with the classic approach of tracking "big sharks". Key overbought/oversold levels combined with candlestick filters remove noise. The SMA filter further enhances robustness.  
 
 The 60-minute timeframe allows fast profits but also introduces higher risk. Overall an insightful strategy template for exploration and optimization, providing a blueprint for systematic development.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -8,66 +8,8 @@ Quantitative-Trading-Strategy-Based-on-Double-EMA-and-Price-Volatility-Index
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/8251baa71aa5d47209.png)
- [trans]
-
-## 概述
-
-本策略名为“均线指标与价格波动率组合策略”。它结合了双指数移动平均线(Double Exponential Moving Average, DEMA)和价格波动率指标,实现了一个综合交易信号的生成。
-
-## 策略原理  
-
-该策略由两部分组成:
-
-1. DEMA指标。该指标计算20日和2日的指数移动平均线,当价格从上方向下突破2日线或从下方向上突破20日线时,产生交易信号。
-
-2. (最高价-最低价)/收盘价波动率指标。该指标反映价格在一个周期内的波动幅度。这里我们计算过去20根K线的波动率指标的16日简单移动平均,当当前K线的波动率高于或低于该平均值时,产生交易信号。
-
-将两组信号结合,如果DEMA和波动率指标同时发出信号,则生成最终的多头或空头交易指令。
-
-## 优势分析
-
-该策略具有以下优势:
-
-1. 组合多个指标,可以减少假信号,提高信号的可靠性。
-
-2. 20日线能有效识别中长线趋势,2日线能捕捉短期波动,组合使用可以应对不同市场环境。  
-
-3. 波动率指标能够有效反映市场的波动性和交易机会。
-
-4. 通过调整参数,可以适应不同品种和周期的市场。
-
-## 风险分析  
-
-该策略也存在一些风险:  
-
-1. 在波动率较低的趋势市中,波动率指标可能会产生错误信号。可以结合其他流动性指标进行过滤。
-
-2. 在快速单边行情中,双EMA可能产生滞后。可以适当缩短参数,或与其他指标组合。 
-
-3. 多指标组合增加了策略复杂度,也增加了过优化的风险。需进行全面回测和参数稳定性检验。
-
-## 优化方向
-
-该策略还可以从以下方面进行优化:
-
-1. 增加止损机制,可以有效控制每单损失。
-
-2. 根据不同品种和周期参数进行优化,使参数更具适应性。
-
-3. 增加流动性和波动率指标进行组合,提高信号质量。
-
-4. 增加机器学习算法,实现动态参数和权重调整。
-
-## 总结
-
-该策略结合双EMA和波动率指标,能够在趋势和震荡市中都获得不错的交易表现。同时也存在一定的风险,需要进一步优化与改进。但总体来说,该策略思路清晰,具有实际操作价值。
-
-||
-
-
-## Overview  
+ ## Overview  
 
 This strategy is called "Moving Average Indicator and Price Volatility Combination Strategy". It combines the double exponential moving average (DEMA) and the price volatility index to generate a comprehensive trading signal.  
 
@@ -118,9 +60,6 @@ The strategy can also be optimized in the following aspects:
 ## Conclusion  
 
 By combining double EMAs and volatility indexes, this strategy can achieve good trading performance in both trending and volatile markets. There are also certain risks that require further optimization and improvement. But overall, the strategy idea is clear and has practical value.
-
-[/trans]
-
 > Strategy Arguments
 
 

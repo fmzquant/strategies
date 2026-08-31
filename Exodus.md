@@ -9,42 +9,38 @@ Exodus[策略代写]
 
 > Strategy Description
 
-本系统是双向合约策略，在满足条件是做多或做空，下单量为合约的数量，使用币安时下单量为几个btc，使用火币时下单量单位为张
-【7-31更新】
-本策略的参数适合在1小时级别运行，但小时级别开单次数过少，因此更新分钟级别。但是分钟级别需要手动修改参数。
+This is a two-way futures strategy that goes long or short when its conditions are met. Order size is specified in contract quantity. On Binance, the order size is measured in BTC, while on Huobi the unit is contracts.
 
-以下回测结果为小时周期
-**** 4-27至7-25****
-本金300,下单量0.04btc
- ![IMG](https://www.fmz.com/upload/asset/1f4e9984f53d575c506c1.png) 
-**** 1-1至7-25****
-本金300，下单量0.03btc,0.04的下单量本金不足
-若要自己实盘使用请进行回测决定自己的下单量
- ![IMG](https://www.fmz.com/upload/asset/1f47c59a9ac1f93694193.png) 
- 
- 如果赚到钱了不妨支持一下作者
-  ![IMG](https://www.fmz.com/upload/asset/1f4c36c1fca8b23e727c7.jpg) 
-  
+**7-31 Update**
+This strategy's parameters are suitable for the 1-hour timeframe, but the hourly timeframe generated too few entries, so a minute-level version was added. The minute-level version requires manual parameter adjustments.
 
+The backtest results below are for the hourly timeframe.
+
+**** 4-27 to 7-25 ****
+Starting capital: 300, order size: 0.04 BTC
+![IMG](https://www.fmz.com/upload/asset/1f4e9984f53d575c506c1.png)
+**** 1-1 to 7-25 ****
+Starting capital: 300, order size: 0.03 BTC. A 0.04 BTC order size requires more capital.
+If you want to use this live, please backtest it first to determine your own appropriate order size.
+![IMG](https://www.fmz.com/upload/asset/1f47c59a9ac1f93694193.png)
+
+If you make money with it, please consider supporting the author.
+![IMG](https://www.fmz.com/upload/asset/1f4c36c1fca8b23e727c7.jpg)
 > Strategy Arguments
-
-
 
 |Argument|Default|Description|
 |----|----|----|
-|afterEmaCrossTime|4|在k线金叉或死叉后几根k线内macd满足条件才允许操作|
-|buyVolume|0.016|交易数量(0.016BTC)|
-|stopLossRate|true|止损率（未计算杠杆）|
-|winLossRate|5|盈亏比|
-|period|60|周期（分）|
-|EMA1|8|最快均线周期|
-|EMA2|34|中等速度均线周期|
-|EMA3|89|最慢均线周期|
-|MACD1|16|MACD参数1|
-|MACD2|26|MACD参数2|
-|MACD3|9|MACD参数3|
-
-
+|afterEmaCrossTime|4|Number of bars after an EMA golden/death cross during which MACD must confirm the trade|
+|buyVolume|0.016|Trade size (0.016 BTC)|
+|stopLossRate|true|Stop-loss rate (excluding leverage)|
+|winLossRate|5|Risk-reward ratio|
+|period|60|Timeframe (minutes)|
+|EMA1|8|Fastest EMA period|
+|EMA2|34|Medium-speed EMA period|
+|EMA3|89|Slowest EMA period|
+|MACD1|16|MACD parameter 1|
+|MACD2|26|MACD parameter 2|
+|MACD3|9|MACD parameter 3|
 > Source (javascript)
 
 ``` javascript
@@ -103,7 +99,7 @@ function Open(direction) {
         exchange.SetDirection("sell");
         exchange.Sell(-1, amount);
     }
-    
+
 }
 
 function Close(ticker,fastLine,midLine) {
@@ -112,13 +108,13 @@ function Close(ticker,fastLine,midLine) {
     if (pos == null) {
         return;
     }
-    
+
     if (pos.Type == PD_LONG) {
         if (ticker.Last < pos.Price*(1- stopLossRate/100) || ticker.Last > pos.Price*(1+(stopLossRate*winLossRate)/100)) {
             Log("平多,开仓价为:",pos.Price,"本次盈利:",pos.Profit);
             exchange.SetDirection("closebuy");
             exchange.Sell(-1, pos.Amount);
-            
+
         }
     }
     if (pos.Type == PD_SHORT) {
@@ -171,7 +167,7 @@ function main() {
         let curEma89 = ema89[emaChart89.length - 1];
         let lastEma89 = ema89[emaChart89.length - 2];
 
-        //判断8均线和34均线的死叉和金叉，当金叉时如果当前实体在ema89均线以上做多，当死叉时如果实体在ema89以下时做空      
+        //判断8均线和34均线的死叉和金叉，当金叉时如果当前实体在ema89均线以上做多，当死叉时如果实体在ema89以下时做空
         let ticker = exchange.GetTicker();
         let low = ticker.Low;
         let high = ticker.High;
@@ -234,18 +230,18 @@ function main() {
 
         //均线系统
         var curTime = GetCurTime(r);
-       
+
         if (NearEmaCross(curTime) && NearMacdCross(curTime)) {
-            
+
             if (emaMeet == 1 && macdMeet == 1 && curDif >= 0) {
                 Open(1);
             }
-           
+
             if (emaMeet == 2 && macdMeet == 2 && curDif < 0) {
                 Open(2);
             }
         }
-        
+
 
 
 

@@ -9,9 +9,10 @@ Ver11
 
 > Strategy Description
 
-## 不同计价币的现货对冲策略 Ver1.1
+## Spot Hedging Strategy for Markets with Different Quote Currencies Ver1.1
 
-相关文章：https://www.fmz.com/digest-topic/7666
+Related article: https://www.fmz.com/digest-topic/7666
+
 
 > Strategy Arguments
 
@@ -19,31 +20,28 @@ Ver11
 
 |Argument|Default|Description|
 |----|----|----|
-|keepBalanceCyc|300|平衡周期|
-|diffAsPercentage|true|使用差价百分比|
-|hedgeDiffPriceA2B|20|对冲差价AtoB|
-|hedgeDiffPriceB2A|20|对冲差价BtoA|
-|hedgeDiffPercentageA2B|4|对冲差价百分比AtoB|
-|hedgeDiffPercentageB2A|4|对冲差价百分比BtoA|
-|minHedgeAmount|0.005|对冲最小下单量|
-|maxHedgeAmount|0.2|对冲最大下单量|
-|rateA|true|A交易所汇率|
-|rateB|true|B交易所汇率|
-|isReset|false|重置所有信息|
-|pricePrecisionA|2|A价格精度|
-|amountPrecisionA|3|A下单量精度|
-|pricePrecisionB|2|B价格精度|
-|amountPrecisionB|3|B下单量精度|
-|slidePrice|true|下单滑价|
-|marginType|0|杠杆类型: 普通币币|逐仓杠杆|全仓杠杆|
-
-
-
+|keepBalanceCyc|300|Rebalancing cycle|
+|diffAsPercentage|true|Use spread percentage|
+|hedgeDiffPriceA2B|20|Hedge spread A to B|
+|hedgeDiffPriceB2A|20|Hedge spread B to A|
+|hedgeDiffPercentageA2B|4|Hedge spread percentage A to B|
+|hedgeDiffPercentageB2A|4|Hedge spread percentage B to A|
+|minHedgeAmount|0.005|Minimum hedge order size|
+|maxHedgeAmount|0.2|Maximum hedge order size|
+|rateA|true|Exchange A rate|
+|rateB|true|Exchange B rate|
+|isReset|false|Reset all data|
+|pricePrecisionA|2|Exchange A price precision|
+|amountPrecisionA|3|Exchange A order size precision|
+|pricePrecisionB|2|Exchange B price precision|
+|amountPrecisionB|3|Exchange B order size precision|
+|slidePrice|true|Order slippage|
+|marginType|0|Margin type: Spot | Isolated Margin | Cross Margin|
 
 |Button|Default|Description|
 |----|----|----|
-|A2B|false|修改AtoB的参数|
-|B2A|false|修改BtoA的参数|
+|A2B|false|Modify A-to-B parameters|
+|B2A|false|Modify B-to-A parameters|
 
 
 > Source (javascript)

@@ -70,7 +70,7 @@ The VR reversal trading strategy is a simple, easy-to-implement short-term quant
 |Argument|Default|Description|
 |----|----|----|
 |v_input_1|20|Length|
-|v_input_2|3|閾値|
+|v_input_2|3|Threshold|
 |v_input_3|true|direction picker # bars|
 |v_input_4|2019|Start Year|
 |v_input_5|true|Start Month|

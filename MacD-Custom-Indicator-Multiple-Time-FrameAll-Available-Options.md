@@ -16,10 +16,9 @@ Special Thanks to that incredible person in Tech Support whoem I won't say you r
 Note the feature Tech Support showed me on how to set the default timeframe of the indicator to the chart Timeframe, but also allow you to choose a different timeframe.
 By the way I fully disclose that I completely STOLE the Dots at the MAcd Cross from "TheLark"
 
-**回测**
+**Backtest**
 
- ![IMG](https://www.fmz.com/upload/asset/1e9c4d77121b59a35fd.png) 
-
+![IMG](https://www.fmz.com/upload/asset/1e9c4d77121b59a35fd.png)
 > Strategy Arguments
 
 

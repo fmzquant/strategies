@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1395beb3624150f92b6.png)
 
-[trans]
-#### 策略概述
-本策略是一个基于多重趋势线突破的智能交易系统。它通过动态识别关键支撑阻力位,结合多种技术指标计算趋势线斜率,在价格突破趋势线时进行交易。该策略不仅能够捕捉市场趋势的转折点,还可以通过参数优化来适应不同市场环境。
-
-#### 策略原理
-策略的核心逻辑包括三个主要部分:首先通过回溯期(Lookback Period)来识别关键的高点和低点,形成初始支撑阻力位;其次,根据选择的计算方法(ATR、标准差或线性回归)动态计算趋势线斜率,使趋势线能够更好地适应市场波动;最后,通过监测价格与趋势线的关系,在突破发生时触发交易信号。系统还包含防止回测过度拟合的机制,通过backpainting参数来模拟真实交易环境。
-
-#### 策略优势
-1. 适应性强:通过多种斜率计算方法和可调参数,策略可以适应不同市场环境
-2. 风险控制完善:趋势线的动态调整能力有助于及时识别趋势改变,减少假突破带来的损失
-3. 可视化效果好:策略提供清晰的视觉反馈,包括趋势线延伸和突破标记
-4. 信号确认机制:通过多重条件验证来确保交易信号的可靠性
-
-#### 策略风险
-1. 市场剧烈波动时可能产生虚假信号
-2. 趋势线计算的延迟性可能导致入场时机略有滞后
-3. 参数选择不当可能导致过度交易或错过重要机会
-4. 在横盘整理市场中可能产生频繁的假突破信号
-
-#### 策略优化方向
-1. 引入成交量指标来验证突破的有效性
-2. 添加市场波动率过滤器,在高波动期间调整参数
-3. 整合其他技术指标来提高信号的准确性
-4. 开发自适应的参数调整机制
-5. 增加止损和获利了结的智能计算方法
-
-#### 总结
-该策略通过综合运用多种技术分析方法,构建了一个可靠的趋势线突破交易系统。它的优势在于能够动态适应市场变化,同时提供清晰的交易信号。虽然存在一些固有风险,但通过合理的参数设置和持续优化,可以显著提高策略的稳定性和盈利能力。 || 
-
 #### Strategy Overview
 This strategy is an intelligent trading system based on multiple trendline breakouts. It dynamically identifies key support and resistance levels, combines multiple technical indicators to calculate trendline slopes, and executes trades when prices break through trendlines. The strategy not only captures market trend turning points but can also be optimized to adapt to different market conditions.
 
@@ -66,7 +37,7 @@ The core logic includes three main components: First, it identifies key highs an
 5. Implement intelligent stop-loss and profit-taking calculation methods
 
 #### Summary
-The strategy builds a reliable trendline breakout trading system by comprehensively utilizing various technical analysis methods. Its strength lies in the ability to dynamically adapt to market changes while providing clear trading signals. Although some inherent risks exist, the strategy's stability and profitability can be significantly improved through proper parameter settings and continuous optimization.[/trans]
+The strategy builds a reliable trendline breakout trading system by comprehensively utilizing various technical analysis methods. Its strength lies in the ability to dynamically adapt to market changes while providing clear trading signals. Although some inherent risks exist, the strategy's stability and profitability can be significantly improved through proper parameter settings and continuous optimization.
 
 
 

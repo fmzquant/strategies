@@ -10,60 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/af41b3f93b4a5f1146.png)
- [trans]
-## 概述
-
-本策略通过布林带、KC通道和蜡烛线颜色等多重指标判断市场的压缩和释放,并结合均线的方向判断 establishment 趋势,在趋势方向发生转折的时候进行操作。
-
-## 策略原理
-
-1. 计算布林带。布林带中轨为N日收盘价的简单移动平均线,上轨为中轨+KC通道的N日真实波幅的M倍,下轨为中轨-KC通道的N日真实波幅的M倍。
-
-2. 计算KC通道。KC通道中轨为N日收盘价的简单移动平均线,上轨为中轨+N日真实波幅的M倍,下轨为中轨-N日真实波幅的M倍。
-
-3. 判断压缩和释放。当布林带上轨低于KC通道上轨且布林带下轨高于KC通道下轨时为压缩,当布林带上轨高于KC通道上轨且布林带下轨低于KC通道下轨时为释放。
-
-4. 计算establishment趋势。以N日收盘价-N日最高价和最低价的平均价为输入,计算N日线性回归,其值大于0表示establishment上涨趋势,小于0表示establishment下跌趋势。
-
-5. 交易信号。establishment上涨时,短阳线和释放为做多信号;establishment下跌时,短阴线和压缩为做空信号。
-
-## 策略优势
-
-1. 多重指标判断,提高信号准确率。结合布林带、KC通道和蜡烛线判断市场走势,避免假信号。
-
-2. establishment趋势判断,按趋势交易。利用establishment判断主要趋势,避免逆势操作。
-
-3. 自动止损,控制风险。当价格触碰止损线时,自动平仓止损。
-
-## 策略风险
-
-1. 布林带和KC通道参数设置不当,可能导致压缩和释放判断错误。
-
-2. establishment趋势判断滞后,可能错过趋势转折点。
-
-3. 突发事件造成巨大行情,无法止损,存在较大亏损风险。
-
-优化方法:调整布林带和KC通道参数,采用ADX等指标辅助判断;及时更新establishment均线周期,降低滞后;设置止损线时加入缓冲区。
-
-## 策略优化方向  
-
-1. 结合更多技术指标,提高建仓信号准确性。例如KDJ、MACD等。
-
-2. 优化establishment均线的周期参数,使其更能捕捉新的趋势。
-
-3. 加入交易量指标,避免虚假突破。例如能量潮指标、Accumulation/Distribution等。  
-
-4. 多时间周期判断,区分中长线和短线信号。避免被套。
-
-5. AI优化参数, searched枚举和searched最优参数组合。降低过拟合。
-
-## 总结  
-
-本策略主要思路是:采用布林带判定市场的压缩和释放;辅助使用establishment趋势判断主要趋势方向;在压缩释放的转折点进行反establishment方向的操作。策略优势是信号较准、有止损、避免假信号。策略可优化的方向有:多指标组合、趋势判断参数优化、加入量能指标、多时间周期判断、AI寻优等。总体来说,本策略基于市场的自我相似和周期性运行规律,通过指标描绘市场节奏的变化,在市场由能量存积转为能量释放的关键点进行交易,属于典型的计时交易策略。
-
-||
-
-## Overview  
+ ## Overview  
 
 This strategy uses multiple indicators such as Bollinger Bands, KC channels, and candlestick colors to determine market squeezes and releases, and combines establishment trend judgments based on moving averages to make transactions when trend reversals occur.
 
@@ -112,8 +59,6 @@ Optimization methods: Adjust Bollinger Band and KC channel parameters, use ADX a
 ## Summary   
 
 The main idea of ​​this strategy is: using Bollinger Bands to determine the compression and release of the market; auxiliary use establishment trend to determine the main trend direction; operate in the opposite direction of the establishment at the turning point of compression and release. The advantages of the strategy are accurate signals, stop losses, and avoiding false signals. The directions for optimizing the strategy include: multi-indicator combinations, trend judgment parameter optimization, adding momentum indicators, multi-timeframe judgments, AI ​​search optimization, etc. Overall, this strategy is based on the self-similarity and periodic operation rules of the market, depicting the rhythm changes of the market through indicators, and trading at the critical points when the market changes from energy storage to energy release, which belongs to a typical cycle trading strategy.
-
-[/trans]
 
 > Strategy Arguments
 

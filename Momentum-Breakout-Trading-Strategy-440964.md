@@ -85,8 +85,8 @@ This strategy utilizes indicators for judgment and strict stop loss/take profit.
 |v_input_3|10|ATR Period|
 |v_input_4|false|Signals from Heikin Ashi Candles|
 |v_input_5|9|emaLengh show|
-|v_input_6|0.00025|波动率min|
-|v_input_7|0.00045|波动率max|
+|v_input_6|0.00025|Minimum Volatility|
+|v_input_7|0.00045|Maximum Volatility|
 |v_input_8|20|adx_length|
 |v_input_9|14|adx_min|
 |v_input_10|11|sma_length|
@@ -95,9 +95,9 @@ This strategy utilizes indicators for judgment and strict stop loss/take profit.
 |v_input_13|2|StdDev|
 |v_input_14|50|zlsma-Length|
 |v_input_15|false|zlsma-Offset|
-|v_input_16|0.015|最小收益率|
-|v_input_17|10|平仓收益回撤比|
-|v_input_18|0.004|回撤率|
+|v_input_16|0.015|Minimum Return Rate|
+|v_input_17|10|Exit Profit Drawdown Ratio|
+|v_input_18|0.004|Drawdown Rate|
 
 
 > Source (PineScript)

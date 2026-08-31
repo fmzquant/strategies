@@ -9,52 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/111b043a3a4e9922e39.png)
-
-[trans]
-#### 概述
-该策略是一个结合了均线(EMA)、供需区域和交易量的高级自适应性套利策略。它通过多重技术指标的交叉确认来识别市场趋势,并在关键供需区域附近进行交易。策略采用动态止损和获利目标,通过ATR指标来适应市场波动性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用9周期和15周期EMA的趋势方向作为主要交易信号
-2. 通过更高时间框架(15分钟)的供需区域来确定重要价格水平
-3. 利用交易量确认来验证趋势的有效性
-4. 使用基于ATR的动态止损和获利目标来管理风险
-5. 在多重条件同时满足时才进行交易
-
-具体来说,当9周期EMA连续3个周期上升,15周期EMA也呈上升趋势,且价格位于需求区域之上,同时20周期交易量均线大于50周期交易量均线时,系统会发出做多信号。做空信号的逻辑相反。
-
-#### 策略优势
-1. 多重确认机制显著提高了交易的可靠性
-2. 动态的止损和获利目标能够适应不同的市场环境
-3. 通过供需区域的过滤来避免在不利的价格区域交易
-4. 交易量确认提供了额外的趋势验证
-5. 风险收益比可以根据市场情况灵活调整
-6. 策略具有良好的自适应性,适合不同的市场条件
-
-#### 策略风险
-1. 在高波动市场中可能会出现虚假信号
-2. 多重确认条件可能导致错过一些交易机会
-3. 供需区域的识别可能存在滞后性
-4. 在横盘市场中可能会产生频繁的交易信号
-
-风险控制措施:
-- 使用动态ATR止损来适应市场波动
-- 通过交易量确认来过滤虚假信号
-- 实施严格的风险收益比控制
-- 在关键价格区域附近进行交易
-
-#### 策略优化方向
-1. 引入自适应的EMA周期,使其能够根据市场波动性自动调整
-2. 添加市场状态识别模块,在不同市场环境下使用不同的参数
-3. 优化供需区域的计算方法,提高识别的准确性
-4. 加入更多的市场微观结构分析
-5. 开发动态的风险收益比调整机制
-
-#### 总结
-这是一个融合了多个技术分析工具的完整交易系统,通过多重确认机制来提高交易的可靠性。策略的优势在于其自适应性和风险管理能力,但同时也需要注意在不同市场环境下的表现差异。通过建议的优化方向,该策略还有进一步提升的空间。 || 
-
 #### Overview
 This strategy is an advanced adaptive scalping system that combines Exponential Moving Averages (EMA), supply/demand zones, and volume analysis. It identifies market trends through multiple technical indicator confirmations and executes trades near key supply/demand zones. The strategy employs dynamic stop-loss and take-profit targets using the ATR indicator to adapt to market volatility.
 
@@ -96,9 +50,7 @@ Risk control measures:
 5. Develop dynamic risk-reward ratio adjustment mechanisms
 
 #### Summary
-This is a comprehensive trading system that integrates multiple technical analysis tools and enhances trade reliability through multiple confirmation mechanisms. The strategy's strengths lie in its adaptability and risk management capabilities, but attention must be paid to performance variations in different market environments. Through the suggested optimization directions, there is room for further improvement of this strategy.[/trans]
-
-
+This is a comprehensive trading system that integrates multiple technical analysis tools and enhances trade reliability through multiple confirmation mechanisms. The strategy's strengths lie in its adaptability and risk management capabilities, but attention must be paid to performance variations in different market environments. Through the suggested optimization directions, there is room for further improvement of this strategy.
 
 > Source (PineScript)
 

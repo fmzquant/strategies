@@ -12,40 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8160ba92addb81ce155.png)
 ![IMG](https://www.fmz.com/upload/asset/2d88e785a5a122666e960.png)
 
-
-
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的趋势跟踪和动量交易系统。它主要结合了平均趋向指标(ADX)、相对强弱指标(RSI)和真实波幅(ATR)来识别潜在的做多机会,并利用ATR来设定动态的获利和止损价位。该策略特别适用于1分钟时间周期的期权交易,通过严格的入场条件和风险管理来提高交易的成功率。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键组成部分:
-1. 趋势确认: 使用ADX>18且+DI大于-DI来确认市场处于上升趋势。
-2. 动量验证: 要求RSI突破60且位于其20周期移动平均线之上,验证价格动量。
-3. 入场时机: 当趋势和动量条件同时满足时,系统在当前收盘价位建立多头仓位。
-4. 目标管理: 基于入场时的ATR值设定动态的获利目标(2.5倍ATR)和止损位(1.5倍ATR)。
-
-#### 策略优势
-1. 多维度确认: 通过结合趋势和动量指标,提供更可靠的交易信号。
-2. 动态风险管理: 使用ATR动态调整止盈止损位置,适应市场波动性变化。
-3. 清晰的交易规则: 入场和出场条件明确,降低主观判断带来的干扰。
-4. 适应性强: 策略参数可根据不同市场环境和交易品种进行优化调整。
-
-#### 策略风险
-1. 假突破风险: RSI突破60可能出现假信号,需要结合其他指标验证。
-2. 滑点影响: 在1分钟周期的快速市场中,可能面临较大的滑点风险。
-3. 市场环境依赖: 策略在趋势明显的市场表现较好,震荡市可能频繁触发止损。
-4. 参数敏感性: 多个指标参数的设置需要平衡,不当的参数组合可能影响策略表现。
-
-#### 策略优化方向
-1. 入场优化: 可增加成交量确认机制,提高信号可靠性。
-2. 仓位管理: 引入动态仓位管理系统,根据市场波动性调整持仓规模。
-3. 出场机制: 可考虑添加追踪止损功能,更好地保护盈利。
-4. 时间过滤: 增加交易时间窗口过滤,避开波动性过大或流动性不足的时段。
-
-#### 总结
-该策略通过综合运用多个技术指标,构建了一个完整的交易系统。其优势在于结合了趋势和动量分析,并采用动态的风险管理方法。虽然存在一定的风险,但通过合理的参数优化和风险控制措施,能够在实际交易中取得稳定的表现。建议交易者在实盘使用前,对策略进行充分的回测和参数优化,并根据具体交易品种的特点进行适当调整。 || 
-
 #### Overview
 This strategy is a multi-technical indicator-based trend following and momentum trading system. It combines the Average Directional Index (ADX), Relative Strength Index (RSI), and Average True Range (ATR) to identify potential long opportunities and uses ATR for dynamic profit and stop-loss levels. The strategy is particularly suitable for 1-minute timeframe options trading, utilizing strict entry conditions and risk management to improve trading success rate.
 
@@ -75,9 +41,7 @@ The core logic includes several key components:
 4. Time Filtering: Add trading time window filters to avoid periods of excessive volatility or insufficient liquidity.
 
 #### Summary
-This strategy constructs a complete trading system by comprehensively utilizing multiple technical indicators. Its strength lies in combining trend and momentum analysis with dynamic risk management methods. While certain risks exist, stable performance can be achieved through proper parameter optimization and risk control measures. Traders are advised to thoroughly backtest and optimize parameters before live trading, and make appropriate adjustments based on specific trading instrument characteristics.[/trans]
-
-
+This strategy constructs a complete trading system by comprehensively utilizing multiple technical indicators. Its strength lies in combining trend and momentum analysis with dynamic risk management methods. While certain risks exist, stable performance can be achieved through proper parameter optimization and risk control measures. Traders are advised to thoroughly backtest and optimize parameters before live trading, and make appropriate adjustments based on specific trading instrument characteristics.
 
 > Source (PineScript)
 

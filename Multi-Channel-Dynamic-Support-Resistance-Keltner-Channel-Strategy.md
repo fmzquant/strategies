@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/204e887193ff67d1df4.png)
 
-[trans]
-#### 概述
-该策略是一个基于肯尼通道(Keltner Channel)和动态支撑阻力位的复合交易系统。它通过对多个时间周期的分析,结合移动平均线和波动率指标,形成了一个完整的交易决策框架。策略的核心是通过识别价格突破关键技术位的时机,同时考虑市场趋势和波动性,从而捕捉高概率的交易机会。
-
-#### 策略原理
-策略采用多层技术指标体系进行分析：
-1. 使用21周期的肯尼通道作为主要趋势判断工具,通道宽度由ATR值决定
-2. 通过左侧21根和右侧8根K线计算关键支撑阻力位
-3. 引入高级别时间周期移动平均线作为趋势过滤器
-4. 结合短期(5周期)和长期(30周期)移动平均线判断入场时机
-5. 使用ATR动态调整止损位置
-
-#### 策略优势
-1. 多维度技术指标互相验证,有效降低假信号
-2. 动态支撑阻力位实时更新,适应市场变化
-3. 通过高级别时间周期分析过滤次级行情
-4. 根据不同时间周期灵活调整止损参数
-5. 采用百分比仓位管理,有效控制风险
-
-#### 策略风险
-1. 在震荡市场可能产生频繁交易信号
-2. 多重指标验证可能导致错过部分交易机会
-3. 参数优化存在过拟合风险
-4. 高波动率环境下止损位置可能过宽
-5. 市场急剧变化时支撑阻力位可能失效
-
-#### 策略优化方向
-1. 引入成交量指标辅助判断突破有效性
-2. 增加市场波动率分析模块,动态调整参数
-3. 优化支撑阻力位计算方法,提高准确性
-4. 添加趋势强度判断,细化入场条件
-5. 完善仓位管理系统,实现更精细的风险控制
-
-#### 总结
-这是一个结构完整、逻辑严谨的量化交易策略。通过多层技术指标的配合使用,既保证了交易信号的可靠性,又实现了对风险的有效控制。策略的可扩展性强,通过持续优化和改进,有望在不同市场环境下都能保持稳定的表现。 ||
-
 #### Overview
 This strategy is a comprehensive trading system based on Keltner Channels and dynamic support/resistance levels. It analyzes multiple timeframes, combining moving averages and volatility indicators to form a complete trading decision framework. The core approach is to identify price breakout opportunities while considering market trends and volatility to capture high-probability trading opportunities.
 
@@ -80,7 +44,7 @@ The strategy employs a multi-layer technical indicator system:
 5. Enhance position management system for more precise risk control
 
 #### Summary
-This is a well-structured and logically rigorous quantitative trading strategy. Through the coordinated use of multiple technical indicators, it ensures both reliable trading signals and effective risk control. The strategy's strong extensibility allows for continuous optimization and improvement, potentially maintaining stable performance across different market environments.[/trans]
+This is a well-structured and logically rigorous quantitative trading strategy. Through the coordinated use of multiple technical indicators, it ensures both reliable trading signals and effective risk control. The strategy's strong extensibility allows for continuous optimization and improvement, potentially maintaining stable performance across different market environments.
 
 
 

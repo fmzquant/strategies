@@ -10,69 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ce7595c5257ff60b31.png)
- [trans]
-
-## 概述
-
-本策略是一个基于价格通道、布林带、快速RSI指标的双轨反转交易策略。它结合了通道指标识别趋势,布林带识别支撑阻力,以及快速RSI判断超买超卖的信号,实现高效的反转交易。
-
-## 策略原理
-
-该策略主要基于以下几个指标进行交易决策:
-
-1. 价格通道:计算一定周期内的最高价和最低价,并绘制通道中轴。价格突破通道时产生交易信号。
-
-2. 布林带:中轴为价格通道中轴,通过计算价格与中轴的偏离标准差构建上下轨。价格与布林带上下轨互动时产生交易信号。 
-
-3. 快速RSI(2周期):判断价格的超买超卖情况,RSI低于5时做多,高于95时做空。
-
-4. CryptoBottom指标:判断价格是否跌破支持位,与快速RSI结合实现高概率做多。
-
-根据价格突破通道、布林带时机做,以及RSI超买超卖时机做多做空,即构成该策略的核心交易逻辑。
-
-## 策略优势
-
-该策略具有以下几个优势:
-
-1. 双轨系统,提高信号准确率。价格通道判断大趋势,布林带识别精确支持阻力位,两者结合提升信号质量。
-
-2. 快速RSI指标判断超买超卖,抓住反转时机。RSI参数为2,能快速判断反转节点。
-
-3. CryptoBottom加快多头信号确定。跌破支持位时快速判断底部特征,避免多头信号漏失。
-
-4. 策略参数设置合理,容易优化。参数组合简单明了,适合参数优化。
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 布林带参数设定不当,可能错过较大行情或产生假信号。
-
-2. 双轨互动模式复杂,需要一定技术积累正确判断。
-
-3. 反转失败风险仍然存在,无法完全避免行情再次拉回的概率。
-
-4. 参数优化困难,最优参数可能因市场环境改变而失效。
-
-## 策略优化方向 
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化布林带的参数,使上下轨更贴近价格,提高信号准确率。
-
-2. 增加止损策略,在亏损达到一定比例时止损,有效控制风险。
-
-3. 结合更多指标,判断趋势、支持阻力位,减少假信号。
-
-4. 增加机器学习算法,自动优化参数,使之能应对市场环境变化。
-
-## 总结
-
-本策略整合价格通道、布林带和快速RSI指标,构建双轨反转交易体系。在判断大趋势的同时,快速抓住支持阻力与超买超卖机会。参数设置简单直接,容易理解和优化。能够有效识别反转机会,适合量化交易。
-
-|| 
-
-## Overview
+ ## Overview
 
 This is a dual-track reversal trading strategy  based on price channel, Bollinger bands and fast RSI indicator. It combines channel index to identify trends, Bollinger bands to recognize support and resistance levels, and fast RSI to detect overbought and oversold signals, in order to achieve efficient reversal trading.  
 
@@ -129,8 +67,6 @@ The strategy can be improved in the following aspects:
 ## Conclusion  
 
 This strategy integrates price channel, Bollinger bands and fast RSI indicator to construct a dual-track reversal trading system. While judging major trends, it also quickly seizes support, resistance and overbought/oversold opportunities. The parameter settings are simple and direct, easy to understand and optimize. It can effectively identify reversal chances and suits algorithmic trading.
-
-[/trans]
 
 > Strategy Arguments
 

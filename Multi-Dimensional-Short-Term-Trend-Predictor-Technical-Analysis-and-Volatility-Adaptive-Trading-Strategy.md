@@ -13,55 +13,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8b673d79f1358096e8d.png)
 
 
-[trans]
-#### 概述
-
-本策略是一种多维度短期趋势预测策略，专注于利用多个技术指标的协同效应来识别和预测金融市场中的短期趋势变化。该策略整合了简单移动平均线(SMA)、相对强弱指数(RSI)、平均方向指数(ADX)、平均真实波动范围(ATR)、移动平均线差指标(MACD)和随机振荡器(Stochastic)等关键技术分析工具，旨在提高交易信号的准确性和可靠性。
-
-#### 策略原理
-
-该策略的核心原理基于多重技术指标的协同分析和趋势确认机制。通过综合考虑以下关键因素来生成交易信号：
-
-1. 短期和长期移动平均线的交叉
-2. RSI的超买超卖状态
-3. MACD线和信号线的变化
-4. 随机振荡器的动量指标
-5. ADX趋势强度
-6. 200周期移动平均线的整体市场趋势
-7. 最近的市场波动性
-
-策略通过动态计算潜在入场点、止损和止盈水平，并根据最近的市场波动性调整这些关键参数，从而实现风险管理和交易执行。
-
-#### 策略优势
-
-1. 多指标综合分析：通过整合多个技术指标，降低了单一指标可能带来的误判风险
-2. 动态风险管理：基于ATR的止损和止盈机制，能够根据市场波动性调整仓位
-3. 灵活的时间框架：支持从5分钟到4小时不同的交易周期
-4. 自适应仓位规模：根据可用资本和每笔交易风险百分比动态调整仓位大小
-5. 趋势强度确认：通过ADX指标确认趋势的有效性，避免在震荡市场中频繁交易
-
-#### 策略风险
-
-1. 多指标复杂性可能导致信号生成的延迟
-2. 在高度不稳定的市场环境中，指标可能给出相互矛盾的信号
-3. 回测结果可能不完全代表未来实际交易表现
-4. 杠杆交易可能显著放大损失
-5. 没有考虑基本面因素和突发市场事件
-
-#### 策略优化方向
-
-1. 引入机器学习算法，动态调整指标权重
-2. 增加更多基本面和情绪指标
-3. 开发更智能的仓位管理算法
-4. 针对不同市场和资产类型定制个性化参数
-5. 集成实时新闻和社交媒体情绪分析
-
-#### 总结
-
-这是一种多维度、数据驱动的短期趋势预测策略，通过复杂的技术指标组合和动态风险管理机制，旨在提高交易决策的准确性和可靠性。尽管策略具有显著的理论优势，但实际应用中仍需谨慎，并持续进行回测和优化。
-
-|| 
-
 #### Overview
 
 This strategy is a multi-dimensional short-term trend prediction approach focusing on leveraging the synergistic effects of multiple technical indicators to identify and predict short-term trend changes in financial markets. By integrating key technical analysis tools such as Simple Moving Averages (SMA), Relative Strength Index (RSI), Average Directional Index (ADX), Average True Range (ATR), Moving Average Convergence Divergence (MACD), and Stochastic Oscillator, the strategy aims to enhance the accuracy and reliability of trading signals.
@@ -106,7 +57,7 @@ The strategy dynamically calculates potential entry points, stop-loss, and take-
 
 #### Conclusion
 
-This is a multi-dimensional, data-driven short-term trend prediction strategy that aims to improve trading decision accuracy and reliability through complex technical indicator combinations and dynamic risk management mechanisms. Despite its theoretical advantages, practical application requires caution and continuous backtesting and optimization.[/trans]
+This is a multi-dimensional, data-driven short-term trend prediction strategy that aims to improve trading decision accuracy and reliability through complex technical indicator combinations and dynamic risk management mechanisms. Despite its theoretical advantages, practical application requires caution and continuous backtesting and optimization.
 
 
 

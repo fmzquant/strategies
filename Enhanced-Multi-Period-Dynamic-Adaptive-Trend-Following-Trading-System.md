@@ -8,40 +8,7 @@ Enhanced-Multi-Period-Dynamic-Adaptive-Trend-Following-Trading-System
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/1af93bdb98e10b588f4.png)
-
-[trans]
-#### 概述
-该策略是一个结合了移动均线、相对强弱指标和趋势强度指标的综合交易系统。通过多重技术指标的协同配合,实现了对市场趋势的精确捕捉和风险的有效控制。系统采用了动态的止盈止损机制,确保了交易的风险收益比,同时通过指标参数的灵活调整来适应不同市场环境。
-
-#### 策略原理
-策略主要基于三个核心指标:快速和慢速指数移动平均线(EMA)、相对强弱指标(RSI)和平均趋向指标(ADX)。当快速EMA上穿慢速EMA时,系统会检查RSI是否处于非超买区域(低于60),同时确认ADX显示趋势强度充分(大于15)。满足这些条件时,系统会发出做多信号。相反的条件组合则触发平仓信号。系统还设置了基于风险收益比的动态止盈止损点,通过参数化的方式实现对交易风险的精确控制。
-
-#### 策略优势
-1. 多重技术指标的协同确认提高了交易信号的可靠性
-2. 动态的止盈止损机制确保了每笔交易的风险可控
-3. 参数化的设计使策略具有较强的适应性
-4. 趋势强度确认机制有效降低了假突破带来的风险
-5. 系统自带警报功能,便于实时监控市场机会
-
-#### 策略风险
-1. 多重指标条件可能导致错过一些交易机会
-2. 在震荡市场中可能频繁产生虚假信号
-3. 固定的风险收益比可能不适合所有市场环境
-4. 参数优化过度可能导致过拟合问题
-
-#### 策略优化方向
-1. 引入自适应的参数调整机制,使系统能够根据市场波动性动态调整指标参数
-2. 增加成交量指标作为辅助确认信号
-3. 开发动态的风险收益比调整机制,根据市场环境自动调整止盈止损比例
-4. 加入市场波动率过滤机制,在高波动率环境下调整策略激进程度
-5. 考虑增加时间过滤器,避免在不利的交易时段进行操作
-
-#### 总结
-该策略通过多重技术指标的综合运用,建立了一个相对完整的交易系统。其核心优势在于通过指标协同配合提高了交易信号的可靠性,同时通过动态的风险控制机制保障了交易的安全性。虽然存在一些固有的局限性,但通过建议的优化方向,策略仍有较大的改进空间。整体而言,这是一个具有实用价值的交易策略框架,适合进一步优化和实战应用。
-
-||
 
 #### Overview
 This strategy is a comprehensive trading system that combines moving averages, relative strength index, and trend strength indicators. Through the coordination of multiple technical indicators, it achieves precise capture of market trends and effective risk control. The system adopts a dynamic stop-loss and take-profit mechanism, ensuring a favorable risk-reward ratio while adapting to different market conditions through flexible parameter adjustments.
@@ -70,10 +37,7 @@ The strategy is primarily based on three core indicators: fast and slow Exponent
 5. Consider adding time filters to avoid trading during unfavorable periods
 
 #### Summary
-This strategy establishes a relatively complete trading system through the comprehensive use of multiple technical indicators. Its core advantage lies in improving trading signal reliability through indicator coordination while ensuring trading safety through dynamic risk control mechanisms. Although some inherent limitations exist, the strategy has significant room for improvement through the suggested optimization directions. Overall, this is a practical trading strategy framework suitable for further optimization and real-world application.[/trans]
-
-
-
+This strategy establishes a relatively complete trading system through the comprehensive use of multiple technical indicators. Its core advantage lies in improving trading signal reliability through indicator coordination while ensuring trading safety through dynamic risk control mechanisms. Although some inherent limitations exist, the strategy has significant room for improvement through the suggested optimization directions. Overall, this is a practical trading strategy framework suitable for further optimization and real-world application.
 > Source (PineScript)
 
 ``` pinescript

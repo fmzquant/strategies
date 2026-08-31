@@ -9,10 +9,7 @@ jfyh5388
 
 > Strategy Description
 
-每周定投100USDT，定期定额
-
-
-
+Invest 100 USDT every week on a regular fixed schedule.
 > Source (python)
 
 ``` python

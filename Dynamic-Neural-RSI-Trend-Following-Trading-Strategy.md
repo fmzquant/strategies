@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/10c14369678d3e362d0.png)
 
-[trans]
-#### 概述
-该策略是一个基于均线、RSI指标和跟踪止损的量化交易系统。它结合了技术分析中的趋势跟踪和动量指标,通过设定严格的入场和出场条件,实现风险可控的交易。策略的核心逻辑是在上升趋势中寻找超卖机会入场,并使用跟踪止损保护盈利。
-
-#### 策略原理
-策略使用200日简单移动平均线(SMA)作为趋势判断的基准线,结合相对强弱指标(RSI)进行交易信号的生成。具体来说:
-1. 使用200日均线判断大趋势,只有价格在均线之上才考虑做多
-2. 当RSI低于预设阈值(默认40)时,认为出现超卖信号
-3. 同时满足以上两个条件且距离上次平仓超过等待期(默认10天)时,触发做多信号
-4. 持仓期间通过跟踪止损(默认5%)动态保护利润
-5. 当价格跌破跟踪止损价格或跌破200日均线时,平仓出场
-
-#### 策略优势
-1. 结合趋势和动量双重过滤,提高交易的准确性
-2. 使用跟踪止损机制,可以有效锁定利润
-3. 设置交易间隔期,避免频繁交易
-4. 参数可调整性强,适应不同市场环境
-5. 交易逻辑清晰,易于理解和执行
-6. 计算简单,运算效率高
-
-#### 策略风险
-1. 均线滞后性可能导致入场和出场信号延迟
-2. RSI指标在震荡市场可能产生虚假信号
-3. 固定百分比的跟踪止损可能不适合所有市场环境
-4. 参数优化可能导致过度拟合
-5. 在剧烈波动市场中可能遭受较大回撤
-
-#### 策略优化方向
-1. 引入波动率自适应的跟踪止损百分比
-2. 增加成交量指标作为辅助确认
-3. 使用指数移动平均线替代简单移动平均线,提高灵敏度
-4. 加入市场情绪指标,优化交易时机
-5. 开发动态参数优化机制
-6. 增加多周期策略确认机制
-
-#### 总结
-这是一个结构完整、逻辑清晰的量化交易策略。它通过结合多个技术指标,在控制风险的同时追求稳定收益。虽然存在一定的优化空间,但基本框架具有良好的实用性和扩展性。策略适合中长期投资者使用,对于不同市场环境都有较好的适应性。 || 
-
 #### Overview
 This strategy is a quantitative trading system based on moving averages, RSI indicator, and trailing stop loss. It combines trend following and momentum indicators from technical analysis, achieving risk-controlled trading through strict entry and exit conditions. The core logic is to seek oversold opportunities in uptrends and protect profits using trailing stops.
 
@@ -84,9 +46,7 @@ The strategy uses a 200-day Simple Moving Average (SMA) as the baseline for tren
 6. Add multi-timeframe strategy confirmation mechanism
 
 #### Summary
-This is a quantitative trading strategy with complete structure and clear logic. It pursues stable returns while controlling risk by combining multiple technical indicators. Although there is room for optimization, the basic framework has good practicality and extensibility. The strategy is suitable for medium to long-term investors and adapts well to different market environments.[/trans]
-
-
+This is a quantitative trading strategy with complete structure and clear logic. It pursues stable returns while controlling risk by combining multiple technical indicators. Although there is room for optimization, the basic framework has good practicality and extensibility. The strategy is suitable for medium to long-term investors and adapts well to different market environments.
 
 > Source (PineScript)
 

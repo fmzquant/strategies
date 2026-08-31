@@ -71,12 +71,12 @@ In general, the moving average pullback trading strategy is a relatively mature 
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_int_1|200|(?パラメータ)長期移動平均BASE200/period of long term sma|
-|v_input_int_2|10|長期移動平均BASE10/period of short term sma|
-|v_input_int_3|5|損切の割合％/stoploss percentages|
-|v_input_int_4|20|利食いの割合％/take profit percentages|
-|v_input_1|timestamp(01 Jan 2000 13:30 +0000)|(?期間)バックテストを始める日/start trade day|
-|v_input_2|timestamp(1 Jan 2099 19:30 +0000)|バックテスを終わる日/finish date day|
+|v_input_int_1|200|Period of long-term SMA|
+|v_input_int_2|10|Period of short-term SMA|
+|v_input_int_3|5|Stop-loss percentage|
+|v_input_int_4|20|Take-profit percentage|
+|v_input_1|timestamp(01 Jan 2000 13:30 +0000)|Start trade date|
+|v_input_2|timestamp(1 Jan 2099 19:30 +0000)|Finish trade date|
 
 
 > Source (PineScript)

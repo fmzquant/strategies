@@ -12,47 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8f7fd268771a5e06244.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8e56a2df20d1376e0c5.png)
 
-
-[trans]
-#### 概述
-该策略是一个结合了多重技术指标的趋势跟踪交易系统。它主要基于简单移动平均线(SMA)和指数移动平均线(EMA)的交叉信号，并集成了赫尔移动平均线(HMA)趋势带、威廉指标(%R)、摆动高低点分析等多个先进特征，通过动态过滤机制来提供更可靠的交易信号。
-
-#### 策略原理
-策略的核心逻辑建立在以下几个关键要素之上：
-1. 使用周期为100的SMA和周期为200的EMA作为主要趋势判断指标
-2. 整合70周期的HMA趋势带用于确认趋势动量
-3. 采用威廉指标(%R)进行动态支撑/阻力位的计算
-4. 通过20个周期的回溯窗口检测摆动高低点
-5. 实时监控和更新日内高低点
-6. 设置开盘初期过滤和波动率阈值(0.5%)来降低虚假信号
-
-入场条件需同时满足：价格站上双均线、%R指标连续3根K线上升且大于-20、K线收阳且收盘价高于前一根、价格未超过日内波动阈值。
-出场条件满足以下任一条件：价格跌破双均线、%R指标低于-80。
-
-#### 策略优势
-1. 多重技术指标的协同验证提高了交易信号的可靠性
-2. 动态过滤机制有效减少了波动剧烈时期的虚假信号
-3. 自适应的支撑阻力位计算使策略具有良好的市场适应性
-4. 完整的日内交易管理机制，包括开盘初期过滤和波动阈值控制
-5. 参数可调性强，便于根据不同市场条件进行优化
-
-#### 策略风险
-1. 均线系统在震荡市场可能产生频繁的假信号
-2. 多重条件的筛选可能导致错过一些潜在的交易机会
-3. 固定的移动平均线周期可能在不同市场环境下表现不一
-4. 日内交易过滤机制可能在急速趋势行情中错过重要机会
-5. 参数优化过度可能导致过拟合问题
-
-#### 策略优化方向
-1. 引入自适应的均线周期计算机制，使系统能更好地适应市场波动
-2. 增加成交量分析指标来提高趋势确认的可靠性
-3. 开发动态的止损止盈机制，提高资金管理的效率
-4. 加入市场波动率指标，优化过滤条件的阈值设置
-5. 考虑在不同时间周期的信号协同，增强系统的稳定性
-
-#### 总结
-这是一个设计完善的趋势跟踪交易系统，通过多重技术指标的配合和严格的过滤机制，在保证可靠性的同时也保持了较好的灵活性。策略的优化空间主要在于参数的自适应性和风险管理机制的完善。建议交易者在实盘使用前，充分测试不同市场环境下的表现，并根据具体情况调整参数设置。 || 
-
 #### Overview
 This strategy is a comprehensive trend-following trading system that combines multiple technical indicators. It primarily relies on the crossover signals between Simple Moving Average (SMA) and Exponential Moving Average (EMA), while integrating advanced features such as Hull Moving Average (HMA) ribbon, Williams %R indicator, swing high/low analysis, and dynamic filtering mechanisms to provide more reliable trading signals.
 
@@ -90,9 +49,7 @@ Exit conditions trigger on either: price falling below both moving averages or %
 5. Consider multi-timeframe signal coordination to enhance system stability
 
 #### Summary
-This is a well-designed trend-following trading system that maintains good flexibility while ensuring reliability through multiple technical indicators and strict filtering mechanisms. The main areas for optimization lie in parameter adaptability and risk management mechanism refinement. Traders are advised to thoroughly test performance under various market conditions and adjust parameters according to specific circumstances before live trading.[/trans]
-
-
+This is a well-designed trend-following trading system that maintains good flexibility while ensuring reliability through multiple technical indicators and strict filtering mechanisms. The main areas for optimization lie in parameter adaptability and risk management mechanism refinement. Traders are advised to thoroughly test performance under various market conditions and adjust parameters according to specific circumstances before live trading.
 
 > Source (PineScript)
 

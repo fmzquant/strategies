@@ -12,44 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8c16e17a2c83102e09d.png)
 ![IMG](https://www.fmz.com/upload/asset/2d877470f397e4fd8ee7a.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的现货市场多头策略。它主要利用快速和慢速移动平均线(EMA)的交叉信号,结合相对强弱指数(RSI)、平均趋向指标(ADX)和移动平均线趋同/背离指标(MACD)来确认交易信号。策略还使用平均真实波幅(ATR)来设置动态的止损和止盈水平,实现风险管理。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键组件:
-1. 使用8周期和21周期的EMA交叉作为主要入场信号
-2. 通过ADX>25确认趋势强度
-3. 利用MACD金叉确认趋势方向
-4. RSI<70用于避免在过度买入区域入场
-5. 使用ATR的1.5倍作为止损,2倍作为止盈
-6. 引入追踪止损机制,确保利润锁定
-
-#### 策略优势
-1. 多重确认机制显著提高了交易的可靠性
-2. 动态的止损和止盈设置适应市场波动
-3. 追踪止损功能有效保护已获利润
-4. 仅在K线确认后执行交易,减少虚假信号
-5. 采用资金百分比持仓,更好地控制风险
-6. 考虑了交易成本,更符合实际交易环境
-
-#### 策略风险
-1. 多重指标可能导致错过部分交易机会
-2. 快速震荡市场可能产生频繁的假信号
-3. 大幅跳空可能导致止损失效
-4. 交易成本可能影响策略整体收益
-5. 单向做多策略在熊市中表现可能欠佳
-
-#### 策略优化方向
-1. 可以考虑添加市场环境过滤器,在不同市场条件下调整参数
-2. 引入成交量指标作为额外的确认信号
-3. 优化EMA和MACD参数,使其更好地适应不同时间周期
-4. 完善止盈止损机制,可考虑分批止盈
-5. 增加位置管理逻辑,实现更灵活的仓位控制
-
-#### 总结
-这是一个设计合理的趋势跟踪策略,通过多重技术指标的配合使用,在控制风险的同时追求稳定收益。策略的优势在于其完善的确认机制和风险管理系统,但仍需要根据实际市场情况进行参数优化和逻辑改进。针对现有的风险,可以通过添加市场环境过滤和优化参数来进一步提升策略的稳定性和盈利能力。 || 
-
 #### Overview
 This strategy is a long-only approach for spot markets that utilizes multiple technical indicators. It primarily relies on the crossover signals between fast and slow Exponential Moving Averages (EMA), combined with the Relative Strength Index (RSI), Average Directional Index (ADX), and Moving Average Convergence Divergence (MACD) for trade confirmation. The strategy employs the Average True Range (ATR) for dynamic stop-loss and take-profit levels to manage risk.
 
@@ -85,9 +47,7 @@ The core logic is based on the following key components:
 5. Enhance position management logic for more flexible position control
 
 #### Summary
-This is a well-designed trend-following strategy that seeks stable returns while controlling risk through the use of multiple technical indicators. The strategy's strengths lie in its comprehensive confirmation mechanisms and risk management system, though it still requires parameter optimization and logic improvements based on actual market conditions. To address existing risks, the strategy can be enhanced by adding market environment filters and optimizing parameters to further improve stability and profitability.[/trans]
-
-
+This is a well-designed trend-following strategy that seeks stable returns while controlling risk through the use of multiple technical indicators. The strategy's strengths lie in its comprehensive confirmation mechanisms and risk management system, though it still requires parameter optimization and logic improvements based on actual market conditions. To address existing risks, the strategy can be enhanced by adding market environment filters and optimizing parameters to further improve stability and profitability.
 
 > Source (PineScript)
 

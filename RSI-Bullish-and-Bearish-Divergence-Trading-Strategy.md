@@ -10,47 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/e1822c9df719214237.png)
- [trans]
-## 概述
-该策略通过计算RSI指标的多空分歧情况,判断市场的多空趋势并做出交易决策。具体来说,它会在RSI形成较低的低点但价格形成更高的低点时判断为隐藏的多头信号;而当RSI形成更高的高点但价格形成较低的高点时判断为隐藏的空头信号。根据这些信号判断市场潜在的多空趋势并做出交易。
-
-## 策略原理
-该策略主要基于RSI指标的多空分歧理论。当RSI和价格形成反向的分歧时,预示着市场潜在的反转。具体分为以下四种情况:
-
-1. 正常多头信号:RSI形成更高的低点,价格形成更低的低点。说明买盘推高了RSI但没有完全反映到价格上,预示着多头力量增强。  
-
-2. 隐藏多头信号:RSI形成更低的低点,价格形成更高的低点。说明卖盘推低了RSI但没有完全反映到价格上,预示着多头力量增强。
-
-3. 正常空头信号:RSI形成更低的高点,价格形成更高的高点。说明卖盘推高了价格但没有完全反映到RSI上,预示着空头力量增强。
-
-4. 隐藏空头信号:RSI形成更高的高点,价格形成更低的高点。说明买盘推高了RSI但没有完全反映到价格上,预示着空头力量增强。
-
-根据以上分歧情况判断市场潜在的多空趋势,以及买卖力量的增强情况,从而制定交易策略。
-
-## 策略优势
-1. 利用RSI的多空分歧理论,判断市场的潜在趋势。
-2. 同时结合价格行情作为确认,避免产生噪音信号。  
-3. 能够在市场快速反转前捕捉到重要信号,predictions先机做出判断。
-4. 实现了可视化的多空信号提示,操作方便直观。
-5. 可自定义参数,适应不同市场环境。
-
-## 策略风险
-1. RSI指标和价格出现分歧不一定预示着反转,可能是正常的盘整行情。  
-2. 隐藏信号相对噪音较大,可能产生误判。
-3. 需要结合更多指标或者技术分析方法来确认信号。 
-4. 信号参数设置不当也可能影响判断。
-
-## 优化方向 
-1. 增加MACD,KDJ等指标与RSI指标结合,确定entry signal信号。
-2. 增加止损策略,降低单笔损失。
-3. 优化参数设置,如搜索更合适的RSI周期参数。  
-4. 增加机器学习算法,训练判断entry signal的准确性。
-5. 增加websocket实时行情,以减少信号确认滞后。
-
-## 总结
-该策略主要依靠RSI的多空分歧来判断市场潜在的多空趋势,通过捕捉价格运动中买卖盘的相对力量变化,predictions做出反转交易。具有一定的先机预测功能。但也存在一定的噪音信号风险。可以通过参数优化、指标组合、机器学习等方式进一步增强策略的稳定性与盈利能力。
-
-||
 
 ## Overview
 This strategy judges the bullish and bearish trends of the market and makes trading decisions by calculating the divergence of RSI indicator. Specifically, it will judge hidden bullish signals when RSI forms lower lows but prices form higher lows. And it will judge hidden bearish signals when RSI forms higher highs but prices form lower highs. Then it determines the potential bullish or bearish trends of the market based on these signals and makes trades.   
@@ -91,9 +50,7 @@ Based on the above divergences, it judges the potential bullish or bearish trend
 5. Implement websocket for real-time quotes to reduce signal confirmation latency.   
 
 ## Summary   
-The strategy mainly leverages the bullish and bearish divergences of RSI to determine the potential bullish or bearish trends of market by capturing the relative strength changes between buying and selling power behind the price actions. It has certain predictive capabilities of reversals. But it also has risks of noisy signals. Ways like parameter optimization, indicator combination, machine learning can help further enhance the stability and profitability of the strategy.  
-[/trans]
-
+The strategy mainly leverages the bullish and bearish divergences of RSI to determine the potential bullish or bearish trends of market by capturing the relative strength changes between buying and selling power behind the price actions. It has certain predictive capabilities of reversals. But it also has risks of noisy signals. Ways like parameter optimization, indicator combination, machine learning can help further enhance the stability and profitability of the strategy.
 > Strategy Arguments
 
 

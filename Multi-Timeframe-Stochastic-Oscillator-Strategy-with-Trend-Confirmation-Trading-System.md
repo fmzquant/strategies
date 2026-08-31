@@ -9,43 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/d8884650945bcd5a28.png)
-
-[trans]
-#### 概述
-该策略是一个基于多时框随机震荡指标(Stochastic)的交易系统,结合了趋势确认和价格形态分析。策略使用15分钟、30分钟和60分钟三个时间周期,通过随机指标的交叉信号以及更高高点(Higher High)和更低低点(Lower Low)的形态确认来识别交易机会。同时,策略采用了固定百分比的止损和获利设置,以控制风险和锁定利润。
-
-#### 策略原理
-策略的核心逻辑包括以下几个关键部分:
-1. 使用三个不同时间周期(15分钟、30分钟、60分钟)的随机指标来分析市场动向
-2. 在主要时间周期(15分钟)上,当K线突破D线且处于超卖区域时,结合更高低点形态确认买入信号
-3. 同样,当K线跌破D线且处于超买区域时,结合更低高点形态确认卖出信号
-4. 采用3.7%的止损和1.8%的获利目标来管理每笔交易的风险和收益
-
-#### 策略优势
-1. 多时间周期分析提供了更全面的市场视角,能够更好地过滤假信号
-2. 结合价格形态分析增加了交易信号的可靠性
-3. 固定的风险管理参数使得交易结果更加稳定可控
-4. 策略适用于波动性较大的市场环境
-5. 自动化的进出场信号降低了主观判断带来的情绪影响
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假信号
-2. 固定的止损和获利设置可能不适合所有市场环境
-3. 多时间周期的信号可能产生滞后
-4. 在快速趋势市场中,止盈设置可能过早锁定利润
-5. 需要较大的资金管理以承受3.7%的止损幅度
-
-#### 策略优化方向
-1. 可以考虑根据市场波动率动态调整止损和获利目标
-2. 增加成交量指标作为辅助确认信号
-3. 引入趋势强度指标来改善震荡市场中的表现
-4. 优化多时间周期之间的权重设置
-5. 考虑加入市场情绪指标来提高信号的准确性
-
-#### 总结
-这是一个结合了多时间周期分析和趋势确认的完整交易系统。通过随机指标和价格形态的配合使用,能够较好地捕捉市场的转折点。固定的风险管理参数虽然简单,但保证了交易的一致性。该策略适合波动性较大的市场,但仍需要交易者根据具体市场环境进行参数优化。 ||
-
 #### Overview
 This strategy is a trading system based on Multi-Timeframe Stochastic Oscillator, combining trend confirmation and price pattern analysis. The strategy utilizes three timeframes (15-minute, 30-minute, and 60-minute), identifying trading opportunities through Stochastic crossover signals and confirmation of Higher Highs and Lower Lows patterns. It also implements fixed percentage stop-loss and take-profit settings to control risk and secure profits.
 
@@ -78,9 +41,7 @@ The core logic includes the following key components:
 5. Consider adding market sentiment indicators to improve signal accuracy
 
 #### Summary
-This is a comprehensive trading system combining multi-timeframe analysis and trend confirmation. Through the coordinated use of Stochastic indicators and price patterns, it effectively captures market turning points. While the fixed risk management parameters are simple, they ensure consistency in trading. The strategy is suitable for volatile markets, but traders still need to optimize parameters according to specific market conditions.[/trans]
-
-
+This is a comprehensive trading system combining multi-timeframe analysis and trend confirmation. Through the coordinated use of Stochastic indicators and price patterns, it effectively captures market turning points. While the fixed risk management parameters are simple, they ensure consistency in trading. The strategy is suitable for volatile markets, but traders still need to optimize parameters according to specific market conditions.
 
 > Source (PineScript)
 

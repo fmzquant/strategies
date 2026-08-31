@@ -10,7 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1c7f9b7ce76020d8ea6.png)
-[trans]
 ## Overview
 
 The Dual RSI Mean Reversion Strategy is a trend following strategy that identifies overbought and oversold conditions using two RSI indicators on different timeframes. It aims to capitalize on mean reversion by going long after oversold conditions and going short after overbought conditions. The strategy uses Heikin-Ashi candles, RSI indicators and an open color filter to identify trading opportunities.
@@ -53,54 +52,6 @@ Positions are closed out at the end of each day to avoid holding trades overnigh
 ## Conclusion
 
 The Dual RSI Mean Reversion strategy takes a rules-based approach to trading momentum. By combining two timeframes, overbought/oversold indicators, candlestick analysis and an entry filter, it aims to identify high probability mean reversion setups. Strict risk management and prudent position sizing help balance profits with managing drawdowns. Further optimization and robustness testing would help deploy it successfully across various markets.
-
-||
-
-
-## 概述
-
-双向RSI均线回复策略是一种趋势跟踪策略,它使用两个不同时间周期的RSI指标来识别超买和超卖状况。该策略旨在通过在超卖后做多、在超买后做空来获利。该策略使用平滑异同移动平均线、RSI指标和开仓颜色过滤器来识别交易机会。
-
-## 策略逻辑
-
-该策略使用两个具有不同周期的RSI指标——一个在5分钟图表上,一个在1小时图表上。对于RSI指标,超卖水平被认定在30以下,超买水平在70以上。
-
-它会追踪RSI值,寻找RSI持续一定周期处于超卖区或者超买区的情况,表明出现了扩张的超卖或超买状态。 
-
-此外,它使用平滑异同移动平均线,在进入交易前检查一定周期的红色或绿色K线来确认趋势方向。开仓颜色过滤器有助于避免假信号。
-
-当RSI和平滑异同移动平均线条件都满足时,该策略会在超卖后做多,在超买后做空,押注价格重新回归均线。
-
-每天结束时平仓,以避免过夜持仓。
-
-## 优势分析
-
-- 使用多时间框架识别超买超卖状况
-- 平滑异同移动平均线过滤噪音,识别趋势方向 
-- 开仓颜色过滤器避免假信号
-- 根据两个指标匹配明确的开仓平仓规则
-- 每日前平仓控制风险
-
-## 风险分析
-
-- 如果强势趋势继续,RSI超买超卖信号后可能出现震荡
-- 市场间隙可能触发止损
-- 平滑异同移动平均线滞后可能延迟开仓从而错过行情
-- 每日结束前平仓放弃过夜持仓可能获得的收益
-
-## 优化方向
-
-- 添加交易量或波动率等额外过滤器以确认信号
-- 优化RSI周期和超买超卖水平参数
-- 考虑根据波动率进行动态仓位控制
-- 测试止盈止损退出,而非每日结束前平仓
-- 在不同品种测试效果并调整参数
-
-## 总结
-
-双向RSI均线回复策略采用规则化方法交易动量。通过组合两个时间框架、超买超卖指标、K线形态分析和开仓过滤器,其目标是识别高概率均线回归机会。严格的风险管理和审慎的仓位控制有助于在获利的同时控制回撤。进一步优化和稳健性测试将有助于成功地在各类市场部署该策略。
-
-[/trans]
 
 > Strategy Arguments
 

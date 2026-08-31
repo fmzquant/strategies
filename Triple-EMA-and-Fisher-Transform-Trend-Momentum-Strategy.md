@@ -12,46 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8a58adb79b787179365.png)
 ![IMG](https://www.fmz.com/upload/asset/2d901d8fb7d74c85aeb73.png)
 
-
-[trans]
-#### 概述
-这个策略结合了三重指数移动平均线(TEMA)和Fisher Transform这两个技术指标,通过识别趋势和动量信号来确定入场和出场时机。TEMA作为一种低延迟的趋势跟踪指标,能够有效识别市场趋势方向,而Fisher Transform通过将价格变化转换为高斯正态分布,提供了更清晰的动量信号。策略采用交叉信号作为交易触发条件,结合了趋势跟踪和动量分析的优势。
-
-#### 策略原理
-策略的核心逻辑建立在两个主要指标之上:
-1. TEMA指标采用三重指数移动平均计算方法,通过"3×EMA - 3×EMA(EMA) + EMA(EMA(EMA))"的公式降低了传统移动平均线的滞后性,默认周期为21。
-2. Fisher Transform指标将价格数据转换为正态分布,默认参数为10,通过对高低点价格进行标准化处理后应用对数变换,使得信号更加明确。
-
-交易规则如下:
-- 做多条件:价格上穿TEMA线且Fisher Transform上穿0轴
-- 做空条件:价格下穿TEMA线且Fisher Transform下穿0轴  
-- 多单出场:价格下穿TEMA线或Fisher Transform下穿0轴
-- 空单出场:价格上穿TEMA线或Fisher Transform上穿0轴
-
-#### 策略优势
-1. 信号可靠性高:通过结合趋势和动量指标,能够有效过滤虚假信号
-2. 延迟性低:TEMA相比传统移动平均线具有更快的响应速度
-3. 信号明确:Fisher Transform的正态分布特性使得交易信号更加清晰
-4. 风险控制完善:设置了明确的止损条件
-5. 参数可调:可根据不同市场环境调整指标参数
-6. 可视化效果好:提供了清晰的图表展示
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡行情下可能产生频繁的假突破信号
-2. 滞后性风险:虽然TEMA降低了滞后性,但仍然存在一定程度的延迟
-3. 参数敏感性:不同参数设置可能导致策略表现差异较大
-4. 市场环境依赖:策略在趋势明显的市场中表现更好
-
-#### 策略优化方向
-1. 引入波动率过滤:可以添加ATR指标过滤低波动率环境下的交易信号
-2. 优化出场机制:可以考虑加入移动止损或利润保护机制
-3. 增加时间过滤:可以根据不同时间段的市场特性调整交易策略
-4. 加入成交量确认:结合成交量指标提高信号可靠性
-5. 动态参数优化:根据市场状态动态调整指标参数
-
-#### 总结
-这是一个结合趋势和动量分析的完整交易策略,通过TEMA和Fisher Transform的配合使用,既保证了趋势跟踪能力,又提供了清晰的动量确认信号。策略设计合理,具有较好的实用性,但在实际应用中需要注意市场环境的适应性,并根据具体情况进行参数优化。通过建议的优化方向,策略的稳定性和可靠性还可以进一步提升。|| 
-
 #### Overview
 This strategy combines the Triple Exponential Moving Average (TEMA) and Fisher Transform indicators to identify trend and momentum signals for entry and exit timing. TEMA serves as a low-lag trend following indicator for effective trend direction identification, while Fisher Transform converts price movements into a Gaussian normal distribution for clearer momentum signals. The strategy uses crossover signals as trading triggers, combining the advantages of trend following and momentum analysis.
 
@@ -88,9 +48,7 @@ Trading rules are:
 5. Dynamic Parameter Optimization: Adjust indicator parameters based on market conditions
 
 #### Summary
-This is a comprehensive trading strategy combining trend and momentum analysis. Through the complementary use of TEMA and Fisher Transform, it ensures trend following capability while providing clear momentum confirmation signals. The strategy design is rational and practical, but attention must be paid to market environment adaptability and parameter optimization in actual application. Through the suggested optimization directions, the strategy's stability and reliability can be further enhanced.[/trans]
-
-
+This is a comprehensive trading strategy combining trend and momentum analysis. Through the complementary use of TEMA and Fisher Transform, it ensures trend following capability while providing clear momentum confirmation signals. The strategy design is rational and practical, but attention must be paid to market environment adaptability and parameter optimization in actual application. Through the suggested optimization directions, the strategy's stability and reliability can be further enhanced.
 
 > Source (PineScript)
 

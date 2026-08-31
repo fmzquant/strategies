@@ -10,62 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1159e7bae47b549394f.png)
- [trans]
-
-## 概述
-
-该策略是著名的Turtle交易系统的实际代码实现,使用55周期通道作为入场信号,20周期通道作为退出信号,追踪较长周期的趋势,属于趋势跟踪类型策略。
-
-## 策略原理
-
-该策略主要基于两个指标:55周期最高价(HI)和最低价(LO)构建入场通道,以及20周期最高价(hi)和最低价(lo)构建退出通道。
-
-当价格上穿55周期通道时生成买入信号;当价格下穿55周期通道时生成卖出信号。这是典型的趋势追踪策略入场逻辑。
-
-当价格下穿20周期通道时平掉多单;当价格上穿20周期通道时平掉空单。这是策略的退出逻辑。
-
-该策略同时绘图显示55周期通道和20周期通道,可以直观看到策略的入场和退出点。
-
-## 优势分析
-
-该策略主要具有以下几点优势:
-
-1. 追踪中长线趋势,回撤相对较小
-2. 入场信号明确,运用通道原理,回撤控制效果好
-3. 退出机制较为严格,避免反转带来的损失
-4. 参数设置简单,容易实施
-
-## 风险分析
-
-该策略也存在一些风险:
-
-1. 无法捕获短线机会,盈利能力相对较弱
-2. 无法应对突发事件,容易止损
-3. 无法有效控制单边行情的超额亏损
-4.  parametric,对参数非常敏感
-
-可以通过以下方法降低风险:
-
-1. 优化参数,找到最佳参数组合
-2. 增加止损策略,控制单边行情下的损失
-3. 结合其他指标,识别潜在的反转机会
-
-## 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 优化入场通道和出场通道的参数,找到最优参数组合
-2. 增加波动率指标,避免陷入震荡行情
-3. 结合交易量指标,确保入场时交易量放大
-4. 增加移动止损策略,实时跟踪止损线
-5. 结合多个时间周期,实现多周期综合交易
-
-## 总结
-
-该策略整体是一个非常典型的趋势跟踪策略,通过通道来捕获中长线趋势,回撤控制效果较好。同时也存在一些典型的趋势跟踪策略的问题,如捕获趋势的不足,难以应对反转等。通过多方面优化,可以将该策略的优势发挥到极致,成为一个可靠的量化策略。
-
-||
-
 
 ## Overview
 
@@ -118,9 +62,6 @@ The strategy can be optimized in several aspects:
 ## Conclusion  
 
 In summary, this is a very typical trend-following strategy, using channels to capture mid-to-long term trends with good drawdown control. It also has some typical issues of trend-following strategies, like insufficient trend capturing ability and difficulty dealing with reversals. With comprehensive optimizations, the advantages can be fully realized to become a reliable quantitative strategy.
-
-[/trans]
-
 > Strategy Arguments
 
 

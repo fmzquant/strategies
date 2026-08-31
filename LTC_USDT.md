@@ -9,11 +9,10 @@ yuehen7
 
 > Strategy Description
 
-新手上路，研究了几天，简单的写了个......
-
+I am just getting started and put together this simple strategy after a few days of study.
 
 QQ:185772115
-可以交流交流呀~
+Feel free to discuss ideas.
 
 > Strategy Arguments
 
@@ -21,13 +20,13 @@ QQ:185772115
 
 |Argument|Default|Description|
 |----|----|----|
-|MinSpace|0.06|最小利润差价|
-|MaxSpace|0.03|挂单失效距离|
-|SlidePrice|0.01|下单滑动价|
-|RetryDelay|500|失败重试|
-|MinStock|0.001|最小交易量|
-|OrderAmount|0.02|固定下单数量|
-|Precision|2|小数精度|
+|MinSpace|0.06|Minimum profit spread|
+|MaxSpace|0.03|Pending order invalidation distance|
+|SlidePrice|0.01|Order price slippage|
+|RetryDelay|500|Retry on failure|
+|MinStock|0.001|Minimum trade size|
+|OrderAmount|0.02|Fixed order size|
+|Precision|2|Decimal precision|
 
 
 > Source (javascript)

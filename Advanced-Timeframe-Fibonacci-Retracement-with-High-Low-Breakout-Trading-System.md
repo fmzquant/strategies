@@ -11,36 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/12aab3311df739c5957.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多重技术分析工具的高级交易系统,主要基于高时间框架的Fibonacci回撤水平与价格高低点突破条件来生成交易信号。策略通过动态计算更高时间框架的价格数据,结合Fibonacci回撤水平和自定义的价格突破条件,形成一个完整的交易决策系统。这种方法既考虑了市场的整体趋势,又关注短期价格突破,能够在市场转折点捕捉潜在的交易机会。
-
-#### 策略原理
-策略的核心逻辑建立在三个主要支柱之上:首先是更高时间框架的价格分析,通过计算日线等较高时间周期的开高低收价格,建立更宏观的市场视角。其次是Fibonacci回撤水平的动态计算,基于高时间框架的价格区间设定关键的支撑阻力位。最后是价格突破判定,通过设定回溯期间的最高价和最低价作为突破参考。买入信号在价格突破最近低点且越过50%Fibonacci回撤位时触发,而卖出信号则在价格跌破最近高点且跌破50%Fibonacci回撤位时产生。
-
-#### 策略优势
-1. 多维度分析:结合了技术分析中最受认可的几个要素,包括价格行为、趋势跟踪和支撑阻力。
-2. 适应性强:可以根据不同市场条件调整参数,包括时间周期、回溯期和Fibonacci水平。
-3. 风险管理完善:通过多重确认机制降低假突破风险。
-4. 可视化程度高:所有关键价位都在图表上清晰可见,便于交易决策。
-5. 灵活性强:可以适用于各种交易品种和时间周期。
-
-#### 策略风险
-1. 参数敏感性:不同的回溯期设置可能导致信号质量差异较大。
-2. 市场条件依赖:在震荡市场中可能产生过多假信号。
-3. 滞后性风险:由于使用了回溯期数据,可能在快速市场中错过最佳入场点。
-4. 过度优化风险:参数过度优化可能导致未来表现不佳。
-
-#### 策略优化方向
-1. 增加波动率过滤:建议添加ATR或Bollinger带宽等指标来过滤低波动期。
-2. 整合趋势过滤:可以加入均线系统来确认整体趋势方向。
-3. 优化进场时机:可以结合RSI等动量指标改善入场时机。
-4. 动态参数调整:引入自适应机制,根据市场状况自动调整参数。
-5. 增强风险控制:加入动态止损和利润目标设置。
-
-#### 总结
-这是一个设计精良的交易系统,通过结合多个经典技术分析工具,创造出一个既有理论基础又实用的交易策略。该策略最大的特点是能够通过多维度分析提供更可靠的交易信号,同时保持了足够的灵活性以适应不同市场环境。虽然存在一些固有风险,但通过建议的优化方向,可以进一步提升策略的稳定性和可靠性。对于愿意投入时间进行参数优化和策略改进的交易者来说,这是一个很好的基础框架。 || 
-
 #### Overview
 This strategy is an advanced trading system that combines multiple technical analysis tools, primarily based on higher timeframe Fibonacci retracement levels and price high-low breakout conditions to generate trading signals. The strategy dynamically calculates higher timeframe price data, combining Fibonacci retracement levels and customized price breakout conditions to form a complete trading decision system. This approach considers both overall market trends and short-term price breakouts, capable of capturing potential trading opportunities at market turning points.
 
@@ -68,7 +38,7 @@ The strategy's core logic is built on three main pillars: First is the higher ti
 5. Enhanced risk control: Add dynamic stop-loss and profit target settings.
 
 #### Summary
-This is a well-designed trading system that creates a theoretically sound and practical trading strategy by combining multiple classic technical analysis tools. The strategy's greatest feature is its ability to provide more reliable trading signals through multi-dimensional analysis while maintaining sufficient flexibility to adapt to different market environments. While there are some inherent risks, the strategy's stability and reliability can be further enhanced through the suggested optimization directions. For traders willing to invest time in parameter optimization and strategy improvement, this is an excellent basic framework.[/trans]
+This is a well-designed trading system that creates a theoretically sound and practical trading strategy by combining multiple classic technical analysis tools. The strategy's greatest feature is its ability to provide more reliable trading signals through multi-dimensional analysis while maintaining sufficient flexibility to adapt to different market environments. While there are some inherent risks, the strategy's stability and reliability can be further enhanced through the suggested optimization directions. For traders willing to invest time in parameter optimization and strategy improvement, this is an excellent basic framework.
 
 
 

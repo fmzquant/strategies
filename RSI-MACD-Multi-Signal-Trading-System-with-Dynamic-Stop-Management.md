@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11fc49bce391e023433.png)
 
-[trans]
-#### 概述
-该策略是一个基于技术分析指标的交易系统,结合了RSI(相对强弱指数)和MACD(移动平均线趋同背离)双重信号确认机制,通过在超买超卖区间寻找交易机会,并采用动态止盈止损来管理风险。策略设计主要针对短线交易,适用于快速市场环境下的交易机会捕捉。
-
-#### 策略原理
-策略运用RSI和MACD两个经典技术指标构建交易信号系统。买入信号在RSI低于35(超卖区域)且MACD出现金叉时触发;卖出信号在RSI高于70(超买区域)且MACD出现死叉时触发。系统采用300点止损和600点止盈的风险管理机制,这种2:1的盈亏比有助于在长期交易中获得正期望收益。
-
-#### 策略优势
-1. 双重信号确认机制提高了交易的准确性
-2. RSI和MACD指标组合能够有效过滤虚假信号
-3. 固定的风险收益比有利于长期稳定获利
-4. 策略参数可调整,具有良好的适应性
-5. 采用标签系统可视化交易信号,便于回测分析
-6. 短周期设置适合把握短线机会
-
-#### 策略风险
-1. 震荡市场可能产生频繁交易信号导致连续亏损
-2. 固定止损可能在剧烈波动中造成较大损失
-3. RSI和MACD属于滞后指标,可能错过最佳入场时机
-4. 短周期交易易受市场噪音影响
-5. 未设置时间过滤可能在不适合的时段交易
-
-#### 策略优化方向
-1. 引入趋势过滤器,避免震荡市场交易
-2. 增加波动率指标,动态调整止损水平
-3. 加入交易时间过滤,避开低流动性时段
-4. 考虑设置信号确认时间要求,减少虚假信号
-5. 优化仓位管理系统,根据市场波动调整交易量
-6. 增加移动止损功能,更好地保护盈利
-
-#### 总结
-该策略通过结合RSI和MACD指标构建了一个相对可靠的交易系统,配合合理的止盈止损设置,具有一定的实战应用价值。但仍需要根据实际市场情况进行优化,特别是在风险控制和信号过滤方面需要进一步完善。策略的成功运行需要交易者对市场有深入理解,并能够灵活调整参数以适应不同市场环境。 || 
-
 #### Overview
 This strategy is a technical analysis-based trading system that combines RSI (Relative Strength Index) and MACD (Moving Average Convergence Divergence) dual signal confirmation mechanism, seeking trading opportunities in overbought and oversold zones while employing dynamic stop management. The strategy is designed for short-term trading and is suitable for capturing opportunities in fast-moving markets.
 
@@ -74,9 +41,7 @@ The strategy utilizes two classic technical indicators - RSI and MACD - to const
 6. Add trailing stop functionality for better profit protection
 
 #### Summary
-The strategy builds a relatively reliable trading system by combining RSI and MACD indicators, complemented by reasonable stop-loss and take-profit settings, showing practical application value. However, it still requires optimization based on actual market conditions, especially in risk control and signal filtering aspects. Successful strategy implementation requires traders to have a deep understanding of the market and the ability to flexibly adjust parameters to adapt to different market environments.[/trans]
-
-
+The strategy builds a relatively reliable trading system by combining RSI and MACD indicators, complemented by reasonable stop-loss and take-profit settings, showing practical application value. However, it still requires optimization based on actual market conditions, especially in risk control and signal filtering aspects. Successful strategy implementation requires traders to have a deep understanding of the market and the ability to flexibly adjust parameters to adapt to different market environments.
 
 > Source (PineScript)
 

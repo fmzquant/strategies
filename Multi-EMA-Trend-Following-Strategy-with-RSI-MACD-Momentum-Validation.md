@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/119deec2d9bd799df13.png)
 
-[trans]
-#### 概述
-该策略是一个基于多周期指数移动平均线(EMA)、相对强弱指标(RSI)和移动平均线趋同散度指标(MACD)的趋势跟踪交易系统。策略通过多重EMA的排列形态识别市场趋势,并结合RSI和MACD的动量确认来优化入场时机,同时使用基于EMA的止损和获利方法来管理风险和收益。
-
-#### 策略原理
-策略使用5、14、34和55周期的EMA形成的"EMA瀑布"形态来判断趋势方向。在上升趋势中,要求EMA5>EMA14>EMA34>EMA55;在下降趋势中则相反。当MACD线穿越零轴且RSI位于50以上(多头)或50以下(空头)时,触发交易信号。止损设置在34周期EMA处,获利目标为止损位的3倍。
-
-#### 策略优势
-1. 多重技术指标的结合提供了更可靠的交易信号,降低了假突破的风险
-2. EMA瀑布形态能够有效识别强势趋势,避免在盘整市场中频繁交易
-3. RSI和MACD的动量确认机制可以过滤掉趋势较弱的交易机会
-4. 基于EMA的动态止损方法既保护了利润又给予趋势充分发展空间
-5. 较大的盈亏比设置(3:1)有助于获得良好的长期收益表现
-
-#### 策略风险
-1. 在剧烈波动的市场中,多重EMA的滞后性可能导致入场或出场延迟
-2. 对趋势市场依赖性强,在震荡市场中可能产生连续亏损
-3. MACD零轴交叉可能出现假信号,特别是在市场波动较大时
-4. 3倍止损的获利目标在某些市场环境下可能过于激进
-5. 多个技术指标的组合可能导致交易机会减少,影响策略的频率
-
-#### 策略优化方向
-1. 考虑引入波动率指标(如ATR)来动态调整止损和获利目标
-2. 可以增加成交量指标来验证趋势的有效性
-3. 针对不同市场状态动态调整EMA周期参数
-4. 在震荡市场中可以考虑降低盈亏比要求
-5. 增加市场环境过滤机制,在非趋势市场暂停交易
-
-#### 总结
-这是一个设计合理的趋势跟踪策略,通过多重技术指标的配合既确保了交易的可靠性,又实现了风险的有效控制。虽然策略在震荡市场中表现可能欠佳,但通过建议的优化方向可以进一步提升其适应性和稳定性。在实盘交易中,建议先进行充分的回测和参数优化,并根据具体市场特征进行针对性调整。 || 
-
 #### Overview
 This strategy is a trend-following trading system based on multiple Exponential Moving Averages (EMA), Relative Strength Index (RSI), and Moving Average Convergence Divergence (MACD). It identifies market trends through multiple EMA alignments, validates entry timing with RSI and MACD momentum confirmation, and manages risk and profit using EMA-based stop-loss and take-profit methods.
 
@@ -70,10 +39,7 @@ The strategy employs an "EMA Cascade" formation using 5, 14, 34, and 55-period E
 5. Implement market environment filters to pause trading in non-trending conditions
 
 #### Summary
-This is a well-designed trend-following strategy that ensures trading reliability and effective risk control through multiple technical indicators' coordination. While the strategy may underperform in ranging markets, its performance and stability can be further enhanced through the suggested optimizations. For live trading, it's recommended to conduct thorough backtesting and parameter optimization, with specific adjustments based on market characteristics.[/trans]
-
-
-
+This is a well-designed trend-following strategy that ensures trading reliability and effective risk control through multiple technical indicators' coordination. While the strategy may underperform in ranging markets, its performance and stability can be further enhanced through the suggested optimizations. For live trading, it's recommended to conduct thorough backtesting and parameter optimization, with specific adjustments based on market characteristics.
 > Source (PineScript)
 
 ``` pinescript

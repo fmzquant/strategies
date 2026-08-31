@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14d7eb33bf3777a5ea7.png)
 
-[trans]
-#### 概述
-本策略是一个基于布林带趋势背离和动态带宽变化的多层级量化交易系统。该策略通过监测布林带宽度的动态变化、价格突破以及EMA200均线配合，构建了一个完整的交易决策框架。策略采用自适应的波动率跟踪机制，能够有效捕捉市场趋势转折点。
-
-#### 策略原理
-策略核心基于以下几个关键要素:
-1. 布林带计算采用20周期移动平均和2倍标准差
-2. 通过连续三个时间点的带宽变化判断趋势强度
-3. 结合K线实体与带宽比例关系判断突破有效性
-4. 使用EMA200作为中长期趋势过滤器
-5. 在价格突破上轨且符合带宽扩张条件时入场做多
-6. 在价格跌破下轨且符合带宽收缩条件时平仓出场
-
-#### 策略优势
-1. 信号系统具有前瞻性,能提前发现潜在趋势转折点
-2. 多重技术指标交叉验证,显著降低虚假信号
-3. 带宽变化率指标对市场波动具有良好的自适应性
-4. 出入场逻辑清晰,易于程序化实现
-5. 风险控制机制完善,能有效控制回撤
-
-#### 策略风险
-1. 在震荡市场可能产生频繁交易
-2. 趋势突变时可能出现滞后
-3. 参数优化存在过拟合风险
-4. 市场高波动期可能面临滑点风险
-5. 需要及时监控带宽指标的有效性
-
-#### 策略优化方向
-1. 引入自适应的参数优化机制
-2. 增加成交量等辅助指标验证
-3. 优化止损止盈条件设置
-4. 完善趋势强度的量化判断标准
-5. 加入更多的市场环境过滤条件
-
-#### 总结
-该策略通过布林带趋势背离和动态带宽变化构建了一个稳健的交易系统。策略在趋势市场表现优异,但仍需要在震荡市场和参数优化方面进行改进。整体而言,该策略具有较好的实用价值和扩展空间。 || 
-
 #### Overview
 This strategy is a multi-level quantitative trading system based on Bollinger Bands trend divergence and dynamic bandwidth changes. The strategy constructs a complete trading decision framework by monitoring Bollinger Bands width dynamics, price breakouts, and EMA200 coordination. It employs an adaptive volatility tracking mechanism to effectively capture market trend turning points.
 
@@ -82,7 +45,7 @@ The strategy is based on the following key elements:
 5. Incorporate additional market environment filters
 
 #### Summary
-The strategy builds a robust trading system through Bollinger Bands trend divergence and dynamic bandwidth changes. While performing excellently in trending markets, improvements are needed for ranging markets and parameter optimization. Overall, the strategy demonstrates good practical value and room for expansion.[/trans]
+The strategy builds a robust trading system through Bollinger Bands trend divergence and dynamic bandwidth changes. While performing excellently in trending markets, improvements are needed for ranging markets and parameter optimization. Overall, the strategy demonstrates good practical value and room for expansion.
 
 
 

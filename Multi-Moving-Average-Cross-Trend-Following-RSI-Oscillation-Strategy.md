@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/202f7f27946cc2976e3.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重均线交叉和RSI指标的趋势跟踪交易系统。策略结合了EMA20、EMA50和SMA200三条均线,通过均线的位置关系判断市场趋势,同时利用RSI指标过滤交易信号,在价格突破前期高点时进行交易。策略设置了固定的止盈止损条件,适合在1小时和日线级别上运行。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键条件:
-1. 趋势判断: EMA20需要位于EMA50之上,且SMA200位于EMA20和EMA50之下,确保处于上升趋势。
-2. 价格位置: 当前收盘价需要在EMA20或EMA50的1%波动范围内,确保在关键支撑位置。
-3. RSI过滤: RSI值需要大于设定的阈值(默认40),过滤出强势市场。
-4. 入场触发: 当价格突破前一根K线高点时触发做多信号。
-5. 风险管理: 设置25%的止盈位和10%的止损位进行风险控制。
-
-#### 策略优势
-1. 多重确认机制: 通过均线系统、RSI指标和价格突破多个维度确认交易信号,降低虚假信号。
-2. 趋势跟踪性强: 利用多重均线系统判断中长期趋势,提高交易方向的准确性。
-3. 风险管理完善: 设置固定的止盈止损比例,有效控制每笔交易的风险。
-4. 适应性好: 策略参数可调整,能适应不同市场环境。
-5. 执行明确: 入场和出场条件清晰,易于程序化实现。
-
-#### 策略风险
-1. 震荡市场风险: 在横盘震荡市场中可能产生频繁的虚假信号。
-2. 滞后性风险: 均线系统具有一定滞后性,可能错过最佳入场时机。
-3. 止损幅度风险: 固定的止损比例可能不适合所有市场环境。
-4. 回撤风险: 趋势反转时可能面临较大回撤。
-
-#### 策略优化方向
-1. 动态参数优化: 根据市场波动率动态调整均线周期和RSI阈值。
-2. 市场环境识别: 添加市场环境判断机制,在不同市场环境下使用不同的参数组合。
-3. 动态止盈止损: 基于ATR或波动率设置动态的止盈止损水平。
-4. 加入成交量分析: 结合成交量指标提高信号可靠性。
-5. 优化出场机制: 设计更灵活的出场机制,提高获利能力。
-
-#### 总结
-该策略是一个结构完整、逻辑清晰的趋势跟踪系统。通过多重技术指标的配合使用,能够有效捕捉市场趋势,同时具备完善的风险管理机制。策略的优化空间较大,通过持续改进能够进一步提升策略的稳定性和盈利能力。对于中长期交易者来说,这是一个值得尝试的策略框架。 ||
-
 #### Overview
 This strategy is a trend following trading system based on multiple moving averages crossover and RSI indicator. It combines EMA20, EMA50, and SMA200 to determine market trends, uses RSI indicator to filter trading signals, and executes trades when price breaks previous highs. The strategy implements fixed take-profit and stop-loss conditions, suitable for 1-hour and daily timeframes.
 
@@ -78,10 +43,7 @@ The core logic is based on the following key conditions:
 5. Exit Mechanism Optimization: Design more flexible exit mechanisms to improve profit capture.
 
 #### Summary
-This strategy is a well-structured and logically sound trend following system. Through the combination of multiple technical indicators, it effectively captures market trends while maintaining comprehensive risk management. The strategy has significant room for optimization and can achieve improved stability and profitability through continuous improvement. For medium to long-term traders, this represents a worthwhile strategic framework.[/trans]
-
-
-
+This strategy is a well-structured and logically sound trend following system. Through the combination of multiple technical indicators, it effectively captures market trends while maintaining comprehensive risk management. The strategy has significant room for optimization and can achieve improved stability and profitability through continuous improvement. For medium to long-term traders, this represents a worthwhile strategic framework.
 > Source (PineScript)
 
 ``` pinescript

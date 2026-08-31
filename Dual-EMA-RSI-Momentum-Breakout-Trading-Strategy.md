@@ -11,43 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/18ce225b014f74b6a82.png)
 
-[trans]
-#### 概述
-本策略是一个结合了双均线系统(50和100周期EMA)和RSI动量指标的交易系统。策略通过识别均线交叉和RSI超买区域来确定市场趋势和入场时机,同时使用动态止损来控制风险。该策略主要适用于趋势明显的市场环境,通过捕捉趋势的持续性来获取收益。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键要素：
-1. 使用50周期和100周期的指数移动平均线(EMA)构建趋势判断系统
-2. 通过RSI指标的超买区域(默认70)确认动量
-3. 在均线金叉且RSI进入超买区域时进场做多
-4. 当短期均线跌破长期均线时平仓出场
-5. 使用均线交叉点设置动态止损位
-
-#### 策略优势
-1. 结合趋势和动量双重确认,提高交易信号的可靠性
-2. 使用经典技术指标,逻辑清晰,易于理解和执行
-3. 动态止损机制可以有效控制风险,防止过度回撤
-4. 策略参数可调整性强,适应不同市场环境
-5. 代码结构清晰,便于维护和优化
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假突破信号
-2. RSI超买条件可能导致错过一些重要的趋势起点
-3. 均线系统存在滞后性,可能影响入场和出场时机
-4. 市场剧烈波动时止损位可能不够及时
-5. 仅支持做多,限制了策略的适用范围
-
-#### 策略优化方向
-1. 增加市场环境识别机制,在不同市场条件下使用不同的参数设置
-2. 引入成交量指标作为辅助确认
-3. 优化止损机制,考虑引入追踪止损
-4. 添加做空机制,提高策略的全面性
-5. 考虑加入波动率过滤器,避免在过度波动时期交易
-6. 引入仓位管理系统,根据市场风险动态调整持仓量
-
-#### 总结
-这是一个基于经典技术分析理论构建的趋势跟踪策略,通过均线系统和RSI指标的配合使用,有效地平衡了盈利机会和风险控制。策略的主要优势在于逻辑清晰、风险可控,但也需要在实际应用中根据市场情况进行适当的参数优化和策略改进。对于寻求中长期趋势交易机会的投资者来说,这是一个值得参考的基础策略框架。 || 
-
 #### Overview
 This strategy combines a dual EMA system (50 and 100 periods) with the RSI momentum indicator. It identifies market trends and entry points through EMA crossovers and RSI overbought conditions, while implementing dynamic stop-loss for risk management. The strategy is particularly effective in trending market conditions, capitalizing on trend continuation patterns.
 
@@ -82,7 +45,7 @@ The core logic includes the following key elements:
 6. Introduce position sizing system based on market risk assessment
 
 #### Summary
-This trend-following strategy, built on classical technical analysis principles, effectively balances profit opportunities and risk control through the combination of EMA system and RSI indicator. Its main strengths lie in its clear logic and controllable risk, though it requires appropriate parameter optimization and strategy improvements based on market conditions. For investors seeking medium to long-term trend trading opportunities, this serves as a valuable basic strategy framework.[/trans]
+This trend-following strategy, built on classical technical analysis principles, effectively balances profit opportunities and risk control through the combination of EMA system and RSI indicator. Its main strengths lie in its clear logic and controllable risk, though it requires appropriate parameter optimization and strategy improvements based on market conditions. For investors seeking medium to long-term trend trading opportunities, this serves as a valuable basic strategy framework.
 
 
 

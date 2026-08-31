@@ -10,67 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12043d88d08863d63b5.png)
- [trans]
-
-### 概述
-
-该策略是基于动量指标的反向交易策略。它使用易行指标(EOM)来判断市场的走势,当指标超过设定的阈值时做多做空。同时提供反向交易功能,可以根据实际需要选择正向交易或反向交易。
-
-### 策略原理
-
-易行指标(EOM)是衡量价格和成交量变动幅度的指标。它同时返回正负值。正值表示价格上涨,负值表示价格下跌。数值越大表示价格变动越大和/或成交量越小。
-
-该策略的原理是:
-
-1. 计算当前K线的易行指标值
-2. 判断指标值是否超过设定的做多阈值或做空阈值
-    - 如果超过做多阈值(默认4000),做多
-    - 如果低于做空阈值(默认-4000),做空
-3. 提供反向交易功能
-    - 正常情况下做多时为看涨,做空时为看跌
-    - 开启反向交易后,做多为看跌,做空为看涨
-
-### 优势分析
-
-该策略主要优势有:
-
-1. 使用易行指标判断市场实际走势,指标反映价格和成交量变化
-2. 阈值可自定义设置
-3. 提供反向交易功能,可以根据需要选择正向交易或反向交易
-4. 直观通过K线颜色判断做多做空
-
-### 风险分析
-
-该策略主要风险有:
-
-1. 易行指标存在错触风险,可能出现假突破
-2. 阈值设定不当可能导致交易频繁或次数过少
-3. 反向交易时,需要确保自己有足够的风险承受能力
-
-解决方法:
-
-1. 结合其他指标判断,避免错触
-2. 调整阈值参数,优化交易次数
-3. 正确评估自己的实际风险承受能力
-
-### 优化方向  
-
-该策略可以从以下几个方向进行优化:
-
-1. 结合移动平均线等指标,避免假突破
-2. 添加止损机制
-3. 优化参数,调整做多做空的阈值
-4. 增加开仓条件,避免频繁交易
-5. 反向交易时可设置风险管理策略
-
-通过以上几点优化,可以使策略更稳定,降低风险,提高实盘效果。
-
-### 总结
-
-总的来说,该策略利用易行指标判断市场实际走势,通过做多和做空获得超额收益。它简单易用,同时考虑了价格变动和交易量变动两个因素。如果用于实盘,建议结合其他技术指标,并适当优化参数,可以获得更好的效果。
-
-||
-
 
 ### Overview
 
@@ -129,9 +68,6 @@ By making the above optimizations, the strategy can become more robust, lower ri
 ### Conclusion
 
 In conclusion, this strategy utilizes the Ease of Movement indicator to determine actual market trends, and profits from long/short trading. It is easy to use and considers both price change and volume change factors. When apply it in real trading, it is recommended to incorporate other technical indicators and optimize parameters properly for better performance.
-
-[/trans]
-
 > Strategy Arguments
 
 

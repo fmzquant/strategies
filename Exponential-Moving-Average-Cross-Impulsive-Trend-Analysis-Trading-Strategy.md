@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/104a3014c9a3495ef39.png)
 
-[trans]
-#### 概述
-本策略是一个基于指数移动平均线(EMA)和脉冲修正模型(ICM)的趋势跟踪交易系统。它通过识别价格与EMA的交叉以及随后的脉冲-修正-脉冲形态来捕捉市场趋势变化,并在满足特定条件时执行交易。系统采用固定的风险收益比来管理每笔交易的止损和止盈。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键组件：
-1. 使用10周期EMA作为趋势方向的参考指标
-2. 在价格与EMA发生交叉后的3个周期内寻找脉冲-修正-脉冲形态
-3. 多头入场条件：
-   - 价格上穿EMA
-   - 第一根K线为看涨脉冲(上涨幅度大于预设值)
-   - 第二根K线为看跌修正(收盘价低于开盘价)
-   - 第三根K线为看涨脉冲且突破前两根K线高点
-4. 空头入场条件与多头相反
-5. 使用固定风险收益比(默认3倍)自动设置止损和止盈位置
-
-#### 策略优势
-1. 结合技术指标和价格形态,提供更可靠的交易信号
-2. 通过脉冲-修正-脉冲形态确认趋势的持续性
-3. 采用固定风险收益比进行仓位管理,有利于长期稳定收益
-4. 入场逻辑明确,易于理解和执行
-5. 可适用于不同的交易品种和时间周期
-
-#### 策略风险
-1. 在震荡市场中可能产生频繁的假突破信号
-2. 固定的风险收益比可能不适合所有市场环境
-3. EMA参数和脉冲幅度阈值的选择会影响策略表现
-4. 连续剧烈波动可能导致止损位置不合理
-5. 市场快速反转时可能造成较大回撤
-
-#### 策略优化方向
-1. 引入波动率指标动态调整脉冲幅度阈值
-2. 增加趋势强度过滤器减少假突破
-3. 根据市场特征动态调整风险收益比
-4. 添加时间过滤避免在不利时段交易
-5. 结合成交量指标提高信号可靠性
-
-#### 总结
-该策略通过结合EMA和脉冲修正模型,构建了一个逻辑清晰的趋势跟踪系统。它的优势在于信号明确、风险可控,但仍需要根据具体市场特征进行优化。通过添加适当的过滤条件和动态参数调整机制,可以进一步提高策略的稳定性和盈利能力。 || 
-
 #### Overview
 This strategy is a trend-following trading system based on Exponential Moving Average (EMA) and Impulse Correction Model (ICM). It captures market trend changes by identifying price-EMA crossovers and subsequent impulse-correction-impulse patterns, executing trades when specific conditions are met. The system employs a fixed risk-reward ratio to manage stop-loss and take-profit levels for each trade.
 
@@ -88,10 +48,7 @@ The core logic of the strategy is based on the following key components:
 5. Incorporate volume indicators to improve signal reliability
 
 #### Summary
-The strategy constructs a logically clear trend-following system by combining EMA and impulse correction model. Its advantages lie in clear signals and controllable risk, but optimization based on specific market characteristics is still needed. Through adding appropriate filtering conditions and dynamic parameter adjustment mechanisms, the strategy's stability and profitability can be further improved.[/trans]
-
-
-
+The strategy constructs a logically clear trend-following system by combining EMA and impulse correction model. Its advantages lie in clear signals and controllable risk, but optimization based on specific market characteristics is still needed. Through adding appropriate filtering conditions and dynamic parameter adjustment mechanisms, the strategy's stability and profitability can be further improved.
 > Source (PineScript)
 
 ``` pinescript

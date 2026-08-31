@@ -14,37 +14,6 @@ ianzeng123
 
 
 
-[trans]
-#### 概述
-该策略是一个基于经典三线突破形态的高级交易系统,通过整合ADX趋势确认指标和ATR动态止盈止损机制,提供了一个完整的交易解决方案。策略核心是识别三根连续同向K线后的突破形态,并结合趋势强度确认,实现精准的交易信号生成。
-
-#### 策略原理
-策略运作基于三个核心机制:首先是识别经典的三线突破形态,包括看涨形态(三根连续阴线后的阳线突破)和看跌形态(三根连续阳线后的阴线突破);其次使用ADX(平均趋向指标)进行趋势强度过滤,只有当ADX值超过设定阈值时才确认信号;最后利用ATR(真实波幅)动态计算止盈止损位置,实现风险管理的自适应性。策略在技术上通过精确的K线颜色判定和突破力度验证来保证信号质量。
-
-#### 策略优势
-1. 信号确认机制完善：通过组合多重技术指标(K线形态、ADX、ATR)提高信号可靠性
-2. 风险管理智能化：基于ATR的动态止盈止损设置,能够根据市场波动性自动调整
-3. 高度可定制性：提供多个关键参数的调整选项,包括ADX阈值、ATR周期等
-4. 趋势跟踪增强：ADX过滤确保只在强趋势环境下入场
-5. 代码结构清晰：模块化设计便于维护和扩展
-
-#### 策略风险
-1. 形态识别延迟：三线突破形态的确认需要四根K线完成,可能造成入场时机滞后
-2. 假突破风险：在震荡市场中可能出现虚假突破信号
-3. ADX滞后性：作为趋势确认指标,ADX本身具有一定滞后性
-4. 止损幅度考量：基于ATR的止损设置在剧烈波动时可能过大或过小
-5. 市场环境依赖：策略在趋势明显的市场表现更好,震荡市场效果可能欠佳
-
-#### 策略优化方向
-1. 信号过滤增强：可以添加成交量确认机制,提高信号可靠性
-2. 动态参数优化：引入自适应机制动态调整ADX阈值和ATR周期
-3. 入场时机优化：可以结合价格结构(支撑位/阻力位)优化入场点位
-4. 仓位管理完善：增加基于波动率的动态仓位管理机制
-5. 市场环境识别：添加市场环境分类逻辑,在不同市场条件下使用不同参数设置
-
-#### 总结
-这个策略通过将经典的三线突破形态与现代技术指标相结合,创造了一个兼具理论基础和实用性的交易系统。其核心优势在于多重信号确认机制和智能化风险管理,但使用时需要注意市场环境的适配性和参数优化问题。通过建议的优化方向,策略还有进一步提升的空间。 || 
-
 #### Overview
 This strategy is an advanced trading system based on the classic Three-Line Strike pattern, incorporating ADX trend confirmation and ATR-based dynamic stop-loss/take-profit mechanisms to provide a comprehensive trading solution. The core strategy identifies breakthrough patterns following three consecutive candlesticks in the same direction, combined with trend strength confirmation for precise signal generation.
 
@@ -73,7 +42,7 @@ The strategy operates on three core mechanisms: First, it identifies classic Thr
 5. Market Environment Recognition: Add market condition classification logic to use different parameter settings in different market conditions
 
 #### Summary
-This strategy creates a trading system combining theoretical foundation and practicality by integrating the classic Three-Line Strike pattern with modern technical indicators. Its core strengths lie in multiple signal confirmation mechanisms and intelligent risk management, though attention must be paid to market environment compatibility and parameter optimization. Through the suggested optimization directions, the strategy has room for further improvement.[/trans]
+This strategy creates a trading system combining theoretical foundation and practicality by integrating the classic Three-Line Strike pattern with modern technical indicators. Its core strengths lie in multiple signal confirmation mechanisms and intelligent risk management, though attention must be paid to market environment compatibility and parameter optimization. Through the suggested optimization directions, the strategy has room for further improvement.
 
 
 

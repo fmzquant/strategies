@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f44fe54ba0ad053e7d.png)
 
-[trans]
-#### 概述
-这是一个基于指数移动平均线(EMA)的智能交易策略系统。该策略利用短周期和长周期EMA的交叉信号,结合价格与短期EMA的关系来识别市场趋势和交易机会。策略采用AI辅助开发,通过对价格走势的动态分析实现自动化交易。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键组件:
-1. 双重EMA系统:使用9周期和21周期的指数移动平均线作为信号指标
-2. 趋势判定:通过短期EMA位于长期EMA之上/之下判断市场趋势方向
-3. 入场信号:在上升趋势中,当价格突破短期EMA时做多;在下降趋势中,当价格跌破短期EMA时做空
-4. 出场机制:价格与短期EMA的反向交叉作为止损信号
-
-#### 策略优势
-1. 系统化运作:策略完全系统化,避免人为情绪干扰
-2. 趋势跟踪:能够有效捕捉市场主要趋势,提高盈利机会
-3. 风险控制:具有明确的止损机制,能够及时控制损失
-4. 简单可靠:策略逻辑清晰,便于理解和执行
-5. 适应性强:可以通过参数调整适应不同市场环境
-
-#### 策略风险
-1. 震荡市不适用:在横盘整理阶段可能产生频繁假信号
-2. 滞后性风险:移动平均线本身具有滞后性,可能错过最佳入场点
-3. 参数敏感性:EMA参数的选择对策略表现影响较大
-4. 市场环境依赖:策略在趋势明显的市场中表现更好
-
-#### 策略优化方向
-1. 增加成交量过滤:引入成交量确认信号,提高交易质量
-2. 动态参数优化:根据市场波动率自动调整EMA参数
-3. 加入趋势强度指标:结合其他技术指标评估趋势强度
-4. 完善止盈机制:设计更灵活的利润获取机制
-5. 引入波动率管理:基于波动率调整持仓规模
-
-#### 总结
-这是一个结构完整、逻辑清晰的趋势跟踪策略。通过EMA指标的配合使用,实现了对市场趋势的有效把握。策略的优化空间主要在于信号过滤和风险管理方面,通过持续改进可以进一步提升策略的稳定性和盈利能力。 || 
-
 #### Overview
 This is an intelligent trading strategy system based on Exponential Moving Average (EMA). The strategy utilizes crossover signals between short-term and long-term EMAs, combined with price-EMA relationships to identify market trends and trading opportunities. The strategy was developed with AI assistance, achieving automated trading through dynamic price trend analysis.
 
@@ -76,8 +42,7 @@ The core logic of the strategy is based on several key components:
 5. Introduce Volatility Management: Adjust position sizing based on volatility
 
 #### Summary
-This is a well-structured trend-following strategy with clear logic. Through the coordinated use of EMA indicators, it achieves effective market trend capture. The strategy's optimization potential mainly lies in signal filtering and risk management aspects, with continuous improvements potentially enhancing strategy stability and profitability.[/trans]
-
+This is a well-structured trend-following strategy with clear logic. Through the coordinated use of EMA indicators, it achieves effective market trend capture. The strategy's optimization potential mainly lies in signal filtering and risk management aspects, with continuous improvements potentially enhancing strategy stability and profitability.
 
 
 > Source (PineScript)

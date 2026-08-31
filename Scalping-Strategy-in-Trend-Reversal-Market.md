@@ -10,53 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1608dcb2b64994544ab.png)
- [trans]
-
-## 概述
-
-该策略旨在识别长期趋势态势通过短期震荡进行调整后的低买点,以期捕捉新的趋势行情的开始。它整合多种技术指标判断关键的支持区域,实现风险可控的进入。
-
-## 策略原理
-
-1. 首先判断长期趋势态势,策略采用KD指标判断长短期趋势vetical状况。当长期KD指标连续多周期维持在50以上表示处于多头行情,这为策略确定大级市背景创造条件。
-
-2. 其次,识别短期调整震荡的特征。该策略使用RSI指标判断短期调整的深度。当RSI指标连续创出较低的谷底意味着积累和洗盘的进行。结合KD指标可以判断短期震荡是否接近尾声。
-
-3. 再者,确定支持区域。策略会识别RSI指标在较低水平后的回升,表明支撑区域的形成。KD指标的回升也验证了这一点。这些因素综合表明反转的时机成熟,可以进行介入。
-
-4. 最后,识别反转信号完成入场。当上述指标满足条件时,会产生做多信号,提示可以介入做多。此时作为趋势开始的最佳切入点。
-
-## 优势分析
-
-该策略最大的优势在于充分利用短期调整震荡进行反转切入的时间点选择非常准确,支撑强度得到验证,从而风险可控。这为后续趋势行情提供了巨大的回报潜力。
-
-其次,指标参数设置得当,避免了过多的噪音交易。只在大级市框架内寻找高置信度的支撑区域进行介入,大幅降低了错误交易的概率。
-
-## 风险分析
-
-该策略面临的主要风险在于长期趋势判断出现偏差。当处于盘整和分化行情时,策略会产生错误信号。此外,短期支撑可能再次下破,需要及时止损退出。
-
-为降低风险,首先需要根据大级市背景调整参数,降低多头信号的敏感度。其次,可以设定止损线,在支撑下破时快速退出。最后,如果出现连续的错误信号,应暂停策略,重新评估市场情况。
-
-## 优化方向 
-
-该策略还有进一步优化的空间:
-
-1. 增加成交量指标判断,确保支撑强度
-
-2. 设置回撤止损保护策略收益
-
-3. 增加突破过滤,避免支持下破后的追踪停损被套
-
-4. 结合更多指标综合判断,提升策略稳定性
-
-## 总结
-
-该收益捕捉策略成功利用短期调整震荡的特点,在大级市背景指引下,识别反转信号,以低买高卖的原则进入市场。通过优化参数设置和止损手段,可以降低交易风险。这是一个可靠、稳定、高效的量化策略。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy aims to identify low buying points after long-term trend adjustments through short-term fluctuations, in order to capture the start of new trend markets. It integrates multiple technical indicators to determine key support areas and achieve risk-controlled entry.
 
@@ -97,8 +51,6 @@ There is still room for further optimization of this strategy:
 ## Conclusion  
 
 This profit capturing strategy successfully utilizes the characteristics of short-term adjustment fluctuations under the guidance of macro backgrounds to identify reversal signals and enter the market according to the principle of buying low and selling high. By optimizing parameter settings and stop loss means, trading risks can be reduced. This is a reliable, stable and efficient quantitative strategy.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -1,0 +1,32 @@
+
+> Name
+
+Moving-Average-Strategy-Example-02
+
+> Author
+
+发明者量化-小小梦
+
+
+
+
+
+> Source (MyLanguage)
+
+``` pascal
+M5H^^MA(H,5);
+M5L^^MA(L,5);
+C>M5H,BPK;
+C<M5L,SPK;
+C<MA(C,5) AND BKVOL>0,SP;   
+C>MA(C,5) AND SKVOL>0,BP;  
+AUTOFILTER;
+```
+
+> Detail
+
+https://www.fmz.com/strategy/156699
+
+> Last Modified
+
+2019-07-12 10:23:45

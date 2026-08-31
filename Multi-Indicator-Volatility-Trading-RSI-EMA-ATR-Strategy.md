@@ -9,47 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/11ccc0408e5cbaf0e28.png)
-
-[trans]
-#### 概述
-这个策略是一个结合了多个技术指标的短线交易系统,主要基于RSI(相对强弱指标)、EMA(指数移动平均线)和ATR(真实波幅均值)进行交易信号的生成。策略通过多重指标的配合使用,既考虑了价格趋势,又关注了市场波动性,同时还可以选择性地加入成交量过滤,从而构建了一个相对完整的交易决策体系。
-
-#### 策略原理
-策略采用了三重过滤机制来确保交易信号的可靠性:
-1. 趋势判断: 通过快速EMA(5周期)和慢速EMA(21周期)的交叉关系判断当前市场趋势
-2. 超买超卖: 使用RSI指标(14周期)在45和55的区间内进行反转交易
-3. 波动性确认: 利用ATR指标判断当前市场波动是否适合交易,要求ATR值大于其移动平均值的0.8倍
-4. 可选择性地添加成交量过滤条件,要求成交量大于其20周期均线
-
-多空信号的具体触发条件如下:
-- 做多条件: 快速EMA在慢速EMA上方 + RSI低于45 + 波动性条件满足
-- 做空条件: 快速EMA在慢速EMA下方 + RSI高于55 + 波动性条件满足
-
-#### 策略优势
-1. 多重确认机制提高了交易的可靠性,有效降低了虚假信号
-2. 结合了趋势跟踪和反转交易的特点,既能捕捉大趋势,又能在区间内震荡获利
-3. 通过ATR指标对波动性的控制,避免了在波动过小时频繁交易
-4. 策略具有良好的适应性,可以通过参数调整来适应不同的市场环境
-5. 可选的成交量过滤机制进一步提高了交易的准确性
-
-#### 策略风险
-1. 在剧烈波动的市场中可能会产生滑点,影响实际执行效果
-2. 参数优化存在过拟合风险,需要在不同时间周期进行充分测试
-3. 快速EMA和慢速EMA可能在横盘市场产生过多交叉,导致虚假信号
-4. RSI的固定阈值在不同市场环境下可能需要调整
-5. 交易成本(0.1%手续费)可能会显著影响策略收益
-
-#### 策略优化方向
-1. 可以考虑加入更多的时间框架确认,如在更大的时间周期增加趋势过滤
-2. 建议增加止损止盈机制,可以基于ATR的倍数来设置
-3. 考虑加入仓位管理系统,根据波动率来动态调整持仓规模
-4. 可以引入市场情绪指标,在极端市场环境下调整交易参数
-5. 建议增加交易时间过滤,避免在低流动性时段交易
-
-#### 总结
-这是一个设计合理的多指标交易系统,通过多重确认机制提高了交易的可靠性。策略的核心优势在于结合了趋势和波动性分析,同时考虑了市场的多个维度。虽然存在一定的优化空间,但总体来说是一个值得进一步完善和实践的交易策略。 || 
-
 #### Overview
 This strategy is a short-term trading system that combines multiple technical indicators, primarily based on RSI (Relative Strength Index), EMA (Exponential Moving Average), and ATR (Average True Range) for generating trading signals. By utilizing multiple indicators together, the strategy considers both price trends and market volatility, with an optional volume filter, creating a relatively complete trading decision system.
 
@@ -86,9 +45,7 @@ Specific trigger conditions for long and short signals are:
 5. Recommend adding trading time filters to avoid trading during low liquidity periods
 
 #### Summary
-This is a well-designed multi-indicator trading system that improves trading reliability through multiple confirmation mechanisms. The strategy's core advantage lies in combining trend and volatility analysis while considering multiple market dimensions. While there is room for optimization, it is overall a trading strategy worth further refinement and implementation.[/trans]
-
-
+This is a well-designed multi-indicator trading system that improves trading reliability through multiple confirmation mechanisms. The strategy's core advantage lies in combining trend and volatility analysis while considering multiple market dimensions. While there is room for optimization, it is overall a trading strategy worth further refinement and implementation.
 
 > Source (PineScript)
 

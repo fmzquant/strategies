@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/181f974936d204e1660.png)
 
-[trans]
-#### 概述
-本策略是一个基于市场疲劳度分析的多层级交易系统,通过对价格动态的深入分析来识别市场可能出现转折的关键时刻。该策略结合了动态的风险管理机制,包括资金管理、止损优化以及回撤控制等多个维度,形成了一个完整的交易决策框架。
-
-#### 策略原理
-策略核心是通过监测价格连续运动来判断市场疲劳程度。具体来说:
-1. 通过比较当前收盘价与之前第4根K线的收盘价来确定趋势方向
-2. 设置了三个不同强度级别(9/12/14)的信号触发点
-3. 当价格持续朝一个方向运动时,系统会累积信号计数
-4. 一旦达到预设的信号强度阈值,系统会给出相应级别的交易信号
-5. 整合了基于ATR的动态止损机制和风险回报比的仓位管理系统
-
-#### 策略优势
-1. 多层级信号系统提供了不同程度的交易机会识别
-2. 通过资金管理和风险控制机制来保护资金安全
-3. 采用ATR动态止损,能更好地适应市场波动
-4. 引入了追踪止损机制,可以更好地锁定利润
-5. 设置了最大回撤保护,避免过度损失
-6. 系统具有良好的可扩展性和参数优化空间
-
-#### 策略风险
-1. 在震荡市场中可能产生错误信号
-2. 固定的信号阈值可能不适合所有市场环境
-3. 快速反转行情下止损可能较大
-4. 需要较多的参数优化工作
-5. 资金管理系统可能在某些情况下限制获利空间
-
-#### 策略优化方向
-1. 引入市场波动率过滤机制,在不同波动环境下调整信号阈值
-2. 增加成交量分析维度,提高信号可靠性
-3. 开发自适应的参数优化系统
-4. 加入更多的市场环境分析指标
-5. 优化资金管理系统,使其更具灵活性
-
-#### 总结
-该策略通过多层级的疲劳度分析和完善的风险管理系统,为交易者提供了一个系统化的交易框架。虽然存在一些需要优化的地方,但整体设计理念完整,具有实际应用价值。建议在实盘中采用保守的资金管理策略,并持续进行参数优化和系统改进。
-
-|| 
-
 #### Overview
 This strategy is a multi-level trading system based on market exhaustion analysis, designed to identify potential market turning points through in-depth price dynamics analysis. It incorporates dynamic risk management mechanisms, including money management, stop-loss optimization, and drawdown control, forming a comprehensive trading decision framework.
 
@@ -84,10 +45,7 @@ The core mechanism analyzes market exhaustion through continuous price movement 
 5. Optimize money management system for greater flexibility
 
 #### Summary
-The strategy provides a systematic trading framework through multi-level exhaustion analysis and comprehensive risk management. While there are areas for optimization, the overall design is complete and practically applicable. It is recommended to use conservative money management in live trading while continuously optimizing parameters and improving the system.[/trans]
-
-
-
+The strategy provides a systematic trading framework through multi-level exhaustion analysis and comprehensive risk management. While there are areas for optimization, the overall design is complete and practically applicable. It is recommended to use conservative money management in live trading while continuously optimizing parameters and improving the system.
 > Source (PineScript)
 
 ``` pinescript

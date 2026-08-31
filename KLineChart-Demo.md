@@ -9,18 +9,12 @@ KLineChart-Demo
 
 > Strategy Description
 
- 平台(Javascript/Python语言)开通KLineChart支持, 支持Pine语言全部画图功能(参数保持一致), 支持自定义买卖信号
- 下面是一个演示的例子
- 
- 参考文档 https://www.fmz.com/api#klinechart
- 
- 
- ![IMG](https://www.fmz.com/upload/asset/bb180d6a028bcc6993.png) 
- 
- 
- 
+KLineChart is now supported on the platform for both JavaScript and Python. It supports all Pine-language drawing functions with the same parameters, and it also supports custom buy and sell signals.
+Below is a demo example.
 
+Reference documentation https://www.fmz.com/api#klinechart
 
+![IMG](https://www.fmz.com/upload/asset/bb180d6a028bcc6993.png) 
 
 > Source (javascript)
 

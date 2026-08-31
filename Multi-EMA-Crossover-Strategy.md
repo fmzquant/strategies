@@ -12,50 +12,7 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d905a89e352e0bb60ca7.png)
 ![IMG](https://www.fmz.com/upload/asset/2d84018b4e9fbcb14d072.png)
 
-
-
-[trans]
-#### 概述
-
-这是一种基于多重指数移动平均线(EMA)交叉的量化交易策略，通过捕捉不同时间周期EMA的交叉点来识别市场趋势，并生成交易信号。该策略旨在通过逐步确认的方式捕捉市场动量，并提供直观的可视化趋势判断机制。
-
-#### 策略原理
-
-策略的核心逻辑基于四个不同周期EMA的交叉信号：
-1. 第一入场信号：1日EMA上穿5日EMA，表示初步上涨动量
-2. 第二入场信号：3日EMA上穿10日EMA，确认更强的上涨趋势
-3. 第三入场信号：5日EMA上穿20日EMA，显示趋势进一步发展
-4. 第四入场信号：10日EMA上穿40日EMA，表明长期牛市动能
-
-策略通过颜色编码直观展示市场情绪：蓝色系表示看涨，红色系表示看跌。颜色深浅反映了短期EMA相对长期EMA的位置关系。
-
-#### 策略优势
-
-1. 渐进式确认：多重EMA交叉提供分层趋势确认机制
-2. 可视化反馈：柱状图颜色快速呈现市场情绪变化
-3. 灵活性强：适用于比特币等具有明显趋势性的市场
-4. 动态头寸管理：可逐步增加仓位，降低单次交易风险
-5. 趋势跟踪能力：能捕捉不同时间尺度的市场动量
-
-#### 策略风险
-
-1. 滞后性：EMA作为滞后指标，可能对突发价格变化反应缓慢
-2. 假突破风险：在震荡市场中可能产生错误信号
-3. 多头仓位风险：金字塔式建仓可能增加整体风险敞口
-
-#### 策略优化方向
-
-1. 引入附加过滤条件，如成交量确认、波动率指标
-2. 结合止损机制，如凯利准则控制单笔交易风险
-3. 针对不同市场环境调整EMA参数
-4. 增加趋势强度评估模块
-5. 引入机器学习算法动态调整入场策略
-
-#### 总结
-
-多重EMA交叉策略通过渐进式信号生成和直观的可视化机制，为交易者提供了一种捕捉市场趋势的系统化方法。尽管存在一定局限性，但通过持续优化和风险管理，该策略仍具有显著的实践价值。
-
-|| 
+ 
 
 #### Overview
 
@@ -95,9 +52,7 @@ The strategy intuitively displays market sentiment through color coding: blue to
 
 #### Summary
 
-The Multi-EMA Crossover Strategy provides traders with a systematic method of capturing market trends through progressive signal generation and intuitive visualization. Despite certain limitations, the strategy remains valuable through continuous optimization and risk management.[/trans]
-
-
+The Multi-EMA Crossover Strategy provides traders with a systematic method of capturing market trends through progressive signal generation and intuitive visualization. Despite certain limitations, the strategy remains valuable through continuous optimization and risk management.
 
 > Source (PineScript)
 

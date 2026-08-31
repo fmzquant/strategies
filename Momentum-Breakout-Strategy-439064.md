@@ -10,59 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9c173975ec39afd35d.png)
- [trans]
-
-## 概述
-
-该策略是一个利用价格动量指标实现的趋势跟踪策略。它通过计算一定周期内的收盘价变化来判断市场趋势,当价格出现持续的上涨或下跌趋势时,进行对应的做多或做空操作。
-
-## 策略原理
-
-该策略的核心指标是价格的动量(momentum)。动量的计算公式为:
-
-```
-momentum = close - close[n]
-```
-
-其中n代表动量周期长度。当momentum > 0时,表示当前周期内价格一直在上涨;当momentum < 0时,表示当前周期内价格一直在下跌。
-
-该策略首先设置一个confirmBars参数,代表需要几根K线的趋势判断才执行交易。在回测范围内,如果momentum > 0持续confirmBars根K线,则进行做多进入;如果momentum < 0持续confirmBars根K线,则进行做空进入。
-
-该策略判断趋势的关键在于对momentum连续大于或小于0的K线数量进行统计,通过bcount和scount变量完成。它们在对应条件满足时+1,不满足时归0。当计数达到confirmBars时,执行对应做多或做空交易。
-
-## 策略优势
-
-这是一个较简单的趋势跟踪策略,具有以下优势:
-
-1. 逻辑简单,容易理解实现
-2. 动量指标对价格变化敏感,可以快速捕捉趋势
-3. 可配置参数调整判断灵敏度
-4. 可在多种市场环境中使用
-
-## 策略风险
-
-该策略也存在一些风险:
-
-1. 容易产生多次震荡交易和过度交易
-2. 需要合理配置参数,特别是confirmBars过滤震荡
-3. 无法有效应对市场突发事件的冲击
-4. 回测与实盘会有差异,需要复核数据和补充参数优化
-
-## 策略优化方向  
-
-该策略可以从以下几个方面进行优化:
-
-1. 增加止损逻辑,控制单次交易风险
-2. 增加突破过滤,避免价格震荡造成的虚假信号
-3. 根据不同品种和市场环境调整confirmBars等参数
-4. 增加多因子判断,结合其他指标确认入场
-5. 利用机器学习方法自适应参数与过滤规则
-
-## 总结
-
-总的来说,该动量突破策略是一个简单实用的趋势跟踪策略,适合作为量化交易的入门策略之一。在应用过程中需要注意控制交易频率,防止过度交易和交易成本过高的问题。同时,参数与过滤规则都需要根据实际品种与市场环境进行调整优化,才能发挥策略最大效果。
-
-||
+ 
 
 ## Overview
 
@@ -113,8 +61,6 @@ The strategy can be optimized in several aspects:
 ## Summary  
 
 In summary, this momentum breakout strategy is a simple and practical trend following strategy suitable as a introductory quant trading strategy. In application, attention is needed to control trade frequency and prevent overtrading. Meanwhile, parameters and filters need to be adjusted and optimized based on actual products and market environments for the strategy to achieve maximum performance.
-
-[/trans]
 
 > Strategy Arguments
 

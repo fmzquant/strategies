@@ -12,46 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d8ba07dbf3ca0f0ef1fd.png)
 ![IMG](https://www.fmz.com/upload/asset/2d86957e619d6fccccb5c.png)
 
-
-[trans]
-#### 概述
-该策略是一个结合了趋势跟踪和区间交易的自适应交易系统。系统通过ADX指标动态识别市场状态,在趋势市场和震荡市场中分别采用不同的交易策略。在趋势市场中,策略使用移动平均线交叉信号结合RSI和MACD确认;在震荡市场中,策略利用布林带突破结合RSI超买超卖信号进行交易。系统还集成了基于ATR的动态止损止盈机制,有效控制风险。
-
-#### 策略原理
-策略的核心是市场状态识别机制。当ADX大于25时判定为趋势市场,此时启用趋势跟踪策略:
-1. 多头条件:50日均线上穿200日均线,同时RSI大于50且MACD线在信号线上方
-2. 空头条件:50日均线下穿200日均线,同时RSI小于50且MACD线在信号线下方
-
-当ADX小于等于25时判定为震荡市场,启用区间交易策略:
-1. 多头条件:价格上穿布林带下轨且RSI小于40
-2. 空头条件:价格下穿布林带上轨且RSI大于60
-
-止损止盈设置采用ATR的动态倍数方式,止损为1.5倍ATR,止盈为3倍ATR。
-
-#### 策略优势
-1. 市场适应性强:能够根据市场状态自动切换交易策略
-2. 多重信号确认:通过多个技术指标的配合降低虚假信号
-3. 风险控制完善:采用动态止损止盈机制,适应市场波动
-4. 策略逻辑清晰:趋势和区间判断标准明确,便于优化调整
-5. 可视化效果好:通过背景颜色区分市场状态,直观明了
-
-#### 策略风险
-1. 信号滞后性:移动平均线等指标具有一定滞后性,可能错过最佳入场点
-2. 假突破风险:在震荡市场中可能出现布林带假突破信号
-3. 参数敏感性:ADX阈值、ATR倍数等参数设置会影响策略表现
-4. 市场切换风险:在趋势与震荡的过渡期可能产生错误信号
-5. 止损幅度风险:固定倍数的ATR止损可能在高波动时期过大
-
-#### 策略优化方向
-1. 引入成交量分析:在信号确认中加入成交量因素,提高信号可靠性
-2. 优化市场状态判断:可考虑将ADX改为动态阈值或结合其他指标
-3. 完善止损机制:引入跟踪止损或根据波动率动态调整ATR倍数
-4. 增加时间过滤:加入交易时间段限制,避开低流动性期间
-5. 改进信号确认机制:可以考虑加入价格形态分析,提高信号质量
-
-#### 总结
-该策略通过市场状态的动态识别和相应的策略切换,实现了对不同市场环境的适应。通过多重技术指标的配合和动态风险控制机制,策略具有较好的实用性。但仍需注意信号滞后性和假突破等风险,建议在实盘中进行充分测试和参数优化。 ||
-
 #### Overview
 This strategy is an adaptive trading system that combines trend following and range trading. The system dynamically identifies market conditions using the ADX indicator and applies different trading strategies in trending and ranging markets. In trending markets, the strategy uses moving average crossover signals combined with RSI and MACD confirmation; in ranging markets, it utilizes Bollinger Bands breakouts with RSI overbought/oversold signals. The system also incorporates a dynamic stop-loss and take-profit mechanism based on ATR for effective risk management.
 
@@ -88,9 +48,7 @@ Stop-loss and take-profit levels are set using ATR multiples: 1.5x ATR for stop-
 5. Improve signal confirmation: Consider adding price pattern analysis to enhance signal quality
 
 #### Summary
-The strategy achieves adaptation to different market environments through dynamic market condition identification and corresponding strategy switching. Through the combination of multiple technical indicators and dynamic risk control mechanisms, the strategy demonstrates good practicality. However, attention should be paid to signal lag and false breakout risks, and thorough testing and parameter optimization in live trading is recommended.[/trans]
-
-
+The strategy achieves adaptation to different market environments through dynamic market condition identification and corresponding strategy switching. Through the combination of multiple technical indicators and dynamic risk control mechanisms, the strategy demonstrates good practicality. However, attention should be paid to signal lag and false breakout risks, and thorough testing and parameter optimization in live trading is recommended.
 
 > Source (PineScript)
 

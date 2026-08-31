@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16a8fd3e1f761dea5b3.png)
 
-[trans]
-#### 概述
-这是一个基于布林带指标的交易策略,通过价格与布林带的交叉关系来识别市场趋势和生成交易信号。该策略使用了55周期的移动平均线作为布林带的中轨,并以1.0倍标准差作为布林带的上下轨计算依据。策略的核心是通过价格突破布林带上轨和下轨来确定做多和做空时机。
-
-#### 策略原理
-策略的运作原理主要包含以下几个关键部分:
-1. 布林带计算: 使用55周期简单移动平均线(SMA)作为中轨,标准差乘数为1.0,计算上下轨。
-2. 信号生成逻辑: 
-   - 当收盘价突破上轨时,生成做多信号
-   - 当收盘价突破下轨时,生成做空信号
-3. 信号确认机制: 使用barssince函数计算距离上次突破的周期数,通过比较多空信号的周期距离来确定最终交易方向。
-4. 可视化部分: 在图表上通过三角形标记显示交易信号,使用不同颜色区分多空。
-
-#### 策略优势
-1. 信号明确: 通过价格与布林带的明确交叉关系生成交易信号,避免了模糊地带。
-2. 趋势跟随: 策略本质上是趋势跟随型,能够在强势行情中获得较好收益。
-3. 视觉直观: 通过颜色填充和形状标记,交易信号的识别非常直观。
-4. 参数灵活: 布林带的周期和标准差倍数可以根据不同市场情况进行调整。
-5. 系统完整: 包含了完整的信号生成、可视化和报警功能。
-
-#### 策略风险
-1. 震荡市风险: 在横盘震荡市场中可能产生频繁的假信号。
-2. 滞后性风险: 由于使用了较长周期(55)的移动平均线,信号可能存在一定滞后。
-3. 反转风险: 在趋势突然反转时,可能承受较大回撤。
-4. 参数敏感性: 布林带参数的选择对策略性能影响较大。
-
-#### 策略优化方向
-1. 引入成交量确认: 可以添加成交量指标作为信号确认的辅助条件。
-2. 动态参数优化: 可以根据市场波动率动态调整布林带的标准差倍数。
-3. 增加趋势过滤器: 可以添加更长周期的趋势指标来过滤假信号。
-4. 完善止损机制: 建议增加移动止损或固定止损来控制风险。
-5. 市场状态分类: 可以增加市场状态识别模块,在不同市场状态下使用不同的参数设置。
-
-#### 总结
-这是一个基于布林带的经典趋势跟随策略,通过价格与布林带的交叉关系来捕捉市场趋势。策略设计简洁明了,具有良好的可视化效果和信号生成机制。虽然在震荡市场中可能面临挑战,但通过适当的参数优化和增加辅助指标,可以进一步提升策略的稳定性和可靠性。建议在实盘使用前进行充分的回测和参数优化。 || 
-
 #### Overview
 This is a trading strategy based on Bollinger Bands indicator that identifies market trends and generates trading signals through price crossovers with the bands. The strategy uses a 55-period moving average as the middle band and 1.0 standard deviation for calculating the upper and lower bands. The core concept is to determine long and short entry points through price breakouts of the Bollinger Bands.
 
@@ -80,9 +44,7 @@ The strategy operates on the following key components:
 5. Market State Classification: Add market state identification module to use different parameter settings under different market conditions.
 
 #### Summary
-This is a classic trend-following strategy based on Bollinger Bands, capturing market trends through price crossovers with the bands. The strategy design is clear and concise, featuring good visualization effects and signal generation mechanisms. While it may face challenges in choppy markets, the strategy's stability and reliability can be further enhanced through appropriate parameter optimization and additional auxiliary indicators. Thorough backtesting and parameter optimization are recommended before live trading.[/trans]
-
-
+This is a classic trend-following strategy based on Bollinger Bands, capturing market trends through price crossovers with the bands. The strategy design is clear and concise, featuring good visualization effects and signal generation mechanisms. While it may face challenges in choppy markets, the strategy's stability and reliability can be further enhanced through appropriate parameter optimization and additional auxiliary indicators. Thorough backtesting and parameter optimization are recommended before live trading.
 
 > Source (PineScript)
 

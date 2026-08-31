@@ -10,51 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1295a753d558fcab6a7.png)
- [trans]
-
-### 概述
-
-该策略根据马克·米内维尼的股票选股模板,结合移动平均线指标判断股价趋势,实现自动买入和止损。策略主要判断股价是否处于上涨趋势,以及是否突破关键的移动平均线,从而产生买入信号。同时,策略设置了止损线,当股价出现回撤时主动止损。
-
-### 策略原理
-
-该策略主要判断以下条件,当条件同时满足时产生买入信号:
-
-1. 当前股价高于150日和200日移动平均线 
-2. 150日移动平均线高于200日移动平均线
-3. 200日移动平均线最近1个月处于上涨趋势
-4. 50日移动平均线高于150日和200日移动平均线  
-5. 当前股价高于50日移动平均线
-6. 当前股价较52周最低价上涨25%以上  
-7. 当前股价接近52周最高价
-
-当上述条件满足时,策略判断股价处于上涨阶段,产生买入信号。
-
-此外,策略同时设置了止损线,当股价从最高点回撤5%或上涨10%时,进行止损或止盈。
-
-### 策略优势
-
-1. 使用马克·米内维尼的股票选股思路,提高获利概率
-2. 运用多重移动平均线确认趋势,避免错过买点
-3. 设置止损机制规避大额亏损
-
-### 风险分析
-
-1. 股价短期内可能出现调整,导致止损被触发
-2. 移动平均线并不能完全判断趋势,可能出现假突破
-3. 设置止损止盈比例并不完美,可能过早止盈或亏损扩大
-
-### 优化方向
-
-1. 可以测试不同参数的移动平均线组合
-2. 可以加入其他技术指标判断买入时机
-3. 可以优化止损止盈的比例设置
-
-### 总结
-
-该策略整体遵循趋势交易的思路,在确认股价上涨趋势的前提下产生买入信号。同时设置止损机制控制风险。通过优化各项细节参数,可以进一步提高策略的稳定性和盈利能力。但任何策略都难以完全规避市场风险,需要投资者谨慎对待。
-
-||
+ 
 
 ### Overview
 
@@ -97,8 +53,6 @@ In addition, the strategy also sets a stop-loss line. When the stock price falls
 ### Summary
 
 The strategy overall follows the idea of trend trading, generating buy signals when the uptrend of stock prices is confirmed. At the same time, a stop-loss mechanism is set to control risks. By optimizing various detailed parameters, the stability and profitability of the strategy can be further improved. However, no strategy can completely avoid market risks, so investors need to treat it cautiously.
-
-[/trans]
 
 > Strategy Arguments
 

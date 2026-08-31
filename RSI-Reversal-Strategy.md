@@ -10,44 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1b8fdb7087ec9473193.png)
- [trans]
-
-## 概述
-
-RSI反转策略通过计算RSI指标和平滑移动平均线,判断股票是否处于超买或超卖状态,从而产生买入和卖出信号。该策略借助RSI指标的反转特征,在股票价格反转时获利。
-
-## 策略原理
-
-该策略首先计算14周期的RSI值,并进行0-100正规化处理。然后计算5周期RSI的加权移动平均,再通过反正切函数将其映射到-1到1之间。当映射后的RSI上穿-0.8时产生买入信号,下穿1时产生卖出信号。这里通过映射和判断阈值的方法,检测到RSI指标的反转信号。
-
-该策略还设定了运行的月份和日期范围,使其只在指定的月份和日期运行。
-
-## 优势
-
-- 利用RSI指标的反转特征,在股价反转点产生交易信号,捕捉反转机会。
-- 对RSI进行映射和判断阈值,使信号更加明确。
-- 可配置运行月份和日期,灵活运用。
-
-## 风险
-
-- RSI反转信号可能出现误报,从而导致交易信号错误。可通过调整RSI参数或增加其他指标过滤来减少误报。
-- 仅依赖RSI单一指标容易墙头信号,可引入其他指标或因子构建机制,提高策略稳定性。
-- 固定的月份和日期范围可能错过其他时间段的交易机会,可配置更加灵活的运行时间。
-
-## 优化方向 
-
-- 测试更多组合的参数,找到RSI和移动平均线周期的最佳匹配。
-- 增加成交量或波动率等指标来确认反转信号,减少误报。
-- 优化和调整运行月份、日期的范围,覆盖更多交易机会。
-- 增加止损机制来控制风险。
-
-## 总结
-
-RSI反转策略通过构建RSI指标的反转交易规则,简单有效地捕捉价格反转机会。该策略易于实施,但可通过参数优化、风控机制增强等进行优化,使之成为稳定盈利的量化交易策略。
-
-||
-
-## Overview
+ ## Overview
 
 The RSI reversal strategy calculates the RSI indicator and smoothed moving average to determine if a stock is overbought or oversold, thereby generating buy and sell signals. This strategy leverages the reversal characteristic of the RSI indicator to profit when stock prices reverse.
 
@@ -79,8 +42,6 @@ The strategy also sets the running month and date range so that it only runs dur
 ## Summary
 
 The RSI reversal strategy effectively captures price reversal opportunities by constructing simple reversal trading rules based on the RSI indicator. The strategy is easy to implement, but can be enhanced via parameter optimization, risk control mechanisms etc, making it a stable profitable quantitative trading strategy.
-
-[/trans]
 
 > Strategy Arguments
 

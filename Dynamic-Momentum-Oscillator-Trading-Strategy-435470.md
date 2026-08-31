@@ -10,33 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/703c27ab946306720c.png)
- [trans]
-
-## 概述
-
-Dynamic Momentum Oscillator Trading Strategy(DMO策略)是一个基于动量震荡指标的15分钟短线交易策略。该策略结合多种技术指标实现高精确度的交易信号,可有效辅助新手交易者在短时间内进行买卖决策,控制风险,提高盈利概率。
-
-## 策略原理
-
-该策略首先使用Doinchian通道判断市场主要趋势方向。当价格突破该通道上沿时为看涨信号,若突破下沿则为看跌信号。其次,策略采用3种Hull移动平均线变体中的一种,结合自适应ATR通道实现更精确的趋势判断。当快线上穿中线时为买入信号,下穿中线则为卖出信号。最后,结合半整平均指标的辅助,过滤掉部分假信号,提高信号的可靠性。在获悉较为可靠的交易信号后,策略即进入对应的多空头仓位。
-
-## 优势分析
-
-DMO策略最大的优势在于多种指标的有机结合,不同指标可相互验证,从而过滤假信号,使每次交易信号更加精确可靠。此外,Doinchian通道判断主趋势的方式简单直接,半整平均线过滤信号的手段也较为常规,整体而言易于理解,新手上手难度不大。相比单一指标,DMO可在同等交易次数下获得更高胜率和盈利率。
-
-## 风险分析
-
-尽管DMO策略较为稳定可靠,但任何量化交易策略都难免存在一定风险。具体来说,快线与中线产生死叉时,如果没有其他指标验证,依然有可能是假信号。此外,像所有短线策略一样,DMO也面临一定的过度交易风险。如果遇到市场突发事件导致指标失效,停损幅度设定不当也会造成较大损失。为降低风险,建议适当调整中长期指标参数,并与更高时间周期指标进行组合验证,同时加大停损距离,严格控制单笔损失。
-
-## 优化方向 
-
-DMO策略可从以下几个维度进行优化:第一,调整Hull MA的参数,优化移动平均线的长度,平滑效果与灵敏度之间的平衡;第二,改进Doinchian通道判断逻辑,如调整通道参数,或增加附加条件限制入场;第三,尝试其他指标代替半整平均,如布林带、KDJ等,提高辅助过滤效果;第四,根据不同品种特点指定合适的交易区间,如改为5分钟或30分钟策略。这些优化举措有助于根据市场环境和品种特征量身定制DMO策略,提升策略稳定性。
-
-## 总结
-
-DMO是一套多指标优化组合的短线策略。它融合Doinchian通道、Hull MA以及半整平均线,有效判断市场趋势,产生精确的交易信号。策略手段相对简单直观,操作难度不大,可作为新手的入门策略。与单一指标相比,DMO可产生更高的交易胜率和盈利率。通过调参数、改进组合及指定交易区间等措施,DMO策略可望获得更长期更稳定的优异表现。
-
-||
 
 ## Overview
 
@@ -61,8 +34,6 @@ The DMO strategy can be optimized in the following aspects: first, adjust the pa
 ## Conclusion  
 
 DMO is a short-term strategy that optimizes the combination of multiple indicators. It integrates Doinchian Channel, Hull MA and Halftrend to effectively determine market trends and generate precise trading signals. With relatively simple and intuitive techniques and easy operation, it can serve as an introductory strategy for beginners. Compared to single indicators, DMO can achieve higher win rates and profitability. Through measures like parameter tuning, combination improvements and interval specification, the DMO strategy has the potential to achieve longer-term superior performance with enhanced stability.
-
-[/trans]
 
 > Strategy Arguments
 

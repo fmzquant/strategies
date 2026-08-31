@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/14f9b618be1e880d98c.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多时框随机指标(Stochastic)和指数移动平均线(EMA)的趋势跟踪交易系统。它通过高时框随机指标判断超买超卖条件，同时使用EMA作为趋势过滤器，并集成了动态仓位管理和追踪止损功能，是一个完整的交易策略系统。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素：
-1. 使用高时框随机指标识别超买超卖区域，通过K线与超买超卖水平的交叉确定潜在交易信号
-2. 使用EMA作为趋势过滤器，只在价格位于EMA之上做多，位于EMA之下做空
-3. 基于ATR动态计算止损和获利目标，止损距离为1.5倍ATR，获利目标为止损的2倍
-4. 采用基于账户风险百分比的动态仓位计算方法，确保每笔交易的风险控制在预设水平
-5. 可选的追踪止损功能，追踪距离为1.5倍ATR
-
-#### 策略优势
-1. 多重信号确认：结合高时框随机指标和EMA趋势过滤器，提高信号可靠性
-2. 完善的风险管理：采用百分比风险管理方法，确保资金安全
-3. 灵活的止损机制：支持固定止损和追踪止损，适应不同市场环境
-4. 清晰的交易提醒：系统自动标注入场点、止损位和目标位，便于交易执行
-5. 动态仓位管理：根据波动性自动调整交易规模，优化资金利用效率
-
-#### 策略风险
-1. 趋势反转风险：在剧烈震荡市场中可能出现虚假信号
-2. 滑点风险：在市场流动性不足时可能面临较大滑点
-3. 参数敏感性：策略表现对参数设置较为敏感，需要careful优化
-4. 回撤风险：在市场剧烈波动时可能面临较大回撤
-5. 止损触发风险：追踪止损可能在波动加剧时过早触发
-
-#### 策略优化方向
-1. 增加市场环境过滤：可添加波动率指标或趋势强度指标，在不同市场环境下调整策略参数
-2. 优化信号确认机制：可考虑添加成交量确认或其他技术指标作为辅助判断
-3. 完善仓位管理：可基于市场波动性动态调整风险百分比
-4. 改进止损机制：可根据市场特征动态调整追踪止损距离
-5. 加入时间过滤：考虑重要时间段的交易限制，避免重要消息发布期间的风险
-
-#### 总结
-该策略通过多时框分析和多重信号确认机制，结合完善的风险管理体系，构建了一个较为完整的交易系统。虽然存在一定的风险，但通过持续优化和改进，该策略有望在不同市场环境下保持稳定的表现。适合风险承受能力较强、具有一定交易经验的投资者使用。 || 
-
 #### Overview
 This strategy is a trend-following trading system that combines multi-timeframe Stochastic Oscillator with Exponential Moving Average (EMA). It uses higher timeframe Stochastic for overbought/oversold conditions, EMA as a trend filter, and integrates dynamic position sizing and trailing stop functionality, forming a comprehensive trading system.
 
@@ -80,7 +44,7 @@ The core logic is based on several key elements:
 5. Implement time filters: Consider trading restrictions during key time periods to avoid news-related risks
 
 #### Summary
-This strategy builds a comprehensive trading system through multi-timeframe analysis and multiple signal confirmation mechanisms, combined with a robust risk management framework. While certain risks exist, continuous optimization and improvement can help maintain stable performance across different market conditions. It is suitable for experienced traders with higher risk tolerance.[/trans]
+This strategy builds a comprehensive trading system through multi-timeframe analysis and multiple signal confirmation mechanisms, combined with a robust risk management framework. While certain risks exist, continuous optimization and improvement can help maintain stable performance across different market conditions. It is suitable for experienced traders with higher risk tolerance.
 
 
 

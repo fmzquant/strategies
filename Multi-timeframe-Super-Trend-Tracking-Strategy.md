@@ -60,11 +60,11 @@ Overall this is a decent trend tracking strategy. It dynamically adjusts to trad
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_1|10|ATR周期|
-|v_input_2_hl2|0|价格数据源: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
-|v_input_float_1|3|ATR 乘数|
-|v_input_3|true|更改ATR计算方法|
-|v_input_4|false|显示买入/卖出信号|
+|v_input_1|10|ATR period|
+|v_input_2_hl2|0|Price source: hl2|high|low|open|close|hlc3|hlcc4|ohlc4|
+|v_input_float_1|3|ATR multiplier|
+|v_input_3|true|Change ATR calculation method|
+|v_input_4|false|Show buy/sell signals|
 |v_input_int_1|9|From Month|
 |v_input_int_2|true|From Day|
 |v_input_int_3|2018|From Year|

@@ -12,45 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d96cfbb19eb2e40c05bb.png)
 ![IMG](https://www.fmz.com/upload/asset/2d81612a52a4af7f0844e.png)
 
-
-
-
-[trans]
-#### 概述
-这是一个基于多重统计带和趋势分析的交易策略。该策略结合使用布林带、分位数带和幂律带来识别关键支撑/阻力区域,并利用上分位数带的下标准差线作为触发信号来确定入场和出场时机。策略设计充分考虑了市场波动性,通过多重统计方法的叠加来提高信号的可靠性。
-
-#### 策略原理
-策略的核心原理是通过多重统计带的交叉来捕捉市场趋势。主要包含以下几个关键组成部分:
-1. 布林带系统 - 用于判断价格波动区间,当价格突破上轨时转为黄色预警。
-2. 分位数带系统 - 计算价格的上下分位数,用于评估价格的极值概率。
-3. 幂律带系统 - 基于历史回报计算显著性水平,用于衡量超买超卖。
-4. 触发系统 - 以上分位数带的下标准差线作为主要触发信号,价格维持在该线以上视为看涨信号。
-5. 确认系统 - 通过设置连续确认K线数来过滤虚假信号。
-
-#### 策略优势
-1. 信号稳定性强 - 多重统计带的叠加使用能有效降低虚假信号。
-2. 适应性好 - 策略可以适应不同的时间周期和市场条件。
-3. 风险控制完善 - 通过多重统计带来划分风险区域,同时设有止损机制。
-4. 参数灵活 - 提供丰富的参数选项,可根据不同市场特征进行优化。
-5. 可视化清晰 - 各类指标线条颜色区分明显,交易信号直观。
-
-#### 策略风险
-1. 滞后性风险 - 统计指标都具有一定滞后性,可能错过最佳入场点。
-2. 震荡市不利 - 在横盘震荡市场中可能产生过多交易信号。
-3. 参数敏感性 - 不同参数组合的效果差异较大,需要反复优化。
-4. 计算负荷大 - 多重统计指标的实时计算需要较大计算资源。
-5. 市场环境依赖 - 在极端市场环境下统计规律可能失效。
-
-#### 策略优化方向
-1. 引入动态参数 - 根据市场波动率自动调整各项参数。
-2. 增加市场环境判断 - 添加趋势强度指标来过滤震荡市信号。
-3. 优化计算效率 - 简化部分计算过程,减少资源占用。
-4. 完善风险控制 - 加入更多止损条件和仓位管理策略。
-5. 增强适应性 - 开发自适应型参数优化系统。
-
-#### 总结
-这是一个融合多种统计方法的综合性趋势跟踪策略。通过布林带、分位数带和幂律带的协同作用,能够较好地把握市场趋势,同时具备良好的风险控制能力。虽然存在一定的滞后性和参数优化难度,但通过持续改进和优化,该策略具有较好的实用价值和发展前景。 || 
-
 #### Overview
 This is a trading strategy based on multiple statistical bands and trend analysis. The strategy combines Bollinger Bands, Quantile Bands, and Power-Law Bands to identify key support/resistance zones, using the lower standard deviation line of the upper quantile band as a trigger signal for entry and exit timing. The strategy design fully considers market volatility and improves signal reliability through the overlay of multiple statistical methods.
 
@@ -84,10 +45,7 @@ The core principle of the strategy is to capture market trends through the inter
 5. Enhance Adaptability - Develop adaptive parameter optimization systems.
 
 #### Summary
-This is a comprehensive trend-following strategy that integrates multiple statistical methods. Through the synergy of Bollinger Bands, Quantile Bands, and Power-Law Bands, it can effectively capture market trends while maintaining good risk control capabilities. Although it has certain lag issues and parameter optimization challenges, through continuous improvement and optimization, this strategy has good practical value and development prospects.[/trans]
-
-
-
+This is a comprehensive trend-following strategy that integrates multiple statistical methods. Through the synergy of Bollinger Bands, Quantile Bands, and Power-Law Bands, it can effectively capture market trends while maintaining good risk control capabilities. Although it has certain lag issues and parameter optimization challenges, through continuous improvement and optimization, this strategy has good practical value and development prospects.
 > Source (PineScript)
 
 ``` pinescript

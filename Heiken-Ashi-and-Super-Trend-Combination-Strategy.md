@@ -11,44 +11,8 @@ ChaoZhang
 
 
 ![IMG](https://www.fmz.com/upload/asset/aa6f25f43814fe0613.png)
- [trans]
-
-## 概述
-这是一个结合Heiken Ashi和超级趋势(Super Trend)两个指标的量化交易策略。该策略主要利用Heiken Ashi平滑K线过滤市场噪音,超级趋势指标判断价格趋势方向,实现趋势跟踪。
-
-## 策略原理
-1. 使用Heiken Ashi指标处理K线,过滤掉部分市场噪声,使得趋势更加明显
-2. 基于ATR和因子计算超级趋势的上轨和下轨
-3. 当价格突破上轨时为看跌信号,突破下轨时为看涨信号
-4. 因子越大,超级趋势信号越少,跟踪效果越好,但入场次数下降  
-5. 结合Heiken Ashi和超级趋势指标,实现对趋势的判断和跟踪
-
-## 策略优势
-1. Heiken Ashi指标有效过滤了部分市场噪音,使得图形更加清晰
-2. 超级趋势指标参数优化效果好,可以灵活调整入场频率
-3. 组合双指标,使判断价格趋势的效果更好
-4. 实现了对强势趋势的自动跟踪
-
-## 策略风险
-1. 指标组合并不能完全避免交易盘整区间的错误信号
-2. 大幅跳空可能导致指标失效,从而错过重要信号点
-3. 超级趋势因子设置过大会错过趋势机会
-
-解决方法:
-(1)适当调整超级趋势参数,平衡跟踪效果和入场频率
-(2)增加其他指标判断辅助,避免跳空引发问题
-
-## 策略优化方向  
-1. 调整ATR周期和超级趋势因子,优化入场频率
-2. 增加止损指标,控制单笔损失
-3. 结合其他指标判断走势类型,避免趋势震荡节奏处理不当
-4. 增加机器学习算法,辅助判断走势方向
-
-## 总结  
-该策略整合Heiken Ashi和超级趋势双指标优势,利用指标判断价值趋势方向,实现自动跟踪。相比单一使用某个指标,判断价格走势的效果更好,增强了策略的稳定性。当然,也存在一定改进空间,未来可从入场频率、止损方面进行优化,使策略收益更高、风险更低。
-
- ||
  
+
 ## Overview  
 This is a quantitative trading strategy that combines the Heiken Ashi and Super Trend indicators. The strategy mainly uses Heiken Ashi to smooth candlesticks and filter market noise, and uses the Super Trend indicator to judge the price trend direction to track trends.
 
@@ -82,7 +46,6 @@ Solutions:
 
 ## Summary
 This strategy integrates the advantages of the double indicators of Heiken Ashi and Super Trend, uses the indicators to determine the direction of the price trend, and achieves automatic tracking. Compared with using a single indicator alone, the effect of judging price movements is better, and the stability of the strategy is enhanced. Of course, there is still room for improvement. In the future, optimization can be carried out from the aspects of entry frequency and stop loss to make the strategy more profitable and less risky.
-[/trans]
 
 > Strategy Arguments
 

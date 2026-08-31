@@ -11,41 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/16869e9123f0f539fd7.png)
 
-[trans]
-#### 概述
-本策略是一个基于市场异常现象的交易系统,主要利用从周四晚间收盘到周五收盘期间的市场行为特征进行交易。该策略采用固定的进场和出场时间,通过回测验证这一市场模式的有效性。策略使用10%的资金进行单次交易,并考虑了滑点和佣金因素,以确保回测结果的真实性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 入场条件:在周四收盘时进场做多,这个时间点选择基于历史数据分析。
-2. 出场条件:在周五收盘时平仓,持仓时间固定。
-3. 资金管理:每次交易使用10%的账户资金,这种保守的仓位管理有助于控制风险。
-4. 交易执行:在收盘价执行订单,可以避免日内剧烈波动带来的影响。
-
-#### 策略优势
-1. 简单明确:交易规则清晰,没有复杂的指标组合,易于理解和执行。
-2. 风险可控:固定的持仓时间和资金管理方案,使得风险更容易评估和控制。
-3. 自动化程度高:策略逻辑简单,适合编程实现自动化交易。
-4. 灵活性强:可以根据不同的市场环境调整参数,适应性较好。
-
-#### 策略风险
-1. 时间依赖:策略严重依赖特定的时间窗口,可能受到非交易时段重大新闻的影响。
-2. 市场环境变化:历史统计规律在未来可能失效,需要持续监控策略表现。
-3. 执行风险:在收盘时段流动性可能不足,导致滑点增加。
-建议通过以下方式管理风险:
-- 设置止损止盈
-- 动态调整持仓时间
-- 增加过滤条件
-
-#### 策略优化方向
-1. 引入波动率指标:可以添加ATR指标来动态调整仓位大小,使策略更具适应性。
-2. 优化进场时机:可以结合价格形态和技术指标,提高入场的准确性。
-3. 完善风险控制:增加动态止损机制,保护既有利润。
-4. 增加过滤条件:考虑加入趋势过滤器,避免在不利市场环境下交易。
-
-#### 总结
-该策略是一个基于市场异常现象的经典交易系统,通过严格的时间管理和保守的资金管理来获取潜在收益。虽然策略逻辑简单,但仍需要注意市场环境变化带来的风险,建议在实盘交易时采用更保守的仓位控制和更完善的风险管理机制。 || 
-
 #### Overview
 This strategy is a trading system based on market anomalies, primarily utilizing market behavior characteristics between Thursday evening close and Friday close. The strategy employs fixed entry and exit times, validating this market pattern through backtesting. It uses 10% of capital per trade and considers slippage and commission factors to ensure realistic backtesting results.
 
@@ -78,8 +43,7 @@ Risk management suggestions:
 4. Add Filtering Conditions: Consider adding trend filters to avoid trading in unfavorable market conditions.
 
 #### Summary
-This strategy is a classic trading system based on market anomalies, seeking potential returns through strict time management and conservative money management. While the strategy logic is simple, attention must be paid to risks from changing market environments. It's recommended to use more conservative position sizing and comprehensive risk management mechanisms in live trading.[/trans]
-
+This strategy is a classic trading system based on market anomalies, seeking potential returns through strict time management and conservative money management. While the strategy logic is simple, attention must be paid to risks from changing market environments. It's recommended to use more conservative position sizing and comprehensive risk management mechanisms in live trading.
 
 
 > Source (PineScript)

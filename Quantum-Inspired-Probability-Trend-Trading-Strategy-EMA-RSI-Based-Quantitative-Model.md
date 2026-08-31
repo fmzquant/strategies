@@ -9,71 +9,6 @@ ianzeng123
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/2d96ed77ac6c3a23780e1.png)
-![IMG](https://www.fmz.com/upload/asset/2d91bd04824d1382e9595.png)
-
-
-
-[trans]
-
-## 概述
-
-量子启发式概率趋势交易策略是一种结合了量子随机行走理论与传统技术指标的创新型量化交易模型。该策略利用指数移动平均线(EMA)、相对强弱指数(RSI)和平均真实范围(ATR)等指标，通过量子概率计算方法评估市场趋势方向和强度，从而生成精确的交易信号。该策略的核心在于将量子物理学中的概率分布理论应用于金融市场分析，提供了一种新颖的市场预测方法。
-
-## 策略原理
-
-该策略的运作基于几个关键组件：
-
-1. **多重EMA趋势识别系统**：策略使用三条不同周期(9、19和55)的指数移动平均线作为市场趋势的基础指标。短期EMA与长期EMA之间的关系通过量子概率转换函数(Sigmoid函数)被映射到0-1之间的概率值，表示市场处于上升趋势的概率。
-
-2. **RSI量子随机行走入场概率**：策略利用14周期RSI指标，通过同样的Sigmoid概率转换，计算价格向上或向下运动的概率。当RSI转换后的概率值大于0.55且趋势概率大于0.6时，生成做多信号；当概率值小于0.45且趋势概率小于0.4时，生成做空信号。
-
-3. **基于ATR的量子衰减止损和止盈**：策略采用14周期ATR作为波动性指标，结合时间衰减因子(基于bar_index周期性变化)动态调整止损和止盈水平。随着持仓时间增加，通过指数衰减函数使止损范围逐渐收窄，促使策略在不利市场条件下更快退出。
-
-4. **概率阈值触发交易**：只有当概率值超过特定阈值时才执行交易，这种方法能够过滤掉低概率的交易信号，提高交易的成功率。
-
-## 策略优势
-
-1. **量子概率模型的精确性**：利用Sigmoid函数将指标转换为概率值，更符合市场的不确定性特性，相比传统二元判断方法提供了更细致的市场状态评估。
-
-2. **多层次趋势确认机制**：结合短中长期EMA和RSI指标，建立了多维度的趋势确认系统，减少了假突破带来的风险。
-
-3. **动态风险管理**：基于ATR和时间衰减因子的止损止盈机制，能够根据市场实时波动性和持仓时间自动调整风险暴露，优化资金管理效率。
-
-4. **适应性强**：策略参数可根据不同市场环境进行调整，特别是量子行走因子(kFactor)参数可以控制系统对市场信号的敏感度。
-
-5. **量化决策过程**：策略完全量化，消除了情绪因素对交易决策的干扰，保证了交易执行的一致性和纪律性。
-
-## 策略风险
-
-1. **参数敏感性**：量子行走因子(kFactor)和概率阈值的设置对策略性能有显著影响，不适当的参数可能导致过度交易或错过重要信号。风险缓解方法包括进行全面的参数优化和回测，找到最适合特定市场的参数组合。
-
-2. **趋势反转风险**：在强趋势市场中表现良好，但在横盘或快速反转的市场环境中可能面临挑战。建议在不同市场条件下进行测试，并考虑增加市场环境过滤器。
-
-3. **时间衰减模型的局限性**：当前使用简单的周期性时间衰减(bar_index % 50)，可能不足以捕捉所有市场周期特征。考虑引入更复杂的时间序列模型或自适应周期识别算法。
-
-4. **过拟合风险**：策略使用多个指标和参数，存在过拟合历史数据的可能性。应通过样本外测试和前向验证来评估策略的稳健性。
-
-5. **计算复杂度**：概率计算和指数函数可能增加计算负担，在高频交易环境中可能导致执行延迟。优化计算效率或降低交易频率可以缓解这一问题。
-
-## 策略优化方向
-
-1. **自适应量子行走因子**：目前策略使用固定的kFactor(0.1)，可以考虑将其设计为根据市场波动性自动调整的参数。例如，在低波动市场增加kFactor提高敏感度，在高波动市场降低kFactor减少噪音干扰。
-
-2. **整合市场状态分类**：引入机器学习方法对市场状态进行分类(趋势、震荡、突破等)，并针对不同市场状态使用特定的参数设置或子策略。
-
-3. **优化时间衰减模型**：用更复杂的市场周期识别算法替换简单的周期性时间衰减，如小波分析或傅里叶变换，更准确地捕捉市场的周期性特征。
-
-4. **引入量子纠缠概念**：考虑不同资产间的相关性，将量子纠缠理论应用于多资产组合策略中，优化资产配置和风险分散。
-
-5. **增强概率模型**：扩展当前的Sigmoid概率模型，引入更复杂的概率分布(如Beta分布或混合高斯模型)，更准确地建模市场不确定性。
-
-## 总结
-
-量子启发式概率趋势交易策略通过创新性地将量子随机行走理论与传统技术分析结合，创建了一个全新的市场概率预测框架。该策略优势在于其精确的概率模型、多层次趋势确认机制和动态风险管理系统，使其能够在趋势市场中把握交易机会并有效控制风险。
-
-尽管存在参数敏感性、趋势反转风险和可能的过拟合问题，但通过优化量子行走因子、整合市场状态分类、改进时间衰减模型和扩展概率分布模型等方向的改进，该策略有潜力成为一个更加稳健和适应性强的交易系统。将量子计算概念应用于交易策略代表了量化交易的前沿发展方向，为传统技术分析提供了新的思考角度和方法论。 || 
-
 ## Overview
 
 The Quantum-Inspired Probability Trend Trading Strategy is an innovative quantitative trading model that combines quantum random walk theory with traditional technical indicators. This strategy utilizes Exponential Moving Averages (EMA), Relative Strength Index (RSI), and Average True Range (ATR) to evaluate market trend direction and strength through quantum probability calculation methods, generating precise trading signals. The core of this strategy lies in applying probability distribution theories from quantum physics to financial market analysis, providing a novel approach to market prediction.
@@ -130,9 +65,7 @@ The operation of this strategy is based on several key components:
 
 The Quantum-Inspired Probability Trend Trading Strategy innovatively combines quantum random walk theory with traditional technical analysis to create a novel framework for market probability prediction. The strategy's strengths lie in its precise probability model, multi-level trend confirmation mechanism, and dynamic risk management system, enabling it to capture trading opportunities in trending markets while effectively controlling risk.
 
-Despite challenges including parameter sensitivity, trend reversal risk, and potential overfitting issues, the strategy has the potential to become a more robust and adaptive trading system through improvements in quantum walk factors, market state classification integration, time decay model refinement, and probability distribution model expansion. Applying quantum computing concepts to trading strategies represents a frontier development in quantitative trading, offering new perspectives and methodologies for traditional technical analysis.[/trans]
-
-
+Despite challenges including parameter sensitivity, trend reversal risk, and potential overfitting issues, the strategy has the potential to become a more robust and adaptive trading system through improvements in quantum walk factors, market state classification integration, time decay model refinement, and probability distribution model expansion. Applying quantum computing concepts to trading strategies represents a frontier development in quantitative trading, offering new perspectives and methodologies for traditional technical analysis.
 
 > Source (PineScript)
 

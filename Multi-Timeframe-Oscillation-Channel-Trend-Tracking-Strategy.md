@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1158dbaa08194313760.png)
 
-[trans]
-
-## 概述
-该策略基于超级趋势指标,结合多个时间框架分析市场趋势,采用震荡通道方法identifying入场时机。
-
-## 策略原理  
-- 采用传统超级趋势指标判断趋势方向
-- 增加高时间框架超级趋势,确保高时间框架也存在趋势
-- 根据两个时间框架的超级趋势指标判断总体趋势方向
-- 根据价格突破震荡通道的上下轨,确定具体的入场时机
-
-## 优势分析
-- 多时间框架分析,判断趋势更可靠
-- 高低时间框架结合,既保证大趋势又能捕捉短期机会
-- 震荡通道设定止损点,有利控制风险
-
-## 风险及解决  
-- 超级趋势本身会有一定滞后现象,可能错过趋势转换点
-- 可以通过参数优化或结合其他指标判断获知趋势转换,降低滞后风险
-
-## 优化方向  
-- 优化超级趋势参数,降低滞后问题
-- 增加趋势过滤指标,确保判断上大趋势更准确
-- 测试并选择更合适的止损方式
-
-## 总结
-该策略整合多时间框架分析和趋势追踪指标,掌握主要趋势的同时寻找具体入场时机。通过不断优化,可望取得长期稳定的超额收益。
-
-||
-
-
 ## Overview
 This strategy is based on the Supertrend indicator, combined with multiple timeframe market trend analysis, and adopts the oscillation channel method to identify entry opportunities.  
 

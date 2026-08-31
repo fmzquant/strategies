@@ -10,43 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1cad99c9cb1a1c80ac9.png)
- [trans]
-### 概述
-
-该策略通过计算动量指标和恐慌指数的交叉来判断市场走势,在两个指标发生特定交叉时发出卖出信号,以捕捉大幅下跌行情。
-
-### 策略原理
-
-1. 计算50周期动量指标。它表示价格相对于50周期前的变化。
-2. 计算22周期的恐慌指数修正值。它通过最高价和最低价的比值来表示市场的恐慌情绪。
-3. 当动量指标下穿恐慌指数时,表示市场存在下跌压力。
-4. 如果动量指标继续下跌进入危险区(-5到5之间),则发出强烈的卖出信号。
-
-### 优势分析
-
-1. 利用市场交易情绪指标恐慌指数,可以有效判断市场结构性变化。
-2. 动量指标可以判断价格变化速度和力度,辅助判断市场趋势变化。
-3. 结合两种不同类型指标,可以提高识别突发事件的准确性。
-4. 通过调整参数,可以灵活适应不同市场环境。
-
-### 风险分析
-
-1. 恐慌指数与动量指标交叉并不能保证每次都出现大幅下跌。需要综合其它指标确定最终决策。  
-2. 卖出后没有设置止损,无法有效控制损失。
-3. 未考虑反转和再次入市问题。策略只适合捕捉突发性下跌。
-
-### 优化方向
-
-1. 在卖出后设置止损点,控制损失。
-2. 增加其它指标判断,提高信号的可靠性。如成交量,布林线等。  
-3. 增加再次入市信号,使策略可以完整运行长期周期。
-4. 对参数进行优化,找到最佳参数组合。
-
-### 总结
-
-该策略通过动量指标和恐慌指数的交叉来发出市场下跌警示。它可以有效捕捉市场的突发性下跌。但该策略仅适合短线应用,没有退出机制与风险控制。未来需要继续完善,使其成为一个长线可持续策略。
-
-||
+ 
 
 ### Overview
 
@@ -95,8 +59,6 @@ This strategy judges market trends by calculating the crossover between a moment
 ### Summary
 
 The strategy issues market decline alerts through crossovers of the momentum indicator and fear index. It can effectively capture sudden market crashes. But the strategy only suits short-term usage without exit mechanisms and risk control. Further improvements are needed to make it a sustainable long-term strategy.
-
-[/trans]
 
 > Strategy Arguments
 

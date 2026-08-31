@@ -8,51 +8,8 @@ Moving-Average-Divergence-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/d23dcd92ddbed44f6d.png)
- [trans]
-
-## 概述
-
-该策略通过计算移动平均线及其枢轴点,发现价格与移动平均线之间的背离,作为买入和卖出信号。它可以应用于任何振荡指标,以查找背离。这是一个有价值的工具,可以用来进行回测和实盘交易。
-
-## 策略原理
-
-1. 计算长度为Len的移动平均线(MA)
-2. 检测MA的枢轴低点(PL)和枢轴高点(PH)
-3. 判断是否存在正向背离:价格创新低点而MA未创新低或价格未创新低而MA创新低
-4. 判断是否存在反向背离:价格创新高点而MA未创新高或价格未创新高而MA创新高
-5. 根据背离情况判断买入和卖出
-
-## 优势分析
-
-1. 可自动发现价格与MA之间的背离,避免人工判断错误
-2. 可适用于任何振荡指标,扩展性强
-3. 可用于回测验证策略盈利能力
-4. 可配置参数调整灵敏度,避免错误信号
-5. 提供多种背离类型,判断准确全面
-
-## 风险分析 
-
-1. 若振荡指标设定不当,可能产生大量错误信号
-2. 背离发生前需要有效的枢轴点,可能发生信号不足
-3. 需适当调整参数,以平衡灵敏度与过滤错误信号
-4. 与其他因素结合使用效果更好,单独使用可信度较低
-
-## 优化方向
-
-1. 优化移动平均线参数,寻找最佳参数组合
-2. 结合其他指标如量价指标避免错误信号
-3. 增加机器学习模型判断背离可信度
-4. 增加风险管理机制,控制单笔损失
-
-## 总结
-
-该策略通过发现价格与移动平均线之间的背离作为交易信号,可自动化判断,避免主观错误。可广泛适用于任何振荡指标,具备较强扩展性。需配合参数优化与其他指标使用,可大幅提高交易信号的可信度与系统稳定性。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy detects divergences between price and moving average line, and uses them as buy and sell signals. It can be applied to any oscillator to find divergences. This is a valuable tool that can be used for backtesting and live trading.  
 
@@ -89,9 +46,6 @@ This strategy detects divergences between price and moving average line, and use
 ## Summary  
 
 This strategy uses divergences between price and MA as trading signals for automated judgment to avoid subjective errors. It can be widely applied to any oscillator with strong extensibility. Requires parameter optimization and usage with other indicators to significantly improve signal reliability and system stability.
-
-[/trans]
-
 > Strategy Arguments
 
 

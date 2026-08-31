@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/e02be2412bcfe8378d.png)
 
-[trans]
-#### 概述
-该策略是一个基于MACD指标和量价关系的交易系统,通过观察MACD柱状图的形态变化来判断市场趋势转折点。策略采用了动态的止盈止损机制,通过ATR指标来自适应市场波动,有效控制风险。
-
-#### 策略原理
-策略的核心逻辑建立在MACD指标的深浅柱状变化上,结合EMA和SMA双重均线系统。当MACD柱状图从深色转为浅色时,表明动量发生转变,系统会在此时进行交易。具体来说:
-1. 使用快速(12)和慢速(26)均线计算MACD值
-2. 通过9周期的信号线平滑MACD
-3. 观察MACD柱状图的颜色深浅变化
-4. 结合14周期ATR指标设置动态止盈止损
-
-#### 策略优势
-1. 指标组合科学合理,MACD能够有效捕捉趋势,ATR可以适应波动
-2. 止盈止损设置灵活,通过倍数参数可以根据不同市场特点进行调整
-3. 交易信号明确,通过柱状图颜色变化直观判断入场时机
-4. 兼顾多空双向交易,增加了策略的适用性和盈利机会
-
-#### 策略风险
-1. MACD作为滞后指标可能错过快速行情的最佳入场点
-2. 在震荡市场中可能产生虚假信号,导致频繁交易
-3. ATR倍数设置不当可能导致止损过松或过紧
-4. 需要合理设置资金管理,避免单笔损失过大
-
-#### 策略优化方向
-1. 引入成交量确认信号,提高信号的可靠性
-2. 增加趋势过滤器,减少震荡市场中的虚假信号
-3. 优化止盈止损倍数,可以根据不同时间周期动态调整
-4. 加入波动率过滤,在剧烈波动时期降低交易频率
-5. 考虑引入时间过滤,避免在不利时段交易
-
-#### 总结
-这是一个结合了技术分析经典指标MACD和现代风险控制方法的综合策略。通过观察MACD柱状图的形态变化来捕捉市场动量的转变,并使用ATR进行动态风险控制。策略设计合理,操作逻辑清晰,具有较好的实用价值。通过持续优化和完善,该策略有望在实战中取得更好的表现。 ||
-
 #### Overview
 This strategy is a trading system based on MACD indicator and price-volume relationship, which identifies market trend reversal points by observing changes in MACD histogram patterns. The strategy employs a dynamic profit-taking and stop-loss mechanism using the ATR indicator to adapt to market volatility and effectively control risk.
 
@@ -74,7 +41,7 @@ The core logic of the strategy is built on the color changes of MACD histogram, 
 5. Consider implementing time filters to avoid trading during unfavorable periods
 
 #### Summary
-This is a comprehensive strategy combining classic technical analysis indicator MACD with modern risk control methods. It captures market momentum shifts by observing MACD histogram pattern changes while using ATR for dynamic risk control. The strategy is well-designed with clear operational logic and practical value. Through continuous optimization and improvement, this strategy shows promise for better performance in real trading conditions.[/trans]
+This is a comprehensive strategy combining classic technical analysis indicator MACD with modern risk control methods. It captures market momentum shifts by observing MACD histogram pattern changes while using ATR for dynamic risk control. The strategy is well-designed with clear operational logic and practical value. Through continuous optimization and improvement, this strategy shows promise for better performance in real trading conditions.
 
 
 

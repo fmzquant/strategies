@@ -10,50 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/6b43d2ea4d9a40c900.png)
- [trans]
-
-## 概述
-
-本策略综合运用IMACD、EMA和一目均衡表等多种技术指标,构建一个全面的决策树模型,用于发出买入和卖出信号。
-
-## 策略原理
-
-1. IMACD:增强型MACD,通过ImpulseMACD和ImpulseHisto更好地捕捉市场趋势
-2. 一目均衡表:绘制换手线、基准线、先行线A、先行线B等,检测支撑和阻力位
-3. EMA 40:辅助判断趋势方向
-4. 根据IMACD、云图组件和EMA 40的具体关系,发出做多和做空信号
-
-做多信号:当IMACD为特定条件颜色且EMA 40高于云图的上轨时,做多
-
-做空信号:当IMACD为红色且EMA 40低于云图的下轨时,做空
-
-## 优势分析
-
-1. 多指标组合,综合判断市场趋势,提高决策的准确性
-2. 决策树模型分类明确,交易信号生成清晰
-3. EMA长度可调,辅助判断的灵活性更高
-4. 结合云图和趋势指标,更好地识别支撑和阻力
-
-## 风险分析
-
-1. 多指标组合,参数设置较为复杂
-2. EMA长度设置不当,可能导致虚假交易信号
-3. 需同时关注多个指标,操作难度较大
-
-风险解决:优化参数设置,调整EMA长度,简化操作流程。
-
-## 优化方向  
-
-1. 优化参数设置,提高策略稳定性
-2. 增加止损策略,控制单笔损失
-3. 基于巨量数据进行回测,提高信号质量
-4. 结合机器学习算法,建立自适应决策树
-
-## 总结
-
-本策略综合运用多种指标识别趋势,构建决策树模型产生交易信号。优点是信号质量高,准确率高,适合逐步优化。需要关注参数优化及止损策略,以控制交易风险,从而获得长期稳定回报。
-
-||
 
 ## Overview
 
@@ -95,9 +51,6 @@ Risk Solutions: Optimize parameter settings, adjust EMA length, simplify workflo
 ## Summary
 
 This strategy identifies trends using multiple indicators to construct a decision tree model for generating trading signals. Pros are high-quality and accurate signals. Consists room for progressive optimization. Requires focus on parameter tuning and stop loss to control risks for long-term steady returns.
-
-[/trans]
-
 > Strategy Arguments
 
 

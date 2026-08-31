@@ -9,33 +9,30 @@ M-Language-Turtle-Trading-strategy-implementationsV-10
 
 > Strategy Description
 
-[trans]
-> 尝个鲜
+> A quick look
 
-* 完全兼容文华麦语言语法
-* 基于发明者强大的低层, 完全支持数字货币现货期货与国内大宗商品期货
-* 兼容工作会一直持续, 目前兼容度90%大部分策略可以直接运行, 无需修改
-* API文档 https://www.fmz.com/bbs-topic/2569
+* Fully compatible with Wenhua MyLanguage syntax
+* Built on FMZ's powerful low-level infrastructure, with full support for cryptocurrency spot, cryptocurrency futures, and domestic commodity futures
+* Compatibility work is ongoing. Current compatibility is about 90%, and most strategies can run directly without modification
+* API documentation: https://www.fmz.com/bbs-topic/2569
 
->语言增强
+> Language enhancements
 
-发明者量化不单实现了麦语言的解释器, 而且还增强让其能与高级语言Javascript混合编程，放个例子
+FMZ Quant not only implements a MyLanguage interpreter, but also extends it so it can be mixed with high-level languages such as JavaScript. Here is a simple example:
 
 ```
 %%
-// 这里面可以调用发明者量化的任何API 
+// Here you can call any API provided by FMZ Quant.
 scope.TEST = function(obj) {
     return obj.val * 100;
 }
 %%
-收盘价:C;
-收盘价放大100倍:TEST(C);
-上一个收盘价放大100倍:TEST(REF(C, 1)); // 鼠标移动到回测的K线上就会提示变量值
+Closing price: C;
+Closing price magnified 100 times: TEST(C);
+Previous closing price magnified 100 times: TEST(REF(C, 1)); // Move the mouse over a backtest candlestick to see the variable value.
 ```
 
- ![IMG](https://www.fmz.com/upload/asset/81cecb83b47ecca04ddd63c3206eb0db.png)
-
-|
+![IMG](https://www.fmz.com/upload/asset/81cecb83b47ecca04ddd63c3206eb0db.png)
 
 > Background
 
@@ -90,7 +87,7 @@ scope.TEST = function(obj) {
 
    TrueRange = Max(High−Low, High−PreClose, PreClose−Low)
 
-   N = (the sum of the N values ​​of the previous 19 days + the TrueRange at the time) / 20
+   N = (the sum of the N values of the previous 19 days + the TrueRange at the time) / 20
 
    Among them, High indicates the highest price of the day, Low indicates the lowest price of the day, and PreClose indicates the closing price of the previous day. We can see from 
    the definition that the value of N can indeed properly express the recent fluctuations in the price of the asset.
@@ -104,36 +101,35 @@ scope.TEST = function(obj) {
 - 2. When to open a position
 
    The action of opening a position comes from the generation of a trend breakthrough signal. If the current price breaks through the upper track, it will generate a buy position 
-   signal. If the current price falls below the lower track, it will generate a short position signal (the cryptocurrency market is supported by the short sale!)
+   signal. If the current price falls below the lower track, it will generate a short position signal (the cryptocurrency market supports short selling!).
 
    Initial build size = 1 Unit
 
-- 3. When is the adding position?
+- 3. When to add to a position
 
-  If the holding position is long positions and the price of the asset has increased by 0.5N based on the last holding position (or adding position), then add a unit of long position;
+   If the holding position is long and the asset price rises by 0.5N from the last entry (or add-on) price, add one more unit to the long position.
 
-  If the holding position is short position and the price of the asset has dropped by 0.5N based on the last position (or adding position), then add a unit of short position.
+   If the holding position is short and the asset price falls by 0.5N from the last entry (or add-on) price, add one more unit to the short position.
 
-  We have seen that the Turtle Strategy is actually a strategy of chasing up and down.
+   As you can see, the Turtle Strategy is essentially a trend-following buy-high/sell-low system.
 
 - 4. How to do dynamic stop loss
 
-  If the holding position is long positions and the price of the asset falls by 2N based on the last holding position (or adding position), then stop loss for all positions;
+   If the holding position is long and the asset price falls by 2N from the last entry (or add-on) price, stop out of the entire position.
 
-  If the holding position is short position and the price of the asset has increased by 2N based on the last holding position (or adding position), then the entire position must be closed.
+   If the holding position is short and the asset price rises by 2N from the last entry (or add-on) price, close the entire position.
 
-  Of course, the user can customize the dynamic stop loss plan, such as a 0.5N drop to start partial closing position, instead of waiting for a 2N decline after a rush to close the 
-  position; after all, the impact cost is there.
+   Of course, users can customize the dynamic stop-loss plan, such as starting partial reduction after a 0.5N decline instead of waiting for a full 2N pullback; after all, impact cost exists.
 
-- 5. How to make a profit, can you customizethe dynamic take profit?
+- 5. How to take profit, and can you customize dynamic take profit?
 
-  In the Turtle Rule, the Take Profit signal is generated like this:
+   In the Turtle Rule, the take-profit signal is generated like this:
 
-  If the holding position is long positions and the current asset price falls below the lower track of the 10th Donchian channel, all position closed;
+   If the holding position is long and the current asset price falls below the lower track of the 10-period Donchian channel, close the entire position.
 
-  If the holding position is short position and the current asset price rises above the upper track of the 10th Donchian channel, all position closed.
+   If the holding position is short and the current asset price rises above the upper track of the 10-period Donchian channel, close the entire position.
 
-  Of course, users can customize the dynamic take profit plan, such as when the total net assets / initial net assets > 1.5, just take the profit.
+   Of course, users can customize the dynamic take-profit plan, such as taking profit when total net assets / initial net assets > 1.5.
 
 > Advantage
 
@@ -141,10 +137,9 @@ scope.TEST = function(obj) {
 
 > Disadvantage
 
-   The turtle trading system has a common problem with the trend tracking strategy, which is the withdrawal of floating profit. The floating profit that is chasing up is likely to be spit 
-   out due to a sudden drop. It is very strong in the big trend, and it is not perform very well in the shock market.
+   The turtle trading system has a common problem with trend-following strategies: giving back floating profit. Gains earned by chasing trends can easily be surrendered after a sudden drop. It performs strongly in major trends, but not very well in choppy markets.
 
-   Enough talk, let’s make it happen!
+   Enough talk, let's make it happen!
 
 > M language
 
@@ -157,11 +152,11 @@ scope.TEST = function(obj) {
    The function library of the M language is updated frequently, and new functions can be added at any time according to the new requirements of the customer to support the new 
    ideas and new applications of the programmer.
 
-   The FMZ Quant not only realized the interpreter of the grammar of M language, but also enhanced its ability to mix programming with high-level language such as JavaScript.
+   FMZ Quant not only implements the M language interpreter, but also enhances it to support mixed programming with high-level languages such as JavaScript.
 
 > For example:
 
-   // here you can call any API function from FMZ Quant
+   // Here you can call any API function from FMZ Quant
    scope.TEST = function(obj) {
        return obj.val * 100;
    }
@@ -169,14 +164,10 @@ scope.TEST = function(obj) {
 
    The closing price is magnified 100 times: TEST(C);
 
-   The previous closing price is magnified 100 times: TEST(REF(C, 1)); // The mouse moves to the backtest K line and the variable value is displayed.
+   The previous closing price is magnified 100 times: TEST(REF(C, 1)); // Move the mouse over the backtest candlestick and the variable value will be displayed.
 
    ![IMG](https://www.fmz.com/upload/asset/16ad22541f647db833cf.png)  
-   ![IMG](https://www.fmz.com/upload/asset/168d0e609175942064c3.png) 
-
-[/trans]
-
-
+   ![IMG](https://www.fmz.com/upload/asset/168d0e609175942064c3.png)
 
 > Source (MyLanguage)
 

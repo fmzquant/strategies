@@ -10,59 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ec8e6941fb3f845836.png)
- [trans]
-
-## 概述
-
-这个策略采用移动平均线、布林带、RSI、随机指标等多个指标,结合多时间框架分析,设计出一个综合利用动量指标判断市场反转的策略。
-
-## 策略原理
-
-该策略的核心逻辑是跟踪短期和长期移动平均线的交叉来判断底部和顶部,同时辅助参考动量指标如RSI、随机指标等的极端值来判断超买超卖现象。
-
-具体来说,它会分别绘制两个不同参数的移动平均线,一个较短期判断当前趋势,一个较长期判断主要趋势。当短期移动平均线从下方上穿越长期移动平均线时,认为行情反转,产生买入信号;当从上方下穿时,产生卖出信号。
-
-此外,策略还会结合RSI指标查看它是否进入超卖区域,以及随机指标查看K线是否进入超卖区域等来判断底部特征。针对顶部特征,也会利用这两个指标的反向逻辑来判断。
-
-在出场方面,策略同时使用止盈、止损、跟踪止损来管理头寸。
-
-## 优势分析
-
-这是一个结合趋势跟踪和反转识别的策略,同时兼顾动量指标的实用策略。它具有以下几个优势:
-
-1. 移动平均线的交叉系统是一个简单有效判断反转的方法。双均线策略容易操作,历史效果良好。
-
-2. 结合RSI等指标来判断反转信号的可靠性,避免在非底部非顶部位置产生误导信号。
-
-3. 止盈、止损和跟踪止损机制帮助锁定利润,控制风险。
-
-## 风险分析 
-
-尽管该策略有许多优点,但也存在一些风险需要注意:
-
-1. 双均线策略容易在震荡行情中被套住。如果行情长期盘整,会频繁打开又平掉头寸。
-
-2. RSI等指标并不能完全避免错误信号的出现。例如快速突破上一波高点会让RSI无法进入超买区域等。
-
-3. 止损点过宽会增加亏损风险。止损幅度需要根据具体品种来调整。
-
-## 优化方向
-
-该策略还有许多可优化的地方:  
-
-1. 可以测试不同类型的移动平均线,寻找最匹配的均线指标。
-
-2. 可以加入更多辅助指标,如MACD,KD,布林带等来丰富策略逻辑。
-
-3. 可以通过机器学习等方式来自动优化头寸管理参数,使止损止盈更为智能化。
-
-4. 不同品种的参数可以单独优化,以适应各品种的特点。
-
-## 总结
-
-综上所述,动量跟踪均线反转策略是一个简单实用的量化策略。它利用均线系统判断市场反转点,辅助以动量指标确认信号可靠性,并采用智能化的头寸管理来锁定利润和控制风险。该策略易于理解和实施,值得练习和优化,是交易者学习量化交易的好起点。
-
-|| 
 
 ## Overview  
 
@@ -114,7 +61,6 @@ Some ways this strategy can be further optimized:
 
 In summary, the Momentum Tracking Mean Reversion Strategy is a simple yet practical quant strategy. It uses moving average crossovers to determine reversal points, confirms signal reliability with momentum indicators, and manages positions intelligently to lock in profits and control risk. Easy to understand and implement, it is a good starting point for traders to learn algorithmic trading strategies.
 
-[/trans]
 
 > Strategy Arguments
 

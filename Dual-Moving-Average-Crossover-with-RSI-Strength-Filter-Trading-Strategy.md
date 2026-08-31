@@ -12,74 +12,9 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d896bec9f4ccdacac222.png)
 ![IMG](https://www.fmz.com/upload/asset/2d88b4b9d47add12aa48a.png)
 
-双均线交叉结合RSI强弱过滤交易策略 | Dual Moving Average Crossover with RSI Strength Filter Trading Strategy
+Dual Moving Average Crossover with RSI Strength Filter Trading Strategy
 
 
-
-[trans]
-#### 概述
-本策略是一个结合了双均线交叉和RSI指标过滤的交易系统。策略使用5周期指数移动平均线(EMA5)和10周期简单移动平均线(SMA10)作为主要趋势判断工具,同时引入14周期相对强弱指数(RSI14)作为交易信号过滤器,通过严格的入场和出场条件来提高交易的准确性。
-
-#### 策略原理
-策略的核心逻辑基于两个关键技术指标的配合:
-1. 双均线系统: EMA5与SMA10的交叉用于捕捉趋势变化
-   - 当EMA5向上穿越SMA10时,产生做多信号
-   - 当EMA5向下穿越SMA10时,产生做空信号
-2. RSI过滤系统:
-   - 做多条件要求RSI14数值大于60
-   - 做空条件要求RSI14数值小于50
-   - 价格必须突破RSI相应水平以确认交易信号
-
-#### 策略优势
-1. 信号确认机制完善
-   - 通过双均线交叉提供初始信号
-   - 使用RSI过滤器进行二次确认
-   - 要求价格突破RSI关键水平作为最终确认
-
-2. 风险控制有效
-   - 设置了明确的入场和出场条件
-   - 采用反向信号自动平仓机制
-   - RSI指标过滤掉潜在的虚假信号
-
-3. 策略逻辑清晰
-   - 指标组合简单易懂
-   - 交易规则明确具体
-   - 便于调整和优化
-
-#### 策略风险
-1. 震荡市场风险
-   - 频繁的均线交叉可能导致过度交易
-   - 在横盘市场中可能产生误导性信号
-   - 建议在明确趋势中使用
-
-2. 滞后性风险
-   - 移动平均线本身具有滞后性
-   - RSI确认可能导致错过部分行情
-   - 需要在及时性和准确性之间找到平衡
-
-3. 参数敏感性
-   - 均线周期设置影响信号频率
-   - RSI阈值设置影响过滤效果
-   - 不同市场环境可能需要不同参数
-
-#### 策略优化方向
-1. 引入趋势强度过滤
-   - 增加ADX指标判断趋势强度
-   - 在强趋势中采用更宽松的RSI过滤条件
-   - 在弱趋势中提高过滤条件严格性
-
-2. 优化参数自适应
-   - 根据市场波动率动态调整均线周期
-   - 基于市场环境自动调整RSI阈值
-   - 引入自适应算法优化参数选择
-
-3. 完善风险管理
-   - 增加止损止盈机制
-   - 实现仓位管理功能
-   - 添加交易成本考虑
-
-#### 总结
-该策略通过结合双均线交叉和RSI过滤器,构建了一个相对完善的交易系统。策略的主要优势在于其信号确认机制和风险控制措施,但也存在一些固有的局限性。通过建议的优化方向,策略有望在实际交易中取得更好的表现。特别是在趋势明确的市场环境下,该策略的表现可能会更加稳定。 ||
 
 #### Overview
 This strategy is a trading system that combines dual moving average crossover with RSI indicator filtering. It uses a 5-period Exponential Moving Average (EMA5) and a 10-period Simple Moving Average (SMA10) as primary trend identification tools, while incorporating a 14-period Relative Strength Index (RSI14) as a trade signal filter to enhance trading accuracy through strict entry and exit conditions.
@@ -143,7 +78,7 @@ The strategy's core logic is based on the combination of two key technical indic
    - Include trading cost considerations
 
 #### Summary
-This strategy constructs a relatively complete trading system by combining dual moving average crossover with RSI filtering. Its main advantages lie in its signal confirmation mechanism and risk control measures, though it does have some inherent limitations. Through the suggested optimization directions, the strategy has the potential to achieve better performance in actual trading. It may perform particularly well in markets with clear trends.[/trans]
+This strategy constructs a relatively complete trading system by combining dual moving average crossover with RSI filtering. Its main advantages lie in its signal confirmation mechanism and risk control measures, though it does have some inherent limitations. Through the suggested optimization directions, the strategy has the potential to achieve better performance in actual trading. It may perform particularly well in markets with clear trends.
 
 
 

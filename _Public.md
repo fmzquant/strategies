@@ -9,23 +9,22 @@ daniaoren
 
 > Strategy Description
 
-用于期现成对下单的插件，可在交易终端里使用。
+A plugin for placing paired spot-and-futures orders from the trading terminal.
 
-自用工具，默认支持的是Deribit的期现开单，在合约中按默认值的格式填入合约名称、期望的差价即可
+This is a personal utility. By default it supports Deribit spot/futures opening orders. In the contract fields, simply enter the contract name and the desired spread using the default format.
 
-如果要支持其它交易所可能要自己小改一下。
-
+If you want to support other exchanges, you may need to make small modifications yourself.
 > Strategy Arguments
 
 
 
 |Argument|Default|Description|
 |----|----|----|
-|ContractSwap|swap|永续合约|
-|ContractFuture|quarter|期货合约|
-|Amount|true|下单量|
-|DiffMin|6|最小可下单差价|
-|RealTrade|false|是否真实下单|
+|ContractSwap|swap|Perpetual contract|
+|ContractFuture|quarter|Futures contract|
+|Amount|true|Order quantity|
+|DiffMin|6|Minimum tradable spread|
+|RealTrade|false|Place real orders|
 
 
 > Source (python)

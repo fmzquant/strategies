@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a053bee0f7c2fd9025.png)
 
-[trans]
-#### 概述
-该策略是一个基于5周期和15周期指数移动平均线(EMA)交叉的量化交易系统。通过设置合理的止损和止盈水平,在保护资金安全的同时追求稳定收益。策略采用经典的均线交叉信号来识别市场趋势变化,并结合风险管理机制来控制每笔交易的盈亏比。
-
-#### 策略原理
-策略核心是监测快速移动平均线(5周期EMA)与慢速移动平均线(15周期EMA)的交叉情况。当5周期EMA向上穿越15周期EMA时,系统产生做多信号;当5周期EMA向下穿越15周期EMA时,系统产生做空信号。对于每个交易信号,系统会自动设置1.5%的止损点位和3%的止盈点位,这种设置保证了良好的风险收益比。止损止盈的设置基于入场价格计算,可以有效地控制风险敞口。
-
-#### 策略优势
-1. 信号生成机制客观且易于理解,不受主观判断影响
-2. 采用指数移动平均线降低了假突破带来的影响
-3. 设置了固定百分比的止损和止盈,有利于资金管理
-4. 风险收益比为1:2,符合专业交易原则
-5. 策略逻辑简单,易于实现和维护
-6. 可以适用于多个市场和时间周期
-
-#### 策略风险
-1. 在横盘市场可能频繁产生假信号,增加交易成本
-2. 固定的止损和止盈设置可能不适合所有市场环境
-3. 快速EMA对价格变动较为敏感,可能导致过度交易
-4. 没有考虑市场波动率变化,风险控制不够灵活
-5. 在极端行情下,止损可能不能及时执行
-
-#### 策略优化方向
-1. 引入波动率指标动态调整止损止盈水平
-2. 增加趋势过滤器减少横盘市场的假信号
-3. 根据不同市场特征动态调整EMA周期
-4. 添加交易量确认机制提高信号可靠性
-5. 引入时间过滤器避免在不利时段交易
-6. 考虑增加trailing stop机制优化获利了结方式
-
-#### 总结
-这是一个结构完整、逻辑清晰的量化交易策略。通过均线交叉捕捉趋势转折点,配合固定止损止盈进行风险控制。策略简单易用,适合初学者入门,也为进一步优化提供了良好基础。建议交易者在实盘使用前进行充分的回测,并根据具体市场特征进行参数优化。 || 
-
 #### Overview
 This strategy is a quantitative trading system based on the crossover of 5-period and 15-period Exponential Moving Averages (EMA). It aims to achieve stable returns while protecting capital through reasonable stop-loss and take-profit levels. The strategy uses classic moving average crossover signals to identify market trend changes and combines them with risk management mechanisms to control the risk-reward ratio of each trade.
 
@@ -74,7 +41,7 @@ The core of the strategy is monitoring the crossover between the fast-moving ave
 6. Consider adding trailing stop mechanism to optimize profit-taking
 
 #### Summary
-This is a well-structured quantitative trading strategy with clear logic. It captures trend reversal points through moving average crossovers and implements risk control with fixed stop-loss and take-profit levels. The strategy is simple to use, suitable for beginners, and provides a good foundation for further optimization. Traders are advised to conduct thorough backtesting before live implementation and optimize parameters according to specific market characteristics.[/trans]
+This is a well-structured quantitative trading strategy with clear logic. It captures trend reversal points through moving average crossovers and implements risk control with fixed stop-loss and take-profit levels. The strategy is simple to use, suitable for beginners, and provides a good foundation for further optimization. Traders are advised to conduct thorough backtesting before live implementation and optimize parameters according to specific market characteristics.
 
 
 

@@ -10,51 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/5e2cb6dcc20b4a140a.png)
- [trans]
-
-## 概述
-
-该策略联合使用双移动平均线和StochRSI指标来识别趋势方向和入场点。主要特点是可以在趋势开始阶段就进入市场,同时利用StochRSI指标的超买超卖特征来过滤假突破。
-
-## 策略原理
-
-该策略使用快速移动平均线EMA(12)和慢速移动平均线EMA(25)构建双移动平均线系统,当快速线上穿慢速线时产生买入信号,快速线下穿慢速线时产生卖出信号,用以判断大趋势方向。
-
-同时,该策略结合StochRSI指标的交叉来进一步识别入场时机。StochRSI指标结合随机指标KDJ和RSI,当K线从超卖区上穿D线时产生买入信号,当K线从超买区下穿D线时产生卖出信号。
-
-只有当双移动平均线产生信号,且StochRSI也产生对应的信号时,该策略才会开仓。从而能有效过滤掉部分假突破情况,避免无效交易。
-
-## 优势分析
-
-该策略最大的优势在于能够早期判断趋势方向和潜在入场点。移动平均线系统可以在趋势开始时就产生信号,而StochRSI指标的加入又可有效过滤假突破,避免错误交易。
-
-另外,该策略同时结合了趋势分析和超买超卖判断,兼具趋势追踪和反转交易的优点。无论是追踪趋势还是逢低买进逢高卖出,该策略都可全方位捕捉机会。
-
-## 风险分析
-
-该策略的主要风险在于移动平均线体系本身的滞后性。当行情突然发生剧烈变化时,双移动平均线系统往往会晚一些才能产生信号,容易让策略错过最佳入场时机。
-
-此外,StochRSI指标也可能会产生错误信号,引发不必要的交易。尤其是行情震荡时期,K线和D线可能频繁交叉,给策略带来过多无效操作的风险。
-
-## 优化方向  
-
-该策略的优化主要集中在以下几个方面:
-
-1. 调整双移动平均线的参数,使用更有利于捕捉趋势的均线周期;
-
-2. 优化StochRSI的参数,制定更合理的超买超卖判断标准;  
-
-3. 加大下单量或调整止损止盈水平,以追求更高收益率;
-
-4. 结合其他指标作为过滤条件,进一步减少无效信号。
-
-## 总结
-
-该策略整体来说非常适合捕捉中长线趋势,可在趋势初期获利潜力大。同时结合StochRSI指标作为辅助判断,可有效过滤误导信号,避免不必要的亏损。通过参数优化和风险管理的改进,该策略可以成为获取稳定收益的有力工具。
-
-||
-
-## Overview  
+ ## Overview  
 
 This strategy combines double moving average and StochRSI indicator to identify trend direction and entry points. The main feature is that it can enter the market in the early stage of trend, while using the overbought/oversold characteristics of StochRSI to filter false breakouts.
 
@@ -93,8 +49,6 @@ The optimization of this strategy mainly focuses on several aspects:
 ## Summary  
 
 Overall, this strategy is very suitable for capturing medium-to-long term trends, with great profit potential in early stage of trends. Combining StochRSI as an auxiliary judge can effectively filter misleading signals and avoid unnecessary losses. With improvements in parameter tuning and risk management, this strategy can become a powerful tool to obtain steady returns.
-
-[/trans]
 
 > Strategy Arguments
 

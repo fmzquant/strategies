@@ -9,61 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/f4934c8eab7e89e839.png)
- [trans]
-## 概述
-
-本策略基于布林带指标设计,当价格突破布林带上轨时做空,突破下轨时做多,实现智能追踪交易。
-
-## 策略原理
-
-该策略使用布林带中的中线、上轨、下轨为基础指标。中线为n天收盘价的移动平均线,上轨是中线上偏移两个标准差,下轨是中线下偏移两个标准差。当价格从下轨顺势上穿时,做多;当价格从上轨顺势下穿时,做空。这样可以根据市场波动性智能追踪价格。
-
-具体来说,策略主要判断两个指标:
-
-1. ta.crossover(source, lower):收盘价上穿下轨,做多
-
-2. ta.crossunder(source, upper):收盘价下穿上轨,做空
-
-当触发平仓条件时,使用strategy.cancel()函数平掉当前持仓。
-
-## 策略优势分析
-
-该策略主要有以下优势:
-
-1. 基于布林带指标设计,可以捕捉市场波动性,有效跟踪价格走势
-2. 规则清晰简单,容易理解实现
-3. 可自定义参数如周期长度、标准差倍数等,适应性强
-4. 可配置移动止损、固定止损及移动止盈等优化策略效果
-
-## 策略风险分析
-
-该策略也存在一些风险:  
-
-1. 布林带突破容易假突破,可能造成虚假信号
-2. 效果依赖参数优化,参数选择不当可能影响盈利能力
-3. 追踪止损困难,无法有效控制单笔损失
-
-对应解决方法:
-
-1. 结合其他指标过滤信号,避免假突破
-2. 做好参数测试,选择最佳参数组合
-3. 加入移动止损或趋势跟踪止损 clips 
-
-## 策略优化方向  
-
-该策略还可进一步优化:
-
-1. 结合其他指标判断趋势方向,避免不适宜布林带策略的市场
-2. 测试不同周期参数的效果,找到最佳周期
-3. 加入移动止损或趋势跟踪止损机制,有效控制单笔亏损
-
-## 总结
-
-本策略基于布林带指标设计,使用价格突破上下轨的方式实现自动追踪。策略简单易懂,对市场波动性敏感,可通过参数优化和止损方式进一步优化效果。总体来说,该策略适用于波动性较大的股指或商品市场。交易者可根据自己的交易偏好,选择合适的品种和参数进行回测优化,从中获得astika的交易策略。
-
-||
-
 ## Overview  
 
 This strategy is designed based on the Bollinger Bands indicator to go short when price breaks above the upper band and go long when price breaks below the lower band, realizing intelligent tracking trading.
@@ -114,8 +59,6 @@ The strategy can be further optimized by:
 ## Conclusion  
 
 This strategy is designed based on the Bollinger Bands indicator, using price breakouts of upper and lower bands to automatically track prices. The logic is simple and sensitive to market volatility. Further optimizations can be done via parameter tuning and stop loss mechanisms. Overall this strategy works well for indices and commodities with higher volatility. Traders can backtest and optimize based on their trading preference to derive an astika trading strategy.
-
-[/trans]
 
 > Strategy Arguments
 

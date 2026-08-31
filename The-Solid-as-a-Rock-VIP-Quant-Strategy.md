@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/fa7310fb1fde2c4e5f.png)
- [trans]
-
-## 概述
-
-本策略名为“坚如磐石的VIP量化策略”,它融合了改进后威廉SMA指标(Modified WMA)和SSL通道指标(SSL Channel),构建了一个稳定可靠的量化交易框架。
-
-## 原理
-
-该策略结合了两个指标,一个是改进后的威廉SMA指标,通过计算每根K线的均价,然后应用指数移动平均方法来确定趋势方向。另一个是SSL通道指标,它采用最高价和最低价的移动平均线来确定价格通道,判断目前的趋势状态。
-
-当改进后的威廉SMA指标发出买入信号,即金叉时,我们再结合SSL通道指标判断通道内价格是否合适,如果K线实体完全在通道下限之下时,我们就在该点进行买入开仓。
-
-## 优势
-
-1. 通过结合两个指标,使买入信号更加可靠,避免假突破。
-2. 改进后的威廉SMA指标可以更准确判断趋势转换点。
-3. SSL通道指标可以清楚判断价格通道,避免高位买入。
-4. 采用指数移动平均方法,更有利于判断长期趋势。
-
-## 风险及解决
-
-1. 如果遇到剧烈行情,止损点可能会被轻易触发。可以适当放宽止损范围。
-2. 移动平均线系统对短期市场噪音敏感,可能产生错误信号。可以适当加大均线参数,增强过滤效果。
-3. 参数设置不当也会影响策略表现。可以通过回测优化参数,找到最佳参数组合。
-
-## 优化方向  
-
-1. 可以测试不同类型的移动平均线,如EMA、VWMA等,寻找最匹配的均线指标。  
-2. 可以加入成交量指标,避免在低量区域发出信号。
-3. 可以尝试不同的通道绘制方法,如Donchian通道等,使通道界限更加可靠。
-4. 可以加入其他辅助指标,如MACD、RSI等,进一步确认买入时机。
-
-## 总结
-
-本策略通过改进后的威廉SMA指标和SSL通道指标的巧妙结合,构建了一个稳定、可靠的量化交易框架。它过滤市场噪音的能力较强,同时也避免了高位买入的风险。如果参数设置得当,并加入一定的优化,它将是一个非常Outperforming的策略。
-||
 
 ## Overview
 
@@ -80,8 +44,6 @@ When the Modified WMA indicator generates a buy signal, that is, the golden cros
 ## Summary  
 
 Through the ingenious combination of the Modified WMA indicator and the SSL Channel indicator, this strategy builds a stable and reliable quantitative trading framework. It has a strong ability to filter market noise while avoiding the risk of buying at high levels. With proper parameter settings and certain optimizations, it will be a highly outperforming strategy.
-[/trans]
-
 > Strategy Arguments
 
 

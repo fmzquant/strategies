@@ -11,44 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6a2496ab9bbed61f1e.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的交易系统,结合了趋势跟踪和震荡指标的优势。核心逻辑是通过SMA均线的交叉判断趋势方向,使用ADX确认趋势强度,随后运用随机RSI在趋势方向上寻找最优入场点,并采用跟踪止损来保护利润。该策略适用于5分钟时间周期的交易,能够有效捕捉市场的主要趋势性机会。
-
-#### 策略原理
-策略的具体运作原理如下:
-1. 趋势判断:使用SMA20和SMA200的交叉来确定趋势方向,快线上穿慢线视为多头趋势,反之为空头趋势
-2. 趋势强度确认:ADX大于20时表明趋势充分发展,避免在盘整市场中交易
-3. 入场时机:在确认趋势后,使用随机RSI寻找超买超卖机会,RSI低于30时寻找做多机会,高于70时寻找做空机会
-4. 仓位管理:采用反转交易机制,在趋势改变时自动平仓并反向开仓
-5. 风险控制:使用跟踪止损(40点,步长5点)来锁定利润,并设置1根K线的重入延迟以避免虚假信号
-
-#### 策略优势
-1. 多维度分析:通过结合均线、ADX和随机RSI,从不同角度确认交易信号,提高了交易的可靠性
-2. 自适应性强:策略能够根据市场状态自动调整,在趋势和震荡市场都能找到交易机会
-3. 风险管理完善:采用跟踪止损机制,能够在保护利润的同时让盈利继续运行
-4. 持续参与市场:通过反转交易机制,确保始终跟随主要市场走势
-5. 参数可调整性:策略提供了多个可调参数,便于根据不同市场条件进行优化
-
-#### 策略风险
-1. 过度交易风险:频繁的反转交易可能导致手续费成本过高
-2. 假突破风险:在市场震荡时期,可能出现频繁的假突破信号
-3. 滑点风险:在5分钟周期上,可能面临较大的滑点成本
-4. 趋势延迟风险:均线系统本身具有滞后性,可能错过一些重要的转折点
-5. 参数敏感性:策略效果对参数设置比较敏感,需要持续优化
-
-#### 策略优化方向
-1. 引入成交量指标:可以通过添加成交量分析来提高趋势判断的准确性
-2. 优化入场时机:考虑增加价格形态分析,如蜡烛图形态,提高入场精确度
-3. 完善止损机制:可以结合ATR动态调整跟踪止损距离,使其更具适应性
-4. 增加时间过滤:添加交易时间段过滤,避开低流动性期间
-5. 开发自适应参数:研究开发能够根据市场波动率自动调整的参数系统
-
-#### 总结
-该策略通过组合多个经典技术指标,构建了一个全面的交易系统。它既能够捕捉主要趋势,又能在趋势中寻找最优入场点,同时具备完善的风险管理机制。虽然存在一些固有风险,但通过持续优化和细致的参数调整,该策略有望在不同市场环境下保持稳定的表现。策略的模块化设计也为后续优化提供了良好的基础,可以根据实际交易效果不断改进和完善。
-
-|| 
-
 #### Overview
 This strategy is a trading system based on multiple technical indicators, combining the advantages of trend following and oscillator indicators. The core logic uses SMA crossovers for trend direction, ADX for trend strength confirmation, and Stochastic RSI for optimal entry points within the trend, while employing trailing stops for profit protection. The strategy is designed for 5-minute timeframe trading and effectively captures major trending market opportunities.
 
@@ -82,10 +44,7 @@ The specific operating principles are as follows:
 5. Develop Adaptive Parameters: Research and develop parameter systems that automatically adjust based on market volatility
 
 #### Summary
-This strategy builds a comprehensive trading system by combining multiple classic technical indicators. It can capture major trends while finding optimal entry points within trends, featuring robust risk management mechanisms. While inherent risks exist, continuous optimization and careful parameter adjustment can help maintain stable performance across different market conditions. The strategy's modular design provides a solid foundation for future improvements, allowing for ongoing refinement based on actual trading results.[/trans]
-
-
-
+This strategy builds a comprehensive trading system by combining multiple classic technical indicators. It can capture major trends while finding optimal entry points within trends, featuring robust risk management mechanisms. While inherent risks exist, continuous optimization and careful parameter adjustment can help maintain stable performance across different market conditions. The strategy's modular design provides a solid foundation for future improvements, allowing for ongoing refinement based on actual trading results.
 > Source (PineScript)
 
 ``` pinescript

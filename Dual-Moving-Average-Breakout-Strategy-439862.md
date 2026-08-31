@@ -8,70 +8,8 @@ Dual-Moving-Average-Breakout-Strategy-439862
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/1b5cb668aa015a95ac2.png)
- [trans]
-## 概述
-
-双移动均线突破策略(Dual Moving Average Breakout Strategy)是一个基于快速移动均线和慢速移动均线的量化交易策略。它使用两个不同周期的指数移动均线(EMA)作为交易信号。当快速移动均线上穿慢速移动均线时,产生买入信号;当快速移动均线下穿慢速移动均线时,产生卖出信号。
-
-## 策略原理
-
-该策略的核心逻辑是使用快速移动均线和慢速移动均线形成交易信号。策略中定义了快速移动均线周期为12日,慢速移动均线周期为26日。计算方法如下:
-
-1. 计算价格数组的指数移动均线AP,周期为2日
-2. 在AP的基础上计算出快速移动均线Fast,周期为12日  
-3. 在AP的基础上计算出慢速移动均线Slow,周期为26日
-4. 比较快速移动均线和慢速移动均线:
-   1. 当Fast上穿Slow时为多头信号
-   2. 当Fast下穿Slow时为空头信号
-5. 结合价格与移动均线的关系判断具体交易信号:
-   1. 多头信号:Fast>Slow && AP>Fast
-   2. 空头信号:Fast<Slow && AP<Fast
-
-通过快速移动均线和慢速移动均线的交叉来判断市场趋势和产生交易信号,是一种典型的双移动均线策略。
-
-## 优势分析
-
-双移动均线突破策略具有以下优势:
-
-1. 策略逻辑简单清晰,易于理解和实现
-2. 通过调整移动均线周期,可以适应不同市场环境
-3. 可以同时做多做空,实现更高的收益
-4. 可以结合价格与移动均线关系发出更精确的交易信号  
-5. 移动均线具有一定的滞后性,可以有效滤除市场噪音
-
-## 风险分析
-
-双移动均线突破策略也存在一定的风险:
-
-1. 当市场处于震荡期,会出现更多的错误信号
-2. 双移动均线策略容易形成曲线拟合,忽略了市场结构性变化
-3. 仅依赖技术指标易受到假突破的影响,存在亏损风险
-
-解决方法:
-
-1. 优化移动均线的周期,使其更加符合当前市场状态
-2. 结合其他指标如成交量确认信号,避免假突破
-3. 采用趋势追踪策略,控制盈亏比例,降低风险
-
-## 优化方向  
-
-双移动均线突破策略可以从以下方面进行优化:
-
-1. 找到更加合适的移动均线周期组合,适应市场的变化
-2. 增加成交量等指标进行信号过滤,确保交易信号的有效性
-3. 结合市场结构指标,识别趋势和调整均线周期参数
-4. 采用动态移动均线可以根据市场变化自动调整周期
-5. 结合止损策略,可以有效控制风险,保护资金
-
-## 总结
-
-双移动均线突破策略是一个简单实用的量化交易策略。它具有策略逻辑简单,容易实现等优势,也存在一定的市场适应性问题。我们可以通过参数优化、信号过滤、风险控制等方法使其成为一个稳定获利的交易系统。总的来说,双移动均线策略是一个非常好的策略原型,值得量化交易者深入研究和应用。
-
-||
-
-## Overview
+ ## Overview
 
 The Dual Moving Average Breakout Strategy is a quantitative trading strategy based on a fast moving average and a slow moving average. It uses two exponential moving averages (EMA) with different periods as trading signals. When the fast EMA crosses above the slow EMA, a buy signal is generated. When the fast EMA crosses below the slow EMA, a sell signal is generated.
 
@@ -128,9 +66,6 @@ The Dual Moving Average Breakout Strategy can be optimized in the following aspe
 ## Conclusion  
 
 The Dual Moving Average Breakout Strategy is a simple and practical quantitative trading strategy. It has advantages like easy logic and implementation, and also has some market adaptability issues. We can make it a stable profitable trading system through parameter optimization, signal filtering, risk control etc. Overall, the dual moving average strategy is a great strategy prototype worth in-depth research and application for quantitative traders.
-
-[/trans]
-
 > Strategy Arguments
 
 

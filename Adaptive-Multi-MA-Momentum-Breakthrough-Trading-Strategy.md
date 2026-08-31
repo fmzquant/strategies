@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1064753b69e185f4397.png)
 
-[trans]
-#### 概述
-这是一个基于多重均线和动量突破的交易策略。该策略结合了SMMA(平滑移动平均线)、ZLEMA(零滞后指数移动平均线)等多个技术指标,通过捕捉价格与均线之间的交叉信号来识别交易机会。策略采用了自适应机制,能够根据市场波动调整信号的灵敏度,提高交易的准确性。
-
-#### 策略原理
-策略使用了四条关键均线:src(基于HLC3的SMMA)、hi(基于最高价的SMMA)、lo(基于最低价的SMMA)和mi(基于src的ZLEMA)。交易信号主要基于这些均线之间的交叉关系和位置关系。多重信号条件的组合确保了交易信号的可靠性。买入信号包括四种不同条件组合,卖出信号也包括四种不同条件组合。平仓信号则基于价格与mi均线的交叉以及均线之间的位置关系。
-
-#### 策略优势
-1. 多重信号确认机制提高了交易的准确性
-2. 自适应特性使策略能够适应不同的市场环境
-3. 使用SMMA和ZLEMA降低了假信号的影响
-4. 分层的信号系统提供了更多的交易机会
-5. 清晰的平仓条件有助于控制风险
-
-#### 策略风险
-1. 均线交叉可能产生滞后,影响入场时机
-2. 多重条件可能错过一些重要的交易机会
-3. 在震荡市场中可能产生过多假信号
-4. 参数设置不当可能影响策略表现
-5. 需要考虑交易成本对策略收益的影响
-
-#### 策略优化方向
-1. 引入波动率过滤器,在高波动期间调整策略参数
-2. 增加交易量分析,提高信号可靠性
-3. 优化均线参数的自适应机制
-4. 加入趋势强度指标,提高趋势判断准确性
-5. 开发动态止损机制,提高风险控制能力
-
-#### 总结
-该策略通过多重均线和动量指标的组合,构建了一个相对完整的交易系统。策略的自适应特性和多重确认机制提高了交易的可靠性。通过优化和完善,该策略有望在不同市场环境下保持稳定表现。建议交易者在实盘使用前进行充分的回测和参数优化。 || 
-
 #### Overview
 This is a trading strategy based on multiple moving averages and momentum breakthrough. The strategy combines technical indicators such as SMMA (Smoothed Moving Average) and ZLEMA (Zero-Lag Exponential Moving Average) to identify trading opportunities by capturing crossover signals between price and moving averages. The strategy employs an adaptive mechanism that adjusts signal sensitivity based on market volatility to improve trading accuracy.
 
@@ -70,7 +39,7 @@ The strategy utilizes four key moving averages: src (SMMA based on HLC3), hi (SM
 5. Develop dynamic stop-loss mechanisms to enhance risk control
 
 #### Summary
-The strategy builds a relatively complete trading system through the combination of multiple moving averages and momentum indicators. The strategy's adaptive features and multiple confirmation mechanisms improve trading reliability. Through optimization and refinement, the strategy has the potential to maintain stable performance in different market environments. Traders are advised to conduct thorough backtesting and parameter optimization before live trading.[/trans]
+The strategy builds a relatively complete trading system through the combination of multiple moving averages and momentum indicators. The strategy's adaptive features and multiple confirmation mechanisms improve trading reliability. Through optimization and refinement, the strategy has the potential to maintain stable performance in different market environments. Traders are advised to conduct thorough backtesting and parameter optimization before live trading.
 
 
 

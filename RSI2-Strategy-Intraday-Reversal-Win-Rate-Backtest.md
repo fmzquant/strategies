@@ -11,41 +11,7 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1b7aa933f913a62e3e5.png)
 
-[trans]
-#### 概述
-该策略基于相对强弱指数(RSI)指标的超卖信号,在日内低点买入,然后设置固定百分比的止盈和止损,回测策略在触及止盈和止损时的概率。主要思路是利用RSI指标超卖时的反转机会,在日内低点介入,博取反转带来的短期收益。同时,使用移动平均线过滤趋势,只在价格高于均线时入场做多。
-
-#### 策略原理
-1. 计算2周期的RSI指标和200周期简单移动平均线
-2. 当收盘价高于均线且RSI小于超卖阈值(默认10)时,在下一个交易日开盘买入
-3. 记录买入当日的最低价作为进场价
-4. 基于进场价计算6%的止盈价和3%的止损价
-5. 下个交易日,若触及止盈价则平仓止盈,若触及止损价则平仓止损
-6. 统计止盈和止损的次数,计算策略在设定周期内的胜率
-
-#### 优势分析
-1. 在日内低点买入,博取当日RSI指标超卖后的反转收益
-2. 固定百分比止盈和止损,控制单次交易风险
-3. 使用长周期均线过滤,减少逆势交易情况
-4. 简单易用,参数设置灵活,适合短线交易者
-
-#### 风险分析
-1. RSI超卖不能保证必然反转,市场在极端情况下会持续下跌
-2. 固定百分比止盈止损可能无法覆盖交易成本
-3. 入场点基于日内最低价,实际操作很难精准买在最低点
-4. 缺乏趋势判断,单纯依靠超买超卖信号,回报比可能不高
-
-#### 优化方向
-1. 使用自适应止盈止损,根据价格波动率等指标动态调整
-2. 加入趋势确认指标,如MACD,DMI等,避免逆势交易
-3. 优化入场点,如使用可变距离海龟交易法则
-4. 增加仓位管理,提高资金利用率和回报率
-5. 结合其他短周期指标,提高信号确认度,如布林带,KDJ等
-
-#### 总结
-RSI2策略尝试捕捉RSI指标超卖后的日内反转机会,通过设置固定百分比止盈止损来控制风险,同时使用长周期均线来过滤逆势信号。该策略思路简单,适合短线投机交易者。但其也存在一定局限性,如缺乏趋势判断,难以精准买在最低点,固定止盈止损也限制了策略收益空间。未来可以从动态止盈止损,结合趋势指标,优化入场点,强化仓位管理等方面来改进该策略,提升系统性和鲁棒性,更好地适应多变的市场环境。
-
- || 
+ 
 
 #### Overview
 This strategy is based on the oversold signal of the Relative Strength Index (RSI) indicator, buying at the intraday low and then setting a fixed percentage of take-profit and stop-loss to backtest the probability of the strategy hitting the take-profit and stop-loss. The main idea is to take advantage of the reversal opportunity when the RSI indicator is oversold, enter at the intraday low, and seek short-term profits brought by the reversal. At the same time, it uses a moving average to filter the trend and only goes long when the price is above the moving average.
@@ -79,7 +45,6 @@ This strategy is based on the oversold signal of the Relative Strength Index (RS
 
 #### Summary
 The RSI2 strategy attempts to capture intraday reversal opportunities after the RSI indicator is oversold, and controls risk by setting a fixed percentage of take-profit and stop-loss, while using a long-period moving average to filter counter-trend signals. The strategy is simple and suitable for short-term speculative traders. However, it also has certain limitations, such as lack of trend judgment, difficulty in accurately buying at the lowest point, and fixed take-profit and stop-loss limits the profit potential. In the future, this strategy can be improved from aspects such as dynamic take-profit and stop-loss, combining trend indicators, optimizing entry points, and strengthening position management to enhance the systematicness and robustness, and better adapt to the changing market environment.
-[/trans]
 
 > Strategy Arguments
 

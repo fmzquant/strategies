@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16b784a24e2c97c28cb.png)
- [trans]
-
-## 概述
-
-这个策略利用多重时间框架的技术指标组合信号,识别趋势方向,实现趋势追踪。它结合了RSI、Stoch、Stoch RSI和CCI等多种指标,在1分钟、5分钟、15分钟、1小时、4小时和1天的时间框架内寻找指标符合条件的组合信号,从而判断目前overall的趋势方向。
-
-## 策略原理
-
-这个策略的核心逻辑在于判断不同时间框架内技术指标的组合情况。对于每个时间框架,策略都判断RSI、Stoch、Stoch RSI和CCI等指标是否在设定的范围内并且是否处于上升趋势。如果一个时间框架内所有的指标都满足条件,则为该时间框架提供一个“通过”信号。
-
-在1分钟、5分钟、15分钟、1小时、4小时和1天内,任何通过的时间框架都会提供一个追踪overall趋势的正面信号。当1分钟、5分钟、15分钟、1小时、4小时和1天所有的时间框架都“通过”审查时,才会触发真正的买入信号。
-
-也就是说,一个时间段内,如果所有时间框架的趋势判断都是正确的,那么整体趋势判断就十分可靠,这时才会开仓做多。通过判断多个时间框架内指标的组合趋势信号,可以更准确地判断overall趋势,过滤错误信号,降低交易频率。
-
-## 策略优势分析
-
-1. 利用多重时间框架指标组合信号,可以显著减少错误信号,降低交易频率。
-
-2. 通过观察多个短期和长期时间框架的趋势一致性,可以更准确判断overall趋势方向。
-
-3. 合理的参数设置可以在一定程度上控制回撤。止损和止盈设置可以锁定部分利润,降低风险。 
-
-4. 允许自定义指标参数组合,可以针对不同市场调整参数,提高适应性。
-
-## 策略风险分析
-
-1. 由于追踪overall趋势,当趋势反转时难以及时止损,存在较大回撤风险。
-
-2. 参数设置不当可能错过趋势机会或增加交易频率。需要经过大量回测优化参数。
-
-3. 多重时间框架判断可能错过短期趋势机会。可以适当优化,允许个别时间框架不符合也可以产生信号。
-
-## 策略优化方向
-
-1. 优化每个时间框架内技术指标的参数设置,找到最佳参数组合。
-
-2. 测试仅根据部分时间框架判断就产生信号的效果。譬如1分钟和15分钟同向就可以判断为买入机会。
-
-3. 添加新的技术指标,丰富多时间框架判断的指标种类。可以考虑MACD,KD,布林带等指标。
-
-4. 测试不同的止损止盈水平,找到最优参数。止损范围太小可能增加止损风险,太大则可能错失利润机会。
-
-## 总结
-
-这个策略主要创新之处在于利用多重时间框架内技术指标信号的组合,判断overall趋势方向。确保短期和长期趋势判断一致,然后再选择建仓时机。这可以明显减少错误信号,锁定趋势交易机会。通过参数优化,可以获得非常出色的回撤指标。总体来说,这是一个相对稳定、适合长线持仓的低风险趋势追踪策略。
-
-||
 
 ## Overview
 
@@ -101,9 +54,6 @@ In other words, if the trend judgments across all timeframes in a period are cor
 ## Conclusion
 
 The main innovation of this strategy lies in utilizing the combined signals from technical indicators across multiple timeframes to determine the overall trend direction. Ensuring short-term and long-term trend alignments before choosing entry timing can significantly reduce false signals and capture trend trading opportunities. Through parameter optimization, superb drawdown metrics can be obtained. Overall, this is a relatively stable, low-risk trend tracking strategy suitable for long-term holdings.
-
-[/trans]
-
 > Strategy Arguments
 
 

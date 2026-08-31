@@ -10,64 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/c03a19729a6000745e.png)
- [trans]
-## 概述
-
-本策略综合利用双移动平均线交叉技术与压力位突破技术,设定买入信号与卖出信号,实现自动交易。当短期均线从下向上突破中期均线,并且股价突破压力位时产生买入信号;当股价上涨15%时设置止盈,下跌3%时设置止损。该策略可自动识别市场趋势,在技术指标信号出现时自动入场,并设置止盈止损来控制风险,属于较为成熟的量化交易策略。
-
-## 策略原理
-
-本策略主要基于以下几个技术指标与条件判断来产生交易信号:
-
-1. 双均线交叉技术:计算20日、44日简单移动平均线,当20日均线上穿44日均线时判断为市场处于上升趋势,产生买入信号。
-
-2. 压力位突破技术:图表显示股价曾多次接近但未能突破的位置被称为压力位。当股价成功突破压力位后,预示着价格进入新的上升阶段。本策略判断股价突破前一交易日最高价的0.7%范围则可视为突破压力位。  
-
-3. 超买超卖指标RSI:相对强弱指数,判断市场是超买还是超卖的技术指标。本策略设定14日RSI指标大于50时为超买信号。
-
-4. 成交量分析:成交量突破过去10日平均成交量预示着市场出现更加强劲的买盘或卖盘。
-
-5. 买入信号:短期均线上穿中期均线且股价突破压力位,市场为超买状态,且成交量高于过去10日平均成交量,则产生买入信号。
-
-6. 卖出信号:设置止盈止损标准,若股价较买入价格上涨15%则止盈;若下跌3%则止损。
-
-该策略综合运用多种技术指标判断市场结构,并在其指示趋势出现时自动产生交易信号,属于较为成熟完整的量化交易策略。
-
-## 策略优势
-
-1. 利用均线技术判断市场结构,能稳定捕捉市场趋势;
-
-2. 结合成交量分析,避免在成交量不匹配的假突破中打开仓位;  
-
-3. 设置止盈止损退出机制,可以很好控制单笔交易的风险收益比,避免亏损扩大;
-
-4. 总体来说,该策略对市场结构判断准确,交易规则严谨,风险控制到位,是一个效果较好的量化策略。
-
-## 策略风险
-
-1. 双均线交易系统对参数设置较为敏感,不同时段参数需要调整;
-
-2. 纯粹追踪趋势的策略,无法对突发事件作出反应,如重大利空消息面前难免遭遇止损;
-
-3. 虽然设置了止盈止损,但交易次数较多时止损次数亦不可避免较多,存在获利水平参差不齐的风险。
-
-4. 从长期看,技术指标发出信号的时点往往已经略过市场反转的最佳点位。
-
-## 策略优化方向 
-
-1. 可采用参数优化方法寻找最佳双均线参数组合,优化止盈止损水平;
-
-2. 增加其他指标判断,如布林带判明盘整范围、MACD判明超买超卖等,提升发出信号时点;  
-
-3. 增加基本面或消息面判断,避免重大负面消息造成止损;
-
-4. 优化资金管理策略,如固定数量交易、固定资金比例交易等,控制单笔风险。
-
-## 总结
-
-本策略整体运作顺畅,判断准确且交易规则严谨,风险控制到位,属于效果较好的量化策略之一。但技术面交易策略对市场结构的判断仍有局限,优化空间在于增加其他指标判断和基本面消息面的综合考量,此外进一步优化止盈止损设定及资金管理策略亦为重点。总体而言,本策略作为技术指标策略已经达到较高水平,但下一步仍需要朝基本面 Messages 驱动全市场周期策略的方向继续优化。
-
-||
+ 
 
 ## Overview
 
@@ -124,10 +67,6 @@ This mature quantitative trading strategy integrates multiple technical analysis
 
 ## Conclusion
 This strategy demonstrates smooth operations, accurate judgements and rigorous trading rules, representing one of the more effective quantitative trading techniques. But technical analysis alone has limitations in reading markets, so further improvements lie in incorporating more indicators and fundamental/event signals, optimizing stop loss/profit taking levels and money management mechanisms. In summary, this strategy has reached high level among technical analysis strategies, but should head towards fundamental/event driven cycles trading strategies in next evolution steps.
-
-[/trans]
-
-
 
 > Source (PineScript)
 

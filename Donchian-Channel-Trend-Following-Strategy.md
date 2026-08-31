@@ -9,68 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/9553e0221d1519141a.png)
- [trans]
-## 概述
-
-Donchian渠道趋势跟踪策略是一种基于Donchian通道指标的趋势跟踪策略。它使用不同长度的Donchian通道来识别价格趋势,并在价格突破通道时产生交易信号。
-
-该策略的主要思想是使用长周期的Donchian通道判断大趋势方向,使用短周期的Donchian通道作为入场和止损的信号。它旨在捕捉中长线的价格趋势,避免被市场中的短期波动所迷惑。
-
-## 策略原理  
-
-1. 计算长周期(如50日)的最高收盘价和最低收盘价构建Donchian通道。当价格突破通道上轨时看多,突破下轨时看空。这是判断大趋势的基础。
-
-2. 计算短周期(如20日)的最高收盘价和最低收闭作为入场和止损的标准。当价格突破长线通道时,如果收盘价也突破短线通道,则入场做多/空。  
-
-3. 当持有多头头寸时,如果价格跌破短线下轨则止损。当持有空头头寸时,如果价格突破短线上轨则止损。
-
-4. 止损点设置为N倍ATR。这可以根据市场波动性来自动调整,有利于减少止损被激活的可能性。 
-
-5. 可以选择在交易结束前平仓,或一直持仓直到止损。这可以通过一个输入参数来控制。
-  
-该策略同时考虑了趋势判断和利润止损,既可以捕捉价格趋势又可以控制风险,适合中长线操作。
-
-## 优势分析
-
-1. 有效识别中长线趋势,避免被短期市场噪音干扰。
-
-2. 自动止损机制可以限制单笔损失。
-
-3. ATR止损可以根据市场波动性调整止损距离,降低止损被冲击的可能性。
-
-4. 可选择在没法交易时自动平仓,管理交易风险。
-    
-5. 策略逻辑简单清晰易于理解。
-
-## 风险分析
-
-1. 在无明确趋势的市场中,策略会产生较多交易,这会增加交易成本和实现损失的可能。
-
-2. 虽然有止损机制,但在异常行情下,价格gaps可能直接跌破止损点造成重大损失。
-
-3. ATR计算仅基于历史数据,无法准确预测未来走势和波动性,实际止损距离可能过大或过小。
-
-4. 在实盘中,止损单无法百分百确保得到执行。极端行情下可能被跳过造成损失。
-
-## 优化方向  
-
-1. 调整Donchian通道参数,优化识别趋势的效果。
-
-2. 结合其他指标确认交易信号,如MACD,KDJ等,提升策略稳定性。  
-
-3. 增加移动止损,让止损点随价格一起移动,进一步限制损失。
-
-4. 测试不同持仓时间对总体效果的影响,确定最佳持仓周期。
-
-5. 考虑动态调整仓位规模,在趋势行情中加大仓位。
-
-## 总结  
-
-Donchian渠道趋势跟踪策略整合了趋势判断与风险控制,通过趋势识别获取 excess return,同时止损机制控制尾部风险。该策略适用于识别和捕捉中长线价格趋势,在参数优化和机制补充后可以获得稳定的正向收益。
-
-||
-
 ## Overview  
 
 The Donchian Channel trend following strategy is a trend following strategy based on the Donchian Channel indicator. It uses Donchian Channels of different lengths to identify price trends and generate trading signals when prices break out of the channels.  
@@ -128,8 +66,6 @@ The strategy considers both trend identification and profit stop loss. It can ca
 ## Summary   
 
 The Donchian Channel trend following strategy integrates trend identification and risk control. It aims to generate excess returns by identifying trends while controlling tail risks with stop loss mechanisms. This strategy suits identifying and capturing medium-to-long term price trends. With parameter optimization and mechanism enhancements, it can achieve steady positive results.
-
-[/trans]
 
 > Strategy Arguments
 

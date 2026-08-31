@@ -11,38 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/a47a36da80c383b202.png)
 
-[trans]
-#### 概述
-这是一个基于多重技术指标的动态波段交易策略，主要结合了趋势跟踪和波段操作的特点。策略通过EMA、ADX、RSI和MACD等多个技术指标的协同配合，在市场中寻找高胜算的交易机会。系统采用动态止损和分批止盈的方式来管理风险和获利。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素：
-1. 趋势判断：使用EMA55和EMA144的交叉关系确定市场趋势方向，并结合ADX指标强度(阈值30)进行趋势确认。
-2. 入场时机：通过RSI指标识别超买超卖区域（超卖45，超买55），用于判断回调买入和反弹做空机会。
-3. 止损机制：采用基于ATR的动态止损，止损距离为1.5倍ATR，可以根据市场波动自适应调整。
-4. 获利策略：使用50周期最高/最低价作为止盈目标，采用50%仓位分批止盈的方式。
-
-#### 策略优势
-1. 多重指标验证：通过EMA、ADX、RSI等多个指标的配合使用，提高了交易信号的可靠性。
-2. 动态风险管理：基于ATR的动态止损可以适应不同市场环境，提供更好的风险控制。
-3. 渐进式获利：采用分批止盈的方式，既能锁定部分利润，又不会过早退出强势行情。
-4. 趋势确认：加入ADX指标过滤，避免在横盘震荡市场频繁交易。
-
-#### 策略风险
-1. 假突破风险：在市场波动加剧时可能出现误判，建议增加成交量确认。
-2. 滑点损失：在市场快速波动时，动态止损可能面临较大滑点。
-3. 横盘损失：虽然有ADX过滤，但在震荡市场仍可能产生连续小额亏损。
-4. 信号滞后：多重指标组合可能导致入场信号滞后，错过最佳建仓时机。
-
-#### 策略优化方向
-1. 指标参数优化：建议对EMA周期、RSI阈值等参数进行历史回测优化。
-2. 止损优化：可考虑增加移动止损，更好地保护利润。
-3. 仓位管理：建议引入波动率自适应的仓位管理系统。
-4. 市场适应性：可增加市场环境分类，在不同市场条件下使用不同的参数组合。
-
-#### 总结
-该策略通过多重技术指标的协同配合，构建了一个完整的交易系统。策略既注重趋势把握，又重视风险控制，通过动态止损和分批止盈的方式来平衡风险和收益。虽然存在一定的优化空间，但整体而言是一个逻辑严谨、实用性强的交易策略。 || 
-
 #### Overview
 This is a dynamic wave trading strategy based on multiple technical indicators, combining trend following and wave operation characteristics. The strategy seeks high-probability trading opportunities through the coordination of multiple technical indicators including EMA, ADX, RSI, and MACD. The system manages risk and profit through dynamic stop-loss and batch profit-taking methods.
 
@@ -72,10 +40,7 @@ The core logic of the strategy is based on the following key elements:
 4. Market Adaptability: Can add market environment classification to use different parameter combinations under different market conditions.
 
 #### Summary
-The strategy constructs a complete trading system through the coordination of multiple technical indicators. It emphasizes both trend capture and risk control, balancing risk and return through dynamic stop-loss and batch profit-taking methods. While there is room for optimization, it is overall a logically rigorous and practical trading strategy.[/trans]
-
-
-
+The strategy constructs a complete trading system through the coordination of multiple technical indicators. It emphasizes both trend capture and risk control, balancing risk and return through dynamic stop-loss and batch profit-taking methods. While there is room for optimization, it is overall a logically rigorous and practical trading strategy.
 > Source (PineScript)
 
 ``` pinescript

@@ -10,52 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1987da75c0546aefff3.png)
- [trans]
-## 概述
-
-该策略名称为“双指标渐进DCA策略”。它基于布林通道和相对强度指数(RSI)这两个指标构建交易信号,同时利用渐进加仓的方法进行风险管理。其主要思想是在牛市中捕捉趋势,利用指标构建多头信号;而在跌势中利用渐进DCA策略降低成本。
-
-## 策略原理
-
-该策略融合了布林通道和RSI两个指标。布林通道能清晰判断行情趋势,布林中轨上方为牛市,下方为熊市。RSI指标则判断超买超卖现象。策略构建了一个MIX指标,它将布林通道价差和RSI的K值进行加权平均。当MIX指标由下向上突破20时产生多头信号。
-
-渐进DCA部分,首先在MIX指标突破20时打开首单。之后每次价格下跌一定幅度,就按一定金额追加仓位。直至达到最大持仓量或者止损止盈退出。这样可以在行情低点多次加仓,实现成本均价的下移。
-
-## 策略优势
-
-1. 双指标结合清晰判断趋势,增加信号准确性。
-
-2. 渐进DCA策略可以在跌势中降低仓位成本,减少亏损风险。同时增大盈利空间。
-
-3. 设定了止损和止盈条件,可以及时止损控制风险,也确保部分利润。
-
-4. 加入开仓日期范围参数,可以针对特定时间周期进行测试和优化。
-
-## 风险及解决方法
-
-1. 布林通道和RSI指标均可能出现失效的情况。可以测试不同参数组合寻找最佳点位。
-
-2. 渐进DCA可能在大跌行情中持续追加仓位导致亏损放大。可以设定最大加仓次数,并适当提高止损线完善风险控制。
-
-3. 无法防止突发事件的异常行情。可加入大盘指标判断系统性风险,避开异常时期。
-
-## 策略优化方向  
-
-1. 测试优化MIX指标的参数,以获得更精确的交易信号。
-
-2. 优化止损止盈的参数,实现盈亏比的最大化。
-
-3. 测试不同追加开仓的幅度和次数,寻找最佳组合。
-
-4. 可以考虑加入交易量控制模块,在特定交易量条件下打开或关闭策略。
-
-## 总结
-
-“双指标渐进DCA策略”综合运用了多个量化技术指标与方法。它构建了清晰的趋势判断指标,并利用渐进加仓降低成本。同时,严格的止损止盈与风险控制手段使其可以安全实用。通过进一步测试与优化,该策略可以成为具备独特优势的量化交易方案。它既考虑获取足够盈利,也注重风险的控制,值得实盘验证与应用。
-
-||
-
-## Overview
+ ## Overview
 
 The strategy is named "Bollinger Band and RSI Mixing with DCA". It builds trading signals based on the Bollinger Band and Relative Strength Index (RSI) indicators and manages risks using progressive dollar cost averaging (DCA). The main idea is capturing the trend in a bull market using the indicators and reducing costs in a down market through progressive DCA.
 
@@ -101,8 +56,6 @@ For the progressive DCA part, an initial position is opened when MIX breaks thro
 ## Summary
 
 The "Bollinger Band and RSI Mixing with DCA Strategy" combines multiple quantitative techniques and methods. It builds a clear trend judging indicator and lowers cost basis through progressive additions. Strict risk control methods including stop loss and take profit makes it practical. Further tests and optimizations can unlock its unique advantages into a profitable trading system. With both profit seeking and risk control in mind, it is worth verifying with live trading and applications.
-
-[/trans]
 
 > Strategy Arguments
 

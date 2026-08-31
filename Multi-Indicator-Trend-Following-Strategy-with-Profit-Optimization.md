@@ -11,46 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/f6535bf1dd1bc6c47b.png)
 
-[trans]
-#### 概述
-该策略是一个结合了多个技术指标的趋势跟踪交易系统。它主要利用抛物线转向指标(SAR)、移动平均线(SMA)和方向动量指标(DMI)来确定市场趋势和入场时机,并通过百分比止盈和MACD背离来优化出场。策略设计的核心思想是在确认强势趋势后入场,并在达到预设盈利目标或出现趋势转折信号时及时出场。
-
-#### 策略原理
-策略使用了多层过滤机制来确认交易信号:
-1. 通过SAR指标的交叉来捕捉初始交易信号
-2. 使用50周期SMA判断整体趋势方向
-3. 运用DMI指标确认趋势强度和方向
-4. 入场条件需同时满足:价格上穿SAR、价格在SMA之上且DMI显示多头趋势
-5. 出场采用双重机制:达到3%的目标利润或MACD死叉信号出现
-6. ATR指标用于市场波动性参考
-
-#### 策略优势
-1. 多重技术指标交叉验证,能有效降低虚假信号
-2. 结合趋势跟踪和动量指标,提高交易成功率
-3. 固定百分比止盈策略,保证稳定获利
-4. MACD背离出场机制,避免趋势反转带来的回撤
-5. 策略参数可根据不同市场特征灵活调整
-6. 使用ATR进行波动性监控,提供市场状态参考
-
-#### 策略风险
-1. 多重指标可能导致信号滞后
-2. 固定百分比止盈可能在强势趋势中提前离场
-3. 没有止损机制增加了风险敞口
-4. 在横盘市场可能产生过多假信号
-5. DMI指标在震荡市场可能产生误导性信号
-
-#### 策略优化方向
-1. 引入自适应止损机制,如基于ATR的动态止损
-2. 开发波动率过滤器,在高波动期间调整持仓规模
-3. 优化MACD参数,提高趋势转折判断准确性
-4. 加入成交量确认机制,提高信号可靠性
-5. 开发动态止盈机制,根据市场波动调整目标利润
-
-#### 总结
-该策略通过多重技术指标的协同配合,构建了一个相对完整的趋势跟踪交易系统。其优势在于信号确认的可靠性和风险控制的灵活性。虽然存在一定的滞后性风险,但通过参数优化和加入动态管理机制,策略的整体表现仍具有较好的应用价值。通过持续优化和改进,该策略可以成为一个稳健的交易工具。
-
-||
-
 #### Overview
 This strategy is a trend-following trading system that combines multiple technical indicators. It primarily uses the Parabolic SAR, Simple Moving Average (SMA), and Directional Movement Index (DMI) to determine market trends and entry points, while optimizing exits through percentage-based profit targets and MACD divergence. The core concept is to enter positions after confirming strong trends and exit when reaching preset profit targets or when trend reversal signals appear.
 
@@ -86,8 +46,7 @@ The strategy employs a multi-layered filtering mechanism:
 5. Develop dynamic profit targets based on market volatility
 
 #### Summary
-This strategy builds a relatively complete trend-following trading system through the coordination of multiple technical indicators. Its strength lies in signal confirmation reliability and risk control flexibility. While there are inherent lag risks, the strategy maintains good practical value through parameter optimization and dynamic management mechanisms. Through continuous optimization and improvement, this strategy can serve as a robust trading tool.[/trans]
-
+This strategy builds a relatively complete trend-following trading system through the coordination of multiple technical indicators. Its strength lies in signal confirmation reliability and risk control flexibility. While there are inherent lag risks, the strategy maintains good practical value through parameter optimization and dynamic management mechanisms. Through continuous optimization and improvement, this strategy can serve as a robust trading tool.
 
 
 > Source (PineScript)

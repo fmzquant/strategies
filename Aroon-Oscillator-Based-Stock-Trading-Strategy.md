@@ -10,60 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/16d6267c0a0ae3086e3.png)
- [trans]
-
-## 策略概述
-
-本策略名为“Saucius 阿隆震荡器策略”,它适用于价格波动性较大、趋势不明显的股票、指数和大宗商品。策略使用阿隆震荡器指标识别价格趋势,结合多个参数设定入场和出场条件,实现对这类风险资产的自动交易。
-
-## 策略原理  
-
-该策略源自阿隆线创始人Tushar Chande的思路。Chande认为,当阿隆震荡器高于或低于50时,可以识别出多头和空头趋势。这有助于弥补简单阿隆线和阿隆交叉在非趋势市场中的不足。  
-
-具体来说,策略首先计算长度为19周期的阿隆上线、阿隆下线和阿隆震荡器。震荡器由上线减去下线计算得到。然后设定中线为-25,上轨为75,下轨为-85。当天震荡器上穿中线时做多,下穿中线时做空。平仓条件为上穿上轨平多仓,下穿下轨平空仓。  
-
-这样,中线用于判断趋势方向进入场内,上下轨用于趋势反转退出场外,实现了基于阿隆震荡器指标的自动化交易。
-
-## 策略优势
-
-与传统趋势跟踪策略相比,本策略具有以下优势:  
-
-1. 适用于波动较大、趋势不明显的品种,比简单趋势策略效果更好  
-2. 使用阿隆震荡器判断趋势更可靠  
-3. 多参数设定条件严谨,避免错误交易
-4. 获利快速,有效控制亏损风险  
-
-总的来说,该策略结合阿隆震荡器指标的优势,实现了对特定品种的自动化交易,胜率和盈利能力良好。
-
-## 策略风险  
-
-本策略也存在一定的风险:  
-
-1. 参数设置需要根据不同品种调整优化,否则会影响效果  
-2. 交易频率可能较高,会增加交易成本和滑点成本  
-3. 依赖技术指标,在指标失效时可能产生损失  
-
-这些风险点是可以通过调整参数、优化代码来改进和减小的。此外,合理的位置和资金管理也能有效控制潜在风险。
-
-## 策略优化  
-
-为进一步提高策略效果,可以从以下几个方面进行优化:  
-
-1. 调整参数,针对不同品种和市场环境进行测试  
-2. 增加其他技术指标的组合,形成更强大的交易信号  
-3. 增加止损策略,有效控制单笔亏损大小  
-4. 结合量能指标,避免虚拟突破产生错误交易  
-5. 优化入场条件,减少不必要的交易次数  
-
-通过多方位测试和优化,策略的稳定性、胜率和盈利能力还可以得到大幅提升。
-
-## 总结  
-
-本策略基于阿隆震荡器指标创造性地实现了对波动性较大、趋势不明显品种的自动化交易。相比传统趋势策略,其在这类品种上效果更好,通过参数设定也实现了严谨的交易条件。策略优势显著,但也存在一定改进空间。通过针对性优化,效果还可得到进一步提高。该策略为量化交易实践提供了一个可参考的思路。
-
-||
-
-## Strategy Overview
+ ## Strategy Overview
 
 This strategy is named "Saucius Aroon Oscillator Strategy". It suits stocks, indexes and commodities with high volatility but unclear trend, where the prospects of future prices are uncertain. The strategy identifies price trends using the Aroon Oscillator indicator and sets entry and exit conditions based on multiple parameters to implement automated trading of these risky assets.
 
@@ -111,8 +58,6 @@ Through comprehensive testing and optimization, the stability, win rate and prof
 ## Conclusion  
 
 This strategy creatively achieved automated trading of assets with high volatility and unclear trends based on the Aroon Oscillator indicator. Compared with traditional trend strategies, it performs better on these types of assets, and its rigorous trading conditions are also achieved through parameter settings. The advantages of the strategy are remarkable, but there is still room for improvement. Further enhancement can be obtained through targeted optimizations. The strategy provides a reference for quantitative trading practices.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -10,68 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/9010c280496fd39d58.png)
- [trans]
-## 概述
-
-移动平均线交叉交易策略是一种较为常见的量化交易策略。该策略通过计算不同周期的移动平均线,并根据它们的交叉情况来产生交易信号。具体来说,是计算4周期、8周期和20周期的指数移动平均线(EMA),当短期EMA上穿长期EMA时,做多;当短期EMA下破长期EMA时,做空。
-
-## 策略原理  
-
-该策略的核心逻辑是:
-
-1. 计算4周期、8周期和20周期的EMA线。
-2. 判断4周期EMA线和8周期EMA线的关系:
-   1. 当4周期EMA线上穿8周期EMA线时,说明价格走势变强,属于多头信号。
-   2. 当4周期EMA下破8周期EMA时,说明价格走势变弱,属于空头信号。
-3. 同时判断20周期EMA线的方向:
-   1. 如果20周期EMA线上升,则Enter Long。
-   2. 如果20周期EMA线下降,则Enter Short。
-4. 当4周期EMA线和8周期EMA线关系发生反转时, Prepare Exit。
-5. 当20周期EMA线方向发生反转时,Exit Now。
-
-通过这个方法,我们利用了不同周期均线之间的交叉来判断市场Signals,同时利用了最长周期均线的方向来过滤误信号,构建一个稳定的交易策略。
-
-## 策略优势
-
-该策略主要具有以下几点优势:
-
-1. 策略逻辑简单清晰,容易理解和实现。
-2. 利用双重条件过滤,可以减少误信号。 
-3. 20周期EMA的加持,可以识别大趋势,增强稳定性。
-4. 可自定义参数,调整交易频率。
-5. 容易和其他指标或模型组合,构建复合策略。
-
-## 策略风险
-
-该策略也存在一些风险:  
-
-1. 双重均线策略容易产生假信号。
-2. 固定周期无法适应市场变化。
-3. 大盘震荡时容易产生亏损。
-
-主要的解决方法是:
-
-1. 适当缩短持仓周期,及时止损。
-2. 动态优化参数,调整均线周期。
-3. 结合其它指标或模型创建复合策略。
-
-## 策略优化
-
-该策略可以从以下几个方面进行优化:
-
-1. 周期优化:根据不同品种确定最佳的MA周期组合
-2.止损优化:合理设置止损点,控制单笔损失
-3.参数优化:采用遗传算法、马尔可夫链等方法动态优化参数  
-
-4.模型融合:与LSTM、RNN等深度学习模型整合,提取更多Alpha
-
-5.组合优化:与其它指标策略组合,构建策略组合
-
-## 总结
-
-移动平均线交叉策略整体来说是一种较为经典和常用的量化交易策略。该策略逻辑简单,容易理解和实现,具有一定的稳定性。但也存在一些问题,如产生假信号、无法适应市场变化等。这些问题可以通过参数优化、止损优化、模型融合等方法加以改进。总的来说,移动平均线策略可以作为策略工具箱中的一个基础模块,与其他更复杂的策略组合,构建稳健的复合策略。
-
-||
+ 
 
 ## Overview  
 
@@ -132,8 +71,6 @@ The strategy can be optimized in the following aspects:
 ## Summary   
 
 In general, the moving average crossover strategy is a relatively classic and commonly used quantitative trading strategy. This strategy has simple logic and is easy to understand and implement, with certain stability. But there are also some problems, such as generating false signals, inability to adapt to market changes, etc. These issues can be improved through parameter optimization, stop loss optimization, model fusion, and other methods. Overall, the moving average strategy can be used as a basic module in the strategy toolbox, combined with more complex strategies to build robust complex strategies.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -8,44 +8,7 @@ Dynamic-Long-Short-Swing-Trading-Strategy-with-Moving-Average-Crossover-Signal-S
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/18ad8b042f956c9118a.png)
-
-[trans]
-#### 概述
-本策略是一个基于技术指标的波动交易策略,结合了均线交叉、RSI超买超卖和ATR止损止盈等多重信号。策略的核心是通过短期EMA和长期SMA的交叉来捕捉市场趋势,同时利用RSI指标进行信号确认,并通过ATR动态设置止损和止盈位置。策略支持多空双向交易,并可以根据用户偏好灵活开启或关闭任一方向。
-
-#### 策略原理
-策略采用了多层技术指标组合的方式构建交易系统:
-1. 趋势判断层:使用20周期EMA和50周期SMA的交叉来判断趋势方向,EMA上穿SMA视为做多信号,下穿则为做空信号。
-2. 动量确认层:使用RSI指标进行超买超卖判断,RSI低于70时允许做多,高于30时允许做空。
-3. 波动性计算层:使用14周期ATR来计算止损止盈位置,止损设置为1.5倍ATR,止盈设置为3倍ATR。
-4. 仓位管理层:基于初始资金和每笔交易风险比例(默认1%)来动态计算开仓数量。
-
-#### 策略优势
-1. 多重信号确认:通过均线交叉、RSI和ATR三重指标的配合,有效降低假信号干扰。
-2. 动态止损止盈:基于ATR动态调整止损止盈位置,能更好地适应市场波动性变化。
-3. 灵活的交易方向:可以根据市场环境单独启用多头或空头交易。
-4. 严格的风险控制:通过百分比风险控制和动态仓位管理,有效控制每笔交易的风险敞口。
-5. 可视化支持:策略提供了完整的图表可视化支持,包括信号标记和指标显示。
-
-#### 策略风险
-1. 震荡市场风险:在横盘震荡市场中,均线交叉可能产生过多假信号。
-2. 滑点风险:在波动剧烈时期,实际成交价格可能与信号价格存在较大偏差。
-3. 资金管理风险:如果设置过高的风险比例,可能导致单笔损失过大。
-4. 参数敏感性:策略效果对参数设置较为敏感,需要careful调优。
-
-#### 策略优化方向
-1. 增加趋势强度过滤:可以添加ADX指标来过滤弱趋势环境下的交易信号。
-2. 优化均线周期:可以根据不同市场周期特征,动态调整均线参数。
-3. 完善止损机制:可以增加追踪止损功能,更好地保护盈利。
-4. 增加成交量确认:加入成交量指标作为辅助确认,提高信号可靠性。
-5. 市场环境分类:增加市场环境识别模块,在不同市场环境下使用不同的参数组合。
-
-#### 总结
-该策略通过多重技术指标的组合运用,构建了一个相对完整的交易系统。策略的优势在于信号确认的可靠性和风险管理的完整性,但也需要注意市场环境对策略表现的影响。通过建议的优化方向,策略还有较大的改进空间。在实盘应用时,建议进行充分的参数测试和回测验证。
-
-||
 
 #### Overview
 This strategy is a technical indicator-based swing trading system that combines multiple signals including moving average crossovers, RSI overbought/oversold conditions, and ATR-based stop-loss/take-profit levels. The core mechanism relies on capturing market trends through short-term EMA and long-term SMA crossovers, confirmed by RSI signals, with dynamic stop-loss and take-profit levels set using ATR. The strategy supports both long and short trading directions and allows flexible enabling/disabling of either direction.
@@ -78,10 +41,7 @@ The strategy employs a multi-layer technical indicator approach:
 5. Market Environment Classification: Add market environment recognition module to use different parameter sets in different market conditions.
 
 #### Summary
-The strategy constructs a relatively complete trading system through the combination of multiple technical indicators. Its strengths lie in signal confirmation reliability and comprehensive risk management, though market environment impact on strategy performance needs attention. Through the suggested optimization directions, there is significant room for improvement. When applying to live trading, thorough parameter testing and backtesting verification is recommended.[/trans]
-
-
-
+The strategy constructs a relatively complete trading system through the combination of multiple technical indicators. Its strengths lie in signal confirmation reliability and comprehensive risk management, though market environment impact on strategy performance needs attention. Through the suggested optimization directions, there is significant room for improvement. When applying to live trading, thorough parameter testing and backtesting verification is recommended.
 > Source (PineScript)
 
 ``` pinescript

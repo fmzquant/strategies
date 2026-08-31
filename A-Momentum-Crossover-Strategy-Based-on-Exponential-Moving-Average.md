@@ -8,62 +8,8 @@ A-Momentum-Crossover-Strategy-Based-on-Exponential-Moving-Average
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/1cba6c5792bce4e0dfd.png)
- [trans]
-## 概述
-
-这个策略基于不同周期的EMA均线的交叉来判断趋势方向,并据此建立做多做空信号。主要使用2条均线,分别是10日线和20日线。当10日线从上向下穿过20日线时,做空;当10日线从下向上穿过20日线时,做多。该策略属于中短线交易策略。
-
-## 策略原理
-
-该策略使用了2条EMA均线,包括10日线和20日线。EMA均线能很好地反映价格的趋势方向。当短期EMA线从下向上穿过长期EMA线时,表示价格走势由跌转升,属于做多信号;当短期EMA线从上向下穿过长期EMA线时,表示价格走势由升转跌,属于做空信号。
-
-该策略同时结合了波动的极大值和极小值来过滤一部分交易信号。只有在价格波动达到一定幅度后,才会发出交易信号。这可以一定程度上过滤掉部分假信号。
-
-具体来说,该策略通过追踪价格的极大值和极小值的到达时间,来判断价格趋势是否形成。在极大值或者极小值达到一定时间后,才会发出真正的交易信号。
-
-## 策略优势分析
-
-该策略具有以下几个优势:
-
-1. 使用EMA均线判断趋势方向,可以有效跟踪市场走势
-2. 结合不同周期的EMA均线,可以在中短线上捕捉交易机会
-3. 通过极值过滤信号,可以过滤掉部分噪音,避免错失交易机会
-4. 策略逻辑简单清晰,容易理解和修改
-5. 可根据不同品种和交易偏好调整参数,适应性强
-
-## 策略风险分析
-
-该策略也存在一些风险:  
-
-1. EMA均线本身会存在滞后性,可能错过短期价格反转
-2. 对噪音信号过滤不完全,可能存在一定的错误交易
-3. 需适当调整参数以适应不同市场环境
-
-可以通过以下方法降低风险:
-
-1. 结合其他指标进行信号确认,避免EMA均线滞后问题  
-2. 优化极值过滤条件,提高信号的可靠性
-3. 根据回测结果调整参数,优化策略
-
-## 策略优化方向  
-
-该策略可以从以下几个方向进行进一步优化:
-
-1. 增加其他技术指标组合,提高交易信号准确率。例如MACD,KD等。 
-2. 优化EMA均线的参数,使其更好适应具体品种。
-3. 优化极大极小值的参数,改进对价格波动的判断。  
-4. 添加止损策略,以控制单笔交易的最大损失。
-5. 测试不同的品种套用该策略,评估适用性。
-
-## 总结  
-
-该EMA交叉策略整体来说是一种简单实用的趋势跟踪策略。它使用EMA均线判断大趋势方向,再结合价格波动过滤信号,形成交易决策。该策略易于理解和调整参数,可以适应中短线交易。通过进一步优化,这可以成为一种值得长期持有使用的量化策略。
-
-||
-
-## Overview  
+ ## Overview  
 
 This strategy determines the trend direction based on the crossover of EMA lines with different periods and generates long and short signals accordingly. It mainly uses two moving averages - 10-day EMA and 20-day EMA. When the 10-day EMA crosses below the 20-day EMA, a short signal is triggered. When the 10-day EMA crosses above the 20-day EMA, a long signal is triggered. This strategy belongs to medium-term trading strategies.  
 
@@ -111,10 +57,7 @@ The strategy can be further optimized in the following aspects:
 
 ## Summary   
 
-In summary, this EMA crossover strategy is a simple and practical trend following strategy. It uses EMA lines to determine the major trend direction, combined with price fluctuation filtering for making trading decisions. It is easy to understand and adjust parameters, adaptable to medium-term trading. With further optimizations, this can become a worthwhile quantitative strategy to hold for the long term.  
-
-[/trans]
-
+In summary, this EMA crossover strategy is a simple and practical trend following strategy. It uses EMA lines to determine the major trend direction, combined with price fluctuation filtering for making trading decisions. It is easy to understand and adjust parameters, adaptable to medium-term trading. With further optimizations, this can become a worthwhile quantitative strategy to hold for the long term.
 > Strategy Arguments
 
 

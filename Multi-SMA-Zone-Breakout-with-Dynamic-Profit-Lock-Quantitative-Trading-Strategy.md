@@ -11,57 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/6e247c4ff859e0db22.png)
 
-[trans]
-#### 概述
-这是一个基于SMA指标的动态趋势跟踪交易策略,结合了价格区间、随机指标和多重利润保护机制。该策略通过监控价格在不同区间的运动,结合短期和长期移动平均线的交叉信号,同时使用随机指标来确定市场状态和趋势强度,实现高效的趋势捕捉。策略设计了百分比和固定点数两种止盈机制,有效平衡了收益和风险。
-
-#### 策略原理
-策略的核心逻辑包含以下几个关键部分:
-1. 使用19周期和74周期SMA构建趋势框架
-2. 通过60周期随机指标判断市场状态,将SMA的颜色区分为黄、绿、红、橙四种状态
-3. 在价格区间中划分5个重要水平,用于判断价格强弱
-4. 入场条件需同时满足:
-   - SMA为绿色或黄色状态
-   - 价格突破橙色区域
-   - 收盘价在短期SMA之上
-5. 设置了两种止盈机制:
-   - 基于最高价的百分比回撤保护
-   - 基于固定点数的利润锁定
-
-#### 策略优势
-1. 多重确认机制降低了虚假信号
-2. 动态的区间划分适应不同市场环境
-3. 双重止盈机制提供了更好的风险控制
-4. 清晰的市场状态分类有助于把握市场节奏
-5. 实时的交易状态监控便于策略调试
-6. 结合技术指标和价格行为分析
-
-#### 策略风险
-1. 在震荡市场可能产生过多交易
-2. 固定点数止盈可能错过大行情
-3. 参数优化可能导致过度拟合
-4. 市场快速反转时可能损失部分利润
-5. 多重确认条件可能错过部分交易机会
-解决方法:
-- 加入波动率过滤器
-- 动态调整止盈参数
-- 增加市场环境识别机制
-- 优化出场时机判断
-
-#### 策略优化方向
-1. 引入波动率指标动态调整参数
-2. 根据市场状态自适应调整止盈条件
-3. 增加成交量确认机制
-4. 加入趋势强度过滤器
-5. 优化区间划分方法,考虑市场特征
-6. 完善风险管理机制,如:
-   - 每日止损
-   - 最大回撤控制
-   - 持仓时间限制
-
-#### 总结
-该策略通过综合运用多个技术指标和价格行为分析方法,构建了一个完整的交易系统。策略的优势在于多重确认机制和灵活的止盈体系,但也需要注意市场环境对策略表现的影响。通过持续优化和完善风险管理,策略有望在不同市场环境下保持稳定表现。 || 
-
 #### Overview
 This is a dynamic trend-following trading strategy based on SMA indicators, combining price zones, stochastic indicators, and multiple profit protection mechanisms. The strategy monitors price movements across different zones, integrates short-term and long-term moving average crossover signals, and uses stochastic indicators to determine market conditions and trend strength for efficient trend capture. The strategy incorporates both percentage-based and fixed-point profit-taking mechanisms to effectively balance returns and risks.
 
@@ -110,7 +59,7 @@ Solutions:
    - Position holding time limits
 
 #### Summary
-The strategy constructs a comprehensive trading system through the integrated use of multiple technical indicators and price action analysis methods. Its strengths lie in multiple confirmation mechanisms and flexible profit-taking systems, while attention must be paid to the impact of market environment on strategy performance. Through continuous optimization and improved risk management, the strategy shows potential for maintaining stable performance across different market conditions.[/trans]
+The strategy constructs a comprehensive trading system through the integrated use of multiple technical indicators and price action analysis methods. Its strengths lie in multiple confirmation mechanisms and flexible profit-taking systems, while attention must be paid to the impact of market environment on strategy performance. Through continuous optimization and improved risk management, the strategy shows potential for maintaining stable performance across different market conditions.
 
 
 

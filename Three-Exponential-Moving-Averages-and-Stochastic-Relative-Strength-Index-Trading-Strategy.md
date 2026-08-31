@@ -10,57 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/8d5699b275379e6f0f.png)
- [trans]
-## 概述
-
-该策略是一种趋势跟踪策略,结合了三重指数移动平均线指标和随机指数平滑移动平均线指标来产生交易信号。当快速移动平均线上穿中速移动平均线,中速移动平均线上穿慢速移动平均线时看多;当快速移动平均线下穿中速移动平均线,中速移动平均线下穿慢速移动平均线时看空。同时,该策略还引入随机指数平滑移动平均线指标作为辅助判断指标。
-
-## 原理
-
-1. 使用8日、14日和50日三重指数移动平均线。当8日指数移动平均线上穿14日指数移动平均线,14日指数移动平均线上穿50日指数移动平均线时产生看多信号;反之,看空信号。
-
-2. 使用随机指数平滑移动平均线指标(Stochastic RSI)作为辅助判断指标。具体为:先计算14日RSI,然后在RSI指标的基础上再计算Stochastic指标,最后对Stochastic指标计算3日简单移动平均得到K线和3日简单移动平均得到D线。当K线上穿D线时,作为看多的辅助信号。  
-
-3. 在产生交易信号时,如果价格高于8日指数移动平均线,则入场做多;如果价格低于8日指数移动平均线,则入场做空。
-
-4. 止损位于入场价下方/上方1倍ATR距离处。 止盈位于入场价上方/下方4倍ATR距离处。
-
-## 优势
-
-1. 移动平均线作为基础指标,可以有效跟踪市场趋势。三重指数移动平均线通过组合使用多个周期,能够同时保证对短期和中长期趋势的敏感性。
-
-2. 增加Stochastic RSI作为辅助判断指标,可以过滤假信号,提高入场的准确性。
-
-3. 根据ATR来设置止损止盈位置,可以动态跟踪市场波动程度,避免止损止盈过大或过小。
-
-4. 该策略参数设置合理,在大趋势下表现优异。回撤较小,收益较为平稳,适合长线操作。
-
-## 风险
-
-1. 多指标组合策略增加了反转的风险。当移动平均线和Stochastic RSI发出相反信号时,可能产生交易信号错误。这时需要关注价格本身的趋势性。  
-
-2. 止损和止盈的设置比较保守,可能会在行情剧烈波动时被突破从而被止出,错过趋势机会。这时可以适当调整ATR参数或调大止损止盈的倍数。
-
-3. 由于使用了三重移动平均线,当快速线和中速线反转时,会有一定的滞后。这时需要关注价格本身是否反转以决定是否入场。
-
-4. 该策略主要适合趋势性行情,在盘整行情中表现不佳。这时可以考虑优化移动平均线的周期参数或使用其他判定指标。
-
-## 优化
-1. 可以考虑加入MACD等其他指标,进一步优化入场时机。也可以测试不同参数的移动平均线组合。
-
-2. 可以对ATR多空检查的参数进行优化。例如将止损从1ATR调整为1.5ATR,止盈从4ATR调整为3ATR,看是否可以获得更佳收益。
-
-3. 可以测试只使用移动平均线,去掉Stochastic RSI指标,看是否可以过滤更多噪音,获得更稳定收益。
-
-4. 可以考虑加入更多条件来判断趋势,例如增加交易量指标,确保在大级别趋势中操作。
-
-## 总结
-
-该策略综合运用三重指数移动平均线和Stochastic RSI指标判定趋势方向。入场信号比较严格,可以有效减少无谓交易。止盈止损设置动态跟踪ATR,使得策略参数具有自适应性。从回测结果来看,该策略在趋势行情中表现优异,回撤较小,收益较为平稳。通过进一步优化,有望获得更好的效果。
-
-||
-
-## Overview  
+ ## Overview  
 
 This is a trend following strategy that combines triple exponential moving average (EMA) and Stochastic Relative Strength Index (Stoch RSI) to generate trading signals. It goes long when the fast EMA crosses above the medium EMA and the medium EMA crosses above the slow EMA. It goes short when the reverse happens. The strategy also uses Stoch RSI as an auxiliary indicator.  
 
@@ -107,8 +57,6 @@ This is a trend following strategy that combines triple exponential moving avera
 ## Conclusion  
 
 This strategy combines triple EMA and Stoch RSI to determine trends. Strict entry signals reduce unnecessary trades. Dynamic SL and TP based on ATR makes parameters adaptive. Backtests show great results during trending periods with smaller drawdowns and consistent profits. Further optimizations could lead to even better results.
-
-[/trans]
 
 
 > Strategy Arguments

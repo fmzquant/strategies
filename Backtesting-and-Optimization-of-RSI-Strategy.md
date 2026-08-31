@@ -83,14 +83,14 @@ In summary, this is a simple and straightforward strategy using RSI to trade ove
 
 |Argument|Default|Description|
 |----|----|----|
-|v_input_int_1|50000|每次开单资金(usdt)|
-|v_input_int_2|14|rsi周期|
-|v_input_float_1|20|RSI触发线|
-|v_input_float_2|70|顶部rsi止损线|
-|v_input_float_3|30|底部rsi止损线|
-|v_input_float_4|0.03|止损线|
-|v_input_float_5|0.01|止盈|
-|v_input_int_3|24|亏损后x根K线不做交易|
+|v_input_int_1|50000|Capital per entry (USDT)|
+|v_input_int_2|14|RSI period|
+|v_input_float_1|20|RSI trigger line|
+|v_input_float_2|70|Upper RSI stop-loss line|
+|v_input_float_3|30|Lower RSI stop-loss line|
+|v_input_float_4|0.03|Stop-loss line|
+|v_input_float_5|0.01|Take profit|
+|v_input_int_3|24|Do not trade for x bars after a loss|
 
 
 > Source (PineScript)

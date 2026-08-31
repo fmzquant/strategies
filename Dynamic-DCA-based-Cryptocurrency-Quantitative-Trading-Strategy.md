@@ -13,41 +13,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d90fdc309b085a7c667d.png)
 
 
-[trans]
-#### 概述
-这是一个专为加密货币市场设计的量化交易策略,充分利用加密货币市场的高波动性特征,通过智能的成本平均法(DCA)在价格回调时动态加仓。策略在15分钟时间框架上运行,能够有效应对加密货币市场的快速波动,同时规避过度交易带来的风险。
-
-#### 策略原理
-策略主要包含四个核心模块：
-1. 智能入场系统：基于OHLC4加权均价进行首次建仓,适应加密货币市场的高波动特性
-2. 动态补仓机制：在价格回调时触发安全订单,补仓量随深度增加而放大,充分利用市场波动
-3. 风险管理系统：通过金字塔式加仓和灵活杠杆调整来优化风险收益比
-4. 快速止盈控制：针对加密货币市场的快速波动特点设计的止盈机制,包含手续费优化
-
-#### 策略优势
-1. 市场适应性：专门针对加密货币市场的高波动特性进行优化
-2. 风险分散：通过动态分批建仓降低加密货币市场的突发性风险
-3. 套利效率：充分利用加密货币市场的价格波动获取收益
-4. 自动化执行：支持多个主流加密货币交易所的API接入
-5. 资金效率：通过智能杠杆管理提高加密货币交易的资金利用效率
-
-#### 策略风险
-1. 市场风险：加密货币市场的极端波动可能导致较大回撤
-2. 流动性风险：部分小市值加密货币可能面临流动性不足问题
-3. 杠杆风险：加密货币市场的高波动性增加了杠杆交易的风险
-4. 技术风险：依赖交易所API的稳定性和网络连接质量
-5. 监管风险：加密货币市场的政策变化可能影响策略执行
-
-#### 策略优化方向
-1. 波动度自适应：引入加密货币市场特有的波动率指标来动态调整参数
-2. 多币种协同：开发多币种联动交易逻辑,分散单一币种风险
-3. 市场情绪过滤：集成加密货币市场情绪指标,优化入场时机
-4. 交易成本优化：通过智能路由和交易所选择降低成本
-5. 风险预警机制：建立基于市场异常波动的预警系统
-
-#### 总结
-该策略通过创新的DCA方法和动态风险管理,为加密货币交易提供了一个全面的自动化解决方案。虽然加密货币市场存在较高风险,但通过精心设计的风控机制和市场适应性优化,策略能够在大多数市场环境下保持稳定性。未来优化将着重于提升策略对加密货币市场特殊性的适应能力。 || 
-
 #### Overview
 This is a quantitative trading strategy specifically designed for the cryptocurrency market, leveraging its high volatility characteristics through intelligent Dollar-Cost Averaging (DCA) with dynamic position scaling during price retracements. Operating on a 15-minute timeframe, it effectively handles rapid cryptocurrency market fluctuations while avoiding overtrading risks.
 
@@ -80,7 +45,7 @@ The strategy consists of four core modules:
 5. Risk Alert Mechanism: Establish warning system based on market abnormal fluctuations
 
 #### Summary
-The strategy provides a comprehensive automated solution for cryptocurrency trading through innovative DCA methods and dynamic risk management. While cryptocurrency markets carry high risks, the strategy maintains stability in most market conditions through carefully designed risk control mechanisms and market adaptability optimization. Future improvements will focus on enhancing strategy adaptation to cryptocurrency market specificities.[/trans]
+The strategy provides a comprehensive automated solution for cryptocurrency trading through innovative DCA methods and dynamic risk management. While cryptocurrency markets carry high risks, the strategy maintains stability in most market conditions through carefully designed risk control mechanisms and market adaptability optimization. Future improvements will focus on enhancing strategy adaptation to cryptocurrency market specificities.
 
 
 

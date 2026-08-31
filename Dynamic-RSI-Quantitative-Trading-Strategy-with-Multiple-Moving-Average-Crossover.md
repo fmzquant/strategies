@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/fc341e6f1e099965a0.png)
 
-[trans]
-#### 概述
-这是一个结合了相对强弱指数(RSI)和多种移动平均线的量化交易策略。该策略主要通过监测RSI指标上的不同类型移动平均线(包括SMA、EMA、WMA和SMMA)的交叉信号来判断市场趋势,同时结合RSI指标本身的超买超卖区间作为辅助判断依据,从而确定交易时机。
-
-#### 策略原理
-策略主要包含以下几个关键计算步骤:
-1. 计算14周期的RSI指标,设定超买区域为70,超卖区域为30
-2. 在RSI曲线上分别计算3条不同参数的移动平均线:
-   - MA1: 20周期,可选SMA/EMA/WMA/SMMA
-   - MA2: 50周期,可选SMA/EMA/WMA/SMMA  
-   - MA3: 100周期,可选SMA/EMA/WMA/SMMA
-3. 交易信号生成规则:
-   - 买入信号:当MA2向上穿越MA3时
-   - 卖出信号:当MA2向下穿越MA3时
-4. 同时检测RSI指标的背离情况,为交易决策提供辅助参考
-
-#### 策略优势
-1. 多重技术指标交叉验证,提高交易信号的可靠性
-2. 移动平均线类型和参数可调,具有较强的灵活性
-3. RSI背离检测功能可以帮助提前发现市场转折点
-4. 采用百分比仓位管理,有效控制风险
-5. 可视化效果优秀,便于分析和回测
-
-#### 策略风险
-1. 移动平均线交叉可能产生滞后效应
-2. 在横盘震荡市场中可能产生频繁的虚假信号
-3. RSI指标在某些市场条件下的失真
-4. 参数选择不当可能导致交易信号过多或过少
-规避措施:
-- 建议结合市场走势和交易量进行交叉验证
-- 可以通过调整移动平均线参数来优化交易频率
-- 设置止损和止盈来控制风险
-
-#### 策略优化方向
-1. 信号过滤优化:
-- 增加趋势确认指标
-- 加入成交量分析
-2. 参数动态优化:
-- 根据市场波动率自动调整RSI和MA参数
-- 引入自适应周期计算方法
-3. 风险控制优化:
-- 开发动态止损止盈机制
-- 设计仓位动态管理系统
-
-#### 总结
-该策略通过结合RSI和多重移动平均线,构建了一个具有较强适应性的交易系统。策略的核心优势在于多重技术指标的交叉验证和灵活的参数配置,但同时需要注意移动平均线的滞后性以及市场条件对策略表现的影响。通过持续优化和风险控制,该策略有望在实际交易中取得稳定表现。
-
-|| 
-
 #### Overview
 This is a quantitative trading strategy that combines the Relative Strength Index (RSI) with multiple moving averages. The strategy primarily identifies market trends by monitoring crossover signals between different types of moving averages (including SMA, EMA, WMA, and SMMA) on the RSI indicator, while using RSI's overbought and oversold zones as supplementary decision criteria.
 
@@ -104,9 +55,7 @@ Risk mitigation:
 - Design dynamic position management system
 
 #### Summary
-The strategy builds an adaptive trading system by combining RSI and multiple moving averages. Its core advantages lie in the cross-validation of multiple technical indicators and flexible parameter configuration, while attention must be paid to moving average lag and market condition impacts on strategy performance. Through continuous optimization and risk control, this strategy shows promise for stable performance in actual trading.[/trans]
-
-
+The strategy builds an adaptive trading system by combining RSI and multiple moving averages. Its core advantages lie in the cross-validation of multiple technical indicators and flexible parameter configuration, while attention must be paid to moving average lag and market condition impacts on strategy performance. Through continuous optimization and risk control, this strategy shows promise for stable performance in actual trading.
 
 > Source (PineScript)
 

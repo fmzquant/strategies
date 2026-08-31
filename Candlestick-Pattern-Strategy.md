@@ -10,56 +10,8 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1749dc4c097500abdaf.png)
-[trans]
-## 概述
 
-蜡烛形态策略是一种利用蜡烛线形态进行交易决策的策略。该策略可以检测多种常见的蜡烛线形态,包括吞噬形态、间隔形态、早晨之星、三个黑乌鸦等,并在检测到这些形态时产生交易信号。策略同时支持自定义止损、止盈、尾随止损参数,可以有效控制风险。
-
-## 策略原理
-
-该策略的核心逻辑是通过Pine Script代码的条件判断,来识别不同类型的蜡烛形态。例如,判断吞噬形态的代码逻辑是:
-
-```
-bullish_engulfing = high[0]>high[1] and low[0]<low[1] and open[0]<open[1] and close[0]>close[1] and close[0]>open[0] and close[1]<close[2] and close[0]>open[1]
-```
-
-以上逻辑判断了当前K线及之前两根K线的高点、低点、开盘价、收盘价的大小关系,如果满足吞噬形态的定义,则返回true。其他蜡烛形态判断也是类似的逻辑。
-
-当识别到符合条件的蜡烛形态时,则相应的多头或空头交易信号变量会被置为true。然后策略会在交易时间段内,判断交易信号是否触发,如果触发则下单,并设置止损、止盈、尾随止损来控制风险。
-
-## 优势分析
-
-- 支持多种常见蜡烛形态,覆盖面广
-- 可自定义控制风险的参数,灵活性强
-- 包含多种绘图工具,可以清楚识别形态
-- 结合K线真实趋势,避免被套
-
-## 风险及解决方法
-
-- 蜡烛形态并不总是可靠的信号
-
-  解决方法:结合趋势指标,避免在震荡市场使用
-
-- 单一形态可能出现假信号
-
-  解决方法:可以适当过滤时间段太短的形态信号  
-
-- 参数设置不当可能扩大损失
-
-  解决方法:严格按照风险承受能力设置止损、止盈参数
-
-## 优化方向 
-
-- 增加对趋势的判断,避免不配合趋势的形态
-- 结合其他指标过滤信号
-- 优化形态参数,降低假信号率
-- 结合机器学习算法,建立更可靠的形态识别
-
-## 总结
-
-蜡烛形态策略利用图形技术分析判断短期转折点,是一种较为常见的短线策略。该策略支持多种形态并可自定义风险控制,使用灵活。但形态信号的可靠性并不高,无法单独使用,需要与趋势及其他因素配合,方可发挥价值。
-
-|| Candlestick Pattern Strategy
+Candlestick Pattern Strategy
 
 ## Overview
 
@@ -108,8 +60,6 @@ When a qualified candlestick pattern is identified, the corresponding long or sh
 ## Summary
 
 The candlestick pattern strategy identifies short-term turning points using technical analysis graphics, which is a common short-term strategy. This strategy supports multiple patterns and customizable risk control, very flexible to use. But the reliability of pattern signals is not high. It cannot be used alone and needs to work with trend and other factors to maximize its value.
-
-[/trans]
 
 > Strategy Arguments
 

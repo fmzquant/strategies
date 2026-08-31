@@ -10,54 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ac3b422ff1ab0df349.png)
- [trans]
-## 概述
-
-本策略名称为“伦敦时间段SMA交叉ETH反转交易策略”。该策略的主要思想是利用伦敦交易时段的高流动性,结合SMA均线的金叉死叉信号,对ETH/USDT这个主流数字货币交易对进行反转交易。
-
-## 策略原理  
-
-该策略的核心逻辑是首先确定伦敦时段的交易时间,然后计算一定周期的SMA均线,再在伦敦时段判断价格是否与SMA发生金叉或死叉。具体来说,该策略首先定义了伦敦时段的开始和结束时间,然后设置了SMA均线的长度参数为50周期。在此基础上,该策略使用ta.sma()函数计算出50周期的SMA均线。接下来,该策略判断当前价格是否在伦敦时段,以及是否在回测时间范围内。在满足这两个条件的情况下,使用ta.crossover()和ta.crossunder()函数判断价格与SMA均线是否发生了金叉和死叉。当发生金叉时,做多;当发生死叉时,做空。
-
-该策略的关键优势在于利用了伦敦时段的高流动性进行交易,可以获得更好的入场机会。同时,SMA均线的金叉死叉信号是经典且有效的技术指标信号。所以,这种组合可以在一定程度上过滤假信号,提高策略的稳定性和盈利率。
-
-## 策略优势
-
-1. 利用伦敦时段的高流动性,可以获得更好的入场时机
-2. SMA均线金叉死叉是经典且有效的技术指标信号
-3. 组合使用可以提高信号质量,过滤假信号
-4. 采用反转交易方式,适合短线交易
-5. 资金利用率高,可以通过杠杆放大收益
-
-## 策略风险及解决方法  
-
-该策略也存在一定的风险,主要包括:
-
-1. 趋势市场中金叉死叉信号可能频繁被打击
-2. SMA周期设置不当,可能产生过多假信号
-3. 反转交易容易受困于震荡行情
-
-对于这些风险,可以通过以下方法加以控制和解决:  
-
-1. 结合趋势指标,避免在趋势震荡中使用
-2. 优化SMA参数,寻找最佳交易周期
-3. 设置止损位,控制单笔损失
-
-## 策略优化方向  
-
-该策略还存在以下可优化的地方:  
-
-1. 可以引入其他指标进行组合,例如RSI、KD等,形成多指标过滤规则,提高信号质量
-2. 可以优化SMA均线的周期参数,寻找最佳交易周期
-3. 可以在SMA均线基础上,再引入longer时间周期的均线,形成多均线交叉组合
-4. 可以对交易时段进行优化,测试哪些时段的交易效果最好
-5. 可以引入机器学习算法,对信号进行训练和过滤
-
-## 总结
-
-整体来说,本策略通过高流动性时段交易和均线交叉的经典技术指标组合,实现了一个较为简单实用的短线反转交易策略。该策略具有资金利用率高,技术指标简单,容易实施等优势。但也存在一定的风险,需要对参数、止损以及交易时段等进行测试和优化,以便获得更好的稳定盈利能力。
-
-||
+ 
 
 ## Overview
 
@@ -104,8 +57,6 @@ The following aspects of the strategy can be optimized:
 ## Conclusion
 
 In general, this strategy realizes a relatively simple and practical short-term reversal trading strategy through trading in high liquidity sessions and combining classic technical indicator of moving average crosses. The advantages of this strategy include high capital utilization, simple technical indicators and easy implementation. But there are also certain risks, the parameters, stop loss and trading sessions need to be tested and optimized in order to obtain better steady profitability.
-
-[/trans]
 
 > Strategy Arguments
 

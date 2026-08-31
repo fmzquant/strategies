@@ -10,63 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b53e08cf2637582c4f.png)
- [trans]
-
-## 概述
-
-该策略是一个适用于比特币和以太坊的简单移动平均线趋势跟随策略。它结合了均线、MACD 和 RSI 等多个指标来识别趋势方向,采用固定仓位长线持仓的方式跟踪趋势。
-
-## 策略原理
-
-策略的核心逻辑是当20日EMA线上穿100日SMA线且100日SMA线上穿200日SMA线时做多;当20日EMA线下穿100日SMA线时平仓。即利用三条不同期限的移动平均线确定趋势方向。
-
-具体来说,策略通过计算20日EMA线、100日SMA线和200日SMA线的值,并比较它们的大小关系来判断趋势。当20日EMA线上穿100日SMA线,即20日EMA线大于100日SMA线,说明价格开始上涨;此时如果100日SMA线也大于200日SMA线,说明中长期趋势也在上升,这是一个较强的做多信号。
-
-在进入做多仓位后,策略会一直持有仓位,跟随趋势运行。当20日EMA线重新下穿100日SMA线时,说明短期趋势出现反转信号,这时策略会选择平仓止损。
-
-此外,策略还结合MACD和RSI等指标来确认趋势。只有当MACD的DIF线、DEMA线和HIST柱形线都是上涨的,同时RSI指标高于50时,才会选择开仓做多。
-
-## 策略优势
-
-该策略最大的优势在于制定清晰的趋势交易规则,能够有效跟踪中长线趋势。具体优势如下:
-
-1. 使用多组移动平均线结合判断趋势,比较可靠。
-2. 采用长线持仓的方式跟踪趋势运行,不容易被短期市场波动干扰。
-3. 结合MACD和RSI等指标进行策略信号确认,可以过滤假突破。
-4. 通过EMA线与SMA线的金叉与死叉来判断入场与出场点位,规则简单清晰。
-5. 能够有效控制风险,通过止损来限制亏损。
-
-## 风险及解决
-
-该策略也存在一些风险,主要问题在于当趋势反转时无法及时止损。具体风险及解决方法如下:
-
-1. 无法及时跟踪到趋势反转点:可以缩短均线周期,或者加入更多指标进行综合判断。
-
-2. 持仓时间过长容易产生较大亏损:可以适当缩短出场线,及时止损。
-
-3. 均线指标容易产生滞后:可以添加一定回撤比例的止损线,主动止损。
-
-
-## 优化方向
-
-该策略还可以从以下几个方面进行优化:
-
-1. 测试更多组合的均线周期,寻找最优参数。
-
-2. 尝试其他指标或模型来判断趋势和入场时机。例如布林带、KD指标等。
-
-3. 采用机器学习等方式动态优化参数。例如使用强化学习调整止损幅度。
-
-4. 结合交易量指标来避免假突破。例如能量潮指标、成交量等。
-
-5. 开发自动止损和追踪止损系统,能够根据市场情况调整止损位置。
-
-
-## 总结
-
-该策略整体是一个简单直接的趋势跟随策略。它利用移动平均线判断趋势方向,MACD和RSI过滤信号。采用较长的持仓时间跟踪趋势。能有效地把握中长线趋势机会。同时也存在滞后识别趋势反转的风险。未来可以通过参数优化、增加指标等方式进行改进与升级。
-
-||
 
 ## Overview  
 
@@ -123,9 +66,6 @@ This strategy can also be optimized in the following aspects:
 ## Conclusion
 
 In summary, this strategy is a simple and straightforward trend following strategy. It uses moving averages to determine the trend direction, MACD and RSI to filter signals. Adopt relatively long holding periods to track trend movements. It can effectively capture medium and long term trend opportunities. At the same time, there is also the risk of lagging in identifying trend reversals. Future improvements and upgrades can be made through parameter optimization, adding indicators, etc.
-
-[/trans]
-
 > Strategy Arguments
 
 

@@ -10,53 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/1dce7da36148dd86acd.png)
- [trans]
-
-## 概述
-
-本策略首先计算快速移动平均线ma_fast和慢速移动平均线ma_slow,然后结合FRAMA自适应移动平均线,在ma_fast上穿ma_slow时做多,在ma_slow下穿ma_fast时或FRAMA下穿收盘价时平仓。
-
-## 策略原理
-
-1. 计算13日简单移动平均线ma_fast和26日简单移动平均线ma_slow。
-
-2. 计算FRAMA自适应移动平均线out。FRAMA的计算公式较复杂,主要思想是根据价格的最高值、最低值和波动性动态调整均线的平滑度α。
-
-3. 在ma_fast上穿ma_slow时做多。这表示短期均线开始上行,并跑赢长期均线,符合趋势的特征。
-
-4. 在ma_slow下穿ma_fast时或FRAMA下穿收盘价时平仓。这表示趋势反转信号。
-
-## 优势分析
-
-1. 结合双均线系统和自适应均线系统的优点。双均线系统擅长捕捉趋势,自适应均线系统可以更好地滤波噪音。
-
-2. FRAMA指标可以自动调整参数,避免人工选择参数的主观性。
-
-3. 同时使用两个退出信号,可以及时捕捉趋势反转。
-
-## 风险分析
-
-1. 双均线交叉存在错位的可能,可能产生间歇性亏损。
-
-2. 自适应移动平均线会增加策略的参数量,可能导致过度优化。
-
-3. 仅考虑价格因素,没有结合交易量做过滤,可能错过机会。
-
-
-## 优化方向 
-
-1. 可以测试不同周期的均线组合,寻找最佳参数。
-
-2. 可以加入成交量的确认,避免无效信号。例如增加成交量突增的条件。
-
-3. 可以优化开仓和平仓条件,使策略更稳定。例如只在延续形态突破时开仓。
-
-
-## 总结
-
-本策略结合双均线交叉和FRAMA自适应均线,通过动态调整参数自动适应市场环境。双均线擅长捕捉趋势,FRAMA可以滤波噪音。同时使用两个平仓信号使策略更稳健。下一步可以进一步优化参数,加入成交量的确认,使策略更加完善。
-
-|| 
+ 
 
 # Summary
 
@@ -100,8 +54,6 @@ This strategy calculates the fast moving average line ma_fast and slow moving av
 # Conclusion
 
 This strategy combines dual moving average crossover and FRAMA adaptive moving average, automatically adapting to market conditions by dynamically adjusting parameters. Dual MAs are good at catching trends while FRAMA filters out noises. Using two exit signals also makes the strategy more robust. Next steps could be further parameter optimization and adding volume filter to improve it.
-
-[/trans]
 
 > Strategy Arguments
 

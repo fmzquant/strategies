@@ -8,39 +8,7 @@ No-Upper-Wick-Bullish-Candle-Breakout-Strategy
 ChaoZhang
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/f64c7295f2e913d182.png)
-
-[trans]
-#### 概述
-该策略主要思路是寻找没有上引线的看涨K线作为买入信号,并在价格跌破前一根K线低点时平仓。该策略利用了看涨K线上引线很小这一特征,表明多方力量强劲,股价继续上涨的概率较大。同时,前一根K线低点作为止损位,可以有效控制风险。
-
-#### 策略原理
-1. 判断当前K线是否为看涨K线(收盘价高于开盘价)
-2. 计算当前K线上引线长度占K线实体长度的比例
-3. 如果上引线比例小于5%,则认为是有效的无上引线看涨K线,发出买入信号
-4. 记录买入后前一根K线的最低价作为止损位
-5. 当价格跌破止损位时,平仓退出
-
-#### 策略优势
-1. 选择无上引线的看涨K线入场,趋势强度更大,成功率更高
-2. 利用前一根K线低点作为止损位,风险可控
-3. 逻辑简单,容易实现和优化
-4. 适合在趋势行情中使用
-
-#### 策略风险
-1. 可能出现买入信号后即刻回撤触发止损的情况
-2. 对于高波动率的品种,止损位可能设置过于靠近买入价,导致过早止损
-3. 缺乏盈利目标,难以把握最佳平仓时机
-
-#### 策略优化方向 
-1. 可以结合其他指标如MA、MACD等,对趋势强度进行确认,提高入场信号有效性
-2. 对于高波动品种,可以将止损位设置在更远的位置,如前N根K线的最低点,减少止损频率
-3. 引入盈利目标,如N倍ATR或百分比获利等,及时锁定利润
-4. 考虑加入仓位管理,如根据信号强度调整仓位大小等
-
-#### 总结
-该策略通过选取无上引线的看涨K线入场,利用前一根K线低点止损,可在趋势行情中有效捕捉利润。但策略也存在一定局限性,如止损位置不够灵活,缺乏盈利目标等。可通过引入其他指标过滤信号、优化止损位置和设置盈利目标等方式进行改进,使策略更加稳健有效。
 
 #### Overview
 The main idea of this strategy is to find bullish candles without upper wicks as buy signals and close positions when the price breaks below the low of the previous candle. The strategy utilizes the characteristic of bullish candles with very small upper wicks, indicating strong bullish momentum and a higher probability of continued price increases. At the same time, using the low of the previous candle as a stop-loss level can effectively control risk.
@@ -71,10 +39,6 @@ The main idea of this strategy is to find bullish candles without upper wicks as
 
 #### Summary
 This strategy captures profits effectively in trending markets by selecting bullish candles without upper wicks for entry and using the low of the previous candle for stop-loss. However, the strategy also has certain limitations, such as inflexible stop-loss placement and lack of profit targets. Improvements can be made by introducing other indicators to filter signals, optimizing stop-loss positions, and setting profit targets to make the strategy more robust and effective.
-[/trans]
-
-
-
 > Source (PineScript)
 
 ``` pinescript

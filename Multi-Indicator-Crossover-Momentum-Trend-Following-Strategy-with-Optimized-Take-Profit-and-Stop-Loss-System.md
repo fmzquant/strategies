@@ -9,45 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/160825cf5ca509b7fb6.png)
-
-[trans]
-#### 概述
-该策略是一个综合性的趋势跟踪交易系统，结合了鳄鱼指标(Alligator)、动量震荡指标(AO)和加速震荡指标(AC)的多重信号确认机制。系统通过多重指标的交叉和趋势确认来识别市场趋势，并配合动态止盈止损来管理风险，实现可控的交易效果。
-
-#### 策略原理
-策略核心逻辑基于三个主要组件：
-1. 鳄鱼指标系统：使用不同周期(13/8/5)的移动平均线，通过唇线(Lips)与牙齿线(Teeth)的交叉来确认趋势方向。
-2. 动量确认系统：结合AO和AC指标，通过判断这两个指标的正负值来确认趋势强度。
-3. 风险管理系统：采用动态止损设置，基于过去5根K线的最高/最低点设置止损，并采用1:2的风险收益比设置止盈点。
-
-多重信号触发条件：
-- 多头入场：唇线上穿牙齿线 + AO为正 + AC为正
-- 空头入场：唇线下穿牙齿线 + AO为负 + AC为负
-
-#### 策略优势
-1. 多重信号确认机制降低了假突破的风险。
-2. 动态止损设置适应市场波动性变化。
-3. 固定的风险收益比有助于长期稳定获利。
-4. 指标组合既考虑趋势又关注动量，提高了交易的准确性。
-5. 系统自动化程度高，减少了主观判断带来的干扰。
-
-#### 策略风险
-1. 多重指标可能导致信号滞后，错过最佳入场时机。
-2. 在震荡市场中可能产生频繁的假信号。
-3. 固定的风险收益比可能不适合所有市场环境。
-4. 动态止损可能在波动加剧时被过早触发。
-
-#### 策略优化方向
-1. 引入波动率自适应机制，动态调整止盈止损比例。
-2. 增加趋势强度过滤器，避免在弱趋势环境下交易。
-3. 开发市场环境分类系统，在不同市场状态下使用不同的参数组合。
-4. 加入交易量确认机制，提高信号可靠性。
-5. 考虑引入时间过滤器，避开低效交易时段。
-
-#### 总结
-该策略通过综合运用多个技术指标，建立了一个完整的交易系统。系统不仅注重信号的准确性，还通过严格的风险管理来保护资金。虽然存在一定的滞后性风险，但通过建议的优化方向，策略有望获得更好的表现。适合追求稳健收益的投资者使用。 || 
-
 #### Overview
 This strategy is a comprehensive trend-following trading system that combines multiple signal confirmation mechanisms including the Alligator indicator, Awesome Oscillator (AO), and Accelerator Oscillator (AC). The system identifies market trends through multiple indicator crossovers and trend confirmations, coupled with dynamic take-profit and stop-loss mechanisms for risk management.
 
@@ -82,9 +43,7 @@ Multiple signal trigger conditions:
 5. Consider implementing time filters to avoid inefficient trading periods.
 
 #### Summary
-This strategy establishes a complete trading system through the comprehensive use of multiple technical indicators. The system emphasizes not only signal accuracy but also strict risk management for capital protection. While there are certain lag risks, the strategy shows promise for better performance through the suggested optimization directions. It is suitable for investors seeking steady returns.[/trans]
-
-
+This strategy establishes a complete trading system through the comprehensive use of multiple technical indicators. The system emphasizes not only signal accuracy but also strict risk management for capital protection. While there are certain lag risks, the strategy shows promise for better performance through the suggested optimization directions. It is suitable for investors seeking steady returns.
 
 > Source (PineScript)
 

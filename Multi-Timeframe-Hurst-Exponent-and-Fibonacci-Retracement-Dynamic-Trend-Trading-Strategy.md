@@ -12,38 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d97dd3f7b0b5b7e530f4.png)
 ![IMG](https://www.fmz.com/upload/asset/2d916a3f758e53ae66cbd.png)
 
-
-
-[trans]
-#### 概述
-这是一个结合了赫斯特指数(Hurst Exponent)和斐波那契回撤水平的创新型多时间周期交易策略。该策略通过计算不同时间周期的赫斯特指数来评估市场趋势特性,并结合斐波那契关键价格水平来识别潜在的交易机会。策略采用了严格的风险管理框架,包括固定风险比例、目标盈亏比以及每日和总体交易频率限制。
-
-#### 策略原理
-策略的核心逻辑基于两个主要组成部分:
-1. 通过计算当前和更高时间周期的赫斯特指数来评估市场趋势性质。赫斯特指数大于0.5表示市场具有趋势持续性,小于0.5则表示市场可能存在均值回归特性。
-2. 利用每日高低点计算关键的斐波那契回撤水平,重点关注61.8%(黄金分割)和38.2%两个水平。当日线赫斯特指数大于0.5且价格突破61.8%水平时,触发做多信号;当日线赫斯特指数小于0.5且价格跌破38.2%水平时,触发做空信号。
-
-#### 策略优势
-1. 多维度分析: 通过结合不同时间周期的趋势分析和价格水平,提供更全面的市场视角
-2. 风险管理完善: 采用固定风险比例(2%)和目标盈亏比(1:2)的风险管理框架
-3. 交易频率控制: 设置每日最大交易次数和总交易次数限制,避免过度交易
-4. 可视化辅助: 提供实时的市场趋势背景颜色变化和关键指标信息表格
-
-#### 策略风险
-1. 市场环境依赖: 在趋势不明显的横盘市场中可能表现欠佳
-2. 参数敏感性: 赫斯特指数计算周期和斐波那契时间周期的选择会影响策略表现
-3. 滑点影响: 在流动性较差的市场条件下,可能面临较大的滑点风险
-4. 系统复杂性: 多个组件的组合增加了策略失效的可能性
-
-#### 策略优化方向
-1. 动态参数调整: 可以根据市场波动率自动调整赫斯特指数计算周期
-2. 增加过滤器: 引入额外的市场状态过滤器,提高信号质量
-3. 优化持仓管理: 实现基于波动率的动态仓位管理
-4. 改进出场机制: 开发更灵活的盈利目标设置方式
-
-#### 总结
-这是一个将技术分析经典工具与现代量化方法相结合的创新策略。通过多时间周期分析和严格的风险管理,策略在保持理论基础的同时也注重实战可行性。虽然存在一定的优化空间,但总体框架具有良好的延展性和实用价值。 ||
-
 #### Overview
 This is an innovative multi-timeframe trading strategy that combines the Hurst Exponent and Fibonacci retracement levels. The strategy evaluates market trend characteristics by calculating the Hurst exponent across different timeframes and identifies potential trading opportunities using key Fibonacci price levels. It incorporates a strict risk management framework, including fixed risk ratios, target risk-reward ratios, and daily and overall trading frequency limits.
 
@@ -71,9 +39,7 @@ The core logic is based on two main components:
 4. Exit Mechanism Improvement: Design more flexible profit target setting methods
 
 #### Summary
-This strategy innovatively combines classical technical analysis tools with modern quantitative methods. Through multi-timeframe analysis and strict risk management, it maintains theoretical foundations while focusing on practical applicability. While there is room for optimization, the overall framework offers good extensibility and practical value.[/trans]
-
-
+This strategy innovatively combines classical technical analysis tools with modern quantitative methods. Through multi-timeframe analysis and strict risk management, it maintains theoretical foundations while focusing on practical applicability. While there is room for optimization, the overall framework offers good extensibility and practical value.
 
 > Source (PineScript)
 

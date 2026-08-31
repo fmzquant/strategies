@@ -11,42 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/7d0f8f179da474c546.png)
 
-[trans]
-#### 概述
-该策略是一个基于ATR(平均真实波幅)指标的动态跟踪止损策略。它通过ATR值动态调整止损位置,并结合EMA均线进行交易信号的确认。策略支持灵活的仓位管理,可以根据不同的市场环境和交易品种自定义买卖数量。它特别适合在5分钟到2小时等中等时间周期上运行,能够有效捕捉市场趋势。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用ATR指标计算市场波动率,并通过用户自定义的系数来调整止损距离
-2. 建立动态跟踪止损线,该止损线会随着价格的变动而自动调整
-3. 使用EMA均线与跟踪止损线的交叉来确认交易信号
-4. 在价格突破跟踪止损线且EMA确认时产生交易信号
-5. 通过仓位管理系统控制每次交易的数量,并实时跟踪投资组合状态
-
-#### 策略优势
-1. 自适应性强 - ATR指标能够根据市场波动自动调整止损距离,使策略在不同市场环境下都能保持良好表现
-2. 风险管理完善 - 动态跟踪止损机制能够有效保护已获利润,同时限制潜在损失
-3. 操作灵活 - 支持自定义交易数量和ATR参数,可以根据不同交易品种特点进行优化
-4. 信号可靠 - 通过EMA均线确认,降低虚假信号的影响
-5. 全自动化 - 策略可以完全自动化运行,减少人为情绪干扰
-
-#### 策略风险
-1. 震荡市场风险 - 在横盘震荡市场可能产生频繁的假突破信号,导致过多交易
-2. 滑点风险 - 在快速行情中可能面临较大滑点,影响策略表现
-3. 参数敏感性 - ATR周期和系数的选择对策略表现影响较大
-4. 资金管理风险 - 如果交易数量设置不当,可能带来过度杠杆风险
-5. 市场波动风险 - 在剧烈波动时期,止损位可能被瞬间击穿
-
-#### 策略优化方向
-1. 引入市场环境识别机制,在不同市场状态下使用不同的参数组合
-2. 添加成交量因素作为信号过滤条件,提高交易信号的可靠性
-3. 优化资金管理算法,根据波动率动态调整持仓规模
-4. 增加时间过滤机制,避免在不适合交易的时段进行操作
-5. 开发自适应参数优化系统,实现参数的动态调整
-
-#### 总结
-该策略通过结合ATR指标和EMA均线,构建了一个可靠的动态跟踪止损系统。它的优势在于能够自适应市场波动,具有完善的风险管理机制,同时保持操作的灵活性。虽然存在一些固有风险,但通过持续优化和完善,策略有望在不同市场环境下都能保持稳定的表现。建议交易者在实盘使用前,充分测试参数组合,并根据具体交易品种的特点进行针对性优化。 || 
-
 #### Overview
 This strategy is a dynamic trailing stop strategy based on the Average True Range (ATR) indicator. It adjusts stop-loss positions dynamically through ATR values and confirms trading signals using EMA crossovers. The strategy supports flexible position management and allows customization of buy/sell quantities based on different market environments and trading instruments. It performs particularly well in medium timeframes ranging from 5 minutes to 2 hours, effectively capturing market trends.
 
@@ -80,7 +44,7 @@ The core logic of the strategy is based on several key elements:
 5. Develop adaptive parameter optimization system for dynamic parameter adjustment
 
 #### Summary
-This strategy builds a reliable dynamic trailing stop system by combining ATR indicator and EMA moving average. Its strengths lie in market volatility adaptation, comprehensive risk management, and operational flexibility. While inherent risks exist, the strategy shows promise for stable performance across different market environments through continuous optimization and improvement. Traders are advised to thoroughly test parameter combinations and optimize based on specific instrument characteristics before live trading.[/trans]
+This strategy builds a reliable dynamic trailing stop system by combining ATR indicator and EMA moving average. Its strengths lie in market volatility adaptation, comprehensive risk management, and operational flexibility. While inherent risks exist, the strategy shows promise for stable performance across different market environments through continuous optimization and improvement. Traders are advised to thoroughly test parameter combinations and optimize based on specific instrument characteristics before live trading.
 
 
 

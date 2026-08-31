@@ -10,67 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/b45ca89b323afd9530.png)
- [trans]
-
-## 概述
-
-本策略名称为“Ichimoku Kinko Hyo Strategy”,即一目均线系统策略。它是一个以一目均线为基础,结合其他技术指标的BTC交易策略。
-
-## 策略原理
-
-该策略主要基于一目均线系统,这是一套综合多种技术指标的趋势交易策略体系。主要包含以下指标:
-
-基准线(Kijun Sen):代表市场趋势方向,是过去26天高点和低点的中点,可作为支持和阻力线。当收盘价突破基准线时,产生买入和卖出信号。
-
-转换线(Tenkan Sen):代表股价的动量,是过去9天高点和低点的中点,可用来判断买入卖出的时机。
-
-未来SPAN A:代表一目均线的中期线,是基准线和转换线的平均值,可作为一目均线的警戒线。
-
-未来SPAN B:代表长期趋势线,是过去52天的中点,可构成云图,判断长短期趋势。
-
-除此之外,该策略还结合RSI指标,在超买超卖区域发出交易信号。
-
-当收盘价突破基准线,并且位于云图之上时产生买入信号;而当收盘价跌破基准线,并且位于云图之下时产生卖出信号。
-
-## 策略优势
-
-1. 一目均线系统判断趋势准确,胜率较高
-
-2. 结合多种指标,避免错失机会
-
-3. RSI指标可有效判断反转点
-
-4. 云图直观显示长短期趋势
-
-## 风险分析
-
-1. 一目均线系统较为滞后,需要配合其他指标判断
-
-2. 趋势市场效果好,但震荡市场表现一般
-
-3. RSI参数设置需要根据市场调整
-
-4. 云图构造较复杂,需熟练运用
-
-可以通过调整一目均线参数,或结合更多技术指标优化。
-
-## 优化方向
-
-1. 优化一目均线的参数,使其能更快判断趋势
-
-2. 增加移动平均线等指标,提高信号准确性
-
-3. 根据不同市场调整RSI的参数设置
-
-4. 可以考虑加入止损机制,控制风险
-
-## 总结
-
-该策略综合运用一目均线、RSI等多个指标judgment趋势,在判断上升趋势准确性较高。但一目均线系统较为滞后,无法判断震荡,这是该策略的主要风险。通过优化参数设置,或增加其他指标可以很好弥补这一缺陷,使策略更加稳定可靠。
-
-||
-
-## Overview
+ ## Overview
 
 This strategy is called "Ichimoku Kinko Hyo Strategy". It is a BTC trading strategy based on Ichimoku Kinko Hyo system combined with other technical indicators.
 
@@ -124,8 +64,6 @@ Parameters of Ichimoku can be optimized or more indicators can be added.
 
 ## Conclusion
 Ichimoku combined with indicators like RSI has high accuracy in capturing upside trends. Lagging of Ichimoku and inadaptability in ranging markets are major risks. Proper parameter tuning and adding more indicators can mitigate these risks substantially, making the strategy more solid and reliable.
-
-[/trans]
 
 > Strategy Arguments
 

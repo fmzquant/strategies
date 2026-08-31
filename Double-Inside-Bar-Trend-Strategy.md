@@ -10,42 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/136fcb3466b5c1d5812.png)
- [trans]
-### 概述
-
-双内含与趋势策略是一个利用双内含形态与移动平均线判断趋势的量化交易策略。该策略结合双内含形态提供较高概率的交易信号,同时利用移动平均线判断市场趋势,在趋势方向做多做空。
-
-### 策略原理
-
-1. 计算 Hull 移动平均线作为判断趋势的指标。
-2. 当出现二次内含形态时,认为这是一个较高概率的交易信号。内含形态是前两根K线的最高价、最低价都被第三根K线包含的形态。
-3. 如果收盘价在移动平均线之上且形成多头内含,则在内含形态高点附近设立买入停止单;如果收盘价在移动平均线之下且形成空头内含,则在内含形态低点附近设立卖出停止单。
-4. 一旦停止单被触发成交后,根据预设的止损幅度和止盈比例设置止损和止盈单。
-
-### 优势分析
-
-1. 内含形态提供较高概率的反转信号。双内含形态的出现,可能预示着短期内的价格反转。
-2. 与移动平均线结合使用,能在大趋势方向操作,提高获利概率。
-3. 采用趋势期间突破点附近的停止单建仓,可获得较好的入场时机。
-
-### 风险分析
-
-1. 在震荡行情中,内含形态提供的交易信号可能会频繁出现亏损的情况。
-2. 移动平均线作为判断趋势的指标也可能发出错误信号,导致逆势交易亏损。
-3. 停损点的设置过小,可能会被价格小幅滑点触发止损。
-
-### 优化方向
-
-1. 可以测试不同参数的移动平均线作为判断趋势的指标。
-2. 可以结合其他指标过滤震荡行情,避免在没有明确趋势时盲目交易。 
-3. 可以通过大数据分析获取更优的参数组合,如移动平均线周期、止损倍数、止盈比例等。
-4. 可以加入交易时间和品种的过滤条件来适配不同时间周期和不同品种的特点。
-
-### 总结
-
-双内含与趋势策略利用双内含形态提供较高概率的交易信号,同时辅助移动平均线判断大趋势的方向,在趋势方向做多做空,是一种较为稳定的突破类策略。通过参数优化和规则优化,可以使该策略对市场的适应性更好,获利概率更高。
-
-||
 
 ## Double Inside Bar & Trend Strategy
 
@@ -82,8 +46,6 @@ The Double Inside Bar & Trend strategy is a quantitative trading strategy that u
 ### Summary
 
 The Double Inside Bar & Trend strategy utilizes the high probability trading signals from double inside bars, aided by moving averages to determine the major trend direction to go long or short, making it a relatively stable breakout strategy. Through parameter optimization and logic optimization, the adaptability and profitability of this strategy can be improved.
-
-[/trans]
 
 > Strategy Arguments
 

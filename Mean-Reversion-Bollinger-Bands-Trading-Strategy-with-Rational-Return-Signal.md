@@ -11,56 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/1efe4c5d9655f94dee3.png)
 
-[trans]
-#### 概述
-本策略是一个基于布林带和价格均值回归原理的量化交易系统。通过监测价格与移动平均线之间的偏离程度,结合布林带上下轨的突破信号,在市场出现超买超卖后期待价格回归均值时进行交易。策略采用百分比阈值来衡量价格偏离程度,通过设定合理的触发条件来过滤虚假信号,提高交易的准确性。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用20日移动平均线作为中轨,配合2倍标准差构建布林带通道
-2. 引入3.5%的价格偏离阈值来识别显著偏离
-3. 通过is_outside变量跟踪价格是否处于偏离状态
-4. 当价格回归布林带区间内时,将触发交易信号
-5. 具体交易规则为:
-   - 当价格从偏离状态回归且突破上轨时做多
-   - 当价格从偏离状态回归且突破下轨时做空
-
-#### 策略优势
-1. 均值回归逻辑稳健
-   - 基于价格终将回归均值的统计规律
-   - 通过偏离阈值确保交易机会的显著性
-2. 风险控制完善
-   - 布林带提供了清晰的波动区间参考
-   - 偏离状态跟踪避免在剧烈波动中交易
-3. 参数可调节性强
-   - 布林带参数可根据品种特性调整
-   - 偏离阈值可根据风险偏好设定
-
-#### 策略风险
-1. 趋势市场失效风险
-   - 在强趋势市场中可能产生频繁假信号
-   - 建议增加趋势过滤器识别市场状态
-2. 参数敏感性风险
-   - 参数设置不当可能影响策略表现
-   - 需要通过历史数据回测优化参数
-3. 滑点成本风险
-   - 频繁交易可能带来较高交易成本
-   - 建议增加持仓时间限制和成本控制
-
-#### 策略优化方向
-1. 增加市场环境识别
-   - 引入趋势强度指标如ADX
-   - 根据市场状态动态调整参数
-2. 完善止盈止损机制
-   - 设置基于ATR的动态止损
-   - 引入移动止盈保护利润
-3. 优化交易频率
-   - 增加最小持仓时间限制
-   - 设置交易间隔控制成本
-
-#### 总结
-该策略通过布林带和均值回归原理捕捉市场超买超卖机会,结合合理的偏离阈值和状态跟踪机制,有效控制交易风险。策略框架具有良好的可扩展性,通过参数优化和功能完善可以适应不同市场环境。建议在实盘应用中注意风险控制,根据具体品种特性进行参数调整。 || 
-
 #### Overview
 This strategy is a quantitative trading system based on Bollinger Bands and price mean reversion principles. It monitors price deviation from the moving average, combined with Bollinger Bands breakout signals, to trade when expecting price regression after market overbought/oversold conditions. The strategy uses percentage thresholds to measure price deviation and sets reasonable trigger conditions to filter false signals and improve trading accuracy.
 
@@ -108,10 +58,7 @@ The core logic is based on the following key elements:
    - Set trading interval to control costs
 
 #### Summary
-This strategy captures market overbought/oversold opportunities through Bollinger Bands and mean reversion principles, effectively controlling trading risks with reasonable deviation thresholds and status tracking mechanisms. The strategy framework has good scalability and can adapt to different market environments through parameter optimization and functionality improvements. It's recommended to focus on risk control in live trading and adjust parameters according to specific instrument characteristics.[/trans]
-
-
-
+This strategy captures market overbought/oversold opportunities through Bollinger Bands and mean reversion principles, effectively controlling trading risks with reasonable deviation thresholds and status tracking mechanisms. The strategy framework has good scalability and can adapt to different market environments through parameter optimization and functionality improvements. It's recommended to focus on risk control in live trading and adjust parameters according to specific instrument characteristics.
 > Source (PineScript)
 
 ``` pinescript

@@ -10,60 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/15caac30779451f218a.png)
- [trans]
-## 概述
-
-本策略是一种短线震荡交易策略,它结合了EMA均线指标和CCI指标来识别市场的短线趋势和超买超卖状态,以捕捉短线价格波动的机会。
-
-## 策略原理
-
-该策略主要利用10日EMA,21日EMA和50日EMA三条均线以及CCI指标来判断入场和出场时机。
-
-具体逻辑是:
-当短期均线(10日EMA)上穿中期均线(21日EMA)并且短期均线高于长期均线(50日EMA),同时CCI指标大于0时视为多头信号,做多;当短期均线下穿中期均线并且短期均线低于长期均线,同时CCI指标小于0时视为空头信号,做空。
-
-平仓逻辑是短期均线重新跨过中期均线时平仓。
-
-## 策略优势
-
-1. 结合均线系统和CCI指标,可以有效识别短线价格波动的趋势方向和超买超卖状态。
-
-2. 利用均线金叉和死叉来判断entries和exists,简单实用。 
-
-3. CCI指标的参数和周期设置较为合理,可以滤除部分假信号。
-
-4. 采用多时间周期均线,可以在震荡市中获取较好的操作机会。
-
-## 策略风险
-
-1. 短线操作波动大,连续止损可能会比较多。
-
-2. CCI指标参数设置不当可能增多假信号。
-
-3. 震荡盘整理期间,该策略可能出现多次小亏损。
-
-4. 只适合短线频繁操作的交易者,不适合长线持有。
-
-对应的风险应对措施包括:优化CCI参数,调整止损位置,增加 FILTER 条件等。
-
-## 策略优化方向  
-
-1. 可以测试不同长度的EMA均线组合,优化参数。
-
-2. 可以加入其他指标或Filter条件来过滤掉部分假信号。例如MACD,KDJ等。
-
-3. 可以通过动态追踪止损来控制单笔亏损。
-
-4. 可以结合更高时间周期的趋势指标,避免逆势操作。
-
-
-## 总结
-
-本策略整体来说是一个典型的短线震荡策略,利用均线指标的金叉死叉结合CCI指标的超买超卖状态来捕捉价格的短期反转机会。该策略适合短线频繁交易,但需要承受一定的止损压力。通过参数优化和增加filter条件可以进一步提高策略稳定性和盈利能力。
-
-|| 
-
-# Overview
+ # Overview
 
 This is a short-term oscillation trading strategy that combines the EMA indicator and CCI indicator to identify short-term trends and overbought/oversold levels in the market, in order to capture opportunities from short-term price fluctuations.  
 
@@ -112,8 +59,6 @@ Corresponding risk mitigation measures include: optimizing CCI parameters, adjus
 # Conclusion
 
 Overall, this is a typical short-term oscillation strategy that uses the crossover of moving average lines combined with the overbought/oversold status of the CCI indicator to capture short-term reversal opportunities. This strategy is suitable for frequent short-term trading, but needs to withstand certain stop loss pressure. The stability and profitability of the strategy can be further improved through parameter optimization and adding filter conditions.
-
-[/trans]
 
 > Strategy Arguments
 

@@ -11,40 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/ef5fef3349f30ba268.png)
 
-[trans]
-#### 概述
-基于Chande动量振荡器(CMO)的均值回归交易策略是一种技术分析策略,通过计算一定时期内价格变动的动量来识别超买超卖区域。该策略主要通过监测资产价格的动量变化,在价格出现极端偏离时进行交易,以捕捉价格回归均值的机会。策略采用9天周期的CMO指标作为核心信号,在CMO低于-50时开仓做多,在CMO高于50或持仓时间超过5天时平仓。
-
-#### 策略原理
-策略的核心是CMO指标的计算和应用。CMO通过计算一定周期内上涨和下跌的差值与总和的比值来衡量动量。具体计算公式为:
-CMO = 100 × (上涨和 - 下跌和)/(上涨和 + 下跌和)
-
-与传统RSI不同,CMO在分子中同时使用了涨跌数据,提供了更对称的动量测量。策略在CMO低于-50时认为市场超卖,预期价格会回升,因此开仓做多。当CMO升至50以上或开仓超过5天时,策略平仓止盈或止损。
-
-#### 策略优势
-1. 信号明确 - CMO提供了清晰的超买超卖判断标准,交易信号明确,不会产生模棱两可的情况
-2. 风险控制完善 - 通过设置最大持仓时间,避免了长期套牢的风险
-3. 适应性强 - 策略可以根据不同市场情况调整参数,具有良好的适应性
-4. 理论基础扎实 - 基于成熟的均值回归理论,具有可靠的学术支持
-5. 计算简单 - 指标计算方法简单直观,易于理解和实现
-
-#### 策略风险
-1. 趋势市场风险 - 在强趋势市场中,均值回归策略可能频繁亏损
-2. 参数敏感性 - CMO周期和阈值的选择对策略表现影响较大
-3. 假信号风险 - 在市场波动剧烈时可能产生虚假信号
-4. 时间风险 - 固定的平仓时间可能错过更好的获利机会
-5. 滑点风险 - 在流动性较差的市场中可能面临较大滑点
-
-#### 策略优化方向
-1. 引入趋势过滤 - 可以添加长期趋势指标,在顺势时才开仓
-2. 动态参数优化 - 根据市场波动率动态调整CMO周期和阈值
-3. 完善止损机制 - 增加动态止损,保护已有利润
-4. 优化持仓时间 - 可以根据波动率动态调整最大持仓时间
-5. 增加成交量确认 - 结合成交量指标提高信号可靠性
-
-#### 总结
-该策略通过CMO指标捕捉市场超买超卖机会,结合固定时间止损,构建了一个稳健的均值回归交易系统。策略逻辑清晰,风险控制合理,具有良好的实用价值。通过进一步优化参数和增加辅助指标,策略的稳定性和盈利能力还可以进一步提升。 || 
-
 #### Overview
 The Mean-Reversion Trading Strategy based on the Chande Momentum Oscillator (CMO) is a technical analysis strategy that identifies overbought and oversold zones by calculating price momentum over a specific period. The strategy monitors momentum changes in asset prices and trades when prices show extreme deviations, aiming to capture mean-reversion opportunities. It uses a 9-day CMO indicator as the core signal, entering long positions when CMO falls below -50 and exiting when CMO rises above 50 or the holding period exceeds 5 days.
 
@@ -76,7 +42,7 @@ Unlike traditional RSI, CMO uses both up and down movements in the numerator, pr
 5. Volume Confirmation - Incorporate volume indicators to improve signal reliability
 
 #### Summary
-The strategy captures market overbought and oversold opportunities through the CMO indicator, combining fixed-time stop-loss to build a robust mean-reversion trading system. It features clear logic and reasonable risk control with practical value. The strategy's stability and profitability can be further enhanced through parameter optimization and additional auxiliary indicators.[/trans]
+The strategy captures market overbought and oversold opportunities through the CMO indicator, combining fixed-time stop-loss to build a robust mean-reversion trading system. It features clear logic and reasonable risk control with practical value. The strategy's stability and profitability can be further enhanced through parameter optimization and additional auxiliary indicators.
 
 
 

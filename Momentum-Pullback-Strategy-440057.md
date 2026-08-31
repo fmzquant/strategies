@@ -10,51 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/180f71489e86f079f61.png)
- [trans]
-## 概述
-
-动量讨价还价策略是一种中短线交易策略,它结合了移动平均线指标和K线形态模型,通过识别突破点和回调点来发现交易机会。该策略适用于看涨期权、看跌期权、期货等高杠杆金融产品的交易。
-
-## 策略原理
-
-该策略的核心逻辑基于5日简单移动平均线。当价格要突破该平均线时,会形成一个跳空的最高点或最低点K线,此时就是一个潜在的做多或做空信号。在价格突破平均线的第二根K线收盘时,若不破坏前一跳空K线的最低价或最高价,则形成入场信号。随后根据止损点和止盈目标设置风险敞口。
-
-当价格向上突破5日均线而收盘时,前一跳空K线的最高价为止损点,最低价减去一定回调范围乘以风险回报比作为止盈目标。当价格向下突破5日均线而收盘时,前一跳空K线的最低价为止损点,最高价加上一定回调范围乘以风险回报比作为止盈目标。
-
-该策略还提供了一个可选的过滤条件,即当前K线的收盘价相对于跳空K线要稍低或稍高,这样可以避免部分错误信号。
-
-## 策略优势分析
-
-- 策略思路清晰简洁,容易理解和实现
-- 基于移动平均线,可以识别趋势和回调
-- 结合K线形态,可以发现更精确的交易时点  
-- 风险和回报匹配,符合理性交易原则
-- 可根据自己的交易品种和周期进行参数调整
-- 提供可选过滤条件,可以减少错误信号
-
-## 策略风险分析 
-
-- 如其他技术指标策略,也可能出现被套、止损追击等风险
-- 移动平均线指标有滞后性,可能错过短线大行情
-- 在震荡趋势中,容易出现较多错误信号
-- 策略参数设置不当可能导致过度交易
-
-可以通过合理止损,适当宽松持仓,选择低频交易等方法降低风险。也可以考虑结合其他指标进行信号过滤。
-
-## 策略优化方向
-
-- 可以测试不同的参数组合,选择最佳参数
-- 可以结合其他指标或图形进行信号过滤优化 
-- 可以考虑动态止损、移动止损等方法
-- 可以结合机器学习模型自动优化参数
-- 可以开发自动止损、止盈插件
-- 可以尝试跨品种、跨周期验证策略健壮性
-
-## 总结
-
-本策略整体来说是一个易于理解和实现的中短线交易策略。它利用移动平均线和跳空K线形态识别趋势转折点,在理性的风险控制框架下进行操作。虽然仍存在一些改进空间,但其核心思路具有普适性,值得学习和应用。通过参数调整、信号过滤等优化措施,可以将该策略运用到更广泛的交易实践中。
-
-|| 
 
 ## Overview
 
@@ -99,7 +54,6 @@ Risks can be reduced via sensible stop losses, position sizing, less frequent tr
 
 Overall this is an easy to understand and implement medium-term trading strategy. It capitalizes on trend reversals identified by moving averages and gap candles, with a rational risk control framework. While further improvements are possible, the core logic is versatile for wider application via parameter tuning, signal filtering etc.
 
-[/trans]
 
 > Strategy Arguments
 

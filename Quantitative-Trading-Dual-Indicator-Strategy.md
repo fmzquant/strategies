@@ -10,53 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/f5be46db2dc9f1350f.png)
- [trans]
-
-## 概述
-
-本策略名称为“量化交易双重指标策略”。该策略同时利用布林带指标和相对强弱指标两个指标作为交易信号,实现了一种双重指标过滤的交易策略。
-
-## 策略原理  
-
-本策略的核心逻辑是同时利用布林带和RSI两个指标判断市场的超买超卖情况,进行交易信号过滤。
-
-具体来说,布林带的上轨和下轨可以判断价格是否处于波动范围之外,从而判断市场是否超买或超卖。相对强弱指标RSI则可以判断市场力量的强弱,RSI高于55时为超买信号,低于45时为超卖信号。
-
-本策略设置为,仅当布林带指标和RSI指标同时显示超买或超卖信号时,才会进行相应的买入或卖出操作。这样可以过滤掉部分误导性信号,提高策略稳定性。
-
-## 策略优势
-
-本策略最大的优势在于利用双重指标进行过滤,可以减少误导性交易,提高信号的可靠性。
-
-相比单一布林带指标,双重指标策略可以大幅度降低假信号的概率。相比单一RSI指标,则可以利用布林带判断目前是否处于震荡区间之外,防止在震荡市场中产生错误信号。
-
-整体来说,双重指标策略综合考虑了多种情况,适应性和稳定性都较好。
-
-## 策略风险和解决方法  
-
-本策略的主要风险在于布林带参数设置和RSI参数设置都可能不当。如果布林带参数设置得过于敏感,容易产生多余信号;如果RSI参数设置得过于宽松,效果减弱。
-
-此外,双重指标组合本身就意味着信号会更少。如果市场只符合一个指标的信号而另一个指标未达到触发水平,那么本策略就不会产生信号。因此相比单一指标策略,本策略的交易频率会更低。
-
-解决方法主要有设置更加恰当的参数,修改RSI和布林带的触发水平等。如果交易频率过低,可以考虑降低参数要求,提高入场机会。
-
-## 策略优化方向   
-
-本策略可以从以下几个方向进行优化:
-
-1. 测试不同的布林带参数和RSI参数组合,寻找更匹配的组合。现有参数可能并不完全适合所有品种和时间段。
-
-2. 增加止损止盈策略,提高盈利结果。当前的策略没有这些方面的考虑。
-
-3. 增加仓位管理机制。使用动态仓位可以在走势好的时候加大头寸,在走势差时减少亏损。
-
-4. 增加基于历史数据的参数自适应功能。让指标参数可以自动优化,适应最新市况。
-
-## 总结
-
-本策略作为一种双重指标过滤的策略,总体稳定性和适应性较好。它在降低假信号比例的同时,也降低了交易频率。通过优化指标参数和增加辅助功能,可以进一步增强策略的盈利空间。
-
-||
 
 ## Overview
 
@@ -100,7 +53,7 @@ This strategy can be optimized in the following aspects:
 
 ## Conclusion 
 As a dual indicator filtered strategy, this strategy has good overall stability and adaptability. While reducing the proportion of false signals, it also reduces the trading frequency. By optimizing indicator parameters and adding auxiliary functions, the profit potential of the strategy can be further enhanced.
-[/trans]
+
 
 > Strategy Arguments
 

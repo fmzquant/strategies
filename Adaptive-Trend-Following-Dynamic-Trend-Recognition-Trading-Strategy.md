@@ -11,39 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/11f344aa60260109dc3.png)
 
-[trans]
-#### 概述
-本策略是一个结合了Supertrend指标和考夫曼自适应移动平均线(KAMA)的趋势跟踪交易系统。该策略通过动态识别市场趋势变化,在上升趋势中寻找做多机会,并采用灵活的止损机制来控制风险。策略的核心思想是利用Supertrend指标的趋势方向判断能力,结合KAMA指标对市场波动的自适应特性,在市场上涨趋势中建立多头仓位。
-
-#### 策略原理
-策略采用了双重技术指标确认系统。首先,Supertrend指标通过ATR和自定义系数计算趋势方向,当指标线位于价格下方时表示上升趋势。其次,KAMA指标通过自适应机制调整移动平均线的敏感度,能够更好地适应不同市场环境。入场信号需同时满足两个条件:Supertrend指示上升趋势且价格位于KAMA线之上。同样,出场信号也需要双重确认:Supertrend转为下降趋势且价格跌破KAMA线。这种双重确认机制有效降低了虚假信号的影响。
-
-#### 策略优势
-1. 采用双重技术指标确认机制,提高信号可靠性
-2. KAMA指标具有自适应特性,能够根据市场波动调整灵敏度
-3. Supertrend指标提供明确的趋势方向指示
-4. 具有完善的止损机制,能够有效控制风险
-5. 策略逻辑清晰,参数可调整性强
-6. 入场和出场信号明确,易于执行
-
-#### 策略风险
-1. 震荡市场可能产生频繁交易信号,增加交易成本
-2. 趋势反转初期可能出现滞后性,影响止损效果
-3. 参数选择不当可能导致过度敏感或迟钝
-4. 市场快速波动时可能面临较大滑点
-5. 交易成本和滑点可能影响策略整体收益
-
-#### 策略优化方向
-1. 引入波动率过滤机制,在高波动率期间调整参数或暂停交易
-2. 增加成交量指标作为辅助确认
-3. 优化止损机制,可考虑采用跟踪止损
-4. 增加策略适用的市场环境判断
-5. 加入时间过滤,避免特定时间段的交易
-6. 开发自适应参数优化系统
-
-#### 总结
-该策略通过结合Supertrend和KAMA两个技术指标,构建了一个稳健的趋势跟踪交易系统。策略的主要优势在于其自适应性和风险控制能力,通过双重确认机制提高了交易信号的可靠性。虽然在震荡市场中可能面临一些挑战,但通过合理的参数设置和优化方向的实施,策略的整体表现可以得到进一步提升。该策略特别适合中长期趋势交易,在明确趋势的市场环境中表现较好。 || 
-
 #### Overview
 This strategy is a trend-following trading system that combines the Supertrend indicator with the Kaufman Adaptive Moving Average (KAMA). It dynamically identifies market trend changes, seeks long opportunities in uptrends, and employs flexible stop-loss mechanisms for risk control. The core concept relies on the Supertrend indicator's trend direction determination capability, combined with KAMA's market volatility adaptive characteristics, to establish long positions in upward market trends.
 
@@ -74,9 +41,7 @@ The strategy employs a dual technical indicator confirmation system. First, the 
 6. Develop adaptive parameter optimization system
 
 #### Conclusion
-This strategy constructs a robust trend-following trading system by combining Supertrend and KAMA technical indicators. Its main advantages lie in adaptability and risk control capabilities, with enhanced trading signal reliability through dual confirmation. While facing challenges in choppy markets, the strategy's overall performance can be further improved through appropriate parameter settings and optimization implementations. It is particularly suitable for medium to long-term trend trading and performs well in markets with clear trends.[/trans]
-
-
+This strategy constructs a robust trend-following trading system by combining Supertrend and KAMA technical indicators. Its main advantages lie in adaptability and risk control capabilities, with enhanced trading signal reliability through dual confirmation. While facing challenges in choppy markets, the strategy's overall performance can be further improved through appropriate parameter settings and optimization implementations. It is particularly suitable for medium to long-term trend trading and performs well in markets with clear trends.
 
 > Source (PineScript)
 

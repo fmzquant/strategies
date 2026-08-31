@@ -12,44 +12,6 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d973da61a0bc4461e9e3.png)
 ![IMG](https://www.fmz.com/upload/asset/2d86b155b273bf39583a0.png)
 
-
-
-[trans]
-#### 概述
-这是一个基于无影线平均K线(Heikin-Ashi)和成交量加权平均价格(VWAP)的自动交易系统。该策略通过识别特定的K线形态,结合VWAP作为动态支撑/阻力位,在设定的交易时间内执行买卖操作。系统采用固定止盈止损点位管理风险,并在每日特定时间强制平仓以避免隔夜风险。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. 使用Heikin-Ashi K线代替传统K线,通过计算开盘价、最高价、最低价和收盘价的平均值,能更好地识别市场趋势。
-2. 买入条件:绿色Heikin-Ashi K线(无下影线)形成且价格位于VWAP之上。
-3. 卖出条件:红色Heikin-Ashi K线(无上影线)形成且价格位于VWAP之下。
-4. 采用固定50点的止盈目标,触及成本价则平仓。
-5. 在15:01时强制平仓所有未平仓位置。
-
-#### 策略优势
-1. 结合了Heikin-Ashi和VWAP两个强大的技术指标,提高了交易信号的可靠性。
-2. 无影线要求确保了更强的趋势确认信号。
-3. 固定止盈止损点位有助于严格的风险控制。
-4. 日内交易策略避免了隔夜风险。
-5. 系统完全自动化,减少了人为情绪干扰。
-
-#### 策略风险
-1. 固定止盈止损点位可能不适合所有市场条件,特别是在波动性变化时。
-2. 强制平仓时间可能导致错过延续性行情。
-3. 无影线的严格要求可能导致错过部分有效交易机会。
-4. 在横盘市场中可能产生频繁的假信号。
-5. VWAP在低交易量期间的参考价值可能降低。
-
-#### 策略优化方向
-1. 引入ATR动态调整止盈止损点位,使策略更好地适应市场波动性。
-2. 增加趋势过滤器,减少横盘市场中的假信号。
-3. 优化平仓时间,可根据市场特征动态调整。
-4. 添加交易量过滤器,提高VWAP指标的可靠性。
-5. 实现追踪止损功能,更好地保护盈利。
-
-#### 总结
-该策略通过结合Heikin-Ashi和VWAP指标,构建了一个稳健的日内交易系统。虽然存在一些优化空间,但基本框架具有良好的实用性。通过提议的优化方向,策略有望在不同市场条件下取得更好的表现。重点是要根据具体交易品种的特点,对各项参数进行细致的调优。 || 
-
 #### Overview
 This is an automated trading system based on shadowless Heikin-Ashi candlesticks and Volume Weighted Average Price (VWAP). The strategy executes trades by identifying specific candlestick patterns and using VWAP as dynamic support/resistance levels within defined trading hours. It manages risk through fixed take-profit and stop-loss levels, with forced position closure at a specific time to avoid overnight exposure.
 
@@ -83,8 +45,7 @@ The core logic is based on several key elements:
 5. Develop trailing stop-loss functionality for better profit protection.
 
 #### Summary
-The strategy builds a robust intraday trading system by combining Heikin-Ashi and VWAP indicators. While there is room for optimization, the basic framework shows good practicality. Through the proposed optimization directions, the strategy has potential for better performance under various market conditions. The key is to fine-tune parameters according to specific trading instrument characteristics.[/trans]
-
+The strategy builds a robust intraday trading system by combining Heikin-Ashi and VWAP indicators. While there is room for optimization, the basic framework shows good practicality. Through the proposed optimization directions, the strategy has potential for better performance under various market conditions. The key is to fine-tune parameters according to specific trading instrument characteristics.
 
 
 > Source (PineScript)

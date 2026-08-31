@@ -9,21 +9,21 @@ Zero
 
 > Strategy Description
 
-今天假设有一个笨笨的大型机构投资人（共同基金，银行，退休基金….），他想要买进一只股票，但又不想挂市价买进，所以就在市场里面挂了一张要买进的大单。这时候所有市场里面的人都会看的到limit order book里面有人挂进了大单准备要买进这只股票。
+Assume a large institutional investor such as a mutual fund, bank, or pension fund wants to buy a stock but does not want to use a market order. Instead, it places a very large bid in the order book. Everyone in the market can then see that there is a sizable limit order waiting to buy the stock.
 
-假设市场本来的order book是200 | $1.01 x $1.03 | 200，然后突然这个笨笨的机构投资人进来挂了一张3000股$1.01 的买单，这时候order book会变成3,200 | $1.01 x $1.03 | 200。而我们通常称这个笨笨的机构投资人为”大象，elephant”，而高频交易者知道$1.01的价位有支撑的买单，所以便会把他们的bid price提高1美分到$1.02，而这样的策略就叫做Penny Jump。因为高频交易者知道往下一档的地方，有一只”大象”在支撑着。所以如果价格往上涨到$1.03 x $1.05的话，他就可以马上赚取$0.01的利润。
+Suppose the original order book is 200 | $1.01 x $1.03 | 200. If that investor suddenly posts a bid for 3,000 shares at $1.01, the order book becomes 3,200 | $1.01 x $1.03 | 200. This large passive buyer is often called an "elephant." High-frequency traders know there is strong support at $1.01, so they step ahead of the elephant by raising their bid one tick to $1.02. That tactic is called Penny Jump. If the market then moves up to $1.03 x $1.05, they can quickly earn $0.01.
 
-如果高频交易商买进这只股票之后，就算价格没有往上涨的话，因为下面有一只大象在支撑着，所以他也可以很快的反手用$1.01的价位卖给这只大象。
+Even if the price does not rise after the high-frequency trader buys, the elephant below still provides support, so the trader may still be able to sell back to the elephant at $1.01.
 
-对于高频交易商来说，他们获利的方法其实也很简单，就是由市场上的微结构(microstrucutre)来推测交易对手的意图，然后抢先他人一步建立部位。然后在短时间之内赚取微小利润，再迅速离开市场。
+For high-frequency traders, the profit model is straightforward: infer counterparty intent from market microstructure, establish a position ahead of slower participants, capture a small profit quickly, and exit fast.
 
-对于这只大象来说，他因为在市场里面挂了一张巨量的买单，所以暴露了他的交易意图，自然就变成高频交易者猎杀的目标。
+For the elephant, posting such a large visible order reveals its trading intent and naturally turns it into a target for high-frequency traders.
 
-而在现实的股票交易世界里面，应该很少有这种笨笨的机构投资人会明目张胆的在市场上挂出巨量的买单（或卖单）。反而常见的是大型机构投资人，想要出脱一只股票，所以故意挂出巨量的买单来制造假象，来吸引高频交易者进场来推升股价，然后再一股脑的把货倒出来，而这就是交易世界里面的尔虞我 诈。
+In real equity markets, truly naive institutions rarely expose themselves so openly with a huge buy or sell order. More often, a large participant that wants to unload stock may intentionally place a large bid to create a false impression, lure high-frequency traders into pushing the price higher, and then sell into that strength. This is part of the strategic deception common in trading.
 
-对于高频交易商来说，一旦这个策略被看穿而被”对作,Gaming”，则他们就又会回头来”反对作”，发展策略来吃这种机构投资人”对作”的豆腐。
+And once high-frequency traders realize they are being gamed, they in turn adapt and develop strategies to profit from those institutions again.
 
-附图: 
+Illustration:
 
 https://dn-filebox.qbox.me/33ecc8cd888b2918dcfb4044913c3c89a4cd4061.jpg
 
@@ -33,17 +33,17 @@ https://dn-filebox.qbox.me/33ecc8cd888b2918dcfb4044913c3c89a4cd4061.jpg
 
 |Argument|Default|Description|
 |----|----|----|
-|Interval|2000|出错重试间隔(毫秒)|
-|Lot|0.01|手数|
-|DisableLog|false|关闭订单跟踪|
-|ElephantAmount|10|大象级别(BTC)|
-|ElephantSpace|0.2|大象距离(元)|
-|LockCount|true|大象确定次数|
-|PennyTick|0.1|跳|
-|WaitInterval|5000|买单超时(毫秒)|
-|CheckInterval|300|快速检测间隔(毫秒)|
-|ProfitTick|5|利润跳数|
-|STTick|true|止损跳数|
+|Interval|2000|Retry interval after error (ms)|
+|Lot|0.01|Lot size|
+|DisableLog|false|Disable order tracking logs|
+|ElephantAmount|10|Elephant threshold (BTC)|
+|ElephantSpace|0.2|Elephant distance (quote currency)|
+|LockCount|true|Elephant confirmation count|
+|PennyTick|0.1|Jump tick|
+|WaitInterval|5000|Buy order timeout (ms)|
+|CheckInterval|300|Fast check interval (ms)|
+|ProfitTick|5|Profit ticks|
+|STTick|true|Stop-loss ticks|
 
 
 > Source (javascript)

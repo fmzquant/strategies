@@ -9,10 +9,10 @@ Simple-Iceberg-order-to-buy
 
 > Strategy Description
 
-Very simple, just for learn.
-Code is best annotation.
+Very simple, just for learning.
+Code is the best annotation.
 
-冰山委托买入，将订单分成小笔M买入，避免冲击市场，是很好的简单入门比特币量化交易的学习策略
+This iceberg buy strategy splits an order into many small purchases to reduce market impact, making it a simple introductory strategy for learning Bitcoin quantitative trading.
 
 > Strategy Arguments
 

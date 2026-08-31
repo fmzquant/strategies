@@ -11,55 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/aa5227227dd547d130.png)
 
-[trans]
-#### 概述
-该策略是一个基于TTM指标的动态网格交易系统,通过对高低点的指数移动平均线(EMA)进行计算来判断市场趋势方向,并在动态更新的基准价格周围部署网格交易系统。网格的方向和价格水平会根据趋势动态调整,当价格穿越预定义的网格水平时执行交易,每笔交易风险敞口为账户权益的固定百分比。
-
-#### 策略原理 
-策略的核心逻辑在于TTM状态计算,它通过以下步骤实现:
-1. 基于ttmPeriod参数计算两个EMA:低点EMA(lowMA)和高点EMA(highMA)
-2. 在highMA和lowMA之间定义两个阈值水平:
-   - lowThird:底部1/3位置
-   - highThird:底部2/3位置
-3. 根据收盘价相对于这些阈值的位置确定TTM状态:
-   - 当收盘价高于highThird时,返回1(上升趋势)
-   - 当收盘价低于lowThird时,返回0(下降趋势) 
-   - 当收盘价在lowThird和highThird之间时,返回-1(中性状态)
-
-网格交易系统会根据TTM状态动态调整:
-1. 当TTM状态发生变化时,更新网格基准价格和方向
-2. 根据网格方向和间距计算买卖价格水平
-3. 在价格突破网格水平时执行相应的买入或卖出操作
-
-#### 策略优势
-1. 动态适应性强:策略能够根据市场趋势动态调整网格方向和价格水平,提高了策略的适应性和盈利能力
-2. 风险控制完善:采用固定百分比进行头寸管理,有效控制每笔交易的风险敞口
-3. 参数可调性好:关键参数如TTM周期、网格级别和间距都可以根据不同市场情况进行优化
-4. 执行机制清晰:交易信号明确,执行逻辑简单直观,便于回测和实盘操作
-
-#### 策略风险
-1. 趋势判断延迟:基于EMA的TTM指标存在一定滞后性,可能导致趋势转折点的信号延迟
-2. 震荡市场风险:在横盘震荡市场中,频繁的网格方向切换可能导致过度交易和手续费损失
-3. 资金管理压力:多个网格同时运行时需要较大资金规模,可能影响策略的实际可行性
-4. 滑点影响:高频网格交易在流动性不足时可能面临较大滑点,影响策略表现
-
-#### 策略优化方向
-1. 趋势判断优化:
-   - 引入多时间周期分析,提高趋势判断准确性
-   - 结合其他技术指标如RSI、MACD等进行趋势确认
-2. 网格参数优化:
-   - 根据波动率动态调整网格间距
-   - 引入自适应网格级别调整机制
-3. 资金管理改进:
-   - 实现动态头寸分配
-   - 增加风险平价机制
-4. 执行机制完善:
-   - 增加止损和止盈机制
-   - 优化订单执行时机
-
-#### 总结
-该策略通过将TTM趋势判断与动态网格交易相结合,实现了一个自适应性强、风险可控的交易系统。通过动态调整网格方向和价格水平,策略能够较好地适应不同市场环境。虽然存在一些固有风险,但通过合理的参数设置和优化措施,策略具有良好的实用价值和发展潜力。 || 
-
 #### Overview
 This strategy is a dynamic grid trading system based on the TTM indicator, which determines market trend direction by calculating exponential moving averages (EMAs) of highs and lows, and deploys a grid trading system around a dynamically updated base price. The grid's direction and price levels adjust according to the trend, executing trades when price crosses predefined grid levels, with each trade risking a fixed percentage of account equity.
 
@@ -106,7 +57,7 @@ The grid trading system adjusts dynamically based on TTM state:
    - Optimize order execution timing
 
 #### Summary
-This strategy combines TTM trend detection with dynamic grid trading to create an adaptive, risk-controlled trading system. Through dynamic adjustment of grid direction and price levels, the strategy can effectively adapt to different market environments. While inherent risks exist, through appropriate parameter settings and optimization measures, the strategy demonstrates good practical value and development potential.[/trans]
+This strategy combines TTM trend detection with dynamic grid trading to create an adaptive, risk-controlled trading system. Through dynamic adjustment of grid direction and price levels, the strategy can effectively adapt to different market environments. While inherent risks exist, through appropriate parameter settings and optimization measures, the strategy demonstrates good practical value and development potential.
 
 
 

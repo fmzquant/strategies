@@ -8,94 +8,8 @@
 ianzeng123
 
 > Strategy Description
-
 ![IMG](https://www.fmz.com/upload/asset/2d81408bba02ecc413156.png)
 ![IMG](https://www.fmz.com/upload/asset/2d8874cf86e5ce6b27285.png)
-
-
-[trans]
-
-## 概述
-
-该策略是一个基于KDJ指标的量化交易系统，专为5分钟K线设计，采用极简参数优化了指标的灵敏度和响应速度。策略核心是通过识别市场的超买超卖状态，在极度超卖区域建立多头头寸，在极度超买区域平仓或建立空头头寸。特别之处在于策略采用动态资金管理，根据账户权益自动调整持仓规模，同时设置了详细的时间过滤条件以控制交易窗口。
-
-## 策略原理
-
-该策略基于KDJ随机指标的波动特性展开交易决策。KDJ指标由三条线组成：K线、D线和J线，其中：
-
-1. K值通过计算收盘价在最近N个周期高低点范围内的相对位置得出
-2. D值是K值的移动平均
-3. J值通过公式3*K-2*D计算得出，放大了K值与D值之间的差异
-
-策略使用了特别短的周期设置（长度为5，K和D的平滑因子均为1），这确保了指标能够对价格变动做出快速响应，特别适合5分钟这种短周期图表的波动特性。
-
-交易逻辑设计如下：
-- 当K线下穿5时（极度超卖），建立多头头寸
-- 当K线上穿90时（极度超买），平仓多头头寸
-- 当K线上穿95时（极度超买），建立空头头寸
-- 当K线下穿10时（极度超卖），平仓空头头寸
-
-整个策略通过时间过滤器限制交易区间，只在用户设定的日期范围内（默认2018年1月1日至2069年12月31日）执行交易信号。
-
-## 策略优势
-
-1. **高度灵敏的市场响应能力**：通过设置极短的参数（长度5，平滑因子1），策略能够在市场调头的早期阶段捕捉信号，有效减少滞后。
-
-2. **清晰的交易规则**：策略采用严格的数值阈值（K<5进多，K>90出多，K>95进空，K<10出空）作为交易触发条件，消除了主观判断，便于量化回测和优化。
-
-3. **动态资金管理**：策略根据账户权益和当前价格自动计算头寸大小，实现100%资金利用，随着账户增长自动放大交易规模。
-
-4. **灵活的时间过滤**：通过时间过滤器，策略可以限制在特定时间段内交易，避开不稳定或低效的市场环境。
-
-5. **双向交易机制**：同时支持多空两个方向的交易，可以充分利用市场双向波动的机会。
-
-6. **视觉辅助功能**：策略通过标签显示K、D、J值以及超买超卖水平线，方便交易者直观监控指标状态。
-
-## 策略风险
-
-1. **震荡市场假信号风险**：在横盘整理或小幅震荡行情中，KDJ频繁穿越超买超卖区间可能导致频繁交易和连续亏损。
-
-2. **趋势持续风险**：在强劲趋势中，市场可能长时间保持在超买或超卖状态，导致过早平仓或逆势交易。
-
-3. **滑点影响**：虽然策略设置了3个点的滑点，但在高波动环境下，实际滑点可能更大，影响策略执行效果。
-
-4. **资金管理风险**：使用100%资金进行单一方向交易会带来较高的风险暴露，缺乏分散投资和风险控制机制。
-
-5. **参数敏感性**：策略性能高度依赖于KDJ参数设置，微小的参数变化可能导致显著不同的交易结果。
-
-6. **市场缺口风险**：在跳空行情中，价格可能直接跨过触发价位，导致实际执行价格远离理想入场点。
-
-解决方法：
-- 增加趋势过滤条件，如移动平均线或ADX指标，避免在震荡市场中频繁交易
-- 引入止损机制，限制单笔交易的最大亏损
-- 降低资金利用率，如只使用30-50%资金进行单一交易
-- 通过多时间周期确认，提高信号可靠性
-
-## 策略优化方向
-
-1. **增加趋势过滤器**：结合方向性指标如ADX或移动平均线系统，只在主趋势方向执行交易，可大幅减少假信号并提高盈利能力。
-
-2. **优化资金管理系统**：引入基于波动率的头寸管理，如ATR止损或Kelly准则计算最优仓位，以平衡风险与收益。
-
-3. **加入多时间周期确认**：在执行5分钟信号前，先确认更高时间框架（如15分钟或1小时）的市场状态，提高信号质量。
-
-4. **动态参数自适应**：基于市场波动率或交易量动态调整KDJ参数，使策略能适应不同市场环境。
-
-5. **增加交易过滤条件**：如交易量确认、价格形态验证或市场开盘时间限制，避免低质量信号。
-
-6. **引入部分仓位管理**：采用分批建仓和减仓机制，而非一次性满仓操作，降低单点风险。
-
-7. **增加止损和止盈机制**：设置基于ATR或固定百分比的止损，保护资金安全；同时配置适当的止盈机制，锁定利润。
-
-这些优化方向的核心目的是提高策略的稳健性和适应性，使其能够在不同市场环境中保持稳定表现，而不仅仅依赖于特定参数和市场条件。
-
-## 总结
-
-这是一个基于KDJ指标超买超卖原理的短线交易策略，通过高度灵敏的参数设置捕捉5分钟图表上的快速价格反转机会。策略简洁明了，易于理解和实施，具有完整的信号生成机制和资金管理系统。
-
-其主要优势在于响应迅速、规则清晰和双向交易能力，但同时也面临震荡市场假信号和趋势持续风险。通过增加趋势过滤器、多时间周期确认和优化资金管理系统，策略性能有望得到显著提升。
-
-最适合作为短期交易者的基础策略框架，在此基础上根据具体交易品种和市场环境进行进一步优化和定制。尤其适合波动性较高但有一定范围界限的交易品种，在这类市场中可以充分发挥KDJ指标捕捉反转点的优势。|| 
 
 ## Overview
 
@@ -177,10 +91,7 @@ This is a short-term trading strategy based on the overbought and oversold princ
 
 Its main advantages are quick response, clear rules, and bi-directional trading capabilities, but it also faces false signal risks in ranging markets and trend continuation risks. By adding trend filters, multi-timeframe confirmation, and optimizing the capital management system, strategy performance can be significantly improved.
 
-It is most suitable as a basic strategy framework for short-term traders, with further optimization and customization based on specific trading instruments and market environments. It is particularly suitable for trading instruments with high volatility but defined range boundaries, where the KDJ indicator's advantage in capturing reversal points can be fully leveraged.[/trans]
-
-
-
+It is most suitable as a basic strategy framework for short-term traders, with further optimization and customization based on specific trading instruments and market environments. It is particularly suitable for trading instruments with high volatility but defined range boundaries, where the KDJ indicator's advantage in capturing reversal points can be fully leveraged.
 > Source (PineScript)
 
 ``` pinescript

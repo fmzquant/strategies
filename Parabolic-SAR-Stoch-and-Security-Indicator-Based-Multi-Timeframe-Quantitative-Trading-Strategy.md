@@ -10,51 +10,7 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/a3621d4ce7c5788319.png)
- [trans]
-
-## 概述
-
-本策略名为“三重保险”量化交易策略,运用Parabolic SAR、Stoch和Security三个指标的组合信号,实现对突破性行情的捕捉。该策略多时间框架分析,通过不同周期指标的组合,实现更稳定和可靠的交易决策。
-
-## 策略原理  
-
-本策略使用Parabolic SAR指标判断趋势方向和反转时机。Stoch指标判断是否过买过卖。Security函数提取更高周期均线的方向判断整体趋势。三者结合构成交易决策:
-
-1. Parabolic SAR点数转化为下方时,视为看涨信号;点数上翻时,则看跌。
-
-2. Stoch K值低于20视为超卖,高于80视为超买。超卖时看涨,超买时看跌。   
-
-3. Security函数调用更高周期均线判断整体趋势方向,实现不同时间周期之间的组合分析。
-
-上述三个指标同向看涨时做多,同向看跌时做空。严格遵循多重指标过滤的原则,可有效过滤假突破,锁定真实趋势。
-
-## 策略优势
-
-本策略最大优势在于多时间框架分析。三个指标分别判断短期、中期和长期不同级别上的价格行为。Parabolic SAR捕捉反转时机和短期趋势;Stoch判断当下是否过买过卖;Security函数判断总体大趋势方向。三者互为佐证,可有效避免假突破的干扰,锁定突破方向正确的机会。
-
-同时,本策略采用多个指标判断和过滤,可最大限度地减少单一指标误判的概率。连续三重判断的通过,说明行情信号强度足够,从而确保交易决策的正确性。
-
-## 策略风险
-
-本策略主要风险在于指标参数设置的恰当性。Parabolic SAR的步长和最大步长设置会直接影响其捕捉反转速度;Stoch的K值和D值平滑周期需要符合市场特征;Security函数的选择周期也会对判断产生影响。这些关键参数的不当设置,都可能导致策略交易决策的错误。
-
-此外,多时间框架分析原理强调不同周期指标的组合运用。但是,如果长短周期指标之间出现分歧时,该如何处理也是一个需要关注的问题。一个可能的解决思路是结合趋势指标判断整体方向,BREAKOUT类指标确定具体出场时机。
-
-## 策略优化方向  
-
-本策略后续优化方向主要在以下三个方面:
-
-1. 增加自适应步长机制。允许Parabolic SAR的参数根据市场波动程度做出调整,更好捕捉反转。
-
-2. 增加止损机制。当价格向不利方向突破某一水平时,选择止损退出。控制单笔损失。
-
-3. 引入机器学习技术。通过算法训练判断不同时间段价格行为的相关性。不同时间框架组合策略参数也可通过算法优化获得。
-
-## 总结
-
-“三重保险”量化策略充分利用Parabolic SAR、Stoch和Security指标的互补优势。它们从短期趋势、超买超卖和长期均线三个维度判断市场行为的一致性,构建出稳定可靠的交易策略。组合使用多个指标有助于过滤假信号,而多时间框架的运用则可在长短周期得到验证的前提下做出决策。总体而言,本策略整合性强,实战水平高,值得进一步研究和应用。
-
-||
+ 
 
 ## Overview
 
@@ -97,8 +53,6 @@ The main directions for further optimization of this strategy are in the followi
 ## Conclusion  
 
 The “Triple Insurance” quantitative strategy makes full use of the complementary advantages of Parabolic SAR, Stoch and Security indicators. They judge the consistency of market behaviors from the dimensions of short-term trends, overbought/oversold levels and long-term moving averages to construct a stable and reliable trading strategy. Using multiple indicators helps filter out false signals. Multi-timeframe usage enables decision-making on the premise that verification is obtained across both short and long cycles. In general, this strategy has strong integration and high practicality, making it worthwhile for further research and application.
-
-[/trans]
 
 > Strategy Arguments
 

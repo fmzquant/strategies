@@ -11,45 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/166906fae3f118255ae.png)
 
-[trans]
-#### 概述
-该策略是一个基于多重技术指标的量化交易系统，结合了指数移动平均线(EMA)、相对波动指数(RVI)和自定义交易信号进行交易决策。系统采用动态止损和获利目标，通过ATR指标进行风险管理，实现了一个全面的交易策略框架。
-
-#### 策略原理
-策略主要依靠三个核心组件做出交易决策：
-1. 双均线系统：使用20周期和200周期的EMA，通过均线交叉判断市场趋势
-2. RVI指标：用于确认市场波动方向，提供额外的交易确认信号
-3. 自定义信号：整合外部交易信号，为交易决策提供第三重确认
-系统在以下条件同时满足时进入多头：
-- EMA20上穿EMA200
-- RVI为正值
-- 收到做多信号
-空头条件相反。同时，系统使用基于ATR的动态止损和获利目标来管理风险。
-
-#### 策略优势
-1. 多重确认机制：通过多个独立指标的综合分析降低虚假信号
-2. 动态风险管理：基于ATR的止损设置能够适应市场波动
-3. 灵活的资金管理：采用基于现金的头寸规模计算
-4. 可视化支持：完整的图形界面支持，便于分析和优化
-5. 模块化设计：各组件独立，便于维护和优化
-
-#### 策略风险
-1. 均线滞后性：EMA指标本质上是滞后指标，可能导致入场延迟
-2. 信号依赖：过度依赖多重信号可能导致错过部分交易机会
-3. 市场适应性：在震荡市场中可能产生频繁的虚假信号
-4. 参数敏感性：多个指标参数需要精确调优，增加了优化难度
-建议通过回测不同市场环境来优化参数，并考虑添加市场环境过滤器。
-
-#### 策略优化方向
-1. 市场环境识别：添加市场状态判断模块，在不同市场环境使用不同参数
-2. 动态参数调整：根据市场波动率自动调整EMA和RVI的周期
-3. 信号权重系统：为不同指标设置动态权重，提高系统适应性
-4. 止损优化：考虑添加移动止损，更好地保护利润
-5. 头寸管理：实现更复杂的头寸管理策略，如金字塔加仓
-
-#### 总结
-该策略通过综合运用多个技术指标和风险管理工具，构建了一个相对完整的交易系统。虽然存在一些固有的局限性，但通过建议的优化方向，系统有望获得更好的表现。关键是要在实盘中持续监控和调整，确保策略在不同市场环境中都能保持稳定性。 ||
-
 #### Overview
 This strategy is a quantitative trading system based on multiple technical indicators, combining Exponential Moving Averages (EMA), Relative Volatility Index (RVI), and custom trading signals for decision-making. The system employs dynamic stop-loss and take-profit targets using the ATR indicator for risk management, creating a comprehensive trading strategy framework.
 
@@ -86,9 +47,7 @@ Recommend backtesting across different market conditions and considering market 
 5. Position Management: Implement more sophisticated position management strategies
 
 #### Summary
-The strategy builds a relatively complete trading system through the comprehensive use of multiple technical indicators and risk management tools. While there are some inherent limitations, the system shows promise for improved performance through the suggested optimizations. The key is continuous monitoring and adjustment in live trading to ensure strategy stability across different market conditions.[/trans]
-
-
+The strategy builds a relatively complete trading system through the comprehensive use of multiple technical indicators and risk management tools. While there are some inherent limitations, the system shows promise for improved performance through the suggested optimizations. The key is continuous monitoring and adjustment in live trading to ensure strategy stability across different market conditions.
 
 > Source (PineScript)
 

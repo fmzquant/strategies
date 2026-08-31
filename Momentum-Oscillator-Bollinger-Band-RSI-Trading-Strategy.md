@@ -9,60 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[简体中文]
-
-## 概述
-
-这个策略通过结合使用布林带和相对强弱指标RSI来预测价格波动性和最佳入场点。策略逻辑非常直接,我们关注收盘价触及布林带下轨的时候,之后会出现两种情况,价格要么从布林带下轨反弹,要么继续下跌。为了确认价格走势,我们采用第二个指标RSI进一步研究价格趋势。例如,如果价格触及布林带下轨但是RSI值没有进入超卖区,我们可以判断价格会继续下跌。如果RSI值进入超卖区,我们可以把这个价格区域作为我们的入场点。 
-
-我们需要设置止损来避免如果RSI值过长时间滞留在超卖区而造成大量资金损失。
-
-最佳止盈区域是当价格重新反弹到布林中轨/上轨以上或者RSI达到超买区时,以先到者为准。
-
-多头入场: 
-
-RSI < 30 且收盘价 < 布林下轨
-
-多头离场:
-
-RSI > 70
-
-## 策略原理
-
-该策略首先计算RSI指标,通过设定上下界来判断是否超买超卖。然后计算布林带的中轨、上轨和下轨。当收盘价触及布林下轨且RSI低于30时,做多;当RSI高于70时,平仓。
-
-进入多头时,设置止盈止损点。止盈点设为入场价*(1+固定比例),止损点设为入场价*(1-固定比例)。
-
-这样,我们在布林带下轨附近同时RSI低点时买入,在RSI高点时卖出,利用反转交易获利。同时设置止盈止损来控制风险。
-
-## 优势分析
-
-- 利用布林带判断价格反转点,增加准确性
-- RSI指标过滤假突破,确保入场的可靠性
-- 设置止盈止损,可以很好控制单次交易风险
-- 回测数据充分,参数调优到位,实现稳定盈利
-
-## 风险分析
-
-- 布林带不能完全预测价格转折点,存在一定失败率
-- RSI指标发出假信号的概率也存在
-- 止损点过近无法持仓,过远增加风险
-
-可以通过调整布林带参数,选用其他指标配合,以及适当放宽止损范围来降低风险。
-
-## 优化方向
-
-- 可以考虑结合其他指标如KD、MACD等过滤入场
-- 动态调整止损止盈比例
-- 优化布林带参数
-- 测试不同交易品种参数健壮性
-
-## 总结
-
-该策略整体风险收益平衡良好,回测表现较好。通过参数调优和指标优化还可进一步提升效果。基于布林带的反转交易思路简单可靠,值得进一步研究改进。
-
-||
-
 ## Overview
 
 This strategy combines Bollinger Bands and the Relative Strength Index (RSI) indicator to predict price volatility and determine optimal entry points. The logic is straightforward - we watch for closing prices that touch the Bollinger lower band, after which there are two possible scenarios: either the price bounces back from the lower Bollinger band, or it continues falling. To confirm the price movement, we use a second indicator, RSI, to further investigate the trend. For example, if the price reaches the lower Bollinger band but the RSI value is not in oversold territory, we can conclude the price will continue down. If the RSI value is oversold, we can use this area as our entry point.  
@@ -112,8 +58,6 @@ Risks can be mitigated by adjusting Bollinger parameters, using other indicators
 ## Conclusion
 
 The overall risk/reward profile of this strategy is balanced and backtest results are good. Further improvements can be made through parameter optimization and indicator enhancements. The reversal trading concept based on Bollinger Bands is simple and reliable, warranting further research and refinement.
-
-[/trans]
 
 > Strategy Arguments
 

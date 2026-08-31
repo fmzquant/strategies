@@ -10,8 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/12ecc3c9901faecad3a.png)
-这里返回您要求的中英文文章内容:
-
 
 ### Overview
 

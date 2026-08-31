@@ -9,50 +9,6 @@ ianzeng123
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/2d8f163ef48d4bc36d9d8.png)
-![IMG](https://www.fmz.com/upload/asset/2d971ceefeb34a5aa00ed.png)
-
-
-
-[trans]
-#### 概述
-该策略是一个基于技术分析中下降楔形形态的趋势突破交易系统。它通过动态识别价格中的高点和低点,构建上下趋势线,在价格突破上趋势线时进入多头仓位。策略采用动态止盈止损机制来控制风险和锁定利润。这是一个经典的技术分析交易方法的程序化实现,特别适合在下跌趋势即将结束时捕捉反转机会。
-
-#### 策略原理
-策略的核心逻辑包括以下几个关键步骤:
-1. 使用枢轴点(Pivot)方法动态识别价格走势中的高点和低点
-2. 记录并保存最近的两个高点和低点及其对应的时间索引
-3. 基于这些点计算上下趋势线的斜率
-4. 判断是否形成下降楔形:要求两个高点递减、两个低点递减,且上趋势线斜率小于下趋势线斜率
-5. 当价格突破上趋势线时,触发买入信号
-6. 设置基于入场价格的百分比止盈止损条件
-
-#### 策略优势
-1. 动态识别市场结构:策略能够自动识别价格结构中的关键点位,不需要人工干预
-2. 趋势反转捕捉:专注于捕捉下跌趋势的潜在反转机会,这通常是风险收益比较高的交易机会
-3. 精确的信号生成:通过数学方法精确计算趋势线位置和突破点位
-4. 风险管理完善:包含预设的止盈止损机制,能够有效控制每笔交易的风险
-5. 系统化操作:策略逻辑完全系统化,避免人为情绪干扰
-
-#### 策略风险
-1. 假突破风险:市场可能出现假突破,导致错误信号
-2. 参数敏感性:策略效果对参数设置较为敏感,不同市场环境可能需要调整参数
-3. 市场条件依赖:策略在震荡市场中可能产生过多错误信号
-4. 止损风险:快速行情可能导致实际止损价格滑点
-5. 交易成本影响:频繁交易可能带来较高交易成本
-
-#### 策略优化方向
-1. 信号确认机制:可以添加成交量、动量等指标作为突破确认
-2. 动态参数优化:引入自适应机制,根据市场波动率调整参数
-3. 多时间周期验证:增加多时间周期确认机制,提高信号可靠性
-4. 改进止盈止损:可以使用动态止盈止损,如跟踪止盈
-5. 市场环境过滤:添加趋势过滤器,在适合的市场环境下交易
-
-#### 总结
-这是一个设计合理的趋势交易策略,通过程序化方式实现了传统技术分析方法。策略的优势在于能够自动化识别市场结构并捕捉潜在的趋势反转机会。但同时也需要注意假突破和参数优化等问题。通过进一步优化和完善,该策略有望在实际交易中取得更好的效果。
-
-||
-
 #### Overview
 This strategy is a trend breakout trading system based on the falling wedge pattern in technical analysis. It dynamically identifies highs and lows in price action to construct upper and lower trendlines, entering long positions when price breaks above the upper trendline. The strategy employs dynamic take-profit and stop-loss mechanisms to control risk and lock in profits. This is a programmatic implementation of a classic technical analysis trading method, particularly suitable for capturing reversal opportunities when downtrends are potentially ending.
 
@@ -87,9 +43,7 @@ The core logic includes several key steps:
 5. Market Environment Filtering: Add trend filters to trade only in suitable market conditions
 
 #### Summary
-This is a well-designed trend trading strategy that implements traditional technical analysis methods programmatically. Its strength lies in automated market structure identification and potential trend reversal capture. However, attention must be paid to false breakouts and parameter optimization. With further enhancement and refinement, this strategy has potential for improved performance in actual trading.[/trans]
-
-
+This is a well-designed trend trading strategy that implements traditional technical analysis methods programmatically. Its strength lies in automated market structure identification and potential trend reversal capture. However, attention must be paid to false breakouts and parameter optimization. With further enhancement and refinement, this strategy has potential for improved performance in actual trading.
 
 > Source (PineScript)
 

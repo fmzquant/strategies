@@ -9,57 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/16a919bdc91e33d13b1.png)
-
-[trans]
-#### 概述
-该策略是一个基于14周期指数移动平均线(EMA)的交易系统,结合了蜡烛图形态分析和价格动量特征。策略通过分析价格与EMA的交叉关系,同时考虑蜡烛图的形态特征(如实体与影线比例)来确定交易信号,从而捕捉市场趋势的变化点。
-
-#### 策略原理
-策略的核心逻辑基于以下几个关键要素:
-1. EMA突破确认:使用14周期EMA作为动态支撑和阻力位。
-2. 蜡烛图形态分析:
-   - 买入条件要求蜡烛为阳线(收盘价高于开盘价)
-   - 卖出条件需要蜡烛为阴线(收盘价低于开盘价)
-3. 价格穿越验证:
-   - 买入时要求至少50%的蜡烛实体穿过EMA
-   - 卖出时需要价格完全跌破EMA
-4. 影线比例控制:
-   - 买入信号要求上下影线总和不超过蜡烛总长度的40%
-   - 卖出信号限制下影线不超过蜡烛总长度的20%
-
-#### 策略优势
-1. 信号质量控制严格：通过多重条件验证,有效降低假突破风险
-2. 形态识别精确：结合蜡烛图实体与影线比例分析,提高信号可靠性
-3. 趋势跟踪能力强：利用EMA的动态特性,能够有效跟踪市场趋势
-4. 风险控制完善：通过严格的影线比例控制,降低交易风险
-5. 适应性良好：策略参数可根据不同市场条件灵活调整
-
-#### 策略风险
-1. 横盘市场风险：在震荡市场中可能产生频繁假信号
-2. 滞后性风险：EMA指标本身具有一定滞后性,可能错过最佳入场点
-3. gap风险：大跳空可能导致止损失效
-4. 参数敏感性：不同市场环境下可能需要调整参数以保持策略有效性
-
-#### 策略优化方向
-1. 引入波动率过滤：
-   - 添加ATR指标评估市场波动状态
-   - 在高波动期间提高信号确认门槛
-2. 多周期验证：
-   - 增加多个时间周期的趋势确认
-   - 建立多周期信号一致性验证机制
-3. 动态参数优化：
-   - 根据市场波动情况动态调整EMA周期
-   - 自适应调整影线比例阈值
-4. 仓位管理优化：
-   - 基于市场波动度设计动态仓位系统
-   - 引入金字塔加仓机制
-
-#### 总结
-该策略通过综合运用EMA、蜡烛图形态和价格行为分析,构建了一个完整的交易系统。策略的优势在于信号确认的严格性和风险控制的完善性,但也需要注意市场环境对策略表现的影响。通过建议的优化方向,策略的稳定性和适应性有望进一步提升。
-
-||
-
 #### Overview
 This strategy is a trading system based on the 14-period Exponential Moving Average (EMA), combining candlestick pattern analysis and price momentum characteristics. The strategy identifies trading signals by analyzing price-EMA crossovers and candlestick formation features (such as body-to-wick ratios) to capture market trend reversal points.
 
@@ -104,9 +53,7 @@ The core logic is based on several key elements:
    - Introduce pyramid position building mechanism
 
 #### Summary
-The strategy builds a comprehensive trading system by integrating EMA, candlestick patterns, and price action analysis. Its strengths lie in strict signal confirmation and comprehensive risk control, though market conditions significantly impact strategy performance. Through the suggested optimization directions, the strategy's stability and adaptability can be further enhanced.[/trans]
-
-
+The strategy builds a comprehensive trading system by integrating EMA, candlestick patterns, and price action analysis. Its strengths lie in strict signal confirmation and comprehensive risk control, though market conditions significantly impact strategy performance. Through the suggested optimization directions, the strategy's stability and adaptability can be further enhanced.
 
 > Source (PineScript)
 

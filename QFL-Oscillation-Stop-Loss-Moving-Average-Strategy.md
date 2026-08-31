@@ -11,37 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/19675c868d2cf6c58f9.png)
 
-[trans]
-#### 概述
-本策略是一个基于Jackson QFL(Quick finger Luc)思想的交易系统,主要通过识别市场恐慌性下跌时机进行建仓,并通过均线系统进行止盈止损管理。策略核心是捕捉短期剧烈波动带来的交易机会,通过多重技术指标确认入场时机,实现低位建仓的目标。
-
-#### 策略原理
-策略采用ATR(平均真实波幅)指标和自定义的基准线(Base Level)、反弹线(Rebound Level)作为主要交易信号。当价格出现恐慌性下跌并突破基准线时,触发做多信号。系统通过计算近期K线波动范围,结合ATR倍数来判定是否出现恐慌性下跌。止盈设置了三种模式:平均价格、首次入场价格和分批止盈,可根据不同市场环境灵活选择。系统还设置了冷却期,避免频繁交易。
-
-#### 策略优势
-1. 交易逻辑清晰,通过技术指标量化判断入场时机,减少主观因素干扰
-2. 多重确认机制提高交易可靠性,包括ATR过滤、基准线突破和恐慌下跌确认
-3. 灵活的止盈机制,可根据市场情况选择不同止盈方式
-4. 具备防护机制,包括交易间隔控制和止损设置,有效控制风险
-5. 系统自动化程度高,可实现全自动交易,减少人为干预
-
-#### 策略风险
-1. 在震荡市场中可能频繁触发假信号,增加交易成本
-2. 依赖历史数据计算基准线,在市场突变时可能失效
-3. 止盈设置可能过早退出强势行情,错过更大收益
-4. 在流动性不足的市场中,恐慌性下跌判断可能不准确
-5. 参数优化存在过拟合风险,需要在不同市场环境中反复验证
-
-#### 策略优化方向
-1. 引入成交量指标,增强恐慌性下跌判断的准确性
-2. 开发自适应参数体系,根据市场波动特征动态调整
-3. 加入趋势判断模块,在明显趋势市场中调整策略参数
-4. 完善止盈机制,考虑引入移动止损和动态调整止盈比例
-5. 增加市场环境分类,针对不同市场特征采用不同参数配置
-
-#### 总结
-QFL震荡条件止损均线策略是一个综合性的交易系统,通过多重技术指标捕捉市场恐慌性下跌机会。策略设计考虑了实战需求,包含完整的入场、止盈止损和风险控制机制。虽然存在一定局限性,但通过持续优化和完善,有望在实际交易中取得稳定收益。建议投资者在实盘应用前进行充分的历史数据回测,并根据具体市场特征调整参数设置。 || 
-
 #### Overview
 This strategy is a trading system based on Jackson QFL (Quick finger Luc) philosophy, which primarily identifies market panic sell-offs for position building and manages profit-taking and stop-loss through a moving average system. The core strategy is to capture trading opportunities brought by short-term violent fluctuations, confirming entry timing through multiple technical indicators to achieve low-position building.
 
@@ -70,9 +39,7 @@ The strategy uses the ATR (Average True Range) indicator and custom Base Level a
 5. Enhance market environment classification to use different parameter configurations for different market characteristics
 
 #### Summary
-The QFL Oscillation Stop-Loss Moving Average Strategy is a comprehensive trading system that captures market panic selling opportunities through multiple technical indicators. The strategy design considers practical needs, including complete entry, profit-taking, stop-loss, and risk control mechanisms. While it has certain limitations, continuous optimization and improvement show promise for stable returns in actual trading. Investors are advised to conduct thorough historical data backtesting before live implementation and adjust parameters according to specific market characteristics.[/trans]
-
-
+The QFL Oscillation Stop-Loss Moving Average Strategy is a comprehensive trading system that captures market panic selling opportunities through multiple technical indicators. The strategy design considers practical needs, including complete entry, profit-taking, stop-loss, and risk control mechanisms. While it has certain limitations, continuous optimization and improvement show promise for stable returns in actual trading. Investors are advised to conduct thorough historical data backtesting before live implementation and adjust parameters according to specific market characteristics.
 
 > Source (PineScript)
 

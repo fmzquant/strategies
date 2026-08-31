@@ -12,76 +12,7 @@ ianzeng123
 ![IMG](https://www.fmz.com/upload/asset/2d84b213ba31ad41dbf74.png)
 ![IMG](https://www.fmz.com/upload/asset/2d89c39fa522ba46a6ead.png)
 
-[trans]## 策略概述
-
-该策略是一种结合了均线交叉、随机指标过滤和自适应追踪止损的综合交易系统。它主要基于快速移动平均线(SMA 34)与慢速移动平均线(SMA 200)的交叉信号，同时使用Stochastic(9-3-3)随机指标作为额外的过滤条件，以增强信号的可靠性。此外，策略还设计了完善的风险管理模块，包括固定止损、获利目标以及根据价格走势自动调整的追踪止损功能。特别值得注意的是，当利润达到预设阈值时，策略会将止损点自动调整至入场价，以保护已获利润，实现"保本出局"的风险控制目标。
-
-## 策略原理
-
-策略的核心逻辑建立在以下几个关键组件上：
-
-1. **双均线系统**：使用34周期和200周期的简单移动平均线(SMA)，分别代表中期和长期趋势。当短期均线上穿长期均线时，表明上升趋势形成；反之，当短期均线下穿长期均线时，表明下降趋势形成。
-
-2. **随机指标过滤**：采用参数为9-3-3的Stochastic随机指标，作为辅助的市场超买超卖判断工具。当考虑做多信号时，要求随机指标值高于20，避免在超卖区域反弹尚未充分时入场；当考虑做空信号时，要求随机指标值低于80，避免在超买区域回落尚未确认时入场。
-
-3. **入场条件**：
-   - 做多条件：价格上穿SMA 34，同时SMA 34位于SMA 200之上，且Stochastic %K线大于20。
-   - 做空条件：价格下穿SMA 34，同时SMA 34位于SMA 200之下，且Stochastic %K线小于80。
-
-4. **风险管理机制**：
-   - 固定止损：设置为入场价格的2%。
-   - 获利目标：设置为入场价格的4%。
-   - 保本止损功能：当盈利达到2%时，止损点自动上调至入场价（做多）或下调至入场价（做空），确保交易至少不亏损。
-
-5. **执行逻辑**：策略通过TradingView的strategy模块实现自动化交易执行，每次交易使用账户权益的10%进行操作。
-
-## 策略优势
-
-1. **趋势跟踪与震荡结合**：通过结合均线系统(趋势跟踪)和Stochastic随机指标(震荡指标)，该策略能够同时捕捉趋势和市场状态，提高入场时机的准确性。
-
-2. **多层级确认**：入场信号需要满足价格与均线的交叉、均线相对位置以及随机指标的状态三重条件，有效减少了假突破和错误信号。
-
-3. **风险收益比合理**：策略设置的止损为2%，获利目标为4%，风险收益比为1:2，符合健康的交易原则。
-
-4. **动态保本机制**：通过breakevenTrigger参数(2%)，实现了自动化的保本功能，在行情朝有利方向发展到一定程度后，确保交易不会从盈利转为亏损。
-
-5. **可视化交易信号**：策略在价格图表上直观显示买卖信号，方便交易者监控和分析策略表现。
-
-6. **参数可调整性**：所有关键参数都可以通过输入界面调整，包括均线周期、Stochastic参数、止损比例、获利目标以及保本触发点，使策略具有良好的适应性。
-
-## 策略风险
-
-1. **趋势反转风险**：虽然使用了SMA 200作为长期趋势过滤，但市场可能在短期内出现快速反转，导致止损被触发。解决方法：可以考虑结合波动率指标，在波动率异常高的时期减小仓位或暂停交易。
-
-2. **滑点和交易成本**：策略在实际环境中可能面临滑点和交易成本问题，影响实际收益率。解决方法：优化交易频率，避免过于频繁的交易，或调整入场条件要求更强的信号确认。
-
-3. **参数敏感性**：策略效果高度依赖于参数设置，不同市场和时间周期可能需要不同的参数组合。解决方法：进行回测优化，为不同市场环境预设不同的参数配置文件。
-
-4. **均线滞后性**：移动平均线本质上是滞后指标，可能导致入场或出场时机延迟。解决方法：可以考虑使用指数移动平均线(EMA)代替简单移动平均线(SMA)，或结合其他领先指标进行确认。
-
-5. **固定百分比风险**：使用固定的止损百分比可能无法适应市场波动率的变化。解决方法：设计基于ATR(Average True Range)的动态止损机制，使止损点更贴合当前市场波动特性。
-
-## 策略优化方向
-
-1. **动态调整的均线周期**：目前策略使用固定的34和200周期均线，可以考虑根据市场波动率自动调整均线周期，在高波动率环境中使用较长周期，在低波动率环境中使用较短周期，以提高适应性。
-
-2. **加入交易量确认**：目前的入场信号仅基于价格和指标，可以增加交易量条件，要求在信号发生时交易量显著增加，以确认突破的有效性。
-
-3. **多时间框架分析**：实现多时间框架确认机制，例如要求较大时间框架的趋势方向与交易方向一致，增强交易信号的可靠性。
-
-4. **优化追踪止损逻辑**：当前的保本机制相对简单，可以设计更复杂的追踪止损逻辑，例如根据ATR动态设置追踪距离，或随着利润的增加逐步收紧追踪止损。
-
-5. **增加市场状态过滤器**：引入市场状态识别机制，例如通过ADX指标识别趋势强度，在强趋势市场中采用更激进的参数设置，在震荡市场中采用更保守的设置。
-
-6. **优化Stochastic参数**：考虑使用自适应的Stochastic参数，而不是固定的9-3-3，使其更好地适应不同市场条件。
-
-## 总结
-
-"双均线交叉与随机指标结合的自适应追踪止损策略"是一个结构完善、逻辑清晰的交易系统，它有效地整合了趋势跟踪、震荡指标过滤和风险管理机制。通过SMA 34与SMA 200的交叉结合Stochastic随机指标的确认，该策略能够捕捉市场中的有效趋势变化，同时避免在不利市场条件下入场。特别是其自适应的保本机制，为交易提供了重要的风险控制手段。
-
-然而，该策略仍有提升空间，尤其是在应对不同市场环境的适应性方面。通过引入动态参数调整、交易量确认、多时间框架分析等优化措施，策略的性能可以进一步提高。对于交易者而言，理解策略背后的逻辑原理并根据自身风险承受能力和交易目标进行适当调整，是成功应用该策略的关键。
-
-无论是追求稳健收益的长期投资者，还是寻求短期交易机会的活跃交易者，这一策略都提供了一个结构化的框架，帮助交易者在复杂多变的市场中做出更加系统化和纪律性的交易决策。 || ## Strategy Overview
+## Strategy Overview
 
 This strategy is a comprehensive trading system that combines moving average crossovers, Stochastic indicator filtering, and adaptive trailing stop loss. It primarily relies on crossover signals between a fast moving average (SMA 34) and a slow moving average (SMA 200), while using the Stochastic (9-3-3) indicator as an additional filter to enhance signal reliability. Additionally, the strategy incorporates a sophisticated risk management module, including fixed stop loss, take profit targets, and an automatically adjusting trailing stop function based on price movement. Notably, when profit reaches a preset threshold, the strategy automatically adjusts the stop loss to the entry price, protecting accumulated profits and achieving a "breakeven exit" risk control objective.
 
@@ -150,8 +81,7 @@ The "Dual Moving Average Crossover with Stochastic Filter and Adaptive Trailing 
 
 However, the strategy still has room for improvement, especially in terms of adaptability to different market environments. By introducing dynamic parameter adjustments, volume confirmation, multiple timeframe analysis, and other optimization measures, strategy performance can be further enhanced. For traders, understanding the logical principles behind the strategy and making appropriate adjustments based on personal risk tolerance and trading objectives is key to successfully applying this strategy.
 
-Whether for long-term investors seeking stable returns or active traders looking for short-term trading opportunities, this strategy provides a structured framework that helps traders make more systematic and disciplined trading decisions in complex and changing markets.[/trans]
-
+Whether for long-term investors seeking stable returns or active traders looking for short-term trading opportunities, this strategy provides a structured framework that helps traders make more systematic and disciplined trading decisions in complex and changing markets.
 
 
 > Source (PineScript)

@@ -10,58 +10,6 @@ ChaoZhang
 > Strategy Description
 
 ![IMG](https://www.fmz.com/upload/asset/ca5f2415971c812143.png)
- [trans]
-### 概述
-
-该策略是基于Renko蜡烛图的移动平均线交叉策略。它使用TEMA指标构建交叉信号,并结合长期均线进行过滤,旨在识别Renko蜡烛图上的趋势,发出买入和卖出信号。
-
-### 策略原理
-
-该策略主要的信号来源是短期TEMA指标和SMA指标的金叉死叉。具体逻辑是:
-
-当短期TEMA上穿短期SMA时,做多;当短期TEMA下穿短期SMA时,平仓。
-
-此外,该策略还设置了两个可选参数avg_protection和gain_protection,用于调节进场和止损逻辑:
-
-- avg_protection>0时,只有当close价格低于当前持仓均价时才会买入,这样可以降低持仓成本;
-
-- gain_protection>0时,只有当close价格超过入场价一定百分比时才会卖出止盈,从而锁定盈利。
-
-最后,策略还使用一条长期SMMA指标作为趋势过滤器。只有当close价格低于SMMA时,才会发出做多信号。
-
-### 优势分析
-
-该策略主要具有以下优势:
-
-1. 基于Renko蜡烛图,能有效过滤noise,识别趋势;
-2. 使用TEMA指标构建信号,灵敏度高,跟随性好;  
-3. 可调参数丰富,可以控制进场策略;
-4. 结合长短期均线,可在趋势中捕捉机会。
-
-### 风险分析
-
-该策略也存在一些风险:  
-
-1. Renko本身时间轴不均匀,无法控制间隔时间;
-2. TEMA灵敏度高也更容易产生误信号; 
-3. 参数设置不当可能导致漏入漏出。
-
-针对这些风险,可以通过适当调整参数,设定止损位置等方式进行规避。
-
-### 优化方向  
-
-该策略主要可以从以下几个方面进行优化:
-
-1. 测试不同参数组合,寻找最优参数;
-2. 增加止损策略,比如移动止损、区间止损等,降低 DD;
-3. 结合其他指标进行信号过滤,减少误信号;
-4. 测试不同品种的参数效果。
-
-### 总结
-
-该策略整体来说是一个基础简单但实用性很强的移动均线交叉策略。它主要依靠Renko K线优异的去噪效果以及TEMA指标的高灵敏性产生信号。同时,长短期均线的配合也强化了它的趋势跟随能力。通过参数调节和适当优化,该策略可以成为量化交易的一个有效选择。
-
-||
 
 ### Overview
 
@@ -113,7 +61,6 @@ The main optimization directions for this strategy are:
 
 In general, this is a basic, simple but highly practical moving average crossover strategy. It mainly relies on the excellent noise reduction effect of Renko bars and the high sensitivity of the TEMA indicator to generate signals. Meanwhile, the collaboration between long-term and short-term moving averages also enhances its trend following capability. With parameter tuning and proper optimization, this strategy can become an effective choice for quantitative trading.
 
-[/trans]
 
 > Strategy Arguments
 

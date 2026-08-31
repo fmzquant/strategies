@@ -9,93 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-[trans]
-
-
-## 概述
-
-本策略基于双均线的金叉死叉原理设计。当短期均线上穿长期均线时,做多;当短期均线下穿长期均线时,平仓。该策略简单易懂,适合新手学习。
-
-## 策略原理
-
-该策略主要基于sma(close, 14) 和 sma(close, 28) 两个均线 indicator。
-
-首先定义长短均线:
-
-```pine
-short_ma = sma(close, 14)
-long_ma = sma(close, 28)
-```
-
-然后根据金叉死叉判断入场出场:
-
-```pine  
-longCondition = crossover(short_ma, long_ma)
-shortCondition = crossunder(short_ma, long_ma)
-```
-
-当短期均线上穿长期均线时做多:
-
-```pine
-strategy.entry("Buy", strategy.long, when = longCondition) 
-```
-
-当短期均线下穿长期均线时平仓:
-
-```pine
-strategy.close_all(when = shortCondition)
-```
-
-该策略原理简单明了,利用双均线的金叉死叉进行判断,具有一定的趋势跟踪能力。
-
-## 优势分析
-
-- 策略原理简单易懂,新手也能轻松使用
-- 利用均线的金叉死叉判断趋势,有一定的趋势跟踪能力
-- 可自定义均线周期,优化策略参数
-- 可设置止损点,控制单笔损失
-
-## 风险分析
-
-- 双均线策略对市场震荡敏感,可能产生多次亏损交易
-- 均线具有滞后性,可能错过价格反转点
-- 靠近均线交叉点建立头寸容易被套牢
-- 需要优化均线周期参数,不同周期效果可能存在差异
-- 无法在趋势 violently 变化时快速止损
-
-## 优化方向
-
-该策略可以从以下几个方面进行优化:
-
-1. 优化均线周期参数,寻找最佳参数组合
-
-可以尝试不同的短期和长期均线周期,寻找最佳组合。例如 (5, 10)、(10, 20)、(20, 60)等参数对比测试。
-
-2. 增加过滤条件,避免虚假信号
-
-可以在均线交叉时增加交易量、价差等过滤条件,避免在震荡市场中产生过多交易。
-
-3. 增加止损策略
-
-设置止损点或使用均线作为止损线,可以控制单笔损失。
-
-4. 结合其他指标
-
-可以加入 MACD,KDJ 等辅助指标进行组合交易,提高策略效果。
-
-5. 优化入场点位
-
-在均线附近寻找更佳入场点,而不是紧贴均线建立头寸。例如在均线背离的点位入场。
-
-## 总结
-
-双均线策略概念简单,新手易于上手使用。但该策略对市场震荡敏感,存在一定亏损风险。我们可以通过优化参数、增加过滤条件、设置止损以及加入其他指标等方式来提高策略效果。在强劲趋势中,该策略可以获得不错的效果。但在市场震荡时期,建议谨慎使用或止损控制风险。
-
-[/trans]
-
-||
-
-
 ## Overview
 
 This strategy is designed based on the golden cross and death cross of dual moving averages. It goes long when the short period moving average crosses above the long period moving average, and closes position when the short period moving average crosses below the long period moving average. The strategy is simple and easy to understand, suitable for beginners to learn.
@@ -174,8 +87,8 @@ Find better entry points near MAs instead of entering right at the crossover. Fo
 
 ## Summary
 
-The dual MA strategy is simple for beginners to use. But it is sensitive to market fluctuations and has risks of losses. We can improve it by optimizing parameters, adding filters, incorporating stop loss, combining other indicators etc. It can perform well in strong trends but should be used with caution or proper stop loss in ranging markets.  
-[/trans]
+The dual MA strategy is simple for beginners to use. But it is sensitive to market fluctuations and has risks of losses. We can improve it by optimizing parameters, adding filters, incorporating stop loss, combining other indicators etc. It can perform well in strong trends but should be used with caution or proper stop loss in ranging markets.
+
 
 > Strategy Arguments
 

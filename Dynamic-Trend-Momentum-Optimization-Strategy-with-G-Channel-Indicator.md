@@ -11,35 +11,6 @@ ChaoZhang
 
 ![IMG](https://www.fmz.com/upload/asset/932f0acc7ad363193c.png)
 
-[trans]
-#### 概述
-该策略是一个融合了G通道、RSI和MACD指标的高级趋势跟踪交易系统。它通过动态计算支撑和阻力区域,结合动量指标来识别高概率的交易机会。策略的核心在于利用自定义的G通道指标来确定市场趋势,同时使用RSI和MACD来确认动量变化,实现更准确的交易信号生成。
-
-#### 策略原理
-策略采用三重过滤机制来确保交易信号的可靠性。首先,G通道通过计算指定周期内的最高和最低价格动态地构建支撑和阻力区域。当价格突破通道时,系统会识别出潜在的趋势转折点。其次,RSI指标用于确认市场是否处于超买或超卖状态,帮助筛选出更有价值的交易机会。最后,MACD指标通过柱状图的正负值来确认动量的方向和强度。只有当这三个条件都满足时,系统才会发出交易信号。
-
-#### 策略优势
-1. 多维度信号确认机制显著提高了交易的准确性
-2. 动态的止损和获利设置,有效控制风险
-3. G通道的自适应特性使策略能够适应不同的市场环境
-4. 完善的风险管理系统,包括仓位管理和资金管理
-5. 可视化标签系统直观显示交易信号,便于分析和优化
-
-#### 策略风险
-1. 在震荡市场中可能产生虚假信号,需要进行市场环境识别
-2. 参数优化过度可能导致过拟合风险
-3. 多重指标可能在高波动期间产生滞后效应
-4. 止损位设置不当可能导致过大回撤
-
-#### 策略优化方向
-1. 引入市场环境识别模块,在不同市场状态下使用不同的参数设置
-2. 开发自适应的止损机制,根据市场波动性动态调整止损位
-3. 添加交易量分析指标,提高信号的可靠性
-4. 优化G通道的计算方法,减少滞后效应
-
-#### 总结
-该策略通过综合运用多个技术指标,构建了一个完整的交易系统。其核心优势在于多维度的信号确认机制和完善的风险管理体系。通过持续优化和改进,策略有望在不同市场环境下都能保持稳定的表现。建议交易者在实盘之前,充分测试不同的参数组合,并根据具体市场特点进行适当调整。 || 
-
 #### Overview
 This strategy is an advanced trend following trading system that integrates G-Channel, RSI, and MACD indicators. It identifies high-probability trading opportunities by dynamically calculating support and resistance zones while combining momentum indicators. The core lies in utilizing a custom G-Channel indicator to determine market trends while using RSI and MACD to confirm momentum changes for more accurate signal generation.
 
@@ -66,9 +37,7 @@ The strategy employs a triple-filtering mechanism to ensure signal reliability. 
 4. Optimize G-Channel calculation method to reduce lag effects
 
 #### Summary
-This strategy builds a complete trading system through the comprehensive use of multiple technical indicators. Its core advantages lie in the multi-dimensional signal confirmation mechanism and comprehensive risk management system. Through continuous optimization and improvement, the strategy shows promise in maintaining stable performance across different market environments. Traders are advised to thoroughly test different parameter combinations and make appropriate adjustments based on specific market characteristics before live trading.[/trans]
-
-
+This strategy builds a complete trading system through the comprehensive use of multiple technical indicators. Its core advantages lie in the multi-dimensional signal confirmation mechanism and comprehensive risk management system. Through continuous optimization and improvement, the strategy shows promise in maintaining stable performance across different market environments. Traders are advised to thoroughly test different parameter combinations and make appropriate adjustments based on specific market characteristics before live trading.
 
 > Source (PineScript)
 

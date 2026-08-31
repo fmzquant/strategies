@@ -9,40 +9,6 @@ ChaoZhang
 
 > Strategy Description
 
-![IMG](https://www.fmz.com/upload/asset/13fa94a39de0470476e.png)
-
-[trans]
-#### 概述
-本策略是一个基于价格波动幅度和均线交叉的动量跟踪交易系统。策略主要通过监测价格波动率超过1.91%的异常波动(黑天鹅事件)进行信号触发,同时结合EMA144和EMA169的交叉来确认趋势方向和退出时机。策略特别适用于1-3分钟的短周期交易,能够快速捕捉市场的剧烈波动机会。
-
-#### 策略原理
-策略的核心逻辑包含两个主要部分:
-1. 波动率监测:通过计算收盘价与开盘价的绝对差值相对于收盘价的比率来衡量价格波动,当该比率超过1.91%时触发交易信号。
-2. 趋势确认:使用EMA144和EMA169的交叉来确认趋势方向,交叉向上则做多,交叉向下则做空。同时还引入了SMA60和SMA20作为辅助指标。
-
-策略在检测到大于1.91%的向上波动时进行做多,检测到向下波动时进行做空。当均线发生反向交叉时,策略会自动平仓以控制风险。
-
-#### 策略优势
-1. 快速响应:策略能够及时捕捉市场的剧烈波动,特别适合短周期交易。
-2. 风险控制:通过均线交叉作为平仓信号,有效控制持仓风险。
-3. 灵活性高:策略允许设置回测时间范围和参数调整,可根据不同市场情况进行优化。
-4. 完善的头寸管理:采用账户净值百分比进行仓位控制,并支持最多3倍的金字塔加仓。
-
-#### 策略风险
-1. 假突破风险:在高波动市场中可能出现虚假信号,导致不必要的交易。
-2. 滑点风险:由于策略在短周期内操作,可能面临较大的滑点损失。
-3. 趋势反转风险:在剧烈波动后可能出现趋势快速反转的情况。
-4. 参数敏感性:策略效果对参数设置较为敏感,不同市场条件下可能需要频繁调整。
-
-#### 策略优化方向
-1. 引入波动率过滤:建议增加ATR指标来过滤市场噪音,提高信号质量。
-2. 优化入场时机:可以考虑增加成交量确认来提高入场准确性。
-3. 动态调整参数:建议开发自适应参数系统,根据市场状况自动调整触发阈值。
-4. 完善止损机制:建议增加跟踪止损功能,更好地保护已有盈利。
-
-#### 总结
-该策略通过结合波动率监测和均线交叉实现了对市场异常波动的快速响应和趋势跟踪。策略设计合理,具有良好的风险控制机制,但仍需要交易者根据实际市场情况进行参数优化和风险管理。建议在实盘交易中从小仓位开始,逐步验证策略在不同市场环境下的表现。 || 
-
 #### Overview
 This strategy is a momentum tracking trading system based on price volatility and moving average crossovers. It triggers signals by monitoring price volatility exceeding 1.91% (Black Swan events) and combines EMA144 and EMA169 crossovers to confirm trend direction and exit timing. The strategy is particularly suitable for short-term trading on 1-3 minute timeframes, capable of quickly capturing significant market volatility opportunities.
 
@@ -72,9 +38,7 @@ The strategy enters long positions when detecting upward volatility above 1.91% 
 4. Enhanced Stop-Loss Mechanism: Recommend adding trailing stop-loss functionality to better protect accumulated profits.
 
 #### Summary
-This strategy achieves quick response to market anomalies and trend following by combining volatility monitoring with moving average crossovers. While the strategy design is sound with good risk control mechanisms, traders need to optimize parameters and manage risks according to actual market conditions. It's recommended to start with small positions in live trading and gradually validate strategy performance across different market environments.[/trans]
-
-
+This strategy achieves quick response to market anomalies and trend following by combining volatility monitoring with moving average crossovers. While the strategy design is sound with good risk control mechanisms, traders need to optimize parameters and manage risks according to actual market conditions. It's recommended to start with small positions in live trading and gradually validate strategy performance across different market environments.
 
 > Source (PineScript)
 
